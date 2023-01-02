@@ -6,7 +6,7 @@ import "../model/currency.dart";
 class FiatAed extends FiatCurrency {
   const FiatAed()
       : super(
-          isoCode: "AED",
+          code: "AED",
           name: "United Arab Emirates Dirham",
           symbol: "د.إ",
           alternateSymbols: const ["DH", "Dhs"],
@@ -19,7 +19,7 @@ class FiatAed extends FiatCurrency {
 class FiatAfn extends FiatCurrency {
   FiatAfn()
       : super(
-          isoCode: "AFN",
+          code: "AFN",
           name: "Afghan Afghani",
           symbol: "؋",
           alternateSymbols: const ["Af", "Afs"],
@@ -32,7 +32,7 @@ class FiatAfn extends FiatCurrency {
 class FiatAll extends FiatCurrency {
   FiatAll()
       : super(
-          isoCode: "ALL",
+          code: "ALL",
           name: "Albanian Lek",
           symbol: "L",
           disambiguateSymbol: "Lek",
@@ -46,7 +46,7 @@ class FiatAll extends FiatCurrency {
 class FiatAmd extends FiatCurrency {
   const FiatAmd()
       : super(
-          isoCode: "AMD",
+          code: "AMD",
           name: "Armenian Dram",
           symbol: "դր.",
           alternateSymbols: const ["dram"],
@@ -59,7 +59,7 @@ class FiatAmd extends FiatCurrency {
 class FiatAng extends FiatCurrency {
   const FiatAng()
       : super(
-          isoCode: "ANG",
+          code: "ANG",
           name: "Netherlands Antillean Gulden",
           symbol: "ƒ",
           alternateSymbols: const ["NAƒ", "NAf", "f"],
@@ -75,7 +75,7 @@ class FiatAng extends FiatCurrency {
 class FiatAoa extends FiatCurrency {
   const FiatAoa()
       : super(
-          isoCode: "AOA",
+          code: "AOA",
           name: "Angolan Kwanza",
           symbol: "Kz",
           subunit: "Cêntimo",
@@ -87,7 +87,7 @@ class FiatAoa extends FiatCurrency {
 class FiatArs extends FiatCurrency {
   const FiatArs()
       : super(
-          isoCode: "ARS",
+          code: "ARS",
           name: "Argentine Peso",
           symbol: r"$",
           disambiguateSymbol: r"$m/n",
@@ -105,7 +105,7 @@ class FiatAud extends FiatCurrency {
   const FiatAud({int? priority})
       : super(
           priority: priority ?? 4,
-          isoCode: "AUD",
+          code: "AUD",
           name: "Australian Dollar",
           symbol: r"$",
           disambiguateSymbol: r"A$",
@@ -121,7 +121,7 @@ class FiatAud extends FiatCurrency {
 class FiatAwg extends FiatCurrency {
   const FiatAwg()
       : super(
-          isoCode: "AWG",
+          code: "AWG",
           name: "Aruban Florin",
           symbol: "ƒ",
           alternateSymbols: const ["Afl"],
@@ -135,7 +135,7 @@ class FiatAwg extends FiatCurrency {
 class FiatAzn extends FiatCurrency {
   const FiatAzn()
       : super(
-          isoCode: "AZN",
+          code: "AZN",
           name: "Azerbaijani Manat",
           symbol: "₼",
           alternateSymbols: const ["m", "man"],
@@ -148,7 +148,7 @@ class FiatAzn extends FiatCurrency {
 class FiatBam extends FiatCurrency {
   const FiatBam()
       : super(
-          isoCode: "BAM",
+          code: "BAM",
           name: "Bosnia and Herzegovina Convertible Mark",
           symbol: "КМ",
           alternateSymbols: const ["KM"],
@@ -162,7 +162,7 @@ class FiatBam extends FiatCurrency {
 class FiatBbd extends FiatCurrency {
   const FiatBbd()
       : super(
-          isoCode: "BBD",
+          code: "BBD",
           name: "Barbadian Dollar",
           symbol: r"$",
           disambiguateSymbol: r"Bds$",
@@ -177,7 +177,7 @@ class FiatBbd extends FiatCurrency {
 class FiatBdt extends FiatCurrency {
   const FiatBdt()
       : super(
-          isoCode: "BDT",
+          code: "BDT",
           name: "Bangladeshi Taka",
           symbol: "৳",
           alternateSymbols: const ["Tk"],
@@ -190,7 +190,7 @@ class FiatBdt extends FiatCurrency {
 class FiatBgn extends FiatCurrency {
   const FiatBgn()
       : super(
-          isoCode: "BGN",
+          code: "BGN",
           name: "Bulgarian Lev",
           symbol: "лв.",
           alternateSymbols: const ["lev", "leva", "лев", "лева"],
@@ -202,7 +202,7 @@ class FiatBgn extends FiatCurrency {
 class FiatBhd extends FiatCurrency {
   const FiatBhd()
       : super(
-          isoCode: "BHD",
+          code: "BHD",
           name: "Bahraini Dinar",
           symbol: "د.ب",
           alternateSymbols: const ["BD"],
@@ -217,7 +217,7 @@ class FiatBhd extends FiatCurrency {
 class FiatBif extends FiatCurrency {
   const FiatBif()
       : super(
-          isoCode: "BIF",
+          code: "BIF",
           name: "Burundian Franc",
           symbol: "Fr",
           disambiguateSymbol: "FBu",
@@ -232,7 +232,7 @@ class FiatBif extends FiatCurrency {
 class FiatBmd extends FiatCurrency {
   const FiatBmd()
       : super(
-          isoCode: "BMD",
+          code: "BMD",
           name: "Bermudian Dollar",
           symbol: r"$",
           disambiguateSymbol: r"BD$",
@@ -247,7 +247,7 @@ class FiatBmd extends FiatCurrency {
 class FiatBnd extends FiatCurrency {
   const FiatBnd()
       : super(
-          isoCode: "BND",
+          code: "BND",
           name: "Brunei Dollar",
           symbol: r"$",
           disambiguateSymbol: "BND",
@@ -262,7 +262,7 @@ class FiatBnd extends FiatCurrency {
 class FiatBob extends FiatCurrency {
   const FiatBob()
       : super(
-          isoCode: "BOB",
+          code: "BOB",
           name: "Bolivian Boliviano",
           symbol: "Bs.",
           alternateSymbols: const ["Bs"],
@@ -276,7 +276,7 @@ class FiatBob extends FiatCurrency {
 class FiatBrl extends FiatCurrency {
   const FiatBrl()
       : super(
-          isoCode: "BRL",
+          code: "BRL",
           name: "Brazilian Real",
           symbol: r"R$",
           subunit: "Centavo",
@@ -292,7 +292,7 @@ class FiatBrl extends FiatCurrency {
 class FiatBsd extends FiatCurrency {
   const FiatBsd()
       : super(
-          isoCode: "BSD",
+          code: "BSD",
           name: "Bahamian Dollar",
           symbol: r"$",
           disambiguateSymbol: "BSD",
@@ -307,7 +307,7 @@ class FiatBsd extends FiatCurrency {
 class FiatBtn extends FiatCurrency {
   const FiatBtn()
       : super(
-          isoCode: "BTN",
+          code: "BTN",
           name: "Bhutanese Ngultrum",
           symbol: "Nu.",
           alternateSymbols: const ["Nu"],
@@ -320,7 +320,7 @@ class FiatBtn extends FiatCurrency {
 class FiatBwp extends FiatCurrency {
   const FiatBwp()
       : super(
-          isoCode: "BWP",
+          code: "BWP",
           name: "Botswana Pula",
           symbol: "P",
           subunit: "Thebe",
@@ -333,7 +333,7 @@ class FiatBwp extends FiatCurrency {
 class FiatByn extends FiatCurrency {
   const FiatByn()
       : super(
-          isoCode: "BYN",
+          code: "BYN",
           name: "Belarusian Ruble",
           symbol: "Br",
           disambiguateSymbol: "BYN",
@@ -349,7 +349,7 @@ class FiatByr extends FiatCurrency {
   const FiatByr({int? priority})
       : super(
           priority: priority ?? 50,
-          isoCode: "BYR",
+          code: "BYR",
           name: "Belarusian Ruble",
           symbol: "Br",
           disambiguateSymbol: "BYR",
@@ -366,7 +366,7 @@ class FiatByr extends FiatCurrency {
 class FiatBzd extends FiatCurrency {
   const FiatBzd()
       : super(
-          isoCode: "BZD",
+          code: "BZD",
           name: "Belize Dollar",
           symbol: r"$",
           disambiguateSymbol: r"BZ$",
@@ -382,7 +382,7 @@ class FiatCad extends FiatCurrency {
   const FiatCad({int? priority})
       : super(
           priority: priority ?? 5,
-          isoCode: "CAD",
+          code: "CAD",
           name: "Canadian Dollar",
           symbol: r"$",
           disambiguateSymbol: r"C$",
@@ -398,7 +398,7 @@ class FiatCad extends FiatCurrency {
 class FiatCdf extends FiatCurrency {
   const FiatCdf()
       : super(
-          isoCode: "CDF",
+          code: "CDF",
           name: "Congolese Franc",
           symbol: "Fr",
           disambiguateSymbol: "FC",
@@ -411,7 +411,7 @@ class FiatCdf extends FiatCurrency {
 class FiatChf extends FiatCurrency {
   const FiatChf()
       : super(
-          isoCode: "CHF",
+          code: "CHF",
           name: "Swiss Franc",
           alternateSymbols: const ["SFr", "Fr"],
           subunit: "Rappen",
@@ -427,7 +427,7 @@ class FiatChf extends FiatCurrency {
 class FiatClf extends FiatCurrency {
   const FiatClf()
       : super(
-          isoCode: "CLF",
+          code: "CLF",
           name: "Unidad de Fomento",
           symbol: "UF",
           subunit: "Peso",
@@ -444,7 +444,7 @@ class FiatClf extends FiatCurrency {
 class FiatClp extends FiatCurrency {
   const FiatClp()
       : super(
-          isoCode: "CLP",
+          code: "CLP",
           name: "Chilean Peso",
           symbol: r"$",
           disambiguateSymbol: "CLP",
@@ -461,7 +461,7 @@ class FiatClp extends FiatCurrency {
 class FiatCny extends FiatCurrency {
   const FiatCny()
       : super(
-          isoCode: "CNY",
+          code: "CNY",
           name: "Chinese Renminbi Yuan",
           symbol: "¥",
           alternateSymbols: const ["CN¥", "元", "CN元"],
@@ -475,7 +475,7 @@ class FiatCny extends FiatCurrency {
 class FiatCop extends FiatCurrency {
   const FiatCop()
       : super(
-          isoCode: "COP",
+          code: "COP",
           name: "Colombian Peso",
           symbol: r"$",
           disambiguateSymbol: r"COL$",
@@ -493,7 +493,7 @@ class FiatCop extends FiatCurrency {
 class FiatCrc extends FiatCurrency {
   const FiatCrc()
       : super(
-          isoCode: "CRC",
+          code: "CRC",
           name: "Costa Rican Colón",
           symbol: "₡",
           alternateSymbols: const ["¢"],
@@ -510,7 +510,7 @@ class FiatCrc extends FiatCurrency {
 class FiatCuc extends FiatCurrency {
   const FiatCuc()
       : super(
-          isoCode: "CUC",
+          code: "CUC",
           name: "Cuban Convertible Peso",
           symbol: r"$",
           disambiguateSymbol: r"CUC$",
@@ -523,7 +523,7 @@ class FiatCuc extends FiatCurrency {
 class FiatCup extends FiatCurrency {
   const FiatCup()
       : super(
-          isoCode: "CUP",
+          code: "CUP",
           name: "Cuban Peso",
           symbol: r"$",
           disambiguateSymbol: r"$MN",
@@ -538,7 +538,7 @@ class FiatCup extends FiatCurrency {
 class FiatCve extends FiatCurrency {
   const FiatCve()
       : super(
-          isoCode: "CVE",
+          code: "CVE",
           name: "Cape Verdean Escudo",
           symbol: r"$",
           disambiguateSymbol: "Esc",
@@ -552,7 +552,7 @@ class FiatCve extends FiatCurrency {
 class FiatCzk extends FiatCurrency {
   const FiatCzk()
       : super(
-          isoCode: "CZK",
+          code: "CZK",
           name: "Czech Koruna",
           symbol: "Kč",
           subunit: "Haléř",
@@ -566,7 +566,7 @@ class FiatCzk extends FiatCurrency {
 class FiatDjf extends FiatCurrency {
   const FiatDjf()
       : super(
-          isoCode: "DJF",
+          code: "DJF",
           name: "Djiboutian Franc",
           symbol: "Fdj",
           subunit: "Centime",
@@ -579,7 +579,7 @@ class FiatDjf extends FiatCurrency {
 class FiatDkk extends FiatCurrency {
   const FiatDkk()
       : super(
-          isoCode: "DKK",
+          code: "DKK",
           name: "Danish Krone",
           symbol: "kr.",
           disambiguateSymbol: "DKK",
@@ -595,7 +595,7 @@ class FiatDkk extends FiatCurrency {
 class FiatDop extends FiatCurrency {
   const FiatDop()
       : super(
-          isoCode: "DOP",
+          code: "DOP",
           name: "Dominican Peso",
           symbol: r"$",
           disambiguateSymbol: r"RD$",
@@ -611,7 +611,7 @@ class FiatDop extends FiatCurrency {
 class FiatDzd extends FiatCurrency {
   const FiatDzd()
       : super(
-          isoCode: "DZD",
+          code: "DZD",
           name: "Algerian Dinar",
           symbol: "د.ج",
           alternateSymbols: const ["DA"],
@@ -624,7 +624,7 @@ class FiatDzd extends FiatCurrency {
 class FiatEgp extends FiatCurrency {
   const FiatEgp()
       : super(
-          isoCode: "EGP",
+          code: "EGP",
           name: "Egyptian Pound",
           symbol: "ج.م",
           alternateSymbols: const ["LE", "E£", "L.E."],
@@ -639,7 +639,7 @@ class FiatEgp extends FiatCurrency {
 class FiatErn extends FiatCurrency {
   const FiatErn()
       : super(
-          isoCode: "ERN",
+          code: "ERN",
           name: "Eritrean Nakfa",
           symbol: "Nfk",
           subunit: "Cent",
@@ -650,7 +650,7 @@ class FiatErn extends FiatCurrency {
 class FiatEtb extends FiatCurrency {
   const FiatEtb()
       : super(
-          isoCode: "ETB",
+          code: "ETB",
           name: "Ethiopian Birr",
           symbol: "Br",
           disambiguateSymbol: "ETB",
@@ -663,7 +663,7 @@ class FiatEur extends FiatCurrency {
   const FiatEur({int? priority})
       : super(
           priority: priority ?? 2,
-          isoCode: "EUR",
+          code: "EUR",
           name: "Euro",
           symbol: "€",
           subunit: "Cent",
@@ -678,7 +678,7 @@ class FiatEur extends FiatCurrency {
 class FiatFjd extends FiatCurrency {
   const FiatFjd()
       : super(
-          isoCode: "FJD",
+          code: "FJD",
           name: "Fijian Dollar",
           symbol: r"$",
           disambiguateSymbol: r"FJ$",
@@ -693,7 +693,7 @@ class FiatFjd extends FiatCurrency {
 class FiatFkp extends FiatCurrency {
   const FiatFkp()
       : super(
-          isoCode: "FKP",
+          code: "FKP",
           name: "Falkland Pound",
           symbol: "£",
           disambiguateSymbol: "FK£",
@@ -708,7 +708,7 @@ class FiatGbp extends FiatCurrency {
   const FiatGbp({int? priority})
       : super(
           priority: priority ?? 3,
-          isoCode: "GBP",
+          code: "GBP",
           name: "British Pound",
           symbol: "£",
           subunit: "Penny",
@@ -721,7 +721,7 @@ class FiatGbp extends FiatCurrency {
 class FiatGel extends FiatCurrency {
   const FiatGel()
       : super(
-          isoCode: "GEL",
+          code: "GEL",
           name: "Georgian Lari",
           symbol: "₾",
           alternateSymbols: const ["lari"],
@@ -733,7 +733,7 @@ class FiatGel extends FiatCurrency {
 class FiatGhs extends FiatCurrency {
   const FiatGhs()
       : super(
-          isoCode: "GHS",
+          code: "GHS",
           name: "Ghanaian Cedi",
           symbol: "₵",
           alternateSymbols: const ["GH¢", "GH₵"],
@@ -747,7 +747,7 @@ class FiatGhs extends FiatCurrency {
 class FiatGip extends FiatCurrency {
   const FiatGip()
       : super(
-          isoCode: "GIP",
+          code: "GIP",
           name: "Gibraltar Pound",
           symbol: "£",
           disambiguateSymbol: "GIP",
@@ -761,7 +761,7 @@ class FiatGip extends FiatCurrency {
 class FiatGmd extends FiatCurrency {
   const FiatGmd()
       : super(
-          isoCode: "GMD",
+          code: "GMD",
           name: "Gambian Dalasi",
           symbol: "D",
           subunit: "Butut",
@@ -772,7 +772,7 @@ class FiatGmd extends FiatCurrency {
 class FiatGnf extends FiatCurrency {
   const FiatGnf()
       : super(
-          isoCode: "GNF",
+          code: "GNF",
           name: "Guinean Franc",
           symbol: "Fr",
           disambiguateSymbol: "FG",
@@ -787,7 +787,7 @@ class FiatGnf extends FiatCurrency {
 class FiatGtq extends FiatCurrency {
   const FiatGtq()
       : super(
-          isoCode: "GTQ",
+          code: "GTQ",
           name: "Guatemalan Quetzal",
           symbol: "Q",
           subunit: "Centavo",
@@ -799,7 +799,7 @@ class FiatGtq extends FiatCurrency {
 class FiatGyd extends FiatCurrency {
   const FiatGyd()
       : super(
-          isoCode: "GYD",
+          code: "GYD",
           name: "Guyanese Dollar",
           symbol: r"$",
           disambiguateSymbol: r"G$",
@@ -814,7 +814,7 @@ class FiatGyd extends FiatCurrency {
 class FiatHkd extends FiatCurrency {
   const FiatHkd()
       : super(
-          isoCode: "HKD",
+          code: "HKD",
           name: "Hong Kong Dollar",
           symbol: r"$",
           disambiguateSymbol: r"HK$",
@@ -830,7 +830,7 @@ class FiatHkd extends FiatCurrency {
 class FiatHnl extends FiatCurrency {
   const FiatHnl()
       : super(
-          isoCode: "HNL",
+          code: "HNL",
           name: "Honduran Lempira",
           symbol: "L",
           disambiguateSymbol: "HNL",
@@ -844,7 +844,7 @@ class FiatHnl extends FiatCurrency {
 class FiatHrk extends FiatCurrency {
   const FiatHrk()
       : super(
-          isoCode: "HRK",
+          code: "HRK",
           name: "Croatian Kuna",
           symbol: "kn",
           subunit: "Lipa",
@@ -857,7 +857,7 @@ class FiatHrk extends FiatCurrency {
 class FiatHtg extends FiatCurrency {
   const FiatHtg()
       : super(
-          isoCode: "HTG",
+          code: "HTG",
           name: "Haitian Gourde",
           symbol: "G",
           subunit: "Centime",
@@ -869,7 +869,7 @@ class FiatHtg extends FiatCurrency {
 class FiatHuf extends FiatCurrency {
   const FiatHuf()
       : super(
-          isoCode: "HUF",
+          code: "HUF",
           name: "Hungarian Forint",
           symbol: "Ft",
           subunitToUnit: 1,
@@ -883,7 +883,7 @@ class FiatHuf extends FiatCurrency {
 class FiatIdr extends FiatCurrency {
   const FiatIdr()
       : super(
-          isoCode: "IDR",
+          code: "IDR",
           name: "Indonesian Rupiah",
           symbol: "Rp",
           subunit: "Sen",
@@ -898,7 +898,7 @@ class FiatIdr extends FiatCurrency {
 class FiatIls extends FiatCurrency {
   const FiatIls()
       : super(
-          isoCode: "ILS",
+          code: "ILS",
           name: "Israeli New Sheqel",
           symbol: "₪",
           alternateSymbols: const ["ש״ח", "NIS"],
@@ -913,7 +913,7 @@ class FiatIls extends FiatCurrency {
 class FiatInr extends FiatCurrency {
   const FiatInr()
       : super(
-          isoCode: "INR",
+          code: "INR",
           name: "Indian Rupee",
           symbol: "₹",
           alternateSymbols: const ["Rs", "৳", "૱", "௹", "रु", "₨"],
@@ -928,7 +928,7 @@ class FiatInr extends FiatCurrency {
 class FiatIqd extends FiatCurrency {
   const FiatIqd()
       : super(
-          isoCode: "IQD",
+          code: "IQD",
           name: "Iraqi Dinar",
           symbol: "ع.د",
           subunit: "Fils",
@@ -941,7 +941,7 @@ class FiatIqd extends FiatCurrency {
 class FiatIrr extends FiatCurrency {
   const FiatIrr()
       : super(
-          isoCode: "IRR",
+          code: "IRR",
           name: "Iranian Rial",
           symbol: "﷼",
           subunit: null,
@@ -955,7 +955,7 @@ class FiatIrr extends FiatCurrency {
 class FiatIsk extends FiatCurrency {
   const FiatIsk()
       : super(
-          isoCode: "ISK",
+          code: "ISK",
           name: "Icelandic Króna",
           symbol: "kr.",
           alternateSymbols: const ["Íkr"],
@@ -970,7 +970,7 @@ class FiatIsk extends FiatCurrency {
 class FiatJmd extends FiatCurrency {
   const FiatJmd()
       : super(
-          isoCode: "JMD",
+          code: "JMD",
           name: "Jamaican Dollar",
           symbol: r"$",
           disambiguateSymbol: r"J$",
@@ -985,7 +985,7 @@ class FiatJmd extends FiatCurrency {
 class FiatJod extends FiatCurrency {
   const FiatJod()
       : super(
-          isoCode: "JOD",
+          code: "JOD",
           name: "Jordanian Dinar",
           symbol: "د.ا",
           alternateSymbols: const ["JD"],
@@ -1001,7 +1001,7 @@ class FiatJpy extends FiatCurrency {
   const FiatJpy({int? priority})
       : super(
           priority: priority ?? 6,
-          isoCode: "JPY",
+          code: "JPY",
           name: "Japanese Yen",
           symbol: "¥",
           alternateSymbols: const ["円", "圓"],
@@ -1016,7 +1016,7 @@ class FiatJpy extends FiatCurrency {
 class FiatKes extends FiatCurrency {
   const FiatKes()
       : super(
-          isoCode: "KES",
+          code: "KES",
           name: "Kenyan Shilling",
           symbol: "KSh",
           alternateSymbols: const ["Sh"],
@@ -1030,7 +1030,7 @@ class FiatKes extends FiatCurrency {
 class FiatKgs extends FiatCurrency {
   const FiatKgs()
       : super(
-          isoCode: "KGS",
+          code: "KGS",
           name: "Kyrgyzstani Som",
           symbol: "som",
           alternateSymbols: const ["сом"],
@@ -1042,7 +1042,7 @@ class FiatKgs extends FiatCurrency {
 class FiatKhr extends FiatCurrency {
   const FiatKhr()
       : super(
-          isoCode: "KHR",
+          code: "KHR",
           name: "Cambodian Riel",
           symbol: "៛",
           subunit: "Sen",
@@ -1055,7 +1055,7 @@ class FiatKhr extends FiatCurrency {
 class FiatKmf extends FiatCurrency {
   const FiatKmf()
       : super(
-          isoCode: "KMF",
+          code: "KMF",
           name: "Comorian Franc",
           symbol: "Fr",
           disambiguateSymbol: "CF",
@@ -1070,7 +1070,7 @@ class FiatKmf extends FiatCurrency {
 class FiatKpw extends FiatCurrency {
   const FiatKpw()
       : super(
-          isoCode: "KPW",
+          code: "KPW",
           name: "North Korean Won",
           symbol: "₩",
           subunit: "Chŏn",
@@ -1082,7 +1082,7 @@ class FiatKpw extends FiatCurrency {
 class FiatKrw extends FiatCurrency {
   const FiatKrw()
       : super(
-          isoCode: "KRW",
+          code: "KRW",
           name: "South Korean Won",
           symbol: "₩",
           subunit: null,
@@ -1096,7 +1096,7 @@ class FiatKrw extends FiatCurrency {
 class FiatKwd extends FiatCurrency {
   const FiatKwd()
       : super(
-          isoCode: "KWD",
+          code: "KWD",
           name: "Kuwaiti Dinar",
           symbol: "د.ك",
           alternateSymbols: const ["K.D."],
@@ -1111,7 +1111,7 @@ class FiatKwd extends FiatCurrency {
 class FiatKyd extends FiatCurrency {
   const FiatKyd()
       : super(
-          isoCode: "KYD",
+          code: "KYD",
           name: "Cayman Islands Dollar",
           symbol: r"$",
           disambiguateSymbol: r"CI$",
@@ -1126,7 +1126,7 @@ class FiatKyd extends FiatCurrency {
 class FiatKzt extends FiatCurrency {
   const FiatKzt()
       : super(
-          isoCode: "KZT",
+          code: "KZT",
           name: "Kazakhstani Tenge",
           symbol: "₸",
           subunit: "Tiyn",
@@ -1138,7 +1138,7 @@ class FiatKzt extends FiatCurrency {
 class FiatLak extends FiatCurrency {
   const FiatLak()
       : super(
-          isoCode: "LAK",
+          code: "LAK",
           name: "Lao Kip",
           symbol: "₭",
           alternateSymbols: const ["₭N"],
@@ -1152,7 +1152,7 @@ class FiatLak extends FiatCurrency {
 class FiatLbp extends FiatCurrency {
   const FiatLbp()
       : super(
-          isoCode: "LBP",
+          code: "LBP",
           name: "Lebanese Pound",
           symbol: "ل.ل",
           alternateSymbols: const ["£", "L£"],
@@ -1167,7 +1167,7 @@ class FiatLbp extends FiatCurrency {
 class FiatLkr extends FiatCurrency {
   const FiatLkr()
       : super(
-          isoCode: "LKR",
+          code: "LKR",
           name: "Sri Lankan Rupee",
           symbol: "₨",
           disambiguateSymbol: "SLRs",
@@ -1182,7 +1182,7 @@ class FiatLkr extends FiatCurrency {
 class FiatLrd extends FiatCurrency {
   const FiatLrd()
       : super(
-          isoCode: "LRD",
+          code: "LRD",
           name: "Liberian Dollar",
           symbol: r"$",
           disambiguateSymbol: r"L$",
@@ -1197,7 +1197,7 @@ class FiatLrd extends FiatCurrency {
 class FiatLsl extends FiatCurrency {
   const FiatLsl()
       : super(
-          isoCode: "LSL",
+          code: "LSL",
           name: "Lesotho Loti",
           symbol: "L",
           disambiguateSymbol: "M",
@@ -1210,7 +1210,7 @@ class FiatLsl extends FiatCurrency {
 class FiatLyd extends FiatCurrency {
   const FiatLyd()
       : super(
-          isoCode: "LYD",
+          code: "LYD",
           name: "Libyan Dinar",
           symbol: "ل.د",
           alternateSymbols: const ["LD"],
@@ -1224,7 +1224,7 @@ class FiatLyd extends FiatCurrency {
 class FiatMad extends FiatCurrency {
   const FiatMad()
       : super(
-          isoCode: "MAD",
+          code: "MAD",
           name: "Moroccan Dirham",
           symbol: "د.م.",
           subunit: "Centime",
@@ -1235,7 +1235,7 @@ class FiatMad extends FiatCurrency {
 class FiatMdl extends FiatCurrency {
   const FiatMdl()
       : super(
-          isoCode: "MDL",
+          code: "MDL",
           name: "Moldovan Leu",
           symbol: "L",
           alternateSymbols: const ["lei"],
@@ -1247,7 +1247,7 @@ class FiatMdl extends FiatCurrency {
 class FiatMga extends FiatCurrency {
   const FiatMga()
       : super(
-          isoCode: "MGA",
+          code: "MGA",
           name: "Malagasy Ariary",
           symbol: "Ar",
           subunit: "Iraimbilanja",
@@ -1260,7 +1260,7 @@ class FiatMga extends FiatCurrency {
 class FiatMkd extends FiatCurrency {
   const FiatMkd()
       : super(
-          isoCode: "MKD",
+          code: "MKD",
           name: "Macedonian Denar",
           symbol: "ден",
           subunit: "Deni",
@@ -1272,7 +1272,7 @@ class FiatMkd extends FiatCurrency {
 class FiatMmk extends FiatCurrency {
   const FiatMmk()
       : super(
-          isoCode: "MMK",
+          code: "MMK",
           name: "Myanmar Kyat",
           symbol: "K",
           disambiguateSymbol: "MMK",
@@ -1285,7 +1285,7 @@ class FiatMmk extends FiatCurrency {
 class FiatMnt extends FiatCurrency {
   const FiatMnt()
       : super(
-          isoCode: "MNT",
+          code: "MNT",
           name: "Mongolian Tögrög",
           symbol: "₮",
           subunit: "Möngö",
@@ -1298,7 +1298,7 @@ class FiatMnt extends FiatCurrency {
 class FiatMop extends FiatCurrency {
   const FiatMop()
       : super(
-          isoCode: "MOP",
+          code: "MOP",
           name: "Macanese Pataca",
           symbol: "P",
           alternateSymbols: const [r"MOP$"],
@@ -1311,7 +1311,7 @@ class FiatMop extends FiatCurrency {
 class FiatMru extends FiatCurrency {
   const FiatMru()
       : super(
-          isoCode: "MRU",
+          code: "MRU",
           name: "Mauritanian Ouguiya",
           symbol: "UM",
           subunit: "Khoums",
@@ -1323,7 +1323,7 @@ class FiatMru extends FiatCurrency {
 class FiatMur extends FiatCurrency {
   const FiatMur()
       : super(
-          isoCode: "MUR",
+          code: "MUR",
           name: "Mauritian Rupee",
           symbol: "₨",
           subunit: "Cent",
@@ -1337,7 +1337,7 @@ class FiatMur extends FiatCurrency {
 class FiatMvr extends FiatCurrency {
   const FiatMvr()
       : super(
-          isoCode: "MVR",
+          code: "MVR",
           name: "Maldivian Rufiyaa",
           alternateSymbols: const ["MRF", "Rf", "/-", "ރ"],
           subunit: "Laari",
@@ -1348,7 +1348,7 @@ class FiatMvr extends FiatCurrency {
 class FiatMwk extends FiatCurrency {
   const FiatMwk()
       : super(
-          isoCode: "MWK",
+          code: "MWK",
           name: "Malawian Kwacha",
           symbol: "MK",
           subunit: "Tambala",
@@ -1359,7 +1359,7 @@ class FiatMwk extends FiatCurrency {
 class FiatMxn extends FiatCurrency {
   const FiatMxn()
       : super(
-          isoCode: "MXN",
+          code: "MXN",
           name: "Mexican Peso",
           symbol: r"$",
           disambiguateSymbol: r"MEX$",
@@ -1375,7 +1375,7 @@ class FiatMxn extends FiatCurrency {
 class FiatMyr extends FiatCurrency {
   const FiatMyr()
       : super(
-          isoCode: "MYR",
+          code: "MYR",
           name: "Malaysian Ringgit",
           symbol: "RM",
           subunit: "Sen",
@@ -1388,7 +1388,7 @@ class FiatMyr extends FiatCurrency {
 class FiatMzn extends FiatCurrency {
   const FiatMzn()
       : super(
-          isoCode: "MZN",
+          code: "MZN",
           name: "Mozambican Metical",
           symbol: "MTn",
           alternateSymbols: const ["MZN"],
@@ -1403,7 +1403,7 @@ class FiatMzn extends FiatCurrency {
 class FiatNad extends FiatCurrency {
   const FiatNad()
       : super(
-          isoCode: "NAD",
+          code: "NAD",
           name: "Namibian Dollar",
           symbol: r"$",
           disambiguateSymbol: r"N$",
@@ -1418,7 +1418,7 @@ class FiatNad extends FiatCurrency {
 class FiatNgn extends FiatCurrency {
   const FiatNgn()
       : super(
-          isoCode: "NGN",
+          code: "NGN",
           name: "Nigerian Naira",
           symbol: "₦",
           subunit: "Kobo",
@@ -1432,7 +1432,7 @@ class FiatNgn extends FiatCurrency {
 class FiatNio extends FiatCurrency {
   const FiatNio()
       : super(
-          isoCode: "NIO",
+          code: "NIO",
           name: "Nicaraguan Córdoba",
           symbol: r"C$",
           disambiguateSymbol: r"NIO$",
@@ -1446,7 +1446,7 @@ class FiatNio extends FiatCurrency {
 class FiatNok extends FiatCurrency {
   const FiatNok()
       : super(
-          isoCode: "NOK",
+          code: "NOK",
           name: "Norwegian Krone",
           symbol: "kr",
           disambiguateSymbol: "NOK",
@@ -1463,7 +1463,7 @@ class FiatNok extends FiatCurrency {
 class FiatNpr extends FiatCurrency {
   const FiatNpr()
       : super(
-          isoCode: "NPR",
+          code: "NPR",
           name: "Nepalese Rupee",
           symbol: "Rs.",
           disambiguateSymbol: "NPR",
@@ -1478,7 +1478,7 @@ class FiatNpr extends FiatCurrency {
 class FiatNzd extends FiatCurrency {
   const FiatNzd()
       : super(
-          isoCode: "NZD",
+          code: "NZD",
           name: "New Zealand Dollar",
           symbol: r"$",
           disambiguateSymbol: r"NZ$",
@@ -1494,7 +1494,7 @@ class FiatNzd extends FiatCurrency {
 class FiatOmr extends FiatCurrency {
   const FiatOmr()
       : super(
-          isoCode: "OMR",
+          code: "OMR",
           name: "Omani Rial",
           symbol: "ر.ع.",
           subunit: "Baisa",
@@ -1509,7 +1509,7 @@ class FiatOmr extends FiatCurrency {
 class FiatPab extends FiatCurrency {
   const FiatPab()
       : super(
-          isoCode: "PAB",
+          code: "PAB",
           name: "Panamanian Balboa",
           symbol: "B/.",
           subunit: "Centésimo",
@@ -1521,7 +1521,7 @@ class FiatPab extends FiatCurrency {
 class FiatPen extends FiatCurrency {
   const FiatPen()
       : super(
-          isoCode: "PEN",
+          code: "PEN",
           name: "Peruvian Sol",
           symbol: "S/",
           subunit: "Céntimo",
@@ -1534,7 +1534,7 @@ class FiatPen extends FiatCurrency {
 class FiatPgk extends FiatCurrency {
   const FiatPgk()
       : super(
-          isoCode: "PGK",
+          code: "PGK",
           name: "Papua New Guinean Kina",
           symbol: "K",
           disambiguateSymbol: "PGK",
@@ -1547,7 +1547,7 @@ class FiatPgk extends FiatCurrency {
 class FiatPhp extends FiatCurrency {
   const FiatPhp()
       : super(
-          isoCode: "PHP",
+          code: "PHP",
           name: "Philippine Peso",
           symbol: "₱",
           alternateSymbols: const ["PHP", "PhP", "P"],
@@ -1561,7 +1561,7 @@ class FiatPhp extends FiatCurrency {
 class FiatPkr extends FiatCurrency {
   const FiatPkr()
       : super(
-          isoCode: "PKR",
+          code: "PKR",
           name: "Pakistani Rupee",
           symbol: "₨",
           disambiguateSymbol: "PKR",
@@ -1577,7 +1577,7 @@ class FiatPkr extends FiatCurrency {
 class FiatPln extends FiatCurrency {
   const FiatPln()
       : super(
-          isoCode: "PLN",
+          code: "PLN",
           name: "Polish Złoty",
           symbol: "zł",
           subunit: "Grosz",
@@ -1591,7 +1591,7 @@ class FiatPln extends FiatCurrency {
 class FiatPyg extends FiatCurrency {
   const FiatPyg()
       : super(
-          isoCode: "PYG",
+          code: "PYG",
           name: "Paraguayan Guaraní",
           symbol: "₲",
           subunit: "Céntimo",
@@ -1606,7 +1606,7 @@ class FiatPyg extends FiatCurrency {
 class FiatZqar extends FiatCurrency {
   const FiatZqar()
       : super(
-          isoCode: "QAR",
+          code: "QAR",
           name: "Qatari Riyal",
           symbol: "ر.ق",
           alternateSymbols: const ["QR"],
@@ -1619,7 +1619,7 @@ class FiatZqar extends FiatCurrency {
 class FiatRon extends FiatCurrency {
   const FiatRon()
       : super(
-          isoCode: "RON",
+          code: "RON",
           name: "Romanian Leu",
           symbol: "Lei",
           subunit: "Bani",
@@ -1632,7 +1632,7 @@ class FiatRon extends FiatCurrency {
 class FiatRsd extends FiatCurrency {
   const FiatRsd()
       : super(
-          isoCode: "RSD",
+          code: "RSD",
           name: "Serbian Dinar",
           symbol: "РСД",
           alternateSymbols: const ["RSD", "din", "дин"],
@@ -1646,7 +1646,7 @@ class FiatRsd extends FiatCurrency {
 class FiatRub extends FiatCurrency {
   const FiatRub()
       : super(
-          isoCode: "RUB",
+          code: "RUB",
           name: "Russian Ruble",
           symbol: "₽",
           alternateSymbols: const ["руб.", "р."],
@@ -1661,7 +1661,7 @@ class FiatRub extends FiatCurrency {
 class FiatRwf extends FiatCurrency {
   const FiatRwf()
       : super(
-          isoCode: "RWF",
+          code: "RWF",
           name: "Rwandan Franc",
           symbol: "FRw",
           alternateSymbols: const ["RF", "R₣"],
@@ -1675,7 +1675,7 @@ class FiatRwf extends FiatCurrency {
 class FiatSar extends FiatCurrency {
   const FiatSar()
       : super(
-          isoCode: "SAR",
+          code: "SAR",
           name: "Saudi Riyal",
           symbol: "ر.س",
           alternateSymbols: const ["SR", "﷼"],
@@ -1690,7 +1690,7 @@ class FiatSar extends FiatCurrency {
 class FiatSbd extends FiatCurrency {
   const FiatSbd()
       : super(
-          isoCode: "SBD",
+          code: "SBD",
           name: "Solomon Islands Dollar",
           symbol: r"$",
           disambiguateSymbol: r"SI$",
@@ -1705,7 +1705,7 @@ class FiatSbd extends FiatCurrency {
 class FiatScr extends FiatCurrency {
   const FiatScr()
       : super(
-          isoCode: "SCR",
+          code: "SCR",
           name: "Seychellois Rupee",
           symbol: "₨",
           disambiguateSymbol: "SRe",
@@ -1719,7 +1719,7 @@ class FiatScr extends FiatCurrency {
 class FiatSdg extends FiatCurrency {
   const FiatSdg()
       : super(
-          isoCode: "SDG",
+          code: "SDG",
           name: "Sudanese Pound",
           symbol: "£",
           disambiguateSymbol: "SDG",
@@ -1732,7 +1732,7 @@ class FiatSdg extends FiatCurrency {
 class FiatSek extends FiatCurrency {
   const FiatSek()
       : super(
-          isoCode: "SEK",
+          code: "SEK",
           name: "Swedish Krona",
           symbol: "kr",
           disambiguateSymbol: "SEK",
@@ -1748,7 +1748,7 @@ class FiatSek extends FiatCurrency {
 class FiatSgd extends FiatCurrency {
   const FiatSgd()
       : super(
-          isoCode: "SGD",
+          code: "SGD",
           name: "Singapore Dollar",
           symbol: r"$",
           disambiguateSymbol: r"S$",
@@ -1763,7 +1763,7 @@ class FiatSgd extends FiatCurrency {
 class FiatShp extends FiatCurrency {
   const FiatShp()
       : super(
-          isoCode: "SHP",
+          code: "SHP",
           name: "Saint Helenian Pound",
           symbol: "£",
           disambiguateSymbol: "SHP",
@@ -1776,7 +1776,7 @@ class FiatShp extends FiatCurrency {
 class FiatSkk extends FiatCurrency {
   const FiatSkk()
       : super(
-          isoCode: "SKK",
+          code: "SKK",
           name: "Slovak Koruna",
           symbol: "Sk",
           subunit: "Halier",
@@ -1789,7 +1789,7 @@ class FiatSkk extends FiatCurrency {
 class FiatSle extends FiatCurrency {
   const FiatSle()
       : super(
-          isoCode: "SLE",
+          code: "SLE",
           name: "New Leone",
           symbol: "Le",
           subunit: "Cent",
@@ -1801,7 +1801,7 @@ class FiatSle extends FiatCurrency {
 class FiatSll extends FiatCurrency {
   const FiatSll()
       : super(
-          isoCode: "SLL",
+          code: "SLL",
           name: "Sierra Leonean Leone",
           symbol: "Le",
           disambiguateSymbol: "SLL",
@@ -1814,7 +1814,7 @@ class FiatSll extends FiatCurrency {
 class FiatSos extends FiatCurrency {
   const FiatSos()
       : super(
-          isoCode: "SOS",
+          code: "SOS",
           name: "Somali Shilling",
           symbol: "Sh",
           alternateSymbols: const ["Sh.So"],
@@ -1826,7 +1826,7 @@ class FiatSos extends FiatCurrency {
 class FiatSrd extends FiatCurrency {
   const FiatSrd()
       : super(
-          isoCode: "SRD",
+          code: "SRD",
           name: "Surinamese Dollar",
           symbol: r"$",
           disambiguateSymbol: "SRD",
@@ -1838,7 +1838,7 @@ class FiatSrd extends FiatCurrency {
 class FiatSsp extends FiatCurrency {
   const FiatSsp()
       : super(
-          isoCode: "SSP",
+          code: "SSP",
           name: "South Sudanese Pound",
           symbol: "£",
           disambiguateSymbol: "SSP",
@@ -1852,7 +1852,7 @@ class FiatSsp extends FiatCurrency {
 class FiatStd extends FiatCurrency {
   const FiatStd()
       : super(
-          isoCode: "STD",
+          code: "STD",
           name: "São Tomé and Príncipe Dobra",
           symbol: "Db",
           subunit: "Cêntimo",
@@ -1864,7 +1864,7 @@ class FiatStd extends FiatCurrency {
 class FiatStn extends FiatCurrency {
   const FiatStn()
       : super(
-          isoCode: "STN",
+          code: "STN",
           name: "São Tomé and Príncipe Second Dobra",
           symbol: "Db",
           disambiguateSymbol: "STN",
@@ -1877,7 +1877,7 @@ class FiatStn extends FiatCurrency {
 class FiatSvc extends FiatCurrency {
   const FiatSvc()
       : super(
-          isoCode: "SVC",
+          code: "SVC",
           name: "Salvadoran Colón",
           symbol: "₡",
           alternateSymbols: const ["¢"],
@@ -1891,7 +1891,7 @@ class FiatSvc extends FiatCurrency {
 class FiatSyp extends FiatCurrency {
   const FiatSyp()
       : super(
-          isoCode: "SYP",
+          code: "SYP",
           name: "Syrian Pound",
           symbol: "£S",
           alternateSymbols: const ["£", "ل.س", "LS", "الليرة السورية"],
@@ -1905,7 +1905,7 @@ class FiatSyp extends FiatCurrency {
 class FiatSzl extends FiatCurrency {
   const FiatSzl()
       : super(
-          isoCode: "SZL",
+          code: "SZL",
           name: "Swazi Lilangeni",
           symbol: "E",
           disambiguateSymbol: "SZL",
@@ -1918,7 +1918,7 @@ class FiatSzl extends FiatCurrency {
 class FiatThb extends FiatCurrency {
   const FiatThb()
       : super(
-          isoCode: "THB",
+          code: "THB",
           name: "Thai Baht",
           symbol: "฿",
           subunit: "Satang",
@@ -1931,7 +1931,7 @@ class FiatThb extends FiatCurrency {
 class FiatTjs extends FiatCurrency {
   const FiatTjs()
       : super(
-          isoCode: "TJS",
+          code: "TJS",
           name: "Tajikistani Somoni",
           symbol: "ЅМ",
           subunit: "Diram",
@@ -1942,7 +1942,7 @@ class FiatTjs extends FiatCurrency {
 class FiatTmt extends FiatCurrency {
   const FiatTmt()
       : super(
-          isoCode: "TMT",
+          code: "TMT",
           name: "Turkmenistani Manat",
           symbol: "T",
           subunit: "Tenge",
@@ -1953,7 +1953,7 @@ class FiatTmt extends FiatCurrency {
 class FiatTnd extends FiatCurrency {
   const FiatTnd()
       : super(
-          isoCode: "TND",
+          code: "TND",
           name: "Tunisian Dinar",
           symbol: "د.ت",
           alternateSymbols: const ["TD", "DT"],
@@ -1967,7 +1967,7 @@ class FiatTnd extends FiatCurrency {
 class FiatTop extends FiatCurrency {
   const FiatTop()
       : super(
-          isoCode: "TOP",
+          code: "TOP",
           name: "Tongan Paʻanga",
           symbol: r"T$",
           alternateSymbols: const ["PT"],
@@ -1980,7 +1980,7 @@ class FiatTop extends FiatCurrency {
 class FiatTry extends FiatCurrency {
   const FiatTry()
       : super(
-          isoCode: "TRY",
+          code: "TRY",
           name: "Turkish Lira",
           symbol: "₺",
           alternateSymbols: const ["TL"],
@@ -1996,7 +1996,7 @@ class FiatTry extends FiatCurrency {
 class FiatTtd extends FiatCurrency {
   const FiatTtd()
       : super(
-          isoCode: "TTD",
+          code: "TTD",
           name: "Trinidad and Tobago Dollar",
           symbol: r"$",
           disambiguateSymbol: r"TT$",
@@ -2010,7 +2010,7 @@ class FiatTtd extends FiatCurrency {
 class FiatTwd extends FiatCurrency {
   const FiatTwd()
       : super(
-          isoCode: "TWD",
+          code: "TWD",
           name: "New Taiwan Dollar",
           symbol: r"$",
           disambiguateSymbol: r"NT$",
@@ -2026,7 +2026,7 @@ class FiatTwd extends FiatCurrency {
 class FiatTzs extends FiatCurrency {
   const FiatTzs()
       : super(
-          isoCode: "TZS",
+          code: "TZS",
           name: "Tanzanian Shilling",
           symbol: "Sh",
           subunit: "Cent",
@@ -2039,7 +2039,7 @@ class FiatTzs extends FiatCurrency {
 class FiatUah extends FiatCurrency {
   const FiatUah()
       : super(
-          isoCode: "UAH",
+          code: "UAH",
           name: "Ukrainian Hryvnia",
           symbol: "₴",
           subunit: "Kopiyka",
@@ -2051,7 +2051,7 @@ class FiatUah extends FiatCurrency {
 class FiatUgx extends FiatCurrency {
   const FiatUgx()
       : super(
-          isoCode: "UGX",
+          code: "UGX",
           name: "Ugandan Shilling",
           symbol: "USh",
           subunit: "Cent",
@@ -2065,7 +2065,7 @@ class FiatUsd extends FiatCurrency {
   const FiatUsd({int? priority})
       : super(
           priority: priority ?? 1,
-          isoCode: "USD",
+          code: "USD",
           name: "United States Dollar",
           symbol: r"$",
           disambiguateSymbol: r"US$",
@@ -2080,7 +2080,7 @@ class FiatUsd extends FiatCurrency {
 class FiatUyu extends FiatCurrency {
   const FiatUyu()
       : super(
-          isoCode: "UYU",
+          code: "UYU",
           name: "Uruguayan Peso",
           symbol: r"$U",
           alternateSymbols: const [r"$U"],
@@ -2097,7 +2097,7 @@ class FiatUyu extends FiatCurrency {
 class FiatUzs extends FiatCurrency {
   const FiatUzs()
       : super(
-          isoCode: "UZS",
+          code: "UZS",
           name: "Uzbekistan Som",
           symbol: "so'm",
           alternateSymbols: const ["so‘m", "сўм", "сум", "s", "с"],
@@ -2110,7 +2110,7 @@ class FiatUzs extends FiatCurrency {
 class FiatVes extends FiatCurrency {
   const FiatVes()
       : super(
-          isoCode: "VES",
+          code: "VES",
           name: "Venezuelan Bolívar Soberano",
           symbol: "Bs",
           alternateSymbols: const ["Bs.S"],
@@ -2125,7 +2125,7 @@ class FiatVes extends FiatCurrency {
 class FiatVnd extends FiatCurrency {
   const FiatVnd()
       : super(
-          isoCode: "VND",
+          code: "VND",
           name: "Vietnamese Đồng",
           symbol: "₫",
           subunit: "Hào",
@@ -2141,7 +2141,7 @@ class FiatVnd extends FiatCurrency {
 class FiatVuv extends FiatCurrency {
   const FiatVuv()
       : super(
-          isoCode: "VUV",
+          code: "VUV",
           name: "Vanuatu Vatu",
           symbol: "Vt",
           subunit: null,
@@ -2154,7 +2154,7 @@ class FiatVuv extends FiatCurrency {
 class FiatWst extends FiatCurrency {
   const FiatWst()
       : super(
-          isoCode: "WST",
+          code: "WST",
           name: "Samoan Tala",
           symbol: "T",
           disambiguateSymbol: r"WS$",
@@ -2168,7 +2168,7 @@ class FiatWst extends FiatCurrency {
 class FiatXaf extends FiatCurrency {
   const FiatXaf()
       : super(
-          isoCode: "XAF",
+          code: "XAF",
           name: "Central African Cfa Franc",
           symbol: "CFA",
           disambiguateSymbol: "FCFA",
@@ -2183,7 +2183,7 @@ class FiatXaf extends FiatCurrency {
 class FiatXag extends FiatCurrency {
   const FiatXag()
       : super(
-          isoCode: "XAG",
+          code: "XAG",
           name: "Silver (Troy Ounce)",
           symbol: "oz t",
           disambiguateSymbol: "XAG",
@@ -2197,7 +2197,7 @@ class FiatXag extends FiatCurrency {
 class FiatXau extends FiatCurrency {
   const FiatXau()
       : super(
-          isoCode: "XAU",
+          code: "XAU",
           name: "Gold (Troy Ounce)",
           symbol: "oz t",
           disambiguateSymbol: "XAU",
@@ -2211,7 +2211,7 @@ class FiatXau extends FiatCurrency {
 class FiatXba extends FiatCurrency {
   const FiatXba()
       : super(
-          isoCode: "XBA",
+          code: "XBA",
           name: "European Composite Unit",
           disambiguateSymbol: "XBA",
           subunitToUnit: 1,
@@ -2223,7 +2223,7 @@ class FiatXba extends FiatCurrency {
 class FiatXbb extends FiatCurrency {
   const FiatXbb()
       : super(
-          isoCode: "XBB",
+          code: "XBB",
           name: "European Monetary Unit",
           disambiguateSymbol: "XBB",
           subunitToUnit: 1,
@@ -2235,7 +2235,7 @@ class FiatXbb extends FiatCurrency {
 class FiatXbc extends FiatCurrency {
   const FiatXbc()
       : super(
-          isoCode: "XBC",
+          code: "XBC",
           name: "European Unit of Account 9",
           disambiguateSymbol: "XBC",
           subunitToUnit: 1,
@@ -2247,7 +2247,7 @@ class FiatXbc extends FiatCurrency {
 class FiatXbd extends FiatCurrency {
   const FiatXbd()
       : super(
-          isoCode: "XBD",
+          code: "XBD",
           name: "European Unit of Account 17",
           disambiguateSymbol: "XBD",
           subunitToUnit: 1,
@@ -2259,7 +2259,7 @@ class FiatXbd extends FiatCurrency {
 class FiatXcd extends FiatCurrency {
   const FiatXcd()
       : super(
-          isoCode: "XCD",
+          code: "XCD",
           name: "East Caribbean Dollar",
           symbol: r"$",
           disambiguateSymbol: r"EX$",
@@ -2274,7 +2274,7 @@ class FiatXcd extends FiatCurrency {
 class FiatXdr extends FiatCurrency {
   const FiatXdr()
       : super(
-          isoCode: "XDR",
+          code: "XDR",
           name: "Special Drawing Rights",
           symbol: "SDR",
           alternateSymbols: const ["XDR"],
@@ -2288,7 +2288,7 @@ class FiatXdr extends FiatCurrency {
 class FiatXof extends FiatCurrency {
   const FiatXof()
       : super(
-          isoCode: "XOF",
+          code: "XOF",
           name: "West African Cfa Franc",
           symbol: "Fr",
           disambiguateSymbol: "CFA",
@@ -2303,7 +2303,7 @@ class FiatXof extends FiatCurrency {
 class FiatXpd extends FiatCurrency {
   const FiatXpd()
       : super(
-          isoCode: "XPD",
+          code: "XPD",
           name: "Palladium",
           symbol: "oz t",
           disambiguateSymbol: "XPD",
@@ -2317,7 +2317,7 @@ class FiatXpd extends FiatCurrency {
 class FiatXpf extends FiatCurrency {
   const FiatXpf()
       : super(
-          isoCode: "XPF",
+          code: "XPF",
           name: "Cfp Franc",
           symbol: "Fr",
           alternateSymbols: const ["F"],
@@ -2331,7 +2331,7 @@ class FiatXpf extends FiatCurrency {
 class FiatXpt extends FiatCurrency {
   const FiatXpt()
       : super(
-          isoCode: "XPT",
+          code: "XPT",
           name: "Platinum",
           symbol: "oz t",
           subunitToUnit: 1,
@@ -2343,7 +2343,7 @@ class FiatXpt extends FiatCurrency {
 class FiatXts extends FiatCurrency {
   const FiatXts()
       : super(
-          isoCode: "XTS",
+          code: "XTS",
           name: "Codes specifically reserved for testing purposes",
           subunitToUnit: 1,
           isoNumeric: "963",
@@ -2354,7 +2354,7 @@ class FiatXts extends FiatCurrency {
 class FiatYer extends FiatCurrency {
   const FiatYer()
       : super(
-          isoCode: "YER",
+          code: "YER",
           name: "Yemeni Rial",
           symbol: "﷼",
           subunit: "Fils",
@@ -2367,7 +2367,7 @@ class FiatYer extends FiatCurrency {
 class FiatZar extends FiatCurrency {
   const FiatZar()
       : super(
-          isoCode: "ZAR",
+          code: "ZAR",
           name: "South African Rand",
           symbol: "R",
           subunit: "Cent",
@@ -2383,7 +2383,7 @@ class FiatZar extends FiatCurrency {
 class FiatZmk extends FiatCurrency {
   const FiatZmk()
       : super(
-          isoCode: "ZMK",
+          code: "ZMK",
           name: "Zambian Kwacha",
           symbol: "ZK",
           disambiguateSymbol: "ZMK",
@@ -2396,7 +2396,7 @@ class FiatZmk extends FiatCurrency {
 class FiatZmw extends FiatCurrency {
   const FiatZmw()
       : super(
-          isoCode: "ZMW",
+          code: "ZMW",
           name: "Zambian Kwacha",
           symbol: "K",
           disambiguateSymbol: "ZMW",

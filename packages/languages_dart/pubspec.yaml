@@ -1,0 +1,11 @@
+name: languages_dart
+description: A starting point for Dart libraries or applications.
+version: 0.0.1
+
+environment:
+  sdk: '>=3.0.0-55 <4.0.0'
+
+dev_dependencies:
+  dart_code_metrics: ^5.3.0 # Flutter Favorite
+  lints: ^2.0.1 # From Google
+  test: ^1.22.1 # From Google

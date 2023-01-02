@@ -2,7 +2,7 @@ part of "currency.dart";
 
 class FiatCurrency extends Currency {
   const FiatCurrency({
-    required String isoCode,
+    required String code,
     required super.name,
     required this.isoNumeric,
     this.alternateSymbols,
@@ -12,17 +12,17 @@ class FiatCurrency extends Currency {
     this.smallestDenomination = 1,
     this.subunit,
     this.subunitToUnit = 100,
-    this.symbol,
+    super.symbol,
     this.unitFirst = false,
     super.decimalMark = ".",
     super.thousandsSeparator = ",",
-  }) : super(isoCode);
+  }) : super(code);
 
   factory FiatCurrency.fromMap(Map<String, Object?> data) => FiatCurrency(
-        isoCode: data["iso_code"]! as String,
+        code: data["code"]! as String,
         name: data["name"]! as String,
         isoNumeric: data["iso_numeric"] as String?,
-        alternateSymbols: data["alternate_symbols"] as List<String>?,
+        alternateSymbols: data["alternate_symbols"] as List<String>?, // TODO!
         disambiguateSymbol: data["disambiguate_symbol"] as String?,
         htmlEntity: data["html_entity"] as String?,
         priority: data["priority"]! as int,
@@ -50,16 +50,15 @@ class FiatCurrency extends Currency {
   final int smallestDenomination;
   final String? subunit;
   final int subunitToUnit;
-  final String? symbol;
   final bool unitFirst;
 
   @override
   String toString() =>
-      """FiatCurrency(isoCode: $code, priority: $priority, name: $name, symbol: $symbol, disambiguateSymbol: $disambiguateSymbol, alternateSymbols: $alternateSymbols, subunit: $subunit, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, htmlEntity: $htmlEntity, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator, isoNumeric: $isoNumeric, smallestDenomination: $smallestDenomination)""";
+      """FiatCurrency(code: $code, priority: $priority, name: $name, symbol: $symbol, disambiguateSymbol: $disambiguateSymbol, alternateSymbols: $alternateSymbols, subunit: $subunit, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, htmlEntity: $htmlEntity, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator, isoNumeric: $isoNumeric, smallestDenomination: $smallestDenomination)""";
 
   @override
   Map<String, Object?> toMap() => {
-        "iso_code": code,
+        "code": code,
         "priority": priority,
         "name": name,
         "symbol": symbol,
