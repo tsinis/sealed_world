@@ -49,6 +49,7 @@ doc/api/
 .project
 .settings/
 .vscode/*
+**/.vscode/*
 
 # Flutter repo-specific
 /bin/cache/
@@ -113,3 +114,6 @@ coverage_badge.svg
 .test_coverage.dart
 *.lcov
 nohup.out
+
+# Other
+**/json/*
