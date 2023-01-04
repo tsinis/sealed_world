@@ -8,6 +8,7 @@ on:
       - edited
 
 permissions:
+  contents: read
   pull-requests: write
 
 jobs:
@@ -29,7 +30,7 @@ jobs:
     timeout-minutes: 4
     steps:
       - name: Author Assign
-        uses: toshimaru/auto-author-assign@v1.6.1
+        uses: toshimaru/auto-author-assign@v1.6.2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
