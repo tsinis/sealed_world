@@ -14,6 +14,7 @@ class CryptoCurrency extends Currency {
         name: data["name"]! as String,
         decimalMark: data["decimal_mark"]! as String,
         thousandsSeparator: data["thousands_separator"]! as String,
+        symbol: data["symbol"] as String?,
       );
 
   /// `dart:convert`
@@ -25,12 +26,4 @@ class CryptoCurrency extends Currency {
   @override
   String toString() =>
       """CryptoCurrency(code: $code, name: $name, symbol: $symbol, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator)""";
-
-  @override
-  Map<String, Object?> toMap() => {
-        "code": code,
-        "name": name,
-        "decimal_mark": decimalMark,
-        "thousands_separator": thousandsSeparator,
-      };
 }

@@ -22,7 +22,13 @@ sealed class Currency {
   String toString() =>
       """Currency(code: $code, name: $name, symbol: $symbol, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator)""";
 
-  Map<String, Object?> toMap();
+  Map<String, Object?> toMap() => {
+        "code": code,
+        "name": name,
+        "symbol": symbol,
+        "decimal_mark": decimalMark,
+        "thousands_separator": thousandsSeparator,
+      };
 
   /// `dart:convert`
   ///
