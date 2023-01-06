@@ -22,23 +22,6 @@ sealed class Currency {
   String toString() =>
       """Currency(code: $code, name: $name, symbol: $symbol, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator)""";
 
-
-  // TODO!: Not working in Dart 3.0.0-55.
-  // @override
-  // bool operator ==(Object other) {
-  //   if (identical(other, this)) {
-  //     return true;
-  //   }
-  //   if (other is! FiatCurrency) {
-  //     return false;
-  //   }
-
-  //   return other.code == code;
-  // }
-
-  @override
-  int get hashCode => code.hashCode;
-
   Map<String, Object?> toMap();
 
   /// `dart:convert`

@@ -102,9 +102,9 @@ class FiatArs extends FiatCurrency {
 }
 
 class FiatAud extends FiatCurrency {
-  const FiatAud({int? priority})
+  const FiatAud()
       : super(
-          priority: priority ?? 4,
+          priority: 4,
           code: "AUD",
           name: "Australian Dollar",
           symbol: r"$",
@@ -346,9 +346,9 @@ class FiatByn extends FiatCurrency {
 }
 
 class FiatByr extends FiatCurrency {
-  const FiatByr({int? priority})
+  const FiatByr()
       : super(
-          priority: priority ?? 50,
+          priority: 50,
           code: "BYR",
           name: "Belarusian Ruble",
           symbol: "Br",
@@ -379,9 +379,9 @@ class FiatBzd extends FiatCurrency {
 }
 
 class FiatCad extends FiatCurrency {
-  const FiatCad({int? priority})
+  const FiatCad()
       : super(
-          priority: priority ?? 5,
+          priority: 5,
           code: "CAD",
           name: "Canadian Dollar",
           symbol: r"$",
@@ -660,9 +660,9 @@ class FiatEtb extends FiatCurrency {
 }
 
 class FiatEur extends FiatCurrency {
-  const FiatEur({int? priority})
+  const FiatEur()
       : super(
-          priority: priority ?? 2,
+          priority: 2,
           code: "EUR",
           name: "Euro",
           symbol: "€",
@@ -705,9 +705,9 @@ class FiatFkp extends FiatCurrency {
 }
 
 class FiatGbp extends FiatCurrency {
-  const FiatGbp({int? priority})
+  const FiatGbp()
       : super(
-          priority: priority ?? 3,
+          priority: 3,
           code: "GBP",
           name: "British Pound",
           symbol: "£",
@@ -998,9 +998,9 @@ class FiatJod extends FiatCurrency {
 }
 
 class FiatJpy extends FiatCurrency {
-  const FiatJpy({int? priority})
+  const FiatJpy()
       : super(
-          priority: priority ?? 6,
+          priority: 6,
           code: "JPY",
           name: "Japanese Yen",
           symbol: "¥",
@@ -2062,9 +2062,9 @@ class FiatUgx extends FiatCurrency {
 }
 
 class FiatUsd extends FiatCurrency {
-  const FiatUsd({int? priority})
+  const FiatUsd()
       : super(
-          priority: priority ?? 1,
+          priority: 1,
           code: "USD",
           name: "United States Dollar",
           symbol: r"$",

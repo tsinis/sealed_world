@@ -78,7 +78,6 @@ dart_code_metrics:
         exclude:
           - test/**
           - lib/**/constants.dart
-          - integration_test/**
     - member-ordering:
         order:
           - constructors
@@ -144,6 +143,7 @@ dart_code_metrics:
     - prefer-single-widget-per-file: false
     - prefer-using-list-view: false
     - provide-correct-intl-args: false
+    - use-setstate-synchronously: false
 
 linter:
   rules:

@@ -15,22 +15,6 @@ sealed class Language {
   @override
   String toString() => "Language(name: $name)";
 
-  // TODO!: Not working in Dart 3.0.0-55.
-  // @override
-  // bool operator ==(Object other) {
-  //   if (identical(other, this)) {
-  //     return true;
-  //   }
-  //   if (other is! Language) {
-  //     return false;
-  //   }
-
-  //   return other.name == name;
-  // }
-
-  @override
-  int get hashCode => name.hashCode;
-
   Map<String, Object?> toMap();
 
   /// `dart:convert`
