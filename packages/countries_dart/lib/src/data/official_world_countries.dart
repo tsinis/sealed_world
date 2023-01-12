@@ -5,10 +5,8 @@ import "../../languages/src/data/natural_languages.dart";
 import '../model/country/country.dart';
 import '../model/country/submodels/capital_info.dart';
 import '../model/country/submodels/car.dart';
-import '../model/country/submodels/coat_of_arms.dart';
 import '../model/country/submodels/country_name.dart';
 import '../model/country/submodels/demonyms.dart';
-import '../model/country/submodels/flags.dart';
 import '../model/country/submodels/gini.dart';
 import '../model/country/submodels/idd.dart';
 import '../model/country/submodels/maps.dart';
@@ -167,12 +165,7 @@ class CountryCpv extends WorldCountry {
           fifa: r"CPV",
           car: const Car(signs: ["CV"]),
           timezones: const ["UTC-01:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/cv.png",
-              svg: "https://flagcdn.com/cv.svg"),
-          coatOfArms: const CoatOfArms(
-              png: "https://mainfacts.com/media/images/coats_of_arms/cv.png",
-              svg: "https://mainfacts.com/media/images/coats_of_arms/cv.svg"),
+          hasCoatOfArms: true,
           capitalInfo: const CapitalInfo(
               capital: const ["Praia"], latlng: const [14.92, -23.52]),
           postalCode:
@@ -360,12 +353,7 @@ class CountrySgp extends WorldCountry {
             fifa: r"SIN",
             car: const Car(signs: ["SGP"], isRightSide: false),
             timezones: const ["UTC+08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sg.png",
-                svg: "https://flagcdn.com/sg.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sg.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sg.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Singapore"], latlng: const [1.28, 103.85]),
             postalCode: const PostalCode(
@@ -548,12 +536,7 @@ class CountryMrt extends WorldCountry {
             fifa: r"MTN",
             car: const Car(signs: ["RIM"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mr.png",
-                svg: "https://flagcdn.com/mr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Nouakchott"], latlng: const [18.07, -15.97]));
 }
@@ -735,12 +718,7 @@ class CountryPol extends WorldCountry {
             fifa: r"POL",
             car: const Car(signs: ["PL"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pl.png",
-                svg: "https://flagcdn.com/pl.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/pl.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/pl.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Warsaw"], latlng: const [52.25, 21]),
             postalCode: const PostalCode(
@@ -931,12 +909,7 @@ class CountryTcd extends WorldCountry {
             fifa: r"CHA",
             car: const Car(signs: ["TCH", "TD"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/td.png",
-                svg: "https://flagcdn.com/td.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/td.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/td.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["N'Djamena"], latlng: const [12.1, 15.03]));
 }
@@ -1103,12 +1076,7 @@ class CountryJpn extends WorldCountry {
             fifa: r"JPN",
             car: const Car(signs: ["J"], isRightSide: false),
             timezones: const ["UTC+09:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/jp.png",
-                svg: "https://flagcdn.com/jp.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/jp.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/jp.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tokyo"], latlng: const [35.68, 139.75]),
             postalCode: const PostalCode(
@@ -1278,14 +1246,11 @@ class CountryCub extends WorldCountry {
             fifa: r"CUB",
             car: const Car(signs: ["C"]),
             timezones: const ["UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cu.png",
-                svg: "https://flagcdn.com/cu.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cu.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cu.svg"),
-            capitalInfo: const CapitalInfo(latlng: const [23.12, -82.35]),
-            capital: const ["Havana"],
+            hasCoatOfArms: true,
+            capitalInfo: const CapitalInfo(
+              latlng: const [23.12, -82.35],
+              capital: const ["Havana"],
+            ),
             postalCode: const PostalCode(
                 format: r"CP #####", regExpPattern: r"^(?:CP)*(\\d{5})$"));
 }
@@ -1468,12 +1433,7 @@ class CountryMoz extends WorldCountry {
             fifa: r"MOZ",
             car: const Car(signs: ["MOC"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mz.png",
-                svg: "https://flagcdn.com/mz.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mz.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mz.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Maputo"], latlng: const [-25.95, 32.58]),
             postalCode: const PostalCode(
@@ -1667,12 +1627,7 @@ class CountryGbr extends WorldCountry {
               "UTC+02:00",
               "UTC+06:00"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gb.png",
-                svg: "https://flagcdn.com/gb.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gb.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gb.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["London"], latlng: const [51.5, -0.08]),
             postalCode: const PostalCode(
@@ -1857,12 +1812,7 @@ class CountryIrl extends WorldCountry {
           fifa: r"IRL",
           car: const Car(signs: ["IRL"], isRightSide: false),
           timezones: const ["UTC"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/ie.png",
-              svg: "https://flagcdn.com/ie.svg"),
-          coatOfArms: const CoatOfArms(
-              png: "https://mainfacts.com/media/images/coats_of_arms/ie.png",
-              svg: "https://mainfacts.com/media/images/coats_of_arms/ie.svg"),
+          hasCoatOfArms: true,
           capitalInfo: const CapitalInfo(
             capital: const ["Dublin"],
             latlng: const [53.32, -6.23],
@@ -2044,12 +1994,7 @@ class CountryNer extends WorldCountry {
             fifa: r"NIG",
             car: const Car(signs: ["RN"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ne.png",
-                svg: "https://flagcdn.com/ne.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ne.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ne.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Niamey"], latlng: const [13.52, 2.12]),
             postalCode: const PostalCode(
@@ -2221,12 +2166,7 @@ class CountryGmb extends WorldCountry {
             fifa: r"GAM",
             car: const Car(signs: ["WAG"]),
             timezones: const ["UTC+00:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gm.png",
-                svg: "https://flagcdn.com/gm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Banjul"], latlng: const [13.45, -16.57]));
 }
@@ -2414,12 +2354,7 @@ class CountryUzb extends WorldCountry {
             fifa: r"UZB",
             car: const Car(signs: ["UZ"]),
             timezones: const ["UTC+05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/uz.png",
-                svg: "https://flagcdn.com/uz.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/uz.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/uz.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tashkent"], latlng: const [41.32, 69.25]),
             postalCode: const PostalCode(
@@ -2620,12 +2555,7 @@ class CountryRus extends WorldCountry {
               "UTC+11:00",
               "UTC+12:00"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ru.png",
-                svg: "https://flagcdn.com/ru.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ru.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ru.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Moscow"], latlng: const [55.75, 37.6]),
             postalCode: const PostalCode(
@@ -2807,12 +2737,7 @@ class CountryTkm extends WorldCountry {
             fifa: r"TKM",
             car: const Car(signs: ["TM"]),
             timezones: const ["UTC+05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tm.png",
-                svg: "https://flagcdn.com/tm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Ashgabat"], latlng: const [37.95, 58.38]),
             postalCode: const PostalCode(
@@ -2983,12 +2908,7 @@ class CountryAia extends WorldCountry {
             fifa: r"AIA",
             car: const Car(signs: ["GB"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ai.png",
-                svg: "https://flagcdn.com/ai.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ai.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ai.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["The Valley"], latlng: const [18.22, -63.05]));
 }
@@ -3165,12 +3085,7 @@ class CountryVnm extends WorldCountry {
             fifa: r"VIE",
             car: const Car(signs: ["VN"]),
             timezones: const ["UTC+07:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/vn.png",
-                svg: "https://flagcdn.com/vn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/vn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/vn.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Hanoi"], latlng: const [21.03, 105.85]),
             postalCode: const PostalCode(
@@ -3316,13 +3231,8 @@ class CountryAta extends WorldCountry {
             "UTC+10:00",
             "UTC+12:00"
           ],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/aq.png",
-              svg: "https://flagcdn.com/aq.svg"),
-          coatOfArms: const CoatOfArms(
-              png: "https://mainfacts.com/media/images/coats_of_arms/aq.png",
-              svg: "https://mainfacts.com/media/images/coats_of_arms/aq.svg"),
-          capitalInfo: const CapitalInfo(),
+
+          hasCoatOfArms: true,
         );
 }
 
@@ -3505,9 +3415,7 @@ class CountrySwz extends WorldCountry {
             fifa: r"SWZ",
             car: const Car(signs: ["SD"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sz.png",
-                svg: "https://flagcdn.com/sz.svg"),
+            hasCoatOfArms: false,
             capitalInfo: const CapitalInfo(
                 capital: const ["Mbabane"], latlng: const [-26.32, 31.13]),
             postalCode: const PostalCode(
@@ -3678,12 +3586,7 @@ class CountryKhm extends WorldCountry {
           fifa: r"CAM",
           car: const Car(signs: ["K"]),
           timezones: const ["UTC+07:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/kh.png",
-              svg: "https://flagcdn.com/kh.svg"),
-          coatOfArms: const CoatOfArms(
-              png: "https://mainfacts.com/media/images/coats_of_arms/kh.png",
-              svg: "https://mainfacts.com/media/images/coats_of_arms/kh.svg"),
+          hasCoatOfArms: true,
           capitalInfo: const CapitalInfo(
               capital: const ["Phnom Penh"], latlng: const [11.55, 104.92]),
           postalCode: const PostalCode(),
@@ -3871,12 +3774,7 @@ class CountryVut extends WorldCountry {
             fifa: r"VAN",
             car: const Car(signs: ["VU"]),
             timezones: const ["UTC+11:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/vu.png",
-                svg: "https://flagcdn.com/vu.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/vu.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/vu.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Port Vila"], latlng: const [-17.73, 168.32]));
 }
@@ -4044,12 +3942,7 @@ class CountryAla extends WorldCountry {
             population: 29458,
             car: const Car(signs: [""]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ax.png",
-                svg: "https://flagcdn.com/ax.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ax.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ax.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Mariehamn"], latlng: const [60.12, 19.9]));
 }
@@ -4227,12 +4120,7 @@ class CountryAus extends WorldCountry {
               "UTC+10:30",
               "UTC+11:30"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/au.png",
-                svg: "https://flagcdn.com/au.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/au.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/au.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Canberra"], latlng: const [-35.27, 149.13]),
             postalCode: const PostalCode(
@@ -4242,168 +4130,170 @@ class CountryAus extends WorldCountry {
 class CountryIot extends WorldCountry {
   const CountryIot()
       : super(
-            name: const CountryName.international(
-                common: "British Indian Ocean Territory",
-                official: "British Indian Ocean Territory"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(),
-                  official: "British Indian Ocean Territory",
-                  common: "British Indian Ocean Territory")
-            ],
-            tld: const [".io"],
-            codeShort: "IO",
-            codeNumeric: "086",
-            code: r"IOT",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatUsd()],
-            idd: const Idd(root: "+2", suffixes: ["46"]),
-            altSpellings: const ["IO"],
-            region: const Africa(),
-            subregion: const EasternAfrica(),
-            languages: const [LangEng()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "إقليم المحيط الهندي البريطاني",
-                common: "إقليم المحيط الهندي البريطاني",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Tiriad breizhveurat Meurvor Indez",
-                common: "Tiriad breizhveurat Meurvor Indez",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Britské indickooceánské území",
-                common: "Britské indickooceánské území",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Tiriogaeth Brydeinig Cefnfor India",
-                common: "Tiriogaeth Brydeinig Cefnfor India",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Britisches Territorium im Indischen Ozean",
-                common: "Britisches Territorium im Indischen Ozean",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Briti India ookeani ala",
-                common: "Briti India ookeani ala",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Brittiläinen Intian valtameren alue",
-                common: "Brittiläinen Intian valtameren alue",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Territoire britannique de l' océan Indien",
-                common: "Territoire britannique de l'océan Indien",
-              ),
-              CountryName(
-                language: const LangHrv(),
+          name: const CountryName.international(
+              common: "British Indian Ocean Territory",
+              official: "British Indian Ocean Territory"),
+          nativeNames: const [
+            CountryName(
+                language: const LangEng(),
                 official: "British Indian Ocean Territory",
-                common: "Britanski Indijskooceanski teritorij",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Brit Indiai-óceáni Terület",
-                common: "Brit Indiai-óceáni Terület",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Territorio britannico dell'Oceano Indiano",
-                common: "Territorio britannico dell'oceano indiano",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "イギリス領インド洋地域",
-                common: "イギリス領インド洋地域",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "인도 공화국",
-                common: "인도",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Brits Indische Oceaan Territorium",
-                common: "Britse Gebieden in de Indische Oceaan",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "قلمرو بریتانیا در اقیانوس هند",
-                common: "قلمرو بریتانیا در اقیانوس هند",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Brytyjskie Terytorium Oceanu Indyjskiego",
-                common: "Brytyjskie Terytorium Oceanu Indyjskiego",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "British Indian Ocean Territory",
-                common: "Território Britânico do Oceano Índico",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Британская территория Индийского океана",
-                common: "Британская территория в Индийском океане",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Britské indickooceánske územie",
-                common: "Britské indickooceánske územie",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Territorio Británico del Océano Índico",
-                common: "Territorio Británico del Océano Índico",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Brittiska territoriet i Indiska Oceanen",
-                common: "Brittiska territoriet i Indiska Oceanen",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Britanya Hint Okyanusu Toprakları",
-                common: "Britanya Hint Okyanusu Toprakları",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "برطانوی بحرہند خطہ",
-                common: "برطانوی بحرہند خطہ",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "英属印度洋领地",
-                  common: "英属印度洋领地")
-            ],
-            latlng: const [-6, 71.5],
-            area: 60,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Indian",
-                m: "Indian",
-              )
-            ],
-            emoji: "🇮🇴",
-            maps: const Maps(
-                googleMaps: "bheNucgekVEYozoi6",
-                openStreetMaps: "relation/1993867"),
-            population: 3000,
-            car: const Car(signs: ["GB"]),
-            timezones: const ["UTC+06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/io.png",
-                svg: "https://flagcdn.com/io.svg"),
-            capitalInfo: const CapitalInfo(latlng: const [-7.3, 72.4]));
+                common: "British Indian Ocean Territory")
+          ],
+          tld: const [".io"],
+          codeShort: "IO",
+          codeNumeric: "086",
+          code: r"IOT",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatUsd()],
+          idd: const Idd(root: "+2", suffixes: ["46"]),
+          altSpellings: const ["IO"],
+          region: const Africa(),
+          subregion: const EasternAfrica(),
+          languages: const [LangEng()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "إقليم المحيط الهندي البريطاني",
+              common: "إقليم المحيط الهندي البريطاني",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Tiriad breizhveurat Meurvor Indez",
+              common: "Tiriad breizhveurat Meurvor Indez",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Britské indickooceánské území",
+              common: "Britské indickooceánské území",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Tiriogaeth Brydeinig Cefnfor India",
+              common: "Tiriogaeth Brydeinig Cefnfor India",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Britisches Territorium im Indischen Ozean",
+              common: "Britisches Territorium im Indischen Ozean",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Briti India ookeani ala",
+              common: "Briti India ookeani ala",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Brittiläinen Intian valtameren alue",
+              common: "Brittiläinen Intian valtameren alue",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Territoire britannique de l' océan Indien",
+              common: "Territoire britannique de l'océan Indien",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "British Indian Ocean Territory",
+              common: "Britanski Indijskooceanski teritorij",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Brit Indiai-óceáni Terület",
+              common: "Brit Indiai-óceáni Terület",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Territorio britannico dell'Oceano Indiano",
+              common: "Territorio britannico dell'oceano indiano",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "イギリス領インド洋地域",
+              common: "イギリス領インド洋地域",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "인도 공화국",
+              common: "인도",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Brits Indische Oceaan Territorium",
+              common: "Britse Gebieden in de Indische Oceaan",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "قلمرو بریتانیا در اقیانوس هند",
+              common: "قلمرو بریتانیا در اقیانوس هند",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Brytyjskie Terytorium Oceanu Indyjskiego",
+              common: "Brytyjskie Terytorium Oceanu Indyjskiego",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "British Indian Ocean Territory",
+              common: "Território Britânico do Oceano Índico",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Британская территория Индийского океана",
+              common: "Британская территория в Индийском океане",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Britské indickooceánske územie",
+              common: "Britské indickooceánske územie",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Territorio Británico del Océano Índico",
+              common: "Territorio Británico del Océano Índico",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Brittiska territoriet i Indiska Oceanen",
+              common: "Brittiska territoriet i Indiska Oceanen",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Britanya Hint Okyanusu Toprakları",
+              common: "Britanya Hint Okyanusu Toprakları",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "برطانوی بحرہند خطہ",
+              common: "برطانوی بحرہند خطہ",
+            ),
+            CountryName(
+                language: const LangZho(),
+                official: "英属印度洋领地",
+                common: "英属印度洋领地")
+          ],
+          latlng: const [-6, 71.5],
+          area: 60,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Indian",
+              m: "Indian",
+            )
+          ],
+          emoji: "🇮🇴",
+          maps: const Maps(
+              googleMaps: "bheNucgekVEYozoi6",
+              openStreetMaps: "relation/1993867"),
+          population: 3000,
+          car: const Car(signs: ["GB"]),
+          timezones: const ["UTC+06:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            latlng: const [-7.3, 72.4],
+            capital: const ["Diego Garcia"],
+          ),
+        );
 }
 
 class CountrySvk extends WorldCountry {
@@ -4411,7 +4301,6 @@ class CountrySvk extends WorldCountry {
       : super(
             name: const CountryName.international(
                 common: "Slovakia", official: "Slovak Republic"),
-            capital: const ["Diego Garcia"],
             nativeNames: const [
               CountryName(
                   language: const LangSlk(),
@@ -4585,12 +4474,7 @@ class CountrySvk extends WorldCountry {
             fifa: r"SVK",
             car: const Car(signs: ["SK"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sk.png",
-                svg: "https://flagcdn.com/sk.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sk.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sk.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bratislava"], latlng: const [48.15, 17.12]),
             postalCode: const PostalCode(
@@ -4784,12 +4668,7 @@ class CountryBra extends WorldCountry {
               "UTC-03:00",
               "UTC-02:00"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/br.png",
-                svg: "https://flagcdn.com/br.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/br.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/br.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Brasília"], latlng: const [-15.79, -47.88]),
             postalCode: const PostalCode(
@@ -4979,12 +4858,7 @@ class CountryTjk extends WorldCountry {
             fifa: r"TJK",
             car: const Car(signs: ["TJ"]),
             timezones: const ["UTC+05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tj.png",
-                svg: "https://flagcdn.com/tj.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tj.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tj.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Dushanbe"], latlng: const [38.55, 68.77]),
             postalCode: const PostalCode(
@@ -5154,16 +5028,16 @@ class CountrySgs extends WorldCountry {
             population: 30,
             car: const Car(signs: [""]),
             timezones: const ["UTC-02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gs.png",
-                svg: "https://flagcdn.com/gs.svg"),
-            capitalInfo: const CapitalInfo(latlng: const [-54.28, -36.5]));
+            hasCoatOfArms: false,
+            capitalInfo: const CapitalInfo(
+              latlng: const [-54.28, -36.5],
+              capital: const ["King Edward Point"],
+            ));
 }
 
 class CountryLbr extends WorldCountry {
   const CountryLbr()
       : super(
-            capital: const ["King Edward Point"],
             name: const CountryName.international(
                 common: "Liberia", official: "Republic of Liberia"),
             nativeNames: const [
@@ -5328,12 +5202,7 @@ class CountryLbr extends WorldCountry {
             fifa: r"LBR",
             car: const Car(signs: ["LB"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/lr.png",
-                svg: "https://flagcdn.com/lr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/lr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/lr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Monrovia"], latlng: const [6.3, -10.8]),
             postalCode: const PostalCode(
@@ -5517,12 +5386,7 @@ class CountryNga extends WorldCountry {
             fifa: r"NGA",
             car: const Car(signs: ["WAN"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ng.png",
-                svg: "https://flagcdn.com/ng.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ng.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ng.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Abuja"], latlng: const [9.08, 7.53]),
             postalCode: const PostalCode(
@@ -5706,12 +5570,7 @@ class CountryCol extends WorldCountry {
             fifa: r"COL",
             car: const Car(signs: ["CO"]),
             timezones: const ["UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/co.png",
-                svg: "https://flagcdn.com/co.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/co.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/co.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bogotá"], latlng: const [4.71, -74.07]));
 }
@@ -5887,12 +5746,7 @@ class CountrySmr extends WorldCountry {
             fifa: r"SMR",
             car: const Car(signs: ["RSM"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sm.png",
-                svg: "https://flagcdn.com/sm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["City of San Marino"],
                 latlng: const [43.94, 12.45]),
@@ -6071,9 +5925,7 @@ class CountryShn extends WorldCountry {
             population: 53192,
             car: const Car(signs: ["GB"], isRightSide: false),
             timezones: const ["UTC+00:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sh.png",
-                svg: "https://flagcdn.com/sh.svg"),
+            hasCoatOfArms: false,
             capitalInfo: const CapitalInfo(
                 capital: const ["Jamestown"], latlng: const [-15.93, -5.72]),
             postalCode: const PostalCode(
@@ -6250,12 +6102,7 @@ class CountryEgy extends WorldCountry {
             fifa: r"EGY",
             car: const Car(signs: ["ET"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/eg.png",
-                svg: "https://flagcdn.com/eg.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/eg.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/eg.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Cairo"], latlng: const [30.05, 31.25]),
@@ -6433,12 +6280,7 @@ class CountryHnd extends WorldCountry {
             fifa: r"HON",
             car: const Car(signs: ["HN"]),
             timezones: const ["UTC-06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/hn.png",
-                svg: "https://flagcdn.com/hn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/hn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/hn.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tegucigalpa"], latlng: const [14.1, -87.22]),
             postalCode: const PostalCode(
@@ -6616,12 +6458,7 @@ class CountryIdn extends WorldCountry {
             fifa: r"IDN",
             car: const Car(signs: ["RI"], isRightSide: false),
             timezones: const ["UTC+07:00", "UTC+08:00", "UTC+09:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/id.png",
-                svg: "https://flagcdn.com/id.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/id.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/id.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Jakarta"], latlng: const [-6.17, 106.82]),
             postalCode: const PostalCode());
@@ -6803,12 +6640,7 @@ class CountryPrk extends WorldCountry {
             fifa: r"PRK",
             car: const Car(signs: [""]),
             timezones: const ["UTC+09:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/kp.png",
-                svg: "https://flagcdn.com/kp.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/kp.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/kp.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Pyongyang"], latlng: const [39.02, 125.75]),
             postalCode: const PostalCode(
@@ -6974,13 +6806,7 @@ class CountryMac extends WorldCountry {
           fifa: r"MAC",
           car: const Car(signs: ["MO"], isRightSide: false),
           timezones: const ["UTC+08:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/mo.png",
-              svg: "https://flagcdn.com/mo.svg"),
-          coatOfArms: const CoatOfArms(
-              png: "https://mainfacts.com/media/images/coats_of_arms/mo.png",
-              svg: "https://mainfacts.com/media/images/coats_of_arms/mo.svg"),
-          capitalInfo: const CapitalInfo(),
+          hasCoatOfArms: true,
         );
 }
 
@@ -7151,12 +6977,7 @@ class CountrySle extends WorldCountry {
             fifa: r"SLE",
             car: const Car(signs: ["WAL"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sl.png",
-                svg: "https://flagcdn.com/sl.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sl.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sl.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Freetown"], latlng: const [8.48, -13.23]));
 }
@@ -7334,12 +7155,7 @@ class CountryMda extends WorldCountry {
             fifa: r"MDA",
             car: const Car(signs: ["MD"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/md.png",
-                svg: "https://flagcdn.com/md.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/md.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/md.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Chișinău"], latlng: const [47.01, 28.9]),
             postalCode: const PostalCode(
@@ -7523,12 +7339,7 @@ class CountryPhl extends WorldCountry {
             fifa: r"PHI",
             car: const Car(signs: ["RP"]),
             timezones: const ["UTC+08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ph.png",
-                svg: "https://flagcdn.com/ph.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ph.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ph.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Manila"], latlng: const [14.6, 120.97]),
             postalCode: const PostalCode(
@@ -7716,12 +7527,7 @@ class CountryCmr extends WorldCountry {
             fifa: r"CMR",
             car: const Car(signs: ["CAM"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cm.png",
-                svg: "https://flagcdn.com/cm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Yaoundé"], latlng: const [3.85, 11.5]));
 }
@@ -7894,12 +7700,7 @@ class CountryGrl extends WorldCountry {
               "UTC-01:00",
               "UTC+00:00"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gl.png",
-                svg: "https://flagcdn.com/gl.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gl.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gl.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Nuuk"], latlng: const [64.18, -51.75]),
             postalCode: const PostalCode(
@@ -8069,12 +7870,7 @@ class CountryMtq extends WorldCountry {
             population: 378243,
             car: const Car(signs: ["F"]),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mq.png",
-                svg: "https://flagcdn.com/mq.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mq.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mq.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Fort-de-France"],
                 latlng: const [14.6, -61.08]),
@@ -8255,12 +8051,7 @@ class CountryLbn extends WorldCountry {
             fifa: r"LBN",
             car: const Car(signs: ["RL"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/lb.png",
-                svg: "https://flagcdn.com/lb.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/lb.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/lb.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Beirut"], latlng: const [33.87, 35.5]),
             postalCode: const PostalCode(
@@ -8454,12 +8245,7 @@ class CountryRwa extends WorldCountry {
             fifa: r"RWA",
             car: const Car(signs: ["RWA"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/rw.png",
-                svg: "https://flagcdn.com/rw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/rw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/rw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kigali"], latlng: const [-1.95, 30.05]));
 }
@@ -8648,12 +8434,7 @@ class CountryBih extends WorldCountry {
             fifa: r"BIH",
             car: const Car(signs: ["BIH"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ba.png",
-                svg: "https://flagcdn.com/ba.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ba.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ba.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Sarajevo"], latlng: const [43.87, 18.42]),
             postalCode: const PostalCode());
@@ -8834,12 +8615,7 @@ class CountryMhl extends WorldCountry {
             population: 59194,
             car: const Car(signs: ["MH"]),
             timezones: const ["UTC+12:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mh.png",
-                svg: "https://flagcdn.com/mh.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mh.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mh.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Majuro"], latlng: const [7.1, 171.38]));
 }
@@ -9020,12 +8796,7 @@ class CountryIta extends WorldCountry {
             fifa: r"ITA",
             car: const Car(signs: ["I"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/it.png",
-                svg: "https://flagcdn.com/it.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/it.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/it.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Rome"], latlng: const [41.9, 12.48]),
             postalCode: const PostalCode());
@@ -9198,9 +8969,7 @@ class CountryTkl extends WorldCountry {
             population: 1411,
             car: const Car(signs: [""], isRightSide: false),
             timezones: const ["UTC+13:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tk.png",
-                svg: "https://flagcdn.com/tk.svg"),
+            hasCoatOfArms: false,
             capitalInfo: const CapitalInfo(
                 capital: const ["Fakaofo"], latlng: const [-9.38, -171.22]));
 }
@@ -9374,12 +9143,7 @@ class CountryGab extends WorldCountry {
             fifa: r"GAB",
             car: const Car(signs: ["G"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ga.png",
-                svg: "https://flagcdn.com/ga.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ga.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ga.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Libreville"], latlng: const [0.38, 9.45]));
 }
@@ -9387,167 +9151,168 @@ class CountryGab extends WorldCountry {
 class CountryCck extends WorldCountry {
   const CountryCck()
       : super(
-            name: const CountryName.international(
-                common: "Cocos (Keeling) Islands",
-                official: "Territory of the Cocos (Keeling) Islands"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(),
-                  official: "Territory of the Cocos (Keeling) Islands",
-                  common: "Cocos (Keeling) Islands")
-            ],
-            tld: const [".cc"],
-            codeShort: "CC",
-            codeNumeric: "166",
-            code: r"CCK",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatAud()],
-            idd: const Idd(root: "+6", suffixes: ["1"]),
-            altSpellings: const ["CC", "Keeling Islands", "Cocos Islands"],
-            region: const Oceania(),
-            subregion: const AustraliaAndNewZealand(),
-            languages: const [LangEng()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "إقليم جزر كوكوس",
-                common: "جزر كوكوس",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Tiriad Inizi Cocos (Keeling)",
-                common: "Inizi Cocos (Keeling)",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Kokosové ostrovy",
-                common: "Kokosové ostrovy",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Tiriogaeth yr Ynysoedd Cocos (Keeling)",
-                common: "Ynysoedd Cocos",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Gebiet der Kokos- (Keeling-) Inseln",
-                common: "Kokosinseln",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Kookossaarte ala",
-                common: "Kookossaared",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Kookossaaret",
-                common: "Kookossaaret",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Territoire des îles Cocos (Keeling)",
-                common: "Îles Cocos",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Teritoriju Kokosovi (Keeling) Islands",
-                common: "Kokosovi Otoci",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Kókusz-szigetek",
-                common: "Kókusz-szigetek",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Territorio della (Keeling) Isole Cocos",
-                common: "Isole Cocos e Keeling",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "ココス諸島の領土",
-                common: "ココス（キーリング）諸島",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "코코스 제도",
-                common: "코코스 제도",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Grondgebied van de Eilanden Cocos (Keeling )",
-                common: "Cocoseilanden",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جزایر کوکوس",
-                common: "جزایر کوکوس",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Wyspy Kokosowe",
-                common: "Wyspy Kokosowe",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Território dos Cocos (Keeling)",
-                common: "Ilhas Cocos (Keeling)",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Территория Кокосовые (Килинг) острова",
-                common: "Кокосовые острова",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Kokosové ostrovy",
-                common: "Kokosové ostrovy",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Territorio de los (Keeling) Islas Cocos",
-                common: "Islas Cocos o Islas Keeling",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Kokosöarna",
-                common: "Kokosöarna",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Cocos (Keeling) Adaları",
-                common: "Cocos (Keeling) Adaları",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "جزائر (کیلنگ) کوکوس",
-                common: "جزائر کوکوس",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "科科斯", common: "科科斯")
-            ],
-            latlng: const [12.1642, 96.871],
-            area: 14,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Cocos Islander",
-                m: "Cocos Islander",
-              )
-            ],
-            emoji: "🇨🇨",
-            maps: const Maps(
-                googleMaps: "3eCdKVpVfMcZyKcK6",
-                openStreetMaps: "relation/82636"),
-            population: 544,
-            car: const Car(signs: ["AUS"], isRightSide: false),
-            timezones: const ["UTC+06:30"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cc.png",
-                svg: "https://flagcdn.com/cc.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["West Island"], latlng: const [-12.17, 96.83]));
+          name: const CountryName.international(
+              common: "Cocos (Keeling) Islands",
+              official: "Territory of the Cocos (Keeling) Islands"),
+          nativeNames: const [
+            CountryName(
+                language: const LangEng(),
+                official: "Territory of the Cocos (Keeling) Islands",
+                common: "Cocos (Keeling) Islands")
+          ],
+          tld: const [".cc"],
+          codeShort: "CC",
+          codeNumeric: "166",
+          code: r"CCK",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatAud()],
+          idd: const Idd(root: "+6", suffixes: ["1"]),
+          altSpellings: const ["CC", "Keeling Islands", "Cocos Islands"],
+          region: const Oceania(),
+          subregion: const AustraliaAndNewZealand(),
+          languages: const [LangEng()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "إقليم جزر كوكوس",
+              common: "جزر كوكوس",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Tiriad Inizi Cocos (Keeling)",
+              common: "Inizi Cocos (Keeling)",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Kokosové ostrovy",
+              common: "Kokosové ostrovy",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Tiriogaeth yr Ynysoedd Cocos (Keeling)",
+              common: "Ynysoedd Cocos",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Gebiet der Kokos- (Keeling-) Inseln",
+              common: "Kokosinseln",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Kookossaarte ala",
+              common: "Kookossaared",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Kookossaaret",
+              common: "Kookossaaret",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Territoire des îles Cocos (Keeling)",
+              common: "Îles Cocos",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Teritoriju Kokosovi (Keeling) Islands",
+              common: "Kokosovi Otoci",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Kókusz-szigetek",
+              common: "Kókusz-szigetek",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Territorio della (Keeling) Isole Cocos",
+              common: "Isole Cocos e Keeling",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "ココス諸島の領土",
+              common: "ココス（キーリング）諸島",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "코코스 제도",
+              common: "코코스 제도",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Grondgebied van de Eilanden Cocos (Keeling )",
+              common: "Cocoseilanden",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جزایر کوکوس",
+              common: "جزایر کوکوس",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Wyspy Kokosowe",
+              common: "Wyspy Kokosowe",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Território dos Cocos (Keeling)",
+              common: "Ilhas Cocos (Keeling)",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Территория Кокосовые (Килинг) острова",
+              common: "Кокосовые острова",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Kokosové ostrovy",
+              common: "Kokosové ostrovy",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Territorio de los (Keeling) Islas Cocos",
+              common: "Islas Cocos o Islas Keeling",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Kokosöarna",
+              common: "Kokosöarna",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Cocos (Keeling) Adaları",
+              common: "Cocos (Keeling) Adaları",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "جزائر (کیلنگ) کوکوس",
+              common: "جزائر کوکوس",
+            ),
+            CountryName(
+                language: const LangZho(), official: "科科斯", common: "科科斯")
+          ],
+          latlng: const [12.1642, 96.871],
+          area: 14,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Cocos Islander",
+              m: "Cocos Islander",
+            )
+          ],
+          emoji: "🇨🇨",
+          maps: const Maps(
+              googleMaps: "3eCdKVpVfMcZyKcK6",
+              openStreetMaps: "relation/82636"),
+          population: 544,
+          car: const Car(signs: ["AUS"], isRightSide: false),
+          timezones: const ["UTC+06:30"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["West Island"],
+            latlng: const [-12.17, 96.83],
+          ),
+        );
 }
 
 class CountryPak extends WorldCountry {
@@ -9733,12 +9498,7 @@ class CountryPak extends WorldCountry {
             fifa: r"PAK",
             car: const Car(signs: ["PK"], isRightSide: false),
             timezones: const ["UTC+05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pk.png",
-                svg: "https://flagcdn.com/pk.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/pk.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/pk.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Islamabad"], latlng: const [33.68, 73.05]),
             postalCode: const PostalCode());
@@ -9747,173 +9507,174 @@ class CountryPak extends WorldCountry {
 class CountryReu extends WorldCountry {
   const CountryReu()
       : super(
-            name: const CountryName.international(
-                common: "Réunion", official: "Réunion Island"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangFra(),
-                  official: "Ile de la Réunion",
-                  common: "La Réunion")
-            ],
-            tld: const [".re"],
-            codeShort: "RE",
-            codeNumeric: "638",
-            code: r"REU",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatEur()],
-            idd: const Idd(root: "+2", suffixes: ["62"]),
-            altSpellings: const ["RE", "Reunion"],
-            region: const Africa(),
-            subregion: const EasternAfrica(),
-            languages: const [LangFra()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "جزيرة لا ريونيون",
-                common: "لا ريونيون",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Enez ar Reünion",
-                common: "Reünion",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Réunion",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Réunion Island",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Réunion",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Réunioni departemang",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Réunion",
-                common: "Réunion",
-              ),
-              CountryName(
+          name: const CountryName.international(
+              common: "Réunion", official: "Réunion Island"),
+          nativeNames: const [
+            CountryName(
                 language: const LangFra(),
                 official: "Ile de la Réunion",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Réunion Island",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Réunion",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Réunion",
-                common: "Riunione",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "レユニオン島",
-                common: "レユニオン",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "레위니옹",
-                common: "레위니옹",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Réunion",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "رئونیون",
-                common: "رئونیون",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Reunion",
-                common: "Reunion",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Ilha da Reunião",
-                common: "Reunião",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Реюньон",
-                common: "Реюньон",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Réunionský zámorský departmán",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Isla de la Reunión",
-                common: "Reunión",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Réunion",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Réunion",
-                common: "Réunion",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "رے یونیوں جزیرہ",
-                common: "رے یونیوں",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "留尼旺岛", common: "留尼旺岛")
-            ],
-            latlng: const [-21.15, 55.5],
-            area: 2511,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Réunionese",
-                m: "Réunionese",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Réunionnaise",
-                m: "Réunionnais",
-              )
-            ],
-            emoji: "🇷🇪",
-            maps: const Maps(
-                googleMaps: "wWpBrXsp8UHVbah29",
-                openStreetMaps: "relation/1785276"),
-            population: 840974,
-            car: const Car(signs: ["F"]),
-            timezones: const ["UTC+04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/re.png",
-                svg: "https://flagcdn.com/re.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Saint-Denis"], latlng: const [-20.88, 55.45]),
-            postalCode:
-                const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\\d{2})$"));
+                common: "La Réunion")
+          ],
+          tld: const [".re"],
+          codeShort: "RE",
+          codeNumeric: "638",
+          code: r"REU",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatEur()],
+          idd: const Idd(root: "+2", suffixes: ["62"]),
+          altSpellings: const ["RE", "Reunion"],
+          region: const Africa(),
+          subregion: const EasternAfrica(),
+          languages: const [LangFra()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "جزيرة لا ريونيون",
+              common: "لا ريونيون",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Enez ar Reünion",
+              common: "Reünion",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Réunion",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Réunion Island",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Réunion",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Réunioni departemang",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Réunion",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Ile de la Réunion",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Réunion Island",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Réunion",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Réunion",
+              common: "Riunione",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "レユニオン島",
+              common: "レユニオン",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "레위니옹",
+              common: "레위니옹",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Réunion",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "رئونیون",
+              common: "رئونیون",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Reunion",
+              common: "Reunion",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Ilha da Reunião",
+              common: "Reunião",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Реюньон",
+              common: "Реюньон",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Réunionský zámorský departmán",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Isla de la Reunión",
+              common: "Reunión",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Réunion",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Réunion",
+              common: "Réunion",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "رے یونیوں جزیرہ",
+              common: "رے یونیوں",
+            ),
+            CountryName(
+                language: const LangZho(), official: "留尼旺岛", common: "留尼旺岛")
+          ],
+          latlng: const [-21.15, 55.5],
+          area: 2511,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Réunionese",
+              m: "Réunionese",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Réunionnaise",
+              m: "Réunionnais",
+            )
+          ],
+          emoji: "🇷🇪",
+          maps: const Maps(
+              googleMaps: "wWpBrXsp8UHVbah29",
+              openStreetMaps: "relation/1785276"),
+          population: 840974,
+          car: const Car(signs: ["F"]),
+          timezones: const ["UTC+04:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Saint-Denis"],
+            latlng: const [-20.88, 55.45],
+          ),
+          postalCode:
+              const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\\d{2})$"),
+        );
 }
 
 class CountryMus extends WorldCountry {
@@ -10101,12 +9862,7 @@ class CountryMus extends WorldCountry {
             fifa: r"MRI",
             car: const Car(signs: ["MS"], isRightSide: false),
             timezones: const ["UTC+04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mu.png",
-                svg: "https://flagcdn.com/mu.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mu.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mu.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Port Louis"], latlng: const [-20.15, 57.48]));
 }
@@ -10274,12 +10030,7 @@ class CountryGrd extends WorldCountry {
           fifa: r"GRN",
           car: const Car(signs: ["WG"], isRightSide: false),
           timezones: const ["UTC-04:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/gd.png",
-              svg: "https://flagcdn.com/gd.svg"),
-          coatOfArms: const CoatOfArms(
-              png: "https://mainfacts.com/media/images/coats_of_arms/gd.png",
-              svg: "https://mainfacts.com/media/images/coats_of_arms/gd.svg"),
+          hasCoatOfArms: true,
           capitalInfo: const CapitalInfo(
             capital: const ["St. George's"],
             latlng: const [32.38, -64.68],
@@ -10451,12 +10202,7 @@ class CountryOmn extends WorldCountry {
             fifa: r"OMA",
             car: const Car(signs: ["OM"]),
             timezones: const ["UTC+04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/om.png",
-                svg: "https://flagcdn.com/om.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/om.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/om.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Muscat"], latlng: const [23.62, 58.58]),
@@ -10637,12 +10383,7 @@ class CountryBfa extends WorldCountry {
             fifa: r"BFA",
             car: const Car(signs: ["BF"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bf.png",
-                svg: "https://flagcdn.com/bf.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bf.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bf.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Ouagadougou"], latlng: const [12.37, -1.52]));
 }
@@ -10821,12 +10562,7 @@ class CountryWsm extends WorldCountry {
             fifa: r"SAM",
             car: const Car(signs: ["WS"], isRightSide: false),
             timezones: const ["UTC+13:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ws.png",
-                svg: "https://flagcdn.com/ws.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ws.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ws.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Apia"], latlng: const [-13.82, -171.77]));
 }
@@ -10998,12 +10734,7 @@ class CountryTto extends WorldCountry {
             fifa: r"TRI",
             car: const Car(signs: ["TT"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tt.png",
-                svg: "https://flagcdn.com/tt.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tt.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tt.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Port of Spain"],
                 latlng: const [10.65, -61.52]));
@@ -11175,12 +10906,7 @@ class CountryVct extends WorldCountry {
             fifa: r"VIN",
             car: const Car(signs: ["WV"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/vc.png",
-                svg: "https://flagcdn.com/vc.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/vc.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/vc.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kingstown"], latlng: const [13.13, -61.22]));
 }
@@ -11356,12 +11082,7 @@ class CountryPlw extends WorldCountry {
             population: 18092,
             car: const Car(signs: ["PAL"]),
             timezones: const ["UTC+09:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pw.png",
-                svg: "https://flagcdn.com/pw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/pw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/pw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Ngerulmud"], latlng: const [7.5, 134.62]),
             postalCode: const PostalCode(
@@ -11602,12 +11323,7 @@ class CountryZaf extends WorldCountry {
             fifa: r"RSA",
             car: const Car(signs: ["ZA"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/za.png",
-                svg: "https://flagcdn.com/za.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/za.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/za.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Pretoria", "Bloemfontein", "Cape Town"],
                 latlng: const [-25.7, 28.22]),
@@ -11789,12 +11505,7 @@ class CountryAgo extends WorldCountry {
             fifa: r"ANG",
             car: const Car(signs: ["ANG"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ao.png",
-                svg: "https://flagcdn.com/ao.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ao.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ao.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Luanda"], latlng: const [-8.83, 13.22]));
 }
@@ -11968,12 +11679,7 @@ class CountryKor extends WorldCountry {
             fifa: r"KOR",
             car: const Car(signs: ["ROK"]),
             timezones: const ["UTC+09:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/kr.png",
-                svg: "https://flagcdn.com/kr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/kr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/kr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Seoul"], latlng: const [37.55, 126.98]),
             postalCode: const PostalCode(
@@ -12153,12 +11859,7 @@ class CountryAtf extends WorldCountry {
             population: 400,
             car: const Car(signs: [""]),
             timezones: const ["UTC+05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tf.png",
-                svg: "https://flagcdn.com/tf.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tf.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tf.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Port-aux-Français"],
                 latlng: const [48.81, -1.4]));
@@ -12333,12 +12034,7 @@ class CountryIsl extends WorldCountry {
             fifa: r"ISL",
             car: const Car(signs: ["IS"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/is.png",
-                svg: "https://flagcdn.com/is.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/is.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/is.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Reykjavik"], latlng: const [64.15, -21.95]),
             postalCode:
@@ -12509,14 +12205,11 @@ class CountryGuf extends WorldCountry {
             population: 254541,
             car: const Car(signs: ["F"]),
             timezones: const ["UTC-03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gf.png",
-                svg: "https://flagcdn.com/gf.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gf.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gf.svg"),
-            capitalInfo: const CapitalInfo(latlng: const [4.94, -52.33]),
-            capital: const ["Cayenne"],
+            hasCoatOfArms: true,
+            capitalInfo: const CapitalInfo(
+              latlng: const [4.94, -52.33],
+              capital: const ["Cayenne"],
+            ),
             postalCode: const PostalCode(regExpPattern: r"^((97|98)3\\d{2})$"));
 }
 
@@ -12706,12 +12399,7 @@ class CountryNor extends WorldCountry {
             fifa: r"NOR",
             car: const Car(signs: ["N"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/no.png",
-                svg: "https://flagcdn.com/no.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/no.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/no.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Oslo"], latlng: const [59.92, 10.75]),
             postalCode: const PostalCode(
@@ -12892,12 +12580,7 @@ class CountryHun extends WorldCountry {
             fifa: r"HUN",
             car: const Car(signs: ["H"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/hu.png",
-                svg: "https://flagcdn.com/hu.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/hu.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/hu.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Budapest"], latlng: const [47.5, 19.08]),
             postalCode: const PostalCode(
@@ -13076,12 +12759,7 @@ class CountryPse extends WorldCountry {
             fifa: r"PLE",
             car: const Car(signs: ["PS"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ps.png",
-                svg: "https://flagcdn.com/ps.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ps.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ps.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Ramallah", "Jerusalem"],
@@ -13252,12 +12930,7 @@ class CountryLca extends WorldCountry {
             fifa: r"LCA",
             car: const Car(signs: ["WL"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/lc.png",
-                svg: "https://flagcdn.com/lc.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/lc.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/lc.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Castries"], latlng: const [14, -61]));
 }
@@ -13436,12 +13109,7 @@ class CountryNpl extends WorldCountry {
             fifa: r"NEP",
             car: const Car(signs: ["NEP"], isRightSide: false),
             timezones: const ["UTC+05:45"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/np.png",
-                svg: "https://flagcdn.com/np.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/np.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/np.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kathmandu"], latlng: const [27.72, 85.32]),
@@ -13614,12 +13282,7 @@ class CountryMng extends WorldCountry {
             fifa: r"MNG",
             car: const Car(signs: ["MGL"]),
             timezones: const ["UTC+07:00", "UTC+08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mn.png",
-                svg: "https://flagcdn.com/mn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mn.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Ulan Bator"], latlng: const [47.92, 106.91]),
             postalCode: const PostalCode(
@@ -13801,12 +13464,7 @@ class CountryZmb extends WorldCountry {
             fifa: r"ZAM",
             car: const Car(signs: ["RNR"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/zm.png",
-                svg: "https://flagcdn.com/zm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/zm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/zm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Lusaka"], latlng: const [-15.42, 28.28]),
             postalCode: const PostalCode());
@@ -13815,174 +13473,175 @@ class CountryZmb extends WorldCountry {
 class CountryWlf extends WorldCountry {
   const CountryWlf()
       : super(
-            name: const CountryName.international(
-                common: "Wallis and Futuna",
-                official: "Territory of the Wallis and Futuna Islands"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangFra(),
-                  official: "Territoire des îles Wallis et Futuna",
-                  common: "Wallis et Futuna")
-            ],
-            tld: const [".wf"],
-            codeShort: "WF",
-            codeNumeric: "876",
-            code: r"WLF",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatXpf()],
-            idd: const Idd(root: "+6", suffixes: ["81"]),
-            altSpellings: const [
-              "WF",
-              "Territory of the Wallis and Futuna Islands",
-              "Territoire des îles Wallis et Futuna"
-            ],
-            region: const Oceania(),
-            subregion: const Polynesia(),
-            languages: const [LangFra()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "إقليم جزر واليس وفوتونا",
-                common: "واليس وفوتونا",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Tiriad Inizi Wallis ha Futuna",
-                common: "Wallis ha Futuna",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Teritorium ostrovů Wallis a Futuna",
-                common: "Wallis a Futuna",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Territory of the Wallis and Futuna Islands",
-                common: "Wallis and Futuna",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Gebiet der Wallis und Futuna",
-                common: "Wallis und Futuna",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Wallise ja Futuna ala",
-                common: "Wallis ja Futuna",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Wallisin ja Futunan yhteisö",
-                common: "Wallis ja Futuna",
-              ),
-              CountryName(
+          name: const CountryName.international(
+              common: "Wallis and Futuna",
+              official: "Territory of the Wallis and Futuna Islands"),
+          nativeNames: const [
+            CountryName(
                 language: const LangFra(),
                 official: "Territoire des îles Wallis et Futuna",
-                common: "Wallis-et-Futuna",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Teritoriju Wallis i Futuna",
-                common: "Wallis i Fortuna",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Wallis és Futuna",
-                common: "Wallis és Futuna",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Territorio delle Isole Wallis e Futuna",
-                common: "Wallis e Futuna",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "ウォリス·フツナ諸島の領土",
-                common: "ウォリス・フツナ",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "왈리스 퓌튀나",
-                common: "왈리스 퓌튀나",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Grondgebied van de Wallis en Futuna",
-                common: "Wallis en Futuna",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جزایر والیس و فوتونا",
-                common: "والیس و فوتونا",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Terytorium Wysp Wallis i Futuna",
-                common: "Wallis i Futuna",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Território das Ilhas Wallis e Futuna",
-                common: "Wallis e Futuna",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Территория Уоллис и Футуна острова",
-                common: "Уоллис и Футуна",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Teritórium ostrovov Wallis a Futuna",
-                common: "Wallis a Futuna",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Territorio de las Islas Wallis y Futuna",
-                common: "Wallis y Futuna",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Territoriet Wallis- och Futunaöarna",
-                common: "Wallis- och Futunaöarna",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Wallis ve Futuna Adaları Bölgesi",
-                common: "Wallis ve Futuna Adaları Bölgesi",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "سر زمینِ والس و فتونہ جزائر",
-                common: "والس و فتونہ",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "瓦利斯和富图纳群岛",
-                  common: "瓦利斯和富图纳群岛")
-            ],
-            latlng: const [-13.3, -176.2],
-            area: 142,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Wallis and Futuna Islander",
-                m: "Wallis and Futuna Islander",
-              )
-            ],
-            emoji: "🇼🇫",
-            maps: const Maps(
-                googleMaps: "CzVqK74QYtbHv65r5",
-                openStreetMaps: "relation/3412448"),
-            population: 11750,
-            car: const Car(signs: ["F"]),
-            timezones: const ["UTC+12:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/wf.png",
-                svg: "https://flagcdn.com/wf.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Mata-Utu"], latlng: const [-13.95, -171.93]),
-            postalCode: const PostalCode(regExpPattern: r"^(986\\d{2})$"));
+                common: "Wallis et Futuna")
+          ],
+          tld: const [".wf"],
+          codeShort: "WF",
+          codeNumeric: "876",
+          code: r"WLF",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatXpf()],
+          idd: const Idd(root: "+6", suffixes: ["81"]),
+          altSpellings: const [
+            "WF",
+            "Territory of the Wallis and Futuna Islands",
+            "Territoire des îles Wallis et Futuna"
+          ],
+          region: const Oceania(),
+          subregion: const Polynesia(),
+          languages: const [LangFra()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "إقليم جزر واليس وفوتونا",
+              common: "واليس وفوتونا",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Tiriad Inizi Wallis ha Futuna",
+              common: "Wallis ha Futuna",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Teritorium ostrovů Wallis a Futuna",
+              common: "Wallis a Futuna",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Territory of the Wallis and Futuna Islands",
+              common: "Wallis and Futuna",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Gebiet der Wallis und Futuna",
+              common: "Wallis und Futuna",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Wallise ja Futuna ala",
+              common: "Wallis ja Futuna",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Wallisin ja Futunan yhteisö",
+              common: "Wallis ja Futuna",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Territoire des îles Wallis et Futuna",
+              common: "Wallis-et-Futuna",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Teritoriju Wallis i Futuna",
+              common: "Wallis i Fortuna",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Wallis és Futuna",
+              common: "Wallis és Futuna",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Territorio delle Isole Wallis e Futuna",
+              common: "Wallis e Futuna",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "ウォリス·フツナ諸島の領土",
+              common: "ウォリス・フツナ",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "왈리스 퓌튀나",
+              common: "왈리스 퓌튀나",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Grondgebied van de Wallis en Futuna",
+              common: "Wallis en Futuna",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جزایر والیس و فوتونا",
+              common: "والیس و فوتونا",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Terytorium Wysp Wallis i Futuna",
+              common: "Wallis i Futuna",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Território das Ilhas Wallis e Futuna",
+              common: "Wallis e Futuna",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Территория Уоллис и Футуна острова",
+              common: "Уоллис и Футуна",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Teritórium ostrovov Wallis a Futuna",
+              common: "Wallis a Futuna",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Territorio de las Islas Wallis y Futuna",
+              common: "Wallis y Futuna",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Territoriet Wallis- och Futunaöarna",
+              common: "Wallis- och Futunaöarna",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Wallis ve Futuna Adaları Bölgesi",
+              common: "Wallis ve Futuna Adaları Bölgesi",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "سر زمینِ والس و فتونہ جزائر",
+              common: "والس و فتونہ",
+            ),
+            CountryName(
+                language: const LangZho(),
+                official: "瓦利斯和富图纳群岛",
+                common: "瓦利斯和富图纳群岛")
+          ],
+          latlng: const [-13.3, -176.2],
+          area: 142,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Wallis and Futuna Islander",
+              m: "Wallis and Futuna Islander",
+            )
+          ],
+          emoji: "🇼🇫",
+          maps: const Maps(
+              googleMaps: "CzVqK74QYtbHv65r5",
+              openStreetMaps: "relation/3412448"),
+          population: 11750,
+          car: const Car(signs: ["F"]),
+          timezones: const ["UTC+12:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Mata-Utu"],
+            latlng: const [-13.95, -171.93],
+          ),
+          postalCode: const PostalCode(regExpPattern: r"^(986\\d{2})$"),
+        );
 }
 
 class CountryMwi extends WorldCountry {
@@ -14156,12 +13815,7 @@ class CountryMwi extends WorldCountry {
             fifa: r"MWI",
             car: const Car(signs: ["MW"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mw.png",
-                svg: "https://flagcdn.com/mw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Lilongwe"], latlng: const [-13.97, 33.78]));
 }
@@ -14333,12 +13987,7 @@ class CountryBhr extends WorldCountry {
             fifa: r"BHR",
             car: const Car(signs: ["BRN"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bh.png",
-                svg: "https://flagcdn.com/bh.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bh.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bh.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Manama"], latlng: const [26.23, 50.57]),
             postalCode: const PostalCode(
@@ -14519,12 +14168,7 @@ class CountryUkr extends WorldCountry {
             fifa: r"UKR",
             car: const Car(signs: ["UA"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ua.png",
-                svg: "https://flagcdn.com/ua.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ua.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ua.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kyiv"], latlng: const [50.43, 30.52]),
             postalCode: const PostalCode());
@@ -14705,12 +14349,7 @@ class CountryNru extends WorldCountry {
             gini: const Gini(rawYear: 2012, value: 34.8),
             car: const Car(signs: ["NAU"], isRightSide: false),
             timezones: const ["UTC+12:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/nr.png",
-                svg: "https://flagcdn.com/nr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/nr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/nr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Yaren"], latlng: const [-0.55, 166.92]));
 }
@@ -14882,11 +14521,11 @@ class CountryMyt extends WorldCountry {
             population: 226915,
             car: const Car(signs: ["F"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/yt.png",
-                svg: "https://flagcdn.com/yt.svg"),
-            capitalInfo: const CapitalInfo(latlng: const [-12.78, 45.22]),
-            capital: const ["Mamoudzou"],
+            hasCoatOfArms: false,
+            capitalInfo: const CapitalInfo(
+              latlng: const [-12.78, 45.22],
+              capital: const ["Mamoudzou"],
+            ),
             postalCode: const PostalCode());
 }
 
@@ -15066,12 +14705,7 @@ class CountryDza extends WorldCountry {
             fifa: r"ALG",
             car: const Car(signs: ["DZ"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/dz.png",
-                svg: "https://flagcdn.com/dz.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/dz.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/dz.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Algiers"], latlng: const [36.75, 3.05]),
@@ -15255,12 +14889,7 @@ class CountryCan extends WorldCountry {
               "UTC-04:00",
               "UTC-03:30"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ca.png",
-                svg: "https://flagcdn.com/ca.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ca.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ca.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Ottawa"], latlng: const [45.42, -75.7]),
@@ -15442,12 +15071,7 @@ class CountryLie extends WorldCountry {
             fifa: r"LIE",
             car: const Car(signs: ["FL"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/li.png",
-                svg: "https://flagcdn.com/li.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/li.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/li.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Vaduz"], latlng: const [47.13, 9.52]),
             postalCode: const PostalCode(
@@ -15635,12 +15259,7 @@ class CountryEth extends WorldCountry {
             fifa: r"ETH",
             car: const Car(signs: ["ETH"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/et.png",
-                svg: "https://flagcdn.com/et.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/et.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/et.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Addis Ababa"], latlng: const [9.03, 38.7]),
             postalCode: const PostalCode(
@@ -15814,12 +15433,7 @@ class CountryDom extends WorldCountry {
             fifa: r"DOM",
             car: const Car(signs: ["DOM"]),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/do.png",
-                svg: "https://flagcdn.com/do.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/do.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/do.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Santo Domingo"], latlng: const [18.47, -69.9]),
             postalCode: const PostalCode());
@@ -15946,196 +15560,194 @@ class CountryBvt extends WorldCountry {
               googleMaps: "7WRQAEKZb4uK36yi9", openStreetMaps: "way/174996681"),
           population: 0,
           car: const Car(signs: [""]),
+          hasCoatOfArms: false,
           timezones: const ["UTC+01:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/bv.png",
-              svg: "https://flagcdn.com/bv.svg"),
-          capitalInfo: const CapitalInfo(),
         );
 }
 
 class CountryNfk extends WorldCountry {
   const CountryNfk()
       : super(
-            name: const CountryName.international(
-                common: "Norfolk Island",
-                official: "Territory of Norfolk Island"),
-            nativeNames: const [
-              CountryName(
-                language: const LangEng(),
-                official: "Territory of Norfolk Island",
-                common: "Norfolk Island",
-              ),
-              // TODO:   CountryName(language: const LangPih(),
-              //       official:"Teratri of Norf'k Ailen",
-              //       common: "Norf'k Ailen",
+          name: const CountryName.international(
+              common: "Norfolk Island",
+              official: "Territory of Norfolk Island"),
+          nativeNames: const [
+            CountryName(
+              language: const LangEng(),
+              official: "Territory of Norfolk Island",
+              common: "Norfolk Island",
+            ),
+            // TODO:   CountryName(language: const LangPih(),
+            //       official:"Teratri of Norf'k Ailen",
+            //       common: "Norf'k Ailen",
 
-              // )],
-            ],
-            tld: const [".nf"],
-            codeShort: "NF",
-            codeNumeric: "574",
-            code: r"NFK",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatAud()],
-            idd: const Idd(root: "+6", suffixes: ["72"]),
-            altSpellings: const [
-              "NF",
-              "Territory of Norfolk Island",
-              "Teratri of Norf'k Ailen"
-            ],
-            region: const Oceania(),
-            subregion: const AustraliaAndNewZealand(),
-            languages: const [
-              LangEng(),
-              // TODO: LangPih()
-            ],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "إقليم جزيرة نورفولك",
-                common: "جزيرة نورفولك",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Tiriad Enez Norfolk",
-                common: "Enez Norfolk",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Teritorium ostrova Norfolk",
-                common: "Norfolk",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Territory of Norfolk Island",
-                common: "Norfolk Island",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Gebiet der Norfolkinsel",
-                common: "Norfolkinsel",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Norfolki saare ala",
-                common: "Norfolk",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Norfolkinsaaren territorio",
-                common: "Norfolkinsaari",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Territoire de l'île Norfolk",
-                common: "Île Norfolk",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Teritorij Norfolk Island",
-                common: "Otok Norfolk",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Norfolk-sziget",
-                common: "Norfolk-sziget",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Territorio di Norfolk Island",
-                common: "Isola Norfolk",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "ノーフォーク島の領土",
-                common: "ノーフォーク島",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "노퍽 섬",
-                common: "노퍽 섬",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Grondgebied van Norfolk Island",
-                common: "Norfolkeiland",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "قلمرو جزایر نورفک",
-                common: "جزیره نورفک",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Terytorium Wyspy Norfolk",
-                common: "Wyspa Norfolk",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Território da Ilha Norfolk",
-                common: "Ilha Norfolk",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Территория острова Норфолк",
-                common: "Норфолк",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Teritórium ostrova Norfolk",
-                common: "Norfolk",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Territorio de la Isla Norfolk",
-                common: "Isla de Norfolk",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Norfolkön",
-                common: "Norfolkön",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Norfolk Adası",
-                common: "Norfolk Adası",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "جزیرہ نورفک خطہ",
-                common: "جزیرہ نورفک",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "诺福克岛", common: "诺福克岛")
-            ],
-            latlng: const [-29.03333333, 167.95],
-            area: 36,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Norfolk Islander",
-                m: "Norfolk Islander",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Norfolkaise",
-                m: "Norfolkais",
-              )
-            ],
-            emoji: "🇳🇫",
-            maps: const Maps(
-                googleMaps: "pbvtm6XYd1iZbjky5",
-                openStreetMaps: "relation/2574988"),
-            population: 2302,
-            car: const Car(signs: ["AUS"], isRightSide: false),
-            timezones: const ["UTC+11:30"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/nf.png",
-                svg: "https://flagcdn.com/nf.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Kingston"], latlng: const [-29.05, 167.97]));
+            // )],
+          ],
+          tld: const [".nf"],
+          codeShort: "NF",
+          codeNumeric: "574",
+          code: r"NFK",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatAud()],
+          idd: const Idd(root: "+6", suffixes: ["72"]),
+          altSpellings: const [
+            "NF",
+            "Territory of Norfolk Island",
+            "Teratri of Norf'k Ailen"
+          ],
+          region: const Oceania(),
+          subregion: const AustraliaAndNewZealand(),
+          languages: const [
+            LangEng(),
+            // TODO: LangPih()
+          ],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "إقليم جزيرة نورفولك",
+              common: "جزيرة نورفولك",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Tiriad Enez Norfolk",
+              common: "Enez Norfolk",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Teritorium ostrova Norfolk",
+              common: "Norfolk",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Territory of Norfolk Island",
+              common: "Norfolk Island",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Gebiet der Norfolkinsel",
+              common: "Norfolkinsel",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Norfolki saare ala",
+              common: "Norfolk",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Norfolkinsaaren territorio",
+              common: "Norfolkinsaari",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Territoire de l'île Norfolk",
+              common: "Île Norfolk",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Teritorij Norfolk Island",
+              common: "Otok Norfolk",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Norfolk-sziget",
+              common: "Norfolk-sziget",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Territorio di Norfolk Island",
+              common: "Isola Norfolk",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "ノーフォーク島の領土",
+              common: "ノーフォーク島",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "노퍽 섬",
+              common: "노퍽 섬",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Grondgebied van Norfolk Island",
+              common: "Norfolkeiland",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "قلمرو جزایر نورفک",
+              common: "جزیره نورفک",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Terytorium Wyspy Norfolk",
+              common: "Wyspa Norfolk",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Território da Ilha Norfolk",
+              common: "Ilha Norfolk",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Территория острова Норфолк",
+              common: "Норфолк",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Teritórium ostrova Norfolk",
+              common: "Norfolk",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Territorio de la Isla Norfolk",
+              common: "Isla de Norfolk",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Norfolkön",
+              common: "Norfolkön",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Norfolk Adası",
+              common: "Norfolk Adası",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "جزیرہ نورفک خطہ",
+              common: "جزیرہ نورفک",
+            ),
+            CountryName(
+                language: const LangZho(), official: "诺福克岛", common: "诺福克岛")
+          ],
+          latlng: const [-29.03333333, 167.95],
+          area: 36,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Norfolk Islander",
+              m: "Norfolk Islander",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Norfolkaise",
+              m: "Norfolkais",
+            )
+          ],
+          emoji: "🇳🇫",
+          maps: const Maps(
+              googleMaps: "pbvtm6XYd1iZbjky5",
+              openStreetMaps: "relation/2574988"),
+          population: 2302,
+          car: const Car(signs: ["AUS"], isRightSide: false),
+          timezones: const ["UTC+11:30"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Kingston"],
+            latlng: const [-29.05, 167.97],
+          ),
+        );
 }
 
 class CountryNld extends WorldCountry {
@@ -16309,12 +15921,7 @@ class CountryNld extends WorldCountry {
             fifa: r"NED",
             car: const Car(signs: ["NL"]),
             timezones: const ["UTC-04:00", "UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/nl.png",
-                svg: "https://flagcdn.com/nl.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/nl.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/nl.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Amsterdam"], latlng: const [52.35, 4.92]),
             postalCode: const PostalCode(
@@ -16324,188 +15931,189 @@ class CountryNld extends WorldCountry {
 class CountryMnp extends WorldCountry {
   const CountryMnp()
       : super(
-            name: const CountryName.international(
-                common: "Northern Mariana Islands",
-                official: "Commonwealth of the Northern Mariana Islands"),
-            nativeNames: const [
-              CountryName(
-                language: const LangCha(),
-                official: "Sankattan Siha Na Islas Mariånas",
-                common: "Na Islas Mariånas",
-              ),
-              CountryName(
-                language: const LangEng(),
-                official: "Commonwealth of the Northern Mariana Islands",
-                common: "Northern Mariana Islands",
-              )
-            ],
-            tld: const [".mp"],
-            codeShort: "MP",
-            codeNumeric: "580",
-            code: r"MNP",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatUsd()],
-            idd: const Idd(root: "+1", suffixes: ["670"]),
-            altSpellings: const [
-              "MP",
-              "Commonwealth of the Northern Mariana Islands",
-              "Sankattan Siha Na Islas Mariånas"
-            ],
-            region: const Oceania(),
-            subregion: const Micronesia(),
-            languages: const [
-              // TODO:  LangCal(),
+          name: const CountryName.international(
+              common: "Northern Mariana Islands",
+              official: "Commonwealth of the Northern Mariana Islands"),
+          nativeNames: const [
+            CountryName(
+              language: const LangCha(),
+              official: "Sankattan Siha Na Islas Mariånas",
+              common: "Na Islas Mariånas",
+            ),
+            CountryName(
+              language: const LangEng(),
+              official: "Commonwealth of the Northern Mariana Islands",
+              common: "Northern Mariana Islands",
+            )
+          ],
+          tld: const [".mp"],
+          codeShort: "MP",
+          codeNumeric: "580",
+          code: r"MNP",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatUsd()],
+          idd: const Idd(root: "+1", suffixes: ["670"]),
+          altSpellings: const [
+            "MP",
+            "Commonwealth of the Northern Mariana Islands",
+            "Sankattan Siha Na Islas Mariånas"
+          ],
+          region: const Oceania(),
+          subregion: const Micronesia(),
+          languages: const [
+            // TODO:  LangCal(),
 
-              LangCha(), LangEng()
-            ],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "كومونولث جزر ماريانا الشمالية",
-                common: "جزر ماريانا الشمالية",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Kenglad Inizi Mariana an Norzh",
-                common: "Inizi Mariana an Norzh",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Společenství Severních Marian",
-                common: "Severní Mariany",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Commonwealth of the Northern Mariana Islands",
-                common: "Northern Mariana Islands",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Commonwealth der Nördlichen Marianen",
-                common: "Nördliche Marianen",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Põhja-Mariaani Ühendus",
-                common: "Põhja-Mariaanid",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Pohjois-Mariaanit",
-                common: "Pohjois-Mariaanit",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Commonwealth des îles Mariannes du Nord",
-                common: "Îles Mariannes du Nord",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Zajednica je Sjeverni Marijanski otoci",
-                common: "Sjevernomarijanski otoci",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Északi-Mariana-szigetek",
-                common: "Északi-Mariana-szigetek",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Commonwealth delle Isole Marianne Settentrionali",
-                common: "Isole Marianne Settentrionali",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "北マリアナ諸島",
-                common: "北マリアナ諸島",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "북마리아나 제도",
-                common: "북마리아나 제도",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Commonwealth van de Noordelijke Marianen",
-                common: "Noordelijke Marianeneilanden",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جزایر ماریانای شمالی",
-                common: "جزایر ماریانای شمالی",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Wspólnota Marianów Północnych",
-                common: "Mariany Północne",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Comunidade das Ilhas Marianas do Norte",
-                common: "Marianas Setentrionais",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Содружество Северных Марианских островов",
-                common: "Северные Марианские острова",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Spoločenstvo ostrovov Severné Mariány",
-                common: "Severné Mariány",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Mancomunidad de las Islas Marianas del Norte",
-                common: "Islas Marianas del Norte",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Nordmarianerna",
-                common: "Nordmarianerna",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Kuzey Mariana Adaları Milletler Topluluğu",
-                common: "Kuzey Mariana Adaları",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "دولتِ مشترکہ جزائر شمالی ماریانا",
-                common: "جزائر شمالی ماریانا",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "北马里亚纳群岛",
-                  common: "北马里亚纳群岛")
-            ],
+            LangCha(), LangEng()
+          ],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "كومونولث جزر ماريانا الشمالية",
+              common: "جزر ماريانا الشمالية",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Kenglad Inizi Mariana an Norzh",
+              common: "Inizi Mariana an Norzh",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Společenství Severních Marian",
+              common: "Severní Mariany",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Commonwealth of the Northern Mariana Islands",
+              common: "Northern Mariana Islands",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Commonwealth der Nördlichen Marianen",
+              common: "Nördliche Marianen",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Põhja-Mariaani Ühendus",
+              common: "Põhja-Mariaanid",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Pohjois-Mariaanit",
+              common: "Pohjois-Mariaanit",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Commonwealth des îles Mariannes du Nord",
+              common: "Îles Mariannes du Nord",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Zajednica je Sjeverni Marijanski otoci",
+              common: "Sjevernomarijanski otoci",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Északi-Mariana-szigetek",
+              common: "Északi-Mariana-szigetek",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Commonwealth delle Isole Marianne Settentrionali",
+              common: "Isole Marianne Settentrionali",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "北マリアナ諸島",
+              common: "北マリアナ諸島",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "북마리아나 제도",
+              common: "북마리아나 제도",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Commonwealth van de Noordelijke Marianen",
+              common: "Noordelijke Marianeneilanden",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جزایر ماریانای شمالی",
+              common: "جزایر ماریانای شمالی",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Wspólnota Marianów Północnych",
+              common: "Mariany Północne",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Comunidade das Ilhas Marianas do Norte",
+              common: "Marianas Setentrionais",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Содружество Северных Марианских островов",
+              common: "Северные Марианские острова",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Spoločenstvo ostrovov Severné Mariány",
+              common: "Severné Mariány",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Mancomunidad de las Islas Marianas del Norte",
+              common: "Islas Marianas del Norte",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Nordmarianerna",
+              common: "Nordmarianerna",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Kuzey Mariana Adaları Milletler Topluluğu",
+              common: "Kuzey Mariana Adaları",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "دولتِ مشترکہ جزائر شمالی ماریانا",
+              common: "جزائر شمالی ماریانا",
+            ),
+            CountryName(
+                language: const LangZho(),
+                official: "北马里亚纳群岛",
+                common: "北马里亚纳群岛")
+          ],
+          latlng: const [15.2, 145.75],
+          area: 464,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "American",
+              m: "American",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Américaine",
+              m: "Américan",
+            )
+          ],
+          emoji: "🇲🇵",
+          maps: const Maps(
+              googleMaps: "cpZ67knoRAcfu1417",
+              openStreetMaps: "relation/306004"),
+          population: 57557,
+          car: const Car(signs: ["USA"]),
+          timezones: const ["UTC+10:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Saipan"],
             latlng: const [15.2, 145.75],
-            area: 464,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "American",
-                m: "American",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Américaine",
-                m: "Américan",
-              )
-            ],
-            emoji: "🇲🇵",
-            maps: const Maps(
-                googleMaps: "cpZ67knoRAcfu1417",
-                openStreetMaps: "relation/306004"),
-            population: 57557,
-            car: const Car(signs: ["USA"]),
-            timezones: const ["UTC+10:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mp.png",
-                svg: "https://flagcdn.com/mp.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Saipan"], latlng: const [15.2, 145.75]));
+          ),
+        );
 }
 
 class CountryHkg extends WorldCountry {
@@ -16695,12 +16303,7 @@ class CountryHkg extends WorldCountry {
             fifa: r"HKG",
             car: const Car(signs: ["HK"], isRightSide: false),
             timezones: const ["UTC+08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/hk.png",
-                svg: "https://flagcdn.com/hk.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/hk.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/hk.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["City of Victoria"],
                 latlng: const [22.267, 114.188]));
@@ -16896,12 +16499,7 @@ class CountryIrq extends WorldCountry {
             fifa: r"IRQ",
             car: const Car(signs: ["IRQ"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/iq.png",
-                svg: "https://flagcdn.com/iq.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/iq.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/iq.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Baghdad"], latlng: const [33.33, 44.4]),
@@ -17079,12 +16677,7 @@ class CountryEsp extends WorldCountry {
             fifa: r"ESP",
             car: const Car(signs: ["E"]),
             timezones: const ["UTC", "UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/es.png",
-                svg: "https://flagcdn.com/es.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/es.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/es.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Madrid"], latlng: const [40.4, -3.68]),
             postalCode: const PostalCode());
@@ -17260,12 +16853,7 @@ class CountryTgo extends WorldCountry {
             fifa: r"TOG",
             car: const Car(signs: ["TG"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tg.png",
-                svg: "https://flagcdn.com/tg.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tg.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tg.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Lomé"], latlng: const [6.14, 1.21]));
 }
@@ -17455,14 +17043,11 @@ class CountryChn extends WorldCountry {
             fifa: r"CHN",
             car: const Car(signs: ["RC"]),
             timezones: const ["UTC+08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cn.png",
-                svg: "https://flagcdn.com/cn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cn.svg"),
-            capital: const ["Beijing"],
-            capitalInfo: const CapitalInfo(latlng: const [39.92, 116.38]),
+            hasCoatOfArms: true,
+            capitalInfo: const CapitalInfo(
+              latlng: const [39.92, 116.38],
+              capital: const ["Beijing"],
+            ),
             postalCode: const PostalCode(
                 format: r"######", regExpPattern: r"^(\\d{6})$"));
 }
@@ -17634,12 +17219,7 @@ class CountryFlk extends WorldCountry {
             population: 2563,
             car: const Car(signs: ["GB"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/fk.png",
-                svg: "https://flagcdn.com/fk.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/fk.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/fk.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Stanley"], latlng: const [-51.7, -57.85]));
 }
@@ -18139,12 +17719,7 @@ class CountryUsa extends WorldCountry {
               "UTC+10:00",
               "UTC+12:00"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/us.png",
-                svg: "https://flagcdn.com/us.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/us.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/us.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Washington, D.C."],
@@ -18294,11 +17869,11 @@ class CountryMaf extends WorldCountry {
           population: 38659,
           car: const Car(signs: ["F"]),
           timezones: const ["UTC-04:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/mf.png",
-              svg: "https://flagcdn.com/mf.svg"),
+          hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-              capital: const ["Marigot"], latlng: const [18.07, -63.08]),
+            capital: const ["Marigot"],
+            latlng: const [18.07, -63.08],
+          ),
           postalCode: const PostalCode(
               format: r"### ###", regExpPattern: "" // TODO ! Add proper regexp.
               ),
@@ -18479,12 +18054,7 @@ class CountryIrn extends WorldCountry {
             fifa: r"IRN",
             car: const Car(signs: ["IR"]),
             timezones: const ["UTC+03:30"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ir.png",
-                svg: "https://flagcdn.com/ir.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ir.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ir.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.saturday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tehran"], latlng: const [35.7, 51.42]),
@@ -18662,12 +18232,7 @@ class CountryMex extends WorldCountry {
             fifa: r"MEX",
             car: const Car(signs: ["MEX"]),
             timezones: const ["UTC-08:00", "UTC-07:00", "UTC-06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mx.png",
-                svg: "https://flagcdn.com/mx.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mx.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mx.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Mexico City"], latlng: const [19.43, -99.13]),
             postalCode: const PostalCode());
@@ -18842,12 +18407,7 @@ class CountryBrn extends WorldCountry {
             fifa: r"BRU",
             car: const Car(signs: ["BRU"], isRightSide: false),
             timezones: const ["UTC+08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bn.png",
-                svg: "https://flagcdn.com/bn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bn.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bandar Seri Begawan"],
                 latlng: const [4.88, 114.93]),
@@ -19032,12 +18592,7 @@ class CountryCyp extends WorldCountry {
             fifa: r"CYP",
             car: const Car(signs: ["CY"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cy.png",
-                svg: "https://flagcdn.com/cy.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cy.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cy.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Nicosia"], latlng: const [35.17, 33.37]),
             postalCode: const PostalCode(
@@ -19215,12 +18770,7 @@ class CountryNic extends WorldCountry {
             fifa: r"NCA",
             car: const Car(signs: ["NIC"]),
             timezones: const ["UTC-06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ni.png",
-                svg: "https://flagcdn.com/ni.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ni.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ni.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Managua"], latlng: const [12.13, -86.25]),
             postalCode: const PostalCode(
@@ -19401,12 +18951,7 @@ class CountryCuw extends WorldCountry {
             fifa: r"CUW",
             car: const Car(signs: ["CW"]),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cw.png",
-                svg: "https://flagcdn.com/cw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Willemstad"], latlng: const [12.1, -68.92]));
 }
@@ -19414,183 +18959,184 @@ class CountryCuw extends WorldCountry {
 class CountryPri extends WorldCountry {
   const CountryPri()
       : super(
-            name: const CountryName.international(
-                common: "Puerto Rico", official: "Commonwealth of Puerto Rico"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(),
-                  official: "Commonwealth of Puerto Rico",
-                  common: "Puerto Rico"),
-              CountryName(
-                  language: const LangSpa(),
-                  official: "Estado Libre Asociado de Puerto Rico",
-                  common: "Puerto Rico")
-            ],
-            tld: const [".pr"],
-            codeShort: "PR",
-            codeNumeric: "630",
-            code: r"PRI",
-            cioc: r"PUR",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatUsd()],
-            idd: const Idd(root: "+1", suffixes: ["787", "939"]),
-            altSpellings: const [
-              "PR",
-              "Commonwealth of Puerto Rico",
-              "Estado Libre Asociado de Puerto Rico"
-            ],
-            region: const Americas(),
-            subregion: const Caribbean(),
-            languages: const [LangEng(), LangSpa()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "كومنولث بويرتوريكو",
-                common: "بويرتوريكو",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Kenglad Puerto Rico",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Portoriko",
-                common: "Portoriko",
-              ),
-              CountryName(
-                language: const LangCym(),
+          name: const CountryName.international(
+              common: "Puerto Rico", official: "Commonwealth of Puerto Rico"),
+          nativeNames: const [
+            CountryName(
+                language: const LangEng(),
                 official: "Commonwealth of Puerto Rico",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Freistaat Puerto Rico",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Puerto Rico Ühendus",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Puerto Rico",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Porto Rico",
-                common: "Porto Rico",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Zajednica Puerto Rico",
-                common: "Portoriko",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Puerto Rico",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Commonwealth di Porto Rico",
-                common: "Porto Rico",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "プエルトリコのコモンウェルス",
-                common: "プエルトリコ",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "푸에르토리코",
-                common: "푸에르토리코",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Gemenebest van Puerto Rico",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "قلمرو همسود پورتوریکو",
-                common: "پورتوریکو",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Wolne Stowarzyszone Państwo Portoryko",
-                common: "Portoryko",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Commonwealth of Puerto Rico",
-                common: "Porto Rico",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Содружество Пуэрто-Рико",
-                common: "Пуэрто-Рико",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Portorické spoločenstvo",
-                common: "Portoriko",
-              ),
-              CountryName(
+                common: "Puerto Rico"),
+            CountryName(
                 language: const LangSpa(),
-                official: "Asociado de Puerto Rico",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Puerto Rico",
-                common: "Puerto Rico",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Porto Riko Topluluğu",
-                common: "Porto Riko",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: " دولتِ مشترکہ پورٹو ریکو",
-                common: "پورٹو ریکو",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "波多黎各联邦", common: "波多黎各")
-            ],
-            latlng: const [18.25, -66.5],
-            area: 8870,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Puerto Rican",
-                m: "Puerto Rican",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Portoricaine",
-                m: "Portoricain",
-              )
-            ],
-            emoji: "🇵🇷",
-            maps: const Maps(
-                googleMaps: "sygfDbtwn389wu8x5",
-                openStreetMaps: "relation/4422604"),
-            population: 3194034,
-            fifa: r"PUR",
-            car: const Car(signs: ["USA"]),
-            timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pr.png",
-                svg: "https://flagcdn.com/pr.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["San Juan"], latlng: const [18.47, -66.12]),
-            postalCode: const PostalCode(
-                format: r"#####-####", regExpPattern: r"^(\\d{9})$"));
+                official: "Estado Libre Asociado de Puerto Rico",
+                common: "Puerto Rico")
+          ],
+          tld: const [".pr"],
+          codeShort: "PR",
+          codeNumeric: "630",
+          code: r"PRI",
+          cioc: r"PUR",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatUsd()],
+          idd: const Idd(root: "+1", suffixes: ["787", "939"]),
+          altSpellings: const [
+            "PR",
+            "Commonwealth of Puerto Rico",
+            "Estado Libre Asociado de Puerto Rico"
+          ],
+          region: const Americas(),
+          subregion: const Caribbean(),
+          languages: const [LangEng(), LangSpa()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "كومنولث بويرتوريكو",
+              common: "بويرتوريكو",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Kenglad Puerto Rico",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Portoriko",
+              common: "Portoriko",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Commonwealth of Puerto Rico",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Freistaat Puerto Rico",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Puerto Rico Ühendus",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Puerto Rico",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Porto Rico",
+              common: "Porto Rico",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Zajednica Puerto Rico",
+              common: "Portoriko",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Puerto Rico",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Commonwealth di Porto Rico",
+              common: "Porto Rico",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "プエルトリコのコモンウェルス",
+              common: "プエルトリコ",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "푸에르토리코",
+              common: "푸에르토리코",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Gemenebest van Puerto Rico",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "قلمرو همسود پورتوریکو",
+              common: "پورتوریکو",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Wolne Stowarzyszone Państwo Portoryko",
+              common: "Portoryko",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Commonwealth of Puerto Rico",
+              common: "Porto Rico",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Содружество Пуэрто-Рико",
+              common: "Пуэрто-Рико",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Portorické spoločenstvo",
+              common: "Portoriko",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Asociado de Puerto Rico",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Puerto Rico",
+              common: "Puerto Rico",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Porto Riko Topluluğu",
+              common: "Porto Riko",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: " دولتِ مشترکہ پورٹو ریکو",
+              common: "پورٹو ریکو",
+            ),
+            CountryName(
+                language: const LangZho(), official: "波多黎各联邦", common: "波多黎各")
+          ],
+          latlng: const [18.25, -66.5],
+          area: 8870,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Puerto Rican",
+              m: "Puerto Rican",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Portoricaine",
+              m: "Portoricain",
+            )
+          ],
+          emoji: "🇵🇷",
+          maps: const Maps(
+              googleMaps: "sygfDbtwn389wu8x5",
+              openStreetMaps: "relation/4422604"),
+          population: 3194034,
+          fifa: r"PUR",
+          car: const Car(signs: ["USA"]),
+          timezones: const ["UTC-04:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["San Juan"],
+            latlng: const [18.47, -66.12],
+          ),
+          postalCode: const PostalCode(
+              format: r"#####-####", regExpPattern: r"^(\\d{9})$"),
+        );
 }
 
 class CountryNcl extends WorldCountry {
@@ -19759,12 +19305,7 @@ class CountryNcl extends WorldCountry {
             fifa: r"NCL",
             car: const Car(signs: ["F"]),
             timezones: const ["UTC+11:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/nc.png",
-                svg: "https://flagcdn.com/nc.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/nc.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/nc.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Nouméa"], latlng: const [-22.27, 166.45]),
             postalCode: const PostalCode());
@@ -19943,12 +19484,7 @@ class CountrySsd extends WorldCountry {
             fifa: r"SSD",
             car: const Car(signs: [""]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ss.png",
-                svg: "https://flagcdn.com/ss.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ss.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ss.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Juba"], latlng: const [4.85, 31.62]));
@@ -20129,12 +19665,7 @@ class CountrySom extends WorldCountry {
             fifa: r"SOM",
             car: const Car(signs: ["SO"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/so.png",
-                svg: "https://flagcdn.com/so.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/so.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/so.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Mogadishu"], latlng: const [2.07, 45.33]),
             postalCode: const PostalCode(
@@ -20316,12 +19847,7 @@ class CountryGrc extends WorldCountry {
             fifa: r"GRE",
             car: const Car(signs: ["GR"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gr.png",
-                svg: "https://flagcdn.com/gr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Athens"], latlng: const [37.98, 23.73]),
             postalCode: const PostalCode(
@@ -20504,12 +20030,7 @@ class CountryBes extends WorldCountry {
             population: 25987,
             car: const Car(signs: [""]),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bq.png",
-                svg: "https://flagcdn.com/bq.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bq.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bq.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kralendijk"], latlng: const [12.14, -68.27]));
 }
@@ -20693,12 +20214,7 @@ class CountryLao extends WorldCountry {
             fifa: r"LAO",
             car: const Car(signs: ["LAO"]),
             timezones: const ["UTC+07:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/la.png",
-                svg: "https://flagcdn.com/la.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/la.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/la.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Vientiane"], latlng: const [17.97, 102.6]),
             postalCode: const PostalCode());
@@ -20878,12 +20394,7 @@ class CountryBlz extends WorldCountry {
             fifa: r"BLZ",
             car: const Car(signs: ["BH"]),
             timezones: const ["UTC-06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bz.png",
-                svg: "https://flagcdn.com/bz.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bz.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bz.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Belmopan"], latlng: const [17.25, -88.77]));
 }
@@ -21059,12 +20570,7 @@ class CountrySlv extends WorldCountry {
             fifa: r"SLV",
             car: const Car(signs: ["ES"]),
             timezones: const ["UTC-06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sv.png",
-                svg: "https://flagcdn.com/sv.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sv.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sv.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["San Salvador"], latlng: const [13.7, -89.2]),
             postalCode: const PostalCode(
@@ -21074,180 +20580,178 @@ class CountrySlv extends WorldCountry {
 class CountryJam extends WorldCountry {
   const CountryJam()
       : super(
-            name: const CountryName.international(
-                common: "Jamaica", official: "Jamaica"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(),
-                  official: "Jamaica",
-                  common: "Jamaica")
-            ],
-            tld: const [".jm"],
-            codeShort: "JM",
-            codeNumeric: "388",
-            code: r"JAM",
-            cioc: r"JAM",
-            currencies: const [
-              // TODO! LangJmd()
-            ],
-            idd: const Idd(root: "+1", suffixes: ["876"]),
-            altSpellings: const ["JM"],
-            region: const Americas(),
-            subregion: const Caribbean(),
-            languages: const [
-              LangEng(),
-              // TODO: LangJam()
-            ],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "جامايكا",
-                common: "جامايكا",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Jamaika",
-                common: "Jamaika",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Jamajka",
-                common: "Jamajka",
-              ),
-              CountryName(
-                language: const LangCym(),
+          name: const CountryName.international(
+              common: "Jamaica", official: "Jamaica"),
+          nativeNames: const [
+            CountryName(
+                language: const LangEng(),
                 official: "Jamaica",
-                common: "Jamaica",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Jamaika",
-                common: "Jamaika",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Jamaica",
-                common: "Jamaica",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Jamaika",
-                common: "Jamaika",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Jamaïque",
-                common: "Jamaïque",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Jamajka",
-                common: "Jamajka",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Jamaica",
-                common: "Jamaica",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Giamaica",
-                common: "Giamaica",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "ジャマイカ",
-                common: "ジャマイカ",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "자메이카",
-                common: "자메이카",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Jamaica",
-                common: "Jamaica",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جامائیکا",
-                common: "جامائیکا",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Jamajka",
-                common: "Jamajka",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Jamaica",
-                common: "Jamaica",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Ямайка",
-                common: "Ямайка",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Jamajka",
-                common: "Jamajka",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Jamaica",
-                common: "Jamaica",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Jamaica",
-                common: "Jamaica",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Jamaika",
-                common: "Jamaika",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "جمیکا",
-                common: "جمیکا",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "牙买加", common: "牙买加")
-            ],
-            latlng: const [18.25, -77.5],
-            area: 10991,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Jamaican",
-                m: "Jamaican",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Jamaïcaine",
-                m: "Jamaïcain",
-              )
-            ],
-            emoji: "🇯🇲",
-            maps: const Maps(
-                googleMaps: "Z8mQ6jxnRQKFwJy9A",
-                openStreetMaps: "relation/555017"),
-            population: 2961161,
-            gini: const Gini(rawYear: 2004, value: 45.5),
-            fifa: r"JAM",
-            car: const Car(signs: ["JA"], isRightSide: false),
-            timezones: const ["UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/jm.png",
-                svg: "https://flagcdn.com/jm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/jm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/jm.svg"),
-            capitalInfo:
-                const CapitalInfo(latlng: const [17.99702, -76.79358]));
+                common: "Jamaica")
+          ],
+          tld: const [".jm"],
+          codeShort: "JM",
+          codeNumeric: "388",
+          code: r"JAM",
+          cioc: r"JAM",
+          currencies: const [
+            // TODO! LangJmd()
+          ],
+          idd: const Idd(root: "+1", suffixes: ["876"]),
+          altSpellings: const ["JM"],
+          region: const Americas(),
+          subregion: const Caribbean(),
+          languages: const [
+            LangEng(),
+            // TODO: LangJam()
+          ],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "جامايكا",
+              common: "جامايكا",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Jamaika",
+              common: "Jamaika",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Jamajka",
+              common: "Jamajka",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Jamaica",
+              common: "Jamaica",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Jamaika",
+              common: "Jamaika",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Jamaica",
+              common: "Jamaica",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Jamaika",
+              common: "Jamaika",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Jamaïque",
+              common: "Jamaïque",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Jamajka",
+              common: "Jamajka",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Jamaica",
+              common: "Jamaica",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Giamaica",
+              common: "Giamaica",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "ジャマイカ",
+              common: "ジャマイカ",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "자메이카",
+              common: "자메이카",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Jamaica",
+              common: "Jamaica",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جامائیکا",
+              common: "جامائیکا",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Jamajka",
+              common: "Jamajka",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Jamaica",
+              common: "Jamaica",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Ямайка",
+              common: "Ямайка",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Jamajka",
+              common: "Jamajka",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Jamaica",
+              common: "Jamaica",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Jamaica",
+              common: "Jamaica",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Jamaika",
+              common: "Jamaika",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "جمیکا",
+              common: "جمیکا",
+            ),
+            CountryName(
+                language: const LangZho(), official: "牙买加", common: "牙买加")
+          ],
+          latlng: const [18.25, -77.5],
+          area: 10991,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Jamaican",
+              m: "Jamaican",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Jamaïcaine",
+              m: "Jamaïcain",
+            )
+          ],
+          emoji: "🇯🇲",
+          maps: const Maps(
+              googleMaps: "Z8mQ6jxnRQKFwJy9A",
+              openStreetMaps: "relation/555017"),
+          population: 2961161,
+          gini: const Gini(rawYear: 2004, value: 45.5),
+          fifa: r"JAM",
+          car: const Car(signs: ["JA"], isRightSide: false),
+          timezones: const ["UTC-05:00"],
+          hasCoatOfArms: true,
+          capitalInfo: const CapitalInfo(
+            latlng: const [17.99702, -76.79358],
+            capital: const ["Kingston"],
+          ),
+        );
 }
 
 class CountryUry extends WorldCountry {
@@ -21266,7 +20770,6 @@ class CountryUry extends WorldCountry {
             codeNumeric: "858",
             code: r"URY",
             cioc: r"URU",
-            capital: const ["Kingston"],
             currencies: const [FiatUyu()],
             idd: const Idd(root: "+5", suffixes: ["98"]),
             altSpellings: const [
@@ -21422,12 +20925,7 @@ class CountryUry extends WorldCountry {
             fifa: r"URU",
             car: const Car(signs: ["ROU"]),
             timezones: const ["UTC-03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/uy.png",
-                svg: "https://flagcdn.com/uy.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/uy.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/uy.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Montevideo"], latlng: const [-34.85, -56.17]),
             postalCode: const PostalCode());
@@ -21587,12 +21085,7 @@ class CountryPng extends WorldCountry {
           car: const Car(signs: ["PNG"], isRightSide: false),
           timezones: const ["UTC+10:00"],
 
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/pg.png",
-              svg: "https://flagcdn.com/pg.svg"),
-          coatOfArms: const CoatOfArms(
-              png: "https://mainfacts.com/media/images/coats_of_arms/pg.png",
-              svg: "https://mainfacts.com/media/images/coats_of_arms/pg.svg"),
+          hasCoatOfArms: true,
 
           capitalInfo: const CapitalInfo(
               capital: const ["Port Moresby"], latlng: const [-9.45, 147.18]),
@@ -21782,12 +21275,7 @@ class CountryLux extends WorldCountry {
             fifa: r"LUX",
             car: const Car(signs: ["L"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/lu.png",
-                svg: "https://flagcdn.com/lu.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/lu.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/lu.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Luxembourg"], latlng: const [49.6, 6.12]),
             postalCode: const PostalCode(
@@ -21963,12 +21451,7 @@ class CountryChl extends WorldCountry {
             fifa: r"CHI",
             car: const Car(signs: ["RCH"]),
             timezones: const ["UTC-06:00", "UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cl.png",
-                svg: "https://flagcdn.com/cl.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cl.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cl.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Santiago"], latlng: const [-33.45, -70.67]),
             postalCode: const PostalCode(
@@ -22147,12 +21630,7 @@ class CountryVat extends WorldCountry {
             population: 451,
             car: const Car(signs: ["V"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/va.png",
-                svg: "https://flagcdn.com/va.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/va.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/va.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Vatican City"], latlng: const [41.9, 12.45]));
 }
@@ -22332,12 +21810,7 @@ class CountryGnb extends WorldCountry {
             fifa: r"GNB",
             car: const Car(signs: ["RGB"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gw.png",
-                svg: "https://flagcdn.com/gw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bissau"], latlng: const [11.85, -15.58]),
             postalCode: const PostalCode(
@@ -22524,12 +21997,7 @@ class CountryUga extends WorldCountry {
             fifa: r"UGA",
             car: const Car(signs: ["EAU"], isRightSide: false),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ug.png",
-                svg: "https://flagcdn.com/ug.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ug.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ug.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kampala"], latlng: const [0.32, 32.55]));
 }
@@ -22707,12 +22175,7 @@ class CountryVen extends WorldCountry {
             fifa: r"VEN",
             car: const Car(signs: ["YV"]),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ve.png",
-                svg: "https://flagcdn.com/ve.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ve.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ve.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Caracas"], latlng: const [10.48, -66.87]),
             postalCode: const PostalCode(
@@ -22901,12 +22364,7 @@ class CountrySrb extends WorldCountry {
             fifa: r"SRB",
             car: const Car(signs: ["SRB"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/rs.png",
-                svg: "https://flagcdn.com/rs.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/rs.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/rs.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Belgrade"], latlng: const [44.83, 20.5]),
             postalCode: const PostalCode(
@@ -23087,12 +22545,7 @@ class CountryBen extends WorldCountry {
             fifa: r"BEN",
             car: const Car(signs: ["DY"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bj.png",
-                svg: "https://flagcdn.com/bj.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bj.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bj.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Porto-Novo"], latlng: const [6.48, 2.62]));
 }
@@ -23269,12 +22722,7 @@ class CountryBgd extends WorldCountry {
             fifa: r"BAN",
             car: const Car(signs: ["BD"], isRightSide: false),
             timezones: const ["UTC+06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bd.png",
-                svg: "https://flagcdn.com/bd.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bd.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bd.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Dhaka"], latlng: const [23.72, 90.4]),
@@ -23445,12 +22893,7 @@ class CountryBhs extends WorldCountry {
             fifa: r"BAH",
             car: const Car(signs: ["BS"], isRightSide: false),
             timezones: const ["UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bs.png",
-                svg: "https://flagcdn.com/bs.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bs.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bs.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Nassau"], latlng: const [25.08, -77.35]));
 }
@@ -23458,177 +22901,177 @@ class CountryBhs extends WorldCountry {
 class CountryNiu extends WorldCountry {
   const CountryNiu()
       : super(
-            name: const CountryName.international(
-                common: "Niue", official: "Niue"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(), official: "Niue", common: "Niue"),
-              // TODO:  CountryName(
-              //     language: const LangNiu(),
-              //       official:"Niuē",
-              //       common: "Niuē"
+          name:
+              const CountryName.international(common: "Niue", official: "Niue"),
+          nativeNames: const [
+            CountryName(
+                language: const LangEng(), official: "Niue", common: "Niue"),
+            // TODO:  CountryName(
+            //     language: const LangNiu(),
+            //       official:"Niuē",
+            //       common: "Niuē"
 
-              // )],
-            ],
-            tld: const [".nu"],
-            codeShort: "NU",
-            codeNumeric: "570",
-            code: r"NIU",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatNzd()],
-            idd: const Idd(root: "+6", suffixes: ["83"]),
-            altSpellings: const ["NU"],
-            region: const Oceania(),
-            subregion: const Polynesia(),
-            languages: const [
-              LangEng(), // TODO: LangNiu()
-            ],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "نييوي",
-                common: "نييوي",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "ニウエ",
-                common: "ニウエ",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "니우에",
-                common: "니우에",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "نیووی",
-                common: "نیووی",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Ниуэ",
-                common: "Ниуэ",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Niue",
-                common: "Niue",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "نیووے",
-                common: "نیووے",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "纽埃", common: "纽埃")
-            ],
-            latlng: const [-19.03333333, -169.86666666],
-            area: 260,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Niuean",
-                m: "Niuean",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Niuéenne",
-                m: "Niuéen",
-              )
-            ],
-            emoji: "🇳🇺",
-            maps: const Maps(
-                googleMaps: "xFgdzs3E55Rk1y8P9",
-                openStreetMaps: "relation/1558556"),
-            population: 1470,
-            car: const Car(signs: ["NZ"], isRightSide: false),
-            timezones: const ["UTC-11:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/nu.png",
-                svg: "https://flagcdn.com/nu.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Alofi"], latlng: const [-19.02, -169.92]));
+            // )],
+          ],
+          tld: const [".nu"],
+          codeShort: "NU",
+          codeNumeric: "570",
+          code: r"NIU",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatNzd()],
+          idd: const Idd(root: "+6", suffixes: ["83"]),
+          altSpellings: const ["NU"],
+          region: const Oceania(),
+          subregion: const Polynesia(),
+          languages: const [
+            LangEng(), // TODO: LangNiu()
+          ],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "نييوي",
+              common: "نييوي",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "ニウエ",
+              common: "ニウエ",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "니우에",
+              common: "니우에",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "نیووی",
+              common: "نیووی",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Ниуэ",
+              common: "Ниуэ",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Niue",
+              common: "Niue",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "نیووے",
+              common: "نیووے",
+            ),
+            CountryName(language: const LangZho(), official: "纽埃", common: "纽埃")
+          ],
+          latlng: const [-19.03333333, -169.86666666],
+          area: 260,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Niuean",
+              m: "Niuean",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Niuéenne",
+              m: "Niuéen",
+            )
+          ],
+          emoji: "🇳🇺",
+          maps: const Maps(
+              googleMaps: "xFgdzs3E55Rk1y8P9",
+              openStreetMaps: "relation/1558556"),
+          population: 1470,
+          car: const Car(signs: ["NZ"], isRightSide: false),
+          timezones: const ["UTC-11:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Alofi"],
+            latlng: const [-19.02, -169.92],
+          ),
+        );
 }
 
 class CountryAtg extends WorldCountry {
@@ -23796,12 +23239,7 @@ class CountryAtg extends WorldCountry {
             fifa: r"ATG",
             car: const Car(signs: ["AG"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ag.png",
-                svg: "https://flagcdn.com/ag.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ag.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ag.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Saint John's"],
                 latlng: const [17.12, -61.85]));
@@ -23950,11 +23388,11 @@ class CountryBlm extends WorldCountry {
           population: 4255,
           car: const Car(signs: ["F"]),
           timezones: const ["UTC-04:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/bl.png",
-              svg: "https://flagcdn.com/bl.svg"),
+          hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-              capital: const ["Gustavia"], latlng: const [17.88, -62.85]),
+            capital: const ["Gustavia"],
+            latlng: const [17.88, -62.85],
+          ),
           postalCode: const PostalCode(
               format: r"### ###",
               regExpPattern: "" // TODO ! Provide proper regexp.
@@ -24145,12 +23583,7 @@ class CountrySyc extends WorldCountry {
             fifa: r"SEY",
             car: const Car(signs: ["SY"], isRightSide: false),
             timezones: const ["UTC+04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sc.png",
-                svg: "https://flagcdn.com/sc.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sc.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sc.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Victoria"], latlng: const [-4.62, 55.45]));
 }
@@ -24158,182 +23591,183 @@ class CountrySyc extends WorldCountry {
 class CountryEsh extends WorldCountry {
   const CountryEsh()
       : super(
-            name: const CountryName.international(
-                common: "Western Sahara",
-                official: "Sahrawi Arab Democratic Republic"),
-            nativeNames: const [
-              //  TODO! BOTH! CountryName(
-              //   language: const LanBer(),
-              //     official:"Sahrawi Arab Democratic Republic",
-              //     common: "Western Sahara"
-              // ), CountryName(
-              //   language: const LanMey(),
-              //     official:"الجمهورية العربية الصحراوية الديمقراطية",
-              //     common: "الصحراء الغربية"
-              //   ),
-              CountryName(
-                  language: const LangSpa(),
-                  official: "República Árabe Saharaui Democrática",
-                  common: "Sahara Occidental")
-            ],
-            tld: const [".eh"],
-            codeShort: "EH",
-            codeNumeric: "732",
-            code: r"ESH",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatDzd(), FiatMad(), FiatMru()],
-            idd: const Idd(root: "+2", suffixes: ["125288", "125289"]),
-            altSpellings: const ["EH", "Taneẓroft Tutrimt"],
-            region: const Africa(),
-            subregion: const NorthernAfrica(),
-            languages: const [
-              LangSpa(),
-              // TODO: LangBer(), LangMey()],
-            ],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "الجمهورية العربية الصحراوية الديمقراطية",
-                common: "الصحراء الغربية",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Republik Arab Saharaoui Demokratel",
-                common: "Sahara ar C'hornôg",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Západní Sahara",
-                common: "Západní Sahara",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Sahrawi Arab Democratic Republic",
-                common: "Western Sahara",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Demokratische Arabische Republik Sahara",
-                common: "Westsahara",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Lääne-Sahara",
-                common: "Lääne-Sahara",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Länsi-Sahara",
-                common: "Länsi-Sahara",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "République arabe sahraouie démocratique",
-                common: "Sahara Occidental",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Sahrawi Arab Demokratska Republika",
-                common: "Zapadna Sahara",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Nyugat-Szahara",
-                common: "Nyugat-Szahara",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Repubblica Araba Saharawi Democratica",
-                common: "Sahara Occidentale",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "サハラアラブ民主共和国",
-                common: "西サハラ",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "사하라 아랍 민주 공화국",
-                common: "서사하라",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Sahrawi Arabische Democratische Republiek",
-                common: "Westelijke Sahara",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "صحرای غربی",
-                common: "صحرای غربی",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Saharyjska Arabska Republika Demokratyczna",
-                common: "Sahara Zachodnia",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "República Árabe Saharaui Democrática",
-                common: "Saara Ocidental",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Sahrawi Арабская Демократическая Республика",
-                common: "Западная Сахара",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Západná Sahara",
-                common: "Západná Sahara",
-              ),
-              CountryName(
+          name: const CountryName.international(
+              common: "Western Sahara",
+              official: "Sahrawi Arab Democratic Republic"),
+          nativeNames: const [
+            //  TODO! BOTH! CountryName(
+            //   language: const LanBer(),
+            //     official:"Sahrawi Arab Democratic Republic",
+            //     common: "Western Sahara"
+            // ), CountryName(
+            //   language: const LanMey(),
+            //     official:"الجمهورية العربية الصحراوية الديمقراطية",
+            //     common: "الصحراء الغربية"
+            //   ),
+            CountryName(
                 language: const LangSpa(),
                 official: "República Árabe Saharaui Democrática",
-                common: "Sahara Occidental",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Västsahara",
-                common: "Västsahara",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Sahra Demokratik Arap Cumhuriyeti",
-                common: "Sahra Demokratik Arap Cumhuriyeti",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "صحراوی عرب عوامی جمہوریہ",
-                common: "مغربی صحارا",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "阿拉伯撒哈拉民主共和国",
-                  common: "西撒哈拉")
-            ],
-            latlng: const [24.5, -13],
-            rawBorders: const ["Dza", "Mrt", "Mar"],
-            area: 266000,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Sahrawi",
-                m: "Sahrawi",
-              )
-            ],
-            emoji: "🇪🇭",
-            maps: const Maps(
-                googleMaps: "7nU3mB69vP6zQp7A8",
-                openStreetMaps: "relation/5441968"),
-            population: 510713,
-            car: const Car(signs: [""]),
-            timezones: const ["UTC+00:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/eh.png",
-                svg: "https://flagcdn.com/eh.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["El Aaiún"], latlng: const [-13.28, 27.14]));
+                common: "Sahara Occidental")
+          ],
+          tld: const [".eh"],
+          codeShort: "EH",
+          codeNumeric: "732",
+          code: r"ESH",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatDzd(), FiatMad(), FiatMru()],
+          idd: const Idd(root: "+2", suffixes: ["125288", "125289"]),
+          altSpellings: const ["EH", "Taneẓroft Tutrimt"],
+          region: const Africa(),
+          subregion: const NorthernAfrica(),
+          languages: const [
+            LangSpa(),
+            // TODO: LangBer(), LangMey()],
+          ],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "الجمهورية العربية الصحراوية الديمقراطية",
+              common: "الصحراء الغربية",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Republik Arab Saharaoui Demokratel",
+              common: "Sahara ar C'hornôg",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Západní Sahara",
+              common: "Západní Sahara",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Sahrawi Arab Democratic Republic",
+              common: "Western Sahara",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Demokratische Arabische Republik Sahara",
+              common: "Westsahara",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Lääne-Sahara",
+              common: "Lääne-Sahara",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Länsi-Sahara",
+              common: "Länsi-Sahara",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "République arabe sahraouie démocratique",
+              common: "Sahara Occidental",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Sahrawi Arab Demokratska Republika",
+              common: "Zapadna Sahara",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Nyugat-Szahara",
+              common: "Nyugat-Szahara",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Repubblica Araba Saharawi Democratica",
+              common: "Sahara Occidentale",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "サハラアラブ民主共和国",
+              common: "西サハラ",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "사하라 아랍 민주 공화국",
+              common: "서사하라",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Sahrawi Arabische Democratische Republiek",
+              common: "Westelijke Sahara",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "صحرای غربی",
+              common: "صحرای غربی",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Saharyjska Arabska Republika Demokratyczna",
+              common: "Sahara Zachodnia",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "República Árabe Saharaui Democrática",
+              common: "Saara Ocidental",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Sahrawi Арабская Демократическая Республика",
+              common: "Западная Сахара",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Západná Sahara",
+              common: "Západná Sahara",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "República Árabe Saharaui Democrática",
+              common: "Sahara Occidental",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Västsahara",
+              common: "Västsahara",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Sahra Demokratik Arap Cumhuriyeti",
+              common: "Sahra Demokratik Arap Cumhuriyeti",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "صحراوی عرب عوامی جمہوریہ",
+              common: "مغربی صحارا",
+            ),
+            CountryName(
+                language: const LangZho(),
+                official: "阿拉伯撒哈拉民主共和国",
+                common: "西撒哈拉")
+          ],
+          latlng: const [24.5, -13],
+          rawBorders: const ["Dza", "Mrt", "Mar"],
+          area: 266000,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Sahrawi",
+              m: "Sahrawi",
+            )
+          ],
+          emoji: "🇪🇭",
+          maps: const Maps(
+              googleMaps: "7nU3mB69vP6zQp7A8",
+              openStreetMaps: "relation/5441968"),
+          population: 510713,
+          car: const Car(signs: [""]),
+          timezones: const ["UTC+00:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["El Aaiún"],
+            latlng: const [-13.28, 27.14],
+          ),
+        );
 }
 
 class CountryLby extends WorldCountry {
@@ -24508,12 +23942,7 @@ class CountryLby extends WorldCountry {
             fifa: r"LBY",
             car: const Car(signs: ["LAR"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ly.png",
-                svg: "https://flagcdn.com/ly.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ly.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ly.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tripoli"], latlng: const [32.88, 13.17]));
@@ -24700,12 +24129,7 @@ class CountryMkd extends WorldCountry {
             fifa: r"MKD",
             car: const Car(signs: ["MK"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mk.png",
-                svg: "https://flagcdn.com/mk.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mk.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mk.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Skopje"], latlng: const [42, 21.43]),
             postalCode: const PostalCode(
@@ -24895,12 +24319,7 @@ class CountryPer extends WorldCountry {
             fifa: r"PER",
             car: const Car(signs: ["PE"]),
             timezones: const ["UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pe.png",
-                svg: "https://flagcdn.com/pe.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/pe.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/pe.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Lima"], latlng: const [-12.05, -77.05]),
             postalCode: const PostalCode());
@@ -25081,12 +24500,7 @@ class CountryBdi extends WorldCountry {
             fifa: r"BDI",
             car: const Car(signs: ["RU"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bi.png",
-                svg: "https://flagcdn.com/bi.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bi.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bi.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Gitega"], latlng: const [-3.43, 29.93]));
 }
@@ -25265,12 +24679,7 @@ class CountryKir extends WorldCountry {
             gini: const Gini(rawYear: 2006, value: 37),
             car: const Car(signs: ["KIR"], isRightSide: false),
             timezones: const ["UTC+12:00", "UTC+13:00", "UTC+14:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ki.png",
-                svg: "https://flagcdn.com/ki.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ki.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ki.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["South Tarawa"], latlng: const [1.33, 172.98]));
 }
@@ -25454,12 +24863,7 @@ class CountryTur extends WorldCountry {
             fifa: r"TUR",
             car: const Car(signs: ["TR"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tr.png",
-                svg: "https://flagcdn.com/tr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Ankara"], latlng: const [39.93, 32.87]),
             postalCode: const PostalCode());
@@ -25650,12 +25054,7 @@ class CountryTza extends WorldCountry {
             fifa: r"TAN",
             car: const Car(signs: ["EAT"], isRightSide: false),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tz.png",
-                svg: "https://flagcdn.com/tz.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tz.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tz.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Dodoma"], latlng: const [-6.16, 35.75]));
 }
@@ -25829,12 +25228,7 @@ class CountryTun extends WorldCountry {
             fifa: r"TUN",
             car: const Car(signs: ["TN"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tn.png",
-                svg: "https://flagcdn.com/tn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tn.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tunis"], latlng: const [36.8, 10.18]),
             postalCode: const PostalCode(
@@ -26005,12 +25399,7 @@ class CountryMsr extends WorldCountry {
             fifa: r"MSR",
             car: const Car(signs: ["GB"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ms.png",
-                svg: "https://flagcdn.com/ms.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ms.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ms.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Plymouth"], latlng: const [16.7, -62.22]));
 }
@@ -26198,12 +25587,7 @@ class CountryKgz extends WorldCountry {
             fifa: r"KGZ",
             car: const Car(signs: ["KS"]),
             timezones: const ["UTC+06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/kg.png",
-                svg: "https://flagcdn.com/kg.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/kg.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/kg.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bishkek"], latlng: const [42.87, 74.6]),
             postalCode: const PostalCode(
@@ -26374,12 +25758,7 @@ class CountryImn extends WorldCountry {
             population: 85032,
             car: const Car(signs: ["GBM"], isRightSide: false),
             timezones: const ["UTC+00:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/im.png",
-                svg: "https://flagcdn.com/im.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/im.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/im.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Douglas"], latlng: const [54.15, -4.48]),
             postalCode: const PostalCode(
@@ -26552,12 +25931,7 @@ class CountryGlp extends WorldCountry {
             population: 400132,
             car: const Car(signs: ["F"]),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gp.png",
-                svg: "https://flagcdn.com/gp.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gp.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gp.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Basse-Terre"], latlng: const [16.03, -61.73]),
             postalCode: const PostalCode(regExpPattern: r"^((97|98)\\d{3})$"));
@@ -26727,12 +26101,7 @@ class CountryKwt extends WorldCountry {
             fifa: r"KUW",
             car: const Car(signs: ["KWT"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/kw.png",
-                svg: "https://flagcdn.com/kw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/kw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/kw.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kuwait City"], latlng: const [29.37, 47.97]),
@@ -26901,12 +26270,7 @@ class CountryVgb extends WorldCountry {
             fifa: r"VGB",
             car: const Car(signs: ["BVI"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/vg.png",
-                svg: "https://flagcdn.com/vg.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/vg.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/vg.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Road Town"], latlng: const [18.42, -64.62]));
 }
@@ -27090,12 +26454,7 @@ class CountryCiv extends WorldCountry {
             fifa: r"CIV",
             car: const Car(signs: ["CI"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ci.png",
-                svg: "https://flagcdn.com/ci.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ci.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ci.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Yamoussoukro"], latlng: const [6.82, -5.27]));
 }
@@ -27259,12 +26618,7 @@ class CountryCxr extends WorldCountry {
             population: 2072,
             car: const Car(signs: ["AUS"], isRightSide: false),
             timezones: const ["UTC+07:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cx.png",
-                svg: "https://flagcdn.com/cx.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cx.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cx.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Flying Fish Cove"],
                 latlng: const [-10.42, 105.68]),
@@ -27442,12 +26796,7 @@ class CountryLso extends WorldCountry {
             fifa: r"LES",
             car: const Car(signs: ["LS"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ls.png",
-                svg: "https://flagcdn.com/ls.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ls.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ls.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Maseru"], latlng: const [-29.32, 27.48]),
             postalCode:
@@ -27639,12 +26988,7 @@ class CountryJey extends WorldCountry {
             population: 100800,
             car: const Car(signs: ["GBJ"], isRightSide: false),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/je.png",
-                svg: "https://flagcdn.com/je.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/je.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/je.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Saint Helier"], latlng: const [49.18, -2.1]),
             postalCode: const PostalCode(
@@ -27830,12 +27174,7 @@ class CountrySvn extends WorldCountry {
             fifa: r"SVN",
             car: const Car(signs: ["SLO"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/si.png",
-                svg: "https://flagcdn.com/si.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/si.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/si.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Ljubljana"], latlng: const [46.05, 14.52]),
             postalCode: const PostalCode(
@@ -28031,12 +27370,7 @@ class CountryBel extends WorldCountry {
             fifa: r"BEL",
             car: const Car(signs: ["B"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/be.png",
-                svg: "https://flagcdn.com/be.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/be.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/be.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Brussels"], latlng: const [50.83, 4.33]),
             postalCode: const PostalCode(
@@ -28046,173 +27380,173 @@ class CountryBel extends WorldCountry {
 class CountryTca extends WorldCountry {
   const CountryTca()
       : super(
-            name: const CountryName.international(
-                common: "Turks and Caicos Islands",
-                official: "Turks and Caicos Islands"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(),
-                  official: "Turks and Caicos Islands",
-                  common: "Turks and Caicos Islands")
-            ],
-            tld: const [".tc"],
-            codeShort: "TC",
-            codeNumeric: "796",
-            code: r"TCA",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatUsd()],
-            idd: const Idd(root: "+1", suffixes: ["649"]),
-            altSpellings: const ["TC"],
-            region: const Americas(),
-            subregion: const Caribbean(),
-            languages: const [LangEng()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "جزر توركس وكايكوس",
-                common: "جزر توركس وكايكوس",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Inizi Turks ha Caicos",
-                common: "Inizi Turks ha Caicos",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Turks a Caicos",
-                common: "Turks a Caicos",
-              ),
-              CountryName(
-                language: const LangCym(),
+          name: const CountryName.international(
+              common: "Turks and Caicos Islands",
+              official: "Turks and Caicos Islands"),
+          nativeNames: const [
+            CountryName(
+                language: const LangEng(),
                 official: "Turks and Caicos Islands",
-                common: "Turks and Caicos Islands",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Turks und Caicos Inseln",
-                common: "Turks-und Caicosinseln",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Turksi ja Caicose saared",
-                common: "Turks ja Caicos",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Turks-ja Caicossaaret",
-                common: "Turks-ja Caicossaaret",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Îles Turques et Caïques",
-                common: "Îles Turques-et-Caïques",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Otoci Turks i Caicos",
-                common: "Otoci Turks i Caicos",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Turks- és Caicos-szigetek",
-                common: "Turks- és Caicos-szigetek",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Turks e Caicos",
-                common: "Isole Turks e Caicos",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "タークス·カイコス諸島",
-                common: "タークス・カイコス諸島",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "터크스 케이커스 제도",
-                common: "터크스 케이커스 제도",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Turks-en Caicoseilanden",
-                common: "Turks-en Caicoseilanden",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جزایر تورکس و کایکوس",
-                common: "جزایر تورکس و کایکوس",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Turks i Caicos",
-                common: "Turks i Caicos",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Ilhas Turks e Caicos",
-                common: "Ilhas Turks e Caicos",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Теркс и Кайкос острова",
-                common: "Теркс и Кайкос",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Ostrovy Turks a Caicos",
-                common: "Turks a Caicos",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Islas Turcas y Caicos",
-                common: "Islas Turks y Caicos",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Turks- och Caicosöarna",
-                common: "Turks- och Caicosöarna",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Turks ve Caicos Adaları",
-                common: "Turks ve Caicos Adaları",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "جزائر کیکس و ترکیہ",
-                common: "جزائر کیکس و ترکیہ",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "特克斯和凯科斯群岛",
-                  common: "特克斯和凯科斯群岛")
-            ],
-            latlng: const [21.75, -71.58333333],
-            area: 948,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Turks and Caicos Islander",
-                m: "Turks and Caicos Islander",
-              )
-            ],
-            emoji: "🇹🇨",
-            maps: const Maps(
-                googleMaps: "R8VUDQfwZiFtvmyn8",
-                openStreetMaps: "relation/547479"),
-            population: 38718,
-            fifa: r"TCA",
-            car: const Car(signs: ["GB"], isRightSide: false),
-            timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tc.png",
-                svg: "https://flagcdn.com/tc.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Cockburn Town"],
-                latlng: const [21.46, -71.14]),
-            postalCode: const PostalCode(
-                format: r"TKCA 1ZZ", regExpPattern: r"^(TKCA 1ZZ)$"));
+                common: "Turks and Caicos Islands")
+          ],
+          tld: const [".tc"],
+          codeShort: "TC",
+          codeNumeric: "796",
+          code: r"TCA",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatUsd()],
+          idd: const Idd(root: "+1", suffixes: ["649"]),
+          altSpellings: const ["TC"],
+          region: const Americas(),
+          subregion: const Caribbean(),
+          languages: const [LangEng()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "جزر توركس وكايكوس",
+              common: "جزر توركس وكايكوس",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Inizi Turks ha Caicos",
+              common: "Inizi Turks ha Caicos",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Turks a Caicos",
+              common: "Turks a Caicos",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Turks and Caicos Islands",
+              common: "Turks and Caicos Islands",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Turks und Caicos Inseln",
+              common: "Turks-und Caicosinseln",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Turksi ja Caicose saared",
+              common: "Turks ja Caicos",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Turks-ja Caicossaaret",
+              common: "Turks-ja Caicossaaret",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Îles Turques et Caïques",
+              common: "Îles Turques-et-Caïques",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Otoci Turks i Caicos",
+              common: "Otoci Turks i Caicos",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Turks- és Caicos-szigetek",
+              common: "Turks- és Caicos-szigetek",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Turks e Caicos",
+              common: "Isole Turks e Caicos",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "タークス·カイコス諸島",
+              common: "タークス・カイコス諸島",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "터크스 케이커스 제도",
+              common: "터크스 케이커스 제도",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Turks-en Caicoseilanden",
+              common: "Turks-en Caicoseilanden",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جزایر تورکس و کایکوس",
+              common: "جزایر تورکس و کایکوس",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Turks i Caicos",
+              common: "Turks i Caicos",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Ilhas Turks e Caicos",
+              common: "Ilhas Turks e Caicos",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Теркс и Кайкос острова",
+              common: "Теркс и Кайкос",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Ostrovy Turks a Caicos",
+              common: "Turks a Caicos",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Islas Turcas y Caicos",
+              common: "Islas Turks y Caicos",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Turks- och Caicosöarna",
+              common: "Turks- och Caicosöarna",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Turks ve Caicos Adaları",
+              common: "Turks ve Caicos Adaları",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "جزائر کیکس و ترکیہ",
+              common: "جزائر کیکس و ترکیہ",
+            ),
+            CountryName(
+                language: const LangZho(),
+                official: "特克斯和凯科斯群岛",
+                common: "特克斯和凯科斯群岛")
+          ],
+          latlng: const [21.75, -71.58333333],
+          area: 948,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Turks and Caicos Islander",
+              m: "Turks and Caicos Islander",
+            )
+          ],
+          emoji: "🇹🇨",
+          maps: const Maps(
+              googleMaps: "R8VUDQfwZiFtvmyn8",
+              openStreetMaps: "relation/547479"),
+          population: 38718,
+          fifa: r"TCA",
+          car: const Car(signs: ["GB"], isRightSide: false),
+          timezones: const ["UTC-04:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Cockburn Town"],
+            latlng: const [21.46, -71.14],
+          ),
+          postalCode: const PostalCode(
+              format: r"TKCA 1ZZ", regExpPattern: r"^(TKCA 1ZZ)$"),
+        );
 }
 
 class CountryGib extends WorldCountry {
@@ -28380,12 +27714,7 @@ class CountryGib extends WorldCountry {
             fifa: r"GIB",
             car: const Car(signs: ["GBZ"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gi.png",
-                svg: "https://flagcdn.com/gi.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gi.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gi.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Gibraltar"], latlng: const [36.13, -5.35]));
 }
@@ -28554,12 +27883,7 @@ class CountryQat extends WorldCountry {
             fifa: r"QAT",
             car: const Car(signs: ["Q"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/qa.png",
-                svg: "https://flagcdn.com/qa.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/qa.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/qa.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Doha"], latlng: const [25.28, 51.53]));
@@ -28748,12 +28072,7 @@ class CountryBwa extends WorldCountry {
             fifa: r"BOT",
             car: const Car(signs: ["BW"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bw.png",
-                svg: "https://flagcdn.com/bw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Gaborone"], latlng: const [-24.63, 25.9]));
 }
@@ -28939,12 +28258,7 @@ class CountryGnq extends WorldCountry {
             fifa: r"EQG",
             car: const Car(signs: ["GQ"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gq.png",
-                svg: "https://flagcdn.com/gq.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gq.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gq.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Malabo"], latlng: const [3.75, 8.78]));
 }
@@ -29127,12 +28441,7 @@ class CountryDji extends WorldCountry {
             fifa: r"DJI",
             car: const Car(signs: ["DJI"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/dj.png",
-                svg: "https://flagcdn.com/dj.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/dj.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/dj.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Djibouti"], latlng: const [11.58, 43.15]));
 }
@@ -29302,12 +28611,7 @@ class CountryGuy extends WorldCountry {
             fifa: r"GUY",
             car: const Car(signs: ["GUY"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gy.png",
-                svg: "https://flagcdn.com/gy.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gy.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gy.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Georgetown"], latlng: const [6.8, -58.15]));
 }
@@ -29477,12 +28781,7 @@ class CountryGum extends WorldCountry {
             fifa: r"GUM",
             car: const Car(signs: ["USA"]),
             timezones: const ["UTC+10:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gu.png",
-                svg: "https://flagcdn.com/gu.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gu.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gu.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Hagåtña"], latlng: const [13.48, 144.75]),
             postalCode: const PostalCode(
@@ -29656,12 +28955,7 @@ class CountryMco extends WorldCountry {
             population: 39244,
             car: const Car(signs: ["MC"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mc.png",
-                svg: "https://flagcdn.com/mc.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mc.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mc.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Monaco"], latlng: const [43.73, 7.42]),
             postalCode: const PostalCode());
@@ -29831,12 +29125,7 @@ class CountrySlb extends WorldCountry {
             fifa: r"SOL",
             car: const Car(signs: ["SOL"], isRightSide: false),
             timezones: const ["UTC+11:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sb.png",
-                svg: "https://flagcdn.com/sb.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sb.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sb.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Honiara"], latlng: const [-9.43, 159.95]));
 }
@@ -30025,12 +29314,7 @@ class CountryGgy extends WorldCountry {
             population: 62999,
             car: const Car(signs: ["GBG"], isRightSide: false),
             timezones: const ["UTC+00:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gg.png",
-                svg: "https://flagcdn.com/gg.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gg.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gg.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["St. Peter Port"],
                 latlng: const [49.45, -2.54]),
@@ -30216,12 +29500,7 @@ class CountryPry extends WorldCountry {
             fifa: r"PAR",
             car: const Car(signs: ["PY"]),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/py.png",
-                svg: "https://flagcdn.com/py.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/py.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/py.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Asunción"], latlng: const [-25.28, -57.57]),
             postalCode: const PostalCode(
@@ -30399,12 +29678,7 @@ class CountrySur extends WorldCountry {
             fifa: r"SUR",
             car: const Car(signs: ["SME"], isRightSide: false),
             timezones: const ["UTC-03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sr.png",
-                svg: "https://flagcdn.com/sr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Paramaribo"], latlng: const [5.83, -55.17]));
 }
@@ -30549,10 +29823,8 @@ class CountryUmi extends WorldCountry {
           population: 300,
           car: const Car(signs: [""]),
           timezones: const ["UTC-11:00", "UTC-10:00", "UTC+12:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/um.png",
-              svg: "https://flagcdn.com/um.svg"),
-          capitalInfo: const CapitalInfo(),
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(capital: const ["Washington DC"]),
         );
 }
 
@@ -30581,7 +29853,6 @@ class CountryGin extends WorldCountry {
             ],
             region: const Africa(),
             subregion: const WesternAfrica(),
-            capital: const ["Washington DC"],
             languages: const [LangFra()],
             translations: const [
               CountryName(
@@ -30733,12 +30004,7 @@ class CountryGin extends WorldCountry {
             fifa: r"GUI",
             car: const Car(signs: ["RG"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gn.png",
-                svg: "https://flagcdn.com/gn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gn.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Conakry"], latlng: const [9.5, -13.7]));
 }
@@ -30914,12 +30180,7 @@ class CountryCze extends WorldCountry {
             fifa: r"CZE",
             car: const Car(signs: ["CZ"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cz.png",
-                svg: "https://flagcdn.com/cz.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cz.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cz.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Prague"], latlng: const [50.08, 14.47]),
             postalCode: const PostalCode(
@@ -31112,12 +30373,7 @@ class CountryCom extends WorldCountry {
             fifa: r"COM",
             car: const Car(signs: ["COM"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/km.png",
-                svg: "https://flagcdn.com/km.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/km.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/km.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Moroni"], latlng: const [-11.7, 43.23]));
 }
@@ -31287,12 +30543,7 @@ class CountryGha extends WorldCountry {
             fifa: r"GHA",
             car: const Car(signs: ["GH"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gh.png",
-                svg: "https://flagcdn.com/gh.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gh.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gh.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Accra"], latlng: const [5.55, -0.22]));
 }
@@ -31466,12 +30717,7 @@ class CountryKna extends WorldCountry {
             fifa: r"SKN",
             car: const Car(signs: ["KN"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/kn.png",
-                svg: "https://flagcdn.com/kn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/kn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/kn.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Basseterre"], latlng: const [17.3, -62.72]));
 }
@@ -31646,12 +30892,7 @@ class CountryPyf extends WorldCountry {
             population: 280904,
             car: const Car(signs: ["F"]),
             timezones: const ["UTC-10:00", "UTC-09:30", "UTC-09:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pf.png",
-                svg: "https://flagcdn.com/pf.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/pf.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/pf.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Papeetē"], latlng: const [-17.53, -149.56]),
             postalCode: const PostalCode(regExpPattern: r"^((97|98)7\\d{2})$"));
@@ -31859,12 +31100,7 @@ class CountryZwe extends WorldCountry {
             fifa: r"ZIM",
             car: const Car(signs: ["ZW"], isRightSide: false),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/zw.png",
-                svg: "https://flagcdn.com/zw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/zw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/zw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Harare"], latlng: const [-17.82, 31.03]));
 }
@@ -32044,12 +31280,7 @@ class CountryKen extends WorldCountry {
             fifa: r"KEN",
             car: const Car(signs: ["EAK"], isRightSide: false),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ke.png",
-                svg: "https://flagcdn.com/ke.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ke.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ke.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Nairobi"], latlng: const [-1.28, 36.82]),
             postalCode: const PostalCode());
@@ -32242,12 +31473,7 @@ class CountryKaz extends WorldCountry {
             fifa: r"KAZ",
             car: const Car(signs: ["KZ"]),
             timezones: const ["UTC+05:00", "UTC+06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/kz.png",
-                svg: "https://flagcdn.com/kz.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/kz.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/kz.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Nur-Sultan"], latlng: const [51.16, 71.45]),
             postalCode: const PostalCode(
@@ -32425,12 +31651,7 @@ class CountryMne extends WorldCountry {
             fifa: r"MNE",
             car: const Car(signs: ["SCG"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/me.png",
-                svg: "https://flagcdn.com/me.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/me.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/me.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Podgorica"], latlng: const [42.43, 19.27]),
             postalCode: const PostalCode());
@@ -32605,12 +31826,7 @@ class CountryTuv extends WorldCountry {
             gini: const Gini(rawYear: 2010, value: 39.1),
             car: const Car(signs: ["TUV"], isRightSide: false),
             timezones: const ["UTC+12:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tv.png",
-                svg: "https://flagcdn.com/tv.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tv.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tv.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Funafuti"], latlng: const [-8.52, 179.22]));
 }
@@ -32784,12 +32000,7 @@ class CountryPan extends WorldCountry {
             fifa: r"PAN",
             car: const Car(signs: ["PA"]),
             timezones: const ["UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pa.png",
-                svg: "https://flagcdn.com/pa.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/pa.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/pa.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Panama City"], latlng: const [8.97, -79.53]));
 }
@@ -32963,12 +32174,7 @@ class CountryAnd extends WorldCountry {
             fifa: r"AND",
             car: const Car(signs: ["AND"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ad.png",
-                svg: "https://flagcdn.com/ad.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ad.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ad.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Andorra la Vella"],
                 latlng: const [42.5, 1.52]),
@@ -32979,172 +32185,172 @@ class CountryAnd extends WorldCountry {
 class CountryVir extends WorldCountry {
   const CountryVir()
       : super(
-            name: const CountryName.international(
-                common: "United States Virgin Islands",
-                official: "Virgin Islands of the United States"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(),
-                  official: "Virgin Islands of the United States",
-                  common: "United States Virgin Islands")
-            ],
-            tld: const [".vi"],
-            codeShort: "VI",
-            codeNumeric: "850",
-            code: r"VIR",
-            cioc: r"ISV",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatUsd()],
-            idd: const Idd(root: "+1", suffixes: ["340"]),
-            altSpellings: const ["VI", "Virgin Islands, U.S."],
-            region: const Americas(),
-            subregion: const Caribbean(),
-            languages: const [LangEng()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "جزر العذراء الامريكية",
-                common: "جزر العذراء الامريكية",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Inizi Gwerc'h ar Stadoù-Unanet",
-                common: "Inizi Gwerc'h ar Stadoù-Unanet",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Americké Panenské ostrovy",
-                common: "Americké Panenské ostrovy",
-              ),
-              CountryName(
-                language: const LangCym(),
+          name: const CountryName.international(
+              common: "United States Virgin Islands",
+              official: "Virgin Islands of the United States"),
+          nativeNames: const [
+            CountryName(
+                language: const LangEng(),
                 official: "Virgin Islands of the United States",
-                common: "United States Virgin Islands",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Amerikanische Jungferninseln",
-                common: "Amerikanische Jungferninseln",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Ühendriikide Neitsisaared",
-                common: "Neitsisaared, USA",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Yhdysvaltain Neitsytsaaret",
-                common: "Neitsytsaaret",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Îles Vierges des États-Unis",
-                common: "Îles Vierges des États-Unis",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Djevičanski Otoci SAD",
-                common: "Američki Djevičanski Otoci",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Amerikai Virgin-szigetek",
-                common: "Amerikai Virgin-szigetek",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Isole Vergini degli Stati Uniti",
-                common: "Isole Vergini americane",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "米国のバージン諸島",
-                common: "アメリカ領ヴァージン諸島",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "미국령 버진아일랜드",
-                common: "미국령 버진아일랜드",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Maagdeneilanden van de Verenigde Staten",
-                common: "Amerikaanse Maagdeneilanden",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جزایر ویرجین ایالات متحده آمریکا",
-                common: "جزایر ویرجین ایالات متحده آمریکا",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Wyspy Dziewicze Stanów Zjednoczonych",
-                common: "Wyspy Dziewicze Stanów Zjednoczonych",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Ilhas Virgens dos Estados Unidos",
-                common: "Ilhas Virgens dos Estados Unidos",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Виргинские острова Соединенных Штатов",
-                common: "Виргинские Острова",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Americké Panenské ostrovy",
-                common: "Americké Panenské ostrovy",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Islas Vírgenes de los Estados Unidos",
-                common: "Islas Vírgenes de los Estados Unidos",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Amerikanska Jungfruöarna",
-                common: "Amerikanska Jungfruöarna",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Amerika Birleşik Devletleri Virjin Adaları",
-                common: "ABD Virjin Adaları",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "امریکی جزائر ورجن",
-                common: "امریکی جزائر ورجن",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "美属维尔京群岛",
-                  common: "美属维尔京群岛")
-            ],
-            latlng: const [18.35, -64.933333],
-            area: 347,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Virgin Islander",
-                m: "Virgin Islander",
-              )
-            ],
-            emoji: "🇻🇮",
-            maps: const Maps(
-                googleMaps: "mBfreywj8dor6q4m9",
-                openStreetMaps: "relation/286898"),
-            population: 106290,
-            fifa: r"VIR",
-            car: const Car(signs: ["USA"]),
-            timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/vi.png",
-                svg: "https://flagcdn.com/vi.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Charlotte Amalie"],
-                latlng: const [18.35, -64.93]));
+                common: "United States Virgin Islands")
+          ],
+          tld: const [".vi"],
+          codeShort: "VI",
+          codeNumeric: "850",
+          code: r"VIR",
+          cioc: r"ISV",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatUsd()],
+          idd: const Idd(root: "+1", suffixes: ["340"]),
+          altSpellings: const ["VI", "Virgin Islands, U.S."],
+          region: const Americas(),
+          subregion: const Caribbean(),
+          languages: const [LangEng()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "جزر العذراء الامريكية",
+              common: "جزر العذراء الامريكية",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Inizi Gwerc'h ar Stadoù-Unanet",
+              common: "Inizi Gwerc'h ar Stadoù-Unanet",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Americké Panenské ostrovy",
+              common: "Americké Panenské ostrovy",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Virgin Islands of the United States",
+              common: "United States Virgin Islands",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Amerikanische Jungferninseln",
+              common: "Amerikanische Jungferninseln",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Ühendriikide Neitsisaared",
+              common: "Neitsisaared, USA",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Yhdysvaltain Neitsytsaaret",
+              common: "Neitsytsaaret",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Îles Vierges des États-Unis",
+              common: "Îles Vierges des États-Unis",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Djevičanski Otoci SAD",
+              common: "Američki Djevičanski Otoci",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Amerikai Virgin-szigetek",
+              common: "Amerikai Virgin-szigetek",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Isole Vergini degli Stati Uniti",
+              common: "Isole Vergini americane",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "米国のバージン諸島",
+              common: "アメリカ領ヴァージン諸島",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "미국령 버진아일랜드",
+              common: "미국령 버진아일랜드",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Maagdeneilanden van de Verenigde Staten",
+              common: "Amerikaanse Maagdeneilanden",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جزایر ویرجین ایالات متحده آمریکا",
+              common: "جزایر ویرجین ایالات متحده آمریکا",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Wyspy Dziewicze Stanów Zjednoczonych",
+              common: "Wyspy Dziewicze Stanów Zjednoczonych",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Ilhas Virgens dos Estados Unidos",
+              common: "Ilhas Virgens dos Estados Unidos",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Виргинские острова Соединенных Штатов",
+              common: "Виргинские Острова",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Americké Panenské ostrovy",
+              common: "Americké Panenské ostrovy",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Islas Vírgenes de los Estados Unidos",
+              common: "Islas Vírgenes de los Estados Unidos",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Amerikanska Jungfruöarna",
+              common: "Amerikanska Jungfruöarna",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Amerika Birleşik Devletleri Virjin Adaları",
+              common: "ABD Virjin Adaları",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "امریکی جزائر ورجن",
+              common: "امریکی جزائر ورجن",
+            ),
+            CountryName(
+                language: const LangZho(),
+                official: "美属维尔京群岛",
+                common: "美属维尔京群岛")
+          ],
+          latlng: const [18.35, -64.933333],
+          area: 347,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Virgin Islander",
+              m: "Virgin Islander",
+            )
+          ],
+          emoji: "🇻🇮",
+          maps: const Maps(
+              googleMaps: "mBfreywj8dor6q4m9",
+              openStreetMaps: "relation/286898"),
+          population: 106290,
+          fifa: r"VIR",
+          car: const Car(signs: ["USA"]),
+          timezones: const ["UTC-04:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Charlotte Amalie"],
+            latlng: const [18.35, -64.93],
+          ),
+        );
 }
 
 class CountryIsr extends WorldCountry {
@@ -33322,12 +32528,7 @@ class CountryIsr extends WorldCountry {
             fifa: r"ISR",
             car: const Car(signs: ["IL"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/il.png",
-                svg: "https://flagcdn.com/il.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/il.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/il.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Jerusalem"], latlng: const [31.77, 35.23]),
@@ -33504,12 +32705,7 @@ class CountryPrt extends WorldCountry {
             fifa: r"POR",
             car: const Car(signs: ["P"]),
             timezones: const ["UTC-01:00", "UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pt.png",
-                svg: "https://flagcdn.com/pt.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/pt.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/pt.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Lisbon"], latlng: const [38.72, -9.13]),
             postalCode: const PostalCode(
@@ -33691,12 +32887,7 @@ class CountryAut extends WorldCountry {
             fifa: r"AUT",
             car: const Car(signs: ["A"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/at.png",
-                svg: "https://flagcdn.com/at.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/at.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/at.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Vienna"], latlng: const [48.2, 16.37]),
             postalCode: const PostalCode(
@@ -33878,12 +33069,7 @@ class CountryFin extends WorldCountry {
             fifa: r"FIN",
             car: const Car(signs: ["FIN"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/fi.png",
-                svg: "https://flagcdn.com/fi.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/fi.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/fi.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Helsinki"], latlng: const [60.17, 24.93]),
             postalCode: const PostalCode(regExpPattern: r"^(?:FI)*(\\d{5})$"));
@@ -34061,12 +33247,7 @@ class CountryEst extends WorldCountry {
             fifa: r"EST",
             car: const Car(signs: ["EST"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ee.png",
-                svg: "https://flagcdn.com/ee.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ee.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ee.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tallinn"], latlng: const [59.43, 24.72]),
             postalCode: const PostalCode());
@@ -34242,12 +33423,7 @@ class CountryDma extends WorldCountry {
             fifa: r"DMA",
             car: const Car(signs: ["WD"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/dm.png",
-                svg: "https://flagcdn.com/dm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/dm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/dm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Roseau"], latlng: const [15.3, -61.4]));
 }
@@ -34421,12 +33597,7 @@ class CountryYem extends WorldCountry {
             fifa: r"YEM",
             car: const Car(signs: ["YAR"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ye.png",
-                svg: "https://flagcdn.com/ye.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ye.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ye.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Sana'a"], latlng: const [15.37, 44.19]));
@@ -34618,14 +33789,7 @@ class CountryAfg extends WorldCountry {
             fifa: r"AFG",
             car: const Car(signs: ["AFG"]),
             timezones: const ["UTC+04:30"],
-            flags: const Flags(
-                png:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png",
-                svg:
-                    "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/af.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/af.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kabul"], latlng: const [34.52, 69.18]));
 }
@@ -34801,12 +33965,7 @@ class CountrySyr extends WorldCountry {
             fifa: r"SYR",
             car: const Car(signs: ["SYR"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sy.png",
-                svg: "https://flagcdn.com/sy.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sy.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sy.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Damascus"], latlng: const [33.5, 36.3]));
 }
@@ -34982,12 +34141,7 @@ class CountryMdv extends WorldCountry {
             fifa: r"MDV",
             car: const Car(signs: ["MV"], isRightSide: false),
             timezones: const ["UTC+05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mv.png",
-                svg: "https://flagcdn.com/mv.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mv.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mv.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Malé"], latlng: const [4.17, 73.51]),
@@ -34997,191 +34151,190 @@ class CountryMdv extends WorldCountry {
 class CountryTls extends WorldCountry {
   const CountryTls()
       : super(
-            name: const CountryName.international(
-                common: "Timor-Leste",
-                official: "Democratic Republic of Timor-Leste"),
-            nativeNames: const [
-              CountryName(
-                language: const LangPor(),
-                official: "República Democrática de Timor-Leste",
-                common: "Timor-Leste",
-                // TODO: "tet": {
-                //   official:"Repúblika Demokrátika Timór-Leste",
-                //   common: "Timór-Leste"
-              )
-            ],
-            tld: const [".tl"],
-            codeShort: "TL",
-            codeNumeric: "626",
-            code: r"TLS",
-            cioc: r"TLS",
-            currencies: const [FiatUsd()],
-            idd: const Idd(root: "+6", suffixes: ["70"]),
-            altSpellings: const [
-              "TL",
-              "East Timor",
-              "Democratic Republic of Timor-Leste",
-              "República Democrática de Timor-Leste",
-              "Repúblika Demokrátika Timór-Leste",
-              "Timór Lorosa'e",
-              "Timor Lorosae"
-            ],
-            region: const Asia(),
-            subregion: const SouthEasternAsia(),
-            languages: const [
-              LangPor(),
-              // TODO: "tet": "Tetum"
-            ],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "جمهورية تيمور الشرقية الديمقراطية",
-                common: "تيمور الشرقية",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Republik demakratel Timor ar Reter",
-                common: "Timor ar Reter",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Demokratická republika Východní Timor",
-                common: "Východní Timor",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Democratic Republic of Timor-Leste",
-                common: "Timor-Leste",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Demokratische Republik Timor-Leste",
-                common: "Osttimor",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Timor-Leste Demokraatlik Vabariik",
-                common: "Ida-Timor",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Itä-Timorin demokraattinen tasavalta",
-                common: "Itä-Timor",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "République démocratique du Timor oriental",
-                common: "Timor oriental",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Demokratska Republika Timor-Leste",
-                common: "Istočni Timor",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Kelet-timori Demokratikus Köztársaság",
-                common: "Kelet-Timor",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Repubblica Democratica di Timor Est",
-                common: "Timor Est",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "東ティモール民主共和国",
-                common: "東ティモール",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "동티모르 민주 공화국",
-                common: "동티모르",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Democratische Republiek Oost-Timor",
-                common: "Oost-Timor",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جمهوری دموکراتیک تیمور شرقی",
-                common: "تیمور شرقی",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Demokratyczna Republika Timoru Wschodniego",
-                common: "Timor Wschodni",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "República Democrática de Timor-Leste",
-                common: "Timor-Leste",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Демократическая Республика Тимор -Лешти",
-                common: "Восточный Тимор",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Východotimorská demokratická republika",
-                common: "Východný Timor",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "República Democrática de Timor-Leste",
-                common: "Timor Oriental",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Demokratiska republiken Östtimor",
-                common: "Östtimor",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Doğu Timor Demokratik Cumhuriyeti",
-                common: "Doğu Timor",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "جمہوری جمہوریہ مشرقی تیمور",
-                common: "مشرقی تیمور",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "东帝汶民主共和国",
-                  common: "东帝汶")
-            ],
-            latlng: const [-8.83333333, 125.91666666],
-            rawBorders: const ["Idn"],
-            area: 14874,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "East Timorese",
-                m: "East Timorese",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Est-timoraise",
-                m: "Est-timorais",
-              )
-            ],
-            emoji: "🇹🇱",
-            maps: const Maps(
-                googleMaps: "sFqBC9zjgUXPR1iTA",
-                openStreetMaps: "relation/305142"),
-            population: 1318442,
-            gini: const Gini(rawYear: 2014, value: 28.7),
-            fifa: r"TLS",
-            car: const Car(signs: ["TL"], isRightSide: false),
-            timezones: const ["UTC+09:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tl.png",
-                svg: "https://flagcdn.com/tl.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Dili"], latlng: const [-8.58, 125.6]));
+          name: const CountryName.international(
+              common: "Timor-Leste",
+              official: "Democratic Republic of Timor-Leste"),
+          nativeNames: const [
+            CountryName(
+              language: const LangPor(),
+              official: "República Democrática de Timor-Leste",
+              common: "Timor-Leste",
+              // TODO: "tet": {
+              //   official:"Repúblika Demokrátika Timór-Leste",
+              //   common: "Timór-Leste"
+            )
+          ],
+          tld: const [".tl"],
+          codeShort: "TL",
+          codeNumeric: "626",
+          code: r"TLS",
+          cioc: r"TLS",
+          currencies: const [FiatUsd()],
+          idd: const Idd(root: "+6", suffixes: ["70"]),
+          altSpellings: const [
+            "TL",
+            "East Timor",
+            "Democratic Republic of Timor-Leste",
+            "República Democrática de Timor-Leste",
+            "Repúblika Demokrátika Timór-Leste",
+            "Timór Lorosa'e",
+            "Timor Lorosae"
+          ],
+          region: const Asia(),
+          subregion: const SouthEasternAsia(),
+          languages: const [
+            LangPor(),
+            // TODO: "tet": "Tetum"
+          ],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "جمهورية تيمور الشرقية الديمقراطية",
+              common: "تيمور الشرقية",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Republik demakratel Timor ar Reter",
+              common: "Timor ar Reter",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Demokratická republika Východní Timor",
+              common: "Východní Timor",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Democratic Republic of Timor-Leste",
+              common: "Timor-Leste",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Demokratische Republik Timor-Leste",
+              common: "Osttimor",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Timor-Leste Demokraatlik Vabariik",
+              common: "Ida-Timor",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Itä-Timorin demokraattinen tasavalta",
+              common: "Itä-Timor",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "République démocratique du Timor oriental",
+              common: "Timor oriental",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Demokratska Republika Timor-Leste",
+              common: "Istočni Timor",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Kelet-timori Demokratikus Köztársaság",
+              common: "Kelet-Timor",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Repubblica Democratica di Timor Est",
+              common: "Timor Est",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "東ティモール民主共和国",
+              common: "東ティモール",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "동티모르 민주 공화국",
+              common: "동티모르",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Democratische Republiek Oost-Timor",
+              common: "Oost-Timor",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جمهوری دموکراتیک تیمور شرقی",
+              common: "تیمور شرقی",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Demokratyczna Republika Timoru Wschodniego",
+              common: "Timor Wschodni",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "República Democrática de Timor-Leste",
+              common: "Timor-Leste",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Демократическая Республика Тимор -Лешти",
+              common: "Восточный Тимор",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Východotimorská demokratická republika",
+              common: "Východný Timor",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "República Democrática de Timor-Leste",
+              common: "Timor Oriental",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Demokratiska republiken Östtimor",
+              common: "Östtimor",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Doğu Timor Demokratik Cumhuriyeti",
+              common: "Doğu Timor",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "جمہوری جمہوریہ مشرقی تیمور",
+              common: "مشرقی تیمور",
+            ),
+            CountryName(
+                language: const LangZho(), official: "东帝汶民主共和国", common: "东帝汶")
+          ],
+          latlng: const [-8.83333333, 125.91666666],
+          rawBorders: const ["Idn"],
+          area: 14874,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "East Timorese",
+              m: "East Timorese",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Est-timoraise",
+              m: "Est-timorais",
+            )
+          ],
+          emoji: "🇹🇱",
+          maps: const Maps(
+              googleMaps: "sFqBC9zjgUXPR1iTA",
+              openStreetMaps: "relation/305142"),
+          population: 1318442,
+          gini: const Gini(rawYear: 2014, value: 28.7),
+          fifa: r"TLS",
+          car: const Car(signs: ["TL"], isRightSide: false),
+          timezones: const ["UTC+09:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Dili"],
+            latlng: const [-8.58, 125.6],
+          ),
+        );
 }
 
 class CountryLtu extends WorldCountry {
@@ -35358,12 +34511,7 @@ class CountryLtu extends WorldCountry {
             fifa: r"LTU",
             car: const Car(signs: ["LT"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/lt.png",
-                svg: "https://flagcdn.com/lt.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/lt.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/lt.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Vilnius"], latlng: const [54.68, 25.32]),
             postalCode: const PostalCode(
@@ -35547,12 +34695,7 @@ class CountryNzl extends WorldCountry {
               "UTC+12:45",
               "UTC+13:00"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/nz.png",
-                svg: "https://flagcdn.com/nz.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/nz.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/nz.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Wellington"], latlng: const [-41.3, 174.78]),
             postalCode: const PostalCode(
@@ -35729,12 +34872,7 @@ class CountryBmu extends WorldCountry {
             fifa: r"BER",
             car: const Car(signs: ["GB"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bm.png",
-                svg: "https://flagcdn.com/bm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Hamilton"], latlng: const [32.28, -64.78]),
             postalCode: const PostalCode(
@@ -35920,12 +35058,7 @@ class CountryDeu extends WorldCountry {
             fifa: r"GER",
             car: const Car(signs: ["DY"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/de.png",
-                svg: "https://flagcdn.com/de.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/de.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/de.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Berlin"], latlng: const [52.52, 13.4]),
             postalCode: const PostalCode());
@@ -36110,12 +35243,7 @@ class CountryArg extends WorldCountry {
             fifa: r"ARG",
             car: const Car(signs: ["RA"]),
             timezones: const ["UTC-03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ar.png",
-                svg: "https://flagcdn.com/ar.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ar.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ar.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Buenos Aires"],
                 latlng: const [-34.58, -58.67]),
@@ -36308,12 +35436,7 @@ class CountryBlr extends WorldCountry {
             fifa: r"BLR",
             car: const Car(signs: ["BY"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/by.png",
-                svg: "https://flagcdn.com/by.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/by.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/by.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Minsk"], latlng: const [53.9, 27.57]),
             postalCode: const PostalCode(
@@ -36483,14 +35606,11 @@ class CountryBrb extends WorldCountry {
             fifa: r"BRB",
             car: const Car(signs: ["BDS"], isRightSide: false),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bb.png",
-                svg: "https://flagcdn.com/bb.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bb.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bb.svg"),
-            capitalInfo: const CapitalInfo(latlng: const [13.1, -59.62]),
-            capital: const ["Bridgetown"],
+            hasCoatOfArms: true,
+            capitalInfo: const CapitalInfo(
+              latlng: const [13.1, -59.62],
+              capital: const ["Bridgetown"],
+            ),
             postalCode: const PostalCode(
                 format: r"BB#####", regExpPattern: r"^(?:BB)*(\\d{5})$"));
 }
@@ -36667,12 +35787,7 @@ class CountryGtm extends WorldCountry {
             fifa: r"GUA",
             car: const Car(signs: ["GCA"]),
             timezones: const ["UTC-06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/gt.png",
-                svg: "https://flagcdn.com/gt.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/gt.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/gt.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Guatemala City"],
                 latlng: const [14.62, -90.52]),
@@ -36855,12 +35970,7 @@ class CountryAze extends WorldCountry {
             fifa: r"AZE",
             car: const Car(signs: ["AZ"]),
             timezones: const ["UTC+04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/az.png",
-                svg: "https://flagcdn.com/az.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/az.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/az.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Baku"], latlng: const [40.38, 49.87]),
             postalCode: const PostalCode(
@@ -37045,12 +36155,7 @@ class CountryMar extends WorldCountry {
             fifa: r"MAR",
             car: const Car(signs: ["MA"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ma.png",
-                svg: "https://flagcdn.com/ma.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ma.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ma.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Rabat"], latlng: const [34.02, -6.82]),
             postalCode: const PostalCode());
@@ -37233,12 +36338,7 @@ class CountryCok extends WorldCountry {
             fifa: r"COK",
             car: const Car(signs: ["NZ"], isRightSide: false),
             timezones: const ["UTC-10:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ck.png",
-                svg: "https://flagcdn.com/ck.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ck.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ck.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Avarua"], latlng: const [-21.2, -159.77]));
 }
@@ -37425,12 +36525,7 @@ class CountryCaf extends WorldCountry {
             fifa: r"CTA",
             car: const Car(signs: ["RCA"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cf.png",
-                svg: "https://flagcdn.com/cf.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cf.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cf.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bangui"], latlng: const [4.37, 18.58]));
 }
@@ -37606,12 +36701,7 @@ class CountryRou extends WorldCountry {
             fifa: r"ROU",
             car: const Car(signs: ["RO"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ro.png",
-                svg: "https://flagcdn.com/ro.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ro.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ro.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bucharest"], latlng: const [44.43, 26.1]),
             postalCode: const PostalCode(
@@ -37790,12 +36880,7 @@ class CountryMlt extends WorldCountry {
             fifa: r"MLT",
             car: const Car(signs: ["M"], isRightSide: false),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mt.png",
-                svg: "https://flagcdn.com/mt.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mt.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mt.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Valletta"], latlng: const [35.88, 14.5]),
             postalCode: const PostalCode(
@@ -37981,12 +37066,7 @@ class CountryArm extends WorldCountry {
             fifa: r"ARM",
             car: const Car(signs: ["AM"]),
             timezones: const ["UTC+04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/am.png",
-                svg: "https://flagcdn.com/am.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/am.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/am.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Yerevan"], latlng: const [40.17, 44.5]),
             postalCode: const PostalCode(
@@ -38170,12 +37250,7 @@ class CountrySen extends WorldCountry {
             fifa: r"SEN",
             car: const Car(signs: ["SN"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sn.png",
-                svg: "https://flagcdn.com/sn.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sn.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sn.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Dakar"], latlng: const [14.73, -17.63]),
             postalCode: const PostalCode());
@@ -38352,12 +37427,7 @@ class CountryBgr extends WorldCountry {
             fifa: r"BUL",
             car: const Car(signs: ["BG"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bg.png",
-                svg: "https://flagcdn.com/bg.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bg.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bg.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Sofia"], latlng: const [42.68, 23.32]),
             postalCode: const PostalCode(
@@ -38571,12 +37641,7 @@ class CountryCod extends WorldCountry {
             fifa: r"COD",
             car: const Car(signs: ["CGO"]),
             timezones: const ["UTC+01:00", "UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cd.png",
-                svg: "https://flagcdn.com/cd.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cd.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cd.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kinshasa"], latlng: const [-4.32, 15.3]));
 }
@@ -38755,12 +37820,7 @@ class CountryHti extends WorldCountry {
             fifa: r"HAI",
             car: const Car(signs: ["RH"]),
             timezones: const ["UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ht.png",
-                svg: "https://flagcdn.com/ht.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ht.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ht.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Port-au-Prince"],
                 latlng: const [18.53, -72.33]),
@@ -38935,12 +37995,7 @@ class CountryAlb extends WorldCountry {
             fifa: r"ALB",
             car: const Car(signs: ["AL"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/al.png",
-                svg: "https://flagcdn.com/al.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/al.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/al.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tirana"], latlng: const [41.32, 19.82]));
 }
@@ -39114,12 +38169,7 @@ class CountryJor extends WorldCountry {
             fifa: r"JOR",
             car: const Car(signs: ["HKJ"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/jo.png",
-                svg: "https://flagcdn.com/jo.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/jo.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/jo.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Amman"], latlng: const [31.95, 35.93]),
@@ -39129,167 +38179,168 @@ class CountryJor extends WorldCountry {
 class CountrySjm extends WorldCountry {
   const CountrySjm()
       : super(
-            name: const CountryName.international(
-                common: "Svalbard and Jan Mayen",
-                official: "Svalbard og Jan Mayen"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangNor(),
-                  official: "Svalbard og Jan Mayen",
-                  common: "Svalbard og Jan Mayen")
-            ],
-            tld: const [".sj"],
-            codeShort: "SJ",
-            codeNumeric: "744",
-            code: r"SJM",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatNok()],
-            idd: const Idd(root: "+4", suffixes: ["779"]),
-            altSpellings: const ["SJ", "Svalbard and Jan Mayen Islands"],
-            region: const Europe(),
-            subregion: const NorthernEurope(),
-            languages: const [LangNor()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "سفالبارد ويان ماين",
-                common: "سفالبارد ويان ماين",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Svalbard ha Jan Mayen",
-                common: "Svalbard ha Jan Mayen",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Špicberky a Jan Mayen",
-                common: "Špicberky a Jan Mayen",
-              ),
-              CountryName(
-                language: const LangCym(),
+          name: const CountryName.international(
+              common: "Svalbard and Jan Mayen",
+              official: "Svalbard og Jan Mayen"),
+          nativeNames: const [
+            CountryName(
+                language: const LangNor(),
                 official: "Svalbard og Jan Mayen",
-                common: "Svalbard and Jan Mayen",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Spitzbergen und Jan Mayen",
-                common: "Spitzbergen und Jan Mayen",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Svalbard",
-                common: "Svalbard",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Huippuvuoret",
-                common: "Huippuvuoret",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Jan Mayen Svalbard",
-                common: "Svalbard et Jan Mayen",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Svalbard og Jan Mayen",
-                common: "Svalbard i Jan Mayen",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Svalbard és Jan Mayen",
-                common: "Svalbard és Jan Mayen",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Svalbard og Jan Mayen",
-                common: "Svalbard e Jan Mayen",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "スバールバル諸島OGヤンマイエン",
-                common: "スヴァールバル諸島およびヤンマイエン島",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "스발바르 얀마옌 제도",
-                common: "스발바르 얀마옌 제도",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Svalbard og Jan Mayen",
-                common: "Svalbard en Jan Mayen",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "سوالبارد و یان ماین",
-                common: "سوالبارد و یان ماین",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Svalbard i Jan Mayen",
-                common: "Svalbard i Jan Mayen",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Svalbard og Jan Mayen",
-                common: "Ilhas Svalbard e Jan Mayen",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Свальбарда ог Ян-Майен",
-                common: "Шпицберген и Ян-Майен",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Svalbard a Jan Mayen",
-                common: "Svalbard a Jan Mayen",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Svalbard og Jan Mayen",
-                common: "Islas Svalbard y Jan Mayen",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Svalbard och Jan Mayen",
-                common: "Svalbard och Jan Mayen",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Svalbard ve Jan Mayen",
-                common: "Svalbard ve Jan Mayen",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "سوالبارڈ اور جان میئن",
-                common: "سوالبارڈ اور جان میئن",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "斯瓦尔巴特", common: "斯瓦尔巴特")
-            ],
-            latlng: const [78, 20],
-            area: -1,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Norwegian",
-                m: "Norwegian",
-              )
-            ],
-            emoji: "🇸🇯",
-            maps: const Maps(
-                googleMaps: "L2wyyn3cQ16PzQ5J8",
-                openStreetMaps: "relation/1337397"),
-            population: 2562,
-            car: const Car(signs: ["N"]),
-            timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sj.png",
-                svg: "https://flagcdn.com/sj.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Longyearbyen"], latlng: const [78.22, 15.63]));
+                common: "Svalbard og Jan Mayen")
+          ],
+          tld: const [".sj"],
+          codeShort: "SJ",
+          codeNumeric: "744",
+          code: r"SJM",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatNok()],
+          idd: const Idd(root: "+4", suffixes: ["779"]),
+          altSpellings: const ["SJ", "Svalbard and Jan Mayen Islands"],
+          region: const Europe(),
+          subregion: const NorthernEurope(),
+          languages: const [LangNor()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "سفالبارد ويان ماين",
+              common: "سفالبارد ويان ماين",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Svalbard ha Jan Mayen",
+              common: "Svalbard ha Jan Mayen",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Špicberky a Jan Mayen",
+              common: "Špicberky a Jan Mayen",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Svalbard og Jan Mayen",
+              common: "Svalbard and Jan Mayen",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Spitzbergen und Jan Mayen",
+              common: "Spitzbergen und Jan Mayen",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Svalbard",
+              common: "Svalbard",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Huippuvuoret",
+              common: "Huippuvuoret",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Jan Mayen Svalbard",
+              common: "Svalbard et Jan Mayen",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Svalbard og Jan Mayen",
+              common: "Svalbard i Jan Mayen",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Svalbard és Jan Mayen",
+              common: "Svalbard és Jan Mayen",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Svalbard og Jan Mayen",
+              common: "Svalbard e Jan Mayen",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "スバールバル諸島OGヤンマイエン",
+              common: "スヴァールバル諸島およびヤンマイエン島",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "스발바르 얀마옌 제도",
+              common: "스발바르 얀마옌 제도",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Svalbard og Jan Mayen",
+              common: "Svalbard en Jan Mayen",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "سوالبارد و یان ماین",
+              common: "سوالبارد و یان ماین",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Svalbard i Jan Mayen",
+              common: "Svalbard i Jan Mayen",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Svalbard og Jan Mayen",
+              common: "Ilhas Svalbard e Jan Mayen",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Свальбарда ог Ян-Майен",
+              common: "Шпицберген и Ян-Майен",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Svalbard a Jan Mayen",
+              common: "Svalbard a Jan Mayen",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Svalbard og Jan Mayen",
+              common: "Islas Svalbard y Jan Mayen",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Svalbard och Jan Mayen",
+              common: "Svalbard och Jan Mayen",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Svalbard ve Jan Mayen",
+              common: "Svalbard ve Jan Mayen",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "سوالبارڈ اور جان میئن",
+              common: "سوالبارڈ اور جان میئن",
+            ),
+            CountryName(
+                language: const LangZho(), official: "斯瓦尔巴特", common: "斯瓦尔巴特")
+          ],
+          latlng: const [78, 20],
+          area: -1,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Norwegian",
+              m: "Norwegian",
+            )
+          ],
+          emoji: "🇸🇯",
+          maps: const Maps(
+              googleMaps: "L2wyyn3cQ16PzQ5J8",
+              openStreetMaps: "relation/1337397"),
+          population: 2562,
+          car: const Car(signs: ["N"]),
+          timezones: const ["UTC+01:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Longyearbyen"],
+            latlng: const [78.22, 15.63],
+          ),
+        );
 }
 
 class CountryMdg extends WorldCountry {
@@ -39467,12 +38518,7 @@ class CountryMdg extends WorldCountry {
             fifa: r"MAD",
             car: const Car(signs: ["RM"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mg.png",
-                svg: "https://flagcdn.com/mg.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mg.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mg.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Antananarivo"], latlng: const [-18.92, 47.52]),
             postalCode:
@@ -39672,14 +38718,11 @@ class CountryFra extends WorldCountry {
               "UTC+11:00",
               "UTC+12:00"
             ],
-            capital: const ["Paris"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/fr.png",
-                svg: "https://flagcdn.com/fr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/fr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/fr.svg"),
-            capitalInfo: const CapitalInfo(latlng: const [48.87, 2.33]),
+            hasCoatOfArms: true,
+            capitalInfo: const CapitalInfo(
+              latlng: const [48.87, 2.33],
+              capital: const ["Paris"],
+            ),
             postalCode: const PostalCode());
 }
 
@@ -39855,12 +38898,7 @@ class CountryFsm extends WorldCountry {
             gini: const Gini(rawYear: 2013, value: 40.1),
             car: const Car(signs: ["FSM"]),
             timezones: const ["UTC+10:00", "UTC+11:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/fm.png",
-                svg: "https://flagcdn.com/fm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/fm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/fm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Palikir"], latlng: const [6.92, 158.15]),
             postalCode: const PostalCode());
@@ -40032,12 +39070,7 @@ class CountryAbw extends WorldCountry {
             fifa: r"ARU",
             car: const Car(signs: const []), // TODO: Fix it.
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/aw.png",
-                svg: "https://flagcdn.com/aw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/aw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/aw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Oranjestad"], latlng: const [12.52, -70.03]));
 }
@@ -40229,12 +39262,7 @@ class CountryInd extends WorldCountry {
             fifa: r"IND",
             car: const Car(signs: ["IND"], isRightSide: false),
             timezones: const ["UTC+05:30"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/in.png",
-                svg: "https://flagcdn.com/in.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/in.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/in.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["New Delhi"], latlng: const [28.6, 77.2]),
             postalCode: const PostalCode(
@@ -40435,12 +39463,7 @@ class CountryNam extends WorldCountry {
             fifa: r"NAM",
             car: const Car(signs: ["NAM"], isRightSide: false),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/na.png",
-                svg: "https://flagcdn.com/na.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/na.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/na.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Windhoek"], latlng: const [-22.57, 17.08]));
 }
@@ -40628,12 +39651,7 @@ class CountryFji extends WorldCountry {
             fifa: r"FIJ",
             car: const Car(signs: ["FJI"], isRightSide: false),
             timezones: const ["UTC+12:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/fj.png",
-                svg: "https://flagcdn.com/fj.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/fj.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/fj.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Suva"], latlng: const [-18.13, 178.42]));
 }
@@ -40820,12 +39838,7 @@ class CountrySdn extends WorldCountry {
             fifa: r"SDN",
             car: const Car(signs: ["SUD"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sd.png",
-                svg: "https://flagcdn.com/sd.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sd.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sd.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Khartoum"], latlng: const [15.6, 32.53]),
             postalCode: const PostalCode());
@@ -41005,12 +40018,7 @@ class CountryStp extends WorldCountry {
             fifa: r"STP",
             car: const Car(signs: ["STP"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/st.png",
-                svg: "https://flagcdn.com/st.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/st.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/st.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["São Tomé"], latlng: const [0.34, 6.73]));
 }
@@ -41194,12 +40202,7 @@ class CountrySau extends WorldCountry {
             fifa: r"KSA",
             car: const Car(signs: ["SA"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sa.png",
-                svg: "https://flagcdn.com/sa.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/sa.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/sa.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Riyadh"], latlng: const [24.65, 46.7]),
@@ -41344,11 +40347,8 @@ class CountryHmd extends WorldCountry {
               openStreetMaps: "relation/2177227"),
           population: 0,
           car: const Car(signs: [""]),
+          hasCoatOfArms: false,
           timezones: const ["UTC+05:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/hm.png",
-              svg: "https://flagcdn.com/hm.svg"),
-          capitalInfo: const CapitalInfo(),
         );
 }
 
@@ -41530,12 +40530,7 @@ class CountryLka extends WorldCountry {
             fifa: r"SRI",
             car: const Car(signs: ["CL"], isRightSide: false),
             timezones: const ["UTC+05:30"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/lk.png",
-                svg: "https://flagcdn.com/lk.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/lk.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/lk.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Sri Jayawardenepura Kotte"],
                 latlng: const [6.89, 79.9]),
@@ -41711,12 +40706,7 @@ class CountrySwe extends WorldCountry {
             fifa: r"SWE",
             car: const Car(signs: ["S"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/se.png",
-                svg: "https://flagcdn.com/se.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/se.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/se.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Stockholm"], latlng: const [59.33, 18.05]),
             postalCode: const PostalCode(
@@ -41891,12 +40881,7 @@ class CountryTon extends WorldCountry {
             fifa: r"TGA",
             car: const Car(signs: ["TO"], isRightSide: false),
             timezones: const ["UTC+13:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/to.png",
-                svg: "https://flagcdn.com/to.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/to.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/to.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Nuku'alofa"], latlng: const [-21.13, -175.2]));
 }
@@ -42077,12 +41062,7 @@ class CountryDnk extends WorldCountry {
               "UTC",
               "UTC+01:00"
             ],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/dk.png",
-                svg: "https://flagcdn.com/dk.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/dk.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/dk.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Copenhagen"], latlng: const [55.67, 12.58]),
             postalCode: const PostalCode(
@@ -42259,12 +41239,7 @@ class CountryMys extends WorldCountry {
             fifa: r"MAS",
             car: const Car(signs: ["MAL"], isRightSide: false),
             timezones: const ["UTC+08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/my.png",
-                svg: "https://flagcdn.com/my.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/my.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/my.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Kuala Lumpur"], latlng: const [3.17, 101.7]),
@@ -42442,12 +41417,7 @@ class CountryCri extends WorldCountry {
             fifa: r"CRC",
             car: const Car(signs: ["CR"]),
             timezones: const ["UTC-06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cr.png",
-                svg: "https://flagcdn.com/cr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/cr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/cr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["San José"], latlng: const [9.93, -84.09]),
             postalCode: const PostalCode(
@@ -42650,12 +41620,7 @@ class CountryBol extends WorldCountry {
             fifa: r"BOL",
             car: const Car(signs: ["BOL"]),
             timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bo.png",
-                svg: "https://flagcdn.com/bo.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bo.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bo.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Sucre"], latlng: const [-19.02, -65.26]));
 }
@@ -42826,12 +41791,7 @@ class CountryBtn extends WorldCountry {
             fifa: r"BHU",
             car: const Car(signs: ["BHT"], isRightSide: false),
             timezones: const ["UTC+06:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/bt.png",
-                svg: "https://flagcdn.com/bt.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/bt.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/bt.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Thimphu"], latlng: const [27.47, 89.63]));
 }
@@ -43001,12 +41961,7 @@ class CountryCym extends WorldCountry {
             fifa: r"CAY",
             car: const Car(signs: ["GB"], isRightSide: false),
             timezones: const ["UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ky.png",
-                svg: "https://flagcdn.com/ky.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ky.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ky.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["George Town"], latlng: const [19.3, -81.38]));
 }
@@ -43014,178 +41969,179 @@ class CountryCym extends WorldCountry {
 class CountryPcn extends WorldCountry {
   const CountryPcn()
       : super(
-            name: const CountryName.international(
-                common: "Pitcairn Islands",
-                official: "Pitcairn Group of Islands"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(),
-                  official: "Pitcairn Group of Islands",
-                  common: "Pitcairn Islands")
-            ],
-            tld: const [".pn"],
-            codeShort: "PN",
-            codeNumeric: "612",
-            code: r"PCN",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatNzd()],
-            idd: const Idd(root: "+6", suffixes: ["4"]),
-            altSpellings: const [
-              "PN",
-              "Pitcairn",
-              "Pitcairn Henderson Ducie and Oeno Islands"
-            ],
-            region: const Oceania(),
-            subregion: const Polynesia(),
-            languages: const [LangEng()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "جزر بيتكيرن",
-                common: "جزر بيتكيرن",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Inizi Pitcairn, Henderson, Ducie hag Oeno",
-                common: "Inizi Pitcairn",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Pitcairnovy ostrovy",
-                common: "Pitcairnovy ostrovy",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Pitcairn Group of Islands",
-                common: "Pitcairn Islands",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Pitcairninseln",
-                common: "Pitcairninseln",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Pitcairni, Hendersoni, Ducie ja Oeno saar",
-                common: "Pitcairn",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Pitcairn",
-                common: "Pitcairn",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Groupe d'îles Pitcairn",
-                common: "Îles Pitcairn",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Pitcairn skupine otoka",
-                common: "Pitcairnovo otočje",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Pitcairn-szigetek",
-                common: "Pitcairn-szigetek",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Pitcairn gruppo di isole",
-                common: "Isole Pitcairn",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "島のピトケアングループ",
-                common: "ピトケアン",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "핏케언 제도",
-                common: "핏케언 제도",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Pitcairn groep eilanden",
-                common: "Pitcairneilanden",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جزایر پیت‌کرن",
-                common: "جزایر پیت‌کرن",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Wyspy Pitcairn, Henderson, Ducie i Oeno",
-                common: "Pitcairn",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Pitcairn grupo de ilhas",
-                common: "Ilhas Pitcairn",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Питкэрн группа островов",
-                common: "Острова Питкэрн",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Pitcairnove ostrovy",
-                common: "Pitcairnove ostrovy",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Grupo de Islas Pitcairn",
-                common: "Islas Pitcairn",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Pitcairnöarna",
-                common: "Pitcairnöarna",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Pitcairn, Henderson, Ducie ve Oeno Adaları",
-                common: "Pitcairn Adaları",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "پٹکیرن جزائر",
-                common: "جزائر پٹکیرن",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "皮特凯恩群岛",
-                  common: "皮特凯恩群岛")
-            ],
-            latlng: const [-25.06666666, -130.1],
-            area: 47,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Pitcairn Islander",
-                m: "Pitcairn Islander",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Pitcairnaise",
-                m: "Pitcairnais",
-              )
-            ],
-            emoji: "🇵🇳",
-            maps: const Maps(
-                googleMaps: "XGJMnMAigXjXcxSa7",
-                openStreetMaps: "relation/2185375"),
-            population: 56,
-            car: const Car(signs: ["GB"], isRightSide: false),
-            timezones: const ["UTC-08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pn.png",
-                svg: "https://flagcdn.com/pn.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Adamstown"], latlng: const [-25.07, -130.08]));
+          name: const CountryName.international(
+            common: "Pitcairn Islands",
+            official: "Pitcairn Group of Islands",
+          ),
+          nativeNames: const [
+            CountryName(
+              language: const LangEng(),
+              official: "Pitcairn Group of Islands",
+              common: "Pitcairn Islands",
+            )
+          ],
+          tld: const [".pn"],
+          codeShort: "PN",
+          codeNumeric: "612",
+          code: r"PCN",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatNzd()],
+          idd: const Idd(root: "+6", suffixes: ["4"]),
+          altSpellings: const [
+            "PN",
+            "Pitcairn",
+            "Pitcairn Henderson Ducie and Oeno Islands"
+          ],
+          region: const Oceania(),
+          subregion: const Polynesia(),
+          languages: const [LangEng()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "جزر بيتكيرن",
+              common: "جزر بيتكيرن",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Inizi Pitcairn, Henderson, Ducie hag Oeno",
+              common: "Inizi Pitcairn",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Pitcairnovy ostrovy",
+              common: "Pitcairnovy ostrovy",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Pitcairn Group of Islands",
+              common: "Pitcairn Islands",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Pitcairninseln",
+              common: "Pitcairninseln",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Pitcairni, Hendersoni, Ducie ja Oeno saar",
+              common: "Pitcairn",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Pitcairn",
+              common: "Pitcairn",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Groupe d'îles Pitcairn",
+              common: "Îles Pitcairn",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Pitcairn skupine otoka",
+              common: "Pitcairnovo otočje",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Pitcairn-szigetek",
+              common: "Pitcairn-szigetek",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Pitcairn gruppo di isole",
+              common: "Isole Pitcairn",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "島のピトケアングループ",
+              common: "ピトケアン",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "핏케언 제도",
+              common: "핏케언 제도",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Pitcairn groep eilanden",
+              common: "Pitcairneilanden",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جزایر پیت‌کرن",
+              common: "جزایر پیت‌کرن",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Wyspy Pitcairn, Henderson, Ducie i Oeno",
+              common: "Pitcairn",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Pitcairn grupo de ilhas",
+              common: "Ilhas Pitcairn",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Питкэрн группа островов",
+              common: "Острова Питкэрн",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Pitcairnove ostrovy",
+              common: "Pitcairnove ostrovy",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Grupo de Islas Pitcairn",
+              common: "Islas Pitcairn",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Pitcairnöarna",
+              common: "Pitcairnöarna",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Pitcairn, Henderson, Ducie ve Oeno Adaları",
+              common: "Pitcairn Adaları",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "پٹکیرن جزائر",
+              common: "جزائر پٹکیرن",
+            ),
+            CountryName(
+                language: const LangZho(), official: "皮特凯恩群岛", common: "皮特凯恩群岛")
+          ],
+          latlng: const [-25.06666666, -130.1],
+          area: 47,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Pitcairn Islander",
+              m: "Pitcairn Islander",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Pitcairnaise",
+              m: "Pitcairnais",
+            )
+          ],
+          emoji: "🇵🇳",
+          maps: const Maps(
+              googleMaps: "XGJMnMAigXjXcxSa7",
+              openStreetMaps: "relation/2185375"),
+          population: 56,
+          car: const Car(signs: ["GB"], isRightSide: false),
+          timezones: const ["UTC-08:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Adamstown"],
+            latlng: const [-25.07, -130.08],
+          ),
+        );
 }
 
 class CountryMli extends WorldCountry {
@@ -43366,12 +42322,7 @@ class CountryMli extends WorldCountry {
             fifa: r"MLI",
             car: const Car(signs: ["RMM"]),
             timezones: const ["UTC"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ml.png",
-                svg: "https://flagcdn.com/ml.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ml.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ml.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bamako"], latlng: const [12.65, -8]));
 }
@@ -43379,181 +42330,182 @@ class CountryMli extends WorldCountry {
 class CountrySxm extends WorldCountry {
   const CountrySxm()
       : super(
-            name: const CountryName.international(
-                common: "Sint Maarten", official: "Sint Maarten"),
-            nativeNames: const [
-              CountryName(
-                language: const LangEng(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                  language: const LangFra(),
-                  official: "Saint-Martin",
-                  common: "Saint-Martin"),
-              CountryName(
-                  language: const LangNld(),
-                  official: "Sint Maarten",
-                  common: "Sint Maarten")
-            ],
-            tld: const [".sx"],
-            codeShort: "SX",
-            codeNumeric: "534",
-            code: r"SXM",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatAng()],
-            idd: const Idd(root: "+1", suffixes: ["721"]),
-            altSpellings: const ["SX", "Sint Maarten (Dutch part)"],
-            region: const Americas(),
-            subregion: const Caribbean(),
-            languages: const [LangEng(), LangFra(), LangNld()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "سينت مارتن",
-                common: "سينت مارتن",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Svatý Martin",
-                common: "Svatý Martin (Nizozemsko)",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
+          name: const CountryName.international(
+              common: "Sint Maarten", official: "Sint Maarten"),
+          nativeNames: const [
+            CountryName(
+              language: const LangEng(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
                 language: const LangFra(),
-                official: "Sint Maarten",
-                common: "Saint-Martin",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Sveti Martin",
-                common: "Sveti Martin",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "シントマールテン島",
-                common: "シント・マールテン",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "신트마르턴",
-                common: "신트마르턴",
-              ),
-              CountryName(
+                official: "Saint-Martin",
+                common: "Saint-Martin"),
+            CountryName(
                 language: const LangNld(),
                 official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "سن مارتن",
-                common: "سن مارتن",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Sint Maarten",
-                common: "São Martinho",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Синт-Маартен",
-                common: "Синт-Мартен",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Sint Maarten",
-                common: "Sint Maarten",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "سنٹ مارٹن",
-                common: "سنٹ مارٹن",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "圣马丁岛", common: "圣马丁岛")
-            ],
-            latlng: const [18.033333, -63.05],
-            rawBorders: const ["Maf"],
-            area: 34,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "St. Maartener",
-                m: "St. Maartener",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Saint-Martinoise",
-                m: "Saint-Martinois",
-              )
-            ],
-            emoji: "🇸🇽",
-            maps: const Maps(
-                googleMaps: "DjvcESy1a1oGEZuNA",
-                openStreetMaps: "relation/1231790"),
-            population: 40812,
-            car: const Car(signs: ["SX"]),
-            timezones: const ["UTC-04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/sx.png",
-                svg: "https://flagcdn.com/sx.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Philipsburg"], latlng: const [18.02, -63.03]));
+                common: "Sint Maarten")
+          ],
+          tld: const [".sx"],
+          codeShort: "SX",
+          codeNumeric: "534",
+          code: r"SXM",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatAng()],
+          idd: const Idd(root: "+1", suffixes: ["721"]),
+          altSpellings: const ["SX", "Sint Maarten (Dutch part)"],
+          region: const Americas(),
+          subregion: const Caribbean(),
+          languages: const [LangEng(), LangFra(), LangNld()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "سينت مارتن",
+              common: "سينت مارتن",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Svatý Martin",
+              common: "Svatý Martin (Nizozemsko)",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Sint Maarten",
+              common: "Saint-Martin",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Sveti Martin",
+              common: "Sveti Martin",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "シントマールテン島",
+              common: "シント・マールテン",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "신트마르턴",
+              common: "신트마르턴",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "سن مارتن",
+              common: "سن مارتن",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Sint Maarten",
+              common: "São Martinho",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Синт-Маартен",
+              common: "Синт-Мартен",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Sint Maarten",
+              common: "Sint Maarten",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "سنٹ مارٹن",
+              common: "سنٹ مارٹن",
+            ),
+            CountryName(
+                language: const LangZho(), official: "圣马丁岛", common: "圣马丁岛")
+          ],
+          latlng: const [18.033333, -63.05],
+          rawBorders: const ["Maf"],
+          area: 34,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "St. Maartener",
+              m: "St. Maartener",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Saint-Martinoise",
+              m: "Saint-Martinois",
+            )
+          ],
+          emoji: "🇸🇽",
+          maps: const Maps(
+              googleMaps: "DjvcESy1a1oGEZuNA",
+              openStreetMaps: "relation/1231790"),
+          population: 40812,
+          car: const Car(signs: ["SX"]),
+          timezones: const ["UTC-04:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Philipsburg"],
+            latlng: const [18.02, -63.03],
+          ),
+        );
 }
 
 class CountryLva extends WorldCountry {
@@ -43732,12 +42684,7 @@ class CountryLva extends WorldCountry {
             fifa: r"LVA",
             car: const Car(signs: ["LV"]),
             timezones: const ["UTC+02:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/lv.png",
-                svg: "https://flagcdn.com/lv.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/lv.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/lv.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Riga"], latlng: const [56.95, 24.1]),
             postalCode: const PostalCode(
@@ -43747,360 +42694,362 @@ class CountryLva extends WorldCountry {
 class CountryAsm extends WorldCountry {
   const CountryAsm()
       : super(
-            name: const CountryName.international(
-                common: "American Samoa", official: "American Samoa"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangEng(),
-                  official: "American Samoa",
-                  common: "American Samoa"),
-              CountryName(
-                  language: const LangSmo(),
-                  official: "Sāmoa Amelika",
-                  common: "Sāmoa Amelika")
-            ],
-            tld: const [".as"],
-            codeShort: "AS",
-            codeNumeric: "016",
-            code: r"ASM",
-            cioc: r"ASA",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatUsd()],
-            idd: const Idd(root: "+1", suffixes: ["684"]),
-            altSpellings: const [
-              "AS",
-              "Amerika Sāmoa",
-              "Amelika Sāmoa",
-              "Sāmoa Amelika"
-            ],
-            region: const Oceania(),
-            subregion: const Polynesia(),
-            languages: const [LangEng(), LangSmo()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "ساموا الأمريكية",
-                common: "ساموا الأمريكية",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Samoa Amerikan",
-                common: "Samoa Amerikan",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Americká Samoa",
-                common: "Americká Samoa",
-              ),
-              CountryName(
-                language: const LangCym(),
+          name: const CountryName.international(
+              common: "American Samoa", official: "American Samoa"),
+          nativeNames: const [
+            CountryName(
+                language: const LangEng(),
                 official: "American Samoa",
-                common: "American Samoa",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Amerikanisch-Samoa",
-                common: "Amerikanisch-Samoa",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Ameerika Samoa",
-                common: "Ameerika Samoa",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Amerikan Samoa",
-                common: "Amerikan Samoa",
-              ),
-              CountryName(
-                language: const LangFra(),
-                official: "Samoa américaines",
-                common: "Samoa américaines",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "američka Samoa",
-                common: "Američka Samoa",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Szamoa",
-                common: "Szamoa",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Samoa americane",
-                common: "Samoa Americane",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "米サモア",
-                common: "アメリカ領サモア",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "아메리칸사모아",
-                common: "아메리칸사모아",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Amerikaans Samoa",
-                common: "Amerikaans Samoa",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "ساموآی آمریکا",
-                common: "ساموآی آمریکا",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Samoa Amerykańskie",
-                common: "Samoa Amerykańskie",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Samoa americana",
-                common: "Samoa Americana",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "американское Самоа",
-                common: "Американское Самоа",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Americká Samoa",
-                common: "Americká Samoa",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "Samoa Americana",
-                common: "Samoa Americana",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Amerikanska Samoa",
-                common: "Amerikanska Samoa",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Amerikan Samoası",
-                common: "Amerikan Samoası",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "امریکی سمووا",
-                common: "امریکی سمووا",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "美属萨摩亚", common: "美属萨摩亚")
-            ],
-            latlng: const [-14.33333333, -170],
-            area: 199,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "American Samoan",
-                m: "American Samoan",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Samoane",
-                m: "Samoan",
-              )
-            ],
-            emoji: "🇦🇸",
-            maps: const Maps(
-                googleMaps: "Re9ePMjwP1sFCBFA6",
-                openStreetMaps: "relation/2177187"),
-            population: 55197,
-            fifa: r"ASA",
-            car: const Car(signs: ["USA"]),
-            timezones: const ["UTC-11:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/as.png",
-                svg: "https://flagcdn.com/as.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Pago Pago"], latlng: const [-14.27, -170.7]));
+                common: "American Samoa"),
+            CountryName(
+                language: const LangSmo(),
+                official: "Sāmoa Amelika",
+                common: "Sāmoa Amelika")
+          ],
+          tld: const [".as"],
+          codeShort: "AS",
+          codeNumeric: "016",
+          code: r"ASM",
+          cioc: r"ASA",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatUsd()],
+          idd: const Idd(root: "+1", suffixes: ["684"]),
+          altSpellings: const [
+            "AS",
+            "Amerika Sāmoa",
+            "Amelika Sāmoa",
+            "Sāmoa Amelika"
+          ],
+          region: const Oceania(),
+          subregion: const Polynesia(),
+          languages: const [LangEng(), LangSmo()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "ساموا الأمريكية",
+              common: "ساموا الأمريكية",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Samoa Amerikan",
+              common: "Samoa Amerikan",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Americká Samoa",
+              common: "Americká Samoa",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "American Samoa",
+              common: "American Samoa",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Amerikanisch-Samoa",
+              common: "Amerikanisch-Samoa",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Ameerika Samoa",
+              common: "Ameerika Samoa",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Amerikan Samoa",
+              common: "Amerikan Samoa",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Samoa américaines",
+              common: "Samoa américaines",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "američka Samoa",
+              common: "Američka Samoa",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Szamoa",
+              common: "Szamoa",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Samoa americane",
+              common: "Samoa Americane",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "米サモア",
+              common: "アメリカ領サモア",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "아메리칸사모아",
+              common: "아메리칸사모아",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Amerikaans Samoa",
+              common: "Amerikaans Samoa",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "ساموآی آمریکا",
+              common: "ساموآی آمریکا",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Samoa Amerykańskie",
+              common: "Samoa Amerykańskie",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Samoa americana",
+              common: "Samoa Americana",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "американское Самоа",
+              common: "Американское Самоа",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Americká Samoa",
+              common: "Americká Samoa",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "Samoa Americana",
+              common: "Samoa Americana",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Amerikanska Samoa",
+              common: "Amerikanska Samoa",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Amerikan Samoası",
+              common: "Amerikan Samoası",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "امریکی سمووا",
+              common: "امریکی سمووا",
+            ),
+            CountryName(
+                language: const LangZho(), official: "美属萨摩亚", common: "美属萨摩亚")
+          ],
+          latlng: const [-14.33333333, -170],
+          area: 199,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "American Samoan",
+              m: "American Samoan",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Samoane",
+              m: "Samoan",
+            )
+          ],
+          emoji: "🇦🇸",
+          maps: const Maps(
+              googleMaps: "Re9ePMjwP1sFCBFA6",
+              openStreetMaps: "relation/2177187"),
+          population: 55197,
+          fifa: r"ASA",
+          car: const Car(signs: ["USA"]),
+          timezones: const ["UTC-11:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Pago Pago"],
+            latlng: const [-14.27, -170.7],
+          ),
+        );
 }
 
 class CountrySpm extends WorldCountry {
   const CountrySpm()
       : super(
-            name: const CountryName.international(
-                common: "Saint Pierre and Miquelon",
-                official: "Saint Pierre and Miquelon"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangFra(),
-                  official:
-                      "Collectivité territoriale de Saint-Pierre-et-Miquelon",
-                  common: "Saint-Pierre-et-Miquelon")
-            ],
-            tld: const [".pm"],
-            codeShort: "PM",
-            codeNumeric: "666",
-            code: r"SPM",
-            independent: false,
-            unMember: false,
-            currencies: const [FiatEur()],
-            idd: const Idd(root: "+5", suffixes: ["08"]),
-            altSpellings: const [
-              "PM",
-              "Collectivité territoriale de Saint-Pierre-et-Miquelon"
-            ],
-            region: const Americas(),
-            subregion: const NorthAmerica(),
-            languages: const [LangFra()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "سان بيير وميكلون",
-                common: "سان بيير وميكلون",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Sant-Pêr-ha-Mikelon",
-                common: "Sant-Pêr-ha-Mikelon",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Saint-Pierre a Miquelon",
-                common: "Saint-Pierre a Miquelon",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Saint Pierre and Miquelon",
-                common: "Saint Pierre and Miquelon",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "St. Pierre und Miquelon",
-                common: "St. Pierre und Miquelon",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Saint-Pierre’i ja Miqueloni territoriaalühendus",
-                common: "Saint-Pierre ja Miquelon",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Saint-Pierre ja Miquelon",
-                common: "Saint-Pierre ja Miquelon",
-              ),
-              CountryName(
+          name: const CountryName.international(
+              common: "Saint Pierre and Miquelon",
+              official: "Saint Pierre and Miquelon"),
+          nativeNames: const [
+            CountryName(
                 language: const LangFra(),
-                official: "Saint-Pierre-et-Miquelon",
-                common: "Saint-Pierre-et-Miquelon",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Saint Pierre i Miquelon",
-                common: "Sveti Petar i Mikelon",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Saint-Pierre és Miquelon",
-                common: "Saint-Pierre és Miquelon",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Saint Pierre e Miquelon",
-                common: "Saint-Pierre e Miquelon",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "サンピエール島·ミクロン島",
-                common: "サンピエール島・ミクロン島",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "생피에르 미클롱",
-                common: "생피에르 미클롱",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Saint-Pierre en Miquelon",
-                common: "Saint Pierre en Miquelon",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "سن-پیر-ا-میکلون",
-                common: "سن-پیِر و میکلُن",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Saint-Pierre i Miquelon",
-                common: "Saint-Pierre i Miquelon",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "Saint Pierre e Miquelon",
-                common: "Saint-Pierre e Miquelon",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Сен-Пьер и Микелон",
-                common: "Сен-Пьер и Микелон",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Ostrovy Saint Pierre a Miquelon",
-                common: "Saint Pierre a Miquelon",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "San Pedro y Miquelón",
-                common: "San Pedro y Miquelón",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Saint-Pierre och Miquelon",
-                common: "Saint-Pierre och Miquelon",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Saint Pierre ve Miquelon",
-                common: "Saint Pierre ve Miquelon",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "سینٹ پیئر و میکیلون",
-                common: "سینٹ پیئر و میکیلون",
-              ),
-              CountryName(
-                  language: const LangZho(),
-                  official: "圣皮埃尔和密克隆",
-                  common: "圣皮埃尔和密克隆")
-            ],
-            latlng: const [46.83333333, -56.33333333],
-            area: 242,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Saint-Pierrais, Miquelonnais",
-                m: "Saint-Pierrais, Miquelonnais",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Saint-Pierraise, Miquelonaise",
-                m: "Saint-Pierrais, Miquelonais",
-              )
-            ],
-            emoji: "🇵🇲",
-            maps: const Maps(
-                googleMaps: "bUM8Yc8pA8ghyhmt6",
-                openStreetMaps: "relation/3406826"),
-            population: 6069,
-            car: const Car(signs: ["F"]),
-            timezones: const ["UTC-03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/pm.png",
-                svg: "https://flagcdn.com/pm.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Saint-Pierre"], latlng: const [46.77, -56.18]),
-            postalCode: const PostalCode(regExpPattern: r"^(97500)$"));
+                official:
+                    "Collectivité territoriale de Saint-Pierre-et-Miquelon",
+                common: "Saint-Pierre-et-Miquelon")
+          ],
+          tld: const [".pm"],
+          codeShort: "PM",
+          codeNumeric: "666",
+          code: r"SPM",
+          independent: false,
+          unMember: false,
+          currencies: const [FiatEur()],
+          idd: const Idd(root: "+5", suffixes: ["08"]),
+          altSpellings: const [
+            "PM",
+            "Collectivité territoriale de Saint-Pierre-et-Miquelon"
+          ],
+          region: const Americas(),
+          subregion: const NorthAmerica(),
+          languages: const [LangFra()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "سان بيير وميكلون",
+              common: "سان بيير وميكلون",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Sant-Pêr-ha-Mikelon",
+              common: "Sant-Pêr-ha-Mikelon",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Saint-Pierre a Miquelon",
+              common: "Saint-Pierre a Miquelon",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Saint Pierre and Miquelon",
+              common: "Saint Pierre and Miquelon",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "St. Pierre und Miquelon",
+              common: "St. Pierre und Miquelon",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Saint-Pierre’i ja Miqueloni territoriaalühendus",
+              common: "Saint-Pierre ja Miquelon",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Saint-Pierre ja Miquelon",
+              common: "Saint-Pierre ja Miquelon",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "Saint-Pierre-et-Miquelon",
+              common: "Saint-Pierre-et-Miquelon",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Saint Pierre i Miquelon",
+              common: "Sveti Petar i Mikelon",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Saint-Pierre és Miquelon",
+              common: "Saint-Pierre és Miquelon",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Saint Pierre e Miquelon",
+              common: "Saint-Pierre e Miquelon",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "サンピエール島·ミクロン島",
+              common: "サンピエール島・ミクロン島",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "생피에르 미클롱",
+              common: "생피에르 미클롱",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Saint-Pierre en Miquelon",
+              common: "Saint Pierre en Miquelon",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "سن-پیر-ا-میکلون",
+              common: "سن-پیِر و میکلُن",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Saint-Pierre i Miquelon",
+              common: "Saint-Pierre i Miquelon",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "Saint Pierre e Miquelon",
+              common: "Saint-Pierre e Miquelon",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Сен-Пьер и Микелон",
+              common: "Сен-Пьер и Микелон",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Ostrovy Saint Pierre a Miquelon",
+              common: "Saint Pierre a Miquelon",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "San Pedro y Miquelón",
+              common: "San Pedro y Miquelón",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Saint-Pierre och Miquelon",
+              common: "Saint-Pierre och Miquelon",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Saint Pierre ve Miquelon",
+              common: "Saint Pierre ve Miquelon",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "سینٹ پیئر و میکیلون",
+              common: "سینٹ پیئر و میکیلون",
+            ),
+            CountryName(
+                language: const LangZho(),
+                official: "圣皮埃尔和密克隆",
+                common: "圣皮埃尔和密克隆")
+          ],
+          latlng: const [46.83333333, -56.33333333],
+          area: 242,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Saint-Pierrais, Miquelonnais",
+              m: "Saint-Pierrais, Miquelonnais",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Saint-Pierraise, Miquelonaise",
+              m: "Saint-Pierrais, Miquelonais",
+            )
+          ],
+          emoji: "🇵🇲",
+          maps: const Maps(
+              googleMaps: "bUM8Yc8pA8ghyhmt6",
+              openStreetMaps: "relation/3406826"),
+          population: 6069,
+          car: const Car(signs: ["F"]),
+          timezones: const ["UTC-03:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Saint-Pierre"],
+            latlng: const [46.77, -56.18],
+          ),
+          postalCode: const PostalCode(regExpPattern: r"^(97500)$"),
+        );
 }
 
 class CountryEcu extends WorldCountry {
@@ -44274,12 +43223,7 @@ class CountryEcu extends WorldCountry {
             fifa: r"ECU",
             car: const Car(signs: ["EC"]),
             timezones: const ["UTC-06:00", "UTC-05:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ec.png",
-                svg: "https://flagcdn.com/ec.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ec.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ec.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Quito"], latlng: const [-0.22, -78.5]),
             postalCode: const PostalCode(
@@ -44459,12 +43403,7 @@ class CountryTha extends WorldCountry {
             fifa: r"THA",
             car: const Car(signs: ["T"], isRightSide: false),
             timezones: const ["UTC+07:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/th.png",
-                svg: "https://flagcdn.com/th.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/th.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/th.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bangkok"], latlng: const [13.75, 100.52]),
             postalCode: const PostalCode());
@@ -44638,12 +43577,7 @@ class CountryAre extends WorldCountry {
             fifa: r"UAE",
             car: const Car(signs: ["UAE"]),
             timezones: const ["UTC+04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ae.png",
-                svg: "https://flagcdn.com/ae.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ae.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ae.svg"),
+            hasCoatOfArms: true,
             startOfWeek: Weekday.sunday,
             capitalInfo: const CapitalInfo(
                 capital: const ["Abu Dhabi"], latlng: const [24.47, 54.37]));
@@ -44828,12 +43762,7 @@ class CountryHrv extends WorldCountry {
             fifa: r"CRO",
             car: const Car(signs: ["HR"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/hr.png",
-                svg: "https://flagcdn.com/hr.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/hr.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/hr.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Zagreb"], latlng: const [45.8, 16]),
             postalCode: const PostalCode(
@@ -45011,12 +43940,7 @@ class CountryMmr extends WorldCountry {
             fifa: r"MYA",
             car: const Car(signs: ["BUR"]),
             timezones: const ["UTC+06:30"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/mm.png",
-                svg: "https://flagcdn.com/mm.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/mm.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/mm.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Naypyidaw"], latlng: const [19.76, 96.07]),
             postalCode: const PostalCode());
@@ -45187,12 +44111,7 @@ class CountryGeo extends WorldCountry {
             fifa: r"GEO",
             car: const Car(signs: ["GE"]),
             timezones: const ["UTC+04:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ge.png",
-                svg: "https://flagcdn.com/ge.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ge.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ge.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Tbilisi"], latlng: const [41.68, 44.83]),
             postalCode: const PostalCode(
@@ -45366,12 +44285,7 @@ class CountryTwn extends WorldCountry {
             fifa: r"TPE",
             car: const Car(signs: ["RC"]),
             timezones: const ["UTC+08:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/tw.png",
-                svg: "https://flagcdn.com/tw.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/tw.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/tw.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Taipei"], latlng: const [25.03, 121.52]),
             postalCode: const PostalCode());
@@ -45568,12 +44482,7 @@ class CountryChe extends WorldCountry {
             fifa: r"SUI",
             car: const Car(signs: ["CH"]),
             timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/ch.png",
-                svg: "https://flagcdn.com/ch.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/ch.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/ch.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Bern"], latlng: const [46.92, 7.47]),
             postalCode: const PostalCode(
@@ -45764,12 +44673,7 @@ class CountryEri extends WorldCountry {
             fifa: r"ERI",
             car: const Car(signs: ["ER"]),
             timezones: const ["UTC+03:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/er.png",
-                svg: "https://flagcdn.com/er.svg"),
-            coatOfArms: const CoatOfArms(
-                png: "https://mainfacts.com/media/images/coats_of_arms/er.png",
-                svg: "https://mainfacts.com/media/images/coats_of_arms/er.svg"),
+            hasCoatOfArms: true,
             capitalInfo: const CapitalInfo(
                 capital: const ["Asmara"], latlng: const [15.33, 38.93]));
 }
@@ -45777,188 +44681,189 @@ class CountryEri extends WorldCountry {
 class CountryCog extends WorldCountry {
   const CountryCog()
       : super(
-            name: const CountryName.international(
-                common: "Republic of the Congo",
-                official: "Republic of the Congo"),
-            nativeNames: const [
-              CountryName(
-                  language: const LangFra(),
-                  official: "République du Congo",
-                  common: "République du Congo"),
-              CountryName(
-                  language: const LangKon(),
-                  official: "Repubilika ya Kongo",
-                  common: "Repubilika ya Kongo"),
-              CountryName(
-                  language: const LangLin(),
-                  official: "Republíki ya Kongó",
-                  common: "Republíki ya Kongó")
-            ],
-            tld: const [".cg"],
-            codeShort: "CG",
-            codeNumeric: "178",
-            code: r"COG",
-            cioc: r"CGO",
-            currencies: const [FiatXaf()],
-            idd: const Idd(root: "+2", suffixes: ["42"]),
-            altSpellings: const ["CG", "Congo", "Congo-Brazzaville"],
-            region: const Africa(),
-            subregion: const MiddleAfrica(),
-            languages: const [LangFra(), LangKon(), LangLin()],
-            translations: const [
-              CountryName(
-                language: const LangAra(),
-                official: "جمهورية الكونغو",
-                common: "جمهورية الكونفو",
-              ),
-              CountryName(
-                language: const LangBre(),
-                official: "Republik Kongo",
-                common: "Kongo-Brazzaville",
-              ),
-              CountryName(
-                language: const LangCes(),
-                official: "Konžská republika",
-                common: "Kongo",
-              ),
-              CountryName(
-                language: const LangCym(),
-                official: "Gweriniaeth y Congo",
-                common: "Gweriniaeth y Congo",
-              ),
-              CountryName(
-                language: const LangDeu(),
-                official: "Republik Kongo",
-                common: "Kongo",
-              ),
-              CountryName(
-                language: const LangEst(),
-                official: "Kongo Vabariik",
-                common: "Kongo Vabariik",
-              ),
-              CountryName(
-                language: const LangFin(),
-                official: "Kongon tasavalta",
-                common: "Kongo-Brazzaville",
-              ),
-              CountryName(
+          name: const CountryName.international(
+              common: "Republic of the Congo",
+              official: "Republic of the Congo"),
+          nativeNames: const [
+            CountryName(
                 language: const LangFra(),
                 official: "République du Congo",
-                common: "Congo",
-              ),
-              CountryName(
-                language: const LangHrv(),
-                official: "Republika Kongo",
-                common: "Kongo",
-              ),
-              CountryName(
-                language: const LangHun(),
-                official: "Kongói Köztársaság",
-                common: "Kongói Köztársaság",
-              ),
-              CountryName(
-                language: const LangIta(),
-                official: "Repubblica del Congo",
-                common: "Congo",
-              ),
-              CountryName(
-                language: const LangJpn(),
-                official: "コンゴ共和国",
-                common: "コンゴ共和国",
-              ),
-              CountryName(
-                language: const LangKor(),
-                official: "콩고",
-                common: "콩고",
-              ),
-              CountryName(
-                language: const LangNld(),
-                official: "Republiek Congo",
-                common: "Congo",
-              ),
-              CountryName(
-                language: const LangFas(),
-                official: "جمهوری برازاویل کُنگو",
-                common: "جمهوری کُنگو",
-              ),
-              CountryName(
-                language: const LangPol(),
-                official: "Republika Konga",
-                common: "Kongo",
-              ),
-              CountryName(
-                language: const LangPor(),
-                official: "República do Congo",
-                common: "Congo",
-              ),
-              CountryName(
-                language: const LangRus(),
-                official: "Республика Конго",
-                common: "Республика Конго",
-              ),
-              CountryName(
-                language: const LangSlk(),
-                official: "Konžská republika",
-                common: "Kongo",
-              ),
-              CountryName(
-                language: const LangSpa(),
-                official: "República del Congo",
-                common: "Congo",
-              ),
-              CountryName(
-                language: const LangSwe(),
-                official: "Republiken Kongo",
-                common: "Kongo-Brazzaville",
-              ),
-              CountryName(
-                language: const LangTur(),
-                official: "Kongo Cumhuriyeti",
-                common: "Kongo Cumhuriyeti",
-              ),
-              CountryName(
-                language: const LangUrd(),
-                official: "جمہوریہ کانگو",
-                common: "جمہوریہ کانگو",
-              ),
-              CountryName(
-                  language: const LangZho(), official: "刚果共和国", common: "刚果")
-            ],
-            latlng: const [-1, 15],
-            rawBorders: const [
-              "Ago",
-              "Cmr",
-              "Caf",
-              "Cod",
-              "Gab",
-            ],
-            area: 342000,
-            demonyms: const [
-              Demonyms(
-                const LangEng(),
-                f: "Congolese",
-                m: "Congolese",
-              ),
-              Demonyms(
-                const LangFra(),
-                f: "Congolaise",
-                m: "Congolais",
-              )
-            ],
-            emoji: "🇨🇬",
-            maps: const Maps(
-                googleMaps: "Phf5dDDKdfCtuBTb6",
-                openStreetMaps: "relation/192794"),
-            population: 5657000,
-            gini: const Gini(rawYear: 2011, value: 48.9),
-            fifa: r"CGO",
-            car: const Car(signs: ["RCB"]),
-            timezones: const ["UTC+01:00"],
-            flags: const Flags(
-                png: "https://flagcdn.com/w320/cg.png",
-                svg: "https://flagcdn.com/cg.svg"),
-            capitalInfo: const CapitalInfo(
-                capital: const ["Brazzaville"], latlng: const [-4.25, 15.28]));
+                common: "République du Congo"),
+            CountryName(
+                language: const LangKon(),
+                official: "Repubilika ya Kongo",
+                common: "Repubilika ya Kongo"),
+            CountryName(
+                language: const LangLin(),
+                official: "Republíki ya Kongó",
+                common: "Republíki ya Kongó")
+          ],
+          tld: const [".cg"],
+          codeShort: "CG",
+          codeNumeric: "178",
+          code: r"COG",
+          cioc: r"CGO",
+          currencies: const [FiatXaf()],
+          idd: const Idd(root: "+2", suffixes: ["42"]),
+          altSpellings: const ["CG", "Congo", "Congo-Brazzaville"],
+          region: const Africa(),
+          subregion: const MiddleAfrica(),
+          languages: const [LangFra(), LangKon(), LangLin()],
+          translations: const [
+            CountryName(
+              language: const LangAra(),
+              official: "جمهورية الكونغو",
+              common: "جمهورية الكونفو",
+            ),
+            CountryName(
+              language: const LangBre(),
+              official: "Republik Kongo",
+              common: "Kongo-Brazzaville",
+            ),
+            CountryName(
+              language: const LangCes(),
+              official: "Konžská republika",
+              common: "Kongo",
+            ),
+            CountryName(
+              language: const LangCym(),
+              official: "Gweriniaeth y Congo",
+              common: "Gweriniaeth y Congo",
+            ),
+            CountryName(
+              language: const LangDeu(),
+              official: "Republik Kongo",
+              common: "Kongo",
+            ),
+            CountryName(
+              language: const LangEst(),
+              official: "Kongo Vabariik",
+              common: "Kongo Vabariik",
+            ),
+            CountryName(
+              language: const LangFin(),
+              official: "Kongon tasavalta",
+              common: "Kongo-Brazzaville",
+            ),
+            CountryName(
+              language: const LangFra(),
+              official: "République du Congo",
+              common: "Congo",
+            ),
+            CountryName(
+              language: const LangHrv(),
+              official: "Republika Kongo",
+              common: "Kongo",
+            ),
+            CountryName(
+              language: const LangHun(),
+              official: "Kongói Köztársaság",
+              common: "Kongói Köztársaság",
+            ),
+            CountryName(
+              language: const LangIta(),
+              official: "Repubblica del Congo",
+              common: "Congo",
+            ),
+            CountryName(
+              language: const LangJpn(),
+              official: "コンゴ共和国",
+              common: "コンゴ共和国",
+            ),
+            CountryName(
+              language: const LangKor(),
+              official: "콩고",
+              common: "콩고",
+            ),
+            CountryName(
+              language: const LangNld(),
+              official: "Republiek Congo",
+              common: "Congo",
+            ),
+            CountryName(
+              language: const LangFas(),
+              official: "جمهوری برازاویل کُنگو",
+              common: "جمهوری کُنگو",
+            ),
+            CountryName(
+              language: const LangPol(),
+              official: "Republika Konga",
+              common: "Kongo",
+            ),
+            CountryName(
+              language: const LangPor(),
+              official: "República do Congo",
+              common: "Congo",
+            ),
+            CountryName(
+              language: const LangRus(),
+              official: "Республика Конго",
+              common: "Республика Конго",
+            ),
+            CountryName(
+              language: const LangSlk(),
+              official: "Konžská republika",
+              common: "Kongo",
+            ),
+            CountryName(
+              language: const LangSpa(),
+              official: "República del Congo",
+              common: "Congo",
+            ),
+            CountryName(
+              language: const LangSwe(),
+              official: "Republiken Kongo",
+              common: "Kongo-Brazzaville",
+            ),
+            CountryName(
+              language: const LangTur(),
+              official: "Kongo Cumhuriyeti",
+              common: "Kongo Cumhuriyeti",
+            ),
+            CountryName(
+              language: const LangUrd(),
+              official: "جمہوریہ کانگو",
+              common: "جمہوریہ کانگو",
+            ),
+            CountryName(
+                language: const LangZho(), official: "刚果共和国", common: "刚果")
+          ],
+          latlng: const [-1, 15],
+          rawBorders: const [
+            "Ago",
+            "Cmr",
+            "Caf",
+            "Cod",
+            "Gab",
+          ],
+          area: 342000,
+          demonyms: const [
+            Demonyms(
+              const LangEng(),
+              f: "Congolese",
+              m: "Congolese",
+            ),
+            Demonyms(
+              const LangFra(),
+              f: "Congolaise",
+              m: "Congolais",
+            )
+          ],
+          emoji: "🇨🇬",
+          maps: const Maps(
+              googleMaps: "Phf5dDDKdfCtuBTb6",
+              openStreetMaps: "relation/192794"),
+          population: 5657000,
+          gini: const Gini(rawYear: 2011, value: 48.9),
+          fifa: r"CGO",
+          car: const Car(signs: ["RCB"]),
+          timezones: const ["UTC+01:00"],
+          hasCoatOfArms: false,
+          capitalInfo: const CapitalInfo(
+            capital: const ["Brazzaville"],
+            latlng: const [-4.25, 15.28],
+          ),
+        );
 }
 
 class CountryFro extends WorldCountry {
@@ -46103,12 +45008,7 @@ class CountryFro extends WorldCountry {
           fifa: r"FRO",
           car: const Car(signs: ["FO"]),
           timezones: const ["UTC+00:00"],
-          flags: const Flags(
-              png: "https://flagcdn.com/w320/fo.png",
-              svg: "https://flagcdn.com/fo.svg"),
-          coatOfArms: const CoatOfArms(
-              png: "https://mainfacts.com/media/images/coats_of_arms/fo.png",
-              svg: "https://mainfacts.com/media/images/coats_of_arms/fo.svg"),
+          hasCoatOfArms: true,
           capitalInfo: const CapitalInfo(
               capital: const ["Tórshavn"], latlng: const [62.01, -6.77]),
           postalCode: const PostalCode(
