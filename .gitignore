@@ -1,15 +1,9 @@
 # See https://www.dartlang.org/guides/libraries/private-files
 
-# Files and directories created by pub
-.dart_tool/
-.packages
-build/
-# If you're building an application, you may want to check-in your pubspec.lock
-pubspec.lock
-
 # Directory created by dartdoc
-# If you don't generate documentation locally you can remove this line.
+# If you don't generate documentation locally you can remove those lines.
 doc/api/
+**/doc/api/
 
 # dotenv environment variables file
 .env*
@@ -70,7 +64,7 @@ version
 .packages.generated
 
 # Flutter/Dart/Pub related
-**/doc/api/
+pubspec.lock
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -116,4 +110,10 @@ coverage_badge.svg
 nohup.out
 
 # Other
-**/json/*
+json/
+macos/
+windows/
+linux/
+web/
+ios/
+android/

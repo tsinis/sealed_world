@@ -1,9 +1,8 @@
 <!--
   Thanks for contributing!
 
-  Provide a description of your changes below and a general summary in the title
+  Provide a description of your changes below and a general summary in the title.
 
-  Please look at the following checklist to ensure that your PR can be accepted quickly:
 -->
 
 ## Description
@@ -21,5 +20,16 @@
 - [ ] ✅ Build configuration change
 - [ ] 🧪 Tests
 - [ ] 📝 Documentation
-- [ ] ⚙️ CI/CD and/or GitHub Workflow configuration change
+- [ ] ⚙️ CI/CD or GitHub Workflow configuration change
 - [ ] 📦 Dependencies update
+
+## Checks
+
+Please look at the following checklist to ensure that your PR can be accepted quickly:
+
+<!--- Put an `x` in all the boxes that apply: -->
+
+- [ ] Data are coming from open-sources resources with proper License (if presented).
+- [ ] New code is documented and data source is referenced (if presented).
+- [ ] Existing tests are up to date with these changes.
+- [ ] New code is tested (if presented).

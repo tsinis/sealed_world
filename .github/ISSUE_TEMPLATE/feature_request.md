@@ -15,7 +15,7 @@ Clearly describe what you are looking to add. The more business/user context the
 
 #### Whiteboard
 
-- [Whiteboard](https://dribbble.com/tsinis)
+- [Whiteboard/Design](https://dribbble.com/tsinis)
 
 #### Additional Context
 
