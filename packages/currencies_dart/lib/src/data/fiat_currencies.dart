@@ -17,7 +17,7 @@ class FiatAed extends FiatCurrency {
 }
 
 class FiatAfn extends FiatCurrency {
-  FiatAfn()
+  const FiatAfn()
       : super(
           code: "AFN",
           name: "Afghan Afghani",
@@ -30,7 +30,7 @@ class FiatAfn extends FiatCurrency {
 }
 
 class FiatAll extends FiatCurrency {
-  FiatAll()
+  const FiatAll()
       : super(
           code: "ALL",
           name: "Albanian Lek",
@@ -330,6 +330,7 @@ class FiatBwp extends FiatCurrency {
         );
 }
 
+// TODO: Remove one of two Belarusian currencies.
 class FiatByn extends FiatCurrency {
   const FiatByn()
       : super(
@@ -1603,8 +1604,8 @@ class FiatPyg extends FiatCurrency {
         );
 }
 
-class FiatZqar extends FiatCurrency {
-  const FiatZqar()
+class FiatQar extends FiatCurrency {
+  const FiatQar()
       : super(
           code: "QAR",
           name: "Qatari Riyal",
@@ -2380,11 +2381,12 @@ class FiatZar extends FiatCurrency {
         );
 }
 
+// TODO: Remove one of two Zambian currencies.
 class FiatZmk extends FiatCurrency {
   const FiatZmk()
       : super(
           code: "ZMK",
-          name: "Zambian Kwacha",
+          name: "Zambian Kwacha (Old)",
           symbol: "ZK",
           disambiguateSymbol: "ZMK",
           subunit: "Ngwee",

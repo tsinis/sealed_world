@@ -1,10 +1,34 @@
+// ignore_for_file: avoid_print
+
 import "package:currencies_dart/currencies_dart.dart";
 
-// From root: dart run --enable-experiment=sealed-class example/main.dart
 void main() {
-  FiatCurrency currency = const FiatUsd();
-  currency = const FiatRub();
-  final array = {const FiatUsd(), const FiatRub(), const FiatUsd()};
-  currency = const FiatUsd();
-  array.add(currency);
+  bool? isVikingKrone(Currency currency) {
+    switch (currency) {
+      case FiatDkk():
+      case FiatIsk():
+      case FiatNok():
+      case FiatSek():
+        return true;
+      case FiatCzk():
+        return false;
+      default:
+        return null;
+    }
+  }
+
+  print(isVikingKrone(const FiatNok())); // Prints true.
+  print(isVikingKrone(const FiatUsd())); // Prints null.
+  print(isVikingKrone(const FiatCzk())); // Prints false.
+
+  FiatCurrency.list
+      .where(
+        (currency) => currency.symbol?.contains("kr") ?? false,
+      )
+      .forEach(print);
+  // Prints:
+  // Currency(code: DKK)
+  // Currency(code: ISK)
+  // Currency(code: NOK)
+  // Currency(code: SEK).
 }

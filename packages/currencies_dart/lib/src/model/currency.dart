@@ -1,11 +1,11 @@
-import "dart:convert";
+import "../data/fiat_currencies.dart";
 
-part "crypto_currency.dart";
-part "fiat_currency.dart";
+part "submodels/crypto_currency.dart";
+part "submodels/fiat_currency.dart";
 
 sealed class Currency {
-  const Currency(
-    this.code, {
+  const Currency({
+    required this.code,
     required this.decimalMark,
     required this.name,
     required this.thousandsSeparator,
@@ -19,19 +19,7 @@ sealed class Currency {
   final String? symbol;
 
   @override
-  String toString() =>
-      """Currency(code: $code, name: $name, symbol: $symbol, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator)""";
-
-  Map<String, Object?> toMap() => {
-        "code": code,
-        "name": name,
-        "symbol": symbol,
-        "decimal_mark": decimalMark,
-        "thousands_separator": thousandsSeparator,
-      };
-
-  /// `dart:convert`
-  ///
-  /// Converts [Currency] to a JSON string.
-  String toJson() => json.encode(toMap());
+  String toString({bool short = true}) => short
+      ? "Currency(code: $code)"
+      : """Currency(code: $code, name: $name, symbol: $symbol, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator)""";
 }
