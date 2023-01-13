@@ -1,15 +1,15 @@
 // ignore_for_file: avoid-non-ascii-symbols
 
-import "../model/lang_family.dart";
-import "../model/language.dart";
+import "../model/language/language.dart";
+import "natural_language_families.dart";
 
-// ignore: prefer-match-file-name, not necessary for the list of languages.
+// ignore: prefer-match-file-name, not necessary for the languages data.
 class LangAar extends NaturalLanguage {
   const LangAar()
       : super(
           code: "aa",
           terminologicalCode: "aar",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Afar",
           nativeNames: const ["Afaraf"],
         );
@@ -20,7 +20,7 @@ class LangAbk extends NaturalLanguage {
       : super(
           code: "ab",
           terminologicalCode: "abk",
-          family: LangFamily.northwestCaucasian,
+          family: const NorthwestCaucasian(),
           name: "Abkhaz",
           nativeNames: const ["аҧсуа бызшәа", "аҧсшәа"],
         );
@@ -51,7 +51,7 @@ class LangAka extends NaturalLanguage {
       : super(
           code: "ak",
           terminologicalCode: "aka",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Akan",
           nativeNames: const ["Akan"],
         );
@@ -62,7 +62,7 @@ class LangAmh extends NaturalLanguage {
       : super(
           code: "am",
           terminologicalCode: "amh",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Amharic",
           nativeNames: const ["አማርኛ"],
         );
@@ -83,7 +83,7 @@ class LangAra extends NaturalLanguage {
       : super(
           code: "ar",
           terminologicalCode: "ara",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Arabic",
           nativeNames: const ["العربية"],
           isRightToLeft: true,
@@ -105,7 +105,7 @@ class LangAva extends NaturalLanguage {
       : super(
           code: "av",
           terminologicalCode: "ava",
-          family: LangFamily.northeastCaucasian,
+          family: const NortheastCaucasian(),
           name: "Avaric",
           nativeNames: const ["авар мацӀ", "магӀарул мацӀ"],
         );
@@ -116,7 +116,7 @@ class LangAym extends NaturalLanguage {
       : super(
           code: "ay",
           terminologicalCode: "aym",
-          family: LangFamily.aymaran,
+          family: const Aymaran(),
           name: "Aymara",
           nativeNames: const ["aymar aru"],
         );
@@ -127,7 +127,7 @@ class LangAze extends NaturalLanguage {
       : super(
           code: "az",
           terminologicalCode: "aze",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Azerbaijani",
           nativeNames: const ["azərbaycan dili"],
         );
@@ -138,7 +138,7 @@ class LangBak extends NaturalLanguage {
       : super(
           code: "ba",
           terminologicalCode: "bak",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Bashkir",
           nativeNames: const ["башҡорт теле"],
         );
@@ -179,7 +179,7 @@ class LangBis extends NaturalLanguage {
       : super(
           code: "bi",
           terminologicalCode: "bis",
-          family: LangFamily.creole,
+          family: const Creole(),
           name: "Bislama",
           nativeNames: const ["Bislama"],
         );
@@ -190,7 +190,7 @@ class LangBam extends NaturalLanguage {
       : super(
           code: "bm",
           terminologicalCode: "bam",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Bambara",
           nativeNames: const ["bamanankan"],
         );
@@ -201,7 +201,7 @@ class LangBen extends NaturalLanguage {
       : super(
           code: "bn",
           terminologicalCode: "ben",
-          name: "Bengali, Bangla",
+          name: "Bengali (Bangla)",
           nativeNames: const ["বাংলা"],
         );
 }
@@ -212,7 +212,7 @@ class LangBod extends NaturalLanguage {
           code: "bo",
           terminologicalCode: "bod",
           bibliographicCode: "tib",
-          family: LangFamily.sinoTibetan,
+          family: const SinoTibetan(),
           name: "Tibetan Standard",
           nativeNames: const ["བོད་ཡིག"],
         );
@@ -253,7 +253,7 @@ class LangChe extends NaturalLanguage {
       : super(
           code: "ce",
           terminologicalCode: "che",
-          family: LangFamily.northeastCaucasian,
+          family: const NortheastCaucasian(),
           name: "Chechen",
           nativeNames: const ["нохчийн мотт"],
         );
@@ -264,7 +264,7 @@ class LangCha extends NaturalLanguage {
       : super(
           code: "ch",
           terminologicalCode: "cha",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Chamorro",
           nativeNames: const ["Chamoru"],
         );
@@ -285,7 +285,7 @@ class LangCre extends NaturalLanguage {
       : super(
           code: "cr",
           terminologicalCode: "cre",
-          family: LangFamily.algonquian,
+          family: const Algonquian(),
           name: "Cree",
           nativeNames: const ["ᓀᐦᐃᔭᐍᐏᐣ"],
         );
@@ -307,7 +307,7 @@ class LangChu extends NaturalLanguage {
       : super(
           code: "cu",
           terminologicalCode: "chu",
-          name: "Old Church Slavonic, Church Slavonic, Old Bulgarian",
+          name: "(Old) Church Slavonic",
           nativeNames: const ["ѩзыкъ словѣньскъ"],
         );
 }
@@ -317,7 +317,7 @@ class LangChv extends NaturalLanguage {
       : super(
           code: "cv",
           terminologicalCode: "chv",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Chuvash",
           nativeNames: const ["чӑваш чӗлхи"],
         );
@@ -370,7 +370,7 @@ class LangDiv extends NaturalLanguage {
       : super(
           code: "dv",
           terminologicalCode: "div",
-          name: "Divehi, Dhivehi, Maldivian",
+          name: "Divehi (Dhivehi/Maldivian)",
           nativeNames: const ["ދިވެހި"],
           isRightToLeft: true,
         );
@@ -381,7 +381,7 @@ class LangDzo extends NaturalLanguage {
       : super(
           code: "dz",
           terminologicalCode: "dzo",
-          family: LangFamily.sinoTibetan,
+          family: const SinoTibetan(),
           name: "Dzongkha",
           nativeNames: const ["རྫོང་ཁ"],
         );
@@ -392,7 +392,7 @@ class LangEwe extends NaturalLanguage {
       : super(
           code: "ee",
           terminologicalCode: "ewe",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Ewe",
           nativeNames: const ["Eʋegbe"],
         );
@@ -424,7 +424,7 @@ class LangEpo extends NaturalLanguage {
       : super(
           code: "eo",
           terminologicalCode: "epo",
-          family: LangFamily.constructed,
+          family: const Constructed(),
           name: "Esperanto",
           nativeNames: const ["Esperanto"],
         );
@@ -435,7 +435,7 @@ class LangEst extends NaturalLanguage {
       : super(
           code: "et",
           terminologicalCode: "est",
-          family: LangFamily.uralic,
+          family: const Uralic(),
           name: "Estonian",
           nativeNames: const ["eesti", "eesti keel"],
         );
@@ -447,7 +447,7 @@ class LangEus extends NaturalLanguage {
           code: "eu",
           terminologicalCode: "eus",
           bibliographicCode: "baq",
-          family: LangFamily.languageIsolate,
+          family: const LanguageIsolate(),
           name: "Basque",
           nativeNames: const ["euskara", "euskera"],
         );
@@ -470,8 +470,8 @@ class LangFul extends NaturalLanguage {
       : super(
           code: "ff",
           terminologicalCode: "ful",
-          family: LangFamily.nigerCongo,
-          name: "Fula, Fulah, Pulaar, Pular",
+          family: const NigerCongo(),
+          name: "Fula (Fulah/Pulaar/Pular)",
           nativeNames: const ["Fulfulde", "Pulaar", "Pular"],
         );
 }
@@ -481,7 +481,7 @@ class LangFin extends NaturalLanguage {
       : super(
           code: "fi",
           terminologicalCode: "fin",
-          family: LangFamily.uralic,
+          family: const Uralic(),
           name: "Finnish",
           nativeNames: const ["suomi", "suomen kieli"],
         );
@@ -492,7 +492,7 @@ class LangFij extends NaturalLanguage {
       : super(
           code: "fj",
           terminologicalCode: "fij",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Fijian",
           nativeNames: const ["vosa Vakaviti"],
         );
@@ -544,7 +544,7 @@ class LangGla extends NaturalLanguage {
       : super(
           code: "gd",
           terminologicalCode: "gla",
-          name: "Scottish Gaelic, Gaelic",
+          name: "(Scottish) Gaelic",
           nativeNames: const ["Gàidhlig"],
         );
 }
@@ -564,7 +564,7 @@ class LangGrn extends NaturalLanguage {
       : super(
           code: "gn",
           terminologicalCode: "grn",
-          family: LangFamily.tupian,
+          family: const Tupian(),
           name: "Guaraní",
           nativeNames: const ["Avañe'ẽ"],
         );
@@ -595,7 +595,7 @@ class LangHau extends NaturalLanguage {
       : super(
           code: "ha",
           terminologicalCode: "hau",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Hausa",
           nativeNames: const ["(Hausa) هَوُسَ"],
           isRightToLeft: true,
@@ -607,7 +607,7 @@ class LangHeb extends NaturalLanguage {
       : super(
           code: "he",
           terminologicalCode: "heb",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Hebrew (modern)",
           nativeNames: const ["עברית"],
           isRightToLeft: true,
@@ -629,7 +629,7 @@ class LangHmo extends NaturalLanguage {
       : super(
           code: "ho",
           terminologicalCode: "hmo",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Hiri Motu",
           nativeNames: const ["Hiri Motu"],
         );
@@ -650,8 +650,8 @@ class LangHat extends NaturalLanguage {
       : super(
           code: "ht",
           terminologicalCode: "hat",
-          family: LangFamily.creole,
-          name: "Haitian, Haitian Creole",
+          family: const Creole(),
+          name: "Haitian (Haitian Creole)",
           nativeNames: const ["Kreyòl ayisyen"],
         );
 }
@@ -661,7 +661,7 @@ class LangHun extends NaturalLanguage {
       : super(
           code: "hu",
           terminologicalCode: "hun",
-          family: LangFamily.uralic,
+          family: const Uralic(),
           name: "Hungarian",
           nativeNames: const ["magyar"],
         );
@@ -683,7 +683,7 @@ class LangHer extends NaturalLanguage {
       : super(
           code: "hz",
           terminologicalCode: "her",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Herero",
           nativeNames: const ["Otjiherero"],
         );
@@ -694,7 +694,7 @@ class LangIna extends NaturalLanguage {
       : super(
           code: "ia",
           terminologicalCode: "ina",
-          family: LangFamily.constructed,
+          family: const Constructed(),
           name: "Interlingua",
           nativeNames: const ["Interlingua"],
         );
@@ -705,7 +705,7 @@ class LangInd extends NaturalLanguage {
       : super(
           code: "id",
           terminologicalCode: "ind",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Indonesian",
           nativeNames: const ["Bahasa Indonesia"],
         );
@@ -716,7 +716,7 @@ class LangIle extends NaturalLanguage {
       : super(
           code: "ie",
           terminologicalCode: "ile",
-          family: LangFamily.constructed,
+          family: const Constructed(),
           name: "Interlingue",
           nativeNames: const ["Interlingue", "Occidental"],
         );
@@ -727,7 +727,7 @@ class LangIbo extends NaturalLanguage {
       : super(
           code: "ig",
           terminologicalCode: "ibo",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Igbo",
           nativeNames: const ["Asụsụ Igbo"],
         );
@@ -738,7 +738,7 @@ class LangIii extends NaturalLanguage {
       : super(
           code: "ii",
           terminologicalCode: "iii",
-          family: LangFamily.sinoTibetan,
+          family: const SinoTibetan(),
           name: "Nuosu",
           nativeNames: const ["ꆈꌠ꒿ Nuosuhxop"],
         );
@@ -749,7 +749,7 @@ class LangIpk extends NaturalLanguage {
       : super(
           code: "ik",
           terminologicalCode: "ipk",
-          family: LangFamily.eskimoAleut,
+          family: const EskimoAleut(),
           name: "Inupiaq",
           nativeNames: const ["Iñupiaq", "Iñupiatun"],
         );
@@ -760,7 +760,7 @@ class LangIdo extends NaturalLanguage {
       : super(
           code: "io",
           terminologicalCode: "ido",
-          family: LangFamily.constructed,
+          family: const Constructed(),
           name: "Ido",
           nativeNames: const ["Ido"],
         );
@@ -792,7 +792,7 @@ class LangIku extends NaturalLanguage {
       : super(
           code: "iu",
           terminologicalCode: "iku",
-          family: LangFamily.eskimoAleut,
+          family: const EskimoAleut(),
           name: "Inuktitut",
           nativeNames: const ["ᐃᓄᒃᑎᑐᑦ"],
         );
@@ -803,7 +803,7 @@ class LangJpn extends NaturalLanguage {
       : super(
           code: "ja",
           terminologicalCode: "jpn",
-          family: LangFamily.japonic,
+          family: const Japonic(),
           name: "Japanese",
           nativeNames: const ["日本語 (にほんご)"],
         );
@@ -814,7 +814,7 @@ class LangJav extends NaturalLanguage {
       : super(
           code: "jv",
           terminologicalCode: "jav",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Javanese",
           nativeNames: const ["ꦧꦱꦗꦮ", "Basa Jawa"],
         );
@@ -826,7 +826,7 @@ class LangKat extends NaturalLanguage {
           code: "ka",
           terminologicalCode: "kat",
           bibliographicCode: "geo",
-          family: LangFamily.southCaucasian,
+          family: const SouthCaucasian(),
           name: "Georgian",
           nativeNames: const ["ქართული"],
         );
@@ -837,7 +837,7 @@ class LangKon extends NaturalLanguage {
       : super(
           code: "kg",
           terminologicalCode: "kon",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Kongo",
           nativeNames: const ["Kikongo"],
         );
@@ -848,8 +848,8 @@ class LangKik extends NaturalLanguage {
       : super(
           code: "ki",
           terminologicalCode: "kik",
-          family: LangFamily.nigerCongo,
-          name: "Kikuyu, Gikuyu",
+          family: const NigerCongo(),
+          name: "Kikuyu (Gikuyu)",
           nativeNames: const ["Gĩkũyũ"],
         );
 }
@@ -859,8 +859,8 @@ class LangKua extends NaturalLanguage {
       : super(
           code: "kj",
           terminologicalCode: "kua",
-          family: LangFamily.nigerCongo,
-          name: "Kwanyama, Kuanyama",
+          family: const NigerCongo(),
+          name: "Kwanyama (Kuanyama)",
           nativeNames: const ["Kuanyama"],
         );
 }
@@ -870,7 +870,7 @@ class LangKaz extends NaturalLanguage {
       : super(
           code: "kk",
           terminologicalCode: "kaz",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Kazakh",
           nativeNames: const ["қазақ тілі"],
         );
@@ -881,8 +881,8 @@ class LangKal extends NaturalLanguage {
       : super(
           code: "kl",
           terminologicalCode: "kal",
-          family: LangFamily.eskimoAleut,
-          name: "Kalaallisut, Greenlandic",
+          family: const EskimoAleut(),
+          name: "Kalaallisut (Greenlandic)",
           nativeNames: const ["kalaallisut", "kalaallit oqaasii"],
         );
 }
@@ -892,7 +892,7 @@ class LangKin extends NaturalLanguage {
       : super(
           code: "rw",
           terminologicalCode: "kin",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Kinyarwanda",
           nativeNames: const ["Ikinyarwanda"],
         );
@@ -903,7 +903,7 @@ class LangKhm extends NaturalLanguage {
       : super(
           code: "km",
           terminologicalCode: "khm",
-          family: LangFamily.austroasiatic,
+          family: const Austroasiatic(),
           name: "Khmer",
           nativeNames: const ["ខ្មែរ", "ខេមរភាសា", "ភាសាខ្មែរ"],
         );
@@ -914,7 +914,7 @@ class LangKan extends NaturalLanguage {
       : super(
           code: "kn",
           terminologicalCode: "kan",
-          family: LangFamily.dravidian,
+          family: const Dravidian(),
           name: "Kannada",
           nativeNames: const ["ಕನ್ನಡ"],
         );
@@ -925,7 +925,7 @@ class LangKor extends NaturalLanguage {
       : super(
           code: "ko",
           terminologicalCode: "kor",
-          family: LangFamily.koreanic,
+          family: const Koreanic(),
           name: "Korean",
           nativeNames: const ["한국어"],
         );
@@ -936,7 +936,7 @@ class LangKau extends NaturalLanguage {
       : super(
           code: "kr",
           terminologicalCode: "kau",
-          family: LangFamily.niloSaharan,
+          family: const NiloSaharan(),
           name: "Kanuri",
           nativeNames: const ["Kanuri"],
         );
@@ -969,7 +969,7 @@ class LangKom extends NaturalLanguage {
       : super(
           code: "kv",
           terminologicalCode: "kom",
-          family: LangFamily.uralic,
+          family: const Uralic(),
           name: "Komi",
           nativeNames: const ["коми кыв"],
         );
@@ -980,7 +980,7 @@ class LangKir extends NaturalLanguage {
       : super(
           code: "ky",
           terminologicalCode: "kir",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Kyrgyz",
           nativeNames: const ["Кыргызча", "Кыргыз тили"],
         );
@@ -1001,7 +1001,7 @@ class LangLtz extends NaturalLanguage {
       : super(
           code: "lb",
           terminologicalCode: "ltz",
-          name: "Luxembourgish, Letzeburgesch",
+          name: "Luxembourgish (Letzeburgesch)",
           nativeNames: const ["Lëtzebuergesch"],
         );
 }
@@ -1011,7 +1011,7 @@ class LangLug extends NaturalLanguage {
       : super(
           code: "lg",
           terminologicalCode: "lug",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Ganda",
           nativeNames: const ["Luganda"],
         );
@@ -1022,7 +1022,7 @@ class LangLim extends NaturalLanguage {
       : super(
           code: "li",
           terminologicalCode: "lim",
-          name: "Limburgish, Limburgan, Limburger",
+          name: "Limburgish (Limburgan/Limburger)",
           nativeNames: const ["Limburgs"],
         );
 }
@@ -1032,7 +1032,7 @@ class LangLin extends NaturalLanguage {
       : super(
           code: "ln",
           terminologicalCode: "lin",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Lingala",
           nativeNames: const ["Lingála"],
         );
@@ -1043,7 +1043,7 @@ class LangLao extends NaturalLanguage {
       : super(
           code: "lo",
           terminologicalCode: "lao",
-          family: LangFamily.taiKadai,
+          family: const TaiKadai(),
           name: "Lao",
           nativeNames: const ["ພາສາລາວ"],
         );
@@ -1064,7 +1064,7 @@ class LangLub extends NaturalLanguage {
       : super(
           code: "lu",
           terminologicalCode: "lub",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Luba-Katanga",
           nativeNames: const ["Tshiluba"],
         );
@@ -1085,7 +1085,7 @@ class LangMlg extends NaturalLanguage {
       : super(
           code: "mg",
           terminologicalCode: "mlg",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Malagasy",
           nativeNames: const ["fiteny malagasy"],
         );
@@ -1096,7 +1096,7 @@ class LangMah extends NaturalLanguage {
       : super(
           code: "mh",
           terminologicalCode: "mah",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Marshallese",
           nativeNames: const ["Kajin M̧ajeļ"],
         );
@@ -1108,7 +1108,7 @@ class LangMri extends NaturalLanguage {
           code: "mi",
           terminologicalCode: "mri",
           bibliographicCode: "mao",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Māori",
           nativeNames: const ["te reo Māori"],
         );
@@ -1130,7 +1130,7 @@ class LangMal extends NaturalLanguage {
       : super(
           code: "ml",
           terminologicalCode: "mal",
-          family: LangFamily.dravidian,
+          family: const Dravidian(),
           name: "Malayalam",
           nativeNames: const ["മലയാളം"],
         );
@@ -1141,7 +1141,7 @@ class LangMon extends NaturalLanguage {
       : super(
           code: "mn",
           terminologicalCode: "mon",
-          family: LangFamily.mongolic,
+          family: const Mongolic(),
           name: "Mongolian",
           nativeNames: const ["Монгол хэл"],
         );
@@ -1163,7 +1163,7 @@ class LangMsa extends NaturalLanguage {
           code: "ms",
           terminologicalCode: "msa",
           bibliographicCode: "may",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Malay",
           nativeNames: const ["bahasa Melayu", "بهاس ملايو‎"],
         );
@@ -1174,7 +1174,7 @@ class LangMlt extends NaturalLanguage {
       : super(
           code: "mt",
           terminologicalCode: "mlt",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Maltese",
           nativeNames: const ["Malti"],
         );
@@ -1186,7 +1186,7 @@ class LangMya extends NaturalLanguage {
           code: "my",
           terminologicalCode: "mya",
           bibliographicCode: "bur",
-          family: LangFamily.sinoTibetan,
+          family: const SinoTibetan(),
           name: "Burmese",
           nativeNames: const ["ဗမာစာ"],
         );
@@ -1197,7 +1197,7 @@ class LangNau extends NaturalLanguage {
       : super(
           code: "na",
           terminologicalCode: "nau",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Nauruan",
           nativeNames: const ["Dorerin Naoero"],
         );
@@ -1218,7 +1218,7 @@ class LangNde extends NaturalLanguage {
       : super(
           code: "nd",
           terminologicalCode: "nde",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Northern Ndebele",
           nativeNames: const ["isiNdebele"],
         );
@@ -1239,7 +1239,7 @@ class LangNdo extends NaturalLanguage {
       : super(
           code: "ng",
           terminologicalCode: "ndo",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Ndonga",
           nativeNames: const ["Owambo"],
         );
@@ -1281,7 +1281,7 @@ class LangNbl extends NaturalLanguage {
       : super(
           code: "nr",
           terminologicalCode: "nbl",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Southern Ndebele",
           nativeNames: const ["isiNdebele"],
         );
@@ -1292,8 +1292,8 @@ class LangNav extends NaturalLanguage {
       : super(
           code: "nv",
           terminologicalCode: "nav",
-          family: LangFamily.deneYeniseian,
-          name: "Navajo, Navaho",
+          family: const DeneYeniseian(),
+          name: "Navajo (Navaho)",
           nativeNames: const ["Diné bizaad"],
         );
 }
@@ -1303,8 +1303,8 @@ class LangNya extends NaturalLanguage {
       : super(
           code: "ny",
           terminologicalCode: "nya",
-          family: LangFamily.nigerCongo,
-          name: "Chichewa, Chewa, Nyanja",
+          family: const NigerCongo(),
+          name: "Chichewa (Chewa/Nyanja)",
           nativeNames: const ["chiCheŵa", "chinyanja"],
         );
 }
@@ -1324,8 +1324,8 @@ class LangOji extends NaturalLanguage {
       : super(
           code: "oj",
           terminologicalCode: "oji",
-          family: LangFamily.algonquian,
-          name: "Ojibwe, Ojibwa",
+          family: const Algonquian(),
+          name: "Ojibwe (Ojibwa)",
           nativeNames: const ["ᐊᓂᔑᓈᐯᒧᐎᓐ"],
         );
 }
@@ -1335,7 +1335,7 @@ class LangOrm extends NaturalLanguage {
       : super(
           code: "om",
           terminologicalCode: "orm",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Oromo",
           nativeNames: const ["Afaan Oromoo"],
         );
@@ -1356,7 +1356,7 @@ class LangOss extends NaturalLanguage {
       : super(
           code: "os",
           terminologicalCode: "oss",
-          name: "Ossetian, Ossetic",
+          name: "Ossetian (Ossetic)",
           nativeNames: const ["ирон æвзаг"],
         );
 }
@@ -1396,7 +1396,7 @@ class LangPus extends NaturalLanguage {
       : super(
           code: "ps",
           terminologicalCode: "pus",
-          name: "Pashto, Pushto",
+          name: "Pashto (Pushto)",
           nativeNames: const ["پښتو"],
           isRightToLeft: true,
         );
@@ -1417,7 +1417,7 @@ class LangQue extends NaturalLanguage {
       : super(
           code: "qu",
           terminologicalCode: "que",
-          family: LangFamily.quechuan,
+          family: const Quechuan(),
           name: "Quechua",
           nativeNames: const ["Runa Simi", "Kichwa"],
         );
@@ -1438,7 +1438,7 @@ class LangRun extends NaturalLanguage {
       : super(
           code: "rn",
           terminologicalCode: "run",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Kirundi",
           nativeNames: const ["Ikirundi"],
         );
@@ -1501,7 +1501,7 @@ class LangSme extends NaturalLanguage {
       : super(
           code: "se",
           terminologicalCode: "sme",
-          family: LangFamily.uralic,
+          family: const Uralic(),
           name: "Northern Sami",
           nativeNames: const ["Davvisámegiella"],
         );
@@ -1512,7 +1512,7 @@ class LangSag extends NaturalLanguage {
       : super(
           code: "sg",
           terminologicalCode: "sag",
-          family: LangFamily.creole,
+          family: const Creole(),
           name: "Sango",
           nativeNames: const ["yângâ tî sängö"],
         );
@@ -1523,7 +1523,7 @@ class LangSin extends NaturalLanguage {
       : super(
           code: "si",
           terminologicalCode: "sin",
-          name: "Sinhalese, Sinhala",
+          name: "Sinhalese (Sinhala)",
           nativeNames: const ["සිංහල"],
         );
 }
@@ -1554,7 +1554,7 @@ class LangSmo extends NaturalLanguage {
       : super(
           code: "sm",
           terminologicalCode: "smo",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Samoan",
           nativeNames: const ["gagana fa'a Samoa"],
         );
@@ -1565,7 +1565,7 @@ class LangSna extends NaturalLanguage {
       : super(
           code: "sn",
           terminologicalCode: "sna",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Shona",
           nativeNames: const ["chiShona"],
         );
@@ -1576,7 +1576,7 @@ class LangSom extends NaturalLanguage {
       : super(
           code: "so",
           terminologicalCode: "som",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Somali",
           nativeNames: const ["Soomaaliga"],
         );
@@ -1618,7 +1618,7 @@ class LangSsw extends NaturalLanguage {
       : super(
           code: "ss",
           terminologicalCode: "ssw",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Swati",
           nativeNames: const ["SiSwati"],
         );
@@ -1629,7 +1629,7 @@ class LangSot extends NaturalLanguage {
       : super(
           code: "st",
           terminologicalCode: "sot",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Southern Sotho",
           nativeNames: const ["Sesotho"],
         );
@@ -1640,7 +1640,7 @@ class LangSun extends NaturalLanguage {
       : super(
           code: "su",
           terminologicalCode: "sun",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Sundanese",
           nativeNames: const ["Basa Sunda"],
         );
@@ -1661,7 +1661,7 @@ class LangSwa extends NaturalLanguage {
       : super(
           code: "sw",
           terminologicalCode: "swa",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Swahili",
           nativeNames: const ["Kiswahili"],
         );
@@ -1672,7 +1672,7 @@ class LangTam extends NaturalLanguage {
       : super(
           code: "ta",
           terminologicalCode: "tam",
-          family: LangFamily.dravidian,
+          family: const Dravidian(),
           name: "Tamil",
           nativeNames: const ["தமிழ்"],
         );
@@ -1683,7 +1683,7 @@ class LangTel extends NaturalLanguage {
       : super(
           code: "te",
           terminologicalCode: "tel",
-          family: LangFamily.dravidian,
+          family: const Dravidian(),
           name: "Telugu",
           nativeNames: const ["తెలుగు"],
         );
@@ -1695,7 +1695,7 @@ class LangTgk extends NaturalLanguage {
           code: "tg",
           terminologicalCode: "tgk",
           name: "Tajik",
-          nativeNames: const ["тоҷикӣ", "toçikī", "تاجیکی‎"],
+          nativeNames: const ["тоҷикӣ", "تاجیکی‎", "toçikī"],
         );
 }
 
@@ -1704,7 +1704,7 @@ class LangTha extends NaturalLanguage {
       : super(
           code: "th",
           terminologicalCode: "tha",
-          family: LangFamily.taiKadai,
+          family: const TaiKadai(),
           name: "Thai",
           nativeNames: const ["ไทย"],
         );
@@ -1715,7 +1715,7 @@ class LangTir extends NaturalLanguage {
       : super(
           code: "ti",
           terminologicalCode: "tir",
-          family: LangFamily.afroAsiatic,
+          family: const AfroAsiatic(),
           name: "Tigrinya",
           nativeNames: const ["ትግርኛ"],
         );
@@ -1726,7 +1726,7 @@ class LangTuk extends NaturalLanguage {
       : super(
           code: "tk",
           terminologicalCode: "tuk",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Turkmen",
           nativeNames: const ["Türkmen", "Түркмен"],
         );
@@ -1737,7 +1737,7 @@ class LangTgl extends NaturalLanguage {
       : super(
           code: "tl",
           terminologicalCode: "tgl",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Tagalog",
           nativeNames: const ["Wikang Tagalog"],
         );
@@ -1748,7 +1748,7 @@ class LangTsn extends NaturalLanguage {
       : super(
           code: "tn",
           terminologicalCode: "tsn",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Tswana",
           nativeNames: const ["Setswana"],
         );
@@ -1759,7 +1759,7 @@ class LangTon extends NaturalLanguage {
       : super(
           code: "to",
           terminologicalCode: "ton",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Tonga (Tonga Islands)",
           nativeNames: const ["faka Tonga"],
         );
@@ -1770,7 +1770,7 @@ class LangTur extends NaturalLanguage {
       : super(
           code: "tr",
           terminologicalCode: "tur",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Turkish",
           nativeNames: const ["Türkçe"],
         );
@@ -1781,7 +1781,7 @@ class LangTso extends NaturalLanguage {
       : super(
           code: "ts",
           terminologicalCode: "tso",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Tsonga",
           nativeNames: const ["Xitsonga"],
         );
@@ -1792,7 +1792,7 @@ class LangTat extends NaturalLanguage {
       : super(
           code: "tt",
           terminologicalCode: "tat",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Tatar",
           nativeNames: const ["татар теле", "tatar tele"],
         );
@@ -1803,7 +1803,7 @@ class LangTwi extends NaturalLanguage {
       : super(
           code: "tw",
           terminologicalCode: "twi",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Twi",
           nativeNames: const ["Twi"],
         );
@@ -1814,7 +1814,7 @@ class LangTah extends NaturalLanguage {
       : super(
           code: "ty",
           terminologicalCode: "tah",
-          family: LangFamily.austronesian,
+          family: const Austronesian(),
           name: "Tahitian",
           nativeNames: const ["Reo Tahiti"],
         );
@@ -1825,7 +1825,7 @@ class LangUig extends NaturalLanguage {
       : super(
           code: "ug",
           terminologicalCode: "uig",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Uyghur",
           nativeNames: const ["ئۇيغۇرچە‎", "Uyghurche"],
         );
@@ -1857,9 +1857,9 @@ class LangUzb extends NaturalLanguage {
       : super(
           code: "uz",
           terminologicalCode: "uzb",
-          family: LangFamily.turkic,
+          family: const Turkic(),
           name: "Uzbek",
-          nativeNames: const ["Oʻzbek", "Ўзбек", "أۇزبېك‎"],
+          nativeNames: const ["Ўзбек", "أۇزبېك‎", "Oʻzbek"],
         );
 }
 
@@ -1868,7 +1868,7 @@ class LangVen extends NaturalLanguage {
       : super(
           code: "ve",
           terminologicalCode: "ven",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Venda",
           nativeNames: const ["Tshivenḓa"],
         );
@@ -1879,7 +1879,7 @@ class LangVie extends NaturalLanguage {
       : super(
           code: "vi",
           terminologicalCode: "vie",
-          family: LangFamily.austroasiatic,
+          family: const Austroasiatic(),
           name: "Vietnamese",
           nativeNames: const ["Tiếng Việt"],
         );
@@ -1890,7 +1890,7 @@ class LangVol extends NaturalLanguage {
       : super(
           code: "vo",
           terminologicalCode: "vol",
-          family: LangFamily.constructed,
+          family: const Constructed(),
           name: "Volapük",
           nativeNames: const ["Volapük"],
         );
@@ -1911,7 +1911,7 @@ class LangWol extends NaturalLanguage {
       : super(
           code: "wo",
           terminologicalCode: "wol",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Wolof",
           nativeNames: const ["Wollof"],
         );
@@ -1922,7 +1922,7 @@ class LangXho extends NaturalLanguage {
       : super(
           code: "xh",
           terminologicalCode: "xho",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Xhosa",
           nativeNames: const ["isiXhosa"],
         );
@@ -1944,7 +1944,7 @@ class LangYor extends NaturalLanguage {
       : super(
           code: "yo",
           terminologicalCode: "yor",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Yoruba",
           nativeNames: const ["Yorùbá"],
         );
@@ -1955,8 +1955,8 @@ class LangZha extends NaturalLanguage {
       : super(
           code: "za",
           terminologicalCode: "zha",
-          family: LangFamily.taiKadai,
-          name: "Zhuang, Chuang",
+          family: const TaiKadai(),
+          name: "Zhuang (Chuang)",
           nativeNames: const ["Saɯ cueŋƅ", "Saw cuengh"],
         );
 }
@@ -1967,7 +1967,7 @@ class LangZho extends NaturalLanguage {
           code: "zh",
           terminologicalCode: "zho",
           bibliographicCode: "chi",
-          family: LangFamily.sinoTibetan,
+          family: const SinoTibetan(),
           name: "Chinese",
           nativeNames: const ["中文 (Zhōngwén)", "汉语", "漢語"],
         );
@@ -1978,7 +1978,7 @@ class LangZul extends NaturalLanguage {
       : super(
           code: "zu",
           terminologicalCode: "zul",
-          family: LangFamily.nigerCongo,
+          family: const NigerCongo(),
           name: "Zulu",
           nativeNames: const ["isiZulu"],
         );
