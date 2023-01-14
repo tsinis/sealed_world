@@ -1,0 +1,17 @@
+name: countries_dart
+description: A starting point for Dart libraries or applications.
+version: 0.0.1
+
+environment:
+  sdk: '>=3.0.0-75 <4.0.0'
+
+dependencies:
+  currencies_dart:
+    path: ../currencies_dart
+  languages_dart:
+    path: ../languages_dart
+
+dev_dependencies:
+  dart_code_metrics: ^5.4.0 # Flutter Favorite
+  lints: ^2.0.1 # From Google
+  test: ^1.22.1 # From Google
