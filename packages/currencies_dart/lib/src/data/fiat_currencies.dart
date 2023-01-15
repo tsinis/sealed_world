@@ -2381,6 +2381,20 @@ class FiatZar extends FiatCurrency {
         );
 }
 
+class FiatZwl extends FiatCurrency {
+  const FiatZwl()
+      : super(
+          code: "ZWL",
+          name: "Zimbabwean dollar",
+          symbol: r"Z$",
+          subunit: "Cent",
+          unitFirst: true,
+          decimalMark: ",",
+          thousandsSeparator: " ",
+          isoNumeric: "932",
+        );
+}
+
 // TODO: Remove one of two Zambian currencies.
 class FiatZmk extends FiatCurrency {
   const FiatZmk()
