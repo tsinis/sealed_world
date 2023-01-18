@@ -1,4 +1,4 @@
-// ignore_for_file: avoid-non-ascii-symbols, format-comment, TODO: adjust.
+// ignore_for_file: avoid-non-ascii-symbols
 
 import "package:currencies_dart/currencies_dart.dart";
 import "package:languages_dart/languages_dart.dart";
@@ -3243,7 +3243,7 @@ class CountryVnm extends WorldCountry {
         );
 }
 
-/// Since: https://en.wikipedia.org/wiki/Antarctic_Treaty_System there is no
+/// Since https://en.wikipedia.org/wiki/Antarctic_Treaty_System there is no
 /// official list of languages, English is used as an international
 /// communication language here.
 class CountryAta extends WorldCountry {
@@ -31984,12 +31984,13 @@ class CountryZwe extends WorldCountry {
           subregion: const SouthernAfrica(),
           languages: const [
             LangEng(),
-            // TODO: ALL // LangBwg(),
+            // TODO: Add those langs below, as soon as they get ISO 639-1 code.
+            // LangBwg(),
             // LangKck(),
             // LangKhi(),
             // LangNdc(),
             // LangToi(),
-            // LangZib(),
+            // LangZib(),.
             LangNde(),
             LangNya(),
             LangSna(),
@@ -32748,18 +32749,13 @@ class CountryTuv extends WorldCountry {
           codeNumeric: "798",
           code: "TUV",
           cioc: "TUV",
-          currencies: const [
-            FiatAud(),
-            // TODO: "TVD": {
-          ],
+          currencies: const [FiatAud()],
           idd: const Idd(root: "+6", suffixes: ["88"]),
           altSpellings: const ["TV"],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [
-            LangEng(),
-            // TODO: "tvl": "Tuvaluan"
-          ],
+          // TODO: LangTvl(), as soon as it gets ISO 639-1 code.
+          languages: const [LangEng()],
           translations: const [
             CountryName(
               language: LangAra(),
@@ -34749,10 +34745,6 @@ class CountryAfg extends WorldCountry {
           ),
           nativeNames: const [
             CountryName(
-              // TODO: "prs": {
-              //   official:"جمهوری اسلامی افغانستان",
-              //   common: "افغانستان"
-              // },
               language: LangPus(),
               official: "د افغانستان اسلامي جمهوریت",
               common: "افغانستان",
@@ -34773,10 +34765,8 @@ class CountryAfg extends WorldCountry {
           altSpellings: const ["AF", "Afġānistān"],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [
-            // TODO: Lang-prs(),
-            LangPus(), LangTuk(),
-          ],
+          // TODO: LangPrs(), as soon as it gets ISO 639-1 and 639-2 codes.
+          languages: const [LangPus(), LangTuk()],
           translations: const [
             CountryName(
               language: LangAra(),
@@ -35312,9 +35302,6 @@ class CountryTls extends WorldCountry {
               language: LangPor(),
               official: "República Democrática de Timor-Leste",
               common: "Timor-Leste",
-              // TODO: "tet": {
-              //   official:"Repúblika Demokrátika Timór-Leste",
-              //   common: "Timór-Leste"
             ),
           ],
           tld: const [".tl"],
@@ -35335,10 +35322,8 @@ class CountryTls extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [
-            LangPor(),
-            // TODO: "tet": "Tetum"
-          ],
+          // TODO: LangTet(), as soon as it gets ISO 639-1 and 639-2 codes.
+          languages: const [LangPor()],
           translations: const [
             CountryName(
               language: LangAra(),
@@ -35713,11 +35698,7 @@ class CountryNzl extends WorldCountry {
           altSpellings: const ["NZ", "Aotearoa"],
           continent: const Oceania(),
           subregion: const AustraliaAndNewZealand(),
-          languages: const [
-            LangEng(),
-            LangMri(),
-            // TODO: "nzs": "New Zealand Sign Language"
-          ],
+          languages: const [LangEng(), LangMri()],
           translations: const [
             CountryName(
               language: LangAra(),
@@ -37212,10 +37193,6 @@ class CountryMar extends WorldCountry {
               language: LangAra(),
               official: "المملكة المغربية",
               common: "المغرب",
-              // TODO: },
-              // "ber": {
-              //   official:"ⵜⴰⴳⵍⴷⵉⵜ ⵏ ⵍⵎⵖⵔⵉⴱ",
-              //   common: "ⵍⵎⴰⵖⵔⵉⴱ"
             ),
           ],
           tld: const [".ma", "المغرب."],
@@ -37232,10 +37209,8 @@ class CountryMar extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const NorthernAfrica(),
-          languages: const [
-            LangAra(),
-            // TODO: "ber": "Berber"
-          ],
+          // TODO: LangBer() as soon as it gets ISO 639-1 code.
+          languages: const [LangAra()],
           translations: const [
             CountryName(
               language: LangAra(),
@@ -37397,10 +37372,6 @@ class CountryCok extends WorldCountry {
               language: LangEng(),
               official: "Cook Islands",
               common: "Cook Islands",
-              // TODO: },
-              // "rar": {
-              //   official:"Kūki 'Āirani",
-              //   common: "Kūki 'Āirani"
             ),
           ],
           tld: const [".ck"],
@@ -37410,18 +37381,13 @@ class CountryCok extends WorldCountry {
           cioc: "COK",
           independent: false,
           unMember: false,
-          currencies: const [
-            FiatNzd(),
-            // TODO: FiatCkd()],
-          ],
+          currencies: const [FiatNzd()],
           idd: const Idd(root: "+6", suffixes: ["82"]),
           altSpellings: const ["CK", "Kūki 'Āirani"],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [
-            LangEng(),
-            // TODO: "rar": "Cook Islands Māori"
-          ],
+          // TODO: LangRar() as soon as it gets ISO 639-1 code.
+          languages: const [LangEng()],
           translations: const [
             CountryName(
               language: LangAra(),
@@ -38723,10 +38689,6 @@ class CountryCod extends WorldCountry {
               language: LangLin(),
               official: "Republiki ya Kongó Demokratiki",
               common: "Republiki ya Kongó Demokratiki",
-              // },
-              // TODO "lua": {
-              //   official:"Ditunga dia Kongu wa Mungalaata",
-              //   common: "Ditunga dia Kongu wa Mungalaata"
             ),
             CountryName(
               language: LangSwa(),
@@ -38750,12 +38712,12 @@ class CountryCod extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
+          // TODO: LangLua() as soon as it gets ISO 639-1 code.
           languages: const [
             LangFra(),
             LangKon(),
             LangLin(),
             LangSwa(),
-            // TODO: "lua": "Tshiluba",
           ],
           translations: const [
             CountryName(
@@ -39619,7 +39581,7 @@ class CountrySjm extends WorldCountry {
             ),
           ],
           latLng: const [78, 20],
-          area: 0, // TODO: Check it.
+          area: 377,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -40380,7 +40342,7 @@ class CountryAbw extends WorldCountry {
           ),
           population: 106766,
           fifa: "ARU",
-          car: const Car(signs: []), // TODO: Fix it.
+          car: const Car(signs: ["A"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Oranjestad"],
@@ -40633,14 +40595,12 @@ class CountryNam extends WorldCountry {
           altSpellings: const ["NA", "Namibië", "Republic of Namibia"],
           continent: const Africa(),
           subregion: const SouthernAfrica(),
+          // TODO: LangHgm, LangLoz & LangKwn as soon as they get ISO 639-1.
           languages: const [
             LangAfr(),
             LangDeu(),
             LangEng(),
             LangHer(),
-            // TODO: ALL LangHgm(),
-            // LangKwn(),
-            // LangLoz(),
             LangNdo(),
             LangTsn(),
           ],
@@ -40816,11 +40776,6 @@ class CountryFji extends WorldCountry {
               official: "Matanitu Tugalala o Viti",
               common: "Viti",
             ),
-            // TODO:      CountryName(language: const LangHif(),
-            //       official:"रिपब्लिक ऑफ फीजी",
-            //       common: "फिजी"
-
-            // )],
           ],
           tld: const [".fj"],
           codeShort: "FJ",
@@ -40838,11 +40793,8 @@ class CountryFji extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Melanesia(),
-          languages: const [
-            LangEng(),
-            LangFij(),
-            // TODO: "hif": "Fiji Hindi"
-          ],
+          // TODO: LangHif(), as soon as it gets ISO 639-1 code.
+          languages: const [LangEng(), LangFij()],
           translations: const [
             CountryName(
               language: LangAra(),
@@ -41574,9 +41526,8 @@ class CountryHmd extends WorldCountry {
           codeNumeric: "334",
           code: "HMD",
           independent: false,
-
           unMember: false,
-          // TODO: idd missing,
+          idd: const Idd(root: "+6", suffixes: ["72"]),
           altSpellings: const ["HM", "Heard Island and McDonald Islands"],
           continent: const Antarctica(),
           languages: const [LangEng()],
@@ -41704,7 +41655,6 @@ class CountryHmd extends WorldCountry {
             ),
           ],
           latLng: const [53.0818, 73.5042],
-
           area: 412,
           demonyms: const [
             Demonyms(
@@ -45794,7 +45744,7 @@ class CountryChe extends WorldCountry {
               common: "Suisse",
             ),
             CountryName(
-              language: LangDeu(), // TODO gsw dialekt.
+              language: LangDeu(),
               official: "Schweizerische Eidgenossenschaft",
               common: "Schweiz",
             ),
@@ -46398,10 +46348,7 @@ class CountryFro extends WorldCountry {
           code: "FRO",
           independent: false,
           unMember: false,
-          currencies: const [
-            FiatDkk(),
-            // TODO: FiatFok()
-          ],
+          currencies: const [FiatDkk()],
           idd: const Idd(root: "+2", suffixes: ["98"]),
           altSpellings: const ["FO", "Føroyar", "Færøerne"],
           continent: const Europe(),

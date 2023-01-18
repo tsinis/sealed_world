@@ -1983,3 +1983,44 @@ class LangZul extends NaturalLanguage {
           nativeNames: const ["isiZulu"],
         );
 }
+
+
+// TODO: Consider add those langs without ISO 639-1 codes:
+// LangBwg(),
+// LangLoz(),
+// LangKwn(),
+// LangKck(),
+// LangKhi(),
+// LangNdc(),
+// LangToi(),
+// LangZib(),
+// LangTkl(),
+// LangPau(),
+// LangNso(),
+// LangSmi(),
+// LangPih(),
+// LangCal(),
+// LangArc(),
+// LangPap(),
+// LangPap(),
+// LangBzj(),
+// LangJam(),
+// LangTpi(),
+// LangPov(),
+// LangNiu(),
+// LangCrs(),
+// LangBer(),
+// LangMey(),
+// LangGil(),
+// LangNrf(),
+// LangNrf(),
+// LangZdj(),
+// LangTvl(),
+// LangPrs(),
+// LangTet(),
+// LangBer()
+// LangRar()
+// LangLua()
+// LangPap(),
+// LangHgm(),
+// LangHif().
