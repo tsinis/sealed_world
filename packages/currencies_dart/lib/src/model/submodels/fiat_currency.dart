@@ -88,7 +88,6 @@ class FiatCurrency extends Currency {
     FiatBtn(),
     FiatBwp(),
     FiatByn(),
-    FiatByr(),
     FiatBzd(),
     FiatCad(),
     FiatCdf(),
@@ -234,7 +233,6 @@ class FiatCurrency extends Currency {
     FiatXts(),
     FiatYer(),
     FiatZar(),
-    FiatZmk(),
     FiatZmw(),
   ];
 }

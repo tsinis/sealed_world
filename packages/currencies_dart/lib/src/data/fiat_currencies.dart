@@ -330,7 +330,6 @@ class FiatBwp extends FiatCurrency {
         );
 }
 
-// TODO: Remove one of two Belarusian currencies.
 class FiatByn extends FiatCurrency {
   const FiatByn()
       : super(
@@ -343,24 +342,6 @@ class FiatByn extends FiatCurrency {
           decimalMark: ",",
           thousandsSeparator: " ",
           isoNumeric: "933",
-        );
-}
-
-class FiatByr extends FiatCurrency {
-  const FiatByr()
-      : super(
-          priority: 50,
-          code: "BYR",
-          name: "Belarusian Ruble",
-          symbol: "Br",
-          disambiguateSymbol: "BYR",
-          alternateSymbols: const ["бел. руб.", "б.р.", "руб.", "р."],
-          subunit: null,
-          subunitToUnit: 1,
-          decimalMark: ",",
-          thousandsSeparator: " ",
-          isoNumeric: "974",
-          smallestDenomination: 100,
         );
 }
 
@@ -2392,20 +2373,6 @@ class FiatZwl extends FiatCurrency {
           decimalMark: ",",
           thousandsSeparator: " ",
           isoNumeric: "932",
-        );
-}
-
-// TODO: Remove one of two Zambian currencies.
-class FiatZmk extends FiatCurrency {
-  const FiatZmk()
-      : super(
-          code: "ZMK",
-          name: "Zambian Kwacha (Old)",
-          symbol: "ZK",
-          disambiguateSymbol: "ZMK",
-          subunit: "Ngwee",
-          isoNumeric: "894",
-          smallestDenomination: 5,
         );
 }
 
