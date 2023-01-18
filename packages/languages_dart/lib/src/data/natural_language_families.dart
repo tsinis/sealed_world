@@ -10,7 +10,6 @@ class Algonquian extends NaturalLanguageFamily {
 }
 
 class Austroasiatic extends NaturalLanguageFamily {
-  // TODO: Check naming.
   const Austroasiatic() : super(name: "Austroasiatic");
 }
 

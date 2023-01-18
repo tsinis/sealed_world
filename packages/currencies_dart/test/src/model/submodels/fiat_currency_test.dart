@@ -1,7 +1,7 @@
 import "package:currencies_dart/src/model/currency.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, TODO: disable in global analysis options.
+// ignore: long-method, it's a test.
 void main() => group("$FiatCurrency", () {
       final value = FiatCurrency.list.last;
       final array = {value, FiatCurrency.list.first};
