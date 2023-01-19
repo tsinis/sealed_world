@@ -1,7 +1,7 @@
 import "package:countries_dart/src/model/country/country.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, TODO: disable in global analysis options.
+// ignore: long-method, it's a test.
 void main() => group("$WorldCountry", () {
       final value = WorldCountry.list.last;
       final array = {value, WorldCountry.list.first};
@@ -55,7 +55,7 @@ void main() => group("$WorldCountry", () {
               expect(element.idd, isNull);
             }
             if (element.currencies != null) {
-              // Fix: expect(element.currencies?.isNotEmpty, isTrue); // TODO.
+              expect(element.currencies?.isNotEmpty, isTrue);
             } else {
               expect(element.currencies, isNull);
             }

@@ -11,7 +11,7 @@ import "../model/country/submodels/demonyms.dart";
 import "../model/country/submodels/gini.dart";
 import "../model/country/submodels/idd.dart";
 import "../model/country/submodels/maps.dart";
-import "geo/continent_parts.dart";
+import "geo/continental_sections.dart";
 import "geo/continents.dart";
 
 // ignore: prefer-match-file-name, not needed in data file.
