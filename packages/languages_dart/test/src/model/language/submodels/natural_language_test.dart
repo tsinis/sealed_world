@@ -1,7 +1,7 @@
 import "package:languages_dart/src/model/language/language.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, TODO: disable in global analysis options.
+// ignore: long-method, it's a test.
 void main() => group("$NaturalLanguage", () {
       final value = NaturalLanguage.list.last;
       final array = {value, NaturalLanguage.list.first};

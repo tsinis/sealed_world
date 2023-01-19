@@ -1,5 +1,4 @@
 name: currencies_dart
-# provide description of this package:
 description: Provides data for world currencies in the form of sealed classes.
 version: 0.0.1
 
