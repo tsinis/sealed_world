@@ -253,6 +253,7 @@ class FiatCurrency extends Currency {
     FiatXts(),
     FiatYer(),
     FiatZar(),
+    FiatZwl(),
     FiatZmw(),
   ];
 }
