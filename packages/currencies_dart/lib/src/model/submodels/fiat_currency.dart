@@ -14,7 +14,7 @@ class FiatCurrency extends Currency {
     this.subunitToUnit = 100,
     this.unitFirst = false,
     super.symbol,
-    super.decimalMark = ".",
+    super.decimalMark = dot,
     super.thousandsSeparator = ",",
   });
 
@@ -35,6 +35,8 @@ class FiatCurrency extends Currency {
   final String? subunit;
   final int subunitToUnit;
   final bool unitFirst;
+
+  static const dot = ".";
 
   @override
   String toString({bool short = true}) => short
@@ -60,8 +62,26 @@ class FiatCurrency extends Currency {
 
   String get unit => symbol ?? code;
 
-  // TODO: Extend for decimalMark and thousandsSeparator.
-  String format(num value) => unitFirst ? "$unit $value" : "$value $unit";
+  String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
+
+  String format(num value) {
+    final stringValue = value.toString();
+    if (stringValue.contains(dot)) {
+      final splitValue = stringValue.split(dot);
+      final integer = splitValue.first;
+      final decimals = splitValue.last;
+      final formattedInt = _formatThousands(integer);
+
+      return addUnit(formattedInt + decimalMark + decimals);
+    }
+
+    return addUnit(_formatThousands(stringValue));
+  }
+
+  String _formatThousands(String value) => value.replaceAllMapped(
+        RegExp(r"(\d)(?=(\d{3})+(?!\d))"),
+        (match) => "${match[1]}$thousandsSeparator",
+      );
 
   static const list = [
     FiatAed(),

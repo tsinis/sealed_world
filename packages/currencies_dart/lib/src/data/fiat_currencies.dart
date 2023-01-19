@@ -403,7 +403,7 @@ class FiatChf extends FiatCurrency {
         );
 
   @override
-  String format(num value) => "$unit$value";
+  String addUnit(String value) => "$unit$value";
 }
 
 class FiatClf extends FiatCurrency {
