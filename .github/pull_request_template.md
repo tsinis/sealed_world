@@ -1,14 +1,13 @@
 <!--
   Thanks for contributing!
 
-  Provide a description of your changes below and a general summary in the title.
+  Please describe your changes below and a general summary in the title.
 
 -->
 
 ## Description
 
-<!--- Describe your changes in detail -->
-PR is related to the issue:
+<!--- Please describe your changes in detail and link related issue(s) -->
 
 ## Type of Change
 
@@ -30,7 +29,7 @@ Please look at the following checklist to ensure that your PR can be accepted qu
 
 <!--- Put an `x` in all the boxes that apply: -->
 
-- [ ] Data are coming from open-sources resources with proper License (if presented).
-- [ ] New code is documented and data source is referenced (if presented).
+- [ ] Data come from open-source resources with proper Licenses (if presented).
+- [ ] New code is documented and the data source is referenced (if presented).
 - [ ] Existing tests are up to date with these changes.
 - [ ] New code is fully tested (if presented).
