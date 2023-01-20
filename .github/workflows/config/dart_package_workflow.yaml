@@ -1,0 +1,116 @@
+name: Dart Package Workflow
+
+on:
+  workflow_call:
+
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
+    inputs:
+      package_name:
+        required: true
+        type: string
+
+      analyze_directories:
+        required: false
+        type: string
+        default: "lib test"
+      coverage_excludes:
+        required: false
+        type: string
+        default: "**/*.g.dart **/*.gen.dart **/data/*.dart"
+      dart_sdk:
+        required: false
+        type: string
+        default: "dev"
+      is_pull_request:
+        required: false
+        type: boolean
+        default: github.event_name == 'pull_request'
+      min_coverage:
+        required: false
+        type: number
+        default: 95
+      platform:
+        required: false
+        type: string
+        default: "vm"
+      report_on:
+        required: false
+        type: string
+        default: "lib"
+      runs_on:
+        required: false
+        type: string
+        default: "ubuntu-latest"
+
+jobs:
+  verify-dart-package:
+    name: ✅ Verify Dart ${{ inputs.package_name }} Package
+    defaults:
+      run:
+        working-directory: packages/${{ inputs.package_name }}
+
+    runs-on: ${{ inputs.runs_on }}
+    timeout-minutes: 10
+
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v3
+
+      - name: 🎯 Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ inputs.dart_sdk }}
+
+      - name: 📦 Install Dependencies
+        run: dart pub get
+
+      # TODO: No support for sealed classes in formatter now.
+      # - name: ✨ Check Formatting
+      #   if: ${{ inputs.is_pull_request }}
+      #   run: dart format --set-exit-if-changed .
+
+      - name: 🕵️ Analyze Code
+        uses: invertase/github-action-dart-analyzer@v1
+        if: ${{ inputs.is_pull_request }}
+        with:
+          fatal-warnings: true
+          fatal-infos: true
+
+      - name: 🔎 Dart Code Metrics
+        uses: dart-code-checker/dart-code-metrics-action@v3
+        if: ${{ inputs.is_pull_request }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          folders: ${{ inputs.analyze_directories }}
+          pull_request_comment: true
+          check_unused_files: true
+          fatal_performance: true
+          fatal_warnings: true
+          fatal_style: true
+
+      - name: 🧪 Run Tests
+        run: |
+          dart pub global activate coverage 1.6.2
+          dart --enable-experiment=sealed-class test --coverage=coverage --platform=${{ inputs.platform }}
+          dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=${{ inputs.report_on }}
+
+      - name: 📊 Check Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
+        if: ${{ inputs.is_pull_request }}
+        with:
+          path: packages/${{ inputs.package_name }}/coverage/lcov.info
+          exclude: ${{ inputs.coverage_excludes }}
+          min_coverage: ${{ inputs.min_coverage }}
+
+      - name: 💯 Upload Coverage
+        uses: codecov/codecov-action@v3
+        if: ${{ !inputs.is_pull_request }}
+        with:
+          flags: ${{ inputs.package_name }}
+          name: ${{ inputs.package_name }}
+          token: ${{ secrets.CODECOV_TOKEN }}

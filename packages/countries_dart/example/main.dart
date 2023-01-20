@@ -5,6 +5,5 @@ void main() {
   final europeanCountries = WorldCountry.list.where(
     (country) => country.continent is Europe,
   );
-
-  europeanCountries.forEach(print);
+  print(europeanCountries); // Prints a list of European countries.
 }

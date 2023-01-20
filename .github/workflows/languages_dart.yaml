@@ -1,14 +1,14 @@
-name: currencies_dart
+name: languages_dart
 
 on:
   # push: # TODO: After publishing as open source.
   pull_request:
     paths:
-      - "packages/currencies_dart/**"
-      - ".github/workflows/currencies_dart.yaml"
+      - "packages/languages_dart/**"
+      - ".github/workflows/languages_dart.yaml"
 
 jobs:
   verify-currencies-dart:
     uses: ./.github/workflows/config/dart_package_workflow.yaml
     with:
-      package_name: currencies_dart
+      package_name: languages_dart

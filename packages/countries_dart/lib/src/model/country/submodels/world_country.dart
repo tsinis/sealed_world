@@ -36,11 +36,13 @@ class WorldCountry extends Country {
     this.unMember = true,
   });
 
-  factory WorldCountry.fromCode(String code) =>
-      list.firstWhere((country) => country.code == code.toUpperCase());
+  factory WorldCountry.fromCode(String code) => list.firstWhere(
+        (country) => country.code == code.toUpperCase(),
+      );
 
-  factory WorldCountry.fromCodeShort(String codeShort) => list
-      .firstWhere((country) => country.codeShort == codeShort.toUpperCase());
+  factory WorldCountry.fromCodeShort(String codeShort) => list.firstWhere(
+        (country) => country.codeShort == codeShort.toUpperCase(),
+      );
 
   final List<CountryName> nativeNames;
   final List<String> tld;
@@ -79,11 +81,8 @@ class WorldCountry extends Country {
       ? super.toString()
       : """WorldCountry(name: $name, nativeNames: $nativeNames  tld: $tld, codeShort: $codeShort, codeNumeric: $codeNumeric, code: $code, cioc: $cioc, independent: $independent, unMember: $unMember, currencies: $currencies, idd: $idd, altSpellings: $altSpellings, continent: $continent, subregion: $subregion, languages: $languages, translations: $translations, latLng: $latLng, landlocked: $landlocked, bordersCodes: $bordersCodes, area: $area, demonyms: $demonyms, emoji: $emoji, maps: $maps, population: $population, gini: $gini, fifa: $fifa, car: $car, timezones: $timezones, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: $capitalInfo, postalCode: $postalCode)""";
 
-  bool get isOfficiallyAssigned =>
-      codeShort.isNotEmpty &&
-      code.isNotEmpty &&
-      codeNumeric.isNotEmpty &&
-      tld.isNotEmpty;
+  // ignore: lines_longer_than_80_chars, might be shorter in the future.
+  bool get isOfficiallyAssigned => codeShort.isNotEmpty && code.isNotEmpty && codeNumeric.isNotEmpty && tld.isNotEmpty;
 
   static WorldCountry? maybeFromValue<T extends Object>(
     T value, {
@@ -101,11 +100,14 @@ class WorldCountry extends Country {
     return null;
   }
 
-  List<WorldCountry>? get borders => bordersCodes != null
-      ? List.unmodifiable(
-          bordersCodes!.map<WorldCountry>(WorldCountry.fromCode),
-        )
-      : null;
+  List<WorldCountry>? get borders {
+    final codes = bordersCodes;
+    if (codes == null) {
+      return null;
+    }
+
+    return List.unmodifiable(codes.map<WorldCountry>(WorldCountry.fromCode));
+  }
 
   static const list = [
     CountryCpv(),

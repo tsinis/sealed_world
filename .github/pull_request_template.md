@@ -8,6 +8,7 @@
 ## Description
 
 <!--- Describe your changes in detail -->
+PR is related to the issue:
 
 ## Type of Change
 
@@ -32,4 +33,4 @@ Please look at the following checklist to ensure that your PR can be accepted qu
 - [ ] Data are coming from open-sources resources with proper License (if presented).
 - [ ] New code is documented and data source is referenced (if presented).
 - [ ] Existing tests are up to date with these changes.
-- [ ] New code is tested (if presented).
+- [ ] New code is fully tested (if presented).

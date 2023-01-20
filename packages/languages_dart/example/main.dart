@@ -6,6 +6,5 @@ void main() {
   final indoEuropeanLanguages = NaturalLanguage.list.where(
     (language) => language.family is IndoEuropean,
   );
-
-  indoEuropeanLanguages.forEach(print);
+  print(indoEuropeanLanguages); // Prints a list of Indo-European languages.
 }
