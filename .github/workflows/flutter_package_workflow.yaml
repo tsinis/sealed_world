@@ -9,7 +9,7 @@ on:
 
 jobs:
   verify-flutter-package:
-    name: ✅ Verify Flutter ${{ inputs.package_name }} Package
+    name: ☑️ Verify ${{ inputs.package_name }} Package (Flutter)
     defaults:
       run:
         working-directory: packages/${{ inputs.package_name }}

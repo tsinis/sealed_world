@@ -9,7 +9,7 @@ on:
 
 jobs:
   verify-dart-package:
-    name: ✅ Verify Dart ${{ inputs.package_name }} Package
+    name: ☑️ Verify ${{ inputs.package_name }} Package (Dart)
     defaults:
       run:
         working-directory: packages/${{ inputs.package_name }}
@@ -39,9 +39,8 @@ jobs:
         if: github.event_name == 'pull_request'
         with:
           working-directory: packages/${{ inputs.package_name }}
-          # TODO: Add these back when package is open sourced.
-          # fatal-warnings: true
-          # fatal-infos: true
+          fatal-warnings: true
+          fatal-infos: true
 
       - name: 🔎 Dart Code Metrics
         uses: dart-code-checker/dart-code-metrics-action@v3
