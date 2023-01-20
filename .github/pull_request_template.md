@@ -13,8 +13,6 @@
 
 <!--- Please put an `x` in all the boxes that apply: -->
 
-<!--Checkmate-->
-
 - [ ] ✨ New feature (non-breaking change which adds functionality)
 - [ ] 🛠️ Bug fix (non-breaking change which fixes an issue)
 - [ ] ❌ Breaking change (fix or feature that would cause existing functionality to change)
@@ -30,8 +28,6 @@
 Please look at the following checklist to ensure that your PR can be accepted quickly:
 
 <!--- Please put an `x` in all the boxes that apply: -->
-
-<!--Checkmate-->
 
 - [ ] Data come from open-source resources with proper Licenses (if presented).
 - [ ] New code is documented and the data source is referenced (if presented).

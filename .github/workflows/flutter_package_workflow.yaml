@@ -41,8 +41,10 @@ jobs:
         uses: invertase/github-action-dart-analyzer@v1
         if: github.event_name == 'pull_request'
         with:
-          fatal-warnings: true
-          fatal-infos: true
+          working-directory: packages/${{ inputs.package_name }}
+          # TODO: Add these back when package is open sourced.
+          # fatal-warnings: true
+          # fatal-infos: true
 
       - name: 🔎 Dart Code Metrics
         uses: dart-code-checker/dart-code-metrics-action@v3

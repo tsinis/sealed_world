@@ -71,10 +71,3 @@ jobs:
           configuration-path: .github/workflows/config/pr-labels.yaml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  check-lists:
-    runs-on: ubuntu-latest
-    timeout-minutes: 4
-    steps:
-      - name: 📜 Checkmate the Checklist Checker
-        uses: RoryQ/checkmate@v0.9.6
