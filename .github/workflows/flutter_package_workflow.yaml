@@ -1,46 +1,16 @@
 name: flutter_package_workflow
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
   workflow_call:
-
     inputs:
       package_name:
         required: true
         type: string
 
-      coverage_excludes:
-        required: false
-        type: string
-        default: "**/*.g.dart **/*.gen.dart **/*.freezed.dart"
-      flutter_channel:
-        required: false
-        type: string
-        default: "beta"
-      flutter_version:
-        required: false
-        type: string
-        default: ""
       is_pull_request:
         required: false
         type: boolean
         default: github.event_name == 'pull_request'
-      min_coverage:
-        required: false
-        type: number
-        default: 95
-      test_optimization:
-        required: false
-        type: boolean
-        default: true
-      test_recursion:
-        required: false
-        type: boolean
-        default: false
 
 jobs:
   verify-flutter-package:
@@ -60,8 +30,8 @@ jobs:
         uses: subosito/flutter-action@v2.8.0
         with:
           cache: true
-          channel: ${{ inputs.flutter_channel }}
-          flutter-version: ${{ inputs.flutter_version }}
+          flutter-version: 3.7
+          channel: "any"
           cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
 
       - name: 📦 Install Dependencies
@@ -99,8 +69,8 @@ jobs:
         if: ${{ inputs.is_pull_request }}
         with:
           path: packages/${{ inputs.package_name }}/coverage/lcov.info
-          exclude: ${{ inputs.coverage_excludes }}
-          min_coverage: ${{ inputs.min_coverage }}
+          exclude: "**/*.g.dart **/*.gen.dart **/*.freezed.dart"
+          min_coverage: 95
 
       - name: 💯 Upload Coverage
         uses: codecov/codecov-action@v3

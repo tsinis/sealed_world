@@ -1,45 +1,16 @@
 name: dart_package_workflow
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
   workflow_call:
     inputs:
       package_name:
         required: true
         type: string
 
-      analyze_directories:
-        required: false
-        type: string
-        default: "lib test"
-      coverage_excludes:
-        required: false
-        type: string
-        default: "**/*.g.dart **/*.gen.dart **/data/*.dart"
-      dart_sdk:
-        required: false
-        type: string
-        default: "dev"
       is_pull_request:
         required: false
         type: boolean
         default: github.event_name == 'pull_request'
-      min_coverage:
-        required: false
-        type: number
-        default: 95
-      platform:
-        required: false
-        type: string
-        default: "vm"
-      report_on:
-        required: false
-        type: string
-        default: "lib"
 
 jobs:
   verify-dart-package:
@@ -58,7 +29,7 @@ jobs:
       - name: 🎯 Setup Dart
         uses: dart-lang/setup-dart@v1
         with:
-          sdk: ${{ inputs.dart_sdk }}
+          sdk: "dev"
 
       - name: 📦 Install Dependencies
         run: dart pub get
@@ -80,7 +51,7 @@ jobs:
         if: ${{ inputs.is_pull_request }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          folders: ${{ inputs.analyze_directories }}
+          folders: "lib test"
           pull_request_comment: true
           check_unused_files: true
           fatal_performance: true
@@ -90,16 +61,16 @@ jobs:
       - name: 🧪 Run Tests
         run: |
           dart pub global activate coverage 1.6.2
-          dart --enable-experiment=sealed-class test --coverage=coverage --platform=${{ inputs.platform }}
-          dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=${{ inputs.report_on }}
+          dart --enable-experiment=sealed-class test --coverage=coverage
+          dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=lib
 
       - name: 📊 Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
         if: ${{ inputs.is_pull_request }}
         with:
           path: packages/${{ inputs.package_name }}/coverage/lcov.info
-          exclude: ${{ inputs.coverage_excludes }}
-          min_coverage: ${{ inputs.min_coverage }}
+          exclude: "**/*.g.dart **/*.gen.dart **/data/*.dart"
+          min_coverage: 95
 
       - name: 💯 Upload Coverage
         uses: codecov/codecov-action@v3

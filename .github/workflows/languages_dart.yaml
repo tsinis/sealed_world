@@ -3,6 +3,7 @@ name: languages_dart
 on:
   # push: # TODO: After publishing as open source.
   pull_request:
+    branches: [main]
     paths:
       - "packages/languages_dart/**"
       - ".github/workflows/languages_dart.yaml"

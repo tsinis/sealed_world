@@ -3,6 +3,7 @@ name: countries_flutter
 on:
   # push: # TODO: After publishing as open source.
   pull_request:
+    branches: [main]
     paths:
       - "packages/countries_flutter/**"
       - ".github/workflows/countries_flutter.yaml"

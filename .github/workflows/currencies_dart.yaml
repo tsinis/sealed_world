@@ -3,6 +3,7 @@ name: currencies_dart
 on:
   # push: # TODO: After publishing as open source.
   pull_request:
+    branches: [main]
     paths:
       - "packages/currencies_dart/**"
       - ".github/workflows/currencies_dart.yaml"
