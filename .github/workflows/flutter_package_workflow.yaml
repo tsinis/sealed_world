@@ -34,19 +34,19 @@ jobs:
 
       # TODO: No support for sealed classes in formatter now.
       # - name: ✨ Check Formatting
-      #   if: ${{ github.event_name == "pull_request" }}
+      #   if: github.event_name == 'pull_request'
       #   run: flutter format --set-exit-if-changed .
 
       - name: 🕵️ Analyze Code
         uses: invertase/github-action-dart-analyzer@v1
-        if: ${{ github.event_name == "pull_request" }}
+        if: github.event_name == 'pull_request'
         with:
           fatal-warnings: true
           fatal-infos: true
 
       - name: 🔎 Dart Code Metrics
         uses: dart-code-checker/dart-code-metrics-action@v3
-        if: ${{ github.event_name == "pull_request" }}
+        if: github.event_name == 'pull_request'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           folders: "lib, test"
@@ -61,7 +61,7 @@ jobs:
 
       - name: 📊 Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
-        if: ${{ github.event_name == "pull_request" }}
+        if: github.event_name == 'pull_request'
         with:
           path: packages/${{ inputs.package_name }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.gen.dart **/*.freezed.dart"
@@ -69,7 +69,7 @@ jobs:
 
       - name: 💯 Upload Coverage
         uses: codecov/codecov-action@v3
-        if: ${{ !inputs.is_pull_request }}
+        if: github.event_name != 'pull_request'
         with:
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
