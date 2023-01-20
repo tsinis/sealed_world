@@ -1,7 +1,7 @@
 name: countries_dart
 
 on:
-  # push: # TODO: After publishing as open source.
+  push:
   pull_request:
     branches: [main]
     paths:
