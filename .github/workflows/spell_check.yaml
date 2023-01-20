@@ -22,7 +22,7 @@ jobs:
         with:
           config: .github/workflows/config/spell-check
           check_file_names: 1
-          only_check_changed_files: 1
+          only_check_changed_files: 0
           check_extra_dictionaries: ""
           extra_dictionaries:
             cspell:html/html.txt
