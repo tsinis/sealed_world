@@ -11,7 +11,9 @@
 
 ## Type of Change
 
-<!--- Put an `x` in all the boxes that apply: -->
+<!--- Please put an `x` in all the boxes that apply: -->
+
+<!--Checkmate-->
 
 - [ ] ✨ New feature (non-breaking change which adds functionality)
 - [ ] 🛠️ Bug fix (non-breaking change which fixes an issue)
@@ -27,7 +29,9 @@
 
 Please look at the following checklist to ensure that your PR can be accepted quickly:
 
-<!--- Put an `x` in all the boxes that apply: -->
+<!--- Please put an `x` in all the boxes that apply: -->
+
+<!--Checkmate-->
 
 - [ ] Data come from open-source resources with proper Licenses (if presented).
 - [ ] New code is documented and the data source is referenced (if presented).
