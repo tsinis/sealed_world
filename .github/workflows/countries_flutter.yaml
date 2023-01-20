@@ -1,0 +1,72 @@
+name: countries_flutter
+
+on:
+  # TODO: After publishing as open source.
+  # push:
+  #   paths:
+  #     - "packages/countries_flutter/**"
+  #     - ".github/workflows/countries_flutter.yaml"
+
+  pull_request:
+    paths:
+      - "packages/countries_flutter/**"
+      - ".github/workflows/countries_flutter.yaml"
+
+jobs:
+  build:
+    defaults:
+      run:
+        working-directory: packages/countries_flutter
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checks-out repository
+        uses: actions/checkout@v3
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2.8.0
+        with:
+          cache: true
+          channel: 'beta'
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      # TODO: No support for sealed classes in formatter now.
+      # - name: Format
+      #   run: flutter format --set-exit-if-changed .
+
+      - name: Analyze project
+        uses: invertase/github-action-dart-analyzer@v1
+        with:
+          fatal-warnings: true
+          fatal-infos: true
+
+      - name: Dart Code Metrics
+        uses: dart-code-checker/dart-code-metrics-action@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          folders: "lib, test"
+          pull_request_comment: true
+          check_unused_files: true
+          fatal_performance: true
+          fatal_warnings: true
+          fatal_style: true
+
+      - name: Run tests
+        run: flutter test --no-pub --coverage --enable-experiment=sealed-class
+
+      - name: Check Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
+        with:
+          min_coverage: 95
+          exclude: "**/*.g.dart **/*.gen.dart **/data/*.dart"
+          path: packages/countries_flutter/coverage/lcov.info
+
+      # TODO: Not connected yet.
+      # - name: Upload coverage to Codecov
+      #   uses: codecov/codecov-action@v3
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}

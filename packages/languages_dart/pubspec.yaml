@@ -3,7 +3,7 @@ description: Provides data for world languages in the form of sealed classes.
 version: 0.0.1
 
 environment:
-  sdk: '>=3.0.0-136 <4.0.0'
+  sdk: '>=3.0.0-128 <4.0.0'
 
 dev_dependencies:
   dart_code_metrics: ^5.4.0 # Flutter Favorite

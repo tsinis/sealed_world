@@ -1984,7 +1984,6 @@ class LangZul extends NaturalLanguage {
         );
 }
 
-
 // TODO: Consider add those langs without ISO 639-1 codes:
 // LangBwg(),
 // LangLoz(),

@@ -1,3 +1,0 @@
-# Only process Dart / Markdown files
-\.md$
-\.dart$

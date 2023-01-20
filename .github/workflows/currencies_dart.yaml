@@ -1,0 +1,73 @@
+name: currencies_dart
+
+on:
+  # TODO: After publishing as open source.
+  # push:
+  #   paths:
+  #     - "packages/currencies_dart/**"
+  #     - ".github/workflows/currencies_dart.yaml"
+
+  pull_request:
+    paths:
+      - "packages/currencies_dart/**"
+      - ".github/workflows/currencies_dart.yaml"
+
+jobs:
+  build:
+    defaults:
+      run:
+        working-directory: packages/currencies_dart
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checks-out repository
+        uses: actions/checkout@v3
+
+      - name: Install Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: dev
+
+      - name: Install Dependencies
+        run: dart pub get
+
+      # TODO: No support for sealed classes in formatter now.
+      # - name: Format
+      #   run: dart format --set-exit-if-changed .
+
+      - name: Analyze project
+        uses: invertase/github-action-dart-analyzer@v1
+        with:
+          fatal-warnings: true
+          fatal-infos: true
+
+      - name: Dart Code Metrics
+        uses: dart-code-checker/dart-code-metrics-action@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          folders: "lib, test"
+          pull_request_comment: true
+          check_unused_files: true
+          fatal_performance: true
+          fatal_warnings: true
+          fatal_style: true
+
+      - name: Run Tests
+        run: |
+          dart pub global activate coverage 1.6.2
+          dart --enable-experiment=sealed-class test --coverage=coverage && dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=lib
+
+      - name: Check Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
+        with:
+          min_coverage: 95
+          exclude: "**/*.g.dart **/*.gen.dart **/data/*.dart"
+          path: packages/currencies_dart/coverage/lcov.info
+
+      # TODO: Not connected yet.
+      # - name: Upload coverage to Codecov
+      #   uses: codecov/codecov-action@v3
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}

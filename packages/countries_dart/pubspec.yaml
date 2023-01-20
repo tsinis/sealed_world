@@ -3,7 +3,7 @@ description: Provides data for world countries in the form of sealed classes.
 version: 0.0.1
 
 environment:
-  sdk: '>=3.0.0-136 <4.0.0'
+  sdk: '>=3.0.0-128 <4.0.0'
 
 dependencies:
   currencies_dart:
