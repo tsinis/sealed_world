@@ -40,10 +40,6 @@ on:
         required: false
         type: string
         default: "lib"
-      runs_on:
-        required: false
-        type: string
-        default: ubuntu-latest
 
 jobs:
   verify-dart-package:
@@ -52,7 +48,7 @@ jobs:
       run:
         working-directory: packages/${{ inputs.package_name }}
 
-    runs-on: ${{ inputs.runs_on }}
+    runs-on: "ubuntu-latest"
     timeout-minutes: 10
 
     steps:
