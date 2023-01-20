@@ -9,6 +9,6 @@ on:
 
 jobs:
   verify-currencies-dart:
-    uses: ./.github/workflows/config/dart_package_workflow.yaml
+    uses: ./.github/workflows/dart_package_workflow.yaml
     with:
       package_name: countries_dart
