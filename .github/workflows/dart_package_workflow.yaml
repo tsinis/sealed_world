@@ -42,18 +42,19 @@ jobs:
           fatal-warnings: true
           fatal-infos: true
 
-      - name: 🔎 Dart Code Metrics
-        uses: dart-code-checker/dart-code-metrics-action@v3
-        if: github.event_name == 'pull_request'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          folders: "lib test"
-          relative_path: packages/${{ inputs.package_name }}
-          pull_request_comment: true
-          check_unused_files: true
-          fatal_performance: true
-          fatal_warnings: true
-          fatal_style: true
+      # TODO: Add these back when DCM will support Dart 3.
+      # - name: 🔎 Dart Code Metrics
+      #   uses: dart-code-checker/dart-code-metrics-action@v3
+      #   if: github.event_name == 'pull_request'
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     folders: "lib test"
+      #     relative_path: packages/${{ inputs.package_name }}
+      #     pull_request_comment: true
+      #     check_unused_files: true
+      #     fatal_performance: true
+      #     fatal_warnings: true
+      #     fatal_style: true
 
       - name: 🧪 Run Tests
         run: |
