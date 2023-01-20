@@ -52,7 +52,7 @@ jobs:
       run:
         working-directory: packages/${{ inputs.package_name }}
 
-    runs-on: ${{ inputs.runs_on }}
+    runs-on: ${{inputs.runs_on}}
     timeout-minutes: 10
 
     steps:
