@@ -9,12 +9,7 @@
 \.gen.dart$
 ^\.github/
 ^\.vscode/
-^\android/
-^\ios/
-^\windows/
-^\linux/
 ^\web/
-^\macos/
 ^\resources/
 ^\assets/
 (?:(?i)LICENSE)
