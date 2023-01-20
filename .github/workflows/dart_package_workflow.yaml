@@ -48,6 +48,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           folders: "lib test"
+          relative_path: packages/${{ inputs.package_name }}
           pull_request_comment: true
           check_unused_files: true
           fatal_performance: true
