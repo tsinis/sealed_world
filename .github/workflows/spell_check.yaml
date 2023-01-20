@@ -3,10 +3,7 @@ name: spell_check
 on:
   pull_request:
     branches: [main]
-    types:
-      - opened
-      - reopened
-      - edited
+    types: [opened, reopened, synchronize, edited]
 
 permissions:
   contents: read
