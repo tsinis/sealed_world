@@ -1,6 +1,4 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
+/// Provides data for world languages in the form of sealed classes.
 library languages_dart;
 
 export "src/data/natural_language_families.dart";

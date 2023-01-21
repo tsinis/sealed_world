@@ -1,6 +1,4 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
+/// Provides data for world currencies in the form of sealed classes.
 library currencies_dart;
 
 export "src/data/fiat_currencies.dart";
