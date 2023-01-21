@@ -36,14 +36,15 @@ doc/api/
 *.iml
 *.ipr
 *.iws
-.idea/
+.idea/*
+**/.idea
 
 # Visual Studio Code related
 .classpath
 .project
 .settings/
 .vscode/*
-**/.vscode/*
+**/.vscode
 
 # Flutter repo-specific
 /bin/cache/
