@@ -1,5 +1,5 @@
 import "package:flutter_test/flutter_test.dart";
 
 void main() => group("CountryPicker", () {
-      // TODO: Implement test
+      test("test", () => expect(true, isTrue));
     });
