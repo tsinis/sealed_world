@@ -33,5 +33,5 @@ linter:
     use_full_hex_values_for_flutter_colors: true
     use_key_in_widget_constructors: true
 
-    # TODO: Enable and fix this in the far-future.
+    # TODO? Enable and fix this in the far-future.
     diagnostic_describe_all_properties: false
