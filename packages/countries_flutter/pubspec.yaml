@@ -17,7 +17,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-
 dev_dependencies:
   build_runner: ^2.4.0 # From Google
   dart_code_metrics: ^5.4.0 # Flutter Favorite
