@@ -61,6 +61,7 @@ Glv
 Gmb
 Gnb
 Gnq
+Google
 Grc
 Grd
 Grl
@@ -79,6 +80,7 @@ Hti
 Idn
 Iku
 Imn
+Indo
 Intelli
 Iot
 Ipk
@@ -189,6 +191,7 @@ Swe
 Swz
 Sxm
 Syc
+TODO
 Tah
 Tca
 Tcd

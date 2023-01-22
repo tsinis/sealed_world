@@ -2,6 +2,7 @@ import "../data/fiat_currencies.dart";
 
 part "submodels/crypto_currency.dart";
 part "submodels/fiat_currency.dart";
+part "submodels/fiat_currency.g.dart";
 
 sealed class Currency {
   const Currency({

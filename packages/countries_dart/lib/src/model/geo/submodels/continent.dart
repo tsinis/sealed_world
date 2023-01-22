@@ -1,6 +1,8 @@
 import "../../../data/geo/continents.dart";
 import "../region.dart";
 
+part "continent.g.dart";
+
 class Continent extends SubRegion {
   const Continent({required super.name});
 

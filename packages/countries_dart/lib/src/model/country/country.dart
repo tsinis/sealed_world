@@ -17,6 +17,7 @@ import "submodels/postal_code.dart";
 import "submodels/weekday.dart";
 
 part "submodels/world_country.dart";
+part "submodels/world_country.g.dart";
 
 sealed class Country {
   const Country({required this.name});
