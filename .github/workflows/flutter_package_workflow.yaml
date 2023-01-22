@@ -25,8 +25,7 @@ jobs:
         uses: subosito/flutter-action@v2.8.0
         with:
           cache: true
-          flutter-version: "3.7.0-24"
-          channel: "any"
+          channel: "master"
           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
       - name: 📦 Install Dependencies
@@ -43,12 +42,14 @@ jobs:
 
       - name: 🧮 Calculate PANA Score
         uses: axel-op/dart-package-analyzer@v3
+        if: false # TODO: Remove this back when action will support Dart 3.
         id: analysis
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           relativePath: packages/${{ inputs.package_name }}
 
       - name: 📈 Check Pub Score # TODO: Increase PERCENTAGE to 100 before publish.
+        if: ${{ steps.analysis.outputs != null }}
         env:
           TOTAL: ${{ steps.analysis.outputs.total }}
           TOTAL_MAX: ${{ steps.analysis.outputs.total_max }}
@@ -60,19 +61,19 @@ jobs:
           exit 1
           fi
 
-      # TODO: Add these back when DCM will support Dart 3.
-      # - name: 🔎 Dart Code Metrics
-      #   uses: dart-code-checker/dart-code-metrics-action@v3.0.0
-      #   if: github.event_name == 'pull_request'
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     folders: "lib, test"
-      #     relative_path: packages/${{ inputs.package_name }}
-      #     pull_request_comment: true
-      #     check_unused_files: true
-      #     fatal_performance: true
-      #     fatal_warnings: true
-      #     fatal_style: true
+      - name: 🔎 Dart Code Metrics
+        uses: dart-code-checker/dart-code-metrics-action@v3.0.0
+        if: false # TODO: Replace it when DCM will support Dart 3.
+        # if: github.event_name == 'pull_request'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          folders: "lib, test"
+          relative_path: packages/${{ inputs.package_name }}
+          pull_request_comment: true
+          check_unused_files: true
+          fatal_performance: true
+          fatal_warnings: true
+          fatal_style: true
 
       - name: 🧪 Run Tests
         run: flutter test --no-pub --coverage --enable-experiment=sealed-class
