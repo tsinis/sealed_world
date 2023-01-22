@@ -9,7 +9,7 @@ on:
 
 jobs:
   verify-dart-package:
-    name: ☑️ Verify ${{ inputs.package_name }} Package (Dart)
+    name: ⏳ Verify ${{ inputs.package_name }} Package (Dart)
     defaults:
       run:
         working-directory: packages/${{ inputs.package_name }}

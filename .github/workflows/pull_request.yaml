@@ -3,7 +3,6 @@ name: pull_requests
 on:
   pull_request:
     branches: [main]
-    types: [opened, reopened, synchronize, edited]
 
 permissions:
   contents: read
@@ -24,6 +23,7 @@ jobs:
   assign:
     runs-on: ubuntu-latest
     timeout-minutes: 4
+    if: ${{ github.event.pull_request.assignee == null && join(github.event.pull_request.assignees) == '' }}
     steps:
       - name: ✍🏻 Author Assign
         uses: toshimaru/auto-author-assign@v1.6.2
