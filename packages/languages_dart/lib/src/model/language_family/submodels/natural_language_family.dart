@@ -33,6 +33,7 @@ class NaturalLanguageFamily extends LanguageFamily {
     Creole(),
     DeneYeniseian(),
     Dravidian(),
+    EskimoAleut(),
     IndoEuropean(),
     Japonic(),
     Koreanic(),
@@ -48,7 +49,6 @@ class NaturalLanguageFamily extends LanguageFamily {
     TaiKadai(),
     Tupian(),
     Turkic(),
-    EskimoAleut(),
     Uralic(),
   ];
 }
