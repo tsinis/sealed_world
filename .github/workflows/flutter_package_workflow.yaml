@@ -26,7 +26,7 @@ jobs:
         with:
           cache: true
           flutter-version: "3.7.0-24"
-          channel: "beta"
+          channel: "any"
           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
       - name: 📦 Install Dependencies
