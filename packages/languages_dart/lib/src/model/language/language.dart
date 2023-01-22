@@ -3,6 +3,7 @@ import "../../data/natural_languages.dart";
 import "../language_family/language_family.dart";
 
 part "submodels/natural_language.dart";
+part "submodels/natural_language.g.dart";
 part "submodels/programming_language.dart";
 
 sealed class Language {

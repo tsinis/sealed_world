@@ -1,7 +1,8 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
-library languages_dart;
+/// Provides data for world countries in the form of sealed classes.
+library countries_dart;
+
+export "package:currencies_dart/currencies_dart.dart";
+export "package:languages_dart/languages_dart.dart";
 
 export "src/data/geo/continental_sections.dart";
 export "src/data/geo/continents.dart";
@@ -20,5 +21,3 @@ export "src/model/country/submodels/postal_code.dart";
 export "src/model/country/submodels/weekday.dart";
 export "src/model/geo/region.dart";
 export "src/model/geo/submodels/continent.dart";
-
-// TODO: Export any libraries intended for clients of this package.
