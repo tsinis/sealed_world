@@ -5,7 +5,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     assignees:
       - "dependabot"
     reviewers:
@@ -16,10 +16,45 @@ updates:
 
   # Maintain dependencies for Dart
   - package-ecosystem: "pub"
-    versioning-strategy: increase
-    directory: "/"
+    directory: "packages/countries_dart/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    assignees:
+      - "dependabot"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+  - package-ecosystem: "pub"
+    directory: "packages/countries_flutter/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "dependabot"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+  - package-ecosystem: "pub"
+    directory: "packages/languages_dart/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "dependabot"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+  - package-ecosystem: "pub"
+    directory: "packages/currencies_dart/"
+    schedule:
+      interval: "weekly"
     assignees:
       - "dependabot"
     reviewers:

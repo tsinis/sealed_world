@@ -11,7 +11,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - name: 🔒 Close Stale Issues
+      - name: 🔒 Close Stale Issues and PRs
         uses: actions/stale@v7.0.0
         with:
           days-before-stale: 60

@@ -29,22 +29,36 @@ jobs:
       - name: 📦 Install Dependencies
         run: dart pub get
 
-      # TODO: No support for sealed classes in formatter now.
-      # - name: ✨ Check Formatting
-      #   if: github.event_name == 'pull_request'
-      #   run: dart format --set-exit-if-changed .
-
       - name: 🕵️ Analyze Code
-        uses: invertase/github-action-dart-analyzer@v1
+        uses: ValentinVignal/action-dart-analyze@v0.15
         if: github.event_name == 'pull_request'
         with:
+          fail-on: 'error'
+          token: ${{ secrets.GITHUB_TOKEN }}
           working-directory: packages/${{ inputs.package_name }}
-          fatal-warnings: true
-          fatal-infos: true
+          format: false # TODO: Enable when formatting in Dart 3 will be supported.
+
+      - name: 🧮 Calculate PANA Score
+        uses: axel-op/dart-package-analyzer@v3
+        id: analysis
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📈 Check Pub Score
+        env:
+          TOTAL: ${{ steps.analysis.outputs.total }}
+          TOTAL_MAX: ${{ steps.analysis.outputs.total_max }}
+        run: |
+          PERCENTAGE=$(( $TOTAL * 100 / $TOTAL_MAX ))
+          if (( $PERCENTAGE < 95 ))
+          then
+          echo Score too low!
+          exit 1
+          fi
 
       # TODO: Add these back when DCM will support Dart 3.
       # - name: 🔎 Dart Code Metrics
-      #   uses: dart-code-checker/dart-code-metrics-action@v3
+      #   uses: dart-code-checker/dart-code-metrics-action@v3.0.0
       #   if: github.event_name == 'pull_request'
       #   with:
       #     github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -58,7 +72,7 @@ jobs:
 
       - name: 🧪 Run Tests
         run: |
-          dart pub global activate coverage 1.6.2
+          dart pub global activate coverage
           dart --enable-experiment=sealed-class test --coverage=coverage
           dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=lib
 
@@ -72,7 +86,6 @@ jobs:
 
       - name: 💯 Upload Coverage
         uses: codecov/codecov-action@v3
-        if: github.event_name != 'pull_request'
         with:
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
