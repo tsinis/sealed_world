@@ -47,7 +47,6 @@ jobs:
           relativePath: packages/${{ inputs.package_name }}
 
       - name: 📈 Check Pub Score # TODO: Increase PERCENTAGE to 100 before publish.
-        if: ${{ steps.analysis.outputs != null }}
         env:
           TOTAL: ${{ steps.analysis.outputs.total }}
           TOTAL_MAX: ${{ steps.analysis.outputs.total_max }}
