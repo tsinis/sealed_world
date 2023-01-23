@@ -93,3 +93,4 @@ jobs:
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
           token: ${{ secrets.CODECOV_TOKEN }}
+          verbose: true

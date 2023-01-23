@@ -110,12 +110,22 @@ coverage_badge.svg
 *.lcov
 nohup.out
 
+# Platfroms except Flutter examples
+!packages/*_flutter/example/pubspec.lock
+macos/
+!packages/*_flutter/example/macos
+windows/
+!packages/*_flutter/example/windows
+linux/
+!packages/*_flutter/example/linux
+web/
+!packages/*_flutter/example/web
+ios/
+!packages/*_flutter/example/ios
+android/
+!packages/*_flutter/example/android
+.metadata
+!packages/*_flutter/example/.metadata
+
 # Other
 json/
-macos/
-windows/
-linux/
-web/
-ios/
-android/
-.metadata
