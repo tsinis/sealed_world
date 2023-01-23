@@ -90,6 +90,7 @@ jobs:
       - name: 💯 Upload Coverage
         uses: codecov/codecov-action@v3
         with:
+          file: ./packages/${{ inputs.package_name }}/coverage/lcov.info
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
           token: ${{ secrets.CODECOV_TOKEN }}
