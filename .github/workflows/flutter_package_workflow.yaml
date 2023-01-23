@@ -42,7 +42,8 @@ jobs:
 
       - name: 🧮 Calculate PANA Score
         uses: axel-op/dart-package-analyzer@v3
-        if: false # TODO: Remove this back when action will support Dart 3.
+        if: false # TODO: Replace this back when action will support Dart 3.
+        # if: github.event_name == 'pull_request'
         id: analysis
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}

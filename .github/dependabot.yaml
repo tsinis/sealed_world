@@ -6,8 +6,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    assignees:
-      - "dependabot"
     reviewers:
       - "tsinis"
     commit-message:
@@ -16,11 +14,10 @@ updates:
 
   # Maintain dependencies for Dart
   - package-ecosystem: "pub"
+    versioning-strategy: increase
     directory: "packages/countries_dart/"
     schedule:
       interval: "weekly"
-    assignees:
-      - "dependabot"
     reviewers:
       - "tsinis"
     commit-message:
@@ -28,11 +25,10 @@ updates:
       include: "scope"
 
   - package-ecosystem: "pub"
+    versioning-strategy: increase
     directory: "packages/countries_flutter/"
     schedule:
       interval: "weekly"
-    assignees:
-      - "dependabot"
     reviewers:
       - "tsinis"
     commit-message:
@@ -40,11 +36,10 @@ updates:
       include: "scope"
 
   - package-ecosystem: "pub"
+    versioning-strategy: increase
     directory: "packages/languages_dart/"
     schedule:
       interval: "weekly"
-    assignees:
-      - "dependabot"
     reviewers:
       - "tsinis"
     commit-message:
@@ -52,11 +47,10 @@ updates:
       include: "scope"
 
   - package-ecosystem: "pub"
+    versioning-strategy: increase
     directory: "packages/currencies_dart/"
     schedule:
       interval: "weekly"
-    assignees:
-      - "dependabot"
     reviewers:
       - "tsinis"
     commit-message:
