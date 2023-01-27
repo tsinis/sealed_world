@@ -1,6 +1,7 @@
 analyzer:
   enable-experiment:
     - sealed-class
+    # - patterns TODO: Enable later and migrate generator: FiatZmw() => fiatZmw?.call(), _ => orElse?.call(), etc.
   exclude:
     # Web
     - "web/**"
