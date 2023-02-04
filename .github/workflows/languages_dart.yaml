@@ -1,11 +1,6 @@
 name: languages_dart
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "packages/languages_dart/**"
-      - ".github/workflows/languages_dart.yaml"
   pull_request:
     branches: [main]
     paths:

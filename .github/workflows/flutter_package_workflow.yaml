@@ -33,7 +33,6 @@ jobs:
 
       - name: 🕵️ Analyze Code
         uses: ValentinVignal/action-dart-analyze@v0.15
-        if: github.event_name == 'pull_request'
         with:
           fail-on: 'error'
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -43,7 +42,6 @@ jobs:
       - name: 🧮 Calculate PANA Score
         uses: axel-op/dart-package-analyzer@v3
         if: false # TODO: Replace this back when action will support Dart 3.
-        # if: github.event_name == 'pull_request'
         id: analysis
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
@@ -64,7 +62,6 @@ jobs:
       - name: 🔎 Dart Code Metrics
         uses: dart-code-checker/dart-code-metrics-action@v3.0.0
         if: false # TODO: Replace it when DCM will support Dart 3.
-        # if: github.event_name == 'pull_request'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           folders: "lib, test"
@@ -80,7 +77,6 @@ jobs:
 
       - name: 📊 Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
-        if: github.event_name == 'pull_request'
         with:
           path: packages/${{ inputs.package_name }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.gen.dart **/*.freezed.dart"
@@ -93,4 +89,4 @@ jobs:
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
           token: ${{ secrets.CODECOV_TOKEN }}
-          verbose: true
+          override_branch: ${{ github.base_ref }}

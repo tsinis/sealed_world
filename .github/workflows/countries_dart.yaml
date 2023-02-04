@@ -1,11 +1,6 @@
 name: countries_dart
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "packages/countries_dart/**"
-      - ".github/workflows/countries_dart.yaml"
   pull_request:
     branches: [main]
     paths:

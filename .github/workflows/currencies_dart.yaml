@@ -1,11 +1,6 @@
 name: currencies_dart
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "packages/currencies_dart/**"
-      - ".github/workflows/currencies_dart.yaml"
   pull_request:
     branches: [main]
     paths:
