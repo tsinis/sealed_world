@@ -584,7 +584,6 @@ foreach
 gifs
 gini
 github
-google
 googleapis
 homepage
 http
