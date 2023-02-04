@@ -36440,7 +36440,7 @@ class CountryBlr extends WorldCountry {
             CountryName(
               language: LangBel(),
               official: "Рэспубліка Беларусь",
-              common: "Белару́сь",
+              common: "Беларусь",
             ),
             CountryName(
               language: LangRus(),
