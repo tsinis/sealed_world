@@ -2,6 +2,7 @@
 \.metadata$
 \.ignore$
 \.png$
+\.ico$
 \.jpg$
 \.mp3$
 \.g.dart$
@@ -12,5 +13,11 @@
 ^\web/
 ^\resources/
 ^\assets/
+^\android/
+^\ios/
+^\macos/
+^\web/
+^\windows/
+^\linux/
 (?:(?i)LICENSE)
 (?:^|/)data/

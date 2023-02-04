@@ -1,6 +1,7 @@
 analyzer:
   enable-experiment:
     - sealed-class
+    # - patterns TODO: Enable later and migrate generator: FiatZmw() => fiatZmw?.call(), _ => orElse?.call(), etc.
   exclude:
     # Web
     - "web/**"
@@ -135,7 +136,6 @@ linter:
     unnecessary_final: false # Conflicts with: prefer_final_locals.
 
     # Enabled
-    always_put_control_body_on_new_line: true
     library_private_types_in_public_api: true
     always_put_required_named_parameters_first: true
     avoid_annotating_with_dynamic: true

@@ -3,23 +3,21 @@ description: Sealed world data in form of Flutter widgets (country, phone, curre
 version: 0.0.1
 homepage: https://github.com/tsinis/sealed_world/packages/countries_flutter
 
-publish_to: 'none' # TODO! Remove this line if you wish to publish to pub.dev
+publish_to: "none" # TODO! Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: '>=3.0.0-85.0.dev <4.0.0'
+  sdk: ">=3.0.0-134 <4.0.0"
   flutter: ">=3.7.0-24"
 
 dependencies:
   countries_dart:
     path: ../countries_dart
-  currencies_dart:
-    path: ../currencies_dart
   flutter:
     sdk: flutter
 
 dev_dependencies:
   build_runner: ^2.4.0 # From Google
-  dart_code_metrics: ^5.5.0 # Flutter Favorite
+  dart_code_metrics: ^5.5.1 # Flutter Favorite
   flutter_test: # From Google
     sdk: flutter
   lints: ^2.0.1 # From Google

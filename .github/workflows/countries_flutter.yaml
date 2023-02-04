@@ -1,11 +1,6 @@
 name: countries_flutter
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "packages/countries_flutter/**"
-      - ".github/workflows/countries_flutter.yaml"
   pull_request:
     branches: [main]
     paths:
