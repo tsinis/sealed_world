@@ -1,6 +1,6 @@
+import "package:countries_dart/countries_dart.dart";
 import "package:flutter/material.dart";
 
-import "../../countries_flutter.dart";
 import "../../helpers/ui_constants.dart";
 
 class CountryTile extends StatelessWidget {
