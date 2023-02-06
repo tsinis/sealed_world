@@ -1,6 +1,6 @@
 // ignore_for_file: long-parameter-list
 
-import "package:flutter/gestures.dart";
+import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 
 import "../../helpers/ui_constants.dart";

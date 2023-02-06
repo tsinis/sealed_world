@@ -48,6 +48,11 @@ class CountryCpv extends WorldCountry {
           languages: const [LangPor()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Зеленортска Република",
+              common: "Зеленортска Острва",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية كابو فيردي",
               common: "كابو فيردي",
@@ -246,6 +251,11 @@ class CountrySgp extends WorldCountry {
           languages: const [LangZho(), LangEng(), LangMsa(), LangTam()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Сингапур",
+              common: "Сингапур",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية سنغافورة",
               common: "سنغافورة",
@@ -360,6 +370,11 @@ class CountrySgp extends WorldCountry {
               official: "جمہوریہ سنگاپور",
               common: "سنگاپور",
             ),
+            CountryName(
+              language: LangZho(),
+              official: "新加坡共和国",
+              common: "新加坡",
+            ),
           ],
           latLng: const [1.36666666, 103.8],
           area: 710,
@@ -425,6 +440,11 @@ class CountryMrt extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Исламска Република Мауританија",
+              common: "Мауританија",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية الإسلامية الموريتانية",
@@ -613,6 +633,11 @@ class CountryPol extends WorldCountry {
           subregion: const CentralEurope(),
           languages: const [LangPol()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Пољска",
+              common: "Пољска",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية البولندية",
@@ -812,6 +837,11 @@ class CountryTcd extends WorldCountry {
           languages: const [LangAra(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Чад",
+              common: "Чад",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية تشاد",
               common: "تشاد",
@@ -999,6 +1029,11 @@ class CountryJpn extends WorldCountry {
           languages: const [LangJpn()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Јапан",
+              common: "Јапан",
+            ),
+            CountryName(
               language: LangAra(),
               official: "اليابان",
               common: "اليابان",
@@ -1178,6 +1213,11 @@ class CountryCub extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Куба",
+              common: "Куба",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية كوبا",
@@ -1364,6 +1404,11 @@ class CountryMoz extends WorldCountry {
           languages: const [LangPor()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Мозамбик",
+              common: "Мозамбик",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية موزمبيق",
               common: "موزمبيق",
@@ -1549,6 +1594,11 @@ class CountryGbr extends WorldCountry {
           subregion: const NorthernEurope(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Уједињено Краљевство Велике Британије и Северне Ирске",
+              common: "Уједињено Краљевство",
+            ),
             CountryName(
               language: LangAra(),
               official: "المملكة المتحدة لبريطانيا العظمى وايرلندا الشمالية",
@@ -1756,6 +1806,11 @@ class CountryIrl extends WorldCountry {
           languages: const [LangEng(), LangGle()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Ирска",
+              common: "Ирска",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية أيرلندا",
               common: "أيرلندا",
@@ -1934,6 +1989,11 @@ class CountryNer extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Нигер",
+              common: "Нигер",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية النيجر",
@@ -2123,6 +2183,11 @@ class CountryGmb extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Гамбија",
+              common: "Гамбија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية غامبيا",
               common: "غامبيا",
@@ -2311,6 +2376,11 @@ class CountryUzb extends WorldCountry {
           subregion: const CentralAsia(),
           languages: const [LangRus(), LangUzb()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Узбекистан",
+              common: "Узбекистан",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية أوزباكستان",
@@ -2505,6 +2575,11 @@ class CountryRus extends WorldCountry {
           subregion: const EasternEurope(),
           languages: const [LangRus()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Руска Федерација",
+              common: "Русија",
+            ),
             CountryName(
               language: LangAra(),
               official: "روسيا الاتحادية",
@@ -2717,6 +2792,11 @@ class CountryTkm extends WorldCountry {
           languages: const [LangRus(), LangTuk()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Туркменистан",
+              common: "Туркменистан",
+            ),
+            CountryName(
               language: LangAra(),
               official: "تركمانستان",
               common: "تركمانستان",
@@ -2907,6 +2987,11 @@ class CountryAia extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Ангвила",
+              common: "Ангвила",
+            ),
+            CountryName(
               language: LangAra(),
               official: "أنغويلا",
               common: "أنغويلا",
@@ -3089,6 +3174,11 @@ class CountryVnm extends WorldCountry {
           languages: const [LangVie()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Социјалистичка Република Вијетнам",
+              common: "Вијетнам",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية فيتنام الاشتراكية",
               common: "فيتنام",
@@ -3270,6 +3360,11 @@ class CountryAta extends WorldCountry {
           continent: const Antarctica(),
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Антарктик",
+              common: "Антарктик",
+            ),
+            CountryName(
               language: LangAra(),
               official: "أنتارتيكا",
               common: "أنتارتيكا",
@@ -3324,8 +3419,16 @@ class CountryAta extends WorldCountry {
               official: "Antartide",
               common: "Antartide",
             ),
-            CountryName(language: LangJpn(), official: "南極大陸", common: "南極"),
-            CountryName(language: LangKor(), official: "남극", common: "남극"),
+            CountryName(
+              language: LangJpn(),
+              official: "南極大陸",
+              common: "南極",
+            ),
+            CountryName(
+              language: LangKor(),
+              official: "남극",
+              common: "남극",
+            ),
             CountryName(
               language: LangNld(),
               official: "Antarctica",
@@ -3451,6 +3554,11 @@ class CountrySwz extends WorldCountry {
           subregion: const SouthernAfrica(),
           languages: const [LangEng(), LangSsw()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Краљевина Есватини",
+              common: "Есватини",
+            ),
             CountryName(
               language: LangAra(),
               official: "مملكة إسواتيني",
@@ -3636,6 +3744,11 @@ class CountryKhm extends WorldCountry {
           subregion: const SouthEasternAsia(),
           languages: const [LangKhm()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Краљевина Камбоџа",
+              common: "Камбоџа",
+            ),
             CountryName(
               language: LangAra(),
               official: "مملكة كمبوديا",
@@ -3831,6 +3944,11 @@ class CountryVut extends WorldCountry {
           languages: const [LangBis(), LangEng(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Вануату",
+              common: "Вануату",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية فانواتو",
               common: "فانواتو",
@@ -4010,6 +4128,11 @@ class CountryAla extends WorldCountry {
           languages: const [LangSwe()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Оландска Острва",
+              common: "Оландска Острва",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزر أولاند",
               common: "جزر أولاند",
@@ -4181,6 +4304,11 @@ class CountryAus extends WorldCountry {
           subregion: const AustraliaAndNewZealand(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Комонвелт Аустралија",
+              common: "Аустралија",
+            ),
             CountryName(
               language: LangAra(),
               official: "كومونولث أستراليا",
@@ -4372,6 +4500,11 @@ class CountryIot extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Британска територија Индијског океана",
+              common: "Британска територија Индијског океана",
+            ),
+            CountryName(
               language: LangAra(),
               official: "إقليم المحيط الهندي البريطاني",
               common: "إقليم المحيط الهندي البريطاني",
@@ -4543,6 +4676,11 @@ class CountrySvk extends WorldCountry {
           subregion: const CentralEurope(),
           languages: const [LangSlk()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Словачка Република",
+              common: "Словачка",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية سلوفاكيا",
@@ -4737,6 +4875,11 @@ class CountryBra extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangPor()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Савезна Република Бразил",
+              common: "Бразил",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية البرازيل الاتحادية",
@@ -4943,6 +5086,11 @@ class CountryTjk extends WorldCountry {
           languages: const [LangRus(), LangTgk()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Таџикистан",
+              common: "Таџикистан",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية طاجيكستان",
               common: "طاجيكستان",
@@ -5135,6 +5283,11 @@ class CountrySgs extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Јужна Џорџија и Јужна Сендвичка Острва",
+              common: "Јужна Џорџија и Јужна Сендвичка Острва",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جورجيا الجنوبية وجزر ساندوتش الجنوبية",
               common: "جورجيا الجنوبية",
@@ -5306,6 +5459,11 @@ class CountryLbr extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Либерија",
+              common: "Либерија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية ليبيريا",
@@ -5490,6 +5648,11 @@ class CountryNga extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Савезна Република Нигерија",
+              common: "Нигерија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية نيجيريا الاتحادية",
@@ -5681,6 +5844,11 @@ class CountryCol extends WorldCountry {
           languages: const [LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Колумбија",
+              common: "Колумбија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية كولومبيا",
               common: "كولومبيا",
@@ -5867,6 +6035,11 @@ class CountrySmr extends WorldCountry {
           subregion: const SouthernEurope(),
           languages: const [LangIta()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Најузвишенија Република Сан Марино",
+              common: "Сан Марино",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية سان مارينو",
@@ -6055,6 +6228,11 @@ class CountryShn extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Света Јелена, Асенсион и Тристан да Куња",
+              common: "Света Јелена",
+            ),
+            CountryName(
               language: LangAra(),
               official: "سانت هيلينا وأسينشين وتريستان دا كونا",
               common: "سانت هيلينا وأسينشين وتريستان دا كونا",
@@ -6237,6 +6415,11 @@ class CountryEgy extends WorldCountry {
           subregion: const NorthernAfrica(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Арапска Република Египат",
+              common: "Египат",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية مصر العربية",
@@ -6426,6 +6609,11 @@ class CountryHnd extends WorldCountry {
           languages: const [LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Хондурас",
+              common: "Хондурас",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية هندوراس",
               common: "هندوراس",
@@ -6612,6 +6800,11 @@ class CountryIdn extends WorldCountry {
           subregion: const SouthEasternAsia(),
           languages: const [LangInd()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Индонезија",
+              common: "Индонезија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية إندونيسيا",
@@ -6801,6 +6994,11 @@ class CountryPrk extends WorldCountry {
           subregion: const EasternAsia(),
           languages: const [LangKor()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Демократска Народна Република Кореја",
+              common: "Северна Кореја",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية كوريا الديمقراطية الشعبية",
@@ -6999,6 +7197,12 @@ class CountryMac extends WorldCountry {
           languages: const [LangPor(), LangZho()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official:
+                  """Макао специјална административна област Народне Републике Кине""",
+              common: "Макао",
+            ),
+            CountryName(
               language: LangAra(),
               official: "منطقة ماكاو الإدارية التابعة لجمهورية الصين الشعبية",
               common: "ماكاو",
@@ -7123,6 +7327,11 @@ class CountryMac extends WorldCountry {
               official: "مکاؤ عوامی جمہوریہ چین کا خصوصی انتظامی علاقہ",
               common: "مکاؤ",
             ),
+            CountryName(
+              language: LangZho(),
+              official: "中华人民共和国澳门特别行政区",
+              common: "澳门",
+            ),
           ],
           latLng: const [22.16666666, 113.55],
           bordersCodes: const ["Chn"],
@@ -7173,6 +7382,11 @@ class CountrySle extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Сијера Леоне",
+              common: "Сијера Леоне",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية سيراليون",
@@ -7357,6 +7571,11 @@ class CountryMda extends WorldCountry {
           subregion: const EasternEurope(),
           languages: const [LangRon()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Молдавија",
+              common: "Молдавија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية مولدوڤا",
@@ -7551,6 +7770,11 @@ class CountryPhl extends WorldCountry {
           languages: const [LangEng(), LangTgl()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Филипини",
+              common: "Филипини",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية الفلبين",
               common: "الفلبين",
@@ -7738,6 +7962,11 @@ class CountryCmr extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Камерун",
+              common: "Камерун",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية الكاميرون",
               common: "الكاميرون",
@@ -7923,6 +8152,11 @@ class CountryGrl extends WorldCountry {
           languages: const [LangKal()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Гренланд",
+              common: "Гренланд",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جرينلاند",
               common: "جرينلاند",
@@ -8095,6 +8329,11 @@ class CountryMtq extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Мартиник",
+              common: "Мартиник",
+            ),
             CountryName(
               language: LangAra(),
               official: "مارتينيك",
@@ -8277,6 +8516,11 @@ class CountryLbn extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangAra(), LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Либанска Република",
+              common: "Либан",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية اللبنانية",
@@ -8473,6 +8717,11 @@ class CountryRwa extends WorldCountry {
           subregion: const EasternAfrica(),
           languages: const [LangEng(), LangFra(), LangKin()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Руанда",
+              common: "Руанда",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية رواندا",
@@ -8671,6 +8920,11 @@ class CountryBih extends WorldCountry {
           languages: const [LangBos(), LangHrv(), LangSrp()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Босна и Херцеговина",
+              common: "Босна и Херцеговина",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية البوسنة والهرسك",
               common: "البوسنة والهرسك",
@@ -8861,6 +9115,11 @@ class CountryMhl extends WorldCountry {
           languages: const [LangEng(), LangMah()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Маршалска Острва",
+              common: "Маршалска Острва",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية جزر مارشال",
               common: "جزر مارشال",
@@ -9034,6 +9293,11 @@ class CountryIta extends WorldCountry {
           subregion: const SouthernEurope(),
           languages: const [LangIta()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Италијанска Република",
+              common: "Италија",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية الإيطالية",
@@ -9227,6 +9491,11 @@ class CountryTkl extends WorldCountry {
           languages: const [LangEng(), LangSmo()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Токелау",
+              common: "Токелау",
+            ),
+            CountryName(
               language: LangAra(),
               official: "توكيلاو",
               common: "توكيلاو",
@@ -9398,6 +9667,11 @@ class CountryGab extends WorldCountry {
           subregion: const MiddleAfrica(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Габонска Република",
+              common: "Габон",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية الغابون",
@@ -9574,6 +9848,11 @@ class CountryCck extends WorldCountry {
           subregion: const AustraliaAndNewZealand(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Кокосова (Килинг) Острва",
+              common: "Кокосова Острва",
+            ),
             CountryName(
               language: LangAra(),
               official: "إقليم جزر كوكوس",
@@ -9752,6 +10031,11 @@ class CountryPak extends WorldCountry {
           subregion: const SouthernAsia(),
           languages: const [LangEng(), LangUrd()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Исламска Република Пакистан",
+              common: "Пакистан",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية باكستان الإسلامية",
@@ -9939,6 +10223,11 @@ class CountryReu extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Реинион",
+              common: "Реинион",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزيرة لا ريونيون",
               common: "لا ريونيون",
@@ -10125,6 +10414,11 @@ class CountryMus extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Маурицијус",
+              common: "Маурицијус",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية موريشيوس",
               common: "موريشيوس",
@@ -10303,6 +10597,11 @@ class CountryGrd extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Гренада",
+              common: "Гренада",
+            ),
+            CountryName(
               language: LangAra(),
               official: "غرينادا",
               common: "غرينادا",
@@ -10475,6 +10774,11 @@ class CountryOmn extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Султанат Оман",
+              common: "Оман",
+            ),
             CountryName(
               language: LangAra(),
               official: "سلطنة عمان",
@@ -10650,6 +10954,11 @@ class CountryBfa extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Буркина Фасо",
+              common: "Буркина Фасо",
+            ),
             CountryName(
               language: LangAra(),
               official: "بوركينا فاسو",
@@ -10847,6 +11156,11 @@ class CountryWsm extends WorldCountry {
           languages: const [LangEng(), LangSmo()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Независна Држава Самоа",
+              common: "Самоа",
+            ),
+            CountryName(
               language: LangAra(),
               official: "دولة ساموا المستقلة",
               common: "ساموا",
@@ -11024,6 +11338,11 @@ class CountryTto extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Тринидад и Тобаго",
+              common: "Тринидад и Тобаго",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية ترينيداد وتوباغو",
@@ -11203,6 +11522,11 @@ class CountryVct extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Свети Винсент и Гренадини",
+              common: "Свети Винсент и Гренадини",
+            ),
+            CountryName(
               language: LangAra(),
               official: "سانت فينسنت والغرينادين",
               common: "سانت فينسنت والغرينادين",
@@ -11380,6 +11704,11 @@ class CountryPlw extends WorldCountry {
           // TODO: LangPau(), as soon as it gets ISO 639-1 code.
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Палау",
+              common: "Палау",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية بالاو",
@@ -11617,6 +11946,11 @@ class CountryZaf extends WorldCountry {
           ],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Јужна Африка",
+              common: "Јужноафричка Република",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية جنوب أفريقيا",
               common: "جنوب أفريقيا",
@@ -11805,6 +12139,11 @@ class CountryAgo extends WorldCountry {
           languages: const [LangPor()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Ангола",
+              common: "Ангола",
+            ),
+            CountryName(
               language: LangAra(),
               official: "أنغولا",
               common: "جمهورية أنغولا",
@@ -11989,6 +12328,11 @@ class CountryKor extends WorldCountry {
           languages: const [LangKor()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Кореја",
+              common: "Јужна Кореја",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية كوريا",
               common: "كوريا الجنوبية",
@@ -12166,6 +12510,11 @@ class CountryAtf extends WorldCountry {
           continent: const Antarctica(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Француске јужне и антарктичке земље",
+              common: "Француске јужне и антарктичке земље",
+            ),
             CountryName(
               language: LangAra(),
               official: "مقاطعات وأقاليم ما وراء البحار الفرنسية",
@@ -12350,6 +12699,11 @@ class CountryIsl extends WorldCountry {
           languages: const [LangIsl()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Исланд",
+              common: "Исланд",
+            ),
+            CountryName(
               language: LangAra(),
               official: "آيسلندا",
               common: "آيسلندا",
@@ -12526,6 +12880,11 @@ class CountryGuf extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Француска Гвајана",
+              common: "Француска Гвајана",
+            ),
             CountryName(
               language: LangAra(),
               official: "غويانا الفرنسية",
@@ -12718,6 +13077,11 @@ class CountryNor extends WorldCountry {
           languages: const [LangNno(), LangNob()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Норвешка",
+              common: "Норвешка",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مملكة النرويج",
               common: "النرويج",
@@ -12892,6 +13256,11 @@ class CountryHun extends WorldCountry {
           subregion: const CentralEurope(),
           languages: const [LangHun()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Мађарска",
+              common: "Мађарска",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية المجرية",
@@ -13084,6 +13453,11 @@ class CountryPse extends WorldCountry {
           languages: const [LangAra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Држава Палестина",
+              common: "Палестина",
+            ),
+            CountryName(
               language: LangAra(),
               official: "دولة فلسطين",
               common: "فلسطين",
@@ -13264,6 +13638,11 @@ class CountryLca extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Света Луција",
+              common: "Света Луција",
+            ),
+            CountryName(
               language: LangAra(),
               official: "سانت لوسيا",
               common: "سانت لوسيا",
@@ -13439,6 +13818,11 @@ class CountryNpl extends WorldCountry {
           subregion: const SouthernAsia(),
           languages: const [LangNep()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Савезна Демократска Република Непал",
+              common: "Непал",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية نيبال الديمقراطية الاتحادية",
@@ -13622,6 +14006,11 @@ class CountryMng extends WorldCountry {
           languages: const [LangMon()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Монголија",
+              common: "Монголија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية منغوليا",
               common: "منغوليا",
@@ -13801,6 +14190,11 @@ class CountryZmb extends WorldCountry {
           subregion: const EasternAfrica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Замбија",
+              common: "Замбија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية زامبيا",
@@ -13995,6 +14389,11 @@ class CountryWlf extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Територија државе Валис и Футуна",
+              common: "Валис и Футуна",
+            ),
+            CountryName(
               language: LangAra(),
               official: "إقليم جزر واليس وفوتونا",
               common: "واليس وفوتونا",
@@ -14172,6 +14571,11 @@ class CountryMwi extends WorldCountry {
           subregion: const EasternAfrica(),
           languages: const [LangEng(), LangNya()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Малави",
+              common: "Малави",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية مالاوي",
@@ -14357,6 +14761,11 @@ class CountryBhr extends WorldCountry {
           languages: const [LangAra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Бахреин",
+              common: "Бахреин",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مملكة البحرين",
               common: "‏البحرين",
@@ -14531,6 +14940,11 @@ class CountryUkr extends WorldCountry {
           subregion: const EasternEurope(),
           languages: const [LangUkr()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Украјина",
+              common: "Украјина",
+            ),
             CountryName(
               language: LangAra(),
               official: "أوكرانيا",
@@ -14725,6 +15139,11 @@ class CountryNru extends WorldCountry {
           languages: const [LangEng(), LangNau()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Науру",
+              common: "Науру",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية ناورو",
               common: "ناورو",
@@ -14901,6 +15320,11 @@ class CountryMyt extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Мајот",
+              common: "Мајот",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مايوت",
               common: "مايوت",
@@ -15074,6 +15498,11 @@ class CountryDza extends WorldCountry {
           subregion: const NorthernAfrica(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Народна Демократска Република Алжир",
+              common: "Алжир",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية الديمقراطية الشعبية الجزائرية",
@@ -15267,6 +15696,11 @@ class CountryCan extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Канада",
+              common: "Канада",
+            ),
+            CountryName(
               language: LangAra(),
               official: "كندا",
               common: "كندا",
@@ -15457,6 +15891,11 @@ class CountryLie extends WorldCountry {
           languages: const [LangDeu()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Кнежевина Лихтенштајн",
+              common: "Лихтенштајн",
+            ),
+            CountryName(
               language: LangAra(),
               official: "إمارة ليختنشتاين",
               common: "ليختنشتاين",
@@ -15640,6 +16079,11 @@ class CountryEth extends WorldCountry {
           subregion: const EasternAfrica(),
           languages: const [LangAmh()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Савезна Демократска Република Етиопија",
+              common: "Етиопија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية إثيوبيا الفدرالية الديموقراطية",
@@ -15830,6 +16274,11 @@ class CountryDom extends WorldCountry {
           languages: const [LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Доминиканска Република",
+              common: "Доминикана",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية الدومينيكان",
               common: "جمهورية الدومينيكان",
@@ -16009,6 +16458,11 @@ class CountryBvt extends WorldCountry {
           languages: const [LangNor()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Буве",
+              common: "Буве",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزر بوفيه",
               common: "جزر بوفيه",
@@ -16063,8 +16517,16 @@ class CountryBvt extends WorldCountry {
               official: "Isola Bouvet",
               common: "Isola Bouvet",
             ),
-            CountryName(language: LangJpn(), official: "ブーヴェ島", common: "ブーベ島"),
-            CountryName(language: LangKor(), official: "부베 섬", common: "부베 섬"),
+            CountryName(
+              language: LangJpn(),
+              official: "ブーヴェ島",
+              common: "ブーベ島",
+            ),
+            CountryName(
+              language: LangKor(),
+              official: "부베 섬",
+              common: "부베 섬",
+            ),
             CountryName(
               language: LangNld(),
               official: "Bouvet Island",
@@ -16163,6 +16625,11 @@ class CountryNfk extends WorldCountry {
           // TODO: LangPih(), as soon as it gets ISO 639-1 and 639-2 codes.
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Територија Острва Норфок",
+              common: "Норфок",
+            ),
             CountryName(
               language: LangAra(),
               official: "إقليم جزيرة نورفولك",
@@ -16336,6 +16803,11 @@ class CountryNld extends WorldCountry {
           subregion: const WesternEurope(),
           languages: const [LangNld()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Краљевина Холандија",
+              common: "Холандија",
+            ),
             CountryName(
               language: LangAra(),
               official: "مملكة هولندا",
@@ -16527,6 +16999,11 @@ class CountryMnp extends WorldCountry {
           languages: const [LangCha(), LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Комонвелт Северна Маријанска Острва",
+              common: "Северна Маријанска Острва",
+            ),
+            CountryName(
               language: LangAra(),
               official: "كومونولث جزر ماريانا الشمالية",
               common: "جزر ماريانا الشمالية",
@@ -16713,6 +17190,12 @@ class CountryHkg extends WorldCountry {
           languages: const [LangEng(), LangZho()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official:
+                  """Хонгконг специјална административна област Народне Републике Кине""",
+              common: "Хонгконг",
+            ),
+            CountryName(
               language: LangAra(),
               official:
                   "منطقة هونغ كونغ الادارية التابعة لجمهورية الصين الشعبية",
@@ -16841,6 +17324,11 @@ class CountryHkg extends WorldCountry {
               official: "ہانگ کانگ عوامی جمہوریہ چین کا خصوصی انتظامی علاقہ",
               common: "ہانگ کانگ",
             ),
+            CountryName(
+              language: LangZho(),
+              official: "中华人民共和国香港特别行政区",
+              common: "香港",
+            ),
           ],
           latLng: const [22.267, 114.188],
           bordersCodes: const ["Chn"],
@@ -16904,6 +17392,11 @@ class CountryIrq extends WorldCountry {
           // TODO: LangArc() and LangCkb() as soon as it gets ISO 639-1 code.
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Ирак",
+              common: "Ирак",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية العراق",
@@ -17091,6 +17584,11 @@ class CountryEsp extends WorldCountry {
           languages: const [LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Шпанија",
+              common: "Шпанија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مملكة إسبانيا",
               common: "إسبانيا",
@@ -17276,6 +17774,11 @@ class CountryTgo extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Тоголешка Република",
+              common: "Того",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية توغو",
               common: "توغو",
@@ -17457,6 +17960,11 @@ class CountryChn extends WorldCountry {
           languages: const [LangZho()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Народна Република Кина",
+              common: "Кина",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية الصين الشعبية",
               common: "الصين",
@@ -17571,6 +18079,11 @@ class CountryChn extends WorldCountry {
               official: "عوامی جمہوریہ چین",
               common: "چین",
             ),
+            CountryName(
+              language: LangZho(),
+              official: "中华人民共和国",
+              common: "中国",
+            ),
           ],
           latLng: const [35, 105],
           bordersCodes: const [
@@ -17656,6 +18169,11 @@ class CountryFlk extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Фолкландска Острва",
+              common: "Фолкланди",
+            ),
             CountryName(
               language: LangAra(),
               official: "جزر فوكلاند",
@@ -18154,6 +18672,11 @@ class CountryUsa extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Сједињене Америчке Државе",
+              common: "Сједињене Америчке Државе",
+            ),
+            CountryName(
               language: LangAra(),
               official: "الولايات المتحدة الامريكية",
               common: "الولايات المتحدة",
@@ -18352,6 +18875,11 @@ class CountryMaf extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Заједница Свети Мартин",
+              common: "Свети Мартин",
+            ),
+            CountryName(
               language: LangAra(),
               official: "سانت مارتن",
               common: "سانت مارتن",
@@ -18528,6 +19056,11 @@ class CountryIrn extends WorldCountry {
           languages: const [LangFas()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Исламска Република Иран",
+              common: "Иран",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية إيران الإسلامية",
               common: "إيران",
@@ -18561,6 +19094,11 @@ class CountryIrn extends WorldCountry {
               language: LangFin(),
               official: "Iranin islamilainen tasavalta",
               common: "Iran",
+            ),
+            CountryName(
+              language: LangFas(),
+              official: "جمهوری اسلامی ایران",
+              common: "ایران",
             ),
             CountryName(
               language: LangFra(),
@@ -18717,6 +19255,11 @@ class CountryMex extends WorldCountry {
           subregion: const NorthAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Сједињене Мексичке Државе",
+              common: "Мексико",
+            ),
             CountryName(
               language: LangAra(),
               official: "الولايات المتحدة المكسيكية",
@@ -18902,6 +19445,11 @@ class CountryBrn extends WorldCountry {
           subregion: const SouthEasternAsia(),
           languages: const [LangMsa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Брунеј Дарусалам",
+              common: "Брунеј",
+            ),
             CountryName(
               language: LangAra(),
               official: "بروناي دار السلام",
@@ -19093,6 +19641,11 @@ class CountryCyp extends WorldCountry {
           languages: const [LangEll(), LangTur()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Кипарска Република",
+              common: "Кипар",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية قبرص",
               common: "قبرص",
@@ -19274,6 +19827,11 @@ class CountryNic extends WorldCountry {
           subregion: const CentralAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Никарагва",
+              common: "Никарагва",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية نيكاراغوا",
@@ -19472,6 +20030,11 @@ class CountryCuw extends WorldCountry {
           languages: const [LangEng(), LangNld()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Курасао",
+              common: "Курасао",
+            ),
+            CountryName(
               language: LangAra(),
               official: "دولة كوراساو",
               common: "كوراساو",
@@ -19507,6 +20070,11 @@ class CountryCuw extends WorldCountry {
               common: "Curaçao",
             ),
             CountryName(
+              language: LangHrv(),
+              official: "Curaçao",
+              common: "Curaçao",
+            ),
+            CountryName(
               language: LangFra(),
               official: "Pays de Curaçao",
               common: "Curaçao",
@@ -19520,6 +20088,11 @@ class CountryCuw extends WorldCountry {
               language: LangIta(),
               official: "Paese di Curaçao",
               common: "Curaçao",
+            ),
+            CountryName(
+              language: LangJpn(),
+              official: "キュラソー",
+              common: "キュラソー",
             ),
             CountryName(
               language: LangKor(),
@@ -19645,6 +20218,11 @@ class CountryPri extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangEng(), LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Комонвелт Порторико",
+              common: "Порторико",
+            ),
             CountryName(
               language: LangAra(),
               official: "كومنولث بويرتوريكو",
@@ -19829,6 +20407,11 @@ class CountryNcl extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Нова Каледонија",
+              common: "Нова Каледонија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "كاليدونيا الجديدة",
               common: "كاليدونيا الجديدة",
@@ -19925,7 +20508,7 @@ class CountryNcl extends WorldCountry {
             ),
             CountryName(
               language: LangSpa(),
-              official: "nueva Caledonia",
+              official: "Nueva Caledonia",
               common: "Nueva Caledonia",
             ),
             CountryName(
@@ -20006,6 +20589,11 @@ class CountrySsd extends WorldCountry {
           subregion: const MiddleAfrica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Јужни Судан",
+              common: "Јужни Судан",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية جنوب السودان",
@@ -20204,6 +20792,11 @@ class CountrySom extends WorldCountry {
           languages: const [LangAra(), LangSom()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Савезна Република Сомалија",
+              common: "Сомалија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية الصومال الفيدرالية",
               common: "الصومال",
@@ -20392,6 +20985,11 @@ class CountryGrc extends WorldCountry {
           languages: const [LangEll()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Хеленска Република",
+              common: "Грчка",
+            ),
+            CountryName(
               language: LangAra(),
               official: "الجمهورية الهيلينية",
               common: "اليونان",
@@ -20575,6 +21173,11 @@ class CountryBes extends WorldCountry {
           languages: const [LangEng(), LangNld()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Бонер, Свети Еустахије и Саба",
+              common: "Карипска Холандија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "بونير وسينت أوستاتيوس وسابا",
               common: "الجزر الكاريبية الهولندية",
@@ -20755,6 +21358,11 @@ class CountryLao extends WorldCountry {
           subregion: const SouthEasternAsia(),
           languages: const [LangLao()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Лаошка Народна Демократска Република",
+              common: "Лаос",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية لاوس الديمقراطية الشعبية",
@@ -20949,6 +21557,11 @@ class CountryBlz extends WorldCountry {
           languages: const [LangEng(), LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Белизе",
+              common: "Белизе",
+            ),
+            CountryName(
               language: LangAra(),
               official: "بليز",
               common: "بليز",
@@ -21127,6 +21740,11 @@ class CountrySlv extends WorldCountry {
           subregion: const CentralAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Ел Салвадор",
+              common: "Салвадор",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية السلفادور",
@@ -21312,6 +21930,11 @@ class CountryJam extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Јамајка",
+              common: "Јамајка",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جامايكا",
               common: "جامايكا",
@@ -21489,6 +22112,11 @@ class CountryUry extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Источна Република Уругвај",
+              common: "Уругвај",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية الأوروغواي الشرقية",
@@ -21679,6 +22307,11 @@ class CountryPng extends WorldCountry {
           // TODO: LangTpi(), as soon as it gets ISO 639-1 code.
           languages: const [LangEng(), LangHmo()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Независна Држава Папуа Нова Гвинеја",
+              common: "Папуа Нова Гвинеја",
+            ),
             CountryName(
               language: LangAra(),
               official: "دولة بابوا غينيا الجديدة",
@@ -21878,6 +22511,11 @@ class CountryLux extends WorldCountry {
           languages: const [LangDeu(), LangFra(), LangLtz()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Велико Војводство Луксембург",
+              common: "Луксембург",
+            ),
+            CountryName(
               language: LangAra(),
               official: "دوقية لوكسمبورغ",
               common: "لوكسمبورغ",
@@ -22059,6 +22697,11 @@ class CountryChl extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Чиле",
+              common: "Чиле",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية تشيلي",
@@ -22248,6 +22891,11 @@ class CountryVat extends WorldCountry {
           languages: const [LangIta(), LangLat()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Град Ватикан",
+              common: "Ватикан",
+            ),
+            CountryName(
               language: LangAra(),
               official: "دولة مدينة الفاتيكان",
               common: "مدينة الفاتيكان",
@@ -22427,6 +23075,11 @@ class CountryGnb extends WorldCountry {
           // TODO: LangPov(), as soon as it gets ISO 639-1 and 639-2 codes.
           languages: const [LangPor()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Гвинеја Бисао",
+              common: "Гвинеја Бисао",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية غينيا بيساو",
@@ -22611,6 +23264,11 @@ class CountryUga extends WorldCountry {
           subregion: const EasternAfrica(),
           languages: const [LangEng(), LangSwa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Уганда",
+              common: "Уганда",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية أوغندا",
@@ -22801,6 +23459,11 @@ class CountryVen extends WorldCountry {
           languages: const [LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Боливарска Република Венецуела",
+              common: "Венецуела",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية فنزويلا البوليفارية",
               common: "فنزويلا",
@@ -22987,6 +23650,11 @@ class CountrySrb extends WorldCountry {
           subregion: const SouthwestEurope(),
           languages: const [LangSrp()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Србија",
+              common: "Србија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية صيربيا",
@@ -23182,6 +23850,11 @@ class CountryBen extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Бенин",
+              common: "Бенин",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية بنين",
               common: "بنين",
@@ -23366,6 +24039,11 @@ class CountryBgd extends WorldCountry {
           languages: const [LangBen()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Народна Република Бангладеш",
+              common: "Бангладеш",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية بنغلاديش الشعبية",
               common: "بنغلاديش",
@@ -23546,6 +24224,11 @@ class CountryBhs extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Комонвелт Бахама",
+              common: "Бахами",
+            ),
+            CountryName(
               language: LangAra(),
               official: "كومنولث جزر البهاما",
               common: "باهاماس",
@@ -23714,6 +24397,11 @@ class CountryNiu extends WorldCountry {
           // TODO: LangNiu(), as soon as it gets ISO 639-1 and 639-2 codes.
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Нијуе",
+              common: "Нијуе",
+            ),
             CountryName(
               language: LangAra(),
               official: "نييوي",
@@ -23887,6 +24575,11 @@ class CountryAtg extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Антигва и Барбуда",
+              common: "Антигва и Барбуда",
+            ),
             CountryName(
               language: LangAra(),
               official: "أنتيغوا وباربودا",
@@ -24070,6 +24763,11 @@ class CountryBlm extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Територијални Kолектив Сен Бартелеми",
+              common: "Сен Бартелеми",
+            ),
             CountryName(
               language: LangAra(),
               official: "التجمع الإقليمي لسانت بارتيليمي",
@@ -24260,6 +24958,11 @@ class CountrySyc extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Сејшели",
+              common: "Сејшели",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية سيشل",
               common: "سيشل",
@@ -24440,6 +25143,11 @@ class CountryEsh extends WorldCountry {
           languages: const [LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Сахарска Арапска Демократска Република",
+              common: "Сахарска Република",
+            ),
+            CountryName(
               language: LangAra(),
               official: "الجمهورية العربية الصحراوية الديمقراطية",
               common: "الصحراء الغربية",
@@ -24526,7 +25234,7 @@ class CountryEsh extends WorldCountry {
             ),
             CountryName(
               language: LangRus(),
-              official: "Sahrawi Арабская Демократическая Республика",
+              official: "Сахарская Арабская Демократическая Республика",
               common: "Западная Сахара",
             ),
             CountryName(
@@ -24612,6 +25320,11 @@ class CountryLby extends WorldCountry {
           subregion: const NorthernAfrica(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Држава Либија",
+              common: "Либија",
+            ),
             CountryName(
               language: LangAra(),
               official: "دولة ليبيا",
@@ -24801,6 +25514,11 @@ class CountryMkd extends WorldCountry {
           subregion: const SouthwestEurope(),
           languages: const [LangMkd()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Северна Македонија",
+              common: "Северна Македонија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية شمال مقدونيا",
@@ -24998,6 +25716,11 @@ class CountryPer extends WorldCountry {
           languages: const [LangAym(), LangQue(), LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Перу",
+              common: "Перу",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية بيرو",
               common: "بيرو",
@@ -25188,6 +25911,11 @@ class CountryBdi extends WorldCountry {
           languages: const [LangFra(), LangRun()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Бурунди",
+              common: "Бурунди",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية بوروندي",
               common: "بوروندي",
@@ -25371,6 +26099,11 @@ class CountryKir extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Независна и Суверена Република Кирибати",
+              common: "Кирибати",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية كيريباتي",
               common: "كيريباتي",
@@ -25552,6 +26285,11 @@ class CountryTur extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangTur()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Турска Република",
+              common: "Турска",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية التركية",
@@ -25750,6 +26488,11 @@ class CountryTza extends WorldCountry {
           languages: const [LangEng(), LangSwa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Уједињена Република Танзанија",
+              common: "Танзанија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية تنزانيا الاتحادية",
               common: "تنزانيا",
@@ -25940,6 +26683,11 @@ class CountryTun extends WorldCountry {
           languages: const [LangAra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Тунишанска Република",
+              common: "Тунис",
+            ),
+            CountryName(
               language: LangAra(),
               official: "الجمهورية التونسية",
               common: "تونس",
@@ -26119,6 +26867,11 @@ class CountryMsr extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Монтсерат",
+              common: "Монтсерат",
+            ),
             CountryName(
               language: LangAra(),
               official: "مونتسرات",
@@ -26307,6 +27060,11 @@ class CountryKgz extends WorldCountry {
           subregion: const CentralAsia(),
           languages: const [LangKir(), LangRus()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Киргиска Република",
+              common: "Киргизија",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية القيرغيزية",
@@ -26501,6 +27259,11 @@ class CountryImn extends WorldCountry {
           languages: const [LangEng(), LangGlv()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Острво Мен",
+              common: "Острво Мен",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزيرة مان",
               common: "جزيرة مان",
@@ -26671,6 +27434,11 @@ class CountryGlp extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Гваделуп",
+              common: "Гваделуп",
+            ),
             CountryName(
               language: LangAra(),
               official: "غوادلوب",
@@ -26848,6 +27616,11 @@ class CountryKwt extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Држава Кувајт",
+              common: "Кувајт",
+            ),
             CountryName(
               language: LangAra(),
               official: "دولة الكويت",
@@ -27027,6 +27800,11 @@ class CountryVgb extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Британска Девичанска Острва",
+              common: "Британска Девичанска Острва",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزر العذراء البريطانية",
               common: "جزر العذراء",
@@ -27204,6 +27982,11 @@ class CountryCiv extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Обала Слоноваче",
+              common: "Обала Слоноваче",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية ساحل العاج",
@@ -27391,6 +28174,11 @@ class CountryCxr extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Божићно Острво",
+              common: "Божићно Острво",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزيرة كريسماس",
               common: "جزيرة كريسماس",
@@ -27564,6 +28352,11 @@ class CountryLso extends WorldCountry {
           subregion: const SouthernAfrica(),
           languages: const [LangEng(), LangSot()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Краљевина Лесото",
+              common: "Лесото",
+            ),
             CountryName(
               language: LangAra(),
               official: "مملكة ليسوتو",
@@ -27753,6 +28546,11 @@ class CountryJey extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Џерзи",
+              common: "Џерзи",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جيرزي",
               common: "جيرزي",
@@ -27933,6 +28731,11 @@ class CountrySvn extends WorldCountry {
           subregion: const CentralEurope(),
           languages: const [LangSlv()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Словенија",
+              common: "Словенија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية سلوفينيا",
@@ -28142,6 +28945,11 @@ class CountryBel extends WorldCountry {
           languages: const [LangDeu(), LangFra(), LangNld()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Белгија",
+              common: "Белгија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مملكة بلجيكا",
               common: "بلجيكا",
@@ -28323,6 +29131,11 @@ class CountryTca extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Острва Теркс и Кејкос",
+              common: "Теркс и Кејкос",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزر توركس وكايكوس",
               common: "جزر توركس وكايكوس",
@@ -28501,6 +29314,11 @@ class CountryGib extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Гибралтар",
+              common: "Гибралтар",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جبل طارق",
               common: "جبل طارق",
@@ -28674,6 +29492,11 @@ class CountryQat extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Држава Катар",
+              common: "Катар",
+            ),
             CountryName(
               language: LangAra(),
               official: "دولة قطر",
@@ -28856,6 +29679,11 @@ class CountryBwa extends WorldCountry {
           subregion: const SouthernAfrica(),
           languages: const [LangEng(), LangTsn()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Боцвана",
+              common: "Боцвана",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية بوتسوانا",
@@ -29058,6 +29886,11 @@ class CountryGnq extends WorldCountry {
           languages: const [LangFra(), LangPor(), LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Екваторијална Гвинеја",
+              common: "Екваторијална Гвинеја",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية غينيا الاستوائية",
               common: "غينيا الاستوائية",
@@ -29247,6 +30080,11 @@ class CountryDji extends WorldCountry {
           languages: const [LangAra(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Џибути",
+              common: "Џибути",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية جيبوتي",
               common: "جيبوتي",
@@ -29425,6 +30263,11 @@ class CountryGuy extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Кооперативна Република Гвајана",
+              common: "Гвајана",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية غيانا التعاونية",
@@ -29613,6 +30456,11 @@ class CountryGum extends WorldCountry {
           languages: const [LangCha(), LangEng(), LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Гуам",
+              common: "Гуам",
+            ),
+            CountryName(
               language: LangAra(),
               official: "غوام",
               common: "غوام",
@@ -29789,6 +30637,11 @@ class CountryMco extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Кнежевина Монако",
+              common: "Монако",
+            ),
+            CountryName(
               language: LangAra(),
               official: "إمارة موناكو",
               common: "موناكو",
@@ -29960,6 +30813,11 @@ class CountrySlb extends WorldCountry {
           subregion: const Melanesia(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Соломонска Острва",
+              common: "Соломонска Острва",
+            ),
             CountryName(
               language: LangAra(),
               official: "جزر سليمان",
@@ -30150,6 +31008,11 @@ class CountryGgy extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Бејливик Гернзи",
+              common: "Гернзи",
+            ),
+            CountryName(
               language: LangAra(),
               official: "غيرنزي",
               common: "غيرنزي",
@@ -30336,6 +31199,11 @@ class CountryPry extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangGrn(), LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Парагвај",
+              common: "Парагвај",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية باراغواي",
@@ -30525,6 +31393,11 @@ class CountrySur extends WorldCountry {
           languages: const [LangNld()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Суринам",
+              common: "Суринам",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية سورينام",
               common: "سورينام",
@@ -30705,6 +31578,11 @@ class CountryUmi extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Мала спољна острва Сједињених Америчких Држава",
+              common: "Мала спољна острва Сједињених Америчких Држава",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزر الولايات المتحدة الصغيرة النائية",
               common: "جزر الولايات المتحدة الصغيرة النائية",
@@ -30878,6 +31756,11 @@ class CountryGin extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Кооперативна Република Гвајана",
+              common: "Гвајана",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية غينيا",
@@ -31062,6 +31945,11 @@ class CountryCze extends WorldCountry {
           subregion: const CentralEurope(),
           languages: const [LangCes()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Чешка Република",
+              common: "Чешка",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية التشيك",
@@ -31257,6 +32145,11 @@ class CountryCom extends WorldCountry {
           languages: const [LangAra(), LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Савез Комора",
+              common: "Комори",
+            ),
+            CountryName(
               language: LangAra(),
               official: "الإتحاد القمري",
               common: "جزر القمر",
@@ -31428,6 +32321,11 @@ class CountryGha extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Гана",
+              common: "Гана",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية غانا",
@@ -31604,6 +32502,11 @@ class CountryKna extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Федерација Сент Китс и Невис",
+              common: "Сент Китс и Невис",
+            ),
             CountryName(
               language: LangAra(),
               official: "اتحاد القديس كريستوفر ونيفيس",
@@ -31787,6 +32690,11 @@ class CountryPyf extends WorldCountry {
           subregion: const Polynesia(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Француска Полинезија",
+              common: "Француска Полинезија",
+            ),
             CountryName(
               language: LangAra(),
               official: "بولينزيا الفرنسية",
@@ -32002,6 +32910,11 @@ class CountryZwe extends WorldCountry {
           ],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Зимбабве",
+              common: "Зимбабве",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية زيمبابوي",
               common: "زيمبابوي",
@@ -32186,6 +33099,11 @@ class CountryKen extends WorldCountry {
           subregion: const EasternAfrica(),
           languages: const [LangEng(), LangSwa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Кенија",
+              common: "Кенија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية كينيا",
@@ -32385,6 +33303,11 @@ class CountryKaz extends WorldCountry {
           languages: const [LangKaz(), LangRus()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Казахстан",
+              common: "Казахстан",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية كازاخستان",
               common: "كازاخستان",
@@ -32575,6 +33498,11 @@ class CountryMne extends WorldCountry {
           languages: const [LangSrp()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Црна Гора",
+              common: "Црна Гора",
+            ),
+            CountryName(
               language: LangAra(),
               official: "الجبل الاسود",
               common: "الجبل الاسود",
@@ -32758,6 +33686,11 @@ class CountryTuv extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Тувалу",
+              common: "Тувалу",
+            ),
+            CountryName(
               language: LangAra(),
               official: "توفالو",
               common: "توفالو",
@@ -32934,6 +33867,11 @@ class CountryPan extends WorldCountry {
           subregion: const CentralAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Панама",
+              common: "Панама",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية بنما",
@@ -33118,6 +34056,11 @@ class CountryAnd extends WorldCountry {
           languages: const [LangCat()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Кнежевина Андора",
+              common: "Андора",
+            ),
+            CountryName(
               language: LangAra(),
               official: "إمارة أندورا",
               common: "أندورا",
@@ -33299,6 +34242,11 @@ class CountryVir extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Америчка Девичанска Острва",
+              common: "Америчка Девичанска Острва",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزر العذراء الامريكية",
               common: "جزر العذراء الامريكية",
@@ -33476,6 +34424,11 @@ class CountryIsr extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangAra(), LangHeb()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Држава Израел",
+              common: "Израел",
+            ),
             CountryName(
               language: LangAra(),
               official: "دولة إسرائيل",
@@ -33665,6 +34618,11 @@ class CountryPrt extends WorldCountry {
           languages: const [LangPor()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Португалска Република",
+              common: "Португал",
+            ),
+            CountryName(
               language: LangAra(),
               official: "الجمهورية البرتغالية",
               common: "البرتغال",
@@ -33845,6 +34803,11 @@ class CountryAut extends WorldCountry {
           subregion: const CentralEurope(),
           languages: const [LangDeu()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Аустрија",
+              common: "Аустрија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية النمسا",
@@ -34046,6 +35009,11 @@ class CountryFin extends WorldCountry {
           languages: const [LangFin(), LangSwe()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Финска",
+              common: "Финска",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية فنلندا",
               common: "فنلندا",
@@ -34226,6 +35194,11 @@ class CountryEst extends WorldCountry {
           subregion: const NorthernEurope(),
           languages: const [LangEst()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Естонска Република",
+              common: "Естонија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية إستونيا",
@@ -34410,6 +35383,11 @@ class CountryDma extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Комонвелт Доминика",
+              common: "Доминика",
+            ),
+            CountryName(
               language: LangAra(),
               official: "كومونولث دومينيكا",
               common: "دومينيكا",
@@ -34588,6 +35566,11 @@ class CountryYem extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Јемен",
+              common: "Јемен",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية اليمنية",
@@ -34768,6 +35751,11 @@ class CountryAfg extends WorldCountry {
           // TODO: LangPrs(), as soon as it gets ISO 639-1 and 639-2 codes.
           languages: const [LangPus(), LangTuk()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Исламска Република Авганистан",
+              common: "Авганистан",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية أففانستان الإسلامية",
@@ -34957,6 +35945,11 @@ class CountrySyr extends WorldCountry {
           languages: const [LangAra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Сиријска Арапска Република",
+              common: "Сирија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "الجمهورية العربية السورية",
               common: "سوريا",
@@ -35138,6 +36131,11 @@ class CountryMdv extends WorldCountry {
           subregion: const SouthernAsia(),
           languages: const [LangDiv()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Малдивска Република",
+              common: "Малдиви",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية المالديف",
@@ -35326,6 +36324,11 @@ class CountryTls extends WorldCountry {
           languages: const [LangPor()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Демократска Република Источни Тимор",
+              common: "Источни Тимор",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية تيمور الشرقية الديمقراطية",
               common: "تيمور الشرقية",
@@ -35509,6 +36512,11 @@ class CountryLtu extends WorldCountry {
           subregion: const NorthernEurope(),
           languages: const [LangLit()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Литванска Република",
+              common: "Литванија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية ليتوانيا",
@@ -35701,6 +36709,11 @@ class CountryNzl extends WorldCountry {
           languages: const [LangEng(), LangMri()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Нови Зеланд",
+              common: "Нови Зеланд",
+            ),
+            CountryName(
               language: LangAra(),
               official: "نيوزيلندا",
               common: "نيوزيلندا",
@@ -35797,7 +36810,7 @@ class CountryNzl extends WorldCountry {
             ),
             CountryName(
               language: LangSpa(),
-              official: "nueva Zelanda",
+              official: "Nueva Zelanda",
               common: "Nueva Zelanda",
             ),
             CountryName(
@@ -35888,6 +36901,11 @@ class CountryBmu extends WorldCountry {
           subregion: const NorthAmerica(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Бермуда",
+              common: "Бермуда",
+            ),
             CountryName(
               language: LangAra(),
               official: "برمودا",
@@ -36069,6 +37087,11 @@ class CountryDeu extends WorldCountry {
           subregion: const WesternEurope(),
           languages: const [LangDeu()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Савезна Република Немачка",
+              common: "Немачка",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية ألمانيا الاتحادية",
@@ -36266,6 +37289,11 @@ class CountryArg extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangGrn(), LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Аргентинска Република",
+              common: "Аргентина",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية الأرجنتين",
@@ -36467,6 +37495,11 @@ class CountryBlr extends WorldCountry {
           languages: const [LangBel(), LangRus()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Белорусија",
+              common: "Белорусија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية بيلاروسيا",
               common: "بيلاروسيا",
@@ -36655,6 +37688,11 @@ class CountryBrb extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Барбадос",
+              common: "Барбадос",
+            ),
+            CountryName(
               language: LangAra(),
               official: "باربادوس",
               common: "باربادوس",
@@ -36831,6 +37869,11 @@ class CountryGtm extends WorldCountry {
           subregion: const CentralAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Гватемала",
+              common: "Гватемала",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية غواتيمالا",
@@ -37026,6 +38069,11 @@ class CountryAze extends WorldCountry {
           languages: const [LangAze(), LangRus()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Азербејџанска Република",
+              common: "Азербејџан",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية أذربيجان",
               common: "أذربيجان",
@@ -37213,6 +38261,11 @@ class CountryMar extends WorldCountry {
           languages: const [LangAra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Мароко",
+              common: "Мароко",
+            ),
+            CountryName(
               language: LangAra(),
               official: "المملكة المغربية",
               common: "المغرب",
@@ -37389,6 +38442,11 @@ class CountryCok extends WorldCountry {
           // TODO: LangRar() as soon as it gets ISO 639-1 code.
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Кукова Острва",
+              common: "Кукова Острва",
+            ),
             CountryName(
               language: LangAra(),
               official: "جزر كوك",
@@ -37571,6 +38629,11 @@ class CountryCaf extends WorldCountry {
           subregion: const MiddleAfrica(),
           languages: const [LangFra(), LangSag()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Централноафричка Република",
+              common: "Централноафричка Република",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية أفريقيا الوسطى",
@@ -37756,6 +38819,11 @@ class CountryRou extends WorldCountry {
           subregion: const SouthwestEurope(),
           languages: const [LangRon()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Румунија",
+              common: "Румунија",
+            ),
             CountryName(
               language: LangAra(),
               official: "رومانيا",
@@ -37951,6 +39019,11 @@ class CountryMlt extends WorldCountry {
           languages: const [LangEng(), LangMlt()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Малта",
+              common: "Малта",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية مالطا",
               common: "مالطا",
@@ -38135,6 +39208,11 @@ class CountryArm extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangHye()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Јерменија",
+              common: "Јерменија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية أرمينيا",
@@ -38327,6 +39405,11 @@ class CountrySen extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Сенегал",
+              common: "Сенегал",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية السنغال",
               common: "السنغال",
@@ -38514,6 +39597,11 @@ class CountryBgr extends WorldCountry {
           subregion: const SouthwestEurope(),
           languages: const [LangBul()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Бугарска",
+              common: "Бугарска",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية بلغاريا",
@@ -38721,6 +39809,11 @@ class CountryCod extends WorldCountry {
           ],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Демократска Република Конго",
+              common: "ДР Конго",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية الكونغو الديمقراطية",
               common: "الكونغو",
@@ -38920,6 +40013,11 @@ class CountryHti extends WorldCountry {
           languages: const [LangFra(), LangHat()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Хаити",
+              common: "Хаити",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية هايتي",
               common: "هايتي",
@@ -39098,6 +40196,11 @@ class CountryAlb extends WorldCountry {
           subregion: const SouthwestEurope(),
           languages: const [LangSqi()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Албанија",
+              common: "Албанија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية ألبانيا",
@@ -39280,6 +40383,11 @@ class CountryJor extends WorldCountry {
           languages: const [LangAra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Хашемитска Краљевина Јордан",
+              common: "Јордан",
+            ),
+            CountryName(
               language: LangAra(),
               official: "المملكة الأردنية الهاشمية",
               common: "الأردن",
@@ -39459,6 +40567,11 @@ class CountrySjm extends WorldCountry {
           subregion: const NorthernEurope(),
           languages: const [LangNor()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Свалбард и Јан Мајен",
+              common: "Свалбард и Јан Мајен",
+            ),
             CountryName(
               language: LangAra(),
               official: "سفالبارد ويان ماين",
@@ -39642,6 +40755,11 @@ class CountryMdg extends WorldCountry {
           languages: const [LangFra(), LangMlg()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Мадагаскар",
+              common: "Мадагаскар",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية مدغشقر",
               common: "مدغشقر",
@@ -39821,6 +40939,11 @@ class CountryFra extends WorldCountry {
           subregion: const WesternEurope(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Француска Република",
+              common: "Француска",
+            ),
             CountryName(
               language: LangAra(),
               official: "الجمهورية الفرنسية",
@@ -40026,6 +41149,11 @@ class CountryFsm extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Савез Држава Микронезије",
+              common: "Микронезија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "ولايات ميكرونيسيا المتحدة",
               common: "ميكرونيسيا",
@@ -40204,6 +41332,11 @@ class CountryAbw extends WorldCountry {
           // TODO: LangPap(), as soon as it gets ISO 639-1 code.
           languages: const [LangNld()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Аруба",
+              common: "Аруба",
+            ),
             CountryName(
               language: LangAra(),
               official: "أروبا",
@@ -40393,6 +41526,11 @@ class CountryInd extends WorldCountry {
           subregion: const SouthernAsia(),
           languages: const [LangEng(), LangHin(), LangTam()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Индија",
+              common: "Индија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية الهند",
@@ -40606,6 +41744,11 @@ class CountryNam extends WorldCountry {
           ],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Намибија",
+              common: "Намибија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية ناميبيا",
               common: "ناميبيا",
@@ -40797,6 +41940,11 @@ class CountryFji extends WorldCountry {
           languages: const [LangEng(), LangFij()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Фиџи",
+              common: "Фиџи",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية جزر فيجي",
               common: "فيجي",
@@ -40977,6 +42125,11 @@ class CountrySdn extends WorldCountry {
           subregion: const NorthernAfrica(),
           languages: const [LangAra(), LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Судан",
+              common: "Судан",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية السودان",
@@ -41165,6 +42318,11 @@ class CountryStp extends WorldCountry {
           languages: const [LangPor()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Демократска Република Сао Томе и Принсипе",
+              common: "Сао Томе и Принсипе",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية ساو تومي وبرينسيب الديمقراطية",
               common: "ساو تومي وبرينسيب",
@@ -41347,6 +42505,11 @@ class CountrySau extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Краљевина Саудијска Арабија",
+              common: "Саудијска Арабија",
+            ),
             CountryName(
               language: LangAra(),
               official: "المملكة العربية السعودية",
@@ -41533,6 +42696,11 @@ class CountryHmd extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Острва Херд и Макдоналд",
+              common: "Острва Херд и Макдоналд",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزيرة هيرد وجزر ماكدونالد",
               common: "جزيرة هيرد وجزر ماكدونالد",
@@ -41710,6 +42878,11 @@ class CountryLka extends WorldCountry {
           subregion: const SouthernAsia(),
           languages: const [LangSin(), LangTam()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Демократска Социјалистичка Република Сри Ланка",
+              common: "Сри Ланка",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية سريلانكا الديمقراطية الشعبية",
@@ -41895,6 +43068,11 @@ class CountrySwe extends WorldCountry {
           languages: const [LangSwe()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Шведска",
+              common: "Шведска",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مملكة السويد",
               common: "السويد",
@@ -42079,6 +43257,11 @@ class CountryTon extends WorldCountry {
           languages: const [LangEng(), LangTon()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Тонга",
+              common: "Тонга",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مملكة تونغا",
               common: "تونغا",
@@ -42257,6 +43440,11 @@ class CountryDnk extends WorldCountry {
           subregion: const NorthernEurope(),
           languages: const [LangDan()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Краљевина Данска",
+              common: "Данска",
+            ),
             CountryName(
               language: LangAra(),
               official: "مملكة الدنمارك",
@@ -42446,6 +43634,11 @@ class CountryMys extends WorldCountry {
           languages: const [LangEng(), LangMsa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Малезија",
+              common: "Малезија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "ماليزيا",
               common: "ماليزيا",
@@ -42626,6 +43819,11 @@ class CountryCri extends WorldCountry {
           subregion: const CentralAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Костарика",
+              common: "Костарика",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية كوستاريكا",
@@ -42833,6 +44031,11 @@ class CountryBol extends WorldCountry {
           languages: const [LangAym(), LangGrn(), LangQue(), LangSpa()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Вишенационална Држава Боливија",
+              common: "Боливија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "دولة بوليفيا المتعددة القوميات",
               common: "بوليفيا",
@@ -43019,6 +44222,11 @@ class CountryBtn extends WorldCountry {
           languages: const [LangDzo()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Бутан",
+              common: "Бутан",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مملكة بوتان",
               common: "بوتان",
@@ -43196,6 +44404,11 @@ class CountryCym extends WorldCountry {
           subregion: const Caribbean(),
           languages: const [LangEng()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Кајманска Острва",
+              common: "Кајманска Острва",
+            ),
             CountryName(
               language: LangAra(),
               official: "جزر كايمان",
@@ -43375,6 +44588,11 @@ class CountryPcn extends WorldCountry {
           languages: const [LangEng()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Острва Питкерн, Хендерсон, Дуци и Оин",
+              common: "Острва Питкерн",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جزر بيتكيرن",
               common: "جزر بيتكيرن",
@@ -43551,6 +44769,11 @@ class CountryMli extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangFra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Мали",
+              common: "Мали",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية مالي",
@@ -43745,6 +44968,11 @@ class CountrySxm extends WorldCountry {
           languages: const [LangEng(), LangFra(), LangNld()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Свети Мартин (Холандија)",
+              common: "Свети Мартин",
+            ),
+            CountryName(
               language: LangAra(),
               official: "سينت مارتن",
               common: "سينت مارتن",
@@ -43922,6 +45150,11 @@ class CountryLva extends WorldCountry {
           subregion: const NorthernEurope(),
           languages: const [LangLav()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Летонска Република",
+              common: "Летонија",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية لاتفيا",
@@ -44121,6 +45354,11 @@ class CountryAsm extends WorldCountry {
           languages: const [LangEng(), LangSmo()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Америчка Самоа",
+              common: "Америчка Самоа",
+            ),
+            CountryName(
               language: LangAra(),
               official: "ساموا الأمريكية",
               common: "ساموا الأمريكية",
@@ -44303,6 +45541,11 @@ class CountrySpm extends WorldCountry {
           languages: const [LangFra()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Сен Пјер и Микелон",
+              common: "Сен Пјер и Микелон",
+            ),
+            CountryName(
               language: LangAra(),
               official: "سان بيير وميكلون",
               common: "سان بيير وميكلون",
@@ -44484,6 +45727,11 @@ class CountryEcu extends WorldCountry {
           subregion: const SouthAmerica(),
           languages: const [LangSpa()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Еквадор",
+              common: "Република Еквадор",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية الإكوادور",
@@ -44673,6 +45921,11 @@ class CountryTha extends WorldCountry {
           languages: const [LangTha()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Краљевина Тајланд",
+              common: "Тајланд",
+            ),
+            CountryName(
               language: LangAra(),
               official: "مملكة تايلند",
               common: "تايلند",
@@ -44848,6 +46101,11 @@ class CountryAre extends WorldCountry {
           subregion: const WesternAsia(),
           languages: const [LangAra()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Уједињени Арапски Емирати",
+              common: "Уједињени Арапски Емирати",
+            ),
             CountryName(
               language: LangAra(),
               official: "الإمارات العربية المتحدة",
@@ -45033,6 +46291,11 @@ class CountryHrv extends WorldCountry {
           subregion: const SouthwestEurope(),
           languages: const [LangHrv()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Хрватска",
+              common: "Хрватска",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية كرواتيا",
@@ -45226,6 +46489,11 @@ class CountryMmr extends WorldCountry {
           languages: const [LangMya()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Савез Мјанмара",
+              common: "Мјанмар",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية اتحاد ميانمار",
               common: "ميانمار",
@@ -45406,6 +46674,11 @@ class CountryGeo extends WorldCountry {
           languages: const [LangKat()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Грузија",
+              common: "Грузија",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جورجيا",
               common: "جورجيا",
@@ -45562,7 +46835,11 @@ class CountryTwn extends WorldCountry {
             official: "Republic of China (Taiwan)",
           ),
           nativeNames: const [
-            CountryName(language: LangZho(), official: "中華民國", common: "台灣"),
+            CountryName(
+              language: LangZho(),
+              official: "中華民國",
+              common: "台灣",
+            ),
           ],
           tld: const [".tw", ".台灣", ".台湾"],
           codeShort: "TW",
@@ -45585,6 +46862,11 @@ class CountryTwn extends WorldCountry {
           subregion: const EasternAsia(),
           languages: const [LangZho()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Република Кина",
+              common: "Тајван",
+            ),
             CountryName(
               language: LangAra(),
               official: "جمهورية الصين (تايوان)",
@@ -45700,6 +46982,11 @@ class CountryTwn extends WorldCountry {
               official: "جمہوریہ چین (تائیوان)",
               common: "تائیوان",
             ),
+            CountryName(
+              language: LangZho(),
+              official: "中華民國",
+              common: "台灣",
+            ),
           ],
           latLng: const [23.5, 121],
           area: 36193,
@@ -45778,6 +47065,11 @@ class CountryChe extends WorldCountry {
           subregion: const WesternEurope(),
           languages: const [LangFra(), LangDeu(), LangIta(), LangRoh()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Швајцарска Конфедерација",
+              common: "Швајцарска",
+            ),
             CountryName(
               language: LangAra(),
               official: "الاتحاد السويسري",
@@ -45978,6 +47270,11 @@ class CountryEri extends WorldCountry {
           languages: const [LangAra(), LangEng(), LangTir()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Држава Еритреја",
+              common: "Еритреја",
+            ),
+            CountryName(
               language: LangAra(),
               official: "دولة إريتريا",
               common: "إريتريا",
@@ -46168,6 +47465,11 @@ class CountryCog extends WorldCountry {
           languages: const [LangFra(), LangKon(), LangLin()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Конго",
+              common: "Конго",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية الكونغو",
               common: "جمهورية الكونفو",
@@ -46355,6 +47657,11 @@ class CountryFro extends WorldCountry {
           subregion: const NorthernEurope(),
           languages: const [LangDan(), LangFao()],
           translations: const [
+            CountryName(
+              language: LangSrp(),
+              official: "Фарска острва",
+              common: "Фарска острва",
+            ),
             CountryName(
               language: LangAra(),
               official: "جزر فارو",

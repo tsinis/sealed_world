@@ -9,10 +9,12 @@ on:
 
 jobs:
   verify-flutter-package:
+    env:
+      relative_path: packages/${{ inputs.package_name }}
     name: ⏳ Verify ${{ inputs.package_name }} Package (Flutter)
     defaults:
       run:
-        working-directory: packages/${{ inputs.package_name }}
+        working-directory: ${{ env.relative_path }}
 
     runs-on: "ubuntu-latest"
     timeout-minutes: 15
@@ -36,7 +38,7 @@ jobs:
         with:
           fail-on: 'error'
           token: ${{ secrets.GITHUB_TOKEN }}
-          working-directory: packages/${{ inputs.package_name }}
+          working-directory: ${{ env.relative_path }}
           format: false # TODO: Enable when formatting in Dart 3 will be supported.
 
       - name: 🧮 Calculate PANA Score
@@ -45,7 +47,7 @@ jobs:
         id: analysis
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          relativePath: packages/${{ inputs.package_name }}
+          relativePath: ${{ env.relative_path }}
 
       - name: 📈 Check Pub Score # TODO: Increase PERCENTAGE to 100 before publish.
         env:
@@ -65,7 +67,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           folders: "lib, test"
-          relative_path: packages/${{ inputs.package_name }}
+          relative_path: ${{ env.relative_path }}
           pull_request_comment: true
           check_unused_files: true
           fatal_performance: true
@@ -78,14 +80,14 @@ jobs:
       - name: 📊 Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
         with:
-          path: packages/${{ inputs.package_name }}/coverage/lcov.info
+          path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.gen.dart **/*.freezed.dart"
           min_coverage: 0 # TODO: Increase to 95 before publish.
 
       - name: 💯 Upload Coverage
         uses: codecov/codecov-action@v3
         with:
-          file: ./packages/${{ inputs.package_name }}/coverage/lcov.info
+          file: ${{ env.relative_path }}/coverage/lcov.info
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
           token: ${{ secrets.CODECOV_TOKEN }}

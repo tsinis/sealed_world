@@ -48,6 +48,11 @@ class CountryUnk extends WorldCountry {
           languages: const [LangSrp(), LangSqi()],
           translations: const [
             CountryName(
+              language: LangSrp(),
+              official: "Република Косово",
+              common: "Косово",
+            ),
+            CountryName(
               language: LangAra(),
               official: "جمهورية كوسوفو",
               common: "كوسوفو",
@@ -101,6 +106,11 @@ class CountryUnk extends WorldCountry {
               language: LangIta(),
               official: "Repubblica del Kosovo",
               common: "Kosovo",
+            ),
+            CountryName(
+              language: LangJpn(),
+              official: "コソボ",
+              common: "コソボ",
             ),
             CountryName(
               language: LangKor(),
