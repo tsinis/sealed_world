@@ -64,7 +64,7 @@ jobs:
         if: false # TODO: Replace it when DCM will support Dart 3.
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          folders: "lib test"
+          folders: "lib, test"
           relative_path: ${{ env.relative_path }}
           pull_request_comment: true
           check_unused_files: true
