@@ -108,6 +108,11 @@ class CountryUnk extends WorldCountry {
               common: "Kosovo",
             ),
             CountryName(
+              language: LangJpn(),
+              official: "コソボ",
+              common: "コソボ",
+            ),
+            CountryName(
               language: LangKor(),
               official: "코소보 공화국",
               common: "코소보",

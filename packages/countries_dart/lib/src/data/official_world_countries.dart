@@ -370,6 +370,11 @@ class CountrySgp extends WorldCountry {
               official: "جمہوریہ سنگاپور",
               common: "سنگاپور",
             ),
+            CountryName(
+              language: LangZho(),
+              official: "新加坡共和国",
+              common: "新加坡",
+            ),
           ],
           latLng: const [1.36666666, 103.8],
           area: 710,
@@ -7321,6 +7326,11 @@ class CountryMac extends WorldCountry {
               language: LangUrd(),
               official: "مکاؤ عوامی جمہوریہ چین کا خصوصی انتظامی علاقہ",
               common: "مکاؤ",
+            ),
+            CountryName(
+              language: LangZho(),
+              official: "中华人民共和国澳门特别行政区",
+              common: "澳门",
             ),
           ],
           latLng: const [22.16666666, 113.55],
@@ -17314,6 +17324,11 @@ class CountryHkg extends WorldCountry {
               official: "ہانگ کانگ عوامی جمہوریہ چین کا خصوصی انتظامی علاقہ",
               common: "ہانگ کانگ",
             ),
+            CountryName(
+              language: LangZho(),
+              official: "中华人民共和国香港特别行政区",
+              common: "香港",
+            ),
           ],
           latLng: const [22.267, 114.188],
           bordersCodes: const ["Chn"],
@@ -18063,6 +18078,11 @@ class CountryChn extends WorldCountry {
               language: LangUrd(),
               official: "عوامی جمہوریہ چین",
               common: "چین",
+            ),
+            CountryName(
+              language: LangZho(),
+              official: "中华人民共和国",
+              common: "中国",
             ),
           ],
           latLng: const [35, 105],
@@ -19076,6 +19096,11 @@ class CountryIrn extends WorldCountry {
               common: "Iran",
             ),
             CountryName(
+              language: LangFas(),
+              official: "جمهوری اسلامی ایران",
+              common: "ایران",
+            ),
+            CountryName(
               language: LangFra(),
               official: "République islamique d'Iran",
               common: "Iran",
@@ -20045,6 +20070,11 @@ class CountryCuw extends WorldCountry {
               common: "Curaçao",
             ),
             CountryName(
+              language: LangHrv(),
+              official: "Curaçao",
+              common: "Curaçao",
+            ),
+            CountryName(
               language: LangFra(),
               official: "Pays de Curaçao",
               common: "Curaçao",
@@ -20058,6 +20088,11 @@ class CountryCuw extends WorldCountry {
               language: LangIta(),
               official: "Paese di Curaçao",
               common: "Curaçao",
+            ),
+            CountryName(
+              language: LangJpn(),
+              official: "キュラソー",
+              common: "キュラソー",
             ),
             CountryName(
               language: LangKor(),
@@ -46800,7 +46835,11 @@ class CountryTwn extends WorldCountry {
             official: "Republic of China (Taiwan)",
           ),
           nativeNames: const [
-            CountryName(language: LangZho(), official: "中華民國", common: "台灣"),
+            CountryName(
+              language: LangZho(),
+              official: "中華民國",
+              common: "台灣",
+            ),
           ],
           tld: const [".tw", ".台灣", ".台湾"],
           codeShort: "TW",
@@ -46942,6 +46981,11 @@ class CountryTwn extends WorldCountry {
               language: LangUrd(),
               official: "جمہوریہ چین (تائیوان)",
               common: "تائیوان",
+            ),
+            CountryName(
+              language: LangZho(),
+              official: "中華民國",
+              common: "台灣",
             ),
           ],
           latLng: const [23.5, 121],

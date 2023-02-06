@@ -1,7 +1,7 @@
 // ignore_for_file: long-parameter-list, format-comment
 import "package:flutter/material.dart";
 
-import '../helpers/ui_constants.dart';
+import "../helpers/ui_constants.dart";
 
 abstract class MaterialContextInterface<T extends Object> {
   /// Shows a modal Material Design bottom sheet.
