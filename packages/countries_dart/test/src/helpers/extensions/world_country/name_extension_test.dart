@@ -4,7 +4,7 @@ import "package:languages_dart/languages_dart.dart";
 import "package:test/test.dart";
 
 void main() => group("NameExtension", () {
-      const allTranslatedLangs = [
+      const allTranslatedLanguages = [
         LangAra,
         LangBre,
         LangCes,
@@ -44,7 +44,7 @@ void main() => group("NameExtension", () {
           }
         }
         map.removeWhere((key, value) => value == 0);
-        expect(map.keys, containsAll(allTranslatedLangs));
+        expect(map.keys, containsAll(allTranslatedLanguages));
       });
 
       test("all translated languages", () {
@@ -59,7 +59,7 @@ void main() => group("NameExtension", () {
           }
         }
         map.removeWhere((key, value) => value == 0);
-        expect(map.keys, containsAll(allTranslatedLangs));
+        expect(map.keys, containsAll(allTranslatedLanguages));
       });
 
       group("translated getters", () {
