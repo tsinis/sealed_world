@@ -22,7 +22,7 @@ class CountryUnk extends WorldCountry {
             common: "Kosovo",
             official: "Republic of Kosovo",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSqi(),
               official: "Republika e Kosovës",

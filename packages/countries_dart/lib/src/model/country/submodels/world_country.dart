@@ -3,7 +3,7 @@ part of "../country.dart";
 class WorldCountry extends Country {
   const WorldCountry({
     required super.name,
-    required this.nativeNames,
+    required this.namesNative,
     required this.tld,
     required this.codeShort, // CCA2.
     required this.codeNumeric, // CCN3.
@@ -44,7 +44,7 @@ class WorldCountry extends Country {
         (country) => country.codeShort == codeShort.toUpperCase(),
       );
 
-  final List<CountryName> nativeNames;
+  final List<CountryName> namesNative;
   final List<String> tld;
   final String codeShort;
   final String codeNumeric;
@@ -79,7 +79,7 @@ class WorldCountry extends Country {
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """WorldCountry(name: $name, nativeNames: $nativeNames  tld: $tld, codeShort: $codeShort, codeNumeric: $codeNumeric, code: $code, cioc: $cioc, independent: $independent, unMember: $unMember, currencies: $currencies, idd: $idd, altSpellings: $altSpellings, continent: $continent, subregion: $subregion, languages: $languages, translations: $translations, latLng: $latLng, landlocked: $landlocked, bordersCodes: $bordersCodes, area: $area, demonyms: $demonyms, emoji: $emoji, maps: $maps, population: $population, gini: $gini, fifa: $fifa, car: $car, timezones: $timezones, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: $capitalInfo, postalCode: $postalCode)""";
+      : """WorldCountry(name: $name, namesNative: $namesNative  tld: $tld, codeShort: $codeShort, codeNumeric: $codeNumeric, code: $code, cioc: $cioc, independent: $independent, unMember: $unMember, currencies: $currencies, idd: $idd, altSpellings: $altSpellings, continent: $continent, subregion: $subregion, languages: $languages, translations: $translations, latLng: $latLng, landlocked: $landlocked, bordersCodes: $bordersCodes, area: $area, demonyms: $demonyms, emoji: $emoji, maps: $maps, population: $population, gini: $gini, fifa: $fifa, car: $car, timezones: $timezones, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: $capitalInfo, postalCode: $postalCode)""";
 
   // ignore: lines_longer_than_80_chars, might be shorter in the future.
   bool get isOfficiallyAssigned =>

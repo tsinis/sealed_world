@@ -9,6 +9,7 @@ abstract class StatefulIndexedListView<T extends Object>
     this.addRepaintBoundaries = true,
     this.addSemanticIndexes = true,
     this.cacheExtent,
+    this.chosen,
     this.clipBehavior = Clip.hardEdge,
     this.crossAxisAlignment = CrossAxisAlignment.center,
     this.direction = Axis.vertical,
@@ -36,10 +37,16 @@ abstract class StatefulIndexedListView<T extends Object>
     super.key,
   });
 
-  final Widget? Function(BuildContext context, int index, T item)? itemBuilder;
+  final Widget? Function(
+    BuildContext context,
+    int index,
+    T item, {
+    bool isChosen,
+  })? itemBuilder;
   final Widget emptyStatePlaceholder;
   final Iterable<T> items;
   final ValueSetter<T>? onSelect;
+  final Iterable<T>? chosen;
   final Widget? separator;
   // TODO: Add favorites sort example.
   final int Function(T, T)? sort;

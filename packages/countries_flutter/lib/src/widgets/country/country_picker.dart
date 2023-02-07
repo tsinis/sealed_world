@@ -13,6 +13,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.addSemanticIndexes,
     super.cacheExtent,
     super.caseSensitiveSearch,
+    super.chosen,
     super.clipBehavior,
     super.crossAxisAlignment,
     super.direction,
@@ -47,13 +48,18 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   Iterable<WorldCountry> get countries => items;
 
   @override
-  Widget? defaultBuilder(BuildContext context, int index, WorldCountry item) =>
-      CountryTile(item, onPressed: onSelect);
+  Widget? defaultBuilder(
+    BuildContext context,
+    int index,
+    WorldCountry item, {
+    bool isChosen = false,
+  }) =>
+      CountryTile(item, onPressed: onSelect, isChosen: isChosen);
 
   @override
   Iterable<String> defaultSearch(WorldCountry item) => {
         ...item.translations.map((tr) => tr.common),
-        ...item.nativeNames.map((nn) => nn.common),
+        ...item.namesNative.map((nn) => nn.common),
       };
 
   @override
@@ -64,6 +70,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     bool? addSemanticIndexes,
     double? cacheExtent,
     bool? caseSensitiveSearch,
+    Iterable<WorldCountry>? chosen,
     Clip? clipBehavior,
     CrossAxisAlignment? crossAxisAlignment,
     Axis? direction,
@@ -92,7 +99,12 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(WorldCountry country)? searchIn,
-    Widget? Function(BuildContext context, int index, WorldCountry country)?
+    Widget? Function(
+      BuildContext context,
+      int index,
+      WorldCountry country, {
+      bool isChosen,
+    })?
         itemBuilder,
   }) =>
       CountryPicker(
@@ -103,6 +115,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
         addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
         cacheExtent: cacheExtent ?? this.cacheExtent,
         caseSensitiveSearch: caseSensitiveSearch ?? this.caseSensitiveSearch,
+        chosen: chosen ?? this.chosen,
         clipBehavior: clipBehavior ?? this.clipBehavior,
         crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
         direction: direction ?? this.direction,

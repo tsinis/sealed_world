@@ -2,7 +2,14 @@
 import "../../../../countries_dart.dart";
 
 extension NameExtension on WorldCountry {
-  CountryName? nameTranslated(NaturalLanguage language) {
+  String? namesCommonNative({String separator = "/", bool skipFirst = false}) {
+    final names = namesNative.map((cn) => cn.common).toSet();
+    if (skipFirst) names.remove(names.first);
+
+    return names.isEmpty ? null : names.join(separator);
+  }
+
+  CountryName? nameTranslated([NaturalLanguage? language]) {
     for (final countryName in translations) {
       if (countryName.language == language) return countryName;
     }
@@ -16,6 +23,7 @@ extension NameExtension on WorldCountry {
   CountryName get nameCroatian => nameTranslated(const LangHrv())!;
   CountryName get nameCzech => nameTranslated(const LangCes())!;
   CountryName get nameDutch => nameTranslated(const LangNld())!;
+  CountryName get nameEnglish => name; // Just to follow the pattern.
   CountryName get nameEstonian => nameTranslated(const LangEst())!;
   CountryName get nameFinnish => nameTranslated(const LangFin())!;
   CountryName get nameFrench => nameTranslated(const LangFra())!;

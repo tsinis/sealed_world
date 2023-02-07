@@ -19,6 +19,7 @@ abstract class BasicPicker<T extends Object>
     super.addSemanticIndexes,
     super.cacheExtent,
     super.caseSensitiveSearch,
+    super.chosen,
     super.clipBehavior,
     super.crossAxisAlignment,
     super.direction,
@@ -56,7 +57,12 @@ abstract class BasicPicker<T extends Object>
 
   @required
   @protected
-  Widget? defaultBuilder(BuildContext context, int index, T item);
+  Widget? defaultBuilder(
+    BuildContext context,
+    int index,
+    T item, {
+    bool isChosen,
+  });
 
   @required
   @protected
@@ -114,6 +120,7 @@ abstract class BasicPicker<T extends Object>
     bool? addSemanticIndexes,
     double? cacheExtent,
     bool? caseSensitiveSearch,
+    Iterable<T>? chosen,
     Clip? clipBehavior,
     CrossAxisAlignment? crossAxisAlignment,
     Axis? direction,
@@ -142,6 +149,12 @@ abstract class BasicPicker<T extends Object>
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(T item)? searchIn,
-    Widget? Function(BuildContext context, int index, T item)? itemBuilder,
+    Widget? Function(
+      BuildContext context,
+      int index,
+      T item, {
+      bool isChosen,
+    })?
+        itemBuilder,
   });
 }

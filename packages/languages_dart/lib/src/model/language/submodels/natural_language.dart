@@ -4,7 +4,7 @@ class NaturalLanguage extends Language {
   const NaturalLanguage({
     required super.name,
     required this.code,
-    required this.nativeNames,
+    required this.namesNative,
     required this.terminologicalCode,
     this.bibliographicCode,
     this.family = const IndoEuropean(),
@@ -23,13 +23,13 @@ class NaturalLanguage extends Language {
   final String code;
   final NaturalLanguageFamily family;
   final bool isRightToLeft;
-  final List<String> nativeNames;
+  final List<String> namesNative;
   final String terminologicalCode;
 
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """NaturalLanguage(name: $name, code: $code, terminologicalCode: $terminologicalCode, bibliographicCode: $bibliographicCode, family: $family, nativeName: $nativeNames, isRightToLeft: $isRightToLeft)""";
+      : """NaturalLanguage(name: $name, code: $code, terminologicalCode: $terminologicalCode, bibliographicCode: $bibliographicCode, family: $family, nativeName: $namesNative, isRightToLeft: $isRightToLeft)""";
 
   // TODO: Annotate here and families too.
   static NaturalLanguage? maybeFromValue<T extends Object>(

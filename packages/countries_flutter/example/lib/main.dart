@@ -21,7 +21,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static const picker = CountryPicker(onSelect: print);
+  static const picker =
+      CountryPicker(onSelect: print, chosen: [CountryAfg(), CountryCze()]);
 
   void onPressed() async {
     final country = await picker.showInModalBottomSheet(context);
@@ -30,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: const SafeArea(child: CountryPicker(onSelect: print)),
+        body: const SafeArea(child: picker),
         floatingActionButton: FloatingActionButton(
           onPressed: onPressed,
         ),

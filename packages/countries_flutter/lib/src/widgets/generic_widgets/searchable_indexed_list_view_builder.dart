@@ -18,6 +18,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
     super.cacheExtent,
+    super.chosen,
     super.clipBehavior,
     super.crossAxisAlignment,
     super.direction,
