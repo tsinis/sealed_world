@@ -32,7 +32,7 @@ void main() => group("$FiatCurrency", () {
       });
 
       test("toString", () {
-        expect(value.toString(short: false).contains(value.code), isTrue);
+        expect(value.toString(short: false), contains(value.code));
         expect(value.toString().contains(value.name), isFalse);
       });
 

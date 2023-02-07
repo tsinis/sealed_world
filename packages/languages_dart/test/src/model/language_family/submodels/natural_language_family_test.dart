@@ -10,7 +10,7 @@ void main() => group("$NaturalLanguageFamily", () {
         for (final element in NaturalLanguageFamily.list) {
           test(
             "of $NaturalLanguageFamily: ${element.name}",
-            () => expect(element.name.isNotEmpty, isTrue),
+            () => expect(element.name, isNotEmpty),
           );
         }
       });

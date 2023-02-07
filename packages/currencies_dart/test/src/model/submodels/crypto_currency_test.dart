@@ -5,7 +5,7 @@ import "package:test/test.dart";
 void main() => group("$CryptoCurrency", () {
       const value = CryptoCurrency(code: "code", name: "name");
       test("toString", () {
-        expect(value.toString(short: false).contains(value.name), isTrue);
+        expect(value.toString(short: false), contains(value.name));
         expect(value.toString().contains(value.name), isFalse);
       });
     });

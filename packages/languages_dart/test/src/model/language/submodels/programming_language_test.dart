@@ -7,8 +7,8 @@ void main() => group("$ProgrammingLanguage", () {
 
       test("toString", () {
         expect(
-          value.toString(short: false).contains(value.isLowLevel.toString()),
-          isTrue,
+          value.toString(short: false),
+          contains(value.isLowLevel.toString()),
         );
         expect(value.toString().contains(value.isLowLevel.toString()), isFalse);
       });

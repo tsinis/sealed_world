@@ -11,18 +11,18 @@ void main() => group("$NaturalLanguage", () {
           test("of $NaturalLanguage: ${element.name}", () {
             if (element.bibliographicCode != null) {
               expect(element.bibliographicCode, isA<String>());
-              expect(element.bibliographicCode?.isNotEmpty, isTrue);
+              expect(element.bibliographicCode, isNotEmpty);
             } else {
               expect(element.bibliographicCode, isNull);
             }
-            expect(element.family.name.isNotEmpty, isTrue);
+            expect(element.family.name, isNotEmpty);
             expect(element.code, isA<String>());
-            expect(element.code.isNotEmpty, isTrue);
+            expect(element.code, isNotEmpty);
             expect(element.isRightToLeft, isA<bool>());
-            expect(element.nativeNames, isA<List<String>>());
-            expect(element.nativeNames.isNotEmpty, isTrue);
+            expect(element.namesNative, isA<List<String>>());
+            expect(element.namesNative, isNotEmpty);
             expect(element.terminologicalCode, isA<String>());
-            expect(element.terminologicalCode.isNotEmpty, isTrue);
+            expect(element.terminologicalCode, isNotEmpty);
           });
         }
       });
@@ -56,7 +56,7 @@ void main() => group("$NaturalLanguage", () {
       });
 
       test("toString", () {
-        expect(value.toString(short: false).contains(value.code), isTrue);
+        expect(value.toString(short: false), contains(value.code));
         expect(value.toString().contains(value.code), isFalse);
       });
 

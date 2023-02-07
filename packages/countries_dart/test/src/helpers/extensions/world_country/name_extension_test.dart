@@ -32,34 +32,56 @@ void main() => group("NameExtension", () {
         LangZho,
       ];
 
-      test("all translated languages", () {
-        final map = <Type, int>{};
-        for (final language in NaturalLanguage.list) {
-          map[language.runtimeType] = 0;
-          for (final country in WorldCountry.list) {
-            final countryName = country.nameTranslated(language);
-            if (countryName != null) {
-              map[language.runtimeType] = map[language.runtimeType]! + 1;
+      group("nameTranslated", () {
+        test("all translated languages", () {
+          final map = <Type, int>{};
+          for (final language in NaturalLanguage.list) {
+            map[language.runtimeType] = 0;
+            for (final country in WorldCountry.list) {
+              final countryName = country.nameTranslated(language);
+              if (countryName != null) {
+                map[language.runtimeType] = map[language.runtimeType]! + 1;
+              }
             }
           }
-        }
-        map.removeWhere((key, value) => value == 0);
-        expect(map.keys, containsAll(allTranslatedLanguages));
+          map.removeWhere((key, value) => value == 0);
+          expect(map.keys, containsAll(allTranslatedLanguages));
+        });
+
+        test(
+          "with $Null input",
+          () => expect(WorldCountry.list.first.nameTranslated(), isNull),
+        );
       });
 
-      test("all translated languages", () {
-        final map = <Type, int>{};
-        for (final language in NaturalLanguage.list) {
-          map[language.runtimeType] = 0;
-          for (final country in WorldCountry.list) {
-            final countryName = country.nameTranslated(language);
-            if (countryName != null) {
-              map[language.runtimeType] = map[language.runtimeType]! + 1;
-            }
-          }
-        }
-        map.removeWhere((key, value) => value == 0);
-        expect(map.keys, containsAll(allTranslatedLanguages));
+      group("namesCommonNative", () {
+        final country = WorldCountry.list.first;
+
+        test(
+          "separator",
+          () => expect(
+            country.namesCommonNative(separator: "-"),
+            """${country.namesNative.first.common}-${country.namesNative.last.common}""",
+          ),
+        );
+
+        group("skipFirst", () {
+          test(
+            "with multiple names",
+            () => expect(
+              country.namesCommonNative(skipFirst: true),
+              country.namesNative.last.common,
+            ),
+          );
+
+          test(
+            "with single name",
+            () => expect(
+              WorldCountry.list.elementAt(1).namesCommonNative(skipFirst: true),
+              null,
+            ),
+          );
+        });
       });
 
       group("translated getters", () {
@@ -96,6 +118,12 @@ void main() => group("NameExtension", () {
         test("nameDutch", () {
           for (final country in WorldCountry.list) {
             expect(country.nameDutch, isNotNull);
+          }
+        });
+
+        test("nameEnglish", () {
+          for (final country in WorldCountry.list) {
+            expect(country.nameEnglish, isNotNull);
           }
         });
 

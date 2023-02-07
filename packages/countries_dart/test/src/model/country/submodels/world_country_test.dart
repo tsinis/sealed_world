@@ -13,18 +13,18 @@ void main() => group("$WorldCountry", () {
         for (final element in officialCountries) {
           test("of $WorldCountry: ${element.name}", () {
             if (element.postalCode != null) {
-              expect(element.postalCode?.format.isNotEmpty, isTrue);
-              expect(element.postalCode?.regExpPattern.isNotEmpty, isTrue);
+              expect(element.postalCode?.format, isNotEmpty);
+              expect(element.postalCode?.regExpPattern, isNotEmpty);
             } else {
               expect(element.postalCode, isNull);
             }
             if (element.capitalInfo != null) {
-              expect(element.capitalInfo?.capital.isNotEmpty, isTrue);
+              expect(element.capitalInfo?.capital, isNotEmpty);
             } else {
               expect(element.capitalInfo, isNull);
             }
             if (element.fifa != null) {
-              expect(element.fifa?.isNotEmpty, isTrue);
+              expect(element.fifa, isNotEmpty);
             } else {
               expect(element.fifa, isNull);
             }
@@ -35,64 +35,64 @@ void main() => group("$WorldCountry", () {
               expect(element.gini, isNull);
             }
             if (element.demonyms != null) {
-              expect(element.demonyms?.isNotEmpty, isTrue);
+              expect(element.demonyms, isNotEmpty);
             } else {
               expect(element.demonyms, isNull);
             }
             if (element.bordersCodes != null) {
-              expect(element.bordersCodes?.isNotEmpty, isTrue);
+              expect(element.bordersCodes, isNotEmpty);
             } else {
               expect(element.bordersCodes, isNull);
             }
             if (element.subregion != null) {
-              expect(element.subregion?.name.isNotEmpty, isTrue);
+              expect(element.subregion?.name, isNotEmpty);
             } else {
               expect(element.subregion, isNull);
             }
             if (element.idd != null) {
-              expect(element.idd?.root.isNotEmpty, isTrue);
+              expect(element.idd?.root, isNotEmpty);
             } else {
               expect(element.idd, isNull);
             }
             if (element.currencies != null) {
-              expect(element.currencies?.isNotEmpty, isTrue);
+              expect(element.currencies, isNotEmpty);
             } else {
               expect(element.currencies, isNull);
             }
             if (element.cioc != null) {
-              expect(element.cioc?.isNotEmpty, isTrue);
+              expect(element.cioc, isNotEmpty);
             } else {
               expect(element.cioc, isNull);
             }
-            expect(element.startOfWeek.name.isNotEmpty, isTrue);
+            expect(element.startOfWeek.name, isNotEmpty);
             expect(element.startOfWeek, isA<Enum>());
             expect(element.hasCoatOfArms, isA<bool>());
             expect(element.landlocked, isA<bool>());
             expect(element.unMember, isA<bool>());
             expect(element.independent, isA<bool>());
             expect(element.timezones, isA<List<String>>());
-            expect(element.timezones.isNotEmpty, isTrue);
+            expect(element.timezones, isNotEmpty);
             expect(element.car.isRightSide, isA<bool>());
             expect(element.population, isNonNegative);
             expect(element.area, isNonNegative);
-            expect(element.maps.googleMaps.isNotEmpty, isTrue);
-            expect(element.maps.openStreetMaps.isNotEmpty, isTrue);
-            expect(element.emoji.isNotEmpty, isTrue);
-            expect(element.latLng.isNotEmpty, isTrue);
-            expect(element.translations.isNotEmpty, isTrue);
-            expect(element.languages.isNotEmpty, isTrue);
-            expect(element.continent.name.isNotEmpty, isTrue);
-            expect(element.altSpellings.isNotEmpty, isTrue);
+            expect(element.maps.googleMaps, isNotEmpty);
+            expect(element.maps.openStreetMaps, isNotEmpty);
+            expect(element.emoji, isNotEmpty);
+            expect(element.latLng, isNotEmpty);
+            expect(element.translations, isNotEmpty);
+            expect(element.languages, isNotEmpty);
+            expect(element.continent.name, isNotEmpty);
+            expect(element.altSpellings, isNotEmpty);
             expect(element.code, isA<String>());
-            expect(element.code.isNotEmpty, isTrue);
+            expect(element.code, isNotEmpty);
             expect(element.codeNumeric, isA<String>());
-            expect(element.codeNumeric.isNotEmpty, isTrue);
+            expect(element.codeNumeric, isNotEmpty);
             expect(element.codeShort, isA<String>());
-            expect(element.codeShort.isNotEmpty, isTrue);
-            expect(element.nativeNames.isNotEmpty, isTrue);
-            expect(element.tld.isNotEmpty, isTrue);
+            expect(element.codeShort, isNotEmpty);
+            expect(element.namesNative, isNotEmpty);
+            expect(element.tld, isNotEmpty);
             for (final domain in element.tld) {
-              expect(domain.isNotEmpty, isTrue);
+              expect(domain, isNotEmpty);
             }
           });
         }
@@ -125,7 +125,7 @@ void main() => group("$WorldCountry", () {
       });
 
       test("toString", () {
-        expect(value.toString(short: false).contains(value.code), isTrue);
+        expect(value.toString(short: false), contains(value.code));
         expect(value.toString().contains(value.codeShort), isFalse);
       });
 
@@ -141,11 +141,8 @@ void main() => group("$WorldCountry", () {
         test(
           "with non-null bordersCodes",
           () => expect(
-            WorldCountry.list
-                .firstWhere((c) => c.borders != null)
-                .borders
-                ?.isEmpty,
-            isFalse,
+            WorldCountry.list.firstWhere((c) => c.borders != null).borders,
+            isNotEmpty,
           ),
         );
       });
