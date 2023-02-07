@@ -24,6 +24,7 @@ class _BasicPickerState<T extends Object> extends State<BasicPicker<T>> {
         addRepaintBoundaries: widget.addRepaintBoundaries,
         addSemanticIndexes: widget.addSemanticIndexes,
         cacheExtent: widget.cacheExtent,
+        chosen: widget.chosen,
         clipBehavior: widget.clipBehavior,
         crossAxisAlignment: widget.crossAxisAlignment,
         direction: widget.direction,

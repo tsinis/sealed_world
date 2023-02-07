@@ -13,6 +13,7 @@ class IndexedListViewBuilder<T extends Object>
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
     super.cacheExtent,
+    super.chosen,
     super.clipBehavior,
     super.crossAxisAlignment,
     super.direction,
@@ -31,8 +32,8 @@ class IndexedListViewBuilder<T extends Object>
     super.restorationId,
     super.reverse,
     super.scrollController,
-    super.showHeader,
     super.separator,
+    super.showHeader,
     super.shrinkWrap,
     super.sort,
     super.textBaseline,
@@ -40,17 +41,30 @@ class IndexedListViewBuilder<T extends Object>
     super.verticalDirection,
   });
 
+  Iterable<T> get _sortedItems {
+    final chosenIsEmpty = chosen?.isEmpty ?? true;
+    if (sort == null && chosenIsEmpty) return items;
+    final list = items.toList(growable: !chosenIsEmpty);
+    if (sort != null) list.sort(sort);
+    if (chosenIsEmpty) return List<T>.unmodifiable(list);
+    for (final item in chosen ?? <T>[]) {
+      list
+        ..remove(item)
+        ..insert(0, item);
+    }
+
+    return List<T>.unmodifiable(list);
+  }
+
   @override
   State<IndexedListViewBuilder> createState() =>
       _IndexedListViewBuilderState<T>();
-
-  Iterable<T> get _items => sort != null
-      ? List<T>.unmodifiable(items.toList(growable: false)..sort(sort))
-      : items;
 }
 
 class _IndexedListViewBuilderState<T extends Object>
     extends State<IndexedListViewBuilder<T>> {
+  late final Iterable<T> items = widget._sortedItems;
+
   @override
   Widget build(BuildContext context) => Column(
         mainAxisAlignment: widget.mainAxisAlignment,
@@ -90,13 +104,15 @@ class _IndexedListViewBuilderState<T extends Object>
                       separatorBuilder: (_, __) =>
                           widget.separator ?? const SizedBox.shrink(),
                       itemBuilder: (bc, i) {
-                        final item = widget._items.elementAt(i);
-                        final child = widget.itemBuilder?.call(bc, i, item);
+                        final item = items.elementAt(i);
+                        final isChosen = widget.chosen?.contains(item) ?? false;
+                        final child = widget.itemBuilder
+                            ?.call(bc, i, item, isChosen: isChosen);
                         if (child == null) return null;
 
                         return GestureDetector(
                           onTap: () => widget.onSelect?.call(item),
-                          child: widget.itemBuilder?.call(bc, i, item),
+                          child: child,
                         );
                       },
                     ),
