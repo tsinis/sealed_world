@@ -24,7 +24,7 @@ class CountryCpv extends WorldCountry {
             common: "Cape Verde",
             official: "Republic of Cabo Verde",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official: "República de Cabo Verde",
@@ -211,7 +211,7 @@ class CountrySgp extends WorldCountry {
             common: "Singapore",
             official: "Republic of Singapore",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangZho(),
               official: "新加坡共和国",
@@ -417,7 +417,7 @@ class CountryMrt extends WorldCountry {
             common: "Mauritania",
             official: "Islamic Republic of Mauritania",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الجمهورية الإسلامية الموريتانية",
@@ -610,7 +610,7 @@ class CountryPol extends WorldCountry {
             common: "Poland",
             official: "Republic of Poland",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPol(),
               official: "Rzeczpospolita Polska",
@@ -807,7 +807,7 @@ class CountryTcd extends WorldCountry {
             common: "Chad",
             official: "Republic of Chad",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "جمهورية تشاد",
@@ -1009,7 +1009,7 @@ class CountryJpn extends WorldCountry {
             common: "Japan",
             official: "Japan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangJpn(),
               official: "日本",
@@ -1194,7 +1194,7 @@ class CountryCub extends WorldCountry {
             common: "Cuba",
             official: "Republic of Cuba",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de Cuba",
@@ -1380,7 +1380,7 @@ class CountryMoz extends WorldCountry {
             common: "Mozambique",
             official: "Republic of Mozambique",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official: "República de Moçambique",
@@ -1575,7 +1575,7 @@ class CountryGbr extends WorldCountry {
             common: "United Kingdom",
             official: "United Kingdom of Great Britain and Northern Ireland",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "United Kingdom of Great Britain and Northern Ireland",
@@ -1776,7 +1776,7 @@ class CountryIrl extends WorldCountry {
             common: "Ireland",
             official: "Republic of Ireland",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Ireland",
@@ -1970,7 +1970,7 @@ class CountryNer extends WorldCountry {
             common: "Niger",
             official: "Republic of Niger",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République du Niger",
@@ -2163,7 +2163,7 @@ class CountryGmb extends WorldCountry {
             common: "Gambia",
             official: "Republic of the Gambia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of the Gambia",
@@ -2347,7 +2347,7 @@ class CountryUzb extends WorldCountry {
             common: "Uzbekistan",
             official: "Republic of Uzbekistan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangRus(),
               official: "Республика Узбекистан",
@@ -2552,7 +2552,7 @@ class CountryRus extends WorldCountry {
             common: "Russia",
             official: "Russian Federation",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangRus(),
               official: "Российская Федерация",
@@ -2767,7 +2767,7 @@ class CountryTkm extends WorldCountry {
             common: "Turkmenistan",
             official: "Turkmenistan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangRus(),
               official: "Туркменистан",
@@ -2966,7 +2966,7 @@ class CountryAia extends WorldCountry {
             common: "Anguilla",
             official: "Anguilla",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Anguilla",
@@ -3149,7 +3149,7 @@ class CountryVnm extends WorldCountry {
             common: "Vietnam",
             official: "Socialist Republic of Vietnam",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangVie(),
               official: "Cộng hòa xã hội chủ nghĩa Việt Nam",
@@ -3343,7 +3343,7 @@ class CountryAta extends WorldCountry {
             common: "Antarctica",
             official: "Antarctica",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName.international(
               common: "Antarctica",
               official: "Antarctica",
@@ -3522,7 +3522,7 @@ class CountrySwz extends WorldCountry {
             common: "Eswatini",
             official: "Kingdom of Eswatini",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Kingdom of Eswatini",
@@ -3725,7 +3725,7 @@ class CountryKhm extends WorldCountry {
             common: "Cambodia",
             official: "Kingdom of Cambodia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangKhm(),
               official: "ព្រះរាជាណាចក្រកម្ពុជា",
@@ -3909,7 +3909,7 @@ class CountryVut extends WorldCountry {
             common: "Vanuatu",
             official: "Republic of Vanuatu",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangBis(),
               official: "Ripablik blong Vanuatu",
@@ -4107,7 +4107,7 @@ class CountryAla extends WorldCountry {
             common: "Åland Islands",
             official: "Åland Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSwe(),
               official: "Landskapet Åland",
@@ -4285,7 +4285,7 @@ class CountryAus extends WorldCountry {
             common: "Australia",
             official: "Commonwealth of Australia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Commonwealth of Australia",
@@ -4479,7 +4479,7 @@ class CountryIot extends WorldCountry {
             common: "British Indian Ocean Territory",
             official: "British Indian Ocean Territory",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "British Indian Ocean Territory",
@@ -4657,7 +4657,7 @@ class CountrySvk extends WorldCountry {
             common: "Slovakia",
             official: "Slovak Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSlk(),
               official: "Slovenská republika",
@@ -4851,7 +4851,7 @@ class CountryBra extends WorldCountry {
             common: "Brazil",
             official: "Federative Republic of Brazil",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official: "República Federativa do Brasil",
@@ -5055,7 +5055,7 @@ class CountryTjk extends WorldCountry {
             common: "Tajikistan",
             official: "Republic of Tajikistan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangRus(),
               official: "Республика Таджикистан",
@@ -5260,7 +5260,7 @@ class CountrySgs extends WorldCountry {
             common: "South Georgia",
             official: "South Georgia and the South Sandwich Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "South Georgia and the South Sandwich Islands",
@@ -5440,7 +5440,7 @@ class CountryLbr extends WorldCountry {
             common: "Liberia",
             official: "Republic of Liberia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Liberia",
@@ -5624,7 +5624,7 @@ class CountryNga extends WorldCountry {
             common: "Nigeria",
             official: "Federal Republic of Nigeria",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Federal Republic of Nigeria",
@@ -5820,7 +5820,7 @@ class CountryCol extends WorldCountry {
             common: "Colombia",
             official: "Republic of Colombia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de Colombia",
@@ -6012,7 +6012,7 @@ class CountrySmr extends WorldCountry {
             common: "San Marino",
             official: "Republic of San Marino",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangIta(),
               official: "Repubblica di San Marino",
@@ -6204,7 +6204,7 @@ class CountryShn extends WorldCountry {
             common: "Saint Helena, Ascension and Tristan da Cunha",
             official: "Saint Helena, Ascension and Tristan da Cunha",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Saint Helena, Ascension and Tristan da Cunha",
@@ -6396,7 +6396,7 @@ class CountryEgy extends WorldCountry {
             common: "Egypt",
             official: "Arab Republic of Egypt",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "جمهورية مصر العربية",
@@ -6585,7 +6585,7 @@ class CountryHnd extends WorldCountry {
             common: "Honduras",
             official: "Republic of Honduras",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de Honduras",
@@ -6777,7 +6777,7 @@ class CountryIdn extends WorldCountry {
             common: "Indonesia",
             official: "Republic of Indonesia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangInd(),
               official: "Republik Indonesia",
@@ -6966,7 +6966,7 @@ class CountryPrk extends WorldCountry {
             common: "North Korea",
             official: "Democratic People's Republic of Korea",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangKor(),
               official: "조선민주주의인민공화국",
@@ -7163,7 +7163,7 @@ class CountryMac extends WorldCountry {
             official:
                 """Macao Special Administrative Region of the People's Republic of China""",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official:
@@ -7363,7 +7363,7 @@ class CountrySle extends WorldCountry {
             common: "Sierra Leone",
             official: "Republic of Sierra Leone",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Sierra Leone",
@@ -7547,7 +7547,7 @@ class CountryMda extends WorldCountry {
             common: "Moldova",
             official: "Republic of Moldova",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangRon(),
               official: "Republica Moldova",
@@ -7739,7 +7739,7 @@ class CountryPhl extends WorldCountry {
             common: "Philippines",
             official: "Republic of the Philippines",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of the Philippines",
@@ -7933,7 +7933,7 @@ class CountryCmr extends WorldCountry {
             common: "Cameroon",
             official: "Republic of Cameroon",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Cameroon",
@@ -8131,7 +8131,7 @@ class CountryGrl extends WorldCountry {
             common: "Greenland",
             official: "Greenland",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangKal(),
               official: "Kalaallit Nunaat",
@@ -8309,7 +8309,7 @@ class CountryMtq extends WorldCountry {
             common: "Martinique",
             official: "Martinique",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Martinique",
@@ -8488,7 +8488,7 @@ class CountryLbn extends WorldCountry {
             common: "Lebanon",
             official: "Lebanese Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الجمهورية اللبنانية",
@@ -8683,7 +8683,7 @@ class CountryRwa extends WorldCountry {
             common: "Rwanda",
             official: "Republic of Rwanda",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Rwanda",
@@ -8886,7 +8886,7 @@ class CountryBih extends WorldCountry {
             common: "Bosnia and Herzegovina",
             official: "Bosnia and Herzegovina",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangBos(),
               official: "Bosna i Hercegovina",
@@ -9086,7 +9086,7 @@ class CountryMhl extends WorldCountry {
             common: "Marshall Islands",
             official: "Republic of the Marshall Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of the Marshall Islands",
@@ -9274,7 +9274,7 @@ class CountryIta extends WorldCountry {
             common: "Italy",
             official: "Italian Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangIta(),
               official: "Repubblica italiana",
@@ -9464,7 +9464,7 @@ class CountryTkl extends WorldCountry {
             common: "Tokelau",
             official: "Tokelau",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Tokelau",
@@ -9644,7 +9644,7 @@ class CountryGab extends WorldCountry {
             common: "Gabon",
             official: "Gabonese Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République gabonaise",
@@ -9828,7 +9828,7 @@ class CountryCck extends WorldCountry {
             common: "Cocos (Keeling) Islands",
             official: "Territory of the Cocos (Keeling) Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Territory of the Cocos (Keeling) Islands",
@@ -10002,7 +10002,7 @@ class CountryPak extends WorldCountry {
             common: "Pakistan",
             official: "Islamic Republic of Pakistan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Islamic Republic of Pakistan",
@@ -10202,7 +10202,7 @@ class CountryReu extends WorldCountry {
             common: "Réunion",
             official: "Réunion Island",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Ile de la Réunion",
@@ -10383,7 +10383,7 @@ class CountryMus extends WorldCountry {
             common: "Mauritius",
             official: "Republic of Mauritius",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Mauritius",
@@ -10577,7 +10577,7 @@ class CountryGrd extends WorldCountry {
             common: "Grenada",
             official: "Grenada",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Grenada",
@@ -10755,7 +10755,7 @@ class CountryOmn extends WorldCountry {
             common: "Oman",
             official: "Sultanate of Oman",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "سلطنة عمان",
@@ -10935,7 +10935,7 @@ class CountryBfa extends WorldCountry {
             common: "Burkina Faso",
             official: "Burkina Faso",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République du Burkina",
@@ -11127,7 +11127,7 @@ class CountryWsm extends WorldCountry {
             common: "Samoa",
             official: "Independent State of Samoa",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Independent State of Samoa",
@@ -11319,7 +11319,7 @@ class CountryTto extends WorldCountry {
             common: "Trinidad and Tobago",
             official: "Republic of Trinidad and Tobago",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Trinidad and Tobago",
@@ -11502,7 +11502,7 @@ class CountryVct extends WorldCountry {
             common: "Saint Vincent and the Grenadines",
             official: "Saint Vincent and the Grenadines",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Saint Vincent and the Grenadines",
@@ -11684,7 +11684,7 @@ class CountryPlw extends WorldCountry {
             common: "Palau",
             official: "Republic of Palau",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Palau",
@@ -11864,7 +11864,7 @@ class CountryZaf extends WorldCountry {
             common: "South Africa",
             official: "Republic of South Africa",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAfr(),
               official: "Republiek van Suid-Afrika",
@@ -12115,7 +12115,7 @@ class CountryAgo extends WorldCountry {
             common: "Angola",
             official: "Republic of Angola",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official: "República de Angola",
@@ -12306,7 +12306,7 @@ class CountryKor extends WorldCountry {
             common: "South Korea",
             official: "Republic of Korea",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(language: LangKor(), official: "대한민국", common: "한국"),
           ],
           tld: const [".kr", ".한국"],
@@ -12490,7 +12490,7 @@ class CountryAtf extends WorldCountry {
             common: "French Southern and Antarctic Lands",
             official: "Territory of the French Southern and Antarctic Lands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official:
@@ -12674,7 +12674,7 @@ class CountryIsl extends WorldCountry {
             common: "Iceland",
             official: "Iceland",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangIsl(),
               official: "Ísland",
@@ -12860,7 +12860,7 @@ class CountryGuf extends WorldCountry {
             common: "French Guiana",
             official: "Guiana",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Guyane",
@@ -13044,7 +13044,7 @@ class CountryNor extends WorldCountry {
             common: "Norway",
             official: "Kingdom of Norway",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangNno(),
               official: "Kongeriket Noreg",
@@ -13237,7 +13237,7 @@ class CountryHun extends WorldCountry {
             common: "Hungary",
             official: "Hungary",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangHun(),
               official: "Magyarország",
@@ -13426,7 +13426,7 @@ class CountryPse extends WorldCountry {
             common: "Palestine",
             official: "State of Palestine",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "دولة فلسطين",
@@ -13618,7 +13618,7 @@ class CountryLca extends WorldCountry {
             common: "Saint Lucia",
             official: "Saint Lucia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Saint Lucia",
@@ -13795,7 +13795,7 @@ class CountryNpl extends WorldCountry {
             common: "Nepal",
             official: "Federal Democratic Republic of Nepal",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangNep(),
               official: "नेपाल संघीय लोकतान्त्रिक गणतन्त्र",
@@ -13986,7 +13986,7 @@ class CountryMng extends WorldCountry {
             common: "Mongolia",
             official: "Mongolia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangMon(),
               official: "Монгол улс",
@@ -14171,7 +14171,7 @@ class CountryZmb extends WorldCountry {
             common: "Zambia",
             official: "Republic of Zambia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Zambia",
@@ -14364,7 +14364,7 @@ class CountryWlf extends WorldCountry {
             common: "Wallis and Futuna",
             official: "Territory of the Wallis and Futuna Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Territoire des îles Wallis et Futuna",
@@ -14547,7 +14547,7 @@ class CountryMwi extends WorldCountry {
             common: "Malawi",
             official: "Republic of Malawi",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Malawi",
@@ -14737,7 +14737,7 @@ class CountryBhr extends WorldCountry {
             common: "Bahrain",
             official: "Kingdom of Bahrain",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "مملكة البحرين",
@@ -14921,7 +14921,7 @@ class CountryUkr extends WorldCountry {
             common: "Ukraine",
             official: "Ukraine",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangUkr(),
               official: "Україна",
@@ -15108,7 +15108,7 @@ class CountryNru extends WorldCountry {
             common: "Nauru",
             official: "Republic of Nauru",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Nauru",
@@ -15295,7 +15295,7 @@ class CountryMyt extends WorldCountry {
             common: "Mayotte",
             official: "Department of Mayotte",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Département de Mayotte",
@@ -15479,7 +15479,7 @@ class CountryDza extends WorldCountry {
             common: "Algeria",
             official: "People's Democratic Republic of Algeria",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الجمهورية الديمقراطية الشعبية الجزائرية",
@@ -15671,7 +15671,7 @@ class CountryCan extends WorldCountry {
             common: "Canada",
             official: "Canada",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Canada",
@@ -15867,7 +15867,7 @@ class CountryLie extends WorldCountry {
             common: "Liechtenstein",
             official: "Principality of Liechtenstein",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDeu(),
               official: "Fürstentum Liechtenstein",
@@ -16055,7 +16055,7 @@ class CountryEth extends WorldCountry {
             common: "Ethiopia",
             official: "Federal Democratic Republic of Ethiopia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAmh(),
               official: "የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ",
@@ -16254,7 +16254,7 @@ class CountryDom extends WorldCountry {
             common: "Dominican Republic",
             official: "Dominican Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República Dominicana",
@@ -16439,7 +16439,7 @@ class CountryBvt extends WorldCountry {
             common: "Bouvet Island",
             official: "Bouvet Island",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangNor(),
               official: "Bouvetøya",
@@ -16600,7 +16600,7 @@ class CountryNfk extends WorldCountry {
             common: "Norfolk Island",
             official: "Territory of Norfolk Island",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Territory of Norfolk Island",
@@ -16784,7 +16784,7 @@ class CountryNld extends WorldCountry {
             common: "Netherlands",
             official: "Kingdom of the Netherlands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangNld(),
               official: "Koninkrijk der Nederlanden",
@@ -16968,7 +16968,7 @@ class CountryMnp extends WorldCountry {
             common: "Northern Mariana Islands",
             official: "Commonwealth of the Northern Mariana Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangCha(),
               official: "Sankattan Siha Na Islas Mariånas",
@@ -17162,7 +17162,7 @@ class CountryHkg extends WorldCountry {
             official:
                 """Hong Kong Special Administrative Region of the People's Republic of China""",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official:
@@ -17368,7 +17368,7 @@ class CountryIrq extends WorldCountry {
             common: "Iraq",
             official: "Republic of Iraq",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "جمهورية العراق",
@@ -17564,7 +17564,7 @@ class CountryEsp extends WorldCountry {
             common: "Spain",
             official: "Kingdom of Spain",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "Reino de España",
@@ -17749,7 +17749,7 @@ class CountryTgo extends WorldCountry {
             common: "Togo",
             official: "Togolese Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République togolaise",
@@ -17932,7 +17932,7 @@ class CountryChn extends WorldCountry {
             common: "China",
             official: "People's Republic of China",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangZho(),
               official: "中华人民共和国",
@@ -18145,7 +18145,7 @@ class CountryFlk extends WorldCountry {
             common: "Falkland Islands",
             official: "Falkland Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Falkland Islands",
@@ -18331,7 +18331,7 @@ class CountryUsa extends WorldCountry {
             common: "United States",
             official: "United States of America",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "United States of America",
@@ -18849,7 +18849,7 @@ class CountryMaf extends WorldCountry {
             common: "Saint Martin",
             official: "Saint Martin",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Saint-Martin",
@@ -19031,7 +19031,7 @@ class CountryIrn extends WorldCountry {
             common: "Iran",
             official: "Islamic Republic of Iran",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFas(),
               official: "جمهوری اسلامی ایران",
@@ -19231,7 +19231,7 @@ class CountryMex extends WorldCountry {
             common: "Mexico",
             official: "United Mexican States",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "Estados Unidos Mexicanos",
@@ -19421,7 +19421,7 @@ class CountryBrn extends WorldCountry {
             common: "Brunei",
             official: "Nation of Brunei, Abode of Peace",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangMsa(),
               official: "Nation of Brunei, Abode Damai",
@@ -19609,7 +19609,7 @@ class CountryCyp extends WorldCountry {
             common: "Cyprus",
             official: "Republic of Cyprus",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEll(),
               official: "Δημοκρατία της Κύπρος",
@@ -19804,7 +19804,7 @@ class CountryNic extends WorldCountry {
             common: "Nicaragua",
             official: "Republic of Nicaragua",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de Nicaragua",
@@ -19996,7 +19996,7 @@ class CountryCuw extends WorldCountry {
             common: "Curaçao",
             official: "WorldCountry of Curaçao",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "WorldCountry of Curaçao",
@@ -20188,7 +20188,7 @@ class CountryPri extends WorldCountry {
             common: "Puerto Rico",
             official: "Commonwealth of Puerto Rico",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Commonwealth of Puerto Rico",
@@ -20386,7 +20386,7 @@ class CountryNcl extends WorldCountry {
             common: "New Caledonia",
             official: "New Caledonia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Nouvelle-Calédonie",
@@ -20570,7 +20570,7 @@ class CountrySsd extends WorldCountry {
             common: "South Sudan",
             official: "Republic of South Sudan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of South Sudan",
@@ -20761,7 +20761,7 @@ class CountrySom extends WorldCountry {
             common: "Somalia",
             official: "Federal Republic of Somalia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "جمهورية الصومال‎‎",
@@ -20960,7 +20960,7 @@ class CountryGrc extends WorldCountry {
             common: "Greece",
             official: "Hellenic Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEll(),
               official: "Ελληνική Δημοκρατία",
@@ -21151,7 +21151,7 @@ class CountryBes extends WorldCountry {
             common: "Caribbean Netherlands",
             official: "Bonaire, Sint Eustatius and Saba",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangNld(),
               official: "Bonaire, Sint Eustatius en Saba",
@@ -21334,7 +21334,7 @@ class CountryLao extends WorldCountry {
             common: "Laos",
             official: "Lao People's Democratic Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangLao(),
               official: "ສາທາລະນະ ຊາທິປະໄຕ ຄົນລາວ ຂອງ",
@@ -21531,7 +21531,7 @@ class CountryBlz extends WorldCountry {
             common: "Belize",
             official: "Belize",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Belize",
@@ -21717,7 +21717,7 @@ class CountrySlv extends WorldCountry {
             common: "El Salvador",
             official: "Republic of El Salvador",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de El Salvador",
@@ -21909,7 +21909,7 @@ class CountryJam extends WorldCountry {
             common: "Jamaica",
             official: "Jamaica",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Jamaica",
@@ -22089,7 +22089,7 @@ class CountryUry extends WorldCountry {
             common: "Uruguay",
             official: "Oriental Republic of Uruguay",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República Oriental del Uruguay",
@@ -22278,7 +22278,7 @@ class CountryPng extends WorldCountry {
             common: "Papua New Guinea",
             official: "Independent State of Papua New Guinea",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Independent State of Papua New Guinea",
@@ -22475,7 +22475,7 @@ class CountryLux extends WorldCountry {
             common: "Luxembourg",
             official: "Grand Duchy of Luxembourg",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDeu(),
               official: "Großherzogtum Luxemburg",
@@ -22678,7 +22678,7 @@ class CountryChl extends WorldCountry {
             common: "Chile",
             official: "Republic of Chile",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de Chile",
@@ -22862,7 +22862,7 @@ class CountryVat extends WorldCountry {
             common: "Vatican City",
             official: "Vatican City State",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangIta(),
               official: "Stato della Città del Vaticano",
@@ -23050,7 +23050,7 @@ class CountryGnb extends WorldCountry {
             common: "Guinea-Bissau",
             official: "Republic of Guinea-Bissau",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official: "República da Guiné-Bissau",
@@ -23240,7 +23240,7 @@ class CountryUga extends WorldCountry {
             common: "Uganda",
             official: "Republic of Uganda",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Uganda",
@@ -23434,7 +23434,7 @@ class CountryVen extends WorldCountry {
             common: "Venezuela",
             official: "Bolivarian Republic of Venezuela",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República Bolivariana de Venezuela",
@@ -23625,7 +23625,7 @@ class CountrySrb extends WorldCountry {
             common: "Serbia",
             official: "Republic of Serbia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSrp(),
               official: "Република Србија",
@@ -23826,7 +23826,7 @@ class CountryBen extends WorldCountry {
             common: "Benin",
             official: "Republic of Benin",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République du Bénin",
@@ -24015,7 +24015,7 @@ class CountryBgd extends WorldCountry {
             common: "Bangladesh",
             official: "People's Republic of Bangladesh",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangBen(),
               official: "বাংলাদেশ গণপ্রজাতন্ত্রী",
@@ -24204,7 +24204,7 @@ class CountryBhs extends WorldCountry {
             common: "Bahamas",
             official: "Commonwealth of the Bahamas",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Commonwealth of the Bahamas",
@@ -24380,7 +24380,7 @@ class CountryNiu extends WorldCountry {
       : super(
           name:
               const CountryName.international(common: "Niue", official: "Niue"),
-          nativeNames: const [
+          namesNative: const [
             CountryName(language: LangEng(), official: "Niue", common: "Niue"),
           ],
           tld: const [".nu"],
@@ -24556,7 +24556,7 @@ class CountryAtg extends WorldCountry {
             common: "Antigua and Barbuda",
             official: "Antigua and Barbuda",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Antigua and Barbuda",
@@ -24738,7 +24738,7 @@ class CountryBlm extends WorldCountry {
             common: "Saint Barthélemy",
             official: "Collectivity of Saint Barthélemy",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Collectivité de Saint-Barthélemy",
@@ -24927,7 +24927,7 @@ class CountrySyc extends WorldCountry {
             common: "Seychelles",
             official: "Republic of Seychelles",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Seychelles",
@@ -25121,7 +25121,7 @@ class CountryEsh extends WorldCountry {
             common: "Western Sahara",
             official: "Sahrawi Arab Democratic Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República Árabe Saharaui Democrática",
@@ -25301,7 +25301,7 @@ class CountryLby extends WorldCountry {
             common: "Libya",
             official: "State of Libya",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الدولة ليبيا",
@@ -25489,7 +25489,7 @@ class CountryMkd extends WorldCountry {
             common: "North Macedonia",
             official: "Republic of North Macedonia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangMkd(),
               official: "Република Северна Македонија",
@@ -25686,7 +25686,7 @@ class CountryPer extends WorldCountry {
             common: "Peru",
             official: "Republic of Peru",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAym(),
               official: "Piruw Suyu",
@@ -25881,7 +25881,7 @@ class CountryBdi extends WorldCountry {
             common: "Burundi",
             official: "Republic of Burundi",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République du Burundi",
@@ -26074,7 +26074,7 @@ class CountryKir extends WorldCountry {
             common: "Kiribati",
             official: "Independent and Sovereign Republic of Kiribati",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Independent and Sovereign Republic of Kiribati",
@@ -26261,7 +26261,7 @@ class CountryTur extends WorldCountry {
             common: "Turkey",
             official: "Republic of Turkey",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangTur(),
               official: "Türkiye Cumhuriyeti",
@@ -26458,7 +26458,7 @@ class CountryTza extends WorldCountry {
             common: "Tanzania",
             official: "United Republic of Tanzania",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "United Republic of Tanzania",
@@ -26659,7 +26659,7 @@ class CountryTun extends WorldCountry {
             common: "Tunisia",
             official: "Tunisian Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الجمهورية التونسية",
@@ -26847,7 +26847,7 @@ class CountryMsr extends WorldCountry {
             common: "Montserrat",
             official: "Montserrat",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Montserrat",
@@ -27030,7 +27030,7 @@ class CountryKgz extends WorldCountry {
             common: "Kyrgyzstan",
             official: "Kyrgyz Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangKir(),
               official: "Кыргыз Республикасы",
@@ -27233,7 +27233,7 @@ class CountryImn extends WorldCountry {
             common: "Isle of Man",
             official: "Isle of Man",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Isle of Man",
@@ -27414,7 +27414,7 @@ class CountryGlp extends WorldCountry {
             common: "Guadeloupe",
             official: "Guadeloupe",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Guadeloupe",
@@ -27597,7 +27597,7 @@ class CountryKwt extends WorldCountry {
             common: "Kuwait",
             official: "State of Kuwait",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "دولة الكويت",
@@ -27778,7 +27778,7 @@ class CountryVgb extends WorldCountry {
             common: "British Virgin Islands",
             official: "Virgin Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Virgin Islands",
@@ -27957,7 +27957,7 @@ class CountryCiv extends WorldCountry {
             common: "Ivory Coast",
             official: "Republic of Côte d'Ivoire",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République de Côte d'Ivoire",
@@ -28153,7 +28153,7 @@ class CountryCxr extends WorldCountry {
             common: "Christmas Island",
             official: "Territory of Christmas Island",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Territory of Christmas Island",
@@ -28328,7 +28328,7 @@ class CountryLso extends WorldCountry {
             common: "Lesotho",
             official: "Kingdom of Lesotho",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Kingdom of Lesotho",
@@ -28514,7 +28514,7 @@ class CountryJey extends WorldCountry {
             common: "Jersey",
             official: "Bailiwick of Jersey",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Bailiwick of Jersey",
@@ -28708,7 +28708,7 @@ class CountrySvn extends WorldCountry {
             common: "Slovenia",
             official: "Republic of Slovenia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSlv(),
               official: "Republika Slovenija",
@@ -28905,7 +28905,7 @@ class CountryBel extends WorldCountry {
             common: "Belgium",
             official: "Kingdom of Belgium",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDeu(),
               official: "Königreich Belgien",
@@ -29110,7 +29110,7 @@ class CountryTca extends WorldCountry {
             common: "Turks and Caicos Islands",
             official: "Turks and Caicos Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Turks and Caicos Islands",
@@ -29293,7 +29293,7 @@ class CountryGib extends WorldCountry {
             common: "Gibraltar",
             official: "Gibraltar",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Gibraltar",
@@ -29473,7 +29473,7 @@ class CountryQat extends WorldCountry {
             common: "Qatar",
             official: "State of Qatar",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "دولة قطر",
@@ -29651,7 +29651,7 @@ class CountryBwa extends WorldCountry {
             common: "Botswana",
             official: "Republic of Botswana",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Botswana",
@@ -29850,7 +29850,7 @@ class CountryGnq extends WorldCountry {
             common: "Equatorial Guinea",
             official: "Republic of Equatorial Guinea",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République de la Guinée Équatoriale",
@@ -30047,7 +30047,7 @@ class CountryDji extends WorldCountry {
             common: "Djibouti",
             official: "Republic of Djibouti",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "جمهورية جيبوتي",
@@ -30244,7 +30244,7 @@ class CountryGuy extends WorldCountry {
             common: "Guyana",
             official: "Co-operative Republic of Guyana",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Co-operative Republic of Guyana",
@@ -30428,7 +30428,7 @@ class CountryGum extends WorldCountry {
             common: "Guam",
             official: "Guam",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangCha(),
               official: "Guåhån",
@@ -30613,7 +30613,7 @@ class CountryMco extends WorldCountry {
             common: "Monaco",
             official: "Principality of Monaco",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Principauté de Monaco",
@@ -30794,7 +30794,7 @@ class CountrySlb extends WorldCountry {
             common: "Solomon Islands",
             official: "Solomon Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Solomon Islands",
@@ -30977,7 +30977,7 @@ class CountryGgy extends WorldCountry {
             common: "Guernsey",
             official: "Bailiwick of Guernsey",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Bailiwick of Guernsey",
@@ -31170,7 +31170,7 @@ class CountryPry extends WorldCountry {
             common: "Paraguay",
             official: "Republic of Paraguay",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangGrn(),
               official: "Tetã Paraguái",
@@ -31367,7 +31367,7 @@ class CountrySur extends WorldCountry {
             common: "Suriname",
             official: "Republic of Suriname",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangNld(),
               official: "Republiek Suriname",
@@ -31557,7 +31557,7 @@ class CountryUmi extends WorldCountry {
             common: "United States Minor Outlying Islands",
             official: "United States Minor Outlying Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "United States Minor Outlying Islands",
@@ -31733,7 +31733,7 @@ class CountryGin extends WorldCountry {
             common: "Guinea",
             official: "Republic of Guinea",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République de Guinée",
@@ -31926,7 +31926,7 @@ class CountryCze extends WorldCountry {
             common: "Czechia",
             official: "Czech Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangCes(),
               official: "Česká republika",
@@ -32113,7 +32113,7 @@ class CountryCom extends WorldCountry {
             common: "Comoros",
             official: "Union of the Comoros",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الاتحاد القمري",
@@ -32302,7 +32302,7 @@ class CountryGha extends WorldCountry {
             common: "Ghana",
             official: "Republic of Ghana",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Ghana",
@@ -32480,7 +32480,7 @@ class CountryKna extends WorldCountry {
             common: "Saint Kitts and Nevis",
             official: "Federation of Saint Christopher and Nevis",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Federation of Saint Christopher and Nevis",
@@ -32665,7 +32665,7 @@ class CountryPyf extends WorldCountry {
             common: "French Polynesia",
             official: "French Polynesia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Polynésie française",
@@ -32853,7 +32853,7 @@ class CountryZwe extends WorldCountry {
             common: "Zimbabwe",
             official: "Republic of Zimbabwe",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Zimbabwe",
@@ -33075,7 +33075,7 @@ class CountryKen extends WorldCountry {
             common: "Kenya",
             official: "Republic of Kenya",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Kenya",
@@ -33269,7 +33269,7 @@ class CountryKaz extends WorldCountry {
             common: "Kazakhstan",
             official: "Republic of Kazakhstan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangKaz(),
               official: "Қазақстан Республикасы",
@@ -33478,7 +33478,7 @@ class CountryMne extends WorldCountry {
             common: "Montenegro",
             official: "Montenegro",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSrp(),
               official: "Црна Гора",
@@ -33665,7 +33665,7 @@ class CountryTuv extends WorldCountry {
             common: "Tuvalu",
             official: "Tuvalu",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Tuvalu",
@@ -33844,7 +33844,7 @@ class CountryPan extends WorldCountry {
             common: "Panama",
             official: "Republic of Panama",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de Panamá",
@@ -34032,7 +34032,7 @@ class CountryAnd extends WorldCountry {
             common: "Andorra",
             official: "Principality of Andorra",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangCat(),
               official: "Principat d'Andorra",
@@ -34220,7 +34220,7 @@ class CountryVir extends WorldCountry {
             common: "United States Virgin Islands",
             official: "Virgin Islands of the United States",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Virgin Islands of the United States",
@@ -34400,7 +34400,7 @@ class CountryIsr extends WorldCountry {
             common: "Israel",
             official: "State of Israel",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "دولة إسرائيل",
@@ -34593,7 +34593,7 @@ class CountryPrt extends WorldCountry {
             common: "Portugal",
             official: "Portuguese Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official: "República português",
@@ -34784,7 +34784,7 @@ class CountryAut extends WorldCountry {
             common: "Austria",
             official: "Republic of Austria",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDeu(),
               official: "Republik Österreich",
@@ -34978,7 +34978,7 @@ class CountryFin extends WorldCountry {
             common: "Finland",
             official: "Republic of Finland",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFin(),
               official: "Suomen tasavalta",
@@ -35170,7 +35170,7 @@ class CountryEst extends WorldCountry {
             common: "Estonia",
             official: "Republic of Estonia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEst(),
               official: "Eesti Vabariik",
@@ -35358,7 +35358,7 @@ class CountryDma extends WorldCountry {
             common: "Dominica",
             official: "Commonwealth of Dominica",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Commonwealth of Dominica",
@@ -35543,7 +35543,7 @@ class CountryYem extends WorldCountry {
             common: "Yemen",
             official: "Republic of Yemen",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الجمهورية اليمنية",
@@ -35726,7 +35726,7 @@ class CountryAfg extends WorldCountry {
             common: "Afghanistan",
             official: "Islamic Republic of Afghanistan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPus(),
               official: "د افغانستان اسلامي جمهوریت",
@@ -35921,7 +35921,7 @@ class CountrySyr extends WorldCountry {
             common: "Syria",
             official: "Syrian Arab Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الجمهورية العربية السورية",
@@ -36107,7 +36107,7 @@ class CountryMdv extends WorldCountry {
             common: "Maldives",
             official: "Republic of the Maldives",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDiv(),
               official: "ދިވެހިރާއްޖޭގެ ޖުމްހޫރިއްޔާ",
@@ -36295,7 +36295,7 @@ class CountryTls extends WorldCountry {
             common: "Timor-Leste",
             official: "Democratic Republic of Timor-Leste",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official: "República Democrática de Timor-Leste",
@@ -36489,7 +36489,7 @@ class CountryLtu extends WorldCountry {
             common: "Lithuania",
             official: "Republic of Lithuania",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangLit(),
               official: "Lietuvos Respublikos",
@@ -36684,7 +36684,7 @@ class CountryNzl extends WorldCountry {
             common: "New Zealand",
             official: "New Zealand",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "New Zealand",
@@ -36875,7 +36875,7 @@ class CountryBmu extends WorldCountry {
             common: "Bermuda",
             official: "Bermuda",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Bermuda",
@@ -37064,7 +37064,7 @@ class CountryDeu extends WorldCountry {
             common: "Germany",
             official: "Federal Republic of Germany",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDeu(),
               official: "Bundesrepublik Deutschland",
@@ -37261,7 +37261,7 @@ class CountryArg extends WorldCountry {
             common: "Argentina",
             official: "Argentine Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangGrn(),
               official: "Argentine Republic",
@@ -37464,7 +37464,7 @@ class CountryBlr extends WorldCountry {
             common: "Belarus",
             official: "Republic of Belarus",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangBel(),
               official: "Рэспубліка Беларусь",
@@ -37668,7 +37668,7 @@ class CountryBrb extends WorldCountry {
             common: "Barbados",
             official: "Barbados",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Barbados",
@@ -37850,7 +37850,7 @@ class CountryGtm extends WorldCountry {
             common: "Guatemala",
             official: "Republic of Guatemala",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de Guatemala",
@@ -38040,7 +38040,7 @@ class CountryAze extends WorldCountry {
             common: "Azerbaijan",
             official: "Republic of Azerbaijan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAze(),
               official: "Azərbaycan Respublikası",
@@ -38236,7 +38236,7 @@ class CountryMar extends WorldCountry {
             common: "Morocco",
             official: "Kingdom of Morocco",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "المملكة المغربية",
@@ -38420,7 +38420,7 @@ class CountryCok extends WorldCountry {
             common: "Cook Islands",
             official: "Cook Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Cook Islands",
@@ -38601,7 +38601,7 @@ class CountryCaf extends WorldCountry {
             common: "Central African Republic",
             official: "Central African Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République centrafricaine",
@@ -38800,7 +38800,7 @@ class CountryRou extends WorldCountry {
             common: "Romania",
             official: "Romania",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangRon(),
               official: "România",
@@ -38990,7 +38990,7 @@ class CountryMlt extends WorldCountry {
             common: "Malta",
             official: "Republic of Malta",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Malta",
@@ -39184,7 +39184,7 @@ class CountryArm extends WorldCountry {
             common: "Armenia",
             official: "Republic of Armenia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangHye(),
               official: "Հայաստանի Հանրապետություն",
@@ -39381,7 +39381,7 @@ class CountrySen extends WorldCountry {
             common: "Senegal",
             official: "Republic of Senegal",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République du Sénégal",
@@ -39574,7 +39574,7 @@ class CountryBgr extends WorldCountry {
             common: "Bulgaria",
             official: "Republic of Bulgaria",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangBul(),
               official: "Република България",
@@ -39762,7 +39762,7 @@ class CountryCod extends WorldCountry {
             common: "DR Congo",
             official: "Democratic Republic of the Congo",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République démocratique du Congo",
@@ -39983,7 +39983,7 @@ class CountryHti extends WorldCountry {
             common: "Haiti",
             official: "Republic of Haiti",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République d'Haïti",
@@ -40177,7 +40177,7 @@ class CountryAlb extends WorldCountry {
             common: "Albania",
             official: "Republic of Albania",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSqi(),
               official: "Republika e Shqipërisë",
@@ -40359,7 +40359,7 @@ class CountryJor extends WorldCountry {
             common: "Jordan",
             official: "Hashemite Kingdom of Jordan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "المملكة الأردنية الهاشمية",
@@ -40547,7 +40547,7 @@ class CountrySjm extends WorldCountry {
             common: "Svalbard and Jan Mayen",
             official: "Svalbard og Jan Mayen",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangNor(),
               official: "Svalbard og Jan Mayen",
@@ -40725,7 +40725,7 @@ class CountryMdg extends WorldCountry {
             common: "Madagascar",
             official: "Republic of Madagascar",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République de Madagascar",
@@ -40920,7 +40920,7 @@ class CountryFra extends WorldCountry {
             common: "France",
             official: "French Republic",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République française",
@@ -41125,7 +41125,7 @@ class CountryFsm extends WorldCountry {
             common: "Micronesia",
             official: "Federated States of Micronesia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Federated States of Micronesia",
@@ -41310,7 +41310,7 @@ class CountryAbw extends WorldCountry {
             common: "Aruba",
             official: "Aruba",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangNld(),
               official: "Aruba",
@@ -41491,7 +41491,7 @@ class CountryInd extends WorldCountry {
             common: "India",
             official: "Republic of India",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of India",
@@ -41696,7 +41696,7 @@ class CountryNam extends WorldCountry {
             common: "Namibia",
             official: "Republic of Namibia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAfr(),
               official: "Republiek van Namibië",
@@ -41908,7 +41908,7 @@ class CountryFji extends WorldCountry {
             common: "Fiji",
             official: "Republic of Fiji",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Republic of Fiji",
@@ -42097,7 +42097,7 @@ class CountrySdn extends WorldCountry {
             common: "Sudan",
             official: "Republic of the Sudan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "جمهورية السودان",
@@ -42293,7 +42293,7 @@ class CountryStp extends WorldCountry {
             common: "São Tomé and Príncipe",
             official: "Democratic Republic of São Tomé and Príncipe",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangPor(),
               official: "República Democrática do São Tomé e Príncipe",
@@ -42481,7 +42481,7 @@ class CountrySau extends WorldCountry {
             common: "Saudi Arabia",
             official: "Kingdom of Saudi Arabia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "المملكة العربية السعودية",
@@ -42677,7 +42677,7 @@ class CountryHmd extends WorldCountry {
             common: "Heard Island and McDonald Islands",
             official: "Heard Island and McDonald Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Heard Island and McDonald Islands",
@@ -42850,7 +42850,7 @@ class CountryLka extends WorldCountry {
             common: "Sri Lanka",
             official: "Democratic Socialist Republic of Sri Lanka",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSin(),
               official: "ශ්‍රී ලංකා ප්‍රජාතාන්ත්‍රික සමාජවාදී ජනරජය",
@@ -43044,7 +43044,7 @@ class CountrySwe extends WorldCountry {
             common: "Sweden",
             official: "Kingdom of Sweden",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSwe(),
               official: "Konungariket Sverige",
@@ -43232,7 +43232,7 @@ class CountryTon extends WorldCountry {
             common: "Tonga",
             official: "Kingdom of Tonga",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Kingdom of Tonga",
@@ -43416,7 +43416,7 @@ class CountryDnk extends WorldCountry {
             common: "Denmark",
             official: "Kingdom of Denmark",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDan(),
               official: "Kongeriget Danmark",
@@ -43609,7 +43609,7 @@ class CountryMys extends WorldCountry {
             common: "Malaysia",
             official: "Malaysia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Malaysia",
@@ -43796,7 +43796,7 @@ class CountryCri extends WorldCountry {
             common: "Costa Rica",
             official: "Republic of Costa Rica",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República de Costa Rica",
@@ -43986,7 +43986,7 @@ class CountryBol extends WorldCountry {
             common: "Bolivia",
             official: "Plurinational State of Bolivia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAym(),
               official: "Wuliwya Suyu",
@@ -44202,7 +44202,7 @@ class CountryBtn extends WorldCountry {
             common: "Bhutan",
             official: "Kingdom of Bhutan",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDzo(),
               official: "འབྲུག་རྒྱལ་ཁབ་",
@@ -44383,7 +44383,7 @@ class CountryCym extends WorldCountry {
             common: "Cayman Islands",
             official: "Cayman Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Cayman Islands",
@@ -44563,7 +44563,7 @@ class CountryPcn extends WorldCountry {
             common: "Pitcairn Islands",
             official: "Pitcairn Group of Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Pitcairn Group of Islands",
@@ -44750,7 +44750,7 @@ class CountryMli extends WorldCountry {
             common: "Mali",
             official: "Republic of Mali",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République du Mali",
@@ -44937,7 +44937,7 @@ class CountrySxm extends WorldCountry {
             common: "Sint Maarten",
             official: "Sint Maarten",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "Sint Maarten",
@@ -45127,7 +45127,7 @@ class CountryLva extends WorldCountry {
             common: "Latvia",
             official: "Republic of Latvia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangLav(),
               official: "Latvijas Republikas",
@@ -45322,7 +45322,7 @@ class CountryAsm extends WorldCountry {
             common: "American Samoa",
             official: "American Samoa",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangEng(),
               official: "American Samoa",
@@ -45517,7 +45517,7 @@ class CountrySpm extends WorldCountry {
             common: "Saint Pierre and Miquelon",
             official: "Saint Pierre and Miquelon",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Collectivité territoriale de Saint-Pierre-et-Miquelon",
@@ -45704,7 +45704,7 @@ class CountryEcu extends WorldCountry {
             common: "Ecuador",
             official: "Republic of Ecuador",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangSpa(),
               official: "República del Ecuador",
@@ -45894,7 +45894,7 @@ class CountryTha extends WorldCountry {
             common: "Thailand",
             official: "Kingdom of Thailand",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangTha(),
               official: "ราชอาณาจักรไทย",
@@ -46082,7 +46082,7 @@ class CountryAre extends WorldCountry {
             common: "United Arab Emirates",
             official: "United Arab Emirates",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "الإمارات العربية المتحدة",
@@ -46267,7 +46267,7 @@ class CountryHrv extends WorldCountry {
             common: "Croatia",
             official: "Republic of Croatia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangHrv(),
               official: "Republika Hrvatska",
@@ -46464,7 +46464,7 @@ class CountryMmr extends WorldCountry {
             common: "Myanmar",
             official: "Republic of the Union of Myanmar",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangMya(),
               official: "ပြည်ထောင်စု သမ္မတ မြန်မာနိုင်ငံတော်",
@@ -46654,7 +46654,7 @@ class CountryGeo extends WorldCountry {
             common: "Georgia",
             official: "Georgia",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangKat(),
               official: "საქართველო",
@@ -46834,7 +46834,7 @@ class CountryTwn extends WorldCountry {
             common: "Taiwan",
             official: "Republic of China (Taiwan)",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangZho(),
               official: "中華民國",
@@ -47024,7 +47024,7 @@ class CountryChe extends WorldCountry {
             common: "Switzerland",
             official: "Swiss Confederation",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "Confédération suisse",
@@ -47233,7 +47233,7 @@ class CountryEri extends WorldCountry {
             common: "Eritrea",
             official: "State of Eritrea",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangAra(),
               official: "دولة إرتريا",
@@ -47435,7 +47435,7 @@ class CountryCog extends WorldCountry {
             common: "Republic of the Congo",
             official: "Republic of the Congo",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangFra(),
               official: "République du Congo",
@@ -47632,7 +47632,7 @@ class CountryFro extends WorldCountry {
             common: "Faroe Islands",
             official: "Faroe Islands",
           ),
-          nativeNames: const [
+          namesNative: const [
             CountryName(
               language: LangDan(),
               official: "Færøerne",
