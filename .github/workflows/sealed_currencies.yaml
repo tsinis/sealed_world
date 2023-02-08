@@ -1,0 +1,14 @@
+name: sealed_currencies
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/sealed_currencies/**"
+      - ".github/workflows/sealed_currencies.yaml"
+
+jobs:
+  verify-currencies-dart:
+    uses: ./.github/workflows/dart_package_workflow.yaml
+    with:
+      package_name: sealed_currencies

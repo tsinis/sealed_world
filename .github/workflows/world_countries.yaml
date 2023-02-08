@@ -1,0 +1,14 @@
+name: world_countries
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/world_countries/**"
+      - ".github/workflows/world_countries.yaml"
+
+jobs:
+  verify-countries-flutter:
+    uses: ./.github/workflows/flutter_package_workflow.yaml
+    with:
+      package_name: world_countries
