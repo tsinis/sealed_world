@@ -1,0 +1,14 @@
+name: sealed_countries
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/sealed_countries/**"
+      - ".github/workflows/sealed_countries.yaml"
+
+jobs:
+  verify-currencies-dart:
+    uses: ./.github/workflows/dart_package_workflow.yaml
+    with:
+      package_name: sealed_countries

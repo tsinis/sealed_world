@@ -1,0 +1,23 @@
+name: example
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0-134 <4.0.0'
+  flutter: ">=3.7.0-24"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  world_countries:
+    path: ../
+
+dev_dependencies:
+  flutter_lints: ^2.0.1  # From Google
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

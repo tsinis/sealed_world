@@ -15,7 +15,7 @@ updates:
   # Maintain dependencies for Dart
   - package-ecosystem: "pub"
     versioning-strategy: increase
-    directory: "packages/countries_dart/"
+    directory: "packages/sealed_countries/"
     schedule:
       interval: "weekly"
     reviewers:
@@ -26,7 +26,7 @@ updates:
 
   - package-ecosystem: "pub"
     versioning-strategy: increase
-    directory: "packages/countries_flutter/"
+    directory: "packages/world_countries/"
     schedule:
       interval: "weekly"
     reviewers:
@@ -37,7 +37,7 @@ updates:
 
   - package-ecosystem: "pub"
     versioning-strategy: increase
-    directory: "packages/languages_dart/"
+    directory: "packages/sealed_languages/"
     schedule:
       interval: "weekly"
     reviewers:
@@ -48,7 +48,7 @@ updates:
 
   - package-ecosystem: "pub"
     versioning-strategy: increase
-    directory: "packages/currencies_dart/"
+    directory: "packages/sealed_currencies/"
     schedule:
       interval: "weekly"
     reviewers:
