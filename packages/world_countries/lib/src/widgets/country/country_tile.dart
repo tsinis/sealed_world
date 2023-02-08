@@ -18,7 +18,7 @@ class CountryTile extends ListTile {
     bool disabled = false,
   }) : super(selected: isChosen, enabled: !disabled);
 
-  static const _overridenStyle = TextStyle(color: Colors.black);
+  static const _overriddenStyle = TextStyle(color: Colors.black);
 
   static const fontSize = UiConstants.point * 3;
 
@@ -32,7 +32,7 @@ class CountryTile extends ListTile {
         // Reference: https://github.com/flutter/flutter/issues/86584.
         type: MaterialType.transparency,
         child: ListTile(
-          leading: leading ?? Text(country.emoji, style: _overridenStyle),
+          leading: leading ?? Text(country.emoji, style: _overriddenStyle),
           title: title ?? Text(country.namesNative.first.common),
           subtitle: subtitle ??
               Text(
