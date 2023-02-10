@@ -8,7 +8,7 @@ class UiConstants {
   static const padding = EdgeInsets.only(left: point, top: point, right: point);
   static const radius = Radius.circular(point);
   static const searchIcon = Icon(Icons.search_outlined);
-  static const duration = Duration(milliseconds: 200);
+  static const duration = kThemeChangeDuration;
   static const switchOutCurve = Curves.easeOut;
   static const switchInCurve = Curves.easeIn;
   static const shape = RoundedRectangleBorder(

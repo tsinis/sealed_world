@@ -8,8 +8,8 @@ import "../base_widgets/stateful_indexed_list_view.dart";
 
 class IndexedListViewBuilder<T extends Object>
     extends StatefulIndexedListView<T> {
-  const IndexedListViewBuilder({
-    required super.items,
+  const IndexedListViewBuilder(
+    super.items, {
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,

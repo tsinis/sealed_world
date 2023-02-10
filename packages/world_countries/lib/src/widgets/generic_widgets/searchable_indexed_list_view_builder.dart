@@ -12,8 +12,8 @@ part "searchable_indexed_list_view_builder_state.dart";
 
 class SearchableIndexedListViewBuilder<T extends Object>
     extends StatefulIndexedListView<T> implements MaterialContextInterface<T> {
-  const SearchableIndexedListViewBuilder({
-    required super.items,
+  const SearchableIndexedListViewBuilder(
+    super.items, {
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
