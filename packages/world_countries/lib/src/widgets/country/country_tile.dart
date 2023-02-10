@@ -1,52 +1,48 @@
 import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
-import "../../helpers/ui_constants.dart";
+import "../../models/item_properties.dart";
+import "../generic_widgets/list_item_tile.dart";
 
-class CountryTile extends ListTile {
+class CountryTile extends ListItemTile<WorldCountry> {
   const CountryTile(
-    this.country, {
+    WorldCountry country, {
+    super.chosenIcon,
+    super.index,
+    super.isChosen,
+    super.isDisabled,
+    super.key,
+    super.leading,
+    super.leadingAndTrailingTextStyle,
+    super.minLeadingWidth,
+    super.onPressed,
     super.subtitle,
     super.title,
-    super.leading,
-    this.onPressed,
-    this.isChosen = false,
-    this.chosenIcon = const Icon(Icons.beenhere_outlined),
-    super.minLeadingWidth,
+  }) : super(country);
+
+  CountryTile.defaultFromProperties(
+    ItemProperties<WorldCountry> country, {
+    Widget? leading,
+    Widget? subtitle,
+    Widget? title,
+    super.chosenIcon,
     super.leadingAndTrailingTextStyle,
+    super.minLeadingWidth,
+    super.onPressed,
     super.key,
-    bool disabled = false,
-  }) : super(selected: isChosen, enabled: !disabled);
-
-  static const _overriddenStyle = TextStyle(color: Colors.black);
-
-  static const fontSize = UiConstants.point * 3;
-
-  final Widget? chosenIcon;
-  final WorldCountry country;
-  final bool isChosen;
-  final ValueSetter<WorldCountry>? onPressed;
-
-  @override
-  Widget build(BuildContext context) => Material(
-        // Reference: https://github.com/flutter/flutter/issues/86584.
-        type: MaterialType.transparency,
-        child: ListTile(
-          leading: leading ?? Text(country.emoji, style: _overriddenStyle),
-          title: title ?? Text(country.namesNative.first.common),
+  }) : super(
+          country.item,
+          index: country.index,
+          isChosen: country.isChosen,
+          isDisabled: country.isDisabled,
+          title: title ?? Text(country.item.namesNative.first.common),
+          leading: leading ??
+              Text(country.item.emoji, style: ListItemTile.overriddenStyle),
           subtitle: subtitle ??
               Text(
-                country.namesCommonNative(skipFirst: true) ??
-                    country.name.common,
+                country.item.namesCommonNative(skipFirst: true) ??
+                    country.item.nameEnglish.common,
                 overflow: TextOverflow.ellipsis,
               ),
-          trailing: isChosen ? chosenIcon : null,
-          leadingAndTrailingTextStyle: leadingAndTrailingTextStyle ??
-              const TextStyle(fontSize: fontSize),
-          enabled: enabled,
-          onTap: enabled ? () => onPressed?.call(country) : null,
-          selected: isChosen,
-          minLeadingWidth: minLeadingWidth ?? fontSize + UiConstants.point,
-        ),
-      );
+        );
 }

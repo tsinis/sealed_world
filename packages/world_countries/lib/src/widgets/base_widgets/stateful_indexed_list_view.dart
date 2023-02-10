@@ -5,8 +5,8 @@ import "../../models/item_properties.dart";
 
 abstract class StatefulIndexedListView<T extends Object>
     extends StatefulWidget {
-  const StatefulIndexedListView({
-    required this.items,
+  const StatefulIndexedListView(
+    this.items, {
     this.addAutomaticKeepAlives = true,
     this.addRepaintBoundaries = true,
     this.addSemanticIndexes = true,
@@ -40,9 +40,10 @@ abstract class StatefulIndexedListView<T extends Object>
     super.key,
   });
 
+  final Iterable<T> items;
+
   final Widget? Function(ItemProperties<T> itemProperties)? itemBuilder;
   final Widget emptyStatePlaceholder;
-  final Iterable<T> items;
   final ValueSetter<T>? onSelect;
   final Iterable<T>? chosen;
   final Iterable<T>? disabled;

@@ -13,8 +13,8 @@ part "basic_picker_state.dart";
 @immutable
 abstract class BasicPicker<T extends Object>
     extends SearchableIndexedListViewBuilder<T> {
-  const BasicPicker({
-    required super.items,
+  const BasicPicker(
+    super.items, {
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,

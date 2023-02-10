@@ -45,23 +45,19 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
-  }) : super(items: countries);
+  }) : super(countries);
 
   Iterable<WorldCountry> get countries => items;
 
   @override
   Widget? defaultBuilder(ItemProperties<WorldCountry> itemProperties) =>
-      CountryTile(
-        itemProperties.item,
-        onPressed: onSelect,
-        isChosen: itemProperties.isChosen,
-        disabled: itemProperties.isDisabled,
-      );
+      CountryTile.defaultFromProperties(itemProperties, onPressed: onSelect);
 
   @override
   Iterable<String> defaultSearch(WorldCountry item) => {
-        ...item.translations.map((tr) => tr.common),
-        ...item.namesNative.map((nn) => nn.common),
+        ...item.translations.map((translatedName) => translatedName.common),
+        ...item.namesNative.map((nativeName) => nativeName.common),
+        item.name.common,
       };
 
   @override

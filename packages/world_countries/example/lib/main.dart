@@ -23,13 +23,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   static const picker = CountryPicker(
     onSelect: print,
-    chosen: [CountryAla(), CountryBel()],
+    chosen: [CountryAfg(), CountryAla(), CountryDza()],
     disabled: [CountryAfg(), CountryAlb()],
   );
 
   void onPressed() async {
     final country = await picker.showInModalBottomSheet(context);
-    debugPrint('Selected country: $country');
+    if (country == null) return debugPrint('No country selected.');
+    debugPrint('Selected country: ${country.name.common}.');
   }
 
   @override

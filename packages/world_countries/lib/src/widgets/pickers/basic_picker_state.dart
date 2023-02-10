@@ -19,7 +19,7 @@ class _BasicPickerState<T extends Object> extends State<BasicPicker<T>> {
 
   @override
   Widget build(BuildContext context) => SearchableIndexedListViewBuilder<T>(
-        items: widget.items,
+        widget.items,
         addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
         addRepaintBoundaries: widget.addRepaintBoundaries,
         addSemanticIndexes: widget.addSemanticIndexes,

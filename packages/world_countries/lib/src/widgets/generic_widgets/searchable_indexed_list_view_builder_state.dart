@@ -9,7 +9,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
   Widget build(BuildContext context) => isSearchable && widget.showHeader
       ? SearchListListenableBuilder<T>(
           builder: (_, filteredItems) => IndexedListViewBuilder<T>(
-            items: filteredItems,
+            filteredItems,
             addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
             addRepaintBoundaries: widget.addRepaintBoundaries,
             addSemanticIndexes: widget.addSemanticIndexes,
@@ -49,7 +49,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
           startWithSearch: widget.startWithSearch,
         )
       : IndexedListViewBuilder<T>(
-          items: widget.items,
+          widget.items,
           addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
           addRepaintBoundaries: widget.addRepaintBoundaries,
           addSemanticIndexes: widget.addSemanticIndexes,
