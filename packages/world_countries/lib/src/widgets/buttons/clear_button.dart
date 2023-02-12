@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-import "../../helpers/ui_constants.dart";
+import "../../constants/ui_constants.dart";
 
 class ClearButton extends StatelessWidget {
   const ClearButton(

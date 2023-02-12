@@ -18,6 +18,33 @@ dependencies:
 dev_dependencies:
   build_runner: ^2.4.0 # From Google
   dart_code_metrics: ^5.5.1 # Flutter Favorite
+  flutter_gen_runner: ^5.2.0
   flutter_test: # From Google
     sdk: flutter
   lints: ^2.0.1 # From Google
+
+
+flutter:
+  assets:
+    - lib/assets/
+
+  fonts:
+    - family: TwemojiTtf
+      fonts:
+        - asset: packages/world_countries/assets/fonts/Twemoji/Twemoji.Mozilla.ttf
+    - family: TwemojiWoff2
+      fonts:
+        - asset: packages/world_countries/assets/fonts/Twemoji/Twemoji.Mozilla.woff2
+
+
+flutter_gen:
+  output: lib/src/generated/
+  assets:
+    enabled: false
+  colors:
+    enabled: false
+  fonts:
+    enabled: true
+    outputs:
+      class_name: WorldCountryFonts
+      package_parameter_enabled: true # TODO: Until https://github.com/FlutterGen/flutter_gen/issues/275

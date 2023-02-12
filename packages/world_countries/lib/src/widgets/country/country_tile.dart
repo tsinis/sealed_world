@@ -3,6 +3,7 @@ import "package:sealed_countries/sealed_countries.dart";
 
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
+import "emoji_flag.dart";
 
 class CountryTile extends ListItemTile<WorldCountry> {
   const CountryTile(
@@ -36,8 +37,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
           isChosen: country.isChosen,
           isDisabled: country.isDisabled,
           title: title ?? Text(country.item.namesNative.first.common),
-          leading: leading ??
-              Text(country.item.emoji, style: ListItemTile.overriddenStyle),
+          leading: leading ?? EmojiFlag.twemoji(country.item),
           subtitle: subtitle ??
               Text(
                 country.item.namesCommonNative(skipFirst: true) ??

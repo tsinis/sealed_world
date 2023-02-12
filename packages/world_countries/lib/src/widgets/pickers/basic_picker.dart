@@ -3,7 +3,7 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 
-import "../../helpers/ui_constants.dart";
+import "../../constants/ui_constants.dart";
 import "../../models/item_properties.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";

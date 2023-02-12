@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-import "../../helpers/ui_constants.dart";
+import "../../constants/ui_constants.dart";
 
 class ListItemTile<T extends Object> extends ListTile {
   const ListItemTile(
@@ -17,9 +17,6 @@ class ListItemTile<T extends Object> extends ListTile {
     super.subtitle,
     super.title,
   }) : super(selected: isChosen, enabled: !isDisabled, trailing: chosenIcon);
-
-  @protected
-  static const overriddenStyle = TextStyle(color: Colors.grey);
 
   @protected
   static const fontSize = UiConstants.point * 3;
