@@ -3,8 +3,8 @@ import "dart:ui" show BoxHeightStyle, BoxWidthStyle;
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 
+import "../../constants/ui_constants.dart";
 import "../../helpers/name_text_input.dart";
-import "../../helpers/ui_constants.dart";
 import "../buttons/clear_button.dart";
 
 class AdaptiveSearchTextField extends TextField {

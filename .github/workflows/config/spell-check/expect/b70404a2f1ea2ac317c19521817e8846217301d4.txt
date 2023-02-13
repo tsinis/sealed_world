@@ -1,0 +1,13 @@
+CBDT
+colr
+emojidex
+emojitwo
+fluentui
+glyf
+Google
+Mozilla
+noto
+OTSVG
+picosvgz
+Segoe
+twemoji

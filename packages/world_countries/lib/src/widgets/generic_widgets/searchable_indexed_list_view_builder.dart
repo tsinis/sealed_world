@@ -2,7 +2,7 @@
 
 import "package:flutter/material.dart";
 
-import "../../helpers/ui_constants.dart";
+import "../../constants/ui_constants.dart";
 import "../../interfaces/material_context_interface.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 import "indexed_list_view_builder.dart";

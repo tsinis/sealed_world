@@ -18,6 +18,48 @@ dependencies:
 dev_dependencies:
   build_runner: ^2.4.0 # From Google
   dart_code_metrics: ^5.5.1 # Flutter Favorite
+  flutter_gen_runner: ^5.2.0
   flutter_test: # From Google
     sdk: flutter
   lints: ^2.0.1 # From Google
+
+flutter:
+  assets:
+    - lib/assets/
+
+  fonts:
+    # Twemoji
+    - family: TwemojiTTF
+      fonts:
+        - asset: packages/world_countries/assets/fonts/Twemoji/Twemoji.Mozilla.ttf
+    - family: TwemojiWOFF2
+      fonts:
+        - asset: packages/world_countries/assets/fonts/Twemoji/Twemoji.Mozilla.woff2
+
+    # OpenMoji
+    - family: OpenMojiCOLR1
+      fonts:
+        - asset: packages/world_countries/assets/fonts/OpenMoji/OpenMoji-color-colr1_svg.ttf
+    - family: OpenMojiCOLR0
+      fonts:
+        - asset: packages/world_countries/assets/fonts/OpenMoji/OpenMoji-color-glyf_colr_0.ttf
+
+    # NotoEmoji
+    - family: NotoEmojiCBDT
+      fonts:
+        - asset: packages/world_countries/assets/fonts/NotoEmoji/NotoColorEmoji.ttf
+    - family: NotoEmojiOTSVG
+      fonts:
+        - asset: packages/world_countries/assets/fonts/NotoEmoji/noto_flags-picosvgz.ttf
+
+flutter_gen:
+  output: lib/src/generated/
+  assets:
+    enabled: false
+  colors:
+    enabled: false
+  fonts:
+    enabled: true
+    outputs:
+      class_name: WorldCountryFonts
+      package_parameter_enabled: true # TODO: Until https://github.com/FlutterGen/flutter_gen/issues/357
