@@ -10,9 +10,21 @@
 class WorldCountryFonts {
   WorldCountryFonts._();
 
-  /// Font family: TwemojiTtf
-  static const String twemojiTtf = 'TwemojiTtf';
+  /// Font family: NotoEmojiCBDT
+  static const String notoEmojiCBDT = 'NotoEmojiCBDT';
 
-  /// Font family: TwemojiWoff2
-  static const String twemojiWoff2 = 'TwemojiWoff2';
+  /// Font family: NotoEmojiOTSVG
+  static const String notoEmojiOTSVG = 'NotoEmojiOTSVG';
+
+  /// Font family: OpenMojiCOLR0
+  static const String openMojiCOLR0 = 'OpenMojiCOLR0';
+
+  /// Font family: OpenMojiCOLR1
+  static const String openMojiCOLR1 = 'OpenMojiCOLR1';
+
+  /// Font family: TwemojiTTF
+  static const String twemojiTTF = 'TwemojiTTF';
+
+  /// Font family: TwemojiWOFF2
+  static const String twemojiWOFF2 = 'TwemojiWOFF2';
 }

@@ -16,13 +16,13 @@ class FunctionalPlatform {
     T Function()? web,
     T Function()? windows,
   }) {
-    if (kIsWeb && web != null) return web.call();
-    if (Platform.isAndroid && android != null) return android.call();
-    if (Platform.isIOS && iOS != null) return iOS.call();
-    if (Platform.isMacOS && macOS != null) return macOS.call();
-    if (Platform.isWindows && windows != null) return windows.call();
-    if (Platform.isLinux && linux != null) return linux.call();
-    if (Platform.isFuchsia && fuchsia != null) return fuchsia.call();
+    if (kIsWeb) return web?.call() ?? orElse(); // IO is not available on web.
+    if (Platform.isAndroid && android != null) return android();
+    if (Platform.isIOS && iOS != null) return iOS();
+    if (Platform.isMacOS && macOS != null) return macOS();
+    if (Platform.isWindows && windows != null) return windows();
+    if (Platform.isLinux && linux != null) return linux();
+    if (Platform.isFuchsia && fuchsia != null) return fuchsia();
 
     return orElse();
   }
