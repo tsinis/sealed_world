@@ -9,6 +9,9 @@
 \.lock$
 \.metadata$
 \.mp3$
+\.woff2$
+\.ttf$
+\.otf$
 \.png$
 ^\.github/
 ^\.vscode/
