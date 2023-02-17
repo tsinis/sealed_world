@@ -19,5 +19,5 @@ jobs:
       - name: 🪞 Mirroring Repository
         uses: pixta-dev/repository-mirroring-action@v1.1.1
         with:
-          target_repo_url: git@gitlab.com:tsinis/functional_status_codes.git
+          target_repo_url: git@gitlab.com:tsinis/sealed_world.git
           ssh_private_key: ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}
