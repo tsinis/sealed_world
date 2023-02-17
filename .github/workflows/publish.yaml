@@ -1,0 +1,80 @@
+name: publish
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "CHANGELOG.md"
+  push:
+    branches:
+      - main
+    tags:
+    - '[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  publish-dry-run:
+    name: 📝 Publish dry run
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.ref_type == 'branch' && github.event_name == 'pull_request' && !github.event.pull_request.merged
+    steps:
+      - name: 📚 Checks-out repository
+        uses: actions/checkout@v3
+
+      - name: 🎯 Setup Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: 📦 Install Dependencies
+        run: dart pub get
+
+      - name: 🏜️ Publish - dry run
+        run: dart pub publish --dry-run
+
+  check-version:
+    name: 💡 Check version
+    runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
+    timeout-minutes: 15
+    steps:
+      - name: 📚 Checks-out repository
+        uses: actions/checkout@v3
+
+      - name: 🔖 Get tag
+        id: get_tag
+        run: echo TAG=${GITHUB_REF#refs/tags/} >> $GITHUB_ENV
+
+      - name: 📰 Read pubspec.yaml version
+        uses: KJ002/read-yaml@1.6
+        id: pubspec
+        with:
+          file: "pubspec.yaml"
+          key-path: '["version"]'
+
+      - name: 🗣️ Show detected tag and version
+        run: |
+          echo "Tag from github ref.: ${{ env.TAG }}!"
+          echo "Version from pubspec: ${{ steps.pubspec.outputs.data }}!"
+
+      - name: 🗑️ Delete tag if version is not same as tag
+        uses: dev-drprasad/delete-tag-and-release@v0.2.0
+        if: ${{ steps.pubspec.outputs.data != env.TAG }}
+        with:
+          tag_name: ${{ env.TAG }}
+          delete_release: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ❌ Cancel workflow if tag is not same as version
+        uses: andymckay/cancel-action@0.3
+        if: ${{ steps.pubspec.outputs.data != env.TAG }}
+
+      - name: 💤 Sleep for 10 seconds
+        run: sleep 10s
+        shell: bash
+
+  publish:
+    name: 📰 Publish to pub.dev
+    needs: check-version
+    if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1

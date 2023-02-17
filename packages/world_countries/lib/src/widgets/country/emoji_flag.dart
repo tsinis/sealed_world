@@ -1,12 +1,15 @@
 import "package:flutter/widgets.dart";
+import "package:sealed_countries/sealed_countries.dart";
 
-import "../../../world_countries.dart";
+import "../../constants/package_constants.dart";
+import "../../constants/ui_constants.dart";
+import "../../generated/fonts.gen.dart";
 import "../../helpers/functional_platform.dart";
 
 // ignore: format-comment, false positive.
 /// Small context about other emoji fonts:
 /// * FxEmojis is deprecated.
-/// * EmojiOne is also deprecated.
+/// * EmojiOne is also deprecated, but you can see usage in the package example.
 /// * emojidex provides no open-source emojis.
 /// * Segoe UI Emoji doesn't include country flags.
 /// * EmojiTwo has no font (especially COLR) support:
@@ -37,6 +40,7 @@ class EmojiFlag extends Text {
           country.emoji,
           style: _style(
             style,
+            package: PackageConstants.name,
             FunctionalPlatform.maybeWhen(
               web: () => WorldCountryFonts.twemojiWOFF2,
               iOS: () => WorldCountryFonts.twemojiWOFF2,
@@ -66,6 +70,7 @@ class EmojiFlag extends Text {
           country.emoji,
           style: _style(
             style,
+            package: PackageConstants.name,
             FunctionalPlatform.maybeWhen(
               iOS: () => WorldCountryFonts.openMojiCOLR0,
               macOS: () => WorldCountryFonts.openMojiCOLR0,
@@ -94,6 +99,7 @@ class EmojiFlag extends Text {
           country.emoji,
           style: _style(
             style,
+            package: PackageConstants.name,
             FunctionalPlatform.maybeWhen<String?>(
               android: () => null, // Provides these emojis directly in the OS.
               iOS: () => WorldCountryFonts.notoEmojiOTSVG,
@@ -147,6 +153,6 @@ class EmojiFlag extends Text {
       (style ?? const TextStyle()).copyWith(
         color: UiConstants.color,
         fontFamily: font,
-        package: package ?? PackageConstants.name,
+        package: package,
       );
 }

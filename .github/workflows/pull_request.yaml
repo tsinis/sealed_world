@@ -24,16 +24,10 @@ jobs:
     timeout-minutes: 4
     if: ${{ github.event.pull_request.assignee == null && join(github.event.pull_request.assignees) == '' }}
     steps:
-      - name: ✍🏻 Author Assign
-        uses: toshimaru/auto-author-assign@v1.6.2
+      - name: ✍🏻 Add Reviewer and Author Assign
+        uses: kentaro-m/auto-assign-action@v1.2.4
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: 👤 Add Reviewer
-        uses: madrapps/add-reviewers@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: github.event.repository.owner.login
+          configuration-path: '.github/workflows/config/auto-assign.yaml'
 
   pr-title:
     runs-on: ubuntu-latest
@@ -50,9 +44,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 4
     steps:
-      - name: 🎟️ Approve Dependabot
+      - name: 🎟️ Approve Dependabot and owner
         uses: hmarr/auto-approve-action@v3
-        if: github.actor == 'dependabot[bot]' || github.actor == github.event.repository.owner.login
+        if: github.actor == 'dependabot[bot]' || github.actor == 'tsinis'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 

@@ -26,7 +26,7 @@ jobs:
       - name: 🎯 Setup Dart
         uses: dart-lang/setup-dart@v1
         with:
-          sdk: "dev"
+          sdk: "beta"
 
       - name: 📦 Install Dependencies
         run: dart pub get
@@ -34,7 +34,7 @@ jobs:
       - name: 🕵️ Analyze Code
         uses: ValentinVignal/action-dart-analyze@v0.15
         with:
-          fail-on: 'error'
+          fail-on: 'error' # TODO: Later change to 'format'.
           token: ${{ secrets.GITHUB_TOKEN }}
           working-directory: ${{ env.relative_path }}
           format: false # TODO: Enable when formatting in Dart 3 will be supported.
@@ -47,7 +47,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           relativePath: ${{ env.relative_path }}
 
-      - name: 📈 Check Pub Score # TODO: Increase PERCENTAGE to 100 before publish.
+      - name: 📈 Check Pub Score # TODO: Increase PERCENTAGE to 92 before publish.
         env:
           TOTAL: ${{ steps.analysis.outputs.total }}
           TOTAL_MAX: ${{ steps.analysis.outputs.total_max }}

@@ -1,0 +1,5 @@
+runOnDraft: false
+addReviewers: true
+addAssignees: author
+reviewers:
+  - tsinis

@@ -1,0 +1,37 @@
+name: links_and_spell_check
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  spell-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v3
+
+      - name: 🪄 Spell Check
+        uses: check-spelling/check-spelling@v0.0.21
+        with:
+          config: .github/workflows/config/spell-check
+          check_file_names: 1
+          only_check_changed_files: 1
+          check_extra_dictionaries: ""
+          extra_dictionaries:
+            cspell:html/html.txt
+            cspell:dart/src/dart.txt
+            cspell:filetypes/filetypes.txt
+
+      - name: 🔗 Link Checker
+        uses: lycheeverse/lychee-action@v1.5.4
+        with:
+          args: --verbose --no-progress './**/*.md' './**/*.html' './**/*.dart'
+          format: markdown
+          jobSummary: true
+          fail: false
