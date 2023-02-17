@@ -21,3 +21,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: EmojiOneColor
+      fonts:
+        - asset: assets/fonts/EmojiOne/EmojiOneColor.otf
+    - family: EmojiOneMozilla
+      fonts:
+        - asset: assets/fonts/EmojiOne/EmojiOneMozilla.ttf
