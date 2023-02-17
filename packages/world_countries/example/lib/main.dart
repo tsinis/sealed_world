@@ -21,23 +21,34 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static const picker = CountryPicker(
-    onSelect: print,
-    chosen: [CountryAfg(), CountryAla(), CountryDza()],
-    disabled: [CountryAfg(), CountryAlb()],
-  );
-
   void onPressed() async {
-    final country = await picker.showInModalBottomSheet(context);
+    final country = await const CountryPicker().showInModalBottomSheet(context);
     if (country == null) return debugPrint('No country selected.');
     debugPrint('Selected country: ${country.name.common}.');
   }
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: const SafeArea(child: picker),
-        floatingActionButton: FloatingActionButton(
-          onPressed: onPressed,
+        floatingActionButton: FloatingActionButton(onPressed: onPressed),
+        body: SafeArea(
+          child: CountryPicker(
+            onSelect: print,
+            chosen: const [CountryAfg(), CountryAla(), CountryDza()],
+            disabled: const [CountryAfg(), CountryAlb()],
+            itemBuilder: (country) => CountryTile.defaultFromProperties(
+              country,
+              leading: EmojiFlag.custom(
+                country.item,
+                style: TextStyle(
+                  fontFamily: FunctionalPlatform.maybeWhen(
+                    iOS: () => 'EmojiOneColor',
+                    macOS: () => 'EmojiOneColor',
+                    orElse: () => 'EmojiOneMozilla',
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
 }
