@@ -1,4 +1,4 @@
-name: spell_check
+name: links_and_spell_check
 
 on:
   pull_request:
@@ -27,3 +27,11 @@ jobs:
             cspell:html/html.txt
             cspell:dart/src/dart.txt
             cspell:filetypes/filetypes.txt
+
+      - name: 🔗 Link Checker
+        uses: lycheeverse/lychee-action@v1.5.4
+        with:
+          args: --verbose --no-progress './**/*.md' './**/*.html' './**/*.dart'
+          format: markdown
+          jobSummary: true
+          fail: true
