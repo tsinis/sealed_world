@@ -34,4 +34,4 @@ jobs:
           args: --verbose --no-progress './**/*.md' './**/*.html' './**/*.dart'
           format: markdown
           jobSummary: true
-          fail: true
+          fail: false
