@@ -100,8 +100,10 @@ class SearchableIndexedListViewBuilder<T extends Object>
       );
 
   @override
-  Future<T?> showInSearch() {
-    // TODO: implement showInSearch.
-    throw UnimplementedError();
-  }
+  Future<T?>? showInSearch(
+    BuildContext context, {
+    String? query = "",
+    bool useRootNavigator = false,
+  }) =>
+      null;
 }

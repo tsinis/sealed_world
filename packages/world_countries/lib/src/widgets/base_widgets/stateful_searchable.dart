@@ -1,6 +1,9 @@
 import "package:flutter/widgets.dart";
 
-abstract class StatefulSearchable<T extends Object> extends StatefulWidget {
+import "../../interfaces/searchable_interface.dart";
+
+abstract class StatefulSearchable<T extends Object> extends StatefulWidget
+    implements SearchableInterface<T> {
   const StatefulSearchable({
     required this.searchIn,
     required this.textController,
@@ -10,7 +13,11 @@ abstract class StatefulSearchable<T extends Object> extends StatefulWidget {
   });
 
   final TextEditingController textController;
+
+  @override
   final Iterable<String> Function(T item) searchIn;
+  @override
   final bool caseSensitiveSearch;
+  @override
   final bool startWithSearch;
 }
