@@ -71,7 +71,7 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
                     style: textStyle ?? const TextStyle(),
                     cursorColor: textStyle?.color ?? UiConstants.color,
                     backgroundCursorColor: Colors.transparent,
-                    textInputAction: TextInputAction.search,
+                    textInputAction: UiConstants.textInputAction,
                     inputFormatters: NameTextInput.formatters,
                   ),
                 ),

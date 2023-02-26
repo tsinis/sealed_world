@@ -3,11 +3,9 @@ import "package:flutter/material.dart";
 import "../../constants/ui_constants.dart";
 
 class ClearButton extends StatelessWidget {
-  const ClearButton(
-    this._controller, {
-    this.icon = const Icon(Icons.clear),
-    super.key,
-  });
+  const ClearButton(this._controller, {this.icon = defaultIcon, super.key});
+
+  static const defaultIcon = Icon(Icons.clear);
 
   final TextEditingController _controller;
   final Widget icon;
