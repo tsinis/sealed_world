@@ -2,6 +2,7 @@ import "dart:collection";
 
 import "package:flutter/material.dart";
 
+import "../../extensions/build_context_extensions.dart";
 import "../../interfaces/search_delegate_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../buttons/clear_button.dart";
@@ -89,8 +90,8 @@ class ImplicitSearchDelegate<T extends Object>
         mouseCursor: backIconButton?.mouseCursor,
         focusNode: backIconButton?.focusNode,
         autofocus: backIconButton?.autofocus ?? false,
-        tooltip: backIconButton?.tooltip ??
-            MaterialLocalizations.of(context).backButtonTooltip,
+        tooltip:
+            backIconButton?.tooltip ?? context.materialL10n.backButtonTooltip,
         enableFeedback: backIconButton?.enableFeedback,
         constraints: backIconButton?.constraints,
         style: backIconButton?.style,

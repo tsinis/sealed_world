@@ -4,6 +4,7 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
+import "../../extensions/build_context_extensions.dart";
 import "../../models/item_properties.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
@@ -95,7 +96,7 @@ abstract class BasicPicker<T extends Object>
           child: copyWith(
             onSelect: (selectedItem) {
               onSelect?.call(selectedItem);
-              Navigator.of(internalContext).maybePop(selectedItem);
+              internalContext.maybePop(selectedItem);
             },
           ),
         ),
@@ -139,7 +140,7 @@ abstract class BasicPicker<T extends Object>
             showSearchBar: false,
             onSelect: (selectedItem) {
               onSelect?.call(selectedItem);
-              Navigator.of(internalContext).maybePop(selectedItem);
+              internalContext.maybePop(selectedItem);
             },
           ),
           searchIn: searchIn ?? defaultSearch,
