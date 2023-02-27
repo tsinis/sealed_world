@@ -72,5 +72,9 @@ abstract class MaterialContextInterface<T extends Object> {
     double? heightFactor = 0.6,
   });
 
-  Future<T?> showInSearch();
+  Future<T?>? showInSearch(
+    BuildContext context, {
+    String? query = "",
+    bool useRootNavigator = false,
+  });
 }

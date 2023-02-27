@@ -150,7 +150,8 @@ class EmojiFlag extends Text {
           style: _style(style, style?.fontFamily, package: package),
         );
 
-  static TextStyle _style(TextStyle? style, String? font, {String? package}) => (style ?? const TextStyle()).copyWith(
+  static TextStyle _style(TextStyle? style, String? font, {String? package}) =>
+      (style ?? const TextStyle()).copyWith(
         color: UiConstants.color,
         fontFamily: font,
         package: package,

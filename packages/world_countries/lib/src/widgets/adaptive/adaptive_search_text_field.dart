@@ -4,6 +4,7 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
+import "../../extensions/build_context_extensions.dart";
 import "../../helpers/name_text_input.dart";
 import "../buttons/clear_button.dart";
 
@@ -37,23 +38,19 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
   // ignore: avoid-non-null-assertion, cannot be null since it's required.
   TextEditingController get controller => widget.controller!;
 
-  bool get hasMaterialL10n =>
-      Localizations.of<MaterialLocalizations>(context, MaterialLocalizations) !=
-      null;
-
   InputDecoration get decoration =>
       widget.copyFrom?.decoration ??
       UiConstants.inputDecoration.copyWith(
-        hintText: MaterialLocalizations.of(context).searchFieldLabel,
+        hintText: context.materialL10n.searchFieldLabel,
         suffixIcon: widget.showClearButton ? ClearButton(controller) : null,
       );
 
-  TextStyle? get textStyle => Theme.of(context).textTheme.titleMedium;
+  TextStyle? get textStyle => context.theme.textTheme.titleMedium;
 
   @override
   Widget build(BuildContext context) => Padding(
         padding: widget.padding ?? EdgeInsets.zero,
-        child: !hasMaterialL10n
+        child: !context.hasMaterialL10n
             ? DecoratedBox(
                 decoration: BoxDecoration(
                   border: Border.fromBorderSide(
@@ -71,7 +68,7 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
                     style: textStyle ?? const TextStyle(),
                     cursorColor: textStyle?.color ?? UiConstants.color,
                     backgroundCursorColor: Colors.transparent,
-                    textInputAction: TextInputAction.search,
+                    textInputAction: UiConstants.textInputAction,
                     inputFormatters: NameTextInput.formatters,
                   ),
                 ),

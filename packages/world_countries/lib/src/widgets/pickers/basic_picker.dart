@@ -4,8 +4,10 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
+import "../../extensions/build_context_extensions.dart";
 import "../../models/item_properties.dart";
 import "../adaptive/adaptive_search_text_field.dart";
+import "../generic_widgets/implicit_search_delegate.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
 
 part "basic_picker_state.dart";
@@ -91,7 +93,12 @@ abstract class BasicPicker<T extends Object>
         context: context,
         builder: (internalContext) => FractionallySizedBox(
           heightFactor: heightFactor,
-          child: copyWith(onSelect: Navigator.of(internalContext).pop),
+          child: copyWith(
+            onSelect: (selectedItem) {
+              onSelect?.call(selectedItem);
+              internalContext.maybePop(selectedItem);
+            },
+          ),
         ),
         backgroundColor: backgroundColor,
         elevation: elevation,
@@ -107,6 +114,52 @@ abstract class BasicPicker<T extends Object>
         routeSettings: routeSettings,
         transitionAnimationController: transitionAnimationController,
         anchorPoint: anchorPoint,
+      );
+
+  @override
+  Future<T?> showInSearch(
+    BuildContext context, {
+    String? query = "",
+    bool useRootNavigator = false,
+    String? searchFieldLabel,
+    TextStyle? searchFieldStyle,
+    InputDecorationTheme? searchFieldDecorationTheme,
+    PreferredSizeWidget? appBarBottom,
+    IconButton? backIconButton,
+    IconButton? clearIconButton,
+    TextInputType? keyboardType,
+    TextInputAction textInputAction = UiConstants.textInputAction,
+    ThemeData? appBarThemeData,
+  }) =>
+      showSearch<T?>(
+        context: context,
+        delegate: ImplicitSearchDelegate<T>(
+          items,
+          resultsBuilder: (internalContext, items) => copyWith(
+            items: items,
+            showSearchBar: false,
+            onSelect: (selectedItem) {
+              onSelect?.call(selectedItem);
+              internalContext.maybePop(selectedItem);
+            },
+          ),
+          searchIn: searchIn ?? defaultSearch,
+          appBarBottom: appBarBottom,
+          appBarThemeData: appBarThemeData,
+          backIconButton: backIconButton,
+          caseSensitiveSearch: caseSensitiveSearch,
+          clearIconButton: clearIconButton,
+          keyboardType: keyboardType,
+          resultValidator: (item) => !(disabled?.contains(item) ?? false),
+          searchFieldDecorationTheme: searchFieldDecorationTheme,
+          searchFieldLabel: searchFieldLabel,
+          searchFieldStyle: searchFieldStyle,
+          showClearButton: showClearButton,
+          startWithSearch: startWithSearch,
+          textInputAction: textInputAction,
+        ),
+        query: query,
+        useRootNavigator: useRootNavigator,
       );
 
   @required

@@ -5,10 +5,6 @@ class _BasicPickerState<T extends Object> extends State<BasicPicker<T>> {
       widget.searchBar?.controller ??
       TextEditingController();
 
-  late final hasMaterialL10n =
-      Localizations.of<MaterialLocalizations>(context, MaterialLocalizations) !=
-          null;
-
   @override
   void dispose() {
     if (widget.textController == null && widget.searchBar?.controller == null) {

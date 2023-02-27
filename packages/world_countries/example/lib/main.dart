@@ -21,22 +21,33 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  static const picker =
+      CountryPicker(onSelect: print, disabled: [CountryAfg(), CountryAlb()]);
+
   void onPressed() async {
-    final country = await const CountryPicker().showInModalBottomSheet(context);
+    final country = await picker.showInModalBottomSheet(context);
     if (country == null) return debugPrint('No country selected.');
     debugPrint('Selected country: ${country.name.common}.');
   }
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () => picker.showInSearch(context),
+            ),
+          ],
+        ),
         floatingActionButton: FloatingActionButton(onPressed: onPressed),
         body: SafeArea(
           child: CountryPicker(
-            onSelect: print,
             chosen: const [CountryAfg(), CountryAla(), CountryDza()],
-            disabled: const [CountryAfg(), CountryAlb()],
+            disabled: picker.disabled,
             itemBuilder: (country) => CountryTile.defaultFromProperties(
               country,
+              onPressed: print,
               leading: EmojiFlag.custom(
                 country.item,
                 style: TextStyle(

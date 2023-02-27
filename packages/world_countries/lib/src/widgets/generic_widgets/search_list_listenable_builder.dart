@@ -1,9 +1,12 @@
+import "dart:collection";
+
 import "package:flutter/widgets.dart";
 
+import "../../mixins/compare_search_mixin.dart";
 import "../base_widgets/stateful_searchable.dart";
 
 class SearchListListenableBuilder<T extends Object>
-    extends StatefulSearchable<T> {
+    extends StatefulSearchable<T> with CompareSearchMixin<T> {
   const SearchListListenableBuilder({
     required this.builder,
     required this.items,
@@ -15,7 +18,8 @@ class SearchListListenableBuilder<T extends Object>
   });
 
   final Iterable<T> items;
-  final Widget Function(BuildContext context, List<T> list) builder;
+  final Widget Function(BuildContext context, UnmodifiableListView<T> list)
+      builder;
 
   @override
   State<SearchListListenableBuilder<T>> createState() =>
@@ -24,12 +28,12 @@ class SearchListListenableBuilder<T extends Object>
 
 class _SearchListListenableBuilderState<T extends Object>
     extends State<SearchListListenableBuilder<T>> {
-  List<T> items = const [];
+  UnmodifiableListView<T> items = UnmodifiableListView([]);
 
   @override
   void initState() {
     super.initState();
-    items = List<T>.unmodifiable(widget.items);
+    items = UnmodifiableListView(widget.items);
     widget.textController.addListener(textChanged);
   }
 
@@ -48,20 +52,13 @@ class _SearchListListenableBuilderState<T extends Object>
     super.dispose();
   }
 
-  bool search(String input, String itemText) {
-    final item = widget.caseSensitiveSearch ? itemText : itemText.toLowerCase();
-    final text = widget.caseSensitiveSearch ? input : input.toLowerCase();
-
-    return widget.startWithSearch ? item.startsWith(text) : item.contains(text);
-  }
+  bool hasSameText(String itemText) =>
+      widget.compareWithInput(widget.textController.value.text, itemText);
 
   void textChanged() {
-    final filteredItems = widget.items.where(
-      (item) => widget.searchIn(item).toSet().any(
-            (element) => search(widget.textController.value.text, element),
-          ),
-    );
-    setState(() => items = List<T>.unmodifiable(filteredItems));
+    final filteredItems =
+        widget.items.where((i) => widget.searchIn(i).toSet().any(hasSameText));
+    setState(() => items = UnmodifiableListView(filteredItems));
   }
 
   @override
