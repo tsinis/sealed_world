@@ -106,4 +106,63 @@ class SearchableIndexedListViewBuilder<T extends Object>
     bool useRootNavigator = false,
   }) =>
       null;
+
+  @override
+  Future<T?>? showInSimpleDialog(
+    BuildContext context, {
+    bool barrierDismissible = true,
+    Color? barrierColor = Colors.black54,
+    String? barrierLabel,
+    bool useSafeArea = true,
+    bool useRootNavigator = true,
+    RouteSettings? routeSettings,
+    Offset? anchorPoint,
+    TraversalEdgeBehavior? traversalEdgeBehavior,
+    Key? key,
+    Widget? title,
+    EdgeInsetsGeometry titlePadding =
+        const EdgeInsets.only(left: 24, top: 24, right: 24),
+    TextStyle? titleTextStyle,
+    List<Widget>? children,
+    EdgeInsetsGeometry contentPadding =
+        const EdgeInsets.only(top: 12, bottom: 16),
+    Color? backgroundColor,
+    double? elevation,
+    Color? shadowColor,
+    Color? surfaceTintColor,
+    String? semanticLabel,
+    EdgeInsets insetPadding =
+        const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
+    Clip clipBehavior = Clip.hardEdge,
+    ShapeBorder? shape,
+    AlignmentGeometry? alignment,
+  }) =>
+      showDialog(
+        context: context,
+        // ignore: arguments-ordering, false positive.
+        builder: (internalContext) => SimpleDialog(
+          title: title,
+          titlePadding: titlePadding,
+          titleTextStyle: titleTextStyle,
+          contentPadding: contentPadding,
+          backgroundColor: backgroundColor,
+          elevation: elevation,
+          shadowColor: shadowColor,
+          surfaceTintColor: surfaceTintColor,
+          semanticLabel: semanticLabel,
+          insetPadding: insetPadding,
+          clipBehavior: clipBehavior,
+          shape: shape,
+          alignment: alignment,
+          children: [SizedBox(width: double.maxFinite, child: this)],
+        ),
+        barrierDismissible: barrierDismissible,
+        barrierColor: barrierColor,
+        barrierLabel: barrierLabel,
+        useSafeArea: useSafeArea,
+        useRootNavigator: useRootNavigator,
+        routeSettings: routeSettings,
+        anchorPoint: anchorPoint,
+        traversalEdgeBehavior: traversalEdgeBehavior,
+      );
 }
