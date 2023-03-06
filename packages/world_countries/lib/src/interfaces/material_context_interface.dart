@@ -78,7 +78,7 @@ abstract class MaterialContextInterface<T extends Object> {
     bool useRootNavigator = false,
   });
 
-  Future<T?>? showInSimpleDialog(
+  Future<T?>? showInDialog(
     BuildContext context, {
     bool barrierDismissible = true,
     Color? barrierColor = Colors.black54,
@@ -89,13 +89,21 @@ abstract class MaterialContextInterface<T extends Object> {
     Offset? anchorPoint,
     TraversalEdgeBehavior? traversalEdgeBehavior,
     Key? key,
+    Widget? icon,
+    EdgeInsetsGeometry? iconPadding,
+    Color? iconColor,
     Widget? title,
-    EdgeInsetsGeometry titlePadding =
-        const EdgeInsets.only(left: 24, top: 24, right: 24),
+    EdgeInsetsGeometry? titlePadding,
     TextStyle? titleTextStyle,
-    List<Widget>? children,
-    EdgeInsetsGeometry contentPadding =
-        const EdgeInsets.only(top: 12, bottom: 16),
+    EdgeInsetsGeometry? contentPadding,
+    TextStyle? contentTextStyle,
+    List<Widget>? actions,
+    EdgeInsetsGeometry? actionsPadding,
+    MainAxisAlignment? actionsAlignment,
+    OverflowBarAlignment? actionsOverflowAlignment,
+    VerticalDirection? actionsOverflowDirection,
+    double? actionsOverflowButtonSpacing,
+    EdgeInsetsGeometry? buttonPadding,
     Color? backgroundColor,
     double? elevation,
     Color? shadowColor,
@@ -103,7 +111,7 @@ abstract class MaterialContextInterface<T extends Object> {
     String? semanticLabel,
     EdgeInsets insetPadding =
         const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
-    Clip clipBehavior = Clip.hardEdge,
+    Clip clipBehavior = Clip.none,
     ShapeBorder? shape,
     AlignmentGeometry? alignment,
   });

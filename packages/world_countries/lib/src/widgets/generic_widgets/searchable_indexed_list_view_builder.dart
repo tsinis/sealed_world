@@ -108,7 +108,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
       null;
 
   @override
-  Future<T?>? showInSimpleDialog(
+  Future<T?>? showInDialog(
     BuildContext context, {
     bool barrierDismissible = true,
     Color? barrierColor = Colors.black54,
@@ -119,13 +119,21 @@ class SearchableIndexedListViewBuilder<T extends Object>
     Offset? anchorPoint,
     TraversalEdgeBehavior? traversalEdgeBehavior,
     Key? key,
+    Widget? icon,
+    EdgeInsetsGeometry? iconPadding,
+    Color? iconColor,
     Widget? title,
-    EdgeInsetsGeometry titlePadding =
-        const EdgeInsets.only(left: 24, top: 24, right: 24),
+    EdgeInsetsGeometry? titlePadding,
     TextStyle? titleTextStyle,
-    List<Widget>? children,
-    EdgeInsetsGeometry contentPadding =
-        const EdgeInsets.only(top: 12, bottom: 16),
+    EdgeInsetsGeometry? contentPadding,
+    TextStyle? contentTextStyle,
+    List<Widget>? actions,
+    EdgeInsetsGeometry? actionsPadding,
+    MainAxisAlignment? actionsAlignment,
+    OverflowBarAlignment? actionsOverflowAlignment,
+    VerticalDirection? actionsOverflowDirection,
+    double? actionsOverflowButtonSpacing,
+    EdgeInsetsGeometry? buttonPadding,
     Color? backgroundColor,
     double? elevation,
     Color? shadowColor,
@@ -133,18 +141,29 @@ class SearchableIndexedListViewBuilder<T extends Object>
     String? semanticLabel,
     EdgeInsets insetPadding =
         const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
-    Clip clipBehavior = Clip.hardEdge,
+    Clip clipBehavior = Clip.none,
     ShapeBorder? shape,
     AlignmentGeometry? alignment,
+    bool scrollable = false,
   }) =>
       showDialog(
         context: context,
         // ignore: arguments-ordering, false positive.
-        builder: (internalContext) => SimpleDialog(
+        builder: (internalContext) => AlertDialog(
+          iconPadding: iconPadding,
+          iconColor: iconColor,
           title: title,
           titlePadding: titlePadding,
           titleTextStyle: titleTextStyle,
           contentPadding: contentPadding,
+          contentTextStyle: contentTextStyle,
+          actions: actions,
+          actionsPadding: actionsPadding,
+          actionsAlignment: actionsAlignment,
+          actionsOverflowAlignment: actionsOverflowAlignment,
+          actionsOverflowDirection: actionsOverflowDirection,
+          actionsOverflowButtonSpacing: actionsOverflowButtonSpacing,
+          buttonPadding: buttonPadding,
           backgroundColor: backgroundColor,
           elevation: elevation,
           shadowColor: shadowColor,
@@ -154,7 +173,8 @@ class SearchableIndexedListViewBuilder<T extends Object>
           clipBehavior: clipBehavior,
           shape: shape,
           alignment: alignment,
-          children: [SizedBox(width: double.maxFinite, child: this)],
+          scrollable: scrollable,
+          content: SizedBox(width: double.maxFinite, child: this),
         ),
         barrierDismissible: barrierDismissible,
         barrierColor: barrierColor,

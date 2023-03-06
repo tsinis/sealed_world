@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
       CountryPicker(onSelect: print, disabled: [CountryAfg(), CountryAlb()]);
 
   void onPressed() async {
-    final country = await picker.showInModalBottomSheet(context);
+    final country = await picker.showInDialog(context);
     if (country == null) return debugPrint('No country selected.');
     debugPrint('Selected country: ${country.name.common}.');
   }

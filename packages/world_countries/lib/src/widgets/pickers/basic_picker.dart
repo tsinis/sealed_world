@@ -163,7 +163,7 @@ abstract class BasicPicker<T extends Object>
       );
 
   @override
-  Future<T?>? showInSimpleDialog(
+  Future<T?>? showInDialog(
     BuildContext context, {
     bool barrierDismissible = true,
     Color? barrierColor = Colors.black54,
@@ -174,13 +174,22 @@ abstract class BasicPicker<T extends Object>
     Offset? anchorPoint,
     TraversalEdgeBehavior? traversalEdgeBehavior,
     Key? key,
+    Widget? icon,
+    EdgeInsetsGeometry? iconPadding,
+    Color? iconColor,
     Widget? title,
-    EdgeInsetsGeometry titlePadding =
-        const EdgeInsets.only(left: 24, top: 24, right: 24),
+    EdgeInsetsGeometry? titlePadding,
     TextStyle? titleTextStyle,
-    List<Widget>? children,
-    EdgeInsetsGeometry contentPadding =
-        const EdgeInsets.only(top: 12, bottom: 16),
+    Widget? content,
+    EdgeInsetsGeometry? contentPadding,
+    TextStyle? contentTextStyle,
+    List<Widget>? actions,
+    EdgeInsetsGeometry? actionsPadding,
+    MainAxisAlignment? actionsAlignment,
+    OverflowBarAlignment? actionsOverflowAlignment,
+    VerticalDirection? actionsOverflowDirection,
+    double? actionsOverflowButtonSpacing,
+    EdgeInsetsGeometry? buttonPadding,
     Color? backgroundColor,
     double? elevation,
     Color? shadowColor,
@@ -188,64 +197,58 @@ abstract class BasicPicker<T extends Object>
     String? semanticLabel,
     EdgeInsets insetPadding =
         const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
-    Clip clipBehavior = Clip.hardEdge,
+    Clip clipBehavior = Clip.none,
     ShapeBorder? shape,
     AlignmentGeometry? alignment,
-  }) {
-    assert(
-      items.length < 10,
-      """
-\n
-Material Design guidelines recommend using a Simple Dialog without scrolling,
-(in this case it particularly means - for 9 or fewer items). Provided items
-count is ${items.length}. Please consider using a different UI component, for
-example via showSearch or showInModalBottomSheet methods instead.
-https://m2.material.io/components/dialogs#simple-dialog""",
-    );
-
-    return showDialog(
-      context: context,
-      // ignore: arguments-ordering, false positive.
-      builder: (internalContext) => SimpleDialog(
-        title: title,
-        titlePadding: titlePadding,
-        titleTextStyle: titleTextStyle,
-        contentPadding: contentPadding,
-        backgroundColor: backgroundColor,
-        elevation: elevation,
-        shadowColor: shadowColor,
-        surfaceTintColor: surfaceTintColor,
-        semanticLabel: semanticLabel,
-        insetPadding: insetPadding,
-        clipBehavior: clipBehavior,
-        shape: shape,
-        alignment: alignment,
-        children: [
-          SizedBox(
+    bool scrollable = false,
+  }) =>
+      showDialog(
+        context: context,
+        // ignore: arguments-ordering, false positive.
+        builder: (internalContext) => AlertDialog(
+          iconPadding: iconPadding,
+          iconColor: iconColor,
+          title: title,
+          titlePadding: titlePadding,
+          titleTextStyle: titleTextStyle,
+          contentPadding: contentPadding,
+          contentTextStyle: contentTextStyle,
+          actions: actions,
+          actionsPadding: actionsPadding,
+          actionsAlignment: actionsAlignment,
+          actionsOverflowAlignment: actionsOverflowAlignment,
+          actionsOverflowDirection: actionsOverflowDirection,
+          actionsOverflowButtonSpacing: actionsOverflowButtonSpacing,
+          buttonPadding: buttonPadding,
+          backgroundColor: backgroundColor,
+          elevation: elevation,
+          shadowColor: shadowColor,
+          surfaceTintColor: surfaceTintColor,
+          semanticLabel: semanticLabel,
+          insetPadding: insetPadding,
+          clipBehavior: clipBehavior,
+          shape: shape,
+          alignment: alignment,
+          scrollable: scrollable,
+          content: SizedBox(
             width: double.maxFinite,
-            child: SingleChildScrollView(
-              child: copyWith(
-                shrinkWrap: true,
-                showSearchBar: false,
-                onSelect: (selectedItem) {
-                  onSelect?.call(selectedItem);
-                  internalContext.maybePop(selectedItem);
-                },
-              ),
+            child: copyWith(
+              onSelect: (selectedItem) {
+                onSelect?.call(selectedItem);
+                internalContext.maybePop(selectedItem);
+              },
             ),
           ),
-        ],
-      ),
-      barrierDismissible: barrierDismissible,
-      barrierColor: barrierColor,
-      barrierLabel: barrierLabel,
-      useSafeArea: useSafeArea,
-      useRootNavigator: useRootNavigator,
-      routeSettings: routeSettings,
-      anchorPoint: anchorPoint,
-      traversalEdgeBehavior: traversalEdgeBehavior,
-    );
-  }
+        ),
+        barrierDismissible: barrierDismissible,
+        barrierColor: barrierColor,
+        barrierLabel: barrierLabel,
+        useSafeArea: useSafeArea,
+        useRootNavigator: useRootNavigator,
+        routeSettings: routeSettings,
+        anchorPoint: anchorPoint,
+        traversalEdgeBehavior: traversalEdgeBehavior,
+      );
 
   @required
   BasicPicker<T> copyWith({
