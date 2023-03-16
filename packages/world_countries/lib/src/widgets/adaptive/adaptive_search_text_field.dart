@@ -100,7 +100,7 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
                   smartDashesType: widget.copyFrom?.smartDashesType,
                   smartQuotesType: widget.copyFrom?.smartQuotesType,
                   enableSuggestions: widget.copyFrom?.enableSuggestions ?? true,
-                  maxLines: widget.copyFrom?.maxLines,
+                  maxLines: widget.copyFrom?.maxLines ?? 1,
                   minLines: widget.copyFrom?.minLines,
                   expands: widget.copyFrom?.expands ?? false,
                   maxLength: widget.copyFrom?.maxLength,

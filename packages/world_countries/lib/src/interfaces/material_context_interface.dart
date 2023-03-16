@@ -77,4 +77,42 @@ abstract class MaterialContextInterface<T extends Object> {
     String? query = "",
     bool useRootNavigator = false,
   });
+
+  Future<T?>? showInDialog(
+    BuildContext context, {
+    bool barrierDismissible = true,
+    Color? barrierColor = Colors.black54,
+    String? barrierLabel,
+    bool useSafeArea = true,
+    bool useRootNavigator = true,
+    RouteSettings? routeSettings,
+    Offset? anchorPoint,
+    TraversalEdgeBehavior? traversalEdgeBehavior,
+    Key? key,
+    Widget? icon,
+    EdgeInsetsGeometry? iconPadding,
+    Color? iconColor,
+    Widget? title,
+    EdgeInsetsGeometry? titlePadding,
+    TextStyle? titleTextStyle,
+    EdgeInsetsGeometry? contentPadding,
+    TextStyle? contentTextStyle,
+    List<Widget>? actions,
+    EdgeInsetsGeometry? actionsPadding,
+    MainAxisAlignment? actionsAlignment,
+    OverflowBarAlignment? actionsOverflowAlignment,
+    VerticalDirection? actionsOverflowDirection,
+    double? actionsOverflowButtonSpacing,
+    EdgeInsetsGeometry? buttonPadding,
+    Color? backgroundColor,
+    double? elevation,
+    Color? shadowColor,
+    Color? surfaceTintColor,
+    String? semanticLabel,
+    EdgeInsets insetPadding =
+        const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
+    Clip clipBehavior = Clip.none,
+    ShapeBorder? shape,
+    AlignmentGeometry? alignment,
+  });
 }
