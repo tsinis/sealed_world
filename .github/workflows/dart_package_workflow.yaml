@@ -34,10 +34,10 @@ jobs:
       - name: 🕵️ Analyze Code
         uses: ValentinVignal/action-dart-analyze@v0.15
         with:
-          fail-on: 'error' # TODO: Later change to 'format'.
+          fail-on: 'format'
           token: ${{ secrets.GITHUB_TOKEN }}
           working-directory: ${{ env.relative_path }}
-          format: false # TODO: Enable when formatting in Dart 3 will be supported.
+          format: true
 
       - name: 🧮 Calculate PANA Score
         uses: axel-op/dart-package-analyzer@v3
