@@ -4,6 +4,7 @@ class FiatCurrency extends Currency {
   const FiatCurrency({
     required super.code,
     required super.name,
+    required this.nativeNames,
     required this.isoNumeric,
     this.alternateSymbols,
     this.disambiguateSymbol,
@@ -30,6 +31,7 @@ class FiatCurrency extends Currency {
   final String? disambiguateSymbol;
   final String? htmlEntity;
   final String? isoNumeric;
+  final List<String> nativeNames;
   final int priority;
   final int smallestDenomination;
   final String? subunit;
@@ -208,13 +210,10 @@ class FiatCurrency extends Currency {
     FiatSek(),
     FiatSgd(),
     FiatShp(),
-    FiatSkk(),
-    FiatSle(),
     FiatSll(),
     FiatSos(),
     FiatSrd(),
     FiatSsp(),
-    FiatStd(),
     FiatStn(),
     FiatSvc(),
     FiatSyp(),
