@@ -87,17 +87,20 @@ abstract class BasicPicker<T extends Object>
     RouteSettings? routeSettings,
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
-    double? heightFactor = 0.6,
+    double? heightFactor = 0.66,
   }) =>
       showModalBottomSheet<T>(
         context: context,
-        builder: (internalContext) => FractionallySizedBox(
-          heightFactor: heightFactor,
-          child: copyWith(
-            onSelect: (selectedItem) {
-              onSelect?.call(selectedItem);
-              internalContext.maybePop(selectedItem);
-            },
+        builder: (internalContext) => Padding(
+          padding: internalContext.media.viewInsets,
+          child: FractionallySizedBox(
+            heightFactor: heightFactor,
+            child: copyWith(
+              onSelect: (selectedItem) {
+                onSelect?.call(selectedItem);
+                internalContext.maybePop(selectedItem);
+              },
+            ),
           ),
         ),
         backgroundColor: backgroundColor,

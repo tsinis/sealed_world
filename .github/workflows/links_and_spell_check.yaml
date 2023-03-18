@@ -16,6 +16,14 @@ jobs:
       - name: 📚 Git Checkout
         uses: actions/checkout@v3
 
+      - name: 🔗 Link Checker
+        uses: lycheeverse/lychee-action@v1.6.1
+        with:
+          args: --verbose --no-progress './**/*.md' './**/*.html' './**/*.dart'
+          format: markdown
+          jobSummary: true
+          fail: false
+
       - name: 🪄 Spell Check
         uses: check-spelling/check-spelling@v0.0.21
         with:
@@ -27,11 +35,3 @@ jobs:
             cspell:html/html.txt
             cspell:dart/src/dart.txt
             cspell:filetypes/filetypes.txt
-
-      - name: 🔗 Link Checker
-        uses: lycheeverse/lychee-action@v1.6.1
-        with:
-          args: --verbose --no-progress './**/*.md' './**/*.html' './**/*.dart'
-          format: markdown
-          jobSummary: true
-          fail: false

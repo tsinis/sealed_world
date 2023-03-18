@@ -1,13 +1,13 @@
 import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
+import "../../constants/ui_constants.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
-import "emoji_flag.dart";
 
-class CountryTile extends ListItemTile<WorldCountry> {
-  const CountryTile(
-    WorldCountry country, {
+class CurrencyTile extends ListItemTile<FiatCurrency> {
+  const CurrencyTile(
+    FiatCurrency currency, {
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -45,13 +45,14 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-  }) : super(country);
+  }) : super(currency);
 
-  CountryTile.defaultFromProperties(
-    ItemProperties<WorldCountry> country, {
+  CurrencyTile.defaultFromProperties(
+    ItemProperties<FiatCurrency> currency, {
     Widget? leading,
     Widget? subtitle,
     Widget? title,
+    double? minLeadingWidth,
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -65,7 +66,6 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.isThreeLine,
     super.key,
     super.leadingAndTrailingTextStyle,
-    super.minLeadingWidth,
     super.minVerticalPadding,
     super.mouseCursor,
     super.onFocusChange,
@@ -84,17 +84,26 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleTextStyle,
     super.visualDensity,
   }) : super(
-          country.item,
-          index: country.index,
-          isChosen: country.isChosen,
-          isDisabled: country.isDisabled,
-          title: title ?? Text(country.item.namesNative.first.common),
-          leading: leading ?? EmojiFlag.twemoji(country.item),
+          currency.item,
+          index: currency.index,
+          isChosen: currency.isChosen,
+          isDisabled: currency.isDisabled,
+          title: title ?? Text(currency.item.namesNative.first),
+          minLeadingWidth: minLeadingWidth ?? defaultConstraints.minWidth,
+          leading: leading ??
+              ConstrainedBox(
+                constraints: defaultConstraints.copyWith(
+                  minWidth: minLeadingWidth ?? defaultConstraints.minWidth,
+                ),
+                child: Text(currency.item.unit, textAlign: TextAlign.center),
+              ),
           subtitle: subtitle ??
               Text(
-                country.item.namesCommonNative(skipFirst: true) ??
-                    country.item.nameEnglish.common,
+                "${currency.item.name} (${currency.item.code})",
                 overflow: TextOverflow.ellipsis,
               ),
         );
+
+  static const defaultConstraints =
+      BoxConstraints(minWidth: UiConstants.point * 6);
 }

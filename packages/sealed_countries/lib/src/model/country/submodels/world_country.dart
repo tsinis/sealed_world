@@ -96,9 +96,7 @@ class WorldCountry extends Country {
     assert(countries.isNotEmpty, "`countries` should not be empty!");
     for (final country in countries) {
       final expectedValue = where?.call(country) ?? country.code;
-      if (expectedValue == value) {
-        return country;
-      }
+      if (expectedValue == value) return country;
     }
 
     return null;
@@ -106,9 +104,7 @@ class WorldCountry extends Country {
 
   List<WorldCountry>? get borders {
     final codes = bordersCodes;
-    if (codes == null) {
-      return null;
-    }
+    if (codes == null) return null;
 
     return List.unmodifiable(codes.map<WorldCountry>(WorldCountry.fromCode));
   }

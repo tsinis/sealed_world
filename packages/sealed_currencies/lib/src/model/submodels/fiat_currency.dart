@@ -4,6 +4,7 @@ class FiatCurrency extends Currency {
   const FiatCurrency({
     required super.code,
     required super.name,
+    required this.namesNative,
     required this.isoNumeric,
     this.alternateSymbols,
     this.disambiguateSymbol,
@@ -30,6 +31,7 @@ class FiatCurrency extends Currency {
   final String? disambiguateSymbol;
   final String? htmlEntity;
   final String? isoNumeric;
+  final List<String> namesNative;
   final int priority;
   final int smallestDenomination;
   final String? subunit;
@@ -52,9 +54,7 @@ class FiatCurrency extends Currency {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
     for (final currency in currencies) {
       final expectedValue = where?.call(currency) ?? currency.code;
-      if (expectedValue == value) {
-        return currency;
-      }
+      if (expectedValue == value) return currency;
     }
 
     return null;
@@ -208,13 +208,10 @@ class FiatCurrency extends Currency {
     FiatSek(),
     FiatSgd(),
     FiatShp(),
-    FiatSkk(),
-    FiatSle(),
     FiatSll(),
     FiatSos(),
     FiatSrd(),
     FiatSsp(),
-    FiatStd(),
     FiatStn(),
     FiatSvc(),
     FiatSyp(),

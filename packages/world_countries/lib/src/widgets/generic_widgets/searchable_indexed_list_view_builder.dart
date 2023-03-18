@@ -3,6 +3,7 @@
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
+import "../../extensions/build_context_extensions.dart";
 import "../../interfaces/material_context_interface.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 import "indexed_list_view_builder.dart";
@@ -77,12 +78,14 @@ class SearchableIndexedListViewBuilder<T extends Object>
     RouteSettings? routeSettings,
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
-    double? heightFactor = 0.6,
+    double? heightFactor = 0.66,
   }) =>
       showModalBottomSheet<T>(
         context: context,
-        builder: (_) =>
-            FractionallySizedBox(heightFactor: heightFactor, child: this),
+        builder: (internalContext) => Padding(
+          padding: internalContext.media.viewInsets,
+          child: FractionallySizedBox(heightFactor: heightFactor, child: this),
+        ),
         backgroundColor: backgroundColor,
         elevation: elevation,
         shape: shape,

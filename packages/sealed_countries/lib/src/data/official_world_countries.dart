@@ -24617,7 +24617,7 @@ class CountryAtg extends WorldCountry {
             ),
             CountryName(
               language: LangFra(),
-              official: "Antigua -et-Barbuda",
+              official: "Antigua-et-Barbuda",
               common: "Antigua-et-Barbuda",
             ),
             CountryName(

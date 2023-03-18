@@ -69,7 +69,7 @@ abstract class MaterialContextInterface<T extends Object> {
     RouteSettings? routeSettings,
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
-    double? heightFactor = 0.6,
+    double? heightFactor = 0.66,
   });
 
   Future<T?>? showInSearch(

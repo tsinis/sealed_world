@@ -4,11 +4,11 @@ import "package:sealed_countries/sealed_countries.dart";
 
 import "../../models/item_properties.dart";
 import "../pickers/basic_picker.dart";
-import "country_tile.dart";
+import "currency_tile.dart";
 
-class CountryPicker extends BasicPicker<WorldCountry> {
-  const CountryPicker({
-    Iterable<WorldCountry> countries = WorldCountry.list,
+class CurrencyPicker extends BasicPicker<FiatCurrency> {
+  const CurrencyPicker({
+    Iterable<FiatCurrency> currencies = FiatCurrency.list,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
@@ -41,45 +41,42 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.showSearchBar,
     super.shrinkWrap,
     super.sort,
-    super.startWithSearch,
+    super.startWithSearch = false,
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
-  }) : super(countries);
+  }) : super(currencies);
 
-  Iterable<WorldCountry> get countries => items;
-
-  @override
-  Widget? defaultBuilder(ItemProperties<WorldCountry> itemProperties) =>
-      CountryTile.defaultFromProperties(itemProperties, onPressed: onSelect);
+  Iterable<FiatCurrency> get currencies => items;
 
   @override
-  Iterable<String> defaultSearch(WorldCountry item) => Set.unmodifiable({
-        ...item.translations.map((translatedName) => translatedName.common),
-        ...item.namesNative.map((nativeName) => nativeName.common),
-        item.name.common,
-      });
+  Widget? defaultBuilder(ItemProperties<FiatCurrency> itemProperties) =>
+      CurrencyTile.defaultFromProperties(itemProperties, onPressed: onSelect);
 
   @override
-  CountryPicker copyWith({
-    Iterable<WorldCountry>? items,
+  Iterable<String> defaultSearch(FiatCurrency item) =>
+      Set.unmodifiable({item.name, ...item.namesNative, item.code, item.unit});
+
+  @override
+  CurrencyPicker copyWith({
+    Iterable<FiatCurrency>? items,
     bool? addAutomaticKeepAlives,
     bool? addRepaintBoundaries,
     bool? addSemanticIndexes,
     double? cacheExtent,
     bool? caseSensitiveSearch,
-    Iterable<WorldCountry>? chosen,
+    Iterable<FiatCurrency>? chosen,
     Clip? clipBehavior,
     CrossAxisAlignment? crossAxisAlignment,
     Axis? direction,
-    Iterable<WorldCountry>? disabled,
+    Iterable<FiatCurrency>? disabled,
     DragStartBehavior? dragStartBehavior,
     Widget? emptyStatePlaceholder,
     Key? key,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,
-    void Function(WorldCountry country)? onSelect,
+    void Function(FiatCurrency currency)? onSelect,
     EdgeInsetsGeometry? padding,
     ScrollPhysics? physics,
     bool? primary,
@@ -92,16 +89,16 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     bool? showClearButton,
     bool? showSearchBar,
     bool? shrinkWrap,
-    int Function(WorldCountry country1, WorldCountry country2)? sort,
+    int Function(FiatCurrency currency1, FiatCurrency currency2)? sort,
     bool? startWithSearch,
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(WorldCountry country)? searchIn,
-    Widget? Function(ItemProperties<WorldCountry> itemProperties)? itemBuilder,
+    Iterable<String> Function(FiatCurrency currency)? searchIn,
+    Widget? Function(ItemProperties<FiatCurrency> itemProperties)? itemBuilder,
   }) =>
-      CountryPicker(
-        countries: items ?? countries,
+      CurrencyPicker(
+        currencies: items ?? currencies,
         addAutomaticKeepAlives:
             addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
         addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
