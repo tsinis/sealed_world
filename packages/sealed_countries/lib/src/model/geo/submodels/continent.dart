@@ -17,7 +17,7 @@ class Continent extends SubRegion {
     assert(continents.isNotEmpty, "`continents` should not be empty!");
     for (final continent in continents) {
       final expectedValue = where?.call(continent) ?? continent.name;
-      if (expectedValue == value)  return continent;
+      if (expectedValue == value) return continent;
     }
 
     return null;
