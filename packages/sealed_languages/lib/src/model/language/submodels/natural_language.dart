@@ -40,9 +40,7 @@ class NaturalLanguage extends Language {
     assert(languages.isNotEmpty, "`languages` should not be empty!");
     for (final language in languages) {
       final expectedValue = where?.call(language) ?? language.code;
-      if (expectedValue == value) {
-        return language;
-      }
+      if (expectedValue == value) return language;
     }
 
     return null;

@@ -15,9 +15,7 @@ class NaturalLanguageFamily extends LanguageFamily {
     assert(families.isNotEmpty, "`families` should not be empty!");
     for (final family in families) {
       final expectedValue = where?.call(family) ?? family.name;
-      if (expectedValue == value) {
-        return family;
-      }
+      if (expectedValue == value) return family;
     }
 
     return null;
