@@ -54,11 +54,11 @@ class CountryPicker extends BasicPicker<WorldCountry> {
       CountryTile.defaultFromProperties(itemProperties, onPressed: onSelect);
 
   @override
-  Iterable<String> defaultSearch(WorldCountry item) => {
+  Iterable<String> defaultSearch(WorldCountry item) => Set.unmodifiable({
         ...item.translations.map((translatedName) => translatedName.common),
         ...item.namesNative.map((nativeName) => nativeName.common),
         item.name.common,
-      };
+      });
 
   @override
   CountryPicker copyWith({
