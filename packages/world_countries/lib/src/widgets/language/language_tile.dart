@@ -5,9 +5,9 @@ import "../../constants/ui_constants.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 
-class CurrencyTile extends ListItemTile<FiatCurrency> {
-  const CurrencyTile(
-    FiatCurrency currency, {
+class LanguageTile extends ListItemTile<NaturalLanguage> {
+  const LanguageTile(
+    NaturalLanguage language, {
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -45,10 +45,10 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-  }) : super(currency);
+  }) : super(language);
 
-  CurrencyTile.defaultFromProperties(
-    ItemProperties<FiatCurrency> currency, {
+  LanguageTile.defaultFromProperties(
+    ItemProperties<NaturalLanguage> language, {
     Widget? leading,
     Widget? subtitle,
     Widget? title,
@@ -84,22 +84,25 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.titleTextStyle,
     super.visualDensity,
   }) : super(
-          currency.item,
-          index: currency.index,
-          isChosen: currency.isChosen,
-          isDisabled: currency.isDisabled,
-          title: title ?? Text(currency.item.namesNative.first),
+          language.item,
+          index: language.index,
+          isChosen: language.isChosen,
+          isDisabled: language.isDisabled,
+          title: title ?? Text(language.item.namesNative.first),
           minLeadingWidth: minLeadingWidth ?? UiConstants.constraints.minWidth,
           leading: leading ??
               ConstrainedBox(
                 constraints: UiConstants.constraints.copyWith(
                   minWidth: minLeadingWidth ?? UiConstants.constraints.minWidth,
                 ),
-                child: Text(currency.item.unit, textAlign: TextAlign.center),
+                child: Text(
+                  language.item.code,
+                  textAlign: TextAlign.center,
+                ),
               ),
           subtitle: subtitle ??
               Text(
-                "${currency.item.name} (${currency.item.code})",
+                "${language.item.name} (${language.item.codeShort})",
                 overflow: TextOverflow.ellipsis,
               ),
         );
