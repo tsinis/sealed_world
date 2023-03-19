@@ -16,13 +16,13 @@ void main() => group("$NaturalLanguage", () {
               expect(element.bibliographicCode, isNull);
             }
             expect(element.family.name, isNotEmpty);
-            expect(element.code, isA<String>());
-            expect(element.code, isNotEmpty);
+            expect(element.codeShort, isA<String>());
+            expect(element.codeShort, isNotEmpty);
             expect(element.isRightToLeft, isA<bool>());
             expect(element.namesNative, isA<List<String>>());
             expect(element.namesNative, isNotEmpty);
-            expect(element.terminologicalCode, isA<String>());
-            expect(element.terminologicalCode, isNotEmpty);
+            expect(element.code, isA<String>());
+            expect(element.code, isNotEmpty);
           });
         }
       });
@@ -56,8 +56,8 @@ void main() => group("$NaturalLanguage", () {
       });
 
       test("toString", () {
-        expect(value.toString(short: false), contains(value.code));
-        expect(value.toString().contains(value.code), isFalse);
+        expect(value.toString(short: false), contains(value.codeShort));
+        expect(value.toString().contains(value.codeShort), isFalse);
       });
 
       group("fromName", () {
@@ -84,7 +84,22 @@ void main() => group("$NaturalLanguage", () {
         test(
           "with wrong code",
           () => expect(
-            () => NaturalLanguage.fromCode(value.toString()),
+            () => NaturalLanguage.fromCodeShort(value.toString()),
+            throwsStateError,
+          ),
+        );
+      });
+
+      group("fromCodeShort", () {
+        test(
+          "with proper code",
+          () => expect(NaturalLanguage.fromCodeShort(value.codeShort), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            () => NaturalLanguage.fromCodeShort(value.toString()),
             throwsStateError,
           ),
         );

@@ -3,33 +3,37 @@ part of "../language.dart";
 class NaturalLanguage extends Language {
   const NaturalLanguage({
     required super.name,
-    required this.code,
+    required this.codeShort,
     required this.namesNative,
-    required this.terminologicalCode,
+    required this.code,
     this.bibliographicCode,
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
   });
 
   factory NaturalLanguage.fromCode(String code) => list.firstWhere(
-        (naturalLanguage) => naturalLanguage.code == code,
+        (naturalLang) => naturalLang.code == code.toUpperCase(),
+      );
+
+  factory NaturalLanguage.fromCodeShort(String codeShort) => list.firstWhere(
+        (naturalLang) => naturalLang.codeShort == codeShort.toUpperCase(),
       );
 
   factory NaturalLanguage.fromName(String name) => list.firstWhere(
-        (naturalLanguage) => naturalLanguage.name == name,
+        (naturalLang) => naturalLang.name == name,
       );
 
   final String? bibliographicCode;
-  final String code;
+  final String codeShort;
   final NaturalLanguageFamily family;
   final bool isRightToLeft;
   final List<String> namesNative;
-  final String terminologicalCode;
+  final String code;
 
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """NaturalLanguage(name: $name, code: $code, terminologicalCode: $terminologicalCode, bibliographicCode: $bibliographicCode, family: $family, nativeName: $namesNative, isRightToLeft: $isRightToLeft)""";
+      : """NaturalLanguage(name: $name, codeShort: $codeShort, code: $code, bibliographicCode: $bibliographicCode, family: $family, nativeName: $namesNative, isRightToLeft: $isRightToLeft)""";
 
   // TODO: Annotate here and families too.
   static NaturalLanguage? maybeFromValue<T extends Object>(
