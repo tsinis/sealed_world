@@ -5,7 +5,7 @@ class FiatCurrency extends Currency {
     required super.code,
     required super.name,
     required this.namesNative,
-    required this.isoNumeric,
+    required this.codeNumeric,
     this.alternateSymbols,
     this.disambiguateSymbol,
     this.htmlEntity,
@@ -20,7 +20,7 @@ class FiatCurrency extends Currency {
   });
 
   factory FiatCurrency.fromCode(String code) => list.firstWhere(
-        (currency) => currency.code == code,
+        (currency) => currency.code == code.toUpperCase(),
       );
 
   factory FiatCurrency.fromName(String name) => list.firstWhere(
@@ -30,7 +30,7 @@ class FiatCurrency extends Currency {
   final List<String>? alternateSymbols;
   final String? disambiguateSymbol;
   final String? htmlEntity;
-  final String? isoNumeric;
+  final String? codeNumeric;
   final List<String> namesNative;
   final int priority;
   final int smallestDenomination;
@@ -43,7 +43,7 @@ class FiatCurrency extends Currency {
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """FiatCurrency(code: $code, priority: $priority, name: $name, symbol: $symbol, disambiguateSymbol: $disambiguateSymbol, alternateSymbols: $alternateSymbols, subunit: $subunit, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, htmlEntity: $htmlEntity, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator, isoNumeric: $isoNumeric, smallestDenomination: $smallestDenomination)""";
+      : """FiatCurrency(code: $code, priority: $priority, name: $name, symbol: $symbol, disambiguateSymbol: $disambiguateSymbol, alternateSymbols: $alternateSymbols, subunit: $subunit, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, htmlEntity: $htmlEntity, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator, codeNumeric: $codeNumeric, smallestDenomination: $smallestDenomination)""";
 
   // TODO: Annotate.
   static FiatCurrency? maybeFromValue<T extends Object>(
