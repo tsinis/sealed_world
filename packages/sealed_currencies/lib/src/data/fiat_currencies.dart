@@ -12,7 +12,7 @@ class FiatAed extends FiatCurrency {
           symbol: "د.إ",
           alternateSymbols: const ["DH", "Dhs"],
           subunit: "Fils",
-          isoNumeric: "784",
+          codeNumeric: "784",
           smallestDenomination: 25,
         );
 }
@@ -26,7 +26,7 @@ class FiatAfn extends FiatCurrency {
           symbol: "؋",
           alternateSymbols: const ["Af", "Afs"],
           subunit: "Pul",
-          isoNumeric: "971",
+          codeNumeric: "971",
           smallestDenomination: 100,
         );
 }
@@ -41,7 +41,7 @@ class FiatAll extends FiatCurrency {
           disambiguateSymbol: "Lek",
           alternateSymbols: const ["Lek"],
           subunit: "Qintar",
-          isoNumeric: "008",
+          codeNumeric: "008",
           smallestDenomination: 100,
         );
 }
@@ -55,7 +55,7 @@ class FiatAmd extends FiatCurrency {
           symbol: "դր.",
           alternateSymbols: const ["dram"],
           subunit: "Luma",
-          isoNumeric: "051",
+          codeNumeric: "051",
           smallestDenomination: 10,
         );
 }
@@ -73,7 +73,7 @@ class FiatAng extends FiatCurrency {
           htmlEntity: "&#x0192;",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "532",
+          codeNumeric: "532",
         );
 }
 
@@ -85,7 +85,7 @@ class FiatAoa extends FiatCurrency {
           name: "Angolan Kwanza",
           symbol: "Kz",
           subunit: "Cêntimo",
-          isoNumeric: "973",
+          codeNumeric: "973",
           smallestDenomination: 10,
         );
 }
@@ -104,7 +104,7 @@ class FiatArs extends FiatCurrency {
           htmlEntity: r"$",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "032",
+          codeNumeric: "032",
         );
 }
 
@@ -121,7 +121,7 @@ class FiatAud extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "036",
+          codeNumeric: "036",
           smallestDenomination: 5,
         );
 }
@@ -136,7 +136,7 @@ class FiatAwg extends FiatCurrency {
           alternateSymbols: const ["Afl"],
           subunit: "Cent",
           htmlEntity: "&#x0192;",
-          isoNumeric: "533",
+          codeNumeric: "533",
           smallestDenomination: 5,
         );
 }
@@ -151,7 +151,7 @@ class FiatAzn extends FiatCurrency {
           alternateSymbols: const ["m", "man"],
           subunit: "Qəpik",
           unitFirst: true,
-          isoNumeric: "944",
+          codeNumeric: "944",
         );
 }
 
@@ -165,7 +165,7 @@ class FiatBam extends FiatCurrency {
           alternateSymbols: const ["KM"],
           subunit: "Fening",
           unitFirst: true,
-          isoNumeric: "977",
+          codeNumeric: "977",
           smallestDenomination: 5,
         );
 }
@@ -182,7 +182,7 @@ class FiatBbd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "052",
+          codeNumeric: "052",
         );
 }
 
@@ -196,7 +196,7 @@ class FiatBdt extends FiatCurrency {
           alternateSymbols: const ["Tk"],
           subunit: "Paisa",
           unitFirst: true,
-          isoNumeric: "050",
+          codeNumeric: "050",
         );
 }
 
@@ -209,7 +209,7 @@ class FiatBgn extends FiatCurrency {
           symbol: "лв.",
           alternateSymbols: const ["lev", "leva", "лев", "лева"],
           subunit: "Stotinka",
-          isoNumeric: "975",
+          codeNumeric: "975",
         );
 }
 
@@ -224,7 +224,7 @@ class FiatBhd extends FiatCurrency {
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          isoNumeric: "048",
+          codeNumeric: "048",
           smallestDenomination: 5,
         );
 }
@@ -240,7 +240,7 @@ class FiatBif extends FiatCurrency {
           alternateSymbols: const ["FBu"],
           subunit: "Centime",
           subunitToUnit: 1,
-          isoNumeric: "108",
+          codeNumeric: "108",
           smallestDenomination: 100,
         );
 }
@@ -257,7 +257,7 @@ class FiatBmd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "060",
+          codeNumeric: "060",
         );
 }
 
@@ -273,7 +273,7 @@ class FiatBnd extends FiatCurrency {
           subunit: "Sen",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "096",
+          codeNumeric: "096",
         );
 }
 
@@ -287,7 +287,7 @@ class FiatBob extends FiatCurrency {
           alternateSymbols: const ["Bs"],
           subunit: "Centavo",
           unitFirst: true,
-          isoNumeric: "068",
+          codeNumeric: "068",
           smallestDenomination: 10,
         );
 }
@@ -304,7 +304,7 @@ class FiatBrl extends FiatCurrency {
           htmlEntity: r"R$",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "986",
+          codeNumeric: "986",
           smallestDenomination: 5,
         );
 }
@@ -321,7 +321,7 @@ class FiatBsd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "044",
+          codeNumeric: "044",
         );
 }
 
@@ -334,7 +334,7 @@ class FiatBtn extends FiatCurrency {
           symbol: "Nu.",
           alternateSymbols: const ["Nu"],
           subunit: "Chertrum",
-          isoNumeric: "064",
+          codeNumeric: "064",
           smallestDenomination: 5,
         );
 }
@@ -348,7 +348,7 @@ class FiatBwp extends FiatCurrency {
           symbol: "P",
           subunit: "Thebe",
           unitFirst: true,
-          isoNumeric: "072",
+          codeNumeric: "072",
           smallestDenomination: 5,
         );
 }
@@ -365,7 +365,7 @@ class FiatByn extends FiatCurrency {
           subunit: "Kapeyka",
           decimalMark: ",",
           thousandsSeparator: " ",
-          isoNumeric: "933",
+          codeNumeric: "933",
         );
 }
 
@@ -381,7 +381,7 @@ class FiatBzd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "084",
+          codeNumeric: "084",
         );
 }
 
@@ -398,7 +398,7 @@ class FiatCad extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "124",
+          codeNumeric: "124",
           smallestDenomination: 5,
         );
 }
@@ -413,7 +413,7 @@ class FiatCdf extends FiatCurrency {
           disambiguateSymbol: "FC",
           alternateSymbols: const ["FC"],
           subunit: "Centime",
-          isoNumeric: "976",
+          codeNumeric: "976",
         );
 }
 
@@ -426,7 +426,7 @@ class FiatChf extends FiatCurrency {
           alternateSymbols: const ["SFr", "Fr"],
           subunit: "Rappen",
           unitFirst: true,
-          isoNumeric: "756",
+          codeNumeric: "756",
           smallestDenomination: 5,
         );
 
@@ -447,7 +447,7 @@ class FiatClf extends FiatCurrency {
           htmlEntity: "&#x20B1;",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "990",
+          codeNumeric: "990",
           smallestDenomination: 0,
         );
 }
@@ -466,7 +466,7 @@ class FiatClp extends FiatCurrency {
           htmlEntity: "&#36;",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "152",
+          codeNumeric: "152",
         );
 }
 
@@ -481,7 +481,7 @@ class FiatCny extends FiatCurrency {
           subunit: "Fen",
           unitFirst: true,
           htmlEntity: "￥",
-          isoNumeric: "156",
+          codeNumeric: "156",
         );
 }
 
@@ -499,7 +499,7 @@ class FiatCop extends FiatCurrency {
           htmlEntity: "&#36;",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "170",
+          codeNumeric: "170",
           smallestDenomination: 20,
         );
 }
@@ -517,7 +517,7 @@ class FiatCrc extends FiatCurrency {
           htmlEntity: "&#x20A1;",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "188",
+          codeNumeric: "188",
           smallestDenomination: 500,
         );
 }
@@ -532,7 +532,7 @@ class FiatCuc extends FiatCurrency {
           disambiguateSymbol: r"CUC$",
           alternateSymbols: const [r"CUC$"],
           subunit: "Centavo",
-          isoNumeric: "931",
+          codeNumeric: "931",
         );
 }
 
@@ -548,7 +548,7 @@ class FiatCup extends FiatCurrency {
           subunit: "Centavo",
           unitFirst: true,
           htmlEntity: "&#x20B1;",
-          isoNumeric: "192",
+          codeNumeric: "192",
         );
 }
 
@@ -562,7 +562,7 @@ class FiatCve extends FiatCurrency {
           disambiguateSymbol: "Esc",
           alternateSymbols: const ["Esc"],
           subunit: "Centavo",
-          isoNumeric: "132",
+          codeNumeric: "132",
           smallestDenomination: 100,
         );
 }
@@ -577,7 +577,7 @@ class FiatCzk extends FiatCurrency {
           subunit: "Haléř",
           decimalMark: ",",
           thousandsSeparator: " ",
-          isoNumeric: "203",
+          codeNumeric: "203",
           smallestDenomination: 100,
         );
 }
@@ -591,7 +591,7 @@ class FiatDjf extends FiatCurrency {
           symbol: "Fdj",
           subunit: "Centime",
           subunitToUnit: 1,
-          isoNumeric: "262",
+          codeNumeric: "262",
           smallestDenomination: 100,
         );
 }
@@ -608,7 +608,7 @@ class FiatDkk extends FiatCurrency {
           subunit: "Øre",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "208",
+          codeNumeric: "208",
           smallestDenomination: 50,
         );
 }
@@ -625,7 +625,7 @@ class FiatDop extends FiatCurrency {
           subunit: "Centavo",
           unitFirst: true,
           htmlEntity: "&#x20B1;",
-          isoNumeric: "214",
+          codeNumeric: "214",
           smallestDenomination: 100,
         );
 }
@@ -639,7 +639,7 @@ class FiatDzd extends FiatCurrency {
           symbol: "د.ج",
           alternateSymbols: const ["DA"],
           subunit: "Centime",
-          isoNumeric: "012",
+          codeNumeric: "012",
           smallestDenomination: 100,
         );
 }
@@ -655,7 +655,7 @@ class FiatEgp extends FiatCurrency {
           subunit: "Piastre",
           unitFirst: true,
           htmlEntity: "&#x00A3;",
-          isoNumeric: "818",
+          codeNumeric: "818",
           smallestDenomination: 25,
         );
 }
@@ -668,7 +668,7 @@ class FiatErn extends FiatCurrency {
           name: "Eritrean Nakfa",
           symbol: "Nfk",
           subunit: "Cent",
-          isoNumeric: "232",
+          codeNumeric: "232",
         );
 }
 
@@ -681,7 +681,7 @@ class FiatEtb extends FiatCurrency {
           symbol: "Br",
           disambiguateSymbol: "ETB",
           subunit: "Santim",
-          isoNumeric: "230",
+          codeNumeric: "230",
         );
 }
 
@@ -698,7 +698,7 @@ class FiatEur extends FiatCurrency {
           htmlEntity: "€",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "978",
+          codeNumeric: "978",
         );
 }
 
@@ -713,7 +713,7 @@ class FiatFjd extends FiatCurrency {
           alternateSymbols: const [r"FJ$"],
           subunit: "Cent",
           htmlEntity: r"$",
-          isoNumeric: "242",
+          codeNumeric: "242",
           smallestDenomination: 5,
         );
 }
@@ -729,7 +729,7 @@ class FiatFkp extends FiatCurrency {
           alternateSymbols: const ["FK£"],
           subunit: "Penny",
           htmlEntity: "&#x00A3;",
-          isoNumeric: "238",
+          codeNumeric: "238",
         );
 }
 
@@ -744,7 +744,7 @@ class FiatGbp extends FiatCurrency {
           subunit: "Penny",
           unitFirst: true,
           htmlEntity: "&#x00A3;",
-          isoNumeric: "826",
+          codeNumeric: "826",
         );
 }
 
@@ -757,7 +757,7 @@ class FiatGel extends FiatCurrency {
           symbol: "₾",
           alternateSymbols: const ["lari"],
           subunit: "Tetri",
-          isoNumeric: "981",
+          codeNumeric: "981",
         );
 }
 
@@ -772,7 +772,7 @@ class FiatGhs extends FiatCurrency {
           subunit: "Pesewa",
           unitFirst: true,
           htmlEntity: "&#x20B5;",
-          isoNumeric: "936",
+          codeNumeric: "936",
         );
 }
 
@@ -787,7 +787,7 @@ class FiatGip extends FiatCurrency {
           subunit: "Penny",
           unitFirst: true,
           htmlEntity: "&#x00A3;",
-          isoNumeric: "292",
+          codeNumeric: "292",
         );
 }
 
@@ -799,7 +799,7 @@ class FiatGmd extends FiatCurrency {
           name: "Gambian Dalasi",
           symbol: "D",
           subunit: "Butut",
-          isoNumeric: "270",
+          codeNumeric: "270",
         );
 }
 
@@ -814,7 +814,7 @@ class FiatGnf extends FiatCurrency {
           alternateSymbols: const ["FG", "GFr"],
           subunit: "Centime",
           subunitToUnit: 1,
-          isoNumeric: "324",
+          codeNumeric: "324",
           smallestDenomination: 100,
         );
 }
@@ -828,7 +828,7 @@ class FiatGtq extends FiatCurrency {
           symbol: "Q",
           subunit: "Centavo",
           unitFirst: true,
-          isoNumeric: "320",
+          codeNumeric: "320",
         );
 }
 
@@ -843,7 +843,7 @@ class FiatGyd extends FiatCurrency {
           alternateSymbols: const [r"G$"],
           subunit: "Cent",
           htmlEntity: r"$",
-          isoNumeric: "328",
+          codeNumeric: "328",
           smallestDenomination: 100,
         );
 }
@@ -860,7 +860,7 @@ class FiatHkd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "344",
+          codeNumeric: "344",
           smallestDenomination: 10,
         );
 }
@@ -875,7 +875,7 @@ class FiatHnl extends FiatCurrency {
           disambiguateSymbol: "HNL",
           subunit: "Centavo",
           unitFirst: true,
-          isoNumeric: "340",
+          codeNumeric: "340",
           smallestDenomination: 5,
         );
 }
@@ -890,7 +890,7 @@ class FiatHrk extends FiatCurrency {
           subunit: "Lipa",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "191",
+          codeNumeric: "191",
         );
 }
 
@@ -902,7 +902,7 @@ class FiatHtg extends FiatCurrency {
           name: "Haitian Gourde",
           symbol: "G",
           subunit: "Centime",
-          isoNumeric: "332",
+          codeNumeric: "332",
           smallestDenomination: 5,
         );
 }
@@ -917,7 +917,7 @@ class FiatHuf extends FiatCurrency {
           subunitToUnit: 1,
           decimalMark: ",",
           thousandsSeparator: " ",
-          isoNumeric: "348",
+          codeNumeric: "348",
           smallestDenomination: 5,
         );
 }
@@ -933,7 +933,7 @@ class FiatIdr extends FiatCurrency {
           unitFirst: true,
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "360",
+          codeNumeric: "360",
           smallestDenomination: 5000,
         );
 }
@@ -949,7 +949,7 @@ class FiatIls extends FiatCurrency {
           subunit: "Agora",
           unitFirst: true,
           htmlEntity: "&#x20AA;",
-          isoNumeric: "376",
+          codeNumeric: "376",
           smallestDenomination: 10,
         );
 }
@@ -965,7 +965,7 @@ class FiatInr extends FiatCurrency {
           subunit: "Paisa",
           unitFirst: true,
           htmlEntity: "&#x20b9;",
-          isoNumeric: "356",
+          codeNumeric: "356",
           smallestDenomination: 50,
         );
 }
@@ -979,7 +979,7 @@ class FiatIqd extends FiatCurrency {
           symbol: "ع.د",
           subunit: "Fils",
           subunitToUnit: 1000,
-          isoNumeric: "368",
+          codeNumeric: "368",
           smallestDenomination: 50000,
         );
 }
@@ -994,7 +994,7 @@ class FiatIrr extends FiatCurrency {
           subunit: null,
           unitFirst: true,
           htmlEntity: "&#xFDFC;",
-          isoNumeric: "364",
+          codeNumeric: "364",
           smallestDenomination: 5000,
         );
 }
@@ -1011,7 +1011,7 @@ class FiatIsk extends FiatCurrency {
           subunitToUnit: 1,
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "352",
+          codeNumeric: "352",
         );
 }
 
@@ -1027,7 +1027,7 @@ class FiatJmd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "388",
+          codeNumeric: "388",
         );
 }
 
@@ -1042,7 +1042,7 @@ class FiatJod extends FiatCurrency {
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          isoNumeric: "400",
+          codeNumeric: "400",
           smallestDenomination: 5,
         );
 }
@@ -1060,7 +1060,7 @@ class FiatJpy extends FiatCurrency {
           subunitToUnit: 1,
           unitFirst: true,
           htmlEntity: "&#x00A5;",
-          isoNumeric: "392",
+          codeNumeric: "392",
         );
 }
 
@@ -1074,7 +1074,7 @@ class FiatKes extends FiatCurrency {
           alternateSymbols: const ["Sh"],
           subunit: "Cent",
           unitFirst: true,
-          isoNumeric: "404",
+          codeNumeric: "404",
           smallestDenomination: 50,
         );
 }
@@ -1088,7 +1088,7 @@ class FiatKgs extends FiatCurrency {
           symbol: "som",
           alternateSymbols: const ["сом"],
           subunit: "Tyiyn",
-          isoNumeric: "417",
+          codeNumeric: "417",
         );
 }
 
@@ -1101,7 +1101,7 @@ class FiatKhr extends FiatCurrency {
           symbol: "៛",
           subunit: "Sen",
           htmlEntity: "&#x17DB;",
-          isoNumeric: "116",
+          codeNumeric: "116",
           smallestDenomination: 5000,
         );
 }
@@ -1117,7 +1117,7 @@ class FiatKmf extends FiatCurrency {
           alternateSymbols: const ["CF"],
           subunit: "Centime",
           subunitToUnit: 1,
-          isoNumeric: "174",
+          codeNumeric: "174",
           smallestDenomination: 100,
         );
 }
@@ -1131,7 +1131,7 @@ class FiatKpw extends FiatCurrency {
           symbol: "₩",
           subunit: "Chŏn",
           htmlEntity: "&#x20A9;",
-          isoNumeric: "408",
+          codeNumeric: "408",
         );
 }
 
@@ -1146,7 +1146,7 @@ class FiatKrw extends FiatCurrency {
           subunitToUnit: 1,
           unitFirst: true,
           htmlEntity: "&#x20A9;",
-          isoNumeric: "410",
+          codeNumeric: "410",
         );
 }
 
@@ -1161,7 +1161,7 @@ class FiatKwd extends FiatCurrency {
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          isoNumeric: "414",
+          codeNumeric: "414",
           smallestDenomination: 5,
         );
 }
@@ -1178,7 +1178,7 @@ class FiatKyd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "136",
+          codeNumeric: "136",
         );
 }
 
@@ -1190,7 +1190,7 @@ class FiatKzt extends FiatCurrency {
           name: "Kazakhstani Tenge",
           symbol: "₸",
           subunit: "Tiyn",
-          isoNumeric: "398",
+          codeNumeric: "398",
           smallestDenomination: 100,
         );
 }
@@ -1205,7 +1205,7 @@ class FiatLak extends FiatCurrency {
           alternateSymbols: const ["₭N"],
           subunit: "Att",
           htmlEntity: "&#x20AD;",
-          isoNumeric: "418",
+          codeNumeric: "418",
           smallestDenomination: 10,
         );
 }
@@ -1221,7 +1221,7 @@ class FiatLbp extends FiatCurrency {
           subunit: "Piastre",
           unitFirst: true,
           htmlEntity: "&#x00A3;",
-          isoNumeric: "422",
+          codeNumeric: "422",
           smallestDenomination: 25000,
         );
 }
@@ -1237,7 +1237,7 @@ class FiatLkr extends FiatCurrency {
           alternateSymbols: const ["රු", "ரூ", "SLRs", "/-"],
           subunit: "Cent",
           htmlEntity: "&#8360;",
-          isoNumeric: "144",
+          codeNumeric: "144",
           smallestDenomination: 100,
         );
 }
@@ -1253,7 +1253,7 @@ class FiatLrd extends FiatCurrency {
           alternateSymbols: const [r"L$"],
           subunit: "Cent",
           htmlEntity: r"$",
-          isoNumeric: "430",
+          codeNumeric: "430",
           smallestDenomination: 5,
         );
 }
@@ -1268,7 +1268,7 @@ class FiatLsl extends FiatCurrency {
           disambiguateSymbol: "M",
           alternateSymbols: const ["M"],
           subunit: "Sente",
-          isoNumeric: "426",
+          codeNumeric: "426",
         );
 }
 
@@ -1282,7 +1282,7 @@ class FiatLyd extends FiatCurrency {
           alternateSymbols: const ["LD"],
           subunit: "Dirham",
           subunitToUnit: 1000,
-          isoNumeric: "434",
+          codeNumeric: "434",
           smallestDenomination: 50,
         );
 }
@@ -1295,7 +1295,7 @@ class FiatMad extends FiatCurrency {
           name: "Moroccan Dirham",
           symbol: "د.م.",
           subunit: "Centime",
-          isoNumeric: "504",
+          codeNumeric: "504",
         );
 }
 
@@ -1308,7 +1308,7 @@ class FiatMdl extends FiatCurrency {
           symbol: "L",
           alternateSymbols: const ["lei"],
           subunit: "Ban",
-          isoNumeric: "498",
+          codeNumeric: "498",
         );
 }
 
@@ -1322,7 +1322,7 @@ class FiatMga extends FiatCurrency {
           subunit: "Iraimbilanja",
           subunitToUnit: 5,
           unitFirst: true,
-          isoNumeric: "969",
+          codeNumeric: "969",
         );
 }
 
@@ -1334,7 +1334,7 @@ class FiatMkd extends FiatCurrency {
           name: "Macedonian Denar",
           symbol: "ден",
           subunit: "Deni",
-          isoNumeric: "807",
+          codeNumeric: "807",
           smallestDenomination: 100,
         );
 }
@@ -1348,7 +1348,7 @@ class FiatMmk extends FiatCurrency {
           symbol: "K",
           disambiguateSymbol: "MMK",
           subunit: "Pya",
-          isoNumeric: "104",
+          codeNumeric: "104",
           smallestDenomination: 50,
         );
 }
@@ -1362,7 +1362,7 @@ class FiatMnt extends FiatCurrency {
           symbol: "₮",
           subunit: "Möngö",
           htmlEntity: "&#x20AE;",
-          isoNumeric: "496",
+          codeNumeric: "496",
           smallestDenomination: 2000,
         );
 }
@@ -1376,7 +1376,7 @@ class FiatMop extends FiatCurrency {
           symbol: "P",
           alternateSymbols: const [r"MOP$"],
           subunit: "Avo",
-          isoNumeric: "446",
+          codeNumeric: "446",
           smallestDenomination: 10,
         );
 }
@@ -1390,7 +1390,7 @@ class FiatMru extends FiatCurrency {
           symbol: "UM",
           subunit: "Khoums",
           subunitToUnit: 5,
-          isoNumeric: "929",
+          codeNumeric: "929",
         );
 }
 
@@ -1404,7 +1404,7 @@ class FiatMur extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: "&#x20A8;",
-          isoNumeric: "480",
+          codeNumeric: "480",
           smallestDenomination: 100,
         );
 }
@@ -1417,7 +1417,7 @@ class FiatMvr extends FiatCurrency {
           name: "Maldivian Rufiyaa",
           alternateSymbols: const ["MRF", "Rf", "/-", "ރ"],
           subunit: "Laari",
-          isoNumeric: "462",
+          codeNumeric: "462",
         );
 }
 
@@ -1429,7 +1429,7 @@ class FiatMwk extends FiatCurrency {
           name: "Malawian Kwacha",
           symbol: "MK",
           subunit: "Tambala",
-          isoNumeric: "454",
+          codeNumeric: "454",
         );
 }
 
@@ -1445,7 +1445,7 @@ class FiatMxn extends FiatCurrency {
           subunit: "Centavo",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "484",
+          codeNumeric: "484",
           smallestDenomination: 5,
         );
 }
@@ -1459,7 +1459,7 @@ class FiatMyr extends FiatCurrency {
           symbol: "RM",
           subunit: "Sen",
           unitFirst: true,
-          isoNumeric: "458",
+          codeNumeric: "458",
           smallestDenomination: 5,
         );
 }
@@ -1476,7 +1476,7 @@ class FiatMzn extends FiatCurrency {
           unitFirst: true,
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "943",
+          codeNumeric: "943",
         );
 }
 
@@ -1491,7 +1491,7 @@ class FiatNad extends FiatCurrency {
           alternateSymbols: const [r"N$"],
           subunit: "Cent",
           htmlEntity: r"$",
-          isoNumeric: "516",
+          codeNumeric: "516",
           smallestDenomination: 5,
         );
 }
@@ -1506,7 +1506,7 @@ class FiatNgn extends FiatCurrency {
           subunit: "Kobo",
           unitFirst: true,
           htmlEntity: "&#x20A6;",
-          isoNumeric: "566",
+          codeNumeric: "566",
           smallestDenomination: 50,
         );
 }
@@ -1521,7 +1521,7 @@ class FiatNio extends FiatCurrency {
           disambiguateSymbol: r"NIO$",
           subunit: "Centavo",
           unitFirst: true,
-          isoNumeric: "558",
+          codeNumeric: "558",
           smallestDenomination: 5,
         );
 }
@@ -1539,7 +1539,7 @@ class FiatNok extends FiatCurrency {
           htmlEntity: "kr",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "578",
+          codeNumeric: "578",
           smallestDenomination: 100,
         );
 }
@@ -1556,7 +1556,7 @@ class FiatNpr extends FiatCurrency {
           subunit: "Paisa",
           unitFirst: true,
           htmlEntity: "&#x20A8;",
-          isoNumeric: "524",
+          codeNumeric: "524",
         );
 }
 
@@ -1572,7 +1572,7 @@ class FiatNzd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "554",
+          codeNumeric: "554",
           smallestDenomination: 10,
         );
 }
@@ -1588,7 +1588,7 @@ class FiatOmr extends FiatCurrency {
           subunitToUnit: 1000,
           unitFirst: true,
           htmlEntity: "&#xFDFC;",
-          isoNumeric: "512",
+          codeNumeric: "512",
           smallestDenomination: 5,
         );
 }
@@ -1602,7 +1602,7 @@ class FiatPab extends FiatCurrency {
           symbol: "B/.",
           subunit: "Centésimo",
           unitFirst: true,
-          isoNumeric: "590",
+          codeNumeric: "590",
         );
 }
 
@@ -1616,7 +1616,7 @@ class FiatPen extends FiatCurrency {
           subunit: "Céntimo",
           unitFirst: true,
           htmlEntity: "S/",
-          isoNumeric: "604",
+          codeNumeric: "604",
         );
 }
 
@@ -1629,7 +1629,7 @@ class FiatPgk extends FiatCurrency {
           symbol: "K",
           disambiguateSymbol: "PGK",
           subunit: "Toea",
-          isoNumeric: "598",
+          codeNumeric: "598",
           smallestDenomination: 5,
         );
 }
@@ -1645,7 +1645,7 @@ class FiatPhp extends FiatCurrency {
           subunit: "Centavo",
           unitFirst: true,
           htmlEntity: "&#x20B1;",
-          isoNumeric: "608",
+          codeNumeric: "608",
         );
 }
 
@@ -1661,7 +1661,7 @@ class FiatPkr extends FiatCurrency {
           subunit: "Paisa",
           unitFirst: true,
           htmlEntity: "&#x20A8;",
-          isoNumeric: "586",
+          codeNumeric: "586",
           smallestDenomination: 100,
         );
 }
@@ -1677,7 +1677,7 @@ class FiatPln extends FiatCurrency {
           htmlEntity: "z&#322;",
           decimalMark: ",",
           thousandsSeparator: " ",
-          isoNumeric: "985",
+          codeNumeric: "985",
         );
 }
 
@@ -1692,7 +1692,7 @@ class FiatPyg extends FiatCurrency {
           subunitToUnit: 1,
           unitFirst: true,
           htmlEntity: "&#x20B2;",
-          isoNumeric: "600",
+          codeNumeric: "600",
           smallestDenomination: 5000,
         );
 }
@@ -1707,7 +1707,7 @@ class FiatQar extends FiatCurrency {
           alternateSymbols: const ["QR"],
           subunit: "Dirham",
           htmlEntity: "&#xFDFC;",
-          isoNumeric: "634",
+          codeNumeric: "634",
         );
 }
 
@@ -1721,7 +1721,7 @@ class FiatRon extends FiatCurrency {
           subunit: "Bani",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "946",
+          codeNumeric: "946",
         );
 }
 
@@ -1735,7 +1735,7 @@ class FiatRsd extends FiatCurrency {
           alternateSymbols: const ["RSD", "din", "дин"],
           subunit: "Para",
           unitFirst: true,
-          isoNumeric: "941",
+          codeNumeric: "941",
           smallestDenomination: 100,
         );
 }
@@ -1752,7 +1752,7 @@ class FiatRub extends FiatCurrency {
           htmlEntity: "&#x20BD;",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "643",
+          codeNumeric: "643",
         );
 }
 
@@ -1766,7 +1766,7 @@ class FiatRwf extends FiatCurrency {
           alternateSymbols: const ["RF", "R₣"],
           subunit: "Centime",
           subunitToUnit: 1,
-          isoNumeric: "646",
+          codeNumeric: "646",
           smallestDenomination: 100,
         );
 }
@@ -1782,7 +1782,7 @@ class FiatSar extends FiatCurrency {
           subunit: "Hallallah",
           unitFirst: true,
           htmlEntity: "&#xFDFC;",
-          isoNumeric: "682",
+          codeNumeric: "682",
           smallestDenomination: 5,
         );
 }
@@ -1798,7 +1798,7 @@ class FiatSbd extends FiatCurrency {
           alternateSymbols: const [r"SI$"],
           subunit: "Cent",
           htmlEntity: r"$",
-          isoNumeric: "090",
+          codeNumeric: "090",
           smallestDenomination: 10,
         );
 }
@@ -1814,7 +1814,7 @@ class FiatScr extends FiatCurrency {
           alternateSymbols: const ["SRe", "SR"],
           subunit: "Cent",
           htmlEntity: "&#x20A8;",
-          isoNumeric: "690",
+          codeNumeric: "690",
         );
 }
 
@@ -1828,7 +1828,7 @@ class FiatSdg extends FiatCurrency {
           disambiguateSymbol: "SDG",
           subunit: "Piastre",
           unitFirst: true,
-          isoNumeric: "938",
+          codeNumeric: "938",
         );
 }
 
@@ -1844,7 +1844,7 @@ class FiatSek extends FiatCurrency {
           subunit: "Öre",
           decimalMark: ",",
           thousandsSeparator: " ",
-          isoNumeric: "752",
+          codeNumeric: "752",
           smallestDenomination: 100,
         );
 }
@@ -1861,7 +1861,7 @@ class FiatSgd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "702",
+          codeNumeric: "702",
         );
 }
 
@@ -1875,7 +1875,7 @@ class FiatShp extends FiatCurrency {
           disambiguateSymbol: "SHP",
           subunit: "Penny",
           htmlEntity: "&#x00A3;",
-          isoNumeric: "654",
+          codeNumeric: "654",
         );
 }
 
@@ -1888,7 +1888,7 @@ class FiatSll extends FiatCurrency {
           symbol: "Le",
           disambiguateSymbol: "SLL",
           subunit: "Cent",
-          isoNumeric: "694",
+          codeNumeric: "694",
           smallestDenomination: 1000,
         );
 }
@@ -1902,7 +1902,7 @@ class FiatSos extends FiatCurrency {
           symbol: "Sh",
           alternateSymbols: const ["Sh.So"],
           subunit: "Cent",
-          isoNumeric: "706",
+          codeNumeric: "706",
         );
 }
 
@@ -1915,7 +1915,7 @@ class FiatSrd extends FiatCurrency {
           symbol: r"$",
           disambiguateSymbol: "SRD",
           subunit: "Cent",
-          isoNumeric: "968",
+          codeNumeric: "968",
         );
 }
 
@@ -1929,7 +1929,7 @@ class FiatSsp extends FiatCurrency {
           disambiguateSymbol: "SSP",
           subunit: "piaster",
           htmlEntity: "&#x00A3;",
-          isoNumeric: "728",
+          codeNumeric: "728",
           smallestDenomination: 5,
         );
 }
@@ -1943,7 +1943,7 @@ class FiatStn extends FiatCurrency {
           symbol: "Db",
           disambiguateSymbol: "STN",
           subunit: "Cêntimo",
-          isoNumeric: "930",
+          codeNumeric: "930",
           smallestDenomination: 10,
         );
 }
@@ -1959,7 +1959,7 @@ class FiatSvc extends FiatCurrency {
           subunit: "Centavo",
           unitFirst: true,
           htmlEntity: "&#x20A1;",
-          isoNumeric: "222",
+          codeNumeric: "222",
         );
 }
 
@@ -1973,7 +1973,7 @@ class FiatSyp extends FiatCurrency {
           alternateSymbols: const ["£", "ل.س", "LS", "الليرة السورية"],
           subunit: "Piastre",
           htmlEntity: "&#x00A3;",
-          isoNumeric: "760",
+          codeNumeric: "760",
           smallestDenomination: 100,
         );
 }
@@ -1988,7 +1988,7 @@ class FiatSzl extends FiatCurrency {
           disambiguateSymbol: "SZL",
           subunit: "Cent",
           unitFirst: true,
-          isoNumeric: "748",
+          codeNumeric: "748",
         );
 }
 
@@ -2002,7 +2002,7 @@ class FiatThb extends FiatCurrency {
           subunit: "Satang",
           unitFirst: true,
           htmlEntity: "&#x0E3F;",
-          isoNumeric: "764",
+          codeNumeric: "764",
         );
 }
 
@@ -2014,7 +2014,7 @@ class FiatTjs extends FiatCurrency {
           name: "Tajikistani Somoni",
           symbol: "ЅМ",
           subunit: "Diram",
-          isoNumeric: "972",
+          codeNumeric: "972",
         );
 }
 
@@ -2026,7 +2026,7 @@ class FiatTmt extends FiatCurrency {
           name: "Turkmenistani Manat",
           symbol: "T",
           subunit: "Tenge",
-          isoNumeric: "934",
+          codeNumeric: "934",
         );
 }
 
@@ -2040,7 +2040,7 @@ class FiatTnd extends FiatCurrency {
           alternateSymbols: const ["TD", "DT"],
           subunit: "Millime",
           subunitToUnit: 1000,
-          isoNumeric: "788",
+          codeNumeric: "788",
           smallestDenomination: 10,
         );
 }
@@ -2055,7 +2055,7 @@ class FiatTop extends FiatCurrency {
           alternateSymbols: const ["PT"],
           subunit: "Seniti",
           unitFirst: true,
-          isoNumeric: "776",
+          codeNumeric: "776",
         );
 }
 
@@ -2072,7 +2072,7 @@ class FiatTry extends FiatCurrency {
           htmlEntity: "&#8378;",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "949",
+          codeNumeric: "949",
         );
 }
 
@@ -2087,7 +2087,7 @@ class FiatTtd extends FiatCurrency {
           alternateSymbols: const [r"TT$"],
           subunit: "Cent",
           htmlEntity: r"$",
-          isoNumeric: "780",
+          codeNumeric: "780",
         );
 }
 
@@ -2103,7 +2103,7 @@ class FiatTwd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "901",
+          codeNumeric: "901",
           smallestDenomination: 50,
         );
 }
@@ -2117,7 +2117,7 @@ class FiatTzs extends FiatCurrency {
           symbol: "Sh",
           subunit: "Cent",
           unitFirst: true,
-          isoNumeric: "834",
+          codeNumeric: "834",
           smallestDenomination: 5000,
         );
 }
@@ -2131,7 +2131,7 @@ class FiatUah extends FiatCurrency {
           symbol: "₴",
           subunit: "Kopiyka",
           htmlEntity: "&#x20B4;",
-          isoNumeric: "980",
+          codeNumeric: "980",
         );
 }
 
@@ -2144,7 +2144,7 @@ class FiatUgx extends FiatCurrency {
           symbol: "USh",
           subunit: "Cent",
           subunitToUnit: 1,
-          isoNumeric: "800",
+          codeNumeric: "800",
           smallestDenomination: 1000,
         );
 }
@@ -2162,7 +2162,7 @@ class FiatUsd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "840",
+          codeNumeric: "840",
         );
 }
 
@@ -2179,7 +2179,7 @@ class FiatUyu extends FiatCurrency {
           htmlEntity: r"$U",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "858",
+          codeNumeric: "858",
           smallestDenomination: 100,
         );
 }
@@ -2193,7 +2193,7 @@ class FiatUzs extends FiatCurrency {
           symbol: "so'm",
           alternateSymbols: const ["so‘m", "сўм", "сум", "s", "с"],
           subunit: "Tiyin",
-          isoNumeric: "860",
+          codeNumeric: "860",
           smallestDenomination: 100,
         );
 }
@@ -2210,7 +2210,7 @@ class FiatVes extends FiatCurrency {
           unitFirst: true,
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "928",
+          codeNumeric: "928",
         );
 }
 
@@ -2226,7 +2226,7 @@ class FiatVnd extends FiatCurrency {
           htmlEntity: "&#x20AB;",
           decimalMark: ",",
           thousandsSeparator: ".",
-          isoNumeric: "704",
+          codeNumeric: "704",
           smallestDenomination: 100,
         );
 }
@@ -2241,7 +2241,7 @@ class FiatVuv extends FiatCurrency {
           subunit: null,
           subunitToUnit: 1,
           unitFirst: true,
-          isoNumeric: "548",
+          codeNumeric: "548",
         );
 }
 
@@ -2255,7 +2255,7 @@ class FiatWst extends FiatCurrency {
           disambiguateSymbol: r"WS$",
           alternateSymbols: const [r"WS$", "SAT", "ST"],
           subunit: "Sene",
-          isoNumeric: "882",
+          codeNumeric: "882",
           smallestDenomination: 10,
         );
 }
@@ -2271,7 +2271,7 @@ class FiatXaf extends FiatCurrency {
           alternateSymbols: const ["FCFA"],
           subunit: "Centime",
           subunitToUnit: 1,
-          isoNumeric: "950",
+          codeNumeric: "950",
           smallestDenomination: 100,
         );
 }
@@ -2286,7 +2286,7 @@ class FiatXag extends FiatCurrency {
           disambiguateSymbol: "XAG",
           subunit: "oz",
           subunitToUnit: 1,
-          isoNumeric: "961",
+          codeNumeric: "961",
           smallestDenomination: 0,
         );
 }
@@ -2301,7 +2301,7 @@ class FiatXau extends FiatCurrency {
           disambiguateSymbol: "XAU",
           subunit: "oz",
           subunitToUnit: 1,
-          isoNumeric: "959",
+          codeNumeric: "959",
           smallestDenomination: 0,
         );
 }
@@ -2314,7 +2314,7 @@ class FiatXba extends FiatCurrency {
           name: "European Composite Unit",
           disambiguateSymbol: "XBA",
           subunitToUnit: 1,
-          isoNumeric: "955",
+          codeNumeric: "955",
           smallestDenomination: 0,
         );
 }
@@ -2327,7 +2327,7 @@ class FiatXbb extends FiatCurrency {
           name: "European Monetary Unit",
           disambiguateSymbol: "XBB",
           subunitToUnit: 1,
-          isoNumeric: "956",
+          codeNumeric: "956",
           smallestDenomination: 0,
         );
 }
@@ -2340,7 +2340,7 @@ class FiatXbc extends FiatCurrency {
           name: "European Unit of Account 9",
           disambiguateSymbol: "XBC",
           subunitToUnit: 1,
-          isoNumeric: "957",
+          codeNumeric: "957",
           smallestDenomination: 0,
         );
 }
@@ -2353,7 +2353,7 @@ class FiatXbd extends FiatCurrency {
           name: "European Unit of Account 17",
           disambiguateSymbol: "XBD",
           subunitToUnit: 1,
-          isoNumeric: "958",
+          codeNumeric: "958",
           smallestDenomination: 0,
         );
 }
@@ -2370,7 +2370,7 @@ class FiatXcd extends FiatCurrency {
           subunit: "Cent",
           unitFirst: true,
           htmlEntity: r"$",
-          isoNumeric: "951",
+          codeNumeric: "951",
         );
 }
 
@@ -2384,7 +2384,7 @@ class FiatXdr extends FiatCurrency {
           alternateSymbols: const ["XDR"],
           subunitToUnit: 1,
           htmlEntity: r"$",
-          isoNumeric: "960",
+          codeNumeric: "960",
           smallestDenomination: 0,
         );
 }
@@ -2400,7 +2400,7 @@ class FiatXof extends FiatCurrency {
           alternateSymbols: const ["CFA"],
           subunit: "Centime",
           subunitToUnit: 1,
-          isoNumeric: "952",
+          codeNumeric: "952",
           smallestDenomination: 100,
         );
 }
@@ -2415,7 +2415,7 @@ class FiatXpd extends FiatCurrency {
           disambiguateSymbol: "XPD",
           subunit: "oz",
           subunitToUnit: 1,
-          isoNumeric: "964",
+          codeNumeric: "964",
           smallestDenomination: 0,
         );
 }
@@ -2430,7 +2430,7 @@ class FiatXpf extends FiatCurrency {
           alternateSymbols: const ["F"],
           subunit: "Centime",
           subunitToUnit: 1,
-          isoNumeric: "953",
+          codeNumeric: "953",
           smallestDenomination: 100,
         );
 }
@@ -2443,7 +2443,7 @@ class FiatXpt extends FiatCurrency {
           name: "Platinum",
           symbol: "oz t",
           subunitToUnit: 1,
-          isoNumeric: "962",
+          codeNumeric: "962",
           smallestDenomination: 0,
         );
 }
@@ -2455,7 +2455,7 @@ class FiatXts extends FiatCurrency {
           namesNative: const ["Test currency"],
           name: "Codes specifically reserved for testing purposes",
           subunitToUnit: 1,
-          isoNumeric: "963",
+          codeNumeric: "963",
           smallestDenomination: 0,
         );
 }
@@ -2469,7 +2469,7 @@ class FiatYer extends FiatCurrency {
           symbol: "﷼",
           subunit: "Fils",
           htmlEntity: "&#xFDFC;",
-          isoNumeric: "886",
+          codeNumeric: "886",
           smallestDenomination: 100,
         );
 }
@@ -2486,7 +2486,7 @@ class FiatZar extends FiatCurrency {
           htmlEntity: "&#x0052;",
           decimalMark: ",",
           thousandsSeparator: " ",
-          isoNumeric: "710",
+          codeNumeric: "710",
           smallestDenomination: 10,
         );
 }
@@ -2502,7 +2502,7 @@ class FiatZwl extends FiatCurrency {
           unitFirst: true,
           decimalMark: ",",
           thousandsSeparator: " ",
-          isoNumeric: "932",
+          codeNumeric: "932",
         );
 }
 
@@ -2516,7 +2516,7 @@ class FiatZmw extends FiatCurrency {
           disambiguateSymbol: "ZMW",
           subunit: "Ngwee",
           unitFirst: true,
-          isoNumeric: "967",
+          codeNumeric: "967",
           smallestDenomination: 5,
         );
 }

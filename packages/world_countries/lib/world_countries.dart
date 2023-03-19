@@ -20,4 +20,6 @@ export "src/widgets/country/emoji_flag.dart";
 export "src/widgets/currency/currency_picker.dart";
 export "src/widgets/currency/currency_tile.dart";
 export "src/widgets/generic_widgets/search_list_listenable_builder.dart";
+export "src/widgets/language/language_picker.dart";
+export "src/widgets/language/language_tile.dart";
 export "src/widgets/pickers/basic_picker.dart";
