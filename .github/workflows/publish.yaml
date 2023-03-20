@@ -57,7 +57,7 @@ jobs:
           echo "Version from pubspec: ${{ steps.pubspec.outputs.data }}!"
 
       - name: 🗑️ Delete tag if version is not same as tag
-        uses: dev-drprasad/delete-tag-and-release@v0.2.0
+        uses: dev-drprasad/delete-tag-and-release@v0.2.1
         if: ${{ steps.pubspec.outputs.data != env.TAG }}
         with:
           tag_name: ${{ env.TAG }}
