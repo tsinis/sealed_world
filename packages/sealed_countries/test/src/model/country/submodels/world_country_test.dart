@@ -49,7 +49,7 @@ void main() => group("$WorldCountry", () {
             } else {
               expect(element.subregion, isNull);
             }
-            expect(element.idd.root, isNotEmpty);
+            expect(element.idd.root, isPositive);
             expect(element.idd.suffixes, isNotEmpty);
             if (element.currencies != null) {
               expect(element.currencies, isNotEmpty);
