@@ -41,7 +41,7 @@ class CountryUnk extends WorldCountry {
           tld: const [],
           unMember: false,
           currencies: const [FiatEur()],
-          idd: const Idd(root: "+3", suffixes: ["83"]),
+          idd: const Idd(root: 3, suffixes: [83]),
           altSpellings: const ["XK", "Република Косово"],
           continent: const Europe(),
           subregion: const SouthwestEurope(),

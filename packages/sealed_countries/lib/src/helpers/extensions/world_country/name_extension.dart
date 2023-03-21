@@ -10,6 +10,7 @@ extension NameExtension on WorldCountry {
   }
 
   CountryName? nameTranslated([NaturalLanguage? language]) {
+    if (language == null) return null;
     for (final countryName in translations) {
       if (countryName.language == language) return countryName;
     }
