@@ -11,5 +11,6 @@ class Maps {
   String get openStreetMapsUrl => openStreetMapsPrefix + openStreetMaps;
 
   @override
-  String toString() => """Maps(googleMaps: $googleMaps, openStreetMaps: $openStreetMaps)""";
+  String toString() =>
+      """Maps(googleMaps: $googleMaps, openStreetMaps: $openStreetMaps)""";
 }

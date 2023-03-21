@@ -1,14 +1,16 @@
-import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
+import "../../constants/ui_constants.dart";
 import "../../models/item_properties.dart";
-import "../pickers/basic_picker.dart";
-import "country_tile.dart";
+import "../country/country_picker.dart";
+import "../country/country_tile.dart";
+import "../country/emoji_flag.dart";
 
-class CountryPicker extends BasicPicker<WorldCountry> {
-  const CountryPicker({
-    Iterable<WorldCountry> countries = WorldCountry.list,
+class PhoneCodePicker extends CountryPicker {
+  const PhoneCodePicker({
+    super.countries,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
@@ -45,30 +47,83 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
-    this.translation,
-  }) : super(countries);
+    super.translation,
+  });
 
-  final NaturalLanguage? translation;
-
-  Iterable<WorldCountry> get countries => items;
+  PhoneCodePicker.fromCountryPicker(CountryPicker picker, {super.key})
+      : super(
+          countries: picker.items,
+          addAutomaticKeepAlives: picker.addAutomaticKeepAlives,
+          addRepaintBoundaries: picker.addRepaintBoundaries,
+          addSemanticIndexes: picker.addSemanticIndexes,
+          cacheExtent: picker.cacheExtent,
+          caseSensitiveSearch: picker.caseSensitiveSearch,
+          chosen: picker.chosen,
+          clipBehavior: picker.clipBehavior,
+          crossAxisAlignment: picker.crossAxisAlignment,
+          direction: picker.direction,
+          disabled: picker.disabled,
+          dragStartBehavior: picker.dragStartBehavior,
+          emptyStatePlaceholder: picker.emptyStatePlaceholder,
+          itemBuilder: picker.itemBuilder,
+          keyboardDismissBehavior: picker.keyboardDismissBehavior,
+          mainAxisAlignment: picker.mainAxisAlignment,
+          mainAxisSize: picker.mainAxisSize,
+          onSelect: picker.onSelect,
+          padding: picker.padding,
+          physics: picker.physics,
+          primary: picker.primary,
+          restorationId: picker.restorationId,
+          reverse: picker.reverse,
+          scrollController: picker.scrollController,
+          searchBar: picker.searchBar,
+          searchBarPadding: picker.searchBarPadding,
+          searchIn: picker.searchIn,
+          separator: picker.separator,
+          showClearButton: picker.showClearButton,
+          showSearchBar: picker.showHeader,
+          shrinkWrap: picker.shrinkWrap,
+          sort: picker.sort,
+          startWithSearch: picker.startWithSearch,
+          textBaseline: picker.textBaseline,
+          textDirection: picker.textDirection,
+          verticalDirection: picker.verticalDirection,
+          translation: picker.translation,
+        );
 
   @override
   Widget? defaultBuilder(ItemProperties<WorldCountry> itemProperties) =>
       CountryTile.defaultFromProperties(
         itemProperties,
+        leading: ConstrainedBox(
+          constraints: UiConstants.constraints,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              EmojiFlag.twemoji(itemProperties.item),
+              Padding(
+                padding: const EdgeInsets.only(right: UiConstants.point / 2),
+                child: Text(
+                  itemProperties.item.idd.phoneCode(),
+                  style: const TextStyle(fontSize: 12),
+                ),
+              ),
+            ],
+          ),
+        ),
+        minLeadingWidth: UiConstants.constraints.minWidth,
         onPressed: onSelect,
         translation: translation,
       );
 
   @override
   Iterable<String> defaultSearch(WorldCountry item) => Set.unmodifiable({
-        ...item.translations.map((translatedName) => translatedName.common),
-        ...item.namesNative.map((nativeName) => nativeName.common),
-        item.name.common,
+        ...super.defaultSearch(item),
+        item.idd.phoneCode(leading: ""),
       });
 
   @override
-  CountryPicker copyWith({
+  PhoneCodePicker copyWith({
     Iterable<WorldCountry>? items,
     bool? addAutomaticKeepAlives,
     bool? addRepaintBoundaries,
@@ -108,7 +163,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     Widget? Function(ItemProperties<WorldCountry> itemProperties)? itemBuilder,
     NaturalLanguage? translation,
   }) =>
-      CountryPicker(
+      PhoneCodePicker(
         countries: items ?? countries,
         addAutomaticKeepAlives:
             addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,

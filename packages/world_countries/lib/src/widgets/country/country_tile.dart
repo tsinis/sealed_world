@@ -83,6 +83,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    NaturalLanguage? translation,
   }) : super(
           country.item,
           index: country.index,
@@ -92,7 +93,8 @@ class CountryTile extends ListItemTile<WorldCountry> {
           leading: leading ?? EmojiFlag.twemoji(country.item),
           subtitle: subtitle ??
               Text(
-                country.item.namesCommonNative(skipFirst: true) ??
+                country.item.nameTranslated(translation)?.common ??
+                    country.item.namesCommonNative(skipFirst: true) ??
                     country.item.nameEnglish.common,
                 overflow: TextOverflow.ellipsis,
               ),

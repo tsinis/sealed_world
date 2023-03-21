@@ -49,11 +49,8 @@ void main() => group("$WorldCountry", () {
             } else {
               expect(element.subregion, isNull);
             }
-            if (element.idd != null) {
-              expect(element.idd?.root, isNotEmpty);
-            } else {
-              expect(element.idd, isNull);
-            }
+            expect(element.idd.root, isNotEmpty);
+            expect(element.idd.suffixes, isNotEmpty);
             if (element.currencies != null) {
               expect(element.currencies, isNotEmpty);
             } else {

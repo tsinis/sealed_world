@@ -8,6 +8,7 @@ export "src/data/geo/continental_sections.dart";
 export "src/data/geo/continents.dart";
 export "src/data/official_world_countries.dart";
 export "src/data/other_world_countries.dart";
+export "src/helpers/extensions/country_submodels/idd_extension.dart";
 export "src/helpers/extensions/world_country/name_extension.dart";
 export "src/helpers/extensions/world_country/web_resources_extension.dart";
 export "src/model/country/country.dart";

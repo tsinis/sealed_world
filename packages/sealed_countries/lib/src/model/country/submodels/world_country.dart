@@ -3,22 +3,23 @@ part of "../country.dart";
 class WorldCountry extends Country {
   const WorldCountry({
     required super.name,
-    required this.namesNative,
-    required this.tld,
-    required this.codeShort, // CCA2.
-    required this.codeNumeric, // CCN3.
-    required this.code, // CCA3.
     required this.altSpellings,
-    required this.continent,
-    required this.languages,
-    required this.translations,
-    required this.latLng,
     required this.area,
-    required this.emoji,
-    required this.maps,
-    required this.population,
     required this.car,
+    required this.code, // CCA3.
+    required this.codeNumeric, // CCN3.
+    required this.codeShort, // CCA2.
+    required this.continent,
+    required this.emoji,
+    required this.idd,
+    required this.languages,
+    required this.latLng,
+    required this.maps,
+    required this.namesNative,
+    required this.population,
     required this.timezones,
+    required this.tld,
+    required this.translations,
     this.capitalInfo,
     this.cioc,
     this.currencies,
@@ -26,7 +27,6 @@ class WorldCountry extends Country {
     this.fifa,
     this.gini,
     this.hasCoatOfArms = true,
-    this.idd,
     this.independent = true,
     this.landlocked = false,
     this.postalCode,
@@ -53,7 +53,7 @@ class WorldCountry extends Country {
   final bool independent;
   final bool unMember;
   final List<FiatCurrency>? currencies;
-  final Idd? idd;
+  final Idd idd;
   final List<String> altSpellings;
   final Continent continent;
   final SubRegion? subregion;
