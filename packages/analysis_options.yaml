@@ -97,6 +97,7 @@ dart_code_metrics:
     - avoid-missing-enum-constant-in-map: true
     - avoid-non-ascii-symbols: true
     - avoid-non-null-assertion: true
+    - avoid-substring: true
     - avoid-throw-in-catch-block: true
     - avoid-unnecessary-conditionals: true
     - avoid-unnecessary-type-assertions: true

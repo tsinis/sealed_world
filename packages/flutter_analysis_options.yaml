@@ -13,6 +13,7 @@ dart_code_metrics:
     - consistent-update-render-object: true
     - prefer-const-border-radius: true
     - prefer-correct-edge-insets-constructor: true
+    - prefer-define-hero-tag: true
     - prefer-extracting-callbacks: true
     - prefer-intl-name: true
     - prefer-single-widget-per-file: true
