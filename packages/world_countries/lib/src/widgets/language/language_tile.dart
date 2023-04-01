@@ -47,7 +47,7 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.visualDensity,
   }) : super(language);
 
-  LanguageTile.defaultFromProperties(
+  LanguageTile.fromProperties(
     ItemProperties<NaturalLanguage> language, {
     Widget? leading,
     Widget? subtitle,

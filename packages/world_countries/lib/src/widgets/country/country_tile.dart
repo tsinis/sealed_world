@@ -47,7 +47,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.visualDensity,
   }) : super(country);
 
-  CountryTile.defaultFromProperties(
+  CountryTile.fromProperties(
     ItemProperties<WorldCountry> country, {
     Widget? leading,
     Widget? subtitle,

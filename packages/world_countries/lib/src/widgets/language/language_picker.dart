@@ -51,7 +51,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
 
   @override
   Widget? defaultBuilder(ItemProperties<NaturalLanguage> itemProperties) =>
-      LanguageTile.defaultFromProperties(itemProperties, onPressed: onSelect);
+      LanguageTile.fromProperties(itemProperties, onPressed: onSelect);
 
   @override
   Iterable<String> defaultSearch(NaturalLanguage item) =>

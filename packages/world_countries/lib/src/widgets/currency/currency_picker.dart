@@ -51,7 +51,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
 
   @override
   Widget? defaultBuilder(ItemProperties<FiatCurrency> itemProperties) =>
-      CurrencyTile.defaultFromProperties(itemProperties, onPressed: onSelect);
+      CurrencyTile.fromProperties(itemProperties, onPressed: onSelect);
 
   @override
   Iterable<String> defaultSearch(FiatCurrency item) =>

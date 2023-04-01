@@ -54,7 +54,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
 
   @override
   Widget? defaultBuilder(ItemProperties<WorldCountry> itemProperties) =>
-      CountryTile.defaultFromProperties(
+      CountryTile.fromProperties(
         itemProperties,
         onPressed: onSelect,
         translation: translation,

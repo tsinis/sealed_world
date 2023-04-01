@@ -47,7 +47,7 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.visualDensity,
   }) : super(currency);
 
-  CurrencyTile.defaultFromProperties(
+  CurrencyTile.fromProperties(
     ItemProperties<FiatCurrency> currency, {
     Widget? leading,
     Widget? subtitle,
