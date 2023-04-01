@@ -6,7 +6,7 @@ class FunctionalPlatform {
   const FunctionalPlatform._();
 
   // ignore: long-parameter-list, Flutter supports 7 platforms.
-  static T? maybeWhen<T>({
+  static T maybeWhen<T>({
     required T Function() orElse,
     T Function()? android,
     T Function()? fuchsia,

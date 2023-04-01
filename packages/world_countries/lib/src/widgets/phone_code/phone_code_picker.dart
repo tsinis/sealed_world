@@ -93,7 +93,7 @@ class PhoneCodePicker extends CountryPicker {
 
   @override
   Widget? defaultBuilder(ItemProperties<WorldCountry> itemProperties) =>
-      CountryTile.defaultFromProperties(
+      CountryTile.fromProperties(
         itemProperties,
         leading: ConstrainedBox(
           constraints: UiConstants.constraints,

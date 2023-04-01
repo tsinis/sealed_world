@@ -3,8 +3,7 @@ import "package:sealed_countries/sealed_countries.dart";
 
 import "../../constants/package_constants.dart";
 import "../../constants/ui_constants.dart";
-import "../../generated/fonts.gen.dart";
-import "../../helpers/functional_platform.dart";
+import "../../models/emoji_family.dart";
 
 // ignore: format-comment, false positive.
 /// Small context about other emoji fonts:
@@ -40,13 +39,8 @@ class EmojiFlag extends Text {
           country.emoji,
           style: _style(
             style,
+            EmojiFamily.twemoji.fontByPlatform,
             package: PackageConstants.name,
-            FunctionalPlatform.maybeWhen(
-              web: () => WorldCountryFonts.twemojiWOFF2,
-              iOS: () => WorldCountryFonts.twemojiWOFF2,
-              macOS: () => WorldCountryFonts.twemojiWOFF2,
-              orElse: () => WorldCountryFonts.twemojiTTF,
-            ),
           ),
         );
 
@@ -70,13 +64,8 @@ class EmojiFlag extends Text {
           country.emoji,
           style: _style(
             style,
+            EmojiFamily.openMoji.fontByPlatform,
             package: PackageConstants.name,
-            FunctionalPlatform.maybeWhen(
-              iOS: () => WorldCountryFonts.openMojiCOLR0,
-              macOS: () => WorldCountryFonts.openMojiCOLR0,
-              windows: () => WorldCountryFonts.openMojiCOLR0,
-              orElse: () => WorldCountryFonts.openMojiCOLR1,
-            ),
           ),
         );
 
@@ -100,13 +89,34 @@ class EmojiFlag extends Text {
           country.emoji,
           style: _style(
             style,
+            EmojiFamily.notoEmoji.fontByPlatform,
             package: PackageConstants.name,
-            FunctionalPlatform.maybeWhen<String?>(
-              android: () => null, // Provides these emojis directly in the OS.
-              iOS: () => WorldCountryFonts.notoEmojiOTSVG,
-              macOS: () => WorldCountryFonts.notoEmojiOTSVG,
-              orElse: () => WorldCountryFonts.notoEmojiCBDT,
-            ),
+          ),
+        );
+
+  EmojiFlag.fromEmojiFamily(
+    WorldCountry country, {
+    EmojiFamily? emojiFamily,
+    TextStyle? style,
+    super.key,
+    super.strutStyle,
+    super.textAlign,
+    super.textDirection,
+    super.locale,
+    super.softWrap,
+    super.overflow,
+    super.textScaleFactor,
+    super.maxLines,
+    super.semanticsLabel,
+    super.textWidthBasis,
+    super.textHeightBehavior,
+    super.selectionColor,
+  }) : super(
+          country.emoji,
+          style: _style(
+            style,
+            emojiFamily?.fontByPlatform,
+            package: emojiFamily?.packageName,
           ),
         );
 

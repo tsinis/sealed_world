@@ -25,7 +25,18 @@ class _MyHomePageState extends State<MyHomePage> {
       CountryPicker(onSelect: print, disabled: [CountryAfg(), CountryAlb()]);
 
   void onPressed() async {
-    final country = await picker.showInDialog(context);
+    final country = await picker
+        .copyWith(
+          itemBuilder: (country) => CountryTile.fromProperties(
+            country,
+            onPressed: print,
+            leading: EmojiFlag.fromEmojiFamily(
+              country.item,
+              emojiFamily: EmojiFamily.openMoji,
+            ),
+          ),
+        )
+        .showInDialog(context);
     if (country == null) return debugPrint('No country selected.');
     debugPrint('Selected country: ${country.name.common}.');
   }
@@ -45,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: CountryPicker(
             chosen: const [CountryAfg(), CountryAla(), CountryDza()],
             disabled: picker.disabled,
-            itemBuilder: (country) => CountryTile.defaultFromProperties(
+            itemBuilder: (country) => CountryTile.fromProperties(
               country,
               onPressed: print,
               leading: EmojiFlag.custom(

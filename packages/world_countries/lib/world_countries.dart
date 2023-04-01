@@ -11,6 +11,7 @@ export "src/helpers/functional_platform.dart";
 export "src/interfaces/search_delegate_interface.dart";
 export "src/interfaces/searchable_interface.dart";
 export "src/mixins/compare_search_mixin.dart";
+export "src/models/emoji_family.dart";
 export "src/widgets/adaptive/adaptive_search_text_field.dart";
 export "src/widgets/base_widgets/stateful_searchable.dart";
 export "src/widgets/buttons/clear_button.dart";
