@@ -111,21 +111,21 @@ coverage_badge.svg
 nohup.out
 
 # Platfroms except Flutter examples
-!packages/*_flutter/example/pubspec.lock
+!packages/*/example/pubspec.lock
 macos/
-!packages/*_flutter/example/macos
+!packages/*/example/macos
 windows/
-!packages/*_flutter/example/windows
+!packages/*/example/windows
 linux/
-!packages/*_flutter/example/linux
+!packages/*/example/linux
 web/
-!packages/*_flutter/example/web
+!packages/*/example/web
 ios/
-!packages/*_flutter/example/ios
+!packages/*/example/ios
 android/
-!packages/*_flutter/example/android
+!packages/*/example/android
 .metadata
-!packages/*_flutter/example/.metadata
+!packages/*/example/.metadata
 
 # Other
 json/
