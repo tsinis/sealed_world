@@ -1,12 +1,8 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
-import "package:sealed_countries/sealed_countries.dart";
 
-import "../../constants/ui_constants.dart";
+import "../../../world_countries.dart";
 import "../../models/item_properties.dart";
-import "../country/country_picker.dart";
-import "../country/country_tile.dart";
-import "../country/emoji_flag.dart";
 
 class PhoneCodePicker extends CountryPicker {
   const PhoneCodePicker({
@@ -103,15 +99,16 @@ class PhoneCodePicker extends CountryPicker {
               EmojiFlag.twemoji(itemProperties.item),
               Padding(
                 padding: const EdgeInsets.only(right: UiConstants.point / 2),
-                child: Text(
-                  itemProperties.item.idd.phoneCode(),
-                  style: const TextStyle(fontSize: 12),
+                child: Builder(
+                  builder: (context) => Text(
+                    itemProperties.item.idd.phoneCode(),
+                    style: context.theme.textTheme.labelSmall,
+                  ),
                 ),
               ),
             ],
           ),
         ),
-        minLeadingWidth: UiConstants.constraints.minWidth,
         onPressed: onSelect,
         translation: translation,
       );

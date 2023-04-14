@@ -18,7 +18,6 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.horizontalTitleGap,
     super.hoverColor,
     super.iconColor,
-    super.index,
     super.isChosen,
     super.isDisabled,
     super.isThreeLine,
@@ -86,7 +85,6 @@ class CountryTile extends ListItemTile<WorldCountry> {
     NaturalLanguage? translation,
   }) : super(
           country.item,
-          index: country.index,
           isChosen: country.isChosen,
           isDisabled: country.isDisabled,
           title: title ?? Text(country.item.namesNative.first.common),
@@ -94,8 +92,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
           subtitle: subtitle ??
               Text(
                 country.item.nameTranslated(translation)?.common ??
-                    country.item.namesCommonNative(skipFirst: true) ??
-                    country.item.nameEnglish.common,
+                    country.item.namesCommonNative(skipFirst: true),
                 overflow: TextOverflow.ellipsis,
               ),
         );

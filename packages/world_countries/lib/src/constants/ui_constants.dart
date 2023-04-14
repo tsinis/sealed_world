@@ -12,7 +12,8 @@ class UiConstants {
   static const switchInCurve = Curves.easeIn;
   static const switchOutCurve = Curves.easeOut;
   static const textInputAction = TextInputAction.search;
-  static const constraints = BoxConstraints(minWidth: UiConstants.point * 6);
+  static const minWidth = UiConstants.point * 6;
+  static const constraints = BoxConstraints(minWidth: minWidth);
   static const shape = RoundedRectangleBorder(
     borderRadius: BorderRadius.vertical(top: radius),
   );

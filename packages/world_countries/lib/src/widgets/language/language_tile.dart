@@ -18,7 +18,6 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.horizontalTitleGap,
     super.hoverColor,
     super.iconColor,
-    super.index,
     super.isChosen,
     super.isDisabled,
     super.isThreeLine,
@@ -52,7 +51,7 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     Widget? leading,
     Widget? subtitle,
     Widget? title,
-    double? minLeadingWidth,
+    double? minLeadingWidth = UiConstants.minWidth,
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -85,20 +84,15 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.visualDensity,
   }) : super(
           language.item,
-          index: language.index,
           isChosen: language.isChosen,
           isDisabled: language.isDisabled,
           title: title ?? Text(language.item.namesNative.first),
-          minLeadingWidth: minLeadingWidth ?? UiConstants.constraints.minWidth,
+          minLeadingWidth: minLeadingWidth,
           leading: leading ??
               ConstrainedBox(
-                constraints: UiConstants.constraints.copyWith(
-                  minWidth: minLeadingWidth ?? UiConstants.constraints.minWidth,
-                ),
-                child: Text(
-                  language.item.code,
-                  textAlign: TextAlign.center,
-                ),
+                constraints:
+                    UiConstants.constraints.copyWith(minWidth: minLeadingWidth),
+                child: Text(language.item.code, textAlign: TextAlign.center),
               ),
           subtitle: subtitle ??
               Text(
