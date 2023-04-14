@@ -2,15 +2,16 @@
 import "../../../../sealed_countries.dart";
 
 extension NameExtension on WorldCountry {
-  String? namesCommonNative({String separator = "/", bool skipFirst = false}) {
+  String namesCommonNative({String separator = "/", bool skipFirst = false}) {
     final names = namesNative.map((cn) => cn.common).toSet();
-    if (skipFirst) names.remove(names.first);
+    if (skipFirst && names.length > 1) names.remove(names.first);
 
-    return names.isEmpty ? null : names.join(separator);
+    return names.join(separator);
   }
 
-  CountryName? nameTranslated([NaturalLanguage? language]) {
+  CountryName? nameTranslated([NaturalLanguage? language = const LangEng()]) {
     if (language == null) return null;
+    if (language == const LangEng()) return name;
     for (final countryName in translations) {
       if (countryName.language == language) return countryName;
     }

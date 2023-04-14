@@ -11,6 +11,7 @@ void main() => group("NameExtension", () {
         LangCym,
         LangDeu,
         LangEst,
+        LangEng,
         LangFas,
         LangFin,
         LangFra,
@@ -49,8 +50,11 @@ void main() => group("NameExtension", () {
         });
 
         test(
-          "with $Null input",
-          () => expect(WorldCountry.list.first.nameTranslated(), isNull),
+          "with $Null input should return english name",
+          () => expect(
+            WorldCountry.list.first.nameTranslated(),
+            WorldCountry.list.first.nameEnglish,
+          ),
         );
       });
 
@@ -78,7 +82,7 @@ void main() => group("NameExtension", () {
             "with single name",
             () => expect(
               WorldCountry.list.elementAt(1).namesCommonNative(skipFirst: true),
-              null,
+              WorldCountry.list.elementAt(1).namesNative.first.common,
             ),
           );
         });
