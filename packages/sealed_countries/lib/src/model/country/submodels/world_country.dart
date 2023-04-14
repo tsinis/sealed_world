@@ -21,7 +21,7 @@ class WorldCountry extends Country {
     required this.tld,
     required this.translations,
     this.capitalInfo,
-    this.cioc,
+    this.cioc, // International Olympic Committee
     this.currencies,
     this.demonyms, // Could be required.
     this.fifa,
