@@ -69,7 +69,7 @@ void main() => group("$WorldCountry", () {
             expect(element.timezones, isNotEmpty);
             expect(element.car.isRightSide, isA<bool>());
             expect(element.population, isNonNegative);
-            expect(element.area, isNonNegative);
+            expect(element.areaMetric, isNonNegative);
             expect(element.maps.googleMaps, isNotEmpty);
             expect(element.maps.openStreetMaps, isNotEmpty);
             expect(element.emoji, isNotEmpty);
@@ -122,24 +122,6 @@ void main() => group("$WorldCountry", () {
       test("toString", () {
         expect(value.toString(short: false), contains(value.code));
         expect(value.toString().contains(value.codeShort), isFalse);
-      });
-
-      group("borders", () {
-        test(
-          "with null bordersCodes",
-          () => expect(
-            WorldCountry.list.firstWhere((c) => c.borders == null).borders,
-            isNull,
-          ),
-        );
-
-        test(
-          "with non-null bordersCodes",
-          () => expect(
-            WorldCountry.list.firstWhere((c) => c.borders != null).borders,
-            isNotEmpty,
-          ),
-        );
       });
 
       group("fromCodeShort", () {

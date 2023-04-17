@@ -1,7 +1,5 @@
 // ignore_for_file: arguments-ordering
 
-import "dart:collection";
-
 import "package:flutter/widgets.dart";
 
 import "../../constants/ui_constants.dart";
@@ -46,7 +44,7 @@ class IndexedListViewBuilder<T extends Object>
   });
 
   Iterable<T> get _sortedItems => sort != null
-      ? UnmodifiableListView(items.toList(growable: false)..sort(sort))
+      ? List.unmodifiable(items.toList(growable: false)..sort(sort))
       : items;
 
   @override

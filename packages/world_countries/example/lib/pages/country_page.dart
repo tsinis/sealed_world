@@ -1,3 +1,4 @@
+// ignore_for_file: avoid-non-ascii-symbols
 import "dart:async" show unawaited;
 
 import "package:flutter/material.dart";
@@ -88,6 +89,7 @@ class _CountryPageState extends State<CountryPage> {
                     ),
                     Expanded(
                       child: ListView(
+                        physics: const ClampingScrollPhysics(),
                         children: <DescriptionTile>[
                           DescriptionTile(
                             country.namesCommonNative(),
@@ -126,7 +128,7 @@ class _CountryPageState extends State<CountryPage> {
                           ),
                           DescriptionTile(
                             country.independent ? "Yes" : "No",
-                            icon: Icons.groups_2_outlined,
+                            icon: Icons.handshake_outlined,
                             description: "Independent",
                           ),
                           DescriptionTile(
@@ -150,6 +152,11 @@ class _CountryPageState extends State<CountryPage> {
                             description: "Alternate Spellings",
                           ),
                           DescriptionTile(
+                            country.capitalInfo?.capital.join("/"),
+                            icon: Icons.home_work_outlined,
+                            description: "Capital",
+                          ),
+                          DescriptionTile(
                             country.continent.name,
                             icon: Icons.public_outlined,
                             description: "Continent",
@@ -165,14 +172,34 @@ class _CountryPageState extends State<CountryPage> {
                             description: "Official Language(s)",
                           ),
                           DescriptionTile(
-                            country.latLng.join(", "),
-                            icon: Icons.translate_outlined,
-                            description: "latLng",
+                            """Latitude: ${country.latitudeLongitude?.latitude.toStringAsFixed(2)}, Longitude: ${country.latitudeLongitude?.longitude.toStringAsFixed(2)}""",
+                            icon: Icons.pin_drop_outlined,
+                            description: "Geographic Coordinates",
                           ),
                           DescriptionTile(
-                            country.capitalInfo.toString(),
-                            icon: Icons.translate_outlined,
-                            description: "capitalInfo",
+                            country.landlocked ? "Yes" : "No",
+                            icon: Icons.vpn_lock_outlined,
+                            description: "Landlocked Country",
+                          ),
+                          DescriptionTile(
+                            country.bordersCodes?.join(", ").toUpperCase(),
+                            icon: Icons.border_style_outlined,
+                            description: "Borders",
+                          ),
+                          DescriptionTile(
+                            "${country.areaMetric} km²",
+                            icon: Icons.square_foot_outlined,
+                            description: "Area",
+                          ),
+                          DescriptionTile(
+                            country.population.toString(),
+                            icon: Icons.groups_2_outlined,
+                            description: "Population",
+                          ),
+                          DescriptionTile(
+                            """♀: ${country.demonyms.first.f}, ♂: ${country.demonyms.first.m}""",
+                            icon: Icons.face_outlined,
+                            description: "Demonyms",
                           ),
                         ],
                       ),
