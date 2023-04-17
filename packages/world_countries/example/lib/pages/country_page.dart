@@ -120,6 +120,11 @@ class _CountryPageState extends State<CountryPage> {
                             description: "International Olympic Committee",
                           ),
                           DescriptionTile(
+                            country.fifa,
+                            icon: Icons.sports_soccer_outlined,
+                            description: "FIFA Country Code",
+                          ),
+                          DescriptionTile(
                             country.independent ? "Yes" : "No",
                             icon: Icons.groups_2_outlined,
                             description: "Independent",
@@ -138,6 +143,36 @@ class _CountryPageState extends State<CountryPage> {
                             country.idd.phoneCode(),
                             icon: Icons.call_end_outlined,
                             description: "Phone Code",
+                          ),
+                          DescriptionTile(
+                            country.altSpellings.join(", "),
+                            icon: Icons.spellcheck,
+                            description: "Alternate Spellings",
+                          ),
+                          DescriptionTile(
+                            country.continent.name,
+                            icon: Icons.public_outlined,
+                            description: "Continent",
+                          ),
+                          DescriptionTile(
+                            country.subregion?.name,
+                            icon: Icons.travel_explore_outlined,
+                            description: "Subregion",
+                          ),
+                          DescriptionTile(
+                            country.languages.map((lng) => lng.name).join(", "),
+                            icon: Icons.translate_outlined,
+                            description: "Official Language(s)",
+                          ),
+                          DescriptionTile(
+                            country.latLng.join(", "),
+                            icon: Icons.translate_outlined,
+                            description: "latLng",
+                          ),
+                          DescriptionTile(
+                            country.capitalInfo.toString(),
+                            icon: Icons.translate_outlined,
+                            description: "capitalInfo",
                           ),
                         ],
                       ),

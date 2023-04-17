@@ -1,4 +1,5 @@
 import "package:sealed_countries/src/model/country/country.dart";
+import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 // ignore: long-method, it's a test.
@@ -34,11 +35,8 @@ void main() => group("$WorldCountry", () {
             } else {
               expect(element.gini, isNull);
             }
-            if (element.demonyms != null) {
-              expect(element.demonyms, isNotEmpty);
-            } else {
-              expect(element.demonyms, isNull);
-            }
+            expect(element.demonyms, isNotEmpty);
+            expect(element.demonyms.first.language, const LangEng());
             if (element.bordersCodes != null) {
               expect(element.bordersCodes, isNotEmpty);
             } else {

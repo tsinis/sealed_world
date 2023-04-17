@@ -20,10 +20,10 @@ class WorldCountry extends Country {
     required this.timezones,
     required this.tld,
     required this.translations,
+    required this.demonyms,
+    required this.currencies,
     this.capitalInfo,
-    this.cioc, // International Olympic Committee
-    this.currencies,
-    this.demonyms, // Could be required.
+    this.cioc, // International Olympic Committee.
     this.fifa,
     this.gini,
     this.hasCoatOfArms = true,
@@ -63,7 +63,7 @@ class WorldCountry extends Country {
   final bool landlocked;
   final List<String>? bordersCodes;
   final double area;
-  final List<Demonyms>? demonyms;
+  final List<Demonyms> demonyms;
   final String emoji;
   final Maps maps;
   final int population;
