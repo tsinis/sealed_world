@@ -201,6 +201,13 @@ class _CountryPageState extends State<CountryPage> {
                             icon: Icons.face_outlined,
                             description: "Demonyms",
                           ),
+                          DescriptionTile(
+                            country.gini != null
+                                ? """${country.gini?.value} (${country.gini?.year})"""
+                                : null,
+                            icon: Icons.layers_outlined,
+                            description: "Gini Coefficient",
+                          ),
                         ],
                       ),
                     ),
