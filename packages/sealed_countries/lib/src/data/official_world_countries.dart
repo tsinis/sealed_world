@@ -595,7 +595,7 @@ class CountryMrt extends WorldCountry {
           gini: const Gini(year: 2014, value: 32.6),
           fifa: "MTN",
           car: const Car(signs: ["RIM"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Nouakchott"],
             latLng: [18.07, -15.97],
@@ -1754,7 +1754,7 @@ class CountryGbr extends WorldCountry {
             "UTC-04:00",
             "UTC-03:00",
             "UTC-02:00",
-            "UTC",
+            "UTC+00:00",
             "UTC+01:00",
             "UTC+02:00",
             "UTC+06:00",
@@ -1955,7 +1955,7 @@ class CountryIrl extends WorldCountry {
           gini: const Gini(year: 2017, value: 31.4),
           fifa: "IRL",
           car: const Car(signs: ["IRL"], isRightSide: false),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Dublin"],
             latLng: [53.32, -6.23],
@@ -5611,7 +5611,7 @@ class CountryLbr extends WorldCountry {
           gini: const Gini(year: 2016, value: 35.3),
           fifa: "LBR",
           car: const Car(signs: ["LB"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Monrovia"], latLng: [6.3, -10.8]),
           postalCode:
@@ -7534,7 +7534,7 @@ class CountrySle extends WorldCountry {
           gini: const Gini(year: 2018, value: 35.7),
           fifa: "SLE",
           car: const Car(signs: ["WAL"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Freetown"],
             latLng: [8.48, -13.23],
@@ -11114,7 +11114,7 @@ class CountryBfa extends WorldCountry {
           gini: const Gini(year: 2014, value: 35.3),
           fifa: "BFA",
           car: const Car(signs: ["BF"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Ouagadougou"],
             latLng: [12.37, -1.52],
@@ -12845,7 +12845,7 @@ class CountryIsl extends WorldCountry {
           gini: const Gini(year: 2017, value: 26.1),
           fifa: "ISL",
           car: const Car(signs: ["IS"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Reykjavik"],
             latLng: [64.15, -21.95],
@@ -17782,7 +17782,7 @@ class CountryEsp extends WorldCountry {
           gini: const Gini(year: 2018, value: 34.7),
           fifa: "ESP",
           car: const Car(signs: ["E"]),
-          timezones: const ["UTC", "UTC+01:00"],
+          timezones: const ["UTC+00:00", "UTC+01:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Madrid"], latLng: [40.4, -3.68]),
           postalCode: const PostalCode(),
@@ -17966,7 +17966,7 @@ class CountryTgo extends WorldCountry {
           gini: const Gini(year: 2015, value: 43.1),
           fifa: "TOG",
           car: const Car(signs: ["TG"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Lomé"], latLng: [6.14, 1.21]),
         );
@@ -23272,7 +23272,7 @@ class CountryGnb extends WorldCountry {
           gini: const Gini(year: 2010, value: 50.7),
           fifa: "GNB",
           car: const Car(signs: ["RGB"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Bissau"], latLng: [11.85, -15.58]),
           postalCode:
@@ -28185,7 +28185,7 @@ class CountryCiv extends WorldCountry {
           gini: const Gini(year: 2015, value: 41.5),
           fifa: "CIV",
           car: const Car(signs: ["CI"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Yamoussoukro"],
             latLng: [6.82, -5.27],
@@ -31960,7 +31960,7 @@ class CountryGin extends WorldCountry {
           gini: const Gini(year: 2012, value: 33.7),
           fifa: "GUI",
           car: const Car(signs: ["RG"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Conakry"], latLng: [9.5, -13.7]),
         );
@@ -32514,7 +32514,7 @@ class CountryGha extends WorldCountry {
           gini: const Gini(year: 2016, value: 43.5),
           fifa: "GHA",
           car: const Car(signs: ["GH"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Accra"], latLng: [5.55, -0.22]),
         );
@@ -34814,7 +34814,7 @@ class CountryPrt extends WorldCountry {
           gini: const Gini(year: 2018, value: 33.5),
           fifa: "POR",
           car: const Car(signs: ["P"]),
-          timezones: const ["UTC-01:00", "UTC"],
+          timezones: const ["UTC-01:00", "UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Lisbon"], latLng: [38.72, -9.13]),
           postalCode: const PostalCode(
@@ -38453,7 +38453,7 @@ class CountryMar extends WorldCountry {
           gini: const Gini(year: 2013, value: 39.5),
           fifa: "MAR",
           car: const Car(signs: ["MA"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Rabat"], latLng: [34.02, -6.82]),
           postalCode: const PostalCode(),
@@ -39607,7 +39607,7 @@ class CountrySen extends WorldCountry {
           gini: const Gini(year: 2011, value: 40.3),
           fifa: "SEN",
           car: const Car(signs: ["SN"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Dakar"], latLng: [14.73, -17.63]),
           postalCode: const PostalCode(),
@@ -42515,7 +42515,7 @@ class CountryStp extends WorldCountry {
           gini: const Gini(year: 2017, value: 56.3),
           fifa: "STP",
           car: const Car(signs: ["STP"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["São Tomé"], latLng: [0.34, 6.73]),
         );
@@ -43638,7 +43638,7 @@ class CountryDnk extends WorldCountry {
             "UTC-04:00",
             "UTC-03:00",
             "UTC-01:00",
-            "UTC",
+            "UTC+00:00",
             "UTC+01:00",
           ],
           capitalInfo: const CapitalInfo(
@@ -44972,7 +44972,7 @@ class CountryMli extends WorldCountry {
           gini: const Gini(year: 2009, value: 33),
           fifa: "MLI",
           car: const Car(signs: ["RMM"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Bamako"], latLng: [12.65, -8]),
         );

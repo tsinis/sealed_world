@@ -25,7 +25,7 @@ class WorldCountry extends Country {
     this.capitalInfo,
     this.cioc, // International Olympic Committee.
     this.fifa,
-    this.gini,
+    this.gini, // Gini Coefficient.
     this.hasCoatOfArms = true,
     this.independent = true,
     this.landlocked = false,

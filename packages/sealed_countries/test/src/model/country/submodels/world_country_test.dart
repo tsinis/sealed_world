@@ -1,3 +1,4 @@
+import "package:sealed_countries/src/helpers/extensions/world_country/date_time_extension.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
@@ -19,16 +20,11 @@ void main() => group("$WorldCountry", () {
             } else {
               expect(element.postalCode, isNull);
             }
-            if (element.capitalInfo != null) {
-              expect(element.capitalInfo?.capital, isNotEmpty);
-            } else {
-              expect(element.capitalInfo, isNull);
-            }
-            if (element.fifa != null) {
-              expect(element.fifa, isNotEmpty);
-            } else {
-              expect(element.fifa, isNull);
-            }
+            expect(
+              element.capitalInfo?.capital,
+              element.capitalInfo != null ? isNotEmpty : isNull,
+            );
+            expect(element.fifa, element.fifa != null ? isNotEmpty : isNull);
             if (element.gini != null) {
               expect(element.gini?.year, isPositive);
               expect(element.gini?.value, isPositive);
@@ -37,27 +33,26 @@ void main() => group("$WorldCountry", () {
             }
             expect(element.demonyms, isNotEmpty);
             expect(element.demonyms.first.language, const LangEng());
-            if (element.bordersCodes != null) {
-              expect(element.bordersCodes, isNotEmpty);
-            } else {
-              expect(element.bordersCodes, isNull);
-            }
-            if (element.subregion != null) {
-              expect(element.subregion?.name, isNotEmpty);
-            } else {
-              expect(element.subregion, isNull);
-            }
+            expect(
+              element.bordersCodes,
+              element.bordersCodes != null ? isNotEmpty : isNull,
+            );
+            expect(
+              element.subregion?.name,
+              element.subregion != null ? isNotEmpty : isNull,
+            );
             expect(element.idd.root, isPositive);
             expect(element.idd.suffixes, isNotEmpty);
-            if (element.currencies != null) {
-              expect(element.currencies, isNotEmpty);
-            } else {
-              expect(element.currencies, isNull);
-            }
-            if (element.cioc != null) {
-              expect(element.cioc, isNotEmpty);
-            } else {
-              expect(element.cioc, isNull);
+            expect(
+              element.currencies,
+              element.currencies != null ? isNotEmpty : isNull,
+            );
+            expect(element.cioc, element.cioc != null ? isNotEmpty : isNull);
+            for (final zone in element.timezones) {
+              expect(zone.length, 9);
+              expect(zone.startsWith(DateTimeExtension.utcString), isTrue);
+              // ignore: avoid-substring, no emojis here.
+              expect(zone.substring(6, 7), ":");
             }
             expect(element.startOfWeek.name, isNotEmpty);
             expect(element.startOfWeek, isA<Enum>());

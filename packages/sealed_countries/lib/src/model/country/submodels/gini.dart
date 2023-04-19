@@ -7,5 +7,5 @@ class Gini {
   DateTime get dateTime => DateTime(year);
 
   @override
-  String toString() => "Gini(year: $year, value: $value)";
+  String toString() => "Gini(value: $value, year: $year)";
 }

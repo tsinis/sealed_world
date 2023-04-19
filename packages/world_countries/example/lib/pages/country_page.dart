@@ -208,6 +208,16 @@ class _CountryPageState extends State<CountryPage> {
                             icon: Icons.layers_outlined,
                             description: "Gini Coefficient",
                           ),
+                          DescriptionTile(
+                            country.car.signs.join(", "),
+                            icon: Icons.local_shipping_outlined,
+                            description: "Vehicle Signs",
+                          ),
+                          DescriptionTile(
+                            country.car.isRightSide ? "Yes" : "No",
+                            icon: Icons.remove_road_outlined,
+                            description: "Right-hand Traffic",
+                          ),
                         ],
                       ),
                     ),
