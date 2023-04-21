@@ -11,14 +11,14 @@ class WorldCountry extends Country {
     required this.codeShort, // CCA2.
     required this.continent,
     required this.emoji,
-    required this.idd,
+    required this.idd, // International Direct Dialing.
     required this.languages,
     required this.latLng,
     required this.maps,
     required this.namesNative,
     required this.population,
     required this.timezones,
-    required this.tld,
+    required this.tld, // Top Level Domain.
     required this.translations,
     required this.demonyms,
     required this.currencies,
