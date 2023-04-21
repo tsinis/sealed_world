@@ -21,6 +21,7 @@ import "../../models/emoji_family.dart";
 class EmojiFlag extends Text {
   EmojiFlag.twemoji(
     WorldCountry country, {
+    double? size,
     TextStyle? style,
     super.key,
     super.strutStyle,
@@ -41,11 +42,13 @@ class EmojiFlag extends Text {
             style,
             EmojiFamily.twemoji.fontByPlatform,
             package: PackageConstants.name,
+            size: size,
           ),
         );
 
   EmojiFlag.openMoji(
     WorldCountry country, {
+    double? size,
     TextStyle? style,
     super.key,
     super.strutStyle,
@@ -66,11 +69,13 @@ class EmojiFlag extends Text {
             style,
             EmojiFamily.openMoji.fontByPlatform,
             package: PackageConstants.name,
+            size: size,
           ),
         );
 
   EmojiFlag.notoEmoji(
     WorldCountry country, {
+    double? size,
     TextStyle? style,
     super.key,
     super.strutStyle,
@@ -91,12 +96,14 @@ class EmojiFlag extends Text {
             style,
             EmojiFamily.notoEmoji.fontByPlatform,
             package: PackageConstants.name,
+            size: size,
           ),
         );
 
   EmojiFlag.fromEmojiFamily(
     WorldCountry country, {
     EmojiFamily? emojiFamily,
+    double? size,
     TextStyle? style,
     super.key,
     super.strutStyle,
@@ -117,11 +124,13 @@ class EmojiFlag extends Text {
             style,
             emojiFamily?.fontByPlatform,
             package: emojiFamily?.packageName,
+            size: size,
           ),
         );
 
   EmojiFlag.platformDefault(
     WorldCountry country, {
+    double? size,
     TextStyle? style,
     super.key,
     super.strutStyle,
@@ -136,10 +145,11 @@ class EmojiFlag extends Text {
     super.textWidthBasis,
     super.textHeightBehavior,
     super.selectionColor,
-  }) : super(country.emoji, style: _style(style, null));
+  }) : super(country.emoji, style: _style(style, null, size: size));
 
   EmojiFlag.custom(
     WorldCountry country, {
+    double? size,
     TextStyle? style,
     String? package,
     super.key,
@@ -157,11 +167,17 @@ class EmojiFlag extends Text {
     super.selectionColor,
   }) : super(
           country.emoji,
-          style: _style(style, style?.fontFamily, package: package),
+          style: _style(style, style?.fontFamily, package: package, size: size),
         );
 
-  static TextStyle _style(TextStyle? style, String? font, {String? package}) =>
+  static TextStyle _style(
+    TextStyle? style,
+    String? font, {
+    String? package,
+    double? size,
+  }) =>
       (style ?? const TextStyle()).copyWith(
+        fontSize: size ?? style?.fontSize,
         color: UiConstants.color,
         fontFamily: font,
         package: package,

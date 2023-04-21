@@ -92,12 +92,17 @@ class _CountryPageState extends State<CountryPage> {
                         physics: const ClampingScrollPhysics(),
                         children: <DescriptionTile>[
                           DescriptionTile(
-                            country.namesCommonNative(),
-                            icon: Icons.flag_outlined,
-                            description: "Native name(s)",
+                            country.namesOfficialNative(separator: ",\n"),
+                            icon: Icons.flag_circle_outlined,
+                            description: "Native Official Name(s)",
                           ),
                           DescriptionTile(
-                            country.tld.join("/"),
+                            country.namesCommonNative(separator: ",\n"),
+                            icon: Icons.flag_outlined,
+                            description: "Native Common Name(s)",
+                          ),
+                          DescriptionTile.fromIterable(
+                            country.tld,
                             icon: Icons.dns_outlined,
                             description: "Top level domain(s)",
                           ),
@@ -126,18 +131,18 @@ class _CountryPageState extends State<CountryPage> {
                             icon: Icons.sports_soccer_outlined,
                             description: "FIFA Country Code",
                           ),
-                          DescriptionTile(
-                            country.independent ? "Yes" : "No",
+                          DescriptionTile.fromBool(
+                            isTrue: country.independent,
                             icon: Icons.handshake_outlined,
                             description: "Independent",
                           ),
-                          DescriptionTile(
-                            country.unMember ? "Yes" : "No",
+                          DescriptionTile.fromBool(
+                            isTrue: country.unMember,
                             icon: Icons.language_outlined,
                             description: "United Nations Member",
                           ),
-                          DescriptionTile(
-                            country.currencies?.map((c) => c.code).join(", "),
+                          DescriptionTile.fromIterable(
+                            country.currencies?.map((cur) => cur.code),
                             icon: Icons.payment_outlined,
                             description: "Currencies",
                           ),
@@ -146,13 +151,8 @@ class _CountryPageState extends State<CountryPage> {
                             icon: Icons.call_end_outlined,
                             description: "Phone Code",
                           ),
-                          DescriptionTile(
-                            country.altSpellings.join(", "),
-                            icon: Icons.spellcheck,
-                            description: "Alternate Spellings",
-                          ),
-                          DescriptionTile(
-                            country.capitalInfo?.capital.join("/"),
+                          DescriptionTile.fromIterable(
+                            country.capitalInfo?.capital,
                             icon: Icons.home_work_outlined,
                             description: "Capital",
                           ),
@@ -166,8 +166,8 @@ class _CountryPageState extends State<CountryPage> {
                             icon: Icons.travel_explore_outlined,
                             description: "Subregion",
                           ),
-                          DescriptionTile(
-                            country.languages.map((lng) => lng.name).join(", "),
+                          DescriptionTile.fromIterable(
+                            country.languages.map((lng) => lng.name),
                             icon: Icons.translate_outlined,
                             description: "Official Language(s)",
                           ),
@@ -176,13 +176,13 @@ class _CountryPageState extends State<CountryPage> {
                             icon: Icons.pin_drop_outlined,
                             description: "Geographic Coordinates",
                           ),
-                          DescriptionTile(
-                            country.landlocked ? "Yes" : "No",
+                          DescriptionTile.fromBool(
+                            isTrue: country.landlocked,
                             icon: Icons.vpn_lock_outlined,
                             description: "Landlocked Country",
                           ),
-                          DescriptionTile(
-                            country.bordersCodes?.join(", ").toUpperCase(),
+                          DescriptionTile.fromIterable(
+                            country.bordersCodes?.map((c) => c.toUpperCase()),
                             icon: Icons.border_style_outlined,
                             description: "Borders",
                           ),
@@ -208,16 +208,88 @@ class _CountryPageState extends State<CountryPage> {
                             icon: Icons.layers_outlined,
                             description: "Gini Coefficient",
                           ),
-                          DescriptionTile(
-                            country.car.signs.join(", "),
-                            icon: Icons.local_shipping_outlined,
+                          DescriptionTile.fromIterable(
+                            country.car.signs,
+                            icon: Icons.directions_car_outlined,
                             description: "Vehicle Signs",
                           ),
-                          DescriptionTile(
-                            country.car.isRightSide ? "Yes" : "No",
+                          DescriptionTile.fromBool(
+                            isTrue: country.car.isRightSide,
                             icon: Icons.remove_road_outlined,
                             description: "Right-hand Traffic",
                           ),
+                          DescriptionTile(
+                            "Count: ${country.timezones.length}",
+                            icon: Icons.schedule_outlined,
+                            description: "Timezones",
+                          ),
+                          DescriptionTile(
+                            country.startOfWeek.label,
+                            icon: Icons.today_outlined,
+                            description: "Start of the Week",
+                          ),
+                          DescriptionTile.fromBool(
+                            isTrue: country.hasCoatOfArms,
+                            icon: Icons.security_outlined,
+                            description: "Has Coat Of Arms",
+                          ),
+                          DescriptionTile(
+                            country.translations.first.common,
+                            icon: Icons.today_outlined,
+                            description: "Start of the Week",
+                          ),
+                          DescriptionTile.raw(
+                            "Device Default Emoji",
+                            leading:
+                                EmojiFlag.platformDefault(country, size: 24),
+                            description: "Vector Colored Flag",
+                          ),
+                          DescriptionTile.raw(
+                            "Twemoji",
+                            leading: EmojiFlag.fromEmojiFamily(
+                              country,
+                              emojiFamily: EmojiFamily.twemoji,
+                              size: 21,
+                            ),
+                            description: "Vector Colored Flag",
+                          ),
+                          DescriptionTile.raw(
+                            "Noto Emoji",
+                            leading: EmojiFlag.fromEmojiFamily(
+                              country,
+                              emojiFamily: EmojiFamily.notoEmoji,
+                              size: 19,
+                            ),
+                            description: "Vector Colored Flag",
+                          ),
+                          DescriptionTile.raw(
+                            "Open Moji",
+                            leading: EmojiFlag.fromEmojiFamily(
+                              country,
+                              emojiFamily: EmojiFamily.openMoji,
+                              size: 19,
+                            ),
+                            description: "Vector Colored Flag",
+                          ),
+                          DescriptionTile.fromIterable(
+                            country.altSpellings,
+                            icon: Icons.spellcheck,
+                            description: "Alternate Spellings",
+                          ),
+                          for (final translation in country.translations) ...[
+                            DescriptionTile.raw(
+                              translation.common,
+                              leading: Text(translation.language.codeShort),
+                              description:
+                                  """Official ${translation.language.name} Name""",
+                            ),
+                            DescriptionTile.raw(
+                              translation.common,
+                              leading: Text(translation.language.codeShort),
+                              description:
+                                  """Common ${translation.language.name} Name""",
+                            ),
+                          ],
                         ],
                       ),
                     ),

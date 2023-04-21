@@ -2,15 +2,40 @@ import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
 class DescriptionTile extends StatelessWidget {
-  const DescriptionTile(
+  DescriptionTile(
     this._title, {
-    required this.icon,
+    required IconData icon,
     required this.description,
     super.key,
-  });
+  }) : _leading = Icon(icon, color: leadingColor);
+
+  DescriptionTile.fromBool({
+    required bool isTrue,
+    required IconData icon,
+    required this.description,
+    super.key,
+  })  : _title = isTrue ? "Yes" : "No",
+        _leading = Icon(icon, color: leadingColor);
+
+  DescriptionTile.fromIterable(
+    Iterable<Object>? iterable, {
+    required IconData icon,
+    required this.description,
+    super.key,
+  })  : _title = iterable?.join(", "),
+        _leading = Icon(icon, color: leadingColor);
+
+  const DescriptionTile.raw(
+    this._title, {
+    required this.description,
+    Widget? leading,
+    super.key,
+  }) : _leading = leading;
+
+  static const leadingColor = Color.fromARGB(70, 158, 158, 158);
 
   final String? _title;
-  final IconData icon;
+  final Widget? _leading;
   final String description;
 
   @override
@@ -20,15 +45,18 @@ class DescriptionTile extends StatelessWidget {
           children: [
             const Divider(height: 1, thickness: 1),
             ListTile(
-              leading:
-                  Icon(icon, color: const Color.fromARGB(70, 158, 158, 158)),
+              leading: _leading,
               title: SelectableText(title),
               subtitle: SelectableText(
                 description,
                 style: context.theme.textTheme.labelSmall
-                    ?.copyWith(fontWeight: FontWeight.w200),
+                    ?.copyWith(fontWeight: FontWeight.w300),
               ),
               dense: true,
+              leadingAndTrailingTextStyle: const TextStyle(
+                color: leadingColor,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
