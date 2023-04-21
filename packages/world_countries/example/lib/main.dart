@@ -3,4 +3,4 @@ import "package:world_countries/world_countries.dart";
 
 import "my_app.dart";
 
-void main() => runApp(const MyApp(country: CountryKaz()));
+void main() => runApp(const MyApp(country: CountryMkd()));

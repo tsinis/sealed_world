@@ -233,44 +233,21 @@ class _CountryPageState extends State<CountryPage> {
                             icon: Icons.security_outlined,
                             description: "Has Coat Of Arms",
                           ),
-                          DescriptionTile(
-                            country.translations.first.common,
-                            icon: Icons.today_outlined,
-                            description: "Start of the Week",
-                          ),
-                          DescriptionTile.raw(
-                            "Device Default Emoji",
-                            leading:
-                                EmojiFlag.platformDefault(country, size: 24),
-                            description: "Vector Colored Flag",
-                          ),
-                          DescriptionTile.raw(
-                            "Twemoji",
-                            leading: EmojiFlag.fromEmojiFamily(
-                              country,
-                              emojiFamily: EmojiFamily.twemoji,
-                              size: 21,
+                          for (final emoji in [null, ...EmojiFamily.values])
+                            DescriptionTile.raw(
+                              emoji?.projectName ?? "Device Default Emoji",
+                              leading: EmojiFlag.fromEmojiFamily(
+                                country,
+                                emojiFamily: emoji,
+                                size: emoji?.whenOrNull(
+                                      twemoji: () => 18,
+                                      openMoji: () => 17,
+                                      notoEmoji: () => 16,
+                                    ) ??
+                                    21,
+                              ),
+                              description: "Emoji Flag (Vector)",
                             ),
-                            description: "Vector Colored Flag",
-                          ),
-                          DescriptionTile.raw(
-                            "Noto Emoji",
-                            leading: EmojiFlag.fromEmojiFamily(
-                              country,
-                              emojiFamily: EmojiFamily.notoEmoji,
-                              size: 19,
-                            ),
-                            description: "Vector Colored Flag",
-                          ),
-                          DescriptionTile.raw(
-                            "Open Moji",
-                            leading: EmojiFlag.fromEmojiFamily(
-                              country,
-                              emojiFamily: EmojiFamily.openMoji,
-                              size: 19,
-                            ),
-                            description: "Vector Colored Flag",
-                          ),
                           DescriptionTile.fromIterable(
                             country.altSpellings,
                             icon: Icons.spellcheck,
