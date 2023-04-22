@@ -10,7 +10,7 @@ enum EmojiFamily {
     codeLicenseUrl: "http://www.apache.org/licenses/LICENSE-2.0",
     graphicsLicense: "CC-BY 4.0",
     graphicsLicenseUrl: "https://creativecommons.org/licenses/by/4.0/legalcode",
-    projectName: "Twemoji (Mozilla)",
+    projectName: "Twemoji",
     projectUrl: "https://twemoji.twitter.com",
   ),
   openMoji(
