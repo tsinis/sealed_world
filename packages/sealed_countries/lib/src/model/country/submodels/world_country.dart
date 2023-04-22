@@ -59,7 +59,7 @@ class WorldCountry extends Country {
   final SubRegion? subregion;
   final List<NaturalLanguage> languages;
   final List<CountryName> translations;
-  final List<double> latLng;
+  final LatLng latLng;
   final bool landlocked;
   final List<String>? bordersCodes;
   final double areaMetric;

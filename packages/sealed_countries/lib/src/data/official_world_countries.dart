@@ -4,12 +4,14 @@ import "package:sealed_currencies/sealed_currencies.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../model/country/country.dart";
+import "../model/country/submodels/capital.dart";
 import "../model/country/submodels/capital_info.dart";
 import "../model/country/submodels/car.dart";
 import "../model/country/submodels/country_name.dart";
 import "../model/country/submodels/demonyms.dart";
 import "../model/country/submodels/gini.dart";
 import "../model/country/submodels/idd.dart";
+import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
 import "../model/country/submodels/postal_code.dart";
 import "../model/country/submodels/weekday.dart";
@@ -173,7 +175,7 @@ class CountryCpv extends WorldCountry {
               common: "佛得角",
             ),
           ],
-          latLng: const [16.5388, 23.0418],
+          latLng: const LatLng(16.5388, 23.0418),
           areaMetric: 4033,
           demonyms: const [
             Demonyms(
@@ -197,8 +199,10 @@ class CountryCpv extends WorldCountry {
           fifa: "CPV",
           car: const Car(signs: ["CV"]),
           timezones: const ["UTC-01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Praia"], latLng: [14.92, -23.52]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Praia"),
+            latLng: LatLng(14.92, -23.52),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -376,7 +380,7 @@ class CountrySgp extends WorldCountry {
               common: "新加坡",
             ),
           ],
-          latLng: const [1.36666666, 103.8],
+          latLng: const LatLng(1.36666666, 103.8),
           areaMetric: 710,
           demonyms: const [
             Demonyms(
@@ -400,8 +404,8 @@ class CountrySgp extends WorldCountry {
           car: const Car(signs: ["SGP"], isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Singapore"],
-            latLng: [1.28, 103.85],
+            capital: Capital("Singapore"),
+            latLng: LatLng(1.28, 103.85),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -566,7 +570,7 @@ class CountryMrt extends WorldCountry {
               common: "毛里塔尼亚",
             ),
           ],
-          latLng: const [20, -12],
+          latLng: const LatLng(20, -12),
           bordersCodes: const [
             "Dza",
             "Mli",
@@ -597,8 +601,8 @@ class CountryMrt extends WorldCountry {
           car: const Car(signs: ["RIM"]),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nouakchott"],
-            latLng: [18.07, -15.97],
+            capital: Capital("Nouakchott"),
+            latLng: LatLng(18.07, -15.97),
           ),
         );
 }
@@ -759,7 +763,7 @@ class CountryPol extends WorldCountry {
               common: "波兰",
             ),
           ],
-          latLng: const [52, 20],
+          latLng: const LatLng(52, 20),
           bordersCodes: const [
             "Blr",
             "Cze",
@@ -792,8 +796,10 @@ class CountryPol extends WorldCountry {
           fifa: "POL",
           car: const Car(signs: ["PL"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Warsaw"], latLng: [52.25, 21]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Warsaw"),
+            latLng: LatLng(52.25, 21),
+          ),
           postalCode: const PostalCode(
             format: "##-###",
           ),
@@ -962,7 +968,7 @@ class CountryTcd extends WorldCountry {
               common: "乍得",
             ),
           ],
-          latLng: const [15, 19],
+          latLng: const LatLng(15, 19),
           landlocked: true,
           bordersCodes: const [
             "Cmr",
@@ -996,8 +1002,8 @@ class CountryTcd extends WorldCountry {
           car: const Car(signs: ["TCH", "TD"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["N'Djamena"],
-            latLng: [12.1, 15.03],
+            capital: Capital("N'Djamena"),
+            latLng: LatLng(12.1, 15.03),
           ),
         );
 }
@@ -1154,7 +1160,7 @@ class CountryJpn extends WorldCountry {
               common: "日本",
             ),
           ],
-          latLng: const [36, 138],
+          latLng: const LatLng(36, 138),
           areaMetric: 377930,
           demonyms: const [
             Demonyms(
@@ -1178,8 +1184,10 @@ class CountryJpn extends WorldCountry {
           fifa: "JPN",
           car: const Car(signs: ["J"], isRightSide: false),
           timezones: const ["UTC+09:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tokyo"], latLng: [35.68, 139.75]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tokyo"),
+            latLng: LatLng(35.68, 139.75),
+          ),
           postalCode: const PostalCode(
             format: "###-####",
             regExpPattern: r"^(\\d{7})$",
@@ -1339,7 +1347,7 @@ class CountryCub extends WorldCountry {
               common: "古巴",
             ),
           ],
-          latLng: const [21.5, -80],
+          latLng: const LatLng(21.5, -80),
           areaMetric: 109884,
           demonyms: const [
             Demonyms(
@@ -1363,8 +1371,8 @@ class CountryCub extends WorldCountry {
           car: const Car(signs: ["C"]),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Havana"],
-            latLng: [23.12, -82.35],
+            capital: Capital("Havana"),
+            latLng: LatLng(23.12, -82.35),
           ),
           postalCode: const PostalCode(
             format: "CP #####",
@@ -1529,7 +1537,7 @@ class CountryMoz extends WorldCountry {
               common: "莫桑比克",
             ),
           ],
-          latLng: const [-18.25, 35],
+          latLng: const LatLng(-18.25, 35),
           bordersCodes: const [
             "Mwi",
             "Zaf",
@@ -1561,8 +1569,10 @@ class CountryMoz extends WorldCountry {
           fifa: "MOZ",
           car: const Car(signs: ["MOC"], isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Maputo"], latLng: [-25.95, 32.58]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Maputo"),
+            latLng: LatLng(-25.95, 32.58),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -1725,7 +1735,7 @@ class CountryGbr extends WorldCountry {
               common: "英国",
             ),
           ],
-          latLng: const [54, -2],
+          latLng: const LatLng(54, -2),
           bordersCodes: const ["Irl"],
           areaMetric: 242900,
           demonyms: const [
@@ -1759,8 +1769,10 @@ class CountryGbr extends WorldCountry {
             "UTC+02:00",
             "UTC+06:00",
           ],
-          capitalInfo:
-              const CapitalInfo(capital: ["London"], latLng: [51.5, -0.08]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("London"),
+            latLng: LatLng(51.5, -0.08),
+          ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
@@ -1931,7 +1943,7 @@ class CountryIrl extends WorldCountry {
               common: "爱尔兰",
             ),
           ],
-          latLng: const [53, -8],
+          latLng: const LatLng(53, -8),
           bordersCodes: const ["Gbr"],
           areaMetric: 70273,
           demonyms: const [
@@ -1957,8 +1969,8 @@ class CountryIrl extends WorldCountry {
           car: const Car(signs: ["IRL"], isRightSide: false),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Dublin"],
-            latLng: [53.32, -6.23],
+            capital: Capital("Dublin"),
+            latLng: LatLng(53.32, -6.23),
           ),
         );
 }
@@ -2115,7 +2127,7 @@ class CountryNer extends WorldCountry {
               common: "尼日尔",
             ),
           ],
-          latLng: const [16, 8],
+          latLng: const LatLng(16, 8),
           landlocked: true,
           bordersCodes: const [
             "Dza",
@@ -2149,8 +2161,10 @@ class CountryNer extends WorldCountry {
           fifa: "NIG",
           car: const Car(signs: ["RN"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Niamey"], latLng: [13.52, 2.12]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Niamey"),
+            latLng: LatLng(13.52, 2.12),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -2308,7 +2322,7 @@ class CountryGmb extends WorldCountry {
               common: "冈比亚",
             ),
           ],
-          latLng: const [13.46666666, -16.56666666],
+          latLng: const LatLng(13.46666666, -16.56666666),
           bordersCodes: const ["Sen"],
           areaMetric: 10689,
           demonyms: const [
@@ -2334,8 +2348,8 @@ class CountryGmb extends WorldCountry {
           car: const Car(signs: ["WAG"]),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Banjul"],
-            latLng: [13.45, -16.57],
+            capital: Capital("Banjul"),
+            latLng: LatLng(13.45, -16.57),
           ),
         );
 }
@@ -2502,7 +2516,7 @@ class CountryUzb extends WorldCountry {
               common: "乌兹别克斯坦",
             ),
           ],
-          latLng: const [41, 64],
+          latLng: const LatLng(41, 64),
           landlocked: true,
           bordersCodes: const [
             "Afg",
@@ -2535,8 +2549,8 @@ class CountryUzb extends WorldCountry {
           car: const Car(signs: ["UZ"]),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Tashkent"],
-            latLng: [41.32, 69.25],
+            capital: Capital("Tashkent"),
+            latLng: LatLng(41.32, 69.25),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -2701,7 +2715,7 @@ class CountryRus extends WorldCountry {
               common: "俄罗斯",
             ),
           ],
-          latLng: const [60, 100],
+          latLng: const LatLng(60, 100),
           bordersCodes: const [
             "Aze",
             "Blr",
@@ -2751,8 +2765,10 @@ class CountryRus extends WorldCountry {
             "UTC+11:00",
             "UTC+12:00",
           ],
-          capitalInfo:
-              const CapitalInfo(capital: ["Moscow"], latLng: [55.75, 37.6]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Moscow"),
+            latLng: LatLng(55.75, 37.6),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -2917,7 +2933,7 @@ class CountryTkm extends WorldCountry {
               common: "土库曼斯坦",
             ),
           ],
-          latLng: const [40, 60],
+          latLng: const LatLng(40, 60),
           landlocked: true,
           bordersCodes: const [
             "Afg",
@@ -2949,8 +2965,8 @@ class CountryTkm extends WorldCountry {
           car: const Car(signs: ["TM"]),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ashgabat"],
-            latLng: [37.95, 58.38],
+            capital: Capital("Ashgabat"),
+            latLng: LatLng(37.95, 58.38),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -3112,7 +3128,7 @@ class CountryAia extends WorldCountry {
               common: "安圭拉",
             ),
           ],
-          latLng: const [18.25, -63.16666666],
+          latLng: const LatLng(18.25, -63.16666666),
           areaMetric: 91,
           demonyms: const [
             Demonyms(
@@ -3136,8 +3152,8 @@ class CountryAia extends WorldCountry {
           car: const Car(signs: ["GB"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["The Valley"],
-            latLng: [18.22, -63.05],
+            capital: Capital("The Valley"),
+            latLng: LatLng(18.22, -63.05),
           ),
         );
 }
@@ -3299,7 +3315,7 @@ class CountryVnm extends WorldCountry {
               common: "越南",
             ),
           ],
-          latLng: const [16.16666666, 107.83333333],
+          latLng: const LatLng(16.16666666, 107.83333333),
           bordersCodes: const ["Khm", "Chn", "Lao"],
           areaMetric: 331212,
           demonyms: const [
@@ -3324,8 +3340,10 @@ class CountryVnm extends WorldCountry {
           fifa: "VIE",
           car: const Car(signs: ["VN"]),
           timezones: const ["UTC+07:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Hanoi"], latLng: [21.03, 105.85]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Hanoi"),
+            latLng: LatLng(21.03, 105.85),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -3486,7 +3504,7 @@ class CountryAta extends WorldCountry {
               common: "南极洲",
             ),
           ],
-          latLng: const [-90, 0],
+          latLng: const LatLng(-90, 0),
           idd: const Idd(root: 6, suffixes: [72]),
           areaMetric: 14000000,
           demonyms: const [
@@ -3682,7 +3700,7 @@ class CountrySwz extends WorldCountry {
               common: "斯威士兰",
             ),
           ],
-          latLng: const [-26.5, 31.5],
+          latLng: const LatLng(-26.5, 31.5),
           landlocked: true,
           bordersCodes: const ["Moz", "Zaf"],
           areaMetric: 17364,
@@ -3710,8 +3728,8 @@ class CountrySwz extends WorldCountry {
           timezones: const ["UTC+02:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Mbabane"],
-            latLng: [-26.32, 31.13],
+            capital: Capital("Mbabane"),
+            latLng: LatLng(-26.32, 31.13),
           ),
           postalCode: const PostalCode(
             format: "@###",
@@ -3872,7 +3890,7 @@ class CountryKhm extends WorldCountry {
               common: "柬埔寨",
             ),
           ],
-          latLng: const [13, 105],
+          latLng: const LatLng(13, 105),
           bordersCodes: const ["Lao", "Tha", "Vnm"],
           areaMetric: 181035,
           demonyms: const [
@@ -3897,8 +3915,8 @@ class CountryKhm extends WorldCountry {
           car: const Car(signs: ["K"]),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Phnom Penh"],
-            latLng: [11.55, 104.92],
+            capital: Capital("Phnom Penh"),
+            latLng: LatLng(11.55, 104.92),
           ),
           postalCode: const PostalCode(),
         );
@@ -4071,7 +4089,7 @@ class CountryVut extends WorldCountry {
               common: "瓦努阿图",
             ),
           ],
-          latLng: const [-16, 167],
+          latLng: const LatLng(-16, 167),
           areaMetric: 12189,
           demonyms: const [
             Demonyms(
@@ -4096,8 +4114,8 @@ class CountryVut extends WorldCountry {
           car: const Car(signs: ["VU"]),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port Vila"],
-            latLng: [-17.73, 168.32],
+            capital: Capital("Port Vila"),
+            latLng: LatLng(-17.73, 168.32),
           ),
         );
 }
@@ -4251,7 +4269,7 @@ class CountryAla extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "奥兰群岛", common: "奥兰群岛"),
           ],
-          latLng: const [60.116667, 19.9],
+          latLng: const LatLng(60.116667, 19.9),
           areaMetric: 1580,
           demonyms: const [
             Demonyms(
@@ -4274,8 +4292,8 @@ class CountryAla extends WorldCountry {
           car: const Car(signs: [""]),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Mariehamn"],
-            latLng: [60.12, 19.9],
+            capital: Capital("Mariehamn"),
+            latLng: LatLng(60.12, 19.9),
           ),
         );
 }
@@ -4432,7 +4450,7 @@ class CountryAus extends WorldCountry {
               common: "澳大利亚",
             ),
           ],
-          latLng: const [-27, 133],
+          latLng: const LatLng(-27, 133),
           areaMetric: 7692024,
           demonyms: const [
             Demonyms(
@@ -4466,8 +4484,8 @@ class CountryAus extends WorldCountry {
             "UTC+11:30",
           ],
           capitalInfo: const CapitalInfo(
-            capital: ["Canberra"],
-            latLng: [-35.27, 149.13],
+            capital: Capital("Canberra"),
+            latLng: LatLng(-35.27, 149.13),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -4627,7 +4645,7 @@ class CountryIot extends WorldCountry {
               common: "英属印度洋领地",
             ),
           ],
-          latLng: const [-6, 71.5],
+          latLng: const LatLng(-6, 71.5),
           areaMetric: 60,
           demonyms: const [
             Demonyms(
@@ -4646,8 +4664,8 @@ class CountryIot extends WorldCountry {
           timezones: const ["UTC+06:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Diego Garcia"],
-            latLng: [-7.3, 72.4],
+            capital: Capital("Diego Garcia"),
+            latLng: LatLng(-7.3, 72.4),
           ),
         );
 }
@@ -4804,7 +4822,7 @@ class CountrySvk extends WorldCountry {
               common: "斯洛伐克",
             ),
           ],
-          latLng: const [48.66666666, 19.5],
+          latLng: const LatLng(48.66666666, 19.5),
           landlocked: true,
           bordersCodes: const [
             "Aut",
@@ -4837,8 +4855,8 @@ class CountrySvk extends WorldCountry {
           car: const Car(signs: ["SK"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bratislava"],
-            latLng: [48.15, 17.12],
+            capital: Capital("Bratislava"),
+            latLng: LatLng(48.15, 17.12),
           ),
           postalCode: const PostalCode(
             format: "###  ##",
@@ -5003,7 +5021,7 @@ class CountryBra extends WorldCountry {
               common: "巴西",
             ),
           ],
-          latLng: const [-10, -55],
+          latLng: const LatLng(-10, -55),
           bordersCodes: const [
             "Arg",
             "Bol",
@@ -5040,8 +5058,8 @@ class CountryBra extends WorldCountry {
           car: const Car(signs: ["BR"]),
           timezones: const ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Brasília"],
-            latLng: [-15.79, -47.88],
+            capital: Capital("Brasília"),
+            latLng: LatLng(-15.79, -47.88),
           ),
           postalCode: const PostalCode(
             format: "#####-###",
@@ -5213,7 +5231,7 @@ class CountryTjk extends WorldCountry {
               common: "塔吉克斯坦",
             ),
           ],
-          latLng: const [39, 71],
+          latLng: const LatLng(39, 71),
           landlocked: true,
           bordersCodes: const [
             "Afg",
@@ -5245,8 +5263,8 @@ class CountryTjk extends WorldCountry {
           car: const Car(signs: ["TJ"]),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Dushanbe"],
-            latLng: [38.55, 68.77],
+            capital: Capital("Dushanbe"),
+            latLng: LatLng(38.55, 68.77),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -5410,7 +5428,7 @@ class CountrySgs extends WorldCountry {
               common: "南乔治亚",
             ),
           ],
-          latLng: const [-54.5, -37],
+          latLng: const LatLng(-54.5, -37),
           areaMetric: 3903,
           demonyms: const [
             Demonyms(
@@ -5429,8 +5447,8 @@ class CountrySgs extends WorldCountry {
           timezones: const ["UTC-02:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["King Edward Point"],
-            latLng: [-54.28, -36.5],
+            capital: Capital("King Edward Point"),
+            latLng: LatLng(-54.28, -36.5),
           ),
         );
 }
@@ -5587,7 +5605,7 @@ class CountryLbr extends WorldCountry {
               common: "利比里亚",
             ),
           ],
-          latLng: const [6.5, -9.5],
+          latLng: const LatLng(6.5, -9.5),
           bordersCodes: const ["Gin", "Civ", "Sle"],
           areaMetric: 111369,
           demonyms: const [
@@ -5612,8 +5630,10 @@ class CountryLbr extends WorldCountry {
           fifa: "LBR",
           car: const Car(signs: ["LB"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Monrovia"], latLng: [6.3, -10.8]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Monrovia"),
+            latLng: LatLng(6.3, -10.8),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -5776,7 +5796,7 @@ class CountryNga extends WorldCountry {
               common: "尼日利亚",
             ),
           ],
-          latLng: const [10, 8],
+          latLng: const LatLng(10, 8),
           bordersCodes: const [
             "Ben",
             "Cmr",
@@ -5806,8 +5826,10 @@ class CountryNga extends WorldCountry {
           fifa: "NGA",
           car: const Car(signs: ["WAN"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Abuja"], latLng: [9.08, 7.53]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Abuja"),
+            latLng: LatLng(9.08, 7.53),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -5971,7 +5993,7 @@ class CountryCol extends WorldCountry {
               common: "哥伦比亚",
             ),
           ],
-          latLng: const [4, -72],
+          latLng: const LatLng(4, -72),
           bordersCodes: const [
             "Bra",
             "Ecu",
@@ -6002,8 +6024,10 @@ class CountryCol extends WorldCountry {
           fifa: "COL",
           car: const Car(signs: ["CO"]),
           timezones: const ["UTC-05:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bogotá"], latLng: [4.71, -74.07]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bogotá"),
+            latLng: LatLng(4.71, -74.07),
+          ),
         );
 }
 
@@ -6163,7 +6187,7 @@ class CountrySmr extends WorldCountry {
               common: "圣马力诺",
             ),
           ],
-          latLng: const [43.76666666, 12.41666666],
+          latLng: const LatLng(43.76666666, 12.41666666),
           landlocked: true,
           bordersCodes: const ["Ita"],
           areaMetric: 61,
@@ -6189,8 +6213,8 @@ class CountrySmr extends WorldCountry {
           car: const Car(signs: ["RSM"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["City of San Marino"],
-            latLng: [43.94, 12.45],
+            capital: Capital("City of San Marino"),
+            latLng: LatLng(43.94, 12.45),
           ),
           postalCode: const PostalCode(
             format: "4789#",
@@ -6357,7 +6381,7 @@ class CountryShn extends WorldCountry {
               common: "圣赫勒拿、阿森松和特里斯坦-达库尼亚",
             ),
           ],
-          latLng: const [-15.95, -5.72],
+          latLng: const LatLng(-15.95, -5.72),
           areaMetric: 394,
           demonyms: const [
             Demonyms(
@@ -6381,8 +6405,8 @@ class CountryShn extends WorldCountry {
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Jamestown"],
-            latLng: [-15.93, -5.72],
+            capital: Capital("Jamestown"),
+            latLng: LatLng(-15.93, -5.72),
           ),
           postalCode: const PostalCode(
             format: "STHL 1ZZ",
@@ -6543,7 +6567,7 @@ class CountryEgy extends WorldCountry {
               common: "埃及",
             ),
           ],
-          latLng: const [27, 30],
+          latLng: const LatLng(27, 30),
           bordersCodes: const [
             "Isr",
             "Lby",
@@ -6574,8 +6598,10 @@ class CountryEgy extends WorldCountry {
           car: const Car(signs: ["ET"]),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Cairo"], latLng: [30.05, 31.25]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Cairo"),
+            latLng: LatLng(30.05, 31.25),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -6736,7 +6762,7 @@ class CountryHnd extends WorldCountry {
               common: "洪都拉斯",
             ),
           ],
-          latLng: const [15, -86.5],
+          latLng: const LatLng(15, -86.5),
           bordersCodes: const ["Gtm", "Slv", "Nic"],
           areaMetric: 112492,
           demonyms: const [
@@ -6762,8 +6788,8 @@ class CountryHnd extends WorldCountry {
           car: const Car(signs: ["HN"]),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Tegucigalpa"],
-            latLng: [14.1, -87.22],
+            capital: Capital("Tegucigalpa"),
+            latLng: LatLng(14.1, -87.22),
           ),
           postalCode: const PostalCode(
             format: "@@####",
@@ -6928,7 +6954,7 @@ class CountryIdn extends WorldCountry {
               common: "印度尼西亚",
             ),
           ],
-          latLng: const [-5, 120],
+          latLng: const LatLng(-5, 120),
           bordersCodes: const ["Tls", "Mys", "Png"],
           areaMetric: 1904569,
           demonyms: const [
@@ -6954,8 +6980,8 @@ class CountryIdn extends WorldCountry {
           car: const Car(signs: ["RI"], isRightSide: false),
           timezones: const ["UTC+07:00", "UTC+08:00", "UTC+09:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Jakarta"],
-            latLng: [-6.17, 106.82],
+            capital: Capital("Jakarta"),
+            latLng: LatLng(-6.17, 106.82),
           ),
           postalCode: const PostalCode(),
         );
@@ -7122,7 +7148,7 @@ class CountryPrk extends WorldCountry {
               common: "朝鲜",
             ),
           ],
-          latLng: const [40, 127],
+          latLng: const LatLng(40, 127),
           bordersCodes: const ["Chn", "Kor", "Rus"],
           areaMetric: 120538,
           demonyms: const [
@@ -7147,8 +7173,8 @@ class CountryPrk extends WorldCountry {
           car: const Car(signs: [""]),
           timezones: const ["UTC+09:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Pyongyang"],
-            latLng: [39.02, 125.75],
+            capital: Capital("Pyongyang"),
+            latLng: LatLng(39.02, 125.75),
           ),
           postalCode: const PostalCode(
             format: "###-###",
@@ -7335,7 +7361,7 @@ class CountryMac extends WorldCountry {
               common: "澳门",
             ),
           ],
-          latLng: const [22.16666666, 113.55],
+          latLng: const LatLng(22.16666666, 113.55),
           bordersCodes: const ["Chn"],
           areaMetric: 30,
           demonyms: const [
@@ -7510,7 +7536,7 @@ class CountrySle extends WorldCountry {
               common: "塞拉利昂",
             ),
           ],
-          latLng: const [8.5, -11.5],
+          latLng: const LatLng(8.5, -11.5),
           bordersCodes: const ["Gin", "Lbr"],
           areaMetric: 71740,
           demonyms: const [
@@ -7536,8 +7562,8 @@ class CountrySle extends WorldCountry {
           car: const Car(signs: ["WAL"]),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Freetown"],
-            latLng: [8.48, -13.23],
+            capital: Capital("Freetown"),
+            latLng: LatLng(8.48, -13.23),
           ),
         );
 }
@@ -7699,7 +7725,7 @@ class CountryMda extends WorldCountry {
               common: "摩尔多瓦",
             ),
           ],
-          latLng: const [47, 29],
+          latLng: const LatLng(47, 29),
           landlocked: true,
           bordersCodes: const ["Rou", "Ukr"],
           areaMetric: 33846,
@@ -7725,8 +7751,10 @@ class CountryMda extends WorldCountry {
           fifa: "MDA",
           car: const Car(signs: ["MD"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Chișinău"], latLng: [47.01, 28.9]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Chișinău"),
+            latLng: LatLng(47.01, 28.9),
+          ),
           postalCode: const PostalCode(
             format: "MD-####",
             regExpPattern: r"^(?:MD)*(\\d{4})$",
@@ -7897,7 +7925,7 @@ class CountryPhl extends WorldCountry {
               common: "菲律宾",
             ),
           ],
-          latLng: const [13, 122],
+          latLng: const LatLng(13, 122),
           areaMetric: 342353,
           demonyms: const [
             Demonyms(
@@ -7921,8 +7949,10 @@ class CountryPhl extends WorldCountry {
           fifa: "PHI",
           car: const Car(signs: ["RP"]),
           timezones: const ["UTC+08:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Manila"], latLng: [14.6, 120.97]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Manila"),
+            latLng: LatLng(14.6, 120.97),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -8089,7 +8119,7 @@ class CountryCmr extends WorldCountry {
               common: "喀麦隆",
             ),
           ],
-          latLng: const [6, 12],
+          latLng: const LatLng(6, 12),
           bordersCodes: const [
             "Caf",
             "Tcd",
@@ -8121,8 +8151,10 @@ class CountryCmr extends WorldCountry {
           fifa: "CMR",
           car: const Car(signs: ["CAM"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Yaoundé"], latLng: [3.85, 11.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Yaoundé"),
+            latLng: LatLng(3.85, 11.5),
+          ),
         );
 }
 
@@ -8275,7 +8307,7 @@ class CountryGrl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "格陵兰", common: "格陵兰"),
           ],
-          latLng: const [72, -40],
+          latLng: const LatLng(72, -40),
           areaMetric: 2166086,
           demonyms: const [
             Demonyms(
@@ -8297,8 +8329,10 @@ class CountryGrl extends WorldCountry {
           population: 56367,
           car: const Car(signs: ["DK"]),
           timezones: const ["UTC-04:00", "UTC-03:00", "UTC-01:00", "UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Nuuk"], latLng: [64.18, -51.75]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Nuuk"),
+            latLng: LatLng(64.18, -51.75),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -8453,7 +8487,7 @@ class CountryMtq extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马提尼克", common: "马提尼克"),
           ],
-          latLng: const [14.666667, -61],
+          latLng: const LatLng(14.666667, -61),
           areaMetric: 1128,
           demonyms: const [
             Demonyms(
@@ -8476,8 +8510,8 @@ class CountryMtq extends WorldCountry {
           car: const Car(signs: ["F"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Fort-de-France"],
-            latLng: [14.6, -61.08],
+            capital: Capital("Fort-de-France"),
+            latLng: LatLng(14.6, -61.08),
           ),
           postalCode: const PostalCode(),
         );
@@ -8644,7 +8678,7 @@ class CountryLbn extends WorldCountry {
               common: "黎巴嫩",
             ),
           ],
-          latLng: const [33.83333333, 35.83333333],
+          latLng: const LatLng(33.83333333, 35.83333333),
           bordersCodes: const ["Isr", "Syr"],
           areaMetric: 10452,
           demonyms: const [
@@ -8669,8 +8703,10 @@ class CountryLbn extends WorldCountry {
           fifa: "LBN",
           car: const Car(signs: ["RL"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Beirut"], latLng: [33.87, 35.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Beirut"),
+            latLng: LatLng(33.87, 35.5),
+          ),
           postalCode: const PostalCode(
             format: "#### ####|####",
             regExpPattern: r"^(\\d{4}(\\d{4})?)$",
@@ -8845,7 +8881,7 @@ class CountryRwa extends WorldCountry {
               common: "卢旺达",
             ),
           ],
-          latLng: const [-2, 30],
+          latLng: const LatLng(-2, 30),
           landlocked: true,
           bordersCodes: const [
             "Bdi",
@@ -8876,8 +8912,10 @@ class CountryRwa extends WorldCountry {
           fifa: "RWA",
           car: const Car(signs: ["RWA"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Kigali"], latLng: [-1.95, 30.05]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Kigali"),
+            latLng: LatLng(-1.95, 30.05),
+          ),
         );
 }
 
@@ -9047,7 +9085,7 @@ class CountryBih extends WorldCountry {
               common: "波斯尼亚和黑塞哥维那",
             ),
           ],
-          latLng: const [44, 18],
+          latLng: const LatLng(44, 18),
           bordersCodes: const ["Hrv", "Mne", "Srb"],
           areaMetric: 51209,
           demonyms: const [
@@ -9074,8 +9112,8 @@ class CountryBih extends WorldCountry {
           car: const Car(signs: ["BIH"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Sarajevo"],
-            latLng: [43.87, 18.42],
+            capital: Capital("Sarajevo"),
+            latLng: LatLng(43.87, 18.42),
           ),
           postalCode: const PostalCode(),
         );
@@ -9242,7 +9280,7 @@ class CountryMhl extends WorldCountry {
               common: "马绍尔群岛",
             ),
           ],
-          latLng: const [9, 168],
+          latLng: const LatLng(9, 168),
           areaMetric: 181,
           demonyms: const [
             Demonyms(
@@ -9264,8 +9302,10 @@ class CountryMhl extends WorldCountry {
           population: 59194,
           car: const Car(signs: ["MH"]),
           timezones: const ["UTC+12:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Majuro"], latLng: [7.1, 171.38]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Majuro"),
+            latLng: LatLng(7.1, 171.38),
+          ),
         );
 }
 
@@ -9421,7 +9461,7 @@ class CountryIta extends WorldCountry {
               common: "意大利",
             ),
           ],
-          latLng: const [42.83333333, 12.83333333],
+          latLng: const LatLng(42.83333333, 12.83333333),
           bordersCodes: const [
             "Aut",
             "Fra",
@@ -9453,8 +9493,10 @@ class CountryIta extends WorldCountry {
           fifa: "ITA",
           car: const Car(signs: ["I"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Rome"], latLng: [41.9, 12.48]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Rome"),
+            latLng: LatLng(41.9, 12.48),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -9614,7 +9656,7 @@ class CountryTkl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "托克劳", common: "托克劳"),
           ],
-          latLng: const [-9, -172],
+          latLng: const LatLng(-9, -172),
           areaMetric: 12,
           demonyms: const [
             Demonyms(
@@ -9633,8 +9675,8 @@ class CountryTkl extends WorldCountry {
           timezones: const ["UTC+13:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Fakaofo"],
-            latLng: [-9.38, -171.22],
+            capital: Capital("Fakaofo"),
+            latLng: LatLng(-9.38, -171.22),
           ),
         );
 }
@@ -9791,7 +9833,7 @@ class CountryGab extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "加蓬共和国", common: "加蓬"),
           ],
-          latLng: const [-1, 11.75],
+          latLng: const LatLng(-1, 11.75),
           bordersCodes: const ["Cmr", "Cog", "Gnq"],
           areaMetric: 267668,
           demonyms: const [
@@ -9817,8 +9859,8 @@ class CountryGab extends WorldCountry {
           car: const Car(signs: ["G"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Libreville"],
-            latLng: [0.38, 9.45],
+            capital: Capital("Libreville"),
+            latLng: LatLng(0.38, 9.45),
           ),
         );
 }
@@ -9972,7 +10014,7 @@ class CountryCck extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "科科斯", common: "科科斯"),
           ],
-          latLng: const [12.1642, 96.871],
+          latLng: const LatLng(12.1642, 96.871),
           areaMetric: 14,
           demonyms: const [
             Demonyms(
@@ -9991,8 +10033,8 @@ class CountryCck extends WorldCountry {
           timezones: const ["UTC+06:30"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["West Island"],
-            latLng: [-12.17, 96.83],
+            capital: Capital("West Island"),
+            latLng: LatLng(-12.17, 96.83),
           ),
         );
 }
@@ -10159,7 +10201,7 @@ class CountryPak extends WorldCountry {
               common: "巴基斯坦",
             ),
           ],
-          latLng: const [30, 70],
+          latLng: const LatLng(30, 70),
           bordersCodes: const [
             "Afg",
             "Chn",
@@ -10190,8 +10232,8 @@ class CountryPak extends WorldCountry {
           car: const Car(signs: ["PK"], isRightSide: false),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Islamabad"],
-            latLng: [33.68, 73.05],
+            capital: Capital("Islamabad"),
+            latLng: LatLng(33.68, 73.05),
           ),
           postalCode: const PostalCode(),
         );
@@ -10346,7 +10388,7 @@ class CountryReu extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "留尼旺岛", common: "留尼旺岛"),
           ],
-          latLng: const [-21.15, 55.5],
+          latLng: const LatLng(-21.15, 55.5),
           areaMetric: 2511,
           demonyms: const [
             Demonyms(
@@ -10370,8 +10412,8 @@ class CountryReu extends WorldCountry {
           timezones: const ["UTC+04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Saint-Denis"],
-            latLng: [-20.88, 55.45],
+            capital: Capital("Saint-Denis"),
+            latLng: LatLng(-20.88, 55.45),
           ),
           postalCode:
               const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\\d{2})$"),
@@ -10541,7 +10583,7 @@ class CountryMus extends WorldCountry {
               common: "毛里求斯",
             ),
           ],
-          latLng: const [-20.28333333, 57.55],
+          latLng: const LatLng(-20.28333333, 57.55),
           areaMetric: 2040,
           demonyms: const [
             Demonyms(
@@ -10566,8 +10608,8 @@ class CountryMus extends WorldCountry {
           car: const Car(signs: ["MS"], isRightSide: false),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port Louis"],
-            latLng: [-20.15, 57.48],
+            capital: Capital("Port Louis"),
+            latLng: LatLng(-20.15, 57.48),
           ),
         );
 }
@@ -10720,7 +10762,7 @@ class CountryGrd extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "格林纳达", common: "格林纳达"),
           ],
-          latLng: const [12.11666666, -61.66666666],
+          latLng: const LatLng(12.11666666, -61.66666666),
           areaMetric: 344,
           demonyms: const [
             Demonyms(
@@ -10744,8 +10786,8 @@ class CountryGrd extends WorldCountry {
           car: const Car(signs: ["WG"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["St. George's"],
-            latLng: [32.38, -64.68],
+            capital: Capital("St. George's"),
+            latLng: LatLng(32.38, -64.68),
           ),
         );
 }
@@ -10898,7 +10940,7 @@ class CountryOmn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "阿曼苏丹国", common: "阿曼"),
           ],
-          latLng: const [21, 57],
+          latLng: const LatLng(21, 57),
           bordersCodes: const ["Sau", "Are", "Yem"],
           areaMetric: 309500,
           demonyms: const [
@@ -10923,8 +10965,10 @@ class CountryOmn extends WorldCountry {
           car: const Car(signs: ["OM"]),
           timezones: const ["UTC+04:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Muscat"], latLng: [23.62, 58.58]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Muscat"),
+            latLng: LatLng(23.62, 58.58),
+          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
         );
@@ -11082,7 +11126,7 @@ class CountryBfa extends WorldCountry {
               common: "布基纳法索",
             ),
           ],
-          latLng: const [13, -2],
+          latLng: const LatLng(13, -2),
           landlocked: true,
           bordersCodes: const [
             "Ben",
@@ -11116,8 +11160,8 @@ class CountryBfa extends WorldCountry {
           car: const Car(signs: ["BF"]),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ouagadougou"],
-            latLng: [12.37, -1.52],
+            capital: Capital("Ouagadougou"),
+            latLng: LatLng(12.37, -1.52),
           ),
         );
 }
@@ -11283,7 +11327,7 @@ class CountryWsm extends WorldCountry {
               common: "萨摩亚",
             ),
           ],
-          latLng: const [-13.58333333, -172.33333333],
+          latLng: const LatLng(-13.58333333, -172.33333333),
           areaMetric: 2842,
           demonyms: const [
             Demonyms(
@@ -11308,8 +11352,8 @@ class CountryWsm extends WorldCountry {
           car: const Car(signs: ["WS"], isRightSide: false),
           timezones: const ["UTC+13:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Apia"],
-            latLng: [-13.82, -171.77],
+            capital: Capital("Apia"),
+            latLng: LatLng(-13.82, -171.77),
           ),
         );
 }
@@ -11466,7 +11510,7 @@ class CountryTto extends WorldCountry {
               common: "特立尼达和多巴哥",
             ),
           ],
-          latLng: const [10.6918, 61.2225],
+          latLng: const LatLng(10.6918, 61.2225),
           areaMetric: 5130,
           demonyms: const [
             Demonyms(
@@ -11491,8 +11535,8 @@ class CountryTto extends WorldCountry {
           car: const Car(signs: ["TT"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port of Spain"],
-            latLng: [10.65, -61.52],
+            capital: Capital("Port of Spain"),
+            latLng: LatLng(10.65, -61.52),
           ),
         );
 }
@@ -11649,7 +11693,7 @@ class CountryVct extends WorldCountry {
               common: "圣文森特和格林纳丁斯",
             ),
           ],
-          latLng: const [13.25, -61.2],
+          latLng: const LatLng(13.25, -61.2),
           areaMetric: 389,
           demonyms: const [
             Demonyms(
@@ -11673,8 +11717,8 @@ class CountryVct extends WorldCountry {
           car: const Car(signs: ["WV"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Kingstown"],
-            latLng: [13.13, -61.22],
+            capital: Capital("Kingstown"),
+            latLng: LatLng(13.13, -61.22),
           ),
         );
 }
@@ -11828,7 +11872,7 @@ class CountryPlw extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "帕劳共和国", common: "帕劳"),
           ],
-          latLng: const [7.5, 134.5],
+          latLng: const LatLng(7.5, 134.5),
           areaMetric: 459,
           demonyms: const [
             Demonyms(
@@ -11851,8 +11895,8 @@ class CountryPlw extends WorldCountry {
           car: const Car(signs: ["PAL"]),
           timezones: const ["UTC+09:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ngerulmud"],
-            latLng: [7.5, 134.62],
+            capital: Capital("Ngerulmud"),
+            latLng: LatLng(7.5, 134.62),
           ),
           postalCode:
               const PostalCode(format: "96940", regExpPattern: r"^(96940)$"),
@@ -12069,7 +12113,7 @@ class CountryZaf extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "南非共和国", common: "南非"),
           ],
-          latLng: const [-29, 24],
+          latLng: const LatLng(-29, 24),
           bordersCodes: const [
             "Bwa",
             "Lso",
@@ -12102,8 +12146,12 @@ class CountryZaf extends WorldCountry {
           car: const Car(signs: ["ZA"], isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Pretoria", "Bloemfontein", "Cape Town"],
-            latLng: [-25.7, 28.22],
+            capital: Capital(
+              "Pretoria",
+              deJure: "Bloemfontein",
+              third: "Cape Town",
+            ),
+            latLng: LatLng(-25.7, 28.22),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -12266,7 +12314,7 @@ class CountryAgo extends WorldCountry {
               common: "安哥拉",
             ),
           ],
-          latLng: const [-12.5, 18.5],
+          latLng: const LatLng(-12.5, 18.5),
           bordersCodes: const [
             "Cog",
             "Cod",
@@ -12296,8 +12344,10 @@ class CountryAgo extends WorldCountry {
           fifa: "ANG",
           car: const Car(signs: ["ANG"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Luanda"], latLng: [-8.83, 13.22]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Luanda"),
+            latLng: LatLng(-8.83, 13.22),
+          ),
         );
 }
 
@@ -12451,7 +12501,7 @@ class CountryKor extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "大韩民国", common: "韩国"),
           ],
-          latLng: const [37, 127.5],
+          latLng: const LatLng(37, 127.5),
           bordersCodes: const ["Prk"],
           areaMetric: 100210,
           demonyms: const [
@@ -12476,8 +12526,10 @@ class CountryKor extends WorldCountry {
           fifa: "KOR",
           car: const Car(signs: ["ROK"]),
           timezones: const ["UTC+09:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Seoul"], latLng: [37.55, 126.98]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Seoul"),
+            latLng: LatLng(37.55, 126.98),
+          ),
           postalCode: const PostalCode(
             format: "SEOUL ###-###",
             regExpPattern: r"^(?:SEOUL)*(\\d{6})$",
@@ -12640,7 +12692,7 @@ class CountryAtf extends WorldCountry {
               common: "法国南部和南极土地",
             ),
           ],
-          latLng: const [-49.25, 69.167],
+          latLng: const LatLng(-49.25, 69.167),
           areaMetric: 7747,
           demonyms: const [
             Demonyms(
@@ -12663,8 +12715,8 @@ class CountryAtf extends WorldCountry {
           car: const Car(signs: [""]),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port-aux-Français"],
-            latLng: [48.81, -1.4],
+            capital: Capital("Port-aux-Français"),
+            latLng: LatLng(48.81, -1.4),
           ),
         );
 }
@@ -12822,7 +12874,7 @@ class CountryIsl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "冰岛", common: "冰岛"),
           ],
-          latLng: const [65, -18],
+          latLng: const LatLng(65, -18),
           areaMetric: 103000,
           demonyms: const [
             Demonyms(
@@ -12847,8 +12899,8 @@ class CountryIsl extends WorldCountry {
           car: const Car(signs: ["IS"]),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Reykjavik"],
-            latLng: [64.15, -21.95],
+            capital: Capital("Reykjavik"),
+            latLng: LatLng(64.15, -21.95),
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
@@ -13008,7 +13060,7 @@ class CountryGuf extends WorldCountry {
               common: "法属圭亚那",
             ),
           ],
-          latLng: const [4, -53],
+          latLng: const LatLng(4, -53),
           bordersCodes: const ["Bra", "Sur"],
           areaMetric: 83534,
           demonyms: const [
@@ -13032,8 +13084,8 @@ class CountryGuf extends WorldCountry {
           car: const Car(signs: ["F"]),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Cayenne"],
-            latLng: [4.94, -52.33],
+            capital: Capital("Cayenne"),
+            latLng: LatLng(4.94, -52.33),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)3\\d{2})$"),
         );
@@ -13200,7 +13252,7 @@ class CountryNor extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "挪威王国", common: "挪威"),
           ],
-          latLng: const [62, 10],
+          latLng: const LatLng(62, 10),
           bordersCodes: const ["Fin", "Swe", "Rus"],
           areaMetric: 323802,
           demonyms: const [
@@ -13225,8 +13277,10 @@ class CountryNor extends WorldCountry {
           fifa: "NOR",
           car: const Car(signs: ["N"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Oslo"], latLng: [59.92, 10.75]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Oslo"),
+            latLng: LatLng(59.92, 10.75),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -13380,7 +13434,7 @@ class CountryHun extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "匈牙利", common: "匈牙利"),
           ],
-          latLng: const [47, 20],
+          latLng: const LatLng(47, 20),
           landlocked: true,
           bordersCodes: const [
             "Aut",
@@ -13414,8 +13468,10 @@ class CountryHun extends WorldCountry {
           fifa: "HUN",
           car: const Car(signs: ["H"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Budapest"], latLng: [47.5, 19.08]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Budapest"),
+            latLng: LatLng(47.5, 19.08),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -13580,7 +13636,7 @@ class CountryPse extends WorldCountry {
               common: "巴勒斯坦",
             ),
           ],
-          latLng: const [31.9, 35.2],
+          latLng: const LatLng(31.9, 35.2),
           bordersCodes: const ["Isr", "Egy", "Jor"],
           areaMetric: 6220,
           demonyms: const [
@@ -13607,8 +13663,8 @@ class CountryPse extends WorldCountry {
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Ramallah", "Jerusalem"],
-            latLng: [31.9, 35.2],
+            capital: Capital("Ramallah", deJure: "Jerusalem"),
+            latLng: LatLng(31.9, 35.2),
           ),
         );
 }
@@ -13761,7 +13817,7 @@ class CountryLca extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "圣卢西亚", common: "圣卢西亚"),
           ],
-          latLng: const [13.88333333, -60.96666666],
+          latLng: const LatLng(13.88333333, -60.96666666),
           areaMetric: 616,
           demonyms: const [
             Demonyms(
@@ -13785,8 +13841,10 @@ class CountryLca extends WorldCountry {
           fifa: "LCA",
           car: const Car(signs: ["WL"], isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Castries"], latLng: [14, -61]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Castries"),
+            latLng: LatLng(14, -61),
+          ),
         );
 }
 
@@ -13946,7 +14004,7 @@ class CountryNpl extends WorldCountry {
               common: "尼泊尔",
             ),
           ],
-          latLng: const [28, 84],
+          latLng: const LatLng(28, 84),
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
           areaMetric: 147181,
@@ -13974,8 +14032,8 @@ class CountryNpl extends WorldCountry {
           timezones: const ["UTC+05:45"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Kathmandu"],
-            latLng: [27.72, 85.32],
+            capital: Capital("Kathmandu"),
+            latLng: LatLng(27.72, 85.32),
           ),
           postalCode: const PostalCode(),
         );
@@ -14129,7 +14187,7 @@ class CountryMng extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "蒙古", common: "蒙古"),
           ],
-          latLng: const [46, 105],
+          latLng: const LatLng(46, 105),
           landlocked: true,
           bordersCodes: const ["Chn", "Rus"],
           areaMetric: 1564110,
@@ -14156,8 +14214,8 @@ class CountryMng extends WorldCountry {
           car: const Car(signs: ["MGL"]),
           timezones: const ["UTC+07:00", "UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ulan Bator"],
-            latLng: [47.92, 106.91],
+            capital: Capital("Ulan Bator"),
+            latLng: LatLng(47.92, 106.91),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -14318,7 +14376,7 @@ class CountryZmb extends WorldCountry {
               common: "赞比亚",
             ),
           ],
-          latLng: const [-15, 30],
+          latLng: const LatLng(-15, 30),
           landlocked: true,
           bordersCodes: const [
             "Ago",
@@ -14353,8 +14411,10 @@ class CountryZmb extends WorldCountry {
           fifa: "ZAM",
           car: const Car(signs: ["RNR"], isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Lusaka"], latLng: [-15.42, 28.28]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Lusaka"),
+            latLng: LatLng(-15.42, 28.28),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -14516,7 +14576,7 @@ class CountryWlf extends WorldCountry {
               common: "瓦利斯和富图纳群岛",
             ),
           ],
-          latLng: const [-13.3, -176.2],
+          latLng: const LatLng(-13.3, -176.2),
           areaMetric: 142,
           demonyms: const [
             Demonyms(
@@ -14535,8 +14595,8 @@ class CountryWlf extends WorldCountry {
           timezones: const ["UTC+12:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Mata-Utu"],
-            latLng: [-13.95, -171.93],
+            capital: Capital("Mata-Utu"),
+            latLng: LatLng(-13.95, -171.93),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(986\\d{2})$"),
         );
@@ -14699,7 +14759,7 @@ class CountryMwi extends WorldCountry {
               common: "马拉维",
             ),
           ],
-          latLng: const [-13.5, 34],
+          latLng: const LatLng(-13.5, 34),
           landlocked: true,
           bordersCodes: const ["Moz", "Tza", "Zmb"],
           areaMetric: 118484,
@@ -14726,8 +14786,8 @@ class CountryMwi extends WorldCountry {
           car: const Car(signs: ["MW"], isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Lilongwe"],
-            latLng: [-13.97, 33.78],
+            capital: Capital("Lilongwe"),
+            latLng: LatLng(-13.97, 33.78),
           ),
         );
 }
@@ -14884,7 +14944,7 @@ class CountryBhr extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "巴林王国", common: "巴林"),
           ],
-          latLng: const [26, 50.55],
+          latLng: const LatLng(26, 50.55),
           areaMetric: 765,
           demonyms: const [
             Demonyms(
@@ -14907,8 +14967,10 @@ class CountryBhr extends WorldCountry {
           fifa: "BHR",
           car: const Car(signs: ["BRN"]),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Manama"], latLng: [26.23, 50.57]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Manama"),
+            latLng: LatLng(26.23, 50.57),
+          ),
           postalCode: const PostalCode(
             format: "####|###",
             regExpPattern: r"^(\\d{3}\\d?)$",
@@ -15064,7 +15126,7 @@ class CountryUkr extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "乌克兰", common: "乌克兰"),
           ],
-          latLng: const [49, 32],
+          latLng: const LatLng(49, 32),
           bordersCodes: const [
             "Blr",
             "Hun",
@@ -15097,8 +15159,10 @@ class CountryUkr extends WorldCountry {
           fifa: "UKR",
           car: const Car(signs: ["UA"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Kyiv"], latLng: [50.43, 30.52]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Kyiv"),
+            latLng: LatLng(50.43, 30.52),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -15262,7 +15326,7 @@ class CountryNru extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "瑙鲁共和国", common: "瑙鲁"),
           ],
-          latLng: const [-0.53333333, 166.91666666],
+          latLng: const LatLng(-0.53333333, 166.91666666),
           areaMetric: 21,
           demonyms: const [
             Demonyms(
@@ -15285,8 +15349,10 @@ class CountryNru extends WorldCountry {
           gini: const Gini(year: 2012, value: 34.8),
           car: const Car(signs: ["NAU"], isRightSide: false),
           timezones: const ["UTC+12:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Yaren"], latLng: [-0.55, 166.92]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Yaren"),
+            latLng: LatLng(-0.55, 166.92),
+          ),
         );
 }
 
@@ -15443,7 +15509,7 @@ class CountryMyt extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马约特", common: "马约特"),
           ],
-          latLng: const [-12.83333333, 45.16666666],
+          latLng: const LatLng(-12.83333333, 45.16666666),
           areaMetric: 374,
           demonyms: const [
             Demonyms(
@@ -15467,8 +15533,8 @@ class CountryMyt extends WorldCountry {
           timezones: const ["UTC+03:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Mamoudzou"],
-            latLng: [-12.78, 45.22],
+            capital: Capital("Mamoudzou"),
+            latLng: LatLng(-12.78, 45.22),
           ),
           postalCode: const PostalCode(),
         );
@@ -15626,7 +15692,7 @@ class CountryDza extends WorldCountry {
               common: "阿尔及利亚",
             ),
           ],
-          latLng: const [28, 3],
+          latLng: const LatLng(28, 3),
           bordersCodes: const [
             "Tun",
             "Lby",
@@ -15660,8 +15726,10 @@ class CountryDza extends WorldCountry {
           car: const Car(signs: ["DZ"]),
           timezones: const ["UTC+01:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Algiers"], latLng: [36.75, 3.05]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Algiers"),
+            latLng: LatLng(36.75, 3.05),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -15856,7 +15924,7 @@ class CountryCan extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "加拿大", common: "加拿大"),
           ],
-          latLng: const [60, -95],
+          latLng: const LatLng(60, -95),
           bordersCodes: const ["Usa"],
           areaMetric: 9984670,
           demonyms: const [
@@ -15889,8 +15957,10 @@ class CountryCan extends WorldCountry {
             "UTC-03:30",
           ],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Ottawa"], latLng: [45.42, -75.7]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Ottawa"),
+            latLng: LatLng(45.42, -75.7),
+          ),
           postalCode: const PostalCode(
             format: "@#@ #@#",
             regExpPattern:
@@ -16055,7 +16125,7 @@ class CountryLie extends WorldCountry {
               common: "列支敦士登",
             ),
           ],
-          latLng: const [47.26666666, 9.53333333],
+          latLng: const LatLng(47.26666666, 9.53333333),
           landlocked: true,
           bordersCodes: const ["Aut", "Che"],
           areaMetric: 160,
@@ -16080,8 +16150,10 @@ class CountryLie extends WorldCountry {
           fifa: "LIE",
           car: const Car(signs: ["FL"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Vaduz"], latLng: [47.13, 9.52]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Vaduz"),
+            latLng: LatLng(47.13, 9.52),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -16244,7 +16316,7 @@ class CountryEth extends WorldCountry {
               common: "埃塞俄比亚",
             ),
           ],
-          latLng: const [8, 38],
+          latLng: const LatLng(8, 38),
           landlocked: true,
           bordersCodes: const [
             "Dji",
@@ -16278,8 +16350,8 @@ class CountryEth extends WorldCountry {
           car: const Car(signs: ["ETH"]),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Addis Ababa"],
-            latLng: [9.03, 38.7],
+            capital: Capital("Addis Ababa"),
+            latLng: LatLng(9.03, 38.7),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -16438,7 +16510,7 @@ class CountryDom extends WorldCountry {
               common: "多明尼加",
             ),
           ],
-          latLng: const [19, -70.66666666],
+          latLng: const LatLng(19, -70.66666666),
           bordersCodes: const ["Hti"],
           areaMetric: 48671,
           demonyms: const [
@@ -16464,8 +16536,8 @@ class CountryDom extends WorldCountry {
           car: const Car(signs: ["DOM"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Santo Domingo"],
-            latLng: [18.47, -69.9],
+            capital: Capital("Santo Domingo"),
+            latLng: LatLng(18.47, -69.9),
           ),
           postalCode: const PostalCode(),
         );
@@ -16626,7 +16698,7 @@ class CountryBvt extends WorldCountry {
               m: "Bouvet Islander",
             ),
           ],
-          latLng: const [54.4208, 3.3464],
+          latLng: const LatLng(54.4208, 3.3464),
           areaMetric: 49,
           emoji: "🇧🇻",
           maps: const Maps(
@@ -16794,7 +16866,7 @@ class CountryNfk extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "诺福克岛", common: "诺福克岛"),
           ],
-          latLng: const [-29.03333333, 167.95],
+          latLng: const LatLng(-29.03333333, 167.95),
           areaMetric: 36,
           demonyms: const [
             Demonyms(
@@ -16818,8 +16890,8 @@ class CountryNfk extends WorldCountry {
           timezones: const ["UTC+11:30"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Kingston"],
-            latLng: [-29.05, 167.97],
+            capital: Capital("Kingston"),
+            latLng: LatLng(-29.05, 167.97),
           ),
         );
 }
@@ -16972,7 +17044,7 @@ class CountryNld extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "荷兰", common: "荷兰"),
           ],
-          latLng: const [52.5, 5.75],
+          latLng: const LatLng(52.5, 5.75),
           bordersCodes: const ["Bel", "Deu"],
           areaMetric: 41850,
           demonyms: const [
@@ -16998,8 +17070,8 @@ class CountryNld extends WorldCountry {
           car: const Car(signs: ["NL"]),
           timezones: const ["UTC-04:00", "UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Amsterdam"],
-            latLng: [52.35, 4.92],
+            capital: Capital("Amsterdam"),
+            latLng: LatLng(52.35, 4.92),
           ),
           postalCode: const PostalCode(
             format: "#### @@",
@@ -17171,7 +17243,7 @@ class CountryMnp extends WorldCountry {
               common: "北马里亚纳群岛",
             ),
           ],
-          latLng: const [15.2, 145.75],
+          latLng: const LatLng(15.2, 145.75),
           areaMetric: 464,
           demonyms: const [
             Demonyms(
@@ -17195,8 +17267,8 @@ class CountryMnp extends WorldCountry {
           timezones: const ["UTC+10:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Saipan"],
-            latLng: [15.2, 145.75],
+            capital: Capital("Saipan"),
+            latLng: LatLng(15.2, 145.75),
           ),
         );
 }
@@ -17377,7 +17449,7 @@ class CountryHkg extends WorldCountry {
               common: "香港",
             ),
           ],
-          latLng: const [22.267, 114.188],
+          latLng: const LatLng(22.267, 114.188),
           bordersCodes: const ["Chn"],
           areaMetric: 1104,
           demonyms: const [
@@ -17402,8 +17474,8 @@ class CountryHkg extends WorldCountry {
           car: const Car(signs: ["HK"], isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["City of Victoria"],
-            latLng: [22.267, 114.188],
+            capital: Capital("City of Victoria"),
+            latLng: LatLng(22.267, 114.188),
           ),
         );
 }
@@ -17565,7 +17637,7 @@ class CountryIrq extends WorldCountry {
               common: "伊拉克",
             ),
           ],
-          latLng: const [33, 44],
+          latLng: const LatLng(33, 44),
           bordersCodes: const [
             "Irn",
             "Jor",
@@ -17598,8 +17670,10 @@ class CountryIrq extends WorldCountry {
           car: const Car(signs: ["IRQ"]),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Baghdad"], latLng: [33.33, 44.4]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Baghdad"),
+            latLng: LatLng(33.33, 44.4),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -17752,7 +17826,7 @@ class CountryEsp extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "西班牙王国", common: "西班牙"),
           ],
-          latLng: const [40, -4],
+          latLng: const LatLng(40, -4),
           bordersCodes: const [
             "And",
             "Fra",
@@ -17783,8 +17857,10 @@ class CountryEsp extends WorldCountry {
           fifa: "ESP",
           car: const Car(signs: ["E"]),
           timezones: const ["UTC+00:00", "UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Madrid"], latLng: [40.4, -3.68]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Madrid"),
+            latLng: LatLng(40.4, -3.68),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -17942,7 +18018,7 @@ class CountryTgo extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "多哥共和国", common: "多哥"),
           ],
-          latLng: const [8, 1.16666666],
+          latLng: const LatLng(8, 1.16666666),
           bordersCodes: const ["Ben", "Bfa", "Gha"],
           areaMetric: 56785,
           demonyms: const [
@@ -17967,8 +18043,10 @@ class CountryTgo extends WorldCountry {
           fifa: "TOG",
           car: const Car(signs: ["TG"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Lomé"], latLng: [6.14, 1.21]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Lomé"),
+            latLng: LatLng(6.14, 1.21),
+          ),
         );
 }
 
@@ -18132,7 +18210,7 @@ class CountryChn extends WorldCountry {
               common: "中国",
             ),
           ],
-          latLng: const [35, 105],
+          latLng: const LatLng(35, 105),
           bordersCodes: const [
             "Afg",
             "Btn",
@@ -18175,8 +18253,8 @@ class CountryChn extends WorldCountry {
           car: const Car(signs: ["RC"]),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Beijing"],
-            latLng: [39.92, 116.38],
+            capital: Capital("Beijing"),
+            latLng: LatLng(39.92, 116.38),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -18342,7 +18420,7 @@ class CountryFlk extends WorldCountry {
               common: "福克兰群岛",
             ),
           ],
-          latLng: const [-51.75, -59],
+          latLng: const LatLng(-51.75, -59),
           areaMetric: 12173,
           demonyms: const [
             Demonyms(
@@ -18365,8 +18443,8 @@ class CountryFlk extends WorldCountry {
           car: const Car(signs: ["GB"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Stanley"],
-            latLng: [-51.7, -57.85],
+            capital: Capital("Stanley"),
+            latLng: LatLng(-51.7, -57.85),
           ),
         );
 }
@@ -18840,7 +18918,7 @@ class CountryUsa extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "美利坚合众国", common: "美国"),
           ],
-          latLng: const [38, -97],
+          latLng: const LatLng(38, -97),
           bordersCodes: const ["Can", "Mex"],
           areaMetric: 9372610,
           demonyms: const [
@@ -18879,8 +18957,8 @@ class CountryUsa extends WorldCountry {
           ],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Washington, D.C."],
-            latLng: [38.89, -77.05],
+            capital: Capital("Washington, D.C."),
+            latLng: LatLng(38.89, -77.05),
           ),
           postalCode: const PostalCode(
             format: "#####-####",
@@ -19039,7 +19117,7 @@ class CountryMaf extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "圣马丁", common: "圣马丁"),
           ],
-          latLng: const [18.0708, 63.0501],
+          latLng: const LatLng(18.0708, 63.0501),
           bordersCodes: const ["Sxm"],
           areaMetric: 53,
           demonyms: const [
@@ -19064,8 +19142,8 @@ class CountryMaf extends WorldCountry {
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Marigot"],
-            latLng: [18.07, -63.08],
+            capital: Capital("Marigot"),
+            latLng: LatLng(18.07, -63.08),
           ),
           postalCode: const PostalCode(),
         );
@@ -19228,7 +19306,7 @@ class CountryIrn extends WorldCountry {
               common: "伊朗",
             ),
           ],
-          latLng: const [32, 53],
+          latLng: const LatLng(32, 53),
           bordersCodes: const [
             "Afg",
             "Arm",
@@ -19262,8 +19340,10 @@ class CountryIrn extends WorldCountry {
           car: const Car(signs: ["IR"]),
           timezones: const ["UTC+03:30"],
           startOfWeek: Weekday.saturday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Tehran"], latLng: [35.7, 51.42]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tehran"),
+            latLng: LatLng(35.7, 51.42),
+          ),
           postalCode: const PostalCode(
             format: "##########",
             regExpPattern: r"^(\\d{10})$",
@@ -19428,7 +19508,7 @@ class CountryMex extends WorldCountry {
               common: "墨西哥",
             ),
           ],
-          latLng: const [23, -102],
+          latLng: const LatLng(23, -102),
           bordersCodes: const ["Blz", "Gtm", "Usa"],
           areaMetric: 1964375,
           demonyms: const [
@@ -19454,8 +19534,8 @@ class CountryMex extends WorldCountry {
           car: const Car(signs: ["MEX"]),
           timezones: const ["UTC-08:00", "UTC-07:00", "UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Mexico City"],
-            latLng: [19.43, -99.13],
+            capital: Capital("Mexico City"),
+            latLng: LatLng(19.43, -99.13),
           ),
           postalCode: const PostalCode(),
         );
@@ -19614,7 +19694,7 @@ class CountryBrn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "文莱和平之国", common: "文莱"),
           ],
-          latLng: const [4.5, 114.66666666],
+          latLng: const LatLng(4.5, 114.66666666),
           bordersCodes: const ["Mys"],
           areaMetric: 5765,
           demonyms: const [
@@ -19639,8 +19719,8 @@ class CountryBrn extends WorldCountry {
           car: const Car(signs: ["BRU"], isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bandar Seri Begawan"],
-            latLng: [4.88, 114.93],
+            capital: Capital("Bandar Seri Begawan"),
+            latLng: LatLng(4.88, 114.93),
           ),
           postalCode: const PostalCode(
             format: "@@####",
@@ -19813,7 +19893,7 @@ class CountryCyp extends WorldCountry {
               common: "塞浦路斯",
             ),
           ],
-          latLng: const [35, 33],
+          latLng: const LatLng(35, 33),
           areaMetric: 9251,
           demonyms: const [
             Demonyms(
@@ -19837,8 +19917,10 @@ class CountryCyp extends WorldCountry {
           fifa: "CYP",
           car: const Car(signs: ["CY"], isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Nicosia"], latLng: [35.17, 33.37]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Nicosia"),
+            latLng: LatLng(35.17, 33.37),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -20000,7 +20082,7 @@ class CountryNic extends WorldCountry {
               common: "尼加拉瓜",
             ),
           ],
-          latLng: const [13, -85],
+          latLng: const LatLng(13, -85),
           bordersCodes: const ["Cri", "Hnd"],
           areaMetric: 130373,
           demonyms: const [
@@ -20026,8 +20108,8 @@ class CountryNic extends WorldCountry {
           car: const Car(signs: ["NIC"]),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Managua"],
-            latLng: [12.13, -86.25],
+            capital: Capital("Managua"),
+            latLng: LatLng(12.13, -86.25),
           ),
           postalCode: const PostalCode(
             format: "###-###-#",
@@ -20198,7 +20280,7 @@ class CountryCuw extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "库拉索", common: "库拉索"),
           ],
-          latLng: const [12.116667, -68.933333],
+          latLng: const LatLng(12.116667, -68.933333),
           areaMetric: 444,
           demonyms: const [
             Demonyms(
@@ -20222,8 +20304,8 @@ class CountryCuw extends WorldCountry {
           car: const Car(signs: ["CW"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Willemstad"],
-            latLng: [12.1, -68.92],
+            capital: Capital("Willemstad"),
+            latLng: LatLng(12.1, -68.92),
           ),
         );
 }
@@ -20391,7 +20473,7 @@ class CountryPri extends WorldCountry {
               common: "波多黎各",
             ),
           ],
-          latLng: const [18.25, -66.5],
+          latLng: const LatLng(18.25, -66.5),
           areaMetric: 8870,
           demonyms: const [
             Demonyms(
@@ -20416,8 +20498,8 @@ class CountryPri extends WorldCountry {
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["San Juan"],
-            latLng: [18.47, -66.12],
+            capital: Capital("San Juan"),
+            latLng: LatLng(18.47, -66.12),
           ),
           postalCode: const PostalCode(
             format: "#####-####",
@@ -20579,7 +20661,7 @@ class CountryNcl extends WorldCountry {
               common: "新喀里多尼亚",
             ),
           ],
-          latLng: const [-21.5, 165.5],
+          latLng: const LatLng(-21.5, 165.5),
           areaMetric: 18575,
           demonyms: const [
             Demonyms(
@@ -20603,8 +20685,8 @@ class CountryNcl extends WorldCountry {
           car: const Car(signs: ["F"]),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nouméa"],
-            latLng: [-22.27, 166.45],
+            capital: Capital("Nouméa"),
+            latLng: LatLng(-22.27, 166.45),
           ),
           postalCode: const PostalCode(),
         );
@@ -20762,7 +20844,7 @@ class CountrySsd extends WorldCountry {
               common: "南苏丹",
             ),
           ],
-          latLng: const [7, 30],
+          latLng: const LatLng(7, 30),
           landlocked: true,
           bordersCodes: const [
             "Caf",
@@ -20796,8 +20878,10 @@ class CountrySsd extends WorldCountry {
           car: const Car(signs: [""]),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Juba"], latLng: [4.85, 31.62]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Juba"),
+            latLng: LatLng(4.85, 31.62),
+          ),
         );
 }
 
@@ -20964,7 +21048,7 @@ class CountrySom extends WorldCountry {
               common: "索马里",
             ),
           ],
-          latLng: const [10, 49],
+          latLng: const LatLng(10, 49),
           bordersCodes: const ["Dji", "Eth", "Ken"],
           areaMetric: 637657,
           demonyms: const [
@@ -20990,8 +21074,8 @@ class CountrySom extends WorldCountry {
           car: const Car(signs: ["SO"]),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Mogadishu"],
-            latLng: [2.07, 45.33],
+            capital: Capital("Mogadishu"),
+            latLng: LatLng(2.07, 45.33),
           ),
           postalCode: const PostalCode(
             format: "@@  #####",
@@ -21153,7 +21237,7 @@ class CountryGrc extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "希腊共和国", common: "希腊"),
           ],
-          latLng: const [39, 22],
+          latLng: const LatLng(39, 22),
           bordersCodes: const [
             "Alb",
             "Bgr",
@@ -21183,8 +21267,10 @@ class CountryGrc extends WorldCountry {
           fifa: "GRE",
           car: const Car(signs: ["GR"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Athens"], latLng: [37.98, 23.73]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Athens"),
+            latLng: LatLng(37.98, 23.73),
+          ),
           postalCode: const PostalCode(
             format: "### ##",
           ),
@@ -21345,7 +21431,7 @@ class CountryBes extends WorldCountry {
               common: "荷蘭加勒比區",
             ),
           ],
-          latLng: const [12.18, -68.25],
+          latLng: const LatLng(12.18, -68.25),
           areaMetric: 328,
           demonyms: const [
             Demonyms(
@@ -21368,8 +21454,8 @@ class CountryBes extends WorldCountry {
           car: const Car(signs: [""]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Kralendijk"],
-            latLng: [12.14, -68.27],
+            capital: Capital("Kralendijk"),
+            latLng: LatLng(12.14, -68.27),
           ),
         );
 }
@@ -21531,7 +21617,7 @@ class CountryLao extends WorldCountry {
               common: "老挝",
             ),
           ],
-          latLng: const [18, 105],
+          latLng: const LatLng(18, 105),
           landlocked: true,
           bordersCodes: const [
             "Mmr",
@@ -21564,8 +21650,8 @@ class CountryLao extends WorldCountry {
           car: const Car(signs: ["LAO"]),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Vientiane"],
-            latLng: [17.97, 102.6],
+            capital: Capital("Vientiane"),
+            latLng: LatLng(17.97, 102.6),
           ),
           postalCode: const PostalCode(),
         );
@@ -21725,7 +21811,7 @@ class CountryBlz extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "伯利兹", common: "伯利兹"),
           ],
-          latLng: const [17.25, -88.75],
+          latLng: const LatLng(17.25, -88.75),
           bordersCodes: const ["Gtm", "Mex"],
           areaMetric: 22966,
           demonyms: const [
@@ -21751,8 +21837,8 @@ class CountryBlz extends WorldCountry {
           car: const Car(signs: ["BH"]),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Belmopan"],
-            latLng: [17.25, -88.77],
+            capital: Capital("Belmopan"),
+            latLng: LatLng(17.25, -88.77),
           ),
         );
 }
@@ -21913,7 +21999,7 @@ class CountrySlv extends WorldCountry {
               common: "萨尔瓦多",
             ),
           ],
-          latLng: const [13.83333333, -88.91666666],
+          latLng: const LatLng(13.83333333, -88.91666666),
           bordersCodes: const ["Gtm", "Hnd"],
           areaMetric: 21041,
           demonyms: const [
@@ -21939,8 +22025,8 @@ class CountrySlv extends WorldCountry {
           car: const Car(signs: ["ES"]),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["San Salvador"],
-            latLng: [13.7, -89.2],
+            capital: Capital("San Salvador"),
+            latLng: LatLng(13.7, -89.2),
           ),
           postalCode: const PostalCode(
             format: "CP ####",
@@ -22098,7 +22184,7 @@ class CountryJam extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "牙买加", common: "牙买加"),
           ],
-          latLng: const [18.25, -77.5],
+          latLng: const LatLng(18.25, -77.5),
           areaMetric: 10991,
           demonyms: const [
             Demonyms(
@@ -22123,8 +22209,8 @@ class CountryJam extends WorldCountry {
           car: const Car(signs: ["JA"], isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Kingston"],
-            latLng: [17.99702, -76.79358],
+            capital: Capital("Kingston"),
+            latLng: LatLng(17.99702, -76.79358),
           ),
         );
 }
@@ -22285,7 +22371,7 @@ class CountryUry extends WorldCountry {
               common: "乌拉圭",
             ),
           ],
-          latLng: const [-33, -56],
+          latLng: const LatLng(-33, -56),
           bordersCodes: const ["Arg", "Bra"],
           areaMetric: 181034,
           demonyms: const [
@@ -22311,8 +22397,8 @@ class CountryUry extends WorldCountry {
           car: const Car(signs: ["ROU"]),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Montevideo"],
-            latLng: [-34.85, -56.17],
+            capital: Capital("Montevideo"),
+            latLng: LatLng(-34.85, -56.17),
           ),
           postalCode: const PostalCode(),
         );
@@ -22480,7 +22566,7 @@ class CountryPng extends WorldCountry {
               common: "巴布亚新几内亚",
             ),
           ],
-          latLng: const [-6, 147],
+          latLng: const LatLng(-6, 147),
           bordersCodes: const ["Idn"],
           areaMetric: 462840,
           demonyms: const [
@@ -22507,8 +22593,8 @@ class CountryPng extends WorldCountry {
           timezones: const ["UTC+10:00"],
 
           capitalInfo: const CapitalInfo(
-            capital: ["Port Moresby"],
-            latLng: [-9.45, 147.18],
+            capital: Capital("Port Moresby"),
+            latLng: LatLng(-9.45, 147.18),
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
@@ -22683,7 +22769,7 @@ class CountryLux extends WorldCountry {
               common: "卢森堡",
             ),
           ],
-          latLng: const [49.75, 6.16666666],
+          latLng: const LatLng(49.75, 6.16666666),
           landlocked: true,
           bordersCodes: const ["Bel", "Fra", "Deu"],
           areaMetric: 2586,
@@ -22710,8 +22796,8 @@ class CountryLux extends WorldCountry {
           car: const Car(signs: ["L"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Luxembourg"],
-            latLng: [49.6, 6.12],
+            capital: Capital("Luxembourg"),
+            latLng: LatLng(49.6, 6.12),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -22866,7 +22952,7 @@ class CountryChl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "智利共和国", common: "智利"),
           ],
-          latLng: const [-30, -71],
+          latLng: const LatLng(-30, -71),
           bordersCodes: const ["Arg", "Bol", "Per"],
           areaMetric: 756102,
           demonyms: const [
@@ -22892,8 +22978,8 @@ class CountryChl extends WorldCountry {
           car: const Car(signs: ["RCH"]),
           timezones: const ["UTC-06:00", "UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Santiago"],
-            latLng: [-33.45, -70.67],
+            capital: Capital("Santiago"),
+            latLng: LatLng(-33.45, -70.67),
           ),
           postalCode: const PostalCode(
             format: "#######",
@@ -23059,7 +23145,7 @@ class CountryVat extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "梵蒂冈城国", common: "梵蒂冈"),
           ],
-          latLng: const [41.9, 12.45],
+          latLng: const LatLng(41.9, 12.45),
           landlocked: true,
           bordersCodes: const ["Ita"],
           areaMetric: 0.44,
@@ -23084,8 +23170,8 @@ class CountryVat extends WorldCountry {
           car: const Car(signs: ["V"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Vatican City"],
-            latLng: [41.9, 12.45],
+            capital: Capital("Vatican City"),
+            latLng: LatLng(41.9, 12.45),
           ),
         );
 }
@@ -23248,7 +23334,7 @@ class CountryGnb extends WorldCountry {
               common: "几内亚比绍",
             ),
           ],
-          latLng: const [12, -15],
+          latLng: const LatLng(12, -15),
           bordersCodes: const ["Gin", "Sen"],
           areaMetric: 36125,
           demonyms: const [
@@ -23273,8 +23359,10 @@ class CountryGnb extends WorldCountry {
           fifa: "GNB",
           car: const Car(signs: ["RGB"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bissau"], latLng: [11.85, -15.58]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bissau"),
+            latLng: LatLng(11.85, -15.58),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -23437,7 +23525,7 @@ class CountryUga extends WorldCountry {
               common: "乌干达",
             ),
           ],
-          latLng: const [1, 32],
+          latLng: const LatLng(1, 32),
           landlocked: true,
           bordersCodes: const [
             "Cod",
@@ -23469,8 +23557,10 @@ class CountryUga extends WorldCountry {
           fifa: "UGA",
           car: const Car(signs: ["EAU"], isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Kampala"], latLng: [0.32, 32.55]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Kampala"),
+            latLng: LatLng(0.32, 32.55),
+          ),
         );
 }
 
@@ -23631,7 +23721,7 @@ class CountryVen extends WorldCountry {
               common: "委内瑞拉",
             ),
           ],
-          latLng: const [8, -66],
+          latLng: const LatLng(8, -66),
           bordersCodes: const ["Bra", "Col", "Guy"],
           areaMetric: 916445,
           demonyms: const [
@@ -23657,8 +23747,8 @@ class CountryVen extends WorldCountry {
           car: const Car(signs: ["YV"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Caracas"],
-            latLng: [10.48, -66.87],
+            capital: Capital("Caracas"),
+            latLng: LatLng(10.48, -66.87),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -23823,7 +23913,7 @@ class CountrySrb extends WorldCountry {
               common: "塞尔维亚",
             ),
           ],
-          latLng: const [44, 21],
+          latLng: const LatLng(44, 21),
           landlocked: true,
           bordersCodes: const [
             "Bih",
@@ -23857,8 +23947,10 @@ class CountrySrb extends WorldCountry {
           fifa: "SRB",
           car: const Car(signs: ["SRB"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Belgrade"], latLng: [44.83, 20.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Belgrade"),
+            latLng: LatLng(44.83, 20.5),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -24018,7 +24110,7 @@ class CountryBen extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "贝宁共和国", common: "贝宁"),
           ],
-          latLng: const [9.5, 2.25],
+          latLng: const LatLng(9.5, 2.25),
           bordersCodes: const [
             "Bfa",
             "Ner",
@@ -24049,8 +24141,8 @@ class CountryBen extends WorldCountry {
           car: const Car(signs: ["DY"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Porto-Novo"],
-            latLng: [6.48, 2.62],
+            capital: Capital("Porto-Novo"),
+            latLng: LatLng(6.48, 2.62),
           ),
         );
 }
@@ -24211,7 +24303,7 @@ class CountryBgd extends WorldCountry {
               common: "孟加拉国",
             ),
           ],
-          latLng: const [24, 90],
+          latLng: const LatLng(24, 90),
           bordersCodes: const ["Mmr", "Ind"],
           areaMetric: 147570,
           demonyms: const [
@@ -24237,8 +24329,10 @@ class CountryBgd extends WorldCountry {
           car: const Car(signs: ["BD"], isRightSide: false),
           timezones: const ["UTC+06:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Dhaka"], latLng: [23.72, 90.4]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Dhaka"),
+            latLng: LatLng(23.72, 90.4),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -24392,7 +24486,7 @@ class CountryBhs extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "巴哈马联邦", common: "巴哈马"),
           ],
-          latLng: const [25.0343, 77.3963],
+          latLng: const LatLng(25.0343, 77.3963),
           areaMetric: 13943,
           demonyms: const [
             Demonyms(
@@ -24416,8 +24510,8 @@ class CountryBhs extends WorldCountry {
           car: const Car(signs: ["BS"], isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nassau"],
-            latLng: [25.08, -77.35],
+            capital: Capital("Nassau"),
+            latLng: LatLng(25.08, -77.35),
           ),
         );
 }
@@ -24566,7 +24660,7 @@ class CountryNiu extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "纽埃", common: "纽埃"),
           ],
-          latLng: const [-19.03333333, -169.86666666],
+          latLng: const LatLng(-19.03333333, -169.86666666),
           areaMetric: 260,
           demonyms: const [
             Demonyms(
@@ -24590,8 +24684,8 @@ class CountryNiu extends WorldCountry {
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Alofi"],
-            latLng: [-19.02, -169.92],
+            capital: Capital("Alofi"),
+            latLng: LatLng(-19.02, -169.92),
           ),
         );
 }
@@ -24748,7 +24842,7 @@ class CountryAtg extends WorldCountry {
               common: "安提瓜和巴布达",
             ),
           ],
-          latLng: const [17.05, -61.8],
+          latLng: const LatLng(17.05, -61.8),
           areaMetric: 442,
           demonyms: const [
             Demonyms(
@@ -24772,8 +24866,8 @@ class CountryAtg extends WorldCountry {
           car: const Car(signs: ["AG"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Saint John's"],
-            latLng: [17.12, -61.85],
+            capital: Capital("Saint John's"),
+            latLng: LatLng(17.12, -61.85),
           ),
         );
 }
@@ -24936,7 +25030,7 @@ class CountryBlm extends WorldCountry {
               common: "圣巴泰勒米",
             ),
           ],
-          latLng: const [18.5, -63.41666666],
+          latLng: const LatLng(18.5, -63.41666666),
           areaMetric: 21,
           demonyms: const [
             Demonyms(
@@ -24960,8 +25054,8 @@ class CountryBlm extends WorldCountry {
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Gustavia"],
-            latLng: [17.88, -62.85],
+            capital: Capital("Gustavia"),
+            latLng: LatLng(17.88, -62.85),
           ),
           postalCode: const PostalCode(),
         );
@@ -25130,7 +25224,7 @@ class CountrySyc extends WorldCountry {
               common: "塞舌尔",
             ),
           ],
-          latLng: const [-4.58333333, 55.66666666],
+          latLng: const LatLng(-4.58333333, 55.66666666),
           areaMetric: 452,
           demonyms: const [
             Demonyms(
@@ -25155,8 +25249,8 @@ class CountrySyc extends WorldCountry {
           car: const Car(signs: ["SY"], isRightSide: false),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Victoria"],
-            latLng: [-4.62, 55.45],
+            capital: Capital("Victoria"),
+            latLng: LatLng(-4.62, 55.45),
           ),
         );
 }
@@ -25315,7 +25409,7 @@ class CountryEsh extends WorldCountry {
               common: "西撒哈拉",
             ),
           ],
-          latLng: const [24.5, -13],
+          latLng: const LatLng(24.5, -13),
           bordersCodes: const ["Dza", "Mrt", "Mar"],
           areaMetric: 266000,
           demonyms: const [
@@ -25335,8 +25429,8 @@ class CountryEsh extends WorldCountry {
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["El Aaiún"],
-            latLng: [-13.28, 27.14],
+            capital: Capital("El Aaiún"),
+            latLng: LatLng(-13.28, 27.14),
           ),
         );
 }
@@ -25490,7 +25584,7 @@ class CountryLby extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "利比亚国", common: "利比亚"),
           ],
-          latLng: const [25, 17],
+          latLng: const LatLng(25, 17),
           bordersCodes: const [
             "Dza",
             "Tcd",
@@ -25523,8 +25617,8 @@ class CountryLby extends WorldCountry {
           timezones: const ["UTC+01:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Tripoli"],
-            latLng: [32.88, 13.17],
+            capital: Capital("Tripoli"),
+            latLng: LatLng(32.88, 13.17),
           ),
         );
 }
@@ -25687,7 +25781,7 @@ class CountryMkd extends WorldCountry {
               common: "北馬其頓",
             ),
           ],
-          latLng: const [41.83333333, 22],
+          latLng: const LatLng(41.83333333, 22),
           landlocked: true,
           bordersCodes: const [
             "Alb",
@@ -25719,8 +25813,10 @@ class CountryMkd extends WorldCountry {
           fifa: "MKD",
           car: const Car(signs: ["MK"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Skopje"], latLng: [42, 21.43]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Skopje"),
+            latLng: LatLng(42, 21.43),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -25884,7 +25980,7 @@ class CountryPer extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "秘鲁共和国", common: "秘鲁"),
           ],
-          latLng: const [-10, -76],
+          latLng: const LatLng(-10, -76),
           bordersCodes: const [
             "Bol",
             "Bra",
@@ -25915,8 +26011,10 @@ class CountryPer extends WorldCountry {
           fifa: "PER",
           car: const Car(signs: ["PE"]),
           timezones: const ["UTC-05:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Lima"], latLng: [-12.05, -77.05]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Lima"),
+            latLng: LatLng(-12.05, -77.05),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -26083,7 +26181,7 @@ class CountryBdi extends WorldCountry {
               common: "布隆迪",
             ),
           ],
-          latLng: const [-3.5, 30],
+          latLng: const LatLng(-3.5, 30),
           landlocked: true,
           bordersCodes: const ["Cod", "Rwa", "Tza"],
           areaMetric: 27834,
@@ -26109,8 +26207,10 @@ class CountryBdi extends WorldCountry {
           fifa: "BDI",
           car: const Car(signs: ["RU"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Gitega"], latLng: [-3.43, 29.93]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Gitega"),
+            latLng: LatLng(-3.43, 29.93),
+          ),
         );
 }
 
@@ -26271,7 +26371,7 @@ class CountryKir extends WorldCountry {
               common: "基里巴斯",
             ),
           ],
-          latLng: const [1.41666666, 173],
+          latLng: const LatLng(1.41666666, 173),
           areaMetric: 811,
           demonyms: const [
             Demonyms(
@@ -26295,8 +26395,8 @@ class CountryKir extends WorldCountry {
           car: const Car(signs: ["KIR"], isRightSide: false),
           timezones: const ["UTC+12:00", "UTC+13:00", "UTC+14:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["South Tarawa"],
-            latLng: [1.33, 172.98],
+            capital: Capital("South Tarawa"),
+            latLng: LatLng(1.33, 172.98),
           ),
         );
 }
@@ -26458,7 +26558,7 @@ class CountryTur extends WorldCountry {
               common: "土耳其",
             ),
           ],
-          latLng: const [39, 35],
+          latLng: const LatLng(39, 35),
           bordersCodes: const [
             "Arm",
             "Aze",
@@ -26492,8 +26592,10 @@ class CountryTur extends WorldCountry {
           fifa: "TUR",
           car: const Car(signs: ["TR"]),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Ankara"], latLng: [39.93, 32.87]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Ankara"),
+            latLng: LatLng(39.93, 32.87),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -26660,7 +26762,7 @@ class CountryTza extends WorldCountry {
               common: "坦桑尼亚",
             ),
           ],
-          latLng: const [-6, 35],
+          latLng: const LatLng(-6, 35),
           bordersCodes: const [
             "Bdi",
             "Cod",
@@ -26694,8 +26796,10 @@ class CountryTza extends WorldCountry {
           fifa: "TAN",
           car: const Car(signs: ["EAT"], isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Dodoma"], latLng: [-6.16, 35.75]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Dodoma"),
+            latLng: LatLng(-6.16, 35.75),
+          ),
         );
 }
 
@@ -26855,7 +26959,7 @@ class CountryTun extends WorldCountry {
               common: "突尼斯",
             ),
           ],
-          latLng: const [34, 9],
+          latLng: const LatLng(34, 9),
           bordersCodes: const ["Dza", "Lby"],
           areaMetric: 163610,
           demonyms: const [
@@ -26880,8 +26984,10 @@ class CountryTun extends WorldCountry {
           fifa: "TUN",
           car: const Car(signs: ["TN"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tunis"], latLng: [36.8, 10.18]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tunis"),
+            latLng: LatLng(36.8, 10.18),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -27040,7 +27146,7 @@ class CountryMsr extends WorldCountry {
               common: "蒙特塞拉特",
             ),
           ],
-          latLng: const [16.75, -62.2],
+          latLng: const LatLng(16.75, -62.2),
           areaMetric: 102,
           demonyms: const [
             Demonyms(
@@ -27064,8 +27170,8 @@ class CountryMsr extends WorldCountry {
           car: const Car(signs: ["GB"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Plymouth"],
-            latLng: [16.7, -62.22],
+            capital: Capital("Plymouth"),
+            latLng: LatLng(16.7, -62.22),
           ),
         );
 }
@@ -27233,7 +27339,7 @@ class CountryKgz extends WorldCountry {
               common: "吉尔吉斯斯坦",
             ),
           ],
-          latLng: const [41, 75],
+          latLng: const LatLng(41, 75),
           landlocked: true,
           bordersCodes: const [
             "Chn",
@@ -27264,8 +27370,10 @@ class CountryKgz extends WorldCountry {
           fifa: "KGZ",
           car: const Car(signs: ["KS"]),
           timezones: const ["UTC+06:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bishkek"], latLng: [42.87, 74.6]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bishkek"),
+            latLng: LatLng(42.87, 74.6),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -27427,7 +27535,7 @@ class CountryImn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马恩岛", common: "马恩岛"),
           ],
-          latLng: const [54.25, -4.5],
+          latLng: const LatLng(54.25, -4.5),
           areaMetric: 572,
           demonyms: const [
             Demonyms(
@@ -27444,8 +27552,10 @@ class CountryImn extends WorldCountry {
           population: 85032,
           car: const Car(signs: ["GBM"], isRightSide: false),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Douglas"], latLng: [54.15, -4.48]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Douglas"),
+            latLng: LatLng(54.15, -4.48),
+          ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
@@ -27607,7 +27717,7 @@ class CountryGlp extends WorldCountry {
               common: "瓜德罗普岛",
             ),
           ],
-          latLng: const [16.25, -61.583333],
+          latLng: const LatLng(16.25, -61.583333),
           areaMetric: 1628,
           demonyms: const [
             Demonyms(
@@ -27630,8 +27740,8 @@ class CountryGlp extends WorldCountry {
           car: const Car(signs: ["F"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Basse-Terre"],
-            latLng: [16.03, -61.73],
+            capital: Capital("Basse-Terre"),
+            latLng: LatLng(16.03, -61.73),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)\\d{3})$"),
         );
@@ -27785,7 +27895,7 @@ class CountryKwt extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "科威特国", common: "科威特"),
           ],
-          latLng: const [29.5, 45.75],
+          latLng: const LatLng(29.5, 45.75),
           bordersCodes: const ["Irq", "Sau"],
           areaMetric: 17818,
           demonyms: const [
@@ -27811,8 +27921,8 @@ class CountryKwt extends WorldCountry {
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Kuwait City"],
-            latLng: [29.37, 47.97],
+            capital: Capital("Kuwait City"),
+            latLng: LatLng(29.37, 47.97),
           ),
           postalCode: const PostalCode(),
         );
@@ -27972,7 +28082,7 @@ class CountryVgb extends WorldCountry {
               common: "英属维尔京群岛",
             ),
           ],
-          latLng: const [18.431383, -64.62305],
+          latLng: const LatLng(18.431383, -64.62305),
           areaMetric: 151,
           demonyms: const [
             Demonyms(
@@ -27991,8 +28101,8 @@ class CountryVgb extends WorldCountry {
           car: const Car(signs: ["BVI"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Road Town"],
-            latLng: [18.42, -64.62],
+            capital: Capital("Road Town"),
+            latLng: LatLng(18.42, -64.62),
           ),
         );
 }
@@ -28155,7 +28265,7 @@ class CountryCiv extends WorldCountry {
               common: "科特迪瓦",
             ),
           ],
-          latLng: const [8, -5],
+          latLng: const LatLng(8, -5),
           bordersCodes: const [
             "Bfa",
             "Gha",
@@ -28187,8 +28297,8 @@ class CountryCiv extends WorldCountry {
           car: const Car(signs: ["CI"]),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Yamoussoukro"],
-            latLng: [6.82, -5.27],
+            capital: Capital("Yamoussoukro"),
+            latLng: LatLng(6.82, -5.27),
           ),
         );
 }
@@ -28342,7 +28452,7 @@ class CountryCxr extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "圣诞岛", common: "圣诞岛"),
           ],
-          latLng: const [-10.5, 105.66666666],
+          latLng: const LatLng(-10.5, 105.66666666),
           areaMetric: 135,
           demonyms: const [
             Demonyms(
@@ -28360,8 +28470,8 @@ class CountryCxr extends WorldCountry {
           car: const Car(signs: ["AUS"], isRightSide: false),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Flying Fish Cove"],
-            latLng: [-10.42, 105.68],
+            capital: Capital("Flying Fish Cove"),
+            latLng: LatLng(-10.42, 105.68),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -28521,7 +28631,7 @@ class CountryLso extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "莱索托王国", common: "莱索托"),
           ],
-          latLng: const [-29.5, 28.5],
+          latLng: const LatLng(-29.5, 28.5),
           landlocked: true,
           bordersCodes: const ["Zaf"],
           areaMetric: 30355,
@@ -28547,8 +28657,10 @@ class CountryLso extends WorldCountry {
           fifa: "LES",
           car: const Car(signs: ["LS"], isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Maseru"], latLng: [-29.32, 27.48]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Maseru"),
+            latLng: LatLng(-29.32, 27.48),
+          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
         );
@@ -28714,7 +28826,7 @@ class CountryJey extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "泽西岛", common: "泽西岛"),
           ],
-          latLng: const [49.25, -2.16666666],
+          latLng: const LatLng(49.25, -2.16666666),
           areaMetric: 116,
           demonyms: const [
             Demonyms(
@@ -28737,8 +28849,8 @@ class CountryJey extends WorldCountry {
           car: const Car(signs: ["GBJ"], isRightSide: false),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Saint Helier"],
-            latLng: [49.18, -2.1],
+            capital: Capital("Saint Helier"),
+            latLng: LatLng(49.18, -2.1),
           ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
@@ -28904,7 +29016,7 @@ class CountrySvn extends WorldCountry {
               common: "斯洛文尼亚",
             ),
           ],
-          latLng: const [46.11666666, 14.81666666],
+          latLng: const LatLng(46.11666666, 14.81666666),
           bordersCodes: const [
             "Aut",
             "Hrv",
@@ -28935,8 +29047,8 @@ class CountrySvn extends WorldCountry {
           car: const Car(signs: ["SLO"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ljubljana"],
-            latLng: [46.05, 14.52],
+            capital: Capital("Ljubljana"),
+            latLng: LatLng(46.05, 14.52),
           ),
           postalCode: const PostalCode(
             format: "SI- ####",
@@ -29113,7 +29225,7 @@ class CountryBel extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "比利时王国", common: "比利时"),
           ],
-          latLng: const [50.83333333, 4],
+          latLng: const LatLng(50.83333333, 4),
           bordersCodes: const [
             "Fra",
             "Deu",
@@ -29143,8 +29255,10 @@ class CountryBel extends WorldCountry {
           fifa: "BEL",
           car: const Car(signs: ["B"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Brussels"], latLng: [50.83, 4.33]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Brussels"),
+            latLng: LatLng(50.83, 4.33),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -29303,7 +29417,7 @@ class CountryTca extends WorldCountry {
               common: "特克斯和凯科斯群岛",
             ),
           ],
-          latLng: const [21.75, -71.58333333],
+          latLng: const LatLng(21.75, -71.58333333),
           areaMetric: 948,
           demonyms: const [
             Demonyms(
@@ -29323,8 +29437,8 @@ class CountryTca extends WorldCountry {
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Cockburn Town"],
-            latLng: [21.46, -71.14],
+            capital: Capital("Cockburn Town"),
+            latLng: LatLng(21.46, -71.14),
           ),
           postalCode: const PostalCode(
             format: "TKCA 1ZZ",
@@ -29482,7 +29596,7 @@ class CountryGib extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "直布罗陀", common: "直布罗陀"),
           ],
-          latLng: const [36.13333333, -5.35],
+          latLng: const LatLng(36.13333333, -5.35),
           bordersCodes: const ["Esp"],
           areaMetric: 6,
           demonyms: const [
@@ -29507,8 +29621,8 @@ class CountryGib extends WorldCountry {
           car: const Car(signs: ["GBZ"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Gibraltar"],
-            latLng: [36.13, -5.35],
+            capital: Capital("Gibraltar"),
+            latLng: LatLng(36.13, -5.35),
           ),
         );
 }
@@ -29661,7 +29775,7 @@ class CountryQat extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "卡塔尔国", common: "卡塔尔"),
           ],
-          latLng: const [25.5, 51.25],
+          latLng: const LatLng(25.5, 51.25),
           bordersCodes: const ["Sau"],
           areaMetric: 11586,
           demonyms: const [
@@ -29686,8 +29800,10 @@ class CountryQat extends WorldCountry {
           car: const Car(signs: ["Q"]),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Doha"], latLng: [25.28, 51.53]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Doha"),
+            latLng: LatLng(25.28, 51.53),
+          ),
         );
 }
 
@@ -29852,7 +29968,7 @@ class CountryBwa extends WorldCountry {
               common: "博茨瓦纳",
             ),
           ],
-          latLng: const [-22, 24],
+          latLng: const LatLng(-22, 24),
           landlocked: true,
           bordersCodes: const [
             "Nam",
@@ -29884,8 +30000,8 @@ class CountryBwa extends WorldCountry {
           car: const Car(signs: ["BW"], isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Gaborone"],
-            latLng: [-24.63, 25.9],
+            capital: Capital("Gaborone"),
+            latLng: LatLng(-24.63, 25.9),
           ),
         );
 }
@@ -30058,7 +30174,7 @@ class CountryGnq extends WorldCountry {
               common: "赤道几内亚",
             ),
           ],
-          latLng: const [2, 10],
+          latLng: const LatLng(2, 10),
           bordersCodes: const ["Cmr", "Gab"],
           areaMetric: 28051,
           demonyms: const [
@@ -30082,8 +30198,10 @@ class CountryGnq extends WorldCountry {
           fifa: "EQG",
           car: const Car(signs: ["GQ"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Malabo"], latLng: [3.75, 8.78]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Malabo"),
+            latLng: LatLng(3.75, 8.78),
+          ),
         );
 }
 
@@ -30252,7 +30370,7 @@ class CountryDji extends WorldCountry {
               common: "吉布提",
             ),
           ],
-          latLng: const [11.5, 43],
+          latLng: const LatLng(11.5, 43),
           bordersCodes: const ["Eri", "Eth", "Som"],
           areaMetric: 23200,
           demonyms: const [
@@ -30278,8 +30396,8 @@ class CountryDji extends WorldCountry {
           car: const Car(signs: ["DJI"]),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Djibouti"],
-            latLng: [11.58, 43.15],
+            capital: Capital("Djibouti"),
+            latLng: LatLng(11.58, 43.15),
           ),
         );
 }
@@ -30436,7 +30554,7 @@ class CountryGuy extends WorldCountry {
               common: "圭亚那",
             ),
           ],
-          latLng: const [5, -59],
+          latLng: const LatLng(5, -59),
           bordersCodes: const ["Bra", "Sur", "Ven"],
           areaMetric: 214969,
           demonyms: const [
@@ -30462,8 +30580,8 @@ class CountryGuy extends WorldCountry {
           car: const Car(signs: ["GUY"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Georgetown"],
-            latLng: [6.8, -58.15],
+            capital: Capital("Georgetown"),
+            latLng: LatLng(6.8, -58.15),
           ),
         );
 }
@@ -30624,7 +30742,7 @@ class CountryGum extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "关岛", common: "关岛"),
           ],
-          latLng: const [13.46666666, 144.78333333],
+          latLng: const LatLng(13.46666666, 144.78333333),
           areaMetric: 549,
           demonyms: const [
             Demonyms(
@@ -30643,8 +30761,8 @@ class CountryGum extends WorldCountry {
           car: const Car(signs: ["USA"]),
           timezones: const ["UTC+10:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Hagåtña"],
-            latLng: [13.48, 144.75],
+            capital: Capital("Hagåtña"),
+            latLng: LatLng(13.48, 144.75),
           ),
           postalCode: const PostalCode(
             format: "969##",
@@ -30805,7 +30923,7 @@ class CountryMco extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "摩纳哥公国", common: "摩纳哥"),
           ],
-          latLng: const [43.73333333, 7.4],
+          latLng: const LatLng(43.73333333, 7.4),
           bordersCodes: const ["Fra"],
           areaMetric: 2.02,
           demonyms: const [
@@ -30828,8 +30946,10 @@ class CountryMco extends WorldCountry {
           population: 39244,
           car: const Car(signs: ["MC"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Monaco"], latLng: [43.73, 7.42]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Monaco"),
+            latLng: LatLng(43.73, 7.42),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -30986,7 +31106,7 @@ class CountrySlb extends WorldCountry {
               common: "所罗门群岛",
             ),
           ],
-          latLng: const [-8, 159],
+          latLng: const LatLng(-8, 159),
           areaMetric: 28896,
           demonyms: const [
             Demonyms(
@@ -31011,8 +31131,8 @@ class CountrySlb extends WorldCountry {
           car: const Car(signs: ["SOL"], isRightSide: false),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Honiara"],
-            latLng: [-9.43, 159.95],
+            capital: Capital("Honiara"),
+            latLng: LatLng(-9.43, 159.95),
           ),
         );
 }
@@ -31176,7 +31296,7 @@ class CountryGgy extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "根西岛", common: "根西岛"),
           ],
-          latLng: const [49.46666666, -2.58333333],
+          latLng: const LatLng(49.46666666, -2.58333333),
           areaMetric: 78,
           demonyms: const [
             Demonyms(
@@ -31199,8 +31319,8 @@ class CountryGgy extends WorldCountry {
           car: const Car(signs: ["GBG"], isRightSide: false),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["St. Peter Port"],
-            latLng: [49.45, -2.54],
+            capital: Capital("St. Peter Port"),
+            latLng: LatLng(49.45, -2.54),
           ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
@@ -31372,7 +31492,7 @@ class CountryPry extends WorldCountry {
               common: "巴拉圭",
             ),
           ],
-          latLng: const [-23, -58],
+          latLng: const LatLng(-23, -58),
           landlocked: true,
           bordersCodes: const ["Arg", "Bol", "Bra"],
           areaMetric: 406752,
@@ -31399,8 +31519,8 @@ class CountryPry extends WorldCountry {
           car: const Car(signs: ["PY"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Asunción"],
-            latLng: [-25.28, -57.57],
+            capital: Capital("Asunción"),
+            latLng: LatLng(-25.28, -57.57),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -31565,7 +31685,7 @@ class CountrySur extends WorldCountry {
               common: "苏里南",
             ),
           ],
-          latLng: const [4, -56],
+          latLng: const LatLng(4, -56),
           bordersCodes: const ["Bra", "Guf", "Guy"],
           areaMetric: 163820,
           demonyms: const [
@@ -31591,8 +31711,8 @@ class CountrySur extends WorldCountry {
           car: const Car(signs: ["SME"], isRightSide: false),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Paramaribo"],
-            latLng: [5.83, -55.17],
+            capital: Capital("Paramaribo"),
+            latLng: LatLng(5.83, -55.17),
           ),
         );
 }
@@ -31751,7 +31871,7 @@ class CountryUmi extends WorldCountry {
               common: "美国本土外小岛屿",
             ),
           ],
-          latLng: const [19.3, 166.633333],
+          latLng: const LatLng(19.3, 166.633333),
           areaMetric: 34.2,
           demonyms: const [
             Demonyms(
@@ -31769,7 +31889,10 @@ class CountryUmi extends WorldCountry {
           car: const Car(signs: [""]),
           timezones: const ["UTC-11:00", "UTC-10:00", "UTC+12:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(capital: ["Washington DC"]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Washington DC"),
+            latLng: LatLng(38.9072, 77.0369),
+          ),
         );
 }
 
@@ -31929,7 +32052,7 @@ class CountryGin extends WorldCountry {
               common: "几内亚",
             ),
           ],
-          latLng: const [11, -10],
+          latLng: const LatLng(11, -10),
           bordersCodes: const [
             "Civ",
             "Gnb",
@@ -31961,8 +32084,10 @@ class CountryGin extends WorldCountry {
           fifa: "GUI",
           car: const Car(signs: ["RG"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Conakry"], latLng: [9.5, -13.7]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Conakry"),
+            latLng: LatLng(9.5, -13.7),
+          ),
         );
 }
 
@@ -32114,7 +32239,7 @@ class CountryCze extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "捷克共和国", common: "捷克"),
           ],
-          latLng: const [49.75, 15.5],
+          latLng: const LatLng(49.75, 15.5),
           landlocked: true,
           bordersCodes: const [
             "Aut",
@@ -32145,8 +32270,10 @@ class CountryCze extends WorldCountry {
           fifa: "CZE",
           car: const Car(signs: ["CZ"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Prague"], latLng: [50.08, 14.47]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Prague"),
+            latLng: LatLng(50.08, 14.47),
+          ),
           postalCode: const PostalCode(
             format: "### ##",
           ),
@@ -32313,7 +32440,7 @@ class CountryCom extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "科摩罗联盟", common: "科摩罗"),
           ],
-          latLng: const [-12.16666666, 44.25],
+          latLng: const LatLng(-12.16666666, 44.25),
           areaMetric: 1862,
           demonyms: const [
             Demonyms(
@@ -32337,8 +32464,10 @@ class CountryCom extends WorldCountry {
           fifa: "COM",
           car: const Car(signs: ["COM"]),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Moroni"], latLng: [-11.7, 43.23]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Moroni"),
+            latLng: LatLng(-11.7, 43.23),
+          ),
         );
 }
 
@@ -32490,7 +32619,7 @@ class CountryGha extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "加纳共和国", common: "加纳"),
           ],
-          latLng: const [8, -2],
+          latLng: const LatLng(8, -2),
           bordersCodes: const ["Bfa", "Civ", "Tgo"],
           areaMetric: 238533,
           demonyms: const [
@@ -32515,8 +32644,10 @@ class CountryGha extends WorldCountry {
           fifa: "GHA",
           car: const Car(signs: ["GH"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Accra"], latLng: [5.55, -0.22]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Accra"),
+            latLng: LatLng(5.55, -0.22),
+          ),
         );
 }
 
@@ -32675,7 +32806,7 @@ class CountryKna extends WorldCountry {
               common: "圣基茨和尼维斯",
             ),
           ],
-          latLng: const [17.33333333, -62.75],
+          latLng: const LatLng(17.33333333, -62.75),
           areaMetric: 261,
           demonyms: const [
             Demonyms(
@@ -32699,8 +32830,8 @@ class CountryKna extends WorldCountry {
           car: const Car(signs: ["KN"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Basseterre"],
-            latLng: [17.3, -62.72],
+            capital: Capital("Basseterre"),
+            latLng: LatLng(17.3, -62.72),
           ),
         );
 }
@@ -32863,7 +32994,7 @@ class CountryPyf extends WorldCountry {
               common: "法属波利尼西亚",
             ),
           ],
-          latLng: const [17.6797, 149.4068],
+          latLng: const LatLng(17.6797, 149.4068),
           areaMetric: 4167,
           demonyms: const [
             Demonyms(
@@ -32886,8 +33017,8 @@ class CountryPyf extends WorldCountry {
           car: const Car(signs: ["F"]),
           timezones: const ["UTC-10:00", "UTC-09:30", "UTC-09:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Papeetē"],
-            latLng: [-17.53, -149.56],
+            capital: Capital("Papeetē"),
+            latLng: LatLng(-17.53, -149.56),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)7\\d{2})$"),
         );
@@ -33082,7 +33213,7 @@ class CountryZwe extends WorldCountry {
               common: "津巴布韦",
             ),
           ],
-          latLng: const [-20, 30],
+          latLng: const LatLng(-20, 30),
           landlocked: true,
           bordersCodes: const ["Bwa", "Moz", "Zaf", "Tur"],
           areaMetric: 390757,
@@ -33109,8 +33240,8 @@ class CountryZwe extends WorldCountry {
           car: const Car(signs: ["ZW"], isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Harare"],
-            latLng: [-17.82, 31.03],
+            capital: Capital("Harare"),
+            latLng: LatLng(-17.82, 31.03),
           ),
         );
 }
@@ -33272,7 +33403,7 @@ class CountryKen extends WorldCountry {
               common: "肯尼亚",
             ),
           ],
-          latLng: const [1, 38],
+          latLng: const LatLng(1, 38),
           bordersCodes: const [
             "Eth",
             "Som",
@@ -33303,8 +33434,10 @@ class CountryKen extends WorldCountry {
           fifa: "KEN",
           car: const Car(signs: ["EAK"], isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Nairobi"], latLng: [-1.28, 36.82]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Nairobi"),
+            latLng: LatLng(-1.28, 36.82),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -33475,7 +33608,7 @@ class CountryKaz extends WorldCountry {
               common: "哈萨克斯坦",
             ),
           ],
-          latLng: const [48.0196, 66.9237],
+          latLng: const LatLng(48.0196, 66.9237),
           landlocked: true,
           bordersCodes: const [
             "Chn",
@@ -33508,8 +33641,8 @@ class CountryKaz extends WorldCountry {
           car: const Car(signs: ["KZ"]),
           timezones: const ["UTC+05:00", "UTC+06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nur-Sultan"],
-            latLng: [51.16, 71.45],
+            capital: Capital("Nur-Sultan"),
+            latLng: LatLng(51.16, 71.45),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -33666,7 +33799,7 @@ class CountryMne extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "黑山", common: "黑山"),
           ],
-          latLng: const [42.5, 19.3],
+          latLng: const LatLng(42.5, 19.3),
           bordersCodes: const [
             "Alb",
             "Bih",
@@ -33698,8 +33831,8 @@ class CountryMne extends WorldCountry {
           car: const Car(signs: ["SCG"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Podgorica"],
-            latLng: [42.43, 19.27],
+            capital: Capital("Podgorica"),
+            latLng: LatLng(42.43, 19.27),
           ),
           postalCode: const PostalCode(),
         );
@@ -33854,7 +33987,7 @@ class CountryTuv extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "图瓦卢", common: "图瓦卢"),
           ],
-          latLng: const [-8, 178],
+          latLng: const LatLng(-8, 178),
           areaMetric: 26,
           demonyms: const [
             Demonyms(
@@ -33878,8 +34011,8 @@ class CountryTuv extends WorldCountry {
           car: const Car(signs: ["TUV"], isRightSide: false),
           timezones: const ["UTC+12:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Funafuti"],
-            latLng: [-8.52, 179.22],
+            capital: Capital("Funafuti"),
+            latLng: LatLng(-8.52, 179.22),
           ),
         );
 }
@@ -34040,7 +34173,7 @@ class CountryPan extends WorldCountry {
               common: "巴拿马",
             ),
           ],
-          latLng: const [9, -80],
+          latLng: const LatLng(9, -80),
           bordersCodes: const ["Col", "Cri"],
           areaMetric: 75417,
           demonyms: const [
@@ -34066,8 +34199,8 @@ class CountryPan extends WorldCountry {
           car: const Car(signs: ["PA"]),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Panama City"],
-            latLng: [8.97, -79.53],
+            capital: Capital("Panama City"),
+            latLng: LatLng(8.97, -79.53),
           ),
         );
 }
@@ -34224,7 +34357,7 @@ class CountryAnd extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "安道尔公国", common: "安道尔"),
           ],
-          latLng: const [42.5, 1.5],
+          latLng: const LatLng(42.5, 1.5),
           landlocked: true,
           bordersCodes: const ["Fra", "Esp"],
           areaMetric: 468,
@@ -34250,8 +34383,8 @@ class CountryAnd extends WorldCountry {
           car: const Car(signs: ["AND"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Andorra la Vella"],
-            latLng: [42.5, 1.52],
+            capital: Capital("Andorra la Vella"),
+            latLng: LatLng(42.5, 1.52),
           ),
           postalCode: const PostalCode(
             format: "AD###",
@@ -34414,7 +34547,7 @@ class CountryVir extends WorldCountry {
               common: "美属维尔京群岛",
             ),
           ],
-          latLng: const [18.35, -64.933333],
+          latLng: const LatLng(18.35, -64.933333),
           areaMetric: 347,
           demonyms: const [
             Demonyms(
@@ -34434,8 +34567,8 @@ class CountryVir extends WorldCountry {
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Charlotte Amalie"],
-            latLng: [18.35, -64.93],
+            capital: Capital("Charlotte Amalie"),
+            latLng: LatLng(18.35, -64.93),
           ),
         );
 }
@@ -34593,7 +34726,7 @@ class CountryIsr extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "以色列国", common: "以色列"),
           ],
-          latLng: const [31.47, 35.13],
+          latLng: const LatLng(31.47, 35.13),
           bordersCodes: const [
             "Egy",
             "Jor",
@@ -34626,8 +34759,8 @@ class CountryIsr extends WorldCountry {
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Jerusalem"],
-            latLng: [31.77, 35.23],
+            capital: Capital("Jerusalem"),
+            latLng: LatLng(31.77, 35.23),
           ),
           postalCode: const PostalCode(),
         );
@@ -34790,7 +34923,7 @@ class CountryPrt extends WorldCountry {
               common: "葡萄牙",
             ),
           ],
-          latLng: const [39.5, -8],
+          latLng: const LatLng(39.5, -8),
           bordersCodes: const ["Esp"],
           areaMetric: 92090,
           demonyms: const [
@@ -34815,8 +34948,10 @@ class CountryPrt extends WorldCountry {
           fifa: "POR",
           car: const Car(signs: ["P"]),
           timezones: const ["UTC-01:00", "UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Lisbon"], latLng: [38.72, -9.13]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Lisbon"),
+            latLng: LatLng(38.72, -9.13),
+          ),
           postalCode: const PostalCode(
             format: "####-###",
             regExpPattern: r"^(\\d{7})$",
@@ -34976,7 +35111,7 @@ class CountryAut extends WorldCountry {
               common: "奥地利",
             ),
           ],
-          latLng: const [47.33333333, 13.33333333],
+          latLng: const LatLng(47.33333333, 13.33333333),
           landlocked: true,
           bordersCodes: const [
             "Cze",
@@ -35011,8 +35146,10 @@ class CountryAut extends WorldCountry {
           fifa: "AUT",
           car: const Car(signs: ["A"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Vienna"], latLng: [48.2, 16.37]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Vienna"),
+            latLng: LatLng(48.2, 16.37),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -35177,7 +35314,7 @@ class CountryFin extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "芬兰共和国", common: "芬兰"),
           ],
-          latLng: const [64, 26],
+          latLng: const LatLng(64, 26),
           bordersCodes: const ["Nor", "Swe", "Rus"],
           areaMetric: 338424,
           demonyms: const [
@@ -35203,8 +35340,8 @@ class CountryFin extends WorldCountry {
           car: const Car(signs: ["FIN"]),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Helsinki"],
-            latLng: [60.17, 24.93],
+            capital: Capital("Helsinki"),
+            latLng: LatLng(60.17, 24.93),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(?:FI)*(\\d{5})$"),
         );
@@ -35367,7 +35504,7 @@ class CountryEst extends WorldCountry {
               common: "爱沙尼亚",
             ),
           ],
-          latLng: const [59, 26],
+          latLng: const LatLng(59, 26),
           bordersCodes: const ["Lva", "Rus"],
           areaMetric: 45227,
           demonyms: const [
@@ -35392,8 +35529,10 @@ class CountryEst extends WorldCountry {
           fifa: "EST",
           car: const Car(signs: ["EST"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tallinn"], latLng: [59.43, 24.72]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tallinn"),
+            latLng: LatLng(59.43, 24.72),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -35555,7 +35694,7 @@ class CountryDma extends WorldCountry {
               common: "多米尼加",
             ),
           ],
-          latLng: const [15.41666666, -61.33333333],
+          latLng: const LatLng(15.41666666, -61.33333333),
           areaMetric: 751,
           demonyms: const [
             Demonyms(
@@ -35578,8 +35717,10 @@ class CountryDma extends WorldCountry {
           fifa: "DMA",
           car: const Car(signs: ["WD"], isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Roseau"], latLng: [15.3, -61.4]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Roseau"),
+            latLng: LatLng(15.3, -61.4),
+          ),
         );
 }
 
@@ -35735,7 +35876,7 @@ class CountryYem extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "也门共和国", common: "也门"),
           ],
-          latLng: const [15, 48],
+          latLng: const LatLng(15, 48),
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 527968,
           demonyms: const [
@@ -35761,8 +35902,10 @@ class CountryYem extends WorldCountry {
           car: const Car(signs: ["YAR"]),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Sana'a"], latLng: [15.37, 44.19]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Sana'a"),
+            latLng: LatLng(15.37, 44.19),
+          ),
         );
 }
 
@@ -35924,8 +36067,9 @@ class CountryAfg extends WorldCountry {
               common: "阿富汗",
             ),
           ],
-          latLng: const [33, 65],
+          latLng: const LatLng(33, 65),
           landlocked: true,
+
           bordersCodes: const [
             "Irn",
             "Pak",
@@ -35934,7 +36078,9 @@ class CountryAfg extends WorldCountry {
             "Tjk",
             "Chn",
           ],
+
           areaMetric: 652230,
+
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -35947,17 +36093,26 @@ class CountryAfg extends WorldCountry {
               m: "Afghan",
             ),
           ],
+
           emoji: "🇦🇫",
+
           maps: const Maps(
             googleMaps: "BXBGw7yUUFknCfva9",
             openStreetMaps: "relation/303427",
           ),
+
           population: 40218234,
+
           fifa: "AFG",
+
           car: const Car(signs: ["AFG"]),
+
           timezones: const ["UTC+04:30"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Kabul"], latLng: [34.52, 69.18]),
+
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Kabul"),
+            latLng: LatLng(34.52, 69.18),
+          ),
         );
 }
 
@@ -36117,7 +36272,7 @@ class CountrySyr extends WorldCountry {
               common: "叙利亚",
             ),
           ],
-          latLng: const [35, 38],
+          latLng: const LatLng(35, 38),
           bordersCodes: const ["Irq", "Isr", "Jor", "Lbn", "Tur"],
           areaMetric: 185180,
           demonyms: const [
@@ -36142,8 +36297,10 @@ class CountrySyr extends WorldCountry {
           fifa: "SYR",
           car: const Car(signs: ["SYR"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Damascus"], latLng: [33.5, 36.3]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Damascus"),
+            latLng: LatLng(33.5, 36.3),
+          ),
         );
 }
 
@@ -36304,7 +36461,7 @@ class CountryMdv extends WorldCountry {
               common: "马尔代夫",
             ),
           ],
-          latLng: const [3.25, 73],
+          latLng: const LatLng(3.25, 73),
           areaMetric: 300,
           demonyms: const [
             Demonyms(
@@ -36329,8 +36486,10 @@ class CountryMdv extends WorldCountry {
           car: const Car(signs: ["MV"], isRightSide: false),
           timezones: const ["UTC+05:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Malé"], latLng: [4.17, 73.51]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Malé"),
+            latLng: LatLng(4.17, 73.51),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -36496,7 +36655,7 @@ class CountryTls extends WorldCountry {
               common: "东帝汶",
             ),
           ],
-          latLng: const [-8.83333333, 125.91666666],
+          latLng: const LatLng(-8.83333333, 125.91666666),
           bordersCodes: const ["Idn"],
           areaMetric: 14874,
           demonyms: const [
@@ -36523,8 +36682,8 @@ class CountryTls extends WorldCountry {
           timezones: const ["UTC+09:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Dili"],
-            latLng: [-8.58, 125.6],
+            capital: Capital("Dili"),
+            latLng: LatLng(-8.58, 125.6),
           ),
         );
 }
@@ -36685,7 +36844,7 @@ class CountryLtu extends WorldCountry {
               common: "立陶宛",
             ),
           ],
-          latLng: const [56, 24],
+          latLng: const LatLng(56, 24),
           bordersCodes: const [
             "Blr",
             "Lva",
@@ -36715,8 +36874,10 @@ class CountryLtu extends WorldCountry {
           fifa: "LTU",
           car: const Car(signs: ["LT"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Vilnius"], latLng: [54.68, 25.32]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Vilnius"),
+            latLng: LatLng(54.68, 25.32),
+          ),
           postalCode: const PostalCode(
             format: "LT-#####",
             regExpPattern: r"^(?:LT)*(\\d{5})$",
@@ -36877,7 +37038,7 @@ class CountryNzl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "新西兰", common: "新西兰"),
           ],
-          latLng: const [-41, 174],
+          latLng: const LatLng(-41, 174),
           areaMetric: 270467,
           demonyms: const [
             Demonyms(
@@ -36907,8 +37068,8 @@ class CountryNzl extends WorldCountry {
             "UTC+13:00",
           ],
           capitalInfo: const CapitalInfo(
-            capital: ["Wellington"],
-            latLng: [-41.3, 174.78],
+            capital: Capital("Wellington"),
+            latLng: LatLng(-41.3, 174.78),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -37070,7 +37231,7 @@ class CountryBmu extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "百慕大", common: "百慕大"),
           ],
-          latLng: const [32.33333333, -64.75],
+          latLng: const LatLng(32.33333333, -64.75),
           areaMetric: 54,
           demonyms: const [
             Demonyms(
@@ -37094,8 +37255,8 @@ class CountryBmu extends WorldCountry {
           car: const Car(signs: ["GB"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Hamilton"],
-            latLng: [32.28, -64.78],
+            capital: Capital("Hamilton"),
+            latLng: LatLng(32.28, -64.78),
           ),
           postalCode: const PostalCode(
             format: "@@ ##",
@@ -37260,7 +37421,7 @@ class CountryDeu extends WorldCountry {
               common: "德国",
             ),
           ],
-          latLng: const [51, 9],
+          latLng: const LatLng(51, 9),
           bordersCodes: const [
             "Aut",
             "Bel",
@@ -37295,8 +37456,10 @@ class CountryDeu extends WorldCountry {
           fifa: "GER",
           car: const Car(signs: ["DY"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Berlin"], latLng: [52.52, 13.4]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Berlin"),
+            latLng: LatLng(52.52, 13.4),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -37462,7 +37625,7 @@ class CountryArg extends WorldCountry {
               common: "阿根廷",
             ),
           ],
-          latLng: const [-34, -64],
+          latLng: const LatLng(-34, -64),
           bordersCodes: const [
             "Bol",
             "Bra",
@@ -37494,8 +37657,8 @@ class CountryArg extends WorldCountry {
           car: const Car(signs: ["RA"]),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Buenos Aires"],
-            latLng: [-34.58, -58.67],
+            capital: Capital("Buenos Aires"),
+            latLng: LatLng(-34.58, -58.67),
           ),
           postalCode: const PostalCode(
             format: "@####@@@",
@@ -37667,7 +37830,7 @@ class CountryBlr extends WorldCountry {
               common: "白俄罗斯",
             ),
           ],
-          latLng: const [53, 28],
+          latLng: const LatLng(53, 28),
           landlocked: true,
           bordersCodes: const [
             "Lva",
@@ -37699,8 +37862,10 @@ class CountryBlr extends WorldCountry {
           fifa: "BLR",
           car: const Car(signs: ["BY"]),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Minsk"], latLng: [53.9, 27.57]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Minsk"),
+            latLng: LatLng(53.9, 27.57),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -37856,7 +38021,7 @@ class CountryBrb extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "巴巴多斯", common: "巴巴多斯"),
           ],
-          latLng: const [13.16666666, -59.53333333],
+          latLng: const LatLng(13.16666666, -59.53333333),
           areaMetric: 430,
           demonyms: const [
             Demonyms(
@@ -37880,8 +38045,8 @@ class CountryBrb extends WorldCountry {
           car: const Car(signs: ["BDS"], isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bridgetown"],
-            latLng: [13.1, -59.62],
+            capital: Capital("Bridgetown"),
+            latLng: LatLng(13.1, -59.62),
           ),
           postalCode: const PostalCode(
             format: "BB#####",
@@ -38042,7 +38207,7 @@ class CountryGtm extends WorldCountry {
               common: "危地马拉",
             ),
           ],
-          latLng: const [15.5, -90.25],
+          latLng: const LatLng(15.5, -90.25),
           bordersCodes: const [
             "Blz",
             "Slv",
@@ -38073,8 +38238,8 @@ class CountryGtm extends WorldCountry {
           car: const Car(signs: ["GCA"]),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Guatemala City"],
-            latLng: [14.62, -90.52],
+            capital: Capital("Guatemala City"),
+            latLng: LatLng(14.62, -90.52),
           ),
           postalCode: const PostalCode(),
         );
@@ -38241,7 +38406,7 @@ class CountryAze extends WorldCountry {
               common: "阿塞拜疆",
             ),
           ],
-          latLng: const [40.5, 47.5],
+          latLng: const LatLng(40.5, 47.5),
           landlocked: true,
           bordersCodes: const ["Arm", "Geo", "Irn", "Rus", "Tur"],
           areaMetric: 86600,
@@ -38267,8 +38432,10 @@ class CountryAze extends WorldCountry {
           fifa: "AZE",
           car: const Car(signs: ["AZ"]),
           timezones: const ["UTC+04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Baku"], latLng: [40.38, 49.87]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Baku"),
+            latLng: LatLng(40.38, 49.87),
+          ),
           postalCode: const PostalCode(
             format: "AZ ####",
             regExpPattern: r"^(?:AZ)*(\\d{4})$",
@@ -38429,7 +38596,7 @@ class CountryMar extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "摩洛哥王国", common: "摩洛哥"),
           ],
-          latLng: const [32, -5],
+          latLng: const LatLng(32, -5),
           bordersCodes: const ["Dza", "Esh", "Esp"],
           areaMetric: 446550,
           demonyms: const [
@@ -38454,8 +38621,10 @@ class CountryMar extends WorldCountry {
           fifa: "MAR",
           car: const Car(signs: ["MA"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Rabat"], latLng: [34.02, -6.82]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Rabat"),
+            latLng: LatLng(34.02, -6.82),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -38611,7 +38780,7 @@ class CountryCok extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "库克群岛", common: "库克群岛"),
           ],
-          latLng: const [-21.23333333, -159.76666666],
+          latLng: const LatLng(-21.23333333, -159.76666666),
           areaMetric: 236,
           demonyms: const [
             Demonyms(
@@ -38635,8 +38804,8 @@ class CountryCok extends WorldCountry {
           car: const Car(signs: ["NZ"], isRightSide: false),
           timezones: const ["UTC-10:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Avarua"],
-            latLng: [-21.2, -159.77],
+            capital: Capital("Avarua"),
+            latLng: LatLng(-21.2, -159.77),
           ),
         );
 }
@@ -38802,7 +38971,7 @@ class CountryCaf extends WorldCountry {
               common: "中非共和国",
             ),
           ],
-          latLng: const [7, 21],
+          latLng: const LatLng(7, 21),
           landlocked: true,
           bordersCodes: const [
             "Cmr",
@@ -38835,8 +39004,10 @@ class CountryCaf extends WorldCountry {
           fifa: "CTA",
           car: const Car(signs: ["RCA"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bangui"], latLng: [4.37, 18.58]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bangui"),
+            latLng: LatLng(4.37, 18.58),
+          ),
         );
 }
 
@@ -38988,7 +39159,7 @@ class CountryRou extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "罗马尼亚", common: "罗马尼亚"),
           ],
-          latLng: const [46, 25],
+          latLng: const LatLng(46, 25),
           bordersCodes: const [
             "Bgr",
             "Hun",
@@ -39020,8 +39191,8 @@ class CountryRou extends WorldCountry {
           car: const Car(signs: ["RO"]),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bucharest"],
-            latLng: [44.43, 26.1],
+            capital: Capital("Bucharest"),
+            latLng: LatLng(44.43, 26.1),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -39191,7 +39362,7 @@ class CountryMlt extends WorldCountry {
               common: "马耳他",
             ),
           ],
-          latLng: const [35.9375, 14.3754],
+          latLng: const LatLng(35.9375, 14.3754),
           areaMetric: 316,
           demonyms: const [
             Demonyms(
@@ -39215,8 +39386,10 @@ class CountryMlt extends WorldCountry {
           fifa: "MLT",
           car: const Car(signs: ["M"], isRightSide: false),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Valletta"], latLng: [35.88, 14.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Valletta"),
+            latLng: LatLng(35.88, 14.5),
+          ),
           postalCode: const PostalCode(
             format: "@@@ ###|@@@ ##",
             regExpPattern: r"^([A-Z]{3}\\d{2}\\d?)$",
@@ -39381,7 +39554,7 @@ class CountryArm extends WorldCountry {
               common: "亚美尼亚",
             ),
           ],
-          latLng: const [40, 45],
+          latLng: const LatLng(40, 45),
           landlocked: true,
           bordersCodes: const [
             "Aze",
@@ -39412,8 +39585,10 @@ class CountryArm extends WorldCountry {
           fifa: "ARM",
           car: const Car(signs: ["AM"]),
           timezones: const ["UTC+04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Yerevan"], latLng: [40.17, 44.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Yerevan"),
+            latLng: LatLng(40.17, 44.5),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -39577,7 +39752,7 @@ class CountrySen extends WorldCountry {
               common: "塞内加尔",
             ),
           ],
-          latLng: const [14, -14],
+          latLng: const LatLng(14, -14),
           bordersCodes: const [
             "Gmb",
             "Gin",
@@ -39608,8 +39783,10 @@ class CountrySen extends WorldCountry {
           fifa: "SEN",
           car: const Car(signs: ["SN"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Dakar"], latLng: [14.73, -17.63]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Dakar"),
+            latLng: LatLng(14.73, -17.63),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -39770,7 +39947,7 @@ class CountryBgr extends WorldCountry {
               common: "保加利亚",
             ),
           ],
-          latLng: const [43, 25],
+          latLng: const LatLng(43, 25),
           bordersCodes: const ["Grc", "Mkd", "Rou", "Srb", "Tur"],
           areaMetric: 110879,
           demonyms: const [
@@ -39795,8 +39972,10 @@ class CountryBgr extends WorldCountry {
           fifa: "BUL",
           car: const Car(signs: ["BG"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Sofia"], latLng: [42.68, 23.32]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Sofia"),
+            latLng: LatLng(42.68, 23.32),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -39981,7 +40160,7 @@ class CountryCod extends WorldCountry {
               common: "民主刚果",
             ),
           ],
-          latLng: const [0, 25],
+          latLng: const LatLng(0, 25),
           bordersCodes: const [
             "Ago",
             "Bdi",
@@ -40017,8 +40196,8 @@ class CountryCod extends WorldCountry {
           car: const Car(signs: ["CGO"]),
           timezones: const ["UTC+01:00", "UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Kinshasa"],
-            latLng: [-4.32, 15.3],
+            capital: Capital("Kinshasa"),
+            latLng: LatLng(-4.32, 15.3),
           ),
         );
 }
@@ -40181,7 +40360,7 @@ class CountryHti extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "海地共和国", common: "海地"),
           ],
-          latLng: const [19, -72.41666666],
+          latLng: const LatLng(19, -72.41666666),
           bordersCodes: const ["Dom"],
           areaMetric: 27750,
           demonyms: const [
@@ -40207,8 +40386,8 @@ class CountryHti extends WorldCountry {
           car: const Car(signs: ["RH"]),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port-au-Prince"],
-            latLng: [18.53, -72.33],
+            capital: Capital("Port-au-Prince"),
+            latLng: LatLng(18.53, -72.33),
           ),
           postalCode: const PostalCode(
             format: "HT####",
@@ -40369,7 +40548,7 @@ class CountryAlb extends WorldCountry {
               common: "阿尔巴尼亚",
             ),
           ],
-          latLng: const [41, 20],
+          latLng: const LatLng(41, 20),
           bordersCodes: const ["Mne", "Grc", "Mkd", "Unk"],
           areaMetric: 28748,
           demonyms: const [
@@ -40394,8 +40573,10 @@ class CountryAlb extends WorldCountry {
           fifa: "ALB",
           car: const Car(signs: ["AL"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tirana"], latLng: [41.32, 19.82]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tirana"),
+            latLng: LatLng(41.32, 19.82),
+          ),
         );
 }
 
@@ -40555,7 +40736,7 @@ class CountryJor extends WorldCountry {
               common: "约旦",
             ),
           ],
-          latLng: const [31, 36],
+          latLng: const LatLng(31, 36),
           bordersCodes: const ["Irq", "Isr", "Pse", "Sau", "Syr"],
           areaMetric: 89342,
           demonyms: const [
@@ -40581,8 +40762,10 @@ class CountryJor extends WorldCountry {
           car: const Car(signs: ["HKJ"]),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Amman"], latLng: [31.95, 35.93]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Amman"),
+            latLng: LatLng(31.95, 35.93),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -40740,7 +40923,7 @@ class CountrySjm extends WorldCountry {
               common: "斯瓦尔巴特",
             ),
           ],
-          latLng: const [78, 20],
+          latLng: const LatLng(78, 20),
           areaMetric: 377,
           demonyms: const [
             Demonyms(
@@ -40759,8 +40942,8 @@ class CountrySjm extends WorldCountry {
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Longyearbyen"],
-            latLng: [78.22, 15.63],
+            capital: Capital("Longyearbyen"),
+            latLng: LatLng(78.22, 15.63),
           ),
         );
 }
@@ -40927,7 +41110,7 @@ class CountryMdg extends WorldCountry {
               common: "马达加斯加",
             ),
           ],
-          latLng: const [-20, 47],
+          latLng: const LatLng(-20, 47),
           areaMetric: 587041,
           demonyms: const [
             Demonyms(
@@ -40952,8 +41135,8 @@ class CountryMdg extends WorldCountry {
           car: const Car(signs: ["RM"]),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Antananarivo"],
-            latLng: [-18.92, 47.52],
+            capital: Capital("Antananarivo"),
+            latLng: LatLng(-18.92, 47.52),
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
@@ -41108,7 +41291,7 @@ class CountryFra extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "法兰西共和国", common: "法国"),
           ],
-          latLng: const [46, 2],
+          latLng: const LatLng(46, 2),
           bordersCodes: const [
             "And",
             "Bel",
@@ -41158,8 +41341,8 @@ class CountryFra extends WorldCountry {
             "UTC+12:00",
           ],
           capitalInfo: const CapitalInfo(
-            capital: ["Paris"],
-            latLng: [48.87, 2.33],
+            capital: Capital("Paris"),
+            latLng: LatLng(48.87, 2.33),
           ),
           postalCode: const PostalCode(),
         );
@@ -41321,7 +41504,7 @@ class CountryFsm extends WorldCountry {
               common: "密克罗尼西亚",
             ),
           ],
-          latLng: const [6.91666666, 158.25],
+          latLng: const LatLng(6.91666666, 158.25),
           areaMetric: 702,
           demonyms: const [
             Demonyms(
@@ -41344,8 +41527,10 @@ class CountryFsm extends WorldCountry {
           gini: const Gini(year: 2013, value: 40.1),
           car: const Car(signs: ["FSM"]),
           timezones: const ["UTC+10:00", "UTC+11:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Palikir"], latLng: [6.92, 158.15]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Palikir"),
+            latLng: LatLng(6.92, 158.15),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -41501,7 +41686,7 @@ class CountryAbw extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "阿鲁巴", common: "阿鲁巴"),
           ],
-          latLng: const [12.5, -69.96666666],
+          latLng: const LatLng(12.5, -69.96666666),
           areaMetric: 180,
           demonyms: const [
             Demonyms(
@@ -41525,8 +41710,8 @@ class CountryAbw extends WorldCountry {
           car: const Car(signs: ["A"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Oranjestad"],
-            latLng: [12.52, -70.03],
+            capital: Capital("Oranjestad"),
+            latLng: LatLng(12.52, -70.03),
           ),
         );
 }
@@ -41695,7 +41880,7 @@ class CountryInd extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "印度共和国", common: "印度"),
           ],
-          latLng: const [20, 77],
+          latLng: const LatLng(20, 77),
           bordersCodes: const [
             "Bgd",
             "Btn",
@@ -41727,8 +41912,10 @@ class CountryInd extends WorldCountry {
           fifa: "IND",
           car: const Car(signs: ["IND"], isRightSide: false),
           timezones: const ["UTC+05:30"],
-          capitalInfo:
-              const CapitalInfo(capital: ["New Delhi"], latLng: [28.6, 77.2]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("New Delhi"),
+            latLng: LatLng(28.6, 77.2),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -41916,7 +42103,7 @@ class CountryNam extends WorldCountry {
               common: "纳米比亚",
             ),
           ],
-          latLng: const [-22, 17],
+          latLng: const LatLng(-22, 17),
           bordersCodes: const ["Ago", "Bwa", "Zaf", "Tur"],
           areaMetric: 825615,
           demonyms: const [
@@ -41942,8 +42129,8 @@ class CountryNam extends WorldCountry {
           car: const Car(signs: ["NAM"], isRightSide: false),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Windhoek"],
-            latLng: [-22.57, 17.08],
+            capital: Capital("Windhoek"),
+            latLng: LatLng(-22.57, 17.08),
           ),
         );
 }
@@ -42108,7 +42295,7 @@ class CountryFji extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "斐济共和国", common: "斐济"),
           ],
-          latLng: const [17.7134, 178.065],
+          latLng: const LatLng(17.7134, 178.065),
           areaMetric: 18272,
           demonyms: const [
             Demonyms(
@@ -42132,8 +42319,10 @@ class CountryFji extends WorldCountry {
           fifa: "FIJ",
           car: const Car(signs: ["FJI"], isRightSide: false),
           timezones: const ["UTC+12:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Suva"], latLng: [-18.13, 178.42]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Suva"),
+            latLng: LatLng(-18.13, 178.42),
+          ),
         );
 }
 
@@ -42294,7 +42483,7 @@ class CountrySdn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "苏丹共和国", common: "苏丹"),
           ],
-          latLng: const [15, 30],
+          latLng: const LatLng(15, 30),
           bordersCodes: const [
             "Caf",
             "Tcd",
@@ -42327,8 +42516,10 @@ class CountrySdn extends WorldCountry {
           fifa: "SDN",
           car: const Car(signs: ["SUD"]),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Khartoum"], latLng: [15.6, 32.53]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Khartoum"),
+            latLng: LatLng(15.6, 32.53),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -42492,7 +42683,7 @@ class CountryStp extends WorldCountry {
               common: "圣多美和普林西比",
             ),
           ],
-          latLng: const [1, 7],
+          latLng: const LatLng(1, 7),
           areaMetric: 964,
           demonyms: const [
             Demonyms(
@@ -42516,8 +42707,10 @@ class CountryStp extends WorldCountry {
           fifa: "STP",
           car: const Car(signs: ["STP"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["São Tomé"], latLng: [0.34, 6.73]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("São Tomé"),
+            latLng: LatLng(0.34, 6.73),
+          ),
         );
 }
 
@@ -42678,7 +42871,7 @@ class CountrySau extends WorldCountry {
               common: "沙特阿拉伯",
             ),
           ],
-          latLng: const [25, 45],
+          latLng: const LatLng(25, 45),
           bordersCodes: const [
             "Irq",
             "Jor",
@@ -42711,8 +42904,10 @@ class CountrySau extends WorldCountry {
           car: const Car(signs: ["SA"]),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Riyadh"], latLng: [24.65, 46.7]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Riyadh"),
+            latLng: LatLng(24.65, 46.7),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -42870,7 +43065,7 @@ class CountryHmd extends WorldCountry {
               common: "赫德岛和麦当劳群岛",
             ),
           ],
-          latLng: const [53.0818, 73.5042],
+          latLng: const LatLng(53.0818, 73.5042),
           areaMetric: 412,
           demonyms: const [
             Demonyms(
@@ -43052,7 +43247,7 @@ class CountryLka extends WorldCountry {
               common: "斯里兰卡",
             ),
           ],
-          latLng: const [7, 81],
+          latLng: const LatLng(7, 81),
           bordersCodes: const ["Ind"],
           areaMetric: 65610,
           demonyms: const [
@@ -43078,8 +43273,8 @@ class CountryLka extends WorldCountry {
           car: const Car(signs: ["CL"], isRightSide: false),
           timezones: const ["UTC+05:30"],
           capitalInfo: const CapitalInfo(
-            capital: ["Sri Jayawardenepura Kotte"],
-            latLng: [6.89, 79.9],
+            capital: Capital("Sri Jayawardenepura Kotte"),
+            latLng: LatLng(6.89, 79.9),
           ),
           postalCode: const PostalCode(),
         );
@@ -43237,7 +43432,7 @@ class CountrySwe extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "瑞典王国", common: "瑞典"),
           ],
-          latLng: const [62, 15],
+          latLng: const LatLng(62, 15),
           bordersCodes: const ["Fin", "Nor"],
           areaMetric: 450295,
           demonyms: const [
@@ -43263,8 +43458,8 @@ class CountrySwe extends WorldCountry {
           car: const Car(signs: ["S"]),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Stockholm"],
-            latLng: [59.33, 18.05],
+            capital: Capital("Stockholm"),
+            latLng: LatLng(59.33, 18.05),
           ),
           postalCode: const PostalCode(
             format: "SE-### ##",
@@ -43426,7 +43621,7 @@ class CountryTon extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "汤加王国", common: "汤加"),
           ],
-          latLng: const [-20, -175],
+          latLng: const LatLng(-20, -175),
           areaMetric: 747,
           demonyms: const [
             Demonyms(
@@ -43451,8 +43646,8 @@ class CountryTon extends WorldCountry {
           car: const Car(signs: ["TO"], isRightSide: false),
           timezones: const ["UTC+13:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nuku'alofa"],
-            latLng: [-21.13, -175.2],
+            capital: Capital("Nuku'alofa"),
+            latLng: LatLng(-21.13, -175.2),
           ),
         );
 }
@@ -43610,7 +43805,7 @@ class CountryDnk extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "丹麦王国", common: "丹麦"),
           ],
-          latLng: const [56, 10],
+          latLng: const LatLng(56, 10),
           bordersCodes: const ["Deu"],
           areaMetric: 43094,
           demonyms: const [
@@ -43642,8 +43837,8 @@ class CountryDnk extends WorldCountry {
             "UTC+01:00",
           ],
           capitalInfo: const CapitalInfo(
-            capital: ["Copenhagen"],
-            latLng: [55.67, 12.58],
+            capital: Capital("Copenhagen"),
+            latLng: LatLng(55.67, 12.58),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -43803,7 +43998,7 @@ class CountryMys extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马来西亚", common: "马来西亚"),
           ],
-          latLng: const [2.5, 112.5],
+          latLng: const LatLng(2.5, 112.5),
           bordersCodes: const ["Brn", "Idn", "Tha"],
           areaMetric: 330803,
           demonyms: const [
@@ -43830,8 +44025,8 @@ class CountryMys extends WorldCountry {
           timezones: const ["UTC+08:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Kuala Lumpur"],
-            latLng: [3.17, 101.7],
+            capital: Capital("Kuala Lumpur"),
+            latLng: LatLng(3.17, 101.7),
           ),
           postalCode: const PostalCode(),
         );
@@ -43993,7 +44188,7 @@ class CountryCri extends WorldCountry {
               common: "哥斯达黎加",
             ),
           ],
-          latLng: const [10, -84],
+          latLng: const LatLng(10, -84),
           bordersCodes: const ["Nic", "Pan"],
           areaMetric: 51100,
           demonyms: const [
@@ -44019,8 +44214,8 @@ class CountryCri extends WorldCountry {
           car: const Car(signs: ["CR"]),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["San José"],
-            latLng: [9.93, -84.09],
+            capital: Capital("San José"),
+            latLng: LatLng(9.93, -84.09),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -44204,7 +44399,7 @@ class CountryBol extends WorldCountry {
               common: "玻利维亚",
             ),
           ],
-          latLng: const [-17, -65],
+          latLng: const LatLng(-17, -65),
           landlocked: true,
           bordersCodes: const [
             "Arg",
@@ -44237,8 +44432,8 @@ class CountryBol extends WorldCountry {
           car: const Car(signs: ["BOL"]),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Sucre"],
-            latLng: [-19.02, -65.26],
+            capital: Capital("Sucre"),
+            latLng: LatLng(-19.02, -65.26),
           ),
         );
 }
@@ -44391,7 +44586,7 @@ class CountryBtn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "不丹王国", common: "不丹"),
           ],
-          latLng: const [27.5, 90.5],
+          latLng: const LatLng(27.5, 90.5),
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
           areaMetric: 38394,
@@ -44418,8 +44613,8 @@ class CountryBtn extends WorldCountry {
           car: const Car(signs: ["BHT"], isRightSide: false),
           timezones: const ["UTC+06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Thimphu"],
-            latLng: [27.47, 89.63],
+            capital: Capital("Thimphu"),
+            latLng: LatLng(27.47, 89.63),
           ),
         );
 }
@@ -44574,7 +44769,7 @@ class CountryCym extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "开曼群岛", common: "开曼群岛"),
           ],
-          latLng: const [19.3133, 81.2546],
+          latLng: const LatLng(19.3133, 81.2546),
           areaMetric: 264,
           demonyms: const [
             Demonyms(
@@ -44598,8 +44793,8 @@ class CountryCym extends WorldCountry {
           car: const Car(signs: ["GB"], isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["George Town"],
-            latLng: [19.3, -81.38],
+            capital: Capital("George Town"),
+            latLng: LatLng(19.3, -81.38),
           ),
         );
 }
@@ -44761,7 +44956,7 @@ class CountryPcn extends WorldCountry {
               common: "皮特凯恩群岛",
             ),
           ],
-          latLng: const [-25.06666666, -130.1],
+          latLng: const LatLng(-25.06666666, -130.1),
           areaMetric: 47,
           demonyms: const [
             Demonyms(
@@ -44785,8 +44980,8 @@ class CountryPcn extends WorldCountry {
           timezones: const ["UTC-08:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Adamstown"],
-            latLng: [-25.07, -130.08],
+            capital: Capital("Adamstown"),
+            latLng: LatLng(-25.07, -130.08),
           ),
         );
 }
@@ -44939,7 +45134,7 @@ class CountryMli extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马里共和国", common: "马里"),
           ],
-          latLng: const [17, -4],
+          latLng: const LatLng(17, -4),
           landlocked: true,
           bordersCodes: const [
             "Dza",
@@ -44973,8 +45168,10 @@ class CountryMli extends WorldCountry {
           fifa: "MLI",
           car: const Car(signs: ["RMM"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bamako"], latLng: [12.65, -8]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bamako"),
+            latLng: LatLng(12.65, -8),
+          ),
         );
 }
 
@@ -45137,7 +45334,7 @@ class CountrySxm extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "圣马丁岛", common: "圣马丁岛"),
           ],
-          latLng: const [18.033333, -63.05],
+          latLng: const LatLng(18.033333, -63.05),
           bordersCodes: const ["Maf"],
           areaMetric: 34,
           demonyms: const [
@@ -45162,8 +45359,8 @@ class CountrySxm extends WorldCountry {
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Philipsburg"],
-            latLng: [18.02, -63.03],
+            capital: Capital("Philipsburg"),
+            latLng: LatLng(18.02, -63.03),
           ),
         );
 }
@@ -45324,7 +45521,7 @@ class CountryLva extends WorldCountry {
               common: "拉脱维亚",
             ),
           ],
-          latLng: const [57, 25],
+          latLng: const LatLng(57, 25),
           bordersCodes: const [
             "Blr",
             "Est",
@@ -45354,8 +45551,10 @@ class CountryLva extends WorldCountry {
           fifa: "LVA",
           car: const Car(signs: ["LV"]),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Riga"], latLng: [56.95, 24.1]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Riga"),
+            latLng: LatLng(56.95, 24.1),
+          ),
           postalCode: const PostalCode(
             format: "LV-####",
             regExpPattern: r"^(?:LV)*(\\d{4})$",
@@ -45527,7 +45726,7 @@ class CountryAsm extends WorldCountry {
               common: "美属萨摩亚",
             ),
           ],
-          latLng: const [-14.33333333, -170],
+          latLng: const LatLng(-14.33333333, -170),
           areaMetric: 199,
           demonyms: const [
             Demonyms(
@@ -45552,8 +45751,8 @@ class CountryAsm extends WorldCountry {
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Pago Pago"],
-            latLng: [-14.27, -170.7],
+            capital: Capital("Pago Pago"),
+            latLng: LatLng(-14.27, -170.7),
           ),
         );
 }
@@ -45714,7 +45913,7 @@ class CountrySpm extends WorldCountry {
               common: "圣皮埃尔和密克隆",
             ),
           ],
-          latLng: const [46.83333333, -56.33333333],
+          latLng: const LatLng(46.83333333, -56.33333333),
           areaMetric: 242,
           demonyms: const [
             Demonyms(
@@ -45738,8 +45937,8 @@ class CountrySpm extends WorldCountry {
           timezones: const ["UTC-03:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Saint-Pierre"],
-            latLng: [46.77, -56.18],
+            capital: Capital("Saint-Pierre"),
+            latLng: LatLng(46.77, -56.18),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(97500)$"),
         );
@@ -45901,7 +46100,7 @@ class CountryEcu extends WorldCountry {
               common: "厄瓜多尔",
             ),
           ],
-          latLng: const [-2, -77.5],
+          latLng: const LatLng(-2, -77.5),
           bordersCodes: const ["Col", "Per"],
           areaMetric: 276841,
           demonyms: const [
@@ -45926,8 +46125,10 @@ class CountryEcu extends WorldCountry {
           fifa: "ECU",
           car: const Car(signs: ["EC"]),
           timezones: const ["UTC-06:00", "UTC-05:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Quito"], latLng: [-0.22, -78.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Quito"),
+            latLng: LatLng(-0.22, -78.5),
+          ),
           postalCode: const PostalCode(
             format: "@####@",
             regExpPattern: r"^([a-zA-Z]\\d{4}[a-zA-Z])$",
@@ -46090,7 +46291,7 @@ class CountryTha extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "泰王国", common: "泰国"),
           ],
-          latLng: const [15, 100],
+          latLng: const LatLng(15, 100),
           bordersCodes: const ["Mmr", "Khm", "Lao", "Mys"],
           areaMetric: 513120,
           demonyms: const [
@@ -46116,8 +46317,8 @@ class CountryTha extends WorldCountry {
           car: const Car(signs: ["T"], isRightSide: false),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bangkok"],
-            latLng: [13.75, 100.52],
+            capital: Capital("Bangkok"),
+            latLng: LatLng(13.75, 100.52),
           ),
           postalCode: const PostalCode(),
         );
@@ -46275,7 +46476,7 @@ class CountryAre extends WorldCountry {
               common: "阿拉伯联合酋长国",
             ),
           ],
-          latLng: const [24, 54],
+          latLng: const LatLng(24, 54),
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 83600,
           demonyms: const [
@@ -46302,8 +46503,8 @@ class CountryAre extends WorldCountry {
           timezones: const ["UTC+04:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Abu Dhabi"],
-            latLng: [24.47, 54.37],
+            capital: Capital("Abu Dhabi"),
+            latLng: LatLng(24.47, 54.37),
           ),
         );
 }
@@ -46465,7 +46666,7 @@ class CountryHrv extends WorldCountry {
               common: "克罗地亚",
             ),
           ],
-          latLng: const [45.16666666, 15.5],
+          latLng: const LatLng(45.16666666, 15.5),
           bordersCodes: const [
             "Bih",
             "Hun",
@@ -46496,8 +46697,10 @@ class CountryHrv extends WorldCountry {
           fifa: "CRO",
           car: const Car(signs: ["HR"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Zagreb"], latLng: [45.8, 16]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Zagreb"),
+            latLng: LatLng(45.8, 16),
+          ),
           postalCode: const PostalCode(
             format: "HR-#####",
             regExpPattern: r"^(?:HR)*(\\d{5})$",
@@ -46662,7 +46865,7 @@ class CountryMmr extends WorldCountry {
               common: "缅甸",
             ),
           ],
-          latLng: const [22, 98],
+          latLng: const LatLng(22, 98),
           bordersCodes: const ["Bgd", "Chn", "Ind", "Lao", "Tha"],
           areaMetric: 676578,
           demonyms: const [
@@ -46688,8 +46891,8 @@ class CountryMmr extends WorldCountry {
           car: const Car(signs: ["BUR"]),
           timezones: const ["UTC+06:30"],
           capitalInfo: const CapitalInfo(
-            capital: ["Naypyidaw"],
-            latLng: [19.76, 96.07],
+            capital: Capital("Naypyidaw"),
+            latLng: LatLng(19.76, 96.07),
           ),
           postalCode: const PostalCode(),
         );
@@ -46843,7 +47046,7 @@ class CountryGeo extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "格鲁吉亚", common: "格鲁吉亚"),
           ],
-          latLng: const [42, 43.5],
+          latLng: const LatLng(42, 43.5),
           bordersCodes: const ["Arm", "Aze", "Rus", "Tur"],
           areaMetric: 69700,
           demonyms: const [
@@ -46868,8 +47071,10 @@ class CountryGeo extends WorldCountry {
           fifa: "GEO",
           car: const Car(signs: ["GE"]),
           timezones: const ["UTC+04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tbilisi"], latLng: [41.68, 44.83]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tbilisi"),
+            latLng: LatLng(41.68, 44.83),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -47036,7 +47241,7 @@ class CountryTwn extends WorldCountry {
               common: "台灣",
             ),
           ],
-          latLng: const [23.5, 121],
+          latLng: const LatLng(23.5, 121),
           areaMetric: 36193,
           demonyms: const [
             Demonyms(
@@ -47059,8 +47264,10 @@ class CountryTwn extends WorldCountry {
           fifa: "TPE",
           car: const Car(signs: ["RC"]),
           timezones: const ["UTC+08:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Taipei"], latLng: [25.03, 121.52]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Taipei"),
+            latLng: LatLng(25.03, 121.52),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -47235,7 +47442,7 @@ class CountryChe extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "瑞士联邦", common: "瑞士"),
           ],
-          latLng: const [47, 8],
+          latLng: const LatLng(47, 8),
           landlocked: true,
           bordersCodes: const [
             "Aut",
@@ -47267,8 +47474,10 @@ class CountryChe extends WorldCountry {
           fifa: "SUI",
           car: const Car(signs: ["CH"]),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bern"], latLng: [46.92, 7.47]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bern"),
+            latLng: LatLng(46.92, 7.47),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -47443,7 +47652,7 @@ class CountryEri extends WorldCountry {
               common: "厄立特里亚",
             ),
           ],
-          latLng: const [15, 39],
+          latLng: const LatLng(15, 39),
           bordersCodes: const [
             "Dji",
             "Eth",
@@ -47471,8 +47680,10 @@ class CountryEri extends WorldCountry {
           fifa: "ERI",
           car: const Car(signs: ["ER"]),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Asmara"], latLng: [15.33, 38.93]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Asmara"),
+            latLng: LatLng(15.33, 38.93),
+          ),
         );
 }
 
@@ -47634,7 +47845,7 @@ class CountryCog extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "刚果共和国", common: "刚果"),
           ],
-          latLng: const [-1, 15],
+          latLng: const LatLng(-1, 15),
           bordersCodes: const [
             "Ago",
             "Cmr",
@@ -47667,8 +47878,8 @@ class CountryCog extends WorldCountry {
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Brazzaville"],
-            latLng: [-4.25, 15.28],
+            capital: Capital("Brazzaville"),
+            latLng: LatLng(-4.25, 15.28),
           ),
         );
 }
@@ -47827,7 +48038,7 @@ class CountryFro extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "法罗群岛", common: "法罗群岛"),
           ],
-          latLng: const [62, -7],
+          latLng: const LatLng(62, -7),
           areaMetric: 1393,
           demonyms: const [
             Demonyms(language: LangEng(), f: "Faroese", m: "Faroese"),
@@ -47846,8 +48057,10 @@ class CountryFro extends WorldCountry {
           fifa: "FRO",
           car: const Car(signs: ["FO"]),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tórshavn"], latLng: [62.01, -6.77]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tórshavn"),
+            latLng: LatLng(62.01, -6.77),
+          ),
           postalCode: const PostalCode(
             format: "FO-###",
             regExpPattern: r"^(?:FO)*(\\d{3})$",
