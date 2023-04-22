@@ -43,7 +43,11 @@ class DescriptionTile extends StatelessWidget {
         _title,
         (title) => Column(
           children: [
-            const Divider(height: 1, thickness: 1),
+            Divider(
+              height: 1,
+              thickness: 1,
+              color: leadingColor.withOpacity(0.2),
+            ),
             ListTile(
               leading: _leading,
               title: SelectableText(title),
@@ -55,6 +59,7 @@ class DescriptionTile extends StatelessWidget {
               dense: true,
               leadingAndTrailingTextStyle: const TextStyle(
                 color: leadingColor,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
             ),

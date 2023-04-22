@@ -90,7 +90,7 @@ class WorldCountry extends Country {
 
   static WorldCountry? maybeFromValue<T extends Object>(
     T value, {
-    T? Function(WorldCountry lang)? where,
+    T? Function(WorldCountry country)? where,
     Iterable<WorldCountry> countries = list,
   }) {
     assert(countries.isNotEmpty, "`countries` should not be empty!");

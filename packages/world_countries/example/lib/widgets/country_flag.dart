@@ -8,15 +8,19 @@ class CountryFlag extends StatelessWidget {
   final double? size;
 
   @override
-  Widget build(BuildContext context) => EmojiFlag.custom(
+  Widget build(BuildContext context) => EmojiFlag.fromEmojiFamily(
         country,
+        emojiFamily: FunctionalPlatform.maybeWhenConst(
+          android: EmojiFamily.openMoji,
+          web: EmojiFamily.openMoji,
+          orElse: null,
+        ),
         style: TextStyle(
           fontSize: size,
-          fontFamily: FunctionalPlatform.maybeWhen(
-            // TODO: Investigate web platform.
-            iOS: () => "EmojiOneColor",
-            macOS: () => "EmojiOneColor",
-            orElse: () => "EmojiOneMozilla",
+          fontFamily: FunctionalPlatform.maybeWhenConst(
+            iOS: "EmojiOneColor",
+            macOS: "EmojiOneColor",
+            orElse: "EmojiOneMozilla",
           ),
         ),
         textAlign: TextAlign.center,

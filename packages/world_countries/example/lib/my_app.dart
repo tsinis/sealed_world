@@ -11,6 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         home: CountryPage(country: country),
-        theme: ThemeData.dark(useMaterial3: true),
+        theme: ThemeData.light(useMaterial3: true),
       );
 }
