@@ -4,8 +4,6 @@ class Gini {
   final int year;
   final double value;
 
-  DateTime get dateTime => DateTime(year);
-
   @override
-  String toString() => "Gini(year: $year, value: $value)";
+  String toString() => "Gini(value: $value, year: $year)";
 }

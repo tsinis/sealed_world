@@ -176,7 +176,7 @@ class CountryUnk extends WorldCountry {
           latLng: const [42.666667, 21.166667],
           landlocked: true,
           bordersCodes: const ["Alb", "Mkd", "Mne", "Srb"],
-          area: 10908,
+          areaMetric: 10908,
           demonyms: const [
             Demonyms(
               language: LangEng(),

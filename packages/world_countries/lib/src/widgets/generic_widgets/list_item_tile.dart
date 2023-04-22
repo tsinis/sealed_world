@@ -4,8 +4,7 @@ import "../../constants/ui_constants.dart";
 
 class ListItemTile<T extends Object> extends ListTile {
   const ListItemTile(
-    this.item, {
-    this.index = 0,
+    this._item, {
     this.onPressed,
     Widget? chosenIcon = const Icon(Icons.beenhere_outlined),
     bool isChosen = false,
@@ -47,11 +46,10 @@ class ListItemTile<T extends Object> extends ListTile {
   @protected
   static const fontSize = UiConstants.point * 3;
 
-  final int index;
   final ValueSetter<T>? onPressed;
 
   @protected
-  final T item;
+  final T _item;
 
   @override
   Widget build(BuildContext context) => Material(
@@ -77,7 +75,7 @@ class ListItemTile<T extends Object> extends ListTile {
               const TextStyle(fontSize: fontSize),
           contentPadding: contentPadding,
           enabled: enabled,
-          onTap: enabled ? () => onPressed?.call(item) : null,
+          onTap: enabled ? () => onPressed?.call(_item) : null,
           onLongPress: onLongPress,
           onFocusChange: onFocusChange,
           mouseCursor: mouseCursor,

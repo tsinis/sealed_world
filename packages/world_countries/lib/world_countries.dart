@@ -6,6 +6,7 @@ export "package:sealed_countries/sealed_countries.dart";
 
 export "src/constants/package_constants.dart";
 export "src/constants/ui_constants.dart";
+export "src/extensions/build_context_extensions.dart";
 export "src/generated/fonts.gen.dart";
 export "src/helpers/functional_platform.dart";
 export "src/interfaces/search_delegate_interface.dart";
@@ -21,6 +22,7 @@ export "src/widgets/country/emoji_flag.dart";
 export "src/widgets/currency/currency_picker.dart";
 export "src/widgets/currency/currency_tile.dart";
 export "src/widgets/generic_widgets/search_list_listenable_builder.dart";
+export "src/widgets/helpers/maybe_widget.dart";
 export "src/widgets/language/language_picker.dart";
 export "src/widgets/language/language_tile.dart";
 export "src/widgets/phone_code/phone_code_picker.dart";

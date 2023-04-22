@@ -18,7 +18,6 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.horizontalTitleGap,
     super.hoverColor,
     super.iconColor,
-    super.index,
     super.isChosen,
     super.isDisabled,
     super.isThreeLine,
@@ -52,7 +51,7 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     Widget? leading,
     Widget? subtitle,
     Widget? title,
-    double? minLeadingWidth,
+    double? minLeadingWidth = UiConstants.minWidth,
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -85,16 +84,14 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.visualDensity,
   }) : super(
           currency.item,
-          index: currency.index,
           isChosen: currency.isChosen,
           isDisabled: currency.isDisabled,
           title: title ?? Text(currency.item.namesNative.first),
-          minLeadingWidth: minLeadingWidth ?? UiConstants.constraints.minWidth,
+          minLeadingWidth: minLeadingWidth,
           leading: leading ??
               ConstrainedBox(
-                constraints: UiConstants.constraints.copyWith(
-                  minWidth: minLeadingWidth ?? UiConstants.constraints.minWidth,
-                ),
+                constraints:
+                    UiConstants.constraints.copyWith(minWidth: minLeadingWidth),
                 child: Text(currency.item.unit, textAlign: TextAlign.center),
               ),
           subtitle: subtitle ??

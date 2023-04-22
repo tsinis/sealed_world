@@ -4,28 +4,28 @@ class WorldCountry extends Country {
   const WorldCountry({
     required super.name,
     required this.altSpellings,
-    required this.area,
+    required this.areaMetric,
     required this.car,
     required this.code, // CCA3.
     required this.codeNumeric, // CCN3.
     required this.codeShort, // CCA2.
     required this.continent,
     required this.emoji,
-    required this.idd,
+    required this.idd, // International Direct Dialing.
     required this.languages,
     required this.latLng,
     required this.maps,
     required this.namesNative,
     required this.population,
     required this.timezones,
-    required this.tld,
+    required this.tld, // Top Level Domain.
     required this.translations,
+    required this.demonyms,
+    required this.currencies,
     this.capitalInfo,
-    this.cioc,
-    this.currencies,
-    this.demonyms, // Could be required.
+    this.cioc, // International Olympic Committee.
     this.fifa,
-    this.gini,
+    this.gini, // Gini Coefficient.
     this.hasCoatOfArms = true,
     this.independent = true,
     this.landlocked = false,
@@ -62,8 +62,8 @@ class WorldCountry extends Country {
   final List<double> latLng;
   final bool landlocked;
   final List<String>? bordersCodes;
-  final double area;
-  final List<Demonyms>? demonyms;
+  final double areaMetric;
+  final List<Demonyms> demonyms;
   final String emoji;
   final Maps maps;
   final int population;
@@ -79,9 +79,9 @@ class WorldCountry extends Country {
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """WorldCountry(name: $name, namesNative: $namesNative  tld: $tld, codeShort: $codeShort, codeNumeric: $codeNumeric, code: $code, cioc: $cioc, independent: $independent, unMember: $unMember, currencies: $currencies, idd: $idd, altSpellings: $altSpellings, continent: $continent, subregion: $subregion, languages: $languages, translations: $translations, latLng: $latLng, landlocked: $landlocked, bordersCodes: $bordersCodes, area: $area, demonyms: $demonyms, emoji: $emoji, maps: $maps, population: $population, gini: $gini, fifa: $fifa, car: $car, timezones: $timezones, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: $capitalInfo, postalCode: $postalCode)""";
+      : """WorldCountry(name: $name, namesNative: $namesNative  tld: $tld, codeShort: $codeShort, codeNumeric: $codeNumeric, code: $code, cioc: $cioc, independent: $independent, unMember: $unMember, currencies: $currencies, idd: $idd, altSpellings: $altSpellings, continent: $continent, subregion: $subregion, languages: $languages, translations: $translations, latLng: $latLng, landlocked: $landlocked, bordersCodes: $bordersCodes, areaMetric: $areaMetric, demonyms: $demonyms, emoji: $emoji, maps: $maps, population: $population, gini: $gini, fifa: $fifa, car: $car, timezones: $timezones, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: $capitalInfo, postalCode: $postalCode)""";
 
-  // ignore: lines_longer_than_80_chars, might be shorter in the future.
+  // TODO: Move to the extension instead.
   bool get isOfficiallyAssigned =>
       codeShort.isNotEmpty &&
       code.isNotEmpty &&
@@ -90,7 +90,7 @@ class WorldCountry extends Country {
 
   static WorldCountry? maybeFromValue<T extends Object>(
     T value, {
-    T? Function(WorldCountry lang)? where,
+    T? Function(WorldCountry country)? where,
     Iterable<WorldCountry> countries = list,
   }) {
     assert(countries.isNotEmpty, "`countries` should not be empty!");
@@ -100,13 +100,6 @@ class WorldCountry extends Country {
     }
 
     return null;
-  }
-
-  List<WorldCountry>? get borders {
-    final codes = bordersCodes;
-    if (codes == null) return null;
-
-    return List.unmodifiable(codes.map<WorldCountry>(WorldCountry.fromCode));
   }
 
   static const list = [

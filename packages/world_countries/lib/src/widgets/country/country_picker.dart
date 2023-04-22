@@ -64,6 +64,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   Iterable<String> defaultSearch(WorldCountry item) => Set.unmodifiable({
         ...item.translations.map((translatedName) => translatedName.common),
         ...item.namesNative.map((nativeName) => nativeName.common),
+        ...item.altSpellings,
         item.name.common,
       });
 

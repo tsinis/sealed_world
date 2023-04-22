@@ -174,7 +174,7 @@ class CountryCpv extends WorldCountry {
             ),
           ],
           latLng: const [16.5388, 23.0418],
-          area: 4033,
+          areaMetric: 4033,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -377,7 +377,7 @@ class CountrySgp extends WorldCountry {
             ),
           ],
           latLng: const [1.36666666, 103.8],
-          area: 710,
+          areaMetric: 710,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -573,7 +573,7 @@ class CountryMrt extends WorldCountry {
             "Sen",
             "Esh",
           ],
-          area: 1030700,
+          areaMetric: 1030700,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -595,7 +595,7 @@ class CountryMrt extends WorldCountry {
           gini: const Gini(year: 2014, value: 32.6),
           fifa: "MTN",
           car: const Car(signs: ["RIM"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Nouakchott"],
             latLng: [18.07, -15.97],
@@ -769,7 +769,7 @@ class CountryPol extends WorldCountry {
             "Svk",
             "Ukr",
           ],
-          area: 312679,
+          areaMetric: 312679,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -972,7 +972,7 @@ class CountryTcd extends WorldCountry {
             "Nga",
             "Sdn",
           ],
-          area: 1284000,
+          areaMetric: 1284000,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -1155,7 +1155,7 @@ class CountryJpn extends WorldCountry {
             ),
           ],
           latLng: const [36, 138],
-          area: 377930,
+          areaMetric: 377930,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -1340,7 +1340,7 @@ class CountryCub extends WorldCountry {
             ),
           ],
           latLng: const [21.5, -80],
-          area: 109884,
+          areaMetric: 109884,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -1538,7 +1538,7 @@ class CountryMoz extends WorldCountry {
             "Zmb",
             "Zwe",
           ],
-          area: 801590,
+          areaMetric: 801590,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -1727,7 +1727,7 @@ class CountryGbr extends WorldCountry {
           ],
           latLng: const [54, -2],
           bordersCodes: const ["Irl"],
-          area: 242900,
+          areaMetric: 242900,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -1754,7 +1754,7 @@ class CountryGbr extends WorldCountry {
             "UTC-04:00",
             "UTC-03:00",
             "UTC-02:00",
-            "UTC",
+            "UTC+00:00",
             "UTC+01:00",
             "UTC+02:00",
             "UTC+06:00",
@@ -1933,7 +1933,7 @@ class CountryIrl extends WorldCountry {
           ],
           latLng: const [53, -8],
           bordersCodes: const ["Gbr"],
-          area: 70273,
+          areaMetric: 70273,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -1955,7 +1955,7 @@ class CountryIrl extends WorldCountry {
           gini: const Gini(year: 2017, value: 31.4),
           fifa: "IRL",
           car: const Car(signs: ["IRL"], isRightSide: false),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Dublin"],
             latLng: [53.32, -6.23],
@@ -2126,7 +2126,7 @@ class CountryNer extends WorldCountry {
             "Mli",
             "Nga",
           ],
-          area: 1267000,
+          areaMetric: 1267000,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -2310,7 +2310,7 @@ class CountryGmb extends WorldCountry {
           ],
           latLng: const [13.46666666, -16.56666666],
           bordersCodes: const ["Sen"],
-          area: 10689,
+          areaMetric: 10689,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -2511,7 +2511,7 @@ class CountryUzb extends WorldCountry {
             "Tjk",
             "Tkm",
           ],
-          area: 447400,
+          areaMetric: 447400,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -2718,7 +2718,7 @@ class CountryRus extends WorldCountry {
             "Pol",
             "Ukr",
           ],
-          area: 17098242,
+          areaMetric: 17098242,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -2925,7 +2925,7 @@ class CountryTkm extends WorldCountry {
             "Kaz",
             "Uzb",
           ],
-          area: 488100,
+          areaMetric: 488100,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -3113,7 +3113,7 @@ class CountryAia extends WorldCountry {
             ),
           ],
           latLng: const [18.25, -63.16666666],
-          area: 91,
+          areaMetric: 91,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -3301,7 +3301,7 @@ class CountryVnm extends WorldCountry {
           ],
           latLng: const [16.16666666, 107.83333333],
           bordersCodes: const ["Khm", "Chn", "Lao"],
-          area: 331212,
+          areaMetric: 331212,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -3353,6 +3353,7 @@ class CountryAta extends WorldCountry {
           codeShort: "AQ",
           codeNumeric: "010",
           code: "ATA",
+          currencies: null,
           independent: false,
           unMember: false,
           languages: const [LangEng()],
@@ -3487,7 +3488,7 @@ class CountryAta extends WorldCountry {
           ],
           latLng: const [-90, 0],
           idd: const Idd(root: 6, suffixes: [72]),
-          area: 14000000,
+          areaMetric: 14000000,
           demonyms: const [
             Demonyms(language: LangEng(), f: "Antarctican", m: "Antarctican"),
             Demonyms(
@@ -3684,7 +3685,7 @@ class CountrySwz extends WorldCountry {
           latLng: const [-26.5, 31.5],
           landlocked: true,
           bordersCodes: const ["Moz", "Zaf"],
-          area: 17364,
+          areaMetric: 17364,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -3873,7 +3874,7 @@ class CountryKhm extends WorldCountry {
           ],
           latLng: const [13, 105],
           bordersCodes: const ["Lao", "Tha", "Vnm"],
-          area: 181035,
+          areaMetric: 181035,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -4071,7 +4072,7 @@ class CountryVut extends WorldCountry {
             ),
           ],
           latLng: const [-16, 167],
-          area: 12189,
+          areaMetric: 12189,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -4251,7 +4252,7 @@ class CountryAla extends WorldCountry {
             CountryName(language: LangZho(), official: "奥兰群岛", common: "奥兰群岛"),
           ],
           latLng: const [60.116667, 19.9],
-          area: 1580,
+          areaMetric: 1580,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -4432,7 +4433,7 @@ class CountryAus extends WorldCountry {
             ),
           ],
           latLng: const [-27, 133],
-          area: 7692024,
+          areaMetric: 7692024,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -4627,7 +4628,7 @@ class CountryIot extends WorldCountry {
             ),
           ],
           latLng: const [-6, 71.5],
-          area: 60,
+          areaMetric: 60,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -4812,7 +4813,7 @@ class CountrySvk extends WorldCountry {
             "Pol",
             "Ukr",
           ],
-          area: 49037,
+          areaMetric: 49037,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -5015,7 +5016,7 @@ class CountryBra extends WorldCountry {
             "Ury",
             "Ven",
           ],
-          area: 8515767,
+          areaMetric: 8515767,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -5220,7 +5221,7 @@ class CountryTjk extends WorldCountry {
             "Kgz",
             "Uzb",
           ],
-          area: 143100,
+          areaMetric: 143100,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -5410,7 +5411,7 @@ class CountrySgs extends WorldCountry {
             ),
           ],
           latLng: const [-54.5, -37],
-          area: 3903,
+          areaMetric: 3903,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -5588,7 +5589,7 @@ class CountryLbr extends WorldCountry {
           ],
           latLng: const [6.5, -9.5],
           bordersCodes: const ["Gin", "Civ", "Sle"],
-          area: 111369,
+          areaMetric: 111369,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -5610,7 +5611,7 @@ class CountryLbr extends WorldCountry {
           gini: const Gini(year: 2016, value: 35.3),
           fifa: "LBR",
           car: const Car(signs: ["LB"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Monrovia"], latLng: [6.3, -10.8]),
           postalCode:
@@ -5782,7 +5783,7 @@ class CountryNga extends WorldCountry {
             "Tcd",
             "Ner",
           ],
-          area: 923768,
+          areaMetric: 923768,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -5978,7 +5979,7 @@ class CountryCol extends WorldCountry {
             "Per",
             "Ven",
           ],
-          area: 1141748,
+          areaMetric: 1141748,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -6165,7 +6166,7 @@ class CountrySmr extends WorldCountry {
           latLng: const [43.76666666, 12.41666666],
           landlocked: true,
           bordersCodes: const ["Ita"],
-          area: 61,
+          areaMetric: 61,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -6357,7 +6358,7 @@ class CountryShn extends WorldCountry {
             ),
           ],
           latLng: const [-15.95, -5.72],
-          area: 394,
+          areaMetric: 394,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -6549,7 +6550,7 @@ class CountryEgy extends WorldCountry {
             "Pse",
             "Sdn",
           ],
-          area: 1002450,
+          areaMetric: 1002450,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -6737,7 +6738,7 @@ class CountryHnd extends WorldCountry {
           ],
           latLng: const [15, -86.5],
           bordersCodes: const ["Gtm", "Slv", "Nic"],
-          area: 112492,
+          areaMetric: 112492,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -6929,7 +6930,7 @@ class CountryIdn extends WorldCountry {
           ],
           latLng: const [-5, 120],
           bordersCodes: const ["Tls", "Mys", "Png"],
-          area: 1904569,
+          areaMetric: 1904569,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -7123,7 +7124,7 @@ class CountryPrk extends WorldCountry {
           ],
           latLng: const [40, 127],
           bordersCodes: const ["Chn", "Kor", "Rus"],
-          area: 120538,
+          areaMetric: 120538,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -7336,7 +7337,7 @@ class CountryMac extends WorldCountry {
           ],
           latLng: const [22.16666666, 113.55],
           bordersCodes: const ["Chn"],
-          area: 30,
+          areaMetric: 30,
           demonyms: const [
             Demonyms(language: LangEng(), f: "Macanese", m: "Macanese"),
             Demonyms(
@@ -7511,7 +7512,7 @@ class CountrySle extends WorldCountry {
           ],
           latLng: const [8.5, -11.5],
           bordersCodes: const ["Gin", "Lbr"],
-          area: 71740,
+          areaMetric: 71740,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -7533,7 +7534,7 @@ class CountrySle extends WorldCountry {
           gini: const Gini(year: 2018, value: 35.7),
           fifa: "SLE",
           car: const Car(signs: ["WAL"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Freetown"],
             latLng: [8.48, -13.23],
@@ -7701,7 +7702,7 @@ class CountryMda extends WorldCountry {
           latLng: const [47, 29],
           landlocked: true,
           bordersCodes: const ["Rou", "Ukr"],
-          area: 33846,
+          areaMetric: 33846,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -7897,7 +7898,7 @@ class CountryPhl extends WorldCountry {
             ),
           ],
           latLng: const [13, 122],
-          area: 342353,
+          areaMetric: 342353,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -8097,7 +8098,7 @@ class CountryCmr extends WorldCountry {
             "Gab",
             "Nga",
           ],
-          area: 475442,
+          areaMetric: 475442,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -8275,7 +8276,7 @@ class CountryGrl extends WorldCountry {
             CountryName(language: LangZho(), official: "格陵兰", common: "格陵兰"),
           ],
           latLng: const [72, -40],
-          area: 2166086,
+          areaMetric: 2166086,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -8453,7 +8454,7 @@ class CountryMtq extends WorldCountry {
             CountryName(language: LangZho(), official: "马提尼克", common: "马提尼克"),
           ],
           latLng: const [14.666667, -61],
-          area: 1128,
+          areaMetric: 1128,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -8645,7 +8646,7 @@ class CountryLbn extends WorldCountry {
           ],
           latLng: const [33.83333333, 35.83333333],
           bordersCodes: const ["Isr", "Syr"],
-          area: 10452,
+          areaMetric: 10452,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -8852,7 +8853,7 @@ class CountryRwa extends WorldCountry {
             "Tza",
             "Uga",
           ],
-          area: 26338,
+          areaMetric: 26338,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -9048,7 +9049,7 @@ class CountryBih extends WorldCountry {
           ],
           latLng: const [44, 18],
           bordersCodes: const ["Hrv", "Mne", "Srb"],
-          area: 51209,
+          areaMetric: 51209,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -9242,7 +9243,7 @@ class CountryMhl extends WorldCountry {
             ),
           ],
           latLng: const [9, 168],
-          area: 181,
+          areaMetric: 181,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -9429,7 +9430,7 @@ class CountryIta extends WorldCountry {
             "Che",
             "Vat",
           ],
-          area: 301336,
+          areaMetric: 301336,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -9614,7 +9615,7 @@ class CountryTkl extends WorldCountry {
             CountryName(language: LangZho(), official: "托克劳", common: "托克劳"),
           ],
           latLng: const [-9, -172],
-          area: 12,
+          areaMetric: 12,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -9792,7 +9793,7 @@ class CountryGab extends WorldCountry {
           ],
           latLng: const [-1, 11.75],
           bordersCodes: const ["Cmr", "Cog", "Gnq"],
-          area: 267668,
+          areaMetric: 267668,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -9972,7 +9973,7 @@ class CountryCck extends WorldCountry {
             CountryName(language: LangZho(), official: "科科斯", common: "科科斯"),
           ],
           latLng: const [12.1642, 96.871],
-          area: 14,
+          areaMetric: 14,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -10165,7 +10166,7 @@ class CountryPak extends WorldCountry {
             "Ind",
             "Irn",
           ],
-          area: 881912,
+          areaMetric: 881912,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -10346,7 +10347,7 @@ class CountryReu extends WorldCountry {
             CountryName(language: LangZho(), official: "留尼旺岛", common: "留尼旺岛"),
           ],
           latLng: const [-21.15, 55.5],
-          area: 2511,
+          areaMetric: 2511,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -10541,7 +10542,7 @@ class CountryMus extends WorldCountry {
             ),
           ],
           latLng: const [-20.28333333, 57.55],
-          area: 2040,
+          areaMetric: 2040,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -10720,7 +10721,7 @@ class CountryGrd extends WorldCountry {
             CountryName(language: LangZho(), official: "格林纳达", common: "格林纳达"),
           ],
           latLng: const [12.11666666, -61.66666666],
-          area: 344,
+          areaMetric: 344,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -10899,7 +10900,7 @@ class CountryOmn extends WorldCountry {
           ],
           latLng: const [21, 57],
           bordersCodes: const ["Sau", "Are", "Yem"],
-          area: 309500,
+          areaMetric: 309500,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -11091,7 +11092,7 @@ class CountryBfa extends WorldCountry {
             "Ner",
             "Tgo",
           ],
-          area: 272967,
+          areaMetric: 272967,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -11113,7 +11114,7 @@ class CountryBfa extends WorldCountry {
           gini: const Gini(year: 2014, value: 35.3),
           fifa: "BFA",
           car: const Car(signs: ["BF"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Ouagadougou"],
             latLng: [12.37, -1.52],
@@ -11283,7 +11284,7 @@ class CountryWsm extends WorldCountry {
             ),
           ],
           latLng: const [-13.58333333, -172.33333333],
-          area: 2842,
+          areaMetric: 2842,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -11466,7 +11467,7 @@ class CountryTto extends WorldCountry {
             ),
           ],
           latLng: const [10.6918, 61.2225],
-          area: 5130,
+          areaMetric: 5130,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -11649,7 +11650,7 @@ class CountryVct extends WorldCountry {
             ),
           ],
           latLng: const [13.25, -61.2],
-          area: 389,
+          areaMetric: 389,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -11828,7 +11829,7 @@ class CountryPlw extends WorldCountry {
             CountryName(language: LangZho(), official: "帕劳共和国", common: "帕劳"),
           ],
           latLng: const [7.5, 134.5],
-          area: 459,
+          areaMetric: 459,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -12077,7 +12078,7 @@ class CountryZaf extends WorldCountry {
             "Swz",
             "Zwe",
           ],
-          area: 1221037,
+          areaMetric: 1221037,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -12272,7 +12273,7 @@ class CountryAgo extends WorldCountry {
             "Zmb",
             "Nam",
           ],
-          area: 1246700,
+          areaMetric: 1246700,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -12452,7 +12453,7 @@ class CountryKor extends WorldCountry {
           ],
           latLng: const [37, 127.5],
           bordersCodes: const ["Prk"],
-          area: 100210,
+          areaMetric: 100210,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -12640,7 +12641,7 @@ class CountryAtf extends WorldCountry {
             ),
           ],
           latLng: const [-49.25, 69.167],
-          area: 7747,
+          areaMetric: 7747,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -12822,7 +12823,7 @@ class CountryIsl extends WorldCountry {
             CountryName(language: LangZho(), official: "冰岛", common: "冰岛"),
           ],
           latLng: const [65, -18],
-          area: 103000,
+          areaMetric: 103000,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -12844,7 +12845,7 @@ class CountryIsl extends WorldCountry {
           gini: const Gini(year: 2017, value: 26.1),
           fifa: "ISL",
           car: const Car(signs: ["IS"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Reykjavik"],
             latLng: [64.15, -21.95],
@@ -13009,7 +13010,7 @@ class CountryGuf extends WorldCountry {
           ],
           latLng: const [4, -53],
           bordersCodes: const ["Bra", "Sur"],
-          area: 83534,
+          areaMetric: 83534,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -13201,7 +13202,7 @@ class CountryNor extends WorldCountry {
           ],
           latLng: const [62, 10],
           bordersCodes: const ["Fin", "Swe", "Rus"],
-          area: 323802,
+          areaMetric: 323802,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -13390,7 +13391,7 @@ class CountryHun extends WorldCountry {
             "Svn",
             "Ukr",
           ],
-          area: 93028,
+          areaMetric: 93028,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -13581,7 +13582,7 @@ class CountryPse extends WorldCountry {
           ],
           latLng: const [31.9, 35.2],
           bordersCodes: const ["Isr", "Egy", "Jor"],
-          area: 6220,
+          areaMetric: 6220,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -13761,7 +13762,7 @@ class CountryLca extends WorldCountry {
             CountryName(language: LangZho(), official: "圣卢西亚", common: "圣卢西亚"),
           ],
           latLng: const [13.88333333, -60.96666666],
-          area: 616,
+          areaMetric: 616,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -13948,7 +13949,7 @@ class CountryNpl extends WorldCountry {
           latLng: const [28, 84],
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
-          area: 147181,
+          areaMetric: 147181,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -14131,7 +14132,7 @@ class CountryMng extends WorldCountry {
           latLng: const [46, 105],
           landlocked: true,
           bordersCodes: const ["Chn", "Rus"],
-          area: 1564110,
+          areaMetric: 1564110,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -14329,7 +14330,7 @@ class CountryZmb extends WorldCountry {
             "Tza",
             "Zwe",
           ],
-          area: 752612,
+          areaMetric: 752612,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -14516,7 +14517,7 @@ class CountryWlf extends WorldCountry {
             ),
           ],
           latLng: const [-13.3, -176.2],
-          area: 142,
+          areaMetric: 142,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -14701,7 +14702,7 @@ class CountryMwi extends WorldCountry {
           latLng: const [-13.5, 34],
           landlocked: true,
           bordersCodes: const ["Moz", "Tza", "Zmb"],
-          area: 118484,
+          areaMetric: 118484,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -14884,7 +14885,7 @@ class CountryBhr extends WorldCountry {
             CountryName(language: LangZho(), official: "巴林王国", common: "巴林"),
           ],
           latLng: const [26, 50.55],
-          area: 765,
+          areaMetric: 765,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -15073,7 +15074,7 @@ class CountryUkr extends WorldCountry {
             "Rus",
             "Svk",
           ],
-          area: 603500,
+          areaMetric: 603500,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -15262,7 +15263,7 @@ class CountryNru extends WorldCountry {
             CountryName(language: LangZho(), official: "瑙鲁共和国", common: "瑙鲁"),
           ],
           latLng: const [-0.53333333, 166.91666666],
-          area: 21,
+          areaMetric: 21,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -15443,7 +15444,7 @@ class CountryMyt extends WorldCountry {
             CountryName(language: LangZho(), official: "马约特", common: "马约特"),
           ],
           latLng: const [-12.83333333, 45.16666666],
-          area: 374,
+          areaMetric: 374,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -15635,7 +15636,7 @@ class CountryDza extends WorldCountry {
             "Mli",
             "Mar",
           ],
-          area: 2381741,
+          areaMetric: 2381741,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -15857,7 +15858,7 @@ class CountryCan extends WorldCountry {
           ],
           latLng: const [60, -95],
           bordersCodes: const ["Usa"],
-          area: 9984670,
+          areaMetric: 9984670,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -16057,7 +16058,7 @@ class CountryLie extends WorldCountry {
           latLng: const [47.26666666, 9.53333333],
           landlocked: true,
           bordersCodes: const ["Aut", "Che"],
-          area: 160,
+          areaMetric: 160,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -16253,7 +16254,7 @@ class CountryEth extends WorldCountry {
             "Ssd",
             "Sdn",
           ],
-          area: 1104300,
+          areaMetric: 1104300,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -16439,7 +16440,7 @@ class CountryDom extends WorldCountry {
           ],
           latLng: const [19, -70.66666666],
           bordersCodes: const ["Hti"],
-          area: 48671,
+          areaMetric: 48671,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -16487,6 +16488,7 @@ class CountryBvt extends WorldCountry {
           tld: const [".bv"],
           codeShort: "BV",
           codeNumeric: "074",
+          currencies: null,
           code: "BVT",
           independent: false,
           unMember: false,
@@ -16617,8 +16619,15 @@ class CountryBvt extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "布维岛", common: "布维岛"),
           ],
+          demonyms: const [
+            Demonyms(
+              language: LangEng(),
+              f: "Bouvet Islander",
+              m: "Bouvet Islander",
+            ),
+          ],
           latLng: const [54.4208, 3.3464],
-          area: 49,
+          areaMetric: 49,
           emoji: "🇧🇻",
           maps: const Maps(
             googleMaps: "7WRQAEKZb4uK36yi9",
@@ -16786,7 +16795,7 @@ class CountryNfk extends WorldCountry {
             CountryName(language: LangZho(), official: "诺福克岛", common: "诺福克岛"),
           ],
           latLng: const [-29.03333333, 167.95],
-          area: 36,
+          areaMetric: 36,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -16965,7 +16974,7 @@ class CountryNld extends WorldCountry {
           ],
           latLng: const [52.5, 5.75],
           bordersCodes: const ["Bel", "Deu"],
-          area: 41850,
+          areaMetric: 41850,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -17163,7 +17172,7 @@ class CountryMnp extends WorldCountry {
             ),
           ],
           latLng: const [15.2, 145.75],
-          area: 464,
+          areaMetric: 464,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -17370,7 +17379,7 @@ class CountryHkg extends WorldCountry {
           ],
           latLng: const [22.267, 114.188],
           bordersCodes: const ["Chn"],
-          area: 1104,
+          areaMetric: 1104,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -17565,7 +17574,7 @@ class CountryIrq extends WorldCountry {
             "Syr",
             "Tur",
           ],
-          area: 438317,
+          areaMetric: 438317,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -17751,7 +17760,7 @@ class CountryEsp extends WorldCountry {
             "Prt",
             "Mar",
           ],
-          area: 505992,
+          areaMetric: 505992,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -17773,7 +17782,7 @@ class CountryEsp extends WorldCountry {
           gini: const Gini(year: 2018, value: 34.7),
           fifa: "ESP",
           car: const Car(signs: ["E"]),
-          timezones: const ["UTC", "UTC+01:00"],
+          timezones: const ["UTC+00:00", "UTC+01:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Madrid"], latLng: [40.4, -3.68]),
           postalCode: const PostalCode(),
@@ -17935,7 +17944,7 @@ class CountryTgo extends WorldCountry {
           ],
           latLng: const [8, 1.16666666],
           bordersCodes: const ["Ben", "Bfa", "Gha"],
-          area: 56785,
+          areaMetric: 56785,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -17957,7 +17966,7 @@ class CountryTgo extends WorldCountry {
           gini: const Gini(year: 2015, value: 43.1),
           fifa: "TOG",
           car: const Car(signs: ["TG"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Lomé"], latLng: [6.14, 1.21]),
         );
@@ -18142,7 +18151,7 @@ class CountryChn extends WorldCountry {
             "Tjk",
             "Vnm",
           ],
-          area: 9706961,
+          areaMetric: 9706961,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -18334,7 +18343,7 @@ class CountryFlk extends WorldCountry {
             ),
           ],
           latLng: const [-51.75, -59],
-          area: 12173,
+          areaMetric: 12173,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -18833,7 +18842,7 @@ class CountryUsa extends WorldCountry {
           ],
           latLng: const [38, -97],
           bordersCodes: const ["Can", "Mex"],
-          area: 9372610,
+          areaMetric: 9372610,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -19032,7 +19041,7 @@ class CountryMaf extends WorldCountry {
           ],
           latLng: const [18.0708, 63.0501],
           bordersCodes: const ["Sxm"],
-          area: 53,
+          areaMetric: 53,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -19229,7 +19238,7 @@ class CountryIrn extends WorldCountry {
             "Tur",
             "Tkm",
           ],
-          area: 1648195,
+          areaMetric: 1648195,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -19421,7 +19430,7 @@ class CountryMex extends WorldCountry {
           ],
           latLng: const [23, -102],
           bordersCodes: const ["Blz", "Gtm", "Usa"],
-          area: 1964375,
+          areaMetric: 1964375,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -19607,7 +19616,7 @@ class CountryBrn extends WorldCountry {
           ],
           latLng: const [4.5, 114.66666666],
           bordersCodes: const ["Mys"],
-          area: 5765,
+          areaMetric: 5765,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -19805,7 +19814,7 @@ class CountryCyp extends WorldCountry {
             ),
           ],
           latLng: const [35, 33],
-          area: 9251,
+          areaMetric: 9251,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -19993,7 +20002,7 @@ class CountryNic extends WorldCountry {
           ],
           latLng: const [13, -85],
           bordersCodes: const ["Cri", "Hnd"],
-          area: 130373,
+          areaMetric: 130373,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -20190,7 +20199,7 @@ class CountryCuw extends WorldCountry {
             CountryName(language: LangZho(), official: "库拉索", common: "库拉索"),
           ],
           latLng: const [12.116667, -68.933333],
-          area: 444,
+          areaMetric: 444,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -20383,7 +20392,7 @@ class CountryPri extends WorldCountry {
             ),
           ],
           latLng: const [18.25, -66.5],
-          area: 8870,
+          areaMetric: 8870,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -20571,7 +20580,7 @@ class CountryNcl extends WorldCountry {
             ),
           ],
           latLng: const [-21.5, 165.5],
-          area: 18575,
+          areaMetric: 18575,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -20763,7 +20772,7 @@ class CountrySsd extends WorldCountry {
             "Sdn",
             "Uga",
           ],
-          area: 619745,
+          areaMetric: 619745,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -20957,7 +20966,7 @@ class CountrySom extends WorldCountry {
           ],
           latLng: const [10, 49],
           bordersCodes: const ["Dji", "Eth", "Ken"],
-          area: 637657,
+          areaMetric: 637657,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -21151,7 +21160,7 @@ class CountryGrc extends WorldCountry {
             "Tur",
             "Mkd",
           ],
-          area: 131990,
+          areaMetric: 131990,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -21337,7 +21346,7 @@ class CountryBes extends WorldCountry {
             ),
           ],
           latLng: const [12.18, -68.25],
-          area: 328,
+          areaMetric: 328,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -21531,7 +21540,7 @@ class CountryLao extends WorldCountry {
             "Tha",
             "Vnm",
           ],
-          area: 236800,
+          areaMetric: 236800,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -21718,7 +21727,7 @@ class CountryBlz extends WorldCountry {
           ],
           latLng: const [17.25, -88.75],
           bordersCodes: const ["Gtm", "Mex"],
-          area: 22966,
+          areaMetric: 22966,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -21906,7 +21915,7 @@ class CountrySlv extends WorldCountry {
           ],
           latLng: const [13.83333333, -88.91666666],
           bordersCodes: const ["Gtm", "Hnd"],
-          area: 21041,
+          areaMetric: 21041,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -22090,7 +22099,7 @@ class CountryJam extends WorldCountry {
             CountryName(language: LangZho(), official: "牙买加", common: "牙买加"),
           ],
           latLng: const [18.25, -77.5],
-          area: 10991,
+          areaMetric: 10991,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -22278,7 +22287,7 @@ class CountryUry extends WorldCountry {
           ],
           latLng: const [-33, -56],
           bordersCodes: const ["Arg", "Bra"],
-          area: 181034,
+          areaMetric: 181034,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -22473,7 +22482,7 @@ class CountryPng extends WorldCountry {
           ],
           latLng: const [-6, 147],
           bordersCodes: const ["Idn"],
-          area: 462840,
+          areaMetric: 462840,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -22677,7 +22686,7 @@ class CountryLux extends WorldCountry {
           latLng: const [49.75, 6.16666666],
           landlocked: true,
           bordersCodes: const ["Bel", "Fra", "Deu"],
-          area: 2586,
+          areaMetric: 2586,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -22859,7 +22868,7 @@ class CountryChl extends WorldCountry {
           ],
           latLng: const [-30, -71],
           bordersCodes: const ["Arg", "Bol", "Per"],
-          area: 756102,
+          areaMetric: 756102,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -23053,7 +23062,7 @@ class CountryVat extends WorldCountry {
           latLng: const [41.9, 12.45],
           landlocked: true,
           bordersCodes: const ["Ita"],
-          area: 0.44,
+          areaMetric: 0.44,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -23241,7 +23250,7 @@ class CountryGnb extends WorldCountry {
           ],
           latLng: const [12, -15],
           bordersCodes: const ["Gin", "Sen"],
-          area: 36125,
+          areaMetric: 36125,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -23263,7 +23272,7 @@ class CountryGnb extends WorldCountry {
           gini: const Gini(year: 2010, value: 50.7),
           fifa: "GNB",
           car: const Car(signs: ["RGB"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Bissau"], latLng: [11.85, -15.58]),
           postalCode:
@@ -23437,7 +23446,7 @@ class CountryUga extends WorldCountry {
             "Ssd",
             "Tza",
           ],
-          area: 241550,
+          areaMetric: 241550,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -23624,7 +23633,7 @@ class CountryVen extends WorldCountry {
           ],
           latLng: const [8, -66],
           bordersCodes: const ["Bra", "Col", "Guy"],
-          area: 916445,
+          areaMetric: 916445,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -23825,7 +23834,7 @@ class CountrySrb extends WorldCountry {
             "Mne",
             "Rou",
           ],
-          area: 88361,
+          areaMetric: 88361,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -24016,7 +24025,7 @@ class CountryBen extends WorldCountry {
             "Nga",
             "Tgo",
           ],
-          area: 112622,
+          areaMetric: 112622,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -24204,7 +24213,7 @@ class CountryBgd extends WorldCountry {
           ],
           latLng: const [24, 90],
           bordersCodes: const ["Mmr", "Ind"],
-          area: 147570,
+          areaMetric: 147570,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -24384,7 +24393,7 @@ class CountryBhs extends WorldCountry {
             CountryName(language: LangZho(), official: "巴哈马联邦", common: "巴哈马"),
           ],
           latLng: const [25.0343, 77.3963],
-          area: 13943,
+          areaMetric: 13943,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -24558,7 +24567,7 @@ class CountryNiu extends WorldCountry {
             CountryName(language: LangZho(), official: "纽埃", common: "纽埃"),
           ],
           latLng: const [-19.03333333, -169.86666666],
-          area: 260,
+          areaMetric: 260,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -24740,7 +24749,7 @@ class CountryAtg extends WorldCountry {
             ),
           ],
           latLng: const [17.05, -61.8],
-          area: 442,
+          areaMetric: 442,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -24928,7 +24937,7 @@ class CountryBlm extends WorldCountry {
             ),
           ],
           latLng: const [18.5, -63.41666666],
-          area: 21,
+          areaMetric: 21,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -25122,7 +25131,7 @@ class CountrySyc extends WorldCountry {
             ),
           ],
           latLng: const [-4.58333333, 55.66666666],
-          area: 452,
+          areaMetric: 452,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -25308,7 +25317,7 @@ class CountryEsh extends WorldCountry {
           ],
           latLng: const [24.5, -13],
           bordersCodes: const ["Dza", "Mrt", "Mar"],
-          area: 266000,
+          areaMetric: 266000,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -25490,7 +25499,7 @@ class CountryLby extends WorldCountry {
             "Sdn",
             "Tun",
           ],
-          area: 1759540,
+          areaMetric: 1759540,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -25687,7 +25696,7 @@ class CountryMkd extends WorldCountry {
             "Srb",
             "Unk",
           ],
-          area: 25713,
+          areaMetric: 25713,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -25883,7 +25892,7 @@ class CountryPer extends WorldCountry {
             "Col",
             "Ecu",
           ],
-          area: 1285216,
+          areaMetric: 1285216,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -26077,7 +26086,7 @@ class CountryBdi extends WorldCountry {
           latLng: const [-3.5, 30],
           landlocked: true,
           bordersCodes: const ["Cod", "Rwa", "Tza"],
-          area: 27834,
+          areaMetric: 27834,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -26263,7 +26272,7 @@ class CountryKir extends WorldCountry {
             ),
           ],
           latLng: const [1.41666666, 173],
-          area: 811,
+          areaMetric: 811,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -26460,7 +26469,7 @@ class CountryTur extends WorldCountry {
             "Irq",
             "Syr",
           ],
-          area: 783562,
+          areaMetric: 783562,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -26662,7 +26671,7 @@ class CountryTza extends WorldCountry {
             "Uga",
             "Zmb",
           ],
-          area: 945087,
+          areaMetric: 945087,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -26848,7 +26857,7 @@ class CountryTun extends WorldCountry {
           ],
           latLng: const [34, 9],
           bordersCodes: const ["Dza", "Lby"],
-          area: 163610,
+          areaMetric: 163610,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -27032,7 +27041,7 @@ class CountryMsr extends WorldCountry {
             ),
           ],
           latLng: const [16.75, -62.2],
-          area: 102,
+          areaMetric: 102,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -27232,7 +27241,7 @@ class CountryKgz extends WorldCountry {
             "Tjk",
             "Uzb",
           ],
-          area: 199951,
+          areaMetric: 199951,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -27419,7 +27428,7 @@ class CountryImn extends WorldCountry {
             CountryName(language: LangZho(), official: "马恩岛", common: "马恩岛"),
           ],
           latLng: const [54.25, -4.5],
-          area: 572,
+          areaMetric: 572,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -27599,7 +27608,7 @@ class CountryGlp extends WorldCountry {
             ),
           ],
           latLng: const [16.25, -61.583333],
-          area: 1628,
+          areaMetric: 1628,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -27778,7 +27787,7 @@ class CountryKwt extends WorldCountry {
           ],
           latLng: const [29.5, 45.75],
           bordersCodes: const ["Irq", "Sau"],
-          area: 17818,
+          areaMetric: 17818,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -27964,7 +27973,7 @@ class CountryVgb extends WorldCountry {
             ),
           ],
           latLng: const [18.431383, -64.62305],
-          area: 151,
+          areaMetric: 151,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -28154,7 +28163,7 @@ class CountryCiv extends WorldCountry {
             "Lbr",
             "Mli",
           ],
-          area: 322463,
+          areaMetric: 322463,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -28176,7 +28185,7 @@ class CountryCiv extends WorldCountry {
           gini: const Gini(year: 2015, value: 41.5),
           fifa: "CIV",
           car: const Car(signs: ["CI"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: ["Yamoussoukro"],
             latLng: [6.82, -5.27],
@@ -28334,7 +28343,7 @@ class CountryCxr extends WorldCountry {
             CountryName(language: LangZho(), official: "圣诞岛", common: "圣诞岛"),
           ],
           latLng: const [-10.5, 105.66666666],
-          area: 135,
+          areaMetric: 135,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -28515,7 +28524,7 @@ class CountryLso extends WorldCountry {
           latLng: const [-29.5, 28.5],
           landlocked: true,
           bordersCodes: const ["Zaf"],
-          area: 30355,
+          areaMetric: 30355,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -28706,7 +28715,7 @@ class CountryJey extends WorldCountry {
             CountryName(language: LangZho(), official: "泽西岛", common: "泽西岛"),
           ],
           latLng: const [49.25, -2.16666666],
-          area: 116,
+          areaMetric: 116,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -28902,7 +28911,7 @@ class CountrySvn extends WorldCountry {
             "Ita",
             "Hun",
           ],
-          area: 20273,
+          areaMetric: 20273,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -29111,7 +29120,7 @@ class CountryBel extends WorldCountry {
             "Lux",
             "Nld",
           ],
-          area: 30528,
+          areaMetric: 30528,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -29295,7 +29304,7 @@ class CountryTca extends WorldCountry {
             ),
           ],
           latLng: const [21.75, -71.58333333],
-          area: 948,
+          areaMetric: 948,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -29475,7 +29484,7 @@ class CountryGib extends WorldCountry {
           ],
           latLng: const [36.13333333, -5.35],
           bordersCodes: const ["Esp"],
-          area: 6,
+          areaMetric: 6,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -29654,7 +29663,7 @@ class CountryQat extends WorldCountry {
           ],
           latLng: const [25.5, 51.25],
           bordersCodes: const ["Sau"],
-          area: 11586,
+          areaMetric: 11586,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -29851,7 +29860,7 @@ class CountryBwa extends WorldCountry {
             "Zmb",
             "Zwe",
           ],
-          area: 582000,
+          areaMetric: 582000,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -30051,7 +30060,7 @@ class CountryGnq extends WorldCountry {
           ],
           latLng: const [2, 10],
           bordersCodes: const ["Cmr", "Gab"],
-          area: 28051,
+          areaMetric: 28051,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -30245,7 +30254,7 @@ class CountryDji extends WorldCountry {
           ],
           latLng: const [11.5, 43],
           bordersCodes: const ["Eri", "Eth", "Som"],
-          area: 23200,
+          areaMetric: 23200,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -30429,7 +30438,7 @@ class CountryGuy extends WorldCountry {
           ],
           latLng: const [5, -59],
           bordersCodes: const ["Bra", "Sur", "Ven"],
-          area: 214969,
+          areaMetric: 214969,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -30616,7 +30625,7 @@ class CountryGum extends WorldCountry {
             CountryName(language: LangZho(), official: "关岛", common: "关岛"),
           ],
           latLng: const [13.46666666, 144.78333333],
-          area: 549,
+          areaMetric: 549,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -30798,7 +30807,7 @@ class CountryMco extends WorldCountry {
           ],
           latLng: const [43.73333333, 7.4],
           bordersCodes: const ["Fra"],
-          area: 2.02,
+          areaMetric: 2.02,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -30978,7 +30987,7 @@ class CountrySlb extends WorldCountry {
             ),
           ],
           latLng: const [-8, 159],
-          area: 28896,
+          areaMetric: 28896,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -31168,7 +31177,7 @@ class CountryGgy extends WorldCountry {
             CountryName(language: LangZho(), official: "根西岛", common: "根西岛"),
           ],
           latLng: const [49.46666666, -2.58333333],
-          area: 78,
+          areaMetric: 78,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -31366,7 +31375,7 @@ class CountryPry extends WorldCountry {
           latLng: const [-23, -58],
           landlocked: true,
           bordersCodes: const ["Arg", "Bol", "Bra"],
-          area: 406752,
+          areaMetric: 406752,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -31558,7 +31567,7 @@ class CountrySur extends WorldCountry {
           ],
           latLng: const [4, -56],
           bordersCodes: const ["Bra", "Guf", "Guy"],
-          area: 163820,
+          areaMetric: 163820,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -31743,7 +31752,7 @@ class CountryUmi extends WorldCountry {
             ),
           ],
           latLng: const [19.3, 166.633333],
-          area: 34.2,
+          areaMetric: 34.2,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -31929,7 +31938,7 @@ class CountryGin extends WorldCountry {
             "Sen",
             "Sle",
           ],
-          area: 245857,
+          areaMetric: 245857,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -31951,7 +31960,7 @@ class CountryGin extends WorldCountry {
           gini: const Gini(year: 2012, value: 33.7),
           fifa: "GUI",
           car: const Car(signs: ["RG"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Conakry"], latLng: [9.5, -13.7]),
         );
@@ -32113,7 +32122,7 @@ class CountryCze extends WorldCountry {
             "Pol",
             "Svk",
           ],
-          area: 78865,
+          areaMetric: 78865,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -32305,7 +32314,7 @@ class CountryCom extends WorldCountry {
             CountryName(language: LangZho(), official: "科摩罗联盟", common: "科摩罗"),
           ],
           latLng: const [-12.16666666, 44.25],
-          area: 1862,
+          areaMetric: 1862,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -32483,7 +32492,7 @@ class CountryGha extends WorldCountry {
           ],
           latLng: const [8, -2],
           bordersCodes: const ["Bfa", "Civ", "Tgo"],
-          area: 238533,
+          areaMetric: 238533,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -32505,7 +32514,7 @@ class CountryGha extends WorldCountry {
           gini: const Gini(year: 2016, value: 43.5),
           fifa: "GHA",
           car: const Car(signs: ["GH"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Accra"], latLng: [5.55, -0.22]),
         );
@@ -32667,7 +32676,7 @@ class CountryKna extends WorldCountry {
             ),
           ],
           latLng: const [17.33333333, -62.75],
-          area: 261,
+          areaMetric: 261,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -32855,7 +32864,7 @@ class CountryPyf extends WorldCountry {
             ),
           ],
           latLng: const [17.6797, 149.4068],
-          area: 4167,
+          areaMetric: 4167,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -33076,7 +33085,7 @@ class CountryZwe extends WorldCountry {
           latLng: const [-20, 30],
           landlocked: true,
           bordersCodes: const ["Bwa", "Moz", "Zaf", "Tur"],
-          area: 390757,
+          areaMetric: 390757,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -33271,7 +33280,7 @@ class CountryKen extends WorldCountry {
             "Tza",
             "Uga",
           ],
-          area: 580367,
+          areaMetric: 580367,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -33475,7 +33484,7 @@ class CountryKaz extends WorldCountry {
             "Tkm",
             "Uzb",
           ],
-          area: 2724900,
+          areaMetric: 2724900,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -33665,7 +33674,7 @@ class CountryMne extends WorldCountry {
             "Srb",
             "Unk",
           ],
-          area: 13812,
+          areaMetric: 13812,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -33846,7 +33855,7 @@ class CountryTuv extends WorldCountry {
             CountryName(language: LangZho(), official: "图瓦卢", common: "图瓦卢"),
           ],
           latLng: const [-8, 178],
-          area: 26,
+          areaMetric: 26,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -34033,7 +34042,7 @@ class CountryPan extends WorldCountry {
           ],
           latLng: const [9, -80],
           bordersCodes: const ["Col", "Cri"],
-          area: 75417,
+          areaMetric: 75417,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -34218,7 +34227,7 @@ class CountryAnd extends WorldCountry {
           latLng: const [42.5, 1.5],
           landlocked: true,
           bordersCodes: const ["Fra", "Esp"],
-          area: 468,
+          areaMetric: 468,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -34406,7 +34415,7 @@ class CountryVir extends WorldCountry {
             ),
           ],
           latLng: const [18.35, -64.933333],
-          area: 347,
+          areaMetric: 347,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -34592,7 +34601,7 @@ class CountryIsr extends WorldCountry {
             "Pse",
             "Syr",
           ],
-          area: 20770,
+          areaMetric: 20770,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -34783,7 +34792,7 @@ class CountryPrt extends WorldCountry {
           ],
           latLng: const [39.5, -8],
           bordersCodes: const ["Esp"],
-          area: 92090,
+          areaMetric: 92090,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -34805,7 +34814,7 @@ class CountryPrt extends WorldCountry {
           gini: const Gini(year: 2018, value: 33.5),
           fifa: "POR",
           car: const Car(signs: ["P"]),
-          timezones: const ["UTC-01:00", "UTC"],
+          timezones: const ["UTC-01:00", "UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Lisbon"], latLng: [38.72, -9.13]),
           postalCode: const PostalCode(
@@ -34979,7 +34988,7 @@ class CountryAut extends WorldCountry {
             "Svn",
             "Che",
           ],
-          area: 83871,
+          areaMetric: 83871,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -35170,7 +35179,7 @@ class CountryFin extends WorldCountry {
           ],
           latLng: const [64, 26],
           bordersCodes: const ["Nor", "Swe", "Rus"],
-          area: 338424,
+          areaMetric: 338424,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -35360,7 +35369,7 @@ class CountryEst extends WorldCountry {
           ],
           latLng: const [59, 26],
           bordersCodes: const ["Lva", "Rus"],
-          area: 45227,
+          areaMetric: 45227,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -35547,7 +35556,7 @@ class CountryDma extends WorldCountry {
             ),
           ],
           latLng: const [15.41666666, -61.33333333],
-          area: 751,
+          areaMetric: 751,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -35728,7 +35737,7 @@ class CountryYem extends WorldCountry {
           ],
           latLng: const [15, 48],
           bordersCodes: const ["Omn", "Sau"],
-          area: 527968,
+          areaMetric: 527968,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -35925,7 +35934,7 @@ class CountryAfg extends WorldCountry {
             "Tjk",
             "Chn",
           ],
-          area: 652230,
+          areaMetric: 652230,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -36110,7 +36119,7 @@ class CountrySyr extends WorldCountry {
           ],
           latLng: const [35, 38],
           bordersCodes: const ["Irq", "Isr", "Jor", "Lbn", "Tur"],
-          area: 185180,
+          areaMetric: 185180,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -36296,7 +36305,7 @@ class CountryMdv extends WorldCountry {
             ),
           ],
           latLng: const [3.25, 73],
-          area: 300,
+          areaMetric: 300,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -36489,7 +36498,7 @@ class CountryTls extends WorldCountry {
           ],
           latLng: const [-8.83333333, 125.91666666],
           bordersCodes: const ["Idn"],
-          area: 14874,
+          areaMetric: 14874,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -36683,7 +36692,7 @@ class CountryLtu extends WorldCountry {
             "Pol",
             "Rus",
           ],
-          area: 65300,
+          areaMetric: 65300,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -36869,7 +36878,7 @@ class CountryNzl extends WorldCountry {
             CountryName(language: LangZho(), official: "新西兰", common: "新西兰"),
           ],
           latLng: const [-41, 174],
-          area: 270467,
+          areaMetric: 270467,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -37062,7 +37071,7 @@ class CountryBmu extends WorldCountry {
             CountryName(language: LangZho(), official: "百慕大", common: "百慕大"),
           ],
           latLng: const [32.33333333, -64.75],
-          area: 54,
+          areaMetric: 54,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -37263,7 +37272,7 @@ class CountryDeu extends WorldCountry {
             "Pol",
             "Che",
           ],
-          area: 357114,
+          areaMetric: 357114,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -37461,7 +37470,7 @@ class CountryArg extends WorldCountry {
             "Pry",
             "Ury",
           ],
-          area: 2780400,
+          areaMetric: 2780400,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -37667,7 +37676,7 @@ class CountryBlr extends WorldCountry {
             "Rus",
             "Ukr",
           ],
-          area: 207600,
+          areaMetric: 207600,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -37848,7 +37857,7 @@ class CountryBrb extends WorldCountry {
             CountryName(language: LangZho(), official: "巴巴多斯", common: "巴巴多斯"),
           ],
           latLng: const [13.16666666, -59.53333333],
-          area: 430,
+          areaMetric: 430,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -38040,7 +38049,7 @@ class CountryGtm extends WorldCountry {
             "Hnd",
             "Mex",
           ],
-          area: 108889,
+          areaMetric: 108889,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -38235,7 +38244,7 @@ class CountryAze extends WorldCountry {
           latLng: const [40.5, 47.5],
           landlocked: true,
           bordersCodes: const ["Arm", "Geo", "Irn", "Rus", "Tur"],
-          area: 86600,
+          areaMetric: 86600,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -38422,7 +38431,7 @@ class CountryMar extends WorldCountry {
           ],
           latLng: const [32, -5],
           bordersCodes: const ["Dza", "Esh", "Esp"],
-          area: 446550,
+          areaMetric: 446550,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -38444,7 +38453,7 @@ class CountryMar extends WorldCountry {
           gini: const Gini(year: 2013, value: 39.5),
           fifa: "MAR",
           car: const Car(signs: ["MA"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Rabat"], latLng: [34.02, -6.82]),
           postalCode: const PostalCode(),
@@ -38603,7 +38612,7 @@ class CountryCok extends WorldCountry {
             CountryName(language: LangZho(), official: "库克群岛", common: "库克群岛"),
           ],
           latLng: const [-21.23333333, -159.76666666],
-          area: 236,
+          areaMetric: 236,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -38803,7 +38812,7 @@ class CountryCaf extends WorldCountry {
             "Ssd",
             "Sdn",
           ],
-          area: 622984,
+          areaMetric: 622984,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -38987,7 +38996,7 @@ class CountryRou extends WorldCountry {
             "Srb",
             "Ukr",
           ],
-          area: 238391,
+          areaMetric: 238391,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -39183,7 +39192,7 @@ class CountryMlt extends WorldCountry {
             ),
           ],
           latLng: const [35.9375, 14.3754],
-          area: 316,
+          areaMetric: 316,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -39380,7 +39389,7 @@ class CountryArm extends WorldCountry {
             "Irn",
             "Tur",
           ],
-          area: 29743,
+          areaMetric: 29743,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -39576,7 +39585,7 @@ class CountrySen extends WorldCountry {
             "Mli",
             "Mrt",
           ],
-          area: 196722,
+          areaMetric: 196722,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -39598,7 +39607,7 @@ class CountrySen extends WorldCountry {
           gini: const Gini(year: 2011, value: 40.3),
           fifa: "SEN",
           car: const Car(signs: ["SN"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Dakar"], latLng: [14.73, -17.63]),
           postalCode: const PostalCode(),
@@ -39763,7 +39772,7 @@ class CountryBgr extends WorldCountry {
           ],
           latLng: const [43, 25],
           bordersCodes: const ["Grc", "Mkd", "Rou", "Srb", "Tur"],
-          area: 110879,
+          areaMetric: 110879,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -39984,7 +39993,7 @@ class CountryCod extends WorldCountry {
             "Uga",
             "Zmb",
           ],
-          area: 2344858,
+          areaMetric: 2344858,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -40174,7 +40183,7 @@ class CountryHti extends WorldCountry {
           ],
           latLng: const [19, -72.41666666],
           bordersCodes: const ["Dom"],
-          area: 27750,
+          areaMetric: 27750,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -40362,7 +40371,7 @@ class CountryAlb extends WorldCountry {
           ],
           latLng: const [41, 20],
           bordersCodes: const ["Mne", "Grc", "Mkd", "Unk"],
-          area: 28748,
+          areaMetric: 28748,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -40548,7 +40557,7 @@ class CountryJor extends WorldCountry {
           ],
           latLng: const [31, 36],
           bordersCodes: const ["Irq", "Isr", "Pse", "Sau", "Syr"],
-          area: 89342,
+          areaMetric: 89342,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -40732,7 +40741,7 @@ class CountrySjm extends WorldCountry {
             ),
           ],
           latLng: const [78, 20],
-          area: 377,
+          areaMetric: 377,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -40919,7 +40928,7 @@ class CountryMdg extends WorldCountry {
             ),
           ],
           latLng: const [-20, 47],
-          area: 587041,
+          areaMetric: 587041,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -41110,7 +41119,7 @@ class CountryFra extends WorldCountry {
             "Esp",
             "Che",
           ],
-          area: 551695,
+          areaMetric: 551695,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -41313,7 +41322,7 @@ class CountryFsm extends WorldCountry {
             ),
           ],
           latLng: const [6.91666666, 158.25],
-          area: 702,
+          areaMetric: 702,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -41493,7 +41502,7 @@ class CountryAbw extends WorldCountry {
             CountryName(language: LangZho(), official: "阿鲁巴", common: "阿鲁巴"),
           ],
           latLng: const [12.5, -69.96666666],
-          area: 180,
+          areaMetric: 180,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -41695,7 +41704,7 @@ class CountryInd extends WorldCountry {
             "Npl",
             "Pak",
           ],
-          area: 3287590,
+          areaMetric: 3287590,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -41909,7 +41918,7 @@ class CountryNam extends WorldCountry {
           ],
           latLng: const [-22, 17],
           bordersCodes: const ["Ago", "Bwa", "Zaf", "Tur"],
-          area: 825615,
+          areaMetric: 825615,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -42100,7 +42109,7 @@ class CountryFji extends WorldCountry {
             CountryName(language: LangZho(), official: "斐济共和国", common: "斐济"),
           ],
           latLng: const [17.7134, 178.065],
-          area: 18272,
+          areaMetric: 18272,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -42295,7 +42304,7 @@ class CountrySdn extends WorldCountry {
             "Lby",
             "Ssd",
           ],
-          area: 1886068,
+          areaMetric: 1886068,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -42484,7 +42493,7 @@ class CountryStp extends WorldCountry {
             ),
           ],
           latLng: const [1, 7],
-          area: 964,
+          areaMetric: 964,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -42506,7 +42515,7 @@ class CountryStp extends WorldCountry {
           gini: const Gini(year: 2017, value: 56.3),
           fifa: "STP",
           car: const Car(signs: ["STP"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["São Tomé"], latLng: [0.34, 6.73]),
         );
@@ -42679,7 +42688,7 @@ class CountrySau extends WorldCountry {
             "Are",
             "Yem",
           ],
-          area: 2149690,
+          areaMetric: 2149690,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -42727,6 +42736,7 @@ class CountryHmd extends WorldCountry {
           codeNumeric: "334",
           code: "HMD",
           independent: false,
+          currencies: null,
           unMember: false,
           idd: const Idd(root: 6, suffixes: [72]),
           altSpellings: const ["HM", "Heard Island and McDonald Islands"],
@@ -42861,7 +42871,7 @@ class CountryHmd extends WorldCountry {
             ),
           ],
           latLng: const [53.0818, 73.5042],
-          area: 412,
+          areaMetric: 412,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -43044,7 +43054,7 @@ class CountryLka extends WorldCountry {
           ],
           latLng: const [7, 81],
           bordersCodes: const ["Ind"],
-          area: 65610,
+          areaMetric: 65610,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -43229,7 +43239,7 @@ class CountrySwe extends WorldCountry {
           ],
           latLng: const [62, 15],
           bordersCodes: const ["Fin", "Nor"],
-          area: 450295,
+          areaMetric: 450295,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -43417,7 +43427,7 @@ class CountryTon extends WorldCountry {
             CountryName(language: LangZho(), official: "汤加王国", common: "汤加"),
           ],
           latLng: const [-20, -175],
-          area: 747,
+          areaMetric: 747,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -43602,7 +43612,7 @@ class CountryDnk extends WorldCountry {
           ],
           latLng: const [56, 10],
           bordersCodes: const ["Deu"],
-          area: 43094,
+          areaMetric: 43094,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -43628,7 +43638,7 @@ class CountryDnk extends WorldCountry {
             "UTC-04:00",
             "UTC-03:00",
             "UTC-01:00",
-            "UTC",
+            "UTC+00:00",
             "UTC+01:00",
           ],
           capitalInfo: const CapitalInfo(
@@ -43795,7 +43805,7 @@ class CountryMys extends WorldCountry {
           ],
           latLng: const [2.5, 112.5],
           bordersCodes: const ["Brn", "Idn", "Tha"],
-          area: 330803,
+          areaMetric: 330803,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -43985,7 +43995,7 @@ class CountryCri extends WorldCountry {
           ],
           latLng: const [10, -84],
           bordersCodes: const ["Nic", "Pan"],
-          area: 51100,
+          areaMetric: 51100,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -44203,7 +44213,7 @@ class CountryBol extends WorldCountry {
             "Pry",
             "Per",
           ],
-          area: 1098581,
+          areaMetric: 1098581,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -44384,7 +44394,7 @@ class CountryBtn extends WorldCountry {
           latLng: const [27.5, 90.5],
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
-          area: 38394,
+          areaMetric: 38394,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -44565,7 +44575,7 @@ class CountryCym extends WorldCountry {
             CountryName(language: LangZho(), official: "开曼群岛", common: "开曼群岛"),
           ],
           latLng: const [19.3133, 81.2546],
-          area: 264,
+          areaMetric: 264,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -44752,7 +44762,7 @@ class CountryPcn extends WorldCountry {
             ),
           ],
           latLng: const [-25.06666666, -130.1],
-          area: 47,
+          areaMetric: 47,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -44940,7 +44950,7 @@ class CountryMli extends WorldCountry {
             "Ner",
             "Sen",
           ],
-          area: 1240192,
+          areaMetric: 1240192,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -44962,7 +44972,7 @@ class CountryMli extends WorldCountry {
           gini: const Gini(year: 2009, value: 33),
           fifa: "MLI",
           car: const Car(signs: ["RMM"]),
-          timezones: const ["UTC"],
+          timezones: const ["UTC+00:00"],
           capitalInfo:
               const CapitalInfo(capital: ["Bamako"], latLng: [12.65, -8]),
         );
@@ -45129,7 +45139,7 @@ class CountrySxm extends WorldCountry {
           ],
           latLng: const [18.033333, -63.05],
           bordersCodes: const ["Maf"],
-          area: 34,
+          areaMetric: 34,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -45321,7 +45331,7 @@ class CountryLva extends WorldCountry {
             "Ltu",
             "Rus",
           ],
-          area: 64559,
+          areaMetric: 64559,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -45518,7 +45528,7 @@ class CountryAsm extends WorldCountry {
             ),
           ],
           latLng: const [-14.33333333, -170],
-          area: 199,
+          areaMetric: 199,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -45705,7 +45715,7 @@ class CountrySpm extends WorldCountry {
             ),
           ],
           latLng: const [46.83333333, -56.33333333],
-          area: 242,
+          areaMetric: 242,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -45893,7 +45903,7 @@ class CountryEcu extends WorldCountry {
           ],
           latLng: const [-2, -77.5],
           bordersCodes: const ["Col", "Per"],
-          area: 276841,
+          areaMetric: 276841,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -46082,7 +46092,7 @@ class CountryTha extends WorldCountry {
           ],
           latLng: const [15, 100],
           bordersCodes: const ["Mmr", "Khm", "Lao", "Mys"],
-          area: 513120,
+          areaMetric: 513120,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -46267,7 +46277,7 @@ class CountryAre extends WorldCountry {
           ],
           latLng: const [24, 54],
           bordersCodes: const ["Omn", "Sau"],
-          area: 83600,
+          areaMetric: 83600,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -46463,7 +46473,7 @@ class CountryHrv extends WorldCountry {
             "Srb",
             "Svn",
           ],
-          area: 56594,
+          areaMetric: 56594,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -46654,7 +46664,7 @@ class CountryMmr extends WorldCountry {
           ],
           latLng: const [22, 98],
           bordersCodes: const ["Bgd", "Chn", "Ind", "Lao", "Tha"],
-          area: 676578,
+          areaMetric: 676578,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -46835,7 +46845,7 @@ class CountryGeo extends WorldCountry {
           ],
           latLng: const [42, 43.5],
           bordersCodes: const ["Arm", "Aze", "Rus", "Tur"],
-          area: 69700,
+          areaMetric: 69700,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -47027,7 +47037,7 @@ class CountryTwn extends WorldCountry {
             ),
           ],
           latLng: const [23.5, 121],
-          area: 36193,
+          areaMetric: 36193,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -47234,7 +47244,7 @@ class CountryChe extends WorldCountry {
             "Lie",
             "Deu",
           ],
-          area: 41284,
+          areaMetric: 41284,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -47439,7 +47449,7 @@ class CountryEri extends WorldCountry {
             "Eth",
             "Sdn",
           ],
-          area: 117600,
+          areaMetric: 117600,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -47632,7 +47642,7 @@ class CountryCog extends WorldCountry {
             "Cod",
             "Gab",
           ],
-          area: 342000,
+          areaMetric: 342000,
           demonyms: const [
             Demonyms(
               language: LangEng(),
@@ -47818,7 +47828,7 @@ class CountryFro extends WorldCountry {
             CountryName(language: LangZho(), official: "法罗群岛", common: "法罗群岛"),
           ],
           latLng: const [62, -7],
-          area: 1393,
+          areaMetric: 1393,
           demonyms: const [
             Demonyms(language: LangEng(), f: "Faroese", m: "Faroese"),
             Demonyms(
