@@ -17,7 +17,7 @@ enum EmojiFamily {
     codeLicense: "LGPL-3.0",
     codeLicenseUrl: "https://www.gnu.org/licenses/lgpl-3.0.en.html",
     graphicsLicense: "CC BY-SA 4.0",
-    graphicsLicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    graphicsLicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
     projectName: "OpenMoji",
     projectUrl: "https://openmoji.org",
   ),
@@ -51,26 +51,24 @@ enum EmojiFamily {
   String? get fontByPlatform {
     switch (this) {
       case twemoji:
-        return FunctionalPlatform.maybeWhen(
-          web: () => WorldCountryFonts.twemojiWOFF2,
-          iOS: () => WorldCountryFonts.twemojiWOFF2,
-          macOS: () => WorldCountryFonts.twemojiWOFF2,
-          orElse: () => WorldCountryFonts.twemojiTTF,
+        return FunctionalPlatform.maybeWhenConst(
+          orElse: WorldCountryFonts.twemojiTTF,
+          iOS: WorldCountryFonts.twemojiWOFF2,
+          macOS: WorldCountryFonts.twemojiWOFF2,
+          web: WorldCountryFonts.twemojiWOFF2,
         );
       case openMoji:
-        return FunctionalPlatform.maybeWhen(
-          iOS: () => WorldCountryFonts.openMojiCOLR0,
-          macOS: () => WorldCountryFonts.openMojiCOLR0,
-          windows: () => WorldCountryFonts.openMojiCOLR0,
-          orElse: () => WorldCountryFonts.openMojiCOLR1,
+        return FunctionalPlatform.maybeWhenConst(
+          orElse: WorldCountryFonts.openMojiCOLR1,
+          iOS: WorldCountryFonts.openMojiCOLR0,
+          macOS: WorldCountryFonts.openMojiCOLR0,
+          windows: WorldCountryFonts.openMojiCOLR0,
         );
       case notoEmoji:
-        return FunctionalPlatform.maybeWhen(
-          // TODO? fuchsia: () => null?
-          android: () => null, // TODO? Provides these emoji directly in the OS?
-          iOS: () => WorldCountryFonts.notoEmojiOTSVG,
-          macOS: () => WorldCountryFonts.notoEmojiOTSVG,
-          orElse: () => WorldCountryFonts.notoEmojiCBDT,
+        return FunctionalPlatform.maybeWhenConst(
+          orElse: WorldCountryFonts.notoEmojiCBDT,
+          iOS: WorldCountryFonts.notoEmojiOTSVG,
+          macOS: WorldCountryFonts.notoEmojiOTSVG,
         );
     }
   }
