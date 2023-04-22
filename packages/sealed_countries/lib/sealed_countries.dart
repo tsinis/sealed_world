@@ -9,6 +9,8 @@ export "src/data/geo/continents.dart";
 export "src/data/official_world_countries.dart";
 export "src/data/other_world_countries.dart";
 export "src/helpers/extensions/country_submodels/capital_info_extension.dart";
+export "src/helpers/extensions/country_submodels/demonyms_extension.dart";
+export "src/helpers/extensions/country_submodels/gini_extension.dart";
 export "src/helpers/extensions/country_submodels/idd_extension.dart";
 export "src/helpers/extensions/world_country/geo_extension.dart";
 export "src/helpers/extensions/world_country/name_extension.dart";
