@@ -23,6 +23,7 @@ dart_code_metrics:
 
 linter:
   rules:
+    avoid_equals_and_hash_code_on_mutable_classes: true
     avoid_unnecessary_containers: true
     avoid_web_libraries_in_flutter: true
     no_logic_in_create_state: true

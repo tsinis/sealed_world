@@ -269,7 +269,6 @@ linter:
 
     # Effective Dart 1.2.0
     avoid_catching_errors: true
-    avoid_equals_and_hash_code_on_mutable_classes: true
     avoid_function_literals_in_foreach_calls: true
     avoid_positional_boolean_parameters: true
     avoid_private_typedef_functions: true
