@@ -60,7 +60,7 @@ class FiatCurrency extends Currency {
     return null;
   }
 
-  String get unit => symbol ?? code;
+  String get unit => symbol ?? code; // TODO: Move to extension.
 
   String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
 

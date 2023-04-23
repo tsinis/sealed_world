@@ -21,8 +21,12 @@ void main() => group("$WorldCountry", () {
               expect(element.postalCode, isNull);
             }
             expect(
-              element.capitalInfo?.capital,
+              element.capitalInfo?.capital.deFacto,
               element.capitalInfo != null ? isNotEmpty : isNull,
+            );
+            expect(
+              element.capitalInfo?.latLng,
+              element.capitalInfo != null ? isNotNull : isNull,
             );
             expect(element.fifa, element.fifa != null ? isNotEmpty : isNull);
             if (element.gini != null) {
@@ -62,13 +66,17 @@ void main() => group("$WorldCountry", () {
             expect(element.independent, isA<bool>());
             expect(element.timezones, isA<List<String>>());
             expect(element.timezones, isNotEmpty);
+            expect(
+              element.car.sign,
+              element.car.sign == null ? isNull : isNotEmpty,
+            );
             expect(element.car.isRightSide, isA<bool>());
             expect(element.population, isNonNegative);
             expect(element.areaMetric, isNonNegative);
             expect(element.maps.googleMaps, isNotEmpty);
             expect(element.maps.openStreetMaps, isNotEmpty);
             expect(element.emoji, isNotEmpty);
-            expect(element.latLng, isNotEmpty);
+            expect(element.latLng, isNotNull);
             expect(element.translations, isNotEmpty);
             expect(element.languages, isNotEmpty);
             expect(element.continent.name, isNotEmpty);
