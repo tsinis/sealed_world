@@ -1,4 +1,4 @@
-class Maps {
+final class Maps {
   const Maps({required this.googleMaps, required this.openStreetMaps});
 
   final String googleMaps;
@@ -12,5 +12,16 @@ class Maps {
 
   @override
   String toString() =>
-      """Maps(googleMaps: $googleMaps, openStreetMaps: $openStreetMaps)""";
+      "Maps(googleMaps: $googleMaps, openStreetMaps: $openStreetMaps)";
+
+  @override
+  bool operator ==(covariant Maps other) {
+    if (identical(this, other)) return true;
+
+    return other.googleMaps == googleMaps &&
+        other.openStreetMaps == openStreetMaps;
+  }
+
+  @override
+  int get hashCode => googleMaps.hashCode ^ openStreetMaps.hashCode;
 }

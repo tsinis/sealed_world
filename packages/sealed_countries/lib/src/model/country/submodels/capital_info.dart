@@ -1,7 +1,7 @@
 import "capital.dart";
 import "lat_lng.dart";
 
-class CapitalInfo {
+final class CapitalInfo {
   const CapitalInfo({required this.capital, required this.latLng});
 
   final Capital capital;

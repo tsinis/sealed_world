@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-class CountryName {
+final class CountryName {
   const CountryName({
     required this.language,
     required this.official,
@@ -19,4 +19,16 @@ class CountryName {
   @override
   String toString() =>
       "CountryName(language: $language, official: $official, common: $common)";
+
+  @override
+  bool operator ==(covariant CountryName other) {
+    if (identical(this, other)) return true;
+
+    return other.common == common &&
+        other.language == language &&
+        other.official == official;
+  }
+
+  @override
+  int get hashCode => common.hashCode ^ language.hashCode ^ official.hashCode;
 }

@@ -8,8 +8,8 @@ final class Capital {
       : deFacto = name,
         assert(name.length != 0, "Capital name cannot be empty!");
 
-  final String deFacto;
-  final String? deJure;
+  final String deFacto; // TODO: Add name getter in extension.
+  final String? deJure; // TODO: Add fallback getter in extension.
   final String? third;
 
   @override
