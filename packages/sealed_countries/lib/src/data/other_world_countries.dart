@@ -199,7 +199,7 @@ class CountryUnk extends WorldCountry {
           population: 1775378,
           gini: const Gini(year: 2017, value: 29),
           fifa: "KVX",
-          car: const Car(signs: ["CS"]),
+          car: const Car(sign: "CS"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Pristina"),

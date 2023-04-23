@@ -197,7 +197,7 @@ class CountryCpv extends WorldCountry {
           population: 555988,
           gini: const Gini(year: 2015, value: 42.4),
           fifa: "CPV",
-          car: const Car(signs: ["CV"]),
+          car: const Car(sign: "CV"),
           timezones: const ["UTC-01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Praia"),
@@ -401,7 +401,7 @@ class CountrySgp extends WorldCountry {
           ),
           population: 5685807,
           fifa: "SIN",
-          car: const Car(signs: ["SGP"], isRightSide: false),
+          car: const Car(sign: "SGP", isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Singapore"),
@@ -598,7 +598,7 @@ class CountryMrt extends WorldCountry {
           population: 4649660,
           gini: const Gini(year: 2014, value: 32.6),
           fifa: "MTN",
-          car: const Car(signs: ["RIM"]),
+          car: const Car(sign: "RIM"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nouakchott"),
@@ -794,7 +794,7 @@ class CountryPol extends WorldCountry {
           population: 37950802,
           gini: const Gini(year: 2018, value: 30.2),
           fifa: "POL",
-          car: const Car(signs: ["PL"]),
+          car: const Car(sign: "PL"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Warsaw"),
@@ -999,7 +999,7 @@ class CountryTcd extends WorldCountry {
           population: 16425859,
           gini: const Gini(year: 2011, value: 43.3),
           fifa: "CHA",
-          car: const Car(signs: ["TCH", "TD"]),
+          car: const Car(sign: "TCH/TD"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("N'Djamena"),
@@ -1182,7 +1182,7 @@ class CountryJpn extends WorldCountry {
           population: 125836021,
           gini: const Gini(year: 2013, value: 32.9),
           fifa: "JPN",
-          car: const Car(signs: ["J"], isRightSide: false),
+          car: const Car(sign: "J", isRightSide: false),
           timezones: const ["UTC+09:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Tokyo"),
@@ -1368,7 +1368,7 @@ class CountryCub extends WorldCountry {
           ),
           population: 11326616,
           fifa: "CUB",
-          car: const Car(signs: ["C"]),
+          car: const Car(sign: "C"),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Havana"),
@@ -1567,7 +1567,7 @@ class CountryMoz extends WorldCountry {
           population: 31255435,
           gini: const Gini(year: 2014, value: 54),
           fifa: "MOZ",
-          car: const Car(signs: ["MOC"], isRightSide: false),
+          car: const Car(sign: "MOC", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Maputo"),
@@ -1757,7 +1757,7 @@ class CountryGbr extends WorldCountry {
           ),
           population: 67215293,
           gini: const Gini(year: 2017, value: 35.1),
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const [
             "UTC-08:00",
             "UTC-05:00",
@@ -1966,7 +1966,7 @@ class CountryIrl extends WorldCountry {
           population: 4994724,
           gini: const Gini(year: 2017, value: 31.4),
           fifa: "IRL",
-          car: const Car(signs: ["IRL"], isRightSide: false),
+          car: const Car(sign: "IRL", isRightSide: false),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Dublin"),
@@ -2159,7 +2159,7 @@ class CountryNer extends WorldCountry {
           population: 24206636,
           gini: const Gini(year: 2014, value: 34.3),
           fifa: "NIG",
-          car: const Car(signs: ["RN"]),
+          car: const Car(sign: "RN"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Niamey"),
@@ -2345,7 +2345,7 @@ class CountryGmb extends WorldCountry {
           population: 2416664,
           gini: const Gini(year: 2015, value: 35.9),
           fifa: "GAM",
-          car: const Car(signs: ["WAG"]),
+          car: const Car(sign: "WAG"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Banjul"),
@@ -2546,7 +2546,7 @@ class CountryUzb extends WorldCountry {
           population: 34232050,
           gini: const Gini(year: 2003, value: 35.3),
           fifa: "UZB",
-          car: const Car(signs: ["UZ"]),
+          car: const Car(sign: "UZ"),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Tashkent"),
@@ -2753,7 +2753,7 @@ class CountryRus extends WorldCountry {
           population: 144104080,
           gini: const Gini(year: 2018, value: 37.5),
           fifa: "RUS",
-          car: const Car(signs: ["RUS"]),
+          car: const Car(sign: "RUS"),
           timezones: const [
             "UTC+03:00",
             "UTC+04:00",
@@ -2962,7 +2962,7 @@ class CountryTkm extends WorldCountry {
           population: 6031187,
           gini: const Gini(year: 1998, value: 40.8),
           fifa: "TKM",
-          car: const Car(signs: ["TM"]),
+          car: const Car(sign: "TM"),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Ashgabat"),
@@ -3149,7 +3149,7 @@ class CountryAia extends WorldCountry {
           ),
           population: 13452,
           fifa: "AIA",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("The Valley"),
@@ -3338,7 +3338,7 @@ class CountryVnm extends WorldCountry {
           population: 97338583,
           gini: const Gini(year: 2018, value: 35.7),
           fifa: "VIE",
-          car: const Car(signs: ["VN"]),
+          car: const Car(sign: "VN"),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Hanoi"),
@@ -3521,7 +3521,6 @@ class CountryAta extends WorldCountry {
             openStreetMaps: "node/36966060",
           ),
           population: 1000,
-          car: const Car(signs: [""]),
           timezones: const [
             "UTC-03:00",
             "UTC+03:00",
@@ -3724,7 +3723,7 @@ class CountrySwz extends WorldCountry {
           population: 1160164,
           gini: const Gini(year: 2016, value: 54.6),
           fifa: "SWZ",
-          car: const Car(signs: ["SD"], isRightSide: false),
+          car: const Car(sign: "SD", isRightSide: false),
           timezones: const ["UTC+02:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -3912,7 +3911,7 @@ class CountryKhm extends WorldCountry {
           ),
           population: 16718971,
           fifa: "CAM",
-          car: const Car(signs: ["K"]),
+          car: const Car(sign: "K"),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Phnom Penh"),
@@ -4111,7 +4110,7 @@ class CountryVut extends WorldCountry {
           population: 307150,
           gini: const Gini(year: 2010, value: 37.6),
           fifa: "VAN",
-          car: const Car(signs: ["VU"]),
+          car: const Car(sign: "VU"),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Port Vila"),
@@ -4289,7 +4288,6 @@ class CountryAla extends WorldCountry {
             openStreetMaps: "relation/1650407",
           ),
           population: 29458,
-          car: const Car(signs: [""]),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Mariehamn"),
@@ -4472,7 +4470,7 @@ class CountryAus extends WorldCountry {
           population: 25687041,
           gini: const Gini(year: 2014, value: 34.4),
           fifa: "AUS",
-          car: const Car(signs: ["AUS"], isRightSide: false),
+          car: const Car(sign: "AUS", isRightSide: false),
           timezones: const [
             "UTC+05:00",
             "UTC+06:30",
@@ -4660,7 +4658,7 @@ class CountryIot extends WorldCountry {
             openStreetMaps: "relation/1993867",
           ),
           population: 3000,
-          car: const Car(signs: ["GB"]),
+          car: const Car(sign: "GB"),
           timezones: const ["UTC+06:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -4852,7 +4850,7 @@ class CountrySvk extends WorldCountry {
           population: 5458827,
           gini: const Gini(year: 2018, value: 25),
           fifa: "SVK",
-          car: const Car(signs: ["SK"]),
+          car: const Car(sign: "SK"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bratislava"),
@@ -5055,7 +5053,7 @@ class CountryBra extends WorldCountry {
           population: 212559409,
           gini: const Gini(year: 2019, value: 53.4),
           fifa: "BRA",
-          car: const Car(signs: ["BR"]),
+          car: const Car(sign: "BR"),
           timezones: const ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Brasília"),
@@ -5260,7 +5258,7 @@ class CountryTjk extends WorldCountry {
           population: 9537642,
           gini: const Gini(year: 2015, value: 34),
           fifa: "TJK",
-          car: const Car(signs: ["TJ"]),
+          car: const Car(sign: "TJ"),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Dushanbe"),
@@ -5443,7 +5441,6 @@ class CountrySgs extends WorldCountry {
             openStreetMaps: "relation/1983629",
           ),
           population: 30,
-          car: const Car(signs: [""]),
           timezones: const ["UTC-02:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -5628,7 +5625,7 @@ class CountryLbr extends WorldCountry {
           population: 5057677,
           gini: const Gini(year: 2016, value: 35.3),
           fifa: "LBR",
-          car: const Car(signs: ["LB"]),
+          car: const Car(sign: "LB"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Monrovia"),
@@ -5824,7 +5821,7 @@ class CountryNga extends WorldCountry {
           population: 206139587,
           gini: const Gini(year: 2018, value: 35.1),
           fifa: "NGA",
-          car: const Car(signs: ["WAN"]),
+          car: const Car(sign: "WAN"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Abuja"),
@@ -6022,7 +6019,7 @@ class CountryCol extends WorldCountry {
           population: 50882884,
           gini: const Gini(year: 2019, value: 51.3),
           fifa: "COL",
-          car: const Car(signs: ["CO"]),
+          car: const Car(sign: "CO"),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bogotá"),
@@ -6210,7 +6207,7 @@ class CountrySmr extends WorldCountry {
           ),
           population: 33938,
           fifa: "SMR",
-          car: const Car(signs: ["RSM"]),
+          car: const Car(sign: "RSM"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("City of San Marino"),
@@ -6401,7 +6398,7 @@ class CountryShn extends WorldCountry {
             openStreetMaps: "relation/4868269#map=13/-15.9657/-5.7120",
           ),
           population: 53192,
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -6595,7 +6592,7 @@ class CountryEgy extends WorldCountry {
           population: 102334403,
           gini: const Gini(year: 2017, value: 31.5),
           fifa: "EGY",
-          car: const Car(signs: ["ET"]),
+          car: const Car(sign: "ET"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -6785,7 +6782,7 @@ class CountryHnd extends WorldCountry {
           population: 9904608,
           gini: const Gini(year: 2019, value: 48.2),
           fifa: "HON",
-          car: const Car(signs: ["HN"]),
+          car: const Car(sign: "HN"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Tegucigalpa"),
@@ -6977,7 +6974,7 @@ class CountryIdn extends WorldCountry {
           population: 273523621,
           gini: const Gini(year: 2019, value: 38.2),
           fifa: "IDN",
-          car: const Car(signs: ["RI"], isRightSide: false),
+          car: const Car(sign: "RI", isRightSide: false),
           timezones: const ["UTC+07:00", "UTC+08:00", "UTC+09:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Jakarta"),
@@ -7170,7 +7167,6 @@ class CountryPrk extends WorldCountry {
           ),
           population: 25778815,
           fifa: "PRK",
-          car: const Car(signs: [""]),
           timezones: const ["UTC+09:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Pyongyang"),
@@ -7379,7 +7375,7 @@ class CountryMac extends WorldCountry {
           ),
           population: 649342,
           fifa: "MAC",
-          car: const Car(signs: ["MO"], isRightSide: false),
+          car: const Car(sign: "MO", isRightSide: false),
           timezones: const ["UTC+08:00"],
         );
 }
@@ -7559,7 +7555,7 @@ class CountrySle extends WorldCountry {
           population: 7976985,
           gini: const Gini(year: 2018, value: 35.7),
           fifa: "SLE",
-          car: const Car(signs: ["WAL"]),
+          car: const Car(sign: "WAL"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Freetown"),
@@ -7749,7 +7745,7 @@ class CountryMda extends WorldCountry {
           population: 2617820,
           gini: const Gini(year: 2018, value: 25.7),
           fifa: "MDA",
-          car: const Car(signs: ["MD"]),
+          car: const Car(sign: "MD"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Chișinău"),
@@ -7947,7 +7943,7 @@ class CountryPhl extends WorldCountry {
           population: 109581085,
           gini: const Gini(year: 2018, value: 42.3),
           fifa: "PHI",
-          car: const Car(signs: ["RP"]),
+          car: const Car(sign: "RP"),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Manila"),
@@ -8149,7 +8145,7 @@ class CountryCmr extends WorldCountry {
           population: 26545864,
           gini: const Gini(year: 2014, value: 46.6),
           fifa: "CMR",
-          car: const Car(signs: ["CAM"]),
+          car: const Car(sign: "CAM"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Yaoundé"),
@@ -8327,7 +8323,7 @@ class CountryGrl extends WorldCountry {
             openStreetMaps: "relation/2184073",
           ),
           population: 56367,
-          car: const Car(signs: ["DK"]),
+          car: const Car(sign: "DK"),
           timezones: const ["UTC-04:00", "UTC-03:00", "UTC-01:00", "UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nuuk"),
@@ -8507,7 +8503,7 @@ class CountryMtq extends WorldCountry {
             openStreetMaps: "relation/2473088",
           ),
           population: 378243,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Fort-de-France"),
@@ -8701,7 +8697,7 @@ class CountryLbn extends WorldCountry {
           population: 6825442,
           gini: const Gini(year: 2011, value: 31.8),
           fifa: "LBN",
-          car: const Car(signs: ["RL"]),
+          car: const Car(sign: "RL"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Beirut"),
@@ -8910,7 +8906,7 @@ class CountryRwa extends WorldCountry {
           population: 12952209,
           gini: const Gini(year: 2016, value: 43.7),
           fifa: "RWA",
-          car: const Car(signs: ["RWA"]),
+          car: const Car(sign: "RWA"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Kigali"),
@@ -9109,7 +9105,7 @@ class CountryBih extends WorldCountry {
           population: 3280815,
           gini: const Gini(year: 2011, value: 33),
           fifa: "BIH",
-          car: const Car(signs: ["BIH"]),
+          car: const Car(sign: "BIH"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Sarajevo"),
@@ -9300,7 +9296,7 @@ class CountryMhl extends WorldCountry {
             openStreetMaps: "relation/571771",
           ),
           population: 59194,
-          car: const Car(signs: ["MH"]),
+          car: const Car(sign: "MH"),
           timezones: const ["UTC+12:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Majuro"),
@@ -9491,7 +9487,7 @@ class CountryIta extends WorldCountry {
           population: 59554023,
           gini: const Gini(year: 2017, value: 35.9),
           fifa: "ITA",
-          car: const Car(signs: ["I"]),
+          car: const Car(sign: "I"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Rome"),
@@ -9671,7 +9667,7 @@ class CountryTkl extends WorldCountry {
             openStreetMaps: "relation/2186600",
           ),
           population: 1411,
-          car: const Car(signs: [""], isRightSide: false),
+          car: const Car(isRightSide: false),
           timezones: const ["UTC+13:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -9856,7 +9852,7 @@ class CountryGab extends WorldCountry {
           population: 2225728,
           gini: const Gini(year: 2017, value: 38),
           fifa: "GAB",
-          car: const Car(signs: ["G"]),
+          car: const Car(sign: "G"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Libreville"),
@@ -10029,7 +10025,7 @@ class CountryCck extends WorldCountry {
             openStreetMaps: "relation/82636",
           ),
           population: 544,
-          car: const Car(signs: ["AUS"], isRightSide: false),
+          car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+06:30"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -10229,7 +10225,7 @@ class CountryPak extends WorldCountry {
           population: 220892331,
           gini: const Gini(year: 2018, value: 31.6),
           fifa: "PAK",
-          car: const Car(signs: ["PK"], isRightSide: false),
+          car: const Car(sign: "PK", isRightSide: false),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Islamabad"),
@@ -10408,7 +10404,7 @@ class CountryReu extends WorldCountry {
             openStreetMaps: "relation/1785276",
           ),
           population: 840974,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC+04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -10605,7 +10601,7 @@ class CountryMus extends WorldCountry {
           population: 1265740,
           gini: const Gini(year: 2017, value: 36.8),
           fifa: "MRI",
-          car: const Car(signs: ["MS"], isRightSide: false),
+          car: const Car(sign: "MS", isRightSide: false),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Port Louis"),
@@ -10783,7 +10779,7 @@ class CountryGrd extends WorldCountry {
           ),
           population: 112519,
           fifa: "GRN",
-          car: const Car(signs: ["WG"], isRightSide: false),
+          car: const Car(sign: "WG", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("St. George's"),
@@ -10962,7 +10958,7 @@ class CountryOmn extends WorldCountry {
           ),
           population: 5106622,
           fifa: "OMA",
-          car: const Car(signs: ["OM"]),
+          car: const Car(sign: "OM"),
           timezones: const ["UTC+04:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -11157,7 +11153,7 @@ class CountryBfa extends WorldCountry {
           population: 20903278,
           gini: const Gini(year: 2014, value: 35.3),
           fifa: "BFA",
-          car: const Car(signs: ["BF"]),
+          car: const Car(sign: "BF"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Ouagadougou"),
@@ -11349,7 +11345,7 @@ class CountryWsm extends WorldCountry {
           population: 198410,
           gini: const Gini(year: 2013, value: 38.7),
           fifa: "SAM",
-          car: const Car(signs: ["WS"], isRightSide: false),
+          car: const Car(sign: "WS", isRightSide: false),
           timezones: const ["UTC+13:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Apia"),
@@ -11532,7 +11528,7 @@ class CountryTto extends WorldCountry {
           population: 1399491,
           gini: const Gini(year: 1992, value: 40.3),
           fifa: "TRI",
-          car: const Car(signs: ["TT"], isRightSide: false),
+          car: const Car(sign: "TT", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Port of Spain"),
@@ -11714,7 +11710,7 @@ class CountryVct extends WorldCountry {
           ),
           population: 110947,
           fifa: "VIN",
-          car: const Car(signs: ["WV"], isRightSide: false),
+          car: const Car(sign: "WV", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Kingstown"),
@@ -11892,7 +11888,7 @@ class CountryPlw extends WorldCountry {
             openStreetMaps: "relation/571805",
           ),
           population: 18092,
-          car: const Car(signs: ["PAL"]),
+          car: const Car(sign: "PAL"),
           timezones: const ["UTC+09:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Ngerulmud"),
@@ -12143,7 +12139,7 @@ class CountryZaf extends WorldCountry {
           population: 59308690,
           gini: const Gini(year: 2014, value: 63),
           fifa: "RSA",
-          car: const Car(signs: ["ZA"], isRightSide: false),
+          car: const Car(sign: "ZA", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital(
@@ -12342,7 +12338,7 @@ class CountryAgo extends WorldCountry {
           population: 32866268,
           gini: const Gini(year: 2018, value: 51.3),
           fifa: "ANG",
-          car: const Car(signs: ["ANG"]),
+          car: const Car(sign: "ANG"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Luanda"),
@@ -12524,7 +12520,7 @@ class CountryKor extends WorldCountry {
           population: 51780579,
           gini: const Gini(year: 2016, value: 31.4),
           fifa: "KOR",
-          car: const Car(signs: ["ROK"]),
+          car: const Car(sign: "ROK"),
           timezones: const ["UTC+09:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Seoul"),
@@ -12712,7 +12708,6 @@ class CountryAtf extends WorldCountry {
             openStreetMaps: "relation/2186658",
           ),
           population: 400,
-          car: const Car(signs: [""]),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Port-aux-Français"),
@@ -12896,7 +12891,7 @@ class CountryIsl extends WorldCountry {
           population: 366425,
           gini: const Gini(year: 2017, value: 26.1),
           fifa: "ISL",
-          car: const Car(signs: ["IS"]),
+          car: const Car(sign: "IS"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Reykjavik"),
@@ -13081,7 +13076,7 @@ class CountryGuf extends WorldCountry {
             openStreetMaps: "relation/2502058",
           ),
           population: 254541,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Cayenne"),
@@ -13275,7 +13270,7 @@ class CountryNor extends WorldCountry {
           population: 5379475,
           gini: const Gini(year: 2018, value: 27.6),
           fifa: "NOR",
-          car: const Car(signs: ["N"]),
+          car: const Car(sign: "N"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Oslo"),
@@ -13466,7 +13461,7 @@ class CountryHun extends WorldCountry {
           population: 9749763,
           gini: const Gini(year: 2018, value: 29.6),
           fifa: "HUN",
-          car: const Car(signs: ["H"]),
+          car: const Car(sign: "H"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Budapest"),
@@ -13659,7 +13654,7 @@ class CountryPse extends WorldCountry {
           population: 4803269,
           gini: const Gini(year: 2016, value: 33.7),
           fifa: "PLE",
-          car: const Car(signs: ["PS"]),
+          car: const Car(sign: "PS"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -13839,7 +13834,7 @@ class CountryLca extends WorldCountry {
           population: 183629,
           gini: const Gini(year: 2016, value: 51.2),
           fifa: "LCA",
-          car: const Car(signs: ["WL"], isRightSide: false),
+          car: const Car(sign: "WL", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Castries"),
@@ -14028,7 +14023,7 @@ class CountryNpl extends WorldCountry {
           population: 29136808,
           gini: const Gini(year: 2010, value: 32.8),
           fifa: "NEP",
-          car: const Car(signs: ["NEP"], isRightSide: false),
+          car: const Car(sign: "NEP", isRightSide: false),
           timezones: const ["UTC+05:45"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -14211,7 +14206,7 @@ class CountryMng extends WorldCountry {
           population: 3278292,
           gini: const Gini(year: 2018, value: 32.7),
           fifa: "MNG",
-          car: const Car(signs: ["MGL"]),
+          car: const Car(sign: "MGL"),
           timezones: const ["UTC+07:00", "UTC+08:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Ulan Bator"),
@@ -14409,7 +14404,7 @@ class CountryZmb extends WorldCountry {
           population: 18383956,
           gini: const Gini(year: 2015, value: 57.1),
           fifa: "ZAM",
-          car: const Car(signs: ["RNR"], isRightSide: false),
+          car: const Car(sign: "RNR", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Lusaka"),
@@ -14591,7 +14586,7 @@ class CountryWlf extends WorldCountry {
             openStreetMaps: "relation/3412448",
           ),
           population: 11750,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC+12:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -14783,7 +14778,7 @@ class CountryMwi extends WorldCountry {
           population: 19129955,
           gini: const Gini(year: 2016, value: 44.7),
           fifa: "MWI",
-          car: const Car(signs: ["MW"], isRightSide: false),
+          car: const Car(sign: "MW", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Lilongwe"),
@@ -14965,7 +14960,7 @@ class CountryBhr extends WorldCountry {
           ),
           population: 1701583,
           fifa: "BHR",
-          car: const Car(signs: ["BRN"]),
+          car: const Car(sign: "BRN"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Manama"),
@@ -15157,7 +15152,7 @@ class CountryUkr extends WorldCountry {
           population: 44134693,
           gini: const Gini(year: 2019, value: 26.6),
           fifa: "UKR",
-          car: const Car(signs: ["UA"]),
+          car: const Car(sign: "UA"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Kyiv"),
@@ -15347,7 +15342,7 @@ class CountryNru extends WorldCountry {
           ),
           population: 10834,
           gini: const Gini(year: 2012, value: 34.8),
-          car: const Car(signs: ["NAU"], isRightSide: false),
+          car: const Car(sign: "NAU", isRightSide: false),
           timezones: const ["UTC+12:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Yaren"),
@@ -15529,7 +15524,7 @@ class CountryMyt extends WorldCountry {
             openStreetMaps: "relation/1259885",
           ),
           population: 226915,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC+03:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -15723,7 +15718,7 @@ class CountryDza extends WorldCountry {
           population: 44700000,
           gini: const Gini(year: 2011, value: 27.6),
           fifa: "ALG",
-          car: const Car(signs: ["DZ"]),
+          car: const Car(sign: "DZ"),
           timezones: const ["UTC+01:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -15947,7 +15942,7 @@ class CountryCan extends WorldCountry {
           population: 38005238,
           gini: const Gini(year: 2017, value: 33.3),
           fifa: "CAN",
-          car: const Car(signs: ["CDN"]),
+          car: const Car(sign: "CDN"),
           timezones: const [
             "UTC-08:00",
             "UTC-07:00",
@@ -16148,7 +16143,7 @@ class CountryLie extends WorldCountry {
           ),
           population: 38137,
           fifa: "LIE",
-          car: const Car(signs: ["FL"]),
+          car: const Car(sign: "FL"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Vaduz"),
@@ -16347,7 +16342,7 @@ class CountryEth extends WorldCountry {
           population: 114963583,
           gini: const Gini(year: 2015, value: 35),
           fifa: "ETH",
-          car: const Car(signs: ["ETH"]),
+          car: const Car(sign: "ETH"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Addis Ababa"),
@@ -16533,7 +16528,7 @@ class CountryDom extends WorldCountry {
           population: 10847904,
           gini: const Gini(year: 2019, value: 41.9),
           fifa: "DOM",
-          car: const Car(signs: ["DOM"]),
+          car: const Car(sign: "DOM"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Santo Domingo"),
@@ -16706,7 +16701,6 @@ class CountryBvt extends WorldCountry {
             openStreetMaps: "way/174996681",
           ),
           population: 0,
-          car: const Car(signs: [""]),
           hasCoatOfArms: false,
           timezones: const ["UTC+01:00"],
         );
@@ -16886,7 +16880,7 @@ class CountryNfk extends WorldCountry {
             openStreetMaps: "relation/2574988",
           ),
           population: 2302,
-          car: const Car(signs: ["AUS"], isRightSide: false),
+          car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+11:30"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -17067,7 +17061,7 @@ class CountryNld extends WorldCountry {
           population: 16655799,
           gini: const Gini(year: 2018, value: 28.1),
           fifa: "NED",
-          car: const Car(signs: ["NL"]),
+          car: const Car(sign: "NL"),
           timezones: const ["UTC-04:00", "UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Amsterdam"),
@@ -17263,7 +17257,7 @@ class CountryMnp extends WorldCountry {
             openStreetMaps: "relation/306004",
           ),
           population: 57557,
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC+10:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -17471,7 +17465,7 @@ class CountryHkg extends WorldCountry {
           ),
           population: 7500700,
           fifa: "HKG",
-          car: const Car(signs: ["HK"], isRightSide: false),
+          car: const Car(sign: "HK", isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("City of Victoria"),
@@ -17667,7 +17661,7 @@ class CountryIrq extends WorldCountry {
           population: 40222503,
           gini: const Gini(year: 2012, value: 29.5),
           fifa: "IRQ",
-          car: const Car(signs: ["IRQ"]),
+          car: const Car(sign: "IRQ"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -17855,7 +17849,7 @@ class CountryEsp extends WorldCountry {
           population: 47351567,
           gini: const Gini(year: 2018, value: 34.7),
           fifa: "ESP",
-          car: const Car(signs: ["E"]),
+          car: const Car(sign: "E"),
           timezones: const ["UTC+00:00", "UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Madrid"),
@@ -18041,7 +18035,7 @@ class CountryTgo extends WorldCountry {
           population: 8278737,
           gini: const Gini(year: 2015, value: 43.1),
           fifa: "TOG",
-          car: const Car(signs: ["TG"]),
+          car: const Car(sign: "TG"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Lomé"),
@@ -18250,7 +18244,7 @@ class CountryChn extends WorldCountry {
           population: 1402112000,
           gini: const Gini(year: 2016, value: 38.5),
           fifa: "CHN",
-          car: const Car(signs: ["RC"]),
+          car: const Car(sign: "RC"),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Beijing"),
@@ -18440,7 +18434,7 @@ class CountryFlk extends WorldCountry {
             openStreetMaps: "relation/2185374",
           ),
           population: 2563,
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Stanley"),
@@ -18941,7 +18935,7 @@ class CountryUsa extends WorldCountry {
           population: 329484123,
           gini: const Gini(year: 2018, value: 41.4),
           fifa: "USA",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const [
             "UTC-12:00",
             "UTC-11:00",
@@ -19138,7 +19132,7 @@ class CountryMaf extends WorldCountry {
             openStreetMaps: "relation/63064",
           ),
           population: 38659,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -19337,7 +19331,7 @@ class CountryIrn extends WorldCountry {
           population: 83992953,
           gini: const Gini(year: 2018, value: 42),
           fifa: "IRN",
-          car: const Car(signs: ["IR"]),
+          car: const Car(sign: "IR"),
           timezones: const ["UTC+03:30"],
           startOfWeek: Weekday.saturday,
           capitalInfo: const CapitalInfo(
@@ -19531,7 +19525,7 @@ class CountryMex extends WorldCountry {
           population: 128932753,
           gini: const Gini(year: 2018, value: 45.4),
           fifa: "MEX",
-          car: const Car(signs: ["MEX"]),
+          car: const Car(sign: "MEX"),
           timezones: const ["UTC-08:00", "UTC-07:00", "UTC-06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Mexico City"),
@@ -19716,7 +19710,7 @@ class CountryBrn extends WorldCountry {
           ),
           population: 437483,
           fifa: "BRU",
-          car: const Car(signs: ["BRU"], isRightSide: false),
+          car: const Car(sign: "BRU", isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bandar Seri Begawan"),
@@ -19915,7 +19909,7 @@ class CountryCyp extends WorldCountry {
           population: 1207361,
           gini: const Gini(year: 2018, value: 32.7),
           fifa: "CYP",
-          car: const Car(signs: ["CY"], isRightSide: false),
+          car: const Car(sign: "CY", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nicosia"),
@@ -20105,7 +20099,7 @@ class CountryNic extends WorldCountry {
           population: 6624554,
           gini: const Gini(year: 2014, value: 46.2),
           fifa: "NCA",
-          car: const Car(signs: ["NIC"]),
+          car: const Car(sign: "NIC"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Managua"),
@@ -20301,7 +20295,7 @@ class CountryCuw extends WorldCountry {
           ),
           population: 155014,
           fifa: "CUW",
-          car: const Car(signs: ["CW"]),
+          car: const Car(sign: "CW"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Willemstad"),
@@ -20494,7 +20488,7 @@ class CountryPri extends WorldCountry {
           ),
           population: 3194034,
           fifa: "PUR",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -20682,7 +20676,7 @@ class CountryNcl extends WorldCountry {
           ),
           population: 271960,
           fifa: "NCL",
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nouméa"),
@@ -20875,7 +20869,6 @@ class CountrySsd extends WorldCountry {
           population: 11193729,
           gini: const Gini(year: 2016, value: 44.1),
           fifa: "SSD",
-          car: const Car(signs: [""]),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -21071,7 +21064,7 @@ class CountrySom extends WorldCountry {
           population: 15893219,
           gini: const Gini(year: 2017, value: 36.8),
           fifa: "SOM",
-          car: const Car(signs: ["SO"]),
+          car: const Car(sign: "SO"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Mogadishu"),
@@ -21265,7 +21258,7 @@ class CountryGrc extends WorldCountry {
           population: 10715549,
           gini: const Gini(year: 2018, value: 32.9),
           fifa: "GRE",
-          car: const Car(signs: ["GR"]),
+          car: const Car(sign: "GR"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Athens"),
@@ -21451,7 +21444,7 @@ class CountryBes extends WorldCountry {
             openStreetMaps: "relation/1216720",
           ),
           population: 25987,
-          car: const Car(signs: [""]),
+
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Kralendijk"),
@@ -21647,7 +21640,7 @@ class CountryLao extends WorldCountry {
           population: 7275556,
           gini: const Gini(year: 2018, value: 38.8),
           fifa: "LAO",
-          car: const Car(signs: ["LAO"]),
+          car: const Car(sign: "LAO"),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Vientiane"),
@@ -21834,7 +21827,7 @@ class CountryBlz extends WorldCountry {
           population: 397621,
           gini: const Gini(year: 1999, value: 53.3),
           fifa: "BLZ",
-          car: const Car(signs: ["BH"]),
+          car: const Car(sign: "BH"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Belmopan"),
@@ -22022,7 +22015,7 @@ class CountrySlv extends WorldCountry {
           population: 6486201,
           gini: const Gini(year: 2019, value: 38.8),
           fifa: "SLV",
-          car: const Car(signs: ["ES"]),
+          car: const Car(sign: "ES"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("San Salvador"),
@@ -22206,7 +22199,7 @@ class CountryJam extends WorldCountry {
           population: 2961161,
           gini: const Gini(year: 2004, value: 45.5),
           fifa: "JAM",
-          car: const Car(signs: ["JA"], isRightSide: false),
+          car: const Car(sign: "JA", isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Kingston"),
@@ -22394,7 +22387,7 @@ class CountryUry extends WorldCountry {
           population: 3473727,
           gini: const Gini(year: 2019, value: 39.7),
           fifa: "URU",
-          car: const Car(signs: ["ROU"]),
+          car: const Car(sign: "ROU"),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Montevideo"),
@@ -22589,7 +22582,7 @@ class CountryPng extends WorldCountry {
           population: 8947027,
           gini: const Gini(year: 2009, value: 41.9),
           fifa: "PNG",
-          car: const Car(signs: ["PNG"], isRightSide: false),
+          car: const Car(sign: "PNG", isRightSide: false),
           timezones: const ["UTC+10:00"],
 
           capitalInfo: const CapitalInfo(
@@ -22793,7 +22786,7 @@ class CountryLux extends WorldCountry {
           population: 632275,
           gini: const Gini(year: 2018, value: 35.4),
           fifa: "LUX",
-          car: const Car(signs: ["L"]),
+          car: const Car(sign: "L"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Luxembourg"),
@@ -22975,7 +22968,7 @@ class CountryChl extends WorldCountry {
           population: 19116209,
           gini: const Gini(year: 2017, value: 44.4),
           fifa: "CHI",
-          car: const Car(signs: ["RCH"]),
+          car: const Car(sign: "RCH"),
           timezones: const ["UTC-06:00", "UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Santiago"),
@@ -23167,7 +23160,7 @@ class CountryVat extends WorldCountry {
             openStreetMaps: "relation/36989",
           ),
           population: 451,
-          car: const Car(signs: ["V"]),
+          car: const Car(sign: "V"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Vatican City"),
@@ -23357,7 +23350,7 @@ class CountryGnb extends WorldCountry {
           population: 1967998,
           gini: const Gini(year: 2010, value: 50.7),
           fifa: "GNB",
-          car: const Car(signs: ["RGB"]),
+          car: const Car(sign: "RGB"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bissau"),
@@ -23555,7 +23548,7 @@ class CountryUga extends WorldCountry {
           population: 45741000,
           gini: const Gini(year: 2016, value: 42.8),
           fifa: "UGA",
-          car: const Car(signs: ["EAU"], isRightSide: false),
+          car: const Car(sign: "EAU", isRightSide: false),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Kampala"),
@@ -23744,7 +23737,7 @@ class CountryVen extends WorldCountry {
           population: 28435943,
           gini: const Gini(year: 2006, value: 44.8),
           fifa: "VEN",
-          car: const Car(signs: ["YV"]),
+          car: const Car(sign: "YV"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Caracas"),
@@ -23945,7 +23938,7 @@ class CountrySrb extends WorldCountry {
           population: 6908224,
           gini: const Gini(year: 2017, value: 36.2),
           fifa: "SRB",
-          car: const Car(signs: ["SRB"]),
+          car: const Car(sign: "SRB"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Belgrade"),
@@ -24138,7 +24131,7 @@ class CountryBen extends WorldCountry {
           population: 12123198,
           gini: const Gini(year: 2015, value: 47.8),
           fifa: "BEN",
-          car: const Car(signs: ["DY"]),
+          car: const Car(sign: "DY"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Porto-Novo"),
@@ -24326,7 +24319,7 @@ class CountryBgd extends WorldCountry {
           population: 164689383,
           gini: const Gini(year: 2016, value: 32.4),
           fifa: "BAN",
-          car: const Car(signs: ["BD"], isRightSide: false),
+          car: const Car(sign: "BD", isRightSide: false),
           timezones: const ["UTC+06:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -24507,7 +24500,7 @@ class CountryBhs extends WorldCountry {
           ),
           population: 393248,
           fifa: "BAH",
-          car: const Car(signs: ["BS"], isRightSide: false),
+          car: const Car(sign: "BS", isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nassau"),
@@ -24680,7 +24673,7 @@ class CountryNiu extends WorldCountry {
             openStreetMaps: "relation/1558556",
           ),
           population: 1470,
-          car: const Car(signs: ["NZ"], isRightSide: false),
+          car: const Car(sign: "NZ", isRightSide: false),
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -24863,7 +24856,7 @@ class CountryAtg extends WorldCountry {
           ),
           population: 97928,
           fifa: "ATG",
-          car: const Car(signs: ["AG"], isRightSide: false),
+          car: const Car(sign: "AG", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Saint John's"),
@@ -25050,7 +25043,7 @@ class CountryBlm extends WorldCountry {
             openStreetMaps: "relation/7552779",
           ),
           population: 4255,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -25246,7 +25239,7 @@ class CountrySyc extends WorldCountry {
           population: 98462,
           gini: const Gini(year: 2018, value: 32.1),
           fifa: "SEY",
-          car: const Car(signs: ["SY"], isRightSide: false),
+          car: const Car(sign: "SY", isRightSide: false),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Victoria"),
@@ -25425,7 +25418,7 @@ class CountryEsh extends WorldCountry {
             openStreetMaps: "relation/5441968",
           ),
           population: 510713,
-          car: const Car(signs: [""]),
+
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -25613,7 +25606,7 @@ class CountryLby extends WorldCountry {
           ),
           population: 6871287,
           fifa: "LBY",
-          car: const Car(signs: ["LAR"]),
+          car: const Car(sign: "LAR"),
           timezones: const ["UTC+01:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -25811,7 +25804,7 @@ class CountryMkd extends WorldCountry {
           population: 2077132,
           gini: const Gini(year: 2018, value: 33),
           fifa: "MKD",
-          car: const Car(signs: ["MK"]),
+          car: const Car(sign: "MK"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Skopje"),
@@ -26009,7 +26002,7 @@ class CountryPer extends WorldCountry {
           population: 32971846,
           gini: const Gini(year: 2019, value: 41.5),
           fifa: "PER",
-          car: const Car(signs: ["PE"]),
+          car: const Car(sign: "PE"),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Lima"),
@@ -26205,7 +26198,7 @@ class CountryBdi extends WorldCountry {
           population: 11890781,
           gini: const Gini(year: 2013, value: 38.6),
           fifa: "BDI",
-          car: const Car(signs: ["RU"]),
+          car: const Car(sign: "RU"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Gitega"),
@@ -26392,7 +26385,7 @@ class CountryKir extends WorldCountry {
           ),
           population: 119446,
           gini: const Gini(year: 2006, value: 37),
-          car: const Car(signs: ["KIR"], isRightSide: false),
+          car: const Car(sign: "KIR", isRightSide: false),
           timezones: const ["UTC+12:00", "UTC+13:00", "UTC+14:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("South Tarawa"),
@@ -26590,7 +26583,7 @@ class CountryTur extends WorldCountry {
           population: 84339067,
           gini: const Gini(year: 2019, value: 41.9),
           fifa: "TUR",
-          car: const Car(signs: ["TR"]),
+          car: const Car(sign: "TR"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Ankara"),
@@ -26794,7 +26787,7 @@ class CountryTza extends WorldCountry {
           population: 59734213,
           gini: const Gini(year: 2017, value: 40.5),
           fifa: "TAN",
-          car: const Car(signs: ["EAT"], isRightSide: false),
+          car: const Car(sign: "EAT", isRightSide: false),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Dodoma"),
@@ -26982,7 +26975,7 @@ class CountryTun extends WorldCountry {
           population: 11818618,
           gini: const Gini(year: 2015, value: 32.8),
           fifa: "TUN",
-          car: const Car(signs: ["TN"]),
+          car: const Car(sign: "TN"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Tunis"),
@@ -27167,7 +27160,7 @@ class CountryMsr extends WorldCountry {
           ),
           population: 4922,
           fifa: "MSR",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Plymouth"),
@@ -27368,7 +27361,7 @@ class CountryKgz extends WorldCountry {
           population: 6591600,
           gini: const Gini(year: 2019, value: 29.7),
           fifa: "KGZ",
-          car: const Car(signs: ["KS"]),
+          car: const Car(sign: "KS"),
           timezones: const ["UTC+06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bishkek"),
@@ -27550,7 +27543,7 @@ class CountryImn extends WorldCountry {
             openStreetMaps: "relation/62269",
           ),
           population: 85032,
-          car: const Car(signs: ["GBM"], isRightSide: false),
+          car: const Car(sign: "GBM", isRightSide: false),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Douglas"),
@@ -27737,7 +27730,7 @@ class CountryGlp extends WorldCountry {
             openStreetMaps: "relation/7109289",
           ),
           population: 400132,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Basse-Terre"),
@@ -27917,7 +27910,7 @@ class CountryKwt extends WorldCountry {
           ),
           population: 4270563,
           fifa: "KUW",
-          car: const Car(signs: ["KWT"]),
+          car: const Car(sign: "KWT"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -28098,7 +28091,7 @@ class CountryVgb extends WorldCountry {
           ),
           population: 30237,
           fifa: "VGB",
-          car: const Car(signs: ["BVI"], isRightSide: false),
+          car: const Car(sign: "BVI", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Road Town"),
@@ -28294,7 +28287,7 @@ class CountryCiv extends WorldCountry {
           population: 26378275,
           gini: const Gini(year: 2015, value: 41.5),
           fifa: "CIV",
-          car: const Car(signs: ["CI"]),
+          car: const Car(sign: "CI"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Yamoussoukro"),
@@ -28467,7 +28460,7 @@ class CountryCxr extends WorldCountry {
             openStreetMaps: "relation/6365444",
           ),
           population: 2072,
-          car: const Car(signs: ["AUS"], isRightSide: false),
+          car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Flying Fish Cove"),
@@ -28655,7 +28648,7 @@ class CountryLso extends WorldCountry {
           population: 2142252,
           gini: const Gini(year: 2017, value: 44.9),
           fifa: "LES",
-          car: const Car(signs: ["LS"], isRightSide: false),
+          car: const Car(sign: "LS", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Maseru"),
@@ -28846,7 +28839,7 @@ class CountryJey extends WorldCountry {
             openStreetMaps: "relation/367988",
           ),
           population: 100800,
-          car: const Car(signs: ["GBJ"], isRightSide: false),
+          car: const Car(sign: "GBJ", isRightSide: false),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Saint Helier"),
@@ -29044,7 +29037,7 @@ class CountrySvn extends WorldCountry {
           population: 2100126,
           gini: const Gini(year: 2018, value: 24.6),
           fifa: "SVN",
-          car: const Car(signs: ["SLO"]),
+          car: const Car(sign: "SLO"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Ljubljana"),
@@ -29253,7 +29246,7 @@ class CountryBel extends WorldCountry {
           population: 11555997,
           gini: const Gini(year: 2018, value: 27.2),
           fifa: "BEL",
-          car: const Car(signs: ["B"]),
+          car: const Car(sign: "B"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Brussels"),
@@ -29433,7 +29426,7 @@ class CountryTca extends WorldCountry {
           ),
           population: 38718,
           fifa: "TCA",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -29618,7 +29611,7 @@ class CountryGib extends WorldCountry {
           ),
           population: 33691,
           fifa: "GIB",
-          car: const Car(signs: ["GBZ"]),
+          car: const Car(sign: "GBZ"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Gibraltar"),
@@ -29797,7 +29790,7 @@ class CountryQat extends WorldCountry {
           ),
           population: 2881060,
           fifa: "QAT",
-          car: const Car(signs: ["Q"]),
+          car: const Car(sign: "Q"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -29997,7 +29990,7 @@ class CountryBwa extends WorldCountry {
           population: 2351625,
           gini: const Gini(year: 2015, value: 53.3),
           fifa: "BOT",
-          car: const Car(signs: ["BW"], isRightSide: false),
+          car: const Car(sign: "BW", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Gaborone"),
@@ -30196,7 +30189,7 @@ class CountryGnq extends WorldCountry {
           ),
           population: 1402985,
           fifa: "EQG",
-          car: const Car(signs: ["GQ"]),
+          car: const Car(sign: "GQ"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Malabo"),
@@ -30393,7 +30386,7 @@ class CountryDji extends WorldCountry {
           population: 988002,
           gini: const Gini(year: 2017, value: 41.6),
           fifa: "DJI",
-          car: const Car(signs: ["DJI"]),
+          car: const Car(sign: "DJI"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Djibouti"),
@@ -30577,7 +30570,7 @@ class CountryGuy extends WorldCountry {
           population: 786559,
           gini: const Gini(year: 1998, value: 45.1),
           fifa: "GUY",
-          car: const Car(signs: ["GUY"], isRightSide: false),
+          car: const Car(sign: "GUY", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Georgetown"),
@@ -30758,7 +30751,7 @@ class CountryGum extends WorldCountry {
           ),
           population: 168783,
           fifa: "GUM",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC+10:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Hagåtña"),
@@ -30944,7 +30937,7 @@ class CountryMco extends WorldCountry {
             openStreetMaps: "relation/1124039",
           ),
           population: 39244,
-          car: const Car(signs: ["MC"]),
+          car: const Car(sign: "MC"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Monaco"),
@@ -31128,7 +31121,7 @@ class CountrySlb extends WorldCountry {
           population: 686878,
           gini: const Gini(year: 2012, value: 37.1),
           fifa: "SOL",
-          car: const Car(signs: ["SOL"], isRightSide: false),
+          car: const Car(sign: "SOL", isRightSide: false),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Honiara"),
@@ -31316,7 +31309,7 @@ class CountryGgy extends WorldCountry {
             openStreetMaps: "relation/270009",
           ),
           population: 62999,
-          car: const Car(signs: ["GBG"], isRightSide: false),
+          car: const Car(sign: "GBG", isRightSide: false),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("St. Peter Port"),
@@ -31516,7 +31509,7 @@ class CountryPry extends WorldCountry {
           population: 7132530,
           gini: const Gini(year: 2019, value: 45.7),
           fifa: "PAR",
-          car: const Car(signs: ["PY"]),
+          car: const Car(sign: "PY"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Asunción"),
@@ -31708,7 +31701,7 @@ class CountrySur extends WorldCountry {
           population: 586634,
           gini: const Gini(year: 1999, value: 57.9),
           fifa: "SUR",
-          car: const Car(signs: ["SME"], isRightSide: false),
+          car: const Car(sign: "SME", isRightSide: false),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Paramaribo"),
@@ -31886,7 +31879,6 @@ class CountryUmi extends WorldCountry {
             openStreetMaps: "relation/6430384",
           ),
           population: 300,
-          car: const Car(signs: [""]),
           timezones: const ["UTC-11:00", "UTC-10:00", "UTC+12:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -32082,7 +32074,7 @@ class CountryGin extends WorldCountry {
           population: 13132792,
           gini: const Gini(year: 2012, value: 33.7),
           fifa: "GUI",
-          car: const Car(signs: ["RG"]),
+          car: const Car(sign: "RG"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Conakry"),
@@ -32268,7 +32260,7 @@ class CountryCze extends WorldCountry {
           population: 10698896,
           gini: const Gini(year: 2018, value: 25),
           fifa: "CZE",
-          car: const Car(signs: ["CZ"]),
+          car: const Car(sign: "CZ"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Prague"),
@@ -32462,7 +32454,7 @@ class CountryCom extends WorldCountry {
           population: 869595,
           gini: const Gini(year: 2014, value: 45.3),
           fifa: "COM",
-          car: const Car(signs: ["COM"]),
+          car: const Car(sign: "COM"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Moroni"),
@@ -32642,7 +32634,7 @@ class CountryGha extends WorldCountry {
           population: 31072945,
           gini: const Gini(year: 2016, value: 43.5),
           fifa: "GHA",
-          car: const Car(signs: ["GH"]),
+          car: const Car(sign: "GH"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Accra"),
@@ -32827,7 +32819,7 @@ class CountryKna extends WorldCountry {
           ),
           population: 53192,
           fifa: "SKN",
-          car: const Car(signs: ["KN"], isRightSide: false),
+          car: const Car(sign: "KN", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Basseterre"),
@@ -33014,7 +33006,7 @@ class CountryPyf extends WorldCountry {
             openStreetMaps: "relation/3412620",
           ),
           population: 280904,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-10:00", "UTC-09:30", "UTC-09:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Papeetē"),
@@ -33237,7 +33229,7 @@ class CountryZwe extends WorldCountry {
           population: 14862927,
           gini: const Gini(year: 2019, value: 50.3),
           fifa: "ZIM",
-          car: const Car(signs: ["ZW"], isRightSide: false),
+          car: const Car(sign: "ZW", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Harare"),
@@ -33432,7 +33424,7 @@ class CountryKen extends WorldCountry {
           population: 53771300,
           gini: const Gini(year: 2015, value: 40.8),
           fifa: "KEN",
-          car: const Car(signs: ["EAK"], isRightSide: false),
+          car: const Car(sign: "EAK", isRightSide: false),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nairobi"),
@@ -33638,7 +33630,7 @@ class CountryKaz extends WorldCountry {
           population: 18754440,
           gini: const Gini(year: 2018, value: 27.8),
           fifa: "KAZ",
-          car: const Car(signs: ["KZ"]),
+          car: const Car(sign: "KZ"),
           timezones: const ["UTC+05:00", "UTC+06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nur-Sultan"),
@@ -33828,7 +33820,7 @@ class CountryMne extends WorldCountry {
           population: 621718,
           gini: const Gini(year: 2016, value: 38.5),
           fifa: "MNE",
-          car: const Car(signs: ["SCG"]),
+          car: const Car(sign: "SCG"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Podgorica"),
@@ -34008,7 +34000,7 @@ class CountryTuv extends WorldCountry {
           ),
           population: 11792,
           gini: const Gini(year: 2010, value: 39.1),
-          car: const Car(signs: ["TUV"], isRightSide: false),
+          car: const Car(sign: "TUV", isRightSide: false),
           timezones: const ["UTC+12:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Funafuti"),
@@ -34196,7 +34188,7 @@ class CountryPan extends WorldCountry {
           population: 4314768,
           gini: const Gini(year: 2019, value: 49.8),
           fifa: "PAN",
-          car: const Car(signs: ["PA"]),
+          car: const Car(sign: "PA"),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Panama City"),
@@ -34380,7 +34372,7 @@ class CountryAnd extends WorldCountry {
           ),
           population: 77265,
           fifa: "AND",
-          car: const Car(signs: ["AND"]),
+          car: const Car(sign: "AND"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Andorra la Vella"),
@@ -34563,7 +34555,7 @@ class CountryVir extends WorldCountry {
           ),
           population: 106290,
           fifa: "VIR",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -34755,7 +34747,7 @@ class CountryIsr extends WorldCountry {
           population: 9216900,
           gini: const Gini(year: 2016, value: 39),
           fifa: "ISR",
-          car: const Car(signs: ["IL"]),
+          car: const Car(sign: "IL"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -34946,7 +34938,7 @@ class CountryPrt extends WorldCountry {
           population: 10305564,
           gini: const Gini(year: 2018, value: 33.5),
           fifa: "POR",
-          car: const Car(signs: ["P"]),
+          car: const Car(sign: "P"),
           timezones: const ["UTC-01:00", "UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Lisbon"),
@@ -35144,7 +35136,7 @@ class CountryAut extends WorldCountry {
           population: 8917205,
           gini: const Gini(year: 2018, value: 30.8),
           fifa: "AUT",
-          car: const Car(signs: ["A"]),
+          car: const Car(sign: "A"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Vienna"),
@@ -35337,7 +35329,7 @@ class CountryFin extends WorldCountry {
           population: 5530719,
           gini: const Gini(year: 2018, value: 27.3),
           fifa: "FIN",
-          car: const Car(signs: ["FIN"]),
+          car: const Car(sign: "FIN"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Helsinki"),
@@ -35527,7 +35519,7 @@ class CountryEst extends WorldCountry {
           population: 1331057,
           gini: const Gini(year: 2018, value: 30.3),
           fifa: "EST",
-          car: const Car(signs: ["EST"]),
+          car: const Car(sign: "EST"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Tallinn"),
@@ -35715,7 +35707,7 @@ class CountryDma extends WorldCountry {
           ),
           population: 71991,
           fifa: "DMA",
-          car: const Car(signs: ["WD"], isRightSide: false),
+          car: const Car(sign: "WD", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Roseau"),
@@ -35899,7 +35891,7 @@ class CountryYem extends WorldCountry {
           population: 29825968,
           gini: const Gini(year: 2014, value: 36.7),
           fifa: "YEM",
-          car: const Car(signs: ["YAR"]),
+          car: const Car(sign: "YAR"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -36105,7 +36097,7 @@ class CountryAfg extends WorldCountry {
 
           fifa: "AFG",
 
-          car: const Car(signs: ["AFG"]),
+          car: const Car(sign: "AFG"),
 
           timezones: const ["UTC+04:30"],
 
@@ -36295,7 +36287,7 @@ class CountrySyr extends WorldCountry {
           population: 17500657,
           gini: const Gini(year: 2003, value: 37.5),
           fifa: "SYR",
-          car: const Car(signs: ["SYR"]),
+          car: const Car(sign: "SYR"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Damascus"),
@@ -36483,7 +36475,7 @@ class CountryMdv extends WorldCountry {
           population: 540542,
           gini: const Gini(year: 2016, value: 31.3),
           fifa: "MDV",
-          car: const Car(signs: ["MV"], isRightSide: false),
+          car: const Car(sign: "MV", isRightSide: false),
           timezones: const ["UTC+05:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -36678,7 +36670,7 @@ class CountryTls extends WorldCountry {
           population: 1318442,
           gini: const Gini(year: 2014, value: 28.7),
           fifa: "TLS",
-          car: const Car(signs: ["TL"], isRightSide: false),
+          car: const Car(sign: "TL", isRightSide: false),
           timezones: const ["UTC+09:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -36872,7 +36864,7 @@ class CountryLtu extends WorldCountry {
           population: 2794700,
           gini: const Gini(year: 2018, value: 35.7),
           fifa: "LTU",
-          car: const Car(signs: ["LT"]),
+          car: const Car(sign: "LT"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Vilnius"),
@@ -37059,7 +37051,7 @@ class CountryNzl extends WorldCountry {
           ),
           population: 5084300,
           fifa: "NZL",
-          car: const Car(signs: ["NZ"], isRightSide: false),
+          car: const Car(sign: "NZ", isRightSide: false),
           timezones: const [
             "UTC-11:00",
             "UTC-10:00",
@@ -37252,7 +37244,7 @@ class CountryBmu extends WorldCountry {
           ),
           population: 63903,
           fifa: "BER",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Hamilton"),
@@ -37454,7 +37446,7 @@ class CountryDeu extends WorldCountry {
           population: 83240525,
           gini: const Gini(year: 2016, value: 31.9),
           fifa: "GER",
-          car: const Car(signs: ["DY"]),
+          car: const Car(sign: "DY"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Berlin"),
@@ -37654,7 +37646,7 @@ class CountryArg extends WorldCountry {
           population: 45376763,
           gini: const Gini(year: 2019, value: 42.9),
           fifa: "ARG",
-          car: const Car(signs: ["RA"]),
+          car: const Car(sign: "RA"),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Buenos Aires"),
@@ -37860,7 +37852,7 @@ class CountryBlr extends WorldCountry {
           population: 9398861,
           gini: const Gini(year: 2019, value: 25.3),
           fifa: "BLR",
-          car: const Car(signs: ["BY"]),
+          car: const Car(sign: "BY"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Minsk"),
@@ -38042,7 +38034,7 @@ class CountryBrb extends WorldCountry {
           ),
           population: 287371,
           fifa: "BRB",
-          car: const Car(signs: ["BDS"], isRightSide: false),
+          car: const Car(sign: "BDS", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bridgetown"),
@@ -38235,7 +38227,7 @@ class CountryGtm extends WorldCountry {
           population: 16858333,
           gini: const Gini(year: 2014, value: 48.3),
           fifa: "GUA",
-          car: const Car(signs: ["GCA"]),
+          car: const Car(sign: "GCA"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Guatemala City"),
@@ -38430,7 +38422,7 @@ class CountryAze extends WorldCountry {
           population: 10110116,
           gini: const Gini(year: 2005, value: 26.6),
           fifa: "AZE",
-          car: const Car(signs: ["AZ"]),
+          car: const Car(sign: "AZ"),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Baku"),
@@ -38619,7 +38611,7 @@ class CountryMar extends WorldCountry {
           population: 36910558,
           gini: const Gini(year: 2013, value: 39.5),
           fifa: "MAR",
-          car: const Car(signs: ["MA"]),
+          car: const Car(sign: "MA"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Rabat"),
@@ -38801,7 +38793,7 @@ class CountryCok extends WorldCountry {
           ),
           population: 18100,
           fifa: "COK",
-          car: const Car(signs: ["NZ"], isRightSide: false),
+          car: const Car(sign: "NZ", isRightSide: false),
           timezones: const ["UTC-10:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Avarua"),
@@ -39002,7 +38994,7 @@ class CountryCaf extends WorldCountry {
           population: 4829764,
           gini: const Gini(year: 2008, value: 56.2),
           fifa: "CTA",
-          car: const Car(signs: ["RCA"]),
+          car: const Car(sign: "RCA"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bangui"),
@@ -39188,7 +39180,7 @@ class CountryRou extends WorldCountry {
           population: 19286123,
           gini: const Gini(year: 2018, value: 35.8),
           fifa: "ROU",
-          car: const Car(signs: ["RO"]),
+          car: const Car(sign: "RO"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bucharest"),
@@ -39384,7 +39376,7 @@ class CountryMlt extends WorldCountry {
           population: 525285,
           gini: const Gini(year: 2018, value: 28.7),
           fifa: "MLT",
-          car: const Car(signs: ["M"], isRightSide: false),
+          car: const Car(sign: "M", isRightSide: false),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Valletta"),
@@ -39583,7 +39575,7 @@ class CountryArm extends WorldCountry {
           population: 2963234,
           gini: const Gini(year: 2019, value: 29.9),
           fifa: "ARM",
-          car: const Car(signs: ["AM"]),
+          car: const Car(sign: "AM"),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Yerevan"),
@@ -39781,7 +39773,7 @@ class CountrySen extends WorldCountry {
           population: 16743930,
           gini: const Gini(year: 2011, value: 40.3),
           fifa: "SEN",
-          car: const Car(signs: ["SN"]),
+          car: const Car(sign: "SN"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Dakar"),
@@ -39970,7 +39962,7 @@ class CountryBgr extends WorldCountry {
           population: 6927288,
           gini: const Gini(year: 2018, value: 41.3),
           fifa: "BUL",
-          car: const Car(signs: ["BG"]),
+          car: const Car(sign: "BG"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Sofia"),
@@ -40193,7 +40185,7 @@ class CountryCod extends WorldCountry {
           population: 108407721,
           gini: const Gini(year: 2012, value: 42.1),
           fifa: "COD",
-          car: const Car(signs: ["CGO"]),
+          car: const Car(sign: "CGO"),
           timezones: const ["UTC+01:00", "UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Kinshasa"),
@@ -40383,7 +40375,7 @@ class CountryHti extends WorldCountry {
           population: 11402533,
           gini: const Gini(year: 2012, value: 41.1),
           fifa: "HAI",
-          car: const Car(signs: ["RH"]),
+          car: const Car(sign: "RH"),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Port-au-Prince"),
@@ -40571,7 +40563,7 @@ class CountryAlb extends WorldCountry {
           population: 2837743,
           gini: const Gini(year: 2017, value: 33.2),
           fifa: "ALB",
-          car: const Car(signs: ["AL"]),
+          car: const Car(sign: "AL"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Tirana"),
@@ -40759,7 +40751,7 @@ class CountryJor extends WorldCountry {
           population: 10203140,
           gini: const Gini(year: 2010, value: 33.7),
           fifa: "JOR",
-          car: const Car(signs: ["HKJ"]),
+          car: const Car(sign: "HKJ"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -40938,7 +40930,7 @@ class CountrySjm extends WorldCountry {
             openStreetMaps: "relation/1337397",
           ),
           population: 2562,
-          car: const Car(signs: ["N"]),
+          car: const Car(sign: "N"),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -41132,7 +41124,7 @@ class CountryMdg extends WorldCountry {
           population: 27691019,
           gini: const Gini(year: 2012, value: 42.6),
           fifa: "MAD",
-          car: const Car(signs: ["RM"]),
+          car: const Car(sign: "RM"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Antananarivo"),
@@ -41323,7 +41315,7 @@ class CountryFra extends WorldCountry {
           population: 67391582,
           gini: const Gini(year: 2018, value: 32.4),
           fifa: "FRA",
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const [
             "UTC-10:00",
             "UTC-09:30",
@@ -41525,7 +41517,7 @@ class CountryFsm extends WorldCountry {
           ),
           population: 115021,
           gini: const Gini(year: 2013, value: 40.1),
-          car: const Car(signs: ["FSM"]),
+          car: const Car(sign: "FSM"),
           timezones: const ["UTC+10:00", "UTC+11:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Palikir"),
@@ -41707,7 +41699,7 @@ class CountryAbw extends WorldCountry {
           ),
           population: 106766,
           fifa: "ARU",
-          car: const Car(signs: ["A"]),
+          car: const Car(sign: "A"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Oranjestad"),
@@ -41910,7 +41902,7 @@ class CountryInd extends WorldCountry {
           population: 1380004385,
           gini: const Gini(year: 2011, value: 35.7),
           fifa: "IND",
-          car: const Car(signs: ["IND"], isRightSide: false),
+          car: const Car(sign: "IND", isRightSide: false),
           timezones: const ["UTC+05:30"],
           capitalInfo: const CapitalInfo(
             capital: Capital("New Delhi"),
@@ -42126,7 +42118,7 @@ class CountryNam extends WorldCountry {
           population: 2540916,
           gini: const Gini(year: 2015, value: 59.1),
           fifa: "NAM",
-          car: const Car(signs: ["NAM"], isRightSide: false),
+          car: const Car(sign: "NAM", isRightSide: false),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Windhoek"),
@@ -42317,7 +42309,7 @@ class CountryFji extends WorldCountry {
           population: 896444,
           gini: const Gini(year: 2013, value: 36.7),
           fifa: "FIJ",
-          car: const Car(signs: ["FJI"], isRightSide: false),
+          car: const Car(sign: "FJI", isRightSide: false),
           timezones: const ["UTC+12:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Suva"),
@@ -42514,7 +42506,7 @@ class CountrySdn extends WorldCountry {
           population: 43849269,
           gini: const Gini(year: 2014, value: 34.2),
           fifa: "SDN",
-          car: const Car(signs: ["SUD"]),
+          car: const Car(sign: "SUD"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Khartoum"),
@@ -42705,7 +42697,7 @@ class CountryStp extends WorldCountry {
           population: 219161,
           gini: const Gini(year: 2017, value: 56.3),
           fifa: "STP",
-          car: const Car(signs: ["STP"]),
+          car: const Car(sign: "STP"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("São Tomé"),
@@ -42901,7 +42893,7 @@ class CountrySau extends WorldCountry {
           ),
           population: 34813867,
           fifa: "KSA",
-          car: const Car(signs: ["SA"]),
+          car: const Car(sign: "SA"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -43080,7 +43072,6 @@ class CountryHmd extends WorldCountry {
             openStreetMaps: "relation/2177227",
           ),
           population: 0,
-          car: const Car(signs: [""]),
           hasCoatOfArms: false,
           timezones: const ["UTC+05:00"],
         );
@@ -43270,7 +43261,7 @@ class CountryLka extends WorldCountry {
           population: 21919000,
           gini: const Gini(year: 2016, value: 39.3),
           fifa: "SRI",
-          car: const Car(signs: ["CL"], isRightSide: false),
+          car: const Car(sign: "CL", isRightSide: false),
           timezones: const ["UTC+05:30"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Sri Jayawardenepura Kotte"),
@@ -43455,7 +43446,7 @@ class CountrySwe extends WorldCountry {
           population: 10353442,
           gini: const Gini(year: 2018, value: 30),
           fifa: "SWE",
-          car: const Car(signs: ["S"]),
+          car: const Car(sign: "S"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Stockholm"),
@@ -43643,7 +43634,7 @@ class CountryTon extends WorldCountry {
           population: 105697,
           gini: const Gini(year: 2015, value: 37.6),
           fifa: "TGA",
-          car: const Car(signs: ["TO"], isRightSide: false),
+          car: const Car(sign: "TO", isRightSide: false),
           timezones: const ["UTC+13:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nuku'alofa"),
@@ -43828,7 +43819,7 @@ class CountryDnk extends WorldCountry {
           population: 5831404,
           gini: const Gini(year: 2018, value: 28.2),
           fifa: "DEN",
-          car: const Car(signs: ["DK"]),
+          car: const Car(sign: "DK"),
           timezones: const [
             "UTC-04:00",
             "UTC-03:00",
@@ -44021,7 +44012,7 @@ class CountryMys extends WorldCountry {
           population: 32365998,
           gini: const Gini(year: 2015, value: 41.1),
           fifa: "MAS",
-          car: const Car(signs: ["MAL"], isRightSide: false),
+          car: const Car(sign: "MAL", isRightSide: false),
           timezones: const ["UTC+08:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -44211,7 +44202,7 @@ class CountryCri extends WorldCountry {
           population: 5094114,
           gini: const Gini(year: 2019, value: 48.2),
           fifa: "CRC",
-          car: const Car(signs: ["CR"]),
+          car: const Car(sign: "CR"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("San José"),
@@ -44429,7 +44420,7 @@ class CountryBol extends WorldCountry {
           population: 11673029,
           gini: const Gini(year: 2019, value: 41.6),
           fifa: "BOL",
-          car: const Car(signs: ["BOL"]),
+          car: const Car(sign: "BOL"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Sucre"),
@@ -44610,7 +44601,7 @@ class CountryBtn extends WorldCountry {
           population: 771612,
           gini: const Gini(year: 2017, value: 37.4),
           fifa: "BHU",
-          car: const Car(signs: ["BHT"], isRightSide: false),
+          car: const Car(sign: "BHT", isRightSide: false),
           timezones: const ["UTC+06:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Thimphu"),
@@ -44790,7 +44781,7 @@ class CountryCym extends WorldCountry {
           ),
           population: 65720,
           fifa: "CAY",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("George Town"),
@@ -44976,7 +44967,7 @@ class CountryPcn extends WorldCountry {
             openStreetMaps: "relation/2185375",
           ),
           population: 56,
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-08:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -45166,7 +45157,7 @@ class CountryMli extends WorldCountry {
           population: 20250834,
           gini: const Gini(year: 2009, value: 33),
           fifa: "MLI",
-          car: const Car(signs: ["RMM"]),
+          car: const Car(sign: "RMM"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bamako"),
@@ -45355,7 +45346,7 @@ class CountrySxm extends WorldCountry {
             openStreetMaps: "relation/1231790",
           ),
           population: 40812,
-          car: const Car(signs: ["SX"]),
+          car: const Car(sign: "SX"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -45549,7 +45540,7 @@ class CountryLva extends WorldCountry {
           population: 1901548,
           gini: const Gini(year: 2018, value: 35.1),
           fifa: "LVA",
-          car: const Car(signs: ["LV"]),
+          car: const Car(sign: "LV"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Riga"),
@@ -45747,7 +45738,7 @@ class CountryAsm extends WorldCountry {
           ),
           population: 55197,
           fifa: "ASA",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -45933,7 +45924,7 @@ class CountrySpm extends WorldCountry {
             openStreetMaps: "relation/3406826",
           ),
           population: 6069,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-03:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -46123,7 +46114,7 @@ class CountryEcu extends WorldCountry {
           population: 17643060,
           gini: const Gini(year: 2019, value: 45.7),
           fifa: "ECU",
-          car: const Car(signs: ["EC"]),
+          car: const Car(sign: "EC"),
           timezones: const ["UTC-06:00", "UTC-05:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Quito"),
@@ -46314,7 +46305,7 @@ class CountryTha extends WorldCountry {
           population: 69799978,
           gini: const Gini(year: 2019, value: 34.9),
           fifa: "THA",
-          car: const Car(signs: ["T"], isRightSide: false),
+          car: const Car(sign: "T", isRightSide: false),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bangkok"),
@@ -46499,7 +46490,7 @@ class CountryAre extends WorldCountry {
           population: 9890400,
           gini: const Gini(year: 2018, value: 26),
           fifa: "UAE",
-          car: const Car(signs: ["UAE"]),
+          car: const Car(sign: "UAE"),
           timezones: const ["UTC+04:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
@@ -46695,7 +46686,7 @@ class CountryHrv extends WorldCountry {
           population: 4047200,
           gini: const Gini(year: 2018, value: 29.7),
           fifa: "CRO",
-          car: const Car(signs: ["HR"]),
+          car: const Car(sign: "HR"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Zagreb"),
@@ -46888,7 +46879,7 @@ class CountryMmr extends WorldCountry {
           population: 54409794,
           gini: const Gini(year: 2017, value: 30.7),
           fifa: "MYA",
-          car: const Car(signs: ["BUR"]),
+          car: const Car(sign: "BUR"),
           timezones: const ["UTC+06:30"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Naypyidaw"),
@@ -47069,7 +47060,7 @@ class CountryGeo extends WorldCountry {
           population: 3714000,
           gini: const Gini(year: 2019, value: 35.9),
           fifa: "GEO",
-          car: const Car(signs: ["GE"]),
+          car: const Car(sign: "GE"),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Tbilisi"),
@@ -47262,7 +47253,7 @@ class CountryTwn extends WorldCountry {
           ),
           population: 23503349,
           fifa: "TPE",
-          car: const Car(signs: ["RC"]),
+          car: const Car(sign: "RC"),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Taipei"),
@@ -47472,7 +47463,7 @@ class CountryChe extends WorldCountry {
           population: 8654622,
           gini: const Gini(year: 2018, value: 33.1),
           fifa: "SUI",
-          car: const Car(signs: ["CH"]),
+          car: const Car(sign: "CH"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Bern"),
@@ -47678,7 +47669,7 @@ class CountryEri extends WorldCountry {
           ),
           population: 5352000,
           fifa: "ERI",
-          car: const Car(signs: ["ER"]),
+          car: const Car(sign: "ER"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Asmara"),
@@ -47874,7 +47865,7 @@ class CountryCog extends WorldCountry {
           population: 5657000,
           gini: const Gini(year: 2011, value: 48.9),
           fifa: "CGO",
-          car: const Car(signs: ["RCB"]),
+          car: const Car(sign: "RCB"),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
@@ -48055,7 +48046,7 @@ class CountryFro extends WorldCountry {
           ),
           population: 48865,
           fifa: "FRO",
-          car: const Car(signs: ["FO"]),
+          car: const Car(sign: "FO"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Tórshavn"),
