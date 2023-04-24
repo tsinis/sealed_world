@@ -1,5 +1,10 @@
 final class PostalCode {
-  const PostalCode({this.format = "#####", this.regExpPattern = r"^(\\d{5})$"});
+  const PostalCode({this.format = "#####", this.regExpPattern = r"^(\\d{5})$"})
+      : assert(format.length != 0, "`format` should not be empty!"),
+        assert(
+          regExpPattern.length != 0,
+          "`regExpPattern` should not be empty!",
+        );
 
   final String format;
   final String regExpPattern;

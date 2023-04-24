@@ -232,8 +232,8 @@ class _CountryPageState extends State<CountryPage> {
                                     ),
                                     DescriptionTile(
                                       country.demonyms.first.areSame
-                                          ? country.demonyms.first.f
-                                          : """👩: ${country.demonyms.first.f}\n👨: ${country.demonyms.first.m}""",
+                                          ? country.demonyms.first.female
+                                          : """👩: ${country.demonyms.first.female}\n👨: ${country.demonyms.first.male}""",
                                       icon: Icons.face_outlined,
                                       description: "Demonym(s)",
                                     ),
