@@ -79,4 +79,24 @@ void main() => group("$Continent", () {
           ),
         );
       });
+
+      group("equality", () {
+        test("basic", () {
+          expect(Continent.list.first, isNot(equals(value)));
+          expect(Continent.list.last, same(value));
+          expect(Continent.fromName(array.first.name), same(value));
+          expect(
+            Continent.fromName(Continent.list.last.name),
+            same(Continent.list.last),
+          );
+        });
+
+        test("with ${array.runtimeType}", () {
+          expect(array.length == 2, isTrue);
+          array.addAll(List.of(array));
+          expect(array.length == 2, isTrue);
+          array.add(Continent.fromName(array.first.name));
+          expect(array.length == 2, isTrue);
+        });
+      });
     });

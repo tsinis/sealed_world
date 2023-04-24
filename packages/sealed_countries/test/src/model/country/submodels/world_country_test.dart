@@ -98,26 +98,23 @@ void main() => group("$WorldCountry", () {
 
       group("equality", () {
         test("basic", () {
-          expect(WorldCountry.list.last == value, isTrue);
+          expect(WorldCountry.list.first, isNot(equals(value)));
+          expect(WorldCountry.list.last, same(value));
           expect(
-            WorldCountry.fromCodeShort(WorldCountry.list.last.codeShort) ==
-                value,
-            isTrue,
+            WorldCountry.fromCodeShort(WorldCountry.list.last.codeShort),
+            same(value),
           );
           expect(
-            WorldCountry.fromCodeShort(
-                  WorldCountry.list.last.codeShort,
-                ) ==
-                WorldCountry.list.last,
-            isTrue,
+            WorldCountry.fromCodeShort(WorldCountry.list.last.codeShort),
+            same(WorldCountry.list.last),
           );
         });
 
-        test("with $Set", () {
+        test("with ${array.runtimeType}", () {
           expect(array.length == 2, isTrue);
-          array.addAll(array);
+          array.addAll(List.of(array));
           expect(array.length == 2, isTrue);
-          array.add(value);
+          array.add(WorldCountry.fromCodeShort(value.codeShort));
           expect(array.length == 2, isTrue);
         });
       });

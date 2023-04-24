@@ -29,28 +29,25 @@ void main() => group("$NaturalLanguage", () {
 
       group("equality", () {
         test("basic", () {
-          expect(NaturalLanguage.list.last == value, isTrue);
+          expect(NaturalLanguage.list.first, isNot(equals(value)));
+          expect(NaturalLanguage.list.last, same(value));
           expect(
-            NaturalLanguage.fromName(
-                  NaturalLanguage.list.last.name,
-                ) ==
-                value,
-            isTrue,
+            NaturalLanguage.fromName(NaturalLanguage.list.last.name),
+            same(value),
           );
           expect(
             NaturalLanguage.fromName(
-                  NaturalLanguage.list.last.name,
-                ) ==
-                NaturalLanguage.list.last,
-            isTrue,
+              NaturalLanguage.list.last.name,
+            ),
+            same(NaturalLanguage.list.last),
           );
         });
 
-        test("with $Set", () {
+        test("with ${array.runtimeType}", () {
           expect(array.length == 2, isTrue);
-          array.addAll(array);
+          array.addAll(List.of(array));
           expect(array.length == 2, isTrue);
-          array.add(value);
+          array.add(NaturalLanguage.fromName(array.last.name));
           expect(array.length == 2, isTrue);
         });
       });

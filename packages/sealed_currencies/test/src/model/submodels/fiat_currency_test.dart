@@ -8,25 +8,23 @@ void main() => group("$FiatCurrency", () {
 
       group("equality", () {
         test("basic", () {
-          expect(FiatCurrency.list.last == value, isTrue);
+          expect(FiatCurrency.list.first, isNot(equals(value)));
+          expect(FiatCurrency.list.last, same(value));
           expect(
-            FiatCurrency.fromName(FiatCurrency.list.last.name) == value,
-            isTrue,
+            FiatCurrency.fromName(value.name),
+            same(value),
           );
           expect(
-            FiatCurrency.fromName(
-                  FiatCurrency.list.last.name,
-                ) ==
-                FiatCurrency.list.last,
-            isTrue,
+            FiatCurrency.fromName(FiatCurrency.list.last.name),
+            same(FiatCurrency.list.last),
           );
         });
 
-        test("with $Set", () {
+        test("with ${array.runtimeType}", () {
           expect(array.length == 2, isTrue);
-          array.addAll(array);
+          array.addAll(List.of(array));
           expect(array.length == 2, isTrue);
-          array.add(value);
+          array.add(FiatCurrency.fromName(array.last.name));
           expect(array.length == 2, isTrue);
         });
       });
