@@ -1,5 +1,5 @@
 import "../../../model/country/submodels/demonyms.dart";
 
 extension DemonymsExtension on Demonyms {
-  bool get areSame => f == m;
+  bool get areSame => male == female;
 }

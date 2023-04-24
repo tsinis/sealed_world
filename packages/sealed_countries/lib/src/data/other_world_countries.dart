@@ -182,13 +182,13 @@ class CountryUnk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kosovar",
-              m: "Kosovar",
+              female: "Kosovar",
+              male: "Kosovar",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kosovare",
-              m: "Kosovar",
+              female: "Kosovare",
+              male: "Kosovar",
             ),
           ],
           emoji: "🇽🇰",

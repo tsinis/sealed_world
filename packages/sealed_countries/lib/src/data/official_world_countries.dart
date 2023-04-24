@@ -180,13 +180,13 @@ class CountryCpv extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cape Verdian",
-              m: "Cape Verdian",
+              female: "Cape Verdian",
+              male: "Cape Verdian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Cap-verdienne",
-              m: "Cap-verdien",
+              female: "Cap-verdienne",
+              male: "Cap-verdien",
             ),
           ],
           emoji: "🇨🇻",
@@ -385,13 +385,13 @@ class CountrySgp extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Singaporean",
-              m: "Singaporean",
+              female: "Singaporean",
+              male: "Singaporean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Singapourienne",
-              m: "Singapourien",
+              female: "Singapourienne",
+              male: "Singapourien",
             ),
           ],
           emoji: "🇸🇬",
@@ -581,13 +581,13 @@ class CountryMrt extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mauritanian",
-              m: "Mauritanian",
+              female: "Mauritanian",
+              male: "Mauritanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mauritanienne",
-              m: "Mauritanien",
+              female: "Mauritanienne",
+              male: "Mauritanien",
             ),
           ],
           emoji: "🇲🇷",
@@ -777,13 +777,13 @@ class CountryPol extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Polish",
-              m: "Polish",
+              female: "Polish",
+              male: "Polish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Polonaise",
-              m: "Polonais",
+              female: "Polonaise",
+              male: "Polonais",
             ),
           ],
           emoji: "🇵🇱",
@@ -982,13 +982,13 @@ class CountryTcd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Chadian",
-              m: "Chadian",
+              female: "Chadian",
+              male: "Chadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tchadienne",
-              m: "Tchadien",
+              female: "Tchadienne",
+              male: "Tchadien",
             ),
           ],
           emoji: "🇹🇩",
@@ -1165,13 +1165,13 @@ class CountryJpn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Japanese",
-              m: "Japanese",
+              female: "Japanese",
+              male: "Japanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Japonaise",
-              m: "Japonais",
+              female: "Japonaise",
+              male: "Japonais",
             ),
           ],
           emoji: "🇯🇵",
@@ -1352,13 +1352,13 @@ class CountryCub extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cuban",
-              m: "Cuban",
+              female: "Cuban",
+              male: "Cuban",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Cubaine",
-              m: "Cubain",
+              female: "Cubaine",
+              male: "Cubain",
             ),
           ],
           emoji: "🇨🇺",
@@ -1550,13 +1550,13 @@ class CountryMoz extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mozambican",
-              m: "Mozambican",
+              female: "Mozambican",
+              male: "Mozambican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mozambicaine",
-              m: "Mozambicain",
+              female: "Mozambicaine",
+              male: "Mozambicain",
             ),
           ],
           emoji: "🇲🇿",
@@ -1741,13 +1741,13 @@ class CountryGbr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "British",
-              m: "British",
+              female: "British",
+              male: "British",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Britannique",
-              m: "Britannique",
+              female: "Britannique",
+              male: "Britannique",
             ),
           ],
           emoji: "🇬🇧",
@@ -1949,13 +1949,13 @@ class CountryIrl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Irish",
-              m: "Irish",
+              female: "Irish",
+              male: "Irish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Irlandaise",
-              m: "Irlandais",
+              female: "Irlandaise",
+              male: "Irlandais",
             ),
           ],
           emoji: "🇮🇪",
@@ -2142,13 +2142,13 @@ class CountryNer extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nigerien",
-              m: "Nigerien",
+              female: "Nigerien",
+              male: "Nigerien",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nigérienne",
-              m: "Nigérien",
+              female: "Nigérienne",
+              male: "Nigérien",
             ),
           ],
           emoji: "🇳🇪",
@@ -2328,13 +2328,13 @@ class CountryGmb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Gambian",
-              m: "Gambian",
+              female: "Gambian",
+              male: "Gambian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Gambienne",
-              m: "Gambien",
+              female: "Gambienne",
+              male: "Gambien",
             ),
           ],
           emoji: "🇬🇲",
@@ -2529,13 +2529,13 @@ class CountryUzb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Uzbekistani",
-              m: "Uzbekistani",
+              female: "Uzbekistani",
+              male: "Uzbekistani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ouzbèke",
-              m: "Ouzbèke",
+              female: "Ouzbèke",
+              male: "Ouzbèke",
             ),
           ],
           emoji: "🇺🇿",
@@ -2736,13 +2736,13 @@ class CountryRus extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Russian",
-              m: "Russian",
+              female: "Russian",
+              male: "Russian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Russe",
-              m: "Russe",
+              female: "Russe",
+              male: "Russe",
             ),
           ],
           emoji: "🇷🇺",
@@ -2945,13 +2945,13 @@ class CountryTkm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Turkmen",
-              m: "Turkmen",
+              female: "Turkmen",
+              male: "Turkmen",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Turkmène",
-              m: "Turkmène",
+              female: "Turkmène",
+              male: "Turkmène",
             ),
           ],
           emoji: "🇹🇲",
@@ -3133,13 +3133,13 @@ class CountryAia extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Anguillian",
-              m: "Anguillian",
+              female: "Anguillian",
+              male: "Anguillian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Anguillane",
-              m: "Anguillan",
+              female: "Anguillane",
+              male: "Anguillan",
             ),
           ],
           emoji: "🇦🇮",
@@ -3321,13 +3321,13 @@ class CountryVnm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Vietnamese",
-              m: "Vietnamese",
+              female: "Vietnamese",
+              male: "Vietnamese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vietnamienne",
-              m: "Vietnamien",
+              female: "Vietnamienne",
+              male: "Vietnamien",
             ),
           ],
           emoji: "🇻🇳",
@@ -3508,11 +3508,15 @@ class CountryAta extends WorldCountry {
           idd: const Idd(root: 6, suffixes: [72]),
           areaMetric: 14000000,
           demonyms: const [
-            Demonyms(language: LangEng(), f: "Antarctican", m: "Antarctican"),
+            Demonyms(
+              language: LangEng(),
+              female: "Antarctican",
+              male: "Antarctican",
+            ),
             Demonyms(
               language: LangFra(),
-              f: "Antarcticaine",
-              m: "Antarcticain",
+              female: "Antarcticaine",
+              male: "Antarcticain",
             ),
           ],
           emoji: "🇦🇶",
@@ -3706,13 +3710,13 @@ class CountrySwz extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Swazi",
-              m: "Swazi",
+              female: "Swazi",
+              male: "Swazi",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Swazie",
-              m: "Swazie",
+              female: "Swazie",
+              male: "Swazie",
             ),
           ],
           emoji: "🇸🇿",
@@ -3895,13 +3899,13 @@ class CountryKhm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cambodian",
-              m: "Cambodian",
+              female: "Cambodian",
+              male: "Cambodian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Cambodgienne",
-              m: "Cambodgien",
+              female: "Cambodgienne",
+              male: "Cambodgien",
             ),
           ],
           emoji: "🇰🇭",
@@ -4093,13 +4097,13 @@ class CountryVut extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ni-Vanuatu",
-              m: "Ni-Vanuatu",
+              female: "Ni-Vanuatu",
+              male: "Ni-Vanuatu",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vanuatuane",
-              m: "Vanuatuan",
+              female: "Vanuatuane",
+              male: "Vanuatuan",
             ),
           ],
           emoji: "🇻🇺",
@@ -4273,13 +4277,13 @@ class CountryAla extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ålandish",
-              m: "Ålandish",
+              female: "Ålandish",
+              male: "Ålandish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ålandaise",
-              m: "Ålandais",
+              female: "Ålandaise",
+              male: "Ålandais",
             ),
           ],
           emoji: "🇦🇽",
@@ -4453,13 +4457,13 @@ class CountryAus extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Australian",
-              m: "Australian",
+              female: "Australian",
+              male: "Australian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Australienne",
-              m: "Australien",
+              female: "Australienne",
+              male: "Australien",
             ),
           ],
           emoji: "🇦🇺",
@@ -4648,8 +4652,8 @@ class CountryIot extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Indian",
-              m: "Indian",
+              female: "Indian",
+              male: "Indian",
             ),
           ],
           emoji: "🇮🇴",
@@ -4833,13 +4837,13 @@ class CountrySvk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Slovak",
-              m: "Slovak",
+              female: "Slovak",
+              male: "Slovak",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Slovaque",
-              m: "Slovaque",
+              female: "Slovaque",
+              male: "Slovaque",
             ),
           ],
           emoji: "🇸🇰",
@@ -5036,13 +5040,13 @@ class CountryBra extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Brazilian",
-              m: "Brazilian",
+              female: "Brazilian",
+              male: "Brazilian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Brésilienne",
-              m: "Brésilien",
+              female: "Brésilienne",
+              male: "Brésilien",
             ),
           ],
           emoji: "🇧🇷",
@@ -5241,13 +5245,13 @@ class CountryTjk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tadzhik",
-              m: "Tadzhik",
+              female: "Tadzhik",
+              male: "Tadzhik",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tadjike",
-              m: "Tadjike",
+              female: "Tadjike",
+              male: "Tadjike",
             ),
           ],
           emoji: "🇹🇯",
@@ -5431,8 +5435,8 @@ class CountrySgs extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "South Georgian South Sandwich Islander",
-              m: "South Georgian South Sandwich Islander",
+              female: "South Georgian South Sandwich Islander",
+              male: "South Georgian South Sandwich Islander",
             ),
           ],
           emoji: "🇬🇸",
@@ -5608,13 +5612,13 @@ class CountryLbr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Liberian",
-              m: "Liberian",
+              female: "Liberian",
+              male: "Liberian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Libérienne",
-              m: "Libérien",
+              female: "Libérienne",
+              male: "Libérien",
             ),
           ],
           emoji: "🇱🇷",
@@ -5804,13 +5808,13 @@ class CountryNga extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nigerian",
-              m: "Nigerian",
+              female: "Nigerian",
+              male: "Nigerian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nigériane",
-              m: "Nigérian",
+              female: "Nigériane",
+              male: "Nigérian",
             ),
           ],
           emoji: "🇳🇬",
@@ -6002,13 +6006,13 @@ class CountryCol extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Colombian",
-              m: "Colombian",
+              female: "Colombian",
+              male: "Colombian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Colombienne",
-              m: "Colombien",
+              female: "Colombienne",
+              male: "Colombien",
             ),
           ],
           emoji: "🇨🇴",
@@ -6191,13 +6195,13 @@ class CountrySmr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sammarinese",
-              m: "Sammarinese",
+              female: "Sammarinese",
+              male: "Sammarinese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Marinaise",
-              m: "Saint-Marinais",
+              female: "Saint-Marinaise",
+              male: "Saint-Marinais",
             ),
           ],
           emoji: "🇸🇲",
@@ -6383,13 +6387,13 @@ class CountryShn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Helenian",
-              m: "Saint Helenian",
+              female: "Saint Helenian",
+              male: "Saint Helenian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sainte-Hélénoise",
-              m: "Sainte-Hélènois",
+              female: "Sainte-Hélénoise",
+              male: "Sainte-Hélènois",
             ),
           ],
           emoji: "🇸🇭",
@@ -6575,13 +6579,13 @@ class CountryEgy extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Egyptian",
-              m: "Egyptian",
+              female: "Egyptian",
+              male: "Egyptian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Égyptienne",
-              m: "Égyptien",
+              female: "Égyptienne",
+              male: "Égyptien",
             ),
           ],
           emoji: "🇪🇬",
@@ -6765,13 +6769,13 @@ class CountryHnd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Honduran",
-              m: "Honduran",
+              female: "Honduran",
+              male: "Honduran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Hondurienne",
-              m: "Hondurien",
+              female: "Hondurienne",
+              male: "Hondurien",
             ),
           ],
           emoji: "🇭🇳",
@@ -6957,13 +6961,13 @@ class CountryIdn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Indonesian",
-              m: "Indonesian",
+              female: "Indonesian",
+              male: "Indonesian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Indonésienne",
-              m: "Indonésien",
+              female: "Indonésienne",
+              male: "Indonésien",
             ),
           ],
           emoji: "🇮🇩",
@@ -7151,13 +7155,13 @@ class CountryPrk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "North Korean",
-              m: "North Korean",
+              female: "North Korean",
+              male: "North Korean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nord-coréenne",
-              m: "Nord-coréen",
+              female: "Nord-coréenne",
+              male: "Nord-coréen",
             ),
           ],
           emoji: "🇰🇵",
@@ -7361,11 +7365,11 @@ class CountryMac extends WorldCountry {
           bordersCodes: const ["Chn"],
           areaMetric: 30,
           demonyms: const [
-            Demonyms(language: LangEng(), f: "Macanese", m: "Macanese"),
+            Demonyms(language: LangEng(), female: "Macanese", male: "Macanese"),
             Demonyms(
               language: LangFra(),
-              f: "Macanaise",
-              m: "Macanais",
+              female: "Macanaise",
+              male: "Macanais",
             ),
           ],
           emoji: "🇲🇴",
@@ -7538,13 +7542,13 @@ class CountrySle extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sierra Leonean",
-              m: "Sierra Leonean",
+              female: "Sierra Leonean",
+              male: "Sierra Leonean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sierra-leonaise",
-              m: "Sierra-leonais",
+              female: "Sierra-leonaise",
+              male: "Sierra-leonais",
             ),
           ],
           emoji: "🇸🇱",
@@ -7728,13 +7732,13 @@ class CountryMda extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Moldovan",
-              m: "Moldovan",
+              female: "Moldovan",
+              male: "Moldovan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Moldave",
-              m: "Moldave",
+              female: "Moldave",
+              male: "Moldave",
             ),
           ],
           emoji: "🇲🇩",
@@ -7926,13 +7930,13 @@ class CountryPhl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Filipino",
-              m: "Filipino",
+              female: "Filipino",
+              male: "Filipino",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Philippine",
-              m: "Philippin",
+              female: "Philippine",
+              male: "Philippin",
             ),
           ],
           emoji: "🇵🇭",
@@ -8128,13 +8132,13 @@ class CountryCmr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cameroonian",
-              m: "Cameroonian",
+              female: "Cameroonian",
+              male: "Cameroonian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Camerounaise",
-              m: "Camerounais",
+              female: "Camerounaise",
+              male: "Camerounais",
             ),
           ],
           emoji: "🇨🇲",
@@ -8308,13 +8312,13 @@ class CountryGrl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Greenlandic",
-              m: "Greenlandic",
+              female: "Greenlandic",
+              male: "Greenlandic",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Groenlandaise",
-              m: "Groenlandais",
+              female: "Groenlandaise",
+              male: "Groenlandais",
             ),
           ],
           emoji: "🇬🇱",
@@ -8488,13 +8492,13 @@ class CountryMtq extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Martinican",
-              m: "Martinican",
+              female: "Martinican",
+              male: "Martinican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Martiniquaise",
-              m: "Martiniquais",
+              female: "Martiniquaise",
+              male: "Martiniquais",
             ),
           ],
           emoji: "🇲🇶",
@@ -8680,13 +8684,13 @@ class CountryLbn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Lebanese",
-              m: "Lebanese",
+              female: "Lebanese",
+              male: "Lebanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Libanaise",
-              m: "Libanais",
+              female: "Libanaise",
+              male: "Libanais",
             ),
           ],
           emoji: "🇱🇧",
@@ -8889,13 +8893,13 @@ class CountryRwa extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Rwandan",
-              m: "Rwandan",
+              female: "Rwandan",
+              male: "Rwandan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Rwandaise",
-              m: "Rwandais",
+              female: "Rwandaise",
+              male: "Rwandais",
             ),
           ],
           emoji: "🇷🇼",
@@ -9087,13 +9091,13 @@ class CountryBih extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bosnian, Herzegovinian",
-              m: "Bosnian, Herzegovinian",
+              female: "Bosnian, Herzegovinian",
+              male: "Bosnian, Herzegovinian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bosnienne",
-              m: "Bosnien",
+              female: "Bosnienne",
+              male: "Bosnien",
             ),
           ],
           emoji: "🇧🇦",
@@ -9281,13 +9285,13 @@ class CountryMhl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Marshallese",
-              m: "Marshallese",
+              female: "Marshallese",
+              male: "Marshallese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Marshallaise",
-              m: "Marshallais",
+              female: "Marshallaise",
+              male: "Marshallais",
             ),
           ],
           emoji: "🇲🇭",
@@ -9470,13 +9474,13 @@ class CountryIta extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Italian",
-              m: "Italian",
+              female: "Italian",
+              male: "Italian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Italienne",
-              m: "Italien",
+              female: "Italienne",
+              male: "Italien",
             ),
           ],
           emoji: "🇮🇹",
@@ -9657,8 +9661,8 @@ class CountryTkl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tokelauan",
-              m: "Tokelauan",
+              female: "Tokelauan",
+              male: "Tokelauan",
             ),
           ],
           emoji: "🇹🇰",
@@ -9835,13 +9839,13 @@ class CountryGab extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Gabonese",
-              m: "Gabonese",
+              female: "Gabonese",
+              male: "Gabonese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Gabonaise",
-              m: "Gabonais",
+              female: "Gabonaise",
+              male: "Gabonais",
             ),
           ],
           emoji: "🇬🇦",
@@ -10015,8 +10019,8 @@ class CountryCck extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cocos Islander",
-              m: "Cocos Islander",
+              female: "Cocos Islander",
+              male: "Cocos Islander",
             ),
           ],
           emoji: "🇨🇨",
@@ -10208,13 +10212,13 @@ class CountryPak extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Pakistani",
-              m: "Pakistani",
+              female: "Pakistani",
+              male: "Pakistani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Pakistanaise",
-              m: "Pakistanais",
+              female: "Pakistanaise",
+              male: "Pakistanais",
             ),
           ],
           emoji: "🇵🇰",
@@ -10389,13 +10393,13 @@ class CountryReu extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Réunionese",
-              m: "Réunionese",
+              female: "Réunionese",
+              male: "Réunionese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Réunionnaise",
-              m: "Réunionnais",
+              female: "Réunionnaise",
+              male: "Réunionnais",
             ),
           ],
           emoji: "🇷🇪",
@@ -10584,13 +10588,13 @@ class CountryMus extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mauritian",
-              m: "Mauritian",
+              female: "Mauritian",
+              male: "Mauritian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mauricienne",
-              m: "Mauricien",
+              female: "Mauricienne",
+              male: "Mauricien",
             ),
           ],
           emoji: "🇲🇺",
@@ -10763,13 +10767,13 @@ class CountryGrd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Grenadian",
-              m: "Grenadian",
+              female: "Grenadian",
+              male: "Grenadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Grenadienne",
-              m: "Grenadien",
+              female: "Grenadienne",
+              male: "Grenadien",
             ),
           ],
           emoji: "🇬🇩",
@@ -10942,13 +10946,13 @@ class CountryOmn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Omani",
-              m: "Omani",
+              female: "Omani",
+              male: "Omani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Omanaise",
-              m: "Omanais",
+              female: "Omanaise",
+              male: "Omanais",
             ),
           ],
           emoji: "🇴🇲",
@@ -11136,13 +11140,13 @@ class CountryBfa extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Burkinabe",
-              m: "Burkinabe",
+              female: "Burkinabe",
+              male: "Burkinabe",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Burkinabée",
-              m: "Burkinabé",
+              female: "Burkinabée",
+              male: "Burkinabé",
             ),
           ],
           emoji: "🇧🇫",
@@ -11328,13 +11332,13 @@ class CountryWsm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Samoan",
-              m: "Samoan",
+              female: "Samoan",
+              male: "Samoan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Samoane",
-              m: "Samoan",
+              female: "Samoane",
+              male: "Samoan",
             ),
           ],
           emoji: "🇼🇸",
@@ -11511,13 +11515,13 @@ class CountryTto extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Trinidadian",
-              m: "Trinidadian",
+              female: "Trinidadian",
+              male: "Trinidadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Trinidadienne",
-              m: "Trinidadien",
+              female: "Trinidadienne",
+              male: "Trinidadien",
             ),
           ],
           emoji: "🇹🇹",
@@ -11694,13 +11698,13 @@ class CountryVct extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Vincentian",
-              m: "Saint Vincentian",
+              female: "Saint Vincentian",
+              male: "Saint Vincentian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vincentaise",
-              m: "Vincentais",
+              female: "Vincentaise",
+              male: "Vincentais",
             ),
           ],
           emoji: "🇻🇨",
@@ -11873,13 +11877,13 @@ class CountryPlw extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Palauan",
-              m: "Palauan",
+              female: "Palauan",
+              male: "Palauan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Paluane",
-              m: "Paluan",
+              female: "Paluane",
+              male: "Paluan",
             ),
           ],
           emoji: "🇵🇼",
@@ -12122,13 +12126,13 @@ class CountryZaf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "South African",
-              m: "South African",
+              female: "South African",
+              male: "South African",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sud-africaine",
-              m: "Sud-africain",
+              female: "Sud-africaine",
+              male: "Sud-africain",
             ),
           ],
           emoji: "🇿🇦",
@@ -12321,13 +12325,13 @@ class CountryAgo extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Angolan",
-              m: "Angolan",
+              female: "Angolan",
+              male: "Angolan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Angolaise",
-              m: "Angolais",
+              female: "Angolaise",
+              male: "Angolais",
             ),
           ],
           emoji: "🇦🇴",
@@ -12503,13 +12507,13 @@ class CountryKor extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "South Korean",
-              m: "South Korean",
+              female: "South Korean",
+              male: "South Korean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sud-coréenne",
-              m: "Sud-coréen",
+              female: "Sud-coréenne",
+              male: "Sud-coréen",
             ),
           ],
           emoji: "🇰🇷",
@@ -12693,13 +12697,13 @@ class CountryAtf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "French",
-              m: "French",
+              female: "French",
+              male: "French",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Française",
-              m: "Français",
+              female: "Française",
+              male: "Français",
             ),
           ],
           emoji: "🇹🇫",
@@ -12874,13 +12878,13 @@ class CountryIsl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Icelander",
-              m: "Icelander",
+              female: "Icelander",
+              male: "Icelander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Islandaise",
-              m: "Islandais",
+              female: "Islandaise",
+              male: "Islandais",
             ),
           ],
           emoji: "🇮🇸",
@@ -13061,13 +13065,13 @@ class CountryGuf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guianan",
-              m: "Guianan",
+              female: "Guianan",
+              male: "Guianan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guyanaise",
-              m: "Guyanais",
+              female: "Guyanaise",
+              male: "Guyanais",
             ),
           ],
           emoji: "🇬🇫",
@@ -13253,13 +13257,13 @@ class CountryNor extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Norwegian",
-              m: "Norwegian",
+              female: "Norwegian",
+              male: "Norwegian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Norvégienne",
-              m: "Norvégien",
+              female: "Norvégienne",
+              male: "Norvégien",
             ),
           ],
           emoji: "🇳🇴",
@@ -13444,13 +13448,13 @@ class CountryHun extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Hungarian",
-              m: "Hungarian",
+              female: "Hungarian",
+              male: "Hungarian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Hongroise",
-              m: "Hongrois",
+              female: "Hongroise",
+              male: "Hongrois",
             ),
           ],
           emoji: "🇭🇺",
@@ -13637,13 +13641,13 @@ class CountryPse extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Palestinian",
-              m: "Palestinian",
+              female: "Palestinian",
+              male: "Palestinian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Palestinienne",
-              m: "Palestinien",
+              female: "Palestinienne",
+              male: "Palestinien",
             ),
           ],
           emoji: "🇵🇸",
@@ -13817,13 +13821,13 @@ class CountryLca extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Lucian",
-              m: "Saint Lucian",
+              female: "Saint Lucian",
+              male: "Saint Lucian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Lucienne",
-              m: "Saint-Lucien",
+              female: "Saint-Lucienne",
+              male: "Saint-Lucien",
             ),
           ],
           emoji: "🇱🇨",
@@ -14006,13 +14010,13 @@ class CountryNpl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nepalese",
-              m: "Nepalese",
+              female: "Nepalese",
+              male: "Nepalese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Népalaise",
-              m: "Népalais",
+              female: "Népalaise",
+              male: "Népalais",
             ),
           ],
           emoji: "🇳🇵",
@@ -14189,13 +14193,13 @@ class CountryMng extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mongolian",
-              m: "Mongolian",
+              female: "Mongolian",
+              male: "Mongolian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mongole",
-              m: "Mongol",
+              female: "Mongole",
+              male: "Mongol",
             ),
           ],
           emoji: "🇲🇳",
@@ -14387,13 +14391,13 @@ class CountryZmb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Zambian",
-              m: "Zambian",
+              female: "Zambian",
+              male: "Zambian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Zambienne",
-              m: "Zambien",
+              female: "Zambienne",
+              male: "Zambien",
             ),
           ],
           emoji: "🇿🇲",
@@ -14576,8 +14580,8 @@ class CountryWlf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Wallis and Futuna Islander",
-              m: "Wallis and Futuna Islander",
+              female: "Wallis and Futuna Islander",
+              male: "Wallis and Futuna Islander",
             ),
           ],
           emoji: "🇼🇫",
@@ -14761,13 +14765,13 @@ class CountryMwi extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Malawian",
-              m: "Malawian",
+              female: "Malawian",
+              male: "Malawian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malawienne",
-              m: "Malawien",
+              female: "Malawienne",
+              male: "Malawien",
             ),
           ],
           emoji: "🇲🇼",
@@ -14944,13 +14948,13 @@ class CountryBhr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bahraini",
-              m: "Bahraini",
+              female: "Bahraini",
+              male: "Bahraini",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bahreïnienne",
-              m: "Bahreïnien",
+              female: "Bahreïnienne",
+              male: "Bahreïnien",
             ),
           ],
           emoji: "🇧🇭",
@@ -15135,13 +15139,13 @@ class CountryUkr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ukrainian",
-              m: "Ukrainian",
+              female: "Ukrainian",
+              male: "Ukrainian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ukrainienne",
-              m: "Ukrainien",
+              female: "Ukrainienne",
+              male: "Ukrainien",
             ),
           ],
           emoji: "🇺🇦",
@@ -15326,13 +15330,13 @@ class CountryNru extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nauruan",
-              m: "Nauruan",
+              female: "Nauruan",
+              male: "Nauruan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nauruane",
-              m: "Nauruan",
+              female: "Nauruane",
+              male: "Nauruan",
             ),
           ],
           emoji: "🇳🇷",
@@ -15509,13 +15513,13 @@ class CountryMyt extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mahoran",
-              m: "Mahoran",
+              female: "Mahoran",
+              male: "Mahoran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mahoraise",
-              m: "Mahorais",
+              female: "Mahoraise",
+              male: "Mahorais",
             ),
           ],
           emoji: "🇾🇹",
@@ -15701,13 +15705,13 @@ class CountryDza extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Algerian",
-              m: "Algerian",
+              female: "Algerian",
+              male: "Algerian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Algérienne",
-              m: "Algérien",
+              female: "Algérienne",
+              male: "Algérien",
             ),
           ],
           emoji: "🇩🇿",
@@ -15925,13 +15929,13 @@ class CountryCan extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Canadian",
-              m: "Canadian",
+              female: "Canadian",
+              male: "Canadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Canadienne",
-              m: "Canadien",
+              female: "Canadienne",
+              male: "Canadien",
             ),
           ],
           emoji: "🇨🇦",
@@ -16127,13 +16131,13 @@ class CountryLie extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Liechtensteiner",
-              m: "Liechtensteiner",
+              female: "Liechtensteiner",
+              male: "Liechtensteiner",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Liechtensteinoise",
-              m: "Liechtensteinois",
+              female: "Liechtensteinoise",
+              male: "Liechtensteinois",
             ),
           ],
           emoji: "🇱🇮",
@@ -16325,13 +16329,13 @@ class CountryEth extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ethiopian",
-              m: "Ethiopian",
+              female: "Ethiopian",
+              male: "Ethiopian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Éthiopienne",
-              m: "Éthiopien",
+              female: "Éthiopienne",
+              male: "Éthiopien",
             ),
           ],
           emoji: "🇪🇹",
@@ -16511,13 +16515,13 @@ class CountryDom extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Dominican",
-              m: "Dominican",
+              female: "Dominican",
+              male: "Dominican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Dominicaine",
-              m: "Dominicain",
+              female: "Dominicaine",
+              male: "Dominicain",
             ),
           ],
           emoji: "🇩🇴",
@@ -16689,8 +16693,8 @@ class CountryBvt extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bouvet Islander",
-              m: "Bouvet Islander",
+              female: "Bouvet Islander",
+              male: "Bouvet Islander",
             ),
           ],
           latLng: const LatLng(54.4208, 3.3464),
@@ -16865,13 +16869,13 @@ class CountryNfk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Norfolk Islander",
-              m: "Norfolk Islander",
+              female: "Norfolk Islander",
+              male: "Norfolk Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Norfolkaise",
-              m: "Norfolkais",
+              female: "Norfolkaise",
+              male: "Norfolkais",
             ),
           ],
           emoji: "🇳🇫",
@@ -17044,13 +17048,13 @@ class CountryNld extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Dutch",
-              m: "Dutch",
+              female: "Dutch",
+              male: "Dutch",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Néerlandaise",
-              m: "Néerlandais",
+              female: "Néerlandaise",
+              male: "Néerlandais",
             ),
           ],
           emoji: "🇳🇱",
@@ -17242,13 +17246,13 @@ class CountryMnp extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "American",
-              m: "American",
+              female: "American",
+              male: "American",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Américaine",
-              m: "Américan",
+              female: "Américaine",
+              male: "Américan",
             ),
           ],
           emoji: "🇲🇵",
@@ -17449,13 +17453,13 @@ class CountryHkg extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Hong Konger",
-              m: "Hong Konger",
+              female: "Hong Konger",
+              male: "Hong Konger",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Hongkongaise",
-              m: "Hongkongais",
+              female: "Hongkongaise",
+              male: "Hongkongais",
             ),
           ],
           emoji: "🇭🇰",
@@ -17644,13 +17648,13 @@ class CountryIrq extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Iraqi",
-              m: "Iraqi",
+              female: "Iraqi",
+              male: "Iraqi",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Irakienne",
-              m: "Irakien",
+              female: "Irakienne",
+              male: "Irakien",
             ),
           ],
           emoji: "🇮🇶",
@@ -17832,13 +17836,13 @@ class CountryEsp extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Spanish",
-              m: "Spanish",
+              female: "Spanish",
+              male: "Spanish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Espagnole",
-              m: "Espagnol",
+              female: "Espagnole",
+              male: "Espagnol",
             ),
           ],
           emoji: "🇪🇸",
@@ -18018,13 +18022,13 @@ class CountryTgo extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Togolese",
-              m: "Togolese",
+              female: "Togolese",
+              male: "Togolese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Togolaise",
-              m: "Togolais",
+              female: "Togolaise",
+              male: "Togolais",
             ),
           ],
           emoji: "🇹🇬",
@@ -18227,13 +18231,13 @@ class CountryChn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Chinese",
-              m: "Chinese",
+              female: "Chinese",
+              male: "Chinese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Chinoise",
-              m: "Chinois",
+              female: "Chinoise",
+              male: "Chinois",
             ),
           ],
           emoji: "🇨🇳",
@@ -18419,13 +18423,13 @@ class CountryFlk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Falkland Islander",
-              m: "Falkland Islander",
+              female: "Falkland Islander",
+              male: "Falkland Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malouinne",
-              m: "Malouin",
+              female: "Malouinne",
+              male: "Malouin",
             ),
           ],
           emoji: "🇫🇰",
@@ -18918,13 +18922,13 @@ class CountryUsa extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "American",
-              m: "American",
+              female: "American",
+              male: "American",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Américaine",
-              m: "Américain",
+              female: "Américaine",
+              male: "Américain",
             ),
           ],
           emoji: "🇺🇸",
@@ -19117,13 +19121,13 @@ class CountryMaf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Martin Islander",
-              m: "Saint Martin Islander",
+              female: "Saint Martin Islander",
+              male: "Saint Martin Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Martinoise",
-              m: "Saint-Martinois",
+              female: "Saint-Martinoise",
+              male: "Saint-Martinois",
             ),
           ],
           emoji: "🇲🇫",
@@ -19314,13 +19318,13 @@ class CountryIrn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Iranian",
-              m: "Iranian",
+              female: "Iranian",
+              male: "Iranian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Iranienne",
-              m: "Iranien",
+              female: "Iranienne",
+              male: "Iranien",
             ),
           ],
           emoji: "🇮🇷",
@@ -19508,13 +19512,13 @@ class CountryMex extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mexican",
-              m: "Mexican",
+              female: "Mexican",
+              male: "Mexican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mexicaine",
-              m: "Mexicain",
+              female: "Mexicaine",
+              male: "Mexicain",
             ),
           ],
           emoji: "🇲🇽",
@@ -19694,13 +19698,13 @@ class CountryBrn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bruneian",
-              m: "Bruneian",
+              female: "Bruneian",
+              male: "Bruneian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Brunéienne",
-              m: "Brunéien",
+              female: "Brunéienne",
+              male: "Brunéien",
             ),
           ],
           emoji: "🇧🇳",
@@ -19892,13 +19896,13 @@ class CountryCyp extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cypriot",
-              m: "Cypriot",
+              female: "Cypriot",
+              male: "Cypriot",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Chypriote",
-              m: "Chypriote",
+              female: "Chypriote",
+              male: "Chypriote",
             ),
           ],
           emoji: "🇨🇾",
@@ -20082,13 +20086,13 @@ class CountryNic extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nicaraguan",
-              m: "Nicaraguan",
+              female: "Nicaraguan",
+              male: "Nicaraguan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nicaraguayenne",
-              m: "Nicaraguayen",
+              female: "Nicaraguayenne",
+              male: "Nicaraguayen",
             ),
           ],
           emoji: "🇳🇮",
@@ -20279,13 +20283,13 @@ class CountryCuw extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Curaçaoan",
-              m: "Curaçaoan",
+              female: "Curaçaoan",
+              male: "Curaçaoan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Curacienne",
-              m: "Curacien",
+              female: "Curacienne",
+              male: "Curacien",
             ),
           ],
           emoji: "🇨🇼",
@@ -20472,13 +20476,13 @@ class CountryPri extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Puerto Rican",
-              m: "Puerto Rican",
+              female: "Puerto Rican",
+              male: "Puerto Rican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Portoricaine",
-              m: "Portoricain",
+              female: "Portoricaine",
+              male: "Portoricain",
             ),
           ],
           emoji: "🇵🇷",
@@ -20660,13 +20664,13 @@ class CountryNcl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "New Caledonian",
-              m: "New Caledonian",
+              female: "New Caledonian",
+              male: "New Caledonian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Néo-Calédonienne",
-              m: "Néo-Calédonien",
+              female: "Néo-Calédonienne",
+              male: "Néo-Calédonien",
             ),
           ],
           emoji: "🇳🇨",
@@ -20852,13 +20856,13 @@ class CountrySsd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "South Sudanese",
-              m: "South Sudanese",
+              female: "South Sudanese",
+              male: "South Sudanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sud-Soudanaise",
-              m: "Sud-Soudanais",
+              female: "Sud-Soudanaise",
+              male: "Sud-Soudanais",
             ),
           ],
           emoji: "🇸🇸",
@@ -21047,13 +21051,13 @@ class CountrySom extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Somali",
-              m: "Somali",
+              female: "Somali",
+              male: "Somali",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Somalienne",
-              m: "Somalien",
+              female: "Somalienne",
+              male: "Somalien",
             ),
           ],
           emoji: "🇸🇴",
@@ -21241,13 +21245,13 @@ class CountryGrc extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Greek",
-              m: "Greek",
+              female: "Greek",
+              male: "Greek",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Grecque",
-              m: "Grec",
+              female: "Grecque",
+              male: "Grec",
             ),
           ],
           emoji: "🇬🇷",
@@ -21429,13 +21433,13 @@ class CountryBes extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Dutch",
-              m: "Dutch",
+              female: "Dutch",
+              male: "Dutch",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Néerlandaise",
-              m: "Néerlandais",
+              female: "Néerlandaise",
+              male: "Néerlandais",
             ),
           ],
           emoji: "🇧🇶",
@@ -21623,13 +21627,13 @@ class CountryLao extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Laotian",
-              m: "Laotian",
+              female: "Laotian",
+              male: "Laotian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Laotienne",
-              m: "Laotien",
+              female: "Laotienne",
+              male: "Laotien",
             ),
           ],
           emoji: "🇱🇦",
@@ -21810,13 +21814,13 @@ class CountryBlz extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Belizean",
-              m: "Belizean",
+              female: "Belizean",
+              male: "Belizean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bélizienne",
-              m: "Bélizien",
+              female: "Bélizienne",
+              male: "Bélizien",
             ),
           ],
           emoji: "🇧🇿",
@@ -21998,13 +22002,13 @@ class CountrySlv extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Salvadoran",
-              m: "Salvadoran",
+              female: "Salvadoran",
+              male: "Salvadoran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Salvadorienne",
-              m: "Salvadorien",
+              female: "Salvadorienne",
+              male: "Salvadorien",
             ),
           ],
           emoji: "🇸🇻",
@@ -22182,13 +22186,13 @@ class CountryJam extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Jamaican",
-              m: "Jamaican",
+              female: "Jamaican",
+              male: "Jamaican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Jamaïcaine",
-              m: "Jamaïcain",
+              female: "Jamaïcaine",
+              male: "Jamaïcain",
             ),
           ],
           emoji: "🇯🇲",
@@ -22370,13 +22374,13 @@ class CountryUry extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Uruguayan",
-              m: "Uruguayan",
+              female: "Uruguayan",
+              male: "Uruguayan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Uruguayenne",
-              m: "Uruguayen",
+              female: "Uruguayenne",
+              male: "Uruguayen",
             ),
           ],
           emoji: "🇺🇾",
@@ -22565,13 +22569,13 @@ class CountryPng extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Papua New Guinean",
-              m: "Papua New Guinean",
+              female: "Papua New Guinean",
+              male: "Papua New Guinean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Papouasienne",
-              m: "Papouasien",
+              female: "Papouasienne",
+              male: "Papouasien",
             ),
           ],
           emoji: "🇵🇬",
@@ -22769,13 +22773,13 @@ class CountryLux extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Luxembourger",
-              m: "Luxembourger",
+              female: "Luxembourger",
+              male: "Luxembourger",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Luxembourgeoise",
-              m: "Luxembourgeois",
+              female: "Luxembourgeoise",
+              male: "Luxembourgeois",
             ),
           ],
           emoji: "🇱🇺",
@@ -22951,13 +22955,13 @@ class CountryChl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Chilean",
-              m: "Chilean",
+              female: "Chilean",
+              male: "Chilean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Chilienne",
-              m: "Chilien",
+              female: "Chilienne",
+              male: "Chilien",
             ),
           ],
           emoji: "🇨🇱",
@@ -23145,13 +23149,13 @@ class CountryVat extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Vatican",
-              m: "Vatican",
+              female: "Vatican",
+              male: "Vatican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vaticane",
-              m: "Vatican",
+              female: "Vaticane",
+              male: "Vatican",
             ),
           ],
           emoji: "🇻🇦",
@@ -23333,13 +23337,13 @@ class CountryGnb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guinea-Bissauan",
-              m: "Guinea-Bissauan",
+              female: "Guinea-Bissauan",
+              male: "Guinea-Bissauan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bissau-Guinéenne",
-              m: "Bissau-Guinéen",
+              female: "Bissau-Guinéenne",
+              male: "Bissau-Guinéen",
             ),
           ],
           emoji: "🇬🇼",
@@ -23531,13 +23535,13 @@ class CountryUga extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ugandan",
-              m: "Ugandan",
+              female: "Ugandan",
+              male: "Ugandan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ougandaise",
-              m: "Ougandais",
+              female: "Ougandaise",
+              male: "Ougandais",
             ),
           ],
           emoji: "🇺🇬",
@@ -23720,13 +23724,13 @@ class CountryVen extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Venezuelan",
-              m: "Venezuelan",
+              female: "Venezuelan",
+              male: "Venezuelan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vénézuélienne",
-              m: "Vénézuélien",
+              female: "Vénézuélienne",
+              male: "Vénézuélien",
             ),
           ],
           emoji: "🇻🇪",
@@ -23921,13 +23925,13 @@ class CountrySrb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Serbian",
-              m: "Serbian",
+              female: "Serbian",
+              male: "Serbian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Serbe",
-              m: "Serbe",
+              female: "Serbe",
+              male: "Serbe",
             ),
           ],
           emoji: "🇷🇸",
@@ -24114,13 +24118,13 @@ class CountryBen extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Beninese",
-              m: "Beninese",
+              female: "Beninese",
+              male: "Beninese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Béninoise",
-              m: "Béninois",
+              female: "Béninoise",
+              male: "Béninois",
             ),
           ],
           emoji: "🇧🇯",
@@ -24302,13 +24306,13 @@ class CountryBgd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bangladeshi",
-              m: "Bangladeshi",
+              female: "Bangladeshi",
+              male: "Bangladeshi",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bangladaise",
-              m: "Bangladais",
+              female: "Bangladaise",
+              male: "Bangladais",
             ),
           ],
           emoji: "🇧🇩",
@@ -24484,13 +24488,13 @@ class CountryBhs extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bahamian",
-              m: "Bahamian",
+              female: "Bahamian",
+              male: "Bahamian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bahamienne",
-              m: "Bahamien",
+              female: "Bahamienne",
+              male: "Bahamien",
             ),
           ],
           emoji: "🇧🇸",
@@ -24658,13 +24662,13 @@ class CountryNiu extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Niuean",
-              m: "Niuean",
+              female: "Niuean",
+              male: "Niuean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Niuéenne",
-              m: "Niuéen",
+              female: "Niuéenne",
+              male: "Niuéen",
             ),
           ],
           emoji: "🇳🇺",
@@ -24840,13 +24844,13 @@ class CountryAtg extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Antiguan, Barbudan",
-              m: "Antiguan, Barbudan",
+              female: "Antiguan, Barbudan",
+              male: "Antiguan, Barbudan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Antiguaise et barbudienne",
-              m: "Antiguaise et barbudien",
+              female: "Antiguaise et barbudienne",
+              male: "Antiguaise et barbudien",
             ),
           ],
           emoji: "🇦🇬",
@@ -25028,13 +25032,13 @@ class CountryBlm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Barthélemy Islander",
-              m: "Saint Barthélemy Islander",
+              female: "Saint Barthélemy Islander",
+              male: "Saint Barthélemy Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Barthéloméenne",
-              m: "Barthéloméen",
+              female: "Barthéloméenne",
+              male: "Barthéloméen",
             ),
           ],
           emoji: "🇧🇱",
@@ -25222,13 +25226,13 @@ class CountrySyc extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Seychellois",
-              m: "Seychellois",
+              female: "Seychellois",
+              male: "Seychellois",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Seychelloise",
-              m: "Seychellois",
+              female: "Seychelloise",
+              male: "Seychellois",
             ),
           ],
           emoji: "🇸🇨",
@@ -25408,8 +25412,8 @@ class CountryEsh extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sahrawi",
-              m: "Sahrawi",
+              female: "Sahrawi",
+              male: "Sahrawi",
             ),
           ],
           emoji: "🇪🇭",
@@ -25590,13 +25594,13 @@ class CountryLby extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Libyan",
-              m: "Libyan",
+              female: "Libyan",
+              male: "Libyan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Libyenne",
-              m: "Libyen",
+              female: "Libyenne",
+              male: "Libyen",
             ),
           ],
           emoji: "🇱🇾",
@@ -25787,13 +25791,13 @@ class CountryMkd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Macedonian",
-              m: "Macedonian",
+              female: "Macedonian",
+              male: "Macedonian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Macédonienne",
-              m: "Macédonien",
+              female: "Macédonienne",
+              male: "Macédonien",
             ),
           ],
           emoji: "🇲🇰",
@@ -25985,13 +25989,13 @@ class CountryPer extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Peruvian",
-              m: "Peruvian",
+              female: "Peruvian",
+              male: "Peruvian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Péruvienne",
-              m: "Péruvien",
+              female: "Péruvienne",
+              male: "Péruvien",
             ),
           ],
           emoji: "🇵🇪",
@@ -26181,13 +26185,13 @@ class CountryBdi extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Burundian",
-              m: "Burundian",
+              female: "Burundian",
+              male: "Burundian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Burundaise",
-              m: "Burundais",
+              female: "Burundaise",
+              male: "Burundais",
             ),
           ],
           emoji: "🇧🇮",
@@ -26369,13 +26373,13 @@ class CountryKir extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "I-Kiribati",
-              m: "I-Kiribati",
+              female: "I-Kiribati",
+              male: "I-Kiribati",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kiribatienne",
-              m: "Kiribatien",
+              female: "Kiribatienne",
+              male: "Kiribatien",
             ),
           ],
           emoji: "🇰🇮",
@@ -26566,13 +26570,13 @@ class CountryTur extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Turkish",
-              m: "Turkish",
+              female: "Turkish",
+              male: "Turkish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Turque",
-              m: "Turc",
+              female: "Turque",
+              male: "Turc",
             ),
           ],
           emoji: "🇹🇷",
@@ -26770,13 +26774,13 @@ class CountryTza extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tanzanian",
-              m: "Tanzanian",
+              female: "Tanzanian",
+              male: "Tanzanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tanzanienne",
-              m: "Tanzanien",
+              female: "Tanzanienne",
+              male: "Tanzanien",
             ),
           ],
           emoji: "🇹🇿",
@@ -26958,13 +26962,13 @@ class CountryTun extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tunisian",
-              m: "Tunisian",
+              female: "Tunisian",
+              male: "Tunisian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tunisienne",
-              m: "Tunisien",
+              female: "Tunisienne",
+              male: "Tunisien",
             ),
           ],
           emoji: "🇹🇳",
@@ -27144,13 +27148,13 @@ class CountryMsr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Montserratian",
-              m: "Montserratian",
+              female: "Montserratian",
+              male: "Montserratian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Montserratienne",
-              m: "Montserratien",
+              female: "Montserratienne",
+              male: "Montserratien",
             ),
           ],
           emoji: "🇲🇸",
@@ -27344,13 +27348,13 @@ class CountryKgz extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kirghiz",
-              m: "Kirghiz",
+              female: "Kirghiz",
+              male: "Kirghiz",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kirghize",
-              m: "Kirghize",
+              female: "Kirghize",
+              male: "Kirghize",
             ),
           ],
           emoji: "🇰🇬",
@@ -27533,8 +27537,8 @@ class CountryImn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Manx",
-              m: "Manx",
+              female: "Manx",
+              male: "Manx",
             ),
           ],
           emoji: "🇮🇲",
@@ -27715,13 +27719,13 @@ class CountryGlp extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guadeloupian",
-              m: "Guadeloupian",
+              female: "Guadeloupian",
+              male: "Guadeloupian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guadeloupéenne",
-              m: "Guadeloupéen",
+              female: "Guadeloupéenne",
+              male: "Guadeloupéen",
             ),
           ],
           emoji: "🇬🇵",
@@ -27894,13 +27898,13 @@ class CountryKwt extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kuwaiti",
-              m: "Kuwaiti",
+              female: "Kuwaiti",
+              male: "Kuwaiti",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Koweïtienne",
-              m: "Koweïtien",
+              female: "Koweïtienne",
+              male: "Koweïtien",
             ),
           ],
           emoji: "🇰🇼",
@@ -28080,8 +28084,8 @@ class CountryVgb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Virgin Islander",
-              m: "Virgin Islander",
+              female: "Virgin Islander",
+              male: "Virgin Islander",
             ),
           ],
           emoji: "🇻🇬",
@@ -28270,13 +28274,13 @@ class CountryCiv extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ivorian",
-              m: "Ivorian",
+              female: "Ivorian",
+              male: "Ivorian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ivoirienne",
-              m: "Ivoirien",
+              female: "Ivoirienne",
+              male: "Ivoirien",
             ),
           ],
           emoji: "🇨🇮",
@@ -28450,8 +28454,8 @@ class CountryCxr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Christmas Islander",
-              m: "Christmas Islander",
+              female: "Christmas Islander",
+              male: "Christmas Islander",
             ),
           ],
           emoji: "🇨🇽",
@@ -28631,13 +28635,13 @@ class CountryLso extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mosotho",
-              m: "Mosotho",
+              female: "Mosotho",
+              male: "Mosotho",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Lésothienne",
-              m: "Lésothien",
+              female: "Lésothienne",
+              male: "Lésothien",
             ),
           ],
           emoji: "🇱🇸",
@@ -28824,13 +28828,13 @@ class CountryJey extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Channel Islander",
-              m: "Channel Islander",
+              female: "Channel Islander",
+              male: "Channel Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Jersiaise",
-              m: "Jersiais",
+              female: "Jersiaise",
+              male: "Jersiais",
             ),
           ],
           emoji: "🇯🇪",
@@ -29020,13 +29024,13 @@ class CountrySvn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Slovene",
-              m: "Slovene",
+              female: "Slovene",
+              male: "Slovene",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Slovène",
-              m: "Slovène",
+              female: "Slovène",
+              male: "Slovène",
             ),
           ],
           emoji: "🇸🇮",
@@ -29229,13 +29233,13 @@ class CountryBel extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Belgian",
-              m: "Belgian",
+              female: "Belgian",
+              male: "Belgian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Belge",
-              m: "Belge",
+              female: "Belge",
+              male: "Belge",
             ),
           ],
           emoji: "🇧🇪",
@@ -29415,8 +29419,8 @@ class CountryTca extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Turks and Caicos Islander",
-              m: "Turks and Caicos Islander",
+              female: "Turks and Caicos Islander",
+              male: "Turks and Caicos Islander",
             ),
           ],
           emoji: "🇹🇨",
@@ -29595,13 +29599,13 @@ class CountryGib extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Gibraltar",
-              m: "Gibraltar",
+              female: "Gibraltar",
+              male: "Gibraltar",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Gibraltarienne",
-              m: "Gibraltarien",
+              female: "Gibraltarienne",
+              male: "Gibraltarien",
             ),
           ],
           emoji: "🇬🇮",
@@ -29774,13 +29778,13 @@ class CountryQat extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Qatari",
-              m: "Qatari",
+              female: "Qatari",
+              male: "Qatari",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Qatarienne",
-              m: "Qatarien",
+              female: "Qatarienne",
+              male: "Qatarien",
             ),
           ],
           emoji: "🇶🇦",
@@ -29973,13 +29977,13 @@ class CountryBwa extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Motswana",
-              m: "Motswana",
+              female: "Motswana",
+              male: "Motswana",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Botswanaise",
-              m: "Botswanais",
+              female: "Botswanaise",
+              male: "Botswanais",
             ),
           ],
           emoji: "🇧🇼",
@@ -30173,13 +30177,13 @@ class CountryGnq extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Equatorial Guinean",
-              m: "Equatorial Guinean",
+              female: "Equatorial Guinean",
+              male: "Equatorial Guinean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Équato-guinéenne",
-              m: "Équato-guinéen",
+              female: "Équato-guinéenne",
+              male: "Équato-guinéen",
             ),
           ],
           emoji: "🇬🇶",
@@ -30369,13 +30373,13 @@ class CountryDji extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Djibouti",
-              m: "Djibouti",
+              female: "Djibouti",
+              male: "Djibouti",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Djiboutienne",
-              m: "Djiboutien",
+              female: "Djiboutienne",
+              male: "Djiboutien",
             ),
           ],
           emoji: "🇩🇯",
@@ -30553,13 +30557,13 @@ class CountryGuy extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guyanese",
-              m: "Guyanese",
+              female: "Guyanese",
+              male: "Guyanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guyanienne",
-              m: "Guyanien",
+              female: "Guyanienne",
+              male: "Guyanien",
             ),
           ],
           emoji: "🇬🇾",
@@ -30740,8 +30744,8 @@ class CountryGum extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guamanian",
-              m: "Guamanian",
+              female: "Guamanian",
+              male: "Guamanian",
             ),
           ],
           emoji: "🇬🇺",
@@ -30922,13 +30926,13 @@ class CountryMco extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Monegasque",
-              m: "Monegasque",
+              female: "Monegasque",
+              male: "Monegasque",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Monégasque",
-              m: "Monégasque",
+              female: "Monégasque",
+              male: "Monégasque",
             ),
           ],
           emoji: "🇲🇨",
@@ -31104,13 +31108,13 @@ class CountrySlb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Solomon Islander",
-              m: "Solomon Islander",
+              female: "Solomon Islander",
+              male: "Solomon Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Salomonienne",
-              m: "Salomonien",
+              female: "Salomonienne",
+              male: "Salomonien",
             ),
           ],
           emoji: "🇸🇧",
@@ -31294,13 +31298,13 @@ class CountryGgy extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Channel Islander",
-              m: "Channel Islander",
+              female: "Channel Islander",
+              male: "Channel Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guernesiaise",
-              m: "Guernesiais",
+              female: "Guernesiaise",
+              male: "Guernesiais",
             ),
           ],
           emoji: "🇬🇬",
@@ -31492,13 +31496,13 @@ class CountryPry extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Paraguayan",
-              m: "Paraguayan",
+              female: "Paraguayan",
+              male: "Paraguayan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Paraguayenne",
-              m: "Paraguayen",
+              female: "Paraguayenne",
+              male: "Paraguayen",
             ),
           ],
           emoji: "🇵🇾",
@@ -31684,13 +31688,13 @@ class CountrySur extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Surinamer",
-              m: "Surinamer",
+              female: "Surinamer",
+              male: "Surinamer",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Surinamaise",
-              m: "Surinamais",
+              female: "Surinamaise",
+              male: "Surinamais",
             ),
           ],
           emoji: "🇸🇷",
@@ -31869,8 +31873,8 @@ class CountryUmi extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "American Islander",
-              m: "American Islander",
+              female: "American Islander",
+              male: "American Islander",
             ),
           ],
           emoji: "🇺🇲",
@@ -32057,13 +32061,13 @@ class CountryGin extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guinean",
-              m: "Guinean",
+              female: "Guinean",
+              male: "Guinean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guinéenne",
-              m: "Guinéen",
+              female: "Guinéenne",
+              male: "Guinéen",
             ),
           ],
           emoji: "🇬🇳",
@@ -32243,13 +32247,13 @@ class CountryCze extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Czech",
-              m: "Czech",
+              female: "Czech",
+              male: "Czech",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tchèque",
-              m: "Tchèque",
+              female: "Tchèque",
+              male: "Tchèque",
             ),
           ],
           emoji: "🇨🇿",
@@ -32437,13 +32441,13 @@ class CountryCom extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Comoran",
-              m: "Comoran",
+              female: "Comoran",
+              male: "Comoran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Comorienne",
-              m: "Comorien",
+              female: "Comorienne",
+              male: "Comorien",
             ),
           ],
           emoji: "🇰🇲",
@@ -32617,13 +32621,13 @@ class CountryGha extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ghanaian",
-              m: "Ghanaian",
+              female: "Ghanaian",
+              male: "Ghanaian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ghanéenne",
-              m: "Ghanéen",
+              female: "Ghanéenne",
+              male: "Ghanéen",
             ),
           ],
           emoji: "🇬🇭",
@@ -32803,13 +32807,13 @@ class CountryKna extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kittitian or Nevisian",
-              m: "Kittitian or Nevisian",
+              female: "Kittitian or Nevisian",
+              male: "Kittitian or Nevisian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kittitienne-et-nevicienne",
-              m: "Kittitien-et-nevicien",
+              female: "Kittitienne-et-nevicienne",
+              male: "Kittitien-et-nevicien",
             ),
           ],
           emoji: "🇰🇳",
@@ -32991,13 +32995,13 @@ class CountryPyf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "French Polynesian",
-              m: "French Polynesian",
+              female: "French Polynesian",
+              male: "French Polynesian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Polynésienne",
-              m: "Polynésien",
+              female: "Polynésienne",
+              male: "Polynésien",
             ),
           ],
           emoji: "🇵🇫",
@@ -33212,13 +33216,13 @@ class CountryZwe extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Zimbabwean",
-              m: "Zimbabwean",
+              female: "Zimbabwean",
+              male: "Zimbabwean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Zimbabwéenne",
-              m: "Zimbabwéen",
+              female: "Zimbabwéenne",
+              male: "Zimbabwéen",
             ),
           ],
           emoji: "🇿🇼",
@@ -33407,13 +33411,13 @@ class CountryKen extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kenyan",
-              m: "Kenyan",
+              female: "Kenyan",
+              male: "Kenyan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kényane",
-              m: "Kényan",
+              female: "Kényane",
+              male: "Kényan",
             ),
           ],
           emoji: "🇰🇪",
@@ -33613,13 +33617,13 @@ class CountryKaz extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kazakhstani",
-              m: "Kazakhstani",
+              female: "Kazakhstani",
+              male: "Kazakhstani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kazakhstanaise",
-              m: "Kazakhstanais",
+              female: "Kazakhstanaise",
+              male: "Kazakhstanais",
             ),
           ],
           emoji: "🇰🇿",
@@ -33803,13 +33807,13 @@ class CountryMne extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Montenegrin",
-              m: "Montenegrin",
+              female: "Montenegrin",
+              male: "Montenegrin",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Monténégrine",
-              m: "Monténégrin",
+              female: "Monténégrine",
+              male: "Monténégrin",
             ),
           ],
           emoji: "🇲🇪",
@@ -33984,13 +33988,13 @@ class CountryTuv extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tuvaluan",
-              m: "Tuvaluan",
+              female: "Tuvaluan",
+              male: "Tuvaluan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tuvaluane",
-              m: "Tuvaluan",
+              female: "Tuvaluane",
+              male: "Tuvaluan",
             ),
           ],
           emoji: "🇹🇻",
@@ -34171,13 +34175,13 @@ class CountryPan extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Panamanian",
-              m: "Panamanian",
+              female: "Panamanian",
+              male: "Panamanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Panaméenne",
-              m: "Panaméen",
+              female: "Panaméenne",
+              male: "Panaméen",
             ),
           ],
           emoji: "🇵🇦",
@@ -34356,13 +34360,13 @@ class CountryAnd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Andorran",
-              m: "Andorran",
+              female: "Andorran",
+              male: "Andorran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Andorrane",
-              m: "Andorran",
+              female: "Andorrane",
+              male: "Andorran",
             ),
           ],
           emoji: "🇦🇩",
@@ -34544,8 +34548,8 @@ class CountryVir extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Virgin Islander",
-              m: "Virgin Islander",
+              female: "Virgin Islander",
+              male: "Virgin Islander",
             ),
           ],
           emoji: "🇻🇮",
@@ -34730,13 +34734,13 @@ class CountryIsr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Israeli",
-              m: "Israeli",
+              female: "Israeli",
+              male: "Israeli",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Israélienne",
-              m: "Israélien",
+              female: "Israélienne",
+              male: "Israélien",
             ),
           ],
           emoji: "🇮🇱",
@@ -34921,13 +34925,13 @@ class CountryPrt extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Portuguese",
-              m: "Portuguese",
+              female: "Portuguese",
+              male: "Portuguese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Portugaise",
-              m: "Portugais",
+              female: "Portugaise",
+              male: "Portugais",
             ),
           ],
           emoji: "🇵🇹",
@@ -35119,13 +35123,13 @@ class CountryAut extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Austrian",
-              m: "Austrian",
+              female: "Austrian",
+              male: "Austrian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Autrichienne",
-              m: "Autrichien",
+              female: "Autrichienne",
+              male: "Autrichien",
             ),
           ],
           emoji: "🇦🇹",
@@ -35312,13 +35316,13 @@ class CountryFin extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Finnish",
-              m: "Finnish",
+              female: "Finnish",
+              male: "Finnish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Finlandaise",
-              m: "Finlandais",
+              female: "Finlandaise",
+              male: "Finlandais",
             ),
           ],
           emoji: "🇫🇮",
@@ -35502,13 +35506,13 @@ class CountryEst extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Estonian",
-              m: "Estonian",
+              female: "Estonian",
+              male: "Estonian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Estonienne",
-              m: "Estonien",
+              female: "Estonienne",
+              male: "Estonien",
             ),
           ],
           emoji: "🇪🇪",
@@ -35691,13 +35695,13 @@ class CountryDma extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Dominican",
-              m: "Dominican",
+              female: "Dominican",
+              male: "Dominican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Dominiquaise",
-              m: "Dominiquais",
+              female: "Dominiquaise",
+              male: "Dominiquais",
             ),
           ],
           emoji: "🇩🇲",
@@ -35874,13 +35878,13 @@ class CountryYem extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Yemeni",
-              m: "Yemeni",
+              female: "Yemeni",
+              male: "Yemeni",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Yéménite",
-              m: "Yéménite",
+              female: "Yéménite",
+              male: "Yéménite",
             ),
           ],
           emoji: "🇾🇪",
@@ -36076,13 +36080,13 @@ class CountryAfg extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Afghan",
-              m: "Afghan",
+              female: "Afghan",
+              male: "Afghan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Afghane",
-              m: "Afghan",
+              female: "Afghane",
+              male: "Afghan",
             ),
           ],
 
@@ -36270,13 +36274,13 @@ class CountrySyr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Syrian",
-              m: "Syrian",
+              female: "Syrian",
+              male: "Syrian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Syrienne",
-              m: "Syrien",
+              female: "Syrienne",
+              male: "Syrien",
             ),
           ],
           emoji: "🇸🇾",
@@ -36458,13 +36462,13 @@ class CountryMdv extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Maldivan",
-              m: "Maldivan",
+              female: "Maldivan",
+              male: "Maldivan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Maldivienne",
-              m: "Maldivien",
+              female: "Maldivienne",
+              male: "Maldivien",
             ),
           ],
           emoji: "🇲🇻",
@@ -36653,13 +36657,13 @@ class CountryTls extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "East Timorese",
-              m: "East Timorese",
+              female: "East Timorese",
+              male: "East Timorese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Est-timoraise",
-              m: "Est-timorais",
+              female: "Est-timoraise",
+              male: "Est-timorais",
             ),
           ],
           emoji: "🇹🇱",
@@ -36847,13 +36851,13 @@ class CountryLtu extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Lithuanian",
-              m: "Lithuanian",
+              female: "Lithuanian",
+              male: "Lithuanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Lituanienne",
-              m: "Lituanien",
+              female: "Lituanienne",
+              male: "Lituanien",
             ),
           ],
           emoji: "🇱🇹",
@@ -37035,13 +37039,13 @@ class CountryNzl extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "New Zealander",
-              m: "New Zealander",
+              female: "New Zealander",
+              male: "New Zealander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Neo-Zélandaise",
-              m: "Neo-Zélandais",
+              female: "Neo-Zélandaise",
+              male: "Neo-Zélandais",
             ),
           ],
           emoji: "🇳🇿",
@@ -37228,13 +37232,13 @@ class CountryBmu extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bermudian",
-              m: "Bermudian",
+              female: "Bermudian",
+              male: "Bermudian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bermudienne",
-              m: "Bermudien",
+              female: "Bermudienne",
+              male: "Bermudien",
             ),
           ],
           emoji: "🇧🇲",
@@ -37429,13 +37433,13 @@ class CountryDeu extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "German",
-              m: "German",
+              female: "German",
+              male: "German",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Allemande",
-              m: "Allemand",
+              female: "Allemande",
+              male: "Allemand",
             ),
           ],
           emoji: "🇩🇪",
@@ -37629,13 +37633,13 @@ class CountryArg extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Argentine",
-              m: "Argentine",
+              female: "Argentine",
+              male: "Argentine",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Argentine",
-              m: "Argentin",
+              female: "Argentine",
+              male: "Argentin",
             ),
           ],
           emoji: "🇦🇷",
@@ -37835,13 +37839,13 @@ class CountryBlr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Belarusian",
-              m: "Belarusian",
+              female: "Belarusian",
+              male: "Belarusian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Biélorusse",
-              m: "Biélorusse",
+              female: "Biélorusse",
+              male: "Biélorusse",
             ),
           ],
           emoji: "🇧🇾",
@@ -38018,13 +38022,13 @@ class CountryBrb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Barbadian",
-              m: "Barbadian",
+              female: "Barbadian",
+              male: "Barbadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Barbadienne",
-              m: "Barbadien",
+              female: "Barbadienne",
+              male: "Barbadien",
             ),
           ],
           emoji: "🇧🇧",
@@ -38210,13 +38214,13 @@ class CountryGtm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guatemalan",
-              m: "Guatemalan",
+              female: "Guatemalan",
+              male: "Guatemalan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guatémaltèque",
-              m: "Guatémaltèque",
+              female: "Guatémaltèque",
+              male: "Guatémaltèque",
             ),
           ],
           emoji: "🇬🇹",
@@ -38405,13 +38409,13 @@ class CountryAze extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Azerbaijani",
-              m: "Azerbaijani",
+              female: "Azerbaijani",
+              male: "Azerbaijani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Azerbaïdjanaise",
-              m: "Azerbaïdjanais",
+              female: "Azerbaïdjanaise",
+              male: "Azerbaïdjanais",
             ),
           ],
           emoji: "🇦🇿",
@@ -38594,13 +38598,13 @@ class CountryMar extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Moroccan",
-              m: "Moroccan",
+              female: "Moroccan",
+              male: "Moroccan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Marocaine",
-              m: "Marocain",
+              female: "Marocaine",
+              male: "Marocain",
             ),
           ],
           emoji: "🇲🇦",
@@ -38777,13 +38781,13 @@ class CountryCok extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cook Islander",
-              m: "Cook Islander",
+              female: "Cook Islander",
+              male: "Cook Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Cookienne",
-              m: "Cookien",
+              female: "Cookienne",
+              male: "Cookien",
             ),
           ],
           emoji: "🇨🇰",
@@ -38977,13 +38981,13 @@ class CountryCaf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Central African",
-              m: "Central African",
+              female: "Central African",
+              male: "Central African",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Centrafricaine",
-              m: "Centrafricain",
+              female: "Centrafricaine",
+              male: "Centrafricain",
             ),
           ],
           emoji: "🇨🇫",
@@ -39163,13 +39167,13 @@ class CountryRou extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Romanian",
-              m: "Romanian",
+              female: "Romanian",
+              male: "Romanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Roumaine",
-              m: "Roumain",
+              female: "Roumaine",
+              male: "Roumain",
             ),
           ],
           emoji: "🇷🇴",
@@ -39359,13 +39363,13 @@ class CountryMlt extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Maltese",
-              m: "Maltese",
+              female: "Maltese",
+              male: "Maltese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Maltaise",
-              m: "Maltais",
+              female: "Maltaise",
+              male: "Maltais",
             ),
           ],
           emoji: "🇲🇹",
@@ -39558,13 +39562,13 @@ class CountryArm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Armenian",
-              m: "Armenian",
+              female: "Armenian",
+              male: "Armenian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Arménienne",
-              m: "Arménien",
+              female: "Arménienne",
+              male: "Arménien",
             ),
           ],
           emoji: "🇦🇲",
@@ -39756,13 +39760,13 @@ class CountrySen extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Senegalese",
-              m: "Senegalese",
+              female: "Senegalese",
+              male: "Senegalese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sénégalaise",
-              m: "Sénégalais",
+              female: "Sénégalaise",
+              male: "Sénégalais",
             ),
           ],
           emoji: "🇸🇳",
@@ -39945,13 +39949,13 @@ class CountryBgr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bulgarian",
-              m: "Bulgarian",
+              female: "Bulgarian",
+              male: "Bulgarian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bulgare",
-              m: "Bulgare",
+              female: "Bulgare",
+              male: "Bulgare",
             ),
           ],
           emoji: "🇧🇬",
@@ -40168,13 +40172,13 @@ class CountryCod extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Congolese",
-              m: "Congolese",
+              female: "Congolese",
+              male: "Congolese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Congolaise",
-              m: "Congolais",
+              female: "Congolaise",
+              male: "Congolais",
             ),
           ],
           emoji: "🇨🇩",
@@ -40358,13 +40362,13 @@ class CountryHti extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Haitian",
-              m: "Haitian",
+              female: "Haitian",
+              male: "Haitian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Haïtienne",
-              m: "Haïtien",
+              female: "Haïtienne",
+              male: "Haïtien",
             ),
           ],
           emoji: "🇭🇹",
@@ -40546,13 +40550,13 @@ class CountryAlb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Albanian",
-              m: "Albanian",
+              female: "Albanian",
+              male: "Albanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Albanaise",
-              m: "Albanais",
+              female: "Albanaise",
+              male: "Albanais",
             ),
           ],
           emoji: "🇦🇱",
@@ -40734,13 +40738,13 @@ class CountryJor extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Jordanian",
-              m: "Jordanian",
+              female: "Jordanian",
+              male: "Jordanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Jordanienne",
-              m: "Jordanien",
+              female: "Jordanienne",
+              male: "Jordanien",
             ),
           ],
           emoji: "🇯🇴",
@@ -40920,8 +40924,8 @@ class CountrySjm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Norwegian",
-              m: "Norwegian",
+              female: "Norwegian",
+              male: "Norwegian",
             ),
           ],
           emoji: "🇸🇯",
@@ -41107,13 +41111,13 @@ class CountryMdg extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Malagasy",
-              m: "Malagasy",
+              female: "Malagasy",
+              male: "Malagasy",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malgache",
-              m: "Malgache",
+              female: "Malgache",
+              male: "Malgache",
             ),
           ],
           emoji: "🇲🇬",
@@ -41298,13 +41302,13 @@ class CountryFra extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "French",
-              m: "French",
+              female: "French",
+              male: "French",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Française",
-              m: "Français",
+              female: "Française",
+              male: "Français",
             ),
           ],
           emoji: "🇫🇷",
@@ -41501,13 +41505,13 @@ class CountryFsm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Micronesian",
-              m: "Micronesian",
+              female: "Micronesian",
+              male: "Micronesian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Micronésienne",
-              m: "Micronésien",
+              female: "Micronésienne",
+              male: "Micronésien",
             ),
           ],
           emoji: "🇫🇲",
@@ -41683,13 +41687,13 @@ class CountryAbw extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Aruban",
-              m: "Aruban",
+              female: "Aruban",
+              male: "Aruban",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Arubaise",
-              m: "Arubais",
+              female: "Arubaise",
+              male: "Arubais",
             ),
           ],
           emoji: "🇦🇼",
@@ -41885,13 +41889,13 @@ class CountryInd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Indian",
-              m: "Indian",
+              female: "Indian",
+              male: "Indian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Indienne",
-              m: "Indien",
+              female: "Indienne",
+              male: "Indien",
             ),
           ],
           emoji: "🇮🇳",
@@ -42101,13 +42105,13 @@ class CountryNam extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Namibian",
-              m: "Namibian",
+              female: "Namibian",
+              male: "Namibian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Namibienne",
-              m: "Namibien",
+              female: "Namibienne",
+              male: "Namibien",
             ),
           ],
           emoji: "🇳🇦",
@@ -42292,13 +42296,13 @@ class CountryFji extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Fijian",
-              m: "Fijian",
+              female: "Fijian",
+              male: "Fijian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Fidjienne",
-              m: "Fidjien",
+              female: "Fidjienne",
+              male: "Fidjien",
             ),
           ],
           emoji: "🇫🇯",
@@ -42489,13 +42493,13 @@ class CountrySdn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sudanese",
-              m: "Sudanese",
+              female: "Sudanese",
+              male: "Sudanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Soudanaise",
-              m: "Soudanais",
+              female: "Soudanaise",
+              male: "Soudanais",
             ),
           ],
           emoji: "🇸🇩",
@@ -42680,13 +42684,13 @@ class CountryStp extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sao Tomean",
-              m: "Sao Tomean",
+              female: "Sao Tomean",
+              male: "Sao Tomean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Santoméenne",
-              m: "Santoméen",
+              female: "Santoméenne",
+              male: "Santoméen",
             ),
           ],
           emoji: "🇸🇹",
@@ -42877,13 +42881,13 @@ class CountrySau extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saudi Arabian",
-              m: "Saudi Arabian",
+              female: "Saudi Arabian",
+              male: "Saudi Arabian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saoudienne",
-              m: "Saoudien",
+              female: "Saoudienne",
+              male: "Saoudien",
             ),
           ],
           emoji: "🇸🇦",
@@ -43062,8 +43066,8 @@ class CountryHmd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Heard and McDonald Islander",
-              m: "Heard and McDonald Islander",
+              female: "Heard and McDonald Islander",
+              male: "Heard and McDonald Islander",
             ),
           ],
           emoji: "🇭🇲",
@@ -43244,13 +43248,13 @@ class CountryLka extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sri Lankan",
-              m: "Sri Lankan",
+              female: "Sri Lankan",
+              male: "Sri Lankan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sri-lankaise",
-              m: "Sri-lankais",
+              female: "Sri-lankaise",
+              male: "Sri-lankais",
             ),
           ],
           emoji: "🇱🇰",
@@ -43429,13 +43433,13 @@ class CountrySwe extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Swedish",
-              m: "Swedish",
+              female: "Swedish",
+              male: "Swedish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Suédoise",
-              m: "Suédois",
+              female: "Suédoise",
+              male: "Suédois",
             ),
           ],
           emoji: "🇸🇪",
@@ -43617,13 +43621,13 @@ class CountryTon extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tongan",
-              m: "Tongan",
+              female: "Tongan",
+              male: "Tongan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tonguienne",
-              m: "Tonguien",
+              female: "Tonguienne",
+              male: "Tonguien",
             ),
           ],
           emoji: "🇹🇴",
@@ -43802,13 +43806,13 @@ class CountryDnk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Danish",
-              m: "Danish",
+              female: "Danish",
+              male: "Danish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Danoise",
-              m: "Danois",
+              female: "Danoise",
+              male: "Danois",
             ),
           ],
           emoji: "🇩🇰",
@@ -43995,13 +43999,13 @@ class CountryMys extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Malaysian",
-              m: "Malaysian",
+              female: "Malaysian",
+              male: "Malaysian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malaisienne",
-              m: "Malaisien",
+              female: "Malaisienne",
+              male: "Malaisien",
             ),
           ],
           emoji: "🇲🇾",
@@ -44185,13 +44189,13 @@ class CountryCri extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Costa Rican",
-              m: "Costa Rican",
+              female: "Costa Rican",
+              male: "Costa Rican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Costaricaine",
-              m: "Costaricain",
+              female: "Costaricaine",
+              male: "Costaricain",
             ),
           ],
           emoji: "🇨🇷",
@@ -44403,13 +44407,13 @@ class CountryBol extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bolivian",
-              m: "Bolivian",
+              female: "Bolivian",
+              male: "Bolivian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bolivienne",
-              m: "Bolivien",
+              female: "Bolivienne",
+              male: "Bolivien",
             ),
           ],
           emoji: "🇧🇴",
@@ -44584,13 +44588,13 @@ class CountryBtn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bhutanese",
-              m: "Bhutanese",
+              female: "Bhutanese",
+              male: "Bhutanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bhoutanaise",
-              m: "Bhoutanais",
+              female: "Bhoutanaise",
+              male: "Bhoutanais",
             ),
           ],
           emoji: "🇧🇹",
@@ -44765,13 +44769,13 @@ class CountryCym extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Caymanian",
-              m: "Caymanian",
+              female: "Caymanian",
+              male: "Caymanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Caïmanienne",
-              m: "Caïmanien",
+              female: "Caïmanienne",
+              male: "Caïmanien",
             ),
           ],
           emoji: "🇰🇾",
@@ -44952,13 +44956,13 @@ class CountryPcn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Pitcairn Islander",
-              m: "Pitcairn Islander",
+              female: "Pitcairn Islander",
+              male: "Pitcairn Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Pitcairnaise",
-              m: "Pitcairnais",
+              female: "Pitcairnaise",
+              male: "Pitcairnais",
             ),
           ],
           emoji: "🇵🇳",
@@ -45140,13 +45144,13 @@ class CountryMli extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Malian",
-              m: "Malian",
+              female: "Malian",
+              male: "Malian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malienne",
-              m: "Malien",
+              female: "Malienne",
+              male: "Malien",
             ),
           ],
           emoji: "🇲🇱",
@@ -45331,13 +45335,13 @@ class CountrySxm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "St. Maartener",
-              m: "St. Maartener",
+              female: "St. Maartener",
+              male: "St. Maartener",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Martinoise",
-              m: "Saint-Martinois",
+              female: "Saint-Martinoise",
+              male: "Saint-Martinois",
             ),
           ],
           emoji: "🇸🇽",
@@ -45523,13 +45527,13 @@ class CountryLva extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Latvian",
-              m: "Latvian",
+              female: "Latvian",
+              male: "Latvian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Lettone",
-              m: "Letton",
+              female: "Lettone",
+              male: "Letton",
             ),
           ],
           emoji: "🇱🇻",
@@ -45722,13 +45726,13 @@ class CountryAsm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "American Samoan",
-              m: "American Samoan",
+              female: "American Samoan",
+              male: "American Samoan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Samoane",
-              m: "Samoan",
+              female: "Samoane",
+              male: "Samoan",
             ),
           ],
           emoji: "🇦🇸",
@@ -45909,13 +45913,13 @@ class CountrySpm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint-Pierrais, Miquelonnais",
-              m: "Saint-Pierrais, Miquelonnais",
+              female: "Saint-Pierrais, Miquelonnais",
+              male: "Saint-Pierrais, Miquelonnais",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Pierraise, Miquelonaise",
-              m: "Saint-Pierrais, Miquelonais",
+              female: "Saint-Pierraise, Miquelonaise",
+              male: "Saint-Pierrais, Miquelonais",
             ),
           ],
           emoji: "🇵🇲",
@@ -46097,13 +46101,13 @@ class CountryEcu extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ecuadorean",
-              m: "Ecuadorean",
+              female: "Ecuadorean",
+              male: "Ecuadorean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Équatorienne",
-              m: "Équatorien",
+              female: "Équatorienne",
+              male: "Équatorien",
             ),
           ],
           emoji: "🇪🇨",
@@ -46288,13 +46292,13 @@ class CountryTha extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Thai",
-              m: "Thai",
+              female: "Thai",
+              male: "Thai",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Thaïlandaise",
-              m: "Thaïlandais",
+              female: "Thaïlandaise",
+              male: "Thaïlandais",
             ),
           ],
           emoji: "🇹🇭",
@@ -46473,13 +46477,13 @@ class CountryAre extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Emirati",
-              m: "Emirati",
+              female: "Emirati",
+              male: "Emirati",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Emirienne",
-              m: "Emirien",
+              female: "Emirienne",
+              male: "Emirien",
             ),
           ],
           emoji: "🇦🇪",
@@ -46669,13 +46673,13 @@ class CountryHrv extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Croatian",
-              m: "Croatian",
+              female: "Croatian",
+              male: "Croatian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Croate",
-              m: "Croate",
+              female: "Croate",
+              male: "Croate",
             ),
           ],
           emoji: "🇭🇷",
@@ -46862,13 +46866,13 @@ class CountryMmr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Burmese",
-              m: "Burmese",
+              female: "Burmese",
+              male: "Burmese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Birmane",
-              m: "Birman",
+              female: "Birmane",
+              male: "Birman",
             ),
           ],
           emoji: "🇲🇲",
@@ -47043,13 +47047,13 @@ class CountryGeo extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Georgian",
-              m: "Georgian",
+              female: "Georgian",
+              male: "Georgian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Géorgienne",
-              m: "Géorgien",
+              female: "Géorgienne",
+              male: "Géorgien",
             ),
           ],
           emoji: "🇬🇪",
@@ -47237,13 +47241,13 @@ class CountryTwn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Taiwanese",
-              m: "Taiwanese",
+              female: "Taiwanese",
+              male: "Taiwanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Taïwanaise",
-              m: "Taïwanais",
+              female: "Taïwanaise",
+              male: "Taïwanais",
             ),
           ],
           emoji: "🇹🇼",
@@ -47446,13 +47450,13 @@ class CountryChe extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Swiss",
-              m: "Swiss",
+              female: "Swiss",
+              male: "Swiss",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Suisse",
-              m: "Suisse",
+              female: "Suisse",
+              male: "Suisse",
             ),
           ],
           emoji: "🇨🇭",
@@ -47653,13 +47657,13 @@ class CountryEri extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Eritrean",
-              m: "Eritrean",
+              female: "Eritrean",
+              male: "Eritrean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Érythréenne",
-              m: "Érythréen",
+              female: "Érythréenne",
+              male: "Érythréen",
             ),
           ],
           emoji: "🇪🇷",
@@ -47848,13 +47852,13 @@ class CountryCog extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Congolese",
-              m: "Congolese",
+              female: "Congolese",
+              male: "Congolese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Congolaise",
-              m: "Congolais",
+              female: "Congolaise",
+              male: "Congolais",
             ),
           ],
           emoji: "🇨🇬",
@@ -48032,11 +48036,11 @@ class CountryFro extends WorldCountry {
           latLng: const LatLng(62, -7),
           areaMetric: 1393,
           demonyms: const [
-            Demonyms(language: LangEng(), f: "Faroese", m: "Faroese"),
+            Demonyms(language: LangEng(), female: "Faroese", male: "Faroese"),
             Demonyms(
               language: LangFra(),
-              f: "Féroïenne",
-              m: "Féroïen",
+              female: "Féroïenne",
+              male: "Féroïen",
             ),
           ],
           emoji: "🇫🇴",
