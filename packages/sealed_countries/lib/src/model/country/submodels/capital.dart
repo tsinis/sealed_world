@@ -6,7 +6,7 @@
 final class Capital {
   const Capital(String name, {this.deJure, this.third})
       : deFacto = name,
-        assert(name.length != 0, "`name` of capital should not be empty!");
+        assert(name.length > 0, "`name` of capital should not be empty!");
 
   final String deFacto; // TODO: Add name getter in extension.
   final String? deJure; // TODO: Add fallback getter in extension.

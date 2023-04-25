@@ -222,4 +222,131 @@ void main() => group("$FiatCurrency", () {
           );
         });
       });
+
+      group("asserts", () {
+        test("not", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: value.name,
+              namesNative: value.namesNative,
+              codeNumeric: value.codeNumeric,
+            ),
+            isNot(throwsA(isA<AssertionError>())),
+          );
+        });
+
+        test("empty name", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: "",
+              namesNative: value.namesNative,
+              codeNumeric: value.codeNumeric,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("code length", () {
+          expect(
+            () => FiatCurrency(
+              code: value.name,
+              name: value.name,
+              namesNative: value.namesNative,
+              codeNumeric: value.codeNumeric,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("codeNumeric length", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: value.name,
+              namesNative: value.namesNative,
+              codeNumeric: value.name,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("empty namesNative", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: value.name,
+              namesNative: const [],
+              codeNumeric: value.codeNumeric,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("empty htmlEntity", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: value.name,
+              namesNative: value.namesNative,
+              codeNumeric: value.codeNumeric,
+              htmlEntity: "",
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("empty subunit", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: value.name,
+              namesNative: value.namesNative,
+              codeNumeric: value.codeNumeric,
+              subunit: "",
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("empty symbol", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: value.name,
+              namesNative: value.namesNative,
+              codeNumeric: value.codeNumeric,
+              symbol: "",
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("empty alternateSymbols", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: value.name,
+              namesNative: value.namesNative,
+              codeNumeric: value.codeNumeric,
+              alternateSymbols: const [],
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("negative smallestDenomination", () {
+          expect(
+            () => FiatCurrency(
+              code: value.code,
+              name: value.name,
+              namesNative: value.namesNative,
+              codeNumeric: value.codeNumeric,
+              smallestDenomination: -1,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+      });
     });

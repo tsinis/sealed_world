@@ -160,4 +160,79 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
       });
+
+      group("asserts", () {
+        test("not", () {
+          expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+            ),
+            isNot(throwsA(isA<AssertionError>())),
+          );
+        });
+
+        test("empty format", () {
+          expect(
+            () => NaturalLanguage(
+              name: "",
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("codeShort length", () {
+          expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.code,
+              namesNative: value.namesNative,
+              code: value.code,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("code length", () {
+          expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.codeShort,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("empty namesNative", () {
+          expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: const [],
+              code: value.code,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+
+        test("bibliographicCode length", () {
+          expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+              bibliographicCode: value.codeShort,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+      });
     });

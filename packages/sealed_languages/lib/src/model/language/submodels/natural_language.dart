@@ -9,7 +9,19 @@ class NaturalLanguage extends Language {
     this.bibliographicCode,
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
-  });
+  })  : assert(code.length == 3, "`code` should be exactly 3 characters long!"),
+        assert(
+          codeShort.length == 2,
+          "`codeShort` should be exactly 2 characters long!",
+        ),
+        assert(
+          namesNative != const <String>[],
+          "`namesNative` should not be empty!",
+        ),
+        assert(
+          bibliographicCode == null || bibliographicCode.length == 3,
+          "`bibliographicCode` should be exactly 3 characters long!",
+        );
 
   factory NaturalLanguage.fromCode(String code) => list.firstWhere(
         (naturalLang) => naturalLang.code == code.toUpperCase(),
@@ -35,7 +47,6 @@ class NaturalLanguage extends Language {
       ? super.toString()
       : """NaturalLanguage(name: $name, codeShort: $codeShort, code: $code, bibliographicCode: $bibliographicCode, family: $family, nativeName: $namesNative, isRightToLeft: $isRightToLeft)""";
 
-  // TODO: Annotate here and families too.
   static NaturalLanguage? maybeFromValue<T extends Object>(
     T value, {
     T? Function(NaturalLanguage lang)? where,

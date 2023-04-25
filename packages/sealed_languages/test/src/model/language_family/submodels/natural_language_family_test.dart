@@ -115,4 +115,20 @@ void main() => group("$NaturalLanguageFamily", () {
           ),
         );
       });
+
+      group("asserts", () {
+        test("not", () {
+          expect(
+            () => NaturalLanguageFamily(name: value.name),
+            isNot(throwsA(isA<AssertionError>())),
+          );
+        });
+
+        test("empty name", () {
+          expect(
+            () => NaturalLanguageFamily(name: ""),
+            throwsA(isA<AssertionError>()),
+          );
+        });
+      });
     });

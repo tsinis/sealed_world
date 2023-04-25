@@ -17,7 +17,31 @@ class FiatCurrency extends Currency {
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-  });
+  })  : assert(code.length == 3, "`code` should be exactly 3 characters long!"),
+        assert(
+          codeNumeric.length == 3,
+          "`codeNumeric` should be exactly 3 characters long!",
+        ),
+        assert(
+          namesNative != const <String>[],
+          "`namesNative` should not be empty!",
+        ),
+        assert(
+          htmlEntity == null || htmlEntity.length > 0,
+          "`htmlEntity` should not be empty!",
+        ),
+        assert(
+          subunit == null || subunit.length > 0,
+          "`subunit` should not be empty!",
+        ),
+        assert(
+          alternateSymbols != const <String>[],
+          "`alternateSymbols` should not be empty!",
+        ),
+        assert(
+          smallestDenomination >= 0,
+          "`smallestDenomination` should not be negative!",
+        );
 
   factory FiatCurrency.fromCode(String code) => list.firstWhere(
         (currency) => currency.code == code.toUpperCase(),
@@ -30,7 +54,7 @@ class FiatCurrency extends Currency {
   final List<String>? alternateSymbols;
   final String? disambiguateSymbol;
   final String? htmlEntity;
-  final String? codeNumeric;
+  final String codeNumeric;
   final List<String> namesNative;
   final int priority;
   final int smallestDenomination;

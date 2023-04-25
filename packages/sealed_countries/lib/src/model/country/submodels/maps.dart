@@ -1,5 +1,10 @@
 final class Maps {
-  const Maps({required this.googleMaps, required this.openStreetMaps});
+  const Maps({required this.googleMaps, required this.openStreetMaps})
+      : assert(googleMaps.length > 0, "`googleMaps` should not be empty!"),
+        assert(
+          openStreetMaps.length > 0,
+          "`openStreetMaps` should not be empty!",
+        );
 
   final String googleMaps;
   final String openStreetMaps;

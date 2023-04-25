@@ -4,7 +4,8 @@ part "submodels/natural_language_family.dart";
 part "submodels/natural_language_family.g.dart";
 
 sealed class LanguageFamily {
-  const LanguageFamily({required this.name});
+  const LanguageFamily({required this.name})
+      : assert(name.length > 0, "`name` should not be empty!");
 
   final String name;
 
