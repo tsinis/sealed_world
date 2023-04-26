@@ -24,7 +24,7 @@ void main() => group("$Maps", () {
 
       group("equality", () {
         const other = Maps(
-          googleMaps: "${TestData.string} ",
+          googleMaps: "${TestData.float}",
           openStreetMaps: TestData.string,
         );
         final array = {value, other};
@@ -53,48 +53,51 @@ void main() => group("$Maps", () {
         });
 
         test("with ${array.runtimeType}", () {
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.addAll(List.of(array));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.add(
             Maps(
               googleMaps: value.googleMaps,
               openStreetMaps: value.openStreetMaps,
             ),
           );
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
         });
       });
 
       group("asserts", () {
-        test("not", () {
-          expect(
+        test(
+          "not",
+          () => expect(
             () => Maps(
               googleMaps: value.googleMaps,
               openStreetMaps: value.openStreetMaps,
             ),
             isNot(throwsA(isA<AssertionError>())),
-          );
-        });
+          ),
+        );
 
-        test("empty format", () {
-          expect(
+        test(
+          "empty format",
+          () => expect(
             () => Maps(
               googleMaps: TestData.emptyString,
               openStreetMaps: value.openStreetMaps,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("empty regExpPattern", () {
-          expect(
+        test(
+          "empty regExpPattern",
+          () => expect(
             () => Maps(
               googleMaps: value.googleMaps,
               openStreetMaps: TestData.emptyString,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
       });
     });

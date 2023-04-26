@@ -239,7 +239,7 @@ class _CountryPageState extends State<CountryPage> {
                                     ),
                                     DescriptionTile(
                                       country.gini != null
-                                          ? """${country.gini?.value} (${country.gini?.year})"""
+                                          ? """${country.gini?.coefficient} (${country.gini?.year})"""
                                           : null,
                                       icon: Icons.layers_outlined,
                                       description: "Gini Coefficient",

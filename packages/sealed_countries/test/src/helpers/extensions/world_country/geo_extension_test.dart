@@ -2,7 +2,6 @@ import "package:sealed_countries/src/helpers/extensions/world_country/geo_extens
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("GeoExtension", () {
       group("borders", () {
         test(

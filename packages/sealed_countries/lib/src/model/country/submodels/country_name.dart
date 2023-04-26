@@ -25,7 +25,7 @@ final class CountryName {
     if (identical(this, other)) return true;
 
     return other.common == common &&
-        other.language == language &&
+        other.language.code == language.code &&
         other.official == official;
   }
 

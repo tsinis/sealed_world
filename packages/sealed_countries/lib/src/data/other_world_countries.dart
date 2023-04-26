@@ -197,7 +197,7 @@ class CountryUnk extends WorldCountry {
             openStreetMaps: "relation/2088990",
           ),
           population: 1775378,
-          gini: const Gini(year: 2017, value: 29),
+          gini: const Gini(year: 2017, coefficient: 29),
           fifa: "KVX",
           car: const Car(sign: "CS"),
           timezones: const ["UTC+01:00"],

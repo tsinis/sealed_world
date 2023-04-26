@@ -1,7 +1,6 @@
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$NaturalLanguage", () {
       final value = NaturalLanguage.list.last;
       final array = {value, NaturalLanguage.list.first};
@@ -44,11 +43,11 @@ void main() => group("$NaturalLanguage", () {
         });
 
         test("with ${array.runtimeType}", () {
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.addAll(List.of(array));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.add(NaturalLanguage.fromName(array.last.name));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
         });
       });
 
@@ -162,8 +161,9 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("asserts", () {
-        test("not", () {
-          expect(
+        test(
+          "not",
+          () => expect(
             () => NaturalLanguage(
               name: value.name,
               codeShort: value.codeShort,
@@ -171,11 +171,12 @@ void main() => group("$NaturalLanguage", () {
               code: value.code,
             ),
             isNot(throwsA(isA<AssertionError>())),
-          );
-        });
+          ),
+        );
 
-        test("empty format", () {
-          expect(
+        test(
+          "empty format",
+          () => expect(
             () => NaturalLanguage(
               name: "",
               codeShort: value.codeShort,
@@ -183,11 +184,12 @@ void main() => group("$NaturalLanguage", () {
               code: value.code,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("codeShort length", () {
-          expect(
+        test(
+          "codeShort length",
+          () => expect(
             () => NaturalLanguage(
               name: value.name,
               codeShort: value.code,
@@ -195,11 +197,12 @@ void main() => group("$NaturalLanguage", () {
               code: value.code,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("code length", () {
-          expect(
+        test(
+          "code length",
+          () => expect(
             () => NaturalLanguage(
               name: value.name,
               codeShort: value.codeShort,
@@ -207,11 +210,12 @@ void main() => group("$NaturalLanguage", () {
               code: value.codeShort,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("empty namesNative", () {
-          expect(
+        test(
+          "empty namesNative",
+          () => expect(
             () => NaturalLanguage(
               name: value.name,
               codeShort: value.codeShort,
@@ -219,11 +223,12 @@ void main() => group("$NaturalLanguage", () {
               code: value.code,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("bibliographicCode length", () {
-          expect(
+        test(
+          "bibliographicCode length",
+          () => expect(
             () => NaturalLanguage(
               name: value.name,
               codeShort: value.codeShort,
@@ -232,7 +237,7 @@ void main() => group("$NaturalLanguage", () {
               bibliographicCode: value.codeShort,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
       });
     });

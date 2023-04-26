@@ -207,13 +207,21 @@ abstract class BasicPicker<T extends Object>
   }) =>
       showDialog(
         context: context,
-        // ignore: arguments-ordering, false positive.
         builder: (internalContext) => AlertDialog(
           iconPadding: iconPadding,
           iconColor: iconColor,
           title: title,
           titlePadding: titlePadding,
           titleTextStyle: titleTextStyle,
+          content: SizedBox(
+            width: double.maxFinite,
+            child: copyWith(
+              onSelect: (selectedItem) {
+                onSelect?.call(selectedItem);
+                internalContext.maybePop(selectedItem);
+              },
+            ),
+          ),
           contentPadding: contentPadding,
           contentTextStyle: contentTextStyle,
           actions: actions,
@@ -233,15 +241,6 @@ abstract class BasicPicker<T extends Object>
           shape: shape,
           alignment: alignment,
           scrollable: scrollable,
-          content: SizedBox(
-            width: double.maxFinite,
-            child: copyWith(
-              onSelect: (selectedItem) {
-                onSelect?.call(selectedItem);
-                internalContext.maybePop(selectedItem);
-              },
-            ),
-          ),
         ),
         barrierDismissible: barrierDismissible,
         barrierColor: barrierColor,

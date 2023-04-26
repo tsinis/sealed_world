@@ -1,7 +1,6 @@
 import "package:sealed_countries/src/model/geo/submodels/continent.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$Continent", () {
       final value = Continent.list.last;
       final array = {value, Continent.list.first};
@@ -92,11 +91,11 @@ void main() => group("$Continent", () {
         });
 
         test("with ${array.runtimeType}", () {
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.addAll(List.of(array));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.add(Continent.fromName(array.first.name));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
         });
       });
     });

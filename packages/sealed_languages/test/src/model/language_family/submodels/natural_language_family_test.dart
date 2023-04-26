@@ -1,7 +1,6 @@
 import "package:sealed_languages/src/model/language_family/language_family.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$NaturalLanguageFamily", () {
       final value = NaturalLanguageFamily.list.last;
       final array = {value, NaturalLanguageFamily.list.first};
@@ -34,11 +33,11 @@ void main() => group("$NaturalLanguageFamily", () {
         });
 
         test("with ${array.runtimeType}", () {
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.addAll(List.of(array));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.add(NaturalLanguageFamily.fromName(array.first.name));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
         });
       });
 
@@ -117,18 +116,20 @@ void main() => group("$NaturalLanguageFamily", () {
       });
 
       group("asserts", () {
-        test("not", () {
-          expect(
+        test(
+          "not",
+          () => expect(
             () => NaturalLanguageFamily(name: value.name),
             isNot(throwsA(isA<AssertionError>())),
-          );
-        });
+          ),
+        );
 
-        test("empty name", () {
-          expect(
+        test(
+          "empty name",
+          () => expect(
             () => NaturalLanguageFamily(name: ""),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
       });
     });

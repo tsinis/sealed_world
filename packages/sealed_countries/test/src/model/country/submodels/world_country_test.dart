@@ -3,7 +3,6 @@ import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$WorldCountry", () {
       final value = WorldCountry.list.last;
       final array = {value, WorldCountry.list.first};
@@ -31,7 +30,7 @@ void main() => group("$WorldCountry", () {
             expect(element.fifa, element.fifa != null ? isNotEmpty : isNull);
             if (element.gini != null) {
               expect(element.gini?.year, isPositive);
-              expect(element.gini?.value, isPositive);
+              expect(element.gini?.coefficient, isPositive);
             } else {
               expect(element.gini, isNull);
             }
@@ -111,11 +110,11 @@ void main() => group("$WorldCountry", () {
         });
 
         test("with ${array.runtimeType}", () {
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.addAll(List.of(array));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.add(WorldCountry.fromCodeShort(value.codeShort));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
         });
       });
 

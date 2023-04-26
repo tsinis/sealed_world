@@ -1,7 +1,6 @@
 import "package:sealed_currencies/src/model/currency.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$FiatCurrency", () {
       final value = FiatCurrency.list.last;
       final array = {value, FiatCurrency.list.first};
@@ -21,11 +20,11 @@ void main() => group("$FiatCurrency", () {
         });
 
         test("with ${array.runtimeType}", () {
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.addAll(List.of(array));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.add(FiatCurrency.fromName(array.last.name));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
         });
       });
 
@@ -224,8 +223,9 @@ void main() => group("$FiatCurrency", () {
       });
 
       group("asserts", () {
-        test("not", () {
-          expect(
+        test(
+          "not",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: value.name,
@@ -233,11 +233,12 @@ void main() => group("$FiatCurrency", () {
               codeNumeric: value.codeNumeric,
             ),
             isNot(throwsA(isA<AssertionError>())),
-          );
-        });
+          ),
+        );
 
-        test("empty name", () {
-          expect(
+        test(
+          "empty name",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: "",
@@ -245,11 +246,12 @@ void main() => group("$FiatCurrency", () {
               codeNumeric: value.codeNumeric,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("code length", () {
-          expect(
+        test(
+          "code length",
+          () => expect(
             () => FiatCurrency(
               code: value.name,
               name: value.name,
@@ -257,11 +259,12 @@ void main() => group("$FiatCurrency", () {
               codeNumeric: value.codeNumeric,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("codeNumeric length", () {
-          expect(
+        test(
+          "codeNumeric length",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: value.name,
@@ -269,11 +272,12 @@ void main() => group("$FiatCurrency", () {
               codeNumeric: value.name,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("empty namesNative", () {
-          expect(
+        test(
+          "empty namesNative",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: value.name,
@@ -281,11 +285,12 @@ void main() => group("$FiatCurrency", () {
               codeNumeric: value.codeNumeric,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("empty htmlEntity", () {
-          expect(
+        test(
+          "empty htmlEntity",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: value.name,
@@ -294,11 +299,12 @@ void main() => group("$FiatCurrency", () {
               htmlEntity: "",
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("empty subunit", () {
-          expect(
+        test(
+          "empty subunit",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: value.name,
@@ -307,11 +313,12 @@ void main() => group("$FiatCurrency", () {
               subunit: "",
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("empty symbol", () {
-          expect(
+        test(
+          "empty symbol",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: value.name,
@@ -320,11 +327,12 @@ void main() => group("$FiatCurrency", () {
               symbol: "",
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("empty alternateSymbols", () {
-          expect(
+        test(
+          "empty alternateSymbols",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: value.name,
@@ -333,11 +341,12 @@ void main() => group("$FiatCurrency", () {
               alternateSymbols: const [],
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("negative smallestDenomination", () {
-          expect(
+        test(
+          "negative smallestDenomination",
+          () => expect(
             () => FiatCurrency(
               code: value.code,
               name: value.name,
@@ -346,7 +355,7 @@ void main() => group("$FiatCurrency", () {
               smallestDenomination: -1,
             ),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
       });
     });

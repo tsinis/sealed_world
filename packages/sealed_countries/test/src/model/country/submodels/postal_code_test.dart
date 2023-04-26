@@ -25,34 +25,37 @@ void main() => group("$PostalCode", () {
         });
 
         test("with ${array.runtimeType}", () {
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.addAll(List.of(array));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
           array.add(PostalCode(format: value.format));
-          expect(array.length == 2, isTrue);
+          expect(array.length, 2);
         });
       });
 
       group("asserts", () {
-        test("not", () {
-          expect(
+        test(
+          "not",
+          () => expect(
             () => PostalCode(format: value.format),
             isNot(throwsA(isA<AssertionError>())),
-          );
-        });
+          ),
+        );
 
-        test("empty format", () {
-          expect(
+        test(
+          "empty format",
+          () => expect(
             () => PostalCode(format: TestData.emptyString),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
 
-        test("empty regExpPattern", () {
-          expect(
+        test(
+          "empty regExpPattern",
+          () => expect(
             () => PostalCode(regExpPattern: TestData.emptyString),
             throwsA(isA<AssertionError>()),
-          );
-        });
+          ),
+        );
       });
     });

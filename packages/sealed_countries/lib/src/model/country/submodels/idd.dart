@@ -1,5 +1,6 @@
 final class Idd {
-  const Idd({required this.root, required this.suffixes});
+  const Idd({required this.root, required this.suffixes})
+      : assert(suffixes != const <int>[], "`suffixes` should not be empty!");
 
   final int root;
   final List<int> suffixes;
