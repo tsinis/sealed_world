@@ -5,7 +5,8 @@ final class Demonyms {
     required this.language,
     required this.female,
     required this.male,
-  });
+  })  : assert(female.length > 0, "`female` value should not be empty!"),
+        assert(male.length > 0, "`male` value should not be empty!");
 
   final NaturalLanguage language;
   final String female;

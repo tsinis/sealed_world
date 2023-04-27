@@ -1,12 +1,18 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-
 // Read more about the world's capitals
 // https://en.wikipedia.org/wiki/List_of_countries_with_multiple_capitals
 // Reference (Wikipedia).
 final class Capital {
   const Capital(String name, {this.deJure, this.third})
       : deFacto = name,
-        assert(name.length > 0, "`name` of capital should not be empty!");
+        assert(name.length > 0, "`name` of capital should not be empty!"),
+        assert(
+          deJure == null || deJure.length > 0,
+          "`deJure` should not be empty!",
+        ),
+        assert(
+          third == null || third.length > 0,
+          "`third` should not be empty!",
+        );
 
   final String deFacto; // TODO: Add name getter in extension.
   final String? deJure; // TODO: Add fallback getter in extension.

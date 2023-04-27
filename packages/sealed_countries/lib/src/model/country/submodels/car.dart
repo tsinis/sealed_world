@@ -1,5 +1,6 @@
 final class Car {
-  const Car({this.sign, this.isRightSide = true});
+  const Car({this.sign, this.isRightSide = true})
+      : assert(sign == null || sign.length > 0, "`sign` should not be empty!");
 
   final bool isRightSide;
   final String? sign;

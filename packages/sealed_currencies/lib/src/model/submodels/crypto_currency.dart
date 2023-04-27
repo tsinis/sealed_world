@@ -11,7 +11,10 @@ class CryptoCurrency extends Currency {
     this.isFork = false,
     this.proofType,
     this.dateAdded,
-  });
+  }) : assert(
+          proofType == null || proofType.length > 0,
+          "`proofType` should not be empty!",
+        );
 
   final bool isMinable;
   final bool isFork;

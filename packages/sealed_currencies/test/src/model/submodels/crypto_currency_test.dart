@@ -42,5 +42,17 @@ void main() => group("$CryptoCurrency", () {
             throwsA(isA<AssertionError>()),
           ),
         );
+
+        test(
+          "empty proofType",
+          () => expect(
+            () => CryptoCurrency(
+              code: value.code,
+              name: value.name,
+              proofType: "",
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
     });

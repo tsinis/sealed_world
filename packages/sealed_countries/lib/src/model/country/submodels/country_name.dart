@@ -5,12 +5,15 @@ final class CountryName {
     required this.language,
     required this.official,
     required this.common,
-  });
+  })  : assert(official.length > 0, "`official` should not be empty!"),
+        assert(common.length > 0, "`common` should not be empty!");
 
   const CountryName.international({
     required this.common,
     required this.official,
-  }) : language = const LangEng();
+  })  : language = const LangEng(),
+        assert(official.length > 0, "`official` should not be empty!"),
+        assert(common.length > 0, "`common` should not be empty!");
 
   final String common;
   final NaturalLanguage language;
