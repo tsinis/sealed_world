@@ -20,7 +20,7 @@ final class Demonyms {
   bool operator ==(covariant Demonyms other) {
     if (identical(this, other)) return true;
 
-    return other.language.code == language.code &&
+    return other.language == language &&
         other.female == female &&
         other.male == male;
   }

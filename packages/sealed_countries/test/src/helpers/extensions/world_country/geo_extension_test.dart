@@ -20,4 +20,13 @@ void main() => group("GeoExtension", () {
           ),
         );
       });
+
+      test(
+        "areaImperial",
+        () => expect(
+          WorldCountry.list.first.areaImperial,
+          WorldCountry.list.first.areaMetric *
+              GeoExtension.imperialAreaMultiplier,
+        ),
+      );
     });
