@@ -88,6 +88,38 @@ void main() => group("NameExtension", () {
         });
       });
 
+      group("namesOfficialNative", () {
+        final country = WorldCountry.list.first;
+
+        test(
+          "separator",
+          () => expect(
+            country.namesOfficialNative(separator: "-"),
+            """${country.namesNative.first.official}-${country.namesNative.last.official}""",
+          ),
+        );
+
+        group("skipFirst", () {
+          test(
+            "with multiple names",
+            () => expect(
+              country.namesOfficialNative(skipFirst: true),
+              country.namesNative.last.official,
+            ),
+          );
+
+          test(
+            "with single name",
+            () => expect(
+              WorldCountry.list
+                  .elementAt(1)
+                  .namesOfficialNative(skipFirst: true),
+              WorldCountry.list.elementAt(1).namesNative.first.official,
+            ),
+          );
+        });
+      });
+
       group("translated getters", () {
         test("nameArabic", () {
           for (final country in WorldCountry.list) {
