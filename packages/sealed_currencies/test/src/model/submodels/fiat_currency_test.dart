@@ -5,6 +5,53 @@ void main() => group("$FiatCurrency", () {
       final value = FiatCurrency.list.last;
       final array = {value, FiatCurrency.list.first};
 
+      group("fields", () {
+        for (final element in FiatCurrency.list) {
+          test("of $FiatCurrency: ${element.name}", () {
+            expect(element.code, isA<String>());
+            expect(element.code, isNotEmpty);
+            expect(element.name, isA<String>());
+            expect(element.name, isNotEmpty);
+            expect(element.codeNumeric, isA<String>());
+            expect(element.codeNumeric, isNotEmpty);
+            expect(element.namesNative, isA<List<String>>());
+            expect(element.namesNative, isNotEmpty);
+            if (element.alternateSymbols != null) {
+              expect(element.alternateSymbols, isA<List<String>>());
+              expect(element.alternateSymbols, isNotEmpty);
+            } else {
+              expect(element.alternateSymbols, isNull);
+            }
+            expect(element.disambiguateSymbol, isA<String?>());
+            expect(
+              element.disambiguateSymbol,
+              element.disambiguateSymbol == null ? isNull : isNotEmpty,
+            );
+            expect(element.htmlEntity, isA<String?>());
+            expect(
+              element.htmlEntity,
+              element.htmlEntity == null ? isNull : isNotEmpty,
+            );
+            expect(element.subunit, isA<String?>());
+            expect(
+              element.subunit,
+              element.subunit == null ? isNull : isNotEmpty,
+            );
+            expect(element.symbol, isA<String?>());
+            expect(
+              element.symbol,
+              element.symbol == null ? isNull : isNotEmpty,
+            );
+            expect(element.priority, isPositive);
+            expect(element.smallestDenomination, isNonNegative);
+            expect(element.subunitToUnit, isPositive);
+            expect(element.unitFirst, isA<bool>());
+            expect(element.decimalMark, isA<String>());
+            expect(element.thousandsSeparator, isA<String>());
+          });
+        }
+      });
+
       group("equality", () {
         test("basic", () {
           expect(FiatCurrency.list.first, isNot(equals(value)));
