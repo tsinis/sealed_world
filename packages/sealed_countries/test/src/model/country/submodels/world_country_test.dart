@@ -3,7 +3,6 @@ import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$WorldCountry", () {
       final value = WorldCountry.list.last;
       final array = {value, WorldCountry.list.first};
@@ -21,13 +20,17 @@ void main() => group("$WorldCountry", () {
               expect(element.postalCode, isNull);
             }
             expect(
-              element.capitalInfo?.capital,
+              element.capitalInfo?.capital.deFacto,
               element.capitalInfo != null ? isNotEmpty : isNull,
+            );
+            expect(
+              element.capitalInfo?.latLng,
+              element.capitalInfo != null ? isNotNull : isNull,
             );
             expect(element.fifa, element.fifa != null ? isNotEmpty : isNull);
             if (element.gini != null) {
               expect(element.gini?.year, isPositive);
-              expect(element.gini?.value, isPositive);
+              expect(element.gini?.coefficient, isPositive);
             } else {
               expect(element.gini, isNull);
             }
@@ -62,13 +65,17 @@ void main() => group("$WorldCountry", () {
             expect(element.independent, isA<bool>());
             expect(element.timezones, isA<List<String>>());
             expect(element.timezones, isNotEmpty);
+            expect(
+              element.car.sign,
+              element.car.sign == null ? isNull : isNotEmpty,
+            );
             expect(element.car.isRightSide, isA<bool>());
             expect(element.population, isNonNegative);
             expect(element.areaMetric, isNonNegative);
             expect(element.maps.googleMaps, isNotEmpty);
             expect(element.maps.openStreetMaps, isNotEmpty);
             expect(element.emoji, isNotEmpty);
-            expect(element.latLng, isNotEmpty);
+            expect(element.latLng, isNotNull);
             expect(element.translations, isNotEmpty);
             expect(element.languages, isNotEmpty);
             expect(element.continent.name, isNotEmpty);
@@ -90,27 +97,24 @@ void main() => group("$WorldCountry", () {
 
       group("equality", () {
         test("basic", () {
-          expect(WorldCountry.list.last == value, isTrue);
+          expect(WorldCountry.list.first, isNot(equals(value)));
+          expect(WorldCountry.list.last, same(value));
           expect(
-            WorldCountry.fromCodeShort(WorldCountry.list.last.codeShort) ==
-                value,
-            isTrue,
+            WorldCountry.fromCodeShort(WorldCountry.list.last.codeShort),
+            same(value),
           );
           expect(
-            WorldCountry.fromCodeShort(
-                  WorldCountry.list.last.codeShort,
-                ) ==
-                WorldCountry.list.last,
-            isTrue,
+            WorldCountry.fromCodeShort(WorldCountry.list.last.codeShort),
+            same(WorldCountry.list.last),
           );
         });
 
-        test("with $Set", () {
-          expect(array.length == 2, isTrue);
-          array.addAll(array);
-          expect(array.length == 2, isTrue);
-          array.add(value);
-          expect(array.length == 2, isTrue);
+        test("with ${array.runtimeType}", () {
+          expect(array.length, 2);
+          array.addAll(List.of(array));
+          expect(array.length, 2);
+          array.add(WorldCountry.fromCodeShort(value.codeShort));
+          expect(array.length, 2);
         });
       });
 

@@ -22,9 +22,7 @@ void main() {
   print(isVikingKrone(const FiatCzk())); // Prints false.
 
   FiatCurrency.list
-      .where(
-        (currency) => currency.symbol?.contains("kr") ?? false,
-      )
+      .where((currency) => currency.symbol?.contains("kr") ?? false)
       .forEach(print);
   // Prints:
   // Currency(code: DKK)

@@ -184,8 +184,8 @@ class _CountryPageState extends State<CountryPage> {
                                       icon: Icons.call_end_outlined,
                                       description: "Phone Code",
                                     ),
-                                    DescriptionTile.fromIterable(
-                                      country.capitalInfo?.capital,
+                                    DescriptionTile(
+                                      country.capitalInfo?.capital.deFacto,
                                       icon: Icons.home_work_outlined,
                                       description: "Capital",
                                     ),
@@ -205,7 +205,7 @@ class _CountryPageState extends State<CountryPage> {
                                       description: "Official Language(s)",
                                     ),
                                     DescriptionTile(
-                                      """Latitude: ${country.latitudeLongitude?.latitude.toStringAsFixed(2)}, Longitude: ${country.latitudeLongitude?.longitude.toStringAsFixed(2)}""",
+                                      """Latitude: ${country.latLng.latitude.toStringAsFixed(2)}, Longitude: ${country.latLng.longitude.toStringAsFixed(2)}""",
                                       icon: Icons.pin_drop_outlined,
                                       description: "Geographic Coordinates",
                                     ),
@@ -232,20 +232,20 @@ class _CountryPageState extends State<CountryPage> {
                                     ),
                                     DescriptionTile(
                                       country.demonyms.first.areSame
-                                          ? country.demonyms.first.f
-                                          : """👩: ${country.demonyms.first.f}\n👨: ${country.demonyms.first.m}""",
+                                          ? country.demonyms.first.female
+                                          : """👩: ${country.demonyms.first.female}\n👨: ${country.demonyms.first.male}""",
                                       icon: Icons.face_outlined,
                                       description: "Demonym(s)",
                                     ),
                                     DescriptionTile(
                                       country.gini != null
-                                          ? """${country.gini?.value} (${country.gini?.year})"""
+                                          ? """${country.gini?.coefficient} (${country.gini?.year})"""
                                           : null,
                                       icon: Icons.layers_outlined,
                                       description: "Gini Coefficient",
                                     ),
-                                    DescriptionTile.fromIterable(
-                                      country.car.signs,
+                                    DescriptionTile(
+                                      country.car.sign,
                                       icon: Icons.directions_car_outlined,
                                       description: "Vehicle Signs",
                                     ),

@@ -1,8 +1,10 @@
-class PostalCode {
-  const PostalCode({
-    this.format = "#####",
-    this.regExpPattern = r"^(\\d{5})$",
-  });
+final class PostalCode {
+  const PostalCode({this.format = "#####", this.regExpPattern = r"^(\\d{5})$"})
+      : assert(format.length > 0, "`format` should not be empty!"),
+        assert(
+          regExpPattern.length > 0,
+          "`regExpPattern` should not be empty!",
+        );
 
   final String format;
   final String regExpPattern;
@@ -11,17 +13,13 @@ class PostalCode {
   String toString() =>
       "PostalCode(format: $format, regExpPattern: $regExpPattern)";
 
-  RegExp validator({
-    bool multiLine = false,
-    bool caseSensitive = true,
-    bool unicode = false,
-    bool dotAll = false,
-  }) =>
-      RegExp(
-        regExpPattern,
-        multiLine: multiLine,
-        caseSensitive: caseSensitive,
-        unicode: unicode,
-        dotAll: dotAll,
-      );
+  @override
+  bool operator ==(covariant PostalCode other) {
+    if (identical(this, other)) return true;
+
+    return other.format == format && other.regExpPattern == regExpPattern;
+  }
+
+  @override
+  int get hashCode => format.hashCode ^ regExpPattern.hashCode;
 }

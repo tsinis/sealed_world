@@ -4,12 +4,14 @@ import "package:sealed_currencies/sealed_currencies.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../model/country/country.dart";
+import "../model/country/submodels/capital.dart";
 import "../model/country/submodels/capital_info.dart";
 import "../model/country/submodels/car.dart";
 import "../model/country/submodels/country_name.dart";
 import "../model/country/submodels/demonyms.dart";
 import "../model/country/submodels/gini.dart";
 import "../model/country/submodels/idd.dart";
+import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
 import "geo/continental_sections.dart";
 import "geo/continents.dart";
@@ -173,20 +175,20 @@ class CountryUnk extends WorldCountry {
               common: "科索沃",
             ),
           ],
-          latLng: const [42.666667, 21.166667],
+          latLng: const LatLng(42.666667, 21.166667),
           landlocked: true,
           bordersCodes: const ["Alb", "Mkd", "Mne", "Srb"],
           areaMetric: 10908,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kosovar",
-              m: "Kosovar",
+              female: "Kosovar",
+              male: "Kosovar",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kosovare",
-              m: "Kosovar",
+              female: "Kosovare",
+              male: "Kosovar",
             ),
           ],
           emoji: "🇽🇰",
@@ -195,13 +197,13 @@ class CountryUnk extends WorldCountry {
             openStreetMaps: "relation/2088990",
           ),
           population: 1775378,
-          gini: const Gini(year: 2017, value: 29),
+          gini: const Gini(year: 2017, coefficient: 29),
           fifa: "KVX",
-          car: const Car(signs: ["CS"]),
+          car: const Car(sign: "CS"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Pristina"],
-            latLng: [42.67, 21.17],
+            capital: Capital("Pristina"),
+            latLng: LatLng(42.67, 21.17),
           ),
         );
 }

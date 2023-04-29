@@ -1,7 +1,6 @@
 import "package:sealed_countries/src/model/geo/submodels/continent.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$Continent", () {
       final value = Continent.list.last;
       final array = {value, Continent.list.first};
@@ -78,5 +77,25 @@ void main() => group("$Continent", () {
             value,
           ),
         );
+      });
+
+      group("equality", () {
+        test("basic", () {
+          expect(Continent.list.first, isNot(equals(value)));
+          expect(Continent.list.last, same(value));
+          expect(Continent.fromName(array.first.name), same(value));
+          expect(
+            Continent.fromName(Continent.list.last.name),
+            same(Continent.list.last),
+          );
+        });
+
+        test("with ${array.runtimeType}", () {
+          expect(array.length, 2);
+          array.addAll(List.of(array));
+          expect(array.length, 2);
+          array.add(Continent.fromName(array.first.name));
+          expect(array.length, 2);
+        });
       });
     });

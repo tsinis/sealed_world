@@ -4,12 +4,14 @@ import "package:sealed_currencies/sealed_currencies.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../model/country/country.dart";
+import "../model/country/submodels/capital.dart";
 import "../model/country/submodels/capital_info.dart";
 import "../model/country/submodels/car.dart";
 import "../model/country/submodels/country_name.dart";
 import "../model/country/submodels/demonyms.dart";
 import "../model/country/submodels/gini.dart";
 import "../model/country/submodels/idd.dart";
+import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
 import "../model/country/submodels/postal_code.dart";
 import "../model/country/submodels/weekday.dart";
@@ -173,18 +175,18 @@ class CountryCpv extends WorldCountry {
               common: "佛得角",
             ),
           ],
-          latLng: const [16.5388, 23.0418],
+          latLng: const LatLng(16.5388, 23.0418),
           areaMetric: 4033,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cape Verdian",
-              m: "Cape Verdian",
+              female: "Cape Verdian",
+              male: "Cape Verdian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Cap-verdienne",
-              m: "Cap-verdien",
+              female: "Cap-verdienne",
+              male: "Cap-verdien",
             ),
           ],
           emoji: "🇨🇻",
@@ -193,12 +195,14 @@ class CountryCpv extends WorldCountry {
             openStreetMaps: "relation/535774",
           ),
           population: 555988,
-          gini: const Gini(year: 2015, value: 42.4),
+          gini: const Gini(year: 2015, coefficient: 42.4),
           fifa: "CPV",
-          car: const Car(signs: ["CV"]),
+          car: const Car(sign: "CV"),
           timezones: const ["UTC-01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Praia"], latLng: [14.92, -23.52]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Praia"),
+            latLng: LatLng(14.92, -23.52),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -376,18 +380,18 @@ class CountrySgp extends WorldCountry {
               common: "新加坡",
             ),
           ],
-          latLng: const [1.36666666, 103.8],
+          latLng: const LatLng(1.36666666, 103.8),
           areaMetric: 710,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Singaporean",
-              m: "Singaporean",
+              female: "Singaporean",
+              male: "Singaporean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Singapourienne",
-              m: "Singapourien",
+              female: "Singapourienne",
+              male: "Singapourien",
             ),
           ],
           emoji: "🇸🇬",
@@ -397,11 +401,11 @@ class CountrySgp extends WorldCountry {
           ),
           population: 5685807,
           fifa: "SIN",
-          car: const Car(signs: ["SGP"], isRightSide: false),
+          car: const Car(sign: "SGP", isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Singapore"],
-            latLng: [1.28, 103.85],
+            capital: Capital("Singapore"),
+            latLng: LatLng(1.28, 103.85),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -566,7 +570,7 @@ class CountryMrt extends WorldCountry {
               common: "毛里塔尼亚",
             ),
           ],
-          latLng: const [20, -12],
+          latLng: const LatLng(20, -12),
           bordersCodes: const [
             "Dza",
             "Mli",
@@ -577,13 +581,13 @@ class CountryMrt extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mauritanian",
-              m: "Mauritanian",
+              female: "Mauritanian",
+              male: "Mauritanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mauritanienne",
-              m: "Mauritanien",
+              female: "Mauritanienne",
+              male: "Mauritanien",
             ),
           ],
           emoji: "🇲🇷",
@@ -592,13 +596,13 @@ class CountryMrt extends WorldCountry {
             openStreetMaps: "relation/192763",
           ),
           population: 4649660,
-          gini: const Gini(year: 2014, value: 32.6),
+          gini: const Gini(year: 2014, coefficient: 32.6),
           fifa: "MTN",
-          car: const Car(signs: ["RIM"]),
+          car: const Car(sign: "RIM"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nouakchott"],
-            latLng: [18.07, -15.97],
+            capital: Capital("Nouakchott"),
+            latLng: LatLng(18.07, -15.97),
           ),
         );
 }
@@ -759,7 +763,7 @@ class CountryPol extends WorldCountry {
               common: "波兰",
             ),
           ],
-          latLng: const [52, 20],
+          latLng: const LatLng(52, 20),
           bordersCodes: const [
             "Blr",
             "Cze",
@@ -773,13 +777,13 @@ class CountryPol extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Polish",
-              m: "Polish",
+              female: "Polish",
+              male: "Polish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Polonaise",
-              m: "Polonais",
+              female: "Polonaise",
+              male: "Polonais",
             ),
           ],
           emoji: "🇵🇱",
@@ -788,12 +792,14 @@ class CountryPol extends WorldCountry {
             openStreetMaps: "relation/49715",
           ),
           population: 37950802,
-          gini: const Gini(year: 2018, value: 30.2),
+          gini: const Gini(year: 2018, coefficient: 30.2),
           fifa: "POL",
-          car: const Car(signs: ["PL"]),
+          car: const Car(sign: "PL"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Warsaw"], latLng: [52.25, 21]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Warsaw"),
+            latLng: LatLng(52.25, 21),
+          ),
           postalCode: const PostalCode(
             format: "##-###",
           ),
@@ -962,7 +968,7 @@ class CountryTcd extends WorldCountry {
               common: "乍得",
             ),
           ],
-          latLng: const [15, 19],
+          latLng: const LatLng(15, 19),
           landlocked: true,
           bordersCodes: const [
             "Cmr",
@@ -976,13 +982,13 @@ class CountryTcd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Chadian",
-              m: "Chadian",
+              female: "Chadian",
+              male: "Chadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tchadienne",
-              m: "Tchadien",
+              female: "Tchadienne",
+              male: "Tchadien",
             ),
           ],
           emoji: "🇹🇩",
@@ -991,13 +997,13 @@ class CountryTcd extends WorldCountry {
             openStreetMaps: "relation/2361304",
           ),
           population: 16425859,
-          gini: const Gini(year: 2011, value: 43.3),
+          gini: const Gini(year: 2011, coefficient: 43.3),
           fifa: "CHA",
-          car: const Car(signs: ["TCH", "TD"]),
+          car: const Car(sign: "TCH/TD"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["N'Djamena"],
-            latLng: [12.1, 15.03],
+            capital: Capital("N'Djamena"),
+            latLng: LatLng(12.1, 15.03),
           ),
         );
 }
@@ -1154,18 +1160,18 @@ class CountryJpn extends WorldCountry {
               common: "日本",
             ),
           ],
-          latLng: const [36, 138],
+          latLng: const LatLng(36, 138),
           areaMetric: 377930,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Japanese",
-              m: "Japanese",
+              female: "Japanese",
+              male: "Japanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Japonaise",
-              m: "Japonais",
+              female: "Japonaise",
+              male: "Japonais",
             ),
           ],
           emoji: "🇯🇵",
@@ -1174,12 +1180,14 @@ class CountryJpn extends WorldCountry {
             openStreetMaps: "relation/382313",
           ),
           population: 125836021,
-          gini: const Gini(year: 2013, value: 32.9),
+          gini: const Gini(year: 2013, coefficient: 32.9),
           fifa: "JPN",
-          car: const Car(signs: ["J"], isRightSide: false),
+          car: const Car(sign: "J", isRightSide: false),
           timezones: const ["UTC+09:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tokyo"], latLng: [35.68, 139.75]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tokyo"),
+            latLng: LatLng(35.68, 139.75),
+          ),
           postalCode: const PostalCode(
             format: "###-####",
             regExpPattern: r"^(\\d{7})$",
@@ -1339,18 +1347,18 @@ class CountryCub extends WorldCountry {
               common: "古巴",
             ),
           ],
-          latLng: const [21.5, -80],
+          latLng: const LatLng(21.5, -80),
           areaMetric: 109884,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cuban",
-              m: "Cuban",
+              female: "Cuban",
+              male: "Cuban",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Cubaine",
-              m: "Cubain",
+              female: "Cubaine",
+              male: "Cubain",
             ),
           ],
           emoji: "🇨🇺",
@@ -1360,11 +1368,11 @@ class CountryCub extends WorldCountry {
           ),
           population: 11326616,
           fifa: "CUB",
-          car: const Car(signs: ["C"]),
+          car: const Car(sign: "C"),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Havana"],
-            latLng: [23.12, -82.35],
+            capital: Capital("Havana"),
+            latLng: LatLng(23.12, -82.35),
           ),
           postalCode: const PostalCode(
             format: "CP #####",
@@ -1529,7 +1537,7 @@ class CountryMoz extends WorldCountry {
               common: "莫桑比克",
             ),
           ],
-          latLng: const [-18.25, 35],
+          latLng: const LatLng(-18.25, 35),
           bordersCodes: const [
             "Mwi",
             "Zaf",
@@ -1542,13 +1550,13 @@ class CountryMoz extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mozambican",
-              m: "Mozambican",
+              female: "Mozambican",
+              male: "Mozambican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mozambicaine",
-              m: "Mozambicain",
+              female: "Mozambicaine",
+              male: "Mozambicain",
             ),
           ],
           emoji: "🇲🇿",
@@ -1557,12 +1565,14 @@ class CountryMoz extends WorldCountry {
             openStreetMaps: "relation/195273",
           ),
           population: 31255435,
-          gini: const Gini(year: 2014, value: 54),
+          gini: const Gini(year: 2014, coefficient: 54),
           fifa: "MOZ",
-          car: const Car(signs: ["MOC"], isRightSide: false),
+          car: const Car(sign: "MOC", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Maputo"], latLng: [-25.95, 32.58]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Maputo"),
+            latLng: LatLng(-25.95, 32.58),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -1725,19 +1735,19 @@ class CountryGbr extends WorldCountry {
               common: "英国",
             ),
           ],
-          latLng: const [54, -2],
+          latLng: const LatLng(54, -2),
           bordersCodes: const ["Irl"],
           areaMetric: 242900,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "British",
-              m: "British",
+              female: "British",
+              male: "British",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Britannique",
-              m: "Britannique",
+              female: "Britannique",
+              male: "Britannique",
             ),
           ],
           emoji: "🇬🇧",
@@ -1746,8 +1756,8 @@ class CountryGbr extends WorldCountry {
             openStreetMaps: "relation/62149",
           ),
           population: 67215293,
-          gini: const Gini(year: 2017, value: 35.1),
-          car: const Car(signs: ["GB"], isRightSide: false),
+          gini: const Gini(year: 2017, coefficient: 35.1),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const [
             "UTC-08:00",
             "UTC-05:00",
@@ -1759,8 +1769,10 @@ class CountryGbr extends WorldCountry {
             "UTC+02:00",
             "UTC+06:00",
           ],
-          capitalInfo:
-              const CapitalInfo(capital: ["London"], latLng: [51.5, -0.08]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("London"),
+            latLng: LatLng(51.5, -0.08),
+          ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
@@ -1931,19 +1943,19 @@ class CountryIrl extends WorldCountry {
               common: "爱尔兰",
             ),
           ],
-          latLng: const [53, -8],
+          latLng: const LatLng(53, -8),
           bordersCodes: const ["Gbr"],
           areaMetric: 70273,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Irish",
-              m: "Irish",
+              female: "Irish",
+              male: "Irish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Irlandaise",
-              m: "Irlandais",
+              female: "Irlandaise",
+              male: "Irlandais",
             ),
           ],
           emoji: "🇮🇪",
@@ -1952,13 +1964,13 @@ class CountryIrl extends WorldCountry {
             openStreetMaps: "relation/62273",
           ),
           population: 4994724,
-          gini: const Gini(year: 2017, value: 31.4),
+          gini: const Gini(year: 2017, coefficient: 31.4),
           fifa: "IRL",
-          car: const Car(signs: ["IRL"], isRightSide: false),
+          car: const Car(sign: "IRL", isRightSide: false),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Dublin"],
-            latLng: [53.32, -6.23],
+            capital: Capital("Dublin"),
+            latLng: LatLng(53.32, -6.23),
           ),
         );
 }
@@ -2115,7 +2127,7 @@ class CountryNer extends WorldCountry {
               common: "尼日尔",
             ),
           ],
-          latLng: const [16, 8],
+          latLng: const LatLng(16, 8),
           landlocked: true,
           bordersCodes: const [
             "Dza",
@@ -2130,13 +2142,13 @@ class CountryNer extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nigerien",
-              m: "Nigerien",
+              female: "Nigerien",
+              male: "Nigerien",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nigérienne",
-              m: "Nigérien",
+              female: "Nigérienne",
+              male: "Nigérien",
             ),
           ],
           emoji: "🇳🇪",
@@ -2145,12 +2157,14 @@ class CountryNer extends WorldCountry {
             openStreetMaps: "relation/192786",
           ),
           population: 24206636,
-          gini: const Gini(year: 2014, value: 34.3),
+          gini: const Gini(year: 2014, coefficient: 34.3),
           fifa: "NIG",
-          car: const Car(signs: ["RN"]),
+          car: const Car(sign: "RN"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Niamey"], latLng: [13.52, 2.12]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Niamey"),
+            latLng: LatLng(13.52, 2.12),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -2308,19 +2322,19 @@ class CountryGmb extends WorldCountry {
               common: "冈比亚",
             ),
           ],
-          latLng: const [13.46666666, -16.56666666],
+          latLng: const LatLng(13.46666666, -16.56666666),
           bordersCodes: const ["Sen"],
           areaMetric: 10689,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Gambian",
-              m: "Gambian",
+              female: "Gambian",
+              male: "Gambian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Gambienne",
-              m: "Gambien",
+              female: "Gambienne",
+              male: "Gambien",
             ),
           ],
           emoji: "🇬🇲",
@@ -2329,13 +2343,13 @@ class CountryGmb extends WorldCountry {
             openStreetMaps: "relation/192774",
           ),
           population: 2416664,
-          gini: const Gini(year: 2015, value: 35.9),
+          gini: const Gini(year: 2015, coefficient: 35.9),
           fifa: "GAM",
-          car: const Car(signs: ["WAG"]),
+          car: const Car(sign: "WAG"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Banjul"],
-            latLng: [13.45, -16.57],
+            capital: Capital("Banjul"),
+            latLng: LatLng(13.45, -16.57),
           ),
         );
 }
@@ -2502,7 +2516,7 @@ class CountryUzb extends WorldCountry {
               common: "乌兹别克斯坦",
             ),
           ],
-          latLng: const [41, 64],
+          latLng: const LatLng(41, 64),
           landlocked: true,
           bordersCodes: const [
             "Afg",
@@ -2515,13 +2529,13 @@ class CountryUzb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Uzbekistani",
-              m: "Uzbekistani",
+              female: "Uzbekistani",
+              male: "Uzbekistani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ouzbèke",
-              m: "Ouzbèke",
+              female: "Ouzbèke",
+              male: "Ouzbèke",
             ),
           ],
           emoji: "🇺🇿",
@@ -2530,13 +2544,13 @@ class CountryUzb extends WorldCountry {
             openStreetMaps: "relation/196240",
           ),
           population: 34232050,
-          gini: const Gini(year: 2003, value: 35.3),
+          gini: const Gini(year: 2003, coefficient: 35.3),
           fifa: "UZB",
-          car: const Car(signs: ["UZ"]),
+          car: const Car(sign: "UZ"),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Tashkent"],
-            latLng: [41.32, 69.25],
+            capital: Capital("Tashkent"),
+            latLng: LatLng(41.32, 69.25),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -2701,7 +2715,7 @@ class CountryRus extends WorldCountry {
               common: "俄罗斯",
             ),
           ],
-          latLng: const [60, 100],
+          latLng: const LatLng(60, 100),
           bordersCodes: const [
             "Aze",
             "Blr",
@@ -2722,13 +2736,13 @@ class CountryRus extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Russian",
-              m: "Russian",
+              female: "Russian",
+              male: "Russian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Russe",
-              m: "Russe",
+              female: "Russe",
+              male: "Russe",
             ),
           ],
           emoji: "🇷🇺",
@@ -2737,9 +2751,9 @@ class CountryRus extends WorldCountry {
             openStreetMaps: "relation/60189#map=3/65.15/105.29",
           ),
           population: 144104080,
-          gini: const Gini(year: 2018, value: 37.5),
+          gini: const Gini(year: 2018, coefficient: 37.5),
           fifa: "RUS",
-          car: const Car(signs: ["RUS"]),
+          car: const Car(sign: "RUS"),
           timezones: const [
             "UTC+03:00",
             "UTC+04:00",
@@ -2751,8 +2765,10 @@ class CountryRus extends WorldCountry {
             "UTC+11:00",
             "UTC+12:00",
           ],
-          capitalInfo:
-              const CapitalInfo(capital: ["Moscow"], latLng: [55.75, 37.6]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Moscow"),
+            latLng: LatLng(55.75, 37.6),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -2917,7 +2933,7 @@ class CountryTkm extends WorldCountry {
               common: "土库曼斯坦",
             ),
           ],
-          latLng: const [40, 60],
+          latLng: const LatLng(40, 60),
           landlocked: true,
           bordersCodes: const [
             "Afg",
@@ -2929,13 +2945,13 @@ class CountryTkm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Turkmen",
-              m: "Turkmen",
+              female: "Turkmen",
+              male: "Turkmen",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Turkmène",
-              m: "Turkmène",
+              female: "Turkmène",
+              male: "Turkmène",
             ),
           ],
           emoji: "🇹🇲",
@@ -2944,13 +2960,13 @@ class CountryTkm extends WorldCountry {
             openStreetMaps: "relation/223026",
           ),
           population: 6031187,
-          gini: const Gini(year: 1998, value: 40.8),
+          gini: const Gini(year: 1998, coefficient: 40.8),
           fifa: "TKM",
-          car: const Car(signs: ["TM"]),
+          car: const Car(sign: "TM"),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ashgabat"],
-            latLng: [37.95, 58.38],
+            capital: Capital("Ashgabat"),
+            latLng: LatLng(37.95, 58.38),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -3112,18 +3128,18 @@ class CountryAia extends WorldCountry {
               common: "安圭拉",
             ),
           ],
-          latLng: const [18.25, -63.16666666],
+          latLng: const LatLng(18.25, -63.16666666),
           areaMetric: 91,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Anguillian",
-              m: "Anguillian",
+              female: "Anguillian",
+              male: "Anguillian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Anguillane",
-              m: "Anguillan",
+              female: "Anguillane",
+              male: "Anguillan",
             ),
           ],
           emoji: "🇦🇮",
@@ -3133,11 +3149,11 @@ class CountryAia extends WorldCountry {
           ),
           population: 13452,
           fifa: "AIA",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["The Valley"],
-            latLng: [18.22, -63.05],
+            capital: Capital("The Valley"),
+            latLng: LatLng(18.22, -63.05),
           ),
         );
 }
@@ -3299,19 +3315,19 @@ class CountryVnm extends WorldCountry {
               common: "越南",
             ),
           ],
-          latLng: const [16.16666666, 107.83333333],
+          latLng: const LatLng(16.16666666, 107.83333333),
           bordersCodes: const ["Khm", "Chn", "Lao"],
           areaMetric: 331212,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Vietnamese",
-              m: "Vietnamese",
+              female: "Vietnamese",
+              male: "Vietnamese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vietnamienne",
-              m: "Vietnamien",
+              female: "Vietnamienne",
+              male: "Vietnamien",
             ),
           ],
           emoji: "🇻🇳",
@@ -3320,12 +3336,14 @@ class CountryVnm extends WorldCountry {
             openStreetMaps: "relation/49915",
           ),
           population: 97338583,
-          gini: const Gini(year: 2018, value: 35.7),
+          gini: const Gini(year: 2018, coefficient: 35.7),
           fifa: "VIE",
-          car: const Car(signs: ["VN"]),
+          car: const Car(sign: "VN"),
           timezones: const ["UTC+07:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Hanoi"], latLng: [21.03, 105.85]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Hanoi"),
+            latLng: LatLng(21.03, 105.85),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -3486,15 +3504,19 @@ class CountryAta extends WorldCountry {
               common: "南极洲",
             ),
           ],
-          latLng: const [-90, 0],
+          latLng: const LatLng(-90, 0),
           idd: const Idd(root: 6, suffixes: [72]),
           areaMetric: 14000000,
           demonyms: const [
-            Demonyms(language: LangEng(), f: "Antarctican", m: "Antarctican"),
+            Demonyms(
+              language: LangEng(),
+              female: "Antarctican",
+              male: "Antarctican",
+            ),
             Demonyms(
               language: LangFra(),
-              f: "Antarcticaine",
-              m: "Antarcticain",
+              female: "Antarcticaine",
+              male: "Antarcticain",
             ),
           ],
           emoji: "🇦🇶",
@@ -3503,7 +3525,6 @@ class CountryAta extends WorldCountry {
             openStreetMaps: "node/36966060",
           ),
           population: 1000,
-          car: const Car(signs: [""]),
           timezones: const [
             "UTC-03:00",
             "UTC+03:00",
@@ -3682,20 +3703,20 @@ class CountrySwz extends WorldCountry {
               common: "斯威士兰",
             ),
           ],
-          latLng: const [-26.5, 31.5],
+          latLng: const LatLng(-26.5, 31.5),
           landlocked: true,
           bordersCodes: const ["Moz", "Zaf"],
           areaMetric: 17364,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Swazi",
-              m: "Swazi",
+              female: "Swazi",
+              male: "Swazi",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Swazie",
-              m: "Swazie",
+              female: "Swazie",
+              male: "Swazie",
             ),
           ],
           emoji: "🇸🇿",
@@ -3704,14 +3725,14 @@ class CountrySwz extends WorldCountry {
             openStreetMaps: "relation/88210",
           ),
           population: 1160164,
-          gini: const Gini(year: 2016, value: 54.6),
+          gini: const Gini(year: 2016, coefficient: 54.6),
           fifa: "SWZ",
-          car: const Car(signs: ["SD"], isRightSide: false),
+          car: const Car(sign: "SD", isRightSide: false),
           timezones: const ["UTC+02:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Mbabane"],
-            latLng: [-26.32, 31.13],
+            capital: Capital("Mbabane"),
+            latLng: LatLng(-26.32, 31.13),
           ),
           postalCode: const PostalCode(
             format: "@###",
@@ -3872,19 +3893,19 @@ class CountryKhm extends WorldCountry {
               common: "柬埔寨",
             ),
           ],
-          latLng: const [13, 105],
+          latLng: const LatLng(13, 105),
           bordersCodes: const ["Lao", "Tha", "Vnm"],
           areaMetric: 181035,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cambodian",
-              m: "Cambodian",
+              female: "Cambodian",
+              male: "Cambodian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Cambodgienne",
-              m: "Cambodgien",
+              female: "Cambodgienne",
+              male: "Cambodgien",
             ),
           ],
           emoji: "🇰🇭",
@@ -3894,11 +3915,11 @@ class CountryKhm extends WorldCountry {
           ),
           population: 16718971,
           fifa: "CAM",
-          car: const Car(signs: ["K"]),
+          car: const Car(sign: "K"),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Phnom Penh"],
-            latLng: [11.55, 104.92],
+            capital: Capital("Phnom Penh"),
+            latLng: LatLng(11.55, 104.92),
           ),
           postalCode: const PostalCode(),
         );
@@ -4071,18 +4092,18 @@ class CountryVut extends WorldCountry {
               common: "瓦努阿图",
             ),
           ],
-          latLng: const [-16, 167],
+          latLng: const LatLng(-16, 167),
           areaMetric: 12189,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ni-Vanuatu",
-              m: "Ni-Vanuatu",
+              female: "Ni-Vanuatu",
+              male: "Ni-Vanuatu",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vanuatuane",
-              m: "Vanuatuan",
+              female: "Vanuatuane",
+              male: "Vanuatuan",
             ),
           ],
           emoji: "🇻🇺",
@@ -4091,13 +4112,13 @@ class CountryVut extends WorldCountry {
             openStreetMaps: "relation/2177246",
           ),
           population: 307150,
-          gini: const Gini(year: 2010, value: 37.6),
+          gini: const Gini(year: 2010, coefficient: 37.6),
           fifa: "VAN",
-          car: const Car(signs: ["VU"]),
+          car: const Car(sign: "VU"),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port Vila"],
-            latLng: [-17.73, 168.32],
+            capital: Capital("Port Vila"),
+            latLng: LatLng(-17.73, 168.32),
           ),
         );
 }
@@ -4251,18 +4272,18 @@ class CountryAla extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "奥兰群岛", common: "奥兰群岛"),
           ],
-          latLng: const [60.116667, 19.9],
+          latLng: const LatLng(60.116667, 19.9),
           areaMetric: 1580,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ålandish",
-              m: "Ålandish",
+              female: "Ålandish",
+              male: "Ålandish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ålandaise",
-              m: "Ålandais",
+              female: "Ålandaise",
+              male: "Ålandais",
             ),
           ],
           emoji: "🇦🇽",
@@ -4271,11 +4292,10 @@ class CountryAla extends WorldCountry {
             openStreetMaps: "relation/1650407",
           ),
           population: 29458,
-          car: const Car(signs: [""]),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Mariehamn"],
-            latLng: [60.12, 19.9],
+            capital: Capital("Mariehamn"),
+            latLng: LatLng(60.12, 19.9),
           ),
         );
 }
@@ -4432,18 +4452,18 @@ class CountryAus extends WorldCountry {
               common: "澳大利亚",
             ),
           ],
-          latLng: const [-27, 133],
+          latLng: const LatLng(-27, 133),
           areaMetric: 7692024,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Australian",
-              m: "Australian",
+              female: "Australian",
+              male: "Australian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Australienne",
-              m: "Australien",
+              female: "Australienne",
+              male: "Australien",
             ),
           ],
           emoji: "🇦🇺",
@@ -4452,9 +4472,9 @@ class CountryAus extends WorldCountry {
             openStreetMaps: "relation/80500",
           ),
           population: 25687041,
-          gini: const Gini(year: 2014, value: 34.4),
+          gini: const Gini(year: 2014, coefficient: 34.4),
           fifa: "AUS",
-          car: const Car(signs: ["AUS"], isRightSide: false),
+          car: const Car(sign: "AUS", isRightSide: false),
           timezones: const [
             "UTC+05:00",
             "UTC+06:30",
@@ -4466,8 +4486,8 @@ class CountryAus extends WorldCountry {
             "UTC+11:30",
           ],
           capitalInfo: const CapitalInfo(
-            capital: ["Canberra"],
-            latLng: [-35.27, 149.13],
+            capital: Capital("Canberra"),
+            latLng: LatLng(-35.27, 149.13),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -4627,13 +4647,13 @@ class CountryIot extends WorldCountry {
               common: "英属印度洋领地",
             ),
           ],
-          latLng: const [-6, 71.5],
+          latLng: const LatLng(-6, 71.5),
           areaMetric: 60,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Indian",
-              m: "Indian",
+              female: "Indian",
+              male: "Indian",
             ),
           ],
           emoji: "🇮🇴",
@@ -4642,12 +4662,12 @@ class CountryIot extends WorldCountry {
             openStreetMaps: "relation/1993867",
           ),
           population: 3000,
-          car: const Car(signs: ["GB"]),
+          car: const Car(sign: "GB"),
           timezones: const ["UTC+06:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Diego Garcia"],
-            latLng: [-7.3, 72.4],
+            capital: Capital("Diego Garcia"),
+            latLng: LatLng(-7.3, 72.4),
           ),
         );
 }
@@ -4804,7 +4824,7 @@ class CountrySvk extends WorldCountry {
               common: "斯洛伐克",
             ),
           ],
-          latLng: const [48.66666666, 19.5],
+          latLng: const LatLng(48.66666666, 19.5),
           landlocked: true,
           bordersCodes: const [
             "Aut",
@@ -4817,13 +4837,13 @@ class CountrySvk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Slovak",
-              m: "Slovak",
+              female: "Slovak",
+              male: "Slovak",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Slovaque",
-              m: "Slovaque",
+              female: "Slovaque",
+              male: "Slovaque",
             ),
           ],
           emoji: "🇸🇰",
@@ -4832,13 +4852,13 @@ class CountrySvk extends WorldCountry {
             openStreetMaps: "relation/14296",
           ),
           population: 5458827,
-          gini: const Gini(year: 2018, value: 25),
+          gini: const Gini(year: 2018, coefficient: 25),
           fifa: "SVK",
-          car: const Car(signs: ["SK"]),
+          car: const Car(sign: "SK"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bratislava"],
-            latLng: [48.15, 17.12],
+            capital: Capital("Bratislava"),
+            latLng: LatLng(48.15, 17.12),
           ),
           postalCode: const PostalCode(
             format: "###  ##",
@@ -5003,7 +5023,7 @@ class CountryBra extends WorldCountry {
               common: "巴西",
             ),
           ],
-          latLng: const [-10, -55],
+          latLng: const LatLng(-10, -55),
           bordersCodes: const [
             "Arg",
             "Bol",
@@ -5020,13 +5040,13 @@ class CountryBra extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Brazilian",
-              m: "Brazilian",
+              female: "Brazilian",
+              male: "Brazilian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Brésilienne",
-              m: "Brésilien",
+              female: "Brésilienne",
+              male: "Brésilien",
             ),
           ],
           emoji: "🇧🇷",
@@ -5035,13 +5055,13 @@ class CountryBra extends WorldCountry {
             openStreetMaps: "relation/59470",
           ),
           population: 212559409,
-          gini: const Gini(year: 2019, value: 53.4),
+          gini: const Gini(year: 2019, coefficient: 53.4),
           fifa: "BRA",
-          car: const Car(signs: ["BR"]),
+          car: const Car(sign: "BR"),
           timezones: const ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Brasília"],
-            latLng: [-15.79, -47.88],
+            capital: Capital("Brasília"),
+            latLng: LatLng(-15.79, -47.88),
           ),
           postalCode: const PostalCode(
             format: "#####-###",
@@ -5213,7 +5233,7 @@ class CountryTjk extends WorldCountry {
               common: "塔吉克斯坦",
             ),
           ],
-          latLng: const [39, 71],
+          latLng: const LatLng(39, 71),
           landlocked: true,
           bordersCodes: const [
             "Afg",
@@ -5225,13 +5245,13 @@ class CountryTjk extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tadzhik",
-              m: "Tadzhik",
+              female: "Tadzhik",
+              male: "Tadzhik",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tadjike",
-              m: "Tadjike",
+              female: "Tadjike",
+              male: "Tadjike",
             ),
           ],
           emoji: "🇹🇯",
@@ -5240,13 +5260,13 @@ class CountryTjk extends WorldCountry {
             openStreetMaps: "relation/214626",
           ),
           population: 9537642,
-          gini: const Gini(year: 2015, value: 34),
+          gini: const Gini(year: 2015, coefficient: 34),
           fifa: "TJK",
-          car: const Car(signs: ["TJ"]),
+          car: const Car(sign: "TJ"),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Dushanbe"],
-            latLng: [38.55, 68.77],
+            capital: Capital("Dushanbe"),
+            latLng: LatLng(38.55, 68.77),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -5410,13 +5430,13 @@ class CountrySgs extends WorldCountry {
               common: "南乔治亚",
             ),
           ],
-          latLng: const [-54.5, -37],
+          latLng: const LatLng(-54.5, -37),
           areaMetric: 3903,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "South Georgian South Sandwich Islander",
-              m: "South Georgian South Sandwich Islander",
+              female: "South Georgian South Sandwich Islander",
+              male: "South Georgian South Sandwich Islander",
             ),
           ],
           emoji: "🇬🇸",
@@ -5425,12 +5445,11 @@ class CountrySgs extends WorldCountry {
             openStreetMaps: "relation/1983629",
           ),
           population: 30,
-          car: const Car(signs: [""]),
           timezones: const ["UTC-02:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["King Edward Point"],
-            latLng: [-54.28, -36.5],
+            capital: Capital("King Edward Point"),
+            latLng: LatLng(-54.28, -36.5),
           ),
         );
 }
@@ -5587,19 +5606,19 @@ class CountryLbr extends WorldCountry {
               common: "利比里亚",
             ),
           ],
-          latLng: const [6.5, -9.5],
+          latLng: const LatLng(6.5, -9.5),
           bordersCodes: const ["Gin", "Civ", "Sle"],
           areaMetric: 111369,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Liberian",
-              m: "Liberian",
+              female: "Liberian",
+              male: "Liberian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Libérienne",
-              m: "Libérien",
+              female: "Libérienne",
+              male: "Libérien",
             ),
           ],
           emoji: "🇱🇷",
@@ -5608,12 +5627,14 @@ class CountryLbr extends WorldCountry {
             openStreetMaps: "relation/192780",
           ),
           population: 5057677,
-          gini: const Gini(year: 2016, value: 35.3),
+          gini: const Gini(year: 2016, coefficient: 35.3),
           fifa: "LBR",
-          car: const Car(signs: ["LB"]),
+          car: const Car(sign: "LB"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Monrovia"], latLng: [6.3, -10.8]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Monrovia"),
+            latLng: LatLng(6.3, -10.8),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -5776,7 +5797,7 @@ class CountryNga extends WorldCountry {
               common: "尼日利亚",
             ),
           ],
-          latLng: const [10, 8],
+          latLng: const LatLng(10, 8),
           bordersCodes: const [
             "Ben",
             "Cmr",
@@ -5787,13 +5808,13 @@ class CountryNga extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nigerian",
-              m: "Nigerian",
+              female: "Nigerian",
+              male: "Nigerian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nigériane",
-              m: "Nigérian",
+              female: "Nigériane",
+              male: "Nigérian",
             ),
           ],
           emoji: "🇳🇬",
@@ -5802,12 +5823,14 @@ class CountryNga extends WorldCountry {
             openStreetMaps: "relation/192787",
           ),
           population: 206139587,
-          gini: const Gini(year: 2018, value: 35.1),
+          gini: const Gini(year: 2018, coefficient: 35.1),
           fifa: "NGA",
-          car: const Car(signs: ["WAN"]),
+          car: const Car(sign: "WAN"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Abuja"], latLng: [9.08, 7.53]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Abuja"),
+            latLng: LatLng(9.08, 7.53),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -5971,7 +5994,7 @@ class CountryCol extends WorldCountry {
               common: "哥伦比亚",
             ),
           ],
-          latLng: const [4, -72],
+          latLng: const LatLng(4, -72),
           bordersCodes: const [
             "Bra",
             "Ecu",
@@ -5983,13 +6006,13 @@ class CountryCol extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Colombian",
-              m: "Colombian",
+              female: "Colombian",
+              male: "Colombian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Colombienne",
-              m: "Colombien",
+              female: "Colombienne",
+              male: "Colombien",
             ),
           ],
           emoji: "🇨🇴",
@@ -5998,12 +6021,14 @@ class CountryCol extends WorldCountry {
             openStreetMaps: "relation/120027",
           ),
           population: 50882884,
-          gini: const Gini(year: 2019, value: 51.3),
+          gini: const Gini(year: 2019, coefficient: 51.3),
           fifa: "COL",
-          car: const Car(signs: ["CO"]),
+          car: const Car(sign: "CO"),
           timezones: const ["UTC-05:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bogotá"], latLng: [4.71, -74.07]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bogotá"),
+            latLng: LatLng(4.71, -74.07),
+          ),
         );
 }
 
@@ -6163,20 +6188,20 @@ class CountrySmr extends WorldCountry {
               common: "圣马力诺",
             ),
           ],
-          latLng: const [43.76666666, 12.41666666],
+          latLng: const LatLng(43.76666666, 12.41666666),
           landlocked: true,
           bordersCodes: const ["Ita"],
           areaMetric: 61,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sammarinese",
-              m: "Sammarinese",
+              female: "Sammarinese",
+              male: "Sammarinese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Marinaise",
-              m: "Saint-Marinais",
+              female: "Saint-Marinaise",
+              male: "Saint-Marinais",
             ),
           ],
           emoji: "🇸🇲",
@@ -6186,11 +6211,11 @@ class CountrySmr extends WorldCountry {
           ),
           population: 33938,
           fifa: "SMR",
-          car: const Car(signs: ["RSM"]),
+          car: const Car(sign: "RSM"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["City of San Marino"],
-            latLng: [43.94, 12.45],
+            capital: Capital("City of San Marino"),
+            latLng: LatLng(43.94, 12.45),
           ),
           postalCode: const PostalCode(
             format: "4789#",
@@ -6357,18 +6382,18 @@ class CountryShn extends WorldCountry {
               common: "圣赫勒拿、阿森松和特里斯坦-达库尼亚",
             ),
           ],
-          latLng: const [-15.95, -5.72],
+          latLng: const LatLng(-15.95, -5.72),
           areaMetric: 394,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Helenian",
-              m: "Saint Helenian",
+              female: "Saint Helenian",
+              male: "Saint Helenian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sainte-Hélénoise",
-              m: "Sainte-Hélènois",
+              female: "Sainte-Hélénoise",
+              male: "Sainte-Hélènois",
             ),
           ],
           emoji: "🇸🇭",
@@ -6377,12 +6402,12 @@ class CountryShn extends WorldCountry {
             openStreetMaps: "relation/4868269#map=13/-15.9657/-5.7120",
           ),
           population: 53192,
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Jamestown"],
-            latLng: [-15.93, -5.72],
+            capital: Capital("Jamestown"),
+            latLng: LatLng(-15.93, -5.72),
           ),
           postalCode: const PostalCode(
             format: "STHL 1ZZ",
@@ -6543,7 +6568,7 @@ class CountryEgy extends WorldCountry {
               common: "埃及",
             ),
           ],
-          latLng: const [27, 30],
+          latLng: const LatLng(27, 30),
           bordersCodes: const [
             "Isr",
             "Lby",
@@ -6554,13 +6579,13 @@ class CountryEgy extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Egyptian",
-              m: "Egyptian",
+              female: "Egyptian",
+              male: "Egyptian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Égyptienne",
-              m: "Égyptien",
+              female: "Égyptienne",
+              male: "Égyptien",
             ),
           ],
           emoji: "🇪🇬",
@@ -6569,13 +6594,15 @@ class CountryEgy extends WorldCountry {
             openStreetMaps: "relation/1473947",
           ),
           population: 102334403,
-          gini: const Gini(year: 2017, value: 31.5),
+          gini: const Gini(year: 2017, coefficient: 31.5),
           fifa: "EGY",
-          car: const Car(signs: ["ET"]),
+          car: const Car(sign: "ET"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Cairo"], latLng: [30.05, 31.25]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Cairo"),
+            latLng: LatLng(30.05, 31.25),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -6736,19 +6763,19 @@ class CountryHnd extends WorldCountry {
               common: "洪都拉斯",
             ),
           ],
-          latLng: const [15, -86.5],
+          latLng: const LatLng(15, -86.5),
           bordersCodes: const ["Gtm", "Slv", "Nic"],
           areaMetric: 112492,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Honduran",
-              m: "Honduran",
+              female: "Honduran",
+              male: "Honduran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Hondurienne",
-              m: "Hondurien",
+              female: "Hondurienne",
+              male: "Hondurien",
             ),
           ],
           emoji: "🇭🇳",
@@ -6757,13 +6784,13 @@ class CountryHnd extends WorldCountry {
             openStreetMaps: "relation/287670",
           ),
           population: 9904608,
-          gini: const Gini(year: 2019, value: 48.2),
+          gini: const Gini(year: 2019, coefficient: 48.2),
           fifa: "HON",
-          car: const Car(signs: ["HN"]),
+          car: const Car(sign: "HN"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Tegucigalpa"],
-            latLng: [14.1, -87.22],
+            capital: Capital("Tegucigalpa"),
+            latLng: LatLng(14.1, -87.22),
           ),
           postalCode: const PostalCode(
             format: "@@####",
@@ -6928,19 +6955,19 @@ class CountryIdn extends WorldCountry {
               common: "印度尼西亚",
             ),
           ],
-          latLng: const [-5, 120],
+          latLng: const LatLng(-5, 120),
           bordersCodes: const ["Tls", "Mys", "Png"],
           areaMetric: 1904569,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Indonesian",
-              m: "Indonesian",
+              female: "Indonesian",
+              male: "Indonesian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Indonésienne",
-              m: "Indonésien",
+              female: "Indonésienne",
+              male: "Indonésien",
             ),
           ],
           emoji: "🇮🇩",
@@ -6949,13 +6976,13 @@ class CountryIdn extends WorldCountry {
             openStreetMaps: "relation/21335",
           ),
           population: 273523621,
-          gini: const Gini(year: 2019, value: 38.2),
+          gini: const Gini(year: 2019, coefficient: 38.2),
           fifa: "IDN",
-          car: const Car(signs: ["RI"], isRightSide: false),
+          car: const Car(sign: "RI", isRightSide: false),
           timezones: const ["UTC+07:00", "UTC+08:00", "UTC+09:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Jakarta"],
-            latLng: [-6.17, 106.82],
+            capital: Capital("Jakarta"),
+            latLng: LatLng(-6.17, 106.82),
           ),
           postalCode: const PostalCode(),
         );
@@ -7122,19 +7149,19 @@ class CountryPrk extends WorldCountry {
               common: "朝鲜",
             ),
           ],
-          latLng: const [40, 127],
+          latLng: const LatLng(40, 127),
           bordersCodes: const ["Chn", "Kor", "Rus"],
           areaMetric: 120538,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "North Korean",
-              m: "North Korean",
+              female: "North Korean",
+              male: "North Korean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nord-coréenne",
-              m: "Nord-coréen",
+              female: "Nord-coréenne",
+              male: "Nord-coréen",
             ),
           ],
           emoji: "🇰🇵",
@@ -7144,11 +7171,10 @@ class CountryPrk extends WorldCountry {
           ),
           population: 25778815,
           fifa: "PRK",
-          car: const Car(signs: [""]),
           timezones: const ["UTC+09:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Pyongyang"],
-            latLng: [39.02, 125.75],
+            capital: Capital("Pyongyang"),
+            latLng: LatLng(39.02, 125.75),
           ),
           postalCode: const PostalCode(
             format: "###-###",
@@ -7335,15 +7361,15 @@ class CountryMac extends WorldCountry {
               common: "澳门",
             ),
           ],
-          latLng: const [22.16666666, 113.55],
+          latLng: const LatLng(22.16666666, 113.55),
           bordersCodes: const ["Chn"],
           areaMetric: 30,
           demonyms: const [
-            Demonyms(language: LangEng(), f: "Macanese", m: "Macanese"),
+            Demonyms(language: LangEng(), female: "Macanese", male: "Macanese"),
             Demonyms(
               language: LangFra(),
-              f: "Macanaise",
-              m: "Macanais",
+              female: "Macanaise",
+              male: "Macanais",
             ),
           ],
           emoji: "🇲🇴",
@@ -7353,7 +7379,7 @@ class CountryMac extends WorldCountry {
           ),
           population: 649342,
           fifa: "MAC",
-          car: const Car(signs: ["MO"], isRightSide: false),
+          car: const Car(sign: "MO", isRightSide: false),
           timezones: const ["UTC+08:00"],
         );
 }
@@ -7510,19 +7536,19 @@ class CountrySle extends WorldCountry {
               common: "塞拉利昂",
             ),
           ],
-          latLng: const [8.5, -11.5],
+          latLng: const LatLng(8.5, -11.5),
           bordersCodes: const ["Gin", "Lbr"],
           areaMetric: 71740,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sierra Leonean",
-              m: "Sierra Leonean",
+              female: "Sierra Leonean",
+              male: "Sierra Leonean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sierra-leonaise",
-              m: "Sierra-leonais",
+              female: "Sierra-leonaise",
+              male: "Sierra-leonais",
             ),
           ],
           emoji: "🇸🇱",
@@ -7531,13 +7557,13 @@ class CountrySle extends WorldCountry {
             openStreetMaps: "relation/192777",
           ),
           population: 7976985,
-          gini: const Gini(year: 2018, value: 35.7),
+          gini: const Gini(year: 2018, coefficient: 35.7),
           fifa: "SLE",
-          car: const Car(signs: ["WAL"]),
+          car: const Car(sign: "WAL"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Freetown"],
-            latLng: [8.48, -13.23],
+            capital: Capital("Freetown"),
+            latLng: LatLng(8.48, -13.23),
           ),
         );
 }
@@ -7699,20 +7725,20 @@ class CountryMda extends WorldCountry {
               common: "摩尔多瓦",
             ),
           ],
-          latLng: const [47, 29],
+          latLng: const LatLng(47, 29),
           landlocked: true,
           bordersCodes: const ["Rou", "Ukr"],
           areaMetric: 33846,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Moldovan",
-              m: "Moldovan",
+              female: "Moldovan",
+              male: "Moldovan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Moldave",
-              m: "Moldave",
+              female: "Moldave",
+              male: "Moldave",
             ),
           ],
           emoji: "🇲🇩",
@@ -7721,12 +7747,14 @@ class CountryMda extends WorldCountry {
             openStreetMaps: "relation/58974",
           ),
           population: 2617820,
-          gini: const Gini(year: 2018, value: 25.7),
+          gini: const Gini(year: 2018, coefficient: 25.7),
           fifa: "MDA",
-          car: const Car(signs: ["MD"]),
+          car: const Car(sign: "MD"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Chișinău"], latLng: [47.01, 28.9]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Chișinău"),
+            latLng: LatLng(47.01, 28.9),
+          ),
           postalCode: const PostalCode(
             format: "MD-####",
             regExpPattern: r"^(?:MD)*(\\d{4})$",
@@ -7897,18 +7925,18 @@ class CountryPhl extends WorldCountry {
               common: "菲律宾",
             ),
           ],
-          latLng: const [13, 122],
+          latLng: const LatLng(13, 122),
           areaMetric: 342353,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Filipino",
-              m: "Filipino",
+              female: "Filipino",
+              male: "Filipino",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Philippine",
-              m: "Philippin",
+              female: "Philippine",
+              male: "Philippin",
             ),
           ],
           emoji: "🇵🇭",
@@ -7917,12 +7945,14 @@ class CountryPhl extends WorldCountry {
             openStreetMaps: "relation/443174",
           ),
           population: 109581085,
-          gini: const Gini(year: 2018, value: 42.3),
+          gini: const Gini(year: 2018, coefficient: 42.3),
           fifa: "PHI",
-          car: const Car(signs: ["RP"]),
+          car: const Car(sign: "RP"),
           timezones: const ["UTC+08:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Manila"], latLng: [14.6, 120.97]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Manila"),
+            latLng: LatLng(14.6, 120.97),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -8089,7 +8119,7 @@ class CountryCmr extends WorldCountry {
               common: "喀麦隆",
             ),
           ],
-          latLng: const [6, 12],
+          latLng: const LatLng(6, 12),
           bordersCodes: const [
             "Caf",
             "Tcd",
@@ -8102,13 +8132,13 @@ class CountryCmr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cameroonian",
-              m: "Cameroonian",
+              female: "Cameroonian",
+              male: "Cameroonian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Camerounaise",
-              m: "Camerounais",
+              female: "Camerounaise",
+              male: "Camerounais",
             ),
           ],
           emoji: "🇨🇲",
@@ -8117,12 +8147,14 @@ class CountryCmr extends WorldCountry {
             openStreetMaps: "relation/192830",
           ),
           population: 26545864,
-          gini: const Gini(year: 2014, value: 46.6),
+          gini: const Gini(year: 2014, coefficient: 46.6),
           fifa: "CMR",
-          car: const Car(signs: ["CAM"]),
+          car: const Car(sign: "CAM"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Yaoundé"], latLng: [3.85, 11.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Yaoundé"),
+            latLng: LatLng(3.85, 11.5),
+          ),
         );
 }
 
@@ -8275,18 +8307,18 @@ class CountryGrl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "格陵兰", common: "格陵兰"),
           ],
-          latLng: const [72, -40],
+          latLng: const LatLng(72, -40),
           areaMetric: 2166086,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Greenlandic",
-              m: "Greenlandic",
+              female: "Greenlandic",
+              male: "Greenlandic",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Groenlandaise",
-              m: "Groenlandais",
+              female: "Groenlandaise",
+              male: "Groenlandais",
             ),
           ],
           emoji: "🇬🇱",
@@ -8295,10 +8327,12 @@ class CountryGrl extends WorldCountry {
             openStreetMaps: "relation/2184073",
           ),
           population: 56367,
-          car: const Car(signs: ["DK"]),
+          car: const Car(sign: "DK"),
           timezones: const ["UTC-04:00", "UTC-03:00", "UTC-01:00", "UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Nuuk"], latLng: [64.18, -51.75]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Nuuk"),
+            latLng: LatLng(64.18, -51.75),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -8453,18 +8487,18 @@ class CountryMtq extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马提尼克", common: "马提尼克"),
           ],
-          latLng: const [14.666667, -61],
+          latLng: const LatLng(14.666667, -61),
           areaMetric: 1128,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Martinican",
-              m: "Martinican",
+              female: "Martinican",
+              male: "Martinican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Martiniquaise",
-              m: "Martiniquais",
+              female: "Martiniquaise",
+              male: "Martiniquais",
             ),
           ],
           emoji: "🇲🇶",
@@ -8473,11 +8507,11 @@ class CountryMtq extends WorldCountry {
             openStreetMaps: "relation/2473088",
           ),
           population: 378243,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Fort-de-France"],
-            latLng: [14.6, -61.08],
+            capital: Capital("Fort-de-France"),
+            latLng: LatLng(14.6, -61.08),
           ),
           postalCode: const PostalCode(),
         );
@@ -8644,19 +8678,19 @@ class CountryLbn extends WorldCountry {
               common: "黎巴嫩",
             ),
           ],
-          latLng: const [33.83333333, 35.83333333],
+          latLng: const LatLng(33.83333333, 35.83333333),
           bordersCodes: const ["Isr", "Syr"],
           areaMetric: 10452,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Lebanese",
-              m: "Lebanese",
+              female: "Lebanese",
+              male: "Lebanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Libanaise",
-              m: "Libanais",
+              female: "Libanaise",
+              male: "Libanais",
             ),
           ],
           emoji: "🇱🇧",
@@ -8665,12 +8699,14 @@ class CountryLbn extends WorldCountry {
             openStreetMaps: "relation/184843",
           ),
           population: 6825442,
-          gini: const Gini(year: 2011, value: 31.8),
+          gini: const Gini(year: 2011, coefficient: 31.8),
           fifa: "LBN",
-          car: const Car(signs: ["RL"]),
+          car: const Car(sign: "RL"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Beirut"], latLng: [33.87, 35.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Beirut"),
+            latLng: LatLng(33.87, 35.5),
+          ),
           postalCode: const PostalCode(
             format: "#### ####|####",
             regExpPattern: r"^(\\d{4}(\\d{4})?)$",
@@ -8845,7 +8881,7 @@ class CountryRwa extends WorldCountry {
               common: "卢旺达",
             ),
           ],
-          latLng: const [-2, 30],
+          latLng: const LatLng(-2, 30),
           landlocked: true,
           bordersCodes: const [
             "Bdi",
@@ -8857,13 +8893,13 @@ class CountryRwa extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Rwandan",
-              m: "Rwandan",
+              female: "Rwandan",
+              male: "Rwandan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Rwandaise",
-              m: "Rwandais",
+              female: "Rwandaise",
+              male: "Rwandais",
             ),
           ],
           emoji: "🇷🇼",
@@ -8872,12 +8908,14 @@ class CountryRwa extends WorldCountry {
             openStreetMaps: "relation/171496",
           ),
           population: 12952209,
-          gini: const Gini(year: 2016, value: 43.7),
+          gini: const Gini(year: 2016, coefficient: 43.7),
           fifa: "RWA",
-          car: const Car(signs: ["RWA"]),
+          car: const Car(sign: "RWA"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Kigali"], latLng: [-1.95, 30.05]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Kigali"),
+            latLng: LatLng(-1.95, 30.05),
+          ),
         );
 }
 
@@ -9047,19 +9085,19 @@ class CountryBih extends WorldCountry {
               common: "波斯尼亚和黑塞哥维那",
             ),
           ],
-          latLng: const [44, 18],
+          latLng: const LatLng(44, 18),
           bordersCodes: const ["Hrv", "Mne", "Srb"],
           areaMetric: 51209,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bosnian, Herzegovinian",
-              m: "Bosnian, Herzegovinian",
+              female: "Bosnian, Herzegovinian",
+              male: "Bosnian, Herzegovinian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bosnienne",
-              m: "Bosnien",
+              female: "Bosnienne",
+              male: "Bosnien",
             ),
           ],
           emoji: "🇧🇦",
@@ -9069,13 +9107,13 @@ class CountryBih extends WorldCountry {
             openStreetMaps: "relation/2528142",
           ),
           population: 3280815,
-          gini: const Gini(year: 2011, value: 33),
+          gini: const Gini(year: 2011, coefficient: 33),
           fifa: "BIH",
-          car: const Car(signs: ["BIH"]),
+          car: const Car(sign: "BIH"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Sarajevo"],
-            latLng: [43.87, 18.42],
+            capital: Capital("Sarajevo"),
+            latLng: LatLng(43.87, 18.42),
           ),
           postalCode: const PostalCode(),
         );
@@ -9242,18 +9280,18 @@ class CountryMhl extends WorldCountry {
               common: "马绍尔群岛",
             ),
           ],
-          latLng: const [9, 168],
+          latLng: const LatLng(9, 168),
           areaMetric: 181,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Marshallese",
-              m: "Marshallese",
+              female: "Marshallese",
+              male: "Marshallese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Marshallaise",
-              m: "Marshallais",
+              female: "Marshallaise",
+              male: "Marshallais",
             ),
           ],
           emoji: "🇲🇭",
@@ -9262,10 +9300,12 @@ class CountryMhl extends WorldCountry {
             openStreetMaps: "relation/571771",
           ),
           population: 59194,
-          car: const Car(signs: ["MH"]),
+          car: const Car(sign: "MH"),
           timezones: const ["UTC+12:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Majuro"], latLng: [7.1, 171.38]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Majuro"),
+            latLng: LatLng(7.1, 171.38),
+          ),
         );
 }
 
@@ -9421,7 +9461,7 @@ class CountryIta extends WorldCountry {
               common: "意大利",
             ),
           ],
-          latLng: const [42.83333333, 12.83333333],
+          latLng: const LatLng(42.83333333, 12.83333333),
           bordersCodes: const [
             "Aut",
             "Fra",
@@ -9434,13 +9474,13 @@ class CountryIta extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Italian",
-              m: "Italian",
+              female: "Italian",
+              male: "Italian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Italienne",
-              m: "Italien",
+              female: "Italienne",
+              male: "Italien",
             ),
           ],
           emoji: "🇮🇹",
@@ -9449,12 +9489,14 @@ class CountryIta extends WorldCountry {
             openStreetMaps: "relation/365331",
           ),
           population: 59554023,
-          gini: const Gini(year: 2017, value: 35.9),
+          gini: const Gini(year: 2017, coefficient: 35.9),
           fifa: "ITA",
-          car: const Car(signs: ["I"]),
+          car: const Car(sign: "I"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Rome"], latLng: [41.9, 12.48]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Rome"),
+            latLng: LatLng(41.9, 12.48),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -9614,13 +9656,13 @@ class CountryTkl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "托克劳", common: "托克劳"),
           ],
-          latLng: const [-9, -172],
+          latLng: const LatLng(-9, -172),
           areaMetric: 12,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tokelauan",
-              m: "Tokelauan",
+              female: "Tokelauan",
+              male: "Tokelauan",
             ),
           ],
           emoji: "🇹🇰",
@@ -9629,12 +9671,12 @@ class CountryTkl extends WorldCountry {
             openStreetMaps: "relation/2186600",
           ),
           population: 1411,
-          car: const Car(signs: [""], isRightSide: false),
+          car: const Car(isRightSide: false),
           timezones: const ["UTC+13:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Fakaofo"],
-            latLng: [-9.38, -171.22],
+            capital: Capital("Fakaofo"),
+            latLng: LatLng(-9.38, -171.22),
           ),
         );
 }
@@ -9791,19 +9833,19 @@ class CountryGab extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "加蓬共和国", common: "加蓬"),
           ],
-          latLng: const [-1, 11.75],
+          latLng: const LatLng(-1, 11.75),
           bordersCodes: const ["Cmr", "Cog", "Gnq"],
           areaMetric: 267668,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Gabonese",
-              m: "Gabonese",
+              female: "Gabonese",
+              male: "Gabonese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Gabonaise",
-              m: "Gabonais",
+              female: "Gabonaise",
+              male: "Gabonais",
             ),
           ],
           emoji: "🇬🇦",
@@ -9812,13 +9854,13 @@ class CountryGab extends WorldCountry {
             openStreetMaps: "relation/192793",
           ),
           population: 2225728,
-          gini: const Gini(year: 2017, value: 38),
+          gini: const Gini(year: 2017, coefficient: 38),
           fifa: "GAB",
-          car: const Car(signs: ["G"]),
+          car: const Car(sign: "G"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Libreville"],
-            latLng: [0.38, 9.45],
+            capital: Capital("Libreville"),
+            latLng: LatLng(0.38, 9.45),
           ),
         );
 }
@@ -9972,13 +10014,13 @@ class CountryCck extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "科科斯", common: "科科斯"),
           ],
-          latLng: const [12.1642, 96.871],
+          latLng: const LatLng(12.1642, 96.871),
           areaMetric: 14,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cocos Islander",
-              m: "Cocos Islander",
+              female: "Cocos Islander",
+              male: "Cocos Islander",
             ),
           ],
           emoji: "🇨🇨",
@@ -9987,12 +10029,12 @@ class CountryCck extends WorldCountry {
             openStreetMaps: "relation/82636",
           ),
           population: 544,
-          car: const Car(signs: ["AUS"], isRightSide: false),
+          car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+06:30"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["West Island"],
-            latLng: [-12.17, 96.83],
+            capital: Capital("West Island"),
+            latLng: LatLng(-12.17, 96.83),
           ),
         );
 }
@@ -10159,7 +10201,7 @@ class CountryPak extends WorldCountry {
               common: "巴基斯坦",
             ),
           ],
-          latLng: const [30, 70],
+          latLng: const LatLng(30, 70),
           bordersCodes: const [
             "Afg",
             "Chn",
@@ -10170,13 +10212,13 @@ class CountryPak extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Pakistani",
-              m: "Pakistani",
+              female: "Pakistani",
+              male: "Pakistani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Pakistanaise",
-              m: "Pakistanais",
+              female: "Pakistanaise",
+              male: "Pakistanais",
             ),
           ],
           emoji: "🇵🇰",
@@ -10185,13 +10227,13 @@ class CountryPak extends WorldCountry {
             openStreetMaps: "relation/307573",
           ),
           population: 220892331,
-          gini: const Gini(year: 2018, value: 31.6),
+          gini: const Gini(year: 2018, coefficient: 31.6),
           fifa: "PAK",
-          car: const Car(signs: ["PK"], isRightSide: false),
+          car: const Car(sign: "PK", isRightSide: false),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Islamabad"],
-            latLng: [33.68, 73.05],
+            capital: Capital("Islamabad"),
+            latLng: LatLng(33.68, 73.05),
           ),
           postalCode: const PostalCode(),
         );
@@ -10346,18 +10388,18 @@ class CountryReu extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "留尼旺岛", common: "留尼旺岛"),
           ],
-          latLng: const [-21.15, 55.5],
+          latLng: const LatLng(-21.15, 55.5),
           areaMetric: 2511,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Réunionese",
-              m: "Réunionese",
+              female: "Réunionese",
+              male: "Réunionese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Réunionnaise",
-              m: "Réunionnais",
+              female: "Réunionnaise",
+              male: "Réunionnais",
             ),
           ],
           emoji: "🇷🇪",
@@ -10366,12 +10408,12 @@ class CountryReu extends WorldCountry {
             openStreetMaps: "relation/1785276",
           ),
           population: 840974,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC+04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Saint-Denis"],
-            latLng: [-20.88, 55.45],
+            capital: Capital("Saint-Denis"),
+            latLng: LatLng(-20.88, 55.45),
           ),
           postalCode:
               const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\\d{2})$"),
@@ -10541,18 +10583,18 @@ class CountryMus extends WorldCountry {
               common: "毛里求斯",
             ),
           ],
-          latLng: const [-20.28333333, 57.55],
+          latLng: const LatLng(-20.28333333, 57.55),
           areaMetric: 2040,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mauritian",
-              m: "Mauritian",
+              female: "Mauritian",
+              male: "Mauritian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mauricienne",
-              m: "Mauricien",
+              female: "Mauricienne",
+              male: "Mauricien",
             ),
           ],
           emoji: "🇲🇺",
@@ -10561,13 +10603,13 @@ class CountryMus extends WorldCountry {
             openStreetMaps: "relation/535828",
           ),
           population: 1265740,
-          gini: const Gini(year: 2017, value: 36.8),
+          gini: const Gini(year: 2017, coefficient: 36.8),
           fifa: "MRI",
-          car: const Car(signs: ["MS"], isRightSide: false),
+          car: const Car(sign: "MS", isRightSide: false),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port Louis"],
-            latLng: [-20.15, 57.48],
+            capital: Capital("Port Louis"),
+            latLng: LatLng(-20.15, 57.48),
           ),
         );
 }
@@ -10720,18 +10762,18 @@ class CountryGrd extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "格林纳达", common: "格林纳达"),
           ],
-          latLng: const [12.11666666, -61.66666666],
+          latLng: const LatLng(12.11666666, -61.66666666),
           areaMetric: 344,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Grenadian",
-              m: "Grenadian",
+              female: "Grenadian",
+              male: "Grenadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Grenadienne",
-              m: "Grenadien",
+              female: "Grenadienne",
+              male: "Grenadien",
             ),
           ],
           emoji: "🇬🇩",
@@ -10741,11 +10783,11 @@ class CountryGrd extends WorldCountry {
           ),
           population: 112519,
           fifa: "GRN",
-          car: const Car(signs: ["WG"], isRightSide: false),
+          car: const Car(sign: "WG", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["St. George's"],
-            latLng: [32.38, -64.68],
+            capital: Capital("St. George's"),
+            latLng: LatLng(32.38, -64.68),
           ),
         );
 }
@@ -10898,19 +10940,19 @@ class CountryOmn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "阿曼苏丹国", common: "阿曼"),
           ],
-          latLng: const [21, 57],
+          latLng: const LatLng(21, 57),
           bordersCodes: const ["Sau", "Are", "Yem"],
           areaMetric: 309500,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Omani",
-              m: "Omani",
+              female: "Omani",
+              male: "Omani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Omanaise",
-              m: "Omanais",
+              female: "Omanaise",
+              male: "Omanais",
             ),
           ],
           emoji: "🇴🇲",
@@ -10920,11 +10962,13 @@ class CountryOmn extends WorldCountry {
           ),
           population: 5106622,
           fifa: "OMA",
-          car: const Car(signs: ["OM"]),
+          car: const Car(sign: "OM"),
           timezones: const ["UTC+04:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Muscat"], latLng: [23.62, 58.58]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Muscat"),
+            latLng: LatLng(23.62, 58.58),
+          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
         );
@@ -11082,7 +11126,7 @@ class CountryBfa extends WorldCountry {
               common: "布基纳法索",
             ),
           ],
-          latLng: const [13, -2],
+          latLng: const LatLng(13, -2),
           landlocked: true,
           bordersCodes: const [
             "Ben",
@@ -11096,13 +11140,13 @@ class CountryBfa extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Burkinabe",
-              m: "Burkinabe",
+              female: "Burkinabe",
+              male: "Burkinabe",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Burkinabée",
-              m: "Burkinabé",
+              female: "Burkinabée",
+              male: "Burkinabé",
             ),
           ],
           emoji: "🇧🇫",
@@ -11111,13 +11155,13 @@ class CountryBfa extends WorldCountry {
             openStreetMaps: "relation/192783",
           ),
           population: 20903278,
-          gini: const Gini(year: 2014, value: 35.3),
+          gini: const Gini(year: 2014, coefficient: 35.3),
           fifa: "BFA",
-          car: const Car(signs: ["BF"]),
+          car: const Car(sign: "BF"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ouagadougou"],
-            latLng: [12.37, -1.52],
+            capital: Capital("Ouagadougou"),
+            latLng: LatLng(12.37, -1.52),
           ),
         );
 }
@@ -11283,18 +11327,18 @@ class CountryWsm extends WorldCountry {
               common: "萨摩亚",
             ),
           ],
-          latLng: const [-13.58333333, -172.33333333],
+          latLng: const LatLng(-13.58333333, -172.33333333),
           areaMetric: 2842,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Samoan",
-              m: "Samoan",
+              female: "Samoan",
+              male: "Samoan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Samoane",
-              m: "Samoan",
+              female: "Samoane",
+              male: "Samoan",
             ),
           ],
           emoji: "🇼🇸",
@@ -11303,13 +11347,13 @@ class CountryWsm extends WorldCountry {
             openStreetMaps: "relation/1872673",
           ),
           population: 198410,
-          gini: const Gini(year: 2013, value: 38.7),
+          gini: const Gini(year: 2013, coefficient: 38.7),
           fifa: "SAM",
-          car: const Car(signs: ["WS"], isRightSide: false),
+          car: const Car(sign: "WS", isRightSide: false),
           timezones: const ["UTC+13:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Apia"],
-            latLng: [-13.82, -171.77],
+            capital: Capital("Apia"),
+            latLng: LatLng(-13.82, -171.77),
           ),
         );
 }
@@ -11466,18 +11510,18 @@ class CountryTto extends WorldCountry {
               common: "特立尼达和多巴哥",
             ),
           ],
-          latLng: const [10.6918, 61.2225],
+          latLng: const LatLng(10.6918, 61.2225),
           areaMetric: 5130,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Trinidadian",
-              m: "Trinidadian",
+              female: "Trinidadian",
+              male: "Trinidadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Trinidadienne",
-              m: "Trinidadien",
+              female: "Trinidadienne",
+              male: "Trinidadien",
             ),
           ],
           emoji: "🇹🇹",
@@ -11486,13 +11530,13 @@ class CountryTto extends WorldCountry {
             openStreetMaps: "relation/555717",
           ),
           population: 1399491,
-          gini: const Gini(year: 1992, value: 40.3),
+          gini: const Gini(year: 1992, coefficient: 40.3),
           fifa: "TRI",
-          car: const Car(signs: ["TT"], isRightSide: false),
+          car: const Car(sign: "TT", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port of Spain"],
-            latLng: [10.65, -61.52],
+            capital: Capital("Port of Spain"),
+            latLng: LatLng(10.65, -61.52),
           ),
         );
 }
@@ -11649,18 +11693,18 @@ class CountryVct extends WorldCountry {
               common: "圣文森特和格林纳丁斯",
             ),
           ],
-          latLng: const [13.25, -61.2],
+          latLng: const LatLng(13.25, -61.2),
           areaMetric: 389,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Vincentian",
-              m: "Saint Vincentian",
+              female: "Saint Vincentian",
+              male: "Saint Vincentian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vincentaise",
-              m: "Vincentais",
+              female: "Vincentaise",
+              male: "Vincentais",
             ),
           ],
           emoji: "🇻🇨",
@@ -11670,11 +11714,11 @@ class CountryVct extends WorldCountry {
           ),
           population: 110947,
           fifa: "VIN",
-          car: const Car(signs: ["WV"], isRightSide: false),
+          car: const Car(sign: "WV", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Kingstown"],
-            latLng: [13.13, -61.22],
+            capital: Capital("Kingstown"),
+            latLng: LatLng(13.13, -61.22),
           ),
         );
 }
@@ -11828,18 +11872,18 @@ class CountryPlw extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "帕劳共和国", common: "帕劳"),
           ],
-          latLng: const [7.5, 134.5],
+          latLng: const LatLng(7.5, 134.5),
           areaMetric: 459,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Palauan",
-              m: "Palauan",
+              female: "Palauan",
+              male: "Palauan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Paluane",
-              m: "Paluan",
+              female: "Paluane",
+              male: "Paluan",
             ),
           ],
           emoji: "🇵🇼",
@@ -11848,11 +11892,11 @@ class CountryPlw extends WorldCountry {
             openStreetMaps: "relation/571805",
           ),
           population: 18092,
-          car: const Car(signs: ["PAL"]),
+          car: const Car(sign: "PAL"),
           timezones: const ["UTC+09:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ngerulmud"],
-            latLng: [7.5, 134.62],
+            capital: Capital("Ngerulmud"),
+            latLng: LatLng(7.5, 134.62),
           ),
           postalCode:
               const PostalCode(format: "96940", regExpPattern: r"^(96940)$"),
@@ -12069,7 +12113,7 @@ class CountryZaf extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "南非共和国", common: "南非"),
           ],
-          latLng: const [-29, 24],
+          latLng: const LatLng(-29, 24),
           bordersCodes: const [
             "Bwa",
             "Lso",
@@ -12082,13 +12126,13 @@ class CountryZaf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "South African",
-              m: "South African",
+              female: "South African",
+              male: "South African",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sud-africaine",
-              m: "Sud-africain",
+              female: "Sud-africaine",
+              male: "Sud-africain",
             ),
           ],
           emoji: "🇿🇦",
@@ -12097,13 +12141,17 @@ class CountryZaf extends WorldCountry {
             openStreetMaps: "relation/87565",
           ),
           population: 59308690,
-          gini: const Gini(year: 2014, value: 63),
+          gini: const Gini(year: 2014, coefficient: 63),
           fifa: "RSA",
-          car: const Car(signs: ["ZA"], isRightSide: false),
+          car: const Car(sign: "ZA", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Pretoria", "Bloemfontein", "Cape Town"],
-            latLng: [-25.7, 28.22],
+            capital: Capital(
+              "Pretoria",
+              deJure: "Bloemfontein",
+              third: "Cape Town",
+            ),
+            latLng: LatLng(-25.7, 28.22),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -12266,7 +12314,7 @@ class CountryAgo extends WorldCountry {
               common: "安哥拉",
             ),
           ],
-          latLng: const [-12.5, 18.5],
+          latLng: const LatLng(-12.5, 18.5),
           bordersCodes: const [
             "Cog",
             "Cod",
@@ -12277,13 +12325,13 @@ class CountryAgo extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Angolan",
-              m: "Angolan",
+              female: "Angolan",
+              male: "Angolan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Angolaise",
-              m: "Angolais",
+              female: "Angolaise",
+              male: "Angolais",
             ),
           ],
           emoji: "🇦🇴",
@@ -12292,12 +12340,14 @@ class CountryAgo extends WorldCountry {
             openStreetMaps: "relation/195267",
           ),
           population: 32866268,
-          gini: const Gini(year: 2018, value: 51.3),
+          gini: const Gini(year: 2018, coefficient: 51.3),
           fifa: "ANG",
-          car: const Car(signs: ["ANG"]),
+          car: const Car(sign: "ANG"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Luanda"], latLng: [-8.83, 13.22]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Luanda"),
+            latLng: LatLng(-8.83, 13.22),
+          ),
         );
 }
 
@@ -12451,19 +12501,19 @@ class CountryKor extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "大韩民国", common: "韩国"),
           ],
-          latLng: const [37, 127.5],
+          latLng: const LatLng(37, 127.5),
           bordersCodes: const ["Prk"],
           areaMetric: 100210,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "South Korean",
-              m: "South Korean",
+              female: "South Korean",
+              male: "South Korean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sud-coréenne",
-              m: "Sud-coréen",
+              female: "Sud-coréenne",
+              male: "Sud-coréen",
             ),
           ],
           emoji: "🇰🇷",
@@ -12472,12 +12522,14 @@ class CountryKor extends WorldCountry {
             openStreetMaps: "relation/307756",
           ),
           population: 51780579,
-          gini: const Gini(year: 2016, value: 31.4),
+          gini: const Gini(year: 2016, coefficient: 31.4),
           fifa: "KOR",
-          car: const Car(signs: ["ROK"]),
+          car: const Car(sign: "ROK"),
           timezones: const ["UTC+09:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Seoul"], latLng: [37.55, 126.98]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Seoul"),
+            latLng: LatLng(37.55, 126.98),
+          ),
           postalCode: const PostalCode(
             format: "SEOUL ###-###",
             regExpPattern: r"^(?:SEOUL)*(\\d{6})$",
@@ -12640,18 +12692,18 @@ class CountryAtf extends WorldCountry {
               common: "法国南部和南极土地",
             ),
           ],
-          latLng: const [-49.25, 69.167],
+          latLng: const LatLng(-49.25, 69.167),
           areaMetric: 7747,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "French",
-              m: "French",
+              female: "French",
+              male: "French",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Française",
-              m: "Français",
+              female: "Française",
+              male: "Français",
             ),
           ],
           emoji: "🇹🇫",
@@ -12660,11 +12712,10 @@ class CountryAtf extends WorldCountry {
             openStreetMaps: "relation/2186658",
           ),
           population: 400,
-          car: const Car(signs: [""]),
           timezones: const ["UTC+05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port-aux-Français"],
-            latLng: [48.81, -1.4],
+            capital: Capital("Port-aux-Français"),
+            latLng: LatLng(48.81, -1.4),
           ),
         );
 }
@@ -12822,18 +12873,18 @@ class CountryIsl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "冰岛", common: "冰岛"),
           ],
-          latLng: const [65, -18],
+          latLng: const LatLng(65, -18),
           areaMetric: 103000,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Icelander",
-              m: "Icelander",
+              female: "Icelander",
+              male: "Icelander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Islandaise",
-              m: "Islandais",
+              female: "Islandaise",
+              male: "Islandais",
             ),
           ],
           emoji: "🇮🇸",
@@ -12842,13 +12893,13 @@ class CountryIsl extends WorldCountry {
             openStreetMaps: "relation/299133",
           ),
           population: 366425,
-          gini: const Gini(year: 2017, value: 26.1),
+          gini: const Gini(year: 2017, coefficient: 26.1),
           fifa: "ISL",
-          car: const Car(signs: ["IS"]),
+          car: const Car(sign: "IS"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Reykjavik"],
-            latLng: [64.15, -21.95],
+            capital: Capital("Reykjavik"),
+            latLng: LatLng(64.15, -21.95),
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
@@ -13008,19 +13059,19 @@ class CountryGuf extends WorldCountry {
               common: "法属圭亚那",
             ),
           ],
-          latLng: const [4, -53],
+          latLng: const LatLng(4, -53),
           bordersCodes: const ["Bra", "Sur"],
           areaMetric: 83534,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guianan",
-              m: "Guianan",
+              female: "Guianan",
+              male: "Guianan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guyanaise",
-              m: "Guyanais",
+              female: "Guyanaise",
+              male: "Guyanais",
             ),
           ],
           emoji: "🇬🇫",
@@ -13029,11 +13080,11 @@ class CountryGuf extends WorldCountry {
             openStreetMaps: "relation/2502058",
           ),
           population: 254541,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Cayenne"],
-            latLng: [4.94, -52.33],
+            capital: Capital("Cayenne"),
+            latLng: LatLng(4.94, -52.33),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)3\\d{2})$"),
         );
@@ -13200,19 +13251,19 @@ class CountryNor extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "挪威王国", common: "挪威"),
           ],
-          latLng: const [62, 10],
+          latLng: const LatLng(62, 10),
           bordersCodes: const ["Fin", "Swe", "Rus"],
           areaMetric: 323802,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Norwegian",
-              m: "Norwegian",
+              female: "Norwegian",
+              male: "Norwegian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Norvégienne",
-              m: "Norvégien",
+              female: "Norvégienne",
+              male: "Norvégien",
             ),
           ],
           emoji: "🇳🇴",
@@ -13221,12 +13272,14 @@ class CountryNor extends WorldCountry {
             openStreetMaps: "relation/2978650",
           ),
           population: 5379475,
-          gini: const Gini(year: 2018, value: 27.6),
+          gini: const Gini(year: 2018, coefficient: 27.6),
           fifa: "NOR",
-          car: const Car(signs: ["N"]),
+          car: const Car(sign: "N"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Oslo"], latLng: [59.92, 10.75]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Oslo"),
+            latLng: LatLng(59.92, 10.75),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -13380,7 +13433,7 @@ class CountryHun extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "匈牙利", common: "匈牙利"),
           ],
-          latLng: const [47, 20],
+          latLng: const LatLng(47, 20),
           landlocked: true,
           bordersCodes: const [
             "Aut",
@@ -13395,13 +13448,13 @@ class CountryHun extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Hungarian",
-              m: "Hungarian",
+              female: "Hungarian",
+              male: "Hungarian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Hongroise",
-              m: "Hongrois",
+              female: "Hongroise",
+              male: "Hongrois",
             ),
           ],
           emoji: "🇭🇺",
@@ -13410,12 +13463,14 @@ class CountryHun extends WorldCountry {
             openStreetMaps: "relation/21335",
           ),
           population: 9749763,
-          gini: const Gini(year: 2018, value: 29.6),
+          gini: const Gini(year: 2018, coefficient: 29.6),
           fifa: "HUN",
-          car: const Car(signs: ["H"]),
+          car: const Car(sign: "H"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Budapest"], latLng: [47.5, 19.08]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Budapest"),
+            latLng: LatLng(47.5, 19.08),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -13580,19 +13635,19 @@ class CountryPse extends WorldCountry {
               common: "巴勒斯坦",
             ),
           ],
-          latLng: const [31.9, 35.2],
+          latLng: const LatLng(31.9, 35.2),
           bordersCodes: const ["Isr", "Egy", "Jor"],
           areaMetric: 6220,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Palestinian",
-              m: "Palestinian",
+              female: "Palestinian",
+              male: "Palestinian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Palestinienne",
-              m: "Palestinien",
+              female: "Palestinienne",
+              male: "Palestinien",
             ),
           ],
           emoji: "🇵🇸",
@@ -13601,14 +13656,14 @@ class CountryPse extends WorldCountry {
             openStreetMaps: "relation/1703814",
           ),
           population: 4803269,
-          gini: const Gini(year: 2016, value: 33.7),
+          gini: const Gini(year: 2016, coefficient: 33.7),
           fifa: "PLE",
-          car: const Car(signs: ["PS"]),
+          car: const Car(sign: "PS"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Ramallah", "Jerusalem"],
-            latLng: [31.9, 35.2],
+            capital: Capital("Ramallah", deJure: "Jerusalem"),
+            latLng: LatLng(31.9, 35.2),
           ),
         );
 }
@@ -13761,18 +13816,18 @@ class CountryLca extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "圣卢西亚", common: "圣卢西亚"),
           ],
-          latLng: const [13.88333333, -60.96666666],
+          latLng: const LatLng(13.88333333, -60.96666666),
           areaMetric: 616,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Lucian",
-              m: "Saint Lucian",
+              female: "Saint Lucian",
+              male: "Saint Lucian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Lucienne",
-              m: "Saint-Lucien",
+              female: "Saint-Lucienne",
+              male: "Saint-Lucien",
             ),
           ],
           emoji: "🇱🇨",
@@ -13781,12 +13836,14 @@ class CountryLca extends WorldCountry {
             openStreetMaps: "relation/550728",
           ),
           population: 183629,
-          gini: const Gini(year: 2016, value: 51.2),
+          gini: const Gini(year: 2016, coefficient: 51.2),
           fifa: "LCA",
-          car: const Car(signs: ["WL"], isRightSide: false),
+          car: const Car(sign: "WL", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Castries"], latLng: [14, -61]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Castries"),
+            latLng: LatLng(14, -61),
+          ),
         );
 }
 
@@ -13946,20 +14003,20 @@ class CountryNpl extends WorldCountry {
               common: "尼泊尔",
             ),
           ],
-          latLng: const [28, 84],
+          latLng: const LatLng(28, 84),
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
           areaMetric: 147181,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nepalese",
-              m: "Nepalese",
+              female: "Nepalese",
+              male: "Nepalese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Népalaise",
-              m: "Népalais",
+              female: "Népalaise",
+              male: "Népalais",
             ),
           ],
           emoji: "🇳🇵",
@@ -13968,14 +14025,14 @@ class CountryNpl extends WorldCountry {
             openStreetMaps: "relation/184633",
           ),
           population: 29136808,
-          gini: const Gini(year: 2010, value: 32.8),
+          gini: const Gini(year: 2010, coefficient: 32.8),
           fifa: "NEP",
-          car: const Car(signs: ["NEP"], isRightSide: false),
+          car: const Car(sign: "NEP", isRightSide: false),
           timezones: const ["UTC+05:45"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Kathmandu"],
-            latLng: [27.72, 85.32],
+            capital: Capital("Kathmandu"),
+            latLng: LatLng(27.72, 85.32),
           ),
           postalCode: const PostalCode(),
         );
@@ -14129,20 +14186,20 @@ class CountryMng extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "蒙古", common: "蒙古"),
           ],
-          latLng: const [46, 105],
+          latLng: const LatLng(46, 105),
           landlocked: true,
           bordersCodes: const ["Chn", "Rus"],
           areaMetric: 1564110,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mongolian",
-              m: "Mongolian",
+              female: "Mongolian",
+              male: "Mongolian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mongole",
-              m: "Mongol",
+              female: "Mongole",
+              male: "Mongol",
             ),
           ],
           emoji: "🇲🇳",
@@ -14151,13 +14208,13 @@ class CountryMng extends WorldCountry {
             openStreetMaps: "relation/161033",
           ),
           population: 3278292,
-          gini: const Gini(year: 2018, value: 32.7),
+          gini: const Gini(year: 2018, coefficient: 32.7),
           fifa: "MNG",
-          car: const Car(signs: ["MGL"]),
+          car: const Car(sign: "MGL"),
           timezones: const ["UTC+07:00", "UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ulan Bator"],
-            latLng: [47.92, 106.91],
+            capital: Capital("Ulan Bator"),
+            latLng: LatLng(47.92, 106.91),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -14318,7 +14375,7 @@ class CountryZmb extends WorldCountry {
               common: "赞比亚",
             ),
           ],
-          latLng: const [-15, 30],
+          latLng: const LatLng(-15, 30),
           landlocked: true,
           bordersCodes: const [
             "Ago",
@@ -14334,13 +14391,13 @@ class CountryZmb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Zambian",
-              m: "Zambian",
+              female: "Zambian",
+              male: "Zambian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Zambienne",
-              m: "Zambien",
+              female: "Zambienne",
+              male: "Zambien",
             ),
           ],
           emoji: "🇿🇲",
@@ -14349,12 +14406,14 @@ class CountryZmb extends WorldCountry {
             openStreetMaps: "relation/195271",
           ),
           population: 18383956,
-          gini: const Gini(year: 2015, value: 57.1),
+          gini: const Gini(year: 2015, coefficient: 57.1),
           fifa: "ZAM",
-          car: const Car(signs: ["RNR"], isRightSide: false),
+          car: const Car(sign: "RNR", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Lusaka"], latLng: [-15.42, 28.28]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Lusaka"),
+            latLng: LatLng(-15.42, 28.28),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -14516,13 +14575,13 @@ class CountryWlf extends WorldCountry {
               common: "瓦利斯和富图纳群岛",
             ),
           ],
-          latLng: const [-13.3, -176.2],
+          latLng: const LatLng(-13.3, -176.2),
           areaMetric: 142,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Wallis and Futuna Islander",
-              m: "Wallis and Futuna Islander",
+              female: "Wallis and Futuna Islander",
+              male: "Wallis and Futuna Islander",
             ),
           ],
           emoji: "🇼🇫",
@@ -14531,12 +14590,12 @@ class CountryWlf extends WorldCountry {
             openStreetMaps: "relation/3412448",
           ),
           population: 11750,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC+12:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Mata-Utu"],
-            latLng: [-13.95, -171.93],
+            capital: Capital("Mata-Utu"),
+            latLng: LatLng(-13.95, -171.93),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(986\\d{2})$"),
         );
@@ -14699,20 +14758,20 @@ class CountryMwi extends WorldCountry {
               common: "马拉维",
             ),
           ],
-          latLng: const [-13.5, 34],
+          latLng: const LatLng(-13.5, 34),
           landlocked: true,
           bordersCodes: const ["Moz", "Tza", "Zmb"],
           areaMetric: 118484,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Malawian",
-              m: "Malawian",
+              female: "Malawian",
+              male: "Malawian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malawienne",
-              m: "Malawien",
+              female: "Malawienne",
+              male: "Malawien",
             ),
           ],
           emoji: "🇲🇼",
@@ -14721,13 +14780,13 @@ class CountryMwi extends WorldCountry {
             openStreetMaps: "relation/195290",
           ),
           population: 19129955,
-          gini: const Gini(year: 2016, value: 44.7),
+          gini: const Gini(year: 2016, coefficient: 44.7),
           fifa: "MWI",
-          car: const Car(signs: ["MW"], isRightSide: false),
+          car: const Car(sign: "MW", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Lilongwe"],
-            latLng: [-13.97, 33.78],
+            capital: Capital("Lilongwe"),
+            latLng: LatLng(-13.97, 33.78),
           ),
         );
 }
@@ -14884,18 +14943,18 @@ class CountryBhr extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "巴林王国", common: "巴林"),
           ],
-          latLng: const [26, 50.55],
+          latLng: const LatLng(26, 50.55),
           areaMetric: 765,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bahraini",
-              m: "Bahraini",
+              female: "Bahraini",
+              male: "Bahraini",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bahreïnienne",
-              m: "Bahreïnien",
+              female: "Bahreïnienne",
+              male: "Bahreïnien",
             ),
           ],
           emoji: "🇧🇭",
@@ -14905,10 +14964,12 @@ class CountryBhr extends WorldCountry {
           ),
           population: 1701583,
           fifa: "BHR",
-          car: const Car(signs: ["BRN"]),
+          car: const Car(sign: "BRN"),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Manama"], latLng: [26.23, 50.57]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Manama"),
+            latLng: LatLng(26.23, 50.57),
+          ),
           postalCode: const PostalCode(
             format: "####|###",
             regExpPattern: r"^(\\d{3}\\d?)$",
@@ -15064,7 +15125,7 @@ class CountryUkr extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "乌克兰", common: "乌克兰"),
           ],
-          latLng: const [49, 32],
+          latLng: const LatLng(49, 32),
           bordersCodes: const [
             "Blr",
             "Hun",
@@ -15078,13 +15139,13 @@ class CountryUkr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ukrainian",
-              m: "Ukrainian",
+              female: "Ukrainian",
+              male: "Ukrainian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ukrainienne",
-              m: "Ukrainien",
+              female: "Ukrainienne",
+              male: "Ukrainien",
             ),
           ],
           emoji: "🇺🇦",
@@ -15093,12 +15154,14 @@ class CountryUkr extends WorldCountry {
             openStreetMaps: "relation/60199",
           ),
           population: 44134693,
-          gini: const Gini(year: 2019, value: 26.6),
+          gini: const Gini(year: 2019, coefficient: 26.6),
           fifa: "UKR",
-          car: const Car(signs: ["UA"]),
+          car: const Car(sign: "UA"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Kyiv"], latLng: [50.43, 30.52]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Kyiv"),
+            latLng: LatLng(50.43, 30.52),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -15262,18 +15325,18 @@ class CountryNru extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "瑙鲁共和国", common: "瑙鲁"),
           ],
-          latLng: const [-0.53333333, 166.91666666],
+          latLng: const LatLng(-0.53333333, 166.91666666),
           areaMetric: 21,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nauruan",
-              m: "Nauruan",
+              female: "Nauruan",
+              male: "Nauruan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nauruane",
-              m: "Nauruan",
+              female: "Nauruane",
+              male: "Nauruan",
             ),
           ],
           emoji: "🇳🇷",
@@ -15282,11 +15345,13 @@ class CountryNru extends WorldCountry {
             openStreetMaps: "relation/571804",
           ),
           population: 10834,
-          gini: const Gini(year: 2012, value: 34.8),
-          car: const Car(signs: ["NAU"], isRightSide: false),
+          gini: const Gini(year: 2012, coefficient: 34.8),
+          car: const Car(sign: "NAU", isRightSide: false),
           timezones: const ["UTC+12:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Yaren"], latLng: [-0.55, 166.92]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Yaren"),
+            latLng: LatLng(-0.55, 166.92),
+          ),
         );
 }
 
@@ -15443,18 +15508,18 @@ class CountryMyt extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马约特", common: "马约特"),
           ],
-          latLng: const [-12.83333333, 45.16666666],
+          latLng: const LatLng(-12.83333333, 45.16666666),
           areaMetric: 374,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mahoran",
-              m: "Mahoran",
+              female: "Mahoran",
+              male: "Mahoran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mahoraise",
-              m: "Mahorais",
+              female: "Mahoraise",
+              male: "Mahorais",
             ),
           ],
           emoji: "🇾🇹",
@@ -15463,12 +15528,12 @@ class CountryMyt extends WorldCountry {
             openStreetMaps: "relation/1259885",
           ),
           population: 226915,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC+03:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Mamoudzou"],
-            latLng: [-12.78, 45.22],
+            capital: Capital("Mamoudzou"),
+            latLng: LatLng(-12.78, 45.22),
           ),
           postalCode: const PostalCode(),
         );
@@ -15626,7 +15691,7 @@ class CountryDza extends WorldCountry {
               common: "阿尔及利亚",
             ),
           ],
-          latLng: const [28, 3],
+          latLng: const LatLng(28, 3),
           bordersCodes: const [
             "Tun",
             "Lby",
@@ -15640,13 +15705,13 @@ class CountryDza extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Algerian",
-              m: "Algerian",
+              female: "Algerian",
+              male: "Algerian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Algérienne",
-              m: "Algérien",
+              female: "Algérienne",
+              male: "Algérien",
             ),
           ],
           emoji: "🇩🇿",
@@ -15655,13 +15720,15 @@ class CountryDza extends WorldCountry {
             openStreetMaps: "relation/192756",
           ),
           population: 44700000,
-          gini: const Gini(year: 2011, value: 27.6),
+          gini: const Gini(year: 2011, coefficient: 27.6),
           fifa: "ALG",
-          car: const Car(signs: ["DZ"]),
+          car: const Car(sign: "DZ"),
           timezones: const ["UTC+01:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Algiers"], latLng: [36.75, 3.05]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Algiers"),
+            latLng: LatLng(36.75, 3.05),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -15856,19 +15923,19 @@ class CountryCan extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "加拿大", common: "加拿大"),
           ],
-          latLng: const [60, -95],
+          latLng: const LatLng(60, -95),
           bordersCodes: const ["Usa"],
           areaMetric: 9984670,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Canadian",
-              m: "Canadian",
+              female: "Canadian",
+              male: "Canadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Canadienne",
-              m: "Canadien",
+              female: "Canadienne",
+              male: "Canadien",
             ),
           ],
           emoji: "🇨🇦",
@@ -15877,9 +15944,9 @@ class CountryCan extends WorldCountry {
             openStreetMaps: "relation/1428125",
           ),
           population: 38005238,
-          gini: const Gini(year: 2017, value: 33.3),
+          gini: const Gini(year: 2017, coefficient: 33.3),
           fifa: "CAN",
-          car: const Car(signs: ["CDN"]),
+          car: const Car(sign: "CDN"),
           timezones: const [
             "UTC-08:00",
             "UTC-07:00",
@@ -15889,8 +15956,10 @@ class CountryCan extends WorldCountry {
             "UTC-03:30",
           ],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Ottawa"], latLng: [45.42, -75.7]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Ottawa"),
+            latLng: LatLng(45.42, -75.7),
+          ),
           postalCode: const PostalCode(
             format: "@#@ #@#",
             regExpPattern:
@@ -16055,20 +16124,20 @@ class CountryLie extends WorldCountry {
               common: "列支敦士登",
             ),
           ],
-          latLng: const [47.26666666, 9.53333333],
+          latLng: const LatLng(47.26666666, 9.53333333),
           landlocked: true,
           bordersCodes: const ["Aut", "Che"],
           areaMetric: 160,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Liechtensteiner",
-              m: "Liechtensteiner",
+              female: "Liechtensteiner",
+              male: "Liechtensteiner",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Liechtensteinoise",
-              m: "Liechtensteinois",
+              female: "Liechtensteinoise",
+              male: "Liechtensteinois",
             ),
           ],
           emoji: "🇱🇮",
@@ -16078,10 +16147,12 @@ class CountryLie extends WorldCountry {
           ),
           population: 38137,
           fifa: "LIE",
-          car: const Car(signs: ["FL"]),
+          car: const Car(sign: "FL"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Vaduz"], latLng: [47.13, 9.52]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Vaduz"),
+            latLng: LatLng(47.13, 9.52),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -16244,7 +16315,7 @@ class CountryEth extends WorldCountry {
               common: "埃塞俄比亚",
             ),
           ],
-          latLng: const [8, 38],
+          latLng: const LatLng(8, 38),
           landlocked: true,
           bordersCodes: const [
             "Dji",
@@ -16258,13 +16329,13 @@ class CountryEth extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ethiopian",
-              m: "Ethiopian",
+              female: "Ethiopian",
+              male: "Ethiopian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Éthiopienne",
-              m: "Éthiopien",
+              female: "Éthiopienne",
+              male: "Éthiopien",
             ),
           ],
           emoji: "🇪🇹",
@@ -16273,13 +16344,13 @@ class CountryEth extends WorldCountry {
             openStreetMaps: "relation/192800",
           ),
           population: 114963583,
-          gini: const Gini(year: 2015, value: 35),
+          gini: const Gini(year: 2015, coefficient: 35),
           fifa: "ETH",
-          car: const Car(signs: ["ETH"]),
+          car: const Car(sign: "ETH"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Addis Ababa"],
-            latLng: [9.03, 38.7],
+            capital: Capital("Addis Ababa"),
+            latLng: LatLng(9.03, 38.7),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -16438,19 +16509,19 @@ class CountryDom extends WorldCountry {
               common: "多明尼加",
             ),
           ],
-          latLng: const [19, -70.66666666],
+          latLng: const LatLng(19, -70.66666666),
           bordersCodes: const ["Hti"],
           areaMetric: 48671,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Dominican",
-              m: "Dominican",
+              female: "Dominican",
+              male: "Dominican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Dominicaine",
-              m: "Dominicain",
+              female: "Dominicaine",
+              male: "Dominicain",
             ),
           ],
           emoji: "🇩🇴",
@@ -16459,13 +16530,13 @@ class CountryDom extends WorldCountry {
             openStreetMaps: "relation/307828",
           ),
           population: 10847904,
-          gini: const Gini(year: 2019, value: 41.9),
+          gini: const Gini(year: 2019, coefficient: 41.9),
           fifa: "DOM",
-          car: const Car(signs: ["DOM"]),
+          car: const Car(sign: "DOM"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Santo Domingo"],
-            latLng: [18.47, -69.9],
+            capital: Capital("Santo Domingo"),
+            latLng: LatLng(18.47, -69.9),
           ),
           postalCode: const PostalCode(),
         );
@@ -16622,11 +16693,11 @@ class CountryBvt extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bouvet Islander",
-              m: "Bouvet Islander",
+              female: "Bouvet Islander",
+              male: "Bouvet Islander",
             ),
           ],
-          latLng: const [54.4208, 3.3464],
+          latLng: const LatLng(54.4208, 3.3464),
           areaMetric: 49,
           emoji: "🇧🇻",
           maps: const Maps(
@@ -16634,7 +16705,6 @@ class CountryBvt extends WorldCountry {
             openStreetMaps: "way/174996681",
           ),
           population: 0,
-          car: const Car(signs: [""]),
           hasCoatOfArms: false,
           timezones: const ["UTC+01:00"],
         );
@@ -16794,18 +16864,18 @@ class CountryNfk extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "诺福克岛", common: "诺福克岛"),
           ],
-          latLng: const [-29.03333333, 167.95],
+          latLng: const LatLng(-29.03333333, 167.95),
           areaMetric: 36,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Norfolk Islander",
-              m: "Norfolk Islander",
+              female: "Norfolk Islander",
+              male: "Norfolk Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Norfolkaise",
-              m: "Norfolkais",
+              female: "Norfolkaise",
+              male: "Norfolkais",
             ),
           ],
           emoji: "🇳🇫",
@@ -16814,12 +16884,12 @@ class CountryNfk extends WorldCountry {
             openStreetMaps: "relation/2574988",
           ),
           population: 2302,
-          car: const Car(signs: ["AUS"], isRightSide: false),
+          car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+11:30"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Kingston"],
-            latLng: [-29.05, 167.97],
+            capital: Capital("Kingston"),
+            latLng: LatLng(-29.05, 167.97),
           ),
         );
 }
@@ -16972,19 +17042,19 @@ class CountryNld extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "荷兰", common: "荷兰"),
           ],
-          latLng: const [52.5, 5.75],
+          latLng: const LatLng(52.5, 5.75),
           bordersCodes: const ["Bel", "Deu"],
           areaMetric: 41850,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Dutch",
-              m: "Dutch",
+              female: "Dutch",
+              male: "Dutch",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Néerlandaise",
-              m: "Néerlandais",
+              female: "Néerlandaise",
+              male: "Néerlandais",
             ),
           ],
           emoji: "🇳🇱",
@@ -16993,13 +17063,13 @@ class CountryNld extends WorldCountry {
             openStreetMaps: "relation/47796",
           ),
           population: 16655799,
-          gini: const Gini(year: 2018, value: 28.1),
+          gini: const Gini(year: 2018, coefficient: 28.1),
           fifa: "NED",
-          car: const Car(signs: ["NL"]),
+          car: const Car(sign: "NL"),
           timezones: const ["UTC-04:00", "UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Amsterdam"],
-            latLng: [52.35, 4.92],
+            capital: Capital("Amsterdam"),
+            latLng: LatLng(52.35, 4.92),
           ),
           postalCode: const PostalCode(
             format: "#### @@",
@@ -17171,18 +17241,18 @@ class CountryMnp extends WorldCountry {
               common: "北马里亚纳群岛",
             ),
           ],
-          latLng: const [15.2, 145.75],
+          latLng: const LatLng(15.2, 145.75),
           areaMetric: 464,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "American",
-              m: "American",
+              female: "American",
+              male: "American",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Américaine",
-              m: "Américan",
+              female: "Américaine",
+              male: "Américan",
             ),
           ],
           emoji: "🇲🇵",
@@ -17191,12 +17261,12 @@ class CountryMnp extends WorldCountry {
             openStreetMaps: "relation/306004",
           ),
           population: 57557,
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC+10:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Saipan"],
-            latLng: [15.2, 145.75],
+            capital: Capital("Saipan"),
+            latLng: LatLng(15.2, 145.75),
           ),
         );
 }
@@ -17377,19 +17447,19 @@ class CountryHkg extends WorldCountry {
               common: "香港",
             ),
           ],
-          latLng: const [22.267, 114.188],
+          latLng: const LatLng(22.267, 114.188),
           bordersCodes: const ["Chn"],
           areaMetric: 1104,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Hong Konger",
-              m: "Hong Konger",
+              female: "Hong Konger",
+              male: "Hong Konger",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Hongkongaise",
-              m: "Hongkongais",
+              female: "Hongkongaise",
+              male: "Hongkongais",
             ),
           ],
           emoji: "🇭🇰",
@@ -17399,11 +17469,11 @@ class CountryHkg extends WorldCountry {
           ),
           population: 7500700,
           fifa: "HKG",
-          car: const Car(signs: ["HK"], isRightSide: false),
+          car: const Car(sign: "HK", isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["City of Victoria"],
-            latLng: [22.267, 114.188],
+            capital: Capital("City of Victoria"),
+            latLng: LatLng(22.267, 114.188),
           ),
         );
 }
@@ -17565,7 +17635,7 @@ class CountryIrq extends WorldCountry {
               common: "伊拉克",
             ),
           ],
-          latLng: const [33, 44],
+          latLng: const LatLng(33, 44),
           bordersCodes: const [
             "Irn",
             "Jor",
@@ -17578,13 +17648,13 @@ class CountryIrq extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Iraqi",
-              m: "Iraqi",
+              female: "Iraqi",
+              male: "Iraqi",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Irakienne",
-              m: "Irakien",
+              female: "Irakienne",
+              male: "Irakien",
             ),
           ],
           emoji: "🇮🇶",
@@ -17593,13 +17663,15 @@ class CountryIrq extends WorldCountry {
             openStreetMaps: "relation/304934",
           ),
           population: 40222503,
-          gini: const Gini(year: 2012, value: 29.5),
+          gini: const Gini(year: 2012, coefficient: 29.5),
           fifa: "IRQ",
-          car: const Car(signs: ["IRQ"]),
+          car: const Car(sign: "IRQ"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Baghdad"], latLng: [33.33, 44.4]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Baghdad"),
+            latLng: LatLng(33.33, 44.4),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -17752,7 +17824,7 @@ class CountryEsp extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "西班牙王国", common: "西班牙"),
           ],
-          latLng: const [40, -4],
+          latLng: const LatLng(40, -4),
           bordersCodes: const [
             "And",
             "Fra",
@@ -17764,13 +17836,13 @@ class CountryEsp extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Spanish",
-              m: "Spanish",
+              female: "Spanish",
+              male: "Spanish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Espagnole",
-              m: "Espagnol",
+              female: "Espagnole",
+              male: "Espagnol",
             ),
           ],
           emoji: "🇪🇸",
@@ -17779,12 +17851,14 @@ class CountryEsp extends WorldCountry {
             openStreetMaps: "relation/1311341",
           ),
           population: 47351567,
-          gini: const Gini(year: 2018, value: 34.7),
+          gini: const Gini(year: 2018, coefficient: 34.7),
           fifa: "ESP",
-          car: const Car(signs: ["E"]),
+          car: const Car(sign: "E"),
           timezones: const ["UTC+00:00", "UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Madrid"], latLng: [40.4, -3.68]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Madrid"),
+            latLng: LatLng(40.4, -3.68),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -17942,19 +18016,19 @@ class CountryTgo extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "多哥共和国", common: "多哥"),
           ],
-          latLng: const [8, 1.16666666],
+          latLng: const LatLng(8, 1.16666666),
           bordersCodes: const ["Ben", "Bfa", "Gha"],
           areaMetric: 56785,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Togolese",
-              m: "Togolese",
+              female: "Togolese",
+              male: "Togolese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Togolaise",
-              m: "Togolais",
+              female: "Togolaise",
+              male: "Togolais",
             ),
           ],
           emoji: "🇹🇬",
@@ -17963,12 +18037,14 @@ class CountryTgo extends WorldCountry {
             openStreetMaps: "relation/192782",
           ),
           population: 8278737,
-          gini: const Gini(year: 2015, value: 43.1),
+          gini: const Gini(year: 2015, coefficient: 43.1),
           fifa: "TOG",
-          car: const Car(signs: ["TG"]),
+          car: const Car(sign: "TG"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Lomé"], latLng: [6.14, 1.21]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Lomé"),
+            latLng: LatLng(6.14, 1.21),
+          ),
         );
 }
 
@@ -18132,7 +18208,7 @@ class CountryChn extends WorldCountry {
               common: "中国",
             ),
           ],
-          latLng: const [35, 105],
+          latLng: const LatLng(35, 105),
           bordersCodes: const [
             "Afg",
             "Btn",
@@ -18155,13 +18231,13 @@ class CountryChn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Chinese",
-              m: "Chinese",
+              female: "Chinese",
+              male: "Chinese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Chinoise",
-              m: "Chinois",
+              female: "Chinoise",
+              male: "Chinois",
             ),
           ],
           emoji: "🇨🇳",
@@ -18170,13 +18246,13 @@ class CountryChn extends WorldCountry {
             openStreetMaps: "relation/270056",
           ),
           population: 1402112000,
-          gini: const Gini(year: 2016, value: 38.5),
+          gini: const Gini(year: 2016, coefficient: 38.5),
           fifa: "CHN",
-          car: const Car(signs: ["RC"]),
+          car: const Car(sign: "RC"),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Beijing"],
-            latLng: [39.92, 116.38],
+            capital: Capital("Beijing"),
+            latLng: LatLng(39.92, 116.38),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -18342,18 +18418,18 @@ class CountryFlk extends WorldCountry {
               common: "福克兰群岛",
             ),
           ],
-          latLng: const [-51.75, -59],
+          latLng: const LatLng(-51.75, -59),
           areaMetric: 12173,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Falkland Islander",
-              m: "Falkland Islander",
+              female: "Falkland Islander",
+              male: "Falkland Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malouinne",
-              m: "Malouin",
+              female: "Malouinne",
+              male: "Malouin",
             ),
           ],
           emoji: "🇫🇰",
@@ -18362,11 +18438,11 @@ class CountryFlk extends WorldCountry {
             openStreetMaps: "relation/2185374",
           ),
           population: 2563,
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Stanley"],
-            latLng: [-51.7, -57.85],
+            capital: Capital("Stanley"),
+            latLng: LatLng(-51.7, -57.85),
           ),
         );
 }
@@ -18840,19 +18916,19 @@ class CountryUsa extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "美利坚合众国", common: "美国"),
           ],
-          latLng: const [38, -97],
+          latLng: const LatLng(38, -97),
           bordersCodes: const ["Can", "Mex"],
           areaMetric: 9372610,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "American",
-              m: "American",
+              female: "American",
+              male: "American",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Américaine",
-              m: "Américain",
+              female: "Américaine",
+              male: "Américain",
             ),
           ],
           emoji: "🇺🇸",
@@ -18861,9 +18937,9 @@ class CountryUsa extends WorldCountry {
             openStreetMaps: "relation/148838#map=2/20.6/-85.8",
           ),
           population: 329484123,
-          gini: const Gini(year: 2018, value: 41.4),
+          gini: const Gini(year: 2018, coefficient: 41.4),
           fifa: "USA",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const [
             "UTC-12:00",
             "UTC-11:00",
@@ -18879,8 +18955,8 @@ class CountryUsa extends WorldCountry {
           ],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Washington, D.C."],
-            latLng: [38.89, -77.05],
+            capital: Capital("Washington, D.C."),
+            latLng: LatLng(38.89, -77.05),
           ),
           postalCode: const PostalCode(
             format: "#####-####",
@@ -19039,19 +19115,19 @@ class CountryMaf extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "圣马丁", common: "圣马丁"),
           ],
-          latLng: const [18.0708, 63.0501],
+          latLng: const LatLng(18.0708, 63.0501),
           bordersCodes: const ["Sxm"],
           areaMetric: 53,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Martin Islander",
-              m: "Saint Martin Islander",
+              female: "Saint Martin Islander",
+              male: "Saint Martin Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Martinoise",
-              m: "Saint-Martinois",
+              female: "Saint-Martinoise",
+              male: "Saint-Martinois",
             ),
           ],
           emoji: "🇲🇫",
@@ -19060,12 +19136,12 @@ class CountryMaf extends WorldCountry {
             openStreetMaps: "relation/63064",
           ),
           population: 38659,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Marigot"],
-            latLng: [18.07, -63.08],
+            capital: Capital("Marigot"),
+            latLng: LatLng(18.07, -63.08),
           ),
           postalCode: const PostalCode(),
         );
@@ -19228,7 +19304,7 @@ class CountryIrn extends WorldCountry {
               common: "伊朗",
             ),
           ],
-          latLng: const [32, 53],
+          latLng: const LatLng(32, 53),
           bordersCodes: const [
             "Afg",
             "Arm",
@@ -19242,13 +19318,13 @@ class CountryIrn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Iranian",
-              m: "Iranian",
+              female: "Iranian",
+              male: "Iranian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Iranienne",
-              m: "Iranien",
+              female: "Iranienne",
+              male: "Iranien",
             ),
           ],
           emoji: "🇮🇷",
@@ -19257,13 +19333,15 @@ class CountryIrn extends WorldCountry {
             openStreetMaps: "relation/304938",
           ),
           population: 83992953,
-          gini: const Gini(year: 2018, value: 42),
+          gini: const Gini(year: 2018, coefficient: 42),
           fifa: "IRN",
-          car: const Car(signs: ["IR"]),
+          car: const Car(sign: "IR"),
           timezones: const ["UTC+03:30"],
           startOfWeek: Weekday.saturday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Tehran"], latLng: [35.7, 51.42]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tehran"),
+            latLng: LatLng(35.7, 51.42),
+          ),
           postalCode: const PostalCode(
             format: "##########",
             regExpPattern: r"^(\\d{10})$",
@@ -19428,19 +19506,19 @@ class CountryMex extends WorldCountry {
               common: "墨西哥",
             ),
           ],
-          latLng: const [23, -102],
+          latLng: const LatLng(23, -102),
           bordersCodes: const ["Blz", "Gtm", "Usa"],
           areaMetric: 1964375,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mexican",
-              m: "Mexican",
+              female: "Mexican",
+              male: "Mexican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Mexicaine",
-              m: "Mexicain",
+              female: "Mexicaine",
+              male: "Mexicain",
             ),
           ],
           emoji: "🇲🇽",
@@ -19449,13 +19527,13 @@ class CountryMex extends WorldCountry {
             openStreetMaps: "relation/114686",
           ),
           population: 128932753,
-          gini: const Gini(year: 2018, value: 45.4),
+          gini: const Gini(year: 2018, coefficient: 45.4),
           fifa: "MEX",
-          car: const Car(signs: ["MEX"]),
+          car: const Car(sign: "MEX"),
           timezones: const ["UTC-08:00", "UTC-07:00", "UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Mexico City"],
-            latLng: [19.43, -99.13],
+            capital: Capital("Mexico City"),
+            latLng: LatLng(19.43, -99.13),
           ),
           postalCode: const PostalCode(),
         );
@@ -19614,19 +19692,19 @@ class CountryBrn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "文莱和平之国", common: "文莱"),
           ],
-          latLng: const [4.5, 114.66666666],
+          latLng: const LatLng(4.5, 114.66666666),
           bordersCodes: const ["Mys"],
           areaMetric: 5765,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bruneian",
-              m: "Bruneian",
+              female: "Bruneian",
+              male: "Bruneian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Brunéienne",
-              m: "Brunéien",
+              female: "Brunéienne",
+              male: "Brunéien",
             ),
           ],
           emoji: "🇧🇳",
@@ -19636,11 +19714,11 @@ class CountryBrn extends WorldCountry {
           ),
           population: 437483,
           fifa: "BRU",
-          car: const Car(signs: ["BRU"], isRightSide: false),
+          car: const Car(sign: "BRU", isRightSide: false),
           timezones: const ["UTC+08:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bandar Seri Begawan"],
-            latLng: [4.88, 114.93],
+            capital: Capital("Bandar Seri Begawan"),
+            latLng: LatLng(4.88, 114.93),
           ),
           postalCode: const PostalCode(
             format: "@@####",
@@ -19813,18 +19891,18 @@ class CountryCyp extends WorldCountry {
               common: "塞浦路斯",
             ),
           ],
-          latLng: const [35, 33],
+          latLng: const LatLng(35, 33),
           areaMetric: 9251,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cypriot",
-              m: "Cypriot",
+              female: "Cypriot",
+              male: "Cypriot",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Chypriote",
-              m: "Chypriote",
+              female: "Chypriote",
+              male: "Chypriote",
             ),
           ],
           emoji: "🇨🇾",
@@ -19833,12 +19911,14 @@ class CountryCyp extends WorldCountry {
             openStreetMaps: "relation/307787",
           ),
           population: 1207361,
-          gini: const Gini(year: 2018, value: 32.7),
+          gini: const Gini(year: 2018, coefficient: 32.7),
           fifa: "CYP",
-          car: const Car(signs: ["CY"], isRightSide: false),
+          car: const Car(sign: "CY", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Nicosia"], latLng: [35.17, 33.37]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Nicosia"),
+            latLng: LatLng(35.17, 33.37),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -20000,19 +20080,19 @@ class CountryNic extends WorldCountry {
               common: "尼加拉瓜",
             ),
           ],
-          latLng: const [13, -85],
+          latLng: const LatLng(13, -85),
           bordersCodes: const ["Cri", "Hnd"],
           areaMetric: 130373,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Nicaraguan",
-              m: "Nicaraguan",
+              female: "Nicaraguan",
+              male: "Nicaraguan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Nicaraguayenne",
-              m: "Nicaraguayen",
+              female: "Nicaraguayenne",
+              male: "Nicaraguayen",
             ),
           ],
           emoji: "🇳🇮",
@@ -20021,13 +20101,13 @@ class CountryNic extends WorldCountry {
             openStreetMaps: "relation/287666",
           ),
           population: 6624554,
-          gini: const Gini(year: 2014, value: 46.2),
+          gini: const Gini(year: 2014, coefficient: 46.2),
           fifa: "NCA",
-          car: const Car(signs: ["NIC"]),
+          car: const Car(sign: "NIC"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Managua"],
-            latLng: [12.13, -86.25],
+            capital: Capital("Managua"),
+            latLng: LatLng(12.13, -86.25),
           ),
           postalCode: const PostalCode(
             format: "###-###-#",
@@ -20198,18 +20278,18 @@ class CountryCuw extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "库拉索", common: "库拉索"),
           ],
-          latLng: const [12.116667, -68.933333],
+          latLng: const LatLng(12.116667, -68.933333),
           areaMetric: 444,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Curaçaoan",
-              m: "Curaçaoan",
+              female: "Curaçaoan",
+              male: "Curaçaoan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Curacienne",
-              m: "Curacien",
+              female: "Curacienne",
+              male: "Curacien",
             ),
           ],
           emoji: "🇨🇼",
@@ -20219,11 +20299,11 @@ class CountryCuw extends WorldCountry {
           ),
           population: 155014,
           fifa: "CUW",
-          car: const Car(signs: ["CW"]),
+          car: const Car(sign: "CW"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Willemstad"],
-            latLng: [12.1, -68.92],
+            capital: Capital("Willemstad"),
+            latLng: LatLng(12.1, -68.92),
           ),
         );
 }
@@ -20391,18 +20471,18 @@ class CountryPri extends WorldCountry {
               common: "波多黎各",
             ),
           ],
-          latLng: const [18.25, -66.5],
+          latLng: const LatLng(18.25, -66.5),
           areaMetric: 8870,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Puerto Rican",
-              m: "Puerto Rican",
+              female: "Puerto Rican",
+              male: "Puerto Rican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Portoricaine",
-              m: "Portoricain",
+              female: "Portoricaine",
+              male: "Portoricain",
             ),
           ],
           emoji: "🇵🇷",
@@ -20412,12 +20492,12 @@ class CountryPri extends WorldCountry {
           ),
           population: 3194034,
           fifa: "PUR",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["San Juan"],
-            latLng: [18.47, -66.12],
+            capital: Capital("San Juan"),
+            latLng: LatLng(18.47, -66.12),
           ),
           postalCode: const PostalCode(
             format: "#####-####",
@@ -20579,18 +20659,18 @@ class CountryNcl extends WorldCountry {
               common: "新喀里多尼亚",
             ),
           ],
-          latLng: const [-21.5, 165.5],
+          latLng: const LatLng(-21.5, 165.5),
           areaMetric: 18575,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "New Caledonian",
-              m: "New Caledonian",
+              female: "New Caledonian",
+              male: "New Caledonian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Néo-Calédonienne",
-              m: "Néo-Calédonien",
+              female: "Néo-Calédonienne",
+              male: "Néo-Calédonien",
             ),
           ],
           emoji: "🇳🇨",
@@ -20600,11 +20680,11 @@ class CountryNcl extends WorldCountry {
           ),
           population: 271960,
           fifa: "NCL",
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nouméa"],
-            latLng: [-22.27, 166.45],
+            capital: Capital("Nouméa"),
+            latLng: LatLng(-22.27, 166.45),
           ),
           postalCode: const PostalCode(),
         );
@@ -20762,7 +20842,7 @@ class CountrySsd extends WorldCountry {
               common: "南苏丹",
             ),
           ],
-          latLng: const [7, 30],
+          latLng: const LatLng(7, 30),
           landlocked: true,
           bordersCodes: const [
             "Caf",
@@ -20776,13 +20856,13 @@ class CountrySsd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "South Sudanese",
-              m: "South Sudanese",
+              female: "South Sudanese",
+              male: "South Sudanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sud-Soudanaise",
-              m: "Sud-Soudanais",
+              female: "Sud-Soudanaise",
+              male: "Sud-Soudanais",
             ),
           ],
           emoji: "🇸🇸",
@@ -20791,13 +20871,14 @@ class CountrySsd extends WorldCountry {
             openStreetMaps: "relation/1656678",
           ),
           population: 11193729,
-          gini: const Gini(year: 2016, value: 44.1),
+          gini: const Gini(year: 2016, coefficient: 44.1),
           fifa: "SSD",
-          car: const Car(signs: [""]),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Juba"], latLng: [4.85, 31.62]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Juba"),
+            latLng: LatLng(4.85, 31.62),
+          ),
         );
 }
 
@@ -20964,19 +21045,19 @@ class CountrySom extends WorldCountry {
               common: "索马里",
             ),
           ],
-          latLng: const [10, 49],
+          latLng: const LatLng(10, 49),
           bordersCodes: const ["Dji", "Eth", "Ken"],
           areaMetric: 637657,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Somali",
-              m: "Somali",
+              female: "Somali",
+              male: "Somali",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Somalienne",
-              m: "Somalien",
+              female: "Somalienne",
+              male: "Somalien",
             ),
           ],
           emoji: "🇸🇴",
@@ -20985,13 +21066,13 @@ class CountrySom extends WorldCountry {
             openStreetMaps: "relation/192799",
           ),
           population: 15893219,
-          gini: const Gini(year: 2017, value: 36.8),
+          gini: const Gini(year: 2017, coefficient: 36.8),
           fifa: "SOM",
-          car: const Car(signs: ["SO"]),
+          car: const Car(sign: "SO"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Mogadishu"],
-            latLng: [2.07, 45.33],
+            capital: Capital("Mogadishu"),
+            latLng: LatLng(2.07, 45.33),
           ),
           postalCode: const PostalCode(
             format: "@@  #####",
@@ -21153,7 +21234,7 @@ class CountryGrc extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "希腊共和国", common: "希腊"),
           ],
-          latLng: const [39, 22],
+          latLng: const LatLng(39, 22),
           bordersCodes: const [
             "Alb",
             "Bgr",
@@ -21164,13 +21245,13 @@ class CountryGrc extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Greek",
-              m: "Greek",
+              female: "Greek",
+              male: "Greek",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Grecque",
-              m: "Grec",
+              female: "Grecque",
+              male: "Grec",
             ),
           ],
           emoji: "🇬🇷",
@@ -21179,12 +21260,14 @@ class CountryGrc extends WorldCountry {
             openStreetMaps: "relation/192307",
           ),
           population: 10715549,
-          gini: const Gini(year: 2018, value: 32.9),
+          gini: const Gini(year: 2018, coefficient: 32.9),
           fifa: "GRE",
-          car: const Car(signs: ["GR"]),
+          car: const Car(sign: "GR"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Athens"], latLng: [37.98, 23.73]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Athens"),
+            latLng: LatLng(37.98, 23.73),
+          ),
           postalCode: const PostalCode(
             format: "### ##",
           ),
@@ -21345,18 +21428,18 @@ class CountryBes extends WorldCountry {
               common: "荷蘭加勒比區",
             ),
           ],
-          latLng: const [12.18, -68.25],
+          latLng: const LatLng(12.18, -68.25),
           areaMetric: 328,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Dutch",
-              m: "Dutch",
+              female: "Dutch",
+              male: "Dutch",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Néerlandaise",
-              m: "Néerlandais",
+              female: "Néerlandaise",
+              male: "Néerlandais",
             ),
           ],
           emoji: "🇧🇶",
@@ -21365,11 +21448,11 @@ class CountryBes extends WorldCountry {
             openStreetMaps: "relation/1216720",
           ),
           population: 25987,
-          car: const Car(signs: [""]),
+
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Kralendijk"],
-            latLng: [12.14, -68.27],
+            capital: Capital("Kralendijk"),
+            latLng: LatLng(12.14, -68.27),
           ),
         );
 }
@@ -21531,7 +21614,7 @@ class CountryLao extends WorldCountry {
               common: "老挝",
             ),
           ],
-          latLng: const [18, 105],
+          latLng: const LatLng(18, 105),
           landlocked: true,
           bordersCodes: const [
             "Mmr",
@@ -21544,13 +21627,13 @@ class CountryLao extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Laotian",
-              m: "Laotian",
+              female: "Laotian",
+              male: "Laotian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Laotienne",
-              m: "Laotien",
+              female: "Laotienne",
+              male: "Laotien",
             ),
           ],
           emoji: "🇱🇦",
@@ -21559,13 +21642,13 @@ class CountryLao extends WorldCountry {
             openStreetMaps: "relation/49903",
           ),
           population: 7275556,
-          gini: const Gini(year: 2018, value: 38.8),
+          gini: const Gini(year: 2018, coefficient: 38.8),
           fifa: "LAO",
-          car: const Car(signs: ["LAO"]),
+          car: const Car(sign: "LAO"),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Vientiane"],
-            latLng: [17.97, 102.6],
+            capital: Capital("Vientiane"),
+            latLng: LatLng(17.97, 102.6),
           ),
           postalCode: const PostalCode(),
         );
@@ -21725,19 +21808,19 @@ class CountryBlz extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "伯利兹", common: "伯利兹"),
           ],
-          latLng: const [17.25, -88.75],
+          latLng: const LatLng(17.25, -88.75),
           bordersCodes: const ["Gtm", "Mex"],
           areaMetric: 22966,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Belizean",
-              m: "Belizean",
+              female: "Belizean",
+              male: "Belizean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bélizienne",
-              m: "Bélizien",
+              female: "Bélizienne",
+              male: "Bélizien",
             ),
           ],
           emoji: "🇧🇿",
@@ -21746,13 +21829,13 @@ class CountryBlz extends WorldCountry {
             openStreetMaps: "relation/287827",
           ),
           population: 397621,
-          gini: const Gini(year: 1999, value: 53.3),
+          gini: const Gini(year: 1999, coefficient: 53.3),
           fifa: "BLZ",
-          car: const Car(signs: ["BH"]),
+          car: const Car(sign: "BH"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Belmopan"],
-            latLng: [17.25, -88.77],
+            capital: Capital("Belmopan"),
+            latLng: LatLng(17.25, -88.77),
           ),
         );
 }
@@ -21913,19 +21996,19 @@ class CountrySlv extends WorldCountry {
               common: "萨尔瓦多",
             ),
           ],
-          latLng: const [13.83333333, -88.91666666],
+          latLng: const LatLng(13.83333333, -88.91666666),
           bordersCodes: const ["Gtm", "Hnd"],
           areaMetric: 21041,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Salvadoran",
-              m: "Salvadoran",
+              female: "Salvadoran",
+              male: "Salvadoran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Salvadorienne",
-              m: "Salvadorien",
+              female: "Salvadorienne",
+              male: "Salvadorien",
             ),
           ],
           emoji: "🇸🇻",
@@ -21934,13 +22017,13 @@ class CountrySlv extends WorldCountry {
             openStreetMaps: "relation/1520612",
           ),
           population: 6486201,
-          gini: const Gini(year: 2019, value: 38.8),
+          gini: const Gini(year: 2019, coefficient: 38.8),
           fifa: "SLV",
-          car: const Car(signs: ["ES"]),
+          car: const Car(sign: "ES"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["San Salvador"],
-            latLng: [13.7, -89.2],
+            capital: Capital("San Salvador"),
+            latLng: LatLng(13.7, -89.2),
           ),
           postalCode: const PostalCode(
             format: "CP ####",
@@ -22098,18 +22181,18 @@ class CountryJam extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "牙买加", common: "牙买加"),
           ],
-          latLng: const [18.25, -77.5],
+          latLng: const LatLng(18.25, -77.5),
           areaMetric: 10991,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Jamaican",
-              m: "Jamaican",
+              female: "Jamaican",
+              male: "Jamaican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Jamaïcaine",
-              m: "Jamaïcain",
+              female: "Jamaïcaine",
+              male: "Jamaïcain",
             ),
           ],
           emoji: "🇯🇲",
@@ -22118,13 +22201,13 @@ class CountryJam extends WorldCountry {
             openStreetMaps: "relation/555017",
           ),
           population: 2961161,
-          gini: const Gini(year: 2004, value: 45.5),
+          gini: const Gini(year: 2004, coefficient: 45.5),
           fifa: "JAM",
-          car: const Car(signs: ["JA"], isRightSide: false),
+          car: const Car(sign: "JA", isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Kingston"],
-            latLng: [17.99702, -76.79358],
+            capital: Capital("Kingston"),
+            latLng: LatLng(17.99702, -76.79358),
           ),
         );
 }
@@ -22285,19 +22368,19 @@ class CountryUry extends WorldCountry {
               common: "乌拉圭",
             ),
           ],
-          latLng: const [-33, -56],
+          latLng: const LatLng(-33, -56),
           bordersCodes: const ["Arg", "Bra"],
           areaMetric: 181034,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Uruguayan",
-              m: "Uruguayan",
+              female: "Uruguayan",
+              male: "Uruguayan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Uruguayenne",
-              m: "Uruguayen",
+              female: "Uruguayenne",
+              male: "Uruguayen",
             ),
           ],
           emoji: "🇺🇾",
@@ -22306,13 +22389,13 @@ class CountryUry extends WorldCountry {
             openStreetMaps: "relation/287072",
           ),
           population: 3473727,
-          gini: const Gini(year: 2019, value: 39.7),
+          gini: const Gini(year: 2019, coefficient: 39.7),
           fifa: "URU",
-          car: const Car(signs: ["ROU"]),
+          car: const Car(sign: "ROU"),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Montevideo"],
-            latLng: [-34.85, -56.17],
+            capital: Capital("Montevideo"),
+            latLng: LatLng(-34.85, -56.17),
           ),
           postalCode: const PostalCode(),
         );
@@ -22480,19 +22563,19 @@ class CountryPng extends WorldCountry {
               common: "巴布亚新几内亚",
             ),
           ],
-          latLng: const [-6, 147],
+          latLng: const LatLng(-6, 147),
           bordersCodes: const ["Idn"],
           areaMetric: 462840,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Papua New Guinean",
-              m: "Papua New Guinean",
+              female: "Papua New Guinean",
+              male: "Papua New Guinean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Papouasienne",
-              m: "Papouasien",
+              female: "Papouasienne",
+              male: "Papouasien",
             ),
           ],
           emoji: "🇵🇬",
@@ -22501,14 +22584,14 @@ class CountryPng extends WorldCountry {
             openStreetMaps: "307866",
           ),
           population: 8947027,
-          gini: const Gini(year: 2009, value: 41.9),
+          gini: const Gini(year: 2009, coefficient: 41.9),
           fifa: "PNG",
-          car: const Car(signs: ["PNG"], isRightSide: false),
+          car: const Car(sign: "PNG", isRightSide: false),
           timezones: const ["UTC+10:00"],
 
           capitalInfo: const CapitalInfo(
-            capital: ["Port Moresby"],
-            latLng: [-9.45, 147.18],
+            capital: Capital("Port Moresby"),
+            latLng: LatLng(-9.45, 147.18),
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
@@ -22683,20 +22766,20 @@ class CountryLux extends WorldCountry {
               common: "卢森堡",
             ),
           ],
-          latLng: const [49.75, 6.16666666],
+          latLng: const LatLng(49.75, 6.16666666),
           landlocked: true,
           bordersCodes: const ["Bel", "Fra", "Deu"],
           areaMetric: 2586,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Luxembourger",
-              m: "Luxembourger",
+              female: "Luxembourger",
+              male: "Luxembourger",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Luxembourgeoise",
-              m: "Luxembourgeois",
+              female: "Luxembourgeoise",
+              male: "Luxembourgeois",
             ),
           ],
           emoji: "🇱🇺",
@@ -22705,13 +22788,13 @@ class CountryLux extends WorldCountry {
             openStreetMaps: "relation/2171347#map=10/49.8167/6.1335",
           ),
           population: 632275,
-          gini: const Gini(year: 2018, value: 35.4),
+          gini: const Gini(year: 2018, coefficient: 35.4),
           fifa: "LUX",
-          car: const Car(signs: ["L"]),
+          car: const Car(sign: "L"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Luxembourg"],
-            latLng: [49.6, 6.12],
+            capital: Capital("Luxembourg"),
+            latLng: LatLng(49.6, 6.12),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -22866,19 +22949,19 @@ class CountryChl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "智利共和国", common: "智利"),
           ],
-          latLng: const [-30, -71],
+          latLng: const LatLng(-30, -71),
           bordersCodes: const ["Arg", "Bol", "Per"],
           areaMetric: 756102,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Chilean",
-              m: "Chilean",
+              female: "Chilean",
+              male: "Chilean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Chilienne",
-              m: "Chilien",
+              female: "Chilienne",
+              male: "Chilien",
             ),
           ],
           emoji: "🇨🇱",
@@ -22887,13 +22970,13 @@ class CountryChl extends WorldCountry {
             openStreetMaps: "relation/167454",
           ),
           population: 19116209,
-          gini: const Gini(year: 2017, value: 44.4),
+          gini: const Gini(year: 2017, coefficient: 44.4),
           fifa: "CHI",
-          car: const Car(signs: ["RCH"]),
+          car: const Car(sign: "RCH"),
           timezones: const ["UTC-06:00", "UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Santiago"],
-            latLng: [-33.45, -70.67],
+            capital: Capital("Santiago"),
+            latLng: LatLng(-33.45, -70.67),
           ),
           postalCode: const PostalCode(
             format: "#######",
@@ -23059,20 +23142,20 @@ class CountryVat extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "梵蒂冈城国", common: "梵蒂冈"),
           ],
-          latLng: const [41.9, 12.45],
+          latLng: const LatLng(41.9, 12.45),
           landlocked: true,
           bordersCodes: const ["Ita"],
           areaMetric: 0.44,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Vatican",
-              m: "Vatican",
+              female: "Vatican",
+              male: "Vatican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vaticane",
-              m: "Vatican",
+              female: "Vaticane",
+              male: "Vatican",
             ),
           ],
           emoji: "🇻🇦",
@@ -23081,11 +23164,11 @@ class CountryVat extends WorldCountry {
             openStreetMaps: "relation/36989",
           ),
           population: 451,
-          car: const Car(signs: ["V"]),
+          car: const Car(sign: "V"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Vatican City"],
-            latLng: [41.9, 12.45],
+            capital: Capital("Vatican City"),
+            latLng: LatLng(41.9, 12.45),
           ),
         );
 }
@@ -23248,19 +23331,19 @@ class CountryGnb extends WorldCountry {
               common: "几内亚比绍",
             ),
           ],
-          latLng: const [12, -15],
+          latLng: const LatLng(12, -15),
           bordersCodes: const ["Gin", "Sen"],
           areaMetric: 36125,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guinea-Bissauan",
-              m: "Guinea-Bissauan",
+              female: "Guinea-Bissauan",
+              male: "Guinea-Bissauan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bissau-Guinéenne",
-              m: "Bissau-Guinéen",
+              female: "Bissau-Guinéenne",
+              male: "Bissau-Guinéen",
             ),
           ],
           emoji: "🇬🇼",
@@ -23269,12 +23352,14 @@ class CountryGnb extends WorldCountry {
             openStreetMaps: "relation/192776",
           ),
           population: 1967998,
-          gini: const Gini(year: 2010, value: 50.7),
+          gini: const Gini(year: 2010, coefficient: 50.7),
           fifa: "GNB",
-          car: const Car(signs: ["RGB"]),
+          car: const Car(sign: "RGB"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bissau"], latLng: [11.85, -15.58]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bissau"),
+            latLng: LatLng(11.85, -15.58),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -23437,7 +23522,7 @@ class CountryUga extends WorldCountry {
               common: "乌干达",
             ),
           ],
-          latLng: const [1, 32],
+          latLng: const LatLng(1, 32),
           landlocked: true,
           bordersCodes: const [
             "Cod",
@@ -23450,13 +23535,13 @@ class CountryUga extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ugandan",
-              m: "Ugandan",
+              female: "Ugandan",
+              male: "Ugandan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ougandaise",
-              m: "Ougandais",
+              female: "Ougandaise",
+              male: "Ougandais",
             ),
           ],
           emoji: "🇺🇬",
@@ -23465,12 +23550,14 @@ class CountryUga extends WorldCountry {
             openStreetMaps: "relation/192796",
           ),
           population: 45741000,
-          gini: const Gini(year: 2016, value: 42.8),
+          gini: const Gini(year: 2016, coefficient: 42.8),
           fifa: "UGA",
-          car: const Car(signs: ["EAU"], isRightSide: false),
+          car: const Car(sign: "EAU", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Kampala"], latLng: [0.32, 32.55]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Kampala"),
+            latLng: LatLng(0.32, 32.55),
+          ),
         );
 }
 
@@ -23631,19 +23718,19 @@ class CountryVen extends WorldCountry {
               common: "委内瑞拉",
             ),
           ],
-          latLng: const [8, -66],
+          latLng: const LatLng(8, -66),
           bordersCodes: const ["Bra", "Col", "Guy"],
           areaMetric: 916445,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Venezuelan",
-              m: "Venezuelan",
+              female: "Venezuelan",
+              male: "Venezuelan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Vénézuélienne",
-              m: "Vénézuélien",
+              female: "Vénézuélienne",
+              male: "Vénézuélien",
             ),
           ],
           emoji: "🇻🇪",
@@ -23652,13 +23739,13 @@ class CountryVen extends WorldCountry {
             openStreetMaps: "relation/272644",
           ),
           population: 28435943,
-          gini: const Gini(year: 2006, value: 44.8),
+          gini: const Gini(year: 2006, coefficient: 44.8),
           fifa: "VEN",
-          car: const Car(signs: ["YV"]),
+          car: const Car(sign: "YV"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Caracas"],
-            latLng: [10.48, -66.87],
+            capital: Capital("Caracas"),
+            latLng: LatLng(10.48, -66.87),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -23823,7 +23910,7 @@ class CountrySrb extends WorldCountry {
               common: "塞尔维亚",
             ),
           ],
-          latLng: const [44, 21],
+          latLng: const LatLng(44, 21),
           landlocked: true,
           bordersCodes: const [
             "Bih",
@@ -23838,13 +23925,13 @@ class CountrySrb extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Serbian",
-              m: "Serbian",
+              female: "Serbian",
+              male: "Serbian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Serbe",
-              m: "Serbe",
+              female: "Serbe",
+              male: "Serbe",
             ),
           ],
           emoji: "🇷🇸",
@@ -23853,12 +23940,14 @@ class CountrySrb extends WorldCountry {
             openStreetMaps: "relation/1741311",
           ),
           population: 6908224,
-          gini: const Gini(year: 2017, value: 36.2),
+          gini: const Gini(year: 2017, coefficient: 36.2),
           fifa: "SRB",
-          car: const Car(signs: ["SRB"]),
+          car: const Car(sign: "SRB"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Belgrade"], latLng: [44.83, 20.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Belgrade"),
+            latLng: LatLng(44.83, 20.5),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -24018,7 +24107,7 @@ class CountryBen extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "贝宁共和国", common: "贝宁"),
           ],
-          latLng: const [9.5, 2.25],
+          latLng: const LatLng(9.5, 2.25),
           bordersCodes: const [
             "Bfa",
             "Ner",
@@ -24029,13 +24118,13 @@ class CountryBen extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Beninese",
-              m: "Beninese",
+              female: "Beninese",
+              male: "Beninese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Béninoise",
-              m: "Béninois",
+              female: "Béninoise",
+              male: "Béninois",
             ),
           ],
           emoji: "🇧🇯",
@@ -24044,13 +24133,13 @@ class CountryBen extends WorldCountry {
             openStreetMaps: "relation/192784",
           ),
           population: 12123198,
-          gini: const Gini(year: 2015, value: 47.8),
+          gini: const Gini(year: 2015, coefficient: 47.8),
           fifa: "BEN",
-          car: const Car(signs: ["DY"]),
+          car: const Car(sign: "DY"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Porto-Novo"],
-            latLng: [6.48, 2.62],
+            capital: Capital("Porto-Novo"),
+            latLng: LatLng(6.48, 2.62),
           ),
         );
 }
@@ -24211,19 +24300,19 @@ class CountryBgd extends WorldCountry {
               common: "孟加拉国",
             ),
           ],
-          latLng: const [24, 90],
+          latLng: const LatLng(24, 90),
           bordersCodes: const ["Mmr", "Ind"],
           areaMetric: 147570,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bangladeshi",
-              m: "Bangladeshi",
+              female: "Bangladeshi",
+              male: "Bangladeshi",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bangladaise",
-              m: "Bangladais",
+              female: "Bangladaise",
+              male: "Bangladais",
             ),
           ],
           emoji: "🇧🇩",
@@ -24232,13 +24321,15 @@ class CountryBgd extends WorldCountry {
             openStreetMaps: "relation/184640",
           ),
           population: 164689383,
-          gini: const Gini(year: 2016, value: 32.4),
+          gini: const Gini(year: 2016, coefficient: 32.4),
           fifa: "BAN",
-          car: const Car(signs: ["BD"], isRightSide: false),
+          car: const Car(sign: "BD", isRightSide: false),
           timezones: const ["UTC+06:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Dhaka"], latLng: [23.72, 90.4]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Dhaka"),
+            latLng: LatLng(23.72, 90.4),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -24392,18 +24483,18 @@ class CountryBhs extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "巴哈马联邦", common: "巴哈马"),
           ],
-          latLng: const [25.0343, 77.3963],
+          latLng: const LatLng(25.0343, 77.3963),
           areaMetric: 13943,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bahamian",
-              m: "Bahamian",
+              female: "Bahamian",
+              male: "Bahamian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bahamienne",
-              m: "Bahamien",
+              female: "Bahamienne",
+              male: "Bahamien",
             ),
           ],
           emoji: "🇧🇸",
@@ -24413,11 +24504,11 @@ class CountryBhs extends WorldCountry {
           ),
           population: 393248,
           fifa: "BAH",
-          car: const Car(signs: ["BS"], isRightSide: false),
+          car: const Car(sign: "BS", isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nassau"],
-            latLng: [25.08, -77.35],
+            capital: Capital("Nassau"),
+            latLng: LatLng(25.08, -77.35),
           ),
         );
 }
@@ -24566,18 +24657,18 @@ class CountryNiu extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "纽埃", common: "纽埃"),
           ],
-          latLng: const [-19.03333333, -169.86666666],
+          latLng: const LatLng(-19.03333333, -169.86666666),
           areaMetric: 260,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Niuean",
-              m: "Niuean",
+              female: "Niuean",
+              male: "Niuean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Niuéenne",
-              m: "Niuéen",
+              female: "Niuéenne",
+              male: "Niuéen",
             ),
           ],
           emoji: "🇳🇺",
@@ -24586,12 +24677,12 @@ class CountryNiu extends WorldCountry {
             openStreetMaps: "relation/1558556",
           ),
           population: 1470,
-          car: const Car(signs: ["NZ"], isRightSide: false),
+          car: const Car(sign: "NZ", isRightSide: false),
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Alofi"],
-            latLng: [-19.02, -169.92],
+            capital: Capital("Alofi"),
+            latLng: LatLng(-19.02, -169.92),
           ),
         );
 }
@@ -24748,18 +24839,18 @@ class CountryAtg extends WorldCountry {
               common: "安提瓜和巴布达",
             ),
           ],
-          latLng: const [17.05, -61.8],
+          latLng: const LatLng(17.05, -61.8),
           areaMetric: 442,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Antiguan, Barbudan",
-              m: "Antiguan, Barbudan",
+              female: "Antiguan, Barbudan",
+              male: "Antiguan, Barbudan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Antiguaise et barbudienne",
-              m: "Antiguaise et barbudien",
+              female: "Antiguaise et barbudienne",
+              male: "Antiguaise et barbudien",
             ),
           ],
           emoji: "🇦🇬",
@@ -24769,11 +24860,11 @@ class CountryAtg extends WorldCountry {
           ),
           population: 97928,
           fifa: "ATG",
-          car: const Car(signs: ["AG"], isRightSide: false),
+          car: const Car(sign: "AG", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Saint John's"],
-            latLng: [17.12, -61.85],
+            capital: Capital("Saint John's"),
+            latLng: LatLng(17.12, -61.85),
           ),
         );
 }
@@ -24936,18 +25027,18 @@ class CountryBlm extends WorldCountry {
               common: "圣巴泰勒米",
             ),
           ],
-          latLng: const [18.5, -63.41666666],
+          latLng: const LatLng(18.5, -63.41666666),
           areaMetric: 21,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint Barthélemy Islander",
-              m: "Saint Barthélemy Islander",
+              female: "Saint Barthélemy Islander",
+              male: "Saint Barthélemy Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Barthéloméenne",
-              m: "Barthéloméen",
+              female: "Barthéloméenne",
+              male: "Barthéloméen",
             ),
           ],
           emoji: "🇧🇱",
@@ -24956,12 +25047,12 @@ class CountryBlm extends WorldCountry {
             openStreetMaps: "relation/7552779",
           ),
           population: 4255,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Gustavia"],
-            latLng: [17.88, -62.85],
+            capital: Capital("Gustavia"),
+            latLng: LatLng(17.88, -62.85),
           ),
           postalCode: const PostalCode(),
         );
@@ -25130,18 +25221,18 @@ class CountrySyc extends WorldCountry {
               common: "塞舌尔",
             ),
           ],
-          latLng: const [-4.58333333, 55.66666666],
+          latLng: const LatLng(-4.58333333, 55.66666666),
           areaMetric: 452,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Seychellois",
-              m: "Seychellois",
+              female: "Seychellois",
+              male: "Seychellois",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Seychelloise",
-              m: "Seychellois",
+              female: "Seychelloise",
+              male: "Seychellois",
             ),
           ],
           emoji: "🇸🇨",
@@ -25150,13 +25241,13 @@ class CountrySyc extends WorldCountry {
             openStreetMaps: "relation/536765",
           ),
           population: 98462,
-          gini: const Gini(year: 2018, value: 32.1),
+          gini: const Gini(year: 2018, coefficient: 32.1),
           fifa: "SEY",
-          car: const Car(signs: ["SY"], isRightSide: false),
+          car: const Car(sign: "SY", isRightSide: false),
           timezones: const ["UTC+04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Victoria"],
-            latLng: [-4.62, 55.45],
+            capital: Capital("Victoria"),
+            latLng: LatLng(-4.62, 55.45),
           ),
         );
 }
@@ -25315,14 +25406,14 @@ class CountryEsh extends WorldCountry {
               common: "西撒哈拉",
             ),
           ],
-          latLng: const [24.5, -13],
+          latLng: const LatLng(24.5, -13),
           bordersCodes: const ["Dza", "Mrt", "Mar"],
           areaMetric: 266000,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sahrawi",
-              m: "Sahrawi",
+              female: "Sahrawi",
+              male: "Sahrawi",
             ),
           ],
           emoji: "🇪🇭",
@@ -25331,12 +25422,12 @@ class CountryEsh extends WorldCountry {
             openStreetMaps: "relation/5441968",
           ),
           population: 510713,
-          car: const Car(signs: [""]),
+
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["El Aaiún"],
-            latLng: [-13.28, 27.14],
+            capital: Capital("El Aaiún"),
+            latLng: LatLng(-13.28, 27.14),
           ),
         );
 }
@@ -25490,7 +25581,7 @@ class CountryLby extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "利比亚国", common: "利比亚"),
           ],
-          latLng: const [25, 17],
+          latLng: const LatLng(25, 17),
           bordersCodes: const [
             "Dza",
             "Tcd",
@@ -25503,13 +25594,13 @@ class CountryLby extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Libyan",
-              m: "Libyan",
+              female: "Libyan",
+              male: "Libyan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Libyenne",
-              m: "Libyen",
+              female: "Libyenne",
+              male: "Libyen",
             ),
           ],
           emoji: "🇱🇾",
@@ -25519,12 +25610,12 @@ class CountryLby extends WorldCountry {
           ),
           population: 6871287,
           fifa: "LBY",
-          car: const Car(signs: ["LAR"]),
+          car: const Car(sign: "LAR"),
           timezones: const ["UTC+01:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Tripoli"],
-            latLng: [32.88, 13.17],
+            capital: Capital("Tripoli"),
+            latLng: LatLng(32.88, 13.17),
           ),
         );
 }
@@ -25687,7 +25778,7 @@ class CountryMkd extends WorldCountry {
               common: "北馬其頓",
             ),
           ],
-          latLng: const [41.83333333, 22],
+          latLng: const LatLng(41.83333333, 22),
           landlocked: true,
           bordersCodes: const [
             "Alb",
@@ -25700,13 +25791,13 @@ class CountryMkd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Macedonian",
-              m: "Macedonian",
+              female: "Macedonian",
+              male: "Macedonian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Macédonienne",
-              m: "Macédonien",
+              female: "Macédonienne",
+              male: "Macédonien",
             ),
           ],
           emoji: "🇲🇰",
@@ -25715,12 +25806,14 @@ class CountryMkd extends WorldCountry {
             openStreetMaps: "relation/53293",
           ),
           population: 2077132,
-          gini: const Gini(year: 2018, value: 33),
+          gini: const Gini(year: 2018, coefficient: 33),
           fifa: "MKD",
-          car: const Car(signs: ["MK"]),
+          car: const Car(sign: "MK"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Skopje"], latLng: [42, 21.43]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Skopje"),
+            latLng: LatLng(42, 21.43),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -25884,7 +25977,7 @@ class CountryPer extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "秘鲁共和国", common: "秘鲁"),
           ],
-          latLng: const [-10, -76],
+          latLng: const LatLng(-10, -76),
           bordersCodes: const [
             "Bol",
             "Bra",
@@ -25896,13 +25989,13 @@ class CountryPer extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Peruvian",
-              m: "Peruvian",
+              female: "Peruvian",
+              male: "Peruvian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Péruvienne",
-              m: "Péruvien",
+              female: "Péruvienne",
+              male: "Péruvien",
             ),
           ],
           emoji: "🇵🇪",
@@ -25911,12 +26004,14 @@ class CountryPer extends WorldCountry {
             openStreetMaps: "relation/288247",
           ),
           population: 32971846,
-          gini: const Gini(year: 2019, value: 41.5),
+          gini: const Gini(year: 2019, coefficient: 41.5),
           fifa: "PER",
-          car: const Car(signs: ["PE"]),
+          car: const Car(sign: "PE"),
           timezones: const ["UTC-05:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Lima"], latLng: [-12.05, -77.05]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Lima"),
+            latLng: LatLng(-12.05, -77.05),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -26083,20 +26178,20 @@ class CountryBdi extends WorldCountry {
               common: "布隆迪",
             ),
           ],
-          latLng: const [-3.5, 30],
+          latLng: const LatLng(-3.5, 30),
           landlocked: true,
           bordersCodes: const ["Cod", "Rwa", "Tza"],
           areaMetric: 27834,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Burundian",
-              m: "Burundian",
+              female: "Burundian",
+              male: "Burundian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Burundaise",
-              m: "Burundais",
+              female: "Burundaise",
+              male: "Burundais",
             ),
           ],
           emoji: "🇧🇮",
@@ -26105,12 +26200,14 @@ class CountryBdi extends WorldCountry {
             openStreetMaps: "relation/195269",
           ),
           population: 11890781,
-          gini: const Gini(year: 2013, value: 38.6),
+          gini: const Gini(year: 2013, coefficient: 38.6),
           fifa: "BDI",
-          car: const Car(signs: ["RU"]),
+          car: const Car(sign: "RU"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Gitega"], latLng: [-3.43, 29.93]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Gitega"),
+            latLng: LatLng(-3.43, 29.93),
+          ),
         );
 }
 
@@ -26271,18 +26368,18 @@ class CountryKir extends WorldCountry {
               common: "基里巴斯",
             ),
           ],
-          latLng: const [1.41666666, 173],
+          latLng: const LatLng(1.41666666, 173),
           areaMetric: 811,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "I-Kiribati",
-              m: "I-Kiribati",
+              female: "I-Kiribati",
+              male: "I-Kiribati",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kiribatienne",
-              m: "Kiribatien",
+              female: "Kiribatienne",
+              male: "Kiribatien",
             ),
           ],
           emoji: "🇰🇮",
@@ -26291,12 +26388,12 @@ class CountryKir extends WorldCountry {
             openStreetMaps: "relation/571178",
           ),
           population: 119446,
-          gini: const Gini(year: 2006, value: 37),
-          car: const Car(signs: ["KIR"], isRightSide: false),
+          gini: const Gini(year: 2006, coefficient: 37),
+          car: const Car(sign: "KIR", isRightSide: false),
           timezones: const ["UTC+12:00", "UTC+13:00", "UTC+14:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["South Tarawa"],
-            latLng: [1.33, 172.98],
+            capital: Capital("South Tarawa"),
+            latLng: LatLng(1.33, 172.98),
           ),
         );
 }
@@ -26458,7 +26555,7 @@ class CountryTur extends WorldCountry {
               common: "土耳其",
             ),
           ],
-          latLng: const [39, 35],
+          latLng: const LatLng(39, 35),
           bordersCodes: const [
             "Arm",
             "Aze",
@@ -26473,13 +26570,13 @@ class CountryTur extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Turkish",
-              m: "Turkish",
+              female: "Turkish",
+              male: "Turkish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Turque",
-              m: "Turc",
+              female: "Turque",
+              male: "Turc",
             ),
           ],
           emoji: "🇹🇷",
@@ -26488,12 +26585,14 @@ class CountryTur extends WorldCountry {
             openStreetMaps: "relation/174737",
           ),
           population: 84339067,
-          gini: const Gini(year: 2019, value: 41.9),
+          gini: const Gini(year: 2019, coefficient: 41.9),
           fifa: "TUR",
-          car: const Car(signs: ["TR"]),
+          car: const Car(sign: "TR"),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Ankara"], latLng: [39.93, 32.87]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Ankara"),
+            latLng: LatLng(39.93, 32.87),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -26660,7 +26759,7 @@ class CountryTza extends WorldCountry {
               common: "坦桑尼亚",
             ),
           ],
-          latLng: const [-6, 35],
+          latLng: const LatLng(-6, 35),
           bordersCodes: const [
             "Bdi",
             "Cod",
@@ -26675,13 +26774,13 @@ class CountryTza extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tanzanian",
-              m: "Tanzanian",
+              female: "Tanzanian",
+              male: "Tanzanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tanzanienne",
-              m: "Tanzanien",
+              female: "Tanzanienne",
+              male: "Tanzanien",
             ),
           ],
           emoji: "🇹🇿",
@@ -26690,12 +26789,14 @@ class CountryTza extends WorldCountry {
             openStreetMaps: "relation/195270",
           ),
           population: 59734213,
-          gini: const Gini(year: 2017, value: 40.5),
+          gini: const Gini(year: 2017, coefficient: 40.5),
           fifa: "TAN",
-          car: const Car(signs: ["EAT"], isRightSide: false),
+          car: const Car(sign: "EAT", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Dodoma"], latLng: [-6.16, 35.75]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Dodoma"),
+            latLng: LatLng(-6.16, 35.75),
+          ),
         );
 }
 
@@ -26855,19 +26956,19 @@ class CountryTun extends WorldCountry {
               common: "突尼斯",
             ),
           ],
-          latLng: const [34, 9],
+          latLng: const LatLng(34, 9),
           bordersCodes: const ["Dza", "Lby"],
           areaMetric: 163610,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tunisian",
-              m: "Tunisian",
+              female: "Tunisian",
+              male: "Tunisian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tunisienne",
-              m: "Tunisien",
+              female: "Tunisienne",
+              male: "Tunisien",
             ),
           ],
           emoji: "🇹🇳",
@@ -26876,12 +26977,14 @@ class CountryTun extends WorldCountry {
             openStreetMaps: "relation/192757",
           ),
           population: 11818618,
-          gini: const Gini(year: 2015, value: 32.8),
+          gini: const Gini(year: 2015, coefficient: 32.8),
           fifa: "TUN",
-          car: const Car(signs: ["TN"]),
+          car: const Car(sign: "TN"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tunis"], latLng: [36.8, 10.18]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tunis"),
+            latLng: LatLng(36.8, 10.18),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -27040,18 +27143,18 @@ class CountryMsr extends WorldCountry {
               common: "蒙特塞拉特",
             ),
           ],
-          latLng: const [16.75, -62.2],
+          latLng: const LatLng(16.75, -62.2),
           areaMetric: 102,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Montserratian",
-              m: "Montserratian",
+              female: "Montserratian",
+              male: "Montserratian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Montserratienne",
-              m: "Montserratien",
+              female: "Montserratienne",
+              male: "Montserratien",
             ),
           ],
           emoji: "🇲🇸",
@@ -27061,11 +27164,11 @@ class CountryMsr extends WorldCountry {
           ),
           population: 4922,
           fifa: "MSR",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Plymouth"],
-            latLng: [16.7, -62.22],
+            capital: Capital("Plymouth"),
+            latLng: LatLng(16.7, -62.22),
           ),
         );
 }
@@ -27233,7 +27336,7 @@ class CountryKgz extends WorldCountry {
               common: "吉尔吉斯斯坦",
             ),
           ],
-          latLng: const [41, 75],
+          latLng: const LatLng(41, 75),
           landlocked: true,
           bordersCodes: const [
             "Chn",
@@ -27245,13 +27348,13 @@ class CountryKgz extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kirghiz",
-              m: "Kirghiz",
+              female: "Kirghiz",
+              male: "Kirghiz",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kirghize",
-              m: "Kirghize",
+              female: "Kirghize",
+              male: "Kirghize",
             ),
           ],
           emoji: "🇰🇬",
@@ -27260,12 +27363,14 @@ class CountryKgz extends WorldCountry {
             openStreetMaps: "relation/178009",
           ),
           population: 6591600,
-          gini: const Gini(year: 2019, value: 29.7),
+          gini: const Gini(year: 2019, coefficient: 29.7),
           fifa: "KGZ",
-          car: const Car(signs: ["KS"]),
+          car: const Car(sign: "KS"),
           timezones: const ["UTC+06:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bishkek"], latLng: [42.87, 74.6]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bishkek"),
+            latLng: LatLng(42.87, 74.6),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -27427,13 +27532,13 @@ class CountryImn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马恩岛", common: "马恩岛"),
           ],
-          latLng: const [54.25, -4.5],
+          latLng: const LatLng(54.25, -4.5),
           areaMetric: 572,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Manx",
-              m: "Manx",
+              female: "Manx",
+              male: "Manx",
             ),
           ],
           emoji: "🇮🇲",
@@ -27442,10 +27547,12 @@ class CountryImn extends WorldCountry {
             openStreetMaps: "relation/62269",
           ),
           population: 85032,
-          car: const Car(signs: ["GBM"], isRightSide: false),
+          car: const Car(sign: "GBM", isRightSide: false),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Douglas"], latLng: [54.15, -4.48]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Douglas"),
+            latLng: LatLng(54.15, -4.48),
+          ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
@@ -27607,18 +27714,18 @@ class CountryGlp extends WorldCountry {
               common: "瓜德罗普岛",
             ),
           ],
-          latLng: const [16.25, -61.583333],
+          latLng: const LatLng(16.25, -61.583333),
           areaMetric: 1628,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guadeloupian",
-              m: "Guadeloupian",
+              female: "Guadeloupian",
+              male: "Guadeloupian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guadeloupéenne",
-              m: "Guadeloupéen",
+              female: "Guadeloupéenne",
+              male: "Guadeloupéen",
             ),
           ],
           emoji: "🇬🇵",
@@ -27627,11 +27734,11 @@ class CountryGlp extends WorldCountry {
             openStreetMaps: "relation/7109289",
           ),
           population: 400132,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Basse-Terre"],
-            latLng: [16.03, -61.73],
+            capital: Capital("Basse-Terre"),
+            latLng: LatLng(16.03, -61.73),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)\\d{3})$"),
         );
@@ -27785,19 +27892,19 @@ class CountryKwt extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "科威特国", common: "科威特"),
           ],
-          latLng: const [29.5, 45.75],
+          latLng: const LatLng(29.5, 45.75),
           bordersCodes: const ["Irq", "Sau"],
           areaMetric: 17818,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kuwaiti",
-              m: "Kuwaiti",
+              female: "Kuwaiti",
+              male: "Kuwaiti",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Koweïtienne",
-              m: "Koweïtien",
+              female: "Koweïtienne",
+              male: "Koweïtien",
             ),
           ],
           emoji: "🇰🇼",
@@ -27807,12 +27914,12 @@ class CountryKwt extends WorldCountry {
           ),
           population: 4270563,
           fifa: "KUW",
-          car: const Car(signs: ["KWT"]),
+          car: const Car(sign: "KWT"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Kuwait City"],
-            latLng: [29.37, 47.97],
+            capital: Capital("Kuwait City"),
+            latLng: LatLng(29.37, 47.97),
           ),
           postalCode: const PostalCode(),
         );
@@ -27972,13 +28079,13 @@ class CountryVgb extends WorldCountry {
               common: "英属维尔京群岛",
             ),
           ],
-          latLng: const [18.431383, -64.62305],
+          latLng: const LatLng(18.431383, -64.62305),
           areaMetric: 151,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Virgin Islander",
-              m: "Virgin Islander",
+              female: "Virgin Islander",
+              male: "Virgin Islander",
             ),
           ],
           emoji: "🇻🇬",
@@ -27988,11 +28095,11 @@ class CountryVgb extends WorldCountry {
           ),
           population: 30237,
           fifa: "VGB",
-          car: const Car(signs: ["BVI"], isRightSide: false),
+          car: const Car(sign: "BVI", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Road Town"],
-            latLng: [18.42, -64.62],
+            capital: Capital("Road Town"),
+            latLng: LatLng(18.42, -64.62),
           ),
         );
 }
@@ -28155,7 +28262,7 @@ class CountryCiv extends WorldCountry {
               common: "科特迪瓦",
             ),
           ],
-          latLng: const [8, -5],
+          latLng: const LatLng(8, -5),
           bordersCodes: const [
             "Bfa",
             "Gha",
@@ -28167,13 +28274,13 @@ class CountryCiv extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ivorian",
-              m: "Ivorian",
+              female: "Ivorian",
+              male: "Ivorian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ivoirienne",
-              m: "Ivoirien",
+              female: "Ivoirienne",
+              male: "Ivoirien",
             ),
           ],
           emoji: "🇨🇮",
@@ -28182,13 +28289,13 @@ class CountryCiv extends WorldCountry {
             openStreetMaps: "relation/192779",
           ),
           population: 26378275,
-          gini: const Gini(year: 2015, value: 41.5),
+          gini: const Gini(year: 2015, coefficient: 41.5),
           fifa: "CIV",
-          car: const Car(signs: ["CI"]),
+          car: const Car(sign: "CI"),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Yamoussoukro"],
-            latLng: [6.82, -5.27],
+            capital: Capital("Yamoussoukro"),
+            latLng: LatLng(6.82, -5.27),
           ),
         );
 }
@@ -28342,13 +28449,13 @@ class CountryCxr extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "圣诞岛", common: "圣诞岛"),
           ],
-          latLng: const [-10.5, 105.66666666],
+          latLng: const LatLng(-10.5, 105.66666666),
           areaMetric: 135,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Christmas Islander",
-              m: "Christmas Islander",
+              female: "Christmas Islander",
+              male: "Christmas Islander",
             ),
           ],
           emoji: "🇨🇽",
@@ -28357,11 +28464,11 @@ class CountryCxr extends WorldCountry {
             openStreetMaps: "relation/6365444",
           ),
           population: 2072,
-          car: const Car(signs: ["AUS"], isRightSide: false),
+          car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Flying Fish Cove"],
-            latLng: [-10.42, 105.68],
+            capital: Capital("Flying Fish Cove"),
+            latLng: LatLng(-10.42, 105.68),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -28521,20 +28628,20 @@ class CountryLso extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "莱索托王国", common: "莱索托"),
           ],
-          latLng: const [-29.5, 28.5],
+          latLng: const LatLng(-29.5, 28.5),
           landlocked: true,
           bordersCodes: const ["Zaf"],
           areaMetric: 30355,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Mosotho",
-              m: "Mosotho",
+              female: "Mosotho",
+              male: "Mosotho",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Lésothienne",
-              m: "Lésothien",
+              female: "Lésothienne",
+              male: "Lésothien",
             ),
           ],
           emoji: "🇱🇸",
@@ -28543,12 +28650,14 @@ class CountryLso extends WorldCountry {
             openStreetMaps: "relation/2093234",
           ),
           population: 2142252,
-          gini: const Gini(year: 2017, value: 44.9),
+          gini: const Gini(year: 2017, coefficient: 44.9),
           fifa: "LES",
-          car: const Car(signs: ["LS"], isRightSide: false),
+          car: const Car(sign: "LS", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Maseru"], latLng: [-29.32, 27.48]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Maseru"),
+            latLng: LatLng(-29.32, 27.48),
+          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
         );
@@ -28714,18 +28823,18 @@ class CountryJey extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "泽西岛", common: "泽西岛"),
           ],
-          latLng: const [49.25, -2.16666666],
+          latLng: const LatLng(49.25, -2.16666666),
           areaMetric: 116,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Channel Islander",
-              m: "Channel Islander",
+              female: "Channel Islander",
+              male: "Channel Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Jersiaise",
-              m: "Jersiais",
+              female: "Jersiaise",
+              male: "Jersiais",
             ),
           ],
           emoji: "🇯🇪",
@@ -28734,11 +28843,11 @@ class CountryJey extends WorldCountry {
             openStreetMaps: "relation/367988",
           ),
           population: 100800,
-          car: const Car(signs: ["GBJ"], isRightSide: false),
+          car: const Car(sign: "GBJ", isRightSide: false),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Saint Helier"],
-            latLng: [49.18, -2.1],
+            capital: Capital("Saint Helier"),
+            latLng: LatLng(49.18, -2.1),
           ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
@@ -28904,7 +29013,7 @@ class CountrySvn extends WorldCountry {
               common: "斯洛文尼亚",
             ),
           ],
-          latLng: const [46.11666666, 14.81666666],
+          latLng: const LatLng(46.11666666, 14.81666666),
           bordersCodes: const [
             "Aut",
             "Hrv",
@@ -28915,13 +29024,13 @@ class CountrySvn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Slovene",
-              m: "Slovene",
+              female: "Slovene",
+              male: "Slovene",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Slovène",
-              m: "Slovène",
+              female: "Slovène",
+              male: "Slovène",
             ),
           ],
           emoji: "🇸🇮",
@@ -28930,13 +29039,13 @@ class CountrySvn extends WorldCountry {
             openStreetMaps: "relation/218657",
           ),
           population: 2100126,
-          gini: const Gini(year: 2018, value: 24.6),
+          gini: const Gini(year: 2018, coefficient: 24.6),
           fifa: "SVN",
-          car: const Car(signs: ["SLO"]),
+          car: const Car(sign: "SLO"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Ljubljana"],
-            latLng: [46.05, 14.52],
+            capital: Capital("Ljubljana"),
+            latLng: LatLng(46.05, 14.52),
           ),
           postalCode: const PostalCode(
             format: "SI- ####",
@@ -29113,7 +29222,7 @@ class CountryBel extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "比利时王国", common: "比利时"),
           ],
-          latLng: const [50.83333333, 4],
+          latLng: const LatLng(50.83333333, 4),
           bordersCodes: const [
             "Fra",
             "Deu",
@@ -29124,13 +29233,13 @@ class CountryBel extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Belgian",
-              m: "Belgian",
+              female: "Belgian",
+              male: "Belgian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Belge",
-              m: "Belge",
+              female: "Belge",
+              male: "Belge",
             ),
           ],
           emoji: "🇧🇪",
@@ -29139,12 +29248,14 @@ class CountryBel extends WorldCountry {
             openStreetMaps: "relation/52411",
           ),
           population: 11555997,
-          gini: const Gini(year: 2018, value: 27.2),
+          gini: const Gini(year: 2018, coefficient: 27.2),
           fifa: "BEL",
-          car: const Car(signs: ["B"]),
+          car: const Car(sign: "B"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Brussels"], latLng: [50.83, 4.33]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Brussels"),
+            latLng: LatLng(50.83, 4.33),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -29303,13 +29414,13 @@ class CountryTca extends WorldCountry {
               common: "特克斯和凯科斯群岛",
             ),
           ],
-          latLng: const [21.75, -71.58333333],
+          latLng: const LatLng(21.75, -71.58333333),
           areaMetric: 948,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Turks and Caicos Islander",
-              m: "Turks and Caicos Islander",
+              female: "Turks and Caicos Islander",
+              male: "Turks and Caicos Islander",
             ),
           ],
           emoji: "🇹🇨",
@@ -29319,12 +29430,12 @@ class CountryTca extends WorldCountry {
           ),
           population: 38718,
           fifa: "TCA",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Cockburn Town"],
-            latLng: [21.46, -71.14],
+            capital: Capital("Cockburn Town"),
+            latLng: LatLng(21.46, -71.14),
           ),
           postalCode: const PostalCode(
             format: "TKCA 1ZZ",
@@ -29482,19 +29593,19 @@ class CountryGib extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "直布罗陀", common: "直布罗陀"),
           ],
-          latLng: const [36.13333333, -5.35],
+          latLng: const LatLng(36.13333333, -5.35),
           bordersCodes: const ["Esp"],
           areaMetric: 6,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Gibraltar",
-              m: "Gibraltar",
+              female: "Gibraltar",
+              male: "Gibraltar",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Gibraltarienne",
-              m: "Gibraltarien",
+              female: "Gibraltarienne",
+              male: "Gibraltarien",
             ),
           ],
           emoji: "🇬🇮",
@@ -29504,11 +29615,11 @@ class CountryGib extends WorldCountry {
           ),
           population: 33691,
           fifa: "GIB",
-          car: const Car(signs: ["GBZ"]),
+          car: const Car(sign: "GBZ"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Gibraltar"],
-            latLng: [36.13, -5.35],
+            capital: Capital("Gibraltar"),
+            latLng: LatLng(36.13, -5.35),
           ),
         );
 }
@@ -29661,19 +29772,19 @@ class CountryQat extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "卡塔尔国", common: "卡塔尔"),
           ],
-          latLng: const [25.5, 51.25],
+          latLng: const LatLng(25.5, 51.25),
           bordersCodes: const ["Sau"],
           areaMetric: 11586,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Qatari",
-              m: "Qatari",
+              female: "Qatari",
+              male: "Qatari",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Qatarienne",
-              m: "Qatarien",
+              female: "Qatarienne",
+              male: "Qatarien",
             ),
           ],
           emoji: "🇶🇦",
@@ -29683,11 +29794,13 @@ class CountryQat extends WorldCountry {
           ),
           population: 2881060,
           fifa: "QAT",
-          car: const Car(signs: ["Q"]),
+          car: const Car(sign: "Q"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Doha"], latLng: [25.28, 51.53]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Doha"),
+            latLng: LatLng(25.28, 51.53),
+          ),
         );
 }
 
@@ -29852,7 +29965,7 @@ class CountryBwa extends WorldCountry {
               common: "博茨瓦纳",
             ),
           ],
-          latLng: const [-22, 24],
+          latLng: const LatLng(-22, 24),
           landlocked: true,
           bordersCodes: const [
             "Nam",
@@ -29864,13 +29977,13 @@ class CountryBwa extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Motswana",
-              m: "Motswana",
+              female: "Motswana",
+              male: "Motswana",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Botswanaise",
-              m: "Botswanais",
+              female: "Botswanaise",
+              male: "Botswanais",
             ),
           ],
           emoji: "🇧🇼",
@@ -29879,13 +29992,13 @@ class CountryBwa extends WorldCountry {
             openStreetMaps: "relation/1889339",
           ),
           population: 2351625,
-          gini: const Gini(year: 2015, value: 53.3),
+          gini: const Gini(year: 2015, coefficient: 53.3),
           fifa: "BOT",
-          car: const Car(signs: ["BW"], isRightSide: false),
+          car: const Car(sign: "BW", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Gaborone"],
-            latLng: [-24.63, 25.9],
+            capital: Capital("Gaborone"),
+            latLng: LatLng(-24.63, 25.9),
           ),
         );
 }
@@ -30058,19 +30171,19 @@ class CountryGnq extends WorldCountry {
               common: "赤道几内亚",
             ),
           ],
-          latLng: const [2, 10],
+          latLng: const LatLng(2, 10),
           bordersCodes: const ["Cmr", "Gab"],
           areaMetric: 28051,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Equatorial Guinean",
-              m: "Equatorial Guinean",
+              female: "Equatorial Guinean",
+              male: "Equatorial Guinean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Équato-guinéenne",
-              m: "Équato-guinéen",
+              female: "Équato-guinéenne",
+              male: "Équato-guinéen",
             ),
           ],
           emoji: "🇬🇶",
@@ -30080,10 +30193,12 @@ class CountryGnq extends WorldCountry {
           ),
           population: 1402985,
           fifa: "EQG",
-          car: const Car(signs: ["GQ"]),
+          car: const Car(sign: "GQ"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Malabo"], latLng: [3.75, 8.78]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Malabo"),
+            latLng: LatLng(3.75, 8.78),
+          ),
         );
 }
 
@@ -30252,19 +30367,19 @@ class CountryDji extends WorldCountry {
               common: "吉布提",
             ),
           ],
-          latLng: const [11.5, 43],
+          latLng: const LatLng(11.5, 43),
           bordersCodes: const ["Eri", "Eth", "Som"],
           areaMetric: 23200,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Djibouti",
-              m: "Djibouti",
+              female: "Djibouti",
+              male: "Djibouti",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Djiboutienne",
-              m: "Djiboutien",
+              female: "Djiboutienne",
+              male: "Djiboutien",
             ),
           ],
           emoji: "🇩🇯",
@@ -30273,13 +30388,13 @@ class CountryDji extends WorldCountry {
             openStreetMaps: "relation/192801",
           ),
           population: 988002,
-          gini: const Gini(year: 2017, value: 41.6),
+          gini: const Gini(year: 2017, coefficient: 41.6),
           fifa: "DJI",
-          car: const Car(signs: ["DJI"]),
+          car: const Car(sign: "DJI"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Djibouti"],
-            latLng: [11.58, 43.15],
+            capital: Capital("Djibouti"),
+            latLng: LatLng(11.58, 43.15),
           ),
         );
 }
@@ -30436,19 +30551,19 @@ class CountryGuy extends WorldCountry {
               common: "圭亚那",
             ),
           ],
-          latLng: const [5, -59],
+          latLng: const LatLng(5, -59),
           bordersCodes: const ["Bra", "Sur", "Ven"],
           areaMetric: 214969,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guyanese",
-              m: "Guyanese",
+              female: "Guyanese",
+              male: "Guyanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guyanienne",
-              m: "Guyanien",
+              female: "Guyanienne",
+              male: "Guyanien",
             ),
           ],
           emoji: "🇬🇾",
@@ -30457,13 +30572,13 @@ class CountryGuy extends WorldCountry {
             openStreetMaps: "relation/287083",
           ),
           population: 786559,
-          gini: const Gini(year: 1998, value: 45.1),
+          gini: const Gini(year: 1998, coefficient: 45.1),
           fifa: "GUY",
-          car: const Car(signs: ["GUY"], isRightSide: false),
+          car: const Car(sign: "GUY", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Georgetown"],
-            latLng: [6.8, -58.15],
+            capital: Capital("Georgetown"),
+            latLng: LatLng(6.8, -58.15),
           ),
         );
 }
@@ -30624,13 +30739,13 @@ class CountryGum extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "关岛", common: "关岛"),
           ],
-          latLng: const [13.46666666, 144.78333333],
+          latLng: const LatLng(13.46666666, 144.78333333),
           areaMetric: 549,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guamanian",
-              m: "Guamanian",
+              female: "Guamanian",
+              male: "Guamanian",
             ),
           ],
           emoji: "🇬🇺",
@@ -30640,11 +30755,11 @@ class CountryGum extends WorldCountry {
           ),
           population: 168783,
           fifa: "GUM",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC+10:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Hagåtña"],
-            latLng: [13.48, 144.75],
+            capital: Capital("Hagåtña"),
+            latLng: LatLng(13.48, 144.75),
           ),
           postalCode: const PostalCode(
             format: "969##",
@@ -30805,19 +30920,19 @@ class CountryMco extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "摩纳哥公国", common: "摩纳哥"),
           ],
-          latLng: const [43.73333333, 7.4],
+          latLng: const LatLng(43.73333333, 7.4),
           bordersCodes: const ["Fra"],
           areaMetric: 2.02,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Monegasque",
-              m: "Monegasque",
+              female: "Monegasque",
+              male: "Monegasque",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Monégasque",
-              m: "Monégasque",
+              female: "Monégasque",
+              male: "Monégasque",
             ),
           ],
           emoji: "🇲🇨",
@@ -30826,10 +30941,12 @@ class CountryMco extends WorldCountry {
             openStreetMaps: "relation/1124039",
           ),
           population: 39244,
-          car: const Car(signs: ["MC"]),
+          car: const Car(sign: "MC"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Monaco"], latLng: [43.73, 7.42]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Monaco"),
+            latLng: LatLng(43.73, 7.42),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -30986,18 +31103,18 @@ class CountrySlb extends WorldCountry {
               common: "所罗门群岛",
             ),
           ],
-          latLng: const [-8, 159],
+          latLng: const LatLng(-8, 159),
           areaMetric: 28896,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Solomon Islander",
-              m: "Solomon Islander",
+              female: "Solomon Islander",
+              male: "Solomon Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Salomonienne",
-              m: "Salomonien",
+              female: "Salomonienne",
+              male: "Salomonien",
             ),
           ],
           emoji: "🇸🇧",
@@ -31006,13 +31123,13 @@ class CountrySlb extends WorldCountry {
             openStreetMaps: "relation/1857436",
           ),
           population: 686878,
-          gini: const Gini(year: 2012, value: 37.1),
+          gini: const Gini(year: 2012, coefficient: 37.1),
           fifa: "SOL",
-          car: const Car(signs: ["SOL"], isRightSide: false),
+          car: const Car(sign: "SOL", isRightSide: false),
           timezones: const ["UTC+11:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Honiara"],
-            latLng: [-9.43, 159.95],
+            capital: Capital("Honiara"),
+            latLng: LatLng(-9.43, 159.95),
           ),
         );
 }
@@ -31176,18 +31293,18 @@ class CountryGgy extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "根西岛", common: "根西岛"),
           ],
-          latLng: const [49.46666666, -2.58333333],
+          latLng: const LatLng(49.46666666, -2.58333333),
           areaMetric: 78,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Channel Islander",
-              m: "Channel Islander",
+              female: "Channel Islander",
+              male: "Channel Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guernesiaise",
-              m: "Guernesiais",
+              female: "Guernesiaise",
+              male: "Guernesiais",
             ),
           ],
           emoji: "🇬🇬",
@@ -31196,11 +31313,11 @@ class CountryGgy extends WorldCountry {
             openStreetMaps: "relation/270009",
           ),
           population: 62999,
-          car: const Car(signs: ["GBG"], isRightSide: false),
+          car: const Car(sign: "GBG", isRightSide: false),
           timezones: const ["UTC+00:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["St. Peter Port"],
-            latLng: [49.45, -2.54],
+            capital: Capital("St. Peter Port"),
+            latLng: LatLng(49.45, -2.54),
           ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
@@ -31372,20 +31489,20 @@ class CountryPry extends WorldCountry {
               common: "巴拉圭",
             ),
           ],
-          latLng: const [-23, -58],
+          latLng: const LatLng(-23, -58),
           landlocked: true,
           bordersCodes: const ["Arg", "Bol", "Bra"],
           areaMetric: 406752,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Paraguayan",
-              m: "Paraguayan",
+              female: "Paraguayan",
+              male: "Paraguayan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Paraguayenne",
-              m: "Paraguayen",
+              female: "Paraguayenne",
+              male: "Paraguayen",
             ),
           ],
           emoji: "🇵🇾",
@@ -31394,13 +31511,13 @@ class CountryPry extends WorldCountry {
             openStreetMaps: "relation/287077",
           ),
           population: 7132530,
-          gini: const Gini(year: 2019, value: 45.7),
+          gini: const Gini(year: 2019, coefficient: 45.7),
           fifa: "PAR",
-          car: const Car(signs: ["PY"]),
+          car: const Car(sign: "PY"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Asunción"],
-            latLng: [-25.28, -57.57],
+            capital: Capital("Asunción"),
+            latLng: LatLng(-25.28, -57.57),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -31565,19 +31682,19 @@ class CountrySur extends WorldCountry {
               common: "苏里南",
             ),
           ],
-          latLng: const [4, -56],
+          latLng: const LatLng(4, -56),
           bordersCodes: const ["Bra", "Guf", "Guy"],
           areaMetric: 163820,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Surinamer",
-              m: "Surinamer",
+              female: "Surinamer",
+              male: "Surinamer",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Surinamaise",
-              m: "Surinamais",
+              female: "Surinamaise",
+              male: "Surinamais",
             ),
           ],
           emoji: "🇸🇷",
@@ -31586,13 +31703,13 @@ class CountrySur extends WorldCountry {
             openStreetMaps: "relation/287082",
           ),
           population: 586634,
-          gini: const Gini(year: 1999, value: 57.9),
+          gini: const Gini(year: 1999, coefficient: 57.9),
           fifa: "SUR",
-          car: const Car(signs: ["SME"], isRightSide: false),
+          car: const Car(sign: "SME", isRightSide: false),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Paramaribo"],
-            latLng: [5.83, -55.17],
+            capital: Capital("Paramaribo"),
+            latLng: LatLng(5.83, -55.17),
           ),
         );
 }
@@ -31751,13 +31868,13 @@ class CountryUmi extends WorldCountry {
               common: "美国本土外小岛屿",
             ),
           ],
-          latLng: const [19.3, 166.633333],
+          latLng: const LatLng(19.3, 166.633333),
           areaMetric: 34.2,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "American Islander",
-              m: "American Islander",
+              female: "American Islander",
+              male: "American Islander",
             ),
           ],
           emoji: "🇺🇲",
@@ -31766,10 +31883,12 @@ class CountryUmi extends WorldCountry {
             openStreetMaps: "relation/6430384",
           ),
           population: 300,
-          car: const Car(signs: [""]),
           timezones: const ["UTC-11:00", "UTC-10:00", "UTC+12:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(capital: ["Washington DC"]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Washington DC"),
+            latLng: LatLng(38.9072, 77.0369),
+          ),
         );
 }
 
@@ -31929,7 +32048,7 @@ class CountryGin extends WorldCountry {
               common: "几内亚",
             ),
           ],
-          latLng: const [11, -10],
+          latLng: const LatLng(11, -10),
           bordersCodes: const [
             "Civ",
             "Gnb",
@@ -31942,13 +32061,13 @@ class CountryGin extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guinean",
-              m: "Guinean",
+              female: "Guinean",
+              male: "Guinean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guinéenne",
-              m: "Guinéen",
+              female: "Guinéenne",
+              male: "Guinéen",
             ),
           ],
           emoji: "🇬🇳",
@@ -31957,12 +32076,14 @@ class CountryGin extends WorldCountry {
             openStreetMaps: "relation/192778",
           ),
           population: 13132792,
-          gini: const Gini(year: 2012, value: 33.7),
+          gini: const Gini(year: 2012, coefficient: 33.7),
           fifa: "GUI",
-          car: const Car(signs: ["RG"]),
+          car: const Car(sign: "RG"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Conakry"], latLng: [9.5, -13.7]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Conakry"),
+            latLng: LatLng(9.5, -13.7),
+          ),
         );
 }
 
@@ -32114,7 +32235,7 @@ class CountryCze extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "捷克共和国", common: "捷克"),
           ],
-          latLng: const [49.75, 15.5],
+          latLng: const LatLng(49.75, 15.5),
           landlocked: true,
           bordersCodes: const [
             "Aut",
@@ -32126,13 +32247,13 @@ class CountryCze extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Czech",
-              m: "Czech",
+              female: "Czech",
+              male: "Czech",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tchèque",
-              m: "Tchèque",
+              female: "Tchèque",
+              male: "Tchèque",
             ),
           ],
           emoji: "🇨🇿",
@@ -32141,12 +32262,14 @@ class CountryCze extends WorldCountry {
             openStreetMaps: "relation/51684",
           ),
           population: 10698896,
-          gini: const Gini(year: 2018, value: 25),
+          gini: const Gini(year: 2018, coefficient: 25),
           fifa: "CZE",
-          car: const Car(signs: ["CZ"]),
+          car: const Car(sign: "CZ"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Prague"], latLng: [50.08, 14.47]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Prague"),
+            latLng: LatLng(50.08, 14.47),
+          ),
           postalCode: const PostalCode(
             format: "### ##",
           ),
@@ -32313,18 +32436,18 @@ class CountryCom extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "科摩罗联盟", common: "科摩罗"),
           ],
-          latLng: const [-12.16666666, 44.25],
+          latLng: const LatLng(-12.16666666, 44.25),
           areaMetric: 1862,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Comoran",
-              m: "Comoran",
+              female: "Comoran",
+              male: "Comoran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Comorienne",
-              m: "Comorien",
+              female: "Comorienne",
+              male: "Comorien",
             ),
           ],
           emoji: "🇰🇲",
@@ -32333,12 +32456,14 @@ class CountryCom extends WorldCountry {
             openStreetMaps: "relation/535790",
           ),
           population: 869595,
-          gini: const Gini(year: 2014, value: 45.3),
+          gini: const Gini(year: 2014, coefficient: 45.3),
           fifa: "COM",
-          car: const Car(signs: ["COM"]),
+          car: const Car(sign: "COM"),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Moroni"], latLng: [-11.7, 43.23]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Moroni"),
+            latLng: LatLng(-11.7, 43.23),
+          ),
         );
 }
 
@@ -32490,19 +32615,19 @@ class CountryGha extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "加纳共和国", common: "加纳"),
           ],
-          latLng: const [8, -2],
+          latLng: const LatLng(8, -2),
           bordersCodes: const ["Bfa", "Civ", "Tgo"],
           areaMetric: 238533,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ghanaian",
-              m: "Ghanaian",
+              female: "Ghanaian",
+              male: "Ghanaian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Ghanéenne",
-              m: "Ghanéen",
+              female: "Ghanéenne",
+              male: "Ghanéen",
             ),
           ],
           emoji: "🇬🇭",
@@ -32511,12 +32636,14 @@ class CountryGha extends WorldCountry {
             openStreetMaps: "relation/192781",
           ),
           population: 31072945,
-          gini: const Gini(year: 2016, value: 43.5),
+          gini: const Gini(year: 2016, coefficient: 43.5),
           fifa: "GHA",
-          car: const Car(signs: ["GH"]),
+          car: const Car(sign: "GH"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Accra"], latLng: [5.55, -0.22]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Accra"),
+            latLng: LatLng(5.55, -0.22),
+          ),
         );
 }
 
@@ -32675,18 +32802,18 @@ class CountryKna extends WorldCountry {
               common: "圣基茨和尼维斯",
             ),
           ],
-          latLng: const [17.33333333, -62.75],
+          latLng: const LatLng(17.33333333, -62.75),
           areaMetric: 261,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kittitian or Nevisian",
-              m: "Kittitian or Nevisian",
+              female: "Kittitian or Nevisian",
+              male: "Kittitian or Nevisian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kittitienne-et-nevicienne",
-              m: "Kittitien-et-nevicien",
+              female: "Kittitienne-et-nevicienne",
+              male: "Kittitien-et-nevicien",
             ),
           ],
           emoji: "🇰🇳",
@@ -32696,11 +32823,11 @@ class CountryKna extends WorldCountry {
           ),
           population: 53192,
           fifa: "SKN",
-          car: const Car(signs: ["KN"], isRightSide: false),
+          car: const Car(sign: "KN", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Basseterre"],
-            latLng: [17.3, -62.72],
+            capital: Capital("Basseterre"),
+            latLng: LatLng(17.3, -62.72),
           ),
         );
 }
@@ -32863,18 +32990,18 @@ class CountryPyf extends WorldCountry {
               common: "法属波利尼西亚",
             ),
           ],
-          latLng: const [17.6797, 149.4068],
+          latLng: const LatLng(17.6797, 149.4068),
           areaMetric: 4167,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "French Polynesian",
-              m: "French Polynesian",
+              female: "French Polynesian",
+              male: "French Polynesian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Polynésienne",
-              m: "Polynésien",
+              female: "Polynésienne",
+              male: "Polynésien",
             ),
           ],
           emoji: "🇵🇫",
@@ -32883,11 +33010,11 @@ class CountryPyf extends WorldCountry {
             openStreetMaps: "relation/3412620",
           ),
           population: 280904,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-10:00", "UTC-09:30", "UTC-09:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Papeetē"],
-            latLng: [-17.53, -149.56],
+            capital: Capital("Papeetē"),
+            latLng: LatLng(-17.53, -149.56),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)7\\d{2})$"),
         );
@@ -33082,20 +33209,20 @@ class CountryZwe extends WorldCountry {
               common: "津巴布韦",
             ),
           ],
-          latLng: const [-20, 30],
+          latLng: const LatLng(-20, 30),
           landlocked: true,
           bordersCodes: const ["Bwa", "Moz", "Zaf", "Tur"],
           areaMetric: 390757,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Zimbabwean",
-              m: "Zimbabwean",
+              female: "Zimbabwean",
+              male: "Zimbabwean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Zimbabwéenne",
-              m: "Zimbabwéen",
+              female: "Zimbabwéenne",
+              male: "Zimbabwéen",
             ),
           ],
           emoji: "🇿🇼",
@@ -33104,13 +33231,13 @@ class CountryZwe extends WorldCountry {
             openStreetMaps: "relation/195272",
           ),
           population: 14862927,
-          gini: const Gini(year: 2019, value: 50.3),
+          gini: const Gini(year: 2019, coefficient: 50.3),
           fifa: "ZIM",
-          car: const Car(signs: ["ZW"], isRightSide: false),
+          car: const Car(sign: "ZW", isRightSide: false),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Harare"],
-            latLng: [-17.82, 31.03],
+            capital: Capital("Harare"),
+            latLng: LatLng(-17.82, 31.03),
           ),
         );
 }
@@ -33272,7 +33399,7 @@ class CountryKen extends WorldCountry {
               common: "肯尼亚",
             ),
           ],
-          latLng: const [1, 38],
+          latLng: const LatLng(1, 38),
           bordersCodes: const [
             "Eth",
             "Som",
@@ -33284,13 +33411,13 @@ class CountryKen extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kenyan",
-              m: "Kenyan",
+              female: "Kenyan",
+              male: "Kenyan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kényane",
-              m: "Kényan",
+              female: "Kényane",
+              male: "Kényan",
             ),
           ],
           emoji: "🇰🇪",
@@ -33299,12 +33426,14 @@ class CountryKen extends WorldCountry {
             openStreetMaps: "relation/192798",
           ),
           population: 53771300,
-          gini: const Gini(year: 2015, value: 40.8),
+          gini: const Gini(year: 2015, coefficient: 40.8),
           fifa: "KEN",
-          car: const Car(signs: ["EAK"], isRightSide: false),
+          car: const Car(sign: "EAK", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Nairobi"], latLng: [-1.28, 36.82]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Nairobi"),
+            latLng: LatLng(-1.28, 36.82),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -33475,7 +33604,7 @@ class CountryKaz extends WorldCountry {
               common: "哈萨克斯坦",
             ),
           ],
-          latLng: const [48.0196, 66.9237],
+          latLng: const LatLng(48.0196, 66.9237),
           landlocked: true,
           bordersCodes: const [
             "Chn",
@@ -33488,13 +33617,13 @@ class CountryKaz extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Kazakhstani",
-              m: "Kazakhstani",
+              female: "Kazakhstani",
+              male: "Kazakhstani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Kazakhstanaise",
-              m: "Kazakhstanais",
+              female: "Kazakhstanaise",
+              male: "Kazakhstanais",
             ),
           ],
           emoji: "🇰🇿",
@@ -33503,13 +33632,13 @@ class CountryKaz extends WorldCountry {
             openStreetMaps: "relation/214665",
           ),
           population: 18754440,
-          gini: const Gini(year: 2018, value: 27.8),
+          gini: const Gini(year: 2018, coefficient: 27.8),
           fifa: "KAZ",
-          car: const Car(signs: ["KZ"]),
+          car: const Car(sign: "KZ"),
           timezones: const ["UTC+05:00", "UTC+06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nur-Sultan"],
-            latLng: [51.16, 71.45],
+            capital: Capital("Nur-Sultan"),
+            latLng: LatLng(51.16, 71.45),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -33666,7 +33795,7 @@ class CountryMne extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "黑山", common: "黑山"),
           ],
-          latLng: const [42.5, 19.3],
+          latLng: const LatLng(42.5, 19.3),
           bordersCodes: const [
             "Alb",
             "Bih",
@@ -33678,13 +33807,13 @@ class CountryMne extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Montenegrin",
-              m: "Montenegrin",
+              female: "Montenegrin",
+              male: "Montenegrin",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Monténégrine",
-              m: "Monténégrin",
+              female: "Monténégrine",
+              male: "Monténégrin",
             ),
           ],
           emoji: "🇲🇪",
@@ -33693,13 +33822,13 @@ class CountryMne extends WorldCountry {
             openStreetMaps: "relation/53296",
           ),
           population: 621718,
-          gini: const Gini(year: 2016, value: 38.5),
+          gini: const Gini(year: 2016, coefficient: 38.5),
           fifa: "MNE",
-          car: const Car(signs: ["SCG"]),
+          car: const Car(sign: "SCG"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Podgorica"],
-            latLng: [42.43, 19.27],
+            capital: Capital("Podgorica"),
+            latLng: LatLng(42.43, 19.27),
           ),
           postalCode: const PostalCode(),
         );
@@ -33854,18 +33983,18 @@ class CountryTuv extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "图瓦卢", common: "图瓦卢"),
           ],
-          latLng: const [-8, 178],
+          latLng: const LatLng(-8, 178),
           areaMetric: 26,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tuvaluan",
-              m: "Tuvaluan",
+              female: "Tuvaluan",
+              male: "Tuvaluan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tuvaluane",
-              m: "Tuvaluan",
+              female: "Tuvaluane",
+              male: "Tuvaluan",
             ),
           ],
           emoji: "🇹🇻",
@@ -33874,12 +34003,12 @@ class CountryTuv extends WorldCountry {
             openStreetMaps: "relation/2177266",
           ),
           population: 11792,
-          gini: const Gini(year: 2010, value: 39.1),
-          car: const Car(signs: ["TUV"], isRightSide: false),
+          gini: const Gini(year: 2010, coefficient: 39.1),
+          car: const Car(sign: "TUV", isRightSide: false),
           timezones: const ["UTC+12:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Funafuti"],
-            latLng: [-8.52, 179.22],
+            capital: Capital("Funafuti"),
+            latLng: LatLng(-8.52, 179.22),
           ),
         );
 }
@@ -34040,19 +34169,19 @@ class CountryPan extends WorldCountry {
               common: "巴拿马",
             ),
           ],
-          latLng: const [9, -80],
+          latLng: const LatLng(9, -80),
           bordersCodes: const ["Col", "Cri"],
           areaMetric: 75417,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Panamanian",
-              m: "Panamanian",
+              female: "Panamanian",
+              male: "Panamanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Panaméenne",
-              m: "Panaméen",
+              female: "Panaméenne",
+              male: "Panaméen",
             ),
           ],
           emoji: "🇵🇦",
@@ -34061,13 +34190,13 @@ class CountryPan extends WorldCountry {
             openStreetMaps: "relation/287668",
           ),
           population: 4314768,
-          gini: const Gini(year: 2019, value: 49.8),
+          gini: const Gini(year: 2019, coefficient: 49.8),
           fifa: "PAN",
-          car: const Car(signs: ["PA"]),
+          car: const Car(sign: "PA"),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Panama City"],
-            latLng: [8.97, -79.53],
+            capital: Capital("Panama City"),
+            latLng: LatLng(8.97, -79.53),
           ),
         );
 }
@@ -34224,20 +34353,20 @@ class CountryAnd extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "安道尔公国", common: "安道尔"),
           ],
-          latLng: const [42.5, 1.5],
+          latLng: const LatLng(42.5, 1.5),
           landlocked: true,
           bordersCodes: const ["Fra", "Esp"],
           areaMetric: 468,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Andorran",
-              m: "Andorran",
+              female: "Andorran",
+              male: "Andorran",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Andorrane",
-              m: "Andorran",
+              female: "Andorrane",
+              male: "Andorran",
             ),
           ],
           emoji: "🇦🇩",
@@ -34247,11 +34376,11 @@ class CountryAnd extends WorldCountry {
           ),
           population: 77265,
           fifa: "AND",
-          car: const Car(signs: ["AND"]),
+          car: const Car(sign: "AND"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Andorra la Vella"],
-            latLng: [42.5, 1.52],
+            capital: Capital("Andorra la Vella"),
+            latLng: LatLng(42.5, 1.52),
           ),
           postalCode: const PostalCode(
             format: "AD###",
@@ -34414,13 +34543,13 @@ class CountryVir extends WorldCountry {
               common: "美属维尔京群岛",
             ),
           ],
-          latLng: const [18.35, -64.933333],
+          latLng: const LatLng(18.35, -64.933333),
           areaMetric: 347,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Virgin Islander",
-              m: "Virgin Islander",
+              female: "Virgin Islander",
+              male: "Virgin Islander",
             ),
           ],
           emoji: "🇻🇮",
@@ -34430,12 +34559,12 @@ class CountryVir extends WorldCountry {
           ),
           population: 106290,
           fifa: "VIR",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Charlotte Amalie"],
-            latLng: [18.35, -64.93],
+            capital: Capital("Charlotte Amalie"),
+            latLng: LatLng(18.35, -64.93),
           ),
         );
 }
@@ -34593,7 +34722,7 @@ class CountryIsr extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "以色列国", common: "以色列"),
           ],
-          latLng: const [31.47, 35.13],
+          latLng: const LatLng(31.47, 35.13),
           bordersCodes: const [
             "Egy",
             "Jor",
@@ -34605,13 +34734,13 @@ class CountryIsr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Israeli",
-              m: "Israeli",
+              female: "Israeli",
+              male: "Israeli",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Israélienne",
-              m: "Israélien",
+              female: "Israélienne",
+              male: "Israélien",
             ),
           ],
           emoji: "🇮🇱",
@@ -34620,14 +34749,14 @@ class CountryIsr extends WorldCountry {
             openStreetMaps: "relation/1473946",
           ),
           population: 9216900,
-          gini: const Gini(year: 2016, value: 39),
+          gini: const Gini(year: 2016, coefficient: 39),
           fifa: "ISR",
-          car: const Car(signs: ["IL"]),
+          car: const Car(sign: "IL"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Jerusalem"],
-            latLng: [31.77, 35.23],
+            capital: Capital("Jerusalem"),
+            latLng: LatLng(31.77, 35.23),
           ),
           postalCode: const PostalCode(),
         );
@@ -34790,19 +34919,19 @@ class CountryPrt extends WorldCountry {
               common: "葡萄牙",
             ),
           ],
-          latLng: const [39.5, -8],
+          latLng: const LatLng(39.5, -8),
           bordersCodes: const ["Esp"],
           areaMetric: 92090,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Portuguese",
-              m: "Portuguese",
+              female: "Portuguese",
+              male: "Portuguese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Portugaise",
-              m: "Portugais",
+              female: "Portugaise",
+              male: "Portugais",
             ),
           ],
           emoji: "🇵🇹",
@@ -34811,12 +34940,14 @@ class CountryPrt extends WorldCountry {
             openStreetMaps: "relation/295480",
           ),
           population: 10305564,
-          gini: const Gini(year: 2018, value: 33.5),
+          gini: const Gini(year: 2018, coefficient: 33.5),
           fifa: "POR",
-          car: const Car(signs: ["P"]),
+          car: const Car(sign: "P"),
           timezones: const ["UTC-01:00", "UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Lisbon"], latLng: [38.72, -9.13]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Lisbon"),
+            latLng: LatLng(38.72, -9.13),
+          ),
           postalCode: const PostalCode(
             format: "####-###",
             regExpPattern: r"^(\\d{7})$",
@@ -34976,7 +35107,7 @@ class CountryAut extends WorldCountry {
               common: "奥地利",
             ),
           ],
-          latLng: const [47.33333333, 13.33333333],
+          latLng: const LatLng(47.33333333, 13.33333333),
           landlocked: true,
           bordersCodes: const [
             "Cze",
@@ -34992,13 +35123,13 @@ class CountryAut extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Austrian",
-              m: "Austrian",
+              female: "Austrian",
+              male: "Austrian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Autrichienne",
-              m: "Autrichien",
+              female: "Autrichienne",
+              male: "Autrichien",
             ),
           ],
           emoji: "🇦🇹",
@@ -35007,12 +35138,14 @@ class CountryAut extends WorldCountry {
             openStreetMaps: "relation/16239",
           ),
           population: 8917205,
-          gini: const Gini(year: 2018, value: 30.8),
+          gini: const Gini(year: 2018, coefficient: 30.8),
           fifa: "AUT",
-          car: const Car(signs: ["A"]),
+          car: const Car(sign: "A"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Vienna"], latLng: [48.2, 16.37]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Vienna"),
+            latLng: LatLng(48.2, 16.37),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -35177,19 +35310,19 @@ class CountryFin extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "芬兰共和国", common: "芬兰"),
           ],
-          latLng: const [64, 26],
+          latLng: const LatLng(64, 26),
           bordersCodes: const ["Nor", "Swe", "Rus"],
           areaMetric: 338424,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Finnish",
-              m: "Finnish",
+              female: "Finnish",
+              male: "Finnish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Finlandaise",
-              m: "Finlandais",
+              female: "Finlandaise",
+              male: "Finlandais",
             ),
           ],
           emoji: "🇫🇮",
@@ -35198,13 +35331,13 @@ class CountryFin extends WorldCountry {
             openStreetMaps: "relation/54224",
           ),
           population: 5530719,
-          gini: const Gini(year: 2018, value: 27.3),
+          gini: const Gini(year: 2018, coefficient: 27.3),
           fifa: "FIN",
-          car: const Car(signs: ["FIN"]),
+          car: const Car(sign: "FIN"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Helsinki"],
-            latLng: [60.17, 24.93],
+            capital: Capital("Helsinki"),
+            latLng: LatLng(60.17, 24.93),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(?:FI)*(\\d{5})$"),
         );
@@ -35367,19 +35500,19 @@ class CountryEst extends WorldCountry {
               common: "爱沙尼亚",
             ),
           ],
-          latLng: const [59, 26],
+          latLng: const LatLng(59, 26),
           bordersCodes: const ["Lva", "Rus"],
           areaMetric: 45227,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Estonian",
-              m: "Estonian",
+              female: "Estonian",
+              male: "Estonian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Estonienne",
-              m: "Estonien",
+              female: "Estonienne",
+              male: "Estonien",
             ),
           ],
           emoji: "🇪🇪",
@@ -35388,12 +35521,14 @@ class CountryEst extends WorldCountry {
             openStreetMaps: "relation/79510",
           ),
           population: 1331057,
-          gini: const Gini(year: 2018, value: 30.3),
+          gini: const Gini(year: 2018, coefficient: 30.3),
           fifa: "EST",
-          car: const Car(signs: ["EST"]),
+          car: const Car(sign: "EST"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tallinn"], latLng: [59.43, 24.72]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tallinn"),
+            latLng: LatLng(59.43, 24.72),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -35555,18 +35690,18 @@ class CountryDma extends WorldCountry {
               common: "多米尼加",
             ),
           ],
-          latLng: const [15.41666666, -61.33333333],
+          latLng: const LatLng(15.41666666, -61.33333333),
           areaMetric: 751,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Dominican",
-              m: "Dominican",
+              female: "Dominican",
+              male: "Dominican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Dominiquaise",
-              m: "Dominiquais",
+              female: "Dominiquaise",
+              male: "Dominiquais",
             ),
           ],
           emoji: "🇩🇲",
@@ -35576,10 +35711,12 @@ class CountryDma extends WorldCountry {
           ),
           population: 71991,
           fifa: "DMA",
-          car: const Car(signs: ["WD"], isRightSide: false),
+          car: const Car(sign: "WD", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Roseau"], latLng: [15.3, -61.4]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Roseau"),
+            latLng: LatLng(15.3, -61.4),
+          ),
         );
 }
 
@@ -35735,19 +35872,19 @@ class CountryYem extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "也门共和国", common: "也门"),
           ],
-          latLng: const [15, 48],
+          latLng: const LatLng(15, 48),
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 527968,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Yemeni",
-              m: "Yemeni",
+              female: "Yemeni",
+              male: "Yemeni",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Yéménite",
-              m: "Yéménite",
+              female: "Yéménite",
+              male: "Yéménite",
             ),
           ],
           emoji: "🇾🇪",
@@ -35756,13 +35893,15 @@ class CountryYem extends WorldCountry {
             openStreetMaps: "relation/305092",
           ),
           population: 29825968,
-          gini: const Gini(year: 2014, value: 36.7),
+          gini: const Gini(year: 2014, coefficient: 36.7),
           fifa: "YEM",
-          car: const Car(signs: ["YAR"]),
+          car: const Car(sign: "YAR"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Sana'a"], latLng: [15.37, 44.19]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Sana'a"),
+            latLng: LatLng(15.37, 44.19),
+          ),
         );
 }
 
@@ -35924,8 +36063,9 @@ class CountryAfg extends WorldCountry {
               common: "阿富汗",
             ),
           ],
-          latLng: const [33, 65],
+          latLng: const LatLng(33, 65),
           landlocked: true,
+
           bordersCodes: const [
             "Irn",
             "Pak",
@@ -35934,30 +36074,41 @@ class CountryAfg extends WorldCountry {
             "Tjk",
             "Chn",
           ],
+
           areaMetric: 652230,
+
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Afghan",
-              m: "Afghan",
+              female: "Afghan",
+              male: "Afghan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Afghane",
-              m: "Afghan",
+              female: "Afghane",
+              male: "Afghan",
             ),
           ],
+
           emoji: "🇦🇫",
+
           maps: const Maps(
             googleMaps: "BXBGw7yUUFknCfva9",
             openStreetMaps: "relation/303427",
           ),
+
           population: 40218234,
+
           fifa: "AFG",
-          car: const Car(signs: ["AFG"]),
+
+          car: const Car(sign: "AFG"),
+
           timezones: const ["UTC+04:30"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Kabul"], latLng: [34.52, 69.18]),
+
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Kabul"),
+            latLng: LatLng(34.52, 69.18),
+          ),
         );
 }
 
@@ -36117,19 +36268,19 @@ class CountrySyr extends WorldCountry {
               common: "叙利亚",
             ),
           ],
-          latLng: const [35, 38],
+          latLng: const LatLng(35, 38),
           bordersCodes: const ["Irq", "Isr", "Jor", "Lbn", "Tur"],
           areaMetric: 185180,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Syrian",
-              m: "Syrian",
+              female: "Syrian",
+              male: "Syrian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Syrienne",
-              m: "Syrien",
+              female: "Syrienne",
+              male: "Syrien",
             ),
           ],
           emoji: "🇸🇾",
@@ -36138,12 +36289,14 @@ class CountrySyr extends WorldCountry {
             openStreetMaps: "relation/184840",
           ),
           population: 17500657,
-          gini: const Gini(year: 2003, value: 37.5),
+          gini: const Gini(year: 2003, coefficient: 37.5),
           fifa: "SYR",
-          car: const Car(signs: ["SYR"]),
+          car: const Car(sign: "SYR"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Damascus"], latLng: [33.5, 36.3]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Damascus"),
+            latLng: LatLng(33.5, 36.3),
+          ),
         );
 }
 
@@ -36304,18 +36457,18 @@ class CountryMdv extends WorldCountry {
               common: "马尔代夫",
             ),
           ],
-          latLng: const [3.25, 73],
+          latLng: const LatLng(3.25, 73),
           areaMetric: 300,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Maldivan",
-              m: "Maldivan",
+              female: "Maldivan",
+              male: "Maldivan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Maldivienne",
-              m: "Maldivien",
+              female: "Maldivienne",
+              male: "Maldivien",
             ),
           ],
           emoji: "🇲🇻",
@@ -36324,13 +36477,15 @@ class CountryMdv extends WorldCountry {
             openStreetMaps: "relation/536773",
           ),
           population: 540542,
-          gini: const Gini(year: 2016, value: 31.3),
+          gini: const Gini(year: 2016, coefficient: 31.3),
           fifa: "MDV",
-          car: const Car(signs: ["MV"], isRightSide: false),
+          car: const Car(sign: "MV", isRightSide: false),
           timezones: const ["UTC+05:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Malé"], latLng: [4.17, 73.51]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Malé"),
+            latLng: LatLng(4.17, 73.51),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -36496,19 +36651,19 @@ class CountryTls extends WorldCountry {
               common: "东帝汶",
             ),
           ],
-          latLng: const [-8.83333333, 125.91666666],
+          latLng: const LatLng(-8.83333333, 125.91666666),
           bordersCodes: const ["Idn"],
           areaMetric: 14874,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "East Timorese",
-              m: "East Timorese",
+              female: "East Timorese",
+              male: "East Timorese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Est-timoraise",
-              m: "Est-timorais",
+              female: "Est-timoraise",
+              male: "Est-timorais",
             ),
           ],
           emoji: "🇹🇱",
@@ -36517,14 +36672,14 @@ class CountryTls extends WorldCountry {
             openStreetMaps: "relation/305142",
           ),
           population: 1318442,
-          gini: const Gini(year: 2014, value: 28.7),
+          gini: const Gini(year: 2014, coefficient: 28.7),
           fifa: "TLS",
-          car: const Car(signs: ["TL"], isRightSide: false),
+          car: const Car(sign: "TL", isRightSide: false),
           timezones: const ["UTC+09:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Dili"],
-            latLng: [-8.58, 125.6],
+            capital: Capital("Dili"),
+            latLng: LatLng(-8.58, 125.6),
           ),
         );
 }
@@ -36685,7 +36840,7 @@ class CountryLtu extends WorldCountry {
               common: "立陶宛",
             ),
           ],
-          latLng: const [56, 24],
+          latLng: const LatLng(56, 24),
           bordersCodes: const [
             "Blr",
             "Lva",
@@ -36696,13 +36851,13 @@ class CountryLtu extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Lithuanian",
-              m: "Lithuanian",
+              female: "Lithuanian",
+              male: "Lithuanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Lituanienne",
-              m: "Lituanien",
+              female: "Lituanienne",
+              male: "Lituanien",
             ),
           ],
           emoji: "🇱🇹",
@@ -36711,12 +36866,14 @@ class CountryLtu extends WorldCountry {
             openStreetMaps: "relation/72596",
           ),
           population: 2794700,
-          gini: const Gini(year: 2018, value: 35.7),
+          gini: const Gini(year: 2018, coefficient: 35.7),
           fifa: "LTU",
-          car: const Car(signs: ["LT"]),
+          car: const Car(sign: "LT"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Vilnius"], latLng: [54.68, 25.32]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Vilnius"),
+            latLng: LatLng(54.68, 25.32),
+          ),
           postalCode: const PostalCode(
             format: "LT-#####",
             regExpPattern: r"^(?:LT)*(\\d{5})$",
@@ -36877,18 +37034,18 @@ class CountryNzl extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "新西兰", common: "新西兰"),
           ],
-          latLng: const [-41, 174],
+          latLng: const LatLng(-41, 174),
           areaMetric: 270467,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "New Zealander",
-              m: "New Zealander",
+              female: "New Zealander",
+              male: "New Zealander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Neo-Zélandaise",
-              m: "Neo-Zélandais",
+              female: "Neo-Zélandaise",
+              male: "Neo-Zélandais",
             ),
           ],
           emoji: "🇳🇿",
@@ -36898,7 +37055,7 @@ class CountryNzl extends WorldCountry {
           ),
           population: 5084300,
           fifa: "NZL",
-          car: const Car(signs: ["NZ"], isRightSide: false),
+          car: const Car(sign: "NZ", isRightSide: false),
           timezones: const [
             "UTC-11:00",
             "UTC-10:00",
@@ -36907,8 +37064,8 @@ class CountryNzl extends WorldCountry {
             "UTC+13:00",
           ],
           capitalInfo: const CapitalInfo(
-            capital: ["Wellington"],
-            latLng: [-41.3, 174.78],
+            capital: Capital("Wellington"),
+            latLng: LatLng(-41.3, 174.78),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -37070,18 +37227,18 @@ class CountryBmu extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "百慕大", common: "百慕大"),
           ],
-          latLng: const [32.33333333, -64.75],
+          latLng: const LatLng(32.33333333, -64.75),
           areaMetric: 54,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bermudian",
-              m: "Bermudian",
+              female: "Bermudian",
+              male: "Bermudian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bermudienne",
-              m: "Bermudien",
+              female: "Bermudienne",
+              male: "Bermudien",
             ),
           ],
           emoji: "🇧🇲",
@@ -37091,11 +37248,11 @@ class CountryBmu extends WorldCountry {
           ),
           population: 63903,
           fifa: "BER",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Hamilton"],
-            latLng: [32.28, -64.78],
+            capital: Capital("Hamilton"),
+            latLng: LatLng(32.28, -64.78),
           ),
           postalCode: const PostalCode(
             format: "@@ ##",
@@ -37260,7 +37417,7 @@ class CountryDeu extends WorldCountry {
               common: "德国",
             ),
           ],
-          latLng: const [51, 9],
+          latLng: const LatLng(51, 9),
           bordersCodes: const [
             "Aut",
             "Bel",
@@ -37276,13 +37433,13 @@ class CountryDeu extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "German",
-              m: "German",
+              female: "German",
+              male: "German",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Allemande",
-              m: "Allemand",
+              female: "Allemande",
+              male: "Allemand",
             ),
           ],
           emoji: "🇩🇪",
@@ -37291,12 +37448,14 @@ class CountryDeu extends WorldCountry {
             openStreetMaps: "relation/51477",
           ),
           population: 83240525,
-          gini: const Gini(year: 2016, value: 31.9),
+          gini: const Gini(year: 2016, coefficient: 31.9),
           fifa: "GER",
-          car: const Car(signs: ["DY"]),
+          car: const Car(sign: "DY"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Berlin"], latLng: [52.52, 13.4]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Berlin"),
+            latLng: LatLng(52.52, 13.4),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -37462,7 +37621,7 @@ class CountryArg extends WorldCountry {
               common: "阿根廷",
             ),
           ],
-          latLng: const [-34, -64],
+          latLng: const LatLng(-34, -64),
           bordersCodes: const [
             "Bol",
             "Bra",
@@ -37474,13 +37633,13 @@ class CountryArg extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Argentine",
-              m: "Argentine",
+              female: "Argentine",
+              male: "Argentine",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Argentine",
-              m: "Argentin",
+              female: "Argentine",
+              male: "Argentin",
             ),
           ],
           emoji: "🇦🇷",
@@ -37489,13 +37648,13 @@ class CountryArg extends WorldCountry {
             openStreetMaps: "relation/286393",
           ),
           population: 45376763,
-          gini: const Gini(year: 2019, value: 42.9),
+          gini: const Gini(year: 2019, coefficient: 42.9),
           fifa: "ARG",
-          car: const Car(signs: ["RA"]),
+          car: const Car(sign: "RA"),
           timezones: const ["UTC-03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Buenos Aires"],
-            latLng: [-34.58, -58.67],
+            capital: Capital("Buenos Aires"),
+            latLng: LatLng(-34.58, -58.67),
           ),
           postalCode: const PostalCode(
             format: "@####@@@",
@@ -37667,7 +37826,7 @@ class CountryBlr extends WorldCountry {
               common: "白俄罗斯",
             ),
           ],
-          latLng: const [53, 28],
+          latLng: const LatLng(53, 28),
           landlocked: true,
           bordersCodes: const [
             "Lva",
@@ -37680,13 +37839,13 @@ class CountryBlr extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Belarusian",
-              m: "Belarusian",
+              female: "Belarusian",
+              male: "Belarusian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Biélorusse",
-              m: "Biélorusse",
+              female: "Biélorusse",
+              male: "Biélorusse",
             ),
           ],
           emoji: "🇧🇾",
@@ -37695,12 +37854,14 @@ class CountryBlr extends WorldCountry {
             openStreetMaps: "relation/59065",
           ),
           population: 9398861,
-          gini: const Gini(year: 2019, value: 25.3),
+          gini: const Gini(year: 2019, coefficient: 25.3),
           fifa: "BLR",
-          car: const Car(signs: ["BY"]),
+          car: const Car(sign: "BY"),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Minsk"], latLng: [53.9, 27.57]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Minsk"),
+            latLng: LatLng(53.9, 27.57),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -37856,18 +38017,18 @@ class CountryBrb extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "巴巴多斯", common: "巴巴多斯"),
           ],
-          latLng: const [13.16666666, -59.53333333],
+          latLng: const LatLng(13.16666666, -59.53333333),
           areaMetric: 430,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Barbadian",
-              m: "Barbadian",
+              female: "Barbadian",
+              male: "Barbadian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Barbadienne",
-              m: "Barbadien",
+              female: "Barbadienne",
+              male: "Barbadien",
             ),
           ],
           emoji: "🇧🇧",
@@ -37877,11 +38038,11 @@ class CountryBrb extends WorldCountry {
           ),
           population: 287371,
           fifa: "BRB",
-          car: const Car(signs: ["BDS"], isRightSide: false),
+          car: const Car(sign: "BDS", isRightSide: false),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bridgetown"],
-            latLng: [13.1, -59.62],
+            capital: Capital("Bridgetown"),
+            latLng: LatLng(13.1, -59.62),
           ),
           postalCode: const PostalCode(
             format: "BB#####",
@@ -38042,7 +38203,7 @@ class CountryGtm extends WorldCountry {
               common: "危地马拉",
             ),
           ],
-          latLng: const [15.5, -90.25],
+          latLng: const LatLng(15.5, -90.25),
           bordersCodes: const [
             "Blz",
             "Slv",
@@ -38053,13 +38214,13 @@ class CountryGtm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Guatemalan",
-              m: "Guatemalan",
+              female: "Guatemalan",
+              male: "Guatemalan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Guatémaltèque",
-              m: "Guatémaltèque",
+              female: "Guatémaltèque",
+              male: "Guatémaltèque",
             ),
           ],
           emoji: "🇬🇹",
@@ -38068,13 +38229,13 @@ class CountryGtm extends WorldCountry {
             openStreetMaps: "relation/1521463",
           ),
           population: 16858333,
-          gini: const Gini(year: 2014, value: 48.3),
+          gini: const Gini(year: 2014, coefficient: 48.3),
           fifa: "GUA",
-          car: const Car(signs: ["GCA"]),
+          car: const Car(sign: "GCA"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Guatemala City"],
-            latLng: [14.62, -90.52],
+            capital: Capital("Guatemala City"),
+            latLng: LatLng(14.62, -90.52),
           ),
           postalCode: const PostalCode(),
         );
@@ -38241,20 +38402,20 @@ class CountryAze extends WorldCountry {
               common: "阿塞拜疆",
             ),
           ],
-          latLng: const [40.5, 47.5],
+          latLng: const LatLng(40.5, 47.5),
           landlocked: true,
           bordersCodes: const ["Arm", "Geo", "Irn", "Rus", "Tur"],
           areaMetric: 86600,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Azerbaijani",
-              m: "Azerbaijani",
+              female: "Azerbaijani",
+              male: "Azerbaijani",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Azerbaïdjanaise",
-              m: "Azerbaïdjanais",
+              female: "Azerbaïdjanaise",
+              male: "Azerbaïdjanais",
             ),
           ],
           emoji: "🇦🇿",
@@ -38263,12 +38424,14 @@ class CountryAze extends WorldCountry {
             openStreetMaps: "relation/364110",
           ),
           population: 10110116,
-          gini: const Gini(year: 2005, value: 26.6),
+          gini: const Gini(year: 2005, coefficient: 26.6),
           fifa: "AZE",
-          car: const Car(signs: ["AZ"]),
+          car: const Car(sign: "AZ"),
           timezones: const ["UTC+04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Baku"], latLng: [40.38, 49.87]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Baku"),
+            latLng: LatLng(40.38, 49.87),
+          ),
           postalCode: const PostalCode(
             format: "AZ ####",
             regExpPattern: r"^(?:AZ)*(\\d{4})$",
@@ -38429,19 +38592,19 @@ class CountryMar extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "摩洛哥王国", common: "摩洛哥"),
           ],
-          latLng: const [32, -5],
+          latLng: const LatLng(32, -5),
           bordersCodes: const ["Dza", "Esh", "Esp"],
           areaMetric: 446550,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Moroccan",
-              m: "Moroccan",
+              female: "Moroccan",
+              male: "Moroccan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Marocaine",
-              m: "Marocain",
+              female: "Marocaine",
+              male: "Marocain",
             ),
           ],
           emoji: "🇲🇦",
@@ -38450,12 +38613,14 @@ class CountryMar extends WorldCountry {
             openStreetMaps: "relation/3630439",
           ),
           population: 36910558,
-          gini: const Gini(year: 2013, value: 39.5),
+          gini: const Gini(year: 2013, coefficient: 39.5),
           fifa: "MAR",
-          car: const Car(signs: ["MA"]),
+          car: const Car(sign: "MA"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Rabat"], latLng: [34.02, -6.82]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Rabat"),
+            latLng: LatLng(34.02, -6.82),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -38611,18 +38776,18 @@ class CountryCok extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "库克群岛", common: "库克群岛"),
           ],
-          latLng: const [-21.23333333, -159.76666666],
+          latLng: const LatLng(-21.23333333, -159.76666666),
           areaMetric: 236,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Cook Islander",
-              m: "Cook Islander",
+              female: "Cook Islander",
+              male: "Cook Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Cookienne",
-              m: "Cookien",
+              female: "Cookienne",
+              male: "Cookien",
             ),
           ],
           emoji: "🇨🇰",
@@ -38632,11 +38797,11 @@ class CountryCok extends WorldCountry {
           ),
           population: 18100,
           fifa: "COK",
-          car: const Car(signs: ["NZ"], isRightSide: false),
+          car: const Car(sign: "NZ", isRightSide: false),
           timezones: const ["UTC-10:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Avarua"],
-            latLng: [-21.2, -159.77],
+            capital: Capital("Avarua"),
+            latLng: LatLng(-21.2, -159.77),
           ),
         );
 }
@@ -38802,7 +38967,7 @@ class CountryCaf extends WorldCountry {
               common: "中非共和国",
             ),
           ],
-          latLng: const [7, 21],
+          latLng: const LatLng(7, 21),
           landlocked: true,
           bordersCodes: const [
             "Cmr",
@@ -38816,13 +38981,13 @@ class CountryCaf extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Central African",
-              m: "Central African",
+              female: "Central African",
+              male: "Central African",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Centrafricaine",
-              m: "Centrafricain",
+              female: "Centrafricaine",
+              male: "Centrafricain",
             ),
           ],
           emoji: "🇨🇫",
@@ -38831,12 +38996,14 @@ class CountryCaf extends WorldCountry {
             openStreetMaps: "relation/192790",
           ),
           population: 4829764,
-          gini: const Gini(year: 2008, value: 56.2),
+          gini: const Gini(year: 2008, coefficient: 56.2),
           fifa: "CTA",
-          car: const Car(signs: ["RCA"]),
+          car: const Car(sign: "RCA"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bangui"], latLng: [4.37, 18.58]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bangui"),
+            latLng: LatLng(4.37, 18.58),
+          ),
         );
 }
 
@@ -38988,7 +39155,7 @@ class CountryRou extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "罗马尼亚", common: "罗马尼亚"),
           ],
-          latLng: const [46, 25],
+          latLng: const LatLng(46, 25),
           bordersCodes: const [
             "Bgr",
             "Hun",
@@ -39000,13 +39167,13 @@ class CountryRou extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Romanian",
-              m: "Romanian",
+              female: "Romanian",
+              male: "Romanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Roumaine",
-              m: "Roumain",
+              female: "Roumaine",
+              male: "Roumain",
             ),
           ],
           emoji: "🇷🇴",
@@ -39015,13 +39182,13 @@ class CountryRou extends WorldCountry {
             openStreetMaps: "relation/90689",
           ),
           population: 19286123,
-          gini: const Gini(year: 2018, value: 35.8),
+          gini: const Gini(year: 2018, coefficient: 35.8),
           fifa: "ROU",
-          car: const Car(signs: ["RO"]),
+          car: const Car(sign: "RO"),
           timezones: const ["UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bucharest"],
-            latLng: [44.43, 26.1],
+            capital: Capital("Bucharest"),
+            latLng: LatLng(44.43, 26.1),
           ),
           postalCode: const PostalCode(
             format: "######",
@@ -39191,18 +39358,18 @@ class CountryMlt extends WorldCountry {
               common: "马耳他",
             ),
           ],
-          latLng: const [35.9375, 14.3754],
+          latLng: const LatLng(35.9375, 14.3754),
           areaMetric: 316,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Maltese",
-              m: "Maltese",
+              female: "Maltese",
+              male: "Maltese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Maltaise",
-              m: "Maltais",
+              female: "Maltaise",
+              male: "Maltais",
             ),
           ],
           emoji: "🇲🇹",
@@ -39211,12 +39378,14 @@ class CountryMlt extends WorldCountry {
             openStreetMaps: "relation/365307",
           ),
           population: 525285,
-          gini: const Gini(year: 2018, value: 28.7),
+          gini: const Gini(year: 2018, coefficient: 28.7),
           fifa: "MLT",
-          car: const Car(signs: ["M"], isRightSide: false),
+          car: const Car(sign: "M", isRightSide: false),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Valletta"], latLng: [35.88, 14.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Valletta"),
+            latLng: LatLng(35.88, 14.5),
+          ),
           postalCode: const PostalCode(
             format: "@@@ ###|@@@ ##",
             regExpPattern: r"^([A-Z]{3}\\d{2}\\d?)$",
@@ -39381,7 +39550,7 @@ class CountryArm extends WorldCountry {
               common: "亚美尼亚",
             ),
           ],
-          latLng: const [40, 45],
+          latLng: const LatLng(40, 45),
           landlocked: true,
           bordersCodes: const [
             "Aze",
@@ -39393,13 +39562,13 @@ class CountryArm extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Armenian",
-              m: "Armenian",
+              female: "Armenian",
+              male: "Armenian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Arménienne",
-              m: "Arménien",
+              female: "Arménienne",
+              male: "Arménien",
             ),
           ],
           emoji: "🇦🇲",
@@ -39408,12 +39577,14 @@ class CountryArm extends WorldCountry {
             openStreetMaps: "relation/364066",
           ),
           population: 2963234,
-          gini: const Gini(year: 2019, value: 29.9),
+          gini: const Gini(year: 2019, coefficient: 29.9),
           fifa: "ARM",
-          car: const Car(signs: ["AM"]),
+          car: const Car(sign: "AM"),
           timezones: const ["UTC+04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Yerevan"], latLng: [40.17, 44.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Yerevan"),
+            latLng: LatLng(40.17, 44.5),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -39577,7 +39748,7 @@ class CountrySen extends WorldCountry {
               common: "塞内加尔",
             ),
           ],
-          latLng: const [14, -14],
+          latLng: const LatLng(14, -14),
           bordersCodes: const [
             "Gmb",
             "Gin",
@@ -39589,13 +39760,13 @@ class CountrySen extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Senegalese",
-              m: "Senegalese",
+              female: "Senegalese",
+              male: "Senegalese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sénégalaise",
-              m: "Sénégalais",
+              female: "Sénégalaise",
+              male: "Sénégalais",
             ),
           ],
           emoji: "🇸🇳",
@@ -39604,12 +39775,14 @@ class CountrySen extends WorldCountry {
             openStreetMaps: "relation/192775",
           ),
           population: 16743930,
-          gini: const Gini(year: 2011, value: 40.3),
+          gini: const Gini(year: 2011, coefficient: 40.3),
           fifa: "SEN",
-          car: const Car(signs: ["SN"]),
+          car: const Car(sign: "SN"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Dakar"], latLng: [14.73, -17.63]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Dakar"),
+            latLng: LatLng(14.73, -17.63),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -39770,19 +39943,19 @@ class CountryBgr extends WorldCountry {
               common: "保加利亚",
             ),
           ],
-          latLng: const [43, 25],
+          latLng: const LatLng(43, 25),
           bordersCodes: const ["Grc", "Mkd", "Rou", "Srb", "Tur"],
           areaMetric: 110879,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bulgarian",
-              m: "Bulgarian",
+              female: "Bulgarian",
+              male: "Bulgarian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bulgare",
-              m: "Bulgare",
+              female: "Bulgare",
+              male: "Bulgare",
             ),
           ],
           emoji: "🇧🇬",
@@ -39791,12 +39964,14 @@ class CountryBgr extends WorldCountry {
             openStreetMaps: "relation/186382",
           ),
           population: 6927288,
-          gini: const Gini(year: 2018, value: 41.3),
+          gini: const Gini(year: 2018, coefficient: 41.3),
           fifa: "BUL",
-          car: const Car(signs: ["BG"]),
+          car: const Car(sign: "BG"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Sofia"], latLng: [42.68, 23.32]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Sofia"),
+            latLng: LatLng(42.68, 23.32),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -39981,7 +40156,7 @@ class CountryCod extends WorldCountry {
               common: "民主刚果",
             ),
           ],
-          latLng: const [0, 25],
+          latLng: const LatLng(0, 25),
           bordersCodes: const [
             "Ago",
             "Bdi",
@@ -39997,13 +40172,13 @@ class CountryCod extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Congolese",
-              m: "Congolese",
+              female: "Congolese",
+              male: "Congolese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Congolaise",
-              m: "Congolais",
+              female: "Congolaise",
+              male: "Congolais",
             ),
           ],
           emoji: "🇨🇩",
@@ -40012,13 +40187,13 @@ class CountryCod extends WorldCountry {
             openStreetMaps: "relation/192795",
           ),
           population: 108407721,
-          gini: const Gini(year: 2012, value: 42.1),
+          gini: const Gini(year: 2012, coefficient: 42.1),
           fifa: "COD",
-          car: const Car(signs: ["CGO"]),
+          car: const Car(sign: "CGO"),
           timezones: const ["UTC+01:00", "UTC+02:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Kinshasa"],
-            latLng: [-4.32, 15.3],
+            capital: Capital("Kinshasa"),
+            latLng: LatLng(-4.32, 15.3),
           ),
         );
 }
@@ -40181,19 +40356,19 @@ class CountryHti extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "海地共和国", common: "海地"),
           ],
-          latLng: const [19, -72.41666666],
+          latLng: const LatLng(19, -72.41666666),
           bordersCodes: const ["Dom"],
           areaMetric: 27750,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Haitian",
-              m: "Haitian",
+              female: "Haitian",
+              male: "Haitian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Haïtienne",
-              m: "Haïtien",
+              female: "Haïtienne",
+              male: "Haïtien",
             ),
           ],
           emoji: "🇭🇹",
@@ -40202,13 +40377,13 @@ class CountryHti extends WorldCountry {
             openStreetMaps: "relation/307829",
           ),
           population: 11402533,
-          gini: const Gini(year: 2012, value: 41.1),
+          gini: const Gini(year: 2012, coefficient: 41.1),
           fifa: "HAI",
-          car: const Car(signs: ["RH"]),
+          car: const Car(sign: "RH"),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Port-au-Prince"],
-            latLng: [18.53, -72.33],
+            capital: Capital("Port-au-Prince"),
+            latLng: LatLng(18.53, -72.33),
           ),
           postalCode: const PostalCode(
             format: "HT####",
@@ -40369,19 +40544,19 @@ class CountryAlb extends WorldCountry {
               common: "阿尔巴尼亚",
             ),
           ],
-          latLng: const [41, 20],
+          latLng: const LatLng(41, 20),
           bordersCodes: const ["Mne", "Grc", "Mkd", "Unk"],
           areaMetric: 28748,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Albanian",
-              m: "Albanian",
+              female: "Albanian",
+              male: "Albanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Albanaise",
-              m: "Albanais",
+              female: "Albanaise",
+              male: "Albanais",
             ),
           ],
           emoji: "🇦🇱",
@@ -40390,12 +40565,14 @@ class CountryAlb extends WorldCountry {
             openStreetMaps: "relation/53292",
           ),
           population: 2837743,
-          gini: const Gini(year: 2017, value: 33.2),
+          gini: const Gini(year: 2017, coefficient: 33.2),
           fifa: "ALB",
-          car: const Car(signs: ["AL"]),
+          car: const Car(sign: "AL"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tirana"], latLng: [41.32, 19.82]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tirana"),
+            latLng: LatLng(41.32, 19.82),
+          ),
         );
 }
 
@@ -40555,19 +40732,19 @@ class CountryJor extends WorldCountry {
               common: "约旦",
             ),
           ],
-          latLng: const [31, 36],
+          latLng: const LatLng(31, 36),
           bordersCodes: const ["Irq", "Isr", "Pse", "Sau", "Syr"],
           areaMetric: 89342,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Jordanian",
-              m: "Jordanian",
+              female: "Jordanian",
+              male: "Jordanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Jordanienne",
-              m: "Jordanien",
+              female: "Jordanienne",
+              male: "Jordanien",
             ),
           ],
           emoji: "🇯🇴",
@@ -40576,13 +40753,15 @@ class CountryJor extends WorldCountry {
             openStreetMaps: "relation/184818",
           ),
           population: 10203140,
-          gini: const Gini(year: 2010, value: 33.7),
+          gini: const Gini(year: 2010, coefficient: 33.7),
           fifa: "JOR",
-          car: const Car(signs: ["HKJ"]),
+          car: const Car(sign: "HKJ"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Amman"], latLng: [31.95, 35.93]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Amman"),
+            latLng: LatLng(31.95, 35.93),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -40740,13 +40919,13 @@ class CountrySjm extends WorldCountry {
               common: "斯瓦尔巴特",
             ),
           ],
-          latLng: const [78, 20],
+          latLng: const LatLng(78, 20),
           areaMetric: 377,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Norwegian",
-              m: "Norwegian",
+              female: "Norwegian",
+              male: "Norwegian",
             ),
           ],
           emoji: "🇸🇯",
@@ -40755,12 +40934,12 @@ class CountrySjm extends WorldCountry {
             openStreetMaps: "relation/1337397",
           ),
           population: 2562,
-          car: const Car(signs: ["N"]),
+          car: const Car(sign: "N"),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Longyearbyen"],
-            latLng: [78.22, 15.63],
+            capital: Capital("Longyearbyen"),
+            latLng: LatLng(78.22, 15.63),
           ),
         );
 }
@@ -40927,18 +41106,18 @@ class CountryMdg extends WorldCountry {
               common: "马达加斯加",
             ),
           ],
-          latLng: const [-20, 47],
+          latLng: const LatLng(-20, 47),
           areaMetric: 587041,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Malagasy",
-              m: "Malagasy",
+              female: "Malagasy",
+              male: "Malagasy",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malgache",
-              m: "Malgache",
+              female: "Malgache",
+              male: "Malgache",
             ),
           ],
           emoji: "🇲🇬",
@@ -40947,13 +41126,13 @@ class CountryMdg extends WorldCountry {
             openStreetMaps: "relation/447325",
           ),
           population: 27691019,
-          gini: const Gini(year: 2012, value: 42.6),
+          gini: const Gini(year: 2012, coefficient: 42.6),
           fifa: "MAD",
-          car: const Car(signs: ["RM"]),
+          car: const Car(sign: "RM"),
           timezones: const ["UTC+03:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Antananarivo"],
-            latLng: [-18.92, 47.52],
+            capital: Capital("Antananarivo"),
+            latLng: LatLng(-18.92, 47.52),
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
@@ -41108,7 +41287,7 @@ class CountryFra extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "法兰西共和国", common: "法国"),
           ],
-          latLng: const [46, 2],
+          latLng: const LatLng(46, 2),
           bordersCodes: const [
             "And",
             "Bel",
@@ -41123,13 +41302,13 @@ class CountryFra extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "French",
-              m: "French",
+              female: "French",
+              male: "French",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Française",
-              m: "Français",
+              female: "Française",
+              male: "Français",
             ),
           ],
           emoji: "🇫🇷",
@@ -41138,9 +41317,9 @@ class CountryFra extends WorldCountry {
             openStreetMaps: "relation/1403916",
           ),
           population: 67391582,
-          gini: const Gini(year: 2018, value: 32.4),
+          gini: const Gini(year: 2018, coefficient: 32.4),
           fifa: "FRA",
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const [
             "UTC-10:00",
             "UTC-09:30",
@@ -41158,8 +41337,8 @@ class CountryFra extends WorldCountry {
             "UTC+12:00",
           ],
           capitalInfo: const CapitalInfo(
-            capital: ["Paris"],
-            latLng: [48.87, 2.33],
+            capital: Capital("Paris"),
+            latLng: LatLng(48.87, 2.33),
           ),
           postalCode: const PostalCode(),
         );
@@ -41321,18 +41500,18 @@ class CountryFsm extends WorldCountry {
               common: "密克罗尼西亚",
             ),
           ],
-          latLng: const [6.91666666, 158.25],
+          latLng: const LatLng(6.91666666, 158.25),
           areaMetric: 702,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Micronesian",
-              m: "Micronesian",
+              female: "Micronesian",
+              male: "Micronesian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Micronésienne",
-              m: "Micronésien",
+              female: "Micronésienne",
+              male: "Micronésien",
             ),
           ],
           emoji: "🇫🇲",
@@ -41341,11 +41520,13 @@ class CountryFsm extends WorldCountry {
             openStreetMaps: "relation/571802",
           ),
           population: 115021,
-          gini: const Gini(year: 2013, value: 40.1),
-          car: const Car(signs: ["FSM"]),
+          gini: const Gini(year: 2013, coefficient: 40.1),
+          car: const Car(sign: "FSM"),
           timezones: const ["UTC+10:00", "UTC+11:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Palikir"], latLng: [6.92, 158.15]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Palikir"),
+            latLng: LatLng(6.92, 158.15),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -41501,18 +41682,18 @@ class CountryAbw extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "阿鲁巴", common: "阿鲁巴"),
           ],
-          latLng: const [12.5, -69.96666666],
+          latLng: const LatLng(12.5, -69.96666666),
           areaMetric: 180,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Aruban",
-              m: "Aruban",
+              female: "Aruban",
+              male: "Aruban",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Arubaise",
-              m: "Arubais",
+              female: "Arubaise",
+              male: "Arubais",
             ),
           ],
           emoji: "🇦🇼",
@@ -41522,11 +41703,11 @@ class CountryAbw extends WorldCountry {
           ),
           population: 106766,
           fifa: "ARU",
-          car: const Car(signs: ["A"]),
+          car: const Car(sign: "A"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Oranjestad"],
-            latLng: [12.52, -70.03],
+            capital: Capital("Oranjestad"),
+            latLng: LatLng(12.52, -70.03),
           ),
         );
 }
@@ -41695,7 +41876,7 @@ class CountryInd extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "印度共和国", common: "印度"),
           ],
-          latLng: const [20, 77],
+          latLng: const LatLng(20, 77),
           bordersCodes: const [
             "Bgd",
             "Btn",
@@ -41708,13 +41889,13 @@ class CountryInd extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Indian",
-              m: "Indian",
+              female: "Indian",
+              male: "Indian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Indienne",
-              m: "Indien",
+              female: "Indienne",
+              male: "Indien",
             ),
           ],
           emoji: "🇮🇳",
@@ -41723,12 +41904,14 @@ class CountryInd extends WorldCountry {
             openStreetMaps: "relation/304716",
           ),
           population: 1380004385,
-          gini: const Gini(year: 2011, value: 35.7),
+          gini: const Gini(year: 2011, coefficient: 35.7),
           fifa: "IND",
-          car: const Car(signs: ["IND"], isRightSide: false),
+          car: const Car(sign: "IND", isRightSide: false),
           timezones: const ["UTC+05:30"],
-          capitalInfo:
-              const CapitalInfo(capital: ["New Delhi"], latLng: [28.6, 77.2]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("New Delhi"),
+            latLng: LatLng(28.6, 77.2),
+          ),
           postalCode: const PostalCode(
             format: "######",
             regExpPattern: r"^(\\d{6})$",
@@ -41916,19 +42099,19 @@ class CountryNam extends WorldCountry {
               common: "纳米比亚",
             ),
           ],
-          latLng: const [-22, 17],
+          latLng: const LatLng(-22, 17),
           bordersCodes: const ["Ago", "Bwa", "Zaf", "Tur"],
           areaMetric: 825615,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Namibian",
-              m: "Namibian",
+              female: "Namibian",
+              male: "Namibian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Namibienne",
-              m: "Namibien",
+              female: "Namibienne",
+              male: "Namibien",
             ),
           ],
           emoji: "🇳🇦",
@@ -41937,13 +42120,13 @@ class CountryNam extends WorldCountry {
             openStreetMaps: "relation/195266",
           ),
           population: 2540916,
-          gini: const Gini(year: 2015, value: 59.1),
+          gini: const Gini(year: 2015, coefficient: 59.1),
           fifa: "NAM",
-          car: const Car(signs: ["NAM"], isRightSide: false),
+          car: const Car(sign: "NAM", isRightSide: false),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Windhoek"],
-            latLng: [-22.57, 17.08],
+            capital: Capital("Windhoek"),
+            latLng: LatLng(-22.57, 17.08),
           ),
         );
 }
@@ -42108,18 +42291,18 @@ class CountryFji extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "斐济共和国", common: "斐济"),
           ],
-          latLng: const [17.7134, 178.065],
+          latLng: const LatLng(17.7134, 178.065),
           areaMetric: 18272,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Fijian",
-              m: "Fijian",
+              female: "Fijian",
+              male: "Fijian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Fidjienne",
-              m: "Fidjien",
+              female: "Fidjienne",
+              male: "Fidjien",
             ),
           ],
           emoji: "🇫🇯",
@@ -42128,12 +42311,14 @@ class CountryFji extends WorldCountry {
             openStreetMaps: "relation/571747",
           ),
           population: 896444,
-          gini: const Gini(year: 2013, value: 36.7),
+          gini: const Gini(year: 2013, coefficient: 36.7),
           fifa: "FIJ",
-          car: const Car(signs: ["FJI"], isRightSide: false),
+          car: const Car(sign: "FJI", isRightSide: false),
           timezones: const ["UTC+12:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Suva"], latLng: [-18.13, 178.42]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Suva"),
+            latLng: LatLng(-18.13, 178.42),
+          ),
         );
 }
 
@@ -42294,7 +42479,7 @@ class CountrySdn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "苏丹共和国", common: "苏丹"),
           ],
-          latLng: const [15, 30],
+          latLng: const LatLng(15, 30),
           bordersCodes: const [
             "Caf",
             "Tcd",
@@ -42308,13 +42493,13 @@ class CountrySdn extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sudanese",
-              m: "Sudanese",
+              female: "Sudanese",
+              male: "Sudanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Soudanaise",
-              m: "Soudanais",
+              female: "Soudanaise",
+              male: "Soudanais",
             ),
           ],
           emoji: "🇸🇩",
@@ -42323,12 +42508,14 @@ class CountrySdn extends WorldCountry {
             openStreetMaps: "relation/192789",
           ),
           population: 43849269,
-          gini: const Gini(year: 2014, value: 34.2),
+          gini: const Gini(year: 2014, coefficient: 34.2),
           fifa: "SDN",
-          car: const Car(signs: ["SUD"]),
+          car: const Car(sign: "SUD"),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Khartoum"], latLng: [15.6, 32.53]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Khartoum"),
+            latLng: LatLng(15.6, 32.53),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -42492,18 +42679,18 @@ class CountryStp extends WorldCountry {
               common: "圣多美和普林西比",
             ),
           ],
-          latLng: const [1, 7],
+          latLng: const LatLng(1, 7),
           areaMetric: 964,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sao Tomean",
-              m: "Sao Tomean",
+              female: "Sao Tomean",
+              male: "Sao Tomean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Santoméenne",
-              m: "Santoméen",
+              female: "Santoméenne",
+              male: "Santoméen",
             ),
           ],
           emoji: "🇸🇹",
@@ -42512,12 +42699,14 @@ class CountryStp extends WorldCountry {
             openStreetMaps: "relation/535880",
           ),
           population: 219161,
-          gini: const Gini(year: 2017, value: 56.3),
+          gini: const Gini(year: 2017, coefficient: 56.3),
           fifa: "STP",
-          car: const Car(signs: ["STP"]),
+          car: const Car(sign: "STP"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["São Tomé"], latLng: [0.34, 6.73]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("São Tomé"),
+            latLng: LatLng(0.34, 6.73),
+          ),
         );
 }
 
@@ -42678,7 +42867,7 @@ class CountrySau extends WorldCountry {
               common: "沙特阿拉伯",
             ),
           ],
-          latLng: const [25, 45],
+          latLng: const LatLng(25, 45),
           bordersCodes: const [
             "Irq",
             "Jor",
@@ -42692,13 +42881,13 @@ class CountrySau extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saudi Arabian",
-              m: "Saudi Arabian",
+              female: "Saudi Arabian",
+              male: "Saudi Arabian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saoudienne",
-              m: "Saoudien",
+              female: "Saoudienne",
+              male: "Saoudien",
             ),
           ],
           emoji: "🇸🇦",
@@ -42708,11 +42897,13 @@ class CountrySau extends WorldCountry {
           ),
           population: 34813867,
           fifa: "KSA",
-          car: const Car(signs: ["SA"]),
+          car: const Car(sign: "SA"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo:
-              const CapitalInfo(capital: ["Riyadh"], latLng: [24.65, 46.7]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Riyadh"),
+            latLng: LatLng(24.65, 46.7),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -42870,13 +43061,13 @@ class CountryHmd extends WorldCountry {
               common: "赫德岛和麦当劳群岛",
             ),
           ],
-          latLng: const [53.0818, 73.5042],
+          latLng: const LatLng(53.0818, 73.5042),
           areaMetric: 412,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Heard and McDonald Islander",
-              m: "Heard and McDonald Islander",
+              female: "Heard and McDonald Islander",
+              male: "Heard and McDonald Islander",
             ),
           ],
           emoji: "🇭🇲",
@@ -42885,7 +43076,6 @@ class CountryHmd extends WorldCountry {
             openStreetMaps: "relation/2177227",
           ),
           population: 0,
-          car: const Car(signs: [""]),
           hasCoatOfArms: false,
           timezones: const ["UTC+05:00"],
         );
@@ -43052,19 +43242,19 @@ class CountryLka extends WorldCountry {
               common: "斯里兰卡",
             ),
           ],
-          latLng: const [7, 81],
+          latLng: const LatLng(7, 81),
           bordersCodes: const ["Ind"],
           areaMetric: 65610,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Sri Lankan",
-              m: "Sri Lankan",
+              female: "Sri Lankan",
+              male: "Sri Lankan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Sri-lankaise",
-              m: "Sri-lankais",
+              female: "Sri-lankaise",
+              male: "Sri-lankais",
             ),
           ],
           emoji: "🇱🇰",
@@ -43073,13 +43263,13 @@ class CountryLka extends WorldCountry {
             openStreetMaps: "relation/536807",
           ),
           population: 21919000,
-          gini: const Gini(year: 2016, value: 39.3),
+          gini: const Gini(year: 2016, coefficient: 39.3),
           fifa: "SRI",
-          car: const Car(signs: ["CL"], isRightSide: false),
+          car: const Car(sign: "CL", isRightSide: false),
           timezones: const ["UTC+05:30"],
           capitalInfo: const CapitalInfo(
-            capital: ["Sri Jayawardenepura Kotte"],
-            latLng: [6.89, 79.9],
+            capital: Capital("Sri Jayawardenepura Kotte"),
+            latLng: LatLng(6.89, 79.9),
           ),
           postalCode: const PostalCode(),
         );
@@ -43237,19 +43427,19 @@ class CountrySwe extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "瑞典王国", common: "瑞典"),
           ],
-          latLng: const [62, 15],
+          latLng: const LatLng(62, 15),
           bordersCodes: const ["Fin", "Nor"],
           areaMetric: 450295,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Swedish",
-              m: "Swedish",
+              female: "Swedish",
+              male: "Swedish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Suédoise",
-              m: "Suédois",
+              female: "Suédoise",
+              male: "Suédois",
             ),
           ],
           emoji: "🇸🇪",
@@ -43258,13 +43448,13 @@ class CountrySwe extends WorldCountry {
             openStreetMaps: "relation/52822",
           ),
           population: 10353442,
-          gini: const Gini(year: 2018, value: 30),
+          gini: const Gini(year: 2018, coefficient: 30),
           fifa: "SWE",
-          car: const Car(signs: ["S"]),
+          car: const Car(sign: "S"),
           timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Stockholm"],
-            latLng: [59.33, 18.05],
+            capital: Capital("Stockholm"),
+            latLng: LatLng(59.33, 18.05),
           ),
           postalCode: const PostalCode(
             format: "SE-### ##",
@@ -43426,18 +43616,18 @@ class CountryTon extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "汤加王国", common: "汤加"),
           ],
-          latLng: const [-20, -175],
+          latLng: const LatLng(-20, -175),
           areaMetric: 747,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Tongan",
-              m: "Tongan",
+              female: "Tongan",
+              male: "Tongan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Tonguienne",
-              m: "Tonguien",
+              female: "Tonguienne",
+              male: "Tonguien",
             ),
           ],
           emoji: "🇹🇴",
@@ -43446,13 +43636,13 @@ class CountryTon extends WorldCountry {
             openStreetMaps: "relation/2186665",
           ),
           population: 105697,
-          gini: const Gini(year: 2015, value: 37.6),
+          gini: const Gini(year: 2015, coefficient: 37.6),
           fifa: "TGA",
-          car: const Car(signs: ["TO"], isRightSide: false),
+          car: const Car(sign: "TO", isRightSide: false),
           timezones: const ["UTC+13:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Nuku'alofa"],
-            latLng: [-21.13, -175.2],
+            capital: Capital("Nuku'alofa"),
+            latLng: LatLng(-21.13, -175.2),
           ),
         );
 }
@@ -43610,19 +43800,19 @@ class CountryDnk extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "丹麦王国", common: "丹麦"),
           ],
-          latLng: const [56, 10],
+          latLng: const LatLng(56, 10),
           bordersCodes: const ["Deu"],
           areaMetric: 43094,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Danish",
-              m: "Danish",
+              female: "Danish",
+              male: "Danish",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Danoise",
-              m: "Danois",
+              female: "Danoise",
+              male: "Danois",
             ),
           ],
           emoji: "🇩🇰",
@@ -43631,9 +43821,9 @@ class CountryDnk extends WorldCountry {
             openStreetMaps: "relation/50046",
           ),
           population: 5831404,
-          gini: const Gini(year: 2018, value: 28.2),
+          gini: const Gini(year: 2018, coefficient: 28.2),
           fifa: "DEN",
-          car: const Car(signs: ["DK"]),
+          car: const Car(sign: "DK"),
           timezones: const [
             "UTC-04:00",
             "UTC-03:00",
@@ -43642,8 +43832,8 @@ class CountryDnk extends WorldCountry {
             "UTC+01:00",
           ],
           capitalInfo: const CapitalInfo(
-            capital: ["Copenhagen"],
-            latLng: [55.67, 12.58],
+            capital: Capital("Copenhagen"),
+            latLng: LatLng(55.67, 12.58),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -43803,19 +43993,19 @@ class CountryMys extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马来西亚", common: "马来西亚"),
           ],
-          latLng: const [2.5, 112.5],
+          latLng: const LatLng(2.5, 112.5),
           bordersCodes: const ["Brn", "Idn", "Tha"],
           areaMetric: 330803,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Malaysian",
-              m: "Malaysian",
+              female: "Malaysian",
+              male: "Malaysian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malaisienne",
-              m: "Malaisien",
+              female: "Malaisienne",
+              male: "Malaisien",
             ),
           ],
           emoji: "🇲🇾",
@@ -43824,14 +44014,14 @@ class CountryMys extends WorldCountry {
             openStreetMaps: "relation/2108121",
           ),
           population: 32365998,
-          gini: const Gini(year: 2015, value: 41.1),
+          gini: const Gini(year: 2015, coefficient: 41.1),
           fifa: "MAS",
-          car: const Car(signs: ["MAL"], isRightSide: false),
+          car: const Car(sign: "MAL", isRightSide: false),
           timezones: const ["UTC+08:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Kuala Lumpur"],
-            latLng: [3.17, 101.7],
+            capital: Capital("Kuala Lumpur"),
+            latLng: LatLng(3.17, 101.7),
           ),
           postalCode: const PostalCode(),
         );
@@ -43993,19 +44183,19 @@ class CountryCri extends WorldCountry {
               common: "哥斯达黎加",
             ),
           ],
-          latLng: const [10, -84],
+          latLng: const LatLng(10, -84),
           bordersCodes: const ["Nic", "Pan"],
           areaMetric: 51100,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Costa Rican",
-              m: "Costa Rican",
+              female: "Costa Rican",
+              male: "Costa Rican",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Costaricaine",
-              m: "Costaricain",
+              female: "Costaricaine",
+              male: "Costaricain",
             ),
           ],
           emoji: "🇨🇷",
@@ -44014,13 +44204,13 @@ class CountryCri extends WorldCountry {
             openStreetMaps: "relation/287667",
           ),
           population: 5094114,
-          gini: const Gini(year: 2019, value: 48.2),
+          gini: const Gini(year: 2019, coefficient: 48.2),
           fifa: "CRC",
-          car: const Car(signs: ["CR"]),
+          car: const Car(sign: "CR"),
           timezones: const ["UTC-06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["San José"],
-            latLng: [9.93, -84.09],
+            capital: Capital("San José"),
+            latLng: LatLng(9.93, -84.09),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
@@ -44204,7 +44394,7 @@ class CountryBol extends WorldCountry {
               common: "玻利维亚",
             ),
           ],
-          latLng: const [-17, -65],
+          latLng: const LatLng(-17, -65),
           landlocked: true,
           bordersCodes: const [
             "Arg",
@@ -44217,13 +44407,13 @@ class CountryBol extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bolivian",
-              m: "Bolivian",
+              female: "Bolivian",
+              male: "Bolivian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bolivienne",
-              m: "Bolivien",
+              female: "Bolivienne",
+              male: "Bolivien",
             ),
           ],
           emoji: "🇧🇴",
@@ -44232,13 +44422,13 @@ class CountryBol extends WorldCountry {
             openStreetMaps: "relation/252645",
           ),
           population: 11673029,
-          gini: const Gini(year: 2019, value: 41.6),
+          gini: const Gini(year: 2019, coefficient: 41.6),
           fifa: "BOL",
-          car: const Car(signs: ["BOL"]),
+          car: const Car(sign: "BOL"),
           timezones: const ["UTC-04:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Sucre"],
-            latLng: [-19.02, -65.26],
+            capital: Capital("Sucre"),
+            latLng: LatLng(-19.02, -65.26),
           ),
         );
 }
@@ -44391,20 +44581,20 @@ class CountryBtn extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "不丹王国", common: "不丹"),
           ],
-          latLng: const [27.5, 90.5],
+          latLng: const LatLng(27.5, 90.5),
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
           areaMetric: 38394,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Bhutanese",
-              m: "Bhutanese",
+              female: "Bhutanese",
+              male: "Bhutanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Bhoutanaise",
-              m: "Bhoutanais",
+              female: "Bhoutanaise",
+              male: "Bhoutanais",
             ),
           ],
           emoji: "🇧🇹",
@@ -44413,13 +44603,13 @@ class CountryBtn extends WorldCountry {
             openStreetMaps: "relation/184629",
           ),
           population: 771612,
-          gini: const Gini(year: 2017, value: 37.4),
+          gini: const Gini(year: 2017, coefficient: 37.4),
           fifa: "BHU",
-          car: const Car(signs: ["BHT"], isRightSide: false),
+          car: const Car(sign: "BHT", isRightSide: false),
           timezones: const ["UTC+06:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Thimphu"],
-            latLng: [27.47, 89.63],
+            capital: Capital("Thimphu"),
+            latLng: LatLng(27.47, 89.63),
           ),
         );
 }
@@ -44574,18 +44764,18 @@ class CountryCym extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "开曼群岛", common: "开曼群岛"),
           ],
-          latLng: const [19.3133, 81.2546],
+          latLng: const LatLng(19.3133, 81.2546),
           areaMetric: 264,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Caymanian",
-              m: "Caymanian",
+              female: "Caymanian",
+              male: "Caymanian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Caïmanienne",
-              m: "Caïmanien",
+              female: "Caïmanienne",
+              male: "Caïmanien",
             ),
           ],
           emoji: "🇰🇾",
@@ -44595,11 +44785,11 @@ class CountryCym extends WorldCountry {
           ),
           population: 65720,
           fifa: "CAY",
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-05:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["George Town"],
-            latLng: [19.3, -81.38],
+            capital: Capital("George Town"),
+            latLng: LatLng(19.3, -81.38),
           ),
         );
 }
@@ -44761,18 +44951,18 @@ class CountryPcn extends WorldCountry {
               common: "皮特凯恩群岛",
             ),
           ],
-          latLng: const [-25.06666666, -130.1],
+          latLng: const LatLng(-25.06666666, -130.1),
           areaMetric: 47,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Pitcairn Islander",
-              m: "Pitcairn Islander",
+              female: "Pitcairn Islander",
+              male: "Pitcairn Islander",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Pitcairnaise",
-              m: "Pitcairnais",
+              female: "Pitcairnaise",
+              male: "Pitcairnais",
             ),
           ],
           emoji: "🇵🇳",
@@ -44781,12 +44971,12 @@ class CountryPcn extends WorldCountry {
             openStreetMaps: "relation/2185375",
           ),
           population: 56,
-          car: const Car(signs: ["GB"], isRightSide: false),
+          car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-08:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Adamstown"],
-            latLng: [-25.07, -130.08],
+            capital: Capital("Adamstown"),
+            latLng: LatLng(-25.07, -130.08),
           ),
         );
 }
@@ -44939,7 +45129,7 @@ class CountryMli extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "马里共和国", common: "马里"),
           ],
-          latLng: const [17, -4],
+          latLng: const LatLng(17, -4),
           landlocked: true,
           bordersCodes: const [
             "Dza",
@@ -44954,13 +45144,13 @@ class CountryMli extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Malian",
-              m: "Malian",
+              female: "Malian",
+              male: "Malian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Malienne",
-              m: "Malien",
+              female: "Malienne",
+              male: "Malien",
             ),
           ],
           emoji: "🇲🇱",
@@ -44969,12 +45159,14 @@ class CountryMli extends WorldCountry {
             openStreetMaps: "relation/192785",
           ),
           population: 20250834,
-          gini: const Gini(year: 2009, value: 33),
+          gini: const Gini(year: 2009, coefficient: 33),
           fifa: "MLI",
-          car: const Car(signs: ["RMM"]),
+          car: const Car(sign: "RMM"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bamako"], latLng: [12.65, -8]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bamako"),
+            latLng: LatLng(12.65, -8),
+          ),
         );
 }
 
@@ -45137,19 +45329,19 @@ class CountrySxm extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "圣马丁岛", common: "圣马丁岛"),
           ],
-          latLng: const [18.033333, -63.05],
+          latLng: const LatLng(18.033333, -63.05),
           bordersCodes: const ["Maf"],
           areaMetric: 34,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "St. Maartener",
-              m: "St. Maartener",
+              female: "St. Maartener",
+              male: "St. Maartener",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Martinoise",
-              m: "Saint-Martinois",
+              female: "Saint-Martinoise",
+              male: "Saint-Martinois",
             ),
           ],
           emoji: "🇸🇽",
@@ -45158,12 +45350,12 @@ class CountrySxm extends WorldCountry {
             openStreetMaps: "relation/1231790",
           ),
           population: 40812,
-          car: const Car(signs: ["SX"]),
+          car: const Car(sign: "SX"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Philipsburg"],
-            latLng: [18.02, -63.03],
+            capital: Capital("Philipsburg"),
+            latLng: LatLng(18.02, -63.03),
           ),
         );
 }
@@ -45324,7 +45516,7 @@ class CountryLva extends WorldCountry {
               common: "拉脱维亚",
             ),
           ],
-          latLng: const [57, 25],
+          latLng: const LatLng(57, 25),
           bordersCodes: const [
             "Blr",
             "Est",
@@ -45335,13 +45527,13 @@ class CountryLva extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Latvian",
-              m: "Latvian",
+              female: "Latvian",
+              male: "Latvian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Lettone",
-              m: "Letton",
+              female: "Lettone",
+              male: "Letton",
             ),
           ],
           emoji: "🇱🇻",
@@ -45350,12 +45542,14 @@ class CountryLva extends WorldCountry {
             openStreetMaps: "relation/72594",
           ),
           population: 1901548,
-          gini: const Gini(year: 2018, value: 35.1),
+          gini: const Gini(year: 2018, coefficient: 35.1),
           fifa: "LVA",
-          car: const Car(signs: ["LV"]),
+          car: const Car(sign: "LV"),
           timezones: const ["UTC+02:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Riga"], latLng: [56.95, 24.1]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Riga"),
+            latLng: LatLng(56.95, 24.1),
+          ),
           postalCode: const PostalCode(
             format: "LV-####",
             regExpPattern: r"^(?:LV)*(\\d{4})$",
@@ -45527,18 +45721,18 @@ class CountryAsm extends WorldCountry {
               common: "美属萨摩亚",
             ),
           ],
-          latLng: const [-14.33333333, -170],
+          latLng: const LatLng(-14.33333333, -170),
           areaMetric: 199,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "American Samoan",
-              m: "American Samoan",
+              female: "American Samoan",
+              male: "American Samoan",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Samoane",
-              m: "Samoan",
+              female: "Samoane",
+              male: "Samoan",
             ),
           ],
           emoji: "🇦🇸",
@@ -45548,12 +45742,12 @@ class CountryAsm extends WorldCountry {
           ),
           population: 55197,
           fifa: "ASA",
-          car: const Car(signs: ["USA"]),
+          car: const Car(sign: "USA"),
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Pago Pago"],
-            latLng: [-14.27, -170.7],
+            capital: Capital("Pago Pago"),
+            latLng: LatLng(-14.27, -170.7),
           ),
         );
 }
@@ -45714,18 +45908,18 @@ class CountrySpm extends WorldCountry {
               common: "圣皮埃尔和密克隆",
             ),
           ],
-          latLng: const [46.83333333, -56.33333333],
+          latLng: const LatLng(46.83333333, -56.33333333),
           areaMetric: 242,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Saint-Pierrais, Miquelonnais",
-              m: "Saint-Pierrais, Miquelonnais",
+              female: "Saint-Pierrais, Miquelonnais",
+              male: "Saint-Pierrais, Miquelonnais",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Saint-Pierraise, Miquelonaise",
-              m: "Saint-Pierrais, Miquelonais",
+              female: "Saint-Pierraise, Miquelonaise",
+              male: "Saint-Pierrais, Miquelonais",
             ),
           ],
           emoji: "🇵🇲",
@@ -45734,12 +45928,12 @@ class CountrySpm extends WorldCountry {
             openStreetMaps: "relation/3406826",
           ),
           population: 6069,
-          car: const Car(signs: ["F"]),
+          car: const Car(sign: "F"),
           timezones: const ["UTC-03:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Saint-Pierre"],
-            latLng: [46.77, -56.18],
+            capital: Capital("Saint-Pierre"),
+            latLng: LatLng(46.77, -56.18),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(97500)$"),
         );
@@ -45901,19 +46095,19 @@ class CountryEcu extends WorldCountry {
               common: "厄瓜多尔",
             ),
           ],
-          latLng: const [-2, -77.5],
+          latLng: const LatLng(-2, -77.5),
           bordersCodes: const ["Col", "Per"],
           areaMetric: 276841,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Ecuadorean",
-              m: "Ecuadorean",
+              female: "Ecuadorean",
+              male: "Ecuadorean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Équatorienne",
-              m: "Équatorien",
+              female: "Équatorienne",
+              male: "Équatorien",
             ),
           ],
           emoji: "🇪🇨",
@@ -45922,12 +46116,14 @@ class CountryEcu extends WorldCountry {
             openStreetMaps: "relation/108089",
           ),
           population: 17643060,
-          gini: const Gini(year: 2019, value: 45.7),
+          gini: const Gini(year: 2019, coefficient: 45.7),
           fifa: "ECU",
-          car: const Car(signs: ["EC"]),
+          car: const Car(sign: "EC"),
           timezones: const ["UTC-06:00", "UTC-05:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Quito"], latLng: [-0.22, -78.5]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Quito"),
+            latLng: LatLng(-0.22, -78.5),
+          ),
           postalCode: const PostalCode(
             format: "@####@",
             regExpPattern: r"^([a-zA-Z]\\d{4}[a-zA-Z])$",
@@ -46090,19 +46286,19 @@ class CountryTha extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "泰王国", common: "泰国"),
           ],
-          latLng: const [15, 100],
+          latLng: const LatLng(15, 100),
           bordersCodes: const ["Mmr", "Khm", "Lao", "Mys"],
           areaMetric: 513120,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Thai",
-              m: "Thai",
+              female: "Thai",
+              male: "Thai",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Thaïlandaise",
-              m: "Thaïlandais",
+              female: "Thaïlandaise",
+              male: "Thaïlandais",
             ),
           ],
           emoji: "🇹🇭",
@@ -46111,13 +46307,13 @@ class CountryTha extends WorldCountry {
             openStreetMaps: "relation/2067731",
           ),
           population: 69799978,
-          gini: const Gini(year: 2019, value: 34.9),
+          gini: const Gini(year: 2019, coefficient: 34.9),
           fifa: "THA",
-          car: const Car(signs: ["T"], isRightSide: false),
+          car: const Car(sign: "T", isRightSide: false),
           timezones: const ["UTC+07:00"],
           capitalInfo: const CapitalInfo(
-            capital: ["Bangkok"],
-            latLng: [13.75, 100.52],
+            capital: Capital("Bangkok"),
+            latLng: LatLng(13.75, 100.52),
           ),
           postalCode: const PostalCode(),
         );
@@ -46275,19 +46471,19 @@ class CountryAre extends WorldCountry {
               common: "阿拉伯联合酋长国",
             ),
           ],
-          latLng: const [24, 54],
+          latLng: const LatLng(24, 54),
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 83600,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Emirati",
-              m: "Emirati",
+              female: "Emirati",
+              male: "Emirati",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Emirienne",
-              m: "Emirien",
+              female: "Emirienne",
+              male: "Emirien",
             ),
           ],
           emoji: "🇦🇪",
@@ -46296,14 +46492,14 @@ class CountryAre extends WorldCountry {
             openStreetMaps: "relation/307763",
           ),
           population: 9890400,
-          gini: const Gini(year: 2018, value: 26),
+          gini: const Gini(year: 2018, coefficient: 26),
           fifa: "UAE",
-          car: const Car(signs: ["UAE"]),
+          car: const Car(sign: "UAE"),
           timezones: const ["UTC+04:00"],
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
-            capital: ["Abu Dhabi"],
-            latLng: [24.47, 54.37],
+            capital: Capital("Abu Dhabi"),
+            latLng: LatLng(24.47, 54.37),
           ),
         );
 }
@@ -46465,7 +46661,7 @@ class CountryHrv extends WorldCountry {
               common: "克罗地亚",
             ),
           ],
-          latLng: const [45.16666666, 15.5],
+          latLng: const LatLng(45.16666666, 15.5),
           bordersCodes: const [
             "Bih",
             "Hun",
@@ -46477,13 +46673,13 @@ class CountryHrv extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Croatian",
-              m: "Croatian",
+              female: "Croatian",
+              male: "Croatian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Croate",
-              m: "Croate",
+              female: "Croate",
+              male: "Croate",
             ),
           ],
           emoji: "🇭🇷",
@@ -46492,12 +46688,14 @@ class CountryHrv extends WorldCountry {
             openStreetMaps: "relation/214885",
           ),
           population: 4047200,
-          gini: const Gini(year: 2018, value: 29.7),
+          gini: const Gini(year: 2018, coefficient: 29.7),
           fifa: "CRO",
-          car: const Car(signs: ["HR"]),
+          car: const Car(sign: "HR"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Zagreb"], latLng: [45.8, 16]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Zagreb"),
+            latLng: LatLng(45.8, 16),
+          ),
           postalCode: const PostalCode(
             format: "HR-#####",
             regExpPattern: r"^(?:HR)*(\\d{5})$",
@@ -46662,19 +46860,19 @@ class CountryMmr extends WorldCountry {
               common: "缅甸",
             ),
           ],
-          latLng: const [22, 98],
+          latLng: const LatLng(22, 98),
           bordersCodes: const ["Bgd", "Chn", "Ind", "Lao", "Tha"],
           areaMetric: 676578,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Burmese",
-              m: "Burmese",
+              female: "Burmese",
+              male: "Burmese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Birmane",
-              m: "Birman",
+              female: "Birmane",
+              male: "Birman",
             ),
           ],
           emoji: "🇲🇲",
@@ -46683,13 +46881,13 @@ class CountryMmr extends WorldCountry {
             openStreetMaps: "relation/50371",
           ),
           population: 54409794,
-          gini: const Gini(year: 2017, value: 30.7),
+          gini: const Gini(year: 2017, coefficient: 30.7),
           fifa: "MYA",
-          car: const Car(signs: ["BUR"]),
+          car: const Car(sign: "BUR"),
           timezones: const ["UTC+06:30"],
           capitalInfo: const CapitalInfo(
-            capital: ["Naypyidaw"],
-            latLng: [19.76, 96.07],
+            capital: Capital("Naypyidaw"),
+            latLng: LatLng(19.76, 96.07),
           ),
           postalCode: const PostalCode(),
         );
@@ -46843,19 +47041,19 @@ class CountryGeo extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "格鲁吉亚", common: "格鲁吉亚"),
           ],
-          latLng: const [42, 43.5],
+          latLng: const LatLng(42, 43.5),
           bordersCodes: const ["Arm", "Aze", "Rus", "Tur"],
           areaMetric: 69700,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Georgian",
-              m: "Georgian",
+              female: "Georgian",
+              male: "Georgian",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Géorgienne",
-              m: "Géorgien",
+              female: "Géorgienne",
+              male: "Géorgien",
             ),
           ],
           emoji: "🇬🇪",
@@ -46864,12 +47062,14 @@ class CountryGeo extends WorldCountry {
             openStreetMaps: "relation/28699",
           ),
           population: 3714000,
-          gini: const Gini(year: 2019, value: 35.9),
+          gini: const Gini(year: 2019, coefficient: 35.9),
           fifa: "GEO",
-          car: const Car(signs: ["GE"]),
+          car: const Car(sign: "GE"),
           timezones: const ["UTC+04:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tbilisi"], latLng: [41.68, 44.83]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tbilisi"),
+            latLng: LatLng(41.68, 44.83),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -47036,18 +47236,18 @@ class CountryTwn extends WorldCountry {
               common: "台灣",
             ),
           ],
-          latLng: const [23.5, 121],
+          latLng: const LatLng(23.5, 121),
           areaMetric: 36193,
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Taiwanese",
-              m: "Taiwanese",
+              female: "Taiwanese",
+              male: "Taiwanese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Taïwanaise",
-              m: "Taïwanais",
+              female: "Taïwanaise",
+              male: "Taïwanais",
             ),
           ],
           emoji: "🇹🇼",
@@ -47057,10 +47257,12 @@ class CountryTwn extends WorldCountry {
           ),
           population: 23503349,
           fifa: "TPE",
-          car: const Car(signs: ["RC"]),
+          car: const Car(sign: "RC"),
           timezones: const ["UTC+08:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Taipei"], latLng: [25.03, 121.52]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Taipei"),
+            latLng: LatLng(25.03, 121.52),
+          ),
           postalCode: const PostalCode(),
         );
 }
@@ -47235,7 +47437,7 @@ class CountryChe extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "瑞士联邦", common: "瑞士"),
           ],
-          latLng: const [47, 8],
+          latLng: const LatLng(47, 8),
           landlocked: true,
           bordersCodes: const [
             "Aut",
@@ -47248,13 +47450,13 @@ class CountryChe extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Swiss",
-              m: "Swiss",
+              female: "Swiss",
+              male: "Swiss",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Suisse",
-              m: "Suisse",
+              female: "Suisse",
+              male: "Suisse",
             ),
           ],
           emoji: "🇨🇭",
@@ -47263,12 +47465,14 @@ class CountryChe extends WorldCountry {
             openStreetMaps: "relation/51701",
           ),
           population: 8654622,
-          gini: const Gini(year: 2018, value: 33.1),
+          gini: const Gini(year: 2018, coefficient: 33.1),
           fifa: "SUI",
-          car: const Car(signs: ["CH"]),
+          car: const Car(sign: "CH"),
           timezones: const ["UTC+01:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Bern"], latLng: [46.92, 7.47]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Bern"),
+            latLng: LatLng(46.92, 7.47),
+          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
         );
@@ -47443,7 +47647,7 @@ class CountryEri extends WorldCountry {
               common: "厄立特里亚",
             ),
           ],
-          latLng: const [15, 39],
+          latLng: const LatLng(15, 39),
           bordersCodes: const [
             "Dji",
             "Eth",
@@ -47453,13 +47657,13 @@ class CountryEri extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Eritrean",
-              m: "Eritrean",
+              female: "Eritrean",
+              male: "Eritrean",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Érythréenne",
-              m: "Érythréen",
+              female: "Érythréenne",
+              male: "Érythréen",
             ),
           ],
           emoji: "🇪🇷",
@@ -47469,10 +47673,12 @@ class CountryEri extends WorldCountry {
           ),
           population: 5352000,
           fifa: "ERI",
-          car: const Car(signs: ["ER"]),
+          car: const Car(sign: "ER"),
           timezones: const ["UTC+03:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Asmara"], latLng: [15.33, 38.93]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Asmara"),
+            latLng: LatLng(15.33, 38.93),
+          ),
         );
 }
 
@@ -47634,7 +47840,7 @@ class CountryCog extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "刚果共和国", common: "刚果"),
           ],
-          latLng: const [-1, 15],
+          latLng: const LatLng(-1, 15),
           bordersCodes: const [
             "Ago",
             "Cmr",
@@ -47646,13 +47852,13 @@ class CountryCog extends WorldCountry {
           demonyms: const [
             Demonyms(
               language: LangEng(),
-              f: "Congolese",
-              m: "Congolese",
+              female: "Congolese",
+              male: "Congolese",
             ),
             Demonyms(
               language: LangFra(),
-              f: "Congolaise",
-              m: "Congolais",
+              female: "Congolaise",
+              male: "Congolais",
             ),
           ],
           emoji: "🇨🇬",
@@ -47661,14 +47867,14 @@ class CountryCog extends WorldCountry {
             openStreetMaps: "relation/192794",
           ),
           population: 5657000,
-          gini: const Gini(year: 2011, value: 48.9),
+          gini: const Gini(year: 2011, coefficient: 48.9),
           fifa: "CGO",
-          car: const Car(signs: ["RCB"]),
+          car: const Car(sign: "RCB"),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
           capitalInfo: const CapitalInfo(
-            capital: ["Brazzaville"],
-            latLng: [-4.25, 15.28],
+            capital: Capital("Brazzaville"),
+            latLng: LatLng(-4.25, 15.28),
           ),
         );
 }
@@ -47827,14 +48033,14 @@ class CountryFro extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "法罗群岛", common: "法罗群岛"),
           ],
-          latLng: const [62, -7],
+          latLng: const LatLng(62, -7),
           areaMetric: 1393,
           demonyms: const [
-            Demonyms(language: LangEng(), f: "Faroese", m: "Faroese"),
+            Demonyms(language: LangEng(), female: "Faroese", male: "Faroese"),
             Demonyms(
               language: LangFra(),
-              f: "Féroïenne",
-              m: "Féroïen",
+              female: "Féroïenne",
+              male: "Féroïen",
             ),
           ],
           emoji: "🇫🇴",
@@ -47844,10 +48050,12 @@ class CountryFro extends WorldCountry {
           ),
           population: 48865,
           fifa: "FRO",
-          car: const Car(signs: ["FO"]),
+          car: const Car(sign: "FO"),
           timezones: const ["UTC+00:00"],
-          capitalInfo:
-              const CapitalInfo(capital: ["Tórshavn"], latLng: [62.01, -6.77]),
+          capitalInfo: const CapitalInfo(
+            capital: Capital("Tórshavn"),
+            latLng: LatLng(62.01, -6.77),
+          ),
           postalCode: const PostalCode(
             format: "FO-###",
             regExpPattern: r"^(?:FO)*(\\d{3})$",

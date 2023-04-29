@@ -1,7 +1,6 @@
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$ProgrammingLanguage", () {
       const value = ProgrammingLanguage(name: "Dart");
 

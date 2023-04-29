@@ -1,7 +1,6 @@
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$NaturalLanguage", () {
       final value = NaturalLanguage.list.last;
       final array = {value, NaturalLanguage.list.first};
@@ -29,29 +28,26 @@ void main() => group("$NaturalLanguage", () {
 
       group("equality", () {
         test("basic", () {
-          expect(NaturalLanguage.list.last == value, isTrue);
+          expect(NaturalLanguage.list.first, isNot(equals(value)));
+          expect(NaturalLanguage.list.last, same(value));
           expect(
-            NaturalLanguage.fromName(
-                  NaturalLanguage.list.last.name,
-                ) ==
-                value,
-            isTrue,
+            NaturalLanguage.fromName(NaturalLanguage.list.last.name),
+            same(value),
           );
           expect(
             NaturalLanguage.fromName(
-                  NaturalLanguage.list.last.name,
-                ) ==
-                NaturalLanguage.list.last,
-            isTrue,
+              NaturalLanguage.list.last.name,
+            ),
+            same(NaturalLanguage.list.last),
           );
         });
 
-        test("with $Set", () {
-          expect(array.length == 2, isTrue);
-          array.addAll(array);
-          expect(array.length == 2, isTrue);
-          array.add(value);
-          expect(array.length == 2, isTrue);
+        test("with ${array.runtimeType}", () {
+          expect(array.length, 2);
+          array.addAll(List.of(array));
+          expect(array.length, 2);
+          array.add(NaturalLanguage.fromName(array.last.name));
+          expect(array.length, 2);
         });
       });
 
@@ -160,6 +156,87 @@ void main() => group("$NaturalLanguage", () {
           () => expect(
             NaturalLanguage.maybeFromValue(value.code, languages: array),
             value,
+          ),
+        );
+      });
+
+      group("asserts", () {
+        test(
+          "not",
+          () => expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+            ),
+            isNot(throwsA(isA<AssertionError>())),
+          ),
+        );
+
+        test(
+          "empty format",
+          () => expect(
+            () => NaturalLanguage(
+              name: "",
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "codeShort length",
+          () => expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.code,
+              namesNative: value.namesNative,
+              code: value.code,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "code length",
+          () => expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.codeShort,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "empty namesNative",
+          () => expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: const [],
+              code: value.code,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "bibliographicCode length",
+          () => expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+              bibliographicCode: value.codeShort,
+            ),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });

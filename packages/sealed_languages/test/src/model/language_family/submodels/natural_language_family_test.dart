@@ -1,7 +1,6 @@
 import "package:sealed_languages/src/model/language_family/language_family.dart";
 import "package:test/test.dart";
 
-// ignore: long-method, it's a test.
 void main() => group("$NaturalLanguageFamily", () {
       final value = NaturalLanguageFamily.list.last;
       final array = {value, NaturalLanguageFamily.list.first};
@@ -17,29 +16,28 @@ void main() => group("$NaturalLanguageFamily", () {
 
       group("equality", () {
         test("basic", () {
-          expect(NaturalLanguageFamily.list.last == value, isTrue);
+          expect(NaturalLanguageFamily.list.first, isNot(equals(value)));
+          expect(NaturalLanguageFamily.list.last, same(value));
           expect(
             NaturalLanguageFamily.fromName(
-                  NaturalLanguageFamily.list.last.name,
-                ) ==
-                value,
-            isTrue,
+              NaturalLanguageFamily.list.last.name,
+            ),
+            same(value),
           );
           expect(
             NaturalLanguageFamily.fromName(
-                  NaturalLanguageFamily.list.last.name,
-                ) ==
-                NaturalLanguageFamily.list.last,
-            isTrue,
+              NaturalLanguageFamily.list.last.name,
+            ),
+            same(NaturalLanguageFamily.list.last),
           );
         });
 
-        test("with $Set", () {
-          expect(array.length == 2, isTrue);
-          array.addAll(array);
-          expect(array.length == 2, isTrue);
-          array.add(value);
-          expect(array.length == 2, isTrue);
+        test("with ${array.runtimeType}", () {
+          expect(array.length, 2);
+          array.addAll(List.of(array));
+          expect(array.length, 2);
+          array.add(NaturalLanguageFamily.fromName(array.first.name));
+          expect(array.length, 2);
         });
       });
 
@@ -113,6 +111,24 @@ void main() => group("$NaturalLanguageFamily", () {
           () => expect(
             NaturalLanguageFamily.maybeFromValue(value.name, families: array),
             value,
+          ),
+        );
+      });
+
+      group("asserts", () {
+        test(
+          "not",
+          () => expect(
+            () => NaturalLanguageFamily(name: value.name),
+            isNot(throwsA(isA<AssertionError>())),
+          ),
+        );
+
+        test(
+          "empty name",
+          () => expect(
+            () => NaturalLanguageFamily(name: ""),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });

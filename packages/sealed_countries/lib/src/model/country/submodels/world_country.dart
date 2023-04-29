@@ -5,7 +5,6 @@ class WorldCountry extends Country {
     required super.name,
     required this.altSpellings,
     required this.areaMetric,
-    required this.car,
     required this.code, // CCA3.
     required this.codeNumeric, // CCN3.
     required this.codeShort, // CCA2.
@@ -23,6 +22,7 @@ class WorldCountry extends Country {
     required this.demonyms,
     required this.currencies,
     this.capitalInfo,
+    this.car = const Car(),
     this.cioc, // International Olympic Committee.
     this.fifa,
     this.gini, // Gini Coefficient.
@@ -59,7 +59,7 @@ class WorldCountry extends Country {
   final SubRegion? subregion;
   final List<NaturalLanguage> languages;
   final List<CountryName> translations;
-  final List<double> latLng;
+  final LatLng latLng;
   final bool landlocked;
   final List<String>? bordersCodes;
   final double areaMetric;

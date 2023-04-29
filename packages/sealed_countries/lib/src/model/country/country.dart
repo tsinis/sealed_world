@@ -1,4 +1,3 @@
-
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
@@ -12,6 +11,7 @@ import "submodels/country_name.dart";
 import "submodels/demonyms.dart";
 import "submodels/gini.dart";
 import "submodels/idd.dart";
+import "submodels/lat_lng.dart";
 import "submodels/maps.dart";
 import "submodels/postal_code.dart";
 import "submodels/weekday.dart";

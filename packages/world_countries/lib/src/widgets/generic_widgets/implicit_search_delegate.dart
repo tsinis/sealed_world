@@ -120,7 +120,7 @@ class ImplicitSearchDelegate<T extends Object>
       resultsBuilder(context, filteredItems);
 
   UnmodifiableListView<T> get filteredItems => UnmodifiableListView(
-        items.where((i) => searchIn(i).toSet().any(hasSameText)),
+        items.where((item) => searchIn(item).toSet().any(hasSameText)),
       );
 
   bool hasSameText(String itemText) => compareWithInput(query, itemText);

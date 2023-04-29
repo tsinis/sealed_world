@@ -21,7 +21,7 @@ dev_dependencies:
   flutter_gen_runner: ^5.3.0
   flutter_test: # From Google
     sdk: flutter
-  lints: ^2.0.1 # From Google
+  lints: ^2.1.0 # From Google
 
 flutter:
   assets:

@@ -7,7 +7,8 @@ part "submodels/natural_language.g.dart";
 part "submodels/programming_language.dart";
 
 sealed class Language {
-  const Language({required this.name});
+  const Language({required this.name})
+      : assert(name.length > 0, "`name` should not be empty!");
 
   final String name;
 

@@ -151,13 +151,13 @@ class SearchableIndexedListViewBuilder<T extends Object>
   }) =>
       showDialog(
         context: context,
-        // ignore: arguments-ordering, false positive.
         builder: (internalContext) => AlertDialog(
           iconPadding: iconPadding,
           iconColor: iconColor,
           title: title,
           titlePadding: titlePadding,
           titleTextStyle: titleTextStyle,
+          content: SizedBox(width: double.maxFinite, child: this),
           contentPadding: contentPadding,
           contentTextStyle: contentTextStyle,
           actions: actions,
@@ -177,7 +177,6 @@ class SearchableIndexedListViewBuilder<T extends Object>
           shape: shape,
           alignment: alignment,
           scrollable: scrollable,
-          content: SizedBox(width: double.maxFinite, child: this),
         ),
         barrierDismissible: barrierDismissible,
         barrierColor: barrierColor,
