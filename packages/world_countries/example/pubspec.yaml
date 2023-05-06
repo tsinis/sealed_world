@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+  http: ^0.13.6
   world_countries:
     path: ../
 
@@ -22,6 +23,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
   fonts:
     - family: EmojiOneColor
       fonts:
