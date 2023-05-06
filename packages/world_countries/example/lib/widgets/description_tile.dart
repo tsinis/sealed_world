@@ -32,7 +32,7 @@ class DescriptionTile extends StatelessWidget {
     super.key,
   }) : _leading = leading;
 
-  static const leadingColor = Color.fromARGB(70, 158, 158, 158);
+  static const leadingColor = Color.fromARGB(80, 100, 100, 100);
 
   final String? _title;
   final Widget? _leading;
@@ -46,7 +46,7 @@ class DescriptionTile extends StatelessWidget {
             Divider(
               height: 1,
               thickness: 1,
-              color: leadingColor.withOpacity(0.2),
+              color: leadingColor.withOpacity(0.1),
             ),
             ListTile(
               leading: _leading,
