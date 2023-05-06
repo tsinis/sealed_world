@@ -8,7 +8,7 @@ import "my_app.dart";
 Future<void> main() async {
   const ireland = CountryIrl();
   const url =
-      """https://lh3.googleusercontent.com/SCaGnZhwF0QmGUAIV2zF-wTopCttEhLKTGeeRTutRb5UN3uPfFZ15y0PB03PmeMXyTXMFBOqtqChZn_CWApL6Qyh-M029PbbsC16c2GP6F5UnQII2AM=h""";
+      """SCaGnZhwF0QmGUAIV2zF-wTopCttEhLKTGeeRTutRb5UN3uPfFZ15y0PB03PmeMXyTXMFBOqtqChZn_CWApL6Qyh-M029PbbsC16c2GP6F5UnQII2AM=h""";
   final dispatcher = PlatformDispatcher.instance;
 
   final countryCode = dispatcher.locale.countryCode;
@@ -20,7 +20,9 @@ Future<void> main() async {
   Uint8List? imageBytes;
   try {
     final height = dispatcher.views.first.physicalSize.height.toInt();
-    final response = await get(Uri.parse(url + height.toString()));
+    final response = await get(
+      Uri.https("lh3.googleusercontent.com", url + height.toString()),
+    );
     if (response.statusCode == 200 && response.bodyBytes.isNotEmpty) {
       imageBytes = response.bodyBytes;
     }
