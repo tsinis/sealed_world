@@ -1,4 +1,4 @@
-import "continents.dart";
+import "continents.data.dart";
 
 // Americas.
 

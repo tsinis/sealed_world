@@ -14,9 +14,6 @@ class CountryTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => TabBody(
-        titleMargin: const EdgeInsets.only(top: 100),
-        titlePadding: const EdgeInsets.only(top: 80, bottom: 8),
-        titleOverlay: AbsorbPointer(child: CountryFlag(country, size: 136)),
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -33,6 +30,9 @@ class CountryTab extends StatelessWidget {
             ),
           ],
         ),
+        titleOverlay: AbsorbPointer(child: CountryFlag(country, size: 136)),
+        titlePadding: const EdgeInsets.only(top: 80, bottom: 8),
+        titleMargin: const EdgeInsets.only(top: 100),
         children: <DescriptionTile>[
           DescriptionTile(
             country.namesOfficialNative(separator: ",\n"),

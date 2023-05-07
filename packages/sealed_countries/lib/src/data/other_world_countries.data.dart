@@ -13,8 +13,8 @@ import "../model/country/submodels/gini.dart";
 import "../model/country/submodels/idd.dart";
 import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
-import "geo/continental_sections.dart";
-import "geo/continents.dart";
+import "geo/continental_sections.data.dart";
+import "geo/continents.data.dart";
 
 // ignore: prefer-match-file-name, not needed in data file.
 class CountryUnk extends WorldCountry {

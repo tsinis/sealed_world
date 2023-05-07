@@ -1,4 +1,4 @@
-import "../data/fiat_currencies.dart";
+import "../data/fiat_currencies.data.dart";
 
 part "submodels/crypto_currency.dart";
 part "submodels/fiat_currency.dart";

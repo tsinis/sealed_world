@@ -7,11 +7,11 @@ import "../widgets/description_tile.dart";
 class TabBody extends StatelessWidget {
   const TabBody({
     required this.title,
-    required this.children,
     this.backgroundColor = Colors.white38,
     this.titleOverlay = const SizedBox.shrink(),
     this.titlePadding = const EdgeInsets.symmetric(vertical: 16),
     this.titleMargin,
+    this.children = const [],
     super.key,
   });
 
@@ -33,8 +33,8 @@ class TabBody extends StatelessWidget {
               children: [
                 ClipRect(
                   child: Container(
-                    width: double.infinity,
                     padding: titlePadding,
+                    width: double.infinity,
                     margin: titleMargin,
                     child: BackdropFilter(
                       filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),

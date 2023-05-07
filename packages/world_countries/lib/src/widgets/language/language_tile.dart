@@ -96,8 +96,8 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
                 child: Builder(
                   builder: (context) => Text(
                     language.item.code,
-                    textAlign: TextAlign.center,
                     style: context.theme.textTheme.titleMedium,
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

@@ -17,6 +17,14 @@ class MainPage extends StatefulWidget {
   final WorldCountry country;
   final Uint8List? maybeBackground;
 
+  DecorationImage? get backgroundImage {
+    final background = maybeBackground;
+
+    return background != null
+        ? DecorationImage(image: MemoryImage(background), fit: BoxFit.cover)
+        : null;
+  }
+
   @override
   State<MainPage> createState() => _MainPageState();
 }
@@ -111,14 +119,7 @@ class _MainPageState extends State<MainPage>
             ),
           ),
           body: DecoratedBox(
-            decoration: BoxDecoration(
-              image: widget.maybeBackground != null
-                  ? DecorationImage(
-                      image: MemoryImage(widget.maybeBackground!),
-                      fit: BoxFit.cover,
-                    )
-                  : null,
-            ),
+            decoration: BoxDecoration(image: widget.backgroundImage),
             child: Align(
               alignment: Alignment.topCenter,
               child: SizedBox(

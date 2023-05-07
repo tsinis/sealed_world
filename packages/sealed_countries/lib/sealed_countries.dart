@@ -4,10 +4,10 @@ library sealed_countries;
 export "package:sealed_currencies/sealed_currencies.dart";
 export "package:sealed_languages/sealed_languages.dart";
 
-export "src/data/geo/continental_sections.dart";
-export "src/data/geo/continents.dart";
-export "src/data/official_world_countries.dart";
-export "src/data/other_world_countries.dart";
+export "src/data/geo/continental_sections.data.dart";
+export "src/data/geo/continents.data.dart";
+export "src/data/official_world_countries.data.dart";
+export "src/data/other_world_countries.data.dart";
 export "src/helpers/extensions/country_submodels/demonyms_extension.dart";
 export "src/helpers/extensions/country_submodels/gini_extension.dart";
 export "src/helpers/extensions/country_submodels/idd_extension.dart";

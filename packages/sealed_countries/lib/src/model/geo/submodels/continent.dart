@@ -1,4 +1,4 @@
-import "../../../data/geo/continents.dart";
+import "../../../data/geo/continents.data.dart";
 import "../region.dart";
 
 part "continent.g.dart";

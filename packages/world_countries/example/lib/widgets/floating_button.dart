@@ -11,18 +11,19 @@ class FloatingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => InkWell(
-        onLongPress: () => onPressed(true),
         child: FloatingActionButton(
-          onPressed: () => onPressed(false),
           child: ValueListenableBuilder<Tabs>(
             valueListenable: selectedTab,
             builder: (_, tab, __) => AnimatedSwitcher(
+              // ignore: sort_child_properties_last, against arguments-ordering.
+              child: Icon(tab.icon, key: Key(tab.name)),
+              duration: const Duration(milliseconds: 300),
               switchInCurve: Curves.easeOutSine,
               switchOutCurve: Curves.easeInSine,
-              duration: const Duration(milliseconds: 300),
-              child: Icon(key: Key(tab.name), tab.icon),
             ),
           ),
+          onPressed: () => onPressed(false),
         ),
+        onLongPress: () => onPressed(true),
       );
 }

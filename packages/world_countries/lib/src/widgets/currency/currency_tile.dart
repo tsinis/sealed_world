@@ -96,8 +96,8 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
                 child: Builder(
                   builder: (context) => Text(
                     currency.item.unit,
-                    textAlign: TextAlign.center,
                     style: context.theme.textTheme.titleMedium,
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

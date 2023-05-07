@@ -1,5 +1,5 @@
-import "../../data/natural_language_families.dart";
-import "../../data/natural_languages.dart";
+import "../../data/natural_language_families.data.dart";
+import "../../data/natural_languages.data.dart";
 import "../language_family/language_family.dart";
 
 part "submodels/natural_language.dart";

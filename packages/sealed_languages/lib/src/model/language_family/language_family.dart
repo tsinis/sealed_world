@@ -1,4 +1,4 @@
-import "../../data/natural_language_families.dart";
+import "../../data/natural_language_families.data.dart";
 
 part "submodels/natural_language_family.dart";
 part "submodels/natural_language_family.g.dart";
