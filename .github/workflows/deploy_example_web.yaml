@@ -1,9 +1,9 @@
-name: Deploy
+name: deploy
 
 on:
   push:
     branches:
-      - main
+      - TODO!
 
 jobs:
   deploy:
@@ -27,16 +27,10 @@ jobs:
     - name: 🛠️ Build for web
       run: flutter build web --release
 
-    - name: 💾 Save to 'deploy' directory
-      run: |
-        rm -rf deploy
-        mkdir deploy
-        cp -avr build/web/* deploy/
-
     - name: 🛫 Deploy website to GH Pages
-      uses: s0/git-publish-subdir-action@develop
+      uses: s0/git-publish-subdir-action@v2.6.0
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: deploy
+        FOLDER: build/web
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
