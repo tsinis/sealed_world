@@ -1,8 +1,8 @@
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
-import "../../data/official_world_countries.dart";
-import "../../data/other_world_countries.dart";
+import "../../data/official_world_countries.data.dart";
+import "../../data/other_world_countries.data.dart";
 import "../geo/region.dart";
 import "../geo/submodels/continent.dart";
 import "submodels/capital_info.dart";

@@ -1,7 +1,7 @@
 // ignore_for_file: avoid-non-ascii-symbols
 
 import "../model/language/language.dart";
-import "natural_language_families.dart";
+import "natural_language_families.data.dart";
 
 // ignore: prefer-match-file-name, not necessary for the languages data.
 class LangAar extends NaturalLanguage {

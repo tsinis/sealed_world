@@ -15,8 +15,8 @@ import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
 import "../model/country/submodels/postal_code.dart";
 import "../model/country/submodels/weekday.dart";
-import "geo/continental_sections.dart";
-import "geo/continents.dart";
+import "geo/continental_sections.data.dart";
+import "geo/continents.data.dart";
 
 // ignore: prefer-match-file-name, not necessary for the list of countries.
 class CountryCpv extends WorldCountry {

@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../../constants/ui_constants.dart";
+import "../../extensions/build_context_extensions.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 
@@ -92,7 +93,13 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
               ConstrainedBox(
                 constraints:
                     UiConstants.constraints.copyWith(minWidth: minLeadingWidth),
-                child: Text(language.item.code, textAlign: TextAlign.center),
+                child: Builder(
+                  builder: (context) => Text(
+                    language.item.code,
+                    style: context.theme.textTheme.titleMedium,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ),
           subtitle: subtitle ??
               Text(
