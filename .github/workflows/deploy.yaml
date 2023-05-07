@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: 🚀 Deploy example website
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - name: 📚 Git checkout
+      uses: actions/checkout@v3
+
+    - name: 🐦 Setup Flutter
+      uses: subosito/flutter-action@v2.10.0
+      with:
+        cache: true
+        channel: "beta"
+        cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
+
+    - name: 📦 Install dependencies
+      run: flutter pub get
+
+    - name: 🛠️ Build for web
+      run: flutter build web --release
+
+    - name: 💾 Save to 'deploy' directory
+      run: |
+        rm -rf deploy
+        mkdir deploy
+        cp -avr build/web/* deploy/
+
+    - name: 🛫 Deploy website to GH Pages
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: deploy
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: 📚 Git Checkout
+      - name: 📚 Git checkout
         uses: actions/checkout@v3
 
-      - name: 🔗 Link Checker
+      - name: 🔗 Link checker
         uses: lycheeverse/lychee-action@v1.7.0
         with:
           args: --verbose --no-progress './**/*.md' './**/*.html' './**/*.dart'
@@ -24,7 +24,7 @@ jobs:
           jobSummary: true
           fail: false
 
-      - name: 🪄 Spell Check
+      - name: 🪄 Spell check
         uses: check-spelling/check-spelling@v0.0.21
         with:
           config: .github/workflows/config/spell-check

@@ -20,20 +20,20 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: 📚 Git Checkout
+      - name: 📚 Git checkout
         uses: actions/checkout@v3
 
       - name: 🐦 Setup Flutter
         uses: subosito/flutter-action@v2.10.0
         with:
           cache: true
-          channel: "master"
+          channel: "beta"
           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
-      - name: 📦 Install Dependencies
+      - name: 📦 Install dependencies
         run: flutter pub get
 
-      - name: 🕵️ Analyze Code
+      - name: 🕵️ Analyze code
         uses: ValentinVignal/action-dart-analyze@v0.15
         with:
           fail-on: 'format'
@@ -41,7 +41,7 @@ jobs:
           working-directory: ${{ env.relative_path }}
           format: true
 
-      - name: 🧮 Calculate PANA Score
+      - name: 🧮 Calculate PANA score
         uses: axel-op/dart-package-analyzer@v3
         if: false # TODO: Replace this back when action will support Dart 3.
         id: analysis
@@ -49,7 +49,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           relativePath: ${{ env.relative_path }}
 
-      - name: 📈 Check Pub Score # TODO: Increase PERCENTAGE to 92 before publish.
+      - name: 📈 Check Pub score # TODO: Increase PERCENTAGE to 92 before publish.
         env:
           TOTAL: ${{ steps.analysis.outputs.total }}
           TOTAL_MAX: ${{ steps.analysis.outputs.total_max }}
@@ -74,17 +74,17 @@ jobs:
           fatal_warnings: true
           fatal_style: true
 
-      - name: 🧪 Run Tests
+      - name: 🧪 Run tests
         run: flutter test --no-pub --coverage --enable-experiment=sealed-class
 
-      - name: 📊 Check Code Coverage
+      - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.gen.dart **/*.freezed.dart"
           min_coverage: 0 # TODO: Increase to 95 before publish.
 
-      - name: 💯 Upload Coverage
+      - name: 💯 Upload coverage
         uses: codecov/codecov-action@v3
         with:
           file: ${{ env.relative_path }}/coverage/lcov.info

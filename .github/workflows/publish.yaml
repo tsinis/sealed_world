@@ -19,13 +19,13 @@ jobs:
     timeout-minutes: 10
     if: github.ref_type == 'branch' && github.event_name == 'pull_request' && !github.event.pull_request.merged
     steps:
-      - name: 📚 Checks-out repository
+      - name: 📚 Git checkout
         uses: actions/checkout@v3
 
       - name: 🎯 Setup Dart
         uses: dart-lang/setup-dart@v1
 
-      - name: 📦 Install Dependencies
+      - name: 📦 Install dependencies
         run: dart pub get
 
       - name: 🏜️ Publish - dry run
@@ -37,7 +37,7 @@ jobs:
     if: github.ref_type == 'tag'
     timeout-minutes: 15
     steps:
-      - name: 📚 Checks-out repository
+      - name: 📚 Git checkout
         uses: actions/checkout@v3
 
       - name: 🔖 Get tag
