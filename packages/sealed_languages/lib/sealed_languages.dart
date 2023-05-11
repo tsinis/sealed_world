@@ -1,4 +1,5 @@
 /// Provides data for world languages in the form of sealed classes.
+/// Provides data for world languages in the form of sealed classes.
 library sealed_languages;
 
 export "src/data/natural_language_families.data.dart";
