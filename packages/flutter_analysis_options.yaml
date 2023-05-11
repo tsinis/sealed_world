@@ -37,3 +37,5 @@ linter:
 
     # TODO? Enable and fix this in the far-future.
     diagnostic_describe_all_properties: false
+    # TODO Enable and fix this for Flutter package.
+    public_member_api_docs: false

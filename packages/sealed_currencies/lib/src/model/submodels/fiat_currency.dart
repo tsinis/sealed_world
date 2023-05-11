@@ -69,7 +69,6 @@ class FiatCurrency extends Currency {
       ? super.toString()
       : """FiatCurrency(code: $code, priority: $priority, name: $name, symbol: $symbol, disambiguateSymbol: $disambiguateSymbol, alternateSymbols: $alternateSymbols, subunit: $subunit, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, htmlEntity: $htmlEntity, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator, codeNumeric: $codeNumeric, smallestDenomination: $smallestDenomination)""";
 
-  // TODO: Annotate.
   static FiatCurrency? maybeFromValue<T extends Object>(
     T value, {
     T? Function(FiatCurrency currency)? where,
