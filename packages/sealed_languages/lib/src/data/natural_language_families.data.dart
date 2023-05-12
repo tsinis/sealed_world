@@ -151,6 +151,7 @@ class EskimoAleut extends NaturalLanguageFamily {
   const EskimoAleut() : super(name: "Eskimo Aleut");
 }
 
+/// {@hideConstantImplementations}
 class Uralic extends NaturalLanguageFamily {
   /// A class that represents the Uralic language family.
   const Uralic() : super(name: "Uralic");
