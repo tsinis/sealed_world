@@ -991,7 +991,6 @@ class FiatIrr extends FiatCurrency {
           namesNative: const ["ریال ایران"],
           name: "Iranian Rial",
           symbol: "﷼",
-          subunit: null,
           unitFirst: true,
           htmlEntity: "&#xFDFC;",
           codeNumeric: "364",
@@ -1007,7 +1006,6 @@ class FiatIsk extends FiatCurrency {
           name: "Icelandic Króna",
           symbol: "kr.",
           alternateSymbols: const ["Íkr"],
-          subunit: null,
           subunitToUnit: 1,
           decimalMark: ",",
           thousandsSeparator: ".",
@@ -1056,7 +1054,6 @@ class FiatJpy extends FiatCurrency {
           name: "Japanese Yen",
           symbol: "¥",
           alternateSymbols: const ["円", "圓"],
-          subunit: null,
           subunitToUnit: 1,
           unitFirst: true,
           htmlEntity: "&#x00A5;",
@@ -1142,7 +1139,6 @@ class FiatKrw extends FiatCurrency {
           namesNative: const ["원"],
           name: "South Korean Won",
           symbol: "₩",
-          subunit: null,
           subunitToUnit: 1,
           unitFirst: true,
           htmlEntity: "&#x20A9;",
@@ -1617,6 +1613,8 @@ class FiatPen extends FiatCurrency {
           unitFirst: true,
           htmlEntity: "S/",
           codeNumeric: "604",
+          decimalMark: ",",
+          thousandsSeparator: ".",
         );
 }
 
@@ -2238,7 +2236,6 @@ class FiatVuv extends FiatCurrency {
           namesNative: const ["Vanuatu vatu"],
           name: "Vanuatu Vatu",
           symbol: "Vt",
-          subunit: null,
           subunitToUnit: 1,
           unitFirst: true,
           codeNumeric: "548",

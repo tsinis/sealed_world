@@ -31,7 +31,7 @@ import 'package:sealed_languages/sealed_languages.dart';
 
 ## Usage
 
-Use NaturalLanguage class to get information about languages. Either construct a new instance directly or with use of the class factory constructors/method fromCode, fromCodeShort, fromName or from any value that class contains (maybeFromValue), or select one from the NaturalLanguage.list constant.
+Use `NaturalLanguage` class to get information about languages. Either construct a new instance directly or with use of the class factory constructors/method `fromCode`, `fromCodeShort`, `fromName` or from any value that class contains `maybeFromValue`, or select one from the `NaturalLanguage.list` constant.
 
 ```dart
  final english = NaturalLanguage.fromCode("Eng");
@@ -55,17 +55,17 @@ Use NaturalLanguage class to get information about languages. Either construct a
  // Language(name: Walloon), Language(name: Yiddish).
 ```
 
-For more usage examples, please see the /example folder.
+For more usage examples, please see the `/example` folder.
 
 ## Additional information
 
 For more information on using this package, check out the API documentation.
-
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
 
 ## References, credits and sources
 
-- [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+- [ISO](https://www.iso.org/iso-639-language-codes.html)
+- [Wikipedia](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)
 - [Data Source](https://github.com/haliaeetus/iso-639)[^1]
 
-[^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified and added additional data.
+[^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified, added additional data and functionality.
