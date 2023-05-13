@@ -62,3 +62,10 @@ For more usage examples, please see the /example folder.
 For more information on using this package, check out the API documentation.
 
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
+
+## References, credits and sources
+
+- [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+- [Data Source](https://github.com/haliaeetus/iso-639)[^1]
+
+[^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified and added additional data.
