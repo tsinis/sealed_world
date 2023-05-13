@@ -15,8 +15,8 @@ void main() {
   final english = NaturalLanguage.fromCode("Eng");
   print("${english.name}: ${english.codeShort}"); // Prints: "English: EN".
 
-  final italian = NaturalLanguage.fromCodeShort("it");
-  print("${italian.name}: ${italian.code}"); // Prints: "Italian: ITA".
+  final russian = NaturalLanguage.fromCodeShort("ru");
+  print("${russian.name}: ${russian.code}"); // Prints: "Russian: RUS".
 
   final maybeCzech = NaturalLanguage.maybeFromValue(
     "CZE",
