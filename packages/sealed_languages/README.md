@@ -7,12 +7,21 @@ This ISO-driven, pure Dart, and and dependency-free package provides information
 | Field | Mandatory | Description | Example for LangEng |
 | --- | --- | --- | --- |
 | name | Yes | A non-empty string representing the English name of the natural language. | "English" |
-| code | Yes | A three-letter string representing the Terminological ISO 639-2 code for the language. | "ENG" |
+| code | Yes | A three-letter string representing the ISO 639-2/T Terminological code for the language. | "ENG" |
 | codeShort | Yes | A two-letter string representing the ISO 639-1 code for the language. | "EN" |
 | namesNative | Yes | A list of non-empty strings representing the language's native names. | ["English"] |
 | bibliographicCode | No | A three-letter string representing the ISO 639-2/B Bibliographic code for the language. | null |
 | family | No | The language family to which the language belongs. | LanguageFamily(name: "Indo-European") |
 | isRightToLeft | No | A boolean value specifying whether the language is written right-to-left. | false |
+
+Compile time constant list of all languages accessible via `NaturalLanguage.list` and more over, the **NaturalLanguage** class provides the following methods:
+
+- `maybeFromValue` - returns a language instance if the value matches the provided value, otherwise returns `null`.
+- `fromCode` - returns a language instance if the value matches the provided ISO 639-2 code.
+- `fromCodeShort` - returns a language instance if the value matches the provided ISO 639-1 code code.
+- `fromName` - returns a language instance if the value matches the provided name.
+
+and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`.
 
 ## Getting started
 
