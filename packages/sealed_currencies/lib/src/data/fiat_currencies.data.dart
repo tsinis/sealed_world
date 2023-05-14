@@ -2126,13 +2126,29 @@ class FiatShp extends FiatCurrency {
 }
 
 /// {@hideConstantImplementations}
+class FiatSle extends FiatCurrency {
+  /// A class that represents the Sierra Leonean Leone (New).
+  const FiatSle()
+      : super(
+          code: "SLE",
+          namesNative: const ["Sierra Leonean leone"],
+          name: "Sierra Leonean Leone",
+          symbol: "Le",
+          disambiguateSymbol: "SLE",
+          subunit: "Cent",
+          codeNumeric: "925",
+          smallestDenomination: 1000,
+        );
+}
+
+/// {@hideConstantImplementations}
 class FiatSll extends FiatCurrency {
-  /// A class that represents the Sierra Leonean Leone.
+  /// A class that represents the Sierra Leonean Leone (Old).
   const FiatSll()
       : super(
           code: "SLL",
           namesNative: const ["Sierra Leonean leone"],
-          name: "Sierra Leonean Leone",
+          name: "Sierra Leonean Leone (Old)",
           symbol: "Le",
           disambiguateSymbol: "SLL",
           subunit: "Cent",

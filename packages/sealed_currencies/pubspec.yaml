@@ -1,6 +1,19 @@
+version: 0.0.1
 name: sealed_currencies
 description: Provides data for world currencies in the form of sealed classes.
-version: 0.0.1
+maintainer: Roman Cinis
+repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies
+issue_tracker: https://github.com/tsinis/sealed_world/issues
+topics:
+ - currencies
+ - currency
+ - money
+ - sealed
+ - iso-4217
+ - iso
+
+screenshots:
+  # - description: 'Example' TODO!
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

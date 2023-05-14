@@ -18,25 +18,18 @@ class CryptoCurrency extends Currency {
   ///
   /// Throws an `AssertionError` if `proofType` is empty.
   const CryptoCurrency({
-    required String code,
-    required String name,
-    String decimalMark = ".",
-    String thousandsSeparator = ",",
-    String? symbol,
+    required super.code,
+    required super.name,
+    super.decimalMark = ".",
+    super.thousandsSeparator = ",",
+    super.symbol,
     this.isMinable = false,
     this.isFork = false,
     this.proofType,
     this.dateAdded,
-  })  : assert(
+  }) : assert(
           proofType == null || proofType.length > 0,
           "`proofType` should not be empty!",
-        ),
-        super(
-          code: code,
-          decimalMark: decimalMark,
-          name: name,
-          thousandsSeparator: thousandsSeparator,
-          symbol: symbol,
         );
 
   /// Indicates whether this cryptocurrency can be mined.

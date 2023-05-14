@@ -126,7 +126,7 @@ class FiatCurrency extends Currency {
   /// The proportion between the unit and the subunit.
   final int subunitToUnit;
 
-  /// Should the currency symbol precede the amount, or should it come after?.
+  /// Should the currency symbol precede the amount, or should it come after?
   final bool unitFirst;
 
   /// Default decimal separator for most currencies.
@@ -136,7 +136,7 @@ class FiatCurrency extends Currency {
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """FiatCurrency(code: $code, priority: $priority, name: $name, symbol: $symbol, disambiguateSymbol: $disambiguateSymbol, alternateSymbols: $alternateSymbols, subunit: $subunit, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, htmlEntity: $htmlEntity, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator, codeNumeric: $codeNumeric, smallestDenomination: $smallestDenomination)""";
+      : """FiatCurrency(code: $code, priority: $priority, name: $name, namesNative: $namesNative, symbol: $symbol, disambiguateSymbol: $disambiguateSymbol, alternateSymbols: $alternateSymbols, subunit: $subunit, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, htmlEntity: $htmlEntity, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator, codeNumeric: $codeNumeric, smallestDenomination: $smallestDenomination)""";
 
   /// Returns a [FiatCurrency] object whose [code] or the value returned by
   /// [where] matches the specified [value], or `null` if no such object exists
@@ -327,6 +327,7 @@ class FiatCurrency extends Currency {
     FiatSek(),
     FiatSgd(),
     FiatShp(),
+    FiatSle(),
     FiatSll(),
     FiatSos(),
     FiatSrd(),

@@ -3,7 +3,7 @@
 import "package:sealed_currencies/sealed_currencies.dart";
 
 void main() {
-  print(FiatCurrency.list.length); // Prints: "168".
+  print(FiatCurrency.list.length); // Prints: "169".
 
   final serbianDinar = FiatCurrency.fromCode("RSD");
   print(serbianDinar.name); // Prints: "Serbian Dinar".
@@ -12,7 +12,13 @@ void main() {
     "Euro",
     where: (currency) => currency.namesNative.first,
   );
-  print(maybeEuro); // Prints: "Currency(code: EUR)".
+  print(maybeEuro?.toString(short: false));
+  /*
+  Prints: "FiatCurrency(code: EUR, priority: 2, name: Euro, namesNative: [Euro],
+  symbol: €, disambiguateSymbol: null, alternateSymbols: null, subunit: Cent,
+  subunitToUnit: 100, unitFirst: true, htmlEntity: €, decimalMark: ",",
+  thousandsSeparator: ".", codeNumeric: 978, smallestDenomination: 1)".
+  */
 
   /// [Currency] is a sealed class, it means
   /// this `whenOrNull` can be used same way as switch:

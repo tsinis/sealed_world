@@ -128,6 +128,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     required R Function(FiatCurrency fiatSek) fiatSek,
     required R Function(FiatCurrency fiatSgd) fiatSgd,
     required R Function(FiatCurrency fiatShp) fiatShp,
+    required R Function(FiatCurrency fiatSle) fiatSle,
     required R Function(FiatCurrency fiatSll) fiatSll,
     required R Function(FiatCurrency fiatSos) fiatSos,
     required R Function(FiatCurrency fiatSrd) fiatSrd,
@@ -422,6 +423,8 @@ extension FiatCurrencyFunctional on FiatCurrency {
         return fiatSgd(this);
       case FiatShp():
         return fiatShp(this);
+      case FiatSle():
+        return fiatSle(this);
       case FiatSll():
         return fiatSll(this);
       case FiatSos():
@@ -641,6 +644,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     R Function(FiatCurrency fiatSek)? fiatSek,
     R Function(FiatCurrency fiatSgd)? fiatSgd,
     R Function(FiatCurrency fiatShp)? fiatShp,
+    R Function(FiatCurrency fiatSle)? fiatSle,
     R Function(FiatCurrency fiatSll)? fiatSll,
     R Function(FiatCurrency fiatSos)? fiatSos,
     R Function(FiatCurrency fiatSrd)? fiatSrd,
@@ -935,6 +939,8 @@ extension FiatCurrencyFunctional on FiatCurrency {
         return fiatSgd?.call(this) ?? orElse(this);
       case FiatShp():
         return fiatShp?.call(this) ?? orElse(this);
+      case FiatSle():
+        return fiatSle?.call(this) ?? orElse(this);
       case FiatSll():
         return fiatSll?.call(this) ?? orElse(this);
       case FiatSos():
@@ -1154,6 +1160,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     R Function()? fiatSek,
     R Function()? fiatSgd,
     R Function()? fiatShp,
+    R Function()? fiatSle,
     R Function()? fiatSll,
     R Function()? fiatSos,
     R Function()? fiatSrd,
@@ -1448,6 +1455,8 @@ extension FiatCurrencyFunctional on FiatCurrency {
         return fiatSgd?.call() ?? orElse();
       case FiatShp():
         return fiatShp?.call() ?? orElse();
+      case FiatSle():
+        return fiatSle?.call() ?? orElse();
       case FiatSll():
         return fiatSll?.call() ?? orElse();
       case FiatSos():
@@ -1666,6 +1675,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     required R Function() fiatSek,
     required R Function() fiatSgd,
     required R Function() fiatShp,
+    required R Function() fiatSle,
     required R Function() fiatSll,
     required R Function() fiatSos,
     required R Function() fiatSrd,
@@ -1960,6 +1970,8 @@ extension FiatCurrencyFunctional on FiatCurrency {
         return fiatSgd();
       case FiatShp():
         return fiatShp();
+      case FiatSle():
+        return fiatSle();
       case FiatSll():
         return fiatSll();
       case FiatSos():
@@ -2178,6 +2190,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     R Function()? fiatSek,
     R Function()? fiatSgd,
     R Function()? fiatShp,
+    R Function()? fiatSle,
     R Function()? fiatSll,
     R Function()? fiatSos,
     R Function()? fiatSrd,
@@ -2473,6 +2486,8 @@ extension FiatCurrencyFunctional on FiatCurrency {
         return fiatSgd?.call() ?? orElse?.call();
       case FiatShp():
         return fiatShp?.call() ?? orElse?.call();
+      case FiatSle():
+        return fiatSle?.call() ?? orElse?.call();
       case FiatSll():
         return fiatSll?.call() ?? orElse?.call();
       case FiatSos():
