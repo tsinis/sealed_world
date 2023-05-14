@@ -174,31 +174,11 @@ class FiatCurrency extends Currency {
     return null;
   }
 
-  /// Returns the unit of the currency.
-  String get unit => symbol ?? code; // TODO: Move to extension.
-
   /// Adds the currency unit to a value.
+  ///
+  /// If [unitFirst] is `true` (default), the currency unit is added before the
+  /// value, otherwise it is added after the value.
   String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
-
-  /// Formats the value as a string with the currency symbol.
-  String format(num value) {
-    final stringValue = value.toString();
-    if (stringValue.contains(dot)) {
-      final splitValue = stringValue.split(dot);
-      final integer = splitValue.first;
-      final decimals = splitValue.last;
-      final formattedInt = _formatThousands(integer);
-
-      return addUnit(formattedInt + decimalMark + decimals);
-    }
-
-    return addUnit(_formatThousands(stringValue));
-  }
-
-  String _formatThousands(String value) => value.replaceAllMapped(
-        RegExp(r"(\d)(?=(\d{3})+(?!\d))"),
-        (match) => "${match[1]}$thousandsSeparator",
-      );
 
   /// A list of all the currencies currently
   /// supported by the [FiatCurrency] class.

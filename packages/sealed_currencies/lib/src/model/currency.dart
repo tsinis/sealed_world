@@ -1,4 +1,5 @@
 import "../data/fiat_currencies.data.dart";
+import "../helpers/fiat_currency/fiat_currency_getters_extension.dart";
 
 part "submodels/crypto_currency.dart";
 part "submodels/fiat_currency.dart";
