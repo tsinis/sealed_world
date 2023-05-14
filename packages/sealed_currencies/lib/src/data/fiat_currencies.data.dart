@@ -2,8 +2,10 @@
 
 import "../model/currency.dart";
 
+/// {@hideConstantImplementations}
 // ignore: prefer-match-file-name, not necessary for the list of currencies.
 class FiatAed extends FiatCurrency {
+  /// A class that represents the United Arab Emirates Dirham.
   const FiatAed()
       : super(
           code: "AED",
@@ -17,7 +19,9 @@ class FiatAed extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatAfn extends FiatCurrency {
+  /// A class that represents the Afghan Afghani.
   const FiatAfn()
       : super(
           code: "AFN",
@@ -31,7 +35,9 @@ class FiatAfn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatAll extends FiatCurrency {
+  /// A class that represents the Albanian Lek.
   const FiatAll()
       : super(
           code: "ALL",
@@ -46,7 +52,9 @@ class FiatAll extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatAmd extends FiatCurrency {
+  /// A class that represents the Armenian Dram.
   const FiatAmd()
       : super(
           code: "AMD",
@@ -60,7 +68,9 @@ class FiatAmd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatAng extends FiatCurrency {
+  /// A class that represents the Netherlands Antillean Gulden.
   const FiatAng()
       : super(
           code: "ANG",
@@ -77,7 +87,9 @@ class FiatAng extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatAoa extends FiatCurrency {
+  /// A class that represents the Angolan Kwanza.
   const FiatAoa()
       : super(
           code: "AOA",
@@ -90,7 +102,9 @@ class FiatAoa extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatArs extends FiatCurrency {
+  /// A class that represents the Argentine Peso.
   const FiatArs()
       : super(
           code: "ARS",
@@ -108,7 +122,9 @@ class FiatArs extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatAud extends FiatCurrency {
+  /// A class that represents the Australian Dollar.
   const FiatAud()
       : super(
           priority: 4,
@@ -126,7 +142,9 @@ class FiatAud extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatAwg extends FiatCurrency {
+  /// A class that represents the Aruban Florin.
   const FiatAwg()
       : super(
           code: "AWG",
@@ -141,7 +159,9 @@ class FiatAwg extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatAzn extends FiatCurrency {
+  /// A class that represents the Azerbaijani Manat.
   const FiatAzn()
       : super(
           code: "AZN",
@@ -155,7 +175,9 @@ class FiatAzn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBam extends FiatCurrency {
+  /// A class that represents the Bosnia and Herzegovina Convertible Mark.
   const FiatBam()
       : super(
           code: "BAM",
@@ -170,7 +192,9 @@ class FiatBam extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBbd extends FiatCurrency {
+  /// A class that represents the Barbadian Dollar.
   const FiatBbd()
       : super(
           code: "BBD",
@@ -186,7 +210,9 @@ class FiatBbd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBdt extends FiatCurrency {
+  /// A class that represents the Bangladeshi Taka.
   const FiatBdt()
       : super(
           code: "BDT",
@@ -200,7 +226,9 @@ class FiatBdt extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBgn extends FiatCurrency {
+  /// A class that represents the Bulgarian Lev.
   const FiatBgn()
       : super(
           code: "BGN",
@@ -213,7 +241,9 @@ class FiatBgn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBhd extends FiatCurrency {
+  /// A class that represents the Bahraini Dinar.
   const FiatBhd()
       : super(
           code: "BHD",
@@ -229,7 +259,9 @@ class FiatBhd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBif extends FiatCurrency {
+  /// A class that represents the Burundian Franc.
   const FiatBif()
       : super(
           code: "BIF",
@@ -245,7 +277,9 @@ class FiatBif extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBmd extends FiatCurrency {
+  /// A class that represents the Bermuda Dollar.
   const FiatBmd()
       : super(
           code: "BMD",
@@ -261,7 +295,9 @@ class FiatBmd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBnd extends FiatCurrency {
+  /// A class that represents the Brunei Dollar.
   const FiatBnd()
       : super(
           code: "BND",
@@ -277,7 +313,9 @@ class FiatBnd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBob extends FiatCurrency {
+  /// A class that represents the Bolivian Boliviano.
   const FiatBob()
       : super(
           code: "BOB",
@@ -292,7 +330,9 @@ class FiatBob extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBrl extends FiatCurrency {
+  /// A class that represents the Brazilian Real.
   const FiatBrl()
       : super(
           code: "BRL",
@@ -309,7 +349,9 @@ class FiatBrl extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBsd extends FiatCurrency {
+  /// A class that represents the Bahamian Dollar.
   const FiatBsd()
       : super(
           code: "BSD",
@@ -325,7 +367,9 @@ class FiatBsd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBtn extends FiatCurrency {
+  /// A class that represents the Bhutanese Ngultrum.
   const FiatBtn()
       : super(
           code: "BTN",
@@ -339,7 +383,9 @@ class FiatBtn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBwp extends FiatCurrency {
+  /// A class that represents the Botswana Pula.
   const FiatBwp()
       : super(
           code: "BWP",
@@ -353,7 +399,9 @@ class FiatBwp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatByn extends FiatCurrency {
+  /// A class that represents the Belarusian Ruble.
   const FiatByn()
       : super(
           code: "BYN",
@@ -369,7 +417,9 @@ class FiatByn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatBzd extends FiatCurrency {
+  /// A class that represents the Belize Dollar.
   const FiatBzd()
       : super(
           code: "BZD",
@@ -385,7 +435,9 @@ class FiatBzd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCad extends FiatCurrency {
+  /// A class that represents the Canadian Dollar.
   const FiatCad()
       : super(
           priority: 5,
@@ -403,7 +455,9 @@ class FiatCad extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCdf extends FiatCurrency {
+  /// A class that represents the Congolese Franc.
   const FiatCdf()
       : super(
           code: "CDF",
@@ -417,7 +471,9 @@ class FiatCdf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatChf extends FiatCurrency {
+  /// A class that represents the Swiss Franc.
   const FiatChf()
       : super(
           code: "CHF",
@@ -434,7 +490,9 @@ class FiatChf extends FiatCurrency {
   String addUnit(String value) => "$unit$value";
 }
 
+/// {@hideConstantImplementations}
 class FiatClf extends FiatCurrency {
+  /// A class that represents the Unidad de Fomento.
   const FiatClf()
       : super(
           code: "CLF",
@@ -452,7 +510,9 @@ class FiatClf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatClp extends FiatCurrency {
+  /// A class that represents the Chilean Peso.
   const FiatClp()
       : super(
           code: "CLP",
@@ -470,7 +530,9 @@ class FiatClp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCny extends FiatCurrency {
+  /// A class that represents the Chinese Renminbi Yuan.
   const FiatCny()
       : super(
           code: "CNY",
@@ -485,7 +547,9 @@ class FiatCny extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCop extends FiatCurrency {
+  /// A class that represents the Colombian Peso.
   const FiatCop()
       : super(
           code: "COP",
@@ -504,7 +568,9 @@ class FiatCop extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCrc extends FiatCurrency {
+  /// A class that represents the Costa Rican Colón.
   const FiatCrc()
       : super(
           code: "CRC",
@@ -522,7 +588,9 @@ class FiatCrc extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCuc extends FiatCurrency {
+  /// A class that represents the Cuban Convertible Peso.
   const FiatCuc()
       : super(
           code: "CUC",
@@ -536,7 +604,9 @@ class FiatCuc extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCup extends FiatCurrency {
+  /// A class that represents the Cuban Peso.
   const FiatCup()
       : super(
           code: "CUP",
@@ -552,7 +622,9 @@ class FiatCup extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCve extends FiatCurrency {
+  /// A class that represents the Cape Verdean Escudo.
   const FiatCve()
       : super(
           code: "CVE",
@@ -567,7 +639,9 @@ class FiatCve extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatCzk extends FiatCurrency {
+  /// A class that represents the Czech Koruna.
   const FiatCzk()
       : super(
           code: "CZK",
@@ -582,7 +656,9 @@ class FiatCzk extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatDjf extends FiatCurrency {
+  /// A class that represents the Djiboutian Franc.
   const FiatDjf()
       : super(
           code: "DJF",
@@ -596,7 +672,9 @@ class FiatDjf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatDkk extends FiatCurrency {
+  /// A class that represents the Danish Krone.
   const FiatDkk()
       : super(
           code: "DKK",
@@ -613,7 +691,9 @@ class FiatDkk extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatDop extends FiatCurrency {
+  /// A class that represents the Dominican Peso.
   const FiatDop()
       : super(
           code: "DOP",
@@ -630,7 +710,9 @@ class FiatDop extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatDzd extends FiatCurrency {
+  /// A class that represents the Algerian Dinar.
   const FiatDzd()
       : super(
           code: "DZD",
@@ -644,7 +726,9 @@ class FiatDzd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatEgp extends FiatCurrency {
+  /// A class that represents the Egyptian Pound.
   const FiatEgp()
       : super(
           code: "EGP",
@@ -660,7 +744,9 @@ class FiatEgp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatErn extends FiatCurrency {
+  /// A class that represents the Eritrean Nakfa.
   const FiatErn()
       : super(
           code: "ERN",
@@ -672,7 +758,9 @@ class FiatErn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatEtb extends FiatCurrency {
+  /// A class that represents the Ethiopian Birr.
   const FiatEtb()
       : super(
           code: "ETB",
@@ -685,7 +773,9 @@ class FiatEtb extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatEur extends FiatCurrency {
+  /// A class that represents the Euro.
   const FiatEur()
       : super(
           priority: 2,
@@ -702,7 +792,9 @@ class FiatEur extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatFjd extends FiatCurrency {
+  /// A class that represents the Fijian Dollar.
   const FiatFjd()
       : super(
           code: "FJD",
@@ -718,7 +810,9 @@ class FiatFjd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatFkp extends FiatCurrency {
+  /// A class that represents the Falkland Islands Pound.
   const FiatFkp()
       : super(
           code: "FKP",
@@ -733,7 +827,9 @@ class FiatFkp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatGbp extends FiatCurrency {
+  /// A class that represents the British Pound.
   const FiatGbp()
       : super(
           priority: 3,
@@ -748,7 +844,9 @@ class FiatGbp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatGel extends FiatCurrency {
+  /// A class that represents the Georgian Lari.
   const FiatGel()
       : super(
           code: "GEL",
@@ -761,7 +859,9 @@ class FiatGel extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatGhs extends FiatCurrency {
+  /// A class that represents the Ghanaian Cedi.
   const FiatGhs()
       : super(
           code: "GHS",
@@ -776,7 +876,9 @@ class FiatGhs extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatGip extends FiatCurrency {
+  /// A class that represents the Gibraltar Pound.
   const FiatGip()
       : super(
           code: "GIP",
@@ -791,7 +893,9 @@ class FiatGip extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatGmd extends FiatCurrency {
+  /// A class that represents the Gambian Dalasi.
   const FiatGmd()
       : super(
           code: "GMD",
@@ -803,7 +907,9 @@ class FiatGmd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatGnf extends FiatCurrency {
+  /// A class that represents the Guinean Franc.
   const FiatGnf()
       : super(
           code: "GNF",
@@ -819,7 +925,9 @@ class FiatGnf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatGtq extends FiatCurrency {
+  /// A class that represents the Guatemalan Quetzal.
   const FiatGtq()
       : super(
           code: "GTQ",
@@ -832,7 +940,9 @@ class FiatGtq extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatGyd extends FiatCurrency {
+  /// A class that represents the Guyanese Dollar.
   const FiatGyd()
       : super(
           code: "GYD",
@@ -848,7 +958,9 @@ class FiatGyd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatHkd extends FiatCurrency {
+  /// A class that represents the Hong Kong Dollar.
   const FiatHkd()
       : super(
           code: "HKD",
@@ -865,7 +977,9 @@ class FiatHkd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatHnl extends FiatCurrency {
+  /// A class that represents the Honduran Lempira.
   const FiatHnl()
       : super(
           code: "HNL",
@@ -880,7 +994,9 @@ class FiatHnl extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatHrk extends FiatCurrency {
+  /// A class that represents the Croatian Kuna.
   const FiatHrk()
       : super(
           code: "HRK",
@@ -894,7 +1010,9 @@ class FiatHrk extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatHtg extends FiatCurrency {
+  /// A class that represents the Haitian Gourde.
   const FiatHtg()
       : super(
           code: "HTG",
@@ -907,7 +1025,9 @@ class FiatHtg extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatHuf extends FiatCurrency {
+  /// A class that represents the Hungarian Forint.
   const FiatHuf()
       : super(
           code: "HUF",
@@ -922,7 +1042,9 @@ class FiatHuf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatIdr extends FiatCurrency {
+  /// A class that represents the Indonesian Rupiah.
   const FiatIdr()
       : super(
           code: "IDR",
@@ -938,7 +1060,9 @@ class FiatIdr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatIls extends FiatCurrency {
+  /// A class that represents the Israeli New Sheqel.
   const FiatIls()
       : super(
           code: "ILS",
@@ -954,7 +1078,9 @@ class FiatIls extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatInr extends FiatCurrency {
+  /// A class that represents the Indian Rupee.
   const FiatInr()
       : super(
           code: "INR",
@@ -970,7 +1096,9 @@ class FiatInr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatIqd extends FiatCurrency {
+  /// A class that represents the Iraqi Dinar.
   const FiatIqd()
       : super(
           code: "IQD",
@@ -984,7 +1112,9 @@ class FiatIqd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatIrr extends FiatCurrency {
+  /// A class that represents the Iranian Rial.
   const FiatIrr()
       : super(
           code: "IRR",
@@ -998,7 +1128,9 @@ class FiatIrr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatIsk extends FiatCurrency {
+  /// A class that represents the Icelandic Króna.
   const FiatIsk()
       : super(
           code: "ISK",
@@ -1013,7 +1145,9 @@ class FiatIsk extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatJmd extends FiatCurrency {
+  /// A class that represents the Jamaican Dollar.
   const FiatJmd()
       : super(
           code: "JMD",
@@ -1029,7 +1163,9 @@ class FiatJmd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatJod extends FiatCurrency {
+  /// A class that represents the Jordanian Dinar.
   const FiatJod()
       : super(
           code: "JOD",
@@ -1045,7 +1181,9 @@ class FiatJod extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatJpy extends FiatCurrency {
+  /// A class that represents the Japanese Yen.
   const FiatJpy()
       : super(
           priority: 6,
@@ -1061,7 +1199,9 @@ class FiatJpy extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKes extends FiatCurrency {
+  /// A class that represents the Kenyan Shilling.
   const FiatKes()
       : super(
           code: "KES",
@@ -1076,7 +1216,9 @@ class FiatKes extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKgs extends FiatCurrency {
+  /// A class that represents the Kyrgyzstani Som.
   const FiatKgs()
       : super(
           code: "KGS",
@@ -1089,7 +1231,9 @@ class FiatKgs extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKhr extends FiatCurrency {
+  /// A class that represents the Cambodian Riel.
   const FiatKhr()
       : super(
           code: "KHR",
@@ -1103,7 +1247,9 @@ class FiatKhr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKmf extends FiatCurrency {
+  /// A class that represents the Comorian Franc.
   const FiatKmf()
       : super(
           code: "KMF",
@@ -1119,7 +1265,9 @@ class FiatKmf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKpw extends FiatCurrency {
+  /// A class that represents the North Korean Won.
   const FiatKpw()
       : super(
           code: "KPW",
@@ -1132,7 +1280,9 @@ class FiatKpw extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKrw extends FiatCurrency {
+  /// A class that represents the South Korean Won.
   const FiatKrw()
       : super(
           code: "KRW",
@@ -1146,7 +1296,9 @@ class FiatKrw extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKwd extends FiatCurrency {
+  /// A class that represents the Kuwaiti Dinar.
   const FiatKwd()
       : super(
           code: "KWD",
@@ -1162,7 +1314,9 @@ class FiatKwd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKyd extends FiatCurrency {
+  /// A class that represents the Cayman Islands Dollar.
   const FiatKyd()
       : super(
           code: "KYD",
@@ -1178,7 +1332,9 @@ class FiatKyd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatKzt extends FiatCurrency {
+  /// A class that represents the Kazakhstani Tenge.
   const FiatKzt()
       : super(
           code: "KZT",
@@ -1191,7 +1347,9 @@ class FiatKzt extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatLak extends FiatCurrency {
+  /// A class that represents the Lao Kip.
   const FiatLak()
       : super(
           code: "LAK",
@@ -1206,7 +1364,9 @@ class FiatLak extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatLbp extends FiatCurrency {
+  /// A class that represents the Lebanese Pound.
   const FiatLbp()
       : super(
           code: "LBP",
@@ -1222,7 +1382,9 @@ class FiatLbp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatLkr extends FiatCurrency {
+  /// A class that represents the Sri Lankan Rupee.
   const FiatLkr()
       : super(
           code: "LKR",
@@ -1238,7 +1400,9 @@ class FiatLkr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatLrd extends FiatCurrency {
+  /// A class that represents the Liberian Dollar.
   const FiatLrd()
       : super(
           code: "LRD",
@@ -1254,7 +1418,9 @@ class FiatLrd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatLsl extends FiatCurrency {
+  /// A class that represents the Lesotho Loti.
   const FiatLsl()
       : super(
           code: "LSL",
@@ -1268,7 +1434,9 @@ class FiatLsl extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatLyd extends FiatCurrency {
+  /// A class that represents the Libyan Dinar.
   const FiatLyd()
       : super(
           code: "LYD",
@@ -1283,7 +1451,9 @@ class FiatLyd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMad extends FiatCurrency {
+  /// A class that represents the Moroccan Dirham.
   const FiatMad()
       : super(
           code: "MAD",
@@ -1295,7 +1465,9 @@ class FiatMad extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMdl extends FiatCurrency {
+  /// A class that represents the Moldovan Leu.
   const FiatMdl()
       : super(
           code: "MDL",
@@ -1308,7 +1480,9 @@ class FiatMdl extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMga extends FiatCurrency {
+  /// A class that represents the Malagasy Ariary.
   const FiatMga()
       : super(
           code: "MGA",
@@ -1322,7 +1496,9 @@ class FiatMga extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMkd extends FiatCurrency {
+  /// A class that represents the Macedonian Denar.
   const FiatMkd()
       : super(
           code: "MKD",
@@ -1335,7 +1511,9 @@ class FiatMkd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMmk extends FiatCurrency {
+  /// A class that represents the Myanmar Kyat.
   const FiatMmk()
       : super(
           code: "MMK",
@@ -1349,7 +1527,9 @@ class FiatMmk extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMnt extends FiatCurrency {
+  /// A class that represents the Mongolian Tugrik.
   const FiatMnt()
       : super(
           code: "MNT",
@@ -1363,7 +1543,9 @@ class FiatMnt extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMop extends FiatCurrency {
+  /// A class that represents the Macanese Pataca.
   const FiatMop()
       : super(
           code: "MOP",
@@ -1377,7 +1559,9 @@ class FiatMop extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMru extends FiatCurrency {
+  /// A class that represents the Mauritian Ouguiya.
   const FiatMru()
       : super(
           code: "MRU",
@@ -1390,7 +1574,9 @@ class FiatMru extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMur extends FiatCurrency {
+  /// A class that represents the Mauritian Rupee.
   const FiatMur()
       : super(
           code: "MUR",
@@ -1405,7 +1591,9 @@ class FiatMur extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMvr extends FiatCurrency {
+  /// A class that represents the Maldivian Rufiyaa.
   const FiatMvr()
       : super(
           code: "MVR",
@@ -1417,7 +1605,9 @@ class FiatMvr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMwk extends FiatCurrency {
+  /// A class that represents the Malawian Kwacha.
   const FiatMwk()
       : super(
           code: "MWK",
@@ -1429,7 +1619,9 @@ class FiatMwk extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMxn extends FiatCurrency {
+  /// A class that represents the Mexican Peso.
   const FiatMxn()
       : super(
           code: "MXN",
@@ -1446,7 +1638,9 @@ class FiatMxn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMyr extends FiatCurrency {
+  /// A class that represents the Malaysian Ringgit.
   const FiatMyr()
       : super(
           code: "MYR",
@@ -1460,7 +1654,9 @@ class FiatMyr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatMzn extends FiatCurrency {
+  /// A class that represents the Mozambican Metical.
   const FiatMzn()
       : super(
           code: "MZN",
@@ -1476,7 +1672,9 @@ class FiatMzn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatNad extends FiatCurrency {
+  /// A class that represents the Namibian Dollar.
   const FiatNad()
       : super(
           code: "NAD",
@@ -1492,7 +1690,9 @@ class FiatNad extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatNgn extends FiatCurrency {
+  /// A class that represents the Nigerian Naira.
   const FiatNgn()
       : super(
           code: "NGN",
@@ -1507,7 +1707,9 @@ class FiatNgn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatNio extends FiatCurrency {
+  /// A class that represents the Nicaraguan Córdoba.
   const FiatNio()
       : super(
           code: "NIO",
@@ -1522,7 +1724,9 @@ class FiatNio extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatNok extends FiatCurrency {
+  /// A class that represents the Norwegian Krone.
   const FiatNok()
       : super(
           code: "NOK",
@@ -1540,7 +1744,9 @@ class FiatNok extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatNpr extends FiatCurrency {
+  /// A class that represents the Nepalese Rupee.
   const FiatNpr()
       : super(
           code: "NPR",
@@ -1556,7 +1762,9 @@ class FiatNpr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatNzd extends FiatCurrency {
+  /// A class that represents the New Zealand Dollar.
   const FiatNzd()
       : super(
           code: "NZD",
@@ -1573,7 +1781,9 @@ class FiatNzd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatOmr extends FiatCurrency {
+  /// A class that represents the Omani Rial.
   const FiatOmr()
       : super(
           code: "OMR",
@@ -1589,7 +1799,9 @@ class FiatOmr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatPab extends FiatCurrency {
+  /// A class that represents the Panamanian Balboa.
   const FiatPab()
       : super(
           code: "PAB",
@@ -1602,7 +1814,9 @@ class FiatPab extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatPen extends FiatCurrency {
+  /// A class that represents the Peruvian Sol.
   const FiatPen()
       : super(
           code: "PEN",
@@ -1618,7 +1832,9 @@ class FiatPen extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatPgk extends FiatCurrency {
+  /// A class that represents the Papua New Guinean Kina.
   const FiatPgk()
       : super(
           code: "PGK",
@@ -1632,7 +1848,9 @@ class FiatPgk extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatPhp extends FiatCurrency {
+  /// A class that represents the Philippine Peso.
   const FiatPhp()
       : super(
           code: "PHP",
@@ -1647,7 +1865,9 @@ class FiatPhp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatPkr extends FiatCurrency {
+  /// A class that represents the Pakistani Rupee.
   const FiatPkr()
       : super(
           code: "PKR",
@@ -1664,7 +1884,9 @@ class FiatPkr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatPln extends FiatCurrency {
+  /// A class that represents the Polish Złoty.
   const FiatPln()
       : super(
           code: "PLN",
@@ -1679,7 +1901,9 @@ class FiatPln extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatPyg extends FiatCurrency {
+  /// A class that represents the Paraguayan Guaraní.
   const FiatPyg()
       : super(
           code: "PYG",
@@ -1695,7 +1919,9 @@ class FiatPyg extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatQar extends FiatCurrency {
+  /// A class that represents the Qatari Riyal.
   const FiatQar()
       : super(
           code: "QAR",
@@ -1709,7 +1935,9 @@ class FiatQar extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatRon extends FiatCurrency {
+  /// A class that represents the Romanian Leu.
   const FiatRon()
       : super(
           code: "RON",
@@ -1723,7 +1951,9 @@ class FiatRon extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatRsd extends FiatCurrency {
+  /// A class that represents the Serbian Dinar.
   const FiatRsd()
       : super(
           code: "RSD",
@@ -1738,7 +1968,9 @@ class FiatRsd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatRub extends FiatCurrency {
+  /// A class that represents the Russian Ruble.
   const FiatRub()
       : super(
           code: "RUB",
@@ -1754,7 +1986,9 @@ class FiatRub extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatRwf extends FiatCurrency {
+  /// A class that represents the Rwandan Franc.
   const FiatRwf()
       : super(
           code: "RWF",
@@ -1769,7 +2003,9 @@ class FiatRwf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSar extends FiatCurrency {
+  /// A class that represents the Saudi Riyal.
   const FiatSar()
       : super(
           code: "SAR",
@@ -1785,7 +2021,9 @@ class FiatSar extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSbd extends FiatCurrency {
+  /// A class that represents the Solomon Islands Dollar.
   const FiatSbd()
       : super(
           code: "SBD",
@@ -1801,7 +2039,9 @@ class FiatSbd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatScr extends FiatCurrency {
+  /// A class that represents the Seychellois Rupee.
   const FiatScr()
       : super(
           code: "SCR",
@@ -1816,7 +2056,9 @@ class FiatScr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSdg extends FiatCurrency {
+  /// A class that represents the Sudanese Pound.
   const FiatSdg()
       : super(
           code: "SDG",
@@ -1830,7 +2072,9 @@ class FiatSdg extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSek extends FiatCurrency {
+  /// A class that represents the Swedish Krona.
   const FiatSek()
       : super(
           code: "SEK",
@@ -1847,7 +2091,9 @@ class FiatSek extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSgd extends FiatCurrency {
+  /// A class that represents the Singapore Dollar.
   const FiatSgd()
       : super(
           code: "SGD",
@@ -1863,7 +2109,9 @@ class FiatSgd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatShp extends FiatCurrency {
+  /// A class that represents the Saint Helena Pound.
   const FiatShp()
       : super(
           code: "SHP",
@@ -1877,7 +2125,9 @@ class FiatShp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSll extends FiatCurrency {
+  /// A class that represents the Sierra Leonean Leone.
   const FiatSll()
       : super(
           code: "SLL",
@@ -1891,7 +2141,9 @@ class FiatSll extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSos extends FiatCurrency {
+  /// A class that represents the Somali Shilling.
   const FiatSos()
       : super(
           code: "SOS",
@@ -1904,7 +2156,9 @@ class FiatSos extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSrd extends FiatCurrency {
+  /// A class that represents the Surinamese Dollar.
   const FiatSrd()
       : super(
           code: "SRD",
@@ -1917,7 +2171,9 @@ class FiatSrd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSsp extends FiatCurrency {
+  /// A class that represents the South Sudanese Pound.
   const FiatSsp()
       : super(
           code: "SSP",
@@ -1932,7 +2188,9 @@ class FiatSsp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatStn extends FiatCurrency {
+  /// A class that represents the São Tomé and Príncipe Dobra.
   const FiatStn()
       : super(
           code: "STN",
@@ -1946,7 +2204,9 @@ class FiatStn extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSvc extends FiatCurrency {
+  /// A class that represents the Salvadoran Colón.
   const FiatSvc()
       : super(
           code: "SVC",
@@ -1961,7 +2221,9 @@ class FiatSvc extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSyp extends FiatCurrency {
+  /// A class that represents the Syrian Pound.
   const FiatSyp()
       : super(
           code: "SYP",
@@ -1976,7 +2238,9 @@ class FiatSyp extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatSzl extends FiatCurrency {
+  /// A class that represents the Swazi Lilangeni.
   const FiatSzl()
       : super(
           code: "SZL",
@@ -1990,7 +2254,9 @@ class FiatSzl extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatThb extends FiatCurrency {
+  /// A class that represents the Thai Baht.
   const FiatThb()
       : super(
           code: "THB",
@@ -2004,7 +2270,9 @@ class FiatThb extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatTjs extends FiatCurrency {
+  /// A class that represents the Tajikistani Somoni.
   const FiatTjs()
       : super(
           code: "TJS",
@@ -2016,7 +2284,9 @@ class FiatTjs extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatTmt extends FiatCurrency {
+  /// A class that represents the Turkmenistani Manat.
   const FiatTmt()
       : super(
           code: "TMT",
@@ -2028,7 +2298,9 @@ class FiatTmt extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatTnd extends FiatCurrency {
+  /// A class that represents the Tunisian Dinar.
   const FiatTnd()
       : super(
           code: "TND",
@@ -2043,7 +2315,9 @@ class FiatTnd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatTop extends FiatCurrency {
+  /// A class that represents the Tongan Paʻanga.
   const FiatTop()
       : super(
           code: "TOP",
@@ -2057,7 +2331,9 @@ class FiatTop extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatTry extends FiatCurrency {
+  /// A class that represents the Turkish Lira.
   const FiatTry()
       : super(
           code: "TRY",
@@ -2074,7 +2350,9 @@ class FiatTry extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatTtd extends FiatCurrency {
+  /// A class that represents the Trinidad and Tobago Dollar.
   const FiatTtd()
       : super(
           code: "TTD",
@@ -2089,7 +2367,9 @@ class FiatTtd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatTwd extends FiatCurrency {
+  /// A class that represents the New Taiwan Dollar.
   const FiatTwd()
       : super(
           code: "TWD",
@@ -2106,7 +2386,9 @@ class FiatTwd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatTzs extends FiatCurrency {
+  /// A class that represents the Tanzanian Shilling.
   const FiatTzs()
       : super(
           code: "TZS",
@@ -2120,7 +2402,9 @@ class FiatTzs extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatUah extends FiatCurrency {
+  /// A class that represents the Ukrainian Hryvnia.
   const FiatUah()
       : super(
           code: "UAH",
@@ -2133,7 +2417,9 @@ class FiatUah extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatUgx extends FiatCurrency {
+  /// A class that represents the Ugandan Shilling.
   const FiatUgx()
       : super(
           code: "UGX",
@@ -2147,7 +2433,9 @@ class FiatUgx extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatUsd extends FiatCurrency {
+  /// A class that represents the United States Dollar.
   const FiatUsd()
       : super(
           priority: 1,
@@ -2164,7 +2452,9 @@ class FiatUsd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatUyu extends FiatCurrency {
+  /// A class that represents the Uruguayan Peso.
   const FiatUyu()
       : super(
           code: "UYU",
@@ -2182,7 +2472,9 @@ class FiatUyu extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatUzs extends FiatCurrency {
+  /// A class that represents the Uzbekistan Som.
   const FiatUzs()
       : super(
           code: "UZS",
@@ -2196,7 +2488,9 @@ class FiatUzs extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatVes extends FiatCurrency {
+  /// A class that represents the Venezuelan Bolívar Soberano.
   const FiatVes()
       : super(
           code: "VES",
@@ -2212,7 +2506,9 @@ class FiatVes extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatVnd extends FiatCurrency {
+  /// A class that represents the Vietnamese Đồng.
   const FiatVnd()
       : super(
           code: "VND",
@@ -2229,7 +2525,9 @@ class FiatVnd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatVuv extends FiatCurrency {
+  /// A class that represents the Vanuatu vatu.
   const FiatVuv()
       : super(
           code: "VUV",
@@ -2242,7 +2540,9 @@ class FiatVuv extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatWst extends FiatCurrency {
+  /// A class that represents the Samoan Tala.
   const FiatWst()
       : super(
           code: "WST",
@@ -2257,7 +2557,9 @@ class FiatWst extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXaf extends FiatCurrency {
+  /// A class that represents the Central African Cfa Franc.
   const FiatXaf()
       : super(
           code: "XAF",
@@ -2273,7 +2575,9 @@ class FiatXaf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXag extends FiatCurrency {
+  /// A class that represents the Silver (Troy Ounce).
   const FiatXag()
       : super(
           code: "XAG",
@@ -2288,7 +2592,9 @@ class FiatXag extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXau extends FiatCurrency {
+  /// A class that represents the Gold (Troy Ounce).
   const FiatXau()
       : super(
           code: "XAU",
@@ -2303,7 +2609,9 @@ class FiatXau extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXba extends FiatCurrency {
+  /// A class that represents the European Composite Unit (EURCO).
   const FiatXba()
       : super(
           code: "XBA",
@@ -2316,7 +2624,9 @@ class FiatXba extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXbb extends FiatCurrency {
+  /// A class that represents the European Monetary Unit (E.M.U.-6).
   const FiatXbb()
       : super(
           code: "XBB",
@@ -2329,7 +2639,9 @@ class FiatXbb extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXbc extends FiatCurrency {
+  /// A class that represents the European Unit of Account 9 (E.U.A.-9).
   const FiatXbc()
       : super(
           code: "XBC",
@@ -2342,7 +2654,9 @@ class FiatXbc extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXbd extends FiatCurrency {
+  /// A class that represents the European Unit of Account 17 (E.U.A.-17).
   const FiatXbd()
       : super(
           code: "XBD",
@@ -2355,7 +2669,9 @@ class FiatXbd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXcd extends FiatCurrency {
+  /// A class that represents the East Caribbean dollar.
   const FiatXcd()
       : super(
           code: "XCD",
@@ -2371,7 +2687,9 @@ class FiatXcd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXdr extends FiatCurrency {
+  /// A class that represents the Special Drawing Rights.
   const FiatXdr()
       : super(
           code: "XDR",
@@ -2386,7 +2704,9 @@ class FiatXdr extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXof extends FiatCurrency {
+  /// A class that represents the West African Cfa Franc.
   const FiatXof()
       : super(
           code: "XOF",
@@ -2402,7 +2722,9 @@ class FiatXof extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXpd extends FiatCurrency {
+  /// A class that represents the Palladium.
   const FiatXpd()
       : super(
           code: "XPD",
@@ -2417,7 +2739,9 @@ class FiatXpd extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXpf extends FiatCurrency {
+  /// A class that represents the Cfp Franc.
   const FiatXpf()
       : super(
           code: "XPF",
@@ -2432,7 +2756,9 @@ class FiatXpf extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXpt extends FiatCurrency {
+  /// A class that represents the Platinum.
   const FiatXpt()
       : super(
           code: "XPT",
@@ -2445,7 +2771,9 @@ class FiatXpt extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatXts extends FiatCurrency {
+  /// A class that represents the Test currency.
   const FiatXts()
       : super(
           code: "XTS",
@@ -2457,7 +2785,9 @@ class FiatXts extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatYer extends FiatCurrency {
+  /// A class that represents the Yemeni Rial.
   const FiatYer()
       : super(
           code: "YER",
@@ -2471,7 +2801,9 @@ class FiatYer extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatZar extends FiatCurrency {
+  /// A class that represents the South African Rand.
   const FiatZar()
       : super(
           code: "ZAR",
@@ -2488,12 +2820,14 @@ class FiatZar extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatZwl extends FiatCurrency {
+  /// A class that represents the Zimbabwean Dollar.
   const FiatZwl()
       : super(
           code: "ZWL",
           namesNative: const ["Zimbabwe Dollar"],
-          name: "Zimbabwean dollar",
+          name: "Zimbabwean Dollar",
           symbol: r"Z$",
           subunit: "Cent",
           unitFirst: true,
@@ -2503,7 +2837,9 @@ class FiatZwl extends FiatCurrency {
         );
 }
 
+/// {@hideConstantImplementations}
 class FiatZmw extends FiatCurrency {
+  /// A class that represents the Zambian Kwacha.
   const FiatZmw()
       : super(
           code: "ZMW",

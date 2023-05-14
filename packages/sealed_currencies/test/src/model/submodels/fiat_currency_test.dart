@@ -110,6 +110,21 @@ void main() => group("$FiatCurrency", () {
         );
       });
 
+      group("fromCodeNumeric", () {
+        test(
+          "with proper code",
+          () => expect(FiatCurrency.fromCodeNumeric(value.codeNumeric), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            () => FiatCurrency.fromCodeNumeric(value.toString()),
+            throwsStateError,
+          ),
+        );
+      });
+
       group("maybeFromValue", () {
         test(
           "with proper value, without where",
