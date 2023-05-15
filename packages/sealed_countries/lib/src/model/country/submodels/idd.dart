@@ -1,8 +1,27 @@
+/// A class that represents an International Direct Dialing (IDD) code.
+///
+/// The `Idd` class is a simple value object that represents an International
+/// Direct Dialing (IDD) code. It consists of an `int` value that represents the
+/// root of the IDD code, and a `List<int>` value that represents the suffixes
+/// of the IDD code.
+///
+/// Example usage:
+///
+/// ```dart
+/// final idd = Idd(root: 3, suffixes: [81]);
+/// print(idd); // Prints: "Idd(root: 3, suffixes: [81])"
+/// ```
 final class Idd {
+  /// Creates a new `Idd` object with the given root and suffixes.
+  ///
+  /// The `suffixes` parameter must not be an empty list.
   const Idd({required this.root, required this.suffixes})
       : assert(suffixes != const <int>[], "`suffixes` should not be empty!");
 
+  /// The root of this IDD code.
   final int root;
+
+  /// The suffixes of this IDD code.
   final List<int> suffixes;
 
   @override

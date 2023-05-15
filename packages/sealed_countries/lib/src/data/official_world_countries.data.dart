@@ -204,7 +204,7 @@ class CountryCpv extends WorldCountry {
             latLng: LatLng(14.92, -23.52),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -409,7 +409,7 @@ class CountrySgp extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -1190,7 +1190,7 @@ class CountryJpn extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "###-####",
-            regExpPattern: r"^(\\d{7})$",
+            regExpPattern: r"^(\d{7})$",
           ),
         );
 }
@@ -1376,7 +1376,7 @@ class CountryCub extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "CP #####",
-            regExpPattern: r"^(?:CP)*(\\d{5})$",
+            regExpPattern: r"^(?:CP)*(\d{5})$",
           ),
         );
 }
@@ -1574,7 +1574,7 @@ class CountryMoz extends WorldCountry {
             latLng: LatLng(-25.95, 32.58),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -1776,7 +1776,7 @@ class CountryGbr extends WorldCountry {
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
-                r"^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$",
+                r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
         );
 }
@@ -2166,7 +2166,7 @@ class CountryNer extends WorldCountry {
             latLng: LatLng(13.52, 2.12),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -2554,7 +2554,7 @@ class CountryUzb extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -2771,7 +2771,7 @@ class CountryRus extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -2970,7 +2970,7 @@ class CountryTkm extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -3346,7 +3346,7 @@ class CountryVnm extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -3736,7 +3736,7 @@ class CountrySwz extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "@###",
-            regExpPattern: r"^([A-Z]\\d{3})$",
+            regExpPattern: r"^([A-Z]\d{3})$",
           ),
         );
 }
@@ -4490,7 +4490,7 @@ class CountryAus extends WorldCountry {
             latLng: LatLng(-35.27, 149.13),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -5065,7 +5065,7 @@ class CountryBra extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "#####-###",
-            regExpPattern: r"^(\\d{8})$",
+            regExpPattern: r"^(\d{8})$",
           ),
         );
 }
@@ -5270,7 +5270,7 @@ class CountryTjk extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -5636,7 +5636,7 @@ class CountryLbr extends WorldCountry {
             latLng: LatLng(6.3, -10.8),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -5833,7 +5833,7 @@ class CountryNga extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -6219,7 +6219,7 @@ class CountrySmr extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "4789#",
-            regExpPattern: r"^(4789\\d)$",
+            regExpPattern: r"^(4789\d)$",
           ),
         );
 }
@@ -6794,7 +6794,7 @@ class CountryHnd extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "@@####",
-            regExpPattern: r"^([A-Z]{2}\\d{4})$",
+            regExpPattern: r"^([A-Z]{2}\d{4})$",
           ),
         );
 }
@@ -7178,7 +7178,7 @@ class CountryPrk extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "###-###",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -7757,7 +7757,7 @@ class CountryMda extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "MD-####",
-            regExpPattern: r"^(?:MD)*(\\d{4})$",
+            regExpPattern: r"^(?:MD)*(\d{4})$",
           ),
         );
 }
@@ -7954,7 +7954,7 @@ class CountryPhl extends WorldCountry {
             latLng: LatLng(14.6, 120.97),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -8334,7 +8334,7 @@ class CountryGrl extends WorldCountry {
             latLng: LatLng(64.18, -51.75),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -8709,7 +8709,7 @@ class CountryLbn extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "#### ####|####",
-            regExpPattern: r"^(\\d{4}(\\d{4})?)$",
+            regExpPattern: r"^(\d{4}(\d{4})?)$",
           ),
         );
 }
@@ -10416,7 +10416,7 @@ class CountryReu extends WorldCountry {
             latLng: LatLng(-20.88, 55.45),
           ),
           postalCode:
-              const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\\d{2})$"),
+              const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\d{2})$"),
         );
 }
 
@@ -10970,7 +10970,7 @@ class CountryOmn extends WorldCountry {
             latLng: LatLng(23.62, 58.58),
           ),
           postalCode:
-              const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
+              const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
         );
 }
 
@@ -12154,7 +12154,7 @@ class CountryZaf extends WorldCountry {
             latLng: LatLng(-25.7, 28.22),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -12532,7 +12532,7 @@ class CountryKor extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "SEOUL ###-###",
-            regExpPattern: r"^(?:SEOUL)*(\\d{6})$",
+            regExpPattern: r"^(?:SEOUL)*(\d{6})$",
           ),
         );
 }
@@ -12902,7 +12902,7 @@ class CountryIsl extends WorldCountry {
             latLng: LatLng(64.15, -21.95),
           ),
           postalCode:
-              const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
+              const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
         );
 }
 
@@ -13086,7 +13086,7 @@ class CountryGuf extends WorldCountry {
             capital: Capital("Cayenne"),
             latLng: LatLng(4.94, -52.33),
           ),
-          postalCode: const PostalCode(regExpPattern: r"^((97|98)3\\d{2})$"),
+          postalCode: const PostalCode(regExpPattern: r"^((97|98)3\d{2})$"),
         );
 }
 
@@ -13281,7 +13281,7 @@ class CountryNor extends WorldCountry {
             latLng: LatLng(59.92, 10.75),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -13472,7 +13472,7 @@ class CountryHun extends WorldCountry {
             latLng: LatLng(47.5, 19.08),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -14218,7 +14218,7 @@ class CountryMng extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -14597,7 +14597,7 @@ class CountryWlf extends WorldCountry {
             capital: Capital("Mata-Utu"),
             latLng: LatLng(-13.95, -171.93),
           ),
-          postalCode: const PostalCode(regExpPattern: r"^(986\\d{2})$"),
+          postalCode: const PostalCode(regExpPattern: r"^(986\d{2})$"),
         );
 }
 
@@ -14972,7 +14972,7 @@ class CountryBhr extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "####|###",
-            regExpPattern: r"^(\\d{3}\\d?)$",
+            regExpPattern: r"^(\d{3}\d?)$",
           ),
         );
 }
@@ -15963,7 +15963,7 @@ class CountryCan extends WorldCountry {
           postalCode: const PostalCode(
             format: "@#@ #@#",
             regExpPattern:
-                r"^([ABCEGHJKLMNPRSTVXY]\\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\\d[ABCEGHJKLMNPRSTVWXYZ]\\d)$ ",
+                r"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$ ",
           ),
         );
 }
@@ -16154,7 +16154,7 @@ class CountryLie extends WorldCountry {
             latLng: LatLng(47.13, 9.52),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -16353,7 +16353,7 @@ class CountryEth extends WorldCountry {
             latLng: LatLng(9.03, 38.7),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -17073,7 +17073,7 @@ class CountryNld extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "#### @@",
-            regExpPattern: r"^(\\d{4}[A-Z]{2})$",
+            regExpPattern: r"^(\d{4}[A-Z]{2})$",
           ),
         );
 }
@@ -18256,7 +18256,7 @@ class CountryChn extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -18960,7 +18960,7 @@ class CountryUsa extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "#####-####",
-            regExpPattern: r"^\\d{5}(-\\d{4})?$",
+            regExpPattern: r"^\d{5}(-\d{4})?$",
           ),
         );
 }
@@ -19344,7 +19344,7 @@ class CountryIrn extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "##########",
-            regExpPattern: r"^(\\d{10})$",
+            regExpPattern: r"^(\d{10})$",
           ),
         );
 }
@@ -19722,7 +19722,7 @@ class CountryBrn extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "@@####",
-            regExpPattern: r"^([A-Z]{2}\\d{4})$",
+            regExpPattern: r"^([A-Z]{2}\d{4})$",
           ),
         );
 }
@@ -19920,7 +19920,7 @@ class CountryCyp extends WorldCountry {
             latLng: LatLng(35.17, 33.37),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -20111,7 +20111,7 @@ class CountryNic extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "###-###-#",
-            regExpPattern: r"^(\\d{7})$",
+            regExpPattern: r"^(\d{7})$",
           ),
         );
 }
@@ -20501,7 +20501,7 @@ class CountryPri extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "#####-####",
-            regExpPattern: r"^(\\d{9})$",
+            regExpPattern: r"^(\d{9})$",
           ),
         );
 }
@@ -21076,7 +21076,7 @@ class CountrySom extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "@@  #####",
-            regExpPattern: r"^([A-Z]{2}\\d{5})$",
+            regExpPattern: r"^([A-Z]{2}\d{5})$",
           ),
         );
 }
@@ -22027,7 +22027,7 @@ class CountrySlv extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "CP ####",
-            regExpPattern: r"^(?:CP)*(\\d{4})$",
+            regExpPattern: r"^(?:CP)*(\d{4})$",
           ),
         );
 }
@@ -22594,7 +22594,7 @@ class CountryPng extends WorldCountry {
             latLng: LatLng(-9.45, 147.18),
           ),
           postalCode:
-              const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
+              const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
         );
 }
 
@@ -22797,7 +22797,7 @@ class CountryLux extends WorldCountry {
             latLng: LatLng(49.6, 6.12),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -22980,7 +22980,7 @@ class CountryChl extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "#######",
-            regExpPattern: r"^(\\d{7})$",
+            regExpPattern: r"^(\d{7})$",
           ),
         );
 }
@@ -23361,7 +23361,7 @@ class CountryGnb extends WorldCountry {
             latLng: LatLng(11.85, -15.58),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -23748,7 +23748,7 @@ class CountryVen extends WorldCountry {
             latLng: LatLng(10.48, -66.87),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -23950,7 +23950,7 @@ class CountrySrb extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -24331,7 +24331,7 @@ class CountryBgd extends WorldCountry {
             latLng: LatLng(23.72, 90.4),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -25815,7 +25815,7 @@ class CountryMkd extends WorldCountry {
             latLng: LatLng(42, 21.43),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -26986,7 +26986,7 @@ class CountryTun extends WorldCountry {
             latLng: LatLng(36.8, 10.18),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -27373,7 +27373,7 @@ class CountryKgz extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -27556,7 +27556,7 @@ class CountryImn extends WorldCountry {
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
-                r"^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$",
+                r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
         );
 }
@@ -27740,7 +27740,7 @@ class CountryGlp extends WorldCountry {
             capital: Capital("Basse-Terre"),
             latLng: LatLng(16.03, -61.73),
           ),
-          postalCode: const PostalCode(regExpPattern: r"^((97|98)\\d{3})$"),
+          postalCode: const PostalCode(regExpPattern: r"^((97|98)\d{3})$"),
         );
 }
 
@@ -28471,7 +28471,7 @@ class CountryCxr extends WorldCountry {
             latLng: LatLng(-10.42, 105.68),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -28659,7 +28659,7 @@ class CountryLso extends WorldCountry {
             latLng: LatLng(-29.32, 27.48),
           ),
           postalCode:
-              const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
+              const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
         );
 }
 
@@ -28852,7 +28852,7 @@ class CountryJey extends WorldCountry {
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
-                r"^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$",
+                r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
         );
 }
@@ -29049,7 +29049,7 @@ class CountrySvn extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "SI- ####",
-            regExpPattern: r"^(?:SI)*(\\d{4})$",
+            regExpPattern: r"^(?:SI)*(\d{4})$",
           ),
         );
 }
@@ -29257,7 +29257,7 @@ class CountryBel extends WorldCountry {
             latLng: LatLng(50.83, 4.33),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -30763,7 +30763,7 @@ class CountryGum extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "969##",
-            regExpPattern: r"^(969\\d{2})$",
+            regExpPattern: r"^(969\d{2})$",
           ),
         );
 }
@@ -31322,7 +31322,7 @@ class CountryGgy extends WorldCountry {
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
-                r"^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$",
+                r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
         );
 }
@@ -31520,7 +31520,7 @@ class CountryPry extends WorldCountry {
             latLng: LatLng(-25.28, -57.57),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -33016,7 +33016,7 @@ class CountryPyf extends WorldCountry {
             capital: Capital("Papeetē"),
             latLng: LatLng(-17.53, -149.56),
           ),
-          postalCode: const PostalCode(regExpPattern: r"^((97|98)7\\d{2})$"),
+          postalCode: const PostalCode(regExpPattern: r"^((97|98)7\d{2})$"),
         );
 }
 
@@ -33642,7 +33642,7 @@ class CountryKaz extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -34384,7 +34384,7 @@ class CountryAnd extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "AD###",
-            regExpPattern: r"^(?:AD)*(\\d{3})$",
+            regExpPattern: r"^(?:AD)*(\d{3})$",
           ),
         );
 }
@@ -34950,7 +34950,7 @@ class CountryPrt extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "####-###",
-            regExpPattern: r"^(\\d{7})$",
+            regExpPattern: r"^(\d{7})$",
           ),
         );
 }
@@ -35147,7 +35147,7 @@ class CountryAut extends WorldCountry {
             latLng: LatLng(48.2, 16.37),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -35339,7 +35339,7 @@ class CountryFin extends WorldCountry {
             capital: Capital("Helsinki"),
             latLng: LatLng(60.17, 24.93),
           ),
-          postalCode: const PostalCode(regExpPattern: r"^(?:FI)*(\\d{5})$"),
+          postalCode: const PostalCode(regExpPattern: r"^(?:FI)*(\d{5})$"),
         );
 }
 
@@ -36876,7 +36876,7 @@ class CountryLtu extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "LT-#####",
-            regExpPattern: r"^(?:LT)*(\\d{5})$",
+            regExpPattern: r"^(?:LT)*(\d{5})$",
           ),
         );
 }
@@ -37068,7 +37068,7 @@ class CountryNzl extends WorldCountry {
             latLng: LatLng(-41.3, 174.78),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -37256,7 +37256,7 @@ class CountryBmu extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "@@ ##",
-            regExpPattern: r"^([A-Z]{2}\\d{2})$",
+            regExpPattern: r"^([A-Z]{2}\d{2})$",
           ),
         );
 }
@@ -37658,7 +37658,7 @@ class CountryArg extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "@####@@@",
-            regExpPattern: r"^([A-Z]\\d{4}[A-Z]{3})$",
+            regExpPattern: r"^([A-Z]\d{4}[A-Z]{3})$",
           ),
         );
 }
@@ -37864,7 +37864,7 @@ class CountryBlr extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -38046,7 +38046,7 @@ class CountryBrb extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "BB#####",
-            regExpPattern: r"^(?:BB)*(\\d{5})$",
+            regExpPattern: r"^(?:BB)*(\d{5})$",
           ),
         );
 }
@@ -38434,7 +38434,7 @@ class CountryAze extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "AZ ####",
-            regExpPattern: r"^(?:AZ)*(\\d{4})$",
+            regExpPattern: r"^(?:AZ)*(\d{4})$",
           ),
         );
 }
@@ -39192,7 +39192,7 @@ class CountryRou extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -39388,7 +39388,7 @@ class CountryMlt extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "@@@ ###|@@@ ##",
-            regExpPattern: r"^([A-Z]{3}\\d{2}\\d?)$",
+            regExpPattern: r"^([A-Z]{3}\d{2}\d?)$",
           ),
         );
 }
@@ -39587,7 +39587,7 @@ class CountryArm extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -39973,7 +39973,7 @@ class CountryBgr extends WorldCountry {
             latLng: LatLng(42.68, 23.32),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -40387,7 +40387,7 @@ class CountryHti extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "HT####",
-            regExpPattern: r"^(?:HT)*(\\d{4})$",
+            regExpPattern: r"^(?:HT)*(\d{4})$",
           ),
         );
 }
@@ -41135,7 +41135,7 @@ class CountryMdg extends WorldCountry {
             latLng: LatLng(-18.92, 47.52),
           ),
           postalCode:
-              const PostalCode(format: "###", regExpPattern: r"^(\\d{3})$"),
+              const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
         );
 }
 
@@ -41914,7 +41914,7 @@ class CountryInd extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "######",
-            regExpPattern: r"^(\\d{6})$",
+            regExpPattern: r"^(\d{6})$",
           ),
         );
 }
@@ -43458,7 +43458,7 @@ class CountrySwe extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "SE-### ##",
-            regExpPattern: r"^(?:SE)*(\\d{5})$",
+            regExpPattern: r"^(?:SE)*(\d{5})$",
           ),
         );
 }
@@ -43836,7 +43836,7 @@ class CountryDnk extends WorldCountry {
             latLng: LatLng(55.67, 12.58),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -44213,7 +44213,7 @@ class CountryCri extends WorldCountry {
             latLng: LatLng(9.93, -84.09),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -45552,7 +45552,7 @@ class CountryLva extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "LV-####",
-            regExpPattern: r"^(?:LV)*(\\d{4})$",
+            regExpPattern: r"^(?:LV)*(\d{4})$",
           ),
         );
 }
@@ -46126,7 +46126,7 @@ class CountryEcu extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "@####@",
-            regExpPattern: r"^([a-zA-Z]\\d{4}[a-zA-Z])$",
+            regExpPattern: r"^([a-zA-Z]\d{4}[a-zA-Z])$",
           ),
         );
 }
@@ -46698,7 +46698,7 @@ class CountryHrv extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "HR-#####",
-            regExpPattern: r"^(?:HR)*(\\d{5})$",
+            regExpPattern: r"^(?:HR)*(\d{5})$",
           ),
         );
 }
@@ -47071,7 +47071,7 @@ class CountryGeo extends WorldCountry {
             latLng: LatLng(41.68, 44.83),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -47474,7 +47474,7 @@ class CountryChe extends WorldCountry {
             latLng: LatLng(46.92, 7.47),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\\d{4})$"),
+              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
 }
 
@@ -48058,7 +48058,7 @@ class CountryFro extends WorldCountry {
           ),
           postalCode: const PostalCode(
             format: "FO-###",
-            regExpPattern: r"^(?:FO)*(\\d{3})$",
+            regExpPattern: r"^(?:FO)*(\d{3})$",
           ),
         );
 }
