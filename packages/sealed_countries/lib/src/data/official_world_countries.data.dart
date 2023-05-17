@@ -11636,7 +11636,7 @@ class CountryTto extends WorldCountry {
               common: "特立尼达和多巴哥",
             ),
           ],
-          latLng: const LatLng(10.6918, 61.2225),
+          latLng: const LatLng(10.6918, -61.2225),
           areaMetric: 5130,
           demonyms: const [
             Demonyms(
@@ -16136,7 +16136,7 @@ class CountryCan extends WorldCountry {
           postalCode: const PostalCode(
             format: "@#@ #@#",
             regExpPattern:
-                r"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$ ",
+                r"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$",
           ),
         );
 }
@@ -24742,7 +24742,7 @@ class CountryBhs extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "巴哈马联邦", common: "巴哈马"),
           ],
-          latLng: const LatLng(25.0343, 77.3963),
+          latLng: const LatLng(25.0343, -77.3963),
           areaMetric: 13943,
           demonyms: const [
             Demonyms(
@@ -45236,7 +45236,7 @@ class CountryCym extends WorldCountry {
             ),
             CountryName(language: LangZho(), official: "开曼群岛", common: "开曼群岛"),
           ],
-          latLng: const LatLng(19.3133, 81.2546),
+          latLng: const LatLng(19.3133, -81.2546),
           areaMetric: 264,
           demonyms: const [
             Demonyms(
