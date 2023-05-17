@@ -61,8 +61,7 @@ jobs:
           fi
 
       - name: 🔎 Dart Code Metrics
-        uses: dart-code-checker/dart-code-metrics-action@v3.0.0
-        if: false # TODO: Replace it when DCM will support Dart 3.
+        uses: dart-code-checker/dart-code-metrics-action@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           folders: "lib, test"
