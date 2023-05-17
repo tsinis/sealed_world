@@ -1,8 +1,21 @@
+version: 0.0.1
 name: sealed_countries
 description: Provides data for world countries in the form of sealed classes.
-version: 0.0.1
+maintainer: Roman Cinis
+repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries
+issue_tracker: https://github.com/tsinis/sealed_world/issues
+topics:
+ - countries
+ - country
+ - land
+ - sealed
+ - iso-3166
+ - iso
 
 publish_to: 'none' # TODO! Remove this line if you wish to publish to pub.dev
+
+screenshots:
+  # - description: 'Example' TODO!
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
