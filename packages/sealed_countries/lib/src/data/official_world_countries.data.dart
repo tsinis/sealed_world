@@ -18,8 +18,10 @@ import "../model/country/submodels/weekday.dart";
 import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
 
+/// {@hideConstantImplementations}
 // ignore: prefer-match-file-name, not necessary for the list of countries.
 class CountryCpv extends WorldCountry {
+  /// A class that represents the country of Cape Verde.
   const CountryCpv()
       : super(
           name: const CountryName.international(
@@ -208,7 +210,9 @@ class CountryCpv extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySgp extends WorldCountry {
+  /// A class that represents the country of Singapore.
   const CountrySgp()
       : super(
           name: const CountryName.international(
@@ -414,7 +418,9 @@ class CountrySgp extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMrt extends WorldCountry {
+  /// A class that represents the country of Mauritania.
   const CountryMrt()
       : super(
           name: const CountryName.international(
@@ -607,7 +613,9 @@ class CountryMrt extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPol extends WorldCountry {
+  /// A class that represents the country of Poland.
   const CountryPol()
       : super(
           name: const CountryName.international(
@@ -806,7 +814,9 @@ class CountryPol extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTcd extends WorldCountry {
+  /// A class that represents the country of Chad.
   const CountryTcd()
       : super(
           name: const CountryName.international(
@@ -1008,7 +1018,9 @@ class CountryTcd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryJpn extends WorldCountry {
+  /// A class that represents the country of Japan.
   const CountryJpn()
       : super(
           name: const CountryName.international(
@@ -1195,7 +1207,9 @@ class CountryJpn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCub extends WorldCountry {
+  /// A class that represents the country of Cuba.
   const CountryCub()
       : super(
           name: const CountryName.international(
@@ -1381,7 +1395,9 @@ class CountryCub extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMoz extends WorldCountry {
+  /// A class that represents the country of Mozambique.
   const CountryMoz()
       : super(
           name: const CountryName.international(
@@ -1578,7 +1594,9 @@ class CountryMoz extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGbr extends WorldCountry {
+  /// A class that represents the country of United Kingdom.
   const CountryGbr()
       : super(
           name: const CountryName.international(
@@ -1781,7 +1799,9 @@ class CountryGbr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryIrl extends WorldCountry {
+  /// A class that represents the country of Ireland.
   const CountryIrl()
       : super(
           name: const CountryName.international(
@@ -1975,7 +1995,9 @@ class CountryIrl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNer extends WorldCountry {
+  /// A class that represents the country of Niger.
   const CountryNer()
       : super(
           name: const CountryName.international(
@@ -2170,7 +2192,9 @@ class CountryNer extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGmb extends WorldCountry {
+  /// A class that represents the country of Gambia.
   const CountryGmb()
       : super(
           name: const CountryName.international(
@@ -2354,7 +2378,9 @@ class CountryGmb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryUzb extends WorldCountry {
+  /// A class that represents the country of Uzbekistan.
   const CountryUzb()
       : super(
           name: const CountryName.international(
@@ -2559,7 +2585,9 @@ class CountryUzb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryRus extends WorldCountry {
+  /// A class that represents the country of Russia.
   const CountryRus()
       : super(
           name: const CountryName.international(
@@ -2776,7 +2804,9 @@ class CountryRus extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTkm extends WorldCountry {
+  /// A class that represents the country of Turkmenistan.
   const CountryTkm()
       : super(
           name: const CountryName.international(
@@ -2975,7 +3005,9 @@ class CountryTkm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAia extends WorldCountry {
+  /// A class that represents the country of Anguilla.
   const CountryAia()
       : super(
           name: const CountryName.international(
@@ -3158,7 +3190,9 @@ class CountryAia extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryVnm extends WorldCountry {
+  /// A class that represents the country of Vietnam.
   const CountryVnm()
       : super(
           name: const CountryName.international(
@@ -3354,7 +3388,9 @@ class CountryVnm extends WorldCountry {
 /// Since https://en.wikipedia.org/wiki/Antarctic_Treaty_System there is no
 /// official list of languages, English is used as an international
 /// communication language here.
+/// {@hideConstantImplementations}
 class CountryAta extends WorldCountry {
+  /// A class that represents the country of Antarctica.
   const CountryAta()
       : super(
           name: const CountryName.international(
@@ -3538,7 +3574,9 @@ class CountryAta extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySwz extends WorldCountry {
+  /// A class that represents the country of Eswatini.
   const CountrySwz()
       : super(
           name: const CountryName.international(
@@ -3741,7 +3779,9 @@ class CountrySwz extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryKhm extends WorldCountry {
+  /// A class that represents the country of Cambodia.
   const CountryKhm()
       : super(
           name: const CountryName.international(
@@ -3925,7 +3965,9 @@ class CountryKhm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryVut extends WorldCountry {
+  /// A class that represents the country of Vanuatu.
   const CountryVut()
       : super(
           name: const CountryName.international(
@@ -4123,7 +4165,9 @@ class CountryVut extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAla extends WorldCountry {
+  /// A class that represents the country of Åland Islands.
   const CountryAla()
       : super(
           name: const CountryName.international(
@@ -4300,7 +4344,9 @@ class CountryAla extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAus extends WorldCountry {
+  /// A class that represents the country of Australia.
   const CountryAus()
       : super(
           name: const CountryName.international(
@@ -4494,7 +4540,9 @@ class CountryAus extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryIot extends WorldCountry {
+  /// A class that represents the country of British Indian Ocean Territory.
   const CountryIot()
       : super(
           name: const CountryName.international(
@@ -4672,7 +4720,9 @@ class CountryIot extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySvk extends WorldCountry {
+  /// A class that represents the country of Slovakia.
   const CountrySvk()
       : super(
           name: const CountryName.international(
@@ -4866,7 +4916,9 @@ class CountrySvk extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBra extends WorldCountry {
+  /// A class that represents the country of Brazil.
   const CountryBra()
       : super(
           name: const CountryName.international(
@@ -5070,7 +5122,9 @@ class CountryBra extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTjk extends WorldCountry {
+  /// A class that represents the country of Tajikistan.
   const CountryTjk()
       : super(
           name: const CountryName.international(
@@ -5275,7 +5329,9 @@ class CountryTjk extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySgs extends WorldCountry {
+  /// A class that represents the country of South Georgia.
   const CountrySgs()
       : super(
           name: const CountryName.international(
@@ -5454,7 +5510,9 @@ class CountrySgs extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLbr extends WorldCountry {
+  /// A class that represents the country of Liberia.
   const CountryLbr()
       : super(
           name: const CountryName.international(
@@ -5640,7 +5698,9 @@ class CountryLbr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNga extends WorldCountry {
+  /// A class that represents the country of Nigeria.
   const CountryNga()
       : super(
           name: const CountryName.international(
@@ -5838,7 +5898,9 @@ class CountryNga extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCol extends WorldCountry {
+  /// A class that represents the country of Colombia.
   const CountryCol()
       : super(
           name: const CountryName.international(
@@ -6032,7 +6094,9 @@ class CountryCol extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySmr extends WorldCountry {
+  /// A class that represents the country of San Marino.
   const CountrySmr()
       : super(
           name: const CountryName.international(
@@ -6224,7 +6288,10 @@ class CountrySmr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryShn extends WorldCountry {
+  /// A class that represents the country of Saint Helena,
+  /// Ascension and Tristan da Cunha.
   const CountryShn()
       : super(
           name: const CountryName.international(
@@ -6416,7 +6483,9 @@ class CountryShn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryEgy extends WorldCountry {
+  /// A class that represents the country of Egypt.
   const CountryEgy()
       : super(
           name: const CountryName.international(
@@ -6607,7 +6676,9 @@ class CountryEgy extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryHnd extends WorldCountry {
+  /// A class that represents the country of Honduras.
   const CountryHnd()
       : super(
           name: const CountryName.international(
@@ -6799,7 +6870,9 @@ class CountryHnd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryIdn extends WorldCountry {
+  /// A class that represents the country of Indonesia.
   const CountryIdn()
       : super(
           name: const CountryName.international(
@@ -6988,7 +7061,9 @@ class CountryIdn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPrk extends WorldCountry {
+  /// A class that represents the country of North Korea.
   const CountryPrk()
       : super(
           name: const CountryName.international(
@@ -7183,7 +7258,9 @@ class CountryPrk extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMac extends WorldCountry {
+  /// A class that represents the country of Macau.
   const CountryMac()
       : super(
           name: const CountryName.international(
@@ -7384,7 +7461,9 @@ class CountryMac extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySle extends WorldCountry {
+  /// A class that represents the country of Sierra Leone.
   const CountrySle()
       : super(
           name: const CountryName.international(
@@ -7568,7 +7647,9 @@ class CountrySle extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMda extends WorldCountry {
+  /// A class that represents the country of Moldova.
   const CountryMda()
       : super(
           name: const CountryName.international(
@@ -7762,7 +7843,9 @@ class CountryMda extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPhl extends WorldCountry {
+  /// A class that represents the country of Philippines.
   const CountryPhl()
       : super(
           name: const CountryName.international(
@@ -7796,7 +7879,7 @@ class CountryPhl extends WorldCountry {
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
 
-          /// https://en.wikipedia.org/wiki/Tagalog_language#Controversy
+          /// https://en.wikipedia.org/wiki/Tagalog_language#Controversy.
           languages: const [LangEng(), LangTgl()],
           translations: const [
             CountryName(
@@ -7958,7 +8041,9 @@ class CountryPhl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCmr extends WorldCountry {
+  /// A class that represents the country of Cameroon.
   const CountryCmr()
       : super(
           name: const CountryName.international(
@@ -8158,7 +8243,9 @@ class CountryCmr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGrl extends WorldCountry {
+  /// A class that represents the country of Greenland.
   const CountryGrl()
       : super(
           name: const CountryName.international(
@@ -8338,7 +8425,9 @@ class CountryGrl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMtq extends WorldCountry {
+  /// A class that represents the country of Martinique.
   const CountryMtq()
       : super(
           name: const CountryName.international(
@@ -8517,7 +8606,9 @@ class CountryMtq extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLbn extends WorldCountry {
+  /// A class that represents the country of Lebanon.
   const CountryLbn()
       : super(
           name: const CountryName.international(
@@ -8714,7 +8805,9 @@ class CountryLbn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryRwa extends WorldCountry {
+  /// A class that represents the country of Rwanda.
   const CountryRwa()
       : super(
           name: const CountryName.international(
@@ -8919,7 +9012,9 @@ class CountryRwa extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBih extends WorldCountry {
+  /// A class that represents the country of Bosnia and Herzegovina.
   const CountryBih()
       : super(
           name: const CountryName.international(
@@ -9119,7 +9214,9 @@ class CountryBih extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMhl extends WorldCountry {
+  /// A class that represents the country of Marshall Islands.
   const CountryMhl()
       : super(
           name: const CountryName.international(
@@ -9309,7 +9406,9 @@ class CountryMhl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryIta extends WorldCountry {
+  /// A class that represents the country of Italy.
   const CountryIta()
       : super(
           name: const CountryName.international(
@@ -9501,7 +9600,9 @@ class CountryIta extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTkl extends WorldCountry {
+  /// A class that represents the country of Tokelau.
   const CountryTkl()
       : super(
           name: const CountryName.international(
@@ -9681,7 +9782,9 @@ class CountryTkl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGab extends WorldCountry {
+  /// A class that represents the country of Gabon.
   const CountryGab()
       : super(
           name: const CountryName.international(
@@ -9865,7 +9968,9 @@ class CountryGab extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCck extends WorldCountry {
+  /// A class that represents the country of Cocos (Keeling) Islands.
   const CountryCck()
       : super(
           name: const CountryName.international(
@@ -10039,7 +10144,9 @@ class CountryCck extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPak extends WorldCountry {
+  /// A class that represents the country of Pakistan.
   const CountryPak()
       : super(
           name: const CountryName.international(
@@ -10239,7 +10346,9 @@ class CountryPak extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryReu extends WorldCountry {
+  /// A class that represents the country of Réunion.
   const CountryReu()
       : super(
           name: const CountryName.international(
@@ -10420,7 +10529,9 @@ class CountryReu extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMus extends WorldCountry {
+  /// A class that represents the country of Mauritius.
   const CountryMus()
       : super(
           name: const CountryName.international(
@@ -10454,7 +10565,7 @@ class CountryMus extends WorldCountry {
           continent: const Africa(),
           subregion: const EasternAfrica(),
 
-          /// No code ISO-639-1 and 639-2 code for Mauritian Creole yet :(
+          /// No code ISO-639-1 and 639-2 code for Mauritian Creole yet :(.
           languages: const [LangEng(), LangFra()],
           translations: const [
             CountryName(
@@ -10614,7 +10725,9 @@ class CountryMus extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGrd extends WorldCountry {
+  /// A class that represents the country of Grenada.
   const CountryGrd()
       : super(
           name: const CountryName.international(
@@ -10792,7 +10905,9 @@ class CountryGrd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryOmn extends WorldCountry {
+  /// A class that represents the country of Oman.
   const CountryOmn()
       : super(
           name: const CountryName.international(
@@ -10974,7 +11089,9 @@ class CountryOmn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBfa extends WorldCountry {
+  /// A class that represents the country of Burkina Faso.
   const CountryBfa()
       : super(
           name: const CountryName.international(
@@ -11166,7 +11283,9 @@ class CountryBfa extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryWsm extends WorldCountry {
+  /// A class that represents the country of Samoa.
   const CountryWsm()
       : super(
           name: const CountryName.international(
@@ -11358,7 +11477,9 @@ class CountryWsm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTto extends WorldCountry {
+  /// A class that represents the country of Trinidad and Tobago.
   const CountryTto()
       : super(
           name: const CountryName.international(
@@ -11541,7 +11662,9 @@ class CountryTto extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryVct extends WorldCountry {
+  /// A class that represents the country of Saint Vincent and the Grenadines.
   const CountryVct()
       : super(
           name: const CountryName.international(
@@ -11723,7 +11846,9 @@ class CountryVct extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPlw extends WorldCountry {
+  /// A class that represents the country of Palau.
   const CountryPlw()
       : super(
           name: const CountryName.international(
@@ -11903,7 +12028,9 @@ class CountryPlw extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryZaf extends WorldCountry {
+  /// A class that represents the country of South Africa.
   const CountryZaf()
       : super(
           name: const CountryName.international(
@@ -12158,7 +12285,9 @@ class CountryZaf extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAgo extends WorldCountry {
+  /// A class that represents the country of Angola.
   const CountryAgo()
       : super(
           name: const CountryName.international(
@@ -12351,7 +12480,9 @@ class CountryAgo extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryKor extends WorldCountry {
+  /// A class that represents the country of South Korea.
   const CountryKor()
       : super(
           name: const CountryName.international(
@@ -12537,7 +12668,10 @@ class CountryKor extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAtf extends WorldCountry {
+  /// A class that represents the country of French Southern
+  /// and Antarctic Lands.
   const CountryAtf()
       : super(
           name: const CountryName.international(
@@ -12720,7 +12854,9 @@ class CountryAtf extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryIsl extends WorldCountry {
+  /// A class that represents the country of Iceland.
   const CountryIsl()
       : super(
           name: const CountryName.international(
@@ -12906,7 +13042,9 @@ class CountryIsl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGuf extends WorldCountry {
+  /// A class that represents the country of French Guiana.
   const CountryGuf()
       : super(
           name: const CountryName.international(
@@ -13090,7 +13228,9 @@ class CountryGuf extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNor extends WorldCountry {
+  /// A class that represents the country of Norway.
   const CountryNor()
       : super(
           name: const CountryName.international(
@@ -13285,7 +13425,9 @@ class CountryNor extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryHun extends WorldCountry {
+  /// A class that represents the country of Hungary.
   const CountryHun()
       : super(
           name: const CountryName.international(
@@ -13476,7 +13618,9 @@ class CountryHun extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPse extends WorldCountry {
+  /// A class that represents the country of Palestine.
   const CountryPse()
       : super(
           name: const CountryName.international(
@@ -13668,7 +13812,9 @@ class CountryPse extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLca extends WorldCountry {
+  /// A class that represents the country of Saint Lucia.
   const CountryLca()
       : super(
           name: const CountryName.international(
@@ -13847,7 +13993,9 @@ class CountryLca extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNpl extends WorldCountry {
+  /// A class that represents the country of Nepal.
   const CountryNpl()
       : super(
           name: const CountryName.international(
@@ -14038,7 +14186,9 @@ class CountryNpl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMng extends WorldCountry {
+  /// A class that represents the country of Mongolia.
   const CountryMng()
       : super(
           name: const CountryName.international(
@@ -14223,7 +14373,9 @@ class CountryMng extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryZmb extends WorldCountry {
+  /// A class that represents the country of Zambia.
   const CountryZmb()
       : super(
           name: const CountryName.international(
@@ -14418,7 +14570,9 @@ class CountryZmb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryWlf extends WorldCountry {
+  /// A class that represents the country of Wallis and Futuna.
   const CountryWlf()
       : super(
           name: const CountryName.international(
@@ -14601,7 +14755,9 @@ class CountryWlf extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMwi extends WorldCountry {
+  /// A class that represents the country of Malawi.
   const CountryMwi()
       : super(
           name: const CountryName.international(
@@ -14791,7 +14947,9 @@ class CountryMwi extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBhr extends WorldCountry {
+  /// A class that represents the country of Bahrain.
   const CountryBhr()
       : super(
           name: const CountryName.international(
@@ -14977,7 +15135,9 @@ class CountryBhr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryUkr extends WorldCountry {
+  /// A class that represents the country of Ukraine.
   const CountryUkr()
       : super(
           name: const CountryName.international(
@@ -15166,7 +15326,9 @@ class CountryUkr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNru extends WorldCountry {
+  /// A class that represents the country of Nauru.
   const CountryNru()
       : super(
           name: const CountryName.international(
@@ -15355,7 +15517,9 @@ class CountryNru extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMyt extends WorldCountry {
+  /// A class that represents the country of Mayotte.
   const CountryMyt()
       : super(
           name: const CountryName.international(
@@ -15539,7 +15703,9 @@ class CountryMyt extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryDza extends WorldCountry {
+  /// A class that represents the country of Algeria.
   const CountryDza()
       : super(
           name: const CountryName.international(
@@ -15733,7 +15899,9 @@ class CountryDza extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCan extends WorldCountry {
+  /// A class that represents the country of Canada.
   const CountryCan()
       : super(
           name: const CountryName.international(
@@ -15968,7 +16136,9 @@ class CountryCan extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLie extends WorldCountry {
+  /// A class that represents the country of Liechtenstein.
   const CountryLie()
       : super(
           name: const CountryName.international(
@@ -16158,7 +16328,9 @@ class CountryLie extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryEth extends WorldCountry {
+  /// A class that represents the country of Ethiopia.
   const CountryEth()
       : super(
           name: const CountryName.international(
@@ -16357,7 +16529,9 @@ class CountryEth extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryDom extends WorldCountry {
+  /// A class that represents the country of Dominican Republic.
   const CountryDom()
       : super(
           name: const CountryName.international(
@@ -16542,7 +16716,9 @@ class CountryDom extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBvt extends WorldCountry {
+  /// A class that represents the country of Bouvet Island.
   const CountryBvt()
       : super(
           name: const CountryName.international(
@@ -16710,7 +16886,9 @@ class CountryBvt extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNfk extends WorldCountry {
+  /// A class that represents the country of Norfolk Island.
   const CountryNfk()
       : super(
           name: const CountryName.international(
@@ -16894,7 +17072,9 @@ class CountryNfk extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNld extends WorldCountry {
+  /// A class that represents the country of Netherlands.
   const CountryNld()
       : super(
           name: const CountryName.international(
@@ -17078,7 +17258,9 @@ class CountryNld extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMnp extends WorldCountry {
+  /// A class that represents the country of Northern Mariana Islands.
   const CountryMnp()
       : super(
           name: const CountryName.international(
@@ -17271,7 +17453,9 @@ class CountryMnp extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryHkg extends WorldCountry {
+  /// A class that represents the country of Hong Kong.
   const CountryHkg()
       : super(
           name: const CountryName.international(
@@ -17478,7 +17662,9 @@ class CountryHkg extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryIrq extends WorldCountry {
+  /// A class that represents the country of Iraq.
   const CountryIrq()
       : super(
           name: const CountryName.international(
@@ -17676,7 +17862,9 @@ class CountryIrq extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryEsp extends WorldCountry {
+  /// A class that represents the country of Spain.
   const CountryEsp()
       : super(
           name: const CountryName.international(
@@ -17863,7 +18051,9 @@ class CountryEsp extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTgo extends WorldCountry {
+  /// A class that represents the country of Togo.
   const CountryTgo()
       : super(
           name: const CountryName.international(
@@ -18048,7 +18238,9 @@ class CountryTgo extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryChn extends WorldCountry {
+  /// A class that represents the country of China.
   const CountryChn()
       : super(
           name: const CountryName.international(
@@ -18261,7 +18453,9 @@ class CountryChn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryFlk extends WorldCountry {
+  /// A class that represents the country of Falkland Islands.
   const CountryFlk()
       : super(
           name: const CountryName.international(
@@ -18447,7 +18641,9 @@ class CountryFlk extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryUsa extends WorldCountry {
+  /// A class that represents the country of United States.
   const CountryUsa()
       : super(
           name: const CountryName.international(
@@ -18965,7 +19161,9 @@ class CountryUsa extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMaf extends WorldCountry {
+  /// A class that represents the country of Saint Martin.
   const CountryMaf()
       : super(
           name: const CountryName.international(
@@ -19147,7 +19345,9 @@ class CountryMaf extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryIrn extends WorldCountry {
+  /// A class that represents the country of Iran.
   const CountryIrn()
       : super(
           name: const CountryName.international(
@@ -19349,7 +19549,9 @@ class CountryIrn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMex extends WorldCountry {
+  /// A class that represents the country of Mexico.
   const CountryMex()
       : super(
           name: const CountryName.international(
@@ -19539,7 +19741,9 @@ class CountryMex extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBrn extends WorldCountry {
+  /// A class that represents the country of Brunei.
   const CountryBrn()
       : super(
           name: const CountryName.international(
@@ -19727,7 +19931,9 @@ class CountryBrn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCyp extends WorldCountry {
+  /// A class that represents the country of Cyprus.
   const CountryCyp()
       : super(
           name: const CountryName.international(
@@ -19924,7 +20130,9 @@ class CountryCyp extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNic extends WorldCountry {
+  /// A class that represents the country of Nicaragua.
   const CountryNic()
       : super(
           name: const CountryName.international(
@@ -20116,7 +20324,9 @@ class CountryNic extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCuw extends WorldCountry {
+  /// A class that represents the country of Curaçao.
   const CountryCuw()
       : super(
           name: const CountryName.international(
@@ -20308,7 +20518,9 @@ class CountryCuw extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPri extends WorldCountry {
+  /// A class that represents the country of Puerto Rico.
   const CountryPri()
       : super(
           name: const CountryName.international(
@@ -20506,7 +20718,9 @@ class CountryPri extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNcl extends WorldCountry {
+  /// A class that represents the country of New Caledonia.
   const CountryNcl()
       : super(
           name: const CountryName.international(
@@ -20690,7 +20904,9 @@ class CountryNcl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySsd extends WorldCountry {
+  /// A class that represents the country of South Sudan.
   const CountrySsd()
       : super(
           name: const CountryName.international(
@@ -20882,7 +21098,9 @@ class CountrySsd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySom extends WorldCountry {
+  /// A class that represents the country of Somalia.
   const CountrySom()
       : super(
           name: const CountryName.international(
@@ -21081,7 +21299,9 @@ class CountrySom extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGrc extends WorldCountry {
+  /// A class that represents the country of Greece.
   const CountryGrc()
       : super(
           name: const CountryName.international(
@@ -21274,7 +21494,9 @@ class CountryGrc extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBes extends WorldCountry {
+  /// A class that represents the country of Caribbean Netherlands.
   const CountryBes()
       : super(
           name: const CountryName.international(
@@ -21457,7 +21679,9 @@ class CountryBes extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLao extends WorldCountry {
+  /// A class that represents the country of Laos.
   const CountryLao()
       : super(
           name: const CountryName.international(
@@ -21654,7 +21878,9 @@ class CountryLao extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBlz extends WorldCountry {
+  /// A class that represents the country of Belize.
   const CountryBlz()
       : super(
           name: const CountryName.international(
@@ -21840,7 +22066,9 @@ class CountryBlz extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySlv extends WorldCountry {
+  /// A class that represents the country of El Salvador.
   const CountrySlv()
       : super(
           name: const CountryName.international(
@@ -22032,7 +22260,9 @@ class CountrySlv extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryJam extends WorldCountry {
+  /// A class that represents the country of Jamaica.
   const CountryJam()
       : super(
           name: const CountryName.international(
@@ -22212,7 +22442,9 @@ class CountryJam extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryUry extends WorldCountry {
+  /// A class that represents the country of Uruguay.
   const CountryUry()
       : super(
           name: const CountryName.international(
@@ -22401,7 +22633,9 @@ class CountryUry extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPng extends WorldCountry {
+  /// A class that represents the country of Papua New Guinea.
   const CountryPng()
       : super(
           name: const CountryName.international(
@@ -22598,7 +22832,9 @@ class CountryPng extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLux extends WorldCountry {
+  /// A class that represents the country of Luxembourg.
   const CountryLux()
       : super(
           name: const CountryName.international(
@@ -22801,7 +23037,9 @@ class CountryLux extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryChl extends WorldCountry {
+  /// A class that represents the country of Chile.
   const CountryChl()
       : super(
           name: const CountryName.international(
@@ -22985,7 +23223,9 @@ class CountryChl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryVat extends WorldCountry {
+  /// A class that represents the country of Vatican City.
   const CountryVat()
       : super(
           name: const CountryName.international(
@@ -23173,7 +23413,9 @@ class CountryVat extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGnb extends WorldCountry {
+  /// A class that represents the country of Guinea-Bissau.
   const CountryGnb()
       : super(
           name: const CountryName.international(
@@ -23365,7 +23607,9 @@ class CountryGnb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryUga extends WorldCountry {
+  /// A class that represents the country of Uganda.
   const CountryUga()
       : super(
           name: const CountryName.international(
@@ -23561,7 +23805,9 @@ class CountryUga extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryVen extends WorldCountry {
+  /// A class that represents the country of Venezuela.
   const CountryVen()
       : super(
           name: const CountryName.international(
@@ -23752,7 +23998,9 @@ class CountryVen extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySrb extends WorldCountry {
+  /// A class that represents the country of Serbia.
   const CountrySrb()
       : super(
           name: const CountryName.international(
@@ -23955,7 +24203,9 @@ class CountrySrb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBen extends WorldCountry {
+  /// A class that represents the country of Benin.
   const CountryBen()
       : super(
           name: const CountryName.international(
@@ -24144,7 +24394,9 @@ class CountryBen extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBgd extends WorldCountry {
+  /// A class that represents the country of Bangladesh.
   const CountryBgd()
       : super(
           name: const CountryName.international(
@@ -24335,7 +24587,9 @@ class CountryBgd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBhs extends WorldCountry {
+  /// A class that represents the country of Bahamas.
   const CountryBhs()
       : super(
           name: const CountryName.international(
@@ -24513,7 +24767,9 @@ class CountryBhs extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNiu extends WorldCountry {
+  /// A class that represents the country of Niue.
   const CountryNiu()
       : super(
           name:
@@ -24687,7 +24943,9 @@ class CountryNiu extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAtg extends WorldCountry {
+  /// A class that represents the country of Antigua and Barbuda.
   const CountryAtg()
       : super(
           name: const CountryName.international(
@@ -24869,7 +25127,9 @@ class CountryAtg extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBlm extends WorldCountry {
+  /// A class that represents the country of Saint Barthélemy.
   const CountryBlm()
       : super(
           name: const CountryName.international(
@@ -25058,7 +25318,9 @@ class CountryBlm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySyc extends WorldCountry {
+  /// A class that represents the country of Seychelles.
   const CountrySyc()
       : super(
           name: const CountryName.international(
@@ -25252,7 +25514,9 @@ class CountrySyc extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryEsh extends WorldCountry {
+  /// A class that represents the country of Western Sahara.
   const CountryEsh()
       : super(
           name: const CountryName.international(
@@ -25432,7 +25696,9 @@ class CountryEsh extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLby extends WorldCountry {
+  /// A class that represents the country of Libya.
   const CountryLby()
       : super(
           name: const CountryName.international(
@@ -25620,7 +25886,9 @@ class CountryLby extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMkd extends WorldCountry {
+  /// A class that represents the country of North Macedonia.
   const CountryMkd()
       : super(
           name: const CountryName.international(
@@ -25819,7 +26087,9 @@ class CountryMkd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPer extends WorldCountry {
+  /// A class that represents the country of Peru.
   const CountryPer()
       : super(
           name: const CountryName.international(
@@ -26016,7 +26286,9 @@ class CountryPer extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBdi extends WorldCountry {
+  /// A class that represents the country of Burundi.
   const CountryBdi()
       : super(
           name: const CountryName.international(
@@ -26211,7 +26483,9 @@ class CountryBdi extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryKir extends WorldCountry {
+  /// A class that represents the country of Kiribati.
   const CountryKir()
       : super(
           name: const CountryName.international(
@@ -26398,7 +26672,9 @@ class CountryKir extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTur extends WorldCountry {
+  /// A class that represents the country of Turkey.
   const CountryTur()
       : super(
           name: const CountryName.international(
@@ -26597,7 +26873,9 @@ class CountryTur extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTza extends WorldCountry {
+  /// A class that represents the country of Tanzania.
   const CountryTza()
       : super(
           name: const CountryName.international(
@@ -26800,7 +27078,9 @@ class CountryTza extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTun extends WorldCountry {
+  /// A class that represents the country of Tunisia.
   const CountryTun()
       : super(
           name: const CountryName.international(
@@ -26990,7 +27270,9 @@ class CountryTun extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMsr extends WorldCountry {
+  /// A class that represents the country of Montserrat.
   const CountryMsr()
       : super(
           name: const CountryName.international(
@@ -27173,7 +27455,9 @@ class CountryMsr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryKgz extends WorldCountry {
+  /// A class that represents the country of Kyrgyzstan.
   const CountryKgz()
       : super(
           name: const CountryName.international(
@@ -27378,7 +27662,9 @@ class CountryKgz extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryImn extends WorldCountry {
+  /// A class that represents the country of Isle of Man.
   const CountryImn()
       : super(
           name: const CountryName.international(
@@ -27561,7 +27847,9 @@ class CountryImn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGlp extends WorldCountry {
+  /// A class that represents the country of Guadeloupe.
   const CountryGlp()
       : super(
           name: const CountryName.international(
@@ -27744,7 +28032,9 @@ class CountryGlp extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryKwt extends WorldCountry {
+  /// A class that represents the country of Kuwait.
   const CountryKwt()
       : super(
           name: const CountryName.international(
@@ -27925,7 +28215,9 @@ class CountryKwt extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryVgb extends WorldCountry {
+  /// A class that represents the country of British Virgin Islands.
   const CountryVgb()
       : super(
           name: const CountryName.international(
@@ -28104,7 +28396,9 @@ class CountryVgb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCiv extends WorldCountry {
+  /// A class that represents the country of Ivory Coast.
   const CountryCiv()
       : super(
           name: const CountryName.international(
@@ -28300,7 +28594,9 @@ class CountryCiv extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCxr extends WorldCountry {
+  /// A class that represents the country of Christmas Island.
   const CountryCxr()
       : super(
           name: const CountryName.international(
@@ -28475,7 +28771,9 @@ class CountryCxr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLso extends WorldCountry {
+  /// A class that represents the country of Lesotho.
   const CountryLso()
       : super(
           name: const CountryName.international(
@@ -28663,7 +28961,9 @@ class CountryLso extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryJey extends WorldCountry {
+  /// A class that represents the country of Jersey.
   const CountryJey()
       : super(
           name: const CountryName.international(
@@ -28857,7 +29157,9 @@ class CountryJey extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySvn extends WorldCountry {
+  /// A class that represents the country of Slovenia.
   const CountrySvn()
       : super(
           name: const CountryName.international(
@@ -29054,7 +29356,9 @@ class CountrySvn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBel extends WorldCountry {
+  /// A class that represents the country of Belgium.
   const CountryBel()
       : super(
           name: const CountryName.international(
@@ -29261,7 +29565,9 @@ class CountryBel extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTca extends WorldCountry {
+  /// A class that represents the country of Turks and Caicos Islands.
   const CountryTca()
       : super(
           name: const CountryName.international(
@@ -29444,7 +29750,9 @@ class CountryTca extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGib extends WorldCountry {
+  /// A class that represents the country of Gibraltar.
   const CountryGib()
       : super(
           name: const CountryName.international(
@@ -29624,7 +29932,9 @@ class CountryGib extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryQat extends WorldCountry {
+  /// A class that represents the country of Qatar.
   const CountryQat()
       : super(
           name: const CountryName.international(
@@ -29804,7 +30114,9 @@ class CountryQat extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBwa extends WorldCountry {
+  /// A class that represents the country of Botswana.
   const CountryBwa()
       : super(
           name: const CountryName.international(
@@ -30003,7 +30315,9 @@ class CountryBwa extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGnq extends WorldCountry {
+  /// A class that represents the country of Equatorial Guinea.
   const CountryGnq()
       : super(
           name: const CountryName.international(
@@ -30202,7 +30516,9 @@ class CountryGnq extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryDji extends WorldCountry {
+  /// A class that represents the country of Djibouti.
   const CountryDji()
       : super(
           name: const CountryName.international(
@@ -30399,7 +30715,9 @@ class CountryDji extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGuy extends WorldCountry {
+  /// A class that represents the country of Guyana.
   const CountryGuy()
       : super(
           name: const CountryName.international(
@@ -30583,7 +30901,9 @@ class CountryGuy extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGum extends WorldCountry {
+  /// A class that represents the country of Guam.
   const CountryGum()
       : super(
           name: const CountryName.international(
@@ -30768,7 +31088,9 @@ class CountryGum extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMco extends WorldCountry {
+  /// A class that represents the country of Monaco.
   const CountryMco()
       : super(
           name: const CountryName.international(
@@ -30951,7 +31273,9 @@ class CountryMco extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySlb extends WorldCountry {
+  /// A class that represents the country of Solomon Islands.
   const CountrySlb()
       : super(
           name: const CountryName.international(
@@ -31134,7 +31458,9 @@ class CountrySlb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGgy extends WorldCountry {
+  /// A class that represents the country of Guernsey.
   const CountryGgy()
       : super(
           name: const CountryName.international(
@@ -31327,7 +31653,9 @@ class CountryGgy extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPry extends WorldCountry {
+  /// A class that represents the country of Paraguay.
   const CountryPry()
       : super(
           name: const CountryName.international(
@@ -31524,7 +31852,9 @@ class CountryPry extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySur extends WorldCountry {
+  /// A class that represents the country of Suriname.
   const CountrySur()
       : super(
           name: const CountryName.international(
@@ -31714,7 +32044,10 @@ class CountrySur extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryUmi extends WorldCountry {
+  /// A class that represents the country of United States Minor
+  /// Outlying Islands.
   const CountryUmi()
       : super(
           name: const CountryName.international(
@@ -31892,7 +32225,9 @@ class CountryUmi extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGin extends WorldCountry {
+  /// A class that represents the country of Guinea.
   const CountryGin()
       : super(
           name: const CountryName.international(
@@ -32087,7 +32422,9 @@ class CountryGin extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCze extends WorldCountry {
+  /// A class that represents the country of Czechia.
   const CountryCze()
       : super(
           name: const CountryName.international(
@@ -32276,7 +32613,9 @@ class CountryCze extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCom extends WorldCountry {
+  /// A class that represents the country of Comoros.
   const CountryCom()
       : super(
           name: const CountryName.international(
@@ -32467,7 +32806,9 @@ class CountryCom extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGha extends WorldCountry {
+  /// A class that represents the country of Ghana.
   const CountryGha()
       : super(
           name: const CountryName.international(
@@ -32647,7 +32988,9 @@ class CountryGha extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryKna extends WorldCountry {
+  /// A class that represents the country of Saint Kitts and Nevis.
   const CountryKna()
       : super(
           name: const CountryName.international(
@@ -32832,7 +33175,9 @@ class CountryKna extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPyf extends WorldCountry {
+  /// A class that represents the country of French Polynesia.
   const CountryPyf()
       : super(
           name: const CountryName.international(
@@ -33020,7 +33365,9 @@ class CountryPyf extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryZwe extends WorldCountry {
+  /// A class that represents the country of Zimbabwe.
   const CountryZwe()
       : super(
           name: const CountryName.international(
@@ -33242,7 +33589,9 @@ class CountryZwe extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryKen extends WorldCountry {
+  /// A class that represents the country of Kenya.
   const CountryKen()
       : super(
           name: const CountryName.international(
@@ -33438,7 +33787,9 @@ class CountryKen extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryKaz extends WorldCountry {
+  /// A class that represents the country of Kazakhstan.
   const CountryKaz()
       : super(
           name: const CountryName.international(
@@ -33647,7 +33998,9 @@ class CountryKaz extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMne extends WorldCountry {
+  /// A class that represents the country of Montenegro.
   const CountryMne()
       : super(
           name: const CountryName.international(
@@ -33834,7 +34187,9 @@ class CountryMne extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTuv extends WorldCountry {
+  /// A class that represents the country of Tuvalu.
   const CountryTuv()
       : super(
           name: const CountryName.international(
@@ -34013,7 +34368,9 @@ class CountryTuv extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPan extends WorldCountry {
+  /// A class that represents the country of Panama.
   const CountryPan()
       : super(
           name: const CountryName.international(
@@ -34201,7 +34558,9 @@ class CountryPan extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAnd extends WorldCountry {
+  /// A class that represents the country of Andorra.
   const CountryAnd()
       : super(
           name: const CountryName.international(
@@ -34389,7 +34748,9 @@ class CountryAnd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryVir extends WorldCountry {
+  /// A class that represents the country of United States Virgin Islands.
   const CountryVir()
       : super(
           name: const CountryName.international(
@@ -34569,7 +34930,9 @@ class CountryVir extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryIsr extends WorldCountry {
+  /// A class that represents the country of Israel.
   const CountryIsr()
       : super(
           name: const CountryName.international(
@@ -34762,7 +35125,9 @@ class CountryIsr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPrt extends WorldCountry {
+  /// A class that represents the country of Portugal.
   const CountryPrt()
       : super(
           name: const CountryName.international(
@@ -34955,7 +35320,9 @@ class CountryPrt extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAut extends WorldCountry {
+  /// A class that represents the country of Austria.
   const CountryAut()
       : super(
           name: const CountryName.international(
@@ -35151,7 +35518,9 @@ class CountryAut extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryFin extends WorldCountry {
+  /// A class that represents the country of Finland.
   const CountryFin()
       : super(
           name: const CountryName.international(
@@ -35343,7 +35712,9 @@ class CountryFin extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryEst extends WorldCountry {
+  /// A class that represents the country of Estonia.
   const CountryEst()
       : super(
           name: const CountryName.international(
@@ -35533,7 +35904,9 @@ class CountryEst extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryDma extends WorldCountry {
+  /// A class that represents the country of Dominica.
   const CountryDma()
       : super(
           name: const CountryName.international(
@@ -35720,7 +36093,9 @@ class CountryDma extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryYem extends WorldCountry {
+  /// A class that represents the country of Yemen.
   const CountryYem()
       : super(
           name: const CountryName.international(
@@ -35905,7 +36280,9 @@ class CountryYem extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAfg extends WorldCountry {
+  /// A class that represents the country of Afghanistan.
   const CountryAfg()
       : super(
           name: const CountryName.international(
@@ -36112,7 +36489,9 @@ class CountryAfg extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySyr extends WorldCountry {
+  /// A class that represents the country of Syria.
   const CountrySyr()
       : super(
           name: const CountryName.international(
@@ -36300,7 +36679,9 @@ class CountrySyr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMdv extends WorldCountry {
+  /// A class that represents the country of Maldives.
   const CountryMdv()
       : super(
           name: const CountryName.international(
@@ -36490,7 +36871,9 @@ class CountryMdv extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTls extends WorldCountry {
+  /// A class that represents the country of Timor-Leste.
   const CountryTls()
       : super(
           name: const CountryName.international(
@@ -36684,7 +37067,9 @@ class CountryTls extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLtu extends WorldCountry {
+  /// A class that represents the country of Lithuania.
   const CountryLtu()
       : super(
           name: const CountryName.international(
@@ -36881,7 +37266,9 @@ class CountryLtu extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNzl extends WorldCountry {
+  /// A class that represents the country of New Zealand.
   const CountryNzl()
       : super(
           name: const CountryName.international(
@@ -37072,7 +37459,9 @@ class CountryNzl extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBmu extends WorldCountry {
+  /// A class that represents the country of Bermuda.
   const CountryBmu()
       : super(
           name: const CountryName.international(
@@ -37261,7 +37650,9 @@ class CountryBmu extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryDeu extends WorldCountry {
+  /// A class that represents the country of Germany.
   const CountryDeu()
       : super(
           name: const CountryName.international(
@@ -37460,7 +37851,9 @@ class CountryDeu extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryArg extends WorldCountry {
+  /// A class that represents the country of Argentina.
   const CountryArg()
       : super(
           name: const CountryName.international(
@@ -37663,7 +38056,9 @@ class CountryArg extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBlr extends WorldCountry {
+  /// A class that represents the country of Belarus.
   const CountryBlr()
       : super(
           name: const CountryName.international(
@@ -37869,7 +38264,9 @@ class CountryBlr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBrb extends WorldCountry {
+  /// A class that represents the country of Barbados.
   const CountryBrb()
       : super(
           name: const CountryName.international(
@@ -38051,7 +38448,9 @@ class CountryBrb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGtm extends WorldCountry {
+  /// A class that represents the country of Guatemala.
   const CountryGtm()
       : super(
           name: const CountryName.international(
@@ -38241,7 +38640,9 @@ class CountryGtm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAze extends WorldCountry {
+  /// A class that represents the country of Azerbaijan.
   const CountryAze()
       : super(
           name: const CountryName.international(
@@ -38439,7 +38840,9 @@ class CountryAze extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMar extends WorldCountry {
+  /// A class that represents the country of Morocco.
   const CountryMar()
       : super(
           name: const CountryName.international(
@@ -38625,7 +39028,9 @@ class CountryMar extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCok extends WorldCountry {
+  /// A class that represents the country of Cook Islands.
   const CountryCok()
       : super(
           name: const CountryName.international(
@@ -38806,7 +39211,9 @@ class CountryCok extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCaf extends WorldCountry {
+  /// A class that represents the country of Central African Republic.
   const CountryCaf()
       : super(
           name: const CountryName.international(
@@ -39007,7 +39414,9 @@ class CountryCaf extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryRou extends WorldCountry {
+  /// A class that represents the country of Romania.
   const CountryRou()
       : super(
           name: const CountryName.international(
@@ -39197,7 +39606,9 @@ class CountryRou extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMlt extends WorldCountry {
+  /// A class that represents the country of Malta.
   const CountryMlt()
       : super(
           name: const CountryName.international(
@@ -39393,7 +39804,9 @@ class CountryMlt extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryArm extends WorldCountry {
+  /// A class that represents the country of Armenia.
   const CountryArm()
       : super(
           name: const CountryName.international(
@@ -39592,7 +40005,9 @@ class CountryArm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySen extends WorldCountry {
+  /// A class that represents the country of Senegal.
   const CountrySen()
       : super(
           name: const CountryName.international(
@@ -39787,7 +40202,9 @@ class CountrySen extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBgr extends WorldCountry {
+  /// A class that represents the country of Bulgaria.
   const CountryBgr()
       : super(
           name: const CountryName.international(
@@ -39977,7 +40394,9 @@ class CountryBgr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCod extends WorldCountry {
+  /// A class that represents the country of DR Congo.
   const CountryCod()
       : super(
           name: const CountryName.international(
@@ -40198,7 +40617,9 @@ class CountryCod extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryHti extends WorldCountry {
+  /// A class that represents the country of Haiti.
   const CountryHti()
       : super(
           name: const CountryName.international(
@@ -40392,7 +40813,9 @@ class CountryHti extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAlb extends WorldCountry {
+  /// A class that represents the country of Albania.
   const CountryAlb()
       : super(
           name: const CountryName.international(
@@ -40576,7 +40999,9 @@ class CountryAlb extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryJor extends WorldCountry {
+  /// A class that represents the country of Jordan.
   const CountryJor()
       : super(
           name: const CountryName.international(
@@ -40766,7 +41191,9 @@ class CountryJor extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySjm extends WorldCountry {
+  /// A class that represents the country of Svalbard and Jan Mayen.
   const CountrySjm()
       : super(
           name: const CountryName.international(
@@ -40944,7 +41371,9 @@ class CountrySjm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMdg extends WorldCountry {
+  /// A class that represents the country of Madagascar.
   const CountryMdg()
       : super(
           name: const CountryName.international(
@@ -41139,7 +41568,9 @@ class CountryMdg extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryFra extends WorldCountry {
+  /// A class that represents the country of France.
   const CountryFra()
       : super(
           name: const CountryName.international(
@@ -41344,7 +41775,9 @@ class CountryFra extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryFsm extends WorldCountry {
+  /// A class that represents the country of Micronesia.
   const CountryFsm()
       : super(
           name: const CountryName.international(
@@ -41531,7 +41964,9 @@ class CountryFsm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAbw extends WorldCountry {
+  /// A class that represents the country of Aruba.
   const CountryAbw()
       : super(
           name: const CountryName.international(
@@ -41712,7 +42147,9 @@ class CountryAbw extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryInd extends WorldCountry {
+  /// A class that represents the country of India.
   const CountryInd()
       : super(
           name: const CountryName.international(
@@ -41919,7 +42356,9 @@ class CountryInd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryNam extends WorldCountry {
+  /// A class that represents the country of Namibia.
   const CountryNam()
       : super(
           name: const CountryName.international(
@@ -42131,7 +42570,9 @@ class CountryNam extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryFji extends WorldCountry {
+  /// A class that represents the country of Fiji.
   const CountryFji()
       : super(
           name: const CountryName.international(
@@ -42322,7 +42763,9 @@ class CountryFji extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySdn extends WorldCountry {
+  /// A class that represents the country of Sudan.
   const CountrySdn()
       : super(
           name: const CountryName.international(
@@ -42520,7 +42963,9 @@ class CountrySdn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryStp extends WorldCountry {
+  /// A class that represents the country of São Tomé and Príncipe.
   const CountryStp()
       : super(
           name: const CountryName.international(
@@ -42710,7 +43155,9 @@ class CountryStp extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySau extends WorldCountry {
+  /// A class that represents the country of Saudi Arabia.
   const CountrySau()
       : super(
           name: const CountryName.international(
@@ -42908,7 +43355,9 @@ class CountrySau extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryHmd extends WorldCountry {
+  /// A class that represents the country of Heard Island and McDonald Islands.
   const CountryHmd()
       : super(
           name: const CountryName.international(
@@ -43081,7 +43530,9 @@ class CountryHmd extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLka extends WorldCountry {
+  /// A class that represents the country of Sri Lanka.
   const CountryLka()
       : super(
           name: const CountryName.international(
@@ -43275,7 +43726,9 @@ class CountryLka extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySwe extends WorldCountry {
+  /// A class that represents the country of Sweden.
   const CountrySwe()
       : super(
           name: const CountryName.international(
@@ -43463,7 +43916,9 @@ class CountrySwe extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTon extends WorldCountry {
+  /// A class that represents the country of Tonga.
   const CountryTon()
       : super(
           name: const CountryName.international(
@@ -43647,7 +44102,9 @@ class CountryTon extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryDnk extends WorldCountry {
+  /// A class that represents the country of Denmark.
   const CountryDnk()
       : super(
           name: const CountryName.international(
@@ -43840,7 +44297,9 @@ class CountryDnk extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMys extends WorldCountry {
+  /// A class that represents the country of Malaysia.
   const CountryMys()
       : super(
           name: const CountryName.international(
@@ -44027,7 +44486,9 @@ class CountryMys extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCri extends WorldCountry {
+  /// A class that represents the country of Costa Rica.
   const CountryCri()
       : super(
           name: const CountryName.international(
@@ -44217,7 +44678,9 @@ class CountryCri extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBol extends WorldCountry {
+  /// A class that represents the country of Bolivia.
   const CountryBol()
       : super(
           name: const CountryName.international(
@@ -44433,7 +44896,9 @@ class CountryBol extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryBtn extends WorldCountry {
+  /// A class that represents the country of Bhutan.
   const CountryBtn()
       : super(
           name: const CountryName.international(
@@ -44614,7 +45079,9 @@ class CountryBtn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCym extends WorldCountry {
+  /// A class that represents the country of Cayman Islands.
   const CountryCym()
       : super(
           name: const CountryName.international(
@@ -44794,7 +45261,9 @@ class CountryCym extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryPcn extends WorldCountry {
+  /// A class that represents the country of Pitcairn Islands.
   const CountryPcn()
       : super(
           name: const CountryName.international(
@@ -44981,7 +45450,9 @@ class CountryPcn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMli extends WorldCountry {
+  /// A class that represents the country of Mali.
   const CountryMli()
       : super(
           name: const CountryName.international(
@@ -45170,7 +45641,9 @@ class CountryMli extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySxm extends WorldCountry {
+  /// A class that represents the country of Sint Maarten.
   const CountrySxm()
       : super(
           name: const CountryName.international(
@@ -45360,7 +45833,9 @@ class CountrySxm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryLva extends WorldCountry {
+  /// A class that represents the country of Latvia.
   const CountryLva()
       : super(
           name: const CountryName.international(
@@ -45557,7 +46032,9 @@ class CountryLva extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAsm extends WorldCountry {
+  /// A class that represents the country of American Samoa.
   const CountryAsm()
       : super(
           name: const CountryName.international(
@@ -45752,7 +46229,9 @@ class CountryAsm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountrySpm extends WorldCountry {
+  /// A class that represents the country of Saint Pierre and Miquelon.
   const CountrySpm()
       : super(
           name: const CountryName.international(
@@ -45939,7 +46418,9 @@ class CountrySpm extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryEcu extends WorldCountry {
+  /// A class that represents the country of Ecuador.
   const CountryEcu()
       : super(
           name: const CountryName.international(
@@ -46131,7 +46612,9 @@ class CountryEcu extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTha extends WorldCountry {
+  /// A class that represents the country of Thailand.
   const CountryTha()
       : super(
           name: const CountryName.international(
@@ -46319,7 +46802,9 @@ class CountryTha extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryAre extends WorldCountry {
+  /// A class that represents the country of United Arab Emirates.
   const CountryAre()
       : super(
           name: const CountryName.international(
@@ -46504,7 +46989,9 @@ class CountryAre extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryHrv extends WorldCountry {
+  /// A class that represents the country of Croatia.
   const CountryHrv()
       : super(
           name: const CountryName.international(
@@ -46703,7 +47190,9 @@ class CountryHrv extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryMmr extends WorldCountry {
+  /// A class that represents the country of Myanmar.
   const CountryMmr()
       : super(
           name: const CountryName.international(
@@ -46893,7 +47382,9 @@ class CountryMmr extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryGeo extends WorldCountry {
+  /// A class that represents the country of Georgia.
   const CountryGeo()
       : super(
           name: const CountryName.international(
@@ -47075,7 +47566,9 @@ class CountryGeo extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryTwn extends WorldCountry {
+  /// A class that represents the country of Taiwan.
   const CountryTwn()
       : super(
           name: const CountryName.international(
@@ -47267,7 +47760,9 @@ class CountryTwn extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryChe extends WorldCountry {
+  /// A class that represents the country of Switzerland.
   const CountryChe()
       : super(
           name: const CountryName.international(
@@ -47478,7 +47973,9 @@ class CountryChe extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryEri extends WorldCountry {
+  /// A class that represents the country of Eritrea.
   const CountryEri()
       : super(
           name: const CountryName.international(
@@ -47682,7 +48179,9 @@ class CountryEri extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryCog extends WorldCountry {
+  /// A class that represents the country of Republic of the Congo.
   const CountryCog()
       : super(
           name: const CountryName.international(
@@ -47879,7 +48378,9 @@ class CountryCog extends WorldCountry {
         );
 }
 
+/// {@hideConstantImplementations}
 class CountryFro extends WorldCountry {
+  /// A class that represents the country of Faroe Islands.
   const CountryFro()
       : super(
           name: const CountryName.international(
