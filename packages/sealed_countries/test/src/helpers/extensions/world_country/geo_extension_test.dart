@@ -19,6 +19,14 @@ void main() => group("GeoExtension", () {
             isNotEmpty,
           ),
         );
+
+        test(
+          "proper type",
+          () => expect(
+            WorldCountry.list.firstWhere((c) => c.borders != null).borders,
+            everyElement(isA<WorldCountry>()),
+          ),
+        );
       });
 
       test(

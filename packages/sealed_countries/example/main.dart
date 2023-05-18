@@ -2,6 +2,11 @@
 import "package:sealed_countries/sealed_countries.dart";
 
 void main() {
+  print(WorldCountry.list.length); // Prints: "250".
+
+  final mexico = WorldCountry.fromCode("MEX");
+  print(mexico.name.common); // Prints: "Mexico".
+
   final europeanCountries = WorldCountry.list.where(
     (country) => country.continent is Europe,
   );

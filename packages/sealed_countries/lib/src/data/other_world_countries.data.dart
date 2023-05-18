@@ -1,3 +1,7 @@
+// Those classes are based on data from the restcountries project
+// https://gitlab.com/restcountries/restcountries, which is
+// licensed under the Mozilla Public License Version 2.0.
+
 // ignore_for_file: avoid-non-ascii-symbols
 
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -16,8 +20,10 @@ import "../model/country/submodels/maps.dart";
 import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
 
+/// {@hideConstantImplementations}
 // ignore: prefer-match-file-name, not needed in data file.
 class CountryUnk extends WorldCountry {
+  /// A class that represents the country of Kosovo.
   const CountryUnk()
       : super(
           name: const CountryName.international(

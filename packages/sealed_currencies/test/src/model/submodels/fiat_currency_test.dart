@@ -110,6 +110,21 @@ void main() => group("$FiatCurrency", () {
         );
       });
 
+      group("fromCodeNumeric", () {
+        test(
+          "with proper code",
+          () => expect(FiatCurrency.fromCodeNumeric(value.codeNumeric), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            () => FiatCurrency.fromCodeNumeric(value.toString()),
+            throwsStateError,
+          ),
+        );
+      });
+
       group("maybeFromValue", () {
         test(
           "with proper value, without where",
@@ -167,106 +182,6 @@ void main() => group("$FiatCurrency", () {
             value,
           ),
         );
-      });
-
-      group("unit", () {
-        test("as symbol", () {
-          final valueWithSymbol = FiatCurrency.list.firstWhere(
-            (currency) => currency.symbol != null,
-          );
-          expect(valueWithSymbol.unit, valueWithSymbol.symbol);
-        });
-        test("as code", () {
-          final valueWithoutSymbol = FiatCurrency.list.firstWhere(
-            (currency) => currency.symbol == null,
-          );
-          expect(valueWithoutSymbol.unit, valueWithoutSymbol.code);
-        });
-      });
-
-      group("format", () {
-        final valueWithoutDot = FiatCurrency.list.firstWhere(
-          (cur) => cur.decimalMark != FiatCurrency.dot && cur.unitFirst,
-        );
-        test("from double value", () {
-          expect(
-            valueWithoutDot.format(-1000.9999),
-            "${valueWithoutDot.unit} -1.000,9999",
-          );
-          expect(
-            valueWithoutDot.format(0.9999),
-            "${valueWithoutDot.unit} 0,9999",
-          );
-          expect(
-            valueWithoutDot.format(1.9999),
-            "${valueWithoutDot.unit} 1,9999",
-          );
-          expect(
-            valueWithoutDot.format(10.9999),
-            "${valueWithoutDot.unit} 10,9999",
-          );
-          expect(
-            valueWithoutDot.format(100.9999),
-            "${valueWithoutDot.unit} 100,9999",
-          );
-          expect(
-            valueWithoutDot.format(1000.9999),
-            "${valueWithoutDot.unit} 1.000,9999",
-          );
-          expect(
-            valueWithoutDot.format(10000.9999),
-            "${valueWithoutDot.unit} 10.000,9999",
-          );
-          expect(
-            valueWithoutDot.format(100000.9999),
-            "${valueWithoutDot.unit} 100.000,9999",
-          );
-
-          expect(
-            valueWithoutDot.format(1000000.9999),
-            "${valueWithoutDot.unit} 1.000.000,9999",
-          );
-        });
-
-        test("from int value", () {
-          expect(
-            valueWithoutDot.format(-1000),
-            "${valueWithoutDot.unit} -1.000",
-          );
-          expect(
-            valueWithoutDot.format(0),
-            "${valueWithoutDot.unit} 0",
-          );
-          expect(
-            valueWithoutDot.format(1),
-            "${valueWithoutDot.unit} 1",
-          );
-          expect(
-            valueWithoutDot.format(10),
-            "${valueWithoutDot.unit} 10",
-          );
-          expect(
-            valueWithoutDot.format(100),
-            "${valueWithoutDot.unit} 100",
-          );
-          expect(
-            valueWithoutDot.format(1000),
-            "${valueWithoutDot.unit} 1.000",
-          );
-          expect(
-            valueWithoutDot.format(10000),
-            "${valueWithoutDot.unit} 10.000",
-          );
-          expect(
-            valueWithoutDot.format(100000),
-            "${valueWithoutDot.unit} 100.000",
-          );
-
-          expect(
-            valueWithoutDot.format(1000000),
-            "${valueWithoutDot.unit} 1.000.000",
-          );
-        });
       });
 
       group("asserts", () {

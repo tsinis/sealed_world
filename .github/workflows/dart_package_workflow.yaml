@@ -26,7 +26,7 @@ jobs:
       - name: 🎯 Setup Dart
         uses: dart-lang/setup-dart@v1
         with:
-          sdk: "beta"
+          sdk: "stable"
 
       - name: 📦 Install dependencies
         run: dart pub get
@@ -41,7 +41,6 @@ jobs:
 
       - name: 🧮 Calculate PANA score
         uses: axel-op/dart-package-analyzer@v3
-        if: false # TODO: Replace this back when action will support Dart 3.
         id: analysis
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
@@ -60,8 +59,7 @@ jobs:
           fi
 
       - name: 🔎 Dart Code Metrics
-        uses: dart-code-checker/dart-code-metrics-action@v3.0.0
-        if: false # TODO: Replace it when DCM will support Dart 3.
+        uses: dart-code-checker/dart-code-metrics-action@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           folders: "lib, test"
@@ -75,14 +73,14 @@ jobs:
       - name: 🧪 Run tests
         run: |
           dart pub global activate coverage
-          dart --enable-experiment=sealed-class test --coverage=coverage
+          dart test --coverage=coverage
           dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=lib
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
-          exclude: "**/*.g.dart **/*.gen.dart **/data/*.dart"
+          exclude: "**/*.g.dart **/*.data.dart"
           min_coverage: 0 # TODO: Increase to 95 before publish.
 
       - name: 💯 Upload coverage

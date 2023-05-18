@@ -68,4 +68,28 @@ void main() => group("WebResourcesExtension", () {
           ),
         );
       });
+
+      test("proper paths", () {
+        final country = WorldCountry.list.first;
+        final coatsPng = country.maybeCoatOfArmsPngUrl();
+        final coatsSvg = country.maybeCoatOfArmsSvgUrl();
+        final flagPng = country.flagPngUrl();
+        final flagSvg = country.flagSvgUrl();
+        expect(
+          coatsSvg,
+          "https://mainfacts.com/media/images/coats_of_arms/af.svg",
+        );
+        expect(
+          coatsPng,
+          "https://mainfacts.com/media/images/coats_of_arms/af.png",
+        );
+        expect(
+          flagPng,
+          "https://flagcdn.com/w320/af.png",
+        );
+        expect(
+          flagSvg,
+          "https://flagcdn.com/af.svg",
+        );
+      });
     });

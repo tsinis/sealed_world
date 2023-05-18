@@ -1,7 +1,4 @@
 analyzer:
-  enable-experiment:
-    - sealed-class
-    # - patterns TODO: Enable later and migrate generator: FiatZmw() => fiatZmw?.call(), _ => orElse?.call(), etc.
   exclude:
     # Web
     - "web/**"
@@ -13,6 +10,8 @@ analyzer:
     - "**/*.mocks.dart"
     # Coverage
     - "coverage/**"
+    # Generated code
+    - "**/*.g.dart"
 
   language:
     strict-casts: true
@@ -203,7 +202,7 @@ linter:
     prefer_typing_uninitialized_variables: true
     prefer_void_to_null: true
     provide_deprecation_message: true
-    # public_member_api_docs: true # TODO!
+    public_member_api_docs: true
     sort_constructors_first: true
     sort_pub_dependencies: true
     sort_unnamed_constructors_first: true
