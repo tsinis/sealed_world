@@ -1,5 +1,5 @@
-import "package:sealed_countries/sealed_countries.dart";
 import "package:sealed_countries/src/helpers/extensions/world_country/date_time_extension.dart";
+import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
 
 void main() => group("DateTimeExtension", () {

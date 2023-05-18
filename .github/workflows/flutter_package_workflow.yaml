@@ -73,13 +73,13 @@ jobs:
           fatal_style: true
 
       - name: 🧪 Run tests
-        run: flutter test --no-pub --coverage --enable-experiment=sealed-class
+        run: flutter test --no-pub --coverage
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
-          exclude: "**/*.g.dart **/*.gen.dart **/*.freezed.dart"
+          exclude: "**/*.g.dart **/*.data.dart"
           min_coverage: 0 # TODO: Increase to 95 before publish.
 
       - name: 💯 Upload coverage

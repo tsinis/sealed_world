@@ -2,7 +2,7 @@
 (?:^|/)data/
 \.freezed.dart$
 \.g.dart$
-\.gen.dart$
+\.data.dart$
 \.ico$
 \.ignore$
 \.jpg$
