@@ -1,6 +1,5 @@
 import "../../../model/country/country.dart";
 
-// TODO: Test.
 /// A class extension that adds utility methods to the [WorldCountry] class.
 extension GettersExtension on WorldCountry {
   /// Returns `true` if this `WorldCountry` object is officially assigned.

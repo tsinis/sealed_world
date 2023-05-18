@@ -34,7 +34,7 @@ final class Capital {
         );
 
   /// The de facto name of this capital.
-  final String deFacto; // TODO: Getters.
+  final String deFacto;
 
   /// The de jure name of this capital.
   final String? deJure;
