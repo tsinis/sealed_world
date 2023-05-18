@@ -10,6 +10,8 @@ analyzer:
     - "**/*.mocks.dart"
     # Coverage
     - "coverage/**"
+    # Generated code
+    - "**/*.g.dart"
 
   language:
     strict-casts: true

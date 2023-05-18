@@ -91,4 +91,4 @@ If you have any issues or suggestions for the package, please file them in the G
 - [Wikipedia](https://wikipedia.org/wiki/List_of_ISO_3166_country_codes)
 - [Data Source](https://gitlab.com/restcountries/restcountries)[^1]
 
-[^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified, added additional data and functionality.
+[^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), added additional data and functionality in Dart classes.

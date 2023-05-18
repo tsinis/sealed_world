@@ -1,3 +1,7 @@
+// Those classes are based on data from the restcountries project
+// https://gitlab.com/restcountries/restcountries, which is
+// licensed under the Mozilla Public License Version 2.0.
+
 // ignore_for_file: avoid-non-ascii-symbols
 
 import "package:sealed_currencies/sealed_currencies.dart";
