@@ -19,13 +19,14 @@ jobs:
       - name: 🔗 Link checker
         uses: lycheeverse/lychee-action@v1.8.0
         with:
-          args: --verbose --no-progress './**/*.md' './**/*.html' './**/*.dart'
+          args: --verbose --no-progress './**/*.md' './**/*.html'
           format: markdown
           jobSummary: true
           fail: false
 
       - name: 🪄 Spell check
         uses: check-spelling/check-spelling@v0.0.21
+        if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
         with:
           config: .github/workflows/config/spell-check
           check_file_names: 1
