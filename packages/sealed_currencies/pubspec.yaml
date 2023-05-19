@@ -14,7 +14,7 @@ topics:
 
 screenshots:
   - description: 'Example'
-    path: docs/example.webp
+    path: doc/example.webp
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
