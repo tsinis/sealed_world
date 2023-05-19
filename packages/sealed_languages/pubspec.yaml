@@ -13,7 +13,8 @@ topics:
  - iso
 
 screenshots:
-  # - description: 'Example' TODO!
+  - description: 'Example'
+    path: docs/example.webp
 
 
 environment:

@@ -13,7 +13,8 @@ topics:
  - iso
 
 screenshots:
-  # - description: 'Example' TODO!
+  - description: 'Example'
+    path: docs/example.webp
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
