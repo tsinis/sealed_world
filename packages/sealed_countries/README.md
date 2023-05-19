@@ -1,3 +1,8 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
+[![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg?flag=sealed_countries)](https://app.codecov.io/github/tsinis/sealed_world/tree/main/packages/sealed_countries)
+[![sealed_countries](https://github.com/tsinis/sealed_world/actions/workflows/sealed_countries.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/sealed_countries.yaml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This ISO-driven and pure Dart package provides information about world countries in form of compile-time constant sealed classes. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, languages, currencies etc.
 
 ## Features

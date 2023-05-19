@@ -1,5 +1,5 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
-[![codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg?flag=sealed_languages)](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages)
+[![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg?flag=sealed_languages)](https://app.codecov.io/github/tsinis/sealed_world/tree/main/packages/sealed_languages)
 [![sealed_languages](https://github.com/tsinis/sealed_world/actions/workflows/sealed_languages.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/sealed_languages.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
