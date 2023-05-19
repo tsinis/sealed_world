@@ -1,6 +1,11 @@
 name: sealed_languages
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/sealed_languages/**"
+      - ".github/workflows/sealed_languages.yaml"
   pull_request:
     branches: [main]
     paths:

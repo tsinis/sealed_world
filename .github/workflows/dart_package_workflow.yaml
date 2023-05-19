@@ -46,6 +46,9 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           relativePath: ${{ env.relative_path }}
 
+      - name: 🏜️ Publish - dry run
+        run: dart pub publish --dry-run
+
       - name: 📈 Check Pub score # TODO: Increase PERCENTAGE to 92 before publish.
         env:
           TOTAL: ${{ steps.analysis.outputs.total }}
@@ -81,7 +84,7 @@ jobs:
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.data.dart"
-          min_coverage: 0 # TODO: Increase to 95 before publish.
+          min_coverage: 90
 
       - name: 💯 Upload coverage
         uses: codecov/codecov-action@v3

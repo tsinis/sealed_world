@@ -1,6 +1,11 @@
 name: sealed_currencies
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/sealed_currencies/**"
+      - ".github/workflows/sealed_currencies.yaml"
   pull_request:
     branches: [main]
     paths:
