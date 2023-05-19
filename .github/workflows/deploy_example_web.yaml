@@ -2,8 +2,10 @@ name: deploy
 
 on:
   push:
-    branches:
-      - TODO!
+    branches: [main]
+    paths:
+      - "packages/world_countries/**"
+      - ".github/workflows/world_countries.yaml"
 
 jobs:
   deploy:

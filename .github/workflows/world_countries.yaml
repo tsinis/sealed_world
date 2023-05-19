@@ -1,6 +1,11 @@
 name: world_countries
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/world_countries/**"
+      - ".github/workflows/world_countries.yaml"
   pull_request:
     branches: [main]
     paths:

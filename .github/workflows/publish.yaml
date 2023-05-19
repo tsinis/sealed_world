@@ -13,24 +13,6 @@ on:
     - '[0-9]+.[0-9]+.[0-9]+*'
 
 jobs:
-  publish-dry-run:
-    name: 📝 Publish dry run
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    if: github.ref_type == 'branch' && github.event_name == 'pull_request' && !github.event.pull_request.merged
-    steps:
-      - name: 📚 Git checkout
-        uses: actions/checkout@v3
-
-      - name: 🎯 Setup Dart
-        uses: dart-lang/setup-dart@v1
-
-      - name: 📦 Install dependencies
-        run: dart pub get
-
-      - name: 🏜️ Publish - dry run
-        run: dart pub publish --dry-run
-
   check-version:
     name: 💡 Check version
     runs-on: ubuntu-latest
