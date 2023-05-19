@@ -294,23 +294,26 @@ packages:
   sealed_countries:
     dependency: transitive
     description:
-      path: "../../sealed_countries"
-      relative: true
-    source: path
+      name: sealed_countries
+      sha256: f2a505cacf7c547382a4af20dd1512cb7b00920c317b592bab35a5aae890cb22
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   sealed_currencies:
     dependency: transitive
     description:
-      path: "../../sealed_currencies"
-      relative: true
-    source: path
+      name: sealed_currencies
+      sha256: "242bf4757c2f90f2fc2f70f432b7bcc4f96ebbde1925771fa3a4d0bfb578274b"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   sealed_languages:
     dependency: transitive
     description:
-      path: "../../sealed_languages"
-      relative: true
-    source: path
+      name: sealed_languages
+      sha256: "6aeda1d0090d1be3605bb9d0154a68e6a35b298919f0287373c3c3047cc2027c"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   sky_engine:
     dependency: transitive
