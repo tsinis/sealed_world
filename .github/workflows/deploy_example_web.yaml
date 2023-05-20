@@ -1,7 +1,7 @@
 name: deploy
 
 on:
-  push:
+  pull_request:
     branches: [main]
     paths:
       - "packages/world_countries/**"
@@ -24,9 +24,11 @@ jobs:
         cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
     - name: 📦 Install dependencies
+      working-directory: packages/world_countries/example
       run: flutter pub get
 
     - name: 🛠️ Build for web
+      working-directory: packages/world_countries/example
       run: flutter build web --release
 
     - name: 🛫 Deploy website to GH Pages
@@ -34,5 +36,5 @@ jobs:
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: build/web
+        FOLDER: packages/world_countries/example/build/web
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
