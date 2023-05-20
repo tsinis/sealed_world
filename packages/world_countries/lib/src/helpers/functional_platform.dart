@@ -1,10 +1,22 @@
-// ignore_for_file: long-parameter-list, Flutter supports 7 platforms.
+// ignore_for_file: long-parameter-list, Flutter supports 6+ platforms.
 import "package:flutter/foundation.dart"
     show TargetPlatform, defaultTargetPlatform, kIsWeb;
 
-class FunctionalPlatform {
+/// A helper class for conditionally executing code based on the current
+/// platform.
+final class FunctionalPlatform {
   const FunctionalPlatform._();
 
+  /// Invokes the given function based on the current platform.
+  ///
+  /// Example usage:
+  /// ```dart
+  /// FunctionalPlatform.maybeWhenConst(
+  ///   android: () => print('Running on Android'),
+  ///   iOS: () => print('Running on iOS'),
+  ///   orElse: () => print('Running on other platform'),
+  /// );
+  /// ```
   static R maybeWhenConst<R>({
     required R orElse,
     R? android,

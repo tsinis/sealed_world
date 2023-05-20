@@ -1,4 +1,5 @@
-import "package:flutter/widgets.dart" show BuildContext, immutable;
+import "package:flutter/foundation.dart";
+import "package:flutter/widgets.dart" show BuildContext;
 
 @immutable
 class ItemProperties<T extends Object> {

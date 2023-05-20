@@ -27,7 +27,7 @@ class AdaptiveSearchTextField extends TextField {
 }
 
 class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
-  final focusNode = FocusNode();
+  final FocusNode focusNode = FocusNode();
 
   @override
   void dispose() {

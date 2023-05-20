@@ -1,7 +1,7 @@
 part of "basic_picker.dart";
 
 class _BasicPickerState<T extends Object> extends State<BasicPicker<T>> {
-  late final controller = widget.textController ??
+  late final TextEditingController controller = widget.textController ??
       widget.searchBar?.controller ??
       TextEditingController();
 
