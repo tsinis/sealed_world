@@ -1,7 +1,7 @@
 name: deploy
 
 on:
-  pull_request:
+  push:
     branches: [main]
     paths:
       - "packages/world_countries/**"

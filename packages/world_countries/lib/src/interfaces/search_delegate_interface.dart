@@ -13,7 +13,7 @@ abstract class SearchDelegateInterface<T extends Object>
   /// Constructor for the [SearchDelegateInterface] class.
   ///
   /// * [items] is the list of items to search through.
-  /// * [resultsBuilder] is a function that takes a [BuildContext] and an
+  /// * [resultsBuilder] is a function that takes a `BuildContext` and an
   ///   [UnmodifiableListView] of items and returns a widget to display as the
   ///   search results.
   /// * [searchIn] is a function that takes an item and returns an iterable of
@@ -70,7 +70,7 @@ abstract class SearchDelegateInterface<T extends Object>
   /// The list of items to search through.
   final Iterable<T> items;
 
-  /// A function that takes a [BuildContext] and an [UnmodifiableListView] of
+  /// A function that takes a `BuildContext` and an [UnmodifiableListView] of
   /// items and returns a widget to display as the search results.
   final Widget Function(BuildContext context, UnmodifiableListView<T> items)
       resultsBuilder;

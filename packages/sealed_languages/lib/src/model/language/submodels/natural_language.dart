@@ -104,7 +104,7 @@ class NaturalLanguage extends Language {
       ? super.toString()
       : """NaturalLanguage(name: $name, codeShort: $codeShort, code: $code, bibliographicCode: $bibliographicCode, family: $family, nativeName: $namesNative, isRightToLeft: $isRightToLeft)""";
 
-  /// Returns a [NaturalLanguage] object whose [code] or the value returned by
+  /// Returns a `NaturalLanguage` object whose [code] or the value returned by
   /// [where] matches the specified [value], or `null` if no such object exists
   /// in the specified [languages] list.
   ///

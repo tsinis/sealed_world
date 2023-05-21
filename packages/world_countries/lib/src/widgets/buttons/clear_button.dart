@@ -8,7 +8,7 @@ class ClearButton extends StatelessWidget {
   ///
   /// * TextEditingController is the text editing controller to listen to.
   /// * [icon] is the icon to display in the button.
-  /// * [key] is the optional key to use for the widget.
+  /// * `key` is the optional key to use for the widget.
   const ClearButton(this._controller, {this.icon = defaultIcon, super.key});
 
   /// The default icon to display in the button.

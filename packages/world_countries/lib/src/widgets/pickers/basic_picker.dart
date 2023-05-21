@@ -40,7 +40,7 @@ abstract class BasicPicker<T extends Object>
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [header] is the optional header to display above the list.
   /// * [itemBuilder] is the builder function for the items.
-  /// * [key] is the optional key to use for the widget.
+  /// * `key` is the optional key to use for the widget.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
   /// * [mainAxisAlignment] is the main axis alignment for the list.
   /// * [mainAxisSize] is the main axis size for the list.

@@ -18,7 +18,7 @@ class AdaptiveSearchTextField extends TextField {
   /// * [padding] is an optional padding to apply to the text field.
   /// * [showClearButton] is a boolean indicating whether a clear button should
   ///   be displayed in the text field.
-  /// * [key] is the optional key to use for the widget.
+  /// * `key` is the optional key to use for the widget.
   const AdaptiveSearchTextField(
     TextEditingController controller, {
     this.copyFrom,
