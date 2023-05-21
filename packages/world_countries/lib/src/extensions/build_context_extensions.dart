@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 
-/// A set of useful extensions for [BuildContext].
+/// A set of useful extensions for `BuildContext`.
 extension BuildContextExtensions on BuildContext {
-  /// Returns the [MaterialLocalizations] instance for the current context.
+  /// Returns the `MaterialLocalizations` instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -10,13 +10,13 @@ extension BuildContextExtensions on BuildContext {
   /// ```
   MaterialLocalizations get materialL10n => MaterialLocalizations.of(this);
 
-  /// Returns `true` if the current [BuildContext] has a [MaterialLocalizations]
+  /// Returns `true` if the current `BuildContext` has a `MaterialLocalizations`
   /// instance associated with it.
   bool get hasMaterialL10n =>
       Localizations.of<MaterialLocalizations>(this, MaterialLocalizations) !=
       null;
 
-  /// Returns the nearest [NavigatorState] instance for the current context.
+  /// Returns the nearest `NavigatorState` instance for the current context.
   NavigatorState get navigator => Navigator.of(this);
 
   /// Pops the current route off the navigation stack and returns to the
@@ -28,7 +28,7 @@ extension BuildContextExtensions on BuildContext {
   /// ```
   void pop<T extends Object>([T? result]) => navigator.pop<T>(result);
 
-  /// Pushes a new [Route] onto the navigation stack and returns a [Future] that
+  /// Pushes a new `Route` onto the navigation stack and returns a [Future] that
   /// completes when the new route is popped.
   ///
   /// Example usage:
@@ -48,7 +48,7 @@ extension BuildContextExtensions on BuildContext {
   Future<bool> maybePop<T extends Object>([T? result]) =>
       navigator.maybePop<T>(result);
 
-  /// Returns the nearest [FocusScopeNode] instance for the current context.
+  /// Returns the nearest `FocusScopeNode` instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -56,7 +56,7 @@ extension BuildContextExtensions on BuildContext {
   /// ```
   FocusScopeNode get focus => FocusScope.of(this);
 
-  /// Returns the nearest [MediaQueryData] instance for the current context.
+  /// Returns the nearest `MediaQueryData` instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -64,7 +64,7 @@ extension BuildContextExtensions on BuildContext {
   /// ```
   MediaQueryData get media => MediaQuery.of(this);
 
-  /// Returns the padding from the nearest [MediaQueryData] instance for the
+  /// Returns the padding from the nearest `MediaQueryData` instance for the
   /// current context.
   ///
   /// Example usage:
@@ -73,7 +73,7 @@ extension BuildContextExtensions on BuildContext {
   /// ```
   EdgeInsets get padding => media.padding;
 
-  /// Returns the [ThemeData] instance for the current context.
+  /// Returns the `ThemeData` instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -81,7 +81,7 @@ extension BuildContextExtensions on BuildContext {
   /// ```
   ThemeData get theme => Theme.of(this);
 
-  /// Returns the nearest [ScaffoldState] instance for the current context.
+  /// Returns the nearest `ScaffoldState` instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -89,7 +89,7 @@ extension BuildContextExtensions on BuildContext {
   /// ```
   ScaffoldState get scaffold => Scaffold.of(this);
 
-  /// Returns the nearest [ScaffoldMessengerState] instance for the current
+  /// Returns the nearest `ScaffoldMessengerState` instance for the current
   /// context.
   ///
   /// Example usage:
@@ -98,7 +98,7 @@ extension BuildContextExtensions on BuildContext {
   /// ```
   ScaffoldMessengerState get messenger => ScaffoldMessenger.of(this);
 
-  /// Shows a [SnackBar] at the bottom of the screen.
+  /// Shows a `SnackBar` at the bottom of the screen.
   ///
   /// Example usage:
   /// ```dart

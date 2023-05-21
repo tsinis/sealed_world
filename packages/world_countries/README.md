@@ -2,6 +2,8 @@
 [![world_countries](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+![Example](https://github.com/tsinis/sealed_world/blob/main/packages/world_countries/doc/example.gif)
+
 This ISO-driven package provides information about world countries, currencies, languages, etc. in form of compile-time constant sealed classes with a customizable pickers. This is Flutter wrapper on top `sealed_countries` package, that extends the data (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
 
 ## Features

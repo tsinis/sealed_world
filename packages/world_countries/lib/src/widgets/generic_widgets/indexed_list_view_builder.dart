@@ -30,7 +30,7 @@ class IndexedListViewBuilder<T extends Object>
   ///   list is empty.
   /// * [header] is the optional header widget to display.
   /// * [itemBuilder] is the builder function to use for the items.
-  /// * [key] is the optional key to use for the widget.
+  /// * `key` is the optional key to use for the widget.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior to use.
   /// * [mainAxisAlignment] is the main axis alignment to use.
   /// * [mainAxisSize] is the main axis size to use.
