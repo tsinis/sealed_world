@@ -29,5 +29,5 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
 
   @override
   // ignore: avoid-non-null-assertion, value is not getter, class is immutable.
-  Widget build(BuildContext context) => value is T ? orElse : _map(value!);
+  Widget build(BuildContext context) => value == null ? orElse : _map(value!);
 }
