@@ -6,7 +6,56 @@ import "../../models/item_properties.dart";
 import "../pickers/basic_picker.dart";
 import "country_tile.dart";
 
+/// A picker widget for selecting a country.
 class CountryPicker extends BasicPicker<WorldCountry> {
+  /// Constructor for the [CountryPicker] class.
+  ///
+  /// * [countries] is the list of countries to display.
+  /// * [addAutomaticKeepAlives] is a boolean indicating whether to add
+  ///   automatic keep-alives to the items.
+  /// * [addRepaintBoundaries] is a boolean indicating whether to add repaint
+  ///   boundaries to the items.
+  /// * [addSemanticIndexes] is a boolean indicating whether to add semantic
+  ///   indexes to the items.
+  /// * [cacheExtent] is the cache extent for the list.
+  /// * [caseSensitiveSearch] is a boolean indicating whether the search is
+  ///   case-sensitive.
+  /// * [chosen] is the index of the currently chosen item.
+  /// * [clipBehavior] is the clip behavior for the list.
+  /// * [crossAxisAlignment] is the cross-axis alignment for the list.
+  /// * [direction] is the direction of the list.
+  /// * [disabled] is a boolean indicating whether the list is disabled.
+  /// * [dragStartBehavior] is the drag start behavior for the list.
+  /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
+  /// * [itemBuilder] is the builder function for the items.
+  /// * [key] is the optional key to use for the widget.
+  /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
+  /// * [mainAxisAlignment] is the main axis alignment for the list.
+  /// * [mainAxisSize] is the main axis size for the list.
+  /// * [onSelect] is the callback function to call when an item is selected.
+  /// * [padding] is the padding for the list.
+  /// * [physics] is the physics for the list.
+  /// * [primary] is a boolean indicating whether the list is the primary scroll
+  ///   view.
+  /// * [restorationId] is the restoration id for the list.
+  /// * [reverse] is a boolean indicating whether to reverse the order of the
+  ///   items.
+  /// * [scrollController] is the scroll controller for the list.
+  /// * [searchBar] is the optional search bar to display.
+  /// * [searchBarPadding] is the padding to apply to the search bar.
+  /// * [searchIn] is the optional function to extract search strings from the
+  ///   items.
+  /// * [separator] is the optional separator to display between items.
+  /// * [showClearButton] is a boolean indicating whether to show a clear button
+  ///   in the search bar.
+  /// * [shrinkWrap] is a boolean indicating whether to shrink-wrap the list.
+  /// * [sort] is the sorting function for the items.
+  /// * [startWithSearch] is a boolean indicating whether to start search with
+  ///   the search string.
+  /// * [textBaseline] is the text baseline for the items.
+  /// * [textDirection] is the text direction for the items.
+  /// * [verticalDirection] is the vertical direction for the items.
+  /// * [translation] is the optional natural language to use for translations.
   const CountryPicker({
     Iterable<WorldCountry> countries = WorldCountry.list,
     super.addAutomaticKeepAlives,
@@ -48,8 +97,10 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     this.translation,
   }) : super(countries);
 
+  /// The natural language to use for translations.
   final NaturalLanguage? translation;
 
+  /// The list of countries to display.
   Iterable<WorldCountry> get countries => items;
 
   @override

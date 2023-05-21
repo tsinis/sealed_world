@@ -5,8 +5,22 @@ import "package:flutter/widgets.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../base_widgets/stateful_searchable.dart";
 
+/// A stateful searchable widget that builds a list view based on a list of
+/// items.
 class SearchListListenableBuilder<T extends Object>
     extends StatefulSearchable<T> with CompareSearchMixin<T> {
+  /// Constructor for the [SearchListListenableBuilder] class.
+  ///
+  /// * [builder] is the builder function to use for the list view.
+  /// * [items] is the list of items to display in the list view.
+  /// * [searchIn] is the optional function to use to extract the searchable
+  ///   string from an item.
+  /// * [textController] is the text controller to use for the search bar.
+  /// * [caseSensitiveSearch] is a boolean indicating whether to use
+  ///   case-sensitive search.
+  /// * [startWithSearch] is a boolean indicating whether to search from the
+  ///   beginning of the string.
+  /// * [key] is the optional key to use for the widget.
   const SearchListListenableBuilder({
     required this.builder,
     required this.items,
@@ -17,7 +31,10 @@ class SearchListListenableBuilder<T extends Object>
     super.key,
   });
 
+  /// The list of items to display in the list view.
   final Iterable<T> items;
+
+  /// The builder function to use for the list view.
   final Widget Function(BuildContext context, UnmodifiableListView<T> list)
       builder;
 

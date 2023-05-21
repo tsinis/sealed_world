@@ -4,7 +4,14 @@ import "package:flutter/material.dart";
 import "../../../world_countries.dart";
 import "../../models/item_properties.dart";
 
+/// A picker widget that displays a list of countries with their phone codes.
 class PhoneCodePicker extends CountryPicker {
+  /// Constructor for the [PhoneCodePicker] class that uses a list of countries
+  /// with their phone codes.
+  ///
+  /// * [countries] is the list of countries with their phone codes to display.
+  /// * All other parameters are optional and are passed to the superclass
+  ///   constructor.
   const PhoneCodePicker({
     super.countries,
     super.addAutomaticKeepAlives,
@@ -46,6 +53,12 @@ class PhoneCodePicker extends CountryPicker {
     super.translation,
   });
 
+  /// Constructor for the [PhoneCodePicker] class that uses a [CountryPicker]
+  /// object.
+  ///
+  /// * [picker] is the [CountryPicker] object to use.
+  /// * All other parameters are optional and are passed to the superclass
+  ///   constructor.
   PhoneCodePicker.fromCountryPicker(CountryPicker picker, {super.key})
       : super(
           countries: picker.items,

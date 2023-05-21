@@ -6,7 +6,13 @@ import "../../models/item_properties.dart";
 import "../pickers/basic_picker.dart";
 import "language_tile.dart";
 
+/// A picker widget that displays a list of natural languages.
 class LanguagePicker extends BasicPicker<NaturalLanguage> {
+  /// Constructor for the [LanguagePicker] class.
+  ///
+  /// * [languages] is the list of natural languages to display.
+  /// * All other parameters are optional and are passed
+  /// to the superclass constructor.
   const LanguagePicker({
     Iterable<NaturalLanguage> languages = NaturalLanguage.list,
     super.addAutomaticKeepAlives,
@@ -47,6 +53,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     super.verticalDirection,
   }) : super(languages);
 
+  /// Returns the list of natural languages being displayed by this widget.
   Iterable<NaturalLanguage> get languages => items;
 
   @override

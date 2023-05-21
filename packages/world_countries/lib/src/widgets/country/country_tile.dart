@@ -5,7 +5,13 @@ import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "emoji_flag.dart";
 
+/// A tile widget that displays information about a world country.
 class CountryTile extends ListItemTile<WorldCountry> {
+  /// Constructor for the [CountryTile] class.
+  ///
+  /// * [country] is the world country to display information about.
+  /// * All other parameters are optional and are passed to the superclass
+  /// constructor.
   const CountryTile(
     WorldCountry country, {
     super.autofocus,
@@ -46,6 +52,15 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.visualDensity,
   }) : super(country);
 
+  /// Constructor for the [CountryTile] class that uses an [ItemProperties]
+  /// object.
+  ///
+  /// * [country] is the [ItemProperties] object containing the world country to
+  ///   display information about.
+  /// * All other parameters are optional and are passed to the superclass
+  ///   constructor.
+  /// * [translation] is an optional [NaturalLanguage] object used to translate
+  ///   the country's name.
   CountryTile.fromProperties(
     ItemProperties<WorldCountry> country, {
     Widget? leading,

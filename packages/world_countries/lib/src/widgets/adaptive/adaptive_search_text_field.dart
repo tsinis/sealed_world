@@ -8,7 +8,17 @@ import "../../extensions/build_context_extensions.dart";
 import "../../helpers/name_text_input.dart";
 import "../buttons/clear_button.dart";
 
+/// A text field specifically designed for search queries, with an automatically
+/// adapting appearance.
 class AdaptiveSearchTextField extends TextField {
+  /// Constructor for the [AdaptiveSearchTextField] class.
+  ///
+  /// * [controller] is the text editing controller for the text field.
+  /// * [copyFrom] is an optional text field to copy the properties from.
+  /// * [padding] is an optional padding to apply to the text field.
+  /// * [showClearButton] is a boolean indicating whether a clear button should
+  ///   be displayed in the text field.
+  /// * [key] is the optional key to use for the widget.
   const AdaptiveSearchTextField(
     TextEditingController controller, {
     this.copyFrom,
@@ -17,8 +27,14 @@ class AdaptiveSearchTextField extends TextField {
     super.key,
   }) : super(controller: controller);
 
+  /// An optional text field to copy the properties from.
   final TextField? copyFrom;
+
+  /// An optional padding to apply to the text field.
   final EdgeInsetsGeometry? padding;
+
+  /// A boolean indicating whether a clear button should be displayed
+  /// in the text field.
   final bool showClearButton;
 
   @override
@@ -27,7 +43,7 @@ class AdaptiveSearchTextField extends TextField {
 }
 
 class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
-  final focusNode = FocusNode();
+  final FocusNode focusNode = FocusNode();
 
   @override
   void dispose() {

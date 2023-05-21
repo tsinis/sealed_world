@@ -2,7 +2,15 @@ import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
 
+/// A custom list tile widget that displays a list item.
 class ListItemTile<T extends Object> extends ListTile {
+  /// Constructor for the [ListItemTile] class.
+  ///
+  /// * [_item] is the item to display in the list tile.
+  /// * [onPressed] is the callback function to call when the tile is pressed.
+  /// * [chosenIcon] is the icon to display when the tile is selected.
+  /// * [isChosen] is a boolean indicating whether the tile is selected.
+  /// * [isDisabled] is a boolean indicating whether the tile is disabled.
   const ListItemTile(
     this._item, {
     this.onPressed,
@@ -43,11 +51,14 @@ class ListItemTile<T extends Object> extends ListTile {
     super.visualDensity,
   }) : super(selected: isChosen, enabled: !isDisabled, trailing: chosenIcon);
 
+  /// Default font size.
   @protected
   static const fontSize = UiConstants.point * 3;
 
+  /// The callback function to call when the tile is pressed.
   final ValueSetter<T>? onPressed;
 
+  /// The item to display in the list tile.
   @protected
   final T _item;
 

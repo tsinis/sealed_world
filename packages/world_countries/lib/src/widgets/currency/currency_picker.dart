@@ -6,7 +6,13 @@ import "../../models/item_properties.dart";
 import "../pickers/basic_picker.dart";
 import "currency_tile.dart";
 
+/// A picker widget that displays a list of fiat currencies.
 class CurrencyPicker extends BasicPicker<FiatCurrency> {
+  /// Constructor for the [CurrencyPicker] class.
+  ///
+  /// * [currencies] is the list of fiat currencies to display.
+  /// * All other parameters are optional and are passed
+  /// to the superclass constructor.
   const CurrencyPicker({
     Iterable<FiatCurrency> currencies = FiatCurrency.list,
     super.addAutomaticKeepAlives,
@@ -47,6 +53,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     super.verticalDirection,
   }) : super(currencies);
 
+  /// Returns the list of fiat currencies being displayed by this widget.
   Iterable<FiatCurrency> get currencies => items;
 
   @override

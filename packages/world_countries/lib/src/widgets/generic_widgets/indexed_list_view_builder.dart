@@ -6,8 +6,48 @@ import "../../constants/ui_constants.dart";
 import "../../models/item_properties.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 
+/// A stateful indexed list view widget that displays a list of items.
 class IndexedListViewBuilder<T extends Object>
     extends StatefulIndexedListView<T> {
+  /// Constructor for the [IndexedListViewBuilder] class.
+  ///
+  /// * [items] is the list of items to display in the list view.
+  /// * [sort] is the optional function to use to sort the items.
+  /// * [addAutomaticKeepAlives] is a boolean indicating whether to add
+  ///   automatic keep alives.
+  /// * [addRepaintBoundaries] is a boolean indicating whether to add repaint
+  ///   boundaries.
+  /// * [addSemanticIndexes] is a boolean indicating whether to add semantic
+  ///   indexes.
+  /// * [cacheExtent] is the cache extent to use.
+  /// * [chosen] is the optional item that is chosen by default.
+  /// * [clipBehavior] is the clip behavior to use.
+  /// * [crossAxisAlignment] is the cross axis alignment to use.
+  /// * [direction] is the direction to use.
+  /// * [disabled] is a boolean indicating whether the list view is disabled.
+  /// * [dragStartBehavior] is the drag start behavior to use.
+  /// * [emptyStatePlaceholder] is the placeholder widget to display when the
+  ///   list is empty.
+  /// * [header] is the optional header widget to display.
+  /// * [itemBuilder] is the builder function to use for the items.
+  /// * [key] is the optional key to use for the widget.
+  /// * [keyboardDismissBehavior] is the keyboard dismiss behavior to use.
+  /// * [mainAxisAlignment] is the main axis alignment to use.
+  /// * [mainAxisSize] is the main axis size to use.
+  /// * [onSelect] is the callback function to call when an item is selected.
+  /// * [padding] is the padding to use.
+  /// * [physics] is the physics to use.
+  /// * [primary] is a boolean indicating whether the list view is the primary
+  ///   widget.
+  /// * [restorationId] is the optional restoration ID to use.
+  /// * [reverse] is a boolean indicating whether to reverse the list view.
+  /// * [scrollController] is the scroll controller to use.
+  /// * [separator] is the optional separator widget to use.
+  /// * [showHeader] is a boolean indicating whether to show the header.
+  /// * [shrinkWrap] is a boolean indicating whether to shrink wrap the items.
+  /// * [textBaseline] is the text baseline to use.
+  /// * [textDirection] is the text direction to use.
+  /// * [verticalDirection] is the vertical direction to use.
   const IndexedListViewBuilder(
     super.items, {
     super.addAutomaticKeepAlives,
@@ -43,6 +83,7 @@ class IndexedListViewBuilder<T extends Object>
     super.verticalDirection,
   });
 
+  /// The sorted list of items to display in the list view.
   Iterable<T> get _sortedItems => sort != null
       ? List.unmodifiable(items.toList(growable: false)..sort(sort))
       : items;

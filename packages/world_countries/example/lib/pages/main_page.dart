@@ -31,28 +31,30 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
-  late final controller =
+  late final TabController controller =
       TabController(length: Tabs.values.length, vsync: this);
-  final selectedTab = ValueNotifier(Tabs.country);
+  final ValueNotifier<Tabs> selectedTab = ValueNotifier(Tabs.country);
 
-  late final selectedCountry = ValueNotifier(widget.country);
-  late final selectedLanguage = ValueNotifier(widget.country.languages.first);
-  late final selectedCurrency =
+  late final ValueNotifier<WorldCountry> selectedCountry =
+      ValueNotifier(widget.country);
+  late final ValueNotifier<NaturalLanguage> selectedLanguage =
+      ValueNotifier(widget.country.languages.first);
+  late final ValueNotifier<FiatCurrency> selectedCurrency =
       ValueNotifier(widget.country.currencies?.first ?? const FiatEur());
 
-  late final countryPicker = CountryPicker(
+  late final CountryPicker countryPicker = CountryPicker(
     disabled: const [CountryAfg(), CountryAlb()],
     chosen: [selectedCountry.value],
     onSelect: (newCountry) => selectedCountry.value = newCountry,
   );
 
-  late final currencyPicker = CurrencyPicker(
+  late final CurrencyPicker currencyPicker = CurrencyPicker(
     disabled: const [FiatAfn()],
     chosen: [selectedCurrency.value],
     onSelect: (newCurrency) => selectedCurrency.value = newCurrency,
   );
 
-  late final languagePicker = LanguagePicker(
+  late final LanguagePicker languagePicker = LanguagePicker(
     disabled: const [LangAar()],
     chosen: [selectedLanguage.value],
     onSelect: (newLang) => selectedLanguage.value = newLang,
