@@ -77,7 +77,7 @@ jobs:
           fatal_style: true
 
       - name: 🧪 Run tests
-        run: flutter test --no-pub --coverage
+        run: flutter test --coverage
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
