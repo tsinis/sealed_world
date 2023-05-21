@@ -23,6 +23,13 @@
 ^\Qpackages/sealed_currencies/docs/example.webp\E$
 ^\Qpackages/sealed_currencies/lib/src/model/submodels/fiat_currency.dart\E$
 ^\Qpackages/sealed_languages/docs/example.webp\E$
+^\Qpackages/world_countries/doc/country_data.webp\E$
+^\Qpackages/world_countries/doc/currency_data.webp\E$
+^\Qpackages/world_countries/doc/dialog_picker.webp\E$
+^\Qpackages/world_countries/doc/example.gif\E$
+^\Qpackages/world_countries/doc/language_data.webp\E$
+^\Qpackages/world_countries/doc/modal_picker.webp\E$
+^\Qpackages/world_countries/doc/search_picker.webp\E$
 ^\resources/
 ^\web/
 ^\windows/
