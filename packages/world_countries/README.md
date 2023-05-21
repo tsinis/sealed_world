@@ -5,6 +5,7 @@
 ![Example](https://github.com/tsinis/sealed_world/blob/main/packages/world_countries/doc/example.gif)
 
 This ISO-driven package provides information about world countries, currencies, languages, etc. in form of compile-time constant sealed classes with a customizable pickers. This is Flutter wrapper on top `sealed_countries` package, that extends the data (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
+You can see example app for Flutter Web, with all data and pickers [here](https://tsin.is/sealed_world).
 
 ## Features
 
@@ -120,7 +121,7 @@ The color emoji flags fonts used in this package were obtained from open-source 
 
 ### Noto Emoji fonts
 
-The [Noto Emoji font](./lib/assets/fonts/NotoEmoji/) font comes from [Noto Emoji](https://github.com/googlefonts/noto-emoji) emoji library. Noto Emoji fonts are under the [SIL Open Font License, version 1.1](http://scripts.sil.org/OFL).
+The [Noto Emoji font](./lib/assets/fonts/NotoEmoji/) font comes from [Noto Emoji](https://github.com/googlefonts/noto-emoji) emoji library. Noto Emoji fonts are under the [SIL Open Font License, version 1.1](https://scripts.sil.org/OFL).
 
 ### OpenMoji fonts
 
