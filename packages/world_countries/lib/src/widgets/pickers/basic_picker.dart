@@ -13,8 +13,56 @@ import "../generic_widgets/searchable_indexed_list_view_builder.dart";
 part "basic_picker_state.dart";
 
 @immutable
+
+/// An abstract class that provides a basic picker widget, with search
+/// functionality and indexing support.
+@immutable
 abstract class BasicPicker<T extends Object>
     extends SearchableIndexedListViewBuilder<T> {
+  /// Constructor for the [BasicPicker] class.
+  ///
+  /// * [items] is the list of items to display.
+  /// * [addAutomaticKeepAlives] is a boolean indicating whether to add
+  ///   automatic keep-alives to the items.
+  /// * [addRepaintBoundaries] is a boolean indicating whether to add repaint
+  ///   boundaries to the items.
+  /// * [addSemanticIndexes] is a boolean indicating whether to add semantic
+  ///   indexes to the items.
+  /// * [cacheExtent] is the cache extent for the list.
+  /// * [caseSensitiveSearch] is a boolean indicating whether the search is
+  ///   case-sensitive.
+  /// * [chosen] is the index of the currently chosen item.
+  /// * [clipBehavior] is the clip behavior for the list.
+  /// * [crossAxisAlignment] is the cross-axis alignment for the list.
+  /// * [direction] is the direction of the list.
+  /// * [disabled] is a boolean indicating whether the list is disabled.
+  /// * [dragStartBehavior] is the drag start behavior for the list.
+  /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
+  /// * [header] is the optional header to display above the list.
+  /// * [itemBuilder] is the builder function for the items.
+  /// * [key] is the optional key to use for the widget.
+  /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
+  /// * [mainAxisAlignment] is the main axis alignment for the list.
+  /// * [mainAxisSize] is the main axis size for the list.
+  /// * [onSelect] is the callback function to call when an item is selected.
+  /// * [padding] is the padding for the list.
+  /// * [physics] is the physics for the list.
+  /// * [primary] is a boolean indicating whether the list is the primary scroll
+  ///   view.
+  /// * [restorationId] is the restoration id for the list.
+  /// * [reverse] is a boolean indicating whether to reverse the order of the
+  ///   items.
+  /// * [scrollController] is the scroll controller for the list.
+  /// * [separator] is the optional separator to display between items.
+  /// * [shrinkWrap] is a boolean indicating whether to shrink-wrap the list.
+  /// * [sort] is the sorting function for the items.
+  /// * [textBaseline] is the text baseline for the items.
+  /// * [textDirection] is the text direction for the items.
+  /// * [verticalDirection] is the vertical direction for the items.
+  /// * [searchBar] is the optional search bar to display.
+  /// * [searchBarPadding] is the padding to apply to the search bar.
+  /// * [showClearButton] is a boolean indicating whether to show a clear button
+  ///   in the search bar.
   const BasicPicker(
     super.items, {
     super.addAutomaticKeepAlives,
@@ -55,14 +103,21 @@ abstract class BasicPicker<T extends Object>
     this.showClearButton = true,
   }) : super(header: searchBar);
 
+  /// A boolean indicating whether to show a clear button in the search bar.
   final bool showClearButton;
+
+  /// The optional search bar to display.
   final TextField? searchBar;
+
+  /// The padding to apply to the search bar.
   final EdgeInsetsGeometry? searchBarPadding;
 
+  /// Returns the default builder for the items.
   @required
   @protected
   Widget? defaultBuilder(ItemProperties<T> itemProperties);
 
+  /// Returns the default search function for the items.
   @required
   @protected
   Iterable<String> defaultSearch(T item);
@@ -255,6 +310,9 @@ abstract class BasicPicker<T extends Object>
       );
 
   @required
+
+  /// Creates a copy of this picker with the given fields replaced with the new
+  /// values.
   BasicPicker<T> copyWith({
     Iterable<T>? items,
     bool? addAutomaticKeepAlives,

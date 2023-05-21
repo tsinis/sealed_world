@@ -7,8 +7,40 @@ import "../../interfaces/search_delegate_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../buttons/clear_button.dart";
 
+/// An implementation of [SearchDelegateInterface] that uses the `compare`
+/// method of the items to search through them.
 class ImplicitSearchDelegate<T extends Object>
     extends SearchDelegateInterface<T> with CompareSearchMixin<T> {
+  /// Constructor for the [ImplicitSearchDelegate] class.
+  ///
+  /// * [items] is the list of items to search through.
+  /// * [resultsBuilder] is a function that takes a [BuildContext] and an
+  ///   [UnmodifiableListView] of items and returns a widget to display as the
+  ///   search results.
+  /// * [searchIn] is a function that takes an item and returns an iterable of
+  ///   strings to search in.
+  /// * [appBarBottom] is a widget to display at the bottom of the search page's
+  ///   app bar.
+  /// * [appBarThemeData] is the theme data to use for the search page's app
+  ///   bar.
+  /// * [backIconButton] is an icon button to use as the search page's back
+  ///   button.
+  /// * [caseSensitiveSearch] is a boolean indicating whether the search should
+  ///   be case-sensitive.
+  /// * [clearIconButton] is an icon button to use as the search page's clear
+  ///   button.
+  /// * [keyboardType] is the type of keyboard to use for the search field.
+  /// * [resultValidator] is a function that takes an item and returns a boolean
+  ///   indicating whether the item should be included in the search results.
+  /// * [searchFieldDecorationTheme] is the decoration theme to use for the
+  ///   search field.
+  /// * [searchFieldLabel] is the label to use for the search field.
+  /// * [searchFieldStyle] is the style to use for the search field.
+  /// * [showClearButton] is a boolean indicating whether to show the clear
+  ///   button on the search field.
+  /// * [startWithSearch] is a boolean indicating whether the search field
+  ///   should search only by starting with the search string.
+  /// * [textInputAction] is the text input action to use for the search field.
   ImplicitSearchDelegate(
     super.items, {
     required super.resultsBuilder,
@@ -100,28 +132,28 @@ class ImplicitSearchDelegate<T extends Object>
         icon: backIconButton?.icon ?? const BackButtonIcon(),
       );
 
-  void tryClose(BuildContext context) {
-    final result = filteredItems.length == 1 ? filteredItems.first : null;
-    if (result == null) return;
-    final isValid = resultValidator?.call(result) ?? true;
-    if (!isValid) return;
-    WidgetsBinding.instance.addPostFrameCallback((_) => close(context, result));
-  }
-
   @override
   Widget buildResults(BuildContext context) {
-    tryClose(context);
+    _tryClose(context);
 
     return buildSuggestions(context);
   }
 
   @override
   Widget buildSuggestions(BuildContext context) =>
-      resultsBuilder(context, filteredItems);
+      resultsBuilder(context, _filteredItems);
 
-  UnmodifiableListView<T> get filteredItems => UnmodifiableListView(
-        items.where((item) => searchIn(item).toSet().any(hasSameText)),
+  UnmodifiableListView<T> get _filteredItems => UnmodifiableListView(
+        items.where((item) => searchIn(item).toSet().any(_hasSameText)),
       );
 
-  bool hasSameText(String itemText) => compareWithInput(query, itemText);
+  bool _hasSameText(String itemText) => compareWithInput(query, itemText);
+
+  void _tryClose(BuildContext context) {
+    final result = _filteredItems.length == 1 ? _filteredItems.first : null;
+    if (result == null) return;
+    final isValid = resultValidator?.call(result) ?? true;
+    if (!isValid) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) => close(context, result));
+  }
 }

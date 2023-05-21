@@ -6,7 +6,13 @@ import "../../extensions/build_context_extensions.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 
+/// A tile widget that displays information about a fiat currency.
 class CurrencyTile extends ListItemTile<FiatCurrency> {
+  /// Constructor for the [CurrencyTile] class.
+  ///
+  /// * [currency] is the fiat currency to display information about.
+  /// * All other parameters are optional and are passed to the superclass
+  /// constructor.
   const CurrencyTile(
     FiatCurrency currency, {
     super.autofocus,
@@ -47,6 +53,13 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.visualDensity,
   }) : super(currency);
 
+  /// Constructor for the [CurrencyTile] class that uses an [ItemProperties]
+  /// object.
+  ///
+  /// * [currency] is the [ItemProperties] object containing the fiat currency
+  ///   to display information about.
+  /// * All other parameters are optional and are passed to the superclass
+  ///   constructor.
   CurrencyTile.fromProperties(
     ItemProperties<FiatCurrency> currency, {
     Widget? leading,

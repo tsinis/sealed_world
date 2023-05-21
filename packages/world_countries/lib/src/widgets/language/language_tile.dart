@@ -6,7 +6,13 @@ import "../../extensions/build_context_extensions.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 
+/// A list item tile widget that displays information about a natural language.
 class LanguageTile extends ListItemTile<NaturalLanguage> {
+  /// Constructor for the [LanguageTile] class.
+  ///
+  /// * [language] is the natural language to display information about.
+  /// * All other parameters are optional and are passed
+  /// to the superclass constructor.
   const LanguageTile(
     NaturalLanguage language, {
     super.autofocus,
@@ -47,6 +53,7 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.visualDensity,
   }) : super(language);
 
+  /// Constructor for the [LanguageTile] class, that uses the item-properties.
   LanguageTile.fromProperties(
     ItemProperties<NaturalLanguage> language, {
     Widget? leading,

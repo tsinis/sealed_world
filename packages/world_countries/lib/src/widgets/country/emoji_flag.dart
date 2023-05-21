@@ -19,6 +19,7 @@ import "../../models/emoji_family.dart";
 /// * Apple Color Emoji are not open-source and free for everyone.
 /// * JoyPixels are also not open-source and free for everyone.
 class EmojiFlag extends Text {
+  /// Twemoji representation of the emoji flag.
   EmojiFlag.twemoji(
     WorldCountry country, {
     double? size,
@@ -46,6 +47,7 @@ class EmojiFlag extends Text {
           ),
         );
 
+  /// OpenMoji representation of the emoji flag.
   EmojiFlag.openMoji(
     WorldCountry country, {
     double? size,
@@ -73,6 +75,7 @@ class EmojiFlag extends Text {
           ),
         );
 
+  /// Noto Emoji Color representation of the emoji flag.
   EmojiFlag.notoEmoji(
     WorldCountry country, {
     double? size,
@@ -100,6 +103,7 @@ class EmojiFlag extends Text {
           ),
         );
 
+  /// Adaptive representation of the emoji flag.
   EmojiFlag.fromEmojiFamily(
     WorldCountry country, {
     EmojiFamily? emojiFamily,
@@ -128,6 +132,7 @@ class EmojiFlag extends Text {
           ),
         );
 
+  /// Platform default representation of the emoji flag.
   EmojiFlag.platformDefault(
     WorldCountry country, {
     double? size,
@@ -147,6 +152,7 @@ class EmojiFlag extends Text {
     super.selectionColor,
   }) : super(country.emoji, style: _style(style, null, size: size));
 
+  /// Custom representation of the emoji flag.
   EmojiFlag.custom(
     WorldCountry country, {
     double? size,
