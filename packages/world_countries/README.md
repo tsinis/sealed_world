@@ -1,31 +1,112 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
-[![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg?flag=world_countries)](https://app.codecov.io/github/tsinis/sealed_world/tree/main/packages/world_countries)
 [![world_countries](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+This ISO-driven package provides information about world countries, currencies, languages, etc. in form of compile-time constant sealed classes with a customizable pickers. This is Flutter wrapper on top `sealed_countries` package, that extends the data (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
+
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+This package provides the following ready-to-use widgets:
+
+* `CountryPicker` - A picker widget that displays a list of world countries.
+* `PhoneCodePicker` - A picker widget that displays a list of phone codes.
+* `CurrencyPicker` - A picker widget that displays a list of fiat currencies.
+* `LanguagePicker` - A picker widget that displays a list of natural languages.
+
+Or you can just create your own pickers by extending `BasicPicker`.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, you will need Flutter version 3.10+. Add `world_countries` as a dependency in your `pubspec.yaml` file.
+
+```yaml
+dependencies:
+  world_countries: any
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+You can use provided widgets directly, or just use their methods:
+
+* showInModalBottomSheet
+* showInSearch
+* showInDialog
+
+For example:
 
 ```dart
-const like = 'sample';
+// ignore_for_file: avoid-non-ascii-symbols, arguments-ordering
+import "dart:async" show unawaited;
+
+import "package:flutter/material.dart";
+import "package:world_countries/world_countries.dart";
+
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
+
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage>
+    with SingleTickerProviderStateMixin {
+  WorldCountry? selectedCountry;
+
+  late final CountryPicker countryPicker = CountryPicker(
+    disabled: const [CountryAfg(), CountryAlb()],
+    onSelect: onSelect,
+  );
+
+  void onSelect(WorldCountry newCountry) {
+    print("New country selected: $newCountry");
+    setState(() => selectedCountry = newCountry);
+  }
+
+  void onFabPressed({bool isLongPress = false}) {
+    final picker = PhoneCodePicker.fromCountryPicker(countryPicker);
+    unawaited(
+      isLongPress
+          ? picker.showInDialog(context)
+          : picker.showInModalBottomSheet(context),
+    );
+  }
+
+  void onAppBarSearchPressed() =>
+      unawaited(countryPicker.showInSearch(context));
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          actions: [
+            IconButton(
+              onPressed: onAppBarSearchPressed,
+              icon: const Icon(Icons.search),
+            ),
+          ],
+        ),
+        body: Center(
+          child: MaybeWidget(
+            selectedCountry?.name.common,
+            Text.new,
+            orElse: const Text(
+              "Please select country by pressing on the search icon",
+            ),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: onFabPressed,
+          child: const Icon(Icons.search),
+        ),
+      );
+}
 ```
+
+For more usage examples, please see the `/example` folder.
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+For more information on using this package, check out the API documentation.
+If you have any issues or suggestions for the package, please file them in the GitHub repository.
 
 ## References, credits
 
