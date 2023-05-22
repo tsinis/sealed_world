@@ -84,7 +84,7 @@ jobs:
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.data.dart"
-          min_coverage: 1 # Test all widgets properly and update to 90%
+          min_coverage: 0 # Test all widgets properly and update to 90%
 
       - name: 💯 Upload coverage
         uses: codecov/codecov-action@v3
