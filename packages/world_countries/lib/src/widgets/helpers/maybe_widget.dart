@@ -1,4 +1,4 @@
-import "package:flutter/material.dart";
+import "package:flutter/widgets.dart";
 
 /// A widget that does a null-check of provided [value] and returns [orElse]
 /// (default to `SizedBox.shrink`) if [value] is `null`.

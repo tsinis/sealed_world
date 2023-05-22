@@ -51,7 +51,7 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-  }) : super(language);
+  }) : super(language); // coverage:ignore-line
 
   /// Constructor for the [LanguageTile] class, that uses the item-properties.
   LanguageTile.fromProperties(
