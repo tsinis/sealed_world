@@ -295,26 +295,26 @@ packages:
     dependency: transitive
     description:
       name: sealed_countries
-      sha256: f2a505cacf7c547382a4af20dd1512cb7b00920c317b592bab35a5aae890cb22
+      sha256: "967be111c6d57beba7b405b80b7da7122bc17d560461d071613510694cc0c7aa"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1"
+    version: "0.1.0"
   sealed_currencies:
     dependency: transitive
     description:
       name: sealed_currencies
-      sha256: "242bf4757c2f90f2fc2f70f432b7bcc4f96ebbde1925771fa3a4d0bfb578274b"
+      sha256: c14dece4d302055a3c5646dfcce21abd389a89b7476cfeee799be3a306d30504
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1"
+    version: "0.1.0"
   sealed_languages:
     dependency: transitive
     description:
       name: sealed_languages
-      sha256: "6aeda1d0090d1be3605bb9d0154a68e6a35b298919f0287373c3c3047cc2027c"
+      sha256: "4dd85146c881e2f6e74c5daada5d35536410c12a80e799e9584debeaeb5ed6d4"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1"
+    version: "0.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -406,7 +406,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.1.0"
   xml:
     dependency: transitive
     description:
