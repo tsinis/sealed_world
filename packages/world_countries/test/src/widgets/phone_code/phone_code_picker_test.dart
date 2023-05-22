@@ -1,14 +1,14 @@
 // ignore_for_file: missing-test-assertion
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/widgets/country/country_picker.dart";
+import "package:world_countries/world_countries.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
 
-void main() => group("$CountryPicker", () {
+void main() => group("$PhoneCodePicker", () {
       testWidgets(
         "scroll from first to last item and tap",
         (tester) async => tester.testPickerBody(
-          const CountryPicker(),
+          const PhoneCodePicker(),
           (item) => item.namesNative.first.common,
         ),
       );
@@ -16,7 +16,7 @@ void main() => group("$CountryPicker", () {
       testWidgets(
         "test behavior in dialog",
         (tester) async => tester.testPickerInDialog(
-          const CountryPicker(),
+          const PhoneCodePicker(),
           (item) => item.namesNative.first.common,
         ),
       );
@@ -24,7 +24,7 @@ void main() => group("$CountryPicker", () {
       testWidgets(
         "test behavior in search",
         (tester) async => tester.testPickerInSearch(
-          const CountryPicker(),
+          const PhoneCodePicker(),
           (item) => item.namesNative.first.common,
         ),
       );
@@ -32,15 +32,15 @@ void main() => group("$CountryPicker", () {
       testWidgets(
         "test behavior in modal bottom sheet",
         (tester) async => tester.testPickerInModal(
-          const CountryPicker(),
+          const PhoneCodePicker(),
           (item) => item.namesNative.first.common,
         ),
       );
 
       testWidgets(
-        "showSearchBar: false",
+        "fromCountryPicker",
         (tester) async => tester.testPickerBody(
-          const CountryPicker(showSearchBar: false),
+          PhoneCodePicker.fromCountryPicker(const CountryPicker()),
           (item) => item.namesNative.first.common,
         ),
       );

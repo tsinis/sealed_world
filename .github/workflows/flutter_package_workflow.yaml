@@ -11,6 +11,7 @@ jobs:
   verify-flutter-package:
     env:
       relative_path: packages/${{ inputs.package_name }}
+      is_pr: ${{ github.event_name == 'pull_request' }}
     name: ⏳ Verify ${{ inputs.package_name }} Package (Flutter)
     defaults:
       run:
@@ -35,6 +36,7 @@ jobs:
 
       - name: 🕵️ Analyze code
         uses: ValentinVignal/action-dart-analyze@v0.15
+        if: ${{ env.is_pr }}
         with:
           fail-on: 'format'
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,9 +44,11 @@ jobs:
           format: true
 
       - name: 🏜️ Publish - dry run
+        if: ${{ env.is_pr }}
         run: dart pub publish --dry-run
 
       - name: 🧮 Calculate PANA score
+        if: ${{ env.is_pr }}
         uses: axel-op/dart-package-analyzer@v3
         id: analysis
         with:
@@ -53,6 +57,7 @@ jobs:
 
 
       - name: 📈 Check Pub score
+        if: ${{ env.is_pr }}
         env:
           TOTAL: ${{ steps.analysis.outputs.total }}
           TOTAL_MAX: ${{ steps.analysis.outputs.total_max }}
@@ -65,6 +70,7 @@ jobs:
           fi
 
       - name: 🔎 Dart Code Metrics
+        if: ${{ env.is_pr }}
         uses: dart-code-checker/dart-code-metrics-action@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

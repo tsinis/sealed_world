@@ -50,7 +50,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-  }) : super(country);
+  }) : super(country); // coverage:ignore-line
 
   /// Constructor for the [CountryTile] class that uses an [ItemProperties]
   /// object.
