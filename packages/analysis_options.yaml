@@ -84,6 +84,9 @@ dart_code_metrics:
           - constructors
           - public-fields
           - private-fields
+    - format-comment:
+        ignored-patterns:
+          - ^coverage.*
 
     - arguments-ordering: true
     - avoid-banned-imports: true
@@ -106,7 +109,6 @@ dart_code_metrics:
     - ban-name: true
     - binary-expression-operand-order: true
     - double-literal-format: true
-    - format-comment: true
     - list-all-equatable-fields: true
     - newline-before-return: true
     - no-boolean-literal-compare: true

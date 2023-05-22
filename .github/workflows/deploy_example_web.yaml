@@ -20,7 +20,7 @@ jobs:
       uses: subosito/flutter-action@v2.10.0
       with:
         cache: true
-        channel: "stable"
+        channel: "beta"
         cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
     - name: 📦 Install dependencies
