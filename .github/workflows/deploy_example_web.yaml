@@ -29,7 +29,7 @@ jobs:
 
     - name: 🛠️ Build for web
       working-directory: packages/world_countries/example
-      run: flutter build web --release --base-href='/world_countries/' --wasm --omit-type-checks --wasm-opt full
+      run: flutter build web --release --base-href='/sealed_world/' --wasm --omit-type-checks --wasm-opt full
 
     - name: 🛫 Deploy website to GH Pages
       uses: s0/git-publish-subdir-action@v2.6.0
