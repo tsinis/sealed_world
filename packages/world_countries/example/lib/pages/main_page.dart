@@ -1,10 +1,10 @@
 // ignore_for_file: avoid-non-ascii-symbols, arguments-ordering
 import "dart:async" show unawaited;
-import "dart:typed_data";
 
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
+import "../assets/assets.gen.dart";
 import "../models/tabs.dart";
 import "../tabs/country_tab.dart";
 import "../tabs/currency_tab.dart";
@@ -12,18 +12,9 @@ import "../tabs/language_tab.dart";
 import "../widgets/floating_button.dart";
 
 class MainPage extends StatefulWidget {
-  const MainPage(this.country, {this.maybeBackground, super.key});
+  const MainPage(this.country, {super.key});
 
   final WorldCountry country;
-  final Uint8List? maybeBackground;
-
-  DecorationImage? get backgroundImage {
-    final background = maybeBackground;
-
-    return background != null
-        ? DecorationImage(image: MemoryImage(background), fit: BoxFit.cover)
-        : null;
-  }
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -121,7 +112,13 @@ class _MainPageState extends State<MainPage>
             ),
           ),
           body: DecoratedBox(
-            decoration: BoxDecoration(image: widget.backgroundImage),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: Assets.images.background.provider(),
+                fit: BoxFit.cover,
+                opacity: 1 / 2,
+              ),
+            ),
             child: Align(
               alignment: Alignment.topCenter,
               child: SizedBox(
