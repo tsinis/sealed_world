@@ -30,6 +30,7 @@
 ^\Qpackages/world_countries/doc/language_data.webp\E$
 ^\Qpackages/world_countries/doc/modal_picker.webp\E$
 ^\Qpackages/world_countries/doc/search_picker.webp\E$
+^\Qpackages/world_countries/example/assets/images/background.webp\E$
 ^\Qpackages/world_countries/example/web/assets/FontManifest.json\E$
 ^\resources/
 ^\web/
