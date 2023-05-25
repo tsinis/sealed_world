@@ -18,18 +18,18 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="An example project for sealed_world package.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="example">
+  <meta name="apple-mobile-web-app-title" content="Sealed World">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>example</title>
+  <title>Sealed World</title>
   <link rel="manifest" href="manifest.json">
 
   <style>
@@ -64,13 +64,16 @@
         // get the version number of Chrome
         var version = parseInt(userAgent.split('Chrome/')[1]);
 
-        // check if the version number is greater than or equal to 113 and the flag is enabled
-        if (version >= 113 && /enable-webassembly-garbage-collection/.test(userAgent)) {
-          // the browser is supported, do nothing
-        } else {
-          // the browser is not supported, show message
-          document.querySelector('.warning-message').style.display = 'flex';
-        }
+        // delay the warning message by 3 seconds
+        setTimeout(function () {
+          // check if the version number is greater than or equal to 114 and the flag is enabled
+          if (version >= 113 && /enable-webassembly-garbage-collection/.test(userAgent)) {
+            // the browser is supported, do nothing
+          } else {
+            // the browser is not supported, show message
+            document.querySelector('.warning-message').style.display = 'flex';
+          }
+        }, 3000);
       } else {
         // the browser is not Chromium-based, show message
         document.querySelector('.warning-message').style.display = 'flex';
@@ -94,7 +97,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "571470361";
+    const serviceWorkerVersion = "720750559";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
