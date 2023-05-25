@@ -32,6 +32,28 @@
   <title>example</title>
   <link rel="manifest" href="manifest.json">
 
+  <style>
+    .warning-message {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .warning-message h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .warning-message p {
+      font-size: 24px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+  </style>
+
   <script>
     window.onload = function () {
       // get the user agent string
@@ -47,38 +69,32 @@
           // the browser is supported, do nothing
         } else {
           // the browser is not supported, show message
-          document.body.innerHTML = `
-            <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-              <h1>Unsupported Browser</h1>
-              <p style="margin: 16px 0;">
-                In order to run this web application, you must use Chrome version 113 or greater with the <strong>enable-webassembly-garbage-collection</strong> flag enabled.
-              </p>
-              <p>
-                For more information about Flutter WebAssembly, please see the <a href="https://docs.flutter.dev/platform-integration/web/wasm" target="_blank">Flutter WebAssembly documentation</a>.
-              </p>
-            </div>
-          `;
+          document.querySelector('.warning-message').style.display = 'flex';
         }
       } else {
         // the browser is not Chromium-based, show message
-        document.body.innerHTML = `
-          <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <h1>Unsupported Browser</h1>
-            <p style="margin: 16px 0;">
-              This web application requires a Chromium-based browser to run.
-            </p>
-            <p>
-              For more information about Flutter WebAssembly, please see the <a href="https://docs.flutter.dev/platform-integration/web/wasm" target="_blank">Flutter WebAssembly documentation</a>.
-            </p>
-          </div>
-        `;
+        document.querySelector('.warning-message').style.display = 'flex';
       }
     };
   </script>
 
+  <!-- This div is displayed when the browser is not supported -->
+  <div class="warning-message" style="display: none;">
+    <h1>Unsupported Browser</h1>
+    <p>
+      In order to run this web application, you must use Chrome version 113 or greater with the
+      <strong>enable-webassembly-garbage-collection</strong> flag enabled.
+    </p>
+    <p>
+      To check out the latest details on the Flutter WebAssembly effort, visit at <a
+        href="https://flutter.dev/wasm" target="_blank">Flutter WebAssembly
+        documentation</a>.
+    </p>
+  </div>
+
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2427574289";
+    const serviceWorkerVersion = "571470361";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
