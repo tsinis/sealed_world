@@ -1,6 +1,12 @@
 name: deploy
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/world_countries/**"
+      - ".github/workflows/world_countries.yaml"
+      - ".github/workflows/deploy_example_web.yaml"
   pull_request:
     branches: [main]
     paths:
