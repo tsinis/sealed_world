@@ -38,6 +38,23 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+
+  <script>
+    if (navigator.userAgent.indexOf('Chrome/') === -1 || parseInt(navigator.userAgent.split('Chrome/')[1]) < 113 || !/enable-webassembly-garbage-collection/.test(navigator.userAgent)) {
+      document.body.innerHTML = `
+        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <h1>Please use Chrome version 113 or greater</h1>
+          <p style="margin: 16px 0;">
+            In order to run this web application, you must enable the <strong>enable-webassembly-garbage-collection</strong> flag in <strong><a href="chrome://flags" target="_blank">chrome://flags</a></strong>.
+          </p>
+          <p>
+            For more information about Flutter WebAssembly, please see the <a href="https://docs.flutter.dev/platform-integration/web/wasm" target="_blank">Flutter WebAssembly documentation</a>.
+          </p>
+        </div>
+      `;
+    }
+  </script>
+
 </head>
 <body>
   <script>
