@@ -6,12 +6,19 @@ on:
     paths:
       - "packages/world_countries/**"
       - ".github/workflows/world_countries.yaml"
+      - ".github/workflows/deploy_example_web.yaml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/world_countries/**"
+      - ".github/workflows/world_countries.yaml"
+      - ".github/workflows/deploy_example_web.yaml"
 
 jobs:
   deploy:
     name: 🚀 Deploy example website
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
     - name: 📚 Git checkout
       uses: actions/checkout@v3
@@ -20,7 +27,7 @@ jobs:
       uses: subosito/flutter-action@v2.10.0
       with:
         cache: true
-        channel: "beta"
+        channel: "master"
         cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
     - name: 📦 Install dependencies
@@ -29,12 +36,12 @@ jobs:
 
     - name: 🛠️ Build for web
       working-directory: packages/world_countries/example
-      run: flutter build web --release
+      run: flutter build web --release --base-href='/sealed_world/' --wasm --omit-type-checks --wasm-opt full
 
     - name: 🛫 Deploy website to GH Pages
       uses: s0/git-publish-subdir-action@v2.6.0
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: packages/world_countries/example/build/web
+        FOLDER: packages/world_countries/example/build/web_wasm
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

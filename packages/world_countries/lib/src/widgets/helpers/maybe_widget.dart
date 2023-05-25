@@ -15,8 +15,8 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
     this.value,
     this._map, {
     this.orElse = const SizedBox.shrink(),
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   /// The builder function to call with a non-null [value].
   final Widget Function(T) _map;

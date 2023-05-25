@@ -1,5 +1,5 @@
 /// An interface for classes that can be searched.
-abstract class SearchableInterface<T extends Object?> {
+abstract interface class SearchableInterface<T extends Object?> {
   /// Constructor for the [SearchableInterface] class.
   ///
   /// * [searchIn] is a function that takes an item and returns an iterable of

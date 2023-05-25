@@ -1,6 +1,8 @@
 import "package:flutter/widgets.dart";
 import "package:world_countries/world_countries.dart";
 
+import "../assets/fonts.gen.dart";
+
 class CountryFlag extends StatelessWidget {
   const CountryFlag(this.country, {this.size, super.key});
 
@@ -18,9 +20,9 @@ class CountryFlag extends StatelessWidget {
         style: TextStyle(
           fontSize: size,
           fontFamily: FunctionalPlatform.maybeWhenConst(
-            iOS: "EmojiOneColor",
-            macOS: "EmojiOneColor",
-            orElse: "EmojiOneMozilla",
+            iOS: FontFamily.emojiOneColor,
+            macOS: FontFamily.emojiOneColor,
+            orElse: FontFamily.emojiOneMozilla,
           ),
         ),
         textAlign: TextAlign.center,

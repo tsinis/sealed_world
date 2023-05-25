@@ -1,0 +1,7 @@
+dhttpd
+flatart
+freepik
+Google
+hitech
+lottie
+Mozilla

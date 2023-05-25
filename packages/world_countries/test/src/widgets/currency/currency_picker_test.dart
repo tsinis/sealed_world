@@ -14,6 +14,15 @@ void main() => group("$CurrencyPicker", () {
       );
 
       testWidgets(
+        "scroll from first to last item and without selection test",
+        (tester) async => tester.testPickerBody(
+          const CurrencyPicker(),
+          (item) => item.namesNative.first,
+          testSelection: false,
+        ),
+      );
+
+      testWidgets(
         "test behavior in dialog",
         (tester) async => tester.testPickerInDialog(
           const CurrencyPicker(),
