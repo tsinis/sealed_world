@@ -27,5 +27,14 @@ void main() => group("$EmojiFlag", () {
           EmojiFlag.twemoji(value).style,
           isNot(EmojiFlag.platformDefault(value).style),
         );
+        expect(
+          EmojiFlag.twemoji(value).style,
+          isNot(
+            EmojiFlag.platformDefault(
+              value,
+              style: EmojiFlag.twemoji(value).style?.copyWith(fontSize: 1),
+            ).style,
+          ),
+        );
       });
     });

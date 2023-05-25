@@ -1,6 +1,7 @@
 // ignore_for_file: missing-test-assertion
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/world_countries.dart";
+import "package:world_countries/src/widgets/country/country_picker.dart";
+import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
 
@@ -10,6 +11,15 @@ void main() => group("$PhoneCodePicker", () {
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
           (item) => item.namesNative.first.common,
+        ),
+      );
+
+      testWidgets(
+        "scroll from first to last item and without selection test",
+        (tester) async => tester.testPickerBody(
+          const PhoneCodePicker(),
+          (item) => item.namesNative.first.common,
+          testSelection: false,
         ),
       );
 

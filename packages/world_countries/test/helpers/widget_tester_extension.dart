@@ -9,14 +9,27 @@ import "package:world_countries/world_countries.dart";
 extension WidgetTesterExtension on WidgetTester {
   Future<void> testPickerBody<T extends Object>(
     BasicPicker<T> picker,
-    String Function(T value) findLabel,
-  ) async {
+    String Function(T value) findLabel, {
+    bool testSelection = true,
+  }) async {
     T? selected;
-    final testPicker = picker.copyWith(onSelect: (item) => selected = item);
+    final testPicker = testSelection
+        ? picker.copyWith(onSelect: (item) => selected = item)
+        : picker;
     await pumpWidget(MaterialApp(home: Scaffold(body: testPicker)));
+    if (testPicker.showClearButton) {
+      await enterText(find.byType(TextField), "A");
+      await testTextInput.receiveAction(TextInputAction.done);
+      final clearButton = find.byType(ClearButton);
+      expect(clearButton, findsOneWidget);
+      await pumpAndSettle();
+      await ensureVisible(clearButton);
+      await tap(clearButton);
+      await pumpAndSettle();
+    }
     expect(selected, isNull);
     await _testPicker(testPicker, findLabel);
-    expect(selected, picker.items.last);
+    if (testSelection) expect(selected, picker.items.last);
   }
 
   Future<void> testPickerInDialog<T extends Object>(
