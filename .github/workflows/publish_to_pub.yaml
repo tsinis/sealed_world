@@ -32,11 +32,12 @@ jobs:
         with:
           working-directory: ${{ env.relative_path }}
           list-files: shell
+          base: main
           filters: |
             changelog:
-              - './CHANGELOG.md'
+              - 'CHANGELOG.md'
             pubspec:
-              - './pubspec.yaml'
+              - 'pubspec.yaml'
 
       - name: ❌ Cancel publishing if changelog and version wasn't updated
         uses: andymckay/cancel-action@0.3
