@@ -1,0 +1,69 @@
+name: publish_to_pub
+
+on:
+  workflow_call:
+    inputs:
+      package_name:
+        required: true
+        type: string
+
+jobs:
+  check-package-version:
+    env:
+      relative_path: packages/${{ inputs.package_name }}
+    name: ⏳ Publish ${{ inputs.package_name }} Package
+    if: ${{ github.event_name == 'push' && github.actor == 'tsinis' }}
+    defaults:
+      run:
+        working-directory: ${{ env.relative_path }}
+
+    runs-on: "ubuntu-latest"
+    timeout-minutes: 10
+
+    steps:
+      - name: 📚 Git checkout
+        uses: actions/checkout@v3
+
+      - name: ⚖️ Check if changelog and version was updated
+        uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          working-directory: ${{ env.relative_path }}
+          filters: |
+            changelog:
+              - 'CHANGELOG.md'
+            pubspec:
+              - 'pubspec.yaml'
+
+      - name: ❌ Cancel publishing if changelog and version wasn't updated
+        uses: andymckay/cancel-action@0.3
+        if: ${{ !steps.changes.outputs.pubspec || !steps.changes.outputs.changelog }}
+
+      - name: 1️⃣ Get version from pubspec.yaml
+        id: pubspec
+        run: |
+          PUBSPEC_VERSION=$(sed -n '1 s/version: *//p' pubspec.yaml)
+          echo "::set-output name=version::$PUBSPEC_VERSION"
+
+      - name: 2️⃣ Get version from CHANGELOG.md
+        id: changelog
+        run: |
+          CHANGELOG_VERSION=$(sed -n '1 s/^## *//p' CHANGELOG.md)
+          echo "::set-output name=version::$CHANGELOG_VERSION"
+
+      - name: 🆚 Check if versions match
+        run: |
+          echo "pubspec.yaml version: ${{ steps.pubspec.outputs.version }}"
+          echo "CHANGELOG.md version: ${{ steps.changelog.outputs.version }}"
+
+      - name: 🚫 Cancel workflow if tag is not the same as version
+        uses: andymckay/cancel-action@0.3
+        if: ${{ steps.pubspec.outputs.version != steps.changelog.outputs.version }}
+
+  publish:
+      name: 📝 Publish to pub.dev
+      needs: check-package-version
+      if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
+      uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+      with:
+        working-directory: ${{ env.relative_path }}

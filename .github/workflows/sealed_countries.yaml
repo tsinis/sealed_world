@@ -13,7 +13,11 @@ on:
       - ".github/workflows/sealed_countries.yaml"
 
 jobs:
-  verify-currencies-dart:
+  verify-countries-dart:
     uses: ./.github/workflows/dart_package_workflow.yaml
+    with:
+      package_name: sealed_countries
+  publish-countries-dart:
+    uses: ./.github/workflows/publish_to_pub.yaml
     with:
       package_name: sealed_countries

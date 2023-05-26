@@ -13,7 +13,11 @@ on:
       - ".github/workflows/sealed_languages.yaml"
 
 jobs:
-  verify-currencies-dart:
+  verify-languages-dart:
     uses: ./.github/workflows/dart_package_workflow.yaml
+    with:
+      package_name: sealed_languages
+  publish-languages-dart:
+    uses: ./.github/workflows/publish_to_pub.yaml
     with:
       package_name: sealed_languages
