@@ -20,4 +20,4 @@ jobs:
   publish-languages-dart:
     uses: ./.github/workflows/publish_to_pub.yaml
     with:
-      package_name: sealed_languages
+      package_to_publish: sealed_languages

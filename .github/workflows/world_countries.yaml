@@ -20,4 +20,4 @@ jobs:
   publish-countries-flutter:
     uses: ./.github/workflows/publish_to_pub.yaml
     with:
-      package_name: world_countries
+      package_to_publish: world_countries
