@@ -32,13 +32,17 @@ jobs:
           list-files: shell
           filters: |
             changelog:
-              - 'CHANGELOG.md'
+              - './CHANGELOG.md'
             pubspec:
-              - 'pubspec.yaml'
+              - './pubspec.yaml'
 
       - name: ❌ Cancel publishing if changelog and version wasn't updated
         uses: andymckay/cancel-action@0.3
         if: ${{ steps.changes.outputs.pubspec != 'true' || steps.changes.outputs.changelog != 'true' }}
+
+      - name: Sleep for 10 seconds
+        run: sleep 10s
+        shell: bash
 
       - name: 1️⃣ Get version from pubspec.yaml
         id: pubspec
@@ -60,6 +64,10 @@ jobs:
       - name: 🚫 Cancel workflow if tag is not the same as version
         uses: andymckay/cancel-action@0.3
         if: ${{ steps.pubspec.outputs.version != steps.changelog.outputs.version }}
+
+      - name: Sleep for 10 seconds
+        run: sleep 10s
+        shell: bash
 
   publish:
       name: 📝 Publish to pub.dev
