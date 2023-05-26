@@ -2,13 +2,14 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/build_context_extensions.dart";
 
+import "../../helpers/widget_tester_extension.dart";
+
 void main() => group("BuildContextExtensions", () {
-      Widget wrap(Widget child) => MaterialApp(home: Scaffold(body: child));
       Future<BuildContext> contextExtractor(
         WidgetTester tester, [
         Widget child = const SizedBox(),
       ]) async {
-        await tester.pumpWidget(wrap(child));
+        await tester.pumpMaterialApp(child);
 
         return tester.element(find.byType(child.runtimeType));
       }
@@ -38,13 +39,11 @@ void main() => group("BuildContextExtensions", () {
 
       testWidgets("pop pops the current route", (tester) async {
         final route = MaterialPageRoute<Object>(builder: (_) => Container());
-        await tester.pumpWidget(
-          wrap(
-            Builder(
-              builder: (context) => ElevatedButton(
-                onPressed: () async => context.push(route),
-                child: const Text("Push route"),
-              ),
+        await tester.pumpMaterialApp(
+          Builder(
+            builder: (context) => ElevatedButton(
+              onPressed: () async => context.push(route),
+              child: const Text("Push route"),
             ),
           ),
         );
@@ -59,13 +58,11 @@ void main() => group("BuildContextExtensions", () {
 
       testWidgets("push pushes a new route", (tester) async {
         final route = MaterialPageRoute<Object>(builder: (_) => Container());
-        await tester.pumpWidget(
-          wrap(
-            Builder(
-              builder: (context) => ElevatedButton(
-                onPressed: () async => context.push(route),
-                child: const Text("Push route"),
-              ),
+        await tester.pumpMaterialApp(
+          Builder(
+            builder: (context) => ElevatedButton(
+              onPressed: () async => context.push(route),
+              child: const Text("Push route"),
             ),
           ),
         );
@@ -84,16 +81,14 @@ void main() => group("BuildContextExtensions", () {
           final route1 = MaterialPageRoute<Object>(builder: (_) => Container());
           final route2 =
               MaterialPageRoute<Object>(builder: (_) => const SizedBox());
-          await tester.pumpWidget(
-            wrap(
-              Builder(
-                builder: (context) => ElevatedButton(
-                  onPressed: () async {
-                    await context.push(route1);
-                    await context.push(route2);
-                  },
-                  child: const Text("Push routes"),
-                ),
+          await tester.pumpMaterialApp(
+            Builder(
+              builder: (context) => ElevatedButton(
+                onPressed: () async {
+                  await context.push(route1);
+                  await context.push(route2);
+                },
+                child: const Text("Push routes"),
               ),
             ),
           );
