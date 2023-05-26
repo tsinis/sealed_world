@@ -67,4 +67,4 @@ jobs:
       if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
       uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
       with:
-        working-directory: ${{ join(github.workspace, 'sealed_world/packages/', inputs.package_name) }}
+        working-directory: ${{ github.workspace }}/sealed_world/packages/${{ inputs.package_name }}
