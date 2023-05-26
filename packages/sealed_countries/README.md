@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_countries.svg)](https://pub.dev/packages/sealed_countries)
 
-This ISO-driven and pure Dart package provides information about world countries in form of compile-time constant sealed classes. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, languages, currencies etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, fully tested and pure Dart package provides information about world countries in form of compile-time constant sealed classes. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, languages, currencies etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ## Features
 

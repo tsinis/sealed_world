@@ -17,3 +17,7 @@ jobs:
     uses: ./.github/workflows/dart_package_workflow.yaml
     with:
       package_name: sealed_currencies
+  publish-currencies-dart:
+    uses: ./.github/workflows/publish_to_pub.yaml
+    with:
+      package_name: sealed_currencies

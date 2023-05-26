@@ -3,10 +3,26 @@ import "dart:async";
 
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/world_countries.dart";
+import "package:world_countries/src/widgets/buttons/clear_button.dart";
+import "package:world_countries/src/widgets/pickers/basic_picker.dart";
 
 // ignore: avoid-top-level-members-in-tests, it's not a test.
 extension WidgetTesterExtension on WidgetTester {
+  Future<MaterialApp> pumpMaterialApp(Widget child) async {
+    final app = MaterialApp(home: Scaffold(body: child));
+    await pumpWidget(app);
+
+    return app;
+  }
+
+  Future<WidgetsApp> pumpWidgetsApp(Widget child) async {
+    final app =
+        WidgetsApp(builder: (_, __) => child, color: const Color(0x00000000));
+    await pumpWidget(app);
+
+    return app;
+  }
+
   Future<void> testPickerBody<T extends Object>(
     BasicPicker<T> picker,
     String Function(T value) findLabel, {
