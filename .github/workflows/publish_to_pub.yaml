@@ -3,19 +3,19 @@ name: publish_to_pub
 on:
   workflow_call:
     inputs:
-      package_to_publish:
+      package_name:
         required: true
         type: string
 
 jobs:
   check-package-version:
     env:
-      relative_dir: packages/${{ inputs.package_to_publish }}
-    name: ⏳ Publish ${{ inputs.package_to_publish }} Package
+      relative_path: packages/${{ inputs.package_name }}
+    name: ⏳ Publish ${{ inputs.package_name }} Package
     if: ${{ github.event_name == 'push' && github.actor == 'tsinis' }}
     defaults:
       run:
-        working-directory: ${{ env.relative_dir }}
+        working-directory: ${{ env.relative_path }}
 
     runs-on: "ubuntu-latest"
     timeout-minutes: 10
@@ -28,7 +28,7 @@ jobs:
         uses: dorny/paths-filter@v2
         id: changes
         with:
-          working-directory: ${{ env.relative_dir }}
+          working-directory: ${{ env.relative_path }}
           filters: |
             changelog:
               - 'CHANGELOG.md'
@@ -66,4 +66,4 @@ jobs:
       if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
       uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
       with:
-        working-directory: ${{ env.relative_dir }}
+        working-directory: ${{ join('packages/', inputs.package_name) }}

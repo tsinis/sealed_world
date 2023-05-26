@@ -20,4 +20,4 @@ jobs:
   publish-countries-dart:
     uses: ./.github/workflows/publish_to_pub.yaml
     with:
-      package_to_publish: sealed_countries
+      package_name: sealed_countries
