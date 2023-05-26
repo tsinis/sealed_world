@@ -29,6 +29,7 @@ jobs:
         id: changes
         with:
           working-directory: ${{ env.relative_path }}
+          list-files: shell
           filters: |
             changelog:
               - 'CHANGELOG.md'
@@ -37,7 +38,7 @@ jobs:
 
       - name: ❌ Cancel publishing if changelog and version wasn't updated
         uses: andymckay/cancel-action@0.3
-        if: ${{ !steps.changes.outputs.pubspec || !steps.changes.outputs.changelog }}
+        if: ${{ steps.changes.outputs.pubspec != 'true' || steps.changes.outputs.changelog != 'true' }}
 
       - name: 1️⃣ Get version from pubspec.yaml
         id: pubspec
@@ -66,4 +67,4 @@ jobs:
       if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
       uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
       with:
-        working-directory: ${{ join('packages/', inputs.package_name) }}
+        working-directory: ${{ join(github.workspace, 'sealed_world/packages/', inputs.package_name) }}
