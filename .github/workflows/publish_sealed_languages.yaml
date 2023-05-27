@@ -9,6 +9,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    if: github.ref_type == 'tag'
     timeout-minutes: 5
     steps:
       - name: 🏷️ Set version tag
