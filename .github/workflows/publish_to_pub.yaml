@@ -79,4 +79,4 @@ jobs:
       if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
       uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
       with:
-        working-directory: ${{ github.workspace }}/packages/${{ inputs.package_name }}
+        working-directory: packages/${{ inputs.package_name }}
