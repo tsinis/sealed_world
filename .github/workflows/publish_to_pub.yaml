@@ -27,21 +27,23 @@ jobs:
           fetch-depth: 0
 
       - name: ⚖️ Check if changelog and version was updated
-        uses: dorny/paths-filter@v2
+        uses: tj-actions/changed-files@v36.0.6
         id: changes
         with:
-          working-directory: ${{ env.relative_path }}
-          list-files: shell
-          base: main
-          filters: |
-            changelog:
-              - 'CHANGELOG.md'
-            pubspec:
-              - 'pubspec.yaml'
+          path: ${{ env.relative_path }}
+          files: |
+            CHANGELOG.md
+            pubspec.yaml
+
+      - name: List all changed files
+        run: |
+          for file in ${{ steps.changes.outputs.any_changed }}; do
+          echo "$file was modified""
+          done
 
       - name: ❌ Cancel publishing if changelog and version wasn't updated
         uses: andymckay/cancel-action@0.3
-        if: ${{ steps.changes.outputs.pubspec != 'true' || steps.changes.outputs.changelog != 'true' }}
+        if: ${{ steps.changes.outputs.any_changed == 'false' }}
 
       - name: Sleep for 10 seconds
         run: sleep 10s
