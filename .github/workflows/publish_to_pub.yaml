@@ -20,44 +20,48 @@ jobs:
       run:
         working-directory: ${{ env.relative_path }}
 
-    runs-on: "ubuntu-latest"
+    runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
+      - name: 1️⃣ Set version tag
+        run: |
+          VERSION_TAG=$(echo "${{ inputs.tag }}" | grep -oE '${{ inputs.package_name }}-v([0-9]+.[0-9]+.[0-9]+)' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+          echo "TAG=${VERSION_TAG}" >> $GITHUB_ENV
+
       - name: 📚 Git checkout
         uses: actions/checkout@v3
 
-
-      - name: 1️⃣ Get version from pubspec.yaml
+      - name: 2️⃣ Get version from pubspec.yaml
         run: |
           PUBSPEC_VERSION=$(sed -n '1 s/version: *//p' pubspec.yaml)
           echo "PUBSPEC=${PUBSPEC_VERSION}" >> $GITHUB_ENV
 
-      - name: 2️⃣ Get version from CHANGELOG.md
+      - name: 3️⃣ Get version from CHANGELOG.md
         run: |
           CHANGELOG_VERSION=$(sed -n '1 s/^## *//p' CHANGELOG.md)
           echo "CHANGELOG=${CHANGELOG_VERSION}" >> $GITHUB_ENV
 
       - name: 🆚 Check if versions match
         run: |
+          echo "Tag version: ${{ env.TAG }}"
           echo "pubspec.yaml version: ${{ env.PUBSPEC }}"
           echo "CHANGELOG.md version: ${{ env.CHANGELOG }}"
-          echo "Tag version: ${{ inputs.tag }}"
 
-      - name: Delete tag if version is not same as tag
+      - name: ❌ Delete tag if version is not same as tag
         uses: dev-drprasad/delete-tag-and-release@v0.2.1
-        if: ${{ env.PUBSPEC != env.CHANGELOG || env.PUBSPEC != inputs.tag || env.CHANGELOG != inputs.tag }}
+        if: ${{ env.PUBSPEC != env.CHANGELOG || env.PUBSPEC != env.TAG || env.CHANGELOG != env.TAG }}
         with:
-          tag_name: ${{ inputs.package_name }}-v${{ inputs.tag }}
+          tag_name: ${{ inputs.tag }}
           delete_release: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚫 Cancel workflow if tag is not the same as version
         uses: andymckay/cancel-action@0.3
-        if: ${{ env.PUBSPEC != env.CHANGELOG || env.PUBSPEC != inputs.tag || env.CHANGELOG != inputs.tag }}
+        if: ${{ env.PUBSPEC != env.CHANGELOG || env.PUBSPEC != env.TAG || env.CHANGELOG != env.TAG }}
 
-      - name: Sleep for 10 seconds
+      - name: 💤 Sleep for 10 seconds
         run: sleep 10s
         shell: bash
 
@@ -67,5 +71,5 @@ jobs:
       if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
       uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
       with:
-        environment: pub.dev
+        environment: 'pub.dev'
         working-directory: packages/${{ inputs.package_name }}

@@ -8,18 +8,8 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
     if: github.ref_type == 'tag'
-    timeout-minutes: 5
-    steps:
-      - name: 🏷️ Set version tag
-        id: version-tag
-        run: |
-          VERSION_TAG=$(echo "${{ github.ref }}" | grep -oE 'sealed_languages-v([0-9]+.[0-9]+.[0-9]+)' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
-          echo "TAG=${VERSION_TAG}" >> "$GITHUB_OUTPUT"
-
-      - name: Publish to pub.dev
-        uses: ./.github/workflows/publish_to_pub.yaml
-        with:
-          package_name: sealed_languages
-          version_tag: "${{ steps.version-tag.outputs.TAG }}"
+    uses: ./.github/workflows/publish_to_pub.yaml
+    with:
+      package_name: sealed_languages
+      version_tag: ${{ github.ref }}
