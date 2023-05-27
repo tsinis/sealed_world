@@ -24,13 +24,16 @@ jobs:
     timeout-minutes: 10
 
     steps:
+      - name: 📚 Git checkout
+        uses: actions/checkout@v3
+
       - name: 1️⃣ Set version tag
         run: |
           VERSION_TAG=$(echo "${{ inputs.tag }}" | grep -oE '${{ inputs.package_name }}-v([0-9]+.[0-9]+.[0-9]+)' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
           echo "TAG=${VERSION_TAG}" >> $GITHUB_ENV
-
-      - name: 📚 Git checkout
-        uses: actions/checkout@v3
+        shell: /bin/bash -e {0}
+        env:
+          relative_path: ${{ env.relative_path }}
 
       - name: 2️⃣ Get version from pubspec.yaml
         run: |
