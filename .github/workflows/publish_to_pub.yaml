@@ -37,9 +37,7 @@ jobs:
 
       - name: List all changed files
         run: |
-          for file in ${{ steps.changes.outputs.any_changed }}; do
-          echo "$file was modified""
-          done
+          echo "List all the files that have changed: ${{ steps.changes.outputs.all_changed_files }}"
 
       - name: ❌ Cancel publishing if changelog and version wasn't updated
         uses: andymckay/cancel-action@0.3
