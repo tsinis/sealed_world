@@ -37,6 +37,7 @@ jobs:
 
       - name: List all changed files
         run: |
+          echo "Detected changes in changelog and pubspec: ${{ steps.changes.outputs.any_changed }}"
           echo "List all the files that have changed: ${{ steps.changes.outputs.all_changed_files }}"
 
       - name: ❌ Cancel publishing if changelog and version wasn't updated
