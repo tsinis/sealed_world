@@ -1,4 +1,4 @@
-name: sealed_countries
+name: verify_sealed_countries
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - ".github/workflows/sealed_countries.yaml"
 
 jobs:
-  verify-countries-dart:
+  verify-sealed-countries:
     uses: ./.github/workflows/dart_package_workflow.yaml
     with:
       package_name: sealed_countries
