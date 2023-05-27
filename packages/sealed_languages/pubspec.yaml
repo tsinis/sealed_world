@@ -3,7 +3,7 @@ name: sealed_languages
 description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages
-issue_tracker: https://github.com/tsinis/sealed_world/issues
+issue_tracker: https://github.com/tsinis/sealed_world/issues/
 topics:
  - languages
  - language
