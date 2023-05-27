@@ -1,6 +1,6 @@
 ## 0.2.0
 
-- tests: increase code coverage to 100%
+- test: increase code coverage to 100%
 
 ## 0.1.0
 
