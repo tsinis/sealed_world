@@ -3,6 +3,8 @@ name: backup
 on:
   push:
     branches: [main]
+    paths:
+      - "packages/**"
 
 jobs:
   mirror-to-gitlab:
