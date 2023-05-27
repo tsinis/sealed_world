@@ -1,3 +1,7 @@
+## 0.2.0
+
+- test: increase code coverage to 100%
+
 ## 0.1.0
 
 - docs: provided code coverage links and badge
