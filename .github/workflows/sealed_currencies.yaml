@@ -1,4 +1,4 @@
-name: sealed_currencies
+name: verify_sealed_currencies
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - ".github/workflows/sealed_currencies.yaml"
 
 jobs:
-  verify-currencies-dart:
+  verify-sealed-currencies:
     uses: ./.github/workflows/dart_package_workflow.yaml
     with:
       package_name: sealed_currencies

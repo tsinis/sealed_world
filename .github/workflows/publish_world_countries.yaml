@@ -1,15 +1,15 @@
-name: publish_sealed_languages
+name: publish_world_countries
 
 on:
   push:
     branches: [main]
     tags:
-    - 'sealed_languages-v[0-9]+.[0-9]+.[0-9]+*'
+    - 'world_countries-v[0-9]+.[0-9]+.[0-9]+*'
 
 jobs:
-  publish-sealed-languages:
+  publish-world-countries:
     if: github.ref_type == 'tag'
     uses: ./.github/workflows/publish_to_pub.yaml
     with:
-      package_name: sealed_languages
+      package_name: world_countries
       tag: ${{ github.ref }}
