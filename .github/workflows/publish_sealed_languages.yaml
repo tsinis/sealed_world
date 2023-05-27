@@ -1,0 +1,17 @@
+name: publish_to_pub
+
+on:
+  push:
+    branches: [main]
+    tags:
+    - 'sealed_languages-v[0-9]+.[0-9]+.[0-9]+*'
+
+env:
+  VERSION_TAG: ${{ github.ref =~ 'refs/tags/sealed_languages-v([0-9]+.[0-9]+.[0-9]+)' && runShellCommand('echo ${{ github.ref }} | grep -oE ''[0-9]+\.[0-9]+\.[0-9]+''') }}
+
+jobs:
+  verify-languages-dart:
+    uses: ./.github/workflows/publish_to_pub.yaml
+    with:
+      package_name: sealed_languages
+      version_tag: ${{ env.VERSION_TAG }}

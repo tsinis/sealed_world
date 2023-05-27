@@ -6,6 +6,9 @@ on:
       package_name:
         required: true
         type: string
+      tag:
+        required: true
+        type: string
 
 jobs:
   check-package-version:
@@ -23,51 +26,36 @@ jobs:
     steps:
       - name: 📚 Git checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      - name: ⚖️ Check if changelog and version was updated
-        uses: tj-actions/changed-files@v36.0.6
-        id: changes
-        with:
-          path: ${{ env.relative_path }}
-          files: |
-            CHANGELOG.md
-            pubspec.yaml
-
-      - name: List all changed files
-        run: |
-          echo "Detected changes in changelog and pubspec: ${{ steps.changes.outputs.any_changed }}"
-          echo "List all the files that have changed: ${{ steps.changes.outputs.all_changed_files }}"
-
-      - name: ❌ Cancel publishing if changelog and version wasn't updated
-        uses: andymckay/cancel-action@0.3
-        if: ${{ steps.changes.outputs.any_changed == 'false' }}
-
-      - name: Sleep for 10 seconds
-        run: sleep 10s
-        shell: bash
 
       - name: 1️⃣ Get version from pubspec.yaml
-        id: pubspec
         run: |
           PUBSPEC_VERSION=$(sed -n '1 s/version: *//p' pubspec.yaml)
-          echo "::set-output name=version::$PUBSPEC_VERSION"
+          echo "PUBSPEC=${PUBSPEC_VERSION}" >> $GITHUB_ENV
 
       - name: 2️⃣ Get version from CHANGELOG.md
-        id: changelog
         run: |
           CHANGELOG_VERSION=$(sed -n '1 s/^## *//p' CHANGELOG.md)
-          echo "::set-output name=version::$CHANGELOG_VERSION"
+          echo "CHANGELOG=${CHANGELOG_VERSION}" >> $GITHUB_ENV
 
       - name: 🆚 Check if versions match
         run: |
-          echo "pubspec.yaml version: ${{ steps.pubspec.outputs.version }}"
-          echo "CHANGELOG.md version: ${{ steps.changelog.outputs.version }}"
+          echo "pubspec.yaml version: ${{ env.PUBSPEC }}"
+          echo "CHANGELOG.md version: ${{ env.CHANGELOG }}"
+          echo "Tag version: ${{ inputs.tag }}"
+
+      - name: Delete tag if version is not same as tag
+        uses: dev-drprasad/delete-tag-and-release@v0.2.1
+        if: ${{ env.PUBSPEC != env.CHANGELOG || env.PUBSPEC != inputs.tag || env.CHANGELOG != inputs.tag }}
+        with:
+          tag_name: ${{ inputs.package_name }}-v${{ inputs.tag }}
+          delete_release: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚫 Cancel workflow if tag is not the same as version
         uses: andymckay/cancel-action@0.3
-        if: ${{ steps.pubspec.outputs.version != steps.changelog.outputs.version }}
+        if: ${{ env.PUBSPEC != env.CHANGELOG || env.PUBSPEC != inputs.tag || env.CHANGELOG != inputs.tag }}
 
       - name: Sleep for 10 seconds
         run: sleep 10s
@@ -79,4 +67,5 @@ jobs:
       if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
       uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
       with:
+        environment: pub.dev
         working-directory: packages/${{ inputs.package_name }}
