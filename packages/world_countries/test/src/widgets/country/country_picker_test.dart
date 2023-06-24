@@ -7,6 +7,17 @@ import "package:world_countries/src/widgets/country/country_picker.dart";
 import "../../../helpers/widget_tester_extension.dart";
 
 void main() => group("$CountryPicker", () {
+      test("copyWith", () {
+        const picker = CountryPicker();
+        expect(picker.onSelect, isNull);
+        final newPicker = picker.copyWith(onSelect: (item) => item.toString());
+        newPicker.onSelect?.call(picker.items.first);
+        expect(newPicker.onSelect, isNotNull);
+        final newestPicker = newPicker.copyWith(onSelect: print);
+        expect(newestPicker.onSelect, isNotNull);
+        expect(newestPicker.copyWith(), isNot(newestPicker));
+      });
+
       testWidgets(
         "scroll from first to last item and tap",
         (tester) async => tester.testPickerBody(
@@ -64,6 +75,26 @@ void main() => group("$CountryPicker", () {
           ),
         );
         expect(find.byType(CountryPicker), findsOneWidget);
+        expect(find.text(countries.first.emoji), findsOneWidget);
+        expect(find.text(countries.last.emoji), findsNothing);
+      });
+
+      testWidgets("in $WidgetsApp with sorted via sort param", (tester) async {
+        final countries = List.of(WorldCountry.list);
+        await tester.pumpWidgetsApp(
+          CountryPicker(
+            countries: countries,
+            chosen: [countries.last],
+            disabled: [countries.first],
+            showSearchBar: false,
+            sort: (a, b) => a.population.compareTo(b.population),
+          ),
+        );
+        final sortedCountries = List.of(WorldCountry.list)
+          ..sort((a, b) => a.population.compareTo(b.population));
+        expect(find.byType(CountryPicker), findsOneWidget);
+        expect(find.text(sortedCountries.first.emoji), findsOneWidget);
+        expect(find.text(sortedCountries.last.emoji), findsNothing);
       });
 
       testWidgets("in $WidgetsApp with empty countries", (tester) async {

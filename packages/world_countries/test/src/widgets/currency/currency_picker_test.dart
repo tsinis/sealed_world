@@ -5,6 +5,17 @@ import "package:world_countries/src/widgets/currency/currency_picker.dart";
 import "../../../helpers/widget_tester_extension.dart";
 
 void main() => group("$CurrencyPicker", () {
+      test("copyWith", () {
+        const picker = CurrencyPicker();
+        expect(picker.onSelect, isNull);
+        final newPicker = picker.copyWith(onSelect: (item) => item.toString());
+        newPicker.onSelect?.call(picker.items.first);
+        expect(newPicker.onSelect, isNotNull);
+        final newestPicker = newPicker.copyWith(onSelect: print);
+        expect(newestPicker.onSelect, isNotNull);
+        expect(newestPicker.copyWith(), isNot(newestPicker));
+      });
+
       testWidgets(
         "scroll from first to last item and tap",
         (tester) async => tester.testPickerBody(
