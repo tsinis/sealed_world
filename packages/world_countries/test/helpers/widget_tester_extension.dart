@@ -101,6 +101,26 @@ extension WidgetTesterExtension on WidgetTester {
     await pumpAndSettle();
     await tap(find.byIcon(Icons.search));
     expect(selected, isNull);
+
+    if (inDialog == false) {
+      await pumpAndSettle();
+      final closeButton = find.byIcon(Icons.arrow_back);
+      expect(closeButton, findsOneWidget);
+      await tap(closeButton);
+      await pumpAndSettle();
+      expect(closeButton, findsNothing);
+      await tap(find.byIcon(Icons.search));
+      expect(selected, isNull);
+      await pumpAndSettle();
+      final textField = find.byType(TextField);
+      expect(textField, findsOneWidget);
+      await enterText(textField, "A");
+      // ignore: avoid-non-null-assertion, defaultIcon has an icon.
+      final clearButton = find.byIcon(ClearButton.defaultIcon.icon!);
+      expect(clearButton, findsOneWidget);
+      await tap(clearButton);
+    }
+
     await _testPicker(testPicker, findLabel);
     expect(selected, picker.items.last);
   }

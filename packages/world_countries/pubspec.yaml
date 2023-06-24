@@ -1,4 +1,4 @@
-version: 0.2.0
+version: 0.2.1
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
@@ -10,10 +10,10 @@ topics:
  - country-picker
  - country-selector
  - currency-picker
- - phone-code-picker
- - language-picker
 
 screenshots:
+  - description: 'Structure visualization'
+    path: doc/structure.webp
   - description: 'Search picker example'
     path: doc/search_picker.webp
   - description: 'Modal bottom sheet picker example'
@@ -37,12 +37,12 @@ dependencies:
   sealed_countries: ^0.2.0
 
 dev_dependencies:
-  build_runner: ^2.4.4 # From Google
-  dart_code_metrics: ^5.7.4 # Flutter Favorite
+  build_runner: ^2.4.5 # From Google
+  dart_code_metrics: ^5.7.5 # Flutter Favorite
   flutter_gen_runner: ^5.3.1
   flutter_test: # From Google
     sdk: flutter
-  lints: ^2.1.0 # From Google
+  lints: ^2.1.1 # From Google
 
 flutter:
   assets:

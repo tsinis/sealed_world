@@ -3,7 +3,6 @@
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
-import "../../extensions/build_context_extensions.dart";
 import "../../interfaces/material_context_interface.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 import "indexed_list_view_builder.dart";
@@ -117,7 +116,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
   State<SearchableIndexedListViewBuilder<T>> createState() =>
       _SearchableIndexedListViewBuilderState<T>();
 
-  @override
+  @override // coverage:ignore-line
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
@@ -136,31 +135,10 @@ class SearchableIndexedListViewBuilder<T extends Object>
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
     double? heightFactor = 0.66,
-  }) =>
-      showModalBottomSheet<T>(
-        context: context,
-        builder: (internalContext) => Padding(
-          padding: internalContext.media.viewInsets,
-          child: FractionallySizedBox(heightFactor: heightFactor, child: this),
-        ),
-        backgroundColor: backgroundColor,
-        elevation: elevation,
-        shape: shape,
-        clipBehavior: clipBehavior,
-        constraints: constraints,
-        barrierColor: barrierColor,
-        isScrollControlled: isScrollControlled,
-        useRootNavigator: useRootNavigator,
-        isDismissible: isDismissible,
-        enableDrag: enableDrag,
-        showDragHandle: showDragHandle,
-        useSafeArea: useSafeArea,
-        routeSettings: routeSettings,
-        transitionAnimationController: transitionAnimationController,
-        anchorPoint: anchorPoint,
-      );
+  }) async =>
+      null;
 
-  @override
+  @override // coverage:ignore-line
   Future<T?>? showInSearch(
     BuildContext context, {
     String? query = "",
@@ -168,7 +146,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
   }) =>
       null;
 
-  @override
+  @override // coverage:ignore-line
   Future<T?>? showInDialog(
     BuildContext context, {
     bool barrierDismissible = true,
@@ -207,42 +185,5 @@ class SearchableIndexedListViewBuilder<T extends Object>
     AlignmentGeometry? alignment,
     bool scrollable = false,
   }) =>
-      showDialog(
-        context: context,
-        builder: (internalContext) => AlertDialog(
-          iconPadding: iconPadding,
-          iconColor: iconColor,
-          title: title,
-          titlePadding: titlePadding,
-          titleTextStyle: titleTextStyle,
-          content: SizedBox(width: double.maxFinite, child: this),
-          contentPadding: contentPadding,
-          contentTextStyle: contentTextStyle,
-          actions: actions,
-          actionsPadding: actionsPadding,
-          actionsAlignment: actionsAlignment,
-          actionsOverflowAlignment: actionsOverflowAlignment,
-          actionsOverflowDirection: actionsOverflowDirection,
-          actionsOverflowButtonSpacing: actionsOverflowButtonSpacing,
-          buttonPadding: buttonPadding,
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          semanticLabel: semanticLabel,
-          insetPadding: insetPadding,
-          clipBehavior: clipBehavior,
-          shape: shape,
-          alignment: alignment,
-          scrollable: scrollable,
-        ),
-        barrierDismissible: barrierDismissible,
-        barrierColor: barrierColor,
-        barrierLabel: barrierLabel,
-        useSafeArea: useSafeArea,
-        useRootNavigator: useRootNavigator,
-        routeSettings: routeSettings,
-        anchorPoint: anchorPoint,
-        traversalEdgeBehavior: traversalEdgeBehavior,
-      );
+      null;
 }

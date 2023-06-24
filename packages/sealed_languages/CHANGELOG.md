@@ -1,3 +1,7 @@
+## 0.2.1
+
+- docs: provided structure screenshot
+
 ## 0.2.0
 
 - test: increase code coverage to 100%

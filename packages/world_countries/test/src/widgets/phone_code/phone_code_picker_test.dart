@@ -6,6 +6,17 @@ import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
 import "../../../helpers/widget_tester_extension.dart";
 
 void main() => group("$PhoneCodePicker", () {
+      test("copyWith", () {
+        const picker = PhoneCodePicker();
+        expect(picker.onSelect, isNull);
+        final newPicker = picker.copyWith(onSelect: (item) => item.toString());
+        newPicker.onSelect?.call(picker.items.first);
+        expect(newPicker.onSelect, isNotNull);
+        final newestPicker = newPicker.copyWith(onSelect: print);
+        expect(newestPicker.onSelect, isNotNull);
+        expect(newestPicker.copyWith(), isNot(newestPicker));
+      });
+
       testWidgets(
         "scroll from first to last item and tap",
         (tester) async => tester.testPickerBody(

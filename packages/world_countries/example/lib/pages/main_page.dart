@@ -36,6 +36,7 @@ class _MainPageState extends State<MainPage>
   late final CountryPicker countryPicker = CountryPicker(
     disabled: const [CountryAfg(), CountryAlb()],
     chosen: [selectedCountry.value],
+    translation: const LangEng(),
     onSelect: (newCountry) => selectedCountry.value = newCountry,
   );
 

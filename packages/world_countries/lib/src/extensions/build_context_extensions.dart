@@ -71,7 +71,7 @@ extension BuildContextExtensions on BuildContext {
   /// ```dart
   /// EdgeInsets padding = context.padding;
   /// ```
-  EdgeInsets get padding => media.padding;
+  EdgeInsets get padding => MediaQuery.paddingOf(this);
 
   /// Returns the `ThemeData` instance for the current context.
   ///
