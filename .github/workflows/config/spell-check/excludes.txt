@@ -6,6 +6,7 @@
 \.ico$
 \.ignore$
 \.jpg$
+\.webp$
 \.lock$
 \.metadata$
 \.mp3$
