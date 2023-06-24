@@ -19,7 +19,6 @@ This ISO-driven, pure Dart, fully tested and and dependency-free package provide
 | alternateSymbols   | No       | Alternative symbols for this currency or `null` if no such symbols exists.                                               | null                |
 | disambiguateSymbol | No       | Alternative currency used if symbol is ambiguous, or `null` if no such symbol exists.                                    | null                |
 | htmlEntity         | No       | The HTML entity for the currency symbol, or `null` if no such entity exists.                                             | "€"                   |
-| priority           | Yes       | A numerical value that can be used to sort/group any currency list.                                                       | 2                   |
 | smallestDenomination | Yes     | Smallest amount of cash possible (in the subunit of this currency).                                                       | 1                   |
 | subunit            | No      | The name of the fractional monetary unit, or `null` if no such name exists.                                              | "Cent"                |
 | subunitToUnit      | Yes       | The proportion between the unit and the subunit.                                                                         | 100
