@@ -8,8 +8,10 @@ on:
 
 jobs:
   publish-world-countries:
-    if: github.ref_type == 'tag'
+    if: false # Until: https://github.com/dart-lang/setup-dart/issues/68
     uses: ./.github/workflows/publish_to_pub.yaml
+    permissions:
+      id-token: write
     with:
       package_name: world_countries
       tag: ${{ github.ref }}

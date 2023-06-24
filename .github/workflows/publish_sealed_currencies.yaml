@@ -10,6 +10,8 @@ jobs:
   publish-sealed-currencies:
     if: github.ref_type == 'tag'
     uses: ./.github/workflows/publish_to_pub.yaml
+    permissions:
+      id-token: write
     with:
       package_name: sealed_currencies
       tag: ${{ github.ref }}
