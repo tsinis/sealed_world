@@ -76,4 +76,3 @@ jobs:
     with:
       environment: 'pub.dev'
       working-directory: packages/${{ inputs.package_name }}
-      id-token: write
