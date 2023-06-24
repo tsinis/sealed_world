@@ -69,10 +69,11 @@ jobs:
         shell: bash
 
   publish:
-      name: 📝 Publish to pub.dev
-      needs: check-package-version
-      if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
-      uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
-      with:
-        environment: 'pub.dev'
-        working-directory: packages/${{ inputs.package_name }}
+    name: 📝 Publish to pub.dev
+    needs: check-package-version
+    if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@main
+    with:
+      environment: 'pub.dev'
+      working-directory: packages/${{ inputs.package_name }}
+      id-token: none
