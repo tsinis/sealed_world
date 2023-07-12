@@ -1,3 +1,9 @@
+## 0.2.2
+
+- feat: added extensions for [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html)
+- style: renamed BuildContextExtensions > BuildContextExtension
+- chore(deps): bump internal dev_dependencies versions
+
 ## 0.2.1
 
 - docs: provided structure screenshot
