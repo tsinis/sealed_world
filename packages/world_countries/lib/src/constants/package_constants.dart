@@ -1,5 +1,5 @@
 /// A utility class that contains constants related to a package.
-final class PackageConstants {
+abstract final class PackageConstants {
   const PackageConstants._(); // coverage:ignore-line
 
   /// The name of the package.
