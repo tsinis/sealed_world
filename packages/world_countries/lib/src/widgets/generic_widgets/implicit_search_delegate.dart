@@ -2,7 +2,7 @@ import "dart:collection";
 
 import "package:flutter/material.dart";
 
-import "../../extensions/build_context_extensions.dart";
+import "../../extensions/build_context_extension.dart";
 import "../../interfaces/search_delegate_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../buttons/clear_button.dart";

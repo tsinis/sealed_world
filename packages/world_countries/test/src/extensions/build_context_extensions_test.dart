@@ -1,10 +1,10 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/extensions/build_context_extensions.dart";
+import "package:world_countries/src/extensions/build_context_extension.dart";
 
 import "../../helpers/widget_tester_extension.dart";
 
-void main() => group("BuildContextExtensions", () {
+void main() => group("BuildContextExtension", () {
       Future<BuildContext> contextExtractor(
         WidgetTester tester, [
         Widget child = const SizedBox(),
