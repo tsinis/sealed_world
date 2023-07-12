@@ -7,6 +7,7 @@ export "package:sealed_countries/sealed_countries.dart";
 export "src/constants/package_constants.dart";
 export "src/constants/ui_constants.dart";
 export "src/extensions/build_context_extension.dart";
+export "src/extensions/locale_extension.dart";
 export "src/generated/fonts.gen.dart";
 export "src/helpers/functional_platform.dart";
 export "src/interfaces/search_delegate_interface.dart";
