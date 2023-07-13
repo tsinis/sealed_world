@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
 /// A set of useful extensions for `BuildContext`.
-extension BuildContextExtensions on BuildContext {
+extension BuildContextExtension on BuildContext {
   /// Returns the `MaterialLocalizations` instance for the current context.
   ///
   /// Example usage:

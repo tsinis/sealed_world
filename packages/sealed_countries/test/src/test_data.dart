@@ -1,4 +1,4 @@
-class TestData {
+abstract final class TestData {
   const TestData._();
 
   static const integer = 1;

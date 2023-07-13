@@ -1,4 +1,4 @@
-version: 0.2.1
+version: 0.2.2
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
@@ -37,7 +37,7 @@ dependencies:
   sealed_countries: ^0.2.1
 
 dev_dependencies:
-  build_runner: ^2.4.5 # From Google
+  build_runner: ^2.4.6 # From Google
   dart_code_metrics: ^5.7.5 # Flutter Favorite
   flutter_gen_runner: ^5.3.1
   flutter_test: # From Google

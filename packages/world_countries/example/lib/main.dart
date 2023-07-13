@@ -1,16 +1,10 @@
-import "package:flutter/foundation.dart";
-import "package:flutter/widgets.dart";
+import "package:flutter/foundation.dart" show PlatformDispatcher;
+import "package:flutter/widgets.dart" show runApp;
 import "package:world_countries/world_countries.dart";
 
 import "my_app.dart";
 
-Future<void> main() async {
-  const serbia = CountrySrb();
-  final countryCode = PlatformDispatcher.instance.locale.countryCode;
-  final country = WorldCountry.maybeFromValue(
-    countryCode ?? serbia.codeShort,
-    where: (expectedCountry) => expectedCountry.codeShort,
-  );
-
-  return runApp(MyApp(country: country ?? serbia));
+void main() {
+  final country = PlatformDispatcher.instance.locale.maybeCountry;
+  runApp(MyApp(country: country ?? const CountrySrb()));
 }

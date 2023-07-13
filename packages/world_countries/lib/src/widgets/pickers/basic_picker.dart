@@ -4,7 +4,7 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
-import "../../extensions/build_context_extensions.dart";
+import "../../extensions/build_context_extension.dart";
 import "../../models/item_properties.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
