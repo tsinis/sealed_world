@@ -21,8 +21,8 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
-  sealed_currencies: ^0.2.1
-  sealed_languages: ^0.2.1
+  sealed_currencies: ^0.2.2
+  sealed_languages: ^0.2.2
 
 dev_dependencies:
   build_runner: ^2.4.6 # From Google
