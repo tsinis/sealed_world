@@ -1,6 +1,6 @@
-import "dart:ui" show Locale;
+import "dart:ui";
 
-import "package:sealed_countries/sealed_countries.dart" show NaturalLanguage;
+import "package:sealed_countries/sealed_countries.dart";
 
 /// Extension on [NaturalLanguage] to convert it to a [Locale].
 extension NaturalLanguageExtension on NaturalLanguage {

@@ -1,4 +1,4 @@
-import "dart:ui" show Locale;
+import "dart:ui";
 
 import "package:sealed_countries/sealed_countries.dart";
 
