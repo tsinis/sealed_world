@@ -1,125 +1,209 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+  <head>
+    <base href="$FLUTTER_BASE_HREF" />
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="description"
+      content="An example project for sealed_world packages."
+    />
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Sealed World" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <title>Sealed World</title>
+    <link rel="manifest" href="manifest.json" />
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400"
+      rel="stylesheet"
+      media="all"
+    />
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="An example project for sealed_world package.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Sealed World">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>Sealed World</title>
-  <link rel="manifest" href="manifest.json">
-
-  <style>
-    .warning-message {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .warning-message h1 {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-
-    .warning-message p {
-      font-size: 24px;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-  </style>
-
-  <script>
-    window.onload = function () {
-      // get the user agent string
-      var userAgent = navigator.userAgent;
-
-      // check if the user agent string contains the word "Chrome"
-      if (userAgent.indexOf('Chrome/') !== -1) {
-        // get the version number of Chrome
-        var version = parseInt(userAgent.split('Chrome/')[1]);
-
-        // delay the warning message by 3 seconds
-        setTimeout(function () {
-          // check if the version number is greater than or equal to 114 and the flag is enabled
-          if (version >= 113 && /enable-webassembly-garbage-collection/.test(userAgent)) {
-            // the browser is supported, do nothing
-          } else {
-            // the browser is not supported, show message
-            document.querySelector('.warning-message').style.display = 'flex';
-          }
-        }, 3000);
-      } else {
-        // the browser is not Chromium-based, show message
-        document.querySelector('.warning-message').style.display = 'flex';
+    <!-- Renderer specifier -->
+    <script>
+      let searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.has("renderer")) {
+        window.flutterWebRenderer = searchParams.get("renderer");
+        console.log(
+          searchParams.get("renderer") + " renderer requested in the URL"
+        );
       }
-    };
-  </script>
+      // The value below is injected by flutter build, do not touch.
+      var serviceWorkerVersion = null;
+    </script>
 
-  <!-- This div is displayed when the browser is not supported -->
-  <div class="warning-message" style="display: none;">
-    <h1>Unsupported Browser</h1>
-    <p>
-      In order to run this web application, you must use Chrome version 113 or greater with the
-      <strong>enable-webassembly-garbage-collection</strong> flag enabled.
-    </p>
-    <p>
-      To check out the latest details on the Flutter WebAssembly effort, visit at <a
-        href="https://flutter.dev/wasm" target="_blank">Flutter WebAssembly
-        documentation</a>.
-    </p>
-  </div>
+    <script src="flutter.js" defer></script>
+  </head>
 
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
+  <body>
+    <style>
+      body {
+        background-color: #030303;
+      }
+    </style>
 
-</head>
-<body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          // https://github.com/flutter/flutter/issues/119536#issuecomment-1500477408
-          engineInitializer.initializeEngine({useColorEmoji: true})
-            .then(function(appRunner) {
-            appRunner.runApp();
-          });
+    <!-- Background -->
+    <style>
+      body.light {
+        background-color: #ffffff;
+      }
+
+      body.dark {
+        background-color: #2a63a9;
+      }
+    </style>
+    <script>
+      var queryParams = new URLSearchParams(window.location.search);
+
+      // Set the theme from the URL param, with fallback to user preference if no theme is
+      // specified.
+      var theme = queryParams.get("brightness");
+      theme ||= window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      document.body.classList.add(theme);
+    </script>
+
+    <!-- Loading indicator -->
+    <div id="loading">
+      <style>
+        body {
+          inset: 0;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+          position: fixed;
+        }
+
+        #loading {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+          width: 100%;
+        }
+
+        #loading img {
+          animation: 1s ease-in-out 0s infinite alternate breathe;
+          opacity: 0.66;
+          transition: opacity 0.4s;
+        }
+
+        #loading.main_done img {
+          opacity: 1;
+        }
+
+        #loading.init_done img {
+          animation: 0.33s ease-in-out 0s 1 forwards zoom;
+          opacity: 0.05;
+        }
+
+        #loading .warning {
+          font-size: 18px;
+          text-align: center;
+          margin-top: 64px;
+          display: none;
+          color: white;
+          font-family: "Robot", sans-serif;
+        }
+
+        body.light #loading .warning {
+          color: black;
+        }
+
+        #loading.show-warning .warning {
+          display: block;
+        }
+
+        #loading .warning a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        @keyframes breathe {
+          from {
+            transform: scale(1);
+          }
+
+          to {
+            transform: scale(0.95);
+          }
+        }
+
+        @keyframes zoom {
+          from {
+            transform: scale(1);
+          }
+
+          to {
+            transform: scale(0.01);
+          }
+        }
+      </style>
+      <img src="icons/Icon-192.png" alt="Loading indicator..." />
+      <div class="warning">
+        <a
+          href="https://docs.flutter.dev/platform-integration/web/wasm"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          Only Chrome browser version 114+ with
+          "enable-webassembly-garbage-collection" flag enabled is supported.
+        </a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var loading = document.querySelector("#loading");
+        var isChrome = typeof chrome !== "undefined";
+        var userAgent = navigator.userAgent;
+        var hasProperVersion =
+          isChrome && parseInt(userAgent.split("Chrome/")[1]) >= 113;
+        var hasFlag =
+          hasProperVersion &&
+          CSS.supports("--enable-webassembly-garbage-collection", true);
+
+        if (!isChrome || !hasProperVersion || !hasFlag) {
+          loading.classList.add("show-warning");
+        } else {
+          _flutter.loader
+            .loadEntrypoint({
+              serviceWorker: {
+                serviceWorkerVersion: serviceWorkerVersion,
+              },
+            })
+            .then(function (engineInitializer) {
+              loading.classList.add("main_done");
+              // https://github.com/flutter/flutter/issues/119536#issuecomment-1500477408
+              return engineInitializer.initializeEngine({
+                useColorEmoji: true,
+              });
+            })
+            .then(function (appRunner) {
+              loading.classList.add("init_done");
+              return appRunner.runApp();
+            })
+            .then(function (app) {
+              // Wait a few milliseconds so users can see the zoom animation
+              // before getting rid of the "loading" div.
+              window.setTimeout(function () {
+                loading.remove();
+              }, 200);
+            });
         }
       });
-    });
-  </script>
-</body>
+    </script>
+
+    <!-- App -->
+  </body>
 </html>
