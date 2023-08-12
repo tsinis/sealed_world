@@ -70,16 +70,7 @@ jobs:
 
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
-        uses: dart-code-checker/dart-code-metrics-action@v4.0.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          folders: "lib, test"
-          relative_path: ${{ env.relative_path }}
-          pull_request_comment: true
-          check_unused_files: true
-          fatal_performance: true
-          fatal_warnings: true
-          fatal_style: true
+        run: dart run dart_code_metrics:metrics --disable-sunset-warning --fatal-style --fatal-performance --fatal-warnings --reporter=github lib test
 
       - name: 🧪 Run tests
         run: flutter test --coverage
