@@ -2,8 +2,6 @@
 // https://gitlab.com/restcountries/restcountries, which is
 // licensed under the Mozilla Public License Version 2.0.
 
-// ignore_for_file: avoid-non-ascii-symbols
-
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:sealed_languages/sealed_languages.dart";
 

@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-non-ascii-symbols
-
 import "../model/language/language.dart";
 import "natural_language_families.data.dart";
 

@@ -1,4 +1,3 @@
-// ignore_for_file: avoid-non-ascii-symbols, arguments-ordering
 import "dart:async" show unawaited;
 
 import "package:flutter/material.dart";
@@ -34,21 +33,21 @@ class _MainPageState extends State<MainPage>
       ValueNotifier(widget.country.currencies?.first ?? const FiatEur());
 
   late final CountryPicker countryPicker = CountryPicker(
-    disabled: const [CountryAfg(), CountryAlb()],
     chosen: [selectedCountry.value],
-    translation: const LangEng(),
+    disabled: const [CountryAfg(), CountryAlb()],
     onSelect: (newCountry) => selectedCountry.value = newCountry,
+    translation: const LangEng(),
   );
 
   late final CurrencyPicker currencyPicker = CurrencyPicker(
-    disabled: const [FiatAfn()],
     chosen: [selectedCurrency.value],
+    disabled: const [FiatAfn()],
     onSelect: (newCurrency) => selectedCurrency.value = newCurrency,
   );
 
   late final LanguagePicker languagePicker = LanguagePicker(
-    disabled: const [LangAar()],
     chosen: [selectedLanguage.value],
+    disabled: const [LangAar()],
     onSelect: (newLang) => selectedLanguage.value = newLang,
   );
 

@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-non-ascii-symbols
-
 import "../helpers/fiat_currency/fiat_currency_getters_extension.dart";
 import "../model/currency.dart";
 
