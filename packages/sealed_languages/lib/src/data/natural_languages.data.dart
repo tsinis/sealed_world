@@ -4,7 +4,6 @@ import "../model/language/language.dart";
 import "natural_language_families.data.dart";
 
 /// {@hideConstantImplementations}
-// ignore: prefer-match-file-name, not necessary for the languages data.
 class LangAar extends NaturalLanguage {
   /// A class that represents the Afar language.
   ///

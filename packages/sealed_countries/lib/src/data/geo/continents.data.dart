@@ -11,7 +11,6 @@ import "../../model/geo/submodels/continent.dart";
 /// final europe = Europe();
 /// print(europe.name); // "Europe"
 /// ```
-// ignore: prefer-match-file-name, not needed in data file.
 class Europe extends Continent {
   /// Creates a new `Europe` instance.
   const Europe() : super(name: "Europe");

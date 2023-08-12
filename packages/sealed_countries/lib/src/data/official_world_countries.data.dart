@@ -23,7 +23,6 @@ import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
 
 /// {@hideConstantImplementations}
-// ignore: prefer-match-file-name, not necessary for the list of countries.
 class CountryCpv extends WorldCountry {
   /// A class that represents the country of Cape Verde.
   const CountryCpv()

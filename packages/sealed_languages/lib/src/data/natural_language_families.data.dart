@@ -1,7 +1,6 @@
 import "../model/language_family/language_family.dart";
 
 /// {@hideConstantImplementations}
-// ignore: prefer-match-file-name, it's a list of natural lang families.
 class AfroAsiatic extends NaturalLanguageFamily {
   /// A class that represents the Afro-Asiatic language family.
   const AfroAsiatic() : super(name: "Afro-Asiatic");

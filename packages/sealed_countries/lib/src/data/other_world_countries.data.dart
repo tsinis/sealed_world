@@ -21,7 +21,6 @@ import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
 
 /// {@hideConstantImplementations}
-// ignore: prefer-match-file-name, not needed in data file.
 class CountryUnk extends WorldCountry {
   /// A class that represents the country of Kosovo.
   const CountryUnk()
