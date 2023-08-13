@@ -1,7 +1,8 @@
-// ignore_for_file: public_member_api_docs, avoid-non-ascii-symbols, TODO!
 import "../../model/regional_bloc/world_bloc.dart";
 
+/// {@hideConstantImplementations}
 class BlocSAARC extends RegionalBloc {
+  /// Represents the South Asian Association for Regional Cooperation.
   const BlocSAARC()
       : super(
           acronym: "SAARC",
@@ -9,11 +10,15 @@ class BlocSAARC extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocEU extends RegionalBloc {
+  /// Represents the European Union.
   const BlocEU() : super(acronym: "EU", name: "European Union");
 }
 
+/// {@hideConstantImplementations}
 class BlocCEFTA extends RegionalBloc {
+  /// Represents the Central European Free Trade Agreement.
   const BlocCEFTA()
       : super(
           acronym: "CEFTA",
@@ -21,7 +26,9 @@ class BlocCEFTA extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocAU extends RegionalBloc {
+  /// Represents the African Union.
   const BlocAU()
       : super(
           acronym: "AU",
@@ -36,7 +43,9 @@ class BlocAU extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocAL extends RegionalBloc {
+  /// Represents the Arab League.
   const BlocAL()
       : super(
           acronym: "AL",
@@ -49,7 +58,9 @@ class BlocAL extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocCARICOM extends RegionalBloc {
+  /// Represents the Caribbean Community.
   const BlocCARICOM()
       : super(
           acronym: "CARICOM",
@@ -62,7 +73,9 @@ class BlocCARICOM extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocCAIS extends RegionalBloc {
+  /// Represents the Central American Integration System.
   const BlocCAIS()
       : super(
           acronym: "CAIS",
@@ -72,7 +85,9 @@ class BlocCAIS extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocUSAN extends RegionalBloc {
+  /// Represents the Union of South American Nations.
   const BlocUSAN()
       : super(
           acronym: "USAN",
@@ -87,7 +102,9 @@ class BlocUSAN extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocEEU extends RegionalBloc {
+  /// Represents the Eurasian Economic Union.
   const BlocEEU()
       : super(
           acronym: "EEU",
@@ -96,12 +113,16 @@ class BlocEEU extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocASEAN extends RegionalBloc {
+  /// Represents the Association of Southeast Asian Nations.
   const BlocASEAN()
       : super(acronym: "ASEAN", name: "Association of Southeast Asian Nations");
 }
 
+/// {@hideConstantImplementations}
 class BlocNAFTA extends RegionalBloc {
+  /// Represents the North American Free Trade Agreement.
   const BlocNAFTA()
       : super(
           acronym: "NAFTA",
@@ -113,7 +134,9 @@ class BlocNAFTA extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocPA extends RegionalBloc {
+  /// Represents the Pacific Alliance.
   const BlocPA()
       : super(
           acronym: "PA",
@@ -122,7 +145,9 @@ class BlocPA extends RegionalBloc {
         );
 }
 
+/// {@hideConstantImplementations}
 class BlocEFTA extends RegionalBloc {
+  /// Represents the European Free Trade Association.
   const BlocEFTA()
       : super(acronym: "EFTA", name: "European Free Trade Association");
 }
