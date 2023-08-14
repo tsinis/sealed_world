@@ -1,11 +1,11 @@
 {
-    "name": "example",
-    "short_name": "example",
+    "name": "world_countries",
+    "short_name": "world_countries",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#6a6c6e",
+    "theme_color": "#ffffff",
+    "description": "A world_countries example application.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
