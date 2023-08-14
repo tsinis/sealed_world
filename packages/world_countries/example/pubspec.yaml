@@ -21,6 +21,7 @@ dev_dependencies:
   dhttpd: ^4.0.1 # From Google
   flutter_gen_runner: ^5.3.1
   flutter_launcher_icons: ^0.13.1 # From Flutter Community
+  flutter_native_splash: ^2.3.2 # Flutter Favorite
   flutter_test: # From Google
     sdk: flutter
   lints: ^2.1.1 # From Google
@@ -36,6 +37,17 @@ flutter:
     - family: EmojiOneMozilla
       fonts:
         - asset: assets/fonts/EmojiOne/EmojiOneMozilla.ttf
+
+flutter_gen:
+  output: lib/assets/
+  assets:
+    exclude:
+      - assets/images/ATTRIBUTION.md
+  integrations:
+    flutter_svg: false
+    flare_flutter: false
+    rive: false
+    lottie: false
 
 flutter_launcher_icons:
   image_path: "assets/images/launcher_icon/icon.png"
@@ -55,13 +67,11 @@ flutter_launcher_icons:
   macos:
     generate: true
 
-flutter_gen:
-  output: lib/assets/
-  assets:
-    exclude:
-      - assets/images/ATTRIBUTION.md
-  integrations:
-    flutter_svg: false
-    flare_flutter: false
-    rive: false
-    lottie: false
+flutter_native_splash:
+  image: "assets/images/launcher_icon/icon.png"
+  color: "#6a6c6e"
+  web: false
+  ios: true
+  android: true
+  android_12:
+    color: "#6a6c6e"
