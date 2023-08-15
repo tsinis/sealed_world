@@ -1,10 +1,7 @@
-// ignore_for_file: avoid-non-ascii-symbols
-
 import "../helpers/fiat_currency/fiat_currency_getters_extension.dart";
 import "../model/currency.dart";
 
 /// {@hideConstantImplementations}
-// ignore: prefer-match-file-name, not necessary for the list of currencies.
 class FiatAed extends FiatCurrency {
   /// A class that represents the United Arab Emirates Dirham.
   const FiatAed()

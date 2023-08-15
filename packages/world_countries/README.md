@@ -39,7 +39,6 @@ You can use provided widgets directly, or just use their methods:
 For example:
 
 ```dart
-// ignore_for_file: avoid-non-ascii-symbols, arguments-ordering
 import "dart:async" show unawaited;
 
 import "package:flutter/material.dart";

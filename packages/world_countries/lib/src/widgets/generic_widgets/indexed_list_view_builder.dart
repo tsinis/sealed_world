@@ -1,5 +1,3 @@
-// ignore_for_file: arguments-ordering
-
 import "package:flutter/widgets.dart";
 
 import "../../constants/ui_constants.dart";
@@ -115,24 +113,13 @@ class _IndexedListViewBuilderState<T extends Object>
                   ? widget.emptyStatePlaceholder
                   // ignore: avoid-shrink-wrap-in-lists, it's false by default.
                   : ListView.separated(
-                      addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
-                      addRepaintBoundaries: widget.addRepaintBoundaries,
-                      addSemanticIndexes: widget.addSemanticIndexes,
-                      cacheExtent: widget.cacheExtent,
-                      clipBehavior: widget.clipBehavior,
-                      controller: widget.scrollController,
-                      dragStartBehavior: widget.dragStartBehavior,
-                      keyboardDismissBehavior: widget.keyboardDismissBehavior,
-                      padding: widget.padding,
-                      physics: widget.physics,
-                      primary: widget.primary,
-                      restorationId: widget.restorationId,
-                      reverse: widget.reverse,
                       scrollDirection: widget.direction,
+                      reverse: widget.reverse,
+                      controller: widget.scrollController,
+                      primary: widget.primary,
+                      physics: widget.physics,
                       shrinkWrap: widget.shrinkWrap,
-                      itemCount: widget.items.length,
-                      separatorBuilder: (_, __) =>
-                          widget.separator ?? UiConstants.placeholder,
+                      padding: widget.padding,
                       itemBuilder: (innerContext, index) {
                         final item = widget._sortedItems.elementAt(index);
                         final isChosen = widget.chosen?.contains(item);
@@ -153,6 +140,17 @@ class _IndexedListViewBuilderState<T extends Object>
                           child: child,
                         );
                       },
+                      separatorBuilder: (_, __) =>
+                          widget.separator ?? UiConstants.placeholder,
+                      itemCount: widget.items.length,
+                      addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
+                      addRepaintBoundaries: widget.addRepaintBoundaries,
+                      addSemanticIndexes: widget.addSemanticIndexes,
+                      cacheExtent: widget.cacheExtent,
+                      dragStartBehavior: widget.dragStartBehavior,
+                      keyboardDismissBehavior: widget.keyboardDismissBehavior,
+                      restorationId: widget.restorationId,
+                      clipBehavior: widget.clipBehavior,
                     ),
             ),
           ),

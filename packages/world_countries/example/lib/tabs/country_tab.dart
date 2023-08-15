@@ -7,6 +7,7 @@ import "../../widgets/country_flag.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
+// TODO! Add Regional Blocs.
 class CountryTab extends StatelessWidget {
   const CountryTab(this.country, {super.key});
 
@@ -125,7 +126,7 @@ class CountryTab extends StatelessWidget {
             description: "Subregion",
           ),
           DescriptionTile.fromIterable(
-            country.languages.map((lng) => lng.name),
+            country.languages.map((language) => language.name),
             icon: Icons.translate_outlined,
             description: "Official Language(s)",
           ),

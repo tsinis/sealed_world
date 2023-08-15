@@ -6,13 +6,14 @@
 \.ico$
 \.ignore$
 \.jpg$
-\.webp$
 \.lock$
 \.metadata$
 \.mp3$
 \.otf$
 \.png$
 \.ttf$
+\.webp$
+\.gif$
 \.woff2$
 ^\.github/
 ^\.vscode/

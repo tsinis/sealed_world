@@ -13,7 +13,6 @@ import "continents.data.dart";
 /// final centralAmerica = CentralAmerica();
 /// print(centralAmerica.name); // "Central America"
 /// ```
-// ignore: prefer-match-file-name, not needed in data file.
 class CentralAmerica extends Americas {
   /// Creates a new `CentralAmerica` instance.
   const CentralAmerica();

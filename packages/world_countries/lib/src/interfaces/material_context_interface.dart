@@ -1,10 +1,11 @@
-// ignore_for_file: long-parameter-list, format-comment
+// ignore_for_file: long-parameter-list
 import "package:flutter/material.dart";
 
 import "../constants/ui_constants.dart";
 
 /// An interface for a Material Design pickers.
 abstract interface class MaterialContextInterface<T extends Object> {
+  // ignore: format-comment, ends with macros.
   /// Twin of a Material's `showModalBottomSheet` function.
   ///
   /// {@macro flutter.material.ModalBottomSheetRoute}

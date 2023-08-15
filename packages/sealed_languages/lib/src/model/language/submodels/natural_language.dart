@@ -47,7 +47,7 @@ class NaturalLanguage extends Language {
   /// method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCode(String code) => list.firstWhere(
-        (naturalLang) => naturalLang.code == code.toUpperCase(),
+        (language) => language.code == code.trim().toUpperCase(),
       );
 
   /// Creates a new instance of the [NaturalLanguage] class from a two-letter
@@ -58,7 +58,7 @@ class NaturalLanguage extends Language {
   /// [NaturalLanguage] instance that corresponds to the given code, or throws a
   /// [StateError] if no such instance exists.
   factory NaturalLanguage.fromCodeShort(String codeShort) => list.firstWhere(
-        (naturalLang) => naturalLang.codeShort == codeShort.toUpperCase(),
+        (language) => language.codeShort == codeShort.trim().toUpperCase(),
       );
 
   /// Creates a new instance of the [NaturalLanguage] class from the name of the
@@ -69,7 +69,7 @@ class NaturalLanguage extends Language {
   /// [NaturalLanguage] instance that corresponds to the given name, or throws a
   /// [StateError] if no such instance exists.
   factory NaturalLanguage.fromName(String name) => list.firstWhere(
-        (naturalLang) => naturalLang.name == name,
+        (lang) => lang.name.toUpperCase() == name.trim().toUpperCase(),
       );
 
   /// A three-letter string representing the Terminological ISO 639-2 code for

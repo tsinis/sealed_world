@@ -43,10 +43,11 @@ analyzer:
 
 dart_code_metrics:
   anti-patterns:
+    - long-parameter-list:
+        ignore-optional: true
     - long-method:
         exclude:
           - "**/test/**"
-    - long-parameter-list
   metrics:
     cyclomatic-complexity: 24
     maximum-nesting-level: 5
@@ -87,8 +88,14 @@ dart_code_metrics:
     - format-comment:
         ignored-patterns:
           - ^coverage.*
-
-    - arguments-ordering: true
+    - prefer-match-file-name:
+        exclude:
+          - "**/data/**.data.dart"
+    - avoid-non-ascii-symbols:
+        exclude:
+          - "**/data/**.data.dart"
+    - arguments-ordering:
+        child-last: true
     - avoid-banned-imports: true
     - avoid-cascade-after-if-null: true
     - avoid-collection-methods-with-unrelated-types: true
@@ -97,7 +104,6 @@ dart_code_metrics:
     - avoid-dynamic: true
     - avoid-global-state: true
     - avoid-missing-enum-constant-in-map: true
-    - avoid-non-ascii-symbols: true
     - avoid-non-null-assertion: true
     - avoid-substring: true
     - avoid-throw-in-catch-block: true
@@ -125,7 +131,6 @@ dart_code_metrics:
     - prefer-immediate-return: true
     - prefer-iterable-of: true
     - prefer-last: true
-    - prefer-match-file-name: true
     - prefer-moving-to-variable: true
     - prefer-trailing-comma: true
     - tag-name: true
@@ -139,7 +144,7 @@ linter:
     prefer_final_parameters: false # Conflicts with: avoid_final_parameters.
     unnecessary_final: false # Conflicts with: prefer_final_locals.
 
-    # Enabled
+    # Enabled:
     library_private_types_in_public_api: true
     always_put_required_named_parameters_first: true
     avoid_annotating_with_dynamic: true

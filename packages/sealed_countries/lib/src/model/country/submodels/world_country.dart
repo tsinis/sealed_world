@@ -75,7 +75,7 @@ class WorldCountry extends Country {
   /// a `WorldCountry` object that represents the country with the given `code`.
   /// Throws a `StateError` if no such country exists.
   factory WorldCountry.fromCode(String code) => list.firstWhere(
-        (country) => country.code == code.toUpperCase(),
+        (country) => country.code == code.trim().toUpperCase(),
       );
 
   /// Creates a new `WorldCountry` object from the given `codeShort`
@@ -85,7 +85,7 @@ class WorldCountry extends Country {
   /// short. Returns a `WorldCountry` object that represents the country with
   /// the given `codeShort`. Throws a `StateError` if no such country exists.
   factory WorldCountry.fromCodeShort(String codeShort) => list.firstWhere(
-        (country) => country.codeShort == codeShort.toUpperCase(),
+        (country) => country.codeShort == codeShort.trim().toUpperCase(),
       );
 
   /// The native names of the country.

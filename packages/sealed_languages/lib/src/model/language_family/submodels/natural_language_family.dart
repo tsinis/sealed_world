@@ -26,7 +26,7 @@ class NaturalLanguageFamily extends LanguageFamily {
   /// print(family); // Prints: LanguageFamily(name: Indo-European).
   /// ```
   factory NaturalLanguageFamily.fromName(String name) => list.firstWhere(
-        (family) => family.name == name,
+        (family) => family.name.toUpperCase() == name.trim().toUpperCase(),
       );
 
   /// Returns a [NaturalLanguageFamily] object that matches the given value.

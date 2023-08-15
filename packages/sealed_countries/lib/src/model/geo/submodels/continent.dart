@@ -34,8 +34,9 @@ class Continent extends SubRegion {
   const Continent({required super.name});
 
   /// Creates a new `Continent` object from its name.
-  factory Continent.fromName(String name) =>
-      list.firstWhere((continent) => continent.name == name);
+  factory Continent.fromName(String name) => list.firstWhere(
+        (region) => region.name.toUpperCase() == name.trim().toUpperCase(),
+      );
 
   /// Creates a new `Continent` object from a value.
   ///

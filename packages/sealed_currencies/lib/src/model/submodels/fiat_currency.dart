@@ -72,7 +72,7 @@ class FiatCurrency extends Currency {
   /// returns the [FiatCurrency] instance that corresponds to the given code, or
   /// throws a [StateError] if no such instance exists.
   factory FiatCurrency.fromCode(String code) => list.firstWhere(
-        (currency) => currency.code == code.toUpperCase(),
+        (currency) => currency.code == code.trim().toUpperCase(),
       );
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
@@ -82,7 +82,7 @@ class FiatCurrency extends Currency {
   /// method returns the [FiatCurrency] instance that corresponds to the given
   /// code, or throws a [StateError] if no such instance exists.
   factory FiatCurrency.fromCodeNumeric(String codeNumeric) => list.firstWhere(
-        (currency) => currency.codeNumeric == codeNumeric,
+        (currency) => currency.codeNumeric == codeNumeric.trim(),
       );
 
   /// Returns a [FiatCurrency] instance from a currency name.
@@ -92,7 +92,7 @@ class FiatCurrency extends Currency {
   /// [FiatCurrency] instance that corresponds to the given name, or throws a
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromName(String name) => list.firstWhere(
-        (currency) => currency.name == name,
+        (currency) => currency.name.toUpperCase() == name.trim().toUpperCase(),
       );
 
   /// Alternative symbols for this currency or `null` if no such symbols exists.
