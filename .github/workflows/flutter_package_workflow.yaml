@@ -34,7 +34,7 @@ jobs:
         run: flutter pub get
 
       - name: 🕵️ Analyze code
-        uses: ValentinVignal/action-dart-analyze@v0.15
+        uses: ValentinVignal/action-dart-analyze@v0.16
         if: ${{ github.event_name == 'pull_request' }}
         with:
           fail-on: 'format'
