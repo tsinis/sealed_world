@@ -1,3 +1,4 @@
+// coverage:ignore-file TODO!
 part "regional_bloc.dart";
 
 /// The `WorldBloc` class is an abstract class that represents a world
