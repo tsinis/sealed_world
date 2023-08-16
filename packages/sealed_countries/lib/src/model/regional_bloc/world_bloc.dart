@@ -1,5 +1,7 @@
 // TODO!
 // coverage:ignore-file
+import "../../data/regional_bloc/regional_bloc.data.dart";
+
 part "regional_bloc.dart";
 
 /// The `WorldBloc` class is an abstract class that represents a world

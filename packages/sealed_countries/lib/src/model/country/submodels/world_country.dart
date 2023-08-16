@@ -66,6 +66,7 @@ class WorldCountry extends Country {
     this.startOfWeek = Weekday.monday,
     this.subregion,
     this.unMember = true,
+    this.regionalBlocs,
   });
 
   /// Creates a new `WorldCountry` object from the given `code`
@@ -180,6 +181,9 @@ class WorldCountry extends Country {
 
   /// The postal code information of the country.
   final PostalCode? postalCode;
+
+  /// The regional blocs of the country.
+  final List<RegionalBloc>? regionalBlocs;
 
   @override
   String toString({bool short = true}) => short

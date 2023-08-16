@@ -26,15 +26,7 @@ class RegionalBloc extends WorldBloc {
     required super.name,
     this.otherAcronyms,
     this.otherNames,
-  })  : assert(
-          otherAcronyms == null || otherAcronyms.length > 0,
-          "`otherAcronyms` should not be empty!",
-        ),
-        assert(
-          otherNames == null || otherNames.length > 0,
-          "`otherNames` should not be empty!",
-        ),
-        super(acronym: acronym);
+  }) : super(acronym: acronym);
 
   /// Creates a new `RegionalBloc` object from its acronym.
   factory RegionalBloc.fromAcronym(String acronym) => list.firstWhere(
@@ -87,5 +79,19 @@ class RegionalBloc extends WorldBloc {
   }
 
   /// The list of all regional blocs in the world.
-  static const list = <RegionalBloc>[]; // TODO!
+  static const list = [
+    BlocSAARC(),
+    BlocEU(),
+    BlocCEFTA(),
+    BlocAU(),
+    BlocAL(),
+    BlocCARICOM(),
+    BlocCAIS(),
+    BlocUSAN(),
+    BlocEEU(),
+    BlocASEAN(),
+    BlocNAFTA(),
+    BlocPA(),
+    BlocEFTA(),
+  ];
 }

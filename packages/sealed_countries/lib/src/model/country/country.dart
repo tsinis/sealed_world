@@ -5,6 +5,7 @@ import "../../data/official_world_countries.data.dart";
 import "../../data/other_world_countries.data.dart";
 import "../geo/region.dart";
 import "../geo/submodels/continent.dart";
+import "../regional_bloc/world_bloc.dart";
 import "submodels/capital_info.dart";
 import "submodels/car.dart";
 import "submodels/country_name.dart";
