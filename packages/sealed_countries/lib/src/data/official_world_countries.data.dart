@@ -38790,11 +38790,6 @@ class CountryAze extends WorldCountry {
               official: "Azərbaycan Respublikası",
               common: "Azərbaycan",
             ),
-            CountryName(
-              language: LangRus(),
-              official: "Азербайджанская Республика",
-              common: "Азербайджан",
-            ),
           ],
           tld: const [".az"],
           codeShort: "AZ",
@@ -38810,7 +38805,7 @@ class CountryAze extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAze(), LangRus()],
+          languages: const [LangAze()],
           translations: const [
             CountryName(
               language: LangSrp(),
