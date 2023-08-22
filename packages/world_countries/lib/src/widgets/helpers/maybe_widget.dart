@@ -11,6 +11,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// * [value] is the value to check for null.
   /// * [_map] is the builder function to call with a non-null [value].
   /// * [orElse] is the widget to display if [value] is null.
+  /// * [key] is the key for the widget.
   /// Example:
   ///
   /// ```
@@ -29,8 +30,8 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
 
   /// Identifiable constructor for the [MaybeWidget] class.
   ///
-  /// Creates a [MaybeWidget] with a unique identifier. This ensures that the
-  /// widget will always have a unique key, even if the value is `null`.
+  /// Creates a [MaybeWidget] with a key identifier. This ensures that the
+  /// widget will always have a different key than the one with a `null` value.
   ///
   /// * [value] is the value to check for null.
   /// * [_map] is the builder function to call with a non-null [value].
