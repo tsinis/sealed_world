@@ -66,13 +66,12 @@ jobs:
           fi
 
       - name: 🔎 Dart Code Metrics
-        run: dart run dart_code_metrics:metrics --disable-sunset-warning --fatal-style --fatal-performance --fatal-warnings --reporter=github lib test
+        run: dart run dart_code_metrics:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib test
 
       - name: 🧪 Run tests
         run: |
-          dart pub global activate coverage
           dart test --fail-fast --coverage=coverage
-          dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=lib
+          dart run coverage:format_coverage -l -i coverage -o coverage/lcov.info --report-on=lib
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0

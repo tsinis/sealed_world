@@ -449,7 +449,6 @@ class WorldCountry extends Country {
     CountryUga(),
     CountryUkr(),
     CountryUmi(),
-    CountryUnk(),
     CountryUry(),
     CountryUsa(),
     CountryUzb(),
@@ -466,5 +465,6 @@ class WorldCountry extends Country {
     CountryZaf(),
     CountryZmb(),
     CountryZwe(),
+    CountryUnk(), // User assigned country.
   ];
 }

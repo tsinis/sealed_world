@@ -70,7 +70,7 @@ jobs:
 
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
-        run: dart run dart_code_metrics:metrics --disable-sunset-warning --fatal-style --fatal-performance --fatal-warnings --reporter=github lib test
+        run: dart run dart_code_metrics:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib test
 
       - name: 🧪 Run tests
         run: flutter test --coverage
