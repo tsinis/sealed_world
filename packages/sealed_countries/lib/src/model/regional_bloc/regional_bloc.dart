@@ -1,4 +1,4 @@
-// TODO! + functional methods.
+// TODO!
 // coverage:ignore-file
 part of "world_bloc.dart";
 
@@ -80,18 +80,18 @@ class RegionalBloc extends WorldBloc {
 
   /// The list of all regional blocs in the world.
   static const list = [
-    BlocSAARC(),
-    BlocEU(),
-    BlocCEFTA(),
-    BlocAU(),
     BlocAL(),
-    BlocCARICOM(),
-    BlocCAIS(),
-    BlocUSAN(),
-    BlocEEU(),
     BlocASEAN(),
+    BlocAU(),
+    BlocCAIS(),
+    BlocCARICOM(),
+    BlocCEFTA(),
+    BlocEEU(),
+    BlocEFTA(),
+    BlocEU(),
     BlocNAFTA(),
     BlocPA(),
-    BlocEFTA(),
+    BlocSAARC(),
+    BlocUSAN(),
   ];
 }
