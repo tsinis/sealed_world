@@ -12,6 +12,13 @@ void main() {
   );
   print(europeanCountries); // Prints a list of European countries.
 
+  final europeanUnion = RegionalBloc.fromAcronym("EU");
+  final europeButNotEU = europeanCountries.where(
+    (country) => !(country.regionalBlocs?.contains(europeanUnion) ?? false),
+  );
+
+  print(europeButNotEU.length); // Prints 23 count of non-EU European countries.
+
   /// Prints all the countries in the world with their phone code.
   for (final country in WorldCountry.list) {
     print(

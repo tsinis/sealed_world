@@ -30,7 +30,7 @@ class RegionalBloc extends WorldBloc {
 
   /// Creates a new `RegionalBloc` object from its acronym.
   factory RegionalBloc.fromAcronym(String acronym) => list.firstWhere(
-        (bloc) => bloc.name == acronym.trim().toUpperCase(),
+        (bloc) => bloc.acronym == acronym.trim().toUpperCase(),
       );
 
   /// Creates a new `RegionalBloc` object from its name.

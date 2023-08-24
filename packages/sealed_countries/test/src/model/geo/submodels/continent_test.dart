@@ -34,7 +34,7 @@ void main() => group("$Continent", () {
           () => expect(
             Continent.maybeFromValue(
               value.name,
-              where: (lang) => lang.name,
+              where: (continent) => continent.name,
             ),
             value,
           ),
@@ -53,7 +53,7 @@ void main() => group("$Continent", () {
           () => expect(
             Continent.maybeFromValue(
               value,
-              where: (lang) => lang.toString(),
+              where: (continent) => continent.toString(),
             ),
             isNull,
           ),
