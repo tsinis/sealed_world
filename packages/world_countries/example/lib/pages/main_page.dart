@@ -1,19 +1,24 @@
 import "dart:async" show unawaited;
 
+import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
 import "../assets/assets.gen.dart";
-import "../models/tabs.dart";
+import "../model/constants.dart";
+import "../model/parsed_data.dart";
+import "../model/world_data.dart";
 import "../tabs/country_tab.dart";
 import "../tabs/currency_tab.dart";
 import "../tabs/language_tab.dart";
+import "../tabs/tabs_data_controller.dart";
 import "../widgets/floating_button.dart";
 
 class MainPage extends StatefulWidget {
-  const MainPage(this.country, {super.key});
+  const MainPage(this.data, {required this.navigate, super.key});
 
-  final WorldCountry country;
+  final ParsedData data;
+  final AsyncValueSetter<String> navigate;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -21,57 +26,39 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
-  late final TabController controller =
-      TabController(length: Tabs.values.length, vsync: this);
-  final ValueNotifier<Tabs> selectedTab = ValueNotifier(Tabs.country);
+  late final _controller = TabsDataController(widget.data.value, vsync: this);
 
-  late final ValueNotifier<WorldCountry> selectedCountry =
-      ValueNotifier(widget.country);
-  late final ValueNotifier<NaturalLanguage> selectedLanguage =
-      ValueNotifier(widget.country.languages.first);
-  late final ValueNotifier<FiatCurrency> selectedCurrency =
-      ValueNotifier(widget.country.currencies?.first ?? const FiatEur());
-
-  late final CountryPicker countryPicker = CountryPicker(
-    chosen: [selectedCountry.value],
-    disabled: const [CountryAfg(), CountryAlb()],
-    onSelect: (newCountry) => selectedCountry.value = newCountry,
+  late final countryPicker = CountryPicker(
+    chosen: [widget.data.country],
+    disabled: [WorldCountry.list.first],
+    onSelect: (newCountry) => widget.data.country != newCountry
+        ? _navigateOnSelect(newCountry.code, WorldData.country)
+        : null,
     translation: const LangEng(),
   );
 
-  late final CurrencyPicker currencyPicker = CurrencyPicker(
-    chosen: [selectedCurrency.value],
-    disabled: const [FiatAfn()],
-    onSelect: (newCurrency) => selectedCurrency.value = newCurrency,
+  late final currencyPicker = CurrencyPicker(
+    chosen: [widget.data.currency],
+    disabled: [FiatCurrency.list.first],
+    onSelect: (newCurrency) => widget.data.currency != newCurrency
+        ? _navigateOnSelect(newCurrency.code, WorldData.currency)
+        : null,
   );
 
-  late final LanguagePicker languagePicker = LanguagePicker(
-    chosen: [selectedLanguage.value],
-    disabled: const [LangAar()],
-    onSelect: (newLang) => selectedLanguage.value = newLang,
+  late final languagePicker = LanguagePicker(
+    chosen: [widget.data.language],
+    disabled: [NaturalLanguage.list.first],
+    onSelect: (newLang) => widget.data.language != newLang
+        ? _navigateOnSelect(newLang.code, WorldData.language)
+        : null,
   );
 
-  @override
-  void initState() {
-    super.initState();
-    controller.addListener(controllerListener);
-  }
+  void _navigateOnSelect(String code, WorldData data) => unawaited(
+        widget.navigate(data.path + Constants.slash + code.toLowerCase()),
+      );
 
-  @override
-  void dispose() {
-    selectedCurrency.dispose();
-    selectedLanguage.dispose();
-    selectedCountry.dispose();
-    selectedTab.dispose();
-    controller.dispose();
-    super.dispose();
-  }
-
-  void controllerListener() =>
-      selectedTab.value = Tabs.values.elementAt(controller.index);
-
-  void onFabPressed({bool isLongPress = false}) {
-    final picker = selectedTab.value.map<BasicPicker>(
+  void _onFabPressed({bool isLongPress = false}) {
+    final picker = _controller.currentData.map<BasicPicker>(
       country: PhoneCodePicker.fromCountryPicker(countryPicker),
       currency: currencyPicker,
       language: languagePicker,
@@ -84,7 +71,7 @@ class _MainPageState extends State<MainPage>
   }
 
   void onAppBarSearchPressed() {
-    final picker = selectedTab.value.map<BasicPicker>(
+    final picker = _controller.currentData.map<BasicPicker>(
       country: countryPicker,
       currency: currencyPicker,
       language: languagePicker,
@@ -93,8 +80,14 @@ class _MainPageState extends State<MainPage>
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) => DefaultTabController(
-        length: Tabs.values.length,
+        length: _controller.length,
         child: Scaffold(
           appBar: AppBar(
             actions: [
@@ -106,9 +99,9 @@ class _MainPageState extends State<MainPage>
             ],
             bottom: TabBar(
               tabs: List.unmodifiable(
-                Tabs.values.map((tab) => Tab(text: tab.label)),
+                WorldData.values.map((tab) => Tab(text: tab.label)),
               ),
-              controller: controller,
+              controller: _controller,
             ),
           ),
           body: DecoratedBox(
@@ -124,28 +117,19 @@ class _MainPageState extends State<MainPage>
               child: SizedBox(
                 width: 300,
                 child: TabBarView(
-                  controller: controller,
+                  controller: _controller,
                   children: [
-                    ValueListenableBuilder<WorldCountry>(
-                      valueListenable: selectedCountry,
-                      builder: (_, country, __) => CountryTab(country),
-                    ),
-                    ValueListenableBuilder<FiatCurrency>(
-                      valueListenable: selectedCurrency,
-                      builder: (_, currency, __) => CurrencyTab(currency),
-                    ),
-                    ValueListenableBuilder<NaturalLanguage>(
-                      valueListenable: selectedLanguage,
-                      builder: (_, language, __) => LanguageTab(language),
-                    ),
+                    CountryTab(widget.data.country),
+                    CurrencyTab(widget.data.currency),
+                    LanguageTab(widget.data.language),
                   ],
                 ),
               ),
             ),
           ),
           floatingActionButton: FloatingButton(
-            selectedTab,
-            onPressed: (longPress) => onFabPressed(isLongPress: longPress),
+            _controller,
+            onPressed: (isLongPress) => _onFabPressed(isLongPress: isLongPress),
           ),
         ),
       );
