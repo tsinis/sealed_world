@@ -1,9 +1,7 @@
 import "package:flutter/services.dart" show FilteringTextInputFormatter;
 
 /// A helper class for creating input validation rules for names.
-abstract final class NameTextInput {
-  const NameTextInput._(); // coverage:ignore-line
-
+sealed class NameTextInput {
   /// A regular expression pattern that matches any digit.
   static const digitsPattern = "[0-9]";
 

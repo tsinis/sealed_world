@@ -140,6 +140,7 @@ linter:
     # Disabled:
     always_specify_types: false # Conflicts with: omit_local_variable_types.
     always_use_package_imports: false # Conflicts with: prefer_relative_imports.
+    avoid_classes_with_only_static_members: false # Conflicts with: prefer-static-class
     prefer_final_parameters: false # Conflicts with: avoid_final_parameters.
     prefer_single_quotes: false # Conflicts with: prefer_double_quotes.
     unnecessary_final: false # Conflicts with: prefer_final_locals.
@@ -152,7 +153,6 @@ linter:
     avoid_annotating_with_dynamic: true
     avoid_bool_literals_in_conditional_expressions: true
     avoid_catching_errors: true
-    avoid_classes_with_only_static_members: true
     avoid_double_and_int_checks: true
     avoid_dynamic_calls: true
     avoid_empty_else: true

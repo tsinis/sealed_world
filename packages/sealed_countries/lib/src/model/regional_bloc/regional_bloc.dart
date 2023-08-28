@@ -1,5 +1,3 @@
-// TODO!
-// coverage:ignore-file
 part of "world_bloc.dart";
 
 /// The `RegionalBloc` class is an non-abstract class that represents a regional

@@ -1,9 +1,7 @@
 import "package:flutter/material.dart";
 
 /// A utility class that contains constants related to the user interface (UI).
-abstract final class UiConstants {
-  const UiConstants._(); // coverage:ignore-line
-
+sealed class UiConstants {
   /// The default color used in the UI.
   static const color = Colors.grey;
 

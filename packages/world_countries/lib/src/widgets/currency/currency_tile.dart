@@ -51,7 +51,7 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-  }); // coverage:ignore-line
+  });
 
   /// Constructor for the [CurrencyTile] class that uses an [ItemProperties]
   /// object.
