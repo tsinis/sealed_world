@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 
 import "helpers/utils/route_parse_utils.dart";
 import "pages/main_page.dart";
+import "routing/fade_transition_page.dart";
 import "routing/route_state.dart";
 
 class AppNavigator extends StatelessWidget {
@@ -22,7 +23,7 @@ class AppNavigator extends StatelessWidget {
     return Navigator(
       key: navigatorKey,
       pages: [
-        MaterialPage(
+        FadeTransitionPage(
           key: ValueKey(parsed.value),
           child: MainPage(parsed, navigate: routeState.go),
         ),
