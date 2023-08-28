@@ -12,16 +12,13 @@ class CountryFlag extends StatelessWidget {
   @override
   Widget build(BuildContext context) => EmojiFlag.fromEmojiFamily(
         country,
-        emojiFamily: FunctionalPlatform.maybeWhenConst(
-          android: EmojiFamily.openMoji,
-          web: EmojiFamily.openMoji,
-          orElse: null,
-        ),
         style: TextStyle(
           fontSize: size,
           fontFamily: FunctionalPlatform.maybeWhenConst(
+            android: FontFamily.emojiOneAndroid,
             iOS: FontFamily.emojiOneColor,
             macOS: FontFamily.emojiOneColor,
+            web: FontFamily.emojiOneAndroid,
             orElse: FontFamily.emojiOneMozilla,
           ),
         ),

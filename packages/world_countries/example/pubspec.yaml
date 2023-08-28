@@ -41,9 +41,10 @@ flutter:
     - family: EmojiOneMozilla
       fonts:
         - asset: assets/fonts/EmojiOne/EmojiOneMozilla.ttf
-    # - family: EmojiOneAndroid
-    #   fonts:
-    #     - asset: assets/fonts/EmojiOne/emojione-android.ttf
+    - family: EmojiOneAndroid
+      fonts:
+        - asset: assets/fonts/EmojiOne/emojione-android.ttf
+
 flutter_gen:
   output: lib/assets/
   assets:

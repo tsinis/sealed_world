@@ -10,6 +10,9 @@
 class FontFamily {
   FontFamily._();
 
+  /// Font family: EmojiOneAndroid
+  static const String emojiOneAndroid = 'EmojiOneAndroid';
+
   /// Font family: EmojiOneColor
   static const String emojiOneColor = 'EmojiOneColor';
 
