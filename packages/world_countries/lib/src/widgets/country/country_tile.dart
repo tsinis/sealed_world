@@ -9,11 +9,11 @@ import "emoji_flag.dart";
 class CountryTile extends ListItemTile<WorldCountry> {
   /// Constructor for the [CountryTile] class.
   ///
-  /// * [country] is the world country to display information about.
+  /// * Input country item is the world country to display information about.
   /// * All other parameters are optional and are passed to the superclass
   /// constructor.
   const CountryTile(
-    WorldCountry country, {
+    super._item, {
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -50,7 +50,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-  }) : super(country); // coverage:ignore-line
+  });
 
   /// Constructor for the [CountryTile] class that uses an [ItemProperties]
   /// object.

@@ -10,11 +10,11 @@ import "../generic_widgets/list_item_tile.dart";
 class LanguageTile extends ListItemTile<NaturalLanguage> {
   /// Constructor for the [LanguageTile] class.
   ///
-  /// * [language] is the natural language to display information about.
+  /// * Input language item is the natural language to display information about
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
   const LanguageTile(
-    NaturalLanguage language, {
+    super._item, {
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -51,7 +51,7 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-  }) : super(language); // coverage:ignore-line
+  }); // coverage:ignore-line
 
   /// Constructor for the [LanguageTile] class, that uses the item-properties.
   LanguageTile.fromProperties(

@@ -202,6 +202,7 @@ linter:
     dangling_library_doc_comments: true
     depend_on_referenced_packages: true
     deprecated_consistency: true
+    deprecated_member_use_from_same_package: true
     diagnostic_describe_all_properties: true
     directives_ordering: true
     discarded_futures: true
@@ -216,6 +217,8 @@ linter:
     hash_and_equals: true
     implementation_imports: true
     implicit_call_tearoffs: true
+    implicit_reopen: true
+    invalid_case_patterns: true
     join_return_with_assignment: true
     leading_newlines_in_multiline_strings: true
     library_annotations: true
@@ -224,13 +227,17 @@ linter:
     library_private_types_in_public_api: true
     lines_longer_than_80_chars: true
     literal_only_boolean_expressions: true
+    matching_super_parameters: true
     missing_whitespace_between_adjacent_strings: true
     no_adjacent_strings_in_list: true
     no_default_cases: true
     no_duplicate_case_values: true
     no_leading_underscores_for_library_prefixes: true
     no_leading_underscores_for_local_identifiers: true
+    no_literal_bool_comparisons: true
     no_runtimeType_toString: true
+    no_self_assignments: true
+    no_wildcard_variable_uses: true
     non_constant_identifier_names: true
     noop_primitive_operations: true
     null_check_on_nullable_type_parameter: true
@@ -295,9 +302,11 @@ linter:
     tighten_type_of_initializing_formals: true
     type_annotate_public_apis: true
     type_init_formals: true
+    type_literal_in_constant_pattern: true
     unawaited_futures: true
     unnecessary_await_in_return: true
     unnecessary_brace_in_string_interps: true
+    unnecessary_breaks: true
     unnecessary_const: true
     unnecessary_constructor_name: true
     unnecessary_getters_setters: true
@@ -321,6 +330,7 @@ linter:
     unreachable_from_main: true
     unrelated_type_equality_checks: true
     unsafe_html: true
+    use_enums: true
     use_function_type_syntax_for_parameters: true
     use_if_null_to_convert_nulls_to_bools: true
     use_is_even_rather_than_modulo: true
@@ -331,6 +341,7 @@ linter:
     use_setters_to_change_properties: true
     use_string_buffers: true
     use_string_in_part_of_directives: true
+    use_super_parameters: true
     use_test_throws_matchers: true
     use_to_and_as_if_applicable: true
     valid_regexps: true
