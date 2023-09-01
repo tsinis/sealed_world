@@ -8,6 +8,7 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 
 ## Features
 
+
 **WorldCountry** class provides the following information about countries:
 
 | **Field** | **Required** | **Description** | **Example for CountryIrl** |
@@ -43,6 +44,7 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 | `hasCoatOfArms` | Yes | Whether the country has an official coat of arms. | `true` |
 | `postalCode` | Yes | The postal code information of the country. | `PostalCode` with format and regExp |
 | `startOfWeek` | Yes | The first day of the week in the country. | `Weekday.monday` |
+| `regionalBlocs` | No | The regional blocs of the country. | `[BlocEU()]` |
 | `translations` | Yes | The translations of the country name. | List of 25 `CountryName`s in different languages |
 
 Compile time constant list of all countries accessible via `WorldCountry.list` and more over, the **WorldCountry** class provides the following methods:
@@ -90,6 +92,8 @@ For more usage examples, please see the `/example` folder.
 
 For more information on using this package, check out the API documentation.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
+
+> **Note**: To preview this package data, you can visit [this web page](https://tsin.is/sealed_world/) using the Chrome browser (version 113 or higher) with the `enable-webassembly-garbage-collection` flag enabled.
 
 ## References, credits and sources
 
