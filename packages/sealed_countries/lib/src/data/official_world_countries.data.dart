@@ -19,6 +19,7 @@ import "../model/country/submodels/postal_code.dart";
 import "../model/country/submodels/weekday.dart";
 import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
+import "regional_bloc/regional_bloc.data.dart";
 
 /// {@hideConstantImplementations}
 class CountryCpv extends WorldCountry {
@@ -208,6 +209,7 @@ class CountryCpv extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -416,6 +418,7 @@ class CountrySgp extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -611,6 +614,7 @@ class CountryMrt extends WorldCountry {
             capital: Capital("Nouakchott"),
             latLng: LatLng(18.07, -15.97),
           ),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -812,6 +816,7 @@ class CountryPol extends WorldCountry {
           postalCode: const PostalCode(
             format: "##-###",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -1592,6 +1597,7 @@ class CountryMoz extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -1998,6 +2004,7 @@ class CountryIrl extends WorldCountry {
             regExpPattern:
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -2195,6 +2202,7 @@ class CountryNer extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -2381,6 +2389,7 @@ class CountryGmb extends WorldCountry {
             capital: Capital("Banjul"),
             latLng: LatLng(13.45, -16.57),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -2807,6 +2816,7 @@ class CountryRus extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocEEU()],
         );
 }
 
@@ -3388,6 +3398,7 @@ class CountryVnm extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -3782,6 +3793,7 @@ class CountrySwz extends WorldCountry {
             format: "@###",
             regExpPattern: r"^([A-Z]\d{3})$",
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -3968,6 +3980,7 @@ class CountryKhm extends WorldCountry {
             latLng: LatLng(11.55, 104.92),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -4347,6 +4360,7 @@ class CountryAla extends WorldCountry {
             capital: Capital("Mariehamn"),
             latLng: LatLng(60.12, 19.9),
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -4723,6 +4737,7 @@ class CountryIot extends WorldCountry {
             capital: Capital("Diego Garcia"),
             latLng: LatLng(-7.3, 72.4),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -4919,6 +4934,7 @@ class CountrySvk extends WorldCountry {
           postalCode: const PostalCode(
             format: "###  ##",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -5125,6 +5141,7 @@ class CountryBra extends WorldCountry {
             format: "#####-###",
             regExpPattern: r"^(\d{8})$",
           ),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -5513,6 +5530,7 @@ class CountrySgs extends WorldCountry {
             capital: Capital("King Edward Point"),
             latLng: LatLng(-54.28, -36.5),
           ),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -5701,6 +5719,7 @@ class CountryLbr extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -5901,6 +5920,7 @@ class CountryNga extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -6097,6 +6117,7 @@ class CountryCol extends WorldCountry {
             capital: Capital("Bogotá"),
             latLng: LatLng(4.71, -74.07),
           ),
+          regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
 }
 
@@ -6486,6 +6507,7 @@ class CountryShn extends WorldCountry {
             format: "STHL 1ZZ",
             regExpPattern: r"^(STHL1ZZ)$",
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -6679,6 +6701,7 @@ class CountryEgy extends WorldCountry {
             latLng: LatLng(30.05, 31.25),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -6873,6 +6896,7 @@ class CountryHnd extends WorldCountry {
             format: "@@####",
             regExpPattern: r"^([A-Z]{2}\d{4})$",
           ),
+          regionalBlocs: const [BlocCAIS()],
         );
 }
 
@@ -7064,6 +7088,7 @@ class CountryIdn extends WorldCountry {
             latLng: LatLng(-6.17, 106.82),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -7650,6 +7675,7 @@ class CountrySle extends WorldCountry {
             capital: Capital("Freetown"),
             latLng: LatLng(8.48, -13.23),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -7846,6 +7872,7 @@ class CountryMda extends WorldCountry {
             format: "MD-####",
             regExpPattern: r"^(?:MD)*(\d{4})$",
           ),
+          regionalBlocs: const [BlocCEFTA()],
         );
 }
 
@@ -8044,6 +8071,7 @@ class CountryPhl extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -8246,6 +8274,7 @@ class CountryCmr extends WorldCountry {
             capital: Capital("Yaoundé"),
             latLng: LatLng(3.85, 11.5),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -8808,6 +8837,7 @@ class CountryLbn extends WorldCountry {
             format: "#### ####|####",
             regExpPattern: r"^(\d{4}(\d{4})?)$",
           ),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -9015,6 +9045,7 @@ class CountryRwa extends WorldCountry {
             capital: Capital("Kigali"),
             latLng: LatLng(-1.95, 30.05),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -9217,6 +9248,7 @@ class CountryBih extends WorldCountry {
             latLng: LatLng(43.87, 18.42),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocCEFTA()],
         );
 }
 
@@ -9603,6 +9635,7 @@ class CountryIta extends WorldCountry {
             latLng: LatLng(41.9, 12.48),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -9971,6 +10004,7 @@ class CountryGab extends WorldCountry {
             capital: Capital("Libreville"),
             latLng: LatLng(0.38, 9.45),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -10349,6 +10383,7 @@ class CountryPak extends WorldCountry {
             latLng: LatLng(33.68, 73.05),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocSAARC()],
         );
 }
 
@@ -10532,6 +10567,7 @@ class CountryReu extends WorldCountry {
           ),
           postalCode:
               const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\d{2})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -10728,6 +10764,7 @@ class CountryMus extends WorldCountry {
             capital: Capital("Port Louis"),
             latLng: LatLng(-20.15, 57.48),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -10908,6 +10945,7 @@ class CountryGrd extends WorldCountry {
             capital: Capital("St. George's"),
             latLng: LatLng(32.38, -64.68),
           ),
+          regionalBlocs: const [BlocCAIS()],
         );
 }
 
@@ -11092,6 +11130,7 @@ class CountryOmn extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -11286,6 +11325,7 @@ class CountryBfa extends WorldCountry {
             capital: Capital("Ouagadougou"),
             latLng: LatLng(12.37, -1.52),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -11665,6 +11705,7 @@ class CountryTto extends WorldCountry {
             capital: Capital("Port of Spain"),
             latLng: LatLng(10.65, -61.52),
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -11849,6 +11890,7 @@ class CountryVct extends WorldCountry {
             capital: Capital("Kingstown"),
             latLng: LatLng(13.13, -61.22),
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -12288,6 +12330,7 @@ class CountryZaf extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -12483,6 +12526,7 @@ class CountryAgo extends WorldCountry {
             capital: Capital("Luanda"),
             latLng: LatLng(-8.83, 13.22),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -12857,6 +12901,7 @@ class CountryAtf extends WorldCountry {
             capital: Capital("Port-aux-Français"),
             latLng: LatLng(48.81, -1.4),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -13045,6 +13090,7 @@ class CountryIsl extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
+          regionalBlocs: const [BlocEFTA()],
         );
 }
 
@@ -13231,6 +13277,7 @@ class CountryGuf extends WorldCountry {
             latLng: LatLng(4.94, -52.33),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)3\d{2})$"),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -13428,6 +13475,7 @@ class CountryNor extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEFTA()],
         );
 }
 
@@ -13621,6 +13669,7 @@ class CountryHun extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -13815,6 +13864,7 @@ class CountryPse extends WorldCountry {
             capital: Capital("Ramallah", deJure: "Jerusalem"),
             latLng: LatLng(31.9, 35.2),
           ),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -13996,6 +14046,7 @@ class CountryLca extends WorldCountry {
             capital: Capital("Castries"),
             latLng: LatLng(14, -61),
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -14189,6 +14240,7 @@ class CountryNpl extends WorldCountry {
             latLng: LatLng(27.72, 85.32),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocSAARC()],
         );
 }
 
@@ -14573,6 +14625,7 @@ class CountryZmb extends WorldCountry {
             latLng: LatLng(-15.42, 28.28),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -14950,6 +15003,7 @@ class CountryMwi extends WorldCountry {
             capital: Capital("Lilongwe"),
             latLng: LatLng(-13.97, 33.78),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -15138,6 +15192,7 @@ class CountryBhr extends WorldCountry {
             format: "####|###",
             regExpPattern: r"^(\d{3}\d?)$",
           ),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -15706,6 +15761,7 @@ class CountryMyt extends WorldCountry {
             latLng: LatLng(-12.78, 45.22),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -15902,6 +15958,7 @@ class CountryDza extends WorldCountry {
             latLng: LatLng(36.75, 3.05),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -16139,6 +16196,7 @@ class CountryCan extends WorldCountry {
             regExpPattern:
                 r"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$",
           ),
+          regionalBlocs: const [BlocNAFTA()],
         );
 }
 
@@ -16331,6 +16389,7 @@ class CountryLie extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEFTA()],
         );
 }
 
@@ -16532,6 +16591,7 @@ class CountryEth extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -16719,6 +16779,7 @@ class CountryDom extends WorldCountry {
             latLng: LatLng(18.47, -69.9),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocCARICOM(), BlocCAIS()],
         );
 }
 
@@ -17261,6 +17322,7 @@ class CountryNld extends WorldCountry {
             format: "#### @@",
             regExpPattern: r"^(\d{4}[A-Z]{2})$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -17865,6 +17927,7 @@ class CountryIrq extends WorldCountry {
             latLng: LatLng(33.33, 44.4),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -18054,6 +18117,7 @@ class CountryEsp extends WorldCountry {
             latLng: LatLng(40.4, -3.68),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -18644,6 +18708,7 @@ class CountryFlk extends WorldCountry {
             capital: Capital("Stanley"),
             latLng: LatLng(-51.7, -57.85),
           ),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -19164,6 +19229,7 @@ class CountryUsa extends WorldCountry {
             format: "#####-####",
             regExpPattern: r"^\d{5}(-\d{4})?$",
           ),
+          regionalBlocs: const [BlocNAFTA()],
         );
 }
 
@@ -19744,6 +19810,7 @@ class CountryMex extends WorldCountry {
             latLng: LatLng(19.43, -99.13),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocPA(), BlocNAFTA()],
         );
 }
 
@@ -19934,6 +20001,7 @@ class CountryBrn extends WorldCountry {
             format: "@@####",
             regExpPattern: r"^([A-Z]{2}\d{4})$",
           ),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -20133,6 +20201,7 @@ class CountryCyp extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -20327,6 +20396,7 @@ class CountryNic extends WorldCountry {
             format: "###-###-#",
             regExpPattern: r"^(\d{7})$",
           ),
+          regionalBlocs: const [BlocCAIS()],
         );
 }
 
@@ -21101,6 +21171,7 @@ class CountrySsd extends WorldCountry {
             capital: Capital("Juba"),
             latLng: LatLng(4.85, 31.62),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -21302,6 +21373,7 @@ class CountrySom extends WorldCountry {
             format: "@@  #####",
             regExpPattern: r"^([A-Z]{2}\d{5})$",
           ),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -21497,6 +21569,7 @@ class CountryGrc extends WorldCountry {
           postalCode: const PostalCode(
             format: "### ##",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -21881,6 +21954,7 @@ class CountryLao extends WorldCountry {
             latLng: LatLng(17.97, 102.6),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -22069,6 +22143,7 @@ class CountryBlz extends WorldCountry {
             capital: Capital("Belmopan"),
             latLng: LatLng(17.25, -88.77),
           ),
+          regionalBlocs: const [BlocCARICOM(), BlocCAIS()],
         );
 }
 
@@ -22263,6 +22338,7 @@ class CountrySlv extends WorldCountry {
             format: "CP ####",
             regExpPattern: r"^(?:CP)*(\d{4})$",
           ),
+          regionalBlocs: const [BlocCAIS()],
         );
 }
 
@@ -22445,6 +22521,7 @@ class CountryJam extends WorldCountry {
             capital: Capital("Kingston"),
             latLng: LatLng(17.99702, -76.79358),
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -22636,6 +22713,7 @@ class CountryUry extends WorldCountry {
             latLng: LatLng(-34.85, -56.17),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -23040,6 +23118,7 @@ class CountryLux extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -23226,6 +23305,7 @@ class CountryChl extends WorldCountry {
             format: "#######",
             regExpPattern: r"^(\d{7})$",
           ),
+          regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
 }
 
@@ -23610,6 +23690,7 @@ class CountryGnb extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -23808,6 +23889,7 @@ class CountryUga extends WorldCountry {
             capital: Capital("Kampala"),
             latLng: LatLng(0.32, 32.55),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -24001,6 +24083,7 @@ class CountryVen extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -24206,6 +24289,7 @@ class CountrySrb extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocCEFTA()],
         );
 }
 
@@ -24397,6 +24481,7 @@ class CountryBen extends WorldCountry {
             capital: Capital("Porto-Novo"),
             latLng: LatLng(6.48, 2.62),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -24590,6 +24675,7 @@ class CountryBgd extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocSAARC()],
         );
 }
 
@@ -24770,6 +24856,7 @@ class CountryBhs extends WorldCountry {
             capital: Capital("Nassau"),
             latLng: LatLng(25.08, -77.35),
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -25130,6 +25217,7 @@ class CountryAtg extends WorldCountry {
             capital: Capital("Saint John's"),
             latLng: LatLng(17.12, -61.85),
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -25517,6 +25605,7 @@ class CountrySyc extends WorldCountry {
             capital: Capital("Victoria"),
             latLng: LatLng(-4.62, 55.45),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -25699,6 +25788,7 @@ class CountryEsh extends WorldCountry {
             capital: Capital("El Aaiún"),
             latLng: LatLng(-13.28, 27.14),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -26090,6 +26180,7 @@ class CountryMkd extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocCEFTA()],
         );
 }
 
@@ -26289,6 +26380,7 @@ class CountryPer extends WorldCountry {
             latLng: LatLng(-12.05, -77.05),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
 }
 
@@ -26486,6 +26578,7 @@ class CountryBdi extends WorldCountry {
             capital: Capital("Gitega"),
             latLng: LatLng(-3.43, 29.93),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -27081,6 +27174,7 @@ class CountryTza extends WorldCountry {
             capital: Capital("Dodoma"),
             latLng: LatLng(-6.16, 35.75),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -27273,6 +27367,7 @@ class CountryTun extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -27458,6 +27553,7 @@ class CountryMsr extends WorldCountry {
             capital: Capital("Plymouth"),
             latLng: LatLng(16.7, -62.22),
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -27665,6 +27761,7 @@ class CountryKgz extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocEEU()],
         );
 }
 
@@ -27850,6 +27947,7 @@ class CountryImn extends WorldCountry {
             regExpPattern:
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -28218,6 +28316,7 @@ class CountryKwt extends WorldCountry {
             latLng: LatLng(29.37, 47.97),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -28597,6 +28696,7 @@ class CountryCiv extends WorldCountry {
             capital: Capital("Yamoussoukro"),
             latLng: LatLng(6.82, -5.27),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -28964,6 +29064,7 @@ class CountryLso extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -29359,6 +29460,7 @@ class CountrySvn extends WorldCountry {
             format: "SI- ####",
             regExpPattern: r"^(?:SI)*(\d{4})$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -29568,6 +29670,7 @@ class CountryBel extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -29935,6 +30038,7 @@ class CountryGib extends WorldCountry {
             capital: Capital("Gibraltar"),
             latLng: LatLng(36.13, -5.35),
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -30117,6 +30221,7 @@ class CountryQat extends WorldCountry {
             capital: Capital("Doha"),
             latLng: LatLng(25.28, 51.53),
           ),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -30318,6 +30423,7 @@ class CountryBwa extends WorldCountry {
             capital: Capital("Gaborone"),
             latLng: LatLng(-24.63, 25.9),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -30519,6 +30625,7 @@ class CountryGnq extends WorldCountry {
             capital: Capital("Malabo"),
             latLng: LatLng(3.75, 8.78),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -30718,6 +30825,7 @@ class CountryDji extends WorldCountry {
             capital: Capital("Djibouti"),
             latLng: LatLng(11.58, 43.15),
           ),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -30904,6 +31012,7 @@ class CountryGuy extends WorldCountry {
             capital: Capital("Georgetown"),
             latLng: LatLng(6.8, -58.15),
           ),
+          regionalBlocs: const [BlocCARICOM(), BlocUSAN()],
         );
 }
 
@@ -31855,6 +31964,7 @@ class CountryPry extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -32047,6 +32157,7 @@ class CountrySur extends WorldCountry {
             capital: Capital("Paramaribo"),
             latLng: LatLng(5.83, -55.17),
           ),
+          regionalBlocs: const [BlocCARICOM(), BlocUSAN()],
         );
 }
 
@@ -32425,6 +32536,7 @@ class CountryGin extends WorldCountry {
             capital: Capital("Conakry"),
             latLng: LatLng(9.5, -13.7),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -32616,6 +32728,7 @@ class CountryCze extends WorldCountry {
           postalCode: const PostalCode(
             format: "### ##",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -32809,6 +32922,7 @@ class CountryCom extends WorldCountry {
             capital: Capital("Moroni"),
             latLng: LatLng(-11.7, 43.23),
           ),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -32991,6 +33105,7 @@ class CountryGha extends WorldCountry {
             capital: Capital("Accra"),
             latLng: LatLng(5.55, -0.22),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -33178,6 +33293,7 @@ class CountryKna extends WorldCountry {
             capital: Capital("Basseterre"),
             latLng: LatLng(17.3, -62.72),
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -33592,6 +33708,7 @@ class CountryZwe extends WorldCountry {
             capital: Capital("Harare"),
             latLng: LatLng(-17.82, 31.03),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -33790,6 +33907,7 @@ class CountryKen extends WorldCountry {
             latLng: LatLng(-1.28, 36.82),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -34001,6 +34119,7 @@ class CountryKaz extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocEEU()],
         );
 }
 
@@ -34190,6 +34309,7 @@ class CountryMne extends WorldCountry {
             latLng: LatLng(42.43, 19.27),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocCEFTA()],
         );
 }
 
@@ -34561,6 +34681,7 @@ class CountryPan extends WorldCountry {
             capital: Capital("Panama City"),
             latLng: LatLng(8.97, -79.53),
           ),
+          regionalBlocs: const [BlocCAIS()],
         );
 }
 
@@ -35323,6 +35444,7 @@ class CountryPrt extends WorldCountry {
             format: "####-###",
             regExpPattern: r"^(\d{7})$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -35521,6 +35643,7 @@ class CountryAut extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -35715,6 +35838,7 @@ class CountryFin extends WorldCountry {
             latLng: LatLng(60.17, 24.93),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(?:FI)*(\d{5})$"),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -35907,6 +36031,7 @@ class CountryEst extends WorldCountry {
             latLng: LatLng(59.43, 24.72),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -36283,6 +36408,7 @@ class CountryYem extends WorldCountry {
             capital: Capital("Sana'a"),
             latLng: LatLng(15.37, 44.19),
           ),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -36479,19 +36605,15 @@ class CountryAfg extends WorldCountry {
             googleMaps: "BXBGw7yUUFknCfva9",
             openStreetMaps: "relation/303427",
           ),
-
           population: 40218234,
-
           fifa: "AFG",
-
           car: const Car(sign: "AFG"),
-
           timezones: const ["UTC+04:30"],
-
           capitalInfo: const CapitalInfo(
             capital: Capital("Kabul"),
             latLng: LatLng(34.52, 69.18),
           ),
+          regionalBlocs: const [BlocSAARC()],
         );
 }
 
@@ -36682,6 +36804,7 @@ class CountrySyr extends WorldCountry {
             capital: Capital("Damascus"),
             latLng: LatLng(33.5, 36.3),
           ),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -36874,6 +36997,7 @@ class CountryMdv extends WorldCountry {
             latLng: LatLng(4.17, 73.51),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocSAARC()],
         );
 }
 
@@ -37269,6 +37393,7 @@ class CountryLtu extends WorldCountry {
             format: "LT-#####",
             regExpPattern: r"^(?:LT)*(\d{5})$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -37854,6 +37979,7 @@ class CountryDeu extends WorldCountry {
             latLng: LatLng(52.52, 13.4),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -38059,6 +38185,7 @@ class CountryArg extends WorldCountry {
             format: "@####@@@",
             regExpPattern: r"^([A-Z]\d{4}[A-Z]{3})$",
           ),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -38267,6 +38394,7 @@ class CountryBlr extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocEEU()],
         );
 }
 
@@ -38451,6 +38579,7 @@ class CountryBrb extends WorldCountry {
             format: "BB#####",
             regExpPattern: r"^(?:BB)*(\d{5})$",
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -38661,11 +38790,6 @@ class CountryAze extends WorldCountry {
               official: "Azərbaycan Respublikası",
               common: "Azərbaycan",
             ),
-            CountryName(
-              language: LangRus(),
-              official: "Азербайджанская Республика",
-              common: "Азербайджан",
-            ),
           ],
           tld: const [".az"],
           codeShort: "AZ",
@@ -38681,7 +38805,7 @@ class CountryAze extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAze(), LangRus()],
+          languages: const [LangAze()],
           translations: const [
             CountryName(
               language: LangSrp(),
@@ -39031,6 +39155,7 @@ class CountryMar extends WorldCountry {
             latLng: LatLng(34.02, -6.82),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -39417,6 +39542,7 @@ class CountryCaf extends WorldCountry {
             capital: Capital("Bangui"),
             latLng: LatLng(4.37, 18.58),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -39609,6 +39735,7 @@ class CountryRou extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -39807,6 +39934,7 @@ class CountryMlt extends WorldCountry {
             format: "@@@ ###|@@@ ##",
             regExpPattern: r"^([A-Z]{3}\d{2}\d?)$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -40008,6 +40136,7 @@ class CountryArm extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocEEU()],
         );
 }
 
@@ -40205,6 +40334,7 @@ class CountrySen extends WorldCountry {
             latLng: LatLng(14.73, -17.63),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -40397,6 +40527,7 @@ class CountryBgr extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -40620,6 +40751,7 @@ class CountryCod extends WorldCountry {
             capital: Capital("Kinshasa"),
             latLng: LatLng(-4.32, 15.3),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -40816,6 +40948,7 @@ class CountryHti extends WorldCountry {
             format: "HT####",
             regExpPattern: r"^(?:HT)*(\d{4})$",
           ),
+          regionalBlocs: const [BlocCARICOM()],
         );
 }
 
@@ -41002,6 +41135,7 @@ class CountryAlb extends WorldCountry {
             capital: Capital("Tirana"),
             latLng: LatLng(41.32, 19.82),
           ),
+          regionalBlocs: const [BlocCEFTA()],
         );
 }
 
@@ -41194,6 +41328,7 @@ class CountryJor extends WorldCountry {
             latLng: LatLng(31.95, 35.93),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -41571,6 +41706,7 @@ class CountryMdg extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -41778,6 +41914,7 @@ class CountryFra extends WorldCountry {
             latLng: LatLng(48.87, 2.33),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -42359,6 +42496,7 @@ class CountryInd extends WorldCountry {
             format: "######",
             regExpPattern: r"^(\d{6})$",
           ),
+          regionalBlocs: const [BlocSAARC()],
         );
 }
 
@@ -42573,6 +42711,7 @@ class CountryNam extends WorldCountry {
             capital: Capital("Windhoek"),
             latLng: LatLng(-22.57, 17.08),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -42966,6 +43105,7 @@ class CountrySdn extends WorldCountry {
             latLng: LatLng(15.6, 32.53),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
 
@@ -43158,6 +43298,7 @@ class CountryStp extends WorldCountry {
             capital: Capital("São Tomé"),
             latLng: LatLng(0.34, 6.73),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -43358,6 +43499,7 @@ class CountrySau extends WorldCountry {
             latLng: LatLng(24.65, 46.7),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -43729,6 +43871,7 @@ class CountryLka extends WorldCountry {
             latLng: LatLng(6.89, 79.9),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocSAARC()],
         );
 }
 
@@ -43919,6 +44062,7 @@ class CountrySwe extends WorldCountry {
             format: "SE-### ##",
             regExpPattern: r"^(?:SE)*(\d{5})$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -44300,6 +44444,7 @@ class CountryDnk extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -44489,6 +44634,7 @@ class CountryMys extends WorldCountry {
             latLng: LatLng(3.17, 101.7),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -44681,6 +44827,7 @@ class CountryCri extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocCAIS()],
         );
 }
 
@@ -44899,6 +45046,7 @@ class CountryBol extends WorldCountry {
             capital: Capital("Sucre"),
             latLng: LatLng(-19.02, -65.26),
           ),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -45082,6 +45230,7 @@ class CountryBtn extends WorldCountry {
             capital: Capital("Thimphu"),
             latLng: LatLng(27.47, 89.63),
           ),
+          regionalBlocs: const [BlocSAARC()],
         );
 }
 
@@ -45644,6 +45793,7 @@ class CountryMli extends WorldCountry {
             capital: Capital("Bamako"),
             latLng: LatLng(12.65, -8),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -46035,6 +46185,7 @@ class CountryLva extends WorldCountry {
             format: "LV-####",
             regExpPattern: r"^(?:LV)*(\d{4})$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -46615,6 +46766,7 @@ class CountryEcu extends WorldCountry {
             format: "@####@",
             regExpPattern: r"^([a-zA-Z]\d{4}[a-zA-Z])$",
           ),
+          regionalBlocs: const [BlocUSAN()],
         );
 }
 
@@ -46805,6 +46957,7 @@ class CountryTha extends WorldCountry {
             latLng: LatLng(13.75, 100.52),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -46992,6 +47145,7 @@ class CountryAre extends WorldCountry {
             capital: Capital("Abu Dhabi"),
             latLng: LatLng(24.47, 54.37),
           ),
+          regionalBlocs: const [BlocAL()],
         );
 }
 
@@ -47193,6 +47347,7 @@ class CountryHrv extends WorldCountry {
             format: "HR-#####",
             regExpPattern: r"^(?:HR)*(\d{5})$",
           ),
+          regionalBlocs: const [BlocEU()],
         );
 }
 
@@ -47385,6 +47540,7 @@ class CountryMmr extends WorldCountry {
             latLng: LatLng(19.76, 96.07),
           ),
           postalCode: const PostalCode(),
+          regionalBlocs: const [BlocASEAN()],
         );
 }
 
@@ -47976,6 +48132,7 @@ class CountryChe extends WorldCountry {
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+          regionalBlocs: const [BlocEFTA()],
         );
 }
 
@@ -48182,6 +48339,7 @@ class CountryEri extends WorldCountry {
             capital: Capital("Asmara"),
             latLng: LatLng(15.33, 38.93),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 
@@ -48381,6 +48539,7 @@ class CountryCog extends WorldCountry {
             capital: Capital("Brazzaville"),
             latLng: LatLng(-4.25, 15.28),
           ),
+          regionalBlocs: const [BlocAU()],
         );
 }
 

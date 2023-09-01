@@ -1,5 +1,3 @@
-// TODO! + functional methods.
-// coverage:ignore-file
 part of "world_bloc.dart";
 
 /// The `RegionalBloc` class is an non-abstract class that represents a regional
@@ -26,19 +24,11 @@ class RegionalBloc extends WorldBloc {
     required super.name,
     this.otherAcronyms,
     this.otherNames,
-  })  : assert(
-          otherAcronyms == null || otherAcronyms.length > 0,
-          "`otherAcronyms` should not be empty!",
-        ),
-        assert(
-          otherNames == null || otherNames.length > 0,
-          "`otherNames` should not be empty!",
-        ),
-        super(acronym: acronym);
+  }) : super(acronym: acronym);
 
   /// Creates a new `RegionalBloc` object from its acronym.
   factory RegionalBloc.fromAcronym(String acronym) => list.firstWhere(
-        (bloc) => bloc.name == acronym.trim().toUpperCase(),
+        (bloc) => bloc.acronym == acronym.trim().toUpperCase(),
       );
 
   /// Creates a new `RegionalBloc` object from its name.
@@ -87,5 +77,19 @@ class RegionalBloc extends WorldBloc {
   }
 
   /// The list of all regional blocs in the world.
-  static const list = <RegionalBloc>[]; // TODO!
+  static const list = [
+    BlocAL(),
+    BlocASEAN(),
+    BlocAU(),
+    BlocCAIS(),
+    BlocCARICOM(),
+    BlocCEFTA(),
+    BlocEEU(),
+    BlocEFTA(),
+    BlocEU(),
+    BlocNAFTA(),
+    BlocPA(),
+    BlocSAARC(),
+    BlocUSAN(),
+  ];
 }

@@ -127,5 +127,8 @@ android/
 .metadata
 !packages/*/example/.metadata
 
+# Flutter Version Management
+.fvm
+
 # Other
 json/

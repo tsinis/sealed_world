@@ -56,3 +56,26 @@ updates:
     commit-message:
       prefix: "chore"
       include: "scope"
+
+  # Maintain dependencies for Flutter (example)
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "/packages/world_countries/example/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+  # Maintain dependencies for Android (example)
+  - package-ecosystem: "gradle"
+    directory: "/packages/world_countries/example/android/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"

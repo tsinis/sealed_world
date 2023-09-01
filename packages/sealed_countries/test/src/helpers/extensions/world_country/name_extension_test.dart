@@ -59,7 +59,8 @@ void main() => group("NameExtension", () {
       });
 
       group("namesCommonNative", () {
-        final country = WorldCountry.list.first;
+        final country =
+            WorldCountry.list.firstWhere((c) => c.namesNative.length > 1);
 
         test(
           "separator",
@@ -80,16 +81,22 @@ void main() => group("NameExtension", () {
 
           test(
             "with single name",
-            () => expect(
-              WorldCountry.list.elementAt(1).namesCommonNative(skipFirst: true),
-              WorldCountry.list.elementAt(1).namesNative.first.common,
-            ),
+            () {
+              final singleNameCountry = WorldCountry.list.firstWhere(
+                (c) => c.namesNative.length == 1,
+              );
+              expect(
+                singleNameCountry.namesCommonNative(skipFirst: true),
+                singleNameCountry.namesNative.first.common,
+              );
+            },
           );
         });
       });
 
       group("namesOfficialNative", () {
-        final country = WorldCountry.list.first;
+        final country =
+            WorldCountry.list.firstWhere((c) => c.namesNative.length > 1);
 
         test(
           "separator",
@@ -110,12 +117,15 @@ void main() => group("NameExtension", () {
 
           test(
             "with single name",
-            () => expect(
-              WorldCountry.list
-                  .elementAt(1)
-                  .namesOfficialNative(skipFirst: true),
-              WorldCountry.list.elementAt(1).namesNative.first.official,
-            ),
+            () {
+              final singleNameCountry = WorldCountry.list.firstWhere(
+                (c) => c.namesNative.length == 1,
+              );
+              expect(
+                singleNameCountry.namesOfficialNative(skipFirst: true),
+                singleNameCountry.namesNative.first.official,
+              );
+            },
           );
         });
       });

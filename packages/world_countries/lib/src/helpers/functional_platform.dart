@@ -4,9 +4,7 @@ import "package:flutter/foundation.dart"
 
 /// A helper class for conditionally executing code based on the current
 /// platform.
-abstract final class FunctionalPlatform {
-  const FunctionalPlatform._(); // coverage:ignore-line
-
+sealed class FunctionalPlatform {
   /// Invokes the given function based on the current platform.
   ///
   /// Example usage:

@@ -13,7 +13,7 @@ class LanguageTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => TabBody(
-        title: SelectableText(
+        title: Text(
           language.name,
           style: context.theme.textTheme.headlineSmall,
           textAlign: TextAlign.center,

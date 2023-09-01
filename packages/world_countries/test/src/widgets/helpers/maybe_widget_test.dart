@@ -28,4 +28,22 @@ void main() => group("$MaybeWidget", () {
         );
         expect(find.text("Hello"), findsOneWidget);
       });
+
+      testWidgets(
+        "renders orElse when value is null in identifiable constructor",
+        (tester) async {
+          const String? maybeValue = null;
+
+          await tester.pumpWidget(
+            MaterialApp(
+              home: MaybeWidget.identifiable(
+                maybeValue,
+                Text.new,
+                orElse: const Text("Identifiable"),
+              ),
+            ),
+          );
+          expect(find.text("Identifiable"), findsOneWidget);
+        },
+      );
     });

@@ -1,10 +1,10 @@
-import "package:flutter/foundation.dart" show PlatformDispatcher;
+import "package:flutter/foundation.dart" show kIsWeb;
 import "package:flutter/widgets.dart" show runApp;
-import "package:world_countries/world_countries.dart";
+import "package:url_strategy/url_strategy.dart";
 
 import "my_app.dart";
 
 void main() {
-  final country = PlatformDispatcher.instance.locale.maybeCountry;
-  runApp(MyApp(country: country ?? const CountrySrb()));
+  if (kIsWeb) setPathUrlStrategy();
+  runApp(const MyApp());
 }

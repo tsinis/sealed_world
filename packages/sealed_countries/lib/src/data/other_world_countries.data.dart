@@ -17,6 +17,7 @@ import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
 import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
+import "regional_bloc/regional_bloc.data.dart";
 
 /// {@hideConstantImplementations}
 class CountryUnk extends WorldCountry {
@@ -208,5 +209,6 @@ class CountryUnk extends WorldCountry {
             capital: Capital("Pristina"),
             latLng: LatLng(42.67, 21.17),
           ),
+          regionalBlocs: const [BlocCEFTA()],
         );
 }

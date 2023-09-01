@@ -75,21 +75,16 @@ void main() => group("WebResourcesExtension", () {
         final coatsSvg = country.maybeCoatOfArmsSvgUrl();
         final flagPng = country.flagPngUrl();
         final flagSvg = country.flagSvgUrl();
+        final code = country.codeShort.toLowerCase();
         expect(
           coatsSvg,
-          "https://mainfacts.com/media/images/coats_of_arms/af.svg",
+          "https://mainfacts.com/media/images/coats_of_arms/$code.svg",
         );
         expect(
           coatsPng,
-          "https://mainfacts.com/media/images/coats_of_arms/af.png",
+          "https://mainfacts.com/media/images/coats_of_arms/$code.png",
         );
-        expect(
-          flagPng,
-          "https://flagcdn.com/w320/af.png",
-        );
-        expect(
-          flagSvg,
-          "https://flagcdn.com/af.svg",
-        );
+        expect(flagPng, "https://flagcdn.com/w320/$code.png");
+        expect(flagSvg, "https://flagcdn.com/$code.svg");
       });
     });

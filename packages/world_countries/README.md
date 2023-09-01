@@ -119,13 +119,15 @@ This package is licensed under the MIT license. See [LICENSE](./LICENSE) for det
 
 The color emoji flags fonts used in this package were obtained from open-source repositories of the original creators. The fonts are redistributed under the terms of the licenses offered by the original authors. The fonts sizes were reduced, by removing non-flag glyphs, to reduce the package size and to reduce the copyright footprint, since most of the country flags are in Public Domain. No modifications in graphic itself were made.
 
+> **Note**: To preview this package example, you can visit [this web page](https://tsin.is/sealed_world/) using the Chrome browser (version 113 or higher) with the `enable-webassembly-garbage-collection` flag enabled.
+
 ### Noto Emoji fonts
 
 The [Noto Emoji font](./lib/assets/fonts/NotoEmoji/) font comes from [Noto Emoji](https://github.com/googlefonts/noto-emoji) emoji library. Noto Emoji fonts are under the [SIL Open Font License, version 1.1](https://scripts.sil.org/OFL).
 
 ### OpenMoji fonts
 
-The [OpenMoji](./lib/assets/fonts/OpenMoji/) font comes from [OpenMoji](https://github.com/hfg-gmuend/openmoji) project and redistributed under the CC-BY-SA-4.0 [license terms](https://creativecommons.org/licenses/by-sa/4.0/) offered by the Twemoji project.
+The [OpenMoji](./lib/assets/fonts/OpenMoji/) font comes from [OpenMoji](https://github.com/hfg-gmuend/openmoji) project and redistributed under the CC-BY-SA-4.0 [license terms](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ### Twemoji fonts
 

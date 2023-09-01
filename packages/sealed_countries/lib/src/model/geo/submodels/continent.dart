@@ -65,11 +65,11 @@ class Continent extends SubRegion {
 
   /// The list of all continents of the world.
   static const list = [
-    Europe(),
     Africa(),
     Americas(),
-    Asia(),
     Antarctica(),
+    Asia(),
+    Europe(),
     Oceania(),
   ];
 }

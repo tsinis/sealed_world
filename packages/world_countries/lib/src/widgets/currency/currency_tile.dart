@@ -10,11 +10,11 @@ import "../generic_widgets/list_item_tile.dart";
 class CurrencyTile extends ListItemTile<FiatCurrency> {
   /// Constructor for the [CurrencyTile] class.
   ///
-  /// * [currency] is the fiat currency to display information about.
+  /// * Input currency item is the fiat currency to display information about.
   /// * All other parameters are optional and are passed to the superclass
   /// constructor.
   const CurrencyTile(
-    FiatCurrency currency, {
+    super._item, {
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -51,7 +51,7 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-  }) : super(currency); // coverage:ignore-line
+  });
 
   /// Constructor for the [CurrencyTile] class that uses an [ItemProperties]
   /// object.
