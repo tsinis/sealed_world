@@ -1,5 +1,6 @@
 import "dart:ui";
 
+// ignore: depend_on_referenced_packages, to match original code.
 import "package:collection/collection.dart";
 import "package:world_countries/world_countries.dart";
 

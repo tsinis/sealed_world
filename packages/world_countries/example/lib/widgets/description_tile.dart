@@ -50,8 +50,8 @@ class DescriptionTile extends StatelessWidget {
             ),
             ListTile(
               leading: _leading,
-              title: SelectableText(title),
-              subtitle: SelectableText(
+              title: Text(title),
+              subtitle: Text(
                 description,
                 style: context.theme.textTheme.labelSmall
                     ?.copyWith(fontWeight: FontWeight.w300),

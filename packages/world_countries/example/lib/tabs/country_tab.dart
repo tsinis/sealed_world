@@ -18,12 +18,12 @@ class CountryTab extends StatelessWidget {
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SelectableText(
+            Text(
               (country.nameTranslated() ?? country.name).common,
               style: context.theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
-            SelectableText(
+            Text(
               (country.nameTranslated() ?? country.name).official,
               style: context.theme.textTheme.titleMedium
                   ?.copyWith(fontWeight: FontWeight.w200),
