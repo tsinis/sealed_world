@@ -17313,7 +17313,7 @@ class CountryNld extends WorldCountry {
           gini: const Gini(year: 2018, coefficient: 28.1),
           fifa: "NED",
           car: const Car(sign: "NL"),
-          timezones: const ["UTC-04:00", "UTC+01:00"],
+          timezones: const ["UTC+01:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Amsterdam"),
             latLng: LatLng(52.35, 4.92),
