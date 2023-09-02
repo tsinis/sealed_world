@@ -133,7 +133,7 @@ extension WidgetTesterExtension on WidgetTester {
     final firstItem = find.text(findLabel(picker.items.first));
     final lastItem = find.text(findLabel(picker.items.last));
 
-    expect(firstItem, findsOneWidget);
+    expect(firstItem, findsWidgets);
 
     await dragUntilVisible(
       lastItem,

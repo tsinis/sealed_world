@@ -7,7 +7,6 @@ import "../../widgets/country_flag.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-// TODO! Add Regional Blocs.
 class CountryTab extends StatelessWidget {
   const CountryTab(this.country, {super.key});
 
@@ -182,7 +181,7 @@ class CountryTab extends StatelessWidget {
           DescriptionTile(
             "Count: ${country.timezones.length}",
             icon: Icons.schedule_outlined,
-            description: "Timezones",
+            description: "Timezone(s)",
           ),
           DescriptionTile(
             country.startOfWeek.label,
@@ -198,6 +197,11 @@ class CountryTab extends StatelessWidget {
             country.altSpellings,
             icon: Icons.spellcheck,
             description: "Alternate Spellings",
+          ),
+          DescriptionTile.fromIterable(
+            country.regionalBlocs?.map((bloc) => bloc.name),
+            icon: Icons.grid_view_outlined,
+            description: "Regional Bloc(s)",
           ),
           for (final translation in country.translations) ...[
             DescriptionTile.raw(
