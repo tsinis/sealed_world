@@ -93,8 +93,6 @@ For more usage examples, please see the `/example` folder.
 For more information on using this package, check out the API documentation.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
 
-> **Note**: To preview this package data, you can visit [this web page](https://tsin.is/sealed_world/) using the Chrome browser (version 113 or higher) with the `enable-webassembly-garbage-collection` flag enabled.
-
 ## References, credits and sources
 
 - [ISO](https://www.iso.org/iso-3166-country-codes.html)

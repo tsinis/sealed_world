@@ -6,7 +6,7 @@
 - feat(docs): added regional blocs in the example
 - refactor(lints): fixing old ignores and new linter rules
 - chore(deps): updates of dev_dependencies
-- docs(example): added web (flutter wasm) example of data provided in this package.
+- fix(data): fix timezones for netherlands
 
 BREAKING CHANGES:
 

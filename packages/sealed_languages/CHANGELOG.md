@@ -3,7 +3,6 @@
 - refactor(model): factory constructors and static methods for data classes creation now implicitly trimming and comparing uppercase string inputs
 - refactor(lints): fixing old ignores and new linter rules
 - chore(deps): updates of dev_dependencies
-- docs(example): added web (flutter wasm) example of data provided in this package.
 
 BREAKING CHANGES:
 

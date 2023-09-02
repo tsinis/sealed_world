@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/world_countries.svg)](https://pub.dev/packages/world_countries)
 
-![Example](https://github.com/tsinis/sealed_world/blob/main/packages/world_countries/doc/example.gif)
+![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_countries/doc/example.gif)
 
 This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in form of compile-time constant sealed classes with a customizable pickers. This is Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends the data (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
 
@@ -119,7 +119,7 @@ This package is licensed under the MIT license. See [LICENSE](./LICENSE) for det
 
 The color emoji flags fonts used in this package were obtained from open-source repositories of the original creators. The fonts are redistributed under the terms of the licenses offered by the original authors. The fonts sizes were reduced, by removing non-flag glyphs, to reduce the package size and to reduce the copyright footprint, since most of the country flags are in Public Domain. No modifications in graphic itself were made.
 
-> **Note**: To preview this package example, you can visit [this web page](https://tsin.is/sealed_world/) using the Chrome browser (version 113 or higher) with the `enable-webassembly-garbage-collection` flag enabled.
+> **EXPERIMENTAL** (Flutter WASM): To preview this package example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **113** or higher) with the `enable-webassembly-garbage-collection` **flag enabled**. Please allow up to one minute for initial fonts and data caching.
 
 ### Noto Emoji fonts
 
@@ -133,3 +133,25 @@ The [OpenMoji](./lib/assets/fonts/OpenMoji/) font comes from [OpenMoji](https://
 
 The [Twemoji font in COLR/CPAL layered format](./lib/assets/fonts/Twemoji/) font comes from [Twemoji-COLR](https://github.com/mozilla/twemoji-colr) project (Mozilla's COLR/CPAL version of [Twemoji](https://github.com/twitter/twemoji)). Twemoji graphics made by Twitter and other contributors
 and is used and redistributed under the CC-BY-4.0 [license terms](https://creativecommons.org/licenses/by/4.0) offered by the Twemoji project.
+
+---
+
+### FAQ
+
+#### I have problems rendering COLR emoji flags on Android.
+
+Answer: Android OS [supports](https://developer.android.com/about/versions/13/features#color-vector-fonts) COLRv1 fonts from version 13 on (API level 33).
+
+#### **My flags on web platform are grey (not colored)!**
+
+Answer: Please add `useColorEmoji: true` parameter to your `engineInitializer.initializeEngine` method ([index.html](https://github.com/flutter/flutter/issues/119536#issuecomment-1546247494)).
+
+#### **I don't like default tiles UI in the pickers**
+
+Answer: Every picker has a `itemBuilder` parameter, providing access to specific list item properties, for example this is how you can show only a common country name in `CountryPicker`:
+
+```dart
+CountryPicker(
+  itemBuilder: (picker) => Text(picker.item.name.common),
+);
+```
