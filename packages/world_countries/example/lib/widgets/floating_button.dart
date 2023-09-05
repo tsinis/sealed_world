@@ -6,14 +6,14 @@ import "../tabs/tabs_data_controller.dart";
 class FloatingButton extends StatelessWidget {
   const FloatingButton(this.controller, {required this.onPressed, super.key});
 
-  final ValueSetter<bool> onPressed;
+  final void Function({bool isLong}) onPressed;
   final TabsDataController controller;
 
   @override
   Widget build(BuildContext context) => InkWell(
-        onLongPress: () => onPressed(true),
+        onLongPress: () => onPressed(isLong: true),
         child: FloatingActionButton(
-          onPressed: () => onPressed(false),
+          onPressed: () => onPressed(isLong: false),
           child: AnimatedBuilder(
             animation: controller,
             builder: (_, __) => AnimatedSwitcher(

@@ -3,89 +3,96 @@
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
+import "../model/world_data.dart";
+import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-class CurrencyTab extends StatelessWidget {
-  const CurrencyTab(this.currency, {super.key});
-
-  final FiatCurrency currency;
+final class CurrencyTab extends WorldDataTab<FiatCurrency> {
+  CurrencyTab(
+    super.data,
+    super.nav, {
+    super.dataPicker = const CurrencyPicker(),
+    super.items = FiatCurrency.list,
+    super.type = WorldData.currency,
+    super.key,
+  }) : super(mapCode: (currency) => currency.code);
 
   @override
   Widget build(BuildContext context) => TabBody(
         title: Text(
-          currency.name,
+          data.name,
           style: context.theme.textTheme.headlineSmall,
           textAlign: TextAlign.center,
         ),
         children: <DescriptionTile>[
           DescriptionTile.fromIterable(
-            currency.namesNative,
+            data.namesNative,
             icon: Icons.badge_outlined,
             description: "Native Name(s)",
           ),
           DescriptionTile(
-            currency.code,
+            data.code,
             icon: Icons.looks_3_outlined,
             description: "Code: ISO 4217 (Alpha)",
           ),
           DescriptionTile(
-            currency.codeNumeric,
+            data.codeNumeric,
             icon: Icons.pin_outlined,
             description: "Code: ISO 4217 (Numeric)",
           ),
           DescriptionTile(
-            currency.symbol,
+            data.symbol,
             icon: Icons.euro_symbol_outlined,
             description: "Symbol",
           ),
           DescriptionTile(
-            currency.subunit,
+            data.subunit,
             icon: Icons.payments_outlined,
             description: "Subunit",
           ),
           DescriptionTile(
-            currency.subunitToUnit.toString(),
+            data.subunitToUnit.toString(),
             icon: Icons.savings_outlined,
             description: "Subunits in Unit",
           ),
           DescriptionTile(
-            currency.disambiguateSymbol,
+            data.disambiguateSymbol,
             icon: Icons.key_outlined,
             description: "Disambiguate Symbol",
           ),
           DescriptionTile(
-            currency.htmlEntity,
+            data.htmlEntity,
             icon: Icons.html_outlined,
             description: "HTML Entity",
           ),
           DescriptionTile(
-            currency.priority.toString(),
+            data.priority.toString(),
             icon: Icons.scale_outlined,
             description: "Priority",
           ),
           DescriptionTile.fromBool(
-            isTrue: currency.unitFirst,
+            isTrue: data.unitFirst,
             icon: Icons.first_page_outlined,
             description: "Unit First",
           ),
           DescriptionTile.fromIterable(
-            currency.alternateSymbols,
+            data.alternateSymbols,
             icon: Icons.monetization_on_outlined,
             description: "Alt. Symbols",
           ),
           DescriptionTile(
-            currency.decimalMark,
+            data.decimalMark,
             icon: Icons.money_outlined,
             description: "Decimal Mark",
           ),
           DescriptionTile(
-            currency.thousandsSeparator,
+            data.thousandsSeparator,
             icon: Icons.space_bar_outlined,
             description: "Thousands Separator",
           ),
           DescriptionTile(
-            currency.smallestDenomination.toString(),
+            data.smallestDenomination.toString(),
             icon: Icons.eject_outlined,
             description: "Smallest Denomination",
           ),
