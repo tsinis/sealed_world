@@ -6,13 +6,14 @@
 
 This project enables the visual presentation of "Sealed World" data, which includes information about countries, currencies, and languages. Additionally, it provides examples of Flutter widgets related to "World Countries" package.
 
-> **Note**: To access this project, you can visit [this web page](https://tsin.is/sealed_world) using the Chrome browser (version 113 or higher) with the `enable-webassembly-garbage-collection` flag enabled.
+> **EXPERIMENTAL** (Flutter WASM): To preview this example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **113** or higher) with the `enable-webassembly-garbage-collection` **flag enabled**. Please allow up to one minute for initial fonts and data caching.
 
 ## How to run it
 
-Flutter (version 3.10+ or higher) is assumed to be installed. After that, all you have to do is run this command from the terminal/command line from the project's root folder:
+Flutter (version 3.10+ or higher) is assumed to be installed. After that, all you have to do is run those commands from the terminal/command line from the project's root folder:
 
 ```shell
+flutter pub get
 flutter run
 ```
 
