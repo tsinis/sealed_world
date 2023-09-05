@@ -104,12 +104,22 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   Iterable<WorldCountry> get countries => items;
 
   @override
-  Widget? defaultBuilder(ItemProperties<WorldCountry> itemProperties) =>
-      CountryTile.fromProperties(
-        itemProperties,
-        onPressed: onSelect,
-        translation: translation,
-      );
+  Widget defaultBuilder(
+    ItemProperties<WorldCountry> itemProperties, {
+    bool? isDense,
+  }) =>
+      isDense ?? false
+          ? CountryTile.simple(
+              itemProperties,
+              onPressed: (country) =>
+                  maybeSelectAndPop(country, itemProperties.context),
+              translation: translation,
+            )
+          : CountryTile.fromProperties(
+              itemProperties,
+              onPressed: onSelect,
+              translation: translation,
+            );
 
   @override
   Iterable<String> defaultSearch(WorldCountry item) => Set.unmodifiable({
@@ -157,7 +167,10 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(WorldCountry country)? searchIn,
-    Widget? Function(ItemProperties<WorldCountry> itemProperties)? itemBuilder,
+    Widget? Function(
+      ItemProperties<WorldCountry> itemProperties, {
+      bool? isDense,
+    })? itemBuilder,
     NaturalLanguage? translation,
   }) =>
       CountryPicker(

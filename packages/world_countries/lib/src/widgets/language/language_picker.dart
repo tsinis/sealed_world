@@ -57,8 +57,18 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
   Iterable<NaturalLanguage> get languages => items;
 
   @override
-  Widget? defaultBuilder(ItemProperties<NaturalLanguage> itemProperties) =>
-      LanguageTile.fromProperties(itemProperties, onPressed: onSelect);
+  Widget defaultBuilder(
+    ItemProperties<NaturalLanguage> itemProperties, {
+    bool? isDense,
+  }) =>
+      LanguageTile.fromProperties(
+        itemProperties,
+        dense: isDense,
+        onPressed: (language) => isDense ?? false
+            ? maybeSelectAndPop(language, itemProperties.context)
+            : onSelect?.call(language),
+        visualDensity: isDense ?? false ? VisualDensity.compact : null,
+      );
 
   @override
   Iterable<String> defaultSearch(NaturalLanguage item) =>
@@ -102,8 +112,10 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(NaturalLanguage language)? searchIn,
-    Widget? Function(ItemProperties<NaturalLanguage> itemProperties)?
-        itemBuilder,
+    Widget? Function(
+      ItemProperties<NaturalLanguage> itemProperties, {
+      bool? isDense,
+    })? itemBuilder,
   }) =>
       LanguagePicker(
         languages: items ?? languages,

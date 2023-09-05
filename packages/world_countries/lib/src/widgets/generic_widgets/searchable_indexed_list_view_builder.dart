@@ -4,6 +4,9 @@ import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../interfaces/material_context_interface.dart";
+import "../../interfaces/searchable_interface.dart";
+import "../../mixins/popped_mixin.dart";
+import "../../mixins/properties_convertible_mixin.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 import "indexed_list_view_builder.dart";
 import "search_list_listenable_builder.dart";
@@ -13,7 +16,9 @@ part "searchable_indexed_list_view_builder_state.dart";
 /// A widget that displays a list of items, with search functionality and
 /// indexing support.
 class SearchableIndexedListViewBuilder<T extends Object>
-    extends StatefulIndexedListView<T> implements MaterialContextInterface<T> {
+    extends StatefulIndexedListView<T>
+    with PropertiesConvertibleMixin<T>, PoppedMixin<T>
+    implements MaterialContextInterface<T>, SearchableInterface<T> {
   /// Constructor for the [SearchableIndexedListViewBuilder] class.
   ///
   /// * [items] is the list of items to display.
@@ -104,12 +109,15 @@ class SearchableIndexedListViewBuilder<T extends Object>
   final TextEditingController? textController;
 
   /// The method to apply search to the items.
+  @override
   final Iterable<String> Function(T item)? searchIn;
 
   /// A boolean indicating whether the search is case-sensitive.
+  @override
   final bool caseSensitiveSearch;
 
   /// A boolean indicating whether to start search with the search string.
+  @override
   final bool startWithSearch;
 
   @override
