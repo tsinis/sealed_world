@@ -1,6 +1,8 @@
 // ignore_for_file: missing-test-assertion
+import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
+import "package:world_countries/src/widgets/country/country_tile.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -65,4 +67,18 @@ void main() => group("$PhoneCodePicker", () {
           (item) => item.namesNative.first.common,
         ),
       );
+
+      testWidgets("searchSuggestions()", (tester) async {
+        await tester.pumpMaterialApp(
+          SearchAnchor.bar(
+            suggestionsBuilder: const PhoneCodePicker().searchSuggestions,
+          ),
+        );
+        final tile = find.byType(CountryTile);
+        expect(tile, findsNothing);
+        await tester.tapAndSettle(find.byIcon(Icons.search));
+        expect(tile, findsWidgets);
+        await tester.tapAndSettle(tile.first);
+        expect(tile, findsNothing);
+      });
     });
