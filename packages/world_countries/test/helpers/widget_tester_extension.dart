@@ -1,6 +1,7 @@
 // ignore_for_file: prefer-moving-to-variable
 import "dart:async";
 
+import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/widgets/buttons/clear_button.dart";
@@ -23,6 +24,21 @@ extension WidgetTesterExtension on WidgetTester {
     return app;
   }
 
+  Future<void> tapAndSettle(
+    Finder finder, {
+    int? pointer,
+    int buttons = kPrimaryButton,
+    bool warnIfMissed = true,
+  }) async {
+    await tap(
+      finder,
+      pointer: pointer,
+      buttons: buttons,
+      warnIfMissed: warnIfMissed,
+    );
+    await pumpAndSettle();
+  }
+
   Future<void> testPickerBody<T extends Object>(
     BasicPicker<T> picker,
     String Function(T value) findLabel, {
@@ -40,8 +56,7 @@ extension WidgetTesterExtension on WidgetTester {
       expect(clearButton, findsOneWidget);
       await pumpAndSettle();
       await ensureVisible(clearButton);
-      await tap(clearButton);
-      await pumpAndSettle();
+      await tapAndSettle(clearButton);
     }
     expect(selected, isNull);
     await _testPicker(testPicker, findLabel);
@@ -106,8 +121,7 @@ extension WidgetTesterExtension on WidgetTester {
       await pumpAndSettle();
       final closeButton = find.byIcon(Icons.arrow_back);
       expect(closeButton, findsOneWidget);
-      await tap(closeButton);
-      await pumpAndSettle();
+      await tapAndSettle(closeButton);
       expect(closeButton, findsNothing);
       await tap(find.byIcon(Icons.search));
       expect(selected, isNull);

@@ -1,6 +1,8 @@
 // ignore_for_file: missing-test-assertion
+import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/widgets/currency/currency_picker.dart";
+import "package:world_countries/src/widgets/currency/currency_tile.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
 
@@ -56,4 +58,18 @@ void main() => group("$CurrencyPicker", () {
           (item) => item.namesNative.first,
         ),
       );
+
+      testWidgets("searchSuggestions()", (tester) async {
+        await tester.pumpMaterialApp(
+          SearchAnchor.bar(
+            suggestionsBuilder: const CurrencyPicker().searchSuggestions,
+          ),
+        );
+        final tile = find.byType(CurrencyTile);
+        expect(tile, findsNothing);
+        await tester.tapAndSettle(find.byIcon(Icons.search));
+        expect(tile, findsWidgets);
+        await tester.tapAndSettle(tile.first);
+        expect(tile, findsNothing);
+      });
     });

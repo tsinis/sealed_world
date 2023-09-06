@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
+import "package:world_countries/src/widgets/country/country_tile.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
 
@@ -62,6 +63,20 @@ void main() => group("$CountryPicker", () {
           testSelection: false,
         ),
       );
+
+      testWidgets("searchSuggestions()", (tester) async {
+        await tester.pumpMaterialApp(
+          SearchAnchor.bar(
+            suggestionsBuilder: const CountryPicker().searchSuggestions,
+          ),
+        );
+        final tile = find.byType(CountryTile);
+        expect(tile, findsNothing);
+        await tester.tapAndSettle(find.byIcon(Icons.search));
+        expect(tile, findsWidgets);
+        await tester.tapAndSettle(tile.first);
+        expect(tile, findsNothing);
+      });
 
       testWidgets("in $WidgetsApp with sorted countries", (tester) async {
         final countries = List.of(WorldCountry.list)

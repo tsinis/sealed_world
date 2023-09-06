@@ -32,6 +32,7 @@ dependencies:
 
 You can use provided widgets directly, or just use their methods:
 
+* searchSuggestions (for use in `suggestionsBuilder` of [SearchAnchor](https://api.flutter.dev/flutter/material/SearchAnchor-class.html))
 * showInModalBottomSheet
 * showInSearch
 * showInDialog
@@ -44,8 +45,19 @@ import "dart:async" show unawaited;
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
+void main() => runApp(const MaterialApp(home: MainPage()));
+
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  const MainPage({
+    super.key,
+    // Immutable compile time constant constructors in every picker.
+    this.basicPicker = const CountryPicker(
+      disabled: [CountryAbw()],
+      translation: LangEng(), // 25 translations provided.
+    ),
+  });
+
+  final CountryPicker basicPicker;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -53,52 +65,66 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
-  WorldCountry? selectedCountry;
-
-  late final CountryPicker countryPicker = CountryPicker(
-    disabled: const [CountryAfg(), CountryAlb()],
-    onSelect: onSelect,
-  );
+  /// Highly customizable, for example use itemBuilder param. for custom tiles.
+  late CountryPicker picker = widget.basicPicker.copyWith(onSelect: onSelect);
 
   void onSelect(WorldCountry newCountry) {
-    print("New country selected: $newCountry");
-    setState(() => selectedCountry = newCountry);
-  }
-
-  void onFabPressed({bool isLongPress = false}) {
-    final picker = PhoneCodePicker.fromCountryPicker(countryPicker);
-    unawaited(
-      isLongPress
-          ? picker.showInDialog(context)
-          : picker.showInModalBottomSheet(context),
+    debugPrint("New country selected: $selectedCountry");
+    setState(
+      () => picker = picker.copyWith( // A copyWith methods in every picker.
+        chosen: selectedCountry == newCountry ? const [] : [newCountry],
+      ),
     );
   }
 
-  void onAppBarSearchPressed() =>
-      unawaited(countryPicker.showInSearch(context));
+  void onFabPressed({bool isLongPress = false}) {
+    /// Or for example: [LanguagePicker], [CurrencyPicker].
+    final phonePicker = PhoneCodePicker.fromCountryPicker(picker);
+    unawaited(
+      isLongPress
+          ? phonePicker.showInDialog(context)
+          : phonePicker.showInModalBottomSheet(context),
+    );
+  }
+
+  void onAppBarSearchLongPressed() => unawaited(picker.showInSearch(context));
+
+  WorldCountry? get selectedCountry => picker.chosen?.firstOrNull;
 
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           actions: [
-            IconButton(
-              onPressed: onAppBarSearchPressed,
-              icon: const Icon(Icons.search),
+            SearchAnchor(
+              isFullScreen: false,
+              viewConstraints:
+                  const BoxConstraints(minWidth: 220, maxWidth: 320),
+              builder: (_, controller) => GestureDetector(
+                onLongPress: onAppBarSearchLongPressed,
+                child: IconButton(
+                  onPressed: controller.openView,
+                  icon: const Icon(Icons.search),
+                ),
+              ),
+              suggestionsBuilder: picker.searchSuggestions,
             ),
           ],
         ),
         body: Center(
           child: MaybeWidget(
-            selectedCountry?.name.common,
+            selectedCountry?.nameEnglish.common,
             Text.new,
             orElse: const Text(
               "Please select country by pressing on the search icon",
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: onFabPressed,
-          child: const Icon(Icons.search),
+        floatingActionButton: GestureDetector(
+          onLongPress: () => onFabPressed(isLongPress: true),
+          child: FloatingActionButton(
+            onPressed: onFabPressed,
+            child: const Icon(Icons.search),
+          ),
         ),
       );
 }
@@ -111,6 +137,8 @@ For more usage examples, please see the `/example` folder.
 For more information on using this package, check out the API documentation.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
 
+> **EXPERIMENTAL** (Flutter WASM): To preview this package example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **113** or higher) with the `enable-webassembly-garbage-collection` **flag enabled**. Please allow up to one minute for initial fonts and data caching.
+
 ## References, credits
 
 This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
@@ -118,8 +146,6 @@ This package is licensed under the MIT license. See [LICENSE](./LICENSE) for det
 ## Attributions
 
 The color emoji flags fonts used in this package were obtained from open-source repositories of the original creators. The fonts are redistributed under the terms of the licenses offered by the original authors. The fonts sizes were reduced, by removing non-flag glyphs, to reduce the package size and to reduce the copyright footprint, since most of the country flags are in Public Domain. No modifications in graphic itself were made.
-
-> **EXPERIMENTAL** (Flutter WASM): To preview this package example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **113** or higher) with the `enable-webassembly-garbage-collection` **flag enabled**. Please allow up to one minute for initial fonts and data caching.
 
 ### Noto Emoji fonts
 
@@ -138,15 +164,15 @@ and is used and redistributed under the CC-BY-4.0 [license terms](https://creati
 
 ### FAQ
 
-#### I have problems rendering COLR emoji flags on Android.
+#### I have problems rendering COLR emoji flags on Android
 
 Answer: Android OS [supports](https://developer.android.com/about/versions/13/features#color-vector-fonts) COLRv1 fonts from version 13 on (API level 33).
 
-#### **My flags on web platform are grey (not colored)!**
+#### My flags on web platform are grey (not colored)
 
 Answer: Please add `useColorEmoji: true` parameter to your `engineInitializer.initializeEngine` method ([index.html](https://github.com/flutter/flutter/issues/119536#issuecomment-1546247494)).
 
-#### **I don't like default tiles UI in the pickers**
+#### I don't like default tiles UI in the pickers
 
 Answer: Every picker has a `itemBuilder` parameter, providing access to specific list item properties, for example this is how you can show only a common country name in `CountryPicker`:
 

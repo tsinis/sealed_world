@@ -1,10 +1,13 @@
 // ignore_for_file: long-parameter-list
 
+import "dart:async" show FutureOr;
+
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
+import "../../mixins/compare_search_mixin.dart";
 import "../../models/item_properties.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
@@ -12,13 +15,11 @@ import "../generic_widgets/searchable_indexed_list_view_builder.dart";
 
 part "basic_picker_state.dart";
 
-@immutable
-
 /// An abstract class that provides a basic picker widget, with search
 /// functionality and indexing support.
 @immutable
 abstract class BasicPicker<T extends Object>
-    extends SearchableIndexedListViewBuilder<T> {
+    extends SearchableIndexedListViewBuilder<T> with CompareSearchMixin<T> {
   /// Constructor for the [BasicPicker] class.
   ///
   /// * [items] is the list of items to display.
@@ -113,14 +114,40 @@ abstract class BasicPicker<T extends Object>
   final EdgeInsetsGeometry? searchBarPadding;
 
   /// Returns the default builder for the items.
+  /// It also has an optional parameter `isDense`, which indicates whether the
+  /// item uses less vertical space or not, defaults to `false`.
   @required
   @protected
-  Widget? defaultBuilder(ItemProperties<T> itemProperties);
+  Widget defaultBuilder(
+    ItemProperties<T> itemProperties, {
+    bool? isDense,
+  });
 
   /// Returns the default search function for the items.
   @required
   @protected
   Iterable<String> defaultSearch(T item);
+
+  /// Called to get the suggestion list for the search view (typically in
+  /// [SearchAnchor] widgets).
+  FutureOr<Iterable<Widget>> searchSuggestions(
+    BuildContext context,
+    SearchController controller,
+  ) {
+    final x = items.where(
+      (item) => (searchIn?.call(item) ?? defaultSearch(item)).toSet().any(
+            (itemText) => compareWithTextInput(controller, itemText),
+          ),
+    );
+
+    return List<Widget>.generate(
+      x.length,
+      (i) =>
+          itemBuilder?.call(filteredProperties(x, context, i), isDense: true) ??
+          defaultBuilder.call(filteredProperties(x, context, i), isDense: true),
+      growable: false,
+    );
+  }
 
   @override
   State<BasicPicker<T>> createState() => _BasicPickerState<T>();
@@ -147,15 +174,12 @@ abstract class BasicPicker<T extends Object>
   }) =>
       showModalBottomSheet<T>(
         context: context,
-        builder: (internalContext) => Padding(
-          padding: internalContext.media.viewInsets,
+        builder: (newContext) => Padding(
+          padding: newContext.media.viewInsets,
           child: FractionallySizedBox(
             heightFactor: heightFactor,
             child: copyWith(
-              onSelect: (selectedItem) {
-                onSelect?.call(selectedItem);
-                internalContext.maybePop(selectedItem);
-              },
+              onSelect: (selected) => maybeSelectAndPop(selected, newContext),
             ),
           ),
         ),
@@ -195,13 +219,10 @@ abstract class BasicPicker<T extends Object>
         context: context,
         delegate: ImplicitSearchDelegate<T>(
           items,
-          resultsBuilder: (internalContext, items) => copyWith(
+          resultsBuilder: (newContext, items) => copyWith(
             items: items,
             showSearchBar: false,
-            onSelect: (selectedItem) {
-              onSelect?.call(selectedItem);
-              internalContext.maybePop(selectedItem);
-            },
+            onSelect: (selected) => maybeSelectAndPop(selected, newContext),
           ),
           searchIn: searchIn ?? defaultSearch,
           appBarBottom: appBarBottom,
@@ -264,7 +285,7 @@ abstract class BasicPicker<T extends Object>
   }) =>
       showDialog(
         context: context,
-        builder: (internalContext) => AlertDialog(
+        builder: (newContext) => AlertDialog(
           iconPadding: iconPadding,
           iconColor: iconColor,
           title: title,
@@ -273,10 +294,7 @@ abstract class BasicPicker<T extends Object>
           content: SizedBox(
             width: double.maxFinite,
             child: copyWith(
-              onSelect: (selectedItem) {
-                onSelect?.call(selectedItem);
-                internalContext.maybePop(selectedItem);
-              },
+              onSelect: (selected) => maybeSelectAndPop(selected, newContext),
             ),
           ),
           contentPadding: contentPadding,
@@ -350,6 +368,9 @@ abstract class BasicPicker<T extends Object>
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(T item)? searchIn,
-    Widget? Function(ItemProperties<T> itemProperties)? itemBuilder,
+    Widget? Function(
+      ItemProperties<T> itemProperties, {
+      bool? isDense,
+    })? itemBuilder,
   });
 }

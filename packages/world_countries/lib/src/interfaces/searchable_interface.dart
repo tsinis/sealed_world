@@ -17,7 +17,7 @@ abstract interface class SearchableInterface<T extends Object?> {
 
   /// A function that takes an item and returns an iterable of strings to search
   /// in.
-  final Iterable<String> Function(T item) searchIn;
+  final Iterable<String> Function(T item)? searchIn;
 
   /// A boolean indicating whether the search should be case-sensitive.
   final bool caseSensitiveSearch;

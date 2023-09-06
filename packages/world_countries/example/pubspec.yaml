@@ -1,7 +1,7 @@
 name: example
 description: A world_countries example application.
-publish_to: 'none'
-version: 0.5.0+1
+publish_to: none
+version: 0.6.0+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -51,9 +51,6 @@ flutter_gen:
       - assets/images/ATTRIBUTION.md
   integrations:
     flutter_svg: false
-    flare_flutter: false
-    rive: false
-    lottie: false
 
 flutter_launcher_icons:
   image_path: "assets/images/launcher_icon/icon.png"

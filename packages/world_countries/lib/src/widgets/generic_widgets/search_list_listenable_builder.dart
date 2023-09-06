@@ -70,7 +70,7 @@ class _SearchListListenableBuilderState<T extends Object>
   }
 
   bool hasSameText(String itemText) =>
-      widget.compareWithInput(widget.textController.value.text, itemText);
+      widget.compareWithTextInput(widget.textController, itemText);
 
   void textChanged() {
     final filteredItems =

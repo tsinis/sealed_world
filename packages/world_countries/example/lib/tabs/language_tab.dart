@@ -3,49 +3,56 @@
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
+import "../model/world_data.dart";
+import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-class LanguageTab extends StatelessWidget {
-  const LanguageTab(this.language, {super.key});
-
-  final NaturalLanguage language;
+final class LanguageTab extends WorldDataTab<NaturalLanguage> {
+  LanguageTab(
+    super.data,
+    super.nav, {
+    super.dataPicker = const LanguagePicker(),
+    super.items = NaturalLanguage.list,
+    super.type = WorldData.language,
+    super.key,
+  }) : super(mapCode: (language) => language.code);
 
   @override
   Widget build(BuildContext context) => TabBody(
         title: Text(
-          language.name,
+          data.name,
           style: context.theme.textTheme.headlineSmall,
           textAlign: TextAlign.center,
         ),
         children: <DescriptionTile>[
           DescriptionTile.fromIterable(
-            language.namesNative,
+            data.namesNative,
             icon: Icons.badge_outlined,
             description: "Native Name(s)",
           ),
           DescriptionTile(
-            language.bibliographicCode,
+            data.bibliographicCode,
             icon: Icons.filter_3_outlined,
             description: "Code: ISO 639-2 (Bibliographic)",
           ),
           DescriptionTile(
-            language.code,
+            data.code,
             icon: Icons.looks_3_outlined,
             description: "Code: ISO 639-2 (Terminological)",
           ),
           DescriptionTile(
-            language.codeShort,
+            data.codeShort,
             icon: Icons.looks_two_outlined,
             description: "Code: ISO 639-1",
           ),
           DescriptionTile(
-            language.family.name,
+            data.family.name,
             icon: Icons.diversity_2_outlined,
             description: "Family Name",
           ),
           DescriptionTile.fromBool(
-            isTrue: language.isRightToLeft,
+            isTrue: data.isRightToLeft,
             icon: Icons.first_page_outlined,
             description: "Right to Left",
           ),

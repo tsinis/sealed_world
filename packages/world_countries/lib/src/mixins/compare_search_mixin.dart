@@ -1,3 +1,5 @@
+import "package:flutter/widgets.dart" show TextEditingController, protected;
+
 import "../interfaces/searchable_interface.dart";
 
 /// A mixin that provides a `compareWithInput` method to compare an input string
@@ -13,10 +15,21 @@ mixin CompareSearchMixin<T extends Object> on SearchableInterface<T> {
   ///
   /// Returns a boolean indicating whether the item's text matches the search
   /// query.
+  @protected
   bool compareWithInput(String input, String itemText) {
     final item = caseSensitiveSearch ? itemText : itemText.toLowerCase();
     final text = caseSensitiveSearch ? input : input.toLowerCase();
 
     return startWithSearch ? item.startsWith(text) : item.contains(text);
   }
+
+  /// Compares an [TextEditingController] text input string with an item's text.
+  ///
+  /// * [controller] is the text editing controller input by the user.
+  /// * [item] is the text of the item being compared.
+  ///
+  /// Returns a boolean indicating whether the item's text matches the search
+  /// query.
+  bool compareWithTextInput(TextEditingController controller, String item) =>
+      compareWithInput(controller.value.text, item);
 }

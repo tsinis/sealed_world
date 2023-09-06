@@ -36,7 +36,6 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.onFocusChange,
     super.onLongPress,
     super.onPressed,
-    super.onTap,
     super.selectedColor,
     super.selectedTileColor,
     super.shape,
@@ -85,7 +84,6 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.onFocusChange,
     super.onLongPress,
     super.onPressed,
-    super.onTap,
     super.selectedColor,
     super.selectedTileColor,
     super.shape,
@@ -110,5 +108,63 @@ class CountryTile extends ListItemTile<WorldCountry> {
                     country.item.namesCommonNative(skipFirst: true),
                 overflow: TextOverflow.ellipsis,
               ),
+        );
+
+  /// Constructor for the [CountryTile] class that uses an [ItemProperties]
+  /// object. It creates a simple dense country tile with no subtitle.
+  ///
+  /// * [country] is the [ItemProperties] object containing the world country to
+  ///   display information about.
+  /// * All other parameters are optional and are passed to the superclass
+  ///   constructor.
+  /// * [translation] is an optional `NaturalLanguage` object used to translate
+  ///   the country's name.
+  CountryTile.simple(
+    ItemProperties<WorldCountry> country, {
+    Widget? leading,
+    Widget? title,
+    super.autofocus,
+    super.chosenIcon,
+    super.contentPadding,
+    super.dense = true,
+    super.enableFeedback,
+    super.focusColor,
+    super.focusNode,
+    super.horizontalTitleGap,
+    super.hoverColor,
+    super.iconColor,
+    super.isThreeLine = false,
+    super.key,
+    super.leadingAndTrailingTextStyle,
+    super.minLeadingWidth,
+    super.minVerticalPadding,
+    super.mouseCursor,
+    super.onFocusChange,
+    super.onLongPress,
+    super.onPressed,
+    super.selectedColor,
+    super.selectedTileColor,
+    super.shape,
+    super.splashColor,
+    super.style,
+    super.subtitle,
+    super.subtitleTextStyle,
+    super.textColor,
+    super.tileColor,
+    super.titleAlignment,
+    super.titleTextStyle,
+    super.visualDensity = VisualDensity.compact,
+    NaturalLanguage? translation,
+  }) : super(
+          country.item,
+          isChosen: country.isChosen,
+          isDisabled: country.isDisabled,
+          title: title ??
+              Text(
+                country.item.nameTranslated(translation)?.common ??
+                    country.item.namesNative.first.common,
+                overflow: TextOverflow.ellipsis,
+              ),
+          leading: leading ?? EmojiFlag.twemoji(country.item),
         );
 }

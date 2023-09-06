@@ -4,13 +4,20 @@ import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
 import "../../widgets/country_flag.dart";
+import "../model/world_data.dart";
+import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-class CountryTab extends StatelessWidget {
-  const CountryTab(this.country, {super.key});
-
-  final WorldCountry country;
+final class CountryTab extends WorldDataTab<WorldCountry> {
+  CountryTab(
+    super.data,
+    super.nav, {
+    super.dataPicker = const CountryPicker(translation: LangEng()),
+    super.items = WorldCountry.list,
+    super.type = WorldData.country,
+    super.key,
+  }) : super(mapCode: (country) => country.code);
 
   @override
   Widget build(BuildContext context) => TabBody(
@@ -18,29 +25,29 @@ class CountryTab extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              (country.nameTranslated() ?? country.name).common,
+              (data.nameTranslated() ?? data.name).common,
               style: context.theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             Text(
-              (country.nameTranslated() ?? country.name).official,
+              (data.nameTranslated() ?? data.name).official,
               style: context.theme.textTheme.titleMedium
                   ?.copyWith(fontWeight: FontWeight.w200),
               textAlign: TextAlign.center,
             ),
           ],
         ),
-        titleOverlay: AbsorbPointer(child: CountryFlag(country, size: 136)),
+        titleOverlay: AbsorbPointer(child: CountryFlag(data, size: 136)),
         titlePadding: const EdgeInsets.only(top: 80, bottom: 8),
         titleMargin: const EdgeInsets.only(top: 100),
         children: <DescriptionTile>[
           DescriptionTile(
-            country.namesOfficialNative(separator: ",\n"),
+            data.namesOfficialNative(separator: ",\n"),
             icon: Icons.flag_circle_outlined,
             description: "Native Official Name(s)",
           ),
           DescriptionTile(
-            country.namesCommonNative(separator: ",\n"),
+            data.namesCommonNative(separator: ",\n"),
             icon: Icons.flag_outlined,
             description: "Native Common Name(s)",
           ),
@@ -52,158 +59,155 @@ class CountryTab extends StatelessWidget {
                 width: 24,
                 child: FittedBox(
                   fit: BoxFit.fitWidth,
-                  child: EmojiFlag.fromEmojiFamily(
-                    country,
-                    emojiFamily: emoji,
-                  ),
+                  child: EmojiFlag.fromEmojiFamily(data, emojiFamily: emoji),
                 ),
               ),
             ),
           DescriptionTile(
-            country.codeNumeric,
+            data.codeNumeric,
             icon: Icons.pin_outlined,
             description: "Code: ISO 3166-1 (CCN3)",
           ),
           DescriptionTile(
-            country.code,
+            data.code,
             icon: Icons.looks_3_outlined,
             description: "Code: ISO 3166-1 (CCA3)",
           ),
           DescriptionTile(
-            country.codeShort,
+            data.codeShort,
             icon: Icons.looks_two_outlined,
             description: "Code: ISO 3166-1 (CCA2)",
           ),
           DescriptionTile.fromIterable(
-            country.tld,
+            data.tld,
             icon: Icons.dns_outlined,
             description: "Top level domain(s)",
           ),
           DescriptionTile(
-            country.cioc,
+            data.cioc,
             icon: Icons.sports_basketball_outlined,
             description: "International Olympic Committee",
           ),
           DescriptionTile(
-            country.fifa,
+            data.fifa,
             icon: Icons.sports_soccer_outlined,
             description: "FIFA Country Code",
           ),
           DescriptionTile.fromBool(
-            isTrue: country.independent,
+            isTrue: data.independent,
             icon: Icons.handshake_outlined,
             description: "Independent",
           ),
           DescriptionTile.fromBool(
-            isTrue: country.unMember,
+            isTrue: data.unMember,
             icon: Icons.language_outlined,
             description: "United Nations Member",
           ),
           DescriptionTile.fromIterable(
-            country.currencies?.map((currency) => currency.code),
+            data.currencies?.map((currency) => currency.code),
             icon: Icons.payment_outlined,
             description: "Currencies",
           ),
           DescriptionTile(
-            country.idd.phoneCode(),
+            data.idd.phoneCode(),
             icon: Icons.call_end_outlined,
             description: "Phone Code",
           ),
           DescriptionTile(
-            country.capitalInfo?.capital.deFacto,
+            data.capitalInfo?.capital.deFacto,
             icon: Icons.home_work_outlined,
             description: "Capital",
           ),
           DescriptionTile(
-            country.continent.name,
+            data.continent.name,
             icon: Icons.public_outlined,
             description: "Continent",
           ),
           DescriptionTile(
-            country.subregion?.name,
+            data.subregion?.name,
             icon: Icons.travel_explore_outlined,
             description: "Subregion",
           ),
           DescriptionTile.fromIterable(
-            country.languages.map((language) => language.name),
+            data.languages.map((language) => language.name),
             icon: Icons.translate_outlined,
             description: "Official Language(s)",
           ),
           DescriptionTile(
-            """Latitude: ${country.latLng.latitude.toStringAsFixed(2)}, Longitude: ${country.latLng.longitude.toStringAsFixed(2)}""",
+            """Latitude: ${data.latLng.latitude.toStringAsFixed(2)}, Longitude: ${data.latLng.longitude.toStringAsFixed(2)}""",
             icon: Icons.pin_drop_outlined,
             description: "Geographic Coordinates",
           ),
           DescriptionTile.fromBool(
-            isTrue: country.landlocked,
+            isTrue: data.landlocked,
             icon: Icons.vpn_lock_outlined,
             description: "Landlocked Country",
           ),
           DescriptionTile.fromIterable(
-            country.bordersCodes?.map((bc) => bc.toUpperCase()),
+            data.bordersCodes?.map((bc) => bc.toUpperCase()),
             icon: Icons.border_style_outlined,
             description: "Borders",
           ),
           DescriptionTile(
-            "${country.areaMetric} km²",
+            "${data.areaMetric} km²",
             icon: Icons.square_foot_outlined,
             description: "Area",
           ),
           DescriptionTile(
-            country.population.toString(),
+            data.population.toString(),
             icon: Icons.groups_2_outlined,
             description: "Population",
           ),
           DescriptionTile(
-            country.demonyms.first.areSame
-                ? country.demonyms.first.female
-                : """👩: ${country.demonyms.first.female}\n👨: ${country.demonyms.first.male}""",
+            data.demonyms.first.areSame
+                ? data.demonyms.first.female
+                : """👩: ${data.demonyms.first.female}\n👨: ${data.demonyms.first.male}""",
             icon: Icons.face_outlined,
             description: "Demonym(s)",
           ),
           DescriptionTile(
-            country.gini != null
-                ? """${country.gini?.coefficient} (${country.gini?.year})"""
+            data.gini != null
+                ? """${data.gini?.coefficient} (${data.gini?.year})"""
                 : null,
             icon: Icons.layers_outlined,
             description: "Gini Coefficient",
           ),
           DescriptionTile(
-            country.car.sign,
+            data.car.sign,
             icon: Icons.directions_car_outlined,
             description: "Vehicle Signs",
           ),
           DescriptionTile.fromBool(
-            isTrue: country.car.isRightSide,
+            isTrue: data.car.isRightSide,
             icon: Icons.remove_road_outlined,
             description: "Right-hand Traffic",
           ),
           DescriptionTile(
-            "Count: ${country.timezones.length}",
+            "Count: ${data.timezones.length}",
             icon: Icons.schedule_outlined,
             description: "Timezone(s)",
           ),
           DescriptionTile(
-            country.startOfWeek.label,
+            data.startOfWeek.label,
             icon: Icons.today_outlined,
             description: "Start of the Week",
           ),
           DescriptionTile.fromBool(
-            isTrue: country.hasCoatOfArms,
+            isTrue: data.hasCoatOfArms,
             icon: Icons.security_outlined,
             description: "Has Coat Of Arms",
           ),
           DescriptionTile.fromIterable(
-            country.altSpellings,
+            data.altSpellings,
             icon: Icons.spellcheck,
             description: "Alternate Spellings",
           ),
           DescriptionTile.fromIterable(
-            country.regionalBlocs?.map((bloc) => bloc.name),
+            data.regionalBlocs?.map((bloc) => bloc.name),
             icon: Icons.grid_view_outlined,
             description: "Regional Bloc(s)",
           ),
-          for (final translation in country.translations) ...[
+          for (final translation in data.translations) ...[
             DescriptionTile.raw(
               translation.official,
               description: """Official ${translation.language.name} Name""",

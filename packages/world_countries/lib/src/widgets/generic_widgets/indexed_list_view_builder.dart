@@ -1,12 +1,12 @@
 import "package:flutter/widgets.dart";
 
 import "../../constants/ui_constants.dart";
-import "../../models/item_properties.dart";
+import "../../mixins/properties_convertible_mixin.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 
 /// A stateful indexed list view widget that displays a list of items.
 class IndexedListViewBuilder<T extends Object>
-    extends StatefulIndexedListView<T> {
+    extends StatefulIndexedListView<T> with PropertiesConvertibleMixin<T> {
   /// Constructor for the [IndexedListViewBuilder] class.
   ///
   /// * [items] is the list of items to display in the list view.
@@ -81,11 +81,6 @@ class IndexedListViewBuilder<T extends Object>
     super.verticalDirection,
   });
 
-  /// The sorted list of items to display in the list view.
-  Iterable<T> get _sortedItems => sort != null
-      ? List.unmodifiable(items.toList(growable: false)..sort(sort))
-      : items;
-
   @override
   State<IndexedListViewBuilder> createState() =>
       _IndexedListViewBuilderState<T>();
@@ -120,23 +115,14 @@ class _IndexedListViewBuilderState<T extends Object>
                       physics: widget.physics,
                       shrinkWrap: widget.shrinkWrap,
                       padding: widget.padding,
-                      itemBuilder: (innerContext, index) {
-                        final item = widget._sortedItems.elementAt(index);
-                        final isChosen = widget.chosen?.contains(item);
-                        final isDisabled = widget.disabled?.contains(item);
-                        final properties = ItemProperties(
-                          innerContext,
-                          item,
-                          index: index,
-                          isChosen: isChosen ?? false,
-                          isDisabled: isDisabled ?? false,
-                        );
+                      itemBuilder: (newContext, index) {
+                        final properties = widget.properties(newContext, index);
                         final child = widget.itemBuilder?.call(properties);
                         if (child == null) return null;
                         if (properties.isDisabled) return child;
 
                         return GestureDetector(
-                          onTap: () => widget.onSelect?.call(item),
+                          onTap: () => widget.onSelect?.call(properties.item),
                           child: child,
                         );
                       },

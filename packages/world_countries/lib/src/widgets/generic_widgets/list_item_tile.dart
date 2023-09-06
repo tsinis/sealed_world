@@ -35,7 +35,6 @@ class ListItemTile<T extends Object> extends ListTile {
     super.mouseCursor,
     super.onFocusChange,
     super.onLongPress,
-    super.onTap,
     super.selectedColor,
     super.selectedTileColor,
     super.shape,

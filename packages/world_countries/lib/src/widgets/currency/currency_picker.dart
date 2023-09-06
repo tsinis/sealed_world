@@ -57,8 +57,18 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
   Iterable<FiatCurrency> get currencies => items;
 
   @override
-  Widget? defaultBuilder(ItemProperties<FiatCurrency> itemProperties) =>
-      CurrencyTile.fromProperties(itemProperties, onPressed: onSelect);
+  Widget defaultBuilder(
+    ItemProperties<FiatCurrency> itemProperties, {
+    bool? isDense,
+  }) =>
+      CurrencyTile.fromProperties(
+        itemProperties,
+        dense: isDense,
+        onPressed: (currency) => isDense ?? false
+            ? maybeSelectAndPop(currency, itemProperties.context)
+            : onSelect?.call(currency),
+        visualDensity: isDense ?? false ? VisualDensity.compact : null,
+      );
 
   @override
   Iterable<String> defaultSearch(FiatCurrency item) =>
@@ -102,7 +112,10 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(FiatCurrency currency)? searchIn,
-    Widget? Function(ItemProperties<FiatCurrency> itemProperties)? itemBuilder,
+    Widget? Function(
+      ItemProperties<FiatCurrency> itemProperties, {
+      bool? isDense,
+    })? itemBuilder,
   }) =>
       CurrencyPicker(
         currencies: items ?? currencies,

@@ -1,8 +1,13 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
+import "package:sealed_countries/sealed_countries.dart";
 
-import "../../../world_countries.dart";
+import "../../constants/ui_constants.dart";
+import "../../extensions/build_context_extension.dart";
 import "../../models/item_properties.dart";
+import "../country/country_picker.dart";
+import "../country/country_tile.dart";
+import "../country/emoji_flag.dart";
 
 /// A picker widget that displays a list of countries with their phone codes.
 class PhoneCodePicker extends CountryPicker {
@@ -101,7 +106,10 @@ class PhoneCodePicker extends CountryPicker {
         );
 
   @override
-  Widget? defaultBuilder(ItemProperties<WorldCountry> itemProperties) =>
+  Widget defaultBuilder(
+    ItemProperties<WorldCountry> itemProperties, {
+    bool? isDense,
+  }) =>
       CountryTile.fromProperties(
         itemProperties,
         leading: ConstrainedBox(
@@ -122,7 +130,10 @@ class PhoneCodePicker extends CountryPicker {
             ],
           ),
         ),
-        onPressed: onSelect,
+        onPressed: (phone) => isDense ?? false
+            ? maybeSelectAndPop(phone, itemProperties.context)
+            : onSelect?.call(phone),
+        visualDensity: isDense ?? false ? VisualDensity.compact : null,
         translation: translation,
       );
 
@@ -170,7 +181,10 @@ class PhoneCodePicker extends CountryPicker {
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(WorldCountry country)? searchIn,
-    Widget? Function(ItemProperties<WorldCountry> itemProperties)? itemBuilder,
+    Widget? Function(
+      ItemProperties<WorldCountry> itemProperties, {
+      bool? isDense,
+    })? itemBuilder,
     NaturalLanguage? translation,
   }) =>
       PhoneCodePicker(

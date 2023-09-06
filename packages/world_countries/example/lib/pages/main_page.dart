@@ -1,24 +1,33 @@
-import "dart:async" show unawaited;
+import "dart:async" show FutureOr;
 
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
 import "../assets/assets.gen.dart";
-import "../model/constants.dart";
 import "../model/parsed_data.dart";
 import "../model/world_data.dart";
 import "../tabs/country_tab.dart";
 import "../tabs/currency_tab.dart";
 import "../tabs/language_tab.dart";
 import "../tabs/tabs_data_controller.dart";
+import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/floating_button.dart";
 
 class MainPage extends StatefulWidget {
-  const MainPage(this.data, {required this.navigate, super.key});
+  MainPage(ParsedData data, {AsyncValueSetter<String>? navigate, super.key})
+      : _dataType = data.value,
+        _country = CountryTab(data.country, navigate),
+        _currency = CurrencyTab(data.currency, navigate),
+        _lang = LanguageTab(data.language, navigate);
 
-  final ParsedData data;
-  final AsyncValueSetter<String> navigate;
+  final WorldData _dataType;
+  final WorldDataTab<WorldCountry> _country;
+  final WorldDataTab<FiatCurrency> _currency;
+  final WorldDataTab<NaturalLanguage> _lang;
+
+  BasicPicker _mapPickers(WorldData data) =>
+      data.map(country: _country, currency: _currency, language: _lang).picker;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -26,58 +35,23 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
-  late final _controller = TabsDataController(widget.data.value, vsync: this);
+  late final _controller = TabsDataController(widget._dataType, vsync: this);
 
-  late final countryPicker = CountryPicker(
-    chosen: [widget.data.country],
-    disabled: [WorldCountry.list.first],
-    onSelect: (newCountry) => widget.data.country != newCountry
-        ? _navigateOnSelect(newCountry.code, WorldData.country)
-        : null,
-    translation: const LangEng(),
-  );
-
-  late final currencyPicker = CurrencyPicker(
-    chosen: [widget.data.currency],
-    disabled: [FiatCurrency.list.first],
-    onSelect: (newCurrency) => widget.data.currency != newCurrency
-        ? _navigateOnSelect(newCurrency.code, WorldData.currency)
-        : null,
-  );
-
-  late final languagePicker = LanguagePicker(
-    chosen: [widget.data.language],
-    disabled: [NaturalLanguage.list.first],
-    onSelect: (newLang) => widget.data.language != newLang
-        ? _navigateOnSelect(newLang.code, WorldData.language)
-        : null,
-  );
-
-  void _navigateOnSelect(String code, WorldData data) => unawaited(
-        widget.navigate(data.path + Constants.slash + code.toLowerCase()),
-      );
-
-  void _onFabPressed({bool isLongPress = false}) {
-    final picker = _controller.currentData.map<BasicPicker>(
-      country: PhoneCodePicker.fromCountryPicker(countryPicker),
-      currency: currencyPicker,
-      language: languagePicker,
-    );
-    unawaited(
-      isLongPress
-          ? picker.showInDialog(context)
-          : picker.showInModalBottomSheet(context),
-    );
+  FutureOr<void> _onFabPressed({bool isLong = false}) {
+    final pick = widget._mapPickers(_controller.currentData);
+    isLong ? pick.showInDialog(context) : pick.showInModalBottomSheet(context);
   }
 
-  void onAppBarSearchPressed() {
-    final picker = _controller.currentData.map<BasicPicker>(
-      country: countryPicker,
-      currency: currencyPicker,
-      language: languagePicker,
-    );
-    unawaited(picker.showInSearch(context));
-  }
+  FutureOr<void> _onAppBarSearchPressed() =>
+      widget._mapPickers(_controller.currentData).showInSearch(context);
+
+  FutureOr<Iterable<Widget>> _anchorPicker(
+    BuildContext context,
+    SearchController controller,
+  ) =>
+      widget
+          ._mapPickers(_controller.currentData)
+          .searchSuggestions(context, controller);
 
   @override
   void dispose() {
@@ -91,9 +65,18 @@ class _MainPageState extends State<MainPage>
         child: Scaffold(
           appBar: AppBar(
             actions: [
-              IconButton(
-                onPressed: onAppBarSearchPressed,
-                icon: const Icon(Icons.search),
+              SearchAnchor(
+                isFullScreen: false,
+                viewConstraints:
+                    const BoxConstraints(minWidth: 220, maxWidth: 320),
+                builder: (_, controller) => GestureDetector(
+                  onLongPress: _onAppBarSearchPressed,
+                  child: IconButton(
+                    onPressed: controller.openView,
+                    icon: const Icon(Icons.search),
+                  ),
+                ),
+                suggestionsBuilder: _anchorPicker,
               ),
               // TODO Add about menu.
             ],
@@ -109,7 +92,6 @@ class _MainPageState extends State<MainPage>
               image: DecorationImage(
                 image: Assets.images.background.provider(),
                 fit: BoxFit.cover,
-                opacity: 1 / 2,
               ),
             ),
             child: Align(
@@ -118,19 +100,13 @@ class _MainPageState extends State<MainPage>
                 width: 300,
                 child: TabBarView(
                   controller: _controller,
-                  children: [
-                    CountryTab(widget.data.country),
-                    CurrencyTab(widget.data.currency),
-                    LanguageTab(widget.data.language),
-                  ],
+                  children: [widget._country, widget._currency, widget._lang],
                 ),
               ),
             ),
           ),
-          floatingActionButton: FloatingButton(
-            _controller,
-            onPressed: (isLongPress) => _onFabPressed(isLongPress: isLongPress),
-          ),
+          floatingActionButton:
+              FloatingButton(_controller, onPressed: _onFabPressed),
         ),
       );
 }

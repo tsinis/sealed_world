@@ -59,11 +59,13 @@ abstract class StatefulIndexedListView<T extends Object>
 
   /// A builder that returns a widget to display an item in the list.
   ///
-  /// The builder is called for each item in the list and should return a
-  /// widget that displays the item. The argument passed to the builder
-  /// is an [ItemProperties] object that contains information about the
-  /// item being displayed.
-  final Widget? Function(ItemProperties<T> itemProperties)? itemBuilder;
+  /// The builder is called for each item in the list and should return a widget
+  /// that displays the item. The argument passed to the builder is an
+  /// [ItemProperties] object that contains information about the item being
+  /// displayed. It also has an optional parameter `isDense`, which indicates
+  /// whether the item uses less vertical space or not, defaults to `false`.
+  final Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
+      itemBuilder;
 
   /// A widget to display when the list is empty.
   final Widget emptyStatePlaceholder;
