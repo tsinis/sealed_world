@@ -92,7 +92,6 @@ class _MainPageState extends State<MainPage>
               image: DecorationImage(
                 image: Assets.images.background.provider(),
                 fit: BoxFit.cover,
-                opacity: 1 / 2,
               ),
             ),
             child: Align(
