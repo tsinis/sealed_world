@@ -1,3 +1,11 @@
+## 0.6.0
+
+NEW FEATURE: New searchSuggestions method in every picker (for use in `suggestionsBuilder` of [SearchAnchor](https://api.flutter.dev/flutter/material/SearchAnchor-class.html))
+
+- refactor(mixin): added new mixins
+- refactor(docs): improve example and docs
+- feat(ui): added search suggestions for search anchors
+
 ## 0.5.0
 
 - refactor(model): factory constructors and static methods for data classes creation now implicitly trimming and comparing uppercase string inputs
