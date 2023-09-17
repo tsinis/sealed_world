@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: 📚 Git checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.0.0
 
       - name: 1️⃣ Set version tag
         run: |
