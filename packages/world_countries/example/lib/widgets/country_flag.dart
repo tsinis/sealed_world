@@ -4,10 +4,10 @@ import "package:world_countries/world_countries.dart";
 import "../assets/fonts.gen.dart";
 
 class CountryFlag extends StatelessWidget {
-  const CountryFlag(this.country, {this.size, super.key});
+  const CountryFlag(this.country, {required this.size, super.key});
 
   final WorldCountry country;
-  final double? size;
+  final double size;
 
   @override
   Widget build(BuildContext context) => DecoratedBox(
@@ -15,18 +15,28 @@ class CountryFlag extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: context.theme.colorScheme.onPrimary,
+              offset: FunctionalPlatform.maybeWhenConst(
+                web: Offset(0, -size / 4),
+                orElse: Offset.zero,
+              ),
               blurRadius: UiConstants.point,
             ),
           ],
-          shape: BoxShape.circle,
+          shape: FunctionalPlatform.maybeWhenConst(
+            web: BoxShape.rectangle,
+            orElse: BoxShape.circle,
+          ),
         ),
         child: EmojiFlag.fromEmojiFamily(
           country,
+          emojiFamily: FunctionalPlatform.maybeWhenConst(
+            web: EmojiFamily.openMoji,
+            orElse: null,
+          ),
           style: TextStyle(
             fontSize: size,
             fontFamily: FunctionalPlatform.maybeWhenConst(
               android: FontFamily.emojiOneAndroid,
-              web: FontFamily.emojiOneAndroid,
               iOS: FontFamily.emojiOneColor,
               macOS: FontFamily.emojiOneColor,
               orElse: FontFamily.emojiOneMozilla,
