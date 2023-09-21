@@ -32,64 +32,36 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     required R Function(NaturalLanguageFamily tupian) tupian,
     required R Function(NaturalLanguageFamily turkic) turkic,
     required R Function(NaturalLanguageFamily uralic) uralic,
-  }) {
-    switch (this) {
-      case AfroAsiatic():
-        return afroAsiatic(this);
-      case Algonquian():
-        return algonquian(this);
-      case Austroasiatic():
-        return austroasiatic(this);
-      case Austronesian():
-        return austronesian(this);
-      case Aymaran():
-        return aymaran(this);
-      case Constructed():
-        return constructed(this);
-      case Creole():
-        return creole(this);
-      case DeneYeniseian():
-        return deneYeniseian(this);
-      case Dravidian():
-        return dravidian(this);
-      case IndoEuropean():
-        return indoEuropean(this);
-      case Japonic():
-        return japonic(this);
-      case Koreanic():
-        return koreanic(this);
-      case LanguageIsolate():
-        return languageIsolate(this);
-      case Mongolic():
-        return mongolic(this);
-      case NigerCongo():
-        return nigerCongo(this);
-      case NiloSaharan():
-        return niloSaharan(this);
-      case NortheastCaucasian():
-        return northeastCaucasian(this);
-      case NorthwestCaucasian():
-        return northwestCaucasian(this);
-      case Quechuan():
-        return quechuan(this);
-      case SinoTibetan():
-        return sinoTibetan(this);
-      case SouthCaucasian():
-        return southCaucasian(this);
-      case TaiKadai():
-        return taiKadai(this);
-      case Tupian():
-        return tupian(this);
-      case Turkic():
-        return turkic(this);
-      case EskimoAleut():
-        return eskimoAleut(this);
-      case Uralic():
-        return uralic(this);
-      default:
-        throw ArgumentError("Unknown value: $this", name);
-    }
-  }
+  }) =>
+      switch (this) {
+        AfroAsiatic() => afroAsiatic(this),
+        Algonquian() => algonquian(this),
+        Austroasiatic() => austroasiatic(this),
+        Austronesian() => austronesian(this),
+        Aymaran() => aymaran(this),
+        Constructed() => constructed(this),
+        Creole() => creole(this),
+        DeneYeniseian() => deneYeniseian(this),
+        Dravidian() => dravidian(this),
+        IndoEuropean() => indoEuropean(this),
+        Japonic() => japonic(this),
+        Koreanic() => koreanic(this),
+        LanguageIsolate() => languageIsolate(this),
+        Mongolic() => mongolic(this),
+        NigerCongo() => nigerCongo(this),
+        NiloSaharan() => niloSaharan(this),
+        NortheastCaucasian() => northeastCaucasian(this),
+        NorthwestCaucasian() => northwestCaucasian(this),
+        Quechuan() => quechuan(this),
+        SinoTibetan() => sinoTibetan(this),
+        SouthCaucasian() => southCaucasian(this),
+        TaiKadai() => taiKadai(this),
+        Tupian() => tupian(this),
+        Turkic() => turkic(this),
+        EskimoAleut() => eskimoAleut(this),
+        Uralic() => uralic(this),
+        _ => throw ArgumentError("Unknown value: $this", name)
+      };
 
   R maybeMap<R>({
     required R Function(NaturalLanguageFamily family) orElse,
@@ -119,64 +91,36 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     R Function(NaturalLanguageFamily tupian)? tupian,
     R Function(NaturalLanguageFamily turkic)? turkic,
     R Function(NaturalLanguageFamily uralic)? uralic,
-  }) {
-    switch (this) {
-      case AfroAsiatic():
-        return afroAsiatic?.call(this) ?? orElse(this);
-      case Algonquian():
-        return algonquian?.call(this) ?? orElse(this);
-      case Austroasiatic():
-        return austroasiatic?.call(this) ?? orElse(this);
-      case Austronesian():
-        return austronesian?.call(this) ?? orElse(this);
-      case Aymaran():
-        return aymaran?.call(this) ?? orElse(this);
-      case Constructed():
-        return constructed?.call(this) ?? orElse(this);
-      case Creole():
-        return creole?.call(this) ?? orElse(this);
-      case DeneYeniseian():
-        return deneYeniseian?.call(this) ?? orElse(this);
-      case Dravidian():
-        return dravidian?.call(this) ?? orElse(this);
-      case IndoEuropean():
-        return indoEuropean?.call(this) ?? orElse(this);
-      case Japonic():
-        return japonic?.call(this) ?? orElse(this);
-      case Koreanic():
-        return koreanic?.call(this) ?? orElse(this);
-      case LanguageIsolate():
-        return languageIsolate?.call(this) ?? orElse(this);
-      case Mongolic():
-        return mongolic?.call(this) ?? orElse(this);
-      case NigerCongo():
-        return nigerCongo?.call(this) ?? orElse(this);
-      case NiloSaharan():
-        return niloSaharan?.call(this) ?? orElse(this);
-      case NortheastCaucasian():
-        return northeastCaucasian?.call(this) ?? orElse(this);
-      case NorthwestCaucasian():
-        return northwestCaucasian?.call(this) ?? orElse(this);
-      case Quechuan():
-        return quechuan?.call(this) ?? orElse(this);
-      case SinoTibetan():
-        return sinoTibetan?.call(this) ?? orElse(this);
-      case SouthCaucasian():
-        return southCaucasian?.call(this) ?? orElse(this);
-      case TaiKadai():
-        return taiKadai?.call(this) ?? orElse(this);
-      case Tupian():
-        return tupian?.call(this) ?? orElse(this);
-      case Turkic():
-        return turkic?.call(this) ?? orElse(this);
-      case EskimoAleut():
-        return eskimoAleut?.call(this) ?? orElse(this);
-      case Uralic():
-        return uralic?.call(this) ?? orElse(this);
-      default:
-        return orElse(this);
-    }
-  }
+  }) =>
+      switch (this) {
+        AfroAsiatic() => afroAsiatic?.call(this) ?? orElse(this),
+        Algonquian() => algonquian?.call(this) ?? orElse(this),
+        Austroasiatic() => austroasiatic?.call(this) ?? orElse(this),
+        Austronesian() => austronesian?.call(this) ?? orElse(this),
+        Aymaran() => aymaran?.call(this) ?? orElse(this),
+        Constructed() => constructed?.call(this) ?? orElse(this),
+        Creole() => creole?.call(this) ?? orElse(this),
+        DeneYeniseian() => deneYeniseian?.call(this) ?? orElse(this),
+        Dravidian() => dravidian?.call(this) ?? orElse(this),
+        IndoEuropean() => indoEuropean?.call(this) ?? orElse(this),
+        Japonic() => japonic?.call(this) ?? orElse(this),
+        Koreanic() => koreanic?.call(this) ?? orElse(this),
+        LanguageIsolate() => languageIsolate?.call(this) ?? orElse(this),
+        Mongolic() => mongolic?.call(this) ?? orElse(this),
+        NigerCongo() => nigerCongo?.call(this) ?? orElse(this),
+        NiloSaharan() => niloSaharan?.call(this) ?? orElse(this),
+        NortheastCaucasian() => northeastCaucasian?.call(this) ?? orElse(this),
+        NorthwestCaucasian() => northwestCaucasian?.call(this) ?? orElse(this),
+        Quechuan() => quechuan?.call(this) ?? orElse(this),
+        SinoTibetan() => sinoTibetan?.call(this) ?? orElse(this),
+        SouthCaucasian() => southCaucasian?.call(this) ?? orElse(this),
+        TaiKadai() => taiKadai?.call(this) ?? orElse(this),
+        Tupian() => tupian?.call(this) ?? orElse(this),
+        Turkic() => turkic?.call(this) ?? orElse(this),
+        EskimoAleut() => eskimoAleut?.call(this) ?? orElse(this),
+        Uralic() => uralic?.call(this) ?? orElse(this),
+        _ => orElse(this),
+      };
 
   R maybeWhen<R>({
     required R Function() orElse,
@@ -206,64 +150,36 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     R Function()? tupian,
     R Function()? turkic,
     R Function()? uralic,
-  }) {
-    switch (this) {
-      case AfroAsiatic():
-        return afroAsiatic?.call() ?? orElse();
-      case Algonquian():
-        return algonquian?.call() ?? orElse();
-      case Austroasiatic():
-        return austroasiatic?.call() ?? orElse();
-      case Austronesian():
-        return austronesian?.call() ?? orElse();
-      case Aymaran():
-        return aymaran?.call() ?? orElse();
-      case Constructed():
-        return constructed?.call() ?? orElse();
-      case Creole():
-        return creole?.call() ?? orElse();
-      case DeneYeniseian():
-        return deneYeniseian?.call() ?? orElse();
-      case Dravidian():
-        return dravidian?.call() ?? orElse();
-      case IndoEuropean():
-        return indoEuropean?.call() ?? orElse();
-      case Japonic():
-        return japonic?.call() ?? orElse();
-      case Koreanic():
-        return koreanic?.call() ?? orElse();
-      case LanguageIsolate():
-        return languageIsolate?.call() ?? orElse();
-      case Mongolic():
-        return mongolic?.call() ?? orElse();
-      case NigerCongo():
-        return nigerCongo?.call() ?? orElse();
-      case NiloSaharan():
-        return niloSaharan?.call() ?? orElse();
-      case NortheastCaucasian():
-        return northeastCaucasian?.call() ?? orElse();
-      case NorthwestCaucasian():
-        return northwestCaucasian?.call() ?? orElse();
-      case Quechuan():
-        return quechuan?.call() ?? orElse();
-      case SinoTibetan():
-        return sinoTibetan?.call() ?? orElse();
-      case SouthCaucasian():
-        return southCaucasian?.call() ?? orElse();
-      case TaiKadai():
-        return taiKadai?.call() ?? orElse();
-      case Tupian():
-        return tupian?.call() ?? orElse();
-      case Turkic():
-        return turkic?.call() ?? orElse();
-      case EskimoAleut():
-        return eskimoAleut?.call() ?? orElse();
-      case Uralic():
-        return uralic?.call() ?? orElse();
-      default:
-        return orElse();
-    }
-  }
+  }) =>
+      switch (this) {
+        AfroAsiatic() => afroAsiatic?.call() ?? orElse(),
+        Algonquian() => algonquian?.call() ?? orElse(),
+        Austroasiatic() => austroasiatic?.call() ?? orElse(),
+        Austronesian() => austronesian?.call() ?? orElse(),
+        Aymaran() => aymaran?.call() ?? orElse(),
+        Constructed() => constructed?.call() ?? orElse(),
+        Creole() => creole?.call() ?? orElse(),
+        DeneYeniseian() => deneYeniseian?.call() ?? orElse(),
+        Dravidian() => dravidian?.call() ?? orElse(),
+        IndoEuropean() => indoEuropean?.call() ?? orElse(),
+        Japonic() => japonic?.call() ?? orElse(),
+        Koreanic() => koreanic?.call() ?? orElse(),
+        LanguageIsolate() => languageIsolate?.call() ?? orElse(),
+        Mongolic() => mongolic?.call() ?? orElse(),
+        NigerCongo() => nigerCongo?.call() ?? orElse(),
+        NiloSaharan() => niloSaharan?.call() ?? orElse(),
+        NortheastCaucasian() => northeastCaucasian?.call() ?? orElse(),
+        NorthwestCaucasian() => northwestCaucasian?.call() ?? orElse(),
+        Quechuan() => quechuan?.call() ?? orElse(),
+        SinoTibetan() => sinoTibetan?.call() ?? orElse(),
+        SouthCaucasian() => southCaucasian?.call() ?? orElse(),
+        TaiKadai() => taiKadai?.call() ?? orElse(),
+        Tupian() => tupian?.call() ?? orElse(),
+        Turkic() => turkic?.call() ?? orElse(),
+        EskimoAleut() => eskimoAleut?.call() ?? orElse(),
+        Uralic() => uralic?.call() ?? orElse(),
+        _ => orElse(),
+      };
 
   R when<R>({
     required R Function() afroAsiatic,
@@ -292,64 +208,36 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     required R Function() tupian,
     required R Function() turkic,
     required R Function() uralic,
-  }) {
-    switch (this) {
-      case AfroAsiatic():
-        return afroAsiatic();
-      case Algonquian():
-        return algonquian();
-      case Austroasiatic():
-        return austroasiatic();
-      case Austronesian():
-        return austronesian();
-      case Aymaran():
-        return aymaran();
-      case Constructed():
-        return constructed();
-      case Creole():
-        return creole();
-      case DeneYeniseian():
-        return deneYeniseian();
-      case Dravidian():
-        return dravidian();
-      case IndoEuropean():
-        return indoEuropean();
-      case Japonic():
-        return japonic();
-      case Koreanic():
-        return koreanic();
-      case LanguageIsolate():
-        return languageIsolate();
-      case Mongolic():
-        return mongolic();
-      case NigerCongo():
-        return nigerCongo();
-      case NiloSaharan():
-        return niloSaharan();
-      case NortheastCaucasian():
-        return northeastCaucasian();
-      case NorthwestCaucasian():
-        return northwestCaucasian();
-      case Quechuan():
-        return quechuan();
-      case SinoTibetan():
-        return sinoTibetan();
-      case SouthCaucasian():
-        return southCaucasian();
-      case TaiKadai():
-        return taiKadai();
-      case Tupian():
-        return tupian();
-      case Turkic():
-        return turkic();
-      case EskimoAleut():
-        return eskimoAleut();
-      case Uralic():
-        return uralic();
-      default:
-        throw ArgumentError("Unknown value: $this", name);
-    }
-  }
+  }) =>
+      switch (this) {
+        AfroAsiatic() => afroAsiatic(),
+        Algonquian() => algonquian(),
+        Austroasiatic() => austroasiatic(),
+        Austronesian() => austronesian(),
+        Aymaran() => aymaran(),
+        Constructed() => constructed(),
+        Creole() => creole(),
+        DeneYeniseian() => deneYeniseian(),
+        Dravidian() => dravidian(),
+        IndoEuropean() => indoEuropean(),
+        Japonic() => japonic(),
+        Koreanic() => koreanic(),
+        LanguageIsolate() => languageIsolate(),
+        Mongolic() => mongolic(),
+        NigerCongo() => nigerCongo(),
+        NiloSaharan() => niloSaharan(),
+        NortheastCaucasian() => northeastCaucasian(),
+        NorthwestCaucasian() => northwestCaucasian(),
+        Quechuan() => quechuan(),
+        SinoTibetan() => sinoTibetan(),
+        SouthCaucasian() => southCaucasian(),
+        TaiKadai() => taiKadai(),
+        Tupian() => tupian(),
+        Turkic() => turkic(),
+        EskimoAleut() => eskimoAleut(),
+        Uralic() => uralic(),
+        _ => throw ArgumentError("Unknown value: $this", name),
+      };
 
   R? whenOrNull<R>({
     R Function()? afroAsiatic,
@@ -379,62 +267,34 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     R Function()? turkic,
     R Function()? uralic,
     R Function()? orElse,
-  }) {
-    switch (this) {
-      case AfroAsiatic():
-        return afroAsiatic?.call() ?? orElse?.call();
-      case Algonquian():
-        return algonquian?.call() ?? orElse?.call();
-      case Austroasiatic():
-        return austroasiatic?.call() ?? orElse?.call();
-      case Austronesian():
-        return austronesian?.call() ?? orElse?.call();
-      case Aymaran():
-        return aymaran?.call() ?? orElse?.call();
-      case Constructed():
-        return constructed?.call() ?? orElse?.call();
-      case Creole():
-        return creole?.call() ?? orElse?.call();
-      case DeneYeniseian():
-        return deneYeniseian?.call() ?? orElse?.call();
-      case Dravidian():
-        return dravidian?.call() ?? orElse?.call();
-      case IndoEuropean():
-        return indoEuropean?.call() ?? orElse?.call();
-      case Japonic():
-        return japonic?.call() ?? orElse?.call();
-      case Koreanic():
-        return koreanic?.call() ?? orElse?.call();
-      case LanguageIsolate():
-        return languageIsolate?.call() ?? orElse?.call();
-      case Mongolic():
-        return mongolic?.call() ?? orElse?.call();
-      case NigerCongo():
-        return nigerCongo?.call() ?? orElse?.call();
-      case NiloSaharan():
-        return niloSaharan?.call() ?? orElse?.call();
-      case NortheastCaucasian():
-        return northeastCaucasian?.call() ?? orElse?.call();
-      case NorthwestCaucasian():
-        return northwestCaucasian?.call() ?? orElse?.call();
-      case Quechuan():
-        return quechuan?.call() ?? orElse?.call();
-      case SinoTibetan():
-        return sinoTibetan?.call() ?? orElse?.call();
-      case SouthCaucasian():
-        return southCaucasian?.call() ?? orElse?.call();
-      case TaiKadai():
-        return taiKadai?.call() ?? orElse?.call();
-      case Tupian():
-        return tupian?.call() ?? orElse?.call();
-      case Turkic():
-        return turkic?.call() ?? orElse?.call();
-      case EskimoAleut():
-        return eskimoAleut?.call() ?? orElse?.call();
-      case Uralic():
-        return uralic?.call() ?? orElse?.call();
-      default:
-        return orElse?.call();
-    }
-  }
+  }) =>
+      switch (this) {
+        AfroAsiatic() => afroAsiatic?.call() ?? orElse?.call(),
+        Algonquian() => algonquian?.call() ?? orElse?.call(),
+        Austroasiatic() => austroasiatic?.call() ?? orElse?.call(),
+        Austronesian() => austronesian?.call() ?? orElse?.call(),
+        Aymaran() => aymaran?.call() ?? orElse?.call(),
+        Constructed() => constructed?.call() ?? orElse?.call(),
+        Creole() => creole?.call() ?? orElse?.call(),
+        DeneYeniseian() => deneYeniseian?.call() ?? orElse?.call(),
+        Dravidian() => dravidian?.call() ?? orElse?.call(),
+        IndoEuropean() => indoEuropean?.call() ?? orElse?.call(),
+        Japonic() => japonic?.call() ?? orElse?.call(),
+        Koreanic() => koreanic?.call() ?? orElse?.call(),
+        LanguageIsolate() => languageIsolate?.call() ?? orElse?.call(),
+        Mongolic() => mongolic?.call() ?? orElse?.call(),
+        NigerCongo() => nigerCongo?.call() ?? orElse?.call(),
+        NiloSaharan() => niloSaharan?.call() ?? orElse?.call(),
+        NortheastCaucasian() => northeastCaucasian?.call() ?? orElse?.call(),
+        NorthwestCaucasian() => northwestCaucasian?.call() ?? orElse?.call(),
+        Quechuan() => quechuan?.call() ?? orElse?.call(),
+        SinoTibetan() => sinoTibetan?.call() ?? orElse?.call(),
+        SouthCaucasian() => southCaucasian?.call() ?? orElse?.call(),
+        TaiKadai() => taiKadai?.call() ?? orElse?.call(),
+        Tupian() => tupian?.call() ?? orElse?.call(),
+        Turkic() => turkic?.call() ?? orElse?.call(),
+        EskimoAleut() => eskimoAleut?.call() ?? orElse?.call(),
+        Uralic() => uralic?.call() ?? orElse?.call(),
+        _ => orElse?.call(),
+      };
 }
