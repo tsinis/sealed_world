@@ -214,7 +214,8 @@ class WorldCountry extends Country {
     return null;
   }
 
-  /// The list of all countries.
+  /// A list of all the countries currently
+  /// supported by the [WorldCountry] class.
   static const list = [
     CountryAbw(),
     CountryAfg(),
