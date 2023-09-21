@@ -1,5 +1,10 @@
+import "dart:convert";
+
 import "../../data/natural_language_families.data.dart";
 import "../../data/natural_languages.data.dart";
+import "../../helpers/extensions/json_natural_language.dart";
+import "../../interfaces/iso_standardized.dart";
+import "../../interfaces/json_encodable.dart";
 import "../language_family/language_family.dart";
 
 part "submodels/natural_language.dart";
