@@ -1,7 +1,8 @@
 part of "../language.dart";
 
 /// A class that represents a natural language.
-class NaturalLanguage extends Language {
+class NaturalLanguage extends Language
+    implements IsoStandardized<String>, JsonEncodable<NaturalLanguage> {
   /// Creates a new instance of the [NaturalLanguage] class.
   ///
   /// The [name] parameter is required and should be a non-empty string
@@ -74,12 +75,14 @@ class NaturalLanguage extends Language {
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
   /// the language.
+  @override
   final String code;
 
   /// A two-letter string representing the ISO 639-1 code for the language.
   final String codeShort;
 
   /// A list of non-empty strings representing the language's native names.
+  @override
   final List<String> namesNative;
 
   /// A three-letter string representing the ISO 639-2/B Bibliographic code for
@@ -92,6 +95,9 @@ class NaturalLanguage extends Language {
   /// Whether the language is written right-to-left.
   final bool isRightToLeft;
 
+  @override
+  String get codeOther => codeShort;
+
   /// Returns a string representation of this [NaturalLanguage] object.
   ///
   /// The optional [short] parameter specifies whether to use a short format
@@ -103,6 +109,9 @@ class NaturalLanguage extends Language {
   String toString({bool short = true}) => short
       ? super.toString()
       : """NaturalLanguage(name: $name, codeShort: $codeShort, code: $code, bibliographicCode: $bibliographicCode, family: $family, nativeName: $namesNative, isRightToLeft: $isRightToLeft)""";
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   /// Returns a `NaturalLanguage` object whose [code] or the value returned by
   /// [where] matches the specified [value], or `null` if no such object exists

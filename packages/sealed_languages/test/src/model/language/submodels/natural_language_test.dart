@@ -1,9 +1,18 @@
+import "package:sealed_languages/src/helpers/extensions/json_natural_language.dart";
+import "package:sealed_languages/src/helpers/extensions/json_string_extension.dart";
+import "package:sealed_languages/src/interfaces/iso_standardized.dart";
+import "package:sealed_languages/src/interfaces/json_encodable.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
 void main() => group("$NaturalLanguage", () {
       final value = NaturalLanguage.list.last;
       final array = {value, NaturalLanguage.list.first};
+
+      test("interfaces", () {
+        expect(value, isA<IsoStandardized>());
+        expect(value, isA<JsonEncodable>());
+      });
 
       group("fields", () {
         for (final element in NaturalLanguage.list) {
@@ -17,6 +26,7 @@ void main() => group("$NaturalLanguage", () {
             expect(element.family.name, isNotEmpty);
             expect(element.codeShort, isA<String>());
             expect(element.codeShort, isNotEmpty);
+            expect(element.codeOther, element.codeShort);
             expect(element.isRightToLeft, isA<bool>());
             expect(element.namesNative, isA<List<String>>());
             expect(element.namesNative, isNotEmpty);
@@ -99,6 +109,26 @@ void main() => group("$NaturalLanguage", () {
             throwsStateError,
           ),
         );
+      });
+
+      group("toJson", () {
+        for (final element in NaturalLanguage.list) {
+          test("compared to $NaturalLanguage: ${element.name}", () {
+            final json = element.toJson();
+            expect(json, isNotEmpty);
+            final decoded = json.tryParse(JsonNaturalLanguage.fromMap);
+            expect(
+              decoded?.toString(short: false),
+              json.parse(JsonNaturalLanguage.fromMap).toString(short: false),
+            );
+            expect(element.bibliographicCode, decoded?.bibliographicCode);
+            expect(element.family, decoded?.family);
+            expect(element.codeShort, decoded?.codeShort);
+            expect(element.isRightToLeft, decoded?.isRightToLeft);
+            expect(element.namesNative, decoded?.namesNative);
+            expect(element.code, decoded?.code);
+          });
+        }
       });
 
       group("maybeFromValue", () {
