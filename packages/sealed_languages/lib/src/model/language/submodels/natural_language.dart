@@ -108,7 +108,7 @@ class NaturalLanguage extends Language
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """NaturalLanguage(name: $name, codeShort: $codeShort, code: $code, bibliographicCode: $bibliographicCode, family: $family, nativeName: $namesNative, isRightToLeft: $isRightToLeft)""";
+      : """NaturalLanguage(name: $name, code: $code, codeShort: $codeShort, namesNative: $namesNative, bibliographicCode: $bibliographicCode, family: $family, isRightToLeft: $isRightToLeft)""";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
