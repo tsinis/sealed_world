@@ -1,8 +1,7 @@
 import "../../model/language/language.dart";
 import "../../model/language_family/language_family.dart";
 
-extension CopyWithNaturalLanguage on NaturalLanguage {
-  // ignore: long-parameter-list, TODO!: add exclude to analysis_options.yaml.
+extension NaturalLanguageCopyWith on NaturalLanguage {
   NaturalLanguage copyWith({
     String? name,
     String? code,

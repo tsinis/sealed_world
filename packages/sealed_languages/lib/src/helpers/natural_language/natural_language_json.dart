@@ -1,8 +1,9 @@
-import "../../../sealed_languages.dart";
 import "../../interfaces/json_encodable.dart";
+import "../../model/language/language.dart";
+import "../../model/language_family/language_family.dart";
 import "../../typedefs/typedefs.dart";
 
-extension JsonNaturalLanguage on NaturalLanguage {
+extension NaturalLanguageJson on NaturalLanguage {
   static NaturalLanguage fromMap(JsonMap map) => NaturalLanguage(
         name: map["name"] as String,
         codeShort: map["codeShort"] as String,

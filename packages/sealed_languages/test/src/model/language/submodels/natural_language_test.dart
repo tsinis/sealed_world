@@ -1,5 +1,5 @@
-import "package:sealed_languages/src/helpers/extensions/json_natural_language.dart";
 import "package:sealed_languages/src/helpers/extensions/json_string_extension.dart";
+import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
 import "package:sealed_languages/src/model/language/language.dart";
@@ -116,10 +116,10 @@ void main() => group("$NaturalLanguage", () {
           test("compared to $NaturalLanguage: ${element.name}", () {
             final json = element.toJson();
             expect(json, isNotEmpty);
-            final decoded = json.tryParse(JsonNaturalLanguage.fromMap);
+            final decoded = json.tryParse(NaturalLanguageJson.fromMap);
             expect(
               decoded?.toString(short: false),
-              json.parse(JsonNaturalLanguage.fromMap).toString(short: false),
+              json.parse(NaturalLanguageJson.fromMap).toString(short: false),
             );
             expect(element.bibliographicCode, decoded?.bibliographicCode);
             expect(element.family, decoded?.family);
