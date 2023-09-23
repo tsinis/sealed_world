@@ -1,0 +1,317 @@
+{
+  "folders": [
+    { "name": "VS Code", "path": "../.vscode" },
+    {
+      "name": "GitHub Setup",
+      "path": "../.github"
+    },
+    {
+      "name": "Flutter World",
+      "path": "../packages/world_countries"
+    },
+    {
+      "name": "Countries",
+      "path": "../packages/sealed_countries"
+    },
+    {
+      "name": "Currencies",
+      "path": "../packages/sealed_currencies"
+    },
+    {
+      "name": "Languages",
+      "path": "../packages/sealed_languages"
+    }
+  ],
+  "settings": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.tabCompletion": "on",
+    "editor.wordBasedSuggestions": true,
+    "dart.previewFlutterUiGuides": true,
+    "dart.lineLength": 80,
+    "[dart]": {
+      "editor.rulers": [80],
+      "editor.defaultFormatter": "Dart-Code.dart-code",
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.organizeImports": "always",
+        "source.addRequired": "always",
+        "source.sortMembers": "never"
+      }
+    },
+    "cSpell.words": ["Cinis"],
+    "cSpell.useGitignore": true,
+    "cSpell.ignorePaths": [
+      ".git", // Ignore the .git directory
+      "**/lib/**/*.data.dart",
+      "**/lib/**/*.g.dart",
+      "**/.vscode/sealed_world.code-workspace"
+    ],
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "dart.renameFilesWithClasses": "prompt",
+    "dart.flutterGenerateLocalizationsOnSave": "manualIfDirty",
+    "dart.runPubGetOnNestedProjects": "both",
+    "dart.suppressTestTimeouts": "debug",
+    "dart.checkForSdkUpdates": false,
+    "dart.experimentalRefactors": true,
+    "dart.previewCommitCharacters": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "flutterPrintTools.debugPrint": false,
+    "git.autofetchPeriod": 360,
+    "git.branchProtection": ["main"],
+    "git.detectSubmodulesLimit": 4,
+    "git.enableSmartCommit": true,
+    "jsonToDart.avoidDynamicTypes": true,
+    "jsonToDart.copyWith": true,
+    "jsonToDart.immutable": true,
+    "jsonToDart.sortConstructorsFirst": true,
+    "material-icon-theme.hidesExplorerArrows": true,
+    "material-icon-theme.saturation": 0.66,
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "code-runner.clearPreviousOutput": false,
+    "dimmer.delay": 1000,
+    "dimmer.opacity": 75,
+    "dimmer.enabled": true,
+    "yaml.keyOrdering": false
+  },
+  "extensions": {
+    "recommendations": [
+      "aaron-bond.better-comments",
+      "alexisvt.flutter-snippets",
+      "bierner.github-markdown-preview",
+      "bierner.markdown-checkbox",
+      "blaxou.freezed",
+      "circlecodesolution.ccs-flutter-color",
+      "codeium.codeium",
+      "coenraads.bracket-pair-colorizer-2",
+      "dart-code.dart-code",
+      "dart-code.flutter",
+      "davidanson.vscode-markdownlint",
+      "esbenp.prettier-vscode",
+      "felixangelov.bloc",
+      "formulahendry.code-runner",
+      "foxundermoon.shell-format",
+      "gaetschwartz.build-runner",
+      "github.vscode-pull-request-github",
+      "giyyapan.fast-snippet",
+      "gmlewis-vscode.flutter-stylizer",
+      "gruntfuggly.todo-tree",
+      "hirantha.json-to-dart",
+      "ibm.output-colorizer",
+      "imagio.vscode-dimmer-block",
+      "jasonlhy.hungry-delete",
+      "jeroen-meijer.pubspec-assist",
+      "kameshkotwani.google-search",
+      "lacroixdavid1.vscode-format-context-menu",
+      "marinv.flutter-print-tools",
+      "nash.awesome-flutter-snippets",
+      "nhoizey.gremlins",
+      "peterhdd.dartgettersetter",
+      "peterschmalfeldt.explorer-exclude",
+      "plibither8.remove-comments",
+      "prasadsunny1.flutter-create-wizard",
+      "rafamel.subtle-brackets",
+      "redhat.vscode-yaml",
+      "ricardo-emerson.dart-data-class-tools",
+      "stkb.rewrap",
+      "streetsidesoftware.code-spell-checker",
+      "tenraneko.pubspec-dependency-opener",
+      "tyriar.sort-lines",
+      "withfig.fig"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "cwd": "${fileWorkspaceFolder}/example/lib/main.dart",
+    "configurations": [
+      { "name": "Debug Example", "request": "launch", "type": "dart" }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "options": { "cwd": "${fileWorkspaceFolder}" },
+    "presentation": { "showReuseMessage": false },
+    "tasks": [
+      {
+        "type": "shell",
+        "command": "dart pub get --no-example",
+        "label": "Dart Pub Get"
+      },
+      {
+        "type": "shell",
+        "command": "dart analyze .",
+        "label": "Dart Analyze"
+      },
+      {
+        "type": "shell",
+        "command": "dart format .",
+        "label": "Dart Format",
+        "presentation": {
+          "reveal": "never",
+          "revealProblems": "onProblem",
+          "close": true
+        }
+      },
+      {
+        "type": "shell",
+        "command": "dart run build_runner build -d",
+        "problemMatcher": ["$dart-build_runner"],
+        "group": "build",
+        "label": "Dart Build Runner"
+      },
+      {
+        "type": "shell",
+        "command": "dart test --fail-fast --coverage=coverage",
+        "label": "Dart Test"
+      },
+      {
+        "type": "shell",
+        "command": "dart run dart_code_metrics:metrics analyze lib test --disable-sunset-warning",
+        "label": "Dart Code Metrics Analyze"
+      },
+      {
+        "type": "shell",
+        "command": "dart run dart_code_metrics:metrics check-unnecessary-nullable lib test --disable-sunset-warning",
+        "label": "Dart Code Metrics Nullable"
+      },
+      {
+        "type": "shell",
+        "command": "dart run dart_code_metrics:metrics check-unused-l10n lib --disable-sunset-warning",
+        "label": "Dart Code Metrics Unused L10N"
+      },
+      {
+        "type": "shell",
+        "command": "dart run dart_code_metrics:metrics check-unused-files lib test --disable-sunset-warning",
+        "label": "Dart Code Metrics Unused Files"
+      },
+      {
+        "type": "shell",
+        "command": "dart run dart_code_metrics:metrics check-unused-code lib test --disable-sunset-warning",
+        "label": "Dart Code Metrics Unused Code"
+      },
+      {
+        "type": "shell",
+        "command": "flutter pub get --no-example",
+        "label": "Flutter Pub Get",
+        "presentation": { "close": true }
+      },
+      {
+        "type": "shell",
+        "command": "flutter clean",
+        "label": "Flutter Clean",
+        "presentation": { "close": true }
+      },
+      {
+        "type": "shell",
+        "command": "flutter gen-l10n",
+        "label": "Flutter Generate L10N",
+        "presentation": {
+          "reveal": "never",
+          "revealProblems": "onProblem",
+          "close": true
+        }
+      },
+      {
+        "type": "shell",
+        "command": "flutter analyze",
+        "label": "Flutter Analyze"
+      },
+      {
+        "type": "shell",
+        "command": "flutter test --coverage",
+        "label": "Flutter Test"
+      },
+      {
+        "type": "shell",
+        "command": "dart run coverage:format_coverage -l -i coverage -o coverage/lcov.info --report-on=lib",
+        "label": "Format Dart Coverage"
+      },
+      {
+        "type": "shell",
+        "command": "lcov -r coverage/lcov.info '*/*.g.dart' '*/*.data.dart' -o coverage/lcov.info --ignore-errors unused",
+        "label": "Remove Generated Files from Coverage",
+        "presentation": {
+          "reveal": "never",
+          "panel": "shared",
+          "close": true
+        }
+      },
+      {
+        "type": "shell",
+        "command": "genhtml coverage/lcov.info -o coverage/",
+        "label": "Generate Coverage",
+        "dependsOn": "Remove Generated Files from Coverage",
+        "presentation": {
+          "reveal": "never",
+          "revealProblems": "onProblem",
+          "close": true
+        }
+      },
+      {
+        "type": "shell",
+        "osx": { "command": "open coverage/index.html" },
+        "linux": { "command": "xdg-open coverage/index.html" },
+        "label": "Open Coverage Report",
+        "presentation": { "close": true }
+      },
+      {
+        "type": "shell",
+        "label": "Show Dart Coverage",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "Dart Test",
+          "Format Dart Coverage",
+          "Generate Coverage",
+          "Open Coverage Report"
+        ],
+        "presentation": { "revealProblems": "onProblem", "close": true }
+      },
+      {
+        "type": "shell",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "Dart Pub Get",
+          "Dart Test",
+          "Dart Format",
+          "Dart Analyze",
+          "Dart Code Metrics Analyze",
+          "Dart Code Metrics Nullable",
+          "Dart Code Metrics Unused Code",
+          "Dart Code Metrics Unused Files"
+        ],
+        "label": "Dart Pub Get, Test, Format, Analyze, DCM"
+      },
+      {
+        "type": "shell",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "Flutter Pub Get",
+          "Flutter Test",
+          "Dart Format",
+          "Flutter Analyze",
+          "Dart Code Metrics Analyze",
+          "Dart Code Metrics Nullable",
+          "Dart Code Metrics Unused Code",
+          "Dart Code Metrics Unused Files"
+        ],
+        "label": "Flutter Pub Get, Test, Format, Analyze, DCM"
+      },
+      {
+        "type": "shell",
+        "label": "Show Flutter Coverage",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "Flutter Test",
+          "Generate Coverage",
+          "Open Coverage Report"
+        ],
+        "presentation": { "revealProblems": "onProblem", "close": true }
+      }
+    ]
+  }
+}

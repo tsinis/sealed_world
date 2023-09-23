@@ -42,9 +42,7 @@ doc/api/
 # Visual Studio Code related
 .classpath
 .project
-.settings/
-.vscode/*
-**/.vscode
+**/.vscode/*.json
 
 # Flutter repo-specific
 /bin/cache/
