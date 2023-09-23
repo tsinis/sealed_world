@@ -1,4 +1,4 @@
-import "dart:convert";
+import "dart:convert" show JsonCodec;
 
 import "../../data/natural_language_families.data.dart";
 import "../../data/natural_languages.data.dart";
