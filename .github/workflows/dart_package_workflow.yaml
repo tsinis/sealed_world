@@ -71,7 +71,7 @@ jobs:
       - name: 🧪 Run tests
         run: |
           dart test --fail-fast --coverage=coverage
-          dart run coverage:format_coverage -l -i coverage -o coverage/lcov.info --report-on=lib
+          dart run coverage:format_coverage -c -l -i coverage -o coverage/lcov.info --report-on=lib
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0

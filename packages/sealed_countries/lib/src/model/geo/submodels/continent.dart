@@ -63,7 +63,8 @@ class Continent extends SubRegion {
     return null;
   }
 
-  /// The list of all continents of the world.
+  /// A list of all the continents currently
+  /// supported by the [Continent] class.
   static const list = [
     Africa(),
     Americas(),

@@ -45,6 +45,8 @@ dart_code_metrics:
   anti-patterns:
     - long-parameter-list:
         ignore-optional: true
+        exclude:
+          - "**/helpers/**_copy_with.dart"
     - long-method:
         exclude:
           - "**/test/**"

@@ -1,8 +1,8 @@
-import "package:sealed_languages/src/helpers/natural_language/natural_language_getters_extension.dart";
+import "package:sealed_languages/src/helpers/natural_language/natural_language_getters.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
-void main() => group("NaturalLanguageGettersExtension", () {
+void main() => group("NaturalLanguageGetters", () {
       final value = NaturalLanguage.list
           .firstWhere((language) => language.bibliographicCode != null);
 

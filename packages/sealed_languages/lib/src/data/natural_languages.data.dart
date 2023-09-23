@@ -2044,7 +2044,7 @@ class LangSnd extends NaturalLanguage {
           code: "SND",
           codeShort: "SD",
           name: "Sindhi",
-          namesNative: const ["सिन्धी, سنڌي، سندھی‎"],
+          namesNative: const ["सिन्धी", "سنڌي، سندھی‎"],
           isRightToLeft: true,
         );
 }

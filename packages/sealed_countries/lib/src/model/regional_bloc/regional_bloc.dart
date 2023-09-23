@@ -76,7 +76,8 @@ class RegionalBloc extends WorldBloc {
     return null;
   }
 
-  /// The list of all regional blocs in the world.
+  /// A list of all the regional blocs currently
+  /// supported by the [RegionalBloc] class.
   static const list = [
     BlocAL(),
     BlocASEAN(),

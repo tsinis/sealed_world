@@ -2,7 +2,7 @@ import "../../model/language/language.dart";
 
 /// Provides convenient getters for ISO 639 language codes
 /// on a [NaturalLanguage] class.
-extension NaturalLanguageGettersExtension on NaturalLanguage {
+extension NaturalLanguageGetters on NaturalLanguage {
   /// Returns the ISO 639-1 language code for a [NaturalLanguage].
   ///
   /// Provides same data as [codeShort].

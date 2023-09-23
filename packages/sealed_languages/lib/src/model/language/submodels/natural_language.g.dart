@@ -188,380 +188,194 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     required R Function(NaturalLanguage langZha) langZha,
     required R Function(NaturalLanguage langZho) langZho,
     required R Function(NaturalLanguage langZul) langZul,
-  }) {
-    switch (this) {
-      case LangAar():
-        return langAar(this);
-      case LangAbk():
-        return langAbk(this);
-      case LangAve():
-        return langAve(this);
-      case LangAfr():
-        return langAfr(this);
-      case LangAka():
-        return langAka(this);
-      case LangAmh():
-        return langAmh(this);
-      case LangArg():
-        return langArg(this);
-      case LangAra():
-        return langAra(this);
-      case LangAsm():
-        return langAsm(this);
-      case LangAva():
-        return langAva(this);
-      case LangAym():
-        return langAym(this);
-      case LangAze():
-        return langAze(this);
-      case LangBak():
-        return langBak(this);
-      case LangBel():
-        return langBel(this);
-      case LangBul():
-        return langBul(this);
-      case LangBih():
-        return langBih(this);
-      case LangBis():
-        return langBis(this);
-      case LangBam():
-        return langBam(this);
-      case LangBen():
-        return langBen(this);
-      case LangBod():
-        return langBod(this);
-      case LangBre():
-        return langBre(this);
-      case LangBos():
-        return langBos(this);
-      case LangCat():
-        return langCat(this);
-      case LangChe():
-        return langChe(this);
-      case LangCha():
-        return langCha(this);
-      case LangCos():
-        return langCos(this);
-      case LangCre():
-        return langCre(this);
-      case LangCes():
-        return langCes(this);
-      case LangChu():
-        return langChu(this);
-      case LangChv():
-        return langChv(this);
-      case LangCor():
-        return langCor(this);
-      case LangCym():
-        return langCym(this);
-      case LangDan():
-        return langDan(this);
-      case LangDeu():
-        return langDeu(this);
-      case LangDiv():
-        return langDiv(this);
-      case LangDzo():
-        return langDzo(this);
-      case LangEwe():
-        return langEwe(this);
-      case LangEll():
-        return langEll(this);
-      case LangEng():
-        return langEng(this);
-      case LangEpo():
-        return langEpo(this);
-      case LangEst():
-        return langEst(this);
-      case LangEus():
-        return langEus(this);
-      case LangFas():
-        return langFas(this);
-      case LangFul():
-        return langFul(this);
-      case LangFin():
-        return langFin(this);
-      case LangFij():
-        return langFij(this);
-      case LangFao():
-        return langFao(this);
-      case LangFra():
-        return langFra(this);
-      case LangFry():
-        return langFry(this);
-      case LangGle():
-        return langGle(this);
-      case LangGla():
-        return langGla(this);
-      case LangGlg():
-        return langGlg(this);
-      case LangGrn():
-        return langGrn(this);
-      case LangGuj():
-        return langGuj(this);
-      case LangGlv():
-        return langGlv(this);
-      case LangHau():
-        return langHau(this);
-      case LangHeb():
-        return langHeb(this);
-      case LangHin():
-        return langHin(this);
-      case LangHmo():
-        return langHmo(this);
-      case LangHrv():
-        return langHrv(this);
-      case LangHat():
-        return langHat(this);
-      case LangHun():
-        return langHun(this);
-      case LangHye():
-        return langHye(this);
-      case LangHer():
-        return langHer(this);
-      case LangIna():
-        return langIna(this);
-      case LangInd():
-        return langInd(this);
-      case LangIle():
-        return langIle(this);
-      case LangIbo():
-        return langIbo(this);
-      case LangIii():
-        return langIii(this);
-      case LangIpk():
-        return langIpk(this);
-      case LangIdo():
-        return langIdo(this);
-      case LangIsl():
-        return langIsl(this);
-      case LangIta():
-        return langIta(this);
-      case LangIku():
-        return langIku(this);
-      case LangJpn():
-        return langJpn(this);
-      case LangJav():
-        return langJav(this);
-      case LangKat():
-        return langKat(this);
-      case LangKon():
-        return langKon(this);
-      case LangKik():
-        return langKik(this);
-      case LangKua():
-        return langKua(this);
-      case LangKaz():
-        return langKaz(this);
-      case LangKal():
-        return langKal(this);
-      case LangKin():
-        return langKin(this);
-      case LangKhm():
-        return langKhm(this);
-      case LangKan():
-        return langKan(this);
-      case LangKor():
-        return langKor(this);
-      case LangKau():
-        return langKau(this);
-      case LangKas():
-        return langKas(this);
-      case LangKur():
-        return langKur(this);
-      case LangKom():
-        return langKom(this);
-      case LangKir():
-        return langKir(this);
-      case LangLat():
-        return langLat(this);
-      case LangLtz():
-        return langLtz(this);
-      case LangLug():
-        return langLug(this);
-      case LangLim():
-        return langLim(this);
-      case LangLin():
-        return langLin(this);
-      case LangLao():
-        return langLao(this);
-      case LangLit():
-        return langLit(this);
-      case LangLub():
-        return langLub(this);
-      case LangLav():
-        return langLav(this);
-      case LangMlg():
-        return langMlg(this);
-      case LangMah():
-        return langMah(this);
-      case LangMri():
-        return langMri(this);
-      case LangMkd():
-        return langMkd(this);
-      case LangMal():
-        return langMal(this);
-      case LangMon():
-        return langMon(this);
-      case LangMar():
-        return langMar(this);
-      case LangMsa():
-        return langMsa(this);
-      case LangMlt():
-        return langMlt(this);
-      case LangMya():
-        return langMya(this);
-      case LangNau():
-        return langNau(this);
-      case LangNob():
-        return langNob(this);
-      case LangNde():
-        return langNde(this);
-      case LangNep():
-        return langNep(this);
-      case LangNdo():
-        return langNdo(this);
-      case LangNld():
-        return langNld(this);
-      case LangNno():
-        return langNno(this);
-      case LangNor():
-        return langNor(this);
-      case LangNbl():
-        return langNbl(this);
-      case LangNav():
-        return langNav(this);
-      case LangNya():
-        return langNya(this);
-      case LangOci():
-        return langOci(this);
-      case LangOji():
-        return langOji(this);
-      case LangOrm():
-        return langOrm(this);
-      case LangOri():
-        return langOri(this);
-      case LangOss():
-        return langOss(this);
-      case LangPan():
-        return langPan(this);
-      case LangPli():
-        return langPli(this);
-      case LangPol():
-        return langPol(this);
-      case LangPus():
-        return langPus(this);
-      case LangPor():
-        return langPor(this);
-      case LangQue():
-        return langQue(this);
-      case LangRoh():
-        return langRoh(this);
-      case LangRun():
-        return langRun(this);
-      case LangRon():
-        return langRon(this);
-      case LangRus():
-        return langRus(this);
-      case LangSan():
-        return langSan(this);
-      case LangSrd():
-        return langSrd(this);
-      case LangSnd():
-        return langSnd(this);
-      case LangSme():
-        return langSme(this);
-      case LangSag():
-        return langSag(this);
-      case LangSin():
-        return langSin(this);
-      case LangSlk():
-        return langSlk(this);
-      case LangSlv():
-        return langSlv(this);
-      case LangSmo():
-        return langSmo(this);
-      case LangSna():
-        return langSna(this);
-      case LangSom():
-        return langSom(this);
-      case LangSpa():
-        return langSpa(this);
-      case LangSqi():
-        return langSqi(this);
-      case LangSrp():
-        return langSrp(this);
-      case LangSsw():
-        return langSsw(this);
-      case LangSot():
-        return langSot(this);
-      case LangSun():
-        return langSun(this);
-      case LangSwe():
-        return langSwe(this);
-      case LangSwa():
-        return langSwa(this);
-      case LangTam():
-        return langTam(this);
-      case LangTel():
-        return langTel(this);
-      case LangTgk():
-        return langTgk(this);
-      case LangTha():
-        return langTha(this);
-      case LangTir():
-        return langTir(this);
-      case LangTuk():
-        return langTuk(this);
-      case LangTgl():
-        return langTgl(this);
-      case LangTsn():
-        return langTsn(this);
-      case LangTon():
-        return langTon(this);
-      case LangTur():
-        return langTur(this);
-      case LangTso():
-        return langTso(this);
-      case LangTat():
-        return langTat(this);
-      case LangTwi():
-        return langTwi(this);
-      case LangTah():
-        return langTah(this);
-      case LangUig():
-        return langUig(this);
-      case LangUkr():
-        return langUkr(this);
-      case LangUrd():
-        return langUrd(this);
-      case LangUzb():
-        return langUzb(this);
-      case LangVen():
-        return langVen(this);
-      case LangVie():
-        return langVie(this);
-      case LangVol():
-        return langVol(this);
-      case LangWln():
-        return langWln(this);
-      case LangWol():
-        return langWol(this);
-      case LangXho():
-        return langXho(this);
-      case LangYid():
-        return langYid(this);
-      case LangYor():
-        return langYor(this);
-      case LangZha():
-        return langZha(this);
-      case LangZho():
-        return langZho(this);
-      case LangZul():
-        return langZul(this);
-      default:
-        throw ArgumentError("Unknown value: $this", name);
-    }
-  }
+  }) =>
+      switch (this) {
+        LangAar() => langAar(this),
+        LangAbk() => langAbk(this),
+        LangAve() => langAve(this),
+        LangAfr() => langAfr(this),
+        LangAka() => langAka(this),
+        LangAmh() => langAmh(this),
+        LangArg() => langArg(this),
+        LangAra() => langAra(this),
+        LangAsm() => langAsm(this),
+        LangAva() => langAva(this),
+        LangAym() => langAym(this),
+        LangAze() => langAze(this),
+        LangBak() => langBak(this),
+        LangBel() => langBel(this),
+        LangBul() => langBul(this),
+        LangBih() => langBih(this),
+        LangBis() => langBis(this),
+        LangBam() => langBam(this),
+        LangBen() => langBen(this),
+        LangBod() => langBod(this),
+        LangBre() => langBre(this),
+        LangBos() => langBos(this),
+        LangCat() => langCat(this),
+        LangChe() => langChe(this),
+        LangCha() => langCha(this),
+        LangCos() => langCos(this),
+        LangCre() => langCre(this),
+        LangCes() => langCes(this),
+        LangChu() => langChu(this),
+        LangChv() => langChv(this),
+        LangCor() => langCor(this),
+        LangCym() => langCym(this),
+        LangDan() => langDan(this),
+        LangDeu() => langDeu(this),
+        LangDiv() => langDiv(this),
+        LangDzo() => langDzo(this),
+        LangEwe() => langEwe(this),
+        LangEll() => langEll(this),
+        LangEng() => langEng(this),
+        LangEpo() => langEpo(this),
+        LangEst() => langEst(this),
+        LangEus() => langEus(this),
+        LangFas() => langFas(this),
+        LangFul() => langFul(this),
+        LangFin() => langFin(this),
+        LangFij() => langFij(this),
+        LangFao() => langFao(this),
+        LangFra() => langFra(this),
+        LangFry() => langFry(this),
+        LangGle() => langGle(this),
+        LangGla() => langGla(this),
+        LangGlg() => langGlg(this),
+        LangGrn() => langGrn(this),
+        LangGuj() => langGuj(this),
+        LangGlv() => langGlv(this),
+        LangHau() => langHau(this),
+        LangHeb() => langHeb(this),
+        LangHin() => langHin(this),
+        LangHmo() => langHmo(this),
+        LangHrv() => langHrv(this),
+        LangHat() => langHat(this),
+        LangHun() => langHun(this),
+        LangHye() => langHye(this),
+        LangHer() => langHer(this),
+        LangIna() => langIna(this),
+        LangInd() => langInd(this),
+        LangIle() => langIle(this),
+        LangIbo() => langIbo(this),
+        LangIii() => langIii(this),
+        LangIpk() => langIpk(this),
+        LangIdo() => langIdo(this),
+        LangIsl() => langIsl(this),
+        LangIta() => langIta(this),
+        LangIku() => langIku(this),
+        LangJpn() => langJpn(this),
+        LangJav() => langJav(this),
+        LangKat() => langKat(this),
+        LangKon() => langKon(this),
+        LangKik() => langKik(this),
+        LangKua() => langKua(this),
+        LangKaz() => langKaz(this),
+        LangKal() => langKal(this),
+        LangKin() => langKin(this),
+        LangKhm() => langKhm(this),
+        LangKan() => langKan(this),
+        LangKor() => langKor(this),
+        LangKau() => langKau(this),
+        LangKas() => langKas(this),
+        LangKur() => langKur(this),
+        LangKom() => langKom(this),
+        LangKir() => langKir(this),
+        LangLat() => langLat(this),
+        LangLtz() => langLtz(this),
+        LangLug() => langLug(this),
+        LangLim() => langLim(this),
+        LangLin() => langLin(this),
+        LangLao() => langLao(this),
+        LangLit() => langLit(this),
+        LangLub() => langLub(this),
+        LangLav() => langLav(this),
+        LangMlg() => langMlg(this),
+        LangMah() => langMah(this),
+        LangMri() => langMri(this),
+        LangMkd() => langMkd(this),
+        LangMal() => langMal(this),
+        LangMon() => langMon(this),
+        LangMar() => langMar(this),
+        LangMsa() => langMsa(this),
+        LangMlt() => langMlt(this),
+        LangMya() => langMya(this),
+        LangNau() => langNau(this),
+        LangNob() => langNob(this),
+        LangNde() => langNde(this),
+        LangNep() => langNep(this),
+        LangNdo() => langNdo(this),
+        LangNld() => langNld(this),
+        LangNno() => langNno(this),
+        LangNor() => langNor(this),
+        LangNbl() => langNbl(this),
+        LangNav() => langNav(this),
+        LangNya() => langNya(this),
+        LangOci() => langOci(this),
+        LangOji() => langOji(this),
+        LangOrm() => langOrm(this),
+        LangOri() => langOri(this),
+        LangOss() => langOss(this),
+        LangPan() => langPan(this),
+        LangPli() => langPli(this),
+        LangPol() => langPol(this),
+        LangPus() => langPus(this),
+        LangPor() => langPor(this),
+        LangQue() => langQue(this),
+        LangRoh() => langRoh(this),
+        LangRun() => langRun(this),
+        LangRon() => langRon(this),
+        LangRus() => langRus(this),
+        LangSan() => langSan(this),
+        LangSrd() => langSrd(this),
+        LangSnd() => langSnd(this),
+        LangSme() => langSme(this),
+        LangSag() => langSag(this),
+        LangSin() => langSin(this),
+        LangSlk() => langSlk(this),
+        LangSlv() => langSlv(this),
+        LangSmo() => langSmo(this),
+        LangSna() => langSna(this),
+        LangSom() => langSom(this),
+        LangSpa() => langSpa(this),
+        LangSqi() => langSqi(this),
+        LangSrp() => langSrp(this),
+        LangSsw() => langSsw(this),
+        LangSot() => langSot(this),
+        LangSun() => langSun(this),
+        LangSwe() => langSwe(this),
+        LangSwa() => langSwa(this),
+        LangTam() => langTam(this),
+        LangTel() => langTel(this),
+        LangTgk() => langTgk(this),
+        LangTha() => langTha(this),
+        LangTir() => langTir(this),
+        LangTuk() => langTuk(this),
+        LangTgl() => langTgl(this),
+        LangTsn() => langTsn(this),
+        LangTon() => langTon(this),
+        LangTur() => langTur(this),
+        LangTso() => langTso(this),
+        LangTat() => langTat(this),
+        LangTwi() => langTwi(this),
+        LangTah() => langTah(this),
+        LangUig() => langUig(this),
+        LangUkr() => langUkr(this),
+        LangUrd() => langUrd(this),
+        LangUzb() => langUzb(this),
+        LangVen() => langVen(this),
+        LangVie() => langVie(this),
+        LangVol() => langVol(this),
+        LangWln() => langWln(this),
+        LangWol() => langWol(this),
+        LangXho() => langXho(this),
+        LangYid() => langYid(this),
+        LangYor() => langYor(this),
+        LangZha() => langZha(this),
+        LangZho() => langZho(this),
+        LangZul() => langZul(this),
+        _ => throw ArgumentError("Unknown value: $this", name),
+      };
 
   R maybeMap<R>({
     required R Function(NaturalLanguage language) orElse,
@@ -749,380 +563,194 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     R Function(NaturalLanguage langZha)? langZha,
     R Function(NaturalLanguage langZho)? langZho,
     R Function(NaturalLanguage langZul)? langZul,
-  }) {
-    switch (this) {
-      case LangAar():
-        return langAar?.call(this) ?? orElse(this);
-      case LangAbk():
-        return langAbk?.call(this) ?? orElse(this);
-      case LangAve():
-        return langAve?.call(this) ?? orElse(this);
-      case LangAfr():
-        return langAfr?.call(this) ?? orElse(this);
-      case LangAka():
-        return langAka?.call(this) ?? orElse(this);
-      case LangAmh():
-        return langAmh?.call(this) ?? orElse(this);
-      case LangArg():
-        return langArg?.call(this) ?? orElse(this);
-      case LangAra():
-        return langAra?.call(this) ?? orElse(this);
-      case LangAsm():
-        return langAsm?.call(this) ?? orElse(this);
-      case LangAva():
-        return langAva?.call(this) ?? orElse(this);
-      case LangAym():
-        return langAym?.call(this) ?? orElse(this);
-      case LangAze():
-        return langAze?.call(this) ?? orElse(this);
-      case LangBak():
-        return langBak?.call(this) ?? orElse(this);
-      case LangBel():
-        return langBel?.call(this) ?? orElse(this);
-      case LangBul():
-        return langBul?.call(this) ?? orElse(this);
-      case LangBih():
-        return langBih?.call(this) ?? orElse(this);
-      case LangBis():
-        return langBis?.call(this) ?? orElse(this);
-      case LangBam():
-        return langBam?.call(this) ?? orElse(this);
-      case LangBen():
-        return langBen?.call(this) ?? orElse(this);
-      case LangBod():
-        return langBod?.call(this) ?? orElse(this);
-      case LangBre():
-        return langBre?.call(this) ?? orElse(this);
-      case LangBos():
-        return langBos?.call(this) ?? orElse(this);
-      case LangCat():
-        return langCat?.call(this) ?? orElse(this);
-      case LangChe():
-        return langChe?.call(this) ?? orElse(this);
-      case LangCha():
-        return langCha?.call(this) ?? orElse(this);
-      case LangCos():
-        return langCos?.call(this) ?? orElse(this);
-      case LangCre():
-        return langCre?.call(this) ?? orElse(this);
-      case LangCes():
-        return langCes?.call(this) ?? orElse(this);
-      case LangChu():
-        return langChu?.call(this) ?? orElse(this);
-      case LangChv():
-        return langChv?.call(this) ?? orElse(this);
-      case LangCor():
-        return langCor?.call(this) ?? orElse(this);
-      case LangCym():
-        return langCym?.call(this) ?? orElse(this);
-      case LangDan():
-        return langDan?.call(this) ?? orElse(this);
-      case LangDeu():
-        return langDeu?.call(this) ?? orElse(this);
-      case LangDiv():
-        return langDiv?.call(this) ?? orElse(this);
-      case LangDzo():
-        return langDzo?.call(this) ?? orElse(this);
-      case LangEwe():
-        return langEwe?.call(this) ?? orElse(this);
-      case LangEll():
-        return langEll?.call(this) ?? orElse(this);
-      case LangEng():
-        return langEng?.call(this) ?? orElse(this);
-      case LangEpo():
-        return langEpo?.call(this) ?? orElse(this);
-      case LangEst():
-        return langEst?.call(this) ?? orElse(this);
-      case LangEus():
-        return langEus?.call(this) ?? orElse(this);
-      case LangFas():
-        return langFas?.call(this) ?? orElse(this);
-      case LangFul():
-        return langFul?.call(this) ?? orElse(this);
-      case LangFin():
-        return langFin?.call(this) ?? orElse(this);
-      case LangFij():
-        return langFij?.call(this) ?? orElse(this);
-      case LangFao():
-        return langFao?.call(this) ?? orElse(this);
-      case LangFra():
-        return langFra?.call(this) ?? orElse(this);
-      case LangFry():
-        return langFry?.call(this) ?? orElse(this);
-      case LangGle():
-        return langGle?.call(this) ?? orElse(this);
-      case LangGla():
-        return langGla?.call(this) ?? orElse(this);
-      case LangGlg():
-        return langGlg?.call(this) ?? orElse(this);
-      case LangGrn():
-        return langGrn?.call(this) ?? orElse(this);
-      case LangGuj():
-        return langGuj?.call(this) ?? orElse(this);
-      case LangGlv():
-        return langGlv?.call(this) ?? orElse(this);
-      case LangHau():
-        return langHau?.call(this) ?? orElse(this);
-      case LangHeb():
-        return langHeb?.call(this) ?? orElse(this);
-      case LangHin():
-        return langHin?.call(this) ?? orElse(this);
-      case LangHmo():
-        return langHmo?.call(this) ?? orElse(this);
-      case LangHrv():
-        return langHrv?.call(this) ?? orElse(this);
-      case LangHat():
-        return langHat?.call(this) ?? orElse(this);
-      case LangHun():
-        return langHun?.call(this) ?? orElse(this);
-      case LangHye():
-        return langHye?.call(this) ?? orElse(this);
-      case LangHer():
-        return langHer?.call(this) ?? orElse(this);
-      case LangIna():
-        return langIna?.call(this) ?? orElse(this);
-      case LangInd():
-        return langInd?.call(this) ?? orElse(this);
-      case LangIle():
-        return langIle?.call(this) ?? orElse(this);
-      case LangIbo():
-        return langIbo?.call(this) ?? orElse(this);
-      case LangIii():
-        return langIii?.call(this) ?? orElse(this);
-      case LangIpk():
-        return langIpk?.call(this) ?? orElse(this);
-      case LangIdo():
-        return langIdo?.call(this) ?? orElse(this);
-      case LangIsl():
-        return langIsl?.call(this) ?? orElse(this);
-      case LangIta():
-        return langIta?.call(this) ?? orElse(this);
-      case LangIku():
-        return langIku?.call(this) ?? orElse(this);
-      case LangJpn():
-        return langJpn?.call(this) ?? orElse(this);
-      case LangJav():
-        return langJav?.call(this) ?? orElse(this);
-      case LangKat():
-        return langKat?.call(this) ?? orElse(this);
-      case LangKon():
-        return langKon?.call(this) ?? orElse(this);
-      case LangKik():
-        return langKik?.call(this) ?? orElse(this);
-      case LangKua():
-        return langKua?.call(this) ?? orElse(this);
-      case LangKaz():
-        return langKaz?.call(this) ?? orElse(this);
-      case LangKal():
-        return langKal?.call(this) ?? orElse(this);
-      case LangKin():
-        return langKin?.call(this) ?? orElse(this);
-      case LangKhm():
-        return langKhm?.call(this) ?? orElse(this);
-      case LangKan():
-        return langKan?.call(this) ?? orElse(this);
-      case LangKor():
-        return langKor?.call(this) ?? orElse(this);
-      case LangKau():
-        return langKau?.call(this) ?? orElse(this);
-      case LangKas():
-        return langKas?.call(this) ?? orElse(this);
-      case LangKur():
-        return langKur?.call(this) ?? orElse(this);
-      case LangKom():
-        return langKom?.call(this) ?? orElse(this);
-      case LangKir():
-        return langKir?.call(this) ?? orElse(this);
-      case LangLat():
-        return langLat?.call(this) ?? orElse(this);
-      case LangLtz():
-        return langLtz?.call(this) ?? orElse(this);
-      case LangLug():
-        return langLug?.call(this) ?? orElse(this);
-      case LangLim():
-        return langLim?.call(this) ?? orElse(this);
-      case LangLin():
-        return langLin?.call(this) ?? orElse(this);
-      case LangLao():
-        return langLao?.call(this) ?? orElse(this);
-      case LangLit():
-        return langLit?.call(this) ?? orElse(this);
-      case LangLub():
-        return langLub?.call(this) ?? orElse(this);
-      case LangLav():
-        return langLav?.call(this) ?? orElse(this);
-      case LangMlg():
-        return langMlg?.call(this) ?? orElse(this);
-      case LangMah():
-        return langMah?.call(this) ?? orElse(this);
-      case LangMri():
-        return langMri?.call(this) ?? orElse(this);
-      case LangMkd():
-        return langMkd?.call(this) ?? orElse(this);
-      case LangMal():
-        return langMal?.call(this) ?? orElse(this);
-      case LangMon():
-        return langMon?.call(this) ?? orElse(this);
-      case LangMar():
-        return langMar?.call(this) ?? orElse(this);
-      case LangMsa():
-        return langMsa?.call(this) ?? orElse(this);
-      case LangMlt():
-        return langMlt?.call(this) ?? orElse(this);
-      case LangMya():
-        return langMya?.call(this) ?? orElse(this);
-      case LangNau():
-        return langNau?.call(this) ?? orElse(this);
-      case LangNob():
-        return langNob?.call(this) ?? orElse(this);
-      case LangNde():
-        return langNde?.call(this) ?? orElse(this);
-      case LangNep():
-        return langNep?.call(this) ?? orElse(this);
-      case LangNdo():
-        return langNdo?.call(this) ?? orElse(this);
-      case LangNld():
-        return langNld?.call(this) ?? orElse(this);
-      case LangNno():
-        return langNno?.call(this) ?? orElse(this);
-      case LangNor():
-        return langNor?.call(this) ?? orElse(this);
-      case LangNbl():
-        return langNbl?.call(this) ?? orElse(this);
-      case LangNav():
-        return langNav?.call(this) ?? orElse(this);
-      case LangNya():
-        return langNya?.call(this) ?? orElse(this);
-      case LangOci():
-        return langOci?.call(this) ?? orElse(this);
-      case LangOji():
-        return langOji?.call(this) ?? orElse(this);
-      case LangOrm():
-        return langOrm?.call(this) ?? orElse(this);
-      case LangOri():
-        return langOri?.call(this) ?? orElse(this);
-      case LangOss():
-        return langOss?.call(this) ?? orElse(this);
-      case LangPan():
-        return langPan?.call(this) ?? orElse(this);
-      case LangPli():
-        return langPli?.call(this) ?? orElse(this);
-      case LangPol():
-        return langPol?.call(this) ?? orElse(this);
-      case LangPus():
-        return langPus?.call(this) ?? orElse(this);
-      case LangPor():
-        return langPor?.call(this) ?? orElse(this);
-      case LangQue():
-        return langQue?.call(this) ?? orElse(this);
-      case LangRoh():
-        return langRoh?.call(this) ?? orElse(this);
-      case LangRun():
-        return langRun?.call(this) ?? orElse(this);
-      case LangRon():
-        return langRon?.call(this) ?? orElse(this);
-      case LangRus():
-        return langRus?.call(this) ?? orElse(this);
-      case LangSan():
-        return langSan?.call(this) ?? orElse(this);
-      case LangSrd():
-        return langSrd?.call(this) ?? orElse(this);
-      case LangSnd():
-        return langSnd?.call(this) ?? orElse(this);
-      case LangSme():
-        return langSme?.call(this) ?? orElse(this);
-      case LangSag():
-        return langSag?.call(this) ?? orElse(this);
-      case LangSin():
-        return langSin?.call(this) ?? orElse(this);
-      case LangSlk():
-        return langSlk?.call(this) ?? orElse(this);
-      case LangSlv():
-        return langSlv?.call(this) ?? orElse(this);
-      case LangSmo():
-        return langSmo?.call(this) ?? orElse(this);
-      case LangSna():
-        return langSna?.call(this) ?? orElse(this);
-      case LangSom():
-        return langSom?.call(this) ?? orElse(this);
-      case LangSpa():
-        return langSpa?.call(this) ?? orElse(this);
-      case LangSqi():
-        return langSqi?.call(this) ?? orElse(this);
-      case LangSrp():
-        return langSrp?.call(this) ?? orElse(this);
-      case LangSsw():
-        return langSsw?.call(this) ?? orElse(this);
-      case LangSot():
-        return langSot?.call(this) ?? orElse(this);
-      case LangSun():
-        return langSun?.call(this) ?? orElse(this);
-      case LangSwe():
-        return langSwe?.call(this) ?? orElse(this);
-      case LangSwa():
-        return langSwa?.call(this) ?? orElse(this);
-      case LangTam():
-        return langTam?.call(this) ?? orElse(this);
-      case LangTel():
-        return langTel?.call(this) ?? orElse(this);
-      case LangTgk():
-        return langTgk?.call(this) ?? orElse(this);
-      case LangTha():
-        return langTha?.call(this) ?? orElse(this);
-      case LangTir():
-        return langTir?.call(this) ?? orElse(this);
-      case LangTuk():
-        return langTuk?.call(this) ?? orElse(this);
-      case LangTgl():
-        return langTgl?.call(this) ?? orElse(this);
-      case LangTsn():
-        return langTsn?.call(this) ?? orElse(this);
-      case LangTon():
-        return langTon?.call(this) ?? orElse(this);
-      case LangTur():
-        return langTur?.call(this) ?? orElse(this);
-      case LangTso():
-        return langTso?.call(this) ?? orElse(this);
-      case LangTat():
-        return langTat?.call(this) ?? orElse(this);
-      case LangTwi():
-        return langTwi?.call(this) ?? orElse(this);
-      case LangTah():
-        return langTah?.call(this) ?? orElse(this);
-      case LangUig():
-        return langUig?.call(this) ?? orElse(this);
-      case LangUkr():
-        return langUkr?.call(this) ?? orElse(this);
-      case LangUrd():
-        return langUrd?.call(this) ?? orElse(this);
-      case LangUzb():
-        return langUzb?.call(this) ?? orElse(this);
-      case LangVen():
-        return langVen?.call(this) ?? orElse(this);
-      case LangVie():
-        return langVie?.call(this) ?? orElse(this);
-      case LangVol():
-        return langVol?.call(this) ?? orElse(this);
-      case LangWln():
-        return langWln?.call(this) ?? orElse(this);
-      case LangWol():
-        return langWol?.call(this) ?? orElse(this);
-      case LangXho():
-        return langXho?.call(this) ?? orElse(this);
-      case LangYid():
-        return langYid?.call(this) ?? orElse(this);
-      case LangYor():
-        return langYor?.call(this) ?? orElse(this);
-      case LangZha():
-        return langZha?.call(this) ?? orElse(this);
-      case LangZho():
-        return langZho?.call(this) ?? orElse(this);
-      case LangZul():
-        return langZul?.call(this) ?? orElse(this);
-      default:
-        return orElse(this);
-    }
-  }
+  }) =>
+      switch (this) {
+        LangAar() => langAar?.call(this) ?? orElse(this),
+        LangAbk() => langAbk?.call(this) ?? orElse(this),
+        LangAve() => langAve?.call(this) ?? orElse(this),
+        LangAfr() => langAfr?.call(this) ?? orElse(this),
+        LangAka() => langAka?.call(this) ?? orElse(this),
+        LangAmh() => langAmh?.call(this) ?? orElse(this),
+        LangArg() => langArg?.call(this) ?? orElse(this),
+        LangAra() => langAra?.call(this) ?? orElse(this),
+        LangAsm() => langAsm?.call(this) ?? orElse(this),
+        LangAva() => langAva?.call(this) ?? orElse(this),
+        LangAym() => langAym?.call(this) ?? orElse(this),
+        LangAze() => langAze?.call(this) ?? orElse(this),
+        LangBak() => langBak?.call(this) ?? orElse(this),
+        LangBel() => langBel?.call(this) ?? orElse(this),
+        LangBul() => langBul?.call(this) ?? orElse(this),
+        LangBih() => langBih?.call(this) ?? orElse(this),
+        LangBis() => langBis?.call(this) ?? orElse(this),
+        LangBam() => langBam?.call(this) ?? orElse(this),
+        LangBen() => langBen?.call(this) ?? orElse(this),
+        LangBod() => langBod?.call(this) ?? orElse(this),
+        LangBre() => langBre?.call(this) ?? orElse(this),
+        LangBos() => langBos?.call(this) ?? orElse(this),
+        LangCat() => langCat?.call(this) ?? orElse(this),
+        LangChe() => langChe?.call(this) ?? orElse(this),
+        LangCha() => langCha?.call(this) ?? orElse(this),
+        LangCos() => langCos?.call(this) ?? orElse(this),
+        LangCre() => langCre?.call(this) ?? orElse(this),
+        LangCes() => langCes?.call(this) ?? orElse(this),
+        LangChu() => langChu?.call(this) ?? orElse(this),
+        LangChv() => langChv?.call(this) ?? orElse(this),
+        LangCor() => langCor?.call(this) ?? orElse(this),
+        LangCym() => langCym?.call(this) ?? orElse(this),
+        LangDan() => langDan?.call(this) ?? orElse(this),
+        LangDeu() => langDeu?.call(this) ?? orElse(this),
+        LangDiv() => langDiv?.call(this) ?? orElse(this),
+        LangDzo() => langDzo?.call(this) ?? orElse(this),
+        LangEwe() => langEwe?.call(this) ?? orElse(this),
+        LangEll() => langEll?.call(this) ?? orElse(this),
+        LangEng() => langEng?.call(this) ?? orElse(this),
+        LangEpo() => langEpo?.call(this) ?? orElse(this),
+        LangEst() => langEst?.call(this) ?? orElse(this),
+        LangEus() => langEus?.call(this) ?? orElse(this),
+        LangFas() => langFas?.call(this) ?? orElse(this),
+        LangFul() => langFul?.call(this) ?? orElse(this),
+        LangFin() => langFin?.call(this) ?? orElse(this),
+        LangFij() => langFij?.call(this) ?? orElse(this),
+        LangFao() => langFao?.call(this) ?? orElse(this),
+        LangFra() => langFra?.call(this) ?? orElse(this),
+        LangFry() => langFry?.call(this) ?? orElse(this),
+        LangGle() => langGle?.call(this) ?? orElse(this),
+        LangGla() => langGla?.call(this) ?? orElse(this),
+        LangGlg() => langGlg?.call(this) ?? orElse(this),
+        LangGrn() => langGrn?.call(this) ?? orElse(this),
+        LangGuj() => langGuj?.call(this) ?? orElse(this),
+        LangGlv() => langGlv?.call(this) ?? orElse(this),
+        LangHau() => langHau?.call(this) ?? orElse(this),
+        LangHeb() => langHeb?.call(this) ?? orElse(this),
+        LangHin() => langHin?.call(this) ?? orElse(this),
+        LangHmo() => langHmo?.call(this) ?? orElse(this),
+        LangHrv() => langHrv?.call(this) ?? orElse(this),
+        LangHat() => langHat?.call(this) ?? orElse(this),
+        LangHun() => langHun?.call(this) ?? orElse(this),
+        LangHye() => langHye?.call(this) ?? orElse(this),
+        LangHer() => langHer?.call(this) ?? orElse(this),
+        LangIna() => langIna?.call(this) ?? orElse(this),
+        LangInd() => langInd?.call(this) ?? orElse(this),
+        LangIle() => langIle?.call(this) ?? orElse(this),
+        LangIbo() => langIbo?.call(this) ?? orElse(this),
+        LangIii() => langIii?.call(this) ?? orElse(this),
+        LangIpk() => langIpk?.call(this) ?? orElse(this),
+        LangIdo() => langIdo?.call(this) ?? orElse(this),
+        LangIsl() => langIsl?.call(this) ?? orElse(this),
+        LangIta() => langIta?.call(this) ?? orElse(this),
+        LangIku() => langIku?.call(this) ?? orElse(this),
+        LangJpn() => langJpn?.call(this) ?? orElse(this),
+        LangJav() => langJav?.call(this) ?? orElse(this),
+        LangKat() => langKat?.call(this) ?? orElse(this),
+        LangKon() => langKon?.call(this) ?? orElse(this),
+        LangKik() => langKik?.call(this) ?? orElse(this),
+        LangKua() => langKua?.call(this) ?? orElse(this),
+        LangKaz() => langKaz?.call(this) ?? orElse(this),
+        LangKal() => langKal?.call(this) ?? orElse(this),
+        LangKin() => langKin?.call(this) ?? orElse(this),
+        LangKhm() => langKhm?.call(this) ?? orElse(this),
+        LangKan() => langKan?.call(this) ?? orElse(this),
+        LangKor() => langKor?.call(this) ?? orElse(this),
+        LangKau() => langKau?.call(this) ?? orElse(this),
+        LangKas() => langKas?.call(this) ?? orElse(this),
+        LangKur() => langKur?.call(this) ?? orElse(this),
+        LangKom() => langKom?.call(this) ?? orElse(this),
+        LangKir() => langKir?.call(this) ?? orElse(this),
+        LangLat() => langLat?.call(this) ?? orElse(this),
+        LangLtz() => langLtz?.call(this) ?? orElse(this),
+        LangLug() => langLug?.call(this) ?? orElse(this),
+        LangLim() => langLim?.call(this) ?? orElse(this),
+        LangLin() => langLin?.call(this) ?? orElse(this),
+        LangLao() => langLao?.call(this) ?? orElse(this),
+        LangLit() => langLit?.call(this) ?? orElse(this),
+        LangLub() => langLub?.call(this) ?? orElse(this),
+        LangLav() => langLav?.call(this) ?? orElse(this),
+        LangMlg() => langMlg?.call(this) ?? orElse(this),
+        LangMah() => langMah?.call(this) ?? orElse(this),
+        LangMri() => langMri?.call(this) ?? orElse(this),
+        LangMkd() => langMkd?.call(this) ?? orElse(this),
+        LangMal() => langMal?.call(this) ?? orElse(this),
+        LangMon() => langMon?.call(this) ?? orElse(this),
+        LangMar() => langMar?.call(this) ?? orElse(this),
+        LangMsa() => langMsa?.call(this) ?? orElse(this),
+        LangMlt() => langMlt?.call(this) ?? orElse(this),
+        LangMya() => langMya?.call(this) ?? orElse(this),
+        LangNau() => langNau?.call(this) ?? orElse(this),
+        LangNob() => langNob?.call(this) ?? orElse(this),
+        LangNde() => langNde?.call(this) ?? orElse(this),
+        LangNep() => langNep?.call(this) ?? orElse(this),
+        LangNdo() => langNdo?.call(this) ?? orElse(this),
+        LangNld() => langNld?.call(this) ?? orElse(this),
+        LangNno() => langNno?.call(this) ?? orElse(this),
+        LangNor() => langNor?.call(this) ?? orElse(this),
+        LangNbl() => langNbl?.call(this) ?? orElse(this),
+        LangNav() => langNav?.call(this) ?? orElse(this),
+        LangNya() => langNya?.call(this) ?? orElse(this),
+        LangOci() => langOci?.call(this) ?? orElse(this),
+        LangOji() => langOji?.call(this) ?? orElse(this),
+        LangOrm() => langOrm?.call(this) ?? orElse(this),
+        LangOri() => langOri?.call(this) ?? orElse(this),
+        LangOss() => langOss?.call(this) ?? orElse(this),
+        LangPan() => langPan?.call(this) ?? orElse(this),
+        LangPli() => langPli?.call(this) ?? orElse(this),
+        LangPol() => langPol?.call(this) ?? orElse(this),
+        LangPus() => langPus?.call(this) ?? orElse(this),
+        LangPor() => langPor?.call(this) ?? orElse(this),
+        LangQue() => langQue?.call(this) ?? orElse(this),
+        LangRoh() => langRoh?.call(this) ?? orElse(this),
+        LangRun() => langRun?.call(this) ?? orElse(this),
+        LangRon() => langRon?.call(this) ?? orElse(this),
+        LangRus() => langRus?.call(this) ?? orElse(this),
+        LangSan() => langSan?.call(this) ?? orElse(this),
+        LangSrd() => langSrd?.call(this) ?? orElse(this),
+        LangSnd() => langSnd?.call(this) ?? orElse(this),
+        LangSme() => langSme?.call(this) ?? orElse(this),
+        LangSag() => langSag?.call(this) ?? orElse(this),
+        LangSin() => langSin?.call(this) ?? orElse(this),
+        LangSlk() => langSlk?.call(this) ?? orElse(this),
+        LangSlv() => langSlv?.call(this) ?? orElse(this),
+        LangSmo() => langSmo?.call(this) ?? orElse(this),
+        LangSna() => langSna?.call(this) ?? orElse(this),
+        LangSom() => langSom?.call(this) ?? orElse(this),
+        LangSpa() => langSpa?.call(this) ?? orElse(this),
+        LangSqi() => langSqi?.call(this) ?? orElse(this),
+        LangSrp() => langSrp?.call(this) ?? orElse(this),
+        LangSsw() => langSsw?.call(this) ?? orElse(this),
+        LangSot() => langSot?.call(this) ?? orElse(this),
+        LangSun() => langSun?.call(this) ?? orElse(this),
+        LangSwe() => langSwe?.call(this) ?? orElse(this),
+        LangSwa() => langSwa?.call(this) ?? orElse(this),
+        LangTam() => langTam?.call(this) ?? orElse(this),
+        LangTel() => langTel?.call(this) ?? orElse(this),
+        LangTgk() => langTgk?.call(this) ?? orElse(this),
+        LangTha() => langTha?.call(this) ?? orElse(this),
+        LangTir() => langTir?.call(this) ?? orElse(this),
+        LangTuk() => langTuk?.call(this) ?? orElse(this),
+        LangTgl() => langTgl?.call(this) ?? orElse(this),
+        LangTsn() => langTsn?.call(this) ?? orElse(this),
+        LangTon() => langTon?.call(this) ?? orElse(this),
+        LangTur() => langTur?.call(this) ?? orElse(this),
+        LangTso() => langTso?.call(this) ?? orElse(this),
+        LangTat() => langTat?.call(this) ?? orElse(this),
+        LangTwi() => langTwi?.call(this) ?? orElse(this),
+        LangTah() => langTah?.call(this) ?? orElse(this),
+        LangUig() => langUig?.call(this) ?? orElse(this),
+        LangUkr() => langUkr?.call(this) ?? orElse(this),
+        LangUrd() => langUrd?.call(this) ?? orElse(this),
+        LangUzb() => langUzb?.call(this) ?? orElse(this),
+        LangVen() => langVen?.call(this) ?? orElse(this),
+        LangVie() => langVie?.call(this) ?? orElse(this),
+        LangVol() => langVol?.call(this) ?? orElse(this),
+        LangWln() => langWln?.call(this) ?? orElse(this),
+        LangWol() => langWol?.call(this) ?? orElse(this),
+        LangXho() => langXho?.call(this) ?? orElse(this),
+        LangYid() => langYid?.call(this) ?? orElse(this),
+        LangYor() => langYor?.call(this) ?? orElse(this),
+        LangZha() => langZha?.call(this) ?? orElse(this),
+        LangZho() => langZho?.call(this) ?? orElse(this),
+        LangZul() => langZul?.call(this) ?? orElse(this),
+        _ => orElse(this),
+      };
 
   R maybeWhen<R>({
     required R Function() orElse,
@@ -1310,380 +938,194 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     R Function()? langZha,
     R Function()? langZho,
     R Function()? langZul,
-  }) {
-    switch (this) {
-      case LangAar():
-        return langAar?.call() ?? orElse();
-      case LangAbk():
-        return langAbk?.call() ?? orElse();
-      case LangAve():
-        return langAve?.call() ?? orElse();
-      case LangAfr():
-        return langAfr?.call() ?? orElse();
-      case LangAka():
-        return langAka?.call() ?? orElse();
-      case LangAmh():
-        return langAmh?.call() ?? orElse();
-      case LangArg():
-        return langArg?.call() ?? orElse();
-      case LangAra():
-        return langAra?.call() ?? orElse();
-      case LangAsm():
-        return langAsm?.call() ?? orElse();
-      case LangAva():
-        return langAva?.call() ?? orElse();
-      case LangAym():
-        return langAym?.call() ?? orElse();
-      case LangAze():
-        return langAze?.call() ?? orElse();
-      case LangBak():
-        return langBak?.call() ?? orElse();
-      case LangBel():
-        return langBel?.call() ?? orElse();
-      case LangBul():
-        return langBul?.call() ?? orElse();
-      case LangBih():
-        return langBih?.call() ?? orElse();
-      case LangBis():
-        return langBis?.call() ?? orElse();
-      case LangBam():
-        return langBam?.call() ?? orElse();
-      case LangBen():
-        return langBen?.call() ?? orElse();
-      case LangBod():
-        return langBod?.call() ?? orElse();
-      case LangBre():
-        return langBre?.call() ?? orElse();
-      case LangBos():
-        return langBos?.call() ?? orElse();
-      case LangCat():
-        return langCat?.call() ?? orElse();
-      case LangChe():
-        return langChe?.call() ?? orElse();
-      case LangCha():
-        return langCha?.call() ?? orElse();
-      case LangCos():
-        return langCos?.call() ?? orElse();
-      case LangCre():
-        return langCre?.call() ?? orElse();
-      case LangCes():
-        return langCes?.call() ?? orElse();
-      case LangChu():
-        return langChu?.call() ?? orElse();
-      case LangChv():
-        return langChv?.call() ?? orElse();
-      case LangCor():
-        return langCor?.call() ?? orElse();
-      case LangCym():
-        return langCym?.call() ?? orElse();
-      case LangDan():
-        return langDan?.call() ?? orElse();
-      case LangDeu():
-        return langDeu?.call() ?? orElse();
-      case LangDiv():
-        return langDiv?.call() ?? orElse();
-      case LangDzo():
-        return langDzo?.call() ?? orElse();
-      case LangEwe():
-        return langEwe?.call() ?? orElse();
-      case LangEll():
-        return langEll?.call() ?? orElse();
-      case LangEng():
-        return langEng?.call() ?? orElse();
-      case LangEpo():
-        return langEpo?.call() ?? orElse();
-      case LangEst():
-        return langEst?.call() ?? orElse();
-      case LangEus():
-        return langEus?.call() ?? orElse();
-      case LangFas():
-        return langFas?.call() ?? orElse();
-      case LangFul():
-        return langFul?.call() ?? orElse();
-      case LangFin():
-        return langFin?.call() ?? orElse();
-      case LangFij():
-        return langFij?.call() ?? orElse();
-      case LangFao():
-        return langFao?.call() ?? orElse();
-      case LangFra():
-        return langFra?.call() ?? orElse();
-      case LangFry():
-        return langFry?.call() ?? orElse();
-      case LangGle():
-        return langGle?.call() ?? orElse();
-      case LangGla():
-        return langGla?.call() ?? orElse();
-      case LangGlg():
-        return langGlg?.call() ?? orElse();
-      case LangGrn():
-        return langGrn?.call() ?? orElse();
-      case LangGuj():
-        return langGuj?.call() ?? orElse();
-      case LangGlv():
-        return langGlv?.call() ?? orElse();
-      case LangHau():
-        return langHau?.call() ?? orElse();
-      case LangHeb():
-        return langHeb?.call() ?? orElse();
-      case LangHin():
-        return langHin?.call() ?? orElse();
-      case LangHmo():
-        return langHmo?.call() ?? orElse();
-      case LangHrv():
-        return langHrv?.call() ?? orElse();
-      case LangHat():
-        return langHat?.call() ?? orElse();
-      case LangHun():
-        return langHun?.call() ?? orElse();
-      case LangHye():
-        return langHye?.call() ?? orElse();
-      case LangHer():
-        return langHer?.call() ?? orElse();
-      case LangIna():
-        return langIna?.call() ?? orElse();
-      case LangInd():
-        return langInd?.call() ?? orElse();
-      case LangIle():
-        return langIle?.call() ?? orElse();
-      case LangIbo():
-        return langIbo?.call() ?? orElse();
-      case LangIii():
-        return langIii?.call() ?? orElse();
-      case LangIpk():
-        return langIpk?.call() ?? orElse();
-      case LangIdo():
-        return langIdo?.call() ?? orElse();
-      case LangIsl():
-        return langIsl?.call() ?? orElse();
-      case LangIta():
-        return langIta?.call() ?? orElse();
-      case LangIku():
-        return langIku?.call() ?? orElse();
-      case LangJpn():
-        return langJpn?.call() ?? orElse();
-      case LangJav():
-        return langJav?.call() ?? orElse();
-      case LangKat():
-        return langKat?.call() ?? orElse();
-      case LangKon():
-        return langKon?.call() ?? orElse();
-      case LangKik():
-        return langKik?.call() ?? orElse();
-      case LangKua():
-        return langKua?.call() ?? orElse();
-      case LangKaz():
-        return langKaz?.call() ?? orElse();
-      case LangKal():
-        return langKal?.call() ?? orElse();
-      case LangKin():
-        return langKin?.call() ?? orElse();
-      case LangKhm():
-        return langKhm?.call() ?? orElse();
-      case LangKan():
-        return langKan?.call() ?? orElse();
-      case LangKor():
-        return langKor?.call() ?? orElse();
-      case LangKau():
-        return langKau?.call() ?? orElse();
-      case LangKas():
-        return langKas?.call() ?? orElse();
-      case LangKur():
-        return langKur?.call() ?? orElse();
-      case LangKom():
-        return langKom?.call() ?? orElse();
-      case LangKir():
-        return langKir?.call() ?? orElse();
-      case LangLat():
-        return langLat?.call() ?? orElse();
-      case LangLtz():
-        return langLtz?.call() ?? orElse();
-      case LangLug():
-        return langLug?.call() ?? orElse();
-      case LangLim():
-        return langLim?.call() ?? orElse();
-      case LangLin():
-        return langLin?.call() ?? orElse();
-      case LangLao():
-        return langLao?.call() ?? orElse();
-      case LangLit():
-        return langLit?.call() ?? orElse();
-      case LangLub():
-        return langLub?.call() ?? orElse();
-      case LangLav():
-        return langLav?.call() ?? orElse();
-      case LangMlg():
-        return langMlg?.call() ?? orElse();
-      case LangMah():
-        return langMah?.call() ?? orElse();
-      case LangMri():
-        return langMri?.call() ?? orElse();
-      case LangMkd():
-        return langMkd?.call() ?? orElse();
-      case LangMal():
-        return langMal?.call() ?? orElse();
-      case LangMon():
-        return langMon?.call() ?? orElse();
-      case LangMar():
-        return langMar?.call() ?? orElse();
-      case LangMsa():
-        return langMsa?.call() ?? orElse();
-      case LangMlt():
-        return langMlt?.call() ?? orElse();
-      case LangMya():
-        return langMya?.call() ?? orElse();
-      case LangNau():
-        return langNau?.call() ?? orElse();
-      case LangNob():
-        return langNob?.call() ?? orElse();
-      case LangNde():
-        return langNde?.call() ?? orElse();
-      case LangNep():
-        return langNep?.call() ?? orElse();
-      case LangNdo():
-        return langNdo?.call() ?? orElse();
-      case LangNld():
-        return langNld?.call() ?? orElse();
-      case LangNno():
-        return langNno?.call() ?? orElse();
-      case LangNor():
-        return langNor?.call() ?? orElse();
-      case LangNbl():
-        return langNbl?.call() ?? orElse();
-      case LangNav():
-        return langNav?.call() ?? orElse();
-      case LangNya():
-        return langNya?.call() ?? orElse();
-      case LangOci():
-        return langOci?.call() ?? orElse();
-      case LangOji():
-        return langOji?.call() ?? orElse();
-      case LangOrm():
-        return langOrm?.call() ?? orElse();
-      case LangOri():
-        return langOri?.call() ?? orElse();
-      case LangOss():
-        return langOss?.call() ?? orElse();
-      case LangPan():
-        return langPan?.call() ?? orElse();
-      case LangPli():
-        return langPli?.call() ?? orElse();
-      case LangPol():
-        return langPol?.call() ?? orElse();
-      case LangPus():
-        return langPus?.call() ?? orElse();
-      case LangPor():
-        return langPor?.call() ?? orElse();
-      case LangQue():
-        return langQue?.call() ?? orElse();
-      case LangRoh():
-        return langRoh?.call() ?? orElse();
-      case LangRun():
-        return langRun?.call() ?? orElse();
-      case LangRon():
-        return langRon?.call() ?? orElse();
-      case LangRus():
-        return langRus?.call() ?? orElse();
-      case LangSan():
-        return langSan?.call() ?? orElse();
-      case LangSrd():
-        return langSrd?.call() ?? orElse();
-      case LangSnd():
-        return langSnd?.call() ?? orElse();
-      case LangSme():
-        return langSme?.call() ?? orElse();
-      case LangSag():
-        return langSag?.call() ?? orElse();
-      case LangSin():
-        return langSin?.call() ?? orElse();
-      case LangSlk():
-        return langSlk?.call() ?? orElse();
-      case LangSlv():
-        return langSlv?.call() ?? orElse();
-      case LangSmo():
-        return langSmo?.call() ?? orElse();
-      case LangSna():
-        return langSna?.call() ?? orElse();
-      case LangSom():
-        return langSom?.call() ?? orElse();
-      case LangSpa():
-        return langSpa?.call() ?? orElse();
-      case LangSqi():
-        return langSqi?.call() ?? orElse();
-      case LangSrp():
-        return langSrp?.call() ?? orElse();
-      case LangSsw():
-        return langSsw?.call() ?? orElse();
-      case LangSot():
-        return langSot?.call() ?? orElse();
-      case LangSun():
-        return langSun?.call() ?? orElse();
-      case LangSwe():
-        return langSwe?.call() ?? orElse();
-      case LangSwa():
-        return langSwa?.call() ?? orElse();
-      case LangTam():
-        return langTam?.call() ?? orElse();
-      case LangTel():
-        return langTel?.call() ?? orElse();
-      case LangTgk():
-        return langTgk?.call() ?? orElse();
-      case LangTha():
-        return langTha?.call() ?? orElse();
-      case LangTir():
-        return langTir?.call() ?? orElse();
-      case LangTuk():
-        return langTuk?.call() ?? orElse();
-      case LangTgl():
-        return langTgl?.call() ?? orElse();
-      case LangTsn():
-        return langTsn?.call() ?? orElse();
-      case LangTon():
-        return langTon?.call() ?? orElse();
-      case LangTur():
-        return langTur?.call() ?? orElse();
-      case LangTso():
-        return langTso?.call() ?? orElse();
-      case LangTat():
-        return langTat?.call() ?? orElse();
-      case LangTwi():
-        return langTwi?.call() ?? orElse();
-      case LangTah():
-        return langTah?.call() ?? orElse();
-      case LangUig():
-        return langUig?.call() ?? orElse();
-      case LangUkr():
-        return langUkr?.call() ?? orElse();
-      case LangUrd():
-        return langUrd?.call() ?? orElse();
-      case LangUzb():
-        return langUzb?.call() ?? orElse();
-      case LangVen():
-        return langVen?.call() ?? orElse();
-      case LangVie():
-        return langVie?.call() ?? orElse();
-      case LangVol():
-        return langVol?.call() ?? orElse();
-      case LangWln():
-        return langWln?.call() ?? orElse();
-      case LangWol():
-        return langWol?.call() ?? orElse();
-      case LangXho():
-        return langXho?.call() ?? orElse();
-      case LangYid():
-        return langYid?.call() ?? orElse();
-      case LangYor():
-        return langYor?.call() ?? orElse();
-      case LangZha():
-        return langZha?.call() ?? orElse();
-      case LangZho():
-        return langZho?.call() ?? orElse();
-      case LangZul():
-        return langZul?.call() ?? orElse();
-      default:
-        return orElse();
-    }
-  }
+  }) =>
+      switch (this) {
+        LangAar() => langAar?.call() ?? orElse(),
+        LangAbk() => langAbk?.call() ?? orElse(),
+        LangAve() => langAve?.call() ?? orElse(),
+        LangAfr() => langAfr?.call() ?? orElse(),
+        LangAka() => langAka?.call() ?? orElse(),
+        LangAmh() => langAmh?.call() ?? orElse(),
+        LangArg() => langArg?.call() ?? orElse(),
+        LangAra() => langAra?.call() ?? orElse(),
+        LangAsm() => langAsm?.call() ?? orElse(),
+        LangAva() => langAva?.call() ?? orElse(),
+        LangAym() => langAym?.call() ?? orElse(),
+        LangAze() => langAze?.call() ?? orElse(),
+        LangBak() => langBak?.call() ?? orElse(),
+        LangBel() => langBel?.call() ?? orElse(),
+        LangBul() => langBul?.call() ?? orElse(),
+        LangBih() => langBih?.call() ?? orElse(),
+        LangBis() => langBis?.call() ?? orElse(),
+        LangBam() => langBam?.call() ?? orElse(),
+        LangBen() => langBen?.call() ?? orElse(),
+        LangBod() => langBod?.call() ?? orElse(),
+        LangBre() => langBre?.call() ?? orElse(),
+        LangBos() => langBos?.call() ?? orElse(),
+        LangCat() => langCat?.call() ?? orElse(),
+        LangChe() => langChe?.call() ?? orElse(),
+        LangCha() => langCha?.call() ?? orElse(),
+        LangCos() => langCos?.call() ?? orElse(),
+        LangCre() => langCre?.call() ?? orElse(),
+        LangCes() => langCes?.call() ?? orElse(),
+        LangChu() => langChu?.call() ?? orElse(),
+        LangChv() => langChv?.call() ?? orElse(),
+        LangCor() => langCor?.call() ?? orElse(),
+        LangCym() => langCym?.call() ?? orElse(),
+        LangDan() => langDan?.call() ?? orElse(),
+        LangDeu() => langDeu?.call() ?? orElse(),
+        LangDiv() => langDiv?.call() ?? orElse(),
+        LangDzo() => langDzo?.call() ?? orElse(),
+        LangEwe() => langEwe?.call() ?? orElse(),
+        LangEll() => langEll?.call() ?? orElse(),
+        LangEng() => langEng?.call() ?? orElse(),
+        LangEpo() => langEpo?.call() ?? orElse(),
+        LangEst() => langEst?.call() ?? orElse(),
+        LangEus() => langEus?.call() ?? orElse(),
+        LangFas() => langFas?.call() ?? orElse(),
+        LangFul() => langFul?.call() ?? orElse(),
+        LangFin() => langFin?.call() ?? orElse(),
+        LangFij() => langFij?.call() ?? orElse(),
+        LangFao() => langFao?.call() ?? orElse(),
+        LangFra() => langFra?.call() ?? orElse(),
+        LangFry() => langFry?.call() ?? orElse(),
+        LangGle() => langGle?.call() ?? orElse(),
+        LangGla() => langGla?.call() ?? orElse(),
+        LangGlg() => langGlg?.call() ?? orElse(),
+        LangGrn() => langGrn?.call() ?? orElse(),
+        LangGuj() => langGuj?.call() ?? orElse(),
+        LangGlv() => langGlv?.call() ?? orElse(),
+        LangHau() => langHau?.call() ?? orElse(),
+        LangHeb() => langHeb?.call() ?? orElse(),
+        LangHin() => langHin?.call() ?? orElse(),
+        LangHmo() => langHmo?.call() ?? orElse(),
+        LangHrv() => langHrv?.call() ?? orElse(),
+        LangHat() => langHat?.call() ?? orElse(),
+        LangHun() => langHun?.call() ?? orElse(),
+        LangHye() => langHye?.call() ?? orElse(),
+        LangHer() => langHer?.call() ?? orElse(),
+        LangIna() => langIna?.call() ?? orElse(),
+        LangInd() => langInd?.call() ?? orElse(),
+        LangIle() => langIle?.call() ?? orElse(),
+        LangIbo() => langIbo?.call() ?? orElse(),
+        LangIii() => langIii?.call() ?? orElse(),
+        LangIpk() => langIpk?.call() ?? orElse(),
+        LangIdo() => langIdo?.call() ?? orElse(),
+        LangIsl() => langIsl?.call() ?? orElse(),
+        LangIta() => langIta?.call() ?? orElse(),
+        LangIku() => langIku?.call() ?? orElse(),
+        LangJpn() => langJpn?.call() ?? orElse(),
+        LangJav() => langJav?.call() ?? orElse(),
+        LangKat() => langKat?.call() ?? orElse(),
+        LangKon() => langKon?.call() ?? orElse(),
+        LangKik() => langKik?.call() ?? orElse(),
+        LangKua() => langKua?.call() ?? orElse(),
+        LangKaz() => langKaz?.call() ?? orElse(),
+        LangKal() => langKal?.call() ?? orElse(),
+        LangKin() => langKin?.call() ?? orElse(),
+        LangKhm() => langKhm?.call() ?? orElse(),
+        LangKan() => langKan?.call() ?? orElse(),
+        LangKor() => langKor?.call() ?? orElse(),
+        LangKau() => langKau?.call() ?? orElse(),
+        LangKas() => langKas?.call() ?? orElse(),
+        LangKur() => langKur?.call() ?? orElse(),
+        LangKom() => langKom?.call() ?? orElse(),
+        LangKir() => langKir?.call() ?? orElse(),
+        LangLat() => langLat?.call() ?? orElse(),
+        LangLtz() => langLtz?.call() ?? orElse(),
+        LangLug() => langLug?.call() ?? orElse(),
+        LangLim() => langLim?.call() ?? orElse(),
+        LangLin() => langLin?.call() ?? orElse(),
+        LangLao() => langLao?.call() ?? orElse(),
+        LangLit() => langLit?.call() ?? orElse(),
+        LangLub() => langLub?.call() ?? orElse(),
+        LangLav() => langLav?.call() ?? orElse(),
+        LangMlg() => langMlg?.call() ?? orElse(),
+        LangMah() => langMah?.call() ?? orElse(),
+        LangMri() => langMri?.call() ?? orElse(),
+        LangMkd() => langMkd?.call() ?? orElse(),
+        LangMal() => langMal?.call() ?? orElse(),
+        LangMon() => langMon?.call() ?? orElse(),
+        LangMar() => langMar?.call() ?? orElse(),
+        LangMsa() => langMsa?.call() ?? orElse(),
+        LangMlt() => langMlt?.call() ?? orElse(),
+        LangMya() => langMya?.call() ?? orElse(),
+        LangNau() => langNau?.call() ?? orElse(),
+        LangNob() => langNob?.call() ?? orElse(),
+        LangNde() => langNde?.call() ?? orElse(),
+        LangNep() => langNep?.call() ?? orElse(),
+        LangNdo() => langNdo?.call() ?? orElse(),
+        LangNld() => langNld?.call() ?? orElse(),
+        LangNno() => langNno?.call() ?? orElse(),
+        LangNor() => langNor?.call() ?? orElse(),
+        LangNbl() => langNbl?.call() ?? orElse(),
+        LangNav() => langNav?.call() ?? orElse(),
+        LangNya() => langNya?.call() ?? orElse(),
+        LangOci() => langOci?.call() ?? orElse(),
+        LangOji() => langOji?.call() ?? orElse(),
+        LangOrm() => langOrm?.call() ?? orElse(),
+        LangOri() => langOri?.call() ?? orElse(),
+        LangOss() => langOss?.call() ?? orElse(),
+        LangPan() => langPan?.call() ?? orElse(),
+        LangPli() => langPli?.call() ?? orElse(),
+        LangPol() => langPol?.call() ?? orElse(),
+        LangPus() => langPus?.call() ?? orElse(),
+        LangPor() => langPor?.call() ?? orElse(),
+        LangQue() => langQue?.call() ?? orElse(),
+        LangRoh() => langRoh?.call() ?? orElse(),
+        LangRun() => langRun?.call() ?? orElse(),
+        LangRon() => langRon?.call() ?? orElse(),
+        LangRus() => langRus?.call() ?? orElse(),
+        LangSan() => langSan?.call() ?? orElse(),
+        LangSrd() => langSrd?.call() ?? orElse(),
+        LangSnd() => langSnd?.call() ?? orElse(),
+        LangSme() => langSme?.call() ?? orElse(),
+        LangSag() => langSag?.call() ?? orElse(),
+        LangSin() => langSin?.call() ?? orElse(),
+        LangSlk() => langSlk?.call() ?? orElse(),
+        LangSlv() => langSlv?.call() ?? orElse(),
+        LangSmo() => langSmo?.call() ?? orElse(),
+        LangSna() => langSna?.call() ?? orElse(),
+        LangSom() => langSom?.call() ?? orElse(),
+        LangSpa() => langSpa?.call() ?? orElse(),
+        LangSqi() => langSqi?.call() ?? orElse(),
+        LangSrp() => langSrp?.call() ?? orElse(),
+        LangSsw() => langSsw?.call() ?? orElse(),
+        LangSot() => langSot?.call() ?? orElse(),
+        LangSun() => langSun?.call() ?? orElse(),
+        LangSwe() => langSwe?.call() ?? orElse(),
+        LangSwa() => langSwa?.call() ?? orElse(),
+        LangTam() => langTam?.call() ?? orElse(),
+        LangTel() => langTel?.call() ?? orElse(),
+        LangTgk() => langTgk?.call() ?? orElse(),
+        LangTha() => langTha?.call() ?? orElse(),
+        LangTir() => langTir?.call() ?? orElse(),
+        LangTuk() => langTuk?.call() ?? orElse(),
+        LangTgl() => langTgl?.call() ?? orElse(),
+        LangTsn() => langTsn?.call() ?? orElse(),
+        LangTon() => langTon?.call() ?? orElse(),
+        LangTur() => langTur?.call() ?? orElse(),
+        LangTso() => langTso?.call() ?? orElse(),
+        LangTat() => langTat?.call() ?? orElse(),
+        LangTwi() => langTwi?.call() ?? orElse(),
+        LangTah() => langTah?.call() ?? orElse(),
+        LangUig() => langUig?.call() ?? orElse(),
+        LangUkr() => langUkr?.call() ?? orElse(),
+        LangUrd() => langUrd?.call() ?? orElse(),
+        LangUzb() => langUzb?.call() ?? orElse(),
+        LangVen() => langVen?.call() ?? orElse(),
+        LangVie() => langVie?.call() ?? orElse(),
+        LangVol() => langVol?.call() ?? orElse(),
+        LangWln() => langWln?.call() ?? orElse(),
+        LangWol() => langWol?.call() ?? orElse(),
+        LangXho() => langXho?.call() ?? orElse(),
+        LangYid() => langYid?.call() ?? orElse(),
+        LangYor() => langYor?.call() ?? orElse(),
+        LangZha() => langZha?.call() ?? orElse(),
+        LangZho() => langZho?.call() ?? orElse(),
+        LangZul() => langZul?.call() ?? orElse(),
+        _ => orElse(),
+      };
 
   R when<R>({
     required R Function() langAar,
@@ -1870,380 +1312,194 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     required R Function() langZha,
     required R Function() langZho,
     required R Function() langZul,
-  }) {
-    switch (this) {
-      case LangAar():
-        return langAar();
-      case LangAbk():
-        return langAbk();
-      case LangAve():
-        return langAve();
-      case LangAfr():
-        return langAfr();
-      case LangAka():
-        return langAka();
-      case LangAmh():
-        return langAmh();
-      case LangArg():
-        return langArg();
-      case LangAra():
-        return langAra();
-      case LangAsm():
-        return langAsm();
-      case LangAva():
-        return langAva();
-      case LangAym():
-        return langAym();
-      case LangAze():
-        return langAze();
-      case LangBak():
-        return langBak();
-      case LangBel():
-        return langBel();
-      case LangBul():
-        return langBul();
-      case LangBih():
-        return langBih();
-      case LangBis():
-        return langBis();
-      case LangBam():
-        return langBam();
-      case LangBen():
-        return langBen();
-      case LangBod():
-        return langBod();
-      case LangBre():
-        return langBre();
-      case LangBos():
-        return langBos();
-      case LangCat():
-        return langCat();
-      case LangChe():
-        return langChe();
-      case LangCha():
-        return langCha();
-      case LangCos():
-        return langCos();
-      case LangCre():
-        return langCre();
-      case LangCes():
-        return langCes();
-      case LangChu():
-        return langChu();
-      case LangChv():
-        return langChv();
-      case LangCor():
-        return langCor();
-      case LangCym():
-        return langCym();
-      case LangDan():
-        return langDan();
-      case LangDeu():
-        return langDeu();
-      case LangDiv():
-        return langDiv();
-      case LangDzo():
-        return langDzo();
-      case LangEwe():
-        return langEwe();
-      case LangEll():
-        return langEll();
-      case LangEng():
-        return langEng();
-      case LangEpo():
-        return langEpo();
-      case LangEst():
-        return langEst();
-      case LangEus():
-        return langEus();
-      case LangFas():
-        return langFas();
-      case LangFul():
-        return langFul();
-      case LangFin():
-        return langFin();
-      case LangFij():
-        return langFij();
-      case LangFao():
-        return langFao();
-      case LangFra():
-        return langFra();
-      case LangFry():
-        return langFry();
-      case LangGle():
-        return langGle();
-      case LangGla():
-        return langGla();
-      case LangGlg():
-        return langGlg();
-      case LangGrn():
-        return langGrn();
-      case LangGuj():
-        return langGuj();
-      case LangGlv():
-        return langGlv();
-      case LangHau():
-        return langHau();
-      case LangHeb():
-        return langHeb();
-      case LangHin():
-        return langHin();
-      case LangHmo():
-        return langHmo();
-      case LangHrv():
-        return langHrv();
-      case LangHat():
-        return langHat();
-      case LangHun():
-        return langHun();
-      case LangHye():
-        return langHye();
-      case LangHer():
-        return langHer();
-      case LangIna():
-        return langIna();
-      case LangInd():
-        return langInd();
-      case LangIle():
-        return langIle();
-      case LangIbo():
-        return langIbo();
-      case LangIii():
-        return langIii();
-      case LangIpk():
-        return langIpk();
-      case LangIdo():
-        return langIdo();
-      case LangIsl():
-        return langIsl();
-      case LangIta():
-        return langIta();
-      case LangIku():
-        return langIku();
-      case LangJpn():
-        return langJpn();
-      case LangJav():
-        return langJav();
-      case LangKat():
-        return langKat();
-      case LangKon():
-        return langKon();
-      case LangKik():
-        return langKik();
-      case LangKua():
-        return langKua();
-      case LangKaz():
-        return langKaz();
-      case LangKal():
-        return langKal();
-      case LangKin():
-        return langKin();
-      case LangKhm():
-        return langKhm();
-      case LangKan():
-        return langKan();
-      case LangKor():
-        return langKor();
-      case LangKau():
-        return langKau();
-      case LangKas():
-        return langKas();
-      case LangKur():
-        return langKur();
-      case LangKom():
-        return langKom();
-      case LangKir():
-        return langKir();
-      case LangLat():
-        return langLat();
-      case LangLtz():
-        return langLtz();
-      case LangLug():
-        return langLug();
-      case LangLim():
-        return langLim();
-      case LangLin():
-        return langLin();
-      case LangLao():
-        return langLao();
-      case LangLit():
-        return langLit();
-      case LangLub():
-        return langLub();
-      case LangLav():
-        return langLav();
-      case LangMlg():
-        return langMlg();
-      case LangMah():
-        return langMah();
-      case LangMri():
-        return langMri();
-      case LangMkd():
-        return langMkd();
-      case LangMal():
-        return langMal();
-      case LangMon():
-        return langMon();
-      case LangMar():
-        return langMar();
-      case LangMsa():
-        return langMsa();
-      case LangMlt():
-        return langMlt();
-      case LangMya():
-        return langMya();
-      case LangNau():
-        return langNau();
-      case LangNob():
-        return langNob();
-      case LangNde():
-        return langNde();
-      case LangNep():
-        return langNep();
-      case LangNdo():
-        return langNdo();
-      case LangNld():
-        return langNld();
-      case LangNno():
-        return langNno();
-      case LangNor():
-        return langNor();
-      case LangNbl():
-        return langNbl();
-      case LangNav():
-        return langNav();
-      case LangNya():
-        return langNya();
-      case LangOci():
-        return langOci();
-      case LangOji():
-        return langOji();
-      case LangOrm():
-        return langOrm();
-      case LangOri():
-        return langOri();
-      case LangOss():
-        return langOss();
-      case LangPan():
-        return langPan();
-      case LangPli():
-        return langPli();
-      case LangPol():
-        return langPol();
-      case LangPus():
-        return langPus();
-      case LangPor():
-        return langPor();
-      case LangQue():
-        return langQue();
-      case LangRoh():
-        return langRoh();
-      case LangRun():
-        return langRun();
-      case LangRon():
-        return langRon();
-      case LangRus():
-        return langRus();
-      case LangSan():
-        return langSan();
-      case LangSrd():
-        return langSrd();
-      case LangSnd():
-        return langSnd();
-      case LangSme():
-        return langSme();
-      case LangSag():
-        return langSag();
-      case LangSin():
-        return langSin();
-      case LangSlk():
-        return langSlk();
-      case LangSlv():
-        return langSlv();
-      case LangSmo():
-        return langSmo();
-      case LangSna():
-        return langSna();
-      case LangSom():
-        return langSom();
-      case LangSpa():
-        return langSpa();
-      case LangSqi():
-        return langSqi();
-      case LangSrp():
-        return langSrp();
-      case LangSsw():
-        return langSsw();
-      case LangSot():
-        return langSot();
-      case LangSun():
-        return langSun();
-      case LangSwe():
-        return langSwe();
-      case LangSwa():
-        return langSwa();
-      case LangTam():
-        return langTam();
-      case LangTel():
-        return langTel();
-      case LangTgk():
-        return langTgk();
-      case LangTha():
-        return langTha();
-      case LangTir():
-        return langTir();
-      case LangTuk():
-        return langTuk();
-      case LangTgl():
-        return langTgl();
-      case LangTsn():
-        return langTsn();
-      case LangTon():
-        return langTon();
-      case LangTur():
-        return langTur();
-      case LangTso():
-        return langTso();
-      case LangTat():
-        return langTat();
-      case LangTwi():
-        return langTwi();
-      case LangTah():
-        return langTah();
-      case LangUig():
-        return langUig();
-      case LangUkr():
-        return langUkr();
-      case LangUrd():
-        return langUrd();
-      case LangUzb():
-        return langUzb();
-      case LangVen():
-        return langVen();
-      case LangVie():
-        return langVie();
-      case LangVol():
-        return langVol();
-      case LangWln():
-        return langWln();
-      case LangWol():
-        return langWol();
-      case LangXho():
-        return langXho();
-      case LangYid():
-        return langYid();
-      case LangYor():
-        return langYor();
-      case LangZha():
-        return langZha();
-      case LangZho():
-        return langZho();
-      case LangZul():
-        return langZul();
-      default:
-        throw ArgumentError("Unknown value: $this", name);
-    }
-  }
+  }) =>
+      switch (this) {
+        LangAar() => langAar(),
+        LangAbk() => langAbk(),
+        LangAve() => langAve(),
+        LangAfr() => langAfr(),
+        LangAka() => langAka(),
+        LangAmh() => langAmh(),
+        LangArg() => langArg(),
+        LangAra() => langAra(),
+        LangAsm() => langAsm(),
+        LangAva() => langAva(),
+        LangAym() => langAym(),
+        LangAze() => langAze(),
+        LangBak() => langBak(),
+        LangBel() => langBel(),
+        LangBul() => langBul(),
+        LangBih() => langBih(),
+        LangBis() => langBis(),
+        LangBam() => langBam(),
+        LangBen() => langBen(),
+        LangBod() => langBod(),
+        LangBre() => langBre(),
+        LangBos() => langBos(),
+        LangCat() => langCat(),
+        LangChe() => langChe(),
+        LangCha() => langCha(),
+        LangCos() => langCos(),
+        LangCre() => langCre(),
+        LangCes() => langCes(),
+        LangChu() => langChu(),
+        LangChv() => langChv(),
+        LangCor() => langCor(),
+        LangCym() => langCym(),
+        LangDan() => langDan(),
+        LangDeu() => langDeu(),
+        LangDiv() => langDiv(),
+        LangDzo() => langDzo(),
+        LangEwe() => langEwe(),
+        LangEll() => langEll(),
+        LangEng() => langEng(),
+        LangEpo() => langEpo(),
+        LangEst() => langEst(),
+        LangEus() => langEus(),
+        LangFas() => langFas(),
+        LangFul() => langFul(),
+        LangFin() => langFin(),
+        LangFij() => langFij(),
+        LangFao() => langFao(),
+        LangFra() => langFra(),
+        LangFry() => langFry(),
+        LangGle() => langGle(),
+        LangGla() => langGla(),
+        LangGlg() => langGlg(),
+        LangGrn() => langGrn(),
+        LangGuj() => langGuj(),
+        LangGlv() => langGlv(),
+        LangHau() => langHau(),
+        LangHeb() => langHeb(),
+        LangHin() => langHin(),
+        LangHmo() => langHmo(),
+        LangHrv() => langHrv(),
+        LangHat() => langHat(),
+        LangHun() => langHun(),
+        LangHye() => langHye(),
+        LangHer() => langHer(),
+        LangIna() => langIna(),
+        LangInd() => langInd(),
+        LangIle() => langIle(),
+        LangIbo() => langIbo(),
+        LangIii() => langIii(),
+        LangIpk() => langIpk(),
+        LangIdo() => langIdo(),
+        LangIsl() => langIsl(),
+        LangIta() => langIta(),
+        LangIku() => langIku(),
+        LangJpn() => langJpn(),
+        LangJav() => langJav(),
+        LangKat() => langKat(),
+        LangKon() => langKon(),
+        LangKik() => langKik(),
+        LangKua() => langKua(),
+        LangKaz() => langKaz(),
+        LangKal() => langKal(),
+        LangKin() => langKin(),
+        LangKhm() => langKhm(),
+        LangKan() => langKan(),
+        LangKor() => langKor(),
+        LangKau() => langKau(),
+        LangKas() => langKas(),
+        LangKur() => langKur(),
+        LangKom() => langKom(),
+        LangKir() => langKir(),
+        LangLat() => langLat(),
+        LangLtz() => langLtz(),
+        LangLug() => langLug(),
+        LangLim() => langLim(),
+        LangLin() => langLin(),
+        LangLao() => langLao(),
+        LangLit() => langLit(),
+        LangLub() => langLub(),
+        LangLav() => langLav(),
+        LangMlg() => langMlg(),
+        LangMah() => langMah(),
+        LangMri() => langMri(),
+        LangMkd() => langMkd(),
+        LangMal() => langMal(),
+        LangMon() => langMon(),
+        LangMar() => langMar(),
+        LangMsa() => langMsa(),
+        LangMlt() => langMlt(),
+        LangMya() => langMya(),
+        LangNau() => langNau(),
+        LangNob() => langNob(),
+        LangNde() => langNde(),
+        LangNep() => langNep(),
+        LangNdo() => langNdo(),
+        LangNld() => langNld(),
+        LangNno() => langNno(),
+        LangNor() => langNor(),
+        LangNbl() => langNbl(),
+        LangNav() => langNav(),
+        LangNya() => langNya(),
+        LangOci() => langOci(),
+        LangOji() => langOji(),
+        LangOrm() => langOrm(),
+        LangOri() => langOri(),
+        LangOss() => langOss(),
+        LangPan() => langPan(),
+        LangPli() => langPli(),
+        LangPol() => langPol(),
+        LangPus() => langPus(),
+        LangPor() => langPor(),
+        LangQue() => langQue(),
+        LangRoh() => langRoh(),
+        LangRun() => langRun(),
+        LangRon() => langRon(),
+        LangRus() => langRus(),
+        LangSan() => langSan(),
+        LangSrd() => langSrd(),
+        LangSnd() => langSnd(),
+        LangSme() => langSme(),
+        LangSag() => langSag(),
+        LangSin() => langSin(),
+        LangSlk() => langSlk(),
+        LangSlv() => langSlv(),
+        LangSmo() => langSmo(),
+        LangSna() => langSna(),
+        LangSom() => langSom(),
+        LangSpa() => langSpa(),
+        LangSqi() => langSqi(),
+        LangSrp() => langSrp(),
+        LangSsw() => langSsw(),
+        LangSot() => langSot(),
+        LangSun() => langSun(),
+        LangSwe() => langSwe(),
+        LangSwa() => langSwa(),
+        LangTam() => langTam(),
+        LangTel() => langTel(),
+        LangTgk() => langTgk(),
+        LangTha() => langTha(),
+        LangTir() => langTir(),
+        LangTuk() => langTuk(),
+        LangTgl() => langTgl(),
+        LangTsn() => langTsn(),
+        LangTon() => langTon(),
+        LangTur() => langTur(),
+        LangTso() => langTso(),
+        LangTat() => langTat(),
+        LangTwi() => langTwi(),
+        LangTah() => langTah(),
+        LangUig() => langUig(),
+        LangUkr() => langUkr(),
+        LangUrd() => langUrd(),
+        LangUzb() => langUzb(),
+        LangVen() => langVen(),
+        LangVie() => langVie(),
+        LangVol() => langVol(),
+        LangWln() => langWln(),
+        LangWol() => langWol(),
+        LangXho() => langXho(),
+        LangYid() => langYid(),
+        LangYor() => langYor(),
+        LangZha() => langZha(),
+        LangZho() => langZho(),
+        LangZul() => langZul(),
+        _ => throw ArgumentError("Unknown value: $this", name),
+      };
 
   R? whenOrNull<R>({
     R Function()? langAar,
@@ -2431,378 +1687,192 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     R Function()? langZho,
     R Function()? langZul,
     R Function()? orElse,
-  }) {
-    switch (this) {
-      case LangAar():
-        return langAar?.call() ?? orElse?.call();
-      case LangAbk():
-        return langAbk?.call() ?? orElse?.call();
-      case LangAve():
-        return langAve?.call() ?? orElse?.call();
-      case LangAfr():
-        return langAfr?.call() ?? orElse?.call();
-      case LangAka():
-        return langAka?.call() ?? orElse?.call();
-      case LangAmh():
-        return langAmh?.call() ?? orElse?.call();
-      case LangArg():
-        return langArg?.call() ?? orElse?.call();
-      case LangAra():
-        return langAra?.call() ?? orElse?.call();
-      case LangAsm():
-        return langAsm?.call() ?? orElse?.call();
-      case LangAva():
-        return langAva?.call() ?? orElse?.call();
-      case LangAym():
-        return langAym?.call() ?? orElse?.call();
-      case LangAze():
-        return langAze?.call() ?? orElse?.call();
-      case LangBak():
-        return langBak?.call() ?? orElse?.call();
-      case LangBel():
-        return langBel?.call() ?? orElse?.call();
-      case LangBul():
-        return langBul?.call() ?? orElse?.call();
-      case LangBih():
-        return langBih?.call() ?? orElse?.call();
-      case LangBis():
-        return langBis?.call() ?? orElse?.call();
-      case LangBam():
-        return langBam?.call() ?? orElse?.call();
-      case LangBen():
-        return langBen?.call() ?? orElse?.call();
-      case LangBod():
-        return langBod?.call() ?? orElse?.call();
-      case LangBre():
-        return langBre?.call() ?? orElse?.call();
-      case LangBos():
-        return langBos?.call() ?? orElse?.call();
-      case LangCat():
-        return langCat?.call() ?? orElse?.call();
-      case LangChe():
-        return langChe?.call() ?? orElse?.call();
-      case LangCha():
-        return langCha?.call() ?? orElse?.call();
-      case LangCos():
-        return langCos?.call() ?? orElse?.call();
-      case LangCre():
-        return langCre?.call() ?? orElse?.call();
-      case LangCes():
-        return langCes?.call() ?? orElse?.call();
-      case LangChu():
-        return langChu?.call() ?? orElse?.call();
-      case LangChv():
-        return langChv?.call() ?? orElse?.call();
-      case LangCor():
-        return langCor?.call() ?? orElse?.call();
-      case LangCym():
-        return langCym?.call() ?? orElse?.call();
-      case LangDan():
-        return langDan?.call() ?? orElse?.call();
-      case LangDeu():
-        return langDeu?.call() ?? orElse?.call();
-      case LangDiv():
-        return langDiv?.call() ?? orElse?.call();
-      case LangDzo():
-        return langDzo?.call() ?? orElse?.call();
-      case LangEwe():
-        return langEwe?.call() ?? orElse?.call();
-      case LangEll():
-        return langEll?.call() ?? orElse?.call();
-      case LangEng():
-        return langEng?.call() ?? orElse?.call();
-      case LangEpo():
-        return langEpo?.call() ?? orElse?.call();
-      case LangEst():
-        return langEst?.call() ?? orElse?.call();
-      case LangEus():
-        return langEus?.call() ?? orElse?.call();
-      case LangFas():
-        return langFas?.call() ?? orElse?.call();
-      case LangFul():
-        return langFul?.call() ?? orElse?.call();
-      case LangFin():
-        return langFin?.call() ?? orElse?.call();
-      case LangFij():
-        return langFij?.call() ?? orElse?.call();
-      case LangFao():
-        return langFao?.call() ?? orElse?.call();
-      case LangFra():
-        return langFra?.call() ?? orElse?.call();
-      case LangFry():
-        return langFry?.call() ?? orElse?.call();
-      case LangGle():
-        return langGle?.call() ?? orElse?.call();
-      case LangGla():
-        return langGla?.call() ?? orElse?.call();
-      case LangGlg():
-        return langGlg?.call() ?? orElse?.call();
-      case LangGrn():
-        return langGrn?.call() ?? orElse?.call();
-      case LangGuj():
-        return langGuj?.call() ?? orElse?.call();
-      case LangGlv():
-        return langGlv?.call() ?? orElse?.call();
-      case LangHau():
-        return langHau?.call() ?? orElse?.call();
-      case LangHeb():
-        return langHeb?.call() ?? orElse?.call();
-      case LangHin():
-        return langHin?.call() ?? orElse?.call();
-      case LangHmo():
-        return langHmo?.call() ?? orElse?.call();
-      case LangHrv():
-        return langHrv?.call() ?? orElse?.call();
-      case LangHat():
-        return langHat?.call() ?? orElse?.call();
-      case LangHun():
-        return langHun?.call() ?? orElse?.call();
-      case LangHye():
-        return langHye?.call() ?? orElse?.call();
-      case LangHer():
-        return langHer?.call() ?? orElse?.call();
-      case LangIna():
-        return langIna?.call() ?? orElse?.call();
-      case LangInd():
-        return langInd?.call() ?? orElse?.call();
-      case LangIle():
-        return langIle?.call() ?? orElse?.call();
-      case LangIbo():
-        return langIbo?.call() ?? orElse?.call();
-      case LangIii():
-        return langIii?.call() ?? orElse?.call();
-      case LangIpk():
-        return langIpk?.call() ?? orElse?.call();
-      case LangIdo():
-        return langIdo?.call() ?? orElse?.call();
-      case LangIsl():
-        return langIsl?.call() ?? orElse?.call();
-      case LangIta():
-        return langIta?.call() ?? orElse?.call();
-      case LangIku():
-        return langIku?.call() ?? orElse?.call();
-      case LangJpn():
-        return langJpn?.call() ?? orElse?.call();
-      case LangJav():
-        return langJav?.call() ?? orElse?.call();
-      case LangKat():
-        return langKat?.call() ?? orElse?.call();
-      case LangKon():
-        return langKon?.call() ?? orElse?.call();
-      case LangKik():
-        return langKik?.call() ?? orElse?.call();
-      case LangKua():
-        return langKua?.call() ?? orElse?.call();
-      case LangKaz():
-        return langKaz?.call() ?? orElse?.call();
-      case LangKal():
-        return langKal?.call() ?? orElse?.call();
-      case LangKin():
-        return langKin?.call() ?? orElse?.call();
-      case LangKhm():
-        return langKhm?.call() ?? orElse?.call();
-      case LangKan():
-        return langKan?.call() ?? orElse?.call();
-      case LangKor():
-        return langKor?.call() ?? orElse?.call();
-      case LangKau():
-        return langKau?.call() ?? orElse?.call();
-      case LangKas():
-        return langKas?.call() ?? orElse?.call();
-      case LangKur():
-        return langKur?.call() ?? orElse?.call();
-      case LangKom():
-        return langKom?.call() ?? orElse?.call();
-      case LangKir():
-        return langKir?.call() ?? orElse?.call();
-      case LangLat():
-        return langLat?.call() ?? orElse?.call();
-      case LangLtz():
-        return langLtz?.call() ?? orElse?.call();
-      case LangLug():
-        return langLug?.call() ?? orElse?.call();
-      case LangLim():
-        return langLim?.call() ?? orElse?.call();
-      case LangLin():
-        return langLin?.call() ?? orElse?.call();
-      case LangLao():
-        return langLao?.call() ?? orElse?.call();
-      case LangLit():
-        return langLit?.call() ?? orElse?.call();
-      case LangLub():
-        return langLub?.call() ?? orElse?.call();
-      case LangLav():
-        return langLav?.call() ?? orElse?.call();
-      case LangMlg():
-        return langMlg?.call() ?? orElse?.call();
-      case LangMah():
-        return langMah?.call() ?? orElse?.call();
-      case LangMri():
-        return langMri?.call() ?? orElse?.call();
-      case LangMkd():
-        return langMkd?.call() ?? orElse?.call();
-      case LangMal():
-        return langMal?.call() ?? orElse?.call();
-      case LangMon():
-        return langMon?.call() ?? orElse?.call();
-      case LangMar():
-        return langMar?.call() ?? orElse?.call();
-      case LangMsa():
-        return langMsa?.call() ?? orElse?.call();
-      case LangMlt():
-        return langMlt?.call() ?? orElse?.call();
-      case LangMya():
-        return langMya?.call() ?? orElse?.call();
-      case LangNau():
-        return langNau?.call() ?? orElse?.call();
-      case LangNob():
-        return langNob?.call() ?? orElse?.call();
-      case LangNde():
-        return langNde?.call() ?? orElse?.call();
-      case LangNep():
-        return langNep?.call() ?? orElse?.call();
-      case LangNdo():
-        return langNdo?.call() ?? orElse?.call();
-      case LangNld():
-        return langNld?.call() ?? orElse?.call();
-      case LangNno():
-        return langNno?.call() ?? orElse?.call();
-      case LangNor():
-        return langNor?.call() ?? orElse?.call();
-      case LangNbl():
-        return langNbl?.call() ?? orElse?.call();
-      case LangNav():
-        return langNav?.call() ?? orElse?.call();
-      case LangNya():
-        return langNya?.call() ?? orElse?.call();
-      case LangOci():
-        return langOci?.call() ?? orElse?.call();
-      case LangOji():
-        return langOji?.call() ?? orElse?.call();
-      case LangOrm():
-        return langOrm?.call() ?? orElse?.call();
-      case LangOri():
-        return langOri?.call() ?? orElse?.call();
-      case LangOss():
-        return langOss?.call() ?? orElse?.call();
-      case LangPan():
-        return langPan?.call() ?? orElse?.call();
-      case LangPli():
-        return langPli?.call() ?? orElse?.call();
-      case LangPol():
-        return langPol?.call() ?? orElse?.call();
-      case LangPus():
-        return langPus?.call() ?? orElse?.call();
-      case LangPor():
-        return langPor?.call() ?? orElse?.call();
-      case LangQue():
-        return langQue?.call() ?? orElse?.call();
-      case LangRoh():
-        return langRoh?.call() ?? orElse?.call();
-      case LangRun():
-        return langRun?.call() ?? orElse?.call();
-      case LangRon():
-        return langRon?.call() ?? orElse?.call();
-      case LangRus():
-        return langRus?.call() ?? orElse?.call();
-      case LangSan():
-        return langSan?.call() ?? orElse?.call();
-      case LangSrd():
-        return langSrd?.call() ?? orElse?.call();
-      case LangSnd():
-        return langSnd?.call() ?? orElse?.call();
-      case LangSme():
-        return langSme?.call() ?? orElse?.call();
-      case LangSag():
-        return langSag?.call() ?? orElse?.call();
-      case LangSin():
-        return langSin?.call() ?? orElse?.call();
-      case LangSlk():
-        return langSlk?.call() ?? orElse?.call();
-      case LangSlv():
-        return langSlv?.call() ?? orElse?.call();
-      case LangSmo():
-        return langSmo?.call() ?? orElse?.call();
-      case LangSna():
-        return langSna?.call() ?? orElse?.call();
-      case LangSom():
-        return langSom?.call() ?? orElse?.call();
-      case LangSpa():
-        return langSpa?.call() ?? orElse?.call();
-      case LangSqi():
-        return langSqi?.call() ?? orElse?.call();
-      case LangSrp():
-        return langSrp?.call() ?? orElse?.call();
-      case LangSsw():
-        return langSsw?.call() ?? orElse?.call();
-      case LangSot():
-        return langSot?.call() ?? orElse?.call();
-      case LangSun():
-        return langSun?.call() ?? orElse?.call();
-      case LangSwe():
-        return langSwe?.call() ?? orElse?.call();
-      case LangSwa():
-        return langSwa?.call() ?? orElse?.call();
-      case LangTam():
-        return langTam?.call() ?? orElse?.call();
-      case LangTel():
-        return langTel?.call() ?? orElse?.call();
-      case LangTgk():
-        return langTgk?.call() ?? orElse?.call();
-      case LangTha():
-        return langTha?.call() ?? orElse?.call();
-      case LangTir():
-        return langTir?.call() ?? orElse?.call();
-      case LangTuk():
-        return langTuk?.call() ?? orElse?.call();
-      case LangTgl():
-        return langTgl?.call() ?? orElse?.call();
-      case LangTsn():
-        return langTsn?.call() ?? orElse?.call();
-      case LangTon():
-        return langTon?.call() ?? orElse?.call();
-      case LangTur():
-        return langTur?.call() ?? orElse?.call();
-      case LangTso():
-        return langTso?.call() ?? orElse?.call();
-      case LangTat():
-        return langTat?.call() ?? orElse?.call();
-      case LangTwi():
-        return langTwi?.call() ?? orElse?.call();
-      case LangTah():
-        return langTah?.call() ?? orElse?.call();
-      case LangUig():
-        return langUig?.call() ?? orElse?.call();
-      case LangUkr():
-        return langUkr?.call() ?? orElse?.call();
-      case LangUrd():
-        return langUrd?.call() ?? orElse?.call();
-      case LangUzb():
-        return langUzb?.call() ?? orElse?.call();
-      case LangVen():
-        return langVen?.call() ?? orElse?.call();
-      case LangVie():
-        return langVie?.call() ?? orElse?.call();
-      case LangVol():
-        return langVol?.call() ?? orElse?.call();
-      case LangWln():
-        return langWln?.call() ?? orElse?.call();
-      case LangWol():
-        return langWol?.call() ?? orElse?.call();
-      case LangXho():
-        return langXho?.call() ?? orElse?.call();
-      case LangYid():
-        return langYid?.call() ?? orElse?.call();
-      case LangYor():
-        return langYor?.call() ?? orElse?.call();
-      case LangZha():
-        return langZha?.call() ?? orElse?.call();
-      case LangZho():
-        return langZho?.call() ?? orElse?.call();
-      case LangZul():
-        return langZul?.call() ?? orElse?.call();
-      default:
-        return orElse?.call();
-    }
-  }
+  }) =>
+      switch (this) {
+        LangAar() => langAar?.call() ?? orElse?.call(),
+        LangAbk() => langAbk?.call() ?? orElse?.call(),
+        LangAve() => langAve?.call() ?? orElse?.call(),
+        LangAfr() => langAfr?.call() ?? orElse?.call(),
+        LangAka() => langAka?.call() ?? orElse?.call(),
+        LangAmh() => langAmh?.call() ?? orElse?.call(),
+        LangArg() => langArg?.call() ?? orElse?.call(),
+        LangAra() => langAra?.call() ?? orElse?.call(),
+        LangAsm() => langAsm?.call() ?? orElse?.call(),
+        LangAva() => langAva?.call() ?? orElse?.call(),
+        LangAym() => langAym?.call() ?? orElse?.call(),
+        LangAze() => langAze?.call() ?? orElse?.call(),
+        LangBak() => langBak?.call() ?? orElse?.call(),
+        LangBel() => langBel?.call() ?? orElse?.call(),
+        LangBul() => langBul?.call() ?? orElse?.call(),
+        LangBih() => langBih?.call() ?? orElse?.call(),
+        LangBis() => langBis?.call() ?? orElse?.call(),
+        LangBam() => langBam?.call() ?? orElse?.call(),
+        LangBen() => langBen?.call() ?? orElse?.call(),
+        LangBod() => langBod?.call() ?? orElse?.call(),
+        LangBre() => langBre?.call() ?? orElse?.call(),
+        LangBos() => langBos?.call() ?? orElse?.call(),
+        LangCat() => langCat?.call() ?? orElse?.call(),
+        LangChe() => langChe?.call() ?? orElse?.call(),
+        LangCha() => langCha?.call() ?? orElse?.call(),
+        LangCos() => langCos?.call() ?? orElse?.call(),
+        LangCre() => langCre?.call() ?? orElse?.call(),
+        LangCes() => langCes?.call() ?? orElse?.call(),
+        LangChu() => langChu?.call() ?? orElse?.call(),
+        LangChv() => langChv?.call() ?? orElse?.call(),
+        LangCor() => langCor?.call() ?? orElse?.call(),
+        LangCym() => langCym?.call() ?? orElse?.call(),
+        LangDan() => langDan?.call() ?? orElse?.call(),
+        LangDeu() => langDeu?.call() ?? orElse?.call(),
+        LangDiv() => langDiv?.call() ?? orElse?.call(),
+        LangDzo() => langDzo?.call() ?? orElse?.call(),
+        LangEwe() => langEwe?.call() ?? orElse?.call(),
+        LangEll() => langEll?.call() ?? orElse?.call(),
+        LangEng() => langEng?.call() ?? orElse?.call(),
+        LangEpo() => langEpo?.call() ?? orElse?.call(),
+        LangEst() => langEst?.call() ?? orElse?.call(),
+        LangEus() => langEus?.call() ?? orElse?.call(),
+        LangFas() => langFas?.call() ?? orElse?.call(),
+        LangFul() => langFul?.call() ?? orElse?.call(),
+        LangFin() => langFin?.call() ?? orElse?.call(),
+        LangFij() => langFij?.call() ?? orElse?.call(),
+        LangFao() => langFao?.call() ?? orElse?.call(),
+        LangFra() => langFra?.call() ?? orElse?.call(),
+        LangFry() => langFry?.call() ?? orElse?.call(),
+        LangGle() => langGle?.call() ?? orElse?.call(),
+        LangGla() => langGla?.call() ?? orElse?.call(),
+        LangGlg() => langGlg?.call() ?? orElse?.call(),
+        LangGrn() => langGrn?.call() ?? orElse?.call(),
+        LangGuj() => langGuj?.call() ?? orElse?.call(),
+        LangGlv() => langGlv?.call() ?? orElse?.call(),
+        LangHau() => langHau?.call() ?? orElse?.call(),
+        LangHeb() => langHeb?.call() ?? orElse?.call(),
+        LangHin() => langHin?.call() ?? orElse?.call(),
+        LangHmo() => langHmo?.call() ?? orElse?.call(),
+        LangHrv() => langHrv?.call() ?? orElse?.call(),
+        LangHat() => langHat?.call() ?? orElse?.call(),
+        LangHun() => langHun?.call() ?? orElse?.call(),
+        LangHye() => langHye?.call() ?? orElse?.call(),
+        LangHer() => langHer?.call() ?? orElse?.call(),
+        LangIna() => langIna?.call() ?? orElse?.call(),
+        LangInd() => langInd?.call() ?? orElse?.call(),
+        LangIle() => langIle?.call() ?? orElse?.call(),
+        LangIbo() => langIbo?.call() ?? orElse?.call(),
+        LangIii() => langIii?.call() ?? orElse?.call(),
+        LangIpk() => langIpk?.call() ?? orElse?.call(),
+        LangIdo() => langIdo?.call() ?? orElse?.call(),
+        LangIsl() => langIsl?.call() ?? orElse?.call(),
+        LangIta() => langIta?.call() ?? orElse?.call(),
+        LangIku() => langIku?.call() ?? orElse?.call(),
+        LangJpn() => langJpn?.call() ?? orElse?.call(),
+        LangJav() => langJav?.call() ?? orElse?.call(),
+        LangKat() => langKat?.call() ?? orElse?.call(),
+        LangKon() => langKon?.call() ?? orElse?.call(),
+        LangKik() => langKik?.call() ?? orElse?.call(),
+        LangKua() => langKua?.call() ?? orElse?.call(),
+        LangKaz() => langKaz?.call() ?? orElse?.call(),
+        LangKal() => langKal?.call() ?? orElse?.call(),
+        LangKin() => langKin?.call() ?? orElse?.call(),
+        LangKhm() => langKhm?.call() ?? orElse?.call(),
+        LangKan() => langKan?.call() ?? orElse?.call(),
+        LangKor() => langKor?.call() ?? orElse?.call(),
+        LangKau() => langKau?.call() ?? orElse?.call(),
+        LangKas() => langKas?.call() ?? orElse?.call(),
+        LangKur() => langKur?.call() ?? orElse?.call(),
+        LangKom() => langKom?.call() ?? orElse?.call(),
+        LangKir() => langKir?.call() ?? orElse?.call(),
+        LangLat() => langLat?.call() ?? orElse?.call(),
+        LangLtz() => langLtz?.call() ?? orElse?.call(),
+        LangLug() => langLug?.call() ?? orElse?.call(),
+        LangLim() => langLim?.call() ?? orElse?.call(),
+        LangLin() => langLin?.call() ?? orElse?.call(),
+        LangLao() => langLao?.call() ?? orElse?.call(),
+        LangLit() => langLit?.call() ?? orElse?.call(),
+        LangLub() => langLub?.call() ?? orElse?.call(),
+        LangLav() => langLav?.call() ?? orElse?.call(),
+        LangMlg() => langMlg?.call() ?? orElse?.call(),
+        LangMah() => langMah?.call() ?? orElse?.call(),
+        LangMri() => langMri?.call() ?? orElse?.call(),
+        LangMkd() => langMkd?.call() ?? orElse?.call(),
+        LangMal() => langMal?.call() ?? orElse?.call(),
+        LangMon() => langMon?.call() ?? orElse?.call(),
+        LangMar() => langMar?.call() ?? orElse?.call(),
+        LangMsa() => langMsa?.call() ?? orElse?.call(),
+        LangMlt() => langMlt?.call() ?? orElse?.call(),
+        LangMya() => langMya?.call() ?? orElse?.call(),
+        LangNau() => langNau?.call() ?? orElse?.call(),
+        LangNob() => langNob?.call() ?? orElse?.call(),
+        LangNde() => langNde?.call() ?? orElse?.call(),
+        LangNep() => langNep?.call() ?? orElse?.call(),
+        LangNdo() => langNdo?.call() ?? orElse?.call(),
+        LangNld() => langNld?.call() ?? orElse?.call(),
+        LangNno() => langNno?.call() ?? orElse?.call(),
+        LangNor() => langNor?.call() ?? orElse?.call(),
+        LangNbl() => langNbl?.call() ?? orElse?.call(),
+        LangNav() => langNav?.call() ?? orElse?.call(),
+        LangNya() => langNya?.call() ?? orElse?.call(),
+        LangOci() => langOci?.call() ?? orElse?.call(),
+        LangOji() => langOji?.call() ?? orElse?.call(),
+        LangOrm() => langOrm?.call() ?? orElse?.call(),
+        LangOri() => langOri?.call() ?? orElse?.call(),
+        LangOss() => langOss?.call() ?? orElse?.call(),
+        LangPan() => langPan?.call() ?? orElse?.call(),
+        LangPli() => langPli?.call() ?? orElse?.call(),
+        LangPol() => langPol?.call() ?? orElse?.call(),
+        LangPus() => langPus?.call() ?? orElse?.call(),
+        LangPor() => langPor?.call() ?? orElse?.call(),
+        LangQue() => langQue?.call() ?? orElse?.call(),
+        LangRoh() => langRoh?.call() ?? orElse?.call(),
+        LangRun() => langRun?.call() ?? orElse?.call(),
+        LangRon() => langRon?.call() ?? orElse?.call(),
+        LangRus() => langRus?.call() ?? orElse?.call(),
+        LangSan() => langSan?.call() ?? orElse?.call(),
+        LangSrd() => langSrd?.call() ?? orElse?.call(),
+        LangSnd() => langSnd?.call() ?? orElse?.call(),
+        LangSme() => langSme?.call() ?? orElse?.call(),
+        LangSag() => langSag?.call() ?? orElse?.call(),
+        LangSin() => langSin?.call() ?? orElse?.call(),
+        LangSlk() => langSlk?.call() ?? orElse?.call(),
+        LangSlv() => langSlv?.call() ?? orElse?.call(),
+        LangSmo() => langSmo?.call() ?? orElse?.call(),
+        LangSna() => langSna?.call() ?? orElse?.call(),
+        LangSom() => langSom?.call() ?? orElse?.call(),
+        LangSpa() => langSpa?.call() ?? orElse?.call(),
+        LangSqi() => langSqi?.call() ?? orElse?.call(),
+        LangSrp() => langSrp?.call() ?? orElse?.call(),
+        LangSsw() => langSsw?.call() ?? orElse?.call(),
+        LangSot() => langSot?.call() ?? orElse?.call(),
+        LangSun() => langSun?.call() ?? orElse?.call(),
+        LangSwe() => langSwe?.call() ?? orElse?.call(),
+        LangSwa() => langSwa?.call() ?? orElse?.call(),
+        LangTam() => langTam?.call() ?? orElse?.call(),
+        LangTel() => langTel?.call() ?? orElse?.call(),
+        LangTgk() => langTgk?.call() ?? orElse?.call(),
+        LangTha() => langTha?.call() ?? orElse?.call(),
+        LangTir() => langTir?.call() ?? orElse?.call(),
+        LangTuk() => langTuk?.call() ?? orElse?.call(),
+        LangTgl() => langTgl?.call() ?? orElse?.call(),
+        LangTsn() => langTsn?.call() ?? orElse?.call(),
+        LangTon() => langTon?.call() ?? orElse?.call(),
+        LangTur() => langTur?.call() ?? orElse?.call(),
+        LangTso() => langTso?.call() ?? orElse?.call(),
+        LangTat() => langTat?.call() ?? orElse?.call(),
+        LangTwi() => langTwi?.call() ?? orElse?.call(),
+        LangTah() => langTah?.call() ?? orElse?.call(),
+        LangUig() => langUig?.call() ?? orElse?.call(),
+        LangUkr() => langUkr?.call() ?? orElse?.call(),
+        LangUrd() => langUrd?.call() ?? orElse?.call(),
+        LangUzb() => langUzb?.call() ?? orElse?.call(),
+        LangVen() => langVen?.call() ?? orElse?.call(),
+        LangVie() => langVie?.call() ?? orElse?.call(),
+        LangVol() => langVol?.call() ?? orElse?.call(),
+        LangWln() => langWln?.call() ?? orElse?.call(),
+        LangWol() => langWol?.call() ?? orElse?.call(),
+        LangXho() => langXho?.call() ?? orElse?.call(),
+        LangYid() => langYid?.call() ?? orElse?.call(),
+        LangYor() => langYor?.call() ?? orElse?.call(),
+        LangZha() => langZha?.call() ?? orElse?.call(),
+        LangZho() => langZho?.call() ?? orElse?.call(),
+        LangZul() => langZul?.call() ?? orElse?.call(),
+        _ => orElse?.call(),
+      };
 }
