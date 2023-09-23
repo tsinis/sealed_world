@@ -228,7 +228,7 @@
       },
       {
         "type": "shell",
-        "command": "dart run coverage:format_coverage -l -i coverage -o coverage/lcov.info --report-on=lib",
+        "command": "dart run coverage:format_coverage --check-ignore -l -i coverage -o coverage/lcov.info --report-on=lib",
         "label": "Format Dart Coverage"
       },
       {

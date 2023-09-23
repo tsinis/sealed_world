@@ -27,7 +27,7 @@ Compile time constant list of all languages accessible via `NaturalLanguage.list
 - `fromCodeShort` - returns a language instance if the value matches the provided ISO 639-1 code code.
 - `fromName` - returns a language instance if the value matches the provided name.
 
-and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`. You can also find a lot of common method you may know from Dart world - `toString` overrides, `copyWith`, `fromJson`, etc.
+and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `fromJson`, etc.
 
 ## Getting started
 

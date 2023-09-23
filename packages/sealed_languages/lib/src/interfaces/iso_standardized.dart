@@ -19,13 +19,13 @@
 ///   });
 ///
 ///   final String code;
-///   final String? codeOther;
+///   final String? codeShort;
 ///
 ///   final String name;
 ///   final List<String>? namesNative;
 ///
 ///   @override
-///   String get codeOther => codeShort;
+///   String? get codeOther => codeShort;
 /// }
 /// ```
 ///
