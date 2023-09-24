@@ -1,4 +1,4 @@
-import "../../../model/currency.dart";
+import "../../model/currency.dart";
 
 /// Provides a set of methods for formatting values of [FiatCurrency].
 extension FiatCurrencyFormat on FiatCurrency {

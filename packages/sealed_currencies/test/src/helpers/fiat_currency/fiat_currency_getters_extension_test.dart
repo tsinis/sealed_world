@@ -1,4 +1,4 @@
-import "package:sealed_currencies/src/helpers/extensions/fiat_currency/fiat_currency_getters.dart";
+import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_getters.dart";
 import "package:sealed_currencies/src/model/currency.dart";
 import "package:test/test.dart";
 
