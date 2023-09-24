@@ -1,7 +1,7 @@
-import "../../model/currency.dart";
+import "../../../model/currency.dart";
 
 /// Provides a set of getters for the [FiatCurrency] class.
-extension FiatCurrencyGettersExtension on FiatCurrency {
+extension FiatCurrencyGetters on FiatCurrency {
   /// Returns the unit of the currency.
   ///
   /// If the currency symbol is not available, the 3-letter

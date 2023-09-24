@@ -1,7 +1,7 @@
-import "../../model/currency.dart";
+import "../../../model/currency.dart";
 
 /// Provides a set of methods for formatting values of [FiatCurrency].
-extension FiatCurrencyFormattingExtension on FiatCurrency {
+extension FiatCurrencyFormat on FiatCurrency {
   /// If value is not `null` - formats the value as a string with
   /// the currency symbol. Otherwise returns `null`.
   String? tryFormat([num? maybeValue]) =>

@@ -173,350 +173,179 @@ extension FiatCurrencyFunctional on FiatCurrency {
     required R Function(FiatCurrency fiatZar) fiatZar,
     required R Function(FiatCurrency fiatZwl) fiatZwl,
     required R Function(FiatCurrency fiatZmw) fiatZmw,
-  }) {
-    switch (this) {
-      case FiatAed():
-        return fiatAed(this);
-      case FiatAfn():
-        return fiatAfn(this);
-      case FiatAll():
-        return fiatAll(this);
-      case FiatAmd():
-        return fiatAmd(this);
-      case FiatAng():
-        return fiatAng(this);
-      case FiatAoa():
-        return fiatAoa(this);
-      case FiatArs():
-        return fiatArs(this);
-      case FiatAud():
-        return fiatAud(this);
-      case FiatAwg():
-        return fiatAwg(this);
-      case FiatAzn():
-        return fiatAzn(this);
-      case FiatBam():
-        return fiatBam(this);
-      case FiatBbd():
-        return fiatBbd(this);
-      case FiatBdt():
-        return fiatBdt(this);
-      case FiatBgn():
-        return fiatBgn(this);
-      case FiatBhd():
-        return fiatBhd(this);
-      case FiatBif():
-        return fiatBif(this);
-      case FiatBmd():
-        return fiatBmd(this);
-      case FiatBnd():
-        return fiatBnd(this);
-      case FiatBob():
-        return fiatBob(this);
-      case FiatBrl():
-        return fiatBrl(this);
-      case FiatBsd():
-        return fiatBsd(this);
-      case FiatBtn():
-        return fiatBtn(this);
-      case FiatBwp():
-        return fiatBwp(this);
-      case FiatByn():
-        return fiatByn(this);
-      case FiatBzd():
-        return fiatBzd(this);
-      case FiatCad():
-        return fiatCad(this);
-      case FiatCdf():
-        return fiatCdf(this);
-      case FiatChf():
-        return fiatChf(this);
-      case FiatClf():
-        return fiatClf(this);
-      case FiatClp():
-        return fiatClp(this);
-      case FiatCny():
-        return fiatCny(this);
-      case FiatCop():
-        return fiatCop(this);
-      case FiatCrc():
-        return fiatCrc(this);
-      case FiatCuc():
-        return fiatCuc(this);
-      case FiatCup():
-        return fiatCup(this);
-      case FiatCve():
-        return fiatCve(this);
-      case FiatCzk():
-        return fiatCzk(this);
-      case FiatDjf():
-        return fiatDjf(this);
-      case FiatDkk():
-        return fiatDkk(this);
-      case FiatDop():
-        return fiatDop(this);
-      case FiatDzd():
-        return fiatDzd(this);
-      case FiatEgp():
-        return fiatEgp(this);
-      case FiatErn():
-        return fiatErn(this);
-      case FiatEtb():
-        return fiatEtb(this);
-      case FiatEur():
-        return fiatEur(this);
-      case FiatFjd():
-        return fiatFjd(this);
-      case FiatFkp():
-        return fiatFkp(this);
-      case FiatGbp():
-        return fiatGbp(this);
-      case FiatGel():
-        return fiatGel(this);
-      case FiatGhs():
-        return fiatGhs(this);
-      case FiatGip():
-        return fiatGip(this);
-      case FiatGmd():
-        return fiatGmd(this);
-      case FiatGnf():
-        return fiatGnf(this);
-      case FiatGtq():
-        return fiatGtq(this);
-      case FiatGyd():
-        return fiatGyd(this);
-      case FiatHkd():
-        return fiatHkd(this);
-      case FiatHnl():
-        return fiatHnl(this);
-      case FiatHrk():
-        return fiatHrk(this);
-      case FiatHtg():
-        return fiatHtg(this);
-      case FiatHuf():
-        return fiatHuf(this);
-      case FiatIdr():
-        return fiatIdr(this);
-      case FiatIls():
-        return fiatIls(this);
-      case FiatInr():
-        return fiatInr(this);
-      case FiatIqd():
-        return fiatIqd(this);
-      case FiatIrr():
-        return fiatIrr(this);
-      case FiatIsk():
-        return fiatIsk(this);
-      case FiatJmd():
-        return fiatJmd(this);
-      case FiatJod():
-        return fiatJod(this);
-      case FiatJpy():
-        return fiatJpy(this);
-      case FiatKes():
-        return fiatKes(this);
-      case FiatKgs():
-        return fiatKgs(this);
-      case FiatKhr():
-        return fiatKhr(this);
-      case FiatKmf():
-        return fiatKmf(this);
-      case FiatKpw():
-        return fiatKpw(this);
-      case FiatKrw():
-        return fiatKrw(this);
-      case FiatKwd():
-        return fiatKwd(this);
-      case FiatKyd():
-        return fiatKyd(this);
-      case FiatKzt():
-        return fiatKzt(this);
-      case FiatLak():
-        return fiatLak(this);
-      case FiatLbp():
-        return fiatLbp(this);
-      case FiatLkr():
-        return fiatLkr(this);
-      case FiatLrd():
-        return fiatLrd(this);
-      case FiatLsl():
-        return fiatLsl(this);
-      case FiatLyd():
-        return fiatLyd(this);
-      case FiatMad():
-        return fiatMad(this);
-      case FiatMdl():
-        return fiatMdl(this);
-      case FiatMga():
-        return fiatMga(this);
-      case FiatMkd():
-        return fiatMkd(this);
-      case FiatMmk():
-        return fiatMmk(this);
-      case FiatMnt():
-        return fiatMnt(this);
-      case FiatMop():
-        return fiatMop(this);
-      case FiatMru():
-        return fiatMru(this);
-      case FiatMur():
-        return fiatMur(this);
-      case FiatMvr():
-        return fiatMvr(this);
-      case FiatMwk():
-        return fiatMwk(this);
-      case FiatMxn():
-        return fiatMxn(this);
-      case FiatMyr():
-        return fiatMyr(this);
-      case FiatMzn():
-        return fiatMzn(this);
-      case FiatNad():
-        return fiatNad(this);
-      case FiatNgn():
-        return fiatNgn(this);
-      case FiatNio():
-        return fiatNio(this);
-      case FiatNok():
-        return fiatNok(this);
-      case FiatNpr():
-        return fiatNpr(this);
-      case FiatNzd():
-        return fiatNzd(this);
-      case FiatOmr():
-        return fiatOmr(this);
-      case FiatPab():
-        return fiatPab(this);
-      case FiatPen():
-        return fiatPen(this);
-      case FiatPgk():
-        return fiatPgk(this);
-      case FiatPhp():
-        return fiatPhp(this);
-      case FiatPkr():
-        return fiatPkr(this);
-      case FiatPln():
-        return fiatPln(this);
-      case FiatPyg():
-        return fiatPyg(this);
-      case FiatQar():
-        return fiatQar(this);
-      case FiatRon():
-        return fiatRon(this);
-      case FiatRsd():
-        return fiatRsd(this);
-      case FiatRub():
-        return fiatRub(this);
-      case FiatRwf():
-        return fiatRwf(this);
-      case FiatSar():
-        return fiatSar(this);
-      case FiatSbd():
-        return fiatSbd(this);
-      case FiatScr():
-        return fiatScr(this);
-      case FiatSdg():
-        return fiatSdg(this);
-      case FiatSek():
-        return fiatSek(this);
-      case FiatSgd():
-        return fiatSgd(this);
-      case FiatShp():
-        return fiatShp(this);
-      case FiatSle():
-        return fiatSle(this);
-      case FiatSll():
-        return fiatSll(this);
-      case FiatSos():
-        return fiatSos(this);
-      case FiatSrd():
-        return fiatSrd(this);
-      case FiatSsp():
-        return fiatSsp(this);
-      case FiatStn():
-        return fiatStn(this);
-      case FiatSvc():
-        return fiatSvc(this);
-      case FiatSyp():
-        return fiatSyp(this);
-      case FiatSzl():
-        return fiatSzl(this);
-      case FiatThb():
-        return fiatThb(this);
-      case FiatTjs():
-        return fiatTjs(this);
-      case FiatTmt():
-        return fiatTmt(this);
-      case FiatTnd():
-        return fiatTnd(this);
-      case FiatTop():
-        return fiatTop(this);
-      case FiatTry():
-        return fiatTry(this);
-      case FiatTtd():
-        return fiatTtd(this);
-      case FiatTwd():
-        return fiatTwd(this);
-      case FiatTzs():
-        return fiatTzs(this);
-      case FiatUah():
-        return fiatUah(this);
-      case FiatUgx():
-        return fiatUgx(this);
-      case FiatUsd():
-        return fiatUsd(this);
-      case FiatUyu():
-        return fiatUyu(this);
-      case FiatUzs():
-        return fiatUzs(this);
-      case FiatVes():
-        return fiatVes(this);
-      case FiatVnd():
-        return fiatVnd(this);
-      case FiatVuv():
-        return fiatVuv(this);
-      case FiatWst():
-        return fiatWst(this);
-      case FiatXaf():
-        return fiatXaf(this);
-      case FiatXag():
-        return fiatXag(this);
-      case FiatXau():
-        return fiatXau(this);
-      case FiatXba():
-        return fiatXba(this);
-      case FiatXbb():
-        return fiatXbb(this);
-      case FiatXbc():
-        return fiatXbc(this);
-      case FiatXbd():
-        return fiatXbd(this);
-      case FiatXcd():
-        return fiatXcd(this);
-      case FiatXdr():
-        return fiatXdr(this);
-      case FiatXof():
-        return fiatXof(this);
-      case FiatXpd():
-        return fiatXpd(this);
-      case FiatXpf():
-        return fiatXpf(this);
-      case FiatXpt():
-        return fiatXpt(this);
-      case FiatXts():
-        return fiatXts(this);
-      case FiatYer():
-        return fiatYer(this);
-      case FiatZar():
-        return fiatZar(this);
-      case FiatZwl():
-        return fiatZwl(this);
-      case FiatZmw():
-        return fiatZmw(this);
-      default:
-        throw ArgumentError("Unknown value: $this", name);
-    }
-  }
+  }) =>
+      switch (this) {
+        FiatAed() => fiatAed(this),
+        FiatAfn() => fiatAfn(this),
+        FiatAll() => fiatAll(this),
+        FiatAmd() => fiatAmd(this),
+        FiatAng() => fiatAng(this),
+        FiatAoa() => fiatAoa(this),
+        FiatArs() => fiatArs(this),
+        FiatAud() => fiatAud(this),
+        FiatAwg() => fiatAwg(this),
+        FiatAzn() => fiatAzn(this),
+        FiatBam() => fiatBam(this),
+        FiatBbd() => fiatBbd(this),
+        FiatBdt() => fiatBdt(this),
+        FiatBgn() => fiatBgn(this),
+        FiatBhd() => fiatBhd(this),
+        FiatBif() => fiatBif(this),
+        FiatBmd() => fiatBmd(this),
+        FiatBnd() => fiatBnd(this),
+        FiatBob() => fiatBob(this),
+        FiatBrl() => fiatBrl(this),
+        FiatBsd() => fiatBsd(this),
+        FiatBtn() => fiatBtn(this),
+        FiatBwp() => fiatBwp(this),
+        FiatByn() => fiatByn(this),
+        FiatBzd() => fiatBzd(this),
+        FiatCad() => fiatCad(this),
+        FiatCdf() => fiatCdf(this),
+        FiatChf() => fiatChf(this),
+        FiatClf() => fiatClf(this),
+        FiatClp() => fiatClp(this),
+        FiatCny() => fiatCny(this),
+        FiatCop() => fiatCop(this),
+        FiatCrc() => fiatCrc(this),
+        FiatCuc() => fiatCuc(this),
+        FiatCup() => fiatCup(this),
+        FiatCve() => fiatCve(this),
+        FiatCzk() => fiatCzk(this),
+        FiatDjf() => fiatDjf(this),
+        FiatDkk() => fiatDkk(this),
+        FiatDop() => fiatDop(this),
+        FiatDzd() => fiatDzd(this),
+        FiatEgp() => fiatEgp(this),
+        FiatErn() => fiatErn(this),
+        FiatEtb() => fiatEtb(this),
+        FiatEur() => fiatEur(this),
+        FiatFjd() => fiatFjd(this),
+        FiatFkp() => fiatFkp(this),
+        FiatGbp() => fiatGbp(this),
+        FiatGel() => fiatGel(this),
+        FiatGhs() => fiatGhs(this),
+        FiatGip() => fiatGip(this),
+        FiatGmd() => fiatGmd(this),
+        FiatGnf() => fiatGnf(this),
+        FiatGtq() => fiatGtq(this),
+        FiatGyd() => fiatGyd(this),
+        FiatHkd() => fiatHkd(this),
+        FiatHnl() => fiatHnl(this),
+        FiatHrk() => fiatHrk(this),
+        FiatHtg() => fiatHtg(this),
+        FiatHuf() => fiatHuf(this),
+        FiatIdr() => fiatIdr(this),
+        FiatIls() => fiatIls(this),
+        FiatInr() => fiatInr(this),
+        FiatIqd() => fiatIqd(this),
+        FiatIrr() => fiatIrr(this),
+        FiatIsk() => fiatIsk(this),
+        FiatJmd() => fiatJmd(this),
+        FiatJod() => fiatJod(this),
+        FiatJpy() => fiatJpy(this),
+        FiatKes() => fiatKes(this),
+        FiatKgs() => fiatKgs(this),
+        FiatKhr() => fiatKhr(this),
+        FiatKmf() => fiatKmf(this),
+        FiatKpw() => fiatKpw(this),
+        FiatKrw() => fiatKrw(this),
+        FiatKwd() => fiatKwd(this),
+        FiatKyd() => fiatKyd(this),
+        FiatKzt() => fiatKzt(this),
+        FiatLak() => fiatLak(this),
+        FiatLbp() => fiatLbp(this),
+        FiatLkr() => fiatLkr(this),
+        FiatLrd() => fiatLrd(this),
+        FiatLsl() => fiatLsl(this),
+        FiatLyd() => fiatLyd(this),
+        FiatMad() => fiatMad(this),
+        FiatMdl() => fiatMdl(this),
+        FiatMga() => fiatMga(this),
+        FiatMkd() => fiatMkd(this),
+        FiatMmk() => fiatMmk(this),
+        FiatMnt() => fiatMnt(this),
+        FiatMop() => fiatMop(this),
+        FiatMru() => fiatMru(this),
+        FiatMur() => fiatMur(this),
+        FiatMvr() => fiatMvr(this),
+        FiatMwk() => fiatMwk(this),
+        FiatMxn() => fiatMxn(this),
+        FiatMyr() => fiatMyr(this),
+        FiatMzn() => fiatMzn(this),
+        FiatNad() => fiatNad(this),
+        FiatNgn() => fiatNgn(this),
+        FiatNio() => fiatNio(this),
+        FiatNok() => fiatNok(this),
+        FiatNpr() => fiatNpr(this),
+        FiatNzd() => fiatNzd(this),
+        FiatOmr() => fiatOmr(this),
+        FiatPab() => fiatPab(this),
+        FiatPen() => fiatPen(this),
+        FiatPgk() => fiatPgk(this),
+        FiatPhp() => fiatPhp(this),
+        FiatPkr() => fiatPkr(this),
+        FiatPln() => fiatPln(this),
+        FiatPyg() => fiatPyg(this),
+        FiatQar() => fiatQar(this),
+        FiatRon() => fiatRon(this),
+        FiatRsd() => fiatRsd(this),
+        FiatRub() => fiatRub(this),
+        FiatRwf() => fiatRwf(this),
+        FiatSar() => fiatSar(this),
+        FiatSbd() => fiatSbd(this),
+        FiatScr() => fiatScr(this),
+        FiatSdg() => fiatSdg(this),
+        FiatSek() => fiatSek(this),
+        FiatSgd() => fiatSgd(this),
+        FiatShp() => fiatShp(this),
+        FiatSle() => fiatSle(this),
+        FiatSll() => fiatSll(this),
+        FiatSos() => fiatSos(this),
+        FiatSrd() => fiatSrd(this),
+        FiatSsp() => fiatSsp(this),
+        FiatStn() => fiatStn(this),
+        FiatSvc() => fiatSvc(this),
+        FiatSyp() => fiatSyp(this),
+        FiatSzl() => fiatSzl(this),
+        FiatThb() => fiatThb(this),
+        FiatTjs() => fiatTjs(this),
+        FiatTmt() => fiatTmt(this),
+        FiatTnd() => fiatTnd(this),
+        FiatTop() => fiatTop(this),
+        FiatTry() => fiatTry(this),
+        FiatTtd() => fiatTtd(this),
+        FiatTwd() => fiatTwd(this),
+        FiatTzs() => fiatTzs(this),
+        FiatUah() => fiatUah(this),
+        FiatUgx() => fiatUgx(this),
+        FiatUsd() => fiatUsd(this),
+        FiatUyu() => fiatUyu(this),
+        FiatUzs() => fiatUzs(this),
+        FiatVes() => fiatVes(this),
+        FiatVnd() => fiatVnd(this),
+        FiatVuv() => fiatVuv(this),
+        FiatWst() => fiatWst(this),
+        FiatXaf() => fiatXaf(this),
+        FiatXag() => fiatXag(this),
+        FiatXau() => fiatXau(this),
+        FiatXba() => fiatXba(this),
+        FiatXbb() => fiatXbb(this),
+        FiatXbc() => fiatXbc(this),
+        FiatXbd() => fiatXbd(this),
+        FiatXcd() => fiatXcd(this),
+        FiatXdr() => fiatXdr(this),
+        FiatXof() => fiatXof(this),
+        FiatXpd() => fiatXpd(this),
+        FiatXpf() => fiatXpf(this),
+        FiatXpt() => fiatXpt(this),
+        FiatXts() => fiatXts(this),
+        FiatYer() => fiatYer(this),
+        FiatZar() => fiatZar(this),
+        FiatZwl() => fiatZwl(this),
+        FiatZmw() => fiatZmw(this),
+        _ => throw ArgumentError("Unknown value: $this", name),
+      };
 
   R maybeMap<R>({
     required R Function(FiatCurrency currency) orElse,
@@ -689,350 +518,179 @@ extension FiatCurrencyFunctional on FiatCurrency {
     R Function(FiatCurrency fiatZar)? fiatZar,
     R Function(FiatCurrency fiatZwl)? fiatZwl,
     R Function(FiatCurrency fiatZmw)? fiatZmw,
-  }) {
-    switch (this) {
-      case FiatAed():
-        return fiatAed?.call(this) ?? orElse(this);
-      case FiatAfn():
-        return fiatAfn?.call(this) ?? orElse(this);
-      case FiatAll():
-        return fiatAll?.call(this) ?? orElse(this);
-      case FiatAmd():
-        return fiatAmd?.call(this) ?? orElse(this);
-      case FiatAng():
-        return fiatAng?.call(this) ?? orElse(this);
-      case FiatAoa():
-        return fiatAoa?.call(this) ?? orElse(this);
-      case FiatArs():
-        return fiatArs?.call(this) ?? orElse(this);
-      case FiatAud():
-        return fiatAud?.call(this) ?? orElse(this);
-      case FiatAwg():
-        return fiatAwg?.call(this) ?? orElse(this);
-      case FiatAzn():
-        return fiatAzn?.call(this) ?? orElse(this);
-      case FiatBam():
-        return fiatBam?.call(this) ?? orElse(this);
-      case FiatBbd():
-        return fiatBbd?.call(this) ?? orElse(this);
-      case FiatBdt():
-        return fiatBdt?.call(this) ?? orElse(this);
-      case FiatBgn():
-        return fiatBgn?.call(this) ?? orElse(this);
-      case FiatBhd():
-        return fiatBhd?.call(this) ?? orElse(this);
-      case FiatBif():
-        return fiatBif?.call(this) ?? orElse(this);
-      case FiatBmd():
-        return fiatBmd?.call(this) ?? orElse(this);
-      case FiatBnd():
-        return fiatBnd?.call(this) ?? orElse(this);
-      case FiatBob():
-        return fiatBob?.call(this) ?? orElse(this);
-      case FiatBrl():
-        return fiatBrl?.call(this) ?? orElse(this);
-      case FiatBsd():
-        return fiatBsd?.call(this) ?? orElse(this);
-      case FiatBtn():
-        return fiatBtn?.call(this) ?? orElse(this);
-      case FiatBwp():
-        return fiatBwp?.call(this) ?? orElse(this);
-      case FiatByn():
-        return fiatByn?.call(this) ?? orElse(this);
-      case FiatBzd():
-        return fiatBzd?.call(this) ?? orElse(this);
-      case FiatCad():
-        return fiatCad?.call(this) ?? orElse(this);
-      case FiatCdf():
-        return fiatCdf?.call(this) ?? orElse(this);
-      case FiatChf():
-        return fiatChf?.call(this) ?? orElse(this);
-      case FiatClf():
-        return fiatClf?.call(this) ?? orElse(this);
-      case FiatClp():
-        return fiatClp?.call(this) ?? orElse(this);
-      case FiatCny():
-        return fiatCny?.call(this) ?? orElse(this);
-      case FiatCop():
-        return fiatCop?.call(this) ?? orElse(this);
-      case FiatCrc():
-        return fiatCrc?.call(this) ?? orElse(this);
-      case FiatCuc():
-        return fiatCuc?.call(this) ?? orElse(this);
-      case FiatCup():
-        return fiatCup?.call(this) ?? orElse(this);
-      case FiatCve():
-        return fiatCve?.call(this) ?? orElse(this);
-      case FiatCzk():
-        return fiatCzk?.call(this) ?? orElse(this);
-      case FiatDjf():
-        return fiatDjf?.call(this) ?? orElse(this);
-      case FiatDkk():
-        return fiatDkk?.call(this) ?? orElse(this);
-      case FiatDop():
-        return fiatDop?.call(this) ?? orElse(this);
-      case FiatDzd():
-        return fiatDzd?.call(this) ?? orElse(this);
-      case FiatEgp():
-        return fiatEgp?.call(this) ?? orElse(this);
-      case FiatErn():
-        return fiatErn?.call(this) ?? orElse(this);
-      case FiatEtb():
-        return fiatEtb?.call(this) ?? orElse(this);
-      case FiatEur():
-        return fiatEur?.call(this) ?? orElse(this);
-      case FiatFjd():
-        return fiatFjd?.call(this) ?? orElse(this);
-      case FiatFkp():
-        return fiatFkp?.call(this) ?? orElse(this);
-      case FiatGbp():
-        return fiatGbp?.call(this) ?? orElse(this);
-      case FiatGel():
-        return fiatGel?.call(this) ?? orElse(this);
-      case FiatGhs():
-        return fiatGhs?.call(this) ?? orElse(this);
-      case FiatGip():
-        return fiatGip?.call(this) ?? orElse(this);
-      case FiatGmd():
-        return fiatGmd?.call(this) ?? orElse(this);
-      case FiatGnf():
-        return fiatGnf?.call(this) ?? orElse(this);
-      case FiatGtq():
-        return fiatGtq?.call(this) ?? orElse(this);
-      case FiatGyd():
-        return fiatGyd?.call(this) ?? orElse(this);
-      case FiatHkd():
-        return fiatHkd?.call(this) ?? orElse(this);
-      case FiatHnl():
-        return fiatHnl?.call(this) ?? orElse(this);
-      case FiatHrk():
-        return fiatHrk?.call(this) ?? orElse(this);
-      case FiatHtg():
-        return fiatHtg?.call(this) ?? orElse(this);
-      case FiatHuf():
-        return fiatHuf?.call(this) ?? orElse(this);
-      case FiatIdr():
-        return fiatIdr?.call(this) ?? orElse(this);
-      case FiatIls():
-        return fiatIls?.call(this) ?? orElse(this);
-      case FiatInr():
-        return fiatInr?.call(this) ?? orElse(this);
-      case FiatIqd():
-        return fiatIqd?.call(this) ?? orElse(this);
-      case FiatIrr():
-        return fiatIrr?.call(this) ?? orElse(this);
-      case FiatIsk():
-        return fiatIsk?.call(this) ?? orElse(this);
-      case FiatJmd():
-        return fiatJmd?.call(this) ?? orElse(this);
-      case FiatJod():
-        return fiatJod?.call(this) ?? orElse(this);
-      case FiatJpy():
-        return fiatJpy?.call(this) ?? orElse(this);
-      case FiatKes():
-        return fiatKes?.call(this) ?? orElse(this);
-      case FiatKgs():
-        return fiatKgs?.call(this) ?? orElse(this);
-      case FiatKhr():
-        return fiatKhr?.call(this) ?? orElse(this);
-      case FiatKmf():
-        return fiatKmf?.call(this) ?? orElse(this);
-      case FiatKpw():
-        return fiatKpw?.call(this) ?? orElse(this);
-      case FiatKrw():
-        return fiatKrw?.call(this) ?? orElse(this);
-      case FiatKwd():
-        return fiatKwd?.call(this) ?? orElse(this);
-      case FiatKyd():
-        return fiatKyd?.call(this) ?? orElse(this);
-      case FiatKzt():
-        return fiatKzt?.call(this) ?? orElse(this);
-      case FiatLak():
-        return fiatLak?.call(this) ?? orElse(this);
-      case FiatLbp():
-        return fiatLbp?.call(this) ?? orElse(this);
-      case FiatLkr():
-        return fiatLkr?.call(this) ?? orElse(this);
-      case FiatLrd():
-        return fiatLrd?.call(this) ?? orElse(this);
-      case FiatLsl():
-        return fiatLsl?.call(this) ?? orElse(this);
-      case FiatLyd():
-        return fiatLyd?.call(this) ?? orElse(this);
-      case FiatMad():
-        return fiatMad?.call(this) ?? orElse(this);
-      case FiatMdl():
-        return fiatMdl?.call(this) ?? orElse(this);
-      case FiatMga():
-        return fiatMga?.call(this) ?? orElse(this);
-      case FiatMkd():
-        return fiatMkd?.call(this) ?? orElse(this);
-      case FiatMmk():
-        return fiatMmk?.call(this) ?? orElse(this);
-      case FiatMnt():
-        return fiatMnt?.call(this) ?? orElse(this);
-      case FiatMop():
-        return fiatMop?.call(this) ?? orElse(this);
-      case FiatMru():
-        return fiatMru?.call(this) ?? orElse(this);
-      case FiatMur():
-        return fiatMur?.call(this) ?? orElse(this);
-      case FiatMvr():
-        return fiatMvr?.call(this) ?? orElse(this);
-      case FiatMwk():
-        return fiatMwk?.call(this) ?? orElse(this);
-      case FiatMxn():
-        return fiatMxn?.call(this) ?? orElse(this);
-      case FiatMyr():
-        return fiatMyr?.call(this) ?? orElse(this);
-      case FiatMzn():
-        return fiatMzn?.call(this) ?? orElse(this);
-      case FiatNad():
-        return fiatNad?.call(this) ?? orElse(this);
-      case FiatNgn():
-        return fiatNgn?.call(this) ?? orElse(this);
-      case FiatNio():
-        return fiatNio?.call(this) ?? orElse(this);
-      case FiatNok():
-        return fiatNok?.call(this) ?? orElse(this);
-      case FiatNpr():
-        return fiatNpr?.call(this) ?? orElse(this);
-      case FiatNzd():
-        return fiatNzd?.call(this) ?? orElse(this);
-      case FiatOmr():
-        return fiatOmr?.call(this) ?? orElse(this);
-      case FiatPab():
-        return fiatPab?.call(this) ?? orElse(this);
-      case FiatPen():
-        return fiatPen?.call(this) ?? orElse(this);
-      case FiatPgk():
-        return fiatPgk?.call(this) ?? orElse(this);
-      case FiatPhp():
-        return fiatPhp?.call(this) ?? orElse(this);
-      case FiatPkr():
-        return fiatPkr?.call(this) ?? orElse(this);
-      case FiatPln():
-        return fiatPln?.call(this) ?? orElse(this);
-      case FiatPyg():
-        return fiatPyg?.call(this) ?? orElse(this);
-      case FiatQar():
-        return fiatQar?.call(this) ?? orElse(this);
-      case FiatRon():
-        return fiatRon?.call(this) ?? orElse(this);
-      case FiatRsd():
-        return fiatRsd?.call(this) ?? orElse(this);
-      case FiatRub():
-        return fiatRub?.call(this) ?? orElse(this);
-      case FiatRwf():
-        return fiatRwf?.call(this) ?? orElse(this);
-      case FiatSar():
-        return fiatSar?.call(this) ?? orElse(this);
-      case FiatSbd():
-        return fiatSbd?.call(this) ?? orElse(this);
-      case FiatScr():
-        return fiatScr?.call(this) ?? orElse(this);
-      case FiatSdg():
-        return fiatSdg?.call(this) ?? orElse(this);
-      case FiatSek():
-        return fiatSek?.call(this) ?? orElse(this);
-      case FiatSgd():
-        return fiatSgd?.call(this) ?? orElse(this);
-      case FiatShp():
-        return fiatShp?.call(this) ?? orElse(this);
-      case FiatSle():
-        return fiatSle?.call(this) ?? orElse(this);
-      case FiatSll():
-        return fiatSll?.call(this) ?? orElse(this);
-      case FiatSos():
-        return fiatSos?.call(this) ?? orElse(this);
-      case FiatSrd():
-        return fiatSrd?.call(this) ?? orElse(this);
-      case FiatSsp():
-        return fiatSsp?.call(this) ?? orElse(this);
-      case FiatStn():
-        return fiatStn?.call(this) ?? orElse(this);
-      case FiatSvc():
-        return fiatSvc?.call(this) ?? orElse(this);
-      case FiatSyp():
-        return fiatSyp?.call(this) ?? orElse(this);
-      case FiatSzl():
-        return fiatSzl?.call(this) ?? orElse(this);
-      case FiatThb():
-        return fiatThb?.call(this) ?? orElse(this);
-      case FiatTjs():
-        return fiatTjs?.call(this) ?? orElse(this);
-      case FiatTmt():
-        return fiatTmt?.call(this) ?? orElse(this);
-      case FiatTnd():
-        return fiatTnd?.call(this) ?? orElse(this);
-      case FiatTop():
-        return fiatTop?.call(this) ?? orElse(this);
-      case FiatTry():
-        return fiatTry?.call(this) ?? orElse(this);
-      case FiatTtd():
-        return fiatTtd?.call(this) ?? orElse(this);
-      case FiatTwd():
-        return fiatTwd?.call(this) ?? orElse(this);
-      case FiatTzs():
-        return fiatTzs?.call(this) ?? orElse(this);
-      case FiatUah():
-        return fiatUah?.call(this) ?? orElse(this);
-      case FiatUgx():
-        return fiatUgx?.call(this) ?? orElse(this);
-      case FiatUsd():
-        return fiatUsd?.call(this) ?? orElse(this);
-      case FiatUyu():
-        return fiatUyu?.call(this) ?? orElse(this);
-      case FiatUzs():
-        return fiatUzs?.call(this) ?? orElse(this);
-      case FiatVes():
-        return fiatVes?.call(this) ?? orElse(this);
-      case FiatVnd():
-        return fiatVnd?.call(this) ?? orElse(this);
-      case FiatVuv():
-        return fiatVuv?.call(this) ?? orElse(this);
-      case FiatWst():
-        return fiatWst?.call(this) ?? orElse(this);
-      case FiatXaf():
-        return fiatXaf?.call(this) ?? orElse(this);
-      case FiatXag():
-        return fiatXag?.call(this) ?? orElse(this);
-      case FiatXau():
-        return fiatXau?.call(this) ?? orElse(this);
-      case FiatXba():
-        return fiatXba?.call(this) ?? orElse(this);
-      case FiatXbb():
-        return fiatXbb?.call(this) ?? orElse(this);
-      case FiatXbc():
-        return fiatXbc?.call(this) ?? orElse(this);
-      case FiatXbd():
-        return fiatXbd?.call(this) ?? orElse(this);
-      case FiatXcd():
-        return fiatXcd?.call(this) ?? orElse(this);
-      case FiatXdr():
-        return fiatXdr?.call(this) ?? orElse(this);
-      case FiatXof():
-        return fiatXof?.call(this) ?? orElse(this);
-      case FiatXpd():
-        return fiatXpd?.call(this) ?? orElse(this);
-      case FiatXpf():
-        return fiatXpf?.call(this) ?? orElse(this);
-      case FiatXpt():
-        return fiatXpt?.call(this) ?? orElse(this);
-      case FiatXts():
-        return fiatXts?.call(this) ?? orElse(this);
-      case FiatYer():
-        return fiatYer?.call(this) ?? orElse(this);
-      case FiatZar():
-        return fiatZar?.call(this) ?? orElse(this);
-      case FiatZwl():
-        return fiatZwl?.call(this) ?? orElse(this);
-      case FiatZmw():
-        return fiatZmw?.call(this) ?? orElse(this);
-      default:
-        return orElse(this);
-    }
-  }
+  }) =>
+      switch (this) {
+        FiatAed() => fiatAed?.call(this) ?? orElse(this),
+        FiatAfn() => fiatAfn?.call(this) ?? orElse(this),
+        FiatAll() => fiatAll?.call(this) ?? orElse(this),
+        FiatAmd() => fiatAmd?.call(this) ?? orElse(this),
+        FiatAng() => fiatAng?.call(this) ?? orElse(this),
+        FiatAoa() => fiatAoa?.call(this) ?? orElse(this),
+        FiatArs() => fiatArs?.call(this) ?? orElse(this),
+        FiatAud() => fiatAud?.call(this) ?? orElse(this),
+        FiatAwg() => fiatAwg?.call(this) ?? orElse(this),
+        FiatAzn() => fiatAzn?.call(this) ?? orElse(this),
+        FiatBam() => fiatBam?.call(this) ?? orElse(this),
+        FiatBbd() => fiatBbd?.call(this) ?? orElse(this),
+        FiatBdt() => fiatBdt?.call(this) ?? orElse(this),
+        FiatBgn() => fiatBgn?.call(this) ?? orElse(this),
+        FiatBhd() => fiatBhd?.call(this) ?? orElse(this),
+        FiatBif() => fiatBif?.call(this) ?? orElse(this),
+        FiatBmd() => fiatBmd?.call(this) ?? orElse(this),
+        FiatBnd() => fiatBnd?.call(this) ?? orElse(this),
+        FiatBob() => fiatBob?.call(this) ?? orElse(this),
+        FiatBrl() => fiatBrl?.call(this) ?? orElse(this),
+        FiatBsd() => fiatBsd?.call(this) ?? orElse(this),
+        FiatBtn() => fiatBtn?.call(this) ?? orElse(this),
+        FiatBwp() => fiatBwp?.call(this) ?? orElse(this),
+        FiatByn() => fiatByn?.call(this) ?? orElse(this),
+        FiatBzd() => fiatBzd?.call(this) ?? orElse(this),
+        FiatCad() => fiatCad?.call(this) ?? orElse(this),
+        FiatCdf() => fiatCdf?.call(this) ?? orElse(this),
+        FiatChf() => fiatChf?.call(this) ?? orElse(this),
+        FiatClf() => fiatClf?.call(this) ?? orElse(this),
+        FiatClp() => fiatClp?.call(this) ?? orElse(this),
+        FiatCny() => fiatCny?.call(this) ?? orElse(this),
+        FiatCop() => fiatCop?.call(this) ?? orElse(this),
+        FiatCrc() => fiatCrc?.call(this) ?? orElse(this),
+        FiatCuc() => fiatCuc?.call(this) ?? orElse(this),
+        FiatCup() => fiatCup?.call(this) ?? orElse(this),
+        FiatCve() => fiatCve?.call(this) ?? orElse(this),
+        FiatCzk() => fiatCzk?.call(this) ?? orElse(this),
+        FiatDjf() => fiatDjf?.call(this) ?? orElse(this),
+        FiatDkk() => fiatDkk?.call(this) ?? orElse(this),
+        FiatDop() => fiatDop?.call(this) ?? orElse(this),
+        FiatDzd() => fiatDzd?.call(this) ?? orElse(this),
+        FiatEgp() => fiatEgp?.call(this) ?? orElse(this),
+        FiatErn() => fiatErn?.call(this) ?? orElse(this),
+        FiatEtb() => fiatEtb?.call(this) ?? orElse(this),
+        FiatEur() => fiatEur?.call(this) ?? orElse(this),
+        FiatFjd() => fiatFjd?.call(this) ?? orElse(this),
+        FiatFkp() => fiatFkp?.call(this) ?? orElse(this),
+        FiatGbp() => fiatGbp?.call(this) ?? orElse(this),
+        FiatGel() => fiatGel?.call(this) ?? orElse(this),
+        FiatGhs() => fiatGhs?.call(this) ?? orElse(this),
+        FiatGip() => fiatGip?.call(this) ?? orElse(this),
+        FiatGmd() => fiatGmd?.call(this) ?? orElse(this),
+        FiatGnf() => fiatGnf?.call(this) ?? orElse(this),
+        FiatGtq() => fiatGtq?.call(this) ?? orElse(this),
+        FiatGyd() => fiatGyd?.call(this) ?? orElse(this),
+        FiatHkd() => fiatHkd?.call(this) ?? orElse(this),
+        FiatHnl() => fiatHnl?.call(this) ?? orElse(this),
+        FiatHrk() => fiatHrk?.call(this) ?? orElse(this),
+        FiatHtg() => fiatHtg?.call(this) ?? orElse(this),
+        FiatHuf() => fiatHuf?.call(this) ?? orElse(this),
+        FiatIdr() => fiatIdr?.call(this) ?? orElse(this),
+        FiatIls() => fiatIls?.call(this) ?? orElse(this),
+        FiatInr() => fiatInr?.call(this) ?? orElse(this),
+        FiatIqd() => fiatIqd?.call(this) ?? orElse(this),
+        FiatIrr() => fiatIrr?.call(this) ?? orElse(this),
+        FiatIsk() => fiatIsk?.call(this) ?? orElse(this),
+        FiatJmd() => fiatJmd?.call(this) ?? orElse(this),
+        FiatJod() => fiatJod?.call(this) ?? orElse(this),
+        FiatJpy() => fiatJpy?.call(this) ?? orElse(this),
+        FiatKes() => fiatKes?.call(this) ?? orElse(this),
+        FiatKgs() => fiatKgs?.call(this) ?? orElse(this),
+        FiatKhr() => fiatKhr?.call(this) ?? orElse(this),
+        FiatKmf() => fiatKmf?.call(this) ?? orElse(this),
+        FiatKpw() => fiatKpw?.call(this) ?? orElse(this),
+        FiatKrw() => fiatKrw?.call(this) ?? orElse(this),
+        FiatKwd() => fiatKwd?.call(this) ?? orElse(this),
+        FiatKyd() => fiatKyd?.call(this) ?? orElse(this),
+        FiatKzt() => fiatKzt?.call(this) ?? orElse(this),
+        FiatLak() => fiatLak?.call(this) ?? orElse(this),
+        FiatLbp() => fiatLbp?.call(this) ?? orElse(this),
+        FiatLkr() => fiatLkr?.call(this) ?? orElse(this),
+        FiatLrd() => fiatLrd?.call(this) ?? orElse(this),
+        FiatLsl() => fiatLsl?.call(this) ?? orElse(this),
+        FiatLyd() => fiatLyd?.call(this) ?? orElse(this),
+        FiatMad() => fiatMad?.call(this) ?? orElse(this),
+        FiatMdl() => fiatMdl?.call(this) ?? orElse(this),
+        FiatMga() => fiatMga?.call(this) ?? orElse(this),
+        FiatMkd() => fiatMkd?.call(this) ?? orElse(this),
+        FiatMmk() => fiatMmk?.call(this) ?? orElse(this),
+        FiatMnt() => fiatMnt?.call(this) ?? orElse(this),
+        FiatMop() => fiatMop?.call(this) ?? orElse(this),
+        FiatMru() => fiatMru?.call(this) ?? orElse(this),
+        FiatMur() => fiatMur?.call(this) ?? orElse(this),
+        FiatMvr() => fiatMvr?.call(this) ?? orElse(this),
+        FiatMwk() => fiatMwk?.call(this) ?? orElse(this),
+        FiatMxn() => fiatMxn?.call(this) ?? orElse(this),
+        FiatMyr() => fiatMyr?.call(this) ?? orElse(this),
+        FiatMzn() => fiatMzn?.call(this) ?? orElse(this),
+        FiatNad() => fiatNad?.call(this) ?? orElse(this),
+        FiatNgn() => fiatNgn?.call(this) ?? orElse(this),
+        FiatNio() => fiatNio?.call(this) ?? orElse(this),
+        FiatNok() => fiatNok?.call(this) ?? orElse(this),
+        FiatNpr() => fiatNpr?.call(this) ?? orElse(this),
+        FiatNzd() => fiatNzd?.call(this) ?? orElse(this),
+        FiatOmr() => fiatOmr?.call(this) ?? orElse(this),
+        FiatPab() => fiatPab?.call(this) ?? orElse(this),
+        FiatPen() => fiatPen?.call(this) ?? orElse(this),
+        FiatPgk() => fiatPgk?.call(this) ?? orElse(this),
+        FiatPhp() => fiatPhp?.call(this) ?? orElse(this),
+        FiatPkr() => fiatPkr?.call(this) ?? orElse(this),
+        FiatPln() => fiatPln?.call(this) ?? orElse(this),
+        FiatPyg() => fiatPyg?.call(this) ?? orElse(this),
+        FiatQar() => fiatQar?.call(this) ?? orElse(this),
+        FiatRon() => fiatRon?.call(this) ?? orElse(this),
+        FiatRsd() => fiatRsd?.call(this) ?? orElse(this),
+        FiatRub() => fiatRub?.call(this) ?? orElse(this),
+        FiatRwf() => fiatRwf?.call(this) ?? orElse(this),
+        FiatSar() => fiatSar?.call(this) ?? orElse(this),
+        FiatSbd() => fiatSbd?.call(this) ?? orElse(this),
+        FiatScr() => fiatScr?.call(this) ?? orElse(this),
+        FiatSdg() => fiatSdg?.call(this) ?? orElse(this),
+        FiatSek() => fiatSek?.call(this) ?? orElse(this),
+        FiatSgd() => fiatSgd?.call(this) ?? orElse(this),
+        FiatShp() => fiatShp?.call(this) ?? orElse(this),
+        FiatSle() => fiatSle?.call(this) ?? orElse(this),
+        FiatSll() => fiatSll?.call(this) ?? orElse(this),
+        FiatSos() => fiatSos?.call(this) ?? orElse(this),
+        FiatSrd() => fiatSrd?.call(this) ?? orElse(this),
+        FiatSsp() => fiatSsp?.call(this) ?? orElse(this),
+        FiatStn() => fiatStn?.call(this) ?? orElse(this),
+        FiatSvc() => fiatSvc?.call(this) ?? orElse(this),
+        FiatSyp() => fiatSyp?.call(this) ?? orElse(this),
+        FiatSzl() => fiatSzl?.call(this) ?? orElse(this),
+        FiatThb() => fiatThb?.call(this) ?? orElse(this),
+        FiatTjs() => fiatTjs?.call(this) ?? orElse(this),
+        FiatTmt() => fiatTmt?.call(this) ?? orElse(this),
+        FiatTnd() => fiatTnd?.call(this) ?? orElse(this),
+        FiatTop() => fiatTop?.call(this) ?? orElse(this),
+        FiatTry() => fiatTry?.call(this) ?? orElse(this),
+        FiatTtd() => fiatTtd?.call(this) ?? orElse(this),
+        FiatTwd() => fiatTwd?.call(this) ?? orElse(this),
+        FiatTzs() => fiatTzs?.call(this) ?? orElse(this),
+        FiatUah() => fiatUah?.call(this) ?? orElse(this),
+        FiatUgx() => fiatUgx?.call(this) ?? orElse(this),
+        FiatUsd() => fiatUsd?.call(this) ?? orElse(this),
+        FiatUyu() => fiatUyu?.call(this) ?? orElse(this),
+        FiatUzs() => fiatUzs?.call(this) ?? orElse(this),
+        FiatVes() => fiatVes?.call(this) ?? orElse(this),
+        FiatVnd() => fiatVnd?.call(this) ?? orElse(this),
+        FiatVuv() => fiatVuv?.call(this) ?? orElse(this),
+        FiatWst() => fiatWst?.call(this) ?? orElse(this),
+        FiatXaf() => fiatXaf?.call(this) ?? orElse(this),
+        FiatXag() => fiatXag?.call(this) ?? orElse(this),
+        FiatXau() => fiatXau?.call(this) ?? orElse(this),
+        FiatXba() => fiatXba?.call(this) ?? orElse(this),
+        FiatXbb() => fiatXbb?.call(this) ?? orElse(this),
+        FiatXbc() => fiatXbc?.call(this) ?? orElse(this),
+        FiatXbd() => fiatXbd?.call(this) ?? orElse(this),
+        FiatXcd() => fiatXcd?.call(this) ?? orElse(this),
+        FiatXdr() => fiatXdr?.call(this) ?? orElse(this),
+        FiatXof() => fiatXof?.call(this) ?? orElse(this),
+        FiatXpd() => fiatXpd?.call(this) ?? orElse(this),
+        FiatXpf() => fiatXpf?.call(this) ?? orElse(this),
+        FiatXpt() => fiatXpt?.call(this) ?? orElse(this),
+        FiatXts() => fiatXts?.call(this) ?? orElse(this),
+        FiatYer() => fiatYer?.call(this) ?? orElse(this),
+        FiatZar() => fiatZar?.call(this) ?? orElse(this),
+        FiatZwl() => fiatZwl?.call(this) ?? orElse(this),
+        FiatZmw() => fiatZmw?.call(this) ?? orElse(this),
+        _ => orElse(this),
+      };
 
   R maybeWhen<R>({
     required R Function() orElse,
@@ -1205,350 +863,179 @@ extension FiatCurrencyFunctional on FiatCurrency {
     R Function()? fiatZar,
     R Function()? fiatZwl,
     R Function()? fiatZmw,
-  }) {
-    switch (this) {
-      case FiatAed():
-        return fiatAed?.call() ?? orElse();
-      case FiatAfn():
-        return fiatAfn?.call() ?? orElse();
-      case FiatAll():
-        return fiatAll?.call() ?? orElse();
-      case FiatAmd():
-        return fiatAmd?.call() ?? orElse();
-      case FiatAng():
-        return fiatAng?.call() ?? orElse();
-      case FiatAoa():
-        return fiatAoa?.call() ?? orElse();
-      case FiatArs():
-        return fiatArs?.call() ?? orElse();
-      case FiatAud():
-        return fiatAud?.call() ?? orElse();
-      case FiatAwg():
-        return fiatAwg?.call() ?? orElse();
-      case FiatAzn():
-        return fiatAzn?.call() ?? orElse();
-      case FiatBam():
-        return fiatBam?.call() ?? orElse();
-      case FiatBbd():
-        return fiatBbd?.call() ?? orElse();
-      case FiatBdt():
-        return fiatBdt?.call() ?? orElse();
-      case FiatBgn():
-        return fiatBgn?.call() ?? orElse();
-      case FiatBhd():
-        return fiatBhd?.call() ?? orElse();
-      case FiatBif():
-        return fiatBif?.call() ?? orElse();
-      case FiatBmd():
-        return fiatBmd?.call() ?? orElse();
-      case FiatBnd():
-        return fiatBnd?.call() ?? orElse();
-      case FiatBob():
-        return fiatBob?.call() ?? orElse();
-      case FiatBrl():
-        return fiatBrl?.call() ?? orElse();
-      case FiatBsd():
-        return fiatBsd?.call() ?? orElse();
-      case FiatBtn():
-        return fiatBtn?.call() ?? orElse();
-      case FiatBwp():
-        return fiatBwp?.call() ?? orElse();
-      case FiatByn():
-        return fiatByn?.call() ?? orElse();
-      case FiatBzd():
-        return fiatBzd?.call() ?? orElse();
-      case FiatCad():
-        return fiatCad?.call() ?? orElse();
-      case FiatCdf():
-        return fiatCdf?.call() ?? orElse();
-      case FiatChf():
-        return fiatChf?.call() ?? orElse();
-      case FiatClf():
-        return fiatClf?.call() ?? orElse();
-      case FiatClp():
-        return fiatClp?.call() ?? orElse();
-      case FiatCny():
-        return fiatCny?.call() ?? orElse();
-      case FiatCop():
-        return fiatCop?.call() ?? orElse();
-      case FiatCrc():
-        return fiatCrc?.call() ?? orElse();
-      case FiatCuc():
-        return fiatCuc?.call() ?? orElse();
-      case FiatCup():
-        return fiatCup?.call() ?? orElse();
-      case FiatCve():
-        return fiatCve?.call() ?? orElse();
-      case FiatCzk():
-        return fiatCzk?.call() ?? orElse();
-      case FiatDjf():
-        return fiatDjf?.call() ?? orElse();
-      case FiatDkk():
-        return fiatDkk?.call() ?? orElse();
-      case FiatDop():
-        return fiatDop?.call() ?? orElse();
-      case FiatDzd():
-        return fiatDzd?.call() ?? orElse();
-      case FiatEgp():
-        return fiatEgp?.call() ?? orElse();
-      case FiatErn():
-        return fiatErn?.call() ?? orElse();
-      case FiatEtb():
-        return fiatEtb?.call() ?? orElse();
-      case FiatEur():
-        return fiatEur?.call() ?? orElse();
-      case FiatFjd():
-        return fiatFjd?.call() ?? orElse();
-      case FiatFkp():
-        return fiatFkp?.call() ?? orElse();
-      case FiatGbp():
-        return fiatGbp?.call() ?? orElse();
-      case FiatGel():
-        return fiatGel?.call() ?? orElse();
-      case FiatGhs():
-        return fiatGhs?.call() ?? orElse();
-      case FiatGip():
-        return fiatGip?.call() ?? orElse();
-      case FiatGmd():
-        return fiatGmd?.call() ?? orElse();
-      case FiatGnf():
-        return fiatGnf?.call() ?? orElse();
-      case FiatGtq():
-        return fiatGtq?.call() ?? orElse();
-      case FiatGyd():
-        return fiatGyd?.call() ?? orElse();
-      case FiatHkd():
-        return fiatHkd?.call() ?? orElse();
-      case FiatHnl():
-        return fiatHnl?.call() ?? orElse();
-      case FiatHrk():
-        return fiatHrk?.call() ?? orElse();
-      case FiatHtg():
-        return fiatHtg?.call() ?? orElse();
-      case FiatHuf():
-        return fiatHuf?.call() ?? orElse();
-      case FiatIdr():
-        return fiatIdr?.call() ?? orElse();
-      case FiatIls():
-        return fiatIls?.call() ?? orElse();
-      case FiatInr():
-        return fiatInr?.call() ?? orElse();
-      case FiatIqd():
-        return fiatIqd?.call() ?? orElse();
-      case FiatIrr():
-        return fiatIrr?.call() ?? orElse();
-      case FiatIsk():
-        return fiatIsk?.call() ?? orElse();
-      case FiatJmd():
-        return fiatJmd?.call() ?? orElse();
-      case FiatJod():
-        return fiatJod?.call() ?? orElse();
-      case FiatJpy():
-        return fiatJpy?.call() ?? orElse();
-      case FiatKes():
-        return fiatKes?.call() ?? orElse();
-      case FiatKgs():
-        return fiatKgs?.call() ?? orElse();
-      case FiatKhr():
-        return fiatKhr?.call() ?? orElse();
-      case FiatKmf():
-        return fiatKmf?.call() ?? orElse();
-      case FiatKpw():
-        return fiatKpw?.call() ?? orElse();
-      case FiatKrw():
-        return fiatKrw?.call() ?? orElse();
-      case FiatKwd():
-        return fiatKwd?.call() ?? orElse();
-      case FiatKyd():
-        return fiatKyd?.call() ?? orElse();
-      case FiatKzt():
-        return fiatKzt?.call() ?? orElse();
-      case FiatLak():
-        return fiatLak?.call() ?? orElse();
-      case FiatLbp():
-        return fiatLbp?.call() ?? orElse();
-      case FiatLkr():
-        return fiatLkr?.call() ?? orElse();
-      case FiatLrd():
-        return fiatLrd?.call() ?? orElse();
-      case FiatLsl():
-        return fiatLsl?.call() ?? orElse();
-      case FiatLyd():
-        return fiatLyd?.call() ?? orElse();
-      case FiatMad():
-        return fiatMad?.call() ?? orElse();
-      case FiatMdl():
-        return fiatMdl?.call() ?? orElse();
-      case FiatMga():
-        return fiatMga?.call() ?? orElse();
-      case FiatMkd():
-        return fiatMkd?.call() ?? orElse();
-      case FiatMmk():
-        return fiatMmk?.call() ?? orElse();
-      case FiatMnt():
-        return fiatMnt?.call() ?? orElse();
-      case FiatMop():
-        return fiatMop?.call() ?? orElse();
-      case FiatMru():
-        return fiatMru?.call() ?? orElse();
-      case FiatMur():
-        return fiatMur?.call() ?? orElse();
-      case FiatMvr():
-        return fiatMvr?.call() ?? orElse();
-      case FiatMwk():
-        return fiatMwk?.call() ?? orElse();
-      case FiatMxn():
-        return fiatMxn?.call() ?? orElse();
-      case FiatMyr():
-        return fiatMyr?.call() ?? orElse();
-      case FiatMzn():
-        return fiatMzn?.call() ?? orElse();
-      case FiatNad():
-        return fiatNad?.call() ?? orElse();
-      case FiatNgn():
-        return fiatNgn?.call() ?? orElse();
-      case FiatNio():
-        return fiatNio?.call() ?? orElse();
-      case FiatNok():
-        return fiatNok?.call() ?? orElse();
-      case FiatNpr():
-        return fiatNpr?.call() ?? orElse();
-      case FiatNzd():
-        return fiatNzd?.call() ?? orElse();
-      case FiatOmr():
-        return fiatOmr?.call() ?? orElse();
-      case FiatPab():
-        return fiatPab?.call() ?? orElse();
-      case FiatPen():
-        return fiatPen?.call() ?? orElse();
-      case FiatPgk():
-        return fiatPgk?.call() ?? orElse();
-      case FiatPhp():
-        return fiatPhp?.call() ?? orElse();
-      case FiatPkr():
-        return fiatPkr?.call() ?? orElse();
-      case FiatPln():
-        return fiatPln?.call() ?? orElse();
-      case FiatPyg():
-        return fiatPyg?.call() ?? orElse();
-      case FiatQar():
-        return fiatQar?.call() ?? orElse();
-      case FiatRon():
-        return fiatRon?.call() ?? orElse();
-      case FiatRsd():
-        return fiatRsd?.call() ?? orElse();
-      case FiatRub():
-        return fiatRub?.call() ?? orElse();
-      case FiatRwf():
-        return fiatRwf?.call() ?? orElse();
-      case FiatSar():
-        return fiatSar?.call() ?? orElse();
-      case FiatSbd():
-        return fiatSbd?.call() ?? orElse();
-      case FiatScr():
-        return fiatScr?.call() ?? orElse();
-      case FiatSdg():
-        return fiatSdg?.call() ?? orElse();
-      case FiatSek():
-        return fiatSek?.call() ?? orElse();
-      case FiatSgd():
-        return fiatSgd?.call() ?? orElse();
-      case FiatShp():
-        return fiatShp?.call() ?? orElse();
-      case FiatSle():
-        return fiatSle?.call() ?? orElse();
-      case FiatSll():
-        return fiatSll?.call() ?? orElse();
-      case FiatSos():
-        return fiatSos?.call() ?? orElse();
-      case FiatSrd():
-        return fiatSrd?.call() ?? orElse();
-      case FiatSsp():
-        return fiatSsp?.call() ?? orElse();
-      case FiatStn():
-        return fiatStn?.call() ?? orElse();
-      case FiatSvc():
-        return fiatSvc?.call() ?? orElse();
-      case FiatSyp():
-        return fiatSyp?.call() ?? orElse();
-      case FiatSzl():
-        return fiatSzl?.call() ?? orElse();
-      case FiatThb():
-        return fiatThb?.call() ?? orElse();
-      case FiatTjs():
-        return fiatTjs?.call() ?? orElse();
-      case FiatTmt():
-        return fiatTmt?.call() ?? orElse();
-      case FiatTnd():
-        return fiatTnd?.call() ?? orElse();
-      case FiatTop():
-        return fiatTop?.call() ?? orElse();
-      case FiatTry():
-        return fiatTry?.call() ?? orElse();
-      case FiatTtd():
-        return fiatTtd?.call() ?? orElse();
-      case FiatTwd():
-        return fiatTwd?.call() ?? orElse();
-      case FiatTzs():
-        return fiatTzs?.call() ?? orElse();
-      case FiatUah():
-        return fiatUah?.call() ?? orElse();
-      case FiatUgx():
-        return fiatUgx?.call() ?? orElse();
-      case FiatUsd():
-        return fiatUsd?.call() ?? orElse();
-      case FiatUyu():
-        return fiatUyu?.call() ?? orElse();
-      case FiatUzs():
-        return fiatUzs?.call() ?? orElse();
-      case FiatVes():
-        return fiatVes?.call() ?? orElse();
-      case FiatVnd():
-        return fiatVnd?.call() ?? orElse();
-      case FiatVuv():
-        return fiatVuv?.call() ?? orElse();
-      case FiatWst():
-        return fiatWst?.call() ?? orElse();
-      case FiatXaf():
-        return fiatXaf?.call() ?? orElse();
-      case FiatXag():
-        return fiatXag?.call() ?? orElse();
-      case FiatXau():
-        return fiatXau?.call() ?? orElse();
-      case FiatXba():
-        return fiatXba?.call() ?? orElse();
-      case FiatXbb():
-        return fiatXbb?.call() ?? orElse();
-      case FiatXbc():
-        return fiatXbc?.call() ?? orElse();
-      case FiatXbd():
-        return fiatXbd?.call() ?? orElse();
-      case FiatXcd():
-        return fiatXcd?.call() ?? orElse();
-      case FiatXdr():
-        return fiatXdr?.call() ?? orElse();
-      case FiatXof():
-        return fiatXof?.call() ?? orElse();
-      case FiatXpd():
-        return fiatXpd?.call() ?? orElse();
-      case FiatXpf():
-        return fiatXpf?.call() ?? orElse();
-      case FiatXpt():
-        return fiatXpt?.call() ?? orElse();
-      case FiatXts():
-        return fiatXts?.call() ?? orElse();
-      case FiatYer():
-        return fiatYer?.call() ?? orElse();
-      case FiatZar():
-        return fiatZar?.call() ?? orElse();
-      case FiatZwl():
-        return fiatZwl?.call() ?? orElse();
-      case FiatZmw():
-        return fiatZmw?.call() ?? orElse();
-      default:
-        return orElse();
-    }
-  }
+  }) =>
+      switch (this) {
+        FiatAed() => fiatAed?.call() ?? orElse(),
+        FiatAfn() => fiatAfn?.call() ?? orElse(),
+        FiatAll() => fiatAll?.call() ?? orElse(),
+        FiatAmd() => fiatAmd?.call() ?? orElse(),
+        FiatAng() => fiatAng?.call() ?? orElse(),
+        FiatAoa() => fiatAoa?.call() ?? orElse(),
+        FiatArs() => fiatArs?.call() ?? orElse(),
+        FiatAud() => fiatAud?.call() ?? orElse(),
+        FiatAwg() => fiatAwg?.call() ?? orElse(),
+        FiatAzn() => fiatAzn?.call() ?? orElse(),
+        FiatBam() => fiatBam?.call() ?? orElse(),
+        FiatBbd() => fiatBbd?.call() ?? orElse(),
+        FiatBdt() => fiatBdt?.call() ?? orElse(),
+        FiatBgn() => fiatBgn?.call() ?? orElse(),
+        FiatBhd() => fiatBhd?.call() ?? orElse(),
+        FiatBif() => fiatBif?.call() ?? orElse(),
+        FiatBmd() => fiatBmd?.call() ?? orElse(),
+        FiatBnd() => fiatBnd?.call() ?? orElse(),
+        FiatBob() => fiatBob?.call() ?? orElse(),
+        FiatBrl() => fiatBrl?.call() ?? orElse(),
+        FiatBsd() => fiatBsd?.call() ?? orElse(),
+        FiatBtn() => fiatBtn?.call() ?? orElse(),
+        FiatBwp() => fiatBwp?.call() ?? orElse(),
+        FiatByn() => fiatByn?.call() ?? orElse(),
+        FiatBzd() => fiatBzd?.call() ?? orElse(),
+        FiatCad() => fiatCad?.call() ?? orElse(),
+        FiatCdf() => fiatCdf?.call() ?? orElse(),
+        FiatChf() => fiatChf?.call() ?? orElse(),
+        FiatClf() => fiatClf?.call() ?? orElse(),
+        FiatClp() => fiatClp?.call() ?? orElse(),
+        FiatCny() => fiatCny?.call() ?? orElse(),
+        FiatCop() => fiatCop?.call() ?? orElse(),
+        FiatCrc() => fiatCrc?.call() ?? orElse(),
+        FiatCuc() => fiatCuc?.call() ?? orElse(),
+        FiatCup() => fiatCup?.call() ?? orElse(),
+        FiatCve() => fiatCve?.call() ?? orElse(),
+        FiatCzk() => fiatCzk?.call() ?? orElse(),
+        FiatDjf() => fiatDjf?.call() ?? orElse(),
+        FiatDkk() => fiatDkk?.call() ?? orElse(),
+        FiatDop() => fiatDop?.call() ?? orElse(),
+        FiatDzd() => fiatDzd?.call() ?? orElse(),
+        FiatEgp() => fiatEgp?.call() ?? orElse(),
+        FiatErn() => fiatErn?.call() ?? orElse(),
+        FiatEtb() => fiatEtb?.call() ?? orElse(),
+        FiatEur() => fiatEur?.call() ?? orElse(),
+        FiatFjd() => fiatFjd?.call() ?? orElse(),
+        FiatFkp() => fiatFkp?.call() ?? orElse(),
+        FiatGbp() => fiatGbp?.call() ?? orElse(),
+        FiatGel() => fiatGel?.call() ?? orElse(),
+        FiatGhs() => fiatGhs?.call() ?? orElse(),
+        FiatGip() => fiatGip?.call() ?? orElse(),
+        FiatGmd() => fiatGmd?.call() ?? orElse(),
+        FiatGnf() => fiatGnf?.call() ?? orElse(),
+        FiatGtq() => fiatGtq?.call() ?? orElse(),
+        FiatGyd() => fiatGyd?.call() ?? orElse(),
+        FiatHkd() => fiatHkd?.call() ?? orElse(),
+        FiatHnl() => fiatHnl?.call() ?? orElse(),
+        FiatHrk() => fiatHrk?.call() ?? orElse(),
+        FiatHtg() => fiatHtg?.call() ?? orElse(),
+        FiatHuf() => fiatHuf?.call() ?? orElse(),
+        FiatIdr() => fiatIdr?.call() ?? orElse(),
+        FiatIls() => fiatIls?.call() ?? orElse(),
+        FiatInr() => fiatInr?.call() ?? orElse(),
+        FiatIqd() => fiatIqd?.call() ?? orElse(),
+        FiatIrr() => fiatIrr?.call() ?? orElse(),
+        FiatIsk() => fiatIsk?.call() ?? orElse(),
+        FiatJmd() => fiatJmd?.call() ?? orElse(),
+        FiatJod() => fiatJod?.call() ?? orElse(),
+        FiatJpy() => fiatJpy?.call() ?? orElse(),
+        FiatKes() => fiatKes?.call() ?? orElse(),
+        FiatKgs() => fiatKgs?.call() ?? orElse(),
+        FiatKhr() => fiatKhr?.call() ?? orElse(),
+        FiatKmf() => fiatKmf?.call() ?? orElse(),
+        FiatKpw() => fiatKpw?.call() ?? orElse(),
+        FiatKrw() => fiatKrw?.call() ?? orElse(),
+        FiatKwd() => fiatKwd?.call() ?? orElse(),
+        FiatKyd() => fiatKyd?.call() ?? orElse(),
+        FiatKzt() => fiatKzt?.call() ?? orElse(),
+        FiatLak() => fiatLak?.call() ?? orElse(),
+        FiatLbp() => fiatLbp?.call() ?? orElse(),
+        FiatLkr() => fiatLkr?.call() ?? orElse(),
+        FiatLrd() => fiatLrd?.call() ?? orElse(),
+        FiatLsl() => fiatLsl?.call() ?? orElse(),
+        FiatLyd() => fiatLyd?.call() ?? orElse(),
+        FiatMad() => fiatMad?.call() ?? orElse(),
+        FiatMdl() => fiatMdl?.call() ?? orElse(),
+        FiatMga() => fiatMga?.call() ?? orElse(),
+        FiatMkd() => fiatMkd?.call() ?? orElse(),
+        FiatMmk() => fiatMmk?.call() ?? orElse(),
+        FiatMnt() => fiatMnt?.call() ?? orElse(),
+        FiatMop() => fiatMop?.call() ?? orElse(),
+        FiatMru() => fiatMru?.call() ?? orElse(),
+        FiatMur() => fiatMur?.call() ?? orElse(),
+        FiatMvr() => fiatMvr?.call() ?? orElse(),
+        FiatMwk() => fiatMwk?.call() ?? orElse(),
+        FiatMxn() => fiatMxn?.call() ?? orElse(),
+        FiatMyr() => fiatMyr?.call() ?? orElse(),
+        FiatMzn() => fiatMzn?.call() ?? orElse(),
+        FiatNad() => fiatNad?.call() ?? orElse(),
+        FiatNgn() => fiatNgn?.call() ?? orElse(),
+        FiatNio() => fiatNio?.call() ?? orElse(),
+        FiatNok() => fiatNok?.call() ?? orElse(),
+        FiatNpr() => fiatNpr?.call() ?? orElse(),
+        FiatNzd() => fiatNzd?.call() ?? orElse(),
+        FiatOmr() => fiatOmr?.call() ?? orElse(),
+        FiatPab() => fiatPab?.call() ?? orElse(),
+        FiatPen() => fiatPen?.call() ?? orElse(),
+        FiatPgk() => fiatPgk?.call() ?? orElse(),
+        FiatPhp() => fiatPhp?.call() ?? orElse(),
+        FiatPkr() => fiatPkr?.call() ?? orElse(),
+        FiatPln() => fiatPln?.call() ?? orElse(),
+        FiatPyg() => fiatPyg?.call() ?? orElse(),
+        FiatQar() => fiatQar?.call() ?? orElse(),
+        FiatRon() => fiatRon?.call() ?? orElse(),
+        FiatRsd() => fiatRsd?.call() ?? orElse(),
+        FiatRub() => fiatRub?.call() ?? orElse(),
+        FiatRwf() => fiatRwf?.call() ?? orElse(),
+        FiatSar() => fiatSar?.call() ?? orElse(),
+        FiatSbd() => fiatSbd?.call() ?? orElse(),
+        FiatScr() => fiatScr?.call() ?? orElse(),
+        FiatSdg() => fiatSdg?.call() ?? orElse(),
+        FiatSek() => fiatSek?.call() ?? orElse(),
+        FiatSgd() => fiatSgd?.call() ?? orElse(),
+        FiatShp() => fiatShp?.call() ?? orElse(),
+        FiatSle() => fiatSle?.call() ?? orElse(),
+        FiatSll() => fiatSll?.call() ?? orElse(),
+        FiatSos() => fiatSos?.call() ?? orElse(),
+        FiatSrd() => fiatSrd?.call() ?? orElse(),
+        FiatSsp() => fiatSsp?.call() ?? orElse(),
+        FiatStn() => fiatStn?.call() ?? orElse(),
+        FiatSvc() => fiatSvc?.call() ?? orElse(),
+        FiatSyp() => fiatSyp?.call() ?? orElse(),
+        FiatSzl() => fiatSzl?.call() ?? orElse(),
+        FiatThb() => fiatThb?.call() ?? orElse(),
+        FiatTjs() => fiatTjs?.call() ?? orElse(),
+        FiatTmt() => fiatTmt?.call() ?? orElse(),
+        FiatTnd() => fiatTnd?.call() ?? orElse(),
+        FiatTop() => fiatTop?.call() ?? orElse(),
+        FiatTry() => fiatTry?.call() ?? orElse(),
+        FiatTtd() => fiatTtd?.call() ?? orElse(),
+        FiatTwd() => fiatTwd?.call() ?? orElse(),
+        FiatTzs() => fiatTzs?.call() ?? orElse(),
+        FiatUah() => fiatUah?.call() ?? orElse(),
+        FiatUgx() => fiatUgx?.call() ?? orElse(),
+        FiatUsd() => fiatUsd?.call() ?? orElse(),
+        FiatUyu() => fiatUyu?.call() ?? orElse(),
+        FiatUzs() => fiatUzs?.call() ?? orElse(),
+        FiatVes() => fiatVes?.call() ?? orElse(),
+        FiatVnd() => fiatVnd?.call() ?? orElse(),
+        FiatVuv() => fiatVuv?.call() ?? orElse(),
+        FiatWst() => fiatWst?.call() ?? orElse(),
+        FiatXaf() => fiatXaf?.call() ?? orElse(),
+        FiatXag() => fiatXag?.call() ?? orElse(),
+        FiatXau() => fiatXau?.call() ?? orElse(),
+        FiatXba() => fiatXba?.call() ?? orElse(),
+        FiatXbb() => fiatXbb?.call() ?? orElse(),
+        FiatXbc() => fiatXbc?.call() ?? orElse(),
+        FiatXbd() => fiatXbd?.call() ?? orElse(),
+        FiatXcd() => fiatXcd?.call() ?? orElse(),
+        FiatXdr() => fiatXdr?.call() ?? orElse(),
+        FiatXof() => fiatXof?.call() ?? orElse(),
+        FiatXpd() => fiatXpd?.call() ?? orElse(),
+        FiatXpf() => fiatXpf?.call() ?? orElse(),
+        FiatXpt() => fiatXpt?.call() ?? orElse(),
+        FiatXts() => fiatXts?.call() ?? orElse(),
+        FiatYer() => fiatYer?.call() ?? orElse(),
+        FiatZar() => fiatZar?.call() ?? orElse(),
+        FiatZwl() => fiatZwl?.call() ?? orElse(),
+        FiatZmw() => fiatZmw?.call() ?? orElse(),
+        _ => orElse(),
+      };
 
   R when<R>({
     required R Function() fiatAed,
@@ -1720,350 +1207,179 @@ extension FiatCurrencyFunctional on FiatCurrency {
     required R Function() fiatZar,
     required R Function() fiatZwl,
     required R Function() fiatZmw,
-  }) {
-    switch (this) {
-      case FiatAed():
-        return fiatAed();
-      case FiatAfn():
-        return fiatAfn();
-      case FiatAll():
-        return fiatAll();
-      case FiatAmd():
-        return fiatAmd();
-      case FiatAng():
-        return fiatAng();
-      case FiatAoa():
-        return fiatAoa();
-      case FiatArs():
-        return fiatArs();
-      case FiatAud():
-        return fiatAud();
-      case FiatAwg():
-        return fiatAwg();
-      case FiatAzn():
-        return fiatAzn();
-      case FiatBam():
-        return fiatBam();
-      case FiatBbd():
-        return fiatBbd();
-      case FiatBdt():
-        return fiatBdt();
-      case FiatBgn():
-        return fiatBgn();
-      case FiatBhd():
-        return fiatBhd();
-      case FiatBif():
-        return fiatBif();
-      case FiatBmd():
-        return fiatBmd();
-      case FiatBnd():
-        return fiatBnd();
-      case FiatBob():
-        return fiatBob();
-      case FiatBrl():
-        return fiatBrl();
-      case FiatBsd():
-        return fiatBsd();
-      case FiatBtn():
-        return fiatBtn();
-      case FiatBwp():
-        return fiatBwp();
-      case FiatByn():
-        return fiatByn();
-      case FiatBzd():
-        return fiatBzd();
-      case FiatCad():
-        return fiatCad();
-      case FiatCdf():
-        return fiatCdf();
-      case FiatChf():
-        return fiatChf();
-      case FiatClf():
-        return fiatClf();
-      case FiatClp():
-        return fiatClp();
-      case FiatCny():
-        return fiatCny();
-      case FiatCop():
-        return fiatCop();
-      case FiatCrc():
-        return fiatCrc();
-      case FiatCuc():
-        return fiatCuc();
-      case FiatCup():
-        return fiatCup();
-      case FiatCve():
-        return fiatCve();
-      case FiatCzk():
-        return fiatCzk();
-      case FiatDjf():
-        return fiatDjf();
-      case FiatDkk():
-        return fiatDkk();
-      case FiatDop():
-        return fiatDop();
-      case FiatDzd():
-        return fiatDzd();
-      case FiatEgp():
-        return fiatEgp();
-      case FiatErn():
-        return fiatErn();
-      case FiatEtb():
-        return fiatEtb();
-      case FiatEur():
-        return fiatEur();
-      case FiatFjd():
-        return fiatFjd();
-      case FiatFkp():
-        return fiatFkp();
-      case FiatGbp():
-        return fiatGbp();
-      case FiatGel():
-        return fiatGel();
-      case FiatGhs():
-        return fiatGhs();
-      case FiatGip():
-        return fiatGip();
-      case FiatGmd():
-        return fiatGmd();
-      case FiatGnf():
-        return fiatGnf();
-      case FiatGtq():
-        return fiatGtq();
-      case FiatGyd():
-        return fiatGyd();
-      case FiatHkd():
-        return fiatHkd();
-      case FiatHnl():
-        return fiatHnl();
-      case FiatHrk():
-        return fiatHrk();
-      case FiatHtg():
-        return fiatHtg();
-      case FiatHuf():
-        return fiatHuf();
-      case FiatIdr():
-        return fiatIdr();
-      case FiatIls():
-        return fiatIls();
-      case FiatInr():
-        return fiatInr();
-      case FiatIqd():
-        return fiatIqd();
-      case FiatIrr():
-        return fiatIrr();
-      case FiatIsk():
-        return fiatIsk();
-      case FiatJmd():
-        return fiatJmd();
-      case FiatJod():
-        return fiatJod();
-      case FiatJpy():
-        return fiatJpy();
-      case FiatKes():
-        return fiatKes();
-      case FiatKgs():
-        return fiatKgs();
-      case FiatKhr():
-        return fiatKhr();
-      case FiatKmf():
-        return fiatKmf();
-      case FiatKpw():
-        return fiatKpw();
-      case FiatKrw():
-        return fiatKrw();
-      case FiatKwd():
-        return fiatKwd();
-      case FiatKyd():
-        return fiatKyd();
-      case FiatKzt():
-        return fiatKzt();
-      case FiatLak():
-        return fiatLak();
-      case FiatLbp():
-        return fiatLbp();
-      case FiatLkr():
-        return fiatLkr();
-      case FiatLrd():
-        return fiatLrd();
-      case FiatLsl():
-        return fiatLsl();
-      case FiatLyd():
-        return fiatLyd();
-      case FiatMad():
-        return fiatMad();
-      case FiatMdl():
-        return fiatMdl();
-      case FiatMga():
-        return fiatMga();
-      case FiatMkd():
-        return fiatMkd();
-      case FiatMmk():
-        return fiatMmk();
-      case FiatMnt():
-        return fiatMnt();
-      case FiatMop():
-        return fiatMop();
-      case FiatMru():
-        return fiatMru();
-      case FiatMur():
-        return fiatMur();
-      case FiatMvr():
-        return fiatMvr();
-      case FiatMwk():
-        return fiatMwk();
-      case FiatMxn():
-        return fiatMxn();
-      case FiatMyr():
-        return fiatMyr();
-      case FiatMzn():
-        return fiatMzn();
-      case FiatNad():
-        return fiatNad();
-      case FiatNgn():
-        return fiatNgn();
-      case FiatNio():
-        return fiatNio();
-      case FiatNok():
-        return fiatNok();
-      case FiatNpr():
-        return fiatNpr();
-      case FiatNzd():
-        return fiatNzd();
-      case FiatOmr():
-        return fiatOmr();
-      case FiatPab():
-        return fiatPab();
-      case FiatPen():
-        return fiatPen();
-      case FiatPgk():
-        return fiatPgk();
-      case FiatPhp():
-        return fiatPhp();
-      case FiatPkr():
-        return fiatPkr();
-      case FiatPln():
-        return fiatPln();
-      case FiatPyg():
-        return fiatPyg();
-      case FiatQar():
-        return fiatQar();
-      case FiatRon():
-        return fiatRon();
-      case FiatRsd():
-        return fiatRsd();
-      case FiatRub():
-        return fiatRub();
-      case FiatRwf():
-        return fiatRwf();
-      case FiatSar():
-        return fiatSar();
-      case FiatSbd():
-        return fiatSbd();
-      case FiatScr():
-        return fiatScr();
-      case FiatSdg():
-        return fiatSdg();
-      case FiatSek():
-        return fiatSek();
-      case FiatSgd():
-        return fiatSgd();
-      case FiatShp():
-        return fiatShp();
-      case FiatSle():
-        return fiatSle();
-      case FiatSll():
-        return fiatSll();
-      case FiatSos():
-        return fiatSos();
-      case FiatSrd():
-        return fiatSrd();
-      case FiatSsp():
-        return fiatSsp();
-      case FiatStn():
-        return fiatStn();
-      case FiatSvc():
-        return fiatSvc();
-      case FiatSyp():
-        return fiatSyp();
-      case FiatSzl():
-        return fiatSzl();
-      case FiatThb():
-        return fiatThb();
-      case FiatTjs():
-        return fiatTjs();
-      case FiatTmt():
-        return fiatTmt();
-      case FiatTnd():
-        return fiatTnd();
-      case FiatTop():
-        return fiatTop();
-      case FiatTry():
-        return fiatTry();
-      case FiatTtd():
-        return fiatTtd();
-      case FiatTwd():
-        return fiatTwd();
-      case FiatTzs():
-        return fiatTzs();
-      case FiatUah():
-        return fiatUah();
-      case FiatUgx():
-        return fiatUgx();
-      case FiatUsd():
-        return fiatUsd();
-      case FiatUyu():
-        return fiatUyu();
-      case FiatUzs():
-        return fiatUzs();
-      case FiatVes():
-        return fiatVes();
-      case FiatVnd():
-        return fiatVnd();
-      case FiatVuv():
-        return fiatVuv();
-      case FiatWst():
-        return fiatWst();
-      case FiatXaf():
-        return fiatXaf();
-      case FiatXag():
-        return fiatXag();
-      case FiatXau():
-        return fiatXau();
-      case FiatXba():
-        return fiatXba();
-      case FiatXbb():
-        return fiatXbb();
-      case FiatXbc():
-        return fiatXbc();
-      case FiatXbd():
-        return fiatXbd();
-      case FiatXcd():
-        return fiatXcd();
-      case FiatXdr():
-        return fiatXdr();
-      case FiatXof():
-        return fiatXof();
-      case FiatXpd():
-        return fiatXpd();
-      case FiatXpf():
-        return fiatXpf();
-      case FiatXpt():
-        return fiatXpt();
-      case FiatXts():
-        return fiatXts();
-      case FiatYer():
-        return fiatYer();
-      case FiatZar():
-        return fiatZar();
-      case FiatZwl():
-        return fiatZwl();
-      case FiatZmw():
-        return fiatZmw();
-      default:
-        throw ArgumentError("Unknown value: $this", name);
-    }
-  }
+  }) =>
+      switch (this) {
+        FiatAed() => fiatAed(),
+        FiatAfn() => fiatAfn(),
+        FiatAll() => fiatAll(),
+        FiatAmd() => fiatAmd(),
+        FiatAng() => fiatAng(),
+        FiatAoa() => fiatAoa(),
+        FiatArs() => fiatArs(),
+        FiatAud() => fiatAud(),
+        FiatAwg() => fiatAwg(),
+        FiatAzn() => fiatAzn(),
+        FiatBam() => fiatBam(),
+        FiatBbd() => fiatBbd(),
+        FiatBdt() => fiatBdt(),
+        FiatBgn() => fiatBgn(),
+        FiatBhd() => fiatBhd(),
+        FiatBif() => fiatBif(),
+        FiatBmd() => fiatBmd(),
+        FiatBnd() => fiatBnd(),
+        FiatBob() => fiatBob(),
+        FiatBrl() => fiatBrl(),
+        FiatBsd() => fiatBsd(),
+        FiatBtn() => fiatBtn(),
+        FiatBwp() => fiatBwp(),
+        FiatByn() => fiatByn(),
+        FiatBzd() => fiatBzd(),
+        FiatCad() => fiatCad(),
+        FiatCdf() => fiatCdf(),
+        FiatChf() => fiatChf(),
+        FiatClf() => fiatClf(),
+        FiatClp() => fiatClp(),
+        FiatCny() => fiatCny(),
+        FiatCop() => fiatCop(),
+        FiatCrc() => fiatCrc(),
+        FiatCuc() => fiatCuc(),
+        FiatCup() => fiatCup(),
+        FiatCve() => fiatCve(),
+        FiatCzk() => fiatCzk(),
+        FiatDjf() => fiatDjf(),
+        FiatDkk() => fiatDkk(),
+        FiatDop() => fiatDop(),
+        FiatDzd() => fiatDzd(),
+        FiatEgp() => fiatEgp(),
+        FiatErn() => fiatErn(),
+        FiatEtb() => fiatEtb(),
+        FiatEur() => fiatEur(),
+        FiatFjd() => fiatFjd(),
+        FiatFkp() => fiatFkp(),
+        FiatGbp() => fiatGbp(),
+        FiatGel() => fiatGel(),
+        FiatGhs() => fiatGhs(),
+        FiatGip() => fiatGip(),
+        FiatGmd() => fiatGmd(),
+        FiatGnf() => fiatGnf(),
+        FiatGtq() => fiatGtq(),
+        FiatGyd() => fiatGyd(),
+        FiatHkd() => fiatHkd(),
+        FiatHnl() => fiatHnl(),
+        FiatHrk() => fiatHrk(),
+        FiatHtg() => fiatHtg(),
+        FiatHuf() => fiatHuf(),
+        FiatIdr() => fiatIdr(),
+        FiatIls() => fiatIls(),
+        FiatInr() => fiatInr(),
+        FiatIqd() => fiatIqd(),
+        FiatIrr() => fiatIrr(),
+        FiatIsk() => fiatIsk(),
+        FiatJmd() => fiatJmd(),
+        FiatJod() => fiatJod(),
+        FiatJpy() => fiatJpy(),
+        FiatKes() => fiatKes(),
+        FiatKgs() => fiatKgs(),
+        FiatKhr() => fiatKhr(),
+        FiatKmf() => fiatKmf(),
+        FiatKpw() => fiatKpw(),
+        FiatKrw() => fiatKrw(),
+        FiatKwd() => fiatKwd(),
+        FiatKyd() => fiatKyd(),
+        FiatKzt() => fiatKzt(),
+        FiatLak() => fiatLak(),
+        FiatLbp() => fiatLbp(),
+        FiatLkr() => fiatLkr(),
+        FiatLrd() => fiatLrd(),
+        FiatLsl() => fiatLsl(),
+        FiatLyd() => fiatLyd(),
+        FiatMad() => fiatMad(),
+        FiatMdl() => fiatMdl(),
+        FiatMga() => fiatMga(),
+        FiatMkd() => fiatMkd(),
+        FiatMmk() => fiatMmk(),
+        FiatMnt() => fiatMnt(),
+        FiatMop() => fiatMop(),
+        FiatMru() => fiatMru(),
+        FiatMur() => fiatMur(),
+        FiatMvr() => fiatMvr(),
+        FiatMwk() => fiatMwk(),
+        FiatMxn() => fiatMxn(),
+        FiatMyr() => fiatMyr(),
+        FiatMzn() => fiatMzn(),
+        FiatNad() => fiatNad(),
+        FiatNgn() => fiatNgn(),
+        FiatNio() => fiatNio(),
+        FiatNok() => fiatNok(),
+        FiatNpr() => fiatNpr(),
+        FiatNzd() => fiatNzd(),
+        FiatOmr() => fiatOmr(),
+        FiatPab() => fiatPab(),
+        FiatPen() => fiatPen(),
+        FiatPgk() => fiatPgk(),
+        FiatPhp() => fiatPhp(),
+        FiatPkr() => fiatPkr(),
+        FiatPln() => fiatPln(),
+        FiatPyg() => fiatPyg(),
+        FiatQar() => fiatQar(),
+        FiatRon() => fiatRon(),
+        FiatRsd() => fiatRsd(),
+        FiatRub() => fiatRub(),
+        FiatRwf() => fiatRwf(),
+        FiatSar() => fiatSar(),
+        FiatSbd() => fiatSbd(),
+        FiatScr() => fiatScr(),
+        FiatSdg() => fiatSdg(),
+        FiatSek() => fiatSek(),
+        FiatSgd() => fiatSgd(),
+        FiatShp() => fiatShp(),
+        FiatSle() => fiatSle(),
+        FiatSll() => fiatSll(),
+        FiatSos() => fiatSos(),
+        FiatSrd() => fiatSrd(),
+        FiatSsp() => fiatSsp(),
+        FiatStn() => fiatStn(),
+        FiatSvc() => fiatSvc(),
+        FiatSyp() => fiatSyp(),
+        FiatSzl() => fiatSzl(),
+        FiatThb() => fiatThb(),
+        FiatTjs() => fiatTjs(),
+        FiatTmt() => fiatTmt(),
+        FiatTnd() => fiatTnd(),
+        FiatTop() => fiatTop(),
+        FiatTry() => fiatTry(),
+        FiatTtd() => fiatTtd(),
+        FiatTwd() => fiatTwd(),
+        FiatTzs() => fiatTzs(),
+        FiatUah() => fiatUah(),
+        FiatUgx() => fiatUgx(),
+        FiatUsd() => fiatUsd(),
+        FiatUyu() => fiatUyu(),
+        FiatUzs() => fiatUzs(),
+        FiatVes() => fiatVes(),
+        FiatVnd() => fiatVnd(),
+        FiatVuv() => fiatVuv(),
+        FiatWst() => fiatWst(),
+        FiatXaf() => fiatXaf(),
+        FiatXag() => fiatXag(),
+        FiatXau() => fiatXau(),
+        FiatXba() => fiatXba(),
+        FiatXbb() => fiatXbb(),
+        FiatXbc() => fiatXbc(),
+        FiatXbd() => fiatXbd(),
+        FiatXcd() => fiatXcd(),
+        FiatXdr() => fiatXdr(),
+        FiatXof() => fiatXof(),
+        FiatXpd() => fiatXpd(),
+        FiatXpf() => fiatXpf(),
+        FiatXpt() => fiatXpt(),
+        FiatXts() => fiatXts(),
+        FiatYer() => fiatYer(),
+        FiatZar() => fiatZar(),
+        FiatZwl() => fiatZwl(),
+        FiatZmw() => fiatZmw(),
+        _ => throw ArgumentError("Unknown value: $this", name),
+      };
 
   R? whenOrNull<R>({
     R Function()? fiatAed,
@@ -2236,348 +1552,177 @@ extension FiatCurrencyFunctional on FiatCurrency {
     R Function()? fiatZwl,
     R Function()? fiatZmw,
     R Function()? orElse,
-  }) {
-    switch (this) {
-      case FiatAed():
-        return fiatAed?.call() ?? orElse?.call();
-      case FiatAfn():
-        return fiatAfn?.call() ?? orElse?.call();
-      case FiatAll():
-        return fiatAll?.call() ?? orElse?.call();
-      case FiatAmd():
-        return fiatAmd?.call() ?? orElse?.call();
-      case FiatAng():
-        return fiatAng?.call() ?? orElse?.call();
-      case FiatAoa():
-        return fiatAoa?.call() ?? orElse?.call();
-      case FiatArs():
-        return fiatArs?.call() ?? orElse?.call();
-      case FiatAud():
-        return fiatAud?.call() ?? orElse?.call();
-      case FiatAwg():
-        return fiatAwg?.call() ?? orElse?.call();
-      case FiatAzn():
-        return fiatAzn?.call() ?? orElse?.call();
-      case FiatBam():
-        return fiatBam?.call() ?? orElse?.call();
-      case FiatBbd():
-        return fiatBbd?.call() ?? orElse?.call();
-      case FiatBdt():
-        return fiatBdt?.call() ?? orElse?.call();
-      case FiatBgn():
-        return fiatBgn?.call() ?? orElse?.call();
-      case FiatBhd():
-        return fiatBhd?.call() ?? orElse?.call();
-      case FiatBif():
-        return fiatBif?.call() ?? orElse?.call();
-      case FiatBmd():
-        return fiatBmd?.call() ?? orElse?.call();
-      case FiatBnd():
-        return fiatBnd?.call() ?? orElse?.call();
-      case FiatBob():
-        return fiatBob?.call() ?? orElse?.call();
-      case FiatBrl():
-        return fiatBrl?.call() ?? orElse?.call();
-      case FiatBsd():
-        return fiatBsd?.call() ?? orElse?.call();
-      case FiatBtn():
-        return fiatBtn?.call() ?? orElse?.call();
-      case FiatBwp():
-        return fiatBwp?.call() ?? orElse?.call();
-      case FiatByn():
-        return fiatByn?.call() ?? orElse?.call();
-      case FiatBzd():
-        return fiatBzd?.call() ?? orElse?.call();
-      case FiatCad():
-        return fiatCad?.call() ?? orElse?.call();
-      case FiatCdf():
-        return fiatCdf?.call() ?? orElse?.call();
-      case FiatChf():
-        return fiatChf?.call() ?? orElse?.call();
-      case FiatClf():
-        return fiatClf?.call() ?? orElse?.call();
-      case FiatClp():
-        return fiatClp?.call() ?? orElse?.call();
-      case FiatCny():
-        return fiatCny?.call() ?? orElse?.call();
-      case FiatCop():
-        return fiatCop?.call() ?? orElse?.call();
-      case FiatCrc():
-        return fiatCrc?.call() ?? orElse?.call();
-      case FiatCuc():
-        return fiatCuc?.call() ?? orElse?.call();
-      case FiatCup():
-        return fiatCup?.call() ?? orElse?.call();
-      case FiatCve():
-        return fiatCve?.call() ?? orElse?.call();
-      case FiatCzk():
-        return fiatCzk?.call() ?? orElse?.call();
-      case FiatDjf():
-        return fiatDjf?.call() ?? orElse?.call();
-      case FiatDkk():
-        return fiatDkk?.call() ?? orElse?.call();
-      case FiatDop():
-        return fiatDop?.call() ?? orElse?.call();
-      case FiatDzd():
-        return fiatDzd?.call() ?? orElse?.call();
-      case FiatEgp():
-        return fiatEgp?.call() ?? orElse?.call();
-      case FiatErn():
-        return fiatErn?.call() ?? orElse?.call();
-      case FiatEtb():
-        return fiatEtb?.call() ?? orElse?.call();
-      case FiatEur():
-        return fiatEur?.call() ?? orElse?.call();
-      case FiatFjd():
-        return fiatFjd?.call() ?? orElse?.call();
-      case FiatFkp():
-        return fiatFkp?.call() ?? orElse?.call();
-      case FiatGbp():
-        return fiatGbp?.call() ?? orElse?.call();
-      case FiatGel():
-        return fiatGel?.call() ?? orElse?.call();
-      case FiatGhs():
-        return fiatGhs?.call() ?? orElse?.call();
-      case FiatGip():
-        return fiatGip?.call() ?? orElse?.call();
-      case FiatGmd():
-        return fiatGmd?.call() ?? orElse?.call();
-      case FiatGnf():
-        return fiatGnf?.call() ?? orElse?.call();
-      case FiatGtq():
-        return fiatGtq?.call() ?? orElse?.call();
-      case FiatGyd():
-        return fiatGyd?.call() ?? orElse?.call();
-      case FiatHkd():
-        return fiatHkd?.call() ?? orElse?.call();
-      case FiatHnl():
-        return fiatHnl?.call() ?? orElse?.call();
-      case FiatHrk():
-        return fiatHrk?.call() ?? orElse?.call();
-      case FiatHtg():
-        return fiatHtg?.call() ?? orElse?.call();
-      case FiatHuf():
-        return fiatHuf?.call() ?? orElse?.call();
-      case FiatIdr():
-        return fiatIdr?.call() ?? orElse?.call();
-      case FiatIls():
-        return fiatIls?.call() ?? orElse?.call();
-      case FiatInr():
-        return fiatInr?.call() ?? orElse?.call();
-      case FiatIqd():
-        return fiatIqd?.call() ?? orElse?.call();
-      case FiatIrr():
-        return fiatIrr?.call() ?? orElse?.call();
-      case FiatIsk():
-        return fiatIsk?.call() ?? orElse?.call();
-      case FiatJmd():
-        return fiatJmd?.call() ?? orElse?.call();
-      case FiatJod():
-        return fiatJod?.call() ?? orElse?.call();
-      case FiatJpy():
-        return fiatJpy?.call() ?? orElse?.call();
-      case FiatKes():
-        return fiatKes?.call() ?? orElse?.call();
-      case FiatKgs():
-        return fiatKgs?.call() ?? orElse?.call();
-      case FiatKhr():
-        return fiatKhr?.call() ?? orElse?.call();
-      case FiatKmf():
-        return fiatKmf?.call() ?? orElse?.call();
-      case FiatKpw():
-        return fiatKpw?.call() ?? orElse?.call();
-      case FiatKrw():
-        return fiatKrw?.call() ?? orElse?.call();
-      case FiatKwd():
-        return fiatKwd?.call() ?? orElse?.call();
-      case FiatKyd():
-        return fiatKyd?.call() ?? orElse?.call();
-      case FiatKzt():
-        return fiatKzt?.call() ?? orElse?.call();
-      case FiatLak():
-        return fiatLak?.call() ?? orElse?.call();
-      case FiatLbp():
-        return fiatLbp?.call() ?? orElse?.call();
-      case FiatLkr():
-        return fiatLkr?.call() ?? orElse?.call();
-      case FiatLrd():
-        return fiatLrd?.call() ?? orElse?.call();
-      case FiatLsl():
-        return fiatLsl?.call() ?? orElse?.call();
-      case FiatLyd():
-        return fiatLyd?.call() ?? orElse?.call();
-      case FiatMad():
-        return fiatMad?.call() ?? orElse?.call();
-      case FiatMdl():
-        return fiatMdl?.call() ?? orElse?.call();
-      case FiatMga():
-        return fiatMga?.call() ?? orElse?.call();
-      case FiatMkd():
-        return fiatMkd?.call() ?? orElse?.call();
-      case FiatMmk():
-        return fiatMmk?.call() ?? orElse?.call();
-      case FiatMnt():
-        return fiatMnt?.call() ?? orElse?.call();
-      case FiatMop():
-        return fiatMop?.call() ?? orElse?.call();
-      case FiatMru():
-        return fiatMru?.call() ?? orElse?.call();
-      case FiatMur():
-        return fiatMur?.call() ?? orElse?.call();
-      case FiatMvr():
-        return fiatMvr?.call() ?? orElse?.call();
-      case FiatMwk():
-        return fiatMwk?.call() ?? orElse?.call();
-      case FiatMxn():
-        return fiatMxn?.call() ?? orElse?.call();
-      case FiatMyr():
-        return fiatMyr?.call() ?? orElse?.call();
-      case FiatMzn():
-        return fiatMzn?.call() ?? orElse?.call();
-      case FiatNad():
-        return fiatNad?.call() ?? orElse?.call();
-      case FiatNgn():
-        return fiatNgn?.call() ?? orElse?.call();
-      case FiatNio():
-        return fiatNio?.call() ?? orElse?.call();
-      case FiatNok():
-        return fiatNok?.call() ?? orElse?.call();
-      case FiatNpr():
-        return fiatNpr?.call() ?? orElse?.call();
-      case FiatNzd():
-        return fiatNzd?.call() ?? orElse?.call();
-      case FiatOmr():
-        return fiatOmr?.call() ?? orElse?.call();
-      case FiatPab():
-        return fiatPab?.call() ?? orElse?.call();
-      case FiatPen():
-        return fiatPen?.call() ?? orElse?.call();
-      case FiatPgk():
-        return fiatPgk?.call() ?? orElse?.call();
-      case FiatPhp():
-        return fiatPhp?.call() ?? orElse?.call();
-      case FiatPkr():
-        return fiatPkr?.call() ?? orElse?.call();
-      case FiatPln():
-        return fiatPln?.call() ?? orElse?.call();
-      case FiatPyg():
-        return fiatPyg?.call() ?? orElse?.call();
-      case FiatQar():
-        return fiatQar?.call() ?? orElse?.call();
-      case FiatRon():
-        return fiatRon?.call() ?? orElse?.call();
-      case FiatRsd():
-        return fiatRsd?.call() ?? orElse?.call();
-      case FiatRub():
-        return fiatRub?.call() ?? orElse?.call();
-      case FiatRwf():
-        return fiatRwf?.call() ?? orElse?.call();
-      case FiatSar():
-        return fiatSar?.call() ?? orElse?.call();
-      case FiatSbd():
-        return fiatSbd?.call() ?? orElse?.call();
-      case FiatScr():
-        return fiatScr?.call() ?? orElse?.call();
-      case FiatSdg():
-        return fiatSdg?.call() ?? orElse?.call();
-      case FiatSek():
-        return fiatSek?.call() ?? orElse?.call();
-      case FiatSgd():
-        return fiatSgd?.call() ?? orElse?.call();
-      case FiatShp():
-        return fiatShp?.call() ?? orElse?.call();
-      case FiatSle():
-        return fiatSle?.call() ?? orElse?.call();
-      case FiatSll():
-        return fiatSll?.call() ?? orElse?.call();
-      case FiatSos():
-        return fiatSos?.call() ?? orElse?.call();
-      case FiatSrd():
-        return fiatSrd?.call() ?? orElse?.call();
-      case FiatSsp():
-        return fiatSsp?.call() ?? orElse?.call();
-      case FiatStn():
-        return fiatStn?.call() ?? orElse?.call();
-      case FiatSvc():
-        return fiatSvc?.call() ?? orElse?.call();
-      case FiatSyp():
-        return fiatSyp?.call() ?? orElse?.call();
-      case FiatSzl():
-        return fiatSzl?.call() ?? orElse?.call();
-      case FiatThb():
-        return fiatThb?.call() ?? orElse?.call();
-      case FiatTjs():
-        return fiatTjs?.call() ?? orElse?.call();
-      case FiatTmt():
-        return fiatTmt?.call() ?? orElse?.call();
-      case FiatTnd():
-        return fiatTnd?.call() ?? orElse?.call();
-      case FiatTop():
-        return fiatTop?.call() ?? orElse?.call();
-      case FiatTry():
-        return fiatTry?.call() ?? orElse?.call();
-      case FiatTtd():
-        return fiatTtd?.call() ?? orElse?.call();
-      case FiatTwd():
-        return fiatTwd?.call() ?? orElse?.call();
-      case FiatTzs():
-        return fiatTzs?.call() ?? orElse?.call();
-      case FiatUah():
-        return fiatUah?.call() ?? orElse?.call();
-      case FiatUgx():
-        return fiatUgx?.call() ?? orElse?.call();
-      case FiatUsd():
-        return fiatUsd?.call() ?? orElse?.call();
-      case FiatUyu():
-        return fiatUyu?.call() ?? orElse?.call();
-      case FiatUzs():
-        return fiatUzs?.call() ?? orElse?.call();
-      case FiatVes():
-        return fiatVes?.call() ?? orElse?.call();
-      case FiatVnd():
-        return fiatVnd?.call() ?? orElse?.call();
-      case FiatVuv():
-        return fiatVuv?.call() ?? orElse?.call();
-      case FiatWst():
-        return fiatWst?.call() ?? orElse?.call();
-      case FiatXaf():
-        return fiatXaf?.call() ?? orElse?.call();
-      case FiatXag():
-        return fiatXag?.call() ?? orElse?.call();
-      case FiatXau():
-        return fiatXau?.call() ?? orElse?.call();
-      case FiatXba():
-        return fiatXba?.call() ?? orElse?.call();
-      case FiatXbb():
-        return fiatXbb?.call() ?? orElse?.call();
-      case FiatXbc():
-        return fiatXbc?.call() ?? orElse?.call();
-      case FiatXbd():
-        return fiatXbd?.call() ?? orElse?.call();
-      case FiatXcd():
-        return fiatXcd?.call() ?? orElse?.call();
-      case FiatXdr():
-        return fiatXdr?.call() ?? orElse?.call();
-      case FiatXof():
-        return fiatXof?.call() ?? orElse?.call();
-      case FiatXpd():
-        return fiatXpd?.call() ?? orElse?.call();
-      case FiatXpf():
-        return fiatXpf?.call() ?? orElse?.call();
-      case FiatXpt():
-        return fiatXpt?.call() ?? orElse?.call();
-      case FiatXts():
-        return fiatXts?.call() ?? orElse?.call();
-      case FiatYer():
-        return fiatYer?.call() ?? orElse?.call();
-      case FiatZar():
-        return fiatZar?.call() ?? orElse?.call();
-      case FiatZwl():
-        return fiatZwl?.call() ?? orElse?.call();
-      case FiatZmw():
-        return fiatZmw?.call() ?? orElse?.call();
-      default:
-        return orElse?.call();
-    }
-  }
+  }) =>
+      switch (this) {
+        FiatAed() => fiatAed?.call() ?? orElse?.call(),
+        FiatAfn() => fiatAfn?.call() ?? orElse?.call(),
+        FiatAll() => fiatAll?.call() ?? orElse?.call(),
+        FiatAmd() => fiatAmd?.call() ?? orElse?.call(),
+        FiatAng() => fiatAng?.call() ?? orElse?.call(),
+        FiatAoa() => fiatAoa?.call() ?? orElse?.call(),
+        FiatArs() => fiatArs?.call() ?? orElse?.call(),
+        FiatAud() => fiatAud?.call() ?? orElse?.call(),
+        FiatAwg() => fiatAwg?.call() ?? orElse?.call(),
+        FiatAzn() => fiatAzn?.call() ?? orElse?.call(),
+        FiatBam() => fiatBam?.call() ?? orElse?.call(),
+        FiatBbd() => fiatBbd?.call() ?? orElse?.call(),
+        FiatBdt() => fiatBdt?.call() ?? orElse?.call(),
+        FiatBgn() => fiatBgn?.call() ?? orElse?.call(),
+        FiatBhd() => fiatBhd?.call() ?? orElse?.call(),
+        FiatBif() => fiatBif?.call() ?? orElse?.call(),
+        FiatBmd() => fiatBmd?.call() ?? orElse?.call(),
+        FiatBnd() => fiatBnd?.call() ?? orElse?.call(),
+        FiatBob() => fiatBob?.call() ?? orElse?.call(),
+        FiatBrl() => fiatBrl?.call() ?? orElse?.call(),
+        FiatBsd() => fiatBsd?.call() ?? orElse?.call(),
+        FiatBtn() => fiatBtn?.call() ?? orElse?.call(),
+        FiatBwp() => fiatBwp?.call() ?? orElse?.call(),
+        FiatByn() => fiatByn?.call() ?? orElse?.call(),
+        FiatBzd() => fiatBzd?.call() ?? orElse?.call(),
+        FiatCad() => fiatCad?.call() ?? orElse?.call(),
+        FiatCdf() => fiatCdf?.call() ?? orElse?.call(),
+        FiatChf() => fiatChf?.call() ?? orElse?.call(),
+        FiatClf() => fiatClf?.call() ?? orElse?.call(),
+        FiatClp() => fiatClp?.call() ?? orElse?.call(),
+        FiatCny() => fiatCny?.call() ?? orElse?.call(),
+        FiatCop() => fiatCop?.call() ?? orElse?.call(),
+        FiatCrc() => fiatCrc?.call() ?? orElse?.call(),
+        FiatCuc() => fiatCuc?.call() ?? orElse?.call(),
+        FiatCup() => fiatCup?.call() ?? orElse?.call(),
+        FiatCve() => fiatCve?.call() ?? orElse?.call(),
+        FiatCzk() => fiatCzk?.call() ?? orElse?.call(),
+        FiatDjf() => fiatDjf?.call() ?? orElse?.call(),
+        FiatDkk() => fiatDkk?.call() ?? orElse?.call(),
+        FiatDop() => fiatDop?.call() ?? orElse?.call(),
+        FiatDzd() => fiatDzd?.call() ?? orElse?.call(),
+        FiatEgp() => fiatEgp?.call() ?? orElse?.call(),
+        FiatErn() => fiatErn?.call() ?? orElse?.call(),
+        FiatEtb() => fiatEtb?.call() ?? orElse?.call(),
+        FiatEur() => fiatEur?.call() ?? orElse?.call(),
+        FiatFjd() => fiatFjd?.call() ?? orElse?.call(),
+        FiatFkp() => fiatFkp?.call() ?? orElse?.call(),
+        FiatGbp() => fiatGbp?.call() ?? orElse?.call(),
+        FiatGel() => fiatGel?.call() ?? orElse?.call(),
+        FiatGhs() => fiatGhs?.call() ?? orElse?.call(),
+        FiatGip() => fiatGip?.call() ?? orElse?.call(),
+        FiatGmd() => fiatGmd?.call() ?? orElse?.call(),
+        FiatGnf() => fiatGnf?.call() ?? orElse?.call(),
+        FiatGtq() => fiatGtq?.call() ?? orElse?.call(),
+        FiatGyd() => fiatGyd?.call() ?? orElse?.call(),
+        FiatHkd() => fiatHkd?.call() ?? orElse?.call(),
+        FiatHnl() => fiatHnl?.call() ?? orElse?.call(),
+        FiatHrk() => fiatHrk?.call() ?? orElse?.call(),
+        FiatHtg() => fiatHtg?.call() ?? orElse?.call(),
+        FiatHuf() => fiatHuf?.call() ?? orElse?.call(),
+        FiatIdr() => fiatIdr?.call() ?? orElse?.call(),
+        FiatIls() => fiatIls?.call() ?? orElse?.call(),
+        FiatInr() => fiatInr?.call() ?? orElse?.call(),
+        FiatIqd() => fiatIqd?.call() ?? orElse?.call(),
+        FiatIrr() => fiatIrr?.call() ?? orElse?.call(),
+        FiatIsk() => fiatIsk?.call() ?? orElse?.call(),
+        FiatJmd() => fiatJmd?.call() ?? orElse?.call(),
+        FiatJod() => fiatJod?.call() ?? orElse?.call(),
+        FiatJpy() => fiatJpy?.call() ?? orElse?.call(),
+        FiatKes() => fiatKes?.call() ?? orElse?.call(),
+        FiatKgs() => fiatKgs?.call() ?? orElse?.call(),
+        FiatKhr() => fiatKhr?.call() ?? orElse?.call(),
+        FiatKmf() => fiatKmf?.call() ?? orElse?.call(),
+        FiatKpw() => fiatKpw?.call() ?? orElse?.call(),
+        FiatKrw() => fiatKrw?.call() ?? orElse?.call(),
+        FiatKwd() => fiatKwd?.call() ?? orElse?.call(),
+        FiatKyd() => fiatKyd?.call() ?? orElse?.call(),
+        FiatKzt() => fiatKzt?.call() ?? orElse?.call(),
+        FiatLak() => fiatLak?.call() ?? orElse?.call(),
+        FiatLbp() => fiatLbp?.call() ?? orElse?.call(),
+        FiatLkr() => fiatLkr?.call() ?? orElse?.call(),
+        FiatLrd() => fiatLrd?.call() ?? orElse?.call(),
+        FiatLsl() => fiatLsl?.call() ?? orElse?.call(),
+        FiatLyd() => fiatLyd?.call() ?? orElse?.call(),
+        FiatMad() => fiatMad?.call() ?? orElse?.call(),
+        FiatMdl() => fiatMdl?.call() ?? orElse?.call(),
+        FiatMga() => fiatMga?.call() ?? orElse?.call(),
+        FiatMkd() => fiatMkd?.call() ?? orElse?.call(),
+        FiatMmk() => fiatMmk?.call() ?? orElse?.call(),
+        FiatMnt() => fiatMnt?.call() ?? orElse?.call(),
+        FiatMop() => fiatMop?.call() ?? orElse?.call(),
+        FiatMru() => fiatMru?.call() ?? orElse?.call(),
+        FiatMur() => fiatMur?.call() ?? orElse?.call(),
+        FiatMvr() => fiatMvr?.call() ?? orElse?.call(),
+        FiatMwk() => fiatMwk?.call() ?? orElse?.call(),
+        FiatMxn() => fiatMxn?.call() ?? orElse?.call(),
+        FiatMyr() => fiatMyr?.call() ?? orElse?.call(),
+        FiatMzn() => fiatMzn?.call() ?? orElse?.call(),
+        FiatNad() => fiatNad?.call() ?? orElse?.call(),
+        FiatNgn() => fiatNgn?.call() ?? orElse?.call(),
+        FiatNio() => fiatNio?.call() ?? orElse?.call(),
+        FiatNok() => fiatNok?.call() ?? orElse?.call(),
+        FiatNpr() => fiatNpr?.call() ?? orElse?.call(),
+        FiatNzd() => fiatNzd?.call() ?? orElse?.call(),
+        FiatOmr() => fiatOmr?.call() ?? orElse?.call(),
+        FiatPab() => fiatPab?.call() ?? orElse?.call(),
+        FiatPen() => fiatPen?.call() ?? orElse?.call(),
+        FiatPgk() => fiatPgk?.call() ?? orElse?.call(),
+        FiatPhp() => fiatPhp?.call() ?? orElse?.call(),
+        FiatPkr() => fiatPkr?.call() ?? orElse?.call(),
+        FiatPln() => fiatPln?.call() ?? orElse?.call(),
+        FiatPyg() => fiatPyg?.call() ?? orElse?.call(),
+        FiatQar() => fiatQar?.call() ?? orElse?.call(),
+        FiatRon() => fiatRon?.call() ?? orElse?.call(),
+        FiatRsd() => fiatRsd?.call() ?? orElse?.call(),
+        FiatRub() => fiatRub?.call() ?? orElse?.call(),
+        FiatRwf() => fiatRwf?.call() ?? orElse?.call(),
+        FiatSar() => fiatSar?.call() ?? orElse?.call(),
+        FiatSbd() => fiatSbd?.call() ?? orElse?.call(),
+        FiatScr() => fiatScr?.call() ?? orElse?.call(),
+        FiatSdg() => fiatSdg?.call() ?? orElse?.call(),
+        FiatSek() => fiatSek?.call() ?? orElse?.call(),
+        FiatSgd() => fiatSgd?.call() ?? orElse?.call(),
+        FiatShp() => fiatShp?.call() ?? orElse?.call(),
+        FiatSle() => fiatSle?.call() ?? orElse?.call(),
+        FiatSll() => fiatSll?.call() ?? orElse?.call(),
+        FiatSos() => fiatSos?.call() ?? orElse?.call(),
+        FiatSrd() => fiatSrd?.call() ?? orElse?.call(),
+        FiatSsp() => fiatSsp?.call() ?? orElse?.call(),
+        FiatStn() => fiatStn?.call() ?? orElse?.call(),
+        FiatSvc() => fiatSvc?.call() ?? orElse?.call(),
+        FiatSyp() => fiatSyp?.call() ?? orElse?.call(),
+        FiatSzl() => fiatSzl?.call() ?? orElse?.call(),
+        FiatThb() => fiatThb?.call() ?? orElse?.call(),
+        FiatTjs() => fiatTjs?.call() ?? orElse?.call(),
+        FiatTmt() => fiatTmt?.call() ?? orElse?.call(),
+        FiatTnd() => fiatTnd?.call() ?? orElse?.call(),
+        FiatTop() => fiatTop?.call() ?? orElse?.call(),
+        FiatTry() => fiatTry?.call() ?? orElse?.call(),
+        FiatTtd() => fiatTtd?.call() ?? orElse?.call(),
+        FiatTwd() => fiatTwd?.call() ?? orElse?.call(),
+        FiatTzs() => fiatTzs?.call() ?? orElse?.call(),
+        FiatUah() => fiatUah?.call() ?? orElse?.call(),
+        FiatUgx() => fiatUgx?.call() ?? orElse?.call(),
+        FiatUsd() => fiatUsd?.call() ?? orElse?.call(),
+        FiatUyu() => fiatUyu?.call() ?? orElse?.call(),
+        FiatUzs() => fiatUzs?.call() ?? orElse?.call(),
+        FiatVes() => fiatVes?.call() ?? orElse?.call(),
+        FiatVnd() => fiatVnd?.call() ?? orElse?.call(),
+        FiatVuv() => fiatVuv?.call() ?? orElse?.call(),
+        FiatWst() => fiatWst?.call() ?? orElse?.call(),
+        FiatXaf() => fiatXaf?.call() ?? orElse?.call(),
+        FiatXag() => fiatXag?.call() ?? orElse?.call(),
+        FiatXau() => fiatXau?.call() ?? orElse?.call(),
+        FiatXba() => fiatXba?.call() ?? orElse?.call(),
+        FiatXbb() => fiatXbb?.call() ?? orElse?.call(),
+        FiatXbc() => fiatXbc?.call() ?? orElse?.call(),
+        FiatXbd() => fiatXbd?.call() ?? orElse?.call(),
+        FiatXcd() => fiatXcd?.call() ?? orElse?.call(),
+        FiatXdr() => fiatXdr?.call() ?? orElse?.call(),
+        FiatXof() => fiatXof?.call() ?? orElse?.call(),
+        FiatXpd() => fiatXpd?.call() ?? orElse?.call(),
+        FiatXpf() => fiatXpf?.call() ?? orElse?.call(),
+        FiatXpt() => fiatXpt?.call() ?? orElse?.call(),
+        FiatXts() => fiatXts?.call() ?? orElse?.call(),
+        FiatYer() => fiatYer?.call() ?? orElse?.call(),
+        FiatZar() => fiatZar?.call() ?? orElse?.call(),
+        FiatZwl() => fiatZwl?.call() ?? orElse?.call(),
+        FiatZmw() => fiatZmw?.call() ?? orElse?.call(),
+        _ => orElse?.call(),
+      };
 }

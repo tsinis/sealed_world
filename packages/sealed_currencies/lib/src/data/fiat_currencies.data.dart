@@ -1,4 +1,4 @@
-import "../helpers/fiat_currency/fiat_currency_getters_extension.dart";
+import "../helpers/extensions/fiat_currency/fiat_currency_getters.dart";
 import "../model/currency.dart";
 
 /// {@hideConstantImplementations}
