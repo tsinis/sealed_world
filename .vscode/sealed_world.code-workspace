@@ -27,7 +27,7 @@
       "**/.git": true,
       "coverage/**": true,
       "**/coverage/*": true,
-      "**/*.*.dart": true
+      "**/*.g.dart": true
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
