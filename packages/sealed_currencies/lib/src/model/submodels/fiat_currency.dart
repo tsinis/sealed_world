@@ -4,7 +4,8 @@ part of "../currency.dart";
 ///
 /// This class extends the general [Currency] class and adds additional
 /// properties specific to fiat currencies.
-class FiatCurrency extends Currency {
+class FiatCurrency extends Currency
+    implements IsoStandardized<String>, JsonEncodable<FiatCurrency> {
   /// Creates a new instance of [FiatCurrency].
   ///
   /// The `code`, `name`, `namesNative`, and `codeNumeric` parameters are
@@ -111,6 +112,7 @@ class FiatCurrency extends Currency {
   final String codeNumeric;
 
   /// The native names of the currency in different locales.
+  @override
   final List<String> namesNative;
 
   /// A numerical value that can be used to sort/group any currency list.
@@ -132,11 +134,17 @@ class FiatCurrency extends Currency {
   /// Default decimal separator for most currencies.
   static const dot = ".";
 
+  @override
+  String? get codeOther => codeNumeric;
+
   /// Returns a string representation of this instance.
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """FiatCurrency(code: $code, priority: $priority, name: $name, namesNative: $namesNative, symbol: $symbol, disambiguateSymbol: $disambiguateSymbol, alternateSymbols: $alternateSymbols, subunit: $subunit, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, htmlEntity: $htmlEntity, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator, codeNumeric: $codeNumeric, smallestDenomination: $smallestDenomination)""";
+      : """FiatCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : "$symbol"}, alternateSymbols: ${alternateSymbols == null ? symbol : jsonEncode(alternateSymbols)}, disambiguateSymbol: ${disambiguateSymbol == null ? disambiguateSymbol : "$disambiguateSymbol"}, htmlEntity: ${htmlEntity == null ? htmlEntity : "$htmlEntity"}, codeNumeric: "$codeNumeric", namesNative: ${jsonEncode(namesNative)}, priority: $priority, smallestDenomination: $smallestDenomination, subunit: ${subunit == null ? subunit : "$subunit"}, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst)""";
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   /// Returns a [FiatCurrency] object whose [code] or the value returned by
   /// [where] matches the specified [value], or `null` if no such object exists
