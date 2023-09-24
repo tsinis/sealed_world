@@ -1,4 +1,6 @@
+import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency.dart";
+import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 void main() => group("$FiatCurrency", () {
@@ -14,6 +16,7 @@ void main() => group("$FiatCurrency", () {
             expect(element.name, isNotEmpty);
             expect(element.codeNumeric, isA<String>());
             expect(element.codeNumeric, isNotEmpty);
+            expect(element.codeOther, element.codeNumeric);
             expect(element.namesNative, isA<List<String>>());
             expect(element.namesNative, isNotEmpty);
             if (element.alternateSymbols != null) {
@@ -123,6 +126,35 @@ void main() => group("$FiatCurrency", () {
             throwsStateError,
           ),
         );
+      });
+
+      group("toJson", () {
+        for (final element in FiatCurrency.list) {
+          test("compared to $FiatCurrency: ${element.name}", () {
+            final json = element.toJson();
+            expect(json, isNotEmpty);
+            final decoded = json.tryParse(FiatCurrencyJson.fromMap);
+            expect(
+              decoded?.toString(short: false),
+              json.parse(FiatCurrencyJson.fromMap).toString(short: false),
+            );
+            expect(element.code, decoded?.code);
+            expect(element.name, decoded?.name);
+            expect(element.codeNumeric, decoded?.codeNumeric);
+            expect(element.namesNative, decoded?.namesNative);
+            expect(element.alternateSymbols, decoded?.alternateSymbols);
+            expect(element.htmlEntity, decoded?.htmlEntity);
+            expect(element.disambiguateSymbol, decoded?.disambiguateSymbol);
+            expect(element.subunit, decoded?.subunit);
+            expect(element.symbol, decoded?.symbol);
+            expect(element.priority, decoded?.priority);
+            expect(element.smallestDenomination, decoded?.smallestDenomination);
+            expect(element.subunitToUnit, decoded?.subunitToUnit);
+            expect(element.unitFirst, decoded?.unitFirst);
+            expect(element.decimalMark, decoded?.decimalMark);
+            expect(element.thousandsSeparator, decoded?.thousandsSeparator);
+          });
+        }
       });
 
       group("maybeFromValue", () {
