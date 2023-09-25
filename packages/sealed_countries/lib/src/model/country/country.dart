@@ -1,5 +1,4 @@
 import "package:sealed_currencies/sealed_currencies.dart";
-import "package:sealed_languages/sealed_languages.dart";
 
 import "../../data/official_world_countries.data.dart";
 import "../../data/other_world_countries.data.dart";

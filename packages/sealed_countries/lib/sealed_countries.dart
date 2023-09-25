@@ -2,7 +2,6 @@
 library sealed_countries;
 
 export "package:sealed_currencies/sealed_currencies.dart";
-export "package:sealed_languages/sealed_languages.dart";
 
 export "src/data/geo/continental_sections.data.dart";
 export "src/data/geo/continents.data.dart";

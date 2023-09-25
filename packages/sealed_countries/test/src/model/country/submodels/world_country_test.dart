@@ -1,7 +1,7 @@
 import "package:sealed_countries/src/helpers/extensions/world_country/date_time_extension.dart";
 import "package:sealed_countries/src/helpers/extensions/world_country/getters_extension.dart";
 import "package:sealed_countries/src/model/country/country.dart";
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 void main() => group("$WorldCountry", () {

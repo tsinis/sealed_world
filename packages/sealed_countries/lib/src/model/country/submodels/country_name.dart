@@ -1,4 +1,4 @@
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 
 /// A class that represents the name of a country in a particular language.
 ///

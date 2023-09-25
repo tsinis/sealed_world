@@ -1,5 +1,5 @@
 import "package:sealed_countries/src/model/country/submodels/country_name.dart";
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";

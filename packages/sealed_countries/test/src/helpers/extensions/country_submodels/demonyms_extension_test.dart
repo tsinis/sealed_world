@@ -1,6 +1,6 @@
 import "package:sealed_countries/src/helpers/extensions/country_submodels/demonyms_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/demonyms.dart";
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
