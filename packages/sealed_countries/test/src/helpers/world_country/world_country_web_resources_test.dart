@@ -1,4 +1,4 @@
-import "package:sealed_countries/src/helpers/extensions/world_country/world_country_web_resources.dart";
+import "package:sealed_countries/src/helpers/world_country/world_country_web_resources.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
 

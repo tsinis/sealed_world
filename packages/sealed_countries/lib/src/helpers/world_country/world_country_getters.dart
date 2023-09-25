@@ -1,4 +1,4 @@
-import "../../../model/country/country.dart";
+import "../../model/country/country.dart";
 
 /// A class extension that adds utility methods to the [WorldCountry] class.
 extension WorldCountryGetters on WorldCountry {

@@ -1,5 +1,10 @@
 // ignore_for_file: avoid-non-null-assertion
-import "../../../../sealed_countries.dart";
+
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../model/country/country.dart";
+import "../../model/country/submodels/country_name.dart";
 
 /// Provides extension methods for getting the names of a `WorldCountry` object.
 extension WorldCountryNames on WorldCountry {

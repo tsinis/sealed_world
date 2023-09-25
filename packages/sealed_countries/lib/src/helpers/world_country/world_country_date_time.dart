@@ -1,5 +1,7 @@
 // ignore_for_file: avoid-substring
-import "../../../../sealed_countries.dart";
+
+import "../../model/country/country.dart";
+import "../../model/typedefs/utc_duration_difference.dart";
 
 /// Provides extension methods for working with time zones and `DateTime`
 /// objects related to a `WorldCountry` object.

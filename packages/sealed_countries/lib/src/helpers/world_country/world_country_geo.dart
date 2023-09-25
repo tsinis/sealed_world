@@ -1,4 +1,4 @@
-import "../../../../sealed_countries.dart";
+import "../../model/country/country.dart";
 
 /// Provides extension methods for geographic calculations related to a
 /// `WorldCountry` object.

@@ -1,4 +1,4 @@
-import "../../../model/country/country.dart";
+import "../../model/country/country.dart";
 
 /// Provides extension methods for accessing web resources related to a
 /// `WorldCountry` object.

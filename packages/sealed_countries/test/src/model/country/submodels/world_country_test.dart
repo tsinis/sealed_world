@@ -1,5 +1,5 @@
-import "package:sealed_countries/src/helpers/extensions/world_country/world_country_date_time.dart";
-import "package:sealed_countries/src/helpers/extensions/world_country/world_country_getters.dart";
+import "package:sealed_countries/src/helpers/world_country/world_country_date_time.dart";
+import "package:sealed_countries/src/helpers/world_country/world_country_getters.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
