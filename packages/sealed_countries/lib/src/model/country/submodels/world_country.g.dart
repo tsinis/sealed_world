@@ -254,512 +254,260 @@ extension WorldCountryFunctional on WorldCountry {
     required R Function(WorldCountry countryCog) countryCog,
     required R Function(WorldCountry countryFro) countryFro,
     required R Function(WorldCountry countryUnk) countryUnk,
-  }) {
-    switch (this) {
-      case CountryCpv():
-        return countryCpv(this);
-      case CountrySgp():
-        return countrySgp(this);
-      case CountryMrt():
-        return countryMrt(this);
-      case CountryPol():
-        return countryPol(this);
-      case CountryTcd():
-        return countryTcd(this);
-      case CountryJpn():
-        return countryJpn(this);
-      case CountryCub():
-        return countryCub(this);
-      case CountryMoz():
-        return countryMoz(this);
-      case CountryGbr():
-        return countryGbr(this);
-      case CountryIrl():
-        return countryIrl(this);
-      case CountryNer():
-        return countryNer(this);
-      case CountryGmb():
-        return countryGmb(this);
-      case CountryUzb():
-        return countryUzb(this);
-      case CountryRus():
-        return countryRus(this);
-      case CountryTkm():
-        return countryTkm(this);
-      case CountryAia():
-        return countryAia(this);
-      case CountryVnm():
-        return countryVnm(this);
-      case CountryAta():
-        return countryAta(this);
-      case CountrySwz():
-        return countrySwz(this);
-      case CountryKhm():
-        return countryKhm(this);
-      case CountryVut():
-        return countryVut(this);
-      case CountryAla():
-        return countryAla(this);
-      case CountryAus():
-        return countryAus(this);
-      case CountryIot():
-        return countryIot(this);
-      case CountrySvk():
-        return countrySvk(this);
-      case CountryBra():
-        return countryBra(this);
-      case CountryTjk():
-        return countryTjk(this);
-      case CountrySgs():
-        return countrySgs(this);
-      case CountryLbr():
-        return countryLbr(this);
-      case CountryNga():
-        return countryNga(this);
-      case CountryCol():
-        return countryCol(this);
-      case CountrySmr():
-        return countrySmr(this);
-      case CountryShn():
-        return countryShn(this);
-      case CountryEgy():
-        return countryEgy(this);
-      case CountryHnd():
-        return countryHnd(this);
-      case CountryIdn():
-        return countryIdn(this);
-      case CountryPrk():
-        return countryPrk(this);
-      case CountryMac():
-        return countryMac(this);
-      case CountrySle():
-        return countrySle(this);
-      case CountryMda():
-        return countryMda(this);
-      case CountryPhl():
-        return countryPhl(this);
-      case CountryCmr():
-        return countryCmr(this);
-      case CountryGrl():
-        return countryGrl(this);
-      case CountryMtq():
-        return countryMtq(this);
-      case CountryLbn():
-        return countryLbn(this);
-      case CountryRwa():
-        return countryRwa(this);
-      case CountryBih():
-        return countryBih(this);
-      case CountryMhl():
-        return countryMhl(this);
-      case CountryIta():
-        return countryIta(this);
-      case CountryTkl():
-        return countryTkl(this);
-      case CountryGab():
-        return countryGab(this);
-      case CountryCck():
-        return countryCck(this);
-      case CountryPak():
-        return countryPak(this);
-      case CountryReu():
-        return countryReu(this);
-      case CountryMus():
-        return countryMus(this);
-      case CountryGrd():
-        return countryGrd(this);
-      case CountryOmn():
-        return countryOmn(this);
-      case CountryBfa():
-        return countryBfa(this);
-      case CountryWsm():
-        return countryWsm(this);
-      case CountryTto():
-        return countryTto(this);
-      case CountryVct():
-        return countryVct(this);
-      case CountryPlw():
-        return countryPlw(this);
-      case CountryZaf():
-        return countryZaf(this);
-      case CountryAgo():
-        return countryAgo(this);
-      case CountryKor():
-        return countryKor(this);
-      case CountryAtf():
-        return countryAtf(this);
-      case CountryIsl():
-        return countryIsl(this);
-      case CountryGuf():
-        return countryGuf(this);
-      case CountryNor():
-        return countryNor(this);
-      case CountryHun():
-        return countryHun(this);
-      case CountryPse():
-        return countryPse(this);
-      case CountryLca():
-        return countryLca(this);
-      case CountryNpl():
-        return countryNpl(this);
-      case CountryMng():
-        return countryMng(this);
-      case CountryZmb():
-        return countryZmb(this);
-      case CountryWlf():
-        return countryWlf(this);
-      case CountryMwi():
-        return countryMwi(this);
-      case CountryBhr():
-        return countryBhr(this);
-      case CountryUkr():
-        return countryUkr(this);
-      case CountryNru():
-        return countryNru(this);
-      case CountryMyt():
-        return countryMyt(this);
-      case CountryDza():
-        return countryDza(this);
-      case CountryCan():
-        return countryCan(this);
-      case CountryLie():
-        return countryLie(this);
-      case CountryEth():
-        return countryEth(this);
-      case CountryDom():
-        return countryDom(this);
-      case CountryBvt():
-        return countryBvt(this);
-      case CountryNfk():
-        return countryNfk(this);
-      case CountryNld():
-        return countryNld(this);
-      case CountryMnp():
-        return countryMnp(this);
-      case CountryHkg():
-        return countryHkg(this);
-      case CountryIrq():
-        return countryIrq(this);
-      case CountryEsp():
-        return countryEsp(this);
-      case CountryTgo():
-        return countryTgo(this);
-      case CountryChn():
-        return countryChn(this);
-      case CountryFlk():
-        return countryFlk(this);
-      case CountryUsa():
-        return countryUsa(this);
-      case CountryMaf():
-        return countryMaf(this);
-      case CountryIrn():
-        return countryIrn(this);
-      case CountryMex():
-        return countryMex(this);
-      case CountryBrn():
-        return countryBrn(this);
-      case CountryCyp():
-        return countryCyp(this);
-      case CountryNic():
-        return countryNic(this);
-      case CountryCuw():
-        return countryCuw(this);
-      case CountryPri():
-        return countryPri(this);
-      case CountryNcl():
-        return countryNcl(this);
-      case CountrySsd():
-        return countrySsd(this);
-      case CountrySom():
-        return countrySom(this);
-      case CountryGrc():
-        return countryGrc(this);
-      case CountryBes():
-        return countryBes(this);
-      case CountryLao():
-        return countryLao(this);
-      case CountryBlz():
-        return countryBlz(this);
-      case CountrySlv():
-        return countrySlv(this);
-      case CountryJam():
-        return countryJam(this);
-      case CountryUry():
-        return countryUry(this);
-      case CountryPng():
-        return countryPng(this);
-      case CountryLux():
-        return countryLux(this);
-      case CountryChl():
-        return countryChl(this);
-      case CountryVat():
-        return countryVat(this);
-      case CountryGnb():
-        return countryGnb(this);
-      case CountryUga():
-        return countryUga(this);
-      case CountryVen():
-        return countryVen(this);
-      case CountrySrb():
-        return countrySrb(this);
-      case CountryBen():
-        return countryBen(this);
-      case CountryBgd():
-        return countryBgd(this);
-      case CountryBhs():
-        return countryBhs(this);
-      case CountryNiu():
-        return countryNiu(this);
-      case CountryAtg():
-        return countryAtg(this);
-      case CountryBlm():
-        return countryBlm(this);
-      case CountrySyc():
-        return countrySyc(this);
-      case CountryEsh():
-        return countryEsh(this);
-      case CountryLby():
-        return countryLby(this);
-      case CountryMkd():
-        return countryMkd(this);
-      case CountryPer():
-        return countryPer(this);
-      case CountryBdi():
-        return countryBdi(this);
-      case CountryKir():
-        return countryKir(this);
-      case CountryTur():
-        return countryTur(this);
-      case CountryTza():
-        return countryTza(this);
-      case CountryTun():
-        return countryTun(this);
-      case CountryMsr():
-        return countryMsr(this);
-      case CountryKgz():
-        return countryKgz(this);
-      case CountryImn():
-        return countryImn(this);
-      case CountryGlp():
-        return countryGlp(this);
-      case CountryKwt():
-        return countryKwt(this);
-      case CountryVgb():
-        return countryVgb(this);
-      case CountryCiv():
-        return countryCiv(this);
-      case CountryCxr():
-        return countryCxr(this);
-      case CountryLso():
-        return countryLso(this);
-      case CountryJey():
-        return countryJey(this);
-      case CountrySvn():
-        return countrySvn(this);
-      case CountryBel():
-        return countryBel(this);
-      case CountryTca():
-        return countryTca(this);
-      case CountryGib():
-        return countryGib(this);
-      case CountryQat():
-        return countryQat(this);
-      case CountryBwa():
-        return countryBwa(this);
-      case CountryGnq():
-        return countryGnq(this);
-      case CountryDji():
-        return countryDji(this);
-      case CountryGuy():
-        return countryGuy(this);
-      case CountryGum():
-        return countryGum(this);
-      case CountryMco():
-        return countryMco(this);
-      case CountrySlb():
-        return countrySlb(this);
-      case CountryGgy():
-        return countryGgy(this);
-      case CountryPry():
-        return countryPry(this);
-      case CountrySur():
-        return countrySur(this);
-      case CountryUmi():
-        return countryUmi(this);
-      case CountryGin():
-        return countryGin(this);
-      case CountryCze():
-        return countryCze(this);
-      case CountryCom():
-        return countryCom(this);
-      case CountryGha():
-        return countryGha(this);
-      case CountryKna():
-        return countryKna(this);
-      case CountryPyf():
-        return countryPyf(this);
-      case CountryZwe():
-        return countryZwe(this);
-      case CountryKen():
-        return countryKen(this);
-      case CountryKaz():
-        return countryKaz(this);
-      case CountryMne():
-        return countryMne(this);
-      case CountryTuv():
-        return countryTuv(this);
-      case CountryPan():
-        return countryPan(this);
-      case CountryAnd():
-        return countryAnd(this);
-      case CountryVir():
-        return countryVir(this);
-      case CountryIsr():
-        return countryIsr(this);
-      case CountryPrt():
-        return countryPrt(this);
-      case CountryAut():
-        return countryAut(this);
-      case CountryFin():
-        return countryFin(this);
-      case CountryEst():
-        return countryEst(this);
-      case CountryDma():
-        return countryDma(this);
-      case CountryYem():
-        return countryYem(this);
-      case CountryAfg():
-        return countryAfg(this);
-      case CountrySyr():
-        return countrySyr(this);
-      case CountryMdv():
-        return countryMdv(this);
-      case CountryTls():
-        return countryTls(this);
-      case CountryLtu():
-        return countryLtu(this);
-      case CountryNzl():
-        return countryNzl(this);
-      case CountryBmu():
-        return countryBmu(this);
-      case CountryDeu():
-        return countryDeu(this);
-      case CountryArg():
-        return countryArg(this);
-      case CountryBlr():
-        return countryBlr(this);
-      case CountryBrb():
-        return countryBrb(this);
-      case CountryGtm():
-        return countryGtm(this);
-      case CountryAze():
-        return countryAze(this);
-      case CountryMar():
-        return countryMar(this);
-      case CountryCok():
-        return countryCok(this);
-      case CountryCaf():
-        return countryCaf(this);
-      case CountryRou():
-        return countryRou(this);
-      case CountryMlt():
-        return countryMlt(this);
-      case CountryArm():
-        return countryArm(this);
-      case CountrySen():
-        return countrySen(this);
-      case CountryBgr():
-        return countryBgr(this);
-      case CountryCod():
-        return countryCod(this);
-      case CountryHti():
-        return countryHti(this);
-      case CountryAlb():
-        return countryAlb(this);
-      case CountryJor():
-        return countryJor(this);
-      case CountrySjm():
-        return countrySjm(this);
-      case CountryMdg():
-        return countryMdg(this);
-      case CountryFra():
-        return countryFra(this);
-      case CountryFsm():
-        return countryFsm(this);
-      case CountryAbw():
-        return countryAbw(this);
-      case CountryInd():
-        return countryInd(this);
-      case CountryNam():
-        return countryNam(this);
-      case CountryFji():
-        return countryFji(this);
-      case CountrySdn():
-        return countrySdn(this);
-      case CountryStp():
-        return countryStp(this);
-      case CountrySau():
-        return countrySau(this);
-      case CountryHmd():
-        return countryHmd(this);
-      case CountryLka():
-        return countryLka(this);
-      case CountrySwe():
-        return countrySwe(this);
-      case CountryTon():
-        return countryTon(this);
-      case CountryDnk():
-        return countryDnk(this);
-      case CountryMys():
-        return countryMys(this);
-      case CountryCri():
-        return countryCri(this);
-      case CountryBol():
-        return countryBol(this);
-      case CountryBtn():
-        return countryBtn(this);
-      case CountryCym():
-        return countryCym(this);
-      case CountryPcn():
-        return countryPcn(this);
-      case CountryMli():
-        return countryMli(this);
-      case CountrySxm():
-        return countrySxm(this);
-      case CountryLva():
-        return countryLva(this);
-      case CountryAsm():
-        return countryAsm(this);
-      case CountrySpm():
-        return countrySpm(this);
-      case CountryEcu():
-        return countryEcu(this);
-      case CountryTha():
-        return countryTha(this);
-      case CountryAre():
-        return countryAre(this);
-      case CountryHrv():
-        return countryHrv(this);
-      case CountryMmr():
-        return countryMmr(this);
-      case CountryGeo():
-        return countryGeo(this);
-      case CountryTwn():
-        return countryTwn(this);
-      case CountryChe():
-        return countryChe(this);
-      case CountryEri():
-        return countryEri(this);
-      case CountryCog():
-        return countryCog(this);
-      case CountryFro():
-        return countryFro(this);
-      case CountryUnk():
-        return countryUnk(this);
-      default:
-        throw ArgumentError("Unknown value: $this", name.common);
-    }
-  }
+  }) =>
+      switch (this) {
+        CountryCpv() => countryCpv(this),
+        CountrySgp() => countrySgp(this),
+        CountryMrt() => countryMrt(this),
+        CountryPol() => countryPol(this),
+        CountryTcd() => countryTcd(this),
+        CountryJpn() => countryJpn(this),
+        CountryCub() => countryCub(this),
+        CountryMoz() => countryMoz(this),
+        CountryGbr() => countryGbr(this),
+        CountryIrl() => countryIrl(this),
+        CountryNer() => countryNer(this),
+        CountryGmb() => countryGmb(this),
+        CountryUzb() => countryUzb(this),
+        CountryRus() => countryRus(this),
+        CountryTkm() => countryTkm(this),
+        CountryAia() => countryAia(this),
+        CountryVnm() => countryVnm(this),
+        CountryAta() => countryAta(this),
+        CountrySwz() => countrySwz(this),
+        CountryKhm() => countryKhm(this),
+        CountryVut() => countryVut(this),
+        CountryAla() => countryAla(this),
+        CountryAus() => countryAus(this),
+        CountryIot() => countryIot(this),
+        CountrySvk() => countrySvk(this),
+        CountryBra() => countryBra(this),
+        CountryTjk() => countryTjk(this),
+        CountrySgs() => countrySgs(this),
+        CountryLbr() => countryLbr(this),
+        CountryNga() => countryNga(this),
+        CountryCol() => countryCol(this),
+        CountrySmr() => countrySmr(this),
+        CountryShn() => countryShn(this),
+        CountryEgy() => countryEgy(this),
+        CountryHnd() => countryHnd(this),
+        CountryIdn() => countryIdn(this),
+        CountryPrk() => countryPrk(this),
+        CountryMac() => countryMac(this),
+        CountrySle() => countrySle(this),
+        CountryMda() => countryMda(this),
+        CountryPhl() => countryPhl(this),
+        CountryCmr() => countryCmr(this),
+        CountryGrl() => countryGrl(this),
+        CountryMtq() => countryMtq(this),
+        CountryLbn() => countryLbn(this),
+        CountryRwa() => countryRwa(this),
+        CountryBih() => countryBih(this),
+        CountryMhl() => countryMhl(this),
+        CountryIta() => countryIta(this),
+        CountryTkl() => countryTkl(this),
+        CountryGab() => countryGab(this),
+        CountryCck() => countryCck(this),
+        CountryPak() => countryPak(this),
+        CountryReu() => countryReu(this),
+        CountryMus() => countryMus(this),
+        CountryGrd() => countryGrd(this),
+        CountryOmn() => countryOmn(this),
+        CountryBfa() => countryBfa(this),
+        CountryWsm() => countryWsm(this),
+        CountryTto() => countryTto(this),
+        CountryVct() => countryVct(this),
+        CountryPlw() => countryPlw(this),
+        CountryZaf() => countryZaf(this),
+        CountryAgo() => countryAgo(this),
+        CountryKor() => countryKor(this),
+        CountryAtf() => countryAtf(this),
+        CountryIsl() => countryIsl(this),
+        CountryGuf() => countryGuf(this),
+        CountryNor() => countryNor(this),
+        CountryHun() => countryHun(this),
+        CountryPse() => countryPse(this),
+        CountryLca() => countryLca(this),
+        CountryNpl() => countryNpl(this),
+        CountryMng() => countryMng(this),
+        CountryZmb() => countryZmb(this),
+        CountryWlf() => countryWlf(this),
+        CountryMwi() => countryMwi(this),
+        CountryBhr() => countryBhr(this),
+        CountryUkr() => countryUkr(this),
+        CountryNru() => countryNru(this),
+        CountryMyt() => countryMyt(this),
+        CountryDza() => countryDza(this),
+        CountryCan() => countryCan(this),
+        CountryLie() => countryLie(this),
+        CountryEth() => countryEth(this),
+        CountryDom() => countryDom(this),
+        CountryBvt() => countryBvt(this),
+        CountryNfk() => countryNfk(this),
+        CountryNld() => countryNld(this),
+        CountryMnp() => countryMnp(this),
+        CountryHkg() => countryHkg(this),
+        CountryIrq() => countryIrq(this),
+        CountryEsp() => countryEsp(this),
+        CountryTgo() => countryTgo(this),
+        CountryChn() => countryChn(this),
+        CountryFlk() => countryFlk(this),
+        CountryUsa() => countryUsa(this),
+        CountryMaf() => countryMaf(this),
+        CountryIrn() => countryIrn(this),
+        CountryMex() => countryMex(this),
+        CountryBrn() => countryBrn(this),
+        CountryCyp() => countryCyp(this),
+        CountryNic() => countryNic(this),
+        CountryCuw() => countryCuw(this),
+        CountryPri() => countryPri(this),
+        CountryNcl() => countryNcl(this),
+        CountrySsd() => countrySsd(this),
+        CountrySom() => countrySom(this),
+        CountryGrc() => countryGrc(this),
+        CountryBes() => countryBes(this),
+        CountryLao() => countryLao(this),
+        CountryBlz() => countryBlz(this),
+        CountrySlv() => countrySlv(this),
+        CountryJam() => countryJam(this),
+        CountryUry() => countryUry(this),
+        CountryPng() => countryPng(this),
+        CountryLux() => countryLux(this),
+        CountryChl() => countryChl(this),
+        CountryVat() => countryVat(this),
+        CountryGnb() => countryGnb(this),
+        CountryUga() => countryUga(this),
+        CountryVen() => countryVen(this),
+        CountrySrb() => countrySrb(this),
+        CountryBen() => countryBen(this),
+        CountryBgd() => countryBgd(this),
+        CountryBhs() => countryBhs(this),
+        CountryNiu() => countryNiu(this),
+        CountryAtg() => countryAtg(this),
+        CountryBlm() => countryBlm(this),
+        CountrySyc() => countrySyc(this),
+        CountryEsh() => countryEsh(this),
+        CountryLby() => countryLby(this),
+        CountryMkd() => countryMkd(this),
+        CountryPer() => countryPer(this),
+        CountryBdi() => countryBdi(this),
+        CountryKir() => countryKir(this),
+        CountryTur() => countryTur(this),
+        CountryTza() => countryTza(this),
+        CountryTun() => countryTun(this),
+        CountryMsr() => countryMsr(this),
+        CountryKgz() => countryKgz(this),
+        CountryImn() => countryImn(this),
+        CountryGlp() => countryGlp(this),
+        CountryKwt() => countryKwt(this),
+        CountryVgb() => countryVgb(this),
+        CountryCiv() => countryCiv(this),
+        CountryCxr() => countryCxr(this),
+        CountryLso() => countryLso(this),
+        CountryJey() => countryJey(this),
+        CountrySvn() => countrySvn(this),
+        CountryBel() => countryBel(this),
+        CountryTca() => countryTca(this),
+        CountryGib() => countryGib(this),
+        CountryQat() => countryQat(this),
+        CountryBwa() => countryBwa(this),
+        CountryGnq() => countryGnq(this),
+        CountryDji() => countryDji(this),
+        CountryGuy() => countryGuy(this),
+        CountryGum() => countryGum(this),
+        CountryMco() => countryMco(this),
+        CountrySlb() => countrySlb(this),
+        CountryGgy() => countryGgy(this),
+        CountryPry() => countryPry(this),
+        CountrySur() => countrySur(this),
+        CountryUmi() => countryUmi(this),
+        CountryGin() => countryGin(this),
+        CountryCze() => countryCze(this),
+        CountryCom() => countryCom(this),
+        CountryGha() => countryGha(this),
+        CountryKna() => countryKna(this),
+        CountryPyf() => countryPyf(this),
+        CountryZwe() => countryZwe(this),
+        CountryKen() => countryKen(this),
+        CountryKaz() => countryKaz(this),
+        CountryMne() => countryMne(this),
+        CountryTuv() => countryTuv(this),
+        CountryPan() => countryPan(this),
+        CountryAnd() => countryAnd(this),
+        CountryVir() => countryVir(this),
+        CountryIsr() => countryIsr(this),
+        CountryPrt() => countryPrt(this),
+        CountryAut() => countryAut(this),
+        CountryFin() => countryFin(this),
+        CountryEst() => countryEst(this),
+        CountryDma() => countryDma(this),
+        CountryYem() => countryYem(this),
+        CountryAfg() => countryAfg(this),
+        CountrySyr() => countrySyr(this),
+        CountryMdv() => countryMdv(this),
+        CountryTls() => countryTls(this),
+        CountryLtu() => countryLtu(this),
+        CountryNzl() => countryNzl(this),
+        CountryBmu() => countryBmu(this),
+        CountryDeu() => countryDeu(this),
+        CountryArg() => countryArg(this),
+        CountryBlr() => countryBlr(this),
+        CountryBrb() => countryBrb(this),
+        CountryGtm() => countryGtm(this),
+        CountryAze() => countryAze(this),
+        CountryMar() => countryMar(this),
+        CountryCok() => countryCok(this),
+        CountryCaf() => countryCaf(this),
+        CountryRou() => countryRou(this),
+        CountryMlt() => countryMlt(this),
+        CountryArm() => countryArm(this),
+        CountrySen() => countrySen(this),
+        CountryBgr() => countryBgr(this),
+        CountryCod() => countryCod(this),
+        CountryHti() => countryHti(this),
+        CountryAlb() => countryAlb(this),
+        CountryJor() => countryJor(this),
+        CountrySjm() => countrySjm(this),
+        CountryMdg() => countryMdg(this),
+        CountryFra() => countryFra(this),
+        CountryFsm() => countryFsm(this),
+        CountryAbw() => countryAbw(this),
+        CountryInd() => countryInd(this),
+        CountryNam() => countryNam(this),
+        CountryFji() => countryFji(this),
+        CountrySdn() => countrySdn(this),
+        CountryStp() => countryStp(this),
+        CountrySau() => countrySau(this),
+        CountryHmd() => countryHmd(this),
+        CountryLka() => countryLka(this),
+        CountrySwe() => countrySwe(this),
+        CountryTon() => countryTon(this),
+        CountryDnk() => countryDnk(this),
+        CountryMys() => countryMys(this),
+        CountryCri() => countryCri(this),
+        CountryBol() => countryBol(this),
+        CountryBtn() => countryBtn(this),
+        CountryCym() => countryCym(this),
+        CountryPcn() => countryPcn(this),
+        CountryMli() => countryMli(this),
+        CountrySxm() => countrySxm(this),
+        CountryLva() => countryLva(this),
+        CountryAsm() => countryAsm(this),
+        CountrySpm() => countrySpm(this),
+        CountryEcu() => countryEcu(this),
+        CountryTha() => countryTha(this),
+        CountryAre() => countryAre(this),
+        CountryHrv() => countryHrv(this),
+        CountryMmr() => countryMmr(this),
+        CountryGeo() => countryGeo(this),
+        CountryTwn() => countryTwn(this),
+        CountryChe() => countryChe(this),
+        CountryEri() => countryEri(this),
+        CountryCog() => countryCog(this),
+        CountryFro() => countryFro(this),
+        CountryUnk() => countryUnk(this),
+        _ => throw ArgumentError("Unknown value: $this", name.common),
+      };
 
   R maybeMap<R>({
     required R Function(WorldCountry country) orElse,
@@ -1013,512 +761,260 @@ extension WorldCountryFunctional on WorldCountry {
     R Function(WorldCountry countryCog)? countryCog,
     R Function(WorldCountry countryFro)? countryFro,
     R Function(WorldCountry countryUnk)? countryUnk,
-  }) {
-    switch (this) {
-      case CountryCpv():
-        return countryCpv?.call(this) ?? orElse(this);
-      case CountrySgp():
-        return countrySgp?.call(this) ?? orElse(this);
-      case CountryMrt():
-        return countryMrt?.call(this) ?? orElse(this);
-      case CountryPol():
-        return countryPol?.call(this) ?? orElse(this);
-      case CountryTcd():
-        return countryTcd?.call(this) ?? orElse(this);
-      case CountryJpn():
-        return countryJpn?.call(this) ?? orElse(this);
-      case CountryCub():
-        return countryCub?.call(this) ?? orElse(this);
-      case CountryMoz():
-        return countryMoz?.call(this) ?? orElse(this);
-      case CountryGbr():
-        return countryGbr?.call(this) ?? orElse(this);
-      case CountryIrl():
-        return countryIrl?.call(this) ?? orElse(this);
-      case CountryNer():
-        return countryNer?.call(this) ?? orElse(this);
-      case CountryGmb():
-        return countryGmb?.call(this) ?? orElse(this);
-      case CountryUzb():
-        return countryUzb?.call(this) ?? orElse(this);
-      case CountryRus():
-        return countryRus?.call(this) ?? orElse(this);
-      case CountryTkm():
-        return countryTkm?.call(this) ?? orElse(this);
-      case CountryAia():
-        return countryAia?.call(this) ?? orElse(this);
-      case CountryVnm():
-        return countryVnm?.call(this) ?? orElse(this);
-      case CountryAta():
-        return countryAta?.call(this) ?? orElse(this);
-      case CountrySwz():
-        return countrySwz?.call(this) ?? orElse(this);
-      case CountryKhm():
-        return countryKhm?.call(this) ?? orElse(this);
-      case CountryVut():
-        return countryVut?.call(this) ?? orElse(this);
-      case CountryAla():
-        return countryAla?.call(this) ?? orElse(this);
-      case CountryAus():
-        return countryAus?.call(this) ?? orElse(this);
-      case CountryIot():
-        return countryIot?.call(this) ?? orElse(this);
-      case CountrySvk():
-        return countrySvk?.call(this) ?? orElse(this);
-      case CountryBra():
-        return countryBra?.call(this) ?? orElse(this);
-      case CountryTjk():
-        return countryTjk?.call(this) ?? orElse(this);
-      case CountrySgs():
-        return countrySgs?.call(this) ?? orElse(this);
-      case CountryLbr():
-        return countryLbr?.call(this) ?? orElse(this);
-      case CountryNga():
-        return countryNga?.call(this) ?? orElse(this);
-      case CountryCol():
-        return countryCol?.call(this) ?? orElse(this);
-      case CountrySmr():
-        return countrySmr?.call(this) ?? orElse(this);
-      case CountryShn():
-        return countryShn?.call(this) ?? orElse(this);
-      case CountryEgy():
-        return countryEgy?.call(this) ?? orElse(this);
-      case CountryHnd():
-        return countryHnd?.call(this) ?? orElse(this);
-      case CountryIdn():
-        return countryIdn?.call(this) ?? orElse(this);
-      case CountryPrk():
-        return countryPrk?.call(this) ?? orElse(this);
-      case CountryMac():
-        return countryMac?.call(this) ?? orElse(this);
-      case CountrySle():
-        return countrySle?.call(this) ?? orElse(this);
-      case CountryMda():
-        return countryMda?.call(this) ?? orElse(this);
-      case CountryPhl():
-        return countryPhl?.call(this) ?? orElse(this);
-      case CountryCmr():
-        return countryCmr?.call(this) ?? orElse(this);
-      case CountryGrl():
-        return countryGrl?.call(this) ?? orElse(this);
-      case CountryMtq():
-        return countryMtq?.call(this) ?? orElse(this);
-      case CountryLbn():
-        return countryLbn?.call(this) ?? orElse(this);
-      case CountryRwa():
-        return countryRwa?.call(this) ?? orElse(this);
-      case CountryBih():
-        return countryBih?.call(this) ?? orElse(this);
-      case CountryMhl():
-        return countryMhl?.call(this) ?? orElse(this);
-      case CountryIta():
-        return countryIta?.call(this) ?? orElse(this);
-      case CountryTkl():
-        return countryTkl?.call(this) ?? orElse(this);
-      case CountryGab():
-        return countryGab?.call(this) ?? orElse(this);
-      case CountryCck():
-        return countryCck?.call(this) ?? orElse(this);
-      case CountryPak():
-        return countryPak?.call(this) ?? orElse(this);
-      case CountryReu():
-        return countryReu?.call(this) ?? orElse(this);
-      case CountryMus():
-        return countryMus?.call(this) ?? orElse(this);
-      case CountryGrd():
-        return countryGrd?.call(this) ?? orElse(this);
-      case CountryOmn():
-        return countryOmn?.call(this) ?? orElse(this);
-      case CountryBfa():
-        return countryBfa?.call(this) ?? orElse(this);
-      case CountryWsm():
-        return countryWsm?.call(this) ?? orElse(this);
-      case CountryTto():
-        return countryTto?.call(this) ?? orElse(this);
-      case CountryVct():
-        return countryVct?.call(this) ?? orElse(this);
-      case CountryPlw():
-        return countryPlw?.call(this) ?? orElse(this);
-      case CountryZaf():
-        return countryZaf?.call(this) ?? orElse(this);
-      case CountryAgo():
-        return countryAgo?.call(this) ?? orElse(this);
-      case CountryKor():
-        return countryKor?.call(this) ?? orElse(this);
-      case CountryAtf():
-        return countryAtf?.call(this) ?? orElse(this);
-      case CountryIsl():
-        return countryIsl?.call(this) ?? orElse(this);
-      case CountryGuf():
-        return countryGuf?.call(this) ?? orElse(this);
-      case CountryNor():
-        return countryNor?.call(this) ?? orElse(this);
-      case CountryHun():
-        return countryHun?.call(this) ?? orElse(this);
-      case CountryPse():
-        return countryPse?.call(this) ?? orElse(this);
-      case CountryLca():
-        return countryLca?.call(this) ?? orElse(this);
-      case CountryNpl():
-        return countryNpl?.call(this) ?? orElse(this);
-      case CountryMng():
-        return countryMng?.call(this) ?? orElse(this);
-      case CountryZmb():
-        return countryZmb?.call(this) ?? orElse(this);
-      case CountryWlf():
-        return countryWlf?.call(this) ?? orElse(this);
-      case CountryMwi():
-        return countryMwi?.call(this) ?? orElse(this);
-      case CountryBhr():
-        return countryBhr?.call(this) ?? orElse(this);
-      case CountryUkr():
-        return countryUkr?.call(this) ?? orElse(this);
-      case CountryNru():
-        return countryNru?.call(this) ?? orElse(this);
-      case CountryMyt():
-        return countryMyt?.call(this) ?? orElse(this);
-      case CountryDza():
-        return countryDza?.call(this) ?? orElse(this);
-      case CountryCan():
-        return countryCan?.call(this) ?? orElse(this);
-      case CountryLie():
-        return countryLie?.call(this) ?? orElse(this);
-      case CountryEth():
-        return countryEth?.call(this) ?? orElse(this);
-      case CountryDom():
-        return countryDom?.call(this) ?? orElse(this);
-      case CountryBvt():
-        return countryBvt?.call(this) ?? orElse(this);
-      case CountryNfk():
-        return countryNfk?.call(this) ?? orElse(this);
-      case CountryNld():
-        return countryNld?.call(this) ?? orElse(this);
-      case CountryMnp():
-        return countryMnp?.call(this) ?? orElse(this);
-      case CountryHkg():
-        return countryHkg?.call(this) ?? orElse(this);
-      case CountryIrq():
-        return countryIrq?.call(this) ?? orElse(this);
-      case CountryEsp():
-        return countryEsp?.call(this) ?? orElse(this);
-      case CountryTgo():
-        return countryTgo?.call(this) ?? orElse(this);
-      case CountryChn():
-        return countryChn?.call(this) ?? orElse(this);
-      case CountryFlk():
-        return countryFlk?.call(this) ?? orElse(this);
-      case CountryUsa():
-        return countryUsa?.call(this) ?? orElse(this);
-      case CountryMaf():
-        return countryMaf?.call(this) ?? orElse(this);
-      case CountryIrn():
-        return countryIrn?.call(this) ?? orElse(this);
-      case CountryMex():
-        return countryMex?.call(this) ?? orElse(this);
-      case CountryBrn():
-        return countryBrn?.call(this) ?? orElse(this);
-      case CountryCyp():
-        return countryCyp?.call(this) ?? orElse(this);
-      case CountryNic():
-        return countryNic?.call(this) ?? orElse(this);
-      case CountryCuw():
-        return countryCuw?.call(this) ?? orElse(this);
-      case CountryPri():
-        return countryPri?.call(this) ?? orElse(this);
-      case CountryNcl():
-        return countryNcl?.call(this) ?? orElse(this);
-      case CountrySsd():
-        return countrySsd?.call(this) ?? orElse(this);
-      case CountrySom():
-        return countrySom?.call(this) ?? orElse(this);
-      case CountryGrc():
-        return countryGrc?.call(this) ?? orElse(this);
-      case CountryBes():
-        return countryBes?.call(this) ?? orElse(this);
-      case CountryLao():
-        return countryLao?.call(this) ?? orElse(this);
-      case CountryBlz():
-        return countryBlz?.call(this) ?? orElse(this);
-      case CountrySlv():
-        return countrySlv?.call(this) ?? orElse(this);
-      case CountryJam():
-        return countryJam?.call(this) ?? orElse(this);
-      case CountryUry():
-        return countryUry?.call(this) ?? orElse(this);
-      case CountryPng():
-        return countryPng?.call(this) ?? orElse(this);
-      case CountryLux():
-        return countryLux?.call(this) ?? orElse(this);
-      case CountryChl():
-        return countryChl?.call(this) ?? orElse(this);
-      case CountryVat():
-        return countryVat?.call(this) ?? orElse(this);
-      case CountryGnb():
-        return countryGnb?.call(this) ?? orElse(this);
-      case CountryUga():
-        return countryUga?.call(this) ?? orElse(this);
-      case CountryVen():
-        return countryVen?.call(this) ?? orElse(this);
-      case CountrySrb():
-        return countrySrb?.call(this) ?? orElse(this);
-      case CountryBen():
-        return countryBen?.call(this) ?? orElse(this);
-      case CountryBgd():
-        return countryBgd?.call(this) ?? orElse(this);
-      case CountryBhs():
-        return countryBhs?.call(this) ?? orElse(this);
-      case CountryNiu():
-        return countryNiu?.call(this) ?? orElse(this);
-      case CountryAtg():
-        return countryAtg?.call(this) ?? orElse(this);
-      case CountryBlm():
-        return countryBlm?.call(this) ?? orElse(this);
-      case CountrySyc():
-        return countrySyc?.call(this) ?? orElse(this);
-      case CountryEsh():
-        return countryEsh?.call(this) ?? orElse(this);
-      case CountryLby():
-        return countryLby?.call(this) ?? orElse(this);
-      case CountryMkd():
-        return countryMkd?.call(this) ?? orElse(this);
-      case CountryPer():
-        return countryPer?.call(this) ?? orElse(this);
-      case CountryBdi():
-        return countryBdi?.call(this) ?? orElse(this);
-      case CountryKir():
-        return countryKir?.call(this) ?? orElse(this);
-      case CountryTur():
-        return countryTur?.call(this) ?? orElse(this);
-      case CountryTza():
-        return countryTza?.call(this) ?? orElse(this);
-      case CountryTun():
-        return countryTun?.call(this) ?? orElse(this);
-      case CountryMsr():
-        return countryMsr?.call(this) ?? orElse(this);
-      case CountryKgz():
-        return countryKgz?.call(this) ?? orElse(this);
-      case CountryImn():
-        return countryImn?.call(this) ?? orElse(this);
-      case CountryGlp():
-        return countryGlp?.call(this) ?? orElse(this);
-      case CountryKwt():
-        return countryKwt?.call(this) ?? orElse(this);
-      case CountryVgb():
-        return countryVgb?.call(this) ?? orElse(this);
-      case CountryCiv():
-        return countryCiv?.call(this) ?? orElse(this);
-      case CountryCxr():
-        return countryCxr?.call(this) ?? orElse(this);
-      case CountryLso():
-        return countryLso?.call(this) ?? orElse(this);
-      case CountryJey():
-        return countryJey?.call(this) ?? orElse(this);
-      case CountrySvn():
-        return countrySvn?.call(this) ?? orElse(this);
-      case CountryBel():
-        return countryBel?.call(this) ?? orElse(this);
-      case CountryTca():
-        return countryTca?.call(this) ?? orElse(this);
-      case CountryGib():
-        return countryGib?.call(this) ?? orElse(this);
-      case CountryQat():
-        return countryQat?.call(this) ?? orElse(this);
-      case CountryBwa():
-        return countryBwa?.call(this) ?? orElse(this);
-      case CountryGnq():
-        return countryGnq?.call(this) ?? orElse(this);
-      case CountryDji():
-        return countryDji?.call(this) ?? orElse(this);
-      case CountryGuy():
-        return countryGuy?.call(this) ?? orElse(this);
-      case CountryGum():
-        return countryGum?.call(this) ?? orElse(this);
-      case CountryMco():
-        return countryMco?.call(this) ?? orElse(this);
-      case CountrySlb():
-        return countrySlb?.call(this) ?? orElse(this);
-      case CountryGgy():
-        return countryGgy?.call(this) ?? orElse(this);
-      case CountryPry():
-        return countryPry?.call(this) ?? orElse(this);
-      case CountrySur():
-        return countrySur?.call(this) ?? orElse(this);
-      case CountryUmi():
-        return countryUmi?.call(this) ?? orElse(this);
-      case CountryGin():
-        return countryGin?.call(this) ?? orElse(this);
-      case CountryCze():
-        return countryCze?.call(this) ?? orElse(this);
-      case CountryCom():
-        return countryCom?.call(this) ?? orElse(this);
-      case CountryGha():
-        return countryGha?.call(this) ?? orElse(this);
-      case CountryKna():
-        return countryKna?.call(this) ?? orElse(this);
-      case CountryPyf():
-        return countryPyf?.call(this) ?? orElse(this);
-      case CountryZwe():
-        return countryZwe?.call(this) ?? orElse(this);
-      case CountryKen():
-        return countryKen?.call(this) ?? orElse(this);
-      case CountryKaz():
-        return countryKaz?.call(this) ?? orElse(this);
-      case CountryMne():
-        return countryMne?.call(this) ?? orElse(this);
-      case CountryTuv():
-        return countryTuv?.call(this) ?? orElse(this);
-      case CountryPan():
-        return countryPan?.call(this) ?? orElse(this);
-      case CountryAnd():
-        return countryAnd?.call(this) ?? orElse(this);
-      case CountryVir():
-        return countryVir?.call(this) ?? orElse(this);
-      case CountryIsr():
-        return countryIsr?.call(this) ?? orElse(this);
-      case CountryPrt():
-        return countryPrt?.call(this) ?? orElse(this);
-      case CountryAut():
-        return countryAut?.call(this) ?? orElse(this);
-      case CountryFin():
-        return countryFin?.call(this) ?? orElse(this);
-      case CountryEst():
-        return countryEst?.call(this) ?? orElse(this);
-      case CountryDma():
-        return countryDma?.call(this) ?? orElse(this);
-      case CountryYem():
-        return countryYem?.call(this) ?? orElse(this);
-      case CountryAfg():
-        return countryAfg?.call(this) ?? orElse(this);
-      case CountrySyr():
-        return countrySyr?.call(this) ?? orElse(this);
-      case CountryMdv():
-        return countryMdv?.call(this) ?? orElse(this);
-      case CountryTls():
-        return countryTls?.call(this) ?? orElse(this);
-      case CountryLtu():
-        return countryLtu?.call(this) ?? orElse(this);
-      case CountryNzl():
-        return countryNzl?.call(this) ?? orElse(this);
-      case CountryBmu():
-        return countryBmu?.call(this) ?? orElse(this);
-      case CountryDeu():
-        return countryDeu?.call(this) ?? orElse(this);
-      case CountryArg():
-        return countryArg?.call(this) ?? orElse(this);
-      case CountryBlr():
-        return countryBlr?.call(this) ?? orElse(this);
-      case CountryBrb():
-        return countryBrb?.call(this) ?? orElse(this);
-      case CountryGtm():
-        return countryGtm?.call(this) ?? orElse(this);
-      case CountryAze():
-        return countryAze?.call(this) ?? orElse(this);
-      case CountryMar():
-        return countryMar?.call(this) ?? orElse(this);
-      case CountryCok():
-        return countryCok?.call(this) ?? orElse(this);
-      case CountryCaf():
-        return countryCaf?.call(this) ?? orElse(this);
-      case CountryRou():
-        return countryRou?.call(this) ?? orElse(this);
-      case CountryMlt():
-        return countryMlt?.call(this) ?? orElse(this);
-      case CountryArm():
-        return countryArm?.call(this) ?? orElse(this);
-      case CountrySen():
-        return countrySen?.call(this) ?? orElse(this);
-      case CountryBgr():
-        return countryBgr?.call(this) ?? orElse(this);
-      case CountryCod():
-        return countryCod?.call(this) ?? orElse(this);
-      case CountryHti():
-        return countryHti?.call(this) ?? orElse(this);
-      case CountryAlb():
-        return countryAlb?.call(this) ?? orElse(this);
-      case CountryJor():
-        return countryJor?.call(this) ?? orElse(this);
-      case CountrySjm():
-        return countrySjm?.call(this) ?? orElse(this);
-      case CountryMdg():
-        return countryMdg?.call(this) ?? orElse(this);
-      case CountryFra():
-        return countryFra?.call(this) ?? orElse(this);
-      case CountryFsm():
-        return countryFsm?.call(this) ?? orElse(this);
-      case CountryAbw():
-        return countryAbw?.call(this) ?? orElse(this);
-      case CountryInd():
-        return countryInd?.call(this) ?? orElse(this);
-      case CountryNam():
-        return countryNam?.call(this) ?? orElse(this);
-      case CountryFji():
-        return countryFji?.call(this) ?? orElse(this);
-      case CountrySdn():
-        return countrySdn?.call(this) ?? orElse(this);
-      case CountryStp():
-        return countryStp?.call(this) ?? orElse(this);
-      case CountrySau():
-        return countrySau?.call(this) ?? orElse(this);
-      case CountryHmd():
-        return countryHmd?.call(this) ?? orElse(this);
-      case CountryLka():
-        return countryLka?.call(this) ?? orElse(this);
-      case CountrySwe():
-        return countrySwe?.call(this) ?? orElse(this);
-      case CountryTon():
-        return countryTon?.call(this) ?? orElse(this);
-      case CountryDnk():
-        return countryDnk?.call(this) ?? orElse(this);
-      case CountryMys():
-        return countryMys?.call(this) ?? orElse(this);
-      case CountryCri():
-        return countryCri?.call(this) ?? orElse(this);
-      case CountryBol():
-        return countryBol?.call(this) ?? orElse(this);
-      case CountryBtn():
-        return countryBtn?.call(this) ?? orElse(this);
-      case CountryCym():
-        return countryCym?.call(this) ?? orElse(this);
-      case CountryPcn():
-        return countryPcn?.call(this) ?? orElse(this);
-      case CountryMli():
-        return countryMli?.call(this) ?? orElse(this);
-      case CountrySxm():
-        return countrySxm?.call(this) ?? orElse(this);
-      case CountryLva():
-        return countryLva?.call(this) ?? orElse(this);
-      case CountryAsm():
-        return countryAsm?.call(this) ?? orElse(this);
-      case CountrySpm():
-        return countrySpm?.call(this) ?? orElse(this);
-      case CountryEcu():
-        return countryEcu?.call(this) ?? orElse(this);
-      case CountryTha():
-        return countryTha?.call(this) ?? orElse(this);
-      case CountryAre():
-        return countryAre?.call(this) ?? orElse(this);
-      case CountryHrv():
-        return countryHrv?.call(this) ?? orElse(this);
-      case CountryMmr():
-        return countryMmr?.call(this) ?? orElse(this);
-      case CountryGeo():
-        return countryGeo?.call(this) ?? orElse(this);
-      case CountryTwn():
-        return countryTwn?.call(this) ?? orElse(this);
-      case CountryChe():
-        return countryChe?.call(this) ?? orElse(this);
-      case CountryEri():
-        return countryEri?.call(this) ?? orElse(this);
-      case CountryCog():
-        return countryCog?.call(this) ?? orElse(this);
-      case CountryFro():
-        return countryFro?.call(this) ?? orElse(this);
-      case CountryUnk():
-        return countryUnk?.call(this) ?? orElse(this);
-      default:
-        return orElse(this);
-    }
-  }
+  }) =>
+      switch (this) {
+        CountryCpv() => countryCpv?.call(this) ?? orElse(this),
+        CountrySgp() => countrySgp?.call(this) ?? orElse(this),
+        CountryMrt() => countryMrt?.call(this) ?? orElse(this),
+        CountryPol() => countryPol?.call(this) ?? orElse(this),
+        CountryTcd() => countryTcd?.call(this) ?? orElse(this),
+        CountryJpn() => countryJpn?.call(this) ?? orElse(this),
+        CountryCub() => countryCub?.call(this) ?? orElse(this),
+        CountryMoz() => countryMoz?.call(this) ?? orElse(this),
+        CountryGbr() => countryGbr?.call(this) ?? orElse(this),
+        CountryIrl() => countryIrl?.call(this) ?? orElse(this),
+        CountryNer() => countryNer?.call(this) ?? orElse(this),
+        CountryGmb() => countryGmb?.call(this) ?? orElse(this),
+        CountryUzb() => countryUzb?.call(this) ?? orElse(this),
+        CountryRus() => countryRus?.call(this) ?? orElse(this),
+        CountryTkm() => countryTkm?.call(this) ?? orElse(this),
+        CountryAia() => countryAia?.call(this) ?? orElse(this),
+        CountryVnm() => countryVnm?.call(this) ?? orElse(this),
+        CountryAta() => countryAta?.call(this) ?? orElse(this),
+        CountrySwz() => countrySwz?.call(this) ?? orElse(this),
+        CountryKhm() => countryKhm?.call(this) ?? orElse(this),
+        CountryVut() => countryVut?.call(this) ?? orElse(this),
+        CountryAla() => countryAla?.call(this) ?? orElse(this),
+        CountryAus() => countryAus?.call(this) ?? orElse(this),
+        CountryIot() => countryIot?.call(this) ?? orElse(this),
+        CountrySvk() => countrySvk?.call(this) ?? orElse(this),
+        CountryBra() => countryBra?.call(this) ?? orElse(this),
+        CountryTjk() => countryTjk?.call(this) ?? orElse(this),
+        CountrySgs() => countrySgs?.call(this) ?? orElse(this),
+        CountryLbr() => countryLbr?.call(this) ?? orElse(this),
+        CountryNga() => countryNga?.call(this) ?? orElse(this),
+        CountryCol() => countryCol?.call(this) ?? orElse(this),
+        CountrySmr() => countrySmr?.call(this) ?? orElse(this),
+        CountryShn() => countryShn?.call(this) ?? orElse(this),
+        CountryEgy() => countryEgy?.call(this) ?? orElse(this),
+        CountryHnd() => countryHnd?.call(this) ?? orElse(this),
+        CountryIdn() => countryIdn?.call(this) ?? orElse(this),
+        CountryPrk() => countryPrk?.call(this) ?? orElse(this),
+        CountryMac() => countryMac?.call(this) ?? orElse(this),
+        CountrySle() => countrySle?.call(this) ?? orElse(this),
+        CountryMda() => countryMda?.call(this) ?? orElse(this),
+        CountryPhl() => countryPhl?.call(this) ?? orElse(this),
+        CountryCmr() => countryCmr?.call(this) ?? orElse(this),
+        CountryGrl() => countryGrl?.call(this) ?? orElse(this),
+        CountryMtq() => countryMtq?.call(this) ?? orElse(this),
+        CountryLbn() => countryLbn?.call(this) ?? orElse(this),
+        CountryRwa() => countryRwa?.call(this) ?? orElse(this),
+        CountryBih() => countryBih?.call(this) ?? orElse(this),
+        CountryMhl() => countryMhl?.call(this) ?? orElse(this),
+        CountryIta() => countryIta?.call(this) ?? orElse(this),
+        CountryTkl() => countryTkl?.call(this) ?? orElse(this),
+        CountryGab() => countryGab?.call(this) ?? orElse(this),
+        CountryCck() => countryCck?.call(this) ?? orElse(this),
+        CountryPak() => countryPak?.call(this) ?? orElse(this),
+        CountryReu() => countryReu?.call(this) ?? orElse(this),
+        CountryMus() => countryMus?.call(this) ?? orElse(this),
+        CountryGrd() => countryGrd?.call(this) ?? orElse(this),
+        CountryOmn() => countryOmn?.call(this) ?? orElse(this),
+        CountryBfa() => countryBfa?.call(this) ?? orElse(this),
+        CountryWsm() => countryWsm?.call(this) ?? orElse(this),
+        CountryTto() => countryTto?.call(this) ?? orElse(this),
+        CountryVct() => countryVct?.call(this) ?? orElse(this),
+        CountryPlw() => countryPlw?.call(this) ?? orElse(this),
+        CountryZaf() => countryZaf?.call(this) ?? orElse(this),
+        CountryAgo() => countryAgo?.call(this) ?? orElse(this),
+        CountryKor() => countryKor?.call(this) ?? orElse(this),
+        CountryAtf() => countryAtf?.call(this) ?? orElse(this),
+        CountryIsl() => countryIsl?.call(this) ?? orElse(this),
+        CountryGuf() => countryGuf?.call(this) ?? orElse(this),
+        CountryNor() => countryNor?.call(this) ?? orElse(this),
+        CountryHun() => countryHun?.call(this) ?? orElse(this),
+        CountryPse() => countryPse?.call(this) ?? orElse(this),
+        CountryLca() => countryLca?.call(this) ?? orElse(this),
+        CountryNpl() => countryNpl?.call(this) ?? orElse(this),
+        CountryMng() => countryMng?.call(this) ?? orElse(this),
+        CountryZmb() => countryZmb?.call(this) ?? orElse(this),
+        CountryWlf() => countryWlf?.call(this) ?? orElse(this),
+        CountryMwi() => countryMwi?.call(this) ?? orElse(this),
+        CountryBhr() => countryBhr?.call(this) ?? orElse(this),
+        CountryUkr() => countryUkr?.call(this) ?? orElse(this),
+        CountryNru() => countryNru?.call(this) ?? orElse(this),
+        CountryMyt() => countryMyt?.call(this) ?? orElse(this),
+        CountryDza() => countryDza?.call(this) ?? orElse(this),
+        CountryCan() => countryCan?.call(this) ?? orElse(this),
+        CountryLie() => countryLie?.call(this) ?? orElse(this),
+        CountryEth() => countryEth?.call(this) ?? orElse(this),
+        CountryDom() => countryDom?.call(this) ?? orElse(this),
+        CountryBvt() => countryBvt?.call(this) ?? orElse(this),
+        CountryNfk() => countryNfk?.call(this) ?? orElse(this),
+        CountryNld() => countryNld?.call(this) ?? orElse(this),
+        CountryMnp() => countryMnp?.call(this) ?? orElse(this),
+        CountryHkg() => countryHkg?.call(this) ?? orElse(this),
+        CountryIrq() => countryIrq?.call(this) ?? orElse(this),
+        CountryEsp() => countryEsp?.call(this) ?? orElse(this),
+        CountryTgo() => countryTgo?.call(this) ?? orElse(this),
+        CountryChn() => countryChn?.call(this) ?? orElse(this),
+        CountryFlk() => countryFlk?.call(this) ?? orElse(this),
+        CountryUsa() => countryUsa?.call(this) ?? orElse(this),
+        CountryMaf() => countryMaf?.call(this) ?? orElse(this),
+        CountryIrn() => countryIrn?.call(this) ?? orElse(this),
+        CountryMex() => countryMex?.call(this) ?? orElse(this),
+        CountryBrn() => countryBrn?.call(this) ?? orElse(this),
+        CountryCyp() => countryCyp?.call(this) ?? orElse(this),
+        CountryNic() => countryNic?.call(this) ?? orElse(this),
+        CountryCuw() => countryCuw?.call(this) ?? orElse(this),
+        CountryPri() => countryPri?.call(this) ?? orElse(this),
+        CountryNcl() => countryNcl?.call(this) ?? orElse(this),
+        CountrySsd() => countrySsd?.call(this) ?? orElse(this),
+        CountrySom() => countrySom?.call(this) ?? orElse(this),
+        CountryGrc() => countryGrc?.call(this) ?? orElse(this),
+        CountryBes() => countryBes?.call(this) ?? orElse(this),
+        CountryLao() => countryLao?.call(this) ?? orElse(this),
+        CountryBlz() => countryBlz?.call(this) ?? orElse(this),
+        CountrySlv() => countrySlv?.call(this) ?? orElse(this),
+        CountryJam() => countryJam?.call(this) ?? orElse(this),
+        CountryUry() => countryUry?.call(this) ?? orElse(this),
+        CountryPng() => countryPng?.call(this) ?? orElse(this),
+        CountryLux() => countryLux?.call(this) ?? orElse(this),
+        CountryChl() => countryChl?.call(this) ?? orElse(this),
+        CountryVat() => countryVat?.call(this) ?? orElse(this),
+        CountryGnb() => countryGnb?.call(this) ?? orElse(this),
+        CountryUga() => countryUga?.call(this) ?? orElse(this),
+        CountryVen() => countryVen?.call(this) ?? orElse(this),
+        CountrySrb() => countrySrb?.call(this) ?? orElse(this),
+        CountryBen() => countryBen?.call(this) ?? orElse(this),
+        CountryBgd() => countryBgd?.call(this) ?? orElse(this),
+        CountryBhs() => countryBhs?.call(this) ?? orElse(this),
+        CountryNiu() => countryNiu?.call(this) ?? orElse(this),
+        CountryAtg() => countryAtg?.call(this) ?? orElse(this),
+        CountryBlm() => countryBlm?.call(this) ?? orElse(this),
+        CountrySyc() => countrySyc?.call(this) ?? orElse(this),
+        CountryEsh() => countryEsh?.call(this) ?? orElse(this),
+        CountryLby() => countryLby?.call(this) ?? orElse(this),
+        CountryMkd() => countryMkd?.call(this) ?? orElse(this),
+        CountryPer() => countryPer?.call(this) ?? orElse(this),
+        CountryBdi() => countryBdi?.call(this) ?? orElse(this),
+        CountryKir() => countryKir?.call(this) ?? orElse(this),
+        CountryTur() => countryTur?.call(this) ?? orElse(this),
+        CountryTza() => countryTza?.call(this) ?? orElse(this),
+        CountryTun() => countryTun?.call(this) ?? orElse(this),
+        CountryMsr() => countryMsr?.call(this) ?? orElse(this),
+        CountryKgz() => countryKgz?.call(this) ?? orElse(this),
+        CountryImn() => countryImn?.call(this) ?? orElse(this),
+        CountryGlp() => countryGlp?.call(this) ?? orElse(this),
+        CountryKwt() => countryKwt?.call(this) ?? orElse(this),
+        CountryVgb() => countryVgb?.call(this) ?? orElse(this),
+        CountryCiv() => countryCiv?.call(this) ?? orElse(this),
+        CountryCxr() => countryCxr?.call(this) ?? orElse(this),
+        CountryLso() => countryLso?.call(this) ?? orElse(this),
+        CountryJey() => countryJey?.call(this) ?? orElse(this),
+        CountrySvn() => countrySvn?.call(this) ?? orElse(this),
+        CountryBel() => countryBel?.call(this) ?? orElse(this),
+        CountryTca() => countryTca?.call(this) ?? orElse(this),
+        CountryGib() => countryGib?.call(this) ?? orElse(this),
+        CountryQat() => countryQat?.call(this) ?? orElse(this),
+        CountryBwa() => countryBwa?.call(this) ?? orElse(this),
+        CountryGnq() => countryGnq?.call(this) ?? orElse(this),
+        CountryDji() => countryDji?.call(this) ?? orElse(this),
+        CountryGuy() => countryGuy?.call(this) ?? orElse(this),
+        CountryGum() => countryGum?.call(this) ?? orElse(this),
+        CountryMco() => countryMco?.call(this) ?? orElse(this),
+        CountrySlb() => countrySlb?.call(this) ?? orElse(this),
+        CountryGgy() => countryGgy?.call(this) ?? orElse(this),
+        CountryPry() => countryPry?.call(this) ?? orElse(this),
+        CountrySur() => countrySur?.call(this) ?? orElse(this),
+        CountryUmi() => countryUmi?.call(this) ?? orElse(this),
+        CountryGin() => countryGin?.call(this) ?? orElse(this),
+        CountryCze() => countryCze?.call(this) ?? orElse(this),
+        CountryCom() => countryCom?.call(this) ?? orElse(this),
+        CountryGha() => countryGha?.call(this) ?? orElse(this),
+        CountryKna() => countryKna?.call(this) ?? orElse(this),
+        CountryPyf() => countryPyf?.call(this) ?? orElse(this),
+        CountryZwe() => countryZwe?.call(this) ?? orElse(this),
+        CountryKen() => countryKen?.call(this) ?? orElse(this),
+        CountryKaz() => countryKaz?.call(this) ?? orElse(this),
+        CountryMne() => countryMne?.call(this) ?? orElse(this),
+        CountryTuv() => countryTuv?.call(this) ?? orElse(this),
+        CountryPan() => countryPan?.call(this) ?? orElse(this),
+        CountryAnd() => countryAnd?.call(this) ?? orElse(this),
+        CountryVir() => countryVir?.call(this) ?? orElse(this),
+        CountryIsr() => countryIsr?.call(this) ?? orElse(this),
+        CountryPrt() => countryPrt?.call(this) ?? orElse(this),
+        CountryAut() => countryAut?.call(this) ?? orElse(this),
+        CountryFin() => countryFin?.call(this) ?? orElse(this),
+        CountryEst() => countryEst?.call(this) ?? orElse(this),
+        CountryDma() => countryDma?.call(this) ?? orElse(this),
+        CountryYem() => countryYem?.call(this) ?? orElse(this),
+        CountryAfg() => countryAfg?.call(this) ?? orElse(this),
+        CountrySyr() => countrySyr?.call(this) ?? orElse(this),
+        CountryMdv() => countryMdv?.call(this) ?? orElse(this),
+        CountryTls() => countryTls?.call(this) ?? orElse(this),
+        CountryLtu() => countryLtu?.call(this) ?? orElse(this),
+        CountryNzl() => countryNzl?.call(this) ?? orElse(this),
+        CountryBmu() => countryBmu?.call(this) ?? orElse(this),
+        CountryDeu() => countryDeu?.call(this) ?? orElse(this),
+        CountryArg() => countryArg?.call(this) ?? orElse(this),
+        CountryBlr() => countryBlr?.call(this) ?? orElse(this),
+        CountryBrb() => countryBrb?.call(this) ?? orElse(this),
+        CountryGtm() => countryGtm?.call(this) ?? orElse(this),
+        CountryAze() => countryAze?.call(this) ?? orElse(this),
+        CountryMar() => countryMar?.call(this) ?? orElse(this),
+        CountryCok() => countryCok?.call(this) ?? orElse(this),
+        CountryCaf() => countryCaf?.call(this) ?? orElse(this),
+        CountryRou() => countryRou?.call(this) ?? orElse(this),
+        CountryMlt() => countryMlt?.call(this) ?? orElse(this),
+        CountryArm() => countryArm?.call(this) ?? orElse(this),
+        CountrySen() => countrySen?.call(this) ?? orElse(this),
+        CountryBgr() => countryBgr?.call(this) ?? orElse(this),
+        CountryCod() => countryCod?.call(this) ?? orElse(this),
+        CountryHti() => countryHti?.call(this) ?? orElse(this),
+        CountryAlb() => countryAlb?.call(this) ?? orElse(this),
+        CountryJor() => countryJor?.call(this) ?? orElse(this),
+        CountrySjm() => countrySjm?.call(this) ?? orElse(this),
+        CountryMdg() => countryMdg?.call(this) ?? orElse(this),
+        CountryFra() => countryFra?.call(this) ?? orElse(this),
+        CountryFsm() => countryFsm?.call(this) ?? orElse(this),
+        CountryAbw() => countryAbw?.call(this) ?? orElse(this),
+        CountryInd() => countryInd?.call(this) ?? orElse(this),
+        CountryNam() => countryNam?.call(this) ?? orElse(this),
+        CountryFji() => countryFji?.call(this) ?? orElse(this),
+        CountrySdn() => countrySdn?.call(this) ?? orElse(this),
+        CountryStp() => countryStp?.call(this) ?? orElse(this),
+        CountrySau() => countrySau?.call(this) ?? orElse(this),
+        CountryHmd() => countryHmd?.call(this) ?? orElse(this),
+        CountryLka() => countryLka?.call(this) ?? orElse(this),
+        CountrySwe() => countrySwe?.call(this) ?? orElse(this),
+        CountryTon() => countryTon?.call(this) ?? orElse(this),
+        CountryDnk() => countryDnk?.call(this) ?? orElse(this),
+        CountryMys() => countryMys?.call(this) ?? orElse(this),
+        CountryCri() => countryCri?.call(this) ?? orElse(this),
+        CountryBol() => countryBol?.call(this) ?? orElse(this),
+        CountryBtn() => countryBtn?.call(this) ?? orElse(this),
+        CountryCym() => countryCym?.call(this) ?? orElse(this),
+        CountryPcn() => countryPcn?.call(this) ?? orElse(this),
+        CountryMli() => countryMli?.call(this) ?? orElse(this),
+        CountrySxm() => countrySxm?.call(this) ?? orElse(this),
+        CountryLva() => countryLva?.call(this) ?? orElse(this),
+        CountryAsm() => countryAsm?.call(this) ?? orElse(this),
+        CountrySpm() => countrySpm?.call(this) ?? orElse(this),
+        CountryEcu() => countryEcu?.call(this) ?? orElse(this),
+        CountryTha() => countryTha?.call(this) ?? orElse(this),
+        CountryAre() => countryAre?.call(this) ?? orElse(this),
+        CountryHrv() => countryHrv?.call(this) ?? orElse(this),
+        CountryMmr() => countryMmr?.call(this) ?? orElse(this),
+        CountryGeo() => countryGeo?.call(this) ?? orElse(this),
+        CountryTwn() => countryTwn?.call(this) ?? orElse(this),
+        CountryChe() => countryChe?.call(this) ?? orElse(this),
+        CountryEri() => countryEri?.call(this) ?? orElse(this),
+        CountryCog() => countryCog?.call(this) ?? orElse(this),
+        CountryFro() => countryFro?.call(this) ?? orElse(this),
+        CountryUnk() => countryUnk?.call(this) ?? orElse(this),
+        _ => orElse(this),
+      };
 
   R maybeWhen<R>({
     required R Function() orElse,
@@ -1772,512 +1268,260 @@ extension WorldCountryFunctional on WorldCountry {
     R Function()? countryCog,
     R Function()? countryFro,
     R Function()? countryUnk,
-  }) {
-    switch (this) {
-      case CountryCpv():
-        return countryCpv?.call() ?? orElse();
-      case CountrySgp():
-        return countrySgp?.call() ?? orElse();
-      case CountryMrt():
-        return countryMrt?.call() ?? orElse();
-      case CountryPol():
-        return countryPol?.call() ?? orElse();
-      case CountryTcd():
-        return countryTcd?.call() ?? orElse();
-      case CountryJpn():
-        return countryJpn?.call() ?? orElse();
-      case CountryCub():
-        return countryCub?.call() ?? orElse();
-      case CountryMoz():
-        return countryMoz?.call() ?? orElse();
-      case CountryGbr():
-        return countryGbr?.call() ?? orElse();
-      case CountryIrl():
-        return countryIrl?.call() ?? orElse();
-      case CountryNer():
-        return countryNer?.call() ?? orElse();
-      case CountryGmb():
-        return countryGmb?.call() ?? orElse();
-      case CountryUzb():
-        return countryUzb?.call() ?? orElse();
-      case CountryRus():
-        return countryRus?.call() ?? orElse();
-      case CountryTkm():
-        return countryTkm?.call() ?? orElse();
-      case CountryAia():
-        return countryAia?.call() ?? orElse();
-      case CountryVnm():
-        return countryVnm?.call() ?? orElse();
-      case CountryAta():
-        return countryAta?.call() ?? orElse();
-      case CountrySwz():
-        return countrySwz?.call() ?? orElse();
-      case CountryKhm():
-        return countryKhm?.call() ?? orElse();
-      case CountryVut():
-        return countryVut?.call() ?? orElse();
-      case CountryAla():
-        return countryAla?.call() ?? orElse();
-      case CountryAus():
-        return countryAus?.call() ?? orElse();
-      case CountryIot():
-        return countryIot?.call() ?? orElse();
-      case CountrySvk():
-        return countrySvk?.call() ?? orElse();
-      case CountryBra():
-        return countryBra?.call() ?? orElse();
-      case CountryTjk():
-        return countryTjk?.call() ?? orElse();
-      case CountrySgs():
-        return countrySgs?.call() ?? orElse();
-      case CountryLbr():
-        return countryLbr?.call() ?? orElse();
-      case CountryNga():
-        return countryNga?.call() ?? orElse();
-      case CountryCol():
-        return countryCol?.call() ?? orElse();
-      case CountrySmr():
-        return countrySmr?.call() ?? orElse();
-      case CountryShn():
-        return countryShn?.call() ?? orElse();
-      case CountryEgy():
-        return countryEgy?.call() ?? orElse();
-      case CountryHnd():
-        return countryHnd?.call() ?? orElse();
-      case CountryIdn():
-        return countryIdn?.call() ?? orElse();
-      case CountryPrk():
-        return countryPrk?.call() ?? orElse();
-      case CountryMac():
-        return countryMac?.call() ?? orElse();
-      case CountrySle():
-        return countrySle?.call() ?? orElse();
-      case CountryMda():
-        return countryMda?.call() ?? orElse();
-      case CountryPhl():
-        return countryPhl?.call() ?? orElse();
-      case CountryCmr():
-        return countryCmr?.call() ?? orElse();
-      case CountryGrl():
-        return countryGrl?.call() ?? orElse();
-      case CountryMtq():
-        return countryMtq?.call() ?? orElse();
-      case CountryLbn():
-        return countryLbn?.call() ?? orElse();
-      case CountryRwa():
-        return countryRwa?.call() ?? orElse();
-      case CountryBih():
-        return countryBih?.call() ?? orElse();
-      case CountryMhl():
-        return countryMhl?.call() ?? orElse();
-      case CountryIta():
-        return countryIta?.call() ?? orElse();
-      case CountryTkl():
-        return countryTkl?.call() ?? orElse();
-      case CountryGab():
-        return countryGab?.call() ?? orElse();
-      case CountryCck():
-        return countryCck?.call() ?? orElse();
-      case CountryPak():
-        return countryPak?.call() ?? orElse();
-      case CountryReu():
-        return countryReu?.call() ?? orElse();
-      case CountryMus():
-        return countryMus?.call() ?? orElse();
-      case CountryGrd():
-        return countryGrd?.call() ?? orElse();
-      case CountryOmn():
-        return countryOmn?.call() ?? orElse();
-      case CountryBfa():
-        return countryBfa?.call() ?? orElse();
-      case CountryWsm():
-        return countryWsm?.call() ?? orElse();
-      case CountryTto():
-        return countryTto?.call() ?? orElse();
-      case CountryVct():
-        return countryVct?.call() ?? orElse();
-      case CountryPlw():
-        return countryPlw?.call() ?? orElse();
-      case CountryZaf():
-        return countryZaf?.call() ?? orElse();
-      case CountryAgo():
-        return countryAgo?.call() ?? orElse();
-      case CountryKor():
-        return countryKor?.call() ?? orElse();
-      case CountryAtf():
-        return countryAtf?.call() ?? orElse();
-      case CountryIsl():
-        return countryIsl?.call() ?? orElse();
-      case CountryGuf():
-        return countryGuf?.call() ?? orElse();
-      case CountryNor():
-        return countryNor?.call() ?? orElse();
-      case CountryHun():
-        return countryHun?.call() ?? orElse();
-      case CountryPse():
-        return countryPse?.call() ?? orElse();
-      case CountryLca():
-        return countryLca?.call() ?? orElse();
-      case CountryNpl():
-        return countryNpl?.call() ?? orElse();
-      case CountryMng():
-        return countryMng?.call() ?? orElse();
-      case CountryZmb():
-        return countryZmb?.call() ?? orElse();
-      case CountryWlf():
-        return countryWlf?.call() ?? orElse();
-      case CountryMwi():
-        return countryMwi?.call() ?? orElse();
-      case CountryBhr():
-        return countryBhr?.call() ?? orElse();
-      case CountryUkr():
-        return countryUkr?.call() ?? orElse();
-      case CountryNru():
-        return countryNru?.call() ?? orElse();
-      case CountryMyt():
-        return countryMyt?.call() ?? orElse();
-      case CountryDza():
-        return countryDza?.call() ?? orElse();
-      case CountryCan():
-        return countryCan?.call() ?? orElse();
-      case CountryLie():
-        return countryLie?.call() ?? orElse();
-      case CountryEth():
-        return countryEth?.call() ?? orElse();
-      case CountryDom():
-        return countryDom?.call() ?? orElse();
-      case CountryBvt():
-        return countryBvt?.call() ?? orElse();
-      case CountryNfk():
-        return countryNfk?.call() ?? orElse();
-      case CountryNld():
-        return countryNld?.call() ?? orElse();
-      case CountryMnp():
-        return countryMnp?.call() ?? orElse();
-      case CountryHkg():
-        return countryHkg?.call() ?? orElse();
-      case CountryIrq():
-        return countryIrq?.call() ?? orElse();
-      case CountryEsp():
-        return countryEsp?.call() ?? orElse();
-      case CountryTgo():
-        return countryTgo?.call() ?? orElse();
-      case CountryChn():
-        return countryChn?.call() ?? orElse();
-      case CountryFlk():
-        return countryFlk?.call() ?? orElse();
-      case CountryUsa():
-        return countryUsa?.call() ?? orElse();
-      case CountryMaf():
-        return countryMaf?.call() ?? orElse();
-      case CountryIrn():
-        return countryIrn?.call() ?? orElse();
-      case CountryMex():
-        return countryMex?.call() ?? orElse();
-      case CountryBrn():
-        return countryBrn?.call() ?? orElse();
-      case CountryCyp():
-        return countryCyp?.call() ?? orElse();
-      case CountryNic():
-        return countryNic?.call() ?? orElse();
-      case CountryCuw():
-        return countryCuw?.call() ?? orElse();
-      case CountryPri():
-        return countryPri?.call() ?? orElse();
-      case CountryNcl():
-        return countryNcl?.call() ?? orElse();
-      case CountrySsd():
-        return countrySsd?.call() ?? orElse();
-      case CountrySom():
-        return countrySom?.call() ?? orElse();
-      case CountryGrc():
-        return countryGrc?.call() ?? orElse();
-      case CountryBes():
-        return countryBes?.call() ?? orElse();
-      case CountryLao():
-        return countryLao?.call() ?? orElse();
-      case CountryBlz():
-        return countryBlz?.call() ?? orElse();
-      case CountrySlv():
-        return countrySlv?.call() ?? orElse();
-      case CountryJam():
-        return countryJam?.call() ?? orElse();
-      case CountryUry():
-        return countryUry?.call() ?? orElse();
-      case CountryPng():
-        return countryPng?.call() ?? orElse();
-      case CountryLux():
-        return countryLux?.call() ?? orElse();
-      case CountryChl():
-        return countryChl?.call() ?? orElse();
-      case CountryVat():
-        return countryVat?.call() ?? orElse();
-      case CountryGnb():
-        return countryGnb?.call() ?? orElse();
-      case CountryUga():
-        return countryUga?.call() ?? orElse();
-      case CountryVen():
-        return countryVen?.call() ?? orElse();
-      case CountrySrb():
-        return countrySrb?.call() ?? orElse();
-      case CountryBen():
-        return countryBen?.call() ?? orElse();
-      case CountryBgd():
-        return countryBgd?.call() ?? orElse();
-      case CountryBhs():
-        return countryBhs?.call() ?? orElse();
-      case CountryNiu():
-        return countryNiu?.call() ?? orElse();
-      case CountryAtg():
-        return countryAtg?.call() ?? orElse();
-      case CountryBlm():
-        return countryBlm?.call() ?? orElse();
-      case CountrySyc():
-        return countrySyc?.call() ?? orElse();
-      case CountryEsh():
-        return countryEsh?.call() ?? orElse();
-      case CountryLby():
-        return countryLby?.call() ?? orElse();
-      case CountryMkd():
-        return countryMkd?.call() ?? orElse();
-      case CountryPer():
-        return countryPer?.call() ?? orElse();
-      case CountryBdi():
-        return countryBdi?.call() ?? orElse();
-      case CountryKir():
-        return countryKir?.call() ?? orElse();
-      case CountryTur():
-        return countryTur?.call() ?? orElse();
-      case CountryTza():
-        return countryTza?.call() ?? orElse();
-      case CountryTun():
-        return countryTun?.call() ?? orElse();
-      case CountryMsr():
-        return countryMsr?.call() ?? orElse();
-      case CountryKgz():
-        return countryKgz?.call() ?? orElse();
-      case CountryImn():
-        return countryImn?.call() ?? orElse();
-      case CountryGlp():
-        return countryGlp?.call() ?? orElse();
-      case CountryKwt():
-        return countryKwt?.call() ?? orElse();
-      case CountryVgb():
-        return countryVgb?.call() ?? orElse();
-      case CountryCiv():
-        return countryCiv?.call() ?? orElse();
-      case CountryCxr():
-        return countryCxr?.call() ?? orElse();
-      case CountryLso():
-        return countryLso?.call() ?? orElse();
-      case CountryJey():
-        return countryJey?.call() ?? orElse();
-      case CountrySvn():
-        return countrySvn?.call() ?? orElse();
-      case CountryBel():
-        return countryBel?.call() ?? orElse();
-      case CountryTca():
-        return countryTca?.call() ?? orElse();
-      case CountryGib():
-        return countryGib?.call() ?? orElse();
-      case CountryQat():
-        return countryQat?.call() ?? orElse();
-      case CountryBwa():
-        return countryBwa?.call() ?? orElse();
-      case CountryGnq():
-        return countryGnq?.call() ?? orElse();
-      case CountryDji():
-        return countryDji?.call() ?? orElse();
-      case CountryGuy():
-        return countryGuy?.call() ?? orElse();
-      case CountryGum():
-        return countryGum?.call() ?? orElse();
-      case CountryMco():
-        return countryMco?.call() ?? orElse();
-      case CountrySlb():
-        return countrySlb?.call() ?? orElse();
-      case CountryGgy():
-        return countryGgy?.call() ?? orElse();
-      case CountryPry():
-        return countryPry?.call() ?? orElse();
-      case CountrySur():
-        return countrySur?.call() ?? orElse();
-      case CountryUmi():
-        return countryUmi?.call() ?? orElse();
-      case CountryGin():
-        return countryGin?.call() ?? orElse();
-      case CountryCze():
-        return countryCze?.call() ?? orElse();
-      case CountryCom():
-        return countryCom?.call() ?? orElse();
-      case CountryGha():
-        return countryGha?.call() ?? orElse();
-      case CountryKna():
-        return countryKna?.call() ?? orElse();
-      case CountryPyf():
-        return countryPyf?.call() ?? orElse();
-      case CountryZwe():
-        return countryZwe?.call() ?? orElse();
-      case CountryKen():
-        return countryKen?.call() ?? orElse();
-      case CountryKaz():
-        return countryKaz?.call() ?? orElse();
-      case CountryMne():
-        return countryMne?.call() ?? orElse();
-      case CountryTuv():
-        return countryTuv?.call() ?? orElse();
-      case CountryPan():
-        return countryPan?.call() ?? orElse();
-      case CountryAnd():
-        return countryAnd?.call() ?? orElse();
-      case CountryVir():
-        return countryVir?.call() ?? orElse();
-      case CountryIsr():
-        return countryIsr?.call() ?? orElse();
-      case CountryPrt():
-        return countryPrt?.call() ?? orElse();
-      case CountryAut():
-        return countryAut?.call() ?? orElse();
-      case CountryFin():
-        return countryFin?.call() ?? orElse();
-      case CountryEst():
-        return countryEst?.call() ?? orElse();
-      case CountryDma():
-        return countryDma?.call() ?? orElse();
-      case CountryYem():
-        return countryYem?.call() ?? orElse();
-      case CountryAfg():
-        return countryAfg?.call() ?? orElse();
-      case CountrySyr():
-        return countrySyr?.call() ?? orElse();
-      case CountryMdv():
-        return countryMdv?.call() ?? orElse();
-      case CountryTls():
-        return countryTls?.call() ?? orElse();
-      case CountryLtu():
-        return countryLtu?.call() ?? orElse();
-      case CountryNzl():
-        return countryNzl?.call() ?? orElse();
-      case CountryBmu():
-        return countryBmu?.call() ?? orElse();
-      case CountryDeu():
-        return countryDeu?.call() ?? orElse();
-      case CountryArg():
-        return countryArg?.call() ?? orElse();
-      case CountryBlr():
-        return countryBlr?.call() ?? orElse();
-      case CountryBrb():
-        return countryBrb?.call() ?? orElse();
-      case CountryGtm():
-        return countryGtm?.call() ?? orElse();
-      case CountryAze():
-        return countryAze?.call() ?? orElse();
-      case CountryMar():
-        return countryMar?.call() ?? orElse();
-      case CountryCok():
-        return countryCok?.call() ?? orElse();
-      case CountryCaf():
-        return countryCaf?.call() ?? orElse();
-      case CountryRou():
-        return countryRou?.call() ?? orElse();
-      case CountryMlt():
-        return countryMlt?.call() ?? orElse();
-      case CountryArm():
-        return countryArm?.call() ?? orElse();
-      case CountrySen():
-        return countrySen?.call() ?? orElse();
-      case CountryBgr():
-        return countryBgr?.call() ?? orElse();
-      case CountryCod():
-        return countryCod?.call() ?? orElse();
-      case CountryHti():
-        return countryHti?.call() ?? orElse();
-      case CountryAlb():
-        return countryAlb?.call() ?? orElse();
-      case CountryJor():
-        return countryJor?.call() ?? orElse();
-      case CountrySjm():
-        return countrySjm?.call() ?? orElse();
-      case CountryMdg():
-        return countryMdg?.call() ?? orElse();
-      case CountryFra():
-        return countryFra?.call() ?? orElse();
-      case CountryFsm():
-        return countryFsm?.call() ?? orElse();
-      case CountryAbw():
-        return countryAbw?.call() ?? orElse();
-      case CountryInd():
-        return countryInd?.call() ?? orElse();
-      case CountryNam():
-        return countryNam?.call() ?? orElse();
-      case CountryFji():
-        return countryFji?.call() ?? orElse();
-      case CountrySdn():
-        return countrySdn?.call() ?? orElse();
-      case CountryStp():
-        return countryStp?.call() ?? orElse();
-      case CountrySau():
-        return countrySau?.call() ?? orElse();
-      case CountryHmd():
-        return countryHmd?.call() ?? orElse();
-      case CountryLka():
-        return countryLka?.call() ?? orElse();
-      case CountrySwe():
-        return countrySwe?.call() ?? orElse();
-      case CountryTon():
-        return countryTon?.call() ?? orElse();
-      case CountryDnk():
-        return countryDnk?.call() ?? orElse();
-      case CountryMys():
-        return countryMys?.call() ?? orElse();
-      case CountryCri():
-        return countryCri?.call() ?? orElse();
-      case CountryBol():
-        return countryBol?.call() ?? orElse();
-      case CountryBtn():
-        return countryBtn?.call() ?? orElse();
-      case CountryCym():
-        return countryCym?.call() ?? orElse();
-      case CountryPcn():
-        return countryPcn?.call() ?? orElse();
-      case CountryMli():
-        return countryMli?.call() ?? orElse();
-      case CountrySxm():
-        return countrySxm?.call() ?? orElse();
-      case CountryLva():
-        return countryLva?.call() ?? orElse();
-      case CountryAsm():
-        return countryAsm?.call() ?? orElse();
-      case CountrySpm():
-        return countrySpm?.call() ?? orElse();
-      case CountryEcu():
-        return countryEcu?.call() ?? orElse();
-      case CountryTha():
-        return countryTha?.call() ?? orElse();
-      case CountryAre():
-        return countryAre?.call() ?? orElse();
-      case CountryHrv():
-        return countryHrv?.call() ?? orElse();
-      case CountryMmr():
-        return countryMmr?.call() ?? orElse();
-      case CountryGeo():
-        return countryGeo?.call() ?? orElse();
-      case CountryTwn():
-        return countryTwn?.call() ?? orElse();
-      case CountryChe():
-        return countryChe?.call() ?? orElse();
-      case CountryEri():
-        return countryEri?.call() ?? orElse();
-      case CountryCog():
-        return countryCog?.call() ?? orElse();
-      case CountryFro():
-        return countryFro?.call() ?? orElse();
-      case CountryUnk():
-        return countryUnk?.call() ?? orElse();
-      default:
-        return orElse();
-    }
-  }
+  }) =>
+      switch (this) {
+        CountryCpv() => countryCpv?.call() ?? orElse(),
+        CountrySgp() => countrySgp?.call() ?? orElse(),
+        CountryMrt() => countryMrt?.call() ?? orElse(),
+        CountryPol() => countryPol?.call() ?? orElse(),
+        CountryTcd() => countryTcd?.call() ?? orElse(),
+        CountryJpn() => countryJpn?.call() ?? orElse(),
+        CountryCub() => countryCub?.call() ?? orElse(),
+        CountryMoz() => countryMoz?.call() ?? orElse(),
+        CountryGbr() => countryGbr?.call() ?? orElse(),
+        CountryIrl() => countryIrl?.call() ?? orElse(),
+        CountryNer() => countryNer?.call() ?? orElse(),
+        CountryGmb() => countryGmb?.call() ?? orElse(),
+        CountryUzb() => countryUzb?.call() ?? orElse(),
+        CountryRus() => countryRus?.call() ?? orElse(),
+        CountryTkm() => countryTkm?.call() ?? orElse(),
+        CountryAia() => countryAia?.call() ?? orElse(),
+        CountryVnm() => countryVnm?.call() ?? orElse(),
+        CountryAta() => countryAta?.call() ?? orElse(),
+        CountrySwz() => countrySwz?.call() ?? orElse(),
+        CountryKhm() => countryKhm?.call() ?? orElse(),
+        CountryVut() => countryVut?.call() ?? orElse(),
+        CountryAla() => countryAla?.call() ?? orElse(),
+        CountryAus() => countryAus?.call() ?? orElse(),
+        CountryIot() => countryIot?.call() ?? orElse(),
+        CountrySvk() => countrySvk?.call() ?? orElse(),
+        CountryBra() => countryBra?.call() ?? orElse(),
+        CountryTjk() => countryTjk?.call() ?? orElse(),
+        CountrySgs() => countrySgs?.call() ?? orElse(),
+        CountryLbr() => countryLbr?.call() ?? orElse(),
+        CountryNga() => countryNga?.call() ?? orElse(),
+        CountryCol() => countryCol?.call() ?? orElse(),
+        CountrySmr() => countrySmr?.call() ?? orElse(),
+        CountryShn() => countryShn?.call() ?? orElse(),
+        CountryEgy() => countryEgy?.call() ?? orElse(),
+        CountryHnd() => countryHnd?.call() ?? orElse(),
+        CountryIdn() => countryIdn?.call() ?? orElse(),
+        CountryPrk() => countryPrk?.call() ?? orElse(),
+        CountryMac() => countryMac?.call() ?? orElse(),
+        CountrySle() => countrySle?.call() ?? orElse(),
+        CountryMda() => countryMda?.call() ?? orElse(),
+        CountryPhl() => countryPhl?.call() ?? orElse(),
+        CountryCmr() => countryCmr?.call() ?? orElse(),
+        CountryGrl() => countryGrl?.call() ?? orElse(),
+        CountryMtq() => countryMtq?.call() ?? orElse(),
+        CountryLbn() => countryLbn?.call() ?? orElse(),
+        CountryRwa() => countryRwa?.call() ?? orElse(),
+        CountryBih() => countryBih?.call() ?? orElse(),
+        CountryMhl() => countryMhl?.call() ?? orElse(),
+        CountryIta() => countryIta?.call() ?? orElse(),
+        CountryTkl() => countryTkl?.call() ?? orElse(),
+        CountryGab() => countryGab?.call() ?? orElse(),
+        CountryCck() => countryCck?.call() ?? orElse(),
+        CountryPak() => countryPak?.call() ?? orElse(),
+        CountryReu() => countryReu?.call() ?? orElse(),
+        CountryMus() => countryMus?.call() ?? orElse(),
+        CountryGrd() => countryGrd?.call() ?? orElse(),
+        CountryOmn() => countryOmn?.call() ?? orElse(),
+        CountryBfa() => countryBfa?.call() ?? orElse(),
+        CountryWsm() => countryWsm?.call() ?? orElse(),
+        CountryTto() => countryTto?.call() ?? orElse(),
+        CountryVct() => countryVct?.call() ?? orElse(),
+        CountryPlw() => countryPlw?.call() ?? orElse(),
+        CountryZaf() => countryZaf?.call() ?? orElse(),
+        CountryAgo() => countryAgo?.call() ?? orElse(),
+        CountryKor() => countryKor?.call() ?? orElse(),
+        CountryAtf() => countryAtf?.call() ?? orElse(),
+        CountryIsl() => countryIsl?.call() ?? orElse(),
+        CountryGuf() => countryGuf?.call() ?? orElse(),
+        CountryNor() => countryNor?.call() ?? orElse(),
+        CountryHun() => countryHun?.call() ?? orElse(),
+        CountryPse() => countryPse?.call() ?? orElse(),
+        CountryLca() => countryLca?.call() ?? orElse(),
+        CountryNpl() => countryNpl?.call() ?? orElse(),
+        CountryMng() => countryMng?.call() ?? orElse(),
+        CountryZmb() => countryZmb?.call() ?? orElse(),
+        CountryWlf() => countryWlf?.call() ?? orElse(),
+        CountryMwi() => countryMwi?.call() ?? orElse(),
+        CountryBhr() => countryBhr?.call() ?? orElse(),
+        CountryUkr() => countryUkr?.call() ?? orElse(),
+        CountryNru() => countryNru?.call() ?? orElse(),
+        CountryMyt() => countryMyt?.call() ?? orElse(),
+        CountryDza() => countryDza?.call() ?? orElse(),
+        CountryCan() => countryCan?.call() ?? orElse(),
+        CountryLie() => countryLie?.call() ?? orElse(),
+        CountryEth() => countryEth?.call() ?? orElse(),
+        CountryDom() => countryDom?.call() ?? orElse(),
+        CountryBvt() => countryBvt?.call() ?? orElse(),
+        CountryNfk() => countryNfk?.call() ?? orElse(),
+        CountryNld() => countryNld?.call() ?? orElse(),
+        CountryMnp() => countryMnp?.call() ?? orElse(),
+        CountryHkg() => countryHkg?.call() ?? orElse(),
+        CountryIrq() => countryIrq?.call() ?? orElse(),
+        CountryEsp() => countryEsp?.call() ?? orElse(),
+        CountryTgo() => countryTgo?.call() ?? orElse(),
+        CountryChn() => countryChn?.call() ?? orElse(),
+        CountryFlk() => countryFlk?.call() ?? orElse(),
+        CountryUsa() => countryUsa?.call() ?? orElse(),
+        CountryMaf() => countryMaf?.call() ?? orElse(),
+        CountryIrn() => countryIrn?.call() ?? orElse(),
+        CountryMex() => countryMex?.call() ?? orElse(),
+        CountryBrn() => countryBrn?.call() ?? orElse(),
+        CountryCyp() => countryCyp?.call() ?? orElse(),
+        CountryNic() => countryNic?.call() ?? orElse(),
+        CountryCuw() => countryCuw?.call() ?? orElse(),
+        CountryPri() => countryPri?.call() ?? orElse(),
+        CountryNcl() => countryNcl?.call() ?? orElse(),
+        CountrySsd() => countrySsd?.call() ?? orElse(),
+        CountrySom() => countrySom?.call() ?? orElse(),
+        CountryGrc() => countryGrc?.call() ?? orElse(),
+        CountryBes() => countryBes?.call() ?? orElse(),
+        CountryLao() => countryLao?.call() ?? orElse(),
+        CountryBlz() => countryBlz?.call() ?? orElse(),
+        CountrySlv() => countrySlv?.call() ?? orElse(),
+        CountryJam() => countryJam?.call() ?? orElse(),
+        CountryUry() => countryUry?.call() ?? orElse(),
+        CountryPng() => countryPng?.call() ?? orElse(),
+        CountryLux() => countryLux?.call() ?? orElse(),
+        CountryChl() => countryChl?.call() ?? orElse(),
+        CountryVat() => countryVat?.call() ?? orElse(),
+        CountryGnb() => countryGnb?.call() ?? orElse(),
+        CountryUga() => countryUga?.call() ?? orElse(),
+        CountryVen() => countryVen?.call() ?? orElse(),
+        CountrySrb() => countrySrb?.call() ?? orElse(),
+        CountryBen() => countryBen?.call() ?? orElse(),
+        CountryBgd() => countryBgd?.call() ?? orElse(),
+        CountryBhs() => countryBhs?.call() ?? orElse(),
+        CountryNiu() => countryNiu?.call() ?? orElse(),
+        CountryAtg() => countryAtg?.call() ?? orElse(),
+        CountryBlm() => countryBlm?.call() ?? orElse(),
+        CountrySyc() => countrySyc?.call() ?? orElse(),
+        CountryEsh() => countryEsh?.call() ?? orElse(),
+        CountryLby() => countryLby?.call() ?? orElse(),
+        CountryMkd() => countryMkd?.call() ?? orElse(),
+        CountryPer() => countryPer?.call() ?? orElse(),
+        CountryBdi() => countryBdi?.call() ?? orElse(),
+        CountryKir() => countryKir?.call() ?? orElse(),
+        CountryTur() => countryTur?.call() ?? orElse(),
+        CountryTza() => countryTza?.call() ?? orElse(),
+        CountryTun() => countryTun?.call() ?? orElse(),
+        CountryMsr() => countryMsr?.call() ?? orElse(),
+        CountryKgz() => countryKgz?.call() ?? orElse(),
+        CountryImn() => countryImn?.call() ?? orElse(),
+        CountryGlp() => countryGlp?.call() ?? orElse(),
+        CountryKwt() => countryKwt?.call() ?? orElse(),
+        CountryVgb() => countryVgb?.call() ?? orElse(),
+        CountryCiv() => countryCiv?.call() ?? orElse(),
+        CountryCxr() => countryCxr?.call() ?? orElse(),
+        CountryLso() => countryLso?.call() ?? orElse(),
+        CountryJey() => countryJey?.call() ?? orElse(),
+        CountrySvn() => countrySvn?.call() ?? orElse(),
+        CountryBel() => countryBel?.call() ?? orElse(),
+        CountryTca() => countryTca?.call() ?? orElse(),
+        CountryGib() => countryGib?.call() ?? orElse(),
+        CountryQat() => countryQat?.call() ?? orElse(),
+        CountryBwa() => countryBwa?.call() ?? orElse(),
+        CountryGnq() => countryGnq?.call() ?? orElse(),
+        CountryDji() => countryDji?.call() ?? orElse(),
+        CountryGuy() => countryGuy?.call() ?? orElse(),
+        CountryGum() => countryGum?.call() ?? orElse(),
+        CountryMco() => countryMco?.call() ?? orElse(),
+        CountrySlb() => countrySlb?.call() ?? orElse(),
+        CountryGgy() => countryGgy?.call() ?? orElse(),
+        CountryPry() => countryPry?.call() ?? orElse(),
+        CountrySur() => countrySur?.call() ?? orElse(),
+        CountryUmi() => countryUmi?.call() ?? orElse(),
+        CountryGin() => countryGin?.call() ?? orElse(),
+        CountryCze() => countryCze?.call() ?? orElse(),
+        CountryCom() => countryCom?.call() ?? orElse(),
+        CountryGha() => countryGha?.call() ?? orElse(),
+        CountryKna() => countryKna?.call() ?? orElse(),
+        CountryPyf() => countryPyf?.call() ?? orElse(),
+        CountryZwe() => countryZwe?.call() ?? orElse(),
+        CountryKen() => countryKen?.call() ?? orElse(),
+        CountryKaz() => countryKaz?.call() ?? orElse(),
+        CountryMne() => countryMne?.call() ?? orElse(),
+        CountryTuv() => countryTuv?.call() ?? orElse(),
+        CountryPan() => countryPan?.call() ?? orElse(),
+        CountryAnd() => countryAnd?.call() ?? orElse(),
+        CountryVir() => countryVir?.call() ?? orElse(),
+        CountryIsr() => countryIsr?.call() ?? orElse(),
+        CountryPrt() => countryPrt?.call() ?? orElse(),
+        CountryAut() => countryAut?.call() ?? orElse(),
+        CountryFin() => countryFin?.call() ?? orElse(),
+        CountryEst() => countryEst?.call() ?? orElse(),
+        CountryDma() => countryDma?.call() ?? orElse(),
+        CountryYem() => countryYem?.call() ?? orElse(),
+        CountryAfg() => countryAfg?.call() ?? orElse(),
+        CountrySyr() => countrySyr?.call() ?? orElse(),
+        CountryMdv() => countryMdv?.call() ?? orElse(),
+        CountryTls() => countryTls?.call() ?? orElse(),
+        CountryLtu() => countryLtu?.call() ?? orElse(),
+        CountryNzl() => countryNzl?.call() ?? orElse(),
+        CountryBmu() => countryBmu?.call() ?? orElse(),
+        CountryDeu() => countryDeu?.call() ?? orElse(),
+        CountryArg() => countryArg?.call() ?? orElse(),
+        CountryBlr() => countryBlr?.call() ?? orElse(),
+        CountryBrb() => countryBrb?.call() ?? orElse(),
+        CountryGtm() => countryGtm?.call() ?? orElse(),
+        CountryAze() => countryAze?.call() ?? orElse(),
+        CountryMar() => countryMar?.call() ?? orElse(),
+        CountryCok() => countryCok?.call() ?? orElse(),
+        CountryCaf() => countryCaf?.call() ?? orElse(),
+        CountryRou() => countryRou?.call() ?? orElse(),
+        CountryMlt() => countryMlt?.call() ?? orElse(),
+        CountryArm() => countryArm?.call() ?? orElse(),
+        CountrySen() => countrySen?.call() ?? orElse(),
+        CountryBgr() => countryBgr?.call() ?? orElse(),
+        CountryCod() => countryCod?.call() ?? orElse(),
+        CountryHti() => countryHti?.call() ?? orElse(),
+        CountryAlb() => countryAlb?.call() ?? orElse(),
+        CountryJor() => countryJor?.call() ?? orElse(),
+        CountrySjm() => countrySjm?.call() ?? orElse(),
+        CountryMdg() => countryMdg?.call() ?? orElse(),
+        CountryFra() => countryFra?.call() ?? orElse(),
+        CountryFsm() => countryFsm?.call() ?? orElse(),
+        CountryAbw() => countryAbw?.call() ?? orElse(),
+        CountryInd() => countryInd?.call() ?? orElse(),
+        CountryNam() => countryNam?.call() ?? orElse(),
+        CountryFji() => countryFji?.call() ?? orElse(),
+        CountrySdn() => countrySdn?.call() ?? orElse(),
+        CountryStp() => countryStp?.call() ?? orElse(),
+        CountrySau() => countrySau?.call() ?? orElse(),
+        CountryHmd() => countryHmd?.call() ?? orElse(),
+        CountryLka() => countryLka?.call() ?? orElse(),
+        CountrySwe() => countrySwe?.call() ?? orElse(),
+        CountryTon() => countryTon?.call() ?? orElse(),
+        CountryDnk() => countryDnk?.call() ?? orElse(),
+        CountryMys() => countryMys?.call() ?? orElse(),
+        CountryCri() => countryCri?.call() ?? orElse(),
+        CountryBol() => countryBol?.call() ?? orElse(),
+        CountryBtn() => countryBtn?.call() ?? orElse(),
+        CountryCym() => countryCym?.call() ?? orElse(),
+        CountryPcn() => countryPcn?.call() ?? orElse(),
+        CountryMli() => countryMli?.call() ?? orElse(),
+        CountrySxm() => countrySxm?.call() ?? orElse(),
+        CountryLva() => countryLva?.call() ?? orElse(),
+        CountryAsm() => countryAsm?.call() ?? orElse(),
+        CountrySpm() => countrySpm?.call() ?? orElse(),
+        CountryEcu() => countryEcu?.call() ?? orElse(),
+        CountryTha() => countryTha?.call() ?? orElse(),
+        CountryAre() => countryAre?.call() ?? orElse(),
+        CountryHrv() => countryHrv?.call() ?? orElse(),
+        CountryMmr() => countryMmr?.call() ?? orElse(),
+        CountryGeo() => countryGeo?.call() ?? orElse(),
+        CountryTwn() => countryTwn?.call() ?? orElse(),
+        CountryChe() => countryChe?.call() ?? orElse(),
+        CountryEri() => countryEri?.call() ?? orElse(),
+        CountryCog() => countryCog?.call() ?? orElse(),
+        CountryFro() => countryFro?.call() ?? orElse(),
+        CountryUnk() => countryUnk?.call() ?? orElse(),
+        _ => orElse(),
+      };
 
   R when<R>({
     required R Function() countryCpv,
@@ -2530,512 +1774,260 @@ extension WorldCountryFunctional on WorldCountry {
     required R Function() countryCog,
     required R Function() countryFro,
     required R Function() countryUnk,
-  }) {
-    switch (this) {
-      case CountryCpv():
-        return countryCpv();
-      case CountrySgp():
-        return countrySgp();
-      case CountryMrt():
-        return countryMrt();
-      case CountryPol():
-        return countryPol();
-      case CountryTcd():
-        return countryTcd();
-      case CountryJpn():
-        return countryJpn();
-      case CountryCub():
-        return countryCub();
-      case CountryMoz():
-        return countryMoz();
-      case CountryGbr():
-        return countryGbr();
-      case CountryIrl():
-        return countryIrl();
-      case CountryNer():
-        return countryNer();
-      case CountryGmb():
-        return countryGmb();
-      case CountryUzb():
-        return countryUzb();
-      case CountryRus():
-        return countryRus();
-      case CountryTkm():
-        return countryTkm();
-      case CountryAia():
-        return countryAia();
-      case CountryVnm():
-        return countryVnm();
-      case CountryAta():
-        return countryAta();
-      case CountrySwz():
-        return countrySwz();
-      case CountryKhm():
-        return countryKhm();
-      case CountryVut():
-        return countryVut();
-      case CountryAla():
-        return countryAla();
-      case CountryAus():
-        return countryAus();
-      case CountryIot():
-        return countryIot();
-      case CountrySvk():
-        return countrySvk();
-      case CountryBra():
-        return countryBra();
-      case CountryTjk():
-        return countryTjk();
-      case CountrySgs():
-        return countrySgs();
-      case CountryLbr():
-        return countryLbr();
-      case CountryNga():
-        return countryNga();
-      case CountryCol():
-        return countryCol();
-      case CountrySmr():
-        return countrySmr();
-      case CountryShn():
-        return countryShn();
-      case CountryEgy():
-        return countryEgy();
-      case CountryHnd():
-        return countryHnd();
-      case CountryIdn():
-        return countryIdn();
-      case CountryPrk():
-        return countryPrk();
-      case CountryMac():
-        return countryMac();
-      case CountrySle():
-        return countrySle();
-      case CountryMda():
-        return countryMda();
-      case CountryPhl():
-        return countryPhl();
-      case CountryCmr():
-        return countryCmr();
-      case CountryGrl():
-        return countryGrl();
-      case CountryMtq():
-        return countryMtq();
-      case CountryLbn():
-        return countryLbn();
-      case CountryRwa():
-        return countryRwa();
-      case CountryBih():
-        return countryBih();
-      case CountryMhl():
-        return countryMhl();
-      case CountryIta():
-        return countryIta();
-      case CountryTkl():
-        return countryTkl();
-      case CountryGab():
-        return countryGab();
-      case CountryCck():
-        return countryCck();
-      case CountryPak():
-        return countryPak();
-      case CountryReu():
-        return countryReu();
-      case CountryMus():
-        return countryMus();
-      case CountryGrd():
-        return countryGrd();
-      case CountryOmn():
-        return countryOmn();
-      case CountryBfa():
-        return countryBfa();
-      case CountryWsm():
-        return countryWsm();
-      case CountryTto():
-        return countryTto();
-      case CountryVct():
-        return countryVct();
-      case CountryPlw():
-        return countryPlw();
-      case CountryZaf():
-        return countryZaf();
-      case CountryAgo():
-        return countryAgo();
-      case CountryKor():
-        return countryKor();
-      case CountryAtf():
-        return countryAtf();
-      case CountryIsl():
-        return countryIsl();
-      case CountryGuf():
-        return countryGuf();
-      case CountryNor():
-        return countryNor();
-      case CountryHun():
-        return countryHun();
-      case CountryPse():
-        return countryPse();
-      case CountryLca():
-        return countryLca();
-      case CountryNpl():
-        return countryNpl();
-      case CountryMng():
-        return countryMng();
-      case CountryZmb():
-        return countryZmb();
-      case CountryWlf():
-        return countryWlf();
-      case CountryMwi():
-        return countryMwi();
-      case CountryBhr():
-        return countryBhr();
-      case CountryUkr():
-        return countryUkr();
-      case CountryNru():
-        return countryNru();
-      case CountryMyt():
-        return countryMyt();
-      case CountryDza():
-        return countryDza();
-      case CountryCan():
-        return countryCan();
-      case CountryLie():
-        return countryLie();
-      case CountryEth():
-        return countryEth();
-      case CountryDom():
-        return countryDom();
-      case CountryBvt():
-        return countryBvt();
-      case CountryNfk():
-        return countryNfk();
-      case CountryNld():
-        return countryNld();
-      case CountryMnp():
-        return countryMnp();
-      case CountryHkg():
-        return countryHkg();
-      case CountryIrq():
-        return countryIrq();
-      case CountryEsp():
-        return countryEsp();
-      case CountryTgo():
-        return countryTgo();
-      case CountryChn():
-        return countryChn();
-      case CountryFlk():
-        return countryFlk();
-      case CountryUsa():
-        return countryUsa();
-      case CountryMaf():
-        return countryMaf();
-      case CountryIrn():
-        return countryIrn();
-      case CountryMex():
-        return countryMex();
-      case CountryBrn():
-        return countryBrn();
-      case CountryCyp():
-        return countryCyp();
-      case CountryNic():
-        return countryNic();
-      case CountryCuw():
-        return countryCuw();
-      case CountryPri():
-        return countryPri();
-      case CountryNcl():
-        return countryNcl();
-      case CountrySsd():
-        return countrySsd();
-      case CountrySom():
-        return countrySom();
-      case CountryGrc():
-        return countryGrc();
-      case CountryBes():
-        return countryBes();
-      case CountryLao():
-        return countryLao();
-      case CountryBlz():
-        return countryBlz();
-      case CountrySlv():
-        return countrySlv();
-      case CountryJam():
-        return countryJam();
-      case CountryUry():
-        return countryUry();
-      case CountryPng():
-        return countryPng();
-      case CountryLux():
-        return countryLux();
-      case CountryChl():
-        return countryChl();
-      case CountryVat():
-        return countryVat();
-      case CountryGnb():
-        return countryGnb();
-      case CountryUga():
-        return countryUga();
-      case CountryVen():
-        return countryVen();
-      case CountrySrb():
-        return countrySrb();
-      case CountryBen():
-        return countryBen();
-      case CountryBgd():
-        return countryBgd();
-      case CountryBhs():
-        return countryBhs();
-      case CountryNiu():
-        return countryNiu();
-      case CountryAtg():
-        return countryAtg();
-      case CountryBlm():
-        return countryBlm();
-      case CountrySyc():
-        return countrySyc();
-      case CountryEsh():
-        return countryEsh();
-      case CountryLby():
-        return countryLby();
-      case CountryMkd():
-        return countryMkd();
-      case CountryPer():
-        return countryPer();
-      case CountryBdi():
-        return countryBdi();
-      case CountryKir():
-        return countryKir();
-      case CountryTur():
-        return countryTur();
-      case CountryTza():
-        return countryTza();
-      case CountryTun():
-        return countryTun();
-      case CountryMsr():
-        return countryMsr();
-      case CountryKgz():
-        return countryKgz();
-      case CountryImn():
-        return countryImn();
-      case CountryGlp():
-        return countryGlp();
-      case CountryKwt():
-        return countryKwt();
-      case CountryVgb():
-        return countryVgb();
-      case CountryCiv():
-        return countryCiv();
-      case CountryCxr():
-        return countryCxr();
-      case CountryLso():
-        return countryLso();
-      case CountryJey():
-        return countryJey();
-      case CountrySvn():
-        return countrySvn();
-      case CountryBel():
-        return countryBel();
-      case CountryTca():
-        return countryTca();
-      case CountryGib():
-        return countryGib();
-      case CountryQat():
-        return countryQat();
-      case CountryBwa():
-        return countryBwa();
-      case CountryGnq():
-        return countryGnq();
-      case CountryDji():
-        return countryDji();
-      case CountryGuy():
-        return countryGuy();
-      case CountryGum():
-        return countryGum();
-      case CountryMco():
-        return countryMco();
-      case CountrySlb():
-        return countrySlb();
-      case CountryGgy():
-        return countryGgy();
-      case CountryPry():
-        return countryPry();
-      case CountrySur():
-        return countrySur();
-      case CountryUmi():
-        return countryUmi();
-      case CountryGin():
-        return countryGin();
-      case CountryCze():
-        return countryCze();
-      case CountryCom():
-        return countryCom();
-      case CountryGha():
-        return countryGha();
-      case CountryKna():
-        return countryKna();
-      case CountryPyf():
-        return countryPyf();
-      case CountryZwe():
-        return countryZwe();
-      case CountryKen():
-        return countryKen();
-      case CountryKaz():
-        return countryKaz();
-      case CountryMne():
-        return countryMne();
-      case CountryTuv():
-        return countryTuv();
-      case CountryPan():
-        return countryPan();
-      case CountryAnd():
-        return countryAnd();
-      case CountryVir():
-        return countryVir();
-      case CountryIsr():
-        return countryIsr();
-      case CountryPrt():
-        return countryPrt();
-      case CountryAut():
-        return countryAut();
-      case CountryFin():
-        return countryFin();
-      case CountryEst():
-        return countryEst();
-      case CountryDma():
-        return countryDma();
-      case CountryYem():
-        return countryYem();
-      case CountryAfg():
-        return countryAfg();
-      case CountrySyr():
-        return countrySyr();
-      case CountryMdv():
-        return countryMdv();
-      case CountryTls():
-        return countryTls();
-      case CountryLtu():
-        return countryLtu();
-      case CountryNzl():
-        return countryNzl();
-      case CountryBmu():
-        return countryBmu();
-      case CountryDeu():
-        return countryDeu();
-      case CountryArg():
-        return countryArg();
-      case CountryBlr():
-        return countryBlr();
-      case CountryBrb():
-        return countryBrb();
-      case CountryGtm():
-        return countryGtm();
-      case CountryAze():
-        return countryAze();
-      case CountryMar():
-        return countryMar();
-      case CountryCok():
-        return countryCok();
-      case CountryCaf():
-        return countryCaf();
-      case CountryRou():
-        return countryRou();
-      case CountryMlt():
-        return countryMlt();
-      case CountryArm():
-        return countryArm();
-      case CountrySen():
-        return countrySen();
-      case CountryBgr():
-        return countryBgr();
-      case CountryCod():
-        return countryCod();
-      case CountryHti():
-        return countryHti();
-      case CountryAlb():
-        return countryAlb();
-      case CountryJor():
-        return countryJor();
-      case CountrySjm():
-        return countrySjm();
-      case CountryMdg():
-        return countryMdg();
-      case CountryFra():
-        return countryFra();
-      case CountryFsm():
-        return countryFsm();
-      case CountryAbw():
-        return countryAbw();
-      case CountryInd():
-        return countryInd();
-      case CountryNam():
-        return countryNam();
-      case CountryFji():
-        return countryFji();
-      case CountrySdn():
-        return countrySdn();
-      case CountryStp():
-        return countryStp();
-      case CountrySau():
-        return countrySau();
-      case CountryHmd():
-        return countryHmd();
-      case CountryLka():
-        return countryLka();
-      case CountrySwe():
-        return countrySwe();
-      case CountryTon():
-        return countryTon();
-      case CountryDnk():
-        return countryDnk();
-      case CountryMys():
-        return countryMys();
-      case CountryCri():
-        return countryCri();
-      case CountryBol():
-        return countryBol();
-      case CountryBtn():
-        return countryBtn();
-      case CountryCym():
-        return countryCym();
-      case CountryPcn():
-        return countryPcn();
-      case CountryMli():
-        return countryMli();
-      case CountrySxm():
-        return countrySxm();
-      case CountryLva():
-        return countryLva();
-      case CountryAsm():
-        return countryAsm();
-      case CountrySpm():
-        return countrySpm();
-      case CountryEcu():
-        return countryEcu();
-      case CountryTha():
-        return countryTha();
-      case CountryAre():
-        return countryAre();
-      case CountryHrv():
-        return countryHrv();
-      case CountryMmr():
-        return countryMmr();
-      case CountryGeo():
-        return countryGeo();
-      case CountryTwn():
-        return countryTwn();
-      case CountryChe():
-        return countryChe();
-      case CountryEri():
-        return countryEri();
-      case CountryCog():
-        return countryCog();
-      case CountryFro():
-        return countryFro();
-      case CountryUnk():
-        return countryUnk();
-      default:
-        throw ArgumentError("Unknown value: $this", name.common);
-    }
-  }
+  }) =>
+      switch (this) {
+        CountryCpv() => countryCpv(),
+        CountrySgp() => countrySgp(),
+        CountryMrt() => countryMrt(),
+        CountryPol() => countryPol(),
+        CountryTcd() => countryTcd(),
+        CountryJpn() => countryJpn(),
+        CountryCub() => countryCub(),
+        CountryMoz() => countryMoz(),
+        CountryGbr() => countryGbr(),
+        CountryIrl() => countryIrl(),
+        CountryNer() => countryNer(),
+        CountryGmb() => countryGmb(),
+        CountryUzb() => countryUzb(),
+        CountryRus() => countryRus(),
+        CountryTkm() => countryTkm(),
+        CountryAia() => countryAia(),
+        CountryVnm() => countryVnm(),
+        CountryAta() => countryAta(),
+        CountrySwz() => countrySwz(),
+        CountryKhm() => countryKhm(),
+        CountryVut() => countryVut(),
+        CountryAla() => countryAla(),
+        CountryAus() => countryAus(),
+        CountryIot() => countryIot(),
+        CountrySvk() => countrySvk(),
+        CountryBra() => countryBra(),
+        CountryTjk() => countryTjk(),
+        CountrySgs() => countrySgs(),
+        CountryLbr() => countryLbr(),
+        CountryNga() => countryNga(),
+        CountryCol() => countryCol(),
+        CountrySmr() => countrySmr(),
+        CountryShn() => countryShn(),
+        CountryEgy() => countryEgy(),
+        CountryHnd() => countryHnd(),
+        CountryIdn() => countryIdn(),
+        CountryPrk() => countryPrk(),
+        CountryMac() => countryMac(),
+        CountrySle() => countrySle(),
+        CountryMda() => countryMda(),
+        CountryPhl() => countryPhl(),
+        CountryCmr() => countryCmr(),
+        CountryGrl() => countryGrl(),
+        CountryMtq() => countryMtq(),
+        CountryLbn() => countryLbn(),
+        CountryRwa() => countryRwa(),
+        CountryBih() => countryBih(),
+        CountryMhl() => countryMhl(),
+        CountryIta() => countryIta(),
+        CountryTkl() => countryTkl(),
+        CountryGab() => countryGab(),
+        CountryCck() => countryCck(),
+        CountryPak() => countryPak(),
+        CountryReu() => countryReu(),
+        CountryMus() => countryMus(),
+        CountryGrd() => countryGrd(),
+        CountryOmn() => countryOmn(),
+        CountryBfa() => countryBfa(),
+        CountryWsm() => countryWsm(),
+        CountryTto() => countryTto(),
+        CountryVct() => countryVct(),
+        CountryPlw() => countryPlw(),
+        CountryZaf() => countryZaf(),
+        CountryAgo() => countryAgo(),
+        CountryKor() => countryKor(),
+        CountryAtf() => countryAtf(),
+        CountryIsl() => countryIsl(),
+        CountryGuf() => countryGuf(),
+        CountryNor() => countryNor(),
+        CountryHun() => countryHun(),
+        CountryPse() => countryPse(),
+        CountryLca() => countryLca(),
+        CountryNpl() => countryNpl(),
+        CountryMng() => countryMng(),
+        CountryZmb() => countryZmb(),
+        CountryWlf() => countryWlf(),
+        CountryMwi() => countryMwi(),
+        CountryBhr() => countryBhr(),
+        CountryUkr() => countryUkr(),
+        CountryNru() => countryNru(),
+        CountryMyt() => countryMyt(),
+        CountryDza() => countryDza(),
+        CountryCan() => countryCan(),
+        CountryLie() => countryLie(),
+        CountryEth() => countryEth(),
+        CountryDom() => countryDom(),
+        CountryBvt() => countryBvt(),
+        CountryNfk() => countryNfk(),
+        CountryNld() => countryNld(),
+        CountryMnp() => countryMnp(),
+        CountryHkg() => countryHkg(),
+        CountryIrq() => countryIrq(),
+        CountryEsp() => countryEsp(),
+        CountryTgo() => countryTgo(),
+        CountryChn() => countryChn(),
+        CountryFlk() => countryFlk(),
+        CountryUsa() => countryUsa(),
+        CountryMaf() => countryMaf(),
+        CountryIrn() => countryIrn(),
+        CountryMex() => countryMex(),
+        CountryBrn() => countryBrn(),
+        CountryCyp() => countryCyp(),
+        CountryNic() => countryNic(),
+        CountryCuw() => countryCuw(),
+        CountryPri() => countryPri(),
+        CountryNcl() => countryNcl(),
+        CountrySsd() => countrySsd(),
+        CountrySom() => countrySom(),
+        CountryGrc() => countryGrc(),
+        CountryBes() => countryBes(),
+        CountryLao() => countryLao(),
+        CountryBlz() => countryBlz(),
+        CountrySlv() => countrySlv(),
+        CountryJam() => countryJam(),
+        CountryUry() => countryUry(),
+        CountryPng() => countryPng(),
+        CountryLux() => countryLux(),
+        CountryChl() => countryChl(),
+        CountryVat() => countryVat(),
+        CountryGnb() => countryGnb(),
+        CountryUga() => countryUga(),
+        CountryVen() => countryVen(),
+        CountrySrb() => countrySrb(),
+        CountryBen() => countryBen(),
+        CountryBgd() => countryBgd(),
+        CountryBhs() => countryBhs(),
+        CountryNiu() => countryNiu(),
+        CountryAtg() => countryAtg(),
+        CountryBlm() => countryBlm(),
+        CountrySyc() => countrySyc(),
+        CountryEsh() => countryEsh(),
+        CountryLby() => countryLby(),
+        CountryMkd() => countryMkd(),
+        CountryPer() => countryPer(),
+        CountryBdi() => countryBdi(),
+        CountryKir() => countryKir(),
+        CountryTur() => countryTur(),
+        CountryTza() => countryTza(),
+        CountryTun() => countryTun(),
+        CountryMsr() => countryMsr(),
+        CountryKgz() => countryKgz(),
+        CountryImn() => countryImn(),
+        CountryGlp() => countryGlp(),
+        CountryKwt() => countryKwt(),
+        CountryVgb() => countryVgb(),
+        CountryCiv() => countryCiv(),
+        CountryCxr() => countryCxr(),
+        CountryLso() => countryLso(),
+        CountryJey() => countryJey(),
+        CountrySvn() => countrySvn(),
+        CountryBel() => countryBel(),
+        CountryTca() => countryTca(),
+        CountryGib() => countryGib(),
+        CountryQat() => countryQat(),
+        CountryBwa() => countryBwa(),
+        CountryGnq() => countryGnq(),
+        CountryDji() => countryDji(),
+        CountryGuy() => countryGuy(),
+        CountryGum() => countryGum(),
+        CountryMco() => countryMco(),
+        CountrySlb() => countrySlb(),
+        CountryGgy() => countryGgy(),
+        CountryPry() => countryPry(),
+        CountrySur() => countrySur(),
+        CountryUmi() => countryUmi(),
+        CountryGin() => countryGin(),
+        CountryCze() => countryCze(),
+        CountryCom() => countryCom(),
+        CountryGha() => countryGha(),
+        CountryKna() => countryKna(),
+        CountryPyf() => countryPyf(),
+        CountryZwe() => countryZwe(),
+        CountryKen() => countryKen(),
+        CountryKaz() => countryKaz(),
+        CountryMne() => countryMne(),
+        CountryTuv() => countryTuv(),
+        CountryPan() => countryPan(),
+        CountryAnd() => countryAnd(),
+        CountryVir() => countryVir(),
+        CountryIsr() => countryIsr(),
+        CountryPrt() => countryPrt(),
+        CountryAut() => countryAut(),
+        CountryFin() => countryFin(),
+        CountryEst() => countryEst(),
+        CountryDma() => countryDma(),
+        CountryYem() => countryYem(),
+        CountryAfg() => countryAfg(),
+        CountrySyr() => countrySyr(),
+        CountryMdv() => countryMdv(),
+        CountryTls() => countryTls(),
+        CountryLtu() => countryLtu(),
+        CountryNzl() => countryNzl(),
+        CountryBmu() => countryBmu(),
+        CountryDeu() => countryDeu(),
+        CountryArg() => countryArg(),
+        CountryBlr() => countryBlr(),
+        CountryBrb() => countryBrb(),
+        CountryGtm() => countryGtm(),
+        CountryAze() => countryAze(),
+        CountryMar() => countryMar(),
+        CountryCok() => countryCok(),
+        CountryCaf() => countryCaf(),
+        CountryRou() => countryRou(),
+        CountryMlt() => countryMlt(),
+        CountryArm() => countryArm(),
+        CountrySen() => countrySen(),
+        CountryBgr() => countryBgr(),
+        CountryCod() => countryCod(),
+        CountryHti() => countryHti(),
+        CountryAlb() => countryAlb(),
+        CountryJor() => countryJor(),
+        CountrySjm() => countrySjm(),
+        CountryMdg() => countryMdg(),
+        CountryFra() => countryFra(),
+        CountryFsm() => countryFsm(),
+        CountryAbw() => countryAbw(),
+        CountryInd() => countryInd(),
+        CountryNam() => countryNam(),
+        CountryFji() => countryFji(),
+        CountrySdn() => countrySdn(),
+        CountryStp() => countryStp(),
+        CountrySau() => countrySau(),
+        CountryHmd() => countryHmd(),
+        CountryLka() => countryLka(),
+        CountrySwe() => countrySwe(),
+        CountryTon() => countryTon(),
+        CountryDnk() => countryDnk(),
+        CountryMys() => countryMys(),
+        CountryCri() => countryCri(),
+        CountryBol() => countryBol(),
+        CountryBtn() => countryBtn(),
+        CountryCym() => countryCym(),
+        CountryPcn() => countryPcn(),
+        CountryMli() => countryMli(),
+        CountrySxm() => countrySxm(),
+        CountryLva() => countryLva(),
+        CountryAsm() => countryAsm(),
+        CountrySpm() => countrySpm(),
+        CountryEcu() => countryEcu(),
+        CountryTha() => countryTha(),
+        CountryAre() => countryAre(),
+        CountryHrv() => countryHrv(),
+        CountryMmr() => countryMmr(),
+        CountryGeo() => countryGeo(),
+        CountryTwn() => countryTwn(),
+        CountryChe() => countryChe(),
+        CountryEri() => countryEri(),
+        CountryCog() => countryCog(),
+        CountryFro() => countryFro(),
+        CountryUnk() => countryUnk(),
+        _ => throw ArgumentError("Unknown value: $this", name.common),
+      };
 
   R? whenOrNull<R>({
     R Function()? countryCpv,
@@ -3289,510 +2281,258 @@ extension WorldCountryFunctional on WorldCountry {
     R Function()? countryFro,
     R Function()? countryUnk,
     R Function()? orElse,
-  }) {
-    switch (this) {
-      case CountryCpv():
-        return countryCpv?.call() ?? orElse?.call();
-      case CountrySgp():
-        return countrySgp?.call() ?? orElse?.call();
-      case CountryMrt():
-        return countryMrt?.call() ?? orElse?.call();
-      case CountryPol():
-        return countryPol?.call() ?? orElse?.call();
-      case CountryTcd():
-        return countryTcd?.call() ?? orElse?.call();
-      case CountryJpn():
-        return countryJpn?.call() ?? orElse?.call();
-      case CountryCub():
-        return countryCub?.call() ?? orElse?.call();
-      case CountryMoz():
-        return countryMoz?.call() ?? orElse?.call();
-      case CountryGbr():
-        return countryGbr?.call() ?? orElse?.call();
-      case CountryIrl():
-        return countryIrl?.call() ?? orElse?.call();
-      case CountryNer():
-        return countryNer?.call() ?? orElse?.call();
-      case CountryGmb():
-        return countryGmb?.call() ?? orElse?.call();
-      case CountryUzb():
-        return countryUzb?.call() ?? orElse?.call();
-      case CountryRus():
-        return countryRus?.call() ?? orElse?.call();
-      case CountryTkm():
-        return countryTkm?.call() ?? orElse?.call();
-      case CountryAia():
-        return countryAia?.call() ?? orElse?.call();
-      case CountryVnm():
-        return countryVnm?.call() ?? orElse?.call();
-      case CountryAta():
-        return countryAta?.call() ?? orElse?.call();
-      case CountrySwz():
-        return countrySwz?.call() ?? orElse?.call();
-      case CountryKhm():
-        return countryKhm?.call() ?? orElse?.call();
-      case CountryVut():
-        return countryVut?.call() ?? orElse?.call();
-      case CountryAla():
-        return countryAla?.call() ?? orElse?.call();
-      case CountryAus():
-        return countryAus?.call() ?? orElse?.call();
-      case CountryIot():
-        return countryIot?.call() ?? orElse?.call();
-      case CountrySvk():
-        return countrySvk?.call() ?? orElse?.call();
-      case CountryBra():
-        return countryBra?.call() ?? orElse?.call();
-      case CountryTjk():
-        return countryTjk?.call() ?? orElse?.call();
-      case CountrySgs():
-        return countrySgs?.call() ?? orElse?.call();
-      case CountryLbr():
-        return countryLbr?.call() ?? orElse?.call();
-      case CountryNga():
-        return countryNga?.call() ?? orElse?.call();
-      case CountryCol():
-        return countryCol?.call() ?? orElse?.call();
-      case CountrySmr():
-        return countrySmr?.call() ?? orElse?.call();
-      case CountryShn():
-        return countryShn?.call() ?? orElse?.call();
-      case CountryEgy():
-        return countryEgy?.call() ?? orElse?.call();
-      case CountryHnd():
-        return countryHnd?.call() ?? orElse?.call();
-      case CountryIdn():
-        return countryIdn?.call() ?? orElse?.call();
-      case CountryPrk():
-        return countryPrk?.call() ?? orElse?.call();
-      case CountryMac():
-        return countryMac?.call() ?? orElse?.call();
-      case CountrySle():
-        return countrySle?.call() ?? orElse?.call();
-      case CountryMda():
-        return countryMda?.call() ?? orElse?.call();
-      case CountryPhl():
-        return countryPhl?.call() ?? orElse?.call();
-      case CountryCmr():
-        return countryCmr?.call() ?? orElse?.call();
-      case CountryGrl():
-        return countryGrl?.call() ?? orElse?.call();
-      case CountryMtq():
-        return countryMtq?.call() ?? orElse?.call();
-      case CountryLbn():
-        return countryLbn?.call() ?? orElse?.call();
-      case CountryRwa():
-        return countryRwa?.call() ?? orElse?.call();
-      case CountryBih():
-        return countryBih?.call() ?? orElse?.call();
-      case CountryMhl():
-        return countryMhl?.call() ?? orElse?.call();
-      case CountryIta():
-        return countryIta?.call() ?? orElse?.call();
-      case CountryTkl():
-        return countryTkl?.call() ?? orElse?.call();
-      case CountryGab():
-        return countryGab?.call() ?? orElse?.call();
-      case CountryCck():
-        return countryCck?.call() ?? orElse?.call();
-      case CountryPak():
-        return countryPak?.call() ?? orElse?.call();
-      case CountryReu():
-        return countryReu?.call() ?? orElse?.call();
-      case CountryMus():
-        return countryMus?.call() ?? orElse?.call();
-      case CountryGrd():
-        return countryGrd?.call() ?? orElse?.call();
-      case CountryOmn():
-        return countryOmn?.call() ?? orElse?.call();
-      case CountryBfa():
-        return countryBfa?.call() ?? orElse?.call();
-      case CountryWsm():
-        return countryWsm?.call() ?? orElse?.call();
-      case CountryTto():
-        return countryTto?.call() ?? orElse?.call();
-      case CountryVct():
-        return countryVct?.call() ?? orElse?.call();
-      case CountryPlw():
-        return countryPlw?.call() ?? orElse?.call();
-      case CountryZaf():
-        return countryZaf?.call() ?? orElse?.call();
-      case CountryAgo():
-        return countryAgo?.call() ?? orElse?.call();
-      case CountryKor():
-        return countryKor?.call() ?? orElse?.call();
-      case CountryAtf():
-        return countryAtf?.call() ?? orElse?.call();
-      case CountryIsl():
-        return countryIsl?.call() ?? orElse?.call();
-      case CountryGuf():
-        return countryGuf?.call() ?? orElse?.call();
-      case CountryNor():
-        return countryNor?.call() ?? orElse?.call();
-      case CountryHun():
-        return countryHun?.call() ?? orElse?.call();
-      case CountryPse():
-        return countryPse?.call() ?? orElse?.call();
-      case CountryLca():
-        return countryLca?.call() ?? orElse?.call();
-      case CountryNpl():
-        return countryNpl?.call() ?? orElse?.call();
-      case CountryMng():
-        return countryMng?.call() ?? orElse?.call();
-      case CountryZmb():
-        return countryZmb?.call() ?? orElse?.call();
-      case CountryWlf():
-        return countryWlf?.call() ?? orElse?.call();
-      case CountryMwi():
-        return countryMwi?.call() ?? orElse?.call();
-      case CountryBhr():
-        return countryBhr?.call() ?? orElse?.call();
-      case CountryUkr():
-        return countryUkr?.call() ?? orElse?.call();
-      case CountryNru():
-        return countryNru?.call() ?? orElse?.call();
-      case CountryMyt():
-        return countryMyt?.call() ?? orElse?.call();
-      case CountryDza():
-        return countryDza?.call() ?? orElse?.call();
-      case CountryCan():
-        return countryCan?.call() ?? orElse?.call();
-      case CountryLie():
-        return countryLie?.call() ?? orElse?.call();
-      case CountryEth():
-        return countryEth?.call() ?? orElse?.call();
-      case CountryDom():
-        return countryDom?.call() ?? orElse?.call();
-      case CountryBvt():
-        return countryBvt?.call() ?? orElse?.call();
-      case CountryNfk():
-        return countryNfk?.call() ?? orElse?.call();
-      case CountryNld():
-        return countryNld?.call() ?? orElse?.call();
-      case CountryMnp():
-        return countryMnp?.call() ?? orElse?.call();
-      case CountryHkg():
-        return countryHkg?.call() ?? orElse?.call();
-      case CountryIrq():
-        return countryIrq?.call() ?? orElse?.call();
-      case CountryEsp():
-        return countryEsp?.call() ?? orElse?.call();
-      case CountryTgo():
-        return countryTgo?.call() ?? orElse?.call();
-      case CountryChn():
-        return countryChn?.call() ?? orElse?.call();
-      case CountryFlk():
-        return countryFlk?.call() ?? orElse?.call();
-      case CountryUsa():
-        return countryUsa?.call() ?? orElse?.call();
-      case CountryMaf():
-        return countryMaf?.call() ?? orElse?.call();
-      case CountryIrn():
-        return countryIrn?.call() ?? orElse?.call();
-      case CountryMex():
-        return countryMex?.call() ?? orElse?.call();
-      case CountryBrn():
-        return countryBrn?.call() ?? orElse?.call();
-      case CountryCyp():
-        return countryCyp?.call() ?? orElse?.call();
-      case CountryNic():
-        return countryNic?.call() ?? orElse?.call();
-      case CountryCuw():
-        return countryCuw?.call() ?? orElse?.call();
-      case CountryPri():
-        return countryPri?.call() ?? orElse?.call();
-      case CountryNcl():
-        return countryNcl?.call() ?? orElse?.call();
-      case CountrySsd():
-        return countrySsd?.call() ?? orElse?.call();
-      case CountrySom():
-        return countrySom?.call() ?? orElse?.call();
-      case CountryGrc():
-        return countryGrc?.call() ?? orElse?.call();
-      case CountryBes():
-        return countryBes?.call() ?? orElse?.call();
-      case CountryLao():
-        return countryLao?.call() ?? orElse?.call();
-      case CountryBlz():
-        return countryBlz?.call() ?? orElse?.call();
-      case CountrySlv():
-        return countrySlv?.call() ?? orElse?.call();
-      case CountryJam():
-        return countryJam?.call() ?? orElse?.call();
-      case CountryUry():
-        return countryUry?.call() ?? orElse?.call();
-      case CountryPng():
-        return countryPng?.call() ?? orElse?.call();
-      case CountryLux():
-        return countryLux?.call() ?? orElse?.call();
-      case CountryChl():
-        return countryChl?.call() ?? orElse?.call();
-      case CountryVat():
-        return countryVat?.call() ?? orElse?.call();
-      case CountryGnb():
-        return countryGnb?.call() ?? orElse?.call();
-      case CountryUga():
-        return countryUga?.call() ?? orElse?.call();
-      case CountryVen():
-        return countryVen?.call() ?? orElse?.call();
-      case CountrySrb():
-        return countrySrb?.call() ?? orElse?.call();
-      case CountryBen():
-        return countryBen?.call() ?? orElse?.call();
-      case CountryBgd():
-        return countryBgd?.call() ?? orElse?.call();
-      case CountryBhs():
-        return countryBhs?.call() ?? orElse?.call();
-      case CountryNiu():
-        return countryNiu?.call() ?? orElse?.call();
-      case CountryAtg():
-        return countryAtg?.call() ?? orElse?.call();
-      case CountryBlm():
-        return countryBlm?.call() ?? orElse?.call();
-      case CountrySyc():
-        return countrySyc?.call() ?? orElse?.call();
-      case CountryEsh():
-        return countryEsh?.call() ?? orElse?.call();
-      case CountryLby():
-        return countryLby?.call() ?? orElse?.call();
-      case CountryMkd():
-        return countryMkd?.call() ?? orElse?.call();
-      case CountryPer():
-        return countryPer?.call() ?? orElse?.call();
-      case CountryBdi():
-        return countryBdi?.call() ?? orElse?.call();
-      case CountryKir():
-        return countryKir?.call() ?? orElse?.call();
-      case CountryTur():
-        return countryTur?.call() ?? orElse?.call();
-      case CountryTza():
-        return countryTza?.call() ?? orElse?.call();
-      case CountryTun():
-        return countryTun?.call() ?? orElse?.call();
-      case CountryMsr():
-        return countryMsr?.call() ?? orElse?.call();
-      case CountryKgz():
-        return countryKgz?.call() ?? orElse?.call();
-      case CountryImn():
-        return countryImn?.call() ?? orElse?.call();
-      case CountryGlp():
-        return countryGlp?.call() ?? orElse?.call();
-      case CountryKwt():
-        return countryKwt?.call() ?? orElse?.call();
-      case CountryVgb():
-        return countryVgb?.call() ?? orElse?.call();
-      case CountryCiv():
-        return countryCiv?.call() ?? orElse?.call();
-      case CountryCxr():
-        return countryCxr?.call() ?? orElse?.call();
-      case CountryLso():
-        return countryLso?.call() ?? orElse?.call();
-      case CountryJey():
-        return countryJey?.call() ?? orElse?.call();
-      case CountrySvn():
-        return countrySvn?.call() ?? orElse?.call();
-      case CountryBel():
-        return countryBel?.call() ?? orElse?.call();
-      case CountryTca():
-        return countryTca?.call() ?? orElse?.call();
-      case CountryGib():
-        return countryGib?.call() ?? orElse?.call();
-      case CountryQat():
-        return countryQat?.call() ?? orElse?.call();
-      case CountryBwa():
-        return countryBwa?.call() ?? orElse?.call();
-      case CountryGnq():
-        return countryGnq?.call() ?? orElse?.call();
-      case CountryDji():
-        return countryDji?.call() ?? orElse?.call();
-      case CountryGuy():
-        return countryGuy?.call() ?? orElse?.call();
-      case CountryGum():
-        return countryGum?.call() ?? orElse?.call();
-      case CountryMco():
-        return countryMco?.call() ?? orElse?.call();
-      case CountrySlb():
-        return countrySlb?.call() ?? orElse?.call();
-      case CountryGgy():
-        return countryGgy?.call() ?? orElse?.call();
-      case CountryPry():
-        return countryPry?.call() ?? orElse?.call();
-      case CountrySur():
-        return countrySur?.call() ?? orElse?.call();
-      case CountryUmi():
-        return countryUmi?.call() ?? orElse?.call();
-      case CountryGin():
-        return countryGin?.call() ?? orElse?.call();
-      case CountryCze():
-        return countryCze?.call() ?? orElse?.call();
-      case CountryCom():
-        return countryCom?.call() ?? orElse?.call();
-      case CountryGha():
-        return countryGha?.call() ?? orElse?.call();
-      case CountryKna():
-        return countryKna?.call() ?? orElse?.call();
-      case CountryPyf():
-        return countryPyf?.call() ?? orElse?.call();
-      case CountryZwe():
-        return countryZwe?.call() ?? orElse?.call();
-      case CountryKen():
-        return countryKen?.call() ?? orElse?.call();
-      case CountryKaz():
-        return countryKaz?.call() ?? orElse?.call();
-      case CountryMne():
-        return countryMne?.call() ?? orElse?.call();
-      case CountryTuv():
-        return countryTuv?.call() ?? orElse?.call();
-      case CountryPan():
-        return countryPan?.call() ?? orElse?.call();
-      case CountryAnd():
-        return countryAnd?.call() ?? orElse?.call();
-      case CountryVir():
-        return countryVir?.call() ?? orElse?.call();
-      case CountryIsr():
-        return countryIsr?.call() ?? orElse?.call();
-      case CountryPrt():
-        return countryPrt?.call() ?? orElse?.call();
-      case CountryAut():
-        return countryAut?.call() ?? orElse?.call();
-      case CountryFin():
-        return countryFin?.call() ?? orElse?.call();
-      case CountryEst():
-        return countryEst?.call() ?? orElse?.call();
-      case CountryDma():
-        return countryDma?.call() ?? orElse?.call();
-      case CountryYem():
-        return countryYem?.call() ?? orElse?.call();
-      case CountryAfg():
-        return countryAfg?.call() ?? orElse?.call();
-      case CountrySyr():
-        return countrySyr?.call() ?? orElse?.call();
-      case CountryMdv():
-        return countryMdv?.call() ?? orElse?.call();
-      case CountryTls():
-        return countryTls?.call() ?? orElse?.call();
-      case CountryLtu():
-        return countryLtu?.call() ?? orElse?.call();
-      case CountryNzl():
-        return countryNzl?.call() ?? orElse?.call();
-      case CountryBmu():
-        return countryBmu?.call() ?? orElse?.call();
-      case CountryDeu():
-        return countryDeu?.call() ?? orElse?.call();
-      case CountryArg():
-        return countryArg?.call() ?? orElse?.call();
-      case CountryBlr():
-        return countryBlr?.call() ?? orElse?.call();
-      case CountryBrb():
-        return countryBrb?.call() ?? orElse?.call();
-      case CountryGtm():
-        return countryGtm?.call() ?? orElse?.call();
-      case CountryAze():
-        return countryAze?.call() ?? orElse?.call();
-      case CountryMar():
-        return countryMar?.call() ?? orElse?.call();
-      case CountryCok():
-        return countryCok?.call() ?? orElse?.call();
-      case CountryCaf():
-        return countryCaf?.call() ?? orElse?.call();
-      case CountryRou():
-        return countryRou?.call() ?? orElse?.call();
-      case CountryMlt():
-        return countryMlt?.call() ?? orElse?.call();
-      case CountryArm():
-        return countryArm?.call() ?? orElse?.call();
-      case CountrySen():
-        return countrySen?.call() ?? orElse?.call();
-      case CountryBgr():
-        return countryBgr?.call() ?? orElse?.call();
-      case CountryCod():
-        return countryCod?.call() ?? orElse?.call();
-      case CountryHti():
-        return countryHti?.call() ?? orElse?.call();
-      case CountryAlb():
-        return countryAlb?.call() ?? orElse?.call();
-      case CountryJor():
-        return countryJor?.call() ?? orElse?.call();
-      case CountrySjm():
-        return countrySjm?.call() ?? orElse?.call();
-      case CountryMdg():
-        return countryMdg?.call() ?? orElse?.call();
-      case CountryFra():
-        return countryFra?.call() ?? orElse?.call();
-      case CountryFsm():
-        return countryFsm?.call() ?? orElse?.call();
-      case CountryAbw():
-        return countryAbw?.call() ?? orElse?.call();
-      case CountryInd():
-        return countryInd?.call() ?? orElse?.call();
-      case CountryNam():
-        return countryNam?.call() ?? orElse?.call();
-      case CountryFji():
-        return countryFji?.call() ?? orElse?.call();
-      case CountrySdn():
-        return countrySdn?.call() ?? orElse?.call();
-      case CountryStp():
-        return countryStp?.call() ?? orElse?.call();
-      case CountrySau():
-        return countrySau?.call() ?? orElse?.call();
-      case CountryHmd():
-        return countryHmd?.call() ?? orElse?.call();
-      case CountryLka():
-        return countryLka?.call() ?? orElse?.call();
-      case CountrySwe():
-        return countrySwe?.call() ?? orElse?.call();
-      case CountryTon():
-        return countryTon?.call() ?? orElse?.call();
-      case CountryDnk():
-        return countryDnk?.call() ?? orElse?.call();
-      case CountryMys():
-        return countryMys?.call() ?? orElse?.call();
-      case CountryCri():
-        return countryCri?.call() ?? orElse?.call();
-      case CountryBol():
-        return countryBol?.call() ?? orElse?.call();
-      case CountryBtn():
-        return countryBtn?.call() ?? orElse?.call();
-      case CountryCym():
-        return countryCym?.call() ?? orElse?.call();
-      case CountryPcn():
-        return countryPcn?.call() ?? orElse?.call();
-      case CountryMli():
-        return countryMli?.call() ?? orElse?.call();
-      case CountrySxm():
-        return countrySxm?.call() ?? orElse?.call();
-      case CountryLva():
-        return countryLva?.call() ?? orElse?.call();
-      case CountryAsm():
-        return countryAsm?.call() ?? orElse?.call();
-      case CountrySpm():
-        return countrySpm?.call() ?? orElse?.call();
-      case CountryEcu():
-        return countryEcu?.call() ?? orElse?.call();
-      case CountryTha():
-        return countryTha?.call() ?? orElse?.call();
-      case CountryAre():
-        return countryAre?.call() ?? orElse?.call();
-      case CountryHrv():
-        return countryHrv?.call() ?? orElse?.call();
-      case CountryMmr():
-        return countryMmr?.call() ?? orElse?.call();
-      case CountryGeo():
-        return countryGeo?.call() ?? orElse?.call();
-      case CountryTwn():
-        return countryTwn?.call() ?? orElse?.call();
-      case CountryChe():
-        return countryChe?.call() ?? orElse?.call();
-      case CountryEri():
-        return countryEri?.call() ?? orElse?.call();
-      case CountryCog():
-        return countryCog?.call() ?? orElse?.call();
-      case CountryFro():
-        return countryFro?.call() ?? orElse?.call();
-      case CountryUnk():
-        return countryUnk?.call() ?? orElse?.call();
-      default:
-        return orElse?.call();
-    }
-  }
+  }) =>
+      switch (this) {
+        CountryCpv() => countryCpv?.call() ?? orElse?.call(),
+        CountrySgp() => countrySgp?.call() ?? orElse?.call(),
+        CountryMrt() => countryMrt?.call() ?? orElse?.call(),
+        CountryPol() => countryPol?.call() ?? orElse?.call(),
+        CountryTcd() => countryTcd?.call() ?? orElse?.call(),
+        CountryJpn() => countryJpn?.call() ?? orElse?.call(),
+        CountryCub() => countryCub?.call() ?? orElse?.call(),
+        CountryMoz() => countryMoz?.call() ?? orElse?.call(),
+        CountryGbr() => countryGbr?.call() ?? orElse?.call(),
+        CountryIrl() => countryIrl?.call() ?? orElse?.call(),
+        CountryNer() => countryNer?.call() ?? orElse?.call(),
+        CountryGmb() => countryGmb?.call() ?? orElse?.call(),
+        CountryUzb() => countryUzb?.call() ?? orElse?.call(),
+        CountryRus() => countryRus?.call() ?? orElse?.call(),
+        CountryTkm() => countryTkm?.call() ?? orElse?.call(),
+        CountryAia() => countryAia?.call() ?? orElse?.call(),
+        CountryVnm() => countryVnm?.call() ?? orElse?.call(),
+        CountryAta() => countryAta?.call() ?? orElse?.call(),
+        CountrySwz() => countrySwz?.call() ?? orElse?.call(),
+        CountryKhm() => countryKhm?.call() ?? orElse?.call(),
+        CountryVut() => countryVut?.call() ?? orElse?.call(),
+        CountryAla() => countryAla?.call() ?? orElse?.call(),
+        CountryAus() => countryAus?.call() ?? orElse?.call(),
+        CountryIot() => countryIot?.call() ?? orElse?.call(),
+        CountrySvk() => countrySvk?.call() ?? orElse?.call(),
+        CountryBra() => countryBra?.call() ?? orElse?.call(),
+        CountryTjk() => countryTjk?.call() ?? orElse?.call(),
+        CountrySgs() => countrySgs?.call() ?? orElse?.call(),
+        CountryLbr() => countryLbr?.call() ?? orElse?.call(),
+        CountryNga() => countryNga?.call() ?? orElse?.call(),
+        CountryCol() => countryCol?.call() ?? orElse?.call(),
+        CountrySmr() => countrySmr?.call() ?? orElse?.call(),
+        CountryShn() => countryShn?.call() ?? orElse?.call(),
+        CountryEgy() => countryEgy?.call() ?? orElse?.call(),
+        CountryHnd() => countryHnd?.call() ?? orElse?.call(),
+        CountryIdn() => countryIdn?.call() ?? orElse?.call(),
+        CountryPrk() => countryPrk?.call() ?? orElse?.call(),
+        CountryMac() => countryMac?.call() ?? orElse?.call(),
+        CountrySle() => countrySle?.call() ?? orElse?.call(),
+        CountryMda() => countryMda?.call() ?? orElse?.call(),
+        CountryPhl() => countryPhl?.call() ?? orElse?.call(),
+        CountryCmr() => countryCmr?.call() ?? orElse?.call(),
+        CountryGrl() => countryGrl?.call() ?? orElse?.call(),
+        CountryMtq() => countryMtq?.call() ?? orElse?.call(),
+        CountryLbn() => countryLbn?.call() ?? orElse?.call(),
+        CountryRwa() => countryRwa?.call() ?? orElse?.call(),
+        CountryBih() => countryBih?.call() ?? orElse?.call(),
+        CountryMhl() => countryMhl?.call() ?? orElse?.call(),
+        CountryIta() => countryIta?.call() ?? orElse?.call(),
+        CountryTkl() => countryTkl?.call() ?? orElse?.call(),
+        CountryGab() => countryGab?.call() ?? orElse?.call(),
+        CountryCck() => countryCck?.call() ?? orElse?.call(),
+        CountryPak() => countryPak?.call() ?? orElse?.call(),
+        CountryReu() => countryReu?.call() ?? orElse?.call(),
+        CountryMus() => countryMus?.call() ?? orElse?.call(),
+        CountryGrd() => countryGrd?.call() ?? orElse?.call(),
+        CountryOmn() => countryOmn?.call() ?? orElse?.call(),
+        CountryBfa() => countryBfa?.call() ?? orElse?.call(),
+        CountryWsm() => countryWsm?.call() ?? orElse?.call(),
+        CountryTto() => countryTto?.call() ?? orElse?.call(),
+        CountryVct() => countryVct?.call() ?? orElse?.call(),
+        CountryPlw() => countryPlw?.call() ?? orElse?.call(),
+        CountryZaf() => countryZaf?.call() ?? orElse?.call(),
+        CountryAgo() => countryAgo?.call() ?? orElse?.call(),
+        CountryKor() => countryKor?.call() ?? orElse?.call(),
+        CountryAtf() => countryAtf?.call() ?? orElse?.call(),
+        CountryIsl() => countryIsl?.call() ?? orElse?.call(),
+        CountryGuf() => countryGuf?.call() ?? orElse?.call(),
+        CountryNor() => countryNor?.call() ?? orElse?.call(),
+        CountryHun() => countryHun?.call() ?? orElse?.call(),
+        CountryPse() => countryPse?.call() ?? orElse?.call(),
+        CountryLca() => countryLca?.call() ?? orElse?.call(),
+        CountryNpl() => countryNpl?.call() ?? orElse?.call(),
+        CountryMng() => countryMng?.call() ?? orElse?.call(),
+        CountryZmb() => countryZmb?.call() ?? orElse?.call(),
+        CountryWlf() => countryWlf?.call() ?? orElse?.call(),
+        CountryMwi() => countryMwi?.call() ?? orElse?.call(),
+        CountryBhr() => countryBhr?.call() ?? orElse?.call(),
+        CountryUkr() => countryUkr?.call() ?? orElse?.call(),
+        CountryNru() => countryNru?.call() ?? orElse?.call(),
+        CountryMyt() => countryMyt?.call() ?? orElse?.call(),
+        CountryDza() => countryDza?.call() ?? orElse?.call(),
+        CountryCan() => countryCan?.call() ?? orElse?.call(),
+        CountryLie() => countryLie?.call() ?? orElse?.call(),
+        CountryEth() => countryEth?.call() ?? orElse?.call(),
+        CountryDom() => countryDom?.call() ?? orElse?.call(),
+        CountryBvt() => countryBvt?.call() ?? orElse?.call(),
+        CountryNfk() => countryNfk?.call() ?? orElse?.call(),
+        CountryNld() => countryNld?.call() ?? orElse?.call(),
+        CountryMnp() => countryMnp?.call() ?? orElse?.call(),
+        CountryHkg() => countryHkg?.call() ?? orElse?.call(),
+        CountryIrq() => countryIrq?.call() ?? orElse?.call(),
+        CountryEsp() => countryEsp?.call() ?? orElse?.call(),
+        CountryTgo() => countryTgo?.call() ?? orElse?.call(),
+        CountryChn() => countryChn?.call() ?? orElse?.call(),
+        CountryFlk() => countryFlk?.call() ?? orElse?.call(),
+        CountryUsa() => countryUsa?.call() ?? orElse?.call(),
+        CountryMaf() => countryMaf?.call() ?? orElse?.call(),
+        CountryIrn() => countryIrn?.call() ?? orElse?.call(),
+        CountryMex() => countryMex?.call() ?? orElse?.call(),
+        CountryBrn() => countryBrn?.call() ?? orElse?.call(),
+        CountryCyp() => countryCyp?.call() ?? orElse?.call(),
+        CountryNic() => countryNic?.call() ?? orElse?.call(),
+        CountryCuw() => countryCuw?.call() ?? orElse?.call(),
+        CountryPri() => countryPri?.call() ?? orElse?.call(),
+        CountryNcl() => countryNcl?.call() ?? orElse?.call(),
+        CountrySsd() => countrySsd?.call() ?? orElse?.call(),
+        CountrySom() => countrySom?.call() ?? orElse?.call(),
+        CountryGrc() => countryGrc?.call() ?? orElse?.call(),
+        CountryBes() => countryBes?.call() ?? orElse?.call(),
+        CountryLao() => countryLao?.call() ?? orElse?.call(),
+        CountryBlz() => countryBlz?.call() ?? orElse?.call(),
+        CountrySlv() => countrySlv?.call() ?? orElse?.call(),
+        CountryJam() => countryJam?.call() ?? orElse?.call(),
+        CountryUry() => countryUry?.call() ?? orElse?.call(),
+        CountryPng() => countryPng?.call() ?? orElse?.call(),
+        CountryLux() => countryLux?.call() ?? orElse?.call(),
+        CountryChl() => countryChl?.call() ?? orElse?.call(),
+        CountryVat() => countryVat?.call() ?? orElse?.call(),
+        CountryGnb() => countryGnb?.call() ?? orElse?.call(),
+        CountryUga() => countryUga?.call() ?? orElse?.call(),
+        CountryVen() => countryVen?.call() ?? orElse?.call(),
+        CountrySrb() => countrySrb?.call() ?? orElse?.call(),
+        CountryBen() => countryBen?.call() ?? orElse?.call(),
+        CountryBgd() => countryBgd?.call() ?? orElse?.call(),
+        CountryBhs() => countryBhs?.call() ?? orElse?.call(),
+        CountryNiu() => countryNiu?.call() ?? orElse?.call(),
+        CountryAtg() => countryAtg?.call() ?? orElse?.call(),
+        CountryBlm() => countryBlm?.call() ?? orElse?.call(),
+        CountrySyc() => countrySyc?.call() ?? orElse?.call(),
+        CountryEsh() => countryEsh?.call() ?? orElse?.call(),
+        CountryLby() => countryLby?.call() ?? orElse?.call(),
+        CountryMkd() => countryMkd?.call() ?? orElse?.call(),
+        CountryPer() => countryPer?.call() ?? orElse?.call(),
+        CountryBdi() => countryBdi?.call() ?? orElse?.call(),
+        CountryKir() => countryKir?.call() ?? orElse?.call(),
+        CountryTur() => countryTur?.call() ?? orElse?.call(),
+        CountryTza() => countryTza?.call() ?? orElse?.call(),
+        CountryTun() => countryTun?.call() ?? orElse?.call(),
+        CountryMsr() => countryMsr?.call() ?? orElse?.call(),
+        CountryKgz() => countryKgz?.call() ?? orElse?.call(),
+        CountryImn() => countryImn?.call() ?? orElse?.call(),
+        CountryGlp() => countryGlp?.call() ?? orElse?.call(),
+        CountryKwt() => countryKwt?.call() ?? orElse?.call(),
+        CountryVgb() => countryVgb?.call() ?? orElse?.call(),
+        CountryCiv() => countryCiv?.call() ?? orElse?.call(),
+        CountryCxr() => countryCxr?.call() ?? orElse?.call(),
+        CountryLso() => countryLso?.call() ?? orElse?.call(),
+        CountryJey() => countryJey?.call() ?? orElse?.call(),
+        CountrySvn() => countrySvn?.call() ?? orElse?.call(),
+        CountryBel() => countryBel?.call() ?? orElse?.call(),
+        CountryTca() => countryTca?.call() ?? orElse?.call(),
+        CountryGib() => countryGib?.call() ?? orElse?.call(),
+        CountryQat() => countryQat?.call() ?? orElse?.call(),
+        CountryBwa() => countryBwa?.call() ?? orElse?.call(),
+        CountryGnq() => countryGnq?.call() ?? orElse?.call(),
+        CountryDji() => countryDji?.call() ?? orElse?.call(),
+        CountryGuy() => countryGuy?.call() ?? orElse?.call(),
+        CountryGum() => countryGum?.call() ?? orElse?.call(),
+        CountryMco() => countryMco?.call() ?? orElse?.call(),
+        CountrySlb() => countrySlb?.call() ?? orElse?.call(),
+        CountryGgy() => countryGgy?.call() ?? orElse?.call(),
+        CountryPry() => countryPry?.call() ?? orElse?.call(),
+        CountrySur() => countrySur?.call() ?? orElse?.call(),
+        CountryUmi() => countryUmi?.call() ?? orElse?.call(),
+        CountryGin() => countryGin?.call() ?? orElse?.call(),
+        CountryCze() => countryCze?.call() ?? orElse?.call(),
+        CountryCom() => countryCom?.call() ?? orElse?.call(),
+        CountryGha() => countryGha?.call() ?? orElse?.call(),
+        CountryKna() => countryKna?.call() ?? orElse?.call(),
+        CountryPyf() => countryPyf?.call() ?? orElse?.call(),
+        CountryZwe() => countryZwe?.call() ?? orElse?.call(),
+        CountryKen() => countryKen?.call() ?? orElse?.call(),
+        CountryKaz() => countryKaz?.call() ?? orElse?.call(),
+        CountryMne() => countryMne?.call() ?? orElse?.call(),
+        CountryTuv() => countryTuv?.call() ?? orElse?.call(),
+        CountryPan() => countryPan?.call() ?? orElse?.call(),
+        CountryAnd() => countryAnd?.call() ?? orElse?.call(),
+        CountryVir() => countryVir?.call() ?? orElse?.call(),
+        CountryIsr() => countryIsr?.call() ?? orElse?.call(),
+        CountryPrt() => countryPrt?.call() ?? orElse?.call(),
+        CountryAut() => countryAut?.call() ?? orElse?.call(),
+        CountryFin() => countryFin?.call() ?? orElse?.call(),
+        CountryEst() => countryEst?.call() ?? orElse?.call(),
+        CountryDma() => countryDma?.call() ?? orElse?.call(),
+        CountryYem() => countryYem?.call() ?? orElse?.call(),
+        CountryAfg() => countryAfg?.call() ?? orElse?.call(),
+        CountrySyr() => countrySyr?.call() ?? orElse?.call(),
+        CountryMdv() => countryMdv?.call() ?? orElse?.call(),
+        CountryTls() => countryTls?.call() ?? orElse?.call(),
+        CountryLtu() => countryLtu?.call() ?? orElse?.call(),
+        CountryNzl() => countryNzl?.call() ?? orElse?.call(),
+        CountryBmu() => countryBmu?.call() ?? orElse?.call(),
+        CountryDeu() => countryDeu?.call() ?? orElse?.call(),
+        CountryArg() => countryArg?.call() ?? orElse?.call(),
+        CountryBlr() => countryBlr?.call() ?? orElse?.call(),
+        CountryBrb() => countryBrb?.call() ?? orElse?.call(),
+        CountryGtm() => countryGtm?.call() ?? orElse?.call(),
+        CountryAze() => countryAze?.call() ?? orElse?.call(),
+        CountryMar() => countryMar?.call() ?? orElse?.call(),
+        CountryCok() => countryCok?.call() ?? orElse?.call(),
+        CountryCaf() => countryCaf?.call() ?? orElse?.call(),
+        CountryRou() => countryRou?.call() ?? orElse?.call(),
+        CountryMlt() => countryMlt?.call() ?? orElse?.call(),
+        CountryArm() => countryArm?.call() ?? orElse?.call(),
+        CountrySen() => countrySen?.call() ?? orElse?.call(),
+        CountryBgr() => countryBgr?.call() ?? orElse?.call(),
+        CountryCod() => countryCod?.call() ?? orElse?.call(),
+        CountryHti() => countryHti?.call() ?? orElse?.call(),
+        CountryAlb() => countryAlb?.call() ?? orElse?.call(),
+        CountryJor() => countryJor?.call() ?? orElse?.call(),
+        CountrySjm() => countrySjm?.call() ?? orElse?.call(),
+        CountryMdg() => countryMdg?.call() ?? orElse?.call(),
+        CountryFra() => countryFra?.call() ?? orElse?.call(),
+        CountryFsm() => countryFsm?.call() ?? orElse?.call(),
+        CountryAbw() => countryAbw?.call() ?? orElse?.call(),
+        CountryInd() => countryInd?.call() ?? orElse?.call(),
+        CountryNam() => countryNam?.call() ?? orElse?.call(),
+        CountryFji() => countryFji?.call() ?? orElse?.call(),
+        CountrySdn() => countrySdn?.call() ?? orElse?.call(),
+        CountryStp() => countryStp?.call() ?? orElse?.call(),
+        CountrySau() => countrySau?.call() ?? orElse?.call(),
+        CountryHmd() => countryHmd?.call() ?? orElse?.call(),
+        CountryLka() => countryLka?.call() ?? orElse?.call(),
+        CountrySwe() => countrySwe?.call() ?? orElse?.call(),
+        CountryTon() => countryTon?.call() ?? orElse?.call(),
+        CountryDnk() => countryDnk?.call() ?? orElse?.call(),
+        CountryMys() => countryMys?.call() ?? orElse?.call(),
+        CountryCri() => countryCri?.call() ?? orElse?.call(),
+        CountryBol() => countryBol?.call() ?? orElse?.call(),
+        CountryBtn() => countryBtn?.call() ?? orElse?.call(),
+        CountryCym() => countryCym?.call() ?? orElse?.call(),
+        CountryPcn() => countryPcn?.call() ?? orElse?.call(),
+        CountryMli() => countryMli?.call() ?? orElse?.call(),
+        CountrySxm() => countrySxm?.call() ?? orElse?.call(),
+        CountryLva() => countryLva?.call() ?? orElse?.call(),
+        CountryAsm() => countryAsm?.call() ?? orElse?.call(),
+        CountrySpm() => countrySpm?.call() ?? orElse?.call(),
+        CountryEcu() => countryEcu?.call() ?? orElse?.call(),
+        CountryTha() => countryTha?.call() ?? orElse?.call(),
+        CountryAre() => countryAre?.call() ?? orElse?.call(),
+        CountryHrv() => countryHrv?.call() ?? orElse?.call(),
+        CountryMmr() => countryMmr?.call() ?? orElse?.call(),
+        CountryGeo() => countryGeo?.call() ?? orElse?.call(),
+        CountryTwn() => countryTwn?.call() ?? orElse?.call(),
+        CountryChe() => countryChe?.call() ?? orElse?.call(),
+        CountryEri() => countryEri?.call() ?? orElse?.call(),
+        CountryCog() => countryCog?.call() ?? orElse?.call(),
+        CountryFro() => countryFro?.call() ?? orElse?.call(),
+        CountryUnk() => countryUnk?.call() ?? orElse?.call(),
+        _ => orElse?.call(),
+      };
 }

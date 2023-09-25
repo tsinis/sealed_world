@@ -10,24 +10,16 @@ extension ContinentFunctional on Continent {
     required R Function(Continent asia) asia,
     required R Function(Continent antarctica) antarctica,
     required R Function(Continent oceania) oceania,
-  }) {
-    switch (this) {
-      case Europe():
-        return europe(this);
-      case Africa():
-        return africa(this);
-      case Americas():
-        return americas(this);
-      case Asia():
-        return asia(this);
-      case Antarctica():
-        return antarctica(this);
-      case Oceania():
-        return oceania(this);
-      default:
-        throw ArgumentError("Unknown value: $this", name);
-    }
-  }
+  }) =>
+      switch (this) {
+        Europe() => europe(this),
+        Africa() => africa(this),
+        Americas() => americas(this),
+        Asia() => asia(this),
+        Antarctica() => antarctica(this),
+        Oceania() => oceania(this),
+        _ => throw ArgumentError("Unknown value: $this", name),
+      };
 
   R maybeMap<R>({
     required R Function(Continent continent) orElse,
@@ -37,24 +29,16 @@ extension ContinentFunctional on Continent {
     R Function(Continent asia)? asia,
     R Function(Continent antarctica)? antarctica,
     R Function(Continent oceania)? oceania,
-  }) {
-    switch (this) {
-      case Europe():
-        return europe?.call(this) ?? orElse(this);
-      case Africa():
-        return africa?.call(this) ?? orElse(this);
-      case Americas():
-        return americas?.call(this) ?? orElse(this);
-      case Asia():
-        return asia?.call(this) ?? orElse(this);
-      case Antarctica():
-        return antarctica?.call(this) ?? orElse(this);
-      case Oceania():
-        return oceania?.call(this) ?? orElse(this);
-      default:
-        return orElse(this);
-    }
-  }
+  }) =>
+      switch (this) {
+        Europe() => europe?.call(this) ?? orElse(this),
+        Africa() => africa?.call(this) ?? orElse(this),
+        Americas() => americas?.call(this) ?? orElse(this),
+        Asia() => asia?.call(this) ?? orElse(this),
+        Antarctica() => antarctica?.call(this) ?? orElse(this),
+        Oceania() => oceania?.call(this) ?? orElse(this),
+        _ => orElse(this),
+      };
 
   R maybeWhen<R>({
     required R Function() orElse,
@@ -64,24 +48,16 @@ extension ContinentFunctional on Continent {
     R Function()? asia,
     R Function()? antarctica,
     R Function()? oceania,
-  }) {
-    switch (this) {
-      case Europe():
-        return europe?.call() ?? orElse();
-      case Africa():
-        return africa?.call() ?? orElse();
-      case Americas():
-        return americas?.call() ?? orElse();
-      case Asia():
-        return asia?.call() ?? orElse();
-      case Antarctica():
-        return antarctica?.call() ?? orElse();
-      case Oceania():
-        return oceania?.call() ?? orElse();
-      default:
-        return orElse();
-    }
-  }
+  }) =>
+      switch (this) {
+        Europe() => europe?.call() ?? orElse(),
+        Africa() => africa?.call() ?? orElse(),
+        Americas() => americas?.call() ?? orElse(),
+        Asia() => asia?.call() ?? orElse(),
+        Antarctica() => antarctica?.call() ?? orElse(),
+        Oceania() => oceania?.call() ?? orElse(),
+        _ => orElse(),
+      };
 
   R when<R>({
     required R Function() europe,
@@ -90,24 +66,16 @@ extension ContinentFunctional on Continent {
     required R Function() asia,
     required R Function() antarctica,
     required R Function() oceania,
-  }) {
-    switch (this) {
-      case Europe():
-        return europe();
-      case Africa():
-        return africa();
-      case Americas():
-        return americas();
-      case Asia():
-        return asia();
-      case Antarctica():
-        return antarctica();
-      case Oceania():
-        return oceania();
-      default:
-        throw ArgumentError("Unknown value: $this", name);
-    }
-  }
+  }) =>
+      switch (this) {
+        Europe() => europe(),
+        Africa() => africa(),
+        Americas() => americas(),
+        Asia() => asia(),
+        Antarctica() => antarctica(),
+        Oceania() => oceania(),
+        _ => throw ArgumentError("Unknown value: $this", name),
+      };
 
   R? whenOrNull<R>({
     R Function()? europe,
@@ -117,22 +85,14 @@ extension ContinentFunctional on Continent {
     R Function()? antarctica,
     R Function()? oceania,
     R Function()? orElse,
-  }) {
-    switch (this) {
-      case Europe():
-        return europe?.call() ?? orElse?.call();
-      case Africa():
-        return africa?.call() ?? orElse?.call();
-      case Americas():
-        return americas?.call() ?? orElse?.call();
-      case Asia():
-        return asia?.call() ?? orElse?.call();
-      case Antarctica():
-        return antarctica?.call() ?? orElse?.call();
-      case Oceania():
-        return oceania?.call() ?? orElse?.call();
-      default:
-        return orElse?.call();
-    }
-  }
+  }) =>
+      switch (this) {
+        Europe() => europe?.call() ?? orElse?.call(),
+        Africa() => africa?.call() ?? orElse?.call(),
+        Americas() => americas?.call() ?? orElse?.call(),
+        Asia() => asia?.call() ?? orElse?.call(),
+        Antarctica() => antarctica?.call() ?? orElse?.call(),
+        Oceania() => oceania?.call() ?? orElse?.call(),
+        _ => orElse?.call(),
+      };
 }
