@@ -2,7 +2,7 @@
 import "../../../../sealed_countries.dart";
 
 /// Provides extension methods for getting the names of a `WorldCountry` object.
-extension NameExtension on WorldCountry {
+extension WorldCountryNames on WorldCountry {
   /// Returns the common and native names of the country as a single string.
   ///
   /// The `separator` parameter is an optional string that determines the

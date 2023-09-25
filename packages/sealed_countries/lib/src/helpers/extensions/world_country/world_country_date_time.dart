@@ -3,7 +3,7 @@ import "../../../../sealed_countries.dart";
 
 /// Provides extension methods for working with time zones and `DateTime`
 /// objects related to a `WorldCountry` object.
-extension DateTimeExtension on WorldCountry {
+extension WorldCountryDateTime on WorldCountry {
   /// The string for a negative UTC offset from the timezone.
   static const minus = "-";
 

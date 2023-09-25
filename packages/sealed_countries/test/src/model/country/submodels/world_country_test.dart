@@ -1,5 +1,5 @@
-import "package:sealed_countries/src/helpers/extensions/world_country/date_time_extension.dart";
-import "package:sealed_countries/src/helpers/extensions/world_country/getters_extension.dart";
+import "package:sealed_countries/src/helpers/extensions/world_country/world_country_date_time.dart";
+import "package:sealed_countries/src/helpers/extensions/world_country/world_country_getters.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
@@ -54,7 +54,7 @@ void main() => group("$WorldCountry", () {
             expect(element.cioc, element.cioc != null ? isNotEmpty : isNull);
             for (final zone in element.timezones) {
               expect(zone.length, 9);
-              expect(zone.startsWith(DateTimeExtension.utcString), isTrue);
+              expect(zone.startsWith(WorldCountryDateTime.utcString), isTrue);
               // ignore: avoid-substring, no emojis here.
               expect(zone.substring(6, 7), ":");
             }

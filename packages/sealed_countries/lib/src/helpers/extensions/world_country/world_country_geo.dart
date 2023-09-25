@@ -2,7 +2,7 @@ import "../../../../sealed_countries.dart";
 
 /// Provides extension methods for geographic calculations related to a
 /// `WorldCountry` object.
-extension GeoExtension on WorldCountry {
+extension WorldCountryGeo on WorldCountry {
   /// The multiplier to convert square kilometers to square miles.
   static const imperialAreaMultiplier = 0.38610216;
 

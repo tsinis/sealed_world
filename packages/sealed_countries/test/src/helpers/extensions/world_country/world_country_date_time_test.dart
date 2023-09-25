@@ -1,8 +1,8 @@
-import "package:sealed_countries/src/helpers/extensions/world_country/date_time_extension.dart";
+import "package:sealed_countries/src/helpers/extensions/world_country/world_country_date_time.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
 
-void main() => group("DateTimeExtension", () {
+void main() => group("WorldCountryDateTime", () {
       const timezoneAdd = "UTC+01:00";
       const timezoneSubtract = "UTC-13:45";
 
@@ -10,7 +10,7 @@ void main() => group("DateTimeExtension", () {
         test(
           "with $timezoneAdd",
           () => expect(
-            DateTimeExtension.tzDuration(timezoneAdd),
+            WorldCountryDateTime.tzDuration(timezoneAdd),
             const Duration(hours: 1),
           ),
         );
@@ -18,7 +18,7 @@ void main() => group("DateTimeExtension", () {
         test(
           "with $timezoneSubtract",
           () => expect(
-            DateTimeExtension.tzDuration(timezoneSubtract),
+            WorldCountryDateTime.tzDuration(timezoneSubtract),
             const Duration(hours: 13, minutes: 45),
           ),
         );
@@ -27,12 +27,12 @@ void main() => group("DateTimeExtension", () {
       group("toAdd", () {
         test(
           "with $timezoneAdd",
-          () => expect(DateTimeExtension.toAdd(timezoneAdd), isTrue),
+          () => expect(WorldCountryDateTime.toAdd(timezoneAdd), isTrue),
         );
 
         test(
           "with $timezoneSubtract",
-          () => expect(DateTimeExtension.toAdd(timezoneSubtract), isFalse),
+          () => expect(WorldCountryDateTime.toAdd(timezoneSubtract), isFalse),
         );
       });
 

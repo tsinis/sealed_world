@@ -2,7 +2,7 @@ import "../../../model/country/country.dart";
 
 /// Provides extension methods for accessing web resources related to a
 /// `WorldCountry` object.
-extension WebResourcesExtension on WorldCountry {
+extension WorldCountryWebResources on WorldCountry {
   /// The file extension for PNG images.
   static const png = "png";
 

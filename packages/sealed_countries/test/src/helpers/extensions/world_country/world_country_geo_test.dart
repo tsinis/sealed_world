@@ -1,8 +1,8 @@
-import "package:sealed_countries/src/helpers/extensions/world_country/geo_extension.dart";
+import "package:sealed_countries/src/helpers/extensions/world_country/world_country_geo.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
 
-void main() => group("GeoExtension", () {
+void main() => group("WorldCountryGeo", () {
       group("borders", () {
         test(
           "with null bordersCodes",
@@ -34,7 +34,7 @@ void main() => group("GeoExtension", () {
         () => expect(
           WorldCountry.list.first.areaImperial,
           WorldCountry.list.first.areaMetric *
-              GeoExtension.imperialAreaMultiplier,
+              WorldCountryGeo.imperialAreaMultiplier,
         ),
       );
     });
