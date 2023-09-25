@@ -1,5 +1,10 @@
+import "dart:convert" show JsonCodec, jsonEncode;
+
+import "package:sealed_languages/sealed_languages.dart";
+
 import "../data/fiat_currencies.data.dart";
-import "../helpers/fiat_currency/fiat_currency_getters_extension.dart";
+import "../helpers/fiat_currency/fiat_currency_getters.dart";
+import "../helpers/fiat_currency/fiat_currency_json.dart";
 
 part "submodels/crypto_currency.dart";
 part "submodels/fiat_currency.dart";

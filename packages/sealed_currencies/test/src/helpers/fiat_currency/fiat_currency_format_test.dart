@@ -1,9 +1,9 @@
-import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_formatting_extension.dart";
-import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_getters_extension.dart";
+import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_format.dart";
+import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_getters.dart";
 import "package:sealed_currencies/src/model/currency.dart";
 import "package:test/test.dart";
 
-void main() => group("FiatCurrencyFormattingExtension", () {
+void main() => group("FiatCurrencyFormat", () {
       final valueWithoutDot = FiatCurrency.list.firstWhere(
         (cur) => cur.decimalMark != FiatCurrency.dot && cur.unitFirst,
       );

@@ -23,6 +23,12 @@
     }
   ],
   "settings": {
+    "search.exclude": {
+      "**/.git": true,
+      "coverage/**": true,
+      "**/coverage/*": true,
+      "**/*.g.dart": true
+    },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,

@@ -1,4 +1,4 @@
-import "../helpers/fiat_currency/fiat_currency_getters_extension.dart";
+import "../helpers/fiat_currency/fiat_currency_getters.dart";
 import "../model/currency.dart";
 
 /// {@hideConstantImplementations}
@@ -680,7 +680,7 @@ class FiatDkk extends FiatCurrency {
           name: "Danish Krone",
           symbol: "kr.",
           disambiguateSymbol: "DKK",
-          alternateSymbols: const [",-"],
+          alternateSymbols: const ["krone"],
           subunit: "Øre",
           decimalMark: ",",
           thousandsSeparator: ".",
@@ -1732,7 +1732,7 @@ class FiatNok extends FiatCurrency {
           name: "Norwegian Krone",
           symbol: "kr",
           disambiguateSymbol: "NOK",
-          alternateSymbols: const [",-"],
+          alternateSymbols: const ["krone"],
           subunit: "Øre",
           htmlEntity: "kr",
           decimalMark: ",",
