@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_currencies.svg)](https://pub.dev/packages/sealed_currencies)
 
-This ISO-driven, pure Dart, fully tested and and dependency-free package provides information about world currencies in form of compile-time constant sealed classes. Contains the all actively used 169[^1] currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and and 3rd-party dependency-free package provides information about world currencies in form of compile-time constant sealed classes. Contains the all actively used 169[^1] currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ## Features
 
@@ -35,7 +35,7 @@ Compile time constant list of all currencies accessible via `FiatCurrency.list` 
 - `fromCodeNumeric` - returns a currency instance if the value matches the provided ISO 4217 numeric code.
 - `fromName` - returns a currency instance if the value matches the provided English name.
 
-and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`.
+and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc.
 
 ## Getting started
 
@@ -68,10 +68,11 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
   );
   print(maybeEuro?.toString(short: false));
   /*
-  Prints: "FiatCurrency(code: EUR, priority: 2, name: Euro, namesNative: [Euro],
-   symbol: €, disambiguateSymbol: null, alternateSymbols: null, subunit: Cent,
-  subunitToUnit: 100, unitFirst: true, htmlEntity: €, decimalMark: ",",
-  thousandsSeparator: ".", codeNumeric: 978, smallestDenomination: 1)".
+  Prints: "FiatCurrency(code: "EUR", name: "Euro", decimalMark: ",",
+  thousandsSeparator: ".", symbol: "€", alternateSymbols: null,
+  disambiguateSymbol: null, htmlEntity: "€", codeNumeric: "978", namesNative:
+  ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
+  subunitToUnit: 100, unitFirst: true)".
   */
 ```
 

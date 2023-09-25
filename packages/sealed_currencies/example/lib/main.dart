@@ -14,10 +14,11 @@ void main() {
   );
   print(maybeEuro?.toString(short: false));
   /*
-  Prints: "FiatCurrency(code: EUR, priority: 2, name: Euro, namesNative: [Euro],
-  symbol: €, disambiguateSymbol: null, alternateSymbols: null, subunit: Cent,
-  subunitToUnit: 100, unitFirst: true, htmlEntity: €, decimalMark: ",",
-  thousandsSeparator: ".", codeNumeric: 978, smallestDenomination: 1)".
+  Prints: "FiatCurrency(code: "EUR", name: "Euro", decimalMark: ",",
+  thousandsSeparator: ".", symbol: "€", alternateSymbols: null,
+  disambiguateSymbol: null, htmlEntity: "€", codeNumeric: "978", namesNative:
+  ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
+  subunitToUnit: 100, unitFirst: true)".
   */
 
   /// [Currency] is a sealed class, it means
