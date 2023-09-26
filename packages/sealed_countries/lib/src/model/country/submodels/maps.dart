@@ -64,7 +64,7 @@ final class Maps {
 
   @override
   String toString() =>
-      "Maps(googleMaps: $googleMaps, openStreetMaps: $openStreetMaps)";
+      'Maps(googleMaps: "$googleMaps", openStreetMaps: "$openStreetMaps")';
 
   @override
   bool operator ==(covariant Maps other) {

@@ -45,7 +45,7 @@ final class Capital {
   @override
   String toString({bool short = true}) => short
       ? "Capital($deFacto)"
-      : "Capital($deFacto, deJure: $deJure, third: $third)";
+      : '''Capital("$deFacto", deJure: ${deJure == null ? null : "$deJure"}, third: ${third == null ? null : "$third"})''';
 
   @override
   bool operator ==(covariant Capital other) {

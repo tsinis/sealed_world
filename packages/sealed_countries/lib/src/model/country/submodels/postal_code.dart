@@ -42,7 +42,7 @@ final class PostalCode {
 
   @override
   String toString() =>
-      "PostalCode(format: $format, regExpPattern: $regExpPattern)";
+      'PostalCode(format: "$format", regExpPattern: "$regExpPattern")';
 
   @override
   bool operator ==(covariant PostalCode other) {

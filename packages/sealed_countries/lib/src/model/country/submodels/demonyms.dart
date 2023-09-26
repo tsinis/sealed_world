@@ -42,7 +42,7 @@ final class Demonyms {
 
   @override
   String toString() =>
-      "Demonyms(language: $language, female: $female, male: $male)";
+      '''Demonyms(language: ${language.runtimeType}(), female: "$female", male: "$male")''';
 
   @override
   bool operator ==(covariant Demonyms other) {

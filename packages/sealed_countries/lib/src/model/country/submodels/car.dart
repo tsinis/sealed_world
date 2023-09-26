@@ -27,7 +27,8 @@ final class Car {
   final String? sign;
 
   @override
-  String toString() => "Car(sign: $sign, isRightSide: $isRightSide)";
+  String toString() =>
+      'Car(sign: ${sign == null ? sign : "$sign"}, isRightSide: $isRightSide)';
 
   @override
   bool operator ==(covariant Car other) {
