@@ -1,3 +1,9 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/capital_extension.dart";
+
 /// A class that represents a capital city.
 ///
 /// The `Capital` class is a simple value object that represents a capital city.
@@ -16,7 +22,7 @@
 // Read more about the world's capitals
 // https://en.wikipedia.org/wiki/List_of_countries_with_multiple_capitals
 // Reference (Wikipedia).
-final class Capital {
+final class Capital implements JsonEncodable<Capital> {
   /// Creates a new `Capital` object with the given name and optional de jure
   /// and third values.
   ///
@@ -46,6 +52,9 @@ final class Capital {
   String toString({bool short = true}) => short
       ? "Capital($deFacto)"
       : '''Capital("$deFacto", deJure: ${deJure == null ? null : "$deJure"}, third: ${third == null ? null : "$third"})''';
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant Capital other) {

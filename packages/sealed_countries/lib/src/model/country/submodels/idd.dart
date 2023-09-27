@@ -25,7 +25,7 @@ final class Idd {
   final List<int> suffixes;
 
   @override
-  String toString() => "Idd(root: $root, suffixes: $suffixes)";
+  String toString() => "$Idd(root: $root, suffixes: $suffixes)";
 
   @override
   bool operator ==(covariant Idd other) {

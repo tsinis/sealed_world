@@ -1,4 +1,6 @@
 /// Provides data for world countries in the form of sealed classes.
+// ignore_for_file: prefer_double_quotes
+
 library sealed_countries;
 
 export "package:sealed_currencies/sealed_currencies.dart";
@@ -9,6 +11,7 @@ export "src/data/official_world_countries.data.dart";
 export "src/data/other_world_countries.data.dart";
 export "src/data/regional_bloc/regional_bloc.data.dart";
 export "src/helpers/extensions/country_submodels/capital_extension.dart";
+export 'src/helpers/extensions/country_submodels/country_name_extension.dart';
 export "src/helpers/extensions/country_submodels/demonyms_extension.dart";
 export "src/helpers/extensions/country_submodels/gini_extension.dart";
 export "src/helpers/extensions/country_submodels/idd_extension.dart";

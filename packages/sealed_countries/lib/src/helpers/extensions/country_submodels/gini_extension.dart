@@ -1,3 +1,5 @@
+import "package:sealed_currencies/sealed_currencies.dart";
+
 import "../../../model/country/submodels/gini.dart";
 
 /// A class extension that adds utility methods to the `Gini` class.
@@ -16,4 +18,16 @@ extension GiniExtension on Gini {
   /// print(dateTime); // Prints: "2020-01-01 00:00:00.000"
   /// ```
   DateTime get dateTime => DateTime(year);
+
+  Gini copyWith({int? year, double? coefficient}) => Gini(
+        year: year ?? this.year,
+        coefficient: coefficient ?? this.coefficient,
+      );
+
+  Map<String, num> toMap() => {"year": year, "coefficient": coefficient};
+
+  static Gini fromMap(JsonMap map) => Gini(
+        year: map["year"] as int,
+        coefficient: map["coefficient"] as double,
+      );
 }

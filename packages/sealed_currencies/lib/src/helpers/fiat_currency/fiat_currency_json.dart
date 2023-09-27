@@ -66,11 +66,12 @@ extension FiatCurrencyJson on FiatCurrency {
   static FiatCurrency fromMap(JsonMap map) => FiatCurrency(
         code: map["code"] as String,
         name: map["name"] as String,
-        namesNative:
-            map["namesNative"].toString().split(JsonEncodable.separator),
+        // TODO!: Move to extension.
+        namesNative: List<String>.unmodifiable(map["namesNative"] as List),
         codeNumeric: map["codeNumeric"] as String,
-        alternateSymbols:
-            map["alternateSymbols"]?.toString().split(JsonEncodable.separator),
+        alternateSymbols: map["alternateSymbols"] is List
+            ? List<String>.unmodifiable(map["alternateSymbols"] as List)
+            : null,
         disambiguateSymbol: map["disambiguateSymbol"] as String?,
         htmlEntity: map["htmlEntity"] as String?,
         priority: map["priority"] as int,
@@ -127,11 +128,11 @@ extension FiatCurrencyJson on FiatCurrency {
         "decimalMark": decimalMark,
         "thousandsSeparator": thousandsSeparator,
         "symbol": symbol,
-        "alternateSymbols": alternateSymbols?.join(JsonEncodable.separator),
+        "alternateSymbols": alternateSymbols,
         "disambiguateSymbol": disambiguateSymbol,
         "htmlEntity": htmlEntity,
         "codeNumeric": codeNumeric,
-        "namesNative": namesNative.join(JsonEncodable.separator),
+        "namesNative": namesNative,
         "priority": priority,
         "smallestDenomination": smallestDenomination,
         "subunit": subunit,

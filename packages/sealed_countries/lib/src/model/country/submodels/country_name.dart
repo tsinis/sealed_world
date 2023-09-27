@@ -1,4 +1,8 @@
+import "dart:convert";
+
 import "package:sealed_currencies/sealed_currencies.dart";
+
+import '../../../helpers/extensions/country_submodels/country_name_extension.dart';
 
 /// A class that represents the name of a country in a particular language.
 ///
@@ -19,7 +23,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 /// print(countryName.official); // Prints: "Slovenská republika"
 /// print(countryName.common); // Prints: "Slovensko"
 /// ```
-final class CountryName {
+final class CountryName implements JsonEncodable<CountryName> {
   /// Creates a new `CountryName` object with the given language and name
   /// values.
   ///
@@ -52,8 +56,12 @@ final class CountryName {
   final String official;
 
   @override
-  String toString() =>
-      "CountryName(language: $language, official: $official, common: $common)";
+  String toString({bool short = true}) => short
+      ? '''$CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")'''
+      : '''$CountryName(language: $language, official: "$official", common: "$common")''';
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant CountryName other) {

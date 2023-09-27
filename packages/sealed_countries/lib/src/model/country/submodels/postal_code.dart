@@ -1,3 +1,9 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/postal_code_extension.dart";
+
 /// A class that represents a postal code format and regular expression pattern.
 ///
 /// The `PostalCode` class is a simple value object that represents a postal
@@ -14,7 +20,7 @@
 /// print(postalCode.format); // Prints: "#####-####"
 /// print(postalCode.regExpPattern); // Prints: "^(\\d{5}(-\\d{4})?)$"
 /// ```
-final class PostalCode {
+final class PostalCode implements JsonEncodable<PostalCode> {
   /// Creates a new `PostalCode` object with the given format and regular
   /// expression pattern.
   ///
@@ -42,7 +48,10 @@ final class PostalCode {
 
   @override
   String toString() =>
-      'PostalCode(format: "$format", regExpPattern: "$regExpPattern")';
+      '$PostalCode(format: "$format", regExpPattern: r"$regExpPattern")';
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant PostalCode other) {

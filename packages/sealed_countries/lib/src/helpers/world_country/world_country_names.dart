@@ -1,6 +1,5 @@
 // ignore_for_file: avoid-non-null-assertion
 
-
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../model/country/country.dart";
@@ -56,6 +55,7 @@ extension WorldCountryNames on WorldCountry {
     return _nameTranslated(language);
   }
 
+  // TODO!: Deprecate.
   /// Returns the Arabic name of the country.
   CountryName get nameArabic => _nameTranslated(const LangAra())!;
 

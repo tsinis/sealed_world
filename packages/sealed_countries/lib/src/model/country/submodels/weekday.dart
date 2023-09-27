@@ -1,3 +1,7 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
 part "weekday.g.dart";
 
 /// An enum that represents the days of the week.
@@ -12,7 +16,7 @@ part "weekday.g.dart";
 /// final monday = Weekday.monday;
 /// print(monday.label); // Prints: "Monday"
 /// ```
-enum Weekday {
+enum Weekday implements JsonEncodable<Weekday> {
   /// Represents Monday.
   monday("Monday"),
 
@@ -39,4 +43,12 @@ enum Weekday {
 
   /// The label that corresponds to this `Weekday` object.
   final String label;
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
+
+  Map<String, String> toMap() => {"weekday": name};
+
+  static Weekday fromMap(JsonMap map) =>
+      values.byName(map.values.first.toString());
 }

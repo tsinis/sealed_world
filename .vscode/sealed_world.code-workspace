@@ -50,7 +50,7 @@
         "source.sortMembers": "never"
       }
     },
-    "cSpell.words": ["Cinis"],
+    "cSpell.words": ["Cinis", "cioc", "demonym", "demonyms", "gini"],
     "cSpell.useGitignore": true,
     "cSpell.ignorePaths": [
       ".git", // Ignore the .git directory

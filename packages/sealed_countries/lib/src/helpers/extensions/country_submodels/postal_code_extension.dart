@@ -1,3 +1,5 @@
+import "package:sealed_currencies/sealed_currencies.dart";
+
 import "../../../model/country/submodels/postal_code.dart";
 
 /// A class extension that adds a additional methods to the `PostalCode` class.
@@ -32,5 +34,18 @@ extension PostalCodeExtension on PostalCode {
         caseSensitive: caseSensitive,
         unicode: unicode,
         dotAll: dotAll,
+      );
+
+  PostalCode copyWith({String? format, String? regExpPattern}) => PostalCode(
+        format: format ?? this.format,
+        regExpPattern: regExpPattern ?? this.regExpPattern,
+      );
+
+  Map<String, String> toMap() =>
+      {"format": format, "regExpPattern": regExpPattern};
+
+  static PostalCode fromMap(JsonMap map) => PostalCode(
+        format: map["format"] as String,
+        regExpPattern: map["regExpPattern"] as String,
       );
 }

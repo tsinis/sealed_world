@@ -49,7 +49,7 @@ class RegionalBloc extends WorldBloc {
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : """RegionalBloc(acronym: $acronym, name: $name, otherAcronyms: $otherAcronyms, otherNames: $otherNames)""";
+      : """$RegionalBloc(acronym: $acronym, name: $name, otherAcronyms: $otherAcronyms, otherNames: $otherNames)""";
 
   /// Creates a new `RegionalBloc` object from a value.
   ///

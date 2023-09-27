@@ -1,3 +1,5 @@
+import "package:sealed_currencies/sealed_currencies.dart";
+
 import "../../../model/country/submodels/idd.dart";
 
 /// A class extension that adds utility methods to the `Idd` class.
@@ -33,4 +35,14 @@ extension IddExtension on Idd {
   /// ```
   String phoneCode({String leading = "+"}) =>
       "$leading$root${hasSingleSuffix ? "${suffixes.first}" : ""}";
+
+  Idd copyWith({int? root, List<int>? suffixes}) =>
+      Idd(root: root ?? this.root, suffixes: suffixes ?? this.suffixes);
+
+  Map<String, Object?> toMap() => {"root": root, "suffixes": suffixes};
+
+  static Idd fromMap(JsonMap map) => Idd(
+        root: map["root"] as int,
+        suffixes: List<int>.unmodifiable(map["suffixes"] as List),
+      );
 }
