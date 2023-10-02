@@ -2,7 +2,7 @@ import "dart:convert";
 
 import "package:sealed_currencies/sealed_currencies.dart";
 
-import '../../../helpers/extensions/country_submodels/country_name_extension.dart';
+import "../../../helpers/extensions/country_submodels/country_name_extension.dart";
 
 /// A class that represents the name of a country in a particular language.
 ///
