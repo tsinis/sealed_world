@@ -24,7 +24,8 @@ part of "../country.dart";
 /// final unknown = WorldCountry.maybeFromValue<int>(42);
 /// print(unknown); // Output: null
 /// ```
-class WorldCountry extends Country {
+class WorldCountry extends Country
+    implements IsoStandardized<CountryName>, JsonEncodable<WorldCountry> {
   /// Creates a new `WorldCountry` object with the given properties.
   ///
   /// The `name` parameter is required and must not be empty. The
@@ -90,12 +91,14 @@ class WorldCountry extends Country {
       );
 
   /// The native names of the country.
+  @override
   final List<CountryName> namesNative;
 
   /// The top level domain names for the country.
   final List<String> tld;
 
   /// The three-letter ISO 3166-1 Alpha-3 code of the country.
+  @override
   final String code;
 
   /// The three-digit ISO 3166-1 Numeric code of the country.
@@ -186,9 +189,15 @@ class WorldCountry extends Country {
   final List<RegionalBloc>? regionalBlocs;
 
   @override
+  String? get codeOther => codeShort;
+
+  @override
   String toString({bool short = true}) => short
       ? super.toString()
       : '''WorldCountry(name: $name, namesNative: $namesNative, tld: ${jsonEncode(tld)}, code: "$code", codeNumeric: "$codeNumeric", codeShort: "$codeShort", cioc: ${cioc == null ? cioc : '"$cioc"'}, independent: $independent, unMember: $unMember, currencies: ${currencies?.toInstancesString()}, idd: $idd, altSpellings: ${jsonEncode(altSpellings)}, continent: ${continent.runtimeType}(), subregion: ${subregion == null ? subregion : '${subregion?.runtimeType}()'}, languages: ${languages.toInstancesString()}, translations: $translations, latLng: $latLng, landlocked: $landlocked, bordersCodes: ${jsonEncode(bordersCodes)}, areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, population: $population, gini: $gini, fifa: ${fifa == null ? fifa : '"$fifa"'}, car: $car, timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: ${capitalInfo?.toString(short: false)}, postalCode: $postalCode, regionalBlocs: ${regionalBlocs?.toInstancesString()})''';
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   /// Returns a `WorldCountry` object that represents the country with the given
   /// `value`.

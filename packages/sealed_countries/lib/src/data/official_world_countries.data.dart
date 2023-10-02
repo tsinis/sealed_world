@@ -2,6 +2,8 @@
 // https://gitlab.com/restcountries/restcountries, which is
 // licensed under the Mozilla Public License Version 2.0.
 
+// ignore_for_file: lines_longer_than_80_chars
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/country.dart";
