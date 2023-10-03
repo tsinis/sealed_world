@@ -1,3 +1,4 @@
+import "../../../data/geo/continental_sections.data.dart";
 import "../../../data/geo/continents.data.dart";
 import "../region.dart";
 
@@ -66,11 +67,38 @@ class Continent extends SubRegion {
   /// A list of all the continents currently
   /// supported by the [Continent] class.
   static const list = [
+    /// General continents.
     Africa(),
     Americas(),
     Antarctica(),
     Asia(),
     Europe(),
     Oceania(),
+
+    /// Subregions.
+    CentralAmerica(),
+    NorthAmerica(),
+    SouthAmerica(),
+    Caribbean(),
+    CentralEurope(),
+    NorthernEurope(),
+    SouthernEurope(),
+    EasternEurope(),
+    WesternEurope(),
+    SouthwestEurope(),
+    MiddleAfrica(),
+    WesternAfrica(),
+    SouthernAfrica(),
+    EasternAfrica(),
+    NorthernAfrica(),
+    CentralAsia(),
+    EasternAsia(),
+    WesternAsia(),
+    SouthernAsia(),
+    SouthEasternAsia(),
+    AustraliaAndNewZealand(),
+    Melanesia(),
+    Micronesia(),
+    Polynesia(),
   ];
 }

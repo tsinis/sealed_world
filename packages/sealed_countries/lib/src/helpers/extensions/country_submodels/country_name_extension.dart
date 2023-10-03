@@ -4,7 +4,7 @@ import "../../../model/country/submodels/country_name.dart";
 
 extension CountryNameExtension on CountryName {
   static CountryName fromMap(JsonMap map) => CountryName(
-        language: NaturalLanguageJson.fromMap(map["language"] as JsonMap),
+        language: NaturalLanguage.fromCode(map["language"].toString()),
         official: map["official"] as String,
         common: map["common"] as String,
       );
@@ -22,7 +22,7 @@ extension CountryNameExtension on CountryName {
 
   Map<String, Object?> toMap() => {
         "common": common,
-        "language": language.toMap(),
+        "language": language.code,
         "official": official,
       };
 }

@@ -35,10 +35,10 @@ extension DemonymsExtension on Demonyms {
       );
 
   Map<String, Object?> toMap() =>
-      {"language": language.toMap(), "female": female, "male": male};
+      {"language": language.code, "female": female, "male": male};
 
   static Demonyms fromMap(Map<String, dynamic> map) => Demonyms(
-        language: NaturalLanguageJson.fromMap(map["language"] as JsonMap),
+        language: NaturalLanguage.fromCode(map["language"].toString()),
         female: map["female"] as String,
         male: map["male"] as String,
       );

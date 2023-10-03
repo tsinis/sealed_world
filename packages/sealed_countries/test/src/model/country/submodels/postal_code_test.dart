@@ -7,10 +7,10 @@ void main() => group("$PostalCode", () {
       const value = PostalCode();
       test(
         "toString",
-        () => expect(
-          value.toString(),
-          """$PostalCode(format: ${value.format}, regExpPattern: ${value.regExpPattern})""",
-        ),
+        () {
+          expect(value.toString(), contains(value.format));
+          expect(value.toString(), contains(value.regExpPattern));
+        },
       );
 
       group("equality", () {

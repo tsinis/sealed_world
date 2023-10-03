@@ -22,7 +22,7 @@ extension WorldCountryJson on WorldCountry {
   Map<String, Object?> toMap() => {
         "name": name.toMap(),
         "namesNative":
-            namesNative.map((x) => x.toMap()).toList(growable: false),
+            namesNative.map((nn) => nn.toMap()).toList(growable: false),
         "tld": tld,
         "code": code,
         "codeNumeric": codeNumeric,
@@ -30,19 +30,19 @@ extension WorldCountryJson on WorldCountry {
         "cioc": cioc,
         "independent": independent,
         "unMember": unMember,
-        "currencies": currencies?.map((x) => x.toMap()).toList(growable: false),
+        "currencies": currencies?.map((c) => c.code).toList(growable: false),
         "idd": idd.toMap(),
         "altSpellings": altSpellings,
         "continent": continent.name,
         "subregion": subregion?.name,
-        "languages": languages.map((x) => x.toMap()).toList(growable: false),
+        "languages": languages.map((l) => l.code).toList(growable: false),
         "translations":
-            translations.map((x) => x.toMap()).toList(growable: false),
+            translations.map((t) => t.toMap()).toList(growable: false),
         "latLng": latLng.toMap(),
         "landlocked": landlocked,
         "bordersCodes": bordersCodes,
         "areaMetric": areaMetric,
-        "demonyms": demonyms.map((x) => x.toMap()).toList(growable: false),
+        "demonyms": demonyms.map((d) => d.toMap()).toList(growable: false),
         "emoji": emoji,
         "maps": maps.toMap(),
         "population": population,
@@ -55,7 +55,7 @@ extension WorldCountryJson on WorldCountry {
         "capitalInfo": capitalInfo?.toMap(),
         "postalCode": postalCode?.toMap(),
         "regionalBlocs":
-            regionalBlocs?.map((x) => x.acronym).toList(growable: false),
+            regionalBlocs?.map((rb) => rb.acronym).toList(growable: false),
       };
 
   // ignore: long-method, class is quite big.
@@ -70,25 +70,29 @@ extension WorldCountryJson on WorldCountry {
         emoji: map["emoji"] as String,
         idd: IddExtension.fromMap(map["idd"] as JsonMap),
         languages: List<NaturalLanguage>.unmodifiable(
-          map["languages"].map(NaturalLanguageJson.fromMap) as List,
+          (map["languages"] as List).map((l) => NaturalLanguage.fromCode("$l")),
         ),
         latLng: LatLngExtension.fromMap(map["latLng"] as JsonMap),
         maps: MapsExtension.fromMap(map["maps"] as JsonMap),
         namesNative: List<CountryName>.unmodifiable(
-          map["namesNative"].map(CountryNameExtension.fromMap) as List,
+          (map["namesNative"] as List)
+              .map((n) => CountryNameExtension.fromMap(n as JsonMap)),
         ),
         population: map["population"] as int,
         timezones: List<String>.unmodifiable(map["timezones"] as List),
         tld: List<String>.unmodifiable(map["tld"] as List),
         translations: List<CountryName>.unmodifiable(
-          map["translations"].map(CountryNameExtension.fromMap) as List,
+          (map["translations"] as List)
+              .map((n) => CountryNameExtension.fromMap(n as JsonMap)),
         ),
         demonyms: List<Demonyms>.unmodifiable(
-          map["demonyms"].map(DemonymsExtension.fromMap) as List,
+          (map["demonyms"] as List)
+              .map((d) => DemonymsExtension.fromMap(d as JsonMap)),
         ),
         currencies: map["currencies"] is List
             ? List<FiatCurrency>.unmodifiable(
-                map["currencies"].map(FiatCurrencyJson.fromMap) as List,
+                (map["currencies"] as List)
+                    .map((l) => FiatCurrency.fromCode("$l")),
               )
             : null,
         capitalInfo: map["capitalInfo"] != null
@@ -116,7 +120,8 @@ extension WorldCountryJson on WorldCountry {
         unMember: map["unMember"] as bool,
         regionalBlocs: map["regionalBlocs"] is List
             ? List<RegionalBloc>.from(
-                map["regionalBlocs"].map(RegionalBloc.fromAcronym) as List,
+                (map["regionalBlocs"] as List)
+                    .map((rb) => RegionalBloc.fromAcronym("$rb")),
               )
             : null,
       );
