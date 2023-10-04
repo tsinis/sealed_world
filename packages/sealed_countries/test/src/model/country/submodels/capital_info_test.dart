@@ -1,6 +1,8 @@
+import "package:sealed_countries/src/helpers/extensions/country_submodels/capital_info_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/capital.dart";
 import "package:sealed_countries/src/model/country/submodels/capital_info.dart";
 import "package:sealed_countries/src/model/country/submodels/lat_lng.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
@@ -45,5 +47,10 @@ void main() => group("$CapitalInfo", () {
           array.add(CapitalInfo(capital: value.capital, latLng: value.latLng));
           expect(array.length, 2);
         });
+      });
+
+      test("toJson", () {
+        final json = value.toJson();
+        expect(value, json.parse(CapitalInfoExtension.fromMap));
       });
     });

@@ -1,4 +1,6 @@
+import "package:sealed_countries/src/helpers/extensions/country_submodels/lat_lng_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/lat_lng.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
@@ -30,5 +32,10 @@ void main() => group("$LatLng", () {
           array.add(LatLng(value.latitude, value.longitude));
           expect(array.length, 2);
         });
+      });
+
+      test("toJson", () {
+        final json = value.toJson();
+        expect(value, json.parse(LatLngExtension.fromMap));
       });
     });

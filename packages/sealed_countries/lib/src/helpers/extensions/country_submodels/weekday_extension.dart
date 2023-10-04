@@ -1,7 +1,5 @@
 import "../../../model/country/submodels/weekday.dart";
 
-export "../../../model/country/submodels/weekday.dart";
-
 /// A class extension that adds utility methods to the `Weekday` enum.
 extension WeekdayExtension on Weekday {
   /// Returns the first three characters of the label for this `Weekday` object.

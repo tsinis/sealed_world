@@ -1,3 +1,9 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/idd_extension.dart";
+
 /// A class that represents an International Direct Dialing (IDD) code.
 ///
 /// The `Idd` class is a simple value object that represents an International
@@ -11,7 +17,7 @@
 /// final idd = Idd(root: 3, suffixes: [81]);
 /// print(idd); // Prints: "Idd(root: 3, suffixes: [81])"
 /// ```
-final class Idd {
+final class Idd implements JsonEncodable<Idd> {
   /// Creates a new `Idd` object with the given root and suffixes.
   ///
   /// The `suffixes` parameter must not be an empty list.
@@ -26,6 +32,9 @@ final class Idd {
 
   @override
   String toString() => "$Idd(root: $root, suffixes: $suffixes)";
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant Idd other) {

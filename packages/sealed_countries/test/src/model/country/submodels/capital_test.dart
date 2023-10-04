@@ -1,4 +1,6 @@
+import "package:sealed_countries/src/helpers/extensions/country_submodels/capital_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/capital.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
@@ -62,5 +64,10 @@ void main() => group("$Capital", () {
             throwsA(isA<AssertionError>()),
           ),
         );
+      });
+
+      test("toJson", () {
+        final json = value.toJson();
+        expect(value, json.parse(CapitalExtension.fromMap));
       });
     });

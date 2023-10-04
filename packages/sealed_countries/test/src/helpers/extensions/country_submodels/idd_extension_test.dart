@@ -5,25 +5,39 @@ import "package:test/test.dart";
 import "../../../test_data.dart";
 
 void main() => group("IddExtension", () {
-      const idd = Idd(root: TestData.integer, suffixes: [TestData.integer]);
+      const value = Idd(root: TestData.integer, suffixes: [TestData.integer]);
       const multipleSuffixes = Idd(
         root: TestData.integer,
         suffixes: [TestData.integer, TestData.integer],
       );
 
       test("hasSingleSuffix", () {
-        expect(idd.hasSingleSuffix, isTrue);
+        expect(value.hasSingleSuffix, isTrue);
         expect(multipleSuffixes.hasSingleSuffix, isFalse);
       });
 
       test("phoneCode", () {
         expect(
-          idd.phoneCode(leading: TestData.emptyString),
-          idd.root.toString() * 2,
+          value.phoneCode(leading: TestData.emptyString),
+          value.root.toString() * 2,
         );
         expect(
           multipleSuffixes.phoneCode(leading: TestData.emptyString),
-          idd.root.toString(),
+          value.root.toString(),
         );
+      });
+
+      group("copyWith", () {
+        test("with non-null values", () {
+          final copy = value.copyWith(root: 0);
+          expect(copy.root, isZero);
+          expect(copy.suffixes, value.suffixes);
+        });
+
+        test("with null values", () {
+          final copy = value.copyWith();
+          expect(copy.root, value.root);
+          expect(copy.suffixes, value.suffixes);
+        });
       });
     });

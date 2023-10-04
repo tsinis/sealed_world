@@ -1,3 +1,4 @@
+import "package:sealed_countries/src/helpers/extensions/country_submodels/demonyms_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/demonyms.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
@@ -95,5 +96,10 @@ void main() => group("$Demonyms", () {
             throwsA(isA<AssertionError>()),
           ),
         );
+      });
+
+      test("toJson", () {
+        final json = value.toJson();
+        expect(value, json.parse(DemonymsExtension.fromMap));
       });
     });

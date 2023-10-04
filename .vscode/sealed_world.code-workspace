@@ -81,7 +81,7 @@
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "code-runner.clearPreviousOutput": false,
     "dimmer.delay": 1000,
-    "dimmer.opacity": 75,
+    "dimmer.opacity": 80,
     "dimmer.enabled": true,
     "yaml.keyOrdering": false
   },

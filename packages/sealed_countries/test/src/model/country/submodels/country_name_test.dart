@@ -1,3 +1,4 @@
+import "package:sealed_countries/src/helpers/extensions/country_submodels/country_name_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/country_name.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
@@ -113,5 +114,10 @@ void main() => group("$CountryName", () {
             );
           },
         );
+      });
+
+      test("toJson", () {
+        final json = value.toJson();
+        expect(value, json.parse(CountryNameExtension.fromMap));
       });
     });
