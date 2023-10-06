@@ -506,7 +506,7 @@ extension WorldCountryFunctional on WorldCountry {
         CountryZmb() => countryZmb(this),
         CountryZwe() => countryZwe(this),
         CountryUnk() => countryUnk(this),
-        _ => throw ArgumentError("Unknown value: $this", name.common),
+        _ => throw ArgumentError("Unknown value: $this", name.name),
       };
 
   R maybeMap<R>({
@@ -2026,7 +2026,7 @@ extension WorldCountryFunctional on WorldCountry {
         CountryZmb() => countryZmb(),
         CountryZwe() => countryZwe(),
         CountryUnk() => countryUnk(),
-        _ => throw ArgumentError("Unknown value: $this", name.common),
+        _ => throw ArgumentError("Unknown value: $this", name.name),
       };
 
   R? whenOrNull<R>({

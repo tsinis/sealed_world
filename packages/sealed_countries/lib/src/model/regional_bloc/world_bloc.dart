@@ -27,5 +27,6 @@ sealed class WorldBloc {
   final String name;
 
   @override
-  String toString() => "WorldBloc(name: $name, acronym: $acronym)";
+  String toString() =>
+      '''$WorldBloc(name: "$name", acronym: ${acronym == null ? acronym : '"$acronym"'})''';
 }

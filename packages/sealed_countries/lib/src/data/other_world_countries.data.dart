@@ -23,9 +23,10 @@ class CountryUnk extends WorldCountry {
   /// A class that represents the country of Kosovo.
   const CountryUnk()
       : super(
-          name: const CountryName.international(
-            common: "Kosovo",
+          name: const CountryName(
+            language: LangEng(),
             official: "Republic of Kosovo",
+            common: "Kosovo",
           ),
           namesNative: const [
             CountryName(

@@ -4,6 +4,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../model/country/country.dart";
 import "../../model/country/submodels/country_name.dart";
+import "../extensions/country_submodels/country_name_extension.dart";
 
 /// Provides extension methods for getting the names of a `WorldCountry` object.
 extension WorldCountryNames on WorldCountry {
