@@ -9,6 +9,7 @@ import "../../helpers/world_country/world_country_json.dart";
 import "../geo/region.dart";
 import "../geo/submodels/continent.dart";
 import "../regional_bloc/world_bloc.dart";
+import "../translated_name.dart";
 import "submodels/capital_info.dart";
 import "submodels/car.dart";
 import "submodels/country_name.dart";

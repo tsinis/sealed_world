@@ -135,7 +135,7 @@ class WorldCountry extends Country
   final List<NaturalLanguage> languages;
 
   /// The translations of the country name.
-  final List<CountryName> translations;
+  final Iterable<TranslatedName> translations;
 
   /// The geographic coordinates of the country.
   final LatLng latLng;

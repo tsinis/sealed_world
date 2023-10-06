@@ -8,6 +8,7 @@ import "../../model/country/submodels/demonyms.dart";
 import "../../model/country/submodels/weekday.dart";
 import "../../model/geo/submodels/continent.dart";
 import "../../model/regional_bloc/world_bloc.dart";
+import "../../model/translated_name.dart";
 import "../extensions/country_submodels/capital_info_extension.dart";
 import "../extensions/country_submodels/car_extension.dart";
 import "../extensions/country_submodels/country_name_extension.dart";
@@ -17,6 +18,7 @@ import "../extensions/country_submodels/idd_extension.dart";
 import "../extensions/country_submodels/lat_lng_extension.dart";
 import "../extensions/country_submodels/maps_extension.dart";
 import "../extensions/country_submodels/postal_code_extension.dart";
+import "../extensions/translated_name_extension.dart";
 
 extension WorldCountryJson on WorldCountry {
   Map<String, Object?> toMap() => {
@@ -81,9 +83,9 @@ extension WorldCountryJson on WorldCountry {
         population: map["population"] as int,
         timezones: List<String>.unmodifiable(map["timezones"] as List),
         tld: List<String>.unmodifiable(map["tld"] as List),
-        translations: List<CountryName>.unmodifiable(
+        translations: List<TranslatedName>.unmodifiable(
           (map["translations"] as List)
-              .map((n) => CountryNameExtension.fromMap(n as JsonMap)),
+              .map((n) => TranslatedNameExtension.fromMap(n as JsonMap)),
         ),
         demonyms: List<Demonyms>.unmodifiable(
           (map["demonyms"] as List)

@@ -14,6 +14,7 @@ import "../../model/country/submodels/weekday.dart";
 import "../../model/geo/region.dart";
 import "../../model/geo/submodels/continent.dart";
 import "../../model/regional_bloc/world_bloc.dart";
+import "../../model/translated_name.dart";
 
 extension WorldCountryCopyWith on WorldCountry {
   WorldCountry copyWith({
@@ -32,7 +33,7 @@ extension WorldCountryCopyWith on WorldCountry {
     Continent? continent,
     SubRegion? subregion,
     List<NaturalLanguage>? languages,
-    List<CountryName>? translations,
+    Iterable<TranslatedName>? translations,
     LatLng? latLng,
     bool? landlocked,
     List<String>? bordersCodes,
