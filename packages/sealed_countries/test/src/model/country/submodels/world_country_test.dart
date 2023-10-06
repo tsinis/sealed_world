@@ -158,7 +158,7 @@ void main() => group("$WorldCountry", () {
 
       group("toJson", () {
         for (final element in WorldCountry.list) {
-          test("compared to $WorldCountry: ${element.name.common}", () {
+          test("compared to $WorldCountry: ${element.name.name}", () {
             final json = element.toJson();
 
             expect(json, isNotEmpty);

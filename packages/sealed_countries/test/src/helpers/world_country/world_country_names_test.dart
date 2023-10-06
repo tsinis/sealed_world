@@ -66,7 +66,7 @@ void main() => group("WorldCountryNames", () {
           "separator",
           () => expect(
             country.namesCommonNative(separator: "-"),
-            """${country.namesNative.first.common}-${country.namesNative.last.common}""",
+            """${country.namesNative.first.name}-${country.namesNative.last.name}""",
           ),
         );
 
@@ -75,7 +75,7 @@ void main() => group("WorldCountryNames", () {
             "with multiple names",
             () => expect(
               country.namesCommonNative(skipFirst: true),
-              country.namesNative.last.common,
+              country.namesNative.last.name,
             ),
           );
 
@@ -87,7 +87,7 @@ void main() => group("WorldCountryNames", () {
               );
               expect(
                 singleNameCountry.namesCommonNative(skipFirst: true),
-                singleNameCountry.namesNative.first.common,
+                singleNameCountry.namesNative.first.name,
               );
             },
           );
@@ -102,7 +102,7 @@ void main() => group("WorldCountryNames", () {
           "separator",
           () => expect(
             country.namesOfficialNative(separator: "-"),
-            """${country.namesNative.first.official}-${country.namesNative.last.official}""",
+            """${country.namesNative.first.fullName}-${country.namesNative.last.fullName}""",
           ),
         );
 
@@ -111,7 +111,7 @@ void main() => group("WorldCountryNames", () {
             "with multiple names",
             () => expect(
               country.namesOfficialNative(skipFirst: true),
-              country.namesNative.last.official,
+              country.namesNative.last.fullName,
             ),
           );
 
@@ -123,7 +123,7 @@ void main() => group("WorldCountryNames", () {
               );
               expect(
                 singleNameCountry.namesOfficialNative(skipFirst: true),
-                singleNameCountry.namesNative.first.official,
+                singleNameCountry.namesNative.first.fullName,
               );
             },
           );

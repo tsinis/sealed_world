@@ -6,6 +6,7 @@ import "package:test/test.dart";
 import "../../../test_data.dart";
 
 void main() => group("$CountryName", () {
+      // ignore: deprecated_member_use_from_same_package, for tests.
       const value = CountryName.international(
         common: TestData.string,
         official: TestData.string,
@@ -76,9 +77,10 @@ void main() => group("$CountryName", () {
           "empty official",
           () {
             expect(
-              () => CountryName.international(
-                common: value.common,
+              () => CountryName(
+                language: const LangEng(),
                 official: TestData.emptyString,
+                common: value.common,
               ),
               throwsA(isA<AssertionError>()),
             );
@@ -97,9 +99,10 @@ void main() => group("$CountryName", () {
           "empty common",
           () {
             expect(
-              () => CountryName.international(
-                common: TestData.emptyString,
+              () => CountryName(
+                language: const LangEng(),
                 official: value.official,
+                common: TestData.emptyString,
               ),
               throwsA(isA<AssertionError>()),
             );

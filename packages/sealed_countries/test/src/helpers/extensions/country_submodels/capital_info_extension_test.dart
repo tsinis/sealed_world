@@ -16,10 +16,8 @@ void main() => group("CapitalInfoExtension", () {
 
       group("copyWith", () {
         test("with non-null values", () {
-          final newCapital =
-              value.capital.copyWith(deFacto: TestData.string);
-          final newLatLng =
-              value.latLng.copyWith(latitude: TestData.float);
+          final newCapital = value.capital.copyWith(deFacto: TestData.string);
+          final newLatLng = value.latLng.copyWith(latitude: TestData.float);
           final copy = value.copyWith(
             capital: newCapital,
             latLng: newLatLng,
