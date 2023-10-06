@@ -6,7 +6,18 @@ import "../helpers/extensions/translated_name_extension.dart";
 import "../interfaces/named.dart";
 
 // TODO! Move to languages.
+/// A class representing a translated name of a country or region.
+///
+/// This class implements the [Named] interface and the
+/// [JsonEncodable] interface.
+/// The [language] property represents the natural language of the translation.
+/// The [name] property represents the short/common translation.
+/// The [fullName] property represents the full/official translation.
+/// The [countryCode] property represents the regional code, that might be used
+/// for regional differences in the [language] translation.
 class TranslatedName implements Named, JsonEncodable<TranslatedName> {
+  /// Creates a new [TranslatedName] instance with the given language, name
+  /// and optional full name and country code.
   const TranslatedName(
     this.language, {
     required this.name,
@@ -22,12 +33,17 @@ class TranslatedName implements Named, JsonEncodable<TranslatedName> {
           "`countryCode` should not be empty!",
         );
 
+  /// Represents the natural language of the translation.
   final NaturalLanguage language;
 
+  /// Represents the regional code, that might be used
+  /// for regional differences in the [language] translation.
   final String? countryCode;
 
+  /// Represents the full/official translation.
   final String? fullName;
 
+  /// Represents the short/common translation.
   @override
   final String name;
 

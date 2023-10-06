@@ -20,7 +20,10 @@ import "../extensions/country_submodels/maps_extension.dart";
 import "../extensions/country_submodels/postal_code_extension.dart";
 import "../extensions/translated_name_extension.dart";
 
+/// Extension methods for serializing and deserializing [WorldCountry] objects
+/// to/from JSON like maps.
 extension WorldCountryJson on WorldCountry {
+  /// {@macro to_map_method}
   Map<String, Object?> toMap() => {
         "name": name.toMap(),
         "namesNative":
@@ -60,6 +63,7 @@ extension WorldCountryJson on WorldCountry {
             regionalBlocs?.map((rb) => rb.acronym).toList(growable: false),
       };
 
+  /// {@macro from_map_method}
   // ignore: long-method, class is quite big.
   static WorldCountry fromMap(JsonMap map) => WorldCountry(
         name: CountryNameExtension.fromMap(map["name"] as JsonMap),

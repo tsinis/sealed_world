@@ -2,7 +2,8 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../../model/country/submodels/idd.dart";
 
-/// A class extension that adds utility methods to the `Idd` class.
+/// Provides extension methods for [Idd] class.
+/// {@macro submodels_class_extension}
 extension IddExtension on Idd {
   /// Returns `true` if this `Idd` object has a single suffix value.
   ///
@@ -36,11 +37,14 @@ extension IddExtension on Idd {
   String phoneCode({String leading = "+"}) =>
       "$leading$root${hasSingleSuffix ? "${suffixes.first}" : ""}";
 
+  /// {@macro copy_with_method}
   Idd copyWith({int? root, List<int>? suffixes}) =>
       Idd(root: root ?? this.root, suffixes: suffixes ?? this.suffixes);
 
+  /// {@macro to_map_method}
   Map<String, Object?> toMap() => {"root": root, "suffixes": suffixes};
 
+  /// {@macro from_map_method}
   static Idd fromMap(JsonMap map) => Idd(
         root: map["root"] as int,
         suffixes: List<int>.unmodifiable(map["suffixes"] as List),

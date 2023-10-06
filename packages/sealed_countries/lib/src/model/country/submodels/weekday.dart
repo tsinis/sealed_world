@@ -47,8 +47,10 @@ enum Weekday implements JsonEncodable<Weekday> {
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
+  /// {@macro to_map_method}
   Map<String, String> toMap() => {"weekday": name};
 
+  /// {@macro from_map_method}
   static Weekday fromMap(JsonMap map) =>
       values.byName(map.values.first.toString());
 }

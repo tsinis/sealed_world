@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use_from_same_package
+
 import "package:sealed_countries/src/helpers/world_country/world_country_names.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -53,7 +55,7 @@ void main() => group("WorldCountryNames", () {
           "with $Null input should return english name",
           () => expect(
             WorldCountry.list.first.nameTranslated(),
-            WorldCountry.list.first.nameEnglish,
+            WorldCountry.list.first.name,
           ),
         );
       });

@@ -2,7 +2,8 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../../model/country/submodels/gini.dart";
 
-/// A class extension that adds utility methods to the `Gini` class.
+/// Provides extension methods for [Gini] class.
+/// {@macro submodels_class_extension}
 extension GiniExtension on Gini {
   /// Converts the `year` field of this `Gini` object to a `DateTime` object.
   ///
@@ -19,13 +20,16 @@ extension GiniExtension on Gini {
   /// ```
   DateTime get dateTime => DateTime(year);
 
+  /// {@macro copy_with_method}
   Gini copyWith({int? year, double? coefficient}) => Gini(
         year: year ?? this.year,
         coefficient: coefficient ?? this.coefficient,
       );
 
+  /// {@macro to_map_method}
   Map<String, num> toMap() => {"year": year, "coefficient": coefficient};
 
+  /// {@macro from_map_method}
   static Gini fromMap(JsonMap map) => Gini(
         year: map["year"] as int,
         coefficient: map["coefficient"] as double,

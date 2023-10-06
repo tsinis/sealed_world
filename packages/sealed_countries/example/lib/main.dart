@@ -22,7 +22,7 @@ void main() {
   /// Prints all the countries in the world with their phone code.
   for (final country in WorldCountry.list) {
     print(
-      "${country.nameEnglish.name} code: ${country.idd.phoneCode()}",
+      "${country.name.common} code: ${country.idd.phoneCode()}",
     );
   }
 }

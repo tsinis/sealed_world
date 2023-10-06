@@ -2,7 +2,8 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../../model/country/submodels/demonyms.dart";
 
-/// A class extension that adds utility methods to the `Demonyms` class.
+/// Provides extension methods for [Demonyms] class.
+/// {@macro submodels_class_extension}
 extension DemonymsExtension on Demonyms {
   /// Returns `true` if the demonym for males and females is the same.
   ///
@@ -23,6 +24,7 @@ extension DemonymsExtension on Demonyms {
   /// ```
   bool get areSame => male == female;
 
+  /// {@macro copy_with_method}
   Demonyms copyWith({
     NaturalLanguage? language,
     String? female,
@@ -34,9 +36,11 @@ extension DemonymsExtension on Demonyms {
         male: male ?? this.male,
       );
 
+  /// {@macro to_map_method}
   Map<String, Object?> toMap() =>
       {"language": language.code, "female": female, "male": male};
 
+  /// {@macro from_map_method}
   static Demonyms fromMap(Map<String, dynamic> map) => Demonyms(
         language: NaturalLanguage.fromCode(map["language"].toString()),
         female: map["female"] as String,
