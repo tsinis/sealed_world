@@ -1,7 +1,7 @@
-import "../common/dart_utils.dart";
-import "../common/io_utils.dart";
 import "../constants/path_constants.dart";
 import "../models/package.dart";
+import "../utils/dart_utils.dart";
+import "../utils/io_utils.dart";
 
 sealed class ExportsGenerator {
   static const _generatorPackage = "index_generator";
