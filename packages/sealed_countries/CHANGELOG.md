@@ -1,3 +1,17 @@
+## 0.6.0
+
+- refactor(model)!: translations are now list of translated name
+- style!: renamed extensions to follow the same naming pattern
+- feat(model): added copy with, to-json etc.
+- refactor(model): functional method parameters are now sorted
+
+NEW FEATURES:
+
+- Added copyWith, toJson etc. to the WorldCountry and all sub-classes.
+- Refactoring in existing functional methods (sorting params to match list sorting).
+- Translations are now List<TranslatedName> instead of List<CountryName>, however CountryName is just an extension on top of TranslatedName (you can reference to name instead of common and fullName instead of official). There will be way more translations provided in upcoming version 0.7.0.
+- Renaming of extensions to follow the eco-system naming pattern.
+
 ## 0.5.0
 
 - refactor(model): factory constructors and static methods for data classes creation now implicitly trimming and comparing uppercase string inputs

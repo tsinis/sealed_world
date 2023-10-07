@@ -8,7 +8,6 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 
 ## Features
 
-
 **WorldCountry** class provides the following information about countries:
 
 | **Field** | **Required** | **Description** | **Example for CountryIrl** |
@@ -45,7 +44,7 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 | `postalCode` | Yes | The postal code information of the country. | `PostalCode` with format and regExp |
 | `startOfWeek` | Yes | The first day of the week in the country. | `Weekday.monday` |
 | `regionalBlocs` | No | The regional blocs of the country. | `[BlocEU()]` |
-| `translations` | Yes | The translations of the country name. | List of 25 `CountryName`s in different languages |
+| `translations` | Yes | The translations of the country name. | List of 25 `TranslatedName`s in different languages |
 
 Compile time constant list of all countries accessible via `WorldCountry.list` and more over, the **WorldCountry** class provides the following methods:
 
@@ -53,7 +52,7 @@ Compile time constant list of all countries accessible via `WorldCountry.list` a
 - `fromCode` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-3 code.
 - `fromCodeShort` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-2 code.
 
-and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`.
+and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc.
 
 ## Getting started
 
