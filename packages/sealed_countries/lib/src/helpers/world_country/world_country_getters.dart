@@ -1,7 +1,7 @@
-import "../../../model/country/country.dart";
+import "../../model/country/country.dart";
 
 /// A class extension that adds utility methods to the [WorldCountry] class.
-extension GettersExtension on WorldCountry {
+extension WorldCountryGetters on WorldCountry {
   /// Returns `true` if this `WorldCountry` object is officially assigned.
   bool get isOfficiallyAssigned =>
       codeShort.isNotEmpty &&

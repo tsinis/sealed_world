@@ -1,11 +1,15 @@
+import "dart:convert";
+
 import "package:sealed_currencies/sealed_currencies.dart";
-import "package:sealed_languages/sealed_languages.dart";
 
 import "../../data/official_world_countries.data.dart";
 import "../../data/other_world_countries.data.dart";
+import "../../helpers/extensions/sealed_world_list_extension.dart";
+import "../../helpers/world_country/world_country_json.dart";
 import "../geo/region.dart";
 import "../geo/submodels/continent.dart";
 import "../regional_bloc/world_bloc.dart";
+import "../translated_name.dart";
 import "submodels/capital_info.dart";
 import "submodels/car.dart";
 import "submodels/country_name.dart";
@@ -32,5 +36,5 @@ sealed class Country {
   final CountryName name;
 
   @override
-  String toString() => "Country(name: ${name.common})";
+  String toString() => "$Country(name: ${name.name})";
 }

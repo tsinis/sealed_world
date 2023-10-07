@@ -1,9 +1,11 @@
-import "package:sealed_countries/src/helpers/extensions/world_country/name_extension.dart";
+// ignore_for_file: deprecated_member_use_from_same_package
+
+import "package:sealed_countries/src/helpers/world_country/world_country_names.dart";
 import "package:sealed_countries/src/model/country/country.dart";
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
-void main() => group("NameExtension", () {
+void main() => group("WorldCountryNames", () {
       const allTranslatedLanguages = [
         LangAra,
         LangBre,
@@ -53,7 +55,7 @@ void main() => group("NameExtension", () {
           "with $Null input should return english name",
           () => expect(
             WorldCountry.list.first.nameTranslated(),
-            WorldCountry.list.first.nameEnglish,
+            WorldCountry.list.first.name,
           ),
         );
       });
@@ -66,7 +68,7 @@ void main() => group("NameExtension", () {
           "separator",
           () => expect(
             country.namesCommonNative(separator: "-"),
-            """${country.namesNative.first.common}-${country.namesNative.last.common}""",
+            """${country.namesNative.first.name}-${country.namesNative.last.name}""",
           ),
         );
 
@@ -75,7 +77,7 @@ void main() => group("NameExtension", () {
             "with multiple names",
             () => expect(
               country.namesCommonNative(skipFirst: true),
-              country.namesNative.last.common,
+              country.namesNative.last.name,
             ),
           );
 
@@ -87,7 +89,7 @@ void main() => group("NameExtension", () {
               );
               expect(
                 singleNameCountry.namesCommonNative(skipFirst: true),
-                singleNameCountry.namesNative.first.common,
+                singleNameCountry.namesNative.first.name,
               );
             },
           );
@@ -102,7 +104,7 @@ void main() => group("NameExtension", () {
           "separator",
           () => expect(
             country.namesOfficialNative(separator: "-"),
-            """${country.namesNative.first.official}-${country.namesNative.last.official}""",
+            """${country.namesNative.first.fullName}-${country.namesNative.last.fullName}""",
           ),
         );
 
@@ -111,7 +113,7 @@ void main() => group("NameExtension", () {
             "with multiple names",
             () => expect(
               country.namesOfficialNative(skipFirst: true),
-              country.namesNative.last.official,
+              country.namesNative.last.fullName,
             ),
           );
 
@@ -123,7 +125,7 @@ void main() => group("NameExtension", () {
               );
               expect(
                 singleNameCountry.namesOfficialNative(skipFirst: true),
-                singleNameCountry.namesNative.first.official,
+                singleNameCountry.namesNative.first.fullName,
               );
             },
           );

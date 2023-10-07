@@ -1,3 +1,9 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/lat_lng_extension.dart";
+
 /// A geographic point on the Earth's surface, defined by its latitude and
 /// longitude.
 ///
@@ -12,7 +18,7 @@
 /// print(point.latitude); // Prints: 37.7749
 /// print(point.longitude); // Prints: -122.4194
 /// ```
-final class LatLng {
+final class LatLng implements JsonEncodable<LatLng> {
   /// Creates a new `LatLng` object with the given latitude and longitude.
   const LatLng(this.latitude, this.longitude);
 
@@ -23,7 +29,10 @@ final class LatLng {
   final double longitude;
 
   @override
-  String toString() => "LatLng(latitude: $latitude, longitude: $longitude)";
+  String toString() => "$LatLng($latitude, $longitude)";
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant LatLng other) {

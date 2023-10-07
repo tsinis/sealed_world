@@ -6,6 +6,10 @@
       "path": "../.github"
     },
     {
+      "name": "CLI Tools",
+      "path": "../tools"
+    },
+    {
       "name": "Flutter World",
       "path": "../packages/world_countries"
     },
@@ -27,7 +31,21 @@
       "**/.git": true,
       "coverage/**": true,
       "**/coverage/*": true,
-      "**/*.g.dart": true
+      "**/*.g.dart": true,
+      "**/*.freezed.dart": true,
+      "**/*.select.dart": true
+    },
+    "explorer.confirmDragAndDrop": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+      "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
+      ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+      "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
+      "*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).select.dart, $(capture).config.dart",
+      "*.graphql": "$(capture).gql.dart, $(capture).*.gql.dart",
+      "schema.graphql": "schema.schema.gql.dart",
+      "firebase.json": ".firebaserc"
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
@@ -50,12 +68,14 @@
         "source.sortMembers": "never"
       }
     },
-    "cSpell.words": ["Cinis"],
+    "cSpell.words": ["Cinis", "cioc", "demonym", "demonyms", "gini"],
     "cSpell.useGitignore": true,
     "cSpell.ignorePaths": [
       ".git", // Ignore the .git directory
       "**/lib/**/*.data.dart",
       "**/lib/**/*.g.dart",
+      "**/lib/**/*.freezed.dart",
+      "**/lib/**/*.select.dart",
       "**/.vscode/sealed_world.code-workspace"
     ],
     "bracket-pair-colorizer-2.highlightActiveScope": true,
@@ -81,7 +101,7 @@
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "code-runner.clearPreviousOutput": false,
     "dimmer.delay": 1000,
-    "dimmer.opacity": 75,
+    "dimmer.opacity": 80,
     "dimmer.enabled": true,
     "yaml.keyOrdering": false
   },

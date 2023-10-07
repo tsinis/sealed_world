@@ -1,4 +1,8 @@
-import "package:sealed_languages/sealed_languages.dart";
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/demonyms_extension.dart";
 
 /// A class that represents the demonyms for a particular language.
 ///
@@ -19,7 +23,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// print(demonyms.female); // Output: "Englishwoman"
 /// print(demonyms.male); // Output: "Englishman"
 /// ```
-final class Demonyms {
+final class Demonyms implements JsonEncodable<Demonyms> {
   /// Creates a new `Demonyms` object with the given language and demonym
   /// values.
   ///
@@ -41,8 +45,12 @@ final class Demonyms {
   final String male;
 
   @override
-  String toString() =>
-      "Demonyms(language: $language, female: $female, male: $male)";
+  String toString({bool short = true}) => short
+      ? '''$Demonyms(language: ${language.runtimeType}(), female: "$female", male: "$male")'''
+      : '''$Demonyms(language: $language, female: "$female", male: "$male")''';
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant Demonyms other) {

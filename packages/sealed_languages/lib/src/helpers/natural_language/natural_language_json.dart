@@ -38,8 +38,7 @@ extension NaturalLanguageJson on NaturalLanguage {
   static NaturalLanguage fromMap(JsonMap map) => NaturalLanguage(
         name: map["name"] as String,
         codeShort: map["codeShort"] as String,
-        namesNative:
-            map["namesNative"].toString().split(JsonEncodable.separator),
+        namesNative: List<String>.unmodifiable(map["namesNative"] as List),
         code: map["code"] as String,
         bibliographicCode: map["bibliographicCode"] as String?,
         family: NaturalLanguageFamily.fromName(map["family"].toString()),
@@ -68,7 +67,7 @@ extension NaturalLanguageJson on NaturalLanguage {
         "name": name,
         "code": code,
         "codeShort": codeShort,
-        "namesNative": namesNative.join(JsonEncodable.separator),
+        "namesNative": namesNative,
         "bibliographicCode": bibliographicCode,
         "family": family.name,
         "isRightToLeft": isRightToLeft,

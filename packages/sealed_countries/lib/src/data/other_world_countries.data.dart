@@ -3,7 +3,6 @@
 // licensed under the Mozilla Public License Version 2.0.
 
 import "package:sealed_currencies/sealed_currencies.dart";
-import "package:sealed_languages/sealed_languages.dart";
 
 import "../model/country/country.dart";
 import "../model/country/submodels/capital.dart";
@@ -24,9 +23,10 @@ class CountryUnk extends WorldCountry {
   /// A class that represents the country of Kosovo.
   const CountryUnk()
       : super(
-          name: const CountryName.international(
-            common: "Kosovo",
+          name: const CountryName(
+            language: LangEng(),
             official: "Republic of Kosovo",
+            common: "Kosovo",
           ),
           namesNative: const [
             CountryName(

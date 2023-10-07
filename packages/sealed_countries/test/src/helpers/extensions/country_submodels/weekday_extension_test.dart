@@ -1,5 +1,5 @@
-import "package:sealed_countries/sealed_countries.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/weekday_extension.dart";
+import "package:sealed_countries/src/model/country/submodels/weekday.dart";
 import "package:test/test.dart";
 
 void main() => group("WeekdayExtension", () {

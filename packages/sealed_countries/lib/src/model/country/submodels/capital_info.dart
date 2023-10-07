@@ -1,3 +1,8 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/capital_info_extension.dart";
 import "capital.dart";
 import "lat_lng.dart";
 
@@ -17,7 +22,7 @@ import "lat_lng.dart";
 /// print(capitalInfo.capital); // Prints: Capital("Ramallah")
 /// print(capitalInfo.latLng); // Prints: LatLng(latitude: 31.9, longitude: 35.2)
 /// ```
-final class CapitalInfo {
+final class CapitalInfo implements JsonEncodable<CapitalInfo> {
   /// Creates a new `CapitalInfo` object with the given capital
   /// and location values.
   ///
@@ -31,7 +36,11 @@ final class CapitalInfo {
   final LatLng latLng;
 
   @override
-  String toString() => "CapitalInfo(capital: $capital, latLng: $latLng)";
+  String toString({bool short = true}) =>
+      """$CapitalInfo(capital: ${capital.toString(short: short)}, latLng: $latLng)""";
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant CapitalInfo other) {

@@ -1,0 +1,19 @@
+index_generator:
+  exclude:
+    # Code-gen part-of exports:
+    - "**.g.dart"
+    # Sealed class part-of exports:
+    - "**/model/geo/subregion.dart"
+    - "**/regional_bloc/regional_bloc.dart"
+    - "**/submodels/world_country.dart"
+    # Internal imports:
+    - "**/extensions/sealed_world_list_extension.dart"
+  indexes:
+    - path: lib/
+      include:
+        - src/**
+      disclaimer: false
+      library: sealed_countries
+      docs: Provides data for world countries in the form of sealed classes.
+      exports:
+        - package: package:sealed_currencies/sealed_currencies.dart

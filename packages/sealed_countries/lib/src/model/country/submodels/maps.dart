@@ -1,3 +1,9 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/maps_extension.dart";
+
 /// A class that represents URLs for Google Maps and OpenStreetMap.
 ///
 /// The `Maps` class is a simple wrapper around two string URLs for Google Maps
@@ -11,7 +17,7 @@
 /// print(maps.googleMapsUrl); // Output: "https://goo.gl/maps/abcdefg"
 /// print(maps.openStreetMapsUrl); // Output: "https://www.openstreetmap.org/123456789"
 /// ```
-final class Maps {
+final class Maps implements JsonEncodable<Maps> {
   /// Creates a new `Maps` object with the given Google Maps and OpenStreetMap
   /// IDs.
   ///
@@ -64,7 +70,10 @@ final class Maps {
 
   @override
   String toString() =>
-      "Maps(googleMaps: $googleMaps, openStreetMaps: $openStreetMaps)";
+      '$Maps(googleMaps: "$googleMaps", openStreetMaps: "$openStreetMaps")';
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant Maps other) {

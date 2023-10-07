@@ -1,3 +1,9 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/gini_extension.dart";
+
 /// A class that represents a Gini coefficient.
 ///
 /// The `Gini` class is a simple value object that represents a Gini
@@ -5,6 +11,7 @@
 /// Gini coefficient, and a `double` value that represents the value of the Gini
 /// coefficient. The `year` field must be greater than 1990, and the
 /// `coefficient` field must be between 0.0 and 100.0 (inclusive).
+/// Reference - https://wikipedia.org/wiki/Gini_coefficient.
 ///
 /// Example usage:
 ///
@@ -13,8 +20,7 @@
 /// print(gini.year); // Prints: 2020
 /// print(gini.coefficient); // Prints: 32.0
 /// ```
-// Reference: https://wikipedia.org/wiki/Gini_coefficient.
-final class Gini {
+final class Gini implements JsonEncodable<Gini> {
   /// Creates a new `Gini` object with the given year and coefficient.
   ///
   /// The `year` parameter must be greater than 1990, and the `coefficient`
@@ -49,7 +55,10 @@ final class Gini {
   final double coefficient;
 
   @override
-  String toString() => "Gini(year: $year, coefficient: $coefficient)";
+  String toString() => "$Gini(year: $year, coefficient: $coefficient)";
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant Gini other) {

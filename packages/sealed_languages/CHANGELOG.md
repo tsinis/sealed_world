@@ -1,14 +1,14 @@
 ## 0.6.0
 
+- feat(model): added new interfaces and typedefs
+- feat(model): added copy with, to-json etc.
+- fix(data): proper names native list for sindhi
+
 NEW FEATURES:
 
 - Added new interfaces (IsoStandardized, JsonEncodable) and typedef (JsonMap) to the model.
 - Added copyWith, toJson etc. to the NaturalLanguage class.
 - Fixed the names native list for Sindhi in the data.
-
-- feat(model): added new interfaces and typedefs
-- feat(model): added copy with, to-json etc.
-- fix(data): proper names native list for sindhi
 
 ## 0.5.0
 

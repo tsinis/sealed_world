@@ -1,7 +1,8 @@
-import "package:sealed_countries/src/helpers/extensions/world_country/date_time_extension.dart";
-import "package:sealed_countries/src/helpers/extensions/world_country/getters_extension.dart";
+import "package:sealed_countries/src/helpers/world_country/world_country_date_time.dart";
+import "package:sealed_countries/src/helpers/world_country/world_country_getters.dart";
+import "package:sealed_countries/src/helpers/world_country/world_country_json.dart";
 import "package:sealed_countries/src/model/country/country.dart";
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 void main() => group("$WorldCountry", () {
@@ -54,7 +55,7 @@ void main() => group("$WorldCountry", () {
             expect(element.cioc, element.cioc != null ? isNotEmpty : isNull);
             for (final zone in element.timezones) {
               expect(zone.length, 9);
-              expect(zone.startsWith(DateTimeExtension.utcString), isTrue);
+              expect(zone.startsWith(WorldCountryDateTime.utcString), isTrue);
               // ignore: avoid-substring, no emojis here.
               expect(zone.substring(6, 7), ":");
             }
@@ -89,6 +90,7 @@ void main() => group("$WorldCountry", () {
             expect(element.codeShort, isNotEmpty);
             expect(element.namesNative, isNotEmpty);
             expect(element.tld, isNotEmpty);
+            expect(element.codeOther, element.codeShort);
             for (final domain in element.tld) {
               expect(domain, isNotEmpty);
             }
@@ -152,6 +154,53 @@ void main() => group("$WorldCountry", () {
             throwsStateError,
           ),
         );
+      });
+
+      group("toJson", () {
+        for (final element in WorldCountry.list) {
+          test("compared to $WorldCountry: ${element.name.name}", () {
+            final json = element.toJson();
+
+            expect(json, isNotEmpty);
+            final decoded = json.tryParse(WorldCountryJson.fromMap);
+            expect(
+              decoded?.toString(short: false),
+              json.parse(WorldCountryJson.fromMap).toString(short: false),
+            );
+
+            expect(element.code, decoded?.code);
+            expect(element.postalCode, decoded?.postalCode);
+            expect(element.capitalInfo, decoded?.capitalInfo);
+            expect(element.fifa, decoded?.fifa);
+            expect(element.gini, decoded?.gini);
+            expect(element.demonyms, decoded?.demonyms);
+            expect(element.bordersCodes, decoded?.bordersCodes);
+            expect(element.subregion, decoded?.subregion);
+            expect(element.idd, decoded?.idd);
+            expect(element.currencies, decoded?.currencies);
+            expect(element.cioc, decoded?.cioc);
+            expect(element.startOfWeek, decoded?.startOfWeek);
+            expect(element.hasCoatOfArms, decoded?.hasCoatOfArms);
+            expect(element.landlocked, decoded?.landlocked);
+            expect(element.unMember, decoded?.unMember);
+            expect(element.independent, decoded?.independent);
+            expect(element.timezones, decoded?.timezones);
+            expect(element.car, decoded?.car);
+            expect(element.population, decoded?.population);
+            expect(element.areaMetric, decoded?.areaMetric);
+            expect(element.maps, decoded?.maps);
+            expect(element.emoji, decoded?.emoji);
+            expect(element.latLng, decoded?.latLng);
+            expect(element.translations, decoded?.translations);
+            expect(element.languages, decoded?.languages);
+            expect(element.continent, decoded?.continent);
+            expect(element.altSpellings, decoded?.altSpellings);
+            expect(element.codeNumeric, decoded?.codeNumeric);
+            expect(element.codeShort, decoded?.codeShort);
+            expect(element.namesNative, decoded?.namesNative);
+            expect(element.tld, decoded?.tld);
+          });
+        }
       });
 
       group("maybeFromValue", () {

@@ -1,6 +1,9 @@
+import "package:sealed_currencies/sealed_currencies.dart";
+
 import "../../../model/country/submodels/postal_code.dart";
 
-/// A class extension that adds a additional methods to the `PostalCode` class.
+/// Provides extension methods for [PostalCode] class.
+/// {@macro submodels_class_extension}
 extension PostalCodeExtension on PostalCode {
   /// Returns a `RegExp` object that can be used to validate postal codes.
   ///
@@ -32,5 +35,21 @@ extension PostalCodeExtension on PostalCode {
         caseSensitive: caseSensitive,
         unicode: unicode,
         dotAll: dotAll,
+      );
+
+  /// {@macro copy_with_method}
+  PostalCode copyWith({String? format, String? regExpPattern}) => PostalCode(
+        format: format ?? this.format,
+        regExpPattern: regExpPattern ?? this.regExpPattern,
+      );
+
+  /// {@macro to_map_method}
+  Map<String, String> toMap() =>
+      {"format": format, "regExpPattern": regExpPattern};
+
+  /// {@macro from_map_method}
+  static PostalCode fromMap(JsonMap map) => PostalCode(
+        format: map["format"] as String,
+        regExpPattern: map["regExpPattern"] as String,
       );
 }

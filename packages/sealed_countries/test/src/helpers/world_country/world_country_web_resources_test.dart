@@ -1,14 +1,14 @@
-import "package:sealed_countries/src/helpers/extensions/world_country/web_resources_extension.dart";
+import "package:sealed_countries/src/helpers/world_country/world_country_web_resources.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
 
-void main() => group("WebResourcesExtension", () {
+void main() => group("WorldCountryWebResources", () {
       test(
         "flagPngUrl",
         () => expect(
           WorldCountry.list.first
               .flagPngUrl()
-              .contains(WebResourcesExtension.png),
+              .contains(WorldCountryWebResources.png),
           isTrue,
         ),
       );
@@ -18,7 +18,7 @@ void main() => group("WebResourcesExtension", () {
         () => expect(
           WorldCountry.list.first
               .flagSvgUrl()
-              .contains(WebResourcesExtension.svg),
+              .contains(WorldCountryWebResources.svg),
           isTrue,
         ),
       );
@@ -30,7 +30,7 @@ void main() => group("WebResourcesExtension", () {
             WorldCountry.list
                 .firstWhere((country) => country.hasCoatOfArms)
                 .maybeCoatOfArmsPngUrl()
-                ?.contains(WebResourcesExtension.png),
+                ?.contains(WorldCountryWebResources.png),
             isTrue,
           ),
         );
@@ -53,7 +53,7 @@ void main() => group("WebResourcesExtension", () {
             WorldCountry.list
                 .firstWhere((country) => country.hasCoatOfArms)
                 .maybeCoatOfArmsSvgUrl()
-                ?.contains(WebResourcesExtension.svg),
+                ?.contains(WorldCountryWebResources.svg),
             isTrue,
           ),
         );

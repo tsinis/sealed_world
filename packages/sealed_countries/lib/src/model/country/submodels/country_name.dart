@@ -1,4 +1,9 @@
-import "package:sealed_languages/sealed_languages.dart";
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/country_name_extension.dart";
+import "../../translated_name.dart";
 
 /// A class that represents the name of a country in a particular language.
 ///
@@ -19,51 +24,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// print(countryName.official); // Prints: "Slovenská republika"
 /// print(countryName.common); // Prints: "Slovensko"
 /// ```
-final class CountryName {
+final class CountryName extends TranslatedName {
   /// Creates a new `CountryName` object with the given language and name
   /// values.
   ///
   /// The `official` and `common` parameters must not be empty.
   const CountryName({
-    required this.language,
-    required this.official,
-    required this.common,
+    required NaturalLanguage language,
+    required String official,
+    required String common,
   })  : assert(official.length > 0, "`official` should not be empty!"),
-        assert(common.length > 0, "`common` should not be empty!");
+        assert(common.length > 0, "`common` should not be empty!"),
+        super(language, name: common, fullName: official);
 
   /// Creates a new `CountryName` object with the given international name
   /// values.
   ///
   /// The `official` and `common` parameters must not be empty.
+  @Deprecated("Please use `CountryName(language: const LangEng())` instead")
   const CountryName.international({
-    required this.common,
-    required this.official,
-  })  : language = const LangEng(),
-        assert(official.length > 0, "`official` should not be empty!"),
-        assert(common.length > 0, "`common` should not be empty!");
-
-  /// The common name of this country.
-  final String common;
-
-  /// The natural language of this country name.
-  final NaturalLanguage language;
-
-  /// The official name of this country.
-  final String official;
+    required String common,
+    required String official,
+  }) : super(_eng, name: common, fullName: official); // coverage:ignore-line
+  static const _eng = LangEng(); // TODO! Soon to be removed.
 
   @override
-  String toString() =>
-      "CountryName(language: $language, official: $official, common: $common)";
+  String toString({bool short = true}) => short
+      ? '''$CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")'''
+      : '''$CountryName(language: $language, official: "$official", common: "$common")''';
 
   @override
-  bool operator ==(covariant CountryName other) {
-    if (identical(this, other)) return true;
-
-    return other.common == common &&
-        other.language == language &&
-        other.official == official;
-  }
-
-  @override
-  int get hashCode => common.hashCode ^ language.hashCode ^ official.hashCode;
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 }

@@ -26,5 +26,5 @@ sealed class Region {
   final String name;
 
   @override
-  String toString() => "Region(name: $name)";
+  String toString() => '$Region(name: "$name")';
 }

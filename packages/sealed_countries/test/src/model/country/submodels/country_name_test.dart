@@ -1,10 +1,12 @@
+import "package:sealed_countries/src/helpers/extensions/country_submodels/country_name_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/country_name.dart";
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
 
 void main() => group("$CountryName", () {
+      // ignore: deprecated_member_use_from_same_package, for tests.
       const value = CountryName.international(
         common: TestData.string,
         official: TestData.string,
@@ -75,9 +77,10 @@ void main() => group("$CountryName", () {
           "empty official",
           () {
             expect(
-              () => CountryName.international(
-                common: value.common,
+              () => CountryName(
+                language: const LangEng(),
                 official: TestData.emptyString,
+                common: value.common,
               ),
               throwsA(isA<AssertionError>()),
             );
@@ -96,9 +99,10 @@ void main() => group("$CountryName", () {
           "empty common",
           () {
             expect(
-              () => CountryName.international(
-                common: TestData.emptyString,
+              () => CountryName(
+                language: const LangEng(),
                 official: value.official,
+                common: TestData.emptyString,
               ),
               throwsA(isA<AssertionError>()),
             );
@@ -113,5 +117,10 @@ void main() => group("$CountryName", () {
             );
           },
         );
+      });
+
+      test("toJson", () {
+        final json = value.toJson();
+        expect(value, json.parse(CountryNameExtension.fromMap));
       });
     });

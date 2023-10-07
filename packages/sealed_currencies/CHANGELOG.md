@@ -1,13 +1,12 @@
 ## 0.6.0
 
+- feat(model): added copy with, to-json etc.
+- fix(data): proper alternate symbols list for scandinavian countries
+
 NEW FEATURES:
 
 - Added copyWith, toJson etc. to the FiatCurrency class.
 - Fixed the alternate symbols list for scandinavian countries.
-
-- feat(model): added new interfaces and typedefs
-- feat(model): added copy with, to-json etc.
-- fix(data): proper alternate symbols list for scandinavian countries
 
 ## 0.5.0
 

@@ -1,3 +1,9 @@
+import "dart:convert";
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../../../helpers/extensions/country_submodels/car_extension.dart";
+
 /// A class that represents a car.
 ///
 /// The `Car` class is a simple value object that represents a car. It consists
@@ -13,7 +19,7 @@
 /// print(car.sign); // Prints: "NEP"
 /// print(car.isRightSide); // Prints: false
 /// ```
-final class Car {
+final class Car implements JsonEncodable<Car> {
   /// Creates a new `Car` object with the given sign and side values.
   ///
   /// The `sign` parameter may be `null` or a non-empty string.
@@ -27,7 +33,11 @@ final class Car {
   final String? sign;
 
   @override
-  String toString() => "Car(sign: $sign, isRightSide: $isRightSide)";
+  String toString() =>
+      '''$Car(sign: ${sign == null ? sign : '"$sign"'}, isRightSide: $isRightSide)''';
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
   bool operator ==(covariant Car other) {

@@ -1,4 +1,6 @@
+import "package:sealed_countries/src/helpers/extensions/country_submodels/idd_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/idd.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
@@ -49,5 +51,10 @@ void main() => group("$Idd", () {
             throwsA(isA<AssertionError>()),
           ),
         );
+      });
+
+      test("toJson", () {
+        final json = value.toJson();
+        expect(value, json.parse(IddExtension.fromMap));
       });
     });

@@ -1,0 +1,11 @@
+include: ../packages/analysis_options.yaml
+
+linter:
+  rules:
+    public_member_api_docs: false
+
+dart_code_metrics:
+  rules:
+    - prefer-correct-identifier-length:
+        # i for index, x for math operations, sb for StringBuffer, io for IO.
+        exceptions: ["i", "io", "x", "sb"]
