@@ -5,6 +5,6 @@ publish_to: none
 
 environment:
   sdk: ^3.1.0
-
-dev_dependencies:
-  index_generator: ^3.4.1
+  
+dependencies:
+  path: ^1.8.3
