@@ -8,8 +8,8 @@ environment:
 
 dependencies:
   change_case: ^1.1.0
-  http: ^1.1.0 # From Google
   path: ^1.8.3 # From Google
+  rw_git: ^1.0.3
   sealed_languages:
     path: ../packages/sealed_languages
   select_annotation: ^0.2.0

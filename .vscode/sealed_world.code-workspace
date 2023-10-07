@@ -68,7 +68,14 @@
         "source.sortMembers": "never"
       }
     },
-    "cSpell.words": ["Cinis", "cioc", "demonym", "demonyms", "gini"],
+    "cSpell.words": [
+      "Cinis",
+      "cioc",
+      "demonym",
+      "demonyms",
+      "gini",
+      "umpirsky"
+    ],
     "cSpell.useGitignore": true,
     "cSpell.ignorePaths": [
       ".git", // Ignore the .git directory

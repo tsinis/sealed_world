@@ -2,6 +2,8 @@ import "dart:io";
 
 import "package:path/path.dart";
 
+import "../constants/path_constants.dart";
+
 export "dart:io";
 
 export "package:path/path.dart";
@@ -25,7 +27,25 @@ final class IoUtils {
   File writeContentToFile(String filePath, StringBuffer buffer) =>
       File(filePath)..writeAsStringSync(buffer.toString());
 
-  void deleteFile(File file) => file.existsSync() ? file.deleteSync() : null;
+  void deleteFile(File file) =>
+      file.existsSync() ? file.deleteSync(recursive: true) : null;
+
+  void deleteDirectory(Directory directory) =>
+      directory.existsSync() ? directory.deleteSync(recursive: true) : null;
 
   void resetCurrentDir() => directory = _dirCache;
+
+  void moveJsonFiles(Directory source, [Directory? destination]) {
+    destination ??= Directory.current;
+    final destinationPath = join(destination.path, PathConstants.json);
+    if (!destination.existsSync()) destination.createSync(recursive: true);
+
+    source.listSync(recursive: true).forEach((file) {
+      if (file is File && file.path.endsWith(".${PathConstants.json}")) {
+        final newPath = destinationPath + file.path.replaceAll(source.path, "");
+        File(newPath).createSync(recursive: true);
+        file.renameSync(newPath);
+      }
+    });
+  }
 }

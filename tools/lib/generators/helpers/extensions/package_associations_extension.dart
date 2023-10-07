@@ -24,4 +24,11 @@ extension PackageAssociationsExtension on Package {
 
   String get isoCodeOtherAssociated =>
       whenConstOrNull(sealedLanguages: "639-1") ?? "";
+
+  String get umpirskyRepoUrl {
+    const baseUrl = "https://github.com/umpirsky/";
+    final repoName = whenConstOrNull(sealedLanguages: "language-list") ?? "";
+
+    return baseUrl + repoName;
+  }
 }
