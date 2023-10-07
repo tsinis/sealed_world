@@ -12,7 +12,7 @@ abstract class Named {
   ///
   /// The [name] parameter represents the name of the object.
   /// It should be a non-null [String].
-  const Named(this.name);
+  const Named(this.name); // coverage:ignore-line
 
   /// The common name of the object.
   final String name;
