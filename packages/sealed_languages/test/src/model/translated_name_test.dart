@@ -1,25 +1,25 @@
-import "package:sealed_countries/src/helpers/extensions/translated_name_extension.dart";
-import "package:sealed_countries/src/model/translated_name.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
+import "package:sealed_languages/src/data/natural_languages.data.dart";
+import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
+import "package:sealed_languages/src/helpers/extensions/translated_name_extension.dart";
+import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
-import "../test_data.dart";
-
 void main() => group("$TranslatedName", () {
+      const string = "1";
       const value = TranslatedName(
         LangEng(),
-        name: TestData.string,
-        fullName: TestData.string,
+        name: string,
+        fullName: string,
       );
 
       group("equality", () {
         const other = TranslatedName(
           LangFra(),
-          name: TestData.string,
-          fullName: TestData.string,
-          countryCode: TestData.string,
+          name: string,
+          fullName: string,
+          countryCode: string,
         );
-        final third = value.copyWith(countryCode: TestData.string);
+        final third = value.copyWith(countryCode: string);
         final array = {value, other, third};
 
         test("basic", () {
@@ -82,7 +82,7 @@ void main() => group("$TranslatedName", () {
               () => TranslatedName(
                 const LangEng(),
                 name: value.name,
-                fullName: TestData.emptyString,
+                fullName: "",
               ),
               throwsA(isA<AssertionError>()),
             );
@@ -90,7 +90,7 @@ void main() => group("$TranslatedName", () {
               () => TranslatedName(
                 value.language,
                 name: value.name,
-                fullName: TestData.emptyString,
+                fullName: "",
               ),
               throwsA(isA<AssertionError>()),
             );
@@ -103,7 +103,7 @@ void main() => group("$TranslatedName", () {
             expect(
               () => TranslatedName(
                 const LangEng(),
-                name: TestData.emptyString,
+                name: "",
                 fullName: value.fullName,
               ),
               throwsA(isA<AssertionError>()),
@@ -112,7 +112,7 @@ void main() => group("$TranslatedName", () {
             expect(
               () => TranslatedName(
                 value.language,
-                name: TestData.emptyString,
+                name: "",
                 fullName: value.fullName,
               ),
               throwsA(isA<AssertionError>()),

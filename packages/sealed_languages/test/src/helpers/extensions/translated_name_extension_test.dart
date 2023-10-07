@@ -1,16 +1,11 @@
-import "package:sealed_countries/src/helpers/extensions/translated_name_extension.dart";
-import "package:sealed_countries/src/model/translated_name.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
+import "package:sealed_languages/src/data/natural_languages.data.dart";
+import "package:sealed_languages/src/helpers/extensions/translated_name_extension.dart";
+import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
-import "../../test_data.dart";
-
 void main() => group("TranslatedNameExtension", () {
-      const value = TranslatedName(
-        LangEng(),
-        name: TestData.string,
-        fullName: TestData.string,
-      );
+      const string = "1";
+      const value = TranslatedName(LangEng(), name: string, fullName: string);
 
       group("copyWith", () {
         test("with non-null values", () {

@@ -1,11 +1,10 @@
 import "dart:convert";
 
-import "package:sealed_currencies/sealed_currencies.dart";
-
 import "../helpers/extensions/translated_name_extension.dart";
+import "../interfaces/json_encodable.dart";
 import "../interfaces/named.dart";
+import "language/language.dart";
 
-// TODO: Remove.
 /// A class representing a translated name of a country or region.
 ///
 /// This class implements the [Named] interface and the

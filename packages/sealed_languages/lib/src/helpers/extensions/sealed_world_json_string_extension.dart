@@ -3,7 +3,7 @@ import "dart:convert";
 import "../../typedefs/typedefs.dart";
 
 /// Extension on [String] that provides methods for parsing JSON strings.
-extension JsonStringExtension on String {
+extension SealedWorldJsonStringExtension on String {
   /// Parses the JSON string into an object of type [T].
   ///
   /// The [fromJson] function is used to convert the JSON map into an object of

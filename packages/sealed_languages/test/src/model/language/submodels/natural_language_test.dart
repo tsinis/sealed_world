@@ -1,4 +1,4 @@
-import "package:sealed_languages/src/helpers/extensions/json_string_extension.dart";
+import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";

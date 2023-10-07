@@ -1,4 +1,3 @@
-// TODO: Remove.
 /// Extension on [List] class to provide helper methods for working with lists.
 extension SealedWorldListExtension<T extends Object> on List<T?> {
   /// Returns a [String] representation of the list containing only the names of
