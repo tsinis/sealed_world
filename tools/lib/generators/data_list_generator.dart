@@ -45,6 +45,7 @@ const $className()""")
       ..directory = currentFileDir;
 
     await _dart.fixFormat();
+
     return _dart.fixFormat();
   }
 }

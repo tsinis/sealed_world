@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   change_case: ^1.1.0
+  http: ^1.1.0 # From Google
   path: ^1.8.3 # From Google
   sealed_languages:
     path: ../packages/sealed_languages
@@ -15,5 +16,7 @@ dependencies:
 
 dev_dependencies:
   build_runner: ^2.4.6 # From Google
-  dart_code_metrics: ^5.7.6 # Flutter Favorite
+  dart_code_metrics: # Flutter Favorite
+    git:
+      url: https://github.com/tsinis/dart-code-metrics
   select: ^0.4.1
