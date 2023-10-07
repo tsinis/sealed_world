@@ -9,8 +9,8 @@ import "helpers/extensions/package_associations_extension.dart";
 class DataListGenerator {
   const DataListGenerator();
 
-  static const _dart = DartUtils();
   static const _code = CodeUtils();
+  static const _dart = DartUtils();
 
   Future<void> generate([Package package = Package.sealedLanguages]) async {
     final currentFileDir =
@@ -21,28 +21,30 @@ class DataListGenerator {
     final buffer = StringBuffer(currentImports);
 
     for (final item in package.dataList) {
+      final type = package.type.toString();
       final code = item.code.toPascalCase();
       final itemString = item.toString(short: false);
-      final type = package.type;
-      final superString = itemString.replaceFirst(type.toString(), ": super");
-      final string = superString.replaceAll(": [", ": const [");
       final className = "${package.classPrefix}$code";
+      final superBody = itemString.replaceFirst(type, ": super");
+      final classBody = superBody.replaceAll(": [", ": const [");
+
       buffer
         ..write("""
-
 /// A class that represents the ${item.name} ${package.dataRepresent}.
 class $className extends $type {
-/// Creates a instance of [$className] that represents the ${item.name}.
+/// Creates a instance of [$className] (${item.name} ${package.dataRepresent}).
 ///
 /// ISO ${package.isoCodeAssociated} code: "${item.code}", ISO ${package.isoCodeOtherAssociated} code: "${item.codeOther}".
-const $className()
-        """)
-        ..write(string)
+const $className()""")
+        ..write(classBody)
         ..write(";}\n");
     }
-    File(currentFilePath).writeAsStringSync(buffer.toString());
-    Directory.current = currentFileDir;
 
-    await _dart.fixApply();
+    IoUtils()
+      ..writeContentToFile(currentFilePath, buffer)
+      ..directory = currentFileDir;
+
+    await _dart.fixFormat();
+    return _dart.fixFormat();
   }
 }

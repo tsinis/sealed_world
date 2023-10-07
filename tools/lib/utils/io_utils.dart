@@ -22,6 +22,9 @@ final class IoUtils {
     return destinationFile;
   }
 
+  File writeContentToFile(String filePath, StringBuffer buffer) =>
+      File(filePath)..writeAsStringSync(buffer.toString());
+
   void deleteFile(File file) => file.existsSync() ? file.deleteSync() : null;
 
   void resetCurrentDir() => directory = _dirCache;

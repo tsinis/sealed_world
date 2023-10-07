@@ -1,9 +1,9 @@
 import "../model/language/language.dart";
 import "natural_language_families.data.dart";
 
-/// {@hideConstantImplementations}
+/// A class that represents the Afar language.
 class LangAar extends NaturalLanguage {
-  /// A class that represents the Afar language.
+  /// Creates a instance of [LangAar] (Afar language).
   ///
   /// ISO 639-2 code: "AAR", ISO 639-1 code: "AA".
   const LangAar()
@@ -18,9 +18,9 @@ class LangAar extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Abkhaz language.
 class LangAbk extends NaturalLanguage {
-  /// A class that represents the Abkhaz language.
+  /// Creates a instance of [LangAbk] (Abkhaz language).
   ///
   /// ISO 639-2 code: "ABK", ISO 639-1 code: "AB".
   const LangAbk()
@@ -35,9 +35,9 @@ class LangAbk extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Afrikaans language.
 class LangAfr extends NaturalLanguage {
-  /// A class that represents the Afrikaans language.
+  /// Creates a instance of [LangAfr] (Afrikaans language).
   ///
   /// ISO 639-2 code: "AFR", ISO 639-1 code: "AF".
   const LangAfr()
@@ -52,9 +52,9 @@ class LangAfr extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Akan language.
 class LangAka extends NaturalLanguage {
-  /// A class that represents the Akan language.
+  /// Creates a instance of [LangAka] (Akan language).
   ///
   /// ISO 639-2 code: "AKA", ISO 639-1 code: "AK".
   const LangAka()
@@ -69,9 +69,9 @@ class LangAka extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Amharic language.
 class LangAmh extends NaturalLanguage {
-  /// A class that represents the Amharic language.
+  /// Creates a instance of [LangAmh] (Amharic language).
   ///
   /// ISO 639-2 code: "AMH", ISO 639-1 code: "AM".
   const LangAmh()
@@ -86,9 +86,9 @@ class LangAmh extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Arabic language.
 class LangAra extends NaturalLanguage {
-  /// A class that represents the Arabic language.
+  /// Creates a instance of [LangAra] (Arabic language).
   ///
   /// ISO 639-2 code: "ARA", ISO 639-1 code: "AR".
   const LangAra()
@@ -103,9 +103,9 @@ class LangAra extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Aragonese language.
 class LangArg extends NaturalLanguage {
-  /// A class that represents the Aragonese language.
+  /// Creates a instance of [LangArg] (Aragonese language).
   ///
   /// ISO 639-2 code: "ARG", ISO 639-1 code: "AN".
   const LangArg()
@@ -120,9 +120,9 @@ class LangArg extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Assamese language.
 class LangAsm extends NaturalLanguage {
-  /// A class that represents the Assamese language.
+  /// Creates a instance of [LangAsm] (Assamese language).
   ///
   /// ISO 639-2 code: "ASM", ISO 639-1 code: "AS".
   const LangAsm()
@@ -137,9 +137,9 @@ class LangAsm extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Avaric language.
 class LangAva extends NaturalLanguage {
-  /// A class that represents the Avaric language.
+  /// Creates a instance of [LangAva] (Avaric language).
   ///
   /// ISO 639-2 code: "AVA", ISO 639-1 code: "AV".
   const LangAva()
@@ -154,9 +154,9 @@ class LangAva extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Avestan language.
 class LangAve extends NaturalLanguage {
-  /// A class that represents the Avestan language.
+  /// Creates a instance of [LangAve] (Avestan language).
   ///
   /// ISO 639-2 code: "AVE", ISO 639-1 code: "AE".
   const LangAve()
@@ -171,9 +171,9 @@ class LangAve extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Aymara language.
 class LangAym extends NaturalLanguage {
-  /// A class that represents the Aymara language.
+  /// Creates a instance of [LangAym] (Aymara language).
   ///
   /// ISO 639-2 code: "AYM", ISO 639-1 code: "AY".
   const LangAym()
@@ -188,9 +188,9 @@ class LangAym extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Azerbaijani language.
 class LangAze extends NaturalLanguage {
-  /// A class that represents the Azerbaijani language.
+  /// Creates a instance of [LangAze] (Azerbaijani language).
   ///
   /// ISO 639-2 code: "AZE", ISO 639-1 code: "AZ".
   const LangAze()
@@ -205,9 +205,9 @@ class LangAze extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bashkir language.
 class LangBak extends NaturalLanguage {
-  /// A class that represents the Bashkir language.
+  /// Creates a instance of [LangBak] (Bashkir language).
   ///
   /// ISO 639-2 code: "BAK", ISO 639-1 code: "BA".
   const LangBak()
@@ -222,9 +222,9 @@ class LangBak extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bambara language.
 class LangBam extends NaturalLanguage {
-  /// A class that represents the Bambara language.
+  /// Creates a instance of [LangBam] (Bambara language).
   ///
   /// ISO 639-2 code: "BAM", ISO 639-1 code: "BM".
   const LangBam()
@@ -239,9 +239,9 @@ class LangBam extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Belarusian language.
 class LangBel extends NaturalLanguage {
-  /// A class that represents the Belarusian language.
+  /// Creates a instance of [LangBel] (Belarusian language).
   ///
   /// ISO 639-2 code: "BEL", ISO 639-1 code: "BE".
   const LangBel()
@@ -256,9 +256,9 @@ class LangBel extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bengali (Bangla) language.
 class LangBen extends NaturalLanguage {
-  /// A class that represents the Bengali (Bangla) language.
+  /// Creates a instance of [LangBen] (Bengali (Bangla) language).
   ///
   /// ISO 639-2 code: "BEN", ISO 639-1 code: "BN".
   const LangBen()
@@ -273,9 +273,9 @@ class LangBen extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bihari language.
 class LangBih extends NaturalLanguage {
-  /// A class that represents the Bihari language.
+  /// Creates a instance of [LangBih] (Bihari language).
   ///
   /// ISO 639-2 code: "BIH", ISO 639-1 code: "BH".
   const LangBih()
@@ -290,9 +290,9 @@ class LangBih extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bislama language.
 class LangBis extends NaturalLanguage {
-  /// A class that represents the Bislama language.
+  /// Creates a instance of [LangBis] (Bislama language).
   ///
   /// ISO 639-2 code: "BIS", ISO 639-1 code: "BI".
   const LangBis()
@@ -307,9 +307,9 @@ class LangBis extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tibetan Standard language.
 class LangBod extends NaturalLanguage {
-  /// A class that represents the Tibetan Standard language.
+  /// Creates a instance of [LangBod] (Tibetan Standard language).
   ///
   /// ISO 639-2 code: "BOD", ISO 639-1 code: "BO".
   const LangBod()
@@ -324,9 +324,9 @@ class LangBod extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bosnian language.
 class LangBos extends NaturalLanguage {
-  /// A class that represents the Bosnian language.
+  /// Creates a instance of [LangBos] (Bosnian language).
   ///
   /// ISO 639-2 code: "BOS", ISO 639-1 code: "BS".
   const LangBos()
@@ -341,9 +341,9 @@ class LangBos extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Breton language.
 class LangBre extends NaturalLanguage {
-  /// A class that represents the Breton language.
+  /// Creates a instance of [LangBre] (Breton language).
   ///
   /// ISO 639-2 code: "BRE", ISO 639-1 code: "BR".
   const LangBre()
@@ -358,9 +358,9 @@ class LangBre extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bulgarian language.
 class LangBul extends NaturalLanguage {
-  /// A class that represents the Bulgarian language.
+  /// Creates a instance of [LangBul] (Bulgarian language).
   ///
   /// ISO 639-2 code: "BUL", ISO 639-1 code: "BG".
   const LangBul()
@@ -375,9 +375,9 @@ class LangBul extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Catalan language.
 class LangCat extends NaturalLanguage {
-  /// A class that represents the Catalan language.
+  /// Creates a instance of [LangCat] (Catalan language).
   ///
   /// ISO 639-2 code: "CAT", ISO 639-1 code: "CA".
   const LangCat()
@@ -392,9 +392,9 @@ class LangCat extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Czech language.
 class LangCes extends NaturalLanguage {
-  /// A class that represents the Czech language.
+  /// Creates a instance of [LangCes] (Czech language).
   ///
   /// ISO 639-2 code: "CES", ISO 639-1 code: "CS".
   const LangCes()
@@ -409,9 +409,9 @@ class LangCes extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Chamorro language.
 class LangCha extends NaturalLanguage {
-  /// A class that represents the Chamorro language.
+  /// Creates a instance of [LangCha] (Chamorro language).
   ///
   /// ISO 639-2 code: "CHA", ISO 639-1 code: "CH".
   const LangCha()
@@ -426,9 +426,9 @@ class LangCha extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Chechen language.
 class LangChe extends NaturalLanguage {
-  /// A class that represents the Chechen language.
+  /// Creates a instance of [LangChe] (Chechen language).
   ///
   /// ISO 639-2 code: "CHE", ISO 639-1 code: "CE".
   const LangChe()
@@ -443,9 +443,9 @@ class LangChe extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the (Old) Church Slavonic language.
 class LangChu extends NaturalLanguage {
-  /// A class that represents the (Old) Church Slavonic language.
+  /// Creates a instance of [LangChu] ((Old) Church Slavonic language).
   ///
   /// ISO 639-2 code: "CHU", ISO 639-1 code: "CU".
   const LangChu()
@@ -460,9 +460,9 @@ class LangChu extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Chuvash language.
 class LangChv extends NaturalLanguage {
-  /// A class that represents the Chuvash language.
+  /// Creates a instance of [LangChv] (Chuvash language).
   ///
   /// ISO 639-2 code: "CHV", ISO 639-1 code: "CV".
   const LangChv()
@@ -477,9 +477,9 @@ class LangChv extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Cornish language.
 class LangCor extends NaturalLanguage {
-  /// A class that represents the Cornish language.
+  /// Creates a instance of [LangCor] (Cornish language).
   ///
   /// ISO 639-2 code: "COR", ISO 639-1 code: "KW".
   const LangCor()
@@ -494,9 +494,9 @@ class LangCor extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Corsican language.
 class LangCos extends NaturalLanguage {
-  /// A class that represents the Corsican language.
+  /// Creates a instance of [LangCos] (Corsican language).
   ///
   /// ISO 639-2 code: "COS", ISO 639-1 code: "CO".
   const LangCos()
@@ -511,9 +511,9 @@ class LangCos extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Cree language.
 class LangCre extends NaturalLanguage {
-  /// A class that represents the Cree language.
+  /// Creates a instance of [LangCre] (Cree language).
   ///
   /// ISO 639-2 code: "CRE", ISO 639-1 code: "CR".
   const LangCre()
@@ -528,9 +528,9 @@ class LangCre extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Welsh language.
 class LangCym extends NaturalLanguage {
-  /// A class that represents the Welsh language.
+  /// Creates a instance of [LangCym] (Welsh language).
   ///
   /// ISO 639-2 code: "CYM", ISO 639-1 code: "CY".
   const LangCym()
@@ -545,9 +545,9 @@ class LangCym extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Danish language.
 class LangDan extends NaturalLanguage {
-  /// A class that represents the Danish language.
+  /// Creates a instance of [LangDan] (Danish language).
   ///
   /// ISO 639-2 code: "DAN", ISO 639-1 code: "DA".
   const LangDan()
@@ -562,9 +562,9 @@ class LangDan extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the German language.
 class LangDeu extends NaturalLanguage {
-  /// A class that represents the German language.
+  /// Creates a instance of [LangDeu] (German language).
   ///
   /// ISO 639-2 code: "DEU", ISO 639-1 code: "DE".
   const LangDeu()
@@ -579,9 +579,9 @@ class LangDeu extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Divehi (Dhivehi/Maldivian) language.
 class LangDiv extends NaturalLanguage {
-  /// A class that represents the Divehi (Dhivehi/Maldivian) language.
+  /// Creates a instance of [LangDiv] (Divehi (Dhivehi/Maldivian) language).
   ///
   /// ISO 639-2 code: "DIV", ISO 639-1 code: "DV".
   const LangDiv()
@@ -596,9 +596,9 @@ class LangDiv extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Dzongkha language.
 class LangDzo extends NaturalLanguage {
-  /// A class that represents the Dzongkha language.
+  /// Creates a instance of [LangDzo] (Dzongkha language).
   ///
   /// ISO 639-2 code: "DZO", ISO 639-1 code: "DZ".
   const LangDzo()
@@ -613,9 +613,9 @@ class LangDzo extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Greek (modern) language.
 class LangEll extends NaturalLanguage {
-  /// A class that represents the Greek (modern) language.
+  /// Creates a instance of [LangEll] (Greek (modern) language).
   ///
   /// ISO 639-2 code: "ELL", ISO 639-1 code: "EL".
   const LangEll()
@@ -630,9 +630,9 @@ class LangEll extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the English language.
 class LangEng extends NaturalLanguage {
-  /// A class that represents the English language.
+  /// Creates a instance of [LangEng] (English language).
   ///
   /// ISO 639-2 code: "ENG", ISO 639-1 code: "EN".
   const LangEng()
@@ -647,9 +647,9 @@ class LangEng extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Esperanto language.
 class LangEpo extends NaturalLanguage {
-  /// A class that represents the Esperanto language.
+  /// Creates a instance of [LangEpo] (Esperanto language).
   ///
   /// ISO 639-2 code: "EPO", ISO 639-1 code: "EO".
   const LangEpo()
@@ -664,9 +664,9 @@ class LangEpo extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Estonian language.
 class LangEst extends NaturalLanguage {
-  /// A class that represents the Estonian language.
+  /// Creates a instance of [LangEst] (Estonian language).
   ///
   /// ISO 639-2 code: "EST", ISO 639-1 code: "ET".
   const LangEst()
@@ -681,9 +681,9 @@ class LangEst extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Basque language.
 class LangEus extends NaturalLanguage {
-  /// A class that represents the Basque language.
+  /// Creates a instance of [LangEus] (Basque language).
   ///
   /// ISO 639-2 code: "EUS", ISO 639-1 code: "EU".
   const LangEus()
@@ -698,9 +698,9 @@ class LangEus extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ewe language.
 class LangEwe extends NaturalLanguage {
-  /// A class that represents the Ewe language.
+  /// Creates a instance of [LangEwe] (Ewe language).
   ///
   /// ISO 639-2 code: "EWE", ISO 639-1 code: "EE".
   const LangEwe()
@@ -715,9 +715,9 @@ class LangEwe extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Faroese language.
 class LangFao extends NaturalLanguage {
-  /// A class that represents the Faroese language.
+  /// Creates a instance of [LangFao] (Faroese language).
   ///
   /// ISO 639-2 code: "FAO", ISO 639-1 code: "FO".
   const LangFao()
@@ -732,9 +732,9 @@ class LangFao extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Persian (Farsi) language.
 class LangFas extends NaturalLanguage {
-  /// A class that represents the Persian (Farsi) language.
+  /// Creates a instance of [LangFas] (Persian (Farsi) language).
   ///
   /// ISO 639-2 code: "FAS", ISO 639-1 code: "FA".
   const LangFas()
@@ -749,9 +749,9 @@ class LangFas extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Fijian language.
 class LangFij extends NaturalLanguage {
-  /// A class that represents the Fijian language.
+  /// Creates a instance of [LangFij] (Fijian language).
   ///
   /// ISO 639-2 code: "FIJ", ISO 639-1 code: "FJ".
   const LangFij()
@@ -766,9 +766,9 @@ class LangFij extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Finnish language.
 class LangFin extends NaturalLanguage {
-  /// A class that represents the Finnish language.
+  /// Creates a instance of [LangFin] (Finnish language).
   ///
   /// ISO 639-2 code: "FIN", ISO 639-1 code: "FI".
   const LangFin()
@@ -783,9 +783,9 @@ class LangFin extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the French language.
 class LangFra extends NaturalLanguage {
-  /// A class that represents the French language.
+  /// Creates a instance of [LangFra] (French language).
   ///
   /// ISO 639-2 code: "FRA", ISO 639-1 code: "FR".
   const LangFra()
@@ -800,9 +800,9 @@ class LangFra extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Western Frisian language.
 class LangFry extends NaturalLanguage {
-  /// A class that represents the Western Frisian language.
+  /// Creates a instance of [LangFry] (Western Frisian language).
   ///
   /// ISO 639-2 code: "FRY", ISO 639-1 code: "FY".
   const LangFry()
@@ -817,9 +817,9 @@ class LangFry extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Fula (Fulah/Pulaar/Pular) language.
 class LangFul extends NaturalLanguage {
-  /// A class that represents the Fula (Fulah/Pulaar/Pular) language.
+  /// Creates a instance of [LangFul] (Fula (Fulah/Pulaar/Pular) language).
   ///
   /// ISO 639-2 code: "FUL", ISO 639-1 code: "FF".
   const LangFul()
@@ -834,9 +834,9 @@ class LangFul extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the (Scottish) Gaelic language.
 class LangGla extends NaturalLanguage {
-  /// A class that represents the (Scottish) Gaelic language.
+  /// Creates a instance of [LangGla] ((Scottish) Gaelic language).
   ///
   /// ISO 639-2 code: "GLA", ISO 639-1 code: "GD".
   const LangGla()
@@ -851,9 +851,9 @@ class LangGla extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Irish language.
 class LangGle extends NaturalLanguage {
-  /// A class that represents the Irish language.
+  /// Creates a instance of [LangGle] (Irish language).
   ///
   /// ISO 639-2 code: "GLE", ISO 639-1 code: "GA".
   const LangGle()
@@ -868,9 +868,9 @@ class LangGle extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Galician language.
 class LangGlg extends NaturalLanguage {
-  /// A class that represents the Galician language.
+  /// Creates a instance of [LangGlg] (Galician language).
   ///
   /// ISO 639-2 code: "GLG", ISO 639-1 code: "GL".
   const LangGlg()
@@ -885,9 +885,9 @@ class LangGlg extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Manx language.
 class LangGlv extends NaturalLanguage {
-  /// A class that represents the Manx language.
+  /// Creates a instance of [LangGlv] (Manx language).
   ///
   /// ISO 639-2 code: "GLV", ISO 639-1 code: "GV".
   const LangGlv()
@@ -902,9 +902,9 @@ class LangGlv extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Guaraní language.
 class LangGrn extends NaturalLanguage {
-  /// A class that represents the Guaraní language.
+  /// Creates a instance of [LangGrn] (Guaraní language).
   ///
   /// ISO 639-2 code: "GRN", ISO 639-1 code: "GN".
   const LangGrn()
@@ -919,9 +919,9 @@ class LangGrn extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Gujarati language.
 class LangGuj extends NaturalLanguage {
-  /// A class that represents the Gujarati language.
+  /// Creates a instance of [LangGuj] (Gujarati language).
   ///
   /// ISO 639-2 code: "GUJ", ISO 639-1 code: "GU".
   const LangGuj()
@@ -936,9 +936,9 @@ class LangGuj extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Haitian (Haitian Creole) language.
 class LangHat extends NaturalLanguage {
-  /// A class that represents the Haitian (Haitian Creole) language.
+  /// Creates a instance of [LangHat] (Haitian (Haitian Creole) language).
   ///
   /// ISO 639-2 code: "HAT", ISO 639-1 code: "HT".
   const LangHat()
@@ -953,9 +953,9 @@ class LangHat extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Hausa language.
 class LangHau extends NaturalLanguage {
-  /// A class that represents the Hausa language.
+  /// Creates a instance of [LangHau] (Hausa language).
   ///
   /// ISO 639-2 code: "HAU", ISO 639-1 code: "HA".
   const LangHau()
@@ -970,9 +970,9 @@ class LangHau extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Hebrew (modern) language.
 class LangHeb extends NaturalLanguage {
-  /// A class that represents the Hebrew (modern) language.
+  /// Creates a instance of [LangHeb] (Hebrew (modern) language).
   ///
   /// ISO 639-2 code: "HEB", ISO 639-1 code: "HE".
   const LangHeb()
@@ -987,9 +987,9 @@ class LangHeb extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Herero language.
 class LangHer extends NaturalLanguage {
-  /// A class that represents the Herero language.
+  /// Creates a instance of [LangHer] (Herero language).
   ///
   /// ISO 639-2 code: "HER", ISO 639-1 code: "HZ".
   const LangHer()
@@ -1004,9 +1004,9 @@ class LangHer extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Hindi language.
 class LangHin extends NaturalLanguage {
-  /// A class that represents the Hindi language.
+  /// Creates a instance of [LangHin] (Hindi language).
   ///
   /// ISO 639-2 code: "HIN", ISO 639-1 code: "HI".
   const LangHin()
@@ -1021,9 +1021,9 @@ class LangHin extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Hiri Motu language.
 class LangHmo extends NaturalLanguage {
-  /// A class that represents the Hiri Motu language.
+  /// Creates a instance of [LangHmo] (Hiri Motu language).
   ///
   /// ISO 639-2 code: "HMO", ISO 639-1 code: "HO".
   const LangHmo()
@@ -1038,9 +1038,9 @@ class LangHmo extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Croatian language.
 class LangHrv extends NaturalLanguage {
-  /// A class that represents the Croatian language.
+  /// Creates a instance of [LangHrv] (Croatian language).
   ///
   /// ISO 639-2 code: "HRV", ISO 639-1 code: "HR".
   const LangHrv()
@@ -1055,9 +1055,9 @@ class LangHrv extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Hungarian language.
 class LangHun extends NaturalLanguage {
-  /// A class that represents the Hungarian language.
+  /// Creates a instance of [LangHun] (Hungarian language).
   ///
   /// ISO 639-2 code: "HUN", ISO 639-1 code: "HU".
   const LangHun()
@@ -1072,9 +1072,9 @@ class LangHun extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Armenian language.
 class LangHye extends NaturalLanguage {
-  /// A class that represents the Armenian language.
+  /// Creates a instance of [LangHye] (Armenian language).
   ///
   /// ISO 639-2 code: "HYE", ISO 639-1 code: "HY".
   const LangHye()
@@ -1089,9 +1089,9 @@ class LangHye extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Igbo language.
 class LangIbo extends NaturalLanguage {
-  /// A class that represents the Igbo language.
+  /// Creates a instance of [LangIbo] (Igbo language).
   ///
   /// ISO 639-2 code: "IBO", ISO 639-1 code: "IG".
   const LangIbo()
@@ -1106,9 +1106,9 @@ class LangIbo extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ido language.
 class LangIdo extends NaturalLanguage {
-  /// A class that represents the Ido language.
+  /// Creates a instance of [LangIdo] (Ido language).
   ///
   /// ISO 639-2 code: "IDO", ISO 639-1 code: "IO".
   const LangIdo()
@@ -1123,9 +1123,9 @@ class LangIdo extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Nuosu language.
 class LangIii extends NaturalLanguage {
-  /// A class that represents the Nuosu language.
+  /// Creates a instance of [LangIii] (Nuosu language).
   ///
   /// ISO 639-2 code: "III", ISO 639-1 code: "II".
   const LangIii()
@@ -1140,9 +1140,9 @@ class LangIii extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Inuktitut language.
 class LangIku extends NaturalLanguage {
-  /// A class that represents the Inuktitut language.
+  /// Creates a instance of [LangIku] (Inuktitut language).
   ///
   /// ISO 639-2 code: "IKU", ISO 639-1 code: "IU".
   const LangIku()
@@ -1157,9 +1157,9 @@ class LangIku extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Interlingue language.
 class LangIle extends NaturalLanguage {
-  /// A class that represents the Interlingue language.
+  /// Creates a instance of [LangIle] (Interlingue language).
   ///
   /// ISO 639-2 code: "ILE", ISO 639-1 code: "IE".
   const LangIle()
@@ -1174,9 +1174,9 @@ class LangIle extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Interlingua language.
 class LangIna extends NaturalLanguage {
-  /// A class that represents the Interlingua language.
+  /// Creates a instance of [LangIna] (Interlingua language).
   ///
   /// ISO 639-2 code: "INA", ISO 639-1 code: "IA".
   const LangIna()
@@ -1191,9 +1191,9 @@ class LangIna extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Indonesian language.
 class LangInd extends NaturalLanguage {
-  /// A class that represents the Indonesian language.
+  /// Creates a instance of [LangInd] (Indonesian language).
   ///
   /// ISO 639-2 code: "IND", ISO 639-1 code: "ID".
   const LangInd()
@@ -1208,9 +1208,9 @@ class LangInd extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Inupiaq language.
 class LangIpk extends NaturalLanguage {
-  /// A class that represents the Inupiaq language.
+  /// Creates a instance of [LangIpk] (Inupiaq language).
   ///
   /// ISO 639-2 code: "IPK", ISO 639-1 code: "IK".
   const LangIpk()
@@ -1225,9 +1225,9 @@ class LangIpk extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Icelandic language.
 class LangIsl extends NaturalLanguage {
-  /// A class that represents the Icelandic language.
+  /// Creates a instance of [LangIsl] (Icelandic language).
   ///
   /// ISO 639-2 code: "ISL", ISO 639-1 code: "IS".
   const LangIsl()
@@ -1242,9 +1242,9 @@ class LangIsl extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Italian language.
 class LangIta extends NaturalLanguage {
-  /// A class that represents the Italian language.
+  /// Creates a instance of [LangIta] (Italian language).
   ///
   /// ISO 639-2 code: "ITA", ISO 639-1 code: "IT".
   const LangIta()
@@ -1259,9 +1259,9 @@ class LangIta extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Javanese language.
 class LangJav extends NaturalLanguage {
-  /// A class that represents the Javanese language.
+  /// Creates a instance of [LangJav] (Javanese language).
   ///
   /// ISO 639-2 code: "JAV", ISO 639-1 code: "JV".
   const LangJav()
@@ -1276,9 +1276,9 @@ class LangJav extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Japanese language.
 class LangJpn extends NaturalLanguage {
-  /// A class that represents the Japanese language.
+  /// Creates a instance of [LangJpn] (Japanese language).
   ///
   /// ISO 639-2 code: "JPN", ISO 639-1 code: "JA".
   const LangJpn()
@@ -1293,9 +1293,9 @@ class LangJpn extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kalaallisut (Greenlandic) language.
 class LangKal extends NaturalLanguage {
-  /// A class that represents the Kalaallisut (Greenlandic) language.
+  /// Creates a instance of [LangKal] (Kalaallisut (Greenlandic) language).
   ///
   /// ISO 639-2 code: "KAL", ISO 639-1 code: "KL".
   const LangKal()
@@ -1310,9 +1310,9 @@ class LangKal extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kannada language.
 class LangKan extends NaturalLanguage {
-  /// A class that represents the Kannada language.
+  /// Creates a instance of [LangKan] (Kannada language).
   ///
   /// ISO 639-2 code: "KAN", ISO 639-1 code: "KN".
   const LangKan()
@@ -1327,9 +1327,9 @@ class LangKan extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kashmiri language.
 class LangKas extends NaturalLanguage {
-  /// A class that represents the Kashmiri language.
+  /// Creates a instance of [LangKas] (Kashmiri language).
   ///
   /// ISO 639-2 code: "KAS", ISO 639-1 code: "KS".
   const LangKas()
@@ -1344,9 +1344,9 @@ class LangKas extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Georgian language.
 class LangKat extends NaturalLanguage {
-  /// A class that represents the Georgian language.
+  /// Creates a instance of [LangKat] (Georgian language).
   ///
   /// ISO 639-2 code: "KAT", ISO 639-1 code: "KA".
   const LangKat()
@@ -1361,9 +1361,9 @@ class LangKat extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kanuri language.
 class LangKau extends NaturalLanguage {
-  /// A class that represents the Kanuri language.
+  /// Creates a instance of [LangKau] (Kanuri language).
   ///
   /// ISO 639-2 code: "KAU", ISO 639-1 code: "KR".
   const LangKau()
@@ -1378,9 +1378,9 @@ class LangKau extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kazakh language.
 class LangKaz extends NaturalLanguage {
-  /// A class that represents the Kazakh language.
+  /// Creates a instance of [LangKaz] (Kazakh language).
   ///
   /// ISO 639-2 code: "KAZ", ISO 639-1 code: "KK".
   const LangKaz()
@@ -1395,9 +1395,9 @@ class LangKaz extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Khmer language.
 class LangKhm extends NaturalLanguage {
-  /// A class that represents the Khmer language.
+  /// Creates a instance of [LangKhm] (Khmer language).
   ///
   /// ISO 639-2 code: "KHM", ISO 639-1 code: "KM".
   const LangKhm()
@@ -1412,9 +1412,9 @@ class LangKhm extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kikuyu (Gikuyu) language.
 class LangKik extends NaturalLanguage {
-  /// A class that represents the Kikuyu (Gikuyu) language.
+  /// Creates a instance of [LangKik] (Kikuyu (Gikuyu) language).
   ///
   /// ISO 639-2 code: "KIK", ISO 639-1 code: "KI".
   const LangKik()
@@ -1429,9 +1429,9 @@ class LangKik extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kinyarwanda language.
 class LangKin extends NaturalLanguage {
-  /// A class that represents the Kinyarwanda language.
+  /// Creates a instance of [LangKin] (Kinyarwanda language).
   ///
   /// ISO 639-2 code: "KIN", ISO 639-1 code: "RW".
   const LangKin()
@@ -1446,9 +1446,9 @@ class LangKin extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kyrgyz language.
 class LangKir extends NaturalLanguage {
-  /// A class that represents the Kyrgyz language.
+  /// Creates a instance of [LangKir] (Kyrgyz language).
   ///
   /// ISO 639-2 code: "KIR", ISO 639-1 code: "KY".
   const LangKir()
@@ -1463,9 +1463,9 @@ class LangKir extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Komi language.
 class LangKom extends NaturalLanguage {
-  /// A class that represents the Komi language.
+  /// Creates a instance of [LangKom] (Komi language).
   ///
   /// ISO 639-2 code: "KOM", ISO 639-1 code: "KV".
   const LangKom()
@@ -1480,9 +1480,9 @@ class LangKom extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kongo language.
 class LangKon extends NaturalLanguage {
-  /// A class that represents the Kongo language.
+  /// Creates a instance of [LangKon] (Kongo language).
   ///
   /// ISO 639-2 code: "KON", ISO 639-1 code: "KG".
   const LangKon()
@@ -1497,9 +1497,9 @@ class LangKon extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Korean language.
 class LangKor extends NaturalLanguage {
-  /// A class that represents the Korean language.
+  /// Creates a instance of [LangKor] (Korean language).
   ///
   /// ISO 639-2 code: "KOR", ISO 639-1 code: "KO".
   const LangKor()
@@ -1514,9 +1514,9 @@ class LangKor extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kwanyama (Kuanyama) language.
 class LangKua extends NaturalLanguage {
-  /// A class that represents the Kwanyama (Kuanyama) language.
+  /// Creates a instance of [LangKua] (Kwanyama (Kuanyama) language).
   ///
   /// ISO 639-2 code: "KUA", ISO 639-1 code: "KJ".
   const LangKua()
@@ -1531,9 +1531,9 @@ class LangKua extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kurdish language.
 class LangKur extends NaturalLanguage {
-  /// A class that represents the Kurdish language.
+  /// Creates a instance of [LangKur] (Kurdish language).
   ///
   /// ISO 639-2 code: "KUR", ISO 639-1 code: "KU".
   const LangKur()
@@ -1548,9 +1548,9 @@ class LangKur extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Lao language.
 class LangLao extends NaturalLanguage {
-  /// A class that represents the Lao language.
+  /// Creates a instance of [LangLao] (Lao language).
   ///
   /// ISO 639-2 code: "LAO", ISO 639-1 code: "LO".
   const LangLao()
@@ -1565,9 +1565,9 @@ class LangLao extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Latin language.
 class LangLat extends NaturalLanguage {
-  /// A class that represents the Latin language.
+  /// Creates a instance of [LangLat] (Latin language).
   ///
   /// ISO 639-2 code: "LAT", ISO 639-1 code: "LA".
   const LangLat()
@@ -1582,9 +1582,9 @@ class LangLat extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Latvian language.
 class LangLav extends NaturalLanguage {
-  /// A class that represents the Latvian language.
+  /// Creates a instance of [LangLav] (Latvian language).
   ///
   /// ISO 639-2 code: "LAV", ISO 639-1 code: "LV".
   const LangLav()
@@ -1599,9 +1599,9 @@ class LangLav extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Limburgish (Limburgan/Limburger) language.
 class LangLim extends NaturalLanguage {
-  /// A class that represents the Limburgish (Limburgan/Limburger) language.
+  /// Creates a instance of [LangLim] (Limburgish (Limburgan/Limburger) language).
   ///
   /// ISO 639-2 code: "LIM", ISO 639-1 code: "LI".
   const LangLim()
@@ -1616,9 +1616,9 @@ class LangLim extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Lingala language.
 class LangLin extends NaturalLanguage {
-  /// A class that represents the Lingala language.
+  /// Creates a instance of [LangLin] (Lingala language).
   ///
   /// ISO 639-2 code: "LIN", ISO 639-1 code: "LN".
   const LangLin()
@@ -1633,9 +1633,9 @@ class LangLin extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Lithuanian language.
 class LangLit extends NaturalLanguage {
-  /// A class that represents the Lithuanian language.
+  /// Creates a instance of [LangLit] (Lithuanian language).
   ///
   /// ISO 639-2 code: "LIT", ISO 639-1 code: "LT".
   const LangLit()
@@ -1650,9 +1650,9 @@ class LangLit extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Luxembourgish (Letzeburgesch) language.
 class LangLtz extends NaturalLanguage {
-  /// A class that represents the Luxembourgish (Letzeburgesch) language.
+  /// Creates a instance of [LangLtz] (Luxembourgish (Letzeburgesch) language).
   ///
   /// ISO 639-2 code: "LTZ", ISO 639-1 code: "LB".
   const LangLtz()
@@ -1667,9 +1667,9 @@ class LangLtz extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Luba-Katanga language.
 class LangLub extends NaturalLanguage {
-  /// A class that represents the Luba-Katanga language.
+  /// Creates a instance of [LangLub] (Luba-Katanga language).
   ///
   /// ISO 639-2 code: "LUB", ISO 639-1 code: "LU".
   const LangLub()
@@ -1684,9 +1684,9 @@ class LangLub extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ganda language.
 class LangLug extends NaturalLanguage {
-  /// A class that represents the Ganda language.
+  /// Creates a instance of [LangLug] (Ganda language).
   ///
   /// ISO 639-2 code: "LUG", ISO 639-1 code: "LG".
   const LangLug()
@@ -1701,9 +1701,9 @@ class LangLug extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Marshallese language.
 class LangMah extends NaturalLanguage {
-  /// A class that represents the Marshallese language.
+  /// Creates a instance of [LangMah] (Marshallese language).
   ///
   /// ISO 639-2 code: "MAH", ISO 639-1 code: "MH".
   const LangMah()
@@ -1718,9 +1718,9 @@ class LangMah extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Malayalam language.
 class LangMal extends NaturalLanguage {
-  /// A class that represents the Malayalam language.
+  /// Creates a instance of [LangMal] (Malayalam language).
   ///
   /// ISO 639-2 code: "MAL", ISO 639-1 code: "ML".
   const LangMal()
@@ -1735,9 +1735,9 @@ class LangMal extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Marathi (Marāṭhī) language.
 class LangMar extends NaturalLanguage {
-  /// A class that represents the Marathi (Marāṭhī) language.
+  /// Creates a instance of [LangMar] (Marathi (Marāṭhī) language).
   ///
   /// ISO 639-2 code: "MAR", ISO 639-1 code: "MR".
   const LangMar()
@@ -1752,9 +1752,9 @@ class LangMar extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Macedonian language.
 class LangMkd extends NaturalLanguage {
-  /// A class that represents the Macedonian language.
+  /// Creates a instance of [LangMkd] (Macedonian language).
   ///
   /// ISO 639-2 code: "MKD", ISO 639-1 code: "MK".
   const LangMkd()
@@ -1769,9 +1769,9 @@ class LangMkd extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Malagasy language.
 class LangMlg extends NaturalLanguage {
-  /// A class that represents the Malagasy language.
+  /// Creates a instance of [LangMlg] (Malagasy language).
   ///
   /// ISO 639-2 code: "MLG", ISO 639-1 code: "MG".
   const LangMlg()
@@ -1786,9 +1786,9 @@ class LangMlg extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Maltese language.
 class LangMlt extends NaturalLanguage {
-  /// A class that represents the Maltese language.
+  /// Creates a instance of [LangMlt] (Maltese language).
   ///
   /// ISO 639-2 code: "MLT", ISO 639-1 code: "MT".
   const LangMlt()
@@ -1803,9 +1803,9 @@ class LangMlt extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Mongolian language.
 class LangMon extends NaturalLanguage {
-  /// A class that represents the Mongolian language.
+  /// Creates a instance of [LangMon] (Mongolian language).
   ///
   /// ISO 639-2 code: "MON", ISO 639-1 code: "MN".
   const LangMon()
@@ -1820,9 +1820,9 @@ class LangMon extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Māori language.
 class LangMri extends NaturalLanguage {
-  /// A class that represents the Māori language.
+  /// Creates a instance of [LangMri] (Māori language).
   ///
   /// ISO 639-2 code: "MRI", ISO 639-1 code: "MI".
   const LangMri()
@@ -1837,9 +1837,9 @@ class LangMri extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Malay language.
 class LangMsa extends NaturalLanguage {
-  /// A class that represents the Malay language.
+  /// Creates a instance of [LangMsa] (Malay language).
   ///
   /// ISO 639-2 code: "MSA", ISO 639-1 code: "MS".
   const LangMsa()
@@ -1854,9 +1854,9 @@ class LangMsa extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Burmese language.
 class LangMya extends NaturalLanguage {
-  /// A class that represents the Burmese language.
+  /// Creates a instance of [LangMya] (Burmese language).
   ///
   /// ISO 639-2 code: "MYA", ISO 639-1 code: "MY".
   const LangMya()
@@ -1871,9 +1871,9 @@ class LangMya extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Nauruan language.
 class LangNau extends NaturalLanguage {
-  /// A class that represents the Nauruan language.
+  /// Creates a instance of [LangNau] (Nauruan language).
   ///
   /// ISO 639-2 code: "NAU", ISO 639-1 code: "NA".
   const LangNau()
@@ -1888,9 +1888,9 @@ class LangNau extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Navajo (Navaho) language.
 class LangNav extends NaturalLanguage {
-  /// A class that represents the Navajo (Navaho) language.
+  /// Creates a instance of [LangNav] (Navajo (Navaho) language).
   ///
   /// ISO 639-2 code: "NAV", ISO 639-1 code: "NV".
   const LangNav()
@@ -1905,9 +1905,9 @@ class LangNav extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Southern Ndebele language.
 class LangNbl extends NaturalLanguage {
-  /// A class that represents the Southern Ndebele language.
+  /// Creates a instance of [LangNbl] (Southern Ndebele language).
   ///
   /// ISO 639-2 code: "NBL", ISO 639-1 code: "NR".
   const LangNbl()
@@ -1922,9 +1922,9 @@ class LangNbl extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Northern Ndebele language.
 class LangNde extends NaturalLanguage {
-  /// A class that represents the Northern Ndebele language.
+  /// Creates a instance of [LangNde] (Northern Ndebele language).
   ///
   /// ISO 639-2 code: "NDE", ISO 639-1 code: "ND".
   const LangNde()
@@ -1939,9 +1939,9 @@ class LangNde extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ndonga language.
 class LangNdo extends NaturalLanguage {
-  /// A class that represents the Ndonga language.
+  /// Creates a instance of [LangNdo] (Ndonga language).
   ///
   /// ISO 639-2 code: "NDO", ISO 639-1 code: "NG".
   const LangNdo()
@@ -1956,9 +1956,9 @@ class LangNdo extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Nepali language.
 class LangNep extends NaturalLanguage {
-  /// A class that represents the Nepali language.
+  /// Creates a instance of [LangNep] (Nepali language).
   ///
   /// ISO 639-2 code: "NEP", ISO 639-1 code: "NE".
   const LangNep()
@@ -1973,9 +1973,9 @@ class LangNep extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Dutch language.
 class LangNld extends NaturalLanguage {
-  /// A class that represents the Dutch language.
+  /// Creates a instance of [LangNld] (Dutch language).
   ///
   /// ISO 639-2 code: "NLD", ISO 639-1 code: "NL".
   const LangNld()
@@ -1990,9 +1990,9 @@ class LangNld extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Norwegian Nynorsk language.
 class LangNno extends NaturalLanguage {
-  /// A class that represents the Norwegian Nynorsk language.
+  /// Creates a instance of [LangNno] (Norwegian Nynorsk language).
   ///
   /// ISO 639-2 code: "NNO", ISO 639-1 code: "NN".
   const LangNno()
@@ -2007,9 +2007,9 @@ class LangNno extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Norwegian Bokmål language.
 class LangNob extends NaturalLanguage {
-  /// A class that represents the Norwegian Bokmål language.
+  /// Creates a instance of [LangNob] (Norwegian Bokmål language).
   ///
   /// ISO 639-2 code: "NOB", ISO 639-1 code: "NB".
   const LangNob()
@@ -2024,9 +2024,9 @@ class LangNob extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Norwegian language.
 class LangNor extends NaturalLanguage {
-  /// A class that represents the Norwegian language.
+  /// Creates a instance of [LangNor] (Norwegian language).
   ///
   /// ISO 639-2 code: "NOR", ISO 639-1 code: "NO".
   const LangNor()
@@ -2041,9 +2041,9 @@ class LangNor extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Chichewa (Chewa/Nyanja) language.
 class LangNya extends NaturalLanguage {
-  /// A class that represents the Chichewa (Chewa/Nyanja) language.
+  /// Creates a instance of [LangNya] (Chichewa (Chewa/Nyanja) language).
   ///
   /// ISO 639-2 code: "NYA", ISO 639-1 code: "NY".
   const LangNya()
@@ -2058,9 +2058,9 @@ class LangNya extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Occitan language.
 class LangOci extends NaturalLanguage {
-  /// A class that represents the Occitan language.
+  /// Creates a instance of [LangOci] (Occitan language).
   ///
   /// ISO 639-2 code: "OCI", ISO 639-1 code: "OC".
   const LangOci()
@@ -2075,9 +2075,9 @@ class LangOci extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ojibwe (Ojibwa) language.
 class LangOji extends NaturalLanguage {
-  /// A class that represents the Ojibwe (Ojibwa) language.
+  /// Creates a instance of [LangOji] (Ojibwe (Ojibwa) language).
   ///
   /// ISO 639-2 code: "OJI", ISO 639-1 code: "OJ".
   const LangOji()
@@ -2092,9 +2092,9 @@ class LangOji extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Oriya language.
 class LangOri extends NaturalLanguage {
-  /// A class that represents the Oriya language.
+  /// Creates a instance of [LangOri] (Oriya language).
   ///
   /// ISO 639-2 code: "ORI", ISO 639-1 code: "OR".
   const LangOri()
@@ -2109,9 +2109,9 @@ class LangOri extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Oromo language.
 class LangOrm extends NaturalLanguage {
-  /// A class that represents the Oromo language.
+  /// Creates a instance of [LangOrm] (Oromo language).
   ///
   /// ISO 639-2 code: "ORM", ISO 639-1 code: "OM".
   const LangOrm()
@@ -2126,9 +2126,9 @@ class LangOrm extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ossetian (Ossetic) language.
 class LangOss extends NaturalLanguage {
-  /// A class that represents the Ossetian (Ossetic) language.
+  /// Creates a instance of [LangOss] (Ossetian (Ossetic) language).
   ///
   /// ISO 639-2 code: "OSS", ISO 639-1 code: "OS".
   const LangOss()
@@ -2143,9 +2143,9 @@ class LangOss extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the (Eastern) Punjabi language.
 class LangPan extends NaturalLanguage {
-  /// A class that represents the (Eastern) Punjabi language.
+  /// Creates a instance of [LangPan] ((Eastern) Punjabi language).
   ///
   /// ISO 639-2 code: "PAN", ISO 639-1 code: "PA".
   const LangPan()
@@ -2160,9 +2160,9 @@ class LangPan extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Pāli language.
 class LangPli extends NaturalLanguage {
-  /// A class that represents the Pāli language.
+  /// Creates a instance of [LangPli] (Pāli language).
   ///
   /// ISO 639-2 code: "PLI", ISO 639-1 code: "PI".
   const LangPli()
@@ -2177,9 +2177,9 @@ class LangPli extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Polish language.
 class LangPol extends NaturalLanguage {
-  /// A class that represents the Polish language.
+  /// Creates a instance of [LangPol] (Polish language).
   ///
   /// ISO 639-2 code: "POL", ISO 639-1 code: "PL".
   const LangPol()
@@ -2194,9 +2194,9 @@ class LangPol extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Portuguese language.
 class LangPor extends NaturalLanguage {
-  /// A class that represents the Portuguese language.
+  /// Creates a instance of [LangPor] (Portuguese language).
   ///
   /// ISO 639-2 code: "POR", ISO 639-1 code: "PT".
   const LangPor()
@@ -2211,9 +2211,9 @@ class LangPor extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Pashto (Pushto) language.
 class LangPus extends NaturalLanguage {
-  /// A class that represents the Pashto (Pushto) language.
+  /// Creates a instance of [LangPus] (Pashto (Pushto) language).
   ///
   /// ISO 639-2 code: "PUS", ISO 639-1 code: "PS".
   const LangPus()
@@ -2228,9 +2228,9 @@ class LangPus extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Quechua language.
 class LangQue extends NaturalLanguage {
-  /// A class that represents the Quechua language.
+  /// Creates a instance of [LangQue] (Quechua language).
   ///
   /// ISO 639-2 code: "QUE", ISO 639-1 code: "QU".
   const LangQue()
@@ -2245,9 +2245,9 @@ class LangQue extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Romansh language.
 class LangRoh extends NaturalLanguage {
-  /// A class that represents the Romansh language.
+  /// Creates a instance of [LangRoh] (Romansh language).
   ///
   /// ISO 639-2 code: "ROH", ISO 639-1 code: "RM".
   const LangRoh()
@@ -2262,9 +2262,9 @@ class LangRoh extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Romanian language.
 class LangRon extends NaturalLanguage {
-  /// A class that represents the Romanian language.
+  /// Creates a instance of [LangRon] (Romanian language).
   ///
   /// ISO 639-2 code: "RON", ISO 639-1 code: "RO".
   const LangRon()
@@ -2279,9 +2279,9 @@ class LangRon extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kirundi language.
 class LangRun extends NaturalLanguage {
-  /// A class that represents the Kirundi language.
+  /// Creates a instance of [LangRun] (Kirundi language).
   ///
   /// ISO 639-2 code: "RUN", ISO 639-1 code: "RN".
   const LangRun()
@@ -2296,9 +2296,9 @@ class LangRun extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Russian language.
 class LangRus extends NaturalLanguage {
-  /// A class that represents the Russian language.
+  /// Creates a instance of [LangRus] (Russian language).
   ///
   /// ISO 639-2 code: "RUS", ISO 639-1 code: "RU".
   const LangRus()
@@ -2313,9 +2313,9 @@ class LangRus extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sango language.
 class LangSag extends NaturalLanguage {
-  /// A class that represents the Sango language.
+  /// Creates a instance of [LangSag] (Sango language).
   ///
   /// ISO 639-2 code: "SAG", ISO 639-1 code: "SG".
   const LangSag()
@@ -2330,9 +2330,9 @@ class LangSag extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sanskrit (Saṁskṛta) language.
 class LangSan extends NaturalLanguage {
-  /// A class that represents the Sanskrit (Saṁskṛta) language.
+  /// Creates a instance of [LangSan] (Sanskrit (Saṁskṛta) language).
   ///
   /// ISO 639-2 code: "SAN", ISO 639-1 code: "SA".
   const LangSan()
@@ -2347,9 +2347,9 @@ class LangSan extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sinhalese (Sinhala) language.
 class LangSin extends NaturalLanguage {
-  /// A class that represents the Sinhalese (Sinhala) language.
+  /// Creates a instance of [LangSin] (Sinhalese (Sinhala) language).
   ///
   /// ISO 639-2 code: "SIN", ISO 639-1 code: "SI".
   const LangSin()
@@ -2364,9 +2364,9 @@ class LangSin extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Slovak language.
 class LangSlk extends NaturalLanguage {
-  /// A class that represents the Slovak language.
+  /// Creates a instance of [LangSlk] (Slovak language).
   ///
   /// ISO 639-2 code: "SLK", ISO 639-1 code: "SK".
   const LangSlk()
@@ -2381,9 +2381,9 @@ class LangSlk extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Slovene language.
 class LangSlv extends NaturalLanguage {
-  /// A class that represents the Slovene language.
+  /// Creates a instance of [LangSlv] (Slovene language).
   ///
   /// ISO 639-2 code: "SLV", ISO 639-1 code: "SL".
   const LangSlv()
@@ -2398,9 +2398,9 @@ class LangSlv extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Northern Sami language.
 class LangSme extends NaturalLanguage {
-  /// A class that represents the Northern Sami language.
+  /// Creates a instance of [LangSme] (Northern Sami language).
   ///
   /// ISO 639-2 code: "SME", ISO 639-1 code: "SE".
   const LangSme()
@@ -2415,9 +2415,9 @@ class LangSme extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Samoan language.
 class LangSmo extends NaturalLanguage {
-  /// A class that represents the Samoan language.
+  /// Creates a instance of [LangSmo] (Samoan language).
   ///
   /// ISO 639-2 code: "SMO", ISO 639-1 code: "SM".
   const LangSmo()
@@ -2432,9 +2432,9 @@ class LangSmo extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Shona language.
 class LangSna extends NaturalLanguage {
-  /// A class that represents the Shona language.
+  /// Creates a instance of [LangSna] (Shona language).
   ///
   /// ISO 639-2 code: "SNA", ISO 639-1 code: "SN".
   const LangSna()
@@ -2449,9 +2449,9 @@ class LangSna extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sindhi language.
 class LangSnd extends NaturalLanguage {
-  /// A class that represents the Sindhi language.
+  /// Creates a instance of [LangSnd] (Sindhi language).
   ///
   /// ISO 639-2 code: "SND", ISO 639-1 code: "SD".
   const LangSnd()
@@ -2466,9 +2466,9 @@ class LangSnd extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Somali language.
 class LangSom extends NaturalLanguage {
-  /// A class that represents the Somali language.
+  /// Creates a instance of [LangSom] (Somali language).
   ///
   /// ISO 639-2 code: "SOM", ISO 639-1 code: "SO".
   const LangSom()
@@ -2483,9 +2483,9 @@ class LangSom extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Southern Sotho language.
 class LangSot extends NaturalLanguage {
-  /// A class that represents the Southern Sotho language.
+  /// Creates a instance of [LangSot] (Southern Sotho language).
   ///
   /// ISO 639-2 code: "SOT", ISO 639-1 code: "ST".
   const LangSot()
@@ -2500,9 +2500,9 @@ class LangSot extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Spanish language.
 class LangSpa extends NaturalLanguage {
-  /// A class that represents the Spanish language.
+  /// Creates a instance of [LangSpa] (Spanish language).
   ///
   /// ISO 639-2 code: "SPA", ISO 639-1 code: "ES".
   const LangSpa()
@@ -2517,9 +2517,9 @@ class LangSpa extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Albanian language.
 class LangSqi extends NaturalLanguage {
-  /// A class that represents the Albanian language.
+  /// Creates a instance of [LangSqi] (Albanian language).
   ///
   /// ISO 639-2 code: "SQI", ISO 639-1 code: "SQ".
   const LangSqi()
@@ -2534,9 +2534,9 @@ class LangSqi extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sardinian language.
 class LangSrd extends NaturalLanguage {
-  /// A class that represents the Sardinian language.
+  /// Creates a instance of [LangSrd] (Sardinian language).
   ///
   /// ISO 639-2 code: "SRD", ISO 639-1 code: "SC".
   const LangSrd()
@@ -2551,9 +2551,9 @@ class LangSrd extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Serbian language.
 class LangSrp extends NaturalLanguage {
-  /// A class that represents the Serbian language.
+  /// Creates a instance of [LangSrp] (Serbian language).
   ///
   /// ISO 639-2 code: "SRP", ISO 639-1 code: "SR".
   const LangSrp()
@@ -2568,9 +2568,9 @@ class LangSrp extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Swati language.
 class LangSsw extends NaturalLanguage {
-  /// A class that represents the Swati language.
+  /// Creates a instance of [LangSsw] (Swati language).
   ///
   /// ISO 639-2 code: "SSW", ISO 639-1 code: "SS".
   const LangSsw()
@@ -2585,9 +2585,9 @@ class LangSsw extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sundanese language.
 class LangSun extends NaturalLanguage {
-  /// A class that represents the Sundanese language.
+  /// Creates a instance of [LangSun] (Sundanese language).
   ///
   /// ISO 639-2 code: "SUN", ISO 639-1 code: "SU".
   const LangSun()
@@ -2602,9 +2602,9 @@ class LangSun extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Swahili language.
 class LangSwa extends NaturalLanguage {
-  /// A class that represents the Swahili language.
+  /// Creates a instance of [LangSwa] (Swahili language).
   ///
   /// ISO 639-2 code: "SWA", ISO 639-1 code: "SW".
   const LangSwa()
@@ -2619,9 +2619,9 @@ class LangSwa extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Swedish language.
 class LangSwe extends NaturalLanguage {
-  /// A class that represents the Swedish language.
+  /// Creates a instance of [LangSwe] (Swedish language).
   ///
   /// ISO 639-2 code: "SWE", ISO 639-1 code: "SV".
   const LangSwe()
@@ -2636,9 +2636,9 @@ class LangSwe extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tahitian language.
 class LangTah extends NaturalLanguage {
-  /// A class that represents the Tahitian language.
+  /// Creates a instance of [LangTah] (Tahitian language).
   ///
   /// ISO 639-2 code: "TAH", ISO 639-1 code: "TY".
   const LangTah()
@@ -2653,9 +2653,9 @@ class LangTah extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tamil language.
 class LangTam extends NaturalLanguage {
-  /// A class that represents the Tamil language.
+  /// Creates a instance of [LangTam] (Tamil language).
   ///
   /// ISO 639-2 code: "TAM", ISO 639-1 code: "TA".
   const LangTam()
@@ -2670,9 +2670,9 @@ class LangTam extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tatar language.
 class LangTat extends NaturalLanguage {
-  /// A class that represents the Tatar language.
+  /// Creates a instance of [LangTat] (Tatar language).
   ///
   /// ISO 639-2 code: "TAT", ISO 639-1 code: "TT".
   const LangTat()
@@ -2687,9 +2687,9 @@ class LangTat extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Telugu language.
 class LangTel extends NaturalLanguage {
-  /// A class that represents the Telugu language.
+  /// Creates a instance of [LangTel] (Telugu language).
   ///
   /// ISO 639-2 code: "TEL", ISO 639-1 code: "TE".
   const LangTel()
@@ -2704,9 +2704,9 @@ class LangTel extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tajik language.
 class LangTgk extends NaturalLanguage {
-  /// A class that represents the Tajik language.
+  /// Creates a instance of [LangTgk] (Tajik language).
   ///
   /// ISO 639-2 code: "TGK", ISO 639-1 code: "TG".
   const LangTgk()
@@ -2721,9 +2721,9 @@ class LangTgk extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tagalog language.
 class LangTgl extends NaturalLanguage {
-  /// A class that represents the Tagalog language.
+  /// Creates a instance of [LangTgl] (Tagalog language).
   ///
   /// ISO 639-2 code: "TGL", ISO 639-1 code: "TL".
   const LangTgl()
@@ -2738,9 +2738,9 @@ class LangTgl extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Thai language.
 class LangTha extends NaturalLanguage {
-  /// A class that represents the Thai language.
+  /// Creates a instance of [LangTha] (Thai language).
   ///
   /// ISO 639-2 code: "THA", ISO 639-1 code: "TH".
   const LangTha()
@@ -2755,9 +2755,9 @@ class LangTha extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tigrinya language.
 class LangTir extends NaturalLanguage {
-  /// A class that represents the Tigrinya language.
+  /// Creates a instance of [LangTir] (Tigrinya language).
   ///
   /// ISO 639-2 code: "TIR", ISO 639-1 code: "TI".
   const LangTir()
@@ -2772,9 +2772,9 @@ class LangTir extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tonga (Tonga Islands) language.
 class LangTon extends NaturalLanguage {
-  /// A class that represents the Tonga (Tonga Islands) language.
+  /// Creates a instance of [LangTon] (Tonga (Tonga Islands) language).
   ///
   /// ISO 639-2 code: "TON", ISO 639-1 code: "TO".
   const LangTon()
@@ -2789,9 +2789,9 @@ class LangTon extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tswana language.
 class LangTsn extends NaturalLanguage {
-  /// A class that represents the Tswana language.
+  /// Creates a instance of [LangTsn] (Tswana language).
   ///
   /// ISO 639-2 code: "TSN", ISO 639-1 code: "TN".
   const LangTsn()
@@ -2806,9 +2806,9 @@ class LangTsn extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tsonga language.
 class LangTso extends NaturalLanguage {
-  /// A class that represents the Tsonga language.
+  /// Creates a instance of [LangTso] (Tsonga language).
   ///
   /// ISO 639-2 code: "TSO", ISO 639-1 code: "TS".
   const LangTso()
@@ -2823,9 +2823,9 @@ class LangTso extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Turkmen language.
 class LangTuk extends NaturalLanguage {
-  /// A class that represents the Turkmen language.
+  /// Creates a instance of [LangTuk] (Turkmen language).
   ///
   /// ISO 639-2 code: "TUK", ISO 639-1 code: "TK".
   const LangTuk()
@@ -2840,9 +2840,9 @@ class LangTuk extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Turkish language.
 class LangTur extends NaturalLanguage {
-  /// A class that represents the Turkish language.
+  /// Creates a instance of [LangTur] (Turkish language).
   ///
   /// ISO 639-2 code: "TUR", ISO 639-1 code: "TR".
   const LangTur()
@@ -2857,9 +2857,9 @@ class LangTur extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Twi language.
 class LangTwi extends NaturalLanguage {
-  /// A class that represents the Twi language.
+  /// Creates a instance of [LangTwi] (Twi language).
   ///
   /// ISO 639-2 code: "TWI", ISO 639-1 code: "TW".
   const LangTwi()
@@ -2874,9 +2874,9 @@ class LangTwi extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Uyghur language.
 class LangUig extends NaturalLanguage {
-  /// A class that represents the Uyghur language.
+  /// Creates a instance of [LangUig] (Uyghur language).
   ///
   /// ISO 639-2 code: "UIG", ISO 639-1 code: "UG".
   const LangUig()
@@ -2891,9 +2891,9 @@ class LangUig extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ukrainian language.
 class LangUkr extends NaturalLanguage {
-  /// A class that represents the Ukrainian language.
+  /// Creates a instance of [LangUkr] (Ukrainian language).
   ///
   /// ISO 639-2 code: "UKR", ISO 639-1 code: "UK".
   const LangUkr()
@@ -2908,9 +2908,9 @@ class LangUkr extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Urdu language.
 class LangUrd extends NaturalLanguage {
-  /// A class that represents the Urdu language.
+  /// Creates a instance of [LangUrd] (Urdu language).
   ///
   /// ISO 639-2 code: "URD", ISO 639-1 code: "UR".
   const LangUrd()
@@ -2925,9 +2925,9 @@ class LangUrd extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Uzbek language.
 class LangUzb extends NaturalLanguage {
-  /// A class that represents the Uzbek language.
+  /// Creates a instance of [LangUzb] (Uzbek language).
   ///
   /// ISO 639-2 code: "UZB", ISO 639-1 code: "UZ".
   const LangUzb()
@@ -2942,9 +2942,9 @@ class LangUzb extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Venda language.
 class LangVen extends NaturalLanguage {
-  /// A class that represents the Venda language.
+  /// Creates a instance of [LangVen] (Venda language).
   ///
   /// ISO 639-2 code: "VEN", ISO 639-1 code: "VE".
   const LangVen()
@@ -2959,9 +2959,9 @@ class LangVen extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Vietnamese language.
 class LangVie extends NaturalLanguage {
-  /// A class that represents the Vietnamese language.
+  /// Creates a instance of [LangVie] (Vietnamese language).
   ///
   /// ISO 639-2 code: "VIE", ISO 639-1 code: "VI".
   const LangVie()
@@ -2976,9 +2976,9 @@ class LangVie extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Volapük language.
 class LangVol extends NaturalLanguage {
-  /// A class that represents the Volapük language.
+  /// Creates a instance of [LangVol] (Volapük language).
   ///
   /// ISO 639-2 code: "VOL", ISO 639-1 code: "VO".
   const LangVol()
@@ -2993,9 +2993,9 @@ class LangVol extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Walloon language.
 class LangWln extends NaturalLanguage {
-  /// A class that represents the Walloon language.
+  /// Creates a instance of [LangWln] (Walloon language).
   ///
   /// ISO 639-2 code: "WLN", ISO 639-1 code: "WA".
   const LangWln()
@@ -3010,9 +3010,9 @@ class LangWln extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Wolof language.
 class LangWol extends NaturalLanguage {
-  /// A class that represents the Wolof language.
+  /// Creates a instance of [LangWol] (Wolof language).
   ///
   /// ISO 639-2 code: "WOL", ISO 639-1 code: "WO".
   const LangWol()
@@ -3027,9 +3027,9 @@ class LangWol extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Xhosa language.
 class LangXho extends NaturalLanguage {
-  /// A class that represents the Xhosa language.
+  /// Creates a instance of [LangXho] (Xhosa language).
   ///
   /// ISO 639-2 code: "XHO", ISO 639-1 code: "XH".
   const LangXho()
@@ -3044,9 +3044,9 @@ class LangXho extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Yiddish language.
 class LangYid extends NaturalLanguage {
-  /// A class that represents the Yiddish language.
+  /// Creates a instance of [LangYid] (Yiddish language).
   ///
   /// ISO 639-2 code: "YID", ISO 639-1 code: "YI".
   const LangYid()
@@ -3061,9 +3061,9 @@ class LangYid extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Yoruba language.
 class LangYor extends NaturalLanguage {
-  /// A class that represents the Yoruba language.
+  /// Creates a instance of [LangYor] (Yoruba language).
   ///
   /// ISO 639-2 code: "YOR", ISO 639-1 code: "YO".
   const LangYor()
@@ -3078,9 +3078,9 @@ class LangYor extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Zhuang (Chuang) language.
 class LangZha extends NaturalLanguage {
-  /// A class that represents the Zhuang (Chuang) language.
+  /// Creates a instance of [LangZha] (Zhuang (Chuang) language).
   ///
   /// ISO 639-2 code: "ZHA", ISO 639-1 code: "ZA".
   const LangZha()
@@ -3095,9 +3095,9 @@ class LangZha extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Chinese language.
 class LangZho extends NaturalLanguage {
-  /// A class that represents the Chinese language.
+  /// Creates a instance of [LangZho] (Chinese language).
   ///
   /// ISO 639-2 code: "ZHO", ISO 639-1 code: "ZH".
   const LangZho()
@@ -3112,9 +3112,9 @@ class LangZho extends NaturalLanguage {
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Zulu language.
 class LangZul extends NaturalLanguage {
-  /// A class that represents the Zulu language.
+  /// Creates a instance of [LangZul] (Zulu language).
   ///
   /// ISO 639-2 code: "ZUL", ISO 639-1 code: "ZU".
   const LangZul()

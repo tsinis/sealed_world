@@ -5,7 +5,7 @@ final class DartUtils {
 
   Future<void> run(List<String> arguments) async {
     final result = await Process.run("dart", arguments);
-    // ignore: avoid_print, it's just a CLI tool, not prod. code.
+    // ignore: avoid_print, it's just a CLI tool, not a production code.
     if (result.exitCode != 0) print(result.stderr);
   }
 
