@@ -12,6 +12,9 @@ final class _IsoStandardizedTest implements IsoStandardized {
   List<String>? get namesNative => [name];
   @override
   String? get codeOther => code;
+
+  @override
+  String toString({bool short = true}) => name;
 }
 
 void main() => group("$IsoStandardized", () {

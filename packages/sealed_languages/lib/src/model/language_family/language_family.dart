@@ -1,4 +1,5 @@
 import "../../data/natural_language_families.data.dart";
+import "../../interfaces/named.dart";
 
 part "submodels/natural_language_family.dart";
 part "submodels/natural_language_family.g.dart";
@@ -7,7 +8,7 @@ part "submodels/natural_language_family.g.dart";
 ///
 /// A language family is a group of languages that have a common ancestor or are
 /// related in some other way.
-sealed class LanguageFamily {
+sealed class LanguageFamily implements Named {
   /// Creates a new instance of the [LanguageFamily] class.
   ///
   /// The [name] parameter is required and should be a non-empty string
@@ -16,9 +17,10 @@ sealed class LanguageFamily {
       : assert(name.length > 0, "`name` should not be empty!");
 
   /// The name of the language family.
+  @override
   final String name;
 
   /// Returns a string representation of this [LanguageFamily] object.
   @override
-  String toString() => "LanguageFamily(name: $name)";
+  String toString() => '$LanguageFamily(name: "$name")';
 }

@@ -1,5 +1,3 @@
-import "dart:convert";
-
 import "../helpers/extensions/translated_name_extension.dart";
 import "../interfaces/json_encodable.dart";
 import "../interfaces/named.dart";

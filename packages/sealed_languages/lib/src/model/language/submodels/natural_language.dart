@@ -44,10 +44,16 @@ class NaturalLanguage extends Language
   /// Terminological ISO 639-2 code.
   ///
   /// The [code] parameter is required and should be a three-letter string
-  /// representing the Terminological ISO 639-2 code for the language. This
-  /// method returns the [NaturalLanguage] instance that corresponds to the
+  /// representing the Terminological ISO 639-2 code for the language.
+  /// The optional [languages] parameter can be used to specify a list of
+  /// [NaturalLanguage] objects to search through.
+  /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory NaturalLanguage.fromCode(String code) => list.firstWhere(
+  factory NaturalLanguage.fromCode(
+    String code, [
+    Iterable<NaturalLanguage> languages = list,
+  ]) =>
+      languages.firstWhere(
         (language) => language.code == code.trim().toUpperCase(),
       );
 
@@ -55,10 +61,16 @@ class NaturalLanguage extends Language
   /// ISO 639-1 code.
   ///
   /// The [codeShort] parameter is required and should be a two-letter string
-  /// representing the ISO 639-1 code for the language. This method returns the
-  /// [NaturalLanguage] instance that corresponds to the given code, or throws a
-  /// [StateError] if no such instance exists.
-  factory NaturalLanguage.fromCodeShort(String codeShort) => list.firstWhere(
+  /// representing the ISO 639-1 code for the language.
+  /// The optional [languages] parameter can be used to specify a list of
+  /// [NaturalLanguage] objects to search through.
+  /// This method returns the [NaturalLanguage] instance that corresponds to the
+  /// given code, or throws a [StateError] if no such instance exists.
+  factory NaturalLanguage.fromCodeShort(
+    String codeShort, [
+    Iterable<NaturalLanguage> languages = list,
+  ]) =>
+      languages.firstWhere(
         (language) => language.codeShort == codeShort.trim().toUpperCase(),
       );
 
@@ -66,10 +78,16 @@ class NaturalLanguage extends Language
   /// language.
   ///
   /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the natural language. This method returns the
-  /// [NaturalLanguage] instance that corresponds to the given name, or throws a
-  /// [StateError] if no such instance exists.
-  factory NaturalLanguage.fromName(String name) => list.firstWhere(
+  /// representing the name of the natural language.
+  /// The optional [languages] parameter can be used to specify a list of
+  /// [NaturalLanguage] objects to search through.
+  /// This method returns the [NaturalLanguage] instance that corresponds to the
+  /// given name, or throws a [StateError] if no such instance exists.
+  factory NaturalLanguage.fromName(
+    String name, [
+    Iterable<NaturalLanguage> languages = list,
+  ]) =>
+      languages.firstWhere(
         (lang) => lang.name.toUpperCase() == name.trim().toUpperCase(),
       );
 

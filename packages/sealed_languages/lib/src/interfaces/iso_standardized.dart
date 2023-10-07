@@ -60,4 +60,7 @@ abstract interface class IsoStandardized<Name extends Object> {
 
   /// An optional list of objects representing the native names of the object.
   final List<Name>? namesNative;
+
+  @override
+  String toString({bool short = true});
 }

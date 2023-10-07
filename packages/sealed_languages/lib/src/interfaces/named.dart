@@ -6,7 +6,7 @@
 ///
 /// Implementing classes should assign a value to the [name] field in their
 /// constructors. Once assigned, the [name] field cannot be modified.
-abstract class Named {
+abstract interface class Named {
   /// Constructs a new instance of the [Named] class with the given [name].
   ///
   /// The [name] parameter represents the name of the object.

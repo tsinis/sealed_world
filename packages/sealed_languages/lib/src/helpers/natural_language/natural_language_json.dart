@@ -63,7 +63,7 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// ```dart
   /// final jsonMap = LangEng().toMap();
   /// ```
-  Map<String, Object?> toMap() => {
+  JsonObjectMap toMap() => {
         "name": name,
         "code": code,
         "codeShort": codeShort,
