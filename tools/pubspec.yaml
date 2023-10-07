@@ -1,0 +1,10 @@
+name: cli
+description: Command-line tools for a sealed_world.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.1.0
+
+dev_dependencies:
+  index_generator: ^3.4.1

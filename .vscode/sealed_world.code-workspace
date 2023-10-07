@@ -6,6 +6,10 @@
       "path": "../.github"
     },
     {
+      "name": "CLI Tools",
+      "path": "../tools"
+    },
+    {
       "name": "Flutter World",
       "path": "../packages/world_countries"
     },
