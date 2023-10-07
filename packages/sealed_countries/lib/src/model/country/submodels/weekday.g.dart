@@ -2,7 +2,7 @@
 
 part of "weekday.dart";
 
-extension WeekdayExtension on Weekday {
+extension WeekdayFunctionalExtension on Weekday {
   bool get isMonday => this == Weekday.monday;
   bool get isTuesday => this == Weekday.tuesday;
   bool get isWednesday => this == Weekday.wednesday;

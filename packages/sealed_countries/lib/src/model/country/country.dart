@@ -4,7 +4,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../data/official_world_countries.data.dart";
 import "../../data/other_world_countries.data.dart";
-import "../../helpers/extensions/list_extension.dart";
+import "../../helpers/extensions/sealed_world_list_extension.dart";
 import "../../helpers/world_country/world_country_json.dart";
 import "../geo/region.dart";
 import "../geo/submodels/continent.dart";

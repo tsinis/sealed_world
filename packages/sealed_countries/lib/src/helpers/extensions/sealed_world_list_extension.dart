@@ -1,6 +1,6 @@
 // TODO!: Move to languages.
 /// Extension on [List] class to provide helper methods for working with lists.
-extension ListExtension<T extends Object> on List<T?> {
+extension SealedWorldListExtension<T extends Object> on List<T?> {
   /// Returns a [String] representation of the list containing only the names of
   /// the non-null objects.
   ///
