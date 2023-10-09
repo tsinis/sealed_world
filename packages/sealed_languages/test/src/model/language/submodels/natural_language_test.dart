@@ -218,6 +218,19 @@ void main() => group("$NaturalLanguage", () {
         );
 
         test(
+          "name",
+          () => expect(
+            () => NaturalLanguage(
+              name: "",
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
           "codeShort length",
           () => expect(
             () => NaturalLanguage(
