@@ -5,6 +5,7 @@ import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";
 
 part "submodels/script.dart";
+part "submodels/script.g.dart";
 
 sealed class WritingSystem implements Named {
   const WritingSystem({required this.name})
