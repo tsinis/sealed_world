@@ -1,7 +1,6 @@
 {
   "folders": [
     { "name": "VS Code", "path": "../.vscode" },
-    { "name": "DEV Container", "path": "../.devcontainer" },
     {
       "name": "GitHub Setup",
       "path": "../.github"
@@ -145,7 +144,6 @@
       "kameshkotwani.google-search",
       "lacroixdavid1.vscode-format-context-menu",
       "marinv.flutter-print-tools",
-      "ms-vscode-remote.remote-containers",
       "nash.awesome-flutter-snippets",
       "nhoizey.gremlins",
       "peterhdd.dartgettersetter",
