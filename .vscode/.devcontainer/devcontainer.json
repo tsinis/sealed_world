@@ -1,0 +1,27 @@
+{
+  "name": "Dart (Community)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": { "VARIANT": "3" }
+  },
+
+  "customizations": {
+    "settings": { "autoOpenWorkspace.enableAutoOpenAlwaysFirst": true },
+    "vscode": {
+      "extensions": ["dart-code.dart-code", "zoma.vscode-auto-open-workspace"]
+    }
+  },
+
+  "remoteUser": "vscode",
+  "postCreateCommand": "dart --disable-analytics",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true,
+      "installZsh": true,
+      "upgradePackages": true,
+      "username": "vscode",
+      "userUid": "automatic",
+      "userGid": "automatic"
+    }
+  }
+}

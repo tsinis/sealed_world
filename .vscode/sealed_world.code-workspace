@@ -74,6 +74,7 @@
       "cioc",
       "demonym",
       "demonyms",
+      "devcontainers",
       "gini",
       "umpirsky"
     ],
@@ -143,6 +144,7 @@
       "kameshkotwani.google-search",
       "lacroixdavid1.vscode-format-context-menu",
       "marinv.flutter-print-tools",
+      "ms-vscode-remote.remote-containers",
       "nash.awesome-flutter-snippets",
       "nhoizey.gremlins",
       "peterhdd.dartgettersetter",
