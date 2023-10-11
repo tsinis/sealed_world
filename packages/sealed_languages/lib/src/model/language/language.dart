@@ -1,10 +1,12 @@
 import "../../data/natural_language_families.data.dart";
 import "../../data/natural_languages.data.dart";
+import "../../data/scripts.data.dart";
 import "../../helpers/natural_language/natural_language_json.dart";
 import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";
 import "../language_family/language_family.dart";
+import "../script/writing_system.dart";
 
 part "submodels/natural_language.dart";
 part "submodels/natural_language.g.dart";

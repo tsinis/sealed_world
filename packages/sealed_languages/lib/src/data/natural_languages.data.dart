@@ -1,5 +1,6 @@
 import "../model/language/language.dart";
 import "natural_language_families.data.dart";
+import "scripts.data.dart";
 
 /// A class that represents the Afar language.
 class LangAar extends NaturalLanguage {
@@ -32,6 +33,7 @@ class LangAbk extends NaturalLanguage {
           bibliographicCode: null,
           family: const NorthwestCaucasian(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -83,6 +85,7 @@ class LangAmh extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: false,
+          scripts: const {ScriptEthi()},
         );
 }
 
@@ -100,6 +103,7 @@ class LangAra extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: true,
+          scripts: const {ScriptArab()},
         );
 }
 
@@ -134,6 +138,7 @@ class LangAsm extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptBeng()},
         );
 }
 
@@ -151,6 +156,7 @@ class LangAva extends NaturalLanguage {
           bibliographicCode: null,
           family: const NortheastCaucasian(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -168,6 +174,7 @@ class LangAve extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptAvst()},
         );
 }
 
@@ -202,6 +209,7 @@ class LangAze extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptArab(), ScriptLatn(), ScriptCyrl()},
         );
 }
 
@@ -219,6 +227,7 @@ class LangBak extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -253,6 +262,7 @@ class LangBel extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -270,6 +280,7 @@ class LangBen extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptBeng()},
         );
 }
 
@@ -287,6 +298,7 @@ class LangBih extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptDeva(), ScriptBhks()},
         );
 }
 
@@ -321,6 +333,7 @@ class LangBod extends NaturalLanguage {
           bibliographicCode: "TIB",
           family: const SinoTibetan(),
           isRightToLeft: false,
+          scripts: const {ScriptTibt()},
         );
 }
 
@@ -338,6 +351,7 @@ class LangBos extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn(), ScriptCyrl()},
         );
 }
 
@@ -372,6 +386,7 @@ class LangBul extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -440,6 +455,7 @@ class LangChe extends NaturalLanguage {
           bibliographicCode: null,
           family: const NortheastCaucasian(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -457,6 +473,7 @@ class LangChu extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrs()},
         );
 }
 
@@ -474,6 +491,7 @@ class LangChv extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -593,6 +611,7 @@ class LangDiv extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
+          scripts: const {ScriptThaa()},
         );
 }
 
@@ -610,6 +629,7 @@ class LangDzo extends NaturalLanguage {
           bibliographicCode: null,
           family: const SinoTibetan(),
           isRightToLeft: false,
+          scripts: const {ScriptTibt()},
         );
 }
 
@@ -627,6 +647,7 @@ class LangEll extends NaturalLanguage {
           bibliographicCode: "GRE",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptGrek()},
         );
 }
 
@@ -746,6 +767,7 @@ class LangFas extends NaturalLanguage {
           bibliographicCode: "PER",
           family: const IndoEuropean(),
           isRightToLeft: true,
+          scripts: const {ScriptArab()},
         );
 }
 
@@ -933,6 +955,7 @@ class LangGuj extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptGujr()},
         );
 }
 
@@ -984,6 +1007,7 @@ class LangHeb extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: true,
+          scripts: const {ScriptHebr()},
         );
 }
 
@@ -1018,6 +1042,7 @@ class LangHin extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptDeva()},
         );
 }
 
@@ -1086,6 +1111,7 @@ class LangHye extends NaturalLanguage {
           bibliographicCode: "ARM",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptArmn()},
         );
 }
 
@@ -1137,6 +1163,7 @@ class LangIii extends NaturalLanguage {
           bibliographicCode: null,
           family: const SinoTibetan(),
           isRightToLeft: false,
+          scripts: const {ScriptYiii()},
         );
 }
 
@@ -1290,6 +1317,7 @@ class LangJpn extends NaturalLanguage {
           bibliographicCode: null,
           family: const Japonic(),
           isRightToLeft: false,
+          scripts: const {ScriptJpan()},
         );
 }
 
@@ -1324,6 +1352,7 @@ class LangKan extends NaturalLanguage {
           bibliographicCode: null,
           family: const Dravidian(),
           isRightToLeft: false,
+          scripts: const {ScriptKnda()},
         );
 }
 
@@ -1341,6 +1370,7 @@ class LangKas extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
+          scripts: const {ScriptDeva()},
         );
 }
 
@@ -1358,6 +1388,7 @@ class LangKat extends NaturalLanguage {
           bibliographicCode: "GEO",
           family: const SouthCaucasian(),
           isRightToLeft: false,
+          scripts: const {ScriptGeor()},
         );
 }
 
@@ -1392,6 +1423,7 @@ class LangKaz extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -1409,6 +1441,7 @@ class LangKhm extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austroasiatic(),
           isRightToLeft: false,
+          scripts: const {ScriptKhmr()},
         );
 }
 
@@ -1460,6 +1493,7 @@ class LangKir extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -1477,6 +1511,7 @@ class LangKom extends NaturalLanguage {
           bibliographicCode: null,
           family: const Uralic(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -1511,6 +1546,7 @@ class LangKor extends NaturalLanguage {
           bibliographicCode: null,
           family: const Koreanic(),
           isRightToLeft: false,
+          scripts: const {ScriptKore()},
         );
 }
 
@@ -1545,6 +1581,7 @@ class LangKur extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
+          scripts: const {ScriptArab(), ScriptLatn()},
         );
 }
 
@@ -1562,6 +1599,7 @@ class LangLao extends NaturalLanguage {
           bibliographicCode: null,
           family: const TaiKadai(),
           isRightToLeft: false,
+          scripts: const {ScriptLaoo()},
         );
 }
 
@@ -1732,6 +1770,7 @@ class LangMal extends NaturalLanguage {
           bibliographicCode: null,
           family: const Dravidian(),
           isRightToLeft: false,
+          scripts: const {ScriptMlym()},
         );
 }
 
@@ -1749,6 +1788,7 @@ class LangMar extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptDeva()},
         );
 }
 
@@ -1766,6 +1806,7 @@ class LangMkd extends NaturalLanguage {
           bibliographicCode: "MAC",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -1817,6 +1858,7 @@ class LangMon extends NaturalLanguage {
           bibliographicCode: null,
           family: const Mongolic(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -1851,6 +1893,7 @@ class LangMsa extends NaturalLanguage {
           bibliographicCode: "MAY",
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptArab()},
         );
 }
 
@@ -1868,6 +1911,7 @@ class LangMya extends NaturalLanguage {
           bibliographicCode: "BUR",
           family: const SinoTibetan(),
           isRightToLeft: false,
+          scripts: const {ScriptMymr()},
         );
 }
 
@@ -1970,6 +2014,7 @@ class LangNep extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptDeva()},
         );
 }
 
@@ -2106,6 +2151,7 @@ class LangOri extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptOrya()},
         );
 }
 
@@ -2140,6 +2186,7 @@ class LangOss extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -2157,6 +2204,7 @@ class LangPan extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptGuru()},
         );
 }
 
@@ -2174,6 +2222,13 @@ class LangPli extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {
+            ScriptLatn(),
+            ScriptBrah(),
+            ScriptKhar(),
+            ScriptKhmr(),
+            ScriptThai(),
+          },
         );
 }
 
@@ -2225,6 +2280,7 @@ class LangPus extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
+          scripts: const {ScriptArab()},
         );
 }
 
@@ -2310,6 +2366,7 @@ class LangRus extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -2344,6 +2401,7 @@ class LangSan extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptDeva()},
         );
 }
 
@@ -2361,6 +2419,7 @@ class LangSin extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptSinh()},
         );
 }
 
@@ -2463,6 +2522,7 @@ class LangSnd extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
+          scripts: const {ScriptDeva()},
         );
 }
 
@@ -2565,6 +2625,7 @@ class LangSrp extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl(), ScriptLatn()},
         );
 }
 
@@ -2667,6 +2728,7 @@ class LangTam extends NaturalLanguage {
           bibliographicCode: null,
           family: const Dravidian(),
           isRightToLeft: false,
+          scripts: const {ScriptTaml()},
         );
 }
 
@@ -2684,6 +2746,7 @@ class LangTat extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -2701,6 +2764,7 @@ class LangTel extends NaturalLanguage {
           bibliographicCode: null,
           family: const Dravidian(),
           isRightToLeft: false,
+          scripts: const {ScriptTelu()},
         );
 }
 
@@ -2718,6 +2782,7 @@ class LangTgk extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -2752,6 +2817,7 @@ class LangTha extends NaturalLanguage {
           bibliographicCode: null,
           family: const TaiKadai(),
           isRightToLeft: false,
+          scripts: const {ScriptThai()},
         );
 }
 
@@ -2769,6 +2835,7 @@ class LangTir extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: false,
+          scripts: const {ScriptEthi()},
         );
 }
 
@@ -2888,6 +2955,7 @@ class LangUig extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptArab()},
         );
 }
 
@@ -2905,6 +2973,7 @@ class LangUkr extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptCyrl()},
         );
 }
 
@@ -2922,6 +2991,7 @@ class LangUrd extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
+          scripts: const {ScriptArab()},
         );
 }
 
@@ -3058,6 +3128,7 @@ class LangYid extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
+          scripts: const {ScriptHebr()},
         );
 }
 
@@ -3109,6 +3180,12 @@ class LangZho extends NaturalLanguage {
           bibliographicCode: "CHI",
           family: const SinoTibetan(),
           isRightToLeft: false,
+          scripts: const {
+            ScriptHans(),
+            ScriptHant(),
+            ScriptBopo(),
+            ScriptLatn(),
+          },
         );
 }
 

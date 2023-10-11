@@ -26,6 +26,7 @@ class NaturalLanguage extends Language
     this.bibliographicCode,
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
+    this.scripts = const {ScriptLatn()},
   })  : assert(code.length == 3, "`code` should be exactly 3 characters long!"),
         assert(
           codeShort.length == 2,
@@ -112,6 +113,9 @@ class NaturalLanguage extends Language
 
   /// Whether the language is written right-to-left.
   final bool isRightToLeft;
+
+  /// The ISO 15924 scripts used by the language.
+  final Set<Script> scripts;
 
   @override
   String get codeOther => codeShort;

@@ -11,4 +11,5 @@ export "src/interfaces/iso_standardized.dart";
 export "src/interfaces/json_encodable.dart";
 export "src/model/language/language.dart";
 export "src/model/language_family/language_family.dart";
+export "src/model/script/writing_system.dart";
 export "src/typedefs/typedefs.dart";
