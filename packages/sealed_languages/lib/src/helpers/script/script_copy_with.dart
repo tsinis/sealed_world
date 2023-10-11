@@ -2,6 +2,7 @@ import "../../model/script/writing_system.dart";
 
 /// Adds [copyWith] method to [Script] objects.
 extension ScriptCopyWith on Script {
+  /// {@macro copy_with_method}
   Script copyWith({
     String? name,
     String? code,

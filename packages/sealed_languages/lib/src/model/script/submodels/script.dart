@@ -1,7 +1,18 @@
 part of "../writing_system.dart";
 
+/// A class that represents a script used in writing systems.
 class Script extends WritingSystem
     implements IsoStandardized<String>, JsonEncodable<Script> {
+  /// Creates a new instance of the [Script] class.
+  ///
+  /// The [name] parameter is required and should be a non-empty string
+  /// representing the name of the script. The [code] parameter is required and
+  /// should be a four-character string representing the ISO 15924 code for the
+  /// script. The [codeNumeric] parameter is required and should be a
+  /// three-digit string representing the ISO 15924 numeric code for the script.
+  /// The [date] parameter is required and should be a string representing the
+  /// date of addition of the script. The optional [pva] parameter is a string
+  /// representing the property value alias for the script.
   const Script({
     required super.name,
     required this.code,
@@ -15,33 +26,58 @@ class Script extends WritingSystem
           "`codeNumeric` should be exactly 3 characters long!",
         );
 
+  /// Creates a new instance of the [Script] class from a four-character ISO
+  /// 15924 code.
+  ///
+  /// The [code] parameter is required and should be a four-character string
+  /// representing the ISO 15924 code for the script. The optional [scripts]
+  /// parameter can be used to specify a list of [Script] objects to search
+  /// through. This method returns the [Script] instance that corresponds to the
+  /// given code, or throws a [StateError] if no such instance exists.
   factory Script.fromCode(String code, [Iterable<Script> scripts = list]) =>
       scripts.firstWhere(
         (script) => script.code.toUpperCase() == code.trim().toUpperCase(),
       );
 
-  factory Script.fromcodeNumeric(
+  /// Creates a new instance of the [Script] class from a three-digit ISO 15924
+  /// code.
+  ///
+  /// The [codeNumeric] parameter is required and should be a three-digit string
+  /// representing the ISO 15924 numeric code for the script. The optional
+  /// [scripts] parameter can be used to specify a list of [Script] objects to
+  /// search through. This method returns the [Script] instance that corresponds
+  /// to the given numeric code, or throws a [StateError] if no such instance
+  /// exists.
+  factory Script.fromCodeNumeric(
     String codeNumeric, [
     Iterable<Script> scripts = list,
   ]) =>
       scripts.firstWhere((script) => script.codeNumeric == codeNumeric.trim());
 
+  /// Creates a new instance of the [Script] class from the name of the script.
+  ///
+  /// The [name] parameter is required and should be a non-empty string
+  /// representing the name of the script. The optional [scripts] parameter can
+  /// be used to specify a list of [Script] objects to search through. This
+  /// method returns the [Script] instance that corresponds to the given name,
+  /// or throws a [StateError] if no such instance exists.
   factory Script.fromName(String name, [Iterable<Script> scripts = list]) =>
       scripts.firstWhere(
         (script) => script.name.toUpperCase() == name.trim().toUpperCase(),
       );
 
-  /// Four character ISO 15924 code.
+  /// A four-character string representing the ISO 15924 code for the script.
   @override
   final String code;
 
-  /// Three digit ISO 15924 code.
+  /// A three-digit string representing the ISO 15924 numeric code for the
+  /// script.
   final String codeNumeric;
 
-  /// Date of addition.
+  /// The date of addition of the script.
   final String date;
 
-  /// Property value alias.
+  /// The property value alias for the script.
   final String? pva;
 
   @override
@@ -58,6 +94,15 @@ class Script extends WritingSystem
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
+  /// Returns a [Script] instance that corresponds to the given value.
+  ///
+  /// The [value] parameter is required and represents the value to match
+  /// against. The optional [where] parameter is a function that can be used to
+  /// specify a custom comparison logic for finding the matching [Script]
+  /// instance. The optional [scripts] parameter can be used to specify a list
+  /// of [Script] objects to search through. This method returns the [Script]
+  /// instance that corresponds to the given value, or `null` if no such
+  /// instance exists.
   static Script? maybeFromValue<T extends Object>(
     T value, {
     T? Function(Script lang)? where,
@@ -72,6 +117,7 @@ class Script extends WritingSystem
     return null;
   }
 
+  /// A list of all the scripts currently supported by the [Script] class.
   static const list = [
     ScriptAdlm(),
     ScriptAfak(),
