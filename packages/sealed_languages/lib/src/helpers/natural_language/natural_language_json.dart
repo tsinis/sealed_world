@@ -1,7 +1,9 @@
 import "../../interfaces/json_encodable.dart";
 import "../../model/language/language.dart";
 import "../../model/language_family/language_family.dart";
+import "../../model/script/writing_system.dart";
 import "../../typedefs/typedefs.dart";
+import "../extensions/sealed_world_iterable_extension.dart";
 
 /// Extension on [NaturalLanguage] that provides methods for converting
 /// [NaturalLanguage] objects to and from JSON maps.
@@ -43,6 +45,9 @@ extension NaturalLanguageJson on NaturalLanguage {
         bibliographicCode: map["bibliographicCode"] as String?,
         family: NaturalLanguageFamily.fromName(map["family"].toString()),
         isRightToLeft: map["isRightToLeft"] as bool,
+        scripts: (map["scripts"] as List<Object?>)
+            .fromIsoList(Script.fromCode)
+            .toSet(),
       );
 
   /// Converts the [NaturalLanguage] object to a JSON map.
@@ -71,5 +76,6 @@ extension NaturalLanguageJson on NaturalLanguage {
         "bibliographicCode": bibliographicCode,
         "family": family.name,
         "isRightToLeft": isRightToLeft,
+        "scripts": scripts.toIsoList(),
       };
 }

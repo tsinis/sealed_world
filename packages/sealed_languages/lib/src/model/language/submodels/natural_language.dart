@@ -36,6 +36,7 @@ class NaturalLanguage extends Language
           namesNative != const <String>[],
           "`namesNative` should not be empty!",
         ),
+        assert(scripts != const <Script>{}, "`scripts` should not be empty!"),
         assert(
           bibliographicCode == null || bibliographicCode.length == 3,
           "`bibliographicCode` should be exactly 3 characters long!",
@@ -130,7 +131,7 @@ class NaturalLanguage extends Language
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''$NaturalLanguage(name: "$name", code: "$code", codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, bibliographicCode: ${bibliographicCode == null ? bibliographicCode : '"$bibliographicCode"'}, family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft)''';
+      : '''$NaturalLanguage(name: "$name", code: "$code", codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, bibliographicCode: ${bibliographicCode == null ? bibliographicCode : '"$bibliographicCode"'}, family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, scripts: ${scripts.toUniqueInstancesString()})''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

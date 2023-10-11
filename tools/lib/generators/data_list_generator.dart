@@ -26,7 +26,8 @@ class DataListGenerator {
       final itemString = item.toString(short: false);
       final className = "${package.classPrefix}$code";
       final superBody = itemString.replaceFirst(type, ": super");
-      final classBody = superBody.replaceAll(": [", ": const [");
+      final setsBody = superBody.replaceAll(": {", ": const {");
+      final classBody = setsBody.replaceAll(": [", ": const [");
 
       buffer
         ..write("""

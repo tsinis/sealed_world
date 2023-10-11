@@ -32,6 +32,7 @@ void main() => group("$NaturalLanguage", () {
             expect(element.namesNative, isNotEmpty);
             expect(element.code, isA<String>());
             expect(element.code, isNotEmpty);
+            expect(element.scripts, isNotEmpty);
           });
         }
       });
@@ -127,6 +128,7 @@ void main() => group("$NaturalLanguage", () {
             expect(element.isRightToLeft, decoded?.isRightToLeft);
             expect(element.namesNative, decoded?.namesNative);
             expect(element.code, decoded?.code);
+            expect(element.scripts, decoded?.scripts);
           });
         }
       });
@@ -278,6 +280,20 @@ void main() => group("$NaturalLanguage", () {
               namesNative: value.namesNative,
               code: value.code,
               bibliographicCode: value.codeShort,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "empty scripts",
+          () => expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+              scripts: const {},
             ),
             throwsA(isA<AssertionError>()),
           ),
