@@ -1,5 +1,7 @@
-import "../../../sealed_languages.dart";
+import "../../model/language/language.dart";
+import "../../model/script/writing_system.dart";
 import "../../model/translated_name.dart";
+import "../../typedefs/typedefs.dart";
 
 /// Provides extension methods for [TranslatedName] class.
 /// {@template submodels_class_extension}

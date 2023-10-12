@@ -3,6 +3,7 @@ include: ../packages/analysis_options.yaml
 linter:
   rules:
     public_member_api_docs: false
+    curly_braces_in_flow_control_structures: false
 
 dart_code_metrics:
   rules:

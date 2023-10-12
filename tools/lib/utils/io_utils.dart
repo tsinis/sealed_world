@@ -24,8 +24,24 @@ final class IoUtils {
     return destinationFile;
   }
 
-  File writeContentToFile(String filePath, StringBuffer buffer) =>
-      File(filePath)..writeAsStringSync(buffer.toString());
+  Directory createDirectory(String path) {
+    final directory = Directory(path);
+    if (!directory.existsSync()) directory.createSync(recursive: true);
+
+    return directory;
+  }
+
+  File writeContentToFile(String filePath, StringBuffer buffer) {
+    final content = buffer.toString();
+    final file = File(filePath);
+    if (!file.existsSync()) return file..writeAsStringSync(content);
+    file
+      ..deleteSync(recursive: true)
+      ..createSync(recursive: true)
+      ..writeAsStringSync(content);
+
+    return file;
+  }
 
   void deleteFile(File file) =>
       file.existsSync() ? file.deleteSync(recursive: true) : null;
