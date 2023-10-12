@@ -2,6 +2,7 @@ import "../helpers/extensions/translated_name_extension.dart";
 import "../interfaces/json_encodable.dart";
 import "../interfaces/named.dart";
 import "language/language.dart";
+import "script/writing_system.dart";
 
 /// A class representing a translated name of a country or region.
 ///
@@ -20,6 +21,7 @@ class TranslatedName implements Named, JsonEncodable<TranslatedName> {
     required this.name,
     this.fullName,
     this.countryCode,
+    this.script,
   })  : assert(name.length > 0, "`name` should not be empty!"),
         assert(
           fullName == null || fullName.length > 0,
@@ -44,10 +46,13 @@ class TranslatedName implements Named, JsonEncodable<TranslatedName> {
   @override
   final String name;
 
+  /// Represents the writing system (script) of the translation.
+  final Script? script;
+
   @override
   String toString({bool short = true}) => short
-      ? '''$TranslatedName(${language.runtimeType}(), name: "$name", fullName: ${fullName == null ? fullName : '"$fullName"'}, countryCode: ${countryCode == null ? countryCode : '"$countryCode"'})'''
-      : '''$TranslatedName($language, name: "$name", fullName: ${fullName == null ? fullName : '"$fullName"'}, countryCode: ${countryCode == null ? countryCode : '"$countryCode"'})''';
+      ? '''$TranslatedName(${language.runtimeType}(), name: "$name", fullName: ${fullName == null ? fullName : '"$fullName"'}, countryCode: ${countryCode == null ? countryCode : '"$countryCode"'}, script: ${script == null ? script : '${script?.runtimeType}()'})'''
+      : '''$TranslatedName($language, name: "$name", fullName: ${fullName == null ? fullName : '"$fullName"'}, countryCode: ${countryCode == null ? countryCode : '"$countryCode"'}, script: $script)''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

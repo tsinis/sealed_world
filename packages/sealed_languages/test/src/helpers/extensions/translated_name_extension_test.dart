@@ -1,19 +1,30 @@
-import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/helpers/extensions/translated_name_extension.dart";
+import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
 void main() => group("TranslatedNameExtension", () {
       const string = "1";
-      const value = TranslatedName(LangEng(), name: string, fullName: string);
+      final value = TranslatedName(
+        NaturalLanguage.list.last,
+        name: string,
+        fullName: string,
+      );
 
       group("copyWith", () {
         test("with non-null values", () {
-          final copy = value.copyWith(language: const LangSlv());
-          expect(copy.language, const LangSlv());
+          final copy = value.copyWith(
+            language: NaturalLanguage.list.first,
+            script: Script.list.first,
+          );
+          expect(copy.language, NaturalLanguage.list.first);
+          expect(value.language, NaturalLanguage.list.last);
           expect(copy.name, value.name);
           expect(copy.fullName, value.fullName);
           expect(copy.countryCode, value.countryCode);
+          expect(copy.script, Script.list.first);
+          expect(value.script, isNull);
         });
 
         test("with null values", () {
@@ -22,6 +33,7 @@ void main() => group("TranslatedNameExtension", () {
           expect(copy.name, value.name);
           expect(copy.fullName, value.fullName);
           expect(copy.countryCode, value.countryCode);
+          expect(copy.script, value.script);
         });
       });
     });

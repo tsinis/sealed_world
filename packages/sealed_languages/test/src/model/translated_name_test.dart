@@ -1,26 +1,29 @@
-import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/extensions/translated_name_extension.dart";
+import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
 void main() => group("$TranslatedName", () {
       const string = "1";
-      const value = TranslatedName(
-        LangEng(),
+      final value = TranslatedName(
+        NaturalLanguage.list.first,
         name: string,
         fullName: string,
+        script: Script.list.last,
       );
 
       group("equality", () {
-        const other = TranslatedName(
-          LangFra(),
+        final other = TranslatedName(
+          NaturalLanguage.list.last,
           name: string,
           fullName: string,
           countryCode: string,
         );
         final third = value.copyWith(countryCode: string);
-        final array = {value, other, third};
+        final fourth = value.copyWith(script: Script.list.first);
+        final array = {value, other, third, fourth};
 
         test("basic", () {
           expect(value, isNot(equals(other)));
@@ -80,7 +83,7 @@ void main() => group("$TranslatedName", () {
           () {
             expect(
               () => TranslatedName(
-                const LangEng(),
+                NaturalLanguage.list.first,
                 name: value.name,
                 fullName: "",
               ),
@@ -102,7 +105,7 @@ void main() => group("$TranslatedName", () {
           () {
             expect(
               () => TranslatedName(
-                const LangEng(),
+                NaturalLanguage.list.first,
                 name: "",
                 fullName: value.fullName,
               ),

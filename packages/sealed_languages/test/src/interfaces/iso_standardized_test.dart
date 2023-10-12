@@ -1,4 +1,4 @@
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:test/test.dart";
 
 final class _IsoStandardizedTest implements IsoStandardized {
