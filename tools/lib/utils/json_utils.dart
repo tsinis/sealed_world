@@ -14,7 +14,7 @@ Future<void> main() async {
   final exports = await const JsonUtils("json/data").parseData(); // TODO!
   final dataType = package.dataRepresent;
   final buffer = StringBuffer(
-    "library ${dataType}_${JsonUtils.translation};\n".toLowerCase(),
+    "library sealed_${dataType}_${JsonUtils.translation};\n".toLowerCase(),
   );
   for (final export in exports) buffer.writeln('export "$export";');
   final filename = "$dataType ${JsonUtils.translation}".toSnakeCase();

@@ -17,7 +17,7 @@ extension PackageAssociationsExtension on Package {
       "";
 
   String get dataRepresent =>
-      whenConstOrNull(sealedLanguages: "language") ?? "";
+      whenConstOrNull(sealedLanguages: "$Language".toLowerCase()) ?? "";
 
   String get isoCodeAssociated =>
       whenConstOrNull(sealedLanguages: "639-2") ?? "";

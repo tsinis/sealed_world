@@ -1,5 +1,5 @@
 /// Provides language translations for sealed_languages.
-library language_translations;
+library sealed_language_translations;
 
 export "aar_language_translations.dart";
 export "abk_language_translations.dart";
