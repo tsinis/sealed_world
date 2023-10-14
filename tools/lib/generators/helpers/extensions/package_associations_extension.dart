@@ -25,10 +25,9 @@ extension PackageAssociationsExtension on Package {
   String get isoCodeOtherAssociated =>
       whenConstOrNull(sealedLanguages: "639-1") ?? "";
 
-  String get umpirskyRepoUrl {
-    const baseUrl = "https://github.com/umpirsky/";
-    final repoName = whenConstOrNull(sealedLanguages: "language-list") ?? "";
+  IsoStandardized instanceFromCode(String code) =>
+      whenConstOrNull(sealedLanguages: NaturalLanguage.fromCode(code))!;
 
-    return baseUrl + repoName;
-  }
+  String get umpirskyRepoUrl =>
+      "https://github.com/umpirsky/$dataRepresent-list";
 }

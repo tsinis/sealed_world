@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, avoid-non-ascii-symbols
 
 import "dart:convert";
 
@@ -19,9 +19,10 @@ Future<void> main() async {
   final buffer = StringBuffer(
     """
 // This library translations are based on the data from the
-// https://github.com/umpirsky/language-list project
+// ${package.umpirskyRepoUrl} project (from Saša Stamenković),
 // which is licensed under the  MIT License.
 
+/// Provides $dataType translations for ${package.dirName}.
 """,
   )..write(
       "library sealed_${dataType}_${JsonUtils.translation};\n".toLowerCase(),
@@ -47,13 +48,15 @@ final class JsonUtils {
   Future<List<String>> parseData([
     Package package = Package.sealedLanguages,
   ]) async {
+    final stopwatch = Stopwatch()..start();
     final paths = <String>[];
     final io = IoUtils()..createDirectory(translation);
+    // TODO: Extract currency, country too.
     final englishData = _extractLanguage(package, eng.codeShort.toLowerCase());
     final directories = dataDirectory.listSync()
       ..sort((a, b) => basename(a.path).compareTo(basename(b.path)));
     for (final item in package.dataList) {
-      final itemFromCode = NaturalLanguage.fromCode(item.code);
+      final itemFromCode = package.instanceFromCode(item.code);
       print("\nExtracting translations for: ${itemFromCode.name}\n");
       final english = englishData[itemFromCode];
       final translations = <TranslatedName>{};
@@ -62,7 +65,7 @@ final class JsonUtils {
         final dirName = basename(dir.path);
         final translation = _extractLanguage(package, dirName);
         final locale = _extractLocaleCode(dirName);
-        final lang = convertCodeToLang(locale.languageCode);
+        final lang = _convertCodeToLang(locale.languageCode);
         final translationForLang = translation[itemFromCode];
         if (lang == null || translationForLang == null) continue;
         if (translationForLang == english) continue;
@@ -92,7 +95,7 @@ final class JsonUtils {
         """
 import "package:sealed_languages/sealed_languages.dart";
 
-${_dartDoc(translations, itemFromCode.name, dataType)}.
+${_dartDoc(translations, itemFromCode.name.toString(), dataType)}.
 const ${varFileName.toCamelCase()} = [
 """,
       );
@@ -109,6 +112,9 @@ const ${varFileName.toCamelCase()} = [
     }
 
     await _dart.fixFormat();
+
+    stopwatch.stop();
+    print("\n🎉 Done! Generation process took ${stopwatch.elapsed}");
 
     return paths;
   }
@@ -142,7 +148,7 @@ const ${varFileName.toCamelCase()} = [
   Map<NaturalLanguage, String> _convertLanguageMap(Map<String, Object?> json) {
     final sortedMap = _sortMapByKeyLength(json);
     final nullMap = sortedMap.map((code, translation) {
-      final language = convertCodeToLang(code);
+      final language = _convertCodeToLang(code);
 
       return MapEntry(language, translation?.toString());
     })
@@ -151,7 +157,7 @@ const ${varFileName.toCamelCase()} = [
     return Map<NaturalLanguage, String>.unmodifiable(nullMap);
   }
 
-  static NaturalLanguage? convertCodeToLang(String code) {
+  NaturalLanguage? _convertCodeToLang(String code) {
     final languageCode = _extractLocaleCode(code).languageCode;
     final language = NaturalLanguage.maybeFromValue(
       languageCode,
@@ -165,7 +171,7 @@ const ${varFileName.toCamelCase()} = [
     return language;
   }
 
-  static ({String languageCode, String? countryCode, String? scriptCode})
+  ({String languageCode, String? countryCode, String? scriptCode})
       _extractLocaleCode(String code) {
     final regex = RegExp("^([A-Z]+)(?:_([A-Z]+))?(?:_([A-Z]+))?");
 

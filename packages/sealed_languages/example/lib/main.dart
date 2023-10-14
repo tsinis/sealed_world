@@ -34,9 +34,26 @@ void main() {
 
   print(NaturalLanguage.list.length); // Prints: "184".
 
+  /// Translations:
+
+  // Prints Slovak translations of all available languages.
   for (final language in NaturalLanguage.list) {
     print(
-      "Czech name of ${language.name}: ${language.maybeTranslation(const LangCes())?.name}",
+      """Slovak name of ${language.name}: ${language.maybeTranslation(const LangSlk())?.name}""",
     );
   }
+
+  // Distinguishes country code in translations.
+  print(maybeCzech?.maybeTranslation(const LangPor())?.name); // Prints tcheco.
+  print(
+    maybeCzech?.maybeTranslation(const LangPor(), countryCode: "PT")?.name,
+  ); // Prints "checo".
+
+  // Distinguishes script in translations.
+  print(maybeCzech?.maybeTranslation(const LangSrp())?.name); // Prints "чешки".
+  print(
+    maybeCzech
+        ?.maybeTranslation(const LangSrp(), script: const ScriptLatn())
+        ?.name, // Prints "češki".
+  );
 }
