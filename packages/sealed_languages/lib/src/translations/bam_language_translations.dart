@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 80 translations for a Bambara language:
+/// Provides 81 translations for a Bambara language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -36,6 +36,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -162,4 +163,7 @@ const bamLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Bambara"),
   TranslatedName(LangZho(), name: "班巴拉文"),
   TranslatedName(LangZul(), name: "isi-Bambara"),
+
+  /// Added manually:
+  TranslatedName(LangGle(), name: "Bambairis"),
 ];

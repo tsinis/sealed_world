@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 60 translations for a Volapük language:
+/// Provides 62 translations for a Volapük language:
 /// - Amharic
 /// - Arabic
 /// - Azerbaijani
@@ -25,7 +25,9 @@ import "../model/translated_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
 /// - Indonesian
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -122,4 +124,8 @@ const volLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Volapük"),
   TranslatedName(LangYid(), name: "וואלאַפּוק"),
   TranslatedName(LangZho(), name: "沃拉普克文"),
+
+  /// Added manually:
+  TranslatedName(LangIsl(), name: "volapük"),
+  TranslatedName(LangGle(), name: "Volapük"),
 ];

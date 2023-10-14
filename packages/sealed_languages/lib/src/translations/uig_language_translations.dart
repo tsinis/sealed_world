@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Uyghur language:
+/// Provides 93 translations for a Uyghur language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -45,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Italian
 /// - Japanese
 /// - Kannada
+/// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
@@ -184,4 +185,7 @@ const uigLanguageTranslations = [
   TranslatedName(LangZho(), name: "维吾尔文"),
   TranslatedName(LangZho(), name: "維吾爾文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Uighur"),
+
+  /// Added manually:
+  TranslatedName(LangKas(), name: "اُیغُر"),
 ];

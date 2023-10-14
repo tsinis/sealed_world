@@ -2,11 +2,12 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 63 translations for a Fula (Fulah/Pulaar/Pular) language:
+/// Provides 64 translations for a Fula (Fulah/Pulaar/Pular) language:
 /// - Arabic
 /// - Azerbaijani
 /// - Bengali (Bangla)
 /// - Bosnian
+/// - Breton
 /// - Bulgarian
 /// - Catalan
 /// - Chinese
@@ -128,4 +129,7 @@ const fulLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Fulah"),
   TranslatedName(LangZho(), name: "夫拉文"),
   TranslatedName(LangZho(), name: "富拉文", script: ScriptHant()),
+
+  /// Added manually:
+  TranslatedName(LangBre(), name: "fula"),
 ];

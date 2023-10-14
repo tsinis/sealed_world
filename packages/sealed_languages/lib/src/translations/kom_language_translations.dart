@@ -2,11 +2,12 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 61 translations for a Komi language:
+/// Provides 62 translations for a Komi language:
 /// - Arabic
 /// - Azerbaijani
 /// - Bengali (Bangla)
 /// - Bosnian
+/// - Breton
 /// - Bulgarian
 /// - Catalan
 /// - Chinese
@@ -125,4 +126,7 @@ const komLanguageTranslations = [
   TranslatedName(LangUkr(), name: "комі"),
   TranslatedName(LangVie(), name: "Tiếng Komi"),
   TranslatedName(LangZho(), name: "科米文"),
+
+  /// Added manually:
+  TranslatedName(LangBre(), name: "komieg"),
 ];

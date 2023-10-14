@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 66 translations for a Interlingue language:
+/// Provides 67 translations for a Interlingue language:
 /// - Amharic
 /// - Arabic
 /// - Azerbaijani
@@ -30,6 +30,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -133,4 +134,7 @@ const ileLanguageTranslations = [
   TranslatedName(LangYor(), name: "Iru Èdè"),
   TranslatedName(LangZho(), name: "国际文字（E）"),
   TranslatedName(LangZho(), name: "國際文（E）", script: ScriptHant()),
+
+  /// Added manually:
+  TranslatedName(LangGle(), name: "Interlingue"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 56 translations for a Ndonga language:
+/// Provides 57 translations for a Ndonga language:
 /// - Arabic
 /// - Azerbaijani
 /// - Bengali (Bangla)
@@ -48,6 +48,7 @@ import "../model/translated_name.dart";
 /// - Russian
 /// - Serbian
 /// - Slovak
+/// - Slovene
 /// - Spanish
 /// - Swedish
 /// - Tamil
@@ -114,4 +115,7 @@ const ndoLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Ndonga"),
   TranslatedName(LangZho(), name: "恩东加文"),
   TranslatedName(LangZho(), name: "恩東加文", script: ScriptHant()),
+
+  /// Added manually:
+  TranslatedName(LangSlv(), name: "ndongščina"),
 ];

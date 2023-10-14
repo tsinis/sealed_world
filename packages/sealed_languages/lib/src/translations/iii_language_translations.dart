@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 78 translations for a Nuosu language:
+/// Provides 79 translations for a Nuosu language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -35,6 +35,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -158,4 +159,7 @@ const iiiLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Di Tứ Xuyên"),
   TranslatedName(LangZho(), name: "四川彝文"),
   TranslatedName(LangZul(), name: "isi-Sichuan Yi"),
+
+  /// Added manually:
+  TranslatedName(LangGle(), name: "Nuosu"),
 ];

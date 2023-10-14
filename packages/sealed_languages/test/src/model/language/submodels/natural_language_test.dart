@@ -195,7 +195,7 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("translations", () {
-        const min = 56;
+        const min = 57;
         test("every language should have at least $min translations", () {
           for (final translated in NaturalLanguage.list) {
             expect(translated.translations.length, greaterThanOrEqualTo(min));

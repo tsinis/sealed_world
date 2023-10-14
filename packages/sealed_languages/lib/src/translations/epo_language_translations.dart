@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 86 translations for a Esperanto language:
+/// Provides 87 translations for a Esperanto language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -37,6 +37,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -173,4 +174,7 @@ const epoLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Esperanto"),
   TranslatedName(LangZho(), name: "世界文"),
   TranslatedName(LangZul(), name: "isi-Esperanto"),
+
+  /// Added manually:
+  TranslatedName(LangGle(), name: "Esperanto"),
 ];

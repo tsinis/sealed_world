@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 59 translations for a Ido language:
+/// Provides 60 translations for a Ido language:
 /// - Arabic
 /// - Azerbaijani
 /// - Bengali (Bangla)
@@ -26,6 +26,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -121,4 +122,7 @@ const idoLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Ido"),
   TranslatedName(LangYid(), name: "אידא"),
   TranslatedName(LangZho(), name: "伊多文"),
+
+  /// Added manually:
+  TranslatedName(LangGle(), name: "Ido"),
 ];

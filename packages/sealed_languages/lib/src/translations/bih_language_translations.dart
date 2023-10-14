@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 63 translations for a Bihari language:
+/// Provides 64 translations for a Bihari language:
 /// - (Eastern) Punjabi
 /// - Arabic
 /// - Azerbaijani
@@ -27,6 +27,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -127,4 +128,7 @@ const bihLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Bhojpuri"),
   TranslatedName(LangZho(), name: "博杰普尔文"),
   TranslatedName(LangZho(), name: "博傑普爾文", script: ScriptHant()),
+
+  /// Added manually:
+  TranslatedName(LangGle(), name: "Bihairis"),
 ];

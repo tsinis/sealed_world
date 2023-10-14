@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 78 translations for a Oromo language:
+/// Provides 79 translations for a Oromo language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -12,6 +12,7 @@ import "../model/translated_name.dart";
 /// - Basque
 /// - Bengali (Bangla)
 /// - Bosnian
+/// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
@@ -157,4 +158,7 @@ const ormLanguageTranslations = [
   TranslatedName(LangZho(), name: "奥洛莫文"),
   TranslatedName(LangZho(), name: "奧羅莫文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Oromo"),
+
+  /// Added manually:
+  TranslatedName(LangBre(), name: "oromoeg"),
 ];

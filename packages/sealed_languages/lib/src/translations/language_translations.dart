@@ -5,6 +5,8 @@
 /// Provides language translations for sealed_languages.
 library sealed_language_translations;
 
+import "../data/natural_languages.data.dart";
+
 export "aar_language_translations.dart";
 export "abk_language_translations.dart";
 export "afr_language_translations.dart";
@@ -189,3 +191,71 @@ export "yor_language_translations.dart";
 export "zha_language_translations.dart";
 export "zho_language_translations.dart";
 export "zul_language_translations.dart";
+
+/// This is a comprehensive list of languages that ensure the availability of
+/// translations for every language in the natural language list.
+///
+/// It is important to note that while other languages may not be included in
+/// this list, they may still have translations available for most common
+/// languages, but there may be some missing translations for rarer languages
+/// such as (Old) Church Slavonic, Volapük, etc. Every language contains more
+/// than 56 translations of it's name to other languages.
+///
+/// This a small (as for now) brother of [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html).
+const kSealedLanguagesSupportedLanguages = [
+  LangPor(),
+  LangPol(),
+  LangOri(),
+  LangRoh(),
+  LangRon(),
+  LangNor(),
+  LangRus(),
+  LangNob(),
+  LangNno(),
+  LangMkd(),
+  LangSlk(),
+  LangSlv(),
+  LangMar(),
+  LangMal(),
+  LangLit(),
+  LangLav(),
+  LangKor(),
+  LangKas(),
+  LangSpa(),
+  LangKan(),
+  LangJpn(),
+  LangSrp(),
+  LangIta(),
+  LangIsl(),
+  LangHrv(),
+  LangSwe(),
+  LangHun(),
+  LangTam(),
+  LangHin(),
+  LangTel(),
+  LangHeb(),
+  LangGuj(),
+  LangTha(),
+  LangGle(),
+  LangTon(),
+  LangFra(),
+  LangFin(),
+  LangFas(),
+  LangEst(),
+  LangEng(),
+  LangUig(),
+  LangUkr(),
+  LangEll(),
+  LangDan(),
+  LangCes(),
+  LangVie(),
+  LangCat(),
+  LangBul(),
+  LangBre(),
+  LangBos(),
+  LangBen(),
+  LangAze(),
+  LangAra(),
+  LangZho(),
+  LangLao(),
+];

@@ -1,4 +1,5 @@
 import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_languages/src/translations/language_translations.dart";
 import "package:test/test.dart";
 
 void main() => group("TranslatedExtension", () {
@@ -114,6 +115,10 @@ void main() => group("TranslatedExtension", () {
 
         final sortedList = map.entries.toList(growable: false)
           ..sort((a, b) => a.value.compareTo(b.value));
-        final sortedMap = Map.fromEntries(sortedList);
+        final complete = sortedList
+            .where((item) => item.value == NaturalLanguage.list.length);
+        final sortedMap = Map.fromEntries(complete);
+
+        expect(sortedMap.keys, kSealedLanguagesSupportedLanguages);
       });
     });

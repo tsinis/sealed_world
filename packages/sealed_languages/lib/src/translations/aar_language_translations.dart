@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 63 translations for a Afar language:
+/// Provides 64 translations for a Afar language:
 /// - Amharic
 /// - Arabic
 /// - Azerbaijani
@@ -28,6 +28,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Irish
+/// - Icelandic
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -128,4 +129,7 @@ const aarLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Afar"),
   TranslatedName(LangYid(), name: "אַפֿאַר"),
   TranslatedName(LangZho(), name: "阿法文"),
+
+  /// Added manually:
+  TranslatedName(LangIsl(), name: "afaríska"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 65 translations for a Limburgish (Limburgan/Limburger) language:
+/// Provides 66 translations for a Limburgish (Limburgan/Limburger) language:
 /// - Arabic
 /// - Azerbaijani
 /// - Bengali (Bangla)
@@ -28,6 +28,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -131,4 +132,7 @@ const limLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Limburg"),
   TranslatedName(LangZho(), name: "淋布尔吉文"),
   TranslatedName(LangZho(), name: "林堡文", script: ScriptHant()),
+
+  /// Added manually:
+  TranslatedName(LangGle(), name: "Liombuirgis"),
 ];
