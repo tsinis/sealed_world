@@ -66,6 +66,12 @@ class Script extends WritingSystem
         (script) => script.name.toUpperCase() == name.trim().toUpperCase(),
       );
 
+  /// The regular length of the ISO code (4). However, it's important to note
+  /// that this length is not standardized for all ISO codes. Typically it is
+  /// three characters. Please refer to [IsoStandardized.codeLength] for more
+  /// information.
+  static const codeLength = 4;
+
   /// A four-character string representing the ISO 15924 code for the script.
   @override
   final String code;
