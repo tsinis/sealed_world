@@ -2,14 +2,17 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Chinese language:
+/// Provides 116 translations for a Chinese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Azerbaijani
+/// - Bambara
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -20,6 +23,7 @@ import "../model/translated_name.dart";
 /// - Catalan
 /// - Chinese
 /// - Croatian
+/// - Czech
 /// - Danish
 /// - Dutch
 /// - Dzongkha
@@ -27,17 +31,22 @@ import "../model/translated_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Irish
 /// - Italian
@@ -46,35 +55,47 @@ import "../model/translated_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
+/// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
+/// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
 /// - Oriya
-/// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sango
+/// - Serbian
+/// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -84,107 +105,131 @@ import "../model/translated_name.dart";
 /// - Tibetan Standard
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const zhoLanguageTranslations = [
-  TranslatedName(LangEng(), name: "Traditional Chinese"),
+  TranslatedName(LangEng(), name: "Chinese"),
+  TranslatedName(LangAfr(), name: "Sjinees"),
+  TranslatedName(LangAka(), name: "Kyaena kasa"),
   TranslatedName(LangAmh(), name: "ቻይንኛ"),
-  TranslatedName(LangAra(), name: "الصينية المبسطة"),
-  TranslatedName(LangAze(), name: "sadələşmiş çin"),
+  TranslatedName(LangAra(), name: "الصينية"),
+  TranslatedName(LangAze(), name: "çin"),
   TranslatedName(LangAze(), name: "чинҹә", script: ScriptCyrl()),
-  TranslatedName(LangBel(), name: "традыцыйная кітайская"),
-  TranslatedName(LangBul(), name: "традиционен китайски"),
-  TranslatedName(LangBen(), name: "সরলীকৃত চীনা"),
+  TranslatedName(LangBel(), name: "кітайская"),
+  TranslatedName(LangBul(), name: "китайски"),
+  TranslatedName(LangBam(), name: "siniwakan"),
+  TranslatedName(LangBen(), name: "চীনা"),
   TranslatedName(LangBod(), name: "རྒྱ་སྐད་"),
-  TranslatedName(LangBre(), name: "sinaeg hengounel"),
-  TranslatedName(LangBos(), name: "kineski (tradicionalni)"),
-  TranslatedName(
-    LangBos(),
-    name: "кинески (традиционални)",
-    script: ScriptCyrl(),
-  ),
-  TranslatedName(LangCat(), name: "xinès tradicional"),
-  TranslatedName(LangCym(), name: "Tsieineeg Traddodiadol"),
-  TranslatedName(LangDan(), name: "traditionelt kinesisk"),
-  TranslatedName(LangDeu(), name: "Chinesisch (vereinfacht)"),
-  TranslatedName(LangDzo(), name: "སྔ་དུས་ཀྱི་རྒྱ་མི་ཁ"),
-  TranslatedName(LangEwe(), name: "tsainagbe"),
-  TranslatedName(LangEll(), name: "Παραδοσιακά Κινεζικά"),
-  TranslatedName(LangEpo(), name: "ĉina tradicia"),
-  TranslatedName(LangSpa(), name: "chino tradicional"),
-  TranslatedName(LangEst(), name: "hiina (traditsiooniline)"),
-  TranslatedName(LangEus(), name: "txinera tradizionala"),
-  TranslatedName(LangFas(), name: "چینی سنتی"),
-  TranslatedName(LangFin(), name: "yksinkertaistettu kiina"),
-  TranslatedName(LangFra(), name: "chinois traditionnel"),
-  TranslatedName(LangFry(), name: "Tradisjoneel Sineesk"),
-  TranslatedName(LangGle(), name: "Sínis Thraidisiúnta"),
-  TranslatedName(LangGla(), name: "Sìnis Thradaiseanta"),
-  TranslatedName(LangGlg(), name: "chinés tradicional"),
-  TranslatedName(LangGuj(), name: "સરળીકૃત ચાઇનીઝ"),
-  TranslatedName(LangHeb(), name: "סינית מפושטת"),
-  TranslatedName(LangHin(), name: "सरलीकृत चीनी"),
-  TranslatedName(LangHrv(), name: "kineski (tradicionalni)"),
+  TranslatedName(LangBre(), name: "sinaeg"),
+  TranslatedName(LangBos(), name: "kineski"),
+  TranslatedName(LangBos(), name: "кинески", script: ScriptCyrl()),
+  TranslatedName(LangCat(), name: "xinès"),
+  TranslatedName(LangCes(), name: "čínština"),
+  TranslatedName(LangCym(), name: "Tsieineeg"),
+  TranslatedName(LangDan(), name: "kinesisk"),
+  TranslatedName(LangDeu(), name: "Chinesisch"),
+  TranslatedName(LangDzo(), name: "རྒྱ་མི་ཁ"),
+  TranslatedName(LangEwe(), name: "kinagbe"),
+  TranslatedName(LangEll(), name: "Κινεζικά"),
+  TranslatedName(LangEpo(), name: "ĉina"),
+  TranslatedName(LangSpa(), name: "chino"),
+  TranslatedName(LangEst(), name: "hiina"),
+  TranslatedName(LangEus(), name: "txinera"),
+  TranslatedName(LangFas(), name: "چینی"),
+  TranslatedName(LangFul(), name: "Sinuwaare"),
+  TranslatedName(LangFin(), name: "kiina"),
+  TranslatedName(LangFao(), name: "kinesiskt"),
+  TranslatedName(LangFra(), name: "chinois"),
+  TranslatedName(LangFry(), name: "Sineesk"),
+  TranslatedName(LangGle(), name: "Sínis"),
+  TranslatedName(LangGla(), name: "Sìnis"),
+  TranslatedName(LangGlg(), name: "chinés"),
+  TranslatedName(LangGuj(), name: "ચાઇનીઝ"),
+  TranslatedName(LangHau(), name: "Harshen Sin"),
+  TranslatedName(LangHeb(), name: "סינית"),
+  TranslatedName(LangHin(), name: "चीनी"),
+  TranslatedName(LangHrv(), name: "kineski"),
   TranslatedName(LangHun(), name: "kínai"),
-  TranslatedName(LangHye(), name: "պարզեցված չինարեն"),
-  TranslatedName(LangInd(), name: "China (Aksara Tradisional)"),
+  TranslatedName(LangHye(), name: "չինարեն"),
+  TranslatedName(LangInd(), name: "China"),
+  TranslatedName(LangIbo(), name: "Mandarịịnị"),
   TranslatedName(LangIii(), name: "ꍏꇩꉙ"),
-  TranslatedName(LangIsl(), name: "kínverska (hefðbundin)"),
-  TranslatedName(LangIta(), name: "cinese tradizionale"),
-  TranslatedName(LangJpn(), name: "繁体中国語"),
+  TranslatedName(LangIsl(), name: "kínverska"),
+  TranslatedName(LangIta(), name: "cinese"),
+  TranslatedName(LangJpn(), name: "中国語"),
   TranslatedName(LangKat(), name: "ჩინური"),
+  TranslatedName(LangKik(), name: "Kĩcaina"),
   TranslatedName(LangKaz(), name: "қытай тілі"),
-  TranslatedName(LangKhm(), name: "ចិន​អក្សរ​ពេញ"),
-  TranslatedName(LangKan(), name: "ಸಾಂಪ್ರದಾಯಿಕ ಚೈನೀಸ್"),
-  TranslatedName(LangKor(), name: "중국어(번체)"),
-  TranslatedName(LangKas(), name: "سیٚود چیٖنی"),
-  TranslatedName(LangKir(), name: "кытайча (салттуу)"),
-  TranslatedName(LangLtz(), name: "Chinesesch (vereinfacht)"),
-  TranslatedName(LangLao(), name: "ຈີນແບບຮຽບງ່າຍ"),
-  TranslatedName(LangLit(), name: "tradicinė kinų"),
-  TranslatedName(LangLav(), name: "ķīniešu vienkāršotā"),
-  TranslatedName(LangMkd(), name: "традиционален кинески"),
+  TranslatedName(LangKhm(), name: "ចិន"),
+  TranslatedName(LangKan(), name: "ಚೈನೀಸ್"),
+  TranslatedName(LangKor(), name: "중국어"),
+  TranslatedName(LangKas(), name: "چیٖنی"),
+  TranslatedName(LangKir(), name: "кытайча"),
+  TranslatedName(LangLtz(), name: "Chinesesch"),
+  TranslatedName(LangLug(), name: "Lucayina"),
+  TranslatedName(LangLin(), name: "lisinwa"),
+  TranslatedName(LangLao(), name: "ຈີນ"),
+  TranslatedName(LangLit(), name: "kinų"),
+  TranslatedName(LangLub(), name: "shinɛ"),
+  TranslatedName(LangLav(), name: "ķīniešu"),
+  TranslatedName(LangMlg(), name: "Sinoa, Mandarin"),
+  TranslatedName(LangMkd(), name: "кинески"),
   TranslatedName(LangMal(), name: "ചൈനീസ്"),
   TranslatedName(LangMon(), name: "хятад"),
-  TranslatedName(LangMar(), name: "सरलीकृत चीनी"),
-  TranslatedName(LangMsa(), name: "Cina Tradisional"),
-  TranslatedName(LangMya(), name: "ရှေးရိုးစဉ်လာ တရုတ်"),
-  TranslatedName(LangNob(), name: "tradisjonell kinesisk"),
-  TranslatedName(LangNep(), name: "सरलिकृत चिनियाँ"),
-  TranslatedName(LangNld(), name: "vereenvoudigd Chinees"),
-  TranslatedName(LangNno(), name: "tradisjonell kinesisk"),
-  TranslatedName(LangNor(), name: "tradisjonell kinesisk"),
-  TranslatedName(LangOrm(), name: "Chinese"),
-  TranslatedName(LangOri(), name: "ସରଳିକରଣ ଚାଇନୀଜ୍"),
-  TranslatedName(LangOss(), name: "традицион китайаг"),
-  TranslatedName(LangPan(), name: "ਰਵਾਇਤੀ ਚੀਨੀ"),
-  TranslatedName(LangPol(), name: "chiński (uproszczony)"),
-  TranslatedName(LangPor(), name: "chinês tradicional"),
-  TranslatedName(LangRoh(), name: "chinais tradiziunal"),
-  TranslatedName(LangRon(), name: "chineză tradițională"),
-  TranslatedName(LangRus(), name: "упрощенный китайский"),
+  TranslatedName(LangMar(), name: "चीनी"),
+  TranslatedName(LangMsa(), name: "Cina"),
+  TranslatedName(LangMlt(), name: "Ċiniż"),
+  TranslatedName(LangMya(), name: "တရုတ်"),
+  TranslatedName(LangNob(), name: "kinesisk"),
+  TranslatedName(LangNde(), name: "isi-China"),
+  TranslatedName(LangNep(), name: "चिनियाँ"),
+  TranslatedName(LangNld(), name: "Chinees"),
+  TranslatedName(LangNno(), name: "kinesisk"),
+  TranslatedName(LangNor(), name: "kinesisk"),
+  TranslatedName(LangOri(), name: "ଚାଇନୀଜ୍"),
+  TranslatedName(LangOss(), name: "китайаг"),
+  TranslatedName(LangPan(), name: "ਚੀਨੀ"),
+  TranslatedName(LangPol(), name: "chiński"),
+  TranslatedName(LangPus(), name: "چیني"),
+  TranslatedName(LangPor(), name: "chinês"),
+  TranslatedName(LangQue(), name: "Chino Simi"),
+  TranslatedName(LangRoh(), name: "chinais"),
+  TranslatedName(LangRun(), name: "Igishinwa"),
+  TranslatedName(LangRon(), name: "chineză"),
+  TranslatedName(LangRus(), name: "китайский"),
   TranslatedName(LangSme(), name: "kiinnágiella"),
-  TranslatedName(LangSin(), name: "සුළුකළ චීන"),
-  TranslatedName(LangSlk(), name: "čínština (zjednodušená)"),
-  TranslatedName(LangSlv(), name: "tradicionalna kitajščina"),
-  TranslatedName(LangSqi(), name: "kinezishte tradicionale"),
-  TranslatedName(LangSwe(), name: "traditionell kinesiska"),
-  TranslatedName(LangSwa(), name: "Simplified Chinese"),
-  TranslatedName(LangTam(), name: "பாரம்பரிய சீனம்"),
-  TranslatedName(LangTel(), name: "సాంప్రదాయక చైనీస్"),
-  TranslatedName(LangTha(), name: "จีนตัวย่อ"),
-  TranslatedName(LangTon(), name: "lea fakasiaina-tukufakaholo"),
-  TranslatedName(LangTur(), name: "Geleneksel Çince"),
-  TranslatedName(LangUig(), name: "مۇرەككەپ خەنچە"),
-  TranslatedName(LangUrd(), name: "روایتی چینی"),
+  TranslatedName(LangSag(), name: "Shinuäa"),
+  TranslatedName(LangSin(), name: "චීන"),
+  TranslatedName(LangSlk(), name: "čínština"),
+  TranslatedName(LangSlv(), name: "kitajščina"),
+  TranslatedName(LangSna(), name: "chiChinese"),
+  TranslatedName(LangSom(), name: "Jayniis"),
+  TranslatedName(LangSqi(), name: "kinezisht"),
+  TranslatedName(LangSrp(), name: "кинески"),
+  TranslatedName(LangSrp(), name: "kineski", script: ScriptLatn()),
+  TranslatedName(LangSwe(), name: "kinesiska"),
+  TranslatedName(LangSwa(), name: "Kichina"),
+  TranslatedName(LangTam(), name: "சீனம்"),
+  TranslatedName(LangTel(), name: "చైనీస్"),
+  TranslatedName(LangTha(), name: "จีน"),
+  TranslatedName(LangTon(), name: "lea fakasiaina"),
+  TranslatedName(LangTur(), name: "Çince"),
+  TranslatedName(LangUig(), name: "خەنچە"),
+  TranslatedName(LangUkr(), name: "китайська"),
+  TranslatedName(LangUrd(), name: "چینی"),
   TranslatedName(LangUzb(), name: "xitoycha"),
   TranslatedName(LangUzb(), name: "Хитойча", script: ScriptCyrl()),
+  TranslatedName(LangVie(), name: "Tiếng Trung"),
+  TranslatedName(LangYid(), name: "כינעזיש"),
+  TranslatedName(LangYor(), name: "Èdè Mandari"),
   TranslatedName(LangZho(), name: "中文"),
-  TranslatedName(LangZho(), name: "繁体中文", countryCode: "HK"),
-  TranslatedName(LangZho(), name: "簡體中文", script: ScriptHant()),
-  TranslatedName(LangZul(), name: "isi-Traditional Chinese"),
+  TranslatedName(LangZul(), name: "isi-Chinese"),
 ];

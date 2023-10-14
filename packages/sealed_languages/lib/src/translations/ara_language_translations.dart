@@ -2,16 +2,19 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 91 translations for a Arabic language:
+/// Provides 117 translations for a Arabic language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Azerbaijani
+/// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
@@ -25,18 +28,25 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
+/// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Irish
 /// - Italian
@@ -45,32 +55,48 @@ import "../model/translated_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
+/// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
+/// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
+/// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Norwegian Nynorsk
+/// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
 /// - Serbian
+/// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -88,101 +114,125 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const araLanguageTranslations = [
-  TranslatedName(LangEng(), name: "Modern Standard Arabic"),
-  TranslatedName(LangAfr(), name: "Moderne Standaard Arabies"),
-  TranslatedName(LangAmh(), name: "ዘመናዊ መደበኛ ዓረብኛ"),
-  TranslatedName(LangAra(), name: "العربية الرسمية الحديثة"),
-  TranslatedName(LangAze(), name: "Modern Standart Ərəbcə"),
-  TranslatedName(LangBul(), name: "съвременен стандартен арабски"),
+  TranslatedName(LangEng(), name: "Arabic"),
+  TranslatedName(LangAfr(), name: "Arabies"),
+  TranslatedName(LangAka(), name: "Arabik"),
+  TranslatedName(LangAmh(), name: "ዓረብኛ"),
+  TranslatedName(LangAra(), name: "العربية"),
+  TranslatedName(LangAze(), name: "ərəb"),
+  TranslatedName(LangBel(), name: "арабская"),
+  TranslatedName(LangBul(), name: "арабски"),
+  TranslatedName(LangBam(), name: "larabukan"),
   TranslatedName(LangBen(), name: "আরবী"),
-  TranslatedName(LangBre(), name: "arabeg modern"),
-  TranslatedName(LangBos(), name: "moderni standardni arapski"),
-  TranslatedName(LangCat(), name: "àrab estàndard modern"),
-  TranslatedName(LangCes(), name: "arabština (moderní standardní)"),
-  TranslatedName(LangCym(), name: "Arabeg Modern Safonol"),
-  TranslatedName(LangDan(), name: "moderne standardarabisk"),
-  TranslatedName(LangDeu(), name: "Modernes Hocharabisch"),
+  TranslatedName(LangBre(), name: "arabeg"),
+  TranslatedName(LangBos(), name: "arapski"),
+  TranslatedName(LangBos(), name: "арапски", script: ScriptCyrl()),
+  TranslatedName(LangCat(), name: "àrab"),
+  TranslatedName(LangCes(), name: "arabština"),
+  TranslatedName(LangCym(), name: "Arabeg"),
+  TranslatedName(LangDan(), name: "arabisk"),
+  TranslatedName(LangDeu(), name: "Arabisch"),
   TranslatedName(LangDzo(), name: "ཨེ་ར་བིཀ་ཁ"),
-  TranslatedName(LangEll(), name: "Σύγχρονα Τυπικά Αραβικά"),
-  TranslatedName(LangSpa(), name: "árabe estándar moderno"),
-  TranslatedName(LangEst(), name: "araabia (tänapäevane)"),
-  TranslatedName(LangEus(), name: "arabiera moderno estandarra"),
-  TranslatedName(LangFas(), name: "عربی رسمی"),
-  TranslatedName(LangFin(), name: "yleisarabia"),
-  TranslatedName(LangFra(), name: "arabe standard moderne"),
-  TranslatedName(LangFry(), name: "Modern standert Arabysk"),
-  TranslatedName(LangGle(), name: "Araibis Chaighdeánach"),
-  TranslatedName(LangGla(), name: "Nuadh-Arabais Stannardach"),
-  TranslatedName(LangGlg(), name: "árabe estándar moderno"),
-  TranslatedName(LangGuj(), name: "મોડર્ન સ્ટાન્ડર્ડ અરબી"),
-  TranslatedName(LangHeb(), name: "ערבית ספרותית"),
-  TranslatedName(LangHin(), name: "आधुनिक मानक अरबी"),
-  TranslatedName(LangHrv(), name: "moderni standardni arapski"),
-  TranslatedName(LangHun(), name: "modern szabányos arab"),
-  TranslatedName(LangHye(), name: "ժամանակակից ստանդարտ արաբերեն"),
-  TranslatedName(LangInd(), name: "Arab Standar Modern"),
-  TranslatedName(LangIsl(), name: "stöðluð nútímaarabíska"),
-  TranslatedName(LangIta(), name: "arabo moderno standard"),
-  TranslatedName(LangJpn(), name: "現代標準アラビア語"),
-  TranslatedName(LangKat(), name: "თანამედროვე სტანდარტული არაბული"),
-  TranslatedName(LangKaz(), name: "қазіргі стандартты араб тілі"),
-  TranslatedName(LangKhm(), name: "អារ៉ាប់​ស្តង់ដារ​ទំនើប"),
-  TranslatedName(LangKan(), name: "ಆಧುನಿಕ ಪ್ರಮಾಣಿತ ಅರೇಬಿಕ್"),
-  TranslatedName(LangKor(), name: "현대 표준 아랍어"),
+  TranslatedName(LangEwe(), name: "arabiagbe"),
+  TranslatedName(LangEll(), name: "Αραβικά"),
+  TranslatedName(LangEpo(), name: "araba"),
+  TranslatedName(LangSpa(), name: "árabe"),
+  TranslatedName(LangEst(), name: "araabia"),
+  TranslatedName(LangEus(), name: "arabiera"),
+  TranslatedName(LangFas(), name: "عربی"),
+  TranslatedName(LangFul(), name: "Aarabeere"),
+  TranslatedName(LangFin(), name: "arabia"),
+  TranslatedName(LangFao(), name: "arabiskt"),
+  TranslatedName(LangFra(), name: "arabe"),
+  TranslatedName(LangFry(), name: "Arabysk"),
+  TranslatedName(LangGle(), name: "Araibis"),
+  TranslatedName(LangGla(), name: "Arabais"),
+  TranslatedName(LangGlg(), name: "árabe"),
+  TranslatedName(LangGuj(), name: "અરબી"),
+  TranslatedName(LangHau(), name: "Larabci"),
+  TranslatedName(LangHeb(), name: "ערבית"),
+  TranslatedName(LangHin(), name: "अरबी"),
+  TranslatedName(LangHrv(), name: "arapski"),
+  TranslatedName(LangHun(), name: "arab"),
+  TranslatedName(LangHye(), name: "արաբերեն"),
+  TranslatedName(LangInd(), name: "Arab"),
+  TranslatedName(LangIbo(), name: "Arabiikị"),
+  TranslatedName(LangIsl(), name: "arabíska"),
+  TranslatedName(LangIta(), name: "arabo"),
+  TranslatedName(LangJpn(), name: "アラビア語"),
+  TranslatedName(LangKat(), name: "არაბული"),
+  TranslatedName(LangKik(), name: "Kĩarabu"),
+  TranslatedName(LangKaz(), name: "араб тілі"),
+  TranslatedName(LangKhm(), name: "អារ៉ាប់"),
+  TranslatedName(LangKan(), name: "ಅರೇಬಿಕ್"),
+  TranslatedName(LangKor(), name: "아랍어"),
   TranslatedName(LangKas(), name: "عربی"),
   TranslatedName(LangKir(), name: "арабча"),
-  TranslatedName(LangLtz(), name: "Modernt Héicharabesch"),
-  TranslatedName(LangLao(), name: "ອາຣາບິກມາດຕະຖານສະໄໝໃໝ່"),
-  TranslatedName(LangLit(), name: "šiuolaikinė standartinė arabų"),
-  TranslatedName(LangLav(), name: "mūsdienu standarta arābu"),
-  TranslatedName(LangMkd(), name: "литературен арапски"),
-  TranslatedName(LangMal(), name: "ആധുനിക സ്റ്റാൻഡേർഡ് അറബിക്"),
-  TranslatedName(LangMon(), name: "стандарт араб"),
-  TranslatedName(LangMar(), name: "आधुनिक प्रमाणित अरबी"),
-  TranslatedName(LangMsa(), name: "Arab Standard Moden"),
-  TranslatedName(LangMlt(), name: "Għarbi Standard Modern"),
+  TranslatedName(LangLtz(), name: "Arabesch"),
+  TranslatedName(LangLug(), name: "Luwarabu"),
+  TranslatedName(LangLin(), name: "lialabo"),
+  TranslatedName(LangLao(), name: "ອາຣັບ"),
+  TranslatedName(LangLit(), name: "arabų"),
+  TranslatedName(LangLub(), name: "Arabi"),
+  TranslatedName(LangLav(), name: "arābu"),
+  TranslatedName(LangMlg(), name: "Arabo"),
+  TranslatedName(LangMkd(), name: "арапски"),
+  TranslatedName(LangMal(), name: "അറബിക്"),
+  TranslatedName(LangMon(), name: "араб"),
+  TranslatedName(LangMar(), name: "अरबी"),
+  TranslatedName(LangMsa(), name: "Arab"),
+  TranslatedName(LangMlt(), name: "Għarbi"),
   TranslatedName(LangMya(), name: "အာရေဗီ"),
-  TranslatedName(LangNob(), name: "moderne standard arabisk"),
-  TranslatedName(LangNep(), name: "आधुनिक मानक अरबी"),
-  TranslatedName(LangNld(), name: "modern standaard Arabisch"),
-  TranslatedName(LangNor(), name: "moderne standard arabisk"),
+  TranslatedName(LangNob(), name: "arabisk"),
+  TranslatedName(LangNde(), name: "isi-Alabhu"),
+  TranslatedName(LangNep(), name: "अरबी"),
+  TranslatedName(LangNld(), name: "Arabisch"),
+  TranslatedName(LangNno(), name: "arabisk"),
+  TranslatedName(LangNor(), name: "arabisk"),
+  TranslatedName(LangOrm(), name: "Arabiffaa"),
+  TranslatedName(LangOri(), name: "ଆରବିକ୍"),
   TranslatedName(LangOss(), name: "араббаг"),
-  TranslatedName(LangPan(), name: "ਆਧੁਨਿਕ ਮਿਆਰੀ ਅਰਬੀ"),
-  TranslatedName(LangPol(), name: "współczesny arabski"),
-  TranslatedName(LangPor(), name: "árabe moderno"),
-  TranslatedName(LangRon(), name: "arabă standard modernă"),
-  TranslatedName(LangRus(), name: "арабский литературный"),
-  TranslatedName(LangSme(), name: "standárda arábagiella", countryCode: "FI"),
-  TranslatedName(LangSin(), name: "නවීන සම්මත අරාබි"),
-  TranslatedName(LangSlk(), name: "arabčina (moderná štandardná)"),
-  TranslatedName(LangSlv(), name: "sodobna standardna arabščina"),
-  TranslatedName(LangSqi(), name: "arabishte standarde moderne"),
-  TranslatedName(LangSrp(), name: "модеран стандардни арапски"),
-  TranslatedName(
-    LangSrp(),
-    name: "moderan standardni arapski",
-    script: ScriptLatn(),
-  ),
-  TranslatedName(LangSwe(), name: "modern standardarabiska"),
-  TranslatedName(LangSwa(), name: "Kiarabu Sanifu cha Kisasa"),
-  TranslatedName(LangTam(), name: "மாடர்ன் ஸ்டாண்டர்ட் அரபிக்"),
-  TranslatedName(LangTel(), name: "ఆధునిక ప్రామాణిక అరబిక్"),
-  TranslatedName(LangTha(), name: "อาหรับมาตรฐานสมัยใหม่"),
+  TranslatedName(LangPan(), name: "ਅਰਬੀ"),
+  TranslatedName(LangPol(), name: "arabski"),
+  TranslatedName(LangPus(), name: "عربي"),
+  TranslatedName(LangPor(), name: "árabe"),
+  TranslatedName(LangQue(), name: "Arabe Simi"),
+  TranslatedName(LangRoh(), name: "arab"),
+  TranslatedName(LangRun(), name: "Icarabu"),
+  TranslatedName(LangRon(), name: "arabă"),
+  TranslatedName(LangRus(), name: "арабский"),
+  TranslatedName(LangKin(), name: "Icyarabu"),
+  TranslatedName(LangSme(), name: "arábagiella"),
+  TranslatedName(LangSag(), name: "Arâbo"),
+  TranslatedName(LangSin(), name: "අරාබි"),
+  TranslatedName(LangSlk(), name: "arabčina"),
+  TranslatedName(LangSlv(), name: "arabščina"),
+  TranslatedName(LangSna(), name: "chiArabu"),
+  TranslatedName(LangSom(), name: "Carabi"),
+  TranslatedName(LangSqi(), name: "arabisht"),
+  TranslatedName(LangSrp(), name: "арапски"),
+  TranslatedName(LangSrp(), name: "arapski", script: ScriptLatn()),
+  TranslatedName(LangSwe(), name: "arabiska"),
+  TranslatedName(LangSwa(), name: "Kiarabu"),
+  TranslatedName(LangTam(), name: "அரபிக்"),
+  TranslatedName(LangTel(), name: "అరబిక్"),
+  TranslatedName(LangTha(), name: "อาหรับ"),
   TranslatedName(LangTir(), name: "ዓረበኛ"),
-  TranslatedName(LangTgl(), name: "Modernong Karaniwang Arabe"),
-  TranslatedName(LangTon(), name: "lea fakaʻalepea (māmani)"),
-  TranslatedName(LangTur(), name: "Modern Standart Arapça"),
-  TranslatedName(LangUig(), name: "ھازىرقى زامان ئۆلچەملىك ئەرەبچە"),
-  TranslatedName(LangUkr(), name: "сучасна стандартна арабська"),
-  TranslatedName(LangUrd(), name: "ماڈرن اسٹینڈرڈ عربی"),
-  TranslatedName(LangUrd(), name: "عربی", countryCode: "IN"),
-  TranslatedName(LangUzb(), name: "zamonavij standart arabcha"),
+  TranslatedName(LangTgl(), name: "Arabe"),
+  TranslatedName(LangTon(), name: "lea fakaʻalepea"),
+  TranslatedName(LangTur(), name: "Arapça"),
+  TranslatedName(LangUig(), name: "ئەرەبچە"),
+  TranslatedName(LangUkr(), name: "арабська"),
+  TranslatedName(LangUrd(), name: "عربی"),
+  TranslatedName(LangUzb(), name: "arabcha"),
   TranslatedName(LangUzb(), name: "Арабча", script: ScriptCyrl()),
-  TranslatedName(LangVie(), name: "Tiếng Ả Rập Hiện đại"),
-  TranslatedName(LangZho(), name: "现代标准阿拉伯文"),
-  TranslatedName(LangZho(), name: "阿拉伯文", countryCode: "HK"),
-  TranslatedName(LangZho(), name: "現代標準阿拉伯文", script: ScriptHant()),
-  TranslatedName(LangZul(), name: "Isi-Arabic Esijwayelekile Samanje"),
+  TranslatedName(LangVie(), name: "Tiếng Ả Rập"),
+  TranslatedName(LangYid(), name: "אַראַביש"),
+  TranslatedName(LangYor(), name: "Èdè Arabiki"),
+  TranslatedName(LangZho(), name: "阿拉伯文"),
+  TranslatedName(LangZul(), name: "isi-Arabic"),
 ];

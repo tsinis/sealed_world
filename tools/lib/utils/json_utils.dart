@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import "dart:convert";
 
 import "package:change_case/change_case.dart";
@@ -13,9 +15,17 @@ Future<void> main() async {
   const package = Package.sealedLanguages;
   final exports = await const JsonUtils("json/data").parseData(); // TODO!
   final dataType = package.dataRepresent;
+
   final buffer = StringBuffer(
-    "library sealed_${dataType}_${JsonUtils.translation};\n".toLowerCase(),
-  );
+    """
+// This library translations are based on the data from the
+// https://github.com/umpirsky/language-list project
+// which is licensed under the  MIT License.
+
+""",
+  )..write(
+      "library sealed_${dataType}_${JsonUtils.translation};\n".toLowerCase(),
+    );
   for (final export in exports) buffer.writeln('export "$export";');
   final filename = "$dataType ${JsonUtils.translation}".toSnakeCase();
 
@@ -44,15 +54,15 @@ final class JsonUtils {
       ..sort((a, b) => basename(a.path).compareTo(basename(b.path)));
     for (final item in package.dataList) {
       final itemFromCode = NaturalLanguage.fromCode(item.code);
+      print("\nExtracting translations for: ${itemFromCode.name}\n");
       final english = englishData[itemFromCode];
       final translations = <TranslatedName>{};
       if (english != null) translations.add(TranslatedName(eng, name: english));
       for (final dir in directories) {
-        // TODO! Improve progress logging.
         final dirName = basename(dir.path);
         final translation = _extractLanguage(package, dirName);
         final locale = _extractLocaleCode(dirName);
-        final lang = _convertCodeToLang(locale.languageCode);
+        final lang = convertCodeToLang(locale.languageCode);
         final translationForLang = translation[itemFromCode];
         if (lang == null || translationForLang == null) continue;
         if (translationForLang == english) continue;
@@ -64,7 +74,12 @@ final class JsonUtils {
           script: script != null ? Script.fromCode(script) : null,
         );
 
-        translations.add(translated);
+        final isAdded = translations.add(translated);
+        if (isAdded) {
+          print(
+            ''' * Add ${translated.language.name}: "${translated.name}" translation (total: ${translations.length})''',
+          );
+        }
       }
 
       final translationCode = item.code.toLowerCase();
@@ -117,9 +132,17 @@ const ${varFileName.toCamelCase()} = [
     return _convertLanguageMap(map);
   }
 
+  Map<String, Object?> _sortMapByKeyLength(Map<String, Object?> map) {
+    final sortedKeys = map.keys.toList(growable: false)
+      ..sort((a, b) => b.length.compareTo(a.length));
+
+    return {for (final key in sortedKeys) key: map[key]};
+  }
+
   Map<NaturalLanguage, String> _convertLanguageMap(Map<String, Object?> json) {
-    final nullMap = json.map((code, translation) {
-      final language = _convertCodeToLang(code);
+    final sortedMap = _sortMapByKeyLength(json);
+    final nullMap = sortedMap.map((code, translation) {
+      final language = convertCodeToLang(code);
 
       return MapEntry(language, translation?.toString());
     })
@@ -128,7 +151,7 @@ const ${varFileName.toCamelCase()} = [
     return Map<NaturalLanguage, String>.unmodifiable(nullMap);
   }
 
-  NaturalLanguage? _convertCodeToLang(String code) {
+  static NaturalLanguage? convertCodeToLang(String code) {
     final languageCode = _extractLocaleCode(code).languageCode;
     final language = NaturalLanguage.maybeFromValue(
       languageCode,
@@ -142,7 +165,7 @@ const ${varFileName.toCamelCase()} = [
     return language;
   }
 
-  ({String languageCode, String? countryCode, String? scriptCode})
+  static ({String languageCode, String? countryCode, String? scriptCode})
       _extractLocaleCode(String code) {
     final regex = RegExp("^([A-Z]+)(?:_([A-Z]+))?(?:_([A-Z]+))?");
 

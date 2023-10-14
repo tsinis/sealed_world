@@ -2,15 +2,17 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a German language:
+/// Provides 119 translations for a German language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Azerbaijani
+/// - Bambara
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -26,20 +28,25 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Irish
 /// - Italian
@@ -48,36 +55,51 @@ import "../model/translated_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
+/// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
+/// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
+/// - Malagasy
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
+/// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Serbian
+/// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -92,109 +114,127 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const deuLanguageTranslations = [
-  TranslatedName(LangEng(), name: "Swiss High German"),
-  TranslatedName(LangAfr(), name: "Switserse hoog-Duits"),
+  TranslatedName(LangEng(), name: "German"),
+  TranslatedName(LangAfr(), name: "Duits"),
+  TranslatedName(LangAka(), name: "Gyaaman"),
   TranslatedName(LangAmh(), name: "ጀርመን"),
-  TranslatedName(LangAra(), name: "الألمانية النمساوية"),
-  TranslatedName(LangAze(), name: "İsveçrə yüksək almancası"),
+  TranslatedName(LangAra(), name: "الألمانية"),
+  TranslatedName(LangAze(), name: "alman"),
   TranslatedName(LangAze(), name: "алманҹа", script: ScriptCyrl()),
-  TranslatedName(LangBel(), name: "нямецкая (швейц.)"),
-  TranslatedName(LangBul(), name: "швейцарски горногермански"),
-  TranslatedName(LangBen(), name: "সুইস উচ্চ জার্মানি"),
-  TranslatedName(LangBre(), name: "alamaneg uhel Suis"),
+  TranslatedName(LangBel(), name: "нямецкая"),
+  TranslatedName(LangBul(), name: "немски"),
+  TranslatedName(LangBam(), name: "alimaɲikan"),
+  TranslatedName(LangBen(), name: "জার্মান"),
+  TranslatedName(LangBre(), name: "alamaneg"),
   TranslatedName(LangBos(), name: "njemački"),
-  TranslatedName(
-    LangBos(),
-    name: "Швајцарски високи немачки",
-    script: ScriptCyrl(),
-  ),
-  TranslatedName(LangCat(), name: "alt alemany suís"),
-  TranslatedName(LangCes(), name: "němčina standardní (Švýcarsko)"),
-  TranslatedName(LangCym(), name: "Almaeneg Safonol y Swistir"),
-  TranslatedName(LangDan(), name: "østrigsk tysk"),
-  TranslatedName(LangDeu(), name: "Schweizer Hochdeutsch"),
-  TranslatedName(LangDzo(), name: "ཨཱོས་ཊྲི་ཡཱན་ཇཱར་མཱན་ཁ"),
-  TranslatedName(LangEwe(), name: "swizerlanɖ germaniagbe kɔkɔtɔ"),
-  TranslatedName(LangEll(), name: "Γερμανικά Ελβετίας"),
-  TranslatedName(LangSpa(), name: "alto alemán suizo"),
-  TranslatedName(LangEst(), name: "saksa (kõrgsaksa)"),
-  TranslatedName(LangEus(), name: "Austrian German"),
-  TranslatedName(LangFas(), name: "آلمانی علیای سوئیس"),
-  TranslatedName(LangFin(), name: "sveitsinyläsaksa"),
+  TranslatedName(LangBos(), name: "немачки", script: ScriptCyrl()),
+  TranslatedName(LangCat(), name: "alemany"),
+  TranslatedName(LangCes(), name: "němčina"),
+  TranslatedName(LangCym(), name: "Almaeneg"),
+  TranslatedName(LangDan(), name: "tysk"),
+  TranslatedName(LangDeu(), name: "Deutsch"),
+  TranslatedName(LangDzo(), name: "ཇཱར་མཱན་ཁ"),
+  TranslatedName(LangEwe(), name: "germaniagbe"),
+  TranslatedName(LangEll(), name: "Γερμανικά"),
+  TranslatedName(LangEpo(), name: "germana"),
+  TranslatedName(LangSpa(), name: "alemán"),
+  TranslatedName(LangEst(), name: "saksa"),
+  TranslatedName(LangEus(), name: "alemana"),
+  TranslatedName(LangFas(), name: "آلمانی"),
+  TranslatedName(LangFul(), name: "Docceere"),
+  TranslatedName(LangFin(), name: "saksa"),
   TranslatedName(LangFao(), name: "týskt"),
-  TranslatedName(LangFra(), name: "allemand suisse"),
-  TranslatedName(LangFry(), name: "Switsersk Heechdútsk"),
-  TranslatedName(LangGle(), name: "Gearmáinis Ostarach"),
-  TranslatedName(LangGla(), name: "Gearmailtis na h-Ostaire"),
-  TranslatedName(LangGlg(), name: "alto alemán suízo"),
-  TranslatedName(LangGuj(), name: "સ્વિસ હાય જર્મન"),
-  TranslatedName(LangHeb(), name: "גרמנית שוויצרית (גבוהה)"),
-  TranslatedName(LangHin(), name: "स्विस उच्च जर्मन"),
+  TranslatedName(LangFra(), name: "allemand"),
+  TranslatedName(LangFry(), name: "Dútsk"),
+  TranslatedName(LangGle(), name: "Gearmáinis"),
+  TranslatedName(LangGla(), name: "Gearmailtis"),
+  TranslatedName(LangGlg(), name: "alemán"),
+  TranslatedName(LangGuj(), name: "જર્મન"),
+  TranslatedName(LangHau(), name: "Jamusanci"),
+  TranslatedName(LangHeb(), name: "גרמנית"),
+  TranslatedName(LangHin(), name: "जर्मन"),
   TranslatedName(LangHrv(), name: "njemački"),
-  TranslatedName(LangHun(), name: "svájci felnémet"),
-  TranslatedName(LangHye(), name: "շվեյցարական բարձր գերմաներեն"),
-  TranslatedName(LangInd(), name: "Jerman Tinggi Swiss"),
+  TranslatedName(LangHun(), name: "német"),
+  TranslatedName(LangHye(), name: "գերմաներեն"),
+  TranslatedName(LangInd(), name: "Jerman"),
+  TranslatedName(LangIbo(), name: "Jamaan"),
   TranslatedName(LangIii(), name: "ꄓꇩꉙ"),
   TranslatedName(LangIsl(), name: "þýska"),
-  TranslatedName(LangIta(), name: "tedesco austriaco"),
-  TranslatedName(LangJpn(), name: "標準ドイツ語(スイス)"),
-  TranslatedName(LangKat(), name: "შვეიცარიული ზემოგერმანული"),
-  TranslatedName(LangKaz(), name: "неміс тілінің швейцариялық диалекті"),
-  TranslatedName(LangKhm(), name: "អាល្លឺម៉ង់ អូទ្រីស"),
-  TranslatedName(LangKan(), name: "ಸ್ವಿಸ್ ಹೈ ಜರ್ಮನ್"),
-  TranslatedName(LangKor(), name: "Austrian German"),
-  TranslatedName(LangKas(), name: "سٕوِس ہاےجٔرمَن"),
-  TranslatedName(LangKir(), name: "Austrian German"),
-  TranslatedName(LangLtz(), name: "Schwäizer Héichdäitsch"),
-  TranslatedName(LangLao(), name: "ອອສຕຣຽນ ເຈີແມນ"),
+  TranslatedName(LangIta(), name: "tedesco"),
+  TranslatedName(LangJpn(), name: "ドイツ語"),
+  TranslatedName(LangKat(), name: "გერმანული"),
+  TranslatedName(LangKik(), name: "Kĩnjeremani"),
+  TranslatedName(LangKaz(), name: "неміс тілі"),
+  TranslatedName(LangKhm(), name: "អាល្លឺម៉ង់"),
+  TranslatedName(LangKan(), name: "ಜರ್ಮನ್"),
+  TranslatedName(LangKor(), name: "독일어"),
+  TranslatedName(LangKas(), name: "جٔرمَن"),
+  TranslatedName(LangKir(), name: "немисче"),
+  TranslatedName(LangLtz(), name: "Däitsch"),
+  TranslatedName(LangLug(), name: "Ludaaki"),
+  TranslatedName(LangLin(), name: "lialemá"),
+  TranslatedName(LangLao(), name: "ເຢຍລະມັນ"),
   TranslatedName(LangLit(), name: "vokiečių"),
+  TranslatedName(LangLub(), name: "Lizelumani"),
   TranslatedName(LangLav(), name: "vācu"),
-  TranslatedName(LangMal(), name: "സ്വിസ് ഹൈ ജർമൻ"),
-  TranslatedName(LangMon(), name: "швейцари дээр герман"),
-  TranslatedName(LangMar(), name: "स्विस हाय जर्मन"),
-  TranslatedName(LangMsa(), name: "Jerman Halus Switzerland"),
-  TranslatedName(LangMya(), name: "ဩစတြီးယ ဂျာမန်"),
-  TranslatedName(LangNob(), name: "østerriksk tysk"),
-  TranslatedName(LangNep(), name: "स्वीस हाई जर्मन"),
-  TranslatedName(LangNld(), name: "Zwitsers Hoogduits"),
+  TranslatedName(LangMlg(), name: "Alemanina"),
+  TranslatedName(LangMkd(), name: "германски"),
+  TranslatedName(LangMal(), name: "ജർമ്മൻ"),
+  TranslatedName(LangMon(), name: "герман"),
+  TranslatedName(LangMar(), name: "जर्मन"),
+  TranslatedName(LangMsa(), name: "Jerman"),
+  TranslatedName(LangMlt(), name: "Ġermaniż"),
+  TranslatedName(LangMya(), name: "ဂျာမန်"),
+  TranslatedName(LangNob(), name: "tysk"),
+  TranslatedName(LangNde(), name: "isi-Jalimani"),
+  TranslatedName(LangNep(), name: "जर्मन"),
+  TranslatedName(LangNld(), name: "Duits"),
   TranslatedName(LangNno(), name: "tysk"),
-  TranslatedName(LangNor(), name: "østerriksk tysk"),
-  TranslatedName(LangOri(), name: "ସ୍ବିସ୍ ହାଇ ଜର୍ମାନ୍"),
-  TranslatedName(LangOss(), name: "швйецариаг немыцаг"),
+  TranslatedName(LangNor(), name: "tysk"),
+  TranslatedName(LangOrm(), name: "Afaan Jarmanii"),
+  TranslatedName(LangOri(), name: "ଜର୍ମାନ୍"),
+  TranslatedName(LangOss(), name: "немыцаг"),
   TranslatedName(LangPan(), name: "ਜਰਮਨ"),
-  TranslatedName(LangPol(), name: "wysokoniemiecki (Szwajcaria)"),
-  TranslatedName(LangPor(), name: "alto alemão suíço"),
-  TranslatedName(LangRoh(), name: "tudestg austriac"),
-  TranslatedName(LangRon(), name: "germană standard elvețiană"),
-  TranslatedName(LangRus(), name: "швейцарский верхненемецкий"),
-  TranslatedName(LangSme(), name: "šveicalaš duiskkagiella", countryCode: "FI"),
+  TranslatedName(LangPol(), name: "niemiecki"),
+  TranslatedName(LangPus(), name: "الماني"),
+  TranslatedName(LangPor(), name: "alemão"),
+  TranslatedName(LangQue(), name: "Aleman Simi"),
+  TranslatedName(LangRoh(), name: "tudestg"),
+  TranslatedName(LangRun(), name: "Ikidage"),
+  TranslatedName(LangRon(), name: "germană"),
+  TranslatedName(LangRus(), name: "немецкий"),
+  TranslatedName(LangKin(), name: "Ikidage"),
+  TranslatedName(LangSme(), name: "duiskkagiella"),
   TranslatedName(LangSag(), name: "Zâmani"),
-  TranslatedName(LangSin(), name: "ස්විස් උසස් ජර්මන්"),
-  TranslatedName(LangSlk(), name: "nemčina (švajčiarska spisovná)"),
-  TranslatedName(LangSlv(), name: "visoka nemščina (Švica)"),
-  TranslatedName(LangSqi(), name: "gjermanishte zvicerane (dialekti i Alpeve)"),
-  TranslatedName(LangSrp(), name: "Austrian German"),
-  TranslatedName(
-    LangSrp(),
-    name: "švajcarski visoki nemački",
-    script: ScriptLatn(),
-  ),
-  TranslatedName(LangSwe(), name: "österrikisk tyska"),
-  TranslatedName(LangTam(), name: "ஸ்விஸ் ஹை ஜெர்மன்"),
-  TranslatedName(LangTel(), name: "స్విస్ హై జర్మన్"),
-  TranslatedName(LangTha(), name: "เยอรมัน - ออสเตรีย"),
+  TranslatedName(LangSin(), name: "ජර්මන්"),
+  TranslatedName(LangSlk(), name: "nemčina"),
+  TranslatedName(LangSlv(), name: "nemščina"),
+  TranslatedName(LangSna(), name: "chiJerimani"),
+  TranslatedName(LangSom(), name: "Jarmal"),
+  TranslatedName(LangSqi(), name: "gjermanisht"),
+  TranslatedName(LangSrp(), name: "немачки"),
+  TranslatedName(LangSrp(), name: "nemački", script: ScriptLatn()),
+  TranslatedName(LangSwe(), name: "tyska"),
+  TranslatedName(LangSwa(), name: "Kijerumani"),
+  TranslatedName(LangTam(), name: "ஜெர்மன்"),
+  TranslatedName(LangTel(), name: "జర్మన్"),
+  TranslatedName(LangTha(), name: "เยอรมัน"),
   TranslatedName(LangTir(), name: "ጀርመን"),
-  TranslatedName(LangTon(), name: "lea fakasiamane-ʻaositulia"),
-  TranslatedName(LangTur(), name: "İsviçre Yüksek Almancası"),
+  TranslatedName(LangTon(), name: "lea fakasiamane"),
+  TranslatedName(LangTur(), name: "Almanca"),
   TranslatedName(LangUig(), name: "گېرمانچە"),
-  TranslatedName(LangUkr(), name: "Austrian German"),
-  TranslatedName(LangUrd(), name: "سوئس ہائی جرمن"),
-  TranslatedName(LangUzb(), name: "Shvesariya olmonchasi"),
+  TranslatedName(LangUkr(), name: "німецька"),
+  TranslatedName(LangUrd(), name: "جرمن"),
+  TranslatedName(LangUzb(), name: "nemischa"),
   TranslatedName(LangUzb(), name: "Олмонча", script: ScriptCyrl()),
-  TranslatedName(LangVie(), name: "Tiếng Thượng Giéc-man (Thụy Sĩ)"),
-  TranslatedName(LangZho(), name: "瑞士高地德文"),
-  TranslatedName(LangZho(), name: "德文", countryCode: "HK"),
-  TranslatedName(LangZul(), name: "isi-Swiss High German"),
+  TranslatedName(LangVie(), name: "Tiếng Đức"),
+  TranslatedName(LangYid(), name: "דײַטש"),
+  TranslatedName(LangYor(), name: "Èdè Ilẹ̀ Gemani"),
+  TranslatedName(LangYor(), name: "Èdè Ilɛ̀ Gemani", countryCode: "BJ"),
+  TranslatedName(LangZho(), name: "德文"),
+  TranslatedName(LangZul(), name: "isi-German"),
 ];

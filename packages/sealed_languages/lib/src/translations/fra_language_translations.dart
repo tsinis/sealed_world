@@ -2,15 +2,18 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 84 translations for a French language:
+/// Provides 118 translations for a French language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -20,22 +23,30 @@ import "../model/translated_name.dart";
 /// - Catalan
 /// - Chinese
 /// - Croatian
+/// - Czech
 /// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
+/// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Irish
 /// - Italian
@@ -43,33 +54,52 @@ import "../model/translated_name.dart";
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
+/// - Kirundi
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
+/// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
+/// - Malagasy
 /// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nepali
+/// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sango
+/// - Serbian
+/// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -77,100 +107,133 @@ import "../model/translated_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const fraLanguageTranslations = [
-  TranslatedName(LangEng(), name: "Swiss French"),
+  TranslatedName(LangEng(), name: "French"),
+  TranslatedName(LangAfr(), name: "Frans"),
+  TranslatedName(LangAka(), name: "Frɛnkye"),
   TranslatedName(LangAmh(), name: "ፈረንሳይኛ"),
-  TranslatedName(LangAra(), name: "الفرنسية الكندية"),
-  TranslatedName(LangAze(), name: "Kanada fransızcası"),
+  TranslatedName(LangAra(), name: "الفرنسية"),
+  TranslatedName(LangAze(), name: "fransız"),
   TranslatedName(LangAze(), name: "франсызҹа", script: ScriptCyrl()),
-  TranslatedName(LangBel(), name: "французская (швейц.)"),
-  TranslatedName(LangBul(), name: "швейцарски френски"),
+  TranslatedName(LangBel(), name: "французская"),
+  TranslatedName(LangBul(), name: "френски"),
   TranslatedName(LangBam(), name: "tubabukan"),
-  TranslatedName(LangBen(), name: "সুইস ফরাসি"),
-  TranslatedName(LangBre(), name: "galleg Suis"),
-  TranslatedName(LangBos(), name: "švajcarski francuski"),
-  TranslatedName(LangBos(), name: "Швајцарски француски", script: ScriptCyrl()),
-  TranslatedName(LangCat(), name: "francès suís"),
-  TranslatedName(LangCym(), name: "Ffrangeg y Swistir"),
-  TranslatedName(LangDan(), name: "schweizisk fransk"),
-  TranslatedName(LangDeu(), name: "Schweizer Französisch"),
-  TranslatedName(LangDzo(), name: "སུ་ཡིས་ཕྲནཅ་ཁ"),
-  TranslatedName(LangEwe(), name: "swizerlanɖtɔwo ƒe fransegbe"),
-  TranslatedName(LangEll(), name: "Γαλλικά Καναδά"),
-  TranslatedName(LangSpa(), name: "francés suizo"),
-  TranslatedName(LangFas(), name: "فرانسوی کانادا"),
-  TranslatedName(LangFin(), name: "sveitsinranska"),
-  TranslatedName(LangFra(), name: "français suisse"),
-  TranslatedName(LangFry(), name: "Switserse Frânsk"),
-  TranslatedName(LangGle(), name: "Fraincis Eilvéiseach"),
-  TranslatedName(LangGla(), name: "Fraingis Eilbheiseach"),
-  TranslatedName(LangGlg(), name: "francés suízo"),
-  TranslatedName(LangGuj(), name: "સ્વિસ ફ્રેંચ"),
-  TranslatedName(LangHeb(), name: "צרפתית שוויצרית"),
-  TranslatedName(LangHin(), name: "स्विस फ़्रेंच"),
-  TranslatedName(LangHrv(), name: "švicarski francuski"),
-  TranslatedName(LangHun(), name: "svájci francia"),
+  TranslatedName(LangBen(), name: "ফরাসি"),
+  TranslatedName(LangBre(), name: "galleg"),
+  TranslatedName(LangBos(), name: "francuski"),
+  TranslatedName(LangBos(), name: "француски", script: ScriptCyrl()),
+  TranslatedName(LangCat(), name: "francès"),
+  TranslatedName(LangCes(), name: "francouzština"),
+  TranslatedName(LangCym(), name: "Ffrangeg"),
+  TranslatedName(LangDan(), name: "fransk"),
+  TranslatedName(LangDeu(), name: "Französisch"),
+  TranslatedName(LangDzo(), name: "ཕྲནཅ་ཁ"),
+  TranslatedName(LangEwe(), name: "fransegbe"),
+  TranslatedName(LangEll(), name: "Γαλλικά"),
+  TranslatedName(LangEpo(), name: "franca"),
+  TranslatedName(LangSpa(), name: "francés"),
+  TranslatedName(LangEst(), name: "prantsuse"),
+  TranslatedName(LangEus(), name: "frantsesa"),
+  TranslatedName(LangFas(), name: "فرانسوی"),
+  TranslatedName(LangFul(), name: "Farayseere"),
+  TranslatedName(LangFin(), name: "ranska"),
+  TranslatedName(LangFao(), name: "franskt"),
+  TranslatedName(LangFra(), name: "français"),
+  TranslatedName(LangFry(), name: "Frânsk"),
+  TranslatedName(LangGle(), name: "Fraincis"),
+  TranslatedName(LangGla(), name: "Fraingis"),
+  TranslatedName(LangGlg(), name: "francés"),
+  TranslatedName(LangGuj(), name: "ફ્રેન્ચ"),
+  TranslatedName(LangHau(), name: "Faransanci"),
+  TranslatedName(LangHeb(), name: "צרפתית"),
+  TranslatedName(LangHin(), name: "फ़्रेंच"),
+  TranslatedName(LangHrv(), name: "francuski"),
+  TranslatedName(LangHun(), name: "francia"),
   TranslatedName(LangHye(), name: "ֆրանսերեն"),
-  TranslatedName(LangInd(), name: "Prancis Swiss"),
+  TranslatedName(LangInd(), name: "Prancis"),
+  TranslatedName(LangIbo(), name: "Fụrench"),
   TranslatedName(LangIii(), name: "ꃔꇩꉙ"),
-  TranslatedName(LangIsl(), name: "svissnesk franska"),
-  TranslatedName(LangIta(), name: "francese svizzero"),
+  TranslatedName(LangIsl(), name: "franska"),
+  TranslatedName(LangIta(), name: "francese"),
   TranslatedName(LangJpn(), name: "フランス語"),
-  TranslatedName(LangKat(), name: "შვეიცარიული ფრანგული"),
-  TranslatedName(LangKaz(), name: "швейцариялық француз тілі"),
-  TranslatedName(LangKan(), name: "ಸ್ವಿಸ್ ಫ್ರೆಂಚ್"),
-  TranslatedName(LangKor(), name: "프랑스어 (캐나다)"),
-  TranslatedName(LangKas(), name: "کَنیڈیَن فریٚنچ"),
-  TranslatedName(LangLtz(), name: "Schwäizer Franséisch"),
+  TranslatedName(LangKat(), name: "ფრანგული"),
+  TranslatedName(LangKik(), name: "Kĩbaranja"),
+  TranslatedName(LangKaz(), name: "француз тілі"),
+  TranslatedName(LangKhm(), name: "បារាំង"),
+  TranslatedName(LangKan(), name: "ಫ್ರೆಂಚ್"),
+  TranslatedName(LangKor(), name: "프랑스어"),
+  TranslatedName(LangKas(), name: "فریٚنچ"),
+  TranslatedName(LangKir(), name: "французча"),
+  TranslatedName(LangLtz(), name: "Franséisch"),
+  TranslatedName(LangLug(), name: "Lufalansa"),
+  TranslatedName(LangLin(), name: "lifalansɛ́"),
   TranslatedName(LangLao(), name: "ຝຣັ່ງ"),
-  TranslatedName(LangLit(), name: "Šveicarijos prancūzų"),
-  TranslatedName(LangLav(), name: "Šveices franču"),
-  TranslatedName(LangMal(), name: "സ്വിസ് ഫ്രഞ്ച്"),
-  TranslatedName(LangMon(), name: "швейцари франц"),
-  TranslatedName(LangMar(), name: "स्विस फ्रेंच"),
-  TranslatedName(LangMsa(), name: "Perancis Switzerland"),
-  TranslatedName(LangMlt(), name: "Franċiż Żvizzeru"),
+  TranslatedName(LangLit(), name: "prancūzų"),
+  TranslatedName(LangLub(), name: "Mfwàlànsa"),
+  TranslatedName(LangLav(), name: "franču"),
+  TranslatedName(LangMlg(), name: "Frantsay"),
+  TranslatedName(LangMkd(), name: "француски"),
+  TranslatedName(LangMal(), name: "ഫ്രഞ്ച്"),
+  TranslatedName(LangMon(), name: "франц"),
+  TranslatedName(LangMar(), name: "फ्रेंच"),
+  TranslatedName(LangMsa(), name: "Perancis"),
+  TranslatedName(LangMlt(), name: "Franċiż"),
   TranslatedName(LangMya(), name: "ပြင်သစ်"),
-  TranslatedName(LangNob(), name: "sveitsisk fransk"),
-  TranslatedName(LangNld(), name: "Zwitsers Frans"),
-  TranslatedName(LangNno(), name: "sveitsisk fransk"),
-  TranslatedName(LangNor(), name: "sveitsisk fransk"),
-  TranslatedName(LangOri(), name: "ସ୍ବିସ୍ ଫ୍ରେଞ୍ଚ୍"),
-  TranslatedName(LangOss(), name: "швейцариаг францаг"),
+  TranslatedName(LangNob(), name: "fransk"),
+  TranslatedName(LangNde(), name: "isi-Fulentshi"),
+  TranslatedName(LangNep(), name: "फ्रान्सेली"),
+  TranslatedName(LangNld(), name: "Frans"),
+  TranslatedName(LangNno(), name: "fransk"),
+  TranslatedName(LangNor(), name: "fransk"),
+  TranslatedName(LangOrm(), name: "Afaan Faransaayii"),
+  TranslatedName(LangOri(), name: "ଫ୍ରେଞ୍ଚ"),
+  TranslatedName(LangOss(), name: "францаг"),
   TranslatedName(LangPan(), name: "ਫਰਾਂਸੀਸੀ"),
-  TranslatedName(LangPol(), name: "szwajcarski francuski"),
-  TranslatedName(LangPor(), name: "francês suíço"),
-  TranslatedName(LangRoh(), name: "franzos svizzer"),
-  TranslatedName(LangRon(), name: "franceză elvețiană"),
-  TranslatedName(LangRus(), name: "швейцарский французский"),
-  TranslatedName(
-    LangSme(),
-    name: "šveicalaš fránskkagiella",
-    countryCode: "FI",
-  ),
-  TranslatedName(LangSin(), name: "ස්විස් ප්‍රංශ"),
-  TranslatedName(LangSlk(), name: "francúzština (švajčiarska)"),
-  TranslatedName(LangSlv(), name: "švicarska francoščina"),
-  TranslatedName(LangSqi(), name: "frëngjishte zvicerane"),
-  TranslatedName(LangSwe(), name: "schweizisk franska"),
-  TranslatedName(LangTam(), name: "ஸ்விஸ் பிரஞ்சு"),
-  TranslatedName(LangTel(), name: "స్విస్ ఫ్రెంచ్"),
-  TranslatedName(LangTha(), name: "Canadian French"),
+  TranslatedName(LangPol(), name: "francuski"),
+  TranslatedName(LangPus(), name: "فرانسوي"),
+  TranslatedName(LangPor(), name: "francês"),
+  TranslatedName(LangQue(), name: "Frances Simi"),
+  TranslatedName(LangRoh(), name: "franzos"),
+  TranslatedName(LangRun(), name: "Igifaransa"),
+  TranslatedName(LangRon(), name: "franceză"),
+  TranslatedName(LangRus(), name: "французский"),
+  TranslatedName(LangKin(), name: "Igifaransa"),
+  TranslatedName(LangSme(), name: "fránskkagiella"),
+  TranslatedName(LangSag(), name: "Farânzi"),
+  TranslatedName(LangSin(), name: "ප්‍රංශ"),
+  TranslatedName(LangSlk(), name: "francúzština"),
+  TranslatedName(LangSlv(), name: "francoščina"),
+  TranslatedName(LangSna(), name: "chiFurenchi"),
+  TranslatedName(LangSom(), name: "Faransiis"),
+  TranslatedName(LangSqi(), name: "frëngjisht"),
+  TranslatedName(LangSrp(), name: "француски"),
+  TranslatedName(LangSrp(), name: "francuski", script: ScriptLatn()),
+  TranslatedName(LangSwe(), name: "franska"),
+  TranslatedName(LangSwa(), name: "Kifaransa"),
+  TranslatedName(LangTam(), name: "பிரெஞ்சு"),
+  TranslatedName(LangTel(), name: "ఫ్రెంచ్"),
+  TranslatedName(LangTha(), name: "ฝรั่งเศส"),
   TranslatedName(LangTir(), name: "ፈረንሳይኛ"),
-  TranslatedName(LangTon(), name: "lea fakafalanisē-suisilani"),
-  TranslatedName(LangTur(), name: "Kanada Fransızcası"),
-  TranslatedName(LangUig(), name: "كانادا فىرانسۇزچە"),
-  TranslatedName(LangUrd(), name: "کینیڈین فرانسیسی"),
-  TranslatedName(LangUzb(), name: "Shvesariya fransuzchasi"),
+  TranslatedName(LangTon(), name: "lea fakafalanisē"),
+  TranslatedName(LangTur(), name: "Fransızca"),
+  TranslatedName(LangUig(), name: "فىرانسۇزچە"),
+  TranslatedName(LangUkr(), name: "французька"),
+  TranslatedName(LangUrd(), name: "فرانسیسی"),
+  TranslatedName(LangUzb(), name: "fransuzcha"),
   TranslatedName(LangUzb(), name: "Французча", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Tiếng Pháp"),
-  TranslatedName(LangZho(), name: "瑞士法文"),
-  TranslatedName(LangZul(), name: "isi-Swiss French"),
+  TranslatedName(LangYid(), name: "פֿראַנצויזיש"),
+  TranslatedName(LangYor(), name: "Èdè Faransé"),
+  TranslatedName(LangZho(), name: "法文"),
+  TranslatedName(LangZul(), name: "isi-French"),
 ];

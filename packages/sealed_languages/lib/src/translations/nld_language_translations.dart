@@ -2,10 +2,11 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Dutch language:
+/// Provides 116 translations for a Dutch language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -33,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Ganda
 /// - Georgian
@@ -44,6 +46,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -62,7 +66,9 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -74,6 +80,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Oromo
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -83,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Russian
 /// - Sango
 /// - Serbian
+/// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -98,117 +106,129 @@ import "../model/translated_name.dart";
 /// - Turkish
 /// - Ukrainian
 /// - Urdu
+/// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const nldLanguageTranslations = [
-  TranslatedName(LangEng(), name: "Flemish"),
-  TranslatedName(LangAfr(), name: "Vlaams"),
-  TranslatedName(LangAmh(), name: "ፍሌሚሽ"),
+  TranslatedName(LangEng(), name: "Dutch"),
+  TranslatedName(LangAfr(), name: "Nederlands"),
+  TranslatedName(LangAka(), name: "Dɛɛkye"),
+  TranslatedName(LangAmh(), name: "ደች"),
   TranslatedName(LangAra(), name: "الهولندية"),
   TranslatedName(LangAze(), name: "holland"),
-  TranslatedName(LangBel(), name: "фламандская"),
-  TranslatedName(LangBul(), name: "фламандски"),
+  TranslatedName(LangBel(), name: "галандская"),
+  TranslatedName(LangBul(), name: "нидерландски"),
   TranslatedName(LangBam(), name: "olandekan"),
-  TranslatedName(LangBen(), name: "ফ্লেমিশ"),
+  TranslatedName(LangBen(), name: "ডাচ"),
   TranslatedName(LangBre(), name: "nederlandeg"),
   TranslatedName(LangBos(), name: "holandski"),
   TranslatedName(LangBos(), name: "холандски", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "neerlandès"),
-  TranslatedName(LangCes(), name: "vlámština"),
+  TranslatedName(LangCes(), name: "nizozemština"),
   TranslatedName(LangCym(), name: "Iseldireg"),
   TranslatedName(LangDan(), name: "hollandsk"),
   TranslatedName(LangDeu(), name: "Niederländisch"),
-  TranslatedName(LangDzo(), name: "ཕྷེལེ་མིཤ་ཁ"),
+  TranslatedName(LangDzo(), name: "ཌཆ་ཁ"),
   TranslatedName(LangEwe(), name: "hɔlandgbe"),
-  TranslatedName(LangEll(), name: "Φλαμανδικά"),
+  TranslatedName(LangEll(), name: "Ολλανδικά"),
   TranslatedName(LangEpo(), name: "nederlanda"),
   TranslatedName(LangSpa(), name: "neerlandés"),
   TranslatedName(LangEst(), name: "hollandi"),
   TranslatedName(LangEus(), name: "nederlandera"),
   TranslatedName(LangFas(), name: "هلندی"),
   TranslatedName(LangFas(), name: "هالندی", countryCode: "AF"),
+  TranslatedName(LangFul(), name: "Dacceere"),
   TranslatedName(LangFin(), name: "hollanti"),
   TranslatedName(LangFao(), name: "hollendskt"),
   TranslatedName(LangFra(), name: "néerlandais"),
-  TranslatedName(LangFry(), name: "Vlaams"),
-  TranslatedName(LangGle(), name: "Pléimeannais"),
-  TranslatedName(LangGla(), name: "Flannrais"),
+  TranslatedName(LangFry(), name: "Nederlânsk"),
+  TranslatedName(LangGle(), name: "Ollainnis"),
+  TranslatedName(LangGla(), name: "Duitsis"),
   TranslatedName(LangGlg(), name: "holandés"),
-  TranslatedName(LangGuj(), name: "ફ્લેમિશ"),
+  TranslatedName(LangGuj(), name: "ડચ"),
   TranslatedName(LangHau(), name: "Holanci"),
-  TranslatedName(LangHeb(), name: "פלמית"),
-  TranslatedName(LangHin(), name: "फ़्लेमिश"),
+  TranslatedName(LangHeb(), name: "הולנדית"),
+  TranslatedName(LangHin(), name: "डच"),
   TranslatedName(LangHrv(), name: "nizozemski"),
   TranslatedName(LangHun(), name: "holland"),
-  TranslatedName(LangHye(), name: "ֆլամանդերեն"),
+  TranslatedName(LangHye(), name: "հոլանդերեն"),
+  TranslatedName(LangInd(), name: "Belanda"),
+  TranslatedName(LangIbo(), name: "Dọọch"),
   TranslatedName(LangIsl(), name: "hollenska"),
   TranslatedName(LangIta(), name: "olandese"),
-  TranslatedName(LangJpn(), name: "フレミッシュ語"),
-  TranslatedName(LangKat(), name: "ფლამანდიური"),
+  TranslatedName(LangJpn(), name: "オランダ語"),
+  TranslatedName(LangKat(), name: "ნიდერლანდური"),
   TranslatedName(LangKik(), name: "Kiholanzi"),
-  TranslatedName(LangKaz(), name: "фламанд тілі"),
+  TranslatedName(LangKaz(), name: "нидерланд тілі"),
   TranslatedName(LangKhm(), name: "ហុល្លង់"),
-  TranslatedName(LangKan(), name: "ಫ್ಲೆಮಿಷ್"),
-  TranslatedName(LangKor(), name: "플라망어"),
-  TranslatedName(LangKas(), name: "فلیٚمِش"),
-  TranslatedName(LangKir(), name: "фламандча"),
+  TranslatedName(LangKan(), name: "ಡಚ್"),
+  TranslatedName(LangKor(), name: "네덜란드어"),
+  TranslatedName(LangKas(), name: "ڈَچ"),
+  TranslatedName(LangKir(), name: "голландча"),
   TranslatedName(LangLtz(), name: "Hollännesch"),
   TranslatedName(LangLug(), name: "Luholandi"),
   TranslatedName(LangLin(), name: "lifalamá"),
-  TranslatedName(LangLao(), name: "ຟລີມິຊ"),
+  TranslatedName(LangLao(), name: "ດັຊ"),
   TranslatedName(LangLit(), name: "olandų"),
   TranslatedName(LangLub(), name: "olandi"),
   TranslatedName(LangLav(), name: "holandiešu"),
   TranslatedName(LangMlg(), name: "Holandey"),
-  TranslatedName(LangMal(), name: "ഫ്ലമിഷ്"),
-  TranslatedName(LangMon(), name: "фламанд"),
-  TranslatedName(LangMar(), name: "फ्लेमिश"),
+  TranslatedName(LangMkd(), name: "холандски"),
+  TranslatedName(LangMal(), name: "ഡച്ച്"),
+  TranslatedName(LangMon(), name: "голланд"),
+  TranslatedName(LangMar(), name: "डच"),
+  TranslatedName(LangMsa(), name: "Belanda"),
   TranslatedName(LangMlt(), name: "Olandiż"),
-  TranslatedName(LangMya(), name: "ဖလီမစ်ရှ်"),
+  TranslatedName(LangMya(), name: "ဒတ်ချ်"),
   TranslatedName(LangNob(), name: "nederlandsk"),
   TranslatedName(LangNde(), name: "isi-Dutch"),
-  TranslatedName(LangNep(), name: "फ्लेमिश"),
-  TranslatedName(LangNld(), name: "Vlaams"),
+  TranslatedName(LangNep(), name: "डच"),
+  TranslatedName(LangNld(), name: "Nederlands"),
   TranslatedName(LangNno(), name: "nederlandsk"),
   TranslatedName(LangNor(), name: "nederlandsk"),
-  TranslatedName(LangOri(), name: "ଫ୍ଲେମିଶ୍"),
-  TranslatedName(LangPan(), name: "ਫਲੈਮਿਸ਼"),
+  TranslatedName(LangOrm(), name: "Afaan Dachii"),
+  TranslatedName(LangOri(), name: "ଡଚ୍"),
+  TranslatedName(LangPan(), name: "ਡੱਚ"),
   TranslatedName(LangPol(), name: "niderlandzki"),
   TranslatedName(LangPor(), name: "holandês"),
   TranslatedName(LangQue(), name: "Neerlandes Simi"),
   TranslatedName(LangRoh(), name: "ollandais"),
   TranslatedName(LangRun(), name: "Igiholandi"),
   TranslatedName(LangRon(), name: "olandeză"),
-  TranslatedName(LangRus(), name: "фламандский"),
+  TranslatedName(LangRus(), name: "голландский"),
   TranslatedName(LangKin(), name: "Ikinerilande"),
   TranslatedName(LangSme(), name: "hollánddagiella"),
   TranslatedName(LangSag(), name: "Holandëe"),
-  TranslatedName(LangSin(), name: "ෆ්ලෙමිශ්"),
+  TranslatedName(LangSin(), name: "ලන්දේසි"),
   TranslatedName(LangSlk(), name: "holandčina"),
   TranslatedName(LangSlv(), name: "nizozemščina"),
+  TranslatedName(LangSna(), name: "chiDutch"),
   TranslatedName(LangSom(), name: "Holandays"),
   TranslatedName(LangSqi(), name: "holandisht"),
   TranslatedName(LangSrp(), name: "холандски"),
   TranslatedName(LangSrp(), name: "holandski", script: ScriptLatn()),
   TranslatedName(LangSwe(), name: "nederländska"),
   TranslatedName(LangSwa(), name: "Kiholanzi"),
-  TranslatedName(LangTam(), name: "பிலெமிஷ்"),
-  TranslatedName(LangTel(), name: "ఫ్లెమిష్"),
-  TranslatedName(LangTha(), name: "เฟลมิช"),
+  TranslatedName(LangTam(), name: "டச்சு"),
+  TranslatedName(LangTel(), name: "డచ్"),
+  TranslatedName(LangTha(), name: "ดัตช์"),
   TranslatedName(LangTir(), name: "ደች"),
-  TranslatedName(LangTon(), name: "lea fakahōlani-pelesiume"),
+  TranslatedName(LangTon(), name: "lea fakahōlani"),
   TranslatedName(LangTur(), name: "Hollandaca"),
-  TranslatedName(LangUkr(), name: "фламандська"),
-  TranslatedName(LangUrd(), name: "فلیمِش"),
+  TranslatedName(LangUig(), name: "گوللاندىيەچە"),
+  TranslatedName(LangUkr(), name: "голландська"),
+  TranslatedName(LangUrd(), name: "ڈچ"),
   TranslatedName(LangUzb(), name: "gollandcha"),
-  TranslatedName(LangUzb(), name: "Фламандча", script: ScriptCyrl()),
+  TranslatedName(LangUzb(), name: "Голландча", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Tiếng Hà Lan"),
-  TranslatedName(LangYid(), name: "פֿלעמיש"),
+  TranslatedName(LangYid(), name: "האלענדיש"),
+  TranslatedName(LangYor(), name: "Èdè Duki"),
   TranslatedName(LangZho(), name: "荷兰文"),
   TranslatedName(LangZho(), name: "荷蘭文", script: ScriptHant()),
-  TranslatedName(LangZul(), name: "isi-Flemish"),
+  TranslatedName(LangZul(), name: "isi-Dutch"),
 ];

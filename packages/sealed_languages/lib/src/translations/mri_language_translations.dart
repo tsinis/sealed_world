@@ -135,10 +135,8 @@ const mriLanguageTranslations = [
   TranslatedName(LangMal(), name: "മവോറി"),
   TranslatedName(LangMon(), name: "маори"),
   TranslatedName(LangMar(), name: "माओरी"),
-  TranslatedName(
-    LangMya(),
-    name: "မောင်းရီ (နယူးဇီလန်ကျွန်းရှိ ပင်ရင်းတိုင်းရင်းသားလူမျိုး)",
-  ),
+  TranslatedName(LangMya(),
+      name: "မောင်းရီ (နယူးဇီလန်ကျွန်းရှိ ပင်ရင်းတိုင်းရင်းသားလူမျိုး)"),
   TranslatedName(LangNob(), name: "maori"),
   TranslatedName(LangNep(), name: "माओरी"),
   TranslatedName(LangNno(), name: "maori"),
