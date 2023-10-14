@@ -5,7 +5,8 @@ import "../model/language/language.dart";
 import "../model/translated_name.dart";
 import "../translations/language_translations.dart";
 
-mixin TranslatedLanguage on Named<String> implements Translated {
+mixin TranslatedLanguage on Named<String>
+    implements Translated<TranslatedName> {
   @override
   List<TranslatedName> get translations => _translations[_language] ?? const [];
 

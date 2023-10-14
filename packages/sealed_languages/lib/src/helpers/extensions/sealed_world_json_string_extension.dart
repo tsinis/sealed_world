@@ -16,8 +16,11 @@ extension SealedWorldJsonStringExtension on String {
   /// final jsonString = '{"name": "John", "age": 30}';
   /// final person = jsonString.parse(Person.fromJson);
   /// ```
-  T parse<T>(T Function(JsonMap map) fromJson, {JsonCodec? codec}) =>
-      fromJson((codec ?? const JsonCodec()).decode(this) as JsonMap);
+  T parse<T>(
+    T Function(JsonMap map) fromJson, {
+    JsonCodec codec = const JsonCodec(),
+  }) =>
+      fromJson(codec.decode(this) as JsonMap);
 
   /// Tries to parse the JSON string into an object of type [T].
   ///

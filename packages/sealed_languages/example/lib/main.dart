@@ -18,7 +18,8 @@ void main() {
   final russian = NaturalLanguage.fromCodeShort("ru");
   print("${russian.name}: ${russian.code}"); // Prints: "Russian: RUS".
 
-  print(russian.translations); // Prints: 120 translations of the language name.
+  /// Translations of the language name.
+  print(russian.translations.length); // Prints: 120.
 
   final maybeCzech = NaturalLanguage.maybeFromValue(
     "CZE",
@@ -32,4 +33,10 @@ void main() {
   print(maybeCzech?.maybeWhen(langCes: () => "Ahoj!", orElse: () => "Hey!"));
 
   print(NaturalLanguage.list.length); // Prints: "184".
+
+  for (final language in NaturalLanguage.list) {
+    print(
+      "Czech name of ${language.name}: ${language.maybeTranslation(const LangCes())?.name}",
+    );
+  }
 }
