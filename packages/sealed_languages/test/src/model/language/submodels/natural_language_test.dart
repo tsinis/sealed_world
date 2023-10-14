@@ -2,6 +2,7 @@ import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string
 import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
+import "package:sealed_languages/src/interfaces/translated.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
@@ -12,6 +13,7 @@ void main() => group("$NaturalLanguage", () {
       test("interfaces", () {
         expect(value, isA<IsoStandardized>());
         expect(value, isA<JsonEncodable>());
+        expect(value, isA<Translated>());
       });
 
       group("fields", () {
@@ -192,6 +194,19 @@ void main() => group("$NaturalLanguage", () {
         );
       });
 
+      group("translations", () {
+        const min = 56;
+        test("every language should have at least $min translations", () {
+          for (final translated in NaturalLanguage.list) {
+            expect(translated.translations.length, greaterThanOrEqualTo(min));
+            expect(
+              translated.translations.every((l10n) => l10n.name.isNotEmpty),
+              isTrue,
+            );
+          }
+        });
+      });
+
       group("asserts", () {
         test(
           "not",
@@ -207,7 +222,7 @@ void main() => group("$NaturalLanguage", () {
         );
 
         test(
-          "empty format",
+          "empty name",
           () => expect(
             () => NaturalLanguage(
               name: "",

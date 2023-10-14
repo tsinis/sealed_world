@@ -8,7 +8,7 @@ part "submodels/natural_language_family.g.dart";
 ///
 /// A language family is a group of languages that have a common ancestor or are
 /// related in some other way.
-sealed class LanguageFamily implements Named {
+sealed class LanguageFamily implements Named<String> {
   /// Creates a new instance of the [LanguageFamily] class.
   ///
   /// The [name] parameter is required and should be a non-empty string

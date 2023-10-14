@@ -12,7 +12,7 @@ part "submodels/script.g.dart";
 /// A writing system is a set of symbols used to represent the sounds of a
 /// language. Examples of writing systems include the Latin alphabet, the
 /// Cyrillic alphabet, the Chinese script, etc.
-sealed class WritingSystem implements Named {
+sealed class WritingSystem implements Named<String> {
   /// Creates a new instance of [WritingSystem] with the specified name.
   ///
   /// The [name] parameter is a non-empty string that represents the name of

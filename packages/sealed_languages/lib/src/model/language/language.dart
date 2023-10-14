@@ -6,6 +6,7 @@ import "../../helpers/natural_language/natural_language_json.dart";
 import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";
+import "../../mixins/translated_language.dart";
 import "../language_family/language_family.dart";
 import "../script/writing_system.dart";
 
@@ -17,7 +18,7 @@ part "submodels/programming_language.dart";
 ///
 /// A language is a system of communication consisting of sounds, words, and
 /// grammar that is used by a group of people to communicate with each other.
-sealed class Language implements Named {
+sealed class Language implements Named<String> {
   /// Creates a new instance of the [Language] class.
   ///
   /// The [name] parameter is required and should be a non-empty string

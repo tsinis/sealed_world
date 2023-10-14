@@ -6,7 +6,7 @@
 ///
 /// Implementing classes should assign a value to the [name] field in their
 /// constructors. Once assigned, the [name] field cannot be modified.
-abstract interface class Named {
+abstract interface class Named<T extends Object> {
   /// Constructs a new instance of the [Named] class with the given [name].
   ///
   /// The [name] parameter represents the name of the object.
@@ -14,5 +14,5 @@ abstract interface class Named {
   const Named(this.name); // coverage:ignore-line
 
   /// The common name of the object.
-  final String name;
+  final T name;
 }

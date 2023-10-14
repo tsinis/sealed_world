@@ -2,6 +2,7 @@ part of "../language.dart";
 
 /// A class that represents a natural language.
 class NaturalLanguage extends Language
+    with TranslatedLanguage
     implements IsoStandardized<String>, JsonEncodable<NaturalLanguage> {
   /// Creates a new instance of the [NaturalLanguage] class.
   ///

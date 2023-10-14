@@ -18,6 +18,8 @@ void main() {
   final russian = NaturalLanguage.fromCodeShort("ru");
   print("${russian.name}: ${russian.code}"); // Prints: "Russian: RUS".
 
+  print(russian.translations); // Prints: 120 translations of the language name.
+
   final maybeCzech = NaturalLanguage.maybeFromValue(
     "CZE",
     where: (language) => language.bibliographicCode,
