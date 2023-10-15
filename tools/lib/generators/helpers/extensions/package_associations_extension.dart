@@ -16,8 +16,12 @@ extension PackageAssociationsExtension on Package {
       whenConstOrNull(sealedLanguages: "${type.toString().toSnakeCase()}s") ??
       "";
 
-  String get dataRepresent =>
-      whenConstOrNull(sealedLanguages: "$Language".toLowerCase()) ?? "";
+  String get dataRepresent => whenConst(
+        sealedLanguages: Language,
+        sealedCountries: "Country",
+        sealedCurrencies: "Currency",
+        worldCountries: "World",
+      ).toString().toLowerCase();
 
   String get isoCodeAssociated =>
       whenConstOrNull(sealedLanguages: "639-2") ?? "";

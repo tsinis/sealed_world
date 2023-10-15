@@ -7,6 +7,7 @@ environment:
   sdk: ^3.0.0
 
 dependencies:
+  args: ^2.4.2 # From Google
   change_case: ^1.1.0
   path: ^1.8.3 # From Google
   rw_git: ^1.0.3
