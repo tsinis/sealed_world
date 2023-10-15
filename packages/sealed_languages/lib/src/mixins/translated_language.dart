@@ -5,8 +5,33 @@ import "../model/language/language.dart";
 import "../model/translated_name.dart";
 import "../translations/language_translations.dart";
 
+/// A mixin that provides translation capabilities for a language object.
+///
+/// The [TranslatedLanguage] mixin is used to add translation functionality to a
+/// language object. The mixin requires the language object to implement the
+/// [Named] interface with a `String` type parameter, as well as the
+/// [Translated] interface with a [TranslatedName] type parameter.
+///
+/// Example usage:
+///
+/// ```dart
+/// class MyLanguage with TranslatedLanguage extends Named<String> {
+/// ...
+/// }
+/// ```
+///
+/// In this example, the `MyLanguage` class implements the [Named] interface
+/// with a `String` type parameter, and the [Translated] interface with a
+/// [TranslatedName] type parameter. By using the [TranslatedLanguage] mixin,
+/// the `MyLanguage` class gains translation capabilities through the
+/// implementation of the [translations] getter.
+///
+/// The [translations] getter returns a list of [TranslatedName] objects, which
+/// represents the translations for the language.
 mixin TranslatedLanguage on Named<String>
     implements Translated<TranslatedName> {
+  /// Returns a list of [TranslatedName] objects representing the translations
+  /// for the language.
   @override
   List<TranslatedName> get translations => _translations[_language] ?? const [];
 

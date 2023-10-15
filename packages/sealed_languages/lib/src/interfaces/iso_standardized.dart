@@ -47,10 +47,11 @@ abstract interface class IsoStandardized<Name extends Object> {
     this.codeOther,
   });
 
-  /// The regular length of the ISO code (3). However, it's important to note
-  /// that this length is not standardized for all ISO codes. Some ISO codes may
-  /// have a different length. For example, the ISO 15924 code has a length of
-  /// 4. To determine the specific length of the code for a particular ISO
+  /// The regular length of the ISO code (3 characters). However, it's important
+  /// to note that this length is not standardized for all ISO codes. Some ISO
+  /// codes may have a different length. For example, the ISO 15924 code has a
+  /// length of 4.
+  /// To determine the specific length of the code for a particular ISO
   /// realization of this interface, please refer to the documentation of that
   /// realization.
   ///
@@ -58,10 +59,10 @@ abstract interface class IsoStandardized<Name extends Object> {
   /// compile-time constant in case of a different length.
   static const codeLength = 3;
 
-  /// The regular length of the short ISO code (2 letters).
+  /// The regular length of the short ISO code (2 characters).
   static const codeShortLength = 2;
 
-  /// A string representing the ISO 3-letter code for the object.
+  /// A string representing the ISO (usually a 3-letter) code for the object.
   final String code;
 
   /// An optional string representing an alternative ISO code for the object.

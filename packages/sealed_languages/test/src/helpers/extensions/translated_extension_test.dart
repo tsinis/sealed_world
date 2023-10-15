@@ -81,26 +81,23 @@ void main() => group("TranslatedExtension", () {
       });
 
       test("translation should always provide at least eng translation", () {
+        const abkhazia = LangAbk();
         const nonExistCode = "";
         var count = 0;
         for (final value in NaturalLanguage.list) {
           final maybeMissing = value.maybeTranslation(
-            portuguese,
+            abkhazia,
             countryCode: nonExistCode,
             useLanguageFallback: false,
           );
           if (maybeMissing != null) continue;
           count++;
           expect(
-            value.translation(
-              portuguese,
-              countryCode: nonExistCode,
-              useLanguageFallback: false,
-            ),
+            value.translation(abkhazia, countryCode: nonExistCode),
             isNotNull,
           );
-          expect(count, isNot(isZero));
         }
+        expect(count, isPositive);
       });
 
       test("there should be always translations for specific languages", () {

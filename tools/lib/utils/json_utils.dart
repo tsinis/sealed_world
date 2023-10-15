@@ -161,7 +161,9 @@ const ${varFileName.toCamelCase()} = [
     final languageCode = _extractLocaleCode(code).languageCode;
     final language = NaturalLanguage.maybeFromValue(
       languageCode,
-      where: (lang) => languageCode.length == 2 ? lang.codeShort : lang.code,
+      where: (lang) => languageCode.length == IsoStandardized.codeShortLength
+          ? lang.codeShort
+          : lang.code,
     );
 
     /// Looks like Bhojpuri is subset of Bihari language group:

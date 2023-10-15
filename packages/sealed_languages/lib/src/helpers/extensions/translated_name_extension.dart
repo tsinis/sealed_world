@@ -15,7 +15,7 @@ extension TranslatedNameExtension on TranslatedName {
   /// If the new values are null, the field is left unchanged. Otherwise,
   /// the field is replaced with the new value.
   /// {@endtemplate}
-  // ignore: long-parameter-list, 5 params in default constructor.
+  // ignore: long-parameter-list, 5 params in the default constructor.
   TranslatedName copyWith({
     NaturalLanguage? language,
     String? countryCode,
