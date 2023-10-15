@@ -1,9 +1,9 @@
+import "../../language_translations.dart";
 import "../data/natural_languages.data.dart";
 import "../interfaces/named.dart";
 import "../interfaces/translated.dart";
 import "../model/language/language.dart";
 import "../model/translated_name.dart";
-import "../translations/language_translations.dart";
 
 /// A mixin that provides translation capabilities for a language object.
 ///

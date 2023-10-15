@@ -1,5 +1,8 @@
-import "../../../sealed_languages.dart";
+import "../../data/natural_languages.data.dart";
 import "../../interfaces/translated.dart";
+import "../../model/language/language.dart";
+import "../../model/script/writing_system.dart";
+import "../../model/translated_name.dart";
 
 /// An extension that provides translation methods for objects implementing the
 /// [Translated] interface.

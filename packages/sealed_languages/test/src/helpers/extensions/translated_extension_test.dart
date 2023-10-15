@@ -1,5 +1,8 @@
-import "package:sealed_languages/sealed_languages.dart";
-import "package:sealed_languages/src/translations/language_translations.dart";
+import "package:sealed_languages/language_translations.dart";
+import "package:sealed_languages/src/data/natural_languages.data.dart";
+import "package:sealed_languages/src/data/scripts.data.dart";
+import "package:sealed_languages/src/helpers/extensions/translated_extension.dart";
+import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
 void main() => group("TranslatedExtension", () {

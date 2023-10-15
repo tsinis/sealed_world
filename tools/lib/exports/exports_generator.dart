@@ -7,7 +7,7 @@ sealed class ExportsGenerator {
   static const _generatorPackage = "index_generator";
   static const _dart = DartUtils();
 
-  static Future<void> run([Package package = Package.sealedCountries]) async {
+  static Future<void> run([Package package = Package.sealedLanguages]) async {
     final packageDirName = package.dirName;
     final sourcePath =
         "configs/${packageDirName}_exports.${PathConstants.yaml}";
