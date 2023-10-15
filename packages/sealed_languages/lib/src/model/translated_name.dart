@@ -40,6 +40,12 @@ class TranslatedName implements Named, JsonEncodable<TranslatedName> {
   final String? countryCode;
 
   /// Represents the full/official translation.
+  ///
+  /// Some languages have the concept of a common name and a full name, for
+  /// example, in the Czech language it is common to use a monosyllabic term for
+  /// a language (e.g. "Čeština", "Ruština", "Angličtina", etc.), when formally
+  /// it is shortened version of the full form ("Český jazyk", "Ruský jazyk",
+  /// "Anglický jazyk", etc.).
   final String? fullName;
 
   /// Represents the short/common translation.

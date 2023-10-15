@@ -5,9 +5,9 @@ import "package:cli/models/package.dart";
 
 /// Usage: `dart run :exports sealed_languages`.
 Future<void> main(List<String> args) {
-  final arg = ArgParser();
-  for (final pkg in Package.values) arg.addCommand(pkg.dirName);
-  final maybeCommand = arg.parse(args).command?.name?.toCamelCase();
+  final parser = ArgParser();
+  for (final package in Package.values) parser.addCommand(package.dirName);
+  final maybeCommand = parser.parse(args).command?.name?.toCamelCase();
   if (maybeCommand?.isEmpty ?? true) return ExportsGenerator.run();
   final maybePackage = Package.values.byName(maybeCommand ?? "");
 
