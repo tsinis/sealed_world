@@ -8,7 +8,7 @@ index_generator:
     - "**/model/language/submodels/programming_language.dart"
     - "**/model/language_family/submodels/natural_language_family.dart"
     # Language translations:
-    - "**/translations/**_language_translations.dart"
+    - "**/translations/**.l10n.dart"
     # Internal imports:
     - "**/mixins/translated_language.dart"
   indexes:

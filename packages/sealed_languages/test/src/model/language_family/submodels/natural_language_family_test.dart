@@ -54,6 +54,14 @@ void main() => group("$NaturalLanguageFamily", () {
             throwsStateError,
           ),
         );
+
+        test(
+          "with empty families",
+          () => expect(
+            () => NaturalLanguageFamily.fromName(value.name, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
 
       group("maybeFromValue", () {

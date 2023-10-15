@@ -78,17 +78,17 @@ final class JsonUtils {
         );
 
         final isAdded = translations.add(translated);
-        if (isAdded) {
-          print(
-            ''' * Add ${translated.language.name}: "${translated.name}" translation (total: ${translations.length})''',
-          );
-        }
+        if (!isAdded) continue;
+        print(
+          ''' * Add ${translated.language.name}: "${translated.name}" translation (total: ${translations.length})''',
+        );
       }
 
       final translationCode = item.code.toLowerCase();
       final dataType = package.dataRepresent;
       final varFileName = "$translationCode $dataType $translation";
-      final fileNameFull = "${varFileName.toSnakeCase()}.${PathConstants.dart}";
+      final fileNameFull =
+          """${translationCode}_${dataType.toLowerCase()}.l10n.${PathConstants.dart}""";
       final filePath = join(translation, fileNameFull);
       paths.add(fileNameFull);
       final buffer = StringBuffer(
@@ -106,13 +106,11 @@ const ${varFileName.toCamelCase()} = [
       }
       buffer.write("];");
       io.writeContentToFile(filePath, buffer);
-
       buffer.clear();
       translations.clear();
     }
 
     await _dart.fixFormat();
-
     stopwatch.stop();
     print("\n🎉 Done! Generation process took ${stopwatch.elapsed}");
 

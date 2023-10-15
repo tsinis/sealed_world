@@ -34,10 +34,13 @@ class Script extends WritingSystem
   /// parameter can be used to specify a list of [Script] objects to search
   /// through. This method returns the [Script] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory Script.fromCode(String code, [Iterable<Script> scripts = list]) =>
-      scripts.firstWhere(
-        (script) => script.code.toUpperCase() == code.trim().toUpperCase(),
-      );
+  factory Script.fromCode(String code, [Iterable<Script> scripts = list]) {
+    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
+
+    return scripts.firstWhere(
+      (script) => script.code.toUpperCase() == code.trim().toUpperCase(),
+    );
+  }
 
   /// Creates a new instance of the [Script] class from a three-digit ISO 15924
   /// code.
@@ -51,8 +54,12 @@ class Script extends WritingSystem
   factory Script.fromCodeNumeric(
     String codeNumeric, [
     Iterable<Script> scripts = list,
-  ]) =>
-      scripts.firstWhere((script) => script.codeNumeric == codeNumeric.trim());
+  ]) {
+    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
+
+    return scripts
+        .firstWhere((script) => script.codeNumeric == codeNumeric.trim());
+  }
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
@@ -61,10 +68,13 @@ class Script extends WritingSystem
   /// be used to specify a list of [Script] objects to search through. This
   /// method returns the [Script] instance that corresponds to the given name,
   /// or throws a [StateError] if no such instance exists.
-  factory Script.fromName(String name, [Iterable<Script> scripts = list]) =>
-      scripts.firstWhere(
-        (script) => script.name.toUpperCase() == name.trim().toUpperCase(),
-      );
+  factory Script.fromName(String name, [Iterable<Script> scripts = list]) {
+    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
+
+    return scripts.firstWhere(
+      (script) => script.name.toUpperCase() == name.trim().toUpperCase(),
+    );
+  }
 
   /// The regular length of the ISO code (4). However, it's important to note
   /// that this length is not standardized for all ISO codes. Typically it is

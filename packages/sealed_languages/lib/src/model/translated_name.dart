@@ -13,7 +13,7 @@ import "script/writing_system.dart";
 /// The [fullName] property represents the full/official translation.
 /// The [countryCode] property represents the regional code, that might be used
 /// for regional differences in the [language] translation.
-class TranslatedName implements Named, JsonEncodable<TranslatedName> {
+class TranslatedName implements Named<String>, JsonEncodable<TranslatedName> {
   /// Creates a new [TranslatedName] instance with the given language, name
   /// and optional full name and country code.
   const TranslatedName(

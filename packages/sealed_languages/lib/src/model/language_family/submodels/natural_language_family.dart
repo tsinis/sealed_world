@@ -29,10 +29,13 @@ class NaturalLanguageFamily extends LanguageFamily {
   factory NaturalLanguageFamily.fromName(
     String name, [
     Iterable<NaturalLanguageFamily> families = list,
-  ]) =>
-      families.firstWhere(
-        (family) => family.name.toUpperCase() == name.trim().toUpperCase(),
-      );
+  ]) {
+    assert(families.isNotEmpty, "`families` should not be empty!");
+
+    return families.firstWhere(
+      (family) => family.name.toUpperCase() == name.trim().toUpperCase(),
+    );
+  }
 
   /// Returns a [NaturalLanguageFamily] object that matches the given value.
   ///

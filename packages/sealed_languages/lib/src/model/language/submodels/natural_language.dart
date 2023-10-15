@@ -55,10 +55,13 @@ class NaturalLanguage extends Language
   factory NaturalLanguage.fromCode(
     String code, [
     Iterable<NaturalLanguage> languages = list,
-  ]) =>
-      languages.firstWhere(
-        (language) => language.code == code.trim().toUpperCase(),
-      );
+  ]) {
+    assert(languages.isNotEmpty, "`languages` should not be empty!");
+
+    return languages.firstWhere(
+      (language) => language.code == code.trim().toUpperCase(),
+    );
+  }
 
   /// Creates a new instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
@@ -72,10 +75,13 @@ class NaturalLanguage extends Language
   factory NaturalLanguage.fromCodeShort(
     String codeShort, [
     Iterable<NaturalLanguage> languages = list,
-  ]) =>
-      languages.firstWhere(
-        (language) => language.codeShort == codeShort.trim().toUpperCase(),
-      );
+  ]) {
+    assert(languages.isNotEmpty, "`languages` should not be empty!");
+
+    return languages.firstWhere(
+      (language) => language.codeShort == codeShort.trim().toUpperCase(),
+    );
+  }
 
   /// Creates a new instance of the [NaturalLanguage] class from the name of the
   /// language.
@@ -89,10 +95,13 @@ class NaturalLanguage extends Language
   factory NaturalLanguage.fromName(
     String name, [
     Iterable<NaturalLanguage> languages = list,
-  ]) =>
-      languages.firstWhere(
-        (lang) => lang.name.toUpperCase() == name.trim().toUpperCase(),
-      );
+  ]) {
+    assert(languages.isNotEmpty, "`languages` should not be empty!");
+
+    return languages.firstWhere(
+      (lang) => lang.name.toUpperCase() == name.trim().toUpperCase(),
+    );
+  }
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
   /// the language.

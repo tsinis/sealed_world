@@ -75,6 +75,14 @@ void main() => group("$Script", () {
             throwsStateError,
           ),
         );
+
+        test(
+          "with empty scripts",
+          () => expect(
+            () => Script.fromName(value.name, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
 
       group("fromCode", () {
@@ -88,6 +96,14 @@ void main() => group("$Script", () {
           () => expect(
             () => Script.fromCodeNumeric(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty scripts",
+          () => expect(
+            () => Script.fromCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
@@ -106,6 +122,14 @@ void main() => group("$Script", () {
           () => expect(
             () => Script.fromCodeNumeric(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty scripts",
+          () => expect(
+            () => Script.fromCodeNumeric(value.codeNumeric, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });

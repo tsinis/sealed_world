@@ -82,6 +82,14 @@ void main() => group("$NaturalLanguage", () {
             throwsStateError,
           ),
         );
+
+        test(
+          "with empty languages",
+          () => expect(
+            () => NaturalLanguage.fromName(value.name, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
 
       group("fromCode", () {
@@ -93,8 +101,16 @@ void main() => group("$NaturalLanguage", () {
         test(
           "with wrong code",
           () => expect(
-            () => NaturalLanguage.fromCodeShort(value.toString()),
+            () => NaturalLanguage.fromCode(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty languages",
+          () => expect(
+            () => NaturalLanguage.fromCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
@@ -110,6 +126,14 @@ void main() => group("$NaturalLanguage", () {
           () => expect(
             () => NaturalLanguage.fromCodeShort(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty languages",
+          () => expect(
+            () => NaturalLanguage.fromCodeShort(value.codeShort, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
