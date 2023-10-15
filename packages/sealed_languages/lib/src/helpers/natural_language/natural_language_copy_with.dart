@@ -1,5 +1,6 @@
 import "../../model/language/language.dart";
 import "../../model/language_family/language_family.dart";
+import "../../model/script/writing_system.dart";
 
 /// Extension on [NaturalLanguage] that provides a `copyWith` method for
 /// creating a new instance of [NaturalLanguage] with updated properties.
@@ -27,6 +28,7 @@ extension NaturalLanguageCopyWith on NaturalLanguage {
     String? bibliographicCode,
     NaturalLanguageFamily? family,
     bool? isRightToLeft,
+    Set<Script>? scripts,
   }) =>
       NaturalLanguage(
         name: name ?? this.name,
@@ -36,5 +38,6 @@ extension NaturalLanguageCopyWith on NaturalLanguage {
         bibliographicCode: bibliographicCode ?? this.bibliographicCode,
         family: family ?? this.family,
         isRightToLeft: isRightToLeft ?? this.isRightToLeft,
+        scripts: scripts ?? this.scripts,
       );
 }

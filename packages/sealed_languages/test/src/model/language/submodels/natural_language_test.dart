@@ -1,7 +1,8 @@
-import "package:sealed_languages/src/helpers/extensions/json_string_extension.dart";
+import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
+import "package:sealed_languages/src/interfaces/translated.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
@@ -12,6 +13,7 @@ void main() => group("$NaturalLanguage", () {
       test("interfaces", () {
         expect(value, isA<IsoStandardized>());
         expect(value, isA<JsonEncodable>());
+        expect(value, isA<Translated>());
       });
 
       group("fields", () {
@@ -32,6 +34,7 @@ void main() => group("$NaturalLanguage", () {
             expect(element.namesNative, isNotEmpty);
             expect(element.code, isA<String>());
             expect(element.code, isNotEmpty);
+            expect(element.scripts, isNotEmpty);
           });
         }
       });
@@ -79,6 +82,14 @@ void main() => group("$NaturalLanguage", () {
             throwsStateError,
           ),
         );
+
+        test(
+          "with empty languages",
+          () => expect(
+            () => NaturalLanguage.fromName(value.name, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
 
       group("fromCode", () {
@@ -90,8 +101,16 @@ void main() => group("$NaturalLanguage", () {
         test(
           "with wrong code",
           () => expect(
-            () => NaturalLanguage.fromCodeShort(value.toString()),
+            () => NaturalLanguage.fromCode(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty languages",
+          () => expect(
+            () => NaturalLanguage.fromCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
@@ -107,6 +126,14 @@ void main() => group("$NaturalLanguage", () {
           () => expect(
             () => NaturalLanguage.fromCodeShort(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty languages",
+          () => expect(
+            () => NaturalLanguage.fromCodeShort(value.codeShort, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
@@ -127,6 +154,7 @@ void main() => group("$NaturalLanguage", () {
             expect(element.isRightToLeft, decoded?.isRightToLeft);
             expect(element.namesNative, decoded?.namesNative);
             expect(element.code, decoded?.code);
+            expect(element.scripts, decoded?.scripts);
           });
         }
       });
@@ -190,6 +218,19 @@ void main() => group("$NaturalLanguage", () {
         );
       });
 
+      group("translations", () {
+        const min = 57;
+        test("every language should have at least $min translations", () {
+          for (final translated in NaturalLanguage.list) {
+            expect(translated.translations.length, greaterThanOrEqualTo(min));
+            expect(
+              translated.translations.every((l10n) => l10n.name.isNotEmpty),
+              isTrue,
+            );
+          }
+        });
+      });
+
       group("asserts", () {
         test(
           "not",
@@ -205,7 +246,20 @@ void main() => group("$NaturalLanguage", () {
         );
 
         test(
-          "empty format",
+          "empty name",
+          () => expect(
+            () => NaturalLanguage(
+              name: "",
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "name",
           () => expect(
             () => NaturalLanguage(
               name: "",
@@ -265,6 +319,20 @@ void main() => group("$NaturalLanguage", () {
               namesNative: value.namesNative,
               code: value.code,
               bibliographicCode: value.codeShort,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "empty scripts",
+          () => expect(
+            () => NaturalLanguage(
+              name: value.name,
+              codeShort: value.codeShort,
+              namesNative: value.namesNative,
+              code: value.code,
+              scripts: const {},
             ),
             throwsA(isA<AssertionError>()),
           ),

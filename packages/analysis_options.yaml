@@ -82,6 +82,7 @@ dart_code_metrics:
         exclude:
           - test/**
           - lib/**/constants.dart
+          - "**/translations/**.l10n.dart"
     - member-ordering:
         order:
           - constructors
@@ -96,6 +97,7 @@ dart_code_metrics:
     - avoid-non-ascii-symbols:
         exclude:
           - "**/data/**.data.dart"
+          - "**/translations/**.l10n.dart"
     - arguments-ordering:
         child-last: true
     - avoid-banned-imports: true

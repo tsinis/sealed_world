@@ -2,6 +2,7 @@ part of "../language.dart";
 
 /// A class that represents a natural language.
 class NaturalLanguage extends Language
+    with TranslatedLanguage
     implements IsoStandardized<String>, JsonEncodable<NaturalLanguage> {
   /// Creates a new instance of the [NaturalLanguage] class.
   ///
@@ -26,6 +27,7 @@ class NaturalLanguage extends Language
     this.bibliographicCode,
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
+    this.scripts = const {ScriptLatn()},
   })  : assert(code.length == 3, "`code` should be exactly 3 characters long!"),
         assert(
           codeShort.length == 2,
@@ -35,6 +37,7 @@ class NaturalLanguage extends Language
           namesNative != const <String>[],
           "`namesNative` should not be empty!",
         ),
+        assert(scripts != const <Script>{}, "`scripts` should not be empty!"),
         assert(
           bibliographicCode == null || bibliographicCode.length == 3,
           "`bibliographicCode` should be exactly 3 characters long!",
@@ -44,34 +47,61 @@ class NaturalLanguage extends Language
   /// Terminological ISO 639-2 code.
   ///
   /// The [code] parameter is required and should be a three-letter string
-  /// representing the Terminological ISO 639-2 code for the language. This
-  /// method returns the [NaturalLanguage] instance that corresponds to the
+  /// representing the Terminological ISO 639-2 code for the language.
+  /// The optional [languages] parameter can be used to specify a list of
+  /// [NaturalLanguage] objects to search through.
+  /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory NaturalLanguage.fromCode(String code) => list.firstWhere(
-        (language) => language.code == code.trim().toUpperCase(),
-      );
+  factory NaturalLanguage.fromCode(
+    String code, [
+    Iterable<NaturalLanguage> languages = list,
+  ]) {
+    assert(languages.isNotEmpty, "`languages` should not be empty!");
+
+    return languages.firstWhere(
+      (language) => language.code == code.trim().toUpperCase(),
+    );
+  }
 
   /// Creates a new instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
   ///
   /// The [codeShort] parameter is required and should be a two-letter string
-  /// representing the ISO 639-1 code for the language. This method returns the
-  /// [NaturalLanguage] instance that corresponds to the given code, or throws a
-  /// [StateError] if no such instance exists.
-  factory NaturalLanguage.fromCodeShort(String codeShort) => list.firstWhere(
-        (language) => language.codeShort == codeShort.trim().toUpperCase(),
-      );
+  /// representing the ISO 639-1 code for the language.
+  /// The optional [languages] parameter can be used to specify a list of
+  /// [NaturalLanguage] objects to search through.
+  /// This method returns the [NaturalLanguage] instance that corresponds to the
+  /// given code, or throws a [StateError] if no such instance exists.
+  factory NaturalLanguage.fromCodeShort(
+    String codeShort, [
+    Iterable<NaturalLanguage> languages = list,
+  ]) {
+    assert(languages.isNotEmpty, "`languages` should not be empty!");
+
+    return languages.firstWhere(
+      (language) => language.codeShort == codeShort.trim().toUpperCase(),
+    );
+  }
 
   /// Creates a new instance of the [NaturalLanguage] class from the name of the
   /// language.
   ///
   /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the natural language. This method returns the
-  /// [NaturalLanguage] instance that corresponds to the given name, or throws a
-  /// [StateError] if no such instance exists.
-  factory NaturalLanguage.fromName(String name) => list.firstWhere(
-        (lang) => lang.name.toUpperCase() == name.trim().toUpperCase(),
-      );
+  /// representing the name of the natural language.
+  /// The optional [languages] parameter can be used to specify a list of
+  /// [NaturalLanguage] objects to search through.
+  /// This method returns the [NaturalLanguage] instance that corresponds to the
+  /// given name, or throws a [StateError] if no such instance exists.
+  factory NaturalLanguage.fromName(
+    String name, [
+    Iterable<NaturalLanguage> languages = list,
+  ]) {
+    assert(languages.isNotEmpty, "`languages` should not be empty!");
+
+    return languages.firstWhere(
+      (lang) => lang.name.toUpperCase() == name.trim().toUpperCase(),
+    );
+  }
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
   /// the language.
@@ -95,6 +125,9 @@ class NaturalLanguage extends Language
   /// Whether the language is written right-to-left.
   final bool isRightToLeft;
 
+  /// The ISO 15924 scripts used by the language.
+  final Set<Script> scripts;
+
   @override
   String get codeOther => codeShort;
 
@@ -108,7 +141,7 @@ class NaturalLanguage extends Language
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''NaturalLanguage(name: "$name", code: "$code", codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, bibliographicCode: ${bibliographicCode == null ? bibliographicCode : '"$bibliographicCode"'}, family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft)''';
+      : '''$NaturalLanguage(name: "$name", code: "$code", codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, bibliographicCode: ${bibliographicCode == null ? bibliographicCode : '"$bibliographicCode"'}, family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, scripts: ${scripts.toUniqueInstancesString()})''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

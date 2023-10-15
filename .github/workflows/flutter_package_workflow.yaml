@@ -79,7 +79,7 @@ jobs:
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
-          exclude: "**/*.g.dart **/*.data.dart"
+          exclude: "**/*.g.dart **/*.data.dart **/*.l10n.dart"
           min_coverage: 90
 
       - name: 💯 Upload coverage

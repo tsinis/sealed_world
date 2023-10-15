@@ -5,7 +5,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 import "../helpers/extensions/translated_name_extension.dart";
 import "../interfaces/named.dart";
 
-// TODO! Move to languages.
+// TODO: Remove.
 /// A class representing a translated name of a country or region.
 ///
 /// This class implements the [Named] interface and the

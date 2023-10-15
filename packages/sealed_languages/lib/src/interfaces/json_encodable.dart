@@ -1,5 +1,7 @@
 import "dart:convert" show JsonCodec;
 
+export "dart:convert" show JsonCodec, jsonEncode;
+
 /// An interface that represents an object that can be encoded to JSON.
 ///
 /// The [JsonEncodable] interface is used to represent objects that can be

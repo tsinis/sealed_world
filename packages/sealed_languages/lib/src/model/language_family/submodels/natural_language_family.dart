@@ -17,7 +17,8 @@ class NaturalLanguageFamily extends LanguageFamily {
   /// Returns a [NaturalLanguageFamily] object with the given [name].
   ///
   /// The [name] parameter should be a string representing the name of the
-  /// language family.
+  /// language family. The optional [families] parameter can be used to
+  /// specify a list of language families to search through.
   ///
   /// Example usage:
   ///
@@ -25,9 +26,16 @@ class NaturalLanguageFamily extends LanguageFamily {
   /// final family = NaturalLanguageFamily.fromName('Indo-European');
   /// print(family); // Prints: LanguageFamily(name: Indo-European).
   /// ```
-  factory NaturalLanguageFamily.fromName(String name) => list.firstWhere(
-        (family) => family.name.toUpperCase() == name.trim().toUpperCase(),
-      );
+  factory NaturalLanguageFamily.fromName(
+    String name, [
+    Iterable<NaturalLanguageFamily> families = list,
+  ]) {
+    assert(families.isNotEmpty, "`families` should not be empty!");
+
+    return families.firstWhere(
+      (family) => family.name.toUpperCase() == name.trim().toUpperCase(),
+    );
+  }
 
   /// Returns a [NaturalLanguageFamily] object that matches the given value.
   ///

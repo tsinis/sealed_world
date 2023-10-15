@@ -1,0 +1,20 @@
+index_generator:
+  exclude:
+    # Code-gen part-of exports:
+    - "**.g.dart"
+    # Sealed class part-of exports:
+    - "**/model/script/submodels/script.dart"
+    - "**/model/language/submodels/natural_language.dart"
+    - "**/model/language/submodels/programming_language.dart"
+    - "**/model/language_family/submodels/natural_language_family.dart"
+    # Language translations:
+    - "**/translations/**.l10n.dart"
+    # Internal imports:
+    - "**/mixins/translated_language.dart"
+  indexes:
+    - path: lib/
+      include:
+        - src/**
+      disclaimer: false
+      library: sealed_languages
+      docs: Provides data for world languages in the form of sealed classes.

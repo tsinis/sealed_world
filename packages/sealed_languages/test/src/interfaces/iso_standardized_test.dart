@@ -1,4 +1,4 @@
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:test/test.dart";
 
 final class _IsoStandardizedTest implements IsoStandardized {
@@ -12,6 +12,9 @@ final class _IsoStandardizedTest implements IsoStandardized {
   List<String>? get namesNative => [name];
   @override
   String? get codeOther => code;
+
+  @override
+  String toString({bool short = true}) => name;
 }
 
 void main() => group("$IsoStandardized", () {

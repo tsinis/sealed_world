@@ -1,6 +1,7 @@
 (?:(?i)LICENSE)
 (?:^|/)data/
 \.data.dart$
+\.l10n.dart$
 \.freezed.dart$
 \.g.dart$
 \.ico$

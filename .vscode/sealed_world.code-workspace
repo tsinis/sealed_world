@@ -68,11 +68,21 @@
         "source.sortMembers": "never"
       }
     },
-    "cSpell.words": ["Cinis", "cioc", "demonym", "demonyms", "gini"],
+    "cSpell.words": [
+      "Bhojpuri",
+      "Cinis",
+      "cioc",
+      "demonym",
+      "demonyms",
+      "devcontainers",
+      "gini",
+      "umpirsky"
+    ],
     "cSpell.useGitignore": true,
     "cSpell.ignorePaths": [
       ".git", // Ignore the .git directory
       "**/lib/**/*.data.dart",
+      "**/lib/**/*.l10n.dart",
       "**/lib/**/*.g.dart",
       "**/lib/**/*.freezed.dart",
       "**/lib/**/*.select.dart",
@@ -259,7 +269,7 @@
       },
       {
         "type": "shell",
-        "command": "lcov -r coverage/lcov.info '*/*.g.dart' '*/*.data.dart' -o coverage/lcov.info --ignore-errors unused",
+        "command": "lcov -r coverage/lcov.info '*/*.g.dart' '*/*.l10n.dart' '*/*.data.dart' -o coverage/lcov.info --ignore-errors unused",
         "label": "Remove Generated Files from Coverage",
         "presentation": {
           "reveal": "never",

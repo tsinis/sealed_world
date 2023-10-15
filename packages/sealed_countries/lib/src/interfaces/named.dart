@@ -1,4 +1,4 @@
-// TODO! Move to languages.
+// TODO: Remove.
 /// An abstract interface class for objects that have a [String] name.
 ///
 /// This interface provides a common structure for objects that have a name.

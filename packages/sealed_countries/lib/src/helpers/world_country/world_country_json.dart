@@ -20,8 +20,8 @@ import "../extensions/country_submodels/maps_extension.dart";
 import "../extensions/country_submodels/postal_code_extension.dart";
 import "../extensions/translated_name_extension.dart";
 
-/// Extension methods for serializing and deserializing [WorldCountry] objects
-/// to/from JSON like maps.
+/// Extension on [WorldCountry] that provides methods for converting
+/// [WorldCountry] objects to and from JSON maps.
 extension WorldCountryJson on WorldCountry {
   /// {@macro to_map_method}
   Map<String, Object?> toMap() => {
