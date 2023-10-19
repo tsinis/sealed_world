@@ -59,7 +59,6 @@ final class JsonUtils {
           ''' * Add ${translated.language.name}: "${translated.name}" translation (total: ${translations.length})''',
         );
       }
-      if (translations.isEmpty) continue;
 
       final translationCode = item.code.toLowerCase();
       final dataType = package.dataRepresent;

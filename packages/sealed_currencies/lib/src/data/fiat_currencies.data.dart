@@ -68,12 +68,12 @@ class FiatAmd extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatAng extends FiatCurrency {
-  /// A class that represents the Netherlands Antillean Gulden.
+  /// A class that represents the Netherlands Antillean Guilder.
   const FiatAng()
       : super(
           code: "ANG",
           namesNative: const ["Antilliaanse gulden"],
-          name: "Netherlands Antillean Gulden",
+          name: "Netherlands Antillean Guilder",
           symbol: "ƒ",
           alternateSymbols: const ["NAƒ", "NAf", "f"],
           subunit: "Cent",
@@ -388,7 +388,7 @@ class FiatBwp extends FiatCurrency {
       : super(
           code: "BWP",
           namesNative: const ["Botswana pula"],
-          name: "Botswana Pula",
+          name: "Botswanan Pula",
           symbol: "P",
           subunit: "Thebe",
           unitFirst: true,
@@ -495,7 +495,7 @@ class FiatClf extends FiatCurrency {
       : super(
           code: "CLF",
           namesNative: const ["Unidad de Fomento"],
-          name: "Unidad de Fomento",
+          name: "Chilean Unit of Account (UF)",
           symbol: "UF",
           subunit: "Peso",
           subunitToUnit: 10000,
@@ -940,12 +940,12 @@ class FiatGtq extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatGyd extends FiatCurrency {
-  /// A class that represents the Guyanese Dollar.
+  /// A class that represents the Guyanaese Dollar.
   const FiatGyd()
       : super(
           code: "GYD",
           namesNative: const ["Guyanese dollar"],
-          name: "Guyanese Dollar",
+          name: "Guyanaese Dollar",
           symbol: r"$",
           disambiguateSymbol: r"G$",
           alternateSymbols: const [r"G$"],
@@ -1060,12 +1060,12 @@ class FiatIdr extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatIls extends FiatCurrency {
-  /// A class that represents the Israeli New Sheqel.
+  /// A class that represents the Israeli New Shekel.
   const FiatIls()
       : super(
           code: "ILS",
           namesNative: const ["שקל חדש"],
-          name: "Israeli New Sheqel",
+          name: "Israeli New Shekel",
           symbol: "₪",
           alternateSymbols: const ["ש״ח", "NIS"],
           subunit: "Agora",
@@ -1216,12 +1216,12 @@ class FiatKes extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatKgs extends FiatCurrency {
-  /// A class that represents the Kyrgyzstani Som.
+  /// A class that represents the Kyrgystani Som.
   const FiatKgs()
       : super(
           code: "KGS",
           namesNative: const ["Кыргыз сом"],
-          name: "Kyrgyzstani Som",
+          name: "Kyrgystani Som",
           symbol: "som",
           alternateSymbols: const ["сом"],
           subunit: "Tyiyn",
@@ -1347,12 +1347,12 @@ class FiatKzt extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatLak extends FiatCurrency {
-  /// A class that represents the Lao Kip.
+  /// A class that represents the Laotian Kip.
   const FiatLak()
       : super(
           code: "LAK",
           namesNative: const ["ເງີນກີບລາວ"],
-          name: "Lao Kip",
+          name: "Laotian Kip",
           symbol: "₭",
           alternateSymbols: const ["₭N"],
           subunit: "Att",
@@ -1532,7 +1532,7 @@ class FiatMnt extends FiatCurrency {
       : super(
           code: "MNT",
           namesNative: const ["Монгол төгрөг"],
-          name: "Mongolian Tögrög",
+          name: "Mongolian Tugrik",
           symbol: "₮",
           subunit: "Möngö",
           htmlEntity: "&#x20AE;",
@@ -1884,12 +1884,12 @@ class FiatPkr extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatPln extends FiatCurrency {
-  /// A class that represents the Polish Złoty.
+  /// A class that represents the Polish Zloty.
   const FiatPln()
       : super(
           code: "PLN",
           namesNative: const ["Polski złoty"],
-          name: "Polish Złoty",
+          name: "Polish Zloty",
           symbol: "zł",
           subunit: "Grosz",
           htmlEntity: "z&#322;",
@@ -1901,12 +1901,12 @@ class FiatPln extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatPyg extends FiatCurrency {
-  /// A class that represents the Paraguayan Guaraní.
+  /// A class that represents the Paraguayan Guarani.
   const FiatPyg()
       : super(
           code: "PYG",
           namesNative: const ["Guaraní paraguayo"],
-          name: "Paraguayan Guaraní",
+          name: "Paraguayan Guarani",
           symbol: "₲",
           subunit: "Céntimo",
           subunitToUnit: 1,
@@ -2109,12 +2109,12 @@ class FiatSgd extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatShp extends FiatCurrency {
-  /// A class that represents the Saint Helena Pound.
+  /// A class that represents the St. Helena Pound.
   const FiatShp()
       : super(
           code: "SHP",
           namesNative: const ["Saint Helena pound"],
-          name: "Saint Helenian Pound",
+          name: "St. Helena Pound",
           symbol: "£",
           disambiguateSymbol: "SHP",
           subunit: "Penny",
@@ -2366,12 +2366,12 @@ class FiatTry extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatTtd extends FiatCurrency {
-  /// A class that represents the Trinidad and Tobago Dollar.
+  /// A class that represents the Trinidad & Tobago Dollar.
   const FiatTtd()
       : super(
           code: "TTD",
-          namesNative: const ["Trinidad and Tobago dollar"],
-          name: "Trinidad and Tobago Dollar",
+          namesNative: const ["Trinidad & Tobago Dollar"],
+          name: "Trinidad & Tobago Dollar",
           symbol: r"$",
           disambiguateSymbol: r"TT$",
           alternateSymbols: const [r"TT$"],
@@ -2488,12 +2488,12 @@ class FiatUyu extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatUzs extends FiatCurrency {
-  /// A class that represents the Uzbekistan Som.
+  /// A class that represents the Uzbekistani Som.
   const FiatUzs()
       : super(
           code: "UZS",
           namesNative: const ["Oʻzbekiston soʻmi"],
-          name: "Uzbekistan Som",
+          name: "Uzbekistani Som",
           symbol: "so'm",
           alternateSymbols: const ["so‘m", "сўм", "сум", "s", "с"],
           subunit: "Tiyin",
@@ -2522,12 +2522,12 @@ class FiatVes extends FiatCurrency {
 
 /// {@hideConstantImplementations}
 class FiatVnd extends FiatCurrency {
-  /// A class that represents the Vietnamese Đồng.
+  /// A class that represents the Vietnamese Dong.
   const FiatVnd()
       : super(
           code: "VND",
           namesNative: const ["đồng Việt Nam"],
-          name: "Vietnamese Đồng",
+          name: "Vietnamese Dong",
           symbol: "₫",
           subunit: "Hào",
           subunitToUnit: 1,
