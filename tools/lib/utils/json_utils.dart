@@ -1,9 +1,8 @@
 // ignore_for_file: avoid_print, avoid-non-ascii-symbols
-
 import "dart:convert";
 
 import "package:change_case/change_case.dart";
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../constants/path_constants.dart";
 import "../generators/helpers/extensions/package_associations_extension.dart";
@@ -11,32 +10,11 @@ import "../models/package.dart";
 import "dart_utils.dart";
 import "io_utils.dart";
 
-Future<void> main() async {
-  const package = Package.sealedLanguages;
-  final exports = await const JsonUtils("json/data").parseData(); // TODO!
-  final dataType = package.dataRepresent;
-
-  final buffer = StringBuffer(
-    """
-// This library translations are based on the data from the
-// ${package.umpirskyRepoUrl} project (from Saša Stamenković),
-// which is licensed under the  MIT License.
-
-/// Provides $dataType translations for ${package.dirName}.
-""",
-  )..write(
-      "library sealed_${dataType}_${JsonUtils.translation};\n".toLowerCase(),
-    );
-  for (final export in exports) buffer.writeln('export "$export";');
-  final filename = "$dataType ${JsonUtils.translation}".toSnakeCase();
-
-  final path = join(JsonUtils.translation, "$filename.${PathConstants.dart}");
-  IoUtils().writeContentToFile(path, buffer);
-}
-
 final class JsonUtils {
-  const JsonUtils(this.dataDirPath);
+  const JsonUtils(this.package, {this.dataDirPath = "json/data"});
+
   final String dataDirPath;
+  final Package package;
 
   static const eng = LangEng();
   static const translation = "translations";
@@ -45,25 +23,23 @@ final class JsonUtils {
 
   Directory get dataDirectory => Directory(dataDirPath);
 
-  Future<List<String>> parseData([
-    Package package = Package.sealedLanguages,
-  ]) async {
+  Future<List<String>> parseData() async {
     final stopwatch = Stopwatch()..start();
     final paths = <String>[];
     final io = IoUtils()..createDirectory(translation);
-    // TODO: Extract currency, country too.
-    final englishData = _extractLanguage(package, eng.codeShort.toLowerCase());
+    final englishData = _extractL10N(eng.codeShort.toLowerCase());
     final directories = dataDirectory.listSync()
       ..sort((a, b) => basename(a.path).compareTo(basename(b.path)));
     for (final item in package.dataList) {
-      final itemFromCode = package.instanceFromCode(item.code);
+      final itemFromCode = _instanceFromCode(item.code);
+      if (itemFromCode == null) continue; // Might be more items in the source.
       print("\nExtracting translations for: ${itemFromCode.name}\n");
       final english = englishData[itemFromCode];
       final translations = <TranslatedName>{};
       if (english != null) translations.add(TranslatedName(eng, name: english));
       for (final dir in directories) {
         final dirName = basename(dir.path);
-        final translation = _extractLanguage(package, dirName);
+        final translation = _extractL10N(dirName);
         final locale = _extractLocaleCode(dirName);
         final lang = _convertCodeToLang(locale.languageCode);
         final translationForLang = translation[itemFromCode];
@@ -83,6 +59,7 @@ final class JsonUtils {
           ''' * Add ${translated.language.name}: "${translated.name}" translation (total: ${translations.length})''',
         );
       }
+      if (translations.isEmpty) continue;
 
       final translationCode = item.code.toLowerCase();
       final dataType = package.dataRepresent;
@@ -99,11 +76,7 @@ ${_dartDoc(translations, itemFromCode.name.toString(), dataType)}.
 const ${varFileName.toCamelCase()} = [
 """,
       );
-      for (final element in translations) {
-        buffer
-          ..write(element.toString())
-          ..write(",\n");
-      }
+      for (final element in translations) buffer.write("$element,\n");
       buffer.write("];");
       io.writeContentToFile(filePath, buffer);
       buffer.clear();
@@ -128,31 +101,57 @@ const ${varFileName.toCamelCase()} = [
     return buffer.toString();
   }
 
-  Map<NaturalLanguage, String> _extractLanguage(Package package, String lang) {
+  Map<IsoStandardized, String> _extractL10N(String lang) {
     final path = "$lang/${package.dataRepresent}.${PathConstants.json}";
     final json = File(join(dataDirectory.path, path));
-    final map = jsonDecode(json.readAsStringSync()) as Map<String, Object?>;
+    final map = jsonDecode(json.readAsStringSync()) as JsonObjectMap;
 
     return _convertLanguageMap(map);
   }
 
-  Map<String, Object?> _sortMapByKeyLength(Map<String, Object?> map) {
+  JsonObjectMap _sortMapByKeyLength(JsonObjectMap map) {
     final sortedKeys = map.keys.toList(growable: false)
       ..sort((a, b) => b.length.compareTo(a.length));
 
     return {for (final key in sortedKeys) key: map[key]};
   }
 
-  Map<NaturalLanguage, String> _convertLanguageMap(Map<String, Object?> json) {
+  Map<IsoStandardized, String> _convertLanguageMap(JsonObjectMap json) {
     final sortedMap = _sortMapByKeyLength(json);
-    final nullMap = sortedMap.map((code, translation) {
-      final language = _convertCodeToLang(code);
+    final nullMap = sortedMap.map(
+      (code, l10n) => MapEntry(_instanceFromCode(code), l10n?.toString()),
+    );
 
-      return MapEntry(language, translation?.toString());
-    })
-      ..removeWhere((key, value) => key == null || value == null);
+    if (package == Package.sealedCurrencies) _fixCurrencyData(nullMap);
+    nullMap.removeWhere((key, value) => key == null || value == null);
 
-    return Map<NaturalLanguage, String>.unmodifiable(nullMap);
+    return Map<IsoStandardized, String>.unmodifiable(nullMap);
+  }
+
+  void _fixCurrencyData(Map<IsoStandardized?, String?> mapToUpdate) {
+    final maybeZwl = mapToUpdate[const FiatZwl()];
+    final maybeSll = mapToUpdate[const FiatSll()];
+    if (maybeSll != null) mapToUpdate[const FiatSle()] = maybeSll;
+    if (maybeZwl == null) return;
+    final withoutYear = maybeZwl.replaceFirst(RegExp(r"\(\d{4}\)"), "");
+    mapToUpdate[const FiatZwl()] = withoutYear.trim();
+  }
+
+  IsoStandardized? _instanceFromCode(String code) =>
+      package.whenOrNull<IsoStandardized?>(
+        sealedCurrencies: () => _convertCodeToCurrency(code),
+        sealedLanguages: () => _convertCodeToLang(code),
+      );
+
+  /// Missing: XAG, XAU, XBA, XBB, XBC, XBD, XDR, XPD, XPT, XTS.
+  FiatCurrency? _convertCodeToCurrency(String rawCode) {
+    final code = rawCode.toUpperCase().trim();
+    var fiat = FiatCurrency.maybeFromValue(code);
+    if (fiat != null) return fiat;
+    const old = {"MRO": "MRU", "STD": "STN", "VEF": "VES"};
+    if (old.containsKey(code)) fiat = FiatCurrency.maybeFromValue(old[code]!);
+
+    return fiat;
   }
 
   NaturalLanguage? _convertCodeToLang(String code) {
