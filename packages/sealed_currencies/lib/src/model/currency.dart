@@ -74,6 +74,6 @@ sealed class Currency {
   /// printed.
   @override
   String toString({bool short = true}) => short
-      ? "Currency(code: $code)"
-      : """Currency(code: $code, name: $name, symbol: $symbol, decimalMark: $decimalMark, thousandsSeparator: $thousandsSeparator)""";
+      ? '$Currency(code: "$code")'
+      : '''$Currency(code: "$code", name: "$name", symbol: ${symbol == null ? symbol : '"$symbol"'}, decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator")''';
 }

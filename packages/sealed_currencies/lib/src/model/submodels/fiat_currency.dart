@@ -69,32 +69,58 @@ class FiatCurrency extends Currency
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.
   ///
   /// The [code] parameter is required and should be a three-letter string
-  /// representing the letter ISO 4217 code for the currency. This method
-  /// returns the [FiatCurrency] instance that corresponds to the given code, or
-  /// throws a [StateError] if no such instance exists.
-  factory FiatCurrency.fromCode(String code) => list.firstWhere(
-        (currency) => currency.code == code.trim().toUpperCase(),
-      );
+  /// representing the letter ISO 4217 code for the currency. The optional
+  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
+  /// objects to search through. This method returns the [FiatCurrency] instance
+  /// that corresponds to the given code, or throws a [StateError] if no such
+  /// instance exists.
+  factory FiatCurrency.fromCode(
+    String code, [
+    Iterable<FiatCurrency> currencies = list,
+  ]) {
+    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+
+    return currencies
+        .firstWhere((currency) => currency.code == code.trim().toUpperCase());
+  }
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
   /// The [codeNumeric] parameter is required and should be a three-letter
-  /// string representing the numeric ISO 4217 code for the currency. This
-  /// method returns the [FiatCurrency] instance that corresponds to the given
-  /// code, or throws a [StateError] if no such instance exists.
-  factory FiatCurrency.fromCodeNumeric(String codeNumeric) => list.firstWhere(
-        (currency) => currency.codeNumeric == codeNumeric.trim(),
-      );
+  /// string representing the numeric ISO 4217 code for the currency.The
+  /// optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through. This method returns the
+  /// [FiatCurrency] instance that corresponds to the given code, or throws a
+  /// [StateError] if no such instance exists.
+  factory FiatCurrency.fromCodeNumeric(
+    String codeNumeric, [
+    Iterable<FiatCurrency> currencies = list,
+  ]) {
+    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+
+    return currencies.firstWhere(
+      (currency) => currency.codeNumeric == codeNumeric.trim(),
+    );
+  }
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
   /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the currency. This method returns the
+  /// representing the name of the currency. The optional
+  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
+  /// objects to search through. This method returns the
   /// [FiatCurrency] instance that corresponds to the given name, or throws a
   /// [StateError] if no such instance exists.
-  factory FiatCurrency.fromName(String name) => list.firstWhere(
-        (currency) => currency.name.toUpperCase() == name.trim().toUpperCase(),
-      );
+  factory FiatCurrency.fromName(
+    String name, [
+    Iterable<FiatCurrency> currencies = list,
+  ]) {
+    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+
+    return currencies.firstWhere(
+      (currency) => currency.name.toUpperCase() == name.trim().toUpperCase(),
+    );
+  }
 
   /// Alternative symbols for this currency or `null` if no such symbols exists.
   final List<String>? alternateSymbols;
@@ -141,7 +167,7 @@ class FiatCurrency extends Currency
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''FiatCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : '"$symbol"'}, alternateSymbols: ${alternateSymbols == null ? alternateSymbols : jsonEncode(alternateSymbols)}, disambiguateSymbol: ${disambiguateSymbol == null ? disambiguateSymbol : '"$disambiguateSymbol"'}, htmlEntity: ${htmlEntity == null ? htmlEntity : '"$htmlEntity"'}, codeNumeric: "$codeNumeric", namesNative: ${jsonEncode(namesNative)}, priority: $priority, smallestDenomination: $smallestDenomination, subunit: ${subunit == null ? subunit : '"$subunit"'}, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst)''';
+      : '''$FiatCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : '"$symbol"'}, alternateSymbols: ${alternateSymbols == null ? alternateSymbols : jsonEncode(alternateSymbols)}, disambiguateSymbol: ${disambiguateSymbol == null ? disambiguateSymbol : '"$disambiguateSymbol"'}, htmlEntity: ${htmlEntity == null ? htmlEntity : '"$htmlEntity"'}, codeNumeric: "$codeNumeric", namesNative: ${jsonEncode(namesNative)}, priority: $priority, smallestDenomination: $smallestDenomination, subunit: ${subunit == null ? subunit : '"$subunit"'}, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst)''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
