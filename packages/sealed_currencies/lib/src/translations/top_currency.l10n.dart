@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Tongan Paʻanga currency:
+/// Provides 94 translations for a Tongan Paʻanga currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -53,6 +53,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -181,4 +182,7 @@ const topCurrencyTranslations = [
   TranslatedName(LangZho(), name: "湯加潘加", countryCode: "HK"),
   TranslatedName(LangZho(), name: "東加潘加", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Tongan Paʻanga"),
+
+  /// Added manually:
+  TranslatedName(LangMsa(), name: "Pa’anga Tonga"),
 ];

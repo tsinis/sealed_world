@@ -1,13 +1,21 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 57 translations for a Chilean Unit of Account (UF) currency:
+/// Provides 86 translations for a Chilean Unit of Account (UF) currency:
 /// - (Scottish) Gaelic
+/// - (Eastern) Punjabi
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -20,41 +28,62 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Finnish
 /// - French
 /// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Gujarati
+/// - Hebrew (modern)
+/// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tamil
+/// - Telugu
 /// - Thai
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Zulu.
 const clfCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Chilean Unit of Account (UF)"),
   TranslatedName(LangBul(), name: "Условна разчетна единица на Чили"),
@@ -123,4 +152,33 @@ const clfCurrencyTranslations = [
   TranslatedName(LangAra(), name: "وحدة الحساب التشيلية"),
   TranslatedName(LangAze(), name: "Çili hesab vahidi"),
   TranslatedName(LangEst(), name: "Tšiili arvestusühik"),
+  TranslatedName(LangAfr(), name: "Chileense eenheid van rekening"),
+  TranslatedName(LangAmh(), name: "ቺሌ መለያ መንገድ"),
+  TranslatedName(LangBel(), name: "Чылійскі адзінка рахунку"),
+  TranslatedName(LangEus(), name: "kontu-unitate txiletarra"),
+  TranslatedName(LangFas(), name: "واحد حساب شیلی"),
+  TranslatedName(LangGuj(), name: "ચિલીયન યુનિટ ઑફ એકાઉન્ટ"),
+  TranslatedName(LangHeb(), name: "יחידת חשבון צ'יליאנית"),
+  TranslatedName(LangHin(), name: "चिलीयन यूनिट ऑफ अकाउंट"),
+  TranslatedName(LangHye(), name: "Չիլիայի հաշվապահության Միավոր"),
+  TranslatedName(LangKat(), name: "ჩილის ანგარიშის ერთეული"),
+  TranslatedName(LangKaz(), name: "Чили төлем бірлігі"),
+  TranslatedName(LangKhm(), name: "អង្គភាពគណនីរបស់ឈីលី"),
+  TranslatedName(LangKan(), name: "ಚಿಲಿಯನ್ ಘಟಕ ಖಾತೆ"),
+  TranslatedName(LangKir(), name: "Чилинин эсеп бирдиги"),
+  TranslatedName(LangMkd(), name: "Чилеанска сметковна единица"),
+  TranslatedName(LangMon(), name: "Чилийн нэгж ханш"),
+  TranslatedName(LangMar(), name: "चिलीयन युनिट ऑफ अकाउंट"),
+  TranslatedName(LangMsa(), name: "Unit Akaun Chile"),
+  TranslatedName(LangMya(), name: "ချီလီယန်း ငွေကြေ"),
+  TranslatedName(LangNep(), name: "चिलीयन युनिट अफ अकाउंट"),
+  TranslatedName(LangPan(), name: "ਚਿਲੀ ਖਾਤੇ ਦੀ ਇਕਾਈ"),
+  TranslatedName(LangSin(), name: "චිලියාන් ගිණුමේ ඒකකය"),
+  TranslatedName(LangSqi(), name: "Njësia e Llogarisë Kiliane"),
+  TranslatedName(LangSwa(), name: "Kitengo cha Akaunti cha Chile"),
+  TranslatedName(LangTam(), name: "சிலியன் யூனிட் ஆஃப் அக்கவுண்ட்"),
+  TranslatedName(LangTel(), name: "చిలీ యూనిట్ ఆఫ్ అకౌంట్"),
+  TranslatedName(LangUrd(), name: "چلی اکاؤنٹ یونٹ"),
+  TranslatedName(LangUzb(), name: "Chili Hisoblash Birlik"),
+  TranslatedName(LangZul(), name: "Iyunithi ye-Akhawunti yaseChile"),
 ];

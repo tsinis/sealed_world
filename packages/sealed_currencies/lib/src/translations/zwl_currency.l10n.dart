@@ -1,13 +1,21 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 53 translations for a Zimbabwean Dollar currency:
+/// Provides 85 translations for a Zimbabwean Dollar currency:
 /// - (Scottish) Gaelic
+/// - (Eastern) Punjabi
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -19,19 +27,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Ewe
 /// - Finnish
 /// - French
+/// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Gujarati
+/// - Hebrew (modern)
+/// - Hindi
 /// - Hungarian
+/// - Icelandic
 /// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Kannada
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Persian (Farsi)
@@ -40,17 +63,24 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romanian
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tamil
+/// - Telugu
 /// - Thai
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Zulu.
 const zwlCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Zimbabwean Dollar"),
   TranslatedName(LangAra(), name: "دولار زمبابوي 2009"),
@@ -107,4 +137,36 @@ const zwlCurrencyTranslations = [
   /// Added manually:
   TranslatedName(LangInd(), name: "Dolar na Siombáibe"),
   TranslatedName(LangMal(), name: "സിംബാബ്‌വേയൻ ഡോളർ"),
+  TranslatedName(LangAfr(), name: "Zimbabwiese dollar"),
+  TranslatedName(LangAmh(), name: "ዚምባብዌ ዶላር"),
+  TranslatedName(LangBel(), name: "даляр Зімбабвэ"),
+  TranslatedName(LangEus(), name: "dolar zimbabwetarra"),
+  TranslatedName(LangGlg(), name: "Dólar de Zimbabwe"),
+  TranslatedName(LangGle(), name: "Dollar Siombábach"),
+  TranslatedName(LangAfr(), name: "Zimbabwiese dollar"),
+  TranslatedName(LangGuj(), name: "ઝિમ્બાબ્વે ડૉલર"),
+  TranslatedName(LangHeb(), name: "דולר זימבבואי"),
+  TranslatedName(LangHin(), name: "जिम्बाब्वे डॉलर"),
+  TranslatedName(LangHye(), name: "Զիմբաբվեյան դոլար"),
+  TranslatedName(LangIsl(), name: "Simbabveskur dalur"),
+  TranslatedName(LangKat(), name: "ზიმბაბვე დოლარი"),
+  TranslatedName(LangKaz(), name: "Зимбабведегі доллар"),
+  TranslatedName(LangKhm(), name: "ដុល្លារហ្ស៊ីមបាវ៉េ"),
+  TranslatedName(LangKan(), name: "ಜಿಂಬಾಬ್ವೆ ಡಾಲರ್"),
+  TranslatedName(LangKir(), name: "Зимбабве доллары"),
+  TranslatedName(LangMkd(), name: "Зимбабвиски долар"),
+  TranslatedName(LangMon(), name: "Замбабив Доллар"),
+  TranslatedName(LangMar(), name: "झिम्बाब्वे डॉलर"),
+  TranslatedName(LangMsa(), name: "Dolar Zimbabwe"),
+  TranslatedName(LangMya(), name: "ဇင်ဘာဘွေ ဒေါ်လာ"),
+  TranslatedName(LangNep(), name: "जिम्बाब्वे डलर"),
+  TranslatedName(LangPan(), name: "ਜਿੰਬਾਬਵੇ ਡਾਲਰ"),
+  TranslatedName(LangSin(), name: "සිම්බාබ්වේ ඩොලරය"),
+  TranslatedName(LangSqi(), name: "Dollar Zimbabve"),
+  TranslatedName(LangSwa(), name: "Zimbabwe Dollar"),
+  TranslatedName(LangTam(), name: "ஜிம்பாப்வே டாலர்"),
+  TranslatedName(LangTel(), name: "జింబాబ్వే డాలర్"),
+  TranslatedName(LangUrd(), name: "زمبابوے ڈالر"),
+  TranslatedName(LangUzb(), name: "Zimbabve dollari"),
+  TranslatedName(LangZul(), name: "I-Zimbabwe Dollar"),
 ];

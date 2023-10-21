@@ -1,18 +1,23 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 87 translations for a Lesotho Loti currency:
+/// Provides 101 translations for a Lesotho Loti currency:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -27,6 +32,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Ganda
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -34,15 +40,19 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
 /// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lingala
@@ -54,6 +64,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -67,6 +79,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Sango
 /// - Serbian
 /// - Shona
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -79,6 +92,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
@@ -176,4 +190,20 @@ const lslCurrencyTranslations = [
   TranslatedName(LangZho(), name: "莱索托洛蒂"),
   TranslatedName(LangZho(), name: "賴索托洛蒂", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Lesotho Loti"),
+
+  /// Added manually:
+  TranslatedName(LangBel(), name: "Лоти"),
+  TranslatedName(LangHye(), name: "Լոթի"),
+  TranslatedName(LangIsl(), name: "lesótóskur lóti"),
+  TranslatedName(LangKat(), name: "ლესოთოს ლოტი"),
+  TranslatedName(LangKaz(), name: "Лоти"),
+  TranslatedName(LangKhm(), name: "ឡូទីឡេសូតូ"),
+  TranslatedName(LangKir(), name: "Лесото лотиси"),
+  TranslatedName(LangMon(), name: "Лесото лоти"),
+  TranslatedName(LangMya(), name: "လီဆိုသို လိုတီ"),
+  TranslatedName(LangNep(), name: "लेसोथो लोटी"),
+  TranslatedName(LangPan(), name: "ਲੇਸੋਥੋ ਲੋਟੀ"),
+  TranslatedName(LangSin(), name: "ලෙසෝතෝ ලොටි"),
+  TranslatedName(LangSqi(), name: "Lota lesotiane"),
+  TranslatedName(LangUzb(), name: "Lesoto lotisi"),
 ];

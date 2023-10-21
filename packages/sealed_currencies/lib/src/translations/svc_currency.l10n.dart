@@ -1,13 +1,21 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 59 translations for a Salvadoran Colón currency:
+/// Provides 86 translations for a Salvadoran Colón currency:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -20,43 +28,62 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Finnish
 /// - French
 /// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Gujarati
 /// - Hebrew (modern)
+/// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tamil
+/// - Telugu
 /// - Thai
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Zulu.
 const svcCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Salvadoran Colón"),
   TranslatedName(LangAra(), name: "كولون سلفادوري"),
@@ -117,4 +144,33 @@ const svcCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Colón El Salvador"),
   TranslatedName(LangZho(), name: "萨尔瓦多科朗"),
   TranslatedName(LangZho(), name: "薩爾瓦多科郎", script: ScriptHant()),
+
+  /// Added manually:
+  TranslatedName(LangAfr(), name: "Salvadoran Colón"),
+  TranslatedName(LangAmh(), name: "ኤል ሳልቫዶር ኮሎን"),
+  TranslatedName(LangBel(), name: "Сальвадорскі колон"),
+  TranslatedName(LangEus(), name: "kolon salvadortarra"),
+  TranslatedName(LangFas(), name: "السالوادور کولون"),
+  TranslatedName(LangGuj(), name: "અલ સાલ્વાડોર કોલન"),
+  TranslatedName(LangHin(), name: "एल साल्वाडोर कॉलन"),
+  TranslatedName(LangHye(), name: "Սալվադոր Կոլոն"),
+  TranslatedName(LangKat(), name: "სალვადორის კოლონი"),
+  TranslatedName(LangKaz(), name: "Сальвадордағы колон"),
+  TranslatedName(LangKhm(), name: "អែលសាវ៉ាឌ័រអាឡូន"),
+  TranslatedName(LangKan(), name: "ಎಲ್ ಸಾಲ್ವಡಾರ್ ಕೊಲೊನ್"),
+  TranslatedName(LangKir(), name: "Салвадордук колон"),
+  TranslatedName(LangMon(), name: "Эл Салвадор Колон"),
+  TranslatedName(LangMar(), name: "एल साल्वाडोर कॉलन"),
+  TranslatedName(LangMsa(), name: "El Salvador Colon"),
+  TranslatedName(LangMya(), name: "ဆာဗေးဒိုလ် ကိုလီနိုင်"),
+  TranslatedName(LangNep(), name: "अल साल्भाडोर कलोन"),
+  TranslatedName(LangPan(), name: "ਐਲ ਸੈਲਵੇਡਾਰ ਕੋਲਨ"),
+  TranslatedName(LangSin(), name: "එල් සැල්වදෝර් කොලෝන්"),
+  TranslatedName(LangSqi(), name: "El Salvador Colon"),
+  TranslatedName(LangSwa(), name: "El Salvador Colon"),
+  TranslatedName(LangTam(), name: "எல் சால்வடார் காலன்"),
+  TranslatedName(LangTel(), name: "ఎల్ సాల్వడార్ కోలన్"),
+  TranslatedName(LangUrd(), name: "ایل سلواڈور کولون"),
+  TranslatedName(LangUzb(), name: "Salvador Koloni"),
+  TranslatedName(LangZul(), name: "El Salvador Colon"),
 ];

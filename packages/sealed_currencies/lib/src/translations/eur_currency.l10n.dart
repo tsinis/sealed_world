@@ -1,8 +1,9 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 108 translations for a Euro currency:
+/// Provides 111 translations for a Euro currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -32,6 +33,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -62,6 +64,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
@@ -216,4 +219,7 @@ const eurCurrencyTranslations = [
   TranslatedName(LangDeu(), name: "Euro"),
   TranslatedName(LangFry(), name: "Euro"),
   TranslatedName(LangGle(), name: "Euro"),
+  TranslatedName(LangAfr(), name: "Euro"),
+  TranslatedName(LangGlg(), name: "Euro"),
+  TranslatedName(LangMsa(), name: "Euro"),
 ];
