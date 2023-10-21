@@ -1,5 +1,3 @@
-import "dart:convert" show JsonCodec, jsonEncode;
-
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../data/fiat_currencies.data.dart";
@@ -27,7 +25,7 @@ part "submodels/fiat_currency.g.dart";
 ///
 /// The `code` parameter should not be empty. The `name` parameter should not be
 /// empty. The `symbol` parameter should not be empty if it is provided.
-sealed class Currency {
+sealed class Currency implements Named<String> {
   /// Creates a new instance of [Currency].
   ///
   /// The `code`, `decimalMark`, `name`, and `thousandsSeparator` parameters are
@@ -59,6 +57,7 @@ sealed class Currency {
   final String decimalMark;
 
   /// The name of the currency.
+  @override
   final String name;
 
   /// The character used to separate thousands grouping of the whole unit.

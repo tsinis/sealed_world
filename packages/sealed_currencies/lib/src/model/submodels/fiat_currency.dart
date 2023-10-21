@@ -5,7 +5,10 @@ part of "../currency.dart";
 /// This class extends the general [Currency] class and adds additional
 /// properties specific to fiat currencies.
 class FiatCurrency extends Currency
-    implements IsoStandardized<String>, JsonEncodable<FiatCurrency> {
+    implements
+        IsoStandardized<String>,
+        JsonEncodable<FiatCurrency>,
+        Translated<TranslatedName> {
   /// Creates a new instance of [FiatCurrency].
   ///
   /// The `code`, `name`, `namesNative`, and `codeNumeric` parameters are
@@ -40,6 +43,7 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
+    this.translations = const [],
   })  : assert(code.length == 3, "`code` should be exactly 3 characters long!"),
         assert(
           codeNumeric.length == 3,
@@ -156,6 +160,9 @@ class FiatCurrency extends Currency
 
   /// Should the currency symbol precede the amount, or should it come after?
   final bool unitFirst;
+
+  @override
+  final List<TranslatedName> translations;
 
   /// Default decimal separator for most currencies.
   static const dot = ".";

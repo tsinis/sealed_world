@@ -11,12 +11,9 @@ dependencies:
   change_case: ^1.1.0
   path: ^1.8.3
   rw_git: ^1.0.3
-  sealed_currencies: ^0.6.0
+  sealed_currencies:
+    path: ../packages/sealed_currencies
   select_annotation: ^0.2.0
-
-dependency_overrides:
-  sealed_languages:
-    path: ../packages/sealed_languages
 
 dev_dependencies:
   build_runner: ^2.4.6 # From Google
