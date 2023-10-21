@@ -32,6 +32,7 @@ class FiatCurrency extends Currency
     required super.name,
     required this.namesNative,
     required this.codeNumeric,
+    required this.translations,
     this.alternateSymbols,
     this.disambiguateSymbol,
     this.htmlEntity,
@@ -43,7 +44,6 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-    this.translations = const [],
   })  : assert(code.length == 3, "`code` should be exactly 3 characters long!"),
         assert(
           codeNumeric.length == 3,
@@ -68,6 +68,10 @@ class FiatCurrency extends Currency
         assert(
           smallestDenomination >= 0,
           "`smallestDenomination` should not be negative!",
+        ),
+        assert(
+          translations != const <TranslatedName>[],
+          "`translations` should not be empty!",
         );
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.

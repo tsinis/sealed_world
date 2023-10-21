@@ -41,6 +41,7 @@ extension FiatCurrencyCopyWith on FiatCurrency {
         name: name ?? this.name,
         namesNative: namesNative ?? this.namesNative,
         codeNumeric: codeNumeric ?? this.codeNumeric,
+        translations: translations ?? this.translations,
         alternateSymbols: alternateSymbols ?? this.alternateSymbols,
         disambiguateSymbol: disambiguateSymbol ?? this.disambiguateSymbol,
         htmlEntity: htmlEntity ?? this.htmlEntity,
@@ -52,6 +53,5 @@ extension FiatCurrencyCopyWith on FiatCurrency {
         symbol: symbol ?? this.symbol,
         decimalMark: decimalMark ?? this.decimalMark,
         thousandsSeparator: thousandsSeparator ?? this.thousandsSeparator,
-        translations: translations ?? this.translations,
       );
 }

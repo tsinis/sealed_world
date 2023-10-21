@@ -186,7 +186,7 @@ export "src/translations/zwl_currency.l10n.dart";
 /// Every currency contains more than 79 translations of it's name.
 ///
 /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
-/// with a three letter code and much more.
+/// with a two letter (but not three letter) code and much more.
 // ignore: prefer-static-class, to follow pattern from languages.
 const kSealedCurrenciesSupportedLanguages = [
   LangMkd(),

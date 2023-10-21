@@ -11,6 +11,10 @@ extension FiatCurrencyJson on FiatCurrency {
         name: map["name"] as String,
         namesNative: List<String>.unmodifiable(map["namesNative"] as List),
         codeNumeric: map["codeNumeric"] as String,
+        translations: List<TranslatedName>.unmodifiable(
+          (map["translations"] as List)
+              .map((l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap)),
+        ),
         alternateSymbols: map["alternateSymbols"] is List
             ? List<String>.unmodifiable(map["alternateSymbols"] as List)
             : null,
@@ -24,10 +28,6 @@ extension FiatCurrencyJson on FiatCurrency {
         symbol: map["symbol"] as String?,
         decimalMark: map["decimalMark"] as String,
         thousandsSeparator: map["thousandsSeparator"] as String,
-        translations: List<TranslatedName>.unmodifiable(
-          (map["translations"] as List)
-              .map((l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap)),
-        ),
       );
 
   /// {@macro to_map_method}
