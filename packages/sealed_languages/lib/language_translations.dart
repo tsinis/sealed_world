@@ -192,6 +192,8 @@ export "src/translations/zha_language.l10n.dart";
 export "src/translations/zho_language.l10n.dart";
 export "src/translations/zul_language.l10n.dart";
 
+// ignore_for_file: prefer-static-class
+
 /// This is a comprehensive list of languages that ensure the availability of
 /// translations for every language in the natural language list.
 ///
@@ -202,7 +204,6 @@ export "src/translations/zul_language.l10n.dart";
 /// than 56 translations of it's name to other languages.
 ///
 /// This a small (as for now) brother of [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html).
-// ignore: prefer-static-class, to follow the naming convention of Flutter's SDK.
 const kSealedLanguagesSupportedLanguages = [
   LangPor(),
   LangPol(),
@@ -259,4 +260,90 @@ const kSealedLanguagesSupportedLanguages = [
   LangAra(),
   LangZho(),
   LangLao(),
+];
+
+/// Sealed languages version of the `kMaterialSupportedLanguages` list.
+///
+/// Implementation of localized strings for the material widgets using
+/// the `intl` package for date and time formatting.
+/// Missing "FIL" (Filipino Pilipino) + "GSW" (Swiss German Alemannic Alsatian)
+/// languages.
+const kMaterialSupportedLanguagesSealed = [
+  LangAfr(),
+  LangAmh(),
+  LangAra(),
+  LangAsm(),
+  LangAze(),
+  LangBel(),
+  LangBul(),
+  LangBen(),
+  LangBos(),
+  LangCat(),
+  LangCes(),
+  LangCym(),
+  LangDan(),
+  LangDeu(),
+  LangEll(),
+  LangEng(),
+  LangSpa(),
+  LangEst(),
+  LangEus(),
+  LangFas(),
+  LangFin(),
+  LangFra(),
+  LangGlg(),
+  LangGuj(),
+  LangHeb(),
+  LangHin(),
+  LangHrv(),
+  LangHun(),
+  LangHye(),
+  LangInd(),
+  LangIsl(),
+  LangIta(),
+  LangJpn(),
+  LangKat(),
+  LangKaz(),
+  LangKhm(),
+  LangKan(),
+  LangKor(),
+  LangKir(),
+  LangLao(),
+  LangLit(),
+  LangLav(),
+  LangMkd(),
+  LangMal(),
+  LangMon(),
+  LangMar(),
+  LangMsa(),
+  LangMya(),
+  LangNob(),
+  LangNep(),
+  LangNld(),
+  LangNor(),
+  LangOri(),
+  LangPan(),
+  LangPol(),
+  LangPus(),
+  LangPor(),
+  LangRon(),
+  LangRus(),
+  LangSin(),
+  LangSlk(),
+  LangSlv(),
+  LangSqi(),
+  LangSrp(),
+  LangSwe(),
+  LangSwa(),
+  LangTam(),
+  LangTel(),
+  LangTha(),
+  LangTgl(),
+  LangTur(),
+  LangUkr(),
+  LangUrd(),
+  LangUzb(),
+  LangVie(),
+  LangZho(),
+  LangZul(),
 ];
