@@ -26,7 +26,7 @@ extension PackageAssociationsExtension on Package {
       const [];
 
   String get dataFilePrefix =>
-      whenConstOrNull(sealedCurrencies: "currencies") ??
+      whenConstOrNull(sealedCurrencies: "fiat_currencies") ??
       "${type.toString().toSnakeCase()}s";
 
   String get dataRepresent => whenConst(

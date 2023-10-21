@@ -12,7 +12,7 @@ class DataListGenerator {
   static const _code = CodeUtils();
   static const _dart = DartUtils();
 
-  Future<void> generate([Package package = Package.sealedLanguages]) async {
+  Future<void> generate(Package package) async {
     final currentFileDir =
         Directory(join(Directory.current.parent.path, package.fullPath));
     final currentFilePath =
