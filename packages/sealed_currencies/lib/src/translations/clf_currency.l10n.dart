@@ -1,7 +1,9 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 50 translations for a Chilean Unit of Account (UF) currency:
+/// Provides 57 translations for a Chilean Unit of Account (UF) currency:
 /// - (Scottish) Gaelic
+/// - Arabic
+/// - Azerbaijani
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
@@ -10,8 +12,10 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - English
+/// - Estonian
 /// - Ewe
 /// - Finnish
 /// - French
@@ -27,13 +31,16 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kashmiri
 /// - Korean
 /// - Lao
+/// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Malayalam
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Polish
 /// - Portuguese
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Serbian
@@ -107,4 +114,13 @@ const clfCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Đơn vị Kế toán của Chile (UF)"),
   TranslatedName(LangZho(), name: "智利（资金）"),
   TranslatedName(LangZho(), name: "卡林油達佛曼跎", script: ScriptHant()),
+
+  /// Added manually:
+  TranslatedName(LangDan(), name: "Chilensk kontoenhed (UF)"),
+  TranslatedName(LangRon(), name: "Unitatea de cont chiliană (UF)"),
+  TranslatedName(LangLav(), name: "Čīles konta vienība (UF)"),
+  TranslatedName(LangPol(), name: "Jednostka rozliczeniowa Chile (UF)"),
+  TranslatedName(LangAra(), name: "وحدة الحساب التشيلية"),
+  TranslatedName(LangAze(), name: "Çili hesab vahidi"),
+  TranslatedName(LangEst(), name: "Tšiili arvestusühik"),
 ];

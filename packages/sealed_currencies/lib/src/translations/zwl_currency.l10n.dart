@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 51 translations for a Zimbabwean Dollar currency:
+/// Provides 53 translations for a Zimbabwean Dollar currency:
 /// - (Scottish) Gaelic
 /// - Arabic
 /// - Azerbaijani
@@ -23,6 +23,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Greek (modern)
 /// - Hungarian
 /// - Indonesian
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Korean
@@ -30,6 +31,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
+/// - Malayalam
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Persian (Farsi)
@@ -101,4 +103,8 @@ const zwlCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Đồng Đô la Zimbabwe"),
   TranslatedName(LangZho(), name: "津巴布韦元"),
   TranslatedName(LangZho(), name: "辛巴威元", script: ScriptHant()),
+
+  /// Added manually:
+  TranslatedName(LangInd(), name: "Dolar na Siombáibe"),
+  TranslatedName(LangMal(), name: "സിംബാബ്‌വേയൻ ഡോളർ"),
 ];
