@@ -7,6 +7,12 @@ void main() => group("$FiatCurrency", () {
       final value = FiatCurrency.list.last;
       final array = {value, FiatCurrency.list.first};
 
+      test("interfaces", () {
+        expect(value, isA<IsoStandardized>());
+        expect(value, isA<JsonEncodable>());
+        expect(value, isA<Translated>());
+      });
+
       group("fields", () {
         for (final element in FiatCurrency.list) {
           test("of $FiatCurrency: ${element.name}", () {
@@ -96,6 +102,14 @@ void main() => group("$FiatCurrency", () {
             throwsStateError,
           ),
         );
+
+        test(
+          "with empty currencies",
+          () => expect(
+            () => FiatCurrency.fromName(value.name, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
 
       group("fromCode", () {
@@ -111,6 +125,14 @@ void main() => group("$FiatCurrency", () {
             throwsStateError,
           ),
         );
+
+        test(
+          "with empty currencies",
+          () => expect(
+            () => FiatCurrency.fromCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
 
       group("fromCodeNumeric", () {
@@ -124,6 +146,14 @@ void main() => group("$FiatCurrency", () {
           () => expect(
             () => FiatCurrency.fromCodeNumeric(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty currencies",
+          () => expect(
+            () => FiatCurrency.fromCodeNumeric(value.code, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
