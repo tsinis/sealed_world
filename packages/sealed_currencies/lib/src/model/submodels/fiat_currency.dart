@@ -221,6 +221,15 @@ class FiatCurrency extends Currency
   /// value, otherwise it is added after the value.
   String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
 
+  /// A list of all regular the currencies currently supported by the
+  /// [FiatCurrency] class. This is subset of [FiatCurrency.list] that excludes
+  /// all currencies from the [FiatCurrency.specialPurposeList].
+  static List<FiatCurrency> get regularList => List.unmodifiable(
+        FiatCurrency.list.where(
+          (currency) => !FiatCurrency.specialPurposeList.contains(currency),
+        ),
+      );
+
   /// A list of all the currencies currently
   /// supported by the [FiatCurrency] class.
   static const list = [
@@ -395,6 +404,11 @@ class FiatCurrency extends Currency
     FiatZwl(),
   ];
 
+  /// A list of special purpose fiat currencies (currencies that are
+  /// not being used in the regular transactional currencies list).
+  ///
+  /// This list contains instances of various `FiatCurrency` subclasses
+  /// that represent special purpose fiat currencies.
   static const specialPurposeList = [
     FiatXag(),
     FiatXau(),
@@ -407,10 +421,4 @@ class FiatCurrency extends Currency
     FiatXpt(),
     FiatXts(),
   ];
-
-  static List<FiatCurrency> get regularList => List.unmodifiable(
-        FiatCurrency.list.where(
-          (currency) => !FiatCurrency.specialPurposeList.contains(currency),
-        ),
-      );
 }
