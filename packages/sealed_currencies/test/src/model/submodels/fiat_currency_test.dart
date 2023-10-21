@@ -58,6 +58,7 @@ void main() => group("$FiatCurrency", () {
             expect(element.unitFirst, isA<bool>());
             expect(element.decimalMark, isA<String>());
             expect(element.thousandsSeparator, isA<String>());
+            expect(element.translations, isNotEmpty);
           });
         }
       });
@@ -184,6 +185,7 @@ void main() => group("$FiatCurrency", () {
             expect(element.unitFirst, decoded?.unitFirst);
             expect(element.decimalMark, decoded?.decimalMark);
             expect(element.thousandsSeparator, decoded?.thousandsSeparator);
+            expect(element.translations, decoded?.translations);
           });
         }
       });
