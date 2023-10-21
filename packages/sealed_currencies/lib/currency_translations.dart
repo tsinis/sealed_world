@@ -5,6 +5,8 @@
 /// Provides currency translations for sealed_currencies.
 library sealed_currency_translations;
 
+import "package:sealed_languages/sealed_languages.dart";
+
 export "src/translations/aed_currency.l10n.dart";
 export "src/translations/afn_currency.l10n.dart";
 export "src/translations/all_currency.l10n.dart";
@@ -174,3 +176,96 @@ export "src/translations/yer_currency.l10n.dart";
 export "src/translations/zar_currency.l10n.dart";
 export "src/translations/zmw_currency.l10n.dart";
 export "src/translations/zwl_currency.l10n.dart";
+
+/// This is a comprehensive list of currencies that ensure the availability of
+/// translations for every language in the currencies `regularList` list.
+///
+/// It is important to note that while other languages may not be included in
+/// this list, they may still have translations available for most common
+/// currencies, but there may be some missing translations for rarer languages.
+/// Every currency contains more than 79 translations of it's name.
+///
+/// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+/// with a three letter code and much more.
+// ignore: prefer-static-class, to follow pattern from languages.
+const kSealedCurrenciesSupportedLanguages = [
+  LangMkd(),
+  LangMon(),
+  LangMar(),
+  LangMsa(),
+  LangMya(),
+  LangMal(),
+  LangLtz(),
+  LangLit(),
+  LangLav(),
+  LangHrv(),
+  LangNep(),
+  LangNld(),
+  LangKor(),
+  LangNob(),
+  LangNor(),
+  LangKir(),
+  LangZul(),
+  LangKhm(),
+  LangKaz(),
+  LangKat(),
+  LangKan(),
+  LangPan(),
+  LangJpn(),
+  LangPol(),
+  LangPor(),
+  LangIta(),
+  LangIsl(),
+  LangInd(),
+  LangRon(),
+  LangHye(),
+  LangRus(),
+  LangHun(),
+  LangHin(),
+  LangSin(),
+  LangSlk(),
+  LangSlv(),
+  LangHeb(),
+  LangGuj(),
+  LangGlg(),
+  LangGle(),
+  LangGla(),
+  LangFry(),
+  LangSpa(),
+  LangSqi(),
+  LangFra(),
+  LangSrp(),
+  LangFin(),
+  LangFas(),
+  LangSwa(),
+  LangSwe(),
+  LangEus(),
+  LangTam(),
+  LangEst(),
+  LangTel(),
+  LangEng(),
+  LangEll(),
+  LangTha(),
+  LangDeu(),
+  LangDan(),
+  LangCym(),
+  LangCes(),
+  LangCat(),
+  LangTur(),
+  LangBul(),
+  LangUig(),
+  LangUkr(),
+  LangUrd(),
+  LangUzb(),
+  LangBre(),
+  LangVie(),
+  LangBos(),
+  LangBen(),
+  LangBel(),
+  LangAze(),
+  LangAra(),
+  LangAmh(),
+  LangAfr(),
+  LangZho(),
+  LangLao(),
+];
