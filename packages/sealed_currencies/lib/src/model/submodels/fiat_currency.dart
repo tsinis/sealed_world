@@ -394,4 +394,23 @@ class FiatCurrency extends Currency
     FiatZmw(),
     FiatZwl(),
   ];
+
+  static const specialPurposeList = [
+    FiatXag(),
+    FiatXau(),
+    FiatXba(),
+    FiatXbb(),
+    FiatXbc(),
+    FiatXbd(),
+    FiatXdr(),
+    FiatXpd(),
+    FiatXpt(),
+    FiatXts(),
+  ];
+
+  static List<FiatCurrency> get regularList => List.unmodifiable(
+        FiatCurrency.list.where(
+          (currency) => !FiatCurrency.specialPurposeList.contains(currency),
+        ),
+      );
 }
