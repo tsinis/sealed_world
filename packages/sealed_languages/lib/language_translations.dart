@@ -1,5 +1,5 @@
 // This library translations are based on the data from the
-// https://github.com/umpirsky/language-list project
+// https://github.com/umpirsky/language-list project (from Saša Stamenković),
 // which is licensed under the  MIT License.
 
 /// Provides language translations for sealed_languages.
