@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 99 translations for a Euro currency:
+/// Provides 108 translations for a Euro currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -23,6 +23,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Estonian
@@ -33,6 +34,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -40,6 +42,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kalaallisut (Greenlandic)
@@ -56,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
@@ -71,6 +76,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Ossetian (Ossetic)
 /// - Persian (Farsi)
 /// - Polish
+/// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
@@ -88,11 +94,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Tigrinya
+/// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -196,4 +205,15 @@ const eurCurrencyTranslations = [
   TranslatedName(LangZho(), name: "欧元"),
   TranslatedName(LangZho(), name: "歐元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Euro"),
+
+  /// Added manually:
+  TranslatedName(LangInd(), name: "Euro"),
+  TranslatedName(LangTur(), name: "Euro"),
+  TranslatedName(LangLtz(), name: "Euro"),
+  TranslatedName(LangNld(), name: "Euro"),
+  TranslatedName(LangVie(), name: "Euro"),
+  TranslatedName(LangPor(), name: "Euro"),
+  TranslatedName(LangDeu(), name: "Euro"),
+  TranslatedName(LangFry(), name: "Euro"),
+  TranslatedName(LangGle(), name: "Euro"),
 ];
