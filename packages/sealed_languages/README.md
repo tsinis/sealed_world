@@ -19,6 +19,7 @@ This ISO-driven, pure Dart, fully tested and and dependency-free package provide
 | bibliographicCode | No | A three-letter string representing the ISO 639-2/B Bibliographic code for the language. | null |
 | family | No | The language family to which the language belongs. | LanguageFamily(name: "Indo-European") |
 | isRightToLeft | No | A boolean value specifying whether the language is written right-to-left. | false |
+| translations | Yes | A list of TranslatedNames representing the language name translations. | 121 translations for a English language name
 
 Compile time constant list of all languages accessible via `NaturalLanguage.list` and more over, the **NaturalLanguage** class provides the following methods:
 

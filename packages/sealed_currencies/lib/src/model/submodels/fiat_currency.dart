@@ -5,7 +5,10 @@ part of "../currency.dart";
 /// This class extends the general [Currency] class and adds additional
 /// properties specific to fiat currencies.
 class FiatCurrency extends Currency
-    implements IsoStandardized<String>, JsonEncodable<FiatCurrency> {
+    implements
+        IsoStandardized<String>,
+        JsonEncodable<FiatCurrency>,
+        Translated<TranslatedName> {
   /// Creates a new instance of [FiatCurrency].
   ///
   /// The `code`, `name`, `namesNative`, and `codeNumeric` parameters are
@@ -29,6 +32,7 @@ class FiatCurrency extends Currency
     required super.name,
     required this.namesNative,
     required this.codeNumeric,
+    required this.translations,
     this.alternateSymbols,
     this.disambiguateSymbol,
     this.htmlEntity,
@@ -64,37 +68,67 @@ class FiatCurrency extends Currency
         assert(
           smallestDenomination >= 0,
           "`smallestDenomination` should not be negative!",
+        ),
+        assert(
+          translations != const <TranslatedName>[],
+          "`translations` should not be empty!",
         );
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.
   ///
   /// The [code] parameter is required and should be a three-letter string
-  /// representing the letter ISO 4217 code for the currency. This method
-  /// returns the [FiatCurrency] instance that corresponds to the given code, or
-  /// throws a [StateError] if no such instance exists.
-  factory FiatCurrency.fromCode(String code) => list.firstWhere(
-        (currency) => currency.code == code.trim().toUpperCase(),
-      );
+  /// representing the letter ISO 4217 code for the currency. The optional
+  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
+  /// objects to search through. This method returns the [FiatCurrency] instance
+  /// that corresponds to the given code, or throws a [StateError] if no such
+  /// instance exists.
+  factory FiatCurrency.fromCode(
+    String code, [
+    Iterable<FiatCurrency> currencies = list,
+  ]) {
+    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+
+    return currencies
+        .firstWhere((currency) => currency.code == code.trim().toUpperCase());
+  }
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
   /// The [codeNumeric] parameter is required and should be a three-letter
-  /// string representing the numeric ISO 4217 code for the currency. This
-  /// method returns the [FiatCurrency] instance that corresponds to the given
-  /// code, or throws a [StateError] if no such instance exists.
-  factory FiatCurrency.fromCodeNumeric(String codeNumeric) => list.firstWhere(
-        (currency) => currency.codeNumeric == codeNumeric.trim(),
-      );
+  /// string representing the numeric ISO 4217 code for the currency.The
+  /// optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through. This method returns the
+  /// [FiatCurrency] instance that corresponds to the given code, or throws a
+  /// [StateError] if no such instance exists.
+  factory FiatCurrency.fromCodeNumeric(
+    String codeNumeric, [
+    Iterable<FiatCurrency> currencies = list,
+  ]) {
+    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+
+    return currencies.firstWhere(
+      (currency) => currency.codeNumeric == codeNumeric.trim(),
+    );
+  }
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
   /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the currency. This method returns the
+  /// representing the name of the currency. The optional
+  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
+  /// objects to search through. This method returns the
   /// [FiatCurrency] instance that corresponds to the given name, or throws a
   /// [StateError] if no such instance exists.
-  factory FiatCurrency.fromName(String name) => list.firstWhere(
-        (currency) => currency.name.toUpperCase() == name.trim().toUpperCase(),
-      );
+  factory FiatCurrency.fromName(
+    String name, [
+    Iterable<FiatCurrency> currencies = list,
+  ]) {
+    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+
+    return currencies.firstWhere(
+      (currency) => currency.name.toUpperCase() == name.trim().toUpperCase(),
+    );
+  }
 
   /// Alternative symbols for this currency or `null` if no such symbols exists.
   final List<String>? alternateSymbols;
@@ -131,6 +165,9 @@ class FiatCurrency extends Currency
   /// Should the currency symbol precede the amount, or should it come after?
   final bool unitFirst;
 
+  @override
+  final List<TranslatedName> translations;
+
   /// Default decimal separator for most currencies.
   static const dot = ".";
 
@@ -141,7 +178,7 @@ class FiatCurrency extends Currency
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''FiatCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : '"$symbol"'}, alternateSymbols: ${alternateSymbols == null ? alternateSymbols : jsonEncode(alternateSymbols)}, disambiguateSymbol: ${disambiguateSymbol == null ? disambiguateSymbol : '"$disambiguateSymbol"'}, htmlEntity: ${htmlEntity == null ? htmlEntity : '"$htmlEntity"'}, codeNumeric: "$codeNumeric", namesNative: ${jsonEncode(namesNative)}, priority: $priority, smallestDenomination: $smallestDenomination, subunit: ${subunit == null ? subunit : '"$subunit"'}, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst)''';
+      : '''$FiatCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : 'r"$symbol"'}, alternateSymbols: ${alternateSymbols == null ? alternateSymbols : jsonEncode(alternateSymbols)}, disambiguateSymbol: ${disambiguateSymbol == null ? disambiguateSymbol : 'r"$disambiguateSymbol"'}, htmlEntity: ${htmlEntity == null ? htmlEntity : 'r"$htmlEntity"'}, codeNumeric: "$codeNumeric", namesNative: ${jsonEncode(namesNative)}, priority: $priority, smallestDenomination: $smallestDenomination, subunit: ${subunit == null ? subunit : '"$subunit"'}, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, translations: ${code.toLowerCase()}CurrencyTranslations)''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -187,6 +224,15 @@ class FiatCurrency extends Currency
   /// If [unitFirst] is `true` (default), the currency unit is added before the
   /// value, otherwise it is added after the value.
   String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
+
+  /// A list of all regular the currencies currently supported by the
+  /// [FiatCurrency] class. This is subset of [FiatCurrency.list] that excludes
+  /// all currencies from the [FiatCurrency.specialPurposeList].
+  static List<FiatCurrency> get regularList => List.unmodifiable(
+        FiatCurrency.list.where(
+          (currency) => !FiatCurrency.specialPurposeList.contains(currency),
+        ),
+      );
 
   /// A list of all the currencies currently
   /// supported by the [FiatCurrency] class.
@@ -360,5 +406,23 @@ class FiatCurrency extends Currency
     FiatZar(),
     FiatZmw(),
     FiatZwl(),
+  ];
+
+  /// A list of special purpose fiat currencies (currencies that are
+  /// not being used in the regular transactional currencies list).
+  ///
+  /// This list contains instances of various `FiatCurrency` subclasses
+  /// that represent special purpose fiat currencies.
+  static const specialPurposeList = [
+    FiatXag(),
+    FiatXau(),
+    FiatXba(),
+    FiatXbb(),
+    FiatXbc(),
+    FiatXbd(),
+    FiatXdr(),
+    FiatXpd(),
+    FiatXpt(),
+    FiatXts(),
   ];
 }

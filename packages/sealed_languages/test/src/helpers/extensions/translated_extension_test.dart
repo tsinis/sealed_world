@@ -120,5 +120,15 @@ void main() => group("TranslatedExtension", () {
         final sortedMap = Map.fromEntries(complete);
 
         expect(sortedMap.keys, kSealedLanguagesSupportedLanguages);
+
+        for (final language in NaturalLanguage.list) {
+          for (final l10n in kSealedLanguagesSupportedLanguages) {
+            if (l10n == const LangEng()) continue;
+            expect(
+              language.translation(l10n),
+              isNot(language.translation(const LangEng())),
+            );
+          }
+        }
       });
     });

@@ -22,9 +22,9 @@ environment:
 
 dev_dependencies:
   build_runner: ^2.4.6 # From Google
-  coverage: ^1.6.4 # From Google
+  coverage: ^1.7.0 # From Google
   dart_code_metrics: # Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
-  lints: ^2.1.1 # From Google
+  lints: ^3.0.0 # From Google
   test: ^1.24.8 # From Google

@@ -43,10 +43,10 @@ dev_dependencies:
   dart_code_metrics: # Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
-  flutter_gen_runner: ^5.3.1
+  flutter_gen_runner: ^5.3.2
   flutter_test: # From Google
     sdk: flutter
-  lints: ^2.1.1 # From Google
+  lints: ^3.0.0 # From Google
 
 flutter:
   assets:

@@ -1,2869 +1,4399 @@
-import "../helpers/fiat_currency/fiat_currency_getters.dart";
+import "../../currency_translations.dart";
 import "../model/currency.dart";
 
-/// {@hideConstantImplementations}
+/// A class that represents the United Arab Emirates Dirham currency.
 class FiatAed extends FiatCurrency {
-  /// A class that represents the United Arab Emirates Dirham.
+  /// Creates a instance of [FiatAed] (United Arab Emirates Dirham currency).
+  ///
+  /// ISO 4217 (Alpha) code: "AED", ISO 4217 (Numeric) code: "784".
   const FiatAed()
       : super(
           code: "AED",
-          namesNative: const ["درهم إماراتي"],
           name: "United Arab Emirates Dirham",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "د.إ",
           alternateSymbols: const ["DH", "Dhs"],
-          subunit: "Fils",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "784",
+          namesNative: const ["درهم إماراتي"],
+          priority: 100,
           smallestDenomination: 25,
+          subunit: "Fils",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: aedCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Afghan Afghani currency.
 class FiatAfn extends FiatCurrency {
-  /// A class that represents the Afghan Afghani.
+  /// Creates a instance of [FiatAfn] (Afghan Afghani currency).
+  ///
+  /// ISO 4217 (Alpha) code: "AFN", ISO 4217 (Numeric) code: "971".
   const FiatAfn()
       : super(
           code: "AFN",
-          namesNative: const ["افغانی"],
           name: "Afghan Afghani",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "؋",
           alternateSymbols: const ["Af", "Afs"],
-          subunit: "Pul",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "971",
+          namesNative: const ["افغانی"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Pul",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: afnCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Albanian Lek currency.
 class FiatAll extends FiatCurrency {
-  /// A class that represents the Albanian Lek.
+  /// Creates a instance of [FiatAll] (Albanian Lek currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ALL", ISO 4217 (Numeric) code: "008".
   const FiatAll()
       : super(
           code: "ALL",
-          namesNative: const ["Leku Shqiptar"],
           name: "Albanian Lek",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "L",
-          disambiguateSymbol: "Lek",
           alternateSymbols: const ["Lek"],
-          subunit: "Qintar",
+          disambiguateSymbol: "Lek",
+          htmlEntity: null,
           codeNumeric: "008",
+          namesNative: const ["Leku Shqiptar"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Qintar",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: allCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Armenian Dram currency.
 class FiatAmd extends FiatCurrency {
-  /// A class that represents the Armenian Dram.
+  /// Creates a instance of [FiatAmd] (Armenian Dram currency).
+  ///
+  /// ISO 4217 (Alpha) code: "AMD", ISO 4217 (Numeric) code: "051".
   const FiatAmd()
       : super(
           code: "AMD",
-          namesNative: const ["Հայկական Դրամ"],
           name: "Armenian Dram",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "դր.",
           alternateSymbols: const ["dram"],
-          subunit: "Luma",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "051",
+          namesNative: const ["Հայկական Դրամ"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Luma",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: amdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Netherlands Antillean Guilder currency.
 class FiatAng extends FiatCurrency {
-  /// A class that represents the Netherlands Antillean Gulden.
+  /// Creates a instance of [FiatAng] (Netherlands Antillean Guilder currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ANG", ISO 4217 (Numeric) code: "532".
   const FiatAng()
       : super(
           code: "ANG",
-          namesNative: const ["Antilliaanse gulden"],
-          name: "Netherlands Antillean Gulden",
-          symbol: "ƒ",
-          alternateSymbols: const ["NAƒ", "NAf", "f"],
-          subunit: "Cent",
-          unitFirst: true,
-          htmlEntity: "&#x0192;",
+          name: "Netherlands Antillean Guilder",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "ƒ",
+          alternateSymbols: const ["NAƒ", "NAf", "f"],
+          disambiguateSymbol: null,
+          htmlEntity: "&#x0192;",
           codeNumeric: "532",
+          namesNative: const ["Antilliaanse gulden"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: angCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Angolan Kwanza currency.
 class FiatAoa extends FiatCurrency {
-  /// A class that represents the Angolan Kwanza.
+  /// Creates a instance of [FiatAoa] (Angolan Kwanza currency).
+  ///
+  /// ISO 4217 (Alpha) code: "AOA", ISO 4217 (Numeric) code: "973".
   const FiatAoa()
       : super(
           code: "AOA",
-          namesNative: const ["Angolan kwanza"],
           name: "Angolan Kwanza",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Kz",
-          subunit: "Cêntimo",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "973",
+          namesNative: const ["Angolan kwanza"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Cêntimo",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: aoaCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Argentine Peso currency.
 class FiatArs extends FiatCurrency {
-  /// A class that represents the Argentine Peso.
+  /// Creates a instance of [FiatArs] (Argentine Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ARS", ISO 4217 (Numeric) code: "032".
   const FiatArs()
       : super(
           code: "ARS",
-          namesNative: const ["Argentine peso"],
           name: "Argentine Peso",
-          symbol: r"$",
-          disambiguateSymbol: r"$m/n",
-          alternateSymbols: const [r"$m/n", r"m$n"],
-          subunit: "Centavo",
-          unitFirst: true,
-          htmlEntity: r"$",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: r"$",
+          alternateSymbols: const [r"$m/n", r"m$n"],
+          disambiguateSymbol: r"$m/n",
+          htmlEntity: r"$",
           codeNumeric: "032",
+          namesNative: const ["Argentine peso"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: arsCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Australian Dollar currency.
 class FiatAud extends FiatCurrency {
-  /// A class that represents the Australian Dollar.
+  /// Creates a instance of [FiatAud] (Australian Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "AUD", ISO 4217 (Numeric) code: "036".
   const FiatAud()
       : super(
-          priority: 4,
           code: "AUD",
-          namesNative: const ["Australian dollar"],
           name: "Australian Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"A$",
           alternateSymbols: const [r"A$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"A$",
           htmlEntity: r"$",
           codeNumeric: "036",
+          namesNative: const ["Australian dollar"],
+          priority: 4,
           smallestDenomination: 5,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: audCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Aruban Florin currency.
 class FiatAwg extends FiatCurrency {
-  /// A class that represents the Aruban Florin.
+  /// Creates a instance of [FiatAwg] (Aruban Florin currency).
+  ///
+  /// ISO 4217 (Alpha) code: "AWG", ISO 4217 (Numeric) code: "533".
   const FiatAwg()
       : super(
           code: "AWG",
-          namesNative: const ["Arubaanse florijn"],
           name: "Aruban Florin",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ƒ",
           alternateSymbols: const ["Afl"],
-          subunit: "Cent",
+          disambiguateSymbol: null,
           htmlEntity: "&#x0192;",
           codeNumeric: "533",
+          namesNative: const ["Arubaanse florijn"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: awgCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Azerbaijani Manat currency.
 class FiatAzn extends FiatCurrency {
-  /// A class that represents the Azerbaijani Manat.
+  /// Creates a instance of [FiatAzn] (Azerbaijani Manat currency).
+  ///
+  /// ISO 4217 (Alpha) code: "AZN", ISO 4217 (Numeric) code: "944".
   const FiatAzn()
       : super(
           code: "AZN",
-          namesNative: const ["Azərbaycan manatı"],
           name: "Azerbaijani Manat",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₼",
           alternateSymbols: const ["m", "man"],
-          subunit: "Qəpik",
-          unitFirst: true,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "944",
+          namesNative: const ["Azərbaycan manatı"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Qəpik",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: aznCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Convertible Mark currency.
 class FiatBam extends FiatCurrency {
-  /// A class that represents the Bosnia and Herzegovina Convertible Mark.
+  /// Creates a instance of [FiatBam] (Convertible Mark currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BAM", ISO 4217 (Numeric) code: "977".
   const FiatBam()
       : super(
           code: "BAM",
-          namesNative: const ["Konvertibilna marka", "Конвертибилна марка"],
           name: "Convertible Mark",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "КМ",
           alternateSymbols: const ["KM"],
-          subunit: "Fening",
-          unitFirst: true,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "977",
+          namesNative: const ["Konvertibilna marka", "Конвертибилна марка"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Fening",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bamCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Barbadian Dollar currency.
 class FiatBbd extends FiatCurrency {
-  /// A class that represents the Barbadian Dollar.
+  /// Creates a instance of [FiatBbd] (Barbadian Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BBD", ISO 4217 (Numeric) code: "052".
   const FiatBbd()
       : super(
           code: "BBD",
-          namesNative: const ["Barbadian dollar"],
           name: "Barbadian Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"Bds$",
           alternateSymbols: const [r"Bds$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"Bds$",
           htmlEntity: r"$",
           codeNumeric: "052",
+          namesNative: const ["Barbadian dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bbdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bangladeshi Taka currency.
 class FiatBdt extends FiatCurrency {
-  /// A class that represents the Bangladeshi Taka.
+  /// Creates a instance of [FiatBdt] (Bangladeshi Taka currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BDT", ISO 4217 (Numeric) code: "050".
   const FiatBdt()
       : super(
           code: "BDT",
-          namesNative: const ["টাকা"],
           name: "Bangladeshi Taka",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "৳",
           alternateSymbols: const ["Tk"],
-          subunit: "Paisa",
-          unitFirst: true,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "050",
+          namesNative: const ["টাকা"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Paisa",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bdtCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bulgarian Lev currency.
 class FiatBgn extends FiatCurrency {
-  /// A class that represents the Bulgarian Lev.
+  /// Creates a instance of [FiatBgn] (Bulgarian Lev currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BGN", ISO 4217 (Numeric) code: "975".
   const FiatBgn()
       : super(
           code: "BGN",
-          namesNative: const ["Български лев"],
           name: "Bulgarian Lev",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "лв.",
           alternateSymbols: const ["lev", "leva", "лев", "лева"],
-          subunit: "Stotinka",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "975",
+          namesNative: const ["Български лев"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Stotinka",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: bgnCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bahraini Dinar currency.
 class FiatBhd extends FiatCurrency {
-  /// A class that represents the Bahraini Dinar.
+  /// Creates a instance of [FiatBhd] (Bahraini Dinar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BHD", ISO 4217 (Numeric) code: "048".
   const FiatBhd()
       : super(
           code: "BHD",
-          namesNative: const ["دينار بحريني"],
           name: "Bahraini Dinar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "د.ب",
           alternateSymbols: const ["BD"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "048",
+          namesNative: const ["دينار بحريني"],
+          priority: 100,
+          smallestDenomination: 5,
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          codeNumeric: "048",
-          smallestDenomination: 5,
+          translations: bhdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Burundian Franc currency.
 class FiatBif extends FiatCurrency {
-  /// A class that represents the Burundian Franc.
+  /// Creates a instance of [FiatBif] (Burundian Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BIF", ISO 4217 (Numeric) code: "108".
   const FiatBif()
       : super(
           code: "BIF",
-          namesNative: const ["franc burundais"],
           name: "Burundian Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Fr",
-          disambiguateSymbol: "FBu",
           alternateSymbols: const ["FBu"],
+          disambiguateSymbol: "FBu",
+          htmlEntity: null,
+          codeNumeric: "108",
+          namesNative: const ["franc burundais"],
+          priority: 100,
+          smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          codeNumeric: "108",
-          smallestDenomination: 100,
+          unitFirst: false,
+          translations: bifCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bermudian Dollar currency.
 class FiatBmd extends FiatCurrency {
-  /// A class that represents the Bermuda Dollar.
+  /// Creates a instance of [FiatBmd] (Bermudian Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BMD", ISO 4217 (Numeric) code: "060".
   const FiatBmd()
       : super(
           code: "BMD",
-          namesNative: const ["Bermudian dollars"],
           name: "Bermudian Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"BD$",
           alternateSymbols: const [r"BD$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"BD$",
           htmlEntity: r"$",
           codeNumeric: "060",
+          namesNative: const ["Bermudian dollars"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bmdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Brunei Dollar currency.
 class FiatBnd extends FiatCurrency {
-  /// A class that represents the Brunei Dollar.
+  /// Creates a instance of [FiatBnd] (Brunei Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BND", ISO 4217 (Numeric) code: "096".
   const FiatBnd()
       : super(
           code: "BND",
-          namesNative: const ["Ringgit Brunei"],
           name: "Brunei Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: "BND",
           alternateSymbols: const [r"B$"],
-          subunit: "Sen",
-          unitFirst: true,
+          disambiguateSymbol: "BND",
           htmlEntity: r"$",
           codeNumeric: "096",
+          namesNative: const ["Ringgit Brunei"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Sen",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bndCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bolivian Boliviano currency.
 class FiatBob extends FiatCurrency {
-  /// A class that represents the Bolivian Boliviano.
+  /// Creates a instance of [FiatBob] (Bolivian Boliviano currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BOB", ISO 4217 (Numeric) code: "068".
   const FiatBob()
       : super(
           code: "BOB",
-          namesNative: const ["Bolivian boliviano"],
           name: "Bolivian Boliviano",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Bs.",
           alternateSymbols: const ["Bs"],
-          subunit: "Centavo",
-          unitFirst: true,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "068",
+          namesNative: const ["Bolivian boliviano"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bobCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Brazilian Real currency.
 class FiatBrl extends FiatCurrency {
-  /// A class that represents the Brazilian Real.
+  /// Creates a instance of [FiatBrl] (Brazilian Real currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BRL", ISO 4217 (Numeric) code: "986".
   const FiatBrl()
       : super(
           code: "BRL",
-          namesNative: const ["real brasileiro"],
           name: "Brazilian Real",
-          symbol: r"R$",
-          subunit: "Centavo",
-          unitFirst: true,
-          htmlEntity: r"R$",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: r"R$",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: r"R$",
           codeNumeric: "986",
+          namesNative: const ["real brasileiro"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: brlCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bahamian Dollar currency.
 class FiatBsd extends FiatCurrency {
-  /// A class that represents the Bahamian Dollar.
+  /// Creates a instance of [FiatBsd] (Bahamian Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BSD", ISO 4217 (Numeric) code: "044".
   const FiatBsd()
       : super(
           code: "BSD",
-          namesNative: const ["Bahamian dollar"],
           name: "Bahamian Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: "BSD",
           alternateSymbols: const [r"B$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: "BSD",
           htmlEntity: r"$",
           codeNumeric: "044",
+          namesNative: const ["Bahamian dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bsdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Bhutanese Ngultrum currency.
 class FiatBtn extends FiatCurrency {
-  /// A class that represents the Bhutanese Ngultrum.
+  /// Creates a instance of [FiatBtn] (Bhutanese Ngultrum currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BTN", ISO 4217 (Numeric) code: "064".
   const FiatBtn()
       : super(
           code: "BTN",
-          namesNative: const ["དངུལ་ཀྲམ"],
           name: "Bhutanese Ngultrum",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Nu.",
           alternateSymbols: const ["Nu"],
-          subunit: "Chertrum",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "064",
+          namesNative: const ["དངུལ་ཀྲམ"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Chertrum",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: btnCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Botswanan Pula currency.
 class FiatBwp extends FiatCurrency {
-  /// A class that represents the Botswana Pula.
+  /// Creates a instance of [FiatBwp] (Botswanan Pula currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BWP", ISO 4217 (Numeric) code: "072".
   const FiatBwp()
       : super(
           code: "BWP",
-          namesNative: const ["Botswana pula"],
-          name: "Botswana Pula",
+          name: "Botswanan Pula",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "P",
-          subunit: "Thebe",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "072",
+          namesNative: const ["Botswana pula"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Thebe",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bwpCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Belarusian Ruble currency.
 class FiatByn extends FiatCurrency {
-  /// A class that represents the Belarusian Ruble.
+  /// Creates a instance of [FiatByn] (Belarusian Ruble currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BYN", ISO 4217 (Numeric) code: "933".
   const FiatByn()
       : super(
           code: "BYN",
-          namesNative: const ["беларускі рубель", "белорусский рубль"],
           name: "Belarusian Ruble",
-          symbol: "Br",
-          disambiguateSymbol: "BYN",
-          alternateSymbols: const ["бел. руб.", "б.р.", "руб.", "р."],
-          subunit: "Kapeyka",
           decimalMark: ",",
           thousandsSeparator: " ",
+          symbol: "Br",
+          alternateSymbols: const ["бел. руб.", "б.р.", "руб.", "р."],
+          disambiguateSymbol: "BYN",
+          htmlEntity: null,
           codeNumeric: "933",
+          namesNative: const ["беларускі рубель", "белорусский рубль"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Kapeyka",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: bynCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Belize Dollar currency.
 class FiatBzd extends FiatCurrency {
-  /// A class that represents the Belize Dollar.
+  /// Creates a instance of [FiatBzd] (Belize Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "BZD", ISO 4217 (Numeric) code: "084".
   const FiatBzd()
       : super(
           code: "BZD",
-          namesNative: const ["Belize dollar"],
           name: "Belize Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"BZ$",
           alternateSymbols: const [r"BZ$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"BZ$",
           htmlEntity: r"$",
           codeNumeric: "084",
+          namesNative: const ["Belize dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: bzdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Canadian Dollar currency.
 class FiatCad extends FiatCurrency {
-  /// A class that represents the Canadian Dollar.
+  /// Creates a instance of [FiatCad] (Canadian Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CAD", ISO 4217 (Numeric) code: "124".
   const FiatCad()
       : super(
-          priority: 5,
           code: "CAD",
-          namesNative: const ["Canadian dollar"],
           name: "Canadian Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"C$",
           alternateSymbols: const [r"C$", r"CAD$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"C$",
           htmlEntity: r"$",
           codeNumeric: "124",
+          namesNative: const ["Canadian dollar"],
+          priority: 5,
           smallestDenomination: 5,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: cadCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Congolese Franc currency.
 class FiatCdf extends FiatCurrency {
-  /// A class that represents the Congolese Franc.
+  /// Creates a instance of [FiatCdf] (Congolese Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CDF", ISO 4217 (Numeric) code: "976".
   const FiatCdf()
       : super(
           code: "CDF",
-          namesNative: const ["franc congolais"],
           name: "Congolese Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Fr",
-          disambiguateSymbol: "FC",
           alternateSymbols: const ["FC"],
-          subunit: "Centime",
+          disambiguateSymbol: "FC",
+          htmlEntity: null,
           codeNumeric: "976",
+          namesNative: const ["franc congolais"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centime",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: cdfCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Swiss Franc currency.
 class FiatChf extends FiatCurrency {
-  /// A class that represents the Swiss Franc.
+  /// Creates a instance of [FiatChf] (Swiss Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CHF", ISO 4217 (Numeric) code: "756".
   const FiatChf()
       : super(
           code: "CHF",
-          namesNative: const ["Schweizer Franken"],
           name: "Swiss Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
+          symbol: null,
           alternateSymbols: const ["SFr", "Fr"],
-          subunit: "Rappen",
-          unitFirst: true,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "756",
+          namesNative: const ["Schweizer Franken"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Rappen",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: chfCurrencyTranslations,
         );
-
-  @override
-  String addUnit(String value) => "$unit$value";
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Chilean Unit of Account (UF) currency.
 class FiatClf extends FiatCurrency {
-  /// A class that represents the Unidad de Fomento.
+  /// Creates a instance of [FiatClf] (Chilean Unit of Account (UF) currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CLF", ISO 4217 (Numeric) code: "990".
   const FiatClf()
       : super(
           code: "CLF",
-          namesNative: const ["Unidad de Fomento"],
-          name: "Unidad de Fomento",
+          name: "Chilean Unit of Account (UF)",
+          decimalMark: ",",
+          thousandsSeparator: ".",
           symbol: "UF",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: "&#x20B1;",
+          codeNumeric: "990",
+          namesNative: const ["Unidad de Fomento"],
+          priority: 100,
+          smallestDenomination: 0,
           subunit: "Peso",
           subunitToUnit: 10000,
           unitFirst: true,
-          htmlEntity: "&#x20B1;",
-          decimalMark: ",",
-          thousandsSeparator: ".",
-          codeNumeric: "990",
-          smallestDenomination: 0,
+          translations: clfCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Chilean Peso currency.
 class FiatClp extends FiatCurrency {
-  /// A class that represents the Chilean Peso.
+  /// Creates a instance of [FiatClp] (Chilean Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CLP", ISO 4217 (Numeric) code: "152".
   const FiatClp()
       : super(
           code: "CLP",
-          namesNative: const ["Peso chileno"],
           name: "Chilean Peso",
+          decimalMark: ",",
+          thousandsSeparator: ".",
           symbol: r"$",
+          alternateSymbols: null,
           disambiguateSymbol: "CLP",
+          htmlEntity: "&#36;",
+          codeNumeric: "152",
+          namesNative: const ["Peso chileno"],
+          priority: 100,
+          smallestDenomination: 1,
           subunit: "Peso",
           subunitToUnit: 1,
           unitFirst: true,
-          htmlEntity: "&#36;",
-          decimalMark: ",",
-          thousandsSeparator: ".",
-          codeNumeric: "152",
+          translations: clpCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Chinese Renminbi Yuan currency.
 class FiatCny extends FiatCurrency {
-  /// A class that represents the Chinese Renminbi Yuan.
+  /// Creates a instance of [FiatCny] (Chinese Renminbi Yuan currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CNY", ISO 4217 (Numeric) code: "156".
   const FiatCny()
       : super(
           code: "CNY",
-          namesNative: const ["人民币"],
           name: "Chinese Renminbi Yuan",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "¥",
           alternateSymbols: const ["CN¥", "元", "CN元"],
-          subunit: "Fen",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "￥",
           codeNumeric: "156",
+          namesNative: const ["人民币"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Fen",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: cnyCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Colombian Peso currency.
 class FiatCop extends FiatCurrency {
-  /// A class that represents the Colombian Peso.
+  /// Creates a instance of [FiatCop] (Colombian Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "COP", ISO 4217 (Numeric) code: "170".
   const FiatCop()
       : super(
           code: "COP",
-          namesNative: const ["peso colombiano"],
           name: "Colombian Peso",
-          symbol: r"$",
-          disambiguateSymbol: r"COL$",
-          alternateSymbols: const [r"COL$"],
-          subunit: "Centavo",
-          unitFirst: true,
-          htmlEntity: "&#36;",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: r"$",
+          alternateSymbols: const [r"COL$"],
+          disambiguateSymbol: r"COL$",
+          htmlEntity: "&#36;",
           codeNumeric: "170",
+          namesNative: const ["peso colombiano"],
+          priority: 100,
           smallestDenomination: 20,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: copCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Costa Rican Colón currency.
 class FiatCrc extends FiatCurrency {
-  /// A class that represents the Costa Rican Colón.
+  /// Creates a instance of [FiatCrc] (Costa Rican Colón currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CRC", ISO 4217 (Numeric) code: "188".
   const FiatCrc()
       : super(
           code: "CRC",
-          namesNative: const ["colón costarricense"],
           name: "Costa Rican Colón",
-          symbol: "₡",
-          alternateSymbols: const ["¢"],
-          subunit: "Céntimo",
-          unitFirst: true,
-          htmlEntity: "&#x20A1;",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "₡",
+          alternateSymbols: const ["¢"],
+          disambiguateSymbol: null,
+          htmlEntity: "&#x20A1;",
           codeNumeric: "188",
+          namesNative: const ["colón costarricense"],
+          priority: 100,
           smallestDenomination: 500,
+          subunit: "Céntimo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: crcCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Cuban Convertible Peso currency.
 class FiatCuc extends FiatCurrency {
-  /// A class that represents the Cuban Convertible Peso.
+  /// Creates a instance of [FiatCuc] (Cuban Convertible Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CUC", ISO 4217 (Numeric) code: "931".
   const FiatCuc()
       : super(
           code: "CUC",
-          namesNative: const ["Peso Convertible"],
           name: "Cuban Convertible Peso",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"CUC$",
           alternateSymbols: const [r"CUC$"],
-          subunit: "Centavo",
+          disambiguateSymbol: r"CUC$",
+          htmlEntity: null,
           codeNumeric: "931",
+          namesNative: const ["Peso Convertible"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: cucCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Cuban Peso currency.
 class FiatCup extends FiatCurrency {
-  /// A class that represents the Cuban Peso.
+  /// Creates a instance of [FiatCup] (Cuban Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CUP", ISO 4217 (Numeric) code: "192".
   const FiatCup()
       : super(
           code: "CUP",
-          namesNative: const ["peso cubano"],
           name: "Cuban Peso",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"$MN",
           alternateSymbols: const [r"$MN"],
-          subunit: "Centavo",
-          unitFirst: true,
+          disambiguateSymbol: r"$MN",
           htmlEntity: "&#x20B1;",
           codeNumeric: "192",
+          namesNative: const ["peso cubano"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: cupCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Cape Verdean Escudo currency.
 class FiatCve extends FiatCurrency {
-  /// A class that represents the Cape Verdean Escudo.
+  /// Creates a instance of [FiatCve] (Cape Verdean Escudo currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CVE", ISO 4217 (Numeric) code: "132".
   const FiatCve()
       : super(
           code: "CVE",
-          namesNative: const ["eskudu kabu-verdianu"],
           name: "Cape Verdean Escudo",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: "Esc",
           alternateSymbols: const ["Esc"],
-          subunit: "Centavo",
+          disambiguateSymbol: "Esc",
+          htmlEntity: null,
           codeNumeric: "132",
+          namesNative: const ["eskudu kabu-verdianu"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: cveCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Czech Koruna currency.
 class FiatCzk extends FiatCurrency {
-  /// A class that represents the Czech Koruna.
+  /// Creates a instance of [FiatCzk] (Czech Koruna currency).
+  ///
+  /// ISO 4217 (Alpha) code: "CZK", ISO 4217 (Numeric) code: "203".
   const FiatCzk()
       : super(
           code: "CZK",
-          namesNative: const ["koruna česká"],
           name: "Czech Koruna",
-          symbol: "Kč",
-          subunit: "Haléř",
           decimalMark: ",",
           thousandsSeparator: " ",
+          symbol: "Kč",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "203",
+          namesNative: const ["koruna česká"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Haléř",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: czkCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Djiboutian Franc currency.
 class FiatDjf extends FiatCurrency {
-  /// A class that represents the Djiboutian Franc.
+  /// Creates a instance of [FiatDjf] (Djiboutian Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "DJF", ISO 4217 (Numeric) code: "262".
   const FiatDjf()
       : super(
           code: "DJF",
-          namesNative: const ["franc djibouti"],
           name: "Djiboutian Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Fdj",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "262",
+          namesNative: const ["franc djibouti"],
+          priority: 100,
+          smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          codeNumeric: "262",
-          smallestDenomination: 100,
+          unitFirst: false,
+          translations: djfCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Danish Krone currency.
 class FiatDkk extends FiatCurrency {
-  /// A class that represents the Danish Krone.
+  /// Creates a instance of [FiatDkk] (Danish Krone currency).
+  ///
+  /// ISO 4217 (Alpha) code: "DKK", ISO 4217 (Numeric) code: "208".
   const FiatDkk()
       : super(
           code: "DKK",
-          namesNative: const ["dansk krone"],
           name: "Danish Krone",
-          symbol: "kr.",
-          disambiguateSymbol: "DKK",
-          alternateSymbols: const ["krone"],
-          subunit: "Øre",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "kr.",
+          alternateSymbols: const ["krone"],
+          disambiguateSymbol: "DKK",
+          htmlEntity: null,
           codeNumeric: "208",
+          namesNative: const ["dansk krone"],
+          priority: 100,
           smallestDenomination: 50,
+          subunit: "Øre",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: dkkCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Dominican Peso currency.
 class FiatDop extends FiatCurrency {
-  /// A class that represents the Dominican Peso.
+  /// Creates a instance of [FiatDop] (Dominican Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "DOP", ISO 4217 (Numeric) code: "214".
   const FiatDop()
       : super(
           code: "DOP",
-          namesNative: const ["Dominican peso"],
           name: "Dominican Peso",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"RD$",
           alternateSymbols: const [r"RD$"],
-          subunit: "Centavo",
-          unitFirst: true,
+          disambiguateSymbol: r"RD$",
           htmlEntity: "&#x20B1;",
           codeNumeric: "214",
+          namesNative: const ["Dominican peso"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: dopCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Algerian Dinar currency.
 class FiatDzd extends FiatCurrency {
-  /// A class that represents the Algerian Dinar.
+  /// Creates a instance of [FiatDzd] (Algerian Dinar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "DZD", ISO 4217 (Numeric) code: "012".
   const FiatDzd()
       : super(
           code: "DZD",
-          namesNative: const ["دينار جزائري"],
           name: "Algerian Dinar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "د.ج",
           alternateSymbols: const ["DA"],
-          subunit: "Centime",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "012",
+          namesNative: const ["دينار جزائري"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Centime",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: dzdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Egyptian Pound currency.
 class FiatEgp extends FiatCurrency {
-  /// A class that represents the Egyptian Pound.
+  /// Creates a instance of [FiatEgp] (Egyptian Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "EGP", ISO 4217 (Numeric) code: "818".
   const FiatEgp()
       : super(
           code: "EGP",
-          namesNative: const ["جنيه مصرى"],
           name: "Egyptian Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ج.م",
           alternateSymbols: const ["LE", "E£", "L.E."],
-          subunit: "Piastre",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#x00A3;",
           codeNumeric: "818",
+          namesNative: const ["جنيه مصرى"],
+          priority: 100,
           smallestDenomination: 25,
+          subunit: "Piastre",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: egpCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Eritrean Nakfa currency.
 class FiatErn extends FiatCurrency {
-  /// A class that represents the Eritrean Nakfa.
+  /// Creates a instance of [FiatErn] (Eritrean Nakfa currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ERN", ISO 4217 (Numeric) code: "232".
   const FiatErn()
       : super(
           code: "ERN",
-          namesNative: const ["Eritrean nakfa"],
           name: "Eritrean Nakfa",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Nfk",
-          subunit: "Cent",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "232",
+          namesNative: const ["Eritrean nakfa"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: ernCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ethiopian Birr currency.
 class FiatEtb extends FiatCurrency {
-  /// A class that represents the Ethiopian Birr.
+  /// Creates a instance of [FiatEtb] (Ethiopian Birr currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ETB", ISO 4217 (Numeric) code: "230".
   const FiatEtb()
       : super(
           code: "ETB",
-          namesNative: const ["Ethiopian birr"],
           name: "Ethiopian Birr",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Br",
+          alternateSymbols: null,
           disambiguateSymbol: "ETB",
-          subunit: "Santim",
+          htmlEntity: null,
           codeNumeric: "230",
+          namesNative: const ["Ethiopian birr"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Santim",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: etbCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Euro currency.
 class FiatEur extends FiatCurrency {
-  /// A class that represents the Euro.
+  /// Creates a instance of [FiatEur] (Euro currency).
+  ///
+  /// ISO 4217 (Alpha) code: "EUR", ISO 4217 (Numeric) code: "978".
   const FiatEur()
       : super(
-          priority: 2,
           code: "EUR",
-          namesNative: const ["Euro"],
           name: "Euro",
-          symbol: "€",
-          subunit: "Cent",
-          unitFirst: true,
-          htmlEntity: "€",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "€",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: "€",
           codeNumeric: "978",
+          namesNative: const ["Euro"],
+          priority: 2,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: eurCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Fijian Dollar currency.
 class FiatFjd extends FiatCurrency {
-  /// A class that represents the Fijian Dollar.
+  /// Creates a instance of [FiatFjd] (Fijian Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "FJD", ISO 4217 (Numeric) code: "242".
   const FiatFjd()
       : super(
           code: "FJD",
-          namesNative: const ["Fijian dollar"],
           name: "Fijian Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"FJ$",
           alternateSymbols: const [r"FJ$"],
-          subunit: "Cent",
+          disambiguateSymbol: r"FJ$",
           htmlEntity: r"$",
           codeNumeric: "242",
+          namesNative: const ["Fijian dollar"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: fjdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Falkland Pound currency.
 class FiatFkp extends FiatCurrency {
-  /// A class that represents the Falkland Islands Pound.
+  /// Creates a instance of [FiatFkp] (Falkland Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "FKP", ISO 4217 (Numeric) code: "238".
   const FiatFkp()
       : super(
           code: "FKP",
-          namesNative: const ["Falkland Islands pound"],
           name: "Falkland Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "£",
-          disambiguateSymbol: "FK£",
           alternateSymbols: const ["FK£"],
-          subunit: "Penny",
+          disambiguateSymbol: "FK£",
           htmlEntity: "&#x00A3;",
           codeNumeric: "238",
+          namesNative: const ["Falkland Islands pound"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Penny",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: fkpCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the British Pound currency.
 class FiatGbp extends FiatCurrency {
-  /// A class that represents the British Pound.
+  /// Creates a instance of [FiatGbp] (British Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "GBP", ISO 4217 (Numeric) code: "826".
   const FiatGbp()
       : super(
-          priority: 3,
           code: "GBP",
-          namesNative: const ["British pound"],
           name: "British Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "£",
-          subunit: "Penny",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x00A3;",
           codeNumeric: "826",
+          namesNative: const ["British pound"],
+          priority: 3,
+          smallestDenomination: 1,
+          subunit: "Penny",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: gbpCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Georgian Lari currency.
 class FiatGel extends FiatCurrency {
-  /// A class that represents the Georgian Lari.
+  /// Creates a instance of [FiatGel] (Georgian Lari currency).
+  ///
+  /// ISO 4217 (Alpha) code: "GEL", ISO 4217 (Numeric) code: "981".
   const FiatGel()
       : super(
           code: "GEL",
-          namesNative: const ["ქართული ლარი"],
           name: "Georgian Lari",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₾",
           alternateSymbols: const ["lari"],
-          subunit: "Tetri",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "981",
+          namesNative: const ["ქართული ლარი"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Tetri",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: gelCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ghanaian Cedi currency.
 class FiatGhs extends FiatCurrency {
-  /// A class that represents the Ghanaian Cedi.
+  /// Creates a instance of [FiatGhs] (Ghanaian Cedi currency).
+  ///
+  /// ISO 4217 (Alpha) code: "GHS", ISO 4217 (Numeric) code: "936".
   const FiatGhs()
       : super(
           code: "GHS",
-          namesNative: const ["Ghanaian cedi"],
           name: "Ghanaian Cedi",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₵",
           alternateSymbols: const ["GH¢", "GH₵"],
-          subunit: "Pesewa",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20B5;",
           codeNumeric: "936",
+          namesNative: const ["Ghanaian cedi"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Pesewa",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: ghsCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Gibraltar Pound currency.
 class FiatGip extends FiatCurrency {
-  /// A class that represents the Gibraltar Pound.
+  /// Creates a instance of [FiatGip] (Gibraltar Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "GIP", ISO 4217 (Numeric) code: "292".
   const FiatGip()
       : super(
           code: "GIP",
-          namesNative: const ["Gibraltar pound"],
           name: "Gibraltar Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "£",
+          alternateSymbols: null,
           disambiguateSymbol: "GIP",
-          subunit: "Penny",
-          unitFirst: true,
           htmlEntity: "&#x00A3;",
           codeNumeric: "292",
+          namesNative: const ["Gibraltar pound"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Penny",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: gipCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Gambian Dalasi currency.
 class FiatGmd extends FiatCurrency {
-  /// A class that represents the Gambian Dalasi.
+  /// Creates a instance of [FiatGmd] (Gambian Dalasi currency).
+  ///
+  /// ISO 4217 (Alpha) code: "GMD", ISO 4217 (Numeric) code: "270".
   const FiatGmd()
       : super(
           code: "GMD",
-          namesNative: const ["Gambian dalasi"],
           name: "Gambian Dalasi",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "D",
-          subunit: "Butut",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "270",
+          namesNative: const ["Gambian dalasi"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Butut",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: gmdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Guinean Franc currency.
 class FiatGnf extends FiatCurrency {
-  /// A class that represents the Guinean Franc.
+  /// Creates a instance of [FiatGnf] (Guinean Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "GNF", ISO 4217 (Numeric) code: "324".
   const FiatGnf()
       : super(
           code: "GNF",
-          namesNative: const ["franc guinéen"],
           name: "Guinean Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Fr",
-          disambiguateSymbol: "FG",
           alternateSymbols: const ["FG", "GFr"],
+          disambiguateSymbol: "FG",
+          htmlEntity: null,
+          codeNumeric: "324",
+          namesNative: const ["franc guinéen"],
+          priority: 100,
+          smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          codeNumeric: "324",
-          smallestDenomination: 100,
+          unitFirst: false,
+          translations: gnfCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Guatemalan Quetzal currency.
 class FiatGtq extends FiatCurrency {
-  /// A class that represents the Guatemalan Quetzal.
+  /// Creates a instance of [FiatGtq] (Guatemalan Quetzal currency).
+  ///
+  /// ISO 4217 (Alpha) code: "GTQ", ISO 4217 (Numeric) code: "320".
   const FiatGtq()
       : super(
           code: "GTQ",
-          namesNative: const ["quetzal guatemalteco"],
           name: "Guatemalan Quetzal",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Q",
-          subunit: "Centavo",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "320",
+          namesNative: const ["quetzal guatemalteco"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: gtqCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Guyanaese Dollar currency.
 class FiatGyd extends FiatCurrency {
-  /// A class that represents the Guyanese Dollar.
+  /// Creates a instance of [FiatGyd] (Guyanaese Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "GYD", ISO 4217 (Numeric) code: "328".
   const FiatGyd()
       : super(
           code: "GYD",
-          namesNative: const ["Guyanese dollar"],
-          name: "Guyanese Dollar",
+          name: "Guyanaese Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"G$",
           alternateSymbols: const [r"G$"],
-          subunit: "Cent",
+          disambiguateSymbol: r"G$",
           htmlEntity: r"$",
           codeNumeric: "328",
+          namesNative: const ["Guyanese dollar"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: gydCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Hong Kong Dollar currency.
 class FiatHkd extends FiatCurrency {
-  /// A class that represents the Hong Kong Dollar.
+  /// Creates a instance of [FiatHkd] (Hong Kong Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "HKD", ISO 4217 (Numeric) code: "344".
   const FiatHkd()
       : super(
           code: "HKD",
-          namesNative: const ["港幣"],
           name: "Hong Kong Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"HK$",
           alternateSymbols: const [r"HK$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"HK$",
           htmlEntity: r"$",
           codeNumeric: "344",
+          namesNative: const ["港幣"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: hkdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Honduran Lempira currency.
 class FiatHnl extends FiatCurrency {
-  /// A class that represents the Honduran Lempira.
+  /// Creates a instance of [FiatHnl] (Honduran Lempira currency).
+  ///
+  /// ISO 4217 (Alpha) code: "HNL", ISO 4217 (Numeric) code: "340".
   const FiatHnl()
       : super(
           code: "HNL",
-          namesNative: const ["lempira hondureño"],
           name: "Honduran Lempira",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "L",
+          alternateSymbols: null,
           disambiguateSymbol: "HNL",
-          subunit: "Centavo",
-          unitFirst: true,
+          htmlEntity: null,
           codeNumeric: "340",
+          namesNative: const ["lempira hondureño"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: hnlCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Croatian Kuna currency.
 class FiatHrk extends FiatCurrency {
-  /// A class that represents the Croatian Kuna.
+  /// Creates a instance of [FiatHrk] (Croatian Kuna currency).
+  ///
+  /// ISO 4217 (Alpha) code: "HRK", ISO 4217 (Numeric) code: "191".
   const FiatHrk()
       : super(
           code: "HRK",
-          namesNative: const ["hrvatska kuna"],
           name: "Croatian Kuna",
-          symbol: "kn",
-          subunit: "Lipa",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "kn",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "191",
+          namesNative: const ["hrvatska kuna"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Lipa",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: hrkCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Haitian Gourde currency.
 class FiatHtg extends FiatCurrency {
-  /// A class that represents the Haitian Gourde.
+  /// Creates a instance of [FiatHtg] (Haitian Gourde currency).
+  ///
+  /// ISO 4217 (Alpha) code: "HTG", ISO 4217 (Numeric) code: "332".
   const FiatHtg()
       : super(
           code: "HTG",
-          namesNative: const ["goud ayisyen"],
           name: "Haitian Gourde",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "G",
-          subunit: "Centime",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "332",
+          namesNative: const ["goud ayisyen"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Centime",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: htgCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Hungarian Forint currency.
 class FiatHuf extends FiatCurrency {
-  /// A class that represents the Hungarian Forint.
+  /// Creates a instance of [FiatHuf] (Hungarian Forint currency).
+  ///
+  /// ISO 4217 (Alpha) code: "HUF", ISO 4217 (Numeric) code: "348".
   const FiatHuf()
       : super(
           code: "HUF",
-          namesNative: const ["Magyar forint"],
           name: "Hungarian Forint",
-          symbol: "Ft",
-          subunitToUnit: 1,
           decimalMark: ",",
           thousandsSeparator: " ",
+          symbol: "Ft",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "348",
+          namesNative: const ["Magyar forint"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: hufCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Indonesian Rupiah currency.
 class FiatIdr extends FiatCurrency {
-  /// A class that represents the Indonesian Rupiah.
+  /// Creates a instance of [FiatIdr] (Indonesian Rupiah currency).
+  ///
+  /// ISO 4217 (Alpha) code: "IDR", ISO 4217 (Numeric) code: "360".
   const FiatIdr()
       : super(
           code: "IDR",
-          namesNative: const ["Rupiah"],
           name: "Indonesian Rupiah",
-          symbol: "Rp",
-          subunit: "Sen",
-          unitFirst: true,
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "Rp",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "360",
+          namesNative: const ["Rupiah"],
+          priority: 100,
           smallestDenomination: 5000,
+          subunit: "Sen",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: idrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Israeli New Shekel currency.
 class FiatIls extends FiatCurrency {
-  /// A class that represents the Israeli New Sheqel.
+  /// Creates a instance of [FiatIls] (Israeli New Shekel currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ILS", ISO 4217 (Numeric) code: "376".
   const FiatIls()
       : super(
           code: "ILS",
-          namesNative: const ["שקל חדש"],
-          name: "Israeli New Sheqel",
+          name: "Israeli New Shekel",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₪",
           alternateSymbols: const ["ש״ח", "NIS"],
-          subunit: "Agora",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20AA;",
           codeNumeric: "376",
+          namesNative: const ["שקל חדש"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Agora",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: ilsCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Indian Rupee currency.
 class FiatInr extends FiatCurrency {
-  /// A class that represents the Indian Rupee.
+  /// Creates a instance of [FiatInr] (Indian Rupee currency).
+  ///
+  /// ISO 4217 (Alpha) code: "INR", ISO 4217 (Numeric) code: "356".
   const FiatInr()
       : super(
           code: "INR",
-          namesNative: const ["रुपया"],
           name: "Indian Rupee",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₹",
           alternateSymbols: const ["Rs", "৳", "૱", "௹", "रु", "₨"],
-          subunit: "Paisa",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20b9;",
           codeNumeric: "356",
+          namesNative: const ["रुपया"],
+          priority: 100,
           smallestDenomination: 50,
+          subunit: "Paisa",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: inrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Iraqi Dinar currency.
 class FiatIqd extends FiatCurrency {
-  /// A class that represents the Iraqi Dinar.
+  /// Creates a instance of [FiatIqd] (Iraqi Dinar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "IQD", ISO 4217 (Numeric) code: "368".
   const FiatIqd()
       : super(
           code: "IQD",
-          namesNative: const ["دينار عراقي"],
           name: "Iraqi Dinar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ع.د",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "368",
+          namesNative: const ["دينار عراقي"],
+          priority: 100,
+          smallestDenomination: 50000,
           subunit: "Fils",
           subunitToUnit: 1000,
-          codeNumeric: "368",
-          smallestDenomination: 50000,
+          unitFirst: false,
+          translations: iqdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Iranian Rial currency.
 class FiatIrr extends FiatCurrency {
-  /// A class that represents the Iranian Rial.
+  /// Creates a instance of [FiatIrr] (Iranian Rial currency).
+  ///
+  /// ISO 4217 (Alpha) code: "IRR", ISO 4217 (Numeric) code: "364".
   const FiatIrr()
       : super(
           code: "IRR",
-          namesNative: const ["ریال ایران"],
           name: "Iranian Rial",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "﷼",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#xFDFC;",
           codeNumeric: "364",
+          namesNative: const ["ریال ایران"],
+          priority: 100,
           smallestDenomination: 5000,
+          subunit: null,
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: irrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Icelandic Króna currency.
 class FiatIsk extends FiatCurrency {
-  /// A class that represents the Icelandic Króna.
+  /// Creates a instance of [FiatIsk] (Icelandic Króna currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ISK", ISO 4217 (Numeric) code: "352".
   const FiatIsk()
       : super(
           code: "ISK",
-          namesNative: const ["íslensk króna"],
           name: "Icelandic Króna",
-          symbol: "kr.",
-          alternateSymbols: const ["Íkr"],
-          subunitToUnit: 1,
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "kr.",
+          alternateSymbols: const ["Íkr"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "352",
+          namesNative: const ["íslensk króna"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: iskCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Jamaican Dollar currency.
 class FiatJmd extends FiatCurrency {
-  /// A class that represents the Jamaican Dollar.
+  /// Creates a instance of [FiatJmd] (Jamaican Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "JMD", ISO 4217 (Numeric) code: "388".
   const FiatJmd()
       : super(
           code: "JMD",
-          namesNative: const ["Jamaican dollar"],
           name: "Jamaican Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"J$",
           alternateSymbols: const [r"J$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"J$",
           htmlEntity: r"$",
           codeNumeric: "388",
+          namesNative: const ["Jamaican dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: jmdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Jordanian Dinar currency.
 class FiatJod extends FiatCurrency {
-  /// A class that represents the Jordanian Dinar.
+  /// Creates a instance of [FiatJod] (Jordanian Dinar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "JOD", ISO 4217 (Numeric) code: "400".
   const FiatJod()
       : super(
           code: "JOD",
-          namesNative: const ["دينار أردني"],
           name: "Jordanian Dinar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "د.ا",
           alternateSymbols: const ["JD"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "400",
+          namesNative: const ["دينار أردني"],
+          priority: 100,
+          smallestDenomination: 5,
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          codeNumeric: "400",
-          smallestDenomination: 5,
+          translations: jodCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Japanese Yen currency.
 class FiatJpy extends FiatCurrency {
-  /// A class that represents the Japanese Yen.
+  /// Creates a instance of [FiatJpy] (Japanese Yen currency).
+  ///
+  /// ISO 4217 (Alpha) code: "JPY", ISO 4217 (Numeric) code: "392".
   const FiatJpy()
       : super(
-          priority: 6,
           code: "JPY",
-          namesNative: const ["日本円"],
           name: "Japanese Yen",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "¥",
           alternateSymbols: const ["円", "圓"],
-          subunitToUnit: 1,
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#x00A5;",
           codeNumeric: "392",
+          namesNative: const ["日本円"],
+          priority: 6,
+          smallestDenomination: 1,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: true,
+          translations: jpyCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kenyan Shilling currency.
 class FiatKes extends FiatCurrency {
-  /// A class that represents the Kenyan Shilling.
+  /// Creates a instance of [FiatKes] (Kenyan Shilling currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KES", ISO 4217 (Numeric) code: "404".
   const FiatKes()
       : super(
           code: "KES",
-          namesNative: const ["Shillingi ya Kenya"],
           name: "Kenyan Shilling",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "KSh",
           alternateSymbols: const ["Sh"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "404",
+          namesNative: const ["Shillingi ya Kenya"],
+          priority: 100,
           smallestDenomination: 50,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: kesCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kyrgystani Som currency.
 class FiatKgs extends FiatCurrency {
-  /// A class that represents the Kyrgyzstani Som.
+  /// Creates a instance of [FiatKgs] (Kyrgystani Som currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KGS", ISO 4217 (Numeric) code: "417".
   const FiatKgs()
       : super(
           code: "KGS",
-          namesNative: const ["Кыргыз сом"],
-          name: "Kyrgyzstani Som",
+          name: "Kyrgystani Som",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "som",
           alternateSymbols: const ["сом"],
-          subunit: "Tyiyn",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "417",
+          namesNative: const ["Кыргыз сом"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Tyiyn",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: kgsCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Cambodian Riel currency.
 class FiatKhr extends FiatCurrency {
-  /// A class that represents the Cambodian Riel.
+  /// Creates a instance of [FiatKhr] (Cambodian Riel currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KHR", ISO 4217 (Numeric) code: "116".
   const FiatKhr()
       : super(
           code: "KHR",
-          namesNative: const ["រៀល"],
           name: "Cambodian Riel",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "៛",
-          subunit: "Sen",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x17DB;",
           codeNumeric: "116",
+          namesNative: const ["រៀល"],
+          priority: 100,
           smallestDenomination: 5000,
+          subunit: "Sen",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: khrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Comorian Franc currency.
 class FiatKmf extends FiatCurrency {
-  /// A class that represents the Comorian Franc.
+  /// Creates a instance of [FiatKmf] (Comorian Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KMF", ISO 4217 (Numeric) code: "174".
   const FiatKmf()
       : super(
           code: "KMF",
-          namesNative: const ["Comorian franc"],
           name: "Comorian Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Fr",
-          disambiguateSymbol: "CF",
           alternateSymbols: const ["CF"],
+          disambiguateSymbol: "CF",
+          htmlEntity: null,
+          codeNumeric: "174",
+          namesNative: const ["Comorian franc"],
+          priority: 100,
+          smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          codeNumeric: "174",
-          smallestDenomination: 100,
+          unitFirst: false,
+          translations: kmfCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the North Korean Won currency.
 class FiatKpw extends FiatCurrency {
-  /// A class that represents the North Korean Won.
+  /// Creates a instance of [FiatKpw] (North Korean Won currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KPW", ISO 4217 (Numeric) code: "408".
   const FiatKpw()
       : super(
           code: "KPW",
-          namesNative: const ["조선 민주주의 인민 공화국 원"],
           name: "North Korean Won",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₩",
-          subunit: "Chŏn",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20A9;",
           codeNumeric: "408",
+          namesNative: const ["조선 민주주의 인민 공화국 원"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Chŏn",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: kpwCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the South Korean Won currency.
 class FiatKrw extends FiatCurrency {
-  /// A class that represents the South Korean Won.
+  /// Creates a instance of [FiatKrw] (South Korean Won currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KRW", ISO 4217 (Numeric) code: "410".
   const FiatKrw()
       : super(
           code: "KRW",
-          namesNative: const ["원"],
           name: "South Korean Won",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₩",
-          subunitToUnit: 1,
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20A9;",
           codeNumeric: "410",
+          namesNative: const ["원"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: true,
+          translations: krwCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kuwaiti Dinar currency.
 class FiatKwd extends FiatCurrency {
-  /// A class that represents the Kuwaiti Dinar.
+  /// Creates a instance of [FiatKwd] (Kuwaiti Dinar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KWD", ISO 4217 (Numeric) code: "414".
   const FiatKwd()
       : super(
           code: "KWD",
-          namesNative: const ["دينار كويتي"],
           name: "Kuwaiti Dinar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "د.ك",
           alternateSymbols: const ["K.D."],
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "414",
+          namesNative: const ["دينار كويتي"],
+          priority: 100,
+          smallestDenomination: 5,
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          codeNumeric: "414",
-          smallestDenomination: 5,
+          translations: kwdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Cayman Islands Dollar currency.
 class FiatKyd extends FiatCurrency {
-  /// A class that represents the Cayman Islands Dollar.
+  /// Creates a instance of [FiatKyd] (Cayman Islands Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KYD", ISO 4217 (Numeric) code: "136".
   const FiatKyd()
       : super(
           code: "KYD",
-          namesNative: const ["Cayman Islands dollar"],
           name: "Cayman Islands Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"CI$",
           alternateSymbols: const [r"CI$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"CI$",
           htmlEntity: r"$",
           codeNumeric: "136",
+          namesNative: const ["Cayman Islands dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: kydCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Kazakhstani Tenge currency.
 class FiatKzt extends FiatCurrency {
-  /// A class that represents the Kazakhstani Tenge.
+  /// Creates a instance of [FiatKzt] (Kazakhstani Tenge currency).
+  ///
+  /// ISO 4217 (Alpha) code: "KZT", ISO 4217 (Numeric) code: "398".
   const FiatKzt()
       : super(
           code: "KZT",
-          namesNative: const ["Қазақстан теңгесі", "Казахстанский тенге"],
           name: "Kazakhstani Tenge",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₸",
-          subunit: "Tiyn",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "398",
+          namesNative: const ["Қазақстан теңгесі", "Казахстанский тенге"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Tiyn",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: kztCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Laotian Kip currency.
 class FiatLak extends FiatCurrency {
-  /// A class that represents the Lao Kip.
+  /// Creates a instance of [FiatLak] (Laotian Kip currency).
+  ///
+  /// ISO 4217 (Alpha) code: "LAK", ISO 4217 (Numeric) code: "418".
   const FiatLak()
       : super(
           code: "LAK",
-          namesNative: const ["ເງີນກີບລາວ"],
-          name: "Lao Kip",
+          name: "Laotian Kip",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₭",
           alternateSymbols: const ["₭N"],
-          subunit: "Att",
+          disambiguateSymbol: null,
           htmlEntity: "&#x20AD;",
           codeNumeric: "418",
+          namesNative: const ["ເງີນກີບລາວ"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Att",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: lakCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Lebanese Pound currency.
 class FiatLbp extends FiatCurrency {
-  /// A class that represents the Lebanese Pound.
+  /// Creates a instance of [FiatLbp] (Lebanese Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "LBP", ISO 4217 (Numeric) code: "422".
   const FiatLbp()
       : super(
           code: "LBP",
-          namesNative: const ["ليرة لبنانية"],
           name: "Lebanese Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ل.ل",
           alternateSymbols: const ["£", "L£"],
-          subunit: "Piastre",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#x00A3;",
           codeNumeric: "422",
+          namesNative: const ["ليرة لبنانية"],
+          priority: 100,
           smallestDenomination: 25000,
+          subunit: "Piastre",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: lbpCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sri Lankan Rupee currency.
 class FiatLkr extends FiatCurrency {
-  /// A class that represents the Sri Lankan Rupee.
+  /// Creates a instance of [FiatLkr] (Sri Lankan Rupee currency).
+  ///
+  /// ISO 4217 (Alpha) code: "LKR", ISO 4217 (Numeric) code: "144".
   const FiatLkr()
       : super(
           code: "LKR",
-          namesNative: const ["ශ්‍රී ලංකා රුපියල්"],
           name: "Sri Lankan Rupee",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₨",
-          disambiguateSymbol: "SLRs",
           alternateSymbols: const ["රු", "ரூ", "SLRs", "/-"],
-          subunit: "Cent",
+          disambiguateSymbol: "SLRs",
           htmlEntity: "&#8360;",
           codeNumeric: "144",
+          namesNative: const ["ශ්‍රී ලංකා රුපියල්"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: lkrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Liberian Dollar currency.
 class FiatLrd extends FiatCurrency {
-  /// A class that represents the Liberian Dollar.
+  /// Creates a instance of [FiatLrd] (Liberian Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "LRD", ISO 4217 (Numeric) code: "430".
   const FiatLrd()
       : super(
           code: "LRD",
-          namesNative: const ["Liberian dollars"],
           name: "Liberian Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"L$",
           alternateSymbols: const [r"L$"],
-          subunit: "Cent",
+          disambiguateSymbol: r"L$",
           htmlEntity: r"$",
           codeNumeric: "430",
+          namesNative: const ["Liberian dollars"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: lrdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Lesotho Loti currency.
 class FiatLsl extends FiatCurrency {
-  /// A class that represents the Lesotho Loti.
+  /// Creates a instance of [FiatLsl] (Lesotho Loti currency).
+  ///
+  /// ISO 4217 (Alpha) code: "LSL", ISO 4217 (Numeric) code: "426".
   const FiatLsl()
       : super(
           code: "LSL",
-          namesNative: const ["Lesotho loti"],
           name: "Lesotho Loti",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "L",
-          disambiguateSymbol: "M",
           alternateSymbols: const ["M"],
-          subunit: "Sente",
+          disambiguateSymbol: "M",
+          htmlEntity: null,
           codeNumeric: "426",
+          namesNative: const ["Lesotho loti"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Sente",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: lslCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Libyan Dinar currency.
 class FiatLyd extends FiatCurrency {
-  /// A class that represents the Libyan Dinar.
+  /// Creates a instance of [FiatLyd] (Libyan Dinar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "LYD", ISO 4217 (Numeric) code: "434".
   const FiatLyd()
       : super(
           code: "LYD",
-          namesNative: const ["دينار ليبي"],
           name: "Libyan Dinar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ل.د",
           alternateSymbols: const ["LD"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "434",
+          namesNative: const ["دينار ليبي"],
+          priority: 100,
+          smallestDenomination: 50,
           subunit: "Dirham",
           subunitToUnit: 1000,
-          codeNumeric: "434",
-          smallestDenomination: 50,
+          unitFirst: false,
+          translations: lydCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Moroccan Dirham currency.
 class FiatMad extends FiatCurrency {
-  /// A class that represents the Moroccan Dirham.
+  /// Creates a instance of [FiatMad] (Moroccan Dirham currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MAD", ISO 4217 (Numeric) code: "504".
   const FiatMad()
       : super(
           code: "MAD",
-          namesNative: const ["درهم مغربي"],
           name: "Moroccan Dirham",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "د.م.",
-          subunit: "Centime",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "504",
+          namesNative: const ["درهم مغربي"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centime",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: madCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Moldovan Leu currency.
 class FiatMdl extends FiatCurrency {
-  /// A class that represents the Moldovan Leu.
+  /// Creates a instance of [FiatMdl] (Moldovan Leu currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MDL", ISO 4217 (Numeric) code: "498".
   const FiatMdl()
       : super(
           code: "MDL",
-          namesNative: const ["leu moldovenesc"],
           name: "Moldovan Leu",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "L",
           alternateSymbols: const ["lei"],
-          subunit: "Ban",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "498",
+          namesNative: const ["leu moldovenesc"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Ban",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: mdlCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Malagasy Ariary currency.
 class FiatMga extends FiatCurrency {
-  /// A class that represents the Malagasy Ariary.
+  /// Creates a instance of [FiatMga] (Malagasy Ariary currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MGA", ISO 4217 (Numeric) code: "969".
   const FiatMga()
       : super(
           code: "MGA",
-          namesNative: const ["ariary malgache"],
           name: "Malagasy Ariary",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Ar",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "969",
+          namesNative: const ["ariary malgache"],
+          priority: 100,
+          smallestDenomination: 1,
           subunit: "Iraimbilanja",
           subunitToUnit: 5,
           unitFirst: true,
-          codeNumeric: "969",
+          translations: mgaCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Macedonian Denar currency.
 class FiatMkd extends FiatCurrency {
-  /// A class that represents the Macedonian Denar.
+  /// Creates a instance of [FiatMkd] (Macedonian Denar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MKD", ISO 4217 (Numeric) code: "807".
   const FiatMkd()
       : super(
           code: "MKD",
-          namesNative: const ["Македонски денар"],
           name: "Macedonian Denar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ден",
-          subunit: "Deni",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "807",
+          namesNative: const ["Македонски денар"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Deni",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: mkdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Myanmar Kyat currency.
 class FiatMmk extends FiatCurrency {
-  /// A class that represents the Myanmar Kyat.
+  /// Creates a instance of [FiatMmk] (Myanmar Kyat currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MMK", ISO 4217 (Numeric) code: "104".
   const FiatMmk()
       : super(
           code: "MMK",
-          namesNative: const ["ကျပ်"],
           name: "Myanmar Kyat",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "K",
+          alternateSymbols: null,
           disambiguateSymbol: "MMK",
-          subunit: "Pya",
+          htmlEntity: null,
           codeNumeric: "104",
+          namesNative: const ["ကျပ်"],
+          priority: 100,
           smallestDenomination: 50,
+          subunit: "Pya",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: mmkCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Mongolian Tugrik currency.
 class FiatMnt extends FiatCurrency {
-  /// A class that represents the Mongolian Tugrik.
+  /// Creates a instance of [FiatMnt] (Mongolian Tugrik currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MNT", ISO 4217 (Numeric) code: "496".
   const FiatMnt()
       : super(
           code: "MNT",
-          namesNative: const ["Монгол төгрөг"],
-          name: "Mongolian Tögrög",
+          name: "Mongolian Tugrik",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₮",
-          subunit: "Möngö",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20AE;",
           codeNumeric: "496",
+          namesNative: const ["Монгол төгрөг"],
+          priority: 100,
           smallestDenomination: 2000,
+          subunit: "Möngö",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: mntCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Macanese Pataca currency.
 class FiatMop extends FiatCurrency {
-  /// A class that represents the Macanese Pataca.
+  /// Creates a instance of [FiatMop] (Macanese Pataca currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MOP", ISO 4217 (Numeric) code: "446".
   const FiatMop()
       : super(
           code: "MOP",
-          namesNative: const ["澳門圓"],
           name: "Macanese Pataca",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "P",
           alternateSymbols: const [r"MOP$"],
-          subunit: "Avo",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "446",
+          namesNative: const ["澳門圓"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Avo",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: mopCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Mauritanian Ouguiya currency.
 class FiatMru extends FiatCurrency {
-  /// A class that represents the Mauritian Ouguiya.
+  /// Creates a instance of [FiatMru] (Mauritanian Ouguiya currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MRU", ISO 4217 (Numeric) code: "929".
   const FiatMru()
       : super(
           code: "MRU",
-          namesNative: const ["أوقية موريتانية"],
           name: "Mauritanian Ouguiya",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "UM",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "929",
+          namesNative: const ["أوقية موريتانية"],
+          priority: 100,
+          smallestDenomination: 1,
           subunit: "Khoums",
           subunitToUnit: 5,
-          codeNumeric: "929",
+          unitFirst: false,
+          translations: mruCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Mauritian Rupee currency.
 class FiatMur extends FiatCurrency {
-  /// A class that represents the Mauritian Rupee.
+  /// Creates a instance of [FiatMur] (Mauritian Rupee currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MUR", ISO 4217 (Numeric) code: "480".
   const FiatMur()
       : super(
           code: "MUR",
-          namesNative: const ["Roupie mauricienne"],
           name: "Mauritian Rupee",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₨",
-          subunit: "Cent",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20A8;",
           codeNumeric: "480",
+          namesNative: const ["Roupie mauricienne"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: murCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Maldivian Rufiyaa currency.
 class FiatMvr extends FiatCurrency {
-  /// A class that represents the Maldivian Rufiyaa.
+  /// Creates a instance of [FiatMvr] (Maldivian Rufiyaa currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MVR", ISO 4217 (Numeric) code: "462".
   const FiatMvr()
       : super(
           code: "MVR",
-          namesNative: const ["ދިވެހި ރުފިޔާ"],
           name: "Maldivian Rufiyaa",
+          decimalMark: ".",
+          thousandsSeparator: ",",
+          symbol: null,
           alternateSymbols: const ["MRF", "Rf", "/-", "ރ"],
-          subunit: "Laari",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "462",
+          namesNative: const ["ދިވެހި ރުފިޔާ"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Laari",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: mvrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Malawian Kwacha currency.
 class FiatMwk extends FiatCurrency {
-  /// A class that represents the Malawian Kwacha.
+  /// Creates a instance of [FiatMwk] (Malawian Kwacha currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MWK", ISO 4217 (Numeric) code: "454".
   const FiatMwk()
       : super(
           code: "MWK",
-          namesNative: const ["Malawian kwacha"],
           name: "Malawian Kwacha",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "MK",
-          subunit: "Tambala",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "454",
+          namesNative: const ["Malawian kwacha"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Tambala",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: mwkCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Mexican Peso currency.
 class FiatMxn extends FiatCurrency {
-  /// A class that represents the Mexican Peso.
+  /// Creates a instance of [FiatMxn] (Mexican Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MXN", ISO 4217 (Numeric) code: "484".
   const FiatMxn()
       : super(
           code: "MXN",
-          namesNative: const ["Peso Mexicano"],
           name: "Mexican Peso",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"MEX$",
           alternateSymbols: const [r"MEX$"],
-          subunit: "Centavo",
-          unitFirst: true,
+          disambiguateSymbol: r"MEX$",
           htmlEntity: r"$",
           codeNumeric: "484",
+          namesNative: const ["Peso Mexicano"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: mxnCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Malaysian Ringgit currency.
 class FiatMyr extends FiatCurrency {
-  /// A class that represents the Malaysian Ringgit.
+  /// Creates a instance of [FiatMyr] (Malaysian Ringgit currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MYR", ISO 4217 (Numeric) code: "458".
   const FiatMyr()
       : super(
           code: "MYR",
-          namesNative: const ["Ringgit Malaysia"],
           name: "Malaysian Ringgit",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "RM",
-          subunit: "Sen",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "458",
+          namesNative: const ["Ringgit Malaysia"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Sen",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: myrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Mozambican Metical currency.
 class FiatMzn extends FiatCurrency {
-  /// A class that represents the Mozambican Metical.
+  /// Creates a instance of [FiatMzn] (Mozambican Metical currency).
+  ///
+  /// ISO 4217 (Alpha) code: "MZN", ISO 4217 (Numeric) code: "943".
   const FiatMzn()
       : super(
           code: "MZN",
-          namesNative: const ["Metical moçambicano"],
           name: "Mozambican Metical",
-          symbol: "MTn",
-          alternateSymbols: const ["MZN"],
-          subunit: "Centavo",
-          unitFirst: true,
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "MTn",
+          alternateSymbols: const ["MZN"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "943",
+          namesNative: const ["Metical moçambicano"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: mznCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Namibian Dollar currency.
 class FiatNad extends FiatCurrency {
-  /// A class that represents the Namibian Dollar.
+  /// Creates a instance of [FiatNad] (Namibian Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "NAD", ISO 4217 (Numeric) code: "516".
   const FiatNad()
       : super(
           code: "NAD",
-          namesNative: const ["Namibian dollar"],
           name: "Namibian Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"N$",
           alternateSymbols: const [r"N$"],
-          subunit: "Cent",
+          disambiguateSymbol: r"N$",
           htmlEntity: r"$",
           codeNumeric: "516",
+          namesNative: const ["Namibian dollar"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: nadCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Nigerian Naira currency.
 class FiatNgn extends FiatCurrency {
-  /// A class that represents the Nigerian Naira.
+  /// Creates a instance of [FiatNgn] (Nigerian Naira currency).
+  ///
+  /// ISO 4217 (Alpha) code: "NGN", ISO 4217 (Numeric) code: "566".
   const FiatNgn()
       : super(
           code: "NGN",
-          namesNative: const ["Nigerian naira"],
           name: "Nigerian Naira",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₦",
-          subunit: "Kobo",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20A6;",
           codeNumeric: "566",
+          namesNative: const ["Nigerian naira"],
+          priority: 100,
           smallestDenomination: 50,
+          subunit: "Kobo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: ngnCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Nicaraguan Córdoba currency.
 class FiatNio extends FiatCurrency {
-  /// A class that represents the Nicaraguan Córdoba.
+  /// Creates a instance of [FiatNio] (Nicaraguan Córdoba currency).
+  ///
+  /// ISO 4217 (Alpha) code: "NIO", ISO 4217 (Numeric) code: "558".
   const FiatNio()
       : super(
           code: "NIO",
-          namesNative: const ["córdoba nicaragüense"],
           name: "Nicaraguan Córdoba",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"C$",
+          alternateSymbols: null,
           disambiguateSymbol: r"NIO$",
-          subunit: "Centavo",
-          unitFirst: true,
+          htmlEntity: null,
           codeNumeric: "558",
+          namesNative: const ["córdoba nicaragüense"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: nioCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Norwegian Krone currency.
 class FiatNok extends FiatCurrency {
-  /// A class that represents the Norwegian Krone.
+  /// Creates a instance of [FiatNok] (Norwegian Krone currency).
+  ///
+  /// ISO 4217 (Alpha) code: "NOK", ISO 4217 (Numeric) code: "578".
   const FiatNok()
       : super(
           code: "NOK",
-          namesNative: const ["norsk krone"],
           name: "Norwegian Krone",
-          symbol: "kr",
-          disambiguateSymbol: "NOK",
-          alternateSymbols: const ["krone"],
-          subunit: "Øre",
-          htmlEntity: "kr",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "kr",
+          alternateSymbols: const ["krone"],
+          disambiguateSymbol: "NOK",
+          htmlEntity: "kr",
           codeNumeric: "578",
+          namesNative: const ["norsk krone"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Øre",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: nokCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Nepalese Rupee currency.
 class FiatNpr extends FiatCurrency {
-  /// A class that represents the Nepalese Rupee.
+  /// Creates a instance of [FiatNpr] (Nepalese Rupee currency).
+  ///
+  /// ISO 4217 (Alpha) code: "NPR", ISO 4217 (Numeric) code: "524".
   const FiatNpr()
       : super(
           code: "NPR",
-          namesNative: const ["रुपैयाँ"],
           name: "Nepalese Rupee",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Rs.",
-          disambiguateSymbol: "NPR",
           alternateSymbols: const ["Rs", "रू", "₨"],
-          subunit: "Paisa",
-          unitFirst: true,
+          disambiguateSymbol: "NPR",
           htmlEntity: "&#x20A8;",
           codeNumeric: "524",
+          namesNative: const ["रुपैयाँ"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Paisa",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: nprCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the New Zealand Dollar currency.
 class FiatNzd extends FiatCurrency {
-  /// A class that represents the New Zealand Dollar.
+  /// Creates a instance of [FiatNzd] (New Zealand Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "NZD", ISO 4217 (Numeric) code: "554".
   const FiatNzd()
       : super(
           code: "NZD",
-          namesNative: const ["New Zealand dollar"],
           name: "New Zealand Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"NZ$",
           alternateSymbols: const [r"NZ$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"NZ$",
           htmlEntity: r"$",
           codeNumeric: "554",
+          namesNative: const ["New Zealand dollar"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: nzdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Omani Rial currency.
 class FiatOmr extends FiatCurrency {
-  /// A class that represents the Omani Rial.
+  /// Creates a instance of [FiatOmr] (Omani Rial currency).
+  ///
+  /// ISO 4217 (Alpha) code: "OMR", ISO 4217 (Numeric) code: "512".
   const FiatOmr()
       : super(
           code: "OMR",
-          namesNative: const ["ريال عماني"],
           name: "Omani Rial",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ر.ع.",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: "&#xFDFC;",
+          codeNumeric: "512",
+          namesNative: const ["ريال عماني"],
+          priority: 100,
+          smallestDenomination: 5,
           subunit: "Baisa",
           subunitToUnit: 1000,
           unitFirst: true,
-          htmlEntity: "&#xFDFC;",
-          codeNumeric: "512",
-          smallestDenomination: 5,
+          translations: omrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Panamanian Balboa currency.
 class FiatPab extends FiatCurrency {
-  /// A class that represents the Panamanian Balboa.
+  /// Creates a instance of [FiatPab] (Panamanian Balboa currency).
+  ///
+  /// ISO 4217 (Alpha) code: "PAB", ISO 4217 (Numeric) code: "590".
   const FiatPab()
       : super(
           code: "PAB",
-          namesNative: const ["Balboa panameño"],
           name: "Panamanian Balboa",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "B/.",
-          subunit: "Centésimo",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "590",
+          namesNative: const ["Balboa panameño"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centésimo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: pabCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Peruvian Sol currency.
 class FiatPen extends FiatCurrency {
-  /// A class that represents the Peruvian Sol.
+  /// Creates a instance of [FiatPen] (Peruvian Sol currency).
+  ///
+  /// ISO 4217 (Alpha) code: "PEN", ISO 4217 (Numeric) code: "604".
   const FiatPen()
       : super(
           code: "PEN",
-          namesNative: const ["sol peruano"],
           name: "Peruvian Sol",
-          symbol: "S/",
-          subunit: "Céntimo",
-          unitFirst: true,
-          htmlEntity: "S/",
-          codeNumeric: "604",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "S/",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: "S/",
+          codeNumeric: "604",
+          namesNative: const ["sol peruano"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Céntimo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: penCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Papua New Guinean Kina currency.
 class FiatPgk extends FiatCurrency {
-  /// A class that represents the Papua New Guinean Kina.
+  /// Creates a instance of [FiatPgk] (Papua New Guinean Kina currency).
+  ///
+  /// ISO 4217 (Alpha) code: "PGK", ISO 4217 (Numeric) code: "598".
   const FiatPgk()
       : super(
           code: "PGK",
-          namesNative: const ["Papua New Guinean kina"],
           name: "Papua New Guinean Kina",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "K",
+          alternateSymbols: null,
           disambiguateSymbol: "PGK",
-          subunit: "Toea",
+          htmlEntity: null,
           codeNumeric: "598",
+          namesNative: const ["Papua New Guinean kina"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Toea",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: pgkCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Philippine Peso currency.
 class FiatPhp extends FiatCurrency {
-  /// A class that represents the Philippine Peso.
+  /// Creates a instance of [FiatPhp] (Philippine Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "PHP", ISO 4217 (Numeric) code: "608".
   const FiatPhp()
       : super(
           code: "PHP",
-          namesNative: const ["Piso ng Pilipinas"],
           name: "Philippine Peso",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₱",
           alternateSymbols: const ["PHP", "PhP", "P"],
-          subunit: "Centavo",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20B1;",
           codeNumeric: "608",
+          namesNative: const ["Piso ng Pilipinas"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: phpCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Pakistani Rupee currency.
 class FiatPkr extends FiatCurrency {
-  /// A class that represents the Pakistani Rupee.
+  /// Creates a instance of [FiatPkr] (Pakistani Rupee currency).
+  ///
+  /// ISO 4217 (Alpha) code: "PKR", ISO 4217 (Numeric) code: "586".
   const FiatPkr()
       : super(
           code: "PKR",
-          namesNative: const ["پاکستانی روپیہ"],
           name: "Pakistani Rupee",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₨",
-          disambiguateSymbol: "PKR",
           alternateSymbols: const ["Rs"],
-          subunit: "Paisa",
-          unitFirst: true,
+          disambiguateSymbol: "PKR",
           htmlEntity: "&#x20A8;",
           codeNumeric: "586",
+          namesNative: const ["پاکستانی روپیہ"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Paisa",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: pkrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Polish Zloty currency.
 class FiatPln extends FiatCurrency {
-  /// A class that represents the Polish Złoty.
+  /// Creates a instance of [FiatPln] (Polish Zloty currency).
+  ///
+  /// ISO 4217 (Alpha) code: "PLN", ISO 4217 (Numeric) code: "985".
   const FiatPln()
       : super(
           code: "PLN",
-          namesNative: const ["Polski złoty"],
-          name: "Polish Złoty",
-          symbol: "zł",
-          subunit: "Grosz",
-          htmlEntity: "z&#322;",
+          name: "Polish Zloty",
           decimalMark: ",",
           thousandsSeparator: " ",
+          symbol: "zł",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: "z&#322;",
           codeNumeric: "985",
+          namesNative: const ["Polski złoty"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Grosz",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: plnCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Paraguayan Guarani currency.
 class FiatPyg extends FiatCurrency {
-  /// A class that represents the Paraguayan Guaraní.
+  /// Creates a instance of [FiatPyg] (Paraguayan Guarani currency).
+  ///
+  /// ISO 4217 (Alpha) code: "PYG", ISO 4217 (Numeric) code: "600".
   const FiatPyg()
       : super(
           code: "PYG",
-          namesNative: const ["Guaraní paraguayo"],
-          name: "Paraguayan Guaraní",
+          name: "Paraguayan Guarani",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₲",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: "&#x20B2;",
+          codeNumeric: "600",
+          namesNative: const ["Guaraní paraguayo"],
+          priority: 100,
+          smallestDenomination: 5000,
           subunit: "Céntimo",
           subunitToUnit: 1,
           unitFirst: true,
-          htmlEntity: "&#x20B2;",
-          codeNumeric: "600",
-          smallestDenomination: 5000,
+          translations: pygCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Qatari Riyal currency.
 class FiatQar extends FiatCurrency {
-  /// A class that represents the Qatari Riyal.
+  /// Creates a instance of [FiatQar] (Qatari Riyal currency).
+  ///
+  /// ISO 4217 (Alpha) code: "QAR", ISO 4217 (Numeric) code: "634".
   const FiatQar()
       : super(
           code: "QAR",
-          namesNative: const ["ريال قطري"],
           name: "Qatari Riyal",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ر.ق",
           alternateSymbols: const ["QR"],
-          subunit: "Dirham",
+          disambiguateSymbol: null,
           htmlEntity: "&#xFDFC;",
           codeNumeric: "634",
+          namesNative: const ["ريال قطري"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Dirham",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: qarCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Romanian Leu currency.
 class FiatRon extends FiatCurrency {
-  /// A class that represents the Romanian Leu.
+  /// Creates a instance of [FiatRon] (Romanian Leu currency).
+  ///
+  /// ISO 4217 (Alpha) code: "RON", ISO 4217 (Numeric) code: "946".
   const FiatRon()
       : super(
           code: "RON",
-          namesNative: const ["Leu românesc"],
           name: "Romanian Leu",
-          symbol: "Lei",
-          subunit: "Bani",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "Lei",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "946",
+          namesNative: const ["Leu românesc"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Bani",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: ronCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Serbian Dinar currency.
 class FiatRsd extends FiatCurrency {
-  /// A class that represents the Serbian Dinar.
+  /// Creates a instance of [FiatRsd] (Serbian Dinar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "RSD", ISO 4217 (Numeric) code: "941".
   const FiatRsd()
       : super(
           code: "RSD",
-          namesNative: const ["Српски динар", "Srpski dinar"],
           name: "Serbian Dinar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "РСД",
           alternateSymbols: const ["RSD", "din", "дин"],
-          subunit: "Para",
-          unitFirst: true,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "941",
+          namesNative: const ["Српски динар", "Srpski dinar"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Para",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: rsdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Russian Ruble currency.
 class FiatRub extends FiatCurrency {
-  /// A class that represents the Russian Ruble.
+  /// Creates a instance of [FiatRub] (Russian Ruble currency).
+  ///
+  /// ISO 4217 (Alpha) code: "RUB", ISO 4217 (Numeric) code: "643".
   const FiatRub()
       : super(
           code: "RUB",
-          namesNative: const ["Российский рубль"],
           name: "Russian Ruble",
-          symbol: "₽",
-          alternateSymbols: const ["руб.", "р."],
-          subunit: "Kopeck",
-          htmlEntity: "&#x20BD;",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "₽",
+          alternateSymbols: const ["руб.", "р."],
+          disambiguateSymbol: null,
+          htmlEntity: "&#x20BD;",
           codeNumeric: "643",
+          namesNative: const ["Российский рубль"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Kopeck",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: rubCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Rwandan Franc currency.
 class FiatRwf extends FiatCurrency {
-  /// A class that represents the Rwandan Franc.
+  /// Creates a instance of [FiatRwf] (Rwandan Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "RWF", ISO 4217 (Numeric) code: "646".
   const FiatRwf()
       : super(
           code: "RWF",
-          namesNative: const ["Franc Rwandais"],
           name: "Rwandan Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "FRw",
           alternateSymbols: const ["RF", "R₣"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "646",
+          namesNative: const ["Franc Rwandais"],
+          priority: 100,
+          smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          codeNumeric: "646",
-          smallestDenomination: 100,
+          unitFirst: false,
+          translations: rwfCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Saudi Riyal currency.
 class FiatSar extends FiatCurrency {
-  /// A class that represents the Saudi Riyal.
+  /// Creates a instance of [FiatSar] (Saudi Riyal currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SAR", ISO 4217 (Numeric) code: "682".
   const FiatSar()
       : super(
           code: "SAR",
-          namesNative: const ["ريال سعودي"],
           name: "Saudi Riyal",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ر.س",
           alternateSymbols: const ["SR", "﷼"],
-          subunit: "Hallallah",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#xFDFC;",
           codeNumeric: "682",
+          namesNative: const ["ريال سعودي"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Hallallah",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: sarCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Solomon Islands Dollar currency.
 class FiatSbd extends FiatCurrency {
-  /// A class that represents the Solomon Islands Dollar.
+  /// Creates a instance of [FiatSbd] (Solomon Islands Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SBD", ISO 4217 (Numeric) code: "090".
   const FiatSbd()
       : super(
           code: "SBD",
-          namesNative: const ["Solomon Islands dollar"],
           name: "Solomon Islands Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"SI$",
           alternateSymbols: const [r"SI$"],
-          subunit: "Cent",
+          disambiguateSymbol: r"SI$",
           htmlEntity: r"$",
           codeNumeric: "090",
+          namesNative: const ["Solomon Islands dollar"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: sbdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Seychellois Rupee currency.
 class FiatScr extends FiatCurrency {
-  /// A class that represents the Seychellois Rupee.
+  /// Creates a instance of [FiatScr] (Seychellois Rupee currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SCR", ISO 4217 (Numeric) code: "690".
   const FiatScr()
       : super(
           code: "SCR",
-          namesNative: const ["roupie seychelloise"],
           name: "Seychellois Rupee",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₨",
-          disambiguateSymbol: "SRe",
           alternateSymbols: const ["SRe", "SR"],
-          subunit: "Cent",
+          disambiguateSymbol: "SRe",
           htmlEntity: "&#x20A8;",
           codeNumeric: "690",
+          namesNative: const ["roupie seychelloise"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: scrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sudanese Pound currency.
 class FiatSdg extends FiatCurrency {
-  /// A class that represents the Sudanese Pound.
+  /// Creates a instance of [FiatSdg] (Sudanese Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SDG", ISO 4217 (Numeric) code: "938".
   const FiatSdg()
       : super(
           code: "SDG",
-          namesNative: const ["جنيه سوداني"],
           name: "Sudanese Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "£",
+          alternateSymbols: null,
           disambiguateSymbol: "SDG",
-          subunit: "Piastre",
-          unitFirst: true,
+          htmlEntity: null,
           codeNumeric: "938",
+          namesNative: const ["جنيه سوداني"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Piastre",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: sdgCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Swedish Krona currency.
 class FiatSek extends FiatCurrency {
-  /// A class that represents the Swedish Krona.
+  /// Creates a instance of [FiatSek] (Swedish Krona currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SEK", ISO 4217 (Numeric) code: "752".
   const FiatSek()
       : super(
           code: "SEK",
-          namesNative: const ["svensk krona"],
           name: "Swedish Krona",
-          symbol: "kr",
-          disambiguateSymbol: "SEK",
-          alternateSymbols: const [":-"],
-          subunit: "Öre",
           decimalMark: ",",
           thousandsSeparator: " ",
+          symbol: "kr",
+          alternateSymbols: const [":-"],
+          disambiguateSymbol: "SEK",
+          htmlEntity: null,
           codeNumeric: "752",
+          namesNative: const ["svensk krona"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Öre",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: sekCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Singapore Dollar currency.
 class FiatSgd extends FiatCurrency {
-  /// A class that represents the Singapore Dollar.
+  /// Creates a instance of [FiatSgd] (Singapore Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SGD", ISO 4217 (Numeric) code: "702".
   const FiatSgd()
       : super(
           code: "SGD",
-          namesNative: const ["Singapore dollar"],
           name: "Singapore Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"S$",
           alternateSymbols: const [r"S$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"S$",
           htmlEntity: r"$",
           codeNumeric: "702",
+          namesNative: const ["Singapore dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: sgdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the St. Helena Pound currency.
 class FiatShp extends FiatCurrency {
-  /// A class that represents the Saint Helena Pound.
+  /// Creates a instance of [FiatShp] (St. Helena Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SHP", ISO 4217 (Numeric) code: "654".
   const FiatShp()
       : super(
           code: "SHP",
-          namesNative: const ["Saint Helena pound"],
-          name: "Saint Helenian Pound",
+          name: "St. Helena Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "£",
+          alternateSymbols: null,
           disambiguateSymbol: "SHP",
-          subunit: "Penny",
           htmlEntity: "&#x00A3;",
           codeNumeric: "654",
+          namesNative: const ["Saint Helena pound"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Penny",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: shpCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sierra Leonean Leone currency.
 class FiatSle extends FiatCurrency {
-  /// A class that represents the Sierra Leonean Leone (New).
+  /// Creates a instance of [FiatSle] (Sierra Leonean Leone currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SLE", ISO 4217 (Numeric) code: "925".
   const FiatSle()
       : super(
           code: "SLE",
-          namesNative: const ["Sierra Leonean leone"],
           name: "Sierra Leonean Leone",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Le",
+          alternateSymbols: null,
           disambiguateSymbol: "SLE",
-          subunit: "Cent",
+          htmlEntity: null,
           codeNumeric: "925",
+          namesNative: const ["Sierra Leonean leone"],
+          priority: 100,
           smallestDenomination: 1000,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: sleCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sierra Leonean Leone (Old) currency.
 class FiatSll extends FiatCurrency {
-  /// A class that represents the Sierra Leonean Leone (Old).
+  /// Creates a instance of [FiatSll] (Sierra Leonean Leone (Old) currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SLL", ISO 4217 (Numeric) code: "694".
   const FiatSll()
       : super(
           code: "SLL",
-          namesNative: const ["Sierra Leonean leone"],
           name: "Sierra Leonean Leone (Old)",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Le",
+          alternateSymbols: null,
           disambiguateSymbol: "SLL",
-          subunit: "Cent",
+          htmlEntity: null,
           codeNumeric: "694",
+          namesNative: const ["Sierra Leonean leone"],
+          priority: 100,
           smallestDenomination: 1000,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: sllCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Somali Shilling currency.
 class FiatSos extends FiatCurrency {
-  /// A class that represents the Somali Shilling.
+  /// Creates a instance of [FiatSos] (Somali Shilling currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SOS", ISO 4217 (Numeric) code: "706".
   const FiatSos()
       : super(
           code: "SOS",
-          namesNative: const ["Shilin soomaali"],
           name: "Somali Shilling",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Sh",
           alternateSymbols: const ["Sh.So"],
-          subunit: "Cent",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "706",
+          namesNative: const ["Shilin soomaali"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: sosCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Surinamese Dollar currency.
 class FiatSrd extends FiatCurrency {
-  /// A class that represents the Surinamese Dollar.
+  /// Creates a instance of [FiatSrd] (Surinamese Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SRD", ISO 4217 (Numeric) code: "968".
   const FiatSrd()
       : super(
           code: "SRD",
-          namesNative: const ["Surinamese dollar"],
           name: "Surinamese Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
+          alternateSymbols: null,
           disambiguateSymbol: "SRD",
-          subunit: "Cent",
+          htmlEntity: null,
           codeNumeric: "968",
+          namesNative: const ["Surinamese dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: srdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the South Sudanese Pound currency.
 class FiatSsp extends FiatCurrency {
-  /// A class that represents the South Sudanese Pound.
+  /// Creates a instance of [FiatSsp] (South Sudanese Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SSP", ISO 4217 (Numeric) code: "728".
   const FiatSsp()
       : super(
           code: "SSP",
-          namesNative: const ["South Sudanese pound"],
           name: "South Sudanese Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "£",
+          alternateSymbols: null,
           disambiguateSymbol: "SSP",
-          subunit: "piaster",
           htmlEntity: "&#x00A3;",
           codeNumeric: "728",
+          namesNative: const ["South Sudanese pound"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "piaster",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: sspCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the São Tomé and Príncipe Second Dobra currency.
 class FiatStn extends FiatCurrency {
-  /// A class that represents the São Tomé and Príncipe Dobra.
+  /// Creates a instance of [FiatStn]
+  /// (São Tomé and Príncipe Second Dobra currency).
+  ///
+  /// ISO 4217 (Alpha) code: "STN", ISO 4217 (Numeric) code: "930".
   const FiatStn()
       : super(
           code: "STN",
-          namesNative: const ["dobra são-tomense"],
           name: "São Tomé and Príncipe Second Dobra",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Db",
+          alternateSymbols: null,
           disambiguateSymbol: "STN",
-          subunit: "Cêntimo",
+          htmlEntity: null,
           codeNumeric: "930",
+          namesNative: const ["dobra são-tomense"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Cêntimo",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: stnCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Salvadoran Colón currency.
 class FiatSvc extends FiatCurrency {
-  /// A class that represents the Salvadoran Colón.
+  /// Creates a instance of [FiatSvc] (Salvadoran Colón currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SVC", ISO 4217 (Numeric) code: "222".
   const FiatSvc()
       : super(
           code: "SVC",
-          namesNative: const ["Colón salvadoreño"],
           name: "Salvadoran Colón",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₡",
           alternateSymbols: const ["¢"],
-          subunit: "Centavo",
-          unitFirst: true,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20A1;",
           codeNumeric: "222",
+          namesNative: const ["Colón salvadoreño"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Centavo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: svcCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Syrian Pound currency.
 class FiatSyp extends FiatCurrency {
-  /// A class that represents the Syrian Pound.
+  /// Creates a instance of [FiatSyp] (Syrian Pound currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SYP", ISO 4217 (Numeric) code: "760".
   const FiatSyp()
       : super(
           code: "SYP",
-          namesNative: const ["الليرة السورية"],
           name: "Syrian Pound",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "£S",
           alternateSymbols: const ["£", "ل.س", "LS", "الليرة السورية"],
-          subunit: "Piastre",
+          disambiguateSymbol: null,
           htmlEntity: "&#x00A3;",
           codeNumeric: "760",
+          namesNative: const ["الليرة السورية"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Piastre",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: sypCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Swazi Lilangeni currency.
 class FiatSzl extends FiatCurrency {
-  /// A class that represents the Swazi Lilangeni.
+  /// Creates a instance of [FiatSzl] (Swazi Lilangeni currency).
+  ///
+  /// ISO 4217 (Alpha) code: "SZL", ISO 4217 (Numeric) code: "748".
   const FiatSzl()
       : super(
           code: "SZL",
-          namesNative: const ["Swazi lilangeni"],
           name: "Swazi Lilangeni",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "E",
+          alternateSymbols: null,
           disambiguateSymbol: "SZL",
-          subunit: "Cent",
-          unitFirst: true,
+          htmlEntity: null,
           codeNumeric: "748",
+          namesNative: const ["Swazi lilangeni"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: szlCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Thai Baht currency.
 class FiatThb extends FiatCurrency {
-  /// A class that represents the Thai Baht.
+  /// Creates a instance of [FiatThb] (Thai Baht currency).
+  ///
+  /// ISO 4217 (Alpha) code: "THB", ISO 4217 (Numeric) code: "764".
   const FiatThb()
       : super(
           code: "THB",
-          namesNative: const ["บาทไทย"],
           name: "Thai Baht",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "฿",
-          subunit: "Satang",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x0E3F;",
           codeNumeric: "764",
+          namesNative: const ["บาทไทย"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Satang",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: thbCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tajikistani Somoni currency.
 class FiatTjs extends FiatCurrency {
-  /// A class that represents the Tajikistani Somoni.
+  /// Creates a instance of [FiatTjs] (Tajikistani Somoni currency).
+  ///
+  /// ISO 4217 (Alpha) code: "TJS", ISO 4217 (Numeric) code: "972".
   const FiatTjs()
       : super(
           code: "TJS",
-          namesNative: const ["Сомонӣ"],
           name: "Tajikistani Somoni",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "ЅМ",
-          subunit: "Diram",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "972",
+          namesNative: const ["Сомонӣ"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Diram",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: tjsCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Turkmenistani Manat currency.
 class FiatTmt extends FiatCurrency {
-  /// A class that represents the Turkmenistani Manat.
+  /// Creates a instance of [FiatTmt] (Turkmenistani Manat currency).
+  ///
+  /// ISO 4217 (Alpha) code: "TMT", ISO 4217 (Numeric) code: "934".
   const FiatTmt()
       : super(
           code: "TMT",
-          namesNative: const ["manat"],
           name: "Turkmenistani Manat",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "T",
-          subunit: "Tenge",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "934",
+          namesNative: const ["manat"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Tenge",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: tmtCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tunisian Dinar currency.
 class FiatTnd extends FiatCurrency {
-  /// A class that represents the Tunisian Dinar.
+  /// Creates a instance of [FiatTnd] (Tunisian Dinar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "TND", ISO 4217 (Numeric) code: "788".
   const FiatTnd()
       : super(
           code: "TND",
-          namesNative: const ["دينار تونسي"],
           name: "Tunisian Dinar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "د.ت",
           alternateSymbols: const ["TD", "DT"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "788",
+          namesNative: const ["دينار تونسي"],
+          priority: 100,
+          smallestDenomination: 10,
           subunit: "Millime",
           subunitToUnit: 1000,
-          codeNumeric: "788",
-          smallestDenomination: 10,
+          unitFirst: false,
+          translations: tndCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tongan Paʻanga currency.
 class FiatTop extends FiatCurrency {
-  /// A class that represents the Tongan Paʻanga.
+  /// Creates a instance of [FiatTop] (Tongan Paʻanga currency).
+  ///
+  /// ISO 4217 (Alpha) code: "TOP", ISO 4217 (Numeric) code: "776".
   const FiatTop()
       : super(
           code: "TOP",
-          namesNative: const ["Tongan paʻanga"],
           name: "Tongan Paʻanga",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"T$",
           alternateSymbols: const ["PT"],
-          subunit: "Seniti",
-          unitFirst: true,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "776",
+          namesNative: const ["Tongan paʻanga"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Seniti",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: topCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Turkish Lira currency.
 class FiatTry extends FiatCurrency {
-  /// A class that represents the Turkish Lira.
+  /// Creates a instance of [FiatTry] (Turkish Lira currency).
+  ///
+  /// ISO 4217 (Alpha) code: "TRY", ISO 4217 (Numeric) code: "949".
   const FiatTry()
       : super(
           code: "TRY",
-          namesNative: const ["Türk lirası"],
           name: "Turkish Lira",
-          symbol: "₺",
-          alternateSymbols: const ["TL"],
-          subunit: "kuruş",
-          unitFirst: true,
-          htmlEntity: "&#8378;",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "₺",
+          alternateSymbols: const ["TL"],
+          disambiguateSymbol: null,
+          htmlEntity: "&#8378;",
           codeNumeric: "949",
+          namesNative: const ["Türk lirası"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "kuruş",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: tryCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Trinidad & Tobago Dollar currency.
 class FiatTtd extends FiatCurrency {
-  /// A class that represents the Trinidad and Tobago Dollar.
+  /// Creates a instance of [FiatTtd] (Trinidad & Tobago Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "TTD", ISO 4217 (Numeric) code: "780".
   const FiatTtd()
       : super(
           code: "TTD",
-          namesNative: const ["Trinidad and Tobago dollar"],
-          name: "Trinidad and Tobago Dollar",
+          name: "Trinidad & Tobago Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"TT$",
           alternateSymbols: const [r"TT$"],
-          subunit: "Cent",
+          disambiguateSymbol: r"TT$",
           htmlEntity: r"$",
           codeNumeric: "780",
+          namesNative: const ["Trinidad & Tobago Dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: ttdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the New Taiwan Dollar currency.
 class FiatTwd extends FiatCurrency {
-  /// A class that represents the New Taiwan Dollar.
+  /// Creates a instance of [FiatTwd] (New Taiwan Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "TWD", ISO 4217 (Numeric) code: "901".
   const FiatTwd()
       : super(
           code: "TWD",
-          namesNative: const ["新臺幣"],
           name: "New Taiwan Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"NT$",
           alternateSymbols: const [r"NT$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"NT$",
           htmlEntity: r"$",
           codeNumeric: "901",
+          namesNative: const ["新臺幣"],
+          priority: 100,
           smallestDenomination: 50,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: twdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tanzanian Shilling currency.
 class FiatTzs extends FiatCurrency {
-  /// A class that represents the Tanzanian Shilling.
+  /// Creates a instance of [FiatTzs] (Tanzanian Shilling currency).
+  ///
+  /// ISO 4217 (Alpha) code: "TZS", ISO 4217 (Numeric) code: "834".
   const FiatTzs()
       : super(
           code: "TZS",
-          namesNative: const ["Shilingi ya Tanzania"],
           name: "Tanzanian Shilling",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Sh",
-          subunit: "Cent",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "834",
+          namesNative: const ["Shilingi ya Tanzania"],
+          priority: 100,
           smallestDenomination: 5000,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: tzsCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ukrainian Hryvnia currency.
 class FiatUah extends FiatCurrency {
-  /// A class that represents the Ukrainian Hryvnia.
+  /// Creates a instance of [FiatUah] (Ukrainian Hryvnia currency).
+  ///
+  /// ISO 4217 (Alpha) code: "UAH", ISO 4217 (Numeric) code: "980".
   const FiatUah()
       : super(
           code: "UAH",
-          namesNative: const ["українська гривня"],
           name: "Ukrainian Hryvnia",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "₴",
-          subunit: "Kopiyka",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x20B4;",
           codeNumeric: "980",
+          namesNative: const ["українська гривня"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Kopiyka",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: uahCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Ugandan Shilling currency.
 class FiatUgx extends FiatCurrency {
-  /// A class that represents the Ugandan Shilling.
+  /// Creates a instance of [FiatUgx] (Ugandan Shilling currency).
+  ///
+  /// ISO 4217 (Alpha) code: "UGX", ISO 4217 (Numeric) code: "800".
   const FiatUgx()
       : super(
           code: "UGX",
-          namesNative: const ["Shilingi ya Uganda"],
           name: "Ugandan Shilling",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "USh",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "800",
+          namesNative: const ["Shilingi ya Uganda"],
+          priority: 100,
+          smallestDenomination: 1000,
           subunit: "Cent",
           subunitToUnit: 1,
-          codeNumeric: "800",
-          smallestDenomination: 1000,
+          unitFirst: false,
+          translations: ugxCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the United States Dollar currency.
 class FiatUsd extends FiatCurrency {
-  /// A class that represents the United States Dollar.
+  /// Creates a instance of [FiatUsd] (United States Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "USD", ISO 4217 (Numeric) code: "840".
   const FiatUsd()
       : super(
-          priority: 1,
           code: "USD",
-          namesNative: const ["US Dollars"],
           name: "United States Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"US$",
           alternateSymbols: const [r"US$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"US$",
           htmlEntity: r"$",
           codeNumeric: "840",
+          namesNative: const ["US Dollars"],
+          priority: 1,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: usdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Uruguayan Peso currency.
 class FiatUyu extends FiatCurrency {
-  /// A class that represents the Uruguayan Peso.
+  /// Creates a instance of [FiatUyu] (Uruguayan Peso currency).
+  ///
+  /// ISO 4217 (Alpha) code: "UYU", ISO 4217 (Numeric) code: "858".
   const FiatUyu()
       : super(
           code: "UYU",
-          namesNative: const ["peso uruguayo"],
           name: "Uruguayan Peso",
-          symbol: r"$U",
-          alternateSymbols: const [r"$U"],
-          subunit: "Centésimo",
-          unitFirst: true,
-          htmlEntity: r"$U",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: r"$U",
+          alternateSymbols: const [r"$U"],
+          disambiguateSymbol: null,
+          htmlEntity: r"$U",
           codeNumeric: "858",
+          namesNative: const ["peso uruguayo"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Centésimo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: uyuCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Uzbekistani Som currency.
 class FiatUzs extends FiatCurrency {
-  /// A class that represents the Uzbekistan Som.
+  /// Creates a instance of [FiatUzs] (Uzbekistani Som currency).
+  ///
+  /// ISO 4217 (Alpha) code: "UZS", ISO 4217 (Numeric) code: "860".
   const FiatUzs()
       : super(
           code: "UZS",
-          namesNative: const ["Oʻzbekiston soʻmi"],
-          name: "Uzbekistan Som",
+          name: "Uzbekistani Som",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "so'm",
           alternateSymbols: const ["so‘m", "сўм", "сум", "s", "с"],
-          subunit: "Tiyin",
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "860",
+          namesNative: const ["Oʻzbekiston soʻmi"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Tiyin",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: uzsCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Venezuelan Bolívar Soberano currency.
 class FiatVes extends FiatCurrency {
-  /// A class that represents the Venezuelan Bolívar Soberano.
+  /// Creates a instance of [FiatVes] (Venezuelan Bolívar Soberano currency).
+  ///
+  /// ISO 4217 (Alpha) code: "VES", ISO 4217 (Numeric) code: "928".
   const FiatVes()
       : super(
           code: "VES",
-          namesNative: const ["Bolívar Soberano"],
           name: "Venezuelan Bolívar Soberano",
-          symbol: "Bs",
-          alternateSymbols: const ["Bs.S"],
-          subunit: "Céntimo",
-          unitFirst: true,
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "Bs",
+          alternateSymbols: const ["Bs.S"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "928",
+          namesNative: const ["Bolívar Soberano"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Céntimo",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: vesCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Vietnamese Dong currency.
 class FiatVnd extends FiatCurrency {
-  /// A class that represents the Vietnamese Đồng.
+  /// Creates a instance of [FiatVnd] (Vietnamese Dong currency).
+  ///
+  /// ISO 4217 (Alpha) code: "VND", ISO 4217 (Numeric) code: "704".
   const FiatVnd()
       : super(
           code: "VND",
-          namesNative: const ["đồng Việt Nam"],
-          name: "Vietnamese Đồng",
-          symbol: "₫",
-          subunit: "Hào",
-          subunitToUnit: 1,
-          htmlEntity: "&#x20AB;",
+          name: "Vietnamese Dong",
           decimalMark: ",",
           thousandsSeparator: ".",
+          symbol: "₫",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: "&#x20AB;",
           codeNumeric: "704",
+          namesNative: const ["đồng Việt Nam"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Hào",
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: vndCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Vanuatu Vatu currency.
 class FiatVuv extends FiatCurrency {
-  /// A class that represents the Vanuatu vatu.
+  /// Creates a instance of [FiatVuv] (Vanuatu Vatu currency).
+  ///
+  /// ISO 4217 (Alpha) code: "VUV", ISO 4217 (Numeric) code: "548".
   const FiatVuv()
       : super(
           code: "VUV",
-          namesNative: const ["Vanuatu vatu"],
           name: "Vanuatu Vatu",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Vt",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "548",
+          namesNative: const ["Vanuatu vatu"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: null,
           subunitToUnit: 1,
           unitFirst: true,
-          codeNumeric: "548",
+          translations: vuvCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Samoan Tala currency.
 class FiatWst extends FiatCurrency {
-  /// A class that represents the Samoan Tala.
+  /// Creates a instance of [FiatWst] (Samoan Tala currency).
+  ///
+  /// ISO 4217 (Alpha) code: "WST", ISO 4217 (Numeric) code: "882".
   const FiatWst()
       : super(
           code: "WST",
-          namesNative: const ["Samoa tālā"],
           name: "Samoan Tala",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "T",
-          disambiguateSymbol: r"WS$",
           alternateSymbols: const [r"WS$", "SAT", "ST"],
-          subunit: "Sene",
+          disambiguateSymbol: r"WS$",
+          htmlEntity: null,
           codeNumeric: "882",
+          namesNative: const ["Samoa tālā"],
+          priority: 100,
           smallestDenomination: 10,
+          subunit: "Sene",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: wstCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Central African Cfa Franc currency.
 class FiatXaf extends FiatCurrency {
-  /// A class that represents the Central African Cfa Franc.
+  /// Creates a instance of [FiatXaf] (Central African Cfa Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XAF", ISO 4217 (Numeric) code: "950".
   const FiatXaf()
       : super(
           code: "XAF",
-          namesNative: const ["franc CFA"],
           name: "Central African Cfa Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "CFA",
-          disambiguateSymbol: "FCFA",
           alternateSymbols: const ["FCFA"],
+          disambiguateSymbol: "FCFA",
+          htmlEntity: null,
+          codeNumeric: "950",
+          namesNative: const ["franc CFA"],
+          priority: 100,
+          smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          codeNumeric: "950",
-          smallestDenomination: 100,
+          unitFirst: false,
+          translations: xafCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Silver (Troy Ounce) currency.
 class FiatXag extends FiatCurrency {
-  /// A class that represents the Silver (Troy Ounce).
+  /// Creates a instance of [FiatXag] (Silver (Troy Ounce) currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XAG", ISO 4217 (Numeric) code: "961".
   const FiatXag()
       : super(
           code: "XAG",
-          namesNative: const ["Silver"],
           name: "Silver (Troy Ounce)",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "oz t",
+          alternateSymbols: null,
           disambiguateSymbol: "XAG",
+          htmlEntity: null,
+          codeNumeric: "961",
+          namesNative: const ["Silver"],
+          priority: 100,
+          smallestDenomination: 0,
           subunit: "oz",
           subunitToUnit: 1,
-          codeNumeric: "961",
-          smallestDenomination: 0,
+          unitFirst: false,
+          translations: xagCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Gold (Troy Ounce) currency.
 class FiatXau extends FiatCurrency {
-  /// A class that represents the Gold (Troy Ounce).
+  /// Creates a instance of [FiatXau] (Gold (Troy Ounce) currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XAU", ISO 4217 (Numeric) code: "959".
   const FiatXau()
       : super(
           code: "XAU",
-          namesNative: const ["Gold"],
           name: "Gold (Troy Ounce)",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "oz t",
+          alternateSymbols: null,
           disambiguateSymbol: "XAU",
+          htmlEntity: null,
+          codeNumeric: "959",
+          namesNative: const ["Gold"],
+          priority: 100,
+          smallestDenomination: 0,
           subunit: "oz",
           subunitToUnit: 1,
-          codeNumeric: "959",
-          smallestDenomination: 0,
+          unitFirst: false,
+          translations: xauCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the European Composite Unit currency.
 class FiatXba extends FiatCurrency {
-  /// A class that represents the European Composite Unit (EURCO).
+  /// Creates a instance of [FiatXba] (European Composite Unit currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XBA", ISO 4217 (Numeric) code: "955".
   const FiatXba()
       : super(
           code: "XBA",
-          namesNative: const ["European Composite Unit (EURCO)"],
           name: "European Composite Unit",
+          decimalMark: ".",
+          thousandsSeparator: ",",
+          symbol: null,
+          alternateSymbols: null,
           disambiguateSymbol: "XBA",
-          subunitToUnit: 1,
+          htmlEntity: null,
           codeNumeric: "955",
+          namesNative: const ["European Composite Unit (EURCO)"],
+          priority: 100,
           smallestDenomination: 0,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: xbaCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the European Monetary Unit currency.
 class FiatXbb extends FiatCurrency {
-  /// A class that represents the European Monetary Unit (E.M.U.-6).
+  /// Creates a instance of [FiatXbb] (European Monetary Unit currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XBB", ISO 4217 (Numeric) code: "956".
   const FiatXbb()
       : super(
           code: "XBB",
-          namesNative: const ["European Monetary Unit (E.M.U.-6)"],
           name: "European Monetary Unit",
+          decimalMark: ".",
+          thousandsSeparator: ",",
+          symbol: null,
+          alternateSymbols: null,
           disambiguateSymbol: "XBB",
-          subunitToUnit: 1,
+          htmlEntity: null,
           codeNumeric: "956",
+          namesNative: const ["European Monetary Unit (E.M.U.-6)"],
+          priority: 100,
           smallestDenomination: 0,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: xbbCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the European Unit of Account 9 currency.
 class FiatXbc extends FiatCurrency {
-  /// A class that represents the European Unit of Account 9 (E.U.A.-9).
+  /// Creates a instance of [FiatXbc] (European Unit of Account 9 currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XBC", ISO 4217 (Numeric) code: "957".
   const FiatXbc()
       : super(
           code: "XBC",
-          namesNative: const ["European Unit of Account 9 (E.U.A.-9)"],
           name: "European Unit of Account 9",
+          decimalMark: ".",
+          thousandsSeparator: ",",
+          symbol: null,
+          alternateSymbols: null,
           disambiguateSymbol: "XBC",
-          subunitToUnit: 1,
+          htmlEntity: null,
           codeNumeric: "957",
+          namesNative: const ["European Unit of Account 9 (E.U.A.-9)"],
+          priority: 100,
           smallestDenomination: 0,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: xbcCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the European Unit of Account 17 currency.
 class FiatXbd extends FiatCurrency {
-  /// A class that represents the European Unit of Account 17 (E.U.A.-17).
+  /// Creates a instance of [FiatXbd] (European Unit of Account 17 currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XBD", ISO 4217 (Numeric) code: "958".
   const FiatXbd()
       : super(
           code: "XBD",
-          namesNative: const ["European Unit of Account 17 (E.U.A.-17)"],
           name: "European Unit of Account 17",
+          decimalMark: ".",
+          thousandsSeparator: ",",
+          symbol: null,
+          alternateSymbols: null,
           disambiguateSymbol: "XBD",
-          subunitToUnit: 1,
+          htmlEntity: null,
           codeNumeric: "958",
+          namesNative: const ["European Unit of Account 17 (E.U.A.-17)"],
+          priority: 100,
           smallestDenomination: 0,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: xbdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the East Caribbean Dollar currency.
 class FiatXcd extends FiatCurrency {
-  /// A class that represents the East Caribbean dollar.
+  /// Creates a instance of [FiatXcd] (East Caribbean Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XCD", ISO 4217 (Numeric) code: "951".
   const FiatXcd()
       : super(
           code: "XCD",
-          namesNative: const ["East Caribbean dollar"],
           name: "East Caribbean Dollar",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: r"$",
-          disambiguateSymbol: r"EX$",
           alternateSymbols: const [r"EC$"],
-          subunit: "Cent",
-          unitFirst: true,
+          disambiguateSymbol: r"EX$",
           htmlEntity: r"$",
           codeNumeric: "951",
+          namesNative: const ["East Caribbean dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: xcdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Special Drawing Rights currency.
 class FiatXdr extends FiatCurrency {
-  /// A class that represents the Special Drawing Rights.
+  /// Creates a instance of [FiatXdr] (Special Drawing Rights currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XDR", ISO 4217 (Numeric) code: "960".
   const FiatXdr()
       : super(
           code: "XDR",
-          namesNative: const ["Derechos especiales de giro"],
           name: "Special Drawing Rights",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "SDR",
           alternateSymbols: const ["XDR"],
-          subunitToUnit: 1,
+          disambiguateSymbol: null,
           htmlEntity: r"$",
           codeNumeric: "960",
+          namesNative: const ["Derechos especiales de giro"],
+          priority: 100,
           smallestDenomination: 0,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: xdrCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the West African Cfa Franc currency.
 class FiatXof extends FiatCurrency {
-  /// A class that represents the West African Cfa Franc.
+  /// Creates a instance of [FiatXof] (West African Cfa Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XOF", ISO 4217 (Numeric) code: "952".
   const FiatXof()
       : super(
           code: "XOF",
-          namesNative: const ["CFA Franc BCEAO"],
           name: "West African Cfa Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Fr",
-          disambiguateSymbol: "CFA",
           alternateSymbols: const ["CFA"],
+          disambiguateSymbol: "CFA",
+          htmlEntity: null,
+          codeNumeric: "952",
+          namesNative: const ["CFA Franc BCEAO"],
+          priority: 100,
+          smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          codeNumeric: "952",
-          smallestDenomination: 100,
+          unitFirst: false,
+          translations: xofCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Palladium currency.
 class FiatXpd extends FiatCurrency {
-  /// A class that represents the Palladium.
+  /// Creates a instance of [FiatXpd] (Palladium currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XPD", ISO 4217 (Numeric) code: "964".
   const FiatXpd()
       : super(
           code: "XPD",
-          namesNative: const ["Palladium"],
           name: "Palladium",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "oz t",
+          alternateSymbols: null,
           disambiguateSymbol: "XPD",
+          htmlEntity: null,
+          codeNumeric: "964",
+          namesNative: const ["Palladium"],
+          priority: 100,
+          smallestDenomination: 0,
           subunit: "oz",
           subunitToUnit: 1,
-          codeNumeric: "964",
-          smallestDenomination: 0,
+          unitFirst: false,
+          translations: xpdCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Cfp Franc currency.
 class FiatXpf extends FiatCurrency {
-  /// A class that represents the Cfp Franc.
+  /// Creates a instance of [FiatXpf] (Cfp Franc currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XPF", ISO 4217 (Numeric) code: "953".
   const FiatXpf()
       : super(
           code: "XPF",
-          namesNative: const ["franc pacifique"],
           name: "Cfp Franc",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "Fr",
           alternateSymbols: const ["F"],
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "953",
+          namesNative: const ["franc pacifique"],
+          priority: 100,
+          smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          codeNumeric: "953",
-          smallestDenomination: 100,
+          unitFirst: false,
+          translations: xpfCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Platinum currency.
 class FiatXpt extends FiatCurrency {
-  /// A class that represents the Platinum.
+  /// Creates a instance of [FiatXpt] (Platinum currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XPT", ISO 4217 (Numeric) code: "962".
   const FiatXpt()
       : super(
           code: "XPT",
-          namesNative: const ["Platinum"],
           name: "Platinum",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "oz t",
-          subunitToUnit: 1,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "962",
+          namesNative: const ["Platinum"],
+          priority: 100,
           smallestDenomination: 0,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: xptCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Codes specifically
+/// reserved for testing purposes currency.
 class FiatXts extends FiatCurrency {
-  /// A class that represents the Test currency.
+  /// Creates a instance of [FiatXts] (Codes specifically reserved
+  /// for testing purposes currency).
+  ///
+  /// ISO 4217 (Alpha) code: "XTS", ISO 4217 (Numeric) code: "963".
   const FiatXts()
       : super(
           code: "XTS",
-          namesNative: const ["Test currency"],
           name: "Codes specifically reserved for testing purposes",
-          subunitToUnit: 1,
+          decimalMark: ".",
+          thousandsSeparator: ",",
+          symbol: null,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
           codeNumeric: "963",
+          namesNative: const ["Test currency"],
+          priority: 100,
           smallestDenomination: 0,
+          subunit: null,
+          subunitToUnit: 1,
+          unitFirst: false,
+          translations: xtsCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Yemeni Rial currency.
 class FiatYer extends FiatCurrency {
-  /// A class that represents the Yemeni Rial.
+  /// Creates a instance of [FiatYer] (Yemeni Rial currency).
+  ///
+  /// ISO 4217 (Alpha) code: "YER", ISO 4217 (Numeric) code: "886".
   const FiatYer()
       : super(
           code: "YER",
-          namesNative: const ["ريال يمني"],
           name: "Yemeni Rial",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "﷼",
-          subunit: "Fils",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#xFDFC;",
           codeNumeric: "886",
+          namesNative: const ["ريال يمني"],
+          priority: 100,
           smallestDenomination: 100,
+          subunit: "Fils",
+          subunitToUnit: 100,
+          unitFirst: false,
+          translations: yerCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the South African Rand currency.
 class FiatZar extends FiatCurrency {
-  /// A class that represents the South African Rand.
+  /// Creates a instance of [FiatZar] (South African Rand currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ZAR", ISO 4217 (Numeric) code: "710".
   const FiatZar()
       : super(
           code: "ZAR",
-          namesNative: const ["Rand"],
           name: "South African Rand",
+          decimalMark: ",",
+          thousandsSeparator: " ",
           symbol: "R",
-          subunit: "Cent",
-          unitFirst: true,
+          alternateSymbols: null,
+          disambiguateSymbol: null,
           htmlEntity: "&#x0052;",
-          decimalMark: ",",
-          thousandsSeparator: " ",
           codeNumeric: "710",
+          namesNative: const ["Rand"],
+          priority: 100,
           smallestDenomination: 10,
-        );
-}
-
-/// {@hideConstantImplementations}
-class FiatZwl extends FiatCurrency {
-  /// A class that represents the Zimbabwean Dollar.
-  const FiatZwl()
-      : super(
-          code: "ZWL",
-          namesNative: const ["Zimbabwe Dollar"],
-          name: "Zimbabwean Dollar",
-          symbol: r"Z$",
           subunit: "Cent",
+          subunitToUnit: 100,
           unitFirst: true,
-          decimalMark: ",",
-          thousandsSeparator: " ",
-          codeNumeric: "932",
+          translations: zarCurrencyTranslations,
         );
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Zambian Kwacha currency.
 class FiatZmw extends FiatCurrency {
-  /// A class that represents the Zambian Kwacha.
+  /// Creates a instance of [FiatZmw] (Zambian Kwacha currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ZMW", ISO 4217 (Numeric) code: "967".
   const FiatZmw()
       : super(
           code: "ZMW",
-          namesNative: const ["Zambian kwacha"],
           name: "Zambian Kwacha",
+          decimalMark: ".",
+          thousandsSeparator: ",",
           symbol: "K",
+          alternateSymbols: null,
           disambiguateSymbol: "ZMW",
-          subunit: "Ngwee",
-          unitFirst: true,
+          htmlEntity: null,
           codeNumeric: "967",
+          namesNative: const ["Zambian kwacha"],
+          priority: 100,
           smallestDenomination: 5,
+          subunit: "Ngwee",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: zmwCurrencyTranslations,
+        );
+}
+
+/// A class that represents the Zimbabwean Dollar currency.
+class FiatZwl extends FiatCurrency {
+  /// Creates a instance of [FiatZwl] (Zimbabwean Dollar currency).
+  ///
+  /// ISO 4217 (Alpha) code: "ZWL", ISO 4217 (Numeric) code: "932".
+  const FiatZwl()
+      : super(
+          code: "ZWL",
+          name: "Zimbabwean Dollar",
+          decimalMark: ",",
+          thousandsSeparator: " ",
+          symbol: r"Z$",
+          alternateSymbols: null,
+          disambiguateSymbol: null,
+          htmlEntity: null,
+          codeNumeric: "932",
+          namesNative: const ["Zimbabwe Dollar"],
+          priority: 100,
+          smallestDenomination: 1,
+          subunit: "Cent",
+          subunitToUnit: 100,
+          unitFirst: true,
+          translations: zwlCurrencyTranslations,
         );
 }

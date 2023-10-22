@@ -1,7 +1,5 @@
 import "package:rw_git/rw_git.dart";
 
-import "../generators/helpers/extensions/package_associations_extension.dart";
-import "../models/package.dart";
 import "io_utils.dart";
 
 final class NetworkUtils {
@@ -21,13 +19,4 @@ final class NetworkUtils {
 
     return directory;
   }
-}
-
-Future<void> main() async {
-  final clonedDir = await const NetworkUtils()
-      .cloneRepository(Package.sealedLanguages.umpirskyRepoUrl);
-
-  IoUtils()
-    ..moveJsonFiles(clonedDir)
-    ..deleteDirectory(clonedDir);
 }

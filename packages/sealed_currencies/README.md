@@ -27,6 +27,7 @@ This ISO-driven, pure Dart, fully tested and and 3rd-party dependency-free packa
 | symbol | No | The currency symbol. | "€"
 | decimalMark | Yes | The decimal mark, or character used to separate the whole unit from the subunit. | ","
 | thousandsSeparator | Yes | The character used to separate thousands grouping of the whole unit. | "."
+| translations | Yes | A list of TranslatedNames representing the currency name translations. | 111 translations for a Euro currency name
 
 Compile time constant list of all currencies accessible via `FiatCurrency.list` and more over, the **FiatCurrency** class provides the following methods:
 
@@ -58,6 +59,7 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
 
 ```dart
   print(FiatCurrency.list.length); // Prints: "169".
+  print(FiatCurrency.regularList.length); // Prints: "159".
 
   final serbianDinar = FiatCurrency.fromCode("Rsd");
   print(serbianDinar); // Prints: "Serbian Dinar".
@@ -72,7 +74,7 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
   thousandsSeparator: ".", symbol: "€", alternateSymbols: null,
   disambiguateSymbol: null, htmlEntity: "€", codeNumeric: "978", namesNative:
   ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
-  subunitToUnit: 100, unitFirst: true)".
+  subunitToUnit: 100, unitFirst: true, translations rsdCurrencyTranslations)".
   */
 ```
 

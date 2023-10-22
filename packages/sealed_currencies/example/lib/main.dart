@@ -18,7 +18,7 @@ void main() {
   thousandsSeparator: ".", symbol: "€", alternateSymbols: null,
   disambiguateSymbol: null, htmlEntity: "€", codeNumeric: "978", namesNative:
   ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
-  subunitToUnit: 100, unitFirst: true)".
+  subunitToUnit: 100, unitFirst: true), translations: eurCurrencyTranslations".
   */
 
   /// [Currency] is a sealed class, it means
@@ -48,7 +48,7 @@ void main() {
   print(isVikingKrone(serbianDinar)); // Prints "null".
   print(isVikingKrone(const FiatCzk())); // Prints "false".
 
-  FiatCurrency.list
+  FiatCurrency.regularList
       .where((currency) => currency.symbol?.contains("kr") ?? false)
       .forEach(print);
   // Prints:
@@ -56,4 +56,6 @@ void main() {
   // Currency(code: ISK)
   // Currency(code: NOK)
   // Currency(code: SEK).
+
+  serbianDinar.toJson(); // Converts currency to a valid JSON.
 }

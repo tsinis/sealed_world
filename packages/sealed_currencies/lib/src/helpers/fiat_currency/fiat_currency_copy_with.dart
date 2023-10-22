@@ -1,3 +1,5 @@
+import "package:sealed_languages/sealed_languages.dart";
+
 import "../../model/currency.dart";
 
 /// Extension on [FiatCurrency] that provides a `copyWith` method for
@@ -32,12 +34,14 @@ extension FiatCurrencyCopyWith on FiatCurrency {
     String? subunit,
     int? subunitToUnit,
     bool? unitFirst,
+    List<TranslatedName>? translations,
   }) =>
       FiatCurrency(
         code: code ?? this.code,
         name: name ?? this.name,
         namesNative: namesNative ?? this.namesNative,
         codeNumeric: codeNumeric ?? this.codeNumeric,
+        translations: translations ?? this.translations,
         alternateSymbols: alternateSymbols ?? this.alternateSymbols,
         disambiguateSymbol: disambiguateSymbol ?? this.disambiguateSymbol,
         htmlEntity: htmlEntity ?? this.htmlEntity,
