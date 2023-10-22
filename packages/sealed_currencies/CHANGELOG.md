@@ -3,7 +3,7 @@
 NEW FEATURES
 
 - Added regularList getter for list of regular currencies (excludes 10 currencies from specialPurposeList).
-- FiatCurrency class now contains translations of language name to other languages.
+- FiatCurrency class now contains translations of language name to other languages (79 translations for each language minimum).
 - Those translations are also accessible via translation and maybeTranslation methods.
 - Refactored factory constructors - there is an optional parameter to provide custom list.
 - Added TranslatedName class for translations.
