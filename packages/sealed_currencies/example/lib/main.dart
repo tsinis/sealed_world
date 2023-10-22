@@ -48,7 +48,7 @@ void main() {
   print(isVikingKrone(serbianDinar)); // Prints "null".
   print(isVikingKrone(const FiatCzk())); // Prints "false".
 
-  FiatCurrency.list
+  FiatCurrency.regularList
       .where((currency) => currency.symbol?.contains("kr") ?? false)
       .forEach(print);
   // Prints:
