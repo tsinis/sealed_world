@@ -22,7 +22,7 @@ import "../extensions/country_submodels/postal_code_extension.dart";
 /// [WorldCountry] objects to and from JSON maps.
 extension WorldCountryJson on WorldCountry {
   /// {@macro to_map_method}
-  Map<String, Object?> toMap() => {
+  JsonObjectMap toMap() => {
         "name": name.toMap(),
         "namesNative":
             namesNative.map((nn) => nn.toMap()).toList(growable: false),

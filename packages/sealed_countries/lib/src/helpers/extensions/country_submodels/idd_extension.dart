@@ -42,7 +42,7 @@ extension IddExtension on Idd {
       Idd(root: root ?? this.root, suffixes: suffixes ?? this.suffixes);
 
   /// {@macro to_map_method}
-  Map<String, Object?> toMap() => {"root": root, "suffixes": suffixes};
+  JsonObjectMap toMap() => {"root": root, "suffixes": suffixes};
 
   /// {@macro from_map_method}
   static Idd fromMap(JsonMap map) => Idd(

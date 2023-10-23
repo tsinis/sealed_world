@@ -20,6 +20,8 @@ final class LatLng implements JsonEncodable<LatLng> {
   /// Creates a new `LatLng` object with the given latitude and longitude.
   const LatLng(this.latitude, this.longitude);
 
+  const LatLng.named({required this.latitude, required this.longitude});
+
   /// The latitude of this geographic point, in degrees.
   final double latitude;
 

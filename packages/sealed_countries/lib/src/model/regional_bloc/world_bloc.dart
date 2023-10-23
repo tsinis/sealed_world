@@ -1,3 +1,5 @@
+import "dart:convert";
+
 import "../../data/regional_bloc/regional_bloc.data.dart";
 
 part "regional_bloc.dart";

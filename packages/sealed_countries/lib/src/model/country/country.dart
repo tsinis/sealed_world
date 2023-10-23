@@ -32,5 +32,5 @@ sealed class Country {
   final CountryName name;
 
   @override
-  String toString() => "$Country(name: ${name.name})";
+  String toString() => '$Country(name: "${name.name}")';
 }

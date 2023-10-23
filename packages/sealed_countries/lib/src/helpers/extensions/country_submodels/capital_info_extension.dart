@@ -16,7 +16,7 @@ extension CapitalInfoExtension on CapitalInfo {
       );
 
   /// {@macro to_map_method}
-  Map<String, Object?> toMap() =>
+  JsonObjectMap toMap() =>
       {"capital": capital.toMap(), "latLng": latLng.toMap()};
 
   /// {@macro from_map_method}
