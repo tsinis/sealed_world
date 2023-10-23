@@ -1,3 +1,5 @@
+import "dart:convert";
+
 import "package:sealed_countries/src/model/regional_bloc/world_bloc.dart";
 import "package:test/test.dart";
 
@@ -101,12 +103,12 @@ void main() => group("$RegionalBloc", () {
             RegionalBloc.list.firstWhere((bloc) => bloc.otherAcronyms != null);
         expect(
           withOtherAcronyms.toString(short: false),
-          contains(withOtherAcronyms.otherAcronyms.toString()),
+          contains(jsonEncode(withOtherAcronyms.otherAcronyms)),
         );
         expect(
           withOtherAcronyms
               .toString()
-              .contains(withOtherAcronyms.otherAcronyms.toString()),
+              .contains(jsonEncode(withOtherAcronyms.otherAcronyms)),
           isFalse,
         );
       });

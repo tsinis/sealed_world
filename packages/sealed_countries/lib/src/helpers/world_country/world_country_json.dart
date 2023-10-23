@@ -33,12 +33,12 @@ extension WorldCountryJson on WorldCountry {
         "cioc": cioc,
         "independent": independent,
         "unMember": unMember,
-        "currencies": currencies?.map((c) => c.code).toList(growable: false),
+        "currencies": currencies?.toIsoList(),
         "idd": idd.toMap(),
         "altSpellings": altSpellings,
         "continent": continent.name,
         "subregion": subregion?.name,
-        "languages": languages.map((l) => l.code).toList(growable: false),
+        "languages": languages.toIsoList(),
         "translations":
             translations.map((t) => t.toMap()).toList(growable: false),
         "latLng": latLng.toMap(),
@@ -73,9 +73,9 @@ extension WorldCountryJson on WorldCountry {
         continent: Continent.fromName(map["continent"] as String),
         emoji: map["emoji"] as String,
         idd: IddExtension.fromMap(map["idd"] as JsonMap),
-        languages: List<NaturalLanguage>.unmodifiable(
-          (map["languages"] as List).map((l) => NaturalLanguage.fromCode("$l")),
-        ),
+        languages: (map["languages"] as List<Object?>)
+            .fromIsoList(NaturalLanguage.fromCode)
+            .toList(growable: false),
         latLng: LatLngExtension.fromMap(map["latLng"] as JsonMap),
         maps: MapsExtension.fromMap(map["maps"] as JsonMap),
         namesNative: List<CountryName>.unmodifiable(
@@ -87,17 +87,16 @@ extension WorldCountryJson on WorldCountry {
         tld: List<String>.unmodifiable(map["tld"] as List),
         translations: List<TranslatedName>.unmodifiable(
           (map["translations"] as List)
-              .map((n) => TranslatedNameExtension.fromMap(n as JsonMap)),
+              .map((l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap)),
         ),
         demonyms: List<Demonyms>.unmodifiable(
           (map["demonyms"] as List)
               .map((d) => DemonymsExtension.fromMap(d as JsonMap)),
         ),
         currencies: map["currencies"] is List
-            ? List<FiatCurrency>.unmodifiable(
-                (map["currencies"] as List)
-                    .map((l) => FiatCurrency.fromCode("$l")),
-              )
+            ? (map["currencies"] as List<Object?>)
+                .fromIsoList(FiatCurrency.fromCode)
+                .toList(growable: false)
             : null,
         capitalInfo: map["capitalInfo"] != null
             ? CapitalInfoExtension.fromMap(map["capitalInfo"] as JsonMap)

@@ -9,6 +9,12 @@ void main() => group("$WorldCountry", () {
       final value = WorldCountry.list.last;
       final array = {value, WorldCountry.list.first};
 
+      test("interfaces", () {
+        expect(value, isA<IsoStandardized>());
+        expect(value, isA<JsonEncodable>());
+        expect(value, isA<Translated>());
+      });
+
       group("fields", () {
         final officialCountries =
             WorldCountry.list.where((country) => country.isOfficiallyAssigned);

@@ -25,7 +25,10 @@ part of "../country.dart";
 /// print(unknown); // Output: null
 /// ```
 class WorldCountry extends Country
-    implements IsoStandardized<CountryName>, JsonEncodable<WorldCountry> {
+    implements
+        IsoStandardized<CountryName>,
+        JsonEncodable<WorldCountry>,
+        Translated<TranslatedName> {
   /// Creates a new `WorldCountry` object with the given properties.
   ///
   /// The `name` parameter is required and must not be empty. The
@@ -135,6 +138,7 @@ class WorldCountry extends Country
   final List<NaturalLanguage> languages;
 
   /// The translations of the country name.
+  @override
   final List<TranslatedName> translations;
 
   /// The geographic coordinates of the country.

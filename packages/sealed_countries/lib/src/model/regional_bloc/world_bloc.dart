@@ -1,4 +1,4 @@
-import "dart:convert";
+import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../data/regional_bloc/regional_bloc.data.dart";
 
@@ -10,7 +10,7 @@ part "regional_bloc.g.dart";
 /// of the WorldBloc. The `name` and `acronym` fields are required and must
 /// not be empty (if provided).
 /// ```
-sealed class WorldBloc {
+sealed class WorldBloc implements Named<String> {
   /// Creates a new `WorldBloc` object with the given name.
   ///
   /// The `name` and `acronym` parameters are required and must not be empty
@@ -26,6 +26,7 @@ sealed class WorldBloc {
   final String? acronym;
 
   /// The name of the bloc.
+  @override
   final String name;
 
   @override

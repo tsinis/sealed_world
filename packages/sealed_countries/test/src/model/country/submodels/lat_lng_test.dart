@@ -29,7 +29,12 @@ void main() => group("$LatLng", () {
           expect(array.length, 2);
           array.addAll(List.of(array));
           expect(array.length, 2);
-          array.add(LatLng(value.latitude, value.longitude));
+          array.add(
+            LatLng.named(
+              latitude: value.latitude,
+              longitude: value.longitude,
+            ),
+          );
           expect(array.length, 2);
         });
       });

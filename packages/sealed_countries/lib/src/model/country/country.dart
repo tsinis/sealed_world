@@ -21,7 +21,7 @@ part "submodels/world_country.dart";
 part "submodels/world_country.g.dart";
 
 /// A sealed class representing a country.
-sealed class Country {
+sealed class Country implements Named<CountryName> {
   /// Creates a new `Country` object with the given `name`.
   ///
   /// The `name` parameter is required and must be a non-empty
@@ -29,6 +29,7 @@ sealed class Country {
   const Country({required this.name});
 
   /// The name of the country.
+  @override
   final CountryName name;
 
   @override
