@@ -22624,7 +22624,7 @@ class CountryJam extends WorldCountry {
           independent: true,
           unMember: true,
           currencies: const [FiatJmd()],
-          idd: const Idd(root: 1, suffixes: [876]),
+          idd: const Idd(root: 1, suffixes: [658, 876]),
           altSpellings: const ["JM"],
           continent: const Americas(),
           subregion: const Caribbean(),
