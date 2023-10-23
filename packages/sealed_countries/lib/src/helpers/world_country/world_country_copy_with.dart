@@ -14,7 +14,6 @@ import "../../model/country/submodels/weekday.dart";
 import "../../model/geo/region.dart";
 import "../../model/geo/submodels/continent.dart";
 import "../../model/regional_bloc/world_bloc.dart";
-import "../../model/translated_name.dart";
 
 /// Extension that adds a `copyWith` method to the `WorldCountry` class.
 /// This method returns a new instance of `WorldCountry` with the specified

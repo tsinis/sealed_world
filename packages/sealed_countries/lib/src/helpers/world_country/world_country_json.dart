@@ -8,7 +8,6 @@ import "../../model/country/submodels/demonyms.dart";
 import "../../model/country/submodels/weekday.dart";
 import "../../model/geo/submodels/continent.dart";
 import "../../model/regional_bloc/world_bloc.dart";
-import "../../model/translated_name.dart";
 import "../extensions/country_submodels/capital_info_extension.dart";
 import "../extensions/country_submodels/car_extension.dart";
 import "../extensions/country_submodels/country_name_extension.dart";
@@ -18,7 +17,6 @@ import "../extensions/country_submodels/idd_extension.dart";
 import "../extensions/country_submodels/lat_lng_extension.dart";
 import "../extensions/country_submodels/maps_extension.dart";
 import "../extensions/country_submodels/postal_code_extension.dart";
-import "../extensions/translated_name_extension.dart";
 
 /// Extension on [WorldCountry] that provides methods for converting
 /// [WorldCountry] objects to and from JSON maps.

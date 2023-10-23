@@ -1,5 +1,3 @@
-import "dart:convert";
-
 import "package:sealed_currencies/sealed_currencies.dart";
 
 part "weekday.g.dart";
