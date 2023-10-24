@@ -46,10 +46,10 @@ final class JsonUtils {
         final translationForLang = translation[itemFromCode];
         if (lang == null || translationForLang == null) continue;
         if (translationForLang == english) continue;
-        final script = locale.scriptCode;
         final containsWithFullName =
             translations.any((e) => e.language == lang && e.fullName != null);
         if (containsWithFullName) continue;
+        final script = locale.scriptCode;
         final translated = TranslatedName(
           lang,
           name: translationForLang,
@@ -71,9 +71,7 @@ final class JsonUtils {
       paths.add(fileNameFull);
       final buffer = StringBuffer(
         """
-import "package:sealed_languages/sealed_languages.dart";
-
-${_dartDoc(translations, itemFromCode.name.toString(), dataType)}.
+${_dartDoc(translations, itemFromCode.name, dataType)}.
 const ${varFileName.toCamelCase()} = [
 """,
       );
@@ -91,12 +89,16 @@ const ${varFileName.toCamelCase()} = [
     return paths;
   }
 
-  String _dartDoc(Set<TranslatedName> translations, String name, String type) {
+  String _dartDoc(Set<TranslatedName> translations, Object name, String type) {
+    final stringName = name is TranslatedName ? name.name : name.toString();
     final sorted = List.of(translations.map((e) => e.language.name))..sort();
+    final import = package.whenConstOrNull(sealedCountries: package.dirName) ??
+        Package.sealedLanguages.dirName;
 
-    final buffer = StringBuffer(
-      "/// Provides ${translations.length} $translation for a $name $type:",
-    );
+    final buffer = StringBuffer('import "package:$import/$import.dart";\n')
+      ..write(
+        "/// Provides ${translations.length} $translation for a $stringName $type:",
+      );
     for (final name in Set.unmodifiable(sorted)) buffer.write("\n /// - $name");
 
     return buffer.toString();
@@ -138,7 +140,7 @@ const ${varFileName.toCamelCase()} = [
     mapToUpdate[const FiatZwl()] = withoutYear.trim();
   }
 
-  IsoStandardized? _instanceFromCode(String code) => package.when(
+  IsoStandardized<Object>? _instanceFromCode(String code) => package.when(
         sealedCurrencies: () => _convertCodeToCurrency(code),
         sealedLanguages: () => _convertCodeToLang(code),
         sealedCountries: () => _convertCodeToCountry(code),

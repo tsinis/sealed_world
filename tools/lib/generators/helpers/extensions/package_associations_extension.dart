@@ -22,10 +22,10 @@ extension PackageAssociationsExtension on Package {
         sealedCountries: WorldCountry.list,
       );
 
-  List<TranslatedName> translations(String code) => whenConst(
-        sealedCurrencies: FiatCurrency.fromCode(code),
-        sealedCountries: WorldCountry.fromCode(code),
-        sealedLanguages: NaturalLanguage.fromCode(code),
+  List<TranslatedName> translations(String code) => when(
+        sealedCurrencies: () => FiatCurrency.fromCode(code),
+        sealedCountries: () => WorldCountry.fromCode(code),
+        sealedLanguages: () => NaturalLanguage.fromCode(code),
       ).translations;
 
   String get dataFilePrefix => whenConst(
