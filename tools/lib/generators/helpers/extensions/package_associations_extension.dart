@@ -13,7 +13,7 @@ extension PackageAssociationsExtension on Package {
   String get classPrefix => whenConst(
         sealedLanguages: "Lang",
         sealedCurrencies: "Fiat",
-        sealedCountries: "World",
+        sealedCountries: "$Country",
       );
 
   List<IsoStandardized> get dataList => whenConst(
@@ -31,7 +31,7 @@ extension PackageAssociationsExtension on Package {
   String get dataFilePrefix => whenConst(
         sealedLanguages: "${type.toString().toSnakeCase()}s",
         sealedCurrencies: "fiat_currencies",
-        sealedCountries: "world_countries",
+        sealedCountries: "official_world_countries",
       );
 
   String get dataRepresent => whenConst(

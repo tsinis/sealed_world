@@ -1,4 +1,5 @@
 import "package:change_case/change_case.dart";
+import "package:sealed_countries/sealed_countries.dart";
 
 import "../models/package.dart";
 import "../utils/code_utils.dart";
@@ -28,12 +29,15 @@ class DataListGenerator {
       final superBody = itemString.replaceFirst(type, ": super");
       final setsBody = superBody.replaceAll(": {", ": const {");
       final classBody = setsBody.replaceAll(": [", ": const [");
-
+      final itemNameRaw = item.name;
+      final itemName = itemNameRaw is TranslatedName
+          ? itemNameRaw.name
+          : itemNameRaw.toString();
       buffer
         ..write("""
-/// A class that represents the ${item.name} ${package.dataRepresent}.
+/// A class that represents the $itemName ${package.dataRepresent}.
 class $className extends $type {
-/// Creates a instance of [$className] (${item.name} ${package.dataRepresent}).
+/// Creates a instance of [$className] ($itemName ${package.dataRepresent}).
 ///
 /// ISO ${package.isoCodeAssociated} code: "${item.code}", ISO ${package.isoCodeOtherAssociated} code: "${item.codeOther}".
 const $className()""")
