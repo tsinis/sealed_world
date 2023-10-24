@@ -1,0 +1,299 @@
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../model/country/submodels/country_name.dart";
+
+/// Provides 104 translations for a Tanzania country:
+/// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
+/// - Arabic
+/// - Armenian
+/// - Assamese
+/// - Azerbaijani
+/// - Bambara
+/// - Belarusian
+/// - Bengali (Bangla)
+/// - Bosnian
+/// - Breton
+/// - Bulgarian
+/// - Burmese
+/// - Catalan
+/// - Chechen
+/// - Chinese
+/// - Croatian
+/// - Czech
+/// - Dutch
+/// - Dzongkha
+/// - Esperanto
+/// - Estonian
+/// - Ewe
+/// - Faroese
+/// - Finnish
+/// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Ganda
+/// - Georgian
+/// - German
+/// - Greek (modern)
+/// - Gujarati
+/// - Hausa
+/// - Hebrew (modern)
+/// - Hindi
+/// - Hungarian
+/// - Icelandic
+/// - Irish
+/// - Italian
+/// - Japanese
+/// - Javanese
+/// - Kannada
+/// - Kashmiri
+/// - Kazakh
+/// - Khmer
+/// - Kirundi
+/// - Korean
+/// - Kurdish
+/// - Kyrgyz
+/// - Lao
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
+/// - Malayalam
+/// - Maltese
+/// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
+/// - Northern Ndebele
+/// - Northern Sami
+/// - Oriya
+/// - Pashto (Pushto)
+/// - Persian (Farsi)
+/// - Polish
+/// - Portuguese
+/// - Romansh
+/// - Russian
+/// - Sango
+/// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
+/// - Slovak
+/// - Slovene
+/// - Somali
+/// - Spanish
+/// - Swedish
+/// - Tajik
+/// - Tamil
+/// - Tatar
+/// - Telugu
+/// - Thai
+/// - Tigrinya
+/// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
+/// - Ukrainian
+/// - Urdu
+/// - Uyghur
+/// - Uzbek
+/// - Welsh
+/// - Wolof
+/// - Yiddish
+/// - Yoruba
+/// - Zulu.
+const tzaCountryTranslations = [
+  CountryName(
+    language: LangSrp(),
+    official: "Уједињена Република Танзанија",
+    common: "Танзанија",
+  ),
+  CountryName(
+    language: LangAra(),
+    official: "جمهورية تنزانيا الاتحادية",
+    common: "تنزانيا",
+  ),
+  CountryName(
+    language: LangBre(),
+    official: "Republik Unanet Tanzania",
+    common: "Tanzania",
+  ),
+  CountryName(
+    language: LangCes(),
+    official: "Sjednocená tanzanská republika",
+    common: "Tanzanie",
+  ),
+  CountryName(
+    language: LangCym(),
+    official: "United Republic of Tanzania",
+    common: "Tanzania",
+  ),
+  CountryName(
+    language: LangDeu(),
+    official: "Vereinigte Republik Tansania",
+    common: "Tansania",
+  ),
+  CountryName(
+    language: LangEst(),
+    official: "Tansaania Ühendvabariik",
+    common: "Tansaania",
+  ),
+  CountryName(
+    language: LangFin(),
+    official: "Tansanian yhdistynyt tasavalta",
+    common: "Tansania",
+  ),
+  CountryName(
+    language: LangFra(),
+    official: "République -Unie de Tanzanie",
+    common: "Tanzanie",
+  ),
+  CountryName(
+    language: LangHrv(),
+    official: "Ujedinjena Republika Tanzanija",
+    common: "Tanzanija",
+  ),
+  CountryName(
+    language: LangHun(),
+    official: "Tádzsik Köztársaság",
+    common: "Tádzsikisztán",
+  ),
+  CountryName(
+    language: LangIta(),
+    official: "Repubblica Unita di Tanzania",
+    common: "Tanzania",
+  ),
+  CountryName(language: LangJpn(), official: "タンザニア連合共和国", common: "タンザニア"),
+  CountryName(language: LangKor(), official: "탄자니아 연합 공화국", common: "탄자니아"),
+  CountryName(
+    language: LangNld(),
+    official: "Verenigde Republiek Tanzania",
+    common: "Tanzania",
+  ),
+  CountryName(
+    language: LangFas(),
+    official: "جمهوری متحد تانزانیا",
+    common: "تانزانیا",
+  ),
+  CountryName(
+    language: LangPol(),
+    official: "Zjednoczona Republika Tanzanii",
+    common: "Tanzania",
+  ),
+  CountryName(
+    language: LangPor(),
+    official: "República Unida da Tanzânia",
+    common: "Tanzânia",
+  ),
+  CountryName(
+    language: LangRus(),
+    official: "Объединенная Республика Танзания",
+    common: "Танзания",
+  ),
+  CountryName(
+    language: LangSlk(),
+    official: "Tanzánijská zjednotená republika",
+    common: "Tanzánia",
+  ),
+  CountryName(
+    language: LangSpa(),
+    official: "República Unida de Tanzania",
+    common: "Tanzania",
+  ),
+  CountryName(
+    language: LangSwe(),
+    official: "Förenade republiken Tanzania",
+    common: "Tanzania",
+  ),
+  CountryName(
+    language: LangTur(),
+    official: "Tanzanya Birleşik Cumhuriyeti",
+    common: "Tanzanya",
+  ),
+  CountryName(
+    language: LangUrd(),
+    official: "متحدہ جمہوریہ تنزانیہ",
+    common: "تنزانیہ",
+  ),
+  CountryName(language: LangZho(), official: "坦桑尼亚联合共和国", common: "坦桑尼亚"),
+  TranslatedName(LangAfr(), name: "Tanzanië"),
+  TranslatedName(LangAmh(), name: "ታንዛኒያ"),
+  TranslatedName(LangAsm(), name: "তাঞ্জানিয়া"),
+  TranslatedName(LangAze(), name: "Tanzaniya"),
+  TranslatedName(LangAze(), name: "Танзанија", script: ScriptCyrl()),
+  TranslatedName(LangBel(), name: "Танзанія"),
+  TranslatedName(LangBul(), name: "Танзания"),
+  TranslatedName(LangBam(), name: "Tanzani"),
+  TranslatedName(LangBen(), name: "তাঞ্জানিয়া"),
+  TranslatedName(LangBos(), name: "Tanzanija"),
+  TranslatedName(LangBos(), name: "Танзанија", script: ScriptCyrl()),
+  TranslatedName(LangCat(), name: "Tanzània"),
+  TranslatedName(LangChe(), name: "Танзани"),
+  TranslatedName(LangDzo(), name: "ཊཱན་ཛཱ་ནི་ཡ"),
+  TranslatedName(LangEwe(), name: "Tanzania nutome"),
+  TranslatedName(LangEll(), name: "Τανζανία"),
+  TranslatedName(LangEpo(), name: "Tanzanio"),
+  TranslatedName(LangFul(), name: "Tansanii"),
+  TranslatedName(LangFao(), name: "Tansania"),
+  TranslatedName(LangGle(), name: "an Tansáin"),
+  TranslatedName(LangGla(), name: "An Tansan"),
+  TranslatedName(LangGuj(), name: "તાંઝાનિયા"),
+  TranslatedName(LangHau(), name: "Tanzaniya"),
+  TranslatedName(LangHeb(), name: "טנזניה"),
+  TranslatedName(LangHin(), name: "तंज़ानिया"),
+  TranslatedName(LangHye(), name: "Տանզանիա"),
+  TranslatedName(LangIsl(), name: "Tansanía"),
+  TranslatedName(LangJav(), name: "Tansania"),
+  TranslatedName(LangKat(), name: "ტანზანია"),
+  TranslatedName(LangKaz(), name: "Танзания"),
+  TranslatedName(LangKhm(), name: "តង់សានី"),
+  TranslatedName(LangKan(), name: "ತಾಂಜೇನಿಯಾ"),
+  TranslatedName(LangKas(), name: "تَنجانِیا"),
+  TranslatedName(LangKur(), name: "Tanzanya"),
+  TranslatedName(LangKir(), name: "Танзания"),
+  TranslatedName(LangLtz(), name: "Tansania"),
+  TranslatedName(LangLug(), name: "Tanzaniya"),
+  TranslatedName(LangLin(), name: "Tanzani"),
+  TranslatedName(LangLao(), name: "ທານຊາເນຍ"),
+  TranslatedName(LangLit(), name: "Tanzanija"),
+  TranslatedName(LangLub(), name: "Tanzani"),
+  TranslatedName(LangLav(), name: "Tanzānija"),
+  TranslatedName(LangMkd(), name: "Танзанија"),
+  TranslatedName(LangMal(), name: "ടാൻസാനിയ"),
+  TranslatedName(LangMon(), name: "Танзани"),
+  TranslatedName(LangMar(), name: "टांझानिया"),
+  TranslatedName(LangMlt(), name: "it-Tanzanija"),
+  TranslatedName(LangMya(), name: "တန်ဇန်းနီးယား"),
+  TranslatedName(LangNde(), name: "Tanzaniya"),
+  TranslatedName(LangNep(), name: "तान्जानिया"),
+  TranslatedName(LangOri(), name: "ତାଞ୍ଜାନିଆ"),
+  TranslatedName(LangPan(), name: "ਤਨਜ਼ਾਨੀਆ"),
+  TranslatedName(LangPus(), name: "تنزانیا"),
+  TranslatedName(LangRoh(), name: "Tansania"),
+  TranslatedName(LangRun(), name: "Tanzaniya"),
+  TranslatedName(LangSnd(), name: "تنزانيا"),
+  TranslatedName(LangSme(), name: "Tanzánia"),
+  TranslatedName(LangSag(), name: "Tanzanïi"),
+  TranslatedName(LangSin(), name: "ටැන්සානියාව"),
+  TranslatedName(LangSlv(), name: "Tanzanija"),
+  TranslatedName(LangSom(), name: "Tansaaniya"),
+  TranslatedName(LangSqi(), name: "Tanzani"),
+  TranslatedName(LangTam(), name: "தான்சானியா"),
+  TranslatedName(LangTel(), name: "టాంజానియా"),
+  TranslatedName(LangTgk(), name: "Танзания"),
+  TranslatedName(LangTha(), name: "แทนซาเนีย"),
+  TranslatedName(LangTir(), name: "ታንዛኒያ"),
+  TranslatedName(LangTuk(), name: "Tanzaniýa"),
+  TranslatedName(LangTon(), name: "Tenisānia"),
+  TranslatedName(LangTat(), name: "Танзания"),
+  TranslatedName(LangUig(), name: "تانزانىيە"),
+  TranslatedName(LangUkr(), name: "Танзанія"),
+  TranslatedName(LangUzb(), name: "Tanzaniya"),
+  TranslatedName(LangUzb(), name: "Танзания", script: ScriptCyrl()),
+  TranslatedName(LangWol(), name: "Taŋsani"),
+  TranslatedName(LangYid(), name: "טאַנזאַניע"),
+  TranslatedName(LangYor(), name: "Orílẹ́ède Tàǹsáníà"),
+  TranslatedName(LangYor(), name: "Orílɛ́ède Tàǹsáníà", countryCode: "BJ"),
+  TranslatedName(LangZul(), name: "i-Tanzania"),
+];

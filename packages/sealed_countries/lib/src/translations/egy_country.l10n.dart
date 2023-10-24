@@ -1,0 +1,318 @@
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../model/country/submodels/country_name.dart";
+
+/// Provides 118 translations for a Egypt country:
+/// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Akan
+/// - Albanian
+/// - Amharic
+/// - Arabic
+/// - Armenian
+/// - Assamese
+/// - Azerbaijani
+/// - Bambara
+/// - Basque
+/// - Belarusian
+/// - Bengali (Bangla)
+/// - Bosnian
+/// - Breton
+/// - Bulgarian
+/// - Burmese
+/// - Catalan
+/// - Chechen
+/// - Chinese
+/// - Croatian
+/// - Czech
+/// - Danish
+/// - Dutch
+/// - Dzongkha
+/// - Esperanto
+/// - Estonian
+/// - Ewe
+/// - Faroese
+/// - Finnish
+/// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
+/// - Georgian
+/// - German
+/// - Greek (modern)
+/// - Gujarati
+/// - Hausa
+/// - Hebrew (modern)
+/// - Hindi
+/// - Hungarian
+/// - Icelandic
+/// - Indonesian
+/// - Interlingua
+/// - Irish
+/// - Italian
+/// - Japanese
+/// - Javanese
+/// - Kannada
+/// - Kashmiri
+/// - Kazakh
+/// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
+/// - Korean
+/// - Kurdish
+/// - Kyrgyz
+/// - Lao
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
+/// - Malagasy
+/// - Malay
+/// - Malayalam
+/// - Maltese
+/// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
+/// - Northern Sami
+/// - Oriya
+/// - Pashto (Pushto)
+/// - Persian (Farsi)
+/// - Polish
+/// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
+/// - Russian
+/// - Sango
+/// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
+/// - Slovak
+/// - Slovene
+/// - Somali
+/// - Spanish
+/// - Swahili
+/// - Swedish
+/// - Tajik
+/// - Tamil
+/// - Tatar
+/// - Telugu
+/// - Thai
+/// - Tigrinya
+/// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
+/// - Ukrainian
+/// - Urdu
+/// - Uyghur
+/// - Uzbek
+/// - Vietnamese
+/// - Welsh
+/// - Western Frisian
+/// - Wolof
+/// - Yiddish
+/// - Yoruba
+/// - Zulu.
+const egyCountryTranslations = [
+  CountryName(
+    language: LangSrp(),
+    official: "Арапска Република Египат",
+    common: "Египат",
+  ),
+  CountryName(
+    language: LangAra(),
+    official: "جمهورية مصر العربية",
+    common: "مصر",
+  ),
+  CountryName(
+    language: LangBre(),
+    official: "Republik arab Egipt",
+    common: "Egipt",
+  ),
+  CountryName(
+    language: LangCes(),
+    official: "Egyptská arabská republika",
+    common: "Egypt",
+  ),
+  CountryName(
+    language: LangCym(),
+    official: "Gweriniaeth Arabaidd yr Aifft",
+    common: "Yr Aifft",
+  ),
+  CountryName(
+    language: LangDeu(),
+    official: "Arabische Republik Ägypten",
+    common: "Ägypten",
+  ),
+  CountryName(
+    language: LangEst(),
+    official: "Egiptuse Araabia Vabariik",
+    common: "Egiptus",
+  ),
+  CountryName(
+    language: LangFin(),
+    official: "Egyptin arabitasavalta",
+    common: "Egypti",
+  ),
+  CountryName(
+    language: LangFra(),
+    official: "République arabe d'Égypte",
+    common: "Égypte",
+  ),
+  CountryName(
+    language: LangHrv(),
+    official: "Arapska Republika Egipat",
+    common: "Egipat",
+  ),
+  CountryName(
+    language: LangHun(),
+    official: "Egyiptomi Arab Köztársaság",
+    common: "Egyiptom",
+  ),
+  CountryName(
+    language: LangIta(),
+    official: "Repubblica araba d'Egitto",
+    common: "Egitto",
+  ),
+  CountryName(language: LangJpn(), official: "エジプト·アラブ共和国", common: "エジプト"),
+  CountryName(language: LangKor(), official: "이집트 아랍 공화국", common: "이집트"),
+  CountryName(
+    language: LangNld(),
+    official: "Arabische Republiek Egypte",
+    common: "Egypte",
+  ),
+  CountryName(language: LangFas(), official: "جمهوری عربی مصر", common: "مصر"),
+  CountryName(
+    language: LangPol(),
+    official: "Arabska Republika Egiptu",
+    common: "Egipt",
+  ),
+  CountryName(
+    language: LangPor(),
+    official: "República Árabe do Egipto",
+    common: "Egito",
+  ),
+  CountryName(
+    language: LangRus(),
+    official: "Арабская Республика Египет",
+    common: "Египет",
+  ),
+  CountryName(
+    language: LangSlk(),
+    official: "Egyptská arabská republika",
+    common: "Egypt",
+  ),
+  CountryName(
+    language: LangSpa(),
+    official: "República Árabe de Egipto",
+    common: "Egipto",
+  ),
+  CountryName(
+    language: LangSwe(),
+    official: "Arabrepubliken Egypten",
+    common: "Egypten",
+  ),
+  CountryName(
+    language: LangTur(),
+    official: "Mısır Arap Cumhuriyeti",
+    common: "Mısır",
+  ),
+  CountryName(language: LangUrd(), official: "مصری عرب جمہوریہ", common: "مصر"),
+  CountryName(language: LangZho(), official: "阿拉伯埃及共和国", common: "埃及"),
+  TranslatedName(LangAfr(), name: "Egipte"),
+  TranslatedName(LangAka(), name: "Nisrim"),
+  TranslatedName(LangAmh(), name: "ግብጽ"),
+  TranslatedName(LangAsm(), name: "ইজিপ্ত"),
+  TranslatedName(LangAze(), name: "Misir"),
+  TranslatedName(LangAze(), name: "Мисир", script: ScriptCyrl()),
+  TranslatedName(LangBel(), name: "Егіпет"),
+  TranslatedName(LangBul(), name: "Египет"),
+  TranslatedName(LangBam(), name: "Eziputi"),
+  TranslatedName(LangBen(), name: "মিশর"),
+  TranslatedName(LangBos(), name: "Egipat"),
+  TranslatedName(LangBos(), name: "Египат", script: ScriptCyrl()),
+  TranslatedName(LangCat(), name: "Egipte"),
+  TranslatedName(LangChe(), name: "Мисар"),
+  TranslatedName(LangDan(), name: "Egypten"),
+  TranslatedName(LangDzo(), name: "ཨི་ཇིབཊ"),
+  TranslatedName(LangEwe(), name: "Egypte nutome"),
+  TranslatedName(LangEll(), name: "Αίγυπτος"),
+  TranslatedName(LangEpo(), name: "Egipto"),
+  TranslatedName(LangEus(), name: "Egipto"),
+  TranslatedName(LangFul(), name: "Ejipt"),
+  TranslatedName(LangFao(), name: "Egyptaland"),
+  TranslatedName(LangFry(), name: "Egypte"),
+  TranslatedName(LangGle(), name: "an Éigipt"),
+  TranslatedName(LangGla(), name: "An Èiphit"),
+  TranslatedName(LangGlg(), name: "Exipto"),
+  TranslatedName(LangGuj(), name: "ઇજિપ્ત"),
+  TranslatedName(LangHau(), name: "Misira"),
+  TranslatedName(LangHau(), name: "Masar, Misira", script: ScriptLatn()),
+  TranslatedName(LangHeb(), name: "מצרים"),
+  TranslatedName(LangHin(), name: "मिस्र"),
+  TranslatedName(LangHye(), name: "Եգիպտոս"),
+  TranslatedName(LangIna(), name: "Egypto"),
+  TranslatedName(LangInd(), name: "Mesir"),
+  TranslatedName(LangIsl(), name: "Egyptaland"),
+  TranslatedName(LangJav(), name: "Mesir"),
+  TranslatedName(LangKat(), name: "ეგვიპტე"),
+  TranslatedName(LangKik(), name: "Misri"),
+  TranslatedName(LangKaz(), name: "Мысыр"),
+  TranslatedName(LangKhm(), name: "អេហ្ស៊ីប"),
+  TranslatedName(LangKan(), name: "ಈಜಿಪ್ಟ್"),
+  TranslatedName(LangKas(), name: "مِسٔر"),
+  TranslatedName(LangKur(), name: "Misir"),
+  TranslatedName(LangKir(), name: "Египет"),
+  TranslatedName(LangLtz(), name: "Egypten"),
+  TranslatedName(LangLug(), name: "Misiri"),
+  TranslatedName(LangLin(), name: "Ezípite"),
+  TranslatedName(LangLao(), name: "ອີຢິບ"),
+  TranslatedName(LangLit(), name: "Egiptas"),
+  TranslatedName(LangLub(), name: "Mushidi"),
+  TranslatedName(LangLav(), name: "Ēģipte"),
+  TranslatedName(LangMlg(), name: "Ejypta"),
+  TranslatedName(LangMkd(), name: "Египет"),
+  TranslatedName(LangMal(), name: "ഈജിപ്ത്"),
+  TranslatedName(LangMon(), name: "Египет"),
+  TranslatedName(LangMar(), name: "इजिप्त"),
+  TranslatedName(LangMsa(), name: "Mesir"),
+  TranslatedName(LangMlt(), name: "l-Eġittu"),
+  TranslatedName(LangMya(), name: "အီဂျစ်"),
+  TranslatedName(LangNep(), name: "इजिप्ट"),
+  TranslatedName(LangOri(), name: "ଇଜିପ୍ଟ"),
+  TranslatedName(LangPan(), name: "ਮਿਸਰ"),
+  TranslatedName(LangPus(), name: "مصر"),
+  TranslatedName(LangQue(), name: "Egipto"),
+  TranslatedName(LangRoh(), name: "Egipta"),
+  TranslatedName(LangRun(), name: "Misiri"),
+  TranslatedName(LangRon(), name: "Egipt"),
+  TranslatedName(LangSnd(), name: "مصر"),
+  TranslatedName(LangSme(), name: "Egypta"),
+  TranslatedName(LangSag(), name: "Kâmitâ"),
+  TranslatedName(LangSin(), name: "ඊජිප්තුව"),
+  TranslatedName(LangSlv(), name: "Egipt"),
+  TranslatedName(LangSom(), name: "Masar"),
+  TranslatedName(LangSqi(), name: "Egjipt"),
+  TranslatedName(LangSwa(), name: "Misri"),
+  TranslatedName(LangTam(), name: "எகிப்து"),
+  TranslatedName(LangTel(), name: "ఈజిప్ట్"),
+  TranslatedName(LangTgk(), name: "Миср"),
+  TranslatedName(LangTha(), name: "อียิปต์"),
+  TranslatedName(LangTir(), name: "ግብጽ"),
+  TranslatedName(LangTuk(), name: "Müsür"),
+  TranslatedName(LangTon(), name: "ʻIsipite"),
+  TranslatedName(LangTat(), name: "Мисыр"),
+  TranslatedName(LangUig(), name: "مىسىر"),
+  TranslatedName(LangUkr(), name: "Єгипет"),
+  TranslatedName(LangUzb(), name: "Misr"),
+  TranslatedName(LangUzb(), name: "Миср", script: ScriptCyrl()),
+  TranslatedName(LangVie(), name: "Ai Cập"),
+  TranslatedName(LangWol(), name: "Esipt"),
+  TranslatedName(LangYid(), name: "עגיפּטן"),
+  TranslatedName(LangYor(), name: "Orílẹ́ède Égípítì"),
+  TranslatedName(LangYor(), name: "Orílɛ́ède Égípítì", countryCode: "BJ"),
+  TranslatedName(LangZul(), name: "i-Egypt"),
+];

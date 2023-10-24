@@ -1,0 +1,327 @@
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../model/country/submodels/country_name.dart";
+
+/// Provides 119 translations for a Saudi Arabia country:
+/// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
+/// - Arabic
+/// - Armenian
+/// - Assamese
+/// - Azerbaijani
+/// - Bambara
+/// - Belarusian
+/// - Bengali (Bangla)
+/// - Bosnian
+/// - Breton
+/// - Bulgarian
+/// - Burmese
+/// - Catalan
+/// - Chechen
+/// - Chinese
+/// - Croatian
+/// - Czech
+/// - Danish
+/// - Dutch
+/// - Dzongkha
+/// - Esperanto
+/// - Estonian
+/// - Ewe
+/// - Faroese
+/// - Finnish
+/// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
+/// - Georgian
+/// - German
+/// - Greek (modern)
+/// - Gujarati
+/// - Hausa
+/// - Hebrew (modern)
+/// - Hindi
+/// - Hungarian
+/// - Icelandic
+/// - Indonesian
+/// - Interlingua
+/// - Irish
+/// - Italian
+/// - Japanese
+/// - Javanese
+/// - Kannada
+/// - Kashmiri
+/// - Kazakh
+/// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
+/// - Korean
+/// - Kurdish
+/// - Kyrgyz
+/// - Lao
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
+/// - Malagasy
+/// - Malay
+/// - Malayalam
+/// - Maltese
+/// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
+/// - Persian (Farsi)
+/// - Polish
+/// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
+/// - Russian
+/// - Sango
+/// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
+/// - Slovak
+/// - Slovene
+/// - Somali
+/// - Spanish
+/// - Swahili
+/// - Swedish
+/// - Tajik
+/// - Tamil
+/// - Tatar
+/// - Telugu
+/// - Thai
+/// - Tigrinya
+/// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
+/// - Ukrainian
+/// - Urdu
+/// - Uyghur
+/// - Uzbek
+/// - Vietnamese
+/// - Welsh
+/// - Western Frisian
+/// - Wolof
+/// - Yoruba
+/// - Zulu.
+const sauCountryTranslations = [
+  CountryName(
+    language: LangSrp(),
+    official: "Краљевина Саудијска Арабија",
+    common: "Саудијска Арабија",
+  ),
+  CountryName(
+    language: LangAra(),
+    official: "المملكة العربية السعودية",
+    common: "السعودية",
+  ),
+  CountryName(
+    language: LangBre(),
+    official: "Rouantelezh Arabia Saoudat",
+    common: "Arabia Saoudat",
+  ),
+  CountryName(
+    language: LangCes(),
+    official: "Saúdskoarabské království",
+    common: "Saúdská Arábie",
+  ),
+  CountryName(
+    language: LangCym(),
+    official: "Kingdom of Saudi Arabia",
+    common: "Saudi Arabia",
+  ),
+  CountryName(
+    language: LangDeu(),
+    official: "Königreich Saudi-Arabien",
+    common: "Saudi-Arabien",
+  ),
+  CountryName(
+    language: LangEst(),
+    official: "Saudi Araabia Kuningriik",
+    common: "Saudi Araabia",
+  ),
+  CountryName(
+    language: LangFin(),
+    official: "Saudi-Arabian kuningaskunta",
+    common: "Saudi-Arabia",
+  ),
+  CountryName(
+    language: LangFra(),
+    official: "Royaume d'Arabie Saoudite",
+    common: "Arabie Saoudite",
+  ),
+  CountryName(
+    language: LangHrv(),
+    official: "Kraljevina Saudijska Arabija",
+    common: "Saudijska Arabija",
+  ),
+  CountryName(
+    language: LangHun(),
+    official: "Szaúd-Arábia",
+    common: "Szaúd-Arábia",
+  ),
+  CountryName(
+    language: LangIta(),
+    official: "Arabia Saudita",
+    common: "Arabia Saudita",
+  ),
+  CountryName(language: LangJpn(), official: "サウジアラビア王国", common: "サウジアラビア"),
+  CountryName(language: LangKor(), official: "사우디아라비아 왕국", common: "사우디아라비아"),
+  CountryName(
+    language: LangNld(),
+    official: "Koninkrijk van Saoedi-Arabië",
+    common: "Saoedi-Arabië",
+  ),
+  CountryName(
+    language: LangFas(),
+    official: "پادشاهی عربی سَعودی",
+    common: "عربستان سعودی",
+  ),
+  CountryName(
+    language: LangPol(),
+    official: "Królestwo Arabii Saudyjskiej",
+    common: "Arabia Saudyjska",
+  ),
+  CountryName(
+    language: LangPor(),
+    official: "Reino da Arábia Saudita",
+    common: "Arábia Saudita",
+  ),
+  CountryName(
+    language: LangRus(),
+    official: "Королевство Саудовская Аравия",
+    common: "Саудовская Аравия",
+  ),
+  CountryName(
+    language: LangSlk(),
+    official: "Saudskoarabské kráľovstvo",
+    common: "Saudská Arábia",
+  ),
+  CountryName(
+    language: LangSpa(),
+    official: "Reino de Arabia Saudita",
+    common: "Arabia Saudí",
+  ),
+  CountryName(
+    language: LangSwe(),
+    official: "Kungadömet Saudiarabien",
+    common: "Saudiarabien",
+  ),
+  CountryName(
+    language: LangTur(),
+    official: "Suudi Arabistan Krallığı",
+    common: "Suudi Arabistan",
+  ),
+  CountryName(
+    language: LangUrd(),
+    official: "مملکتِ سعودی عرب",
+    common: "سعودی عرب",
+  ),
+  CountryName(language: LangZho(), official: "沙特阿拉伯王国", common: "沙特阿拉伯"),
+  TranslatedName(LangAfr(), name: "Saoedi-Arabië"),
+  TranslatedName(LangAmh(), name: "ሳውድአረቢያ"),
+  TranslatedName(LangAsm(), name: "চৌডি আৰবিয়া"),
+  TranslatedName(LangAze(), name: "Səudiyyə Ərəbistanı"),
+  TranslatedName(LangAze(), name: "Сәудијјә Әрәбистаны", script: ScriptCyrl()),
+  TranslatedName(LangBel(), name: "Саудаўская Аравія"),
+  TranslatedName(LangBul(), name: "Саудитска Арабия"),
+  TranslatedName(LangBam(), name: "Arabiya Sawudiya"),
+  TranslatedName(LangBen(), name: "সৌদি আরব"),
+  TranslatedName(LangBos(), name: "Saudijska Arabija"),
+  TranslatedName(LangBos(), name: "Саудијска Арабија", script: ScriptCyrl()),
+  TranslatedName(LangCat(), name: "Aràbia Saudita"),
+  TranslatedName(LangChe(), name: "СаӀудийн Ӏаьрбийчоь"),
+  TranslatedName(LangDan(), name: "Saudi-Arabien"),
+  TranslatedName(LangDzo(), name: "སཱཝ་དི་ ཨ་རེ་བྷི་ཡ"),
+  TranslatedName(LangEwe(), name: "Saudi Arabia nutome"),
+  TranslatedName(LangEll(), name: "Σαουδική Αραβία"),
+  TranslatedName(LangEpo(), name: "Saŭda Arabujo"),
+  TranslatedName(LangFul(), name: "Arabii Sawdit"),
+  TranslatedName(LangFao(), name: "Saudiarabia"),
+  TranslatedName(LangFry(), name: "Saoedi-Arabië"),
+  TranslatedName(LangGle(), name: "an Araib Shádach"),
+  TranslatedName(LangGla(), name: "Aràibia nan Sabhd"),
+  TranslatedName(LangGlg(), name: "Arabia Saudita"),
+  TranslatedName(LangGuj(), name: "સાઉદી અરેબિયા"),
+  TranslatedName(LangHau(), name: "Saudiyya"),
+  TranslatedName(LangHau(), name: "Ƙasar Makka", script: ScriptLatn()),
+  TranslatedName(LangHeb(), name: "ערב הסעודית"),
+  TranslatedName(LangHin(), name: "सऊदी अरब"),
+  TranslatedName(LangHye(), name: "Սաուդյան Արաբիա"),
+  TranslatedName(LangIna(), name: "Arabia Saudita"),
+  TranslatedName(LangInd(), name: "Arab Saudi"),
+  TranslatedName(LangIsl(), name: "Sádi-Arabía"),
+  TranslatedName(LangJav(), name: "Arab Saudi"),
+  TranslatedName(LangKat(), name: "საუდის არაბეთი"),
+  TranslatedName(LangKik(), name: "Saudi"),
+  TranslatedName(LangKaz(), name: "Сауд Арабиясы"),
+  TranslatedName(LangKhm(), name: "អារ៉ាប៊ីសាអូឌីត"),
+  TranslatedName(LangKan(), name: "ಸೌದಿ ಅರೇಬಿಯಾ"),
+  TranslatedName(LangKas(), name: "سوٗدی عربِیہ"),
+  TranslatedName(LangKur(), name: "Erebistana Siyûdî"),
+  TranslatedName(LangKir(), name: "Сауд Арабиясы"),
+  TranslatedName(LangLtz(), name: "Saudi-Arabien"),
+  TranslatedName(LangLug(), name: "Sawudarebya - Buwarabu"),
+  TranslatedName(LangLin(), name: "Alabi Sawuditɛ"),
+  TranslatedName(LangLao(), name: "ຊາອຸດິ ອາຣາເບຍ"),
+  TranslatedName(LangLit(), name: "Saudo Arabija"),
+  TranslatedName(LangLub(), name: "Alabu Nsawudi"),
+  TranslatedName(LangLav(), name: "Saūda Arābija"),
+  TranslatedName(LangMlg(), name: "Arabia saodita"),
+  TranslatedName(LangMkd(), name: "Саудиска Арабија"),
+  TranslatedName(LangMal(), name: "സൗദി അറേബ്യ"),
+  TranslatedName(LangMon(), name: "Саудын Араб"),
+  TranslatedName(LangMar(), name: "सौदी अरब"),
+  TranslatedName(LangMsa(), name: "Arab Saudi"),
+  TranslatedName(LangMlt(), name: "l-Arabia Sawdija"),
+  TranslatedName(LangMya(), name: "ဆော်ဒီအာရေးဘီးယား"),
+  TranslatedName(LangNob(), name: "Saudi-Arabia"),
+  TranslatedName(LangNep(), name: "साउदी अरब"),
+  TranslatedName(LangNno(), name: "Saudi-Arabia"),
+  TranslatedName(LangNor(), name: "Saudi-Arabia"),
+  TranslatedName(LangOri(), name: "ସାଉଦି ଆରବିଆ"),
+  TranslatedName(LangPan(), name: "ਸਾਊਦੀ ਅਰਬ"),
+  TranslatedName(LangPus(), name: "سعودي عربستان"),
+  TranslatedName(LangQue(), name: "Arabia Saudí"),
+  TranslatedName(LangRoh(), name: "Arabia Saudita"),
+  TranslatedName(LangRun(), name: "Arabiya Sawudite"),
+  TranslatedName(LangRon(), name: "Arabia Saudită"),
+  TranslatedName(LangSnd(), name: "سعودي عرب"),
+  TranslatedName(LangSme(), name: "Saudi-Arábia"),
+  TranslatedName(LangSag(), name: "Saûdi Arabïi"),
+  TranslatedName(LangSin(), name: "සෞදි අරාබිය"),
+  TranslatedName(LangSlv(), name: "Saudova Arabija"),
+  TranslatedName(LangSom(), name: "Sacuudi Carabiya"),
+  TranslatedName(LangSqi(), name: "Arabi Saudite"),
+  TranslatedName(LangSwa(), name: "Saudia"),
+  TranslatedName(LangTam(), name: "சவூதி அரேபியா"),
+  TranslatedName(LangTel(), name: "సౌదీ అరేబియా"),
+  TranslatedName(LangTgk(), name: "Арабистони Саудӣ"),
+  TranslatedName(LangTha(), name: "ซาอุดีอาระเบีย"),
+  TranslatedName(LangTir(), name: "ስዑዲ ዓረብ"),
+  TranslatedName(LangTuk(), name: "Saud Arabystany"),
+  TranslatedName(LangTon(), name: "Saute ʻAlepea"),
+  TranslatedName(LangTat(), name: "Согуд Гарәбстаны"),
+  TranslatedName(LangUig(), name: "سەئۇدىي ئەرەبىستان"),
+  TranslatedName(LangUig(), name: "سەئۇدى ئەرەبىستان", script: ScriptArab()),
+  TranslatedName(LangUkr(), name: "Саудівська Аравія"),
+  TranslatedName(LangUzb(), name: "Saudiya Arabistoni"),
+  TranslatedName(LangUzb(), name: "Саудия Арабистони", script: ScriptCyrl()),
+  TranslatedName(LangVie(), name: "Ả Rập Xê-út"),
+  TranslatedName(LangWol(), name: "Arabi Sawudi"),
+  TranslatedName(LangYor(), name: "Orílẹ́ède Saudi Arabia"),
+  TranslatedName(LangYor(), name: "Orílɛ́ède Saudi Arabia", countryCode: "BJ"),
+  TranslatedName(LangZul(), name: "i-Saudi Arabia"),
+];

@@ -1,0 +1,282 @@
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "../model/country/submodels/country_name.dart";
+
+/// Provides 95 translations for a Iran country:
+/// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Amharic
+/// - Arabic
+/// - Armenian
+/// - Assamese
+/// - Azerbaijani
+/// - Bambara
+/// - Belarusian
+/// - Bengali (Bangla)
+/// - Bosnian
+/// - Breton
+/// - Bulgarian
+/// - Burmese
+/// - Chechen
+/// - Chinese
+/// - Croatian
+/// - Czech
+/// - Dutch
+/// - Dzongkha
+/// - Esperanto
+/// - Estonian
+/// - Ewe
+/// - Finnish
+/// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
+/// - Georgian
+/// - German
+/// - Greek (modern)
+/// - Gujarati
+/// - Hebrew (modern)
+/// - Hindi
+/// - Hungarian
+/// - Icelandic
+/// - Irish
+/// - Italian
+/// - Japanese
+/// - Kannada
+/// - Kashmiri
+/// - Kazakh
+/// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
+/// - Korean
+/// - Kurdish
+/// - Kyrgyz
+/// - Lao
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luba-Katanga
+/// - Macedonian
+/// - Malayalam
+/// - Maltese
+/// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
+/// - Oriya
+/// - Pashto (Pushto)
+/// - Persian (Farsi)
+/// - Polish
+/// - Portuguese
+/// - Quechua
+/// - Russian
+/// - Sango
+/// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
+/// - Slovak
+/// - Somali
+/// - Spanish
+/// - Swedish
+/// - Tajik
+/// - Tamil
+/// - Tatar
+/// - Telugu
+/// - Thai
+/// - Tigrinya
+/// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
+/// - Ukrainian
+/// - Urdu
+/// - Uyghur
+/// - Uzbek
+/// - Welsh
+/// - Wolof
+/// - Yiddish
+/// - Yoruba
+/// - Zulu.
+const irnCountryTranslations = [
+  CountryName(
+    language: LangSrp(),
+    official: "Исламска Република Иран",
+    common: "Иран",
+  ),
+  CountryName(
+    language: LangAra(),
+    official: "جمهورية إيران الإسلامية",
+    common: "إيران",
+  ),
+  CountryName(
+    language: LangBre(),
+    official: "Republik Islamek Iran",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangCes(),
+    official: "Islámská republika Írán",
+    common: "Írán",
+  ),
+  CountryName(
+    language: LangCym(),
+    official: "Islamic Republic of Iran",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangDeu(),
+    official: "Islamische Republik Iran",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangEst(),
+    official: "Iraani Islamivabariik",
+    common: "Iraan",
+  ),
+  CountryName(
+    language: LangFin(),
+    official: "Iranin islamilainen tasavalta",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangFas(),
+    official: "جمهوری اسلامی ایران",
+    common: "ایران",
+  ),
+  CountryName(
+    language: LangFra(),
+    official: "République islamique d'Iran",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangHrv(),
+    official: "Islamska Republika Iran",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangHun(),
+    official: "Iráni Iszlám Köztársaság",
+    common: "Irán",
+  ),
+  CountryName(
+    language: LangIta(),
+    official: "Repubblica islamica dell'Iran",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangJpn(),
+    official: "イラン·イスラム共和国",
+    common: "イラン・イスラム共和国",
+  ),
+  CountryName(language: LangKor(), official: "이란 이슬람 공화국", common: "이란"),
+  CountryName(
+    language: LangNld(),
+    official: "Islamitische Republiek Iran",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangPol(),
+    official: "Islamska Republika Iranu",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangPor(),
+    official: "República Islâmica do Irã",
+    common: "Irão",
+  ),
+  CountryName(
+    language: LangRus(),
+    official: "Исламская Республика Иран",
+    common: "Иран",
+  ),
+  CountryName(
+    language: LangSlk(),
+    official: "Iránska islamská republika",
+    common: "Irán",
+  ),
+  CountryName(
+    language: LangSpa(),
+    official: "República Islámica de Irán",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangSwe(),
+    official: "Islamiska republiken Iran",
+    common: "Iran",
+  ),
+  CountryName(
+    language: LangTur(),
+    official: "İran İslam Cumhuriyeti",
+    common: "İran",
+  ),
+  CountryName(language: LangUrd(), official: "جمہوریہ ایران", common: "ایران"),
+  CountryName(language: LangZho(), official: "伊朗伊斯兰共和国", common: "伊朗"),
+  TranslatedName(LangAmh(), name: "ኢራን"),
+  TranslatedName(LangAsm(), name: "ইৰান"),
+  TranslatedName(LangAze(), name: "İran"),
+  TranslatedName(LangAze(), name: "Иран", script: ScriptCyrl()),
+  TranslatedName(LangBel(), name: "Іран"),
+  TranslatedName(LangBul(), name: "Иран"),
+  TranslatedName(LangBam(), name: "Iraŋ"),
+  TranslatedName(LangBen(), name: "ইরান"),
+  TranslatedName(LangBos(), name: "Иран", script: ScriptCyrl()),
+  TranslatedName(LangChe(), name: "ГӀажарийчоь"),
+  TranslatedName(LangDzo(), name: "ཨི་རཱན"),
+  TranslatedName(LangEwe(), name: "Iran nutome"),
+  TranslatedName(LangEll(), name: "Ιράν"),
+  TranslatedName(LangEpo(), name: "Irano"),
+  TranslatedName(LangFul(), name: "Iraan"),
+  TranslatedName(LangGle(), name: "an Iaráin"),
+  TranslatedName(LangGla(), name: "Ioràn"),
+  TranslatedName(LangGlg(), name: "Irán"),
+  TranslatedName(LangGuj(), name: "ઈરાન"),
+  TranslatedName(LangHeb(), name: "איראן"),
+  TranslatedName(LangHin(), name: "ईरान"),
+  TranslatedName(LangHye(), name: "Իրան"),
+  TranslatedName(LangIsl(), name: "Íran"),
+  TranslatedName(LangKat(), name: "ირანი"),
+  TranslatedName(LangKik(), name: "Uajemi"),
+  TranslatedName(LangKaz(), name: "Иран"),
+  TranslatedName(LangKhm(), name: "អ៊ីរ៉ង់"),
+  TranslatedName(LangKan(), name: "ಇರಾನ್"),
+  TranslatedName(LangKas(), name: "ایٖران"),
+  TranslatedName(LangKur(), name: "Îran"),
+  TranslatedName(LangKir(), name: "Иран"),
+  TranslatedName(LangLug(), name: "Yiraani"),
+  TranslatedName(LangLin(), name: "Irâ"),
+  TranslatedName(LangLao(), name: "ອີຣານ"),
+  TranslatedName(LangLit(), name: "Iranas"),
+  TranslatedName(LangLub(), name: "Ira"),
+  TranslatedName(LangLav(), name: "Irāna"),
+  TranslatedName(LangMkd(), name: "Иран"),
+  TranslatedName(LangMal(), name: "ഇറാൻ"),
+  TranslatedName(LangMon(), name: "Иран"),
+  TranslatedName(LangMar(), name: "इराण"),
+  TranslatedName(LangMlt(), name: "l-Iran"),
+  TranslatedName(LangMya(), name: "အီရန်"),
+  TranslatedName(LangNep(), name: "इरान"),
+  TranslatedName(LangOri(), name: "ଇରାନ"),
+  TranslatedName(LangPan(), name: "ਈਰਾਨ"),
+  TranslatedName(LangPus(), name: "ايران"),
+  TranslatedName(LangQue(), name: "Irán"),
+  TranslatedName(LangRun(), name: "Irani"),
+  TranslatedName(LangSnd(), name: "ايران"),
+  TranslatedName(LangSag(), name: "Iräan"),
+  TranslatedName(LangSin(), name: "ඉරානය"),
+  TranslatedName(LangSom(), name: "Iiraan"),
+  TranslatedName(LangTam(), name: "ஈரான்"),
+  TranslatedName(LangTel(), name: "ఇరాన్"),
+  TranslatedName(LangTgk(), name: "Эрон"),
+  TranslatedName(LangTha(), name: "อิหร่าน"),
+  TranslatedName(LangTir(), name: "ኢራን"),
+  TranslatedName(LangTuk(), name: "Eýran"),
+  TranslatedName(LangTon(), name: "ʻIlaani"),
+  TranslatedName(LangTat(), name: "Иран"),
+  TranslatedName(LangUig(), name: "ئىران"),
+  TranslatedName(LangUkr(), name: "Іран"),
+  TranslatedName(LangUzb(), name: "Eron"),
+  TranslatedName(LangUzb(), name: "Эрон", script: ScriptCyrl()),
+  TranslatedName(LangWol(), name: "Iraŋ"),
+  TranslatedName(LangYid(), name: "איראַן"),
+  TranslatedName(LangYor(), name: "Orílẹ́ède Irani"),
+  TranslatedName(LangYor(), name: "Orílɛ́ède Irani", countryCode: "BJ"),
+  TranslatedName(LangZul(), name: "i-Iran"),
+];
