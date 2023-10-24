@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Chile country:
+/// Provides 107 translations for a Chile country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const chlCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Chile",
+    common: "Chile",
+  ),
   CountryName(language: LangSrp(), official: "Република Чиле", common: "Чиле"),
   CountryName(language: LangAra(), official: "جمهورية تشيلي", common: "تشيلي"),
   CountryName(language: LangBre(), official: "Republik Chile", common: "Chile"),

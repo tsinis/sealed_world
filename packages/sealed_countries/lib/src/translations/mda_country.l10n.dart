@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Moldova country:
+/// Provides 105 translations for a Moldova country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -105,6 +106,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const mdaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Moldova",
+    common: "Moldova",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Молдавија",

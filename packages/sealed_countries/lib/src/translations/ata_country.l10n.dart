@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a Antarctica country:
+/// Provides 110 translations for a Antarctica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Zulu.
 const ataCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Antarctica",
+    common: "Antarctica",
+  ),
   CountryName(language: LangSrp(), official: "Антарктик", common: "Антарктик"),
   CountryName(language: LangAra(), official: "أنتارتيكا", common: "أنتارتيكا"),
   CountryName(

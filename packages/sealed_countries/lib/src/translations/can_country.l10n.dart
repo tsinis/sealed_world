@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Canada country:
+/// Provides 114 translations for a Canada country:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -113,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const canCountryTranslations = [
+  CountryName(language: LangEng(), official: "Canada", common: "Canada"),
   CountryName(language: LangSrp(), official: "Канада", common: "Канада"),
   CountryName(language: LangAra(), official: "كندا", common: "كندا"),
   CountryName(language: LangBre(), official: "Kanada", common: "Kanada"),

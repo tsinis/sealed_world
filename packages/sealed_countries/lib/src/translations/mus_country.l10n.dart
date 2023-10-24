@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Mauritius country:
+/// Provides 105 translations for a Mauritius country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -102,6 +103,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const musCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Mauritius",
+    common: "Mauritius",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Маурицијус",

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Monaco country:
+/// Provides 108 translations for a Monaco country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Albanian
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const mcoCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Principality of Monaco",
+    common: "Monaco",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Кнежевина Монако",

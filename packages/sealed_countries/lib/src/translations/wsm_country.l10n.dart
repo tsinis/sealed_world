@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 85 translations for a Samoa country:
+/// Provides 86 translations for a Samoa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -88,6 +89,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const wsmCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Independent State of Samoa",
+    common: "Samoa",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Независна Држава Самоа",

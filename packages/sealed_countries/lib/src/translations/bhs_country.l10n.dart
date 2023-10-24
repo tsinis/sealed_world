@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Bahamas country:
+/// Provides 107 translations for a Bahamas country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -104,6 +105,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const bhsCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Commonwealth of the Bahamas",
+    common: "Bahamas",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Комонвелт Бахама",

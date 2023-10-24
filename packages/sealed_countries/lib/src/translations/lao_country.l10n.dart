@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 90 translations for a Laos country:
+/// Provides 91 translations for a Laos country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -93,6 +94,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const laoCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Lao People's Democratic Republic",
+    common: "Laos",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Лаошка Народна Демократска Република",

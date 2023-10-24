@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 86 translations for a Vanuatu country:
+/// Provides 87 translations for a Vanuatu country:
 /// - (Eastern) Punjabi
 /// - Amharic
 /// - Arabic
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -89,6 +90,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const vutCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Vanuatu",
+    common: "Vanuatu",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Вануату",

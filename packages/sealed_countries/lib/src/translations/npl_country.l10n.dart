@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 95 translations for a Nepal country:
+/// Provides 96 translations for a Nepal country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -98,6 +99,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const nplCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Federal Democratic Republic of Nepal",
+    common: "Nepal",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Савезна Демократска Република Непал",

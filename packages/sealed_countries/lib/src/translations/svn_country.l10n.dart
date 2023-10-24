@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Slovenia country:
+/// Provides 107 translations for a Slovenia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const svnCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Slovenia",
+    common: "Slovenia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Словенија",

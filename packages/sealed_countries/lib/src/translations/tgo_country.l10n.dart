@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 83 translations for a Togo country:
+/// Provides 84 translations for a Togo country:
 /// - (Eastern) Punjabi
 /// - Amharic
 /// - Arabic
@@ -21,6 +21,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -85,6 +86,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const tgoCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Togolese Republic",
+    common: "Togo",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Тоголешка Република",

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 83 translations for a Aruba country:
+/// Provides 84 translations for a Aruba country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -86,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const abwCountryTranslations = [
+  CountryName(language: LangEng(), official: "Aruba", common: "Aruba"),
   CountryName(language: LangSrp(), official: "Аруба", common: "Аруба"),
   CountryName(language: LangAra(), official: "أروبا", common: "أروبا"),
   CountryName(language: LangBre(), official: "Aruba", common: "Aruba"),

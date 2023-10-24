@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Bouvet Island country:
+/// Provides 106 translations for a Bouvet Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Wolof
 /// - Zulu.
 const bvtCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Bouvet Island",
+    common: "Bouvet Island",
+  ),
   CountryName(language: LangSrp(), official: "Буве", common: "Буве"),
   CountryName(language: LangAra(), official: "جزر بوفيه", common: "جزر بوفيه"),
   CountryName(

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Tajikistan country:
+/// Provides 111 translations for a Tajikistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -110,6 +111,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const tjkCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Tajikistan",
+    common: "Tajikistan",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Таџикистан",

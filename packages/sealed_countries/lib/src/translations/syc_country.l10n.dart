@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Seychelles country:
+/// Provides 115 translations for a Seychelles country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -112,6 +113,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const sycCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Seychelles",
+    common: "Seychelles",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Сејшели",

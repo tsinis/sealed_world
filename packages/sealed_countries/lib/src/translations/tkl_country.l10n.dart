@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 82 translations for a Tokelau country:
+/// Provides 83 translations for a Tokelau country:
 /// - (Eastern) Punjabi
 /// - Amharic
 /// - Arabic
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Finnish
@@ -85,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const tklCountryTranslations = [
+  CountryName(language: LangEng(), official: "Tokelau", common: "Tokelau"),
   CountryName(language: LangSrp(), official: "Токелау", common: "Токелау"),
   CountryName(language: LangAra(), official: "توكيلاو", common: "توكيلاو"),
   CountryName(language: LangBre(), official: "Tokelau", common: "Tokelau"),

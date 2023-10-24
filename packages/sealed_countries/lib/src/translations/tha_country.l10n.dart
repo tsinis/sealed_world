@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Thailand country:
+/// Provides 117 translations for a Thailand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -113,6 +114,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const thaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Kingdom of Thailand",
+    common: "Thailand",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Краљевина Тајланд",

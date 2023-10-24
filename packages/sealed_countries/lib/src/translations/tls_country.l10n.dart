@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Timor-Leste country:
+/// Provides 111 translations for a Timor-Leste country:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -111,6 +112,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const tlsCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Democratic Republic of Timor-Leste",
+    common: "Timor-Leste",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Демократска Република Источни Тимор",

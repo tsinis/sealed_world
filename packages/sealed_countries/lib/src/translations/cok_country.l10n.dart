@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Cook Islands country:
+/// Provides 124 translations for a Cook Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -122,6 +123,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const cokCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Cook Islands",
+    common: "Cook Islands",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Кукова Острва",

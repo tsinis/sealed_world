@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Kenya country:
+/// Provides 102 translations for a Kenya country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -100,6 +101,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const kenCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Kenya",
+    common: "Kenya",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Кенија",

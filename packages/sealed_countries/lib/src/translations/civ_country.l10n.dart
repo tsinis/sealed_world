@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Ivory Coast country:
+/// Provides 115 translations for a Ivory Coast country:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -111,6 +112,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const civCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Côte d'Ivoire",
+    common: "Ivory Coast",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Обала Слоноваче",

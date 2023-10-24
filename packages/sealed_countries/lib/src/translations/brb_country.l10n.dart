@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 92 translations for a Barbados country:
+/// Provides 93 translations for a Barbados country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Amharic
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -95,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const brbCountryTranslations = [
+  CountryName(language: LangEng(), official: "Barbados", common: "Barbados"),
   CountryName(language: LangSrp(), official: "Барбадос", common: "Барбадос"),
   CountryName(language: LangAra(), official: "باربادوس", common: "باربادوس"),
   CountryName(language: LangBre(), official: "Barbados", common: "Barbados"),

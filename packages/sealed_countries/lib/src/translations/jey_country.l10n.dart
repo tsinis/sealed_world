@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 80 translations for a Jersey country:
+/// Provides 81 translations for a Jersey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Finnish
@@ -82,6 +83,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Zulu.
 const jeyCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Bailiwick of Jersey",
+    common: "Jersey",
+  ),
   CountryName(language: LangSrp(), official: "Џерзи", common: "Џерзи"),
   CountryName(language: LangAra(), official: "جيرزي", common: "جيرزي"),
   CountryName(language: LangBre(), official: "Jerzenez", common: "Jerzenez"),

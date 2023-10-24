@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Finland country:
+/// Provides 115 translations for a Finland country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -112,6 +113,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const finCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Finland",
+    common: "Finland",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Финска",

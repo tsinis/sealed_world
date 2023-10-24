@@ -4,7 +4,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Hong Kong country:
+/// Provides 103 translations for a Hong Kong country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -103,6 +104,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Western Frisian
 /// - Zulu.
 const hkgCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official:
+        "Hong Kong Special Administrative Region of the People's Republic of China",
+    common: "Hong Kong",
+  ),
   CountryName(
     language: LangSrp(),
     official:

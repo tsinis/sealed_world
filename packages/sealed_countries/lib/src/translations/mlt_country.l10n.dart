@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 86 translations for a Malta country:
+/// Provides 87 translations for a Malta country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -89,6 +90,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const mltCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Malta",
+    common: "Malta",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Малта",

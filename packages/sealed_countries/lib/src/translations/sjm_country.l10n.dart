@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Svalbard and Jan Mayen country:
+/// Provides 108 translations for a Svalbard and Jan Mayen country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -105,6 +106,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Wolof
 /// - Zulu.
 const sjmCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Svalbard og Jan Mayen",
+    common: "Svalbard and Jan Mayen",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Свалбард и Јан Мајен",

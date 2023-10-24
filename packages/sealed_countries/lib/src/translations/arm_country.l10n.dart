@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Armenia country:
+/// Provides 105 translations for a Armenia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -103,6 +104,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const armCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Armenia",
+    common: "Armenia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Јерменија",

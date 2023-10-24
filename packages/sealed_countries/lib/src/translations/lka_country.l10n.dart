@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 99 translations for a Sri Lanka country:
+/// Provides 100 translations for a Sri Lanka country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -97,6 +98,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const lkaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Democratic Socialist Republic of Sri Lanka",
+    common: "Sri Lanka",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Демократска Социјалистичка Република Сри Ланка",

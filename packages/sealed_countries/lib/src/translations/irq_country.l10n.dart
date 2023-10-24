@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Iraq country:
+/// Provides 116 translations for a Iraq country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -115,6 +116,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const irqCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Iraq",
+    common: "Iraq",
+  ),
   CountryName(language: LangSrp(), official: "Република Ирак", common: "Ирак"),
   CountryName(
     language: LangAra(),

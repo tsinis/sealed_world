@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Christmas Island country:
+/// Provides 112 translations for a Christmas Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -107,6 +108,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Wolof
 /// - Zulu.
 const cxrCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Territory of Christmas Island",
+    common: "Christmas Island",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Божићно Острво",

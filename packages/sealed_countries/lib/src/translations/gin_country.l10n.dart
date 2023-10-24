@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Guinea country:
+/// Provides 106 translations for a Guinea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -104,6 +105,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const ginCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Guinea",
+    common: "Guinea",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Кооперативна Република Гвајана",

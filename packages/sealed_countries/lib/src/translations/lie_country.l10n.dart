@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Liechtenstein country:
+/// Provides 103 translations for a Liechtenstein country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -100,6 +101,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const lieCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Principality of Liechtenstein",
+    common: "Liechtenstein",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Кнежевина Лихтенштајн",

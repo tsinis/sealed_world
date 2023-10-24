@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 86 translations for a Guernsey country:
+/// Provides 87 translations for a Guernsey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Finnish
@@ -86,6 +87,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Zulu.
 const ggyCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Bailiwick of Guernsey",
+    common: "Guernsey",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Бејливик Гернзи",

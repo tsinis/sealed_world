@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 99 translations for a Ghana country:
+/// Provides 100 translations for a Ghana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -99,6 +100,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const ghaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Ghana",
+    common: "Ghana",
+  ),
   CountryName(language: LangSrp(), official: "Република Гана", common: "Гана"),
   CountryName(language: LangAra(), official: "جمهورية غانا", common: "غانا"),
   CountryName(language: LangBre(), official: "Republik Ghana", common: "Ghana"),

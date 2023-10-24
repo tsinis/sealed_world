@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 86 translations for a Burundi country:
+/// Provides 87 translations for a Burundi country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -89,6 +90,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const bdiCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Burundi",
+    common: "Burundi",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Бурунди",

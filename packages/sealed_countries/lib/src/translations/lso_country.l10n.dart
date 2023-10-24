@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Lesotho country:
+/// Provides 103 translations for a Lesotho country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -102,6 +103,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const lsoCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Kingdom of Lesotho",
+    common: "Lesotho",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Краљевина Лесото",

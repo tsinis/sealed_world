@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Palestine country:
+/// Provides 118 translations for a Palestine country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -115,6 +116,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const pseCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "State of Palestine",
+    common: "Palestine",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Држава Палестина",

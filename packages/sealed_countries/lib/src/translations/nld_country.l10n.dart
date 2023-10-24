@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Netherlands country:
+/// Provides 125 translations for a Netherlands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -120,6 +121,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const nldCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Kingdom of the Netherlands",
+    common: "Netherlands",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Краљевина Холандија",

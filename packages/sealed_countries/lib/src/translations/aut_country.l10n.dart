@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Austria country:
+/// Provides 112 translations for a Austria country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -110,6 +111,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const autCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Austria",
+    common: "Austria",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Аустрија",

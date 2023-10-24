@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a New Caledonia country:
+/// Provides 119 translations for a New Caledonia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -117,6 +118,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const nclCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "New Caledonia",
+    common: "New Caledonia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Нова Каледонија",

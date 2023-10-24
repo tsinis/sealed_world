@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Turkmenistan country:
+/// Provides 101 translations for a Turkmenistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -101,6 +102,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const tkmCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Turkmenistan",
+    common: "Turkmenistan",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Туркменистан",

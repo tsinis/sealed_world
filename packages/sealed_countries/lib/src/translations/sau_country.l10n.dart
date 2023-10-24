@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Saudi Arabia country:
+/// Provides 120 translations for a Saudi Arabia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -117,6 +118,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const sauCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Kingdom of Saudi Arabia",
+    common: "Saudi Arabia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Краљевина Саудијска Арабија",

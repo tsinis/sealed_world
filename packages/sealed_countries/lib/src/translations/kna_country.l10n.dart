@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Saint Kitts and Nevis country:
+/// Provides 124 translations for a Saint Kitts and Nevis country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -121,6 +121,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const knaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Federation of Saint Christopher and Nevis",
+    common: "Saint Kitts and Nevis",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Федерација Сент Китс и Невис",

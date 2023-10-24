@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 93 translations for a Grenada country:
+/// Provides 94 translations for a Grenada country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -94,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const grdCountryTranslations = [
+  CountryName(language: LangEng(), official: "Grenada", common: "Grenada"),
   CountryName(language: LangSrp(), official: "Гренада", common: "Гренада"),
   CountryName(language: LangAra(), official: "غرينادا", common: "غرينادا"),
   CountryName(language: LangBre(), official: "Grenada", common: "Grenada"),

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 95 translations for a Gibraltar country:
+/// Provides 96 translations for a Gibraltar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -97,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const gibCountryTranslations = [
+  CountryName(language: LangEng(), official: "Gibraltar", common: "Gibraltar"),
   CountryName(language: LangSrp(), official: "Гибралтар", common: "Гибралтар"),
   CountryName(language: LangAra(), official: "جبل طارق", common: "جبل طارق"),
   CountryName(language: LangBre(), official: "Jibraltar", common: "Jibraltar"),

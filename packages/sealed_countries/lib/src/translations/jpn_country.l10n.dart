@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Japan country:
+/// Provides 116 translations for a Japan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -116,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const jpnCountryTranslations = [
+  CountryName(language: LangEng(), official: "Japan", common: "Japan"),
   CountryName(language: LangSrp(), official: "Јапан", common: "Јапан"),
   CountryName(language: LangAra(), official: "اليابان", common: "اليابان"),
   CountryName(language: LangBre(), official: "Japan", common: "Japan"),

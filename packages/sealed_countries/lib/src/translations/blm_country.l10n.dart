@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Saint Barthélemy country:
+/// Provides 108 translations for a Saint Barthélemy country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -104,6 +104,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Wolof
 /// - Zulu.
 const blmCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Collectivity of Saint Barthélemy",
+    common: "Saint Barthélemy",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Територијални Kолектив Сен Бартелеми",

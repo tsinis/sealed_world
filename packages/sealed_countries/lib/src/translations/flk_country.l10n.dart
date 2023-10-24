@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Falkland Islands country:
+/// Provides 124 translations for a Falkland Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -120,6 +121,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const flkCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Falkland Islands",
+    common: "Falkland Islands",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Фолкландска Острва",

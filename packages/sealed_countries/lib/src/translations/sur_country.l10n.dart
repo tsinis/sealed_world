@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Suriname country:
+/// Provides 109 translations for a Suriname country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -107,6 +108,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const surCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Suriname",
+    common: "Suriname",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Суринам",

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Isle of Man country:
+/// Provides 103 translations for a Isle of Man country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Finnish
@@ -101,6 +102,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Wolof
 /// - Zulu.
 const imnCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Isle of Man",
+    common: "Isle of Man",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Острво Мен",

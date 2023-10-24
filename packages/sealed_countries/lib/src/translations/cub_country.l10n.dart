@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Cuba country:
+/// Provides 107 translations for a Cuba country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const cubCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Cuba",
+    common: "Cuba",
+  ),
   CountryName(language: LangSrp(), official: "Република Куба", common: "Куба"),
   CountryName(language: LangAra(), official: "جمهورية كوبا", common: "كوبا"),
   CountryName(language: LangBre(), official: "Republik Kuba", common: "Kuba"),

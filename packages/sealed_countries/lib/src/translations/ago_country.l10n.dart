@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 84 translations for a Angola country:
+/// Provides 85 translations for a Angola country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -86,6 +87,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const agoCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Angola",
+    common: "Angola",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Ангола",

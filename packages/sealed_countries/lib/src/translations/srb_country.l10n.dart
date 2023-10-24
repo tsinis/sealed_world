@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 92 translations for a Serbia country:
+/// Provides 93 translations for a Serbia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Finnish
 /// - French
@@ -93,6 +94,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Zulu.
 const srbCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Serbia",
+    common: "Serbia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Србија",

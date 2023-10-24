@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Gabon country:
+/// Provides 97 translations for a Gabon country:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -98,6 +99,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const gabCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Gabonese Republic",
+    common: "Gabon",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Габонска Република",

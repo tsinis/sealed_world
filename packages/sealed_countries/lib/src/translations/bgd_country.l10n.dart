@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Bangladesh country:
+/// Provides 107 translations for a Bangladesh country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -105,6 +106,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const bgdCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "People's Republic of Bangladesh",
+    common: "Bangladesh",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Народна Република Бангладеш",

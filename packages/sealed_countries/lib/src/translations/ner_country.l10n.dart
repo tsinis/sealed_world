@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 98 translations for a Niger country:
+/// Provides 99 translations for a Niger country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -100,6 +101,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const nerCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Niger",
+    common: "Niger",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Нигер",

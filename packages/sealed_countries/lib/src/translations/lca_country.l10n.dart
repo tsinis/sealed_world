@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Saint Lucia country:
+/// Provides 119 translations for a Saint Lucia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -116,6 +116,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const lcaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Saint Lucia",
+    common: "Saint Lucia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Света Луција",

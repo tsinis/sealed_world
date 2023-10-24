@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a Guinea-Bissau country:
+/// Provides 110 translations for a Guinea-Bissau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -108,6 +109,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const gnbCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Guinea-Bissau",
+    common: "Guinea-Bissau",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Гвинеја Бисао",

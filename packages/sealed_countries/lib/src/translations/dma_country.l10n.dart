@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Dominica country:
+/// Provides 108 translations for a Dominica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const dmaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Commonwealth of Dominica",
+    common: "Dominica",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Комонвелт Доминика",

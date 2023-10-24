@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Tanzania country:
+/// Provides 105 translations for a Tanzania country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -104,6 +105,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const tzaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "United Republic of Tanzania",
+    common: "Tanzania",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Уједињена Република Танзанија",

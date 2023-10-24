@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 93 translations for a Oman country:
+/// Provides 94 translations for a Oman country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -95,6 +96,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const omnCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Sultanate of Oman",
+    common: "Oman",
+  ),
   CountryName(language: LangSrp(), official: "Султанат Оман", common: "Оман"),
   CountryName(language: LangAra(), official: "سلطنة عمان", common: "عمان"),
   CountryName(

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a New Zealand country:
+/// Provides 116 translations for a New Zealand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -113,6 +114,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const nzlCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "New Zealand",
+    common: "New Zealand",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Нови Зеланд",

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Ethiopia country:
+/// Provides 118 translations for a Ethiopia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -117,6 +118,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const ethCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Federal Democratic Republic of Ethiopia",
+    common: "Ethiopia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Савезна Демократска Република Етиопија",

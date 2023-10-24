@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Czechia country:
+/// Provides 125 translations for a Czechia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -122,6 +123,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const czeCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Czech Republic",
+    common: "Czechia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Чешка Република",

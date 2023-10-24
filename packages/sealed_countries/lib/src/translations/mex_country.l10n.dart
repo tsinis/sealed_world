@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Mexico country:
+/// Provides 114 translations for a Mexico country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -112,6 +113,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const mexCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "United Mexican States",
+    common: "Mexico",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Сједињене Мексичке Државе",

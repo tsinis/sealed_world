@@ -2,8 +2,8 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Saint Helena,
-/// Ascension and Tristan da Cunha country:
+/// Provides 115 translations for a Saint Helena, Ascension and Tristan da Cunha
+/// country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -114,6 +114,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const shnCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Saint Helena, Ascension and Tristan da Cunha",
+    common: "Saint Helena, Ascension and Tristan da Cunha",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Света Јелена, Асенсион и Тристан да Куња",

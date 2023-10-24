@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Azerbaijan country:
+/// Provides 118 translations for a Azerbaijan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -115,6 +116,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const azeCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Azerbaijan",
+    common: "Azerbaijan",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Азербејџанска Република",

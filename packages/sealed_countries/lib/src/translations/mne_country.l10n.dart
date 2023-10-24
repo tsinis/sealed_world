@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 89 translations for a Montenegro country:
+/// Provides 90 translations for a Montenegro country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Finnish
@@ -88,6 +89,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Zulu.
 const mneCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Montenegro",
+    common: "Montenegro",
+  ),
   CountryName(language: LangSrp(), official: "Црна Гора", common: "Црна Гора"),
   CountryName(
     language: LangAra(),

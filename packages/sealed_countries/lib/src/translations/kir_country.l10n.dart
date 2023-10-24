@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 80 translations for a Kiribati country:
+/// Provides 81 translations for a Kiribati country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -83,6 +84,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const kirCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Independent and Sovereign Republic of Kiribati",
+    common: "Kiribati",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Независна и Суверена Република Кирибати",

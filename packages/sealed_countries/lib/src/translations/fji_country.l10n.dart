@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Fiji country:
+/// Provides 98 translations for a Fiji country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -98,6 +99,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const fjiCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Fiji",
+    common: "Fiji",
+  ),
   CountryName(language: LangSrp(), official: "Република Фиџи", common: "Фиџи"),
   CountryName(
     language: LangAra(),

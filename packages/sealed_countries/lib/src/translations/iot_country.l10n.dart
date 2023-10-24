@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a British Indian Ocean Territory country:
+/// Provides 123 translations for a British Indian Ocean Territory country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -117,6 +118,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const iotCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "British Indian Ocean Territory",
+    common: "British Indian Ocean Territory",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Британска територија Индијског океана",

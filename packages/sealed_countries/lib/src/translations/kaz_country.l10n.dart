@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Kazakhstan country:
+/// Provides 114 translations for a Kazakhstan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -113,6 +114,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const kazCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Kazakhstan",
+    common: "Kazakhstan",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Казахстан",

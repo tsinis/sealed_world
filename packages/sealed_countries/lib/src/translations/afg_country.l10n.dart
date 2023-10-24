@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Afghanistan country:
+/// Provides 112 translations for a Afghanistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -109,6 +110,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const afgCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Islamic Republic of Afghanistan",
+    common: "Afghanistan",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Исламска Република Авганистан",

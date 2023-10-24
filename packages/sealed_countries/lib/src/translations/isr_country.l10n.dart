@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Israel country:
+/// Provides 105 translations for a Israel country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -104,6 +105,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const isrCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "State of Israel",
+    common: "Israel",
+  ),
   CountryName(language: LangSrp(), official: "Држава Израел", common: "Израел"),
   CountryName(language: LangAra(), official: "دولة إسرائيل", common: "إسرائيل"),
   CountryName(language: LangBre(), official: "Stad Israel", common: "Israel"),

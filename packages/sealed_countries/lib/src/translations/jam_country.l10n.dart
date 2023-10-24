@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Jamaica country:
+/// Provides 111 translations for a Jamaica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -109,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const jamCountryTranslations = [
+  CountryName(language: LangEng(), official: "Jamaica", common: "Jamaica"),
   CountryName(language: LangSrp(), official: "Јамајка", common: "Јамајка"),
   CountryName(language: LangAra(), official: "جامايكا", common: "جامايكا"),
   CountryName(language: LangBre(), official: "Jamaika", common: "Jamaika"),

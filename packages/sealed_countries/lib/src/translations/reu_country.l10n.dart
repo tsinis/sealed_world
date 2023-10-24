@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 103 translations for a Réunion country:
+/// Provides 104 translations for a Réunion country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Albanian
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -100,6 +101,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const reuCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Réunion Island",
+    common: "Réunion",
+  ),
   CountryName(language: LangSrp(), official: "Реинион", common: "Реинион"),
   CountryName(
     language: LangAra(),

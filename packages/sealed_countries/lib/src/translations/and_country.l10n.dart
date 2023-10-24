@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 95 translations for a Andorra country:
+/// Provides 96 translations for a Andorra country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -96,6 +97,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const andCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Principality of Andorra",
+    common: "Andorra",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Кнежевина Андора",

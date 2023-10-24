@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Jordan country:
+/// Provides 111 translations for a Jordan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -111,6 +112,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const jorCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Hashemite Kingdom of Jordan",
+    common: "Jordan",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Хашемитска Краљевина Јордан",

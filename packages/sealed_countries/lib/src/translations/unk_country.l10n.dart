@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 35 translations for a Kosovo country:
+/// Provides 36 translations for a Kosovo country:
 /// - Albanian
 /// - Arabic
 /// - Bambara
@@ -39,6 +39,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Welsh.
 const unkCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Kosovo",
+    common: "Kosovo",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Косово",

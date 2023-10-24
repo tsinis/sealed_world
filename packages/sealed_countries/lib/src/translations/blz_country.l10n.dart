@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Belize country:
+/// Provides 98 translations for a Belize country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -97,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const blzCountryTranslations = [
+  CountryName(language: LangEng(), official: "Belize", common: "Belize"),
   CountryName(language: LangSrp(), official: "Белизе", common: "Белизе"),
   CountryName(language: LangAra(), official: "بليز", common: "بليز"),
   CountryName(language: LangBre(), official: "Belize", common: "Belize"),

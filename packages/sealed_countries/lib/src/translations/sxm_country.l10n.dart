@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 82 translations for a Sint Maarten country:
+/// Provides 83 translations for a Sint Maarten country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Finnish
 /// - French
@@ -82,6 +83,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Wolof
 /// - Zulu.
 const sxmCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Sint Maarten",
+    common: "Sint Maarten",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Свети Мартин (Холандија)",

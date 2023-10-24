@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 92 translations for a San Marino country:
+/// Provides 93 translations for a San Marino country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -92,6 +93,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const smrCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of San Marino",
+    common: "San Marino",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Најузвишенија Република Сан Марино",

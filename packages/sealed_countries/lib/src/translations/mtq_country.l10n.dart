@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Martinique country:
+/// Provides 105 translations for a Martinique country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -104,6 +105,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const mtqCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Martinique",
+    common: "Martinique",
+  ),
   CountryName(language: LangSrp(), official: "Мартиник", common: "Мартиник"),
   CountryName(language: LangAra(), official: "مارتينيك", common: "مارتينيك"),
   CountryName(language: LangBre(), official: "Martinik", common: "Martinik"),

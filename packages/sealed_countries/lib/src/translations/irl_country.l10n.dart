@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Ireland country:
+/// Provides 120 translations for a Ireland country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -118,6 +119,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const irlCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Ireland",
+    common: "Ireland",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Ирска",

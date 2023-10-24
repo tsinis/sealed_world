@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Haiti country:
+/// Provides 97 translations for a Haiti country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -98,6 +99,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const htiCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Haiti",
+    common: "Haiti",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Хаити",

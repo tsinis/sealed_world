@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a Estonia country:
+/// Provides 110 translations for a Estonia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -108,6 +109,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const estCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Estonia",
+    common: "Estonia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Естонска Република",

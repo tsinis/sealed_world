@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Republic of the Congo country:
+/// Provides 118 translations for a Republic of the Congo country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -115,6 +116,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const cogCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of the Congo",
+    common: "Republic of the Congo",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Конго",

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Syria country:
+/// Provides 114 translations for a Syria country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -112,6 +113,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const syrCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Syrian Arab Republic",
+    common: "Syria",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Сиријска Арапска Република",

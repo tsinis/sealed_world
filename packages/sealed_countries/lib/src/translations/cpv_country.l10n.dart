@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Cape Verde country:
+/// Provides 121 translations for a Cape Verde country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -118,6 +119,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const cpvCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Cabo Verde",
+    common: "Cape Verde",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Зеленортска Република",

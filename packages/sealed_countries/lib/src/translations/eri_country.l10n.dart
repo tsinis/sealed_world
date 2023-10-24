@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Eritrea country:
+/// Provides 102 translations for a Eritrea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -99,6 +100,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const eriCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "State of Eritrea",
+    common: "Eritrea",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Држава Еритреја",

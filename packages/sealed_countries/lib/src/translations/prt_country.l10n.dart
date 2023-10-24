@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Portugal country:
+/// Provides 102 translations for a Portugal country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -102,6 +103,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const prtCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Portuguese Republic",
+    common: "Portugal",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Португалска Република",

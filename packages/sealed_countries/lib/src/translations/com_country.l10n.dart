@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Comoros country:
+/// Provides 121 translations for a Comoros country:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -118,6 +119,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const comCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Union of the Comoros",
+    common: "Comoros",
+  ),
   CountryName(language: LangSrp(), official: "Савез Комора", common: "Комори"),
   CountryName(
     language: LangAra(),

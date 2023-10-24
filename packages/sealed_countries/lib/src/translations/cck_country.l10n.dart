@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Cocos (Keeling) Islands country:
+/// Provides 112 translations for a Cocos (Keeling) Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Wolof
 /// - Zulu.
 const cckCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Territory of the Cocos (Keeling) Islands",
+    common: "Cocos (Keeling) Islands",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Кокосова (Килинг) Острва",

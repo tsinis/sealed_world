@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Spain country:
+/// Provides 120 translations for a Spain country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -119,6 +120,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const espCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Kingdom of Spain",
+    common: "Spain",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Краљевина Шпанија",

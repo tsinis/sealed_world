@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 85 translations for a Niue country:
+/// Provides 86 translations for a Niue country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Amharic
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -87,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const niuCountryTranslations = [
+  CountryName(language: LangEng(), official: "Niue", common: "Niue"),
   CountryName(language: LangSrp(), official: "Нијуе", common: "Нијуе"),
   CountryName(language: LangAra(), official: "نييوي", common: "نييوي"),
   CountryName(language: LangBre(), official: "Niue", common: "Niue"),

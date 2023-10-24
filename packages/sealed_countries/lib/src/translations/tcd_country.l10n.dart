@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Chad country:
+/// Provides 116 translations for a Chad country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -116,6 +117,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const tcdCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Chad",
+    common: "Chad",
+  ),
   CountryName(language: LangSrp(), official: "Република Чад", common: "Чад"),
   CountryName(language: LangAra(), official: "جمهورية تشاد", common: "تشاد"),
   CountryName(language: LangBre(), official: "Republik Tchad", common: "Tchad"),

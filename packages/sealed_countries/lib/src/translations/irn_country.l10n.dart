@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 95 translations for a Iran country:
+/// Provides 96 translations for a Iran country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -96,6 +97,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const irnCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Islamic Republic of Iran",
+    common: "Iran",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Исламска Република Иран",

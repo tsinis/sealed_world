@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Brunei country:
+/// Provides 101 translations for a Brunei country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -100,6 +101,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const brnCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Nation of Brunei, Abode of Peace",
+    common: "Brunei",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Брунеј Дарусалам",

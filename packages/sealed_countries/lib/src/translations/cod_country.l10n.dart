@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a DR Congo country:
+/// Provides 115 translations for a DR Congo country:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -112,6 +113,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const codCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Democratic Republic of the Congo",
+    common: "DR Congo",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Демократска Република Конго",

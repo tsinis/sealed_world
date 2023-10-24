@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a São Tomé and Príncipe country:
+/// Provides 125 translations for a São Tomé and Príncipe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -121,6 +122,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const stpCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Democratic Republic of São Tomé and Príncipe",
+    common: "São Tomé and Príncipe",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Демократска Република Сао Томе и Принсипе",

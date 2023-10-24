@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Mauritania country:
+/// Provides 109 translations for a Mauritania country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -108,6 +109,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const mrtCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Islamic Republic of Mauritania",
+    common: "Mauritania",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Исламска Република Мауританија",

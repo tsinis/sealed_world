@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Saint Vincent and the Grenadines country:
+/// Provides 128 translations for a Saint Vincent and the Grenadines country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -122,6 +122,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const vctCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Saint Vincent and the Grenadines",
+    common: "Saint Vincent and the Grenadines",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Свети Винсент и Гренадини",

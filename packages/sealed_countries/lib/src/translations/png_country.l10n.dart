@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Papua New Guinea country:
+/// Provides 120 translations for a Papua New Guinea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -117,6 +118,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const pngCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Independent State of Papua New Guinea",
+    common: "Papua New Guinea",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Независна Држава Папуа Нова Гвинеја",

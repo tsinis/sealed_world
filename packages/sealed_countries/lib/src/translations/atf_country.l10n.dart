@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 112 translations for a French Southern and Antarctic Lands country:
+/// Provides 113 translations for a French Southern and Antarctic Lands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -108,6 +109,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const atfCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Territory of the French Southern and Antarctic Lands",
+    common: "French Southern and Antarctic Lands",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Француске јужне и антарктичке земље",

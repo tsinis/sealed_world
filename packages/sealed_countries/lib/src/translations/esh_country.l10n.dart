@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Western Sahara country:
+/// Provides 106 translations for a Western Sahara country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -106,6 +107,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const eshCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Sahrawi Arab Democratic Republic",
+    common: "Western Sahara",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Сахарска Арапска Демократска Република",

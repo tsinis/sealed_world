@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 95 translations for a Honduras country:
+/// Provides 96 translations for a Honduras country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -96,6 +97,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const hndCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Honduras",
+    common: "Honduras",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Хондурас",

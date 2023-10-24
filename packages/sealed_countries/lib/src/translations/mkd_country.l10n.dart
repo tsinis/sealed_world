@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a North Macedonia country:
+/// Provides 110 translations for a North Macedonia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Danish
 /// - Dutch
+/// - English
 /// - Estonian
 /// - Finnish
 /// - French
@@ -104,6 +105,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const mkdCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of North Macedonia",
+    common: "North Macedonia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Северна Македонија",

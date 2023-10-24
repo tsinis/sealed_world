@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a United States country:
+/// Provides 131 translations for a United States country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -127,6 +128,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const usaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "United States of America",
+    common: "United States",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Сједињене Америчке Државе",

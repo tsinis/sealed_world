@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Puerto Rico country:
+/// Provides 106 translations for a Puerto Rico country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -103,6 +104,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const priCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Commonwealth of Puerto Rico",
+    common: "Puerto Rico",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Комонвелт Порторико",

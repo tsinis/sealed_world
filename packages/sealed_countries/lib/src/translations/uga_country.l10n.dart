@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 88 translations for a Uganda country:
+/// Provides 89 translations for a Uganda country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -89,6 +90,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const ugaCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Uganda",
+    common: "Uganda",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Уганда",

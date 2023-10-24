@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Antigua and Barbuda country:
+/// Provides 125 translations for a Antigua and Barbuda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -121,6 +122,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const atgCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Antigua and Barbuda",
+    common: "Antigua and Barbuda",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Антигва и Барбуда",

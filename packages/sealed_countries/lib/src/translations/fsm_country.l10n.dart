@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Micronesia country:
+/// Provides 114 translations for a Micronesia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -29,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -113,6 +114,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const fsmCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Federated States of Micronesia",
+    common: "Micronesia",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Савез Држава Микронезије",

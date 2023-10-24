@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Guyana country:
+/// Provides 97 translations for a Guyana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -96,6 +97,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const guyCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Co-operative Republic of Guyana",
+    common: "Guyana",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Кооперативна Република Гвајана",

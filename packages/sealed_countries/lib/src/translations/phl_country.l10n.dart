@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Philippines country:
+/// Provides 121 translations for a Philippines country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -118,6 +119,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const phlCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of the Philippines",
+    common: "Philippines",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Република Филипини",

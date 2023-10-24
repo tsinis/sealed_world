@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a United States Virgin Islands country:
+/// Provides 124 translations for a United States Virgin Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -120,6 +120,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const virCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Virgin Islands of the United States",
+    common: "United States Virgin Islands",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Америчка Девичанска Острва",

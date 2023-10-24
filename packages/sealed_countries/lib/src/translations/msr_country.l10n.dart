@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 95 translations for a Montserrat country:
+/// Provides 96 translations for a Montserrat country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Ewe
 /// - Finnish
@@ -94,6 +95,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const msrCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Montserrat",
+    common: "Montserrat",
+  ),
   CountryName(language: LangSrp(), official: "Монтсерат", common: "Монтсерат"),
   CountryName(language: LangAra(), official: "مونتسرات", common: "مونتسرات"),
   CountryName(

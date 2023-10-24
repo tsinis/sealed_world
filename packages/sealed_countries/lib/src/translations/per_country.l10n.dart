@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 87 translations for a Peru country:
+/// Provides 88 translations for a Peru country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -90,6 +91,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const perCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Republic of Peru",
+    common: "Peru",
+  ),
   CountryName(language: LangSrp(), official: "Република Перу", common: "Перу"),
   CountryName(language: LangAra(), official: "جمهورية بيرو", common: "بيرو"),
   CountryName(language: LangBre(), official: "Republik Perou", common: "Perou"),

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 89 translations for a Guam country:
+/// Provides 90 translations for a Guam country:
 /// - (Eastern) Punjabi
 /// - Amharic
 /// - Arabic
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -91,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const gumCountryTranslations = [
+  CountryName(language: LangEng(), official: "Guam", common: "Guam"),
   CountryName(language: LangSrp(), official: "Гуам", common: "Гуам"),
   CountryName(language: LangAra(), official: "غوام", common: "غوام"),
   CountryName(language: LangBre(), official: "Guam", common: "Guam"),

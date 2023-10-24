@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 93 translations for a Mayotte country:
+/// Provides 94 translations for a Mayotte country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Czech
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
@@ -91,6 +92,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zulu.
 const mytCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Department of Mayotte",
+    common: "Mayotte",
+  ),
   CountryName(language: LangSrp(), official: "Мајот", common: "Мајот"),
   CountryName(language: LangAra(), official: "مايوت", common: "مايوت"),
   CountryName(

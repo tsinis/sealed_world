@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Caribbean Netherlands country:
+/// Provides 98 translations for a Caribbean Netherlands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Danish
 /// - Dutch
 /// - Dzongkha
+/// - English
 /// - Estonian
 /// - Faroese
 /// - Finnish
@@ -98,6 +99,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Western Frisian
 /// - Zulu.
 const besCountryTranslations = [
+  CountryName(
+    language: LangEng(),
+    official: "Bonaire, Sint Eust,atius and Saba",
+    common: "Caribbean Netherlands",
+  ),
   CountryName(
     language: LangSrp(),
     official: "Бонер, Свети Еустахије и Саба",
