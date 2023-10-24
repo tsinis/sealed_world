@@ -13,7 +13,6 @@ extension $PackageMatcherExtension on Package {
     required T Function() sealedLanguages,
     required T Function() sealedCurrencies,
     required T Function() sealedCountries,
-    required T Function() worldCountries,
   }) {
     switch (this) {
       case Package.sealedLanguages:
@@ -22,8 +21,6 @@ extension $PackageMatcherExtension on Package {
         return sealedCurrencies();
       case Package.sealedCountries:
         return sealedCountries();
-      case Package.worldCountries:
-        return worldCountries();
     }
   }
 
@@ -31,7 +28,6 @@ extension $PackageMatcherExtension on Package {
     required T sealedLanguages,
     required T sealedCurrencies,
     required T sealedCountries,
-    required T worldCountries,
   }) {
     switch (this) {
       case Package.sealedLanguages:
@@ -40,8 +36,6 @@ extension $PackageMatcherExtension on Package {
         return sealedCurrencies;
       case Package.sealedCountries:
         return sealedCountries;
-      case Package.worldCountries:
-        return worldCountries;
     }
   }
 
@@ -49,7 +43,6 @@ extension $PackageMatcherExtension on Package {
     T Function()? sealedLanguages,
     T Function()? sealedCurrencies,
     T Function()? sealedCountries,
-    T Function()? worldCountries,
   }) {
     switch (this) {
       case Package.sealedLanguages:
@@ -58,8 +51,6 @@ extension $PackageMatcherExtension on Package {
         return sealedCurrencies?.call();
       case Package.sealedCountries:
         return sealedCountries?.call();
-      case Package.worldCountries:
-        return worldCountries?.call();
     }
   }
 
@@ -67,7 +58,6 @@ extension $PackageMatcherExtension on Package {
     T? sealedLanguages,
     T? sealedCurrencies,
     T? sealedCountries,
-    T? worldCountries,
   }) {
     switch (this) {
       case Package.sealedLanguages:
@@ -76,8 +66,6 @@ extension $PackageMatcherExtension on Package {
         return sealedCurrencies;
       case Package.sealedCountries:
         return sealedCountries;
-      case Package.worldCountries:
-        return worldCountries;
     }
   }
 }

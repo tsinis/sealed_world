@@ -9,12 +9,9 @@ part "package.select.dart";
 enum Package {
   sealedLanguages,
   sealedCurrencies,
-  sealedCountries,
-  worldCountries(isFlutter: true);
+  sealedCountries;
 
-  const Package({this.isFlutter = false});
-
-  final bool isFlutter;
+  const Package();
 
   String get dirName => name.toSnakeCase();
 

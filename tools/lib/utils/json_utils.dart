@@ -2,7 +2,7 @@
 import "dart:convert";
 
 import "package:change_case/change_case.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
+import "package:sealed_countries/sealed_countries.dart";
 
 import "../constants/path_constants.dart";
 import "../generators/helpers/extensions/package_associations_extension.dart";
@@ -35,8 +35,9 @@ final class JsonUtils {
       if (itemFromCode == null) continue; // Might be more items in the source.
       print("\nExtracting translations for: ${itemFromCode.name}\n");
       final english = englishData[itemFromCode];
-      final translations = <TranslatedName>{};
-      if (english != null) translations.add(TranslatedName(eng, name: english));
+      final translations = package.translations(item.code).toSet();
+      if (english != null && translations.isEmpty)
+        translations.add(TranslatedName(eng, name: english));
       for (final dir in directories) {
         final dirName = basename(dir.path);
         final translation = _extractL10N(dirName);
@@ -46,6 +47,9 @@ final class JsonUtils {
         if (lang == null || translationForLang == null) continue;
         if (translationForLang == english) continue;
         final script = locale.scriptCode;
+        final containsWithFullName =
+            translations.any((e) => e.language == lang && e.fullName != null);
+        if (containsWithFullName) continue;
         final translated = TranslatedName(
           lang,
           name: translationForLang,
@@ -55,9 +59,7 @@ final class JsonUtils {
 
         final isAdded = translations.add(translated);
         if (!isAdded) continue;
-        print(
-          ''' * Add ${translated.language.name}: "${translated.name}" translation (total: ${translations.length})''',
-        );
+        print("* Add ${translated.language.name} total ${translations.length}");
       }
 
       final translationCode = item.code.toLowerCase();
@@ -136,11 +138,22 @@ const ${varFileName.toCamelCase()} = [
     mapToUpdate[const FiatZwl()] = withoutYear.trim();
   }
 
-  IsoStandardized? _instanceFromCode(String code) =>
-      package.whenOrNull<IsoStandardized?>(
+  IsoStandardized? _instanceFromCode(String code) => package.when(
         sealedCurrencies: () => _convertCodeToCurrency(code),
         sealedLanguages: () => _convertCodeToLang(code),
+        sealedCountries: () => _convertCodeToCountry(code),
       );
+
+  WorldCountry? _convertCodeToCountry(String rawCode) {
+    final countryCode = rawCode.toUpperCase().trim();
+
+    return WorldCountry.maybeFromValue(
+      countryCode,
+      where: (country) => countryCode.length == IsoStandardized.codeShortLength
+          ? country.codeShort
+          : country.code,
+    );
+  }
 
   /// Missing: XAG, XAU, XBA, XBB, XBC, XBD, XDR, XPD, XPT, XTS.
   FiatCurrency? _convertCodeToCurrency(String rawCode) {

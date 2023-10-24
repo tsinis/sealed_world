@@ -1,54 +1,56 @@
 import "package:change_case/change_case.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
+import "package:sealed_countries/sealed_countries.dart";
 
 import "../../../models/package.dart";
 
 extension PackageAssociationsExtension on Package {
-  Type get type =>
-      whenConstOrNull(
+  Type get type => whenConst(
         sealedLanguages: NaturalLanguage,
         sealedCurrencies: FiatCurrency,
-      ) ??
-      NaturalLanguage;
+        sealedCountries: WorldCountry,
+      );
 
-  String get classPrefix =>
-      whenConstOrNull(
+  String get classPrefix => whenConst(
         sealedLanguages: "Lang",
         sealedCurrencies: "Fiat",
-      ) ??
-      "";
+        sealedCountries: "World",
+      );
 
-  List<IsoStandardized> get dataList =>
-      whenConstOrNull(
+  List<IsoStandardized> get dataList => whenConst(
         sealedLanguages: NaturalLanguage.list,
         sealedCurrencies: FiatCurrency.list,
-      ) ??
-      const [];
+        sealedCountries: WorldCountry.list,
+      );
 
-  String get dataFilePrefix =>
-      whenConstOrNull(sealedCurrencies: "fiat_currencies") ??
-      "${type.toString().toSnakeCase()}s";
+  List<TranslatedName> translations(String code) => whenConst(
+        sealedCurrencies: FiatCurrency.fromCode(code),
+        sealedCountries: WorldCountry.fromCode(code),
+        sealedLanguages: NaturalLanguage.fromCode(code),
+      ).translations;
+
+  String get dataFilePrefix => whenConst(
+        sealedLanguages: "${type.toString().toSnakeCase()}s",
+        sealedCurrencies: "fiat_currencies",
+        sealedCountries: "world_countries",
+      );
 
   String get dataRepresent => whenConst(
         sealedLanguages: Language,
-        sealedCountries: "Country",
+        sealedCountries: Country,
         sealedCurrencies: Currency,
-        worldCountries: "world",
       ).toString().toLowerCase();
 
-  String get isoCodeAssociated =>
-      whenConstOrNull(
+  String get isoCodeAssociated => whenConst(
         sealedLanguages: "639-2",
         sealedCurrencies: "4217 (Alpha)",
-      ) ??
-      "";
+        sealedCountries: "3166-1 Alpha-3",
+      );
 
-  String get isoCodeOtherAssociated =>
-      whenConstOrNull(
+  String get isoCodeOtherAssociated => whenConst(
         sealedLanguages: "639-1",
         sealedCurrencies: "4217 (Numeric)",
-      ) ??
-      "";
+        sealedCountries: "3166-1 Alpha-2",
+      );
 
   String get umpirskyRepoUrl =>
       "https://github.com/umpirsky/$dataRepresent-list";
