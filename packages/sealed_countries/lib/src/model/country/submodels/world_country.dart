@@ -79,9 +79,16 @@ class WorldCountry extends Country
   /// The `code` parameter is required and must be a valid country code. Returns
   /// a `WorldCountry` object that represents the country with the given `code`.
   /// Throws a `StateError` if no such country exists.
-  factory WorldCountry.fromCode(String code) => list.firstWhere(
-        (country) => country.code == code.trim().toUpperCase(),
-      );
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  factory WorldCountry.fromCode(
+    String code, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    assert(countries.isNotEmpty, "`countries` should not be empty!");
+
+    return countries.firstWhere((co) => co.code == code.trim().toUpperCase());
+  }
 
   /// Creates a new `WorldCountry` object from the given `codeShort`
   /// ISO 3166-1 Alpha-2 code.
@@ -89,9 +96,17 @@ class WorldCountry extends Country
   /// The `codeShort` parameter is required and must be a valid country code
   /// short. Returns a `WorldCountry` object that represents the country with
   /// the given `codeShort`. Throws a `StateError` if no such country exists.
-  factory WorldCountry.fromCodeShort(String codeShort) => list.firstWhere(
-        (country) => country.codeShort == codeShort.trim().toUpperCase(),
-      );
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  factory WorldCountry.fromCodeShort(
+    String codeShort, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    assert(countries.isNotEmpty, "`countries` should not be empty!");
+
+    return countries
+        .firstWhere((co) => co.codeShort == codeShort.trim().toUpperCase());
+  }
 
   /// The native names of the country.
   @override

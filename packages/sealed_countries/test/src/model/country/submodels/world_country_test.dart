@@ -145,6 +145,14 @@ void main() => group("$WorldCountry", () {
             throwsStateError,
           ),
         );
+
+        test(
+          "with empty countries",
+          () => expect(
+            () => WorldCountry.fromCodeShort(value.codeShort, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
 
       group("fromCode", () {
@@ -158,6 +166,14 @@ void main() => group("$WorldCountry", () {
           () => expect(
             () => WorldCountry.fromCode(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty countries",
+          () => expect(
+            () => WorldCountry.fromCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
