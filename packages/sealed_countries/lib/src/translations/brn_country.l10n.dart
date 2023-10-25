@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Brunei country:
+/// Provides 123 translations for a Brunei country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -13,16 +13,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -36,7 +41,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -50,29 +57,38 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -81,12 +97,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -95,10 +114,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const brnCountryTranslations = [
   CountryName(
@@ -298,4 +320,26 @@ const brnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Búrúnẹ́lì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Búrúnɛ́lì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Brunei"),
+  TranslatedName(LangBak(), name: "Бруней"),
+  TranslatedName(LangBih(), name: "ब्रूनेई"),
+  TranslatedName(LangBod(), name: "བྷི་རུ་ནི།"),
+  TranslatedName(LangChv(), name: "Бруней"),
+  TranslatedName(LangDiv(), name: "ބުރުނައީ"),
+  TranslatedName(LangFry(), name: "Brûnei"),
+  TranslatedName(LangGrn(), name: "Mburunéi"),
+  TranslatedName(LangHat(), name: "Brouney"),
+  TranslatedName(LangKom(), name: "Бруней"),
+  TranslatedName(LangCor(), name: "Bruney"),
+  TranslatedName(LangLat(), name: "Bruneium"),
+  TranslatedName(LangMlg(), name: "Boroney"),
+  TranslatedName(LangMri(), name: "Poronai"),
+  TranslatedName(LangOrm(), name: "Birunaay"),
+  TranslatedName(LangOss(), name: "Бруней"),
+  TranslatedName(LangPli(), name: "ब्रूनै"),
+  TranslatedName(LangKin(), name: "Buruneyi"),
+  TranslatedName(LangSan(), name: "ब्रूनै"),
+  TranslatedName(LangSsw(), name: "iBhruneyi"),
+  TranslatedName(LangSun(), name: "Brunéi"),
+  TranslatedName(LangVol(), name: "Brunän"),
+  TranslatedName(LangZha(), name: "Vwnzlaiz"),
 ];

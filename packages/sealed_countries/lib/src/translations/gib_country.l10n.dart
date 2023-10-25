@@ -2,17 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Gibraltar country:
+/// Provides 109 translations for a Gibraltar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +23,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -51,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -64,10 +70,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -78,8 +88,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Somali
 /// - Spanish
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -92,6 +104,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Walloon
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -206,4 +219,17 @@ const gibCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gibaratara"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gibaratara", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Gibraltar"),
+  TranslatedName(LangArg(), name: "Chibraltar"),
+  TranslatedName(LangBak(), name: "Гибралтар"),
+  TranslatedName(LangChv(), name: "Гибралтар"),
+  TranslatedName(LangDiv(), name: "ޖަބަލްޠާރިޤު"),
+  TranslatedName(LangGlv(), name: "Gibraaltar"),
+  TranslatedName(LangCor(), name: "Jibraltar"),
+  TranslatedName(LangMri(), name: "Kāmaka"),
+  TranslatedName(LangOci(), name: "Gibartar"),
+  TranslatedName(LangOss(), name: "Гибралтар"),
+  TranslatedName(LangKin(), name: "Giburalitari"),
+  TranslatedName(LangSom(), name: "Jibraltaar"),
+  TranslatedName(LangTgl(), name: "Hibraltar"),
+  TranslatedName(LangWln(), name: "Djibraltar"),
 ];

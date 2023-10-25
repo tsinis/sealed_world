@@ -2,8 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 87 translations for a Vanuatu country:
+/// Provides 100 translations for a Vanuatu country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Amharic
 /// - Arabic
 /// - Armenian
@@ -20,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -46,6 +50,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -54,15 +59,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
 /// - Serbian
@@ -77,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Turkish
 /// - Turkmen
@@ -84,7 +95,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -265,4 +278,17 @@ const vutCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Faniatu"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Faniatu", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Vanuatu"),
+  TranslatedName(LangAbk(), name: "Вануату"),
+  TranslatedName(LangBod(), name: "ཝ་ནུའ་ཏུ།"),
+  TranslatedName(LangDiv(), name: "ވަނުއާޓޫ"),
+  TranslatedName(LangFry(), name: "Fanuatû"),
+  TranslatedName(LangGla(), name: "Bhanuatu"),
+  TranslatedName(LangHat(), name: "Vanwatou"),
+  TranslatedName(LangMlt(), name: "Vanwatu"),
+  TranslatedName(LangNau(), name: "Banuatu"),
+  TranslatedName(LangNav(), name: "Banoʼáátʼoo"),
+  TranslatedName(LangOss(), name: "Вануату"),
+  TranslatedName(LangQue(), name: "Wanwatu"),
+  TranslatedName(LangKin(), name: "Vanuwatu"),
+  TranslatedName(LangVol(), name: "Vanuatuäns"),
 ];

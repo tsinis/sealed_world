@@ -2,16 +2,20 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Turkmenistan country:
+/// Provides 121 translations for a Turkmenistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -20,8 +24,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -52,11 +60,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -65,10 +76,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -76,18 +91,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -96,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -295,4 +315,24 @@ const tkmCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Tọọkimenisita"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Tɔɔkimenisita", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Turkmenistan"),
+  TranslatedName(LangArg(), name: "Turkmenistán"),
+  TranslatedName(LangAva(), name: "Туркменистан"),
+  TranslatedName(LangBak(), name: "Төрөкмәнстан"),
+  TranslatedName(LangBod(), name: "ཏུརཀ་མེ་ནི་སུཏན།"),
+  TranslatedName(LangChv(), name: "Туркменистан"),
+  TranslatedName(LangDiv(), name: "ތުރުކުމެނިސްތާން"),
+  TranslatedName(LangGlv(), name: "Yn Turkmenistaan"),
+  TranslatedName(LangHat(), name: "Tirkmenistan"),
+  TranslatedName(LangKom(), name: "Туркменистан"),
+  TranslatedName(LangCor(), name: "Pow Turkmen"),
+  TranslatedName(LangLat(), name: "Turcomannia"),
+  TranslatedName(LangNav(), name: "Tʼóokmen Bikéyah"),
+  TranslatedName(LangOci(), name: "Turcmenistan"),
+  TranslatedName(LangOss(), name: "Туркмени"),
+  TranslatedName(LangKin(), name: "Turukimenisitani"),
+  TranslatedName(LangSan(), name: "तुर्कमिनिस्थान"),
+  TranslatedName(LangSqi(), name: "Turkmenistani"),
+  TranslatedName(LangSsw(), name: "IThumekhi"),
+  TranslatedName(LangSun(), name: "Turkménistan"),
+  TranslatedName(LangVol(), name: "Turkmenän"),
 ];

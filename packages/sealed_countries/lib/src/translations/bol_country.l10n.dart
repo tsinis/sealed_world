@@ -2,19 +2,23 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Bolivia country:
+/// Provides 127 translations for a Bolivia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -22,8 +26,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,7 +44,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -50,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -63,17 +73,29 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -81,12 +103,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -95,6 +119,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -290,4 +316,30 @@ const bolCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bọ̀lífíyà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bɔ̀lífíyà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Bolivia"),
+  TranslatedName(LangAbk(), name: "Боли́виа"),
+  TranslatedName(LangAym(), name: "Wuliwya"),
+  TranslatedName(LangBak(), name: "Боливия"),
+  TranslatedName(LangBih(), name: "बोलीविया"),
+  TranslatedName(LangBod(), name: "བྷོ་ལི་ཝི་ཡ།"),
+  TranslatedName(LangChv(), name: "Боливи"),
+  TranslatedName(LangDiv(), name: "ބޮލީވިއާ"),
+  TranslatedName(LangGrn(), name: "Volívia"),
+  TranslatedName(LangGlv(), name: "yn Volivia"),
+  TranslatedName(LangHat(), name: "Bolivi"),
+  TranslatedName(LangCor(), name: "Bolivi"),
+  TranslatedName(LangMri(), name: "Poriwia"),
+  TranslatedName(LangNau(), name: "Boribiya"),
+  TranslatedName(LangNav(), name: "Bolíbiya"),
+  TranslatedName(LangOci(), name: "Bolívia"),
+  TranslatedName(LangOrm(), name: "Boliiviyaa"),
+  TranslatedName(LangOss(), name: "Боливи"),
+  TranslatedName(LangPli(), name: "बोलिविया"),
+  TranslatedName(LangQue(), name: "Wuliwiya"),
+  TranslatedName(LangKin(), name: "Boliviya"),
+  TranslatedName(LangSan(), name: "बोलिविया"),
+  TranslatedName(LangSrd(), name: "Bolìvia"),
+  TranslatedName(LangSmo(), name: "Polevia"),
+  TranslatedName(LangSsw(), name: "IBholiviya"),
+  TranslatedName(LangVol(), name: "Bolivän"),
+  TranslatedName(LangWln(), name: "Boliveye"),
 ];

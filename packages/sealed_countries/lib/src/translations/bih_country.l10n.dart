@@ -2,21 +2,27 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Bosnia and Herzegovina country:
+/// Provides 165 translations for a Bosnia and Herzegovina country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +30,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +52,40 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,24 +95,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -100,13 +132,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -116,6 +153,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -365,4 +404,43 @@ const bihCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Bosnia ne-Herzegovina"),
+  TranslatedName(LangArg(), name: "Bosnia y Herzegovina"),
+  TranslatedName(LangAva(), name: "Бо́сния ва Герцегови́на"),
+  TranslatedName(LangBak(), name: "Босния һәм Герцеговина"),
+  TranslatedName(LangBih(), name: "बोस्निया आ हर्जेगोविना"),
+  TranslatedName(LangBis(), name: "Bosnia mo Herzegovina"),
+  TranslatedName(LangBod(), name: "བྷོསུ་ནིཡ་དང་ཧར་ཛེ་གྷོ་ཝི་ན།"),
+  TranslatedName(LangCos(), name: "Bosnia è Erzegovina"),
+  TranslatedName(LangChu(), name: "Босна́"),
+  TranslatedName(LangChv(), name: "Босни тата Герцеговина"),
+  TranslatedName(LangDiv(), name: "ބޮސްނިޔާ އެންޑް ހެރްޒިގޮވީނާ"),
+  TranslatedName(LangGrn(), name: "Vonia ha Hesegovina"),
+  TranslatedName(LangGlv(), name: "Bosnia as Herzegovina"),
+  TranslatedName(LangHat(), name: "Bosni ak Erzegovin"),
+  TranslatedName(LangIle(), name: "Bosnia e Herzegovina"),
+  TranslatedName(LangIbo(), name: "Bosnia na Herzegovina"),
+  TranslatedName(LangIdo(), name: "Bosnia e Herzegovina"),
+  TranslatedName(LangKon(), name: "Bosna"),
+  TranslatedName(LangKal(), name: "Bosnia-Hercegovina"),
+  TranslatedName(LangKom(), name: "Босния да Герцеговина"),
+  TranslatedName(LangCor(), name: "Bosni–Hercegovina"),
+  TranslatedName(LangLat(), name: "Bosnia et Herzegovina"),
+  TranslatedName(LangLim(), name: "Bosnië en Herzegovina"),
+  TranslatedName(LangMri(), name: "Pōngia-Herekōmina"),
+  TranslatedName(LangNau(), name: "Boteniya me Erdegobina"),
+  TranslatedName(LangNav(), name: "Bosna dóó Hetsog Bikéyah"),
+  TranslatedName(LangOci(), name: "Bòsnia e Ercegovina"),
+  TranslatedName(LangOrm(), name: "Boosniyaa fi Herzegoviinaa"),
+  TranslatedName(LangOss(), name: "Босни æмæ Герцеговинæ"),
+  TranslatedName(LangPli(), name: "बास्निया"),
+  TranslatedName(LangKin(), name: "Bosiniya na Herizegovina"),
+  TranslatedName(LangSan(), name: "बास्निया"),
+  TranslatedName(LangSrd(), name: "Bòsnia e Erzegòvina"),
+  TranslatedName(LangSmo(), name: "Bosnia ma Herzegovina"),
+  TranslatedName(LangSsw(), name: "iBhosinya ne Hezegovi"),
+  TranslatedName(LangSun(), name: "Bosnia jeung Hérzégovina"),
+  TranslatedName(LangTgl(), name: "Bosnia at Herzegovina"),
+  TranslatedName(LangTah(), name: "Pōtinia-Heretōvina"),
+  TranslatedName(LangVol(), name: "Bosnän e Härzegovän"),
+  TranslatedName(LangWln(), name: "Bosneye"),
 ];

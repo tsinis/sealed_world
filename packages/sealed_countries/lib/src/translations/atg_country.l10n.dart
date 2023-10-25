@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Antigua and Barbuda country:
+/// Provides 153 translations for a Antigua and Barbuda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,15 +27,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -41,29 +47,37 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,15 +87,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -91,6 +111,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -99,13 +121,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,11 +141,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const atgCountryTranslations = [
   CountryName(
@@ -351,4 +379,32 @@ const atgCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Antigua ne-Barbuda"),
+  TranslatedName(LangArg(), name: "Antigua y Barbuda"),
+  TranslatedName(LangAym(), name: "Antiwa wan Barbuda"),
+  TranslatedName(LangBak(), name: "Антигуа һәм Барбуда"),
+  TranslatedName(LangBod(), name: "ཨེན་ཊི་གུའ་དང་བར་བུ་ཌ།"),
+  TranslatedName(LangDiv(), name: "އެންޓިގުއާ އަދި ބާބިއުޑާ"),
+  TranslatedName(LangFao(), name: "Antigua og Barbuda"),
+  TranslatedName(LangGrn(), name: "Antigua ha Barbuda"),
+  TranslatedName(LangGlv(), name: "Antigua as Barbuda"),
+  TranslatedName(LangHat(), name: "Antigwa ak Babouda"),
+  TranslatedName(LangIle(), name: "Antigua e Barbuda"),
+  TranslatedName(LangIdo(), name: "Antigua e Barbuda"),
+  TranslatedName(LangKal(), name: "Antigua aamma Barbuda"),
+  TranslatedName(LangCor(), name: "Antiga ha Barbuda"),
+  TranslatedName(LangLat(), name: "Antiqua et Barbuda"),
+  TranslatedName(LangLim(), name: "Antigua en Barbuda"),
+  TranslatedName(LangNau(), name: "Antigua me Barbuda"),
+  TranslatedName(LangNav(), name: "Antíígwa dóó Hashkʼaan Bikéyah Yázhí"),
+  TranslatedName(LangOci(), name: "Antigua e Barbuda"),
+  TranslatedName(LangOrm(), name: "Antiiguwaa fi Baarbuudaa"),
+  TranslatedName(LangOss(), name: "Антигуæ æмæ Барбудæ"),
+  TranslatedName(LangKin(), name: "Antigwa na Baribuda"),
+  TranslatedName(LangSan(), name: "अण्टीग्वा"),
+  TranslatedName(LangSrd(), name: "Antigua e Barbuda"),
+  TranslatedName(LangSsw(), name: "iBhabudi ne Anithikhu"),
+  TranslatedName(LangSun(), name: "Antigua jeung Barbuda"),
+  TranslatedName(LangTgl(), name: "Antigua at Barbuda"),
+  TranslatedName(LangVol(), name: "Lantigeän e Barbudeän"),
+  TranslatedName(LangZha(), name: "Antigua caeuq Barbuda"),
 ];

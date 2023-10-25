@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Burkina Faso country:
+/// Provides 118 translations for a Burkina Faso country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -13,16 +13,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -32,11 +36,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -49,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -64,14 +71,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -80,12 +93,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -94,7 +109,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -288,4 +306,22 @@ const bfaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bùùkíná Fasò"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bùùkíná Fasò", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Burkina Faso"),
+  TranslatedName(LangBak(), name: "Буркина́-Фасо́"),
+  TranslatedName(LangBih(), name: "बुर्किना फासो"),
+  TranslatedName(LangBod(), name: "བུར་ཀི་ན་ཕ་སོ།"),
+  TranslatedName(LangChv(), name: "Буркина Фасо"),
+  TranslatedName(LangDiv(), name: "ބުރުކީނާ ފާސޯ"),
+  TranslatedName(LangFry(), name: "Boerkina Faso"),
+  TranslatedName(LangGlg(), name: "Burquina Faso"),
+  TranslatedName(LangHat(), name: "Boukinafaso"),
+  TranslatedName(LangNau(), name: "Burkinabato"),
+  TranslatedName(LangOrm(), name: "Burkinaa Faasoo"),
+  TranslatedName(LangOss(), name: "Буркина́-Фасо́"),
+  TranslatedName(LangPli(), name: "बुर्कीना-फासो"),
+  TranslatedName(LangQue(), name: "Burkina Phasu"),
+  TranslatedName(LangKin(), name: "Burukina Faso"),
+  TranslatedName(LangSan(), name: "बुर्कीना-फासो"),
+  TranslatedName(LangSsw(), name: "iBhukhina-Faso"),
+  TranslatedName(LangVie(), name: "Buốc-ki-na Pha-xô"),
+  TranslatedName(LangVol(), name: "Burkinän"),
 ];

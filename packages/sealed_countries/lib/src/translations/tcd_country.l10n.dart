@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Chad country:
+/// Provides 137 translations for a Chad country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,17 +40,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -56,12 +62,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -70,8 +80,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -79,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -87,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -96,12 +111,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -110,6 +128,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -281,4 +302,25 @@ const tcdCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède ṣààdì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède shààdì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Chad"),
+  TranslatedName(LangBak(), name: "Чад"),
+  TranslatedName(LangBod(), name: "ཆཱ་ཌ།"),
+  TranslatedName(LangChv(), name: "Чад"),
+  TranslatedName(LangDiv(), name: "ޝާދު"),
+  TranslatedName(LangGlg(), name: "Chad - Tchad"),
+  TranslatedName(LangGlv(), name: "Shad"),
+  TranslatedName(LangHat(), name: "Tchad"),
+  TranslatedName(LangIna(), name: "Tchad"),
+  TranslatedName(LangKon(), name: "Tasadi"),
+  TranslatedName(LangLat(), name: "Tzadia"),
+  TranslatedName(LangLim(), name: "Tsjaad"),
+  TranslatedName(LangMri(), name: "Kāta"),
+  TranslatedName(LangNau(), name: "Tsiad"),
+  TranslatedName(LangOss(), name: "Чад"),
+  TranslatedName(LangKin(), name: "Cade"),
+  TranslatedName(LangSan(), name: "चाड"),
+  TranslatedName(LangSsw(), name: "IShedi"),
+  TranslatedName(LangTgl(), name: "Tsad"),
+  TranslatedName(LangVie(), name: "Tchad"),
+  TranslatedName(LangVol(), name: "Tjadän"),
+  TranslatedName(LangWln(), name: "Tchad"),
 ];

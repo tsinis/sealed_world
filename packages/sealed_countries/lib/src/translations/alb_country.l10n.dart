@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Albania country:
+/// Provides 137 translations for a Albania country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -12,10 +14,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -23,9 +29,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,12 +48,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -53,12 +65,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -66,17 +82,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -84,12 +109,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,6 +127,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -299,4 +330,35 @@ const albCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Àlùbàníánì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Àlùbàníánì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Albania"),
+  TranslatedName(LangAbk(), name: "Арнауыҭтәыла"),
+  TranslatedName(LangAva(), name: "Алба́ния"),
+  TranslatedName(LangAym(), name: "Alwaña"),
+  TranslatedName(LangBak(), name: "Алба́ния"),
+  TranslatedName(LangBih(), name: "अल्बानिया"),
+  TranslatedName(LangBod(), name: "ཨལ་པ་ཉི་ཡ།"),
+  TranslatedName(LangChu(), name: "Алванїꙗ"),
+  TranslatedName(LangChv(), name: "Албани"),
+  TranslatedName(LangDiv(), name: "އަލްބޭނިއާ"),
+  TranslatedName(LangGrn(), name: "Avaña"),
+  TranslatedName(LangGlv(), name: "Yn Albaan"),
+  TranslatedName(LangHat(), name: "Albani"),
+  TranslatedName(LangIku(), name: "ᐊᓪᐹᓂᐊ"),
+  TranslatedName(LangKik(), name: "Arũmbĩnia"),
+  TranslatedName(LangKom(), name: "Албания"),
+  TranslatedName(LangCor(), name: "Albani"),
+  TranslatedName(LangLim(), name: "Albanië"),
+  TranslatedName(LangMri(), name: "Arapeinia"),
+  TranslatedName(LangNau(), name: "Arbainiya"),
+  TranslatedName(LangNav(), name: "Dziłigaii Bikéyah"),
+  TranslatedName(LangOrm(), name: "Albeeniyaa"),
+  TranslatedName(LangOss(), name: "Албани"),
+  TranslatedName(LangPli(), name: "अल्बानिया"),
+  TranslatedName(LangQue(), name: "Albanya"),
+  TranslatedName(LangKin(), name: "Alubaniya"),
+  TranslatedName(LangSan(), name: "अल्बेनिया"),
+  TranslatedName(LangSsw(), name: "I-Alibheniya"),
+  TranslatedName(LangTgl(), name: "Albanya"),
+  TranslatedName(LangTah(), name: "Arapania"),
+  TranslatedName(LangVol(), name: "Lalbanän"),
+  TranslatedName(LangWln(), name: "Albaneye"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Falkland Islands country:
+/// Provides 130 translations for a Falkland Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -30,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -53,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -63,6 +65,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -73,6 +76,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
@@ -100,11 +104,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -341,4 +347,10 @@ const flkCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Falkland Islands"),
+  TranslatedName(LangBod(), name: "ཕལྐ་ལནྜ་གླིང་ཕྲན།"),
+  TranslatedName(LangEpo(), name: "Falklandoj"),
+  TranslatedName(LangGlv(), name: "Ny Malveenaghyn"),
+  TranslatedName(LangKal(), name: "Falklandi qeqertaq"),
+  TranslatedName(LangLat(), name: "Insulae Malvinae"),
+  TranslatedName(LangTgl(), name: "Kapuluang Falkland (Kapuluang Malvinas)"),
 ];

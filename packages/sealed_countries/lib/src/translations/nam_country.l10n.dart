@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Namibia country:
+/// Provides 120 translations for a Namibia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,6 +23,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -38,6 +41,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -51,29 +55,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -81,12 +95,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -95,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -296,4 +314,22 @@ const namCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Namibia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Namibia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Namibia"),
+  TranslatedName(LangBak(), name: "Намибия"),
+  TranslatedName(LangBod(), name: "ན་མི་བྷི་ཡ།"),
+  TranslatedName(LangChv(), name: "Намиби"),
+  TranslatedName(LangGlv(), name: "Yn Nameeb"),
+  TranslatedName(LangHat(), name: "Namibi"),
+  TranslatedName(LangCor(), name: "Namibi"),
+  TranslatedName(LangLtz(), name: "Namibien"),
+  TranslatedName(LangLim(), name: "Namibië"),
+  TranslatedName(LangMri(), name: "Namīpia"),
+  TranslatedName(LangNav(), name: "Namííbya"),
+  TranslatedName(LangOss(), name: "Намиби"),
+  TranslatedName(LangQue(), name: "Namiwya"),
+  TranslatedName(LangKin(), name: "Namibiya"),
+  TranslatedName(LangSan(), name: "नमीबिया"),
+  TranslatedName(LangSrd(), name: "Namìbia"),
+  TranslatedName(LangSsw(), name: "INamibiya"),
+  TranslatedName(LangTgl(), name: "Namibya"),
+  TranslatedName(LangVol(), name: "Namibiyän"),
 ];

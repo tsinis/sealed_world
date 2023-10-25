@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 84 translations for a Nauru country:
+/// Provides 90 translations for a Nauru country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
@@ -22,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -52,9 +54,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Limburgish (Limburgan/Limburger)
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
@@ -82,7 +86,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yoruba
 /// - Zulu.
@@ -239,4 +245,10 @@ const nruCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Nauru"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Nauru", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Nauru"),
+  TranslatedName(LangDiv(), name: "ނައުރޫ"),
+  TranslatedName(LangFry(), name: "Naurû"),
+  TranslatedName(LangLim(), name: "Naoeroe"),
+  TranslatedName(LangMlt(), name: "Nawru"),
+  TranslatedName(LangSqi(), name: "Naurua"),
+  TranslatedName(LangVol(), name: "Naureän"),
 ];

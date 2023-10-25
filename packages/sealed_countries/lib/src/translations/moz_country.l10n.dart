@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Mozambique country:
+/// Provides 140 translations for a Mozambique country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,8 +25,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,12 +45,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Irish
@@ -57,11 +65,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -71,22 +82,29 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -94,13 +112,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -109,7 +131,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -322,4 +347,29 @@ const mozCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Moṣamibiku"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Moshamibiku", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Mozambique"),
+  TranslatedName(LangBak(), name: "Мозамбик"),
+  TranslatedName(LangBod(), name: "མོ་ཛམ་བིཀ།"),
+  TranslatedName(LangCos(), name: "Mozambicu"),
+  TranslatedName(LangChv(), name: "Мозамбик"),
+  TranslatedName(LangDiv(), name: "މުސިންބީ"),
+  TranslatedName(LangFry(), name: "Mozambyk"),
+  TranslatedName(LangGrn(), name: "Mosambike"),
+  TranslatedName(LangGlv(), name: "Yn Vosambeeck"),
+  TranslatedName(LangHat(), name: "Mozanbik"),
+  TranslatedName(LangIdo(), name: "Mozambik"),
+  TranslatedName(LangKon(), name: "Musambiki"),
+  TranslatedName(LangCor(), name: "Mosambik"),
+  TranslatedName(LangLat(), name: "Mozambicum"),
+  TranslatedName(LangMri(), name: "Mohapiki"),
+  TranslatedName(LangOci(), name: "Moçambic"),
+  TranslatedName(LangOss(), name: "Мозамбик"),
+  TranslatedName(LangQue(), name: "Musambik"),
+  TranslatedName(LangKin(), name: "Mozambike"),
+  TranslatedName(LangSan(), name: "मोजम्बीक"),
+  TranslatedName(LangSrd(), name: "Mozambico"),
+  TranslatedName(LangSsw(), name: "IMozambikhi"),
+  TranslatedName(LangSun(), name: "Mosambik"),
+  TranslatedName(LangTgl(), name: "Musambik"),
+  TranslatedName(LangVen(), name: "Mozambikwi"),
+  TranslatedName(LangVol(), name: "Mozambikän"),
 ];

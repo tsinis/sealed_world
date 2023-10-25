@@ -2,19 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Faroe Islands country:
+/// Provides 127 translations for a Faroe Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -22,9 +24,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,6 +47,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
@@ -50,28 +55,37 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -87,8 +101,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -107,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const froCountryTranslations = [
   CountryName(
@@ -287,4 +304,21 @@ const froCountryTranslations = [
   TranslatedName(LangWol(), name: "Duni Faro"),
   TranslatedName(LangYid(), name: "פֿאַרא אינזלען"),
   TranslatedName(LangZul(), name: "i-Faroe Islands"),
+  TranslatedName(LangArg(), name: "Islas Feroe"),
+  TranslatedName(LangBis(), name: "Faroe aelan"),
+  TranslatedName(LangDiv(), name: "ފަރޮއޭ ޖަޒީރާ"),
+  TranslatedName(LangGlv(), name: "Ellanyn ny Geyrragh"),
+  TranslatedName(LangIdo(), name: "Faero"),
+  TranslatedName(LangKal(), name: "Savalimmiut"),
+  TranslatedName(LangKom(), name: "Фарер діяс"),
+  TranslatedName(LangCor(), name: "Ynysow Faroe"),
+  TranslatedName(LangLat(), name: "Faeroae insulae"),
+  TranslatedName(LangLim(), name: "Faeröer"),
+  TranslatedName(LangMri(), name: "Moutere Faroe"),
+  TranslatedName(LangOci(), name: "Illas Feròe"),
+  TranslatedName(LangOss(), name: "Фареры сакъадæхтæ"),
+  TranslatedName(LangKin(), name: "Ibirwa bya Farowe"),
+  TranslatedName(LangSun(), name: "Kapuloan Faroe"),
+  TranslatedName(LangTgl(), name: "Kapuluang Peroe"),
+  TranslatedName(LangYor(), name: "Àwọn Erékùṣù Fàróè"),
 ];

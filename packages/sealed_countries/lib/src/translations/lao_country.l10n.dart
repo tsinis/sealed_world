@@ -2,15 +2,17 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 91 translations for a Laos country:
+/// Provides 110 translations for a Laos country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -19,8 +21,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -46,10 +51,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -58,28 +66,37 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -88,10 +105,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const laoCountryTranslations = [
   CountryName(
@@ -281,4 +300,23 @@ const laoCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Laosi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Laosi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Laos"),
+  TranslatedName(LangBak(), name: "Лаос"),
+  TranslatedName(LangBod(), name: "ལའོ་སུ།"),
+  TranslatedName(LangChv(), name: "Лаос"),
+  TranslatedName(LangDiv(), name: "ލާއޯސް"),
+  TranslatedName(LangGlv(), name: "Yn Laos"),
+  TranslatedName(LangKom(), name: "Лаос"),
+  TranslatedName(LangCor(), name: "Pow Lao"),
+  TranslatedName(LangLat(), name: "Laotia"),
+  TranslatedName(LangMri(), name: "Rāoho"),
+  TranslatedName(LangNau(), name: "Raot"),
+  TranslatedName(LangNav(), name: "Lááʼos"),
+  TranslatedName(LangOss(), name: "Лаос"),
+  TranslatedName(LangQue(), name: "Law suyu"),
+  TranslatedName(LangKin(), name: "Lawosi"),
+  TranslatedName(LangSan(), name: "लाओस"),
+  TranslatedName(LangSqi(), name: "Laosi"),
+  TranslatedName(LangSsw(), name: "ILawoso"),
+  TranslatedName(LangVol(), name: "Laosän"),
+  TranslatedName(LangZha(), name: "Lao"),
 ];

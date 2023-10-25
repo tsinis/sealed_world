@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Saint Vincent and the Grenadines country:
+/// Provides 129 translations for a Saint Vincent and the Grenadines country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -65,6 +65,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -116,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -278,7 +280,6 @@ const vctCountryTranslations = [
   TranslatedName(LangDzo(), name: "སེནཊ་ཝིན་སེནཌ྄ ཨེནཌ་ གི་རེ་ན་དིནས྄"),
   TranslatedName(LangEwe(), name: "Saint Vincent kple Grenadine nutome"),
   TranslatedName(LangEll(), name: "Άγιος Βικέντιος και Γρεναδίνες"),
-  TranslatedName(LangEng(), name: "St Vincent & Grenadines"),
   TranslatedName(LangEpo(), name: "Sent-Vincento kaj la Grenadinoj"),
   TranslatedName(LangEus(), name: "Saint Vincent eta Grenadinak"),
   TranslatedName(LangFul(), name: "See Weesaa e Garnadiin"),
@@ -390,4 +391,6 @@ const vctCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Saint Vincent ne-Grenadines"),
+  TranslatedName(LangLim(), name: "Saint-Vincent"),
+  TranslatedName(LangVol(), name: "Saluda-Vinsenteän e Grenadineäns"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a North Korea country:
+/// Provides 157 translations for a North Korea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,13 +10,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +27,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,28 +47,40 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +90,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,6 +114,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -98,13 +124,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -114,10 +144,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const prkCountryTranslations = [
   CountryName(
@@ -339,4 +373,38 @@ const prkCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Guusu Kọria"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Guusu Kɔria", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-North Korea"),
+  TranslatedName(LangArg(), name: "Coreya d'o Norte"),
+  TranslatedName(LangBak(), name: "Корея Халыҡ-Демократик Республикаһы"),
+  TranslatedName(LangBih(), name: "उत्तर कोरिया"),
+  TranslatedName(LangBod(), name: "བྱང་ཀོ་རི་ཡ།"),
+  TranslatedName(LangDiv(), name: "އުތުރު ކޮރެއާ"),
+  TranslatedName(LangGrn(), name: "Yvate Koréa"),
+  TranslatedName(LangGlv(), name: "Yn Chorea Twoaie"),
+  TranslatedName(LangHat(), name: "Kore dinò"),
+  TranslatedName(LangIle(), name: "Nord-Korea"),
+  TranslatedName(LangIpk(), name: "Nigiq Korea"),
+  TranslatedName(LangIdo(), name: "Nord-Korea"),
+  TranslatedName(LangJav(), name: "Koréa Lor"),
+  TranslatedName(LangKon(), name: "Hangu ya Node"),
+  TranslatedName(LangKal(), name: "Korea Avannarleq"),
+  TranslatedName(LangKom(), name: "Корея Войтыр Демократия Республика"),
+  TranslatedName(LangCor(), name: "Korea Gledh"),
+  TranslatedName(LangLat(), name: "Res publica popularis democratica Coreana"),
+  TranslatedName(LangLim(), name: "Noord-Korea"),
+  TranslatedName(LangMri(), name: "Kōrea-ki-te-raki"),
+  TranslatedName(LangNau(), name: "Ripubrikit Engame Korea"),
+  TranslatedName(LangNav(), name: "Kolíya Bikéyah Náhookǫsjí Siʼánígíí"),
+  TranslatedName(LangOci(), name: "Corèa del Nòrd"),
+  TranslatedName(LangOrm(), name: "Kooriyaa Kaabaa"),
+  TranslatedName(LangOss(), name: "Корейы Адæмон Демократон Республикæ"),
+  TranslatedName(LangKin(), name: "Koreya y’Amajyaruguru"),
+  TranslatedName(LangSan(), name: "उत्तर कोरिया"),
+  TranslatedName(LangSrd(), name: "Corea de su Norte"),
+  TranslatedName(LangSsw(), name: "IKhoriya leseNyakatfo"),
+  TranslatedName(LangSun(), name: "Koréa Kalér"),
+  TranslatedName(LangTgl(), name: "Hilagang Korea"),
+  TranslatedName(LangVol(), name: "Nolüda-Koreyän"),
+  TranslatedName(LangXho(), name: "Coreia do Twoaie"),
+  TranslatedName(LangYid(), name: "צפון קארעע"),
+  TranslatedName(LangZha(), name: "Cauzsenh Minzcujcujyi Yinzminz Gunghozgoz"),
 ];

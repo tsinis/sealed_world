@@ -2,17 +2,20 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Slovakia country:
+/// Provides 136 translations for a Slovakia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,9 +26,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,13 +47,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -55,12 +66,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -68,11 +83,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -82,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -89,12 +111,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -103,6 +128,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -308,4 +334,30 @@ const svkCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Silofakia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Silofakia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Slovakia"),
+  TranslatedName(LangArg(), name: "Eslovaquia"),
+  TranslatedName(LangBak(), name: "Словакия"),
+  TranslatedName(LangBod(), name: "སི་ལོ་ཕ་ཁེ།"),
+  TranslatedName(LangCos(), name: "Sluvacchia"),
+  TranslatedName(LangChu(), name: "Словѣньско"),
+  TranslatedName(LangChv(), name: "Словаки"),
+  TranslatedName(LangDiv(), name: "ސުލޮވާކިއާ"),
+  TranslatedName(LangGrn(), name: "Elovakia"),
+  TranslatedName(LangGlv(), name: "Yn Clovack"),
+  TranslatedName(LangHat(), name: "Slovaki"),
+  TranslatedName(LangInd(), name: "Slowakia"),
+  TranslatedName(LangIle(), name: "Slovacia"),
+  TranslatedName(LangKom(), name: "Словакия"),
+  TranslatedName(LangCor(), name: "Slovaki"),
+  TranslatedName(LangLat(), name: "Slovacia"),
+  TranslatedName(LangLim(), name: "Slowakieë"),
+  TranslatedName(LangMri(), name: "Horowākia"),
+  TranslatedName(LangNau(), name: "Slowakia"),
+  TranslatedName(LangNav(), name: "Słóbaʼ Bikéyah"),
+  TranslatedName(LangOci(), name: "Eslovaquia"),
+  TranslatedName(LangOss(), name: "Словаки"),
+  TranslatedName(LangKin(), name: "Silovakiya"),
+  TranslatedName(LangSan(), name: "स्लोवाकिया"),
+  TranslatedName(LangSsw(), name: "Silovakhi"),
+  TranslatedName(LangTgl(), name: "Eslobakya"),
+  TranslatedName(LangVol(), name: "Slovakiyän"),
 ];

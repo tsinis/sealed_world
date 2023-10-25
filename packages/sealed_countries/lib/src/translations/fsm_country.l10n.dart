@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Micronesia country:
+/// Provides 119 translations for a Micronesia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -47,6 +47,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Irish
 /// - Italian
@@ -62,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -77,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -107,6 +110,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -320,4 +325,9 @@ const fsmCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Makoronesia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Makoronesia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Micronesia"),
+  TranslatedName(LangIdo(), name: "Mikronezia"),
+  TranslatedName(LangLim(), name: "Micronesië"),
+  TranslatedName(LangOci(), name: "Estats Federats de Micronesia"),
+  TranslatedName(LangVie(), name: "Liên bang Micronesia"),
+  TranslatedName(LangVol(), name: "Smala-Seanuäns"),
 ];

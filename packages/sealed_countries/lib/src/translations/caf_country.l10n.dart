@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Central African Republic country:
+/// Provides 145 translations for a Central African Republic country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -24,9 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,11 +46,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
@@ -60,12 +65,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -75,14 +84,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -92,6 +107,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -99,15 +116,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
@@ -115,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -356,4 +379,27 @@ const cafCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Central African Republic"),
+  TranslatedName(LangArg(), name: "Republica Centroafricana"),
+  TranslatedName(LangBod(), name: "དབུས་ཨ་ཧྥེ་རི་ཁན་རི་པཔ་ལིཀ།"),
+  TranslatedName(LangDiv(), name: "މެދުތެރޭ އެފްރިކާގެ ޖުމްހޫރިއްޔާ"),
+  TranslatedName(LangGlv(), name: "Pobblaght yn Affrick Veanagh"),
+  TranslatedName(LangHat(), name: "Repiblik santafrik"),
+  TranslatedName(LangIdo(), name: "Centrafrika"),
+  TranslatedName(LangKon(), name: "Repubilika ya Afelika ya Kati"),
+  TranslatedName(LangCor(), name: "Centrafrika"),
+  TranslatedName(LangLat(), name: "Respublica Africae Mediae"),
+  TranslatedName(LangLim(), name: "Centraal Afrika"),
+  TranslatedName(LangMri(), name: "Te Puku o Āwherika"),
+  TranslatedName(LangNau(), name: "Ripubrikin Aprika Yugaga"),
+  TranslatedName(LangNav(), name: "Naakaii Łizhinii Bikéyah Beʼałnííʼ"),
+  TranslatedName(LangOci(), name: "Centreafrica"),
+  TranslatedName(LangOss(), name: "Централон Африкæйы Республикæ"),
+  TranslatedName(LangKin(), name: "Repubulika ya Santara Afurika"),
+  TranslatedName(LangSan(), name: "केन्द्रीय अफ्रीका गणराज्यम्"),
+  TranslatedName(LangSrd(), name: "Tzentràfrica"),
+  TranslatedName(LangSsw(), name: "Umkhatsi we-Afrikha"),
+  TranslatedName(LangSun(), name: "Républik Afrika Tengah"),
+  TranslatedName(LangTgl(), name: "Republika ng Gitnang Aprika"),
+  TranslatedName(LangTso(), name: "Afrika Wale Xikarhi"),
+  TranslatedName(LangVol(), name: "Zänoda-Frikop"),
 ];

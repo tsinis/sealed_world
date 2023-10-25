@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a China country:
+/// Provides 155 translations for a China country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -12,11 +14,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +30,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,6 +42,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Estonian
 /// - Ewe
 /// - Faroese
+/// - Fijian
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -42,28 +51,37 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -72,9 +90,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -82,22 +103,31 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Nynorsk
 /// - Nuosu
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
+/// - Southern Sotho
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -106,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
@@ -113,11 +144,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const chnCountryTranslations = [
   CountryName(
@@ -329,4 +363,38 @@ const chnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orilẹ̀-èdè Ṣáínà"),
   TranslatedName(LangYor(), name: "Orilɛ̀-èdè Sháínà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-China"),
+  TranslatedName(LangAbk(), name: "Чынҭ"),
+  TranslatedName(LangAva(), name: "Чин"),
+  TranslatedName(LangBak(), name: "Ҡытай"),
+  TranslatedName(LangBih(), name: "चीन"),
+  TranslatedName(LangBis(), name: "Jaena"),
+  TranslatedName(LangChu(), name: "Срѣдинꙗнє"),
+  TranslatedName(LangChv(), name: "Китай"),
+  TranslatedName(LangDiv(), name: "ސީނުކަރަ"),
+  TranslatedName(LangFij(), name: "Jaina"),
+  TranslatedName(LangGrn(), name: "Chína"),
+  TranslatedName(LangGlv(), name: "Sheen"),
+  TranslatedName(LangHat(), name: "Chin"),
+  TranslatedName(LangIdo(), name: "Chinia"),
+  TranslatedName(LangIku(), name: "ᓴᐃᓇ"),
+  TranslatedName(LangKon(), name: "Sina"),
+  TranslatedName(LangKal(), name: "Kina"),
+  TranslatedName(LangKom(), name: "Китай"),
+  TranslatedName(LangLat(), name: "Sinae"),
+  TranslatedName(LangNau(), name: "Tsiene"),
+  TranslatedName(LangNav(), name: "Tsiiʼyishbizhí Dineʼé Bikéyah"),
+  TranslatedName(LangOrm(), name: "Chaayinaan"),
+  TranslatedName(LangQue(), name: "Chunkuk"),
+  TranslatedName(LangKin(), name: "Ubushinwa"),
+  TranslatedName(LangSrd(), name: "Cina"),
+  TranslatedName(LangSmo(), name: "Saina"),
+  TranslatedName(LangSsw(), name: "iShayina"),
+  TranslatedName(LangSot(), name: "Tjhaena"),
+  TranslatedName(LangSun(), name: "Tiongkok"),
+  TranslatedName(LangTgl(), name: "Tsina"),
+  TranslatedName(LangTso(), name: "Chayina"),
+  TranslatedName(LangTah(), name: "Tinitō"),
+  TranslatedName(LangVol(), name: "Tsyinän"),
+  TranslatedName(LangXho(), name: "IShayina"),
+  TranslatedName(LangZha(), name: "Cunghgoz"),
 ];

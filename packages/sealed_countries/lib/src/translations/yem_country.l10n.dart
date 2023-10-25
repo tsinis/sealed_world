@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Yemen country:
+/// Provides 132 translations for a Yemen country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,8 +24,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,7 +42,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -55,11 +60,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -68,22 +77,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -91,13 +106,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -106,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -302,4 +321,23 @@ const yemCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède yemeni"),
   TranslatedName(LangYor(), name: "Orílɛ́ède yemeni", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Yemen"),
+  TranslatedName(LangBak(), name: "Йемен"),
+  TranslatedName(LangBod(), name: "ཡེ་མེན།"),
+  TranslatedName(LangChv(), name: "Йемен"),
+  TranslatedName(LangDiv(), name: "ޔަމަން"),
+  TranslatedName(LangGrn(), name: "Jemẽ"),
+  TranslatedName(LangGlv(), name: "Yn Yeaman"),
+  TranslatedName(LangHat(), name: "Yemèn"),
+  TranslatedName(LangKom(), name: "Йемен"),
+  TranslatedName(LangLat(), name: "Iemenia"),
+  TranslatedName(LangLim(), name: "Jeme"),
+  TranslatedName(LangNav(), name: "Shádiʼááhjí Ásáí Bikéyah"),
+  TranslatedName(LangOci(), name: "Iemèn"),
+  TranslatedName(LangOss(), name: "Йемен"),
+  TranslatedName(LangQue(), name: "Yaman"),
+  TranslatedName(LangKin(), name: "Yemeni"),
+  TranslatedName(LangSan(), name: "यमन"),
+  TranslatedName(LangSsw(), name: "IYemeni"),
+  TranslatedName(LangSun(), name: "Yaman"),
+  TranslatedName(LangVol(), name: "Yämän"),
 ];

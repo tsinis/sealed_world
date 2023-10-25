@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Armenia country:
+/// Provides 136 translations for a Armenia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -12,10 +14,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -23,9 +28,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,7 +47,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -53,12 +63,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -66,16 +79,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -83,20 +107,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -301,4 +332,35 @@ const armCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Améníà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Améníà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Armenia"),
+  TranslatedName(LangAbk(), name: "Ермантәыла"),
+  TranslatedName(LangAva(), name: "ЦIамухъ"),
+  TranslatedName(LangBak(), name: "Әрмәнстан"),
+  TranslatedName(LangBih(), name: "आर्मीनिया"),
+  TranslatedName(LangBod(), name: "ཨར་མེ་ནི་ཡ།"),
+  TranslatedName(LangChu(), name: "Армєні́ꙗ"),
+  TranslatedName(LangChv(), name: "Эрмени"),
+  TranslatedName(LangDiv(), name: "އަރުމީނިއާ"),
+  TranslatedName(LangGrn(), name: "Aymenia"),
+  TranslatedName(LangGlv(), name: "Armeain"),
+  TranslatedName(LangHat(), name: "Ameni"),
+  TranslatedName(LangKom(), name: "Армения"),
+  TranslatedName(LangCor(), name: "Armeni"),
+  TranslatedName(LangLim(), name: "Armenië"),
+  TranslatedName(LangMri(), name: "Āmenia"),
+  TranslatedName(LangNau(), name: "Arminiya"),
+  TranslatedName(LangNav(), name: "Aooméénii Bikéyah"),
+  TranslatedName(LangOrm(), name: "Armeeniyaa"),
+  TranslatedName(LangOss(), name: "Сомихыстон"),
+  TranslatedName(LangPli(), name: "आर्मीनिया"),
+  TranslatedName(LangQue(), name: "Arminya"),
+  TranslatedName(LangKin(), name: "Arumeniya"),
+  TranslatedName(LangSan(), name: "आर्मीनिया"),
+  TranslatedName(LangSrd(), name: "Armènia"),
+  TranslatedName(LangSmo(), name: "Amenia"),
+  TranslatedName(LangSsw(), name: "iArimeniya"),
+  TranslatedName(LangSun(), name: "Arménia"),
+  TranslatedName(LangTgl(), name: "Armenya"),
+  TranslatedName(LangTwi(), name: "Aminia"),
+  TranslatedName(LangTah(), name: "Āmenia"),
+  TranslatedName(LangVol(), name: "Larmeniyän"),
 ];

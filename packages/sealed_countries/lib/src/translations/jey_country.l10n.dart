@@ -2,12 +2,13 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 81 translations for a Jersey country:
+/// Provides 93 translations for a Jersey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -19,15 +20,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Finnish
 /// - French
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -45,18 +50,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
 /// - Malayalam
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Romanian
 /// - Russian
 /// - Serbian
 /// - Sindhi
@@ -65,6 +76,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -212,4 +224,16 @@ const jeyCountryTranslations = [
   TranslatedName(LangWol(), name: "Serse"),
   TranslatedName(LangYid(), name: "דזשערזי"),
   TranslatedName(LangZul(), name: "i-Jersey"),
+  TranslatedName(LangArg(), name: "Jèrri"),
+  TranslatedName(LangDiv(), name: "ޖާސޭ"),
+  TranslatedName(LangEpo(), name: "Ĵerzejo"),
+  TranslatedName(LangGlg(), name: "Illa de Jersey"),
+  TranslatedName(LangGlv(), name: "Jersee"),
+  TranslatedName(LangCor(), name: "Jersi"),
+  TranslatedName(LangLat(), name: "Caesarea Insula"),
+  TranslatedName(LangMri(), name: "Tōrehe"),
+  TranslatedName(LangOci(), name: "Jersei"),
+  TranslatedName(LangOss(), name: "Джерси"),
+  TranslatedName(LangRon(), name: "Insula Jersey"),
+  TranslatedName(LangTgl(), name: "Hersey"),
 ];

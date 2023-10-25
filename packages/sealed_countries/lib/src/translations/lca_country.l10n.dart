@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Saint Lucia country:
+/// Provides 122 translations for a Saint Lucia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -64,7 +64,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -110,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -244,7 +247,6 @@ const lcaCountryTranslations = [
   TranslatedName(LangDzo(), name: "སེནཊ་ ལུ་སི་ཡ"),
   TranslatedName(LangEwe(), name: "Saint Lusia nutome"),
   TranslatedName(LangEll(), name: "Αγία Λουκία"),
-  TranslatedName(LangEng(), name: "St Lucia"),
   TranslatedName(LangEpo(), name: "Sent-Lucio"),
   TranslatedName(LangEus(), name: "Santa Luzia"),
   TranslatedName(LangFul(), name: "Sent Lusiyaa"),
@@ -319,4 +321,7 @@ const lcaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Luṣia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Lushia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Saint Lucia"),
+  TranslatedName(LangLat(), name: "Sancta Lucia"),
+  TranslatedName(LangLim(), name: "Santa Lucia"),
+  TranslatedName(LangVol(), name: "Sanlusiyän"),
 ];

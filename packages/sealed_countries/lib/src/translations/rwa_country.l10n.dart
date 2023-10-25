@@ -2,16 +2,18 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Rwanda country:
+/// Provides 121 translations for a Rwanda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -22,8 +24,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -44,6 +48,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +62,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
@@ -64,11 +70,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -77,6 +86,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -84,12 +95,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,7 +112,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -297,4 +313,20 @@ const rwaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ruwanda"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ruwanda", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Rwanda"),
+  TranslatedName(LangArg(), name: "Ruanda"),
+  TranslatedName(LangBak(), name: "Руанда"),
+  TranslatedName(LangBod(), name: "རུ་ཝན་ཌ།"),
+  TranslatedName(LangChv(), name: "Руанда"),
+  TranslatedName(LangDiv(), name: "ރުވާންޑާ"),
+  TranslatedName(LangFry(), name: "Rûanda"),
+  TranslatedName(LangGlv(), name: "Rooandey"),
+  TranslatedName(LangIdo(), name: "Ruanda"),
+  TranslatedName(LangLat(), name: "Ruanda"),
+  TranslatedName(LangNav(), name: "Wánda Dineʼé Bikéyah"),
+  TranslatedName(LangOss(), name: "Руандæ"),
+  TranslatedName(LangSan(), name: "रवाण्डा"),
+  TranslatedName(LangSrd(), name: "Ruanda"),
+  TranslatedName(LangSsw(), name: "IRuwanda"),
+  TranslatedName(LangTgl(), name: "Ruwanda"),
+  TranslatedName(LangVol(), name: "Ruandän"),
 ];

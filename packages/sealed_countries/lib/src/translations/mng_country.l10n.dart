@@ -2,8 +2,9 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Mongolia country:
+/// Provides 128 translations for a Mongolia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
@@ -14,6 +15,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,9 +25,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,6 +45,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -52,12 +58,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -66,16 +75,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -83,12 +100,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,11 +118,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mngCountryTranslations = [
   CountryName(language: LangEng(), official: "Mongolia", common: "Mongolia"),
@@ -227,4 +249,26 @@ const mngCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Mogolia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Mogolia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Mongolia"),
+  TranslatedName(LangBak(), name: "Монголия"),
+  TranslatedName(LangBod(), name: "མོང་གོལ།"),
+  TranslatedName(LangChu(), name: "Мѫголи"),
+  TranslatedName(LangChv(), name: "Монголи"),
+  TranslatedName(LangDiv(), name: "މޮންގޯލިއާ"),
+  TranslatedName(LangGlv(), name: "Yn Vongoil"),
+  TranslatedName(LangHat(), name: "Mongoli"),
+  TranslatedName(LangKom(), name: "Монголия"),
+  TranslatedName(LangCor(), name: "Mongoli"),
+  TranslatedName(LangLim(), name: "Mongolië"),
+  TranslatedName(LangMri(), name: "Mongōria"),
+  TranslatedName(LangNau(), name: "Mongoriya"),
+  TranslatedName(LangNav(), name: "Chʼah Diʼilii Bikéyah"),
+  TranslatedName(LangOss(), name: "Мангол"),
+  TranslatedName(LangQue(), name: "Mungul suyu"),
+  TranslatedName(LangKin(), name: "Mongoliya"),
+  TranslatedName(LangSan(), name: "मंगोलिया"),
+  TranslatedName(LangSmo(), name: "Mogitolia"),
+  TranslatedName(LangSsw(), name: "IMongoliya"),
+  TranslatedName(LangTgl(), name: "Monggolya"),
+  TranslatedName(LangVol(), name: "Mongolän"),
+  TranslatedName(LangZha(), name: "Mungzguj"),
 ];

@@ -2,12 +2,13 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 87 translations for a Guernsey country:
+/// Provides 97 translations for a Guernsey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -20,11 +21,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Finnish
@@ -44,9 +48,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -54,8 +60,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -69,6 +78,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -234,4 +244,14 @@ const ggyCountryTranslations = [
   TranslatedName(LangWol(), name: "Gernase"),
   TranslatedName(LangYid(), name: "גערנזי"),
   TranslatedName(LangZul(), name: "i-Guernsey"),
+  TranslatedName(LangArg(), name: "Guernési"),
+  TranslatedName(LangDiv(), name: "ގުއާންސޭ"),
+  TranslatedName(LangEpo(), name: "Gernezejo"),
+  TranslatedName(LangCor(), name: "Gwernenys"),
+  TranslatedName(LangLat(), name: "Lisia"),
+  TranslatedName(LangMri(), name: "Kōnihi"),
+  TranslatedName(LangOci(), name: "Guernesey"),
+  TranslatedName(LangOss(), name: "Гернси"),
+  TranslatedName(LangKin(), name: "Gwasi"),
+  TranslatedName(LangTgl(), name: "Gernesey"),
 ];

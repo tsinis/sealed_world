@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Maldives country:
+/// Provides 126 translations for a Maldives country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -46,6 +47,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Irish
@@ -62,6 +64,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -69,8 +72,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
@@ -102,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -110,6 +116,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -324,4 +331,11 @@ const mdvCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Maladifi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Maladifi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Maldives"),
+  TranslatedName(LangBod(), name: "མལ་དྭིབ།"),
+  TranslatedName(LangDiv(), name: "ދިވެހިރާއްޖެ"),
+  TranslatedName(LangGlv(), name: "Ny Maldeevaghyn"),
+  TranslatedName(LangIdo(), name: "Maldivi"),
+  TranslatedName(LangLat(), name: "Insulae Maldivae"),
+  TranslatedName(LangMsa(), name: "Maldiv"),
+  TranslatedName(LangVol(), name: "Maldivuäns"),
 ];

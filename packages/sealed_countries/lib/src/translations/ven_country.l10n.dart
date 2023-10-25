@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 99 translations for a Venezuela country:
+/// Provides 122 translations for a Venezuela country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -10,8 +10,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +24,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,7 +43,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -51,10 +59,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -62,28 +72,38 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -92,7 +112,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -293,4 +316,27 @@ const venCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Fẹnẹṣuẹla"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Fɛnɛshuɛla", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Venezuela"),
+  TranslatedName(LangAva(), name: "Венесуэла"),
+  TranslatedName(LangAym(), name: "Winïxwila"),
+  TranslatedName(LangBak(), name: "Венесуэла"),
+  TranslatedName(LangBod(), name: "ཝེ་ནེ་ཟུའེ་ལ།"),
+  TranslatedName(LangChv(), name: "Венесуэла"),
+  TranslatedName(LangDiv(), name: "ވެނެޒުއޭލާ"),
+  TranslatedName(LangFry(), name: "Fenezuëla"),
+  TranslatedName(LangGrn(), name: "Venesuéla"),
+  TranslatedName(LangGlv(), name: "Yn Veneswaaley"),
+  TranslatedName(LangHat(), name: "Venezwela"),
+  TranslatedName(LangCor(), name: "Veneswela"),
+  TranslatedName(LangLat(), name: "Venetiola"),
+  TranslatedName(LangMri(), name: "Wenehūera"),
+  TranslatedName(LangNav(), name: "Táłkááʼ Bighan Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "Veneçuèla"),
+  TranslatedName(LangOss(), name: "Венесуэлæ"),
+  TranslatedName(LangQue(), name: "Winisuyla"),
+  TranslatedName(LangKin(), name: "Venezuwela"),
+  TranslatedName(LangSan(), name: "वेनेज्वेला"),
+  TranslatedName(LangSmo(), name: "Venesuela"),
+  TranslatedName(LangSun(), name: "Vénézuéla"),
+  TranslatedName(LangVol(), name: "Venesolän"),
+  TranslatedName(LangWln(), name: "Venezwela"),
 ];

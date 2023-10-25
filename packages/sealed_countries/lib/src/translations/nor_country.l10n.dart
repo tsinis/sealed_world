@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Norway country:
+/// Provides 155 translations for a Norway country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +28,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +50,40 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,15 +92,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -91,6 +115,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -98,15 +124,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
@@ -114,11 +145,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const norCountryTranslations = [
   CountryName(
@@ -326,4 +360,38 @@ const norCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Nọọwii"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Nɔɔwii", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Norway"),
+  TranslatedName(LangArg(), name: "Noruega"),
+  TranslatedName(LangAym(), name: "Nurweka"),
+  TranslatedName(LangBak(), name: "Норвегия"),
+  TranslatedName(LangBod(), name: "ནོར་ཝེ།"),
+  TranslatedName(LangCos(), name: "Nurvegia"),
+  TranslatedName(LangChu(), name: "Норєгъ"),
+  TranslatedName(LangChv(), name: "Норвеги"),
+  TranslatedName(LangDiv(), name: "ނޯވޭ"),
+  TranslatedName(LangGrn(), name: "Noruega"),
+  TranslatedName(LangGlv(), name: "Norlynn"),
+  TranslatedName(LangHat(), name: "Nòvèj"),
+  TranslatedName(LangIle(), name: "Norvegia"),
+  TranslatedName(LangIdo(), name: "Norvegia"),
+  TranslatedName(LangIku(), name: "ᓄᕐᒋ"),
+  TranslatedName(LangKon(), name: "Norge"),
+  TranslatedName(LangKal(), name: "Norge"),
+  TranslatedName(LangKom(), name: "Норвегия"),
+  TranslatedName(LangCor(), name: "Norgagh"),
+  TranslatedName(LangLat(), name: "Norvegia"),
+  TranslatedName(LangLim(), name: "Noorwege"),
+  TranslatedName(LangMri(), name: "Nōwei"),
+  TranslatedName(LangNau(), name: "Norwei"),
+  TranslatedName(LangOci(), name: "Norvègia"),
+  TranslatedName(LangOss(), name: "Норвеги"),
+  TranslatedName(LangKin(), name: "Noruveje"),
+  TranslatedName(LangSan(), name: "नार्वे"),
+  TranslatedName(LangSrd(), name: "Norvegia"),
+  TranslatedName(LangSsw(), name: "INoweyi"),
+  TranslatedName(LangSun(), name: "Norwégia"),
+  TranslatedName(LangTgl(), name: "Noruwega"),
+  TranslatedName(LangTso(), name: "Norge"),
+  TranslatedName(LangVol(), name: "Norgän"),
+  TranslatedName(LangWln(), name: "Norvedje"),
+  TranslatedName(LangZha(), name: "Nozveih"),
 ];

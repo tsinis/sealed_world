@@ -2,35 +2,41 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Montserrat country:
+/// Provides 103 translations for a Montserrat country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -49,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
@@ -267,4 +274,11 @@ const msrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Motserati"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Motserati", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Montserrat"),
+  TranslatedName(LangArg(), name: "Isla de Montserrat"),
+  TranslatedName(LangBak(), name: "Монтсеррат"),
+  TranslatedName(LangCat(), name: "Illa de Montserrat"),
+  TranslatedName(LangDiv(), name: "މޮންސެރާޓު"),
+  TranslatedName(LangEpo(), name: "Moncerato"),
+  TranslatedName(LangGlg(), name: "Illa Montserrat"),
+  TranslatedName(LangKin(), name: "Monserati"),
 ];

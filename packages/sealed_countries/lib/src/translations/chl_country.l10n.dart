@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Chile country:
+/// Provides 145 translations for a Chile country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -12,11 +14,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,8 +30,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,12 +50,16 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Inuktitut
+/// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -55,12 +68,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -68,17 +85,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -86,23 +114,33 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
+/// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -274,4 +312,42 @@ const chlCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède ṣílè"),
   TranslatedName(LangYor(), name: "Orílɛ́ède shílè", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Chile"),
+  TranslatedName(LangAbk(), name: "Чили"),
+  TranslatedName(LangAva(), name: "Чили"),
+  TranslatedName(LangAym(), name: "Chili"),
+  TranslatedName(LangBak(), name: "Чи́ли"),
+  TranslatedName(LangBih(), name: "चिली"),
+  TranslatedName(LangBod(), name: "ཅི་ལི།"),
+  TranslatedName(LangCos(), name: "Cile"),
+  TranslatedName(LangChu(), name: "Чилє"),
+  TranslatedName(LangChv(), name: "Чили"),
+  TranslatedName(LangDiv(), name: "ޗިލީ"),
+  TranslatedName(LangGlv(), name: "yn Çhillee"),
+  TranslatedName(LangHat(), name: "Chili"),
+  TranslatedName(LangIpk(), name: "Cili"),
+  TranslatedName(LangIdo(), name: "Chili"),
+  TranslatedName(LangIku(), name: "ᓯᓕ"),
+  TranslatedName(LangKom(), name: "Чили"),
+  TranslatedName(LangLat(), name: "Chilia"),
+  TranslatedName(LangLim(), name: "Chili"),
+  TranslatedName(LangMri(), name: "Hiri"),
+  TranslatedName(LangNau(), name: "Tsire"),
+  TranslatedName(LangNav(), name: "Chíilii"),
+  TranslatedName(LangOrm(), name: "Chiilii"),
+  TranslatedName(LangOss(), name: "Чили"),
+  TranslatedName(LangPli(), name: "चिले"),
+  TranslatedName(LangQue(), name: "Chili"),
+  TranslatedName(LangKin(), name: "Shili"),
+  TranslatedName(LangSan(), name: "चिले"),
+  TranslatedName(LangSrd(), name: "Cile"),
+  TranslatedName(LangSmo(), name: "Shili"),
+  TranslatedName(LangSsw(), name: "iShile"),
+  TranslatedName(LangSun(), name: "Cilé"),
+  TranslatedName(LangTwi(), name: "Kyili"),
+  TranslatedName(LangTah(), name: "Tīri"),
+  TranslatedName(LangVen(), name: "Shile"),
+  TranslatedName(LangVie(), name: "Chi-lê"),
+  TranslatedName(LangVol(), name: "Cilän"),
+  TranslatedName(LangWln(), name: "Tchili"),
+  TranslatedName(LangXho(), name: "iChile"),
 ];

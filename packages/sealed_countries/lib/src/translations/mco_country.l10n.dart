@@ -2,16 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Monaco country:
+/// Provides 134 translations for a Monaco country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -22,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,12 +46,15 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -55,11 +64,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -67,11 +80,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -79,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -86,22 +105,29 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -299,4 +325,30 @@ const mcoCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Monako"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Monako", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Monaco"),
+  TranslatedName(LangArg(), name: "Múnegu"),
+  TranslatedName(LangBak(), name: "Монако"),
+  TranslatedName(LangBod(), name: "མོ་ན་ཁོ།"),
+  TranslatedName(LangChu(), name: "Монако"),
+  TranslatedName(LangChv(), name: "Монако"),
+  TranslatedName(LangDiv(), name: "މޮނާކޯ"),
+  TranslatedName(LangFry(), name: "Monako"),
+  TranslatedName(LangHat(), name: "Monako"),
+  TranslatedName(LangIle(), name: "Mónaco"),
+  TranslatedName(LangIdo(), name: "Monako"),
+  TranslatedName(LangKon(), name: "Monako"),
+  TranslatedName(LangKom(), name: "Монако"),
+  TranslatedName(LangCor(), name: "Monako"),
+  TranslatedName(LangLat(), name: "Monoecus"),
+  TranslatedName(LangMri(), name: "Manako"),
+  TranslatedName(LangMlt(), name: "Monako"),
+  TranslatedName(LangNau(), name: "Monako"),
+  TranslatedName(LangOci(), name: "Mónegue"),
+  TranslatedName(LangOss(), name: "Монако"),
+  TranslatedName(LangKin(), name: "Monako"),
+  TranslatedName(LangSan(), name: "मोनाको"),
+  TranslatedName(LangSsw(), name: "IMonakho"),
+  TranslatedName(LangSun(), name: "Monako"),
+  TranslatedName(LangTgl(), name: "Monako"),
+  TranslatedName(LangTwi(), name: "Monako"),
+  TranslatedName(LangVol(), name: "Monakän"),
 ];

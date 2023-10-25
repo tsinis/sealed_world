@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Bahamas country:
+/// Provides 133 translations for a Bahamas country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,8 +24,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,43 +43,61 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -84,13 +106,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -99,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
@@ -300,4 +326,30 @@ const bhsCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bàhámásì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bàhámásì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Bahamas"),
+  TranslatedName(LangBak(), name: "Багама утрауҙары"),
+  TranslatedName(LangBod(), name: "བ་ཧ་མཱ་སི།"),
+  TranslatedName(LangChv(), name: "Пахамсем"),
+  TranslatedName(LangDiv(), name: "ބަހާމަސް"),
+  TranslatedName(LangGrn(), name: "Vaamakuéra"),
+  TranslatedName(LangGlv(), name: "ny Bahamaghyn"),
+  TranslatedName(LangHat(), name: "Il Bahamas"),
+  TranslatedName(LangIdo(), name: "Bahama"),
+  TranslatedName(LangJav(), name: "Bahama"),
+  TranslatedName(LangCor(), name: "Ynysow Bahama"),
+  TranslatedName(LangLat(), name: "Bahamanae"),
+  TranslatedName(LangLtz(), name: "D'Bahamas"),
+  TranslatedName(LangLim(), name: "De Bahama's"),
+  TranslatedName(LangMlg(), name: "Bahamasy"),
+  TranslatedName(LangNau(), name: "Bahamat"),
+  TranslatedName(LangOci(), name: "Las Bahamas"),
+  TranslatedName(LangOrm(), name: "Bahamaas"),
+  TranslatedName(LangOss(), name: "Багамтæ"),
+  TranslatedName(LangPli(), name: "बहामास"),
+  TranslatedName(LangQue(), name: "Bahamakuna"),
+  TranslatedName(LangKin(), name: "Bahamasi"),
+  TranslatedName(LangSan(), name: "बहामास"),
+  TranslatedName(LangSme(), name: "Bahamasullot"),
+  TranslatedName(LangSsw(), name: "iBhahamasi"),
+  TranslatedName(LangSun(), name: "Bahama"),
+  TranslatedName(LangVol(), name: "Bahamuäns"),
 ];

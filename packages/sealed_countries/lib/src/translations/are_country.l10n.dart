@@ -2,15 +2,17 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a United Arab Emirates country:
+/// Provides 144 translations for a United Arab Emirates country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -23,9 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,14 +45,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -58,12 +66,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +85,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -97,13 +115,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -113,9 +134,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const areCountryTranslations = [
@@ -356,4 +379,27 @@ const areCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-United Arab Emirates"),
+  TranslatedName(LangArg(), name: "Emiratos Arabes Unitos"),
+  TranslatedName(LangAva(), name: "ГIарабазул Цолъарал Имаратал"),
+  TranslatedName(LangBod(), name: "ཡི་ནེ་ཁྲེ་ཀྲི་ཨ་རབ་ཨེ་མེ་རེ་ཁྲི།"),
+  TranslatedName(LangDiv(), name: "އެކުވެރި ޢަރަބި އިމާރާތު"),
+  TranslatedName(LangGrn(), name: "Aravia Emiryvy Joaju"),
+  TranslatedName(LangGlv(), name: "Ny h-Emmiraidyn Arabagh Unnaneysit"),
+  TranslatedName(LangHat(), name: "Emira Arab Ini"),
+  TranslatedName(LangIle(), name: "Unit Arabic Emiratus"),
+  TranslatedName(LangIdo(), name: "Unionita Araba Emirati"),
+  TranslatedName(LangKom(), name: "Ӧтувтчӧм Араб Эмиратъяс"),
+  TranslatedName(LangCor(), name: "Pennternasedh Unys Arabek"),
+  TranslatedName(LangLat(), name: "Phylarchiarum Arabicarum Confoederatio"),
+  TranslatedName(LangLim(), name: "Vereinegde Arabische Emiraote"),
+  TranslatedName(LangMri(), name: "Te Kotahitanga o ngā Whenua Ārapi"),
+  TranslatedName(LangNau(), name: "Emireitit Arabiya"),
+  TranslatedName(LangNav(), name: "Ásáí Bikéyah Yázhí Ałhidadiidzooígíí"),
+  TranslatedName(LangOci(), name: "Emirats Arabis Units"),
+  TranslatedName(LangOss(), name: "Араббы Иугонд Эмираттæ"),
+  TranslatedName(LangKin(), name: "Nyarabu Zunze Ubumwe"),
+  TranslatedName(LangSsw(), name: "Bunye bema-Arabhu"),
+  TranslatedName(LangSun(), name: "Uni Émirat Arab"),
+  TranslatedName(LangVol(), name: "Lemiräns Larabik Pebalöl"),
+  TranslatedName(LangYid(), name: "פאראייניגטע אראבישע עמיראטן"),
 ];

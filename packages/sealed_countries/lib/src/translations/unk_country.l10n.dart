@@ -2,42 +2,124 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 36 translations for a Kosovo country:
+/// Provides 118 translations for a Kosovo country:
+/// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Aragonese
+/// - Armenian
+/// - Aymara
+/// - Azerbaijani
 /// - Bambara
+/// - Bashkir
+/// - Basque
+/// - Belarusian
+/// - Bengali (Bangla)
+/// - Bosnian
 /// - Breton
+/// - Bulgarian
+/// - Burmese
+/// - Catalan
+/// - Chechen
+/// - Chichewa (Chewa/Nyanja)
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - English
+/// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Galician
+/// - Georgian
 /// - German
+/// - Greek (modern)
+/// - Guaraní
 /// - Hausa
+/// - Hebrew (modern)
+/// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
+/// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Kinyarwanda
+/// - Komi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
+/// - Lao
+/// - Latin
+/// - Latvian
+/// - Limburgish (Limburgan/Limburger)
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
+/// - Macedonian
 /// - Malay
+/// - Malayalam
+/// - Maltese
+/// - Manx
+/// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Norwegian
+/// - Norwegian Nynorsk
+/// - Occitan
+/// - Ossetian (Ossetic)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Samoan
+/// - Sardinian
 /// - Serbian
+/// - Shona
+/// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swahili
 /// - Swedish
+/// - Tagalog
+/// - Tamil
+/// - Tatar
+/// - Telugu
+/// - Thai
+/// - Tibetan Standard
+/// - Tsonga
 /// - Turkish
+/// - Ukrainian
 /// - Urdu
 /// - Uyghur
-/// - Welsh.
+/// - Uzbek
+/// - Vietnamese
+/// - Volapük
+/// - Welsh
+/// - Western Frisian
+/// - Yoruba.
 const unkCountryTranslations = [
   CountryName(
     language: LangEng(),
@@ -159,4 +241,86 @@ const unkCountryTranslations = [
   TranslatedName(LangMsa(), name: "Kosovo", script: ScriptLatn()),
   TranslatedName(LangSqi(), name: "Kosovë", countryCode: "XK"),
   TranslatedName(LangUig(), name: "كوسوۋو", script: ScriptArab()),
+  TranslatedName(LangAmh(), name: "ኮሶቮ"),
+  TranslatedName(LangAym(), name: "Kusuwu"),
+  TranslatedName(LangBak(), name: "Косово"),
+  TranslatedName(LangBel(), name: "Косава"),
+  TranslatedName(LangBul(), name: "Косово"),
+  TranslatedName(LangBen(), name: "কসোভো"),
+  TranslatedName(LangBod(), name: "ཁོ་སོ་ཝོ།"),
+  TranslatedName(LangChe(), name: "Косово"),
+  TranslatedName(LangChv(), name: "Косово"),
+  TranslatedName(LangEll(), name: "Κοσσυφοπέδιο"),
+  TranslatedName(LangGle(), name: "An Chosaiv"),
+  TranslatedName(LangGla(), name: "Cosobho"),
+  TranslatedName(LangHeb(), name: "קוסובו"),
+  TranslatedName(LangHin(), name: "कोसोवो गणराज्य"),
+  TranslatedName(LangHye(), name: "Կոսովոն"),
+  TranslatedName(LangIsl(), name: "Kosóvó"),
+  TranslatedName(LangKat(), name: "კოსოვო"),
+  TranslatedName(LangKan(), name: "ಕೊಸೊವೊ"),
+  TranslatedName(LangKur(), name: "Kosova"),
+  TranslatedName(LangKom(), name: "Косово"),
+  TranslatedName(LangCor(), name: "Kosova"),
+  TranslatedName(LangLat(), name: "Kosovia"),
+  TranslatedName(LangLao(), name: "ປະເທດໂກໂຊໂວ"),
+  TranslatedName(LangLit(), name: "Kosovas"),
+  TranslatedName(LangLav(), name: "Kosova"),
+  TranslatedName(LangMkd(), name: "Косово"),
+  TranslatedName(LangMal(), name: "കൊസോവോ"),
+  TranslatedName(LangMar(), name: "कोसोव्हो"),
+  TranslatedName(LangMya(), name: "ကိုဆိုဗို"),
+  TranslatedName(LangOci(), name: "Kosova"),
+  TranslatedName(LangOss(), name: "Косово"),
+  TranslatedName(LangPan(), name: "ਕੋਸੋਵੋ ਗਣਰਾਜ"),
+  TranslatedName(LangQue(), name: "Kusuwu"),
+  TranslatedName(LangRoh(), name: "Cosovo"),
+  TranslatedName(LangSrd(), name: "Kòssovu"),
+  TranslatedName(LangSin(), name: "කොසෝවො"),
+  TranslatedName(LangSom(), name: "Kosofo"),
+  TranslatedName(LangTam(), name: "கொசோவோ"),
+  TranslatedName(LangTel(), name: "కొసావో"),
+  TranslatedName(LangTha(), name: "ประเทศคอซอวอ"),
+  TranslatedName(LangTat(), name: "Косово Җөмһүрияте"),
+  TranslatedName(LangUkr(), name: "Косово"),
+  TranslatedName(LangVol(), name: "Kosovän"),
+  TranslatedName(LangYor(), name: "Kósófò"),
+  TranslatedName(LangAfr(), name: "Kosovo"),
+  TranslatedName(LangArg(), name: "Kosovo"),
+  TranslatedName(LangAze(), name: "Kosovo"),
+  TranslatedName(LangBos(), name: "Kosovo"),
+  TranslatedName(LangCat(), name: "Kosovo"),
+  TranslatedName(LangDan(), name: "Kosovo"),
+  TranslatedName(LangEpo(), name: "Kosovo"),
+  TranslatedName(LangEus(), name: "Kosovo"),
+  TranslatedName(LangFao(), name: "Kosovo"),
+  TranslatedName(LangFry(), name: "Kosovo"),
+  TranslatedName(LangGlg(), name: "Kosovo"),
+  TranslatedName(LangGrn(), name: "Kosovo"),
+  TranslatedName(LangGlv(), name: "Kosovo"),
+  TranslatedName(LangIna(), name: "Kosovo"),
+  TranslatedName(LangInd(), name: "Kosovo"),
+  TranslatedName(LangIle(), name: "Kosovo"),
+  TranslatedName(LangIbo(), name: "Kosovo"),
+  TranslatedName(LangIdo(), name: "Kosovo"),
+  TranslatedName(LangJav(), name: "Kosovo"),
+  TranslatedName(LangKal(), name: "Kosovo"),
+  TranslatedName(LangLtz(), name: "Kosovo"),
+  TranslatedName(LangLim(), name: "Kosovo"),
+  TranslatedName(LangMlt(), name: "Kosovo"),
+  TranslatedName(LangNau(), name: "Kosovo"),
+  TranslatedName(LangNno(), name: "Kosovo"),
+  TranslatedName(LangNor(), name: "Kosovo"),
+  TranslatedName(LangNya(), name: "Kosovo"),
+  TranslatedName(LangRon(), name: "Kosovo"),
+  TranslatedName(LangKin(), name: "Kosovo"),
+  TranslatedName(LangSlv(), name: "Kosovo"),
+  TranslatedName(LangSmo(), name: "Kosovo"),
+  TranslatedName(LangSna(), name: "Kosovo"),
+  TranslatedName(LangSun(), name: "Kosovo"),
+  TranslatedName(LangSwa(), name: "Kosovo"),
+  TranslatedName(LangTgl(), name: "Kosovo"),
+  TranslatedName(LangTso(), name: "Kosovo"),
+  TranslatedName(LangUzb(), name: "Kosovo"),
+  TranslatedName(LangVie(), name: "Kosovo"),
 ];

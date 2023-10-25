@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a India country:
+/// Provides 113 translations for a India country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -46,6 +46,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -105,6 +106,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -293,4 +295,6 @@ const indCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède India"),
   TranslatedName(LangYor(), name: "Orílɛ́ède India", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-India"),
+  TranslatedName(LangFry(), name: "Yndia"),
+  TranslatedName(LangIku(), name: "ᐃᓐᑎᐊ/intia"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 86 translations for a Mali country:
+/// Provides 98 translations for a Mali country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -10,6 +10,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -18,8 +19,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -49,15 +52,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Lingala
 /// - Lithuanian
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -65,18 +72,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -84,7 +94,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -211,4 +223,16 @@ const mliCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Mali"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Mali", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "iMali"),
+  TranslatedName(LangBak(), name: "Мали"),
+  TranslatedName(LangBod(), name: "མ་ལི།"),
+  TranslatedName(LangChv(), name: "Мали"),
+  TranslatedName(LangDiv(), name: "މާލީ"),
+  TranslatedName(LangFry(), name: "Maly"),
+  TranslatedName(LangGlv(), name: "Malee"),
+  TranslatedName(LangLat(), name: "Malium"),
+  TranslatedName(LangMri(), name: "Māri"),
+  TranslatedName(LangOss(), name: "Мали"),
+  TranslatedName(LangSan(), name: "माली"),
+  TranslatedName(LangSsw(), name: "IMali"),
+  TranslatedName(LangVol(), name: "Maliyän"),
 ];

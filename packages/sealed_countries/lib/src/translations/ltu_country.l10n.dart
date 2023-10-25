@@ -2,31 +2,42 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Lithuania country:
+/// Provides 159 translations for a Lithuania country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,6 +45,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Estonian
 /// - Ewe
 /// - Faroese
+/// - Fijian
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -42,29 +54,40 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +96,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,19 +119,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
+/// - Southern Sotho
 /// - Spanish
+/// - Sundanese
+/// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -111,7 +148,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -326,4 +366,44 @@ const ltuCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Lituania"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Lituania", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Lithuania"),
+  TranslatedName(LangAbk(), name: "Литва"),
+  TranslatedName(LangArg(), name: "Lituania"),
+  TranslatedName(LangAym(), name: "Lituaña"),
+  TranslatedName(LangBak(), name: "Литва"),
+  TranslatedName(LangBis(), name: "Litwania"),
+  TranslatedName(LangBod(), name: "ལི་ཐུ་ཨེ་ནི་ཡ།"),
+  TranslatedName(LangCha(), name: "Lituania"),
+  TranslatedName(LangCos(), name: "Lituania"),
+  TranslatedName(LangChu(), name: "Литъва"),
+  TranslatedName(LangChv(), name: "Литва"),
+  TranslatedName(LangDiv(), name: "ލިތުއޭނިއާ"),
+  TranslatedName(LangFij(), name: "Lituani"),
+  TranslatedName(LangGrn(), name: "Lituaña"),
+  TranslatedName(LangGlv(), name: "Yn Litaan"),
+  TranslatedName(LangHat(), name: "Lityani"),
+  TranslatedName(LangIle(), name: "Lituania"),
+  TranslatedName(LangIdo(), name: "Lituania"),
+  TranslatedName(LangIku(), name: "ᓕᐋᑐᕙ"),
+  TranslatedName(LangKon(), name: "Lietuva"),
+  TranslatedName(LangKal(), name: "Litaueni"),
+  TranslatedName(LangKom(), name: "Литва"),
+  TranslatedName(LangCor(), name: "Lithouani"),
+  TranslatedName(LangLat(), name: "Lituania"),
+  TranslatedName(LangLim(), name: "Litauwe"),
+  TranslatedName(LangMri(), name: "Rituānia"),
+  TranslatedName(LangNau(), name: "Rituainiya"),
+  TranslatedName(LangNav(), name: "Łitʼoowę́ęya"),
+  TranslatedName(LangOci(), name: "Lituània"),
+  TranslatedName(LangOss(), name: "Литва"),
+  TranslatedName(LangKin(), name: "Lituwaniya"),
+  TranslatedName(LangSan(), name: "लेतुवा"),
+  TranslatedName(LangSrd(), name: "Lituània"),
+  TranslatedName(LangSsw(), name: "Lithuwani"),
+  TranslatedName(LangSot(), name: "Lituania"),
+  TranslatedName(LangSun(), name: "Lituania"),
+  TranslatedName(LangSwa(), name: "Lituanya"),
+  TranslatedName(LangTgl(), name: "Litwaniya"),
+  TranslatedName(LangVen(), name: "Lituania"),
+  TranslatedName(LangVol(), name: "Lietuvän"),
+  TranslatedName(LangWln(), name: "Litwaneye"),
 ];

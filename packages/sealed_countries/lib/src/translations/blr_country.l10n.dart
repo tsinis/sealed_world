@@ -2,13 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Belarus country:
+/// Provides 143 translations for a Belarus country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -23,9 +26,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,27 +48,37 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -70,15 +87,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -87,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -94,20 +117,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -317,4 +346,33 @@ const blrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bélárúsì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bélárúsì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Belarus"),
+  TranslatedName(LangAfr(), name: "Wit-Rusland"),
+  TranslatedName(LangArg(), name: "Belarrusia"),
+  TranslatedName(LangBod(), name: "བྷེ་ལ་རསུ།"),
+  TranslatedName(LangCos(), name: "Bielorussia"),
+  TranslatedName(LangChu(), name: "Бѣла Роусь"),
+  TranslatedName(LangChv(), name: "Беларуç"),
+  TranslatedName(LangDiv(), name: "ބެލަރޫސް"),
+  TranslatedName(LangGrn(), name: "Vielorrusia"),
+  TranslatedName(LangGlv(), name: "Yn Velaroosh"),
+  TranslatedName(LangHat(), name: "Byelorisi"),
+  TranslatedName(LangIle(), name: "Bielorussia"),
+  TranslatedName(LangIdo(), name: "Bielorusia"),
+  TranslatedName(LangKon(), name: "Belarusia"),
+  TranslatedName(LangKal(), name: "Hvideruslandi"),
+  TranslatedName(LangKom(), name: "Беларусь"),
+  TranslatedName(LangCor(), name: "Belarussi"),
+  TranslatedName(LangLat(), name: "Ruthenia Alba"),
+  TranslatedName(LangLim(), name: "Wit-Rusland"),
+  TranslatedName(LangMri(), name: "Pērara"),
+  TranslatedName(LangNau(), name: "Berarut"),
+  TranslatedName(LangOci(), name: "Bielorussia"),
+  TranslatedName(LangOss(), name: "Белорусси"),
+  TranslatedName(LangKin(), name: "Belarusi"),
+  TranslatedName(LangSan(), name: "बेलारूस"),
+  TranslatedName(LangSsw(), name: "IBhelalasi"),
+  TranslatedName(LangSun(), name: "Bélarus"),
+  TranslatedName(LangTuk(), name: "Belorussiýa"),
+  TranslatedName(LangTgl(), name: "Biyelorusya"),
+  TranslatedName(LangVol(), name: "Belarusän"),
 ];

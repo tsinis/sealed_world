@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Bulgaria country:
+/// Provides 137 translations for a Bulgaria country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -12,10 +14,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -23,9 +29,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,7 +48,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -53,12 +64,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -67,18 +82,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -86,12 +111,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -100,6 +128,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -306,4 +336,34 @@ const bgrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bùùgáríà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bùùgáríà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Bulgaria"),
+  TranslatedName(LangAbk(), name: "Болга́риа"),
+  TranslatedName(LangAva(), name: "Болга́рия"),
+  TranslatedName(LangAym(), name: "Bulkariya"),
+  TranslatedName(LangBak(), name: "Болга́рия"),
+  TranslatedName(LangBih(), name: "बुल्गारिया"),
+  TranslatedName(LangBod(), name: "པུ་ར་ག་རི་ཡ།"),
+  TranslatedName(LangChu(), name: "Блъгарїꙗ"),
+  TranslatedName(LangChv(), name: "Пăлхарĕ"),
+  TranslatedName(LangDiv(), name: "ބަލްގޭރިއާ"),
+  TranslatedName(LangGrn(), name: "Vugaria"),
+  TranslatedName(LangGlv(), name: "yn Vulgeyr"),
+  TranslatedName(LangHat(), name: "Bilgari"),
+  TranslatedName(LangKon(), name: "Balgaria"),
+  TranslatedName(LangKom(), name: "Болгария"),
+  TranslatedName(LangCor(), name: "Bulgari"),
+  TranslatedName(LangLim(), name: "Bölgarije"),
+  TranslatedName(LangMri(), name: "Purukāria"),
+  TranslatedName(LangNau(), name: "Borgeriya"),
+  TranslatedName(LangNav(), name: "Bálgaa Bikéyah"),
+  TranslatedName(LangOrm(), name: "Bulgeeriyaa"),
+  TranslatedName(LangOss(), name: "Болгари"),
+  TranslatedName(LangPli(), name: "बुल्गारिया"),
+  TranslatedName(LangQue(), name: "Bulgarya"),
+  TranslatedName(LangKin(), name: "Bulugariya"),
+  TranslatedName(LangSan(), name: "बुल्गारिया"),
+  TranslatedName(LangSmo(), name: "Bultalia"),
+  TranslatedName(LangSsw(), name: "iBhulgariya"),
+  TranslatedName(LangTgl(), name: "Bulgarya"),
+  TranslatedName(LangVol(), name: "Bulgarän"),
+  TranslatedName(LangWln(), name: "Bulgåreye"),
 ];

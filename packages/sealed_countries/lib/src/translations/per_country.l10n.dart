@@ -2,14 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 88 translations for a Peru country:
+/// Provides 114 translations for a Peru country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -17,10 +22,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -33,12 +43,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingue
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,20 +60,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Lingala
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -67,18 +87,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -86,7 +110,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -219,4 +245,30 @@ const perCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Peru"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Peru", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Peru"),
+  TranslatedName(LangAbk(), name: "Перу"),
+  TranslatedName(LangArg(), name: "Perú"),
+  TranslatedName(LangAym(), name: "Piruw"),
+  TranslatedName(LangBak(), name: "Перу"),
+  TranslatedName(LangBod(), name: "པེ་རུ།"),
+  TranslatedName(LangCha(), name: "Perú"),
+  TranslatedName(LangCos(), name: "Perù"),
+  TranslatedName(LangChv(), name: "Перу"),
+  TranslatedName(LangDiv(), name: "ޕެރޫ"),
+  TranslatedName(LangFry(), name: "Perû"),
+  TranslatedName(LangGrn(), name: "Perũ"),
+  TranslatedName(LangGlv(), name: "Yn Pheroo"),
+  TranslatedName(LangHat(), name: "Pewou"),
+  TranslatedName(LangIle(), name: "Perú"),
+  TranslatedName(LangIku(), name: "ᐱᕉ"),
+  TranslatedName(LangKom(), name: "Перу"),
+  TranslatedName(LangCor(), name: "Perou"),
+  TranslatedName(LangLat(), name: "Peruvia"),
+  TranslatedName(LangMri(), name: "Perū"),
+  TranslatedName(LangOci(), name: "Peró"),
+  TranslatedName(LangOss(), name: "Перу"),
+  TranslatedName(LangSan(), name: "पेरु"),
+  TranslatedName(LangSqi(), name: "Peruja"),
+  TranslatedName(LangSsw(), name: "IPheru"),
+  TranslatedName(LangSun(), name: "Péru"),
+  TranslatedName(LangVol(), name: "Peruvän"),
 ];

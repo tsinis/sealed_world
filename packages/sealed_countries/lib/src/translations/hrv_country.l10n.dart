@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Croatia country:
+/// Provides 151 translations for a Croatia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +28,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,28 +48,36 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -72,14 +86,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -89,6 +109,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -96,14 +118,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovak
 /// - Slovene
 /// - Somali
+/// - Southern Sotho
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -112,11 +139,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const hrvCountryTranslations = [
   CountryName(
@@ -332,4 +362,34 @@ const hrvCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kòróátíà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kòróátíà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Croatia"),
+  TranslatedName(LangAbk(), name: "Хорватиа"),
+  TranslatedName(LangArg(), name: "Croacia"),
+  TranslatedName(LangBak(), name: "Хорватия"),
+  TranslatedName(LangBod(), name: "ཁུརོ་ཤི་ཡ།"),
+  TranslatedName(LangChu(), name: "Хръватьска"),
+  TranslatedName(LangDiv(), name: "ކުރޮއޭޝިއާ"),
+  TranslatedName(LangGrn(), name: "Kyoasia"),
+  TranslatedName(LangGlv(), name: "Yn Chroit"),
+  TranslatedName(LangHat(), name: "Kroasi"),
+  TranslatedName(LangIdo(), name: "Kroatia"),
+  TranslatedName(LangKon(), name: "Kroatia"),
+  TranslatedName(LangKal(), name: "Kroatia"),
+  TranslatedName(LangKom(), name: "Хорватия"),
+  TranslatedName(LangCor(), name: "Kroati"),
+  TranslatedName(LangLim(), name: "Kroatië"),
+  TranslatedName(LangMri(), name: "Koroātia"),
+  TranslatedName(LangNau(), name: "Kroaitsiya"),
+  TranslatedName(LangNav(), name: "Kwóóʼad Bikéyah"),
+  TranslatedName(LangOci(), name: "Croàcia"),
+  TranslatedName(LangOss(), name: "Хорвати"),
+  TranslatedName(LangKin(), name: "Korowatiya"),
+  TranslatedName(LangSan(), name: "क्रोएशिया"),
+  TranslatedName(LangSrd(), name: "Croatzia"),
+  TranslatedName(LangSsw(), name: "IKhuroshiya"),
+  TranslatedName(LangSot(), name: "Kroatia"),
+  TranslatedName(LangSun(), name: "Kroasia"),
+  TranslatedName(LangTgl(), name: "Kroasya"),
+  TranslatedName(LangVol(), name: "Kroasän"),
+  TranslatedName(LangWln(), name: "Crowaceye"),
+  TranslatedName(LangZha(), name: "Gwzlozdiya"),
 ];

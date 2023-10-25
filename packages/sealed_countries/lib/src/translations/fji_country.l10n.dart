@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 98 translations for a Fiji country:
+/// Provides 117 translations for a Fiji country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,25 +10,31 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Fijian
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -37,10 +43,12 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -52,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -63,9 +72,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -73,7 +86,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -81,11 +96,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Spanish
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -93,7 +110,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -261,4 +280,23 @@ const fjiCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Fiji"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Fiji", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Fiji"),
+  TranslatedName(LangArg(), name: "Fichi"),
+  TranslatedName(LangBak(), name: "Фиджи"),
+  TranslatedName(LangBih(), name: "फिजी"),
+  TranslatedName(LangBod(), name: "ཧྥི་ཇི།"),
+  TranslatedName(LangChv(), name: "Фиджи"),
+  TranslatedName(LangDiv(), name: "ފިޖީ"),
+  TranslatedName(LangFij(), name: "Viti"),
+  TranslatedName(LangFry(), name: "Fidzjy"),
+  TranslatedName(LangHat(), name: "Fidji"),
+  TranslatedName(LangIdo(), name: "Fidji"),
+  TranslatedName(LangLat(), name: "Viti"),
+  TranslatedName(LangMri(), name: "Whītī"),
+  TranslatedName(LangNau(), name: "Bidji"),
+  TranslatedName(LangNav(), name: "Fííjii"),
+  TranslatedName(LangOss(), name: "Фиджи"),
+  TranslatedName(LangSan(), name: "फिजी"),
+  TranslatedName(LangSmo(), name: "Fiti"),
+  TranslatedName(LangTgl(), name: "Piyi"),
+  TranslatedName(LangVol(), name: "Ficiyuäns"),
 ];

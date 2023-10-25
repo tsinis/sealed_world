@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Nigeria country:
+/// Provides 131 translations for a Nigeria country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,7 +44,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -55,7 +62,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -68,17 +77,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -87,12 +103,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -101,10 +120,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ngaCountryTranslations = [
   CountryName(
@@ -302,4 +326,28 @@ const ngaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orilẹ̀-èdè Nàìjíríà"),
   TranslatedName(LangYor(), name: "Orilɛ̀-èdè Nàìjíríà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Nigeria"),
+  TranslatedName(LangArg(), name: "Nicheria"),
+  TranslatedName(LangBak(), name: "Нигерия"),
+  TranslatedName(LangBod(), name: "ནི་ཇི་རི་ཡ།"),
+  TranslatedName(LangChv(), name: "Нигери"),
+  TranslatedName(LangDiv(), name: "ނައިޖީރިއާ"),
+  TranslatedName(LangFry(), name: "Nigearia"),
+  TranslatedName(LangGrn(), name: "Niheria"),
+  TranslatedName(LangGlv(), name: "Yn Naigeer"),
+  TranslatedName(LangHat(), name: "Nijerya"),
+  TranslatedName(LangKon(), name: "Nizeria"),
+  TranslatedName(LangCor(), name: "Nijeri"),
+  TranslatedName(LangMri(), name: "Ngāitiria"),
+  TranslatedName(LangOci(), name: "Nigèria"),
+  TranslatedName(LangOss(), name: "Нигери"),
+  TranslatedName(LangQue(), name: "Niqirya"),
+  TranslatedName(LangKin(), name: "Nijeriya"),
+  TranslatedName(LangSan(), name: "नैजीरिया"),
+  TranslatedName(LangSrd(), name: "Nigéria"),
+  TranslatedName(LangSsw(), name: "INayijeriya"),
+  TranslatedName(LangTgl(), name: "Nigerya"),
+  TranslatedName(LangVol(), name: "Nigeriyän"),
+  TranslatedName(LangWln(), name: "Nidjeria"),
+  TranslatedName(LangXho(), name: "INigeria"),
+  TranslatedName(LangZha(), name: "Nizywlihya"),
 ];

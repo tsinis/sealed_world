@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Sierra Leone country:
+/// Provides 118 translations for a Sierra Leone country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -12,6 +12,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -21,8 +22,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,6 +42,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -53,10 +57,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -65,8 +72,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -74,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -81,21 +92,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -294,4 +311,24 @@ const sleCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Siria looni"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Siria looni", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Sierra Leone"),
+  TranslatedName(LangBak(), name: "Сьерра-Леоне"),
+  TranslatedName(LangBod(), name: "སི་ར་ལེ་ཨོན།"),
+  TranslatedName(LangDiv(), name: "ސެރެލިއޯން"),
+  TranslatedName(LangFry(), name: "Sierra Leöane"),
+  TranslatedName(LangHat(), name: "Syera Leòn"),
+  TranslatedName(LangKon(), name: "Siera Leone"),
+  TranslatedName(LangCor(), name: "Sierra Leon"),
+  TranslatedName(LangLat(), name: "Mons Leoninus"),
+  TranslatedName(LangMri(), name: "Te Araone"),
+  TranslatedName(
+    LangNav(),
+    name: "Náshdóítsoh Bitsiijįʼ Daditłʼooʼígíí Bidził",
+  ),
+  TranslatedName(LangOss(), name: "Сьеррæ-Леоне"),
+  TranslatedName(LangKin(), name: "Siyera Lewone"),
+  TranslatedName(LangSan(), name: "सियारा-लियोन"),
+  TranslatedName(LangSsw(), name: "ISiriya-Liyoni"),
+  TranslatedName(LangTgl(), name: "Bulubunduking Leona"),
+  TranslatedName(LangTso(), name: "Siyera Liyona"),
+  TranslatedName(LangVol(), name: "Sieraleonän"),
 ];

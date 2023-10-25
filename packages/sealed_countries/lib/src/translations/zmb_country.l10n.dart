@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Zambia country:
+/// Provides 121 translations for a Zambia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,8 +23,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -52,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -65,18 +71,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -84,12 +96,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,7 +113,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -296,4 +313,21 @@ const zmbCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède ṣamibia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède shamibia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Zambia"),
+  TranslatedName(LangBak(), name: "Замбия"),
+  TranslatedName(LangBod(), name: "ཛམ་བི་ཡ།"),
+  TranslatedName(LangChv(), name: "Замби"),
+  TranslatedName(LangDiv(), name: "ޒެމްބިއާ"),
+  TranslatedName(LangFry(), name: "Sambia"),
+  TranslatedName(LangGlv(), name: "Yn Tambia"),
+  TranslatedName(LangHat(), name: "Zanbi"),
+  TranslatedName(LangCor(), name: "Zambi"),
+  TranslatedName(LangMri(), name: "Tāmipia"),
+  TranslatedName(LangOss(), name: "Замби"),
+  TranslatedName(LangQue(), name: "Sambya"),
+  TranslatedName(LangKin(), name: "Zambiya"),
+  TranslatedName(LangSan(), name: "जाम्बिया"),
+  TranslatedName(LangSrd(), name: "Zàmbia"),
+  TranslatedName(LangSsw(), name: "IZambiya"),
+  TranslatedName(LangTgl(), name: "Sambya"),
+  TranslatedName(LangVol(), name: "Zambiyän"),
 ];

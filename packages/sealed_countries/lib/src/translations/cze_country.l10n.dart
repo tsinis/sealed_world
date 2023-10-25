@@ -2,31 +2,44 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Czechia country:
+/// Provides 170 translations for a Czechia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +55,41 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,24 +99,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -100,15 +136,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
@@ -116,11 +158,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const czeCountryTranslations = [
   CountryName(
@@ -332,4 +377,49 @@ const czeCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède ṣẹ́ẹ́kì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède shɛ́ɛ́kì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Czechia"),
+  TranslatedName(LangAbk(), name: "Чехиа"),
+  TranslatedName(LangArg(), name: "Republica Checa"),
+  TranslatedName(LangAva(), name: "Чехия"),
+  TranslatedName(LangAym(), name: "Chexya Ripublika"),
+  TranslatedName(LangBak(), name: "Чехия"),
+  TranslatedName(LangBih(), name: "चेक रिपब्लिक"),
+  TranslatedName(LangBis(), name: "Czech Republic"),
+  TranslatedName(LangBod(), name: "ཅེ་ཁེ།"),
+  TranslatedName(LangCha(), name: "Chekia"),
+  TranslatedName(LangCos(), name: "Cechia"),
+  TranslatedName(LangChu(), name: "Чєшьско"),
+  TranslatedName(LangChv(), name: "Чех Республики"),
+  TranslatedName(LangDiv(), name: "ޗެކް ޖުމްހޫރިއްޔާ"),
+  TranslatedName(LangGrn(), name: "Cheko"),
+  TranslatedName(LangGlv(), name: "Yn Phobblaght Çheck"),
+  TranslatedName(LangHat(), name: "Repiblik tchèk"),
+  TranslatedName(LangIle(), name: "Tchechia"),
+  TranslatedName(LangIbo(), name: "Chekia"),
+  TranslatedName(LangIpk(), name: "Czech Republic"),
+  TranslatedName(LangIdo(), name: "Chekia"),
+  TranslatedName(LangKon(), name: "République tchèque"),
+  TranslatedName(LangKal(), name: "Tjekkia"),
+  TranslatedName(LangKom(), name: "Чехия"),
+  TranslatedName(LangCor(), name: "Pow Chek"),
+  TranslatedName(LangLat(), name: "Cechia"),
+  TranslatedName(LangLim(), name: "Tsjechië"),
+  TranslatedName(LangMri(), name: "Tīekia"),
+  TranslatedName(LangNau(), name: "Ripubrikin Tsiek"),
+  TranslatedName(LangNav(), name: "Chek Bikéyah"),
+  TranslatedName(LangOci(), name: "Republica Chèca"),
+  TranslatedName(LangOrm(), name: "Cheekiyaa"),
+  TranslatedName(LangOss(), name: "Чехи"),
+  TranslatedName(LangPli(), name: "चेक रिपब्लिक"),
+  TranslatedName(LangKin(), name: "Cekiya"),
+  TranslatedName(LangSan(), name: "ज़ेक् रिपब्लिक"),
+  TranslatedName(LangSrd(), name: "Repùblica Ceca"),
+  TranslatedName(LangSmo(), name: "Czechs Republic"),
+  TranslatedName(LangSsw(), name: "Shekhi"),
+  TranslatedName(LangSun(), name: "Céko"),
+  TranslatedName(LangTgl(), name: "Republikang Tseko"),
+  TranslatedName(LangTso(), name: "Czech Republic"),
+  TranslatedName(LangTah(), name: "Czech Republic"),
+  TranslatedName(LangVol(), name: "Tsyegän"),
+  TranslatedName(LangWln(), name: "Tchekeye"),
+  TranslatedName(LangZha(), name: "Ciethaek"),
 ];

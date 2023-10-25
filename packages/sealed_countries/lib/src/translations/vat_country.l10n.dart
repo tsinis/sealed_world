@@ -2,21 +2,25 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Vatican City country:
+/// Provides 155 translations for a Vatican City country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +28,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +50,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,15 +92,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -92,6 +116,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -100,12 +126,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -329,4 +361,36 @@ const vatCountryTranslations = [
   TranslatedName(LangYid(), name: "וואַטיקאַן שטאָט"),
   TranslatedName(LangYor(), name: "Ìlú Vatican"),
   TranslatedName(LangZul(), name: "i-Vatican City"),
+  TranslatedName(LangArg(), name: "Ciudat d'o Vaticano"),
+  TranslatedName(LangBak(), name: "Ватикан"),
+  TranslatedName(LangBis(), name: "Vatican Siti"),
+  TranslatedName(LangBod(), name: "ཝ་ཏི་ཀན་གྲོང་ཁྱོར།"),
+  TranslatedName(LangCos(), name: "Cità di u Vaticanu"),
+  TranslatedName(LangChu(), name: "Ватиканъ"),
+  TranslatedName(LangChv(), name: "Ватикан"),
+  TranslatedName(LangDiv(), name: "ވެޓިކަން ސިޓީ"),
+  TranslatedName(LangGrn(), name: "Táva Vatikano"),
+  TranslatedName(LangGlv(), name: "Ard-valley yn Phaab"),
+  TranslatedName(LangHat(), name: "Vatikan"),
+  TranslatedName(LangIle(), name: "Vaticano"),
+  TranslatedName(LangIdo(), name: "Vatikano"),
+  TranslatedName(LangKon(), name: "Vatican"),
+  TranslatedName(LangKal(), name: "Vatikani"),
+  TranslatedName(LangKom(), name: "Ватикан"),
+  TranslatedName(LangCor(), name: "Cita Vatikan"),
+  TranslatedName(LangLat(), name: "Status Civitatis Vaticanæ"),
+  TranslatedName(LangLim(), name: "Vaticaanstad"),
+  TranslatedName(LangMri(), name: "Poho o Pita"),
+  TranslatedName(LangNau(), name: "Batikan"),
+  TranslatedName(LangNav(), name: "Bádikin Sídii"),
+  TranslatedName(LangOci(), name: "Vatican"),
+  TranslatedName(LangOss(), name: "Ватикан"),
+  TranslatedName(LangKin(), name: "Vatikani"),
+  TranslatedName(LangSan(), name: "वैटिकन"),
+  TranslatedName(LangSrd(), name: "Tzitade de su Vaticanu"),
+  TranslatedName(LangSsw(), name: "IVathikhi"),
+  TranslatedName(LangSun(), name: "Vatikan"),
+  TranslatedName(LangTgl(), name: "Lungsod ng Vaticano"),
+  TranslatedName(LangTat(), name: "Ватикан"),
+  TranslatedName(LangVol(), name: "Vatikän"),
 ];

@@ -2,25 +2,31 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 95 translations for a Pakistan country:
+/// Provides 116 translations for a Pakistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -35,10 +41,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -47,10 +55,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -58,11 +69,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -70,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -77,19 +94,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -279,4 +300,25 @@ const pakCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Pakisitan"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Pakisitan", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Pakistan"),
+  TranslatedName(LangArg(), name: "Pakistán"),
+  TranslatedName(LangBak(), name: "Пакистан"),
+  TranslatedName(LangBih(), name: "पाकिस्तान"),
+  TranslatedName(LangBod(), name: "པ་ཀི་སི་ཐན"),
+  TranslatedName(LangChv(), name: "Пакистан"),
+  TranslatedName(LangDiv(), name: "ޕާކިސްތާން"),
+  TranslatedName(LangGrn(), name: "Pakistán"),
+  TranslatedName(LangGlv(), name: "Yn Phakistaan"),
+  TranslatedName(LangIku(), name: "ᐸᑭᔅᑕᓐ"),
+  TranslatedName(LangKom(), name: "Пакистан"),
+  TranslatedName(LangLat(), name: "Pakistania"),
+  TranslatedName(LangMri(), name: "Pakitāne"),
+  TranslatedName(LangNav(), name: "Eʼeʼaahjí Naakaii Dootłʼizhí Bikéyah"),
+  TranslatedName(LangOci(), name: "Paquistan"),
+  TranslatedName(LangOss(), name: "Пакистан"),
+  TranslatedName(LangKin(), name: "Pakisitani"),
+  TranslatedName(LangSan(), name: "पाकिस्तानम्"),
+  TranslatedName(LangSqi(), name: "Pakistani"),
+  TranslatedName(LangSsw(), name: "IPhakhistani"),
+  TranslatedName(LangTuk(), name: "Päkistan"),
+  TranslatedName(LangVol(), name: "Pakistän"),
 ];

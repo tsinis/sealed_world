@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Nicaragua country:
+/// Provides 124 translations for a Nicaragua country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -11,8 +11,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -22,8 +24,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -38,12 +42,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Irish
 /// - Italian
@@ -54,7 +61,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -67,16 +76,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -84,13 +98,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -99,7 +116,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -302,4 +321,23 @@ const nicCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède NIkaragua"),
   TranslatedName(LangYor(), name: "Orílɛ́ède NIkaragua", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Nicaragua"),
+  TranslatedName(LangAym(), name: "Nikarwa"),
+  TranslatedName(LangBak(), name: "Никарагуа"),
+  TranslatedName(LangBod(), name: "ནི་ཀ་ར་གུ་ཝ།"),
+  TranslatedName(LangDiv(), name: "ނިކަރާގުއާ"),
+  TranslatedName(LangFry(), name: "Nikaragûa"),
+  TranslatedName(LangGrn(), name: "Nikaragua"),
+  TranslatedName(LangGlv(), name: "Yn Nickeraag"),
+  TranslatedName(LangHat(), name: "Nikaragwa"),
+  TranslatedName(LangIdo(), name: "Nikaragua"),
+  TranslatedName(LangKom(), name: "Никарагуа"),
+  TranslatedName(LangCor(), name: "Nikaragwa"),
+  TranslatedName(LangMri(), name: "Nikarāhua"),
+  TranslatedName(LangOss(), name: "Никарагуæ"),
+  TranslatedName(LangQue(), name: "Nikarawa"),
+  TranslatedName(LangKin(), name: "Nikaragwa"),
+  TranslatedName(LangSan(), name: "निकारगुवा"),
+  TranslatedName(LangSsw(), name: "INikhalaga"),
+  TranslatedName(LangSun(), name: "Nikaragua"),
+  TranslatedName(LangVol(), name: "Nikaraguvän"),
 ];

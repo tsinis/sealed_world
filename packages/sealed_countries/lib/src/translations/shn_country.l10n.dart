@@ -107,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -253,7 +254,6 @@ const shnCountryTranslations = [
   TranslatedName(LangDzo(), name: "སེནཊ་ ཧེ་ལི་ན"),
   TranslatedName(LangEwe(), name: "Saint Helena nutome"),
   TranslatedName(LangEll(), name: "Αγία Ελένη"),
-  TranslatedName(LangEng(), name: "St Helena"),
   TranslatedName(LangEpo(), name: "Sent-Heleno"),
   TranslatedName(LangEus(), name: "Santa Helena"),
   TranslatedName(LangFul(), name: "Sent Helen"),
@@ -325,4 +325,8 @@ const shnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Hẹlena"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Hɛlena", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-St. Helena"),
+  TranslatedName(
+    LangVie(),
+    name: "Saint Helena, Ascension và Tristan da Cunha",
+  ),
 ];

@@ -2,30 +2,41 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Latvia country:
+/// Provides 148 translations for a Latvia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,7 +52,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -51,17 +64,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -70,20 +88,31 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -92,12 +121,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -106,6 +138,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -307,4 +341,38 @@ const lvaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Latifia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Latifia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Latvia"),
+  TranslatedName(LangAbk(), name: "Латвиа"),
+  TranslatedName(LangArg(), name: "Letonia"),
+  TranslatedName(LangAva(), name: "Латвия"),
+  TranslatedName(LangBak(), name: "Латвия"),
+  TranslatedName(LangBih(), name: "लैटविया"),
+  TranslatedName(LangBod(), name: "ལ་ཊ་ཝིཡ།"),
+  TranslatedName(LangCha(), name: "Letonia"),
+  TranslatedName(LangCos(), name: "Lettonia"),
+  TranslatedName(LangChu(), name: "Латвїꙗ"),
+  TranslatedName(LangChv(), name: "Латви"),
+  TranslatedName(LangDiv(), name: "ލެޓުވިއާ"),
+  TranslatedName(LangGrn(), name: "Letoña"),
+  TranslatedName(LangGlv(), name: "Yn Latvey"),
+  TranslatedName(LangHat(), name: "Letoni"),
+  TranslatedName(LangKal(), name: "Letlandi"),
+  TranslatedName(LangKom(), name: "Латвия"),
+  TranslatedName(LangCor(), name: "Latvi"),
+  TranslatedName(LangLat(), name: "Lettonia"),
+  TranslatedName(LangLim(), name: "Letland"),
+  TranslatedName(LangMri(), name: "Rāwhia"),
+  TranslatedName(LangNau(), name: "Ratebiya"),
+  TranslatedName(LangNav(), name: "Létbiiya"),
+  TranslatedName(LangOci(), name: "Letònia"),
+  TranslatedName(LangOrm(), name: "Laativiyaa"),
+  TranslatedName(LangOss(), name: "Латви"),
+  TranslatedName(LangPli(), name: "लाट्विया"),
+  TranslatedName(LangKin(), name: "Lativiya"),
+  TranslatedName(LangSan(), name: "लाट्विया"),
+  TranslatedName(LangSrd(), name: "Lettonia"),
+  TranslatedName(LangSmo(), name: "Lativia"),
+  TranslatedName(LangSsw(), name: "ILathiviya"),
+  TranslatedName(LangTgl(), name: "Latbiya"),
+  TranslatedName(LangVol(), name: "Latviyän"),
+  TranslatedName(LangWln(), name: "Letoneye"),
 ];

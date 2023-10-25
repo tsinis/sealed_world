@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Malaysia country:
+/// Provides 136 translations for a Malaysia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,11 +46,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,46 +61,63 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -102,11 +126,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mysCountryTranslations = [
   CountryName(language: LangEng(), official: "Malaysia", common: "Malaysia"),
@@ -223,4 +249,30 @@ const mysCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Malasia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Malasia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Malaysia"),
+  TranslatedName(LangArg(), name: "Malaisia"),
+  TranslatedName(LangBak(), name: "Малайзия"),
+  TranslatedName(LangBod(), name: "མ་ལ་ཤི་ཡ།"),
+  TranslatedName(LangChv(), name: "Малайзи"),
+  TranslatedName(LangDiv(), name: "މެލޭޝިޔާ"),
+  TranslatedName(LangGlv(), name: "Yn Valaysia"),
+  TranslatedName(LangHat(), name: "Malezi"),
+  TranslatedName(LangIdo(), name: "Malaizia"),
+  TranslatedName(LangKom(), name: "Малайзия"),
+  TranslatedName(LangCor(), name: "Malaysi"),
+  TranslatedName(LangLat(), name: "Malaesia"),
+  TranslatedName(LangLim(), name: "Maleisië"),
+  TranslatedName(LangMri(), name: "Marēhia"),
+  TranslatedName(LangMsa(), name: "Maleisië"),
+  TranslatedName(LangNau(), name: "Maraidja"),
+  TranslatedName(LangNav(), name: "Maléízha"),
+  TranslatedName(LangOci(), name: "Malàisia"),
+  TranslatedName(LangOss(), name: "Малайзи"),
+  TranslatedName(LangRon(), name: "Malaezia"),
+  TranslatedName(LangKin(), name: "Malesiya"),
+  TranslatedName(LangSan(), name: "मलयेशिया"),
+  TranslatedName(LangSom(), name: "Malaysiya"),
+  TranslatedName(LangSsw(), name: "IMaleshiya"),
+  TranslatedName(LangTgl(), name: "Malasya"),
+  TranslatedName(LangVol(), name: "Malaysiyän"),
+  TranslatedName(LangZha(), name: "Majlaizsihya"),
 ];

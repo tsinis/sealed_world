@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Lebanon country:
+/// Provides 147 translations for a Lebanon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +26,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,13 +47,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -58,12 +67,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,15 +86,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -91,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -98,13 +118,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -114,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -323,4 +348,29 @@ const lbnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Lebanoni"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Lebanoni", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Lebanon"),
+  TranslatedName(LangArg(), name: "Liban"),
+  TranslatedName(LangBak(), name: "Ливан"),
+  TranslatedName(LangBod(), name: "ལེ་པ་ནོན།"),
+  TranslatedName(LangChv(), name: "Ливан"),
+  TranslatedName(LangDiv(), name: "ލުބުނާން"),
+  TranslatedName(LangGrn(), name: "Lívano"),
+  TranslatedName(LangGlv(), name: "Yn Livaan"),
+  TranslatedName(LangHat(), name: "Liban"),
+  TranslatedName(LangIle(), name: "Libano"),
+  TranslatedName(LangIdo(), name: "Libano"),
+  TranslatedName(LangKom(), name: "Ливан"),
+  TranslatedName(LangCor(), name: "Lebnon"),
+  TranslatedName(LangLat(), name: "Libanus"),
+  TranslatedName(LangLim(), name: "Libanon"),
+  TranslatedName(LangMri(), name: "Repanona"),
+  TranslatedName(LangNau(), name: "Ribanon"),
+  TranslatedName(LangNav(), name: "Łíbanoo"),
+  TranslatedName(LangOci(), name: "Liban"),
+  TranslatedName(LangOss(), name: "Ливан"),
+  TranslatedName(LangKin(), name: "Libani"),
+  TranslatedName(LangSan(), name: "लेबनान"),
+  TranslatedName(LangSsw(), name: "ILibhanoni"),
+  TranslatedName(LangSun(), name: "Libanon"),
+  TranslatedName(LangTgl(), name: "Libano"),
+  TranslatedName(LangVol(), name: "Libanän"),
 ];

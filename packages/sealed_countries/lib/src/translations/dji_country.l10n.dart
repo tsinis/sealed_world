@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a Djibouti country:
+/// Provides 132 translations for a Djibouti country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -46,7 +51,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
@@ -55,11 +62,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -71,8 +81,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -81,6 +97,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -89,12 +107,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -103,7 +124,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -302,4 +325,27 @@ const djiCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Díbọ́ótì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Díbɔ́ótì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Djibouti"),
+  TranslatedName(LangArg(), name: "Chibuti"),
+  TranslatedName(LangBak(), name: "Джибути"),
+  TranslatedName(LangBod(), name: "ཇི་བའོ་ཊི།"),
+  TranslatedName(LangChv(), name: "Джибути"),
+  TranslatedName(LangDiv(), name: "ޖިބުތީ"),
+  TranslatedName(LangFry(), name: "Dzjibûty"),
+  TranslatedName(LangGle(), name: "Diobúití"),
+  TranslatedName(LangIdo(), name: "Djibuti"),
+  TranslatedName(LangKon(), name: "Djibuti"),
+  TranslatedName(LangCor(), name: "Jibouti"),
+  TranslatedName(LangLat(), name: "Gibutum"),
+  TranslatedName(LangMri(), name: "Tipūti"),
+  TranslatedName(LangNau(), name: "Djibuti"),
+  TranslatedName(LangNav(), name: "Jibótii"),
+  TranslatedName(LangOci(), name: "Jiboti"),
+  TranslatedName(LangOrm(), name: "Jibuutii"),
+  TranslatedName(LangOss(), name: "Джибути"),
+  TranslatedName(LangKin(), name: "Jibuti"),
+  TranslatedName(LangSan(), name: "जिबूटी"),
+  TranslatedName(LangSrd(), name: "Gibuti"),
+  TranslatedName(LangSsw(), name: "IJibhuthi"),
+  TranslatedName(LangTgl(), name: "Hiboti"),
+  TranslatedName(LangVol(), name: "Cibutän"),
 ];

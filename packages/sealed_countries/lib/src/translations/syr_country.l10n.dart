@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Syria country:
+/// Provides 141 translations for a Syria country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +28,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,12 +50,15 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -58,23 +68,32 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -84,6 +103,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -91,13 +112,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -106,6 +131,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -319,4 +346,31 @@ const syrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Siria"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Siria", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Syria"),
+  TranslatedName(LangArg(), name: "Siria"),
+  TranslatedName(LangAva(), name: "Сирия"),
+  TranslatedName(LangBak(), name: "Сирия"),
+  TranslatedName(LangBod(), name: "སི་རི་ཡ།"),
+  TranslatedName(LangChu(), name: "Сѷрїꙗ"),
+  TranslatedName(LangChv(), name: "Сири"),
+  TranslatedName(LangDiv(), name: "ސޫރިޔާ"),
+  TranslatedName(LangGlv(), name: "Yn Teer"),
+  TranslatedName(LangHat(), name: "Siri"),
+  TranslatedName(LangIle(), name: "Siria"),
+  TranslatedName(LangIdo(), name: "Siria"),
+  TranslatedName(LangKom(), name: "Сирия"),
+  TranslatedName(LangCor(), name: "Syri"),
+  TranslatedName(LangLim(), name: "Syrië"),
+  TranslatedName(LangMlg(), name: "Siria"),
+  TranslatedName(LangMri(), name: "Hiria"),
+  TranslatedName(LangNav(), name: "Sííwiya"),
+  TranslatedName(LangOci(), name: "Siria"),
+  TranslatedName(LangOss(), name: "Сири"),
+  TranslatedName(LangKin(), name: "Siriya"),
+  TranslatedName(LangSan(), name: "सिरिया"),
+  TranslatedName(LangSrd(), name: "Siria"),
+  TranslatedName(LangSsw(), name: "ISiriya"),
+  TranslatedName(LangSun(), name: "Suriah"),
+  TranslatedName(LangTgl(), name: "Sirya"),
+  TranslatedName(LangVol(), name: "Süriyän"),
+  TranslatedName(LangWln(), name: "Sireye"),
 ];

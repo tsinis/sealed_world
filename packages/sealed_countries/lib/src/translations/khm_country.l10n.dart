@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Cambodia country:
+/// Provides 146 translations for a Cambodia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +26,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,14 +47,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -59,12 +68,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,14 +87,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -99,13 +117,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -337,4 +360,27 @@ const khmCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kàmùbódíà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kàmùbódíà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Cambodia"),
+  TranslatedName(LangArg(), name: "Cambocha"),
+  TranslatedName(LangBak(), name: "Камбоджа"),
+  TranslatedName(LangBod(), name: "ཁམ་པོ་ཛ།"),
+  TranslatedName(LangChv(), name: "Камбоджа"),
+  TranslatedName(LangDiv(), name: "ކެންބޯޑިއާ"),
+  TranslatedName(LangGrn(), name: "Kamboja"),
+  TranslatedName(LangGlv(), name: "Yn Chamboyd"),
+  TranslatedName(LangHat(), name: "Kanbòdj"),
+  TranslatedName(LangIle(), name: "Cambodja"),
+  TranslatedName(LangIdo(), name: "Kambodja"),
+  TranslatedName(LangKom(), name: "Камбоджа"),
+  TranslatedName(LangCor(), name: "Kamboji"),
+  TranslatedName(LangLat(), name: "Cambosia"),
+  TranslatedName(LangLim(), name: "Cambodja"),
+  TranslatedName(LangMri(), name: "Kamapōtia"),
+  TranslatedName(LangNau(), name: "Kambodja"),
+  TranslatedName(LangOci(), name: "Cambòtja"),
+  TranslatedName(LangOss(), name: "Камбоджæ"),
+  TranslatedName(LangKin(), name: "Kambodiya"),
+  TranslatedName(LangSsw(), name: "IKhambodiya"),
+  TranslatedName(LangSun(), name: "Kamboja"),
+  TranslatedName(LangTgl(), name: "Kamboya"),
+  TranslatedName(LangVol(), name: "Kambocän"),
 ];

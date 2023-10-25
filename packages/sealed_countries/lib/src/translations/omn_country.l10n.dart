@@ -2,15 +2,18 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 94 translations for a Oman country:
+/// Provides 114 translations for a Oman country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -19,8 +22,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -35,7 +40,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -48,22 +55,30 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -71,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -78,12 +94,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -91,8 +109,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const omnCountryTranslations = [
@@ -238,4 +258,24 @@ const omnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ọọma"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ɔɔma", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Oman"),
+  TranslatedName(LangArg(), name: "Omán"),
+  TranslatedName(LangBak(), name: "Оман"),
+  TranslatedName(LangBod(), name: "ཨོ་མན།"),
+  TranslatedName(LangChv(), name: "Оман"),
+  TranslatedName(LangDiv(), name: "ޢުމާން"),
+  TranslatedName(LangGrn(), name: "Omã"),
+  TranslatedName(LangGlv(), name: "Yn Omaan"),
+  TranslatedName(LangHat(), name: "Omàn"),
+  TranslatedName(LangKom(), name: "Оман"),
+  TranslatedName(LangLat(), name: "Omania"),
+  TranslatedName(LangLim(), name: "Omaan"),
+  TranslatedName(LangMri(), name: "Omāna"),
+  TranslatedName(LangNav(), name: "Omą́ą́"),
+  TranslatedName(LangOss(), name: "Оман"),
+  TranslatedName(LangKin(), name: "Omani"),
+  TranslatedName(LangSan(), name: "ओमान"),
+  TranslatedName(LangSqi(), name: "Omani"),
+  TranslatedName(LangSsw(), name: "IMani"),
+  TranslatedName(LangVol(), name: "Lomän"),
+  TranslatedName(LangYid(), name: "אמאן"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Saint Pierre and Miquelon country:
+/// Provides 125 translations for a Saint Pierre and Miquelon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -266,7 +266,6 @@ const spmCountryTranslations = [
   TranslatedName(LangDzo(), name: "སིནཊ་པི་ཡེར་ ཨེནཌ་ མིཀོ་ལེན"),
   TranslatedName(LangEwe(), name: "Saint Pierre kple Mikelɔn nutome"),
   TranslatedName(LangEll(), name: "Σεν Πιερ και Μικελόν"),
-  TranslatedName(LangEng(), name: "St Pierre & Miquelon"),
   TranslatedName(LangEpo(), name: "Sent-Piero kaj Mikelono"),
   TranslatedName(LangEus(), name: "Saint-Pierre eta Mikelune"),
   TranslatedName(LangFul(), name: "See Piyeer e Mikeloo"),

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Saint Martin country:
+/// Provides 104 translations for a Saint Martin country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -237,7 +237,6 @@ const mafCountryTranslations = [
   TranslatedName(LangDzo(), name: "སེནཊ་ མཱར་ཊིན"),
   TranslatedName(LangEwe(), name: "Saint Martin nutome"),
   TranslatedName(LangEll(), name: "Άγιος Μαρτίνος (Γαλλικό τμήμα)"),
-  TranslatedName(LangEng(), name: "St Martin"),
   TranslatedName(LangEus(), name: "San Martin"),
   TranslatedName(LangFao(), name: "St-Martin"),
   TranslatedName(LangFry(), name: "Saint-Martin"),

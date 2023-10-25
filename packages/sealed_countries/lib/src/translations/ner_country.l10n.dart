@@ -2,16 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 99 translations for a Niger country:
+/// Provides 118 translations for a Niger country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +24,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -38,11 +43,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -52,7 +59,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -64,10 +73,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -75,6 +88,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -82,12 +97,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -95,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -276,4 +295,23 @@ const nerCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Nàìjá"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Nàìjá", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Niger"),
+  TranslatedName(LangArg(), name: "Nícher"),
+  TranslatedName(LangBak(), name: "Нигер"),
+  TranslatedName(LangBod(), name: "ནི་ཇར།"),
+  TranslatedName(LangDiv(), name: "ނީޖަރު"),
+  TranslatedName(LangGlv(), name: "Yn Neegeyr"),
+  TranslatedName(LangHat(), name: "Nijè"),
+  TranslatedName(LangIdo(), name: "Nijer"),
+  TranslatedName(LangKon(), name: "Nijer"),
+  TranslatedName(LangCor(), name: "Pow Nijer"),
+  TranslatedName(LangMri(), name: "Ngāika"),
+  TranslatedName(LangOci(), name: "Nigèr"),
+  TranslatedName(LangOss(), name: "Нигер"),
+  TranslatedName(LangKin(), name: "Nigeri"),
+  TranslatedName(LangSan(), name: "नीजे"),
+  TranslatedName(LangSrd(), name: "Nixèr"),
+  TranslatedName(LangSqi(), name: "Nigeri"),
+  TranslatedName(LangSsw(), name: "INayijari"),
+  TranslatedName(LangTgl(), name: "Niyer"),
+  TranslatedName(LangVol(), name: "Nigerän"),
 ];

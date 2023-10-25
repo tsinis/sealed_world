@@ -2,17 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Uruguay country:
+/// Provides 131 translations for a Uruguay country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,8 +27,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,7 +47,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -54,12 +63,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -67,17 +79,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -87,11 +106,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -100,7 +121,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -305,4 +329,31 @@ const uryCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Nruguayi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Nruguayi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Uruguay"),
+  TranslatedName(LangArg(), name: "Uruguai"),
+  TranslatedName(LangAym(), name: "Uruwayi"),
+  TranslatedName(LangBak(), name: "Уругвай"),
+  TranslatedName(LangBod(), name: "ཨུ་རུ་གུ་ཡེ།"),
+  TranslatedName(LangChu(), name: "Оуроугваи"),
+  TranslatedName(LangChv(), name: "Уругвай"),
+  TranslatedName(LangDiv(), name: "އުރުގުއޭ"),
+  TranslatedName(LangFry(), name: "Urûguay"),
+  TranslatedName(LangGrn(), name: "Uruguái"),
+  TranslatedName(LangGlv(), name: "Yn Ooraguay"),
+  TranslatedName(LangHat(), name: "Irigwe"),
+  TranslatedName(LangCor(), name: "Urugway"),
+  TranslatedName(LangLat(), name: "Uraquaria"),
+  TranslatedName(LangLim(), name: "Urugay"),
+  TranslatedName(LangMri(), name: "Urukoi"),
+  TranslatedName(
+    LangNav(),
+    name: "Táłtłʼááh Chʼosh Bitooh (Kéyah Dah Siʼánígíí)",
+  ),
+  TranslatedName(LangOci(), name: "Uruguai"),
+  TranslatedName(LangOss(), name: "Уругвай"),
+  TranslatedName(LangQue(), name: "Uruwayi"),
+  TranslatedName(LangKin(), name: "Irigwe"),
+  TranslatedName(LangSan(), name: "उरुग्वाय"),
+  TranslatedName(LangTgl(), name: "Urugway"),
+  TranslatedName(LangVol(), name: "Luruguyän"),
+  TranslatedName(LangWln(), name: "Ourougway"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Dominican Republic country:
+/// Provides 144 translations for a Dominican Republic country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,8 +10,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -24,9 +26,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,11 +47,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
@@ -60,12 +66,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -75,14 +84,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -92,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -99,13 +115,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,6 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -353,4 +374,25 @@ const domCountryTranslations = [
   TranslatedName(LangYor(), name: "Orilẹ́ède Dòmíníkánì"),
   TranslatedName(LangYor(), name: "Orilɛ́ède Dòmíníkánì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Dominican Republic"),
+  TranslatedName(LangArg(), name: "Republica Dominicana"),
+  TranslatedName(LangAym(), name: "Republika Duminikana"),
+  TranslatedName(LangBod(), name: "ཌོ་མི་ནི་ཀན་སྤྱི་མཐུན་རྒྱལ་ཁབ།"),
+  TranslatedName(LangDiv(), name: "ޑޮމިނިކަން ޖުމްހޫރިއްޔާ"),
+  TranslatedName(LangGlv(), name: "Yn Phobblaght Ghominicagh"),
+  TranslatedName(LangHat(), name: "Dominikani"),
+  TranslatedName(LangIdo(), name: "Dominikana Republiko"),
+  TranslatedName(LangCor(), name: "Repoblek Dhominikanek"),
+  TranslatedName(LangLat(), name: "Respublica Dominicana"),
+  TranslatedName(LangLim(), name: "Dominicaanse Rippubliek"),
+  TranslatedName(LangMri(), name: "Te Whenua Tominika"),
+  TranslatedName(LangNau(), name: "Ripubrikin Dominika"),
+  TranslatedName(LangNav(), name: "Domingo Bikéyah"),
+  TranslatedName(LangOci(), name: "Republica Dominicana"),
+  TranslatedName(LangOss(), name: "Доминиканæйы Республикæ"),
+  TranslatedName(LangKin(), name: "Repubulika ya Dominikani"),
+  TranslatedName(LangSan(), name: "डोमोनिकन रिपब्लिक"),
+  TranslatedName(LangSsw(), name: "Tibuse weDomonokha"),
+  TranslatedName(LangSun(), name: "Républik Dominika"),
+  TranslatedName(LangTgl(), name: "Republikang Dominikano"),
+  TranslatedName(LangVol(), name: "Sandominän"),
 ];

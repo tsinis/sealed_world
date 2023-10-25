@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Zimbabwe country:
+/// Provides 117 translations for a Zimbabwe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,8 +23,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -55,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
@@ -62,10 +67,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -74,6 +83,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -81,12 +91,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -94,7 +108,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -292,4 +309,21 @@ const zweCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède ṣimibabe"),
   TranslatedName(LangYor(), name: "Orílɛ́ède shimibabe", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "iZimbabwe"),
+  TranslatedName(LangBak(), name: "Зимбабве"),
+  TranslatedName(LangBod(), name: "ཛིམ་བབ་ཝི།"),
+  TranslatedName(LangChv(), name: "Зимбабве"),
+  TranslatedName(LangDiv(), name: "ޒިމްބާބުވޭ"),
+  TranslatedName(LangFry(), name: "Simbabwe"),
+  TranslatedName(LangGlg(), name: "Cimbabue"),
+  TranslatedName(LangGlv(), name: "Yn Çhimbabwe"),
+  TranslatedName(LangLat(), name: "Zimbabua"),
+  TranslatedName(LangMri(), name: "Timuwawe"),
+  TranslatedName(LangNav(), name: "Hooghan Tsé Bee Ádaalyaaí Bikéyah"),
+  TranslatedName(LangOss(), name: "Зимбабве"),
+  TranslatedName(LangSan(), name: "जिम्बाबवे"),
+  TranslatedName(LangSsw(), name: "IZimbabhwe"),
+  TranslatedName(LangSun(), name: "Zimbabwé"),
+  TranslatedName(LangTgl(), name: "Simbabwe"),
+  TranslatedName(LangVen(), name: "Zimbagwe"),
+  TranslatedName(LangVol(), name: "Zimbabiyän"),
 ];

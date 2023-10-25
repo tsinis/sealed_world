@@ -2,17 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Japan country:
+/// Provides 148 translations for a Japan country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -21,10 +26,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,28 +48,36 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -70,13 +87,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Nuosu
+/// - Occitan
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -86,7 +108,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -94,8 +119,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -106,15 +135,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const jpnCountryTranslations = [
   CountryName(language: LangEng(), official: "Japan", common: "Japan"),
@@ -233,4 +265,36 @@ const jpnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Japani"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Japani", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Japan"),
+  TranslatedName(LangAbk(), name: "Иапониа"),
+  TranslatedName(LangArg(), name: "Chapón"),
+  TranslatedName(LangAym(), name: "Nihun"),
+  TranslatedName(LangBak(), name: "Япония"),
+  TranslatedName(LangCha(), name: "Chapan"),
+  TranslatedName(LangChu(), name: "Ꙗпѡнїꙗ"),
+  TranslatedName(LangChv(), name: "Япони"),
+  TranslatedName(LangDiv(), name: "ޖަޕާނު"),
+  TranslatedName(LangGrn(), name: "Hapõ"),
+  TranslatedName(LangGlv(), name: "Yn Çhapaan"),
+  TranslatedName(LangHat(), name: "Japon"),
+  TranslatedName(LangIdo(), name: "Japonia"),
+  TranslatedName(LangIku(), name: "ᓃᑉᐊᓐ"),
+  TranslatedName(LangKal(), name: "Japani"),
+  TranslatedName(LangKom(), name: "Япония"),
+  TranslatedName(LangCor(), name: "Nihon"),
+  TranslatedName(LangLat(), name: "Iaponia"),
+  TranslatedName(LangNau(), name: "Djapan"),
+  TranslatedName(LangNav(), name: "Binaʼadaałtzózí Dinéʼiʼ Bikéyah"),
+  TranslatedName(LangOci(), name: "Japon"),
+  TranslatedName(LangOrm(), name: "Jaappaan"),
+  TranslatedName(LangKin(), name: "Ubuyapani"),
+  TranslatedName(LangSan(), name: "सूर्यमूल"),
+  TranslatedName(LangSrd(), name: "Giapone"),
+  TranslatedName(LangSmo(), name: "Iapani"),
+  TranslatedName(LangSsw(), name: "IJaphani"),
+  TranslatedName(LangSun(), name: "Jepang"),
+  TranslatedName(LangTgl(), name: "Hapon"),
+  TranslatedName(LangTwi(), name: "Yapan"),
+  TranslatedName(LangTah(), name: "Tāpōnē"),
+  TranslatedName(LangVol(), name: "Yapän"),
+  TranslatedName(LangZha(), name: "Nditbonj"),
 ];

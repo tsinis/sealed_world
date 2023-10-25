@@ -2,17 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Tajikistan country:
+/// Provides 136 translations for a Tajikistan country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,9 +26,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,11 +48,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,12 +63,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -67,14 +80,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -84,19 +102,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -105,9 +128,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const tjkCountryTranslations = [
@@ -314,4 +339,29 @@ const tjkCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Takisitani"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Takisitani", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Tajikistan"),
+  TranslatedName(LangArg(), name: "Tachiquistán"),
+  TranslatedName(LangAym(), name: "Tayiksuyu"),
+  TranslatedName(LangBak(), name: "Тажикстан"),
+  TranslatedName(LangBod(), name: "ཐ་ཇི་ཁེ་སི་ཏན།"),
+  TranslatedName(LangChu(), name: "Таджикистанъ"),
+  TranslatedName(LangChv(), name: "Таджикистан"),
+  TranslatedName(LangDiv(), name: "ތަޖިކިސްތާން"),
+  TranslatedName(LangGlv(), name: "Yn Tajikistaan"),
+  TranslatedName(LangHat(), name: "Tadjikistan"),
+  TranslatedName(LangIle(), name: "Tadjikistan"),
+  TranslatedName(LangKom(), name: "Таджикистан"),
+  TranslatedName(LangCor(), name: "Pow Tajik"),
+  TranslatedName(LangLat(), name: "Tadzikistania"),
+  TranslatedName(LangLim(), name: "Tadzjikistan"),
+  TranslatedName(LangNau(), name: "Tadjikitan"),
+  TranslatedName(LangNav(), name: "Tʼajiʼ Bikéyah"),
+  TranslatedName(LangOci(), name: "Tatgiquistan"),
+  TranslatedName(LangOss(), name: "Таджикистан"),
+  TranslatedName(LangKin(), name: "Tajikisitani"),
+  TranslatedName(LangSan(), name: "ताजिकिस्थान"),
+  TranslatedName(LangSom(), name: "Tadsjikistan"),
+  TranslatedName(LangSsw(), name: "IThajiki"),
+  TranslatedName(LangTgl(), name: "Tayikistan"),
+  TranslatedName(LangVol(), name: "Tacikistän"),
+  TranslatedName(LangYid(), name: "טאדזשיקיסטאן"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Guinea-Bissau country:
+/// Provides 132 translations for a Guinea-Bissau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,11 +45,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,12 +60,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -68,10 +78,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -87,13 +103,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -102,6 +122,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -311,4 +333,26 @@ const gnbCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gene-Busau"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gene-Busau", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Guinea-Bissau"),
+  TranslatedName(LangBak(), name: "Гвинея-Бисау"),
+  TranslatedName(LangBod(), name: "གི་ནེ་-བི་སའོ།"),
+  TranslatedName(LangChv(), name: "Гвиней-Бисау"),
+  TranslatedName(LangDiv(), name: "ގީނީ-ބިސާއޫ"),
+  TranslatedName(LangGlv(), name: "Yn Ghuinea-Bissau"),
+  TranslatedName(LangHat(), name: "Gine-Bisao"),
+  TranslatedName(LangIdo(), name: "Guinea Bisau"),
+  TranslatedName(LangKon(), name: "Ginea-Bisau"),
+  TranslatedName(LangCor(), name: "Gyni-Bissaw"),
+  TranslatedName(LangLat(), name: "Guinea Bissaviensis"),
+  TranslatedName(LangLim(), name: "Guinee-Bissau"),
+  TranslatedName(LangMri(), name: "Kini Pihō"),
+  TranslatedName(LangNau(), name: "Gini-Bitau"),
+  TranslatedName(LangNav(), name: "Gíní Bisó"),
+  TranslatedName(LangOci(), name: "Guinèa Bissau"),
+  TranslatedName(LangOss(), name: "Гвиней-Бисау"),
+  TranslatedName(LangKin(), name: "Gineya-Biso"),
+  TranslatedName(LangSsw(), name: "IGiniya-Bhasawu"),
+  TranslatedName(LangSun(), name: "Guinéa-Bissau"),
+  TranslatedName(LangTgl(), name: "Ginea-Bissau"),
+  TranslatedName(LangVie(), name: "Guiné-Bissau"),
+  TranslatedName(LangVol(), name: "Gineyän-Bisauän"),
 ];

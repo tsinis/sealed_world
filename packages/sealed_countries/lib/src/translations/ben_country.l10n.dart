@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Benin country:
+/// Provides 123 translations for a Benin country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -21,8 +25,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,7 +43,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -53,30 +61,38 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -84,13 +100,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,7 +117,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -273,4 +295,26 @@ const benCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bẹ̀nẹ̀"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bɛ̀nɛ̀", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Benin"),
+  TranslatedName(LangArg(), name: "Benín"),
+  TranslatedName(LangBak(), name: "Бенин"),
+  TranslatedName(LangBih(), name: "बेनिन"),
+  TranslatedName(LangBod(), name: "བེ་ནིན།"),
+  TranslatedName(LangChv(), name: "Бенин"),
+  TranslatedName(LangDiv(), name: "ބެނީން"),
+  TranslatedName(LangFry(), name: "Benyn"),
+  TranslatedName(LangGrn(), name: "Mbenĩ"),
+  TranslatedName(LangHat(), name: "Benen"),
+  TranslatedName(LangLat(), name: "Beninum"),
+  TranslatedName(LangMlg(), name: "Benina"),
+  TranslatedName(LangMri(), name: "Pēnina"),
+  TranslatedName(LangOrm(), name: "Beeniin"),
+  TranslatedName(LangOss(), name: "Бенин"),
+  TranslatedName(LangPli(), name: "बेनिन"),
+  TranslatedName(LangKin(), name: "Bene"),
+  TranslatedName(LangSan(), name: "बेनिन्"),
+  TranslatedName(LangSqi(), name: "Benini"),
+  TranslatedName(LangSsw(), name: "iBhenini"),
+  TranslatedName(LangSun(), name: "Bénin"),
+  TranslatedName(LangVie(), name: "Bénin"),
+  TranslatedName(LangVol(), name: "Beninän"),
 ];

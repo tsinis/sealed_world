@@ -2,8 +2,9 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Timor-Leste country:
+/// Provides 120 translations for a Timor-Leste country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Amharic
@@ -24,9 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -60,13 +63,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -90,10 +96,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -106,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -319,4 +328,13 @@ const tlsCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Timor-Leste"),
+  TranslatedName(LangDan(), name: "Østtimor"),
+  TranslatedName(LangEpo(), name: "Orienta Timoro"),
+  TranslatedName(LangGla(), name: "Tiomor an Ear"),
+  TranslatedName(LangLat(), name: "Timoria Orientalis"),
+  TranslatedName(LangLim(), name: "Oos-Timor"),
+  TranslatedName(LangMsa(), name: "Timor Timur"),
+  TranslatedName(LangSlv(), name: "Vzhodni Timor"),
+  TranslatedName(LangTgl(), name: "Silangan Timor"),
+  TranslatedName(LangVie(), name: "Đông Timor"),
 ];

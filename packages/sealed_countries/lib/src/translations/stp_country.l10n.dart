@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a São Tomé and Príncipe country:
+/// Provides 129 translations for a São Tomé and Príncipe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -48,6 +48,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Irish
 /// - Italian
@@ -63,7 +64,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -115,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -359,4 +363,8 @@ const stpCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-São Tomé kanye ne-Príncipe"),
+  TranslatedName(LangIdo(), name: "San-Tome e Principe"),
+  TranslatedName(LangLat(), name: "Insulae Sancti Thomae et Principis"),
+  TranslatedName(LangLim(), name: "São Tomé en Príncipe"),
+  TranslatedName(LangVol(), name: "Saluda-Tomeän e Prinsipeän"),
 ];

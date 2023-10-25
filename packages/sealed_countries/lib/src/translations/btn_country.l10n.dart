@@ -2,28 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Bhutan country:
+/// Provides 136 translations for a Bhutan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,7 +46,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -53,11 +62,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -66,18 +78,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -86,25 +107,33 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const btnCountryTranslations = [
   CountryName(
@@ -278,4 +307,33 @@ const btnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bútánì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bútánì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Bhutan"),
+  TranslatedName(LangAbk(), name: "Бутан"),
+  TranslatedName(LangArg(), name: "Bután"),
+  TranslatedName(LangBak(), name: "Бута́н"),
+  TranslatedName(LangBih(), name: "भूटान"),
+  TranslatedName(LangBod(), name: "འབྲུག་ཡུལ།"),
+  TranslatedName(LangChv(), name: "Бутан"),
+  TranslatedName(LangDiv(), name: "ބޫޓާން"),
+  TranslatedName(LangFry(), name: "Bûtan"),
+  TranslatedName(LangGrn(), name: "Vutã"),
+  TranslatedName(LangGlv(), name: "yn Vutaan"),
+  TranslatedName(LangHat(), name: "Boutan"),
+  TranslatedName(LangKom(), name: "Бутан"),
+  TranslatedName(LangCor(), name: "Bhoutan"),
+  TranslatedName(LangLat(), name: "Butania"),
+  TranslatedName(LangMri(), name: "Putāna"),
+  TranslatedName(LangNau(), name: "Butan"),
+  TranslatedName(LangNav(), name: "Bikéyah"),
+  TranslatedName(LangOci(), name: "Botan"),
+  TranslatedName(LangOrm(), name: "Buutan"),
+  TranslatedName(LangOss(), name: "Бутан"),
+  TranslatedName(LangPli(), name: "भूटान"),
+  TranslatedName(LangKin(), name: "Butani"),
+  TranslatedName(LangSan(), name: "भूटान"),
+  TranslatedName(LangSsw(), name: "iBhuthani"),
+  TranslatedName(LangSun(), name: "Butan"),
+  TranslatedName(LangTgl(), name: "Butan"),
+  TranslatedName(LangTwi(), name: "Butan"),
+  TranslatedName(LangVol(), name: "Butän"),
+  TranslatedName(LangZha(), name: "Budanh"),
 ];

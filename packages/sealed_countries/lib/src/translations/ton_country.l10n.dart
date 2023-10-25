@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 79 translations for a Tonga country:
+/// Provides 92 translations for a Tonga country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -19,6 +21,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -48,33 +51,43 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
+/// - Samoan
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Spanish
 /// - Swedish
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Yiddish
 /// - Yoruba
@@ -223,4 +236,17 @@ const tonCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Tonga"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Tonga", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Tonga"),
+  TranslatedName(LangBak(), name: "Тонга"),
+  TranslatedName(LangBod(), name: "ཊོང་ག"),
+  TranslatedName(LangChu(), name: "Тонга"),
+  TranslatedName(LangDiv(), name: "ޓޮންގާ"),
+  TranslatedName(LangGlv(), name: "Yn Tongey"),
+  TranslatedName(LangNav(), name: "Tʼónga"),
+  TranslatedName(LangOci(), name: "Tònga"),
+  TranslatedName(LangOss(), name: "Тонгæ"),
+  TranslatedName(LangQue(), name: "Tunqa"),
+  TranslatedName(LangSan(), name: "टोंगा"),
+  TranslatedName(LangSmo(), name: "Toga"),
+  TranslatedName(LangTah(), name: "To’a"),
+  TranslatedName(LangVol(), name: "Tonguäns"),
 ];

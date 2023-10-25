@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Sri Lanka country:
+/// Provides 119 translations for a Sri Lanka country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -12,6 +12,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -20,8 +21,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -31,11 +35,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -49,11 +55,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -63,14 +72,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -78,12 +92,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -92,7 +109,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -294,4 +313,23 @@ const lkaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Siri Lanka"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Siri Lanka", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Sri Lanka"),
+  TranslatedName(LangBak(), name: "Шри-Ланка"),
+  TranslatedName(LangBod(), name: "སེང་ག་གླིང་།"),
+  TranslatedName(LangChv(), name: "Шри-Ланка"),
+  TranslatedName(LangDiv(), name: "އޮޅުދޫކަރަ"),
+  TranslatedName(LangFry(), name: "Sry Lanka"),
+  TranslatedName(LangGlg(), name: "Sri Lanka - Sri Lankā"),
+  TranslatedName(LangHat(), name: "Srilanka"),
+  TranslatedName(LangKom(), name: "Шри-Ланка"),
+  TranslatedName(LangCor(), name: "Shri Lanka"),
+  TranslatedName(LangLat(), name: "Taprobane"),
+  TranslatedName(LangMri(), name: "Hīraka"),
+  TranslatedName(LangNav(), name: "Swii Lankʼa"),
+  TranslatedName(LangOrm(), name: "Sirilaankaa"),
+  TranslatedName(LangOss(), name: "Шри-Ланка"),
+  TranslatedName(LangKin(), name: "Siri Lanka"),
+  TranslatedName(LangSan(), name: "श्रीलङ्का"),
+  TranslatedName(LangSsw(), name: "Siri Lanka"),
+  TranslatedName(LangSun(), name: "Sri Langka"),
+  TranslatedName(LangVol(), name: "Sri-Lankän"),
 ];

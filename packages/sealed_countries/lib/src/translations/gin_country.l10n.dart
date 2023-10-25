@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Guinea country:
+/// Provides 130 translations for a Guinea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -21,10 +22,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -52,12 +58,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -65,17 +74,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -83,21 +100,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -291,4 +315,28 @@ const ginCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gene"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gene", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Guinea"),
+  TranslatedName(LangBak(), name: "Гвинея"),
+  TranslatedName(LangBod(), name: "གི་ནེ།"),
+  TranslatedName(LangCat(), name: "República de Guinea"),
+  TranslatedName(LangChv(), name: "Гвиней"),
+  TranslatedName(LangDiv(), name: "ގީނިއާ"),
+  TranslatedName(LangGlv(), name: "Yn Ghuinea"),
+  TranslatedName(LangHat(), name: "Gine"),
+  TranslatedName(LangKon(), name: "Ginea"),
+  TranslatedName(LangCor(), name: "Gyni"),
+  TranslatedName(LangLim(), name: "Guinee"),
+  TranslatedName(LangMri(), name: "Kini"),
+  TranslatedName(LangNau(), name: "Gini"),
+  TranslatedName(LangNav(), name: "Gíní"),
+  TranslatedName(LangOci(), name: "Guinèa"),
+  TranslatedName(LangOss(), name: "Гвиней"),
+  TranslatedName(LangQue(), name: "Khiniya"),
+  TranslatedName(LangKin(), name: "Gineya"),
+  TranslatedName(LangSan(), name: "गिनी"),
+  TranslatedName(LangSsw(), name: "IGiniya"),
+  TranslatedName(LangSun(), name: "Guinéa"),
+  TranslatedName(LangTgl(), name: "Ginea"),
+  TranslatedName(LangTso(), name: "Gineya"),
+  TranslatedName(LangVie(), name: "Guinée"),
+  TranslatedName(LangVol(), name: "Gineyän"),
 ];

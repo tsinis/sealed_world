@@ -2,18 +2,23 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Greece country:
+/// Provides 155 translations for a Greece country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +29,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +51,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,14 +93,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,7 +115,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -98,13 +126,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -114,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -331,4 +364,37 @@ const grcCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Geriisi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Geriisi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Greece"),
+  TranslatedName(LangAbk(), name: "Барзентәыла"),
+  TranslatedName(LangArg(), name: "Grecia"),
+  TranslatedName(LangAym(), name: "Grisya"),
+  TranslatedName(LangBak(), name: "Греция"),
+  TranslatedName(LangBod(), name: "ཀེ་རི་སི།"),
+  TranslatedName(LangCos(), name: "Grecia"),
+  TranslatedName(LangChu(), name: "Грьци"),
+  TranslatedName(LangChv(), name: "Греци"),
+  TranslatedName(LangDiv(), name: "ޔޫނާން"),
+  TranslatedName(LangGrn(), name: "Gyresia"),
+  TranslatedName(LangGlv(), name: "Yn Ghreag"),
+  TranslatedName(LangHat(), name: "Grès"),
+  TranslatedName(LangIle(), name: "Grecia"),
+  TranslatedName(LangIdo(), name: "Grekia"),
+  TranslatedName(LangKon(), name: "Gelesi"),
+  TranslatedName(LangKal(), name: "Grækerit Nunaat"),
+  TranslatedName(LangKom(), name: "Эллада"),
+  TranslatedName(LangCor(), name: "Pow Grek"),
+  TranslatedName(LangLat(), name: "Graecia"),
+  TranslatedName(LangLim(), name: "Griekeland"),
+  TranslatedName(LangMri(), name: "Kirihi"),
+  TranslatedName(LangNau(), name: "Grit"),
+  TranslatedName(LangNav(), name: "Gwíík Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "Grècia"),
+  TranslatedName(LangOss(), name: "Грекъ"),
+  TranslatedName(LangKin(), name: "Ubugereki"),
+  TranslatedName(LangSan(), name: "यवनदेशः"),
+  TranslatedName(LangSrd(), name: "Grèghia"),
+  TranslatedName(LangSmo(), name: "Kuliti"),
+  TranslatedName(LangSsw(), name: "IGrikhi"),
+  TranslatedName(LangSun(), name: "Yunani"),
+  TranslatedName(LangTgl(), name: "Gresya"),
+  TranslatedName(LangVol(), name: "Grikän"),
 ];

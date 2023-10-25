@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a United States Minor Outlying Islands country
+/// Provides 110 translations for a United States Minor Outlying Islands country
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -253,7 +253,6 @@ const umiCountryTranslations = [
   TranslatedName(LangDzo(), name: "ཡུ་ཨེས་གྱི་མཐའ་མཚམས་མཚོ་གླིང་"),
   TranslatedName(LangEwe(), name: "U.S. Minor Outlaying ƒudomekpowo nutome"),
   TranslatedName(LangEll(), name: "Απομακρυσμένες Νησίδες ΗΠΑ"),
-  TranslatedName(LangEng(), name: "US Outlying Islands"),
   TranslatedName(LangEpo(), name: "Usonaj malgrandaj insuloj"),
   TranslatedName(
     LangEus(),

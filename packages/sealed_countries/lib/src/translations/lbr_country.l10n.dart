@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Liberia country:
+/// Provides 120 translations for a Liberia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,8 +24,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -52,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -64,17 +70,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -82,21 +95,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -296,4 +314,22 @@ const lbrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Laberia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Laberia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Liberia"),
+  TranslatedName(LangBak(), name: "Либерия"),
+  TranslatedName(LangBod(), name: "ལི་བེ་རི་ཡ།"),
+  TranslatedName(LangChv(), name: "Либери"),
+  TranslatedName(LangDiv(), name: "ލައިބީރިއާ"),
+  TranslatedName(LangFry(), name: "Libearia"),
+  TranslatedName(LangGlv(), name: "Yn Laibeer"),
+  TranslatedName(LangHat(), name: "Liberya"),
+  TranslatedName(LangCor(), name: "Liberi"),
+  TranslatedName(LangMri(), name: "Raipiri"),
+  TranslatedName(LangOci(), name: "Libèria"),
+  TranslatedName(LangOss(), name: "Либери"),
+  TranslatedName(LangQue(), name: "Libirya"),
+  TranslatedName(LangKin(), name: "Liberiya"),
+  TranslatedName(LangSan(), name: "लायबीरिया"),
+  TranslatedName(LangSrd(), name: "Libèria"),
+  TranslatedName(LangSsw(), name: "ILibheriya"),
+  TranslatedName(LangTso(), name: "Layiberiya"),
+  TranslatedName(LangVol(), name: "Liberän"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Republic of the Congo country:
+/// Provides 150 translations for a Republic of the Congo country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -21,11 +23,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,14 +48,17 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -59,37 +68,49 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -98,21 +119,32 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const cogCountryTranslations = [
@@ -322,4 +354,36 @@ const cogCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kóngò"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kóngò", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Congo - Brazzaville"),
+  TranslatedName(LangArg(), name: "Republica d'o Congo"),
+  TranslatedName(LangBak(), name: "Республика Конго"),
+  TranslatedName(LangBod(), name: "ཀོང་གོ་སྤྱི་མཐུན་རྒྱལ་ཁབ།"),
+  TranslatedName(LangCat(), name: "República del Congo"),
+  TranslatedName(LangChv(), name: "Конго Республики"),
+  TranslatedName(LangDiv(), name: "ކޮންގޯ (ޖުމްހޫރިއްޔާ)"),
+  TranslatedName(LangGlv(), name: "Pobblaght ny Congo"),
+  TranslatedName(LangHat(), name: "Kongo (Brazavil)"),
+  TranslatedName(LangIle(), name: "Republic de Congo"),
+  TranslatedName(LangIdo(), name: "Republiko Kongo"),
+  TranslatedName(LangKon(), name: "Repubilika ya Kôngo"),
+  TranslatedName(LangCor(), name: "Repoblek Kongo"),
+  TranslatedName(LangLat(), name: "Respublica Congensis"),
+  TranslatedName(LangLim(), name: "Kongo-Brazzaville"),
+  TranslatedName(LangMsa(), name: "Republik Congo"),
+  TranslatedName(LangNau(), name: "Ripubrikin Kongo"),
+  TranslatedName(LangNav(), name: "Kéyah Káango Náhookǫsjí Siʼánígíí"),
+  TranslatedName(LangOci(), name: "Republica de Còngo"),
+  TranslatedName(LangOss(), name: "Конгойы Республикæ"),
+  TranslatedName(LangRon(), name: "Republica Congo"),
+  TranslatedName(LangKin(), name: "Kongo"),
+  TranslatedName(LangSrd(), name: "Repùbrica de su Congo"),
+  TranslatedName(LangSsw(), name: "Tibuse weKhongo"),
+  TranslatedName(LangSun(), name: "Républik Kongo"),
+  TranslatedName(LangTgk(), name: "Ҷумҳӯрии Конго"),
+  TranslatedName(LangTgl(), name: "Republika ng Konggo"),
+  TranslatedName(LangTso(), name: "Riphabliki ya Congo"),
+  TranslatedName(LangTat(), name: "Конго Җөмһүрияте"),
+  TranslatedName(LangVie(), name: "Cộng hòa Congo"),
+  TranslatedName(LangVol(), name: "Kongoän (Repüblikän)"),
+  TranslatedName(LangWol(), name: "Kongóo-Brasaawiil"),
+  TranslatedName(LangYid(), name: "רעפובליק פון קאנגא"),
 ];

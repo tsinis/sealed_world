@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Saint Barthélemy country:
+/// Provides 107 translations for a Saint Barthélemy country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -242,7 +242,6 @@ const blmCountryTranslations = [
   TranslatedName(LangDzo(), name: "སེནཊ་ བར་ཐོ་ལོམ་མིའུ"),
   TranslatedName(LangEwe(), name: "Saint Barthélemy nutome"),
   TranslatedName(LangEll(), name: "Άγιος Βαρθολομαίος"),
-  TranslatedName(LangEng(), name: "St Barthélemy"),
   TranslatedName(LangEus(), name: "Saint Barthélemy"),
   TranslatedName(LangFry(), name: "Saint Barthélemy"),
   TranslatedName(LangGle(), name: "Saint Barthélemy"),

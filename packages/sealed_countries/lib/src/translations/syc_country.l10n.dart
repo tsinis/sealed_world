@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Seychelles country:
+/// Provides 136 translations for a Seychelles country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -23,9 +23,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -36,16 +39,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -55,12 +61,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -69,21 +79,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -91,13 +107,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -106,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -312,4 +333,25 @@ const sycCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède seṣẹlẹsi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède seshɛlɛsi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Seychelles"),
+  TranslatedName(LangBod(), name: "སེ་ཞེལ།"),
+  TranslatedName(LangChv(), name: "Сейшел утравĕсем"),
+  TranslatedName(LangDiv(), name: "ތޭންގަދީބު"),
+  TranslatedName(LangGlg(), name: "Seixeles - Seychelles"),
+  TranslatedName(LangGlv(), name: "Ny h-Ellanyn Heshell"),
+  TranslatedName(LangHat(), name: "Sechèl"),
+  TranslatedName(LangIdo(), name: "Seycheli"),
+  TranslatedName(LangKon(), name: "Seychell"),
+  TranslatedName(LangCor(), name: "Seychellys"),
+  TranslatedName(LangLat(), name: "Insulae Seisellenses"),
+  TranslatedName(LangLim(), name: "Seychelle"),
+  TranslatedName(LangNav(), name: "Seishel"),
+  TranslatedName(LangOci(), name: "Seichèlas"),
+  TranslatedName(LangOss(), name: "Сейшелтæ"),
+  TranslatedName(LangQue(), name: "Sichillakuna"),
+  TranslatedName(LangKin(), name: "Seyishele"),
+  TranslatedName(LangSan(), name: "सेशेल"),
+  TranslatedName(LangSsw(), name: "ISeyishelesi"),
+  TranslatedName(LangSun(), name: "Seychéll"),
+  TranslatedName(LangTgl(), name: "Seyshels"),
+  TranslatedName(LangVol(), name: "Säceluäns"),
 ];

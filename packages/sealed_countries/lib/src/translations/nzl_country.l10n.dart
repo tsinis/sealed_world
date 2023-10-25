@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a New Zealand country:
+/// Provides 142 translations for a New Zealand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,13 +10,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,8 +27,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,27 +48,35 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -70,12 +84,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -84,7 +102,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -92,13 +112,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -107,11 +130,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const nzlCountryTranslations = [
   CountryName(
@@ -314,4 +340,30 @@ const nzlCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-New Zealand"),
+  TranslatedName(LangArg(), name: "Nueva Zelanda"),
+  TranslatedName(LangBak(), name: "Яңы Зеландия"),
+  TranslatedName(LangBis(), name: "Niu Zilan"),
+  TranslatedName(LangBod(), name: "ནིའུ་ཛི་ལེན་ཌི།"),
+  TranslatedName(LangChv(), name: "Çĕнĕ Зеланди"),
+  TranslatedName(LangDiv(), name: "ނިއުޒިލޭންޑު"),
+  TranslatedName(LangGlv(), name: "Yn Teelynn Noa"),
+  TranslatedName(LangHat(), name: "Nouvèl Zelann"),
+  TranslatedName(LangIle(), name: "Nov-Zeland"),
+  TranslatedName(LangIdo(), name: "Nova-Zelando"),
+  TranslatedName(LangJav(), name: "Sélandia Anyar"),
+  TranslatedName(LangKom(), name: "Выль Зеландия"),
+  TranslatedName(LangCor(), name: "Mordir Nowydh"),
+  TranslatedName(LangLat(), name: "Nova Zelandia"),
+  TranslatedName(LangLim(), name: "Nui-Zieland"),
+  TranslatedName(LangNau(), name: "Niu Djiran"),
+  TranslatedName(LangOci(), name: "Nòva Zelanda"),
+  TranslatedName(LangOss(), name: "Ног Зеланди"),
+  TranslatedName(LangKin(), name: "Nuveli Zelande"),
+  TranslatedName(LangSan(), name: "न्यू-जीलैंड"),
+  TranslatedName(LangSmo(), name: "Niu Sila"),
+  TranslatedName(LangSun(), name: "Selandia Anyar"),
+  TranslatedName(LangTah(), name: "Aotearoa"),
+  TranslatedName(LangVol(), name: "Nula-Seleäns"),
+  TranslatedName(LangWln(), name: "Nouve Zelande"),
+  TranslatedName(LangZha(), name: "Saen Saelanz"),
 ];

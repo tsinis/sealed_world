@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Moldova country:
+/// Provides 129 translations for a Moldova country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,8 +28,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,12 +48,14 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,11 +63,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
+/// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -67,17 +81,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -85,12 +105,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -99,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -295,4 +319,28 @@ const mdaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Modofia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Modofia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Moldova"),
+  TranslatedName(LangAbk(), name: "Молдова"),
+  TranslatedName(LangArg(), name: "Moldavia"),
+  TranslatedName(LangBak(), name: "Молдова"),
+  TranslatedName(LangBod(), name: "མོལ་དོ་ཝ།"),
+  TranslatedName(LangCos(), name: "Moldavia"),
+  TranslatedName(LangChu(), name: "Молдова"),
+  TranslatedName(LangChv(), name: "Молдави"),
+  TranslatedName(LangDiv(), name: "މޮލްޑޯވާ"),
+  TranslatedName(LangHat(), name: "Moldavi"),
+  TranslatedName(LangIle(), name: "Moldavia"),
+  TranslatedName(LangKom(), name: "Молдова"),
+  TranslatedName(LangLat(), name: "Moldavia"),
+  TranslatedName(LangLim(), name: "Moldavië"),
+  TranslatedName(LangLit(), name: "Moldavija"),
+  TranslatedName(LangMri(), name: "Te Whenua o Morotawa"),
+  TranslatedName(LangNau(), name: "Mordowa"),
+  TranslatedName(LangOci(), name: "Moldàvia"),
+  TranslatedName(LangOss(), name: "Молдави"),
+  TranslatedName(LangQue(), name: "Mulduwa"),
+  TranslatedName(LangKin(), name: "Molidova"),
+  TranslatedName(LangSan(), name: "मोल्दोवा"),
+  TranslatedName(LangSsw(), name: "IMolidiva"),
+  TranslatedName(LangTgl(), name: "Moldavia"),
+  TranslatedName(LangVol(), name: "Moldovän"),
 ];

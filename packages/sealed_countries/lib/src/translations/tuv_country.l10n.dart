@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 85 translations for a Tuvalu country:
+/// Provides 88 translations for a Tuvalu country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -74,6 +74,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -82,7 +83,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -173,4 +176,7 @@ const tuvCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Tufalu"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Tufalu", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Tuvalu"),
+  TranslatedName(LangBod(), name: "ཐུ་ཝ་ལུ།"),
+  TranslatedName(LangFry(), name: "Tûvalû"),
+  TranslatedName(LangVol(), name: "Tuvaluäns"),
 ];

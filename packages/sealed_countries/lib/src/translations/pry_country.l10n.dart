@@ -2,16 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Paraguay country:
+/// Provides 122 translations for a Paraguay country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -22,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,7 +45,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -53,10 +61,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -65,17 +75,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -90,6 +105,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -301,4 +318,21 @@ const pryCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Paraguye"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Paraguye", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Paraguay"),
+  TranslatedName(LangArg(), name: "Paraguai"),
+  TranslatedName(LangAym(), name: "Parawayi"),
+  TranslatedName(LangBak(), name: "Парагвай"),
+  TranslatedName(LangBod(), name: "པ་ར་གུ་ཡེ།"),
+  TranslatedName(LangChv(), name: "Парагвай"),
+  TranslatedName(LangDiv(), name: "ޕެރަގުއޭ"),
+  TranslatedName(LangGrn(), name: "Paraguái"),
+  TranslatedName(LangGlv(), name: "Yn Pharaguay"),
+  TranslatedName(LangHat(), name: "Paragwe"),
+  TranslatedName(LangCor(), name: "Paragway"),
+  TranslatedName(LangLat(), name: "Paraquaria"),
+  TranslatedName(LangOci(), name: "Paraguai"),
+  TranslatedName(LangOss(), name: "Парагвай"),
+  TranslatedName(LangQue(), name: "Parawayi"),
+  TranslatedName(LangKin(), name: "Paragwe"),
+  TranslatedName(LangSan(), name: "पेरेग्वाय"),
+  TranslatedName(LangVol(), name: "Paragvän"),
 ];

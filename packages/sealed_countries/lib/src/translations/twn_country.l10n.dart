@@ -2,26 +2,31 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Taiwan country:
+/// Provides 123 translations for a Taiwan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -38,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -50,11 +56,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -63,18 +71,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -82,13 +95,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,9 +114,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const twnCountryTranslations = [
   CountryName(
@@ -291,4 +310,23 @@ const twnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Taiwani"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Taiwani", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Taiwan"),
+  TranslatedName(LangArg(), name: "Taiwán"),
+  TranslatedName(LangBih(), name: "ताइवान"),
+  TranslatedName(LangBod(), name: "ཐེ་ཝན"),
+  TranslatedName(LangChv(), name: "Тайва́нь"),
+  TranslatedName(LangDiv(), name: "ޖުމްހޫރީ ޗައިނާ"),
+  TranslatedName(LangGlv(), name: "yn Taiwaan"),
+  TranslatedName(LangHat(), name: "Taywann"),
+  TranslatedName(LangCor(), name: "Taywan"),
+  TranslatedName(LangLat(), name: "Taivania"),
+  TranslatedName(LangMri(), name: "Taiwana"),
+  TranslatedName(LangOss(), name: "Тайван"),
+  TranslatedName(LangPli(), name: "तैवान"),
+  TranslatedName(LangKin(), name: "Tayiwani"),
+  TranslatedName(LangSan(), name: "तैवान"),
+  TranslatedName(LangSsw(), name: "iThayiwani"),
+  TranslatedName(LangSun(), name: "Tiongkok"),
+  TranslatedName(LangVol(), name: "Tayvän"),
+  TranslatedName(LangYid(), name: "טייוואַן"),
+  TranslatedName(LangZha(), name: "Daizvanh"),
 ];

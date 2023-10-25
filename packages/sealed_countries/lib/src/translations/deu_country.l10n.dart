@@ -2,18 +2,24 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Germany country:
+/// Provides 164 translations for a Germany country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +30,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,30 +52,41 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -75,15 +96,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -94,7 +119,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -102,8 +130,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -112,18 +144,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const deuCountryTranslations = [
   CountryName(
@@ -344,4 +382,42 @@ const deuCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹèdè Jámánì"),
   TranslatedName(LangYor(), name: "Orílɛèdè Jámánì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Germany"),
+  TranslatedName(LangAbk(), name: "Алмантәыла"),
+  TranslatedName(LangArg(), name: "Alemanya"),
+  TranslatedName(LangAva(), name: "Алмания"),
+  TranslatedName(LangAym(), name: "Alimaña"),
+  TranslatedName(LangBak(), name: "Германия"),
+  TranslatedName(LangCos(), name: "Germania"),
+  TranslatedName(LangChu(), name: "Нѣмьци"),
+  TranslatedName(LangChv(), name: "Германи"),
+  TranslatedName(LangDiv(), name: "ޖަރުމަނުވިލާތް"),
+  TranslatedName(LangGrn(), name: "Alemaña"),
+  TranslatedName(LangGlv(), name: "Yn Ghermaan"),
+  TranslatedName(LangHat(), name: "Almay"),
+  TranslatedName(LangIle(), name: "Germania"),
+  TranslatedName(LangIdo(), name: "Germania"),
+  TranslatedName(LangIku(), name: "ᔮᒪᓂ"),
+  TranslatedName(LangKon(), name: "Alemanyi"),
+  TranslatedName(LangKal(), name: "Tyskit Nunaat"),
+  TranslatedName(LangKom(), name: "Германия"),
+  TranslatedName(LangCor(), name: "Almayn"),
+  TranslatedName(LangLat(), name: "Germania"),
+  TranslatedName(LangLim(), name: "Duutsjlandj"),
+  TranslatedName(LangNau(), name: "Djermani"),
+  TranslatedName(LangNav(), name: "Béésh Bichʼahii Bikéyah"),
+  TranslatedName(LangOci(), name: "Alemanha"),
+  TranslatedName(LangKin(), name: "Ubudage"),
+  TranslatedName(LangSan(), name: "जर्मनी"),
+  TranslatedName(LangSrd(), name: "Germània"),
+  TranslatedName(LangSmo(), name: "Siamani"),
+  TranslatedName(LangSsw(), name: "IJalimane"),
+  TranslatedName(LangSun(), name: "Jérman"),
+  TranslatedName(LangTgl(), name: "Alemanya"),
+  TranslatedName(LangTso(), name: "Jarimani"),
+  TranslatedName(LangTwi(), name: "Gyaaman"),
+  TranslatedName(LangTah(), name: "Heremani"),
+  TranslatedName(LangVol(), name: "Deutän"),
+  TranslatedName(LangWln(), name: "Almagne"),
+  TranslatedName(LangXho(), name: "IJamani"),
+  TranslatedName(LangZha(), name: "Dwzgoz"),
 ];

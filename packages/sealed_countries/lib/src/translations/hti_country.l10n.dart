@@ -2,15 +2,18 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Haiti country:
+/// Provides 117 translations for a Haiti country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Belarusian
@@ -22,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,6 +45,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -51,11 +58,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -64,9 +75,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -79,12 +94,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Turkish
 /// - Turkmen
@@ -92,6 +110,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -264,4 +284,24 @@ const htiCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Haati"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Haati", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Haiti"),
+  TranslatedName(LangArg(), name: "Haití"),
+  TranslatedName(LangAym(), name: "Ayti"),
+  TranslatedName(LangBod(), name: "ཧའི་ཏི།"),
+  TranslatedName(LangChv(), name: "Гаити"),
+  TranslatedName(LangDiv(), name: "ހެއިޓީ"),
+  TranslatedName(LangHat(), name: "Ayiti"),
+  TranslatedName(LangKon(), name: "Ayiti"),
+  TranslatedName(LangCor(), name: "Hayti"),
+  TranslatedName(LangLat(), name: "Haitia"),
+  TranslatedName(LangLim(), name: "Haïti"),
+  TranslatedName(LangNau(), name: "Aiti"),
+  TranslatedName(LangNav(), name: "Héítii"),
+  TranslatedName(LangOci(), name: "Haití (estat)"),
+  TranslatedName(LangOss(), name: "Гаити"),
+  TranslatedName(LangKin(), name: "Hayiti"),
+  TranslatedName(LangSqi(), name: "Haitia"),
+  TranslatedName(LangSsw(), name: "IHayithi"),
+  TranslatedName(LangTgl(), name: "Hayti"),
+  TranslatedName(LangVol(), name: "Haitiyän"),
+  TranslatedName(LangWln(), name: "Ayiti"),
 ];

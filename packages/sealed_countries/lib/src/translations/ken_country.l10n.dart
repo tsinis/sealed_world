@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Kenya country:
+/// Provides 125 translations for a Kenya country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,8 +24,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -42,6 +47,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -53,19 +60,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Oriya
 /// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -74,18 +90,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -94,6 +116,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -275,4 +298,27 @@ const kenCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kenya"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kenya", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Kenya"),
+  TranslatedName(LangArg(), name: "Kenia"),
+  TranslatedName(LangBak(), name: "Кения"),
+  TranslatedName(LangBod(), name: "ཁེ་ནི་ཡ།"),
+  TranslatedName(LangChv(), name: "Кени"),
+  TranslatedName(LangDiv(), name: "ކެންޔާ"),
+  TranslatedName(LangGlg(), name: "Quenia - Kenya"),
+  TranslatedName(LangGlv(), name: "Yn Cheinney"),
+  TranslatedName(LangIle(), name: "Kenia"),
+  TranslatedName(LangIdo(), name: "Kenia"),
+  TranslatedName(LangLat(), name: "Kenia"),
+  TranslatedName(LangLim(), name: "Kenia"),
+  TranslatedName(LangLin(), name: "Kénya"),
+  TranslatedName(LangMlg(), name: "Kenia"),
+  TranslatedName(LangMri(), name: "Kēnia"),
+  TranslatedName(LangNau(), name: "Keniya"),
+  TranslatedName(LangNav(), name: "Kénya"),
+  TranslatedName(LangOss(), name: "Кени"),
+  TranslatedName(LangSan(), name: "केन्या"),
+  TranslatedName(LangSrd(), name: "Kènya"),
+  TranslatedName(LangSom(), name: "Kiinya"),
+  TranslatedName(LangSsw(), name: "IKheniya"),
+  TranslatedName(LangSun(), name: "Kénya"),
+  TranslatedName(LangVol(), name: "Kenyän"),
 ];

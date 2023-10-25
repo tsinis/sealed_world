@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Gambia country:
+/// Provides 121 translations for a Gambia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,8 +23,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -38,11 +42,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -50,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -62,18 +69,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -81,20 +96,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -290,4 +310,24 @@ const gmbCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gambia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gambia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Gambia"),
+  TranslatedName(LangBak(), name: "Гамбия"),
+  TranslatedName(LangBod(), name: "གེམ་བྷི་ཡ།"),
+  TranslatedName(LangChv(), name: "Гамби"),
+  TranslatedName(LangDiv(), name: "ގެމްބިއާ"),
+  TranslatedName(LangGlv(), name: "Yn Ghambia"),
+  TranslatedName(LangHat(), name: "Ganbi"),
+  TranslatedName(LangIle(), name: "The Gambia"),
+  TranslatedName(LangCor(), name: "Gambi"),
+  TranslatedName(LangNau(), name: "Gambiya"),
+  TranslatedName(LangNav(), name: "Géémbiya"),
+  TranslatedName(LangOci(), name: "Gàmbia"),
+  TranslatedName(LangOss(), name: "Гамби"),
+  TranslatedName(LangQue(), name: "Gambya"),
+  TranslatedName(LangKin(), name: "Gambiya"),
+  TranslatedName(LangSan(), name: "गाम्बिया"),
+  TranslatedName(LangSrd(), name: "Gàmbia"),
+  TranslatedName(LangSsw(), name: "IGambiya"),
+  TranslatedName(LangTgl(), name: "Ang Gambiya"),
+  TranslatedName(LangTso(), name: "Gambiya"),
+  TranslatedName(LangVol(), name: "Gambiyän"),
 ];

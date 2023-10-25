@@ -2,8 +2,9 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 93 translations for a Serbia country:
+/// Provides 119 translations for a Serbia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
@@ -11,7 +12,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,19 +24,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Finnish
 /// - French
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -47,26 +56,36 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -74,12 +93,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -88,10 +112,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const srbCountryTranslations = [
   CountryName(
@@ -275,4 +301,30 @@ const srbCountryTranslations = [
   TranslatedName(LangWol(), name: "Serbi"),
   TranslatedName(LangYid(), name: "סערביע"),
   TranslatedName(LangZul(), name: "i-Serbia"),
+  TranslatedName(LangAym(), name: "Sirwiya"),
+  TranslatedName(LangBak(), name: "Сербия"),
+  TranslatedName(LangBod(), name: "སེར་བྷི་ཡ།"),
+  TranslatedName(LangChu(), name: "Срьбїꙗ"),
+  TranslatedName(LangChv(), name: "Серби"),
+  TranslatedName(LangDiv(), name: "ސާބިއާ"),
+  TranslatedName(LangEpo(), name: "Serbio"),
+  TranslatedName(LangGrn(), name: "Sevia"),
+  TranslatedName(LangGlv(), name: "Yn Serb"),
+  TranslatedName(LangHat(), name: "Sèbi"),
+  TranslatedName(LangKon(), name: "Serbie"),
+  TranslatedName(LangKom(), name: "Сербия"),
+  TranslatedName(LangCor(), name: "Serbi"),
+  TranslatedName(LangLim(), name: "Servië"),
+  TranslatedName(LangNau(), name: "Terbiya"),
+  TranslatedName(LangOss(), name: "Серби"),
+  TranslatedName(LangQue(), name: "Sirbya"),
+  TranslatedName(LangKin(), name: "Seribiya"),
+  TranslatedName(LangSan(), name: "सर्बिया"),
+  TranslatedName(LangSrd(), name: "Sèrbia"),
+  TranslatedName(LangSsw(), name: "ISebhiya"),
+  TranslatedName(LangSun(), name: "Sérbia"),
+  TranslatedName(LangTgl(), name: "Serbiya"),
+  TranslatedName(LangTah(), name: "Terepia"),
+  TranslatedName(LangVol(), name: "Särbän"),
+  TranslatedName(LangYor(), name: "Sérbíà"),
 ];

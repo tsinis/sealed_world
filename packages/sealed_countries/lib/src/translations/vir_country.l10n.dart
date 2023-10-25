@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a United States Virgin Islands country:
+/// Provides 123 translations for a United States Virgin Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -268,7 +268,6 @@ const virCountryTranslations = [
   TranslatedName(LangDzo(), name: "ཝརཇིན་གླིང་ཚོམ་ ཡུ་ཨེས་ཨེ་མངའ་ཁོངས"),
   TranslatedName(LangEwe(), name: "U.S. Vɛrgin ƒudomekpowo nutome"),
   TranslatedName(LangEll(), name: "Αμερικανικές Παρθένες Νήσοι"),
-  TranslatedName(LangEng(), name: "US Virgin Islands"),
   TranslatedName(LangEpo(), name: "Usonaj Virgulininsuloj"),
   TranslatedName(LangEus(), name: "Birjina uharte amerikarrak"),
   TranslatedName(LangFul(), name: "Duuɗe Kecce Amerik"),

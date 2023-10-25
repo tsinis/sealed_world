@@ -2,13 +2,14 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Solomon Islands country:
+/// Provides 141 translations for a Solomon Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -23,9 +24,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,11 +46,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
@@ -59,12 +65,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,14 +83,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -91,6 +104,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -99,13 +113,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,6 +132,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -337,4 +355,22 @@ const slbCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Solomon Islands"),
+  TranslatedName(LangArg(), name: "Islas Salomón"),
+  TranslatedName(LangBod(), name: "སོ་ལོ་མོན་གླིང་ཕྲན་ཚོ་ཁག"),
+  TranslatedName(LangChv(), name: "Соломон Утравĕсем"),
+  TranslatedName(LangDiv(), name: "ސޮލޮމޮން ޖަޒީރާ"),
+  TranslatedName(LangGlv(), name: "Ny h-Ellanyn Holomon"),
+  TranslatedName(LangHat(), name: "Salomon"),
+  TranslatedName(LangIdo(), name: "Salomon Insuli"),
+  TranslatedName(LangCor(), name: "Ynysow Salamon"),
+  TranslatedName(LangLat(), name: "Insulae Salomonis"),
+  TranslatedName(LangLim(), name: "Salomonseilen"),
+  TranslatedName(LangNav(), name: "Sólomon Tó Bináhaazyínígíí"),
+  TranslatedName(LangOci(), name: "Illas Salamon"),
+  TranslatedName(LangOss(), name: "Соломоны сакъадæхтæ"),
+  TranslatedName(LangKin(), name: "Ibirwa bya Solomoni"),
+  TranslatedName(LangSan(), name: "सोलोमन-द्वीप"),
+  TranslatedName(LangSun(), name: "Kapuloan Solomon"),
+  TranslatedName(LangTgl(), name: "Kapuluang Solomon"),
+  TranslatedName(LangVol(), name: "Solomonuäns"),
 ];

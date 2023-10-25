@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Ecuador country:
+/// Provides 128 translations for a Ecuador country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -11,8 +11,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,12 +44,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Irish
 /// - Italian
@@ -55,11 +63,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -70,14 +80,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -85,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
 /// - Tajik
@@ -92,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -100,7 +119,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -301,4 +322,25 @@ const ecuCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ekuádò"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ekuádò", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Ecuador"),
+  TranslatedName(LangAym(), name: "Ikwadur"),
+  TranslatedName(LangBak(), name: "Эквадор"),
+  TranslatedName(LangBod(), name: "ཨེ་ཁོའོ་ཌོར།"),
+  TranslatedName(LangChv(), name: "Эквадор"),
+  TranslatedName(LangDiv(), name: "އިކުއެޑޯރު"),
+  TranslatedName(LangFry(), name: "Ekwador"),
+  TranslatedName(LangGrn(), name: "Ekuator"),
+  TranslatedName(LangHat(), name: "Ekwatè"),
+  TranslatedName(LangIdo(), name: "Equador"),
+  TranslatedName(LangCor(), name: "Pow Ekwadorel"),
+  TranslatedName(LangLat(), name: "Aequatoria"),
+  TranslatedName(LangMri(), name: "Ekuatoa"),
+  TranslatedName(LangNau(), name: "Ekwador"),
+  TranslatedName(LangNav(), name: "Kéyah Nahasdzáán Ałníiʼgi Siʼánígíí"),
+  TranslatedName(LangOci(), name: "Eqüator"),
+  TranslatedName(LangOss(), name: "Эквадор"),
+  TranslatedName(LangQue(), name: "Ikwadur"),
+  TranslatedName(LangKin(), name: "Ekwadoro"),
+  TranslatedName(LangSan(), name: "एक्वाडोर"),
+  TranslatedName(LangSun(), name: "Ékuador"),
+  TranslatedName(LangVol(), name: "Lekvadorän"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 89 translations for a Uganda country:
+/// Provides 104 translations for a Uganda country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -10,6 +10,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -18,8 +19,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -45,19 +50,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Limburgish (Limburgan/Limburger)
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -70,12 +82,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -83,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -271,4 +286,19 @@ const ugaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Uganda"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Uganda", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Uganda"),
+  TranslatedName(LangBak(), name: "Уганда"),
+  TranslatedName(LangBod(), name: "ཨུ་གན་ད།"),
+  TranslatedName(LangChv(), name: "Уганда"),
+  TranslatedName(LangDiv(), name: "ޔުގެންޑާ"),
+  TranslatedName(LangGlv(), name: "Ooganda"),
+  TranslatedName(LangHat(), name: "Ouganda"),
+  TranslatedName(LangCor(), name: "Ouganda"),
+  TranslatedName(LangLim(), name: "Oeganda"),
+  TranslatedName(LangMri(), name: "Ukānga"),
+  TranslatedName(LangNav(), name: "Yogénda"),
+  TranslatedName(LangOci(), name: "Oganda"),
+  TranslatedName(LangOss(), name: "Угандæ"),
+  TranslatedName(LangKin(), name: "Ubugande"),
+  TranslatedName(LangSsw(), name: "IBuganda"),
+  TranslatedName(LangVol(), name: "Lugandayän"),
 ];

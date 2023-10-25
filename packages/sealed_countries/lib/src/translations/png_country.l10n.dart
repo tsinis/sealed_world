@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Papua New Guinea country:
+/// Provides 141 translations for a Papua New Guinea country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -27,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,11 +47,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -59,12 +65,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -72,14 +81,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
+/// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -88,7 +103,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -96,13 +113,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -111,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -342,4 +363,25 @@ const pngCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Papua New Guinea"),
+  TranslatedName(LangArg(), name: "Papua y Nueva Guinea"),
+  TranslatedName(LangBak(), name: "Папуа — Яңы Гвинея"),
+  TranslatedName(LangBod(), name: "པ་པུ་འ་ནིའུ་གི་ནེ།"),
+  TranslatedName(LangChu(), name: "Папоуа · Нова Гвинєꙗ"),
+  TranslatedName(LangDiv(), name: "ޕަޕުއާ ނިއު ގިނީ"),
+  TranslatedName(LangGlv(), name: "Papooey Guinea Noa"),
+  TranslatedName(LangHat(), name: "Papwazi-Nouvèl-Gine"),
+  TranslatedName(LangIdo(), name: "Papua-Nova-Guinea"),
+  TranslatedName(LangLat(), name: "Papua Nova Guinea"),
+  TranslatedName(LangLim(), name: "Papoea-Nui-Guinea"),
+  TranslatedName(LangMri(), name: "Papua Nūkini"),
+  TranslatedName(LangMlt(), name: "Papwa Gwinea l-Ġdida"),
+  TranslatedName(LangNav(), name: "Páápowa Bigíní Ániidí"),
+  TranslatedName(LangOci(), name: "Papoa-Nòva Guinèa"),
+  TranslatedName(LangOss(), name: "Папуæ — Ног Гвиней"),
+  TranslatedName(LangKin(), name: "Papuwa Nuveli Gineya"),
+  TranslatedName(LangSan(), name: "पपुवा न्यू गिनी"),
+  TranslatedName(LangSmo(), name: "Papua"),
+  TranslatedName(LangSun(), name: "Papua Nugini"),
+  TranslatedName(LangTgl(), name: "Papua Bagong Ginea"),
+  TranslatedName(LangVol(), name: "Papuveän Nula-Gineyän"),
 ];

@@ -2,17 +2,20 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Saudi Arabia country:
+/// Provides 144 translations for a Saudi Arabia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,9 +25,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,12 +46,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -57,12 +66,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -72,14 +85,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -89,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,12 +116,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -112,9 +134,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const sauCountryTranslations = [
@@ -330,4 +354,28 @@ const sauCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Saudi Arabia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Saudi Arabia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Saudi Arabia"),
+  TranslatedName(LangArg(), name: "Arabia Saudí"),
+  TranslatedName(LangAva(), name: "СагIудиязул ГIарабия"),
+  TranslatedName(LangBak(), name: "Сәғүд Ғәрәбстаны"),
+  TranslatedName(LangBod(), name: "སའུ་དི་ཨ་ར་པི་ཡ།"),
+  TranslatedName(LangChv(), name: "Сауд Аравийĕ"),
+  TranslatedName(LangDiv(), name: "ސައޫދީ އަރަބިއްޔާ"),
+  TranslatedName(LangGrn(), name: "Aravia Saudíta"),
+  TranslatedName(LangGlv(), name: "Yn Araab Saudi"),
+  TranslatedName(LangHat(), name: "Arabi Sawoudit"),
+  TranslatedName(LangIdo(), name: "Saudia Arabia"),
+  TranslatedName(LangKom(), name: "Саудса Аравия"),
+  TranslatedName(LangCor(), name: "Arabi Saoudek"),
+  TranslatedName(LangLat(), name: "Arabia Saudiana"),
+  TranslatedName(LangLim(), name: "Saoedi-Arabië"),
+  TranslatedName(LangNau(), name: "Taudiarabiya"),
+  TranslatedName(LangNav(), name: "Ásáí Bikéyah Saʼoodí"),
+  TranslatedName(LangOci(), name: "Arabia Saudita"),
+  TranslatedName(LangOss(), name: "Сауды Арави"),
+  TranslatedName(LangKin(), name: "Arabiya Sawudite"),
+  TranslatedName(LangSan(), name: "सऊदी अरब"),
+  TranslatedName(LangSsw(), name: "I-Arabhiya"),
+  TranslatedName(LangTgl(), name: "Arabyang Saudi"),
+  TranslatedName(LangVol(), name: "Sauda-Larabän"),
+  TranslatedName(LangYid(), name: "סאודי אראביע"),
 ];

@@ -2,17 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Spain country:
+/// Provides 159 translations for a Spain country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -21,11 +25,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,29 +50,41 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
+/// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +94,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -89,7 +116,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,15 +127,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
@@ -113,11 +149,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const espCountryTranslations = [
   CountryName(
@@ -332,4 +371,43 @@ const espCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Sipani"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Sipani", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Spain"),
+  TranslatedName(LangArg(), name: "Espanya"),
+  TranslatedName(LangAym(), name: "Ispaña"),
+  TranslatedName(LangBak(), name: "Испания"),
+  TranslatedName(LangBod(), name: "ཞི་པན་ཡ།"),
+  TranslatedName(LangCha(), name: "España"),
+  TranslatedName(LangCos(), name: "Spagna"),
+  TranslatedName(LangChu(), name: "Їспанїꙗ"),
+  TranslatedName(LangChv(), name: "Испани"),
+  TranslatedName(LangDiv(), name: "އިސްޕެއިން"),
+  TranslatedName(LangGrn(), name: "España"),
+  TranslatedName(LangGlv(), name: "Yn Spaainey"),
+  TranslatedName(LangHat(), name: "Espay"),
+  TranslatedName(LangIle(), name: "Hispania"),
+  TranslatedName(LangIpk(), name: "Spaña"),
+  TranslatedName(LangIdo(), name: "Hispania"),
+  TranslatedName(LangIku(), name: "ᓯᐸᐃᓐ"),
+  TranslatedName(LangKon(), name: "Espania"),
+  TranslatedName(LangKal(), name: "Spania"),
+  TranslatedName(LangKom(), name: "Испания"),
+  TranslatedName(LangCor(), name: "Spayn"),
+  TranslatedName(LangLat(), name: "Hispania"),
+  TranslatedName(LangLim(), name: "Spanje"),
+  TranslatedName(LangMri(), name: "Peina"),
+  TranslatedName(LangNau(), name: "Pain"),
+  TranslatedName(LangNav(), name: "Dibé Diníí Bikéyah"),
+  TranslatedName(LangOci(), name: "Espanha"),
+  TranslatedName(LangOss(), name: "Испани"),
+  TranslatedName(LangKin(), name: "Esipanye"),
+  TranslatedName(LangSan(), name: "स्पेन्"),
+  TranslatedName(LangSrd(), name: "Ispagna"),
+  TranslatedName(LangSmo(), name: "Spania"),
+  TranslatedName(LangSsw(), name: "Sipeyini"),
+  TranslatedName(LangSun(), name: "Spanyol"),
+  TranslatedName(LangTgl(), name: "Espanya"),
+  TranslatedName(LangTso(), name: "Spaniya"),
+  TranslatedName(LangTah(), name: "Paniora"),
+  TranslatedName(LangVol(), name: "Spanyän"),
+  TranslatedName(LangWln(), name: "Espagne"),
+  TranslatedName(LangZha(), name: "Sihbanhyaz"),
 ];

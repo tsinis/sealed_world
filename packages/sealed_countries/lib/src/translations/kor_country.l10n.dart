@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a South Korea country:
+/// Provides 153 translations for a South Korea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,13 +10,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +27,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +47,38 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,14 +88,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,7 +110,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -99,9 +122,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tibetan Standard
@@ -114,9 +141,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const korCountryTranslations = [
   CountryName(
@@ -333,4 +364,35 @@ const korCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ariwa Kọria"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ariwa Kɔria", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-South Korea"),
+  TranslatedName(LangArg(), name: "Corea d'o Sur"),
+  TranslatedName(LangBak(), name: "Көньяҡ Корея"),
+  TranslatedName(LangBis(), name: "Saot Koria"),
+  TranslatedName(LangDiv(), name: "ދެކުނު ކޮރެއާ"),
+  TranslatedName(LangGrn(), name: "Yvykorea"),
+  TranslatedName(LangGlv(), name: "Yn Chorea Yiass"),
+  TranslatedName(LangHat(), name: "Kore disid"),
+  TranslatedName(LangIle(), name: "Sud-Korea"),
+  TranslatedName(LangIdo(), name: "Sud-Korea"),
+  TranslatedName(LangKal(), name: "Korea Kujalleq"),
+  TranslatedName(LangKom(), name: "Корея Республика"),
+  TranslatedName(LangCor(), name: "Korea Dhyhow"),
+  TranslatedName(LangLat(), name: "Corea Meridionalis"),
+  TranslatedName(LangLim(), name: "Zuud-Korea"),
+  TranslatedName(LangMri(), name: "Kōrea-ki-te-tonga"),
+  TranslatedName(LangNau(), name: "Ripubrikin Korea"),
+  TranslatedName(LangNav(), name: "Kolíya Bikéyah Shádiʼááhjí Siʼánígíí"),
+  TranslatedName(LangOci(), name: "Corèa del Sud"),
+  TranslatedName(LangOss(), name: "Хуссар Корей"),
+  TranslatedName(LangKin(), name: "Koreya y’Amajyepfo"),
+  TranslatedName(LangSan(), name: "दक्षिण कोरिया"),
+  TranslatedName(LangSrd(), name: "Corea de su Sud"),
+  TranslatedName(LangSmo(), name: "Kolea i Saute"),
+  TranslatedName(LangSsw(), name: "IKhoriya leseNingizimu"),
+  TranslatedName(LangSun(), name: "Koréa Kidul"),
+  TranslatedName(LangTgl(), name: "Timog Korea"),
+  TranslatedName(LangTat(), name: "Көньяк Корея"),
+  TranslatedName(LangVol(), name: "Sulüda-Koreyän"),
+  TranslatedName(LangWol(), name: "Kore gu Bëj-saalum"),
+  TranslatedName(LangYid(), name: "דרום קארעע"),
+  TranslatedName(LangZha(), name: "Hanzgoz"),
 ];

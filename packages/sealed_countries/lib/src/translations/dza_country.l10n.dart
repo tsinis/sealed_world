@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Algeria country:
+/// Provides 150 translations for a Algeria country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,13 +10,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +28,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,28 +48,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -71,21 +85,31 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -94,24 +118,34 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const dzaCountryTranslations = [
@@ -323,4 +357,38 @@ const dzaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Àlùgèríánì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Àlùgèríánì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Algeria"),
+  TranslatedName(LangArg(), name: "Alcheria"),
+  TranslatedName(LangAym(), name: "Alhirya"),
+  TranslatedName(LangBak(), name: "Алжи́р"),
+  TranslatedName(LangBih(), name: "अल्जीरिया"),
+  TranslatedName(LangBod(), name: "ཨཱལ་ཇི་རི་ཡ།"),
+  TranslatedName(LangChv(), name: "Алжир"),
+  TranslatedName(LangDiv(), name: "ޖަޒާއިރު"),
+  TranslatedName(LangGrn(), name: "Ayhelia"),
+  TranslatedName(LangGlv(), name: "Yn Algear"),
+  TranslatedName(LangHat(), name: "Aljeri"),
+  TranslatedName(LangIdo(), name: "Aljeria"),
+  TranslatedName(LangKal(), name: "Algeriet"),
+  TranslatedName(LangCor(), name: "Aljeri"),
+  TranslatedName(LangLat(), name: "Algerium"),
+  TranslatedName(LangLim(), name: "Algerieë"),
+  TranslatedName(LangMri(), name: "Aratiria"),
+  TranslatedName(LangNau(), name: "Ardjiriya"),
+  TranslatedName(LangNav(), name: "Aljííya"),
+  TranslatedName(LangOci(), name: "Argeria"),
+  TranslatedName(LangOrm(), name: "Aljeeriyaa"),
+  TranslatedName(LangOss(), name: "Алжир"),
+  TranslatedName(LangPli(), name: "अल्जीरिया"),
+  TranslatedName(LangKin(), name: "Aligeriya"),
+  TranslatedName(LangSan(), name: "अल्जीरिया"),
+  TranslatedName(LangSrd(), name: "Algerìa"),
+  TranslatedName(LangSsw(), name: "i-Alijeriya"),
+  TranslatedName(LangSun(), name: "Aljazair"),
+  TranslatedName(LangTgl(), name: "Arhelya"),
+  TranslatedName(LangTso(), name: "Algeriya"),
+  TranslatedName(LangVie(), name: "Algérie"),
+  TranslatedName(LangVol(), name: "Laljerän"),
+  TranslatedName(LangWln(), name: "Aldjereye"),
+  TranslatedName(LangXho(), name: "I-Algeria"),
+  TranslatedName(LangYid(), name: "אַלזשיר"),
 ];

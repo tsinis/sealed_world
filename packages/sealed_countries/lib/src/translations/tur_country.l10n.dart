@@ -2,18 +2,24 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Turkey country:
+/// Provides 156 translations for a Turkey country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +30,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +51,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,15 +93,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -92,6 +117,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -99,13 +126,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,11 +146,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const turCountryTranslations = [
   CountryName(
@@ -324,4 +358,38 @@ const turCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Tọọki"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Tɔɔki", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Turkey"),
+  TranslatedName(LangAbk(), name: "Ҭырқәтәыла"),
+  TranslatedName(LangArg(), name: "Turquía"),
+  TranslatedName(LangAva(), name: "Туркия"),
+  TranslatedName(LangAym(), name: "Turkiya"),
+  TranslatedName(LangBak(), name: "Төркиә"),
+  TranslatedName(LangBod(), name: "ཏུར་ཀི།"),
+  TranslatedName(LangChu(), name: "Тѷрци"),
+  TranslatedName(LangChv(), name: "Турци"),
+  TranslatedName(LangDiv(), name: "ތުރުކީވިލާތް"),
+  TranslatedName(LangGrn(), name: "Tuykia"),
+  TranslatedName(LangGlv(), name: "Yn Turkee"),
+  TranslatedName(LangHat(), name: "Tiki"),
+  TranslatedName(LangIle(), name: "Turcia"),
+  TranslatedName(LangIdo(), name: "Turkia"),
+  TranslatedName(LangKon(), name: "Turki"),
+  TranslatedName(LangKal(), name: "Tyrkia"),
+  TranslatedName(LangKom(), name: "Турция"),
+  TranslatedName(LangCor(), name: "Turki"),
+  TranslatedName(LangLat(), name: "Turcia"),
+  TranslatedName(LangLim(), name: "Turkije"),
+  TranslatedName(LangMri(), name: "Tākei"),
+  TranslatedName(LangNau(), name: "Terki"),
+  TranslatedName(LangNav(), name: "Tʼóok Bikéyah"),
+  TranslatedName(LangOci(), name: "Turquia"),
+  TranslatedName(LangOss(), name: "Турк"),
+  TranslatedName(LangKin(), name: "Turukiya"),
+  TranslatedName(LangSan(), name: "तुर्की"),
+  TranslatedName(LangSrd(), name: "Turkia"),
+  TranslatedName(LangSsw(), name: "IThekhi"),
+  TranslatedName(LangSun(), name: "Turki"),
+  TranslatedName(LangTgl(), name: "Turkiya"),
+  TranslatedName(LangVol(), name: "Türkän"),
+  TranslatedName(LangWln(), name: "Tourkeye"),
+  TranslatedName(LangZha(), name: "Dujwjgiz"),
 ];

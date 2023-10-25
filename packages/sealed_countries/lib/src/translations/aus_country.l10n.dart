@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Australia country:
+/// Provides 142 translations for a Australia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -12,10 +14,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -23,9 +29,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,12 +49,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,12 +67,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -68,17 +84,29 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -87,11 +115,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -100,11 +131,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ausCountryTranslations = [
   CountryName(
@@ -302,4 +337,39 @@ const ausCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ástràlìá"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ástràlìá", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Australia"),
+  TranslatedName(LangAbk(), name: "Австралиа"),
+  TranslatedName(LangAym(), name: "Australla"),
+  TranslatedName(LangBak(), name: "Австралия"),
+  TranslatedName(LangBih(), name: "ऑस्ट्रेलिया"),
+  TranslatedName(LangBis(), name: "Ostrelia"),
+  TranslatedName(LangBod(), name: "ཨོ་སེ་ཐེ་ལི་ཡ།"),
+  TranslatedName(LangChu(), name: "Аѵстралїꙗ"),
+  TranslatedName(LangChv(), name: "Австрали"),
+  TranslatedName(LangDiv(), name: "އޮސްޓަރުލިޔާ"),
+  TranslatedName(LangGrn(), name: "Autaralia"),
+  TranslatedName(LangGlv(), name: "Austrail"),
+  TranslatedName(LangHat(), name: "Ostrali"),
+  TranslatedName(LangIbo(), name: "Ostraliya"),
+  TranslatedName(LangIku(), name: "ᐊᔅᑦᕌᓕᐊ"),
+  TranslatedName(LangKom(), name: "Австралия"),
+  TranslatedName(LangCor(), name: "Ostrali"),
+  TranslatedName(LangLim(), name: "Australië"),
+  TranslatedName(LangMri(), name: "Ahitereiria"),
+  TranslatedName(LangNau(), name: "Otereiriya"),
+  TranslatedName(LangNav(), name: "Nahatʼeʼiitsoh Bikéyah"),
+  TranslatedName(LangOci(), name: "Austràlia"),
+  TranslatedName(LangOrm(), name: "Awustireliyaa"),
+  TranslatedName(LangOss(), name: "Австрали"),
+  TranslatedName(LangPli(), name: "आस्ट्रेलिया"),
+  TranslatedName(LangQue(), name: "Awstralya"),
+  TranslatedName(LangKin(), name: "Ositaraliya"),
+  TranslatedName(LangSan(), name: "आस्ट्रेलिया"),
+  TranslatedName(LangSrd(), name: "Austràlia"),
+  TranslatedName(LangSmo(), name: "Ausetalia"),
+  TranslatedName(LangTgl(), name: "Australya"),
+  TranslatedName(LangTah(), name: "Autereraria"),
+  TranslatedName(LangVie(), name: "Úc"),
+  TranslatedName(LangVol(), name: "Laustralän"),
+  TranslatedName(LangWln(), name: "Ostraleye"),
+  TranslatedName(LangZha(), name: "Audaihleihya"),
 ];

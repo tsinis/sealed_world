@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 86 translations for a Samoa country:
+/// Provides 91 translations for a Samoa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -55,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
@@ -76,6 +78,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -83,7 +86,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -263,4 +268,9 @@ const wsmCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Samọ"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Samɔ", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Samoa"),
+  TranslatedName(LangBod(), name: "ནུ་བ་ས་མོ་འ།"),
+  TranslatedName(LangFao(), name: "Sámoa"),
+  TranslatedName(LangFry(), name: "Samoä"),
+  TranslatedName(LangMri(), name: "Hāmoa"),
+  TranslatedName(LangVol(), name: "Samovuäns"),
 ];

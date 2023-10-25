@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a El Salvador country:
+/// Provides 119 translations for a El Salvador country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,11 +39,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -51,26 +56,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
 /// - Malayalam
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -78,12 +92,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -92,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -291,4 +309,22 @@ const slvCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ẹẹsáfádò"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ɛɛsáfádò", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-El Salvador"),
+  TranslatedName(LangBak(), name: "Сальвадор"),
+  TranslatedName(LangBod(), name: "ཨིལ་སལ་ཝ་ཌོར།"),
+  TranslatedName(LangDiv(), name: "އެލްސެލްވަޑޯރު"),
+  TranslatedName(LangGrn(), name: "Salvador"),
+  TranslatedName(LangGlv(), name: "Yn Salvador"),
+  TranslatedName(LangHat(), name: "Salvadò"),
+  TranslatedName(LangIdo(), name: "Salvadoria"),
+  TranslatedName(LangLat(), name: "Salvatoria"),
+  TranslatedName(LangMri(), name: "Te Whakaora"),
+  TranslatedName(LangNau(), name: "Ersarbador"),
+  TranslatedName(LangOci(), name: "Lo Salvador"),
+  TranslatedName(LangOss(), name: "Сальвадор"),
+  TranslatedName(LangQue(), name: "Salwadur"),
+  TranslatedName(LangKin(), name: "Saluvadoro"),
+  TranslatedName(LangSan(), name: "एल-साल्वाडोर"),
+  TranslatedName(LangSsw(), name: "ISalivado"),
+  TranslatedName(LangSun(), name: "Él Salvador"),
+  TranslatedName(LangVol(), name: "Salvadorän"),
 ];

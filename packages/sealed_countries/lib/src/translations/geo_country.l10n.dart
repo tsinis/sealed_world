@@ -2,16 +2,20 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Georgia country:
+/// Provides 135 translations for a Georgia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
 /// - Belarusian
@@ -23,15 +27,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -41,11 +49,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -55,12 +65,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -69,15 +82,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
 /// - Serbian
@@ -87,13 +106,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -102,6 +125,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -227,4 +252,29 @@ const geoCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gọgia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gɔgia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Georgia"),
+  TranslatedName(LangAbk(), name: "Қырҭтәыла"),
+  TranslatedName(LangArg(), name: "Cheorchia"),
+  TranslatedName(LangAva(), name: "Гуржи"),
+  TranslatedName(LangBod(), name: "འཇོར་ཇི་ཡ། (རྒྱལ་ཁབ།)"),
+  TranslatedName(LangChu(), name: "Гєѡргїꙗ"),
+  TranslatedName(LangChv(), name: "Грузи"),
+  TranslatedName(LangDiv(), name: "ޖޯޖިޔާ (ޤައުމު)"),
+  TranslatedName(LangFao(), name: "Georgia (land)"),
+  TranslatedName(LangGlv(), name: "Yn Çhorshey"),
+  TranslatedName(LangHat(), name: "Jeoji"),
+  TranslatedName(LangIdo(), name: "Gruzia"),
+  TranslatedName(LangKom(), name: "Грузия"),
+  TranslatedName(LangCor(), name: "Pow Grouzi"),
+  TranslatedName(LangLim(), name: "Georgië"),
+  TranslatedName(LangMri(), name: "Hōria"),
+  TranslatedName(LangNau(), name: "Djiordjiya"),
+  TranslatedName(LangNav(), name: "Jóojah (Kéyah)"),
+  TranslatedName(LangOci(), name: "Georgia (Caucàs)"),
+  TranslatedName(LangQue(), name: "Kartulsuyu"),
+  TranslatedName(LangKin(), name: "Geworugiya"),
+  TranslatedName(LangSsw(), name: "IJojiya"),
+  TranslatedName(LangSun(), name: "Géorgia"),
+  TranslatedName(LangTgl(), name: "Heorhiya"),
+  TranslatedName(LangVie(), name: "Gruzia"),
+  TranslatedName(LangVol(), name: "Grusiyän"),
 ];

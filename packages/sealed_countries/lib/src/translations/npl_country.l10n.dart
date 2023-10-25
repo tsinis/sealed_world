@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Nepal country:
+/// Provides 97 translations for a Nepal country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -53,6 +53,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -287,4 +288,5 @@ const nplCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Nepa"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Nepa", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Nepal"),
+  TranslatedName(LangLat(), name: "Nepalia"),
 ];

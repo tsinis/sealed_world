@@ -2,13 +2,14 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 103 translations for a Isle of Man country:
+/// Provides 121 translations for a Isle of Man country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -22,13 +23,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Galician
@@ -40,6 +46,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -50,23 +57,29 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lithuanian
 /// - Macedonian
 /// - Malayalam
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -82,8 +95,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -98,8 +113,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
+/// - Yoruba
 /// - Zulu.
 const imnCountryTranslations = [
   CountryName(
@@ -265,4 +283,22 @@ const imnCountryTranslations = [
   TranslatedName(LangVie(), name: "Đảo Man"),
   TranslatedName(LangWol(), name: "Dunu Maan"),
   TranslatedName(LangZul(), name: "i-Isle of Man"),
+  TranslatedName(LangArg(), name: "Isla de Man"),
+  TranslatedName(LangChv(), name: "Мэн утравĕ"),
+  TranslatedName(LangDiv(), name: "އައިޒަލް އޮފް މޭން"),
+  TranslatedName(LangEpo(), name: "Manksinsulo"),
+  TranslatedName(LangFao(), name: "Mann"),
+  TranslatedName(LangFry(), name: "Man"),
+  TranslatedName(LangIdo(), name: "Man-Insulo"),
+  TranslatedName(LangCor(), name: "Ynys Manow"),
+  TranslatedName(LangLat(), name: "Monapia"),
+  TranslatedName(LangLim(), name: "Man"),
+  TranslatedName(LangMri(), name: "Motu o Man"),
+  TranslatedName(LangOci(), name: "Illa de Man"),
+  TranslatedName(LangOss(), name: "Мэн"),
+  TranslatedName(LangKin(), name: "Ikirwa cya Man"),
+  TranslatedName(LangSun(), name: "Pulo Man"),
+  TranslatedName(LangTgl(), name: "Pulo ng Man"),
+  TranslatedName(LangVol(), name: "Mäneän"),
+  TranslatedName(LangYor(), name: "Erékùṣù ilẹ̀ Man"),
 ];

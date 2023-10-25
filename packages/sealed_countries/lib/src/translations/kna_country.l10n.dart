@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Saint Kitts and Nevis country:
+/// Provides 126 translations for a Saint Kitts and Nevis country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -47,6 +47,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -64,6 +65,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -115,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -265,7 +268,6 @@ const knaCountryTranslations = [
   TranslatedName(LangDzo(), name: "སེནཊ་ ཀིཊས་ དང་ ནེ་བིས"),
   TranslatedName(LangEwe(), name: "Saint Kitis kple Nevis nutome"),
   TranslatedName(LangEll(), name: "Σεν Κιτς και Νέβις"),
-  TranslatedName(LangEng(), name: "St Kitts & Nevis"),
   TranslatedName(LangEpo(), name: "Sent-Kristofo kaj Neviso"),
   TranslatedName(LangEus(), name: "Saint Kitts eta Nevis"),
   TranslatedName(LangFul(), name: "Sent Kits e Newis"),
@@ -357,4 +359,7 @@ const knaCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Saint Kitts ne-Nevis"),
+  TranslatedName(LangIdo(), name: "Santa Kitts e Nevis"),
+  TranslatedName(LangLim(), name: "Saint-Kitts"),
+  TranslatedName(LangVol(), name: "Sankiteän e Neviseän"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Marshall Islands country:
+/// Provides 128 translations for a Marshall Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -47,6 +47,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
@@ -64,7 +65,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -81,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -115,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -341,4 +346,9 @@ const mhlCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Marshall Islands"),
+  TranslatedName(LangIdo(), name: "Insuli Marshall"),
+  TranslatedName(LangLat(), name: "Insulae Marsalienses"),
+  TranslatedName(LangLim(), name: "Marshall-eilen"),
+  TranslatedName(LangOci(), name: "Illas Marshall"),
+  TranslatedName(LangVol(), name: "Marjaluäns"),
 ];

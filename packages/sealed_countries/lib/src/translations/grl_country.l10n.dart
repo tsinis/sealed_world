@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Greenland country:
+/// Provides 140 translations for a Greenland country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -24,9 +25,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,14 +46,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -59,12 +67,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -72,14 +84,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -94,14 +110,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -110,6 +130,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -260,4 +281,25 @@ const grlCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gerelandi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gerelandi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Greenland"),
+  TranslatedName(LangArg(), name: "Gronlandia"),
+  TranslatedName(LangBod(), name: "གེ་རེན་ལ"),
+  TranslatedName(LangChv(), name: "Гренланди"),
+  TranslatedName(LangDiv(), name: "ގުރީންލޭންޑު"),
+  TranslatedName(LangGrn(), name: "Kyoẽlándia"),
+  TranslatedName(LangGlv(), name: "Greenlynn"),
+  TranslatedName(LangIle(), name: "Grenland"),
+  TranslatedName(LangIdo(), name: "Grenlando"),
+  TranslatedName(LangIku(), name: "ᐊᑯᑭᑦᑐᑦ"),
+  TranslatedName(LangKom(), name: "Гренландия"),
+  TranslatedName(LangCor(), name: "Greunland"),
+  TranslatedName(LangLat(), name: "Groenlandia"),
+  TranslatedName(LangLim(), name: "Greunland"),
+  TranslatedName(LangNav(), name: "Haʼaʼaahjí Hakʼaz Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "Groenlàndia"),
+  TranslatedName(LangOss(), name: "Гренланди"),
+  TranslatedName(LangKin(), name: "Goronulande"),
+  TranslatedName(LangSom(), name: "Griinland"),
+  TranslatedName(LangSun(), name: "Lemah Héjo"),
+  TranslatedName(LangTgl(), name: "Lupanlunti"),
+  TranslatedName(LangVol(), name: "Gröneän"),
 ];

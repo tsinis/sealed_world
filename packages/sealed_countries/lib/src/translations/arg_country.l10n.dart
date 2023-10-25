@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 103 translations for a Argentina country:
+/// Provides 135 translations for a Argentina country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,20 +10,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,11 +47,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -53,12 +63,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
@@ -66,18 +80,29 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -85,20 +110,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -301,4 +333,36 @@ const argCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Agentínà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Agentínà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Argentina"),
+  TranslatedName(LangArg(), name: "Archentina"),
+  TranslatedName(LangAva(), name: "Аргентина"),
+  TranslatedName(LangAym(), name: "Arxintina"),
+  TranslatedName(LangBak(), name: "Аргенти́на"),
+  TranslatedName(LangBih(), name: "अर्जेन्टीना"),
+  TranslatedName(LangBod(), name: "ཨར་ཇེན་ཊི་ན།"),
+  TranslatedName(LangChv(), name: "Аргентина"),
+  TranslatedName(LangDiv(), name: "އާޖެންޓީނާ"),
+  TranslatedName(LangGlv(), name: "yn Argenteen"),
+  TranslatedName(LangHat(), name: "Ajantin"),
+  TranslatedName(LangIdo(), name: "Arjentinia"),
+  TranslatedName(LangKon(), name: "Arhentina"),
+  TranslatedName(LangKom(), name: "Аргентина"),
+  TranslatedName(LangCor(), name: "Arghantina"),
+  TranslatedName(LangLim(), name: "Argentinië"),
+  TranslatedName(LangMri(), name: "Āketina"),
+  TranslatedName(LangNau(), name: "Ardjentina"),
+  TranslatedName(LangNav(), name: "Béésh Łigaii Bikéyah"),
+  TranslatedName(LangOrm(), name: "Arjentiinaa"),
+  TranslatedName(LangOss(), name: "Аргентинæ"),
+  TranslatedName(LangPli(), name: "अर्जन्टीना"),
+  TranslatedName(LangQue(), name: "Arhintina"),
+  TranslatedName(LangKin(), name: "Arijantine"),
+  TranslatedName(LangSan(), name: "अर्जण्टिना"),
+  TranslatedName(LangSme(), name: "Argentiinná"),
+  TranslatedName(LangSmo(), name: "Atenitina"),
+  TranslatedName(LangSun(), name: "Argéntina"),
+  TranslatedName(LangTgl(), name: "Arhentina"),
+  TranslatedName(LangTso(), name: "Arjentina"),
+  TranslatedName(LangTah(), name: "’Atetina"),
+  TranslatedName(LangVol(), name: "Largäntän"),
+  TranslatedName(LangWln(), name: "Årdjintene"),
 ];

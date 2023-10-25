@@ -2,16 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Gabon country:
+/// Provides 114 translations for a Gabon country:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -20,8 +23,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -49,9 +54,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -62,9 +69,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -73,6 +84,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -80,19 +93,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -280,4 +297,21 @@ const gabCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gabon"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gabon", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Gabon"),
+  TranslatedName(LangArg(), name: "Gabón"),
+  TranslatedName(LangBak(), name: "Габон"),
+  TranslatedName(LangBod(), name: "གེ་བོན།"),
+  TranslatedName(LangChv(), name: "Габон"),
+  TranslatedName(LangDiv(), name: "ގެބޯން"),
+  TranslatedName(LangKon(), name: "Ngabu"),
+  TranslatedName(LangLat(), name: "Gabonia"),
+  TranslatedName(LangMri(), name: "Kāpona"),
+  TranslatedName(LangNau(), name: "Gabun"),
+  TranslatedName(LangNav(), name: "Gabǫ́ǫ́"),
+  TranslatedName(LangOss(), name: "Габон"),
+  TranslatedName(LangSan(), name: "गाबोन"),
+  TranslatedName(LangSrd(), name: "Gabòn"),
+  TranslatedName(LangSqi(), name: "Gaboni"),
+  TranslatedName(LangSsw(), name: "IGabhoni"),
+  TranslatedName(LangTso(), name: "Gaboni"),
+  TranslatedName(LangVol(), name: "Gabunän"),
 ];

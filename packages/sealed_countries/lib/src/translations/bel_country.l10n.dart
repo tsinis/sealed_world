@@ -2,21 +2,28 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Belgium country:
+/// Provides 161 translations for a Belgium country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +31,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +53,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,24 +94,34 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -99,13 +130,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,6 +150,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -326,4 +363,41 @@ const belCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bégíọ́mù"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bégíɔ́mù", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Belgium"),
+  TranslatedName(LangArg(), name: "Belchica"),
+  TranslatedName(LangAva(), name: "Бе́льгия"),
+  TranslatedName(LangAym(), name: "Bilkiya"),
+  TranslatedName(LangBak(), name: "Бе́льгия"),
+  TranslatedName(LangBih(), name: "बेल्जियम"),
+  TranslatedName(LangBis(), name: "Beljiom"),
+  TranslatedName(LangBod(), name: "པེར་ཅིན།"),
+  TranslatedName(LangCos(), name: "Belgica"),
+  TranslatedName(LangChu(), name: "Бє́лгїѥ"),
+  TranslatedName(LangChv(), name: "Бельги"),
+  TranslatedName(LangDiv(), name: "ބެލްޖިއަމް"),
+  TranslatedName(LangGrn(), name: "Véyhika"),
+  TranslatedName(LangGlv(), name: "Velg"),
+  TranslatedName(LangHat(), name: "Bèljik"),
+  TranslatedName(LangIle(), name: "Belgia"),
+  TranslatedName(LangIdo(), name: "Belgia"),
+  TranslatedName(LangKon(), name: "Belezi"),
+  TranslatedName(LangKal(), name: "Belgia"),
+  TranslatedName(LangKom(), name: "Бельгия"),
+  TranslatedName(LangCor(), name: "Pow Belg"),
+  TranslatedName(LangLat(), name: "Belgica"),
+  TranslatedName(LangLim(), name: "Belsj"),
+  TranslatedName(LangMri(), name: "Pehiamu"),
+  TranslatedName(LangNau(), name: "Berdjiyum"),
+  TranslatedName(LangOci(), name: "Belgica"),
+  TranslatedName(LangOrm(), name: "Beeljiyeem"),
+  TranslatedName(LangOss(), name: "Бельги"),
+  TranslatedName(LangPli(), name: "बेल्जियम"),
+  TranslatedName(LangKin(), name: "Ububiligi"),
+  TranslatedName(LangSan(), name: "बेल्जियम"),
+  TranslatedName(LangSrd(), name: "Bèlgiu"),
+  TranslatedName(LangSmo(), name: "Peleseuma"),
+  TranslatedName(LangSsw(), name: "iBhelijiyamu"),
+  TranslatedName(LangSun(), name: "Bélgia"),
+  TranslatedName(LangTgl(), name: "Belhika"),
+  TranslatedName(LangVol(), name: "Belgän"),
+  TranslatedName(LangWln(), name: "Beldjike"),
 ];

@@ -2,19 +2,25 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Brazil country:
+/// Provides 158 translations for a Brazil country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -22,9 +28,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,15 +50,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -58,12 +72,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -72,9 +91,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -82,17 +104,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -100,12 +128,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -114,11 +146,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const braCountryTranslations = [
   CountryName(
@@ -334,4 +371,41 @@ const braCountryTranslations = [
   TranslatedName(LangYor(), name: "Orilẹ̀-èdè Bàràsílì"),
   TranslatedName(LangYor(), name: "Orilɛ̀-èdè Bàràsílì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Brazil"),
+  TranslatedName(LangArg(), name: "Brasil"),
+  TranslatedName(LangAym(), name: "Wrasil"),
+  TranslatedName(LangBak(), name: "Брази́лия"),
+  TranslatedName(LangBih(), name: "ब्राज़ील"),
+  TranslatedName(LangBod(), name: "པུ་རུ་ཟིལ།"),
+  TranslatedName(LangCos(), name: "Brasile"),
+  TranslatedName(LangChu(), name: "Браꙁїлі́ꙗ"),
+  TranslatedName(LangChv(), name: "Бразили"),
+  TranslatedName(LangDiv(), name: "ބުރެޒިލް"),
+  TranslatedName(LangGrn(), name: "Pindoráma"),
+  TranslatedName(LangGlv(), name: "yn Vrasseel"),
+  TranslatedName(LangHat(), name: "Brezil"),
+  TranslatedName(LangIle(), name: "Brasil"),
+  TranslatedName(LangIdo(), name: "Brazilia"),
+  TranslatedName(LangKon(), name: "Brazilia"),
+  TranslatedName(LangKom(), name: "Бразилия"),
+  TranslatedName(LangCor(), name: "Brasil"),
+  TranslatedName(LangLat(), name: "Brasilia"),
+  TranslatedName(LangLim(), name: "Braziel"),
+  TranslatedName(LangNau(), name: "Bradir"),
+  TranslatedName(LangNav(), name: "Bwazííl"),
+  TranslatedName(LangOci(), name: "Brasil"),
+  TranslatedName(LangOrm(), name: "Biraazil"),
+  TranslatedName(LangPli(), name: "ब्रासील"),
+  TranslatedName(LangKin(), name: "Burezile"),
+  TranslatedName(LangSan(), name: "ब्रासील"),
+  TranslatedName(LangSrd(), name: "Brasile"),
+  TranslatedName(LangSmo(), name: "Pasila"),
+  TranslatedName(LangSqi(), name: "Brazili"),
+  TranslatedName(LangSun(), name: "Brasil"),
+  TranslatedName(LangTgl(), name: "Brasil"),
+  TranslatedName(LangTah(), name: "Parīihi"),
+  TranslatedName(LangVie(), name: "Brasil"),
+  TranslatedName(LangVol(), name: "Brasilän"),
+  TranslatedName(LangWln(), name: "Braezi"),
+  TranslatedName(LangXho(), name: "Brasil"),
+  TranslatedName(LangZha(), name: "Bahsih"),
 ];

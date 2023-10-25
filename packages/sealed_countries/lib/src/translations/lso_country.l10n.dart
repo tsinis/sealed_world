@@ -2,17 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 103 translations for a Lesotho country:
+/// Provides 124 translations for a Lesotho country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +23,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -33,11 +37,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -52,11 +58,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -64,10 +72,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -75,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -82,13 +96,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -97,7 +115,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -290,4 +311,25 @@ const lsoCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Lesoto"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Lesoto", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "iLesotho"),
+  TranslatedName(LangArg(), name: "Lesoto"),
+  TranslatedName(LangBak(), name: "Лесото"),
+  TranslatedName(LangBod(), name: "ལི་སོ་ཐོ།"),
+  TranslatedName(LangChv(), name: "Лесото"),
+  TranslatedName(LangDiv(), name: "ލެސޯތޯ"),
+  TranslatedName(LangFry(), name: "Lesoto"),
+  TranslatedName(LangGlg(), name: "Lesoto"),
+  TranslatedName(LangGlv(), name: "Lesoto"),
+  TranslatedName(LangHat(), name: "Lezoto"),
+  TranslatedName(LangLat(), name: "Lesothum"),
+  TranslatedName(LangMri(), name: "Teroto"),
+  TranslatedName(LangNau(), name: "Resoto"),
+  TranslatedName(LangNav(), name: "Sotho Dineʼé Bikéyah"),
+  TranslatedName(LangOss(), name: "Лесото"),
+  TranslatedName(LangKin(), name: "Lesoto"),
+  TranslatedName(LangSan(), name: "लेसोथो"),
+  TranslatedName(LangSsw(), name: "ÉLusûtfu"),
+  TranslatedName(LangSun(), name: "Lésotho"),
+  TranslatedName(LangTgl(), name: "Lesoto"),
+  TranslatedName(LangVen(), name: "Li-Sotho"),
+  TranslatedName(LangVol(), name: "Lesotän"),
 ];

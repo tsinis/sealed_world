@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Morocco country:
+/// Provides 148 translations for a Morocco country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +26,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,11 +48,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -59,12 +66,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,15 +85,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -92,6 +108,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -99,13 +117,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,6 +137,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -326,4 +350,28 @@ const marCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Moroko"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Moroko", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Morocco"),
+  TranslatedName(LangArg(), name: "Marruecos"),
+  TranslatedName(LangBak(), name: "Марокко"),
+  TranslatedName(LangBod(), name: "མོ་རོ་ཁོ།"),
+  TranslatedName(LangChv(), name: "Марокко"),
+  TranslatedName(LangDiv(), name: "މައުރިބު"),
+  TranslatedName(LangGlv(), name: "Yn Varoc"),
+  TranslatedName(LangHat(), name: "Mawòk"),
+  TranslatedName(LangIdo(), name: "Maroko"),
+  TranslatedName(LangKon(), name: "Maroko"),
+  TranslatedName(LangCor(), name: "Marokk"),
+  TranslatedName(LangLat(), name: "Marocum"),
+  TranslatedName(LangLim(), name: "Marokko"),
+  TranslatedName(LangMri(), name: "Marako"),
+  TranslatedName(LangNav(), name: "Moroko"),
+  TranslatedName(LangOci(), name: "Marròc"),
+  TranslatedName(LangOss(), name: "Марокко"),
+  TranslatedName(LangKin(), name: "Maroke"),
+  TranslatedName(LangSan(), name: "मोराको"),
+  TranslatedName(LangSrd(), name: "Marocco"),
+  TranslatedName(LangSsw(), name: "IMorokho"),
+  TranslatedName(LangSun(), name: "Maroko"),
+  TranslatedName(LangTgl(), name: "Maruekos"),
+  TranslatedName(LangVol(), name: "Marokän"),
+  TranslatedName(LangWln(), name: "Marok"),
 ];

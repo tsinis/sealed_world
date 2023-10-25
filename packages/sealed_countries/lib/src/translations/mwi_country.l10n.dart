@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 91 translations for a Malawi country:
+/// Provides 105 translations for a Malawi country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -11,6 +11,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -18,9 +19,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
+/// - Chichewa (Chewa/Nyanja)
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -31,6 +35,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -50,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
@@ -58,14 +64,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -73,12 +83,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -86,7 +98,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -266,4 +280,18 @@ const mwiCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Malawi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Malawi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "iMalawi"),
+  TranslatedName(LangBak(), name: "Малави"),
+  TranslatedName(LangBod(), name: "མ་ལ་ཝི།"),
+  TranslatedName(LangChv(), name: "Малави"),
+  TranslatedName(LangDiv(), name: "މަލާވީ"),
+  TranslatedName(LangFry(), name: "Malawy"),
+  TranslatedName(LangGlg(), name: "Malaui - Malawi"),
+  TranslatedName(LangLat(), name: "Malavium"),
+  TranslatedName(LangMri(), name: "Marāwi"),
+  TranslatedName(LangNav(), name: "Malááwii"),
+  TranslatedName(LangNya(), name: "Malaŵi"),
+  TranslatedName(LangOss(), name: "Малави"),
+  TranslatedName(LangSan(), name: "मलावी"),
+  TranslatedName(LangSsw(), name: "IMalawi"),
+  TranslatedName(LangVol(), name: "Malaviyän"),
 ];

@@ -2,21 +2,26 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Netherlands country:
+/// Provides 160 translations for a Netherlands country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +29,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +51,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,14 +93,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -91,20 +116,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
+/// - Southern Sotho
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -114,9 +146,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -310,4 +345,39 @@ const nldCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Nedalandi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Nedalandi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Netherlands"),
+  TranslatedName(LangArg(), name: "Países Baixos"),
+  TranslatedName(LangAym(), name: "Aynacha Jach'a Markanaka"),
+  TranslatedName(LangBak(), name: "Нидерландтар"),
+  TranslatedName(LangBih(), name: "एम्सटर्डम"),
+  TranslatedName(LangBod(), name: "ཧོ་ལན།"),
+  TranslatedName(LangCos(), name: "Paesi Bassi"),
+  TranslatedName(LangChu(), name: "Нидєрландꙑ"),
+  TranslatedName(LangChv(), name: "Нидерландсем"),
+  TranslatedName(LangDiv(), name: "ނެދަލޭންޑު"),
+  TranslatedName(LangGrn(), name: "Tetãnguéra Yvýi"),
+  TranslatedName(LangGlv(), name: "Yn Çheer Injil"),
+  TranslatedName(LangHat(), name: "Peyiba"),
+  TranslatedName(LangIle(), name: "Nederland"),
+  TranslatedName(LangIdo(), name: "Nederlando"),
+  TranslatedName(LangKon(), name: "Pays-Bas"),
+  TranslatedName(LangKal(), name: "Hollandi"),
+  TranslatedName(LangKom(), name: "Нидерландъяс"),
+  TranslatedName(LangCor(), name: "Iseldiryow"),
+  TranslatedName(LangLat(), name: "Nederlandia"),
+  TranslatedName(LangLim(), name: "Nederland"),
+  TranslatedName(LangMri(), name: "Hōrana"),
+  TranslatedName(LangNau(), name: "Eben Eyong"),
+  TranslatedName(LangNav(), name: "Tsin Bikeeʼ Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "Païses Basses"),
+  TranslatedName(LangOss(), name: "Нидерландтæ"),
+  TranslatedName(LangKin(), name: "Ubuholandi"),
+  TranslatedName(LangSan(), name: "नेदरलैंड्स"),
+  TranslatedName(LangSrd(), name: "Logos Bascios"),
+  TranslatedName(LangSsw(), name: "IDashi"),
+  TranslatedName(LangSot(), name: "Hôlanê"),
+  TranslatedName(LangSun(), name: "Walanda"),
+  TranslatedName(LangTgl(), name: "Olanda"),
+  TranslatedName(LangVol(), name: "Nedän"),
+  TranslatedName(LangWln(), name: "Bas Payis"),
+  TranslatedName(LangXho(), name: "ENetherlands"),
 ];

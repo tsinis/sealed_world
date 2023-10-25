@@ -2,32 +2,43 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a United Kingdom country:
+/// Provides 166 translations for a United Kingdom country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,30 +54,41 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -79,13 +101,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -95,7 +121,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -103,8 +132,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -120,11 +152,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const gbrCountryTranslations = [
   CountryName(
@@ -358,4 +393,39 @@ const gbrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́èdè Gẹ̀ẹ́sì"),
   TranslatedName(LangYor(), name: "Orílɛ́èdè Gɛ̀ɛ́sì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-United Kingdom"),
+  TranslatedName(LangAbk(), name: "Британиа Ду"),
+  TranslatedName(LangArg(), name: "Reino Unito"),
+  TranslatedName(LangAva(), name: "Кӏудабиритан"),
+  TranslatedName(LangBak(), name: "Бөйөк Британия"),
+  TranslatedName(LangBih(), name: "यूनाइटेड किंगडम"),
+  TranslatedName(LangBis(), name: "Unaeted Kingdom"),
+  TranslatedName(LangCha(), name: "Reinu Unidu"),
+  TranslatedName(LangCos(), name: "Regnu Unitu"),
+  TranslatedName(LangChu(), name: "Вєлика Британїꙗ"),
+  TranslatedName(LangChv(), name: "Аслă Британи"),
+  TranslatedName(LangDiv(), name: "ޔުނައިޓެޑް ކިންގްޑަމް"),
+  TranslatedName(LangGrn(), name: "Tavetã Joaju"),
+  TranslatedName(LangHat(), name: "Wayòm Ini"),
+  TranslatedName(LangIle(), name: "Reyatu Unit"),
+  TranslatedName(LangIdo(), name: "Unionita Rejio"),
+  TranslatedName(LangIku(), name: "ᑐᓗᐃᑦ ᓄᓈᑦ"),
+  TranslatedName(LangKon(), name: "Royaume-Uni"),
+  TranslatedName(LangKal(), name: "Tuluit Nunaat"),
+  TranslatedName(LangKom(), name: "Ыджыд Британия"),
+  TranslatedName(LangLat(), name: "Britanniarum Regnum"),
+  TranslatedName(LangLim(), name: "Vereineg Keuninkriek"),
+  TranslatedName(LangNau(), name: "Ingerand"),
+  TranslatedName(LangNav(), name: "Tótaʼ Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "Reialme Unit"),
+  TranslatedName(LangOrm(), name: "Yunaayitid Kingidem"),
+  TranslatedName(LangKin(), name: "Ubwongereza"),
+  TranslatedName(LangSan(), name: "संयुक्त अधिराज्य"),
+  TranslatedName(LangSrd(), name: "Rennu Auniadu"),
+  TranslatedName(LangSmo(), name: "Peretānia"),
+  TranslatedName(LangSun(), name: "Britania"),
+  TranslatedName(LangTgl(), name: "Nagkakaisang Kaharian"),
+  TranslatedName(LangTah(), name: "Paratāne"),
+  TranslatedName(LangVol(), name: "Regän Pebalöl"),
+  TranslatedName(LangWln(), name: "Rweyåme-Uni"),
+  TranslatedName(LangZha(), name: "Yinghgoz"),
 ];

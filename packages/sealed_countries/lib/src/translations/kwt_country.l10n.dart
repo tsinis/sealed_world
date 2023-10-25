@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Kuwait country:
+/// Provides 122 translations for a Kuwait country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,8 +23,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -52,12 +57,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -65,11 +74,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -77,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -84,12 +98,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,9 +114,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const kwtCountryTranslations = [
@@ -256,4 +274,22 @@ const kwtCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kuweti"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kuweti", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Kuwait"),
+  TranslatedName(LangBak(), name: "Күвейт"),
+  TranslatedName(LangBod(), name: "ཁུ་ཝི་ཐི།"),
+  TranslatedName(LangChv(), name: "Кувейт"),
+  TranslatedName(LangDiv(), name: "ކުވެއިތު"),
+  TranslatedName(LangGlv(), name: "Yn Choowait"),
+  TranslatedName(LangHat(), name: "Kowet"),
+  TranslatedName(LangKom(), name: "Кувейт"),
+  TranslatedName(LangCor(), name: "Koweyt"),
+  TranslatedName(LangLat(), name: "Cuvaitum"),
+  TranslatedName(LangLim(), name: "Koeweit"),
+  TranslatedName(LangNav(), name: "Kóóweiʼ"),
+  TranslatedName(LangOci(), name: "Kowait"),
+  TranslatedName(LangOss(), name: "Кувейт"),
+  TranslatedName(LangKin(), name: "Koweti"),
+  TranslatedName(LangSan(), name: "कुवैत"),
+  TranslatedName(LangSsw(), name: "IKhuwathi"),
+  TranslatedName(LangVol(), name: "Kovätän"),
+  TranslatedName(LangYid(), name: "קואווייט"),
 ];

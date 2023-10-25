@@ -2,16 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Israel country:
+/// Provides 129 translations for a Israel country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -20,8 +23,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -29,6 +36,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Estonian
 /// - Ewe
 /// - Faroese
+/// - Fijian
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -37,6 +45,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -51,12 +60,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -66,15 +78,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -84,12 +104,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -98,6 +120,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -262,4 +286,28 @@ const isrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Iserẹli"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Iserɛli", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "kwa-Israel"),
+  TranslatedName(LangAva(), name: "Гlизраил"),
+  TranslatedName(LangBak(), name: "Израиль"),
+  TranslatedName(LangBod(), name: "ཨི་སི་ར་ཨེལ།"),
+  TranslatedName(LangCos(), name: "Israele"),
+  TranslatedName(LangChu(), name: "Їꙁдраил҄ь"),
+  TranslatedName(LangChv(), name: "Израиль"),
+  TranslatedName(LangDiv(), name: "އިސްރާއީލު"),
+  TranslatedName(LangFij(), name: "Isireli"),
+  TranslatedName(LangHat(), name: "Izrayèl"),
+  TranslatedName(LangKom(), name: "Израиль"),
+  TranslatedName(LangCor(), name: "Ysrael"),
+  TranslatedName(LangLim(), name: "Israël"),
+  TranslatedName(LangMri(), name: "Iharaira"),
+  TranslatedName(LangNau(), name: "Iteraer"),
+  TranslatedName(LangNav(), name: "Ízrel Bikéyah"),
+  TranslatedName(LangOci(), name: "Israèl"),
+  TranslatedName(LangOss(), name: "Израиль"),
+  TranslatedName(LangQue(), name: "Israyil"),
+  TranslatedName(LangKin(), name: "Isirayeli"),
+  TranslatedName(LangSan(), name: "इस्रेल"),
+  TranslatedName(LangSrd(), name: "Israele"),
+  TranslatedName(LangSsw(), name: "Ka-Israyeli"),
+  TranslatedName(LangVol(), name: "Yisraelän"),
+  TranslatedName(LangWln(), name: "Israyel"),
 ];

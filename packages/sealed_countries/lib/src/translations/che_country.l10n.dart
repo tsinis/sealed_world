@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Switzerland country:
+/// Provides 153 translations for a Switzerland country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +27,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +49,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +90,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,6 +112,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,13 +121,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -113,11 +141,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const cheCountryTranslations = [
   CountryName(
@@ -331,4 +361,34 @@ const cheCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède switiṣilandi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède switishilandi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Switzerland"),
+  TranslatedName(LangArg(), name: "Suiza"),
+  TranslatedName(LangBak(), name: "Швейцария"),
+  TranslatedName(LangBod(), name: "སུད་སི།"),
+  TranslatedName(LangCos(), name: "Svizzera"),
+  TranslatedName(LangChu(), name: "Свицєра"),
+  TranslatedName(LangChv(), name: "Швейцари"),
+  TranslatedName(LangDiv(), name: "ސުވިޒަލޭންޑު"),
+  TranslatedName(LangGrn(), name: "Suisa"),
+  TranslatedName(LangGlv(), name: "Yn Elveeish"),
+  TranslatedName(LangHat(), name: "Swis"),
+  TranslatedName(LangIle(), name: "Svissia"),
+  TranslatedName(LangIdo(), name: "Suisia"),
+  TranslatedName(LangKon(), name: "Suisi"),
+  TranslatedName(LangKal(), name: "Schweizi"),
+  TranslatedName(LangKom(), name: "Швейцария"),
+  TranslatedName(LangCor(), name: "Swistir"),
+  TranslatedName(LangLat(), name: "Helvetia"),
+  TranslatedName(LangLim(), name: "Zweitserland"),
+  TranslatedName(LangMri(), name: "Huiterangi"),
+  TranslatedName(LangNav(), name: "Swis Bikéyah"),
+  TranslatedName(LangOci(), name: "Soïssa"),
+  TranslatedName(LangOss(), name: "Швейцари"),
+  TranslatedName(LangKin(), name: "Ubusuwisi"),
+  TranslatedName(LangSan(), name: "स्विटजरलैंड"),
+  TranslatedName(LangSrd(), name: "Isvìtzera"),
+  TranslatedName(LangSsw(), name: "ISwizalandi"),
+  TranslatedName(LangSun(), name: "Suis"),
+  TranslatedName(LangTgl(), name: "Suwisa"),
+  TranslatedName(LangVol(), name: "Jveizän"),
+  TranslatedName(LangZha(), name: "Nyeiqswq"),
 ];

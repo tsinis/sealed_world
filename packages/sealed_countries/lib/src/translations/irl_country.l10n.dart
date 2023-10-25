@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Ireland country:
+/// Provides 150 translations for a Ireland country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +28,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +50,38 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +90,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -98,12 +122,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -112,11 +139,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const irlCountryTranslations = [
   CountryName(
@@ -311,4 +341,34 @@ const irlCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ailandi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ailandi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Ireland"),
+  TranslatedName(LangArg(), name: "Irlanda"),
+  TranslatedName(LangAym(), name: "Irlandiya"),
+  TranslatedName(LangBak(), name: "Ирландия"),
+  TranslatedName(LangBod(), name: "ཨ་ཡར་ལནཌ།"),
+  TranslatedName(LangCos(), name: "Irlanda"),
+  TranslatedName(LangChu(), name: "Єирь"),
+  TranslatedName(LangChv(), name: "Ирланди Республики"),
+  TranslatedName(LangDiv(), name: "އަޔަލޭންޑުގެ ޖުމްހޫރިއްޔާ"),
+  TranslatedName(LangGrn(), name: "Ilandia"),
+  TranslatedName(LangGlv(), name: "Nerin"),
+  TranslatedName(LangHat(), name: "Ilann"),
+  TranslatedName(LangIle(), name: "Irland"),
+  TranslatedName(LangIdo(), name: "Irlando"),
+  TranslatedName(LangKal(), name: "Irlandi"),
+  TranslatedName(LangKom(), name: "Ирландия"),
+  TranslatedName(LangCor(), name: "Repoblek Wordhen"),
+  TranslatedName(LangLat(), name: "Hibernia"),
+  TranslatedName(LangLim(), name: "Ierland"),
+  TranslatedName(LangMri(), name: "Airangi"),
+  TranslatedName(LangNau(), name: "Ripubrikit Airerand"),
+  TranslatedName(LangNav(), name: "Bitsiighaʼ Łichííʼí Bikéyah"),
+  TranslatedName(LangOci(), name: "Republica d'Irlanda"),
+  TranslatedName(LangOss(), name: "Ирланди"),
+  TranslatedName(LangKin(), name: "Irilande"),
+  TranslatedName(LangSrd(), name: "Irlanda"),
+  TranslatedName(LangSsw(), name: "IYalendi"),
+  TranslatedName(LangTgl(), name: "Irlanda"),
+  TranslatedName(LangVol(), name: "Lireyän"),
+  TranslatedName(LangWln(), name: "Irlande"),
+  TranslatedName(LangZha(), name: "Aiwjlanz Gunghozgoz"),
 ];

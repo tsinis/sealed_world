@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Equatorial Guinea country:
+/// Provides 151 translations for a Equatorial Guinea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,13 +10,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +27,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,13 +50,16 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -59,12 +69,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,14 +88,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,7 +111,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -98,15 +121,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
@@ -114,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -340,4 +368,32 @@ const gnqCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ekutoria Gini"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ekutoria Gini", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Equatorial Guinea"),
+  TranslatedName(LangArg(), name: "Guinea Equatorial"),
+  TranslatedName(LangBak(), name: "Экватор Гвинеяһы"),
+  TranslatedName(LangBih(), name: "भूमध्यरेखीय गिनी"),
+  TranslatedName(LangBod(), name: "ཨི་ཁུའ་ཊོ་རལ་གི་ནེ།"),
+  TranslatedName(LangCos(), name: "Guinea Equatoriale"),
+  TranslatedName(LangChv(), name: "Экваториаллă Гвиней"),
+  TranslatedName(LangDiv(), name: "އިކުއެޓޯރިއަލް ގިނީ"),
+  TranslatedName(LangGlv(), name: "Guinea Chryss ny Cruinney"),
+  TranslatedName(LangHat(), name: "Gine ekwateryal"),
+  TranslatedName(LangIle(), name: "Equatorial Guinéa"),
+  TranslatedName(LangIdo(), name: "Equatorala Guinea"),
+  TranslatedName(LangKon(), name: "Ginea ya Ekwatelo"),
+  TranslatedName(LangCor(), name: "Gyni Ekwadoriel"),
+  TranslatedName(LangLat(), name: "Guinea Aequatorensis"),
+  TranslatedName(LangLim(), name: "Equatoriaal Guinee"),
+  TranslatedName(LangMri(), name: "Kini Ekuatoria"),
+  TranslatedName(LangNau(), name: "Gini t Ekwador"),
+  TranslatedName(LangNav(), name: "Gíní Nahasdzáán Ałníiʼgi Siʼánígíí"),
+  TranslatedName(LangOci(), name: "Guinèa Eqüatoriala"),
+  TranslatedName(LangOrm(), name: "Iqu’aatoriyaal Giinii"),
+  TranslatedName(LangOss(), name: "Экваториалон Гвиней"),
+  TranslatedName(LangKin(), name: "Gineya Ekwatoriyale"),
+  TranslatedName(LangSrd(), name: "Guinea Ecuadoriale"),
+  TranslatedName(LangSmo(), name: "Kini Ekuatoria"),
+  TranslatedName(LangSun(), name: "Guinéa Khatulistiwa"),
+  TranslatedName(LangTgl(), name: "Gineang Ekwatoriyal"),
+  TranslatedName(LangTso(), name: "Gineya ya le Nkaveni"),
+  TranslatedName(LangVol(), name: "Kveatora-Gineyän"),
 ];

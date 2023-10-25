@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Jordan country:
+/// Provides 136 translations for a Jordan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,8 +26,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,26 +45,34 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
 /// - Kannada
+/// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -69,12 +81,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -84,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -91,13 +110,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -106,9 +129,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const jorCountryTranslations = [
@@ -311,4 +336,29 @@ const jorCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Jọdani"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Jɔdani", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Jordan"),
+  TranslatedName(LangArg(), name: "Chordania"),
+  TranslatedName(LangBak(), name: "Иордания"),
+  TranslatedName(LangBod(), name: "རྗོར་ཌན།"),
+  TranslatedName(LangChv(), name: "Иордани"),
+  TranslatedName(LangDiv(), name: "އުރުދުން"),
+  TranslatedName(LangGlv(), name: "Yn Jordaan"),
+  TranslatedName(LangHat(), name: "Jòdani"),
+  TranslatedName(LangIle(), name: "Jordania"),
+  TranslatedName(LangIdo(), name: "Jordania"),
+  TranslatedName(LangKas(), name: "اردن"),
+  TranslatedName(LangKom(), name: "Иордания"),
+  TranslatedName(LangLat(), name: "Iordania"),
+  TranslatedName(LangLim(), name: "Jordanië"),
+  TranslatedName(LangMri(), name: "Hōrano"),
+  TranslatedName(LangNau(), name: "Djordan"),
+  TranslatedName(LangNav(), name: "Jóoʼdan"),
+  TranslatedName(LangOci(), name: "Jordania"),
+  TranslatedName(LangOss(), name: "Иордани"),
+  TranslatedName(LangKin(), name: "Yorudani"),
+  TranslatedName(LangSan(), name: "जार्डन"),
+  TranslatedName(LangSsw(), name: "IJoridane"),
+  TranslatedName(LangSun(), name: "Yordania"),
+  TranslatedName(LangTgl(), name: "Hordan"),
+  TranslatedName(LangVol(), name: "Yordän"),
+  TranslatedName(LangYid(), name: "יארדאניע"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Iraq country:
+/// Provides 143 translations for a Iraq country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -12,6 +12,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -23,9 +24,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -36,18 +40,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -57,11 +66,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -70,8 +83,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -79,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -88,6 +106,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -95,24 +114,32 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const irqCountryTranslations = [
@@ -284,4 +311,31 @@ const irqCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Iraki"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Iraki", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Iraq"),
+  TranslatedName(LangAva(), name: "ГӀиракъ"),
+  TranslatedName(LangBod(), name: "ཡི་ལའ་ཁོ།"),
+  TranslatedName(LangChv(), name: "Ирак"),
+  TranslatedName(LangDiv(), name: "ޢިރާޤު"),
+  TranslatedName(LangGlg(), name: "Iraq - العراق"),
+  TranslatedName(LangGlv(), name: "Yn Earack"),
+  TranslatedName(LangHat(), name: "Irak"),
+  TranslatedName(LangIle(), name: "Irak"),
+  TranslatedName(LangIdo(), name: "Irak"),
+  TranslatedName(LangIku(), name: "ᐃᕉᒃ"),
+  TranslatedName(LangKom(), name: "Ирак"),
+  TranslatedName(LangCor(), name: "Irak"),
+  TranslatedName(LangLat(), name: "Iracum"),
+  TranslatedName(LangLim(), name: "Irak"),
+  TranslatedName(LangMri(), name: "Irāki"),
+  TranslatedName(LangNau(), name: "Irak"),
+  TranslatedName(LangNav(), name: "Iiwááʼ"),
+  TranslatedName(LangOss(), name: "Ирак"),
+  TranslatedName(LangKin(), name: "Irake"),
+  TranslatedName(LangSan(), name: "ईराक"),
+  TranslatedName(LangSsw(), name: "I-Irakhi"),
+  TranslatedName(LangSun(), name: "Irak"),
+  TranslatedName(LangTgl(), name: "Irak"),
+  TranslatedName(LangTwi(), name: "Irak"),
+  TranslatedName(LangVol(), name: "Lirakän"),
+  TranslatedName(LangWln(), name: "Irak"),
+  TranslatedName(LangYid(), name: "איראק"),
 ];

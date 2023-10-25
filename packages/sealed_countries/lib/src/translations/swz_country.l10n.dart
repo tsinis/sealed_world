@@ -2,17 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Eswatini country:
+/// Provides 149 translations for a Eswatini country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,8 +27,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -35,33 +42,42 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -71,13 +87,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -87,6 +108,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -95,21 +118,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -328,4 +358,34 @@ const swzCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Saṣiland"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Sashiland", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Swaziland"),
+  TranslatedName(LangAfr(), name: "Swaziland"),
+  TranslatedName(LangArg(), name: "Swazilandia"),
+  TranslatedName(LangAym(), name: "Suasïsuiu"),
+  TranslatedName(LangBak(), name: "Свазиленд"),
+  TranslatedName(LangBod(), name: "སུ་ཝ་ཛི་ལནཌ།"),
+  TranslatedName(LangDan(), name: "Swaziland"),
+  TranslatedName(LangDiv(), name: "ސުވާޒިލޭންޑު"),
+  TranslatedName(LangGlg(), name: "Suacilandia - Swaziland"),
+  TranslatedName(LangGlv(), name: "Yn Çheer Swassee"),
+  TranslatedName(LangHat(), name: "Swazilann"),
+  TranslatedName(LangIle(), name: "Swaziland"),
+  TranslatedName(LangIdo(), name: "Swazilando"),
+  TranslatedName(LangKon(), name: "Swati"),
+  TranslatedName(LangKal(), name: "Swazilandi"),
+  TranslatedName(LangCor(), name: "Pow Swati"),
+  TranslatedName(LangLat(), name: "Swazia"),
+  TranslatedName(LangLim(), name: "Swaziland"),
+  TranslatedName(LangMri(), name: "Warerangi"),
+  TranslatedName(LangNav(), name: "Swáazi Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "Swaziland"),
+  TranslatedName(LangOss(), name: "Свазиленд"),
+  TranslatedName(LangKin(), name: "Swazilande"),
+  TranslatedName(LangSan(), name: "स्वाजीलैंड"),
+  TranslatedName(LangSrd(), name: "Swaziland"),
+  TranslatedName(LangSun(), name: "Swaziland"),
+  TranslatedName(LangTuk(), name: "Swazilend"),
+  TranslatedName(LangTgl(), name: "Suwasilandya"),
+  TranslatedName(LangTso(), name: "Swaziland"),
+  TranslatedName(LangVen(), name: "Swazini"),
+  TranslatedName(LangVol(), name: "Svasiyän"),
 ];

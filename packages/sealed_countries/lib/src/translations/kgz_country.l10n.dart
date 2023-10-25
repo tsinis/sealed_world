@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Kyrgyzstan country:
+/// Provides 143 translations for a Kyrgyzstan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +27,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,13 +49,16 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -59,12 +68,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +86,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,13 +116,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -112,9 +135,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const kgzCountryTranslations = [
@@ -324,4 +349,29 @@ const kgzCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kuriṣisitani"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kurishisitani", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Kyrgyzstan"),
+  TranslatedName(LangAbk(), name: "Ҟырҕызсҭан"),
+  TranslatedName(LangArg(), name: "Kirguizistán"),
+  TranslatedName(LangBak(), name: "Ҡырғыҙстан"),
+  TranslatedName(LangBod(), name: "ཀེ་རེ་གེཛུ་སུཏེན།"),
+  TranslatedName(LangChv(), name: "Киргизи"),
+  TranslatedName(LangDiv(), name: "ކިރިގިސްތާން"),
+  TranslatedName(LangGlv(), name: "Yn Chyrgistaan"),
+  TranslatedName(LangHat(), name: "Kirgistan"),
+  TranslatedName(LangIle(), name: "Kirgizistan"),
+  TranslatedName(LangIdo(), name: "Kirgizistan"),
+  TranslatedName(LangKom(), name: "Кыргызстан"),
+  TranslatedName(LangCor(), name: "Pow Kyrgys"),
+  TranslatedName(LangLat(), name: "Chirgisia"),
+  TranslatedName(LangLim(), name: "Kirgizië"),
+  TranslatedName(LangNau(), name: "Kirgitan"),
+  TranslatedName(LangNav(), name: "Kíígiz Bikéyah"),
+  TranslatedName(LangOci(), name: "Quirguizstan"),
+  TranslatedName(LangOss(), name: "Хъиргъиз"),
+  TranslatedName(LangKin(), name: "Kirigizisitani"),
+  TranslatedName(LangSan(), name: "किरगिस्थान"),
+  TranslatedName(LangSsw(), name: "IKhirigi"),
+  TranslatedName(LangSun(), name: "Kirgistan"),
+  TranslatedName(LangTgl(), name: "Kirgistan"),
+  TranslatedName(LangVol(), name: "Kirgistän"),
+  TranslatedName(LangYid(), name: "קירגיזסטאן"),
 ];

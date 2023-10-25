@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 112 translations for a Afghanistan country:
+/// Provides 143 translations for a Afghanistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,13 +10,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,8 +27,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,13 +46,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -57,30 +66,46 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
+/// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -89,13 +114,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -104,7 +133,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -322,4 +353,35 @@ const afgCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Àfùgànístánì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Àfùgànístánì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Afghanistan"),
+  TranslatedName(LangArg(), name: "Afganistán"),
+  TranslatedName(LangBak(), name: "Афғанстан"),
+  TranslatedName(LangBih(), name: "अफ़ग़ानिस्तान"),
+  TranslatedName(LangBod(), name: "ཨ་ཧྥུའུ་རྒན་སི་ཐན།"),
+  TranslatedName(LangChv(), name: "Афганистан"),
+  TranslatedName(LangDiv(), name: "އަފްޣާނިސްތާން"),
+  TranslatedName(LangFry(), name: "Afganistan"),
+  TranslatedName(LangGrn(), name: "Ahyganitã"),
+  TranslatedName(LangGlv(), name: "Yn Afghanistaan"),
+  TranslatedName(LangHat(), name: "Afganistan"),
+  TranslatedName(LangIdo(), name: "Afganistan"),
+  TranslatedName(LangIku(), name: "ᐊᑉᒐᓂᔅᑕᓐ"),
+  TranslatedName(LangKom(), name: "Афганистан"),
+  TranslatedName(LangLat(), name: "Afgania"),
+  TranslatedName(LangMlg(), name: "Afganistana"),
+  TranslatedName(LangMri(), name: "Āwhekenetāna"),
+  TranslatedName(LangNau(), name: "Apeganitan"),
+  TranslatedName(LangOci(), name: "Afganistan"),
+  TranslatedName(LangOrm(), name: "Afgaanistaan"),
+  TranslatedName(LangOss(), name: "Афгъанистан"),
+  TranslatedName(LangPli(), name: "अफगानस्थान"),
+  TranslatedName(LangRoh(), name: "Afganistan"),
+  TranslatedName(LangKin(), name: "Afuganisitani"),
+  TranslatedName(LangSan(), name: "अफगानस्थान"),
+  TranslatedName(LangSrd(), name: "Afganistàn"),
+  TranslatedName(LangSme(), name: "Afganistána"),
+  TranslatedName(LangSmo(), name: "Afakanisitana"),
+  TranslatedName(LangSsw(), name: "I-Afugani"),
+  TranslatedName(LangSun(), name: "Apganistan"),
+  TranslatedName(LangTgl(), name: "Apganistan"),
+  TranslatedName(LangVol(), name: "Lafganistän"),
 ];

@@ -2,26 +2,33 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Andorra country:
+/// Provides 120 translations for a Andorra country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
+/// - Abkhaz
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -36,10 +43,12 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -49,7 +58,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kyrgyz
 /// - Lao
@@ -58,18 +70,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -78,12 +99,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -91,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -277,4 +301,28 @@ const andCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ààndórà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ààndórà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Andorra"),
+  TranslatedName(LangAbk(), name: "Андора"),
+  TranslatedName(LangAva(), name: "Андо́рра"),
+  TranslatedName(LangBak(), name: "Андо́рра"),
+  TranslatedName(LangBih(), name: "अंडोरा"),
+  TranslatedName(LangBod(), name: "ཨན་ཌོར་ར།"),
+  TranslatedName(LangChu(), name: "Андо́ра"),
+  TranslatedName(LangChv(), name: "Андорра"),
+  TranslatedName(LangDiv(), name: "އެންޑޯރާ"),
+  TranslatedName(LangHat(), name: "Andora"),
+  TranslatedName(LangIdo(), name: "Andora"),
+  TranslatedName(LangKon(), name: "Andora"),
+  TranslatedName(LangKom(), name: "Андорра"),
+  TranslatedName(LangMlg(), name: "Andora"),
+  TranslatedName(LangNav(), name: "Andówa"),
+  TranslatedName(LangOci(), name: "Andòrra"),
+  TranslatedName(LangOrm(), name: "Andooraa"),
+  TranslatedName(LangOss(), name: "Андоррæ"),
+  TranslatedName(LangPli(), name: "अंडोरा"),
+  TranslatedName(LangQue(), name: "Andurra"),
+  TranslatedName(LangKin(), name: "Andora"),
+  TranslatedName(LangSan(), name: "अण्डोरा"),
+  TranslatedName(LangSmo(), name: "Andora"),
+  TranslatedName(LangSsw(), name: "iYandola"),
+  TranslatedName(LangVol(), name: "Landorän"),
 ];

@@ -2,21 +2,26 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Ethiopia country:
+/// Provides 154 translations for a Ethiopia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +29,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,13 +50,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -58,37 +70,53 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -97,23 +125,31 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -332,4 +368,40 @@ const ethCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Etopia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Etopia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Ethiopia"),
+  TranslatedName(LangArg(), name: "Etiopia"),
+  TranslatedName(LangAva(), name: "Хабашистан"),
+  TranslatedName(LangBak(), name: "Эфио́пия"),
+  TranslatedName(LangBih(), name: "इथियोपिया"),
+  TranslatedName(LangBod(), name: "ཨི་ཐི་ཨོ་པི་ཡ།"),
+  TranslatedName(LangChu(), name: "Єѳїопі́ꙗ"),
+  TranslatedName(LangChv(), name: "Эфиопи"),
+  TranslatedName(LangDiv(), name: "ޙަބުޝްކަރަ"),
+  TranslatedName(LangGrn(), name: "Etiopia"),
+  TranslatedName(LangGlv(), name: "yn Eetoip"),
+  TranslatedName(LangHat(), name: "Etyopi"),
+  TranslatedName(LangIle(), name: "Etiopia"),
+  TranslatedName(LangIdo(), name: "Etiopia"),
+  TranslatedName(LangKon(), name: "Itiopia"),
+  TranslatedName(LangKom(), name: "Эфиопия"),
+  TranslatedName(LangCor(), name: "Ethiopi"),
+  TranslatedName(LangLat(), name: "Aethiopia"),
+  TranslatedName(LangLim(), name: "Ethiopië"),
+  TranslatedName(LangMlg(), name: "Etiopia"),
+  TranslatedName(LangMri(), name: "Etiopia"),
+  TranslatedName(LangMsa(), name: "Habsyah"),
+  TranslatedName(LangNau(), name: "Itiyopiya"),
+  TranslatedName(LangNav(), name: "Iithiyópya"),
+  TranslatedName(LangOci(), name: "Etiopia"),
+  TranslatedName(LangOss(), name: "Эфио́пи"),
+  TranslatedName(LangPli(), name: "ईथ्योपिया"),
+  TranslatedName(LangKin(), name: "Etiyopiya"),
+  TranslatedName(LangSan(), name: "ईथ्योपिया"),
+  TranslatedName(LangSrd(), name: "Etiòpia"),
+  TranslatedName(LangSsw(), name: "iTopiya"),
+  TranslatedName(LangSun(), name: "Étiopia"),
+  TranslatedName(LangTgl(), name: "Etiyopiya"),
+  TranslatedName(LangTso(), name: "Topiya"),
+  TranslatedName(LangVol(), name: "Lätiopän"),
+  TranslatedName(LangWln(), name: "Etiopeye"),
+  TranslatedName(LangXho(), name: "iTopiya"),
 ];

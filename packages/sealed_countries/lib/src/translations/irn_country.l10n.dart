@@ -2,15 +2,18 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Iran country:
+/// Provides 114 translations for a Iran country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -19,8 +22,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -35,6 +40,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
@@ -48,11 +54,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -60,10 +69,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -71,18 +84,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -91,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -285,4 +303,22 @@ const irnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Irani"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Irani", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Iran"),
+  TranslatedName(LangArg(), name: "Irán"),
+  TranslatedName(LangBak(), name: "Иран"),
+  TranslatedName(LangBod(), name: "ཡི་ལང་།"),
+  TranslatedName(LangCos(), name: "Iranu"),
+  TranslatedName(LangDiv(), name: "އީރާން"),
+  TranslatedName(LangGrn(), name: "Irán"),
+  TranslatedName(LangGlv(), name: "Yn Eeraan"),
+  TranslatedName(LangKom(), name: "Иран"),
+  TranslatedName(LangLat(), name: "Irania"),
+  TranslatedName(LangMri(), name: "Irāna"),
+  TranslatedName(LangNav(), name: "Iiwą́ą́"),
+  TranslatedName(LangOss(), name: "Иран"),
+  TranslatedName(LangKin(), name: "Irani"),
+  TranslatedName(LangSan(), name: "ईरान"),
+  TranslatedName(LangSqi(), name: "Irani"),
+  TranslatedName(LangSsw(), name: "I-Irani"),
+  TranslatedName(LangSwa(), name: "Uajemi"),
+  TranslatedName(LangVol(), name: "Lirän"),
 ];

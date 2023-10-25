@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Cameroon country:
+/// Provides 146 translations for a Cameroon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +26,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -43,11 +48,14 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -59,12 +67,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -75,13 +87,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -91,6 +108,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -99,13 +118,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -114,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -335,4 +359,28 @@ const cmrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kamerúúnì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kamerúúnì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Cameroon"),
+  TranslatedName(LangArg(), name: "Camerún"),
+  TranslatedName(LangBak(), name: "Камерун"),
+  TranslatedName(LangBod(), name: "ཁམ་མུ་རོན།"),
+  TranslatedName(LangChv(), name: "Камерун"),
+  TranslatedName(LangDiv(), name: "ކެމަރޫން"),
+  TranslatedName(LangHat(), name: "Kamewoun"),
+  TranslatedName(LangIbo(), name: "Kameroon"),
+  TranslatedName(LangIdo(), name: "Kamerun"),
+  TranslatedName(LangKon(), name: "Kamerun"),
+  TranslatedName(LangCor(), name: "Kameroun"),
+  TranslatedName(LangLat(), name: "Cameronia"),
+  TranslatedName(LangLim(), name: "Kameroen"),
+  TranslatedName(LangMri(), name: "Kamarūna"),
+  TranslatedName(LangNau(), name: "Kamerun"),
+  TranslatedName(LangNav(), name: "Táłtłʼááh Chʼosh Daadánígíí Bitooh"),
+  TranslatedName(LangOci(), name: "Cameron"),
+  TranslatedName(LangOss(), name: "Камерун"),
+  TranslatedName(LangKin(), name: "Kameruni"),
+  TranslatedName(LangSan(), name: "केमेरून"),
+  TranslatedName(LangSrd(), name: "Camerùn"),
+  TranslatedName(LangSsw(), name: "IKhameruni"),
+  TranslatedName(LangSun(), name: "Kamerun"),
+  TranslatedName(LangTgl(), name: "Kamerun"),
+  TranslatedName(LangVol(), name: "Kamerunän"),
 ];

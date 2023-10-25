@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Colombia country:
+/// Provides 138 translations for a Colombia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -12,8 +12,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,8 +26,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,13 +45,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -56,11 +65,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -70,27 +81,37 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
 /// - Tajik
@@ -98,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -106,9 +128,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -315,4 +339,28 @@ const colCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kòlómíbìa"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kòlómíbìa", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Colombia"),
+  TranslatedName(LangAym(), name: "Kuluwya"),
+  TranslatedName(LangBak(), name: "Колумбия"),
+  TranslatedName(LangBod(), name: "ཁོ་ལོམ་བི་ཡ།"),
+  TranslatedName(LangChv(), name: "Колумби"),
+  TranslatedName(LangDiv(), name: "ކޮލަންބިއާ"),
+  TranslatedName(LangGrn(), name: "Kolómbia"),
+  TranslatedName(LangGlv(), name: "Yn Cholombey"),
+  TranslatedName(LangHat(), name: "Kolonbi"),
+  TranslatedName(LangIle(), name: "Columbia"),
+  TranslatedName(LangIdo(), name: "Kolumbia"),
+  TranslatedName(LangCor(), name: "Kolombi"),
+  TranslatedName(LangLat(), name: "Columbia"),
+  TranslatedName(LangMri(), name: "Koromōpia"),
+  TranslatedName(LangNau(), name: "Korombiya"),
+  TranslatedName(LangNav(), name: "Kolámbiya"),
+  TranslatedName(LangOci(), name: "Colómbia"),
+  TranslatedName(LangOss(), name: "Колумби"),
+  TranslatedName(LangQue(), name: "Kulumbya"),
+  TranslatedName(LangKin(), name: "Kolombiya"),
+  TranslatedName(LangSan(), name: "कोलोम्बिया"),
+  TranslatedName(LangSom(), name: "Kolombiya"),
+  TranslatedName(LangSun(), name: "Kolombia"),
+  TranslatedName(LangVol(), name: "Kolumbän"),
+  TranslatedName(LangXho(), name: "IsiColombia"),
 ];

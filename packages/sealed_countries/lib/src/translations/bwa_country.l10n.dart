@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Botswana country:
+/// Provides 118 translations for a Botswana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -13,16 +13,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,6 +41,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
 /// - Hausa
 /// - Hebrew (modern)
@@ -53,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lithuanian
 /// - Luba-Katanga
@@ -61,16 +67,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Russian
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -78,12 +93,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -91,6 +108,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
+/// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Yiddish
 /// - Yoruba
@@ -285,4 +306,25 @@ const bwaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bọ̀tìsúwánà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bɔ̀tìsúwánà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "iBotswana"),
+  TranslatedName(LangBak(), name: "Ботсвана"),
+  TranslatedName(LangBih(), name: "बोत्सवाना"),
+  TranslatedName(LangBod(), name: "བྷོ་ཙི་ཝ་ན།"),
+  TranslatedName(LangChv(), name: "Ботсвана"),
+  TranslatedName(LangDiv(), name: "ބޮޓުސްވާނާ"),
+  TranslatedName(LangGrn(), name: "Votusuana"),
+  TranslatedName(LangGlv(), name: "yn Votswaan"),
+  TranslatedName(LangLat(), name: "Botsuana"),
+  TranslatedName(LangMri(), name: "Poriwana"),
+  TranslatedName(LangNau(), name: "Botwana"),
+  TranslatedName(LangNav(), name: "Tswana Dineʼé Bikéyah"),
+  TranslatedName(LangOrm(), name: "Bootiswaanaa"),
+  TranslatedName(LangOss(), name: "Ботсванæ"),
+  TranslatedName(LangPli(), name: "बोत्सवाना"),
+  TranslatedName(LangSan(), name: "बोत्सवाना"),
+  TranslatedName(LangSrd(), name: "Botzuana"),
+  TranslatedName(LangSsw(), name: "ÉButjwána"),
+  TranslatedName(LangVen(), name: "Vhu-Tswana"),
+  TranslatedName(LangVie(), name: "Bốt-xoa-na"),
+  TranslatedName(LangVol(), name: "Zvanän"),
+  TranslatedName(LangWln(), name: "Boswana"),
 ];

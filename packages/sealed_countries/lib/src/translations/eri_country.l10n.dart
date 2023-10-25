@@ -2,8 +2,9 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Eritrea country:
+/// Provides 121 translations for a Eritrea country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Akan
 /// - Albanian
@@ -13,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -36,12 +39,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -50,11 +56,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -64,15 +72,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -80,21 +93,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -266,4 +285,23 @@ const eriCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Eritira"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Eritira", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Eritrea"),
+  TranslatedName(LangBak(), name: "Эритрея"),
+  TranslatedName(LangBod(), name: "ཨི་རི་ཏྲའ།"),
+  TranslatedName(LangChu(), name: "Єрѷѳрїꙗ"),
+  TranslatedName(LangDiv(), name: "އެރިތުރިއާ"),
+  TranslatedName(LangFry(), name: "Eritreä"),
+  TranslatedName(LangGrn(), name: "Erityrea"),
+  TranslatedName(LangHat(), name: "Eritre"),
+  TranslatedName(LangIle(), name: "Eritréa"),
+  TranslatedName(LangLat(), name: "Erythraea"),
+  TranslatedName(LangMri(), name: "Eritēria"),
+  TranslatedName(LangOci(), name: "Eritrèa"),
+  TranslatedName(LangOss(), name: "Эритрей"),
+  TranslatedName(LangQue(), name: "Iritriya"),
+  TranslatedName(LangKin(), name: "Eritereya"),
+  TranslatedName(LangSan(), name: "इरीट्रिया"),
+  TranslatedName(LangSsw(), name: "IRitheya"),
+  TranslatedName(LangSun(), name: "Éritréa"),
+  TranslatedName(LangTso(), name: "Eritreya"),
+  TranslatedName(LangVol(), name: "Lerüträn"),
 ];

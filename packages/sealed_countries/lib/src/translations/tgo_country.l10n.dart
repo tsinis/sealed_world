@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 84 translations for a Togo country:
+/// Provides 100 translations for a Togo country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -17,8 +19,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -46,34 +50,44 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -81,7 +95,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -218,4 +234,20 @@ const tgoCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Togo"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Togo", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Togo"),
+  TranslatedName(LangBak(), name: "Того"),
+  TranslatedName(LangBod(), name: "ཊོ་གོ"),
+  TranslatedName(LangChv(), name: "Того"),
+  TranslatedName(LangDiv(), name: "ޓޯގޯ"),
+  TranslatedName(LangGla(), name: "Tògo"),
+  TranslatedName(LangGlv(), name: "Yn Togo"),
+  TranslatedName(LangLat(), name: "Togum"),
+  TranslatedName(LangMri(), name: "Toko"),
+  TranslatedName(LangNav(), name: "Tʼóogo"),
+  TranslatedName(LangOci(), name: "Tògo"),
+  TranslatedName(LangOss(), name: "Того"),
+  TranslatedName(LangQue(), name: "Tugu"),
+  TranslatedName(LangSan(), name: "टोगो"),
+  TranslatedName(LangSsw(), name: "IThogo"),
+  TranslatedName(LangVol(), name: "Togoän"),
+  TranslatedName(LangWol(), name: "Togóo"),
 ];

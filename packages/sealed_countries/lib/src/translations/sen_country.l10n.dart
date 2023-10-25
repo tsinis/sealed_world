@@ -2,15 +2,17 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 95 translations for a Senegal country:
+/// Provides 112 translations for a Senegal country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -19,8 +21,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -48,10 +52,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -59,23 +66,30 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
 /// - Tajik
@@ -83,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -90,6 +105,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -275,4 +292,21 @@ const senCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Sẹnẹga"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Sɛnɛga", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Senegal"),
+  TranslatedName(LangBak(), name: "Сенегал"),
+  TranslatedName(LangBod(), name: "སི་ནི་གཱལ།"),
+  TranslatedName(LangChv(), name: "Сенегал"),
+  TranslatedName(LangDiv(), name: "ސެނެގާލް"),
+  TranslatedName(LangGlv(), name: "Yn Tenegaal"),
+  TranslatedName(LangKon(), name: "Senangale"),
+  TranslatedName(LangLat(), name: "Senegalia"),
+  TranslatedName(LangMri(), name: "Henekara"),
+  TranslatedName(LangOss(), name: "Сенегал"),
+  TranslatedName(LangQue(), name: "Sinigal"),
+  TranslatedName(LangKin(), name: "Senegali"),
+  TranslatedName(LangSan(), name: "सेनेगल"),
+  TranslatedName(LangSrd(), name: "Senegàl"),
+  TranslatedName(LangSqi(), name: "Senegali"),
+  TranslatedName(LangSun(), name: "Sénégal"),
+  TranslatedName(LangVie(), name: "Sénégal"),
+  TranslatedName(LangVol(), name: "Senegalän"),
 ];

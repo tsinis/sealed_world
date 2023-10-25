@@ -2,16 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Honduras country:
+/// Provides 115 translations for a Honduras country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +24,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,6 +42,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -49,11 +55,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -62,27 +70,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -91,7 +107,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -285,4 +304,23 @@ const hndCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Hondurasi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Hondurasi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Honduras"),
+  TranslatedName(LangBak(), name: "Гондурас"),
+  TranslatedName(LangBod(), name: "ཧོང་དུ་ར་སི།"),
+  TranslatedName(LangChu(), name: "Ондоурасъ"),
+  TranslatedName(LangDiv(), name: "ހޮންޑިއުރަސް"),
+  TranslatedName(LangFry(), name: "Hondueras"),
+  TranslatedName(LangGlv(), name: "Ny Hondooraghyn"),
+  TranslatedName(LangHat(), name: "Ondiras"),
+  TranslatedName(LangCor(), name: "Hondouras"),
+  TranslatedName(LangLat(), name: "Honduria"),
+  TranslatedName(LangNau(), name: "Ondurat"),
+  TranslatedName(LangOss(), name: "Гондурас"),
+  TranslatedName(LangQue(), name: "Unduras"),
+  TranslatedName(LangKin(), name: "Hondurasi"),
+  TranslatedName(LangSan(), name: "हांडूरस"),
+  TranslatedName(LangSmo(), name: "Honilagi"),
+  TranslatedName(LangSqi(), name: "Hondurasi"),
+  TranslatedName(LangSsw(), name: "IHondulasi"),
+  TranslatedName(LangVol(), name: "Hondurän"),
+  TranslatedName(LangWln(), name: "Hondourasse"),
 ];

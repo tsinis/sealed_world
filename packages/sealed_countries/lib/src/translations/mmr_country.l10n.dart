@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Myanmar country:
+/// Provides 138 translations for a Myanmar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,9 +14,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,14 +26,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -41,11 +47,13 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,11 +62,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -70,10 +81,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -83,6 +98,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -92,11 +109,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -106,11 +126,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mmrCountryTranslations = [
   CountryName(
@@ -321,4 +343,26 @@ const mmrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Manamari"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Manamari", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Myanmar (Burma)"),
+  TranslatedName(LangBak(), name: "Мьянма"),
+  TranslatedName(LangBis(), name: "Burma"),
+  TranslatedName(LangBod(), name: "བྷར་མ།"),
+  TranslatedName(LangChv(), name: "Мьянма"),
+  TranslatedName(LangDiv(), name: "ބަރުމާ"),
+  TranslatedName(LangFao(), name: "Burma"),
+  TranslatedName(LangHat(), name: "Bimani"),
+  TranslatedName(LangIna(), name: "Birmania"),
+  TranslatedName(LangKom(), name: "Мьянма"),
+  TranslatedName(LangCor(), name: "Byrmani"),
+  TranslatedName(LangLat(), name: "Birmania"),
+  TranslatedName(LangMri(), name: "Pēma"),
+  TranslatedName(LangNau(), name: "Miyanmar"),
+  TranslatedName(LangOci(), name: "Birmania"),
+  TranslatedName(LangOss(), name: "Мьянмæ"),
+  TranslatedName(LangKin(), name: "Mayanimari"),
+  TranslatedName(LangSan(), name: "म्यान्मार"),
+  TranslatedName(LangSrd(), name: "Birmania"),
+  TranslatedName(LangSsw(), name: "IMayanima"),
+  TranslatedName(LangTat(), name: "Мьянма"),
+  TranslatedName(LangVol(), name: "Mianmarän"),
+  TranslatedName(LangZha(), name: "Mienjdien"),
 ];

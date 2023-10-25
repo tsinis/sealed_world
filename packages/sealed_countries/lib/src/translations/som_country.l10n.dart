@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 103 translations for a Somalia country:
+/// Provides 123 translations for a Somalia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,8 +23,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -38,6 +41,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -51,30 +55,42 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -82,12 +98,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -96,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -298,4 +318,24 @@ const somCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Somalia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Somalia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Somalia"),
+  TranslatedName(LangBak(), name: "Сомали"),
+  TranslatedName(LangBod(), name: "སོ་མ་ལི།"),
+  TranslatedName(LangDiv(), name: "ސޯމާލިއާ"),
+  TranslatedName(LangGlv(), name: "Yn Tomaal"),
+  TranslatedName(LangHat(), name: "Somali"),
+  TranslatedName(LangKon(), name: "Sômâlia"),
+  TranslatedName(LangCor(), name: "Somali"),
+  TranslatedName(LangLim(), name: "Somalië"),
+  TranslatedName(LangMri(), name: "Hūmārie"),
+  TranslatedName(LangNau(), name: "Tomariya"),
+  TranslatedName(LangNav(), name: "Soomáálii Bikéyah"),
+  TranslatedName(LangOrm(), name: "Somaaliyaa"),
+  TranslatedName(LangOss(), name: "Сомали"),
+  TranslatedName(LangQue(), name: "Sumalya"),
+  TranslatedName(LangKin(), name: "Somaliya"),
+  TranslatedName(LangSan(), name: "सोमालिया"),
+  TranslatedName(LangSrd(), name: "Somàlia"),
+  TranslatedName(LangSsw(), name: "ISomaliya"),
+  TranslatedName(LangTgl(), name: "Somalya"),
+  TranslatedName(LangVol(), name: "Somalän"),
 ];

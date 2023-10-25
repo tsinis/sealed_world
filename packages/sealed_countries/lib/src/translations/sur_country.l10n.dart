@@ -2,16 +2,18 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a Suriname country:
+/// Provides 130 translations for a Suriname country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -22,9 +24,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,11 +44,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -52,31 +61,40 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
@@ -89,11 +107,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -102,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -309,4 +330,25 @@ const surCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Surinami"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Surinami", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Suriname"),
+  TranslatedName(LangArg(), name: "Surinam"),
+  TranslatedName(LangBak(), name: "Суринам"),
+  TranslatedName(LangBod(), name: "སུ་རི་ནེམ།"),
+  TranslatedName(LangChv(), name: "Суринам"),
+  TranslatedName(LangDiv(), name: "ސުރިނާމް"),
+  TranslatedName(LangGrn(), name: "Surinam"),
+  TranslatedName(LangGlv(), name: "Yn Toorinam"),
+  TranslatedName(LangHat(), name: "Sirinam"),
+  TranslatedName(LangIle(), name: "Surinam"),
+  TranslatedName(LangIdo(), name: "Surinam"),
+  TranslatedName(LangCor(), name: "Surinam"),
+  TranslatedName(LangLat(), name: "Surinamia"),
+  TranslatedName(LangLtz(), name: "Surinam"),
+  TranslatedName(LangMri(), name: "Hurināme"),
+  TranslatedName(LangNav(), name: "Sówinam"),
+  TranslatedName(LangOci(), name: "Surinam"),
+  TranslatedName(LangOss(), name: "Суринам"),
+  TranslatedName(LangRon(), name: "Surinam"),
+  TranslatedName(LangKin(), name: "Surinamu"),
+  TranslatedName(LangTgl(), name: "Surinam"),
+  TranslatedName(LangVol(), name: "Surinän"),
 ];

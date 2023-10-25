@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Denmark country:
+/// Provides 150 translations for a Denmark country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +27,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,28 +49,38 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -72,15 +89,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,19 +113,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -112,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -323,4 +353,34 @@ const dnkCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Dẹ́mákì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Dɛ́mákì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Denmark"),
+  TranslatedName(LangArg(), name: "Dinamarca"),
+  TranslatedName(LangBak(), name: "Дания"),
+  TranslatedName(LangBod(), name: "དན་མྲག"),
+  TranslatedName(LangCos(), name: "Danimarca"),
+  TranslatedName(LangChu(), name: "Данїꙗ"),
+  TranslatedName(LangChv(), name: "Дани"),
+  TranslatedName(LangDiv(), name: "ޑެންމާކު"),
+  TranslatedName(LangGrn(), name: "Ndinamayka"),
+  TranslatedName(LangGlv(), name: "Yn Danvarg"),
+  TranslatedName(LangHat(), name: "Danmak"),
+  TranslatedName(LangIle(), name: "Dania"),
+  TranslatedName(LangIdo(), name: "Dania"),
+  TranslatedName(LangKon(), name: "Danemark"),
+  TranslatedName(LangKal(), name: "Danmarki"),
+  TranslatedName(LangKom(), name: "Дания"),
+  TranslatedName(LangCor(), name: "Danmark"),
+  TranslatedName(LangLat(), name: "Dania"),
+  TranslatedName(LangLim(), name: "Denemarke"),
+  TranslatedName(LangMri(), name: "Tenemāka"),
+  TranslatedName(LangNau(), name: "Denemark"),
+  TranslatedName(LangNav(), name: "Déinish Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "Danemarc"),
+  TranslatedName(LangOss(), name: "Дани"),
+  TranslatedName(LangKin(), name: "Danimarike"),
+  TranslatedName(LangSan(), name: "डेनमार्क"),
+  TranslatedName(LangSrd(), name: "Danimarca"),
+  TranslatedName(LangSsw(), name: "IDenimakhi"),
+  TranslatedName(LangSun(), name: "Dénmark"),
+  TranslatedName(LangTgl(), name: "Dinamarka"),
+  TranslatedName(LangVol(), name: "Danän"),
 ];

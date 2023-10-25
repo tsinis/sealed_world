@@ -2,8 +2,9 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Indonesia country:
+/// Provides 137 translations for a Indonesia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
@@ -12,8 +13,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,9 +26,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,11 +47,14 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -53,12 +63,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -67,18 +80,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -86,12 +108,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -100,11 +126,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const idnCountryTranslations = [
   CountryName(
@@ -307,4 +336,33 @@ const idnCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Indonesia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Indonesia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Indonesia"),
+  TranslatedName(LangAym(), name: "Indunisya"),
+  TranslatedName(LangBak(), name: "Индонезия"),
+  TranslatedName(LangBod(), name: "ཨིན་རྡུ་ནི་ཤིས་ཡ།"),
+  TranslatedName(LangCos(), name: "Indunesia"),
+  TranslatedName(LangChu(), name: "Їндонисїꙗ"),
+  TranslatedName(LangChv(), name: "Индонези"),
+  TranslatedName(LangDiv(), name: "އިންޑޮނޭޝިޔާ"),
+  TranslatedName(LangGlv(), name: "Yn Indoneesh"),
+  TranslatedName(LangHat(), name: "Endonezi"),
+  TranslatedName(LangIdo(), name: "Indonezia"),
+  TranslatedName(LangIku(), name: "ᐄᓅᓯᐊ"),
+  TranslatedName(LangKom(), name: "Индонезия"),
+  TranslatedName(LangCor(), name: "Indonesi"),
+  TranslatedName(LangLim(), name: "Indonesië"),
+  TranslatedName(LangMri(), name: "Initonīhia"),
+  TranslatedName(LangNau(), name: "Indonitsiya"),
+  TranslatedName(LangNav(), name: "Indoníízha"),
+  TranslatedName(LangOrm(), name: "Indoneeshiyaa"),
+  TranslatedName(LangOss(), name: "Индонези"),
+  TranslatedName(LangQue(), name: "Indunisya"),
+  TranslatedName(LangKin(), name: "Indonesiya"),
+  TranslatedName(LangSan(), name: "इण्डोनेशिया"),
+  TranslatedName(LangSmo(), name: "Indyunisia"),
+  TranslatedName(LangSsw(), name: "INdonesiya"),
+  TranslatedName(LangSun(), name: "Indonésia"),
+  TranslatedName(LangTgl(), name: "Indonesya"),
+  TranslatedName(LangVol(), name: "Lindäna-Seänuäns"),
+  TranslatedName(LangWln(), name: "Indonezeye"),
+  TranslatedName(LangZha(), name: "Yindunizsihya"),
 ];

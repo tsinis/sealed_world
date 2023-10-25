@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 87 translations for a Burundi country:
+/// Provides 107 translations for a Burundi country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -10,16 +10,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -32,7 +36,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -45,39 +51,49 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lithuanian
 /// - Macedonian
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -85,7 +101,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
+/// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -261,4 +281,24 @@ const bdiCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bùùrúndì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bùùrúndì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Burundi"),
+  TranslatedName(LangBak(), name: "Буру́нди"),
+  TranslatedName(LangBih(), name: "बुरुंडी"),
+  TranslatedName(LangBod(), name: "བུ་རུན་ཌི།"),
+  TranslatedName(LangChv(), name: "Бурунди"),
+  TranslatedName(LangDiv(), name: "ބުރުންޑީ"),
+  TranslatedName(LangFry(), name: "Boerûndy"),
+  TranslatedName(LangGrn(), name: "Vurundi"),
+  TranslatedName(LangGlv(), name: "Burundee"),
+  TranslatedName(LangHat(), name: "Bouroundi"),
+  TranslatedName(LangLat(), name: "Burundia"),
+  TranslatedName(LangLim(), name: "Boeroendi"),
+  TranslatedName(LangOrm(), name: "Buruundii"),
+  TranslatedName(LangOss(), name: "Буру́нди"),
+  TranslatedName(LangPli(), name: "बुरुंडी"),
+  TranslatedName(LangKin(), name: "Uburundi"),
+  TranslatedName(LangSan(), name: "बुरुंडी"),
+  TranslatedName(LangSsw(), name: "iBurundi"),
+  TranslatedName(LangVol(), name: "Rundiyän"),
+  TranslatedName(LangWln(), name: "Bouroundi"),
+  TranslatedName(LangWol(), name: "Buruundi"),
 ];

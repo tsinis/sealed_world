@@ -2,20 +2,26 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Azerbaijan country:
+/// Provides 155 translations for a Azerbaijan country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -23,9 +29,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,27 +51,36 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -70,23 +89,34 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -96,12 +126,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -110,10 +144,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const azeCountryTranslations = [
   CountryName(
@@ -326,4 +363,41 @@ const azeCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Asẹ́bájánì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Asɛ́bájánì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Azerbaijan"),
+  TranslatedName(LangAbk(), name: "Азербаиџьан"),
+  TranslatedName(LangArg(), name: "Azerbaichán"),
+  TranslatedName(LangAva(), name: "Азарбижан"),
+  TranslatedName(LangBak(), name: "Әзербайжан"),
+  TranslatedName(LangBih(), name: "अज़रबैजान"),
+  TranslatedName(LangBod(), name: "ཨ་ཛར་བཡི་ཇན།"),
+  TranslatedName(LangCos(), name: "Azerbaighjan"),
+  TranslatedName(LangChu(), name: "Аꙁѣрбаича́нъ"),
+  TranslatedName(LangChv(), name: "Азербайджан"),
+  TranslatedName(LangDiv(), name: "އަޒަރުބައިޖާން"),
+  TranslatedName(LangGrn(), name: "Aservaijã"),
+  TranslatedName(LangGlv(), name: "yn Asserbajaan"),
+  TranslatedName(LangHat(), name: "Azerbaydjan"),
+  TranslatedName(LangIle(), name: "Azerbaidjan"),
+  TranslatedName(LangKon(), name: "Azerbaidjan"),
+  TranslatedName(LangKal(), name: "Aserbajdsjan"),
+  TranslatedName(LangKom(), name: "Азербайджа́н"),
+  TranslatedName(LangCor(), name: "Azerbayjan"),
+  TranslatedName(LangLat(), name: "Atropatene"),
+  TranslatedName(LangLim(), name: "Azerbaidzjan"),
+  TranslatedName(LangMri(), name: "Atepaihānia"),
+  TranslatedName(LangNau(), name: "Aderbaidjan"),
+  TranslatedName(LangNav(), name: "Azééwii Bikéyah"),
+  TranslatedName(LangOci(), name: "Azerbaitjan"),
+  TranslatedName(LangOrm(), name: "Azarbaajan"),
+  TranslatedName(LangOss(), name: "Азербайджан"),
+  TranslatedName(LangPli(), name: "अजर्बैजान"),
+  TranslatedName(LangKin(), name: "Azeribayijani"),
+  TranslatedName(LangSan(), name: "अजर्बैजान"),
+  TranslatedName(LangSrd(), name: "Azerbaigián"),
+  TranslatedName(LangSmo(), name: "Azerbaijin"),
+  TranslatedName(LangSsw(), name: "iZebajani"),
+  TranslatedName(LangTgl(), name: "Aserbayan"),
+  TranslatedName(LangTah(), name: "Atepaihānia"),
+  TranslatedName(LangVol(), name: "Lasärbäcän"),
+  TranslatedName(LangYid(), name: "אַזערבײַדזשאַן"),
+  TranslatedName(LangZha(), name: "Ahsehbaiqgyangh"),
 ];

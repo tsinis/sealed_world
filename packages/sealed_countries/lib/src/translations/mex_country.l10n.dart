@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Mexico country:
+/// Provides 142 translations for a Mexico country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -12,8 +12,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,8 +26,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,13 +47,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Inuktitut
+/// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -57,11 +68,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -71,12 +85,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -85,6 +105,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -92,13 +113,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -107,7 +132,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -319,4 +347,32 @@ const mexCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Mesiko"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Mesiko", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Mexico"),
+  TranslatedName(LangAym(), name: "Mïxiku"),
+  TranslatedName(LangBak(), name: "Мексика"),
+  TranslatedName(LangBod(), name: "མེག་སི་ཀོ།"),
+  TranslatedName(LangCos(), name: "Messicu"),
+  TranslatedName(LangChv(), name: "Мексика"),
+  TranslatedName(LangDiv(), name: "މެކްސިކޯ"),
+  TranslatedName(LangFry(), name: "Meksiko"),
+  TranslatedName(LangGrn(), name: "Méjiko"),
+  TranslatedName(LangGlv(), name: "Meksico"),
+  TranslatedName(LangHat(), name: "Meksik"),
+  TranslatedName(LangIpk(), name: "Mexiqo"),
+  TranslatedName(LangIdo(), name: "Mexikia"),
+  TranslatedName(LangIku(), name: "ᒦᒃᓰᖂ"),
+  TranslatedName(LangKom(), name: "Мексика"),
+  TranslatedName(LangCor(), name: "Meksiko"),
+  TranslatedName(LangLat(), name: "Mexicum"),
+  TranslatedName(LangMri(), name: "Mēhiko"),
+  TranslatedName(LangNau(), name: "Meketiko"),
+  TranslatedName(LangNav(), name: "Méhigo"),
+  TranslatedName(LangOci(), name: "Mexic"),
+  TranslatedName(LangOss(), name: "Мексикæ"),
+  TranslatedName(LangKin(), name: "Megizike"),
+  TranslatedName(LangSrd(), name: "Mèssico"),
+  TranslatedName(LangSsw(), name: "IMekisikho"),
+  TranslatedName(LangSun(), name: "Méksiko"),
+  TranslatedName(LangTgl(), name: "Mehiko"),
+  TranslatedName(LangVie(), name: "México"),
+  TranslatedName(LangVol(), name: "Mäxikän"),
 ];

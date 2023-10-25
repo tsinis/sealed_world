@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Qatar country:
+/// Provides 128 translations for a Qatar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,8 +22,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,16 +37,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -53,12 +60,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -67,11 +78,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -79,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -87,12 +103,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -101,7 +120,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -230,4 +251,25 @@ const qatCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kota"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kota", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Qatar"),
+  TranslatedName(LangBod(), name: "ཁ་ཏར།"),
+  TranslatedName(LangChv(), name: "Катар"),
+  TranslatedName(LangDiv(), name: "ޤަޠަރު"),
+  TranslatedName(LangFry(), name: "Katar"),
+  TranslatedName(LangGlg(), name: "Qatar - قطر"),
+  TranslatedName(LangGlv(), name: "Yn Chatar"),
+  TranslatedName(LangHat(), name: "Katar"),
+  TranslatedName(LangIle(), name: "Katar"),
+  TranslatedName(LangIdo(), name: "Katar"),
+  TranslatedName(LangKom(), name: "Катар"),
+  TranslatedName(LangCor(), name: "Katar"),
+  TranslatedName(LangLat(), name: "Quataria"),
+  TranslatedName(LangLim(), name: "Katar"),
+  TranslatedName(LangMri(), name: "Katā"),
+  TranslatedName(LangNav(), name: "Kʼatár"),
+  TranslatedName(LangOss(), name: "Катар"),
+  TranslatedName(LangKin(), name: "Katari"),
+  TranslatedName(LangSan(), name: "कतार"),
+  TranslatedName(LangSsw(), name: "IKhathari"),
+  TranslatedName(LangTgl(), name: "Katar"),
+  TranslatedName(LangVol(), name: "Katarän"),
 ];

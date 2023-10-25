@@ -2,21 +2,28 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a United States country:
+/// Provides 171 translations for a United States country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +31,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,30 +53,41 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
+/// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -75,9 +97,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -85,7 +110,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -95,7 +122,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -104,8 +134,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -114,18 +148,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tswana
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const usaCountryTranslations = [
   CountryName(
@@ -371,4 +411,44 @@ const usaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ̀-èdè Amẹrikà"),
   TranslatedName(LangYor(), name: "Orílɛ̀-èdè Amɛrikà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-United States"),
+  TranslatedName(LangAbk(), name: "Америка Еиду Аштатқәа"),
+  TranslatedName(LangArg(), name: "Estatos Unitos d'America"),
+  TranslatedName(LangAva(), name: "Америкалъул Цолъарал Штатал"),
+  TranslatedName(LangAym(), name: "Istadus Unidus"),
+  TranslatedName(LangBak(), name: "Америка Ҡушма Штаттары"),
+  TranslatedName(LangBis(), name: "Yunaeted Stet blong Amerika"),
+  TranslatedName(LangCos(), name: "Stati Uniti d'America"),
+  TranslatedName(LangChu(), name: "Амєрика́ньскꙑ Ѥдьнѥнꙑ́ Дрьжа́вꙑ"),
+  TranslatedName(LangChv(), name: "Америкăри Пĕрлешӳллĕ Штатсем"),
+  TranslatedName(LangDiv(), name: "އެމެރިކާ"),
+  TranslatedName(LangGrn(), name: "Tetã peteĩ reko Amérikagua"),
+  TranslatedName(LangGlv(), name: "Steatyn Unnaneysit America"),
+  TranslatedName(LangHat(), name: "Etazini"),
+  TranslatedName(LangIle(), name: "Unit States de America"),
+  TranslatedName(LangIpk(), name: "United States of America"),
+  TranslatedName(LangIdo(), name: "Unionita Stati di Amerika"),
+  TranslatedName(LangIku(), name: "ᐊᒥᐊᓕᑲ"),
+  TranslatedName(LangKal(), name: "Naalagaaffeqatigiit"),
+  TranslatedName(LangKom(), name: "Америкаса Ӧтувтӧм Штатъяс"),
+  TranslatedName(LangCor(), name: "Statys Unys Amerika"),
+  TranslatedName(LangLat(), name: "Civitates Foederatae Americae"),
+  TranslatedName(LangLim(), name: "Vereinegde State van Amerika"),
+  TranslatedName(LangNau(), name: "Eben Merika"),
+  TranslatedName(LangNav(), name: "Wááshindoon Bikéyah Ałhidadiidzooígíí"),
+  TranslatedName(LangOci(), name: "Estats Units d'America"),
+  TranslatedName(LangOrm(), name: "USA"),
+  TranslatedName(LangKin(), name: "Leta Zunze Ubumwe z’Amerika"),
+  TranslatedName(LangSan(), name: "संयुक्तानि राज्यानि"),
+  TranslatedName(LangSrd(), name: "Istados Unidos de America"),
+  TranslatedName(LangSmo(), name: "Iunaite Sitete o Amerika"),
+  TranslatedName(LangSsw(), name: "IMelika"),
+  TranslatedName(LangSun(), name: "Amérika Sarikat"),
+  TranslatedName(LangTgl(), name: "Estados Unidos"),
+  TranslatedName(LangTsn(), name: "USA"),
+  TranslatedName(LangTwi(), name: "USA"),
+  TranslatedName(LangTah(), name: "Fenua Marite"),
+  TranslatedName(LangVol(), name: "Lamerikän"),
+  TranslatedName(LangWln(), name: "Estats Unis d' Amerike"),
+  TranslatedName(LangXho(), name: "IYunayithedi Steyitsi"),
+  TranslatedName(LangZha(), name: "Meijgoz"),
 ];

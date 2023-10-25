@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 112 translations for a Romania country:
+/// Provides 136 translations for a Romania country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,9 +27,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,27 +48,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -69,11 +84,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,12 +109,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -104,6 +126,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -223,4 +247,28 @@ const rouCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Romaniya"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Romaniya", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Romania"),
+  TranslatedName(LangArg(), name: "Rumanía"),
+  TranslatedName(LangAym(), name: "Rumanya"),
+  TranslatedName(LangBak(), name: "Румыния"),
+  TranslatedName(LangBod(), name: "རོ་མ་ནི་ཡ།"),
+  TranslatedName(LangChu(), name: "Роумꙑнїꙗ"),
+  TranslatedName(LangChv(), name: "Румыни"),
+  TranslatedName(LangDiv(), name: "ރުމޭނިއާ"),
+  TranslatedName(LangGrn(), name: "Rrumaña"),
+  TranslatedName(LangGlv(), name: "Yn Romaan"),
+  TranslatedName(LangHat(), name: "Woumani"),
+  TranslatedName(LangIle(), name: "Rumania"),
+  TranslatedName(LangIdo(), name: "Rumania"),
+  TranslatedName(LangKal(), name: "Rumænia"),
+  TranslatedName(LangKom(), name: "Румыния"),
+  TranslatedName(LangCor(), name: "Roumani"),
+  TranslatedName(LangLim(), name: "Roemenië"),
+  TranslatedName(LangMri(), name: "Romeinia"),
+  TranslatedName(LangNav(), name: "Wooméiniya"),
+  TranslatedName(LangOss(), name: "Румыни"),
+  TranslatedName(LangKin(), name: "Romaniya"),
+  TranslatedName(LangSsw(), name: "IRomaniya"),
+  TranslatedName(LangTgl(), name: "Rumanya"),
+  TranslatedName(LangVol(), name: "Rumän"),
+  TranslatedName(LangWln(), name: "Roumaneye"),
 ];

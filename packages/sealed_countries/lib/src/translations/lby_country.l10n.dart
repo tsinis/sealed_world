@@ -2,17 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Libya country:
+/// Provides 134 translations for a Libya country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,9 +25,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,12 +44,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Irish
@@ -54,24 +62,33 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -81,6 +98,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -88,20 +107,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -243,4 +267,28 @@ const lbyCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Libiya"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Libiya", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Libya"),
+  TranslatedName(LangArg(), name: "Libia"),
+  TranslatedName(LangBak(), name: "Ливия"),
+  TranslatedName(LangBod(), name: "ལི་པི་ཡ།"),
+  TranslatedName(LangChv(), name: "Ливи"),
+  TranslatedName(LangDiv(), name: "ލީބިޔާ"),
+  TranslatedName(LangGrn(), name: "Livia"),
+  TranslatedName(LangGlv(), name: "Yn Leeb"),
+  TranslatedName(LangHat(), name: "Libi"),
+  TranslatedName(LangIdo(), name: "Libia"),
+  TranslatedName(LangKon(), name: "Libia"),
+  TranslatedName(LangCor(), name: "Libi"),
+  TranslatedName(LangLim(), name: "Libië"),
+  TranslatedName(LangMlg(), name: "Libia"),
+  TranslatedName(LangMri(), name: "Rīpia"),
+  TranslatedName(LangNav(), name: "Łíbya"),
+  TranslatedName(LangOci(), name: "Libia"),
+  TranslatedName(LangOss(), name: "Ливи"),
+  TranslatedName(LangKin(), name: "Libiya"),
+  TranslatedName(LangSan(), name: "लिबिया"),
+  TranslatedName(LangSrd(), name: "Lìbia"),
+  TranslatedName(LangSsw(), name: "ILibhiya"),
+  TranslatedName(LangTso(), name: "Libiya"),
+  TranslatedName(LangVol(), name: "Lübän"),
+  TranslatedName(LangWln(), name: "Libeye"),
 ];

@@ -2,21 +2,28 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Russia country:
+/// Provides 159 translations for a Russia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +31,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +52,38 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,9 +93,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -85,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Nynorsk
 /// - Nuosu
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -93,7 +116,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Romanian
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -101,8 +126,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -117,12 +146,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const rusCountryTranslations = [
   CountryName(
@@ -326,4 +360,38 @@ const rusCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Rọṣia"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Rɔshia", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Russia"),
+  TranslatedName(LangAbk(), name: "Урыстәыла"),
+  TranslatedName(LangArg(), name: "Rusia"),
+  TranslatedName(LangAva(), name: "Россиялъул Федерация"),
+  TranslatedName(LangAym(), name: "Rusiya"),
+  TranslatedName(LangBak(), name: "Рәсәй"),
+  TranslatedName(LangBis(), name: "Rusia"),
+  TranslatedName(LangChu(), name: "Рѡсїꙗ"),
+  TranslatedName(LangChv(), name: "Раççей Патшалăхĕ"),
+  TranslatedName(LangDiv(), name: "ރޫސީވިލާތް"),
+  TranslatedName(LangGrn(), name: "Rrúsia"),
+  TranslatedName(LangGlv(), name: "Yn Roosh"),
+  TranslatedName(LangHat(), name: "Risi"),
+  TranslatedName(LangIdo(), name: "Rusia"),
+  TranslatedName(LangIku(), name: "ᐅᓛᓴ"),
+  TranslatedName(LangKon(), name: "Rusia"),
+  TranslatedName(LangKal(), name: "Ruslandi"),
+  TranslatedName(LangKom(), name: "Рочму"),
+  TranslatedName(LangCor(), name: "Russi"),
+  TranslatedName(LangLim(), name: "Rusland"),
+  TranslatedName(LangNau(), name: "Ratsiya"),
+  TranslatedName(LangNav(), name: "Biʼééʼ Łichííʼí Bikéyah"),
+  TranslatedName(LangOrm(), name: "Raashiyaa"),
+  TranslatedName(LangKin(), name: "Uburusiya"),
+  TranslatedName(LangSrd(), name: "Rùssia"),
+  TranslatedName(LangSmo(), name: "Lusia"),
+  TranslatedName(LangSsw(), name: "IRashiya"),
+  TranslatedName(LangSun(), name: "Rusia"),
+  TranslatedName(LangTgl(), name: "Pederasyong Ruso"),
+  TranslatedName(LangTah(), name: "Rūtia"),
+  TranslatedName(LangVen(), name: "Rashia"),
+  TranslatedName(LangVol(), name: "Rusän"),
+  TranslatedName(LangWln(), name: "Federåcion d' Rûsseye"),
+  TranslatedName(LangXho(), name: "IRashiya"),
+  TranslatedName(LangZha(), name: "Ezlozswh Lienzbangh"),
 ];

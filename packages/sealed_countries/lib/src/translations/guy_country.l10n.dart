@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Guyana country:
+/// Provides 113 translations for a Guyana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -11,8 +11,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +23,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -38,7 +43,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -50,10 +57,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -61,16 +70,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -83,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -91,6 +106,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -286,4 +302,20 @@ const guyCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Guyana"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Guyana", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Guyana"),
+  TranslatedName(LangAym(), name: "Wayana"),
+  TranslatedName(LangBak(), name: "Гайана"),
+  TranslatedName(LangBod(), name: "གུ་ཡ་ན།"),
+  TranslatedName(LangChv(), name: "Гайана"),
+  TranslatedName(LangDiv(), name: "ގުޔާނާ"),
+  TranslatedName(LangGrn(), name: "Gujána"),
+  TranslatedName(LangGlv(), name: "Geeaaney"),
+  TranslatedName(LangHat(), name: "Giyàn"),
+  TranslatedName(LangCor(), name: "Gwayana"),
+  TranslatedName(LangLat(), name: "Guiana"),
+  TranslatedName(LangMri(), name: "Kaiana"),
+  TranslatedName(LangOss(), name: "Гайанæ"),
+  TranslatedName(LangQue(), name: "Wayana"),
+  TranslatedName(LangKin(), name: "Giyana"),
+  TranslatedName(LangSan(), name: "गयाना"),
+  TranslatedName(LangVol(), name: "Gvayän"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a Mauritania country:
+/// Provides 130 translations for a Mauritania country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -23,9 +23,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -54,12 +58,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -68,18 +75,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -88,20 +103,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -314,4 +335,25 @@ const mrtCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Maritania"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Maritania", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Mauritania"),
+  TranslatedName(LangBod(), name: "མའུ་རི་ཏ་ནི་ཡ།"),
+  TranslatedName(LangChv(), name: "Мавритани"),
+  TranslatedName(LangDiv(), name: "މޮރިޓާނިއާ"),
+  TranslatedName(LangGlv(), name: "Yn Varitaan"),
+  TranslatedName(LangHat(), name: "Moritani"),
+  TranslatedName(LangKon(), name: "Muritania"),
+  TranslatedName(LangCor(), name: "Moritani"),
+  TranslatedName(LangLim(), name: "Mauritanië"),
+  TranslatedName(LangMri(), name: "Mauritānia"),
+  TranslatedName(LangNav(), name: "Moowitéínya"),
+  TranslatedName(LangOci(), name: "Mauritània"),
+  TranslatedName(LangOss(), name: "Мавритани"),
+  TranslatedName(LangQue(), name: "Muritanya"),
+  TranslatedName(LangKin(), name: "Moritaniya"),
+  TranslatedName(LangSan(), name: "मारिटेनिया"),
+  TranslatedName(LangSrd(), name: "Mauritània"),
+  TranslatedName(LangSsw(), name: "IMolithaniya"),
+  TranslatedName(LangTso(), name: "Maritana"),
+  TranslatedName(LangVie(), name: "Mauritanie"),
+  TranslatedName(LangVol(), name: "Moritän"),
+  TranslatedName(LangWln(), name: "Moritanreye"),
 ];

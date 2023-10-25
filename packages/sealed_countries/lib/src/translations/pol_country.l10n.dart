@@ -2,17 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Poland country:
+/// Provides 156 translations for a Poland country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,9 +28,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,29 +50,40 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -72,15 +92,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -89,7 +115,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,13 +126,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -113,6 +146,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -321,4 +356,39 @@ const polCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Polandi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Polandi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Poland"),
+  TranslatedName(LangAbk(), name: "Полша"),
+  TranslatedName(LangArg(), name: "Polonia"),
+  TranslatedName(LangAym(), name: "Puluña"),
+  TranslatedName(LangBak(), name: "Польша"),
+  TranslatedName(LangBod(), name: "ཕོ་ལན།"),
+  TranslatedName(LangCos(), name: "Polonia"),
+  TranslatedName(LangChu(), name: "Пол҄ьска"),
+  TranslatedName(LangChv(), name: "Польша"),
+  TranslatedName(LangDiv(), name: "ޕޮލެންޑު"),
+  TranslatedName(LangGrn(), name: "Poloña"),
+  TranslatedName(LangGlv(), name: "Yn Pholynn"),
+  TranslatedName(LangHat(), name: "Polòy"),
+  TranslatedName(LangIle(), name: "Polonia"),
+  TranslatedName(LangIdo(), name: "Polonia"),
+  TranslatedName(LangIku(), name: "ᐳᓚᓐᑦ"),
+  TranslatedName(LangKon(), name: "Pologne"),
+  TranslatedName(LangKal(), name: "Poleni"),
+  TranslatedName(LangKom(), name: "Польша"),
+  TranslatedName(LangCor(), name: "Poloni"),
+  TranslatedName(LangLat(), name: "Polonia"),
+  TranslatedName(LangLim(), name: "Pole"),
+  TranslatedName(LangMri(), name: "Pōrana"),
+  TranslatedName(LangNau(), name: "Poran"),
+  TranslatedName(LangNav(), name: "Póolish Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "Polonha"),
+  TranslatedName(LangOss(), name: "Польшæ"),
+  TranslatedName(LangKin(), name: "Polonye"),
+  TranslatedName(LangSan(), name: "पोलैंड"),
+  TranslatedName(LangSrd(), name: "Polonia"),
+  TranslatedName(LangSmo(), name: "Polagi"),
+  TranslatedName(LangSsw(), name: "IPholandi"),
+  TranslatedName(LangSun(), name: "Polandia"),
+  TranslatedName(LangTgl(), name: "Polonya"),
+  TranslatedName(LangVol(), name: "Polän"),
+  TranslatedName(LangWln(), name: "Pologne"),
 ];

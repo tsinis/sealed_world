@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Bermuda country:
+/// Provides 101 translations for a Bermuda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -65,6 +65,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -208,4 +209,5 @@ const bmuCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bémúdà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bémúdà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Bermuda"),
+  TranslatedName(LangOci(), name: "Bermudas"),
 ];

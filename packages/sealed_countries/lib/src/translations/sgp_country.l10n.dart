@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 112 translations for a Singapore country:
+/// Provides 136 translations for a Singapore country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,8 +26,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,12 +47,16 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -58,10 +67,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -71,10 +82,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -82,7 +99,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -90,13 +109,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -105,7 +127,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -315,4 +339,28 @@ const sgpCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Singapo"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Singapo", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Singapore"),
+  TranslatedName(LangArg(), name: "Singapur"),
+  TranslatedName(LangBak(), name: "Сингапур"),
+  TranslatedName(LangBod(), name: "སེང་ག་ཕོར།"),
+  TranslatedName(LangChv(), name: "Сингапур"),
+  TranslatedName(LangDiv(), name: "ސިންގަޕޫރު"),
+  TranslatedName(LangFry(), name: "Singapoer"),
+  TranslatedName(LangHat(), name: "Sengapou"),
+  TranslatedName(LangIna(), name: "Singapur"),
+  TranslatedName(LangIle(), name: "Singapor"),
+  TranslatedName(LangIdo(), name: "Singapur"),
+  TranslatedName(LangKom(), name: "Сингапур"),
+  TranslatedName(LangCor(), name: "Singapour"),
+  TranslatedName(LangLat(), name: "Singapura"),
+  TranslatedName(LangMri(), name: "Hingapoa"),
+  TranslatedName(LangMlt(), name: "Singapor"),
+  TranslatedName(LangNau(), name: "Tsingapoar"),
+  TranslatedName(LangNav(), name: "Sį́ʼgaboo"),
+  TranslatedName(LangOci(), name: "Singapor"),
+  TranslatedName(LangOss(), name: "Сингапур"),
+  TranslatedName(LangSan(), name: "सिङ्गापुरम्"),
+  TranslatedName(LangSmo(), name: "Sigapoa"),
+  TranslatedName(LangSsw(), name: "ISingapholo"),
+  TranslatedName(LangSun(), name: "Singapura"),
+  TranslatedName(LangVol(), name: "Singapurän"),
 ];

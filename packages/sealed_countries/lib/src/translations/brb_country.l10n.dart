@@ -2,15 +2,17 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 93 translations for a Barbados country:
+/// Provides 110 translations for a Barbados country:
 /// - (Eastern) Punjabi
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,7 +37,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -48,10 +53,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -61,15 +69,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -77,12 +90,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -90,6 +105,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -189,4 +206,21 @@ const brbCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bábádósì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bábádósì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Barbados"),
+  TranslatedName(LangBak(), name: "Барба́дос"),
+  TranslatedName(LangBod(), name: "བར་བ་ཌོ་སི།"),
+  TranslatedName(LangDiv(), name: "ބާބަޑޮސް"),
+  TranslatedName(LangGrn(), name: "Varvado"),
+  TranslatedName(LangHat(), name: "Lababad"),
+  TranslatedName(LangKom(), name: "Барбадос"),
+  TranslatedName(LangLat(), name: "Barbata"),
+  TranslatedName(LangNau(), name: "Barbadot"),
+  TranslatedName(LangOrm(), name: "Baarbeedoos"),
+  TranslatedName(LangOss(), name: "Барбадос"),
+  TranslatedName(LangPli(), name: "बार्बाडोस"),
+  TranslatedName(LangKin(), name: "Barubadosi"),
+  TranslatedName(LangSan(), name: "बार्बाडोस"),
+  TranslatedName(LangSqi(), name: "Barbadosi"),
+  TranslatedName(LangSsw(), name: "iBhadosi"),
+  TranslatedName(LangVol(), name: "Barbadeän"),
+  TranslatedName(LangWln(), name: "Barbåde"),
 ];

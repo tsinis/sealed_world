@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 85 translations for a Angola country:
+/// Provides 106 translations for a Angola country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -11,16 +11,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -45,35 +49,50 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kongo
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Lingala
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -81,7 +100,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -256,4 +277,25 @@ const agoCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ààngólà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ààngólà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Angola"),
+  TranslatedName(LangBak(), name: "Анго́ла"),
+  TranslatedName(LangBih(), name: "अंगोला"),
+  TranslatedName(LangBod(), name: "ཨང་གོ་ལ།"),
+  TranslatedName(LangChv(), name: "Ангола"),
+  TranslatedName(LangDiv(), name: "އެންގޯލާ"),
+  TranslatedName(LangFry(), name: "Angoala"),
+  TranslatedName(LangGlv(), name: "Angoley"),
+  TranslatedName(LangKon(), name: "Ngola"),
+  TranslatedName(LangLat(), name: "Angolia"),
+  TranslatedName(LangMri(), name: "Anakora"),
+  TranslatedName(LangNau(), name: "Angora"),
+  TranslatedName(LangNav(), name: "Angóola"),
+  TranslatedName(LangOci(), name: "Angòla"),
+  TranslatedName(LangOrm(), name: "Angoolaa"),
+  TranslatedName(LangOss(), name: "Анголæ"),
+  TranslatedName(LangPli(), name: "अंगोला"),
+  TranslatedName(LangQue(), name: "Angula"),
+  TranslatedName(LangSan(), name: "अङ्गोला"),
+  TranslatedName(LangSsw(), name: "I-Angola"),
+  TranslatedName(LangTgl(), name: "Anggola"),
+  TranslatedName(LangVol(), name: "Langolän"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Cuba country:
+/// Provides 133 translations for a Cuba country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -12,8 +12,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -38,13 +43,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,7 +63,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -68,17 +79,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -86,12 +104,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -100,11 +123,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const cubCountryTranslations = [
   CountryName(
@@ -258,4 +284,30 @@ const cubCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kúbà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kúbà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Cuba"),
+  TranslatedName(LangAym(), name: "Kuba"),
+  TranslatedName(LangBak(), name: "Куба"),
+  TranslatedName(LangBod(), name: "ཀུ་བ།"),
+  TranslatedName(LangChv(), name: "Куба"),
+  TranslatedName(LangDiv(), name: "ކިއުބާ"),
+  TranslatedName(LangGrn(), name: "Kuva"),
+  TranslatedName(LangGlv(), name: "Yn Choobey"),
+  TranslatedName(LangHat(), name: "Kiba"),
+  TranslatedName(LangIdo(), name: "Kuba"),
+  TranslatedName(LangIku(), name: "ᖂᐹ"),
+  TranslatedName(LangKom(), name: "Куба"),
+  TranslatedName(LangCor(), name: "Kuba"),
+  TranslatedName(LangMri(), name: "Kiupa"),
+  TranslatedName(LangNau(), name: "Kiuba"),
+  TranslatedName(LangNav(), name: "Kyóoba"),
+  TranslatedName(LangOss(), name: "Кубæ"),
+  TranslatedName(LangQue(), name: "Kuba"),
+  TranslatedName(LangKin(), name: "Kiba"),
+  TranslatedName(LangSan(), name: "क्यूबा"),
+  TranslatedName(LangSsw(), name: "IKhuyubha"),
+  TranslatedName(LangSun(), name: "Kuba"),
+  TranslatedName(LangSwa(), name: "Kuba"),
+  TranslatedName(LangTgl(), name: "Kuba"),
+  TranslatedName(LangVol(), name: "Kubeän"),
+  TranslatedName(LangWln(), name: "Couba"),
+  TranslatedName(LangZha(), name: "Gujbah"),
 ];

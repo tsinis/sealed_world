@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 86 translations for a Niue country:
+/// Provides 90 translations for a Niue country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Amharic
@@ -21,6 +21,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -45,6 +46,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -60,6 +62,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -84,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yoruba
 /// - Zulu.
@@ -174,4 +178,8 @@ const niuCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Niue"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Niue", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Niue"),
+  TranslatedName(LangDiv(), name: "ނީއު"),
+  TranslatedName(LangFry(), name: "Niûé"),
+  TranslatedName(LangOss(), name: "Ниуэ"),
+  TranslatedName(LangKin(), name: "Niyuwe"),
 ];

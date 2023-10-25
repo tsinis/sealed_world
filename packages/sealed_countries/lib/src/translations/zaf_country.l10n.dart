@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a South Africa country:
+/// Provides 156 translations for a South Africa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -24,9 +25,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,14 +46,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -59,12 +67,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,15 +87,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -92,29 +110,41 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
+/// - Southern Sotho
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
+/// - Tswana
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Venda
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -357,4 +387,37 @@ const zafCountryTranslations = [
   TranslatedName(LangYor(), name: "Gúúṣù Áfíríkà"),
   TranslatedName(LangYor(), name: "Gúúshù Áfíríkà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "iNingizimu Afrika"),
+  TranslatedName(LangArg(), name: "Sudafrica"),
+  TranslatedName(LangBod(), name: "ལྷོ་ ཨཕྲི་ཀ།"),
+  TranslatedName(LangChv(), name: "Кăнтăр Африка"),
+  TranslatedName(LangDiv(), name: "ދެކުނު އެފްރިކާ"),
+  TranslatedName(LangGrn(), name: "Yvyafrika"),
+  TranslatedName(LangGlv(), name: "Yn Affrick Yiass"),
+  TranslatedName(LangHat(), name: "Afrik disid"),
+  TranslatedName(LangIle(), name: "Sudafrica"),
+  TranslatedName(LangIdo(), name: "Sud-Afrika"),
+  TranslatedName(LangKon(), name: "Afelika ya Sudi"),
+  TranslatedName(LangKom(), name: "Лунвыв Африкаса Республика"),
+  TranslatedName(LangCor(), name: "Afrika Dhyhow"),
+  TranslatedName(LangLat(), name: "Africa Australis"),
+  TranslatedName(LangLim(), name: "Zuud-Afrika"),
+  TranslatedName(LangMri(), name: "Awherika ki te Tonga"),
+  TranslatedName(
+    LangNav(),
+    name: "Kéyah Naakai Łizhinii Bikéyah Shádiʼááhjí Siʼánígíí",
+  ),
+  TranslatedName(LangOci(), name: "Sud d'Africa"),
+  TranslatedName(LangOss(), name: "Хуссар Африкæйы"),
+  TranslatedName(LangKin(), name: "Afurika y’Epfo"),
+  TranslatedName(LangSan(), name: "दक्षिण-आफ्रिका"),
+  TranslatedName(LangSrd(), name: "Sudàfrica"),
+  TranslatedName(LangSsw(), name: "INingizimu Afrika"),
+  TranslatedName(LangSot(), name: "Afrika Borwa"),
+  TranslatedName(LangSun(), name: "Afrika Kidul"),
+  TranslatedName(LangTgl(), name: "Timog Aprika"),
+  TranslatedName(LangTsn(), name: "Aferika Borwa"),
+  TranslatedName(LangTso(), name: "Afrika-Dzonga"),
+  TranslatedName(LangVen(), name: "Afurika Tshipembe"),
+  TranslatedName(LangVol(), name: "Sulüdafrikän"),
+  TranslatedName(LangWln(), name: "Nonne-Afrike"),
 ];

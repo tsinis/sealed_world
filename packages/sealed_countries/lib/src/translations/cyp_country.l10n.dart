@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Cyprus country:
+/// Provides 146 translations for a Cyprus country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -24,6 +26,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -42,24 +47,32 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -73,14 +86,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,13 +117,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -113,9 +137,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const cypCountryTranslations = [
@@ -315,4 +341,30 @@ const cypCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kúrúsì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kúrúsì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Cyprus"),
+  TranslatedName(LangArg(), name: "Chipre"),
+  TranslatedName(LangBod(), name: "སེ་པི་རི་སི།"),
+  TranslatedName(LangCos(), name: "Cipru"),
+  TranslatedName(LangChu(), name: "Кѷпръ"),
+  TranslatedName(LangChv(), name: "Кипр"),
+  TranslatedName(LangGrn(), name: "Chipre"),
+  TranslatedName(LangGlv(), name: "Yn Cheeprey"),
+  TranslatedName(LangHat(), name: "Chip"),
+  TranslatedName(LangIle(), name: "Cypria"),
+  TranslatedName(LangIdo(), name: "Chipro"),
+  TranslatedName(LangKon(), name: "Kipros"),
+  TranslatedName(LangKal(), name: "Cyperni"),
+  TranslatedName(LangKom(), name: "Кипр"),
+  TranslatedName(LangCor(), name: "Kobros"),
+  TranslatedName(LangMri(), name: "Haipara"),
+  TranslatedName(LangNau(), name: "Taiprus"),
+  TranslatedName(LangNav(), name: "Béésh Łichíiʼii Bikéyah"),
+  TranslatedName(LangOci(), name: "Chipre"),
+  TranslatedName(LangOss(), name: "Кипр"),
+  TranslatedName(LangKin(), name: "Shipure"),
+  TranslatedName(LangSrd(), name: "Tzipru"),
+  TranslatedName(LangSsw(), name: "ISayiphro"),
+  TranslatedName(LangSun(), name: "Siprus"),
+  TranslatedName(LangTgl(), name: "Tsipre"),
+  TranslatedName(LangVol(), name: "Sipreän"),
+  TranslatedName(LangYid(), name: "קיפראס"),
 ];

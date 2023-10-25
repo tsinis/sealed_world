@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 98 translations for a Belize country:
+/// Provides 120 translations for a Belize country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -11,8 +11,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +23,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -33,10 +38,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -54,36 +62,49 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -92,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -196,4 +218,26 @@ const blzCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Bèlísẹ̀"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Bèlísɛ̀", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Belize"),
+  TranslatedName(LangAym(), name: "Wilisi"),
+  TranslatedName(LangBak(), name: "Белиз"),
+  TranslatedName(LangBod(), name: "བེ་ལི་ཛི།"),
+  TranslatedName(LangChv(), name: "Белиз"),
+  TranslatedName(LangDiv(), name: "ބެލީޒު"),
+  TranslatedName(LangGlg(), name: "Belice"),
+  TranslatedName(LangGrn(), name: "Mbelise"),
+  TranslatedName(LangGlv(), name: "yn Veleesh"),
+  TranslatedName(LangHat(), name: "Beliz"),
+  TranslatedName(LangCor(), name: "Belisa"),
+  TranslatedName(LangLat(), name: "Beliza"),
+  TranslatedName(LangMlg(), name: "Belizy"),
+  TranslatedName(LangNau(), name: "Berij"),
+  TranslatedName(LangOrm(), name: "Beliiz"),
+  TranslatedName(LangOss(), name: "Белиз"),
+  TranslatedName(LangPli(), name: "बेलीज"),
+  TranslatedName(LangSan(), name: "बेलीज"),
+  TranslatedName(LangSmo(), name: "Pelisi"),
+  TranslatedName(LangSsw(), name: "iBhelizi"),
+  TranslatedName(LangSun(), name: "Bélis"),
+  TranslatedName(LangTgl(), name: "Belise"),
+  TranslatedName(LangVol(), name: "Belisän"),
 ];

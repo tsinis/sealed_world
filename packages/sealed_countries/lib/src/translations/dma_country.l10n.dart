@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Dominica country:
+/// Provides 110 translations for a Dominica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -100,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -307,4 +309,6 @@ const dmaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Dòmíníkà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Dòmíníkà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Dominica"),
+  TranslatedName(LangAfr(), name: "Dominika"),
+  TranslatedName(LangVol(), name: "Dominikeän"),
 ];

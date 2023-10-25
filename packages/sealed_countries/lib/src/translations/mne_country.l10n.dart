@@ -2,15 +2,18 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 90 translations for a Montenegro country:
+/// Provides 110 translations for a Montenegro country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -19,8 +22,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -32,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -45,9 +51,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -56,12 +66,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Russian
 /// - Serbian
@@ -71,22 +85,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const mneCountryTranslations = [
   CountryName(
@@ -259,4 +279,24 @@ const mneCountryTranslations = [
   TranslatedName(LangWol(), name: "Montenegoro"),
   TranslatedName(LangYid(), name: "מאנטענעגרא"),
   TranslatedName(LangZul(), name: "i-Montenegro"),
+  TranslatedName(LangAva(), name: "Чеэраб Меэр"),
+  TranslatedName(LangBak(), name: "Черногория"),
+  TranslatedName(LangBod(), name: "མོན་ཊེནིག་རོ།"),
+  TranslatedName(LangChu(), name: "Чрьна Гора"),
+  TranslatedName(LangChv(), name: "Черногори"),
+  TranslatedName(LangDiv(), name: "މޮންޓެނީގުރޯ"),
+  TranslatedName(LangHat(), name: "Montenegwo"),
+  TranslatedName(LangKon(), name: "Monte Negro"),
+  TranslatedName(LangKom(), name: "Черногория"),
+  TranslatedName(LangLat(), name: "Mons Niger"),
+  TranslatedName(LangMri(), name: "Monotenīkoro"),
+  TranslatedName(LangNav(), name: "Dziłizhin Bikéyah"),
+  TranslatedName(LangOss(), name: "Черногори"),
+  TranslatedName(LangQue(), name: "Yanaurqu"),
+  TranslatedName(LangKin(), name: "Montenegoro"),
+  TranslatedName(LangSsw(), name: "IMonthenekho"),
+  TranslatedName(LangSun(), name: "Monténégro"),
+  TranslatedName(LangTuk(), name: "Çernogoriýa"),
+  TranslatedName(LangVol(), name: "Montenegrän"),
+  TranslatedName(LangYor(), name: "Montenẹ́grò"),
 ];

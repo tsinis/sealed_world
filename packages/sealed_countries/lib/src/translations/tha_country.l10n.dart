@@ -2,17 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Thailand country:
+/// Provides 140 translations for a Thailand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,8 +25,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,27 +45,34 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -69,12 +81,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -84,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -92,12 +110,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -107,11 +128,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const thaCountryTranslations = [
   CountryName(
@@ -315,4 +338,27 @@ const thaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Tailandi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Tailandi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Thailand"),
+  TranslatedName(LangArg(), name: "Tailandia"),
+  TranslatedName(LangBak(), name: "Таиланд"),
+  TranslatedName(LangBod(), name: "ཐའི་ལེན།"),
+  TranslatedName(LangChv(), name: "Таиланд"),
+  TranslatedName(LangDiv(), name: "ސިޔާމު"),
+  TranslatedName(LangGrn(), name: "Tailandia"),
+  TranslatedName(LangGlv(), name: "Yn Çheer Thai"),
+  TranslatedName(LangHat(), name: "Tayilann"),
+  TranslatedName(LangIdo(), name: "Tailando"),
+  TranslatedName(LangKal(), name: "Thailandi"),
+  TranslatedName(LangKom(), name: "Таиланд"),
+  TranslatedName(LangCor(), name: "Pow Tay"),
+  TranslatedName(LangLat(), name: "Thailandia"),
+  TranslatedName(LangMri(), name: "Tairana"),
+  TranslatedName(LangNav(), name: "Tʼáí Bikéyah"),
+  TranslatedName(LangOci(), name: "Tailàndia"),
+  TranslatedName(LangOss(), name: "Таиланд"),
+  TranslatedName(LangKin(), name: "Tayilande"),
+  TranslatedName(LangSan(), name: "श्यामदेश"),
+  TranslatedName(LangSsw(), name: "IThayilandi"),
+  TranslatedName(LangTgl(), name: "Taylandiya"),
+  TranslatedName(LangVol(), name: "Tayän"),
+  TranslatedName(LangZha(), name: "Daigoz"),
 ];

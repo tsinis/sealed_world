@@ -2,16 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Finland country:
+/// Provides 148 translations for a Finland country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -22,8 +27,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,28 +48,37 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -70,11 +88,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -83,20 +106,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -106,11 +136,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const finCountryTranslations = [
   CountryName(
@@ -312,4 +345,37 @@ const finCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Filandi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Filandi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Finland"),
+  TranslatedName(LangAbk(), name: "Суоми"),
+  TranslatedName(LangArg(), name: "Finlandia"),
+  TranslatedName(LangAym(), name: "Phini suyu"),
+  TranslatedName(LangBak(), name: "Финляндия"),
+  TranslatedName(LangBod(), name: "ཧྥིན་ལན"),
+  TranslatedName(LangCos(), name: "Finlandia"),
+  TranslatedName(LangChu(), name: "Соумь"),
+  TranslatedName(LangChv(), name: "Финлянди"),
+  TranslatedName(LangDiv(), name: "ފިންލޭންޑު"),
+  TranslatedName(LangGrn(), name: "Hĩlandia"),
+  TranslatedName(LangGlv(), name: "Finnlynn"),
+  TranslatedName(LangHat(), name: "Fenlann"),
+  TranslatedName(LangIdo(), name: "Finlando"),
+  TranslatedName(LangIku(), name: "ᐃᓐᓚᓐᑦ"),
+  TranslatedName(LangKon(), name: "Finlandi"),
+  TranslatedName(LangKal(), name: "Finlandi"),
+  TranslatedName(LangKom(), name: "Финляндия"),
+  TranslatedName(LangCor(), name: "Pow Finn"),
+  TranslatedName(LangLat(), name: "Finnia"),
+  TranslatedName(LangMri(), name: "Whinarana"),
+  TranslatedName(LangNav(), name: "Nahoditsʼǫʼłání"),
+  TranslatedName(LangOci(), name: "Finlàndia"),
+  TranslatedName(LangOss(), name: "Финлянди"),
+  TranslatedName(LangKin(), name: "Finilande"),
+  TranslatedName(LangSan(), name: "फिन्लैंड"),
+  TranslatedName(LangSrd(), name: "Finlandia"),
+  TranslatedName(LangSmo(), name: "Finalagi"),
+  TranslatedName(LangSsw(), name: "IFini"),
+  TranslatedName(LangSun(), name: "Finlandia"),
+  TranslatedName(LangTgl(), name: "Pinlandiya"),
+  TranslatedName(LangVol(), name: "Suomiyän"),
+  TranslatedName(LangWln(), name: "Finlande"),
+  TranslatedName(LangZha(), name: "Finlan"),
 ];

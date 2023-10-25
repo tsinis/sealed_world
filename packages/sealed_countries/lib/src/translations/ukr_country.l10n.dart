@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Ukraine country:
+/// Provides 150 translations for a Ukraine country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,8 +28,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,14 +48,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -58,12 +70,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -72,15 +89,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,13 +120,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -113,6 +140,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -241,4 +270,33 @@ const ukrCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ukarini"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ukarini", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Ukraine"),
+  TranslatedName(LangAbk(), name: "Украина"),
+  TranslatedName(LangArg(), name: "Ucraína"),
+  TranslatedName(LangBak(), name: "Украина"),
+  TranslatedName(LangBod(), name: "ཨུཀ་རཡི་ནི།"),
+  TranslatedName(LangChu(), name: "Оукраина"),
+  TranslatedName(LangChv(), name: "Украина"),
+  TranslatedName(LangDiv(), name: "ޔުކްރެއިން"),
+  TranslatedName(LangGrn(), name: "Ukyaña"),
+  TranslatedName(LangGlv(), name: "Yn Ookraan"),
+  TranslatedName(LangHat(), name: "Ikrèn"),
+  TranslatedName(LangIle(), name: "Ucraina"),
+  TranslatedName(LangIbo(), name: "Yukrain"),
+  TranslatedName(LangIdo(), name: "Ukrainia"),
+  TranslatedName(LangKon(), name: "Ukrayina"),
+  TranslatedName(LangKom(), name: "Украина"),
+  TranslatedName(LangCor(), name: "Ukrayn"),
+  TranslatedName(LangLat(), name: "Ucraina"),
+  TranslatedName(LangLim(), name: "Oekraïne"),
+  TranslatedName(LangMri(), name: "Ūkareinga"),
+  TranslatedName(LangNav(), name: "Yóókwein"),
+  TranslatedName(LangOci(), name: "Ucraïna"),
+  TranslatedName(LangOss(), name: "Украинæ"),
+  TranslatedName(LangKin(), name: "Ikerene"),
+  TranslatedName(LangSrd(), name: "Ucraina"),
+  TranslatedName(LangSsw(), name: "IYukhureni"),
+  TranslatedName(LangSun(), name: "Ukraina"),
+  TranslatedName(LangTgl(), name: "Ukranya"),
+  TranslatedName(LangVol(), name: "Lukrayän"),
+  TranslatedName(LangWln(), name: "Oucrinne"),
 ];

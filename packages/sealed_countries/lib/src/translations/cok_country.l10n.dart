@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Cook Islands country:
+/// Provides 139 translations for a Cook Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,10 +10,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +26,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -48,6 +52,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
@@ -55,17 +60,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -77,12 +86,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -100,13 +112,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -319,4 +334,19 @@ const cokCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Etíokun Kùúkù"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Etíokun Kùúkù", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Cook Islands"),
+  TranslatedName(LangArg(), name: "islas Cook"),
+  TranslatedName(LangBak(), name: "Кук Утрауҙары"),
+  TranslatedName(LangBod(), name: "ཀཱུག གླིང་ཕྲེན་རྒྱལ་ཁབ།"),
+  TranslatedName(LangDiv(), name: "ކުކް ޖަޒީރާ"),
+  TranslatedName(LangIdo(), name: "Insuli Cook"),
+  TranslatedName(LangKal(), name: "Cook qeqertaq"),
+  TranslatedName(LangCor(), name: "Ynysow Cook"),
+  TranslatedName(LangLat(), name: "Insulae de Cook"),
+  TranslatedName(LangLim(), name: "Cookeilenj"),
+  TranslatedName(LangMri(), name: "Kuki Airani"),
+  TranslatedName(LangOci(), name: "Illas Cook"),
+  TranslatedName(LangOss(), name: "Кучы сакъадæхтæ"),
+  TranslatedName(LangKin(), name: "Ibirwa bya Kuke"),
+  TranslatedName(LangSun(), name: "Kapuloan Cook"),
+  TranslatedName(LangTgl(), name: "Kapuluang Cook"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Madagascar country:
+/// Provides 138 translations for a Madagascar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -14,6 +14,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -23,9 +24,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -33,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Estonian
 /// - Ewe
 /// - Faroese
+/// - Fijian
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -40,12 +45,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Italian
@@ -56,12 +64,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -70,8 +82,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -79,12 +94,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -92,13 +111,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -107,6 +130,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -320,4 +344,28 @@ const mdgCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Madasika"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Madasika", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Madagascar"),
+  TranslatedName(LangBak(), name: "Мадагаскар"),
+  TranslatedName(LangBod(), name: "མ་ད་གཱ་སི་ཀར།"),
+  TranslatedName(LangChv(), name: "Мадагаскар"),
+  TranslatedName(LangDiv(), name: "މަޑަގަސްކަރަ"),
+  TranslatedName(LangFij(), name: "Madagasikar"),
+  TranslatedName(LangGrn(), name: "Madagaka"),
+  TranslatedName(LangHat(), name: "Madagaskar"),
+  TranslatedName(LangIdo(), name: "Madagaskar"),
+  TranslatedName(LangKon(), name: "Malagasi"),
+  TranslatedName(LangCor(), name: "Madagaskar"),
+  TranslatedName(LangLat(), name: "Madagascaria"),
+  TranslatedName(LangLim(), name: "Madagaskar"),
+  TranslatedName(LangMri(), name: "Marakāhia"),
+  TranslatedName(LangMlt(), name: "Madagaskar"),
+  TranslatedName(LangNav(), name: "Madaʼgéésgáá"),
+  TranslatedName(LangOss(), name: "Мадагаскар"),
+  TranslatedName(LangQue(), name: "Madagaskar"),
+  TranslatedName(LangKin(), name: "Madagasikari"),
+  TranslatedName(LangSan(), name: "मडगास्कर"),
+  TranslatedName(LangSrd(), name: "Madagascàr"),
+  TranslatedName(LangSsw(), name: "IMadagasikha"),
+  TranslatedName(LangSun(), name: "Madagaskar"),
+  TranslatedName(LangTgl(), name: "Madagaskar"),
+  TranslatedName(LangVol(), name: "Malagaseän"),
 ];

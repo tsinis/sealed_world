@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Iceland country:
+/// Provides 152 translations for a Iceland country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +27,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +49,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +90,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -89,7 +112,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,13 +123,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -112,6 +142,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -255,4 +287,36 @@ const islCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Aṣilandi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ashilandi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Iceland"),
+  TranslatedName(LangArg(), name: "Islandia"),
+  TranslatedName(LangBak(), name: "Исландия"),
+  TranslatedName(LangBod(), name: "ཨཡིསུ་ལེན་ཌ།"),
+  TranslatedName(LangCos(), name: "Islanda"),
+  TranslatedName(LangChu(), name: "Исландъ"),
+  TranslatedName(LangChv(), name: "Исланди"),
+  TranslatedName(LangDiv(), name: "އައިސްލަންޑަން"),
+  TranslatedName(LangGrn(), name: "Iylanda"),
+  TranslatedName(LangGlv(), name: "Yn Eeslynn"),
+  TranslatedName(LangHat(), name: "Islann"),
+  TranslatedName(LangIle(), name: "Island"),
+  TranslatedName(LangIdo(), name: "Islando"),
+  TranslatedName(LangKon(), name: "Islande"),
+  TranslatedName(LangKal(), name: "Islandi"),
+  TranslatedName(LangKom(), name: "Исландия"),
+  TranslatedName(LangCor(), name: "Island"),
+  TranslatedName(LangLat(), name: "Islandia"),
+  TranslatedName(LangLim(), name: "Iesland"),
+  TranslatedName(LangMri(), name: "Tiorangi"),
+  TranslatedName(LangNau(), name: "Aiterand"),
+  TranslatedName(LangNav(), name: "Tin Bikéyah"),
+  TranslatedName(LangOci(), name: "Islàndia"),
+  TranslatedName(LangOss(), name: "Исланди"),
+  TranslatedName(LangKin(), name: "Isilande"),
+  TranslatedName(LangSan(), name: "आइसलैंड"),
+  TranslatedName(LangSrd(), name: "Islanda"),
+  TranslatedName(LangSmo(), name: "Aiselani"),
+  TranslatedName(LangSsw(), name: "Echweni"),
+  TranslatedName(LangSun(), name: "Islandia"),
+  TranslatedName(LangTgl(), name: "Lupangyelo"),
+  TranslatedName(LangVol(), name: "Lisladeän"),
+  TranslatedName(LangWln(), name: "Izlande"),
 ];

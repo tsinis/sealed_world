@@ -2,21 +2,26 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a France country:
+/// Provides 161 translations for a France country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +29,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,30 +51,40 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -75,9 +94,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -85,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -95,21 +118,30 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
+/// - Southern Sotho
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -119,11 +151,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const fraCountryTranslations = [
   CountryName(
@@ -333,4 +367,38 @@ const fraCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Faranse"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Faranse", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-France"),
+  TranslatedName(LangArg(), name: "Francia"),
+  TranslatedName(LangAym(), name: "Phransiya"),
+  TranslatedName(LangBak(), name: "Франция"),
+  TranslatedName(LangBis(), name: "Franis"),
+  TranslatedName(LangBod(), name: "ཧྥ་རན་སི།"),
+  TranslatedName(LangCos(), name: "Francia"),
+  TranslatedName(LangChu(), name: "Франкїꙗ"),
+  TranslatedName(LangChv(), name: "Франци"),
+  TranslatedName(LangDiv(), name: "ފަރަންސޭސިވިލާތް"),
+  TranslatedName(LangGrn(), name: "Hyãsia"),
+  TranslatedName(LangGlv(), name: "Yn Rank"),
+  TranslatedName(LangHat(), name: "Frans"),
+  TranslatedName(LangIle(), name: "Francia"),
+  TranslatedName(LangIdo(), name: "Francia"),
+  TranslatedName(LangKon(), name: "Fwalansa"),
+  TranslatedName(LangKal(), name: "Frankrigi"),
+  TranslatedName(LangKom(), name: "Франция"),
+  TranslatedName(LangCor(), name: "Pow Frynk"),
+  TranslatedName(LangLat(), name: "Francia"),
+  TranslatedName(LangLim(), name: "Frankriek"),
+  TranslatedName(LangNau(), name: "Prant"),
+  TranslatedName(LangNav(), name: "Dáághahii Dineʼé Bikéyah"),
+  TranslatedName(LangOci(), name: "França"),
+  TranslatedName(LangKin(), name: "Ubufaransa"),
+  TranslatedName(LangSan(), name: "फ्रान्सदेशः"),
+  TranslatedName(LangSrd(), name: "Frantza"),
+  TranslatedName(LangSmo(), name: "Farani"),
+  TranslatedName(LangSsw(), name: "IFulansi"),
+  TranslatedName(LangSot(), name: "Fora"),
+  TranslatedName(LangSun(), name: "Perancis"),
+  TranslatedName(LangTgl(), name: "Pransiya"),
+  TranslatedName(LangTah(), name: "Farāni"),
+  TranslatedName(LangVol(), name: "Fransän"),
+  TranslatedName(LangZha(), name: "Fazgoz"),
 ];

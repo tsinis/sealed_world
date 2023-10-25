@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Ghana country:
+/// Provides 120 translations for a Ghana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +22,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -33,11 +36,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -51,11 +56,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -63,16 +71,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -80,12 +95,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -94,7 +111,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -256,4 +276,24 @@ const ghaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gana"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gana", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Ghana"),
+  TranslatedName(LangBak(), name: "Гана"),
+  TranslatedName(LangBod(), name: "ཀ་ན།"),
+  TranslatedName(LangChv(), name: "Гана"),
+  TranslatedName(LangDiv(), name: "ގާނާ"),
+  TranslatedName(LangFry(), name: "Gana"),
+  TranslatedName(LangGlg(), name: "Gana"),
+  TranslatedName(LangGlv(), name: "Yn Ghaney"),
+  TranslatedName(LangHat(), name: "Gana"),
+  TranslatedName(LangKon(), name: "Gana"),
+  TranslatedName(LangLat(), name: "Gana"),
+  TranslatedName(LangMri(), name: "Kāna"),
+  TranslatedName(LangNau(), name: "Gana"),
+  TranslatedName(LangNav(), name: "Gáana"),
+  TranslatedName(LangOss(), name: "Ганæ"),
+  TranslatedName(LangQue(), name: "Gana"),
+  TranslatedName(LangKin(), name: "Gana"),
+  TranslatedName(LangSan(), name: "घाना"),
+  TranslatedName(LangSsw(), name: "IGana"),
+  TranslatedName(LangVol(), name: "Ganän"),
+  TranslatedName(LangWln(), name: "Gana"),
 ];

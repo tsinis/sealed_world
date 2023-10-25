@@ -2,20 +2,27 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Canada country:
+/// Provides 147 translations for a Canada country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -23,8 +30,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,14 +51,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Inuktitut
+/// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -57,7 +73,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -72,12 +90,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -85,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -93,22 +118,30 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
+/// - Twi
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -228,4 +261,37 @@ const canCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kánádà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kánádà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Canada"),
+  TranslatedName(LangAbk(), name: "Канада"),
+  TranslatedName(LangArg(), name: "Canadá"),
+  TranslatedName(LangAva(), name: "Канада"),
+  TranslatedName(LangAym(), name: "Kanada"),
+  TranslatedName(LangBak(), name: "Канада"),
+  TranslatedName(LangBis(), name: "Kanada"),
+  TranslatedName(LangBod(), name: "ཁ་ན་ཌ།"),
+  TranslatedName(LangCos(), name: "Canadà"),
+  TranslatedName(LangChu(), name: "Канада"),
+  TranslatedName(LangChv(), name: "Канада"),
+  TranslatedName(LangDiv(), name: "ކެނެޑާ"),
+  TranslatedName(LangFry(), name: "Kanada"),
+  TranslatedName(LangGrn(), name: "Kanatã"),
+  TranslatedName(LangGlv(), name: "Yn Chanadey"),
+  TranslatedName(LangHat(), name: "Kanada"),
+  TranslatedName(LangIpk(), name: "Kanada"),
+  TranslatedName(LangIdo(), name: "Kanada"),
+  TranslatedName(LangIku(), name: "ᑲᓇᑕ"),
+  TranslatedName(LangKom(), name: "Канада"),
+  TranslatedName(LangCor(), name: "Kanada"),
+  TranslatedName(LangMri(), name: "Kānata"),
+  TranslatedName(LangNau(), name: "Kanada"),
+  TranslatedName(LangNav(), name: "Deeteel Bikéyah"),
+  TranslatedName(LangOci(), name: "Canadà"),
+  TranslatedName(LangOss(), name: "Канадæ"),
+  TranslatedName(LangKin(), name: "Kanada"),
+  TranslatedName(LangSan(), name: "केनडा"),
+  TranslatedName(LangSsw(), name: "IKhanada"),
+  TranslatedName(LangSun(), name: "Kanada"),
+  TranslatedName(LangTgl(), name: "Kanada"),
+  TranslatedName(LangTwi(), name: "Kanada"),
+  TranslatedName(LangTah(), name: "Tanata"),
+  TranslatedName(LangVol(), name: "Kanadän"),
 ];

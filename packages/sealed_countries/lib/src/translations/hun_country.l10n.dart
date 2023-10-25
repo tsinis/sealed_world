@@ -2,18 +2,23 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Hungary country:
+/// Provides 151 translations for a Hungary country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -24,9 +29,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,29 +51,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +92,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -90,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,13 +123,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -112,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -251,4 +282,35 @@ const hunCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Hungari"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Hungari", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Hungary"),
+  TranslatedName(LangAbk(), name: "Мадиартәыла"),
+  TranslatedName(LangArg(), name: "Hongría"),
+  TranslatedName(LangAym(), name: "Hunkariya"),
+  TranslatedName(LangBak(), name: "Венгрия"),
+  TranslatedName(LangBod(), name: "ཧུང་གྷ་རི།"),
+  TranslatedName(LangCos(), name: "Ungheria"),
+  TranslatedName(LangChu(), name: "Ѫгри"),
+  TranslatedName(LangChv(), name: "Венгри"),
+  TranslatedName(LangDiv(), name: "ހަންގޭރީ"),
+  TranslatedName(LangGrn(), name: "Hungyria"),
+  TranslatedName(LangGlv(), name: "Yn Ungaar"),
+  TranslatedName(LangHat(), name: "Ongri"),
+  TranslatedName(LangIle(), name: "Hungaria"),
+  TranslatedName(LangIdo(), name: "Hungaria"),
+  TranslatedName(LangKon(), name: "Hongrie"),
+  TranslatedName(LangKal(), name: "Ungarni"),
+  TranslatedName(LangKom(), name: "Мадьяр Му"),
+  TranslatedName(LangCor(), name: "Hungari"),
+  TranslatedName(LangLat(), name: "Hungaria"),
+  TranslatedName(LangLim(), name: "Hongarieë"),
+  TranslatedName(LangMri(), name: "Hanekari"),
+  TranslatedName(LangNau(), name: "Ungari"),
+  TranslatedName(LangNav(), name: "Hángewii"),
+  TranslatedName(LangOci(), name: "Ongria"),
+  TranslatedName(LangOss(), name: "Венгри"),
+  TranslatedName(LangKin(), name: "Hongiriya"),
+  TranslatedName(LangSan(), name: "हंगरी"),
+  TranslatedName(LangSsw(), name: "IHangareyi"),
+  TranslatedName(LangSun(), name: "Hungaria"),
+  TranslatedName(LangTgl(), name: "Unggarya"),
+  TranslatedName(LangVol(), name: "Macarän"),
 ];

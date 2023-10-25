@@ -2,17 +2,20 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Uzbekistan country:
+/// Provides 131 translations for a Uzbekistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,9 +24,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,6 +46,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -54,12 +61,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -68,14 +79,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -84,19 +99,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -105,9 +124,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const uzbCountryTranslations = [
@@ -317,4 +338,25 @@ const uzbCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Uzbekistan"),
+  TranslatedName(LangArg(), name: "Uzbekistán"),
+  TranslatedName(LangBak(), name: "Үзбәкстан"),
+  TranslatedName(LangBod(), name: "ཨུ་ཟ་བྷེ་ཁི་སི་ཐན།"),
+  TranslatedName(LangChv(), name: "Ӳспекстан"),
+  TranslatedName(LangDiv(), name: "އުޒްބެކިސްތާން"),
+  TranslatedName(LangGlv(), name: "Yn Oosbeckistaan"),
+  TranslatedName(LangHat(), name: "Ouzbekistan"),
+  TranslatedName(LangKom(), name: "Узбекистан"),
+  TranslatedName(LangCor(), name: "Pow Ousbek"),
+  TranslatedName(LangLat(), name: "Uzbecia"),
+  TranslatedName(LangLim(), name: "Oesbekistan"),
+  TranslatedName(LangNav(), name: "Ózbeʼ Bikéyah"),
+  TranslatedName(LangOci(), name: "Ozbequistan"),
+  TranslatedName(LangOss(), name: "Узбекистан"),
+  TranslatedName(LangKin(), name: "Uzubekisitani"),
+  TranslatedName(LangSan(), name: "उजबेकिस्थान"),
+  TranslatedName(LangSqi(), name: "Uzbekistani"),
+  TranslatedName(LangSsw(), name: "IZubekhi"),
+  TranslatedName(LangSun(), name: "Uzbékistan"),
+  TranslatedName(LangVol(), name: "Lusbekän"),
+  TranslatedName(LangYid(), name: "אוזבעקיסטאן"),
 ];

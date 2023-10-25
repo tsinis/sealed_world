@@ -2,31 +2,41 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Egypt country:
+/// Provides 159 translations for a Egypt country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Estonian
 /// - Ewe
 /// - Faroese
+/// - Fijian
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -42,14 +53,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -60,11 +75,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -74,36 +93,54 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
 /// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
+/// - Southern Sotho
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Tsonga
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
@@ -111,11 +148,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const egyCountryTranslations = [
   CountryName(
@@ -321,4 +361,44 @@ const egyCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Égípítì"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Égípítì", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Egypt"),
+  TranslatedName(LangAbk(), name: "Мы́сры"),
+  TranslatedName(LangArg(), name: "Echipto"),
+  TranslatedName(LangAva(), name: "Еги́пет"),
+  TranslatedName(LangAym(), name: "Iqiqtu"),
+  TranslatedName(LangBak(), name: "Мысыр"),
+  TranslatedName(LangBih(), name: "मिस्र"),
+  TranslatedName(LangBod(), name: "ཨའི་ཅི།"),
+  TranslatedName(LangCha(), name: "Ehiptu"),
+  TranslatedName(LangChu(), name: "Єгѷптъ"),
+  TranslatedName(LangDiv(), name: "މިޞްރު"),
+  TranslatedName(LangFij(), name: "Ijipta"),
+  TranslatedName(LangGrn(), name: "Ehipto"),
+  TranslatedName(LangGlv(), name: "Yn Egypt"),
+  TranslatedName(LangHat(), name: "Ejip"),
+  TranslatedName(LangIle(), name: "Egiptia"),
+  TranslatedName(LangIdo(), name: "Egiptia"),
+  TranslatedName(LangKon(), name: "Misiri"),
+  TranslatedName(LangKom(), name: "Египет"),
+  TranslatedName(LangCor(), name: "Ejyp"),
+  TranslatedName(LangLat(), name: "Aegyptus"),
+  TranslatedName(LangLim(), name: "Egypte"),
+  TranslatedName(LangMri(), name: "Īhipa"),
+  TranslatedName(LangNau(), name: "Idjipt"),
+  TranslatedName(LangNav(), name: "Ííjip"),
+  TranslatedName(LangOci(), name: "Egipte"),
+  TranslatedName(LangOrm(), name: "Ijiipti"),
+  TranslatedName(LangOss(), name: "Мысыр"),
+  TranslatedName(LangPli(), name: "ईजिप्ट"),
+  TranslatedName(LangSan(), name: "ईजिप्तदेशः"),
+  TranslatedName(LangSrd(), name: "Egittu"),
+  TranslatedName(LangSmo(), name: "Aikupito"),
+  TranslatedName(LangSsw(), name: "iGibhithe"),
+  TranslatedName(LangSot(), name: "Egepeta"),
+  TranslatedName(LangSun(), name: "Mesir"),
+  TranslatedName(LangTgl(), name: "Ehipto"),
+  TranslatedName(LangTso(), name: "Gibita"),
+  TranslatedName(LangTah(), name: "’Aifiti"),
+  TranslatedName(LangVol(), name: "Lägüptän"),
+  TranslatedName(LangWln(), name: "Edjipe"),
+  TranslatedName(LangZha(), name: "Aehciz"),
 ];

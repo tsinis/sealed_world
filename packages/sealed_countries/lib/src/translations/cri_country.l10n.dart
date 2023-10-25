@@ -2,27 +2,33 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Costa Rica country:
+/// Provides 135 translations for a Costa Rica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bihari
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,12 +43,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Irish
@@ -54,11 +63,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -67,17 +79,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
+/// - Occitan
 /// - Oriya
+/// - Oromo
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Pāli
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -86,13 +108,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -101,7 +126,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -307,4 +334,31 @@ const criCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kuusita Ríkà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kuusita Ríkà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Costa Rica"),
+  TranslatedName(LangAbk(), name: "Коста-Рика"),
+  TranslatedName(LangAym(), name: "Kustarika"),
+  TranslatedName(LangBak(), name: "Коста-Рика"),
+  TranslatedName(LangBih(), name: "कोस्टा रिका"),
+  TranslatedName(LangBod(), name: "ཁོ་ས་ཏ་རི་ཁ"),
+  TranslatedName(LangDiv(), name: "ކޮސްޓަރީކާ"),
+  TranslatedName(LangFry(), name: "Kosta Rika"),
+  TranslatedName(LangGrn(), name: "Kosta Rrika"),
+  TranslatedName(LangGlv(), name: "Yn Coose Berçhagh"),
+  TranslatedName(LangHat(), name: "Kostarika"),
+  TranslatedName(LangIdo(), name: "Kosta Rika"),
+  TranslatedName(LangKom(), name: "Коста-Рика"),
+  TranslatedName(LangCor(), name: "Kosta Rika"),
+  TranslatedName(LangLat(), name: "Ora Opulenta"),
+  TranslatedName(LangMri(), name: "Koto Rika"),
+  TranslatedName(LangNau(), name: "Kosta Rika"),
+  TranslatedName(LangOci(), name: "Còsta Rica"),
+  TranslatedName(LangOrm(), name: "Kostaa Rikaa"),
+  TranslatedName(LangOss(), name: "Коста-Рикæ"),
+  TranslatedName(LangPli(), name: "कोस्टा रीका"),
+  TranslatedName(LangQue(), name: "Kustarika"),
+  TranslatedName(LangKin(), name: "Kosita Rika"),
+  TranslatedName(LangSan(), name: "कोस्टा रीका"),
+  TranslatedName(LangSmo(), name: "Kosta Rika"),
+  TranslatedName(LangSsw(), name: "IKhosta-Likha"),
+  TranslatedName(LangSun(), name: "Kosta Rika"),
+  TranslatedName(LangVol(), name: "Kostarikän"),
 ];

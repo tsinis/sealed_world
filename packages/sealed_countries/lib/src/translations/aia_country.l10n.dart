@@ -2,17 +2,19 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 102 translations for a Anguilla country:
+/// Provides 109 translations for a Anguilla country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
@@ -22,8 +24,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -44,6 +48,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -51,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
@@ -82,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -202,4 +209,11 @@ const aiaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Ààngúlílà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Ààngúlílà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Anguilla"),
+  TranslatedName(LangArg(), name: "Anguila"),
+  TranslatedName(LangBak(), name: "Ангилья"),
+  TranslatedName(LangDiv(), name: "އަންގީލާ"),
+  TranslatedName(LangIdo(), name: "Anguila"),
+  TranslatedName(LangCor(), name: "Angwilla"),
+  TranslatedName(LangKin(), name: "Angwiya"),
+  TranslatedName(LangTgl(), name: "Anggilya"),
 ];

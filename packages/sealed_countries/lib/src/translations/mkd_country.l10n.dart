@@ -2,94 +2,137 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a North Macedonia country:
+/// Provides 156 translations for a North Macedonia country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
+/// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
+/// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
+/// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
 /// - Nepali
+/// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -99,9 +142,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const mkdCountryTranslations = [
@@ -307,4 +353,50 @@ const mkdCountryTranslations = [
   TranslatedName(LangXho(), name: "uMntla Macedonia"),
   TranslatedName(LangYor(), name: "Àríwá Macedonia"),
   TranslatedName(LangZul(), name: "i-North Macedonia"),
+  TranslatedName(LangAka(), name: "Masedonia"),
+  TranslatedName(LangArg(), name: "Republica de Macedonia"),
+  TranslatedName(LangBak(), name: "Македония Республикаһы"),
+  TranslatedName(LangBis(), name: "Macedonia"),
+  TranslatedName(LangBod(), name: "མ་སེ་ཌོ་ནིཡ། (རྒྱལ་ཁབ།)"),
+  TranslatedName(LangChe(), name: "Македони"),
+  TranslatedName(LangChu(), name: "Макєдонїꙗ"),
+  TranslatedName(LangChv(), name: "Македони Республики"),
+  TranslatedName(LangDiv(), name: "މެސެޑޯނިއާ"),
+  TranslatedName(LangDzo(), name: "མ་སེ་ཌོ་ནི་ཡ་ [ཡུ་གོ་སླཱ་བི་ཡ]"),
+  TranslatedName(LangEwe(), name: "Makedonia"),
+  TranslatedName(LangEpo(), name: "Nord-Makedonio"),
+  TranslatedName(LangFul(), name: "Meceduwaan"),
+  TranslatedName(LangFao(), name: "Makedónia"),
+  TranslatedName(LangFry(), name: "Noard-Masedoanje"),
+  TranslatedName(LangGrn(), name: "Masendoña"),
+  TranslatedName(LangGlv(), name: "Massadoan Hwoaie"),
+  TranslatedName(LangHat(), name: "Repiblik d Masedoni"),
+  TranslatedName(LangIle(), name: "Macedonia"),
+  TranslatedName(LangIdo(), name: "Republiko Macedonia"),
+  TranslatedName(LangJav(), name: "Républik Makedonia"),
+  TranslatedName(LangKon(), name: "Makedonia"),
+  TranslatedName(LangKik(), name: "Masedonia"),
+  TranslatedName(LangKal(), name: "Makedonia"),
+  TranslatedName(LangKom(), name: "Македония Республика"),
+  TranslatedName(LangCor(), name: "Repoblek Makedoni"),
+  TranslatedName(LangLat(), name: "Macedonia Septentrionalis"),
+  TranslatedName(LangLug(), name: "Masedoniya"),
+  TranslatedName(LangLim(), name: "Noord-Macedonië"),
+  TranslatedName(LangLin(), name: "Masedoni"),
+  TranslatedName(LangMlg(), name: "Makedonia"),
+  TranslatedName(LangNau(), name: "Matedoniya"),
+  TranslatedName(LangOci(), name: "Republica de Macedònia"),
+  TranslatedName(LangOss(), name: "Республикæ Македони"),
+  TranslatedName(LangRoh(), name: "Macedonia"),
+  TranslatedName(LangRun(), name: "Masedoniya"),
+  TranslatedName(LangSan(), name: "मेसेडोनिया"),
+  TranslatedName(LangSrd(), name: "Matzedònia"),
+  TranslatedName(LangSme(), name: "Davvi-Makedonia"),
+  TranslatedName(LangSag(), name: "Maseduäni"),
+  TranslatedName(LangSna(), name: "Macedonia"),
+  TranslatedName(LangSsw(), name: "IMakhedoniya"),
+  TranslatedName(LangSun(), name: "Makédonia"),
+  TranslatedName(LangTgl(), name: "Republika ng Masedonya"),
+  TranslatedName(LangVol(), name: "Nolüda-Makedoniyän"),
+  TranslatedName(LangYid(), name: "רעפובליק פון מאקעדאניע"),
 ];

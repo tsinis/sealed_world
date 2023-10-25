@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Guatemala country:
+/// Provides 120 translations for a Guatemala country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -11,8 +11,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Arabic
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -21,8 +23,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Cornish
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -37,6 +41,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -51,10 +56,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -63,16 +70,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
 /// - Nepali
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -80,12 +94,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -94,7 +112,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -292,4 +312,24 @@ const gtmCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Guatemala"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Guatemala", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Guatemala"),
+  TranslatedName(LangAym(), name: "Watimala"),
+  TranslatedName(LangBak(), name: "Гватемала"),
+  TranslatedName(LangBod(), name: "གུ་ཝེ་ཐི་མ་ལ།"),
+  TranslatedName(LangDiv(), name: "ގުއަޓެމާލާ"),
+  TranslatedName(LangFry(), name: "Gûatemala"),
+  TranslatedName(LangGlv(), name: "Yn Ghuatemaley"),
+  TranslatedName(LangHat(), name: "Gwatemala"),
+  TranslatedName(LangCor(), name: "Gwatemala"),
+  TranslatedName(LangLat(), name: "Guatimalia"),
+  TranslatedName(LangMri(), name: "Kuatamāra"),
+  TranslatedName(LangNau(), name: "Guatemara"),
+  TranslatedName(LangOss(), name: "Гватемалæ"),
+  TranslatedName(LangQue(), name: "Watimala"),
+  TranslatedName(LangKin(), name: "Gwatemala"),
+  TranslatedName(LangSan(), name: "ग्वाटेमाला"),
+  TranslatedName(LangSmo(), name: "Tuatemala"),
+  TranslatedName(LangSsw(), name: "IGwathamala"),
+  TranslatedName(LangSun(), name: "Guatémala"),
+  TranslatedName(LangTgl(), name: "Guwatemala"),
+  TranslatedName(LangVol(), name: "Gvatemän"),
 ];

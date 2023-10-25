@@ -2,21 +2,27 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Italy country:
+/// Provides 160 translations for a Italy country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
+/// - Bislama
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
@@ -24,9 +30,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -42,30 +52,40 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
+/// - Kongo
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -75,9 +95,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -85,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -95,7 +119,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -103,8 +130,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
+/// - Tahitian
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -119,6 +150,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -344,4 +378,38 @@ const itaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Itáli"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Itáli", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Italy"),
+  TranslatedName(LangAbk(), name: "Италиа"),
+  TranslatedName(LangArg(), name: "Italia"),
+  TranslatedName(LangAym(), name: "Italiya"),
+  TranslatedName(LangBak(), name: "Италия"),
+  TranslatedName(LangBis(), name: "Itali"),
+  TranslatedName(LangCos(), name: "Italia"),
+  TranslatedName(LangChu(), name: "Италїꙗ"),
+  TranslatedName(LangChv(), name: "Итали"),
+  TranslatedName(LangDiv(), name: "އިޓަލީވިލާތް"),
+  TranslatedName(LangGrn(), name: "Itália"),
+  TranslatedName(LangGlv(), name: "Yn Iddaal"),
+  TranslatedName(LangHat(), name: "Itali"),
+  TranslatedName(LangIle(), name: "Italia"),
+  TranslatedName(LangIdo(), name: "Italia"),
+  TranslatedName(LangKon(), name: "Italia"),
+  TranslatedName(LangKal(), name: "Italia"),
+  TranslatedName(LangKom(), name: "Италия"),
+  TranslatedName(LangCor(), name: "Itali"),
+  TranslatedName(LangLat(), name: "Italia"),
+  TranslatedName(LangLim(), name: "Italië"),
+  TranslatedName(LangNau(), name: "Itari"),
+  TranslatedName(LangNav(), name: "Ídelii"),
+  TranslatedName(LangOci(), name: "Itàlia"),
+  TranslatedName(LangKin(), name: "Ubutaliyani"),
+  TranslatedName(LangSan(), name: "इटली"),
+  TranslatedName(LangSrd(), name: "Itàlia"),
+  TranslatedName(LangSmo(), name: "Italia"),
+  TranslatedName(LangSsw(), name: "INtaliyane"),
+  TranslatedName(LangSun(), name: "Italia"),
+  TranslatedName(LangTgl(), name: "Italya"),
+  TranslatedName(LangTah(), name: "’Itāria"),
+  TranslatedName(LangVie(), name: "Ý"),
+  TranslatedName(LangVol(), name: "Litaliyän"),
+  TranslatedName(LangWln(), name: "Itåleye"),
 ];

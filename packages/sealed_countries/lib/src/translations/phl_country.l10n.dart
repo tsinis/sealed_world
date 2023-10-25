@@ -2,13 +2,14 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Philippines country:
+/// Provides 148 translations for a Philippines country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -23,9 +24,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -41,14 +45,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -58,12 +66,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
@@ -73,14 +85,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Malay
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -89,7 +107,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,13 +117,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -112,11 +136,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
+/// - Walloon
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const phlCountryTranslations = [
   CountryName(
@@ -332,4 +359,31 @@ const phlCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède filipini"),
   TranslatedName(LangYor(), name: "Orílɛ́ède filipini", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Philippines"),
+  TranslatedName(LangArg(), name: "Filipinas"),
+  TranslatedName(LangBod(), name: "ཧྥི་ལི་པིན།"),
+  TranslatedName(LangChv(), name: "Филиппин"),
+  TranslatedName(LangDiv(), name: "ފިލިޕީންސް"),
+  TranslatedName(LangGrn(), name: "Filipina"),
+  TranslatedName(LangGlv(), name: "Ny h-Ellanyn Philippeenagh"),
+  TranslatedName(LangHat(), name: "Filipin"),
+  TranslatedName(LangIle(), name: "Filipines"),
+  TranslatedName(LangIdo(), name: "Filipini"),
+  TranslatedName(LangKom(), name: "Филиппинъяс"),
+  TranslatedName(LangCor(), name: "Filipinys"),
+  TranslatedName(LangLat(), name: "Philippinae"),
+  TranslatedName(LangLim(), name: "Filipiene"),
+  TranslatedName(LangMri(), name: "Piripīni"),
+  TranslatedName(LangNau(), name: "Eben Piripin"),
+  TranslatedName(LangNav(), name: "Kéyah Dańlíinii"),
+  TranslatedName(LangOci(), name: "Filipinas"),
+  TranslatedName(LangOss(), name: "Филиппинтæ"),
+  TranslatedName(LangKin(), name: "Filipine"),
+  TranslatedName(LangSan(), name: "कलिंगद्वीप"),
+  TranslatedName(LangSmo(), name: "Filipaina"),
+  TranslatedName(LangSsw(), name: "IFiliphayi"),
+  TranslatedName(LangSun(), name: "Pilipina"),
+  TranslatedName(LangTgl(), name: "Pilipinas"),
+  TranslatedName(LangVol(), name: "Filipuäns"),
+  TranslatedName(LangWln(), name: "Filipenes"),
+  TranslatedName(LangZha(), name: "Feihlizbinh"),
 ];

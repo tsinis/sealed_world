@@ -2,18 +2,23 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Kazakhstan country:
+/// Provides 145 translations for a Kazakhstan country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
+/// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,9 +27,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
+/// - Cornish
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -40,43 +48,59 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Ido
 /// - Indonesian
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
 /// - Kirundi
+/// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malayalam
 /// - Maltese
+/// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nauruan
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -86,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -93,13 +118,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -108,10 +136,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const kazCountryTranslations = [
   CountryName(
@@ -320,4 +351,35 @@ const kazCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Kaṣaṣatani"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Kashashatani", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Kazakhstan"),
+  TranslatedName(LangAbk(), name: "Ҟазаҟсҭан"),
+  TranslatedName(LangArg(), name: "Cazaquistán"),
+  TranslatedName(LangAva(), name: "Хъазахъистан"),
+  TranslatedName(LangBak(), name: "Ҡаҙағстан"),
+  TranslatedName(LangBod(), name: "ཀཛ་ཀིསུ་གཏན།"),
+  TranslatedName(LangChu(), name: "Каꙁахстанъ"),
+  TranslatedName(LangChv(), name: "Казахстан"),
+  TranslatedName(LangDiv(), name: "ކަޒަކިސްތާން"),
+  TranslatedName(LangGrn(), name: "Kazajistán"),
+  TranslatedName(LangGlv(), name: "Yn Chassaghstaan"),
+  TranslatedName(LangHat(), name: "Kazakstan"),
+  TranslatedName(LangIle(), name: "Kazakstan"),
+  TranslatedName(LangIdo(), name: "Kazakstan"),
+  TranslatedName(LangKal(), name: "Kasakhstani"),
+  TranslatedName(LangKom(), name: "Казахстан"),
+  TranslatedName(LangCor(), name: "Pow Kazagh"),
+  TranslatedName(LangLat(), name: "Kazachstania"),
+  TranslatedName(LangLim(), name: "Kazachstan"),
+  TranslatedName(LangMlg(), name: "Kazakstàna"),
+  TranslatedName(LangMri(), name: "Katatānga"),
+  TranslatedName(LangNau(), name: "Kadaketan"),
+  TranslatedName(LangNav(), name: "Kʼazah Bikéyah"),
+  TranslatedName(LangOci(), name: "Cazacstan"),
+  TranslatedName(LangOss(), name: "Хъазахстан"),
+  TranslatedName(LangKin(), name: "Kazakisitani"),
+  TranslatedName(LangSan(), name: "कजाकस्थान"),
+  TranslatedName(LangSsw(), name: "IKhazakhi"),
+  TranslatedName(LangSun(), name: "Kazastan"),
+  TranslatedName(LangVol(), name: "Kazakistän"),
+  TranslatedName(LangYid(), name: "קאזאכסטאן"),
+  TranslatedName(LangZha(), name: "Hahsazgwswhdanj"),
 ];

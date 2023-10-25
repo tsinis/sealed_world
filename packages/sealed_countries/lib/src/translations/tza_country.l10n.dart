@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Tanzania country:
+/// Provides 119 translations for a Tanzania country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -13,6 +13,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Bashkir
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,8 +23,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -39,6 +42,7 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Haitian (Haitian Creole)
 /// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
@@ -52,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
@@ -67,17 +72,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Oriya
+/// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -85,12 +96,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swati
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -99,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Volapük
 /// - Welsh
 /// - Wolof
 /// - Yiddish
@@ -302,4 +316,18 @@ const tzaCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Tàǹsáníà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Tàǹsáníà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Tanzania"),
+  TranslatedName(LangBak(), name: "Танзания"),
+  TranslatedName(LangBod(), name: "ཏན་ཛ་ནི་ཡ།"),
+  TranslatedName(LangChv(), name: "Танзани"),
+  TranslatedName(LangDiv(), name: "ޓެންޒޭނިއާ"),
+  TranslatedName(LangHat(), name: "Tanzani"),
+  TranslatedName(LangMri(), name: "Tānahia"),
+  TranslatedName(LangNav(), name: "Tʼanzanííya"),
+  TranslatedName(LangOss(), name: "Танзани"),
+  TranslatedName(LangQue(), name: "Tansanya"),
+  TranslatedName(LangKin(), name: "Tanzaniya"),
+  TranslatedName(LangSan(), name: "टंजानिया"),
+  TranslatedName(LangSrd(), name: "Tanzània"),
+  TranslatedName(LangSsw(), name: "IThanzaniya"),
+  TranslatedName(LangVol(), name: "Tansanän"),
 ];
