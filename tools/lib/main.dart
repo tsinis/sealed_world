@@ -1,5 +1,31 @@
-import "generators/data_list_generator.dart";
-import "models/package.dart";
+// ignore_for_file: avoid_print, avoid-non-ascii-symbols
+import "package:change_case/change_case.dart";
 
-Future<void> main() =>
-    const DataListGenerator().generate(Package.sealedCurrencies);
+import "constants/path_constants.dart";
+import "generators/helpers/extensions/package_associations_extension.dart";
+import "models/package.dart";
+import "utils/io_utils.dart";
+import "utils/json_utils.dart";
+
+Future<void> main() async {
+  const package = Package.sealedCountries;
+  final exports = await const JsonUtils(Package.sealedCountries).parseByItems();
+
+  final dataType = package.dataRepresent;
+  final buffer = StringBuffer(
+    """
+// This library translations are based on the data from the
+// ${package.umpirskyRepoUrl} project (from Saša Stamenković),
+// which is licensed under the MIT License.
+
+/// Provides $dataType translations for ${package.dirName}.
+""",
+  )..write(
+      "library sealed_${dataType}_${JsonUtils.translation};\n".toLowerCase(),
+    );
+  for (final export in exports) buffer.writeln('export "$export";');
+  final filename = "$dataType ${JsonUtils.translation}".toSnakeCase();
+
+  final path = join(JsonUtils.translation, "$filename.${PathConstants.dart}");
+  IoUtils().writeContentToFile(path, buffer);
+}

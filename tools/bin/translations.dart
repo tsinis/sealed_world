@@ -18,7 +18,7 @@ Future<void> main(List<String> args) async {
     ..moveJsonFiles(clonedDir)
     ..deleteDirectory(clonedDir);
 
-  final exports = await JsonUtils(package).parseData();
+  final exports = await JsonUtils(package).parseByLanguage();
 
   final dataType = package.dataRepresent;
   final buffer = StringBuffer(

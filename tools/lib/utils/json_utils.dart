@@ -3,6 +3,7 @@ import "dart:convert";
 
 import "package:change_case/change_case.dart";
 import "package:sealed_countries/sealed_countries.dart";
+import "package:yaml/yaml.dart";
 
 import "../constants/path_constants.dart";
 import "../generators/helpers/extensions/package_associations_extension.dart";
@@ -23,7 +24,7 @@ final class JsonUtils {
 
   Directory get dataDirectory => Directory(dataDirPath);
 
-  Future<List<String>> parseData() async {
+  Future<List<String>> parseByLanguage() async {
     final stopwatch = Stopwatch()..start();
     final paths = <String>[];
     final io = IoUtils()..createDirectory(translation);
@@ -60,6 +61,72 @@ final class JsonUtils {
         final isAdded = translations.add(translated);
         if (!isAdded) continue;
         print("* Add ${translated.language.name} total ${translations.length}");
+      }
+
+      final translationCode = item.code.toLowerCase();
+      final dataType = package.dataRepresent;
+      final varFileName = "$translationCode $dataType $translation";
+      final fileNameFull =
+          """${translationCode}_${dataType.toLowerCase()}.l10n.${PathConstants.dart}""";
+      final filePath = join(translation, fileNameFull);
+      paths.add(fileNameFull);
+      final buffer = StringBuffer(
+        """
+${_dartDoc(translations, itemFromCode.name, dataType)}.
+const ${varFileName.toCamelCase()} = [
+""",
+      );
+      for (final element in translations) buffer.write("$element,\n");
+      buffer.write("];");
+      io.writeContentToFile(filePath, buffer);
+      buffer.clear();
+      translations.clear();
+    }
+
+    await _dart.fixFormat();
+    stopwatch.stop();
+    print("\n🎉 Done! Generation process took ${stopwatch.elapsed}");
+
+    return paths;
+  }
+
+  // ignore: long-method, TODO: refactor.
+  Future<List<String>> parseByItems() async {
+    final stopwatch = Stopwatch()..start();
+    final paths = <String>[];
+    final io = IoUtils()..createDirectory(translation);
+    for (final item in [package.dataList.last]) {
+      final itemFromCode = _instanceFromCode(item.code);
+      if (itemFromCode == null) continue; // Might be more items in the source.
+      final translations = package.translations(item.code).toSet();
+      final english = translations.firstWhere((e) => e.language == eng);
+      final length = translations.length;
+      print("\nExtracting translations for: ${itemFromCode.name}\n");
+      final codeShort = item.codeOther?.toLowerCase();
+      final file = File(join(dataDirectory.path, "$codeShort.yaml"));
+      if (!file.existsSync()) continue;
+      final yamlString = file.readAsStringSync();
+      final yaml = loadYaml(yamlString) as YamlMap;
+      final map = Map<String, String>.from(yaml["name"] as Map);
+      for (final entry in map.entries) {
+        final l10n = NaturalLanguage.maybeFromValue(
+          entry.key.toUpperCase().trim(),
+          where: (l) => l.codeShort,
+        );
+        if (l10n == null) continue;
+        if (translations.any((e) => e.language == l10n)) continue;
+        final translation = entry.value.trim();
+        if (translation.toLowerCase() == english.name.toLowerCase()) continue;
+        final translated = TranslatedName(l10n, name: translation);
+        final isAdded = translations.add(translated);
+        if (!isAdded) continue;
+        print("* Add ${translated.language.name} total ${translations.length}");
+      }
+
+      if (translations.length == length) {
+        print(":( No translations for ${item.name}");
+        translations.clear();
+        continue;
       }
 
       final translationCode = item.code.toLowerCase();
