@@ -44,7 +44,7 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 | `postalCode` | Yes | The postal code information of the country. | `PostalCode` with format and regExp |
 | `startOfWeek` | Yes | The first day of the week in the country. | `Weekday.monday` |
 | `regionalBlocs` | No | The regional blocs of the country. | `[BlocEU()]` |
-| `translations` | Yes | The translations of the country name. | List of 25 `TranslatedName`s in different languages |
+| `translations` | Yes | The translations of the country name. | List of 150 `TranslatedName`s in different languages |
 
 Compile time constant list of all countries accessible via `WorldCountry.list` and more over, the **WorldCountry** class provides the following methods:
 

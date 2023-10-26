@@ -25,4 +25,10 @@ void main() {
       "${country.name.common} code: ${country.idd.phoneCode()}",
     );
   }
+
+  for (final country in WorldCountry.list) {
+    print(
+      """${country.name.common} translated to Slovak language: ${country.translation(const LangSlk()).name}""",
+    );
+  }
 }
