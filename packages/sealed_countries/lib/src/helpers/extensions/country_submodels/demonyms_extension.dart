@@ -37,11 +37,11 @@ extension DemonymsExtension on Demonyms {
       );
 
   /// {@macro to_map_method}
-  Map<String, Object?> toMap() =>
+  JsonObjectMap toMap() =>
       {"language": language.code, "female": female, "male": male};
 
   /// {@macro from_map_method}
-  static Demonyms fromMap(Map<String, dynamic> map) => Demonyms(
+  static Demonyms fromMap(JsonMap map) => Demonyms(
         language: NaturalLanguage.fromCode(map["language"].toString()),
         female: map["female"] as String,
         male: map["male"] as String,

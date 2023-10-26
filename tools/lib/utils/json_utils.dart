@@ -2,7 +2,8 @@
 import "dart:convert";
 
 import "package:change_case/change_case.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
+import "package:sealed_countries/sealed_countries.dart";
+import "package:yaml/yaml.dart";
 
 import "../constants/path_constants.dart";
 import "../generators/helpers/extensions/package_associations_extension.dart";
@@ -23,7 +24,7 @@ final class JsonUtils {
 
   Directory get dataDirectory => Directory(dataDirPath);
 
-  Future<List<String>> parseData() async {
+  Future<List<String>> parseByLanguage() async {
     final stopwatch = Stopwatch()..start();
     final paths = <String>[];
     final io = IoUtils()..createDirectory(translation);
@@ -35,8 +36,9 @@ final class JsonUtils {
       if (itemFromCode == null) continue; // Might be more items in the source.
       print("\nExtracting translations for: ${itemFromCode.name}\n");
       final english = englishData[itemFromCode];
-      final translations = <TranslatedName>{};
-      if (english != null) translations.add(TranslatedName(eng, name: english));
+      final translations = package.translations(item.code).toSet();
+      if (english != null && translations.isEmpty)
+        translations.add(TranslatedName(eng, name: english));
       for (final dir in directories) {
         final dirName = basename(dir.path);
         final translation = _extractL10N(dirName);
@@ -45,6 +47,9 @@ final class JsonUtils {
         final translationForLang = translation[itemFromCode];
         if (lang == null || translationForLang == null) continue;
         if (translationForLang == english) continue;
+        final containsWithFullName =
+            translations.any((e) => e.language == lang && e.fullName != null);
+        if (containsWithFullName) continue;
         final script = locale.scriptCode;
         final translated = TranslatedName(
           lang,
@@ -55,9 +60,7 @@ final class JsonUtils {
 
         final isAdded = translations.add(translated);
         if (!isAdded) continue;
-        print(
-          ''' * Add ${translated.language.name}: "${translated.name}" translation (total: ${translations.length})''',
-        );
+        print("* Add ${translated.language.name} total ${translations.length}");
       }
 
       final translationCode = item.code.toLowerCase();
@@ -69,9 +72,7 @@ final class JsonUtils {
       paths.add(fileNameFull);
       final buffer = StringBuffer(
         """
-import "package:sealed_languages/sealed_languages.dart";
-
-${_dartDoc(translations, itemFromCode.name.toString(), dataType)}.
+${_dartDoc(translations, itemFromCode.name, dataType)}.
 const ${varFileName.toCamelCase()} = [
 """,
       );
@@ -89,12 +90,81 @@ const ${varFileName.toCamelCase()} = [
     return paths;
   }
 
-  String _dartDoc(Set<TranslatedName> translations, String name, String type) {
-    final sorted = List.of(translations.map((e) => e.language.name))..sort();
+  Future<List<String>> parseByItems() async {
+    final stopwatch = Stopwatch()..start();
+    final paths = <String>[];
+    final io = IoUtils()..createDirectory(translation);
+    for (final item in [package.dataList.last]) {
+      final itemFromCode = _instanceFromCode(item.code);
+      if (itemFromCode == null) continue; // Might be more items in the source.
+      final translations = package.translations(item.code).toSet();
+      final english = translations.firstWhere((e) => e.language == eng);
+      final length = translations.length;
+      print("\nExtracting translations for: ${itemFromCode.name}\n");
+      final codeShort = item.codeOther?.toLowerCase();
+      final file = File(join(dataDirectory.path, "$codeShort.yaml"));
+      if (!file.existsSync()) continue;
+      final yamlString = file.readAsStringSync();
+      final yaml = loadYaml(yamlString) as YamlMap;
+      final map = Map<String, String>.from(yaml["name"] as Map);
+      for (final entry in map.entries) {
+        final l10n = NaturalLanguage.maybeFromValue(
+          entry.key.toUpperCase().trim(),
+          where: (l) => l.codeShort,
+        );
+        if (l10n == null) continue;
+        if (translations.any((e) => e.language == l10n)) continue;
+        final translation = entry.value.trim();
+        if (translation.toLowerCase() == english.name.toLowerCase()) continue;
+        final translated = TranslatedName(l10n, name: translation);
+        final isAdded = translations.add(translated);
+        if (!isAdded) continue;
+        print("* Add ${translated.language.name} total ${translations.length}");
+      }
 
-    final buffer = StringBuffer(
-      "/// Provides ${translations.length} $translation for a $name $type:",
-    );
+      if (translations.length == length) {
+        print(":( No translations for ${item.name}");
+        translations.clear();
+        continue;
+      }
+
+      final translationCode = item.code.toLowerCase();
+      final dataType = package.dataRepresent;
+      final varFileName = "$translationCode $dataType $translation";
+      final fileNameFull =
+          """${translationCode}_${dataType.toLowerCase()}.l10n.${PathConstants.dart}""";
+      final filePath = join(translation, fileNameFull);
+      paths.add(fileNameFull);
+      final buffer = StringBuffer(
+        """
+${_dartDoc(translations, itemFromCode.name, dataType)}.
+const ${varFileName.toCamelCase()} = [
+""",
+      );
+      for (final element in translations) buffer.write("$element,\n");
+      buffer.write("];");
+      io.writeContentToFile(filePath, buffer);
+      buffer.clear();
+      translations.clear();
+    }
+
+    await _dart.fixFormat();
+    stopwatch.stop();
+    print("\n🎉 Done! Generation process took ${stopwatch.elapsed}");
+
+    return paths;
+  }
+
+  String _dartDoc(Set<TranslatedName> translations, Object name, String type) {
+    final stringName = name is TranslatedName ? name.name : name.toString();
+    final sorted = List.of(translations.map((e) => e.language.name))..sort();
+    final import = package.whenConstOrNull(sealedCountries: package.dirName) ??
+        Package.sealedLanguages.dirName;
+
+    final buffer = StringBuffer('import "package:$import/$import.dart";\n')
+      ..write(
+        "/// Provides ${translations.length} $translation for a $stringName $type:",
+      );
     for (final name in Set.unmodifiable(sorted)) buffer.write("\n /// - $name");
 
     return buffer.toString();
@@ -136,11 +206,22 @@ const ${varFileName.toCamelCase()} = [
     mapToUpdate[const FiatZwl()] = withoutYear.trim();
   }
 
-  IsoStandardized? _instanceFromCode(String code) =>
-      package.whenOrNull<IsoStandardized?>(
+  IsoStandardized<Object>? _instanceFromCode(String code) => package.when(
         sealedCurrencies: () => _convertCodeToCurrency(code),
         sealedLanguages: () => _convertCodeToLang(code),
+        sealedCountries: () => _convertCodeToCountry(code),
       );
+
+  WorldCountry? _convertCodeToCountry(String rawCode) {
+    final countryCode = rawCode.toUpperCase().trim();
+
+    return WorldCountry.maybeFromValue(
+      countryCode,
+      where: (country) => countryCode.length == IsoStandardized.codeShortLength
+          ? country.codeShort
+          : country.code,
+    );
+  }
 
   /// Missing: XAG, XAU, XBA, XBB, XBC, XBD, XDR, XPD, XPT, XTS.
   FiatCurrency? _convertCodeToCurrency(String rawCode) {

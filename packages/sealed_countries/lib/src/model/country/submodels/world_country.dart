@@ -25,7 +25,10 @@ part of "../country.dart";
 /// print(unknown); // Output: null
 /// ```
 class WorldCountry extends Country
-    implements IsoStandardized<CountryName>, JsonEncodable<WorldCountry> {
+    implements
+        IsoStandardized<CountryName>,
+        JsonEncodable<WorldCountry>,
+        Translated<TranslatedName> {
   /// Creates a new `WorldCountry` object with the given properties.
   ///
   /// The `name` parameter is required and must not be empty. The
@@ -76,9 +79,16 @@ class WorldCountry extends Country
   /// The `code` parameter is required and must be a valid country code. Returns
   /// a `WorldCountry` object that represents the country with the given `code`.
   /// Throws a `StateError` if no such country exists.
-  factory WorldCountry.fromCode(String code) => list.firstWhere(
-        (country) => country.code == code.trim().toUpperCase(),
-      );
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  factory WorldCountry.fromCode(
+    String code, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    assert(countries.isNotEmpty, "`countries` should not be empty!");
+
+    return countries.firstWhere((co) => co.code == code.trim().toUpperCase());
+  }
 
   /// Creates a new `WorldCountry` object from the given `codeShort`
   /// ISO 3166-1 Alpha-2 code.
@@ -86,9 +96,17 @@ class WorldCountry extends Country
   /// The `codeShort` parameter is required and must be a valid country code
   /// short. Returns a `WorldCountry` object that represents the country with
   /// the given `codeShort`. Throws a `StateError` if no such country exists.
-  factory WorldCountry.fromCodeShort(String codeShort) => list.firstWhere(
-        (country) => country.codeShort == codeShort.trim().toUpperCase(),
-      );
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  factory WorldCountry.fromCodeShort(
+    String codeShort, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    assert(countries.isNotEmpty, "`countries` should not be empty!");
+
+    return countries
+        .firstWhere((co) => co.codeShort == codeShort.trim().toUpperCase());
+  }
 
   /// The native names of the country.
   @override
@@ -135,6 +153,7 @@ class WorldCountry extends Country
   final List<NaturalLanguage> languages;
 
   /// The translations of the country name.
+  @override
   final List<TranslatedName> translations;
 
   /// The geographic coordinates of the country.
@@ -194,7 +213,7 @@ class WorldCountry extends Country
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''$WorldCountry(name: $name, namesNative: $namesNative, tld: ${jsonEncode(tld)}, code: "$code", codeNumeric: "$codeNumeric", codeShort: "$codeShort", cioc: ${cioc == null ? cioc : '"$cioc"'}, independent: $independent, unMember: $unMember, currencies: ${currencies?.toInstancesString()}, idd: $idd, altSpellings: ${jsonEncode(altSpellings)}, continent: ${continent.runtimeType}(), subregion: ${subregion == null ? subregion : '${subregion?.runtimeType}()'}, languages: ${languages.toInstancesString()}, translations: $translations, latLng: $latLng, landlocked: $landlocked, bordersCodes: ${jsonEncode(bordersCodes)}, areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, population: $population, gini: $gini, fifa: ${fifa == null ? fifa : '"$fifa"'}, car: $car, timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: ${capitalInfo?.toString(short: false)}, postalCode: $postalCode, regionalBlocs: ${regionalBlocs?.toInstancesString()})''';
+      : '''$WorldCountry(name: $name, namesNative: $namesNative, tld: ${jsonEncode(tld)}, code: "$code", codeNumeric: "$codeNumeric", codeShort: "$codeShort", cioc: ${cioc == null ? cioc : '"$cioc"'}, independent: $independent, unMember: $unMember, currencies: ${currencies?.toInstancesString()}, idd: $idd, altSpellings: ${jsonEncode(altSpellings)}, continent: ${continent.runtimeType}(), subregion: ${subregion == null ? subregion : '${subregion?.runtimeType}()'}, languages: ${languages.toInstancesString()}, translations: ${code.toLowerCase()}CountryTranslations, latLng: $latLng, landlocked: $landlocked, bordersCodes: ${jsonEncode(bordersCodes)}, areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, population: $population, gini: $gini, fifa: ${fifa == null ? fifa : '"$fifa"'}, car: $car, timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: ${capitalInfo?.toString(short: false)}, postalCode: $postalCode, regionalBlocs: ${regionalBlocs?.toInstancesString()})''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

@@ -1,13 +1,20 @@
+import "package:sealed_countries/country_translations.dart";
 import "package:sealed_countries/src/helpers/world_country/world_country_date_time.dart";
 import "package:sealed_countries/src/helpers/world_country/world_country_getters.dart";
 import "package:sealed_countries/src/helpers/world_country/world_country_json.dart";
 import "package:sealed_countries/src/model/country/country.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
+import "package:sealed_currencies/currency_translations.dart";
 import "package:test/test.dart";
 
 void main() => group("$WorldCountry", () {
       final value = WorldCountry.list.last;
       final array = {value, WorldCountry.list.first};
+
+      test("interfaces", () {
+        expect(value, isA<IsoStandardized>());
+        expect(value, isA<JsonEncodable>());
+        expect(value, isA<Translated>());
+      });
 
       group("fields", () {
         final officialCountries =
@@ -139,6 +146,14 @@ void main() => group("$WorldCountry", () {
             throwsStateError,
           ),
         );
+
+        test(
+          "with empty countries",
+          () => expect(
+            () => WorldCountry.fromCodeShort(value.codeShort, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
       });
 
       group("fromCode", () {
@@ -152,6 +167,14 @@ void main() => group("$WorldCountry", () {
           () => expect(
             () => WorldCountry.fromCode(value.toString()),
             throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty countries",
+          () => expect(
+            () => WorldCountry.fromCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
@@ -260,5 +283,78 @@ void main() => group("$WorldCountry", () {
             value,
           ),
         );
+      });
+
+      group("translations", () {
+        test("translation should always provide at least eng translation", () {
+          const abkhazia = LangAbk();
+          const nonExistCode = "";
+          var count = 0;
+          for (final value in WorldCountry.list) {
+            final maybeMissing = value.maybeTranslation(
+              abkhazia,
+              countryCode: nonExistCode,
+              useLanguageFallback: false,
+            );
+            if (maybeMissing != null) continue;
+            count++;
+            expect(
+              value.translation(abkhazia, countryCode: nonExistCode),
+              isNotNull,
+            );
+          }
+          expect(count, isPositive);
+        });
+
+        test("there should be always minimum translations count available", () {
+          final map = {
+            for (final country in WorldCountry.list) country: 0,
+          };
+
+          for (final l10n in NaturalLanguage.list) {
+            for (final value in WorldCountry.list) {
+              final hasTranslationForValue = value.maybeTranslation(l10n);
+              if (hasTranslationForValue != null) map[value] = map[value]! + 1;
+            }
+          }
+
+          final sortedList = map.entries.toList(growable: false)
+            ..sort((a, b) => a.value.compareTo(b.value));
+          expect(
+            sortedList.first.value,
+            kSealedCurrenciesSupportedLanguages.length,
+          );
+        });
+
+        test("there should be always translations for specific languages", () {
+          final map = {
+            for (final language in NaturalLanguage.list) language: 0,
+          };
+
+          for (final l10n in NaturalLanguage.list) {
+            for (final value in WorldCountry.list) {
+              final hasTranslationForValue = value.maybeTranslation(l10n);
+              if (hasTranslationForValue != null) map[l10n] = map[l10n]! + 1;
+            }
+          }
+
+          final sortedList = map.entries.toList(growable: false)
+            ..sort((a, b) => a.value.compareTo(b.value));
+          final complete = sortedList
+              .where((item) => item.value >= WorldCountry.list.length);
+          final sortedMap = Map.fromEntries(complete);
+
+          expect(sortedMap.keys, kSealedCountriesSupportedLanguages);
+
+          for (final country in WorldCountry.list) {
+            for (final l10n in kSealedCountriesSupportedLanguages) {
+              if (l10n == const LangEng()) continue;
+              expect(
+                country.translation(l10n),
+                isNot(country.translation(const LangEng())),
+              );
+            }
+          }
+        });
       });
     });

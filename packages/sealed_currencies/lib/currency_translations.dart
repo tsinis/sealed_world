@@ -7,6 +7,8 @@ library sealed_currency_translations;
 
 import "package:sealed_languages/sealed_languages.dart";
 
+export "package:sealed_languages/sealed_languages.dart";
+
 export "src/translations/aed_currency.l10n.dart";
 export "src/translations/afn_currency.l10n.dart";
 export "src/translations/all_currency.l10n.dart";

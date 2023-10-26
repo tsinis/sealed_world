@@ -8,7 +8,6 @@ import "../../model/country/submodels/demonyms.dart";
 import "../../model/country/submodels/weekday.dart";
 import "../../model/geo/submodels/continent.dart";
 import "../../model/regional_bloc/world_bloc.dart";
-import "../../model/translated_name.dart";
 import "../extensions/country_submodels/capital_info_extension.dart";
 import "../extensions/country_submodels/car_extension.dart";
 import "../extensions/country_submodels/country_name_extension.dart";
@@ -18,13 +17,12 @@ import "../extensions/country_submodels/idd_extension.dart";
 import "../extensions/country_submodels/lat_lng_extension.dart";
 import "../extensions/country_submodels/maps_extension.dart";
 import "../extensions/country_submodels/postal_code_extension.dart";
-import "../extensions/translated_name_extension.dart";
 
 /// Extension on [WorldCountry] that provides methods for converting
 /// [WorldCountry] objects to and from JSON maps.
 extension WorldCountryJson on WorldCountry {
   /// {@macro to_map_method}
-  Map<String, Object?> toMap() => {
+  JsonObjectMap toMap() => {
         "name": name.toMap(),
         "namesNative":
             namesNative.map((nn) => nn.toMap()).toList(growable: false),
@@ -35,12 +33,12 @@ extension WorldCountryJson on WorldCountry {
         "cioc": cioc,
         "independent": independent,
         "unMember": unMember,
-        "currencies": currencies?.map((c) => c.code).toList(growable: false),
+        "currencies": currencies?.toIsoList(),
         "idd": idd.toMap(),
         "altSpellings": altSpellings,
         "continent": continent.name,
         "subregion": subregion?.name,
-        "languages": languages.map((l) => l.code).toList(growable: false),
+        "languages": languages.toIsoList(),
         "translations":
             translations.map((t) => t.toMap()).toList(growable: false),
         "latLng": latLng.toMap(),
@@ -75,9 +73,9 @@ extension WorldCountryJson on WorldCountry {
         continent: Continent.fromName(map["continent"] as String),
         emoji: map["emoji"] as String,
         idd: IddExtension.fromMap(map["idd"] as JsonMap),
-        languages: List<NaturalLanguage>.unmodifiable(
-          (map["languages"] as List).map((l) => NaturalLanguage.fromCode("$l")),
-        ),
+        languages: (map["languages"] as List<Object?>)
+            .fromIsoList(NaturalLanguage.fromCode)
+            .toList(growable: false),
         latLng: LatLngExtension.fromMap(map["latLng"] as JsonMap),
         maps: MapsExtension.fromMap(map["maps"] as JsonMap),
         namesNative: List<CountryName>.unmodifiable(
@@ -89,17 +87,16 @@ extension WorldCountryJson on WorldCountry {
         tld: List<String>.unmodifiable(map["tld"] as List),
         translations: List<TranslatedName>.unmodifiable(
           (map["translations"] as List)
-              .map((n) => TranslatedNameExtension.fromMap(n as JsonMap)),
+              .map((l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap)),
         ),
         demonyms: List<Demonyms>.unmodifiable(
           (map["demonyms"] as List)
               .map((d) => DemonymsExtension.fromMap(d as JsonMap)),
         ),
         currencies: map["currencies"] is List
-            ? List<FiatCurrency>.unmodifiable(
-                (map["currencies"] as List)
-                    .map((l) => FiatCurrency.fromCode("$l")),
-              )
+            ? (map["currencies"] as List<Object?>)
+                .fromIsoList(FiatCurrency.fromCode)
+                .toList(growable: false)
             : null,
         capitalInfo: map["capitalInfo"] != null
             ? CapitalInfoExtension.fromMap(map["capitalInfo"] as JsonMap)

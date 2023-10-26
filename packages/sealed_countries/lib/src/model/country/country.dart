@@ -1,15 +1,11 @@
-import "dart:convert";
-
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../data/official_world_countries.data.dart";
 import "../../data/other_world_countries.data.dart";
-import "../../helpers/extensions/sealed_world_list_extension.dart";
 import "../../helpers/world_country/world_country_json.dart";
 import "../geo/region.dart";
 import "../geo/submodels/continent.dart";
 import "../regional_bloc/world_bloc.dart";
-import "../translated_name.dart";
 import "submodels/capital_info.dart";
 import "submodels/car.dart";
 import "submodels/country_name.dart";
@@ -25,7 +21,7 @@ part "submodels/world_country.dart";
 part "submodels/world_country.g.dart";
 
 /// A sealed class representing a country.
-sealed class Country {
+sealed class Country implements Named<CountryName> {
   /// Creates a new `Country` object with the given `name`.
   ///
   /// The `name` parameter is required and must be a non-empty
@@ -33,8 +29,9 @@ sealed class Country {
   const Country({required this.name});
 
   /// The name of the country.
+  @override
   final CountryName name;
 
   @override
-  String toString() => "$Country(name: ${name.name})";
+  String toString() => '$Country(name: "${name.name}")';
 }

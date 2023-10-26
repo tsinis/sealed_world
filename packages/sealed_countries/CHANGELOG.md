@@ -1,3 +1,10 @@
+## 0.7.0
+
+NEW FEATURES
+
+- WorldCountry class now contains way more translations of language name to other languages (79 translations for each language minimum).
+- Refactored factory constructors - there is an optional parameter to provide custom list.
+
 ## 0.6.0
 
 - refactor(model)!: translations are now list of translated name

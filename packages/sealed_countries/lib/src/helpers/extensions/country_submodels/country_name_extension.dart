@@ -32,7 +32,7 @@ extension CountryNameExtension on CountryName {
       );
 
   /// {@macro to_map_method}
-  Map<String, Object?> toMap() => {
+  JsonObjectMap toMap() => {
         "language": language.code,
         "official": fullName,
         "common": name,

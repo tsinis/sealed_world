@@ -1,5 +1,3 @@
-import "dart:convert";
-
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../../helpers/extensions/country_submodels/capital_extension.dart";
