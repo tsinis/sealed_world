@@ -2,8 +2,6 @@
 // https://gitlab.com/restcountries/restcountries, which is
 // licensed under the Mozilla Public License Version 2.0.
 
-import "package:sealed_currencies/sealed_currencies.dart";
-
 import "../../country_translations.dart";
 import "../model/country/country.dart";
 import "../model/country/submodels/capital.dart";

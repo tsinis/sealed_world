@@ -6,6 +6,8 @@ index_generator:
     - "**/model/geo/subregion.dart"
     - "**/regional_bloc/regional_bloc.dart"
     - "**/submodels/world_country.dart"
+    # Language translations:
+    - "**/translations/**.l10n.dart"
     # Internal imports:
     - "**/extensions/sealed_world_list_extension.dart"
   indexes:
