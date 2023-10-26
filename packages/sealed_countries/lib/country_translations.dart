@@ -5,6 +5,10 @@
 /// Provides country translations for sealed_countries.
 library sealed_country_translations;
 
+import "package:sealed_currencies/sealed_currencies.dart";
+
+export "package:sealed_currencies/sealed_currencies.dart";
+
 export "src/translations/abw_country.l10n.dart";
 export "src/translations/afg_country.l10n.dart";
 export "src/translations/ago_country.l10n.dart";
@@ -255,3 +259,79 @@ export "src/translations/yem_country.l10n.dart";
 export "src/translations/zaf_country.l10n.dart";
 export "src/translations/zmb_country.l10n.dart";
 export "src/translations/zwe_country.l10n.dart";
+
+/// This is a comprehensive list of countries that ensure the availability of
+/// translations for every language in the countries `list`.
+///
+/// It is important to note that while other languages may not be included in
+/// this list, they may still have translations available for most common
+/// countries, but there may be some missing translations for rarer languages.
+/// Every country contains more than 79 translations of it's name.
+///
+/// Supports most of the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+/// with a two letter (but not three letter) code.
+// ignore: prefer-static-class, to follow pattern from languages.
+const kSealedCountriesSupportedLanguages = [
+  LangCym(),
+  LangOri(),
+  LangFas(),
+  LangJpn(),
+  LangPan(),
+  LangChe(),
+  LangPol(),
+  LangPor(),
+  LangPus(),
+  LangAze(),
+  LangKan(),
+  LangBul(),
+  LangKat(),
+  LangRus(),
+  LangHun(),
+  LangKaz(),
+  LangSin(),
+  LangSlk(),
+  LangIta(),
+  LangZho(),
+  LangFin(),
+  LangFra(),
+  LangZul(),
+  LangKhm(),
+  LangMar(),
+  LangSpa(),
+  LangMkd(),
+  LangCes(),
+  LangSrp(),
+  LangHye(),
+  LangMon(),
+  LangHrv(),
+  LangSwe(),
+  LangKir(),
+  LangTam(),
+  LangAsm(),
+  LangTel(),
+  LangMya(),
+  LangHin(),
+  LangTha(),
+  LangMal(),
+  LangBos(),
+  LangBre(),
+  LangBel(),
+  LangEll(),
+  LangTur(),
+  LangGuj(),
+  LangUig(),
+  LangUkr(),
+  LangUrd(),
+  LangUzb(),
+  LangEng(),
+  LangNep(),
+  LangNld(),
+  LangHeb(),
+  LangKor(),
+  LangBen(),
+  LangEst(),
+  LangAra(),
+  LangDeu(),
+  LangAmh(),
+  LangLao(),
+];
