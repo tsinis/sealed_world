@@ -2,6 +2,7 @@
 /// widgets (country, phone, currency pickers, etc.).
 library world_countries;
 
+export "package:sealed_countries/country_translations.dart";
 export "package:sealed_countries/sealed_countries.dart";
 
 export "src/constants/package_constants.dart";
@@ -12,6 +13,7 @@ export "src/extensions/natural_language_extension.dart";
 export "src/extensions/navigator_context_extension.dart";
 export "src/extensions/world_country_extension.dart";
 export "src/generated/fonts.gen.dart";
+export "src/helpers/deprecated_translated_name_extension.dart";
 export "src/helpers/functional_platform.dart";
 export "src/helpers/name_text_input.dart";
 export "src/interfaces/material_context_interface.dart";

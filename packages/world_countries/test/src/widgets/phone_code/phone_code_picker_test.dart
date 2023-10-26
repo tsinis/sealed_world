@@ -1,6 +1,7 @@
 // ignore_for_file: missing-test-assertion
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:world_countries/src/helpers/deprecated_translated_name_extension.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/country/country_tile.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
@@ -23,6 +24,7 @@ void main() => group("$PhoneCodePicker", () {
         "scroll from first to last item and tap",
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
+          // ignore: deprecated_member_use_from_same_package, for test.
           (item) => item.namesNative.first.common,
         ),
       );
@@ -31,7 +33,7 @@ void main() => group("$PhoneCodePicker", () {
         "scroll from first to last item and without selection test",
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.common,
+          (item) => item.namesNative.first.name,
           testSelection: false,
         ),
       );
@@ -40,7 +42,7 @@ void main() => group("$PhoneCodePicker", () {
         "test behavior in dialog",
         (tester) async => tester.testPickerInDialog(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.common,
+          (item) => item.namesNative.first.name,
         ),
       );
 
@@ -48,7 +50,7 @@ void main() => group("$PhoneCodePicker", () {
         "test behavior in search",
         (tester) async => tester.testPickerInSearch(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.common,
+          (item) => item.namesNative.first.name,
         ),
       );
 
@@ -56,7 +58,7 @@ void main() => group("$PhoneCodePicker", () {
         "test behavior in modal bottom sheet",
         (tester) async => tester.testPickerInModal(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.common,
+          (item) => item.namesNative.first.name,
         ),
       );
 
@@ -64,7 +66,7 @@ void main() => group("$PhoneCodePicker", () {
         "fromCountryPicker",
         (tester) async => tester.testPickerBody(
           PhoneCodePicker.fromCountryPicker(const CountryPicker()),
-          (item) => item.namesNative.first.common,
+          (item) => item.namesNative.first.name,
         ),
       );
 

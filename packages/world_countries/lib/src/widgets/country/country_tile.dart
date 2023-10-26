@@ -104,7 +104,9 @@ class CountryTile extends ListItemTile<WorldCountry> {
           leading: leading ?? EmojiFlag.twemoji(country.item),
           subtitle: subtitle ??
               Text(
-                country.item.nameTranslated(translation)?.common ??
+                country.item
+                        .maybeTranslation(translation ?? const LangEng())
+                        ?.name ??
                     country.item.namesCommonNative(skipFirst: true),
                 overflow: TextOverflow.ellipsis,
               ),
@@ -161,7 +163,9 @@ class CountryTile extends ListItemTile<WorldCountry> {
           isDisabled: country.isDisabled,
           title: title ??
               Text(
-                country.item.nameTranslated(translation)?.common ??
+                country.item
+                        .maybeTranslation(translation ?? const LangEng())
+                        ?.name ??
                     country.item.namesNative.first.common,
                 overflow: TextOverflow.ellipsis,
               ),
