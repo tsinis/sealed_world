@@ -90,7 +90,6 @@ const ${varFileName.toCamelCase()} = [
     return paths;
   }
 
-  // ignore: long-method, TODO: refactor.
   Future<List<String>> parseByItems() async {
     final stopwatch = Stopwatch()..start();
     final paths = <String>[];
