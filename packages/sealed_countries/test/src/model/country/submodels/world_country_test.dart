@@ -4,8 +4,6 @@ import "package:sealed_countries/src/helpers/world_country/world_country_getters
 import "package:sealed_countries/src/helpers/world_country/world_country_json.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_currencies/currency_translations.dart";
-// ignore: depend_on_referenced_packages, TODO! fix that in 0.8.0.
-import "package:sealed_languages/language_translations.dart";
 import "package:test/test.dart";
 
 void main() => group("$WorldCountry", () {
@@ -358,42 +356,5 @@ void main() => group("$WorldCountry", () {
             }
           }
         });
-
-        test(
-          "there should be always translations for material locales",
-          () {
-            final map = {
-              for (final language in kMaterialSupportedLanguagesSealed)
-                language: <WorldCountry>[],
-            };
-
-            for (final l10n in kMaterialSupportedLanguagesSealed) {
-              for (final value in WorldCountry.list) {
-                if (value.translations.any((e) => e.language == l10n)) continue;
-                final list = (map[l10n] ?? [])..add(value);
-                map[l10n] = list;
-              }
-            }
-
-            final sortedList = map.entries.toList(growable: false)
-              ..sort((a, b) => a.value.length.compareTo(b.value.length));
-            final complete = sortedList
-                .where((item) => item.value.length >= WorldCountry.list.length);
-            final sortedMap = Map.fromEntries(complete);
-
-            expect(sortedMap.keys, kMaterialSupportedLanguagesSealed);
-
-            for (final country in WorldCountry.list) {
-              for (final l10n in kMaterialSupportedLanguagesSealed) {
-                if (l10n == const LangEng()) continue;
-                expect(
-                  country.translation(l10n),
-                  isNot(country.translation(const LangEng())),
-                );
-              }
-            }
-          },
-          skip: true, // TODO.
-        );
       });
     });
