@@ -315,10 +315,10 @@ packages:
     dependency: "direct dev"
     description:
       name: flutter_native_splash
-      sha256: "91004565166dbbc7a85e7e99b84124a287839830ca957cfe45004793fe6fe69f"
+      sha256: "5bf4c3e5e5a0426c1e2fc8ca3555a9e617e76369c3442e1dae8385c7767ba97a"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.3"
+    version: "2.3.4"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -565,26 +565,26 @@ packages:
     dependency: transitive
     description:
       name: sealed_countries
-      sha256: eca0ee5479295ca46ecd50d62812f64ab96304e1dea3a3454506f28efcbd9c7f
+      sha256: baf5cd4e134df5482781598ac5afc9eaab0828ac1d52be5d532b3e6622ad42e7
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.7.0"
   sealed_currencies:
     dependency: transitive
     description:
       name: sealed_currencies
-      sha256: "473a903e829c4d45eaeeb92a851443aa6536843d01193bd8c744751c541236a2"
+      sha256: "2bcb2c667f1e571054d669d099a4626e9b2d5e549c2ac10653db9dffb522f341"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.7.0"
   sealed_languages:
     dependency: transitive
     description:
       name: sealed_languages
-      sha256: d60808d83805a19acfe559d9f3252acd2b5958bbe31220e4f6f58a735478383c
+      sha256: ad344677c95d9b59a10c35e62d1ebfa8569a01a394a90d0b81f7ad604384d3b9
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.7.0"
   shelf:
     dependency: transitive
     description:
@@ -756,7 +756,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.6.0"
+    version: "0.7.0"
   xml:
     dependency: transitive
     description:

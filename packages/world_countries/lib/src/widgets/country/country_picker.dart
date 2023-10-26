@@ -123,7 +123,8 @@ class CountryPicker extends BasicPicker<WorldCountry> {
 
   @override
   Iterable<String> defaultSearch(WorldCountry item) => Set.unmodifiable({
-        ...item.translations.map((translatedName) => translatedName.common),
+        // ignore: avoid-non-null-assertion, TODO! Refactor with delegates.
+        if (translation != null) ...[item.translation(translation!).name],
         ...item.namesNative.map((nativeName) => nativeName.common),
         ...item.altSpellings,
         item.name.common,

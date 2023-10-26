@@ -112,7 +112,7 @@ class _MainPageState extends State<MainPage>
         ),
         body: Center(
           child: MaybeWidget(
-            selectedCountry?.nameEnglish.common,
+            selectedCountry?.maybeTranslation(const LangEng())?.name,
             Text.new,
             orElse: const Text(
               "Please select country by pressing on the search icon",

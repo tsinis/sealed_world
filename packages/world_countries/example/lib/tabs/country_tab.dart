@@ -25,15 +25,18 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              (data.nameTranslated() ?? data.name).common,
+              (data.maybeTranslation(const LangEng()) ?? data.name).name,
               style: context.theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
-            Text(
-              (data.nameTranslated() ?? data.name).official,
-              style: context.theme.textTheme.titleMedium
-                  ?.copyWith(fontWeight: FontWeight.w200),
-              textAlign: TextAlign.center,
+            MaybeWidget(
+              (data.maybeTranslation(const LangEng()) ?? data.name).fullName,
+              (fullName) => Text(
+                fullName,
+                style: context.theme.textTheme.titleMedium
+                    ?.copyWith(fontWeight: FontWeight.w200),
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
@@ -209,12 +212,12 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
           ),
           for (final translation in data.translations) ...[
             DescriptionTile.raw(
-              translation.official,
+              translation.fullName,
               description: """Official ${translation.language.name} Name""",
               leading: Text(translation.language.codeShort),
             ),
             DescriptionTile.raw(
-              translation.common,
+              translation.name,
               description: """Common ${translation.language.name} Name""",
               leading: Text(translation.language.codeShort),
             ),

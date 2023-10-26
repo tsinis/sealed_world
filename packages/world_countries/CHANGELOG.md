@@ -1,3 +1,19 @@
+## 0.7.0
+
+This is a general update that synchronizes underlying Dart package updates (related to translations and interfaces), as a preparation for a bigger upcoming update for localization delegates.
+
+NEW FEATURES
+
+- Added and updated translations for currencies, languages, and countries (79 translations for each minimum).
+- Added translation and maybeTranslation methods for Translated classes.
+- Refactored factory constructors for IsoStandardized classes. There is an optional parameter to provide a custom list.
+
+- Added a new sealed class called Scripts, based on the ISO 15924 standard.
+- The NaturalLanguage class now contains information about scripts (writing systems) and translations of the language name to other languages.
+
+- Added a regularList getter for a list of regular currencies (excluding 10 currencies from the specialPurposeList).
+- Fixed several English currency names.
+
 ## 0.6.0
 
 NEW FEATURE: New searchSuggestions method in every picker (for use in `suggestionsBuilder` of [SearchAnchor](https://api.flutter.dev/flutter/material/SearchAnchor-class.html))

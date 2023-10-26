@@ -1,4 +1,4 @@
-version: 0.6.0
+version: 0.7.0
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
@@ -30,13 +30,13 @@ screenshots:
     path: doc/language_data.webp
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.10.0"
+  sdk: ^3.0.0
+  flutter: '>=3.10.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  sealed_countries: ^0.5.0
+  sealed_countries: ^0.7.0
 
 dev_dependencies:
   build_runner: ^2.4.6 # From Google
