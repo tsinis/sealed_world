@@ -1,8 +1,11 @@
+import "package:sealed_countries/country_translations.dart";
 import "package:sealed_countries/src/helpers/world_country/world_country_date_time.dart";
 import "package:sealed_countries/src/helpers/world_country/world_country_getters.dart";
 import "package:sealed_countries/src/helpers/world_country/world_country_json.dart";
 import "package:sealed_countries/src/model/country/country.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
+import "package:sealed_currencies/currency_translations.dart";
+// ignore: depend_on_referenced_packages, TODO! fix that in 0.8.0.
+import "package:sealed_languages/language_translations.dart";
 import "package:test/test.dart";
 
 void main() => group("$WorldCountry", () {
@@ -281,6 +284,116 @@ void main() => group("$WorldCountry", () {
             WorldCountry.maybeFromValue(value.code, countries: array),
             value,
           ),
+        );
+      });
+
+      group("translations", () {
+        test("translation should always provide at least eng translation", () {
+          const abkhazia = LangAbk();
+          const nonExistCode = "";
+          var count = 0;
+          for (final value in WorldCountry.list) {
+            final maybeMissing = value.maybeTranslation(
+              abkhazia,
+              countryCode: nonExistCode,
+              useLanguageFallback: false,
+            );
+            if (maybeMissing != null) continue;
+            count++;
+            expect(
+              value.translation(abkhazia, countryCode: nonExistCode),
+              isNotNull,
+            );
+          }
+          expect(count, isPositive);
+        });
+
+        test("there should be always minimum translations count available", () {
+          final map = {
+            for (final country in WorldCountry.list) country: 0,
+          };
+
+          for (final l10n in NaturalLanguage.list) {
+            for (final value in WorldCountry.list) {
+              final hasTranslationForValue = value.maybeTranslation(l10n);
+              if (hasTranslationForValue != null) map[value] = map[value]! + 1;
+            }
+          }
+
+          final sortedList = map.entries.toList(growable: false)
+            ..sort((a, b) => a.value.compareTo(b.value));
+          expect(
+            sortedList.first.value,
+            kSealedCurrenciesSupportedLanguages.length,
+          );
+        });
+
+        test("there should be always translations for specific languages", () {
+          final map = {
+            for (final language in NaturalLanguage.list) language: 0,
+          };
+
+          for (final l10n in NaturalLanguage.list) {
+            for (final value in WorldCountry.list) {
+              final hasTranslationForValue = value.maybeTranslation(l10n);
+              if (hasTranslationForValue != null) map[l10n] = map[l10n]! + 1;
+            }
+          }
+
+          final sortedList = map.entries.toList(growable: false)
+            ..sort((a, b) => a.value.compareTo(b.value));
+          final complete = sortedList
+              .where((item) => item.value >= WorldCountry.list.length);
+          final sortedMap = Map.fromEntries(complete);
+
+          expect(sortedMap.keys, kSealedCountriesSupportedLanguages);
+
+          for (final country in WorldCountry.list) {
+            for (final l10n in kSealedCountriesSupportedLanguages) {
+              if (l10n == const LangEng()) continue;
+              expect(
+                country.translation(l10n),
+                isNot(country.translation(const LangEng())),
+              );
+            }
+          }
+        });
+
+        test(
+          "there should be always translations for material locales",
+          () {
+            final map = {
+              for (final language in kMaterialSupportedLanguagesSealed)
+                language: <WorldCountry>[],
+            };
+
+            for (final l10n in kMaterialSupportedLanguagesSealed) {
+              for (final value in WorldCountry.list) {
+                if (value.translations.any((e) => e.language == l10n)) continue;
+                final list = (map[l10n] ?? [])..add(value);
+                map[l10n] = list;
+              }
+            }
+
+            final sortedList = map.entries.toList(growable: false)
+              ..sort((a, b) => a.value.length.compareTo(b.value.length));
+            final complete = sortedList
+                .where((item) => item.value.length >= WorldCountry.list.length);
+            final sortedMap = Map.fromEntries(complete);
+
+            expect(sortedMap.keys, kMaterialSupportedLanguagesSealed);
+
+            for (final country in WorldCountry.list) {
+              for (final l10n in kMaterialSupportedLanguagesSealed) {
+                if (l10n == const LangEng()) continue;
+                expect(
+                  country.translation(l10n),
+                  isNot(country.translation(const LangEng())),
+                );
+              }
+            }
+          },
+          skip: true, // TODO.
         );
       });
     });
