@@ -1,4 +1,4 @@
-version: 0.6.0
+version: 0.7.0
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
