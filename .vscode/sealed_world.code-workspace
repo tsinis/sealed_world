@@ -76,6 +76,8 @@
       "demonyms",
       "devcontainers",
       "gini",
+      "Saša",
+      "Stamenković",
       "umpirsky"
     ],
     "cSpell.useGitignore": true,
@@ -346,6 +348,18 @@
           "Generate Coverage",
           "Open Coverage Report"
         ],
+        "presentation": { "revealProblems": "onProblem", "close": true }
+      },
+      {
+        "type": "shell",
+        "command": "cwebp -q 90 doc/structure.png -o doc/structure.webp",
+        "label": "Convert Structure PNG to WEBP",
+        "presentation": { "revealProblems": "onProblem", "close": true }
+      },
+      {
+        "type": "shell",
+        "command": "cwebp -q 90 doc/example.png -o doc/example.webp",
+        "label": "Convert Example PNG to WEBP",
         "presentation": { "revealProblems": "onProblem", "close": true }
       }
     ]
