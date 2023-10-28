@@ -4,6 +4,7 @@ import "dart:async";
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/widgets/buttons/clear_button.dart";
 import "package:world_countries/src/widgets/pickers/basic_picker.dart";
 
@@ -39,7 +40,7 @@ extension WidgetTesterExtension on WidgetTester {
     await pumpAndSettle();
   }
 
-  Future<void> testPickerBody<T extends Object>(
+  Future<void> testPickerBody<T extends Translated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel, {
     bool testSelection = true,
@@ -63,25 +64,25 @@ extension WidgetTesterExtension on WidgetTester {
     if (testSelection) expect(selected, picker.items.last);
   }
 
-  Future<void> testPickerInDialog<T extends Object>(
+  Future<void> testPickerInDialog<T extends Translated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
   ) =>
       _testPickerIn(picker, findLabel, true);
 
-  Future<void> testPickerInSearch<T extends Object>(
+  Future<void> testPickerInSearch<T extends Translated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
   ) =>
       _testPickerIn(picker, findLabel, false);
 
-  Future<void> testPickerInModal<T extends Object>(
+  Future<void> testPickerInModal<T extends Translated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
   ) =>
       _testPickerIn(picker, findLabel, null);
 
-  Future<void> _testPickerIn<T extends Object>(
+  Future<void> _testPickerIn<T extends Translated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
     bool? inDialog,
@@ -139,7 +140,7 @@ extension WidgetTesterExtension on WidgetTester {
     expect(selected, picker.items.last);
   }
 
-  Future<void> _testPicker<T extends Object>(
+  Future<void> _testPicker<T extends Translated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
   ) async {

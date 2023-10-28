@@ -1,3 +1,4 @@
+import "package:flutter/widgets.dart" show BuildContext;
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/interfaces/searchable_interface.dart";
 
@@ -8,7 +9,7 @@ class _SearchableInterfaceTest implements SearchableInterface<String> {
     this.startWithSearch = true,
   });
   @override
-  final Iterable<String> Function(String item) searchIn;
+  final Iterable<String> Function(String item, BuildContext context) searchIn;
   @override
   final bool caseSensitiveSearch;
   @override
@@ -20,7 +21,7 @@ void main() => group("$SearchableInterface", () {
         "constructor",
         () => expect(
           _SearchableInterfaceTest(
-            searchIn: (_) => const [],
+            searchIn: (_, __) => const [],
             caseSensitiveSearch: true,
             startWithSearch: false,
           ).startWithSearch,
