@@ -13,7 +13,7 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
   CountryTab(
     super.data,
     super.nav, {
-    super.dataPicker = const CountryPicker(translation: LangEng()),
+    super.dataPicker = const CountryPicker(),
     super.items = WorldCountry.list,
     super.type = WorldData.country,
     super.key,

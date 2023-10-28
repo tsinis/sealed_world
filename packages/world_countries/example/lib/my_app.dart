@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:flutter_localizations/flutter_localizations.dart";
+import "package:world_countries/world_countries.dart";
 
 import "app_navigator.dart";
 import "model/world_data.dart";
@@ -45,7 +47,26 @@ class _MyAppState extends State<MyApp> {
         child: MaterialApp.router(
           routeInformationParser: _routeParser,
           routerDelegate: _routerDelegate,
-          theme: ThemeData(colorScheme: lightColorScheme),
+          theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            TypedLocaleDelegate(
+              localeMapResolution: [
+                LocaleEntry(
+                  /// Brazilian Portuguese could be mapped to Euro Portuguese.
+                  Locale("pt", "BR"),
+                  IsoLocale(LangPor(), country: CountryPrt()),
+                ),
+              ],
+            ),
+          ],
+          supportedLocales: const [
+            Locale("cs"),
+            Locale("pt", "PT"),
+            Locale("pt", "BR"),
+          ],
         ),
       );
 }

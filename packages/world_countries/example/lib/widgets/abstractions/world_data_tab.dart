@@ -5,7 +5,7 @@ import "package:world_countries/world_countries.dart";
 import "../../model/constants.dart";
 import "../../model/world_data.dart";
 
-abstract base class WorldDataTab<T extends Object> extends StatelessWidget {
+abstract base class WorldDataTab<T extends Translated> extends StatelessWidget {
   WorldDataTab(
     this.data,
     AsyncValueSetter<String>? nav, {
