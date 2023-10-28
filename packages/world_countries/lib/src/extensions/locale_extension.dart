@@ -2,9 +2,19 @@ import "dart:ui";
 
 import "package:sealed_countries/sealed_countries.dart";
 
+import "../models/locale/typed_locale.dart";
+
 /// Extension on [Locale] that provides utility methods for retrieving language
 /// and country information from a [Locale] object.
 extension LocaleExtension on Locale? {
+  TypedLocale<String>? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
+    final language = maybeLanguage ?? fallbackLanguage;
+
+    return language != null
+        ? TypedLocale(language, country: this?.countryCode, script: maybeScript)
+        : null;
+  }
+
   /// Retrieves the associated [NaturalLanguage] from the [Locale] object.
   ///
   /// Returns `null` if the [Locale] object is `null`, the language code length
@@ -25,6 +35,14 @@ extension LocaleExtension on Locale? {
           where: (language) => language.codeShort,
         ),
       );
+
+  Script? get maybeScript {
+    final scriptCode = this?.scriptCode?.toUpperCase().trim() ?? "";
+
+    return scriptCode.isNotEmpty
+        ? Script.maybeFromValue(scriptCode, where: (s) => s.code.toUpperCase())
+        : null;
+  }
 
   /// Retrieves the associated [WorldCountry] from the [Locale] object.
   ///

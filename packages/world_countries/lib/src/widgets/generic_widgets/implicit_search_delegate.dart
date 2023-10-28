@@ -141,16 +141,18 @@ class ImplicitSearchDelegate<T extends Object>
 
   @override
   Widget buildSuggestions(BuildContext context) =>
-      resultsBuilder(context, _filteredItems);
+      resultsBuilder(context, _filteredItems(context));
 
-  UnmodifiableListView<T> get _filteredItems => UnmodifiableListView(
-        items.where((item) => searchIn(item).toSet().any(_hasSameText)),
+  UnmodifiableListView<T> _filteredItems(BuildContext context) =>
+      UnmodifiableListView(
+        items.where((i) => searchIn(i, context).toSet().any(_hasSameText)),
       );
 
   bool _hasSameText(String itemText) => compareWithInput(query, itemText);
 
   void _tryClose(BuildContext context) {
-    final result = _filteredItems.length == 1 ? _filteredItems.first : null;
+    final filteredItems = _filteredItems(context);
+    final result = filteredItems.length == 1 ? filteredItems.first : null;
     if (result == null) return;
     final isValid = resultValidator?.call(result) ?? true;
     if (!isValid) return;

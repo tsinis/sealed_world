@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../../models/item_properties.dart";
+import "../../models/locale/typed_locale.dart";
 import "../pickers/basic_picker.dart";
 import "language_tile.dart";
 
@@ -51,6 +52,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.translation,
   }) : super(languages);
 
   /// Returns the list of natural languages being displayed by this widget.
@@ -63,6 +65,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
   }) =>
       LanguageTile.fromProperties(
         itemProperties,
+        title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
         onPressed: (language) => isDense ?? false
             ? maybeSelectAndPop(language, itemProperties.context)
@@ -71,8 +74,13 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
       );
 
   @override
-  Iterable<String> defaultSearch(NaturalLanguage item) =>
-      Set.unmodifiable({item.name, ...item.namesNative, item.codeShort});
+  Iterable<String> defaultSearch(NaturalLanguage item, BuildContext context) =>
+      Set.unmodifiable({
+        ...super.defaultSearch(item, context),
+        ...item.namesNative,
+        item.name,
+        item.codeShort,
+      });
 
   @override
   LanguagePicker copyWith({
@@ -111,11 +119,13 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(NaturalLanguage language)? searchIn,
+    Iterable<String> Function(NaturalLanguage language, BuildContext context)?
+        searchIn,
     Widget? Function(
       ItemProperties<NaturalLanguage> itemProperties, {
       bool? isDense,
     })? itemBuilder,
+    TypedLocale? translation,
   }) =>
       LanguagePicker(
         languages: items ?? languages,
@@ -158,5 +168,6 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
         textBaseline: textBaseline ?? this.textBaseline,
         textDirection: textDirection ?? this.textDirection,
         verticalDirection: verticalDirection ?? this.verticalDirection,
+        translation: translation ?? this.translation,
       );
 }

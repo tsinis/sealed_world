@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../../models/item_properties.dart";
+import "../../models/locale/typed_locale.dart";
 import "../pickers/basic_picker.dart";
 import "currency_tile.dart";
 
@@ -51,6 +52,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.translation,
   }) : super(currencies);
 
   /// Returns the list of fiat currencies being displayed by this widget.
@@ -63,6 +65,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
   }) =>
       CurrencyTile.fromProperties(
         itemProperties,
+        title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
         onPressed: (currency) => isDense ?? false
             ? maybeSelectAndPop(currency, itemProperties.context)
@@ -71,8 +74,14 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
       );
 
   @override
-  Iterable<String> defaultSearch(FiatCurrency item) =>
-      Set.unmodifiable({item.name, ...item.namesNative, item.code, item.unit});
+  Iterable<String> defaultSearch(FiatCurrency item, BuildContext context) =>
+      Set.unmodifiable({
+        ...super.defaultSearch(item, context),
+        ...item.namesNative,
+        item.name,
+        item.code,
+        item.unit,
+      });
 
   @override
   CurrencyPicker copyWith({
@@ -111,11 +120,13 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(FiatCurrency currency)? searchIn,
+    Iterable<String> Function(FiatCurrency currency, BuildContext context)?
+        searchIn,
     Widget? Function(
       ItemProperties<FiatCurrency> itemProperties, {
       bool? isDense,
     })? itemBuilder,
+    TypedLocale? translation,
   }) =>
       CurrencyPicker(
         currencies: items ?? currencies,
@@ -158,5 +169,6 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
         textBaseline: textBaseline ?? this.textBaseline,
         textDirection: textDirection ?? this.textDirection,
         verticalDirection: verticalDirection ?? this.verticalDirection,
+        translation: translation ?? this.translation,
       );
 }

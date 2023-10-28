@@ -73,8 +73,8 @@ class _SearchListListenableBuilderState<T extends Object>
       widget.compareWithTextInput(widget.textController, itemText);
 
   void textChanged() {
-    final filteredItems =
-        widget.items.where((i) => widget.searchIn(i).toSet().any(hasSameText));
+    final filteredItems = widget.items
+        .where((i) => widget.searchIn(i, context).toSet().any(hasSameText));
     setState(() => items = UnmodifiableListView(filteredItems));
   }
 
