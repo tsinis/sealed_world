@@ -57,7 +57,7 @@ class TranslatedName implements Named<String>, JsonEncodable<TranslatedName> {
 
   @override
   String toString({bool short = true}) => short
-      ? '''TranslatedName(${language.name}, name: "$name", fullName: ${fullName == null ? fullName : '"$fullName"'}, countryCode: ${countryCode == null ? countryCode : '"$countryCode"'}, script: $script)'''
+      ? name
       : '''TranslatedName(${language.runtimeType}(), name: "$name", fullName: ${fullName == null ? fullName : '"$fullName"'}, countryCode: ${countryCode == null ? countryCode : '"$countryCode"'}, script: ${script == null ? script : '${script?.runtimeType}()'})''';
 
   @override
