@@ -238,7 +238,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage> languages = list,
   ]) {
     assert(languages.isNotEmpty, "`languages` should not be empty!");
-    
+
     final trimmedCode = code?.trim().toUpperCase();
     if (trimmedCode?.isEmpty ?? true) return null;
 
