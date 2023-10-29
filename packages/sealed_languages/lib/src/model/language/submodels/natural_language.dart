@@ -28,10 +28,13 @@ class NaturalLanguage extends Language
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
-  })  : assert(code.length == 3, "`code` should be exactly 3 characters long!"),
+  })  : assert(
+          code.length == IsoStandardized.codeLength,
+          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
+        ),
         assert(
-          codeShort.length == 2,
-          "`codeShort` should be exactly 2 characters long!",
+          codeShort.length == IsoStandardized.codeShortLength,
+          """`codeShort` should be exactly ${IsoStandardized.codeShortLength} characters long!""",
         ),
         assert(
           namesNative != const <String>[],
@@ -39,11 +42,12 @@ class NaturalLanguage extends Language
         ),
         assert(scripts != const <Script>{}, "`scripts` should not be empty!"),
         assert(
-          bibliographicCode == null || bibliographicCode.length == 3,
-          "`bibliographicCode` should be exactly 3 characters long!",
+          bibliographicCode == null ||
+              bibliographicCode.length == IsoStandardized.codeLength,
+          """`bibliographicCode` should be exactly ${IsoStandardized.codeLength} characters long!""",
         );
 
-  /// Creates a new instance of the [NaturalLanguage] class from a three-letter
+  /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code.
   ///
   /// The [code] parameter is required and should be a three-letter string
@@ -63,7 +67,7 @@ class NaturalLanguage extends Language
     );
   }
 
-  /// Creates a new instance of the [NaturalLanguage] class from a two-letter
+  /// Returns an instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
   ///
   /// The [codeShort] parameter is required and should be a two-letter string
@@ -83,7 +87,7 @@ class NaturalLanguage extends Language
     );
   }
 
-  /// Creates a new instance of the [NaturalLanguage] class from the name of the
+  /// Returns an instance of the [NaturalLanguage] class from the name of the
   /// language.
   ///
   /// The [name] parameter is required and should be a non-empty string
@@ -102,6 +106,36 @@ class NaturalLanguage extends Language
       (lang) => lang.name.toUpperCase() == name.trim().toUpperCase(),
     );
   }
+
+  /// Returns an instance of the [NaturalLanguage] class from any valid ISO 639
+  /// code.
+  ///
+  /// The [code] parameter is required and should be a string representing the
+  /// ISO 639 code for the language. The optional [languages] parameter can be
+  /// used to specify a list of [NaturalLanguage] objects to search through.
+  /// This method returns the [NaturalLanguage] instance that corresponds to the
+  /// given code, or throws a [StateError] if no such instance exists.
+  ///
+  /// Example:
+  /// ```dart
+  /// final language = NaturalLanguage.fromAnyCode("en");
+  /// ```
+  ///
+  /// In the above example, the `fromAnyCode` factory method is called with the
+  /// code "en". It uses the `maybeMapIsoCode` method to determine the
+  /// appropriate mapping for the code. If the code is a short code, it calls
+  /// the `fromCodeShort` factory method to create a [NaturalLanguage] instance.
+  /// Otherwise, it calls the `fromCode` factory method to create a
+  /// [NaturalLanguage] instance. The resulting [NaturalLanguage] instance is
+  /// assigned to the `language` variable.
+  factory NaturalLanguage.fromAnyCode(
+    String code, [
+    Iterable<NaturalLanguage> languages = list,
+  ]) =>
+      code.maybeMapIsoCode(
+        orElse: (_) => NaturalLanguage.fromCode(code, languages),
+        short: (_) => NaturalLanguage.fromCodeShort(code, languages),
+      );
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
   /// the language.
@@ -141,7 +175,7 @@ class NaturalLanguage extends Language
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''$NaturalLanguage(name: "$name", code: "$code", codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, bibliographicCode: ${bibliographicCode == null ? bibliographicCode : '"$bibliographicCode"'}, family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, scripts: ${scripts.toUniqueInstancesString()})''';
+      : '''NaturalLanguage(name: "$name", code: "$code", codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, bibliographicCode: ${bibliographicCode == null ? bibliographicCode : '"$bibliographicCode"'}, family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, scripts: ${scripts.toUniqueInstancesString()})''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -179,6 +213,41 @@ class NaturalLanguage extends Language
     for (final language in languages) {
       final expectedValue = where?.call(language) ?? language.code;
       if (expectedValue == value) return language;
+    }
+
+    return null;
+  }
+
+  /// Returns a [NaturalLanguage] object whose [code] matches the specified
+  /// [code],
+  /// or `null` if no such object exists in the specified [languages] list.
+  ///
+  /// The [code] parameter is required and should be a string representing the
+  /// ISO 639 code for the language. The optional [languages] parameter
+  /// specifies the list of `NaturalLanguage` objects to search (defaults to
+  /// `NaturalLanguage.list`).
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// NaturalLanguage? lng = NaturalLanguage.maybeFromAnyCode(LangEnum.en.name);
+  /// print(lng != null); // Prints: true
+  /// ```
+  static NaturalLanguage? maybeFromAnyCode(
+    String? code, [
+    Iterable<NaturalLanguage> languages = list,
+  ]) {
+    assert(languages.isNotEmpty, "`languages` should not be empty!");
+
+    final trimmedCode = code?.trim().toUpperCase();
+    if (trimmedCode?.isEmpty ?? true) return null;
+
+    for (final language in languages) {
+      final expectedValue = trimmedCode?.maybeMapIsoCode(
+        orElse: (_) => language.code,
+        short: (_) => language.codeShort,
+      );
+      if (expectedValue == trimmedCode) return language;
     }
 
     return null;

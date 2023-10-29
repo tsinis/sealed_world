@@ -14,6 +14,11 @@ void main() => group("$TranslatedName", () {
         script: Script.list.last,
       );
 
+      test("toString", () {
+        expect(value.toString(short: false), contains(value.script?.code));
+        expect(value.toString(), isNot(contains(value.script?.code)));
+      });
+
       group("equality", () {
         final other = TranslatedName(
           NaturalLanguage.list.last,

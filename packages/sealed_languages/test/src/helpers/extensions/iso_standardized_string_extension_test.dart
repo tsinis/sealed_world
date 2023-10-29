@@ -2,22 +2,110 @@ import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 void main() => group("IsoStandardizedStringExtension", () {
-      group("isIsoCode", () {
+      const alphaRegularCodes = ["ENG", "Latn", "cze", "rUS", "Slv"];
+      const alphaShortCodes = ["en", "CZ", "rU", "Sk"];
+      const numericCodes = ["100", "001", "010", "999"];
+      const invalidCodes = ["a", "B", "1"];
+
+      group("isIsoAlphaRegularCode", () {
         test("should return true for valid ISO codes", () {
-          expect("ENG".isIsoCode, isTrue);
-          expect("Latn".isIsoCode, isTrue);
-          expect("abc".isIsoCode, isTrue);
-          expect("xyz".isIsoCode, isTrue);
-          expect("AbC".isIsoCode, isTrue);
+          for (final code in alphaRegularCodes) {
+            expect(code.isIsoAlphaRegularCode, isTrue);
+          }
         });
 
         test("should return false for invalid ISO codes", () {
-          expect("A".isIsoCode, isFalse);
-          expect("AB".isIsoCode, isFalse);
-          expect("123".isIsoCode, isFalse);
-          expect("AB3".isIsoCode, isFalse);
-          expect("abc123".isIsoCode, isFalse);
-          expect("!@#".isIsoCode, isFalse);
+          for (final code in [
+            ...alphaShortCodes,
+            ...numericCodes,
+            ...invalidCodes,
+          ]) {
+            expect(code.isIsoAlphaRegularCode, isFalse);
+          }
         });
+      });
+
+      group("maybeMapIsoCode", () {
+        const orElse = "orElse";
+        test(
+          "should call short function when code length is equal to 2",
+          () {
+            for (final code in alphaShortCodes) {
+              var result = code.maybeMapIsoCode(
+                orElse: (_) => orElse,
+                numeric: (_) => "numeric",
+                regular: (_) => "regular",
+                short: (_) => "short",
+              );
+              expect(result, "short");
+
+              result = code.maybeMapIsoCode(
+                orElse: (_) => orElse,
+                numeric: (_) => "numeric",
+                regular: (_) => "regular",
+              );
+              expect(result, orElse);
+            }
+          },
+        );
+
+        test(
+          "should call numeric function when code is numeric",
+          () {
+            for (final code in numericCodes) {
+              var result = code.maybeMapIsoCode(
+                orElse: (_) => orElse,
+                numeric: (_) => "numeric",
+                regular: (_) => "regular",
+                short: (_) => "short",
+              );
+              expect(result, "numeric");
+
+              result = code.maybeMapIsoCode(
+                orElse: (_) => orElse,
+                regular: (_) => "regular",
+                short: (_) => "short",
+              );
+              expect(result, orElse);
+            }
+          },
+        );
+
+        test(
+          "should call regular function if code length is 3 and is not numeric",
+          () {
+            for (final code in alphaRegularCodes) {
+              var result = code.maybeMapIsoCode(
+                orElse: (_) => orElse,
+                numeric: (_) => "numeric",
+                regular: (_) => "regular",
+                short: (_) => "short",
+              );
+              expect(result, "regular");
+
+              result = code.maybeMapIsoCode(
+                orElse: (_) => orElse,
+                numeric: (_) => "numeric",
+                short: (_) => "short",
+              );
+              expect(result, orElse);
+            }
+          },
+        );
+
+        test(
+          "should call orElse function when code is not ISO code",
+          () {
+            for (final code in invalidCodes) {
+              final result = code.maybeMapIsoCode(
+                orElse: (_) => orElse,
+                numeric: (_) => "numeric",
+                regular: (_) => "regular",
+                short: (_) => "short",
+              );
+              expect(result, orElse);
+            }
+          },
+        );
       });
     });

@@ -15,4 +15,7 @@ abstract interface class Named<T extends Object> {
 
   /// The common name of the object.
   final T name;
+
+  @override
+  String toString({bool short = true});
 }
