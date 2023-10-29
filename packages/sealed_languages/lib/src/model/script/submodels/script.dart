@@ -19,14 +19,17 @@ class Script extends WritingSystem
     required this.codeNumeric,
     required this.date,
     this.pva,
-  })  : assert(code.length == 4, "`code` should be exactly 4 characters long!"),
+  })  : assert(
+          code.length == codeLength,
+          "`code` should be exactly $codeLength characters long!",
+        ),
         assert(pva == null || pva.length > 0, "`pva` should not be empty!"),
         assert(
-          codeNumeric.length == 3,
-          "`codeNumeric` should be exactly 3 characters long!",
+          codeNumeric.length == IsoStandardized.codeLength,
+          """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
         );
 
-  /// Creates a new instance of the [Script] class from a four-character ISO
+  /// Returns an instance of the [Script] class from a four-character ISO
   /// 15924 code.
   ///
   /// The [code] parameter is required and should be a four-character string
@@ -42,7 +45,7 @@ class Script extends WritingSystem
     );
   }
 
-  /// Creates a new instance of the [Script] class from a three-digit ISO 15924
+  /// Returns an instance of the [Script] class from a three-digit ISO 15924
   /// code.
   ///
   /// The [codeNumeric] parameter is required and should be a three-digit string
@@ -75,6 +78,31 @@ class Script extends WritingSystem
       (script) => script.name.toUpperCase() == name.trim().toUpperCase(),
     );
   }
+
+  /// Returns an instance of the [Script] class from any valid ISO 15924 code.
+  ///
+  /// The [code] parameter is required and should be a string representing the
+  /// ISO 15924 code for the script. The optional [scripts] parameter can be
+  /// used to specify a list of [Script] objects to search through. This method
+  /// returns the [Script] instance that corresponds to the given code, or
+  /// throws a [StateError] if no such instance exists.
+  ///
+  /// Example:
+  /// ```dart
+  /// final script = Script.fromAnyCode("Latn");
+  /// ```
+  ///
+  /// In the above example, the `fromAnyCode` factory method is called with the
+  /// code "Latn". It uses the `maybeMapIsoCode` method to determine the
+  /// appropriate mapping for the code. If the code is numeric, it calls the
+  /// `fromCodeNumeric` factory method to create a [Script] instance. Otherwise,
+  /// it calls the `fromCode` factory method to create a [Script] instance. The
+  /// resulting [Script] instance is assigned to the `script` variable.
+  factory Script.fromAnyCode(String code, [Iterable<Script> scripts = list]) =>
+      code.maybeMapIsoCode(
+        orElse: (_) => Script.fromCode(code, scripts),
+        numeric: (_) => Script.fromCodeNumeric(code, scripts),
+      );
 
   /// The regular length of the ISO code (4). However, it's important to note
   /// that this length is not standardized for all ISO codes. Typically it is
@@ -128,6 +156,47 @@ class Script extends WritingSystem
     for (final script in scripts) {
       final expectedValue = where?.call(script) ?? script.code;
       if (expectedValue == value) return script;
+    }
+
+    return null;
+  }
+
+  /// Returns a [Script] instance that corresponds to the given value, or `null`
+  /// if no such instance exists.
+  ///
+  /// The [code] parameter is required and represents the value to match
+  /// against. The optional [scripts] parameter can be used to specify a list of
+  /// [Script] objects to search through. This method returns the [Script]
+  /// instance that corresponds to the given value, or `null` if no such
+  /// instance exists.
+  ///
+  /// Example:
+  /// ```dart
+  /// Script? script = Script.maybeFromAnyCode(ExampleScriptEnum.latn.name);
+  /// print(script != null) // Prints: true.
+  /// ```
+  ///
+  /// In the above example, the `maybeFromAnyCode` method is called with the
+  /// value "Latn". It uses the `maybeMapIsoCode` method to determine the
+  /// appropriate mapping for the value. If the value is numeric, it compares it
+  /// with the `codeNumeric` property of each [Script] instance. Otherwise, it
+  /// compares it with the uppercase version of the `code` property of each
+  /// [Script] instance. The resulting [Script] instance is assigned to the
+  /// `script` variable.
+  static Script? maybeFromAnyCode(
+    String? code, [
+    Iterable<Script> scripts = list,
+  ]) {
+    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
+    final trimmedCode = code?.trim().toUpperCase();
+    if (trimmedCode?.isEmpty ?? true) return null;
+
+    for (final script in scripts) {
+      final expectedValue = trimmedCode?.maybeMapIsoCode(
+        orElse: (_) => script.code.toUpperCase(),
+        numeric: (_) => script.codeNumeric,
+      );
+      if (expectedValue == trimmedCode) return script;
     }
 
     return null;
