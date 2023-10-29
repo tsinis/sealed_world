@@ -94,7 +94,7 @@ void main() => group("$Script", () {
         test(
           "with wrong code",
           () => expect(
-            () => Script.fromCodeNumeric(value.toString()),
+            () => Script.fromCode(value.toString()),
             throwsStateError,
           ),
         );
@@ -129,6 +129,34 @@ void main() => group("$Script", () {
           "with empty scripts",
           () => expect(
             () => Script.fromCodeNumeric(value.codeNumeric, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+      });
+
+      group("fromAnyCode", () {
+        test(
+          "with proper non-numeric code",
+          () => expect(Script.fromAnyCode(value.code), value),
+        );
+
+        test(
+          "with proper numeric code",
+          () => expect(Script.fromAnyCode(value.codeNumeric), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            () => Script.fromAnyCode(value.toString()),
+            throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty scripts",
+          () => expect(
+            () => Script.fromAnyCode(value.code, const []),
             throwsA(isA<AssertionError>()),
           ),
         );
@@ -208,6 +236,39 @@ void main() => group("$Script", () {
           () => expect(
             Script.maybeFromValue(value.code, scripts: array),
             value,
+          ),
+        );
+      });
+
+      group("maybeFromAnyCode", () {
+        test(
+          "with proper non-numeric code",
+          () => expect(Script.maybeFromAnyCode(value.code), value),
+        );
+
+        test(
+          "with proper numeric code",
+          () => expect(Script.maybeFromAnyCode(value.codeNumeric), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            Script.maybeFromAnyCode(value.toString()),
+            isNull,
+          ),
+        );
+
+        test(
+          "with null code",
+          () => expect(Script.maybeFromAnyCode(null), isNull),
+        );
+
+        test(
+          "with empty scripts",
+          () => expect(
+            () => Script.maybeFromAnyCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });
