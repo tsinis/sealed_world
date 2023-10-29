@@ -32,5 +32,5 @@ sealed class Language implements Named<String> {
 
   /// Returns a string representation of this [Language] object.
   @override
-  String toString() => '$Language(name: "$name")';
+  String toString({bool short = true}) => 'Language(name: "$name")';
 }

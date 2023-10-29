@@ -24,5 +24,5 @@ sealed class WritingSystem implements Named<String> {
   final String name;
 
   @override
-  String toString() => '$WritingSystem(name: "$name")';
+  String toString({bool short = true}) => 'WritingSystem(name: "$name")';
 }

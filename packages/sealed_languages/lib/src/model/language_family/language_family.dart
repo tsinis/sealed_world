@@ -22,5 +22,5 @@ sealed class LanguageFamily implements Named<String> {
 
   /// Returns a string representation of this [LanguageFamily] object.
   @override
-  String toString() => '$LanguageFamily(name: "$name")';
+  String toString({bool short = true}) => 'LanguageFamily(name: "$name")';
 }
