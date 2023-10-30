@@ -30,6 +30,7 @@ sealed class WorldBloc implements Named<String> {
   final String name;
 
   @override
-  String toString() =>
-      '''$WorldBloc(name: "$name", acronym: ${acronym == null ? acronym : '"$acronym"'})''';
+  String toString({bool short = true}) => short
+      ? 'WorldBloc(name: "$name")'
+      : '''WorldBloc(name: "$name", acronym: ${acronym == null ? acronym : '"$acronym"'})''';
 }

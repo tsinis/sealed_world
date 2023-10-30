@@ -29,5 +29,5 @@ sealed class Region implements Named<String> {
   final String name;
 
   @override
-  String toString() => '$Region(name: "$name")';
+  String toString({bool short = true}) => 'Region(name: "$name")';
 }

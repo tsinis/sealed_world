@@ -44,10 +44,13 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 | `postalCode` | Yes | The postal code information of the country. | `PostalCode` with format and regExp |
 | `startOfWeek` | Yes | The first day of the week in the country. | `Weekday.monday` |
 | `regionalBlocs` | No | The regional blocs of the country. | `[BlocEU()]` |
-| `translations` | Yes | The translations of the country name. | List of 150 `TranslatedName`s in different languages |
+| `translations` | Yes | The translations of the country name. | List of **150** `TranslatedName`s in different languages |
 
 Compile time constant list of all countries accessible via `WorldCountry.list` and more over, the **WorldCountry** class provides the following methods:
 
+- `maybeFromAnyCode` - returns a country instance if the value matches any ISO 3166 code, otherwise returns `null`.
+- `fromCodeNumeric` - returns a country instance if the value matches the provided ISO 3166-1 numeric code.
+- `fromAnyCode` - returns a country instance if the value matches any ISO 4217 code.
 - `maybeFromValue` - returns a country instance if the value matches the provided value, otherwise returns `null`.
 - `fromCode` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-3 code.
 - `fromCodeShort` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-2 code.

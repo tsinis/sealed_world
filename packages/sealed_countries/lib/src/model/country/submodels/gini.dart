@@ -53,7 +53,7 @@ final class Gini implements JsonEncodable<Gini> {
   final double coefficient;
 
   @override
-  String toString() => "$Gini(year: $year, coefficient: $coefficient)";
+  String toString() => "Gini(year: $year, coefficient: $coefficient)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

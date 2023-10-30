@@ -71,9 +71,51 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
-  });
+  })  : assert(
+          code.length == IsoStandardized.codeLength,
+          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
+        ),
+        assert(
+          codeShort.length == IsoStandardized.codeShortLength,
+          """`codeShort` should be exactly ${IsoStandardized.codeShortLength} characters long!""",
+        ),
+        assert(emoji.length > 0, "`emoji` should not be empty!"),
+        assert(
+          namesNative != const <CountryName>[],
+          "`namesNative` should not be empty!",
+        ),
+        assert(
+          altSpellings != const <String>[],
+          "`altSpellings` should not be empty!",
+        ),
+        assert(
+          languages != const <NaturalLanguage>[],
+          "`languages` should not be empty!",
+        ),
+        assert(
+          timezones != const <String>[],
+          "`timezones` should not be empty!",
+        ),
+        assert(
+          translations != const <TranslatedName>[],
+          "`translations` should not be empty!",
+        ),
+        assert(
+          demonyms != const <Demonyms>[],
+          "`demonyms` should not be empty!",
+        ),
+        assert(cioc == null || cioc.length > 0, "`cioc` should not be empty!"),
+        assert(fifa == null || fifa.length > 0, "`fifa` should not be empty!"),
+        assert(
+          bordersCodes != const <String>[],
+          "`bordersCodes` should not be empty!",
+        ),
+        assert(
+          regionalBlocs != const <RegionalBloc>[],
+          "`bordersCodes` should not be empty!",
+        );
 
-  /// Creates a new `WorldCountry` object from the given `code`
+  /// Returns an `WorldCountry` object from the given `code`
   /// ISO 3166-1 Alpha-3 code.
   ///
   /// The `code` parameter is required and must be a valid country code. Returns
@@ -90,7 +132,7 @@ class WorldCountry extends Country
     return countries.firstWhere((co) => co.code == code.trim().toUpperCase());
   }
 
-  /// Creates a new `WorldCountry` object from the given `codeShort`
+  /// Returns an `WorldCountry` object from the given `codeShort`
   /// ISO 3166-1 Alpha-2 code.
   ///
   /// The `codeShort` parameter is required and must be a valid country code
@@ -107,6 +149,53 @@ class WorldCountry extends Country
     return countries
         .firstWhere((co) => co.codeShort == codeShort.trim().toUpperCase());
   }
+
+  /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code.
+  ///
+  /// The `code` parameter is required and must be a valid country code. Returns
+  /// a [WorldCountry] object that represents the country with the given `code`.
+  /// Throws a `StateError` if no such country exists.
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  factory WorldCountry.fromCodeNumeric(
+    String codeNumeric, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    assert(countries.isNotEmpty, "`countries` should not be empty!");
+
+    return countries.firstWhere((co) => co.codeNumeric == codeNumeric.trim());
+  }
+
+  /// Returns an instance of the [WorldCountry] class from any valid
+  /// ISO 3166 code.
+  ///
+  /// The [code] parameter is required and should be a string representing the
+  /// ISO 3166 code for the country. The optional [countries] parameter can be
+  /// used to specify a list of [WorldCountry] objects to search through.
+  /// This method returns the [WorldCountry] instance that corresponds to the
+  /// given code, or throws a [StateError] if no such instance exists.
+  ///
+  /// Example:
+  /// ```dart
+  /// final country = WorldCountry.fromAnyCode("BLR");
+  /// ```
+  ///
+  /// In the above example, the `fromAnyCode` factory method is called with the
+  /// code "BLR". It uses the `maybeMapIsoCode` method to determine the
+  /// appropriate mapping for the code. If the code is numeric, it calls the
+  /// `fromCodeNumeric` factory method to create a [WorldCountry] instance.
+  /// Otherwise, it calls the `fromCode` factory method to create a
+  /// [WorldCountry] instance. The resulting [WorldCountry] instance is assigned
+  /// to the `code` variable.
+  factory WorldCountry.fromAnyCode(
+    String code, [
+    Iterable<WorldCountry> countries = list,
+  ]) =>
+      code.maybeMapIsoCode(
+        orElse: (_) => WorldCountry.fromCode(code, countries),
+        short: (_) => WorldCountry.fromCodeShort(code, countries),
+        numeric: (_) => WorldCountry.fromCodeNumeric(code, countries),
+      );
 
   /// The native names of the country.
   @override
@@ -213,7 +302,7 @@ class WorldCountry extends Country
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''$WorldCountry(name: $name, namesNative: $namesNative, tld: ${jsonEncode(tld)}, code: "$code", codeNumeric: "$codeNumeric", codeShort: "$codeShort", cioc: ${cioc == null ? cioc : '"$cioc"'}, independent: $independent, unMember: $unMember, currencies: ${currencies?.toInstancesString()}, idd: $idd, altSpellings: ${jsonEncode(altSpellings)}, continent: ${continent.runtimeType}(), subregion: ${subregion == null ? subregion : '${subregion?.runtimeType}()'}, languages: ${languages.toInstancesString()}, translations: ${code.toLowerCase()}CountryTranslations, latLng: $latLng, landlocked: $landlocked, bordersCodes: ${jsonEncode(bordersCodes)}, areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, population: $population, gini: $gini, fifa: ${fifa == null ? fifa : '"$fifa"'}, car: $car, timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: ${capitalInfo?.toString(short: false)}, postalCode: $postalCode, regionalBlocs: ${regionalBlocs?.toInstancesString()})''';
+      : '''WorldCountry(name: $name, namesNative: $namesNative, tld: ${jsonEncode(tld)}, code: "$code", codeNumeric: "$codeNumeric", codeShort: "$codeShort", cioc: ${cioc == null ? cioc : '"$cioc"'}, independent: $independent, unMember: $unMember, currencies: ${currencies?.toInstancesString()}, idd: $idd, altSpellings: ${jsonEncode(altSpellings)}, continent: ${continent.runtimeType}(), subregion: ${subregion == null ? subregion : '${subregion?.runtimeType}()'}, languages: ${languages.toInstancesString()}, translations: ${code.toLowerCase()}CountryTranslations, latLng: $latLng, landlocked: $landlocked, bordersCodes: ${jsonEncode(bordersCodes)}, areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, population: $population, gini: $gini, fifa: ${fifa == null ? fifa : '"$fifa"'}, car: $car, timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: ${capitalInfo?.toString(short: false)}, postalCode: $postalCode, regionalBlocs: ${regionalBlocs?.toInstancesString()})''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -237,6 +326,50 @@ class WorldCountry extends Country
     for (final country in countries) {
       final expectedValue = where?.call(country) ?? country.code;
       if (expectedValue == value) return country;
+    }
+
+    return null;
+  }
+
+  /// Returns a [WorldCountry] instance that corresponds to the given code, or
+  /// `null` if no such instance exists.
+  ///
+  /// The [code] parameter is required and represents the value to match
+  /// against. The optional [countries] parameter can be used to specify a list
+  /// of [WorldCountry] objects to search through. This method returns the
+  /// [WorldCountry] instance that corresponds to the given value, or `null` if
+  /// no such instance exists.
+  ///
+  /// Example:
+  /// ```dart
+  /// WorldCountry? blr = WorldCountry.maybeFromAnyCode(CountryEnum.blr.name);
+  /// print(blr != null) // Prints: true.
+  /// ```
+  ///
+  /// In the above example, the `maybeFromAnyCode` method is called with the
+  /// value "eur". It uses the `maybeMapIsoCode` method to determine the
+  /// appropriate mapping for the value. If the value is numeric, it compares it
+  /// with the `codeNumeric` property of each [WorldCountry] instance.
+  /// If the value is two characters code, it compares it
+  /// with the `codeShort` property of each [WorldCountry] instance.
+  /// Otherwise, it compares it with the uppercase version of the `code`
+  /// property of each [WorldCountry] instance. The resulting [WorldCountry]
+  /// instance is assigned to the `country` variable.
+  static WorldCountry? maybeFromAnyCode(
+    String? code, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    assert(countries.isNotEmpty, "`countries` should not be empty!");
+    final trimmedCode = code?.trim().toUpperCase();
+    if (trimmedCode?.isEmpty ?? true) return null;
+
+    for (final country in countries) {
+      final expectedValue = trimmedCode?.maybeMapIsoCode(
+        orElse: (_) => country.code,
+        numeric: (_) => country.codeNumeric,
+        short: (_) => country.codeShort,
+      );
+      if (expectedValue == trimmedCode) return country;
     }
 
     return null;
