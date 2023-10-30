@@ -27,13 +27,15 @@ This ISO-driven, pure Dart, fully tested and and 3rd-party dependency-free packa
 | symbol | No | The currency symbol. | "€"
 | decimalMark | Yes | The decimal mark, or character used to separate the whole unit from the subunit. | ","
 | thousandsSeparator | Yes | The character used to separate thousands grouping of the whole unit. | "."
-| translations | Yes | A list of TranslatedNames representing the currency name translations. | 111 translations for a Euro currency name
+| translations | Yes | A list of TranslatedNames representing the currency name translations. | **111** translations for a Euro currency name
 
 Compile time constant list of all currencies accessible via `FiatCurrency.list` and more over, the **FiatCurrency** class provides the following methods:
 
 - `maybeFromValue` - returns a currency instance if the value matches the provided value, otherwise returns `null`.
+- `maybeFromAnyCode` - returns a currency instance if the value matches any ISO 4217 code, otherwise returns `null`.
 - `fromCode` - returns a currency instance if the value matches the provided ISO 4217 letter code.
 - `fromCodeNumeric` - returns a currency instance if the value matches the provided ISO 4217 numeric code.
+- `fromAnyCode` - returns a currency instance if the value matches any ISO 4217 code.
 - `fromName` - returns a currency instance if the value matches the provided English name.
 
 and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc.
