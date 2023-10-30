@@ -1,7 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../data/fiat_currencies.data.dart";
-import "../helpers/fiat_currency/fiat_currency_getters.dart";
 import "../helpers/fiat_currency/fiat_currency_json.dart";
 
 part "submodels/crypto_currency.dart";
@@ -73,6 +72,6 @@ sealed class Currency implements Named<String> {
   /// printed.
   @override
   String toString({bool short = true}) => short
-      ? '$Currency(code: "$code")'
-      : '''$Currency(code: "$code", name: "$name", symbol: ${symbol == null ? symbol : '"$symbol"'}, decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator")''';
+      ? 'Currency(code: "$code")'
+      : '''Currency(code: "$code", name: "$name", symbol: ${symbol == null ? symbol : '"$symbol"'}, decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator")''';
 }

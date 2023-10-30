@@ -7,7 +7,7 @@ library sealed_currency_translations;
 
 import "package:sealed_languages/sealed_languages.dart";
 
-export "package:sealed_languages/sealed_languages.dart";
+export "package:sealed_languages/language_translations.dart";
 
 export "src/translations/aed_currency.l10n.dart";
 export "src/translations/afn_currency.l10n.dart";
@@ -187,8 +187,20 @@ export "src/translations/zwl_currency.l10n.dart";
 /// currencies, but there may be some missing translations for rarer languages.
 /// Every currency contains more than 79 translations of it's name.
 ///
-/// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
-/// with a two letter (but not three letter) code and much more.
+/// Includes almost all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+/// with a two letter (but not three letter) code and much more. Languages are
+/// missing (with comparison to Material ones):
+/// - Assamese (ASM)
+/// - Oriya (ORI)
+/// - Pashto (Pushto) (PUS)
+/// - Tagalog (TGL).
+/// On the other hand it provides translations for:
+/// - Breton (BRE)
+/// - Western Frisian (FRY)
+/// - (Scottish) Gaelic (GLA)
+/// - Irish (GLE)
+/// - Luxembourgish (Letzeburgesch) (LTZ)
+/// That are not listed in Material one.
 // ignore: prefer-static-class, to follow pattern from languages.
 const kSealedCurrenciesSupportedLanguages = [
   LangMkd(),

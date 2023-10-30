@@ -1,4 +1,5 @@
 import "../../model/currency.dart";
+import "fiat_currency_getters.dart";
 
 /// Provides a set of methods for formatting values of [FiatCurrency].
 extension FiatCurrencyFormat on FiatCurrency {
@@ -6,6 +7,12 @@ extension FiatCurrencyFormat on FiatCurrency {
   /// the currency symbol. Otherwise returns `null`.
   String? tryFormat([num? maybeValue]) =>
       maybeValue != null ? format(maybeValue) : null;
+
+  /// Adds the currency unit to a value.
+  ///
+  /// If [unitFirst] is `true` (default), the currency unit is added before the
+  /// value, otherwise it is added after the value.
+  String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
 
   /// Formats the value as a string with the currency symbol.
   String format(num value) {

@@ -3,7 +3,7 @@
 NEW FEATURES
 
 - Added new factories to Script and NaturalLanguage - fromAnyCode, which do the length and type checks and redirects to other fromCode* constructors
-- Added new methods to Script and NaturalLanguage - maybeFromAnyCode, which works same way as fromAnyCode, but doesn't throws StateErrors if no ISO object is found.
+- Added new static methods to Script and NaturalLanguage - maybeFromAnyCode, which works same way as fromAnyCode, but doesn't throws StateErrors if no ISO object is found.
 - Added maybeMapIsoCode method to String extensions, which is used under the hood of (maybe)fromAnyCode.
 
 REFACTOR
