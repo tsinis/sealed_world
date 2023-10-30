@@ -1,6 +1,7 @@
 import "package:sealed_currencies/currency_translations.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency.dart";
+import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 void main() => group("$FiatCurrency", () {
@@ -159,6 +160,34 @@ void main() => group("$FiatCurrency", () {
         );
       });
 
+      group("fromAnyCode", () {
+        test(
+          "with proper numeric code",
+          () => expect(FiatCurrency.fromAnyCode(value.codeNumeric), value),
+        );
+
+        test(
+          "with proper alpha code",
+          () => expect(FiatCurrency.fromAnyCode(value.code), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            () => FiatCurrency.fromAnyCode(value.toString()),
+            throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty currencies",
+          () => expect(
+            () => FiatCurrency.fromAnyCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+      });
+
       group("toJson", () {
         for (final element in FiatCurrency.list) {
           test("compared to $FiatCurrency: ${element.name}", () {
@@ -244,6 +273,42 @@ void main() => group("$FiatCurrency", () {
           () => expect(
             FiatCurrency.maybeFromValue(value.code, currencies: array),
             value,
+          ),
+        );
+      });
+
+      group("maybeFromAnyCode", () {
+        test(
+          "with proper numeric code",
+          () => expect(FiatCurrency.maybeFromAnyCode(value.codeNumeric), value),
+        );
+
+        test(
+          "with proper alpha code",
+          () => expect(FiatCurrency.maybeFromAnyCode(value.code), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            FiatCurrency.maybeFromAnyCode(value.toString()),
+            isNull,
+          ),
+        );
+
+        test(
+          "with empty currencies",
+          () => expect(
+            () => FiatCurrency.maybeFromAnyCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "with null code",
+          () => expect(
+            FiatCurrency.maybeFromAnyCode(null),
+            isNull,
           ),
         );
       });
