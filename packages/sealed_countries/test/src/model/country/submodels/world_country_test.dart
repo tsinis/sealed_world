@@ -179,6 +179,65 @@ void main() => group("$WorldCountry", () {
         );
       });
 
+      group("fromCodeNumeric", () {
+        test(
+          "with proper code",
+          () => expect(WorldCountry.fromCodeNumeric(value.codeNumeric), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            () => WorldCountry.fromCodeNumeric(value.toString()),
+            throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty countries",
+          () => expect(
+            () => WorldCountry.fromCodeNumeric(value.codeNumeric, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+      });
+
+      group("fromAnyCode", () {
+        test(
+          "with numeric code",
+          () => expect(
+            WorldCountry.fromAnyCode(array.last.codeNumeric),
+            array.last,
+          ),
+        );
+
+        test(
+          "with short code",
+          () => expect(WorldCountry.fromAnyCode(value.codeShort), value),
+        );
+
+        test(
+          "with regular code",
+          () => expect(WorldCountry.fromAnyCode(value.code), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            () => WorldCountry.fromAnyCode(value.toString()),
+            throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty countries",
+          () => expect(
+            () => WorldCountry.fromAnyCode(value.codeNumeric, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+      });
+
       group("toJson", () {
         for (final element in WorldCountry.list) {
           test("compared to $WorldCountry: ${element.name.name}", () {
@@ -281,6 +340,42 @@ void main() => group("$WorldCountry", () {
           () => expect(
             WorldCountry.maybeFromValue(value.code, countries: array),
             value,
+          ),
+        );
+      });
+
+      group("fromAnyCode", () {
+        test(
+          "with numeric code",
+          () => expect(
+            WorldCountry.maybeFromAnyCode(array.last.codeNumeric),
+            array.last,
+          ),
+        );
+
+        test(
+          "with short code",
+          () => expect(WorldCountry.maybeFromAnyCode(value.codeShort), value),
+        );
+
+        test(
+          "with regular code",
+          () => expect(WorldCountry.maybeFromAnyCode(value.code), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            WorldCountry.maybeFromAnyCode(value.toString()),
+            isNull,
+          ),
+        );
+
+        test(
+          "with empty countries",
+          () => expect(
+            () => WorldCountry.maybeFromAnyCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });

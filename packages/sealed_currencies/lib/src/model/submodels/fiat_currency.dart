@@ -252,7 +252,7 @@ class FiatCurrency extends Currency
     return null;
   }
 
-  /// Returns a [FiatCurrency] instance that corresponds to the given value, or
+  /// Returns a [FiatCurrency] instance that corresponds to the given code, or
   /// `null` if no such instance exists.
   ///
   /// The [code] parameter is required and represents the value to match
