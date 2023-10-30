@@ -5,6 +5,7 @@ import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
+import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/widgets/buttons/clear_button.dart";
 import "package:world_countries/src/widgets/pickers/basic_picker.dart";
 
@@ -112,6 +113,8 @@ extension WidgetTesterExtension on WidgetTester {
             ),
           ),
         ),
+        localizationsDelegates: const [TypedLocaleDelegate()],
+        supportedLocales: const [Locale("en")],
       ),
     );
     await pumpAndSettle();

@@ -31,7 +31,7 @@ void main() => group("$ItemProperties", () {
 
         expect(
           find.text(
-            "$ItemProperties(2, index: 2, isChosen: false, isDisabled: true)",
+            "ItemProperties(2, index: 2, isChosen: false, isDisabled: true)",
           ),
           findsOneWidget,
         );
