@@ -12,7 +12,7 @@ jobs:
   deploy:
     name: 🚀 Deploy example website
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 24
     steps:
     - name: 📚 Git checkout
       uses: actions/checkout@v4.1.1

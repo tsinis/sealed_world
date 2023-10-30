@@ -92,24 +92,27 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
           language.item,
           isChosen: language.isChosen,
           isDisabled: language.isDisabled,
-          title: title ?? Text(language.item.namesNative.first),
+          title: title ??
+              Text(
+                "${language.item.name} (${language.item.codeShort})",
+                overflow: TextOverflow.ellipsis,
+              ),
           minLeadingWidth: minLeadingWidth,
           leading: leading ??
               ConstrainedBox(
                 constraints:
                     UiConstants.constraints.copyWith(minWidth: minLeadingWidth),
-                child: Builder(
-                  builder: (context) => Text(
-                    language.item.code,
-                    style: context.theme.textTheme.titleMedium,
-                    textAlign: TextAlign.center,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: UiConstants.point),
+                  child: Builder(
+                    builder: (context) => Text(
+                      language.item.code,
+                      style: context.theme.textTheme.titleMedium,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
-          subtitle: subtitle ??
-              Text(
-                "${language.item.name} (${language.item.codeShort})",
-                overflow: TextOverflow.ellipsis,
-              ),
+          subtitle: subtitle ?? Text(language.item.namesNative.first),
         );
 }

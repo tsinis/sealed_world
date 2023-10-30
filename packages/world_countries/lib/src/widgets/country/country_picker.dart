@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../../models/item_properties.dart";
+import "../../models/locale/typed_locale.dart";
 import "../pickers/basic_picker.dart";
 import "country_tile.dart";
 
@@ -94,11 +95,8 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
-    this.translation,
+    super.translation,
   }) : super(countries);
-
-  /// The natural language to use for translations.
-  final NaturalLanguage? translation;
 
   /// The list of countries to display.
   Iterable<WorldCountry> get countries => items;
@@ -107,24 +105,28 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   Widget defaultBuilder(
     ItemProperties<WorldCountry> itemProperties, {
     bool? isDense,
-  }) =>
-      isDense ?? false
-          ? CountryTile.simple(
-              itemProperties,
-              onPressed: (country) =>
-                  maybeSelectAndPop(country, itemProperties.context),
-              translation: translation,
-            )
-          : CountryTile.fromProperties(
-              itemProperties,
-              onPressed: onSelect,
-              translation: translation,
-            );
+  }) {
+    final maybeNameTitle =
+        itemNameTranslated(itemProperties.item, itemProperties.context);
+
+    return isDense ?? false
+        ? CountryTile.simple(
+            itemProperties,
+            title: maybeNameTitle,
+            onPressed: (country) =>
+                maybeSelectAndPop(country, itemProperties.context),
+          )
+        : CountryTile.fromProperties(
+            itemProperties,
+            title: maybeNameTitle,
+            onPressed: onSelect,
+          );
+  }
 
   @override
-  Iterable<String> defaultSearch(WorldCountry item) => Set.unmodifiable({
-        // ignore: avoid-non-null-assertion, TODO! Refactor with delegates.
-        if (translation != null) ...[item.translation(translation!).name],
+  Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>
+      Set.unmodifiable({
+        ...super.defaultSearch(item, context),
         ...item.namesNative.map((nativeName) => nativeName.common),
         ...item.altSpellings,
         item.name.common,
@@ -167,12 +169,13 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(WorldCountry country)? searchIn,
+    Iterable<String> Function(WorldCountry country, BuildContext context)?
+        searchIn,
     Widget? Function(
       ItemProperties<WorldCountry> itemProperties, {
       bool? isDense,
     })? itemBuilder,
-    NaturalLanguage? translation,
+    TypedLocale? translation,
   }) =>
       CountryPicker(
         countries: items ?? countries,

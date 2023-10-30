@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_dynamic_calls
-
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../model/country/country.dart";

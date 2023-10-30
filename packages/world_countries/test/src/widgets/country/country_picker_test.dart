@@ -55,7 +55,7 @@ void main() => group("$CountryPicker", () {
         "showSearchBar: false and without selection test",
         (tester) async => tester.testPickerBody(
           CountryPicker(
-            searchIn: (_) => const [],
+            searchIn: (_, __) => const [],
             showClearButton: false,
             showSearchBar: false,
           ),

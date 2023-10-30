@@ -4,11 +4,14 @@ import "dart:async" show FutureOr;
 
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
+import "package:sealed_countries/sealed_countries.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
+import "../../extensions/locale_translated_extension.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../../models/item_properties.dart";
+import "../../models/locale/typed_locale.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
@@ -18,7 +21,7 @@ part "basic_picker_state.dart";
 /// An abstract class that provides a basic picker widget, with search
 /// functionality and indexing support.
 @immutable
-abstract class BasicPicker<T extends Object>
+abstract class BasicPicker<T extends Translated>
     extends SearchableIndexedListViewBuilder<T> with CompareSearchMixin<T> {
   /// Constructor for the [BasicPicker] class.
   ///
@@ -64,6 +67,7 @@ abstract class BasicPicker<T extends Object>
   /// * [searchBarPadding] is the padding to apply to the search bar.
   /// * [showClearButton] is a boolean indicating whether to show a clear button
   ///   in the search bar.
+  /// * [translation] is the optional parameter to use for translations.
   const BasicPicker(
     super.items, {
     super.addAutomaticKeepAlives,
@@ -102,6 +106,7 @@ abstract class BasicPicker<T extends Object>
     this.searchBar,
     this.searchBarPadding = UiConstants.padding,
     this.showClearButton = true,
+    this.translation,
   }) : super(header: searchBar);
 
   /// A boolean indicating whether to show a clear button in the search bar.
@@ -113,6 +118,9 @@ abstract class BasicPicker<T extends Object>
   /// The padding to apply to the search bar.
   final EdgeInsetsGeometry? searchBarPadding;
 
+  /// The local to use for translations.
+  final TypedLocale? translation;
+
   /// Returns the default builder for the items.
   /// It also has an optional parameter `isDense`, which indicates whether the
   /// item uses less vertical space or not, defaults to `false`.
@@ -123,10 +131,23 @@ abstract class BasicPicker<T extends Object>
     bool? isDense,
   });
 
-  /// Returns the default search function for the items.
+  /// Returns the default search function for the items. By default returns
+  /// translated name of the item (if exists).
   @required
   @protected
-  Iterable<String> defaultSearch(T item);
+  @mustCallSuper
+  Iterable<String> defaultSearch(T item, BuildContext context) => [
+        _maybeNameTranslation(item, context) ??
+            item.translation(const LangEng()).name,
+      ];
+
+  /// Returns the name translation of the item (if exists) in form
+  /// of [Text] widget.
+  Text? itemNameTranslated(T item, BuildContext context) {
+    final title = _maybeNameTranslation(item, context);
+
+    return title != null ? Text(title, overflow: TextOverflow.ellipsis) : null;
+  }
 
   /// Called to get the suggestion list for the search view (typically in
   /// [SearchAnchor] widgets).
@@ -135,9 +156,9 @@ abstract class BasicPicker<T extends Object>
     SearchController controller,
   ) {
     final x = items.where(
-      (item) => (searchIn?.call(item) ?? defaultSearch(item)).toSet().any(
-            (itemText) => compareWithTextInput(controller, itemText),
-          ),
+      (item) => (searchIn?.call(item, context) ?? defaultSearch(item, context))
+          .toSet()
+          .any((itemText) => compareWithTextInput(controller, itemText)),
     );
 
     return List<Widget>.generate(
@@ -147,6 +168,12 @@ abstract class BasicPicker<T extends Object>
           defaultBuilder.call(filteredProperties(x, context, i), isDense: true),
       growable: false,
     );
+  }
+
+  String? _maybeNameTranslation(T item, BuildContext context) {
+    final typedLocale = translation ?? context.maybeLocale;
+
+    return typedLocale != null ? item.maybeTranslate(typedLocale)?.name : null;
   }
 
   @override
@@ -367,10 +394,11 @@ abstract class BasicPicker<T extends Object>
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(T item)? searchIn,
+    Iterable<String> Function(T item, BuildContext context)? searchIn,
     Widget? Function(
       ItemProperties<T> itemProperties, {
       bool? isDense,
     })? itemBuilder,
+    TypedLocale? translation,
   });
 }

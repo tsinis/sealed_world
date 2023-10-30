@@ -311,14 +311,19 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.13.1"
+  flutter_localizations:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   flutter_native_splash:
     dependency: "direct dev"
     description:
       name: flutter_native_splash
-      sha256: "5bf4c3e5e5a0426c1e2fc8ca3555a9e617e76369c3442e1dae8385c7767ba97a"
+      sha256: d93394f22f73e810bda59e11ebe83329c5511d6460b6b7509c4e1f3c92d6d625
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.4"
+    version: "2.3.5"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -393,6 +398,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.3"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.18.1"
   io:
     dependency: transitive
     description:
@@ -565,26 +578,26 @@ packages:
     dependency: transitive
     description:
       name: sealed_countries
-      sha256: baf5cd4e134df5482781598ac5afc9eaab0828ac1d52be5d532b3e6622ad42e7
+      sha256: "3fe68040c53110ff90bcfb24b27e3efc74d76256d8c69e21d28ecb828800f4dd"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0"
+    version: "0.8.0"
   sealed_currencies:
     dependency: transitive
     description:
       name: sealed_currencies
-      sha256: "2bcb2c667f1e571054d669d099a4626e9b2d5e549c2ac10653db9dffb522f341"
+      sha256: "9715a57531b140cf70ca00e9d2e4fd613fe627a49efa774688f11e840d6299d4"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0"
+    version: "0.8.0"
   sealed_languages:
     dependency: transitive
     description:
       name: sealed_languages
-      sha256: ad344677c95d9b59a10c35e62d1ebfa8569a01a394a90d0b81f7ad604384d3b9
+      sha256: "3c603523360ac8b5d7a1cc42fed645cf0f116b650a3533554fbe9ea521bbdc0d"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0"
+    version: "0.8.0"
   shelf:
     dependency: transitive
     description:
@@ -756,7 +769,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.7.0"
+    version: "0.8.0"
   xml:
     dependency: transitive
     description:

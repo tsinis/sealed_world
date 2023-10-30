@@ -110,7 +110,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
 
   /// The method to apply search to the items.
   @override
-  final Iterable<String> Function(T item)? searchIn;
+  final Iterable<String> Function(T item, BuildContext context)? searchIn;
 
   /// A boolean indicating whether the search is case-sensitive.
   @override

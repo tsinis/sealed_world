@@ -2,9 +2,49 @@ import "dart:ui";
 
 import "package:sealed_countries/sealed_countries.dart";
 
+import "../models/locale/typed_locale.dart";
+
 /// Extension on [Locale] that provides utility methods for retrieving language
 /// and country information from a [Locale] object.
 extension LocaleExtension on Locale? {
+  /// Converts the [Locale] to a [TypedLocale], if possible.
+  ///
+  /// The `maybeToTypedLocale` method takes an optional [fallbackLanguage]
+  /// parameter of type `NaturalLanguage?`. If [fallbackLanguage] is provided,
+  /// it is used as the language for the `TypedLocale` if the `Locale` is
+  /// `null`.
+  ///
+  /// If the `Locale` is not `null`, the `maybeToTypedLocale` method returns a
+  /// `TypedLocale<String>` instance with the following properties:
+  /// - `language`: The `NaturalLanguage` corresponding to the `Locale`.
+  /// - `country`: The country code of the `Locale`.
+  /// - `script`: The script code of the `Locale`, if available.
+  ///
+  /// If the `Locale` is `null`, the `maybeToTypedLocale` method returns
+  /// `null`.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// final locale = Locale('en', 'US');
+  /// final typedLocale = locale.maybeToTypedLocale();
+  /// /// typedLocale is equal to: IsoLocale(LangEng(), country: CountryUsa()).
+  /// ```
+  TypedLocale<String>? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
+    final language = maybeLanguage ?? fallbackLanguage;
+
+    return language != null
+        ? TypedLocale(language, country: this?.countryCode, script: maybeScript)
+        : null;
+  }
+
+  /// Determines the script of the [Locale] instance (if has a valid
+  /// ISO 15924 [scriptCode]).
+  ///
+  /// This method will return a [Script] instance if the [scriptCode] contains
+  /// a valid script code. Otherwise, it will return `null`.
+  Script? get maybeScript => Script.maybeFromAnyCode(this?.scriptCode);
+
   /// Retrieves the associated [NaturalLanguage] from the [Locale] object.
   ///
   /// Returns `null` if the [Locale] object is `null`, the language code length
@@ -17,14 +57,8 @@ extension LocaleExtension on Locale? {
   /// final language = englishLocale.maybeLanguage;
   /// print(language); // Prints: Language(name: English) (LangEng)
   /// ```
-  NaturalLanguage? get maybeLanguage => _maybeFromCode<NaturalLanguage>(
-        this?.languageCode.toUpperCase(),
-        onThree: NaturalLanguage.maybeFromValue,
-        onTwo: (codeShort) => NaturalLanguage.maybeFromValue(
-          codeShort,
-          where: (language) => language.codeShort,
-        ),
-      );
+  NaturalLanguage? get maybeLanguage =>
+      NaturalLanguage.maybeFromAnyCode(this?.languageCode);
 
   /// Retrieves the associated [WorldCountry] from the [Locale] object.
   ///
@@ -39,27 +73,6 @@ extension LocaleExtension on Locale? {
   /// final country = usEnglishLocale.maybeCountry;
   /// print(country); // Prints: Country(name: United States) (CountryUsa)
   /// ```
-  WorldCountry? get maybeCountry => _maybeFromCode<WorldCountry>(
-        this?.countryCode?.toUpperCase(),
-        onThree: WorldCountry.maybeFromValue,
-        onTwo: (codeShort) => WorldCountry.maybeFromValue(
-          codeShort,
-          where: (country) => country.codeShort,
-        ),
-      );
-
-  T? _maybeFromCode<T extends Object>(
-    String? code, {
-    required T? Function(String codeShort) onTwo,
-    required T? Function(String code) onThree,
-  }) {
-    if (code == null) return null;
-
-    return switch (code.length) {
-      2 => onTwo(code),
-      // ignore: avoid-substring, no emojis here.
-      >= 3 => onThree(code.substring(0, 3)),
-      _ => null,
-    };
-  }
+  WorldCountry? get maybeCountry =>
+      WorldCountry.maybeFromAnyCode(this?.countryCode);
 }

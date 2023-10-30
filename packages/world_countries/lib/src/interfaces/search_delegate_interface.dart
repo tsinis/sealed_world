@@ -90,5 +90,5 @@ abstract class SearchDelegateInterface<T extends Object>
   /// A function that takes an item and returns an iterable of strings to search
   /// in.
   @override
-  final Iterable<String> Function(T item) searchIn;
+  final Iterable<String> Function(T item, BuildContext context) searchIn;
 }

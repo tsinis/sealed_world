@@ -5,6 +5,7 @@ import "package:sealed_countries/sealed_countries.dart";
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../models/item_properties.dart";
+import "../../models/locale/typed_locale.dart";
 import "../country/country_picker.dart";
 import "../country/country_tile.dart";
 import "../country/emoji_flag.dart";
@@ -114,32 +115,36 @@ class PhoneCodePicker extends CountryPicker {
         itemProperties,
         leading: ConstrainedBox(
           constraints: UiConstants.constraints,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              EmojiFlag.twemoji(itemProperties.item),
-              Padding(
-                padding: const EdgeInsets.only(right: UiConstants.point / 2),
-                child: Builder(
-                  builder: (context) => Text(
-                    itemProperties.item.idd.phoneCode(),
-                    style: context.theme.textTheme.labelSmall,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                EmojiFlag.twemoji(itemProperties.item),
+                Padding(
+                  padding: const EdgeInsets.only(right: UiConstants.point / 2),
+                  child: Builder(
+                    builder: (context) => Text(
+                      itemProperties.item.idd.phoneCode(),
+                      style: context.theme.textTheme.labelSmall,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
+        title: itemNameTranslated(itemProperties.item, itemProperties.context),
         onPressed: (phone) => isDense ?? false
             ? maybeSelectAndPop(phone, itemProperties.context)
             : onSelect?.call(phone),
         visualDensity: isDense ?? false ? VisualDensity.compact : null,
-        translation: translation,
       );
 
   @override
-  Iterable<String> defaultSearch(WorldCountry item) => Set.unmodifiable({
-        ...super.defaultSearch(item),
+  Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>
+      Set.unmodifiable({
+        ...super.defaultSearch(item, context),
         item.idd.phoneCode(leading: ""),
       });
 
@@ -180,12 +185,13 @@ class PhoneCodePicker extends CountryPicker {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(WorldCountry country)? searchIn,
+    Iterable<String> Function(WorldCountry country, BuildContext context)?
+        searchIn,
     Widget? Function(
       ItemProperties<WorldCountry> itemProperties, {
       bool? isDense,
     })? itemBuilder,
-    NaturalLanguage? translation,
+    TypedLocale? translation,
   }) =>
       PhoneCodePicker(
         countries: items ?? countries,

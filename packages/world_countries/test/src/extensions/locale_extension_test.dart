@@ -2,11 +2,18 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/extensions/locale_extension.dart";
+import "package:world_countries/src/models/locale/iso_locale.dart";
+import "package:world_countries/src/models/locale/typed_locale.dart";
 
 void main() => group("LocaleExtension ", () {
       const usa = CountryUsa();
       const english = LangEng();
-      final usEnglishLocale = Locale(english.codeShort, usa.codeShort);
+      const latin = ScriptLatn();
+      final usEnglishLocale = Locale.fromSubtags(
+        languageCode: english.codeShort,
+        scriptCode: latin.code,
+        countryCode: usa.codeShort,
+      );
 
       group("maybeLanguage", () {
         test(
@@ -74,6 +81,61 @@ void main() => group("LocaleExtension ", () {
               "${usEnglishLocale.countryCode}A",
             ).maybeCountry,
             usa,
+          ),
+        );
+      });
+
+      group("maybeScript", () {
+        test(
+          "should return null if $Locale is null",
+          () => expect(null.maybeScript, isNull),
+        );
+
+        test(
+          "should return null if languageCode length smaller than 2",
+          () => expect(const Locale("1").maybeScript, isNull),
+        );
+
+        test(
+          "should return null if languageCode is not a valid language code",
+          () => expect(const Locale("01").maybeScript, isNull),
+        );
+
+        test(
+          "should return $Script if scriptCode is a valid code",
+          () => expect(usEnglishLocale.maybeScript, latin),
+        );
+      });
+
+      group("maybeToTypedLocale", () {
+        test(
+          "should return null if $Locale is null",
+          () => expect(null.maybeToTypedLocale(), isNull),
+        );
+
+        test(
+          "should return null if languageCode length smaller than 2",
+          () => expect(const Locale("1").maybeToTypedLocale(), isNull),
+        );
+
+        test(
+          "should return null if languageCode is not a valid language code",
+          () => expect(const Locale("01").maybeToTypedLocale(), isNull),
+        );
+
+        test(
+          "should not return null if fallbackLanguage is provided",
+          () => expect(
+            const Locale("01").maybeToTypedLocale(english),
+            const TypedLocale(english),
+          ),
+        );
+
+        test(
+          "should return $TypedLocale if languageCode is a valid code",
+          () => expect(
+            usEnglishLocale.maybeToTypedLocale(),
+            const IsoLocale(english, country: usa, script: latin),
           ),
         );
       });

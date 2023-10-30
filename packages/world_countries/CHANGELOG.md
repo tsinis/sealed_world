@@ -1,3 +1,26 @@
+## 0.8.0
+
+BREAKING CHANGE
+
+- Country and PhoneCode pickers now using `TypedLocale` as translation parameter (to migrate just wrap your previous language there with IsoLocale()).
+
+NEW FEATURES
+
+- Added the `TypedLocaleDelegate` class, which can be used in the `localizationsDelegates` (such as in `MaterialApp`). It attempts to convert the string-based `Locale` to a strongly typed `TypedLocale`, which is then used in all pickers to provide translations for country/currency/language names. The detected TypedLocale? is also accessible via `TypedLocaleDelegate.maybeOf(context)` or simply `context.maybeLocale`.
+- All pickers can have a local translation override via the `translation` parameter (which will be used instead of the TypedLocale translation).
+- Translated classes now also have translate() and maybeTranslate() methods to translate it's data (country/currency/language names).
+
+- Added new factories to ISO classes - fromAnyCode, which do the length and type checks and redirects to other fromCode* constructors.
+- Added new static method to ISO classes - maybeFromAnyCode, which works same way as fromAnyCode, but doesn't throws StateErrors if no currency object is found.
+- Added maybeMapIsoCode method to String extensions, which is used under the hood of (maybe)fromAnyCode.
+
+REFACTOR
+
+- Slightly changed UI of default picker's tiles - added padding on top of the leading widget and swapped title with subtitle (because of translations provided to title).
+- Named classes now has boolean flag (short, defaults to true).
+- TranslatedName class by default returns "name" value on toString().
+- Refactored dollar symbols in toString() methods.
+
 ## 0.7.0
 
 This is a general update that synchronizes underlying Dart package updates (related to translations and interfaces), as a preparation for a bigger upcoming update for localization delegates.

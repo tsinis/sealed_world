@@ -1,5 +1,8 @@
 import "package:flutter/material.dart";
 
+import "../helpers/typed_locale_delegate.dart";
+import "../models/locale/typed_locale.dart";
+
 /// A set of useful extensions for `BuildContext`.
 extension BuildContextExtension on BuildContext {
   /// Returns the `MaterialLocalizations` instance for the current context.
@@ -13,7 +16,7 @@ extension BuildContextExtension on BuildContext {
   /// Returns `true` if the current `BuildContext` has a `MaterialLocalizations`
   /// instance associated with it.
   bool get hasMaterialL10n =>
-      Localizations.of<MaterialLocalizations>(this, MaterialLocalizations) !=
+      Localizations.of<MaterialLocalizations?>(this, MaterialLocalizations) !=
       null;
 
   /// Returns the nearest `FocusScopeNode` instance for the current context.
@@ -76,4 +79,10 @@ extension BuildContextExtension on BuildContext {
     SnackBar snackBar,
   ) =>
       messenger.showSnackBar(snackBar);
+
+  /// Returns the `TypedLocale` instance for the current context, or `null` if
+  /// the current context does not have a `TypedLocale` (for example, because
+  /// `TypedLocaleDelegate` is not provided in the `MaterialApp`'s
+  /// `localizationsDelegates` list or locale was not detected).
+  TypedLocale? get maybeLocale => TypedLocaleDelegate.maybeOf(this);
 }
