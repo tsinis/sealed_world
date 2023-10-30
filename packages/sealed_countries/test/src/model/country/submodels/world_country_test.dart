@@ -3,7 +3,7 @@ import "package:sealed_countries/src/helpers/world_country/world_country_date_ti
 import "package:sealed_countries/src/helpers/world_country/world_country_getters.dart";
 import "package:sealed_countries/src/helpers/world_country/world_country_json.dart";
 import "package:sealed_countries/src/model/country/country.dart";
-import "package:sealed_currencies/currency_translations.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 void main() => group("$WorldCountry", () {

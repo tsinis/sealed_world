@@ -68,7 +68,7 @@ final class Maps implements JsonEncodable<Maps> {
 
   @override
   String toString() =>
-      '$Maps(googleMaps: "$googleMaps", openStreetMaps: "$openStreetMaps")';
+      'Maps(googleMaps: "$googleMaps", openStreetMaps: "$openStreetMaps")';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

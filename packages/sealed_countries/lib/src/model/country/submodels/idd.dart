@@ -29,7 +29,7 @@ final class Idd implements JsonEncodable<Idd> {
   final List<int> suffixes;
 
   @override
-  String toString() => "$Idd(root: $root, suffixes: $suffixes)";
+  String toString() => "Idd(root: $root, suffixes: $suffixes)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

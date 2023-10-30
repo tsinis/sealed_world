@@ -7,7 +7,7 @@ library sealed_country_translations;
 
 import "package:sealed_currencies/sealed_currencies.dart";
 
-export "package:sealed_currencies/sealed_currencies.dart";
+export "package:sealed_currencies/currency_translations.dart";
 
 export "src/translations/abw_country.l10n.dart";
 export "src/translations/afg_country.l10n.dart";
