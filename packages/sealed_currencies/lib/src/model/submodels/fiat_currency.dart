@@ -44,10 +44,13 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-  })  : assert(code.length == 3, "`code` should be exactly 3 characters long!"),
+  })  : assert(
+          code.length == IsoStandardized.codeLength,
+          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
+        ),
         assert(
-          codeNumeric.length == 3,
-          "`codeNumeric` should be exactly 3 characters long!",
+          codeNumeric.length == IsoStandardized.codeLength,
+          """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
         ),
         assert(
           namesNative != const <String>[],
@@ -130,6 +133,36 @@ class FiatCurrency extends Currency
     );
   }
 
+  /// Returns an instance of the [FiatCurrency] class from any valid
+  /// ISO 4217 code.
+  ///
+  /// The [code] parameter is required and should be a string representing the
+  /// ISO 4217 code for the currency. The optional [currencies] parameter can be
+  /// used to specify a list of [FiatCurrency] objects to search through.
+  /// This method returns the [FiatCurrency] instance that corresponds to the
+  /// given code, or throws a [StateError] if no such instance exists.
+  ///
+  /// Example:
+  /// ```dart
+  /// final currency = FiatCurrency.fromAnyCode("eur");
+  /// ```
+  ///
+  /// In the above example, the `fromAnyCode` factory method is called with the
+  /// code "eur". It uses the `maybeMapIsoCode` method to determine the
+  /// appropriate mapping for the code. If the code is numeric, it calls the
+  /// `fromCodeNumeric` factory method to create a [FiatCurrency] instance.
+  /// Otherwise, it calls the `fromCode` factory method to create a
+  /// [FiatCurrency] instance. The resulting [FiatCurrency] instance is assigned
+  /// to the `code` variable.
+  factory FiatCurrency.fromAnyCode(
+    String code, [
+    Iterable<FiatCurrency> currencies = list,
+  ]) =>
+      code.maybeMapIsoCode(
+        orElse: (_) => FiatCurrency.fromCode(code, currencies),
+        numeric: (_) => FiatCurrency.fromCodeNumeric(code, currencies),
+      );
+
   /// Alternative symbols for this currency or `null` if no such symbols exists.
   final List<String>? alternateSymbols;
 
@@ -178,7 +211,7 @@ class FiatCurrency extends Currency
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''$FiatCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : 'r"$symbol"'}, alternateSymbols: ${alternateSymbols == null ? alternateSymbols : jsonEncode(alternateSymbols)}, disambiguateSymbol: ${disambiguateSymbol == null ? disambiguateSymbol : 'r"$disambiguateSymbol"'}, htmlEntity: ${htmlEntity == null ? htmlEntity : 'r"$htmlEntity"'}, codeNumeric: "$codeNumeric", namesNative: ${jsonEncode(namesNative)}, priority: $priority, smallestDenomination: $smallestDenomination, subunit: ${subunit == null ? subunit : '"$subunit"'}, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, translations: ${code.toLowerCase()}CurrencyTranslations)''';
+      : '''FiatCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : 'r"$symbol"'}, alternateSymbols: ${alternateSymbols == null ? alternateSymbols : jsonEncode(alternateSymbols)}, disambiguateSymbol: ${disambiguateSymbol == null ? disambiguateSymbol : 'r"$disambiguateSymbol"'}, htmlEntity: ${htmlEntity == null ? htmlEntity : 'r"$htmlEntity"'}, codeNumeric: "$codeNumeric", namesNative: ${jsonEncode(namesNative)}, priority: $priority, smallestDenomination: $smallestDenomination, subunit: ${subunit == null ? subunit : '"$subunit"'}, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, translations: ${code.toLowerCase()}CurrencyTranslations)''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -219,11 +252,46 @@ class FiatCurrency extends Currency
     return null;
   }
 
-  /// Adds the currency unit to a value.
+  /// Returns a [FiatCurrency] instance that corresponds to the given value, or
+  /// `null` if no such instance exists.
   ///
-  /// If [unitFirst] is `true` (default), the currency unit is added before the
-  /// value, otherwise it is added after the value.
-  String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
+  /// The [code] parameter is required and represents the value to match
+  /// against. The optional [currencies] parameter can be used to specify a list
+  /// of [FiatCurrency] objects to search through. This method returns the
+  /// [FiatCurrency] instance that corresponds to the given value, or `null` if
+  /// no such instance exists.
+  ///
+  /// Example:
+  /// ```dart
+  /// FiatCurrency? fiat = FiatCurrency.maybeFromAnyCode(CurrencyEnum.eur.name);
+  /// print(fiat != null) // Prints: true.
+  /// ```
+  ///
+  /// In the above example, the `maybeFromAnyCode` method is called with the
+  /// value "Latn". It uses the `maybeMapIsoCode` method to determine the
+  /// appropriate mapping for the value. If the value is numeric, it compares it
+  /// with the `codeNumeric` property of each [FiatCurrency] instance.
+  /// Otherwise, it compares it with the uppercase version of the `code`
+  /// property of each [FiatCurrency] instance. The resulting [FiatCurrency]
+  /// instance is assigned to the `currency` variable.
+  static FiatCurrency? maybeFromAnyCode(
+    String? code, [
+    Iterable<FiatCurrency> currencies = list,
+  ]) {
+    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+    final trimmedCode = code?.trim().toUpperCase();
+    if (trimmedCode?.isEmpty ?? true) return null;
+
+    for (final currency in currencies) {
+      final expectedValue = trimmedCode?.maybeMapIsoCode(
+        orElse: (_) => currency.code,
+        numeric: (_) => currency.codeNumeric,
+      );
+      if (expectedValue == trimmedCode) return currency;
+    }
+
+    return null;
+  }
 
   /// A list of all regular the currencies currently supported by the
   /// [FiatCurrency] class. This is subset of [FiatCurrency.list] that excludes
