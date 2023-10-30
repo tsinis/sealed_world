@@ -268,7 +268,7 @@ class FiatCurrency extends Currency
   /// ```
   ///
   /// In the above example, the `maybeFromAnyCode` method is called with the
-  /// value "Latn". It uses the `maybeMapIsoCode` method to determine the
+  /// value "eur". It uses the `maybeMapIsoCode` method to determine the
   /// appropriate mapping for the value. If the value is numeric, it compares it
   /// with the `codeNumeric` property of each [FiatCurrency] instance.
   /// Otherwise, it compares it with the uppercase version of the `code`
