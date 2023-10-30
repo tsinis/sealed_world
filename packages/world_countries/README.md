@@ -43,18 +43,38 @@ For example:
 import "dart:async" show unawaited;
 
 import "package:flutter/material.dart";
+import "package:flutter_localizations/flutter_localizations.dart";
 import "package:world_countries/world_countries.dart";
 
-void main() => runApp(const MaterialApp(home: MainPage()));
+void main() => runApp(
+      MaterialApp(
+        home: const MainPage(),
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          TypedLocaleDelegate(
+            localeMapResolution: [
+              /// Just as an example, Brazil could be mapped to Euro Portuguese.
+              LocaleEntry(
+                Locale("pt", "BR"),
+                IsoLocale(LangPor(), country: CountryPrt()),
+              ),
+            ],
+          ),
+        ],
+        supportedLocales: [
+          for (final locale in kMaterialSupportedLanguages) Locale(locale),
+          const Locale("pt", "PT"),
+          const Locale("pt", "BR"),
+        ],
+      ),
+    );
 
 class MainPage extends StatefulWidget {
   const MainPage({
     super.key,
     // Immutable compile time constant constructors in every picker.
-    this.basicPicker = const CountryPicker(
-      disabled: [CountryAbw()],
-      translation: LangEng(), // 25 translations provided.
-    ),
+    this.basicPicker = const CountryPicker(disabled: [CountryAbw()]),
   });
 
   final CountryPicker basicPicker;
@@ -71,7 +91,8 @@ class _MainPageState extends State<MainPage>
   void onSelect(WorldCountry newCountry) {
     debugPrint("New country selected: $selectedCountry");
     setState(
-      () => picker = picker.copyWith( // A copyWith methods in every picker.
+      () => picker = picker.copyWith(
+        // A copyWith methods in every picker.
         chosen: selectedCountry == newCountry ? const [] : [newCountry],
       ),
     );
@@ -136,8 +157,6 @@ For more usage examples, please see the `/example` folder.
 
 For more information on using this package, check out the API documentation.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
-
-> **EXPERIMENTAL** (Flutter WASM): To preview this package example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **113** or higher) with the `enable-webassembly-garbage-collection` **flag enabled**. Please allow up to one minute for initial fonts and data caching.
 
 ## References, credits
 
