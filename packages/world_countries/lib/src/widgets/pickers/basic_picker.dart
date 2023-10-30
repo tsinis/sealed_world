@@ -141,6 +141,8 @@ abstract class BasicPicker<T extends Translated>
             item.translation(const LangEng()).name,
       ];
 
+  /// Returns the name translation of the item (if exists) in form
+  /// of [Text] widget.
   Text? itemNameTranslated(T item, BuildContext context) {
     final title = _maybeNameTranslation(item, context);
 

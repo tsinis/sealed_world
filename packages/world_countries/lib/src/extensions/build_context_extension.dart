@@ -80,5 +80,9 @@ extension BuildContextExtension on BuildContext {
   ) =>
       messenger.showSnackBar(snackBar);
 
+  /// Returns the `TypedLocale` instance for the current context, or `null` if
+  /// the current context does not have a `TypedLocale` (for example, because
+  /// `TypedLocaleDelegate` is not provided in the `MaterialApp`'s
+  /// `localizationsDelegates` list or locale was not detected).
   TypedLocale? get maybeLocale => TypedLocaleDelegate.maybeOf(this);
 }
