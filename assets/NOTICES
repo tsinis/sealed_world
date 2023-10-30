@@ -917,6 +917,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------
 analyzer
+intl
 
 Copyright 2013, the Dart project authors.
 
@@ -32502,6 +32503,7 @@ sealed_languages
 MIT License
 
 Copyright (c) 2017-present B. Martin
+Copyright (c) Saša Stamenković <umpirsky@gmail.com>
 Copyright (c) 2023 Roman Cinis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
