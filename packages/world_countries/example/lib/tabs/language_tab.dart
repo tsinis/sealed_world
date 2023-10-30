@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-non-ascii-symbols
-
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 

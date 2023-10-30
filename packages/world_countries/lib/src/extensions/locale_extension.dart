@@ -27,22 +27,10 @@ extension LocaleExtension on Locale? {
   /// final language = englishLocale.maybeLanguage;
   /// print(language); // Prints: Language(name: English) (LangEng)
   /// ```
-  NaturalLanguage? get maybeLanguage => _maybeFromCode<NaturalLanguage>(
-        this?.languageCode.toUpperCase(),
-        onThree: NaturalLanguage.maybeFromValue,
-        onTwo: (codeShort) => NaturalLanguage.maybeFromValue(
-          codeShort,
-          where: (language) => language.codeShort,
-        ),
-      );
+  NaturalLanguage? get maybeLanguage =>
+      NaturalLanguage.maybeFromAnyCode(this?.languageCode);
 
-  Script? get maybeScript {
-    final scriptCode = this?.scriptCode?.toUpperCase().trim() ?? "";
-
-    return scriptCode.isNotEmpty
-        ? Script.maybeFromValue(scriptCode, where: (s) => s.code.toUpperCase())
-        : null;
-  }
+  Script? get maybeScript => Script.maybeFromAnyCode(this?.scriptCode);
 
   /// Retrieves the associated [WorldCountry] from the [Locale] object.
   ///
@@ -57,27 +45,6 @@ extension LocaleExtension on Locale? {
   /// final country = usEnglishLocale.maybeCountry;
   /// print(country); // Prints: Country(name: United States) (CountryUsa)
   /// ```
-  WorldCountry? get maybeCountry => _maybeFromCode<WorldCountry>(
-        this?.countryCode?.toUpperCase(),
-        onThree: WorldCountry.maybeFromValue,
-        onTwo: (codeShort) => WorldCountry.maybeFromValue(
-          codeShort,
-          where: (country) => country.codeShort,
-        ),
-      );
-
-  T? _maybeFromCode<T extends Object>(
-    String? code, {
-    required T? Function(String codeShort) onTwo,
-    required T? Function(String code) onThree,
-  }) {
-    if (code == null) return null;
-
-    return switch (code.length) {
-      2 => onTwo(code),
-      // ignore: avoid-substring, no emojis here.
-      >= 3 => onThree(code.substring(0, 3)),
-      _ => null,
-    };
-  }
+  WorldCountry? get maybeCountry =>
+      WorldCountry.maybeFromAnyCode(this?.countryCode);
 }

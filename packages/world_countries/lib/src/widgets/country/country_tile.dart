@@ -59,8 +59,6 @@ class CountryTile extends ListItemTile<WorldCountry> {
   ///   display information about.
   /// * All other parameters are optional and are passed to the superclass
   ///   constructor.
-  /// * [translation] is an optional `NaturalLanguage` object used to translate
-  ///   the country's name.
   CountryTile.fromProperties(
     ItemProperties<WorldCountry> country, {
     Widget? leading,
@@ -119,8 +117,6 @@ class CountryTile extends ListItemTile<WorldCountry> {
   ///   display information about.
   /// * All other parameters are optional and are passed to the superclass
   ///   constructor.
-  /// * [translation] is an optional `NaturalLanguage` object used to translate
-  ///   the country's name.
   CountryTile.simple(
     ItemProperties<WorldCountry> country, {
     Widget? leading,
