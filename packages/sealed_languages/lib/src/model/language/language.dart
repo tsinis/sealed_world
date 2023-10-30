@@ -1,6 +1,7 @@
 import "../../data/natural_language_families.data.dart";
 import "../../data/natural_languages.data.dart";
 import "../../data/scripts.data.dart";
+import "../../helpers/extensions/iso_standardized_string_extension.dart";
 import "../../helpers/extensions/sealed_world_iterable_extension.dart";
 import "../../helpers/natural_language/natural_language_json.dart";
 import "../../interfaces/iso_standardized.dart";
@@ -32,5 +33,5 @@ sealed class Language implements Named<String> {
 
   /// Returns a string representation of this [Language] object.
   @override
-  String toString() => '$Language(name: "$name")';
+  String toString({bool short = true}) => 'Language(name: "$name")';
 }

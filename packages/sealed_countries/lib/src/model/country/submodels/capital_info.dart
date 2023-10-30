@@ -35,7 +35,7 @@ final class CapitalInfo implements JsonEncodable<CapitalInfo> {
 
   @override
   String toString({bool short = true}) =>
-      """$CapitalInfo(capital: ${capital.toString(short: short)}, latLng: $latLng)""";
+      """CapitalInfo(capital: ${capital.toString(short: short)}, latLng: $latLng)""";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

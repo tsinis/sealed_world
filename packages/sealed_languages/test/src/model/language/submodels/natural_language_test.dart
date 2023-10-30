@@ -138,6 +138,34 @@ void main() => group("$NaturalLanguage", () {
         );
       });
 
+      group("fromAnyCode", () {
+        test(
+          "with proper short code",
+          () => expect(NaturalLanguage.fromAnyCode(value.codeShort), value),
+        );
+
+        test(
+          "with proper regular code",
+          () => expect(NaturalLanguage.fromAnyCode(value.code), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            () => NaturalLanguage.fromAnyCode(value.toString()),
+            throwsStateError,
+          ),
+        );
+
+        test(
+          "with empty languages",
+          () => expect(
+            () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+      });
+
       group("toJson", () {
         for (final element in NaturalLanguage.list) {
           test("compared to $NaturalLanguage: ${element.name}", () {
@@ -214,6 +242,43 @@ void main() => group("$NaturalLanguage", () {
           () => expect(
             NaturalLanguage.maybeFromValue(value.code, languages: array),
             value,
+          ),
+        );
+      });
+
+      group("maybeFromAnyCode", () {
+        test(
+          "with proper short code",
+          () =>
+              expect(NaturalLanguage.maybeFromAnyCode(value.codeShort), value),
+        );
+
+        test(
+          "with proper regular code",
+          () => expect(NaturalLanguage.maybeFromAnyCode(value.code), value),
+        );
+
+        test(
+          "with wrong code",
+          () => expect(
+            NaturalLanguage.maybeFromAnyCode(value.toString()),
+            isNull,
+          ),
+        );
+
+        test(
+          "with null code",
+          () => expect(
+            NaturalLanguage.maybeFromAnyCode(null),
+            isNull,
+          ),
+        );
+
+        test(
+          "with empty languages",
+          () => expect(
+            () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
+            throwsA(isA<AssertionError>()),
           ),
         );
       });

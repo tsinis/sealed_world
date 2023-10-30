@@ -47,8 +47,8 @@ final class CountryName extends TranslatedName {
 
   @override
   String toString({bool short = true}) => short
-      ? '''$CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")'''
-      : '''$CountryName(language: $language, official: "$official", common: "$common")''';
+      ? '''CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")'''
+      : '''CountryName(language: $language, official: "$official", common: "$common")''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

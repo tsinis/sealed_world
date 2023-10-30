@@ -46,7 +46,7 @@ final class PostalCode implements JsonEncodable<PostalCode> {
 
   @override
   String toString() =>
-      '$PostalCode(format: "$format", regExpPattern: r"$regExpPattern")';
+      'PostalCode(format: "$format", regExpPattern: r"$regExpPattern")';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

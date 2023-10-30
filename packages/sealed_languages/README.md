@@ -19,13 +19,15 @@ This ISO-driven, pure Dart, fully tested and and dependency-free package provide
 | bibliographicCode | No | A three-letter string representing the ISO 639-2/B Bibliographic code for the language. | null |
 | family | No | The language family to which the language belongs. | LanguageFamily(name: "Indo-European") |
 | isRightToLeft | No | A boolean value specifying whether the language is written right-to-left. | false |
-| translations | Yes | A list of TranslatedNames representing the language name translations. | 121 translations for a English language name
+| translations | Yes | A list of TranslatedNames representing the language name translations. | **121** translations for a English language name
 
 Compile time constant list of all languages accessible via `NaturalLanguage.list` and more over, the **NaturalLanguage** class provides the following methods:
 
 - `maybeFromValue` - returns a language instance if the value matches the provided value, otherwise returns `null`.
+- `maybeFromAnyCode` - returns a language instance if the value matches any ISO code, otherwise returns `null`.
 - `fromCode` - returns a language instance if the value matches the provided ISO 639-2 code.
 - `fromCodeShort` - returns a language instance if the value matches the provided ISO 639-1 code code.
+- `fromAnyCode` - returns a language instance if the value matches the provided ISO 639-1 or ISO 639-2 codes.
 - `fromName` - returns a language instance if the value matches the provided name.
 
 and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc.

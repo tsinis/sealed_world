@@ -33,7 +33,7 @@ final class LatLng implements JsonEncodable<LatLng> {
   final double longitude;
 
   @override
-  String toString() => "$LatLng($latitude, $longitude)";
+  String toString() => "LatLng($latitude, $longitude)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

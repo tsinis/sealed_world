@@ -1,3 +1,19 @@
+## 0.8.0
+
+NEW FEATURES
+
+- Added new factories to Script and NaturalLanguage - fromAnyCode, which do the length and type checks and redirects to other fromCode* constructors
+- Added new static methods to Script and NaturalLanguage - maybeFromAnyCode, which works same way as fromAnyCode, but doesn't throws StateErrors if no ISO object is found.
+- Added maybeMapIsoCode method to String extensions, which is used under the hood of (maybe)fromAnyCode.
+
+REFACTOR
+
+- Renamed isIsoCode to isIsoAlphaRegularCode.
+
+- Named classes now has boolean flag (short, defaults to true).
+- TranslatedName class by default returns "name" value on toString().
+- Refactored dollar symbols in toString() methods.
+
 ## 0.7.0
 
 NEW FEATURES
