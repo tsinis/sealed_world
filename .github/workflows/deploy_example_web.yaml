@@ -36,10 +36,6 @@ jobs:
       working-directory: packages/world_countries/example/build/web_wasm
       run: rm -rf assets/packages && rm -rf assets/assets
 
-    - name: 🗜️ Gzip compression
-      working-directory: packages/world_countries/example/build/web_wasm
-      run: find . -type f -exec gzip "{}" \; -exec mv "{}.gz" "{}" \;
-
     - name: 🛫 Deploy website to GH Pages
       uses: s0/git-publish-subdir-action@v2.6.0
       env:
