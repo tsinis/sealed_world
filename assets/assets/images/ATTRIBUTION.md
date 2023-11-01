@@ -1,1 +1,0 @@
-Image by [flatart](https://www.freepik.com/free-vector/hitech-motion-background-vector-technology-background-illustration_32375229.htm#page=2&query=planet%20drawing%20abstract%20illustration&position=44&from_view=search&track=ais) on [Freepik](https://www.freepik.com)
