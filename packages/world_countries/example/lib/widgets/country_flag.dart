@@ -27,22 +27,21 @@ class CountryFlag extends StatelessWidget {
             orElse: BoxShape.circle,
           ),
         ),
-        child: EmojiFlag.fromEmojiFamily(
-          country,
-          emojiFamily: FunctionalPlatform.maybeWhenConst(
-            web: EmojiFamily.openMoji,
-            orElse: null,
-          ),
-          style: TextStyle(
-            fontSize: size,
-            fontFamily: FunctionalPlatform.maybeWhenConst(
-              android: FontFamily.emojiOneAndroid,
-              iOS: FontFamily.emojiOneColor,
-              macOS: FontFamily.emojiOneColor,
-              orElse: FontFamily.emojiOneMozilla,
+        child: FunctionalPlatform.maybeWhenConst(
+          web: EmojiFlag.platformDefault(country, size: size),
+          orElse: EmojiFlag.fromEmojiFamily(
+            country,
+            style: TextStyle(
+              fontSize: size,
+              fontFamily: FunctionalPlatform.maybeWhenConst(
+                android: FontFamily.emojiOneAndroid,
+                iOS: FontFamily.emojiOneColor,
+                macOS: FontFamily.emojiOneColor,
+                orElse: FontFamily.emojiOneMozilla,
+              ),
             ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
         ),
       );
 }

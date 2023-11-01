@@ -24,10 +24,8 @@ class RouteParseUtils {
     if (route.pathTemplate == WorldData.country.pathTemplate) {
       final country = _maybeData(
         code,
-        onCode: WorldCountry.maybeFromValue,
-        onCodeShort: (_) =>
-            WorldCountry.maybeFromValue(code, where: (c) => c.codeShort),
-        onName: (_) => WorldCountry.maybeFromValue(
+        onCode: WorldCountry.maybeFromAnyCode,
+        orElse: () => WorldCountry.maybeFromValue(
           code,
           where: (c) => c.name.common.toUpperCase(),
         ),
@@ -37,9 +35,8 @@ class RouteParseUtils {
     } else if (route.pathTemplate == WorldData.currency.pathTemplate) {
       final currency = _maybeData(
         code,
-        onCode: FiatCurrency.maybeFromValue,
-        onCodeShort: FiatCurrency.maybeFromValue,
-        onName: (_) => FiatCurrency.maybeFromValue(
+        onCode: FiatCurrency.maybeFromAnyCode,
+        orElse: () => FiatCurrency.maybeFromValue(
           code,
           where: (c) => c.name.toUpperCase(),
         ),
@@ -49,10 +46,8 @@ class RouteParseUtils {
     } else if (route.pathTemplate == WorldData.language.pathTemplate) {
       final language = _maybeData(
         code,
-        onCode: NaturalLanguage.maybeFromValue,
-        onCodeShort: (_) =>
-            NaturalLanguage.maybeFromValue(code, where: (l) => l.codeShort),
-        onName: (_) => NaturalLanguage.maybeFromValue(
+        onCode: NaturalLanguage.maybeFromAnyCode,
+        orElse: () => NaturalLanguage.maybeFromValue(
           code,
           where: (l) => l.name.toUpperCase(),
         ),
@@ -64,21 +59,12 @@ class RouteParseUtils {
     return _returnFromCountryData(null);
   }
 
-  T? _maybeData<T extends Object?>(
+  T? _maybeData<T extends IsoStandardized>(
     String code, {
-    required T? Function(String code) onCodeShort,
     required T? Function(String code) onCode,
-    required T? Function(String code) onName,
-  }) {
-    switch (code.length) {
-      case 2:
-        return onCodeShort(code);
-      case 3:
-        return onCode(code);
-      default:
-        return onName(code);
-    }
-  }
+    required T? Function() orElse,
+  }) =>
+      code.length < 4 ? onCode(code) : orElse();
 
   ParsedData _returnFromCountryData(
     WorldCountry? maybeCountry, {

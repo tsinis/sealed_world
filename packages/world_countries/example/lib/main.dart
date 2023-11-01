@@ -58,17 +58,8 @@ class _MainState extends State<Main> {
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
 
-            /// Add this [TypedLocaleDelegate] for automatic locale detection
-            /// and translations using in the pickers.
-            TypedLocaleDelegate(
-              localeMapResolution: [
-                LocaleEntry(
-                  /// Brazilian Portuguese could be mapped to Euro Portuguese.
-                  Locale("pt", "BR"),
-                  IsoLocale(LangPor(), country: CountryPrt()),
-                ),
-              ],
-            ),
+            /// Allows to use user's [Locale] as default translation in pickers.
+            TypedLocaleDelegate(), // <----.
           ],
           supportedLocales: [
             for (final locale in kMaterialSupportedLanguages) Locale(locale),
