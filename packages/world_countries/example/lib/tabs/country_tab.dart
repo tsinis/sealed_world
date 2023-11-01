@@ -1,5 +1,6 @@
 // ignore_for_file: avoid-non-ascii-symbols
 
+import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
@@ -54,18 +55,30 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             icon: Icons.flag_outlined,
             description: "Native Common Name(s)",
           ),
-          for (final emoji in [...EmojiFamily.values, null])
-            DescriptionTile.raw(
-              emoji?.projectName ?? "Device Default Emoji",
-              description: "Emoji Flag (Vector)",
-              leading: SizedBox(
-                width: 24,
-                child: FittedBox(
-                  fit: BoxFit.fitWidth,
-                  child: EmojiFlag.fromEmojiFamily(data, emojiFamily: emoji),
+          if (!kIsWeb)
+            for (final emoji in EmojiFamily.values)
+              DescriptionTile.raw(
+                emoji.projectName,
+                description: "Emoji Flag (Vector)",
+                leading: SizedBox(
+                  width: 24,
+                  child: FittedBox(
+                    fit: BoxFit.fitWidth,
+                    child: EmojiFlag.fromEmojiFamily(data, emojiFamily: emoji),
+                  ),
                 ),
               ),
+          DescriptionTile.raw(
+            "Device Default Emoji",
+            description: "Emoji Flag",
+            leading: SizedBox(
+              width: 24,
+              child: FittedBox(
+                fit: BoxFit.fitWidth,
+                child: EmojiFlag.platformDefault(data),
+              ),
             ),
+          ),
           DescriptionTile(
             data.codeNumeric,
             icon: Icons.pin_outlined,
