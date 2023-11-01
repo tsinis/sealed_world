@@ -59,7 +59,7 @@ class _MainState extends State<Main> {
             GlobalCupertinoLocalizations.delegate,
 
             /// Allows to use user's [Locale] as default translation in pickers.
-            TypedLocaleDelegate(),
+            TypedLocaleDelegate(), // <----.
           ],
           supportedLocales: [
             for (final locale in kMaterialSupportedLanguages) Locale(locale),
