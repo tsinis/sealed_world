@@ -4,9 +4,9 @@ import "../helpers/extensions/string_extension.dart";
 import "constants.dart";
 
 enum WorldData {
-  country(icon: Icons.call_outlined),
+  country(icon: Icons.language_outlined),
   currency(icon: Icons.payments_outlined),
-  language(icon: Icons.language_outlined);
+  language(icon: Icons.translate_outlined);
 
   const WorldData({required this.icon});
 

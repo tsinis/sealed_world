@@ -1,13 +1,13 @@
 import "dart:ui";
 
 import "package:flutter/material.dart";
+import "package:world_countries/world_countries.dart";
 
 import "../widgets/description_tile.dart";
 
 class TabBody extends StatelessWidget {
   const TabBody({
     required this.title,
-    this.backgroundColor = Colors.white38,
     this.titleOverlay = const SizedBox.shrink(),
     this.titlePadding = const EdgeInsets.symmetric(vertical: 16),
     this.titleMargin,
@@ -15,7 +15,6 @@ class TabBody extends StatelessWidget {
     super.key,
   });
 
-  final Color backgroundColor;
   final List<DescriptionTile> children;
   final Widget title;
   final EdgeInsetsGeometry? titleMargin;
@@ -27,7 +26,7 @@ class TabBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ColoredBox(
-            color: backgroundColor,
+            color: context.theme.colorScheme.onSecondary.withOpacity(1 / 2),
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
@@ -36,9 +35,15 @@ class TabBody extends StatelessWidget {
                     padding: titlePadding,
                     width: double.infinity,
                     margin: titleMargin,
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
-                      child: title,
+                    child: FunctionalPlatform.maybeWhenConst(
+                      web: title,
+                      orElse: BackdropFilter(
+                        filter: ImageFilter.blur(
+                          sigmaX: UiConstants.point,
+                          sigmaY: UiConstants.point,
+                        ),
+                        child: title,
+                      ),
                     ),
                   ),
                 ),
@@ -48,13 +53,22 @@ class TabBody extends StatelessWidget {
           ),
           Expanded(
             child: ClipRect(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
-                child: ColoredBox(
-                  color: backgroundColor,
-                  child: ListView(
+              child: ColoredBox(
+                color: context.theme.colorScheme.background.withOpacity(1 / 2),
+                child: FunctionalPlatform.maybeWhenConst(
+                  web: ListView(
                     physics: const ClampingScrollPhysics(),
                     children: children,
+                  ),
+                  orElse: BackdropFilter(
+                    filter: ImageFilter.blur(
+                      sigmaX: UiConstants.point,
+                      sigmaY: UiConstants.point,
+                    ),
+                    child: ListView(
+                      physics: const ClampingScrollPhysics(),
+                      children: children,
+                    ),
                   ),
                 ),
               ),

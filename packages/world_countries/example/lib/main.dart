@@ -24,21 +24,13 @@ class Main extends StatefulWidget {
 
 class _MainState extends State<Main> {
   final _navigatorKey = GlobalKey<NavigatorState>();
-  late final SimpleRouterDelegate _routerDelegate;
-  late final TemplateRouteParser _routeParser;
-  late final RouteState _routeState;
-
-  @override
-  void initState() {
-    super.initState();
-    _routeParser = TemplateRouteParser(allowedPaths: WorldData.paths);
-    _routeState = RouteState(_routeParser);
-    _routerDelegate = SimpleRouterDelegate(
-      routeState: _routeState,
-      builder: (_) => AppNavigator(_navigatorKey),
-      navigatorKey: _navigatorKey,
-    );
-  }
+  final _routeParser = TemplateRouteParser(allowedPaths: WorldData.paths);
+  late final _routeState = RouteState(_routeParser);
+  late final _routerDelegate = SimpleRouterDelegate(
+    routeState: _routeState,
+    builder: (_) => AppNavigator(_navigatorKey),
+    navigatorKey: _navigatorKey,
+  );
 
   @override
   void dispose() {
@@ -54,17 +46,19 @@ class _MainState extends State<Main> {
           routeInformationParser: _routeParser,
           routerDelegate: _routerDelegate,
           theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
+          darkTheme:
+              ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
-
-            /// Allows to use user's [Locale] as default translation in pickers.
-            TypedLocaleDelegate(), // <----.
+            TypedLocaleDelegate(), // <- Add for automatic pickers translations.
           ],
           supportedLocales: [
-            for (final locale in kMaterialSupportedLanguages) Locale(locale),
             const Locale("pt", "PT"),
-            const Locale("pt", "BR"),
+            const Locale("pt", "BR"), // Classic string only based locale, or:
+            const IsoLocale(LangBos(), script: ScriptCyrl()), // Strict typed.
+            const TypedLocale(LangBos(), script: ScriptLatn()), // Loose typed.
+            for (final locale in kMaterialSupportedLanguages) Locale(locale),
           ],
         ),
       );

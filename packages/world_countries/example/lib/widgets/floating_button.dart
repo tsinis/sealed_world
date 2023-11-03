@@ -10,7 +10,7 @@ class FloatingButton extends StatelessWidget {
   final TabsDataController controller;
 
   @override
-  Widget build(BuildContext context) => InkWell(
+  Widget build(BuildContext context) => GestureDetector(
         onLongPress: () => onPressed(isLong: true),
         child: FloatingActionButton(
           onPressed: () => onPressed(isLong: false),
