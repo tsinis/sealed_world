@@ -5,16 +5,16 @@ maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 topics:
- - languages
- - language
- - locale
- - iso-639
- - iso
+  - languages
+  - language
+  - locale
+  - iso-639
+  - iso
 
 screenshots:
-  - description: 'Structure visualization'
+  - description: "Structure visualization"
     path: doc/structure.webp
-  - description: 'Examples of usage'
+  - description: "Examples of usage"
     path: doc/example.webp
 
 environment:
