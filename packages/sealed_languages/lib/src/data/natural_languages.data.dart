@@ -1,4 +1,6 @@
+import "../../language_translations.dart";
 import "../model/language/language.dart";
+import "../model/translated_name.dart";
 import "natural_language_families.data.dart";
 import "scripts.data.dart";
 
@@ -16,7 +18,11 @@ class LangAar extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => aarLanguageTranslations;
 }
 
 /// A class that represents the Abkhaz language.
@@ -35,6 +41,9 @@ class LangAbk extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => abkLanguageTranslations;
 }
 
 /// A class that represents the Afrikaans language.
@@ -51,7 +60,11 @@ class LangAfr extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => afrLanguageTranslations;
 }
 
 /// A class that represents the Akan language.
@@ -68,7 +81,11 @@ class LangAka extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => akaLanguageTranslations;
 }
 
 /// A class that represents the Amharic language.
@@ -87,6 +104,9 @@ class LangAmh extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptEthi()},
         );
+
+  @override
+  List<TranslatedName> get translations => amhLanguageTranslations;
 }
 
 /// A class that represents the Arabic language.
@@ -105,6 +125,9 @@ class LangAra extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptArab()},
         );
+
+  @override
+  List<TranslatedName> get translations => araLanguageTranslations;
 }
 
 /// A class that represents the Aragonese language.
@@ -121,7 +144,11 @@ class LangArg extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => argLanguageTranslations;
 }
 
 /// A class that represents the Assamese language.
@@ -140,6 +167,9 @@ class LangAsm extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptBeng()},
         );
+
+  @override
+  List<TranslatedName> get translations => asmLanguageTranslations;
 }
 
 /// A class that represents the Avaric language.
@@ -158,6 +188,9 @@ class LangAva extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => avaLanguageTranslations;
 }
 
 /// A class that represents the Avestan language.
@@ -176,6 +209,9 @@ class LangAve extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptAvst()},
         );
+
+  @override
+  List<TranslatedName> get translations => aveLanguageTranslations;
 }
 
 /// A class that represents the Aymara language.
@@ -192,7 +228,11 @@ class LangAym extends NaturalLanguage {
           bibliographicCode: null,
           family: const Aymaran(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => aymLanguageTranslations;
 }
 
 /// A class that represents the Azerbaijani language.
@@ -211,6 +251,9 @@ class LangAze extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptArab(), ScriptLatn(), ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => azeLanguageTranslations;
 }
 
 /// A class that represents the Bashkir language.
@@ -229,6 +272,9 @@ class LangBak extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => bakLanguageTranslations;
 }
 
 /// A class that represents the Bambara language.
@@ -245,7 +291,11 @@ class LangBam extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => bamLanguageTranslations;
 }
 
 /// A class that represents the Belarusian language.
@@ -264,6 +314,9 @@ class LangBel extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => belLanguageTranslations;
 }
 
 /// A class that represents the Bengali (Bangla) language.
@@ -282,6 +335,9 @@ class LangBen extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptBeng()},
         );
+
+  @override
+  List<TranslatedName> get translations => benLanguageTranslations;
 }
 
 /// A class that represents the Bihari language.
@@ -300,6 +356,9 @@ class LangBih extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptDeva(), ScriptBhks()},
         );
+
+  @override
+  List<TranslatedName> get translations => bihLanguageTranslations;
 }
 
 /// A class that represents the Bislama language.
@@ -316,7 +375,11 @@ class LangBis extends NaturalLanguage {
           bibliographicCode: null,
           family: const Creole(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => bisLanguageTranslations;
 }
 
 /// A class that represents the Tibetan Standard language.
@@ -335,6 +398,9 @@ class LangBod extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptTibt()},
         );
+
+  @override
+  List<TranslatedName> get translations => bodLanguageTranslations;
 }
 
 /// A class that represents the Bosnian language.
@@ -353,6 +419,9 @@ class LangBos extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptLatn(), ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => bosLanguageTranslations;
 }
 
 /// A class that represents the Breton language.
@@ -369,7 +438,11 @@ class LangBre extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => breLanguageTranslations;
 }
 
 /// A class that represents the Bulgarian language.
@@ -388,6 +461,9 @@ class LangBul extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => bulLanguageTranslations;
 }
 
 /// A class that represents the Catalan language.
@@ -404,7 +480,11 @@ class LangCat extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => catLanguageTranslations;
 }
 
 /// A class that represents the Czech language.
@@ -421,7 +501,11 @@ class LangCes extends NaturalLanguage {
           bibliographicCode: "CZE",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => cesLanguageTranslations;
 }
 
 /// A class that represents the Chamorro language.
@@ -438,7 +522,11 @@ class LangCha extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => chaLanguageTranslations;
 }
 
 /// A class that represents the Chechen language.
@@ -457,6 +545,9 @@ class LangChe extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => cheLanguageTranslations;
 }
 
 /// A class that represents the (Old) Church Slavonic language.
@@ -475,6 +566,9 @@ class LangChu extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrs()},
         );
+
+  @override
+  List<TranslatedName> get translations => chuLanguageTranslations;
 }
 
 /// A class that represents the Chuvash language.
@@ -493,6 +587,9 @@ class LangChv extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => chvLanguageTranslations;
 }
 
 /// A class that represents the Cornish language.
@@ -509,7 +606,11 @@ class LangCor extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => corLanguageTranslations;
 }
 
 /// A class that represents the Corsican language.
@@ -526,7 +627,11 @@ class LangCos extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => cosLanguageTranslations;
 }
 
 /// A class that represents the Cree language.
@@ -543,7 +648,11 @@ class LangCre extends NaturalLanguage {
           bibliographicCode: null,
           family: const Algonquian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => creLanguageTranslations;
 }
 
 /// A class that represents the Welsh language.
@@ -560,7 +669,11 @@ class LangCym extends NaturalLanguage {
           bibliographicCode: "WEL",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => cymLanguageTranslations;
 }
 
 /// A class that represents the Danish language.
@@ -577,7 +690,11 @@ class LangDan extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => danLanguageTranslations;
 }
 
 /// A class that represents the German language.
@@ -594,7 +711,11 @@ class LangDeu extends NaturalLanguage {
           bibliographicCode: "GER",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => deuLanguageTranslations;
 }
 
 /// A class that represents the Divehi (Dhivehi/Maldivian) language.
@@ -613,6 +734,9 @@ class LangDiv extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptThaa()},
         );
+
+  @override
+  List<TranslatedName> get translations => divLanguageTranslations;
 }
 
 /// A class that represents the Dzongkha language.
@@ -631,6 +755,9 @@ class LangDzo extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptTibt()},
         );
+
+  @override
+  List<TranslatedName> get translations => dzoLanguageTranslations;
 }
 
 /// A class that represents the Greek (modern) language.
@@ -649,6 +776,9 @@ class LangEll extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptGrek()},
         );
+
+  @override
+  List<TranslatedName> get translations => ellLanguageTranslations;
 }
 
 /// A class that represents the English language.
@@ -665,7 +795,11 @@ class LangEng extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => engLanguageTranslations;
 }
 
 /// A class that represents the Esperanto language.
@@ -682,7 +816,11 @@ class LangEpo extends NaturalLanguage {
           bibliographicCode: null,
           family: const Constructed(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => epoLanguageTranslations;
 }
 
 /// A class that represents the Estonian language.
@@ -699,7 +837,11 @@ class LangEst extends NaturalLanguage {
           bibliographicCode: null,
           family: const Uralic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => estLanguageTranslations;
 }
 
 /// A class that represents the Basque language.
@@ -716,7 +858,11 @@ class LangEus extends NaturalLanguage {
           bibliographicCode: "BAQ",
           family: const LanguageIsolate(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => eusLanguageTranslations;
 }
 
 /// A class that represents the Ewe language.
@@ -733,7 +879,11 @@ class LangEwe extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => eweLanguageTranslations;
 }
 
 /// A class that represents the Faroese language.
@@ -750,7 +900,11 @@ class LangFao extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => faoLanguageTranslations;
 }
 
 /// A class that represents the Persian (Farsi) language.
@@ -769,6 +923,9 @@ class LangFas extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptArab()},
         );
+
+  @override
+  List<TranslatedName> get translations => fasLanguageTranslations;
 }
 
 /// A class that represents the Fijian language.
@@ -785,7 +942,11 @@ class LangFij extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => fijLanguageTranslations;
 }
 
 /// A class that represents the Finnish language.
@@ -802,7 +963,11 @@ class LangFin extends NaturalLanguage {
           bibliographicCode: null,
           family: const Uralic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => finLanguageTranslations;
 }
 
 /// A class that represents the French language.
@@ -819,7 +984,11 @@ class LangFra extends NaturalLanguage {
           bibliographicCode: "FRE",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => fraLanguageTranslations;
 }
 
 /// A class that represents the Western Frisian language.
@@ -836,7 +1005,11 @@ class LangFry extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => fryLanguageTranslations;
 }
 
 /// A class that represents the Fula (Fulah/Pulaar/Pular) language.
@@ -853,7 +1026,11 @@ class LangFul extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => fulLanguageTranslations;
 }
 
 /// A class that represents the (Scottish) Gaelic language.
@@ -870,7 +1047,11 @@ class LangGla extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => glaLanguageTranslations;
 }
 
 /// A class that represents the Irish language.
@@ -887,7 +1068,11 @@ class LangGle extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => gleLanguageTranslations;
 }
 
 /// A class that represents the Galician language.
@@ -904,7 +1089,11 @@ class LangGlg extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => glgLanguageTranslations;
 }
 
 /// A class that represents the Manx language.
@@ -921,7 +1110,11 @@ class LangGlv extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => glvLanguageTranslations;
 }
 
 /// A class that represents the Guaraní language.
@@ -938,7 +1131,11 @@ class LangGrn extends NaturalLanguage {
           bibliographicCode: null,
           family: const Tupian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => grnLanguageTranslations;
 }
 
 /// A class that represents the Gujarati language.
@@ -957,6 +1154,9 @@ class LangGuj extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptGujr()},
         );
+
+  @override
+  List<TranslatedName> get translations => gujLanguageTranslations;
 }
 
 /// A class that represents the Haitian (Haitian Creole) language.
@@ -973,7 +1173,11 @@ class LangHat extends NaturalLanguage {
           bibliographicCode: null,
           family: const Creole(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => hatLanguageTranslations;
 }
 
 /// A class that represents the Hausa language.
@@ -990,7 +1194,11 @@ class LangHau extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: true,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => hauLanguageTranslations;
 }
 
 /// A class that represents the Hebrew (modern) language.
@@ -1009,6 +1217,9 @@ class LangHeb extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptHebr()},
         );
+
+  @override
+  List<TranslatedName> get translations => hebLanguageTranslations;
 }
 
 /// A class that represents the Herero language.
@@ -1025,7 +1236,11 @@ class LangHer extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => herLanguageTranslations;
 }
 
 /// A class that represents the Hindi language.
@@ -1044,6 +1259,9 @@ class LangHin extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptDeva()},
         );
+
+  @override
+  List<TranslatedName> get translations => hinLanguageTranslations;
 }
 
 /// A class that represents the Hiri Motu language.
@@ -1060,7 +1278,11 @@ class LangHmo extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => hmoLanguageTranslations;
 }
 
 /// A class that represents the Croatian language.
@@ -1077,7 +1299,11 @@ class LangHrv extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => hrvLanguageTranslations;
 }
 
 /// A class that represents the Hungarian language.
@@ -1094,7 +1320,11 @@ class LangHun extends NaturalLanguage {
           bibliographicCode: null,
           family: const Uralic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => hunLanguageTranslations;
 }
 
 /// A class that represents the Armenian language.
@@ -1113,6 +1343,9 @@ class LangHye extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptArmn()},
         );
+
+  @override
+  List<TranslatedName> get translations => hyeLanguageTranslations;
 }
 
 /// A class that represents the Igbo language.
@@ -1129,7 +1362,11 @@ class LangIbo extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => iboLanguageTranslations;
 }
 
 /// A class that represents the Ido language.
@@ -1146,7 +1383,11 @@ class LangIdo extends NaturalLanguage {
           bibliographicCode: null,
           family: const Constructed(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => idoLanguageTranslations;
 }
 
 /// A class that represents the Nuosu language.
@@ -1165,6 +1406,9 @@ class LangIii extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptYiii()},
         );
+
+  @override
+  List<TranslatedName> get translations => iiiLanguageTranslations;
 }
 
 /// A class that represents the Inuktitut language.
@@ -1181,7 +1425,11 @@ class LangIku extends NaturalLanguage {
           bibliographicCode: null,
           family: const EskimoAleut(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ikuLanguageTranslations;
 }
 
 /// A class that represents the Interlingue language.
@@ -1198,7 +1446,11 @@ class LangIle extends NaturalLanguage {
           bibliographicCode: null,
           family: const Constructed(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ileLanguageTranslations;
 }
 
 /// A class that represents the Interlingua language.
@@ -1215,7 +1467,11 @@ class LangIna extends NaturalLanguage {
           bibliographicCode: null,
           family: const Constructed(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => inaLanguageTranslations;
 }
 
 /// A class that represents the Indonesian language.
@@ -1232,7 +1488,11 @@ class LangInd extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => indLanguageTranslations;
 }
 
 /// A class that represents the Inupiaq language.
@@ -1249,7 +1509,11 @@ class LangIpk extends NaturalLanguage {
           bibliographicCode: null,
           family: const EskimoAleut(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ipkLanguageTranslations;
 }
 
 /// A class that represents the Icelandic language.
@@ -1266,7 +1530,11 @@ class LangIsl extends NaturalLanguage {
           bibliographicCode: "ICE",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => islLanguageTranslations;
 }
 
 /// A class that represents the Italian language.
@@ -1283,7 +1551,11 @@ class LangIta extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => itaLanguageTranslations;
 }
 
 /// A class that represents the Javanese language.
@@ -1300,7 +1572,11 @@ class LangJav extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => javLanguageTranslations;
 }
 
 /// A class that represents the Japanese language.
@@ -1319,6 +1595,9 @@ class LangJpn extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptJpan()},
         );
+
+  @override
+  List<TranslatedName> get translations => jpnLanguageTranslations;
 }
 
 /// A class that represents the Kalaallisut (Greenlandic) language.
@@ -1335,7 +1614,11 @@ class LangKal extends NaturalLanguage {
           bibliographicCode: null,
           family: const EskimoAleut(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => kalLanguageTranslations;
 }
 
 /// A class that represents the Kannada language.
@@ -1354,6 +1637,9 @@ class LangKan extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptKnda()},
         );
+
+  @override
+  List<TranslatedName> get translations => kanLanguageTranslations;
 }
 
 /// A class that represents the Kashmiri language.
@@ -1372,6 +1658,9 @@ class LangKas extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptDeva()},
         );
+
+  @override
+  List<TranslatedName> get translations => kasLanguageTranslations;
 }
 
 /// A class that represents the Georgian language.
@@ -1390,6 +1679,9 @@ class LangKat extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptGeor()},
         );
+
+  @override
+  List<TranslatedName> get translations => katLanguageTranslations;
 }
 
 /// A class that represents the Kanuri language.
@@ -1406,7 +1698,11 @@ class LangKau extends NaturalLanguage {
           bibliographicCode: null,
           family: const NiloSaharan(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => kauLanguageTranslations;
 }
 
 /// A class that represents the Kazakh language.
@@ -1425,6 +1721,9 @@ class LangKaz extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => kazLanguageTranslations;
 }
 
 /// A class that represents the Khmer language.
@@ -1443,6 +1742,9 @@ class LangKhm extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptKhmr()},
         );
+
+  @override
+  List<TranslatedName> get translations => khmLanguageTranslations;
 }
 
 /// A class that represents the Kikuyu (Gikuyu) language.
@@ -1459,7 +1761,11 @@ class LangKik extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => kikLanguageTranslations;
 }
 
 /// A class that represents the Kinyarwanda language.
@@ -1476,7 +1782,11 @@ class LangKin extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => kinLanguageTranslations;
 }
 
 /// A class that represents the Kyrgyz language.
@@ -1495,6 +1805,9 @@ class LangKir extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => kirLanguageTranslations;
 }
 
 /// A class that represents the Komi language.
@@ -1513,6 +1826,9 @@ class LangKom extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => komLanguageTranslations;
 }
 
 /// A class that represents the Kongo language.
@@ -1529,7 +1845,11 @@ class LangKon extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => konLanguageTranslations;
 }
 
 /// A class that represents the Korean language.
@@ -1548,6 +1868,9 @@ class LangKor extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptKore()},
         );
+
+  @override
+  List<TranslatedName> get translations => korLanguageTranslations;
 }
 
 /// A class that represents the Kwanyama (Kuanyama) language.
@@ -1564,7 +1887,11 @@ class LangKua extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => kuaLanguageTranslations;
 }
 
 /// A class that represents the Kurdish language.
@@ -1583,6 +1910,9 @@ class LangKur extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptArab(), ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => kurLanguageTranslations;
 }
 
 /// A class that represents the Lao language.
@@ -1601,6 +1931,9 @@ class LangLao extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptLaoo()},
         );
+
+  @override
+  List<TranslatedName> get translations => laoLanguageTranslations;
 }
 
 /// A class that represents the Latin language.
@@ -1617,7 +1950,11 @@ class LangLat extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => latLanguageTranslations;
 }
 
 /// A class that represents the Latvian language.
@@ -1634,7 +1971,11 @@ class LangLav extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => lavLanguageTranslations;
 }
 
 /// A class that represents the Limburgish (Limburgan/Limburger) language.
@@ -1651,7 +1992,11 @@ class LangLim extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => limLanguageTranslations;
 }
 
 /// A class that represents the Lingala language.
@@ -1668,7 +2013,11 @@ class LangLin extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => linLanguageTranslations;
 }
 
 /// A class that represents the Lithuanian language.
@@ -1685,7 +2034,11 @@ class LangLit extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => litLanguageTranslations;
 }
 
 /// A class that represents the Luxembourgish (Letzeburgesch) language.
@@ -1702,7 +2055,11 @@ class LangLtz extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ltzLanguageTranslations;
 }
 
 /// A class that represents the Luba-Katanga language.
@@ -1719,7 +2076,11 @@ class LangLub extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => lubLanguageTranslations;
 }
 
 /// A class that represents the Ganda language.
@@ -1736,7 +2097,11 @@ class LangLug extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => lugLanguageTranslations;
 }
 
 /// A class that represents the Marshallese language.
@@ -1753,7 +2118,11 @@ class LangMah extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => mahLanguageTranslations;
 }
 
 /// A class that represents the Malayalam language.
@@ -1772,6 +2141,9 @@ class LangMal extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptMlym()},
         );
+
+  @override
+  List<TranslatedName> get translations => malLanguageTranslations;
 }
 
 /// A class that represents the Marathi (Marāṭhī) language.
@@ -1790,6 +2162,9 @@ class LangMar extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptDeva()},
         );
+
+  @override
+  List<TranslatedName> get translations => marLanguageTranslations;
 }
 
 /// A class that represents the Macedonian language.
@@ -1808,6 +2183,9 @@ class LangMkd extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => mkdLanguageTranslations;
 }
 
 /// A class that represents the Malagasy language.
@@ -1824,7 +2202,11 @@ class LangMlg extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => mlgLanguageTranslations;
 }
 
 /// A class that represents the Maltese language.
@@ -1841,7 +2223,11 @@ class LangMlt extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => mltLanguageTranslations;
 }
 
 /// A class that represents the Mongolian language.
@@ -1860,6 +2246,9 @@ class LangMon extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => monLanguageTranslations;
 }
 
 /// A class that represents the Māori language.
@@ -1876,7 +2265,11 @@ class LangMri extends NaturalLanguage {
           bibliographicCode: "MAO",
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => mriLanguageTranslations;
 }
 
 /// A class that represents the Malay language.
@@ -1895,6 +2288,9 @@ class LangMsa extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptArab()},
         );
+
+  @override
+  List<TranslatedName> get translations => msaLanguageTranslations;
 }
 
 /// A class that represents the Burmese language.
@@ -1913,6 +2309,9 @@ class LangMya extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptMymr()},
         );
+
+  @override
+  List<TranslatedName> get translations => myaLanguageTranslations;
 }
 
 /// A class that represents the Nauruan language.
@@ -1929,7 +2328,11 @@ class LangNau extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => nauLanguageTranslations;
 }
 
 /// A class that represents the Navajo (Navaho) language.
@@ -1946,7 +2349,11 @@ class LangNav extends NaturalLanguage {
           bibliographicCode: null,
           family: const DeneYeniseian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => navLanguageTranslations;
 }
 
 /// A class that represents the Southern Ndebele language.
@@ -1963,7 +2370,11 @@ class LangNbl extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => nblLanguageTranslations;
 }
 
 /// A class that represents the Northern Ndebele language.
@@ -1980,7 +2391,11 @@ class LangNde extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ndeLanguageTranslations;
 }
 
 /// A class that represents the Ndonga language.
@@ -1997,7 +2412,11 @@ class LangNdo extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ndoLanguageTranslations;
 }
 
 /// A class that represents the Nepali language.
@@ -2016,6 +2435,9 @@ class LangNep extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptDeva()},
         );
+
+  @override
+  List<TranslatedName> get translations => nepLanguageTranslations;
 }
 
 /// A class that represents the Dutch language.
@@ -2032,7 +2454,11 @@ class LangNld extends NaturalLanguage {
           bibliographicCode: "DUT",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => nldLanguageTranslations;
 }
 
 /// A class that represents the Norwegian Nynorsk language.
@@ -2049,7 +2475,11 @@ class LangNno extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => nnoLanguageTranslations;
 }
 
 /// A class that represents the Norwegian Bokmål language.
@@ -2066,7 +2496,11 @@ class LangNob extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => nobLanguageTranslations;
 }
 
 /// A class that represents the Norwegian language.
@@ -2083,7 +2517,11 @@ class LangNor extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => norLanguageTranslations;
 }
 
 /// A class that represents the Chichewa (Chewa/Nyanja) language.
@@ -2100,7 +2538,11 @@ class LangNya extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => nyaLanguageTranslations;
 }
 
 /// A class that represents the Occitan language.
@@ -2117,7 +2559,11 @@ class LangOci extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ociLanguageTranslations;
 }
 
 /// A class that represents the Ojibwe (Ojibwa) language.
@@ -2134,7 +2580,11 @@ class LangOji extends NaturalLanguage {
           bibliographicCode: null,
           family: const Algonquian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ojiLanguageTranslations;
 }
 
 /// A class that represents the Oriya language.
@@ -2153,6 +2603,9 @@ class LangOri extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptOrya()},
         );
+
+  @override
+  List<TranslatedName> get translations => oriLanguageTranslations;
 }
 
 /// A class that represents the Oromo language.
@@ -2169,7 +2622,11 @@ class LangOrm extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ormLanguageTranslations;
 }
 
 /// A class that represents the Ossetian (Ossetic) language.
@@ -2188,6 +2645,9 @@ class LangOss extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => ossLanguageTranslations;
 }
 
 /// A class that represents the (Eastern) Punjabi language.
@@ -2206,6 +2666,9 @@ class LangPan extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptGuru()},
         );
+
+  @override
+  List<TranslatedName> get translations => panLanguageTranslations;
 }
 
 /// A class that represents the Pāli language.
@@ -2230,6 +2693,9 @@ class LangPli extends NaturalLanguage {
             ScriptThai(),
           },
         );
+
+  @override
+  List<TranslatedName> get translations => pliLanguageTranslations;
 }
 
 /// A class that represents the Polish language.
@@ -2246,7 +2712,11 @@ class LangPol extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => polLanguageTranslations;
 }
 
 /// A class that represents the Portuguese language.
@@ -2263,7 +2733,11 @@ class LangPor extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => porLanguageTranslations;
 }
 
 /// A class that represents the Pashto (Pushto) language.
@@ -2282,6 +2756,9 @@ class LangPus extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptArab()},
         );
+
+  @override
+  List<TranslatedName> get translations => pusLanguageTranslations;
 }
 
 /// A class that represents the Quechua language.
@@ -2298,7 +2775,11 @@ class LangQue extends NaturalLanguage {
           bibliographicCode: null,
           family: const Quechuan(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => queLanguageTranslations;
 }
 
 /// A class that represents the Romansh language.
@@ -2315,7 +2796,11 @@ class LangRoh extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => rohLanguageTranslations;
 }
 
 /// A class that represents the Romanian language.
@@ -2332,7 +2817,11 @@ class LangRon extends NaturalLanguage {
           bibliographicCode: "RUM",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => ronLanguageTranslations;
 }
 
 /// A class that represents the Kirundi language.
@@ -2349,7 +2838,11 @@ class LangRun extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => runLanguageTranslations;
 }
 
 /// A class that represents the Russian language.
@@ -2368,6 +2861,9 @@ class LangRus extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => rusLanguageTranslations;
 }
 
 /// A class that represents the Sango language.
@@ -2384,7 +2880,11 @@ class LangSag extends NaturalLanguage {
           bibliographicCode: null,
           family: const Creole(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => sagLanguageTranslations;
 }
 
 /// A class that represents the Sanskrit (Saṁskṛta) language.
@@ -2403,6 +2903,9 @@ class LangSan extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptDeva()},
         );
+
+  @override
+  List<TranslatedName> get translations => sanLanguageTranslations;
 }
 
 /// A class that represents the Sinhalese (Sinhala) language.
@@ -2421,6 +2924,9 @@ class LangSin extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptSinh()},
         );
+
+  @override
+  List<TranslatedName> get translations => sinLanguageTranslations;
 }
 
 /// A class that represents the Slovak language.
@@ -2437,7 +2943,11 @@ class LangSlk extends NaturalLanguage {
           bibliographicCode: "SLO",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => slkLanguageTranslations;
 }
 
 /// A class that represents the Slovene language.
@@ -2454,7 +2964,11 @@ class LangSlv extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => slvLanguageTranslations;
 }
 
 /// A class that represents the Northern Sami language.
@@ -2471,7 +2985,11 @@ class LangSme extends NaturalLanguage {
           bibliographicCode: null,
           family: const Uralic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => smeLanguageTranslations;
 }
 
 /// A class that represents the Samoan language.
@@ -2488,7 +3006,11 @@ class LangSmo extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => smoLanguageTranslations;
 }
 
 /// A class that represents the Shona language.
@@ -2505,7 +3027,11 @@ class LangSna extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => snaLanguageTranslations;
 }
 
 /// A class that represents the Sindhi language.
@@ -2524,6 +3050,9 @@ class LangSnd extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptDeva()},
         );
+
+  @override
+  List<TranslatedName> get translations => sndLanguageTranslations;
 }
 
 /// A class that represents the Somali language.
@@ -2540,7 +3069,11 @@ class LangSom extends NaturalLanguage {
           bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => somLanguageTranslations;
 }
 
 /// A class that represents the Southern Sotho language.
@@ -2557,7 +3090,11 @@ class LangSot extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => sotLanguageTranslations;
 }
 
 /// A class that represents the Spanish language.
@@ -2574,7 +3111,11 @@ class LangSpa extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => spaLanguageTranslations;
 }
 
 /// A class that represents the Albanian language.
@@ -2591,7 +3132,11 @@ class LangSqi extends NaturalLanguage {
           bibliographicCode: "ALB",
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => sqiLanguageTranslations;
 }
 
 /// A class that represents the Sardinian language.
@@ -2608,7 +3153,11 @@ class LangSrd extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => srdLanguageTranslations;
 }
 
 /// A class that represents the Serbian language.
@@ -2627,6 +3176,9 @@ class LangSrp extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl(), ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => srpLanguageTranslations;
 }
 
 /// A class that represents the Swati language.
@@ -2643,7 +3195,11 @@ class LangSsw extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => sswLanguageTranslations;
 }
 
 /// A class that represents the Sundanese language.
@@ -2660,7 +3216,11 @@ class LangSun extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => sunLanguageTranslations;
 }
 
 /// A class that represents the Swahili language.
@@ -2677,7 +3237,11 @@ class LangSwa extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => swaLanguageTranslations;
 }
 
 /// A class that represents the Swedish language.
@@ -2694,7 +3258,11 @@ class LangSwe extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => sweLanguageTranslations;
 }
 
 /// A class that represents the Tahitian language.
@@ -2711,7 +3279,11 @@ class LangTah extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => tahLanguageTranslations;
 }
 
 /// A class that represents the Tamil language.
@@ -2730,6 +3302,9 @@ class LangTam extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptTaml()},
         );
+
+  @override
+  List<TranslatedName> get translations => tamLanguageTranslations;
 }
 
 /// A class that represents the Tatar language.
@@ -2748,6 +3323,9 @@ class LangTat extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => tatLanguageTranslations;
 }
 
 /// A class that represents the Telugu language.
@@ -2766,6 +3344,9 @@ class LangTel extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptTelu()},
         );
+
+  @override
+  List<TranslatedName> get translations => telLanguageTranslations;
 }
 
 /// A class that represents the Tajik language.
@@ -2784,6 +3365,9 @@ class LangTgk extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => tgkLanguageTranslations;
 }
 
 /// A class that represents the Tagalog language.
@@ -2800,7 +3384,11 @@ class LangTgl extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => tglLanguageTranslations;
 }
 
 /// A class that represents the Thai language.
@@ -2819,6 +3407,9 @@ class LangTha extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptThai()},
         );
+
+  @override
+  List<TranslatedName> get translations => thaLanguageTranslations;
 }
 
 /// A class that represents the Tigrinya language.
@@ -2837,6 +3428,9 @@ class LangTir extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptEthi()},
         );
+
+  @override
+  List<TranslatedName> get translations => tirLanguageTranslations;
 }
 
 /// A class that represents the Tonga (Tonga Islands) language.
@@ -2853,7 +3447,11 @@ class LangTon extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austronesian(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => tonLanguageTranslations;
 }
 
 /// A class that represents the Tswana language.
@@ -2870,7 +3468,11 @@ class LangTsn extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => tsnLanguageTranslations;
 }
 
 /// A class that represents the Tsonga language.
@@ -2887,7 +3489,11 @@ class LangTso extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => tsoLanguageTranslations;
 }
 
 /// A class that represents the Turkmen language.
@@ -2904,7 +3510,11 @@ class LangTuk extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => tukLanguageTranslations;
 }
 
 /// A class that represents the Turkish language.
@@ -2921,7 +3531,11 @@ class LangTur extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => turLanguageTranslations;
 }
 
 /// A class that represents the Twi language.
@@ -2938,7 +3552,11 @@ class LangTwi extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => twiLanguageTranslations;
 }
 
 /// A class that represents the Uyghur language.
@@ -2957,6 +3575,9 @@ class LangUig extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptArab()},
         );
+
+  @override
+  List<TranslatedName> get translations => uigLanguageTranslations;
 }
 
 /// A class that represents the Ukrainian language.
@@ -2975,6 +3596,9 @@ class LangUkr extends NaturalLanguage {
           isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
+
+  @override
+  List<TranslatedName> get translations => ukrLanguageTranslations;
 }
 
 /// A class that represents the Urdu language.
@@ -2993,6 +3617,9 @@ class LangUrd extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptArab()},
         );
+
+  @override
+  List<TranslatedName> get translations => urdLanguageTranslations;
 }
 
 /// A class that represents the Uzbek language.
@@ -3009,7 +3636,11 @@ class LangUzb extends NaturalLanguage {
           bibliographicCode: null,
           family: const Turkic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => uzbLanguageTranslations;
 }
 
 /// A class that represents the Venda language.
@@ -3026,7 +3657,11 @@ class LangVen extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => venLanguageTranslations;
 }
 
 /// A class that represents the Vietnamese language.
@@ -3043,7 +3678,11 @@ class LangVie extends NaturalLanguage {
           bibliographicCode: null,
           family: const Austroasiatic(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => vieLanguageTranslations;
 }
 
 /// A class that represents the Volapük language.
@@ -3060,7 +3699,11 @@ class LangVol extends NaturalLanguage {
           bibliographicCode: null,
           family: const Constructed(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => volLanguageTranslations;
 }
 
 /// A class that represents the Walloon language.
@@ -3077,7 +3720,11 @@ class LangWln extends NaturalLanguage {
           bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => wlnLanguageTranslations;
 }
 
 /// A class that represents the Wolof language.
@@ -3094,7 +3741,11 @@ class LangWol extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => wolLanguageTranslations;
 }
 
 /// A class that represents the Xhosa language.
@@ -3111,7 +3762,11 @@ class LangXho extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => xhoLanguageTranslations;
 }
 
 /// A class that represents the Yiddish language.
@@ -3130,6 +3785,9 @@ class LangYid extends NaturalLanguage {
           isRightToLeft: true,
           scripts: const {ScriptHebr()},
         );
+
+  @override
+  List<TranslatedName> get translations => yidLanguageTranslations;
 }
 
 /// A class that represents the Yoruba language.
@@ -3146,7 +3804,11 @@ class LangYor extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => yorLanguageTranslations;
 }
 
 /// A class that represents the Zhuang (Chuang) language.
@@ -3163,7 +3825,11 @@ class LangZha extends NaturalLanguage {
           bibliographicCode: null,
           family: const TaiKadai(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => zhaLanguageTranslations;
 }
 
 /// A class that represents the Chinese language.
@@ -3187,6 +3853,9 @@ class LangZho extends NaturalLanguage {
             ScriptLatn(),
           },
         );
+
+  @override
+  List<TranslatedName> get translations => zhoLanguageTranslations;
 }
 
 /// A class that represents the Zulu language.
@@ -3203,5 +3872,9 @@ class LangZul extends NaturalLanguage {
           bibliographicCode: null,
           family: const NigerCongo(),
           isRightToLeft: false,
+          scripts: const {ScriptLatn()},
         );
+
+  @override
+  List<TranslatedName> get translations => zulLanguageTranslations;
 }

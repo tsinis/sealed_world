@@ -42,7 +42,18 @@ class $className extends $type {
 /// ISO ${package.isoCodeAssociated} code: "${item.code}", ISO ${package.isoCodeOtherAssociated} code: "${item.codeOther}".
 const $className()""")
         ..write(classBody)
-        ..write(";}\n");
+        ..write(";\n")
+        ..write(
+          /// It's not possible to use a self-referencing data in
+          /// compile time constant constructor :-/.
+          package.whenConstOrNull(
+                sealedLanguages: """
+  \n@override
+  List<$TranslatedName> get translations => ${item.code.toLowerCase()}${Language}Translations;""",
+              ) ??
+              "",
+        )
+        ..write("\n}\n");
     }
 
     IoUtils()

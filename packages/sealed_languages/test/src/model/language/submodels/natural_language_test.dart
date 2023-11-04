@@ -7,6 +7,11 @@ import "package:sealed_languages/src/interfaces/translated.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
+class _NaturalLanguageTest extends NaturalLanguage {
+  const _NaturalLanguageTest()
+      : super(name: " ", code: "   ", codeShort: "  ", namesNative: const [""]);
+}
+
 void main() => group("$NaturalLanguage", () {
       final value = NaturalLanguage.list.last;
       final array = {value, NaturalLanguage.list.first};
@@ -298,6 +303,16 @@ void main() => group("$NaturalLanguage", () {
             );
           }
         });
+
+        test(
+          "throws $UnimplementedError on custom class with no translations",
+          () {
+            expect(
+              () => const _NaturalLanguageTest().translations,
+              throwsUnimplementedError,
+            );
+          },
+        );
       });
 
       group("asserts", () {

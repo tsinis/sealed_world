@@ -2,7 +2,6 @@ part of "../language.dart";
 
 /// A class that represents a natural language.
 class NaturalLanguage extends Language
-    with TranslatedLanguage
     implements
         IsoTranslated<TranslatedName, String>,
         JsonEncodable<NaturalLanguage> {
@@ -166,6 +165,16 @@ class NaturalLanguage extends Language
 
   @override
   String get codeOther => codeShort;
+
+  @override
+  List<TranslatedName> get translations => throw UnimplementedError(
+        """
+Please provide translations for your custom language for example via override:
+
+@override
+${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "Custom")];
+""",
+      );
 
   /// Returns a string representation of this [NaturalLanguage] object.
   ///
