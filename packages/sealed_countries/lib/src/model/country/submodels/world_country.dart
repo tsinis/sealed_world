@@ -26,9 +26,8 @@ part of "../country.dart";
 /// ```
 class WorldCountry extends Country
     implements
-        IsoStandardized<CountryName>,
-        JsonEncodable<WorldCountry>,
-        Translated<TranslatedName> {
+        IsoTranslated<TranslatedName, CountryName>,
+        JsonEncodable<WorldCountry> {
   /// Creates a new `WorldCountry` object with the given properties.
   ///
   /// The `name` parameter is required and must not be empty. The
@@ -374,6 +373,19 @@ class WorldCountry extends Country
 
     return null;
   }
+
+  /// The general standard ISO code for countries, defined as ISO 3166-1.
+  static const standardGeneralName = "3166-1";
+
+  /// The standard ISO code name for countries, defined as ISO 3166-1 Alpha-3.
+  static const standardCodeName = "$standardGeneralName Alpha-3";
+
+  /// The standard ISO code name for countries, defined as ISO 3166-1 Alpha-2.
+  static const standardCodeShortName = "$standardGeneralName Alpha-2";
+
+  /// The standard numeric ISO code name for countries, defined as
+  /// ISO 3166-1 Numeric.
+  static const standardCodeNumericName = "$standardGeneralName Numeric";
 
   /// A list of all the countries currently
   /// supported by the [WorldCountry] class.
