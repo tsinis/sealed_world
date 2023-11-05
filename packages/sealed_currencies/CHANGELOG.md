@@ -1,8 +1,17 @@
+## 0.9.0
+
+NEW FEATURES
+
+- Added new interface `IsoTranslated` which combines `Translated` and `IsoStandardized` interfaces.
+- Added `standard*` static constants in FiatCurrency class referencing different names of the ISO 4217 standard.
+- Improved documentation in README, added FAQ.
+- Updated example with translations.
+
 ## 0.8.0
 
 NEW FEATURES
 
-- Added new factory to FiatCurrency - fromAnyCode, which do the length and type checks and redirects to other fromCode* constructors
+- Added new factory to FiatCurrency - fromAnyCode, which do the length and type checks and redirects to other fromCode\* constructors
 - Added new static method to FiatCurrency - maybeFromAnyCode, which works same way as fromAnyCode, but doesn't throws StateErrors if no currency object is found.
 - Added maybeMapIsoCode method to String extensions, which is used under the hood of (maybe)fromAnyCode.
 

@@ -265,18 +265,17 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   }
 
   /// The general standard ISO code for languages, defined as ISO 639.
-  static const String standardGeneralName = "639";
+  static const standardGeneralName = "639";
 
   /// The standard ISO code name for languages, defined as ISO 639-2/T.
-  static const String standardCodeName = "$standardGeneralName-2/T";
+  static const standardCodeName = "$standardGeneralName-2/T";
 
   /// The standard short ISO code name for languages, defined as ISO 639-1.
-  static const String standardCodeShortName = "$standardGeneralName-1";
+  static const standardCodeShortName = "$standardGeneralName-1";
 
   /// The standard bibliographic ISO code name for languages,
   /// defined as ISO 639-2/B.
-  static const String standardBibliographicCodeName =
-      "$standardGeneralName-2/B";
+  static const standardBibliographicCodeName = "$standardGeneralName-2/B";
 
   /// A list of all the natural languages currently
   /// supported by the [NaturalLanguage] class.
