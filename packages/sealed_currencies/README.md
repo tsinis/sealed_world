@@ -80,6 +80,13 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
   ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
   subunitToUnit: 100, unitFirst: true, translations rsdCurrencyTranslations)".
   */
+
+  // Prints German translations of all available regular currencies.
+  for (final currency in FiatCurrency.regularList) {
+    print(
+      """German name of ${currency.name}: ${currency.maybeTranslation(const LangDeu())?.name}""",
+    );
+  }
 ```
 
 For more usage examples, please see the `/example` folder.

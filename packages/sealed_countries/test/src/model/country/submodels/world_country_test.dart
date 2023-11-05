@@ -11,8 +11,11 @@ void main() => group("$WorldCountry", () {
       final array = {value, WorldCountry.list.first};
 
       test("interfaces", () {
+        expect(value, isA<Country>());
         expect(value, isA<IsoStandardized>());
+        expect(value, isA<IsoTranslated>());
         expect(value, isA<JsonEncodable>());
+        expect(value, isA<Named>());
         expect(value, isA<Translated>());
       });
 

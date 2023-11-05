@@ -73,6 +73,13 @@ Use `NaturalLanguage` class to get information about languages. Either construct
  // (Language(name: Avestan), Language(name: Afrikaans),
  // ...
  // Language(name: Walloon), Language(name: Yiddish).
+
+ // Prints Slovak translations of all available languages.
+ for (final language in NaturalLanguage.list) {
+   print(
+     """Slovak name of ${language.name}: ${language.maybeTranslation(const LangSlk())?.name}""",
+   );
+ }
 ```
 
 For more usage examples, please see the `/example` folder.

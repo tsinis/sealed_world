@@ -1,8 +1,16 @@
+## 0.9.0
+
+NEW FEATURES
+
+- Added new interface `IsoTranslated` which combines `Translated` and `IsoStandardized`interfaces.
+- Added `standard*` static constants in WorldCountry class referencing different names of the ISO 3166-1 standard.
+- Improved documentation in README, added FAQ.
+
 ## 0.8.0
 
 NEW FEATURES
 
-- Added new factories to WorldCountry - fromCodeNumeric which returns instance by it's numeric code and fromAnyCode, which do the length and type checks and redirects to other fromCode* constructors
+- Added new factories to WorldCountry - fromCodeNumeric which returns instance by it's numeric code and fromAnyCode, which do the length and type checks and redirects to other fromCode\* constructors
 - Added new static method to WorldCountry - maybeFromAnyCode, which works same way as fromAnyCode, but doesn't throws StateErrors if no currency object is found.
 - Added maybeMapIsoCode method to String extensions, which is used under the hood of (maybe)fromAnyCode.
 
