@@ -1,4 +1,5 @@
 import "../helpers/extensions/translated_name_extension.dart";
+import "../interfaces/iso_standardized.dart";
 import "../interfaces/json_encodable.dart";
 import "../interfaces/named.dart";
 import "language/language.dart";
@@ -28,8 +29,9 @@ class TranslatedName implements Named<String>, JsonEncodable<TranslatedName> {
           "`fullName` should not be empty!",
         ),
         assert(
-          countryCode == null || countryCode.length > 0,
-          "`countryCode` should not be empty!",
+          countryCode == null ||
+              countryCode.length >= IsoStandardized.codeShortLength,
+          """`countryCode` have to be at least ${IsoStandardized.codeShortLength} characters long!""",
         );
 
   /// Represents the natural language of the translation.

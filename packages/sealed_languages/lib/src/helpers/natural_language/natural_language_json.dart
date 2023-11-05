@@ -34,6 +34,7 @@ extension NaturalLanguageJson on NaturalLanguage {
   ///   "codeShort": "EN",
   ///   "namesNative": ["American English"],
   ///   "isRightToLeft": false,
+  ///   "scripts": ["Latn"],
   /// };
   ///
   /// final english = NaturalLanguageJson.fromMap(jsonMap);
@@ -59,10 +60,11 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// - `"code"`: A string that represents the ISO 639-1 code of the language.
   /// - `"codeShort"`: A string that represents the short code of the language.
   /// - `"namesNative"`: A string that represents the native names of the
-  ///   language, separated by the [JsonEncodable.separator] character.
+  /// language.
   /// - `"family"`: A string that represents the name of the language family.
   /// - `"isRightToLeft"`: A boolean that indicates whether the language is
   ///   written from right to left.
+  /// - `"scripts"`: A string that represents the scripts of the language.
   ///
   /// Example usage:
   ///
