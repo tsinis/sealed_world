@@ -6,7 +6,7 @@
 
 This ISO-driven, pure Dart, fully tested and and dependency-free package provides information about world languages in form of compile-time constant sealed classes. Contains the **all 184 languages with ISO 639-1 codes**, also provides ISO 639-2 codes, their English, native names, language family info, etc. For Flutter ready widgets (like language picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
-## Features
+### Features
 
 **NaturalLanguage** class provides the following information about languages:
 
@@ -34,7 +34,7 @@ and (thanks to sealed nature of the class) functional-style like methods: `whenO
 
 > Translations: Use `maybeTranslation()` or `translation()` methods to get translations for specific locale.
 
-## Getting started
+### Getting started
 
 To use this package, add `sealed_languages` as a dependency in your `pubspec.yaml` file.
 
@@ -49,7 +49,7 @@ Then import the package in your Dart code:
 import 'package:sealed_languages/sealed_languages.dart';
 ```
 
-## Usage
+### Usage
 
 Use `NaturalLanguage` class to get information about languages. Either construct a new instance directly or with use of the class factory constructors/ static methods or select one from the `NaturalLanguage.list` constant.
 
@@ -77,16 +77,28 @@ Use `NaturalLanguage` class to get information about languages. Either construct
 
 For more usage examples, please see the `/example` folder.
 
-## Additional information
+### FAQ
 
-For more information on using this package, check out the API documentation.
+### Why should I use this package over any other language-related package?
+
+- **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes, you can also override existing data, etc.).
+- **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
+- **Rich language data**: This package offers far more data about languages than any other package + tons of translations.
+- **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
+- **High code coverage**: The code in this package has a high level of coverage, providing confidence in its reliability and stability.
+- **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+
+### Additional information
+
+For more information on using this package, check out the API documentation. PRs or ideas are always welcome.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
 
-## References, credits and sources
+### References, credits and sources
 
 - [ISO](https://www.iso.org/iso-639-language-codes.html)
 - [Wikipedia](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)
 - [Data Source](https://github.com/haliaeetus/iso-639)[^1]
 - [Translations Source](https://github.com/umpirsky/language-list)
+- [Project Roadmap](https://github.com/users/tsinis/projects/1)
 
 [^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified, added additional data and functionality.

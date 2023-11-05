@@ -1,3 +1,13 @@
+## 0.9.0
+
+NEW FEATURES
+
+- Added new interface `IsoTranslated` which combines `Translated` and `IsoStandardized` interfaces.
+- Added `standard*` static constants in ISO classes referencing different names of specific standards.
+- Improved documentation in README, added FAQ.
+
+> Note: Please make sure to replace deprecated methods with suggested replacements, because all of them will be removed in version 1.0.0.
+
 ## 0.8.0
 
 NEW FEATURES
