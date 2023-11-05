@@ -7,9 +7,10 @@ import "../../helpers/natural_language/natural_language_json.dart";
 import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";
-import "../../mixins/translated_language.dart";
+import "../../interfaces/translated.dart";
 import "../language_family/language_family.dart";
 import "../script/writing_system.dart";
+import "../translated_name.dart";
 
 part "submodels/natural_language.dart";
 part "submodels/natural_language.g.dart";

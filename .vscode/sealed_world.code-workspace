@@ -56,6 +56,10 @@
     "editor.suggestSelection": "recentlyUsed",
     "editor.tabCompletion": "on",
     "editor.wordBasedSuggestions": true,
+    "prettier.singleQuote": false,
+    "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     "dart.previewFlutterUiGuides": true,
     "dart.lineLength": 80,
     "[dart]": {

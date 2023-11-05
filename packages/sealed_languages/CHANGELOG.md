@@ -1,8 +1,18 @@
+## 0.9.0
+
+NEW FEATURES
+
+- Added new interface `IsoTranslated` which combines `Translated` and `IsoStandardized` interfaces.
+- Added `standard*` static constants in ISO classes referencing different names of specific standards.
+- Improved documentation in README, added FAQ.
+
+> Note: Please make sure to replace deprecated methods with suggested replacements, because all of them will be removed in version 1.0.0.
+
 ## 0.8.0
 
 NEW FEATURES
 
-- Added new factories to Script and NaturalLanguage - fromAnyCode, which do the length and type checks and redirects to other fromCode* constructors
+- Added new factories to Script and NaturalLanguage - fromAnyCode, which do the length and type checks and redirects to other fromCode\* constructors
 - Added new static methods to Script and NaturalLanguage - maybeFromAnyCode, which works same way as fromAnyCode, but doesn't throws StateErrors if no ISO object is found.
 - Added maybeMapIsoCode method to String extensions, which is used under the hood of (maybe)fromAnyCode.
 

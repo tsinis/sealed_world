@@ -10,26 +10,19 @@ class CountryFlag extends StatelessWidget {
   final double size;
 
   @override
-  Widget build(BuildContext context) => DecoratedBox(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: context.theme.colorScheme.onPrimary,
-              offset: FunctionalPlatform.maybeWhenConst(
-                web: Offset(0, -size / 4),
-                orElse: Offset.zero,
+  Widget build(BuildContext context) => FunctionalPlatform.maybeWhenConst(
+        web: EmojiFlag.platformDefault(country, size: size),
+        orElse: DecoratedBox(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: context.theme.colorScheme.onSecondary,
+                blurRadius: UiConstants.point,
               ),
-              blurRadius: UiConstants.point,
-            ),
-          ],
-          shape: FunctionalPlatform.maybeWhenConst(
-            web: BoxShape.rectangle,
-            orElse: BoxShape.circle,
+            ],
+            shape: BoxShape.circle,
           ),
-        ),
-        child: FunctionalPlatform.maybeWhenConst(
-          web: EmojiFlag.platformDefault(country, size: size),
-          orElse: EmojiFlag.fromEmojiFamily(
+          child: EmojiFlag.fromEmojiFamily(
             country,
             style: TextStyle(
               fontSize: size,

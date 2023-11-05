@@ -202,6 +202,16 @@ class Script extends WritingSystem
     return null;
   }
 
+  /// The general standard ISO code for scripts, defined as ISO 15924.
+  static const String standardGeneralName = "15924";
+
+  /// The standard ISO code name for scripts, defined as ISO 15924 Alpha-4.
+  static const String standardCodeName = "$standardGeneralName Alpha-4";
+
+  /// The standard numeric ISO code name for scripts, defined as
+  /// ISO 15924 Numeric.
+  static const String standardCodeNumericName = "$standardGeneralName Numeric";
+
   /// A list of all the scripts currently supported by the [Script] class.
   static const list = [
     ScriptAdlm(),

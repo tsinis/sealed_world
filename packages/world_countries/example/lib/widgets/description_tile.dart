@@ -32,7 +32,7 @@ class DescriptionTile extends StatelessWidget {
     super.key,
   }) : _leading = leading;
 
-  static const leadingColor = Color.fromARGB(80, 100, 100, 100);
+  static const leadingColor = Color.fromARGB(125, 100, 100, 100);
 
   final String? _title;
   final Widget? _leading;
@@ -59,7 +59,7 @@ class DescriptionTile extends StatelessWidget {
               dense: true,
               leadingAndTrailingTextStyle: const TextStyle(
                 color: leadingColor,
-                fontSize: 16,
+                fontSize: UiConstants.point * 2,
                 fontWeight: FontWeight.bold,
               ),
             ),

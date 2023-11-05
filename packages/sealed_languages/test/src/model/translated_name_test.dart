@@ -6,7 +6,7 @@ import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
 void main() => group("$TranslatedName", () {
-      const string = "1";
+      const string = "01";
       final value = TranslatedName(
         NaturalLanguage.list.first,
         name: string,

@@ -64,6 +64,7 @@ class _MainPageState extends State<MainPage>
         length: _controller.length,
         child: Scaffold(
           appBar: AppBar(
+            title: const Text("World Countries Example"),
             actions: [
               SearchAnchor(
                 isFullScreen: false,
@@ -78,7 +79,6 @@ class _MainPageState extends State<MainPage>
                 ),
                 suggestionsBuilder: _anchorPicker,
               ),
-              // TODO Add about menu.
             ],
             bottom: TabBar(
               tabs: List.unmodifiable(
@@ -86,12 +86,16 @@ class _MainPageState extends State<MainPage>
               ),
               controller: _controller,
             ),
+            centerTitle: false,
           ),
           body: DecoratedBox(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: Assets.images.background.provider(),
-                fit: BoxFit.cover,
+            decoration: FunctionalPlatform.maybeWhenConst(
+              web: const BoxDecoration(),
+              orElse: BoxDecoration(
+                image: DecorationImage(
+                  image: Assets.images.background.provider(),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             child: Align(
@@ -107,6 +111,7 @@ class _MainPageState extends State<MainPage>
           ),
           floatingActionButton:
               FloatingButton(_controller, onPressed: _onFabPressed),
+          backgroundColor: context.theme.colorScheme.surfaceVariant,
         ),
       );
 }

@@ -2,8 +2,9 @@ part of "../language.dart";
 
 /// A class that represents a natural language.
 class NaturalLanguage extends Language
-    with TranslatedLanguage
-    implements IsoStandardized<String>, JsonEncodable<NaturalLanguage> {
+    implements
+        IsoTranslated<TranslatedName, String>,
+        JsonEncodable<NaturalLanguage> {
   /// Creates a new instance of the [NaturalLanguage] class.
   ///
   /// The [name] parameter is required and should be a non-empty string
@@ -165,6 +166,16 @@ class NaturalLanguage extends Language
   @override
   String get codeOther => codeShort;
 
+  @override
+  List<TranslatedName> get translations => throw UnimplementedError(
+        """
+Please provide translations for your custom language for example via override:
+
+@override
+${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "Custom")];
+""",
+      );
+
   /// Returns a string representation of this [NaturalLanguage] object.
   ///
   /// The optional [short] parameter specifies whether to use a short format
@@ -252,6 +263,20 @@ class NaturalLanguage extends Language
 
     return null;
   }
+
+  /// The general standard ISO code for languages, defined as ISO 639.
+  static const String standardGeneralName = "639";
+
+  /// The standard ISO code name for languages, defined as ISO 639-2/T.
+  static const String standardCodeName = "$standardGeneralName-2/T";
+
+  /// The standard short ISO code name for languages, defined as ISO 639-1.
+  static const String standardCodeShortName = "$standardGeneralName-1";
+
+  /// The standard bibliographic ISO code name for languages,
+  /// defined as ISO 639-2/B.
+  static const String standardBibliographicCodeName =
+      "$standardGeneralName-2/B";
 
   /// A list of all the natural languages currently
   /// supported by the [NaturalLanguage] class.

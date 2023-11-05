@@ -62,6 +62,9 @@ abstract interface class IsoStandardized<Name extends Object> {
   /// The regular length of the short ISO code (2 characters).
   static const codeShortLength = 2;
 
+  /// The acronym for the International Organization for Standardization (ISO).
+  static const standardAcronym = "ISO";
+
   /// A string representing the ISO (usually a 3-letter) code for the object.
   final String code;
 

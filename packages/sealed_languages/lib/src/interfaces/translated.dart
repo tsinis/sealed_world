@@ -1,4 +1,7 @@
 import "../model/translated_name.dart";
+import "iso_standardized.dart";
+
+part "iso_translated.dart";
 
 /// An interface representing a translated object.
 ///

@@ -2,9 +2,15 @@ import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string
 import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
+import "package:sealed_languages/src/interfaces/named.dart";
 import "package:sealed_languages/src/interfaces/translated.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
+
+class _NaturalLanguageTest extends NaturalLanguage {
+  const _NaturalLanguageTest()
+      : super(name: " ", code: "   ", codeShort: "  ", namesNative: const [""]);
+}
 
 void main() => group("$NaturalLanguage", () {
       final value = NaturalLanguage.list.last;
@@ -12,7 +18,10 @@ void main() => group("$NaturalLanguage", () {
 
       test("interfaces", () {
         expect(value, isA<IsoStandardized>());
+        expect(value, isA<IsoTranslated>());
         expect(value, isA<JsonEncodable>());
+        expect(value, isA<Language>());
+        expect(value, isA<Named>());
         expect(value, isA<Translated>());
       });
 
@@ -294,6 +303,16 @@ void main() => group("$NaturalLanguage", () {
             );
           }
         });
+
+        test(
+          "throws $UnimplementedError on custom class with no translations",
+          () {
+            expect(
+              () => const _NaturalLanguageTest().translations,
+              throwsUnimplementedError,
+            );
+          },
+        );
       });
 
       group("asserts", () {
