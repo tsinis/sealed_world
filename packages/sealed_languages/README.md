@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_languages.svg)](https://pub.dev/packages/sealed_languages)
 
-This ISO-driven, pure Dart, fully tested and and dependency-free package provides information about world languages in form of compile-time constant sealed classes. Contains the **all 184 languages with ISO 639-1 codes**, also provides ISO 639-2 codes, their English, native names, language family info, etc. For Flutter ready widgets (like language picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and and dependency-free package provides information about world languages in form of compile-time constant sealed classes. Contains the **all 184 languages with ISO 639-1 codes**, also provides ISO 639-2 codes, their English, native names, language family info, language name translations, etc. For Flutter ready widgets (like language picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
@@ -51,7 +51,7 @@ import 'package:sealed_languages/sealed_languages.dart';
 
 ### Usage
 
-Use `NaturalLanguage` class to get information about languages. Either construct a new instance directly or with use of the class factory constructors/ static methods or select one from the `NaturalLanguage.list` constant.
+Use `NaturalLanguage` class to get information about languages. Either construct a new instance directly or with use of the class factory constructors/static methods or select one from the `NaturalLanguage.list` constant.
 
 ```dart
  final english = NaturalLanguage.fromCode("Eng");
@@ -83,7 +83,7 @@ For more usage examples, please see the `/example` folder.
 
 - **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes, you can also override existing data, etc.).
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
-- **Rich language data**: This package offers far more data about languages than any other package + tons of translations.
+- **Rich data**: This package offers far more data than any other package + tons of translations.
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has a high level of coverage, providing confidence in its reliability and stability.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.

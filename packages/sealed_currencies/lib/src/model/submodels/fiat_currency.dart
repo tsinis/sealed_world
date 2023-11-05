@@ -6,14 +6,13 @@ part of "../currency.dart";
 /// properties specific to fiat currencies.
 class FiatCurrency extends Currency
     implements
-        IsoStandardized<String>,
-        JsonEncodable<FiatCurrency>,
-        Translated<TranslatedName> {
+        IsoTranslated<TranslatedName, String>,
+        JsonEncodable<FiatCurrency> {
   /// Creates a new instance of [FiatCurrency].
   ///
-  /// The `code`, `name`, `namesNative`, and `codeNumeric` parameters are
-  /// required. The `priority` parameter defaults to 100, and the
-  /// `smallestDenomination` parameter defaults to 1.
+  /// The `code`, `name`, `namesNative`, `translations` and `codeNumeric`
+  /// parameters are required. The `priority` parameter defaults to 100, and
+  /// the `smallestDenomination` parameter defaults to 1.
   ///
   /// The `alternateSymbols`, `disambiguateSymbol`, `htmlEntity`, `subunit`,
   /// `subunitToUnit`, and `unitFirst` parameters are optional.
@@ -301,6 +300,16 @@ class FiatCurrency extends Currency
           (currency) => !FiatCurrency.specialPurposeList.contains(currency),
         ),
       );
+
+  /// The general standard ISO code for currencies, defined as ISO 4217.
+  static const standardGeneralName = "4217";
+
+  /// The standard ISO code name for currencies, defined as ISO 4217 Alpha.
+  static const standardCodeName = "$standardGeneralName Alpha";
+
+  /// The standard numeric ISO code name for currencies, defined as
+  /// ISO 4217 Numeric.
+  static const standardCodeNumericName = "$standardGeneralName Numeric";
 
   /// A list of all the currencies currently
   /// supported by the [FiatCurrency] class.

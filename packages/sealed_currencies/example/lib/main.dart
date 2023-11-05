@@ -58,4 +58,11 @@ void main() {
   // Currency(code: SEK).
 
   serbianDinar.toJson(); // Converts currency to a valid JSON.
+
+  // Prints German translations of all available regular currencies.
+  for (final currency in FiatCurrency.regularList) {
+    print(
+      """German name of ${currency.name}: ${currency.maybeTranslation(const LangDeu())?.name}""",
+    );
+  }
 }
