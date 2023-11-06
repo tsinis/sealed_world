@@ -1,42 +1,42 @@
-version: 0.8.0
+version: 0.9.0
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_countries
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 topics:
- - picker
- - pickers
- - country-picker
- - country-selector
- - currency-picker
+  - picker
+  - sealed
+  - country-picker
+  - country-selector
+  - currency-picker
 
 screenshots:
-  - description: 'Structure visualization'
+  - description: "Structure visualization"
     path: doc/structure.webp
-  - description: 'Use with SearchAnchor widget'
+  - description: "Use with SearchAnchor widget"
     path: doc/search_anchor.webp
-  - description: 'Search picker example'
+  - description: "Search picker example"
     path: doc/search_picker.webp
-  - description: 'Modal bottom sheet picker example'
+  - description: "Modal bottom sheet picker example"
     path: doc/modal_picker.webp
-  - description: 'Dialog picker example'
+  - description: "Dialog picker example"
     path: doc/dialog_picker.webp
-  - description: 'Country data example'
+  - description: "Country data example"
     path: doc/country_data.webp
-  - description: 'Currency data example'
+  - description: "Currency data example"
     path: doc/currency_data.webp
-  - description: 'Language data example'
+  - description: "Language data example"
     path: doc/language_data.webp
 
 environment:
   sdk: ^3.0.0
-  flutter: '>=3.10.0'
+  flutter: ">=3.10.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  sealed_countries: ^0.8.0
+  sealed_countries: ^0.9.0
 
 dev_dependencies:
   build_runner: ^2.4.6 # From Google

@@ -578,26 +578,26 @@ packages:
     dependency: transitive
     description:
       name: sealed_countries
-      sha256: "3fe68040c53110ff90bcfb24b27e3efc74d76256d8c69e21d28ecb828800f4dd"
+      sha256: "32386d05cc7440a78cfdfd1d0a0cecefc4fdc385bb12c7ea1bcf0c982d9c2971"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0"
+    version: "0.9.0"
   sealed_currencies:
     dependency: transitive
     description:
       name: sealed_currencies
-      sha256: "9715a57531b140cf70ca00e9d2e4fd613fe627a49efa774688f11e840d6299d4"
+      sha256: a0e5289bb3149c20ba6475cb3bf7b24672feeeafd35e238bf1bc5d943c6bc124
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0"
+    version: "0.9.0"
   sealed_languages:
     dependency: transitive
     description:
       name: sealed_languages
-      sha256: "3c603523360ac8b5d7a1cc42fed645cf0f116b650a3533554fbe9ea521bbdc0d"
+      sha256: ff1e643f172dabec1249dded7ce5d6cf6f3a84b0dd5104325317d0ff9ede9360
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0"
+    version: "0.9.0"
   shelf:
     dependency: transitive
     description:
@@ -769,7 +769,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.8.0"
+    version: "0.9.0"
   xml:
     dependency: transitive
     description:

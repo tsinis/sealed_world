@@ -56,10 +56,7 @@ class TabBody extends StatelessWidget {
               child: ColoredBox(
                 color: context.theme.colorScheme.background.withOpacity(1 / 2),
                 child: FunctionalPlatform.maybeWhenConst(
-                  web: ListView(
-                    physics: const ClampingScrollPhysics(),
-                    children: children,
-                  ),
+                  web: ListView(children: children),
                   orElse: BackdropFilter(
                     filter: ImageFilter.blur(
                       sigmaX: UiConstants.point,

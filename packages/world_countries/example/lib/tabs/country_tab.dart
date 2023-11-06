@@ -18,7 +18,7 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
     super.items = WorldCountry.list,
     super.type = WorldData.country,
     super.key,
-  }) : super(mapCode: (country) => country.code);
+  });
 
   @override
   Widget build(BuildContext context) => TabBody(
@@ -26,12 +26,12 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              (data.maybeTranslation(const LangEng()) ?? data.name).name,
+              data.translation(const LangEng()).name,
               style: context.theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             MaybeWidget(
-              (data.maybeTranslation(const LangEng()) ?? data.name).fullName,
+              data.translation(const LangEng()).fullName,
               (fullName) => Text(
                 fullName,
                 style: context.theme.textTheme.titleMedium
@@ -55,7 +55,14 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             icon: Icons.flag_outlined,
             description: "Native Common Name(s)",
           ),
-          if (!kIsWeb)
+          if (kIsWeb)
+            DescriptionTile(
+              "Only default flags are available in this web example",
+              icon: Icons.block_outlined,
+              description:
+                  "Build this app on a mobile/desktop device to see the all of them",
+            )
+          else
             for (final emoji in EmojiFamily.values)
               DescriptionTile.raw(
                 emoji.projectName,
@@ -82,22 +89,25 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
           DescriptionTile(
             data.codeNumeric,
             icon: Icons.pin_outlined,
-            description: "Code: ISO 3166-1 (CCN3)",
+            description:
+                """Code: ${IsoStandardized.standardAcronym} ${WorldCountry.standardCodeNumericName}""",
           ),
           DescriptionTile(
             data.code,
             icon: Icons.looks_3_outlined,
-            description: "Code: ISO 3166-1 (CCA3)",
+            description:
+                """Code: ${IsoStandardized.standardAcronym} ${WorldCountry.standardCodeName}""",
           ),
           DescriptionTile(
             data.codeShort,
             icon: Icons.looks_two_outlined,
-            description: "Code: ISO 3166-1 (CCA2)",
+            description:
+                """Code: ${IsoStandardized.standardAcronym} ${WorldCountry.standardCodeShortName}""",
           ),
           DescriptionTile.fromIterable(
             data.tld,
             icon: Icons.dns_outlined,
-            description: "Top level domain(s)",
+            description: "Top Level Domain(s)",
           ),
           DescriptionTile(
             data.cioc,

@@ -14,7 +14,7 @@ final class CurrencyTab extends WorldDataTab<FiatCurrency> {
     super.items = FiatCurrency.list,
     super.type = WorldData.currency,
     super.key,
-  }) : super(mapCode: (currency) => currency.code);
+  });
 
   @override
   Widget build(BuildContext context) => TabBody(
@@ -32,12 +32,14 @@ final class CurrencyTab extends WorldDataTab<FiatCurrency> {
           DescriptionTile(
             data.code,
             icon: Icons.looks_3_outlined,
-            description: "Code: ISO 4217 (Alpha)",
+            description:
+                """Code: ${IsoStandardized.standardAcronym} ${FiatCurrency.standardCodeName}""",
           ),
           DescriptionTile(
             data.codeNumeric,
             icon: Icons.pin_outlined,
-            description: "Code: ISO 4217 (Numeric)",
+            description:
+                """Code: ${IsoStandardized.standardAcronym} ${FiatCurrency.standardCodeNumericName}""",
           ),
           DescriptionTile(
             data.symbol,
