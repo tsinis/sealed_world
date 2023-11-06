@@ -111,7 +111,7 @@ class WorldCountry extends Country
         ),
         assert(
           regionalBlocs != const <RegionalBloc>[],
-          "`bordersCodes` should not be empty!",
+          "`regionalBlocs` should not be empty!",
         );
 
   /// Returns an `WorldCountry` object from the given `code`
