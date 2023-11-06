@@ -11,8 +11,11 @@ void main() => group("$WorldCountry", () {
       final array = {value, WorldCountry.list.first};
 
       test("interfaces", () {
+        expect(value, isA<Country>());
         expect(value, isA<IsoStandardized>());
+        expect(value, isA<IsoTranslated>());
         expect(value, isA<JsonEncodable>());
+        expect(value, isA<Named>());
         expect(value, isA<Translated>());
       });
 
@@ -375,6 +378,404 @@ void main() => group("$WorldCountry", () {
           "with empty countries",
           () => expect(
             () => WorldCountry.maybeFromAnyCode(value.code, const []),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+      });
+
+      group("asserts", () {
+        test(
+          "not",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            isNot(throwsA(isA<AssertionError>())),
+          ),
+        );
+
+        test(
+          "code length",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.codeShort,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "codeShort length",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.code,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "emoji length",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: "",
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "namesNative empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: const [],
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "altSpellings empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: const [],
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "languages empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: const [],
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "timezones empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: const [],
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "translations empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: const [],
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "demonyms empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: const [],
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "cioc length",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+              cioc: "",
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "fifa length",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+              fifa: "",
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "bordersCodes empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+              bordersCodes: const [],
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "regionalBlocs empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+              regionalBlocs: const [],
+            ),
             throwsA(isA<AssertionError>()),
           ),
         );

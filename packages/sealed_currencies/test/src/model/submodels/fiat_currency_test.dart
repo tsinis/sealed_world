@@ -9,8 +9,11 @@ void main() => group("$FiatCurrency", () {
       final array = {value, FiatCurrency.list.first};
 
       test("interfaces", () {
+        expect(value, isA<Currency>());
         expect(value, isA<IsoStandardized>());
+        expect(value, isA<IsoTranslated>());
         expect(value, isA<JsonEncodable>());
+        expect(value, isA<Named>());
         expect(value, isA<Translated>());
       });
 

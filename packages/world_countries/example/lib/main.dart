@@ -55,9 +55,9 @@ class _MainState extends State<Main> {
           ],
           supportedLocales: [
             const Locale("pt", "PT"),
-            const Locale("pt", "BR"), // Classic string only based locale, or:
-            const IsoLocale(LangBos(), script: ScriptCyrl()), // Strict typed.
+            const Locale("pt", "BR"), // Classic, string only based locale, or:
             const TypedLocale(LangBos(), script: ScriptLatn()), // Loose typed.
+            const IsoLocale(LangBos(), script: ScriptCyrl()), // Strict typed.
             for (final locale in kMaterialSupportedLanguages) Locale(locale),
           ],
         ),

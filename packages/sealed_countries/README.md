@@ -4,47 +4,47 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_countries.svg)](https://pub.dev/packages/sealed_countries)
 
-This ISO-driven, fully tested and pure Dart package provides information about world countries in form of compile-time constant sealed classes. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, languages, currencies etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, fully tested and pure Dart package provides information about world countries in form of compile-time constant sealed classes. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, languages (and scripts), currencies, country/currency/language name translations, etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
 
-## Features
+### Features
 
 **WorldCountry** class provides the following information about countries:
 
-| **Field** | **Required** | **Description** | **Example for CountryIrl** |
-|-----------|--------------|-----------------|-----------------------------|
-| `name` | Yes | The English name of the country. | `CountryName.international(common: "Ireland", official: "Republic of Ireland")` |
-| `namesNative` | Yes | The native names of the country. | `[CountryName(language: LangEng(), official: "Republic of Ireland", common: "Ireland"), CountryName(language: LangGle(), official: "Poblacht na hÉireann", common: "Éire")]` |
-| `tld` | Yes | The top level domain names for the country. | `[".ie"]` |
-| `code` | Yes | The three-letter ISO 3166-1 Alpha-3 code of the country. | `"IRL"` |
-| `codeNumeric` | Yes | The three-digit ISO 3166-1 Numeric code of the country. | `"372"` |
-| `codeShort` | Yes | The two-letter ISO 3166-1 Alpha-2 code of the country. | `"IE"` |
-| `cioc` | No | The International Olympic Committee code of the country. | `"IRL"` |
-| `independent` | Yes | Whether the country is an independent state. | `true` |
-| `unMember` | Yes | Whether the country is a member of the United Nations. | `true` |
-| `currencies` | Yes | The currencies used in the country. | `[FiatEur()]` |
-| `idd` | Yes | The international direct dialing codes for the country. | `Idd(root: 3, suffixes: [53])` |
-| `altSpellings` | Yes | The alternate spellings of the country name. | `["IE", "Éire", "Republic of Ireland", "Poblacht na hÉireann"]` |
-| `continent` | Yes | The continent where the country is located. | `Europe()` |
-| `subregion` | No | The subregion where the country is located. | `NorthernEurope()` |
-| `languages` | Yes | The official languages spoken in the country. | `[LangEng(), LangGle()]` |
-| `latLng` | Yes | The geographic coordinates of the country. | `LatLng(53, -8)` |
-| `landlocked` | Yes | Whether the country is landlocked. | `false` |
-| `bordersCodes` | No | The codes of the countries that share borders with this country. | `["GBR"]` |
-| `areaMetric` | Yes | The area of the country in square kilometers. | `70273` |
-| `demonyms` | Yes | The demonym names for the people of the country. | `[Demonyms(language: LangEng(), female: "Irish", male: "Irish"), Demonyms(language: LangFra(), female: "Irlandaise", male: "Irlandais")]` |
-| `emoji` | Yes | The emoji flag for the country. | `🇮🇪` |
-| `maps` | Yes | The maps of the country. | `Maps(googleMaps: "hxd1BKxgpchStzQC6", openStreetMaps: "relation/62273")` |
-| `population` | Yes | The population of the country. | `4994724` |
-| `gini` | No | The Gini coefficient of the country. | `Gini(year: 2017, coefficient: 31.4)` |
-| `fifa` | No | The FIFA code of the country. | `"IRL"` |
-| `car` | Yes | The car information of the country. | `Car(sign: "IRL", isRightSide: false)` |
-| `timezones` | Yes | The time zones of the country. | `["UTC+00:00"]` |
-| `capitalInfo` | No | The capital city information of the country. | `CapitalInfo(capital: Capital("Dublin"), latLng: LatLng(53.32, -6.23))` |
-| `hasCoatOfArms` | Yes | Whether the country has an official coat of arms. | `true` |
-| `postalCode` | Yes | The postal code information of the country. | `PostalCode` with format and regExp |
-| `startOfWeek` | Yes | The first day of the week in the country. | `Weekday.monday` |
-| `regionalBlocs` | No | The regional blocs of the country. | `[BlocEU()]` |
-| `translations` | Yes | The translations of the country name. | List of **150** `TranslatedName`s in different languages |
+| **Field**       | **Required** | **Description**                                                  | **Example for CountryIrl**                                                                                                                                                   |
+| --------------- | ------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`          | Yes          | The English name of the country.                                 | `CountryName.international(common: "Ireland", official: "Republic of Ireland")`                                                                                              |
+| `namesNative`   | Yes          | The native names of the country.                                 | `[CountryName(language: LangEng(), official: "Republic of Ireland", common: "Ireland"), CountryName(language: LangGle(), official: "Poblacht na hÉireann", common: "Éire")]` |
+| `tld`           | Yes          | The top level domain names for the country.                      | `[".ie"]`                                                                                                                                                                    |
+| `code`          | Yes          | The three-letter ISO 3166-1 Alpha-3 code of the country.         | `"IRL"`                                                                                                                                                                      |
+| `codeNumeric`   | Yes          | The three-digit ISO 3166-1 Numeric code of the country.          | `"372"`                                                                                                                                                                      |
+| `codeShort`     | Yes          | The two-letter ISO 3166-1 Alpha-2 code of the country.           | `"IE"`                                                                                                                                                                       |
+| `cioc`          | No           | The International Olympic Committee code of the country.         | `"IRL"`                                                                                                                                                                      |
+| `independent`   | Yes          | Whether the country is an independent state.                     | `true`                                                                                                                                                                       |
+| `unMember`      | Yes          | Whether the country is a member of the United Nations.           | `true`                                                                                                                                                                       |
+| `currencies`    | Yes          | The currencies used in the country.                              | `[FiatEur()]`                                                                                                                                                                |
+| `idd`           | Yes          | The international direct dialing codes for the country.          | `Idd(root: 3, suffixes: [53])`                                                                                                                                               |
+| `altSpellings`  | Yes          | The alternate spellings of the country name.                     | `["IE", "Éire", "Republic of Ireland", "Poblacht na hÉireann"]`                                                                                                              |
+| `continent`     | Yes          | The continent where the country is located.                      | `Europe()`                                                                                                                                                                   |
+| `subregion`     | No           | The subregion where the country is located.                      | `NorthernEurope()`                                                                                                                                                           |
+| `languages`     | Yes          | The official languages spoken in the country.                    | `[LangEng(), LangGle()]`                                                                                                                                                     |
+| `latLng`        | Yes          | The geographic coordinates of the country.                       | `LatLng(53, -8)`                                                                                                                                                             |
+| `landlocked`    | Yes          | Whether the country is landlocked.                               | `false`                                                                                                                                                                      |
+| `bordersCodes`  | No           | The codes of the countries that share borders with this country. | `["GBR"]`                                                                                                                                                                    |
+| `areaMetric`    | Yes          | The area of the country in square kilometers.                    | `70273`                                                                                                                                                                      |
+| `demonyms`      | Yes          | The demonym names for the people of the country.                 | `[Demonyms(language: LangEng(), female: "Irish", male: "Irish"), Demonyms(language: LangFra(), female: "Irlandaise", male: "Irlandais")]`                                    |
+| `emoji`         | Yes          | The emoji flag for the country.                                  | `🇮🇪`                                                                                                                                                                         |
+| `maps`          | Yes          | The maps of the country.                                         | `Maps(googleMaps: "hxd1BKxgpchStzQC6", openStreetMaps: "relation/62273")`                                                                                                    |
+| `population`    | Yes          | The population of the country.                                   | `4994724`                                                                                                                                                                    |
+| `gini`          | No           | The Gini coefficient of the country.                             | `Gini(year: 2017, coefficient: 31.4)`                                                                                                                                        |
+| `fifa`          | No           | The FIFA code of the country.                                    | `"IRL"`                                                                                                                                                                      |
+| `car`           | Yes          | The car information of the country.                              | `Car(sign: "IRL", isRightSide: false)`                                                                                                                                       |
+| `timezones`     | Yes          | The time zones of the country.                                   | `["UTC+00:00"]`                                                                                                                                                              |
+| `capitalInfo`   | No           | The capital city information of the country.                     | `CapitalInfo(capital: Capital("Dublin"), latLng: LatLng(53.32, -6.23))`                                                                                                      |
+| `hasCoatOfArms` | Yes          | Whether the country has an official coat of arms.                | `true`                                                                                                                                                                       |
+| `postalCode`    | Yes          | The postal code information of the country.                      | `PostalCode` with format and regExp                                                                                                                                          |
+| `startOfWeek`   | Yes          | The first day of the week in the country.                        | `Weekday.monday`                                                                                                                                                             |
+| `regionalBlocs` | No           | The regional blocs of the country.                               | `[BlocEU()]`                                                                                                                                                                 |
+| `translations`  | Yes          | The translations of the country name.                            | List of **150** `TranslatedName`s in different languages                                                                                                                     |
 
 Compile time constant list of all countries accessible via `WorldCountry.list` and more over, the **WorldCountry** class provides the following methods:
 
@@ -57,7 +57,9 @@ Compile time constant list of all countries accessible via `WorldCountry.list` a
 
 and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap`. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc.
 
-## Getting started
+> Translations: Use `maybeTranslation()` or `translation()` methods to get translations for specific locale.
+
+### Getting started
 
 To use this package, add `sealed_countries` as a dependency in your `pubspec.yaml` file.
 
@@ -72,9 +74,9 @@ Then import the package in your Dart code:
 import 'package:sealed_countries/sealed_countries.dart';
 ```
 
-## Usage
+### Usage
 
-Use `WorldCountry` class to get information about countries. Either construct a new instance directly or with use of the class factory constructors/method `fromCode`, `fromCodeShort` or from any value that class contains `maybeFromValue`, or select one from the `WorldCountry.list` constant.
+Use `WorldCountry` class to get information about countries. Either construct a new instance directly or with use of the class factory constructors/static methods, or select one from the `WorldCountry.list` constant.
 
 ```dart
   print(WorldCountry.list.length); // Prints: "250".
@@ -86,19 +88,38 @@ Use `WorldCountry` class to get information about countries. Either construct a 
     (country) => country.continent is Europe,
   );
   print(europeanCountries); // Prints a list of European countries.
+
+  for (final country in WorldCountry.list) {
+  print(
+    """${country.name.common} translated to Slovak language: ${country.translation(const LangSlk()).name}""",
+  );
+}
 ```
 
 For more usage examples, please see the `/example` folder.
 
-## Additional information
+### FAQ
 
-For more information on using this package, check out the API documentation.
+#### Why should I use this package over any other country-related package?
+
+- **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes, you can also override existing data, etc.).
+- **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
+- **Rich data**: This package offers far more data than any other package + tons of translations.
+- **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
+- **High code coverage**: The code in this package has a high level of coverage, providing confidence in its reliability and stability.
+- **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+
+### Additional information
+
+If you like this package, please give it a star or like. For more information on using this package, check out the API documentation. PRs or ideas are always welcome.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
 
-## References, credits and sources
+### References, credits and sources
 
 - [ISO](https://www.iso.org/iso-3166-country-codes.html)
 - [Wikipedia](https://wikipedia.org/wiki/List_of_ISO_3166_country_codes)
 - [Data Source](https://gitlab.com/restcountries/restcountries)[^1]
+- [Translations Source](https://github.com/umpirsky/country-list)
+- [Project Roadmap](https://github.com/users/tsinis/projects/1)
 
 [^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), added additional data and functionality in Dart classes.
