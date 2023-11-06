@@ -100,7 +100,7 @@ For more usage examples, please see the `/example` folder.
 
 ### FAQ
 
-### Why should I use this package over any other country-related package?
+#### Why should I use this package over any other country-related package?
 
 - **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes, you can also override existing data, etc.).
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
@@ -111,7 +111,7 @@ For more usage examples, please see the `/example` folder.
 
 ### Additional information
 
-For more information on using this package, check out the API documentation. PRs or ideas are always welcome.
+If you like this package, please give it a star or like. For more information on using this package, check out the API documentation. PRs or ideas are always welcome.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
 
 ### References, credits and sources
