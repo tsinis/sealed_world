@@ -16,7 +16,7 @@ extension PackageAssociationsExtension on Package {
         sealedCountries: "$Country",
       );
 
-  List<IsoStandardized> get dataList => whenConst(
+  List<IsoTranslated> get dataList => whenConst(
         sealedLanguages: NaturalLanguage.list,
         sealedCurrencies: FiatCurrency.list,
         sealedCountries: WorldCountry.list,
@@ -41,15 +41,15 @@ extension PackageAssociationsExtension on Package {
       ).toString().toLowerCase();
 
   String get isoCodeAssociated => whenConst(
-        sealedLanguages: "639-2",
-        sealedCurrencies: "4217 (Alpha)",
-        sealedCountries: "3166-1 Alpha-3",
+        sealedLanguages: NaturalLanguage.standardCodeName,
+        sealedCurrencies: FiatCurrency.standardCodeName,
+        sealedCountries: WorldCountry.standardCodeName,
       );
 
   String get isoCodeOtherAssociated => whenConst(
-        sealedLanguages: "639-1",
-        sealedCurrencies: "4217 (Numeric)",
-        sealedCountries: "3166-1 Alpha-2",
+        sealedLanguages: NaturalLanguage.standardCodeShortName,
+        sealedCurrencies: FiatCurrency.standardCodeNumericName,
+        sealedCountries: WorldCountry.standardCodeShortName,
       );
 
   String get umpirskyRepoUrl =>

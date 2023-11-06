@@ -156,14 +156,13 @@ const ${varFileName.toCamelCase()} = [
   }
 
   String _dartDoc(Set<TranslatedName> translations, Object name, String type) {
-    final stringName = name is TranslatedName ? name.name : name.toString();
     final sorted = List.of(translations.map((e) => e.language.name))..sort();
     final import = package.whenConstOrNull(sealedCountries: package.dirName) ??
         Package.sealedLanguages.dirName;
 
     final buffer = StringBuffer('import "package:$import/$import.dart";\n')
       ..write(
-        "/// Provides ${translations.length} $translation for a $stringName $type:",
+        "/// Provides ${translations.length} $translation for a $name $type:",
       );
     for (final name in Set.unmodifiable(sorted)) buffer.write("\n /// - $name");
 
