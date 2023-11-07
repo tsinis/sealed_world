@@ -64,7 +64,7 @@ class RouteParseUtils {
     required T? Function(String code) onCode,
     required T? Function() orElse,
   }) =>
-      code.length < 4 ? onCode(code) : orElse();
+      code.length < Script.codeLength ? onCode(code) : orElse();
 
   ParsedData _returnFromCountryData(
     WorldCountry? maybeCountry, {

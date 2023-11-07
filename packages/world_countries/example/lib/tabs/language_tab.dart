@@ -14,7 +14,7 @@ final class LanguageTab extends WorldDataTab<NaturalLanguage> {
     super.items = NaturalLanguage.list,
     super.type = WorldData.language,
     super.key,
-  }) : super(mapCode: (language) => language.code);
+  });
 
   @override
   Widget build(BuildContext context) => TabBody(
@@ -32,17 +32,20 @@ final class LanguageTab extends WorldDataTab<NaturalLanguage> {
           DescriptionTile(
             data.bibliographicCode,
             icon: Icons.filter_3_outlined,
-            description: "Code: ISO 639-2 (Bibliographic)",
+            description:
+                """Code: ${IsoStandardized.standardAcronym} ${NaturalLanguage.standardBibliographicCodeName}""",
           ),
           DescriptionTile(
             data.code,
             icon: Icons.looks_3_outlined,
-            description: "Code: ISO 639-2 (Terminological)",
+            description:
+                """Code: ${IsoStandardized.standardAcronym} ${NaturalLanguage.standardCodeName}""",
           ),
           DescriptionTile(
             data.codeShort,
             icon: Icons.looks_two_outlined,
-            description: "Code: ISO 639-1",
+            description:
+                """Code: ${IsoStandardized.standardAcronym} ${NaturalLanguage.standardCodeShortName}""",
           ),
           DescriptionTile(
             data.family.name,

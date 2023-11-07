@@ -12,28 +12,18 @@ enum WorldData {
 
   final IconData icon;
 
-  R map<R>({required R country, required R currency, required R language}) {
-    switch (this) {
-      case WorldData.country:
-        return country;
-      case WorldData.currency:
-        return currency;
-      case WorldData.language:
-        return language;
-    }
-  }
+  R map<R>({required R country, required R currency, required R language}) =>
+      switch (this) {
+        WorldData.country => country,
+        WorldData.currency => currency,
+        WorldData.language => language,
+      };
 
   String get path => Constants.slash + name;
   String get pathTemplate => "$path${Constants.slash}:${Constants.code}";
   String? get label => name.toBeginningOfSentenceCase;
 
-  static List<String> get paths {
-    final pathList = List<String>.empty(growable: true);
-
-    for (final tab in WorldData.values) {
-      pathList.addAll([tab.path, tab.pathTemplate]);
-    }
-
-    return List<String>.unmodifiable(pathList);
-  }
+  static List<String> get paths => List.unmodifiable(
+        WorldData.values.expand((tab) => [tab.path, tab.pathTemplate]),
+      );
 }

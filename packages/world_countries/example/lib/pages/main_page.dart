@@ -64,7 +64,7 @@ class _MainPageState extends State<MainPage>
         length: _controller.length,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text("World Countries Example"),
+            title: const Text("Try long press too :)"),
             actions: [
               SearchAnchor(
                 isFullScreen: false,

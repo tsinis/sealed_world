@@ -1,6 +1,6 @@
 import "dart:ui" show Locale;
 
-import "package:flutter/foundation.dart" show immutable;
+import "package:flutter/foundation.dart" show immutable, required;
 import "package:sealed_countries/sealed_countries.dart";
 
 @immutable
@@ -42,6 +42,7 @@ class TypedLocale<CountryType extends Object> extends Locale {
   final Script? script;
 
   @override
+  @required
   String? get countryCode => country?.toString().trim().toUpperCase();
 
   @override
