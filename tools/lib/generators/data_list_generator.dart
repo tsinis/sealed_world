@@ -37,7 +37,7 @@ class DataListGenerator {
 class $className extends $type {
 /// Creates a instance of [$className] ($itemName ${package.dataRepresent}).
 ///
-/// ISO ${package.isoCodeAssociated} code: "${item.code}", ISO ${package.isoCodeOtherAssociated} code: "${item.codeOther}".
+/// ${IsoStandardized.standardAcronym} ${package.isoCodeAssociated} code: "${item.code}", ${IsoStandardized.standardAcronym} ${package.isoCodeOtherAssociated} code: "${item.codeOther}".
 const $className()""")
         ..write(classBody)
         ..write(";\n")
