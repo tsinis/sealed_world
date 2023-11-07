@@ -6,7 +6,9 @@
 
 This project enables the visual presentation of "Sealed World" data, which includes information about countries, currencies, and languages. Additionally, it provides examples of Flutter widgets related to "World Countries" package.
 
-> **EXPERIMENTAL** (Flutter WASM): To preview this example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **113** or higher) with the `enable-webassembly-garbage-collection` **flag enabled**. Please allow up to one minute for initial fonts and data caching.
+Flutter WASM: To preview this example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **119** or higher). Please allow up to 15 seconds for initial fonts and data caching.
+
+> Note: Please keep in mind that demo was build with Flutter WASM which is in very early alpha stage, so performance might be affected.
 
 ## How to run it
 

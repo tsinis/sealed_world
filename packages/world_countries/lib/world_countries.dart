@@ -11,7 +11,6 @@ export "src/extensions/build_context_extension.dart";
 export "src/extensions/locale_extension.dart";
 export "src/extensions/locale_translated_extension.dart";
 export "src/extensions/natural_language_extension.dart";
-export "src/extensions/navigator_context_extension.dart";
 export "src/extensions/world_country_extension.dart";
 export "src/generated/fonts.gen.dart";
 export "src/helpers/deprecated_translated_name_extension.dart";

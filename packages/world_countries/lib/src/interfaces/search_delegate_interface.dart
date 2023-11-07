@@ -7,7 +7,7 @@ import "package:flutter/widgets.dart";
 import "../constants/ui_constants.dart";
 import "searchable_interface.dart";
 
-/// {@hideConstantImplementations}
+/// An interface for a search delegate.
 abstract class SearchDelegateInterface<T extends Object>
     extends SearchDelegate<T?> implements SearchableInterface<T> {
   /// Constructor for the [SearchDelegateInterface] class.

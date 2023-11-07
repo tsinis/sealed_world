@@ -6,6 +6,10 @@ NEW FEATURES
 - Added `standard*` static constants in WorldCountry class referencing different names of the ISO 3166-1 standard.
 - Improved documentation in README, added FAQ and demo web-site (Flutter WASM).
 
+REFACTORING
+
+- Removed `NavigatorContextExtension` from exports, so you don't need to specify it no longer via `hide`.
+
 ## 0.8.0
 
 BREAKING CHANGE
