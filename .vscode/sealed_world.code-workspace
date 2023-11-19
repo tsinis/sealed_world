@@ -55,7 +55,7 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "recentlyUsed",
     "editor.tabCompletion": "on",
-    "editor.wordBasedSuggestions": true,
+    "editor.wordBasedSuggestions": "matchingDocuments",
     "prettier.singleQuote": false,
     "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
@@ -70,7 +70,8 @@
         "source.organizeImports": "always",
         "source.addRequired": "always",
         "source.sortMembers": "never"
-      }
+      },
+      "editor.wordBasedSuggestions": "matchingDocuments"
     },
     "cSpell.words": [
       "Bhojpuri",
