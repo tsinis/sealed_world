@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Tatar language:
+/// Provides 107 translations for a Tatar language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,6 +43,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -48,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -70,18 +77,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -90,6 +104,7 @@ import "../model/translated_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const tatLanguageTranslations = [
   TranslatedName(LangEng(), name: "Tatar"),
@@ -184,4 +199,23 @@ const tatLanguageTranslations = [
   TranslatedName(LangZho(), name: "塔塔尔文"),
   TranslatedName(LangZho(), name: "韃靼文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Tatar"),
+  TranslatedName(LangAsm(), name: "তাতাৰ"),
+  TranslatedName(LangChe(), name: "гӀезалойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤢𞤼𞤢𞤪𞥇𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "tataro"),
+  TranslatedName(LangIbo(), name: "Tata"),
+  TranslatedName(LangKur(), name: "teterî"),
+  TranslatedName(LangMri(), name: "Tatā"),
+  TranslatedName(LangSrd(), name: "tàtaru"),
+  TranslatedName(LangSnd(), name: "تاتار"),
+  TranslatedName(LangSom(), name: "Taatar"),
+  TranslatedName(LangTgk(), name: "тоторӣ"),
+  TranslatedName(LangTir(), name: "ታታር"),
+  TranslatedName(LangTuk(), name: "tatar dili"),
+  TranslatedName(LangTat(), name: "татар"),
+  TranslatedName(LangYor(), name: "Tatarí"),
 ];

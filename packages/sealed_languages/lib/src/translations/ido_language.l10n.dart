@@ -2,22 +2,34 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 60 translations for a Ido language:
+/// Provides 92 translations for a Ido language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -26,12 +38,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -39,29 +56,44 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Yiddish.
+/// - Yiddish
+/// - Yoruba
+/// - Zulu.
 const idoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Ido"),
   TranslatedName(LangAra(), name: "الإيدو"),
@@ -122,7 +154,41 @@ const idoLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Ido"),
   TranslatedName(LangYid(), name: "אידא"),
   TranslatedName(LangZho(), name: "伊多文"),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Ido"),
+  TranslatedName(LangAmh(), name: "ኢዶ"),
+  TranslatedName(LangAsm(), name: "ইডো"),
+  TranslatedName(LangBel(), name: "іда"),
+  TranslatedName(LangChe(), name: "идо"),
+  TranslatedName(LangEus(), name: "idoa"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤋𞤣𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "ido"),
+  TranslatedName(LangGlg(), name: "ido"),
+  TranslatedName(LangHye(), name: "իդո"),
+  TranslatedName(LangIna(), name: "ido"),
+  TranslatedName(LangKaz(), name: "идо тілі"),
+  TranslatedName(LangKhm(), name: "អ៊ីដូ"),
+  TranslatedName(LangKur(), name: "îdoyî"),
+  TranslatedName(LangKir(), name: "идочо"),
+  TranslatedName(LangMri(), name: "Īto"),
+  TranslatedName(LangMon(), name: "идо"),
+  TranslatedName(LangMya(), name: "အီဒို"),
+  TranslatedName(LangNep(), name: "इडो"),
+  TranslatedName(LangPan(), name: "ਇਡੂ"),
+  TranslatedName(LangPus(), name: "اڊو"),
+  TranslatedName(LangQue(), name: "Ido Simi"),
+  TranslatedName(LangSrd(), name: "ido"),
+  TranslatedName(LangSnd(), name: "ادو"),
+  TranslatedName(LangSin(), name: "ඉඩො"),
+  TranslatedName(LangSqi(), name: "idoisht"),
+  TranslatedName(LangSwa(), name: "Kiido"),
+  TranslatedName(LangTir(), name: "ኢዶ"),
+  TranslatedName(LangTuk(), name: "ido dili"),
+  TranslatedName(LangUrd(), name: "ایڈو"),
+  TranslatedName(LangUzb(), name: "ido"),
+  TranslatedName(LangYor(), name: "Èdè Ido"),
+  TranslatedName(LangZul(), name: "isi-Ido"),
 ];

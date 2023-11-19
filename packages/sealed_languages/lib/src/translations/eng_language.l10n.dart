@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 121 translations for a English language:
+/// Provides 141 translations for a English language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,12 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +65,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +80,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -80,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -92,22 +101,30 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
 /// - Tagalog
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -115,8 +132,11 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const engLanguageTranslations = [
   TranslatedName(LangEng(), name: "English"),
@@ -240,4 +260,24 @@ const engLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Gɛ̀ɛ́sì", countryCode: "BJ"),
   TranslatedName(LangZho(), name: "英文"),
   TranslatedName(LangZul(), name: "i-English"),
+  TranslatedName(LangAsm(), name: "ইংৰাজী"),
+  TranslatedName(LangBod(), name: "དབྱིན་ཇིའི་སྐད།"),
+  TranslatedName(LangChe(), name: "ингалсан"),
+  TranslatedName(LangChv(), name: "акӑлчан"),
+  TranslatedName(LangIna(), name: "anglese"),
+  TranslatedName(LangIle(), name: "anglesi"),
+  TranslatedName(LangJav(), name: "Inggris"),
+  TranslatedName(LangKur(), name: "îngilîzî"),
+  TranslatedName(LangMri(), name: "Ingarihi"),
+  TranslatedName(LangOci(), name: "anglés"),
+  TranslatedName(LangSan(), name: "आङ्ग्लभाषा"),
+  TranslatedName(LangSrd(), name: "inglesu"),
+  TranslatedName(LangSnd(), name: "انگريزي"),
+  TranslatedName(LangSun(), name: "Inggris"),
+  TranslatedName(LangTgk(), name: "Англисӣ"),
+  TranslatedName(LangTuk(), name: "iňlis dili"),
+  TranslatedName(LangTat(), name: "инглиз"),
+  TranslatedName(LangWol(), name: "Àngale"),
+  TranslatedName(LangXho(), name: "IsiNgesi"),
+  TranslatedName(LangZha(), name: "Yinghyij"),
 ];

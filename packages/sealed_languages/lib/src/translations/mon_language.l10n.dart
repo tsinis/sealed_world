@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 96 translations for a Mongolian language:
+/// Provides 114 translations for a Mongolian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,25 +33,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,6 +69,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -75,18 +84,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -94,7 +110,9 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const monLanguageTranslations = [
   TranslatedName(LangEng(), name: "Mongolian"),
@@ -193,4 +211,26 @@ const monLanguageTranslations = [
   TranslatedName(LangYid(), name: "מאנגאליש"),
   TranslatedName(LangZho(), name: "蒙古文"),
   TranslatedName(LangZul(), name: "isi-Mongolian"),
+  TranslatedName(LangAsm(), name: "মংগোলীয়"),
+  TranslatedName(LangChe(), name: "монголийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤮𞤲𞤺𞤮𞤤𞤭𞤲𞤳𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Mongoliyanci"),
+  TranslatedName(LangIna(), name: "mongol"),
+  TranslatedName(LangIbo(), name: "Mọngolịan"),
+  TranslatedName(LangJav(), name: "Mongolia"),
+  TranslatedName(LangKur(), name: "mongolî"),
+  TranslatedName(LangMri(), name: "Mongōria"),
+  TranslatedName(LangSrd(), name: "mòngolu"),
+  TranslatedName(LangSnd(), name: "منگولي"),
+  TranslatedName(LangSom(), name: "Mangooli"),
+  TranslatedName(LangTgk(), name: "муғулӣ"),
+  TranslatedName(LangTir(), name: "ሞንጎልኛ"),
+  TranslatedName(LangTuk(), name: "mongol dili"),
+  TranslatedName(LangTat(), name: "монгол"),
+  TranslatedName(LangWol(), name: "Mongoliye"),
+  TranslatedName(LangYor(), name: "Mòngólíà"),
 ];

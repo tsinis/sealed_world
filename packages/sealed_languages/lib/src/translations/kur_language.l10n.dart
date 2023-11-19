@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 99 translations for a Kurdish language:
+/// Provides 117 translations for a Kurdish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,6 +69,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -72,22 +81,29 @@ import "../model/translated_name.dart";
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -95,7 +111,9 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const kurLanguageTranslations = [
   TranslatedName(LangEng(), name: "Kurdish"),
@@ -197,4 +215,26 @@ const kurLanguageTranslations = [
   TranslatedName(LangZho(), name: "库尔德文"),
   TranslatedName(LangZho(), name: "庫爾德文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Kurdish"),
+  TranslatedName(LangAsm(), name: "কুৰ্ডিচ"),
+  TranslatedName(LangChe(), name: "курдийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤵𞤪𞤣𞤭𞤧𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Kurdanci"),
+  TranslatedName(LangIna(), name: "kurdo"),
+  TranslatedName(LangIbo(), name: "Ndị Kụrdịsh"),
+  TranslatedName(LangJav(), name: "Kurdis"),
+  TranslatedName(LangKur(), name: "kurdî (kurmancî)"),
+  TranslatedName(LangMri(), name: "Kūrihi"),
+  TranslatedName(LangQue(), name: "Kurdo Simi"),
+  TranslatedName(LangSrd(), name: "curdu"),
+  TranslatedName(LangSnd(), name: "ڪردي"),
+  TranslatedName(LangSom(), name: "Kurdishka"),
+  TranslatedName(LangTgk(), name: "курдӣ"),
+  TranslatedName(LangTuk(), name: "kürt dili"),
+  TranslatedName(LangTat(), name: "көрд"),
+  TranslatedName(LangWol(), name: "Kurdi"),
+  TranslatedName(LangYor(), name: "Kọdiṣì"),
 ];

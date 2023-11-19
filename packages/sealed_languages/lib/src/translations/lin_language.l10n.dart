@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 83 translations for a Lingala language:
+/// Provides 97 translations for a Lingala language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -18,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,6 +31,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
@@ -37,6 +40,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,6 +51,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,18 +62,23 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -77,12 +88,15 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Yoruba
 /// - Zulu.
 const linLanguageTranslations = [
   TranslatedName(LangEng(), name: "Lingala"),
@@ -168,4 +182,22 @@ const linLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Lingala"),
   TranslatedName(LangZho(), name: "林加拉文"),
   TranslatedName(LangZul(), name: "isi-Lingala"),
+  TranslatedName(LangAsm(), name: "লিংগালা"),
+  TranslatedName(LangChe(), name: "лингала"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤂𞤭𞤲𞤺𞤢𞤤𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "lingala"),
+  TranslatedName(LangIbo(), name: "Lịngala"),
+  TranslatedName(LangKur(), name: "lingalayî"),
+  TranslatedName(LangMri(), name: "Ringāra"),
+  TranslatedName(LangPus(), name: "لنګالا"),
+  TranslatedName(LangQue(), name: "Lingala Simi"),
+  TranslatedName(LangSrd(), name: "lingala"),
+  TranslatedName(LangSnd(), name: "لنگالا"),
+  TranslatedName(LangTir(), name: "ሊንጋላ"),
+  TranslatedName(LangTuk(), name: "lingala dili"),
+  TranslatedName(LangYor(), name: "Lìǹgálà"),
 ];

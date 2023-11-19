@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Georgian language:
+/// Provides 118 translations for a Georgian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -70,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -77,19 +87,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -97,6 +113,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -202,4 +219,25 @@ const katLanguageTranslations = [
   TranslatedName(LangZho(), name: "格鲁吉亚文"),
   TranslatedName(LangZho(), name: "喬治亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Georgian"),
+  TranslatedName(LangAsm(), name: "জৰ্জিয়ান"),
+  TranslatedName(LangChe(), name: "гуьржийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤔𞤮𞥅𞤪𞥁𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Jojiyanci"),
+  TranslatedName(LangIna(), name: "georgiano"),
+  TranslatedName(LangIbo(), name: "Geọjịan"),
+  TranslatedName(LangJav(), name: "Georgia"),
+  TranslatedName(LangKur(), name: "gurcî"),
+  TranslatedName(LangMri(), name: "Hōriana"),
+  TranslatedName(LangPus(), name: "جورجيائي"),
+  TranslatedName(LangSrd(), name: "georgianu"),
+  TranslatedName(LangSnd(), name: "جارجيائي"),
+  TranslatedName(LangSom(), name: "Joorijiyaan"),
+  TranslatedName(LangTgk(), name: "гурҷӣ"),
+  TranslatedName(LangTuk(), name: "gruzin dili"),
+  TranslatedName(LangTat(), name: "грузин"),
+  TranslatedName(LangWol(), name: "Sorsiye"),
 ];

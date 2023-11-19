@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Bulgarian language:
+/// Provides 129 translations for a Bulgarian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -48,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -82,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -90,8 +97,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -99,12 +108,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -112,6 +124,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -232,4 +245,17 @@ const bulLanguageTranslations = [
   TranslatedName(LangZho(), name: "保加利亚文"),
   TranslatedName(LangZho(), name: "保加利亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Bulgari"),
+  TranslatedName(LangAsm(), name: "বুলগেৰীয়"),
+  TranslatedName(LangChe(), name: "болгарийн"),
+  TranslatedName(LangIna(), name: "bulgaro"),
+  TranslatedName(LangJav(), name: "Bulgaria"),
+  TranslatedName(LangKur(), name: "bulgarî"),
+  TranslatedName(LangMri(), name: "Purukāriana"),
+  TranslatedName(LangPus(), name: "بلغاري"),
+  TranslatedName(LangSrd(), name: "bùlgaru"),
+  TranslatedName(LangSnd(), name: "بلغاريائي"),
+  TranslatedName(LangTgk(), name: "булғорӣ"),
+  TranslatedName(LangTuk(), name: "bolgar dili"),
+  TranslatedName(LangTat(), name: "болгар"),
+  TranslatedName(LangWol(), name: "Bilgaar"),
 ];

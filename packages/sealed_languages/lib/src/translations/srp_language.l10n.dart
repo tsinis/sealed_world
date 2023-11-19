@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Serbian language:
+/// Provides 117 translations for a Serbian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -69,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -76,19 +86,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -96,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -200,4 +217,25 @@ const srpLanguageTranslations = [
   TranslatedName(LangZho(), name: "塞尔维亚文"),
   TranslatedName(LangZho(), name: "塞爾維亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Serbian"),
+  TranslatedName(LangAsm(), name: "ছাৰ্বিয়ান"),
+  TranslatedName(LangChe(), name: "сербийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤫𞤪𞤦𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Sabiyan"),
+  TranslatedName(LangIna(), name: "serbo"),
+  TranslatedName(LangIbo(), name: "Sebịan"),
+  TranslatedName(LangJav(), name: "Serbia"),
+  TranslatedName(LangKur(), name: "sirbî"),
+  TranslatedName(LangMri(), name: "Hirupia"),
+  TranslatedName(LangPus(), name: "سربيائي"),
+  TranslatedName(LangSrd(), name: "serbu"),
+  TranslatedName(LangSnd(), name: "سربيائي"),
+  TranslatedName(LangSom(), name: "Seerbiyaan"),
+  TranslatedName(LangTgk(), name: "сербӣ"),
+  TranslatedName(LangTuk(), name: "serb dili"),
+  TranslatedName(LangTat(), name: "серб"),
+  TranslatedName(LangWol(), name: "Serb"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a (Eastern) Punjabi language:
+/// Provides 121 translations for a (Eastern) Punjabi language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -44,9 +46,11 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,6 +73,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -76,6 +82,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -84,8 +91,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -93,12 +102,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -217,4 +229,16 @@ const panLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Punjabi"),
   TranslatedName(LangZho(), name: "旁遮普文"),
   TranslatedName(LangZul(), name: "isi-Punjabi"),
+  TranslatedName(LangAsm(), name: "পাঞ্জাবী"),
+  TranslatedName(LangChe(), name: "панджаби"),
+  TranslatedName(LangIna(), name: "punjabi"),
+  TranslatedName(LangJav(), name: "Punjab"),
+  TranslatedName(LangKur(), name: "puncabî"),
+  TranslatedName(LangMri(), name: "Punutapi"),
+  TranslatedName(LangPus(), name: "پنجابي"),
+  TranslatedName(LangSrd(), name: "punjabi"),
+  TranslatedName(LangSnd(), name: "پنجابي"),
+  TranslatedName(LangTgk(), name: "панҷобӣ"),
+  TranslatedName(LangTuk(), name: "penjab dili"),
+  TranslatedName(LangTat(), name: "пәнҗаби"),
 ];

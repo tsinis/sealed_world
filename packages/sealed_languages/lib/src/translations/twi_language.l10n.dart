@@ -2,10 +2,12 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 68 translations for a Twi language:
+/// Provides 78 translations for a Twi language:
 /// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
 /// - Azerbaijani
 /// - Basque
 /// - Bengali (Bangla)
@@ -23,18 +25,23 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Galician
 /// - Georgian
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Kinyarwanda
 /// - Korean
 /// - Kyrgyz
@@ -59,6 +66,7 @@ import "../model/translated_name.dart";
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -67,8 +75,10 @@ import "../model/translated_name.dart";
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Vietnamese
+/// - Zulu.
 const twiLanguageTranslations = [
   TranslatedName(LangEng(), name: "Twi"),
   TranslatedName(LangAmh(), name: "ትዊኛ"),
@@ -138,4 +148,14 @@ const twiLanguageTranslations = [
   TranslatedName(LangUkr(), name: "тві"),
   TranslatedName(LangVie(), name: "Tiếng Twi"),
   TranslatedName(LangZho(), name: "特威文"),
+  TranslatedName(LangGlg(), name: "twi"),
+  TranslatedName(LangHau(), name: "Tiwiniyanci"),
+  TranslatedName(LangHye(), name: "տուի"),
+  TranslatedName(LangIna(), name: "twi"),
+  TranslatedName(LangKaz(), name: "тви тілі"),
+  TranslatedName(LangKhm(), name: "ទ្វី"),
+  TranslatedName(LangSqi(), name: "tuisht"),
+  TranslatedName(LangSwa(), name: "Kitwi", countryCode: "KE"),
+  TranslatedName(LangUrd(), name: "توی"),
+  TranslatedName(LangZul(), name: "isi-Twi"),
 ];

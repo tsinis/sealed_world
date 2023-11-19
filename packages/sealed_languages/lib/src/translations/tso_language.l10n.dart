@@ -2,16 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 67 translations for a Tsonga language:
+/// Provides 94 translations for a Tsonga language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -23,36 +30,52 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Georgian
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -61,12 +84,16 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Yoruba
 /// - Zulu.
 const tsoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Tsonga"),
@@ -136,4 +163,35 @@ const tsoLanguageTranslations = [
   TranslatedName(LangZho(), name: "宗加文"),
   TranslatedName(LangZho(), name: "特松加文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Tsonga"),
+  TranslatedName(LangAsm(), name: "ছোঙ্গা"),
+  TranslatedName(LangBel(), name: "тсонга"),
+  TranslatedName(LangChe(), name: "тсонга"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤭𞤧𞤮𞤲𞤺𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHye(), name: "ցոնգա"),
+  TranslatedName(LangIna(), name: "tsonga"),
+  TranslatedName(LangIbo(), name: "Songa"),
+  TranslatedName(LangKat(), name: "ტსონგა"),
+  TranslatedName(LangKaz(), name: "тсонга тілі"),
+  TranslatedName(LangKhm(), name: "សុងហ្គា"),
+  TranslatedName(LangKur(), name: "tsongayî"),
+  TranslatedName(LangKir(), name: "тсонгача"),
+  TranslatedName(LangMri(), name: "Honga"),
+  TranslatedName(LangMon(), name: "цонга"),
+  TranslatedName(LangMya(), name: "ဆွန်ဂါ"),
+  TranslatedName(LangNep(), name: "ट्सोङ्गा"),
+  TranslatedName(LangPan(), name: "ਸੋਂਗਾ"),
+  TranslatedName(LangPus(), name: "سونګا"),
+  TranslatedName(LangQue(), name: "Tsonga Simi"),
+  TranslatedName(LangSrd(), name: "tsonga"),
+  TranslatedName(LangSnd(), name: "سونگا"),
+  TranslatedName(LangSin(), name: "සොන්ග"),
+  TranslatedName(LangSqi(), name: "congaisht"),
+  TranslatedName(LangTir(), name: "ሶንጋ"),
+  TranslatedName(LangTuk(), name: "tsonga dili"),
+  TranslatedName(LangUzb(), name: "tsonga"),
+  TranslatedName(LangYor(), name: "Èdè Songa"),
 ];

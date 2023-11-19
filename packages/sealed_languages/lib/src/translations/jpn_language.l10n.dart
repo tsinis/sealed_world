@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Japanese language:
+/// Provides 136 translations for a Japanese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -46,10 +49,13 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -58,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -72,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -91,22 +99,29 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -114,6 +129,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -237,4 +254,21 @@ const jpnLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Japanisi"),
   TranslatedName(LangZho(), name: "日文"),
   TranslatedName(LangZul(), name: "isi-Japanese"),
+  TranslatedName(LangAsm(), name: "জাপানী"),
+  TranslatedName(LangChe(), name: "японийн"),
+  TranslatedName(LangChv(), name: "япони"),
+  TranslatedName(LangIna(), name: "japonese"),
+  TranslatedName(LangIbo(), name: "Japaniisi"),
+  TranslatedName(LangJav(), name: "Jepang"),
+  TranslatedName(LangKur(), name: "japonî"),
+  TranslatedName(LangMri(), name: "Hapanihi"),
+  TranslatedName(LangSan(), name: "सूर्यमूलीय भाषा:"),
+  TranslatedName(LangSrd(), name: "giaponesu"),
+  TranslatedName(LangSnd(), name: "جاپاني"),
+  TranslatedName(LangSun(), name: "Jepang"),
+  TranslatedName(LangTgk(), name: "японӣ"),
+  TranslatedName(LangTuk(), name: "ýapon dili"),
+  TranslatedName(LangTat(), name: "япон"),
+  TranslatedName(LangWol(), name: "Sapone"),
+  TranslatedName(LangXho(), name: "IsiJapan"),
 ];

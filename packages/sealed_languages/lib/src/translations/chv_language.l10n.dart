@@ -2,24 +2,36 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 66 translations for a Chuvash language:
+/// Provides 100 translations for a Chuvash language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -28,12 +40,18 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -42,31 +60,47 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Western Frisian.
+/// - Welsh
+/// - Western Frisian
+/// - Yoruba
+/// - Zulu.
 const chvLanguageTranslations = [
   TranslatedName(LangEng(), name: "Chuvash"),
   TranslatedName(LangAra(), name: "التشوفاشي"),
@@ -134,4 +168,42 @@ const chvLanguageTranslations = [
   TranslatedName(LangUkr(), name: "чуваська"),
   TranslatedName(LangVie(), name: "Tiếng Chuvash"),
   TranslatedName(LangZho(), name: "楚瓦什文"),
+  TranslatedName(LangAmh(), name: "ቹቫሽ"),
+  TranslatedName(LangAsm(), name: "চুভাচ"),
+  TranslatedName(LangChe(), name: "чувашийн"),
+  TranslatedName(LangChv(), name: "чӑваш"),
+  TranslatedName(LangCym(), name: "Tshwfasheg"),
+  TranslatedName(LangEus(), name: "txuvaxera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤕𞤵𞥅𞤾𞤢𞤧𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "chuvash"),
+  TranslatedName(LangGlg(), name: "chuvaxo"),
+  TranslatedName(LangHye(), name: "չուվաշերեն"),
+  TranslatedName(LangIna(), name: "chuvash"),
+  TranslatedName(LangJav(), name: "Khuvash"),
+  TranslatedName(LangKaz(), name: "чуваш тілі"),
+  TranslatedName(LangKhm(), name: "ឈូវ៉ាស"),
+  TranslatedName(LangKur(), name: "çuvaşî"),
+  TranslatedName(LangKir(), name: "чувашча"),
+  TranslatedName(LangMri(), name: "Tiuwhāhi"),
+  TranslatedName(LangMon(), name: "чуваш"),
+  TranslatedName(LangMya(), name: "ချူဗက်ရှ်"),
+  TranslatedName(LangNep(), name: "चुभास"),
+  TranslatedName(LangPan(), name: "ਚੁਵਾਸ਼"),
+  TranslatedName(LangPus(), name: "چوواشي"),
+  TranslatedName(LangQue(), name: "Chuvash Simi"),
+  TranslatedName(LangSrd(), name: "ciuvàsciu"),
+  TranslatedName(LangSnd(), name: "چو واش"),
+  TranslatedName(LangSin(), name: "චවේෂ්"),
+  TranslatedName(LangSqi(), name: "çuvashisht"),
+  TranslatedName(LangSwa(), name: "Kichuvash"),
+  TranslatedName(LangTir(), name: "ቹቫሽኛ"),
+  TranslatedName(LangTuk(), name: "çuwaş dili"),
+  TranslatedName(LangUrd(), name: "چوواش"),
+  TranslatedName(LangUzb(), name: "chuvash"),
+  TranslatedName(LangYor(), name: "Èdè Shufasi"),
+  TranslatedName(LangZul(), name: "isi-Chuvash"),
 ];

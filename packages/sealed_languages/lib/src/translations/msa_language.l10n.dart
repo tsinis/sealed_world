@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 113 translations for a Malay language:
+/// Provides 124 translations for a Malay language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -48,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -72,6 +77,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
@@ -88,8 +94,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -97,12 +105,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -226,4 +237,15 @@ const msaLanguageTranslations = [
   TranslatedName(LangZho(), name: "马来文"),
   TranslatedName(LangZho(), name: "馬來文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Malay"),
+  TranslatedName(LangAsm(), name: "মালয়"),
+  TranslatedName(LangChe(), name: "малайн"),
+  TranslatedName(LangIna(), name: "malay"),
+  TranslatedName(LangJav(), name: "Melayu"),
+  TranslatedName(LangKur(), name: "malezî"),
+  TranslatedName(LangMri(), name: "Marei"),
+  TranslatedName(LangSrd(), name: "malesu"),
+  TranslatedName(LangSnd(), name: "ملي"),
+  TranslatedName(LangTgk(), name: "малайӣ"),
+  TranslatedName(LangTuk(), name: "malaý dili"),
+  TranslatedName(LangTat(), name: "малай"),
 ];

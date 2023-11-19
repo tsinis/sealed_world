@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 67 translations for a Tagalog language:
+/// Provides 69 translations for a Tagalog language:
 /// - Amharic
 /// - Arabic
+/// - Armenian
 /// - Azerbaijani
 /// - Basque
 /// - Bengali (Bangla)
@@ -64,6 +65,7 @@ import "../model/translated_name.dart";
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
 /// - Vietnamese
 /// - Yiddish.
@@ -135,4 +137,6 @@ const tglLanguageTranslations = [
   TranslatedName(LangYid(), name: "טאַגאַלאג"),
   TranslatedName(LangZho(), name: "塔加洛文"),
   TranslatedName(LangZho(), name: "塔加路族文", script: ScriptHant()),
+  TranslatedName(LangHye(), name: "տագալերեն"),
+  TranslatedName(LangUrd(), name: "ٹیگا لوگ"),
 ];

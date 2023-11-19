@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Finnish language:
+/// Provides 119 translations for a Finnish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -78,19 +87,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -98,6 +113,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -205,4 +221,24 @@ const finLanguageTranslations = [
   TranslatedName(LangZho(), name: "芬兰文"),
   TranslatedName(LangZho(), name: "芬蘭文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Finnish"),
+  TranslatedName(LangAsm(), name: "ফিনিচ"),
+  TranslatedName(LangChe(), name: "финнийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤊𞤫𞤲𞤭𞤧𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Yaren mutanen Finland"),
+  TranslatedName(LangIna(), name: "finnese"),
+  TranslatedName(LangIbo(), name: "Fịnịsh"),
+  TranslatedName(LangJav(), name: "Suomi"),
+  TranslatedName(LangKur(), name: "fînî"),
+  TranslatedName(LangMri(), name: "Whinirānia"),
+  TranslatedName(LangSrd(), name: "finlandesu"),
+  TranslatedName(LangSnd(), name: "فنش"),
+  TranslatedName(LangSom(), name: "Finishka"),
+  TranslatedName(LangTgk(), name: "финӣ"),
+  TranslatedName(LangTuk(), name: "fin dili"),
+  TranslatedName(LangTat(), name: "фин"),
+  TranslatedName(LangWol(), name: "Feylànde"),
 ];

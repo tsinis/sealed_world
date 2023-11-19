@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Amharic language:
+/// Provides 125 translations for a Amharic language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -48,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -72,6 +77,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
@@ -79,6 +85,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -87,8 +94,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -96,12 +105,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -109,6 +121,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -225,4 +238,17 @@ const amhLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Amariki"),
   TranslatedName(LangZho(), name: "阿姆哈拉文"),
   TranslatedName(LangZul(), name: "isi-Amharic"),
+  TranslatedName(LangAsm(), name: "আমহাৰিক"),
+  TranslatedName(LangChe(), name: "амхаройн"),
+  TranslatedName(LangIna(), name: "amharico"),
+  TranslatedName(LangJav(), name: "Amharik"),
+  TranslatedName(LangKur(), name: "amharî"),
+  TranslatedName(LangMri(), name: "Amahereka"),
+  TranslatedName(LangPus(), name: "امهاري"),
+  TranslatedName(LangSrd(), name: "amàricu"),
+  TranslatedName(LangSnd(), name: "امهاري"),
+  TranslatedName(LangTgk(), name: "амҳарӣ"),
+  TranslatedName(LangTuk(), name: "amhar dili"),
+  TranslatedName(LangTat(), name: "амхар"),
+  TranslatedName(LangWol(), name: "Amharik"),
 ];

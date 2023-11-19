@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 89 translations for a Bashkir language:
+/// Provides 106 translations for a Bashkir language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -18,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -26,8 +28,10 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -37,6 +41,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -45,6 +51,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -55,12 +62,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -68,18 +77,24 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const bakLanguageTranslations = [
   TranslatedName(LangEng(), name: "Bashkir"),
@@ -178,4 +195,25 @@ const bakLanguageTranslations = [
   TranslatedName(LangZho(), name: "巴什客尔文"),
   TranslatedName(LangZho(), name: "巴什客爾文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Bashkir"),
+  TranslatedName(LangAsm(), name: "বাছখিৰ"),
+  TranslatedName(LangChe(), name: "башкирийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤢𞤧𞤳𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "bashkir"),
+  TranslatedName(LangIna(), name: "bashkir"),
+  TranslatedName(LangIbo(), name: "Bashki"),
+  TranslatedName(LangKur(), name: "başkîrî"),
+  TranslatedName(LangMri(), name: "Pākīra"),
+  TranslatedName(LangPus(), name: "باشکير"),
+  TranslatedName(LangSrd(), name: "baschiru"),
+  TranslatedName(LangSnd(), name: "ڪينيڊا"),
+  TranslatedName(LangTgk(), name: "бошқирдӣ"),
+  TranslatedName(LangTir(), name: "ባሽኪር"),
+  TranslatedName(LangTuk(), name: "başgyrt dili"),
+  TranslatedName(LangTat(), name: "башкорт"),
+  TranslatedName(LangWol(), name: "Baskir"),
+  TranslatedName(LangYor(), name: "Èdè Bashiri"),
 ];

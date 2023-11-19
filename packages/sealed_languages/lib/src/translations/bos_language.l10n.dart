@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Bosnian language:
+/// Provides 118 translations for a Bosnian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -70,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -77,19 +87,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -97,6 +113,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -202,4 +219,25 @@ const bosLanguageTranslations = [
   TranslatedName(LangZho(), name: "波斯尼亚文"),
   TranslatedName(LangZho(), name: "波士尼亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Bosnian"),
+  TranslatedName(LangAsm(), name: "বছনীয়"),
+  TranslatedName(LangChe(), name: "боснийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤮𞤧𞤲𞤭𞤴𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Bosniyanci"),
+  TranslatedName(LangIna(), name: "bosniaco"),
+  TranslatedName(LangIbo(), name: "Bosnia"),
+  TranslatedName(LangJav(), name: "Bosnia lan Hercegovina"),
+  TranslatedName(LangKur(), name: "bosnî"),
+  TranslatedName(LangMri(), name: "Pōngiana"),
+  TranslatedName(LangPus(), name: "بوسني"),
+  TranslatedName(LangSrd(), name: "bosnìacu"),
+  TranslatedName(LangSnd(), name: "بوسنيائي"),
+  TranslatedName(LangSom(), name: "Bosniyaan"),
+  TranslatedName(LangTgk(), name: "босниягӣ"),
+  TranslatedName(LangTuk(), name: "bosniýa dili"),
+  TranslatedName(LangTat(), name: "босния"),
+  TranslatedName(LangWol(), name: "Bosñak"),
 ];

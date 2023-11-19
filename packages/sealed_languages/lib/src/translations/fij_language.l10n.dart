@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 96 translations for a Fijian language:
+/// Provides 112 translations for a Fijian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,16 +34,20 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -49,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,6 +68,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -67,13 +76,17 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -83,8 +96,10 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -93,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const fijLanguageTranslations = [
   TranslatedName(LangEng(), name: "Fijian"),
@@ -191,4 +207,24 @@ const fijLanguageTranslations = [
   TranslatedName(LangZho(), name: "斐济文"),
   TranslatedName(LangZho(), name: "斐濟文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Fijian"),
+  TranslatedName(LangAsm(), name: "ফিজিয়ান"),
+  TranslatedName(LangBel(), name: "фіджыйская"),
+  TranslatedName(LangChe(), name: "фиджи"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤊𞤭𞥅𞤶𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Fijiyanci"),
+  TranslatedName(LangIna(), name: "fijiano"),
+  TranslatedName(LangIbo(), name: "Fijanị"),
+  TranslatedName(LangKur(), name: "fîjî"),
+  TranslatedName(LangMri(), name: "Whītīana"),
+  TranslatedName(LangPus(), name: "فجیان"),
+  TranslatedName(LangQue(), name: "Fiyiano Simi"),
+  TranslatedName(LangSrd(), name: "fijianu"),
+  TranslatedName(LangSnd(), name: "فجي"),
+  TranslatedName(LangTir(), name: "ፊጅያንኛ"),
+  TranslatedName(LangTuk(), name: "fiji dili"),
+  TranslatedName(LangYor(), name: "Èdè Fiji"),
 ];

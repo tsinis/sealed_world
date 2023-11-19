@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 93 translations for a Uyghur language:
+/// Provides 112 translations for a Uyghur language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,24 +34,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,11 +68,13 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -72,18 +82,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -91,6 +108,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const uigLanguageTranslations = [
   TranslatedName(LangEng(), name: "Uyghur"),
@@ -185,7 +204,28 @@ const uigLanguageTranslations = [
   TranslatedName(LangZho(), name: "维吾尔文"),
   TranslatedName(LangZho(), name: "維吾爾文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Uighur"),
-
-  /// Added manually:
   TranslatedName(LangKas(), name: "اُیغُر"),
+  TranslatedName(LangAsm(), name: "উইঘুৰ"),
+  TranslatedName(LangChe(), name: "уйгурийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤓𞥅𞤴𞤺𞤵𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Ugiranci"),
+  TranslatedName(LangIna(), name: "uighur"),
+  TranslatedName(LangIbo(), name: "Ụyghụr"),
+  TranslatedName(LangJav(), name: "Uighur"),
+  TranslatedName(LangKur(), name: "oygurî"),
+  TranslatedName(LangMri(), name: "Wīkura"),
+  TranslatedName(LangPus(), name: "اويغوري"),
+  TranslatedName(LangSrd(), name: "uiguru"),
+  TranslatedName(LangSnd(), name: "يوغور"),
+  TranslatedName(LangSom(), name: "Uighur"),
+  TranslatedName(LangTgk(), name: "ӯйғурӣ"),
+  TranslatedName(LangTir(), name: "ኡይጉር"),
+  TranslatedName(LangTuk(), name: "uýgur dili"),
+  TranslatedName(LangTat(), name: "уйгыр"),
+  TranslatedName(LangWol(), name: "Uygur"),
+  TranslatedName(LangYor(), name: "Yúgọ̀"),
 ];

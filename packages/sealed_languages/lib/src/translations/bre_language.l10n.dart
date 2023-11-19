@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Breton language:
+/// Provides 109 translations for a Breton language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,15 +33,18 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -49,6 +54,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,12 +65,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -72,19 +80,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -191,4 +205,22 @@ const breLanguageTranslations = [
   TranslatedName(LangZho(), name: "布里多尼文"),
   TranslatedName(LangZho(), name: "布列塔尼文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Breton"),
+  TranslatedName(LangAsm(), name: "ব্ৰেটন"),
+  TranslatedName(LangChe(), name: "бретонийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤫𞤪𞤫𞤼𞤮𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Buretananci"),
+  TranslatedName(LangIna(), name: "breton"),
+  TranslatedName(LangKur(), name: "bretonî"),
+  TranslatedName(LangMri(), name: "Peretana"),
+  TranslatedName(LangPus(), name: "برېتون"),
+  TranslatedName(LangSrd(), name: "brètone"),
+  TranslatedName(LangSnd(), name: "بريٽن"),
+  TranslatedName(LangSom(), name: "Biriton"),
+  TranslatedName(LangTgk(), name: "бретонӣ"),
+  TranslatedName(LangTuk(), name: "breton dili"),
+  TranslatedName(LangTat(), name: "бретон"),
 ];

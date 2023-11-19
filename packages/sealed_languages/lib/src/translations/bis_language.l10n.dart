@@ -2,15 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 59 translations for a Bislama language:
+/// Provides 91 translations for a Bislama language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -18,48 +26,72 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Georgian
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Uzbek
+/// - Vietnamese
+/// - Yoruba
+/// - Zulu.
 const bisLanguageTranslations = [
   TranslatedName(LangEng(), name: "Bislama"),
   TranslatedName(LangAmh(), name: "ቢስላምኛ"),
@@ -120,4 +152,40 @@ const bisLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Bislama"),
   TranslatedName(LangZho(), name: "比斯拉马文"),
   TranslatedName(LangZho(), name: "比斯拉馬文", script: ScriptHant()),
+  TranslatedName(LangAsm(), name: "বিছলামা"),
+  TranslatedName(LangBel(), name: "біслама"),
+  TranslatedName(LangChe(), name: "бислама"),
+  TranslatedName(LangEus(), name: "bislama"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤭𞤧𞤤𞤢𞤥𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "bislama"),
+  TranslatedName(LangGlg(), name: "bislama"),
+  TranslatedName(LangHye(), name: "բիսլամա"),
+  TranslatedName(LangIna(), name: "bislama"),
+  TranslatedName(LangKat(), name: "ბისლამა"),
+  TranslatedName(LangKaz(), name: "бислама тілі"),
+  TranslatedName(LangKhm(), name: "ប៊ីស្លាម៉ា"),
+  TranslatedName(LangKur(), name: "bîslamayî"),
+  TranslatedName(LangKir(), name: "бисламача"),
+  TranslatedName(LangMri(), name: "Pihirāma"),
+  TranslatedName(LangMon(), name: "бислам"),
+  TranslatedName(LangMya(), name: "ဘစ်စ်လာမာ"),
+  TranslatedName(LangNep(), name: "बिस्लाम"),
+  TranslatedName(LangPan(), name: "ਬਿਸਲਾਮਾ"),
+  TranslatedName(LangPus(), name: "بسلاما"),
+  TranslatedName(LangSrd(), name: "bislama"),
+  TranslatedName(LangSnd(), name: "بسلاما"),
+  TranslatedName(LangSin(), name: "බිස්ලමා"),
+  TranslatedName(LangSom(), name: "U dhashay Bislam"),
+  TranslatedName(LangSqi(), name: "bislamisht"),
+  TranslatedName(LangSwa(), name: "Kibislama"),
+  TranslatedName(LangTir(), name: "ቢስላማ"),
+  TranslatedName(LangTuk(), name: "bislama dili"),
+  TranslatedName(LangUrd(), name: "بسلاما"),
+  TranslatedName(LangUzb(), name: "bislama"),
+  TranslatedName(LangYor(), name: "Èdè Bisilama"),
+  TranslatedName(LangZul(), name: "isi-Bislama"),
 ];

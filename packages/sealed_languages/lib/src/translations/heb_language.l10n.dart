@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Hebrew (modern) language:
+/// Provides 116 translations for a Hebrew (modern) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +69,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -77,19 +85,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -97,6 +111,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -202,4 +217,23 @@ const hebLanguageTranslations = [
   TranslatedName(LangZho(), name: "希伯来文"),
   TranslatedName(LangZho(), name: "希伯來文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Hebrew"),
+  TranslatedName(LangAsm(), name: "হিব্ৰু"),
+  TranslatedName(LangChe(), name: "жугтийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤖𞤭𞤦𞤵𞤪𞤵𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Ibrananci"),
+  TranslatedName(LangIna(), name: "hebreo"),
+  TranslatedName(LangJav(), name: "Ibrani"),
+  TranslatedName(LangKur(), name: "îbranî"),
+  TranslatedName(LangMri(), name: "Hīperu"),
+  TranslatedName(LangSrd(), name: "ebreu"),
+  TranslatedName(LangSnd(), name: "عبراني"),
+  TranslatedName(LangSom(), name: "Cibraani"),
+  TranslatedName(LangTgk(), name: "ибронӣ"),
+  TranslatedName(LangTuk(), name: "ýewreý dili"),
+  TranslatedName(LangTat(), name: "яһүд"),
+  TranslatedName(LangWol(), name: "Ebrë"),
 ];

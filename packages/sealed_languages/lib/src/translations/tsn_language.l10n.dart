@@ -2,16 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 73 translations for a Tswana language:
+/// Provides 98 translations for a Tswana language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -23,6 +30,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -32,12 +40,18 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -46,10 +60,14 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -57,7 +75,10 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -66,12 +87,16 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
+/// - Yoruba
 /// - Zulu.
 const tsnLanguageTranslations = [
   TranslatedName(LangEng(), name: "Tswana"),
@@ -147,4 +172,33 @@ const tsnLanguageTranslations = [
   TranslatedName(LangZho(), name: "塞茨瓦纳文"),
   TranslatedName(LangZho(), name: "突尼西亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Tswana"),
+  TranslatedName(LangAsm(), name: "ছোৱানা"),
+  TranslatedName(LangBel(), name: "тсвана"),
+  TranslatedName(LangChe(), name: "тсвана"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤭𞤧𞤱𞤢𞤲𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHye(), name: "ցվանա"),
+  TranslatedName(LangIna(), name: "tswana"),
+  TranslatedName(LangIbo(), name: "Swana"),
+  TranslatedName(LangKaz(), name: "тсвана тілі"),
+  TranslatedName(LangKhm(), name: "ស្វាណា"),
+  TranslatedName(LangKur(), name: "tswanayî"),
+  TranslatedName(LangKir(), name: "тсванача"),
+  TranslatedName(LangMri(), name: "Hawāna"),
+  TranslatedName(LangMon(), name: "цвана"),
+  TranslatedName(LangMya(), name: "တီဆဝါနာ"),
+  TranslatedName(LangNep(), name: "ट्स्वाना"),
+  TranslatedName(LangPan(), name: "ਤਸਵਾਨਾ"),
+  TranslatedName(LangPus(), name: "سووانا"),
+  TranslatedName(LangSrd(), name: "tswana"),
+  TranslatedName(LangSnd(), name: "تسوانا"),
+  TranslatedName(LangSin(), name: "ස්වනා"),
+  TranslatedName(LangSqi(), name: "cuanaisht"),
+  TranslatedName(LangTir(), name: "ስዋና"),
+  TranslatedName(LangTuk(), name: "tswana dili"),
+  TranslatedName(LangUzb(), name: "tsvana"),
+  TranslatedName(LangYor(), name: "Èdè Suwana"),
 ];

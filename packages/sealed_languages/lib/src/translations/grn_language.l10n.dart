@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 91 translations for a Guaraní language:
+/// Provides 108 translations for a Guaraní language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -18,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,14 +33,19 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -48,6 +55,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,31 +65,39 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -89,6 +105,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yoruba
 /// - Zulu.
 const grnLanguageTranslations = [
@@ -183,4 +200,25 @@ const grnLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Guarani"),
   TranslatedName(LangZho(), name: "瓜拉尼文"),
   TranslatedName(LangZul(), name: "isi-Guarani"),
+  TranslatedName(LangAsm(), name: "গুৱাৰাণী"),
+  TranslatedName(LangChe(), name: "гуарани"),
+  TranslatedName(LangDeu(), name: "Guaraní"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤘𞤵𞤢𞤪𞤢𞤲𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Guwaraniyanci"),
+  TranslatedName(LangIna(), name: "guarani"),
+  TranslatedName(LangIbo(), name: "Gwarani"),
+  TranslatedName(LangKur(), name: "guwaranî"),
+  TranslatedName(LangMri(), name: "Kuaranī"),
+  TranslatedName(LangPus(), name: "ګوراني"),
+  TranslatedName(LangQue(), name: "Guaraní Simi"),
+  TranslatedName(LangSrd(), name: "guaranì"),
+  TranslatedName(LangSnd(), name: "گواراني"),
+  TranslatedName(LangTgk(), name: "гуаранӣ"),
+  TranslatedName(LangTuk(), name: "guarani dili"),
+  TranslatedName(LangTat(), name: "гуарани"),
+  TranslatedName(LangWol(), name: "Garani"),
 ];

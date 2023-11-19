@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 120 translations for a Italian language:
+/// Provides 136 translations for a Italian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -92,21 +99,28 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -114,6 +128,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -238,4 +254,20 @@ const itaLanguageTranslations = [
   TranslatedName(LangZho(), name: "意大利文"),
   TranslatedName(LangZho(), name: "義大利文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Italian"),
+  TranslatedName(LangAsm(), name: "ইটালিয়ান"),
+  TranslatedName(LangChe(), name: "итальянийн"),
+  TranslatedName(LangChv(), name: "итали"),
+  TranslatedName(LangIna(), name: "italiano"),
+  TranslatedName(LangJav(), name: "Italia"),
+  TranslatedName(LangKur(), name: "îtalî"),
+  TranslatedName(LangMri(), name: "Itāriana"),
+  TranslatedName(LangSan(), name: "इटलीदेशीय भाषा:"),
+  TranslatedName(LangSrd(), name: "italianu"),
+  TranslatedName(LangSnd(), name: "اطالوي"),
+  TranslatedName(LangSun(), name: "Italia"),
+  TranslatedName(LangTgk(), name: "италиявӣ"),
+  TranslatedName(LangTuk(), name: "italýan dili"),
+  TranslatedName(LangTat(), name: "итальян"),
+  TranslatedName(LangWol(), name: "Italiye"),
+  TranslatedName(LangXho(), name: "IsiTaliyane"),
 ];

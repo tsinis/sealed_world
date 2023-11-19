@@ -2,21 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Igbo language:
+/// Provides 109 translations for a Igbo language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -39,9 +42,11 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -49,6 +54,7 @@ import "../model/translated_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,12 +66,14 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -74,19 +82,25 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -190,4 +204,18 @@ const iboLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Ibo"),
   TranslatedName(LangZho(), name: "伊布文"),
   TranslatedName(LangZul(), name: "isi-Igbo"),
+  TranslatedName(LangAsm(), name: "ইগ্বো"),
+  TranslatedName(LangBel(), name: "ігба"),
+  TranslatedName(LangChe(), name: "игбо"),
+  TranslatedName(LangIna(), name: "igbo"),
+  TranslatedName(LangJav(), name: "Iqbo"),
+  TranslatedName(LangKur(), name: "îgboyî"),
+  TranslatedName(LangMri(), name: "Ikapo"),
+  TranslatedName(LangPus(), name: "اګبو"),
+  TranslatedName(LangSrd(), name: "igbo"),
+  TranslatedName(LangSnd(), name: "اگبو"),
+  TranslatedName(LangTgk(), name: "игбо"),
+  TranslatedName(LangTir(), name: "ኢግቦ"),
+  TranslatedName(LangTuk(), name: "igbo dili"),
+  TranslatedName(LangTat(), name: "игбо"),
 ];

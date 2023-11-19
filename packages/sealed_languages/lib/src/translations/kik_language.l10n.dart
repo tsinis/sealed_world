@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 81 translations for a Kikuyu (Gikuyu) language:
+/// Provides 99 translations for a Kikuyu (Gikuyu) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -23,8 +26,10 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
@@ -33,14 +38,18 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -52,34 +61,43 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Yoruba
 /// - Zulu.
 const kikLanguageTranslations = [
   TranslatedName(LangEng(), name: "Kikuyu"),
@@ -163,4 +181,26 @@ const kikLanguageTranslations = [
   TranslatedName(LangZho(), name: "吉库尤文"),
   TranslatedName(LangZho(), name: "吉庫尤文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Kikuyu"),
+  TranslatedName(LangAsm(), name: "কিকুয়ু"),
+  TranslatedName(LangBel(), name: "кікуйю"),
+  TranslatedName(LangChe(), name: "кикуйю"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤭𞤳𞤵𞤴𞤵𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "kikuyu"),
+  TranslatedName(LangIna(), name: "kikuyu"),
+  TranslatedName(LangIbo(), name: "Kịkụyụ"),
+  TranslatedName(LangKhm(), name: "គីគូយូ"),
+  TranslatedName(LangKur(), name: "kîkûyûyî"),
+  TranslatedName(LangMri(), name: "Kikūiu"),
+  TranslatedName(LangPus(), name: "ککوؤو"),
+  TranslatedName(LangQue(), name: "Kikuyu Simi"),
+  TranslatedName(LangSrd(), name: "kikuyu"),
+  TranslatedName(LangSnd(), name: "اڪويو"),
+  TranslatedName(LangSom(), name: "Kikuuyu"),
+  TranslatedName(LangTir(), name: "ኪኩዩ"),
+  TranslatedName(LangTuk(), name: "kikuýu dili"),
+  TranslatedName(LangYor(), name: "Kíkúyù"),
 ];

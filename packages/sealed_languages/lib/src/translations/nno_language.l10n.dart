@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 99 translations for a Norwegian Nynorsk language:
+/// Provides 114 translations for a Norwegian Nynorsk language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -41,16 +44,20 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +69,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -69,16 +77,21 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -88,6 +101,7 @@ import "../model/translated_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -96,6 +110,7 @@ import "../model/translated_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const nnoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Norwegian Nynorsk"),
@@ -197,4 +212,23 @@ const nnoLanguageTranslations = [
   TranslatedName(LangZho(), name: "挪威尼诺斯克文"),
   TranslatedName(LangZho(), name: "耐諾斯克挪威文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Norwegian Nynorsk"),
+  TranslatedName(LangAsm(), name: "নৰৱেজিয়ান নায়নোৰ্স্ক"),
+  TranslatedName(LangChe(), name: "норвегийн нюнорск"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤐𞤮𞤪𞤱𞤫𞤶𞤭𞤴𞤢𞤲𞤪𞤫 𞤙𞤮𞤪𞤧𞤳",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "norvegiano nynorsk"),
+  TranslatedName(LangIbo(), name: "Nọrweyịan Nynersk"),
+  TranslatedName(LangJav(), name: "Nynorsk Norwegia"),
+  TranslatedName(LangKur(), name: "norwecî (nynorsk)"),
+  TranslatedName(LangMri(), name: "Nīnōka Nōwei"),
+  TranslatedName(LangPus(), name: "ناروېئي (نائنورسک)"),
+  TranslatedName(LangQue(), name: "Noruego Nynorsk Simi"),
+  TranslatedName(LangSrd(), name: "norvegesu nynorsk"),
+  TranslatedName(LangSnd(), name: "نارويائي نيوناسڪ"),
+  TranslatedName(LangSom(), name: "Nawriijiga Nynorsk"),
+  TranslatedName(LangTuk(), name: "norwegiýa nýunorsk dili"),
+  TranslatedName(LangYor(), name: "Nọ́ọ́wè Nínọ̀sìkì"),
 ];

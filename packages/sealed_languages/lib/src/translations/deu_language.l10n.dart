@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a German language:
+/// Provides 135 translations for a German language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -92,21 +99,28 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -114,6 +128,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -237,4 +253,20 @@ const deuLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Ilɛ̀ Gemani", countryCode: "BJ"),
   TranslatedName(LangZho(), name: "德文"),
   TranslatedName(LangZul(), name: "isi-German"),
+  TranslatedName(LangAsm(), name: "জাৰ্মান"),
+  TranslatedName(LangChe(), name: "немцойн"),
+  TranslatedName(LangChv(), name: "нимӗҫ"),
+  TranslatedName(LangIna(), name: "germano"),
+  TranslatedName(LangJav(), name: "Jérman"),
+  TranslatedName(LangKur(), name: "almanî"),
+  TranslatedName(LangMri(), name: "Tiamana"),
+  TranslatedName(LangSan(), name: "जर्मनभाषा:"),
+  TranslatedName(LangSrd(), name: "tedescu"),
+  TranslatedName(LangSnd(), name: "جرمن"),
+  TranslatedName(LangSun(), name: "Jérman"),
+  TranslatedName(LangTgk(), name: "немисӣ"),
+  TranslatedName(LangTuk(), name: "nemes dili"),
+  TranslatedName(LangTat(), name: "алман"),
+  TranslatedName(LangWol(), name: "Almaa"),
+  TranslatedName(LangXho(), name: "IsiJamani"),
 ];

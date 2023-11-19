@@ -2,14 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 64 translations for a Walloon language:
+/// Provides 98 translations for a Walloon language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -17,8 +26,12 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -26,12 +39,18 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -39,32 +58,47 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Yoruba
+/// - Zulu.
 const wlnLanguageTranslations = [
   TranslatedName(LangEng(), name: "Walloon"),
   TranslatedName(LangAra(), name: "الولونية"),
@@ -130,4 +164,42 @@ const wlnLanguageTranslations = [
   TranslatedName(LangUkr(), name: "валлонська"),
   TranslatedName(LangVie(), name: "Tiếng Walloon"),
   TranslatedName(LangZho(), name: "瓦隆文"),
+  TranslatedName(LangAmh(), name: "ዋሎን"),
+  TranslatedName(LangAsm(), name: "ৱালুন"),
+  TranslatedName(LangBel(), name: "валонская"),
+  TranslatedName(LangChe(), name: "валлонойн"),
+  TranslatedName(LangEus(), name: "valoniera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤏𞤢𞥄𞤤𞤮𞤲𞤳𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "walloon"),
+  TranslatedName(LangGlg(), name: "valón"),
+  TranslatedName(LangHye(), name: "վալոներեն"),
+  TranslatedName(LangIna(), name: "wallon"),
+  TranslatedName(LangIbo(), name: "Waloọn"),
+  TranslatedName(LangKat(), name: "ვალონური"),
+  TranslatedName(LangKaz(), name: "валлон тілі"),
+  TranslatedName(LangKhm(), name: "វ៉ាលូន"),
+  TranslatedName(LangKur(), name: "walonî"),
+  TranslatedName(LangKir(), name: "валлончо"),
+  TranslatedName(LangMri(), name: "Warūna"),
+  TranslatedName(LangMon(), name: "уоллун"),
+  TranslatedName(LangMya(), name: "ဝါလူးန်"),
+  TranslatedName(LangNep(), name: "वाल्लुन"),
+  TranslatedName(LangPan(), name: "ਵਲੂਨ"),
+  TranslatedName(LangPus(), name: "والون"),
+  TranslatedName(LangQue(), name: "Valona Simi"),
+  TranslatedName(LangSrd(), name: "vallonu"),
+  TranslatedName(LangSnd(), name: "ولون"),
+  TranslatedName(LangSin(), name: "වෑලූන්"),
+  TranslatedName(LangSqi(), name: "ualunisht"),
+  TranslatedName(LangSwa(), name: "Kiwaloon"),
+  TranslatedName(LangTir(), name: "ዋሎን"),
+  TranslatedName(LangTuk(), name: "wallon dili"),
+  TranslatedName(LangUrd(), name: "والون"),
+  TranslatedName(LangUzb(), name: "vallon"),
+  TranslatedName(LangYor(), name: "Èdè Waluni"),
+  TranslatedName(LangZul(), name: "isi-Walloon"),
 ];

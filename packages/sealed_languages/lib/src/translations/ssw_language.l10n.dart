@@ -2,17 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 72 translations for a Swati language:
+/// Provides 98 translations for a Swati language:
+/// - (Eastern) Punjabi
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -25,7 +32,9 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -33,12 +42,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -46,17 +60,25 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -65,13 +87,17 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const sswLanguageTranslations = [
   TranslatedName(LangEng(), name: "Swati"),
@@ -146,4 +172,34 @@ const sswLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Swati"),
   TranslatedName(LangZho(), name: "斯瓦特文"),
   TranslatedName(LangZul(), name: "isiSwati"),
+  TranslatedName(LangAsm(), name: "স্বাতি"),
+  TranslatedName(LangBel(), name: "суаці"),
+  TranslatedName(LangChe(), name: "свази"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤵𞤱𞤢𞤼𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHye(), name: "սվազերեն"),
+  TranslatedName(LangIna(), name: "swati"),
+  TranslatedName(LangKat(), name: "სუატი"),
+  TranslatedName(LangKaz(), name: "свати тілі"),
+  TranslatedName(LangKhm(), name: "ស្វាទី"),
+  TranslatedName(LangKur(), name: "swazî"),
+  TranslatedName(LangKir(), name: "сватиче"),
+  TranslatedName(LangMri(), name: "Wāti"),
+  TranslatedName(LangMon(), name: "свати"),
+  TranslatedName(LangMya(), name: "ဆွာဇီလန်"),
+  TranslatedName(LangNep(), name: "स्वाती"),
+  TranslatedName(LangPan(), name: "ਸਵਾਤੀ"),
+  TranslatedName(LangPus(), name: "سواتی"),
+  TranslatedName(LangQue(), name: "Swati Simi"),
+  TranslatedName(LangSrd(), name: "swati"),
+  TranslatedName(LangSnd(), name: "سواتي"),
+  TranslatedName(LangSin(), name: "ස්වති"),
+  TranslatedName(LangSqi(), name: "suatisht"),
+  TranslatedName(LangTir(), name: "ስዋዚ"),
+  TranslatedName(LangTuk(), name: "swati dili"),
+  TranslatedName(LangUzb(), name: "svati"),
+  TranslatedName(LangYor(), name: "Èdè Suwati"),
 ];

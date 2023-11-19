@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 70 translations for a Kongo language:
+/// Provides 72 translations for a Kongo language:
 /// - Afrikaans
 /// - Amharic
 /// - Arabic
@@ -44,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
@@ -64,6 +65,7 @@ import "../model/translated_name.dart";
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -140,7 +142,7 @@ const konLanguageTranslations = [
   TranslatedName(LangZho(), name: "刚果文"),
   TranslatedName(LangZho(), name: "剛果文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Kongo"),
-
-  /// Added manually:
   TranslatedName(LangLit(), name: "Kongo"),
+  TranslatedName(LangNep(), name: "कोङ्गो"),
+  TranslatedName(LangTur(), name: "Kongo dili"),
 ];

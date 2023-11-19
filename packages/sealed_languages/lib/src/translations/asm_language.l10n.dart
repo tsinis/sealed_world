@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Assamese language:
+/// Provides 115 translations for a Assamese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -20,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -33,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,13 +67,16 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -74,18 +84,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -93,6 +110,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -194,4 +212,26 @@ const asmLanguageTranslations = [
   TranslatedName(LangZho(), name: "阿萨姆文"),
   TranslatedName(LangZho(), name: "阿薩姆文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Assamese"),
+  TranslatedName(LangChe(), name: "ассамийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤧𞤢𞤥𞤫𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Asamisanci"),
+  TranslatedName(LangIna(), name: "assamese"),
+  TranslatedName(LangIbo(), name: "Asamisị"),
+  TranslatedName(LangJav(), name: "Assam"),
+  TranslatedName(LangKur(), name: "asamî"),
+  TranslatedName(LangMri(), name: "Āhamēhi"),
+  TranslatedName(LangMlt(), name: "Assamiż"),
+  TranslatedName(LangPus(), name: "اسامي"),
+  TranslatedName(LangSrd(), name: "assamesu"),
+  TranslatedName(LangSnd(), name: "آسامي"),
+  TranslatedName(LangSom(), name: "Asaamiis"),
+  TranslatedName(LangTgk(), name: "ассомӣ"),
+  TranslatedName(LangTir(), name: "ኣሳሜዝኛ"),
+  TranslatedName(LangTuk(), name: "assam dili"),
+  TranslatedName(LangTat(), name: "ассам"),
+  TranslatedName(LangWol(), name: "Asame"),
 ];

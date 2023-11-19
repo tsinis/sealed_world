@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Spanish language:
+/// Provides 135 translations for a Spanish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -83,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -91,21 +99,28 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -113,6 +128,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -235,4 +252,21 @@ const spaLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Sipanisi"),
   TranslatedName(LangZho(), name: "西班牙文"),
   TranslatedName(LangZul(), name: "isi-Spanish"),
+  TranslatedName(LangAsm(), name: "স্পেনিচ"),
+  TranslatedName(LangChe(), name: "испанхойн"),
+  TranslatedName(LangChv(), name: "испани"),
+  TranslatedName(LangIna(), name: "espaniol"),
+  TranslatedName(LangJav(), name: "Spanyol"),
+  TranslatedName(LangKur(), name: "spanî"),
+  TranslatedName(LangMri(), name: "Pāniora"),
+  TranslatedName(LangPus(), name: "هسپانوي"),
+  TranslatedName(LangSan(), name: "स्पेनीय भाषा:"),
+  TranslatedName(LangSrd(), name: "ispagnolu"),
+  TranslatedName(LangSnd(), name: "هسپانوي"),
+  TranslatedName(LangSun(), name: "Spanyol"),
+  TranslatedName(LangTgk(), name: "испанӣ"),
+  TranslatedName(LangTuk(), name: "ispan dili"),
+  TranslatedName(LangTat(), name: "испан"),
+  TranslatedName(LangWol(), name: "Español"),
+  TranslatedName(LangXho(), name: "Isi-Spanish"),
 ];

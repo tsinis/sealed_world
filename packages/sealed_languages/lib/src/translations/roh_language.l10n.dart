@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 93 translations for a Romansh language:
+/// Provides 112 translations for a Romansh language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,15 +44,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,12 +67,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -72,18 +82,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -91,6 +108,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const rohLanguageTranslations = [
   TranslatedName(LangEng(), name: "Romansh"),
@@ -186,4 +205,27 @@ const rohLanguageTranslations = [
   TranslatedName(LangZho(), name: "罗曼什文"),
   TranslatedName(LangZho(), name: "羅曼斯文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Romansh"),
+  TranslatedName(LangAsm(), name: "ৰোমানচ"),
+  TranslatedName(LangBel(), name: "рэтараманская"),
+  TranslatedName(LangChe(), name: "романшийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤈𞤮𞤥𞤢𞤲𞤧𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "romanche"),
+  TranslatedName(LangIbo(), name: "Rọmansị"),
+  TranslatedName(LangJav(), name: "Roman"),
+  TranslatedName(LangKur(), name: "romancî"),
+  TranslatedName(LangMri(), name: "Romānihi"),
+  TranslatedName(LangPus(), name: "رومانیش"),
+  TranslatedName(LangSrd(), name: "romànciu"),
+  TranslatedName(LangSnd(), name: "رومانش"),
+  TranslatedName(LangSom(), name: "Romaanis"),
+  TranslatedName(LangTgk(), name: "ретороманӣ"),
+  TranslatedName(LangTir(), name: "ሮማንሽ"),
+  TranslatedName(LangTuk(), name: "retoroman dili"),
+  TranslatedName(LangTat(), name: "ретороман"),
+  TranslatedName(LangWol(), name: "Romaas"),
+  TranslatedName(LangYor(), name: "Rómáǹṣì"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a French language:
+/// Provides 134 translations for a French language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -92,21 +99,28 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -114,6 +128,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -236,4 +252,20 @@ const fraLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Faransé"),
   TranslatedName(LangZho(), name: "法文"),
   TranslatedName(LangZul(), name: "isi-French"),
+  TranslatedName(LangAsm(), name: "ফ্ৰেন্স"),
+  TranslatedName(LangChe(), name: "французийн"),
+  TranslatedName(LangChv(), name: "франци"),
+  TranslatedName(LangIna(), name: "francese"),
+  TranslatedName(LangJav(), name: "Prancis"),
+  TranslatedName(LangKur(), name: "fransî"),
+  TranslatedName(LangMri(), name: "Wīwī"),
+  TranslatedName(LangSan(), name: "फ़्रांसदेशीय भाषा:"),
+  TranslatedName(LangSrd(), name: "frantzesu"),
+  TranslatedName(LangSnd(), name: "فرانسيسي"),
+  TranslatedName(LangSun(), name: "Prancis"),
+  TranslatedName(LangTgk(), name: "франсузӣ"),
+  TranslatedName(LangTuk(), name: "fransuz dili"),
+  TranslatedName(LangTat(), name: "француз"),
+  TranslatedName(LangWol(), name: "Farañse"),
+  TranslatedName(LangXho(), name: "IsiFrentshi"),
 ];

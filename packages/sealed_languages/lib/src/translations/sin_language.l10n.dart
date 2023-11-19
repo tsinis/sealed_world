@@ -2,12 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Sinhalese (Sinhala) language:
+/// Provides 110 translations for a Sinhalese (Sinhala) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +18,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -30,15 +32,18 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -48,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,12 +64,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -71,19 +79,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -91,6 +105,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -190,4 +205,23 @@ const sinLanguageTranslations = [
   TranslatedName(LangZho(), name: "僧伽罗文"),
   TranslatedName(LangZho(), name: "僧伽羅文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Sinhala"),
+  TranslatedName(LangAsm(), name: "সিংহলা"),
+  TranslatedName(LangChe(), name: "сингалхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤭𞤲𞤸𞤢𞤤𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Sinhalanci"),
+  TranslatedName(LangIna(), name: "cingalese"),
+  TranslatedName(LangKur(), name: "kîngalî"),
+  TranslatedName(LangMri(), name: "Hinihāra"),
+  TranslatedName(LangPus(), name: "سينهالي"),
+  TranslatedName(LangSrd(), name: "singalesu"),
+  TranslatedName(LangSnd(), name: "سنهالا"),
+  TranslatedName(LangSom(), name: "Sinhaleys"),
+  TranslatedName(LangTgk(), name: "сингалӣ"),
+  TranslatedName(LangTuk(), name: "singal dili"),
+  TranslatedName(LangTat(), name: "сингал"),
+  TranslatedName(LangWol(), name: "Sinala"),
 ];

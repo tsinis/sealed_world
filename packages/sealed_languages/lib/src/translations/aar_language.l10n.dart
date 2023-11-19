@@ -2,15 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 64 translations for a Afar language:
+/// Provides 89 translations for a Afar language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -19,32 +27,42 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
-/// - Irish
 /// - Icelandic
+/// - Interlingua
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -52,19 +70,26 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Yiddish.
+/// - Yiddish
+/// - Zulu.
 const aarLanguageTranslations = [
   TranslatedName(LangEng(), name: "Afar"),
   TranslatedName(LangAmh(), name: "አፋርኛ"),
@@ -129,7 +154,34 @@ const aarLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Afar"),
   TranslatedName(LangYid(), name: "אַפֿאַר"),
   TranslatedName(LangZho(), name: "阿法文"),
-
-  /// Added manually:
   TranslatedName(LangIsl(), name: "afaríska"),
+  TranslatedName(LangAsm(), name: "আফাৰ"),
+  TranslatedName(LangBel(), name: "афарская"),
+  TranslatedName(LangChe(), name: "афарийн"),
+  TranslatedName(LangEus(), name: "afarera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤬𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "afar"),
+  TranslatedName(LangGlg(), name: "afar"),
+  TranslatedName(LangHye(), name: "աֆարերեն"),
+  TranslatedName(LangIna(), name: "afar"),
+  TranslatedName(LangKaz(), name: "афар тілі"),
+  TranslatedName(LangKur(), name: "afarî"),
+  TranslatedName(LangKir(), name: "афарча"),
+  TranslatedName(LangMon(), name: "афар"),
+  TranslatedName(LangMya(), name: "အာဖာ"),
+  TranslatedName(LangNep(), name: "अफार"),
+  TranslatedName(LangPan(), name: "ਅਫ਼ਾਰ"),
+  TranslatedName(LangPus(), name: "افري"),
+  TranslatedName(LangSnd(), name: "افار"),
+  TranslatedName(LangSin(), name: "අෆාර්"),
+  TranslatedName(LangSqi(), name: "afarisht"),
+  TranslatedName(LangSwa(), name: "Kiafar"),
+  TranslatedName(LangTuk(), name: "afar dili"),
+  TranslatedName(LangUrd(), name: "افار"),
+  TranslatedName(LangUzb(), name: "afar"),
+  TranslatedName(LangZul(), name: "isi-Afar"),
 ];

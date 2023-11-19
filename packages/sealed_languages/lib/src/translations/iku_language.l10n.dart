@@ -2,21 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 81 translations for a Inuktitut language:
+/// Provides 101 translations for a Inuktitut language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -24,8 +27,10 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
@@ -34,13 +39,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -51,11 +60,13 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -63,23 +74,32 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const ikuLanguageTranslations = [
   TranslatedName(LangEng(), name: "Inuktitut"),
@@ -163,4 +183,28 @@ const ikuLanguageTranslations = [
   TranslatedName(LangZho(), name: "因纽特文"),
   TranslatedName(LangZho(), name: "因紐特文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Inuktitut"),
+  TranslatedName(LangAsm(), name: "ইনুক্টিটুট"),
+  TranslatedName(LangBel(), name: "інуктытут"),
+  TranslatedName(LangChe(), name: "инуктитут"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤋𞤲𞤵𞤳𞤼𞤫𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "inuktitut"),
+  TranslatedName(LangIna(), name: "inuktitut"),
+  TranslatedName(LangIbo(), name: "Inuktitutị"),
+  TranslatedName(LangKhm(), name: "អ៊ីនុកទីទុត"),
+  TranslatedName(LangKur(), name: "înuîtî"),
+  TranslatedName(LangMri(), name: "Inukitetūta"),
+  TranslatedName(LangPus(), name: "انوکتیتوت"),
+  TranslatedName(LangSrd(), name: "inuktitut"),
+  TranslatedName(LangSnd(), name: "انو ڪتوت"),
+  TranslatedName(LangTgk(), name: "инуктитутӣ"),
+  TranslatedName(LangTir(), name: "ኢናክቲቱት"),
+  TranslatedName(LangTuk(), name: "inuktitut dili"),
+  TranslatedName(LangTur(), name: "İnuktitut dili"),
+  TranslatedName(LangTat(), name: "инуктикут"),
+  TranslatedName(LangWol(), name: "Inuktitit"),
+  TranslatedName(LangYor(), name: "Èdè Inukitu"),
 ];

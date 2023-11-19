@@ -2,9 +2,11 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 67 translations for a Interlingue language:
+/// Provides 75 translations for a Interlingue language:
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -26,6 +28,7 @@ import "../model/translated_name.dart";
 /// - Georgian
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -35,8 +38,10 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -44,6 +49,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
@@ -58,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -66,7 +73,8 @@ import "../model/translated_name.dart";
 /// - Ukrainian
 /// - Uyghur
 /// - Vietnamese
-/// - Yoruba.
+/// - Yoruba
+/// - Zulu.
 const ileLanguageTranslations = [
   TranslatedName(LangEng(), name: "Interlingue"),
   TranslatedName(LangAmh(), name: "እንተርሊንግወ"),
@@ -134,7 +142,13 @@ const ileLanguageTranslations = [
   TranslatedName(LangYor(), name: "Iru Èdè"),
   TranslatedName(LangZho(), name: "国际文字（E）"),
   TranslatedName(LangZho(), name: "國際文（E）", script: ScriptHant()),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Interlingue"),
+  TranslatedName(LangHau(), name: "Intagulanci"),
+  TranslatedName(LangHye(), name: "ինտերլինգուե"),
+  TranslatedName(LangKaz(), name: "интерлингве тілі"),
+  TranslatedName(LangKur(), name: "înterlîngue"),
+  TranslatedName(LangNep(), name: "इन्टरलिङ्ग्वे"),
+  TranslatedName(LangSqi(), name: "gjuha oksidentale"),
+  TranslatedName(LangSwa(), name: "lugha ya kisayansi"),
+  TranslatedName(LangZul(), name: "izimili"),
 ];

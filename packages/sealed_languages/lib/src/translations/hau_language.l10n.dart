@@ -2,21 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Hausa language:
+/// Provides 116 translations for a Hausa language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -33,6 +36,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -40,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -50,6 +55,7 @@ import "../model/translated_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,6 +67,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -68,6 +75,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -76,8 +84,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -85,16 +95,22 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -199,4 +215,20 @@ const hauLanguageTranslations = [
   TranslatedName(LangZho(), name: "豪萨文"),
   TranslatedName(LangZho(), name: "豪撒文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Hausa"),
+  TranslatedName(LangAsm(), name: "হাউছা"),
+  TranslatedName(LangBel(), name: "хауса"),
+  TranslatedName(LangChe(), name: "хауса"),
+  TranslatedName(LangDeu(), name: "Haussa"),
+  TranslatedName(LangIna(), name: "hausa"),
+  TranslatedName(LangKur(), name: "hawsayî"),
+  TranslatedName(LangMri(), name: "Hauha"),
+  TranslatedName(LangPus(), name: "هوسا"),
+  TranslatedName(LangSrd(), name: "hausa"),
+  TranslatedName(LangSnd(), name: "هوسا"),
+  TranslatedName(LangTgk(), name: "ҳауса"),
+  TranslatedName(LangTir(), name: "ሃውሳ"),
+  TranslatedName(LangTuk(), name: "hausa dili"),
+  TranslatedName(LangTur(), name: "Hausa dili"),
+  TranslatedName(LangTat(), name: "хауса"),
+  TranslatedName(LangWol(), name: "Hawsa"),
 ];

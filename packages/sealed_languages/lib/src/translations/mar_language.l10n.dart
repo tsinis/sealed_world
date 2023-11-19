@@ -2,12 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 88 translations for a Marathi (Marāṭhī) language:
+/// Provides 105 translations for a Marathi (Marāṭhī) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +18,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,14 +31,18 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,6 +52,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -55,12 +62,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -68,23 +77,31 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Wolof
 /// - Yoruba
 /// - Zulu.
 const marLanguageTranslations = [
@@ -176,4 +193,25 @@ const marLanguageTranslations = [
   TranslatedName(LangZho(), name: "马拉地文"),
   TranslatedName(LangZho(), name: "馬拉地文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Marathi"),
+  TranslatedName(LangAsm(), name: "মাৰাঠী"),
+  TranslatedName(LangChe(), name: "маратхи"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤢𞤪𞤢𞤼𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Maratinci"),
+  TranslatedName(LangIna(), name: "marathi"),
+  TranslatedName(LangIbo(), name: "Maratị"),
+  TranslatedName(LangKur(), name: "maratî"),
+  TranslatedName(LangMri(), name: "Marati"),
+  TranslatedName(LangPus(), name: "مراټهي"),
+  TranslatedName(LangSrd(), name: "marathi"),
+  TranslatedName(LangSnd(), name: "مراٺي"),
+  TranslatedName(LangSom(), name: "Maarati"),
+  TranslatedName(LangTgk(), name: "маратҳӣ"),
+  TranslatedName(LangTuk(), name: "marathi dili"),
+  TranslatedName(LangTur(), name: "Marathi dili"),
+  TranslatedName(LangTat(), name: "маратхи"),
+  TranslatedName(LangWol(), name: "Marati"),
 ];

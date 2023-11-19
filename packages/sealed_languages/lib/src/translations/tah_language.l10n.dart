@@ -2,17 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 76 translations for a Tahitian language:
+/// Provides 106 translations for a Tahitian language:
+/// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -24,21 +32,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -48,18 +65,26 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -68,13 +93,18 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const tahLanguageTranslations = [
   TranslatedName(LangEng(), name: "Tahitian"),
@@ -153,4 +183,38 @@ const tahLanguageTranslations = [
   TranslatedName(LangZho(), name: "塔西提文"),
   TranslatedName(LangZho(), name: "大溪地文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Tahitian"),
+  TranslatedName(LangAsm(), name: "তাহিতিয়ান"),
+  TranslatedName(LangBel(), name: "таіці"),
+  TranslatedName(LangChe(), name: "таитянойн"),
+  TranslatedName(LangCym(), name: "Tahitïeg"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤢𞤸𞤭𞤼𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangGla(), name: "Cànan Tahiti"),
+  TranslatedName(LangHau(), name: "Tahitiyanci"),
+  TranslatedName(LangHye(), name: "թաիտերեն"),
+  TranslatedName(LangIna(), name: "tahitiano"),
+  TranslatedName(LangJav(), name: "Tahiti"),
+  TranslatedName(LangKat(), name: "ტაიტური"),
+  TranslatedName(LangKaz(), name: "таити тілі"),
+  TranslatedName(LangKhm(), name: "តាហ៊ីទី"),
+  TranslatedName(LangKur(), name: "tahîtî"),
+  TranslatedName(LangKir(), name: "таитиче"),
+  TranslatedName(LangMri(), name: "Tahiti"),
+  TranslatedName(LangMon(), name: "таити"),
+  TranslatedName(LangMya(), name: "တဟီတီ"),
+  TranslatedName(LangNep(), name: "टाहिटियन"),
+  TranslatedName(LangPan(), name: "ਤਾਹੀਟੀ"),
+  TranslatedName(LangPus(), name: "تاهیتي"),
+  TranslatedName(LangQue(), name: "Tahití Simi"),
+  TranslatedName(LangSrd(), name: "taitianu"),
+  TranslatedName(LangSnd(), name: "تاهيتي"),
+  TranslatedName(LangSin(), name: "ටහිටියන්"),
+  TranslatedName(LangSqi(), name: "tahitisht"),
+  TranslatedName(LangTir(), name: "ታሂትኛ"),
+  TranslatedName(LangTuk(), name: "taiti dili"),
+  TranslatedName(LangUzb(), name: "taiti"),
+  TranslatedName(LangYor(), name: "Èdè Tahiti"),
 ];

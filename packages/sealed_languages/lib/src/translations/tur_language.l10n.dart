@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 113 translations for a Turkish language:
+/// Provides 128 translations for a Turkish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -81,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -89,20 +97,25 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -110,6 +123,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const turLanguageTranslations = [
@@ -226,4 +241,19 @@ const turLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Tɔɔkisi", countryCode: "BJ"),
   TranslatedName(LangZho(), name: "土耳其文"),
   TranslatedName(LangZul(), name: "isi-Turkish"),
+  TranslatedName(LangAsm(), name: "তুৰ্কী"),
+  TranslatedName(LangChe(), name: "туркойн"),
+  TranslatedName(LangChv(), name: "турккӑ"),
+  TranslatedName(LangIna(), name: "turco"),
+  TranslatedName(LangJav(), name: "Turki"),
+  TranslatedName(LangKur(), name: "tirkî"),
+  TranslatedName(LangMri(), name: "Tākei"),
+  TranslatedName(LangPus(), name: "ترکي"),
+  TranslatedName(LangSrd(), name: "turcu"),
+  TranslatedName(LangSnd(), name: "ترڪش"),
+  TranslatedName(LangTgk(), name: "туркӣ"),
+  TranslatedName(LangTuk(), name: "türk dili"),
+  TranslatedName(LangTat(), name: "төрек"),
+  TranslatedName(LangWol(), name: "Tirk"),
+  TranslatedName(LangXho(), name: "Isi-Turkish"),
 ];

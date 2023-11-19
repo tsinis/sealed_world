@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a Bengali (Bangla) language:
+/// Provides 131 translations for a Bengali (Bangla) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -34,19 +37,25 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,17 +64,22 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
+/// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -74,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -82,8 +97,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -91,12 +108,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -104,6 +124,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -217,4 +239,26 @@ const benLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Bengali"),
   TranslatedName(LangZho(), name: "孟加拉文"),
   TranslatedName(LangZul(), name: "isi-Bengali"),
+  TranslatedName(LangAsm(), name: "বাংলা"),
+  TranslatedName(LangChe(), name: "бенгалийн"),
+  TranslatedName(LangChv(), name: "бенгал"),
+  TranslatedName(LangFul(), name: "Bengali"),
+  TranslatedName(LangHau(), name: "Bengali"),
+  TranslatedName(LangIna(), name: "bengalese"),
+  TranslatedName(LangInd(), name: "Bengali"),
+  TranslatedName(LangIbo(), name: "Bengali"),
+  TranslatedName(LangJav(), name: "Bengali"),
+  TranslatedName(LangKur(), name: "bengalî"),
+  TranslatedName(LangLub(), name: "Bengali"),
+  TranslatedName(LangMlg(), name: "Bengali"),
+  TranslatedName(LangMri(), name: "Pākara"),
+  TranslatedName(LangMlt(), name: "Bengali"),
+  TranslatedName(LangPus(), name: "بنگالي"),
+  TranslatedName(LangSrd(), name: "bengalesu"),
+  TranslatedName(LangSnd(), name: "بنگلا"),
+  TranslatedName(LangTgk(), name: "бинғолӣ"),
+  TranslatedName(LangTuk(), name: "bengal dili"),
+  TranslatedName(LangTat(), name: "бенгали"),
+  TranslatedName(LangWol(), name: "Baŋla"),
+  TranslatedName(LangXho(), name: "IsiBangla"),
 ];

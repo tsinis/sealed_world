@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 117 translations for a Arabic language:
+/// Provides 131 translations for a Arabic language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -91,8 +98,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -101,12 +110,15 @@ import "../model/translated_name.dart";
 /// - Swahili
 /// - Swedish
 /// - Tagalog
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -114,6 +126,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -235,4 +249,18 @@ const araLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Arabiki"),
   TranslatedName(LangZho(), name: "阿拉伯文"),
   TranslatedName(LangZul(), name: "isi-Arabic"),
+  TranslatedName(LangAsm(), name: "আৰবী"),
+  TranslatedName(LangChe(), name: "Ӏаьрбийн"),
+  TranslatedName(LangChv(), name: "арап"),
+  TranslatedName(LangIna(), name: "arabe"),
+  TranslatedName(LangJav(), name: "Arab"),
+  TranslatedName(LangKur(), name: "erebî"),
+  TranslatedName(LangMri(), name: "Ārapi"),
+  TranslatedName(LangSrd(), name: "àrabu"),
+  TranslatedName(LangSnd(), name: "عربي"),
+  TranslatedName(LangTgk(), name: "арабӣ"),
+  TranslatedName(LangTuk(), name: "arap dili"),
+  TranslatedName(LangTat(), name: "гарәп"),
+  TranslatedName(LangWol(), name: "Araab"),
+  TranslatedName(LangXho(), name: "Isi-Arabhu"),
 ];

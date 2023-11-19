@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Haitian (Haitian Creole) language:
+/// Provides 112 translations for a Haitian (Haitian Creole) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,15 +44,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,14 +65,17 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -72,18 +83,26 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -91,6 +110,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Zulu.
 const hatLanguageTranslations = [
   TranslatedName(LangEng(), name: "Haitian"),
@@ -185,4 +205,28 @@ const hatLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Haiti"),
   TranslatedName(LangZho(), name: "海地文"),
   TranslatedName(LangZul(), name: "isi-Haitian"),
+  TranslatedName(LangAsm(), name: "হেইটিয়ান ক্ৰিয়ল"),
+  TranslatedName(LangBel(), name: "гаіцянская крэольская"),
+  TranslatedName(LangChe(), name: "гаитийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤳𞤵𞥅𞤪𞤫 𞤖𞤢𞤴𞤼𞤭𞥅",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "creolo haitian"),
+  TranslatedName(LangIbo(), name: "Haịtịan ndị Cerọle"),
+  TranslatedName(LangJav(), name: "Kreol Haiti"),
+  TranslatedName(LangKur(), name: "haîtî"),
+  TranslatedName(LangMri(), name: "Kereō Haiti"),
+  TranslatedName(LangMlt(), name: "Creole ta’ Haiti"),
+  TranslatedName(LangPus(), name: "هيټي کريول"),
+  TranslatedName(LangSrd(), name: "crèolu haitianu"),
+  TranslatedName(LangSnd(), name: "هيٽي ڪرولي"),
+  TranslatedName(LangSom(), name: "Heeytiyaan Karawle"),
+  TranslatedName(LangTgk(), name: "гаитии креолӣ"),
+  TranslatedName(LangTir(), name: "ክርዮል ሃይትኛ"),
+  TranslatedName(LangTuk(), name: "gaiti kreol dili"),
+  TranslatedName(LangTgl(), name: "Haitian"),
+  TranslatedName(LangTat(), name: "гаити креол"),
+  TranslatedName(LangWol(), name: "Kereyolu Ayti"),
 ];

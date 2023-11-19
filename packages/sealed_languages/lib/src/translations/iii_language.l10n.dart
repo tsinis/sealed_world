@@ -2,21 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 79 translations for a Nuosu language:
+/// Provides 97 translations for a Nuosu language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -24,8 +27,10 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -35,13 +40,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -50,12 +59,14 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -63,22 +74,29 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Yoruba
 /// - Zulu.
 const iiiLanguageTranslations = [
   TranslatedName(LangEng(), name: "Sichuan Yi"),
@@ -159,7 +177,27 @@ const iiiLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Di Tứ Xuyên"),
   TranslatedName(LangZho(), name: "四川彝文"),
   TranslatedName(LangZul(), name: "isi-Sichuan Yi"),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Nuosu"),
+  TranslatedName(LangAsm(), name: "ছিচুৱান ই"),
+  TranslatedName(LangBel(), name: "сычуаньская йі"),
+  TranslatedName(LangChe(), name: "сычуань"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤭𞤧𞤵𞤢𞤲𞤪𞤫 𞤒𞤭𞥅",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "sichuan yi"),
+  TranslatedName(LangIna(), name: "yi de Sichuan"),
+  TranslatedName(LangIbo(), name: "Sịchụayị"),
+  TranslatedName(LangKhm(), name: "ស៊ីឈាន់យី"),
+  TranslatedName(LangKur(), name: "yiyiya siçuwayî"),
+  TranslatedName(LangMri(), name: "Hīhuana Eī"),
+  TranslatedName(LangPus(), name: "سیچیان یی"),
+  TranslatedName(LangSrd(), name: "sichuan yi"),
+  TranslatedName(LangSnd(), name: "سچوان يي"),
+  TranslatedName(LangSom(), name: "Sijuwan Yi"),
+  TranslatedName(LangSwa(), name: "Kiyi cha Sichuan"),
+  TranslatedName(LangTir(), name: "ሲችዋን ዪ"),
+  TranslatedName(LangTuk(), name: "syçuan-i dili"),
+  TranslatedName(LangYor(), name: "Ṣíkuán Yì"),
 ];

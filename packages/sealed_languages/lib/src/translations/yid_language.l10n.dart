@@ -2,11 +2,15 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 84 translations for a Yiddish language:
+/// Provides 109 translations for a Yiddish language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -14,7 +18,9 @@ import "../model/translated_name.dart";
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -26,23 +32,29 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -53,34 +65,47 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -169,4 +194,33 @@ const yidLanguageTranslations = [
   TranslatedName(LangZho(), name: "依地文"),
   TranslatedName(LangZho(), name: "意第緒文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Yidish"),
+  TranslatedName(LangAsm(), name: "ইদ্দিছ"),
+  TranslatedName(LangChe(), name: "идиш"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤒𞤭𞤣𞤭𞤧𞤢𞤲𞤳𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Yaren Yiddish"),
+  TranslatedName(LangHye(), name: "իդիշ"),
+  TranslatedName(LangIna(), name: "yiddish"),
+  TranslatedName(LangIbo(), name: "Yịdịsh"),
+  TranslatedName(LangKaz(), name: "идиш тілі"),
+  TranslatedName(LangKur(), name: "yidîşî"),
+  TranslatedName(LangMri(), name: "Irihi"),
+  TranslatedName(LangMya(), name: "ရဟူဒီ"),
+  TranslatedName(LangNep(), name: "यिद्दिस"),
+  TranslatedName(LangPan(), name: "ਯਿਦਿਸ਼"),
+  TranslatedName(LangPus(), name: "يديش"),
+  TranslatedName(LangQue(), name: "Yiddish Simi"),
+  TranslatedName(LangSrd(), name: "yiddish"),
+  TranslatedName(LangSnd(), name: "يدش"),
+  TranslatedName(LangSin(), name: "යිඩිශ්"),
+  TranslatedName(LangSom(), name: "Yadhish"),
+  TranslatedName(LangSqi(), name: "jidisht"),
+  TranslatedName(LangTgk(), name: "идиш"),
+  TranslatedName(LangTuk(), name: "idiş dili"),
+  TranslatedName(LangTat(), name: "идиш"),
+  TranslatedName(LangUzb(), name: "idish"),
+  TranslatedName(LangWol(), name: "Yidis"),
 ];

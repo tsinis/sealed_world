@@ -2,17 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 80 translations for a Ossetian (Ossetic) language:
+/// Provides 108 translations for a Ossetian (Ossetic) language:
+/// - (Eastern) Punjabi
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -24,6 +31,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -33,13 +41,20 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -49,35 +64,48 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const ossLanguageTranslations = [
   TranslatedName(LangEng(), name: "Ossetic"),
@@ -160,4 +188,36 @@ const ossLanguageTranslations = [
   TranslatedName(LangZho(), name: "奥塞梯文"),
   TranslatedName(LangZho(), name: "奧塞提文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Ossetic"),
+  TranslatedName(LangAsm(), name: "ওছেটিক"),
+  TranslatedName(LangBel(), name: "асецінская"),
+  TranslatedName(LangChe(), name: "хӀирийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤌𞤧𞥆𞤫𞤼𞤭𞤳𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHye(), name: "օսերեն"),
+  TranslatedName(LangIna(), name: "osseto"),
+  TranslatedName(LangIbo(), name: "Osetik"),
+  TranslatedName(LangJav(), name: "Ossetia"),
+  TranslatedName(LangKaz(), name: "осетин тілі"),
+  TranslatedName(LangKhm(), name: "អូស៊ីទិក"),
+  TranslatedName(LangKur(), name: "osetî"),
+  TranslatedName(LangKir(), name: "осетинче"),
+  TranslatedName(LangMri(), name: "Ōtītiki"),
+  TranslatedName(LangMon(), name: "оссетин"),
+  TranslatedName(LangMya(), name: "အိုဆဲတစ်ခ်"),
+  TranslatedName(LangNep(), name: "ओस्सेटिक"),
+  TranslatedName(LangPan(), name: "ਓਸੈਟਿਕ"),
+  TranslatedName(LangPus(), name: "اوسيټک"),
+  TranslatedName(LangQue(), name: "Osetio Simi"),
+  TranslatedName(LangSrd(), name: "ossèticu"),
+  TranslatedName(LangSnd(), name: "اوسيٽڪ"),
+  TranslatedName(LangSin(), name: "ඔසිටෙක්"),
+  TranslatedName(LangSom(), name: "Oseetic"),
+  TranslatedName(LangSqi(), name: "osetisht"),
+  TranslatedName(LangTir(), name: "ኦሰትኛ"),
+  TranslatedName(LangTuk(), name: "osetin dili"),
+  TranslatedName(LangUzb(), name: "osetin"),
+  TranslatedName(LangYor(), name: "Ọṣẹ́tíìkì"),
 ];

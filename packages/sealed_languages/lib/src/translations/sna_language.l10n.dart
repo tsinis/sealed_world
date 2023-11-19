@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 81 translations for a Shona language:
+/// Provides 99 translations for a Shona language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -27,6 +30,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
@@ -35,13 +39,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -51,35 +59,45 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const snaLanguageTranslations = [
   TranslatedName(LangEng(), name: "Shona"),
@@ -163,4 +181,26 @@ const snaLanguageTranslations = [
   TranslatedName(LangZho(), name: "绍纳文"),
   TranslatedName(LangZho(), name: "塞內加爾文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Shona"),
+  TranslatedName(LangAsm(), name: "চোনা"),
+  TranslatedName(LangBel(), name: "шона"),
+  TranslatedName(LangChe(), name: "шона"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤮𞤲𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "shona"),
+  TranslatedName(LangIbo(), name: "Shọna"),
+  TranslatedName(LangKhm(), name: "សូណា"),
+  TranslatedName(LangKur(), name: "şonayî"),
+  TranslatedName(LangMri(), name: "Hōna"),
+  TranslatedName(LangPus(), name: "شونا"),
+  TranslatedName(LangQue(), name: "Shona Simi"),
+  TranslatedName(LangSrd(), name: "shona"),
+  TranslatedName(LangSnd(), name: "شونا"),
+  TranslatedName(LangSom(), name: "Shoona"),
+  TranslatedName(LangTir(), name: "ሾና"),
+  TranslatedName(LangTuk(), name: "şona dili"),
+  TranslatedName(LangTur(), name: "Şona dili"),
+  TranslatedName(LangYor(), name: "Ṣọnà"),
 ];

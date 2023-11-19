@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Catalan language:
+/// Provides 117 translations for a Catalan language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +69,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -70,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -77,19 +86,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -97,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -202,4 +218,24 @@ const catLanguageTranslations = [
   TranslatedName(LangZho(), name: "加泰罗尼亚文"),
   TranslatedName(LangZho(), name: "加泰羅尼亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Catalan"),
+  TranslatedName(LangAsm(), name: "কাতালান"),
+  TranslatedName(LangChe(), name: "каталонийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤢𞤼𞤢𞤤𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Kataloniyanci"),
+  TranslatedName(LangIna(), name: "catalano"),
+  TranslatedName(LangJav(), name: "Katala"),
+  TranslatedName(LangKur(), name: "katalanî"),
+  TranslatedName(LangMri(), name: "Katarana"),
+  TranslatedName(LangPus(), name: "کټلاني"),
+  TranslatedName(LangSrd(), name: "catalanu"),
+  TranslatedName(LangSnd(), name: "ڪيٽالان"),
+  TranslatedName(LangSom(), name: "Katalaan"),
+  TranslatedName(LangTgk(), name: "каталонӣ"),
+  TranslatedName(LangTuk(), name: "katalan dili"),
+  TranslatedName(LangTat(), name: "каталан"),
+  TranslatedName(LangWol(), name: "Katalan"),
 ];

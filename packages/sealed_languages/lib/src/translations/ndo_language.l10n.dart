@@ -2,62 +2,95 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 57 translations for a Ndonga language:
+/// Provides 90 translations for a Ndonga language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Georgian
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Uzbek
+/// - Vietnamese
+/// - Yoruba
+/// - Zulu.
 const ndoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Ndonga"),
   TranslatedName(LangAra(), name: "الندونجا"),
@@ -115,7 +148,42 @@ const ndoLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Ndonga"),
   TranslatedName(LangZho(), name: "恩东加文"),
   TranslatedName(LangZho(), name: "恩東加文", script: ScriptHant()),
-
-  /// Added manually:
   TranslatedName(LangSlv(), name: "ndongščina"),
+  TranslatedName(LangAmh(), name: "ንዶንጋ"),
+  TranslatedName(LangAsm(), name: "এন্দোঙ্গা"),
+  TranslatedName(LangBel(), name: "ндонга"),
+  TranslatedName(LangChe(), name: "ндонга"),
+  TranslatedName(LangEus(), name: "ndonga"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤐𞤣𞤮𞤲𞤺𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "ndonga"),
+  TranslatedName(LangGlg(), name: "ndonga"),
+  TranslatedName(LangHye(), name: "նդոնգա"),
+  TranslatedName(LangIna(), name: "ndonga"),
+  TranslatedName(LangKat(), name: "ნდონგა"),
+  TranslatedName(LangKaz(), name: "ндонга тілі"),
+  TranslatedName(LangKhm(), name: "នុនហ្គា"),
+  TranslatedName(LangKur(), name: "ndongayî"),
+  TranslatedName(LangKir(), name: "ндонгача"),
+  TranslatedName(LangMri(), name: "Natōka"),
+  TranslatedName(LangMon(), name: "ндонга"),
+  TranslatedName(LangMya(), name: "အွန်ဒွန်ဂါ"),
+  TranslatedName(LangNep(), name: "न्दोन्गा"),
+  TranslatedName(LangPan(), name: "ਐਂਡੋਂਗਾ"),
+  TranslatedName(LangPus(), name: "ندونگا"),
+  TranslatedName(LangQue(), name: "Ndonga Simi"),
+  TranslatedName(LangSrd(), name: "ndonga"),
+  TranslatedName(LangSnd(), name: "ڊونگا"),
+  TranslatedName(LangSin(), name: "න්ඩොන්ගා"),
+  TranslatedName(LangSqi(), name: "ndongaisht"),
+  TranslatedName(LangSwa(), name: "Kindonga"),
+  TranslatedName(LangTir(), name: "ኤንዶንጋ"),
+  TranslatedName(LangTuk(), name: "ndonga dili"),
+  TranslatedName(LangUrd(), name: "نڈونگا"),
+  TranslatedName(LangUzb(), name: "ndonga"),
+  TranslatedName(LangYor(), name: "Èdè Ndonga"),
+  TranslatedName(LangZul(), name: "isi-Ndonga"),
 ];

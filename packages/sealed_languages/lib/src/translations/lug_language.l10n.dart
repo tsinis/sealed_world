@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 79 translations for a Ganda language:
+/// Provides 95 translations for a Ganda language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -23,8 +26,10 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Ganda
 /// - Georgian
@@ -34,13 +39,16 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -50,28 +58,36 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -158,4 +174,24 @@ const lugLanguageTranslations = [
   TranslatedName(LangZho(), name: "卢干达文"),
   TranslatedName(LangZho(), name: "干達文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Ganda"),
+  TranslatedName(LangAsm(), name: "গান্দা"),
+  TranslatedName(LangBel(), name: "ганда"),
+  TranslatedName(LangChe(), name: "ганда"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤘𞤢𞤲𞤣𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "ganda"),
+  TranslatedName(LangIna(), name: "luganda"),
+  TranslatedName(LangKhm(), name: "ហ្កាន់ដា"),
+  TranslatedName(LangKur(), name: "lugandayî"),
+  TranslatedName(LangMri(), name: "Kānata"),
+  TranslatedName(LangPus(), name: "ګانده"),
+  TranslatedName(LangQue(), name: "Luganda Simi"),
+  TranslatedName(LangSrd(), name: "ganda"),
+  TranslatedName(LangSnd(), name: "گاندا"),
+  TranslatedName(LangSom(), name: "Gandha"),
+  TranslatedName(LangTir(), name: "ጋንዳ"),
+  TranslatedName(LangTuk(), name: "ganda dili"),
 ];

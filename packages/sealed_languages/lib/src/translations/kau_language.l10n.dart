@@ -2,22 +2,34 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 61 translations for a Kanuri language:
+/// Provides 95 translations for a Kanuri language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -26,12 +38,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -39,29 +56,46 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Welsh.
+/// - Welsh
+/// - Yoruba
+/// - Zulu.
 const kauLanguageTranslations = [
   TranslatedName(LangEng(), name: "Kanuri"),
   TranslatedName(LangAra(), name: "الكانيوري"),
@@ -124,4 +158,42 @@ const kauLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Kanuri"),
   TranslatedName(LangZho(), name: "卡努里文"),
   TranslatedName(LangZho(), name: "卡努裡文", script: ScriptHant()),
+  TranslatedName(LangAmh(), name: "ካኑሪ"),
+  TranslatedName(LangAsm(), name: "কানুৰি"),
+  TranslatedName(LangBel(), name: "кануры"),
+  TranslatedName(LangChe(), name: "канури"),
+  TranslatedName(LangEus(), name: "kanuriera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤮𞥅𞤤𞤫𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "kanuri"),
+  TranslatedName(LangGlg(), name: "kanuri"),
+  TranslatedName(LangHye(), name: "կանուրի"),
+  TranslatedName(LangIna(), name: "kanuri"),
+  TranslatedName(LangKaz(), name: "канури тілі"),
+  TranslatedName(LangKhm(), name: "កានូរី"),
+  TranslatedName(LangKur(), name: "kanuriyî"),
+  TranslatedName(LangKir(), name: "кануриче"),
+  TranslatedName(LangMon(), name: "канури"),
+  TranslatedName(LangMya(), name: "ကနူရီ"),
+  TranslatedName(LangNep(), name: "कानुरी"),
+  TranslatedName(LangPan(), name: "ਕਨੂਰੀ"),
+  TranslatedName(LangPus(), name: "کنوری"),
+  TranslatedName(LangQue(), name: "Kanuri Simi"),
+  TranslatedName(LangSrd(), name: "kanuri"),
+  TranslatedName(LangSnd(), name: "ڪنوري"),
+  TranslatedName(LangSin(), name: "කනුරි"),
+  TranslatedName(LangSqi(), name: "kanurisht"),
+  TranslatedName(LangSwa(), name: "Kikanuri"),
+  TranslatedName(LangTgk(), name: "канурӣ"),
+  TranslatedName(LangTir(), name: "ካኑሪ"),
+  TranslatedName(LangTuk(), name: "kanuri"),
+  TranslatedName(LangTur(), name: "Kanuri dili"),
+  TranslatedName(LangTat(), name: "канури"),
+  TranslatedName(LangUrd(), name: "کنوری"),
+  TranslatedName(LangUzb(), name: "kanuri"),
+  TranslatedName(LangYor(), name: "Èdè Kanuri"),
+  TranslatedName(LangZul(), name: "isi-Kanuri"),
 ];

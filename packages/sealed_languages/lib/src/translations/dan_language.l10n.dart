@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Danish language:
+/// Provides 119 translations for a Danish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -41,16 +44,20 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +69,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -70,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -77,19 +86,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -97,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -204,4 +220,24 @@ const danLanguageTranslations = [
   TranslatedName(LangZho(), name: "丹麦文"),
   TranslatedName(LangZho(), name: "丹麥文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Danish"),
+  TranslatedName(LangAsm(), name: "ডেনিচ"),
+  TranslatedName(LangChe(), name: "датхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤁𞤢𞥄𞤲𞤭𞤧𞤳𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "danese"),
+  TranslatedName(LangIbo(), name: "Danịsh"),
+  TranslatedName(LangJav(), name: "Dansk"),
+  TranslatedName(LangKur(), name: "danmarkî"),
+  TranslatedName(LangMri(), name: "Teina"),
+  TranslatedName(LangPus(), name: "ډنمارکي"),
+  TranslatedName(LangSrd(), name: "danesu"),
+  TranslatedName(LangSnd(), name: "ڊينش"),
+  TranslatedName(LangSom(), name: "Dhaanish"),
+  TranslatedName(LangTgk(), name: "даниягӣ"),
+  TranslatedName(LangTuk(), name: "daniýa dili"),
+  TranslatedName(LangTat(), name: "дания"),
+  TranslatedName(LangWol(), name: "Danuwa"),
 ];

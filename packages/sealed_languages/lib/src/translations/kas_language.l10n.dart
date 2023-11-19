@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Kashmiri language:
+/// Provides 110 translations for a Kashmiri language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,7 +44,9 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -49,6 +55,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,29 +67,39 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -90,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const kasLanguageTranslations = [
   TranslatedName(LangEng(), name: "Kashmiri"),
@@ -184,4 +202,26 @@ const kasLanguageTranslations = [
   TranslatedName(LangZho(), name: "克什米尔文"),
   TranslatedName(LangZho(), name: "喀什米爾文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Kashmiri"),
+  TranslatedName(LangAsm(), name: "কাশ্মিৰী"),
+  TranslatedName(LangBel(), name: "кашмірская"),
+  TranslatedName(LangChe(), name: "кашмири"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤢𞥃𞤥𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "kashmiri"),
+  TranslatedName(LangIbo(), name: "Kashmịrị"),
+  TranslatedName(LangKur(), name: "keşmîrî"),
+  TranslatedName(LangMri(), name: "Kahimiri"),
+  TranslatedName(LangPus(), name: "کشمیري"),
+  TranslatedName(LangQue(), name: "Cachemir Simi"),
+  TranslatedName(LangSrd(), name: "kashmiri"),
+  TranslatedName(LangSnd(), name: "ڪشميري"),
+  TranslatedName(LangSom(), name: "Kaashmiir"),
+  TranslatedName(LangTgk(), name: "кашмирӣ"),
+  TranslatedName(LangTir(), name: "ካሽሚሪ"),
+  TranslatedName(LangTuk(), name: "kaşmiri dili"),
+  TranslatedName(LangTat(), name: "кашмири"),
+  TranslatedName(LangYor(), name: "Kaṣímirì"),
 ];

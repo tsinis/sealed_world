@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 96 translations for a Sundanese language:
+/// Provides 112 translations for a Sundanese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,23 +70,30 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
 /// - Tamil
@@ -87,6 +102,7 @@ import "../model/translated_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -193,4 +209,24 @@ const sunLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Sudani"),
   TranslatedName(LangZho(), name: "巽他文"),
   TranslatedName(LangZul(), name: "isi-Sundanese"),
+  TranslatedName(LangAsm(), name: "ছুণ্ডানীজ"),
+  TranslatedName(LangChe(), name: "сунданхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤵𞤲𞤣𞤢𞤲𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Harshen Sundanese"),
+  TranslatedName(LangIna(), name: "sundanese"),
+  TranslatedName(LangIbo(), name: "Sudanese"),
+  TranslatedName(LangJav(), name: "Sunda"),
+  TranslatedName(LangKur(), name: "sundanî"),
+  TranslatedName(LangMri(), name: "Hunanīhi"),
+  TranslatedName(LangPus(), name: "سوډاني"),
+  TranslatedName(LangQue(), name: "Sundanés Simi"),
+  TranslatedName(LangSrd(), name: "sundanesu"),
+  TranslatedName(LangSnd(), name: "سوڊاني"),
+  TranslatedName(LangSom(), name: "Suudaaniis"),
+  TranslatedName(LangSun(), name: "Basa Sunda"),
+  TranslatedName(LangTuk(), name: "sundan dili"),
 ];

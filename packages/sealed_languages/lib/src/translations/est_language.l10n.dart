@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Estonian language:
+/// Provides 119 translations for a Estonian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -78,19 +87,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -98,6 +113,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -205,4 +221,24 @@ const estLanguageTranslations = [
   TranslatedName(LangZho(), name: "爱沙尼亚文"),
   TranslatedName(LangZho(), name: "愛沙尼亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Estonia"),
+  TranslatedName(LangAsm(), name: "এষ্টোনিয়"),
+  TranslatedName(LangChe(), name: "эстонийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤉𞤧𞤼𞤮𞤲𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Istoniyanci"),
+  TranslatedName(LangIna(), name: "estoniano"),
+  TranslatedName(LangIbo(), name: "Ndị Estọnịa"),
+  TranslatedName(LangJav(), name: "Estonia"),
+  TranslatedName(LangKur(), name: "estonî"),
+  TranslatedName(LangMri(), name: "Etōniana"),
+  TranslatedName(LangSrd(), name: "èstone"),
+  TranslatedName(LangSnd(), name: "ايستونائي"),
+  TranslatedName(LangSom(), name: "Istooniyaan"),
+  TranslatedName(LangTgk(), name: "эстонӣ"),
+  TranslatedName(LangTuk(), name: "eston dili"),
+  TranslatedName(LangTat(), name: "эстон"),
+  TranslatedName(LangWol(), name: "Estoñiye"),
 ];

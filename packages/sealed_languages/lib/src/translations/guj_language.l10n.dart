@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Gujarati language:
+/// Provides 108 translations for a Gujarati language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -18,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -30,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
@@ -38,15 +41,20 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,6 +65,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -64,6 +73,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -71,19 +81,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -185,4 +201,24 @@ const gujLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Gujarati"),
   TranslatedName(LangZho(), name: "古吉拉特文"),
   TranslatedName(LangZul(), name: "isi-Gujarati"),
+  TranslatedName(LangAsm(), name: "গুজৰাটী"),
+  TranslatedName(LangChe(), name: "гуджарати"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤘𞤵𞤶𞤢𞤪𞤢𞤼𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "gujarati"),
+  TranslatedName(LangInd(), name: "Gujarat"),
+  TranslatedName(LangIbo(), name: "Gụaratị"),
+  TranslatedName(LangJav(), name: "Gujarat"),
+  TranslatedName(LangKur(), name: "gujaratî"),
+  TranslatedName(LangMri(), name: "Kutarāti"),
+  TranslatedName(LangPus(), name: "ګجراتي"),
+  TranslatedName(LangSrd(), name: "gujarati"),
+  TranslatedName(LangSnd(), name: "گجراتي"),
+  TranslatedName(LangSom(), name: "Gujaraati"),
+  TranslatedName(LangTgk(), name: "гуҷаротӣ"),
+  TranslatedName(LangTuk(), name: "gujarati dili"),
+  TranslatedName(LangTat(), name: "гуҗарати"),
 ];

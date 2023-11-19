@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 60 translations for a Hiri Motu language:
+/// Provides 61 translations for a Hiri Motu language:
 /// - Arabic
 /// - Azerbaijani
 /// - Bengali (Bangla)
@@ -39,6 +39,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
@@ -122,4 +123,5 @@ const hmoLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Hiri Motu"),
   TranslatedName(LangZho(), name: "希里莫图文"),
   TranslatedName(LangZho(), name: "西里莫圖土文", script: ScriptHant()),
+  TranslatedName(LangNep(), name: "हिरी मोटु"),
 ];

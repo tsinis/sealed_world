@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Albanian language:
+/// Provides 117 translations for a Albanian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -69,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -76,19 +86,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -96,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -200,4 +217,25 @@ const sqiLanguageTranslations = [
   TranslatedName(LangZho(), name: "阿尔巴尼亚文"),
   TranslatedName(LangZho(), name: "阿爾巴尼亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Albania"),
+  TranslatedName(LangAsm(), name: "আলবেনীয়"),
+  TranslatedName(LangChe(), name: "албанойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤤𞤦𞤢𞤲𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Albaniyanci"),
+  TranslatedName(LangIna(), name: "albanese"),
+  TranslatedName(LangIbo(), name: "Albanianị"),
+  TranslatedName(LangJav(), name: "Albania"),
+  TranslatedName(LangKur(), name: "elbanî"),
+  TranslatedName(LangMri(), name: "Arapeiniana"),
+  TranslatedName(LangPus(), name: "الباني"),
+  TranslatedName(LangSrd(), name: "albanesu"),
+  TranslatedName(LangSnd(), name: "الباني"),
+  TranslatedName(LangSom(), name: "Albeeniyaan"),
+  TranslatedName(LangTgk(), name: "албанӣ"),
+  TranslatedName(LangTuk(), name: "alban dili"),
+  TranslatedName(LangTat(), name: "албан"),
+  TranslatedName(LangWol(), name: "Albane"),
 ];

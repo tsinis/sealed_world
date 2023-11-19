@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 91 translations for a Northern Sami language:
+/// Provides 113 translations for a Northern Sami language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -26,26 +29,33 @@ import "../model/translated_name.dart";
 /// - English
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,12 +67,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -70,18 +82,26 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -89,7 +109,9 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const smeLanguageTranslations = [
   TranslatedName(LangEng(), name: "Northern Sami"),
@@ -183,4 +205,30 @@ const smeLanguageTranslations = [
   TranslatedName(LangZho(), name: "北萨米文"),
   TranslatedName(LangZho(), name: "北方薩米文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Northern Sami"),
+  TranslatedName(LangAsm(), name: "উদীচ্য ছামি"),
+  TranslatedName(LangBel(), name: "паўночнасаамская"),
+  TranslatedName(LangChe(), name: "къилбаседа саамийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤢𞤥𞤭𞥅𞤪𞤫 𞤐𞤢𞤲𞥆𞤢𞥄𞤲𞤺𞤫𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "norður sámiskt"),
+  TranslatedName(LangHau(), name: "Sami ta Arewa"),
+  TranslatedName(LangIna(), name: "sami del nord"),
+  TranslatedName(LangIbo(), name: "Nọrtan Samị"),
+  TranslatedName(LangJav(), name: "Sami Sisih Lor"),
+  TranslatedName(LangKur(), name: "samiya bakur"),
+  TranslatedName(LangMri(), name: "Hami ki te Raki"),
+  TranslatedName(LangPus(), name: "شمالي سامي"),
+  TranslatedName(LangSrd(), name: "sami setentrionale"),
+  TranslatedName(LangSnd(), name: "اتر سامي"),
+  TranslatedName(LangSom(), name: "Sami Waqooyi"),
+  TranslatedName(LangTgk(), name: "самии шимолӣ"),
+  TranslatedName(LangTir(), name: "ሰሜናዊ ሳሚ"),
+  TranslatedName(LangTuk(), name: "demirgazyk saam dili"),
+  TranslatedName(LangTgl(), name: "Hilagang Sami"),
+  TranslatedName(LangTat(), name: "төньяк саам"),
+  TranslatedName(LangWol(), name: "Penku Sami"),
+  TranslatedName(LangYor(), name: "Apáàríwá Sami"),
 ];

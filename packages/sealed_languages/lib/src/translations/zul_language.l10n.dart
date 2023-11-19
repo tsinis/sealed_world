@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 107 translations for a Zulu language:
+/// Provides 117 translations for a Zulu language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -43,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,6 +57,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -66,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
@@ -73,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,8 +87,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -96,12 +104,14 @@ import "../model/translated_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -213,4 +223,14 @@ const zulLanguageTranslations = [
   TranslatedName(LangZho(), name: "祖鲁文"),
   TranslatedName(LangZho(), name: "祖魯文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isiZulu"),
+  TranslatedName(LangAsm(), name: "ঝুলু"),
+  TranslatedName(LangChe(), name: "зулу"),
+  TranslatedName(LangIna(), name: "zulu"),
+  TranslatedName(LangKur(), name: "zuluyî"),
+  TranslatedName(LangMri(), name: "Tūru"),
+  TranslatedName(LangPus(), name: "زولو"),
+  TranslatedName(LangSrd(), name: "zulu"),
+  TranslatedName(LangSnd(), name: "زولو"),
+  TranslatedName(LangTuk(), name: "zulu dili"),
+  TranslatedName(LangXho(), name: "isiZulu"),
 ];

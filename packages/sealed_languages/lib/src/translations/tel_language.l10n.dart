@@ -2,12 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 88 translations for a Telugu language:
+/// Provides 103 translations for a Telugu language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
@@ -37,6 +41,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,6 +52,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -54,12 +61,14 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -67,19 +76,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -176,4 +191,23 @@ const telLanguageTranslations = [
   TranslatedName(LangZho(), name: "泰卢固文"),
   TranslatedName(LangZho(), name: "泰盧固文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Telugu"),
+  TranslatedName(LangAfr(), name: "Teloegoe"),
+  TranslatedName(LangAsm(), name: "তেলুগু"),
+  TranslatedName(LangChe(), name: "телугу"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤫𞤤𞤫𞤺𞤵𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "telugu"),
+  TranslatedName(LangIbo(), name: "Telụgụ"),
+  TranslatedName(LangKur(), name: "telûgûyî"),
+  TranslatedName(LangMri(), name: "Teruku"),
+  TranslatedName(LangPus(), name: "تېليګو"),
+  TranslatedName(LangSrd(), name: "telugu"),
+  TranslatedName(LangSnd(), name: "تلگو"),
+  TranslatedName(LangSom(), name: "Teluugu"),
+  TranslatedName(LangTgk(), name: "телугу"),
+  TranslatedName(LangTuk(), name: "telugu dili"),
+  TranslatedName(LangTat(), name: "телугу"),
 ];

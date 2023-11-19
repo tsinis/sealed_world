@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Uzbek language:
+/// Provides 114 translations for a Uzbek language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -41,6 +44,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -50,6 +55,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,6 +67,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -75,19 +82,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -95,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -199,4 +213,22 @@ const uzbLanguageTranslations = [
   TranslatedName(LangZho(), name: "乌兹别克文"),
   TranslatedName(LangZho(), name: "烏茲別克文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Uzbek"),
+  TranslatedName(LangAsm(), name: "উজবেক"),
+  TranslatedName(LangChe(), name: "узбекийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤓𞥅𞤧𞤦𞤫𞤳𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "uzbeko"),
+  TranslatedName(LangIbo(), name: "Ụzbek"),
+  TranslatedName(LangKur(), name: "ozbekî"),
+  TranslatedName(LangMri(), name: "Ūpeke"),
+  TranslatedName(LangSrd(), name: "uzbecu"),
+  TranslatedName(LangSnd(), name: "ازبڪ"),
+  TranslatedName(LangSom(), name: "Usbakis"),
+  TranslatedName(LangTgk(), name: "ӯзбекӣ"),
+  TranslatedName(LangTuk(), name: "özbek dili"),
+  TranslatedName(LangTat(), name: "үзбәк"),
+  TranslatedName(LangWol(), name: "Usbek"),
 ];

@@ -2,21 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 85 translations for a Quechua language:
+/// Provides 103 translations for a Quechua language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
@@ -37,6 +41,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -45,6 +51,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -54,11 +61,13 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -66,23 +75,32 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const queLanguageTranslations = [
   TranslatedName(LangEng(), name: "Quechua"),
@@ -170,4 +188,26 @@ const queLanguageTranslations = [
   TranslatedName(LangZho(), name: "盖丘亚文"),
   TranslatedName(LangZho(), name: "蓋楚瓦文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Quechua"),
+  TranslatedName(LangAsm(), name: "কুৱেচুৱা"),
+  TranslatedName(LangBel(), name: "кечуа"),
+  TranslatedName(LangChe(), name: "кечуа"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤗𞤵𞤷𞤵𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "quechua"),
+  TranslatedName(LangIbo(), name: "Qụechụa"),
+  TranslatedName(LangKur(), name: "keçwayî"),
+  TranslatedName(LangMri(), name: "Kētua"),
+  TranslatedName(LangPus(), name: "کېچوا"),
+  TranslatedName(LangSrd(), name: "quechua"),
+  TranslatedName(LangSnd(), name: "ڪيچوا"),
+  TranslatedName(LangSom(), name: "Quwejuwa"),
+  TranslatedName(LangTgk(), name: "кечуа"),
+  TranslatedName(LangTir(), name: "ቀችዋ"),
+  TranslatedName(LangTuk(), name: "keçua dili"),
+  TranslatedName(LangTat(), name: "кечуа"),
+  TranslatedName(LangWol(), name: "Kesuwa"),
+  TranslatedName(LangYor(), name: "Kúẹ́ńjùà"),
 ];

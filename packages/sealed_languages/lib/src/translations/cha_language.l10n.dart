@@ -2,22 +2,35 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 62 translations for a Chamorro language:
+/// Provides 98 translations for a Chamorro language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -25,12 +38,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -39,29 +59,45 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Welsh.
+/// - Welsh
+/// - Yoruba
+/// - Zulu.
 const chaLanguageTranslations = [
   TranslatedName(LangEng(), name: "Chamorro"),
   TranslatedName(LangAra(), name: "التشامورو"),
@@ -125,4 +161,44 @@ const chaLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Chamorro"),
   TranslatedName(LangZho(), name: "查莫罗文"),
   TranslatedName(LangZho(), name: "查莫洛文", script: ScriptHant()),
+  TranslatedName(LangAmh(), name: "ቻሞሮ"),
+  TranslatedName(LangAsm(), name: "চামোৰো"),
+  TranslatedName(LangBel(), name: "чамора"),
+  TranslatedName(LangChe(), name: "чаморро"),
+  TranslatedName(LangEus(), name: "txamorroera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤕𞤢𞤥𞤮𞤪𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "chamorro"),
+  TranslatedName(LangGlg(), name: "chamorro"),
+  TranslatedName(LangHye(), name: "չամոռո"),
+  TranslatedName(LangIna(), name: "chamorro"),
+  TranslatedName(LangIbo(), name: "Chamoro"),
+  TranslatedName(LangJav(), name: "Khamorro"),
+  TranslatedName(LangKat(), name: "ჩამორო"),
+  TranslatedName(LangKaz(), name: "чаморро тілі"),
+  TranslatedName(LangKhm(), name: "ឈីម៉ូរ៉ូ"),
+  TranslatedName(LangKur(), name: "çamoroyî"),
+  TranslatedName(LangKir(), name: "чаморрочо"),
+  TranslatedName(LangMri(), name: "Tiamoro"),
+  TranslatedName(LangMon(), name: "чаморро"),
+  TranslatedName(LangMya(), name: "ချမိုရို"),
+  TranslatedName(LangNep(), name: "चामोर्रो"),
+  TranslatedName(LangPan(), name: "ਚਮੋਰੋ"),
+  TranslatedName(LangPus(), name: "چمورو"),
+  TranslatedName(LangQue(), name: "Chamorro Simi"),
+  TranslatedName(LangSrd(), name: "chamorru"),
+  TranslatedName(LangSnd(), name: "چمورو"),
+  TranslatedName(LangSin(), name: "චමොරො"),
+  TranslatedName(LangSqi(), name: "kamoroisht"),
+  TranslatedName(LangSwa(), name: "Kichamorro"),
+  TranslatedName(LangTir(), name: "ቻሞሮ"),
+  TranslatedName(LangTuk(), name: "çamorro"),
+  TranslatedName(LangTur(), name: "Çamorro dili"),
+  TranslatedName(LangUrd(), name: "چیمارو"),
+  TranslatedName(LangUzb(), name: "chamorro"),
+  TranslatedName(LangYor(), name: "Èdè S̩amoro"),
+  TranslatedName(LangZul(), name: "isi-Chamorro"),
 ];

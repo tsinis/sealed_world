@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 120 translations for a Russian language:
+/// Provides 136 translations for a Russian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -92,22 +99,29 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -115,6 +129,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -239,4 +255,20 @@ const rusLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè ̣Rɔɔsia", countryCode: "BJ"),
   TranslatedName(LangZho(), name: "俄文"),
   TranslatedName(LangZul(), name: "isi-Russian"),
+  TranslatedName(LangAsm(), name: "ৰাছিয়ান"),
+  TranslatedName(LangChe(), name: "оьрсийн"),
+  TranslatedName(LangChv(), name: "вырӑс"),
+  TranslatedName(LangIna(), name: "russo"),
+  TranslatedName(LangJav(), name: "Rusia"),
+  TranslatedName(LangKur(), name: "rûsî"),
+  TranslatedName(LangMri(), name: "Ruhiana"),
+  TranslatedName(LangSan(), name: "रष्यदेशीय भाषा:"),
+  TranslatedName(LangSrd(), name: "russu"),
+  TranslatedName(LangSnd(), name: "روسي"),
+  TranslatedName(LangSun(), name: "Rusia"),
+  TranslatedName(LangTgk(), name: "русӣ"),
+  TranslatedName(LangTuk(), name: "rus dili"),
+  TranslatedName(LangTat(), name: "рус"),
+  TranslatedName(LangWol(), name: "Rus"),
+  TranslatedName(LangXho(), name: "Isi-Russian"),
 ];

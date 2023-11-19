@@ -2,18 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 83 translations for a Southern Sotho language:
+/// Provides 110 translations for a Southern Sotho language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -26,23 +33,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -53,31 +68,43 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
@@ -167,4 +194,35 @@ const sotLanguageTranslations = [
   TranslatedName(LangZho(), name: "南索托文"),
   TranslatedName(LangZho(), name: "塞索托文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isiSuthu"),
+  TranslatedName(LangAsm(), name: "দাক্ষিণাত্য ছোথো"),
+  TranslatedName(LangBel(), name: "сесута"),
+  TranslatedName(LangChe(), name: "къилба сото"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤮𞤼𞤮𞥅𞤪𞤫 𞤙𞤢𞥄𞤥𞤲𞤢𞥄𞤲𞤺𞤫𞤲𞤳𞤮",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Sesotanci"),
+  TranslatedName(LangHye(), name: "հարավային սոթո"),
+  TranslatedName(LangIna(), name: "sotho del sud"),
+  TranslatedName(LangIbo(), name: "Sọụth Soto"),
+  TranslatedName(LangJav(), name: "Sotho Sisih Kidul"),
+  TranslatedName(LangKaz(), name: "оңтүстік сото тілі"),
+  TranslatedName(LangKhm(), name: "សូថូខាងត្បូង"),
+  TranslatedName(LangKur(), name: "sotoyiya başûr"),
+  TranslatedName(LangMri(), name: "Hōto ki te Tonga"),
+  TranslatedName(LangMon(), name: "сесото"),
+  TranslatedName(LangMya(), name: "တောင်ပိုင်း ဆိုသို"),
+  TranslatedName(LangNep(), name: "दक्षिणी सोथो"),
+  TranslatedName(LangPan(), name: "ਦੱਖਣੀ ਸੋਥੋ"),
+  TranslatedName(LangPus(), name: "سويلي سوتو"),
+  TranslatedName(LangQue(), name: "Soto Meridional Simi"),
+  TranslatedName(LangSrd(), name: "sotho meridionale"),
+  TranslatedName(LangSnd(), name: "ڏکڻ سوٿي"),
+  TranslatedName(LangSin(), name: "සතර්න් සොතො"),
+  TranslatedName(LangSom(), name: "Sesooto"),
+  TranslatedName(LangSqi(), name: "sotoishte jugore"),
+  TranslatedName(LangTuk(), name: "günorta soto dili"),
+  TranslatedName(LangTgl(), name: "Katimugang Sotho"),
+  TranslatedName(LangUzb(), name: "janubiy soto"),
 ];

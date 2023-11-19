@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 66 translations for a Inupiaq language:
+/// Provides 67 translations for a Inupiaq language:
 /// - Amharic
 /// - Arabic
 /// - Azerbaijani
@@ -42,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
@@ -133,4 +134,5 @@ const ipkLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Inupiaq"),
   TranslatedName(LangZho(), name: "依奴皮维克文"),
   TranslatedName(LangZho(), name: "依奴皮維克文", script: ScriptHant()),
+  TranslatedName(LangNep(), name: "इनुपिआक्"),
 ];

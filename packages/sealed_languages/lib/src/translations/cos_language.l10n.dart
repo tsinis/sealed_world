@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 89 translations for a Corsican language:
+/// Provides 110 translations for a Corsican language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -26,8 +29,10 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -37,14 +42,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,12 +66,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -69,18 +81,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +107,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const cosLanguageTranslations = [
   TranslatedName(LangEng(), name: "Corsican"),
@@ -179,4 +200,29 @@ const cosLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Corsica"),
   TranslatedName(LangZho(), name: "科西嘉文"),
   TranslatedName(LangZul(), name: "isi-Corsican"),
+  TranslatedName(LangAsm(), name: "কোৰ্ছিকান"),
+  TranslatedName(LangBel(), name: "карсіканская"),
+  TranslatedName(LangChe(), name: "корсиканийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤮𞤪𞤧𞤭𞤳𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "korsikanskt"),
+  TranslatedName(LangIna(), name: "corso"),
+  TranslatedName(LangIbo(), name: "Kọsịan"),
+  TranslatedName(LangJav(), name: "Korsika"),
+  TranslatedName(LangKhm(), name: "កូស៊ីខាន"),
+  TranslatedName(LangKur(), name: "korsîkayî"),
+  TranslatedName(LangMri(), name: "Kōhikana"),
+  TranslatedName(LangPus(), name: "کورسيکاني"),
+  TranslatedName(LangSrd(), name: "corsicanu"),
+  TranslatedName(LangSnd(), name: "ڪارسيڪائي"),
+  TranslatedName(LangSom(), name: "Korsikan"),
+  TranslatedName(LangTgk(), name: "корсиканӣ"),
+  TranslatedName(LangTir(), name: "ኮርስኛ"),
+  TranslatedName(LangTuk(), name: "korsikan dili"),
+  TranslatedName(LangTat(), name: "корсика"),
+  TranslatedName(LangWol(), name: "Kors"),
+  TranslatedName(LangYor(), name: "Èdè Corsican"),
 ];

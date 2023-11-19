@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Pashto (Pushto) language:
+/// Provides 113 translations for a Pashto (Pushto) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,15 +34,19 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -50,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,6 +67,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -73,26 +81,34 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const pusLanguageTranslations = [
   TranslatedName(LangEng(), name: "Pashto"),
@@ -192,4 +208,24 @@ const pusLanguageTranslations = [
   TranslatedName(LangZho(), name: "普什图文"),
   TranslatedName(LangZho(), name: "普什圖文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Pashto"),
+  TranslatedName(LangAsm(), name: "পুস্ত"),
+  TranslatedName(LangChe(), name: "пушту"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤆𞤢𞤧𞤼𞤵𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Pashtanci"),
+  TranslatedName(LangIna(), name: "pashto"),
+  TranslatedName(LangIbo(), name: "Pashọ"),
+  TranslatedName(LangKur(), name: "peştûyî"),
+  TranslatedName(LangMri(), name: "Pāhitō"),
+  TranslatedName(LangSrd(), name: "pashto"),
+  TranslatedName(LangSnd(), name: "پشتو"),
+  TranslatedName(LangSom(), name: "Bashtuu"),
+  TranslatedName(LangTgk(), name: "пушту"),
+  TranslatedName(LangTuk(), name: "peştun dili"),
+  TranslatedName(LangTat(), name: "пушту"),
+  TranslatedName(LangWol(), name: "Pasto"),
+  TranslatedName(LangYor(), name: "Páshítò"),
 ];

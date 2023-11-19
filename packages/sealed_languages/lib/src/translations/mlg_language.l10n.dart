@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Malagasy language:
+/// Provides 112 translations for a Malagasy language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,24 +34,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,6 +68,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -68,21 +78,29 @@ import "../model/translated_name.dart";
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -90,6 +108,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const mlgLanguageTranslations = [
   TranslatedName(LangEng(), name: "Malagasy"),
@@ -184,4 +204,28 @@ const mlgLanguageTranslations = [
   TranslatedName(LangZho(), name: "马尔加什文"),
   TranslatedName(LangZho(), name: "馬拉加什文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Malagasy"),
+  TranslatedName(LangAsm(), name: "মালাগাছী"),
+  TranslatedName(LangBel(), name: "малагасійская"),
+  TranslatedName(LangChe(), name: "малагасийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤢𞤤𞤢𞤺𞤢𞤧𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Malagasi"),
+  TranslatedName(LangIna(), name: "malgache"),
+  TranslatedName(LangIbo(), name: "Malagasị"),
+  TranslatedName(LangJav(), name: "Malagasi"),
+  TranslatedName(LangKur(), name: "malagasî"),
+  TranslatedName(LangMri(), name: "Marakāhi"),
+  TranslatedName(LangQue(), name: "Malgache Simi"),
+  TranslatedName(LangSrd(), name: "malgàsciu"),
+  TranslatedName(LangSnd(), name: "ملاگاسي"),
+  TranslatedName(LangSom(), name: "Malagaasi"),
+  TranslatedName(LangTgk(), name: "малагасӣ"),
+  TranslatedName(LangTir(), name: "ማላጋሲ"),
+  TranslatedName(LangTuk(), name: "malagasiý dili"),
+  TranslatedName(LangTat(), name: "малагаси"),
+  TranslatedName(LangWol(), name: "Malagasi"),
+  TranslatedName(LangYor(), name: "Malagasì"),
 ];

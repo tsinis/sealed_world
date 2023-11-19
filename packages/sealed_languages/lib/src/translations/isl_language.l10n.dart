@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Icelandic language:
+/// Provides 118 translations for a Icelandic language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -69,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -76,19 +86,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -96,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -201,4 +218,25 @@ const islLanguageTranslations = [
   TranslatedName(LangZho(), name: "冰岛文"),
   TranslatedName(LangZho(), name: "冰島文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Icelandic"),
+  TranslatedName(LangAsm(), name: "আইচলেণ্ডিক"),
+  TranslatedName(LangChe(), name: "исландхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤴𞤧𞤭𞤤𞤢𞤲𞤣𞤫𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Yaren mutanen Iceland"),
+  TranslatedName(LangIna(), name: "islandese"),
+  TranslatedName(LangIbo(), name: "Icịlandịk"),
+  TranslatedName(LangJav(), name: "Islandia"),
+  TranslatedName(LangKur(), name: "îzlendî"),
+  TranslatedName(LangMri(), name: "Tiorangi"),
+  TranslatedName(LangPus(), name: "ايسلنډي"),
+  TranslatedName(LangSrd(), name: "islandesu"),
+  TranslatedName(LangSnd(), name: "آئيس لينڊڪ"),
+  TranslatedName(LangSom(), name: "Ayslandays"),
+  TranslatedName(LangTgk(), name: "исландӣ"),
+  TranslatedName(LangTuk(), name: "island dili"),
+  TranslatedName(LangTat(), name: "исланд"),
+  TranslatedName(LangWol(), name: "Islànde"),
 ];

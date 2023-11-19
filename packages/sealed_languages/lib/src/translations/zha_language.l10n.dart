@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 62 translations for a Zhuang (Chuang) language:
+/// Provides 66 translations for a Zhuang (Chuang) language:
 /// - Amharic
 /// - Arabic
+/// - Armenian
 /// - Azerbaijani
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -33,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Kashmiri
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -59,9 +61,11 @@ import "../model/translated_name.dart";
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Ukrainian
 /// - Uyghur
-/// - Vietnamese.
+/// - Vietnamese
+/// - Zhuang (Chuang).
 const zhaLanguageTranslations = [
   TranslatedName(LangEng(), name: "Zhuang"),
   TranslatedName(LangAmh(), name: "ዡዋንግኛ"),
@@ -124,7 +128,9 @@ const zhaLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Zhuang"),
   TranslatedName(LangZho(), name: "壮文"),
   TranslatedName(LangZho(), name: "壯文", script: ScriptHant()),
-
-  /// Added manually:
   TranslatedName(LangSlv(), name: "žuangščina"),
+  TranslatedName(LangHye(), name: "ժուանգ"),
+  TranslatedName(LangKur(), name: "zhuangî"),
+  TranslatedName(LangTur(), name: "Zhuangca"),
+  TranslatedName(LangZha(), name: "Vahcuengh"),
 ];

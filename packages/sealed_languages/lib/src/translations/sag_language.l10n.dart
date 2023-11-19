@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 78 translations for a Sango language:
+/// Provides 93 translations for a Sango language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -27,6 +30,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - Greek (modern)
@@ -35,13 +39,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -50,19 +58,24 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -72,7 +85,9 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -158,4 +173,23 @@ const sagLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Sango"),
   TranslatedName(LangZho(), name: "桑戈文"),
   TranslatedName(LangZul(), name: "isi-Sango"),
+  TranslatedName(LangAsm(), name: "ছাঙ্গো"),
+  TranslatedName(LangBel(), name: "санга"),
+  TranslatedName(LangChe(), name: "санго"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤢𞤲𞤺𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "sango"),
+  TranslatedName(LangIbo(), name: "Sangọ"),
+  TranslatedName(LangKhm(), name: "សានហ្គោ"),
+  TranslatedName(LangKur(), name: "sangoyî"),
+  TranslatedName(LangMri(), name: "Hāngo"),
+  TranslatedName(LangPus(), name: "سانګو"),
+  TranslatedName(LangQue(), name: "Sango Simi"),
+  TranslatedName(LangSrd(), name: "sango"),
+  TranslatedName(LangSnd(), name: "سانگو"),
+  TranslatedName(LangTir(), name: "ሳንጎ"),
+  TranslatedName(LangTuk(), name: "sango dili"),
 ];

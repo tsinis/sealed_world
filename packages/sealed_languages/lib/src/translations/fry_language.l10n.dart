@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Western Frisian language:
+/// Provides 116 translations for a Western Frisian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,25 +33,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,6 +69,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -68,6 +77,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -75,7 +85,9 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -83,12 +95,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
+/// - Tajik
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -201,4 +216,23 @@ const fryLanguageTranslations = [
   TranslatedName(LangZho(), name: "西弗里西亚文"),
   TranslatedName(LangZho(), name: "西弗里西亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Western Frisian"),
+  TranslatedName(LangAsm(), name: "ৱেষ্টাৰ্ণ ফ্ৰিছিয়ান"),
+  TranslatedName(LangChe(), name: "малхбузен-фризийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤊𞤭𞤪𞤭𞥅𞤧𞤭𞤴𞤢𞤲𞤳𞤮𞥅𞤪𞤫 𞤖𞤭𞤪𞤲𞤢",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Frisian ta Yamma"),
+  TranslatedName(LangIna(), name: "frison occidental"),
+  TranslatedName(LangIbo(), name: "Westan Frịsịan"),
+  TranslatedName(LangJav(), name: "Frisia Sisih Kulon"),
+  TranslatedName(LangKur(), name: "frîsî"),
+  TranslatedName(LangMri(), name: "Whirīhiana ki te Uru"),
+  TranslatedName(LangPus(), name: "لوېديځ فريشي"),
+  TranslatedName(LangSrd(), name: "frisone otzidentale"),
+  TranslatedName(LangSnd(), name: "مغربي فريشن"),
+  TranslatedName(LangTgk(), name: "фризии ғарбӣ"),
+  TranslatedName(LangTuk(), name: "günbatar friz dili"),
+  TranslatedName(LangTgl(), name: "Kanlurang Frisian"),
 ];

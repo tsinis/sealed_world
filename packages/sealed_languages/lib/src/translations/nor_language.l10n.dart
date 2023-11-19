@@ -2,11 +2,15 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 90 translations for a Norwegian language:
+/// Provides 114 translations for a Norwegian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -29,24 +33,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,12 +69,15 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -71,25 +85,35 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
-/// - Yoruba.
+/// - Yoruba
+/// - Zulu.
 const norLanguageTranslations = [
   TranslatedName(LangEng(), name: "Norwegian"),
   TranslatedName(LangAmh(), name: "ኖርዌጂያን"),
@@ -181,4 +205,32 @@ const norLanguageTranslations = [
   TranslatedName(LangYid(), name: "נארוועגיש"),
   TranslatedName(LangYor(), name: "Èdè Norway"),
   TranslatedName(LangZho(), name: "挪威文"),
+  TranslatedName(LangAfr(), name: "Noors"),
+  TranslatedName(LangAsm(), name: "নৰৱেজিয়ান"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤐𞤮𞤪𞤱𞤫𞤶𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Harhsen Norway"),
+  TranslatedName(LangHye(), name: "նորվեգերեն"),
+  TranslatedName(LangIna(), name: "norvegiano"),
+  TranslatedName(LangIbo(), name: "Nọrweyịan"),
+  TranslatedName(LangJav(), name: "Norwegia"),
+  TranslatedName(LangKaz(), name: "норвег тілі"),
+  TranslatedName(LangKur(), name: "norwecî"),
+  TranslatedName(LangMri(), name: "Nōwei"),
+  TranslatedName(LangNep(), name: "नर्वेली"),
+  TranslatedName(LangPus(), name: "ناروېئي"),
+  TranslatedName(LangSrd(), name: "norvegesu"),
+  TranslatedName(LangSnd(), name: "نارويجيائي"),
+  TranslatedName(LangSin(), name: "නෝර්වීජියානු"),
+  TranslatedName(LangSom(), name: "Nawriiji"),
+  TranslatedName(LangSqi(), name: "norvegjisht"),
+  TranslatedName(LangSwa(), name: "Kinorwe"),
+  TranslatedName(LangTgk(), name: "норвегӣ"),
+  TranslatedName(LangTuk(), name: "norweg dili"),
+  TranslatedName(LangUzb(), name: "norveg"),
+  TranslatedName(LangWol(), name: "Nerwesiye"),
+  TranslatedName(LangZul(), name: "isi-Norwegian"),
 ];

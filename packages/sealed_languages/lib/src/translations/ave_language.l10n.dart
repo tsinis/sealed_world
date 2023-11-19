@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 69 translations for a Avestan language:
+/// Provides 71 translations for a Avestan language:
 /// - (Scottish) Gaelic
+/// - Amharic
 /// - Arabic
 /// - Azerbaijani
 /// - Bengali (Bangla)
@@ -43,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
@@ -139,4 +141,6 @@ const aveLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Avestan"),
   TranslatedName(LangZho(), name: "阿维斯塔文"),
   TranslatedName(LangZho(), name: "阿緯斯陀文", script: ScriptHant()),
+  TranslatedName(LangAmh(), name: "አቬስታን"),
+  TranslatedName(LangNep(), name: "अवेस्तान"),
 ];
