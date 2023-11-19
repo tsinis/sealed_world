@@ -8,15 +8,19 @@ import "package:cli/utils/json_utils.dart";
 import "package:cli/utils/network_utils.dart";
 
 /// Usage: `dart run :translations sealed_currencies`.
-Future<void> main(List<String> args) async {
+Future<void> main(List<String> args, {bool skipFetch = true}) async {
   final package = ArgsParser(args).maybePackageName();
   if (package == null) throw ArgumentError("Package name should be provided.");
+  final io = IoUtils();
 
-  final clonedDir =
-      await const NetworkUtils().cloneRepository(package.umpirskyRepoUrl);
-  final io = IoUtils()
-    ..moveJsonFiles(clonedDir)
-    ..deleteDirectory(clonedDir);
+  if (!skipFetch) {
+    final clonedDir =
+        await const NetworkUtils().cloneRepository(package.umpirskyRepoUrl);
+
+    io
+      ..moveJsonFiles(clonedDir)
+      ..deleteDirectory(clonedDir);
+  }
 
   final exports = await JsonUtils(package).parseByLanguage();
 

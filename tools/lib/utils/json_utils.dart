@@ -49,7 +49,11 @@ final class JsonUtils {
         if (translationForLang == english) continue;
         final containsWithFullName =
             translations.any((e) => e.language == lang && e.fullName != null);
-        if (containsWithFullName) continue;
+        final containsWithSameLocale = translations.any(
+          (e) =>
+              e.language == lang && e.script == null && e.countryCode == null,
+        );
+        if (containsWithFullName || containsWithSameLocale) continue;
         final script = locale.scriptCode;
         final translated = TranslatedName(
           lang,
@@ -57,10 +61,8 @@ final class JsonUtils {
           countryCode: locale.countryCode,
           script: script != null ? Script.fromCode(script) : null,
         );
-
         final isAdded = translations.add(translated);
         if (!isAdded) continue;
-        print("* Add ${translated.language.name} total ${translations.length}");
       }
 
       final translationCode = item.code.toLowerCase();
@@ -70,16 +72,14 @@ final class JsonUtils {
           """${translationCode}_${dataType.toLowerCase()}.l10n.${PathConstants.dart}""";
       final filePath = join(translation, fileNameFull);
       paths.add(fileNameFull);
-      final buffer = StringBuffer(
-        """
+      final sb = StringBuffer("""
 ${_dartDoc(translations, itemFromCode.name, dataType)}.
 const ${varFileName.toCamelCase()} = [
-""",
-      );
-      for (final element in translations) buffer.write("$element,\n");
-      buffer.write("];");
-      io.writeContentToFile(filePath, buffer);
-      buffer.clear();
+""");
+      for (final i in translations) sb.write("${i.toString(short: false)},\n");
+      sb.write("];");
+      io.writeContentToFile(filePath, sb);
+      sb.clear();
       translations.clear();
     }
 
