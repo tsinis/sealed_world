@@ -74,7 +74,7 @@ jobs:
           dart run coverage:format_coverage -c -l -i coverage -o coverage/lcov.info --report-on=lib
 
       - name: 📊 Check code coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
+        uses: VeryGoodOpenSource/very_good_coverage@v2.2.0
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.data.dart **/*.l10n.dart"
