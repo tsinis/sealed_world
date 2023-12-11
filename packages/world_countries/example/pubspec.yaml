@@ -28,7 +28,7 @@ dev_dependencies:
   dhttpd: ^4.0.1 # From Google
   flutter_gen_runner: ^5.3.2
   flutter_launcher_icons: ^0.13.1 # From Flutter Community
-  flutter_native_splash: ^2.3.6 # Flutter Favorite
+  flutter_native_splash: ^2.3.8 # Flutter Favorite
   flutter_test: # From Google
     sdk: flutter
   lints: ^3.0.0 # From Google
