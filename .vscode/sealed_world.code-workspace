@@ -50,7 +50,6 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [80],
     "editor.selectionHighlight": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "recentlyUsed",
@@ -63,7 +62,7 @@
     "dart.previewFlutterUiGuides": true,
     "dart.lineLength": 80,
     "[dart]": {
-      "editor.rulers": [80],
+      "editor.rulers": [81],
       "editor.defaultFormatter": "Dart-Code.dart-code",
       "editor.codeActionsOnSave": {
         "source.fixAll": "always",
@@ -98,6 +97,7 @@
       "**/lib/**/*.select.dart",
       "**/.vscode/sealed_world.code-workspace"
     ],
+    "files.readonlyInclude": { "**/*.g.dart": true },
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "dart.renameFilesWithClasses": "prompt",
     "dart.flutterGenerateLocalizationsOnSave": "manualIfDirty",
@@ -110,6 +110,7 @@
     "flutterPrintTools.debugPrint": false,
     "git.autofetchPeriod": 360,
     "git.branchProtection": ["main"],
+    "git.branchValidationRegex": "^(docs|feat|fix|bug|chore|ci|style|refactor|test|perf)/[a-zA-Z0-9-/]+$",
     "git.detectSubmodulesLimit": 4,
     "git.enableSmartCommit": true,
     "jsonToDart.avoidDynamicTypes": true,
@@ -120,9 +121,6 @@
     "material-icon-theme.saturation": 0.66,
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "code-runner.clearPreviousOutput": false,
-    "dimmer.delay": 1000,
-    "dimmer.opacity": 80,
-    "dimmer.enabled": true,
     "yaml.keyOrdering": false
   },
   "extensions": {
@@ -149,7 +147,6 @@
       "gruntfuggly.todo-tree",
       "hirantha.json-to-dart",
       "ibm.output-colorizer",
-      "imagio.vscode-dimmer-block",
       "jasonlhy.hungry-delete",
       "jeroen-meijer.pubspec-assist",
       "kameshkotwani.google-search",
