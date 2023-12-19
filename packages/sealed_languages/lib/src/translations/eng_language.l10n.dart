@@ -236,7 +236,7 @@ const engLanguageTranslations = [
   TranslatedName(LangSlv(), name: "angleščina"),
   TranslatedName(LangSna(), name: "Chirungu"),
   TranslatedName(LangSom(), name: "Ingiriisi"),
-  TranslatedName(LangSqi(), name: "anglisht"),
+  TranslatedName(LangSqi(), name: "Anglisht"),
   TranslatedName(LangSrp(), name: "енглески"),
   TranslatedName(LangSrp(), name: "engleski", script: ScriptLatn()),
   TranslatedName(LangSwe(), name: "engelska"),
