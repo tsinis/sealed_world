@@ -36,4 +36,6 @@ void main() => group("TranslatedNameExtension", () {
           expect(copy.script, value.script);
         });
       });
+
+      test("common", () => expect(value.common, value.name));
     });

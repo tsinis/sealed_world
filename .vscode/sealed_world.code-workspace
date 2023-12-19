@@ -117,11 +117,20 @@
     "jsonToDart.copyWith": true,
     "jsonToDart.immutable": true,
     "jsonToDart.sortConstructorsFirst": true,
-    "material-icon-theme.hidesExplorerArrows": true,
-    "material-icon-theme.saturation": 0.66,
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "code-runner.clearPreviousOutput": false,
-    "yaml.keyOrdering": false
+    "yaml.keyOrdering": false,
+    "material-icon-theme.hidesExplorerArrows": true,
+    "material-icon-theme.saturation": 0.66,
+    "material-icon-theme.folders.associations": {
+      "l10n": "I18n",
+      "ui": "layout",
+      "assets-src": "images",
+      "widgets": "middleware",
+      "windows": "components",
+      "linux": "sass",
+      "converters": "hook"
+    }
   },
   "extensions": {
     "recommendations": [
