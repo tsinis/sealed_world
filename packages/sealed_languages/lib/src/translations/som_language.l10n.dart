@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 121 translations for a Somali language:
+/// Provides 122 translations for a Somali language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -40,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -242,4 +243,5 @@ const somLanguageTranslations = [
   TranslatedName(LangTuk(), name: "somali dili"),
   TranslatedName(LangTat(), name: "сомали"),
   TranslatedName(LangWol(), name: "Somali (làkk)"),
+  TranslatedName(LangDeu(), name: "Somali"),
 ];

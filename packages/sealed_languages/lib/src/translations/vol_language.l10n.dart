@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Volapük language:
+/// Provides 98 translations for a Volapük language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -32,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -200,4 +201,5 @@ const volLanguageTranslations = [
   TranslatedName(LangUzb(), name: "volapyuk"),
   TranslatedName(LangYor(), name: "Fọ́lápùùkù"),
   TranslatedName(LangZul(), name: "isi-Volapük"),
+  TranslatedName(LangDeu(), name: "Volapük"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 87 translations for a Avestan language:
+/// Provides 88 translations for a Avestan language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian

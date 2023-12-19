@@ -8,14 +8,20 @@ environment:
 
 dependencies:
   args: ^2.4.2
-  change_case: ^1.1.0
+  change_case: ^2.0.0
   collection: ^1.18.0
-  path: ^1.8.3
+  path: ^1.9.0
   rw_git: ^1.0.3
   sealed_countries:
     path: ../packages/sealed_countries
   select_annotation: ^0.2.0
   yaml: ^3.1.2
+
+dependency_overrides:
+  sealed_currencies:
+    path: ../packages/sealed_currencies
+  sealed_languages:
+    path: ../packages/sealed_languages
 
 dev_dependencies:
   build_runner: ^2.4.7 # From Google

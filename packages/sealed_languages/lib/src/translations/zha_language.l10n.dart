@@ -44,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -82,7 +83,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
-/// - Zhuang (Chuang).
+/// - Zhuang (Chuang)
 /// - Zulu.
 const zhaLanguageTranslations = [
   TranslatedName(LangEng(), name: "Zhuang"),

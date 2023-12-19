@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Yoruba language:
+/// Provides 113 translations for a Yoruba language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -37,6 +37,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -224,4 +225,5 @@ const yorLanguageTranslations = [
   TranslatedName(LangTir(), name: "ዮሩባ"),
   TranslatedName(LangTuk(), name: "ýoruba dili"),
   TranslatedName(LangTat(), name: "йоруба"),
+  TranslatedName(LangDeu(), name: "Yoruba"),
 ];

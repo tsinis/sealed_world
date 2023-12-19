@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Sindhi language:
+/// Provides 105 translations for a Sindhi language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -34,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -213,4 +214,5 @@ const sndLanguageTranslations = [
   TranslatedName(LangTur(), name: "Sindhi dili"),
   TranslatedName(LangTat(), name: "синдһи"),
   TranslatedName(LangWol(), name: "Sindi"),
+  TranslatedName(LangDeu(), name: "Sindhi"),
 ];

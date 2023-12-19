@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Interlingua language:
+/// Provides 98 translations for a Interlingua language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -32,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -199,4 +200,5 @@ const inaLanguageTranslations = [
   TranslatedName(LangTuk(), name: "interlingwa dili"),
   TranslatedName(LangTur(), name: "İnterlingua"),
   TranslatedName(LangUzb(), name: "interlingva"),
+  TranslatedName(LangDeu(), name: "Interlingua"),
 ];

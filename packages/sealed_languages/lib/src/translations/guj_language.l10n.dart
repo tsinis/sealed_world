@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 108 translations for a Gujarati language:
+/// Provides 109 translations for a Gujarati language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -35,6 +35,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -221,4 +222,5 @@ const gujLanguageTranslations = [
   TranslatedName(LangTgk(), name: "гуҷаротӣ"),
   TranslatedName(LangTuk(), name: "gujarati dili"),
   TranslatedName(LangTat(), name: "гуҗарати"),
+  TranslatedName(LangDeu(), name: "Gujarati"),
 ];

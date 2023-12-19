@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Urdu language:
+/// Provides 119 translations for a Urdu language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -39,6 +39,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -240,4 +241,5 @@ const urdLanguageTranslations = [
   TranslatedName(LangTgk(), name: "урду"),
   TranslatedName(LangTuk(), name: "urdu"),
   TranslatedName(LangTat(), name: "урду"),
+  TranslatedName(LangDeu(), name: "Urdu"),
 ];

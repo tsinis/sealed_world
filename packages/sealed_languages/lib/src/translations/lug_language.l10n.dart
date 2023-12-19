@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Ganda language:
+/// Provides 96 translations for a Ganda language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -33,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -194,4 +195,5 @@ const lugLanguageTranslations = [
   TranslatedName(LangSom(), name: "Gandha"),
   TranslatedName(LangTir(), name: "ጋንዳ"),
   TranslatedName(LangTuk(), name: "ganda dili"),
+  TranslatedName(LangDeu(), name: "Ganda"),
 ];

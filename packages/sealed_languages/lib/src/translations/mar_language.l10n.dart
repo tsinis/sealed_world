@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Marathi (Marāṭhī) language:
+/// Provides 106 translations for a Marathi (Marāṭhī) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -34,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -214,4 +215,5 @@ const marLanguageTranslations = [
   TranslatedName(LangTur(), name: "Marathi dili"),
   TranslatedName(LangTat(), name: "маратхи"),
   TranslatedName(LangWol(), name: "Marati"),
+  TranslatedName(LangDeu(), name: "Marathi"),
 ];

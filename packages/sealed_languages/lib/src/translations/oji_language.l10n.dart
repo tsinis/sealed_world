@@ -7,11 +7,11 @@ import "../model/translated_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
-/// - Assamese
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
-/// - Belarusian
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
@@ -52,8 +52,8 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
-/// - Nepali
 /// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 99 translations for a Kikuyu (Gikuyu) language:
+/// Provides 100 translations for a Kikuyu (Gikuyu) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -32,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -203,4 +204,5 @@ const kikLanguageTranslations = [
   TranslatedName(LangTir(), name: "ኪኩዩ"),
   TranslatedName(LangTuk(), name: "kikuýu dili"),
   TranslatedName(LangYor(), name: "Kíkúyù"),
+  TranslatedName(LangDeu(), name: "Kikuyu"),
 ];

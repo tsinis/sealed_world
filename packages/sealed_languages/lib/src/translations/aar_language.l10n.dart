@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 89 translations for a Afar language:
+/// Provides 90 translations for a Afar language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -33,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -184,4 +185,5 @@ const aarLanguageTranslations = [
   TranslatedName(LangUrd(), name: "افار"),
   TranslatedName(LangUzb(), name: "afar"),
   TranslatedName(LangZul(), name: "isi-Afar"),
+  TranslatedName(LangDeu(), name: "Afar"),
 ];

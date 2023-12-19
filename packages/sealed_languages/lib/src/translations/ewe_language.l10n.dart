@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 94 translations for a Ewe language:
+/// Provides 95 translations for a Ewe language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -32,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -192,4 +193,5 @@ const eweLanguageTranslations = [
   TranslatedName(LangTir(), name: "ኢው"),
   TranslatedName(LangTuk(), name: "ewe dili"),
   TranslatedName(LangYor(), name: "Èdè Ewè"),
+  TranslatedName(LangDeu(), name: "Ewe"),
 ];

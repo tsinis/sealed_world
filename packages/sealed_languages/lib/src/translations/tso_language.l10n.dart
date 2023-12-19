@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 94 translations for a Tsonga language:
+/// Provides 95 translations for a Tsonga language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -33,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -194,4 +195,5 @@ const tsoLanguageTranslations = [
   TranslatedName(LangTuk(), name: "tsonga dili"),
   TranslatedName(LangUzb(), name: "tsonga"),
   TranslatedName(LangYor(), name: "Èdè Songa"),
+  TranslatedName(LangDeu(), name: "Tsonga"),
 ];

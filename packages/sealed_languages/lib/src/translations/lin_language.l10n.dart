@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Lingala language:
+/// Provides 98 translations for a Lingala language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -34,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -200,4 +201,5 @@ const linLanguageTranslations = [
   TranslatedName(LangTir(), name: "ሊንጋላ"),
   TranslatedName(LangTuk(), name: "lingala dili"),
   TranslatedName(LangYor(), name: "Lìǹgálà"),
+  TranslatedName(LangDeu(), name: "Lingala"),
 ];

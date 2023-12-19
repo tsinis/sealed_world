@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 91 translations for a Bislama language:
+/// Provides 92 translations for a Bislama language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -32,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -188,4 +189,5 @@ const bisLanguageTranslations = [
   TranslatedName(LangUzb(), name: "bislama"),
   TranslatedName(LangYor(), name: "Èdè Bisilama"),
   TranslatedName(LangZul(), name: "isi-Bislama"),
+  TranslatedName(LangDeu(), name: "Bislama"),
 ];

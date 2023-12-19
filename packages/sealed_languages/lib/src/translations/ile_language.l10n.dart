@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 89 translations for a Interlingue language:
+/// Provides 86 translations for a Interlingue language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 77 translations for a Pāli language:
+/// Provides 78 translations for a Pāli language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Manx language:
+/// Provides 102 translations for a Manx language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -32,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -207,4 +208,5 @@ const glvLanguageTranslations = [
   TranslatedName(LangTir(), name: "ማንክስ"),
   TranslatedName(LangTuk(), name: "men dili"),
   TranslatedName(LangYor(), name: "Máǹkì"),
+  TranslatedName(LangDeu(), name: "Manx"),
 ];

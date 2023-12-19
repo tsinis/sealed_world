@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 113 translations for a Afrikaans language:
+/// Provides 114 translations for a Afrikaans language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -35,6 +35,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -228,4 +229,5 @@ const afrLanguageTranslations = [
   TranslatedName(LangTuk(), name: "afrikaans dili"),
   TranslatedName(LangTat(), name: "африкаанс"),
   TranslatedName(LangXho(), name: "isiBhulu"),
+  TranslatedName(LangDeu(), name: "Afrikaans"),
 ];

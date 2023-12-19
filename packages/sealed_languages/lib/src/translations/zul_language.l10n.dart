@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 117 translations for a Zulu language:
+/// Provides 118 translations for a Zulu language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -38,6 +38,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -233,4 +234,5 @@ const zulLanguageTranslations = [
   TranslatedName(LangSnd(), name: "زولو"),
   TranslatedName(LangTuk(), name: "zulu dili"),
   TranslatedName(LangXho(), name: "isiZulu"),
+  TranslatedName(LangDeu(), name: "Zulu"),
 ];

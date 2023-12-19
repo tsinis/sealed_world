@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 94 translations for a Navajo (Navaho) language:
+/// Provides 95 translations for a Navajo (Navaho) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -31,6 +31,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -193,4 +194,5 @@ const navLanguageTranslations = [
   TranslatedName(LangUzb(), name: "navaxo"),
   TranslatedName(LangYor(), name: "Èdè Nafajo"),
   TranslatedName(LangZul(), name: "isi-Navajo"),
+  TranslatedName(LangDeu(), name: "Navajo"),
 ];

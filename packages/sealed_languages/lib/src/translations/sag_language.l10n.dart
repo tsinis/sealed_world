@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 93 translations for a Sango language:
+/// Provides 94 translations for a Sango language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -33,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -192,4 +193,5 @@ const sagLanguageTranslations = [
   TranslatedName(LangSnd(), name: "سانگو"),
   TranslatedName(LangTir(), name: "ሳንጎ"),
   TranslatedName(LangTuk(), name: "sango dili"),
+  TranslatedName(LangDeu(), name: "Sango"),
 ];

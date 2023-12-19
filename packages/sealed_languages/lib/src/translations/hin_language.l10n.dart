@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 121 translations for a Hindi language:
+/// Provides 122 translations for a Hindi language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -38,6 +38,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -241,4 +242,5 @@ const hinLanguageTranslations = [
   TranslatedName(LangTat(), name: "һинд"),
   TranslatedName(LangWol(), name: "Endo"),
   TranslatedName(LangXho(), name: "IsiHindi"),
+  TranslatedName(LangDeu(), name: "Hindi"),
 ];

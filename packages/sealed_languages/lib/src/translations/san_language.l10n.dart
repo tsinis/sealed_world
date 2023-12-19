@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Sanskrit (Saṁskṛta) language:
+/// Provides 107 translations for a Sanskrit (Saṁskṛta) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -35,6 +35,7 @@ import "../model/translated_name.dart";
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -217,4 +218,5 @@ const sanLanguageTranslations = [
   TranslatedName(LangTir(), name: "ሳንስክሪት"),
   TranslatedName(LangTuk(), name: "sanskrit dili"),
   TranslatedName(LangTat(), name: "санскрит"),
+  TranslatedName(LangDeu(), name: "Sanskrit"),
 ];
