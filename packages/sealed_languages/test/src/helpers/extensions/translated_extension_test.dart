@@ -123,8 +123,10 @@ void main() => group("TranslatedExtension", () {
         final complete = sortedList
             .where((item) => item.value == NaturalLanguage.list.length);
         final sortedMap = Map.fromEntries(complete);
+        final sortedLanguages = sortedMap.keys.toList(growable: false)
+          ..sort((a, b) => a.code.compareTo(b.code));
 
-        expect(sortedMap.keys, kSealedLanguagesSupportedLanguages);
+        expect(sortedLanguages, kSealedLanguagesSupportedLanguages);
 
         for (final language in NaturalLanguage.list) {
           for (final l10n in kSealedLanguagesSupportedLanguages) {

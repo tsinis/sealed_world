@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 113 translations for a Kinyarwanda language:
+/// Provides 114 translations for a Kinyarwanda language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -95,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tajik
 /// - Tamil
@@ -227,4 +228,5 @@ const kinLanguageTranslations = [
   TranslatedName(LangTuk(), name: "kinýaruanda dili"),
   TranslatedName(LangTat(), name: "руанда"),
   TranslatedName(LangWol(), name: "Kinyarwànda"),
+  TranslatedName(LangSwa(), name: "Kinyarwanda"),
 ];
