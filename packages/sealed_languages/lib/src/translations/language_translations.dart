@@ -1,6 +1,8 @@
 // This library translations are based on the data from the
-// https://github.com/umpirsky/language-list project (from Saša Stamenković),
-// which is licensed under the MIT License.
+// https://github.com/symfony/intl project
+// (from The Symfony - Intl Component, Fabien Potencier) and from the
+// https://github.com/umpirsky/language-list project (from Saša Stamenković).
+// Both projects are licensed under the  MIT License.
 
 /// Provides language translations for sealed_languages.
 library sealed_language_translations;

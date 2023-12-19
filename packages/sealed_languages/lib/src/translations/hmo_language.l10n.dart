@@ -2,13 +2,21 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 61 translations for a Hiri Motu language:
+/// Provides 81 translations for a Hiri Motu language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -18,6 +26,8 @@ import "../model/translated_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -30,7 +40,10 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -39,11 +52,13 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -51,17 +66,22 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Uzbek
+/// - Vietnamese
+/// - Zulu.
 const hmoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Hiri Motu"),
   TranslatedName(LangAra(), name: "الهيري موتو"),
@@ -124,4 +144,24 @@ const hmoLanguageTranslations = [
   TranslatedName(LangZho(), name: "希里莫图文"),
   TranslatedName(LangZho(), name: "西里莫圖土文", script: ScriptHant()),
   TranslatedName(LangNep(), name: "हिरी मोटु"),
+  TranslatedName(LangAmh(), name: "ሂሪ ሞቱ"),
+  TranslatedName(LangAsm(), name: "হিৰি মোটু"),
+  TranslatedName(LangBel(), name: "хіры-моту"),
+  TranslatedName(LangEus(), name: "hiri motua"),
+  TranslatedName(LangGlg(), name: "hiri motu"),
+  TranslatedName(LangHye(), name: "հիրի մոտու"),
+  TranslatedName(LangKat(), name: "ჰირი-მოტუ"),
+  TranslatedName(LangKaz(), name: "хири-моту"),
+  TranslatedName(LangKhm(), name: "ហ៊ីរីម៉ូតូ"),
+  TranslatedName(LangKir(), name: "хири моту"),
+  TranslatedName(LangMon(), name: "хири моту"),
+  TranslatedName(LangMya(), name: "ဟီရီ မိုတူ"),
+  TranslatedName(LangPan(), name: "ਹਾਇਰੀ ਮੋਤੂ"),
+  TranslatedName(LangPus(), name: "هیري موټو"),
+  TranslatedName(LangSin(), name: "හිරි මොටු"),
+  TranslatedName(LangSqi(), name: "Hiriisht (Motu)"),
+  TranslatedName(LangSwa(), name: "Kihiri Motu"),
+  TranslatedName(LangUrd(), name: "ہیری موٹو"),
+  TranslatedName(LangUzb(), name: "hiri-motu"),
+  TranslatedName(LangZul(), name: "isi-Hiri Motu"),
 ];

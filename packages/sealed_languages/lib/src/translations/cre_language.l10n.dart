@@ -2,10 +2,16 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 66 translations for a Cree language:
+/// Provides 84 translations for a Cree language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
@@ -20,7 +26,9 @@ import "../model/translated_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -33,7 +41,10 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -41,11 +52,13 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -53,9 +66,11 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -63,9 +78,12 @@ import "../model/translated_name.dart";
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Welsh.
+/// - Welsh
+/// - Zulu.
 const creLanguageTranslations = [
   TranslatedName(LangEng(), name: "Cree"),
   TranslatedName(LangAra(), name: "الكرى"),
@@ -133,4 +151,22 @@ const creLanguageTranslations = [
   TranslatedName(LangAmh(), name: "ክሪ"),
   TranslatedName(LangNep(), name: "क्री"),
   TranslatedName(LangTur(), name: "Krice"),
+  TranslatedName(LangAsm(), name: "ক্ৰী"),
+  TranslatedName(LangBel(), name: "кры"),
+  TranslatedName(LangDeu(), name: "Cree"),
+  TranslatedName(LangEus(), name: "creera"),
+  TranslatedName(LangGlg(), name: "cree"),
+  TranslatedName(LangHye(), name: "Կրի"),
+  TranslatedName(LangKaz(), name: "кри"),
+  TranslatedName(LangKhm(), name: "គ្រី"),
+  TranslatedName(LangKir(), name: "кри"),
+  TranslatedName(LangMon(), name: "крее хэл"),
+  TranslatedName(LangPan(), name: "ਕ੍ਰੀ"),
+  TranslatedName(LangPus(), name: "کری"),
+  TranslatedName(LangSin(), name: "ක්‍රී"),
+  TranslatedName(LangSqi(), name: "Kriisht"),
+  TranslatedName(LangSwa(), name: "Kikiri"),
+  TranslatedName(LangUrd(), name: "کری"),
+  TranslatedName(LangUzb(), name: "kri"),
+  TranslatedName(LangZul(), name: "isi-Cree"),
 ];

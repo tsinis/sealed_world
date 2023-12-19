@@ -2,16 +2,21 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 69 translations for a Tagalog language:
+/// Provides 86 translations for a Tagalog language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -25,6 +30,8 @@ import "../model/translated_name.dart";
 /// - Finnish
 /// - French
 /// - Galician
+/// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -36,7 +43,10 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -44,10 +54,13 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -55,9 +68,11 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -67,8 +82,10 @@ import "../model/translated_name.dart";
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Yiddish.
+/// - Yiddish
+/// - Zulu.
 const tglLanguageTranslations = [
   TranslatedName(LangEng(), name: "Tagalog"),
   TranslatedName(LangAmh(), name: "ታጋሎገኛ"),
@@ -139,4 +156,21 @@ const tglLanguageTranslations = [
   TranslatedName(LangZho(), name: "塔加路族文", script: ScriptHant()),
   TranslatedName(LangHye(), name: "տագալերեն"),
   TranslatedName(LangUrd(), name: "ٹیگا لوگ"),
+  TranslatedName(LangAsm(), name: "টাগালগ"),
+  TranslatedName(LangBel(), name: "тагальская"),
+  TranslatedName(LangDeu(), name: "Tagalog"),
+  TranslatedName(LangKat(), name: "ტაგალური"),
+  TranslatedName(LangKaz(), name: "тагалог"),
+  TranslatedName(LangKhm(), name: "ហ្វីលីពីន"),
+  TranslatedName(LangKir(), name: "тагал"),
+  TranslatedName(LangMon(), name: "тагалог"),
+  TranslatedName(LangMya(), name: "တဂါးလော့ဂ်"),
+  TranslatedName(LangNep(), name: "फिलिपिनो"),
+  TranslatedName(LangPan(), name: "ਤਗਾਲੋਗ"),
+  TranslatedName(LangPus(), name: "ټوی"),
+  TranslatedName(LangSin(), name: "ටැගලොග්"),
+  TranslatedName(LangSqi(), name: "Tagalogase"),
+  TranslatedName(LangSwa(), name: "Kitagalogi"),
+  TranslatedName(LangUzb(), name: "tagalog"),
+  TranslatedName(LangZul(), name: "isi-Tagalog"),
 ];

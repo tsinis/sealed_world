@@ -2,11 +2,16 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 61 translations for a Pāli language:
+/// Provides 77 translations for a Pāli language:
 /// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
@@ -21,7 +26,9 @@ import "../model/translated_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -33,18 +40,23 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -52,17 +64,22 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Uzbek
+/// - Vietnamese
+/// - Zulu.
 const pliLanguageTranslations = [
   TranslatedName(LangEng(), name: "Pali"),
   TranslatedName(LangAra(), name: "البالية"),
@@ -125,4 +142,21 @@ const pliLanguageTranslations = [
   TranslatedName(LangZho(), name: "巴利文"),
   TranslatedName(LangHye(), name: "պալի"),
   TranslatedName(LangNep(), name: "पाली"),
+  TranslatedName(LangAmh(), name: "ፓሊ"),
+  TranslatedName(LangAsm(), name: "পালি"),
+  TranslatedName(LangBel(), name: "палі"),
+  TranslatedName(LangDeu(), name: "Pali"),
+  TranslatedName(LangEus(), name: "paliera"),
+  TranslatedName(LangGlg(), name: "pali"),
+  TranslatedName(LangKaz(), name: "пали"),
+  TranslatedName(LangKhm(), name: "បាលី"),
+  TranslatedName(LangKir(), name: "пали"),
+  TranslatedName(LangMon(), name: "пали"),
+  TranslatedName(LangPus(), name: "پالي"),
+  TranslatedName(LangSin(), name: "පාලි"),
+  TranslatedName(LangSqi(), name: "Pali"),
+  TranslatedName(LangSwa(), name: "Pali"),
+  TranslatedName(LangUrd(), name: "پایلی"),
+  TranslatedName(LangUzb(), name: "pali"),
+  TranslatedName(LangZul(), name: "isi-Pali"),
 ];

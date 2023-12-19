@@ -2,11 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 75 translations for a Interlingue language:
+/// Provides 89 translations for a Interlingue language:
+/// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -14,6 +16,7 @@ import "../model/translated_name.dart";
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -25,7 +28,9 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -39,9 +44,11 @@ import "../model/translated_name.dart";
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Kinyarwanda
 /// - Korean
 /// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -54,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -61,6 +69,7 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -71,7 +80,9 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Yoruba
 /// - Zulu.
@@ -151,4 +162,15 @@ const ileLanguageTranslations = [
   TranslatedName(LangSqi(), name: "gjuha oksidentale"),
   TranslatedName(LangSwa(), name: "lugha ya kisayansi"),
   TranslatedName(LangZul(), name: "izimili"),
+  TranslatedName(LangAsm(), name: "আন্তঃভাষা"),
+  TranslatedName(LangDeu(), name: "Interlingue"),
+  TranslatedName(LangGlg(), name: "interlingua"),
+  TranslatedName(LangKhm(), name: "អន្តរភាសា"),
+  TranslatedName(LangKir(), name: "интерлингве"),
+  TranslatedName(LangMya(), name: "ဘာသာစကားအချင်းချင်း"),
+  TranslatedName(LangPan(), name: "ਇੰਟਰਲਿੰਗ"),
+  TranslatedName(LangPus(), name: "انټرلینګو"),
+  TranslatedName(LangSin(), name: "අන්තර්භාෂාව"),
+  TranslatedName(LangUrd(), name: "انٹرلنگوا"),
+  TranslatedName(LangUzb(), name: "interlingva"),
 ];

@@ -2,18 +2,21 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 78 translations for a Twi language:
+/// Provides 85 translations for a Twi language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -27,6 +30,7 @@ import "../model/translated_name.dart";
 /// - French
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -52,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
@@ -63,6 +68,7 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -77,6 +83,7 @@ import "../model/translated_name.dart";
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Zulu.
 const twiLanguageTranslations = [
@@ -158,4 +165,11 @@ const twiLanguageTranslations = [
   TranslatedName(LangSwa(), name: "Kitwi", countryCode: "KE"),
   TranslatedName(LangUrd(), name: "توی"),
   TranslatedName(LangZul(), name: "isi-Twi"),
+  TranslatedName(LangAsm(), name: "টুৱি"),
+  TranslatedName(LangBel(), name: "чві"),
+  TranslatedName(LangDeu(), name: "Twi"),
+  TranslatedName(LangMya(), name: "တီ"),
+  TranslatedName(LangNep(), name: "ट्वी"),
+  TranslatedName(LangSin(), name: "ට්වි"),
+  TranslatedName(LangUzb(), name: "tvi"),
 ];
