@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 110 translations for a Ethiopian Birr currency:
+/// Provides 123 translations for a Ethiopian Birr currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,12 +74,15 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,6 +90,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
@@ -90,11 +100,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -102,6 +114,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const etbCurrencyTranslations = [
@@ -219,4 +232,17 @@ const etbCurrencyTranslations = [
   TranslatedName(LangZho(), name: "埃塞俄比亞比爾", countryCode: "HK"),
   TranslatedName(LangZho(), name: "衣索比亞比爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Ethopian Birr"),
+  TranslatedName(LangAsm(), name: "ইথিঅ’পিয়ান বিৰ"),
+  TranslatedName(LangChv(), name: "Эфиопи бырӗ"),
+  TranslatedName(LangIna(), name: "birr ethiope"),
+  TranslatedName(LangIbo(), name: "Ego Birr obodo Ethiopia"),
+  TranslatedName(LangJav(), name: "Birr Ethiopia"),
+  TranslatedName(LangKur(), name: "bîrê etyopyayî"),
+  TranslatedName(LangMri(), name: "birr Etiopia"),
+  TranslatedName(LangOri(), name: "ଇଥିଓପିୟ ବିର୍"),
+  TranslatedName(LangPus(), name: "ايتهوپيايي بر"),
+  TranslatedName(LangSrd(), name: "birr etìope"),
+  TranslatedName(LangTuk(), name: "Efiopiýa byry"),
+  TranslatedName(LangTgl(), name: "Ethiopian Birr"),
+  TranslatedName(LangXho(), name: "I-Birr yase-Ethopia"),
 ];

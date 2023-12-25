@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Nepalese Rupee currency:
+/// Provides 107 translations for a Nepalese Rupee currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const nprCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Nepalese Rupee"),
@@ -179,4 +196,21 @@ const nprCurrencyTranslations = [
   TranslatedName(LangZho(), name: "尼泊尔卢比"),
   TranslatedName(LangZho(), name: "尼泊爾盧比", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Nepalese Rupee"),
+  TranslatedName(LangAsm(), name: "নেপালী ৰুপী"),
+  TranslatedName(LangChv(), name: "Непал рупийӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤵𞥅𞤨𞤭𞥅 𞤐𞤫𞤨𞤢𞤤𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Rupee na Nepal"),
+  TranslatedName(LangIna(), name: "rupia nepalese"),
+  TranslatedName(LangIbo(), name: "Ego Rupee obodo Nepal"),
+  TranslatedName(LangJav(), name: "Rupee Nepal"),
+  TranslatedName(LangKur(), name: "rûpiyê nepalî"),
+  TranslatedName(LangMri(), name: "Rupee Nepōra"),
+  TranslatedName(LangOri(), name: "ନେପାଳି ରୁପି"),
+  TranslatedName(LangPus(), name: "نيپالي روپۍ"),
+  TranslatedName(LangSrd(), name: "rupia nepalesa"),
+  TranslatedName(LangSom(), name: "Rubiga Nebal"),
+  TranslatedName(LangTuk(), name: "Nepal rupiýasy"),
+  TranslatedName(LangTgl(), name: "Nepalese Rupee"),
+  TranslatedName(LangXho(), name: "I-Rupee yaseNepal"),
+  TranslatedName(LangYor(), name: "Rúpìì Nẹ̵́pààlì"),
 ];

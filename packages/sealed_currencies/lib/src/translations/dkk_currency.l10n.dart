@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Danish Krone currency:
+/// Provides 109 translations for a Danish Krone currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,25 +32,31 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,28 +67,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +103,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const dkkCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Danish Krone"),
@@ -182,4 +199,21 @@ const dkkCurrencyTranslations = [
   TranslatedName(LangZho(), name: "丹麦克朗"),
   TranslatedName(LangZho(), name: "丹麥克朗", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Danish Krone"),
+  TranslatedName(LangAsm(), name: "ডেনিচ ক্ৰোন"),
+  TranslatedName(LangChv(), name: "Дани кронӗ"),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞤪𞤲𞤫 𞤁𞤢𞤲𞤭𞥅𞤧𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Krone na ƙasar Denmark"),
+  TranslatedName(LangIna(), name: "corona danese"),
+  TranslatedName(LangIbo(), name: "Ego Krone Obodo Denmark"),
+  TranslatedName(LangJav(), name: "Krone Denmark"),
+  TranslatedName(LangKur(), name: "kronê danîmarkî"),
+  TranslatedName(LangMri(), name: "Kroner Tenemāka"),
+  TranslatedName(LangOri(), name: "ଡାନିସ୍ କ୍ରୋନ୍"),
+  TranslatedName(LangPus(), name: "ډنمارکي کرون"),
+  TranslatedName(LangSrd(), name: "corona danesa"),
+  TranslatedName(LangSom(), name: "Koronka Danishka"),
+  TranslatedName(LangTuk(), name: "Daniýa kronasy"),
+  TranslatedName(LangTgl(), name: "Danish Krone"),
+  TranslatedName(LangXho(), name: "I-Krone yaseDenmark"),
+  TranslatedName(LangYor(), name: "Kírónì Dáníṣì"),
 ];

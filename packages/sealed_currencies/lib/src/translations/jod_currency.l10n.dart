@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Jordanian Dinar currency:
+/// Provides 107 translations for a Jordanian Dinar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const jodCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Jordanian Dinar"),
@@ -179,4 +196,21 @@ const jodCurrencyTranslations = [
   TranslatedName(LangZho(), name: "约旦第纳尔"),
   TranslatedName(LangZho(), name: "約旦第納爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Jordanian Dinar"),
+  TranslatedName(LangAsm(), name: "জৰ্ডানিয়ান ডিনাৰ"),
+  TranslatedName(LangChv(), name: "Иордан динарӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤭𞤲𞤢𞥄𞤪 𞤔𞤮𞤪𞤣𞤢𞤲𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dinarin Jordan"),
+  TranslatedName(LangIna(), name: "dinar jordan"),
+  TranslatedName(LangIbo(), name: "Ego Dinar Obodo Jordan"),
+  TranslatedName(LangJav(), name: "Dinar Yordania"),
+  TranslatedName(LangKur(), name: "dînarê urdunî"),
+  TranslatedName(LangMri(), name: "Dinar Hōrano"),
+  TranslatedName(LangOri(), name: "ଜର୍ଡାନିୟ ଦିନାର୍"),
+  TranslatedName(LangPus(), name: "اردني دينار"),
+  TranslatedName(LangSrd(), name: "dinar giordanu"),
+  TranslatedName(LangSom(), name: "Dinaarka Urdun"),
+  TranslatedName(LangTuk(), name: "Iordan dinary"),
+  TranslatedName(LangTgl(), name: "Jordanian Dinar"),
+  TranslatedName(LangXho(), name: "I-Dinar yaseJordan"),
+  TranslatedName(LangYor(), name: "Dínárì Jọ́dàànì"),
 ];

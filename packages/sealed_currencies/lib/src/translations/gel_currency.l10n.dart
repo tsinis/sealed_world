@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Georgian Lari currency:
+/// Provides 109 translations for a Georgian Lari currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,28 +66,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const gelCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Georgian Lari"),
@@ -181,4 +198,21 @@ const gelCurrencyTranslations = [
   TranslatedName(LangZho(), name: "格魯吉亞拉里", countryCode: "HK"),
   TranslatedName(LangZho(), name: "喬治亞拉里", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Georgian Lari"),
+  TranslatedName(LangAsm(), name: "জৰ্জিয়ান লাৰি"),
+  TranslatedName(LangChv(), name: "Грузи ларийӗ"),
+  TranslatedName(LangFul(), name: "𞤂𞤢𞥄𞤪𞤭 𞤔𞤮𞤪𞤶𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Georgia"),
+  TranslatedName(LangIna(), name: "lari georgian"),
+  TranslatedName(LangIbo(), name: "Ego Lari Obodo Georgia"),
+  TranslatedName(LangJav(), name: "Lari Georgia"),
+  TranslatedName(LangKur(), name: "lariyê gurcistanî"),
+  TranslatedName(LangMri(), name: "Lari Hōria"),
+  TranslatedName(LangOri(), name: "ଜର୍ଜିୟ ଲାରି"),
+  TranslatedName(LangPus(), name: "جارجیاېي لارې"),
+  TranslatedName(LangSrd(), name: "lari georgianu"),
+  TranslatedName(LangSom(), name: "Laariga Joorjiya"),
+  TranslatedName(LangTuk(), name: "Gruzin larisi"),
+  TranslatedName(LangTgl(), name: "Georgian Lari"),
+  TranslatedName(LangXho(), name: "I-Lari yaseGeorgia"),
+  TranslatedName(LangYor(), name: "Lárì Jọ́jíà"),
 ];

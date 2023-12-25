@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a Botswanan Pula currency:
+/// Provides 121 translations for a Botswanan Pula currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const bwpCurrencyTranslations = [
@@ -213,4 +227,18 @@ const bwpCurrencyTranslations = [
   TranslatedName(LangZho(), name: "博茨瓦納普拉", countryCode: "HK"),
   TranslatedName(LangZho(), name: "波札那普拉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Botswana Pula"),
+  TranslatedName(LangAsm(), name: "ব’টচোৱানান পুলা"),
+  TranslatedName(LangChv(), name: "Ботсвана пули"),
+  TranslatedName(LangIna(), name: "pula botswanese"),
+  TranslatedName(LangIbo(), name: "Ego Pula obodo Bostwana"),
+  TranslatedName(LangJav(), name: "Pula Botswana"),
+  TranslatedName(LangKur(), name: "pulayê botswanayî"),
+  TranslatedName(LangMri(), name: "Pula Poriwana"),
+  TranslatedName(LangOri(), name: "ବୋତ୍ସୱାନା ପୁଲା"),
+  TranslatedName(LangPus(), name: "بوټسواني پولا"),
+  TranslatedName(LangSrd(), name: "pula botswanesa"),
+  TranslatedName(LangSom(), name: "Buulada Botswana"),
+  TranslatedName(LangTuk(), name: "Botswana pulasy"),
+  TranslatedName(LangTgl(), name: "Botswanan Pula"),
+  TranslatedName(LangXho(), name: "I-Pula yaseBotswana"),
 ];

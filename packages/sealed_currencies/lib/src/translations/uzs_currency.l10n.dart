@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Uzbekistani Som currency:
+/// Provides 110 translations for a Uzbekistani Som currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const uzsCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Uzbekistani Som"),
@@ -184,4 +200,20 @@ const uzsCurrencyTranslations = [
   TranslatedName(LangZho(), name: "乌兹别克斯坦苏姆"),
   TranslatedName(LangZho(), name: "烏茲別克索姆", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Uzbekistan Som"),
+  TranslatedName(LangAsm(), name: "উজবেকিস্তানী ছোম"),
+  TranslatedName(LangChv(), name: "Узбек сумӗ"),
+  TranslatedName(LangFul(), name: "𞤅𞤮𞤥𞤵 𞤓𞥁𞤦𞤫𞤳𞤭𞤧𞤼𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Som na ƙasar Uzbekistan"),
+  TranslatedName(LangIna(), name: "som uzbek"),
+  TranslatedName(LangIbo(), name: "Ego Som obodo Uzbekistan"),
+  TranslatedName(LangJav(), name: "Som Usbekistan"),
+  TranslatedName(LangKur(), name: "somê ozbekî"),
+  TranslatedName(LangMri(), name: "Som Uhipeketāne"),
+  TranslatedName(LangOri(), name: "ଉଜବେକିସ୍ତାନୀ ସୋମ୍"),
+  TranslatedName(LangPus(), name: "ازبکستاني سوم"),
+  TranslatedName(LangSrd(), name: "som uzbeku"),
+  TranslatedName(LangSom(), name: "Somta Usbekistan"),
+  TranslatedName(LangTuk(), name: "Özbek somy"),
+  TranslatedName(LangXho(), name: "I-Som yase-Uzbekistan"),
+  TranslatedName(LangYor(), name: "Sómú Usibẹkísítàànì"),
 ];

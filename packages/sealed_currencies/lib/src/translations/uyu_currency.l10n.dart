@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Uruguayan Peso currency:
+/// Provides 109 translations for a Uruguayan Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const uyuCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Uruguayan Peso"),
@@ -183,4 +199,20 @@ const uyuCurrencyTranslations = [
   TranslatedName(LangZho(), name: "乌拉圭比索"),
   TranslatedName(LangZho(), name: "烏拉圭披索", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Uruguayan Peso"),
+  TranslatedName(LangAsm(), name: "উৰুগুৱেয়ান পেছো"),
+  TranslatedName(LangChv(), name: "Уругвай песийӗ"),
+  TranslatedName(LangFul(), name: "𞤆𞤫𞥅𞤧𞤮𞥅 𞤒𞤵𞤪𞤺𞤮𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Peso na ƙasar Uruguay"),
+  TranslatedName(LangIna(), name: "peso uruguayan"),
+  TranslatedName(LangIbo(), name: "Ego Peso obodo Uruguay"),
+  TranslatedName(LangJav(), name: "Peso Uruguay"),
+  TranslatedName(LangKur(), name: "pesoyê ûrûgûayî"),
+  TranslatedName(LangMri(), name: "Peso Urukoi"),
+  TranslatedName(LangOri(), name: "ଉରୁଗୁଇୟାନ୍ ପେସୋ"),
+  TranslatedName(LangPus(), name: "يوراګوي پسو"),
+  TranslatedName(LangSrd(), name: "peso uruguayanu"),
+  TranslatedName(LangSom(), name: "Beesada Urugway"),
+  TranslatedName(LangTuk(), name: "Urugwaý pesosy"),
+  TranslatedName(LangXho(), name: "I-Peso yase-Uruguay"),
+  TranslatedName(LangYor(), name: "Pẹ́sò Úrúgúwè"),
 ];

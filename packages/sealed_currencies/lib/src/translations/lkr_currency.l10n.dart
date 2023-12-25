@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Sri Lankan Rupee currency:
+/// Provides 109 translations for a Sri Lankan Rupee currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const lkrCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Sri Lankan Rupee"),
@@ -181,4 +198,24 @@ const lkrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "斯里兰卡卢比"),
   TranslatedName(LangZho(), name: "斯里蘭卡盧比", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Sri Lankan Rupee"),
+  TranslatedName(LangAsm(), name: "শ্ৰীলংকান ৰুপী"),
+  TranslatedName(LangChv(), name: "Шри-ланка рупийӗ"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤈𞤵𞥅𞤨𞤭𞥅 𞤅𞤭𞤪𞤭-𞤂𞤢𞤲𞤳𞤢𞤲𞤭𞤴𞤢𞤲𞤳𞤮",
+  ),
+  TranslatedName(LangHau(), name: "Rupee na ƙasar Sri Lanka"),
+  TranslatedName(LangIna(), name: "rupia de Sri Lanka"),
+  TranslatedName(LangIbo(), name: "Ego Rupee obodo Sri Lanka"),
+  TranslatedName(LangJav(), name: "Rupee Sri Lanka"),
+  TranslatedName(LangKur(), name: "rûpiyê srî lankayî"),
+  TranslatedName(LangMri(), name: "Rupee Hiri Ranaka"),
+  TranslatedName(LangOri(), name: "ଶ୍ରୀଲଙ୍କିୟ ରୁପି"),
+  TranslatedName(LangPus(), name: "سري لنکن روپۍ"),
+  TranslatedName(LangSrd(), name: "rupia de su Sri Lanka"),
+  TranslatedName(LangSom(), name: "Rubiga Siri lanka"),
+  TranslatedName(LangTuk(), name: "Şri-Lanka rupiýasy"),
+  TranslatedName(LangTgl(), name: "Sri Lankan Rupee"),
+  TranslatedName(LangXho(), name: "I-Rupee yaseSri Lanka"),
+  TranslatedName(LangYor(), name: "Rúpìì Siri Láńkà"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Cambodian Riel currency:
+/// Provides 109 translations for a Cambodian Riel currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const khrCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Cambodian Riel"),
@@ -181,4 +198,21 @@ const khrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "柬埔寨里爾", countryCode: "HK"),
   TranslatedName(LangZho(), name: "柬埔寨瑞爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Cambodian Riel"),
+  TranslatedName(LangAsm(), name: "কেম্ব’ডিয়ান ৰিয়েল"),
+  TranslatedName(LangChv(), name: "Камбоджа риелӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤭𞤴𞤢𞤤 𞤑𞤢𞤥𞤦𞤮𞤣𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Riel na ƙasar Cambodia"),
+  TranslatedName(LangIna(), name: "riel cambodgian"),
+  TranslatedName(LangIbo(), name: "Ego Riel obodo Cambodia"),
+  TranslatedName(LangJav(), name: "Riel Kamboja"),
+  TranslatedName(LangKur(), name: "rîelê kamboçyayî"),
+  TranslatedName(LangMri(), name: "Riel Kamapōtia"),
+  TranslatedName(LangOri(), name: "କାମ୍ଵୋଡିୟ ରିଏଲ୍"),
+  TranslatedName(LangPus(), name: "کمبوډي ريل"),
+  TranslatedName(LangSrd(), name: "riel cambogianu"),
+  TranslatedName(LangSom(), name: "Riyf kambodiya"),
+  TranslatedName(LangTuk(), name: "Kamboja riýeli"),
+  TranslatedName(LangTgl(), name: "Cambodian Riel"),
+  TranslatedName(LangXho(), name: "I-Riel yaseCambodia"),
+  TranslatedName(LangYor(), name: "Ráyò Kàm̀bọ́díà"),
 ];

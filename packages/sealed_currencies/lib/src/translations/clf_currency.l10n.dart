@@ -1,8 +1,8 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 86 translations for a Chilean Unit of Account (UF) currency:
-/// - (Scottish) Gaelic
+/// Provides 88 translations for a Chilean Unit of Account (UF) currency:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -27,6 +27,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Ewe
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -65,6 +66,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -143,8 +145,6 @@ const clfCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Đơn vị Kế toán của Chile (UF)"),
   TranslatedName(LangZho(), name: "智利（资金）"),
   TranslatedName(LangZho(), name: "卡林油達佛曼跎", script: ScriptHant()),
-
-  /// Added manually:
   TranslatedName(LangDan(), name: "Chilensk kontoenhed (UF)"),
   TranslatedName(LangRon(), name: "Unitatea de cont chiliană (UF)"),
   TranslatedName(LangLav(), name: "Čīles konta vienība (UF)"),
@@ -181,4 +181,9 @@ const clfCurrencyTranslations = [
   TranslatedName(LangUrd(), name: "چلی اکاؤنٹ یونٹ"),
   TranslatedName(LangUzb(), name: "Chili Hisoblash Birlik"),
   TranslatedName(LangZul(), name: "Iyunithi ye-Akhawunti yaseChile"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤢𞤤𞤲𞤣𞤵 𞤂𞤭𞤥𞤮𞥅𞤪𞤫 𞤕𞤭𞤤𞤫𞥊𞤴𞤢𞤲𞤳𞤮",
+  ),
+  TranslatedName(LangSrd(), name: "unidade de acontu tzilena"),
 ];

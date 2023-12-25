@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Omani Rial currency:
+/// Provides 109 translations for a Omani Rial currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const omrCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Omani Rial"),
@@ -181,4 +198,21 @@ const omrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "阿曼里奧", countryCode: "HK"),
   TranslatedName(LangZho(), name: "阿曼里亞爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Omani Rial"),
+  TranslatedName(LangAsm(), name: "ওমানি ৰিয়েল"),
+  TranslatedName(LangChv(), name: "Оман риалӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤭𞤴𞤢𞥄𞤤 𞤌𞤥𞤢𞤲𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Riyal ɗin Oman"),
+  TranslatedName(LangIna(), name: "rial omani"),
+  TranslatedName(LangIbo(), name: "Ego Rial obodo Oman"),
+  TranslatedName(LangJav(), name: "Rial Oman"),
+  TranslatedName(LangKur(), name: "riyalê umanî"),
+  TranslatedName(LangMri(), name: "Rial Ōmana"),
+  TranslatedName(LangOri(), name: "ଓମାନି ରିଆଲ୍"),
+  TranslatedName(LangPus(), name: "عماني ريال"),
+  TranslatedName(LangSrd(), name: "rial omanesu"),
+  TranslatedName(LangSom(), name: "Riyaalka Cumaan"),
+  TranslatedName(LangTuk(), name: "Oman rialy"),
+  TranslatedName(LangTgl(), name: "Omani Rial"),
+  TranslatedName(LangXho(), name: "I-Rial yase-Oman"),
+  TranslatedName(LangYor(), name: "Ráyò Omani"),
 ];

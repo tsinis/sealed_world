@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Tajikistani Somoni currency:
+/// Provides 109 translations for a Tajikistani Somoni currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const tjsCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Tajikistani Somoni"),
@@ -181,4 +198,21 @@ const tjsCurrencyTranslations = [
   TranslatedName(LangZho(), name: "塔吉克斯坦索莫尼"),
   TranslatedName(LangZho(), name: "塔吉克索莫尼", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Tajikistani Somoni"),
+  TranslatedName(LangAsm(), name: "তাজিকিস্তানী ছোমনি"),
+  TranslatedName(LangChv(), name: "Таджик сомонийӗ"),
+  TranslatedName(LangFul(), name: "𞤅𞤢𞤥𞤮𞥅𞤲𞤭 𞤚𞤢𞤶𞤭𞤳𞤭𞤧𞤼𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Somoni na ƙasar Tajikistan"),
+  TranslatedName(LangIna(), name: "somoni tajik"),
+  TranslatedName(LangIbo(), name: "Who Somoni obodo Tajikistan"),
+  TranslatedName(LangJav(), name: "Somoni Tajikistan"),
+  TranslatedName(LangKur(), name: "somonê tacikistanî"),
+  TranslatedName(LangMri(), name: "Somoni Takiritānga"),
+  TranslatedName(LangOri(), name: "ତାଜିକିସ୍ତାନୀ ସୋମୋନି"),
+  TranslatedName(LangPus(), name: "تاجکستاني سوموني"),
+  TranslatedName(LangSrd(), name: "somoni tagiku"),
+  TranslatedName(LangSom(), name: "Somoonida Tajikistan"),
+  TranslatedName(LangTuk(), name: "Täjik somonisi"),
+  TranslatedName(LangTgl(), name: "Tajikistani Somoni"),
+  TranslatedName(LangXho(), name: "I-Somoni yaseTajikistan"),
+  TranslatedName(LangYor(), name: "Sómónì Tajikístàànì"),
 ];

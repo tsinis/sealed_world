@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Thai Baht currency:
+/// Provides 110 translations for a Thai Baht currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,21 +67,26 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const thbCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Thai Baht"),
@@ -184,4 +200,20 @@ const thbCurrencyTranslations = [
   TranslatedName(LangZho(), name: "泰铢"),
   TranslatedName(LangZho(), name: "泰銖", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Thai Baht"),
+  TranslatedName(LangAsm(), name: "থাই বাত"),
+  TranslatedName(LangChv(), name: "Таиланд барӗ"),
+  TranslatedName(LangFul(), name: "𞤄𞤢𞤸𞤼𞤵 𞤚𞤢𞤴𞤤𞤢𞤲𞤣𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Baht na ƙasar Thailand"),
+  TranslatedName(LangIna(), name: "baht thailandese"),
+  TranslatedName(LangIbo(), name: "Ego Baht obodo Thai"),
+  TranslatedName(LangJav(), name: "Baht Thai"),
+  TranslatedName(LangKur(), name: "bahtê taylandî"),
+  TranslatedName(LangMri(), name: "Baht Tairanga"),
+  TranslatedName(LangOri(), name: "ଥାଇ ଭାଟ୍"),
+  TranslatedName(LangPus(), name: "تهايي بات"),
+  TranslatedName(LangSrd(), name: "baht tailandesu"),
+  TranslatedName(LangSom(), name: "Baatka Taylaan"),
+  TranslatedName(LangTuk(), name: "Taýland baty"),
+  TranslatedName(LangXho(), name: "I-Baht yaseThailand"),
+  TranslatedName(LangYor(), name: "Báàtì Tháì"),
 ];

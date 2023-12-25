@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a Bahraini Dinar currency:
+/// Provides 119 translations for a Bahraini Dinar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const bhdCurrencyTranslations = [
@@ -211,4 +225,18 @@ const bhdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "巴林第纳尔"),
   TranslatedName(LangZho(), name: "巴林第納爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Bahraini Dinar"),
+  TranslatedName(LangAsm(), name: "বাহৰেইনী ডিনাৰ"),
+  TranslatedName(LangChv(), name: "Бахрейн динарӗ"),
+  TranslatedName(LangIna(), name: "dinar bahreini"),
+  TranslatedName(LangIbo(), name: "Ego Dinar Obodo Bahrain"),
+  TranslatedName(LangJav(), name: "Bahrain Dinar"),
+  TranslatedName(LangKur(), name: "dînarê behreynê"),
+  TranslatedName(LangMri(), name: "Dinar Pāreina"),
+  TranslatedName(LangOri(), name: "ବାଃରେନି ଦିନାର୍"),
+  TranslatedName(LangPus(), name: "بحريني دينار"),
+  TranslatedName(LangSrd(), name: "dinar bahreinu"),
+  TranslatedName(LangSom(), name: "Dinaarka Baxreyn"),
+  TranslatedName(LangTuk(), name: "Bahreýn dinary"),
+  TranslatedName(LangTgl(), name: "Bahraini Dinar"),
+  TranslatedName(LangXho(), name: "I-Dinar yaseBahrain"),
 ];

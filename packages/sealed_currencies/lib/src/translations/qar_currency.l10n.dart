@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Qatari Riyal currency:
+/// Provides 111 translations for a Qatari Riyal currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const qarCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Qatari Rial"),
@@ -183,4 +200,21 @@ const qarCurrencyTranslations = [
   TranslatedName(LangZho(), name: "卡塔爾里亞爾", countryCode: "HK"),
   TranslatedName(LangZho(), name: "卡達里亞爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Qatari Rial"),
+  TranslatedName(LangAsm(), name: "কাটাৰি ৰিয়েল"),
+  TranslatedName(LangChv(), name: "Катар риалӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤭𞤴𞤢𞥄𞤤 𞤗𞤢𞤼𞤢𞤪𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Riyal ɗin Qatar"),
+  TranslatedName(LangIna(), name: "rial qatari"),
+  TranslatedName(LangIbo(), name: "Ego Rial obodo Qatar"),
+  TranslatedName(LangJav(), name: "Rial Qatar"),
+  TranslatedName(LangKur(), name: "riyalê qeterî"),
+  TranslatedName(LangMri(), name: "Riyal Katā"),
+  TranslatedName(LangOri(), name: "କ୍ଵାତାରି ରିଆଲ୍"),
+  TranslatedName(LangPus(), name: "قطري ريال"),
+  TranslatedName(LangSrd(), name: "rial catarianu"),
+  TranslatedName(LangSom(), name: "Riyaalka Qatar"),
+  TranslatedName(LangTuk(), name: "Katar rialy"),
+  TranslatedName(LangTgl(), name: "Qatari Rial"),
+  TranslatedName(LangXho(), name: "I-Riyal yaseQatar"),
+  TranslatedName(LangYor(), name: "Ráyò Kàtárì"),
 ];

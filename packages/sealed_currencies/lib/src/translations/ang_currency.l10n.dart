@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Netherlands Antillean Guilder currency:
+/// Provides 107 translations for a Netherlands Antillean Guilder currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const angCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Netherlands Antillean Guilder"),
@@ -192,4 +208,20 @@ const angCurrencyTranslations = [
   TranslatedName(LangZho(), name: "荷属安的列斯盾"),
   TranslatedName(LangZho(), name: "荷屬安地列斯盾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Netherlands Antillean Guilder"),
+  TranslatedName(LangAsm(), name: "নেডাৰলেণ্ডছ এণ্টিলিয়েন গিল্ডাৰ"),
+  TranslatedName(LangChv(), name: "Нидерланд Антиллиан гульденӗ"),
+  TranslatedName(LangFul(), name: "𞤊𞤵𞤤𞤮𞤪𞤭𞤲 𞤀𞤲𞤼𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Antillean Guilder na ƙasar Netherlands"),
+  TranslatedName(LangIna(), name: "florino antillan"),
+  TranslatedName(LangIbo(), name: "Ego Antillean Guilder obodo Netherlands"),
+  TranslatedName(LangJav(), name: "Guilder Antilla Walanda"),
+  TranslatedName(LangKur(), name: "guldenê antîlê yê holandî"),
+  TranslatedName(LangMri(), name: "Guilder Anatiri Hōrana"),
+  TranslatedName(LangOri(), name: "ନେଦରଲ୍ୟାଣ୍ଡ୍ ଆଣ୍ଟିଲିୟ ଗିଲଡର୍"),
+  TranslatedName(LangPus(), name: "هالېنډي انټيليايي ګيلډر"),
+  TranslatedName(LangSrd(), name: "fiorinu de sas Antillas Olandesas"),
+  TranslatedName(LangSom(), name: "Galdarka Nadarlaan Antiliyaan"),
+  TranslatedName(LangTuk(), name: "Niderland antil guldeni"),
+  TranslatedName(LangXho(), name: "Netherlands Antillean Guilder"),
+  TranslatedName(LangYor(), name: "Gílídà Netherlands Antillean"),
 ];

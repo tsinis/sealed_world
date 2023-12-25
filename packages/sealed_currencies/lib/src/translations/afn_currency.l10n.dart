@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Afghan Afghani currency:
+/// Provides 109 translations for a Afghan Afghani currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,10 +67,12 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
@@ -70,17 +80,21 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const afnCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Afghan Afghani"),
@@ -183,4 +199,20 @@ const afnCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Afghani Afghanistan"),
   TranslatedName(LangZho(), name: "阿富汗尼"),
   TranslatedName(LangZul(), name: "i-Afghan Afghani"),
+  TranslatedName(LangAsm(), name: "আফগান আফগানী"),
+  TranslatedName(LangChv(), name: "афганийӗ"),
+  TranslatedName(LangFul(), name: "𞤀𞤬𞤿𞤢𞤲𞤭 𞤀𞤬𞤿𞤢𞤲𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Afghani na ƙasar Afghanistan"),
+  TranslatedName(LangIna(), name: "afghani"),
+  TranslatedName(LangIbo(), name: "Ego Afghani Obodo Afghanistan"),
+  TranslatedName(LangJav(), name: "Afghani Afganistan"),
+  TranslatedName(LangKur(), name: "efxaniyê efxanistanî"),
+  TranslatedName(LangMri(), name: "Afghani Awhekenetāna"),
+  TranslatedName(LangOri(), name: "ଆଫଗାନ ଆଫଗାନି"),
+  TranslatedName(LangSrd(), name: "afgani afganu"),
+  TranslatedName(LangSom(), name: "Afgan Afgani"),
+  TranslatedName(LangTuk(), name: "Owgan afganisi"),
+  TranslatedName(LangTgl(), name: "Afghan Afghani"),
+  TranslatedName(LangXho(), name: "I-Afghani yase-Afghanistan"),
+  TranslatedName(LangYor(), name: "Afugánì Afuganísítàànì"),
 ];

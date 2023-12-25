@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Surinamese Dollar currency:
+/// Provides 110 translations for a Surinamese Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const srdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Surinamese Dollar"),
@@ -183,4 +199,20 @@ const srdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "蘇里南元", countryCode: "HK"),
   TranslatedName(LangZho(), name: "蘇利南元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Surinamese Dollar"),
+  TranslatedName(LangAsm(), name: "ছুৰিনামী ডলাৰ"),
+  TranslatedName(LangChv(), name: "Суринам долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤅𞤵𞤪𞤵𞤲𞤢𞤥𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dalar ƙasar Suriname"),
+  TranslatedName(LangIna(), name: "dollar surinamese"),
+  TranslatedName(LangIbo(), name: "Dollar Surinamese"),
+  TranslatedName(LangJav(), name: "Dolar Suriname"),
+  TranslatedName(LangKur(), name: "dolarê surînamî"),
+  TranslatedName(LangMri(), name: "Tāra Huriname"),
+  TranslatedName(LangOri(), name: "ସୁରିନାମିଜ୍ ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "سورينيمي ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru surinamesu"),
+  TranslatedName(LangSom(), name: "Doolarka Surinamees"),
+  TranslatedName(LangTuk(), name: "Surinam dollary"),
+  TranslatedName(LangXho(), name: "IDola yaseSuriname"),
+  TranslatedName(LangYor(), name: "Dọ́là Súrínámì"),
 ];

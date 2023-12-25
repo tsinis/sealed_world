@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 104 translations for a Burundian Franc currency:
+/// Provides 118 translations for a Burundian Franc currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const bifCurrencyTranslations = [
@@ -210,4 +224,18 @@ const bifCurrencyTranslations = [
   TranslatedName(LangZho(), name: "布隆迪法郎"),
   TranslatedName(LangZho(), name: "蒲隆地法郎", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Burundian Franc"),
+  TranslatedName(LangAsm(), name: "বুৰুণ্ডিয়ান ফ্ৰেংক"),
+  TranslatedName(LangChv(), name: "Бурунди франкӗ"),
+  TranslatedName(LangIna(), name: "franco burundese"),
+  TranslatedName(LangIbo(), name: "Ego Franc obodo Burundi"),
+  TranslatedName(LangJav(), name: "Franc Burundi"),
+  TranslatedName(LangKur(), name: "frenkê birûndiyî"),
+  TranslatedName(LangMri(), name: "Franc Puruniti"),
+  TranslatedName(LangOri(), name: "ବୁରୁଣ୍ଡିୟ ଫ୍ରାଙ୍କ୍"),
+  TranslatedName(LangPus(), name: "برونډي فرانک"),
+  TranslatedName(LangSrd(), name: "francu burundianu"),
+  TranslatedName(LangSom(), name: "Faranka Burundi"),
+  TranslatedName(LangTuk(), name: "Burundi franky"),
+  TranslatedName(LangTgl(), name: "Burundian Franc"),
+  TranslatedName(LangXho(), name: "I-Franc yaseBurundi"),
 ];

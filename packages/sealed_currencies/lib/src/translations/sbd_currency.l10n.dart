@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Solomon Islands Dollar currency:
+/// Provides 109 translations for a Solomon Islands Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const sbdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Solomon Islands Dollar"),
@@ -191,4 +207,20 @@ const sbdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "所羅門群島元", countryCode: "HK"),
   TranslatedName(LangZho(), name: "索羅門群島元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Solomon Islands Dollar"),
+  TranslatedName(LangAsm(), name: "চোলোমোন দ্বীপপুঞ্জৰ ডলাৰ"),
+  TranslatedName(LangChv(), name: "Соломон утравӗсен долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤅𞤵𞤤𞤢𞤴𞤥𞤢𞥄𞤲"),
+  TranslatedName(LangHau(), name: "Dalar Tsibirai na Solomon"),
+  TranslatedName(LangIna(), name: "dollar del insulas Salomon"),
+  TranslatedName(LangIbo(), name: "Ego Dollar obodo Solomon Islands"),
+  TranslatedName(LangJav(), name: "Dolar Kepuloan Solomon"),
+  TranslatedName(LangKur(), name: "dolarê giravên solomonî"),
+  TranslatedName(LangMri(), name: "Tāra Moutere Horomona"),
+  TranslatedName(LangOri(), name: "ସୋଲୋମୋନ୍ ଦ୍ଵୀପପୁଞ୍ଜ ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "سولومن ټاپوګانو ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru de sas Ìsulas Salomone"),
+  TranslatedName(LangSom(), name: "Doolarka Solomon Aylaanis"),
+  TranslatedName(LangTuk(), name: "Solomon adalarynyň dollary"),
+  TranslatedName(LangXho(), name: "IDola yaseSolomon Islands"),
+  TranslatedName(LangYor(), name: "Dọ́là Erékùsù Sọ́lómọ́nì"),
 ];

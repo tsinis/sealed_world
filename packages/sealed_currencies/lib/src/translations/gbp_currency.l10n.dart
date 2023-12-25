@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 111 translations for a British Pound currency:
+/// Provides 112 translations for a British Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -94,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Thai
 /// - Tigrinya
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -224,4 +225,5 @@ const gbpCurrencyTranslations = [
   TranslatedName(LangZho(), name: "英镑"),
   TranslatedName(LangZho(), name: "英鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-British Pound"),
+  TranslatedName(LangTuk(), name: "Britan funt sterlingi"),
 ];

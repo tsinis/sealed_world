@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a South African Rand currency:
+/// Provides 119 translations for a South African Rand currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,11 +90,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -94,6 +105,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -215,4 +227,16 @@ const zarCurrencyTranslations = [
   TranslatedName(LangZho(), name: "南非兰特"),
   TranslatedName(LangZho(), name: "南非蘭特", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-South African Rand"),
+  TranslatedName(LangAsm(), name: "দক্ষিণ আফ্ৰিকাৰ ৰাণ্ড"),
+  TranslatedName(LangChv(), name: "Кӑнтӑр Африка рэндӗ"),
+  TranslatedName(LangIna(), name: "rand sudafrican"),
+  TranslatedName(LangIbo(), name: "Ego Rand obodo South Africa"),
+  TranslatedName(LangJav(), name: "Rand Afrika Kidul"),
+  TranslatedName(LangKur(), name: "randê afrîkaya başûrî"),
+  TranslatedName(LangMri(), name: "Rand Āwherika ki te Tonga"),
+  TranslatedName(LangOri(), name: "ଦକ୍ଷିଣ ଆଫ୍ରିକିୟ ରାଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "جنوبي افريقاېي رنډ"),
+  TranslatedName(LangSrd(), name: "rand sudafricanu"),
+  TranslatedName(LangSom(), name: "Randka Koonfur Afrika"),
+  TranslatedName(LangTuk(), name: "Günorta Afrika rendi"),
 ];

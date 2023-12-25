@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Honduran Lempira currency:
+/// Provides 108 translations for a Honduran Lempira currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const hnlCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Honduran Lempira"),
@@ -181,4 +197,20 @@ const hnlCurrencyTranslations = [
   TranslatedName(LangZho(), name: "洪都拉斯伦皮拉"),
   TranslatedName(LangZho(), name: "洪都拉斯倫皮拉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Honduran Lempira"),
+  TranslatedName(LangAsm(), name: "হোন্দুৰান লেম্পিৰা"),
+  TranslatedName(LangChv(), name: "Гондурас лемпирӗ"),
+  TranslatedName(LangFul(), name: "𞤂𞤫𞤥𞤨𞤭𞤪𞤢 𞤖𞤮𞤲𞤣𞤵𞤪𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Lempira na ƙasar Honduras"),
+  TranslatedName(LangIna(), name: "lempira hondurese"),
+  TranslatedName(LangIbo(), name: "Ego Lempira obodo Honduras"),
+  TranslatedName(LangJav(), name: "Lempira Honduras"),
+  TranslatedName(LangKur(), name: "lempîrayê hondurasî"),
+  TranslatedName(LangMri(), name: "Lempira Honotura"),
+  TranslatedName(LangOri(), name: "ହୋଣ୍ଡୁରୀୟ ଲେମପିରା"),
+  TranslatedName(LangPus(), name: "هونډوران ليمپيرا"),
+  TranslatedName(LangSrd(), name: "lempira hondurenu"),
+  TranslatedName(LangSom(), name: "Lembirada Honduras"),
+  TranslatedName(LangTuk(), name: "Gonduras lempirasy"),
+  TranslatedName(LangXho(), name: "Honduran Lempira"),
+  TranslatedName(LangYor(), name: "Lẹmipírà Ọ́ńdúrà"),
 ];

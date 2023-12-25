@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Zambian Kwacha currency:
+/// Provides 120 translations for a Zambian Kwacha currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const zmwCurrencyTranslations = [
@@ -212,4 +226,18 @@ const zmwCurrencyTranslations = [
   TranslatedName(LangZho(), name: "贊比亞克瓦查", countryCode: "HK"),
   TranslatedName(LangZho(), name: "尚比亞克瓦查", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Zambian Kwacha"),
+  TranslatedName(LangAsm(), name: "জাম্বিয়ান কোৱাচা"),
+  TranslatedName(LangChv(), name: "Замби квачи"),
+  TranslatedName(LangIna(), name: "kwacha zambian"),
+  TranslatedName(LangIbo(), name: "Ego Kwacha Obodo Zambia"),
+  TranslatedName(LangJav(), name: "Kwacha Sambia"),
+  TranslatedName(LangKur(), name: "kwaçayê zambiyayî"),
+  TranslatedName(LangMri(), name: "Kwacha Tāmipia"),
+  TranslatedName(LangOri(), name: "ଜାମ୍ବୀୟ କ୍ୱାଚା"),
+  TranslatedName(LangPus(), name: "زيمبي کواچا"),
+  TranslatedName(LangSrd(), name: "kwacha zambiana"),
+  TranslatedName(LangSom(), name: "Kawajada Sambiya"),
+  TranslatedName(LangTuk(), name: "Zambiýa kwaçasy"),
+  TranslatedName(LangTgl(), name: "Zambian Kwacha"),
+  TranslatedName(LangXho(), name: "I-Kwacha yaseZambi"),
 ];

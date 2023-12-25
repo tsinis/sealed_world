@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 95 translations for a Ghanaian Cedi currency:
+/// Provides 112 translations for a Ghanaian Cedi currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -20,6 +21,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,6 +32,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,15 +43,19 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const ghsCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Ghanaian Cedi"),
@@ -185,4 +201,21 @@ const ghsCurrencyTranslations = [
   TranslatedName(LangZho(), name: "加納塞地", countryCode: "HK"),
   TranslatedName(LangZho(), name: "迦納塞地", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Ghanaian Cedi"),
+  TranslatedName(LangAsm(), name: "ঘানাৰ চেডি"),
+  TranslatedName(LangChv(), name: "Гана седийӗ"),
+  TranslatedName(LangFul(), name: "𞤅𞤭𞤣𞤭 𞤘𞤢𞤲𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Sidi na Ghana"),
+  TranslatedName(LangIna(), name: "cedi ghanese"),
+  TranslatedName(LangIbo(), name: "Ego Cedi obodo Ghana"),
+  TranslatedName(LangJav(), name: "Cedi Ghana"),
+  TranslatedName(LangKur(), name: "cediyê ganayî"),
+  TranslatedName(LangMri(), name: "Cedi Kāna"),
+  TranslatedName(LangOri(), name: "ଘାନିୟ ସେଡି"),
+  TranslatedName(LangPus(), name: "ګانين سيډي"),
+  TranslatedName(LangSrd(), name: "cedi ganesu"),
+  TranslatedName(LangSom(), name: "Sedida Gana"),
+  TranslatedName(LangTuk(), name: "Gano sedisi"),
+  TranslatedName(LangTgl(), name: "Ghanaian Cedi"),
+  TranslatedName(LangXho(), name: "I-Cedi yaseGhana"),
+  TranslatedName(LangYor(), name: "sídì Gana"),
 ];

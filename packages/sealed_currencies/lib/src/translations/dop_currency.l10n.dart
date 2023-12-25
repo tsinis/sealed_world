@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Dominican Peso currency:
+/// Provides 108 translations for a Dominican Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const dopCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Dominican Peso"),
@@ -181,4 +197,20 @@ const dopCurrencyTranslations = [
   TranslatedName(LangZho(), name: "多米尼加披索", countryCode: "HK"),
   TranslatedName(LangZho(), name: "多明尼加披索", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Dominican Peso"),
+  TranslatedName(LangAsm(), name: "ড’মিনিকান পেছো"),
+  TranslatedName(LangChv(), name: "Доминикан песийӗ"),
+  TranslatedName(LangFul(), name: "𞤆𞤫𞤧𞤮 𞤁𞤮𞤥𞤭𞤲𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Peso na jamhuriyar Dominica"),
+  TranslatedName(LangIna(), name: "peso dominican"),
+  TranslatedName(LangIbo(), name: "Ego Peso Obodo Dominica"),
+  TranslatedName(LangJav(), name: "Peso Dominika"),
+  TranslatedName(LangKur(), name: "pesoyê domînîkî"),
+  TranslatedName(LangMri(), name: "Peso Tominika"),
+  TranslatedName(LangOri(), name: "ଡୋମିନିକୀୟ ପେସୋ"),
+  TranslatedName(LangPus(), name: "دومينيکا پسو"),
+  TranslatedName(LangSrd(), name: "peso dominicanu"),
+  TranslatedName(LangSom(), name: "Beesada Dominiika"),
+  TranslatedName(LangTuk(), name: "Dominikan pesosy"),
+  TranslatedName(LangXho(), name: "Dominican Peso"),
+  TranslatedName(LangYor(), name: "Pẹ́sò Dòníníkà"),
 ];

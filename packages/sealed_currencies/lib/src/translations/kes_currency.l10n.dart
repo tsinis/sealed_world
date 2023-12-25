@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 108 translations for a Kenyan Shilling currency:
+/// Provides 122 translations for a Kenyan Shilling currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,12 +75,15 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -82,6 +91,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
@@ -91,10 +101,12 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -102,6 +114,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const kesCurrencyTranslations = [
@@ -217,4 +230,18 @@ const kesCurrencyTranslations = [
   TranslatedName(LangZho(), name: "肯雅先令", countryCode: "HK"),
   TranslatedName(LangZho(), name: "肯尼亞先令", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Kenyan Shilling"),
+  TranslatedName(LangAsm(), name: "কেনিয়ান শ্বিলিং"),
+  TranslatedName(LangChv(), name: "Кени шиллингӗ"),
+  TranslatedName(LangIna(), name: "shilling kenyan"),
+  TranslatedName(LangIbo(), name: "Ego Shilling obodo Kenya"),
+  TranslatedName(LangJav(), name: "Shilling Kenya"),
+  TranslatedName(LangKur(), name: "şîlîngê kenyayî"),
+  TranslatedName(LangMri(), name: "Hereni Kenia"),
+  TranslatedName(LangOri(), name: "କେନିୟ ଶିଲିଂ"),
+  TranslatedName(LangPus(), name: "کينيايي شيلنګ"),
+  TranslatedName(LangSrd(), name: "iscellinu kenianu"),
+  TranslatedName(LangSom(), name: "Shilingka Kenya"),
+  TranslatedName(LangTuk(), name: "Keniýa şillingi"),
+  TranslatedName(LangTgl(), name: "Kenyan Shilling"),
+  TranslatedName(LangXho(), name: "I-Shilling yaseKenya"),
 ];

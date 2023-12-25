@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 85 translations for a South Sudanese Pound currency:
+/// Provides 102 translations for a South Sudanese Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -28,23 +30,29 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,18 +64,24 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -76,6 +90,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -83,6 +98,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const sspCurrencyTranslations = [
   TranslatedName(LangEng(), name: "South Sudanese Pound"),
@@ -170,4 +187,24 @@ const sspCurrencyTranslations = [
   TranslatedName(LangZho(), name: "南苏丹镑"),
   TranslatedName(LangZho(), name: "南蘇丹鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-South Sudanese Pound"),
+  TranslatedName(LangAsm(), name: "দক্ষিণ চুডানীজ পাউণ্ড"),
+  TranslatedName(LangChv(), name: "Кӑнтӑр Судан фунчӗ"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤆𞤢𞤱𞤲𞤣𞤵 𞤂𞤫𞤴𞤤𞤫𞤴𞤪𞤭 𞤅𞤵𞤣𞤢𞤲𞤭𞤲𞤳𞤮",
+  ),
+  TranslatedName(LangHau(), name: "Fam na Kudancin Sudan"),
+  TranslatedName(LangIna(), name: "libra sud-sudanese"),
+  TranslatedName(LangIbo(), name: "Ego Pound obodo South Sudan"),
+  TranslatedName(LangJav(), name: "Pound Sudan Kidul"),
+  TranslatedName(LangKur(), name: "lîreyê sûdana başûrî"),
+  TranslatedName(LangMri(), name: "Pāuna Hūtāne Tonga"),
+  TranslatedName(LangOri(), name: "ଦକ୍ଷିଣ ସୁଡାନିଜ୍‍ ପାଉଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "جنوب سوډاني پونډ"),
+  TranslatedName(LangRoh(), name: "glivra sidsudanaisa"),
+  TranslatedName(LangSrd(), name: "isterlina sud-sudanesa"),
+  TranslatedName(LangSom(), name: "Bowndka Koonfurta Suudaan"),
+  TranslatedName(LangTuk(), name: "Günorta Sudan funty"),
+  TranslatedName(LangXho(), name: "IPonti yaseSouth Sudan"),
+  TranslatedName(LangYor(), name: "Pọ́n-un Gúúsù Sùdáànì"),
 ];

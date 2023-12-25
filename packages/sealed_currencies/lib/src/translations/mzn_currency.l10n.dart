@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Mozambican Metical currency:
+/// Provides 108 translations for a Mozambican Metical currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -28,24 +30,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,27 +65,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -85,6 +100,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const mznCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Mozambican Metical"),
@@ -178,4 +195,21 @@ const mznCurrencyTranslations = [
   TranslatedName(LangZho(), name: "莫桑比克梅蒂卡爾", countryCode: "HK"),
   TranslatedName(LangZho(), name: "莫三比克梅蒂卡爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Mozambican Metical"),
+  TranslatedName(LangAsm(), name: "মোজাম্বিকান মেটিকল"),
+  TranslatedName(LangChv(), name: "Мозамбик метикалӗ"),
+  TranslatedName(LangFul(), name: "𞤃𞤫𞤼𞤭𞤳𞤮𞤤 𞤃𞤮𞥁𞤢𞤥𞤦𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Metical na ƙasar Mozambique"),
+  TranslatedName(LangIna(), name: "metical mozambican"),
+  TranslatedName(LangIbo(), name: "Ego Metical obodo Mozambique"),
+  TranslatedName(LangJav(), name: "Metical Mosambik"),
+  TranslatedName(LangKur(), name: "meticalê mozambîkî"),
+  TranslatedName(LangMri(), name: "Metical Mohapiki"),
+  TranslatedName(LangOri(), name: "ମୋଜାମ୍ବିକୀୟ ମେଟିକାଲ୍"),
+  TranslatedName(LangPus(), name: "موزمبيقي ميټيکل"),
+  TranslatedName(LangSrd(), name: "metical mozambicanu"),
+  TranslatedName(LangSom(), name: "Metikalka Mosambik"),
+  TranslatedName(LangTuk(), name: "Mozambik metikaly"),
+  TranslatedName(LangTgl(), name: "Mozambican Metical"),
+  TranslatedName(LangXho(), name: "I-Metical yaseMozambique"),
+  TranslatedName(LangYor(), name: "Mẹ́tíkààlì Mòsáḿbíìkì"),
 ];

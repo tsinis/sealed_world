@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 88 translations for a Turkmenistani Manat currency:
+/// Provides 106 translations for a Turkmenistani Manat currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,23 +31,29 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,25 +65,33 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -83,6 +99,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const tmtCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Turkmenistani Manat"),
@@ -181,4 +199,25 @@ const tmtCurrencyTranslations = [
   TranslatedName(LangZho(), name: "土库曼斯坦马纳特"),
   TranslatedName(LangZho(), name: "土庫曼馬納特", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Turkmenistani Manat"),
+  TranslatedName(LangAsm(), name: "তুৰ্কমেনিস্তানী মানাত"),
+  TranslatedName(LangChv(), name: "Туркмен маначӗ"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤢𞤲𞤢𞤼𞤵 𞤚𞤵𞤪𞤳𞤵𞤥𞤫𞤲𞤭𞤧𞤼𞤢𞤲𞤳𞤮",
+  ),
+  TranslatedName(LangHau(), name: "Manat na ƙasar Turkmenistan"),
+  TranslatedName(LangIna(), name: "manat turkmen"),
+  TranslatedName(LangIbo(), name: "Ego Manat Obodo Turkmenistan"),
+  TranslatedName(LangJav(), name: "Manat Turmenistan"),
+  TranslatedName(LangKur(), name: "manatê tirkmenî"),
+  TranslatedName(LangMri(), name: "Manat Tukumanatānga"),
+  TranslatedName(LangOri(), name: "ତୁର୍କମେନିସ୍ତାନୀ ମନତ୍‌"),
+  TranslatedName(LangPus(), name: "ترکمانستاني منت"),
+  TranslatedName(LangRoh(), name: "manat turkmen"),
+  TranslatedName(LangSrd(), name: "manat turkmenu"),
+  TranslatedName(LangSom(), name: "Manaata Turkmenistan"),
+  TranslatedName(LangTuk(), name: "Türkmen manady"),
+  TranslatedName(LangTgl(), name: "Turkmenistani Manat"),
+  TranslatedName(LangXho(), name: "I-Manat yaseTurkmenistan"),
+  TranslatedName(LangYor(), name: "Mánààtì Tọkimẹnístàànì"),
 ];

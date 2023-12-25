@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 104 translations for a Malawian Kwacha currency:
+/// Provides 118 translations for a Malawian Kwacha currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -42,10 +44,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -53,6 +58,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -67,11 +73,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -79,18 +88,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -98,6 +111,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const mwkCurrencyTranslations = [
@@ -209,4 +223,18 @@ const mwkCurrencyTranslations = [
   TranslatedName(LangZho(), name: "马拉维克瓦查"),
   TranslatedName(LangZho(), name: "馬拉維克瓦查", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Malawian Kwacha"),
+  TranslatedName(LangAsm(), name: "মালাউইয়ান কোৱাচা"),
+  TranslatedName(LangChv(), name: "Малави квачӗ"),
+  TranslatedName(LangIna(), name: "kwacha malawian"),
+  TranslatedName(LangIbo(), name: "Ego Kwacha obodo Malawi"),
+  TranslatedName(LangJav(), name: "Kwacha Malawi"),
+  TranslatedName(LangKur(), name: "kwaçayê malawiyê"),
+  TranslatedName(LangMri(), name: "Kwacha Marāwi"),
+  TranslatedName(LangOri(), name: "ମଲାୱି କ୍ୱାଚା"),
+  TranslatedName(LangPus(), name: "ملاوي کواچا"),
+  TranslatedName(LangSrd(), name: "kwacha malawiana"),
+  TranslatedName(LangSom(), name: "Kawajada Malawi"),
+  TranslatedName(LangTuk(), name: "Malawi kwaçasy"),
+  TranslatedName(LangTgl(), name: "Malawian Kwacha"),
+  TranslatedName(LangXho(), name: "I-Kwacha yaseMalawi"),
 ];

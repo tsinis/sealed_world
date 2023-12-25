@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Papua New Guinean Kina currency:
+/// Provides 109 translations for a Papua New Guinean Kina currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -34,19 +36,24 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,28 +65,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const pgkCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Papua New Guinean Kina"),
@@ -194,4 +210,20 @@ const pgkCurrencyTranslations = [
   TranslatedName(LangZho(), name: "巴布亞新幾內亞基那", countryCode: "HK"),
   TranslatedName(LangZho(), name: "巴布亞紐幾內亞基那", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Papua New Guinean Kina"),
+  TranslatedName(LangAsm(), name: "পাপুৱা নিউ গিনি কিনা"),
+  TranslatedName(LangChv(), name: "Папуа – Ҫӗнӗ Гвиней кини"),
+  TranslatedName(LangHau(), name: "Kina na ƙasar Papua Sabon Guinea"),
+  TranslatedName(LangIna(), name: "kina papuan"),
+  TranslatedName(LangIbo(), name: "Ego Kina obodo Papua New Guinea"),
+  TranslatedName(LangJav(), name: "Kina Papua Nugini"),
+  TranslatedName(LangKur(), name: "kînayê gîneya nû ya papûayî"),
+  TranslatedName(LangMri(), name: "Kina Papua Nūkini"),
+  TranslatedName(LangOri(), name: "ପପୁଆ ନ୍ୟୁ ଗୁଇନିୟ କିନା"),
+  TranslatedName(LangPus(), name: "پاپوا نيوګاني کينا"),
+  TranslatedName(LangSrd(), name: "kina papuana"),
+  TranslatedName(LangSom(), name: "Kinada Babua Niyuu Gini"),
+  TranslatedName(LangTuk(), name: "Papua - Täze Gwineýa kinasy"),
+  TranslatedName(LangTgl(), name: "Papua New Guinean Kina"),
+  TranslatedName(LangXho(), name: "I-Kina yasePapua New Guinea"),
+  TranslatedName(LangYor(), name: "Kínà Papua Guinea Tuntun"),
 ];

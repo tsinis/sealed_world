@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Iraqi Dinar currency:
+/// Provides 107 translations for a Iraqi Dinar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const iqdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Iraqi Dinar"),
@@ -179,4 +196,21 @@ const iqdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "伊拉克第纳尔"),
   TranslatedName(LangZho(), name: "伊拉克第納爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Iraqi Dinar"),
+  TranslatedName(LangAsm(), name: "ইৰাকী ডিনাৰ"),
+  TranslatedName(LangChv(), name: "Ирак динарӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤭𞤲𞤢𞥄𞤪 𞤋𞤪𞤢𞥄𞤳𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dinarin Iraqi"),
+  TranslatedName(LangIna(), name: "dinar iraqi"),
+  TranslatedName(LangIbo(), name: "Ego Dinar obodo Iraq"),
+  TranslatedName(LangJav(), name: "Dinar Irak"),
+  TranslatedName(LangKur(), name: "dînarê îraqî"),
+  TranslatedName(LangMri(), name: "Dinar Irāka"),
+  TranslatedName(LangOri(), name: "ଇରାକି ଦିନାର୍"),
+  TranslatedName(LangPus(), name: "عراقي دينار"),
+  TranslatedName(LangSrd(), name: "dinar irachenu"),
+  TranslatedName(LangSom(), name: "Dinaarka Ciraaq"),
+  TranslatedName(LangTuk(), name: "Yrak dinary"),
+  TranslatedName(LangTgl(), name: "Iraqi Dinar"),
+  TranslatedName(LangXho(), name: "I-Dinar yase-Iraq"),
+  TranslatedName(LangYor(), name: "Dínárì Ìráákì"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Guinean Franc currency:
+/// Provides 107 translations for a Guinean Franc currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -35,19 +37,24 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const gnfCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Guinean Franc"),
@@ -180,4 +196,20 @@ const gnfCurrencyTranslations = [
   TranslatedName(LangZho(), name: "几内亚法郎"),
   TranslatedName(LangZho(), name: "幾內亞法郎", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Gunean Franc"),
+  TranslatedName(LangAsm(), name: "গিনি ফ্ৰেংক"),
+  TranslatedName(LangChv(), name: "Гвиней франкӗ"),
+  TranslatedName(LangHau(), name: "Kuɗin Guinea"),
+  TranslatedName(LangIna(), name: "franco guinean"),
+  TranslatedName(LangIbo(), name: "Ego Franc obodo Guinea"),
+  TranslatedName(LangJav(), name: "Franc Guinea"),
+  TranslatedName(LangKur(), name: "frankê gîneyî"),
+  TranslatedName(LangMri(), name: "Franc Kini"),
+  TranslatedName(LangOri(), name: "ଗୁଇନେୟ ଫ୍ରାଙ୍କ୍"),
+  TranslatedName(LangPus(), name: "ګنې فرانک"),
+  TranslatedName(LangSrd(), name: "francu guineanu"),
+  TranslatedName(LangSom(), name: "Faranka Gini"),
+  TranslatedName(LangTuk(), name: "Gwineý franky"),
+  TranslatedName(LangTgl(), name: "Guinean Franc"),
+  TranslatedName(LangXho(), name: "I-Franc yaseGuinea"),
+  TranslatedName(LangYor(), name: "Fírànkì Gínì"),
 ];

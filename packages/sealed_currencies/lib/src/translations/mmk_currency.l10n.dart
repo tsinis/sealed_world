@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Myanmar Kyat currency:
+/// Provides 109 translations for a Myanmar Kyat currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const mmkCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Myanmar Kyat"),
@@ -181,4 +198,21 @@ const mmkCurrencyTranslations = [
   TranslatedName(LangZho(), name: "缅甸元"),
   TranslatedName(LangZho(), name: "緬甸元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Myanma Kyat"),
+  TranslatedName(LangAsm(), name: "ম্যানমাৰ কিয়াট"),
+  TranslatedName(LangChv(), name: "Мьянман кьятӗ"),
+  TranslatedName(LangFul(), name: "𞤑𞤭𞤴𞤢𞤼𞤵 𞤃𞤭𞤴𞤢𞤥𞤢𞤪𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Myanmar"),
+  TranslatedName(LangIna(), name: "kyat de Myanmar"),
+  TranslatedName(LangIbo(), name: "Ego Kyat obodo Myanmar"),
+  TranslatedName(LangJav(), name: "Kyat Myanmar"),
+  TranslatedName(LangKur(), name: "kyatê myanmarî"),
+  TranslatedName(LangMri(), name: "Kyat Pēma"),
+  TranslatedName(LangOri(), name: "ମ୍ୟାନମାର୍ କ୍ୟାତ୍‌"),
+  TranslatedName(LangPus(), name: "ميانماري کيات"),
+  TranslatedName(LangSrd(), name: "kyat de su Myanmar"),
+  TranslatedName(LangSom(), name: "Kayatda Mayanmaar"),
+  TranslatedName(LangTuk(), name: "Mýanma kýaty"),
+  TranslatedName(LangTgl(), name: "Myanmar Kyat"),
+  TranslatedName(LangXho(), name: "I-Kyat yaseMyanmar"),
+  TranslatedName(LangYor(), name: "Kíyàtì Myanmar"),
 ];

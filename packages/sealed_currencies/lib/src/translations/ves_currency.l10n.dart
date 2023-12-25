@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Venezuelan Bolívar Soberano currency:
+/// Provides 108 translations for a Venezuelan Bolívar Soberano currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const vesCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Venezuelan Bolívar"),
@@ -190,4 +206,20 @@ const vesCurrencyTranslations = [
   TranslatedName(LangZho(), name: "委内瑞拉玻利瓦尔"),
   TranslatedName(LangZho(), name: "委內瑞拉玻利瓦", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Venezuelan Bolívar"),
+  TranslatedName(LangAsm(), name: "ভেনিজুৱেলান বলিভাৰ"),
+  TranslatedName(LangChv(), name: "Венесуэла боливарӗ"),
+  TranslatedName(LangFul(), name: "𞤄𞤮𞤤𞤭𞤾𞤢𞥄𞤪 𞤜𞤫𞤲𞤭𞥅𞤧𞤫𞤤𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Bolívar na ƙasar Venezuela"),
+  TranslatedName(LangIna(), name: "bolivar venezuelan"),
+  TranslatedName(LangIbo(), name: "Ego Bolivar obodo Venezuela"),
+  TranslatedName(LangJav(), name: "Bolivar Venezuela"),
+  TranslatedName(LangKur(), name: "bolîvarê venezuelayî"),
+  TranslatedName(LangMri(), name: "Bolivar Penehūera"),
+  TranslatedName(LangOri(), name: "ଭେନେଜୁଏଲାନ୍ ବୋଲିଭାର୍"),
+  TranslatedName(LangPus(), name: "وينزويلي بوليوار"),
+  TranslatedName(LangSrd(), name: "bolivar venezuelanu"),
+  TranslatedName(LangSom(), name: "Bolifarada Fenesuwela"),
+  TranslatedName(LangTuk(), name: "Wenesuela boliwary"),
+  TranslatedName(LangXho(), name: "I-Bolívar yaseVenezuela"),
+  TranslatedName(LangYor(), name: "Bọ̀lífà Fẹnẹsuẹ́là"),
 ];

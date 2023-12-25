@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Algerian Dinar currency:
+/// Provides 120 translations for a Algerian Dinar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,18 +90,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const dzdCurrencyTranslations = [
@@ -213,4 +227,18 @@ const dzdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "阿尔及利亚第纳尔"),
   TranslatedName(LangZho(), name: "阿爾及利亞第納爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Algerian Dinar"),
+  TranslatedName(LangAsm(), name: "আলজেৰীয় ডিনাৰ"),
+  TranslatedName(LangChv(), name: "Алжир динарӗ"),
+  TranslatedName(LangIna(), name: "dinar algerin"),
+  TranslatedName(LangIbo(), name: "Ego Dinar Obodo Algeria"),
+  TranslatedName(LangJav(), name: "Dinar Algeria"),
+  TranslatedName(LangKur(), name: "dînarê cezayîrî"),
+  TranslatedName(LangMri(), name: "Dinar Aratiria"),
+  TranslatedName(LangOri(), name: "ଆଲଜେରୀୟ ଦିନାର୍"),
+  TranslatedName(LangPus(), name: "الجيرين دينار"),
+  TranslatedName(LangSrd(), name: "dinar algerinu"),
+  TranslatedName(LangSom(), name: "Dinaarka Aljeriya"),
+  TranslatedName(LangTuk(), name: "Alžir dinary"),
+  TranslatedName(LangTgl(), name: "Algerian Dinar"),
+  TranslatedName(LangXho(), name: "I-Dinar yase-Algeria"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Moroccan Dirham currency:
+/// Provides 120 translations for a Moroccan Dirham currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,18 +90,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const madCurrencyTranslations = [
@@ -213,4 +227,18 @@ const madCurrencyTranslations = [
   ),
   TranslatedName(LangZho(), name: "摩洛哥迪拉姆"),
   TranslatedName(LangZul(), name: "i-Moroccan Dirham"),
+  TranslatedName(LangAsm(), name: "মৰোক্কান ডিৰহাম"),
+  TranslatedName(LangChv(), name: "Марокко дирхамӗ"),
+  TranslatedName(LangIna(), name: "dirham marocchin"),
+  TranslatedName(LangIbo(), name: "Ego Dirham obodo Morocco"),
+  TranslatedName(LangJav(), name: "Dirham Maroko"),
+  TranslatedName(LangKur(), name: "dîrhemê fasî"),
+  TranslatedName(LangMri(), name: "Dirham Moroko"),
+  TranslatedName(LangOri(), name: "ମୋରୋକୀୟ ଦିର୍ହାମ୍"),
+  TranslatedName(LangPus(), name: "مراکشي درهم"),
+  TranslatedName(LangSrd(), name: "dirham marochinu"),
+  TranslatedName(LangSom(), name: "Dirhamka Moroko"),
+  TranslatedName(LangTuk(), name: "Marokko dirhamy"),
+  TranslatedName(LangTgl(), name: "Moroccan Dirham"),
+  TranslatedName(LangXho(), name: "Moroccan Dirham"),
 ];

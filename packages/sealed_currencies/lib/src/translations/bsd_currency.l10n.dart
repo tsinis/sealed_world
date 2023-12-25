@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Bahamian Dollar currency:
+/// Provides 108 translations for a Bahamian Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const bsdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Bahamian Dollar"),
@@ -181,4 +197,20 @@ const bsdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "巴哈马元"),
   TranslatedName(LangZho(), name: "巴哈馬元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Bahamian Dollar"),
+  TranslatedName(LangAsm(), name: "বাহামিয়ান ডলাৰ"),
+  TranslatedName(LangChv(), name: "Багам долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤄𞤢𞤸𞤢𞤥𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dalar ƙasar Bahamas"),
+  TranslatedName(LangIna(), name: "dollar bahamian"),
+  TranslatedName(LangIbo(), name: "Ego Dollar Obodo Bahamas"),
+  TranslatedName(LangJav(), name: "Dolar Bahamian"),
+  TranslatedName(LangKur(), name: "dolarê bahamayî"),
+  TranslatedName(LangMri(), name: "Tāra Pahama"),
+  TranslatedName(LangOri(), name: "ବାହାମୀୟ ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "بهاماسي ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru bahamesu"),
+  TranslatedName(LangSom(), name: "Doolarka Bahamaas"),
+  TranslatedName(LangTuk(), name: "Bagama dollary"),
+  TranslatedName(LangXho(), name: "Bahamian Dollar"),
+  TranslatedName(LangYor(), name: "Dọ́là Bàhámà"),
 ];

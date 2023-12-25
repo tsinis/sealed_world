@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Indonesian Rupiah currency:
+/// Provides 106 translations for a Indonesian Rupiah currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,16 +32,20 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -48,6 +54,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const idrCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Indonesian Rupiah"),
@@ -179,4 +195,20 @@ const idrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "印度尼西亚盾"),
   TranslatedName(LangZho(), name: "印尼盾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Indonesian Rupiah"),
+  TranslatedName(LangAsm(), name: "ইণ্ডোনেচিয়ান ৰুপিয়াহ"),
+  TranslatedName(LangChv(), name: "Индонези рупийӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤵𞤨𞤭𞤴𞤢 𞤋𞤲𞤣𞤮𞤲𞤫𞤧𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Rupiah na ƙasar Indonesia"),
+  TranslatedName(LangIna(), name: "rupia indonesian"),
+  TranslatedName(LangIbo(), name: "Ego Rupiah Obodo Indonesia"),
+  TranslatedName(LangKur(), name: "rûpiyê endonezî"),
+  TranslatedName(LangMri(), name: "Rupiah Initonīhia"),
+  TranslatedName(LangOri(), name: "ଇଣ୍ଡୋନେସିୟ ରୁପିଆ"),
+  TranslatedName(LangPus(), name: "انډونيشي روپيا"),
+  TranslatedName(LangSrd(), name: "rupia indonesiana"),
+  TranslatedName(LangSom(), name: "Rubiah Indonesiya"),
+  TranslatedName(LangTuk(), name: "Indoneziýa rupiýasy"),
+  TranslatedName(LangTgl(), name: "Indonesian Rupiah"),
+  TranslatedName(LangXho(), name: "I-Rupiah yase-Indonesia"),
+  TranslatedName(LangYor(), name: "Rúpìyá Indonésíà"),
 ];

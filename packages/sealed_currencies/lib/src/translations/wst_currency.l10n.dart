@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Samoan Tala currency:
+/// Provides 109 translations for a Samoan Tala currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,28 +66,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const wstCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Samoan Tala"),
@@ -181,4 +198,21 @@ const wstCurrencyTranslations = [
   TranslatedName(LangZho(), name: "萨摩亚塔拉"),
   TranslatedName(LangZho(), name: "西薩摩亞塔拉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Samoan Tala"),
+  TranslatedName(LangAsm(), name: "ছামোৱান টালা"),
+  TranslatedName(LangChv(), name: "Самоа тали"),
+  TranslatedName(LangFul(), name: "𞤚𞤢𞤤𞤢 𞤅𞤢𞤥𞤮𞤱𞤢𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Tala na ƙasar Samoa"),
+  TranslatedName(LangIna(), name: "tala samoan"),
+  TranslatedName(LangIbo(), name: "Ego Tala obodo Samoa"),
+  TranslatedName(LangJav(), name: "Tala Samoa"),
+  TranslatedName(LangKur(), name: "talayê somonî"),
+  TranslatedName(LangMri(), name: "Tala Hāmoa"),
+  TranslatedName(LangOri(), name: "ସାମୋୟିୟ ତାଲା"),
+  TranslatedName(LangPus(), name: "سموون تالا"),
+  TranslatedName(LangSrd(), name: "tala samoana"),
+  TranslatedName(LangSom(), name: "Tala Samao"),
+  TranslatedName(LangTuk(), name: "Samoa talasy"),
+  TranslatedName(LangTgl(), name: "Samoan Tala"),
+  TranslatedName(LangXho(), name: "I-Tala yaseSamoa"),
+  TranslatedName(LangYor(), name: "Tálà Sàmóà"),
 ];

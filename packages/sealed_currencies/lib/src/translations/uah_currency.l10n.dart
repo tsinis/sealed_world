@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Ukrainian Hryvnia currency:
+/// Provides 108 translations for a Ukrainian Hryvnia currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const uahCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Ukrainian Hryvnia"),
@@ -179,4 +196,24 @@ const uahCurrencyTranslations = [
   TranslatedName(LangZho(), name: "乌克兰格里夫纳"),
   TranslatedName(LangZho(), name: "烏克蘭格里夫納", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Ukrainian Hryvnia"),
+  TranslatedName(LangAsm(), name: "ইউক্ৰেইনীয় হৃভনিয়া"),
+  TranslatedName(LangChv(), name: "Украина гривни"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤖𞤵𞤪𞤢𞤾𞤫𞤲𞤭𞤴𞤢 𞤒𞤵𞤳𞤫𞤪𞤫𞥅𞤲𞤭𞤲𞤳𞤮",
+  ),
+  TranslatedName(LangHau(), name: "Kudin Ukrainian"),
+  TranslatedName(LangIna(), name: "hryvnia ukrainian"),
+  TranslatedName(LangIbo(), name: "Ego Hryvnia obodo Ukraine"),
+  TranslatedName(LangJav(), name: "Hryvnia Ukrania"),
+  TranslatedName(LangKur(), name: "grîvnayê ûkraynî"),
+  TranslatedName(LangMri(), name: "Hryvnia Ukareinga"),
+  TranslatedName(LangOri(), name: "ୟୁକ୍ରେନୀୟ ହ୍ରାଇଭନିଆ"),
+  TranslatedName(LangPus(), name: "اوکرايني هريونيا"),
+  TranslatedName(LangSrd(), name: "hryvnia ucraina"),
+  TranslatedName(LangSom(), name: "Hirfiniyada Yukreeyn"),
+  TranslatedName(LangTuk(), name: "Ukrain griwnasy"),
+  TranslatedName(LangTgl(), name: "Hryvnia ng Ukraine"),
+  TranslatedName(LangXho(), name: "I-Hryvnia yase-Ukraine"),
+  TranslatedName(LangYor(), name: "Ọrifiníyà Yukiréníà"),
 ];

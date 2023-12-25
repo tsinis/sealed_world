@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Trinidad & Tobago Dollar currency:
+/// Provides 110 translations for a Trinidad & Tobago Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const ttdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Trinidad & Tobago Dollar"),
@@ -203,4 +219,20 @@ const ttdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "千里達和多巴哥元", countryCode: "HK"),
   TranslatedName(LangZho(), name: "千里達及托巴哥元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Trinidad and Tobago Dollar"),
+  TranslatedName(LangAsm(), name: "ট্ৰিনিডাড আৰু টোবাগো ডলাৰ"),
+  TranslatedName(LangChv(), name: "Тринидад тата Тобаго долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤚𞤭𞤪𞤲𞤭𞤣𞤢𞥄𞤣 & 𞤚𞤮𞤦𞤢𞤺𞤮"),
+  TranslatedName(LangHau(), name: "Dalar ƙasar Trinidad da Tobago"),
+  TranslatedName(LangIna(), name: "dollar de Trinidad e Tobago"),
+  TranslatedName(LangIbo(), name: "Dollar Trinidad & Tobago"),
+  TranslatedName(LangJav(), name: "Dolar Trinidad lan Tobago"),
+  TranslatedName(LangKur(), name: "dolarê trinidad û tobagoyî"),
+  TranslatedName(LangMri(), name: "Tāra Tirinaki Tōpako"),
+  TranslatedName(LangOri(), name: "ତ୍ରିନିଦାଦ୍ ଏବଂ ଟୋବାଗୋ ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "ټرينيډاډ او ټوباګو ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru de Trinidad e Tobago"),
+  TranslatedName(LangSom(), name: "Doolarka Tirinidad iyo Tobago"),
+  TranslatedName(LangTuk(), name: "Trininad we Tobago dollary"),
+  TranslatedName(LangXho(), name: "Trinidad & Tobago Dollar"),
+  TranslatedName(LangYor(), name: "Dọ́là Trinidad & Tobago"),
 ];

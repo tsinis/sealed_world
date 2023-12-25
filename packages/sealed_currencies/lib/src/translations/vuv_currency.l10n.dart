@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Vanuatu Vatu currency:
+/// Provides 110 translations for a Vanuatu Vatu currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,28 +66,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const vuvCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Vanuatu Vatu"),
@@ -182,4 +199,21 @@ const vuvCurrencyTranslations = [
   TranslatedName(LangZho(), name: "瓦努阿圖瓦圖", countryCode: "HK"),
   TranslatedName(LangZho(), name: "萬那杜瓦圖", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Vanuatu Vatu"),
+  TranslatedName(LangAsm(), name: "ভানাটুৰ ভাটু"),
+  TranslatedName(LangChv(), name: "Вануату ватуйӗ"),
+  TranslatedName(LangFul(), name: "𞤜𞤢𞤼𞤵 𞤜𞤢𞤲𞤵𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Vatu da ƙasar Vanuatu"),
+  TranslatedName(LangIna(), name: "vatu vanuatuan"),
+  TranslatedName(LangIbo(), name: "Ego Vatu obodo Vanuatu"),
+  TranslatedName(LangJav(), name: "Vatu Vanuatu"),
+  TranslatedName(LangKur(), name: "vatûyê vanûatûyî"),
+  TranslatedName(LangMri(), name: "Vatu Whenuatū"),
+  TranslatedName(LangOri(), name: "ଭାନୁଆଟୁ ଭାଟୁ"),
+  TranslatedName(LangPus(), name: "ونواتو واتو"),
+  TranslatedName(LangSrd(), name: "vatu de Vanuatu"),
+  TranslatedName(LangSom(), name: "Fatu Fanuatu"),
+  TranslatedName(LangTuk(), name: "Wanuatu watusy"),
+  TranslatedName(LangTgl(), name: "Vanuatu Vatu"),
+  TranslatedName(LangXho(), name: "I-Vatu yaseVanuatu"),
+  TranslatedName(LangYor(), name: "Fátù Vanuatu"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a Sudanese Pound currency:
+/// Provides 118 translations for a Sudanese Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,11 +89,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -93,6 +104,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const sdgCurrencyTranslations = [
@@ -212,4 +225,17 @@ const sdgCurrencyTranslations = [
   TranslatedName(LangZho(), name: "苏丹镑"),
   TranslatedName(LangZho(), name: "蘇丹鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Sudanese Pound"),
+  TranslatedName(LangAsm(), name: "চুডানী পাউণ্ড"),
+  TranslatedName(LangChv(), name: "Судан фунчӗ"),
+  TranslatedName(LangIna(), name: "libra sudanese"),
+  TranslatedName(LangIbo(), name: "Ego Pound obodo Sudan"),
+  TranslatedName(LangJav(), name: "Pound Sudan"),
+  TranslatedName(LangKur(), name: "lîreyê sûdanî"),
+  TranslatedName(LangMri(), name: "Pāuna Hūtāne"),
+  TranslatedName(LangOri(), name: "ସୁଦାନୀଜ ପାଉଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "سوډاني پونډ"),
+  TranslatedName(LangSrd(), name: "isterlina sudanesa"),
+  TranslatedName(LangSom(), name: "Bowndka Suudaan"),
+  TranslatedName(LangTuk(), name: "Sudan funty"),
+  TranslatedName(LangXho(), name: "Sudanese Pound"),
 ];

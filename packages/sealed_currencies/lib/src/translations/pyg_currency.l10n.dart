@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 89 translations for a Paraguayan Guarani currency:
+/// Provides 106 translations for a Paraguayan Guarani currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const pygCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Paraguayan Guarani"),
@@ -177,4 +194,21 @@ const pygCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Guarani Paraguay"),
   TranslatedName(LangZho(), name: "巴拉圭瓜拉尼"),
   TranslatedName(LangZul(), name: "i-Paraguayan Guarani"),
+  TranslatedName(LangAsm(), name: "পাৰাগুয়ান গুৱাৰানি"),
+  TranslatedName(LangChv(), name: "Парагвай гуаранӗ"),
+  TranslatedName(LangFul(), name: "𞤘𞤵𞤱𞤢𞤪𞤢𞤲𞤭 𞤆𞤢𞥄𞤪𞤢𞤺𞤵𞤴𞤫𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Guarani na ƙasar Paraguay"),
+  TranslatedName(LangIna(), name: "guarani paraguayan"),
+  TranslatedName(LangIbo(), name: "Ego Guarani obodo Paraguay"),
+  TranslatedName(LangJav(), name: "Guarani Paraguay"),
+  TranslatedName(LangKur(), name: "gûaraniyê paragûayî"),
+  TranslatedName(LangMri(), name: "Guarani Parakai"),
+  TranslatedName(LangOri(), name: "ପାରାଗୁଆୟାନ୍ ଗୁଆରାନି"),
+  TranslatedName(LangPus(), name: "پيراګوين ګوراني"),
+  TranslatedName(LangSrd(), name: "guaraní paraguayanu"),
+  TranslatedName(LangSom(), name: "Guranida Baraguway"),
+  TranslatedName(LangTuk(), name: "Paragwaý guaranisi"),
+  TranslatedName(LangTgl(), name: "Paraguayan Guarani"),
+  TranslatedName(LangXho(), name: "I-Guarani yaseParaguay"),
+  TranslatedName(LangYor(), name: "Gúáránì Párágúwè"),
 ];

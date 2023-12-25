@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Lebanese Pound currency:
+/// Provides 107 translations for a Lebanese Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const lbpCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Lebanese Pound"),
@@ -181,4 +197,20 @@ const lbpCurrencyTranslations = [
   TranslatedName(LangZho(), name: "黎巴嫩镑"),
   TranslatedName(LangZho(), name: "黎巴嫩鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Lebanese Pound"),
+  TranslatedName(LangAsm(), name: "লেবানীজ পাউণ্ড"),
+  TranslatedName(LangChv(), name: "Ливан фунчӗ"),
+  TranslatedName(LangFul(), name: "𞤆𞤢𞤱𞤲𞥋𞤣𞤵 𞤂𞤭𞤦𞤢𞤲𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Lebanon"),
+  TranslatedName(LangIna(), name: "libra libanese"),
+  TranslatedName(LangIbo(), name: "Ego Pound obodo Lebanon"),
+  TranslatedName(LangJav(), name: "Pound Libanon"),
+  TranslatedName(LangKur(), name: "lîreyê libnanî"),
+  TranslatedName(LangMri(), name: "Pāuna Repanona"),
+  TranslatedName(LangOri(), name: "ଲେବାନିଜ୍ ପାଉଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "لبناني پونډ"),
+  TranslatedName(LangSrd(), name: "isterlina lebanesa"),
+  TranslatedName(LangSom(), name: "Bowndka Lubnaan"),
+  TranslatedName(LangTuk(), name: "Liwan funty"),
+  TranslatedName(LangXho(), name: "IPonti yaseLebanon"),
+  TranslatedName(LangYor(), name: "Pọ́n-ùn Lebanese"),
 ];

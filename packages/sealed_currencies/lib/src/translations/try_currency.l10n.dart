@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Turkish Lira currency:
+/// Provides 106 translations for a Turkish Lira currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,19 +32,24 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const tryCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Turkish Lira"),
@@ -179,4 +195,20 @@ const tryCurrencyTranslations = [
   TranslatedName(LangZho(), name: "土耳其里拉"),
   TranslatedName(LangZho(), name: "新土耳其里拉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Turkish Lira"),
+  TranslatedName(LangAsm(), name: "তুৰ্কীৰ লিৰা"),
+  TranslatedName(LangChv(), name: "Турци лири"),
+  TranslatedName(LangFul(), name: "𞤂𞤭𞤪𞤢 𞤚𞤵𞤪𞤳𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Turkiyya"),
+  TranslatedName(LangIna(), name: "lira turc"),
+  TranslatedName(LangIbo(), name: "Ego Lira obodo Turkey"),
+  TranslatedName(LangJav(), name: "Lira Turki"),
+  TranslatedName(LangMri(), name: "Lira Tākei"),
+  TranslatedName(LangOri(), name: "ତୁର୍କିୟ ଲିରା"),
+  TranslatedName(LangPus(), name: "ترکي ليرا"),
+  TranslatedName(LangSrd(), name: "lira turca"),
+  TranslatedName(LangSom(), name: "Liirada Turkiga"),
+  TranslatedName(LangTuk(), name: "Türk lirasy"),
+  TranslatedName(LangTgl(), name: "Turkish Lira"),
+  TranslatedName(LangXho(), name: "I-Lira yaseTurkey"),
+  TranslatedName(LangYor(), name: "Lírà Tọ́kì"),
 ];
