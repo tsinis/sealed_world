@@ -3357,7 +3357,8 @@ class FiatSsp extends FiatCurrency {
 
 /// A class that represents the São Tomé and Príncipe Second Dobra currency.
 class FiatStn extends FiatCurrency {
-  /// Creates a instance of [FiatStn] (São Tomé and Príncipe Second Dobra currency).
+  /// Creates a instance of [FiatStn] (São Tomé and Príncipe Second Dobra
+  /// currency).
   ///
   /// ISO 4217 Alpha code: "STN", ISO 4217 Numeric code: "930".
   const FiatStn()
@@ -4265,9 +4266,11 @@ class FiatXpt extends FiatCurrency {
         );
 }
 
-/// A class that represents the Codes specifically reserved for testing purposes currency.
+/// A class that represents the Codes specifically reserved for testing purposes
+/// currency.
 class FiatXts extends FiatCurrency {
-  /// Creates a instance of [FiatXts] (Codes specifically reserved for testing purposes currency).
+  /// Creates a instance of [FiatXts] (Codes specifically reserved for testing
+  /// purposes currency).
   ///
   /// ISO 4217 Alpha code: "XTS", ISO 4217 Numeric code: "963".
   const FiatXts()
