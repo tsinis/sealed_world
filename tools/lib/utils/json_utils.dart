@@ -12,11 +12,12 @@ import "dart_utils.dart";
 import "io_utils.dart";
 
 final class JsonUtils {
-  const JsonUtils(this.package, {this.dataDirPath = "json/data"});
+  const JsonUtils(this.package, {this.dataDirPath = defaultDataDirPath});
 
   final String dataDirPath;
   final Package package;
 
+  static const defaultDataDirPath = "json/data";
   static const eng = LangEng();
   static const translation = "translations";
 
@@ -225,7 +226,7 @@ const ${varFileName.toCamelCase()} = [
   /// Missing: XAG, XAU, XBA, XBB, XBC, XBD, XDR, XPD, XPT, XTS.
   FiatCurrency? _convertCodeToCurrency(String rawCode) {
     final code = rawCode.toUpperCase().trim();
-    var fiat = FiatCurrency.maybeFromValue(code);
+    var fiat = FiatCurrency.maybeFromAnyCode(code);
     if (fiat != null) return fiat;
     const old = {"MRO": "MRU", "STD": "STN", "VEF": "VES"};
     if (old.containsKey(code)) fiat = FiatCurrency.maybeFromValue(old[code]!);

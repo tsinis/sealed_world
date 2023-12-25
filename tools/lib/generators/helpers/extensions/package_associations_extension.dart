@@ -40,6 +40,12 @@ extension PackageAssociationsExtension on Package {
         sealedCurrencies: Currency,
       ).toString().toLowerCase();
 
+  String get dataRepresentPlural => whenConst(
+        sealedLanguages: "languages",
+        sealedCurrencies: "currencies",
+        sealedCountries: "countries",
+      );
+
   String get isoCodeAssociated => whenConst(
         sealedLanguages: NaturalLanguage.standardCodeName,
         sealedCurrencies: FiatCurrency.standardCodeName,
