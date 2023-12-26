@@ -500,11 +500,11 @@ void main() => group("$FiatCurrency", () {
 
         test("there should be always minimum translations count available", () {
           final map = {
-            for (final currency in FiatCurrency.regularList) currency: 0,
+            for (final currency in FiatCurrency.list) currency: 0,
           };
 
           for (final l10n in NaturalLanguage.list) {
-            for (final value in FiatCurrency.regularList) {
+            for (final value in FiatCurrency.list) {
               final hasTranslationForValue = value.maybeTranslation(l10n);
               if (hasTranslationForValue != null) map[value] = map[value]! + 1;
             }
@@ -514,7 +514,7 @@ void main() => group("$FiatCurrency", () {
             ..sort((a, b) => a.value.compareTo(b.value));
           expect(
             sortedList.first.value,
-            kSealedCurrenciesSupportedLanguages.length + 1,
+            kSealedCurrenciesSupportedLanguages.length + 2,
           );
         });
 
@@ -523,7 +523,7 @@ void main() => group("$FiatCurrency", () {
           final missing = <NaturalLanguage, Set<FiatCurrency>>{};
 
           for (final l10n in NaturalLanguage.list) {
-            for (final value in FiatCurrency.regularList) {
+            for (final value in FiatCurrency.list) {
               final hasTranslationForValue = value.maybeTranslation(l10n);
               if (hasTranslationForValue != null) {
                 map[l10n] = map[l10n]! + 1;
@@ -536,7 +536,7 @@ void main() => group("$FiatCurrency", () {
           final sortedList = map.entries.toList(growable: false)
             ..sort((a, b) => a.value.compareTo(b.value));
           final complete = sortedList
-              .where((item) => item.value >= FiatCurrency.regularList.length);
+              .where((item) => item.value >= FiatCurrency.list.length);
           final sortedMap = Map.fromEntries(complete);
           final sortedLanguages = sortedMap.keys.toList(growable: false)
             ..sort((a, b) => a.code.compareTo(b.code));
@@ -547,7 +547,7 @@ void main() => group("$FiatCurrency", () {
           );
           expect(sortedLanguages, kSealedCurrenciesSupportedLanguages);
 
-          for (final currency in FiatCurrency.regularList) {
+          for (final currency in FiatCurrency.list) {
             for (final l10n in kSealedCurrenciesSupportedLanguages) {
               if (l10n == const LangEng()) continue;
               expect(

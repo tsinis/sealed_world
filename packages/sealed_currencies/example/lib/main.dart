@@ -48,7 +48,7 @@ void main() {
   print(isVikingKrone(serbianDinar)); // Prints "null".
   print(isVikingKrone(const FiatCzk())); // Prints "false".
 
-  FiatCurrency.regularList
+  FiatCurrency.list
       .where((currency) => currency.symbol?.contains("kr") ?? false)
       .forEach(print);
   // Prints:
@@ -60,7 +60,7 @@ void main() {
   serbianDinar.toJson(); // Converts currency to a valid JSON.
 
   // Prints German translations of all available regular currencies.
-  for (final currency in FiatCurrency.regularList) {
+  for (final currency in FiatCurrency.list) {
     print(
       """German name of ${currency.name}: ${currency.maybeTranslation(const LangDeu())?.name}""",
     );

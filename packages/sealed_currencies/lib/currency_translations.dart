@@ -180,7 +180,7 @@ export "src/translations/zmw_currency.l10n.dart";
 export "src/translations/zwl_currency.l10n.dart";
 
 /// This is a comprehensive list of currencies that ensure the availability of
-/// translations for every language in the currencies `regularList` list.
+/// translations for every language in the currencies `list`.
 ///
 /// It is important to note that while other languages may not be included in
 /// this list, they may still have translations available for most common
@@ -189,7 +189,7 @@ export "src/translations/zwl_currency.l10n.dart";
 ///
 /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
 /// with a two letter code and much more (for example on top of that it also
-/// provides translations for:
+/// provides translations for the following languages:
 /// - Breton (BRE)
 /// - Western Frisian (FRY)
 /// - (Scottish) Gaelic (GLA)

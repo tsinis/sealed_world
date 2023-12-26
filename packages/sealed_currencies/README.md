@@ -62,8 +62,8 @@ import 'package:sealed_currencies/sealed_currencies.dart';
 Use `FiatCurrency` class to get information about currencies. Either construct a new instance directly, or with use of the class factory constructors/static methods or select one from the `FiatCurrency.list` constant.
 
 ```dart
-  print(FiatCurrency.list.length); // Prints: "169".
-  print(FiatCurrency.regularList.length); // Prints: "159".
+  print(FiatCurrency.listExtended.length); // Prints: "169".
+  print(FiatCurrency.list.length); // Prints: "159".
 
   final serbianDinar = FiatCurrency.fromCode("Rsd");
   print(serbianDinar); // Prints: "Serbian Dinar".
@@ -82,7 +82,7 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
   */
 
   // Prints German translations of all available regular currencies.
-  for (final currency in FiatCurrency.regularList) {
+  for (final currency in FiatCurrency.list) {
     print(
       """German name of ${currency.name}: ${currency.maybeTranslation(const LangDeu())?.name}""",
     );

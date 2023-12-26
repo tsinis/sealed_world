@@ -292,15 +292,6 @@ class FiatCurrency extends Currency
     return null;
   }
 
-  /// A list of all regular the currencies currently supported by the
-  /// [FiatCurrency] class. This is subset of [FiatCurrency.list] that excludes
-  /// all currencies from the [FiatCurrency.specialPurposeList].
-  static List<FiatCurrency> get regularList => List.unmodifiable(
-        FiatCurrency.list.where(
-          (currency) => !FiatCurrency.specialPurposeList.contains(currency),
-        ),
-      );
-
   /// The general standard ISO code for currencies, defined as ISO 4217.
   static const standardGeneralName = "4217";
 
@@ -311,8 +302,9 @@ class FiatCurrency extends Currency
   /// ISO 4217 Numeric.
   static const standardCodeNumericName = "$standardGeneralName Numeric";
 
-  /// A list of all the currencies currently
-  /// supported by the [FiatCurrency] class.
+  /// A list of the regular currencies currently supported by the [FiatCurrency]
+  /// class. For a full list with non-regular currencies please
+  /// use [listExtended].
   static const list = [
     FiatAed(),
     FiatAfn(),
@@ -466,19 +458,9 @@ class FiatCurrency extends Currency
     FiatVuv(),
     FiatWst(),
     FiatXaf(),
-    FiatXag(),
-    FiatXau(),
-    FiatXba(),
-    FiatXbb(),
-    FiatXbc(),
-    FiatXbd(),
     FiatXcd(),
-    FiatXdr(),
     FiatXof(),
-    FiatXpd(),
     FiatXpf(),
-    FiatXpt(),
-    FiatXts(),
     FiatYer(),
     FiatZar(),
     FiatZmw(),
@@ -502,4 +484,9 @@ class FiatCurrency extends Currency
     FiatXpt(),
     FiatXts(),
   ];
+
+  /// A list of all currencies currently supported by the
+  /// [FiatCurrency] class. This is combination of [FiatCurrency.list]
+  /// plus all currencies from the [FiatCurrency.specialPurposeList].
+  static const listExtended = [...list, ...specialPurposeList];
 }
