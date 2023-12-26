@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a North Korean Won currency:
+/// Provides 108 translations for a North Korean Won currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const kpwCurrencyTranslations = [
   TranslatedName(LangEng(), name: "North Korean Won"),
@@ -100,7 +116,11 @@ const kpwCurrencyTranslations = [
   TranslatedName(LangBen(), name: "উত্তর কোরিয়ার ওন"),
   TranslatedName(LangBre(), name: "won Korea an Norzh"),
   TranslatedName(LangBos(), name: "Sjevernokorejski von"),
-  TranslatedName(LangBos(), name: "Севернокорејски вон", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Севернокорејски вон",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "won nord-coreà"),
   TranslatedName(LangChe(), name: "Къилбаседа Корейн вона"),
   TranslatedName(LangCes(), name: "severokorejský won"),
@@ -182,4 +202,23 @@ const kpwCurrencyTranslations = [
   TranslatedName(LangZho(), name: "北韓圜", countryCode: "HK"),
   TranslatedName(LangZho(), name: "北韓圓", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-North Korean Won"),
+  TranslatedName(LangAsm(), name: "উত্তৰ কোৰিয়াৰ ওৱান"),
+  TranslatedName(LangChv(), name: "КХДР вони"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤏𞤮𞤲 𞤁𞤮𞤱𞤣𞤮𞤱𞤪𞤭 𞤑𞤮𞥅𞤪𞤫𞤴𞤢𞤲𞤳𞤮",
+  ),
+  TranslatedName(LangHau(), name: "Won na ƙasar Koriya ta Arewa"),
+  TranslatedName(LangIna(), name: "won nordkorean"),
+  TranslatedName(LangIbo(), name: "Ego Won Obodo North Korea"),
+  TranslatedName(LangJav(), name: "Won Korea Lor"),
+  TranslatedName(LangKur(), name: "wonê koreya bakurî"),
+  TranslatedName(LangMri(), name: "Won Kōrea ki te Raki"),
+  TranslatedName(LangOri(), name: "ଉତ୍ତର କୋରିଆଇ ୱୋନ୍"),
+  TranslatedName(LangPus(), name: "شمالي کوريايي وان"),
+  TranslatedName(LangSrd(), name: "won nordcoreanu"),
+  TranslatedName(LangSom(), name: "Wonka Waqooyiga Kuuriya"),
+  TranslatedName(LangTuk(), name: "Demirgazyk Koreý wony"),
+  TranslatedName(LangXho(), name: "I-Won yaseNorth Korea"),
+  TranslatedName(LangYor(), name: "Wọ́ọ̀nù Àríwá Kòríà"),
 ];

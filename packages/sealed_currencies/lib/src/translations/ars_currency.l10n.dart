@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Argentine Peso currency:
+/// Provides 107 translations for a Argentine Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const arsCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Argentine Peso"),
@@ -99,7 +115,11 @@ const arsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আর্জেন্টিনা পেসো"),
   TranslatedName(LangBre(), name: "peso Arcʼhantina"),
   TranslatedName(LangBos(), name: "Argentinski pezos"),
-  TranslatedName(LangBos(), name: "аргентински пезо", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "аргентински пезо",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "peso argentí"),
   TranslatedName(LangChe(), name: "Аргентинан песо"),
   TranslatedName(LangCes(), name: "argentinské peso"),
@@ -175,9 +195,29 @@ const arsCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "аргентинський песо"),
   TranslatedName(LangUrd(), name: "ارجنٹائن پیسہ"),
   TranslatedName(LangUzb(), name: "Argentina pesosi"),
-  TranslatedName(LangUzb(), name: "Аргентина песоси", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Аргентина песоси",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Peso Argentina"),
   TranslatedName(LangZho(), name: "阿根廷比索"),
   TranslatedName(LangZho(), name: "阿根廷披索", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Argentina Peso"),
+  TranslatedName(LangAsm(), name: "আৰ্জেণ্টাইন পেছো"),
+  TranslatedName(LangChv(), name: "Аргентина песийӗ"),
+  TranslatedName(LangFul(), name: "𞤆𞤫𞥅𞤧𞤮𞥅 𞤀𞤪𞤶𞤢𞤲𞤼𞤭𞤲𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Peso na ƙasar Argentina"),
+  TranslatedName(LangIna(), name: "peso argentin"),
+  TranslatedName(LangIbo(), name: "Ego Peso obodo Argentina"),
+  TranslatedName(LangJav(), name: "Peso Argentina"),
+  TranslatedName(LangKur(), name: "pesoyê arjantînî"),
+  TranslatedName(LangMri(), name: "Peso Āketina"),
+  TranslatedName(LangOri(), name: "ଆର୍ଜେଣ୍ଟାଇନ୍‍ ପେସୋ"),
+  TranslatedName(LangPus(), name: "ارجنټاين پسو"),
+  TranslatedName(LangSrd(), name: "peso argentinu"),
+  TranslatedName(LangSom(), name: "Beesada Arjentiin"),
+  TranslatedName(LangTuk(), name: "Argentin pesosy"),
+  TranslatedName(LangXho(), name: "IPeso yase-Argentina"),
+  TranslatedName(LangYor(), name: "Pẹ́sò Agẹntínà"),
 ];

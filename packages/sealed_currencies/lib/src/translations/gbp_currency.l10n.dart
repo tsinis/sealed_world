@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 111 translations for a British Pound currency:
+/// Provides 116 translations for a British Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -73,7 +74,9 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -89,11 +92,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -117,7 +122,11 @@ const gbpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ব্রিটিশ পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Breizh-Veur"),
   TranslatedName(LangBos(), name: "Britanska funta"),
-  TranslatedName(LangBos(), name: "Британска фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Британска фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura esterlina britànica"),
   TranslatedName(LangChe(), name: "Англин фунт"),
   TranslatedName(LangCes(), name: "britská libra"),
@@ -212,7 +221,11 @@ const gbpCurrencyTranslations = [
   TranslatedName(LangUrd(), name: "انگلستانی پاونڈ سٹرلنگ"),
   TranslatedName(LangUrd(), name: "برطانوی پاونڈ سٹرلنگ", countryCode: "IN"),
   TranslatedName(LangUzb(), name: "Angliya funt sterlingi"),
-  TranslatedName(LangUzb(), name: "Инглиз фунт", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Инглиз фунт",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Bảng Anh"),
   TranslatedName(LangYid(), name: "פֿונט שטערלינג"),
   TranslatedName(LangYor(), name: "Pọọn ti Orílẹ́ède Bírítísì"),
@@ -224,4 +237,9 @@ const gbpCurrencyTranslations = [
   TranslatedName(LangZho(), name: "英镑"),
   TranslatedName(LangZho(), name: "英鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-British Pound"),
+  TranslatedName(LangTuk(), name: "Britan funt sterlingi"),
+  TranslatedName(LangAsm(), name: "ব্ৰিটিছ পাউণ্ড"),
+  TranslatedName(LangOri(), name: "ବ୍ରିଟିସ ପାଉଣ୍ଡ"),
+  TranslatedName(LangPus(), name: "برتانيوي پاونډ"),
+  TranslatedName(LangTgl(), name: "Pound ng Britanya"),
 ];

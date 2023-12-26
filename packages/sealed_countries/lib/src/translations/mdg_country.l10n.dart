@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Madagascar country:
+/// Provides 139 translations for a Madagascar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -134,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -368,4 +369,5 @@ const mdgCountryTranslations = [
   TranslatedName(LangSun(), name: "Madagaskar"),
   TranslatedName(LangTgl(), name: "Madagaskar"),
   TranslatedName(LangVol(), name: "Malagaseän"),
+  TranslatedName(LangXho(), name: "EMadagascar"),
 ];

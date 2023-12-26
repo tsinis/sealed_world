@@ -2,14 +2,21 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 66 translations for a Inupiaq language:
+/// Provides 86 translations for a Inupiaq language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -20,6 +27,8 @@ import "../model/translated_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -33,7 +42,10 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -42,10 +54,13 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -53,9 +68,11 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -63,9 +80,12 @@ import "../model/translated_name.dart";
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Welsh.
+/// - Welsh
+/// - Zulu.
 const ipkLanguageTranslations = [
   TranslatedName(LangEng(), name: "Inupiaq"),
   TranslatedName(LangAmh(), name: "እኑፒያቅኛ"),
@@ -133,4 +153,24 @@ const ipkLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Inupiaq"),
   TranslatedName(LangZho(), name: "依奴皮维克文"),
   TranslatedName(LangZho(), name: "依奴皮維克文", script: ScriptHant()),
+  TranslatedName(LangNep(), name: "इनुपिआक्"),
+  TranslatedName(LangAsm(), name: "ইনুপিয়াক"),
+  TranslatedName(LangBel(), name: "інупіак"),
+  TranslatedName(LangEus(), name: "inupiak"),
+  TranslatedName(LangGlg(), name: "inupiaq"),
+  TranslatedName(LangHye(), name: "Ինուպիակ"),
+  TranslatedName(LangKat(), name: "ინუიტი"),
+  TranslatedName(LangKaz(), name: "инупиак тілі"),
+  TranslatedName(LangKhm(), name: "អ៊ីនួប៉ីយ៉ា"),
+  TranslatedName(LangKir(), name: "инупиак"),
+  TranslatedName(LangMon(), name: "инупиак"),
+  TranslatedName(LangMya(), name: "အင်ဥပိအက်"),
+  TranslatedName(LangPan(), name: "ਇਨੂਪੀਆਕ"),
+  TranslatedName(LangPus(), name: "اینوپیاڪ"),
+  TranslatedName(LangSin(), name: "ඉනුපියාක්"),
+  TranslatedName(LangSqi(), name: "Inupiaq"),
+  TranslatedName(LangSwa(), name: "Inupiaq"),
+  TranslatedName(LangUrd(), name: "انوپیاک"),
+  TranslatedName(LangUzb(), name: "inupiaq"),
+  TranslatedName(LangZul(), name: "i-Inupiaq"),
 ];

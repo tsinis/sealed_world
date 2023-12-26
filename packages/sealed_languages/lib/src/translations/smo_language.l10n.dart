@@ -2,18 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 82 translations for a Samoan language:
+/// Provides 109 translations for a Samoan language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -26,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -35,14 +43,20 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -52,35 +66,48 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const smoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Samoan"),
@@ -165,4 +192,35 @@ const smoLanguageTranslations = [
   TranslatedName(LangZho(), name: "萨摩亚文"),
   TranslatedName(LangZho(), name: "薩摩亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Samoan"),
+  TranslatedName(LangAsm(), name: "ছামোন"),
+  TranslatedName(LangBel(), name: "самоа"),
+  TranslatedName(LangChe(), name: "самоанойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤢𞤥𞤮𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHye(), name: "սամոաերեն"),
+  TranslatedName(LangIna(), name: "samoano"),
+  TranslatedName(LangIbo(), name: "Samọa"),
+  TranslatedName(LangJav(), name: "Samoa"),
+  TranslatedName(LangKaz(), name: "самоа тілі"),
+  TranslatedName(LangKur(), name: "samoayî"),
+  TranslatedName(LangKir(), name: "самоанча"),
+  TranslatedName(LangMri(), name: "Hāmoa"),
+  TranslatedName(LangMon(), name: "самоа"),
+  TranslatedName(LangMya(), name: "ဆမိုအာ"),
+  TranslatedName(LangNep(), name: "सामोआ"),
+  TranslatedName(LangPan(), name: "ਸਾਮੋਨ"),
+  TranslatedName(LangPus(), name: "ساموآن"),
+  TranslatedName(LangQue(), name: "Samoano Simi"),
+  TranslatedName(LangSrd(), name: "samoanu"),
+  TranslatedName(LangSnd(), name: "سموئا"),
+  TranslatedName(LangSin(), name: "සෑමොඅන්"),
+  TranslatedName(LangSom(), name: "Samowan"),
+  TranslatedName(LangSqi(), name: "samoanisht"),
+  TranslatedName(LangTir(), name: "ሳሞእኛ"),
+  TranslatedName(LangTuk(), name: "samoa dili"),
+  TranslatedName(LangUzb(), name: "samoa"),
+  TranslatedName(LangYor(), name: "Sámóánù"),
 ];

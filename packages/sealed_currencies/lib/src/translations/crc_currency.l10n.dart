@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Costa Rican Colón currency:
+/// Provides 110 translations for a Costa Rican Colón currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const crcCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Costa Rican Colón"),
@@ -99,7 +115,11 @@ const crcCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কোস্টা রিকা কোলোন"),
   TranslatedName(LangBre(), name: "colón Costa Rica"),
   TranslatedName(LangBos(), name: "Kostarikanski kolon"),
-  TranslatedName(LangBos(), name: "Костарикански колон", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Костарикански колон",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "colón costa-riqueny"),
   TranslatedName(LangChe(), name: "Костарикан колон"),
   TranslatedName(LangCes(), name: "kostarický colón"),
@@ -177,10 +197,30 @@ const crcCurrencyTranslations = [
   TranslatedName(LangUrd(), name: "کوسٹا ریکا کا کولن"),
   TranslatedName(LangUrd(), name: "کوسٹا ریکا کولون", countryCode: "IN"),
   TranslatedName(LangUzb(), name: "Kosta-Rika koloni"),
-  TranslatedName(LangUzb(), name: "Коста-Рика колони", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Коста-Рика колони",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Colón Costa Rica"),
   TranslatedName(LangZho(), name: "哥斯达黎加科朗"),
   TranslatedName(LangZho(), name: "哥斯達黎加科郎", countryCode: "HK"),
   TranslatedName(LangZho(), name: "哥斯大黎加科朗", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Costa Rican Colón"),
+  TranslatedName(LangAsm(), name: "কোষ্টা ৰিকান কোলন"),
+  TranslatedName(LangChv(), name: "Коста-Рика колонӗ"),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞤤𞤮𞥅𞤲 𞤑𞤮𞤧𞤼𞤢𞤪𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Colón na ƙasar Costa Rica"),
+  TranslatedName(LangIna(), name: "colon costarican"),
+  TranslatedName(LangIbo(), name: "Ego Colón obodo Costa Rica"),
+  TranslatedName(LangJav(), name: "Colon Kosta Rika"),
+  TranslatedName(LangKur(), name: "kolonê kosta rîkayî"),
+  TranslatedName(LangMri(), name: "Colon Koto Rika"),
+  TranslatedName(LangOri(), name: "କୋଷ୍ଟା ରିକୀୟ କୋଲୋନ୍"),
+  TranslatedName(LangPus(), name: "کوسټا ريکن کولون"),
+  TranslatedName(LangSrd(), name: "colón costaricanu"),
+  TranslatedName(LangSom(), name: "Kolonka Kosta Riika"),
+  TranslatedName(LangTuk(), name: "Kosta-Rika kolony"),
+  TranslatedName(LangXho(), name: "Costa Rican Colón"),
+  TranslatedName(LangYor(), name: "Kólọ́ọ̀nì Kosita Ríkà"),
 ];

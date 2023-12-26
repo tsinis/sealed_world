@@ -88,27 +88,33 @@ class _MainPageState extends State<MainPage>
             ),
             centerTitle: false,
           ),
-          body: DecoratedBox(
-            decoration: FunctionalPlatform.maybeWhenConst(
-              web: const BoxDecoration(),
-              orElse: BoxDecoration(
-                image: DecorationImage(
-                  image: Assets.images.background.provider(),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            child: Align(
-              alignment: Alignment.topCenter,
-              child: SizedBox(
-                width: 300,
-                child: TabBarView(
-                  controller: _controller,
-                  children: [widget._country, widget._currency, widget._lang],
-                ),
-              ),
-            ),
-          ),
+          body: !kProfileMode
+              ? DecoratedBox(
+                  decoration: FunctionalPlatform.maybeWhenConst(
+                    web: const BoxDecoration(),
+                    orElse: BoxDecoration(
+                      image: DecorationImage(
+                        image: Assets.images.background.provider(),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: SizedBox(
+                      width: 300,
+                      child: TabBarView(
+                        controller: _controller,
+                        children: [
+                          widget._country,
+                          widget._currency,
+                          widget._lang,
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              : null,
           floatingActionButton:
               FloatingButton(_controller, onPressed: _onFabPressed),
           backgroundColor: context.theme.colorScheme.surfaceVariant,

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Kyrgystani Som currency:
+/// Provides 108 translations for a Kyrgystani Som currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const kgsCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Kyrgystani Som"),
@@ -98,7 +115,11 @@ const kgsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কিরগিজস্তান সোম"),
   TranslatedName(LangBre(), name: "som Kyrgyzstan"),
   TranslatedName(LangBos(), name: "Kirgistanski som"),
-  TranslatedName(LangBos(), name: "Киргистански сом", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Киргистански сом",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "som kirguís"),
   TranslatedName(LangChe(), name: "Киргизин сом"),
   TranslatedName(LangCes(), name: "kyrgyzský som"),
@@ -179,4 +200,21 @@ const kgsCurrencyTranslations = [
   TranslatedName(LangZho(), name: "吉尔吉斯斯坦索姆"),
   TranslatedName(LangZho(), name: "吉爾吉斯索姆", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Kyrgystani Som"),
+  TranslatedName(LangAsm(), name: "কিৰ্গিস্তানী ছোম"),
+  TranslatedName(LangChv(), name: "Киргиз сомӗ"),
+  TranslatedName(LangFul(), name: "𞤅𞤮𞤥𞤵 𞤑𞤭𞤪𞤺𞤭𞤧𞤼𞤢𞤲𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Som na ƙasar Kyrgystani"),
+  TranslatedName(LangIna(), name: "som kirghiz"),
+  TranslatedName(LangIbo(), name: "Ego Som Obodo Kyrgyzstan"),
+  TranslatedName(LangJav(), name: "Som Kirgistan"),
+  TranslatedName(LangKur(), name: "somê qirxizistanî"),
+  TranslatedName(LangMri(), name: "Som Kikitānga"),
+  TranslatedName(LangOri(), name: "କିର୍ଗିସ୍ତାନୀ ସୋମ୍"),
+  TranslatedName(LangPus(), name: "کرغزستاني سوم"),
+  TranslatedName(LangSrd(), name: "som kirghisu"),
+  TranslatedName(LangSom(), name: "Somta Kiyrgiystan"),
+  TranslatedName(LangTuk(), name: "Gyrgyz somy"),
+  TranslatedName(LangTgl(), name: "Kyrgystani Som"),
+  TranslatedName(LangXho(), name: "I-Som yaseKyrgystan"),
+  TranslatedName(LangYor(), name: "Sómú Kirijísítàànì"),
 ];

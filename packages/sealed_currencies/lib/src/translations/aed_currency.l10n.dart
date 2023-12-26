@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a United Arab Emirates Dirham currency:
+/// Provides 121 translations for a United Arab Emirates Dirham currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,18 +90,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const aedCurrencyTranslations = [
@@ -228,4 +242,18 @@ const aedCurrencyTranslations = [
   TranslatedName(LangZho(), name: "阿拉伯聯合酋長國迪爾汗", countryCode: "HK"),
   TranslatedName(LangZho(), name: "阿拉伯聯合大公國迪爾汗", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Dirham yase-United Arab Emirates"),
+  TranslatedName(LangAsm(), name: "সংযুক্ত আৰব আমিৰাত ডিৰহেম"),
+  TranslatedName(LangChv(), name: "АПЭ дирхамӗ"),
+  TranslatedName(LangIna(), name: "dirham del Emiratos Arabe Unite"),
+  TranslatedName(LangIbo(), name: "Ego Dirham obodo United Arab Emirates"),
+  TranslatedName(LangJav(), name: "Dirham Uni Emirat Arab"),
+  TranslatedName(LangKur(), name: "dîrhemê mîrgehên erebî yên yekbûyî"),
+  TranslatedName(LangMri(), name: "Dirham UAE"),
+  TranslatedName(LangOri(), name: "ଯୁକ୍ତ ଆରବ ଏମିରେଟସ୍ ଦିରହାମ୍"),
+  TranslatedName(LangPus(), name: "متحده عرب امارات درهم"),
+  TranslatedName(LangSrd(), name: "dirham de sos Emirados Àrabos Unidos"),
+  TranslatedName(LangSom(), name: "Dirhamka Isutaga Imaaraatka Carabta"),
+  TranslatedName(LangTuk(), name: "BAE dirhemi"),
+  TranslatedName(LangTgl(), name: "United Arab Emirates Dirham"),
+  TranslatedName(LangXho(), name: "I-Dirham yase-UAE"),
 ];

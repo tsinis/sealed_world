@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Belarusian Ruble currency:
+/// Provides 108 translations for a Belarusian Ruble currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const bynCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Belarusian Ruble"),
@@ -98,7 +115,11 @@ const bynCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বেলারুশিয়ান রুবেল"),
   TranslatedName(LangBre(), name: "roubl Belarus"),
   TranslatedName(LangBos(), name: "Bjeloruska rublja"),
-  TranslatedName(LangBos(), name: "Белоруска рубља", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Белоруска рубља",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "ruble bielorús"),
   TranslatedName(LangChe(), name: "Белоруссин сом"),
   TranslatedName(LangCes(), name: "běloruský rubl"),
@@ -179,4 +200,21 @@ const bynCurrencyTranslations = [
   TranslatedName(LangZho(), name: "白俄罗斯卢布"),
   TranslatedName(LangZho(), name: "白俄羅斯盧布", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Belarusian Ruble"),
+  TranslatedName(LangAsm(), name: "বেলাৰুছীয় ৰুবেল"),
+  TranslatedName(LangChv(), name: "Беларуҫ тенкӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤵𞥅𞤦𞤮𞤤 𞤄𞤫𞤤𞤢𞤪𞤭𞥅𞤧𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Belarus"),
+  TranslatedName(LangIna(), name: "rublo bielorusse"),
+  TranslatedName(LangIbo(), name: "Ego Ruble mba Belarus"),
+  TranslatedName(LangJav(), name: "Ruble Belarusia"),
+  TranslatedName(LangKur(), name: "rûbleyê belarûsî"),
+  TranslatedName(LangMri(), name: "Ruble Pērara"),
+  TranslatedName(LangOri(), name: "ବେଲାରୁସି ରୁବଲ୍"),
+  TranslatedName(LangPus(), name: "بلاروسي روبل"),
+  TranslatedName(LangSrd(), name: "rublu bielorussu"),
+  TranslatedName(LangSom(), name: "Rubalka Belarus"),
+  TranslatedName(LangTuk(), name: "Belarus rubly"),
+  TranslatedName(LangTgl(), name: "Ruble ng Belarus"),
+  TranslatedName(LangXho(), name: "I-Ruble yaseBelarus"),
+  TranslatedName(LangYor(), name: "Rọ́bù Bẹ̀lárùùsì"),
 ];

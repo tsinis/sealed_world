@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Korean language:
+/// Provides 131 translations for a Korean language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -81,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -89,8 +97,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -98,12 +108,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -111,6 +124,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -231,4 +246,19 @@ const korLanguageTranslations = [
   TranslatedName(LangZho(), name: "韩文"),
   TranslatedName(LangZho(), name: "韓文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Korean"),
+  TranslatedName(LangAsm(), name: "কোৰিয়ান"),
+  TranslatedName(LangChe(), name: "корейн"),
+  TranslatedName(LangChv(), name: "корей"),
+  TranslatedName(LangIna(), name: "coreano"),
+  TranslatedName(LangJav(), name: "Korea"),
+  TranslatedName(LangKur(), name: "koreyî"),
+  TranslatedName(LangMri(), name: "Kōreana"),
+  TranslatedName(LangPus(), name: "کوریایی"),
+  TranslatedName(LangSrd(), name: "coreanu"),
+  TranslatedName(LangSnd(), name: "ڪوريائي"),
+  TranslatedName(LangTgk(), name: "кореягӣ"),
+  TranslatedName(LangTuk(), name: "koreý dili"),
+  TranslatedName(LangTat(), name: "корея"),
+  TranslatedName(LangWol(), name: "Koreye"),
+  TranslatedName(LangXho(), name: "Isi-Korean"),
 ];

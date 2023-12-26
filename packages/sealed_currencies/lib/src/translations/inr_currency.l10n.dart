@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 112 translations for a Indian Rupee currency:
+/// Provides 115 translations for a Indian Rupee currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -76,6 +77,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -91,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -121,7 +124,11 @@ const inrCurrencyTranslations = [
   TranslatedName(LangBod(), name: "རྒྱ་གར་སྒོར་"),
   TranslatedName(LangBre(), name: "roupi India"),
   TranslatedName(LangBos(), name: "Indijska rupija"),
-  TranslatedName(LangBos(), name: "Индијски Рупи", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Индијски Рупи",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rupia índia"),
   TranslatedName(LangChe(), name: "Индин рупи"),
   TranslatedName(LangCes(), name: "indická rupie"),
@@ -212,7 +219,11 @@ const inrCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "індійська рупія"),
   TranslatedName(LangUrd(), name: "بھارتی روپیہ"),
   TranslatedName(LangUzb(), name: "Hindiston rupiyasi"),
-  TranslatedName(LangUzb(), name: "Ҳинд рупияси", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Ҳинд рупияси",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Rupee Ấn Độ"),
   TranslatedName(LangYid(), name: "אינדישער רופי"),
   TranslatedName(LangYor(), name: "Rupi ti Orílẹ́ède Indina"),
@@ -224,4 +235,7 @@ const inrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "印度卢比"),
   TranslatedName(LangZho(), name: "印度盧比", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Indian Rupee"),
+  TranslatedName(LangAsm(), name: "ভাৰতীয় ৰুপী"),
+  TranslatedName(LangPus(), name: "هندي روپۍ"),
+  TranslatedName(LangTgl(), name: "Rupee ng India"),
 ];

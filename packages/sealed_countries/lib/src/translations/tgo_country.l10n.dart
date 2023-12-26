@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Togo country:
+/// Provides 101 translations for a Togo country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -98,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -250,4 +251,5 @@ const tgoCountryTranslations = [
   TranslatedName(LangSsw(), name: "IThogo"),
   TranslatedName(LangVol(), name: "Togoän"),
   TranslatedName(LangWol(), name: "Togóo"),
+  TranslatedName(LangXho(), name: "ETogo"),
 ];

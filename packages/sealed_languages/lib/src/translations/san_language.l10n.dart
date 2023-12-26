@@ -2,12 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 91 translations for a Sanskrit (Saṁskṛta) language:
+/// Provides 107 translations for a Sanskrit (Saṁskṛta) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +18,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -30,24 +32,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -69,18 +78,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -183,4 +199,24 @@ const sanLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè awon ara Indo"),
   TranslatedName(LangZho(), name: "梵文"),
   TranslatedName(LangZul(), name: "isi-Sanskrit"),
+  TranslatedName(LangAsm(), name: "সংস্কৃত"),
+  TranslatedName(LangChe(), name: "санскрит"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤢𞤲𞤧𞤳𞤪𞤭𞤼𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "sanscrito"),
+  TranslatedName(LangIbo(), name: "Sansịkịt"),
+  TranslatedName(LangJav(), name: "Sanskerta"),
+  TranslatedName(LangKur(), name: "sanskrîtî"),
+  TranslatedName(LangMri(), name: "Hanahiti"),
+  TranslatedName(LangSan(), name: "संस्कृत भाषा"),
+  TranslatedName(LangSrd(), name: "sànscritu"),
+  TranslatedName(LangSnd(), name: "سنسڪرت"),
+  TranslatedName(LangTgk(), name: "санскрит"),
+  TranslatedName(LangTir(), name: "ሳንስክሪት"),
+  TranslatedName(LangTuk(), name: "sanskrit dili"),
+  TranslatedName(LangTat(), name: "санскрит"),
+  TranslatedName(LangDeu(), name: "Sanskrit"),
 ];

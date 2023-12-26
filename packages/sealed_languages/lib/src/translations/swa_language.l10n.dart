@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 93 translations for a Swahili language:
+/// Provides 105 translations for a Swahili language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -18,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -30,15 +32,18 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -48,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,12 +64,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -71,10 +79,13 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -84,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -186,4 +198,20 @@ const swaLanguageTranslations = [
   TranslatedName(LangZho(), name: "斯瓦希里文"),
   TranslatedName(LangZho(), name: "史瓦希里文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Swahili"),
+  TranslatedName(LangAsm(), name: "স্বাহিলি"),
+  TranslatedName(LangChe(), name: "суахили"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤵𞤱𞤢𞤸𞤭𞤤𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Harshen Suwahili"),
+  TranslatedName(LangIna(), name: "swahili"),
+  TranslatedName(LangKur(), name: "swahîlî"),
+  TranslatedName(LangMri(), name: "Wāhīri"),
+  TranslatedName(LangPus(), name: "سواهېلي"),
+  TranslatedName(LangSrd(), name: "swahili"),
+  TranslatedName(LangSnd(), name: "سواحيلي"),
+  TranslatedName(LangSom(), name: "Sawaaxili"),
+  TranslatedName(LangTuk(), name: "suahili dili"),
 ];

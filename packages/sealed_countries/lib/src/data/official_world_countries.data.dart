@@ -14623,14 +14623,14 @@ class CountrySgp extends WorldCountry {
           ),
           namesNative: const [
             CountryName(
-              language: LangZho(),
-              official: "新加坡共和国",
-              common: "新加坡",
-            ),
-            CountryName(
               language: LangEng(),
               official: "Republic of Singapore",
               common: "Singapore",
+            ),
+            CountryName(
+              language: LangZho(),
+              official: "新加坡共和国",
+              common: "新加坡",
             ),
             CountryName(
               language: LangMsa(),

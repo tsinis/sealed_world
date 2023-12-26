@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 112 translations for a Senegal country:
+/// Provides 113 translations for a Senegal country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -109,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -309,4 +310,5 @@ const senCountryTranslations = [
   TranslatedName(LangSun(), name: "Sénégal"),
   TranslatedName(LangVie(), name: "Sénégal"),
   TranslatedName(LangVol(), name: "Senegalän"),
+  TranslatedName(LangXho(), name: "ESenegal"),
 ];

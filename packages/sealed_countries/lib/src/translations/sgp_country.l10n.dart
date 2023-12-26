@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Singapore country:
+/// Provides 137 translations for a Singapore country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -131,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -363,4 +364,5 @@ const sgpCountryTranslations = [
   TranslatedName(LangSsw(), name: "ISingapholo"),
   TranslatedName(LangSun(), name: "Singapura"),
   TranslatedName(LangVol(), name: "Singapurän"),
+  TranslatedName(LangXho(), name: "ESingapore"),
 ];

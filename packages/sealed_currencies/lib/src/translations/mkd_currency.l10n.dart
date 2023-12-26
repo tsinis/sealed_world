@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Macedonian Denar currency:
+/// Provides 107 translations for a Macedonian Denar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const mkdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Macedonian Denar"),
@@ -98,7 +115,11 @@ const mkdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ম্যাসেডোনিয়ান দিনার"),
   TranslatedName(LangBre(), name: "denar Makedonia"),
   TranslatedName(LangBos(), name: "Makedonski denar"),
-  TranslatedName(LangBos(), name: "Македонски денар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Македонски денар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "denar macedoni"),
   TranslatedName(LangChe(), name: "Македонин динар"),
   TranslatedName(LangCes(), name: "makedonský denár"),
@@ -178,4 +199,21 @@ const mkdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "马其顿第纳尔"),
   TranslatedName(LangZho(), name: "馬其頓第納爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Macedonian Denar"),
+  TranslatedName(LangAsm(), name: "মেচিডোনীয় ডেনাৰ"),
+  TranslatedName(LangChv(), name: "Македони денарӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤭𞤲𞤢𞥄𞤪 𞤃𞤢𞤧𞤫𞤣𞤮𞤲𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dinarin Macedonia"),
+  TranslatedName(LangIna(), name: "denar macedonie"),
+  TranslatedName(LangIbo(), name: "Ego Denar Obodo Macedonia"),
+  TranslatedName(LangJav(), name: "Denar Masedonia"),
+  TranslatedName(LangKur(), name: "dînarê makedonî"),
+  TranslatedName(LangMri(), name: "Denar Makerōnia"),
+  TranslatedName(LangOri(), name: "ମାସେଡୋନୀୟ ଡିନର୍"),
+  TranslatedName(LangPus(), name: "مسيډونايي دينار"),
+  TranslatedName(LangSrd(), name: "denar matzèdone"),
+  TranslatedName(LangSom(), name: "Denaarka Masedoniya"),
+  TranslatedName(LangTuk(), name: "Makedon dinary"),
+  TranslatedName(LangTgl(), name: "Denar ng Macedonia"),
+  TranslatedName(LangXho(), name: "Macedonian Denar"),
+  TranslatedName(LangYor(), name: "Dẹ́nà Masidóníà"),
 ];

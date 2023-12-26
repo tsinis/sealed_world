@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Albanian Lek currency:
+/// Provides 107 translations for a Albanian Lek currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const allCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Albanian Lek"),
@@ -98,7 +115,11 @@ const allCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আলবেনিয়ান লেক"),
   TranslatedName(LangBre(), name: "lek Albania"),
   TranslatedName(LangBos(), name: "Albanski lek"),
-  TranslatedName(LangBos(), name: "Албански лек", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Албански лек",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lek albanès"),
   TranslatedName(LangChe(), name: "Албанин лек"),
   TranslatedName(LangCes(), name: "albánský lek"),
@@ -178,4 +199,21 @@ const allCurrencyTranslations = [
   TranslatedName(LangZho(), name: "阿尔巴尼亚列克"),
   TranslatedName(LangZho(), name: "阿爾巴尼亞列克", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Albanian Lek"),
+  TranslatedName(LangAsm(), name: "আলবেনীয় লেক"),
+  TranslatedName(LangChv(), name: "Албани лекӗ"),
+  TranslatedName(LangFul(), name: "𞤂𞤫𞤳 𞤀𞤤𞤦𞤢𞤲𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Albania"),
+  TranslatedName(LangIna(), name: "lek albanese"),
+  TranslatedName(LangIbo(), name: "Ego Lek Obodo Albania"),
+  TranslatedName(LangJav(), name: "Lek Albania"),
+  TranslatedName(LangKur(), name: "lekê arnawidî"),
+  TranslatedName(LangMri(), name: "Lek Arapeinia"),
+  TranslatedName(LangOri(), name: "ଆଲବାନିୟ ଲେକ୍"),
+  TranslatedName(LangPus(), name: "البانوي لک"),
+  TranslatedName(LangSrd(), name: "lek albanesu"),
+  TranslatedName(LangSom(), name: "Lekta Albaniya"),
+  TranslatedName(LangTuk(), name: "Alban leki"),
+  TranslatedName(LangTgl(), name: "Lek ng Albania"),
+  TranslatedName(LangXho(), name: "I-Lek yase-Albania"),
+  TranslatedName(LangYor(), name: "Lẹ́ẹ̀kì Àlìbáníà"),
 ];

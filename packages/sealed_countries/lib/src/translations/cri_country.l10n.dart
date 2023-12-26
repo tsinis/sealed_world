@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Costa Rica country:
+/// Provides 137 translations for a Costa Rica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -130,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -361,4 +363,6 @@ const criCountryTranslations = [
   TranslatedName(LangSsw(), name: "IKhosta-Likha"),
   TranslatedName(LangSun(), name: "Kosta Rika"),
   TranslatedName(LangVol(), name: "Kostarikän"),
+  TranslatedName(LangChv(), name: "Коста-Рика"),
+  TranslatedName(LangXho(), name: "ECosta Rica"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Latin language:
+/// Provides 112 translations for a Latin language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,15 +34,19 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -50,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,6 +66,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -71,22 +79,29 @@ import "../model/translated_name.dart";
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -195,4 +210,23 @@ const latLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Latini"),
   TranslatedName(LangZho(), name: "拉丁文"),
   TranslatedName(LangZul(), name: "isi-Latin"),
+  TranslatedName(LangAsm(), name: "লেটিন"),
+  TranslatedName(LangChe(), name: "латинан"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤂𞤢𞤼𞤫𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Dan Kabilar Latin"),
+  TranslatedName(LangIna(), name: "latino"),
+  TranslatedName(LangIbo(), name: "Latịn"),
+  TranslatedName(LangKur(), name: "latînî"),
+  TranslatedName(LangMri(), name: "Rātini"),
+  TranslatedName(LangQue(), name: "Latín Simi"),
+  TranslatedName(LangSrd(), name: "latinu"),
+  TranslatedName(LangSnd(), name: "لاطيني"),
+  TranslatedName(LangSom(), name: "Laatiin"),
+  TranslatedName(LangTgk(), name: "лотинӣ"),
+  TranslatedName(LangTuk(), name: "latyn dili"),
+  TranslatedName(LangTat(), name: "латин"),
 ];

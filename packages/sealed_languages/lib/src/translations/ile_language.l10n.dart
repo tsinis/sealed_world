@@ -2,9 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 67 translations for a Interlingue language:
+/// Provides 86 translations for a Interlingue language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -12,6 +16,7 @@ import "../model/translated_name.dart";
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -23,9 +28,12 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -35,8 +43,12 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -44,10 +56,12 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -55,18 +69,23 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Yoruba.
+/// - Yoruba
+/// - Zulu.
 const ileLanguageTranslations = [
   TranslatedName(LangEng(), name: "Interlingue"),
   TranslatedName(LangAmh(), name: "እንተርሊንግወ"),
@@ -134,7 +153,24 @@ const ileLanguageTranslations = [
   TranslatedName(LangYor(), name: "Iru Èdè"),
   TranslatedName(LangZho(), name: "国际文字（E）"),
   TranslatedName(LangZho(), name: "國際文（E）", script: ScriptHant()),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Interlingue"),
+  TranslatedName(LangHau(), name: "Intagulanci"),
+  TranslatedName(LangHye(), name: "ինտերլինգուե"),
+  TranslatedName(LangKaz(), name: "интерлингве тілі"),
+  TranslatedName(LangKur(), name: "înterlîngue"),
+  TranslatedName(LangNep(), name: "इन्टरलिङ्ग्वे"),
+  TranslatedName(LangSqi(), name: "gjuha oksidentale"),
+  TranslatedName(LangSwa(), name: "lugha ya kisayansi"),
+  TranslatedName(LangZul(), name: "izimili"),
+  TranslatedName(LangAsm(), name: "আন্তঃভাষা"),
+  TranslatedName(LangDeu(), name: "Interlingue"),
+  TranslatedName(LangGlg(), name: "interlingua"),
+  TranslatedName(LangKhm(), name: "អន្តរភាសា"),
+  TranslatedName(LangKir(), name: "интерлингве"),
+  TranslatedName(LangMya(), name: "ဘာသာစကားအချင်းချင်း"),
+  TranslatedName(LangPan(), name: "ਇੰਟਰਲਿੰਗ"),
+  TranslatedName(LangPus(), name: "انټرلینګو"),
+  TranslatedName(LangSin(), name: "අන්තර්භාෂාව"),
+  TranslatedName(LangUrd(), name: "انٹرلنگوا"),
+  TranslatedName(LangUzb(), name: "interlingva"),
 ];

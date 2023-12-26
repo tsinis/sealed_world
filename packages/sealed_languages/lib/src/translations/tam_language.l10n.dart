@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Tamil language:
+/// Provides 118 translations for a Tamil language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -20,6 +21,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Ganda
 /// - Georgian
@@ -43,6 +46,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -66,6 +71,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,8 +88,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -90,12 +99,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -212,4 +224,20 @@ const tamLanguageTranslations = [
   TranslatedName(LangZho(), name: "泰米尔文"),
   TranslatedName(LangZho(), name: "坦米爾文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Tamil"),
+  TranslatedName(LangAsm(), name: "তামিল"),
+  TranslatedName(LangChe(), name: "тамилхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤢𞤥𞤵𞤤𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "tamil"),
+  TranslatedName(LangKur(), name: "tamîlî"),
+  TranslatedName(LangMri(), name: "Tamira"),
+  TranslatedName(LangPus(), name: "تامل"),
+  TranslatedName(LangSrd(), name: "tamil"),
+  TranslatedName(LangSnd(), name: "تامل"),
+  TranslatedName(LangTgk(), name: "тамилӣ"),
+  TranslatedName(LangTuk(), name: "tamil dili"),
+  TranslatedName(LangTat(), name: "тамил"),
 ];

@@ -2,20 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 89 translations for a Oriya language:
+/// Provides 110 translations for a Oriya language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,14 +33,20 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,11 +67,13 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -68,25 +81,33 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Western Frisian
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const oriLanguageTranslations = [
   TranslatedName(LangEng(), name: "Oriya"),
@@ -178,4 +199,29 @@ const oriLanguageTranslations = [
   TranslatedName(LangZho(), name: "奥里亚文"),
   TranslatedName(LangZho(), name: "歐利亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Oriya"),
+  TranslatedName(LangAfr(), name: "Oriya"),
+  TranslatedName(LangAsm(), name: "ওড়িয়া"),
+  TranslatedName(LangBel(), name: "орыя"),
+  TranslatedName(LangChe(), name: "ори"),
+  TranslatedName(LangDeu(), name: "Oriya"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤌𞤣𞤭𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Odiya"),
+  TranslatedName(LangIna(), name: "oriya"),
+  TranslatedName(LangInd(), name: "Oriya"),
+  TranslatedName(LangIbo(), name: "Ọdịa"),
+  TranslatedName(LangKur(), name: "oriyayî"),
+  TranslatedName(LangMri(), name: "Ōtia"),
+  TranslatedName(LangPus(), name: "اوڊيا"),
+  TranslatedName(LangSrd(), name: "odia"),
+  TranslatedName(LangSnd(), name: "اوڊيا"),
+  TranslatedName(LangSom(), name: "Oodhiya"),
+  TranslatedName(LangTgk(), name: "одия"),
+  TranslatedName(LangTuk(), name: "oriýa dili"),
+  TranslatedName(LangTat(), name: "ория"),
+  TranslatedName(LangWol(), name: "Oja"),
+  TranslatedName(LangYor(), name: "Òdíà"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a Thai language:
+/// Provides 124 translations for a Thai language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -20,7 +21,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -45,9 +48,11 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -56,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,6 +75,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -77,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -85,8 +93,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -94,18 +104,23 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const thaLanguageTranslations = [
@@ -218,4 +233,19 @@ const thaLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Tai"),
   TranslatedName(LangZho(), name: "泰文"),
   TranslatedName(LangZul(), name: "isi-Thai"),
+  TranslatedName(LangAsm(), name: "থাই"),
+  TranslatedName(LangChe(), name: "тайн"),
+  TranslatedName(LangChv(), name: "тай"),
+  TranslatedName(LangIna(), name: "thai"),
+  TranslatedName(LangJav(), name: "Thailand"),
+  TranslatedName(LangKur(), name: "tayî"),
+  TranslatedName(LangMri(), name: "Tai"),
+  TranslatedName(LangPus(), name: "تايلېنډي"),
+  TranslatedName(LangSrd(), name: "tailandesu"),
+  TranslatedName(LangSnd(), name: "ٿائي"),
+  TranslatedName(LangTgk(), name: "тайӣ"),
+  TranslatedName(LangTuk(), name: "taý dili"),
+  TranslatedName(LangTat(), name: "тай"),
+  TranslatedName(LangWol(), name: "Tay"),
+  TranslatedName(LangXho(), name: "Isi-Thai"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Ireland country:
+/// Provides 151 translations for a Ireland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -144,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -371,4 +372,5 @@ const irlCountryTranslations = [
   TranslatedName(LangVol(), name: "Lireyän"),
   TranslatedName(LangWln(), name: "Irlande"),
   TranslatedName(LangZha(), name: "Aiwjlanz Gunghozgoz"),
+  TranslatedName(LangXho(), name: "E-Ireland"),
 ];

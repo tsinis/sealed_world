@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Ukrainian language:
+/// Provides 129 translations for a Ukrainian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -48,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -81,6 +87,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -89,8 +96,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -99,12 +108,15 @@ import "../model/translated_name.dart";
 /// - Swahili
 /// - Swedish
 /// - Tagalog
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -112,6 +124,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -232,4 +245,17 @@ const ukrLanguageTranslations = [
   TranslatedName(LangZho(), name: "乌克兰文"),
   TranslatedName(LangZho(), name: "烏克蘭文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Ukrainian"),
+  TranslatedName(LangAsm(), name: "ইউক্ৰেইনীয়"),
+  TranslatedName(LangChe(), name: "украинийн"),
+  TranslatedName(LangIna(), name: "ukrainiano"),
+  TranslatedName(LangJav(), name: "Ukraina"),
+  TranslatedName(LangKur(), name: "ukraynî"),
+  TranslatedName(LangMri(), name: "Ukareinga"),
+  TranslatedName(LangPus(), name: "اوکرايني"),
+  TranslatedName(LangSrd(), name: "ucrainu"),
+  TranslatedName(LangSnd(), name: "يوڪراني"),
+  TranslatedName(LangTgk(), name: "украинӣ"),
+  TranslatedName(LangTuk(), name: "ukrain dili"),
+  TranslatedName(LangTat(), name: "украин"),
+  TranslatedName(LangWol(), name: "Ikreniye"),
 ];

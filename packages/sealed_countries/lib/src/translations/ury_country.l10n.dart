@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Uruguay country:
+/// Provides 133 translations for a Uruguay country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -97,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -126,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -356,4 +358,6 @@ const uryCountryTranslations = [
   TranslatedName(LangTgl(), name: "Urugway"),
   TranslatedName(LangVol(), name: "Luruguyän"),
   TranslatedName(LangWln(), name: "Ourougway"),
+  TranslatedName(LangSrd(), name: "Uruguày"),
+  TranslatedName(LangXho(), name: "E-Uruguay"),
 ];

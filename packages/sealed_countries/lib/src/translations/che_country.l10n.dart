@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 153 translations for a Switzerland country:
+/// Provides 154 translations for a Switzerland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -145,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -391,4 +392,5 @@ const cheCountryTranslations = [
   TranslatedName(LangTgl(), name: "Suwisa"),
   TranslatedName(LangVol(), name: "Jveizän"),
   TranslatedName(LangZha(), name: "Nyeiqswq"),
+  TranslatedName(LangXho(), name: "ESwitzerland"),
 ];

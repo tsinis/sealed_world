@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 155 translations for a China country:
+/// Provides 156 translations for a China country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -113,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
 /// - Sindhi
@@ -397,4 +398,5 @@ const chnCountryTranslations = [
   TranslatedName(LangVol(), name: "Tsyinän"),
   TranslatedName(LangXho(), name: "IShayina"),
   TranslatedName(LangZha(), name: "Cunghgoz"),
+  TranslatedName(LangSan(), name: "चीन:"),
 ];

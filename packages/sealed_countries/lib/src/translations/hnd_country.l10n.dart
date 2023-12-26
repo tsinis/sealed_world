@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Honduras country:
+/// Provides 119 translations for a Honduras country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -43,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Greek (modern)
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -73,6 +75,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Nepali
 /// - Oriya
@@ -112,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -323,4 +327,8 @@ const hndCountryTranslations = [
   TranslatedName(LangSsw(), name: "IHondulasi"),
   TranslatedName(LangVol(), name: "Hondurän"),
   TranslatedName(LangWln(), name: "Hondourasse"),
+  TranslatedName(LangChv(), name: "Гондурас"),
+  TranslatedName(LangHau(), name: "Yankin Honduras"),
+  TranslatedName(LangMri(), name: "Honotura"),
+  TranslatedName(LangXho(), name: "EHonduras"),
 ];

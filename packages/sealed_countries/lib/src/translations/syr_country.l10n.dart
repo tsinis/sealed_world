@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 141 translations for a Syria country:
+/// Provides 142 translations for a Syria country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -136,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -373,4 +374,5 @@ const syrCountryTranslations = [
   TranslatedName(LangTgl(), name: "Sirya"),
   TranslatedName(LangVol(), name: "Süriyän"),
   TranslatedName(LangWln(), name: "Sireye"),
+  TranslatedName(LangXho(), name: "ESiriya"),
 ];

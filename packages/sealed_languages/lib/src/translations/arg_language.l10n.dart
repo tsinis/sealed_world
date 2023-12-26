@@ -2,16 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 72 translations for a Aragonese language:
+/// Provides 107 translations for a Aragonese language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -19,59 +28,85 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
-/// - Yiddish.
+/// - Yiddish
+/// - Yoruba
+/// - Zulu.
 const argLanguageTranslations = [
   TranslatedName(LangEng(), name: "Aragonese"),
   TranslatedName(LangAra(), name: "الأراغونية"),
@@ -145,4 +180,43 @@ const argLanguageTranslations = [
   TranslatedName(LangYid(), name: "אַראַגאניש"),
   TranslatedName(LangZho(), name: "阿拉贡文"),
   TranslatedName(LangZho(), name: "阿拉貢文", script: ScriptHant()),
+  TranslatedName(LangAfr(), name: "Aragonees"),
+  TranslatedName(LangAmh(), name: "አራጎንስ"),
+  TranslatedName(LangAsm(), name: "আৰ্গোনিজ"),
+  TranslatedName(LangChe(), name: "арагонойн"),
+  TranslatedName(LangEus(), name: "aragoiera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤪𞤢𞤺𞤮𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "aragoniskt"),
+  TranslatedName(LangHau(), name: "Aragonesanci"),
+  TranslatedName(LangHye(), name: "արագոներեն"),
+  TranslatedName(LangIna(), name: "aragonese"),
+  TranslatedName(LangIbo(), name: "Aragonisị"),
+  TranslatedName(LangKaz(), name: "арагон тілі"),
+  TranslatedName(LangKur(), name: "aragonî"),
+  TranslatedName(LangKir(), name: "арагончо"),
+  TranslatedName(LangMri(), name: "Arakonihi"),
+  TranslatedName(LangMon(), name: "арагон"),
+  TranslatedName(LangMsa(), name: "Aragon"),
+  TranslatedName(LangMlt(), name: "Aragoniż"),
+  TranslatedName(LangMya(), name: "အာရာဂွန်"),
+  TranslatedName(LangNep(), name: "अरागोनी"),
+  TranslatedName(LangPan(), name: "ਅਰਾਗੋਨੀ"),
+  TranslatedName(LangPus(), name: "اراگونېسي"),
+  TranslatedName(LangQue(), name: "Aragonesa"),
+  TranslatedName(LangSrd(), name: "aragonesu"),
+  TranslatedName(LangSnd(), name: "ارگني"),
+  TranslatedName(LangSin(), name: "ඇරගොනීස්"),
+  TranslatedName(LangSom(), name: "U dhashay Aragon"),
+  TranslatedName(LangSqi(), name: "aragonezisht"),
+  TranslatedName(LangSwa(), name: "Kiaragoni"),
+  TranslatedName(LangTir(), name: "ኣራጎንኛ"),
+  TranslatedName(LangTuk(), name: "aragon dili"),
+  TranslatedName(LangUrd(), name: "اراگونیز"),
+  TranslatedName(LangUzb(), name: "aragon"),
+  TranslatedName(LangYor(), name: "Èdè Aragoni"),
+  TranslatedName(LangZul(), name: "isi-Aragonese"),
 ];

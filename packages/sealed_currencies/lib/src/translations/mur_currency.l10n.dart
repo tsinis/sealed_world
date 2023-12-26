@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a Mauritian Rupee currency:
+/// Provides 119 translations for a Mauritian Rupee currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const murCurrencyTranslations = [
@@ -114,7 +128,11 @@ const murCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মৌরিতানিয়ান রুপি"),
   TranslatedName(LangBre(), name: "roupi Moris"),
   TranslatedName(LangBos(), name: "Mauricijska rupija"),
-  TranslatedName(LangBos(), name: "Маурицијски рупи", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Маурицијски рупи",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rupia mauriciana"),
   TranslatedName(LangChe(), name: "Маврикин рупи"),
   TranslatedName(LangCes(), name: "mauricijská rupie"),
@@ -211,4 +229,18 @@ const murCurrencyTranslations = [
   TranslatedName(LangZho(), name: "毛里裘斯盧布", countryCode: "HK"),
   TranslatedName(LangZho(), name: "模里西斯盧比", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Mauritian Rupee"),
+  TranslatedName(LangAsm(), name: "মৰিচিয়ান ৰুপী"),
+  TranslatedName(LangChv(), name: "Маврики рупийӗ"),
+  TranslatedName(LangIna(), name: "rupia mauritian"),
+  TranslatedName(LangIbo(), name: "Ego Rupee obodo Mauritania"),
+  TranslatedName(LangJav(), name: "Rupee Mauritius"),
+  TranslatedName(LangKur(), name: "rûpiyê maûrîtîûsê"),
+  TranslatedName(LangMri(), name: "Rupee Marihi"),
+  TranslatedName(LangOri(), name: "ମୌରିସୀୟ ରୁପି"),
+  TranslatedName(LangPus(), name: "موريشيسي روپۍ"),
+  TranslatedName(LangSrd(), name: "rupia mauritziana"),
+  TranslatedName(LangSom(), name: "Rubiga Mowrishiya"),
+  TranslatedName(LangTuk(), name: "Mawrikiý rupiýasy"),
+  TranslatedName(LangTgl(), name: "Mauritian Rupee"),
+  TranslatedName(LangXho(), name: "I-Rupee yaseMauritius"),
 ];

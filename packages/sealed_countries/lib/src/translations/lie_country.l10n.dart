@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Liechtenstein country:
+/// Provides 110 translations for a Liechtenstein country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -21,6 +21,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -102,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -314,4 +316,6 @@ const lieCountryTranslations = [
   TranslatedName(LangLat(), name: "Lichtenstenum"),
   TranslatedName(LangMri(), name: "Rīkeneteina"),
   TranslatedName(LangVol(), name: "Ligtänstän"),
+  TranslatedName(LangChv(), name: "Лихтенштейн"),
+  TranslatedName(LangXho(), name: "ELiechtenstein"),
 ];

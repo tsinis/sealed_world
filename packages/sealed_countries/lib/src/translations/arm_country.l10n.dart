@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Armenia country:
+/// Provides 137 translations for a Armenia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -131,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -363,4 +364,5 @@ const armCountryTranslations = [
   TranslatedName(LangTwi(), name: "Aminia"),
   TranslatedName(LangTah(), name: "Āmenia"),
   TranslatedName(LangVol(), name: "Larmeniyän"),
+  TranslatedName(LangXho(), name: "E-Armenia"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a Indonesia country:
+/// Provides 139 translations for a Indonesia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -101,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -131,6 +132,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -365,4 +367,6 @@ const idnCountryTranslations = [
   TranslatedName(LangVol(), name: "Lindäna-Seänuäns"),
   TranslatedName(LangWln(), name: "Indonezeye"),
   TranslatedName(LangZha(), name: "Yindunizsihya"),
+  TranslatedName(LangSrd(), name: "Indonèsia"),
+  TranslatedName(LangXho(), name: "E-Indonesia"),
 ];

@@ -6,10 +6,10 @@ import "package:test/test.dart";
 import "../../../test_data.dart";
 
 void main() => group("$CountryName", () {
-      // ignore: deprecated_member_use_from_same_package, for tests.
-      const value = CountryName.international(
-        common: TestData.string,
+      const value = CountryName(
+        language: LangEng(),
         official: TestData.string,
+        common: TestData.string,
       );
 
       group("equality", () {

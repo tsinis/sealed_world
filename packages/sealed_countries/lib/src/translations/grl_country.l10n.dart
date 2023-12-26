@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 140 translations for a Greenland country:
+/// Provides 143 translations for a Greenland country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -87,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
@@ -105,6 +106,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -134,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -302,4 +305,7 @@ const grlCountryTranslations = [
   TranslatedName(LangSun(), name: "Lemah Héjo"),
   TranslatedName(LangTgl(), name: "Lupanlunti"),
   TranslatedName(LangVol(), name: "Gröneän"),
+  TranslatedName(LangMri(), name: "Whenuakāriki"),
+  TranslatedName(LangSrd(), name: "Groenlàndia"),
+  TranslatedName(LangXho(), name: "EGreenland"),
 ];

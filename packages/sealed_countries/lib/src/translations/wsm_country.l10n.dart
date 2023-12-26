@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 91 translations for a Samoa country:
+/// Provides 93 translations for a Samoa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -19,6 +19,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -90,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -273,4 +275,6 @@ const wsmCountryTranslations = [
   TranslatedName(LangFry(), name: "Samoä"),
   TranslatedName(LangMri(), name: "Hāmoa"),
   TranslatedName(LangVol(), name: "Samovuäns"),
+  TranslatedName(LangChv(), name: "Самоа"),
+  TranslatedName(LangXho(), name: "ESamoa"),
 ];

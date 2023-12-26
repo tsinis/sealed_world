@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Hindi language:
+/// Provides 122 translations for a Hindi language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -19,7 +20,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -35,6 +38,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -42,9 +46,12 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -53,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -64,6 +72,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -81,26 +90,33 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -211,4 +227,20 @@ const hinLanguageTranslations = [
   TranslatedName(LangZho(), name: "印地文"),
   TranslatedName(LangZho(), name: "北印度文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Hindi"),
+  TranslatedName(LangAsm(), name: "হিন্দী"),
+  TranslatedName(LangChe(), name: "хӀинди"),
+  TranslatedName(LangChv(), name: "хинди"),
+  TranslatedName(LangIna(), name: "hindi"),
+  TranslatedName(LangIbo(), name: "Hindị"),
+  TranslatedName(LangJav(), name: "India"),
+  TranslatedName(LangKur(), name: "hindî"),
+  TranslatedName(LangMri(), name: "Hīni"),
+  TranslatedName(LangSrd(), name: "hindi"),
+  TranslatedName(LangSnd(), name: "هندي"),
+  TranslatedName(LangTgk(), name: "ҳиндӣ"),
+  TranslatedName(LangTuk(), name: "hindi dili"),
+  TranslatedName(LangTat(), name: "һинд"),
+  TranslatedName(LangWol(), name: "Endo"),
+  TranslatedName(LangXho(), name: "IsiHindi"),
+  TranslatedName(LangDeu(), name: "Hindi"),
 ];

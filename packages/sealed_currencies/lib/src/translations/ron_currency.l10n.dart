@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Romanian Leu currency:
+/// Provides 107 translations for a Romanian Leu currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const ronCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Romanian Leu"),
@@ -98,7 +115,11 @@ const ronCurrencyTranslations = [
   TranslatedName(LangBen(), name: "রুমানিয়া লেয়ু"),
   TranslatedName(LangBre(), name: "leu Roumania"),
   TranslatedName(LangBos(), name: "Rumunski lej"),
-  TranslatedName(LangBos(), name: "Румунски леу", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Румунски леу",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "leu romanès"),
   TranslatedName(LangChe(), name: "Румынин лей"),
   TranslatedName(LangCes(), name: "rumunský leu"),
@@ -173,9 +194,30 @@ const ronCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "румунський лей"),
   TranslatedName(LangUrd(), name: "رومانیائی لیو"),
   TranslatedName(LangUzb(), name: "Ruminiya leyi"),
-  TranslatedName(LangUzb(), name: "RON", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "RON",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Leu Romania"),
   TranslatedName(LangZho(), name: "罗马尼亚列伊"),
   TranslatedName(LangZho(), name: "羅馬尼亞列伊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Romanian Leu"),
+  TranslatedName(LangAsm(), name: "ৰোমানীয় লেউ"),
+  TranslatedName(LangChv(), name: "Румыни лейӗ"),
+  TranslatedName(LangFul(), name: "𞤂𞤫𞤱𞤵 𞤈𞤮𞤥𞤢𞤲𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Romania"),
+  TranslatedName(LangIna(), name: "leu romanian"),
+  TranslatedName(LangIbo(), name: "Ego Leu obodo Romania"),
+  TranslatedName(LangJav(), name: "Leu Rumania"),
+  TranslatedName(LangKur(), name: "leyê romanyayî"),
+  TranslatedName(LangMri(), name: "Leu Romeinia"),
+  TranslatedName(LangOri(), name: "ରୋମାନିୟ ଲେଉ"),
+  TranslatedName(LangPus(), name: "روماني ليو"),
+  TranslatedName(LangSrd(), name: "leu rumenu"),
+  TranslatedName(LangSom(), name: "Liyuuda Romaniya"),
+  TranslatedName(LangTuk(), name: "Rumyn leýi"),
+  TranslatedName(LangTgl(), name: "Leu ng Romania"),
+  TranslatedName(LangXho(), name: "I-Leu yaseRomania"),
+  TranslatedName(LangYor(), name: "Léhù Ròméníà"),
 ];

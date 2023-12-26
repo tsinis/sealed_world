@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Convertible Mark currency:
+/// Provides 109 translations for a Convertible Mark currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const bamCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Bosnia-Herzegovina Convertible Mark"),
@@ -98,7 +115,11 @@ const bamCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বসনিয়া এবং হার্জেগোভিনা মার্ক"),
   TranslatedName(LangBre(), name: "mark kemmadus Bosnia ha Herzegovina"),
   TranslatedName(LangBos(), name: "Bosanskohercegovačka konvertibilna marka"),
-  TranslatedName(LangBos(), name: "Конвертибилна марка", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Конвертибилна марка",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "marc convertible de Bòsnia i Hercegovina"),
   TranslatedName(LangChe(), name: "Боснин а, Герцеговинан а хийцалун марка"),
   TranslatedName(LangCes(), name: "bosenská konvertibilní marka"),
@@ -237,4 +258,31 @@ const bamCurrencyTranslations = [
   TranslatedName(LangZho(), name: "波斯尼亞-赫塞哥維納可轉換馬克", countryCode: "HK"),
   TranslatedName(LangZho(), name: "波士尼亞-赫塞哥維納可轉換馬克", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Bosnia-Herzegovina Convertible Mark"),
+  TranslatedName(
+    LangAsm(),
+    name: "ব’ছনিয়া আৰু হাৰ্জেগ’ভিনা কনভাৰ্টিব্‌ল মাৰ্ক",
+  ),
+  TranslatedName(LangChv(), name: "Боснипе Герцеговина конвертланакан марки"),
+  TranslatedName(
+    LangFul(),
+    name:
+        "𞤃𞤢𞤪𞤳 𞤄𞤮𞤧𞤲𞤭𞤴𞤢-𞤖𞤫𞤪𞤶𞤫𞤺𞤮𞤾𞤭𞤲𞤳𞤮 𞤱𞤢𞤴𞤤𞤮𞤼𞤮𞥅𞤯𞤭",
+  ),
+  TranslatedName(LangHau(), name: "Kuɗaɗen Bosnia da Herzegovina"),
+  TranslatedName(LangIna(), name: "marco convertibile de Bosnia-Herzegovina"),
+  TranslatedName(LangIbo(), name: "Akara mgbanwe ego obodo Bosnia-Herzegovina"),
+  TranslatedName(LangJav(), name: "Mark Konvertibel Bosnia-Herzegovina"),
+  TranslatedName(LangKur(), name: "markê konvertibl ê bosna hersekî"),
+  TranslatedName(LangMri(), name: "Mark Pōngia-Herekōwini takahuri"),
+  TranslatedName(LangOri(), name: "ବୋସନିଆ-ହର୍ଜଗୋଭିନା କନଭର୍ଟିବଲ୍ ମାର୍କ୍"),
+  TranslatedName(LangPus(), name: "بوسنيا هرزګوينيايي بدلېدونکې مارک"),
+  TranslatedName(LangSrd(), name: "marcu cunvertìbile de sa Bòsnia-Erzegòvina"),
+  TranslatedName(LangSom(), name: "Konfatibal Maakta Bosnia-Hersogofina"),
+  TranslatedName(
+    LangTuk(),
+    name: "Konwertirlenýän Bosniýa we Gersegowina markasy",
+  ),
+  TranslatedName(LangTgl(), name: "Bosnia-Herzegovina Convertible Mark"),
+  TranslatedName(LangXho(), name: "I-Convertible Mark yaseBosnia-Herzegovina"),
+  TranslatedName(LangYor(), name: "Àmi Yíyípadà Bosnia-Herzegovina"),
 ];

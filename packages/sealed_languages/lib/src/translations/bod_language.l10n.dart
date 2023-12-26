@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Tibetan Standard language:
+/// Provides 112 translations for a Tibetan Standard language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -41,14 +45,17 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,12 +67,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -73,19 +82,26 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tibetan Standard
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -94,6 +110,7 @@ import "../model/translated_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const bodLanguageTranslations = [
   TranslatedName(LangEng(), name: "Tibetan"),
@@ -191,4 +208,25 @@ const bodLanguageTranslations = [
   TranslatedName(LangYid(), name: "טיבעטיש"),
   TranslatedName(LangZho(), name: "藏文"),
   TranslatedName(LangZul(), name: "isi-Tibetan"),
+  TranslatedName(LangAsm(), name: "তিব্বতী"),
+  TranslatedName(LangBel(), name: "тыбецкая"),
+  TranslatedName(LangChe(), name: "тибетхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤭𞤦𞤫𞤼𞤫𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "tibetano"),
+  TranslatedName(LangJav(), name: "Tibet"),
+  TranslatedName(LangKur(), name: "tîbetî"),
+  TranslatedName(LangMri(), name: "Tipete"),
+  TranslatedName(LangPus(), name: "تبتي"),
+  TranslatedName(LangSrd(), name: "tibetanu"),
+  TranslatedName(LangSnd(), name: "تبيتائي"),
+  TranslatedName(LangSom(), name: "Tibeetaan"),
+  TranslatedName(LangTgk(), name: "тибетӣ"),
+  TranslatedName(LangTir(), name: "ቲበታንኛ"),
+  TranslatedName(LangTuk(), name: "tibet dili"),
+  TranslatedName(LangTat(), name: "тибет"),
+  TranslatedName(LangYor(), name: "Tibetán"),
 ];

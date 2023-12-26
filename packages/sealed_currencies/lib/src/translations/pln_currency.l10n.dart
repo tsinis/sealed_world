@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Polish Zloty currency:
+/// Provides 109 translations for a Polish Zloty currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const plnCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Polish Zloty"),
@@ -99,7 +116,11 @@ const plnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "পোলিশ জ্লোটি"),
   TranslatedName(LangBre(), name: "zloty Polonia"),
   TranslatedName(LangBos(), name: "Poljski zlot"),
-  TranslatedName(LangBos(), name: "Пољски злот", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Пољски злот",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "zloty polonès"),
   TranslatedName(LangChe(), name: "Польшан злотый"),
   TranslatedName(LangCes(), name: "polský zlotý"),
@@ -181,4 +202,21 @@ const plnCurrencyTranslations = [
   TranslatedName(LangZho(), name: "波兰兹罗提"),
   TranslatedName(LangZho(), name: "波蘭茲羅提", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Polish Zloty"),
+  TranslatedName(LangAsm(), name: "প’লিচ জোল্টী"),
+  TranslatedName(LangChv(), name: "Польша злотыйӗ"),
+  TranslatedName(LangFul(), name: "𞤔𞤢𞤤𞤮𞤼𞤵 𞤆𞤮𞤤𞤭𞥅𞤧𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Polan"),
+  TranslatedName(LangIna(), name: "zloty polonese"),
+  TranslatedName(LangIbo(), name: "Ego Zloty mba Poland"),
+  TranslatedName(LangJav(), name: "Zloty Polandia"),
+  TranslatedName(LangKur(), name: "zlotiyê polonyayî"),
+  TranslatedName(LangMri(), name: "Zloty Pōrana"),
+  TranslatedName(LangOri(), name: "ପୋଲିଶ୍ ଜ୍ଲଟୀ"),
+  TranslatedName(LangPus(), name: "پولينډي زلوټي"),
+  TranslatedName(LangSrd(), name: "zloty polacu"),
+  TranslatedName(LangSom(), name: "Solotida Bolaan"),
+  TranslatedName(LangTuk(), name: "Polýak zlotysy"),
+  TranslatedName(LangTgl(), name: "Zloty ng Poland"),
+  TranslatedName(LangXho(), name: "Polish Zloty"),
+  TranslatedName(LangYor(), name: "Sílọ̀tì Pọ́líṣì"),
 ];

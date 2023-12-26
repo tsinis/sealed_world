@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a São Tomé and Príncipe Second Dobra currency:
+/// Provides 119 translations for a São Tomé and Príncipe Second Dobra currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,16 +45,20 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -67,11 +73,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -79,18 +88,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -98,6 +111,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const stnCurrencyTranslations = [
@@ -218,4 +232,18 @@ const stnCurrencyTranslations = [
   TranslatedName(LangZho(), name: "聖多美和普林西比多布拉", countryCode: "HK"),
   TranslatedName(LangZho(), name: "聖多美島和普林西比島多布拉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-São Tomé kanye ne-Príncipe Dobra"),
+  TranslatedName(LangAsm(), name: "চাও টোমে আৰু প্ৰিনচিপে ডোব্‌ৰা"),
+  TranslatedName(LangChv(), name: "Сан-Томе тата Принсипи добрӗ"),
+  TranslatedName(LangIna(), name: "dobra de São Tomé e Príncipe"),
+  TranslatedName(LangIbo(), name: "Ego Dobra nke obodo Sāo Tomé na Principe"),
+  TranslatedName(LangJav(), name: "Dobra Sao Tome lan Principe"),
+  TranslatedName(LangKur(), name: "dobrayê sao tome û principeyî"),
+  TranslatedName(LangMri(), name: "Dobra Hao Tome me Pirinihipi"),
+  TranslatedName(LangOri(), name: "ସାଓ ତୋମେ & ପ୍ରିସିପ୍ ଡୋବ୍ରା"),
+  TranslatedName(LangPus(), name: "ساو ټوم او پرينسپي ډوبرا"),
+  TranslatedName(LangSrd(), name: "dobra de São Tomé e Príncipe"),
+  TranslatedName(LangSom(), name: "Dobra Sao Tome & Birinsibi"),
+  TranslatedName(LangTuk(), name: "San-Tome we Prinsipi dobrasy"),
+  TranslatedName(LangTgl(), name: "São Tomé & Príncipe Dobra"),
+  TranslatedName(LangXho(), name: "I-Dobra yaseSão Tomé & Príncipe"),
 ];

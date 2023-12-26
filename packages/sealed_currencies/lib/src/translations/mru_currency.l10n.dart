@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 108 translations for a Mauritanian Ouguiya currency:
+/// Provides 122 translations for a Mauritanian Ouguiya currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const mruCurrencyTranslations = [
@@ -114,7 +128,11 @@ const mruCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মৌরিতানিয়ান ওউগুইয়া"),
   TranslatedName(LangBre(), name: "ouguiya Maouritania"),
   TranslatedName(LangBos(), name: "Mauritanijska ugvija"),
-  TranslatedName(LangBos(), name: "Мауританијска угвија", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Мауританијска угвија",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "ouguiya maurità"),
   TranslatedName(LangChe(), name: "Мавританин уги"),
   TranslatedName(LangCes(), name: "mauritánská ouguiya"),
@@ -214,4 +232,18 @@ const mruCurrencyTranslations = [
   TranslatedName(LangZho(), name: "毛里塔尼亞烏吉亞", countryCode: "HK"),
   TranslatedName(LangZho(), name: "茅利塔尼亞烏吉亞", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Mauritanian Ouguiya"),
+  TranslatedName(LangAsm(), name: "ম’ৰিটেনিয়ান ঔগুইয়া"),
+  TranslatedName(LangChv(), name: "Мавритани угийӗ"),
+  TranslatedName(LangIna(), name: "ouguiya mauritan"),
+  TranslatedName(LangIbo(), name: "Ego Ouguiya Obodo Mauritania"),
+  TranslatedName(LangJav(), name: "Ouguiya Mauritania"),
+  TranslatedName(LangKur(), name: "ouguîayê morîtanyayî"),
+  TranslatedName(LangMri(), name: "Ouguiya Mauritania"),
+  TranslatedName(LangOri(), name: "ମର୍ଟିନିୟ ଆଗୁଇଅ"),
+  TranslatedName(LangPus(), name: "موريشيسي ډالر"),
+  TranslatedName(LangSrd(), name: "ouguiya mauritiana"),
+  TranslatedName(LangSom(), name: "Oogiyada Mawritaaniya"),
+  TranslatedName(LangTuk(), name: "Mawritan ugiýasy"),
+  TranslatedName(LangTgl(), name: "Ouguiya ng Mauritania"),
+  TranslatedName(LangXho(), name: "I-Ouguiya yaseMauritania"),
 ];

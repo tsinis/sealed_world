@@ -2,12 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 90 translations for a Tigrinya language:
+/// Provides 106 translations for a Tigrinya language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +18,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,15 +31,19 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -47,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,12 +64,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -70,23 +79,30 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Wolof
 /// - Yoruba
 /// - Zulu.
 const tirLanguageTranslations = [
@@ -180,4 +196,24 @@ const tirLanguageTranslations = [
   TranslatedName(LangZho(), name: "提格里尼亚文"),
   TranslatedName(LangZho(), name: "提格利尼亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Tigrinya"),
+  TranslatedName(LangAsm(), name: "টিগৰিনিয়া"),
+  TranslatedName(LangChe(), name: "тигринья"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤭𞤺𞤭𞤪𞤻𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Tigrinyanci"),
+  TranslatedName(LangIna(), name: "tigrinya"),
+  TranslatedName(LangIbo(), name: "Tịgrịnya"),
+  TranslatedName(LangKur(), name: "tigrînî"),
+  TranslatedName(LangMri(), name: "Tekirinia"),
+  TranslatedName(LangPus(), name: "تيګريني"),
+  TranslatedName(LangSrd(), name: "tigrignu"),
+  TranslatedName(LangSnd(), name: "تگرينيائي"),
+  TranslatedName(LangTgk(), name: "тигриня"),
+  TranslatedName(LangTuk(), name: "tigrinýa dili"),
+  TranslatedName(LangTur(), name: "Tigrinya dili"),
+  TranslatedName(LangTat(), name: "тигринья"),
+  TranslatedName(LangWol(), name: "Tigriña"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a Nigerian Naira currency:
+/// Provides 120 translations for a Nigerian Naira currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -45,9 +47,11 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const ngnCurrencyTranslations = [
@@ -115,7 +128,11 @@ const ngnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নাইজেরিয়ান নায়রা"),
   TranslatedName(LangBre(), name: "naira Nigeria"),
   TranslatedName(LangBos(), name: "Nigerijska naira"),
-  TranslatedName(LangBos(), name: "Нигеријска наира", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Нигеријска наира",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "naira nigerià"),
   TranslatedName(LangChe(), name: "Нигерин найра"),
   TranslatedName(LangCes(), name: "nigerijská naira"),
@@ -214,4 +231,17 @@ const ngnCurrencyTranslations = [
   TranslatedName(LangZho(), name: "尼日利亞奈拉", countryCode: "HK"),
   TranslatedName(LangZho(), name: "奈及利亞奈拉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Nigerian Naira"),
+  TranslatedName(LangAsm(), name: "নাইজেৰিয়ান নাইৰা"),
+  TranslatedName(LangChv(), name: "Нигери найрӗ"),
+  TranslatedName(LangIna(), name: "naira nigerian"),
+  TranslatedName(LangJav(), name: "Naira Nigeria"),
+  TranslatedName(LangKur(), name: "naîrayê nîjeryayî"),
+  TranslatedName(LangMri(), name: "Naira Ngāitīria"),
+  TranslatedName(LangOri(), name: "ନାଇଜେରିଆଇ ନାଇରା"),
+  TranslatedName(LangPus(), name: "نايجيري نايرا"),
+  TranslatedName(LangSrd(), name: "naira nigeriana"),
+  TranslatedName(LangSom(), name: "Nairada Neyjeeriya"),
+  TranslatedName(LangTuk(), name: "Nigeriýa naýrasy"),
+  TranslatedName(LangTgl(), name: "Nigerian Naira"),
+  TranslatedName(LangXho(), name: "I-Naira yaseNigeria"),
 ];

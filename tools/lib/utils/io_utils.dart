@@ -31,10 +31,16 @@ final class IoUtils {
     return directory;
   }
 
-  File writeContentToFile(String filePath, StringBuffer buffer) {
+  File? writeContentToFile(String filePath, Object buffer) {
     final content = buffer.toString();
+    if (content.length <= 5) return null;
     final file = File(filePath);
-    if (!file.existsSync()) return file..writeAsStringSync(content);
+
+    if (!file.existsSync()) {
+      return file
+        ..createSync(recursive: true)
+        ..writeAsStringSync(content);
+    }
     file
       ..deleteSync(recursive: true)
       ..createSync(recursive: true)
@@ -56,12 +62,24 @@ final class IoUtils {
     final destinationPath = join(destination.path, PathConstants.json);
     if (!destination.existsSync()) destination.createSync(recursive: true);
 
-    source.listSync(recursive: true).forEach((file) {
-      if (file is File && file.path.endsWith(".${PathConstants.json}")) {
+    forFileInDirectory(
+      source,
+      withFile: (file, _) {
         final newPath = destinationPath + file.path.replaceAll(source.path, "");
         File(newPath).createSync(recursive: true);
         file.renameSync(newPath);
-      }
-    });
+      },
+    );
   }
+
+  void forFileInDirectory(
+    Directory directory, {
+    required void Function(File file, String filename) withFile,
+    String format = PathConstants.json,
+  }) =>
+      directory.listSync(recursive: true).forEach((file) {
+        if (file is! File) return;
+        final name = basename(file.path);
+        if (name.endsWith(".$format")) withFile(file, withoutExtension(name));
+      });
 }

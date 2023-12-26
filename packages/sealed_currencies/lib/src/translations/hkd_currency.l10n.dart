@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Hong Kong Dollar currency:
+/// Provides 96 translations for a Hong Kong Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -63,6 +64,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -100,7 +103,11 @@ const hkdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "হংকং ডলার"),
   TranslatedName(LangBre(), name: "dollar Hong Kong"),
   TranslatedName(LangBos(), name: "Honkonški dolar"),
-  TranslatedName(LangBos(), name: "Хонгконшки долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Хонгконшки долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar de Hong Kong"),
   TranslatedName(LangChe(), name: "Гонконган доллар"),
   TranslatedName(LangCes(), name: "hongkongský dolar"),
@@ -178,9 +185,16 @@ const hkdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "гонконгський долар"),
   TranslatedName(LangUrd(), name: "ھانگ کانگ ڈالر"),
   TranslatedName(LangUzb(), name: "Gonkong dollari"),
-  TranslatedName(LangUzb(), name: "HKD", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "HKD",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Hồng Kông"),
   TranslatedName(LangZho(), name: "港元"),
   TranslatedName(LangZho(), name: "港幣", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Hong Kong Dollar"),
+  TranslatedName(LangAsm(), name: "হং কং ডলাৰ"),
+  TranslatedName(LangOri(), name: "ହଂକଂ ଡଲାର"),
+  TranslatedName(LangPus(), name: "هانگ کانگي ډالر"),
 ];

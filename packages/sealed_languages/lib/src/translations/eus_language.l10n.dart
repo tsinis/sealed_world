@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Basque language:
+/// Provides 113 translations for a Basque language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -41,7 +44,9 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -51,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,6 +67,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -68,6 +75,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -75,19 +83,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -95,6 +109,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -197,4 +212,23 @@ const eusLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Baski"),
   TranslatedName(LangZho(), name: "巴斯克文"),
   TranslatedName(LangZul(), name: "isi-Basque"),
+  TranslatedName(LangAsm(), name: "বাস্ক"),
+  TranslatedName(LangChe(), name: "баскийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤢𞤧𞤳𞤢𞤪𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "basco"),
+  TranslatedName(LangIbo(), name: "Baskwe"),
+  TranslatedName(LangKur(), name: "baskî"),
+  TranslatedName(LangMri(), name: "Pākihi"),
+  TranslatedName(LangPus(), name: "باسکي"),
+  TranslatedName(LangSrd(), name: "bascu"),
+  TranslatedName(LangSnd(), name: "باسق"),
+  TranslatedName(LangSom(), name: "Basquu"),
+  TranslatedName(LangTgk(), name: "баскӣ"),
+  TranslatedName(LangTuk(), name: "bask dili"),
+  TranslatedName(LangTat(), name: "баск"),
+  TranslatedName(LangWol(), name: "Bask"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 153 translations for a Antigua and Barbuda country:
+/// Provides 157 translations for a Antigua and Barbuda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -90,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
@@ -145,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -407,4 +411,8 @@ const atgCountryTranslations = [
   TranslatedName(LangTgl(), name: "Antigua at Barbuda"),
   TranslatedName(LangVol(), name: "Lantigeän e Barbudeän"),
   TranslatedName(LangZha(), name: "Antigua caeuq Barbuda"),
+  TranslatedName(LangChv(), name: "Антигуа тата Барбуда"),
+  TranslatedName(LangIbo(), name: "Antigua na Barbuda"),
+  TranslatedName(LangMri(), name: "Motu Nehe me Pāputa"),
+  TranslatedName(LangXho(), name: "E-Antigua & Barbuda"),
 ];

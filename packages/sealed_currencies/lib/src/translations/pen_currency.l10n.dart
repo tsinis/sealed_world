@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Peruvian Sol currency:
+/// Provides 109 translations for a Peruvian Sol currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,10 +67,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -70,17 +81,21 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +103,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const penCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Peruvian Sol"),
@@ -100,7 +117,11 @@ const penCurrencyTranslations = [
   TranslatedName(LangBen(), name: "পেরুভিয়ান সোল"),
   TranslatedName(LangBre(), name: "sol Perou"),
   TranslatedName(LangBos(), name: "Peruanski sol"),
-  TranslatedName(LangBos(), name: "Перуански сол", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Перуански сол",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "sol peruà"),
   TranslatedName(LangChe(), name: "Перун соль"),
   TranslatedName(LangCes(), name: "peruánský sol"),
@@ -177,9 +198,30 @@ const penCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "перуанський сол"),
   TranslatedName(LangUrd(), name: "پیرو نیووسول"),
   TranslatedName(LangUzb(), name: "Peru soli"),
-  TranslatedName(LangUzb(), name: "Перу сол", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Перу сол",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Sol Peru"),
   TranslatedName(LangZho(), name: "秘鲁索尔"),
   TranslatedName(LangZho(), name: "秘魯太陽幣", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Peruvian Nuevo Sol"),
+  TranslatedName(LangAsm(), name: "পেৰুভিয়ান ছ’ল"),
+  TranslatedName(LangChv(), name: "Перу солӗ"),
+  TranslatedName(LangFul(), name: "𞤅𞤮𞤤 𞤆𞤫𞤪𞤵𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Sol na ƙasar Peru"),
+  TranslatedName(LangIna(), name: "sol peruvian"),
+  TranslatedName(LangIbo(), name: "Ego Sol obodo Peru"),
+  TranslatedName(LangJav(), name: "Sol Peru"),
+  TranslatedName(LangKur(), name: "solê perûyî"),
+  TranslatedName(LangMri(), name: "Sole Peru"),
+  TranslatedName(LangOri(), name: "ପେରୁଭୀୟ ସୋଲ୍"),
+  TranslatedName(LangPus(), name: "پيروين سول"),
+  TranslatedName(LangSrd(), name: "sol peruvianu"),
+  TranslatedName(LangSom(), name: "Solsha Beeru"),
+  TranslatedName(LangTuk(), name: "Peru soly"),
+  TranslatedName(LangTgl(), name: "Peruvian Sol"),
+  TranslatedName(LangXho(), name: "I-Sol yasePeruvia"),
+  TranslatedName(LangYor(), name: "Sólì Pèrúù"),
 ];

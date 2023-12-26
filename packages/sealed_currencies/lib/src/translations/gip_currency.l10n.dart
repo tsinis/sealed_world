@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 89 translations for a Gibraltar Pound currency:
+/// Provides 106 translations for a Gibraltar Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const gipCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Gibraltar Pound"),
@@ -98,7 +115,11 @@ const gipCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জিব্রাল্টার পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Jibraltar"),
   TranslatedName(LangBos(), name: "Gibraltarska funta"),
-  TranslatedName(LangBos(), name: "Гибралташка фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Гибралташка фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura de Gibraltar"),
   TranslatedName(LangChe(), name: "Гибралтаран фунт"),
   TranslatedName(LangCes(), name: "gibraltarská libra"),
@@ -177,4 +198,21 @@ const gipCurrencyTranslations = [
   TranslatedName(LangZho(), name: "直布罗陀镑"),
   TranslatedName(LangZho(), name: "直布羅陀鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Gibraltar Pound"),
+  TranslatedName(LangAsm(), name: "জিব্ৰাল্টৰ পাউণ্ড"),
+  TranslatedName(LangChv(), name: "Гибралтар фунчӗ"),
+  TranslatedName(LangFul(), name: "𞤆𞤢𞤱𞤲𞥋𞤣𞤵 𞤔𞤭𞤤𞤦𞤪𞤢𞤤𞤼𞤢𞤪"),
+  TranslatedName(LangHau(), name: "Kuɗin Gibraltal"),
+  TranslatedName(LangIna(), name: "libra de Gibraltar"),
+  TranslatedName(LangIbo(), name: "Ego Pound obodo Gibraltar"),
+  TranslatedName(LangJav(), name: "Pound Gibraltar"),
+  TranslatedName(LangKur(), name: "poundê gîbraltarê"),
+  TranslatedName(LangMri(), name: "Pāuna Kāmaka"),
+  TranslatedName(LangOri(), name: "ଗିବ୍ରାଲଟର୍ ପାଉଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "جبل الطارقي پونډ"),
+  TranslatedName(LangSrd(), name: "isterlina de Gibilterra"),
+  TranslatedName(LangSom(), name: "Bowndka Gibraltar"),
+  TranslatedName(LangTuk(), name: "Gibraltar funty"),
+  TranslatedName(LangTgl(), name: "Pound ng Gibraltar"),
+  TranslatedName(LangXho(), name: "IPonti yaseGilbraltar"),
+  TranslatedName(LangYor(), name: "Pọ́n-ùn Gibúrátà"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Kazakhstani Tenge currency:
+/// Provides 110 translations for a Kazakhstani Tenge currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const kztCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Kazakhstani Tenge"),
@@ -99,7 +116,11 @@ const kztCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কাজাখাস্তানি টেঙ্গে"),
   TranslatedName(LangBre(), name: "tenge Kazakstan"),
   TranslatedName(LangBos(), name: "Kazahstanski tenge"),
-  TranslatedName(LangBos(), name: "Казахстански тенџ", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Казахстански тенџ",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "tenge kazakh"),
   TranslatedName(LangChe(), name: "Казахстанан тенге"),
   TranslatedName(LangCes(), name: "kazašské tenge"),
@@ -182,4 +203,21 @@ const kztCurrencyTranslations = [
   TranslatedName(LangZho(), name: "哈薩克坦吉", countryCode: "HK"),
   TranslatedName(LangZho(), name: "卡扎克斯坦坦吉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Kazakhstani Tenge"),
+  TranslatedName(LangAsm(), name: "কাজাখস্তানী তেঞ্জ"),
+  TranslatedName(LangChv(), name: "Казах тенгейӗ"),
+  TranslatedName(LangFul(), name: "𞤚𞤫𞤲𞤺𞤫 𞤑𞤢𞥁𞤢𞤳𞤭𞤧𞤼𞤢𞤲𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Tenge na ƙasar Kazkhstan"),
+  TranslatedName(LangIna(), name: "tenge kazakh"),
+  TranslatedName(LangIbo(), name: "Ego Tenge obodo Kazakhstani"),
+  TranslatedName(LangJav(), name: "Tenge Kasakhstan"),
+  TranslatedName(LangKur(), name: "tengeyê qazaxistanî"),
+  TranslatedName(LangMri(), name: "Tenge Katatānga"),
+  TranslatedName(LangOri(), name: "କାଜାକସ୍ତାନୀ ତେଙ୍ଗେ"),
+  TranslatedName(LangPus(), name: "قازقستاني ټينج"),
+  TranslatedName(LangSrd(), name: "tenge kazaku"),
+  TranslatedName(LangSom(), name: "Tengeda Kasakhstan"),
+  TranslatedName(LangTuk(), name: "Gazak teňňesi"),
+  TranslatedName(LangTgl(), name: "Kazakhstani Tenge"),
+  TranslatedName(LangXho(), name: "I-Tenge yaseKhazakhstan"),
+  TranslatedName(LangYor(), name: "Tẹngé Kasakísítàànì"),
 ];

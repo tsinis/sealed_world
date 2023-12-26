@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 117 translations for a Persian (Farsi) language:
+/// Provides 129 translations for a Persian (Farsi) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -48,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -91,8 +97,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -100,12 +108,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -113,6 +124,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -234,4 +246,16 @@ const fasLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Pasia"),
   TranslatedName(LangZho(), name: "波斯文"),
   TranslatedName(LangZul(), name: "isi-Persian"),
+  TranslatedName(LangAsm(), name: "ফাৰ্ছী"),
+  TranslatedName(LangChe(), name: "гӀажарийн"),
+  TranslatedName(LangIna(), name: "persa"),
+  TranslatedName(LangJav(), name: "Persia"),
+  TranslatedName(LangKur(), name: "farisî"),
+  TranslatedName(LangMri(), name: "Pāhiana"),
+  TranslatedName(LangSrd(), name: "persianu"),
+  TranslatedName(LangSnd(), name: "فارسي"),
+  TranslatedName(LangTgk(), name: "форсӣ"),
+  TranslatedName(LangTuk(), name: "pars dili"),
+  TranslatedName(LangTat(), name: "фарсы"),
+  TranslatedName(LangWol(), name: "Pers"),
 ];

@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 86 translations for a Dzongkha language:
+/// Provides 105 translations for a Dzongkha language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -28,6 +31,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -37,6 +41,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -45,6 +51,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -55,36 +62,48 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tibetan Standard
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const dzoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Dzongkha"),
@@ -173,4 +192,27 @@ const dzoLanguageTranslations = [
   TranslatedName(LangZho(), name: "不丹文"),
   TranslatedName(LangZho(), name: "宗卡文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Dzongkha"),
+  TranslatedName(LangAsm(), name: "জোংখা"),
+  TranslatedName(LangBel(), name: "дзонг-кэ"),
+  TranslatedName(LangChe(), name: "дзонг-кэ"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤵𞥅𞤼𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "dzongkha"),
+  TranslatedName(LangIbo(), name: "Dọzngọka"),
+  TranslatedName(LangKur(), name: "conxayî"),
+  TranslatedName(LangMri(), name: "Tonoka"),
+  TranslatedName(LangPus(), name: "ژونگکه"),
+  TranslatedName(LangQue(), name: "Butanés Simi"),
+  TranslatedName(LangSrd(), name: "dzongkha"),
+  TranslatedName(LangSnd(), name: "زونخا"),
+  TranslatedName(LangSom(), name: "D’zongqa"),
+  TranslatedName(LangTgk(), name: "дзонгха"),
+  TranslatedName(LangTir(), name: "ድዞንግካ"),
+  TranslatedName(LangTuk(), name: "dzong-ke dili"),
+  TranslatedName(LangTat(), name: "дзонг-кха"),
+  TranslatedName(LangWol(), name: "Dsongkaa"),
+  TranslatedName(LangYor(), name: "Èdè Dzongkha"),
 ];

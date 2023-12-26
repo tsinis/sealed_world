@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Hungary country:
+/// Provides 153 translations for a Hungary country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -116,6 +116,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -146,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -313,4 +315,6 @@ const hunCountryTranslations = [
   TranslatedName(LangSun(), name: "Hungaria"),
   TranslatedName(LangTgl(), name: "Unggarya"),
   TranslatedName(LangVol(), name: "Macarän"),
+  TranslatedName(LangSrd(), name: "Ungheria"),
+  TranslatedName(LangXho(), name: "EHungary"),
 ];

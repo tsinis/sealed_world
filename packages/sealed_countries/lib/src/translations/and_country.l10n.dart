@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Andorra country:
+/// Provides 122 translations for a Andorra country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - Abkhaz
@@ -74,6 +74,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
@@ -117,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -325,4 +327,6 @@ const andCountryTranslations = [
   TranslatedName(LangSmo(), name: "Andora"),
   TranslatedName(LangSsw(), name: "iYandola"),
   TranslatedName(LangVol(), name: "Landorän"),
+  TranslatedName(LangMri(), name: "Anatōra"),
+  TranslatedName(LangXho(), name: "E-Andorra"),
 ];

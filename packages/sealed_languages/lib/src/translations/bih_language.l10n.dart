@@ -2,23 +2,34 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 64 translations for a Bihari language:
+/// Provides 96 translations for a Bihari language:
 /// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -27,12 +38,18 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -41,29 +58,44 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Uzbek
+/// - Vietnamese
+/// - Yoruba
+/// - Zulu.
 const bihLanguageTranslations = [
   TranslatedName(LangEng(), name: "Bhojpuri"),
   TranslatedName(LangAra(), name: "البهوجبورية"),
@@ -128,7 +160,41 @@ const bihLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Bhojpuri"),
   TranslatedName(LangZho(), name: "博杰普尔文"),
   TranslatedName(LangZho(), name: "博傑普爾文", script: ScriptHant()),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Bihairis"),
+  TranslatedName(LangAmh(), name: "ቦጁሪ"),
+  TranslatedName(LangAsm(), name: "ভোজপুৰী"),
+  TranslatedName(LangBel(), name: "бхаджпуры"),
+  TranslatedName(LangChe(), name: "бходжпури"),
+  TranslatedName(LangEus(), name: "bhojpurera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤮𞤧𞤨𞤵𞤪𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "bhojpuri"),
+  TranslatedName(LangGlg(), name: "bhojpuri"),
+  TranslatedName(LangHye(), name: "բհոպուրի"),
+  TranslatedName(LangIna(), name: "bhojpuri"),
+  TranslatedName(LangIbo(), name: "Bojpuri"),
+  TranslatedName(LangKaz(), name: "бходжпури тілі"),
+  TranslatedName(LangKhm(), name: "បូចពូរី"),
+  TranslatedName(LangKur(), name: "bojpûrî"),
+  TranslatedName(LangKir(), name: "бхожпуриче"),
+  TranslatedName(LangMri(), name: "Pōhipuri"),
+  TranslatedName(LangMon(), name: "божпури"),
+  TranslatedName(LangMya(), name: "ဘို့ဂျ်ပူရီ"),
+  TranslatedName(LangNep(), name: "भोजपुरी"),
+  TranslatedName(LangPus(), name: "بهوجپوري"),
+  TranslatedName(LangSrd(), name: "bhojpuri"),
+  TranslatedName(LangSnd(), name: "ڀوجپوري"),
+  TranslatedName(LangSin(), name: "බොජ්පුරි"),
+  TranslatedName(LangSom(), name: "U dhashay Bhohp"),
+  TranslatedName(LangSqi(), name: "boxhpurisht"),
+  TranslatedName(LangSwa(), name: "Kibhojpuri"),
+  TranslatedName(LangTir(), name: "ቦጅፑሪ"),
+  TranslatedName(LangTuk(), name: "bhojpuri dili"),
+  TranslatedName(LangUrd(), name: "بھوجپوری"),
+  TranslatedName(LangUzb(), name: "bxojpuri"),
+  TranslatedName(LangYor(), name: "Èdè Bojuri"),
+  TranslatedName(LangZul(), name: "isi-Bhojpuri"),
 ];

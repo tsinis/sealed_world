@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Gambia country:
+/// Provides 123 translations for a Gambia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -72,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
@@ -117,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -330,4 +332,6 @@ const gmbCountryTranslations = [
   TranslatedName(LangTgl(), name: "Ang Gambiya"),
   TranslatedName(LangTso(), name: "Gambiya"),
   TranslatedName(LangVol(), name: "Gambiyän"),
+  TranslatedName(LangMri(), name: "Kamopia"),
+  TranslatedName(LangXho(), name: "EGambia"),
 ];

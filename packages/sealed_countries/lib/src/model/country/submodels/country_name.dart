@@ -34,21 +34,10 @@ final class CountryName extends TranslatedName {
         assert(common.length > 0, "`common` should not be empty!"),
         super(language, name: common, fullName: official);
 
-  /// Creates a new `CountryName` object with the given international name
-  /// values.
-  ///
-  /// The `official` and `common` parameters must not be empty.
-  @Deprecated("Please use `CountryName(language: const LangEng())` instead")
-  const CountryName.international({
-    required String common,
-    required String official,
-  }) : super(_eng, name: common, fullName: official); // coverage:ignore-line
-  static const _eng = LangEng(); // TODO! Soon to be removed.
-
   @override
   String toString({bool short = true}) => short
-      ? '''CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")'''
-      : '''CountryName(language: $language, official: "$official", common: "$common")''';
+      ? '''CountryName(language: $language, official: "$official", common: "$common")'''
+      : '''CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

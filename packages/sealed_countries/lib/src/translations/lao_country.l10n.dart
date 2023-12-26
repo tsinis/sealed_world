@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Laos country:
+/// Provides 111 translations for a Laos country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -108,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -319,4 +320,5 @@ const laoCountryTranslations = [
   TranslatedName(LangSsw(), name: "ILawoso"),
   TranslatedName(LangVol(), name: "Laosän"),
   TranslatedName(LangZha(), name: "Lao"),
+  TranslatedName(LangXho(), name: "ELaos"),
 ];

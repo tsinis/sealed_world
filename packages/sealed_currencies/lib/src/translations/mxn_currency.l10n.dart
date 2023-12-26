@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Mexican Peso currency:
+/// Provides 97 translations for a Mexican Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -64,6 +65,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -101,7 +104,11 @@ const mxnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ম্যাক্সিকান পেসো"),
   TranslatedName(LangBre(), name: "peso Mecʼhiko"),
   TranslatedName(LangBos(), name: "Meksički pezos"),
-  TranslatedName(LangBos(), name: "Мексички пезо", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Мексички пезо",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "peso mexicà"),
   TranslatedName(LangChe(), name: "Мексикан песо"),
   TranslatedName(LangCes(), name: "mexické peso"),
@@ -180,9 +187,16 @@ const mxnCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "мексиканський песо"),
   TranslatedName(LangUrd(), name: "میکسیکی پیسہ"),
   TranslatedName(LangUzb(), name: "Meksika pesosi"),
-  TranslatedName(LangUzb(), name: "Мексика песоси", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Мексика песоси",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Peso Mexico"),
   TranslatedName(LangZho(), name: "墨西哥比索"),
   TranslatedName(LangZho(), name: "墨西哥披索", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Mexican Peso"),
+  TranslatedName(LangAsm(), name: "মেক্সিকান পেছো"),
+  TranslatedName(LangOri(), name: "ମେକ୍ସିକୋ ପେସୋ"),
+  TranslatedName(LangPus(), name: "مکسيکي پېسو"),
 ];

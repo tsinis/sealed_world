@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Libya country:
+/// Provides 135 translations for a Libya country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -129,6 +129,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -291,4 +292,5 @@ const lbyCountryTranslations = [
   TranslatedName(LangTso(), name: "Libiya"),
   TranslatedName(LangVol(), name: "Lübän"),
   TranslatedName(LangWln(), name: "Libeye"),
+  TranslatedName(LangXho(), name: "ELibya"),
 ];

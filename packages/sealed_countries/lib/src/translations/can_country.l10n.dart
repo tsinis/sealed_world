@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Canada country:
+/// Provides 149 translations for a Canada country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - Abkhaz
@@ -110,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -143,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -294,4 +296,6 @@ const canCountryTranslations = [
   TranslatedName(LangTwi(), name: "Kanada"),
   TranslatedName(LangTah(), name: "Tanata"),
   TranslatedName(LangVol(), name: "Kanadän"),
+  TranslatedName(LangSrd(), name: "Cànada"),
+  TranslatedName(LangXho(), name: "EKhanada"),
 ];

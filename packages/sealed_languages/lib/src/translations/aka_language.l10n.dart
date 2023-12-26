@@ -2,21 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 89 translations for a Akan language:
+/// Provides 104 translations for a Akan language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -24,27 +27,32 @@ import "../model/translated_name.dart";
 /// - English
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -55,21 +63,26 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -79,7 +92,9 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -178,4 +193,19 @@ const akaLanguageTranslations = [
   TranslatedName(LangZho(), name: "阿肯文"),
   TranslatedName(LangZho(), name: "阿坎文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Akan"),
+  TranslatedName(LangAsm(), name: "আকান"),
+  TranslatedName(LangBel(), name: "акан"),
+  TranslatedName(LangChe(), name: "акан"),
+  TranslatedName(LangFao(), name: "akan"),
+  TranslatedName(LangIna(), name: "akan"),
+  TranslatedName(LangKhm(), name: "អាកាន"),
+  TranslatedName(LangKur(), name: "akanî"),
+  TranslatedName(LangMri(), name: "Ākana"),
+  TranslatedName(LangPus(), name: "اکاني"),
+  TranslatedName(LangQue(), name: "Akan Simi"),
+  TranslatedName(LangSrd(), name: "akan"),
+  TranslatedName(LangSnd(), name: "اڪان"),
+  TranslatedName(LangTir(), name: "ኣካን"),
+  TranslatedName(LangTuk(), name: "akan dili"),
+  TranslatedName(LangDeu(), name: "Akan"),
 ];

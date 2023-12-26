@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Peru country:
+/// Provides 117 translations for a Peru country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -39,6 +39,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Ewe
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -88,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -113,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -271,4 +274,7 @@ const perCountryTranslations = [
   TranslatedName(LangSsw(), name: "IPheru"),
   TranslatedName(LangSun(), name: "Péru"),
   TranslatedName(LangVol(), name: "Peruvän"),
+  TranslatedName(LangFul(), name: "𞤆𞤫𞤪𞤵𞥅"),
+  TranslatedName(LangSrd(), name: "Perù"),
+  TranslatedName(LangXho(), name: "EPeru"),
 ];

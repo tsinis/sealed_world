@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Brunei country:
+/// Provides 124 translations for a Brunei country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -118,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -342,4 +343,5 @@ const brnCountryTranslations = [
   TranslatedName(LangSun(), name: "Brunéi"),
   TranslatedName(LangVol(), name: "Brunän"),
   TranslatedName(LangZha(), name: "Vwnzlaiz"),
+  TranslatedName(LangXho(), name: "eBrunei"),
 ];

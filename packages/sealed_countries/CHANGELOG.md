@@ -1,3 +1,21 @@
+## 1.0.0
+
+🎉 First anniversary and first stable release!
+
+NEW FEATURES
+
+- Added new getter for `TranslatedName` name called `common`, which might be useful in some cases when `name` is being used by a parent class.
+- Added a lot of translations from the Symfony.
+- Currencies translations now support all GlobalMaterialLocalizations and GlobalCupertinoLocalizations locales.
+- Updated LICENSE.
+
+BREAKING CHANGES
+
+- Removed code marked as `Deprecated` in previous releases.
+- Replaced old `FiatCurrency.list` with a new `FiatCurrency.listExtended`.
+- Removed `FiatCurrency.regularList` (please use `FiatCurrency.list` instead).
+- Marked Croatian Kuna as `Deprecated` (currencies).
+
 ## 0.9.0
 
 NEW FEATURES
@@ -34,7 +52,7 @@ NEW FEATURES
 - feat(model): added copy with, to-json etc.
 - refactor(model): functional method parameters are now sorted
 
-NEW FEATURES:
+NEW FEATURES
 
 - Added copyWith, toJson etc. to the WorldCountry and all sub-classes.
 - Refactoring in existing functional methods (sorting params to match list sorting).
@@ -51,7 +69,7 @@ NEW FEATURES:
 - chore(deps): updates of dev_dependencies
 - fix(data): fix timezones for netherlands
 
-BREAKING CHANGES:
+BREAKING CHANGES
 
 - refactor(data)!: compile time static const. data in lists are now sorted alphabetically by the (3 letter) code
 

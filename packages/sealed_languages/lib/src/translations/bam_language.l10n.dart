@@ -2,21 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 81 translations for a Bambara language:
+/// Provides 96 translations for a Bambara language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -27,6 +30,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -36,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -44,6 +49,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -53,34 +59,43 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Yoruba
 /// - Zulu.
 const bamLanguageTranslations = [
   TranslatedName(LangEng(), name: "Bambara"),
@@ -163,7 +178,24 @@ const bamLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Bambara"),
   TranslatedName(LangZho(), name: "班巴拉文"),
   TranslatedName(LangZul(), name: "isi-Bambara"),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Bambairis"),
+  TranslatedName(LangAsm(), name: "বামবাৰা"),
+  TranslatedName(LangBel(), name: "бамбара"),
+  TranslatedName(LangChe(), name: "бамбара"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤢𞤥𞤦𞤢𞤪𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "bambara"),
+  TranslatedName(LangKur(), name: "bambarayî"),
+  TranslatedName(LangMri(), name: "Pāpara"),
+  TranslatedName(LangPus(), name: "بمبارا"),
+  TranslatedName(LangQue(), name: "Bambara Simi"),
+  TranslatedName(LangSrd(), name: "bambara"),
+  TranslatedName(LangSnd(), name: "بمبارا"),
+  TranslatedName(LangSom(), name: "Bambaara"),
+  TranslatedName(LangTir(), name: "ባምባራ"),
+  TranslatedName(LangTuk(), name: "bamana"),
+  TranslatedName(LangYor(), name: "Èdè Báḿbàrà"),
 ];

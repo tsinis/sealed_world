@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a Comorian Franc currency:
+/// Provides 119 translations for a Comorian Franc currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const kmfCurrencyTranslations = [
@@ -114,7 +128,11 @@ const kmfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কম্বোরো ফ্রাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Komorez"),
   TranslatedName(LangBos(), name: "Komorski franak"),
-  TranslatedName(LangBos(), name: "Коморски франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Коморски франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc de les Comores"),
   TranslatedName(LangChe(), name: "Коморийн гӀайренийн франк"),
   TranslatedName(LangCes(), name: "komorský frank"),
@@ -211,4 +229,18 @@ const kmfCurrencyTranslations = [
   TranslatedName(LangZho(), name: "科摩罗法郎"),
   TranslatedName(LangZho(), name: "科摩羅法郎", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Comorian Franc"),
+  TranslatedName(LangAsm(), name: "ক’মোৰিয়ান ফ্ৰেংক"),
+  TranslatedName(LangChv(), name: "Комора франкӗ"),
+  TranslatedName(LangIna(), name: "franco comorian"),
+  TranslatedName(LangIbo(), name: "Ego Franc obodo Comoros"),
+  TranslatedName(LangJav(), name: "Franc Komoro"),
+  TranslatedName(LangKur(), name: "frankê komoranî"),
+  TranslatedName(LangMri(), name: "Franc Komoro"),
+  TranslatedName(LangOri(), name: "କୋମୋରୀୟ ଫ୍ରାଙ୍କ୍"),
+  TranslatedName(LangPus(), name: "کوموري فرانک"),
+  TranslatedName(LangSrd(), name: "francu comorianu"),
+  TranslatedName(LangSom(), name: "Faranka Komoros"),
+  TranslatedName(LangTuk(), name: "Komor adalarynyň franky"),
+  TranslatedName(LangTgl(), name: "Comorian Franc"),
+  TranslatedName(LangXho(), name: "I-Franc yaseComoros"),
 ];

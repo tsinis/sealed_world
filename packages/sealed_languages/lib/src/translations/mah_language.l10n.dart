@@ -2,15 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 67 translations for a Marshallese language:
+/// Provides 103 translations for a Marshallese language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -18,8 +28,12 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -27,46 +41,68 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Yoruba
+/// - Zulu.
 const mahLanguageTranslations = [
   TranslatedName(LangEng(), name: "Marshallese"),
   TranslatedName(LangAra(), name: "المارشالية"),
@@ -135,4 +171,44 @@ const mahLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Marshall"),
   TranslatedName(LangZho(), name: "马绍尔文"),
   TranslatedName(LangZho(), name: "馬紹爾文", script: ScriptHant()),
+  TranslatedName(LangAfr(), name: "Marshallees"),
+  TranslatedName(LangAmh(), name: "ማርሻሊዝ"),
+  TranslatedName(LangAsm(), name: "মাৰ্চলিজ"),
+  TranslatedName(LangBel(), name: "маршальская"),
+  TranslatedName(LangChe(), name: "маршаллийн"),
+  TranslatedName(LangEus(), name: "marshallera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤢𞤪𞤧𞤢𞤤𞤫𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "marshallesiskt"),
+  TranslatedName(LangGlg(), name: "marshalés"),
+  TranslatedName(LangHye(), name: "մարշալերեն"),
+  TranslatedName(LangIna(), name: "marshallese"),
+  TranslatedName(LangIbo(), name: "Marshalese"),
+  TranslatedName(LangKat(), name: "მარშალური"),
+  TranslatedName(LangKaz(), name: "маршалл тілі"),
+  TranslatedName(LangKhm(), name: "ម៉ាស់សល"),
+  TranslatedName(LangKur(), name: "marşalî"),
+  TranslatedName(LangKir(), name: "маршаллча"),
+  TranslatedName(LangMri(), name: "Mararīhi"),
+  TranslatedName(LangMon(), name: "маршалл"),
+  TranslatedName(LangMsa(), name: "Marshall"),
+  TranslatedName(LangMya(), name: "မာရှယ်လိဇ်"),
+  TranslatedName(LangNep(), name: "मार्साली"),
+  TranslatedName(LangPan(), name: "ਮਾਰਸ਼ਲੀਜ਼"),
+  TranslatedName(LangPus(), name: "مارشلیز"),
+  TranslatedName(LangQue(), name: "Marshallese Simi"),
+  TranslatedName(LangSrd(), name: "marshallesu"),
+  TranslatedName(LangSnd(), name: "مارشليز"),
+  TranslatedName(LangSin(), name: "මාශලීස්"),
+  TranslatedName(LangSqi(), name: "marshallisht"),
+  TranslatedName(LangSwa(), name: "Kimashale"),
+  TranslatedName(LangTir(), name: "ማርሻሊዝኛ"),
+  TranslatedName(LangTuk(), name: "marşall dili"),
+  TranslatedName(LangUrd(), name: "مارشلیز"),
+  TranslatedName(LangUzb(), name: "marshall"),
+  TranslatedName(LangYor(), name: "Èdè Mashali"),
+  TranslatedName(LangZul(), name: "isi-Marshallese"),
 ];

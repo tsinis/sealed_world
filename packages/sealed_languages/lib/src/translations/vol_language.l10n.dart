@@ -2,15 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 62 translations for a Volapük language:
+/// Provides 98 translations for a Volapük language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -18,21 +26,33 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -40,29 +60,45 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Yiddish.
+/// - Welsh
+/// - Yiddish
+/// - Yoruba
+/// - Zulu.
 const volLanguageTranslations = [
   TranslatedName(LangEng(), name: "Volapük"),
   TranslatedName(LangAmh(), name: "ቮላፑክኛ"),
@@ -124,8 +160,46 @@ const volLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Volapük"),
   TranslatedName(LangYid(), name: "וואלאַפּוק"),
   TranslatedName(LangZho(), name: "沃拉普克文"),
-
-  /// Added manually:
   TranslatedName(LangIsl(), name: "volapük"),
   TranslatedName(LangGle(), name: "Volapük"),
+  TranslatedName(LangAsm(), name: "ভোলাপুক"),
+  TranslatedName(LangBel(), name: "валапюк"),
+  TranslatedName(LangChe(), name: "волапюк"),
+  TranslatedName(LangCym(), name: "Folapük"),
+  TranslatedName(LangEus(), name: "volapük"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤏𞤮𞤤𞤢𞤨𞤵𞤳𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "volapykk"),
+  TranslatedName(LangGlg(), name: "volapuk"),
+  TranslatedName(LangHye(), name: "վոլապյուկ"),
+  TranslatedName(LangIna(), name: "volapük"),
+  TranslatedName(LangIbo(), name: "Volapụ"),
+  TranslatedName(LangJav(), name: "Volapuk"),
+  TranslatedName(LangKat(), name: "ვოლაპუკი"),
+  TranslatedName(LangKaz(), name: "волапюк тілі"),
+  TranslatedName(LangKhm(), name: "វូឡាពូក"),
+  TranslatedName(LangKur(), name: "volapûkî"),
+  TranslatedName(LangKir(), name: "волапюкча"),
+  TranslatedName(LangMon(), name: "волапюк"),
+  TranslatedName(LangMya(), name: "ဗိုလာပိုက်"),
+  TranslatedName(LangNep(), name: "भोलापिक"),
+  TranslatedName(LangPan(), name: "ਵੋਲਾਪੂਕ"),
+  TranslatedName(LangPus(), name: "والاپوک"),
+  TranslatedName(LangQue(), name: "Volapük Simi"),
+  TranslatedName(LangSrd(), name: "volapük"),
+  TranslatedName(LangSnd(), name: "والپڪ"),
+  TranslatedName(LangSin(), name: "වොලපූක්"),
+  TranslatedName(LangSom(), name: "Folabuuk"),
+  TranslatedName(LangSqi(), name: "volapykisht"),
+  TranslatedName(LangSwa(), name: "Kivolapuk"),
+  TranslatedName(LangTir(), name: "ቮላፑክ"),
+  TranslatedName(LangTuk(), name: "wolapýuk dili"),
+  TranslatedName(LangUrd(), name: "وولاپوک"),
+  TranslatedName(LangUzb(), name: "volapyuk"),
+  TranslatedName(LangYor(), name: "Fọ́lápùùkù"),
+  TranslatedName(LangZul(), name: "isi-Volapük"),
+  TranslatedName(LangDeu(), name: "Volapük"),
 ];

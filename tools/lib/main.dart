@@ -9,14 +9,16 @@ import "utils/json_utils.dart";
 
 Future<void> main() async {
   const package = Package.sealedCountries;
-  final exports = await const JsonUtils(Package.sealedCountries).parseByItems();
+  final exports = await const JsonUtils(package).parseByItems();
 
   final dataType = package.dataRepresent;
   final buffer = StringBuffer(
     """
 // This library translations are based on the data from the
-// ${package.umpirskyRepoUrl} project (from Saša Stamenković),
-// which is licensed under the MIT License.
+// https://github.com/symfony/intl project
+// (from The Symfony - Intl Component, Fabien Potencier) and from the
+// ${package.umpirskyRepoUrl} project (from Saša Stamenković).
+// Both projects are licensed under the MIT License.
 
 /// Provides $dataType translations for ${package.dirName}.
 """,

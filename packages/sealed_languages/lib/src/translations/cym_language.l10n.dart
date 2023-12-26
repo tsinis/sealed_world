@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Welsh language:
+/// Provides 112 translations for a Welsh language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,6 +43,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -49,6 +54,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,6 +66,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -67,6 +74,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -74,19 +82,24 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -94,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -196,4 +210,22 @@ const cymLanguageTranslations = [
   TranslatedName(LangZho(), name: "威尔士文"),
   TranslatedName(LangZho(), name: "威爾斯文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Welsh"),
+  TranslatedName(LangAsm(), name: "ৱেলচ"),
+  TranslatedName(LangChe(), name: "валлийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤘𞤢𞤤𞤭𞤲𞤳𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "gallese"),
+  TranslatedName(LangIbo(), name: "Wesh"),
+  TranslatedName(LangKur(), name: "weylsî"),
+  TranslatedName(LangMri(), name: "Werehi"),
+  TranslatedName(LangPus(), name: "ويلشي"),
+  TranslatedName(LangSrd(), name: "gallesu"),
+  TranslatedName(LangSnd(), name: "ويلش"),
+  TranslatedName(LangTgk(), name: "валлӣ"),
+  TranslatedName(LangTuk(), name: "walliý dili"),
+  TranslatedName(LangTat(), name: "уэльс"),
+  TranslatedName(LangWol(), name: "Wels"),
 ];

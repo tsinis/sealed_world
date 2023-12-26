@@ -1,6 +1,8 @@
 // This library translations are based on the data from the
-// https://github.com/umpirsky/currency-list project (from Saša Stamenković),
-// which is licensed under the MIT License.
+// https://github.com/symfony/intl project
+// (from The Symfony - Intl Component, Fabien Potencier) and from the
+// https://github.com/umpirsky/currency-list project (from Saša Stamenković).
+// Both projects are licensed under the MIT License.
 
 /// Provides currency translations for sealed_currencies.
 library sealed_currency_translations;
@@ -180,106 +182,107 @@ export "src/translations/zmw_currency.l10n.dart";
 export "src/translations/zwl_currency.l10n.dart";
 
 /// This is a comprehensive list of currencies that ensure the availability of
-/// translations for every language in the currencies `regularList` list.
+/// translations for every language in the currencies `list`.
 ///
 /// It is important to note that while other languages may not be included in
 /// this list, they may still have translations available for most common
 /// currencies, but there may be some missing translations for rarer languages.
 /// Every currency contains more than 79 translations of it's name.
 ///
-/// Includes almost all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
-/// with a two letter (but not three letter) code and much more. Languages are
-/// missing (with comparison to Material ones):
-/// - Assamese (ASM)
-/// - Oriya (ORI)
-/// - Pashto (Pushto) (PUS)
-/// - Tagalog (TGL).
-/// On the other hand it provides translations for:
+/// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+/// with a two letter code and much more (for example on top of that it also
+/// provides translations for the following languages:
 /// - Breton (BRE)
 /// - Western Frisian (FRY)
 /// - (Scottish) Gaelic (GLA)
 /// - Irish (GLE)
 /// - Luxembourgish (Letzeburgesch) (LTZ)
-/// That are not listed in Material one.
+/// That are not listed in Material one, and much more.
 // ignore: prefer-static-class, to follow pattern from languages.
 const kSealedCurrenciesSupportedLanguages = [
+  LangAfr(),
+  LangAmh(),
+  LangAra(),
+  LangAsm(),
+  LangAze(),
+  LangBel(),
+  LangBen(),
+  LangBos(),
+  LangBre(),
+  LangBul(),
+  LangCat(),
+  LangCes(),
+  LangCym(),
+  LangDan(),
+  LangDeu(),
+  LangEll(),
+  LangEng(),
+  LangEst(),
+  LangEus(),
+  LangFas(),
+  LangFin(),
+  LangFra(),
+  LangFry(),
+  LangGla(),
+  LangGle(),
+  LangGlg(),
+  LangGuj(),
+  LangHeb(),
+  LangHin(),
+  LangHrv(),
+  LangHun(),
+  LangHye(),
+  LangInd(),
+  LangIsl(),
+  LangIta(),
+  LangJpn(),
+  LangKan(),
+  LangKat(),
+  LangKaz(),
+  LangKhm(),
+  LangKir(),
+  LangKor(),
+  LangLao(),
+  LangLav(),
+  LangLit(),
+  LangLtz(),
+  LangMal(),
+  LangMar(),
   LangMkd(),
   LangMon(),
-  LangMar(),
   LangMsa(),
   LangMya(),
-  LangMal(),
-  LangLtz(),
-  LangLit(),
-  LangLav(),
-  LangHrv(),
   LangNep(),
   LangNld(),
-  LangKor(),
+  LangNno(),
   LangNob(),
   LangNor(),
-  LangKir(),
-  LangZul(),
-  LangKhm(),
-  LangKaz(),
-  LangKat(),
-  LangKan(),
+  LangOri(),
   LangPan(),
-  LangJpn(),
   LangPol(),
   LangPor(),
-  LangIta(),
-  LangIsl(),
-  LangInd(),
+  LangPus(),
+  LangRoh(),
   LangRon(),
-  LangHye(),
   LangRus(),
-  LangHun(),
-  LangHin(),
   LangSin(),
   LangSlk(),
   LangSlv(),
-  LangHeb(),
-  LangGuj(),
-  LangGlg(),
-  LangGle(),
-  LangGla(),
-  LangFry(),
   LangSpa(),
   LangSqi(),
-  LangFra(),
   LangSrp(),
-  LangFin(),
-  LangFas(),
   LangSwa(),
   LangSwe(),
-  LangEus(),
   LangTam(),
-  LangEst(),
   LangTel(),
-  LangEng(),
-  LangEll(),
+  LangTgl(),
   LangTha(),
-  LangDeu(),
-  LangDan(),
-  LangCym(),
-  LangCes(),
-  LangCat(),
   LangTur(),
-  LangBul(),
   LangUig(),
   LangUkr(),
   LangUrd(),
   LangUzb(),
-  LangBre(),
   LangVie(),
-  LangBos(),
-  LangBen(),
-  LangBel(),
-  LangAze(),
-  LangAra(),
-  LangAmh(),
-  LangAfr(),
   LangZho(),
-  LangLao(),
+  LangZul(),
 ];

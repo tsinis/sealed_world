@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 94 translations for a Abkhaz language:
+/// Provides 109 translations for a Abkhaz language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -41,7 +44,9 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -50,6 +55,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,30 +67,38 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -92,6 +106,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const abkLanguageTranslations = [
   TranslatedName(LangEng(), name: "Abkhazian"),
@@ -188,4 +203,23 @@ const abkLanguageTranslations = [
   TranslatedName(LangZho(), name: "阿布哈西亚文"),
   TranslatedName(LangZho(), name: "阿布哈茲文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Abkhazian"),
+  TranslatedName(LangAsm(), name: "আবখাজিয়ান"),
+  TranslatedName(LangChe(), name: "абхазхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤦𞤳𞤢𞥄𞤧𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "abkhazo"),
+  TranslatedName(LangIbo(), name: "Abkaziani"),
+  TranslatedName(LangKur(), name: "abxazî"),
+  TranslatedName(LangMri(), name: "Apakāhiana"),
+  TranslatedName(LangPus(), name: "ابخازي"),
+  TranslatedName(LangQue(), name: "Abjasia"),
+  TranslatedName(LangSrd(), name: "abcasu"),
+  TranslatedName(LangSnd(), name: "ابقازیان"),
+  TranslatedName(LangSom(), name: "U dhashay Abkhazia"),
+  TranslatedName(LangTir(), name: "ኣብካዝኛ"),
+  TranslatedName(LangTuk(), name: "abhaz dili"),
+  TranslatedName(LangYor(), name: "Èdè Abasia"),
 ];

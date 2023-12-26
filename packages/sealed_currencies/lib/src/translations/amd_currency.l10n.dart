@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Armenian Dram currency:
+/// Provides 107 translations for a Armenian Dram currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const amdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Armenian Dram"),
@@ -98,7 +115,11 @@ const amdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আরমেনিয়ান দ্রাম"),
   TranslatedName(LangBre(), name: "dram Armenia"),
   TranslatedName(LangBos(), name: "Armenski dram"),
-  TranslatedName(LangBos(), name: "Јерменски драм", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Јерменски драм",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dram armeni"),
   TranslatedName(LangChe(), name: "Эрмалойчоьнан драм"),
   TranslatedName(LangCes(), name: "arménský dram"),
@@ -178,4 +199,21 @@ const amdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "亚美尼亚德拉姆"),
   TranslatedName(LangZho(), name: "亞美尼亞德拉姆", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Armenian Dram"),
+  TranslatedName(LangAsm(), name: "আৰ্মেনিয়ান ড্ৰাম"),
+  TranslatedName(LangChv(), name: "Армяни драмӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤪𞤢𞤥𞤵 𞤀𞤪𞤥𞤢𞤲𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Armenia"),
+  TranslatedName(LangIna(), name: "dram armenie"),
+  TranslatedName(LangIbo(), name: "Ego Dram obodo Armenia"),
+  TranslatedName(LangJav(), name: "Dram Armenia"),
+  TranslatedName(LangKur(), name: "dramê ermenî"),
+  TranslatedName(LangMri(), name: "Dram Āmenia"),
+  TranslatedName(LangOri(), name: "ଅର୍ମେନୀୟ ଡ୍ରାମ୍"),
+  TranslatedName(LangPus(), name: "ارمينيايي ډرام"),
+  TranslatedName(LangSrd(), name: "dram armenu"),
+  TranslatedName(LangSom(), name: "Daraamka Armeniya"),
+  TranslatedName(LangTuk(), name: "Ermeni dramy"),
+  TranslatedName(LangTgl(), name: "Armenian Dram"),
+  TranslatedName(LangXho(), name: "I-Dram yase Armenia"),
+  TranslatedName(LangYor(), name: "Dírààmù Àmẹ́níà"),
 ];

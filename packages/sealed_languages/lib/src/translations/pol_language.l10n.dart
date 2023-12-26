@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Polish language:
+/// Provides 133 translations for a Polish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -90,8 +97,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -99,12 +108,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -112,6 +124,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -235,4 +249,18 @@ const polLanguageTranslations = [
   TranslatedName(LangZho(), name: "波兰文"),
   TranslatedName(LangZho(), name: "波蘭文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Polish"),
+  TranslatedName(LangAsm(), name: "প’লিচ"),
+  TranslatedName(LangChe(), name: "полякийн"),
+  TranslatedName(LangChv(), name: "поляк"),
+  TranslatedName(LangIna(), name: "polonese"),
+  TranslatedName(LangJav(), name: "Polandia"),
+  TranslatedName(LangKur(), name: "polonî"),
+  TranslatedName(LangMri(), name: "Pōrihi"),
+  TranslatedName(LangSrd(), name: "polacu"),
+  TranslatedName(LangSnd(), name: "پولش"),
+  TranslatedName(LangTgk(), name: "лаҳистонӣ"),
+  TranslatedName(LangTuk(), name: "polýak dili"),
+  TranslatedName(LangTat(), name: "поляк"),
+  TranslatedName(LangWol(), name: "Polone"),
+  TranslatedName(LangXho(), name: "Isi-Polish"),
 ];

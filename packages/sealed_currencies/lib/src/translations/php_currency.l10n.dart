@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Philippine Peso currency:
+/// Provides 95 translations for a Philippine Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -63,6 +64,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,6 +84,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,7 +104,11 @@ const phpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ফিলিপাইন পেসো"),
   TranslatedName(LangBre(), name: "peso Filipinez"),
   TranslatedName(LangBos(), name: "Filipinski pezos"),
-  TranslatedName(LangBos(), name: "Филипински пезо", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Филипински пезо",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "peso filipí"),
   TranslatedName(LangChe(), name: "Филиппинийн песо"),
   TranslatedName(LangCes(), name: "filipínské peso"),
@@ -181,4 +189,8 @@ const phpCurrencyTranslations = [
   TranslatedName(LangZho(), name: "菲律宾比索"),
   TranslatedName(LangZho(), name: "菲律賓披索", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Philippine Peso"),
+  TranslatedName(LangAsm(), name: "ফিলিপিন পেইছ’"),
+  TranslatedName(LangOri(), name: "ଫିଲିପିନି ପେସୋ"),
+  TranslatedName(LangTuk(), name: "Filippin pesosy"),
+  TranslatedName(LangPus(), name: "فليپيني پېسو"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Micronesia country:
+/// Provides 123 translations for a Micronesia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -74,6 +75,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -88,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -115,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -330,4 +334,8 @@ const fsmCountryTranslations = [
   TranslatedName(LangOci(), name: "Estats Federats de Micronesia"),
   TranslatedName(LangVie(), name: "Liên bang Micronesia"),
   TranslatedName(LangVol(), name: "Smala-Seanuäns"),
+  TranslatedName(LangChv(), name: "Микронези"),
+  TranslatedName(LangMri(), name: "Mekanēhia"),
+  TranslatedName(LangSrd(), name: "Micronèsia"),
+  TranslatedName(LangXho(), name: "EMicronesia"),
 ];

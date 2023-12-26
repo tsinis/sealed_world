@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a Tanzanian Shilling currency:
+/// Provides 120 translations for a Tanzanian Shilling currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,6 +90,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
@@ -90,10 +100,12 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -101,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const tzsCurrencyTranslations = [
@@ -116,7 +129,11 @@ const tzsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "তাঞ্জনিয়া শিলিং"),
   TranslatedName(LangBre(), name: "shilling Tanzania"),
   TranslatedName(LangBos(), name: "Tanzanijski šiling"),
-  TranslatedName(LangBos(), name: "Танзанијски шилинг", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Танзанијски шилинг",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "xíling tanzà"),
   TranslatedName(LangChe(), name: "Танзанин шиллинг"),
   TranslatedName(LangCes(), name: "tanzanský šilink"),
@@ -215,4 +232,17 @@ const tzsCurrencyTranslations = [
   TranslatedName(LangZho(), name: "坦桑尼亞先令", countryCode: "HK"),
   TranslatedName(LangZho(), name: "坦尚尼亞先令", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Tanzanian Shilling"),
+  TranslatedName(LangAsm(), name: "টানজানিয়ান শ্বিলিং"),
+  TranslatedName(LangChv(), name: "Танзани шиллингӗ"),
+  TranslatedName(LangIna(), name: "shilling tanzanian"),
+  TranslatedName(LangIbo(), name: "Ego Shilling Obodo Tanzania"),
+  TranslatedName(LangJav(), name: "Shilling Tansania"),
+  TranslatedName(LangKur(), name: "şîlîngê tanzanî"),
+  TranslatedName(LangMri(), name: "Hereni Tānahia"),
+  TranslatedName(LangOri(), name: "ତାନଜାନୀୟ ଶିଲିଂ"),
+  TranslatedName(LangPus(), name: "تنزاني شيلنګ"),
+  TranslatedName(LangSrd(), name: "iscellinu tanzanianu"),
+  TranslatedName(LangTuk(), name: "Tanzaniýa şillingi"),
+  TranslatedName(LangTgl(), name: "Tanzanian Shilling"),
+  TranslatedName(LangXho(), name: "I-Shilling yaseTanzania"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 93 translations for a Jersey country:
+/// Provides 97 translations for a Jersey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -20,6 +20,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -32,11 +33,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Ewe
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -92,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Zulu.
 const jeyCountryTranslations = [
@@ -236,4 +240,8 @@ const jeyCountryTranslations = [
   TranslatedName(LangOss(), name: "Джерси"),
   TranslatedName(LangRon(), name: "Insula Jersey"),
   TranslatedName(LangTgl(), name: "Hersey"),
+  TranslatedName(LangChv(), name: "Джерси"),
+  TranslatedName(LangFul(), name: "𞤔𞤫𞤪𞤧𞤭𞥅"),
+  TranslatedName(LangHau(), name: "Kasar Jersey"),
+  TranslatedName(LangXho(), name: "EJersey"),
 ];

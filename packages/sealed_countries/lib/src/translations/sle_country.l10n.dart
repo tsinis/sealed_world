@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Sierra Leone country:
+/// Provides 120 translations for a Sierra Leone country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -114,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -331,4 +333,6 @@ const sleCountryTranslations = [
   TranslatedName(LangTgl(), name: "Bulubunduking Leona"),
   TranslatedName(LangTso(), name: "Siyera Liyona"),
   TranslatedName(LangVol(), name: "Sieraleonän"),
+  TranslatedName(LangChv(), name: "Сьерра-Леоне"),
+  TranslatedName(LangXho(), name: "ESierra Leone"),
 ];

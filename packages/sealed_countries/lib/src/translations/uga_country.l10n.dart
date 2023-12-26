@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Uganda country:
+/// Provides 105 translations for a Uganda country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -101,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -301,4 +302,5 @@ const ugaCountryTranslations = [
   TranslatedName(LangKin(), name: "Ubugande"),
   TranslatedName(LangSsw(), name: "IBuganda"),
   TranslatedName(LangVol(), name: "Lugandayän"),
+  TranslatedName(LangXho(), name: "E-Uganda"),
 ];

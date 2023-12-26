@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 111 translations for a Japanese Yen currency:
+/// Provides 115 translations for a Japanese Yen currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -74,6 +75,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -89,6 +92,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -117,7 +121,11 @@ const jpyCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জাপানি ইয়েন"),
   TranslatedName(LangBre(), name: "yen Japan"),
   TranslatedName(LangBos(), name: "Japanski jen"),
-  TranslatedName(LangBos(), name: "Јапански јен", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Јапански јен",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "ien japonès"),
   TranslatedName(LangChe(), name: "Японин иена"),
   TranslatedName(LangCes(), name: "japonský jen"),
@@ -208,7 +216,11 @@ const jpyCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "японська єна"),
   TranslatedName(LangUrd(), name: "جاپانی ین"),
   TranslatedName(LangUzb(), name: "Yaponiya iyenasi"),
-  TranslatedName(LangUzb(), name: "Япон йенаси", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Япон йенаси",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Yên Nhật"),
   TranslatedName(LangYid(), name: "יאפאנעזישער יען"),
   TranslatedName(LangYor(), name: "Yeni ti Orílẹ́ède Japani"),
@@ -220,4 +232,8 @@ const jpyCurrencyTranslations = [
   TranslatedName(LangZho(), name: "日元"),
   TranslatedName(LangZho(), name: "日圓", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Japanese Yen"),
+  TranslatedName(LangAsm(), name: "জাপানী য়েন"),
+  TranslatedName(LangOri(), name: "ଜାପାନି ୟେନ"),
+  TranslatedName(LangPus(), name: "جاپاني ين"),
+  TranslatedName(LangTgl(), name: "Yen ng Hapon"),
 ];

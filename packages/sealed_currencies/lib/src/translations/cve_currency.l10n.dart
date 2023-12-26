@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Cape Verdean Escudo currency:
+/// Provides 119 translations for a Cape Verdean Escudo currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -45,15 +47,18 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +73,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +88,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +111,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const cveCurrencyTranslations = [
@@ -114,7 +127,11 @@ const cveCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কেপ ভার্দে এসকুডো"),
   TranslatedName(LangBre(), name: "escudo Kab Glas"),
   TranslatedName(LangBos(), name: "Zelenortski eskudo"),
-  TranslatedName(LangBos(), name: "Зеленортски ескудо", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Зеленортски ескудо",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "escut de Cap Verd"),
   TranslatedName(LangChe(), name: "Кабо-Верден эскудо"),
   TranslatedName(LangCes(), name: "kapverdské escudo"),
@@ -212,4 +229,17 @@ const cveCurrencyTranslations = [
   TranslatedName(LangZho(), name: "佛得角埃斯庫多", countryCode: "HK"),
   TranslatedName(LangZho(), name: "維德角埃斯庫多", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Cape Verdean Escudo"),
+  TranslatedName(LangAsm(), name: "কেপ ভাৰ্দে এছকুডো"),
+  TranslatedName(LangChv(), name: "Кабо-Верде эскудӗ"),
+  TranslatedName(LangIna(), name: "escudo capoverdian"),
+  TranslatedName(LangJav(), name: "Escudo Tanjung Verde"),
+  TranslatedName(LangKur(), name: "eskudoyê kape verdeyî"),
+  TranslatedName(LangMri(), name: "Escudo Kūrae Matomato"),
+  TranslatedName(LangOri(), name: "କେପ୍ ଭେର୍ଦେୟ ଏସ୍କୁଡୋ"),
+  TranslatedName(LangPus(), name: "کيپ وردين اسکوډو"),
+  TranslatedName(LangSrd(), name: "iscudu cabubirdianu"),
+  TranslatedName(LangSom(), name: "Eskudo Keyb Farde"),
+  TranslatedName(LangTuk(), name: "Kabo-Werde eskudosy"),
+  TranslatedName(LangTgl(), name: "Cape Verdean Escudo"),
+  TranslatedName(LangXho(), name: "Cape Verdean Escudo"),
 ];

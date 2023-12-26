@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 112 translations for a Cocos (Keeling) Islands country:
+/// Provides 120 translations for a Cocos (Keeling) Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -33,6 +34,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -45,6 +47,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -65,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -79,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -105,6 +111,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const cckCountryTranslations = [
   CountryName(
@@ -347,4 +355,15 @@ const cckCountryTranslations = [
   TranslatedName(LangVie(), name: "Quần đảo Cocos (Keeling)"),
   TranslatedName(LangWol(), name: "Duni Koko (Kilin)"),
   TranslatedName(LangZul(), name: "i-Cocos (Keeling) Islands"),
+  TranslatedName(LangChv(), name: "Кокос утравӗсем"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤑𞤮𞤳𞤮𞥅𞤧 (𞤑𞤭𞥅𞤤𞤭𞤲𞤺)",
+  ),
+  TranslatedName(LangIna(), name: "Insulas Cocos (Keeling)"),
+  TranslatedName(LangKur(), name: "Giravên Kokosê (Keeling)"),
+  TranslatedName(LangMri(), name: "Ngā Moutere Kokoko (Kirini)"),
+  TranslatedName(LangSrd(), name: "Ìsulas Cocos (Keeling)"),
+  TranslatedName(LangXho(), name: "ECocos (Keeling) Islands"),
+  TranslatedName(LangYor(), name: "Erékùsù Cocos (Keeling)"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Libyan Dinar currency:
+/// Provides 120 translations for a Libyan Dinar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,18 +90,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const lydCurrencyTranslations = [
@@ -115,7 +129,11 @@ const lydCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লিবিয়ান ডলার"),
   TranslatedName(LangBre(), name: "dinar Libia"),
   TranslatedName(LangBos(), name: "Libijski dinar"),
-  TranslatedName(LangBos(), name: "Либијски динар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Либијски динар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dinar libi"),
   TranslatedName(LangChe(), name: "Ливин динар"),
   TranslatedName(LangCes(), name: "libyjský dinár"),
@@ -202,7 +220,11 @@ const lydCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "лівійський динар"),
   TranslatedName(LangUrd(), name: "لیبیائی دینار"),
   TranslatedName(LangUzb(), name: "Liviya dinori"),
-  TranslatedName(LangUzb(), name: "Ливия динори", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Ливия динори",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Dinar Libi"),
   TranslatedName(LangYor(), name: "Dina ti Orílẹ́ède Libiya"),
   TranslatedName(
@@ -213,4 +235,18 @@ const lydCurrencyTranslations = [
   TranslatedName(LangZho(), name: "利比亚第纳尔"),
   TranslatedName(LangZho(), name: "利比亞第納爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Libyan Dinar"),
+  TranslatedName(LangAsm(), name: "লিবিয়ান ডিনাৰ"),
+  TranslatedName(LangChv(), name: "Ливи динарӗ"),
+  TranslatedName(LangIna(), name: "dinar libyc"),
+  TranslatedName(LangIbo(), name: "Ego Dinar obodo Libya"),
+  TranslatedName(LangJav(), name: "Dinar Libya"),
+  TranslatedName(LangKur(), name: "dînarê lîbyayî"),
+  TranslatedName(LangMri(), name: "Dinar Ripia"),
+  TranslatedName(LangOri(), name: "ଲିବ୍ୟ ଦିନାର୍"),
+  TranslatedName(LangPus(), name: "ليبياېي دينار"),
+  TranslatedName(LangSrd(), name: "dinar lìbicu"),
+  TranslatedName(LangSom(), name: "Dinaarka Libya"),
+  TranslatedName(LangTuk(), name: "Liwiýa dinary"),
+  TranslatedName(LangTgl(), name: "Dinar ng Libya"),
+  TranslatedName(LangXho(), name: "Libyan Dinar"),
 ];

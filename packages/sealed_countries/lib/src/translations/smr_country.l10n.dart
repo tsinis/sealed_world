@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a San Marino country:
+/// Provides 99 translations for a San Marino country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -19,6 +19,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -71,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -92,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Volapük
 /// - Welsh
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -288,4 +291,7 @@ const smrCountryTranslations = [
   TranslatedName(LangLat(), name: "Sancti Marini"),
   TranslatedName(LangMri(), name: "Hato Marino"),
   TranslatedName(LangVol(), name: "Sanmarinän"),
+  TranslatedName(LangChv(), name: "Сан-Марино"),
+  TranslatedName(LangSrd(), name: "Santu Marinu"),
+  TranslatedName(LangXho(), name: "ESan Marino"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Venezuela country:
+/// Provides 124 translations for a Venezuela country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -90,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -117,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -339,4 +341,6 @@ const venCountryTranslations = [
   TranslatedName(LangSun(), name: "Vénézuéla"),
   TranslatedName(LangVol(), name: "Venesolän"),
   TranslatedName(LangWln(), name: "Venezwela"),
+  TranslatedName(LangSrd(), name: "Venetzuela"),
+  TranslatedName(LangXho(), name: "EVenezuela"),
 ];

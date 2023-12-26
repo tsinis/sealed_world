@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Serbian Dinar currency:
+/// Provides 107 translations for a Serbian Dinar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const rsdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Serbian Dinar"),
@@ -98,7 +115,11 @@ const rsdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সারবিয়ান দিনার"),
   TranslatedName(LangBre(), name: "dinar Serbia"),
   TranslatedName(LangBos(), name: "Srpski dinar"),
-  TranslatedName(LangBos(), name: "Српски динар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Српски динар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dinar serbi"),
   TranslatedName(LangChe(), name: "Сербин динар"),
   TranslatedName(LangCes(), name: "srbský dinár"),
@@ -178,4 +199,21 @@ const rsdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "塞爾維亞第納爾", countryCode: "HK"),
   TranslatedName(LangZho(), name: "塞爾維亞戴納", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Serbian Dinar"),
+  TranslatedName(LangAsm(), name: "চাৰ্বিয়ান ডিনাৰ"),
+  TranslatedName(LangChv(), name: "Серби динарӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤭𞤲𞤢𞥄𞤪 𞤅𞤫𞤪𞤦𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dinarin Serbia"),
+  TranslatedName(LangIna(), name: "dinar serbe"),
+  TranslatedName(LangIbo(), name: "Ego Dinar obodo Serbia"),
+  TranslatedName(LangJav(), name: "Dinar Serbia"),
+  TranslatedName(LangKur(), name: "dînarê sirbî"),
+  TranslatedName(LangMri(), name: "Dinar Hirupia"),
+  TranslatedName(LangOri(), name: "ସର୍ବିଆଇ ଦିନାର"),
+  TranslatedName(LangPus(), name: "سربيايي دينار"),
+  TranslatedName(LangSrd(), name: "dinar serbu"),
+  TranslatedName(LangSom(), name: "Dinaarka Serbiya"),
+  TranslatedName(LangTuk(), name: "Serb dinary"),
+  TranslatedName(LangTgl(), name: "Dinar ng Serbia"),
+  TranslatedName(LangXho(), name: "I-Dinar yaseSerbia"),
+  TranslatedName(LangYor(), name: "Dínárì Sàbíà"),
 ];

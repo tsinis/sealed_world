@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Bolivian Boliviano currency:
+/// Provides 109 translations for a Bolivian Boliviano currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,10 +66,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -69,10 +80,12 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const bobCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Bolivian Boliviano"),
@@ -100,7 +116,11 @@ const bobCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বলিভিয়ানো"),
   TranslatedName(LangBre(), name: "boliviano Bolivia"),
   TranslatedName(LangBos(), name: "Bolivijski boliviano"),
-  TranslatedName(LangBos(), name: "Боливијски Боливиано", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Боливијски Боливиано",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "bolivià"),
   TranslatedName(LangChe(), name: "Боливин боливиано"),
   TranslatedName(LangCes(), name: "bolivijský boliviano"),
@@ -182,9 +202,32 @@ const bobCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "болівійський болівіано"),
   TranslatedName(LangUrd(), name: "بولیوین بولیویانو"),
   TranslatedName(LangUzb(), name: "Boliviya bolivianosi"),
-  TranslatedName(LangUzb(), name: "Боливия болвиани", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Боливия болвиани",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Boliviano Bolivia"),
   TranslatedName(LangZho(), name: "玻利维亚诺"),
   TranslatedName(LangZho(), name: "玻利維亞諾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Bolivian Boliviano"),
+  TranslatedName(LangAsm(), name: "বলিভিয়ান বলিভিয়ানো"),
+  TranslatedName(LangChv(), name: "Боливи боливианӗ"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤄𞤮𞤤𞤭𞤾𞤭𞤴𞤢𞤲𞤮 𞤄𞤮𞤤𞤭𞤾𞤭𞤴𞤢𞤲𞤳𞤮",
+  ),
+  TranslatedName(LangHau(), name: "Boloviano na ƙasar Bolivia"),
+  TranslatedName(LangIna(), name: "boliviano bolivian"),
+  TranslatedName(LangIbo(), name: "Ego Boliviano obodo Bolivia"),
+  TranslatedName(LangJav(), name: "Boliviano Bolivia"),
+  TranslatedName(LangKur(), name: "bolîvyanoyê bolîvyayî"),
+  TranslatedName(LangMri(), name: "Boliviano Poriwia"),
+  TranslatedName(LangOri(), name: "ବୋଲିଭୀୟ ବୋଲିଭିଆନୋ"),
+  TranslatedName(LangPus(), name: "بوليوي بوليويانو"),
+  TranslatedName(LangSrd(), name: "bolivianu"),
+  TranslatedName(LangSom(), name: "Bolifiyanada Bolifiya"),
+  TranslatedName(LangTuk(), name: "Boliwiýa boliwianosy"),
+  TranslatedName(LangXho(), name: "I-Boliviano yaseBolivia"),
+  TranslatedName(LangYor(), name: "Bọlifiánò Bọ̀lífíà"),
 ];

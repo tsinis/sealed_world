@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Latvian language:
+/// Provides 118 translations for a Latvian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -69,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -76,19 +86,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -96,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -201,4 +218,25 @@ const lavLanguageTranslations = [
   TranslatedName(LangZho(), name: "拉脱维亚文"),
   TranslatedName(LangZho(), name: "拉脫維亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Latvian"),
+  TranslatedName(LangAsm(), name: "লাটভিয়ান"),
+  TranslatedName(LangChe(), name: "латышийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤂𞤢𞤼𞤾𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Latbiyanci"),
+  TranslatedName(LangIna(), name: "letton"),
+  TranslatedName(LangIbo(), name: "Latviani"),
+  TranslatedName(LangJav(), name: "Latvia"),
+  TranslatedName(LangKur(), name: "latviyayî"),
+  TranslatedName(LangMri(), name: "Rāwhia"),
+  TranslatedName(LangPus(), name: "لېټواني"),
+  TranslatedName(LangSrd(), name: "lètone"),
+  TranslatedName(LangSnd(), name: "لاتوين"),
+  TranslatedName(LangSom(), name: "Laatfiyaan"),
+  TranslatedName(LangTgk(), name: "латишӣ"),
+  TranslatedName(LangTuk(), name: "latyş dili"),
+  TranslatedName(LangTat(), name: "латыш"),
+  TranslatedName(LangWol(), name: "Letoniye"),
 ];

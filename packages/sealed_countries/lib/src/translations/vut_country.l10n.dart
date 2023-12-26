@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Vanuatu country:
+/// Provides 103 translations for a Vanuatu country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -20,6 +20,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Divehi (Dhivehi/Maldivian)
@@ -62,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
@@ -99,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -291,4 +294,7 @@ const vutCountryTranslations = [
   TranslatedName(LangQue(), name: "Wanwatu"),
   TranslatedName(LangKin(), name: "Vanuwatu"),
   TranslatedName(LangVol(), name: "Vanuatuäns"),
+  TranslatedName(LangChv(), name: "Вануату"),
+  TranslatedName(LangMri(), name: "Whenuatū"),
+  TranslatedName(LangXho(), name: "EVanuatu"),
 ];

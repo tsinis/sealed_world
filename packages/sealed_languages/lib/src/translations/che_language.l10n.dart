@@ -2,11 +2,17 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 71 translations for a Chechen language:
+/// Provides 102 translations for a Chechen language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -14,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -21,8 +28,11 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -31,12 +41,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -45,32 +60,48 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Yoruba
+/// - Zulu.
 const cheLanguageTranslations = [
   TranslatedName(LangEng(), name: "Chechen"),
   TranslatedName(LangAra(), name: "الشيشانية"),
@@ -143,4 +174,39 @@ const cheLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Chechen"),
   TranslatedName(LangZho(), name: "车臣文"),
   TranslatedName(LangZho(), name: "車臣文", script: ScriptHant()),
+  TranslatedName(LangAfr(), name: "Tsjetsjeens"),
+  TranslatedName(LangAmh(), name: "ችችን"),
+  TranslatedName(LangAsm(), name: "চেচেন"),
+  TranslatedName(LangChe(), name: "нохчийн"),
+  TranslatedName(LangEus(), name: "txetxenera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤕𞤫𞤷𞤫𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "tjetjenskt"),
+  TranslatedName(LangGlg(), name: "checheno"),
+  TranslatedName(LangHye(), name: "չեչեներեն"),
+  TranslatedName(LangIna(), name: "checheno"),
+  TranslatedName(LangKaz(), name: "шешен тілі"),
+  TranslatedName(LangKhm(), name: "ឈីឆេន"),
+  TranslatedName(LangKur(), name: "çeçenî"),
+  TranslatedName(LangKir(), name: "чеченче"),
+  TranslatedName(LangMri(), name: "Tietiene"),
+  TranslatedName(LangMon(), name: "чечень"),
+  TranslatedName(LangNep(), name: "चेचेन"),
+  TranslatedName(LangPus(), name: "چيچني"),
+  TranslatedName(LangQue(), name: "Checheno Simi"),
+  TranslatedName(LangSrd(), name: "cecenu"),
+  TranslatedName(LangSnd(), name: "چیچن"),
+  TranslatedName(LangSin(), name: "චෙච්නියානු"),
+  TranslatedName(LangSom(), name: "Jejen"),
+  TranslatedName(LangSqi(), name: "çeçenisht"),
+  TranslatedName(LangSwa(), name: "Kichechenia"),
+  TranslatedName(LangTir(), name: "ቸቸንይና"),
+  TranslatedName(LangTuk(), name: "çeçen dili"),
+  TranslatedName(LangUrd(), name: "چیچن"),
+  TranslatedName(LangUzb(), name: "chechen"),
+  TranslatedName(LangYor(), name: "Èdè Chechen"),
+  TranslatedName(LangZul(), name: "isi-Chechen"),
 ];

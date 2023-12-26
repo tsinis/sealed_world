@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Ghana country:
+/// Provides 121 translations for a Ghana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -116,6 +116,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -296,4 +297,5 @@ const ghaCountryTranslations = [
   TranslatedName(LangSsw(), name: "IGana"),
   TranslatedName(LangVol(), name: "Ganän"),
   TranslatedName(LangWln(), name: "Gana"),
+  TranslatedName(LangXho(), name: "EGhana"),
 ];

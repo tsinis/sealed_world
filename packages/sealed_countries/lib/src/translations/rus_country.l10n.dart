@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 159 translations for a Russia country:
+/// Provides 160 translations for a Russia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -118,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Samoan
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
 /// - Sindhi
@@ -394,4 +395,5 @@ const rusCountryTranslations = [
   TranslatedName(LangWln(), name: "Federåcion d' Rûsseye"),
   TranslatedName(LangXho(), name: "IRashiya"),
   TranslatedName(LangZha(), name: "Ezlozswh Lienzbangh"),
+  TranslatedName(LangSan(), name: "रष्यदेश:"),
 ];

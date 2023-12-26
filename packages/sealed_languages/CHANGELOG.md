@@ -1,3 +1,13 @@
+## 1.0.0
+
+🎉 First anniversary and first stable release!
+
+NEW FEATURES
+
+- Added new getter for `TranslatedName` name called `common`, which might be useful in some cases when `name` is being used by a parent class.
+- Added a lot of translations from the Symfony.
+- Updated LICENSE.
+
 ## 0.9.0
 
 NEW FEATURES

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 88 translations for a Hungarian Forint currency:
+/// Provides 105 translations for a Hungarian Forint currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const hufCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Hungarian Forint"),
@@ -98,7 +115,11 @@ const hufCurrencyTranslations = [
   TranslatedName(LangBen(), name: "হাঙ্গেরিয়ান ফোরিন্ট"),
   TranslatedName(LangBre(), name: "forint Hungaria"),
   TranslatedName(LangBos(), name: "Mađarska forinta"),
-  TranslatedName(LangBos(), name: "Мађарска форинта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Мађарска форинта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "fòrint hongarès"),
   TranslatedName(LangChe(), name: "Венгрин форинт"),
   TranslatedName(LangCes(), name: "maďarský forint"),
@@ -176,4 +197,21 @@ const hufCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Forint Hungary"),
   TranslatedName(LangZho(), name: "匈牙利福林"),
   TranslatedName(LangZul(), name: "i-Hungarian Forint"),
+  TranslatedName(LangAsm(), name: "হাংগেৰীয়ান ফ’ৰিণ্ট"),
+  TranslatedName(LangChv(), name: "Венгри форинчӗ"),
+  TranslatedName(LangFul(), name: "𞤊𞤮𞤪𞤭𞤲𞤼𞤵 𞤖𞤵𞤲𞤺𞤢𞤪𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Hungary"),
+  TranslatedName(LangIna(), name: "forint hungare"),
+  TranslatedName(LangIbo(), name: "Ego Forint obodo Hungary"),
+  TranslatedName(LangJav(), name: "Forint Hungaria"),
+  TranslatedName(LangKur(), name: "forîntê macarî"),
+  TranslatedName(LangMri(), name: "Forint Hanekari"),
+  TranslatedName(LangOri(), name: "ହଙ୍ଗେରିୟ ଫୋରିଣ୍ଟ୍"),
+  TranslatedName(LangPus(), name: "هنګري فورنټ"),
+  TranslatedName(LangSrd(), name: "fiorinu ungheresu"),
+  TranslatedName(LangSom(), name: "Forintiska Hangari"),
+  TranslatedName(LangTuk(), name: "Wenger forinti"),
+  TranslatedName(LangTgl(), name: "Forint ng Hungary"),
+  TranslatedName(LangXho(), name: "I-Forint yaseHungay"),
+  TranslatedName(LangYor(), name: "Fọ́ríǹtì Họ̀ngérí"),
 ];

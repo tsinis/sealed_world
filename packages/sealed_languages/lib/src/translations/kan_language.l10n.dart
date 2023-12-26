@@ -2,12 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 90 translations for a Kannada language:
+/// Provides 107 translations for a Kannada language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +18,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,14 +31,18 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,6 +52,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -54,12 +61,14 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -67,23 +76,31 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -178,4 +195,25 @@ const kanLanguageTranslations = [
   TranslatedName(LangZho(), name: "卡纳达文"),
   TranslatedName(LangZho(), name: "坎那達文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Kannada"),
+  TranslatedName(LangAsm(), name: "কানাড়া"),
+  TranslatedName(LangChe(), name: "каннада"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤢𞤲𞥆𞤢𞤣𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "kannada"),
+  TranslatedName(LangIbo(), name: "Kanhada"),
+  TranslatedName(LangKur(), name: "kannadayî"),
+  TranslatedName(LangMri(), name: "Kanara"),
+  TranslatedName(LangPus(), name: "کناډا"),
+  TranslatedName(LangSrd(), name: "kannada"),
+  TranslatedName(LangSnd(), name: "ڪناڊا"),
+  TranslatedName(LangSom(), name: "Kannadays"),
+  TranslatedName(LangTgk(), name: "каннада"),
+  TranslatedName(LangTuk(), name: "kannada dili"),
+  TranslatedName(LangTur(), name: "Kannada dili"),
+  TranslatedName(LangTat(), name: "каннада"),
+  TranslatedName(LangWol(), name: "Kannadaa"),
+  TranslatedName(LangDeu(), name: "Kannada"),
 ];

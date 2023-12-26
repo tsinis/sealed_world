@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Bhutan country:
+/// Provides 138 translations for a Bhutan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -131,6 +132,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -336,4 +338,6 @@ const btnCountryTranslations = [
   TranslatedName(LangTwi(), name: "Butan"),
   TranslatedName(LangVol(), name: "Butän"),
   TranslatedName(LangZha(), name: "Budanh"),
+  TranslatedName(LangSrd(), name: "Bhutàn"),
+  TranslatedName(LangXho(), name: "EBhutan"),
 ];

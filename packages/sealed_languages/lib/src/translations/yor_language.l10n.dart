@@ -2,22 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 99 translations for a Yoruba language:
+/// Provides 113 translations for a Yoruba language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -34,6 +37,7 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -41,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -51,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -63,12 +69,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -76,8 +84,10 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -85,11 +95,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -198,4 +212,18 @@ const yorLanguageTranslations = [
   TranslatedName(LangZho(), name: "约鲁巴文"),
   TranslatedName(LangZho(), name: "約魯巴文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Yoruba"),
+  TranslatedName(LangAsm(), name: "ইউৰুবা"),
+  TranslatedName(LangBel(), name: "ёруба"),
+  TranslatedName(LangChe(), name: "йоруба"),
+  TranslatedName(LangIna(), name: "yoruba"),
+  TranslatedName(LangKur(), name: "yorubayî"),
+  TranslatedName(LangMri(), name: "Ōrūpa"),
+  TranslatedName(LangPus(), name: "یوروبا"),
+  TranslatedName(LangSrd(), name: "yoruba"),
+  TranslatedName(LangSnd(), name: "يوروبا"),
+  TranslatedName(LangTgk(), name: "йоруба"),
+  TranslatedName(LangTir(), name: "ዮሩባ"),
+  TranslatedName(LangTuk(), name: "ýoruba dili"),
+  TranslatedName(LangTat(), name: "йоруба"),
+  TranslatedName(LangDeu(), name: "Yoruba"),
 ];

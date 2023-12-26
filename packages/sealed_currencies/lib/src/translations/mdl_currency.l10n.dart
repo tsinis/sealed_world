@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Moldovan Leu currency:
+/// Provides 108 translations for a Moldovan Leu currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const mdlCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Moldovan Leu"),
@@ -98,7 +115,11 @@ const mdlCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মোল্ডোভান লেয়ু"),
   TranslatedName(LangBre(), name: "leu Moldova"),
   TranslatedName(LangBos(), name: "Moldavski lej"),
-  TranslatedName(LangBos(), name: "Молдовски љу", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Молдовски љу",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "leu moldau"),
   TranslatedName(LangChe(), name: "Молдавин лей"),
   TranslatedName(LangCes(), name: "moldavský leu"),
@@ -179,4 +200,21 @@ const mdlCurrencyTranslations = [
   TranslatedName(LangZho(), name: "摩爾多瓦列伊", countryCode: "HK"),
   TranslatedName(LangZho(), name: "摩杜雲列伊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Moldovan Leu"),
+  TranslatedName(LangAsm(), name: "মোলডোভান লেউ"),
+  TranslatedName(LangChv(), name: "Молдова лайӗ"),
+  TranslatedName(LangFul(), name: "𞤂𞤭𞥅𞤱𞤮 𞤃𞤮𞤤𞤣𞤮𞤾𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗaɗen Moldova"),
+  TranslatedName(LangIna(), name: "leu moldave"),
+  TranslatedName(LangIbo(), name: "Ego Leu obodo Moldova"),
+  TranslatedName(LangJav(), name: "Leu Moldova"),
+  TranslatedName(LangKur(), name: "leyê moldovayî"),
+  TranslatedName(LangMri(), name: "Leu Morotawa"),
+  TranslatedName(LangOri(), name: "ମୋଲଡୋଭାନ୍ ଲେୟୁ"),
+  TranslatedName(LangPus(), name: "مالډوي ليو"),
+  TranslatedName(LangSrd(), name: "leu moldavu"),
+  TranslatedName(LangSom(), name: "Leeyuuda Moldofa"),
+  TranslatedName(LangTuk(), name: "Moldaw leýi"),
+  TranslatedName(LangTgl(), name: "Leu ng Moldova"),
+  TranslatedName(LangXho(), name: "Moldovan Leu"),
+  TranslatedName(LangYor(), name: "Owó Léhù Moldovan"),
 ];

@@ -2,22 +2,34 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 62 translations for a Komi language:
+/// Provides 92 translations for a Komi language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -26,12 +38,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -39,18 +56,25 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -59,11 +83,17 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
-/// - Welsh.
+/// - Welsh
+/// - Yoruba
+/// - Zulu.
 const komLanguageTranslations = [
   TranslatedName(LangEng(), name: "Komi"),
   TranslatedName(LangAra(), name: "الكومي"),
@@ -126,7 +156,39 @@ const komLanguageTranslations = [
   TranslatedName(LangUkr(), name: "комі"),
   TranslatedName(LangVie(), name: "Tiếng Komi"),
   TranslatedName(LangZho(), name: "科米文"),
-
-  /// Added manually:
   TranslatedName(LangBre(), name: "komieg"),
+  TranslatedName(LangAmh(), name: "ኮሚ"),
+  TranslatedName(LangAsm(), name: "কোমি"),
+  TranslatedName(LangBel(), name: "комі"),
+  TranslatedName(LangChe(), name: "комийн"),
+  TranslatedName(LangEus(), name: "komiera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤮𞤥𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "komi"),
+  TranslatedName(LangGlg(), name: "komi"),
+  TranslatedName(LangHye(), name: "կոմիերեն"),
+  TranslatedName(LangIna(), name: "komi"),
+  TranslatedName(LangKaz(), name: "коми тілі"),
+  TranslatedName(LangKhm(), name: "កូមី"),
+  TranslatedName(LangKur(), name: "komî"),
+  TranslatedName(LangKir(), name: "комиче"),
+  TranslatedName(LangMon(), name: "коми"),
+  TranslatedName(LangMya(), name: "ကိုမီ"),
+  TranslatedName(LangNep(), name: "कोमी"),
+  TranslatedName(LangPan(), name: "ਕੋਮੀ"),
+  TranslatedName(LangPus(), name: "کومی"),
+  TranslatedName(LangQue(), name: "Komi Simi"),
+  TranslatedName(LangSrd(), name: "komi"),
+  TranslatedName(LangSnd(), name: "ڪومي"),
+  TranslatedName(LangSin(), name: "කොමි"),
+  TranslatedName(LangSqi(), name: "komisht"),
+  TranslatedName(LangTir(), name: "ኮሚ"),
+  TranslatedName(LangTuk(), name: "komi dili"),
+  TranslatedName(LangUrd(), name: "کومی"),
+  TranslatedName(LangUzb(), name: "komi"),
+  TranslatedName(LangYor(), name: "Èdè Komi"),
+  TranslatedName(LangZul(), name: "isi-Komi"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Khmer language:
+/// Provides 120 translations for a Khmer language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -10,15 +10,18 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -44,6 +47,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -55,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -67,6 +72,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -74,6 +80,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -82,8 +89,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -91,17 +100,22 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -212,4 +226,18 @@ const khmLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè kameri"),
   TranslatedName(LangZho(), name: "高棉文"),
   TranslatedName(LangZul(), name: "isi-Khmer"),
+  TranslatedName(LangAsm(), name: "খমেৰ"),
+  TranslatedName(LangBel(), name: "кхмерская"),
+  TranslatedName(LangChe(), name: "кхмерийн"),
+  TranslatedName(LangIna(), name: "khmer"),
+  TranslatedName(LangKur(), name: "ximêrî"),
+  TranslatedName(LangMri(), name: "Kimēra"),
+  TranslatedName(LangPus(), name: "خمر"),
+  TranslatedName(LangSrd(), name: "khmer"),
+  TranslatedName(LangSnd(), name: "خمر"),
+  TranslatedName(LangTgk(), name: "кхмерӣ"),
+  TranslatedName(LangTir(), name: "ክመር"),
+  TranslatedName(LangTuk(), name: "khmer dili"),
+  TranslatedName(LangTat(), name: "кхмер"),
+  TranslatedName(LangWol(), name: "Xmer"),
 ];

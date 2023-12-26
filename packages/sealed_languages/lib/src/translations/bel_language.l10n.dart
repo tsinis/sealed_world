@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 117 translations for a Belarusian language:
+/// Provides 130 translations for a Belarusian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -48,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -81,6 +87,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -89,8 +96,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -98,12 +107,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -111,6 +123,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -232,4 +245,17 @@ const belLanguageTranslations = [
   TranslatedName(LangZho(), name: "白俄罗斯文"),
   TranslatedName(LangZho(), name: "白俄羅斯文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Belarusian"),
+  TranslatedName(LangAsm(), name: "বেলাৰুছীয়"),
+  TranslatedName(LangChe(), name: "белорусийн"),
+  TranslatedName(LangIna(), name: "bielorusso"),
+  TranslatedName(LangJav(), name: "Belarus"),
+  TranslatedName(LangKur(), name: "belarusî"),
+  TranslatedName(LangMri(), name: "Perarūhiana"),
+  TranslatedName(LangPus(), name: "بېلاروسي"),
+  TranslatedName(LangSrd(), name: "bielorussu"),
+  TranslatedName(LangSnd(), name: "بيلاروسي"),
+  TranslatedName(LangTgk(), name: "белорусӣ"),
+  TranslatedName(LangTuk(), name: "belarus dili"),
+  TranslatedName(LangTat(), name: "белорус"),
+  TranslatedName(LangWol(), name: "Belaris"),
 ];

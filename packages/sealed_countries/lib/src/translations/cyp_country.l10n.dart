@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 146 translations for a Cyprus country:
+/// Provides 147 translations for a Cyprus country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -141,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -367,4 +368,5 @@ const cypCountryTranslations = [
   TranslatedName(LangTgl(), name: "Tsipre"),
   TranslatedName(LangVol(), name: "Sipreän"),
   TranslatedName(LangYid(), name: "קיפראס"),
+  TranslatedName(LangXho(), name: "ECyprus"),
 ];

@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 78 translations for a Ewe language:
+/// Provides 95 translations for a Ewe language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -23,23 +26,29 @@ import "../model/translated_name.dart";
 /// - English
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -54,28 +63,36 @@ import "../model/translated_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Yoruba
 /// - Zulu.
 const eweLanguageTranslations = [
   TranslatedName(LangEng(), name: "Ewe"),
@@ -155,7 +172,26 @@ const eweLanguageTranslations = [
   TranslatedName(LangZho(), name: "埃维文"),
   TranslatedName(LangZho(), name: "埃維文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Ewe"),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Ewe"),
+  TranslatedName(LangAsm(), name: "ইৱে"),
+  TranslatedName(LangBel(), name: "эве"),
+  TranslatedName(LangChe(), name: "эве"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤉𞤱𞤫𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "ewe"),
+  TranslatedName(LangIna(), name: "ewe"),
+  TranslatedName(LangKhm(), name: "អ៊ីវ"),
+  TranslatedName(LangKur(), name: "eweyî"),
+  TranslatedName(LangPus(), name: "ايو"),
+  TranslatedName(LangQue(), name: "Ewé Simi"),
+  TranslatedName(LangSrd(), name: "ewe"),
+  TranslatedName(LangSnd(), name: "ايو"),
+  TranslatedName(LangSom(), name: "Eewe"),
+  TranslatedName(LangTir(), name: "ኢው"),
+  TranslatedName(LangTuk(), name: "ewe dili"),
+  TranslatedName(LangYor(), name: "Èdè Ewè"),
+  TranslatedName(LangDeu(), name: "Ewe"),
 ];

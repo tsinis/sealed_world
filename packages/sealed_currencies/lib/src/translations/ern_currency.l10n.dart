@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Eritrean Nakfa currency:
+/// Provides 121 translations for a Eritrean Nakfa currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,19 +89,23 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const ernCurrencyTranslations = [
@@ -115,7 +129,11 @@ const ernCurrencyTranslations = [
   TranslatedName(LangBen(), name: "এরিট্রিয়েন নাকফা"),
   TranslatedName(LangBre(), name: "nakfa Eritrea"),
   TranslatedName(LangBos(), name: "Eritrejska nakfa"),
-  TranslatedName(LangBos(), name: "Еритреанска накфа", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Еритреанска накфа",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "nakfa eritreu"),
   TranslatedName(LangChe(), name: "Эритрейн накфа"),
   TranslatedName(LangCes(), name: "eritrejská nakfa"),
@@ -213,4 +231,19 @@ const ernCurrencyTranslations = [
   TranslatedName(LangZho(), name: "厄立特里亚纳克法"),
   TranslatedName(LangZho(), name: "厄立特里亞納克法", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Eritrean Nakfa"),
+  TranslatedName(LangAsm(), name: "এৰিট্ৰিয়ন নাক্‌ফা"),
+  TranslatedName(LangChv(), name: "Эритрей накфӗ"),
+  TranslatedName(LangIna(), name: "nakfa eritree"),
+  TranslatedName(LangIbo(), name: "Ego Nakfa obodo Eritrea"),
+  TranslatedName(LangJav(), name: "Nakfa Eritrea"),
+  TranslatedName(LangKur(), name: "nakfayê erîtreyî"),
+  TranslatedName(LangMri(), name: "Nakfa Eriterea"),
+  TranslatedName(LangOri(), name: "ଏରିଟ୍ରେୟ ନାକଫା"),
+  TranslatedName(LangPus(), name: "ايريټرين نکفا"),
+  TranslatedName(LangSrd(), name: "nafka eritreu"),
+  TranslatedName(LangSom(), name: "Nakfada Eritriya"),
+  TranslatedName(LangTir(), name: "ናቕፋ"),
+  TranslatedName(LangTuk(), name: "Eritreýa nakfasy"),
+  TranslatedName(LangTgl(), name: "Eritrean Nakfa"),
+  TranslatedName(LangXho(), name: "I-Nakfa yase-Eritria"),
 ];

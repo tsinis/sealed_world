@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Yemeni Rial currency:
+/// Provides 107 translations for a Yemeni Rial currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const yerCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Yemeni Rial"),
@@ -98,7 +115,11 @@ const yerCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইয়েমেনি রিয়াল"),
   TranslatedName(LangBre(), name: "rial Yemen"),
   TranslatedName(LangBos(), name: "Jemenski rijal"),
-  TranslatedName(LangBos(), name: "Јеменски риал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Јеменски риал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rial iemenita"),
   TranslatedName(LangChe(), name: "Йеменан риал"),
   TranslatedName(LangCes(), name: "jemenský rijál"),
@@ -178,4 +199,21 @@ const yerCurrencyTranslations = [
   TranslatedName(LangZho(), name: "也門里雅", countryCode: "HK"),
   TranslatedName(LangZho(), name: "葉門里亞爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Yemeni Rial"),
+  TranslatedName(LangAsm(), name: "য়েমেনী ৰিয়েল"),
+  TranslatedName(LangChv(), name: "Йемен риалӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤭𞤴𞤢𞥄𞤤 𞤒𞤫𞤥𞤫𞤲𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Riyal ɗin Yemen"),
+  TranslatedName(LangIna(), name: "rial yemeni"),
+  TranslatedName(LangIbo(), name: "Ego Rial obodo Yemeni"),
+  TranslatedName(LangJav(), name: "Rial Yaman"),
+  TranslatedName(LangKur(), name: "riyalê yemenî"),
+  TranslatedName(LangMri(), name: "Rial Īmene"),
+  TranslatedName(LangOri(), name: "ୟେମେନି ରିଆଲ୍"),
+  TranslatedName(LangPus(), name: "يمني ريال"),
+  TranslatedName(LangSrd(), name: "rial yemenita"),
+  TranslatedName(LangSom(), name: "Riyaalka Yemen"),
+  TranslatedName(LangTuk(), name: "Ýemen rialy"),
+  TranslatedName(LangTgl(), name: "Yemeni Rial"),
+  TranslatedName(LangXho(), name: "I-Rial yaseYemen"),
+  TranslatedName(LangYor(), name: "Ráyò Yẹ́mẹ̀nì"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Aruban Florin currency:
+/// Provides 109 translations for a Aruban Florin currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const awgCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Aruban Florin"),
@@ -99,7 +115,11 @@ const awgCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আরুবা গিল্ডার"),
   TranslatedName(LangBre(), name: "florin Aruba"),
   TranslatedName(LangBos(), name: "Arubanski florin"),
-  TranslatedName(LangBos(), name: "Арубански флорин", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Арубански флорин",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "florí d’Aruba"),
   TranslatedName(LangChe(), name: "Арубан флорин"),
   TranslatedName(LangCes(), name: "arubský zlatý"),
@@ -176,10 +196,30 @@ const awgCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "арубський флорин"),
   TranslatedName(LangUrd(), name: "اروبن فلورِن"),
   TranslatedName(LangUzb(), name: "Aruba florini"),
-  TranslatedName(LangUzb(), name: "Аруба флорини", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Аруба флорини",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Florin Aruba"),
   TranslatedName(LangZho(), name: "阿鲁巴弗罗林"),
   TranslatedName(LangZho(), name: "阿魯巴盾", countryCode: "HK"),
   TranslatedName(LangZho(), name: "阿路巴盾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Aruban Florin"),
+  TranslatedName(LangAsm(), name: "আৰুবান ফ্ল’ৰিন"),
+  TranslatedName(LangChv(), name: "Аруба флоринӗ"),
+  TranslatedName(LangFul(), name: "𞤊𞤵𞤤𞤮𞤪𞤭𞤲 𞤀𞤪𞤵𞤦𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Florin na yankin Aruba"),
+  TranslatedName(LangIna(), name: "florino aruban"),
+  TranslatedName(LangIbo(), name: "Ego Florin obodo Aruba"),
+  TranslatedName(LangJav(), name: "Florin Aruban"),
+  TranslatedName(LangKur(), name: "florînê arubayî"),
+  TranslatedName(LangMri(), name: "Florin Arūpa"),
+  TranslatedName(LangOri(), name: "ଆରୁବୀୟ ଫ୍ଲୋରିନ୍"),
+  TranslatedName(LangPus(), name: "اروبايي فلورن"),
+  TranslatedName(LangSrd(), name: "fiorinu arubanu"),
+  TranslatedName(LangSom(), name: "Foloorinta Aruban"),
+  TranslatedName(LangTuk(), name: "Aruba florini"),
+  TranslatedName(LangXho(), name: "Aruban Florin"),
+  TranslatedName(LangYor(), name: "Fuloríìnì Àrúbà"),
 ];

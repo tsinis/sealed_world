@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 129 translations for a São Tomé and Príncipe country:
+/// Provides 136 translations for a São Tomé and Príncipe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -49,7 +50,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -78,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -94,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -104,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -122,6 +128,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -367,4 +374,11 @@ const stpCountryTranslations = [
   TranslatedName(LangLat(), name: "Insulae Sancti Thomae et Principis"),
   TranslatedName(LangLim(), name: "São Tomé en Príncipe"),
   TranslatedName(LangVol(), name: "Saluda-Tomeän e Prinsipeän"),
+  TranslatedName(LangChv(), name: "Сан-Томе тата Принсипи"),
+  TranslatedName(LangIna(), name: "São Tomé e Príncipe"),
+  TranslatedName(LangIbo(), name: "São Tomé & Príncipe"),
+  TranslatedName(LangMri(), name: "Hato Tomei me Pirinipei"),
+  TranslatedName(LangSrd(), name: "São Tomé e Príncipe"),
+  TranslatedName(LangTgl(), name: "São Tomé & Príncipe"),
+  TranslatedName(LangXho(), name: "ESão Tomé & Príncipe"),
 ];

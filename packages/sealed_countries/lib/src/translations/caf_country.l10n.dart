@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Central African Republic country:
+/// Provides 147 translations for a Central African Republic country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -141,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -402,4 +404,6 @@ const cafCountryTranslations = [
   TranslatedName(LangTgl(), name: "Republika ng Gitnang Aprika"),
   TranslatedName(LangTso(), name: "Afrika Wale Xikarhi"),
   TranslatedName(LangVol(), name: "Zänoda-Frikop"),
+  TranslatedName(LangChv(), name: "Тӗп Африка Республики"),
+  TranslatedName(LangXho(), name: "ECentral African Republic"),
 ];

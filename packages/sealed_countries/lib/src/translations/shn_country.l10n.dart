@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Saint Helena, Ascension and Tristan da Cunha
+/// Provides 127 translations for a Saint Helena, Ascension and Tristan da Cunha
 /// country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
@@ -25,14 +25,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -47,7 +50,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -59,12 +64,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
 /// - Malay
@@ -72,9 +79,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Pashto (Pushto)
@@ -86,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -95,6 +105,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Telugu
@@ -111,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -329,4 +341,16 @@ const shnCountryTranslations = [
     LangVie(),
     name: "Saint Helena, Ascension và Tristan da Cunha",
   ),
+  TranslatedName(LangChv(), name: "Сӑваплӑ Елена утравӗ"),
+  TranslatedName(LangDan(), name: "St. Helena"),
+  TranslatedName(LangFao(), name: "St. Helena"),
+  TranslatedName(LangIna(), name: "Sancte Helena"),
+  TranslatedName(LangIbo(), name: "St. Helena"),
+  TranslatedName(LangKur(), name: "Saint Helena"),
+  TranslatedName(LangLtz(), name: "St. Helena"),
+  TranslatedName(LangMri(), name: "Hato Hērena"),
+  TranslatedName(LangNor(), name: "St. Helena"),
+  TranslatedName(LangSrd(), name: "Santa Elene"),
+  TranslatedName(LangTgl(), name: "St. Helena"),
+  TranslatedName(LangXho(), name: "ESt. Helena"),
 ];

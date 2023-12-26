@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Dominican Republic country:
+/// Provides 147 translations for a Dominican Republic country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -26,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -108,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -139,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -395,4 +398,7 @@ const domCountryTranslations = [
   TranslatedName(LangSun(), name: "Républik Dominika"),
   TranslatedName(LangTgl(), name: "Republikang Dominikano"),
   TranslatedName(LangVol(), name: "Sandominän"),
+  TranslatedName(LangChv(), name: "Доминикан Республики"),
+  TranslatedName(LangSrd(), name: "Repùblica Dominicana"),
+  TranslatedName(LangXho(), name: "EDominican Republic"),
 ];

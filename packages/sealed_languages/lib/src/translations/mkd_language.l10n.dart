@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Macedonian language:
+/// Provides 119 translations for a Macedonian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -78,19 +87,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -98,6 +113,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -205,4 +221,24 @@ const mkdLanguageTranslations = [
   TranslatedName(LangZho(), name: "马其顿文"),
   TranslatedName(LangZho(), name: "馬其頓文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Macedonian"),
+  TranslatedName(LangAsm(), name: "মেচিডোনীয়"),
+  TranslatedName(LangChe(), name: "македонхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤢𞤧𞤫𞤣𞤮𞤲𞤭𞤲𞤳𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Dan Masedoniya"),
+  TranslatedName(LangIna(), name: "macedone"),
+  TranslatedName(LangIbo(), name: "Masedọnịa"),
+  TranslatedName(LangJav(), name: "Makedonia"),
+  TranslatedName(LangKur(), name: "makedonî"),
+  TranslatedName(LangMri(), name: "Makerōnia"),
+  TranslatedName(LangSrd(), name: "matzèdone"),
+  TranslatedName(LangSnd(), name: "ميسي ڊونيائي"),
+  TranslatedName(LangSom(), name: "Masadooniyaan"),
+  TranslatedName(LangTgk(), name: "мақдунӣ"),
+  TranslatedName(LangTuk(), name: "makedon dili"),
+  TranslatedName(LangTat(), name: "македон"),
+  TranslatedName(LangWol(), name: "Maseduwaane"),
 ];

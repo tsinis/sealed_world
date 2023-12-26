@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Jamaican Dollar currency:
+/// Provides 108 translations for a Jamaican Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const jmdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Jamaican Dollar"),
@@ -100,7 +116,11 @@ const jmdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জামাইকান ডলার"),
   TranslatedName(LangBre(), name: "dollar Jamaika"),
   TranslatedName(LangBos(), name: "Jamajčanski dolar"),
-  TranslatedName(LangBos(), name: "Јамајски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Јамајски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar jamaicà"),
   TranslatedName(LangChe(), name: "Ямайн доллар"),
   TranslatedName(LangCes(), name: "jamajský dolar"),
@@ -177,9 +197,29 @@ const jmdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "ямайський долар"),
   TranslatedName(LangUrd(), name: "جمائیکن ڈالر"),
   TranslatedName(LangUzb(), name: "Yamayka dollari"),
-  TranslatedName(LangUzb(), name: "Ямайка доллари", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Ямайка доллари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Jamaica"),
   TranslatedName(LangZho(), name: "牙买加元"),
   TranslatedName(LangZho(), name: "牙買加元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Jamaican Dollar"),
+  TranslatedName(LangAsm(), name: "জামাইকান ডলাৰ"),
+  TranslatedName(LangChv(), name: "Ямайка долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤔𞤢𞤥𞤢𞤴𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dalar Jamaica"),
+  TranslatedName(LangIna(), name: "dollar jamaican"),
+  TranslatedName(LangIbo(), name: "Ego Dollar obodo Jamaica"),
+  TranslatedName(LangJav(), name: "Dolar Jamaika"),
+  TranslatedName(LangKur(), name: "dolarê jamaîkayî"),
+  TranslatedName(LangMri(), name: "Tāra Hemeika"),
+  TranslatedName(LangOri(), name: "ଜାମାଇକୀୟ ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "جمايکايي ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru giamaicanu"),
+  TranslatedName(LangSom(), name: "Doolarka Jamayka"),
+  TranslatedName(LangTuk(), name: "Ýamaýka dollary"),
+  TranslatedName(LangXho(), name: "Jamaican Dollar"),
+  TranslatedName(LangYor(), name: "Dọ́là Jàmáíkà"),
 ];

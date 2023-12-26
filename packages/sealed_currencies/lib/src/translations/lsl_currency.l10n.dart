@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 101 translations for a Lesotho Loti currency:
+/// Provides 116 translations for a Lesotho Loti currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -20,6 +21,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Burmese
 /// - Catalan
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -27,6 +29,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - English
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -41,10 +44,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -52,6 +58,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -65,11 +72,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -77,18 +87,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -96,6 +110,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const lslCurrencyTranslations = [
@@ -110,7 +125,11 @@ const lslCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লেসুটু লোটি"),
   TranslatedName(LangBre(), name: "loti Lesotho"),
   TranslatedName(LangBos(), name: "Lesotski loti"),
-  TranslatedName(LangBos(), name: "Лесото лоти", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Лесото лоти",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "loti de Lesotho"),
   TranslatedName(LangCes(), name: "lesothský loti"),
   TranslatedName(LangCym(), name: "Loti Lesotho"),
@@ -190,8 +209,6 @@ const lslCurrencyTranslations = [
   TranslatedName(LangZho(), name: "莱索托洛蒂"),
   TranslatedName(LangZho(), name: "賴索托洛蒂", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Lesotho Loti"),
-
-  /// Added manually:
   TranslatedName(LangBel(), name: "Лоти"),
   TranslatedName(LangHye(), name: "Լոթի"),
   TranslatedName(LangIsl(), name: "lesótóskur lóti"),
@@ -206,4 +223,19 @@ const lslCurrencyTranslations = [
   TranslatedName(LangSin(), name: "ලෙසෝතෝ ලොටි"),
   TranslatedName(LangSqi(), name: "Lota lesotiane"),
   TranslatedName(LangUzb(), name: "Lesoto lotisi"),
+  TranslatedName(LangAsm(), name: "লেচোথো লোটি"),
+  TranslatedName(LangChv(), name: "Лесото лотийӗ"),
+  TranslatedName(LangFao(), name: "Lesoto loti"),
+  TranslatedName(LangIna(), name: "loti de Lesotho"),
+  TranslatedName(LangIbo(), name: "Ego loti obodo Lesotho"),
+  TranslatedName(LangJav(), name: "Lesotho Loti"),
+  TranslatedName(LangKur(), name: "lotiyê lesothoyî"),
+  TranslatedName(LangMri(), name: "Loti Teroto"),
+  TranslatedName(LangOri(), name: "ଲେସୋଥୋ ଲୋଟି"),
+  TranslatedName(LangPus(), name: "Lesotho Loti"),
+  TranslatedName(LangSrd(), name: "loti lesothianu"),
+  TranslatedName(LangSom(), name: "Lesotho Loti"),
+  TranslatedName(LangTuk(), name: "Lesoto lotisi"),
+  TranslatedName(LangTgl(), name: "Lesotho Loti"),
+  TranslatedName(LangXho(), name: "I-Loti yaseLesotho"),
 ];

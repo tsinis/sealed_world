@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Panamanian Balboa currency:
+/// Provides 109 translations for a Panamanian Balboa currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const pabCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Panamanian Balboa"),
@@ -100,7 +116,11 @@ const pabCurrencyTranslations = [
   TranslatedName(LangBen(), name: "পানামা বেলবোয়া"),
   TranslatedName(LangBre(), name: "balboa Panamá"),
   TranslatedName(LangBos(), name: "Panamska balboa"),
-  TranslatedName(LangBos(), name: "Панамска балбоа", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Панамска балбоа",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "balboa panameny"),
   TranslatedName(LangChe(), name: "Панаман бальбоа"),
   TranslatedName(LangCes(), name: "panamská balboa"),
@@ -178,9 +198,29 @@ const pabCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "панамська бальбоа"),
   TranslatedName(LangUrd(), name: "پنامہ کا بالبوآ"),
   TranslatedName(LangUzb(), name: "Panama balboasi"),
-  TranslatedName(LangUzb(), name: "Панама бальбоаси", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Панама бальбоаси",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Balboa Panama"),
   TranslatedName(LangZho(), name: "巴拿马巴波亚"),
   TranslatedName(LangZho(), name: "巴拿馬巴波亞", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Panamanian Balboa"),
+  TranslatedName(LangAsm(), name: "পানামেনিয়ান বাল্বোৱা"),
+  TranslatedName(LangChv(), name: "Панама бальбоа"),
+  TranslatedName(LangFul(), name: "𞤄𞤢𞤤𞤦𞤮𞤱𞤢 𞤆𞤢𞤲𞤢𞤥𞤢𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Balboa na ƙasar Panama"),
+  TranslatedName(LangIna(), name: "balboa panamen"),
+  TranslatedName(LangIbo(), name: "Ego Balboa obodo Panama"),
+  TranslatedName(LangJav(), name: "Balboa Panama"),
+  TranslatedName(LangKur(), name: "balboayê panamayî"),
+  TranslatedName(LangMri(), name: "Balboa Panama"),
+  TranslatedName(LangOri(), name: "ପାନାମାନିୟ ବାଲବୋଆ"),
+  TranslatedName(LangPus(), name: "پانامۍ بالبوا"),
+  TranslatedName(LangSrd(), name: "balboa panamesu"),
+  TranslatedName(LangSom(), name: "Balbow Banama"),
+  TranslatedName(LangTuk(), name: "Panama balboasy"),
+  TranslatedName(LangXho(), name: "Panamanian Balboa"),
+  TranslatedName(LangYor(), name: "Bálíbóà Pànámà"),
 ];

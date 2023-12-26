@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 115 translations for a Nepali language:
+/// Provides 128 translations for a Nepali language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -45,9 +47,11 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -56,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -70,6 +75,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -78,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -86,8 +93,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -95,13 +104,16 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -109,6 +121,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -228,4 +241,17 @@ const nepLanguageTranslations = [
   TranslatedName(LangZho(), name: "尼泊尔文"),
   TranslatedName(LangZho(), name: "尼泊爾文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Nepali"),
+  TranslatedName(LangAsm(), name: "নেপালী"),
+  TranslatedName(LangChe(), name: "непалхойн"),
+  TranslatedName(LangIna(), name: "nepalese"),
+  TranslatedName(LangJav(), name: "Nepal"),
+  TranslatedName(LangKur(), name: "nepalî"),
+  TranslatedName(LangMri(), name: "Nepari"),
+  TranslatedName(LangPus(), name: "نېپالي"),
+  TranslatedName(LangSrd(), name: "nepalesu"),
+  TranslatedName(LangSnd(), name: "نيپالي"),
+  TranslatedName(LangTgk(), name: "непалӣ"),
+  TranslatedName(LangTuk(), name: "nepal dili"),
+  TranslatedName(LangTat(), name: "непали"),
+  TranslatedName(LangWol(), name: "Nepale"),
 ];

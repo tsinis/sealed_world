@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 132 translations for a Yemen country:
+/// Provides 135 translations for a Yemen country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -37,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Ganda
 /// - Georgian
@@ -80,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
@@ -128,6 +130,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -340,4 +343,7 @@ const yemCountryTranslations = [
   TranslatedName(LangSsw(), name: "IYemeni"),
   TranslatedName(LangSun(), name: "Yaman"),
   TranslatedName(LangVol(), name: "Yämän"),
+  TranslatedName(LangFul(), name: "𞤒𞤢𞤥𞤢𞤲"),
+  TranslatedName(LangMri(), name: "Īmene"),
+  TranslatedName(LangXho(), name: "EYemen"),
 ];

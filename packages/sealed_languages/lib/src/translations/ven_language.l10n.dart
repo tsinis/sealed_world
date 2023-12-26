@@ -2,16 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 68 translations for a Venda language:
+/// Provides 97 translations for a Venda language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -22,7 +29,9 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -30,12 +39,16 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -43,31 +56,47 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const venLanguageTranslations = [
   TranslatedName(LangEng(), name: "Venda"),
@@ -138,4 +167,37 @@ const venLanguageTranslations = [
   TranslatedName(LangZho(), name: "文达文"),
   TranslatedName(LangZho(), name: "溫達文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Venda"),
+  TranslatedName(LangAsm(), name: "ভেণ্ডা"),
+  TranslatedName(LangBel(), name: "венда"),
+  TranslatedName(LangChe(), name: "венда"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤏𞤫𞤲𞤣𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHye(), name: "վենդա"),
+  TranslatedName(LangIna(), name: "venda"),
+  TranslatedName(LangKat(), name: "ვენდა"),
+  TranslatedName(LangKaz(), name: "венда тілі"),
+  TranslatedName(LangKhm(), name: "វេនដា"),
+  TranslatedName(LangKir(), name: "вендача"),
+  TranslatedName(LangMri(), name: "Wēnera"),
+  TranslatedName(LangMon(), name: "венда"),
+  TranslatedName(LangMya(), name: "ဗင်န်ဒါ"),
+  TranslatedName(LangNep(), name: "भेन्डा"),
+  TranslatedName(LangPan(), name: "ਵੇਂਡਾ"),
+  TranslatedName(LangPus(), name: "ویندا"),
+  TranslatedName(LangQue(), name: "Venda Simi"),
+  TranslatedName(LangSrd(), name: "venda"),
+  TranslatedName(LangSnd(), name: "وينڊا"),
+  TranslatedName(LangSin(), name: "වෙන්ඩා"),
+  TranslatedName(LangSqi(), name: "vendaisht"),
+  TranslatedName(LangTgk(), name: "венда"),
+  TranslatedName(LangTir(), name: "ቨንዳ"),
+  TranslatedName(LangTuk(), name: "wenda dili"),
+  TranslatedName(LangTur(), name: "Venda dili"),
+  TranslatedName(LangTat(), name: "венда"),
+  TranslatedName(LangUzb(), name: "venda"),
+  TranslatedName(LangWol(), name: "Wenda"),
+  TranslatedName(LangYor(), name: "Èdè Fenda"),
 ];

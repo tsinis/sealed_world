@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 103 translations for a Sierra Leonean Leone currency:
+/// Provides 117 translations for a Sierra Leonean Leone currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,16 +45,20 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -67,11 +73,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -79,18 +88,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -98,6 +111,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const sleCurrencyTranslations = [
@@ -113,7 +127,11 @@ const sleCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সিয়েরালিয়ন লিয়ন"),
   TranslatedName(LangBre(), name: "leone Sierra Leone"),
   TranslatedName(LangBos(), name: "Sijeraleonski leone"),
-  TranslatedName(LangBos(), name: "Сијера-леоншки леоне", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Сијера-леоншки леоне",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "leone de Sierra Leone"),
   TranslatedName(LangChe(), name: "Леоне"),
   TranslatedName(LangCes(), name: "sierro-leonský leone"),
@@ -204,4 +222,18 @@ const sleCurrencyTranslations = [
   TranslatedName(LangZho(), name: "塞拉利昂利昂"),
   TranslatedName(LangZho(), name: "獅子山利昂", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Sierra Leonean Leone"),
+  TranslatedName(LangAsm(), name: "চিয়েৰা লিঅ’নৰ লিঅ’ন"),
+  TranslatedName(LangChv(), name: "леонӗ"),
+  TranslatedName(LangIna(), name: "leone sierraleonese"),
+  TranslatedName(LangIbo(), name: "Ego Leone obodo Sierra Leone"),
+  TranslatedName(LangJav(), name: "Leone Sierra Leone"),
+  TranslatedName(LangKur(), name: "leoneyê sîera leoneyî"),
+  TranslatedName(LangMri(), name: "Leone Araon (1964—2022)e"),
+  TranslatedName(LangOri(), name: "ସିଏରା ଲିଓନୀୟ ଲେଓନ୍"),
+  TranslatedName(LangPus(), name: "سيرا ليوني ليون - 1964-2022"),
+  TranslatedName(LangSrd(), name: "leone de sa Sierra Leone"),
+  TranslatedName(LangSom(), name: "Leonka Sira Leon"),
+  TranslatedName(LangTuk(), name: "Sýerra-Leone leony"),
+  TranslatedName(LangTgl(), name: "Sierra Leonean Leone"),
+  TranslatedName(LangXho(), name: "I-Loeone yaseSierra Leone"),
 ];

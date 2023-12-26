@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Egyptian Pound currency:
+/// Provides 120 translations for a Egyptian Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,18 +90,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const egpCurrencyTranslations = [
@@ -115,7 +129,11 @@ const egpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মিশরীয় পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Egipt"),
   TranslatedName(LangBos(), name: "Egipatska funta"),
-  TranslatedName(LangBos(), name: "Египатска фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Египатска фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura egípcia"),
   TranslatedName(LangChe(), name: "Мисаран фунт"),
   TranslatedName(LangCes(), name: "egyptská libra"),
@@ -202,7 +220,11 @@ const egpCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "єгипетський фунт"),
   TranslatedName(LangUrd(), name: "مصری پاؤنڈ"),
   TranslatedName(LangUzb(), name: "Misr funti"),
-  TranslatedName(LangUzb(), name: "Миср фунти", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Миср фунти",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Bảng Ai Cập"),
   TranslatedName(LangYor(), name: "pọọn ti Orílẹ́ède Egipiti"),
   TranslatedName(
@@ -213,4 +235,18 @@ const egpCurrencyTranslations = [
   TranslatedName(LangZho(), name: "埃及镑"),
   TranslatedName(LangZho(), name: "埃及鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Egyptian Pound"),
+  TranslatedName(LangAsm(), name: "ইজিপ্তৰ পাউণ্ড"),
+  TranslatedName(LangChv(), name: "Египет фунчӗ"),
+  TranslatedName(LangIna(), name: "libra egyptie"),
+  TranslatedName(LangIbo(), name: "Ego Pound obodo Egypt"),
+  TranslatedName(LangJav(), name: "Pound Mesir"),
+  TranslatedName(LangKur(), name: "lîreyê misirî"),
+  TranslatedName(LangMri(), name: "Pāuna Īhipa"),
+  TranslatedName(LangOri(), name: "ଇଜିପ୍ଟିୟ ପାଉଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "مصري پونډ"),
+  TranslatedName(LangSrd(), name: "isterlina egitziana"),
+  TranslatedName(LangSom(), name: "Bowndka Masar"),
+  TranslatedName(LangTuk(), name: "Müsür funty"),
+  TranslatedName(LangTgl(), name: "Pound ng Egypt"),
+  TranslatedName(LangXho(), name: "IPonti yase-Egypt"),
 ];

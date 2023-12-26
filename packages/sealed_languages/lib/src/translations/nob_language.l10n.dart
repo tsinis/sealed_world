@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 96 translations for a Norwegian Bokmål language:
+/// Provides 112 translations for a Norwegian Bokmål language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -41,15 +44,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,22 +68,28 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -84,8 +97,10 @@ import "../model/translated_name.dart";
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -93,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const nobLanguageTranslations = [
   TranslatedName(LangEng(), name: "Norwegian Bokmål"),
@@ -191,4 +207,24 @@ const nobLanguageTranslations = [
   TranslatedName(LangZho(), name: "挪威博克马尔文"),
   TranslatedName(LangZho(), name: "巴克摩挪威文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Norwegian Bokmål"),
+  TranslatedName(LangAsm(), name: "নৰৱেজিয়ান বোকমাল"),
+  TranslatedName(LangChe(), name: "норвегийн букмол"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤐𞤮𞤪𞤱𞤫𞤶𞤭𞤴𞤢𞤲𞤪𞤫 𞤄𞤮𞤳𞤥𞤢𞤤",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "norvegiano bokmål"),
+  TranslatedName(LangIbo(), name: "Nọrweyịan Bọkmal"),
+  TranslatedName(LangJav(), name: "Bokmål Norwegia"),
+  TranslatedName(LangKur(), name: "norwecî (bokmål)"),
+  TranslatedName(LangMri(), name: "Pakamō Nōwei"),
+  TranslatedName(LangPus(), name: "ناروېئي (بوکمال)"),
+  TranslatedName(LangQue(), name: "Noruego Bokmål Simi"),
+  TranslatedName(LangSrd(), name: "norvegesu bokmål"),
+  TranslatedName(LangSnd(), name: "نارويائي بوڪمال"),
+  TranslatedName(LangSom(), name: "Nawrijii Bokmål"),
+  TranslatedName(LangTir(), name: "ኖርወያዊ ቦክማል"),
+  TranslatedName(LangTuk(), name: "norwegiýa bukmol dili"),
+  TranslatedName(LangYor(), name: "Nọ́ọ́wè Bokímàl"),
 ];

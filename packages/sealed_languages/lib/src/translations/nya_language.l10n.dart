@@ -2,17 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 72 translations for a Chichewa (Chewa/Nyanja) language:
+/// Provides 101 translations for a Chichewa (Chewa/Nyanja) language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -23,6 +30,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -32,12 +40,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -46,31 +59,47 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const nyaLanguageTranslations = [
   TranslatedName(LangEng(), name: "Nyanja"),
@@ -145,4 +174,37 @@ const nyaLanguageTranslations = [
   TranslatedName(LangZho(), name: "尼扬扎文"),
   TranslatedName(LangZho(), name: "尼揚賈文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Nyanja"),
+  TranslatedName(LangAsm(), name: "ন্যাঞ্জা"),
+  TranslatedName(LangBel(), name: "ньянджа"),
+  TranslatedName(LangChe(), name: "ньянджа"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤙𞤢𞤲𞤶𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHye(), name: "նյանջա"),
+  TranslatedName(LangIna(), name: "nyanja"),
+  TranslatedName(LangKaz(), name: "ньянджа тілі"),
+  TranslatedName(LangKhm(), name: "ណានចា"),
+  TranslatedName(LangKur(), name: "çîçewayî"),
+  TranslatedName(LangKir(), name: "ньянджача"),
+  TranslatedName(LangMri(), name: "Niānia"),
+  TranslatedName(LangMon(), name: "нянжа"),
+  TranslatedName(LangMya(), name: "နရန်ဂျာ"),
+  TranslatedName(LangNep(), name: "न्यान्जा"),
+  TranslatedName(LangPan(), name: "ਨਯਾਂਜਾ"),
+  TranslatedName(LangPus(), name: "نیانجا"),
+  TranslatedName(LangQue(), name: "Nyanja Simi"),
+  TranslatedName(LangSrd(), name: "nyanja"),
+  TranslatedName(LangSnd(), name: "نيانجا"),
+  TranslatedName(LangSin(), name: "න්යන්ජා"),
+  TranslatedName(LangSom(), name: "Inyaanja"),
+  TranslatedName(LangSqi(), name: "nianjisht"),
+  TranslatedName(LangTgk(), name: "нянҷа"),
+  TranslatedName(LangTir(), name: "ንያንጃ"),
+  TranslatedName(LangTuk(), name: "nýanja dili"),
+  TranslatedName(LangTat(), name: "ньянҗа"),
+  TranslatedName(LangUzb(), name: "cheva"),
+  TranslatedName(LangWol(), name: "Sewa"),
+  TranslatedName(LangYor(), name: "Ńyájà"),
 ];

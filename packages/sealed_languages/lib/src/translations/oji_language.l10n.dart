@@ -2,13 +2,21 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 63 translations for a Ojibwe (Ojibwa) language:
+/// Provides 83 translations for a Ojibwe (Ojibwa) language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -18,6 +26,7 @@ import "../model/translated_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -31,7 +40,10 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -40,10 +52,13 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -51,9 +66,11 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -61,8 +78,11 @@ import "../model/translated_name.dart";
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Uzbek
+/// - Vietnamese
+/// - Zulu.
 const ojiLanguageTranslations = [
   TranslatedName(LangEng(), name: "Ojibwa"),
   TranslatedName(LangAra(), name: "الأوجيبوا"),
@@ -127,4 +147,24 @@ const ojiLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Ojibwa"),
   TranslatedName(LangZho(), name: "奥吉布瓦文"),
   TranslatedName(LangZho(), name: "奧杰布瓦文", script: ScriptHant()),
+  TranslatedName(LangBel(), name: "аджыбвэ"),
+  TranslatedName(LangHye(), name: "օջիբվա"),
+  TranslatedName(LangNep(), name: "ओजिब्वा"),
+  TranslatedName(LangAmh(), name: "ኦጂብዋ"),
+  TranslatedName(LangAsm(), name: "ওজিবৱে"),
+  TranslatedName(LangEus(), name: "ojibwera"),
+  TranslatedName(LangGlg(), name: "ojibwe"),
+  TranslatedName(LangKaz(), name: "оджибве"),
+  TranslatedName(LangKhm(), name: "អូជីបវេ"),
+  TranslatedName(LangKir(), name: "ожибве"),
+  TranslatedName(LangMon(), name: "ожибве"),
+  TranslatedName(LangMya(), name: "Ojibwe"),
+  TranslatedName(LangPan(), name: "ਓਜੀਬਵੇ"),
+  TranslatedName(LangPus(), name: "اُجیبیو"),
+  TranslatedName(LangSin(), name: "ඕජිබ්වේ"),
+  TranslatedName(LangSqi(), name: "Ojibwe"),
+  TranslatedName(LangSwa(), name: "Ojibwe"),
+  TranslatedName(LangUrd(), name: "اوجیبوئی"),
+  TranslatedName(LangUzb(), name: "ojibve"),
+  TranslatedName(LangZul(), name: "isi-Ojibwa"),
 ];

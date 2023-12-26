@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a British Indian Ocean Territory country:
+/// Provides 131 translations for a British Indian Ocean Territory country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -78,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -92,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -101,6 +104,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -118,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const iotCountryTranslations = [
@@ -397,4 +402,9 @@ const iotCountryTranslations = [
   TranslatedName(LangArg(), name: "Territorio Britanico de l'Ozián Indico"),
   TranslatedName(LangIdo(), name: "Britaniana teritorio en Indiana Oceano"),
   TranslatedName(LangKur(), name: "Xakên Brîtanyayê yên Okyanûsa Hindî"),
+  TranslatedName(LangMri(), name: "Te Rohe o te Moana Īniana Piritihi"),
+  TranslatedName(LangSrd(), name: "Territòriu Britànnicu de s’Otzèanu Indianu"),
+  TranslatedName(LangTgl(), name: "Teritoryo sa Karagatan ng British Indian"),
+  TranslatedName(LangXho(), name: "EBritish Indian Ocean Territory"),
+  TranslatedName(LangChv(), name: "Англисен Инди океанĕн территорийĕ"),
 ];

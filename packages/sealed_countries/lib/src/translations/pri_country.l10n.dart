@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Puerto Rico country:
+/// Provides 110 translations for a Puerto Rico country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -21,6 +21,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -45,6 +46,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -68,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -100,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -302,4 +306,8 @@ const priCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Pọto Riko"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Pɔto Riko", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Puerto Rico"),
+  TranslatedName(LangChv(), name: "Пуэрто-Рико"),
+  TranslatedName(LangIna(), name: "Porto Rico"),
+  TranslatedName(LangMri(), name: "Peta Riko"),
+  TranslatedName(LangXho(), name: "EPuerto Rico"),
 ];

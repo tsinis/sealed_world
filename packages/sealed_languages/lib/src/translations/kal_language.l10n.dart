@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 84 translations for a Kalaallisut (Greenlandic) language:
+/// Provides 101 translations for a Kalaallisut (Greenlandic) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -24,8 +27,10 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -35,6 +40,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -42,7 +49,9 @@ import "../model/translated_name.dart";
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -53,11 +62,13 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -65,24 +76,30 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const kalLanguageTranslations = [
   TranslatedName(LangEng(), name: "Kalaallisut"),
@@ -167,8 +184,27 @@ const kalLanguageTranslations = [
   TranslatedName(LangZho(), name: "格陵兰文"),
   TranslatedName(LangZho(), name: "格陵蘭文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Kalaallisut"),
-
-  /// Added manually:
   TranslatedName(LangBre(), name: "greunlandeg"),
   TranslatedName(LangGle(), name: "Kalaallisut"),
+  TranslatedName(LangAsm(), name: "কালালিছুট"),
+  TranslatedName(LangBel(), name: "грэнландская"),
+  TranslatedName(LangChe(), name: "гренландхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤢𞤤𞤢𞥄𞤤𞤧𞤵𞤼𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "kalaallisut"),
+  TranslatedName(LangIna(), name: "groenlandese"),
+  TranslatedName(LangIbo(), name: "Kalaalịsụt"),
+  TranslatedName(LangKhm(), name: "កាឡាលលីស៊ុត"),
+  TranslatedName(LangKur(), name: "kalalîsûtî"),
+  TranslatedName(LangMri(), name: "Kararīhutu"),
+  TranslatedName(LangPus(), name: "کالالیست"),
+  TranslatedName(LangSrd(), name: "groenlandesu"),
+  TranslatedName(LangSnd(), name: "ڪالا ليسٽ"),
+  TranslatedName(LangSom(), name: "Kalaallisuut"),
+  TranslatedName(LangTir(), name: "ግሪንላንድኛ"),
+  TranslatedName(LangTuk(), name: "grenland dili"),
+  TranslatedName(LangYor(), name: "Kalaalísùtì"),
 ];

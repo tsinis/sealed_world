@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Norwegian Krone currency:
+/// Provides 107 translations for a Norwegian Krone currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,28 +66,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const nokCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Norwegian Krone"),
@@ -99,7 +116,11 @@ const nokCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নরওয়ে ক্রৌন"),
   TranslatedName(LangBre(), name: "kurunenn Norvegia"),
   TranslatedName(LangBos(), name: "Norveška kruna"),
-  TranslatedName(LangBos(), name: "Норвешка круна", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Норвешка круна",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "corona noruega"),
   TranslatedName(LangChe(), name: "Норвегин крона"),
   TranslatedName(LangCes(), name: "norská koruna"),
@@ -179,4 +200,21 @@ const nokCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Krone Na Uy"),
   TranslatedName(LangZho(), name: "挪威克朗"),
   TranslatedName(LangZul(), name: "i-Norwegian Krone"),
+  TranslatedName(LangAsm(), name: "নৰৱেজিয়ান ক্ৰোন"),
+  TranslatedName(LangChv(), name: "Норвеги кронӗ"),
+  TranslatedName(LangFul(), name: "𞤑𞤪𞤮𞤲𞤫 𞤐𞤮𞤪𞤱𞤫𞤶𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Krone na ƙasar Norway"),
+  TranslatedName(LangIna(), name: "corona norvegian"),
+  TranslatedName(LangIbo(), name: "Ego Krone Obodo Norway"),
+  TranslatedName(LangJav(), name: "Krone Norwegia"),
+  TranslatedName(LangKur(), name: "kronê norweçî"),
+  TranslatedName(LangMri(), name: "Kroner Nōwei"),
+  TranslatedName(LangOri(), name: "ନରୱେୟୀୟ କ୍ରୋନ୍"),
+  TranslatedName(LangPus(), name: "نارويجين کرون"),
+  TranslatedName(LangSrd(), name: "corona norvegesa"),
+  TranslatedName(LangSom(), name: "Koronka Norway"),
+  TranslatedName(LangTuk(), name: "Norwegiýa kronasy"),
+  TranslatedName(LangTgl(), name: "Norwegian Krone"),
+  TranslatedName(LangXho(), name: "I-Krone yaseNorway"),
+  TranslatedName(LangYor(), name: "kórónì Nọ́wè"),
 ];

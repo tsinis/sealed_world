@@ -2,15 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 70 translations for a Sardinian language:
+/// Provides 105 translations for a Sardinian language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -18,58 +28,83 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
-/// - Yiddish.
+/// - Yiddish
+/// - Yoruba
+/// - Zulu.
 const srdLanguageTranslations = [
   TranslatedName(LangEng(), name: "Sardinian"),
   TranslatedName(LangAra(), name: "السردينية"),
@@ -141,4 +176,43 @@ const srdLanguageTranslations = [
   TranslatedName(LangYid(), name: "סאַרדיש"),
   TranslatedName(LangZho(), name: "萨丁文"),
   TranslatedName(LangZho(), name: "撒丁文", script: ScriptHant()),
+  TranslatedName(LangAfr(), name: "Sardinies"),
+  TranslatedName(LangAmh(), name: "ሳርዲንያን"),
+  TranslatedName(LangAsm(), name: "ছাৰ্ডিনিয়ান"),
+  TranslatedName(LangBel(), name: "сардзінская"),
+  TranslatedName(LangChe(), name: "сардинийн"),
+  TranslatedName(LangEus(), name: "sardiniera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤢𞤪𞤣𞤭𞤲𞤭𞤴𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "sardiskt"),
+  TranslatedName(LangGlg(), name: "sardo"),
+  TranslatedName(LangHau(), name: "Sardiniyanci"),
+  TranslatedName(LangHye(), name: "սարդիներեն"),
+  TranslatedName(LangIna(), name: "sardo"),
+  TranslatedName(LangKaz(), name: "сардин тілі"),
+  TranslatedName(LangKhm(), name: "សាឌីនា"),
+  TranslatedName(LangKur(), name: "sardînî"),
+  TranslatedName(LangKir(), name: "сардинче"),
+  TranslatedName(LangMri(), name: "Hārinia"),
+  TranslatedName(LangMon(), name: "сардин"),
+  TranslatedName(LangMsa(), name: "Sardinia"),
+  TranslatedName(LangMya(), name: "ဆာဒီနီးယား"),
+  TranslatedName(LangNep(), name: "सार्डिनियाली"),
+  TranslatedName(LangPan(), name: "ਸਾਰਡੀਨੀਆਈ"),
+  TranslatedName(LangPus(), name: "سارڊيني"),
+  TranslatedName(LangQue(), name: "Sardinian Simi"),
+  TranslatedName(LangSrd(), name: "sardu"),
+  TranslatedName(LangSnd(), name: "سارڊيني"),
+  TranslatedName(LangSin(), name: "සාර්ඩිනිඅන්"),
+  TranslatedName(LangSqi(), name: "sardenjisht"),
+  TranslatedName(LangSwa(), name: "Kisardinia"),
+  TranslatedName(LangTir(), name: "ሳርዲንኛ"),
+  TranslatedName(LangTuk(), name: "sardin dili"),
+  TranslatedName(LangUrd(), name: "سردینین"),
+  TranslatedName(LangUzb(), name: "sardin"),
+  TranslatedName(LangYor(), name: "Èdè Sadini"),
+  TranslatedName(LangZul(), name: "isi-Sardinian"),
 ];

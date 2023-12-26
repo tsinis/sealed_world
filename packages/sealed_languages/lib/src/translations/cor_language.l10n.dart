@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 86 translations for a Cornish language:
+/// Provides 105 translations for a Cornish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Cornish
 /// - Croatian
@@ -25,8 +28,10 @@ import "../model/translated_name.dart";
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -36,14 +41,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -54,30 +64,38 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -85,6 +103,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const corLanguageTranslations = [
   TranslatedName(LangEng(), name: "Cornish"),
@@ -173,4 +192,27 @@ const corLanguageTranslations = [
   TranslatedName(LangZho(), name: "凯尔特文"),
   TranslatedName(LangZho(), name: "康瓦耳文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Cornish"),
+  TranslatedName(LangAsm(), name: "কোৰ্নিচ"),
+  TranslatedName(LangBel(), name: "корнская"),
+  TranslatedName(LangChe(), name: "корнуоллийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤮𞤪𞤲𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "corniskt"),
+  TranslatedName(LangIna(), name: "cornico"),
+  TranslatedName(LangIbo(), name: "Kọnịsh"),
+  TranslatedName(LangJav(), name: "Kernowek"),
+  TranslatedName(LangKhm(), name: "កូនីស"),
+  TranslatedName(LangKur(), name: "kornî"),
+  TranslatedName(LangMri(), name: "Kōnihi"),
+  TranslatedName(LangPus(), name: "کورنيشي"),
+  TranslatedName(LangQue(), name: "Córnico Simi"),
+  TranslatedName(LangSrd(), name: "còrnicu"),
+  TranslatedName(LangSnd(), name: "ڪورنش"),
+  TranslatedName(LangSom(), name: "Kornish"),
+  TranslatedName(LangTir(), name: "ኮርንኛ"),
+  TranslatedName(LangTuk(), name: "korn dili"),
+  TranslatedName(LangYor(), name: "Èdè Kọ́nììṣì"),
 ];

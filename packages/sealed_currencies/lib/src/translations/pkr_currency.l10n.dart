@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Pakistani Rupee currency:
+/// Provides 108 translations for a Pakistani Rupee currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const pkrCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Pakistani Rupee"),
@@ -99,7 +116,11 @@ const pkrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "পাকিস্তানি রুপি"),
   TranslatedName(LangBre(), name: "roupi Pakistan"),
   TranslatedName(LangBos(), name: "Pakistanska rupija"),
-  TranslatedName(LangBos(), name: "Пакистански рупи", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Пакистански рупи",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rupia pakistanesa"),
   TranslatedName(LangChe(), name: "Пакистанан рупи"),
   TranslatedName(LangCes(), name: "pákistánská rupie"),
@@ -180,4 +201,21 @@ const pkrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "巴基斯坦卢比"),
   TranslatedName(LangZho(), name: "巴基斯坦盧比", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Pakistani Rupee"),
+  TranslatedName(LangAsm(), name: "পাকিস্তানী ৰুপী"),
+  TranslatedName(LangChv(), name: "пакистан рупийӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤵𞥅𞤨𞤭𞥅 𞤆𞤢𞤳𞤭𞤧𞤼𞤢𞤲𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Rupee na ƙasar Pakistan"),
+  TranslatedName(LangIna(), name: "rupia pakistani"),
+  TranslatedName(LangIbo(), name: "Ego Rupee obodo Pakistan"),
+  TranslatedName(LangJav(), name: "Rupee Pakistan"),
+  TranslatedName(LangKur(), name: "rûpiyê pakistanî"),
+  TranslatedName(LangMri(), name: "Rupee Pakitāne"),
+  TranslatedName(LangOri(), name: "ପାକିସ୍ତାନୀ ରୁପି"),
+  TranslatedName(LangPus(), name: "پاکستانۍ کلداره"),
+  TranslatedName(LangSrd(), name: "rupia pakistana"),
+  TranslatedName(LangSom(), name: "Rubiga Bakistan"),
+  TranslatedName(LangTuk(), name: "Päkistan rupiýasy"),
+  TranslatedName(LangTgl(), name: "Pakistani Rupee"),
+  TranslatedName(LangXho(), name: "I-Rupee yasePakistan"),
+  TranslatedName(LangYor(), name: "Rúpìì Pakisitánì"),
 ];

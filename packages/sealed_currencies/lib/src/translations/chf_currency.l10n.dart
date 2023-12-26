@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a Swiss Franc currency:
+/// Provides 119 translations for a Swiss Franc currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -20,6 +21,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -114,7 +128,11 @@ const chfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সুইস ফ্রাঁ"),
   TranslatedName(LangBre(), name: "lur Suis"),
   TranslatedName(LangBos(), name: "Švicarski franak"),
-  TranslatedName(LangBos(), name: "Швајцарски франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Швајцарски франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc suís"),
   TranslatedName(LangChe(), name: "Швейцарин франк"),
   TranslatedName(LangCes(), name: "švýcarský frank"),
@@ -212,4 +230,18 @@ const chfCurrencyTranslations = [
   ),
   TranslatedName(LangZho(), name: "瑞士法郎"),
   TranslatedName(LangZul(), name: "i-Swiss Franc"),
+  TranslatedName(LangAsm(), name: "চুইছ ফ্ৰেংক"),
+  TranslatedName(LangChv(), name: "Швейцари франкӗ"),
+  TranslatedName(LangIna(), name: "franco suisse"),
+  TranslatedName(LangIbo(), name: "Ego Franc mba Switzerland"),
+  TranslatedName(LangJav(), name: "Franc Swiss"),
+  TranslatedName(LangKur(), name: "frankê swîsrî"),
+  TranslatedName(LangMri(), name: "Franc Huiterangi"),
+  TranslatedName(LangOri(), name: "ସୁଇସ୍ ଫ୍ରାଙ୍କ୍"),
+  TranslatedName(LangPus(), name: "سويسي فرانک"),
+  TranslatedName(LangSrd(), name: "francu isvìtzeru"),
+  TranslatedName(LangSom(), name: "Faranka Iswiska"),
+  TranslatedName(LangTuk(), name: "Şweýsar franky"),
+  TranslatedName(LangTgl(), name: "Swiss Franc"),
+  TranslatedName(LangXho(), name: "I-Franc yaseSwitzerland"),
 ];

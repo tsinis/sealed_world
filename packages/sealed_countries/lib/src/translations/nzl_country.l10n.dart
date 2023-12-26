@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 142 translations for a New Zealand country:
+/// Provides 144 translations for a New Zealand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -105,6 +105,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -135,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -366,4 +368,6 @@ const nzlCountryTranslations = [
   TranslatedName(LangVol(), name: "Nula-Seleäns"),
   TranslatedName(LangWln(), name: "Nouve Zelande"),
   TranslatedName(LangZha(), name: "Saen Saelanz"),
+  TranslatedName(LangSrd(), name: "Zelanda Noa"),
+  TranslatedName(LangXho(), name: "ENew Zealand"),
 ];

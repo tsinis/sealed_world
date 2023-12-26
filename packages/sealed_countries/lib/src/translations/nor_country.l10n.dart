@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 155 translations for a Norway country:
+/// Provides 156 translations for a Norway country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -150,6 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -394,4 +395,5 @@ const norCountryTranslations = [
   TranslatedName(LangVol(), name: "Norgän"),
   TranslatedName(LangWln(), name: "Norvedje"),
   TranslatedName(LangZha(), name: "Nozveih"),
+  TranslatedName(LangXho(), name: "ENorway"),
 ];

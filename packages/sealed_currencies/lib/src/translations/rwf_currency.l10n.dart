@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Rwandan Franc currency:
+/// Provides 120 translations for a Rwandan Franc currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,18 +90,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const rwfCurrencyTranslations = [
@@ -115,7 +129,11 @@ const rwfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "রুয়ান্ডান ফ্রাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Rwanda"),
   TranslatedName(LangBos(), name: "Ruandski franak"),
-  TranslatedName(LangBos(), name: "Руандански франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Руандански франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc de Ruanda"),
   TranslatedName(LangChe(), name: "Руандан франк"),
   TranslatedName(LangCes(), name: "rwandský frank"),
@@ -213,4 +231,18 @@ const rwfCurrencyTranslations = [
   TranslatedName(LangZho(), name: "盧旺達法郎", countryCode: "HK"),
   TranslatedName(LangZho(), name: "盧安達法郎", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Rwandan Franc"),
+  TranslatedName(LangAsm(), name: "ৰোৱান্দান ফ্ৰেংক"),
+  TranslatedName(LangChv(), name: "Руанда франкӗ"),
+  TranslatedName(LangIna(), name: "franco ruandese"),
+  TranslatedName(LangIbo(), name: "Ego Franc obodo Rwanda"),
+  TranslatedName(LangJav(), name: "Franc Rwanda"),
+  TranslatedName(LangKur(), name: "frankê rwandayî"),
+  TranslatedName(LangMri(), name: "Franc Rāwana"),
+  TranslatedName(LangOri(), name: "ରୁୱାଣ୍ଡା ଫ୍ରାଙ୍କ୍"),
+  TranslatedName(LangPus(), name: "روانډي فرانک"),
+  TranslatedName(LangSrd(), name: "francu ruandesu"),
+  TranslatedName(LangSom(), name: "Faranka Ruwanda"),
+  TranslatedName(LangTuk(), name: "Ruanda franky"),
+  TranslatedName(LangTgl(), name: "Rwandan Franc"),
+  TranslatedName(LangXho(), name: "I-Franc yaseRwanda"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 111 translations for a Euro currency:
+/// Provides 116 translations for a Euro currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -64,8 +65,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
-/// - Malay
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -76,7 +77,9 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -93,11 +96,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -119,7 +124,11 @@ const eurCurrencyTranslations = [
   TranslatedName(LangBam(), name: "ero"),
   TranslatedName(LangBen(), name: "ইউরো"),
   TranslatedName(LangBre(), name: "euro"),
-  TranslatedName(LangBos(), name: "Евро", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Евро",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "euro"),
   TranslatedName(LangChe(), name: "Евро"),
   TranslatedName(LangCes(), name: "euro"),
@@ -202,14 +211,16 @@ const eurCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "євро"),
   TranslatedName(LangUrd(), name: "یورو"),
   TranslatedName(LangUzb(), name: "Yevro"),
-  TranslatedName(LangUzb(), name: "Евро", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Евро",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangYid(), name: "איירא"),
   TranslatedName(LangYor(), name: "Uro"),
   TranslatedName(LangZho(), name: "欧元"),
   TranslatedName(LangZho(), name: "歐元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Euro"),
-
-  /// Added manually:
   TranslatedName(LangInd(), name: "Euro"),
   TranslatedName(LangTur(), name: "Euro"),
   TranslatedName(LangLtz(), name: "Euro"),
@@ -222,4 +233,9 @@ const eurCurrencyTranslations = [
   TranslatedName(LangAfr(), name: "Euro"),
   TranslatedName(LangGlg(), name: "Euro"),
   TranslatedName(LangMsa(), name: "Euro"),
+  TranslatedName(LangTuk(), name: "Ýewro"),
+  TranslatedName(LangAsm(), name: "ইউৰো"),
+  TranslatedName(LangOri(), name: "ଇଉରୋ"),
+  TranslatedName(LangPus(), name: "اېرو"),
+  TranslatedName(LangTgl(), name: "Euro"),
 ];

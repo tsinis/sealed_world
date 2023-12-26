@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Falkland Pound currency:
+/// Provides 109 translations for a Falkland Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const fkpCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Falkland Islands Pound"),
@@ -198,4 +214,23 @@ const fkpCurrencyTranslations = [
   TranslatedName(LangZho(), name: "福克兰群岛镑"),
   TranslatedName(LangZho(), name: "福克蘭群島鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Falkland Islands Pound"),
+  TranslatedName(LangAsm(), name: "ফকলেণ্ড দ্বীপপুঞ্জৰ পাউণ্ড"),
+  TranslatedName(LangChv(), name: "Факланд утравӗсен фунчӗ"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤆𞤢𞤱𞤲𞤣𞤵 𞤅𞤵𞤪𞤭𞥅𞤶𞤫 𞤊𞤢𞤤𞤳𞤵𞤤𞤢𞤲𞤣𞤭𞤳𞤮",
+  ),
+  TranslatedName(LangHau(), name: "Fam na ƙasar Tsibirai na Falkland"),
+  TranslatedName(LangIna(), name: "libra falklandese"),
+  TranslatedName(LangIbo(), name: "Ego Pound obodo Falkland Islands"),
+  TranslatedName(LangJav(), name: "Pound Kepuloan Falkland"),
+  TranslatedName(LangKur(), name: "paundê giravên falklandê"),
+  TranslatedName(LangMri(), name: "Pāuna Whākana"),
+  TranslatedName(LangOri(), name: "ଫକଲ୍ୟାଣ୍ଡ୍ ଦ୍ଵୀପପୁଞ୍ଜ ପାଉଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "پاکلېنډ ټاپوګانو پونډ"),
+  TranslatedName(LangSrd(), name: "isterlina de sas ìsulas Falklands"),
+  TranslatedName(LangSom(), name: "Bowndka Faalklaan Aylaanis"),
+  TranslatedName(LangTuk(), name: "Folklend adalarynyň funty"),
+  TranslatedName(LangXho(), name: "Iponti yaseFalkland Islands"),
+  TranslatedName(LangYor(), name: "Pọ́n-ùn Erékùsù Falkland"),
 ];

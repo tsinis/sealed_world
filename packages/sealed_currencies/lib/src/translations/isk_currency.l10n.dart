@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 89 translations for a Icelandic Króna currency:
+/// Provides 106 translations for a Icelandic Króna currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const iskCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Icelandic Króna"),
@@ -98,7 +115,11 @@ const iskCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আইসল্যান্ড ক্রৌন"),
   TranslatedName(LangBre(), name: "kurunenn Island"),
   TranslatedName(LangBos(), name: "Islandska kruna"),
-  TranslatedName(LangBos(), name: "Исландска круна", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Исландска круна",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "corona islandesa"),
   TranslatedName(LangChe(), name: "Исландин крона"),
   TranslatedName(LangCes(), name: "islandská koruna"),
@@ -177,4 +198,21 @@ const iskCurrencyTranslations = [
   TranslatedName(LangZho(), name: "冰岛克朗"),
   TranslatedName(LangZho(), name: "冰島克朗", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Icelandic Króna"),
+  TranslatedName(LangAsm(), name: "আইচলেণ্ডিক ক্ৰোনা"),
+  TranslatedName(LangChv(), name: "Исланди кронӗ"),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞤪𞤮𞤲𞤢 𞤀𞤴𞤧𞤭𞤤𞤢𞤲𞤣𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Króna na ƙasar Iceland"),
+  TranslatedName(LangIna(), name: "corona islandese"),
+  TranslatedName(LangIbo(), name: "Ego Króna obodo Iceland"),
+  TranslatedName(LangJav(), name: "Krona Islandia"),
+  TranslatedName(LangKur(), name: "kronê îslandayî"),
+  TranslatedName(LangMri(), name: "Kronur Tiorangi"),
+  TranslatedName(LangOri(), name: "ଆଇସଲ୍ୟାଣ୍ଡିକ୍‍ କ୍ରୋନା"),
+  TranslatedName(LangPus(), name: "آيسلېنډي کرونا"),
+  TranslatedName(LangSrd(), name: "corona islandesa"),
+  TranslatedName(LangSom(), name: "Koronada Eysland"),
+  TranslatedName(LangTuk(), name: "Islandiýa kronasy"),
+  TranslatedName(LangTgl(), name: "Icelandic Króna"),
+  TranslatedName(LangXho(), name: "I-Króna yase-Iceland"),
+  TranslatedName(LangYor(), name: "Kòrónà Icelandic"),
 ];

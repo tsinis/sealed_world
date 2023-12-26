@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Malaysian Ringgit currency:
+/// Provides 108 translations for a Malaysian Ringgit currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const myrCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Malaysian Ringgit"),
@@ -99,7 +116,11 @@ const myrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মালয়েশিয়ান রিঙ্গিৎ"),
   TranslatedName(LangBre(), name: "ringgit Malaysia"),
   TranslatedName(LangBos(), name: "Malezijski ringit"),
-  TranslatedName(LangBos(), name: "Малезијски ринггит", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Малезијски ринггит",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "ringgit de Malàisia"),
   TranslatedName(LangChe(), name: "Малайзин ринггит"),
   TranslatedName(LangCes(), name: "malajsijský ringgit"),
@@ -180,4 +201,21 @@ const myrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "马来西亚林吉特"),
   TranslatedName(LangZho(), name: "馬來西亞令吉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Malaysian Ringgit"),
+  TranslatedName(LangAsm(), name: "মালায়েচিয়ান ৰিংগিট"),
+  TranslatedName(LangChv(), name: "Малайзи ринггичӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤭𞤲𞤺𞤵𞤼𞤵 𞤃𞤢𞤤𞤫𞥅𞤧𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Malaysia"),
+  TranslatedName(LangIna(), name: "ringgit malay"),
+  TranslatedName(LangIbo(), name: "Ego Ringgit obodo Malaysia"),
+  TranslatedName(LangJav(), name: "Ringgit Malaysia"),
+  TranslatedName(LangKur(), name: "ringgitê malezyayî"),
+  TranslatedName(LangMri(), name: "Ringgit Mareia"),
+  TranslatedName(LangOri(), name: "ମାଲେସିୟ ରିଙ୍ଗିଟ୍"),
+  TranslatedName(LangPus(), name: "ملايشي رنګټ"),
+  TranslatedName(LangSrd(), name: "ringgit malesu"),
+  TranslatedName(LangSom(), name: "Ringitda Malayshiya"),
+  TranslatedName(LangTuk(), name: "Malaýziýa ringgiti"),
+  TranslatedName(LangTgl(), name: "Malaysian Ringgit"),
+  TranslatedName(LangXho(), name: "I-Ringgit yaseMalysia"),
+  TranslatedName(LangYor(), name: "Ríngìtì Màléṣíà"),
 ];

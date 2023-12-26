@@ -803,9 +803,7 @@ void main() => group("$WorldCountry", () {
         });
 
         test("there should be always minimum translations count available", () {
-          final map = {
-            for (final country in WorldCountry.list) country: 0,
-          };
+          final map = {for (final country in WorldCountry.list) country: 0};
 
           for (final l10n in NaturalLanguage.list) {
             for (final value in WorldCountry.list) {
@@ -816,21 +814,21 @@ void main() => group("$WorldCountry", () {
 
           final sortedList = map.entries.toList(growable: false)
             ..sort((a, b) => a.value.compareTo(b.value));
-          expect(
-            sortedList.first.value,
-            kSealedCurrenciesSupportedLanguages.length,
-          );
+          expect(sortedList.first.value, 85);
         });
 
         test("there should be always translations for specific languages", () {
-          final map = {
-            for (final language in NaturalLanguage.list) language: 0,
-          };
+          final map = {for (final lang in NaturalLanguage.list) lang: 0};
+          final missing = <NaturalLanguage, Set<WorldCountry>>{};
 
           for (final l10n in NaturalLanguage.list) {
             for (final value in WorldCountry.list) {
               final hasTranslationForValue = value.maybeTranslation(l10n);
-              if (hasTranslationForValue != null) map[l10n] = map[l10n]! + 1;
+              if (hasTranslationForValue != null) {
+                map[l10n] = map[l10n]! + 1;
+              } else {
+                missing[l10n] = {...?missing[l10n], value};
+              }
             }
           }
 
@@ -839,8 +837,10 @@ void main() => group("$WorldCountry", () {
           final complete = sortedList
               .where((item) => item.value >= WorldCountry.list.length);
           final sortedMap = Map.fromEntries(complete);
+          final sortedLanguages = sortedMap.keys.toList(growable: false)
+            ..sort((a, b) => a.code.compareTo(b.code));
 
-          expect(sortedMap.keys, kSealedCountriesSupportedLanguages);
+          expect(sortedLanguages, kSealedCountriesSupportedLanguages);
 
           for (final country in WorldCountry.list) {
             for (final l10n in kSealedCountriesSupportedLanguages) {

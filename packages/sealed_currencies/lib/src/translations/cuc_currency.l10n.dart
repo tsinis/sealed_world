@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 89 translations for a Cuban Convertible Peso currency:
+/// Provides 107 translations for a Cuban Convertible Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,23 +31,29 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,18 +65,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -77,6 +92,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -84,6 +100,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const cucCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Cuban Convertible Peso"),
@@ -191,4 +209,28 @@ const cucCurrencyTranslations = [
   TranslatedName(LangZho(), name: "古巴可兑换比索"),
   TranslatedName(LangZho(), name: "古巴可轉換披索", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Cuban Convertable Peso"),
+  TranslatedName(LangAsm(), name: "কিউবান ৰূপান্তৰযোগ্য পেছো"),
+  TranslatedName(LangChv(), name: "Куба конвертланакан песийӗ"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤆𞤫𞤧𞤮 𞤑𞤵𞤦𞤢𞤲𞤳𞤮 𞤏𞤢𞤴𞤤𞤮𞤼𞤮𞥅𞤲𞥋𞤺𞤮",
+  ),
+  TranslatedName(LangHau(), name: "Peso mai fuska biyu na ƙasar Kuba"),
+  TranslatedName(LangIna(), name: "peso cuban convertibile"),
+  TranslatedName(
+    LangIbo(),
+    name: "Ego Peso e nwere ike ịgbanwe nke obodo Cuba",
+  ),
+  TranslatedName(LangJav(), name: "Peso Konvertibel Kuba"),
+  TranslatedName(LangKur(), name: "pesoyên konvertibl ê kubayî"),
+  TranslatedName(LangMri(), name: "Peso Kiupa takahuri"),
+  TranslatedName(LangOri(), name: "କ୍ୟୁବାନ୍ କନଭର୍ଟିବଲ୍ ପେସୋ"),
+  TranslatedName(LangPus(), name: "کيوبايي بدلېدونکي پسو"),
+  TranslatedName(LangRoh(), name: "peso cuban convertibel"),
+  TranslatedName(LangSrd(), name: "peso cubanu cunvertìbile"),
+  TranslatedName(LangSom(), name: "Beesada Konfatibal ee Kuuba"),
+  TranslatedName(LangTuk(), name: "Konwertirlenýän kuba pesosy"),
+  TranslatedName(LangXho(), name: "Cuban Convertible Peso"),
+  TranslatedName(LangYor(), name: "Pẹ́sò Yíyípadà Kúbà"),
+  TranslatedName(LangNno(), name: "kubanske konvertible pesos"),
 ];

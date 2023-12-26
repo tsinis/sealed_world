@@ -2,21 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 87 translations for a Kirundi language:
+/// Provides 103 translations for a Kirundi language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,6 +32,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -38,6 +42,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -47,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,29 +63,37 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const runLanguageTranslations = [
   TranslatedName(LangEng(), name: "Rundi"),
@@ -175,4 +191,24 @@ const runLanguageTranslations = [
   TranslatedName(LangZho(), name: "基隆迪文"),
   TranslatedName(LangZho(), name: "隆迪文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Rundi"),
+  TranslatedName(LangAsm(), name: "ৰুন্দি"),
+  TranslatedName(LangBel(), name: "рундзі"),
+  TranslatedName(LangChe(), name: "рунди"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤈𞤵𞤲𞤣𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "rundi"),
+  TranslatedName(LangIbo(), name: "Rụndị"),
+  TranslatedName(LangKur(), name: "rundî"),
+  TranslatedName(LangMri(), name: "Rūniti"),
+  TranslatedName(LangPus(), name: "رونډی"),
+  TranslatedName(LangQue(), name: "Rundi Simi"),
+  TranslatedName(LangSrd(), name: "rundi"),
+  TranslatedName(LangSnd(), name: "رونڊي"),
+  TranslatedName(LangSom(), name: "Rundhi"),
+  TranslatedName(LangTir(), name: "ኪሩንዲ"),
+  TranslatedName(LangTuk(), name: "rundi dili"),
+  TranslatedName(LangYor(), name: "Rúńdì"),
 ];

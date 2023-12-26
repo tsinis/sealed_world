@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Heard Island and McDonald Islands country:
+/// Provides 117 translations for a Heard Island and McDonald Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -34,17 +35,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -66,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -80,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -89,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -106,6 +114,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const hmdCountryTranslations = [
   CountryName(
@@ -327,4 +337,17 @@ const hmdCountryTranslations = [
   TranslatedName(LangVie(), name: "Quần đảo Heard và McDonald"),
   TranslatedName(LangWol(), name: "Duni Hërd ak Duni MakDonald"),
   TranslatedName(LangZul(), name: "I-Heard & McDonald Island"),
+  TranslatedName(LangChv(), name: "Херд тата Макдональд утравӗ"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤖𞤭𞤪𞤣𞤭 & 𞤃𞤢𞤳𞤣𞤮𞤲𞤢𞤤",
+  ),
+  TranslatedName(LangHau(), name: "Tsibirin Heard da McDonald"),
+  TranslatedName(LangIna(), name: "Insulas Heard e McDonald"),
+  TranslatedName(LangKur(), name: "Giravên Heard û MacDonaldê"),
+  TranslatedName(LangMri(), name: "Ngā Moutere Heriti me Makitānara"),
+  TranslatedName(LangSrd(), name: "Ìsulas Heard e McDonald"),
+  TranslatedName(LangTgl(), name: "Heard & McDonald Islands"),
+  TranslatedName(LangXho(), name: "EHeard & McDonald Islands"),
+  TranslatedName(LangYor(), name: "Erékùsù Heard àti Erékùsù McDonald"),
 ];

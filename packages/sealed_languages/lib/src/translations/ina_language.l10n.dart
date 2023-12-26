@@ -2,16 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 71 translations for a Interlingua language:
+/// Provides 98 translations for a Interlingua language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -22,21 +29,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -44,19 +60,27 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -65,9 +89,12 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Yoruba
 /// - Zulu.
@@ -142,7 +169,36 @@ const inaLanguageTranslations = [
   TranslatedName(LangZho(), name: "国际文字"),
   TranslatedName(LangZho(), name: "國際文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Izilimi ezihlangene"),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Interlingua"),
+  TranslatedName(LangAsm(), name: "ইণ্টাৰলিংগুৱা"),
+  TranslatedName(LangChe(), name: "интерлингва"),
+  TranslatedName(LangEus(), name: "interlingua"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤉𞤲𞤼𞤫𞤪𞤤𞤭𞤺𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Yare Tsakanin Kasashe"),
+  TranslatedName(LangHye(), name: "ինտերլինգուա"),
+  TranslatedName(LangIna(), name: "interlingua"),
+  TranslatedName(LangIbo(), name: "Intalịgụa"),
+  TranslatedName(LangKaz(), name: "интерлингва тілі"),
+  TranslatedName(LangKhm(), name: "អ៊ីនធើលីង"),
+  TranslatedName(LangKur(), name: "interlingua"),
+  TranslatedName(LangKir(), name: "интерлингва"),
+  TranslatedName(LangMri(), name: "Inarīngua"),
+  TranslatedName(LangMya(), name: "အင်တာလင်ဂွါ"),
+  TranslatedName(LangNep(), name: "इन्टर्लिङ्गुआ"),
+  TranslatedName(LangPan(), name: "ਇੰਟਰਲਿੰਗੁਆ"),
+  TranslatedName(LangPus(), name: "انټرلنګوا"),
+  TranslatedName(LangQue(), name: "Interlingua Simi"),
+  TranslatedName(LangSrd(), name: "interlìngua"),
+  TranslatedName(LangSnd(), name: "انٽرلنگئا"),
+  TranslatedName(LangSin(), name: "ඉන්ටලින්ගුආ"),
+  TranslatedName(LangSom(), name: "Interlinguwa"),
+  TranslatedName(LangSqi(), name: "interlingua"),
+  TranslatedName(LangTuk(), name: "interlingwa dili"),
+  TranslatedName(LangTur(), name: "İnterlingua"),
+  TranslatedName(LangUzb(), name: "interlingva"),
+  TranslatedName(LangDeu(), name: "Interlingua"),
 ];

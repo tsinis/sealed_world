@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Swedish Krona currency:
+/// Provides 109 translations for a Swedish Krona currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,28 +67,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,7 +103,9 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const sekCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Swedish Krona"),
@@ -101,7 +118,11 @@ const sekCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সুইডিশ ক্রোনা"),
   TranslatedName(LangBre(), name: "kurunenn Sveden"),
   TranslatedName(LangBos(), name: "Švedska kruna"),
-  TranslatedName(LangBos(), name: "Шведска круна", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Шведска круна",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "corona sueca"),
   TranslatedName(LangChe(), name: "Швецин крона"),
   TranslatedName(LangCes(), name: "švédská koruna"),
@@ -183,4 +204,21 @@ const sekCurrencyTranslations = [
   TranslatedName(LangYid(), name: "שוועדישע קראנע"),
   TranslatedName(LangZho(), name: "瑞典克朗"),
   TranslatedName(LangZul(), name: "i-Swedish Krona"),
+  TranslatedName(LangAsm(), name: "চুইডিছ ক্ৰোনা"),
+  TranslatedName(LangChv(), name: "Швеци кронӗ"),
+  TranslatedName(LangFul(), name: "𞤑𞤪𞤮𞤲𞤢 𞤅𞤵𞤱𞤫𞤣𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Krona na ƙasar Sweden"),
+  TranslatedName(LangIna(), name: "corona svedese"),
+  TranslatedName(LangIbo(), name: "Ego Krona Obodo Sweden"),
+  TranslatedName(LangJav(), name: "Krona Swedia"),
+  TranslatedName(LangKur(), name: "kronê swêdî"),
+  TranslatedName(LangMri(), name: "Kronor Huitene"),
+  TranslatedName(LangOri(), name: "ସ୍ୱେଡିଶ୍ କ୍ରୋନା"),
+  TranslatedName(LangPus(), name: "سويډني کرونا"),
+  TranslatedName(LangSrd(), name: "corona isvedesa"),
+  TranslatedName(LangSom(), name: "Koronka Isweden"),
+  TranslatedName(LangTuk(), name: "Şwed kronasy"),
+  TranslatedName(LangTgl(), name: "Swedish Krona"),
+  TranslatedName(LangXho(), name: "I-Krona yaseSweden"),
+  TranslatedName(LangYor(), name: "Kòrónà Súwídìn"),
 ];

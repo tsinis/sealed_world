@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a West African Cfa Franc currency:
+/// Provides 110 translations for a West African Cfa Franc currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -71,6 +72,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -112,7 +115,11 @@ const xofCurrencyTranslations = [
   TranslatedName(LangBen(), name: "পশ্চিম আফ্রিকান [CFA] ফ্র্যাঙ্ক"),
   TranslatedName(LangBre(), name: "lur CFA Afrika ar Cʼhornôg"),
   TranslatedName(LangBos(), name: "Zapadnoafrički franak (CFA)"),
-  TranslatedName(LangBos(), name: "CFA франак BCEAO", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "CFA франак BCEAO",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc CFA BCEAO"),
   TranslatedName(LangChe(), name: "Малхбузен Африкан КФА франк"),
   TranslatedName(LangCes(), name: "CFA/BCEAO frank"),
@@ -203,7 +210,11 @@ const xofCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "західноафриканський франк"),
   TranslatedName(LangUrd(), name: "مغربی افریقی [CFA] فرانک"),
   TranslatedName(LangUzb(), name: "G‘arbiy Afrika CFA franki"),
-  TranslatedName(LangUzb(), name: "XOF", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "XOF",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Franc CFA Tây Phi"),
   TranslatedName(LangYor(), name: "Faransi ti Orílẹ́ède BIKEAO"),
   TranslatedName(
@@ -215,4 +226,7 @@ const xofCurrencyTranslations = [
   TranslatedName(LangZho(), name: "多哥非洲共同體法郎", countryCode: "HK"),
   TranslatedName(LangZho(), name: "法郎 (CFA–BCEAO)", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-West African CFA Franc"),
+  TranslatedName(LangAsm(), name: "পশ্চিম আফ্ৰিকান CFA ফ্ৰেংক"),
+  TranslatedName(LangOri(), name: "ପଶ୍ଚିମ ଆଫ୍ରିକା CFA ଫ୍ରାଙ୍କ"),
+  TranslatedName(LangPus(), name: "لوېديځ افريقايي سي اف اې فرانک"),
 ];

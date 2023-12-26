@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Kinyarwanda language:
+/// Provides 114 translations for a Kinyarwanda language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -10,15 +10,18 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -43,14 +46,17 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -64,12 +70,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -78,24 +86,32 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Wolof
 /// - Yoruba
 /// - Zulu.
 const kinLanguageTranslations = [
@@ -197,4 +213,20 @@ const kinLanguageTranslations = [
   TranslatedName(LangZho(), name: "卢旺达文"),
   TranslatedName(LangZho(), name: "盧安達文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Kinyarwanda"),
+  TranslatedName(LangAsm(), name: "কিনয়াৰোৱাণ্ডা"),
+  TranslatedName(LangBel(), name: "руанда"),
+  TranslatedName(LangChe(), name: "киньяруанда"),
+  TranslatedName(LangIna(), name: "kinyarwanda"),
+  TranslatedName(LangKhm(), name: "គិនយ៉ាវ៉ាន់ដា"),
+  TranslatedName(LangKur(), name: "kînyariwandayî"),
+  TranslatedName(LangMri(), name: "Kiniawāna"),
+  TranslatedName(LangPus(), name: "کینیارونډا"),
+  TranslatedName(LangSrd(), name: "kinyarwanda"),
+  TranslatedName(LangSnd(), name: "ڪنيار وانڊا"),
+  TranslatedName(LangTgk(), name: "киняруанда"),
+  TranslatedName(LangTir(), name: "ኪንያርዋንዳ"),
+  TranslatedName(LangTuk(), name: "kinýaruanda dili"),
+  TranslatedName(LangTat(), name: "руанда"),
+  TranslatedName(LangWol(), name: "Kinyarwànda"),
+  TranslatedName(LangSwa(), name: "Kinyarwanda"),
 ];

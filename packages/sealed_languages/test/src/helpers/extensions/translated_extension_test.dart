@@ -105,11 +105,16 @@ void main() => group("TranslatedExtension", () {
 
       test("there should be always translations for specific languages", () {
         final map = {for (final language in NaturalLanguage.list) language: 0};
+        final missing = <NaturalLanguage, Set<NaturalLanguage>>{};
 
         for (final value in NaturalLanguage.list) {
           for (final l10n in NaturalLanguage.list) {
             final hasTranslationForValue = value.maybeTranslation(l10n);
-            if (hasTranslationForValue != null) map[l10n] = map[l10n]! + 1;
+            if (hasTranslationForValue != null) {
+              map[l10n] = map[l10n]! + 1;
+            } else {
+              missing[l10n] = {...?missing[l10n], value};
+            }
           }
         }
 
@@ -118,8 +123,10 @@ void main() => group("TranslatedExtension", () {
         final complete = sortedList
             .where((item) => item.value == NaturalLanguage.list.length);
         final sortedMap = Map.fromEntries(complete);
+        final sortedLanguages = sortedMap.keys.toList(growable: false)
+          ..sort((a, b) => a.code.compareTo(b.code));
 
-        expect(sortedMap.keys, kSealedLanguagesSupportedLanguages);
+        expect(sortedLanguages, kSealedLanguagesSupportedLanguages);
 
         for (final language in NaturalLanguage.list) {
           for (final l10n in kSealedLanguagesSupportedLanguages) {

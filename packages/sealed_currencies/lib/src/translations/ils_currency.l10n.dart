@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Israeli New Shekel currency:
+/// Provides 97 translations for a Israeli New Shekel currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -63,6 +64,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -100,7 +103,11 @@ const ilsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইস্রাইলি নতুন শেকেল"),
   TranslatedName(LangBre(), name: "shekel nevez Israel"),
   TranslatedName(LangBos(), name: "Izraelski novi šekel"),
-  TranslatedName(LangBos(), name: "Израелски нови шекел", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Израелски нови шекел",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "nou xéquel israelià"),
   TranslatedName(LangChe(), name: "Израилан керла шекель"),
   TranslatedName(LangCes(), name: "izraelský nový šekel"),
@@ -179,9 +186,16 @@ const ilsCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "ізраїльський новий шекель"),
   TranslatedName(LangUrd(), name: "اسرائیلی نیا شیکل"),
   TranslatedName(LangUzb(), name: "Isroil yangi shekeli"),
-  TranslatedName(LangUzb(), name: "ILS", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "ILS",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Sheqel Israel mới"),
   TranslatedName(LangZho(), name: "以色列新谢克尔"),
   TranslatedName(LangZho(), name: "以色列新謝克爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Israeli New Sheqel"),
+  TranslatedName(LangAsm(), name: "ইজৰাইলী নিউ শ্বেকেল"),
+  TranslatedName(LangOri(), name: "ଇସ୍ରାଏଲ ସେକେଲ"),
+  TranslatedName(LangPus(), name: "اسراييلي شېکېل"),
 ];

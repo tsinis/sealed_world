@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Cayman Islands Dollar currency:
+/// Provides 109 translations for a Cayman Islands Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const kydCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Cayman Islands Dollar"),
@@ -180,7 +196,11 @@ const kydCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "долар Кайманових островів"),
   TranslatedName(LangUrd(), name: "کیمین آئلینڈز ڈالر"),
   TranslatedName(LangUzb(), name: "Kayman orollari dollari"),
-  TranslatedName(LangUzb(), name: "Кайман ороли Доллари", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Кайман ороли Доллари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Quần đảo Cayman"),
   TranslatedName(LangZho(), name: "开曼元"),
   TranslatedName(
@@ -191,4 +211,20 @@ const kydCurrencyTranslations = [
   ),
   TranslatedName(LangZho(), name: "開曼群島元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Cayman Islands Dollar"),
+  TranslatedName(LangAsm(), name: "কেইমেন দ্বীপপুঞ্জৰ ডলাৰ"),
+  TranslatedName(LangChv(), name: "Кайман утравӗсен долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤅𞤵𞤪𞤭𞥅𞤶𞤫 𞤑𞤢𞤴𞤥𞤢𞥄𞤲"),
+  TranslatedName(LangHau(), name: "Dalar ƙasar Tsibirai na Cayman"),
+  TranslatedName(LangIna(), name: "dollar del Insulas Caiman"),
+  TranslatedName(LangIbo(), name: "Ego Dollar obodo Cayman Islands"),
+  TranslatedName(LangJav(), name: "Dolar Kepuloan Caiman"),
+  TranslatedName(LangKur(), name: "dolarê giravên keymanî"),
+  TranslatedName(LangMri(), name: "Tāra Kāmana"),
+  TranslatedName(LangOri(), name: "କେମେନ୍ ଦ୍ଵୀପପୁଞ୍ଜ ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "کيمن ټاپوګانو ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru de sas Ìsulas Cayman"),
+  TranslatedName(LangSom(), name: "Doolarka Kayman Aylaanis"),
+  TranslatedName(LangTuk(), name: "Kaýman adalarynyň dollary"),
+  TranslatedName(LangXho(), name: "Cayman Islands Dollar"),
+  TranslatedName(LangYor(), name: "Dọ́là Erékùsù Cayman"),
 ];

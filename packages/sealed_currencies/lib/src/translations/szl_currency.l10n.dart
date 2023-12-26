@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Swazi Lilangeni currency:
+/// Provides 120 translations for a Swazi Lilangeni currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const szlCurrencyTranslations = [
@@ -114,7 +128,11 @@ const szlCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সোয়াজিল্যান্ড লিলাঙ্গেনি"),
   TranslatedName(LangBre(), name: "lilangeni Swaziland"),
   TranslatedName(LangBos(), name: "Svazilendski lilangeni"),
-  TranslatedName(LangBos(), name: "Свази лилангени", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Свази лилангени",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lilangeni swazi"),
   TranslatedName(LangChe(), name: "Свазилендан лилангени"),
   TranslatedName(LangCes(), name: "svazijský lilangeni"),
@@ -216,4 +234,18 @@ const szlCurrencyTranslations = [
   TranslatedName(LangZho(), name: "斯威士蘭里朗吉尼", countryCode: "HK"),
   TranslatedName(LangZho(), name: "史瓦濟蘭里朗吉尼", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Swazi Lilangeni"),
+  TranslatedName(LangAsm(), name: "স্বাজি লিলেংগেনি"),
+  TranslatedName(LangChv(), name: "Свази лилангенийӗ"),
+  TranslatedName(LangIna(), name: "lilangeni swazilandese"),
+  TranslatedName(LangIbo(), name: "Ego Lilangeni obodo Swaziland"),
+  TranslatedName(LangJav(), name: "Lilangeni Swasi"),
+  TranslatedName(LangKur(), name: "lîlangeniyê swazîlî"),
+  TranslatedName(LangMri(), name: "Lilangeni Warerangi"),
+  TranslatedName(LangOri(), name: "ସ୍ଵାଜି ଲିଲାଞ୍ଜେନି"),
+  TranslatedName(LangPus(), name: "سوازي ليلانګيني"),
+  TranslatedName(LangSrd(), name: "lilangeni de s’Eswatini"),
+  TranslatedName(LangSom(), name: "Lilangeenida iswaasi"),
+  TranslatedName(LangTuk(), name: "Swazi lilangeni"),
+  TranslatedName(LangTgl(), name: "Swazi Lilangeni"),
+  TranslatedName(LangXho(), name: "I-Lilangeni yase-Eswatini"),
 ];

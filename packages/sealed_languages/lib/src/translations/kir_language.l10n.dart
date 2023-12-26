@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 99 translations for a Kyrgyz language:
+/// Provides 118 translations for a Kyrgyz language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,11 +70,13 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -73,20 +84,26 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tagalog
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -94,7 +111,9 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const kirLanguageTranslations = [
   TranslatedName(LangEng(), name: "Kyrgyz"),
@@ -196,4 +215,27 @@ const kirLanguageTranslations = [
   TranslatedName(LangZho(), name: "吉尔吉斯文"),
   TranslatedName(LangZho(), name: "吉爾吉斯文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Kyrgyz"),
+  TranslatedName(LangAsm(), name: "কিৰ্গিজ"),
+  TranslatedName(LangBel(), name: "кіргізская"),
+  TranslatedName(LangChe(), name: "гӀиргӀизойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤭𞤪𞤺𞤵𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Kirgizanci"),
+  TranslatedName(LangIna(), name: "kirghizo"),
+  TranslatedName(LangIbo(), name: "Kyrayz"),
+  TranslatedName(LangJav(), name: "Kirgis"),
+  TranslatedName(LangKur(), name: "kirgizî"),
+  TranslatedName(LangMri(), name: "Kiakihi"),
+  TranslatedName(LangPus(), name: "کرغيزي"),
+  TranslatedName(LangSrd(), name: "chirghisu"),
+  TranslatedName(LangSnd(), name: "ڪرغيز"),
+  TranslatedName(LangSom(), name: "Kirgiis"),
+  TranslatedName(LangTgk(), name: "қирғизӣ"),
+  TranslatedName(LangTuk(), name: "gyrgyz dili"),
+  TranslatedName(LangTat(), name: "кыргыз"),
+  TranslatedName(LangWol(), name: "Kirgiis"),
+  TranslatedName(LangYor(), name: "Kírígíìsì"),
 ];

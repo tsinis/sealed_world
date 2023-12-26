@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Swedish language:
+/// Provides 128 translations for a Swedish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -48,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -90,8 +96,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -99,12 +107,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -112,6 +123,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -232,4 +244,16 @@ const sweLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Suwidiisi"),
   TranslatedName(LangZho(), name: "瑞典文"),
   TranslatedName(LangZul(), name: "isi-Swedish"),
+  TranslatedName(LangAsm(), name: "ছুইডিচ"),
+  TranslatedName(LangChe(), name: "шведийн"),
+  TranslatedName(LangIna(), name: "svedese"),
+  TranslatedName(LangJav(), name: "Swedia"),
+  TranslatedName(LangKur(), name: "swêdî"),
+  TranslatedName(LangMri(), name: "Huitene"),
+  TranslatedName(LangSrd(), name: "isvedesu"),
+  TranslatedName(LangSnd(), name: "سويڊش"),
+  TranslatedName(LangTgk(), name: "шведӣ"),
+  TranslatedName(LangTuk(), name: "şwed dili"),
+  TranslatedName(LangTat(), name: "швед"),
+  TranslatedName(LangWol(), name: "Suweduwaa"),
 ];

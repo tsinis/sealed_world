@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Rwanda country:
+/// Provides 123 translations for a Rwanda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -73,6 +73,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
@@ -116,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -329,4 +331,6 @@ const rwaCountryTranslations = [
   TranslatedName(LangSsw(), name: "IRuwanda"),
   TranslatedName(LangTgl(), name: "Ruwanda"),
   TranslatedName(LangVol(), name: "Ruandän"),
+  TranslatedName(LangMri(), name: "Rāwana"),
+  TranslatedName(LangXho(), name: "ERwanda"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Tajik language:
+/// Provides 109 translations for a Tajik language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,6 +44,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -48,6 +54,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,6 +65,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -71,18 +79,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -90,6 +105,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Yoruba
 /// - Zulu.
 const tgkLanguageTranslations = [
   TranslatedName(LangEng(), name: "Tajik"),
@@ -184,4 +201,25 @@ const tgkLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Tajik"),
   TranslatedName(LangZho(), name: "塔吉克文"),
   TranslatedName(LangZul(), name: "isi-Tajik"),
+  TranslatedName(LangAsm(), name: "তাজিক"),
+  TranslatedName(LangBel(), name: "таджыкская"),
+  TranslatedName(LangChe(), name: "таджикийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤢𞤶𞤭𞤳𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "tajiko"),
+  TranslatedName(LangIbo(), name: "Tajịk"),
+  TranslatedName(LangKur(), name: "tacikî"),
+  TranslatedName(LangMri(), name: "Tāhiki"),
+  TranslatedName(LangSrd(), name: "tagicu"),
+  TranslatedName(LangSnd(), name: "تاجڪ"),
+  TranslatedName(LangSom(), name: "Taajik"),
+  TranslatedName(LangTgk(), name: "тоҷикӣ"),
+  TranslatedName(LangTir(), name: "ታጂክኛ"),
+  TranslatedName(LangTuk(), name: "täjik dili"),
+  TranslatedName(LangTat(), name: "таҗик"),
+  TranslatedName(LangWol(), name: "Tajis"),
+  TranslatedName(LangYor(), name: "Tàjíìkì"),
 ];

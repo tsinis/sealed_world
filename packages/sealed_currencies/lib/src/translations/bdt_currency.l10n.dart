@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Bangladeshi Taka currency:
+/// Provides 108 translations for a Bangladeshi Taka currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const bdtCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Bangladeshi Taka"),
@@ -99,7 +116,11 @@ const bdtCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বাংলাদেশী টাকা"),
   TranslatedName(LangBre(), name: "taka Bangladesh"),
   TranslatedName(LangBos(), name: "Bangladeška taka"),
-  TranslatedName(LangBos(), name: "Бангладешка така", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Бангладешка така",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "taka de Bangla Desh"),
   TranslatedName(LangChe(), name: "Бангладешан така"),
   TranslatedName(LangCes(), name: "bangladéšská taka"),
@@ -180,4 +201,21 @@ const bdtCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Taka Bangladesh"),
   TranslatedName(LangZho(), name: "孟加拉塔卡"),
   TranslatedName(LangZul(), name: "i-Bangladeshi Taka"),
+  TranslatedName(LangAsm(), name: "বাংলাদেশী টাকা"),
+  TranslatedName(LangChv(), name: "Бангладеш таки"),
+  TranslatedName(LangFul(), name: "𞤚𞤢𞤪𞤢 𞤄𞤢𞤲𞤺𞤭𞤤𞤢𞤣𞤫𞥅𞤧𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Taka na ƙasar Bangladesh"),
+  TranslatedName(LangIna(), name: "taka bengalese"),
+  TranslatedName(LangIbo(), name: "Ego Taka obodo Bangladesh"),
+  TranslatedName(LangJav(), name: "Taka Bangladesh"),
+  TranslatedName(LangKur(), name: "takayê bengladeşî"),
+  TranslatedName(LangMri(), name: "Taka Pākaratēhi"),
+  TranslatedName(LangOri(), name: "ବଙ୍ଗଳାଦେଶୀ ଟାକା"),
+  TranslatedName(LangPus(), name: "بنګالۍ ټاکه"),
+  TranslatedName(LangSrd(), name: "taka bangladesu"),
+  TranslatedName(LangSom(), name: "Taka Bangledesh"),
+  TranslatedName(LangTuk(), name: "Bangladeş takasy"),
+  TranslatedName(LangTgl(), name: "Bangladeshi Taka"),
+  TranslatedName(LangXho(), name: "I-Taka yaseBangladesh"),
+  TranslatedName(LangYor(), name: "Tákà Báńgíládẹ̀ẹ̀ṣì"),
 ];

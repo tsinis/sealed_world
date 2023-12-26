@@ -2,12 +2,17 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 70 translations for a Kongo language:
+/// Provides 84 translations for a Kongo language:
+/// - (Eastern) Punjabi
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
@@ -36,7 +41,10 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -44,10 +52,13 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -55,6 +66,7 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
@@ -64,9 +76,11 @@ import "../model/translated_name.dart";
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Zulu.
@@ -140,7 +154,19 @@ const konLanguageTranslations = [
   TranslatedName(LangZho(), name: "刚果文"),
   TranslatedName(LangZho(), name: "剛果文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Kongo"),
-
-  /// Added manually:
   TranslatedName(LangLit(), name: "Kongo"),
+  TranslatedName(LangNep(), name: "कोङ्गो"),
+  TranslatedName(LangTur(), name: "Kongo dili"),
+  TranslatedName(LangAsm(), name: "কঙ্গো"),
+  TranslatedName(LangBel(), name: "конга"),
+  TranslatedName(LangHye(), name: "կոնգո"),
+  TranslatedName(LangKaz(), name: "конго"),
+  TranslatedName(LangKhm(), name: "កុងហ្គោ"),
+  TranslatedName(LangKir(), name: "конгочо"),
+  TranslatedName(LangMon(), name: "конго"),
+  TranslatedName(LangPan(), name: "ਕਾਂਗੋ"),
+  TranslatedName(LangPus(), name: "ګونګ"),
+  TranslatedName(LangSin(), name: "කොංගෝ"),
+  TranslatedName(LangSqi(), name: "Kongo"),
+  TranslatedName(LangUzb(), name: "kongo"),
 ];

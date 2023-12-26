@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 102 translations for a Armenian language:
+/// Provides 119 translations for a Armenian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,25 +34,31 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -77,18 +86,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -96,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -202,4 +219,25 @@ const hyeLanguageTranslations = [
   TranslatedName(LangZho(), name: "亚美尼亚文"),
   TranslatedName(LangZho(), name: "亞美尼亞文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Armenia"),
+  TranslatedName(LangAsm(), name: "আৰ্মেনীয়"),
+  TranslatedName(LangChe(), name: "эрмалойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤪𞤥𞤫𞤲𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Armeniyanci"),
+  TranslatedName(LangIna(), name: "armenio"),
+  TranslatedName(LangIbo(), name: "Armenianị"),
+  TranslatedName(LangJav(), name: "Armenia"),
+  TranslatedName(LangKur(), name: "ermenî"),
+  TranslatedName(LangMri(), name: "Āmeniana"),
+  TranslatedName(LangSrd(), name: "armenu"),
+  TranslatedName(LangSnd(), name: "ارماني"),
+  TranslatedName(LangSom(), name: "Armeeniyaan"),
+  TranslatedName(LangTgk(), name: "арманӣ"),
+  TranslatedName(LangTir(), name: "ኣርሜንኛ"),
+  TranslatedName(LangTuk(), name: "ermeni dili"),
+  TranslatedName(LangTat(), name: "әрмән"),
+  TranslatedName(LangWol(), name: "Armaniye"),
 ];

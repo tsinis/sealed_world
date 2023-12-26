@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Mongolia country:
+/// Provides 130 translations for a Mongolia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -122,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -271,4 +273,6 @@ const mngCountryTranslations = [
   TranslatedName(LangTgl(), name: "Monggolya"),
   TranslatedName(LangVol(), name: "Mongolän"),
   TranslatedName(LangZha(), name: "Mungzguj"),
+  TranslatedName(LangSrd(), name: "Mongòlia"),
+  TranslatedName(LangXho(), name: "EMongolia"),
 ];

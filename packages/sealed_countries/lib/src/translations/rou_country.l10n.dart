@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Romania country:
+/// Provides 137 translations for a Romania country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -131,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -271,4 +272,5 @@ const rouCountryTranslations = [
   TranslatedName(LangTgl(), name: "Rumanya"),
   TranslatedName(LangVol(), name: "Rumän"),
   TranslatedName(LangWln(), name: "Roumaneye"),
+  TranslatedName(LangXho(), name: "ERomania"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Norfolk Island country:
+/// Provides 127 translations for a Norfolk Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -76,6 +77,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -91,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -118,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -337,4 +341,8 @@ const nfkCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Norfolk Island"),
+  TranslatedName(LangChv(), name: "Норфолк утравӗ"),
+  TranslatedName(LangMri(), name: "Te Moutere Nōpoke"),
+  TranslatedName(LangSrd(), name: "Ìsula Norfolk"),
+  TranslatedName(LangXho(), name: "ENorfolk Island"),
 ];

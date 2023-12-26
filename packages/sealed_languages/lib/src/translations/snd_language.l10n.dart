@@ -2,12 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 86 translations for a Sindhi language:
+/// Provides 105 translations for a Sindhi language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +18,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,14 +31,19 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -55,11 +63,13 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -67,22 +77,31 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -173,4 +192,27 @@ const sndLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Sindhi"),
   TranslatedName(LangZho(), name: "信德文"),
   TranslatedName(LangZul(), name: "isi-Sindhi"),
+  TranslatedName(LangAsm(), name: "সিন্ধী"),
+  TranslatedName(LangChe(), name: "синдхи"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤭𞤲𞤣𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Sindiyanci"),
+  TranslatedName(LangIna(), name: "sindhi"),
+  TranslatedName(LangIbo(), name: "Sịndh"),
+  TranslatedName(LangKur(), name: "sindhî"),
+  TranslatedName(LangMri(), name: "Hiniti"),
+  TranslatedName(LangPus(), name: "سندهي"),
+  TranslatedName(LangSrd(), name: "sindhi"),
+  TranslatedName(LangSnd(), name: "سنڌي"),
+  TranslatedName(LangSom(), name: "Siindhi"),
+  TranslatedName(LangTgk(), name: "синдӣ"),
+  TranslatedName(LangTir(), name: "ሲንድሂ"),
+  TranslatedName(LangTuk(), name: "sindhi dili"),
+  TranslatedName(LangTur(), name: "Sindhi dili"),
+  TranslatedName(LangTat(), name: "синдһи"),
+  TranslatedName(LangWol(), name: "Sindi"),
+  TranslatedName(LangDeu(), name: "Sindhi"),
 ];

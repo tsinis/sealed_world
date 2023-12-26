@@ -12,11 +12,12 @@ import "dart_utils.dart";
 import "io_utils.dart";
 
 final class JsonUtils {
-  const JsonUtils(this.package, {this.dataDirPath = "json/data"});
+  const JsonUtils(this.package, {this.dataDirPath = defaultDataDirPath});
 
   final String dataDirPath;
   final Package package;
 
+  static const defaultDataDirPath = "json/data";
   static const eng = LangEng();
   static const translation = "translations";
 
@@ -35,9 +36,9 @@ final class JsonUtils {
       final itemFromCode = _instanceFromCode(item.code);
       if (itemFromCode == null) continue; // Might be more items in the source.
       print("\nExtracting translations for: ${itemFromCode.name}\n");
-      final english = englishData[itemFromCode];
+      final english = englishData[itemFromCode] ?? item.translation(eng).name;
       final translations = package.translations(item.code).toSet();
-      if (english != null && translations.isEmpty)
+      if (translations.isEmpty)
         translations.add(TranslatedName(eng, name: english));
       for (final dir in directories) {
         final dirName = basename(dir.path);
@@ -49,7 +50,11 @@ final class JsonUtils {
         if (translationForLang == english) continue;
         final containsWithFullName =
             translations.any((e) => e.language == lang && e.fullName != null);
-        if (containsWithFullName) continue;
+        final containsWithSameLocale = translations.any(
+          (e) =>
+              e.language == lang && e.script == null && e.countryCode == null,
+        );
+        if (containsWithFullName || containsWithSameLocale) continue;
         final script = locale.scriptCode;
         final translated = TranslatedName(
           lang,
@@ -57,10 +62,8 @@ final class JsonUtils {
           countryCode: locale.countryCode,
           script: script != null ? Script.fromCode(script) : null,
         );
-
         final isAdded = translations.add(translated);
         if (!isAdded) continue;
-        print("* Add ${translated.language.name} total ${translations.length}");
       }
 
       final translationCode = item.code.toLowerCase();
@@ -70,16 +73,14 @@ final class JsonUtils {
           """${translationCode}_${dataType.toLowerCase()}.l10n.${PathConstants.dart}""";
       final filePath = join(translation, fileNameFull);
       paths.add(fileNameFull);
-      final buffer = StringBuffer(
-        """
+      final sb = StringBuffer("""
 ${_dartDoc(translations, itemFromCode.name, dataType)}.
 const ${varFileName.toCamelCase()} = [
-""",
-      );
-      for (final element in translations) buffer.write("$element,\n");
-      buffer.write("];");
-      io.writeContentToFile(filePath, buffer);
-      buffer.clear();
+""");
+      for (final i in translations) sb.write("${i.toString(short: false)},\n");
+      sb.write("];");
+      io.writeContentToFile(filePath, sb);
+      sb.clear();
       translations.clear();
     }
 
@@ -156,13 +157,14 @@ const ${varFileName.toCamelCase()} = [
   }
 
   String _dartDoc(Set<TranslatedName> translations, Object name, String type) {
+    final itemName = name is TranslatedName ? name.common : name.toString();
     final sorted = List.of(translations.map((e) => e.language.name))..sort();
     final import = package.whenConstOrNull(sealedCountries: package.dirName) ??
         Package.sealedLanguages.dirName;
 
     final buffer = StringBuffer('import "package:$import/$import.dart";\n')
       ..write(
-        "/// Provides ${translations.length} $translation for a $name $type:",
+        "/// Provides ${translations.length} $translation for a $itemName $type:",
       );
     for (final name in Set.unmodifiable(sorted)) buffer.write("\n /// - $name");
 
@@ -225,7 +227,7 @@ const ${varFileName.toCamelCase()} = [
   /// Missing: XAG, XAU, XBA, XBB, XBC, XBD, XDR, XPD, XPT, XTS.
   FiatCurrency? _convertCodeToCurrency(String rawCode) {
     final code = rawCode.toUpperCase().trim();
-    var fiat = FiatCurrency.maybeFromValue(code);
+    var fiat = FiatCurrency.maybeFromAnyCode(code);
     if (fiat != null) return fiat;
     const old = {"MRO": "MRU", "STD": "STN", "VEF": "VES"};
     if (old.containsKey(code)) fiat = FiatCurrency.maybeFromValue(old[code]!);

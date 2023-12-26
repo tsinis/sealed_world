@@ -1,6 +1,8 @@
 // This library translations are based on the data from the
-// https://github.com/umpirsky/language-list project (from Saša Stamenković),
-// which is licensed under the  MIT License.
+// https://github.com/symfony/intl project
+// (from The Symfony - Intl Component, Fabien Potencier) and from the
+// https://github.com/umpirsky/language-list project (from Saša Stamenković).
+// Both projects are licensed under the  MIT License.
 
 /// Provides language translations for sealed_languages.
 library sealed_language_translations;
@@ -197,76 +199,101 @@ export "src/translations/zul_language.l10n.dart";
 /// This is a comprehensive list of languages that ensure the availability of
 /// translations for every language in the natural language list.
 ///
+/// It's safe to say that this package supports 98% of the name translations
+/// from the `kMaterialSupportedLanguages` list (GlobalMaterialLocalizations).
+///
 /// It is important to note that while other languages may not be included in
 /// this list, they may still have translations available for most common
 /// languages, but there may be some missing translations for rarer languages
 /// such as (Old) Church Slavonic, Volapük, etc. Every language contains more
-/// than 56 translations of it's name to other languages.
-///
-/// This a small (as for now) brother of [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html).
+/// than 77 translations of it's name to other languages.
 const kSealedLanguagesSupportedLanguages = [
-  LangPor(),
-  LangPol(),
+  LangAmh(),
+  LangAra(),
+  LangAsm(),
+  LangAze(),
+  LangBel(),
+  LangBen(),
+  LangBos(),
+  LangBre(),
+  LangBul(),
+  LangCat(),
+  LangCes(),
+  LangDan(),
+  LangDeu(),
+  LangEll(),
+  LangEng(),
+  LangEst(),
+  LangEus(),
+  LangFas(),
+  LangFin(),
+  LangFra(),
+  LangGle(),
+  LangGlg(),
+  LangGuj(),
+  LangHeb(),
+  LangHin(),
+  LangHrv(),
+  LangHun(),
+  LangHye(),
+  LangIsl(),
+  LangIta(),
+  LangJpn(),
+  LangKan(),
+  LangKas(),
+  LangKat(),
+  LangKaz(),
+  LangKhm(),
+  LangKir(),
+  LangKor(),
+  LangLao(),
+  LangLav(),
+  LangLit(),
+  LangMal(),
+  LangMar(),
+  LangMkd(),
+  LangMon(),
+  LangMya(),
+  LangNep(),
+  LangNno(),
+  LangNob(),
+  LangNor(),
   LangOri(),
+  LangPan(),
+  LangPol(),
+  LangPor(),
+  LangPus(),
   LangRoh(),
   LangRon(),
-  LangNor(),
   LangRus(),
-  LangNob(),
-  LangNno(),
-  LangMkd(),
+  LangSin(),
   LangSlk(),
   LangSlv(),
-  LangMar(),
-  LangMal(),
-  LangLit(),
-  LangLav(),
-  LangKor(),
-  LangKas(),
   LangSpa(),
-  LangKan(),
-  LangJpn(),
+  LangSqi(),
   LangSrp(),
-  LangIta(),
-  LangIsl(),
-  LangHrv(),
+  LangSwa(),
   LangSwe(),
-  LangHun(),
   LangTam(),
-  LangHin(),
   LangTel(),
-  LangHeb(),
-  LangGuj(),
   LangTha(),
-  LangGle(),
   LangTon(),
-  LangFra(),
-  LangFin(),
-  LangFas(),
-  LangEst(),
-  LangEng(),
   LangUig(),
   LangUkr(),
-  LangEll(),
-  LangDan(),
-  LangCes(),
+  LangUrd(),
+  LangUzb(),
   LangVie(),
-  LangCat(),
-  LangBul(),
-  LangBre(),
-  LangBos(),
-  LangBen(),
-  LangAze(),
-  LangAra(),
   LangZho(),
-  LangLao(),
+  LangZul(),
 ];
 
-/// Sealed languages version of the `kMaterialSupportedLanguages` list.
+/// Sealed languages version of the
+/// `kMaterialSupportedLanguages`/`kWidgetsSupportedLanguages` lists.
 ///
 /// Implementation of localized strings for the material widgets using
 /// the `intl` package for date and time formatting.
-/// Missing "FIL" (Filipino Pilipino) + "GSW" (Swiss German Alemannic Alsatian)
+/// Missing "FIL" (Filipino Pilipino, but mapped to Tagalog "tl") and
+/// "GSW" (Swiss German Alemannic Alsatian, but mapped to Swiss German "de_CH")
 /// languages.
 const kMaterialSupportedLanguagesSealed = [
   LangAfr(),
@@ -324,7 +351,96 @@ const kMaterialSupportedLanguagesSealed = [
   LangOri(),
   LangPan(),
   LangPol(),
-  LangPus(),
+  LangPus(), // Missing in kCupertinoSupportedLanguagesSealed.
+  LangPor(),
+  LangRon(),
+  LangRus(),
+  LangSin(),
+  LangSlk(),
+  LangSlv(),
+  LangSqi(),
+  LangSrp(),
+  LangSwe(),
+  LangSwa(),
+  LangTam(),
+  LangTel(),
+  LangTha(),
+  LangTgl(),
+  LangTur(),
+  LangUkr(),
+  LangUrd(),
+  LangUzb(),
+  LangVie(),
+  LangZho(),
+  LangZul(),
+];
+
+/// Sealed languages version of the `kCupertinoSupportedLanguages` list.
+///
+/// Implementation of localized strings for the Cupertino widgets using
+/// the `intl` package for date and time formatting.
+/// Missing "FIL" (Filipino Pilipino, but mapped to Tagalog "tl") and
+/// "GSW" (Swiss German Alemannic Alsatian, but mapped to Swiss German "de_CH")
+/// languages.
+///
+/// The only difference from the [kMaterialSupportedLanguagesSealed] list
+/// is the additional [LangPus] (Pashto (Pushto) language) in Material locales.
+const kCupertinoSupportedLanguagesSealed = [
+  LangAfr(),
+  LangAmh(),
+  LangAra(),
+  LangAsm(),
+  LangAze(),
+  LangBel(),
+  LangBul(),
+  LangBen(),
+  LangBos(),
+  LangCat(),
+  LangCes(),
+  LangCym(),
+  LangDan(),
+  LangDeu(),
+  LangEll(),
+  LangEng(),
+  LangSpa(),
+  LangEst(),
+  LangEus(),
+  LangFas(),
+  LangFin(),
+  LangFra(),
+  LangGlg(),
+  LangGuj(),
+  LangHeb(),
+  LangHin(),
+  LangHrv(),
+  LangHun(),
+  LangHye(),
+  LangInd(),
+  LangIsl(),
+  LangIta(),
+  LangJpn(),
+  LangKat(),
+  LangKaz(),
+  LangKhm(),
+  LangKan(),
+  LangKor(),
+  LangKir(),
+  LangLao(),
+  LangLit(),
+  LangLav(),
+  LangMkd(),
+  LangMal(),
+  LangMon(),
+  LangMar(),
+  LangMsa(),
+  LangMya(),
+  LangNob(),
+  LangNep(),
+  LangNld(),
+  LangNor(),
+  LangOri(),
+  LangPan(),
+  LangPol(),
   LangPor(),
   LangRon(),
   LangRus(),

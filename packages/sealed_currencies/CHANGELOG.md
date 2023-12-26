@@ -1,3 +1,21 @@
+## 1.0.0
+
+🎉 First anniversary and first stable release!
+
+NEW FEATURES
+
+- Added new getter for `TranslatedName` name called `common`, which might be useful in some cases when `name` is being used by a parent class.
+- Added a lot of translations from the Symfony.
+- Currencies translations now support all GlobalMaterialLocalizations and GlobalCupertinoLocalizations locales.
+- Updated LICENSE.
+
+BREAKING CHANGES
+
+- Removed code marked as `Deprecated` in previous releases.
+- Replaced old `FiatCurrency.list` with a new `FiatCurrency.listExtended`.
+- Removed `FiatCurrency.regularList` (please use `FiatCurrency.list` instead).
+- Marked Croatian Kuna as `Deprecated`.
+
 ## 0.9.0
 
 NEW FEATURES
@@ -38,7 +56,7 @@ NEW FEATURES
 - feat(model): added copy with, to-json etc.
 - fix(data): proper alternate symbols list for scandinavian countries
 
-NEW FEATURES:
+NEW FEATURES
 
 - Added copyWith, toJson etc. to the FiatCurrency class.
 - Fixed the alternate symbols list for scandinavian countries.
@@ -49,7 +67,7 @@ NEW FEATURES:
 - refactor(lints): fixing old ignores and new linter rules
 - chore(deps): updates of dev_dependencies
 
-BREAKING CHANGES:
+BREAKING CHANGES
 
 - refactor(data)!: zimbabwean dollar (zwl) is now properly placed as last item in currencies list
 

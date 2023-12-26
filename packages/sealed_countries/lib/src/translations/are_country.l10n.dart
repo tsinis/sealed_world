@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a United Arab Emirates country:
+/// Provides 147 translations for a United Arab Emirates country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -108,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -138,6 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -402,4 +405,7 @@ const areCountryTranslations = [
   TranslatedName(LangSun(), name: "Uni Émirat Arab"),
   TranslatedName(LangVol(), name: "Lemiräns Larabik Pebalöl"),
   TranslatedName(LangYid(), name: "פאראייניגטע אראבישע עמיראטן"),
+  TranslatedName(LangChv(), name: "Арапсен Пӗрлешӳллӗ Эмирачӗ"),
+  TranslatedName(LangSrd(), name: "Emirados Àrabos Unidos"),
+  TranslatedName(LangXho(), name: "E-United Arab Emirates"),
 ];

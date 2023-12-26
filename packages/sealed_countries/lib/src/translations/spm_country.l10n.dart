@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Saint Pierre and Miquelon country:
+/// Provides 131 translations for a Saint Pierre and Miquelon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,6 +49,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -76,6 +78,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -92,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -102,6 +106,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -119,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const spmCountryTranslations = [
@@ -359,4 +365,10 @@ const spmCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-Saint Pierre kanye ne-Miquelon"),
+  TranslatedName(LangChv(), name: "Сен-Пьер & Микелон"),
+  TranslatedName(LangIbo(), name: "Pierre na Miquelon Dị nsọ"),
+  TranslatedName(LangMri(), name: "Hato Piere & Mikerona"),
+  TranslatedName(LangSrd(), name: "Santu Predu e Miquelon"),
+  TranslatedName(LangTgl(), name: "St. Pierre & Miquelon"),
+  TranslatedName(LangXho(), name: "ESt. Pierre & Miquelon"),
 ];

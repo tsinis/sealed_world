@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a New Zealand Dollar currency:
+/// Provides 97 translations for a New Zealand Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -63,6 +64,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -101,7 +104,11 @@ const nzdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নিউজিল্যান্ড ডলার"),
   TranslatedName(LangBre(), name: "dollar Zeland-Nevez"),
   TranslatedName(LangBos(), name: "Novozelandski dolar"),
-  TranslatedName(LangBos(), name: "Новозеландски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Новозеландски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar neozelandès"),
   TranslatedName(LangChe(), name: "Керла Зеландин доллар"),
   TranslatedName(LangCes(), name: "novozélandský dolar"),
@@ -179,10 +186,17 @@ const nzdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "новозеландський долар"),
   TranslatedName(LangUrd(), name: "نیوزی لینڈ ڈالر"),
   TranslatedName(LangUzb(), name: "Yangi Zelandiya dollari"),
-  TranslatedName(LangUzb(), name: "NZD", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "NZD",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la New Zealand"),
   TranslatedName(LangZho(), name: "新西兰元"),
   TranslatedName(LangZho(), name: "紐西蘭元", countryCode: "HK"),
   TranslatedName(LangZho(), name: "紐西蘭幣", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-New Zealand Dollar"),
+  TranslatedName(LangAsm(), name: "নিউজিলেণ্ড ডলাৰ"),
+  TranslatedName(LangOri(), name: "ନିଉ ଜିଲାଣ୍ଡ ଡଲାର"),
+  TranslatedName(LangPus(), name: "نيوزيلانډي ډالر"),
 ];

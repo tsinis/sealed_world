@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Haitian Gourde currency:
+/// Provides 106 translations for a Haitian Gourde currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -80,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const htgCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Haitian Gourde"),
@@ -99,7 +115,11 @@ const htgCurrencyTranslations = [
   TranslatedName(LangBen(), name: "হাইতি গৌর্দে"),
   TranslatedName(LangBre(), name: "gourde Haiti"),
   TranslatedName(LangBos(), name: "Haićanski gurd"),
-  TranslatedName(LangBos(), name: "Хаићански гурд", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Хаићански гурд",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "gourde haitià"),
   TranslatedName(LangChe(), name: "Гаитин гурд"),
   TranslatedName(LangCes(), name: "haitský gourde"),
@@ -175,8 +195,28 @@ const htgCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "гаїтянський гурд"),
   TranslatedName(LangUrd(), name: "ہیتی کا گؤرڈی"),
   TranslatedName(LangUzb(), name: "Gaiti gurdi"),
-  TranslatedName(LangUzb(), name: "Гаити гурдаси", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Гаити гурдаси",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Gourde Haiti"),
   TranslatedName(LangZho(), name: "海地古德"),
   TranslatedName(LangZul(), name: "i-Haitian Gourde"),
+  TranslatedName(LangAsm(), name: "হাইটিয়ান গৌৰ্ড"),
+  TranslatedName(LangChv(), name: "Гаити гурдӗ"),
+  TranslatedName(LangFul(), name: "𞤘𞤵𞥅𞤪𞤣𞤫 𞤖𞤢𞤴𞤼𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Gourde na ƙasar Haiti"),
+  TranslatedName(LangIna(), name: "gourde haitian"),
+  TranslatedName(LangIbo(), name: "Ego Gourde obodo Haiti"),
+  TranslatedName(LangJav(), name: "Gourde Haiti"),
+  TranslatedName(LangKur(), name: "gûrdeyê haîtiyî"),
+  TranslatedName(LangMri(), name: "Gourde Haiti"),
+  TranslatedName(LangOri(), name: "ହାଇତୀୟ ଗୋରଡ୍"),
+  TranslatedName(LangPus(), name: "هيټي ګورډ"),
+  TranslatedName(LangSrd(), name: "gourde haitianu"),
+  TranslatedName(LangSom(), name: "Goordada Hiyati"),
+  TranslatedName(LangTuk(), name: "Gaiti gurdy"),
+  TranslatedName(LangXho(), name: "Haitian Gourde"),
+  TranslatedName(LangYor(), name: "Gọ́dì Àítì"),
 ];

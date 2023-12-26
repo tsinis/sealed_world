@@ -2,16 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 68 translations for a Southern Ndebele language:
+/// Provides 105 translations for a Southern Ndebele language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -19,55 +28,83 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Yoruba
+/// - Zulu.
 const nblLanguageTranslations = [
   TranslatedName(LangEng(), name: "South Ndebele"),
   TranslatedName(LangAfr(), name: "Suid-Ndebele"),
@@ -137,4 +174,45 @@ const nblLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Ndebele Miền Nam"),
   TranslatedName(LangZho(), name: "南恩德贝勒文"),
   TranslatedName(LangZho(), name: "南地畢列文", script: ScriptHant()),
+  TranslatedName(LangAmh(), name: "ደቡብ ንደቤሌ"),
+  TranslatedName(LangAsm(), name: "দক্ষিণ দেবেল"),
+  TranslatedName(LangBel(), name: "паўднёвая ндэбеле"),
+  TranslatedName(LangChe(), name: "къилба ндебеле"),
+  TranslatedName(LangEus(), name: "hegoaldeko ndebeleera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤐𞤣𞤫𞤦𞤫𞤤𞤫𞥅𞤪𞤫 𞤙𞤢𞥄𞤥𞤲𞤢𞥄𞤲𞤺𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "suður ndebele"),
+  TranslatedName(LangGlg(), name: "ndebele meridional"),
+  TranslatedName(LangHau(), name: "Ndebele na Kudu"),
+  TranslatedName(LangHye(), name: "հարավային նդեբելե"),
+  TranslatedName(LangIna(), name: "ndebele del sud"),
+  TranslatedName(LangIbo(), name: "Sọut Ndebele"),
+  TranslatedName(LangJav(), name: "Ndebele Kidul"),
+  TranslatedName(LangKat(), name: "სამხრეთ ნდებელური"),
+  TranslatedName(LangKaz(), name: "оңтүстік ндебеле тілі"),
+  TranslatedName(LangKhm(), name: "នេប៊េលខាងត្បូង"),
+  TranslatedName(LangKur(), name: "ndebeliya başûrî"),
+  TranslatedName(LangKir(), name: "түштүк ндебелече"),
+  TranslatedName(LangMri(), name: "Enetepēra ki te Tonga"),
+  TranslatedName(LangMon(), name: "өмнөд ндебеле"),
+  TranslatedName(LangMsa(), name: "Ndebele Selatan"),
+  TranslatedName(LangMya(), name: "တောင် အွန်န်ဘီလီ"),
+  TranslatedName(LangNep(), name: "दक्षिण न्देबेले"),
+  TranslatedName(LangPan(), name: "ਸਾਊਥ ਨਡੇਬੇਲੇ"),
+  TranslatedName(LangPus(), name: "سويلي نديبيل"),
+  TranslatedName(LangQue(), name: "Ndebele del Sur Simi"),
+  TranslatedName(LangSrd(), name: "ndebele de su sud"),
+  TranslatedName(LangSnd(), name: "ڏکڻ دبيلي"),
+  TranslatedName(LangSin(), name: "සෞත් ඩ්බේල්"),
+  TranslatedName(LangSqi(), name: "ndebelishte jugore"),
+  TranslatedName(LangSwa(), name: "Kindebele"),
+  TranslatedName(LangTir(), name: "ደቡብ ኤንደበለ"),
+  TranslatedName(LangTuk(), name: "günorta ndebele dili"),
+  TranslatedName(LangUrd(), name: "جنوبی نڈیبیلی"),
+  TranslatedName(LangUzb(), name: "janubiy ndebel"),
+  TranslatedName(LangYor(), name: "Èdè Gusu Ndebele"),
+  TranslatedName(LangZul(), name: "isi-South Ndebele"),
 ];

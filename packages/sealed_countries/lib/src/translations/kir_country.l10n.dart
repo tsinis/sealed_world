@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 83 translations for a Kiribati country:
+/// Provides 86 translations for a Kiribati country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -18,6 +18,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -54,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
@@ -82,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -261,4 +264,7 @@ const kirCountryTranslations = [
   TranslatedName(LangZul(), name: "i-Kiribati"),
   TranslatedName(LangFry(), name: "Kiribaty"),
   TranslatedName(LangLim(), name: "Kiribati-eilen"),
+  TranslatedName(LangChv(), name: "Кирибати"),
+  TranslatedName(LangMri(), name: "Kiripati"),
+  TranslatedName(LangXho(), name: "EKiribati"),
 ];

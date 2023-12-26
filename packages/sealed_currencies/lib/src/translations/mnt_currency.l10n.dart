@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Mongolian Tugrik currency:
+/// Provides 109 translations for a Mongolian Tugrik currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const mntCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Mongolian Tugrik"),
@@ -99,7 +116,11 @@ const mntCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মঙ্গোলিয়ান তুগরিক"),
   TranslatedName(LangBre(), name: "tugrik Mongolia"),
   TranslatedName(LangBos(), name: "Mongolski tugrik"),
-  TranslatedName(LangBos(), name: "Монголски тугрик", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Монголски тугрик",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "tögrög mongol"),
   TranslatedName(LangChe(), name: "Монголин тугрик"),
   TranslatedName(LangCes(), name: "mongolský tugrik"),
@@ -181,4 +202,21 @@ const mntCurrencyTranslations = [
   TranslatedName(LangZho(), name: "蒙古图格里克"),
   TranslatedName(LangZho(), name: "蒙古圖格里克", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Mongolian Tugrik"),
+  TranslatedName(LangAsm(), name: "মঙ্গোলিয়ান টুৰ্গিক"),
+  TranslatedName(LangChv(), name: "Монголи тугрикӗ"),
+  TranslatedName(LangFul(), name: "𞤚𞤵𞤺𞤵𞤪𞤭𞤳𞤵 𞤃𞤮𞤲𞤺𞤮𞤤𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Tugrik na Mongolia"),
+  TranslatedName(LangIna(), name: "tugrik mongol"),
+  TranslatedName(LangIbo(), name: "Ego Turgik Obodo Mongolia"),
+  TranslatedName(LangJav(), name: "Tugrik Mongol"),
+  TranslatedName(LangKur(), name: "togrokê moxolî"),
+  TranslatedName(LangMri(), name: "tugrik Mongōria"),
+  TranslatedName(LangOri(), name: "ମଙ୍ଗୋଲିୟ ତୁଗ୍ରିକ୍"),
+  TranslatedName(LangPus(), name: "منګوليايي توګريک"),
+  TranslatedName(LangSrd(), name: "tugrik mòngolu"),
+  TranslatedName(LangSom(), name: "Tugrikta Mongoliya"),
+  TranslatedName(LangTuk(), name: "Mongol tugrigi"),
+  TranslatedName(LangTgl(), name: "Mongolian Tugrik"),
+  TranslatedName(LangXho(), name: "I-Tugrik yaseMongolia"),
+  TranslatedName(LangYor(), name: "Túgúrììkì Mòǹgólíà"),
 ];

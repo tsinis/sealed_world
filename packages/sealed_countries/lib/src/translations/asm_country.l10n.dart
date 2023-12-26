@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a American Samoa country:
+/// Provides 128 translations for a American Samoa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -75,6 +76,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -91,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -118,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const asmCountryTranslations = [
@@ -341,4 +345,8 @@ const asmCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-American Samoa"),
+  TranslatedName(LangChv(), name: "Америка Самоа"),
+  TranslatedName(LangMri(), name: "Hāmoa-Amerika"),
+  TranslatedName(LangSrd(), name: "Samoa americanas"),
+  TranslatedName(LangXho(), name: "E-American Samoa"),
 ];

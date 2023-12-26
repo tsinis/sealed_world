@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a Djiboutian Franc currency:
+/// Provides 118 translations for a Djiboutian Franc currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,16 +45,20 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -67,11 +73,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -79,6 +88,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
@@ -88,10 +98,12 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +111,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const djfCurrencyTranslations = [
@@ -114,7 +127,11 @@ const djfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জিবুতি ফ্রাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Djibouti"),
   TranslatedName(LangBos(), name: "Džibutski franak"),
-  TranslatedName(LangBos(), name: "Џибутански франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Џибутански франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc de Djibouti"),
   TranslatedName(LangChe(), name: "Джибутин франк"),
   TranslatedName(LangCes(), name: "džibutský frank"),
@@ -211,4 +228,17 @@ const djfCurrencyTranslations = [
   TranslatedName(LangZho(), name: "吉布提法郎"),
   TranslatedName(LangZho(), name: "吉布地法郎", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Djiboutian Franc"),
+  TranslatedName(LangAsm(), name: "জিবুটি ফ্ৰেংক"),
+  TranslatedName(LangChv(), name: "Джибути франкӗ"),
+  TranslatedName(LangIna(), name: "franco djibutian"),
+  TranslatedName(LangIbo(), name: "Ego Franc obodo Djibouti"),
+  TranslatedName(LangJav(), name: "Franc Djibouti"),
+  TranslatedName(LangKur(), name: "frankê cîbûtiyî"),
+  TranslatedName(LangMri(), name: "Franc Tepūti"),
+  TranslatedName(LangOri(), name: "ଜିବୌଟିୟ ଫ୍ରାଙ୍କ୍"),
+  TranslatedName(LangPus(), name: "جبوتي فرانک"),
+  TranslatedName(LangSrd(), name: "francu gibutianu"),
+  TranslatedName(LangTuk(), name: "Jibuti franky"),
+  TranslatedName(LangTgl(), name: "Djiboutian Franc"),
+  TranslatedName(LangXho(), name: "I-Franc yaseDjibouti"),
 ];

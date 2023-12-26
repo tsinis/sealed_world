@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Cape Verde country:
+/// Provides 130 translations for a Cape Verde country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -50,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Icelandic
 /// - Ido
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -93,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -120,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -346,4 +350,8 @@ const cpvCountryTranslations = [
   TranslatedName(LangLim(), name: "Kaapverdië"),
   TranslatedName(LangMri(), name: "Te Kūrae Matomato"),
   TranslatedName(LangVol(), name: "Kabovärduäns"),
+  TranslatedName(LangChv(), name: "Кабо-Верде"),
+  TranslatedName(LangIna(), name: "Capo Verde"),
+  TranslatedName(LangSrd(), name: "Cabu birde"),
+  TranslatedName(LangXho(), name: "ECape Verde"),
 ];

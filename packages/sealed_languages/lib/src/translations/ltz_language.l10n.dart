@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Luxembourgish (Letzeburgesch) language:
+/// Provides 114 translations for a Luxembourgish (Letzeburgesch) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,15 +44,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,12 +68,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -73,18 +83,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -92,7 +109,9 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const ltzLanguageTranslations = [
   TranslatedName(LangEng(), name: "Luxembourgish"),
@@ -190,4 +209,27 @@ const ltzLanguageTranslations = [
   TranslatedName(LangZho(), name: "卢森堡文"),
   TranslatedName(LangZho(), name: "盧森堡文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Luxembourgish"),
+  TranslatedName(LangAsm(), name: "লাক্সেমবাৰ্গিচ"),
+  TranslatedName(LangBel(), name: "люксембургская"),
+  TranslatedName(LangChe(), name: "люксембургхойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤂𞤵𞥁𞤫𞤲𞤦𞤵𞥅𞤪𞤺𞤭𞤧𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "luxemburgese"),
+  TranslatedName(LangIbo(), name: "Lụxenbọụgịsh"),
+  TranslatedName(LangJav(), name: "Luksemburg"),
+  TranslatedName(LangKur(), name: "luksembûrgî"),
+  TranslatedName(LangMri(), name: "Rakapuō"),
+  TranslatedName(LangPus(), name: "لوګزامبورګي"),
+  TranslatedName(LangSrd(), name: "lussemburghesu"),
+  TranslatedName(LangSnd(), name: "لگزمبرگ"),
+  TranslatedName(LangSom(), name: "Luksaamboorgish"),
+  TranslatedName(LangTgk(), name: "люксембургӣ"),
+  TranslatedName(LangTir(), name: "ሉክሰምበርግኛ"),
+  TranslatedName(LangTuk(), name: "lýuksemburg dili"),
+  TranslatedName(LangTat(), name: "люксембург"),
+  TranslatedName(LangWol(), name: "Liksàmbursuwaa"),
+  TranslatedName(LangYor(), name: "Lùṣẹ́mbọ́ọ̀gì"),
 ];

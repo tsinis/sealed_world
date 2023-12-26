@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Barbadian Dollar currency:
+/// Provides 107 translations for a Barbadian Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,16 +66,20 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -80,6 +92,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +100,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const bbdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Barbadian Dollar"),
@@ -99,7 +114,11 @@ const bbdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বার্বেডোজ ডলার"),
   TranslatedName(LangBre(), name: "dollar Barbados"),
   TranslatedName(LangBos(), name: "Barbadoski dolar"),
-  TranslatedName(LangBos(), name: "Барбадошки долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Барбадошки долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar de Barbados"),
   TranslatedName(LangChe(), name: "Барбадосан доллар"),
   TranslatedName(LangCes(), name: "barbadoský dolar"),
@@ -176,9 +195,28 @@ const bbdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "барбадоський долар"),
   TranslatedName(LangUrd(), name: "باربیڈین ڈالر"),
   TranslatedName(LangUzb(), name: "Barbados dollari"),
-  TranslatedName(LangUzb(), name: "Барбадос доллари", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Барбадос доллари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Barbados"),
   TranslatedName(LangZho(), name: "巴巴多斯元"),
   TranslatedName(LangZho(), name: "巴貝多元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Barbadian Dollar"),
+  TranslatedName(LangAsm(), name: "বাৰ্বাডিয়ান ডলাৰ"),
+  TranslatedName(LangChv(), name: "Барбадос долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤄𞤢𞤪𞤦𞤢𞤣𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dalar ƙasar Barbados"),
+  TranslatedName(LangIna(), name: "dollar barbadian"),
+  TranslatedName(LangIbo(), name: "Ego Dollar obodo Barbados"),
+  TranslatedName(LangJav(), name: "Dolar Barbadian"),
+  TranslatedName(LangKur(), name: "dolarê barbadosî"),
+  TranslatedName(LangMri(), name: "Tāra Papatohe"),
+  TranslatedName(LangOri(), name: "ବାର୍ବାଡୀୟ ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "باربيډين ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru barbadianu"),
+  TranslatedName(LangTuk(), name: "Barbados dollary"),
+  TranslatedName(LangXho(), name: "Barbadian Dollar"),
+  TranslatedName(LangYor(), name: "Dọ́là Bábádọ̀ọ̀sì"),
 ];

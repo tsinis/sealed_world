@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a Somali Shilling currency:
+/// Provides 120 translations for a Somali Shilling currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,6 +89,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
@@ -89,10 +99,12 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const sosCurrencyTranslations = [
@@ -115,7 +128,11 @@ const sosCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সোমালি শিলিং"),
   TranslatedName(LangBre(), name: "shilling Somalia"),
   TranslatedName(LangBos(), name: "Somalski šiling"),
-  TranslatedName(LangBos(), name: "СОмалијски шилинг", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "СОмалијски шилинг",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "xíling somali"),
   TranslatedName(LangChe(), name: "Сомалин шиллинг"),
   TranslatedName(LangCes(), name: "somálský šilink"),
@@ -214,4 +231,17 @@ const sosCurrencyTranslations = [
   TranslatedName(LangZho(), name: "索馬里先令", countryCode: "HK"),
   TranslatedName(LangZho(), name: "索馬利亞先令", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Somali Shilling"),
+  TranslatedName(LangAsm(), name: "চোমালি শ্বিলিং"),
+  TranslatedName(LangChv(), name: "Сомали шиллингӗ"),
+  TranslatedName(LangIna(), name: "shilling somali"),
+  TranslatedName(LangIbo(), name: "Ego shilling obodo Somali"),
+  TranslatedName(LangJav(), name: "Shilling Somalia"),
+  TranslatedName(LangKur(), name: "şîlîngê somalî"),
+  TranslatedName(LangMri(), name: "Hereni Hūmārie"),
+  TranslatedName(LangOri(), name: "ସୋମାଲି ସିଲିଂ"),
+  TranslatedName(LangPus(), name: "سومالي شيلنګ"),
+  TranslatedName(LangSrd(), name: "iscellinu sòmalu"),
+  TranslatedName(LangTuk(), name: "Somali şillingi"),
+  TranslatedName(LangTgl(), name: "Somali Shilling"),
+  TranslatedName(LangXho(), name: "I-Shilling yaseSomalia"),
 ];

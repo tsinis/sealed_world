@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Laotian Kip currency:
+/// Provides 110 translations for a Laotian Kip currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const lakCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Laotian Kip"),
@@ -99,7 +116,11 @@ const lakCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লেউশান কিপ"),
   TranslatedName(LangBre(), name: "kip Laos"),
   TranslatedName(LangBos(), name: "Laoski kip"),
-  TranslatedName(LangBos(), name: "Лаошки кип", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Лаошки кип",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "kip laosià"),
   TranslatedName(LangChe(), name: "Лаосан кип"),
   TranslatedName(LangCes(), name: "laoský kip"),
@@ -182,4 +203,21 @@ const lakCurrencyTranslations = [
   TranslatedName(LangZho(), name: "老撾基普", countryCode: "HK"),
   TranslatedName(LangZho(), name: "寮國基普", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Laotian Kip"),
+  TranslatedName(LangAsm(), name: "লাওচিয়ান কিপ"),
+  TranslatedName(LangChv(), name: "Лаос кипӗ"),
+  TranslatedName(LangFul(), name: "𞤑𞤭𞤨𞤵 𞤂𞤢𞤱𞤮𞥅𞤧𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Laos"),
+  TranslatedName(LangIna(), name: "kip laotian"),
+  TranslatedName(LangIbo(), name: "Ego Kip Obodo Laos"),
+  TranslatedName(LangJav(), name: "Kip Laos"),
+  TranslatedName(LangKur(), name: "kîpê laosî"),
+  TranslatedName(LangMri(), name: "kip Rāoho"),
+  TranslatedName(LangOri(), name: "ଲାଓଟିୟ କିପ୍"),
+  TranslatedName(LangPus(), name: "لاشې کپ"),
+  TranslatedName(LangSrd(), name: "kip laotianu"),
+  TranslatedName(LangSom(), name: "Kib Laoti"),
+  TranslatedName(LangTuk(), name: "Laos kipi"),
+  TranslatedName(LangTgl(), name: "Laotian Kip"),
+  TranslatedName(LangXho(), name: "I-Kip yaseLaos"),
+  TranslatedName(LangYor(), name: "Kíììpù Làótì"),
 ];

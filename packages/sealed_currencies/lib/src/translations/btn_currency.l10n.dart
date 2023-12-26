@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Bhutanese Ngultrum currency:
+/// Provides 109 translations for a Bhutanese Ngultrum currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const btnCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Bhutanese Ngultrum"),
@@ -99,7 +116,11 @@ const btnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ভুটানি এনগুল্ট্রুম"),
   TranslatedName(LangBre(), name: "ngultrum Bhoutan"),
   TranslatedName(LangBos(), name: "Butanski ngultrum"),
-  TranslatedName(LangBos(), name: "Бутански нгултрум", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Бутански нгултрум",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "ngultrum de Bhutan"),
   TranslatedName(LangChe(), name: "Бутанан нгултрум"),
   TranslatedName(LangCes(), name: "bhútánský ngultrum"),
@@ -181,4 +202,21 @@ const btnCurrencyTranslations = [
   TranslatedName(LangZho(), name: "不丹努尔特鲁姆"),
   TranslatedName(LangZho(), name: "不丹那特倫", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Bhutanese Ngultrum"),
+  TranslatedName(LangAsm(), name: "ভুটানী নংগলট্ৰাম"),
+  TranslatedName(LangChv(), name: "Бутан нгултрумӗ"),
+  TranslatedName(LangFul(), name: "𞤐𞤘𞤵𞤤𞤼𞤵𞤪𞤵𞤥𞤵 𞤄𞤵𞤼𞤢𞤲𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Ngultrum na ƙasar Bhutan"),
+  TranslatedName(LangIna(), name: "ngultrum bhutanese"),
+  TranslatedName(LangIbo(), name: "Ego Ngultrum obodo Bhutan"),
+  TranslatedName(LangJav(), name: "Ngultrum Bhutan"),
+  TranslatedName(LangKur(), name: "ngultrumê bûtanî"),
+  TranslatedName(LangMri(), name: "Ngultrum Pūtana"),
+  TranslatedName(LangOri(), name: "ଭୁଟାନୀ ଗଲଟ୍ରୁମ୍"),
+  TranslatedName(LangPus(), name: "بهوټانۍ انګولټرم"),
+  TranslatedName(LangSrd(), name: "ngultrum bhutanesu"),
+  TranslatedName(LangSom(), name: "Nugultaramta Butan"),
+  TranslatedName(LangTuk(), name: "Butan ngultrumy"),
+  TranslatedName(LangTgl(), name: "Bhutanese Ngultrum"),
+  TranslatedName(LangXho(), name: "I-Ngultrum yaseBhutan"),
+  TranslatedName(LangYor(), name: "Ìngọ́tírọ̀mù Bútàànì"),
 ];

@@ -2,12 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 89 translations for a Xhosa language:
+/// Provides 104 translations for a Xhosa language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +18,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,14 +31,19 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -55,12 +63,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -68,10 +78,13 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,11 +94,13 @@ import "../model/translated_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const xhoLanguageTranslations = [
@@ -178,4 +193,23 @@ const xhoLanguageTranslations = [
   TranslatedName(LangZho(), name: "科萨文"),
   TranslatedName(LangZho(), name: "科薩文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isiXhosa"),
+  TranslatedName(LangAsm(), name: "হোছা"),
+  TranslatedName(LangChe(), name: "коса"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤮𞥅𞤧𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Bazosa"),
+  TranslatedName(LangIna(), name: "xhosa"),
+  TranslatedName(LangIbo(), name: "Xhọsa"),
+  TranslatedName(LangKur(), name: "xosayî"),
+  TranslatedName(LangMri(), name: "Tōha"),
+  TranslatedName(LangPus(), name: "خوسا"),
+  TranslatedName(LangSrd(), name: "xhosa"),
+  TranslatedName(LangSnd(), name: "زھوسا"),
+  TranslatedName(LangSom(), name: "Hoosta"),
+  TranslatedName(LangTuk(), name: "kosa dili"),
+  TranslatedName(LangXho(), name: "IsiXhosa"),
+  TranslatedName(LangDeu(), name: "Xhosa"),
 ];

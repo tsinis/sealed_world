@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Comoros country:
+/// Provides 129 translations for a Comoros country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -76,6 +77,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -92,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -119,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -320,4 +324,8 @@ const comCountryTranslations = [
   TranslatedName(LangIdo(), name: "Komori"),
   TranslatedName(LangLat(), name: "Insulae Comorianae"),
   TranslatedName(LangVol(), name: "Komoruäns"),
+  TranslatedName(LangChv(), name: "Комор утравӗсем"),
+  TranslatedName(LangMri(), name: "Komoro"),
+  TranslatedName(LangSrd(), name: "Comoras"),
+  TranslatedName(LangXho(), name: "EComoros"),
 ];

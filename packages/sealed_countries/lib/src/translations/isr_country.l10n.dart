@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 129 translations for a Israel country:
+/// Provides 130 translations for a Israel country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -125,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -310,4 +311,5 @@ const isrCountryTranslations = [
   TranslatedName(LangSsw(), name: "Ka-Israyeli"),
   TranslatedName(LangVol(), name: "Yisraelän"),
   TranslatedName(LangWln(), name: "Israyel"),
+  TranslatedName(LangXho(), name: "E-Israel"),
 ];

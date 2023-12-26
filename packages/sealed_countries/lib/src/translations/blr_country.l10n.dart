@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 143 translations for a Belarus country:
+/// Provides 145 translations for a Belarus country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -110,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -140,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -375,4 +377,6 @@ const blrCountryTranslations = [
   TranslatedName(LangTuk(), name: "Belorussiýa"),
   TranslatedName(LangTgl(), name: "Biyelorusya"),
   TranslatedName(LangVol(), name: "Belarusän"),
+  TranslatedName(LangSrd(), name: "Bielorùssia"),
+  TranslatedName(LangXho(), name: "EBelarus"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a United States Virgin Islands country:
+/// Provides 131 translations for a United States Virgin Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -50,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -61,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -75,7 +78,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -90,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -100,6 +106,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -117,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const virCountryTranslations = [
@@ -363,4 +371,12 @@ const virCountryTranslations = [
     countryCode: "BJ",
   ),
   TranslatedName(LangZul(), name: "i-U.S. Virgin Islands"),
+  TranslatedName(LangChv(), name: "Виргини утравӗсем (АПШ)"),
+  TranslatedName(LangIna(), name: "Insulas Virgine statounitese"),
+  TranslatedName(LangKur(), name: "Giravên Vîrjînê yên Amerîkayê"),
+  TranslatedName(LangMri(), name: "Ngā Moutere Puhi Amerika"),
+  TranslatedName(LangNde(), name: "U.S. Virgin Islands"),
+  TranslatedName(LangSrd(), name: "Ìsulas Vèrgines de sos Istados Unidos"),
+  TranslatedName(LangTgl(), name: "U.S. Virgin Islands"),
+  TranslatedName(LangXho(), name: "E-U.S. Virgin Islands"),
 ];

@@ -2,14 +2,21 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 62 translations for a Zhuang (Chuang) language:
+/// Provides 85 translations for a Zhuang (Chuang) language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -20,6 +27,9 @@ import "../model/translated_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Galician
+/// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
@@ -31,8 +41,11 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -40,10 +53,13 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -51,17 +67,24 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Uzbek
+/// - Vietnamese
+/// - Zhuang (Chuang)
+/// - Zulu.
 const zhaLanguageTranslations = [
   TranslatedName(LangEng(), name: "Zhuang"),
   TranslatedName(LangAmh(), name: "ዡዋንግኛ"),
@@ -124,7 +147,28 @@ const zhaLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Zhuang"),
   TranslatedName(LangZho(), name: "壮文"),
   TranslatedName(LangZho(), name: "壯文", script: ScriptHant()),
-
-  /// Added manually:
   TranslatedName(LangSlv(), name: "žuangščina"),
+  TranslatedName(LangHye(), name: "ժուանգ"),
+  TranslatedName(LangKur(), name: "zhuangî"),
+  TranslatedName(LangTur(), name: "Zhuangca"),
+  TranslatedName(LangZha(), name: "Vahcuengh"),
+  TranslatedName(LangAsm(), name: "ঝুৱাং"),
+  TranslatedName(LangBel(), name: "чжуанская"),
+  TranslatedName(LangDeu(), name: "Zhuang"),
+  TranslatedName(LangEus(), name: "zhuangarra"),
+  TranslatedName(LangGlg(), name: "zhuang"),
+  TranslatedName(LangKat(), name: "ჯუანური"),
+  TranslatedName(LangKaz(), name: "чжуан"),
+  TranslatedName(LangKir(), name: "чжуанча"),
+  TranslatedName(LangMon(), name: "жуан"),
+  TranslatedName(LangMya(), name: "ချုန်း"),
+  TranslatedName(LangNep(), name: "जुआङ्ग"),
+  TranslatedName(LangPan(), name: "ਜ਼ੁਆਂਗ"),
+  TranslatedName(LangPus(), name: "ژوانګ"),
+  TranslatedName(LangSin(), name: "ෂුවාන්"),
+  TranslatedName(LangSqi(), name: "Zhuang"),
+  TranslatedName(LangSwa(), name: "Kizhuangi"),
+  TranslatedName(LangUrd(), name: "ژوانگ"),
+  TranslatedName(LangUzb(), name: "chjuan"),
+  TranslatedName(LangZul(), name: "isi-Zhuang"),
 ];

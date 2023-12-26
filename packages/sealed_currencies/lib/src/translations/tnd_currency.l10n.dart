@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a Tunisian Dinar currency:
+/// Provides 119 translations for a Tunisian Dinar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const tndCurrencyTranslations = [
@@ -114,7 +128,11 @@ const tndCurrencyTranslations = [
   TranslatedName(LangBen(), name: "তিউনেশিয়ান দিনার"),
   TranslatedName(LangBre(), name: "dinar Tunizia"),
   TranslatedName(LangBos(), name: "Tuniški dinar"),
-  TranslatedName(LangBos(), name: "Тунизијски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Тунизијски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dinar tunisià"),
   TranslatedName(LangChe(), name: "Тунисан динар"),
   TranslatedName(LangCes(), name: "tuniský dinár"),
@@ -211,4 +229,18 @@ const tndCurrencyTranslations = [
   TranslatedName(LangZho(), name: "突尼斯第纳尔"),
   TranslatedName(LangZho(), name: "突尼西亞第納爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Tunisian Dinar"),
+  TranslatedName(LangAsm(), name: "টুনিচিয়ান ডিনাৰ"),
+  TranslatedName(LangChv(), name: "Тунези динарӗ"),
+  TranslatedName(LangIna(), name: "dinar tunisian"),
+  TranslatedName(LangIbo(), name: "Ego Dinar Obodo Tunisia"),
+  TranslatedName(LangJav(), name: "Dinar Tunisia"),
+  TranslatedName(LangKur(), name: "dînarê tûnisî"),
+  TranslatedName(LangMri(), name: "Dinar Tūnihia"),
+  TranslatedName(LangOri(), name: "ଟୁନେସିଆଇ ଦିନାର୍"),
+  TranslatedName(LangPus(), name: "تيونسې دينار"),
+  TranslatedName(LangSrd(), name: "dinar tunisinu"),
+  TranslatedName(LangSom(), name: "Dinaarka Tunisiya"),
+  TranslatedName(LangTuk(), name: "Tunis dinary"),
+  TranslatedName(LangTgl(), name: "Tunisian Dinar"),
+  TranslatedName(LangXho(), name: "Tunisian Dinar"),
 ];

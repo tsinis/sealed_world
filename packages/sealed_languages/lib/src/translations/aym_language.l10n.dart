@@ -2,9 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 71 translations for a Aymara language:
+/// Provides 99 translations for a Aymara language:
+/// - (Eastern) Punjabi
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -12,7 +16,9 @@ import "../model/translated_name.dart";
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -24,21 +30,29 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -46,30 +60,44 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
+/// - Welsh
+/// - Yoruba
 /// - Zulu.
 const aymLanguageTranslations = [
   TranslatedName(LangEng(), name: "Aymara"),
@@ -143,4 +171,36 @@ const aymLanguageTranslations = [
   TranslatedName(LangZho(), name: "艾马拉文"),
   TranslatedName(LangZho(), name: "艾馬拉文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Aymara"),
+  TranslatedName(LangAsm(), name: "আয়মাৰা"),
+  TranslatedName(LangChe(), name: "аймара"),
+  TranslatedName(LangCym(), name: "Aymareg"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤴𞤥𞤢𞤪𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Aymaranci"),
+  TranslatedName(LangHye(), name: "այմարա"),
+  TranslatedName(LangIna(), name: "aymara"),
+  TranslatedName(LangIbo(), name: "Ayịmarà"),
+  TranslatedName(LangKaz(), name: "аймара тілі"),
+  TranslatedName(LangKur(), name: "aymarayî"),
+  TranslatedName(LangKir(), name: "аймарача"),
+  TranslatedName(LangMri(), name: "Aimāra"),
+  TranslatedName(LangMon(), name: "аймара"),
+  TranslatedName(LangMya(), name: "အိုင်မာရ"),
+  TranslatedName(LangNep(), name: "ऐमारा"),
+  TranslatedName(LangPan(), name: "ਅਈਮਾਰਾ"),
+  TranslatedName(LangPus(), name: "ایماري"),
+  TranslatedName(LangQue(), name: "Aymara Simi"),
+  TranslatedName(LangSrd(), name: "aimara"),
+  TranslatedName(LangSnd(), name: "ایمارا"),
+  TranslatedName(LangSin(), name: "අයිමරා"),
+  TranslatedName(LangSom(), name: "U dhashay Aymar"),
+  TranslatedName(LangSqi(), name: "ajmarisht"),
+  TranslatedName(LangTir(), name: "ኣይማራ"),
+  TranslatedName(LangTuk(), name: "aýmara dili"),
+  TranslatedName(LangUzb(), name: "aymara"),
+  TranslatedName(LangYor(), name: "Èdè Amara"),
+  TranslatedName(LangDeu(), name: "Aymara"),
 ];

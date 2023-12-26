@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Russian Ruble currency:
+/// Provides 114 translations for a Russian Ruble currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -30,24 +31,29 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,29 +65,41 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
+/// - Tajik
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -89,6 +107,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Zulu.
 const rubCurrencyTranslations = [
@@ -102,7 +122,11 @@ const rubCurrencyTranslations = [
   TranslatedName(LangBen(), name: "রাশিয়ান রুবেল"),
   TranslatedName(LangBre(), name: "roubl Rusia"),
   TranslatedName(LangBos(), name: "Ruska rublja"),
-  TranslatedName(LangBos(), name: "Руска рубља", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Руска рубља",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "ruble rus"),
   TranslatedName(LangChe(), name: "Российн сом"),
   TranslatedName(LangCes(), name: "ruský rubl"),
@@ -180,10 +204,34 @@ const rubCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "російський рубль"),
   TranslatedName(LangUrd(), name: "روسی روبل"),
   TranslatedName(LangUzb(), name: "Rossiya rubli"),
-  TranslatedName(LangUzb(), name: "Рус рубли", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Рус рубли",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Rúp Nga"),
   TranslatedName(LangYid(), name: "רוסישער רובל"),
   TranslatedName(LangZho(), name: "俄罗斯卢布"),
   TranslatedName(LangZho(), name: "俄羅斯盧布", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Russian Ruble"),
+  TranslatedName(LangAsm(), name: "ৰাছিয়ান ৰুব্‌ল"),
+  TranslatedName(LangFul(), name: "𞤈𞤵𞥅𞤦𞤮𞤤 𞤈𞤭𞥅𞤧𞤭𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Ruble na ƙasar Rasha"),
+  TranslatedName(LangIbo(), name: "Ruble Russia"),
+  TranslatedName(LangJav(), name: "Rubel Rusia"),
+  TranslatedName(LangKur(), name: "rubleyê rûsî"),
+  TranslatedName(LangMri(), name: "Rūpera Ruhiana"),
+  TranslatedName(LangOrm(), name: "Russian Ruble"),
+  TranslatedName(LangOri(), name: "ରୁଷି ରୁବଲ୍"),
+  TranslatedName(LangPus(), name: "روسي روبل"),
+  TranslatedName(LangSan(), name: "रष्यदेशीय रूबल"),
+  TranslatedName(LangSrd(), name: "rublu russu"),
+  TranslatedName(LangSnd(), name: "रशियनु रुबलु"),
+  TranslatedName(LangSom(), name: "Rubalka Ruushka"),
+  TranslatedName(LangSun(), name: "Rubel Rusia"),
+  TranslatedName(LangTgk(), name: "Рубли русӣ"),
+  TranslatedName(LangTuk(), name: "Rus rubly"),
+  TranslatedName(LangTgl(), name: "Ruble ng Russia"),
+  TranslatedName(LangWol(), name: "Ruble bi Rsis"),
+  TranslatedName(LangXho(), name: "I-Ruble yaseRashiya"),
 ];

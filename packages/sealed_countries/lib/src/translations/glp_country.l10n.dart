@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 103 translations for a Guadeloupe country:
+/// Provides 108 translations for a Guadeloupe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -20,8 +20,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -66,6 +68,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -76,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -99,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -258,4 +263,9 @@ const glpCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Gadelope"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Gadelope", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Guadeloupe"),
+  TranslatedName(LangCat(), name: "Guadalupe"),
+  TranslatedName(LangChv(), name: "Гваделупа"),
+  TranslatedName(LangMri(), name: "Kuatarupa"),
+  TranslatedName(LangSrd(), name: "Guadalupa"),
+  TranslatedName(LangXho(), name: "EGuadeloupe"),
 ];

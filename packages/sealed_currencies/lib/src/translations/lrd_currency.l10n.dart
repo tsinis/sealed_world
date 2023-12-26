@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a Liberian Dollar currency:
+/// Provides 120 translations for a Liberian Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,11 +90,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -94,6 +105,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -101,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const lrdCurrencyTranslations = [
@@ -116,7 +129,11 @@ const lrdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লিবেরিয়ান ডলার"),
   TranslatedName(LangBre(), name: "dollar Liberia"),
   TranslatedName(LangBos(), name: "Liberijski dolar"),
-  TranslatedName(LangBos(), name: "Либеријски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Либеријски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar liberià"),
   TranslatedName(LangChe(), name: "Либерин доллар"),
   TranslatedName(LangCes(), name: "liberijský dolar"),
@@ -215,4 +232,17 @@ const lrdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "利比利亞元", countryCode: "HK"),
   TranslatedName(LangZho(), name: "賴比瑞亞元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Liberian Dollar"),
+  TranslatedName(LangAsm(), name: "লাইবেৰিয়ান ডলাৰ"),
+  TranslatedName(LangChv(), name: "Либери долларӗ"),
+  TranslatedName(LangIna(), name: "dollar liberian"),
+  TranslatedName(LangIbo(), name: "Ego Dollar obodo Liberia"),
+  TranslatedName(LangJav(), name: "Dolar Liberia"),
+  TranslatedName(LangKur(), name: "dolarê lîberyayî"),
+  TranslatedName(LangMri(), name: "Tāra Raipiria"),
+  TranslatedName(LangOri(), name: "ଲିବେରୀୟ ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "لايبيرين ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru liberianu"),
+  TranslatedName(LangSom(), name: "Doolarka Liberiya"),
+  TranslatedName(LangTuk(), name: "Liberiýa dollary"),
+  TranslatedName(LangXho(), name: "IDola yaseLiberia"),
 ];

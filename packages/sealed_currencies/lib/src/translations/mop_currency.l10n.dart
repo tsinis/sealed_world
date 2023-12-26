@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 90 translations for a Macanese Pataca currency:
+/// Provides 107 translations for a Macanese Pataca currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const mopCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Macanese Pataca"),
@@ -98,7 +115,11 @@ const mopCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ম্যাক্যাও পাটাকা"),
   TranslatedName(LangBre(), name: "pataca Macau"),
   TranslatedName(LangBos(), name: "Makaonska pataka"),
-  TranslatedName(LangBos(), name: "Маканишка патака", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Маканишка патака",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "pataca de Macau"),
   TranslatedName(LangChe(), name: "Макаон патака"),
   TranslatedName(LangCes(), name: "macajská pataca"),
@@ -178,4 +199,21 @@ const mopCurrencyTranslations = [
   TranslatedName(LangZho(), name: "澳门币"),
   TranslatedName(LangZho(), name: "澳門元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Macanese Pataca"),
+  TranslatedName(LangAsm(), name: "মেকানীজ পাটাকা"),
+  TranslatedName(LangChv(), name: "Макао патаки"),
+  TranslatedName(LangFul(), name: "𞤆𞤢𞤼𞤢𞤳𞤢 𞤃𞤢𞤳𞤢𞤱𞤮𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Pataca na ƙasar Macao"),
+  TranslatedName(LangIna(), name: "pataca de Macao"),
+  TranslatedName(LangIbo(), name: "Ego Pataca ndị Obodo Macanese"),
+  TranslatedName(LangJav(), name: "Pataca Macau"),
+  TranslatedName(LangKur(), name: "patakayê makaoyî"),
+  TranslatedName(LangMri(), name: "Pataca Makau"),
+  TranslatedName(LangOri(), name: "ମାକାନେଜ୍ ପାଟାକା"),
+  TranslatedName(LangPus(), name: "مکانيس پټاکا"),
+  TranslatedName(LangSrd(), name: "pataca macanesa"),
+  TranslatedName(LangSom(), name: "Bataka Makana"),
+  TranslatedName(LangTuk(), name: "Makao patakasy"),
+  TranslatedName(LangTgl(), name: "Macanese Pataca"),
+  TranslatedName(LangXho(), name: "I-Pataca yaseMacao"),
+  TranslatedName(LangYor(), name: "Pàtákà Màkáò"),
 ];

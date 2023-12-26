@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Slovak language:
+/// Provides 114 translations for a Slovak language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,24 +34,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,6 +68,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -67,6 +76,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -74,19 +84,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -94,6 +110,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -195,4 +212,25 @@ const slkLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Slovaki"),
   TranslatedName(LangZho(), name: "斯洛伐克文"),
   TranslatedName(LangZul(), name: "isi-Slovak"),
+  TranslatedName(LangAsm(), name: "শ্লোভাক"),
+  TranslatedName(LangChe(), name: "словакийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤤𞤮𞤾𞤢𞥄𞤳𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Basulke"),
+  TranslatedName(LangIna(), name: "slovaco"),
+  TranslatedName(LangIbo(), name: "Slova"),
+  TranslatedName(LangJav(), name: "Slowakia"),
+  TranslatedName(LangKur(), name: "slovakî"),
+  TranslatedName(LangMri(), name: "Horowākia"),
+  TranslatedName(LangPus(), name: "سلوواکي"),
+  TranslatedName(LangSrd(), name: "islovacu"),
+  TranslatedName(LangSnd(), name: "سلواڪي"),
+  TranslatedName(LangSom(), name: "Isloofaak"),
+  TranslatedName(LangTgk(), name: "словакӣ"),
+  TranslatedName(LangTuk(), name: "slowak dili"),
+  TranslatedName(LangTat(), name: "словак"),
+  TranslatedName(LangWol(), name: "Eslowaki (Eslowak)"),
 ];

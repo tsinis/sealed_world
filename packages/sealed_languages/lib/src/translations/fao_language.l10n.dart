@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Faroese language:
+/// Provides 116 translations for a Faroese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,16 +43,20 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -61,6 +68,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -69,6 +77,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -76,19 +85,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -96,6 +111,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -200,4 +216,24 @@ const faoLanguageTranslations = [
   TranslatedName(LangZho(), name: "法罗文"),
   TranslatedName(LangZho(), name: "法羅文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Faroese"),
+  TranslatedName(LangAsm(), name: "ফাৰোইজ"),
+  TranslatedName(LangChe(), name: "фарерийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤊𞤫𞤪𞤮𞤱𞤫𞤧𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "feroese"),
+  TranslatedName(LangIbo(), name: "Farọse"),
+  TranslatedName(LangJav(), name: "Faroe"),
+  TranslatedName(LangKur(), name: "ferî"),
+  TranslatedName(LangMri(), name: "Wharoīhi"),
+  TranslatedName(LangPus(), name: "فاروئې"),
+  TranslatedName(LangSrd(), name: "faroesu"),
+  TranslatedName(LangSnd(), name: "فيروايس"),
+  TranslatedName(LangSom(), name: "Farowsi"),
+  TranslatedName(LangTgk(), name: "фарерӣ"),
+  TranslatedName(LangTuk(), name: "farer dili"),
+  TranslatedName(LangTat(), name: "фарер"),
+  TranslatedName(LangWol(), name: "Feroos"),
 ];

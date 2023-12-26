@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Somali language:
+/// Provides 122 translations for a Somali language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -38,15 +40,20 @@ import "../model/translated_name.dart";
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -66,21 +74,26 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -88,11 +101,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +117,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -208,4 +226,22 @@ const somLanguageTranslations = [
   TranslatedName(LangZho(), name: "索马里文"),
   TranslatedName(LangZho(), name: "索馬利文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Somali"),
+  TranslatedName(LangAsm(), name: "ছোমালি"),
+  TranslatedName(LangChe(), name: "сомали"),
+  TranslatedName(LangHau(), name: "Somalianci"),
+  TranslatedName(LangIna(), name: "somali"),
+  TranslatedName(LangInd(), name: "Somalia"),
+  TranslatedName(LangJav(), name: "Somalia"),
+  TranslatedName(LangKur(), name: "somalî"),
+  TranslatedName(LangMri(), name: "Hamāri"),
+  TranslatedName(LangPus(), name: "سومالي"),
+  TranslatedName(LangQue(), name: "Somali Simi"),
+  TranslatedName(LangSrd(), name: "sòmalu"),
+  TranslatedName(LangSnd(), name: "سومالي"),
+  TranslatedName(LangTgk(), name: "сомалӣ"),
+  TranslatedName(LangTir(), name: "ሶማሊ"),
+  TranslatedName(LangTuk(), name: "somali dili"),
+  TranslatedName(LangTat(), name: "сомали"),
+  TranslatedName(LangWol(), name: "Somali (làkk)"),
+  TranslatedName(LangDeu(), name: "Somali"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Burkina Faso country:
+/// Provides 120 translations for a Burkina Faso country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -71,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
@@ -114,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -324,4 +326,6 @@ const bfaCountryTranslations = [
   TranslatedName(LangSsw(), name: "iBhukhina-Faso"),
   TranslatedName(LangVie(), name: "Buốc-ki-na Pha-xô"),
   TranslatedName(LangVol(), name: "Burkinän"),
+  TranslatedName(LangMri(), name: "Pākina Wharo"),
+  TranslatedName(LangXho(), name: "EBurkina Faso"),
 ];

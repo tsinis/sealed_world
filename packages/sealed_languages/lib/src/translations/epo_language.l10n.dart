@@ -2,12 +2,13 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 87 translations for a Esperanto language:
+/// Provides 104 translations for a Esperanto language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -17,6 +18,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -29,14 +31,18 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -46,6 +52,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -54,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -61,29 +69,38 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -174,7 +191,26 @@ const epoLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Esperanto"),
   TranslatedName(LangZho(), name: "世界文"),
   TranslatedName(LangZul(), name: "isi-Esperanto"),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Esperanto"),
+  TranslatedName(LangAsm(), name: "এস্পেৰান্তো"),
+  TranslatedName(LangChe(), name: "эсперанто"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤉𞤧𞤨𞤫𞤪𞤢𞤲𞤼𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "esperanto"),
+  TranslatedName(LangIbo(), name: "Ndị Esperantọ"),
+  TranslatedName(LangKur(), name: "esperantoyî"),
+  TranslatedName(LangMri(), name: "Eheperāto"),
+  TranslatedName(LangPus(), name: "اسپرانتو"),
+  TranslatedName(LangQue(), name: "Esperanto Simi"),
+  TranslatedName(LangSrd(), name: "esperanto"),
+  TranslatedName(LangSnd(), name: "ايسپرانٽو"),
+  TranslatedName(LangSom(), name: "Isberaanto"),
+  TranslatedName(LangTgk(), name: "эсперанто"),
+  TranslatedName(LangTuk(), name: "esperanto dili"),
+  TranslatedName(LangTat(), name: "эсперанто"),
+  TranslatedName(LangWol(), name: "Esperantoo"),
+  TranslatedName(LangDeu(), name: "Esperanto"),
 ];

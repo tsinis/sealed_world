@@ -67,7 +67,7 @@ NEW FEATURE: New searchSuggestions method in every picker (for use in `suggestio
 - chore(deps): updates of dev_dependencies
 - docs(example): added web (flutter wasm) example of data provided in this package.
 
-BREAKING CHANGES:
+BREAKING CHANGES
 
 - refactor(data)!: compile time static const. data in lists are now sorted alphabetically by the (3 letter) code
 

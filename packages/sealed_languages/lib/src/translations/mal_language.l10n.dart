@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 89 translations for a Malayalam language:
+/// Provides 105 translations for a Malayalam language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -18,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -30,14 +32,18 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -47,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,12 +63,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -69,24 +78,31 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const malLanguageTranslations = [
   TranslatedName(LangEng(), name: "Malayalam"),
@@ -178,4 +194,24 @@ const malLanguageTranslations = [
   TranslatedName(LangZho(), name: "马拉雅拉姆文"),
   TranslatedName(LangZho(), name: "馬來亞拉姆文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Malayalam"),
+  TranslatedName(LangAsm(), name: "মালায়ালম"),
+  TranslatedName(LangChe(), name: "малаялам"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤢𞤤𞤢𞤴𞤢𞤤𞤢𞤥𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Malayalamci"),
+  TranslatedName(LangIna(), name: "malayalam"),
+  TranslatedName(LangKur(), name: "malayalamî"),
+  TranslatedName(LangMri(), name: "Mareiārama"),
+  TranslatedName(LangPus(), name: "مالايالم"),
+  TranslatedName(LangSrd(), name: "malayalam"),
+  TranslatedName(LangSnd(), name: "مليالم"),
+  TranslatedName(LangTgk(), name: "малаяламӣ"),
+  TranslatedName(LangTuk(), name: "malaýalam dili"),
+  TranslatedName(LangTur(), name: "Malayalam dili"),
+  TranslatedName(LangTat(), name: "малаялам"),
+  TranslatedName(LangYor(), name: "Málàyálámù"),
+  TranslatedName(LangDeu(), name: "Malayalam"),
 ];

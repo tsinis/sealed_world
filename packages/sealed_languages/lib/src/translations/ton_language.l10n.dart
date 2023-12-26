@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Tonga (Tonga Islands) language:
+/// Provides 112 translations for a Tonga (Tonga Islands) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,24 +34,30 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,29 +68,39 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -89,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const tonLanguageTranslations = [
   TranslatedName(LangEng(), name: "Tongan"),
@@ -183,4 +203,28 @@ const tonLanguageTranslations = [
   TranslatedName(LangZho(), name: "汤加文"),
   TranslatedName(LangZho(), name: "東加文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Tongan"),
+  TranslatedName(LangAsm(), name: "টোঙ্গান"),
+  TranslatedName(LangBel(), name: "танганская"),
+  TranslatedName(LangChe(), name: "тонганийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤚𞤮𞤲𞤺𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Tonganci"),
+  TranslatedName(LangIna(), name: "tongano"),
+  TranslatedName(LangIbo(), name: "Tọngan"),
+  TranslatedName(LangJav(), name: "Tonga"),
+  TranslatedName(LangKur(), name: "tongî"),
+  TranslatedName(LangMri(), name: "Tonga"),
+  TranslatedName(LangPus(), name: "تونګان"),
+  TranslatedName(LangQue(), name: "Tongano Simi"),
+  TranslatedName(LangSrd(), name: "tonganu"),
+  TranslatedName(LangSnd(), name: "تونگن"),
+  TranslatedName(LangSom(), name: "Toongan"),
+  TranslatedName(LangTgk(), name: "тонганӣ"),
+  TranslatedName(LangTir(), name: "ቶንጋንኛ"),
+  TranslatedName(LangTuk(), name: "tongan dili"),
+  TranslatedName(LangTat(), name: "тонга"),
+  TranslatedName(LangYor(), name: "Tóńgàn"),
 ];

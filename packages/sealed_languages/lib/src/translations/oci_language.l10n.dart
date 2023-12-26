@@ -2,11 +2,15 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 87 translations for a Occitan language:
+/// Provides 115 translations for a Occitan language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -14,7 +18,9 @@ import "../model/translated_name.dart";
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -26,23 +32,32 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -53,12 +68,16 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -66,23 +85,32 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -174,4 +202,36 @@ const ociLanguageTranslations = [
   TranslatedName(LangZho(), name: "奥克西唐文"),
   TranslatedName(LangZho(), name: "奧克西坦文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Osithani"),
+  TranslatedName(LangAsm(), name: "অ’চিটান"),
+  TranslatedName(LangChe(), name: "окситанойн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤌𞤷𞥆𞤭𞤼𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Ositanci"),
+  TranslatedName(LangHye(), name: "օքսիտաներեն"),
+  TranslatedName(LangIna(), name: "occitano"),
+  TranslatedName(LangIbo(), name: "Osịtan"),
+  TranslatedName(LangJav(), name: "Ossitan"),
+  TranslatedName(LangKaz(), name: "окситан тілі"),
+  TranslatedName(LangKhm(), name: "អូសីតាន់"),
+  TranslatedName(LangKur(), name: "oksîtanî"),
+  TranslatedName(LangKir(), name: "окситанча"),
+  TranslatedName(LangMri(), name: "Ōkitana"),
+  TranslatedName(LangMya(), name: "အိုစီတန်"),
+  TranslatedName(LangNep(), name: "अक्सिटन"),
+  TranslatedName(LangOci(), name: "occitan"),
+  TranslatedName(LangPan(), name: "ਓਕਸੀਟਾਨ"),
+  TranslatedName(LangPus(), name: "اوکسيټاني"),
+  TranslatedName(LangSrd(), name: "otzitanu"),
+  TranslatedName(LangSnd(), name: "آڪسيٽن"),
+  TranslatedName(LangSin(), name: "ඔසිටාන්"),
+  TranslatedName(LangSqi(), name: "oksitanisht"),
+  TranslatedName(LangTgk(), name: "окситанӣ"),
+  TranslatedName(LangTuk(), name: "oksitan dili"),
+  TranslatedName(LangTur(), name: "Oksitan dili"),
+  TranslatedName(LangTat(), name: "окситан"),
+  TranslatedName(LangUzb(), name: "oksitan"),
+  TranslatedName(LangWol(), name: "Ositan"),
 ];

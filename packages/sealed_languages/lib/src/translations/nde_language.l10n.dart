@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 88 translations for a Northern Ndebele language:
+/// Provides 108 translations for a Northern Ndebele language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,14 +10,17 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -26,8 +29,10 @@ import "../model/translated_name.dart";
 /// - English
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -37,14 +42,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,30 +66,39 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +106,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Yoruba
 /// - Zulu.
 const ndeLanguageTranslations = [
   TranslatedName(LangEng(), name: "North Ndebele"),
@@ -177,4 +197,28 @@ const ndeLanguageTranslations = [
   TranslatedName(LangZho(), name: "北恩德贝勒文"),
   TranslatedName(LangZho(), name: "北地畢列文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-North Ndebele"),
+  TranslatedName(LangAsm(), name: "উত্তৰ নিবেবেলে"),
+  TranslatedName(LangBel(), name: "паўночная ндэбеле"),
+  TranslatedName(LangChe(), name: "къилбаседа ндебели"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤐𞤣𞤫𞤦𞤫𞤤𞤫𞥅𞤪𞤫 𞤐𞤢𞤲𞥆𞤢𞥄𞤺𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "norður ndebele"),
+  TranslatedName(LangIna(), name: "ndebele del nord"),
+  TranslatedName(LangIbo(), name: "Nọrtụ Ndabede"),
+  TranslatedName(LangJav(), name: "Ndebele Lor"),
+  TranslatedName(LangKhm(), name: "នេបេលេខាងជើង"),
+  TranslatedName(LangKur(), name: "ndebeliya bakurî"),
+  TranslatedName(LangMri(), name: "Enetepēra ki te Raki"),
+  TranslatedName(LangPus(), name: "شمالي نديبل"),
+  TranslatedName(LangQue(), name: "Ndebele septentrional Simi"),
+  TranslatedName(LangSrd(), name: "ndebele de su nord"),
+  TranslatedName(LangSnd(), name: "اتر دبيلي"),
+  TranslatedName(LangSom(), name: "Indhebeele Waqooyi"),
+  TranslatedName(LangTir(), name: "ሰሜን ኤንደበለ"),
+  TranslatedName(LangTuk(), name: "demirgazyk ndebele dili"),
+  TranslatedName(LangTgl(), name: "Hilagang Ndebele"),
+  TranslatedName(LangYor(), name: "Àríwá Ndebele"),
 ];

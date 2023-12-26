@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 83 translations for a Wolof language:
+/// Provides 101 translations for a Wolof language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -28,14 +31,18 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -44,6 +51,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -52,11 +60,13 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -64,24 +74,32 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Yoruba
 /// - Zulu.
 const wolLanguageTranslations = [
   TranslatedName(LangEng(), name: "Wolof"),
@@ -167,4 +185,26 @@ const wolLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Wolof"),
   TranslatedName(LangZho(), name: "沃洛夫文"),
   TranslatedName(LangZul(), name: "isi-Wolof"),
+  TranslatedName(LangAsm(), name: "ৱোলাফ"),
+  TranslatedName(LangBel(), name: "валоф"),
+  TranslatedName(LangChe(), name: "волоф"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤏𞤮𞤤𞤮𞤬𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "wolof"),
+  TranslatedName(LangIbo(), name: "Wolọf"),
+  TranslatedName(LangKur(), name: "wolofî"),
+  TranslatedName(LangMri(), name: "Warawhe"),
+  TranslatedName(LangPus(), name: "ولوف"),
+  TranslatedName(LangSrd(), name: "wolof"),
+  TranslatedName(LangSnd(), name: "وولوف"),
+  TranslatedName(LangSom(), name: "Woolof"),
+  TranslatedName(LangTgk(), name: "волоф"),
+  TranslatedName(LangTir(), name: "ዎሎፍ"),
+  TranslatedName(LangTuk(), name: "wolof dili"),
+  TranslatedName(LangTat(), name: "волоф"),
+  TranslatedName(LangYor(), name: "Wọ́lọ́ọ̀fù"),
+  TranslatedName(LangDeu(), name: "Wolof"),
 ];

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a Gambian Dalasi currency:
+/// Provides 121 translations for a Gambian Dalasi currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const gmdCurrencyTranslations = [
@@ -114,7 +128,11 @@ const gmdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "গাম্বিয়া ডালাসি"),
   TranslatedName(LangBre(), name: "dalasi Gambia"),
   TranslatedName(LangBos(), name: "Gambijski dalasi"),
-  TranslatedName(LangBos(), name: "Гамбијски даласи", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Гамбијски даласи",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dalasi gambià"),
   TranslatedName(LangChe(), name: "Гамбин даласи"),
   TranslatedName(LangCes(), name: "gambijský dalasi"),
@@ -213,4 +231,18 @@ const gmdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "岡比亞達拉西", countryCode: "HK"),
   TranslatedName(LangZho(), name: "甘比亞達拉西", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Gambian Dalasi"),
+  TranslatedName(LangAsm(), name: "গাম্বিয়া ডালাছি"),
+  TranslatedName(LangChv(), name: "Гамби даласийӗ"),
+  TranslatedName(LangIna(), name: "dalasi gambian"),
+  TranslatedName(LangIbo(), name: "Ego Dalasi obodo Gambia"),
+  TranslatedName(LangJav(), name: "Dalasi Gambia"),
+  TranslatedName(LangKur(), name: "dalasiyê gambiyayî"),
+  TranslatedName(LangMri(), name: "Dalasi Kamopia"),
+  TranslatedName(LangOri(), name: "ଗାମ୍ବିୟ ଡାଲାସି"),
+  TranslatedName(LangPus(), name: "ګيمبين دلاسې"),
+  TranslatedName(LangSrd(), name: "dalasi gambianu"),
+  TranslatedName(LangSom(), name: "Dalasida Gambiya"),
+  TranslatedName(LangTuk(), name: "Gambiýa dalasisi"),
+  TranslatedName(LangTgl(), name: "Gambian Dalasi"),
+  TranslatedName(LangXho(), name: "I-Dalasi yaseGambia"),
 ];

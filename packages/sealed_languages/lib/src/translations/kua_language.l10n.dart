@@ -2,22 +2,35 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 60 translations for a Kwanyama (Kuanyama) language:
+/// Provides 94 translations for a Kwanyama (Kuanyama) language:
+/// - (Eastern) Punjabi
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
@@ -25,12 +38,18 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -38,28 +57,43 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
-/// - Vietnamese.
+/// - Uzbek
+/// - Vietnamese
+/// - Yoruba
+/// - Zulu.
 const kuaLanguageTranslations = [
   TranslatedName(LangEng(), name: "Kuanyama"),
   TranslatedName(LangAra(), name: "الكيونياما"),
@@ -121,4 +155,42 @@ const kuaLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Kuanyama"),
   TranslatedName(LangZho(), name: "宽亚玛文"),
   TranslatedName(LangZho(), name: "廣亞馬文", script: ScriptHant()),
+  TranslatedName(LangAmh(), name: "ኩዋንያማ"),
+  TranslatedName(LangAsm(), name: "কুয়ানিয়ামা"),
+  TranslatedName(LangBel(), name: "куаньяма"),
+  TranslatedName(LangChe(), name: "кунама"),
+  TranslatedName(LangEus(), name: "kuanyama"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤵𞤢𞤻𞤢𞤥𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "kuanyama"),
+  TranslatedName(LangGlg(), name: "kuanyama"),
+  TranslatedName(LangHye(), name: "կուանյամա"),
+  TranslatedName(LangIna(), name: "kuanyama"),
+  TranslatedName(LangIbo(), name: "Kwanyama"),
+  TranslatedName(LangKat(), name: "კუნამა"),
+  TranslatedName(LangKaz(), name: "кваньяма тілі"),
+  TranslatedName(LangKhm(), name: "គូនយ៉ាម៉ា"),
+  TranslatedName(LangKur(), name: "kwanyamayî"),
+  TranslatedName(LangKir(), name: "куаньямача"),
+  TranslatedName(LangMri(), name: "Kuoniāma"),
+  TranslatedName(LangMon(), name: "куаньяма"),
+  TranslatedName(LangMya(), name: "ကွန်းယာမာ"),
+  TranslatedName(LangNep(), name: "कुआन्यामा"),
+  TranslatedName(LangPan(), name: "ਕੁਆਨਯਾਮਾ"),
+  TranslatedName(LangPus(), name: "کواناما"),
+  TranslatedName(LangQue(), name: "Kuanyama Simi"),
+  TranslatedName(LangSrd(), name: "kuanyama"),
+  TranslatedName(LangSnd(), name: "ڪنياما"),
+  TranslatedName(LangSin(), name: "කුයන්යමා"),
+  TranslatedName(LangSqi(), name: "kuanjamaisht"),
+  TranslatedName(LangSwa(), name: "Kikwanyama"),
+  TranslatedName(LangTir(), name: "ክዋንያማ"),
+  TranslatedName(LangTuk(), name: "kwanýama dili"),
+  TranslatedName(LangUrd(), name: "کونیاما"),
+  TranslatedName(LangUzb(), name: "kvanyama"),
+  TranslatedName(LangYor(), name: "Èdè Kuayama"),
+  TranslatedName(LangZul(), name: "isi-Kuanyama"),
 ];

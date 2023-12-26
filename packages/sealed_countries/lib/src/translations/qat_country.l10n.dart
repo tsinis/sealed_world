@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Qatar country:
+/// Provides 130 translations for a Qatar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -124,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -272,4 +274,6 @@ const qatCountryTranslations = [
   TranslatedName(LangSsw(), name: "IKhathari"),
   TranslatedName(LangTgl(), name: "Katar"),
   TranslatedName(LangVol(), name: "Katarän"),
+  TranslatedName(LangSrd(), name: "Catar"),
+  TranslatedName(LangXho(), name: "EQatar"),
 ];

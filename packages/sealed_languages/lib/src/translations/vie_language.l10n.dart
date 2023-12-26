@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 115 translations for a Vietnamese language:
+/// Provides 128 translations for a Vietnamese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -48,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -81,6 +87,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -89,8 +96,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -98,12 +107,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -111,6 +123,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -230,4 +243,17 @@ const vieLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Jetinamu"),
   TranslatedName(LangZho(), name: "越南文"),
   TranslatedName(LangZul(), name: "isi-Vietnamese"),
+  TranslatedName(LangAsm(), name: "ভিয়েটনামী"),
+  TranslatedName(LangChe(), name: "вьетнамхойн"),
+  TranslatedName(LangIna(), name: "vietnamese"),
+  TranslatedName(LangJav(), name: "Vietnam"),
+  TranslatedName(LangKur(), name: "viyetnamî"),
+  TranslatedName(LangMri(), name: "Whitināmu"),
+  TranslatedName(LangPus(), name: "وېتنامي"),
+  TranslatedName(LangSrd(), name: "vietnamita"),
+  TranslatedName(LangSnd(), name: "ويتنامي"),
+  TranslatedName(LangTgk(), name: "ветнамӣ"),
+  TranslatedName(LangTuk(), name: "wýetnam dili"),
+  TranslatedName(LangTat(), name: "вьетнам"),
+  TranslatedName(LangWol(), name: "Wiyetnaamiye"),
 ];

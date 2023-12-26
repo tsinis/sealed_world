@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a Finland country:
+/// Provides 149 translations for a Finland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -141,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -378,4 +379,5 @@ const finCountryTranslations = [
   TranslatedName(LangVol(), name: "Suomiyän"),
   TranslatedName(LangWln(), name: "Finlande"),
   TranslatedName(LangZha(), name: "Finlan"),
+  TranslatedName(LangXho(), name: "EFinland"),
 ];

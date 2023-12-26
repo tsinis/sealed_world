@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 83 translations for a Sint Maarten country:
+/// Provides 91 translations for a Sint Maarten country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -18,6 +18,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -26,14 +27,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Italian
 /// - Japanese
 /// - Javanese
@@ -41,6 +45,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -49,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Oriya
@@ -81,6 +87,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const sxmCountryTranslations = [
   CountryName(
@@ -254,4 +262,12 @@ const sxmCountryTranslations = [
   TranslatedName(LangUzb(), name: "Синт-Мартен", script: ScriptCyrl()),
   TranslatedName(LangWol(), name: "Sin Marten"),
   TranslatedName(LangZul(), name: "i-Sint Maarten"),
+  TranslatedName(LangChv(), name: "Синт-Мартен"),
+  TranslatedName(LangFul(), name: "𞤅𞤫𞤲𞤼𞤵 𞤃𞤢𞥄𞤪𞤼𞤫𞤲"),
+  TranslatedName(LangHau(), name: "San Maarten"),
+  TranslatedName(LangIna(), name: "Sancte Martino nederlandese"),
+  TranslatedName(LangKur(), name: "Sint Marteen"),
+  TranslatedName(LangMri(), name: "Hiti Mātene"),
+  TranslatedName(LangXho(), name: "ESint Maarten"),
+  TranslatedName(LangYor(), name: "Síntì Mátẹ́ẹ̀nì"),
 ];

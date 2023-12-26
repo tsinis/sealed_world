@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 96 translations for a Kazakh language:
+/// Provides 113 translations for a Kazakh language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -10,6 +10,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -32,6 +34,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -41,6 +44,8 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -49,6 +54,7 @@ import "../model/translated_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -60,12 +66,14 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -73,18 +81,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -92,7 +107,9 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const kazLanguageTranslations = [
   TranslatedName(LangEng(), name: "Kazakh"),
@@ -191,4 +208,25 @@ const kazLanguageTranslations = [
   TranslatedName(LangZho(), name: "哈萨克文"),
   TranslatedName(LangZho(), name: "哈薩克文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Kazakh"),
+  TranslatedName(LangAsm(), name: "কাজাখ"),
+  TranslatedName(LangChe(), name: "кхазакхийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤑𞤢𞥁𞤢𞤳𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "kazakh"),
+  TranslatedName(LangIbo(), name: "Kazak"),
+  TranslatedName(LangKur(), name: "qazaxî"),
+  TranslatedName(LangMri(), name: "Kahāka"),
+  TranslatedName(LangPus(), name: "قازق"),
+  TranslatedName(LangSrd(), name: "kazacu"),
+  TranslatedName(LangSnd(), name: "قازق"),
+  TranslatedName(LangSom(), name: "Kasaaq"),
+  TranslatedName(LangTgk(), name: "қазоқӣ"),
+  TranslatedName(LangTir(), name: "ካዛክ"),
+  TranslatedName(LangTuk(), name: "gazak dili"),
+  TranslatedName(LangTat(), name: "казакъ"),
+  TranslatedName(LangWol(), name: "Kasax"),
+  TranslatedName(LangYor(), name: "Kaṣakì"),
 ];

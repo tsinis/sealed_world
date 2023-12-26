@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Saint Lucia country:
+/// Provides 130 translations for a Saint Lucia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,6 +49,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -70,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
 /// - Malay
@@ -77,9 +80,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -90,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -99,6 +105,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -112,10 +119,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const lcaCountryTranslations = [
@@ -324,4 +333,13 @@ const lcaCountryTranslations = [
   TranslatedName(LangLat(), name: "Sancta Lucia"),
   TranslatedName(LangLim(), name: "Santa Lucia"),
   TranslatedName(LangVol(), name: "Sanlusiyän"),
+  TranslatedName(LangChv(), name: "Сент-Люсия"),
+  TranslatedName(LangIbo(), name: "Lucia Dị nsọ"),
+  TranslatedName(LangLtz(), name: "St. Lucia"),
+  TranslatedName(LangMri(), name: "Hato Ruhia"),
+  TranslatedName(LangNor(), name: "St. Lucia"),
+  TranslatedName(LangSrd(), name: "Santa Lughia"),
+  TranslatedName(LangTgl(), name: "Saint Lucia"),
+  TranslatedName(LangVie(), name: "St. Lucia"),
+  TranslatedName(LangXho(), name: "ESt. Lucia"),
 ];

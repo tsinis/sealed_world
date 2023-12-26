@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 108 translations for a Burmese language:
+/// Provides 124 translations for a Burmese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,15 +11,18 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -47,9 +50,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -57,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -70,6 +76,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -77,26 +84,34 @@ import "../model/translated_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -104,6 +119,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -216,4 +232,20 @@ const myaLanguageTranslations = [
   TranslatedName(LangZho(), name: "缅甸文"),
   TranslatedName(LangZho(), name: "緬甸文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Burmese"),
+  TranslatedName(LangAsm(), name: "বাৰ্মীজ"),
+  TranslatedName(LangBel(), name: "бірманская"),
+  TranslatedName(LangChe(), name: "бирманийн"),
+  TranslatedName(LangIna(), name: "birmano"),
+  TranslatedName(LangJav(), name: "Myanmar"),
+  TranslatedName(LangKur(), name: "burmayî"),
+  TranslatedName(LangMri(), name: "Pēmīhi"),
+  TranslatedName(LangPus(), name: "برمایی"),
+  TranslatedName(LangQue(), name: "Birmano Simi"),
+  TranslatedName(LangSrd(), name: "burmesu"),
+  TranslatedName(LangSnd(), name: "برمي"),
+  TranslatedName(LangTgk(), name: "бирманӣ"),
+  TranslatedName(LangTir(), name: "በርምኛ"),
+  TranslatedName(LangTuk(), name: "birma dili"),
+  TranslatedName(LangTat(), name: "бирма"),
+  TranslatedName(LangWol(), name: "Birmes"),
 ];

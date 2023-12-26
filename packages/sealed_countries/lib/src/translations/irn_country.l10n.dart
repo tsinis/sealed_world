@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Iran country:
+/// Provides 117 translations for a Iran country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Corsican
 /// - Croatian
 /// - Czech
@@ -85,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -111,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -321,4 +324,7 @@ const irnCountryTranslations = [
   TranslatedName(LangSsw(), name: "I-Irani"),
   TranslatedName(LangSwa(), name: "Uajemi"),
   TranslatedName(LangVol(), name: "Lirän"),
+  TranslatedName(LangChv(), name: "Иран"),
+  TranslatedName(LangSrd(), name: "Iràn"),
+  TranslatedName(LangXho(), name: "E-Iran"),
 ];

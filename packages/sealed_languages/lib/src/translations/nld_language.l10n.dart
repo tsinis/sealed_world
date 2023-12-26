@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Dutch language:
+/// Provides 131 translations for a Dutch language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -73,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -81,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -89,8 +97,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -98,12 +108,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -111,6 +124,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -231,4 +246,19 @@ const nldLanguageTranslations = [
   TranslatedName(LangZho(), name: "荷兰文"),
   TranslatedName(LangZho(), name: "荷蘭文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Dutch"),
+  TranslatedName(LangAsm(), name: "ডাচ"),
+  TranslatedName(LangChe(), name: "голландхойн"),
+  TranslatedName(LangChv(), name: "голланди"),
+  TranslatedName(LangIna(), name: "nederlandese"),
+  TranslatedName(LangJav(), name: "Walanda"),
+  TranslatedName(LangKur(), name: "holendî"),
+  TranslatedName(LangMri(), name: "Tati"),
+  TranslatedName(LangPus(), name: "هالېنډي"),
+  TranslatedName(LangSrd(), name: "olandesu"),
+  TranslatedName(LangSnd(), name: "ڊچ"),
+  TranslatedName(LangTgk(), name: "голландӣ"),
+  TranslatedName(LangTuk(), name: "niderland dili"),
+  TranslatedName(LangTat(), name: "голланд"),
+  TranslatedName(LangWol(), name: "Neyerlànde"),
+  TranslatedName(LangXho(), name: "IsiDatshi"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Angola country:
+/// Provides 107 translations for a Angola country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -104,6 +104,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -298,4 +299,5 @@ const agoCountryTranslations = [
   TranslatedName(LangSsw(), name: "I-Angola"),
   TranslatedName(LangTgl(), name: "Anggola"),
   TranslatedName(LangVol(), name: "Langolän"),
+  TranslatedName(LangXho(), name: "E-Angola"),
 ];

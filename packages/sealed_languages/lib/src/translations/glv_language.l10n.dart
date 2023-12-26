@@ -2,44 +2,54 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 83 translations for a Manx language:
+/// Provides 102 translations for a Manx language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -50,30 +60,38 @@ import "../model/translated_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -82,6 +100,7 @@ import "../model/translated_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const glvLanguageTranslations = [
   TranslatedName(LangEng(), name: "Manx"),
@@ -167,4 +186,27 @@ const glvLanguageTranslations = [
   TranslatedName(LangZho(), name: "马恩岛文"),
   TranslatedName(LangZho(), name: "曼島文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Manx"),
+  TranslatedName(LangAsm(), name: "মেংক্স"),
+  TranslatedName(LangBel(), name: "мэнская"),
+  TranslatedName(LangChe(), name: "мэнийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤢𞤲𞤳𞤭𞤧𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "manx"),
+  TranslatedName(LangIna(), name: "mannese"),
+  TranslatedName(LangIbo(), name: "Mansị"),
+  TranslatedName(LangKhm(), name: "មេន"),
+  TranslatedName(LangKur(), name: "manksî"),
+  TranslatedName(LangMri(), name: "Manaki"),
+  TranslatedName(LangPus(), name: "مینکس"),
+  TranslatedName(LangQue(), name: "Manés Simi"),
+  TranslatedName(LangSrd(), name: "mannesu"),
+  TranslatedName(LangSnd(), name: "مينڪس"),
+  TranslatedName(LangSom(), name: "Mankis"),
+  TranslatedName(LangTir(), name: "ማንክስ"),
+  TranslatedName(LangTuk(), name: "men dili"),
+  TranslatedName(LangYor(), name: "Máǹkì"),
+  TranslatedName(LangDeu(), name: "Manx"),
 ];

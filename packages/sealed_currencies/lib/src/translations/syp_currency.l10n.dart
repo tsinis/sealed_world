@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Syrian Pound currency:
+/// Provides 108 translations for a Syrian Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const sypCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Syrian Pound"),
@@ -99,7 +116,11 @@ const sypCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সিরিয়ান পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Siria"),
   TranslatedName(LangBos(), name: "Sirijska funta"),
-  TranslatedName(LangBos(), name: "Сиријска фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Сиријска фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura síria"),
   TranslatedName(LangChe(), name: "Шеман фунт"),
   TranslatedName(LangCes(), name: "syrská libra"),
@@ -180,4 +201,21 @@ const sypCurrencyTranslations = [
   TranslatedName(LangZho(), name: "敍利亞鎊", countryCode: "HK"),
   TranslatedName(LangZho(), name: "敘利亞鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Syrian Pound"),
+  TranslatedName(LangAsm(), name: "চিৰিয়ান পাউণ্ড"),
+  TranslatedName(LangChv(), name: "Сири фунчӗ"),
+  TranslatedName(LangFul(), name: "𞤆𞤢𞤱𞤲𞥋𞤣𞤵 𞤅𞤭𞤪𞤢𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Siriya"),
+  TranslatedName(LangIna(), name: "libra syriac"),
+  TranslatedName(LangIbo(), name: "Ego Pound obodo Syria"),
+  TranslatedName(LangJav(), name: "Pound Siria"),
+  TranslatedName(LangKur(), name: "lîreyê sûrî"),
+  TranslatedName(LangMri(), name: "Pāuna Hiria"),
+  TranslatedName(LangOri(), name: "ସିରିୟ ପାଉଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "سوريايي پونډ"),
+  TranslatedName(LangSrd(), name: "isterlina siriana"),
+  TranslatedName(LangSom(), name: "Bowndka Suuriya"),
+  TranslatedName(LangTuk(), name: "Siriýa funty"),
+  TranslatedName(LangTgl(), name: "Syrian Pound"),
+  TranslatedName(LangXho(), name: "IPonti yaseSiriya"),
+  TranslatedName(LangYor(), name: "Pọ́n-ùn Sírìà"),
 ];

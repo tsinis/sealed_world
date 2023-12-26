@@ -86,7 +86,7 @@ class FiatCurrency extends Currency
   /// instance exists.
   factory FiatCurrency.fromCode(
     String code, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
 
@@ -104,7 +104,7 @@ class FiatCurrency extends Currency
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromCodeNumeric(
     String codeNumeric, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
 
@@ -123,7 +123,7 @@ class FiatCurrency extends Currency
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromName(
     String name, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
 
@@ -155,7 +155,7 @@ class FiatCurrency extends Currency
   /// to the `code` variable.
   factory FiatCurrency.fromAnyCode(
     String code, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) =>
       code.maybeMapIsoCode(
         orElse: (_) => FiatCurrency.fromCode(code, currencies),
@@ -226,7 +226,7 @@ class FiatCurrency extends Currency
   /// each [FiatCurrency]'s [code] to [value].
   ///
   /// The optional [currencies] parameter specifies the list of [FiatCurrency]
-  /// objects to search (defaults to [FiatCurrency.list]).
+  /// objects to search (defaults to [FiatCurrency.listExtended]).
   ///
   /// Example usage:
   ///
@@ -240,7 +240,7 @@ class FiatCurrency extends Currency
   static FiatCurrency? maybeFromValue<T extends Object>(
     T value, {
     T? Function(FiatCurrency currency)? where,
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   }) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
     for (final currency in currencies) {
@@ -275,7 +275,7 @@ class FiatCurrency extends Currency
   /// instance is assigned to the `currency` variable.
   static FiatCurrency? maybeFromAnyCode(
     String? code, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
     final trimmedCode = code?.trim().toUpperCase();
@@ -292,15 +292,6 @@ class FiatCurrency extends Currency
     return null;
   }
 
-  /// A list of all regular the currencies currently supported by the
-  /// [FiatCurrency] class. This is subset of [FiatCurrency.list] that excludes
-  /// all currencies from the [FiatCurrency.specialPurposeList].
-  static List<FiatCurrency> get regularList => List.unmodifiable(
-        FiatCurrency.list.where(
-          (currency) => !FiatCurrency.specialPurposeList.contains(currency),
-        ),
-      );
-
   /// The general standard ISO code for currencies, defined as ISO 4217.
   static const standardGeneralName = "4217";
 
@@ -311,8 +302,9 @@ class FiatCurrency extends Currency
   /// ISO 4217 Numeric.
   static const standardCodeNumericName = "$standardGeneralName Numeric";
 
-  /// A list of all the currencies currently
-  /// supported by the [FiatCurrency] class.
+  /// A list of the regular currencies currently supported by the [FiatCurrency]
+  /// class. For a full list with non-regular currencies please
+  /// use [listExtended].
   static const list = [
     FiatAed(),
     FiatAfn(),
@@ -371,7 +363,7 @@ class FiatCurrency extends Currency
     FiatGyd(),
     FiatHkd(),
     FiatHnl(),
-    FiatHrk(),
+    FiatHrk(), // ignore: deprecated_member_use_from_same_package, until 2024+.
     FiatHtg(),
     FiatHuf(),
     FiatIdr(),
@@ -466,19 +458,9 @@ class FiatCurrency extends Currency
     FiatVuv(),
     FiatWst(),
     FiatXaf(),
-    FiatXag(),
-    FiatXau(),
-    FiatXba(),
-    FiatXbb(),
-    FiatXbc(),
-    FiatXbd(),
     FiatXcd(),
-    FiatXdr(),
     FiatXof(),
-    FiatXpd(),
     FiatXpf(),
-    FiatXpt(),
-    FiatXts(),
     FiatYer(),
     FiatZar(),
     FiatZmw(),
@@ -502,4 +484,9 @@ class FiatCurrency extends Currency
     FiatXpt(),
     FiatXts(),
   ];
+
+  /// A list of all currencies currently supported by the
+  /// [FiatCurrency] class. This is combination of [FiatCurrency.list]
+  /// plus all currencies from the [FiatCurrency.specialPurposeList].
+  static const listExtended = [...list, ...specialPurposeList];
 }

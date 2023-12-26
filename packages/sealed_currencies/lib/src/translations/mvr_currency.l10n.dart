@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Maldivian Rufiyaa currency:
+/// Provides 110 translations for a Maldivian Rufiyaa currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,27 +67,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const mvrCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Maldivian Rufiyaa"),
@@ -99,7 +116,11 @@ const mvrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মালদিভিয়ান রুফিয়া"),
   TranslatedName(LangBre(), name: "rufiyaa Maldivez"),
   TranslatedName(LangBos(), name: "Maldivska rufija"),
-  TranslatedName(LangBos(), name: "Малдивијска руфија", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Малдивијска руфија",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rupia de les Maldives"),
   TranslatedName(LangChe(), name: "Мальдивийн руфи"),
   TranslatedName(LangCes(), name: "maledivská rupie"),
@@ -186,4 +207,21 @@ const mvrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "馬爾代夫盧非亞", countryCode: "HK"),
   TranslatedName(LangZho(), name: "馬爾地夫盧非亞", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Maldivian Rufiyana"),
+  TranslatedName(LangAsm(), name: "মালডিভিয়ান ৰুফিয়া"),
+  TranslatedName(LangChv(), name: "Мальдивсен руфийӗ"),
+  TranslatedName(LangFul(), name: "𞤈𞤵𞤬𞤭𞤴𞤢𞥄 𞤃𞤢𞤤𞤣𞤭𞤾𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Rufiyaa na ɓasar Maldives"),
+  TranslatedName(LangIna(), name: "rufiyaa del Maldivas"),
+  TranslatedName(LangIbo(), name: "Ego Rufiyaa obodo Moldova"),
+  TranslatedName(LangJav(), name: "Rufiyaa Maladewa"),
+  TranslatedName(LangKur(), name: "rûfiyaayê maldîvayî"),
+  TranslatedName(LangMri(), name: "Rufiyaa Māratiri"),
+  TranslatedName(LangOri(), name: "ମାଲଡିଭିୟ ରୁଫିୟା"),
+  TranslatedName(LangPus(), name: "مالديپي روپيا"),
+  TranslatedName(LangSrd(), name: "rufiyaa maldiviana"),
+  TranslatedName(LangSom(), name: "Rufiyada Maldifiya"),
+  TranslatedName(LangTuk(), name: "Maldiw rufiýasy"),
+  TranslatedName(LangTgl(), name: "Maldivian Rufiyaa"),
+  TranslatedName(LangXho(), name: "I-Rufiyaa yaseMaldives"),
+  TranslatedName(LangYor(), name: "Rúfìyá Mọ̀lìdífà"),
 ];

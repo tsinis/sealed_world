@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Sudan country:
+/// Provides 123 translations for a Sudan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -325,4 +327,6 @@ const sdnCountryTranslations = [
   TranslatedName(LangSqi(), name: "Sudani"),
   TranslatedName(LangSsw(), name: "ISudani"),
   TranslatedName(LangVol(), name: "Sudän"),
+  TranslatedName(LangSrd(), name: "Sudàn"),
+  TranslatedName(LangXho(), name: "ESudan"),
 ];

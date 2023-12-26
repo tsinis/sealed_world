@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 107 translations for a Seychellois Rupee currency:
+/// Provides 121 translations for a Seychellois Rupee currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -44,16 +46,20 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const scrCurrencyTranslations = [
@@ -114,7 +128,11 @@ const scrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সেয়চেল্লোইস রুপি"),
   TranslatedName(LangBre(), name: "roupi Sechelez"),
   TranslatedName(LangBos(), name: "Sejšelska rupija"),
-  TranslatedName(LangBos(), name: "Сејшелска рупија", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Сејшелска рупија",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rupia de les Seychelles"),
   TranslatedName(LangChe(), name: "Сейшелан рупи"),
   TranslatedName(LangCes(), name: "seychelská rupie"),
@@ -213,4 +231,18 @@ const scrCurrencyTranslations = [
   TranslatedName(LangZho(), name: "塞舌爾盧比", countryCode: "HK"),
   TranslatedName(LangZho(), name: "塞席爾盧比", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Seychellois Rupee"),
+  TranslatedName(LangAsm(), name: "ছেচেলৱা ৰুপী"),
+  TranslatedName(LangChv(), name: "Сейшел рупийӗ"),
+  TranslatedName(LangIna(), name: "rupia seychellese"),
+  TranslatedName(LangIbo(), name: "Ego Rupee obodo Seychelles"),
+  TranslatedName(LangJav(), name: "Rupee Seichelles"),
+  TranslatedName(LangKur(), name: "rûpiyê seyşelerî"),
+  TranslatedName(LangMri(), name: "Rupee Heikere"),
+  TranslatedName(LangOri(), name: "ସେୟଚେଲୋଇସ୍ ରୁପି"),
+  TranslatedName(LangPus(), name: "سيچيليسي روپۍ"),
+  TranslatedName(LangSrd(), name: "rupia seychellesa"),
+  TranslatedName(LangSom(), name: "Rubiga Siisalis"),
+  TranslatedName(LangTuk(), name: "Seýşel rupiýasy"),
+  TranslatedName(LangTgl(), name: "Seychellois Rupee"),
+  TranslatedName(LangXho(), name: "I-Rupee yaseSeychelles"),
 ];

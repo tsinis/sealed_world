@@ -2,16 +2,24 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 68 translations for a Nauruan language:
+/// Provides 98 translations for a Nauruan language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -20,8 +28,11 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -30,12 +41,17 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -44,31 +60,45 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Yoruba
+/// - Zulu.
 const nauLanguageTranslations = [
   TranslatedName(LangEng(), name: "Nauru"),
   TranslatedName(LangAmh(), name: "ናኡሩ"),
@@ -138,4 +168,38 @@ const nauLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Nauru"),
   TranslatedName(LangZho(), name: "瑙鲁文"),
   TranslatedName(LangZho(), name: "諾魯文", script: ScriptHant()),
+  TranslatedName(LangAsm(), name: "নাউৰু"),
+  TranslatedName(LangBel(), name: "науру"),
+  TranslatedName(LangChe(), name: "науру"),
+  TranslatedName(LangEus(), name: "nauruera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤐𞤢𞤱𞤵𞤪𞤵𞤲𞤳𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "nauru"),
+  TranslatedName(LangGlg(), name: "nauruano"),
+  TranslatedName(LangHye(), name: "նաուրու"),
+  TranslatedName(LangIna(), name: "nauru"),
+  TranslatedName(LangKaz(), name: "науру тілі"),
+  TranslatedName(LangKhm(), name: "ណូរូ"),
+  TranslatedName(LangKur(), name: "nawrûyî"),
+  TranslatedName(LangKir(), name: "науруча"),
+  TranslatedName(LangMon(), name: "науру"),
+  TranslatedName(LangMya(), name: "နော်ရူး"),
+  TranslatedName(LangNep(), name: "नाउरू"),
+  TranslatedName(LangPan(), name: "ਨਾਉਰੂ"),
+  TranslatedName(LangPus(), name: "نایرو"),
+  TranslatedName(LangQue(), name: "Nauru Simi"),
+  TranslatedName(LangSrd(), name: "nauru"),
+  TranslatedName(LangSnd(), name: "نائو"),
+  TranslatedName(LangSin(), name: "නෞරු"),
+  TranslatedName(LangSqi(), name: "nauruisht"),
+  TranslatedName(LangSwa(), name: "Kinauru"),
+  TranslatedName(LangTir(), name: "ናውርዋንኛ"),
+  TranslatedName(LangTuk(), name: "nauru dili"),
+  TranslatedName(LangUrd(), name: "ناؤرو"),
+  TranslatedName(LangUzb(), name: "nauru"),
+  TranslatedName(LangYor(), name: "Èdè Nauru"),
+  TranslatedName(LangZul(), name: "isi-Nauru"),
 ];

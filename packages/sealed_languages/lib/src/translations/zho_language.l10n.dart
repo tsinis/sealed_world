@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Chinese language:
+/// Provides 133 translations for a Chinese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,7 +22,9 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,9 +51,11 @@ import "../model/translated_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -58,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -72,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -90,21 +97,29 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tibetan Standard
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -112,6 +127,8 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -232,4 +249,21 @@ const zhoLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Mandari"),
   TranslatedName(LangZho(), name: "中文"),
   TranslatedName(LangZul(), name: "isi-Chinese"),
+  TranslatedName(LangAsm(), name: "চীনা"),
+  TranslatedName(LangChe(), name: "цийн"),
+  TranslatedName(LangChv(), name: "китай"),
+  TranslatedName(LangIna(), name: "chinese"),
+  TranslatedName(LangJav(), name: "Tyonghwa"),
+  TranslatedName(LangKur(), name: "çînî"),
+  TranslatedName(LangMri(), name: "Hainamana"),
+  TranslatedName(LangSan(), name: "चीनी"),
+  TranslatedName(LangSrd(), name: "tzinesu"),
+  TranslatedName(LangSnd(), name: "چيني"),
+  TranslatedName(LangSun(), name: "Tiongkok"),
+  TranslatedName(LangTgk(), name: "хитоӣ"),
+  TranslatedName(LangTir(), name: "ቻይንኛ"),
+  TranslatedName(LangTuk(), name: "hytaý dili"),
+  TranslatedName(LangTat(), name: "кытай"),
+  TranslatedName(LangWol(), name: "Sinuwaa"),
+  TranslatedName(LangXho(), name: "IsiMandarin"),
 ];

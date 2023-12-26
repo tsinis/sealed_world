@@ -2,14 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 66 translations for a Limburgish (Limburgan/Limburger) language:
+/// Provides 101 translations for a Limburgish (Limburgan/Limburger) language:
+/// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -17,8 +28,11 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -28,12 +42,17 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -41,31 +60,46 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Māori
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Yoruba
+/// - Zulu.
 const limLanguageTranslations = [
   TranslatedName(LangEng(), name: "Limburgish"),
   TranslatedName(LangAra(), name: "الليمبرجيشية"),
@@ -132,7 +166,44 @@ const limLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Limburg"),
   TranslatedName(LangZho(), name: "淋布尔吉文"),
   TranslatedName(LangZho(), name: "林堡文", script: ScriptHant()),
-
-  /// Added manually:
   TranslatedName(LangGle(), name: "Liombuirgis"),
+  TranslatedName(LangAfr(), name: "Limburgs"),
+  TranslatedName(LangAmh(), name: "ሊምቡርጊሽ"),
+  TranslatedName(LangAsm(), name: "লিম্বুৰ্গিচ"),
+  TranslatedName(LangBel(), name: "лімбургская"),
+  TranslatedName(LangChe(), name: "лимбургийн"),
+  TranslatedName(LangEus(), name: "limburgera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤂𞤭𞤥𞤦𞤵𞤪𞤺𞤵𞤧𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "limburgiskt"),
+  TranslatedName(LangGla(), name: "Cànan Limburg"),
+  TranslatedName(LangGlg(), name: "limburgués"),
+  TranslatedName(LangHye(), name: "լիմբուրգերեն"),
+  TranslatedName(LangIna(), name: "limburgese"),
+  TranslatedName(LangKaz(), name: "лимбург тілі"),
+  TranslatedName(LangKhm(), name: "លីមប៊ូស"),
+  TranslatedName(LangKur(), name: "lîmbûrgî"),
+  TranslatedName(LangKir(), name: "лимбургиче"),
+  TranslatedName(LangMri(), name: "Ripūkuihi"),
+  TranslatedName(LangMon(), name: "лимбург"),
+  TranslatedName(LangMya(), name: "လင်ဘာဂစ်ရှ်"),
+  TranslatedName(LangNep(), name: "लिम्बुर्गी"),
+  TranslatedName(LangPan(), name: "ਲਿਮਬੁਰਗੀ"),
+  TranslatedName(LangPus(), name: "لمبرگیانی"),
+  TranslatedName(LangQue(), name: "Limburgues Simi"),
+  TranslatedName(LangSrd(), name: "limburghesu"),
+  TranslatedName(LangSnd(), name: "لمبرگش"),
+  TranslatedName(LangSin(), name: "ලිම්බර්ගිශ්"),
+  TranslatedName(LangSqi(), name: "limburgisht"),
+  TranslatedName(LangSwa(), name: "Kilimburgi", countryCode: "CD"),
+  TranslatedName(LangSwa(), name: "Kilimbugi", countryCode: "KE"),
+  TranslatedName(LangTir(), name: "ሊምበርግኛ"),
+  TranslatedName(LangTuk(), name: "limburg dili"),
+  TranslatedName(LangUrd(), name: "لیمبرگش"),
+  TranslatedName(LangUzb(), name: "limburg"),
+  TranslatedName(LangYor(), name: "Èdè Limbogishi"),
+  TranslatedName(LangZul(), name: "isi-Limburgish"),
 ];

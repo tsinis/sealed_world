@@ -2,14 +2,22 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 69 translations for a Avestan language:
+/// Provides 88 translations for a Avestan language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
 /// - Chinese
 /// - Croatian
@@ -20,6 +28,7 @@ import "../model/translated_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -34,8 +43,10 @@ import "../model/translated_name.dart";
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -43,11 +54,14 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malayalam
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -55,9 +69,11 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Serbian
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
@@ -65,10 +81,13 @@ import "../model/translated_name.dart";
 /// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
-/// - Western Frisian.
+/// - Western Frisian
+/// - Zulu.
 const aveLanguageTranslations = [
   TranslatedName(LangEng(), name: "Avestan"),
   TranslatedName(LangAra(), name: "الأفستية"),
@@ -139,4 +158,23 @@ const aveLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Avestan"),
   TranslatedName(LangZho(), name: "阿维斯塔文"),
   TranslatedName(LangZho(), name: "阿緯斯陀文", script: ScriptHant()),
+  TranslatedName(LangAmh(), name: "አቬስታን"),
+  TranslatedName(LangNep(), name: "अवेस्तान"),
+  TranslatedName(LangAsm(), name: "আভেস্তান"),
+  TranslatedName(LangBel(), name: "авестан"),
+  TranslatedName(LangEus(), name: "avesta"),
+  TranslatedName(LangGlg(), name: "avestan"),
+  TranslatedName(LangHye(), name: "ավեստերեն"),
+  TranslatedName(LangKaz(), name: "авеста тілі"),
+  TranslatedName(LangKir(), name: "авестан"),
+  TranslatedName(LangMon(), name: "авестан"),
+  TranslatedName(LangMya(), name: "အာဗက်စတန်"),
+  TranslatedName(LangPan(), name: "ਅਵੇਸਤਾਨ"),
+  TranslatedName(LangPus(), name: "اوستا"),
+  TranslatedName(LangSin(), name: "ඇවෙස්තාන්"),
+  TranslatedName(LangSqi(), name: "Avestan"),
+  TranslatedName(LangSwa(), name: "Avestan"),
+  TranslatedName(LangUrd(), name: "زبان اوستا"),
+  TranslatedName(LangUzb(), name: "avesto"),
+  TranslatedName(LangZul(), name: "isi-Avestan"),
 ];

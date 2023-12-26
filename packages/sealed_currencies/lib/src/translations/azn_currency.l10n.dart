@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Azerbaijani Manat currency:
+/// Provides 109 translations for a Azerbaijani Manat currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,27 +66,34 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -86,6 +101,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const aznCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Azerbaijani Manat"),
@@ -93,13 +110,21 @@ const aznCurrencyTranslations = [
   TranslatedName(LangAmh(), name: "የአዛርባጃን ማናት"),
   TranslatedName(LangAra(), name: "مانات أذربيجان"),
   TranslatedName(LangAze(), name: "Azərbaycan Manatı"),
-  TranslatedName(LangAze(), name: "AZN", script: ScriptCyrl()),
+  TranslatedName(
+    LangAze(),
+    name: "AZN",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangBel(), name: "азербайджанскі манат"),
   TranslatedName(LangBul(), name: "Азербайджански манат"),
   TranslatedName(LangBen(), name: "আজারবাইজান মানাত"),
   TranslatedName(LangBre(), name: "manat Azerbaidjan"),
   TranslatedName(LangBos(), name: "Azerbejdžanski manat"),
-  TranslatedName(LangBos(), name: "Азербејџански манат", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Азербејџански манат",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "manat azerbaidjanès"),
   TranslatedName(LangChe(), name: "Азербайджанан манат"),
   TranslatedName(LangCes(), name: "ázerbájdžánský manat"),
@@ -180,4 +205,21 @@ const aznCurrencyTranslations = [
   TranslatedName(LangZho(), name: "亞塞拜疆馬納特", countryCode: "HK"),
   TranslatedName(LangZho(), name: "亞塞拜然馬納特", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Azerbaijani Manat"),
+  TranslatedName(LangAsm(), name: "আজেৰবাইজানী মানাত"),
+  TranslatedName(LangChv(), name: "Азербайджан маначӗ"),
+  TranslatedName(LangFul(), name: "𞤃𞤢𞤲𞤢𞥄𞤼𞤵 𞤀𞥁𞤫𞤪𞤦𞤢𞤴𞤶𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Kuɗin Azerbaijani"),
+  TranslatedName(LangIna(), name: "manat azeri"),
+  TranslatedName(LangIbo(), name: "Ego Manat obodo Azerbaijan"),
+  TranslatedName(LangJav(), name: "Manat Azerbaijan"),
+  TranslatedName(LangKur(), name: "manatê azerbeycanî"),
+  TranslatedName(LangMri(), name: "Manat Atepaihānia"),
+  TranslatedName(LangOri(), name: "ଆଜେରବାଇଜାନି ମନତ୍"),
+  TranslatedName(LangPus(), name: "آزربايجاني منت"),
+  TranslatedName(LangSrd(), name: "manat azeru"),
+  TranslatedName(LangSom(), name: "Manaata Asarbeyjan"),
+  TranslatedName(LangTuk(), name: "Azerbaýjan manady"),
+  TranslatedName(LangTgl(), name: "Azerbaijani Manat"),
+  TranslatedName(LangXho(), name: "I-Manat yase-Azerbeijan"),
+  TranslatedName(LangYor(), name: "Mánààtì Àsàbáíjáì"),
 ];

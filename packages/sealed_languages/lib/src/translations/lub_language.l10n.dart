@@ -2,43 +2,53 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 76 translations for a Luba-Katanga language:
+/// Provides 95 translations for a Luba-Katanga language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -48,33 +58,42 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Yoruba
 /// - Zulu.
 const lubLanguageTranslations = [
   TranslatedName(LangEng(), name: "Luba-Katanga"),
@@ -153,4 +172,27 @@ const lubLanguageTranslations = [
   TranslatedName(LangZho(), name: "鲁巴加丹加文"),
   TranslatedName(LangZho(), name: "魯巴加丹加文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Luba-Katanga"),
+  TranslatedName(LangAsm(), name: "লুবা-কাটাংগা"),
+  TranslatedName(LangBel(), name: "луба-катанга"),
+  TranslatedName(LangChe(), name: "луба-катанга"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤂𞤵𞤦𞤢-𞤑𞤢𞤼𞤢𞤲𞤺𞤢𞥄𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "luba-katanga"),
+  TranslatedName(LangIna(), name: "luba-katanga"),
+  TranslatedName(LangIbo(), name: "Lịba-Katanga"),
+  TranslatedName(LangKhm(), name: "លូបាកាតានហ្គា"),
+  TranslatedName(LangKur(), name: "luba-katangayî"),
+  TranslatedName(LangMri(), name: "Rupa Katanga"),
+  TranslatedName(LangPus(), name: "لوبا-کټنګا"),
+  TranslatedName(LangQue(), name: "Luba-Katanga Simi"),
+  TranslatedName(LangSrd(), name: "luba-katanga"),
+  TranslatedName(LangSnd(), name: "لوبا-ڪتانگا"),
+  TranslatedName(LangSom(), name: "Luuba-kataanga"),
+  TranslatedName(LangTir(), name: "ሉባ-ካታንጋ"),
+  TranslatedName(LangTuk(), name: "luba-katanga dili"),
+  TranslatedName(LangYor(), name: "Lúbà-Katanga"),
+  TranslatedName(LangDeu(), name: "Luba-Katanga"),
 ];

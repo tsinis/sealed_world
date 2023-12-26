@@ -4,7 +4,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 103 translations for a Hong Kong country:
+/// Provides 116 translations for a Hong Kong country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -35,16 +36,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,16 +59,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -78,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -86,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -102,6 +112,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const hkgCountryTranslations = [
   CountryName(
@@ -330,4 +343,23 @@ const hkgCountryTranslations = [
   TranslatedName(LangUzb(), name: "Гонконг (Хитой ММҲ)", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Hồng Kông, Trung Quốc"),
   TranslatedName(LangZul(), name: "i-Hong Kong SAR China"),
+  TranslatedName(LangChv(), name: "Гонконг (САР)"),
+  TranslatedName(LangFul(), name: "𞤖𞤂𞤀 𞤕𞤢𞤴𞤲𞤢 𞤫 𞤖𞤮𞤲𞤺 𞤑𞤮𞤲𞤺"),
+  TranslatedName(
+    LangHau(),
+    name: "Babban Yankin Mulkin Hong Kong na Ƙasar Sin",
+  ),
+  TranslatedName(LangIna(), name: "Hongkong, R.A.S. de China"),
+  TranslatedName(LangIbo(), name: "Hong Kong SAR China"),
+  TranslatedName(LangKur(), name: "Hong Konga HîT ya Çînê"),
+  TranslatedName(LangMri(), name: "Hongipua Haina"),
+  TranslatedName(LangMsa(), name: "Hong Kong SAR China"),
+  TranslatedName(LangSrd(), name: "RAS tzinesa de Hong Kong"),
+  TranslatedName(LangTgl(), name: "Hong Kong SAR China"),
+  TranslatedName(LangWol(), name: "Ooŋ Koŋ"),
+  TranslatedName(LangXho(), name: "EHong Kong SAR China"),
+  TranslatedName(
+    LangYor(),
+    name: "Agbègbè Ìṣàkóso Ìṣúná Hong Kong Tí Ṣánà Ń Darí",
+  ),
 ];

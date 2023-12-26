@@ -2,15 +2,25 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 70 translations for a (Old) Church Slavonic language:
+/// Provides 104 translations for a (Old) Church Slavonic language:
+/// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
+/// - Albanian
+/// - Amharic
 /// - Arabic
+/// - Armenian
+/// - Assamese
 /// - Azerbaijani
+/// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
+/// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -18,8 +28,10 @@ import "../model/translated_name.dart";
 /// - Dutch
 /// - English
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -29,13 +41,20 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
+/// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
+/// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
@@ -45,32 +64,47 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
+/// - Mongolian
+/// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
+/// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
+/// - Urdu
 /// - Uyghur
+/// - Uzbek
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
-/// - Yiddish.
+/// - Yiddish
+/// - Yoruba
+/// - Zulu.
 const chuLanguageTranslations = [
   TranslatedName(LangEng(), name: "Church Slavic"),
   TranslatedName(LangAra(), name: "سلافية كنسية"),
@@ -142,4 +176,42 @@ const chuLanguageTranslations = [
   TranslatedName(LangVie(), name: "Tiếng Slavơ Nhà thờ"),
   TranslatedName(LangYid(), name: "קלויסטער־סלאַוויש"),
   TranslatedName(LangZho(), name: "宗教斯拉夫文"),
+  TranslatedName(LangAfr(), name: "Kerkslawies"),
+  TranslatedName(LangAmh(), name: "ቸርች ስላቪክ"),
+  TranslatedName(LangAsm(), name: "চাৰ্চ শ্লেভিক"),
+  TranslatedName(LangBel(), name: "царкоўнаславянская"),
+  TranslatedName(LangChe(), name: "килсславянийн"),
+  TranslatedName(LangEus(), name: "elizako eslaviera"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤅𞤭𞤤𞤾𞤭𞤳𞤪𞤫 𞤕𞤮𞥅𞤷𞤭",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "kirkju sláviskt"),
+  TranslatedName(LangHye(), name: "սլավոներեն, եկեղեցական"),
+  TranslatedName(LangIna(), name: "slavo ecclesiastic"),
+  TranslatedName(LangIbo(), name: "Church slavic"),
+  TranslatedName(LangJav(), name: "Slavia Gerejani"),
+  TranslatedName(LangKaz(), name: "шіркеулік славян тілі"),
+  TranslatedName(LangKhm(), name: "ឈើជស្លាវិក"),
+  TranslatedName(LangKur(), name: "slaviya kenîseyî"),
+  TranslatedName(LangKir(), name: "чиркөө славянча"),
+  TranslatedName(LangMon(), name: "сүмийн славян"),
+  TranslatedName(LangMya(), name: "ချပ်ချ် စလာဗစ်"),
+  TranslatedName(LangNep(), name: "चर्च स्लाभिक"),
+  TranslatedName(LangPan(), name: "ਚਰਚ ਸਲਾਵੀ"),
+  TranslatedName(LangPus(), name: "د کليسا سلاوي"),
+  TranslatedName(LangQue(), name: "Eslavo Eclesiástico Simi"),
+  TranslatedName(LangSrd(), name: "islavu eclesiàsticu"),
+  TranslatedName(LangSnd(), name: "چرچ سلاوی"),
+  TranslatedName(LangSin(), name: "චර්ච් ස්ලැවික්"),
+  TranslatedName(LangSom(), name: "Kaniisadda Islaafik"),
+  TranslatedName(LangSqi(), name: "sllavishte kishtare"),
+  TranslatedName(LangSwa(), name: "Kislovakia cha Kanisa"),
+  TranslatedName(LangTir(), name: "ቤተ-ክርስትያን ስላቭኛ"),
+  TranslatedName(LangTuk(), name: "buthana slaw dili"),
+  TranslatedName(LangUrd(), name: "چرچ سلاوک"),
+  TranslatedName(LangUzb(), name: "slavyan (cherkov)"),
+  TranslatedName(LangYor(), name: "Èdè Síláfííkì Ilé Ìjọ́sìn"),
+  TranslatedName(LangZul(), name: "isi-Church Slavic"),
 ];

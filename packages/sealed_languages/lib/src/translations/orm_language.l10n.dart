@@ -2,20 +2,23 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 79 translations for a Oromo language:
+/// Provides 100 translations for a Oromo language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -24,23 +27,30 @@ import "../model/translated_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
+/// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -50,34 +60,45 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Yoruba
 /// - Zulu.
 const ormLanguageTranslations = [
   TranslatedName(LangEng(), name: "Oromo"),
@@ -158,7 +179,30 @@ const ormLanguageTranslations = [
   TranslatedName(LangZho(), name: "奥洛莫文"),
   TranslatedName(LangZho(), name: "奧羅莫文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "Isi-Oromo"),
-
-  /// Added manually:
   TranslatedName(LangBre(), name: "oromoeg"),
+  TranslatedName(LangAsm(), name: "ওৰোমো"),
+  TranslatedName(LangBel(), name: "арома"),
+  TranslatedName(LangChe(), name: "оромо"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤌𞤪𞤮𞤥𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFao(), name: "oromo"),
+  TranslatedName(LangIna(), name: "oromo"),
+  TranslatedName(LangIbo(), name: "Ọromo"),
+  TranslatedName(LangKhm(), name: "អូរ៉ូម៉ូ"),
+  TranslatedName(LangKur(), name: "oromoyî"),
+  TranslatedName(LangMri(), name: "Ōromo"),
+  TranslatedName(LangPus(), name: "اورومو"),
+  TranslatedName(LangQue(), name: "Oromo Simi"),
+  TranslatedName(LangSrd(), name: "oromo"),
+  TranslatedName(LangSnd(), name: "اورومو"),
+  TranslatedName(LangTgk(), name: "оромо"),
+  TranslatedName(LangTir(), name: "ኦሮሞ"),
+  TranslatedName(LangTuk(), name: "oromo dili"),
+  TranslatedName(LangTur(), name: "Oromo dili"),
+  TranslatedName(LangTat(), name: "оромо"),
+  TranslatedName(LangYor(), name: "Òròmọ́"),
+  TranslatedName(LangDeu(), name: "Oromo"),
 ];

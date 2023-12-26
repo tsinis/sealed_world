@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Gabon country:
+/// Provides 115 translations for a Gabon country:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -112,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -314,4 +315,5 @@ const gabCountryTranslations = [
   TranslatedName(LangSsw(), name: "IGabhoni"),
   TranslatedName(LangTso(), name: "Gaboni"),
   TranslatedName(LangVol(), name: "Gabunän"),
+  TranslatedName(LangXho(), name: "EGabon"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Argentina country:
+/// Provides 136 translations for a Argentina country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -134,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -365,4 +366,5 @@ const argCountryTranslations = [
   TranslatedName(LangTah(), name: "’Atetina"),
   TranslatedName(LangVol(), name: "Largäntän"),
   TranslatedName(LangWln(), name: "Årdjintene"),
+  TranslatedName(LangXho(), name: "E-Argentina"),
 ];

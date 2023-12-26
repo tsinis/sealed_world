@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a Angolan Kwanza currency:
+/// Provides 119 translations for a Angolan Kwanza currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,18 +89,22 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -99,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const aoaCurrencyTranslations = [
@@ -114,7 +128,11 @@ const aoaCurrencyTranslations = [
   TranslatedName(LangBen(), name: "এ্যাঙ্গোলান কওয়ানজা"),
   TranslatedName(LangBre(), name: "kwanza Angola"),
   TranslatedName(LangBos(), name: "Angolska kvanza"),
-  TranslatedName(LangBos(), name: "анголска кванза", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "анголска кванза",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "kwanza angolès"),
   TranslatedName(LangChe(), name: "Анголан кванза"),
   TranslatedName(LangCes(), name: "angolská kwanza"),
@@ -211,4 +229,18 @@ const aoaCurrencyTranslations = [
   TranslatedName(LangZho(), name: "安哥拉宽扎"),
   TranslatedName(LangZho(), name: "安哥拉寬扎", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Angolan Kwanza"),
+  TranslatedName(LangAsm(), name: "এংগোলান কোৱাঞ্জা"),
+  TranslatedName(LangChv(), name: "Ангола кванзӗ"),
+  TranslatedName(LangIna(), name: "kwanza angolan"),
+  TranslatedName(LangIbo(), name: "Ego Kwanza obodo Angola"),
+  TranslatedName(LangJav(), name: "Kwanza Angola"),
+  TranslatedName(LangKur(), name: "kwanzayê angolayî"),
+  TranslatedName(LangMri(), name: "Kwanza Anakora"),
+  TranslatedName(LangOri(), name: "ଅଙ୍ଗୋଲୀୟ କୱାନଜା"),
+  TranslatedName(LangPus(), name: "انګولي کوانزا"),
+  TranslatedName(LangSrd(), name: "kwanza angolanu"),
+  TranslatedName(LangSom(), name: "Kawansada Angola"),
+  TranslatedName(LangTuk(), name: "Angola kwanzasy"),
+  TranslatedName(LangTgl(), name: "Angolan Kwanza"),
+  TranslatedName(LangXho(), name: "I-Kwanza yase-Angola"),
 ];

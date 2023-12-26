@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 94 translations for a Lao language:
+/// Provides 112 translations for a Lao language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -18,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -31,6 +33,7 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -40,15 +43,19 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -57,14 +64,17 @@ import "../model/translated_name.dart";
 /// - Macedonian
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -72,18 +82,24 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -91,7 +107,9 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const laoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Lao"),
@@ -188,4 +206,26 @@ const laoLanguageTranslations = [
   TranslatedName(LangZho(), name: "老挝文"),
   TranslatedName(LangZho(), name: "寮文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Lao"),
+  TranslatedName(LangAsm(), name: "লাও"),
+  TranslatedName(LangChe(), name: "лаоссийн"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤂𞤢𞤮𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "laotiano"),
+  TranslatedName(LangIbo(), name: "Laọ"),
+  TranslatedName(LangJav(), name: "Laos"),
+  TranslatedName(LangKur(), name: "lawsî"),
+  TranslatedName(LangMri(), name: "Rao"),
+  TranslatedName(LangMlt(), name: "Laosjan"),
+  TranslatedName(LangPus(), name: "لاو"),
+  TranslatedName(LangSrd(), name: "laotianu"),
+  TranslatedName(LangSnd(), name: "لائو"),
+  TranslatedName(LangTgk(), name: "лаосӣ"),
+  TranslatedName(LangTir(), name: "ላኦ"),
+  TranslatedName(LangTuk(), name: "laos dili"),
+  TranslatedName(LangTat(), name: "лаос"),
+  TranslatedName(LangWol(), name: "Laaw"),
+  TranslatedName(LangYor(), name: "Láò"),
 ];

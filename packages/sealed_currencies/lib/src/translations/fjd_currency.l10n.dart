@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Fijian Dollar currency:
+/// Provides 108 translations for a Fijian Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,20 +66,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const fjdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Fijian Dollar"),
@@ -100,7 +116,11 @@ const fjdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ফিজি ডলার"),
   TranslatedName(LangBre(), name: "dollar Fidji"),
   TranslatedName(LangBos(), name: "Fidžijski dolar"),
-  TranslatedName(LangBos(), name: "Фиџи долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Фиџи долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar fijià"),
   TranslatedName(LangChe(), name: "Фиджин доллар"),
   TranslatedName(LangCes(), name: "fidžijský dolar"),
@@ -182,4 +202,20 @@ const fjdCurrencyTranslations = [
   TranslatedName(LangZho(), name: "斐济元"),
   TranslatedName(LangZho(), name: "斐濟元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Fijian Dollar"),
+  TranslatedName(LangAsm(), name: "ফিজিয়ান ডলাৰ"),
+  TranslatedName(LangChv(), name: "Фиджи долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤊𞤭𞤶𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dalar Fiji"),
+  TranslatedName(LangIna(), name: "dollar fijian"),
+  TranslatedName(LangIbo(), name: "Ego Dollar obodo Fiji"),
+  TranslatedName(LangJav(), name: "Dolar Fiji"),
+  TranslatedName(LangKur(), name: "dolarê fîjiyî"),
+  TranslatedName(LangMri(), name: "Tāra Whītī"),
+  TranslatedName(LangOri(), name: "ଫିଜି ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "فجي ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru fijianu"),
+  TranslatedName(LangSom(), name: "Doolarka Fiji"),
+  TranslatedName(LangTuk(), name: "Fiji dollary"),
+  TranslatedName(LangXho(), name: "IDola yaseFiji"),
+  TranslatedName(LangYor(), name: "Dọ́là Fíjì"),
 ];

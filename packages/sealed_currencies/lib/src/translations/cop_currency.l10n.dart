@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Colombian Peso currency:
+/// Provides 108 translations for a Colombian Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const copCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Colombian Peso"),
@@ -100,7 +116,11 @@ const copCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কলোম্বিয়ান পেসো"),
   TranslatedName(LangBre(), name: "peso Kolombia"),
   TranslatedName(LangBos(), name: "Kolumbijski pezos"),
-  TranslatedName(LangBos(), name: "Колумбијски пезо", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Колумбијски пезо",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "peso colombià"),
   TranslatedName(LangChe(), name: "Колумбин песо"),
   TranslatedName(LangCes(), name: "kolumbijské peso"),
@@ -177,9 +197,29 @@ const copCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "колумбійський песо"),
   TranslatedName(LangUrd(), name: "کولمبین پیسہ"),
   TranslatedName(LangUzb(), name: "Kolumbiya pesosi"),
-  TranslatedName(LangUzb(), name: "Колумбия песоси", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Колумбия песоси",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Peso Colombia"),
   TranslatedName(LangZho(), name: "哥伦比亚比索"),
   TranslatedName(LangZho(), name: "哥倫比亞披索", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Colombian Peso"),
+  TranslatedName(LangAsm(), name: "কলম্বিয়ান পেছো"),
+  TranslatedName(LangChv(), name: "Колумби песийӗ"),
+  TranslatedName(LangFul(), name: "𞤆𞤫𞥅𞤧𞤮𞥅 𞤑𞤮𞤤𞤮𞤥𞤦𞤭𞤴𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Peso na ƙasar Columbia"),
+  TranslatedName(LangIna(), name: "peso colombian"),
+  TranslatedName(LangIbo(), name: "Ego Peso obodo Columbia"),
+  TranslatedName(LangJav(), name: "Peso Kolumbia"),
+  TranslatedName(LangKur(), name: "pesoyê kolombiyayî"),
+  TranslatedName(LangMri(), name: "Peso Koromōpia"),
+  TranslatedName(LangOri(), name: "କଲୋମ୍ବୀୟ ପେସୋ"),
+  TranslatedName(LangPus(), name: "کولمبين پسو"),
+  TranslatedName(LangSrd(), name: "peso colombianu"),
+  TranslatedName(LangSom(), name: "Beesada Kolombiya"),
+  TranslatedName(LangTuk(), name: "Kolumbiýa pesosy"),
+  TranslatedName(LangXho(), name: "I-Peso yaseColombia"),
+  TranslatedName(LangYor(), name: "Pẹ́sò Kòlóḿbíà"),
 ];

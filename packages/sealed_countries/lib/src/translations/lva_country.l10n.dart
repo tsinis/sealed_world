@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a Latvia country:
+/// Provides 149 translations for a Latvia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -143,6 +143,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -375,4 +376,5 @@ const lvaCountryTranslations = [
   TranslatedName(LangTgl(), name: "Latbiya"),
   TranslatedName(LangVol(), name: "Latviyän"),
   TranslatedName(LangWln(), name: "Letoneye"),
+  TranslatedName(LangXho(), name: "ELatvia"),
 ];

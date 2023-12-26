@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 85 translations for a Tokelau country:
+/// Provides 88 translations for a Tokelau country:
 /// - (Eastern) Punjabi
 /// - Amharic
 /// - Arabic
@@ -18,6 +18,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
@@ -85,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const tklCountryTranslations = [
@@ -193,4 +196,7 @@ const tklCountryTranslations = [
   TranslatedName(LangZul(), name: "i-Tokelau"),
   TranslatedName(LangEpo(), name: "Tokelao"),
   TranslatedName(LangFry(), name: "Tokelaû"),
+  TranslatedName(LangChv(), name: "Токелау"),
+  TranslatedName(LangMri(), name: "Tokerau"),
+  TranslatedName(LangXho(), name: "ETokelau"),
 ];

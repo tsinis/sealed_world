@@ -2,25 +2,30 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 85 translations for a Māori language:
+/// Provides 112 translations for a Māori language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
+/// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -29,28 +34,39 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Nepali
@@ -59,6 +75,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -66,24 +83,34 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Western Frisian
+/// - Wolof
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const mriLanguageTranslations = [
   TranslatedName(LangEng(), name: "Maori"),
@@ -174,4 +201,35 @@ const mriLanguageTranslations = [
   TranslatedName(LangYid(), name: "מאַאריש"),
   TranslatedName(LangZho(), name: "毛利文"),
   TranslatedName(LangZul(), name: "isi-Maori"),
+  TranslatedName(LangAfr(), name: "Maori"),
+  TranslatedName(LangAsm(), name: "মাওৰি"),
+  TranslatedName(LangBel(), name: "маары"),
+  TranslatedName(LangChe(), name: "маори"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤃𞤢𞥄𞤮𞤪𞤭𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangFry(), name: "Maori"),
+  TranslatedName(LangHau(), name: "Maori"),
+  TranslatedName(LangIna(), name: "maori"),
+  TranslatedName(LangInd(), name: "Maori"),
+  TranslatedName(LangIbo(), name: "Maọrị"),
+  TranslatedName(LangJav(), name: "Maori"),
+  TranslatedName(LangKur(), name: "maorî"),
+  TranslatedName(LangLtz(), name: "Maori"),
+  TranslatedName(LangMsa(), name: "Maori"),
+  TranslatedName(LangMlt(), name: "Maori"),
+  TranslatedName(LangNld(), name: "Maori"),
+  TranslatedName(LangPus(), name: "ماوري"),
+  TranslatedName(LangSrd(), name: "maori"),
+  TranslatedName(LangSnd(), name: "مائوري"),
+  TranslatedName(LangSom(), name: "Maaoori"),
+  TranslatedName(LangTgk(), name: "маорӣ"),
+  TranslatedName(LangTir(), name: "ማኦሪ"),
+  TranslatedName(LangTuk(), name: "maori dili"),
+  TranslatedName(LangTat(), name: "маори"),
+  TranslatedName(LangWol(), name: "Mawri"),
+  TranslatedName(LangYor(), name: "Màórì"),
+  TranslatedName(LangDeu(), name: "Māori"),
 ];

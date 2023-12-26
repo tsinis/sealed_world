@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a South Georgia country:
+/// Provides 124 translations for a South Georgia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -35,17 +36,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -55,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -67,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -82,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -91,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -108,6 +116,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const sgsCountryTranslations = [
   CountryName(
@@ -441,5 +451,31 @@ const sgsCountryTranslations = [
   TranslatedName(
     LangOss(),
     name: "Хуссар Джорджи æмæ Хуссар Сандвичы сакъадæхтæ",
+  ),
+  TranslatedName(LangChv(), name: "Кӑнтӑр Георги тата Сандвичев утравӗсем"),
+  TranslatedName(
+    LangFul(),
+    name:
+        """𞤐𞤢𞤲𞥆𞤢𞥄𞤲𞤺𞤫 𞤔𞤮𞤪𞤶𞤭𞤴𞤢 & 𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤐𞤢𞤲𞥆𞤢𞥄𞤲𞤺𞤫 𞤅𞤢𞤲𞤣𞤵𞤱𞤭𞥅𞤷""",
+  ),
+  TranslatedName(
+    LangHau(),
+    name: "Kudancin Geogia da Kudancin Tsibirin Sandiwic",
+  ),
+  TranslatedName(LangIna(), name: "Georgia del Sud e Insulas Sandwich Austral"),
+  TranslatedName(LangKur(), name: "Giravên Georgiyaya Başûr û Sandwicha Başûr"),
+  TranslatedName(
+    LangMri(),
+    name: "Hōria ki te Tonga me ngā Motu Hanawiti ki te Tonga",
+  ),
+  TranslatedName(
+    LangSrd(),
+    name: "Geòrgia de su Sud e Ìsulas Sandwich Australes",
+  ),
+  TranslatedName(LangTgl(), name: "South Georgia & South Sandwich Islands"),
+  TranslatedName(LangXho(), name: "ESouth Georgia & South Sandwich Islands"),
+  TranslatedName(
+    LangYor(),
+    name: "Gúúsù Georgia àti Gúúsù Àwọn Erékùsù Sandwich",
   ),
 ];

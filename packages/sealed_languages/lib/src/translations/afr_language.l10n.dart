@@ -2,13 +2,14 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Afrikaans language:
+/// Provides 114 translations for a Afrikaans language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -18,6 +19,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -30,23 +32,29 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -56,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -64,6 +73,7 @@ import "../model/translated_name.dart";
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -71,19 +81,25 @@ import "../model/translated_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -91,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -192,4 +209,25 @@ const afrLanguageTranslations = [
   TranslatedName(LangZho(), name: "南非荷兰文"),
   TranslatedName(LangZho(), name: "南非荷蘭文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Afrikaans"),
+  TranslatedName(LangAsm(), name: "আফ্ৰিকানছ্"),
+  TranslatedName(LangChe(), name: "африкаанс"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤀𞤬𞤪𞤭𞤳𞤢𞤲𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangHau(), name: "Afirkanci"),
+  TranslatedName(LangIna(), name: "afrikaans"),
+  TranslatedName(LangJav(), name: "Afrika"),
+  TranslatedName(LangKur(), name: "afrîkansî"),
+  TranslatedName(LangMri(), name: "Awherikāna"),
+  TranslatedName(LangPus(), name: "افریکانسي"),
+  TranslatedName(LangSrd(), name: "afrikaans"),
+  TranslatedName(LangSnd(), name: "آفريڪي"),
+  TranslatedName(LangSom(), name: "Afrikaanka"),
+  TranslatedName(LangTgk(), name: "африкаанс"),
+  TranslatedName(LangTuk(), name: "afrikaans dili"),
+  TranslatedName(LangTat(), name: "африкаанс"),
+  TranslatedName(LangXho(), name: "isiBhulu"),
+  TranslatedName(LangDeu(), name: "Afrikaans"),
 ];

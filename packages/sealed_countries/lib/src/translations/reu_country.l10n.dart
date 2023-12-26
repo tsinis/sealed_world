@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Réunion country:
+/// Provides 110 translations for a Réunion country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Albanian
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -43,6 +44,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Interlingua
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Kannada
@@ -64,6 +67,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -73,6 +77,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -249,4 +255,10 @@ const reuCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Riuniyan"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Riuniyan", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Réunion"),
+  TranslatedName(LangChv(), name: "Реюньон"),
+  TranslatedName(LangGle(), name: "La Réunion"),
+  TranslatedName(LangIna(), name: "Reunion"),
+  TranslatedName(LangMri(), name: "Reūnio"),
+  TranslatedName(LangSrd(), name: "Riunione"),
+  TranslatedName(LangXho(), name: "ERéunion"),
 ];

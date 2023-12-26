@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a Bermudian Dollar currency:
+/// Provides 109 translations for a Bermudian Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,24 +32,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -59,20 +67,25 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -81,6 +94,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -88,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const bmdCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Bermudan Dollar"),
@@ -100,7 +116,11 @@ const bmdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বারমিউডান ডলার"),
   TranslatedName(LangBre(), name: "dollar Bermuda"),
   TranslatedName(LangBos(), name: "Bermudski dolar"),
-  TranslatedName(LangBos(), name: "Бермудски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Бермудски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar de les Bermudes"),
   TranslatedName(LangChe(), name: "Бермудан доллар"),
   TranslatedName(LangCes(), name: "bermudský dolar"),
@@ -178,9 +198,29 @@ const bmdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "бермудський долар"),
   TranslatedName(LangUrd(), name: "برموڈا ڈالر"),
   TranslatedName(LangUzb(), name: "Bermuda dollari"),
-  TranslatedName(LangUzb(), name: "Бермуда доллари", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Бермуда доллари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Bermuda"),
   TranslatedName(LangZho(), name: "百慕大元"),
   TranslatedName(LangZho(), name: "百慕達幣", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Bermudan Dollar"),
+  TranslatedName(LangAsm(), name: "বাৰ্মুডান ডলাৰ"),
+  TranslatedName(LangChv(), name: "Бермуд долларӗ"),
+  TranslatedName(LangFul(), name: "𞤁𞤢𞤤𞤢 𞤄𞤵𞤪𞤥𞤵𞤣𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Dalar ƙasar Bermuda"),
+  TranslatedName(LangIna(), name: "dollar bermudan"),
+  TranslatedName(LangIbo(), name: "Dollar Bermuda"),
+  TranslatedName(LangJav(), name: "Dolar Bermuda"),
+  TranslatedName(LangKur(), name: "dolarê bermûdayî"),
+  TranslatedName(LangMri(), name: "Tāra Pāmura"),
+  TranslatedName(LangOri(), name: "ବର୍ମ୍ୟୁଡା ଡଲାର୍"),
+  TranslatedName(LangPus(), name: "برمودا ډالر"),
+  TranslatedName(LangSrd(), name: "dòllaru de sas Bermudas"),
+  TranslatedName(LangSom(), name: "Doolarka Barmuuda"),
+  TranslatedName(LangTuk(), name: "Bermuda dollary"),
+  TranslatedName(LangXho(), name: "Bermudan Dollar"),
+  TranslatedName(LangYor(), name: "Dọ́là Bẹ̀múdà"),
 ];

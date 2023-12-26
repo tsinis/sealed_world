@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Urdu language:
+/// Provides 119 translations for a Urdu language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -11,6 +11,7 @@ import "../model/translated_name.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -33,9 +35,11 @@ import "../model/translated_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Ganda
 /// - Georgian
+/// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Hausa
@@ -44,6 +48,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -55,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -65,6 +71,7 @@ import "../model/translated_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -73,6 +80,7 @@ import "../model/translated_name.dart";
 /// - Norwegian Nynorsk
 /// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -81,8 +89,10 @@ import "../model/translated_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
+/// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
@@ -90,12 +100,15 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tajik
 /// - Tamil
+/// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -212,4 +225,21 @@ const urdLanguageTranslations = [
   TranslatedName(LangZho(), name: "乌尔都文"),
   TranslatedName(LangZho(), name: "烏都文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Urdu"),
+  TranslatedName(LangAsm(), name: "উৰ্দু"),
+  TranslatedName(LangChe(), name: "урду"),
+  TranslatedName(
+    LangFul(),
+    name: "𞤓𞤪𞤣𞤵𞥅𞤪𞤫",
+    script: ScriptAdlm(),
+  ),
+  TranslatedName(LangIna(), name: "urdu"),
+  TranslatedName(LangKur(), name: "urdûyî"),
+  TranslatedName(LangMri(), name: "Ūrutu"),
+  TranslatedName(LangPus(), name: "اردو"),
+  TranslatedName(LangSrd(), name: "urdu"),
+  TranslatedName(LangSnd(), name: "اردو"),
+  TranslatedName(LangTgk(), name: "урду"),
+  TranslatedName(LangTuk(), name: "urdu"),
+  TranslatedName(LangTat(), name: "урду"),
+  TranslatedName(LangDeu(), name: "Urdu"),
 ];

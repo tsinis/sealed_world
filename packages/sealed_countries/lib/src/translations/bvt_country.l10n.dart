@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Bouvet Island country:
+/// Provides 114 translations for a Bouvet Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -33,11 +34,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -54,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -65,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -79,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -105,6 +111,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const bvtCountryTranslations = [
   CountryName(
@@ -293,4 +301,12 @@ const bvtCountryTranslations = [
   TranslatedName(LangVie(), name: "Đảo Bouvet"),
   TranslatedName(LangWol(), name: "Dunu Buwet"),
   TranslatedName(LangZul(), name: "i-Bouvet Island"),
+  TranslatedName(LangChv(), name: "Буве утравӗ"),
+  TranslatedName(LangFul(), name: "𞤅𞤵𞤪𞤭𞥅𞤪𞤫 𞤄𞤵𞥅𞤾𞤫𞥅"),
+  TranslatedName(LangHau(), name: "Tsibirin Bouvet"),
+  TranslatedName(LangKur(), name: "Girava Bouvetê"),
+  TranslatedName(LangMri(), name: "Motu Pūwei"),
+  TranslatedName(LangSrd(), name: "Ìsula Bouvet"),
+  TranslatedName(LangXho(), name: "EBouvet Island"),
+  TranslatedName(LangYor(), name: "Erékùsù Bouvet"),
 ];

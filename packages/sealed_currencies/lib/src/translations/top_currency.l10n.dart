@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Tongan Paʻanga currency:
+/// Provides 111 translations for a Tongan Paʻanga currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -19,6 +20,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -29,24 +31,30 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -58,28 +66,35 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -87,6 +102,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const topCurrencyTranslations = [
   TranslatedName(LangEng(), name: "Tongan Paʻanga"),
@@ -99,7 +116,11 @@ const topCurrencyTranslations = [
   TranslatedName(LangBen(), name: "টোঙ্গা পা’আঙ্গা"),
   TranslatedName(LangBre(), name: "paʻanga Tonga"),
   TranslatedName(LangBos(), name: "Tonganska panga"),
-  TranslatedName(LangBos(), name: "Тонгоншка Панга", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Тонгоншка Панга",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "pa‘anga tongà"),
   TranslatedName(LangChe(), name: "Тонганан паанга"),
   TranslatedName(LangCes(), name: "tonžská paanga"),
@@ -182,7 +203,22 @@ const topCurrencyTranslations = [
   TranslatedName(LangZho(), name: "湯加潘加", countryCode: "HK"),
   TranslatedName(LangZho(), name: "東加潘加", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Tongan Paʻanga"),
-
-  /// Added manually:
   TranslatedName(LangMsa(), name: "Pa’anga Tonga"),
+  TranslatedName(LangAsm(), name: "টংগান পাআংগা"),
+  TranslatedName(LangChv(), name: "Тонган паанги"),
+  TranslatedName(LangFul(), name: "𞤆𞤢𞤢𞤲𞤺𞤢 𞤚𞤮𞤲𞤺𞤢𞤲𞤳𞤮"),
+  TranslatedName(LangHau(), name: "Paʻanga na ƙasar Tonga"),
+  TranslatedName(LangIna(), name: "paʻanga tongan"),
+  TranslatedName(LangIbo(), name: "Ego paʻanga obodo Tonga"),
+  TranslatedName(LangJav(), name: "Paʻanga Tonga"),
+  TranslatedName(LangKur(), name: "paʻangayê tonganî"),
+  TranslatedName(LangMri(), name: "Pa’anga Tonga"),
+  TranslatedName(LangOri(), name: "ତୋଙ୍ଗିୟ ପାଙ୍ଗା"),
+  TranslatedName(LangPus(), name: "ټونګن پانګا"),
+  TranslatedName(LangSrd(), name: "paʻanga tongana"),
+  TranslatedName(LangSom(), name: "Ba’angada Tonga"),
+  TranslatedName(LangTuk(), name: "Tonga paangasy"),
+  TranslatedName(LangTgl(), name: "Tongan Paʻanga"),
+  TranslatedName(LangXho(), name: "I-Paʻanga yaseTonga"),
+  TranslatedName(LangYor(), name: "Pàángà Tóńgà"),
 ];

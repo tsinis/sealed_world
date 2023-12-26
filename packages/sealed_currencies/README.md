@@ -62,8 +62,8 @@ import 'package:sealed_currencies/sealed_currencies.dart';
 Use `FiatCurrency` class to get information about currencies. Either construct a new instance directly, or with use of the class factory constructors/static methods or select one from the `FiatCurrency.list` constant.
 
 ```dart
-  print(FiatCurrency.list.length); // Prints: "169".
-  print(FiatCurrency.regularList.length); // Prints: "159".
+  print(FiatCurrency.listExtended.length); // Prints: "169".
+  print(FiatCurrency.list.length); // Prints: "159".
 
   final serbianDinar = FiatCurrency.fromCode("Rsd");
   print(serbianDinar); // Prints: "Serbian Dinar".
@@ -82,7 +82,7 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
   */
 
   // Prints German translations of all available regular currencies.
-  for (final currency in FiatCurrency.regularList) {
+  for (final currency in FiatCurrency.list) {
     print(
       """German name of ${currency.name}: ${currency.maybeTranslation(const LangDeu())?.name}""",
     );
@@ -97,7 +97,7 @@ For more usage examples, please see the `/example` folder.
 
 - **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes, you can also override existing data, etc.).
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
-- **Rich data**: This package offers far more data than any other package + tons of translations.
+- **Rich data**: This package offers far more data than any other package + tons of translations (all GlobalMaterialLocalizations and GlobalCupertinoLocalizations locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has a high level of coverage, providing confidence in its reliability and stability.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
@@ -112,7 +112,8 @@ If you have any issues or suggestions for the package, please file them in the G
 - [ISO](https://www.iso.org/iso-4217-currency-codes.html)
 - [Wikipedia](https://wikipedia.org/wiki/ISO_4217)
 - [Data Source](https://github.com/RubyMoney/money)[^2]
-- [Translations Source](https://github.com/umpirsky/currency-list)
+- [Primary Translations Source](https://github.com/umpirsky/currency-list)
+- [Secondary Translations Source](https://github.com/symfony/intl)
 - [Project Roadmap](https://github.com/users/tsinis/projects/1)
 
 [^1]: Doesn't contain complementary funds, etc. currency codes: BOV, CHE, CHW, COU, MXV, USN, UYI, UYW, VED, XSU, XUA, XXX.

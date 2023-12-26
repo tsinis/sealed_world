@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Dominica country:
+/// Provides 113 translations for a Dominica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -70,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
@@ -105,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -311,4 +314,7 @@ const dmaCountryTranslations = [
   TranslatedName(LangZul(), name: "i-Dominica"),
   TranslatedName(LangAfr(), name: "Dominika"),
   TranslatedName(LangVol(), name: "Dominikeän"),
+  TranslatedName(LangChv(), name: "Доминика"),
+  TranslatedName(LangMri(), name: "Tominika"),
+  TranslatedName(LangXho(), name: "EDominica"),
 ];

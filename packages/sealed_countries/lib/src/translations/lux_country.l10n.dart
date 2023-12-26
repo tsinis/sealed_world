@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Luxembourg country:
+/// Provides 145 translations for a Luxembourg country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -140,6 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -380,4 +381,5 @@ const luxCountryTranslations = [
   TranslatedName(LangSun(), name: "Luksemburg"),
   TranslatedName(LangVol(), name: "Luxämburgän"),
   TranslatedName(LangWln(), name: "Grande-Dutcheye do Lussimbork"),
+  TranslatedName(LangXho(), name: "ELuxembourg"),
 ];

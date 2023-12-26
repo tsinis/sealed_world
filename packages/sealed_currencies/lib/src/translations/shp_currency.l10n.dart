@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 105 translations for a St. Helena Pound currency:
+/// Provides 118 translations for a St. Helena Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -21,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +45,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +59,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +74,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,11 +89,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -93,6 +104,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +112,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const shpCurrencyTranslations = [
@@ -115,7 +128,11 @@ const shpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সেন্ট হেলেনা পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Saint-Helena"),
   TranslatedName(LangBos(), name: "Svetohelenska funta"),
-  TranslatedName(LangBos(), name: "Св. јеленска фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Св. јеленска фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura de Santa Helena"),
   TranslatedName(LangChe(), name: "Сийлахьчу Еленин гӀайрен фунт"),
   TranslatedName(LangCes(), name: "svatohelenská libra"),
@@ -212,4 +229,17 @@ const shpCurrencyTranslations = [
   TranslatedName(LangZho(), name: "圣赫勒拿群岛磅"),
   TranslatedName(LangZho(), name: "聖赫勒拿鎊", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Saint Helena Pound"),
+  TranslatedName(LangAsm(), name: "ছেইণ্ট হেলেনা পাউণ্ড"),
+  TranslatedName(LangChv(), name: "Сӑваплӑ Елена утравӗн фунчӗ"),
+  TranslatedName(LangIna(), name: "libra de St. Helena"),
+  TranslatedName(LangIbo(), name: "Ego Pound obodo St Helena"),
+  TranslatedName(LangJav(), name: "Pound Santa Helena"),
+  TranslatedName(LangKur(), name: "lîreyê saînt helenayî"),
+  TranslatedName(LangMri(), name: "Pāuna Hato Herena"),
+  TranslatedName(LangOri(), name: "ସେଣ୍ଟ୍. ହେଲେନା ପାଉଣ୍ଡ୍"),
+  TranslatedName(LangPus(), name: "سينټ هيلينا پونډ"),
+  TranslatedName(LangSrd(), name: "isterlina de Sant’Elene"),
+  TranslatedName(LangSom(), name: "Bowndka St Helen"),
+  TranslatedName(LangTuk(), name: "Keramatly Ýelena adasynyň funty"),
+  TranslatedName(LangXho(), name: "IPonti yaseSt. Helena"),
 ];

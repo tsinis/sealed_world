@@ -1,13 +1,15 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 108 translations for a Saudi Riyal currency:
+/// Provides 122 translations for a Saudi Riyal currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
+/// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -20,6 +22,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -43,10 +46,13 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -54,6 +60,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -68,11 +75,14 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -80,6 +90,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sinhalese (Sinhala)
@@ -89,10 +100,12 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -100,6 +113,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const sarCurrencyTranslations = [
@@ -114,7 +128,11 @@ const sarCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সৌদি রিয়্যাল"),
   TranslatedName(LangBre(), name: "riyal Arabia Saoudat"),
   TranslatedName(LangBos(), name: "Saudijski rijal"),
-  TranslatedName(LangBos(), name: "Саудијски ријал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Саудијски ријал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rial saudita"),
   TranslatedName(LangChe(), name: "СаӀудийн Аравин риал"),
   TranslatedName(LangCes(), name: "saúdský rijál"),
@@ -206,9 +224,27 @@ const sarCurrencyTranslations = [
   TranslatedName(LangUzb(), name: "Saudiya Arabistoni riyoli"),
   TranslatedName(LangVie(), name: "Riyal Ả Rập Xê-út"),
   TranslatedName(LangYor(), name: "Riya ti Orílẹ́ède Saudi"),
-  TranslatedName(LangYor(), name: "Riya ti Orílɛ́ède Saudi", countryCode: "BJ"),
+  TranslatedName(
+    LangYor(),
+    name: "Riya ti Orílɛ́ède Saudi",
+    countryCode: "BJ",
+  ),
   TranslatedName(LangZho(), name: "沙特里亚尔"),
   TranslatedName(LangZho(), name: "沙特阿拉伯里亞爾", countryCode: "HK"),
   TranslatedName(LangZho(), name: "沙烏地里亞爾", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Saudi Riyal"),
+  TranslatedName(LangAka(), name: "Saudi Riyal"),
+  TranslatedName(LangAsm(), name: "চৌডি ৰিয়েল"),
+  TranslatedName(LangChv(), name: "Сауд риялӗ"),
+  TranslatedName(LangIna(), name: "rial saudi"),
+  TranslatedName(LangIbo(), name: "Ego Riyal obodo Saudi"),
+  TranslatedName(LangJav(), name: "Riyal Saudi"),
+  TranslatedName(LangKur(), name: "riyalê siûdî"),
+  TranslatedName(LangMri(), name: "Riyal Hauri"),
+  TranslatedName(LangOri(), name: "ସୌଦି ରିୟାଲ୍"),
+  TranslatedName(LangPus(), name: "سعودي ريال"),
+  TranslatedName(LangSrd(), name: "riyal saudita"),
+  TranslatedName(LangTuk(), name: "Saud rialy"),
+  TranslatedName(LangTgl(), name: "Saudi Riyal"),
+  TranslatedName(LangXho(), name: "I-Riyal yaseSaudi"),
 ];
