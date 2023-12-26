@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Turkmenistani Manat currency:
+/// Provides 107 translations for a Turkmenistani Manat currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -69,6 +69,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Norwegian Nynorsk
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -220,4 +221,5 @@ const tmtCurrencyTranslations = [
   TranslatedName(LangTgl(), name: "Turkmenistani Manat"),
   TranslatedName(LangXho(), name: "I-Manat yaseTurkmenistan"),
   TranslatedName(LangYor(), name: "Mánààtì Tọkimẹnístàànì"),
+  TranslatedName(LangNno(), name: "turkmenske manat"),
 ];

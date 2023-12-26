@@ -363,7 +363,7 @@ class FiatCurrency extends Currency
     FiatGyd(),
     FiatHkd(),
     FiatHnl(),
-    FiatHrk(),
+    FiatHrk(), // ignore: deprecated_member_use_from_same_package, until 2024+.
     FiatHtg(),
     FiatHuf(),
     FiatIdr(),

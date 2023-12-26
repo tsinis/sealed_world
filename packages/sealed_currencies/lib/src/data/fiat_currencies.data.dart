@@ -1484,10 +1484,12 @@ class FiatHnl extends FiatCurrency {
 }
 
 /// A class that represents the Croatian Kuna currency.
+@Deprecated("Use FiatEur() instead")
 class FiatHrk extends FiatCurrency {
   /// Creates a instance of [FiatHrk] (Croatian Kuna currency).
   ///
   /// ISO 4217 Alpha code: "HRK", ISO 4217 Numeric code: "191".
+  @Deprecated("Use FiatEur() instead")
   const FiatHrk()
       : super(
           code: "HRK",

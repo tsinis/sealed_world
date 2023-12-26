@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 102 translations for a South Sudanese Pound currency:
+/// Provides 103 translations for a South Sudanese Pound currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -68,6 +68,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Norwegian Nynorsk
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -207,4 +208,5 @@ const sspCurrencyTranslations = [
   TranslatedName(LangTuk(), name: "Günorta Sudan funty"),
   TranslatedName(LangXho(), name: "IPonti yaseSouth Sudan"),
   TranslatedName(LangYor(), name: "Pọ́n-un Gúúsù Sùdáànì"),
+  TranslatedName(LangNno(), name: "sørsudanske pund"),
 ];

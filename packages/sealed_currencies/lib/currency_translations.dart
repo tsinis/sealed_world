@@ -252,6 +252,7 @@ const kSealedCurrenciesSupportedLanguages = [
   LangMya(),
   LangNep(),
   LangNld(),
+  LangNno(),
   LangNob(),
   LangNor(),
   LangOri(),

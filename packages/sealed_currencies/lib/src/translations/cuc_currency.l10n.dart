@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 106 translations for a Cuban Convertible Peso currency:
+/// Provides 107 translations for a Cuban Convertible Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -69,6 +69,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Norwegian Nynorsk
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -231,4 +232,5 @@ const cucCurrencyTranslations = [
   TranslatedName(LangTuk(), name: "Konwertirlenýän kuba pesosy"),
   TranslatedName(LangXho(), name: "Cuban Convertible Peso"),
   TranslatedName(LangYor(), name: "Pẹ́sò Yíyípadà Kúbà"),
+  TranslatedName(LangNno(), name: "kubanske konvertible pesos"),
 ];

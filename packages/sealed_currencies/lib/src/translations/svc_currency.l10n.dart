@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a Salvadoran Colón currency:
+/// Provides 93 translations for a Salvadoran Colón currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -18,6 +18,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Bulgarian
 /// - Burmese
 /// - Catalan
+/// - Chechen
 /// - Chinese
 /// - Croatian
 /// - Czech
@@ -187,4 +188,5 @@ const svcCurrencyTranslations = [
   TranslatedName(LangOri(), name: "ସାଲଭାଡୋରାନ କଲୋନ"),
   TranslatedName(LangPus(), name: "سلواډوري کولون"),
   TranslatedName(LangTgl(), name: "Colon ng El Salvador"),
+  TranslatedName(LangChe(), name: "Сальвадоран колон"),
 ];
