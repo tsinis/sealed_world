@@ -86,7 +86,7 @@ class FiatCurrency extends Currency
   /// instance exists.
   factory FiatCurrency.fromCode(
     String code, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
 
@@ -104,7 +104,7 @@ class FiatCurrency extends Currency
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromCodeNumeric(
     String codeNumeric, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
 
@@ -123,7 +123,7 @@ class FiatCurrency extends Currency
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromName(
     String name, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
 
@@ -155,7 +155,7 @@ class FiatCurrency extends Currency
   /// to the `code` variable.
   factory FiatCurrency.fromAnyCode(
     String code, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) =>
       code.maybeMapIsoCode(
         orElse: (_) => FiatCurrency.fromCode(code, currencies),
@@ -226,7 +226,7 @@ class FiatCurrency extends Currency
   /// each [FiatCurrency]'s [code] to [value].
   ///
   /// The optional [currencies] parameter specifies the list of [FiatCurrency]
-  /// objects to search (defaults to [FiatCurrency.list]).
+  /// objects to search (defaults to [FiatCurrency.listExtended]).
   ///
   /// Example usage:
   ///
@@ -240,7 +240,7 @@ class FiatCurrency extends Currency
   static FiatCurrency? maybeFromValue<T extends Object>(
     T value, {
     T? Function(FiatCurrency currency)? where,
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   }) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
     for (final currency in currencies) {
@@ -275,7 +275,7 @@ class FiatCurrency extends Currency
   /// instance is assigned to the `currency` variable.
   static FiatCurrency? maybeFromAnyCode(
     String? code, [
-    Iterable<FiatCurrency> currencies = list,
+    Iterable<FiatCurrency> currencies = listExtended,
   ]) {
     assert(currencies.isNotEmpty, "`currencies` should not be empty!");
     final trimmedCode = code?.trim().toUpperCase();

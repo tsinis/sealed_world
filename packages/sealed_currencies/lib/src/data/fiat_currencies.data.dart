@@ -1484,7 +1484,6 @@ class FiatHnl extends FiatCurrency {
 }
 
 /// A class that represents the Croatian Kuna currency.
-@Deprecated("Use FiatEur() instead")
 class FiatHrk extends FiatCurrency {
   /// Creates a instance of [FiatHrk] (Croatian Kuna currency).
   ///
