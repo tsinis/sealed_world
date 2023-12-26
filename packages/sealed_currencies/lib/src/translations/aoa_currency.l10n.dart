@@ -128,7 +128,11 @@ const aoaCurrencyTranslations = [
   TranslatedName(LangBen(), name: "এ্যাঙ্গোলান কওয়ানজা"),
   TranslatedName(LangBre(), name: "kwanza Angola"),
   TranslatedName(LangBos(), name: "Angolska kvanza"),
-  TranslatedName(LangBos(), name: "анголска кванза", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "анголска кванза",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "kwanza angolès"),
   TranslatedName(LangChe(), name: "Анголан кванза"),
   TranslatedName(LangCes(), name: "angolská kwanza"),

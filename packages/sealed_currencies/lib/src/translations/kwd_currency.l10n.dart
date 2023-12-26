@@ -116,7 +116,11 @@ const kwdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কুয়েতি দিনার"),
   TranslatedName(LangBre(), name: "dinar Koweit"),
   TranslatedName(LangBos(), name: "Kuvajtski dinar"),
-  TranslatedName(LangBos(), name: "Кувајтски динар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Кувајтски динар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dinar kuwaitià"),
   TranslatedName(LangChe(), name: "Кувейтан динар"),
   TranslatedName(LangCes(), name: "kuvajtský dinár"),

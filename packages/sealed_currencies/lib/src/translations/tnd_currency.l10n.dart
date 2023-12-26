@@ -128,7 +128,11 @@ const tndCurrencyTranslations = [
   TranslatedName(LangBen(), name: "তিউনেশিয়ান দিনার"),
   TranslatedName(LangBre(), name: "dinar Tunizia"),
   TranslatedName(LangBos(), name: "Tuniški dinar"),
-  TranslatedName(LangBos(), name: "Тунизијски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Тунизијски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dinar tunisià"),
   TranslatedName(LangChe(), name: "Тунисан динар"),
   TranslatedName(LangCes(), name: "tuniský dinár"),

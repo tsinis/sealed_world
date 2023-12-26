@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 93 translations for a East Caribbean Dollar currency:
+/// Provides 96 translations for a East Caribbean Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -62,6 +63,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -188,10 +191,17 @@ const xcdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "східнокарибський долар"),
   TranslatedName(LangUrd(), name: "مشرقی کریبیا کا ڈالر"),
   TranslatedName(LangUzb(), name: "Sharqiy Karib dollari"),
-  TranslatedName(LangUzb(), name: "Шарқий Кариб доллари", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Шарқий Кариб доллари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Đông Caribê"),
   TranslatedName(LangZho(), name: "东加勒比元"),
   TranslatedName(LangZho(), name: "東加勒比元", countryCode: "HK"),
   TranslatedName(LangZho(), name: "格瑞那達元", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-East Caribbean Dollar"),
+  TranslatedName(LangAsm(), name: "ইষ্ট কেৰিবিয়ান ডলাৰ"),
+  TranslatedName(LangOri(), name: "ପୂର୍ବ କାରିବିଆନ ଡଲାର"),
+  TranslatedName(LangPus(), name: "ختيځ کارېبين ډالر"),
 ];

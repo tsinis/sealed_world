@@ -116,7 +116,11 @@ const fjdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ফিজি ডলার"),
   TranslatedName(LangBre(), name: "dollar Fidji"),
   TranslatedName(LangBos(), name: "Fidžijski dolar"),
-  TranslatedName(LangBos(), name: "Фиџи долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Фиџи долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar fijià"),
   TranslatedName(LangChe(), name: "Фиджин доллар"),
   TranslatedName(LangCes(), name: "fidžijský dolar"),

@@ -130,7 +130,11 @@ const etbCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইথিওপিয়ান বির"),
   TranslatedName(LangBre(), name: "birr Etiopia"),
   TranslatedName(LangBos(), name: "Etiopski bir"),
-  TranslatedName(LangBos(), name: "етиопијски бир", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "етиопијски бир",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "birr etíop"),
   TranslatedName(LangChe(), name: "Эфиопин быр"),
   TranslatedName(LangCes(), name: "etiopský birr"),

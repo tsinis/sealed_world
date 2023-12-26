@@ -116,7 +116,11 @@ const qarCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কাতার রিয়্যাল"),
   TranslatedName(LangBre(), name: "rial Qatar"),
   TranslatedName(LangBos(), name: "Katarski rijal"),
-  TranslatedName(LangBos(), name: "Катаршки ријал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Катаршки ријал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rial de Qatar"),
   TranslatedName(LangChe(), name: "Катаран риал"),
   TranslatedName(LangCes(), name: "katarský rijál"),

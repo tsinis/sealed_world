@@ -116,7 +116,11 @@ const mvrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মালদিভিয়ান রুফিয়া"),
   TranslatedName(LangBre(), name: "rufiyaa Maldivez"),
   TranslatedName(LangBos(), name: "Maldivska rufija"),
-  TranslatedName(LangBos(), name: "Малдивијска руфија", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Малдивијска руфија",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rupia de les Maldives"),
   TranslatedName(LangChe(), name: "Мальдивийн руфи"),
   TranslatedName(LangCes(), name: "maledivská rupie"),

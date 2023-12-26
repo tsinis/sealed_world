@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 114 translations for a United States Dollar currency:
+/// Provides 117 translations for a United States Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -74,7 +75,9 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -123,7 +126,11 @@ const usdCurrencyTranslations = [
   TranslatedName(LangBod(), name: "ཨ་རིའི་སྒོར་"),
   TranslatedName(LangBre(), name: "dollar SU"),
   TranslatedName(LangBos(), name: "Američki dolar"),
-  TranslatedName(LangBos(), name: "Амерички долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Амерички долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar dels Estats Units"),
   TranslatedName(LangChe(), name: "АЦШн доллар"),
   TranslatedName(LangCes(), name: "americký dolar"),
@@ -221,7 +228,11 @@ const usdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "долар США"),
   TranslatedName(LangUrd(), name: "امریکی ڈالر"),
   TranslatedName(LangUzb(), name: "AQSH dollari"),
-  TranslatedName(LangUzb(), name: "АҚШ доллари", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "АҚШ доллари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Mỹ"),
   TranslatedName(LangYid(), name: "אמעריקאנער דאלאר"),
   TranslatedName(LangYor(), name: "Dọla ti Orílẹ́ède Amerika"),
@@ -232,4 +243,7 @@ const usdCurrencyTranslations = [
   ),
   TranslatedName(LangZho(), name: "美元"),
   TranslatedName(LangZul(), name: "i-US Dollar"),
+  TranslatedName(LangAsm(), name: "ইউ. এছ. ডলাৰ"),
+  TranslatedName(LangOri(), name: "ଆମେରିକା ଡଲାର"),
+  TranslatedName(LangPus(), name: "امريکايي ډالر"),
 ];

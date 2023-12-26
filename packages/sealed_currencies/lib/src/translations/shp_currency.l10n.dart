@@ -128,7 +128,11 @@ const shpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সেন্ট হেলেনা পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Saint-Helena"),
   TranslatedName(LangBos(), name: "Svetohelenska funta"),
-  TranslatedName(LangBos(), name: "Св. јеленска фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Св. јеленска фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura de Santa Helena"),
   TranslatedName(LangChe(), name: "Сийлахьчу Еленин гӀайрен фунт"),
   TranslatedName(LangCes(), name: "svatohelenská libra"),

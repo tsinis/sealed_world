@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Cfp Franc currency:
+/// Provides 95 translations for a Cfp Franc currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -62,6 +63,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -75,6 +78,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -99,7 +103,11 @@ const xpfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সিএফপি ফ্র্যাঙ্ক"),
   TranslatedName(LangBre(), name: "lur CFP"),
   TranslatedName(LangBos(), name: "Franak (CFP)"),
-  TranslatedName(LangBos(), name: "CFP франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "CFP франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc CFP"),
   TranslatedName(LangChe(), name: "Французийн Тийна океанан франк"),
   TranslatedName(LangCes(), name: "CFP frank"),
@@ -178,9 +186,17 @@ const xpfCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "французький тихоокеанський франк"),
   TranslatedName(LangUrd(), name: "CFP فرانک"),
   TranslatedName(LangUzb(), name: "Fransuz Polineziyasi franki"),
-  TranslatedName(LangUzb(), name: "XPF", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "XPF",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Franc CFP"),
   TranslatedName(LangZho(), name: "太平洋法郎"),
   TranslatedName(LangZho(), name: "法郎 (CFP)", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-CFP Franc"),
+  TranslatedName(LangAsm(), name: "CFP ফ্ৰেংক"),
+  TranslatedName(LangOri(), name: "Cfp ଫ୍ରାଙ୍କ୍"),
+  TranslatedName(LangPus(), name: "CFP فرانک"),
+  TranslatedName(LangTgl(), name: "Prangko CFP"),
 ];

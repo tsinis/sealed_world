@@ -116,7 +116,11 @@ const nprCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নেপালি রুপি"),
   TranslatedName(LangBre(), name: "roupi Nepal"),
   TranslatedName(LangBos(), name: "Nepalska rupija"),
-  TranslatedName(LangBos(), name: "Непалски рупи", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Непалски рупи",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rupia nepalesa"),
   TranslatedName(LangChe(), name: "Непалан рупи"),
   TranslatedName(LangCes(), name: "nepálská rupie"),

@@ -115,7 +115,11 @@ const iskCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আইসল্যান্ড ক্রৌন"),
   TranslatedName(LangBre(), name: "kurunenn Island"),
   TranslatedName(LangBos(), name: "Islandska kruna"),
-  TranslatedName(LangBos(), name: "Исландска круна", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Исландска круна",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "corona islandesa"),
   TranslatedName(LangChe(), name: "Исландин крона"),
   TranslatedName(LangCes(), name: "islandská koruna"),

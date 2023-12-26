@@ -128,7 +128,11 @@ const sdgCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সুদানি পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Soudan"),
   TranslatedName(LangBos(), name: "Sudanska funta"),
-  TranslatedName(LangBos(), name: "Суданска фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Суданска фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura sudanesa"),
   TranslatedName(LangChe(), name: "Суданан фунт"),
   TranslatedName(LangCes(), name: "súdánská libra"),

@@ -116,7 +116,11 @@ const pkrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "পাকিস্তানি রুপি"),
   TranslatedName(LangBre(), name: "roupi Pakistan"),
   TranslatedName(LangBos(), name: "Pakistanska rupija"),
-  TranslatedName(LangBos(), name: "Пакистански рупи", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Пакистански рупи",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rupia pakistanesa"),
   TranslatedName(LangChe(), name: "Пакистанан рупи"),
   TranslatedName(LangCes(), name: "pákistánská rupie"),

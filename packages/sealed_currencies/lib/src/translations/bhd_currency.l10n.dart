@@ -128,7 +128,11 @@ const bhdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বাহরাইনি দিনার"),
   TranslatedName(LangBre(), name: "dinar Bahrein"),
   TranslatedName(LangBos(), name: "Bahreinski dinar"),
-  TranslatedName(LangBos(), name: "Бахреински динар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Бахреински динар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dinar de Bahrain"),
   TranslatedName(LangChe(), name: "Бахрейнан динар"),
   TranslatedName(LangCes(), name: "bahrajnský dinár"),

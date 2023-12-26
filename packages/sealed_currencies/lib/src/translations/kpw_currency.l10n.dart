@@ -116,7 +116,11 @@ const kpwCurrencyTranslations = [
   TranslatedName(LangBen(), name: "উত্তর কোরিয়ার ওন"),
   TranslatedName(LangBre(), name: "won Korea an Norzh"),
   TranslatedName(LangBos(), name: "Sjevernokorejski von"),
-  TranslatedName(LangBos(), name: "Севернокорејски вон", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Севернокорејски вон",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "won nord-coreà"),
   TranslatedName(LangChe(), name: "Къилбаседа Корейн вона"),
   TranslatedName(LangCes(), name: "severokorejský won"),

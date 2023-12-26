@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a South Korean Won currency:
+/// Provides 95 translations for a South Korean Won currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -63,6 +64,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -100,7 +103,11 @@ const krwCurrencyTranslations = [
   TranslatedName(LangBen(), name: "দক্ষিণ কোরিয়ান ওন"),
   TranslatedName(LangBre(), name: "won Korea ar Su"),
   TranslatedName(LangBos(), name: "Južnokorejski von"),
-  TranslatedName(LangBos(), name: "Јужнокорејски Вон", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Јужнокорејски Вон",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "won sud-coreà"),
   TranslatedName(LangChe(), name: "Къилба Корейн вона"),
   TranslatedName(LangCes(), name: "jihokorejský won"),
@@ -177,9 +184,16 @@ const krwCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "південнокорейський вон"),
   TranslatedName(LangUrd(), name: "جنوبی کوریائی وون"),
   TranslatedName(LangUzb(), name: "Janubiy Koreya voni"),
-  TranslatedName(LangUzb(), name: "KRW", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "KRW",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Won Hàn Quốc"),
   TranslatedName(LangZho(), name: "韩元"),
   TranslatedName(LangZho(), name: "韓圓", countryCode: "HK"),
   TranslatedName(LangZul(), name: "i-South Korean Won"),
+  TranslatedName(LangAsm(), name: "দক্ষিণ কোৰিয়াৰ ওৱান"),
+  TranslatedName(LangOri(), name: "ଦକ୍ଷିଣ କୋରିଆ ଉଅନ"),
+  TranslatedName(LangPus(), name: "سوېل کوريايي وون"),
 ];

@@ -125,7 +125,11 @@ const lslCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লেসুটু লোটি"),
   TranslatedName(LangBre(), name: "loti Lesotho"),
   TranslatedName(LangBos(), name: "Lesotski loti"),
-  TranslatedName(LangBos(), name: "Лесото лоти", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Лесото лоти",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "loti de Lesotho"),
   TranslatedName(LangCes(), name: "lesothský loti"),
   TranslatedName(LangCym(), name: "Loti Lesotho"),

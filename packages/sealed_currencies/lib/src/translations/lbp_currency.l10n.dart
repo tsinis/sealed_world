@@ -116,7 +116,11 @@ const lbpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লেবানিজ পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Liban"),
   TranslatedName(LangBos(), name: "Libanska funta"),
-  TranslatedName(LangBos(), name: "Лебанска фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Лебанска фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura libanesa"),
   TranslatedName(LangChe(), name: "Ливанан фунт"),
   TranslatedName(LangCes(), name: "libanonská libra"),

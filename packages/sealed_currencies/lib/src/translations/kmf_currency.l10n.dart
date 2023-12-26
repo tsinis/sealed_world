@@ -128,7 +128,11 @@ const kmfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কম্বোরো ফ্রাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Komorez"),
   TranslatedName(LangBos(), name: "Komorski franak"),
-  TranslatedName(LangBos(), name: "Коморски франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Коморски франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc de les Comores"),
   TranslatedName(LangChe(), name: "Коморийн гӀайренийн франк"),
   TranslatedName(LangCes(), name: "komorský frank"),

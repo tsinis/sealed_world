@@ -116,7 +116,11 @@ const topCurrencyTranslations = [
   TranslatedName(LangBen(), name: "টোঙ্গা পা’আঙ্গা"),
   TranslatedName(LangBre(), name: "paʻanga Tonga"),
   TranslatedName(LangBos(), name: "Tonganska panga"),
-  TranslatedName(LangBos(), name: "Тонгоншка Панга", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Тонгоншка Панга",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "pa‘anga tongà"),
   TranslatedName(LangChe(), name: "Тонганан паанга"),
   TranslatedName(LangCes(), name: "tonžská paanga"),

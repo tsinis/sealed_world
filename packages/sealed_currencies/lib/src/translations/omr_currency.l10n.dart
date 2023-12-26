@@ -116,7 +116,11 @@ const omrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ওমানি রিয়াল"),
   TranslatedName(LangBre(), name: "rial Oman"),
   TranslatedName(LangBos(), name: "Omanski rijal"),
-  TranslatedName(LangBos(), name: "Омански ријал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Омански ријал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rial omanita"),
   TranslatedName(LangChe(), name: "Оманан риал"),
   TranslatedName(LangCes(), name: "ománský rijál"),

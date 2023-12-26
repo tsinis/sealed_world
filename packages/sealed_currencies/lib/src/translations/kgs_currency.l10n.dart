@@ -115,7 +115,11 @@ const kgsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কিরগিজস্তান সোম"),
   TranslatedName(LangBre(), name: "som Kyrgyzstan"),
   TranslatedName(LangBos(), name: "Kirgistanski som"),
-  TranslatedName(LangBos(), name: "Киргистански сом", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Киргистански сом",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "som kirguís"),
   TranslatedName(LangChe(), name: "Киргизин сом"),
   TranslatedName(LangCes(), name: "kyrgyzský som"),

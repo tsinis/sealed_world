@@ -116,7 +116,11 @@ const irrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইরানিয়ান রিয়াল"),
   TranslatedName(LangBre(), name: "rial Iran"),
   TranslatedName(LangBos(), name: "Iranski rijal"),
-  TranslatedName(LangBos(), name: "Ирански риал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Ирански риал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rial iranià"),
   TranslatedName(LangChe(), name: "ГӀажарийчоьнан риал"),
   TranslatedName(LangCes(), name: "íránský rijál"),

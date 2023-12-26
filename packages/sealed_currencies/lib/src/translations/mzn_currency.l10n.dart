@@ -114,7 +114,11 @@ const mznCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মোজাম্বিক মেটিকেল"),
   TranslatedName(LangBre(), name: "metical Mozambik"),
   TranslatedName(LangBos(), name: "Mozambijski metikal"),
-  TranslatedName(LangBos(), name: "Мозамбијски метикал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Мозамбијски метикал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "metical moçambiquès"),
   TranslatedName(LangChe(), name: "Мозамбикан метикал"),
   TranslatedName(LangCes(), name: "mozambický metical"),

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 110 translations for a Australian Dollar currency:
+/// Provides 113 translations for a Australian Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -74,6 +75,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -117,7 +120,11 @@ const audCurrencyTranslations = [
   TranslatedName(LangBen(), name: "অস্ট্রেলিয়ান ডলার"),
   TranslatedName(LangBre(), name: "dollar Aostralia"),
   TranslatedName(LangBos(), name: "Australijski dolar"),
-  TranslatedName(LangBos(), name: "Аустралијски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Аустралијски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar australià"),
   TranslatedName(LangChe(), name: "Австралин доллар"),
   TranslatedName(LangCes(), name: "australský dolar"),
@@ -207,7 +214,11 @@ const audCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "австралійський долар"),
   TranslatedName(LangUrd(), name: "آسٹریلین ڈالر"),
   TranslatedName(LangUzb(), name: "Avstraliya dollari"),
-  TranslatedName(LangUzb(), name: "AUD", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "AUD",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Australia"),
   TranslatedName(LangYor(), name: "Dọla ti Orílẹ́ède Ástràlìá"),
   TranslatedName(
@@ -219,4 +230,7 @@ const audCurrencyTranslations = [
   TranslatedName(LangZho(), name: "澳元", countryCode: "HK"),
   TranslatedName(LangZho(), name: "澳幣", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Austrilian Dollar"),
+  TranslatedName(LangAsm(), name: "অষ্ট্ৰেলিয়ান ডলাৰ"),
+  TranslatedName(LangOri(), name: "ଅଷ୍ଟ୍ରେଲିଆ ଡଲାର"),
+  TranslatedName(LangPus(), name: "اسټراليايي ډالر"),
 ];

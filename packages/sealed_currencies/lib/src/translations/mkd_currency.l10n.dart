@@ -115,7 +115,11 @@ const mkdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ম্যাসেডোনিয়ান দিনার"),
   TranslatedName(LangBre(), name: "denar Makedonia"),
   TranslatedName(LangBos(), name: "Makedonski denar"),
-  TranslatedName(LangBos(), name: "Македонски денар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Македонски денар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "denar macedoni"),
   TranslatedName(LangChe(), name: "Македонин динар"),
   TranslatedName(LangCes(), name: "makedonský denár"),

@@ -115,7 +115,11 @@ const hufCurrencyTranslations = [
   TranslatedName(LangBen(), name: "হাঙ্গেরিয়ান ফোরিন্ট"),
   TranslatedName(LangBre(), name: "forint Hungaria"),
   TranslatedName(LangBos(), name: "Mađarska forinta"),
-  TranslatedName(LangBos(), name: "Мађарска форинта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Мађарска форинта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "fòrint hongarès"),
   TranslatedName(LangChe(), name: "Венгрин форинт"),
   TranslatedName(LangCes(), name: "maďarský forint"),

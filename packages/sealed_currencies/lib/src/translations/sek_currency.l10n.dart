@@ -118,7 +118,11 @@ const sekCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সুইডিশ ক্রোনা"),
   TranslatedName(LangBre(), name: "kurunenn Sveden"),
   TranslatedName(LangBos(), name: "Švedska kruna"),
-  TranslatedName(LangBos(), name: "Шведска круна", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Шведска круна",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "corona sueca"),
   TranslatedName(LangChe(), name: "Швецин крона"),
   TranslatedName(LangCes(), name: "švédská koruna"),

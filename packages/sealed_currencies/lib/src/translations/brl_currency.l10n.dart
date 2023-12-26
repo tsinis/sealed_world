@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 96 translations for a Brazilian Real currency:
+/// Provides 99 translations for a Brazilian Real currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -63,7 +64,9 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
 /// - Ossetian (Ossetic)
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -104,7 +107,11 @@ const brlCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ব্রাজিলিয়ান রিয়েল"),
   TranslatedName(LangBre(), name: "real Brazil"),
   TranslatedName(LangBos(), name: "Brazilski real"),
-  TranslatedName(LangBos(), name: "Бразилски Реал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Бразилски Реал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "real brasiler"),
   TranslatedName(LangChe(), name: "Бразилин реал"),
   TranslatedName(LangCes(), name: "brazilský real"),
@@ -184,10 +191,17 @@ const brlCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "бразильський реал"),
   TranslatedName(LangUrd(), name: "برازیلی ریئل"),
   TranslatedName(LangUzb(), name: "Braziliya reali"),
-  TranslatedName(LangUzb(), name: "Бразил реали", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Бразил реали",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Real Braxin"),
   TranslatedName(LangYid(), name: "בראזיל רעאל"),
   TranslatedName(LangZho(), name: "巴西雷亚尔"),
   TranslatedName(LangZho(), name: "巴西里拉", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Brazilian Real"),
+  TranslatedName(LangAsm(), name: "ব্ৰাজিলিয়ান ৰিয়েল"),
+  TranslatedName(LangOri(), name: "ବ୍ରାଜିଲ ରିଆଲ"),
+  TranslatedName(LangPus(), name: "برازيلي ريال"),
 ];

@@ -116,7 +116,11 @@ const iqdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইরাকি দিনার"),
   TranslatedName(LangBre(), name: "dinar Iraq"),
   TranslatedName(LangBos(), name: "Irački dinar"),
-  TranslatedName(LangBos(), name: "Ирачки динар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Ирачки динар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dinar iraquià"),
   TranslatedName(LangChe(), name: "Ӏиракъан динар"),
   TranslatedName(LangCes(), name: "irácký dinár"),

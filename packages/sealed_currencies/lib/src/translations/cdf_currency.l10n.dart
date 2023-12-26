@@ -128,7 +128,11 @@ const cdfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কঙ্গোলিস ফ্র্যাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Kongo"),
   TranslatedName(LangBos(), name: "Kongoanski franak"),
-  TranslatedName(LangBos(), name: "Конголски франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Конголски франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc congolès"),
   TranslatedName(LangChe(), name: "Конголезин франк"),
   TranslatedName(LangCes(), name: "konžský frank"),

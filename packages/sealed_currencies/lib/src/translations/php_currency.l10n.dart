@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 94 translations for a Philippine Peso currency:
+/// Provides 95 translations for a Philippine Peso currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -65,6 +65,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -103,7 +104,11 @@ const phpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ফিলিপাইন পেসো"),
   TranslatedName(LangBre(), name: "peso Filipinez"),
   TranslatedName(LangBos(), name: "Filipinski pezos"),
-  TranslatedName(LangBos(), name: "Филипински пезо", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Филипински пезо",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "peso filipí"),
   TranslatedName(LangChe(), name: "Филиппинийн песо"),
   TranslatedName(LangCes(), name: "filipínské peso"),
@@ -187,4 +192,5 @@ const phpCurrencyTranslations = [
   TranslatedName(LangAsm(), name: "ফিলিপিন পেইছ’"),
   TranslatedName(LangOri(), name: "ଫିଲିପିନି ପେସୋ"),
   TranslatedName(LangTuk(), name: "Filippin pesosy"),
+  TranslatedName(LangPus(), name: "فليپيني پېسو"),
 ];

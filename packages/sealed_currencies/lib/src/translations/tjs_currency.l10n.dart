@@ -116,7 +116,11 @@ const tjsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "তাজিকিস্তান সোমোনি"),
   TranslatedName(LangBre(), name: "somoni Tadjikistan"),
   TranslatedName(LangBos(), name: "Tadžikistanski somoni"),
-  TranslatedName(LangBos(), name: "Таљихистански сомони", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Таљихистански сомони",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "somoni tadjik"),
   TranslatedName(LangChe(), name: "Таджикистанан сомони"),
   TranslatedName(LangCes(), name: "tádžické somoni"),

@@ -115,7 +115,11 @@ const uahCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইউক্রেইন হৃভনিয়া"),
   TranslatedName(LangBre(), name: "hryvnia Ukraina"),
   TranslatedName(LangBos(), name: "Ukrajinska hrivnja"),
-  TranslatedName(LangBos(), name: "Украјинска хривња", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Украјинска хривња",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "hrívnia ucraïnesa"),
   TranslatedName(LangChe(), name: "Украинан гривна"),
   TranslatedName(LangCes(), name: "ukrajinská hřivna"),

@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 110 translations for a Thai Baht currency:
+/// Provides 111 translations for a Thai Baht currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -90,6 +90,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -116,7 +117,11 @@ const thbCurrencyTranslations = [
   TranslatedName(LangBen(), name: "থাই বাত"),
   TranslatedName(LangBre(), name: "baht Thailand"),
   TranslatedName(LangBos(), name: "Tajlandski baht"),
-  TranslatedName(LangBos(), name: "Таи бахт", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Таи бахт",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "baht tailandès"),
   TranslatedName(LangChe(), name: "Таиландан бат"),
   TranslatedName(LangCes(), name: "thajský baht"),
@@ -195,7 +200,11 @@ const thbCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "таїландський бат"),
   TranslatedName(LangUrd(), name: "تھائی باہت"),
   TranslatedName(LangUzb(), name: "Tailand bati"),
-  TranslatedName(LangUzb(), name: "THB", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "THB",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Bạt Thái Lan"),
   TranslatedName(LangZho(), name: "泰铢"),
   TranslatedName(LangZho(), name: "泰銖", script: ScriptHant()),
@@ -216,4 +225,5 @@ const thbCurrencyTranslations = [
   TranslatedName(LangTuk(), name: "Taýland baty"),
   TranslatedName(LangXho(), name: "I-Baht yaseThailand"),
   TranslatedName(LangYor(), name: "Báàtì Tháì"),
+  TranslatedName(LangTgl(), name: "Bhat ng Thailand"),
 ];

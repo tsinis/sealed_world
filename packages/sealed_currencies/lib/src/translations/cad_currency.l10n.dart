@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 109 translations for a Canadian Dollar currency:
+/// Provides 112 translations for a Canadian Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -74,6 +75,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -116,7 +119,11 @@ const cadCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কানাডিয়ান ডলার"),
   TranslatedName(LangBre(), name: "dollar Kanada"),
   TranslatedName(LangBos(), name: "Kanadski dolar"),
-  TranslatedName(LangBos(), name: "Канадски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Канадски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar canadenc"),
   TranslatedName(LangChe(), name: "Канадан доллар"),
   TranslatedName(LangCes(), name: "kanadský dolar"),
@@ -206,7 +213,11 @@ const cadCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "канадський долар"),
   TranslatedName(LangUrd(), name: "کنیڈین ڈالر"),
   TranslatedName(LangUzb(), name: "Kanada dollari"),
-  TranslatedName(LangUzb(), name: "Канада доллари", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Канада доллари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Canada"),
   TranslatedName(LangYor(), name: "Dọla ti Orílẹ́ède Kánádà"),
   TranslatedName(
@@ -217,4 +228,7 @@ const cadCurrencyTranslations = [
   TranslatedName(LangZho(), name: "加拿大元"),
   TranslatedName(LangZho(), name: "加幣", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Candian Dollar"),
+  TranslatedName(LangAsm(), name: "কানাডিয়ান ডলাৰ"),
+  TranslatedName(LangOri(), name: "କାନାଡ଼ା ଡଲାର"),
+  TranslatedName(LangPus(), name: "کاناډايي ډالر"),
 ];

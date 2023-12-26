@@ -519,14 +519,17 @@ void main() => group("$FiatCurrency", () {
         });
 
         test("there should be always translations for specific languages", () {
-          final map = {
-            for (final language in NaturalLanguage.list) language: 0,
-          };
+          final map = {for (final lang in NaturalLanguage.list) lang: 0};
+          final missing = <NaturalLanguage, Set<FiatCurrency>>{};
 
           for (final l10n in NaturalLanguage.list) {
             for (final value in FiatCurrency.regularList) {
               final hasTranslationForValue = value.maybeTranslation(l10n);
-              if (hasTranslationForValue != null) map[l10n] = map[l10n]! + 1;
+              if (hasTranslationForValue != null) {
+                map[l10n] = map[l10n]! + 1;
+              } else {
+                missing[l10n] = {...?missing[l10n], value};
+              }
             }
           }
 
@@ -535,8 +538,14 @@ void main() => group("$FiatCurrency", () {
           final complete = sortedList
               .where((item) => item.value >= FiatCurrency.regularList.length);
           final sortedMap = Map.fromEntries(complete);
+          final sortedLanguages = sortedMap.keys.toList(growable: false)
+            ..sort((a, b) => a.code.compareTo(b.code));
 
-          expect(sortedMap.keys, kSealedCurrenciesSupportedLanguages);
+          expect(
+            sortedLanguages,
+            containsAll(kMaterialSupportedLanguagesSealed),
+          );
+          expect(sortedLanguages, kSealedCurrenciesSupportedLanguages);
 
           for (final currency in FiatCurrency.regularList) {
             for (final l10n in kSealedCurrenciesSupportedLanguages) {

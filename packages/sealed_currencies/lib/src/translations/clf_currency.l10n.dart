@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 88 translations for a Chilean Unit of Account (UF) currency:
+/// Provides 92 translations for a Chilean Unit of Account (UF) currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -60,6 +61,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -74,6 +77,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -186,4 +190,8 @@ const clfCurrencyTranslations = [
     name: "𞤅𞤢𞤤𞤲𞤣𞤵 𞤂𞤭𞤥𞤮𞥅𞤪𞤫 𞤕𞤭𞤤𞤫𞥊𞤴𞤢𞤲𞤳𞤮",
   ),
   TranslatedName(LangSrd(), name: "unidade de acontu tzilena"),
+  TranslatedName(LangAsm(), name: "চিলিৰ একাউণ্টৰ একক (UF)"),
+  TranslatedName(LangOri(), name: "ଚିଲିକାର ଆକାଉଣ୍ଟ୍ ୟୁନିଟ୍"),
+  TranslatedName(LangPus(), name: "د چیلي د حساب واحد (UF)"),
+  TranslatedName(LangTgl(), name: "Unidades de Fomento ng Chile"),
 ];

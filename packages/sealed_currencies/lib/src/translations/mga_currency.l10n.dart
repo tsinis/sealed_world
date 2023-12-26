@@ -128,7 +128,11 @@ const mgaCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মাদাগাস্কার আরিয়ারি"),
   TranslatedName(LangBre(), name: "ariary Madagaskar"),
   TranslatedName(LangBos(), name: "Malagaški arijari"),
-  TranslatedName(LangBos(), name: "Малагасијски ариари", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Малагасијски ариари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "ariary malgaix"),
   TranslatedName(LangChe(), name: "Малагасийн ариари"),
   TranslatedName(LangCes(), name: "madagaskarský ariary"),

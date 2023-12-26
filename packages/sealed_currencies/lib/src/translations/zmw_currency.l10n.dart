@@ -128,7 +128,11 @@ const zmwCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জাম্বিয়ান কওয়াচা"),
   TranslatedName(LangBre(), name: "kwacha Zambia"),
   TranslatedName(LangBos(), name: "Zambijska kvača"),
-  TranslatedName(LangBos(), name: "Замбијска квача", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Замбијска квача",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "kwacha zambià"),
   TranslatedName(LangChe(), name: "Замбин квача"),
   TranslatedName(LangCes(), name: "zambijská kwacha"),

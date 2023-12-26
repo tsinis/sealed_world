@@ -115,7 +115,11 @@ const mopCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ম্যাক্যাও পাটাকা"),
   TranslatedName(LangBre(), name: "pataca Macau"),
   TranslatedName(LangBos(), name: "Makaonska pataka"),
-  TranslatedName(LangBos(), name: "Маканишка патака", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Маканишка патака",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "pataca de Macau"),
   TranslatedName(LangChe(), name: "Макаон патака"),
   TranslatedName(LangCes(), name: "macajská pataca"),

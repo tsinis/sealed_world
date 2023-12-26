@@ -116,7 +116,11 @@ const vuvCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ভানুয়াতু ভাতু"),
   TranslatedName(LangBre(), name: "vatu Vanuatu"),
   TranslatedName(LangBos(), name: "Vanuatski vatu"),
-  TranslatedName(LangBos(), name: "Вануатски вату", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Вануатски вату",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "vatu de Vanuatu"),
   TranslatedName(LangChe(), name: "Вануатун вату"),
   TranslatedName(LangCes(), name: "vanuatský vatu"),

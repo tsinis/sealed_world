@@ -116,7 +116,11 @@ const gelCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জর্জিয়ান লারি"),
   TranslatedName(LangBre(), name: "lari Jorjia"),
   TranslatedName(LangBos(), name: "Gruzijski lari"),
-  TranslatedName(LangBos(), name: "Грузијски лари", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Грузијски лари",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lari georgià"),
   TranslatedName(LangChe(), name: "Гуьржийчоьнан лари"),
   TranslatedName(LangCes(), name: "gruzínské lari"),

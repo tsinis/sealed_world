@@ -116,7 +116,11 @@ const khrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কম্বোডিয়ান রিয়েল"),
   TranslatedName(LangBre(), name: "riel Kambodja"),
   TranslatedName(LangBos(), name: "Kambodžanski rijel"),
-  TranslatedName(LangBos(), name: "Камбоџијски риел", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Камбоџијски риел",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "riel cambodjà"),
   TranslatedName(LangChe(), name: "Камбоджан риель"),
   TranslatedName(LangCes(), name: "kambodžský riel"),

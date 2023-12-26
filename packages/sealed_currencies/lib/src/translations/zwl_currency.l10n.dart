@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 86 translations for a Zimbabwean Dollar currency:
+/// Provides 90 translations for a Zimbabwean Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -57,6 +58,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -71,6 +74,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -91,7 +95,11 @@ const zwlCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জিম্বাবুয়ে ডলার (২০০৯)"),
   TranslatedName(LangBre(), name: "dollar Zimbabwe"),
   TranslatedName(LangBos(), name: "Zimbabvejski dolar"),
-  TranslatedName(LangBos(), name: "Зимбабвеански долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Зимбабвеански долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar zimbabuès"),
   TranslatedName(LangCes(), name: "zimbabwský dolar"),
   TranslatedName(LangCym(), name: "Doler Zimbabwe"),
@@ -170,4 +178,8 @@ const zwlCurrencyTranslations = [
   TranslatedName(LangZul(), name: "I-Zimbabwe Dollar"),
   TranslatedName(LangRoh(), name: "dollar dal Simbabwe"),
   TranslatedName(LangSrd(), name: "dòllaru zimbabweanu"),
+  TranslatedName(LangAsm(), name: "জিম্বাবুৱেৰ ডলাৰ"),
+  TranslatedName(LangOri(), name: "ଜିମ୍ବାୱେ ଡଲାର"),
+  TranslatedName(LangPus(), name: "د زیمبابوې ډالر"),
+  TranslatedName(LangTgl(), name: "Dolyar ng Zimbabwe"),
 ];

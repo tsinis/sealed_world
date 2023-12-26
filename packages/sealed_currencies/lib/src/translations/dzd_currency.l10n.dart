@@ -129,7 +129,11 @@ const dzdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আলজেরীয় দিনার"),
   TranslatedName(LangBre(), name: "dinar Aljeria"),
   TranslatedName(LangBos(), name: "Alžirski dinar"),
-  TranslatedName(LangBos(), name: "Алжирски динар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Алжирски динар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dinar algerià"),
   TranslatedName(LangChe(), name: "Алжиран динар"),
   TranslatedName(LangCes(), name: "alžírský dinár"),
@@ -216,7 +220,11 @@ const dzdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "алжирський динар"),
   TranslatedName(LangUrd(), name: "الجیریائی دینار"),
   TranslatedName(LangUzb(), name: "Jazoir dinori"),
-  TranslatedName(LangUzb(), name: "Жазоир динори", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Жазоир динори",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Dinar Algeria"),
   TranslatedName(LangYor(), name: "Dina ti Orílẹ́ède Àlùgèríánì"),
   TranslatedName(

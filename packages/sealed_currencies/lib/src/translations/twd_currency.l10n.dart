@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 92 translations for a New Taiwan Dollar currency:
+/// Provides 95 translations for a New Taiwan Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -63,6 +64,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -100,7 +103,11 @@ const twdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নতুন তাইওয়ান ডলার"),
   TranslatedName(LangBre(), name: "dollar nevez Taiwan"),
   TranslatedName(LangBos(), name: "Novi tajvanski dolar"),
-  TranslatedName(LangBos(), name: "Нови тајвански долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Нови тајвански долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "nou dòlar de Taiwan"),
   TranslatedName(LangChe(), name: "Тайванан керла доллар"),
   TranslatedName(LangCes(), name: "tchajwanský dolar"),
@@ -177,9 +184,16 @@ const twdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "новий тайванський долар"),
   TranslatedName(LangUrd(), name: "نیو تائیوان ڈالر"),
   TranslatedName(LangUzb(), name: "Yangi Tayvan dollari"),
-  TranslatedName(LangUzb(), name: "TWD", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "TWD",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đô la Đài Loan mới"),
   TranslatedName(LangZho(), name: "新台币"),
   TranslatedName(LangZho(), name: "新台幣", countryCode: "HK"),
   TranslatedName(LangZul(), name: "i-New Taiwan Dollar"),
+  TranslatedName(LangAsm(), name: "নিউ টাইৱান ডলাৰ"),
+  TranslatedName(LangOri(), name: "ନୂଆ ତାଇୱାନ ଡଲାର"),
+  TranslatedName(LangPus(), name: "تايواني نوي ډالر"),
 ];

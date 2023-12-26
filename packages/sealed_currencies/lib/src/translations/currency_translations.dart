@@ -6,7 +6,6 @@
 
 /// Provides currency translations for sealed_currencies.
 library sealed_currency_translations;
-
 export "aed_currency.l10n.dart";
 export "afn_currency.l10n.dart";
 export "all_currency.l10n.dart";

@@ -129,7 +129,11 @@ const egpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মিশরীয় পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Egipt"),
   TranslatedName(LangBos(), name: "Egipatska funta"),
-  TranslatedName(LangBos(), name: "Египатска фунта", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Египатска фунта",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lliura egípcia"),
   TranslatedName(LangChe(), name: "Мисаран фунт"),
   TranslatedName(LangCes(), name: "egyptská libra"),
@@ -216,7 +220,11 @@ const egpCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "єгипетський фунт"),
   TranslatedName(LangUrd(), name: "مصری پاؤنڈ"),
   TranslatedName(LangUzb(), name: "Misr funti"),
-  TranslatedName(LangUzb(), name: "Миср фунти", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Миср фунти",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Bảng Ai Cập"),
   TranslatedName(LangYor(), name: "pọọn ti Orílẹ́ède Egipiti"),
   TranslatedName(

@@ -128,7 +128,11 @@ const sarCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সৌদি রিয়্যাল"),
   TranslatedName(LangBre(), name: "riyal Arabia Saoudat"),
   TranslatedName(LangBos(), name: "Saudijski rijal"),
-  TranslatedName(LangBos(), name: "Саудијски ријал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Саудијски ријал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rial saudita"),
   TranslatedName(LangChe(), name: "СаӀудийн Аравин риал"),
   TranslatedName(LangCes(), name: "saúdský rijál"),

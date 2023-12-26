@@ -115,7 +115,11 @@ const bgnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বুলগেরীয় নিউ লেভ"),
   TranslatedName(LangBre(), name: "lev Bulgaria"),
   TranslatedName(LangBos(), name: "Bugarski lev"),
-  TranslatedName(LangBos(), name: "Бугарски лев", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Бугарски лев",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lev búlgar"),
   TranslatedName(LangChe(), name: "Болгарин лев"),
   TranslatedName(LangCes(), name: "bulharský lev"),

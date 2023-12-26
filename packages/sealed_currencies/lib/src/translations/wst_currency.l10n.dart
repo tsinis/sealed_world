@@ -116,7 +116,11 @@ const wstCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সামোয়ান টালা"),
   TranslatedName(LangBre(), name: "tala Samoa"),
   TranslatedName(LangBos(), name: "Samoanska tala"),
-  TranslatedName(LangBos(), name: "Самоанска тала", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Самоанска тала",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "tala samoà"),
   TranslatedName(LangChe(), name: "Самоанан тала"),
   TranslatedName(LangCes(), name: "samojská tala"),

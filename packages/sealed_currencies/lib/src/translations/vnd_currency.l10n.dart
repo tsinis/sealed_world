@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 91 translations for a Vietnamese Dong currency:
+/// Provides 95 translations for a Vietnamese Dong currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -63,6 +64,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -76,6 +79,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -99,7 +103,11 @@ const vndCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ভিয়েতনামি ডঙ্গ"),
   TranslatedName(LangBre(), name: "dong Viêt Nam"),
   TranslatedName(LangBos(), name: "Vijetnamski dong"),
-  TranslatedName(LangBos(), name: "Вијетнамски донг", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Вијетнамски донг",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dong vietnamita"),
   TranslatedName(LangChe(), name: "Вьетнаман донг"),
   TranslatedName(LangCes(), name: "vietnamský dong"),
@@ -176,8 +184,16 @@ const vndCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "вʼєтнамський донг"),
   TranslatedName(LangUrd(), name: "ویتنامی ڈانگ"),
   TranslatedName(LangUzb(), name: "Vyetnam dongi"),
-  TranslatedName(LangUzb(), name: "VND", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "VND",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Đồng Việt Nam"),
   TranslatedName(LangZho(), name: "越南盾"),
   TranslatedName(LangZul(), name: "i-Vietnamese Dong"),
+  TranslatedName(LangAsm(), name: "ভিয়েটনামীজ ডং"),
+  TranslatedName(LangOri(), name: "ଭିଏତନାମ ଡଙ୍ଗ"),
+  TranslatedName(LangPus(), name: "وېتنامي ډونگ"),
+  TranslatedName(LangTgl(), name: "Dong ng Vietnam"),
 ];

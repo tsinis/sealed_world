@@ -116,7 +116,11 @@ const plnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "পোলিশ জ্লোটি"),
   TranslatedName(LangBre(), name: "zloty Polonia"),
   TranslatedName(LangBos(), name: "Poljski zlot"),
-  TranslatedName(LangBos(), name: "Пољски злот", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Пољски злот",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "zloty polonès"),
   TranslatedName(LangChe(), name: "Польшан злотый"),
   TranslatedName(LangCes(), name: "polský zlotý"),

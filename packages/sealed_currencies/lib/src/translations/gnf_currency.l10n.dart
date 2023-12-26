@@ -115,7 +115,11 @@ const gnfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "গিনি ফ্রাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Ginea"),
   TranslatedName(LangBos(), name: "Gvinejski franak"),
-  TranslatedName(LangBos(), name: "Гвинејски франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Гвинејски франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc guineà"),
   TranslatedName(LangChe(), name: "Гвинейн франк"),
   TranslatedName(LangCes(), name: "guinejský frank"),

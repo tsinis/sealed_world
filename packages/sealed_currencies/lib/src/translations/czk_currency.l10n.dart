@@ -115,7 +115,11 @@ const czkCurrencyTranslations = [
   TranslatedName(LangBen(), name: "চেক প্রজাতন্ত্র কোরুনা"),
   TranslatedName(LangBre(), name: "kurunenn Tchek"),
   TranslatedName(LangBos(), name: "Češka kruna"),
-  TranslatedName(LangBos(), name: "Чешка круна", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Чешка круна",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "corona txeca"),
   TranslatedName(LangChe(), name: "Чехин крона"),
   TranslatedName(LangCes(), name: "česká koruna"),

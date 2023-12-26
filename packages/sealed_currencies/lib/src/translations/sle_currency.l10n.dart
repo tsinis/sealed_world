@@ -127,7 +127,11 @@ const sleCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সিয়েরালিয়ন লিয়ন"),
   TranslatedName(LangBre(), name: "leone Sierra Leone"),
   TranslatedName(LangBos(), name: "Sijeraleonski leone"),
-  TranslatedName(LangBos(), name: "Сијера-леоншки леоне", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Сијера-леоншки леоне",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "leone de Sierra Leone"),
   TranslatedName(LangChe(), name: "Леоне"),
   TranslatedName(LangCes(), name: "sierro-leonský leone"),

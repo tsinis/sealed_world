@@ -129,7 +129,11 @@ const rwfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "রুয়ান্ডান ফ্রাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Rwanda"),
   TranslatedName(LangBos(), name: "Ruandski franak"),
-  TranslatedName(LangBos(), name: "Руандански франак", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Руандански франак",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "franc de Ruanda"),
   TranslatedName(LangChe(), name: "Руандан франк"),
   TranslatedName(LangCes(), name: "rwandský frank"),

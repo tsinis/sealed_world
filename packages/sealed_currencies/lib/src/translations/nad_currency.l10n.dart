@@ -127,7 +127,11 @@ const nadCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নামিবিয়া ডলার"),
   TranslatedName(LangBre(), name: "dollar Namibia"),
   TranslatedName(LangBos(), name: "Namibijski dolar"),
-  TranslatedName(LangBos(), name: "намбијски долар", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "намбијски долар",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dòlar namibià"),
   TranslatedName(LangChe(), name: "Намибин доллар"),
   TranslatedName(LangCes(), name: "namibijský dolar"),

@@ -116,7 +116,11 @@ const kztCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কাজাখাস্তানি টেঙ্গে"),
   TranslatedName(LangBre(), name: "tenge Kazakstan"),
   TranslatedName(LangBos(), name: "Kazahstanski tenge"),
-  TranslatedName(LangBos(), name: "Казахстански тенџ", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Казахстански тенџ",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "tenge kazakh"),
   TranslatedName(LangChe(), name: "Казахстанан тенге"),
   TranslatedName(LangCes(), name: "kazašské tenge"),

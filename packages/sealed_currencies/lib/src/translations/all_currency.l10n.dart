@@ -115,7 +115,11 @@ const allCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আলবেনিয়ান লেক"),
   TranslatedName(LangBre(), name: "lek Albania"),
   TranslatedName(LangBos(), name: "Albanski lek"),
-  TranslatedName(LangBos(), name: "Албански лек", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Албански лек",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "lek albanès"),
   TranslatedName(LangChe(), name: "Албанин лек"),
   TranslatedName(LangCes(), name: "albánský lek"),

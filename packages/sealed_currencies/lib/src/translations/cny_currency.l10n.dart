@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 112 translations for a Chinese Renminbi Yuan currency:
+/// Provides 116 translations for a Chinese Renminbi Yuan currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -9,6 +9,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Basque
@@ -74,7 +75,9 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Oriya
 /// - Oromo
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -90,6 +93,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -215,7 +219,11 @@ const cnyCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "китайський юань"),
   TranslatedName(LangUrd(), name: "چینی یوآن"),
   TranslatedName(LangUzb(), name: "Xitoy yuani"),
-  TranslatedName(LangUzb(), name: "Хитой юани", script: ScriptCyrl()),
+  TranslatedName(
+    LangUzb(),
+    name: "Хитой юани",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangVie(), name: "Nhân dân tệ"),
   TranslatedName(LangYid(), name: "כינעזישער יואן"),
   TranslatedName(LangYor(), name: "Reminibi ti Orílẹ́ède ṣáínà"),
@@ -227,4 +235,8 @@ const cnyCurrencyTranslations = [
   TranslatedName(LangZho(), name: "人民币"),
   TranslatedName(LangZho(), name: "人民幣", script: ScriptHant()),
   TranslatedName(LangZul(), name: "i-Chinese Yuan"),
+  TranslatedName(LangAsm(), name: "চীনা ইউৱান"),
+  TranslatedName(LangOri(), name: "ଚାଇନା ଇଉଆନ ରେନମିମ୍ବି"),
+  TranslatedName(LangPus(), name: "چينايي يان رينمېنبي"),
+  TranslatedName(LangTgl(), name: "Yuan Renminbi ng Tsina"),
 ];

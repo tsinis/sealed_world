@@ -130,7 +130,11 @@ const kesCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কেনিয়ান শিলিং"),
   TranslatedName(LangBre(), name: "shilling Kenya"),
   TranslatedName(LangBos(), name: "Kenijski šiling"),
-  TranslatedName(LangBos(), name: "Кенијски шилинг", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Кенијски шилинг",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "xíling kenyà"),
   TranslatedName(LangChe(), name: "Кенин шиллинг"),
   TranslatedName(LangCes(), name: "keňský šilink"),

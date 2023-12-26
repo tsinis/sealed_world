@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 88 translations for a Salvadoran Colón currency:
+/// Provides 92 translations for a Salvadoran Colón currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -8,6 +8,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Amharic
 /// - Arabic
 /// - Armenian
+/// - Assamese
 /// - Azerbaijani
 /// - Basque
 /// - Belarusian
@@ -60,6 +61,8 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Oriya
+/// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
@@ -74,6 +77,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -94,7 +98,11 @@ const svcCurrencyTranslations = [
   TranslatedName(LangBen(), name: "এল স্যালভোডোর কোলোন"),
   TranslatedName(LangBre(), name: "colón Salvador"),
   TranslatedName(LangBos(), name: "Salvadorski kolon"),
-  TranslatedName(LangBos(), name: "Салвадорски колон", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Салвадорски колон",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "colón salvadorenc"),
   TranslatedName(LangCes(), name: "salvadorský colón"),
   TranslatedName(LangCym(), name: "Colón El Salvador"),
@@ -175,4 +183,8 @@ const svcCurrencyTranslations = [
   TranslatedName(LangZul(), name: "El Salvador Colon"),
   TranslatedName(LangFul(), name: "𞤑𞤮𞤤𞤮𞥅𞤲 𞤅𞤢𞤤𞤾𞤢𞤣𞤮𞤪𞤢𞤲𞤳𞤮"),
   TranslatedName(LangSrd(), name: "colón salvadorenu"),
+  TranslatedName(LangAsm(), name: "ছালভাডৰিয়ান কলন"),
+  TranslatedName(LangOri(), name: "ସାଲଭାଡୋରାନ କଲୋନ"),
+  TranslatedName(LangPus(), name: "سلواډوري کولون"),
+  TranslatedName(LangTgl(), name: "Colon ng El Salvador"),
 ];

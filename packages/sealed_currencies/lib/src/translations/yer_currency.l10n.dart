@@ -115,7 +115,11 @@ const yerCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইয়েমেনি রিয়াল"),
   TranslatedName(LangBre(), name: "rial Yemen"),
   TranslatedName(LangBos(), name: "Jemenski rijal"),
-  TranslatedName(LangBos(), name: "Јеменски риал", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Јеменски риал",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "rial iemenita"),
   TranslatedName(LangChe(), name: "Йеменан риал"),
   TranslatedName(LangCes(), name: "jemenský rijál"),

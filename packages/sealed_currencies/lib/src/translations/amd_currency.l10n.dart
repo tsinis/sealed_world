@@ -115,7 +115,11 @@ const amdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আরমেনিয়ান দ্রাম"),
   TranslatedName(LangBre(), name: "dram Armenia"),
   TranslatedName(LangBos(), name: "Armenski dram"),
-  TranslatedName(LangBos(), name: "Јерменски драм", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Јерменски драм",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "dram armeni"),
   TranslatedName(LangChe(), name: "Эрмалойчоьнан драм"),
   TranslatedName(LangCes(), name: "arménský dram"),

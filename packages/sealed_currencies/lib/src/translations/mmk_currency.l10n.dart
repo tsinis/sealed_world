@@ -116,7 +116,11 @@ const mmkCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মায়ানমার কিয়াত"),
   TranslatedName(LangBre(), name: "kyat Myanmar"),
   TranslatedName(LangBos(), name: "Mijanmarski kjat"),
-  TranslatedName(LangBos(), name: "Мјанмашки кјат", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Мјанмашки кјат",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "kyat de Myanmar"),
   TranslatedName(LangChe(), name: "Мьянман кьят"),
   TranslatedName(LangCes(), name: "myanmarský kyat"),

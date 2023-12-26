@@ -116,7 +116,11 @@ const bdtCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বাংলাদেশী টাকা"),
   TranslatedName(LangBre(), name: "taka Bangladesh"),
   TranslatedName(LangBos(), name: "Bangladeška taka"),
-  TranslatedName(LangBos(), name: "Бангладешка така", script: ScriptCyrl()),
+  TranslatedName(
+    LangBos(),
+    name: "Бангладешка така",
+    script: ScriptCyrl(),
+  ),
   TranslatedName(LangCat(), name: "taka de Bangla Desh"),
   TranslatedName(LangChe(), name: "Бангладешан така"),
   TranslatedName(LangCes(), name: "bangladéšská taka"),
