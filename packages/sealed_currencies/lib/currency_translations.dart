@@ -1,6 +1,8 @@
 // This library translations are based on the data from the
-// https://github.com/umpirsky/currency-list project (from Saša Stamenković),
-// which is licensed under the MIT License.
+// https://github.com/symfony/intl project
+// (from The Symfony - Intl Component, Fabien Potencier) and from the
+// https://github.com/umpirsky/currency-list project (from Saša Stamenković).
+// Both projects are licensed under the MIT License.
 
 /// Provides currency translations for sealed_currencies.
 library sealed_currency_translations;

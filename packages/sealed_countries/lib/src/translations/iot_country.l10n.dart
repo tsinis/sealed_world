@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a British Indian Ocean Territory country:
+/// Provides 131 translations for a British Indian Ocean Territory country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -405,4 +406,5 @@ const iotCountryTranslations = [
   TranslatedName(LangSrd(), name: "Territòriu Britànnicu de s’Otzèanu Indianu"),
   TranslatedName(LangTgl(), name: "Teritoryo sa Karagatan ng British Indian"),
   TranslatedName(LangXho(), name: "EBritish Indian Ocean Territory"),
+  TranslatedName(LangChv(), name: "Англисен Инди океанĕн территорийĕ"),
 ];
