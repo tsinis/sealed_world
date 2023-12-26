@@ -69,8 +69,7 @@
         "source.organizeImports": "always",
         "source.addRequired": "always",
         "source.sortMembers": "never"
-      },
-      "editor.wordBasedSuggestions": "matchingDocuments"
+      }
     },
     "cSpell.words": [
       "Bhojpuri",
