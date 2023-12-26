@@ -7,7 +7,7 @@ import "package:cli/utils/io_utils.dart";
 import "package:cli/utils/json_utils.dart";
 import "package:cli/utils/network_utils.dart";
 
-/// Usage: `dart run :translations sealed_currencies`.
+/// Usage: `dart run :translations sealed_countries`.
 Future<void> main(List<String> args, {bool skipFetch = true}) async {
   final package = ArgsParser(args).maybePackageName();
   if (package == null) throw ArgumentError("Package name should be provided.");

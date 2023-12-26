@@ -29,7 +29,9 @@ class DataListGenerator {
       final superBody = itemString.replaceFirst(type, ": super");
       final setsBody = superBody.replaceAll(": {", ": const {");
       final classBody = setsBody.replaceAll(": [", ": const [");
-      final itemName = item.name;
+      final itemNameRaw = item.name;
+      final itemName =
+          itemNameRaw is TranslatedName ? itemNameRaw.name : itemNameRaw;
 
       buffer
         ..write("""
