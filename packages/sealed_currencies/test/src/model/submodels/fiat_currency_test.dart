@@ -545,6 +545,10 @@ void main() => group("$FiatCurrency", () {
             sortedLanguages,
             containsAll(kMaterialSupportedLanguagesSealed),
           );
+          expect(
+            sortedLanguages,
+            containsAll(kSealedCurrenciesSupportedLanguages),
+          );
           expect(sortedLanguages, kSealedCurrenciesSupportedLanguages);
 
           for (final currency in FiatCurrency.list) {

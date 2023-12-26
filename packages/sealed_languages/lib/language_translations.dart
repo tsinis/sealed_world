@@ -287,7 +287,8 @@ const kSealedLanguagesSupportedLanguages = [
   LangZul(),
 ];
 
-/// Sealed languages version of the `kMaterialSupportedLanguages` list.
+/// Sealed languages version of the
+/// `kMaterialSupportedLanguages`/`kWidgetsSupportedLanguages` lists.
 ///
 /// Implementation of localized strings for the material widgets using
 /// the `intl` package for date and time formatting.
@@ -350,7 +351,96 @@ const kMaterialSupportedLanguagesSealed = [
   LangOri(),
   LangPan(),
   LangPol(),
-  LangPus(),
+  LangPus(), // Missing in kCupertinoSupportedLanguagesSealed.
+  LangPor(),
+  LangRon(),
+  LangRus(),
+  LangSin(),
+  LangSlk(),
+  LangSlv(),
+  LangSqi(),
+  LangSrp(),
+  LangSwe(),
+  LangSwa(),
+  LangTam(),
+  LangTel(),
+  LangTha(),
+  LangTgl(),
+  LangTur(),
+  LangUkr(),
+  LangUrd(),
+  LangUzb(),
+  LangVie(),
+  LangZho(),
+  LangZul(),
+];
+
+/// Sealed languages version of the `kCupertinoSupportedLanguages` list.
+///
+/// Implementation of localized strings for the Cupertino widgets using
+/// the `intl` package for date and time formatting.
+/// Missing "FIL" (Filipino Pilipino, but mapped to Tagalog "tl") and
+/// "GSW" (Swiss German Alemannic Alsatian, but mapped to Swiss German "de_CH")
+/// languages.
+///
+/// The only difference from the [kMaterialSupportedLanguagesSealed] list
+/// is the additional [LangPus] (Pashto (Pushto) language) in Material locales.
+const kCupertinoSupportedLanguagesSealed = [
+  LangAfr(),
+  LangAmh(),
+  LangAra(),
+  LangAsm(),
+  LangAze(),
+  LangBel(),
+  LangBul(),
+  LangBen(),
+  LangBos(),
+  LangCat(),
+  LangCes(),
+  LangCym(),
+  LangDan(),
+  LangDeu(),
+  LangEll(),
+  LangEng(),
+  LangSpa(),
+  LangEst(),
+  LangEus(),
+  LangFas(),
+  LangFin(),
+  LangFra(),
+  LangGlg(),
+  LangGuj(),
+  LangHeb(),
+  LangHin(),
+  LangHrv(),
+  LangHun(),
+  LangHye(),
+  LangInd(),
+  LangIsl(),
+  LangIta(),
+  LangJpn(),
+  LangKat(),
+  LangKaz(),
+  LangKhm(),
+  LangKan(),
+  LangKor(),
+  LangKir(),
+  LangLao(),
+  LangLit(),
+  LangLav(),
+  LangMkd(),
+  LangMal(),
+  LangMon(),
+  LangMar(),
+  LangMsa(),
+  LangMya(),
+  LangNob(),
+  LangNep(),
+  LangNld(),
+  LangNor(),
+  LangOri(),
+  LangPan(),
+  LangPol(),
   LangPor(),
   LangRon(),
   LangRus(),

@@ -6,7 +6,7 @@ NEW FEATURES
 
 - Added new getter for `TranslatedName` name called `common`, which might be useful in some cases when `name` is being used by a parent class.
 - Added a lot of translations from the Symfony.
-- Currencies translations now support all GlobalMaterialLocalizations locales.
+- Currencies translations now support all GlobalMaterialLocalizations and GlobalCupertinoLocalizations locales.
 - Updated LICENSE.
 
 BREAKING CHANGES
