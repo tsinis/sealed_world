@@ -3,7 +3,7 @@ class PhpConverter {
 
   static const format = "php";
 
-  static Map<String, String> extractL10nFomLists(String phpFileContent) {
+  static Map<String, String> extractL10nFromLists(String phpFileContent) {
     final translations = <String, String>{};
     final regex = RegExp(r"'(\w+)'\s*=>\s*\[\s*'\1',\s*'([^']+)'");
     // Regular expression to match and remove text within brackets.
@@ -12,7 +12,7 @@ class PhpConverter {
     final matches = regex.allMatches(phpFileContent);
 
     for (final match in matches) {
-      final code = match.group(1)?.toUpperCase(); // Currency code.
+      final code = match.group(1)?.toUpperCase(); // Code.
       var translation = match.group(2); // Translation.
 
       if (code != null && translation != null) {
@@ -20,6 +20,22 @@ class PhpConverter {
         translation = translation.replaceAll(cleanupRegex, "");
         translations[code] = translation.trim();
       }
+    }
+
+    return translations;
+  }
+
+  static Map<String, String> extractL10nFromSimpleMap(String phpFileContent) {
+    final translations = <String, String>{};
+    final regex = RegExp(r"'(\w+)'\s*=>\s*'([^']+)'");
+
+    final matches = regex.allMatches(phpFileContent);
+
+    for (final match in matches) {
+      final code = match.group(1); // Code.
+      final l10n = match.group(2); // Translation.
+
+      if (code != null && l10n != null) translations[code] = l10n.trim();
     }
 
     return translations;
