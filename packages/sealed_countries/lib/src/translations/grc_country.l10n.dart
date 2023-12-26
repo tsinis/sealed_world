@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 155 translations for a Greece country:
+/// Provides 156 translations for a Greece country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -150,6 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -397,4 +398,5 @@ const grcCountryTranslations = [
   TranslatedName(LangSun(), name: "Yunani"),
   TranslatedName(LangTgl(), name: "Gresya"),
   TranslatedName(LangVol(), name: "Grikän"),
+  TranslatedName(LangXho(), name: "EGreece"),
 ];

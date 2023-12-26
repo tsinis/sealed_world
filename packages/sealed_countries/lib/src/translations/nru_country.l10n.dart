@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 90 translations for a Nauru country:
+/// Provides 92 translations for a Nauru country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -21,6 +21,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Divehi (Dhivehi/Maldivian)
@@ -90,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const nruCountryTranslations = [
@@ -251,4 +253,6 @@ const nruCountryTranslations = [
   TranslatedName(LangMlt(), name: "Nawru"),
   TranslatedName(LangSqi(), name: "Naurua"),
   TranslatedName(LangVol(), name: "Naureän"),
+  TranslatedName(LangChv(), name: "Науру"),
+  TranslatedName(LangXho(), name: "ENauru"),
 ];

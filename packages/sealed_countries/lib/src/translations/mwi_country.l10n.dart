@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Malawi country:
+/// Provides 106 translations for a Malawi country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -101,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -294,4 +295,5 @@ const mwiCountryTranslations = [
   TranslatedName(LangSan(), name: "मलावी"),
   TranslatedName(LangSsw(), name: "IMalawi"),
   TranslatedName(LangVol(), name: "Malaviyän"),
+  TranslatedName(LangXho(), name: "EMalawi"),
 ];

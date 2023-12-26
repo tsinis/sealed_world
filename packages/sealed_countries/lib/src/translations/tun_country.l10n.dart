@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Tunisia country:
+/// Provides 128 translations for a Tunisia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -123,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -338,4 +339,5 @@ const tunCountryTranslations = [
   TranslatedName(LangTgl(), name: "Tunisya"),
   TranslatedName(LangVol(), name: "Tünisän"),
   TranslatedName(LangWln(), name: "Tunizeye"),
+  TranslatedName(LangXho(), name: "ETunisia"),
 ];

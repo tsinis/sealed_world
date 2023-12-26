@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a India country:
+/// Provides 118 translations for a India country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -50,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -82,6 +84,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Russian
 /// - Sango
+/// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -108,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -297,4 +302,9 @@ const indCountryTranslations = [
   TranslatedName(LangZul(), name: "i-India"),
   TranslatedName(LangFry(), name: "Yndia"),
   TranslatedName(LangIku(), name: "ᐃᓐᑎᐊ/intia"),
+  TranslatedName(LangChv(), name: "Инди"),
+  TranslatedName(LangJav(), name: "Indhia"),
+  TranslatedName(LangSan(), name: "भारतः"),
+  TranslatedName(LangSrd(), name: "Ìndia"),
+  TranslatedName(LangXho(), name: "E-Indiya"),
 ];

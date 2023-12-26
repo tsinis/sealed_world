@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a Japan country:
+/// Provides 149 translations for a Japan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -144,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -297,4 +298,5 @@ const jpnCountryTranslations = [
   TranslatedName(LangTah(), name: "Tāpōnē"),
   TranslatedName(LangVol(), name: "Yapän"),
   TranslatedName(LangZha(), name: "Nditbonj"),
+  TranslatedName(LangXho(), name: "EJapan"),
 ];

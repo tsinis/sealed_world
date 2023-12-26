@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Bolivia country:
+/// Provides 128 translations for a Bolivia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -123,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Walloon
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -342,4 +343,5 @@ const bolCountryTranslations = [
   TranslatedName(LangSsw(), name: "IBholiviya"),
   TranslatedName(LangVol(), name: "Bolivän"),
   TranslatedName(LangWln(), name: "Boliveye"),
+  TranslatedName(LangXho(), name: "EBolivia"),
 ];

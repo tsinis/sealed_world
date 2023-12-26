@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Saint Barthélemy country:
+/// Provides 119 translations for a Saint Barthélemy country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -30,18 +31,23 @@ import "../model/country/submodels/country_name.dart";
 /// - English
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -63,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -77,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -86,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -99,9 +108,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const blmCountryTranslations = [
   CountryName(
@@ -311,4 +323,16 @@ const blmCountryTranslations = [
   TranslatedName(LangUzb(), name: "Сен-Бартелеми", script: ScriptCyrl()),
   TranslatedName(LangWol(), name: "Saŋ Bartalemi"),
   TranslatedName(LangZul(), name: "i-Saint Barthélemy"),
+  TranslatedName(LangChv(), name: "Сен-Бартелеми"),
+  TranslatedName(LangFul(), name: "𞤅𞤼. 𞤄𞤢𞤪𞤼𞤫𞤤𞤭𞤥𞤭"),
+  TranslatedName(LangFao(), name: "St. Barthélemy"),
+  TranslatedName(LangHau(), name: "San Barthélemy"),
+  TranslatedName(LangIna(), name: "Sancte Bartholomeo"),
+  TranslatedName(LangIbo(), name: "Barthélemy Dị nsọ"),
+  TranslatedName(LangMri(), name: "Hato Pāteremi"),
+  TranslatedName(LangSrd(), name: "Santu Bartolomeu"),
+  TranslatedName(LangTgl(), name: "St. Barthélemy"),
+  TranslatedName(LangVie(), name: "St. Barthélemy"),
+  TranslatedName(LangXho(), name: "ESt. Barthélemy"),
+  TranslatedName(LangYor(), name: "Ìlú Bátílẹ́mì"),
 ];

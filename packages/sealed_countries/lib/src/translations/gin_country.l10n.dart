@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Guinea country:
+/// Provides 131 translations for a Guinea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -125,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -339,4 +340,5 @@ const ginCountryTranslations = [
   TranslatedName(LangTso(), name: "Gineya"),
   TranslatedName(LangVie(), name: "Guinée"),
   TranslatedName(LangVol(), name: "Gineyän"),
+  TranslatedName(LangXho(), name: "EGuinea"),
 ];

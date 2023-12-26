@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 153 translations for a South Korea country:
+/// Provides 155 translations for a South Korea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -145,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -395,4 +397,6 @@ const korCountryTranslations = [
   TranslatedName(LangWol(), name: "Kore gu Bëj-saalum"),
   TranslatedName(LangYid(), name: "דרום קארעע"),
   TranslatedName(LangZha(), name: "Hanzgoz"),
+  TranslatedName(LangChv(), name: "Корей Республики"),
+  TranslatedName(LangXho(), name: "EMzantsi Korea"),
 ];

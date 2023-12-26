@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Myanmar country:
+/// Provides 146 translations for a Myanmar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -30,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -53,10 +54,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -77,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -86,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -111,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -130,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -365,4 +373,12 @@ const mmrCountryTranslations = [
   TranslatedName(LangTat(), name: "Мьянма"),
   TranslatedName(LangVol(), name: "Mianmarän"),
   TranslatedName(LangZha(), name: "Mienjdien"),
+  TranslatedName(LangDan(), name: "Myanmar (Burma)"),
+  TranslatedName(LangInd(), name: "Myanmar (Burma)"),
+  TranslatedName(LangIbo(), name: "Myanmar (Burma)"),
+  TranslatedName(LangJav(), name: "Myanmar (Burma)"),
+  TranslatedName(LangMsa(), name: "Myanmar (Burma)"),
+  TranslatedName(LangNor(), name: "Myanmar (Burma)"),
+  TranslatedName(LangTgl(), name: "Myanmar (Burma)"),
+  TranslatedName(LangXho(), name: "EMyanmar (Burma)"),
 ];

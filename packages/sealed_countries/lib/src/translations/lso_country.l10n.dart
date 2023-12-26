@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Lesotho country:
+/// Provides 125 translations for a Lesotho country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -120,6 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -332,4 +333,5 @@ const lsoCountryTranslations = [
   TranslatedName(LangTgl(), name: "Lesoto"),
   TranslatedName(LangVen(), name: "Li-Sotho"),
   TranslatedName(LangVol(), name: "Lesotän"),
+  TranslatedName(LangXho(), name: "ELesotho"),
 ];

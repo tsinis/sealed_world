@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Antarctica country:
+/// Provides 116 translations for a Antarctica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -34,6 +35,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -67,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -79,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -104,7 +108,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const ataCountryTranslations = [
   CountryName(
@@ -273,4 +279,10 @@ const ataCountryTranslations = [
   TranslatedName(LangWol(), name: "Antarktik"),
   TranslatedName(LangYid(), name: "אַנטאַרקטיקע"),
   TranslatedName(LangZul(), name: "i-Antarctica"),
+  TranslatedName(LangChv(), name: "Антарктида"),
+  TranslatedName(LangFul(), name: "𞤀𞤲𞤼𞤢𞤪𞤼𞤭𞤳𞤢𞥄"),
+  TranslatedName(LangMri(), name: "Te Kōpakatanga ki te Tonga"),
+  TranslatedName(LangSrd(), name: "Antàrticu"),
+  TranslatedName(LangXho(), name: "E-Antarctica"),
+  TranslatedName(LangYor(), name: "Antakítíkà"),
 ];

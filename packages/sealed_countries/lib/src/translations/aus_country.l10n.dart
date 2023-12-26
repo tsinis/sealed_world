@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 142 translations for a Australia country:
+/// Provides 143 translations for a Australia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -137,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -372,4 +373,5 @@ const ausCountryTranslations = [
   TranslatedName(LangVol(), name: "Laustralän"),
   TranslatedName(LangWln(), name: "Ostraleye"),
   TranslatedName(LangZha(), name: "Audaihleihya"),
+  TranslatedName(LangXho(), name: "E-Australia"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Svalbard and Jan Mayen country:
+/// Provides 119 translations for a Svalbard and Jan Mayen country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -31,17 +32,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -53,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -64,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -78,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -87,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -104,6 +113,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const sjmCountryTranslations = [
   CountryName(
@@ -326,4 +337,15 @@ const sjmCountryTranslations = [
   TranslatedName(LangVie(), name: "Svalbard và Jan Mayen"),
   TranslatedName(LangWol(), name: "Swalbaar ak Jan Mayen"),
   TranslatedName(LangZul(), name: "i-Svalbard ne-Jan Mayen"),
+  TranslatedName(LangChv(), name: "Шпицберген тата Ян-Майен"),
+  TranslatedName(LangFul(), name: "𞤅𞤢𞤾𞤢𞤤𞤦𞤢𞤪𞤣 & 𞤔𞤢𞤲 𞤃𞤢𞤴𞤫𞤲"),
+  TranslatedName(LangFao(), name: "Svalbard & Jan Mayen"),
+  TranslatedName(LangHau(), name: "Svalbard da Jan Mayen"),
+  TranslatedName(LangIbo(), name: "Svalbard & Jan Mayen"),
+  TranslatedName(LangKur(), name: "Svalbard û Jan Mayen"),
+  TranslatedName(LangMri(), name: "Heopara me Iana Maiana"),
+  TranslatedName(LangSrd(), name: "Svalbard e Jan Mayen"),
+  TranslatedName(LangTgl(), name: "Svalbard & Jan Mayen"),
+  TranslatedName(LangXho(), name: "ESvalbard & Jan Mayen"),
+  TranslatedName(LangYor(), name: "Sífábáàdì àti Jánì Máyẹ̀nì"),
 ];

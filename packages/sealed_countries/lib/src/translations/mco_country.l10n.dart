@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Monaco country:
+/// Provides 136 translations for a Monaco country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - Akan
@@ -98,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -129,6 +130,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -351,4 +353,6 @@ const mcoCountryTranslations = [
   TranslatedName(LangTgl(), name: "Monako"),
   TranslatedName(LangTwi(), name: "Monako"),
   TranslatedName(LangVol(), name: "Monakän"),
+  TranslatedName(LangSrd(), name: "Mònacu"),
+  TranslatedName(LangXho(), name: "EMonaco"),
 ];

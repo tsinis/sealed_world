@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Martinique country:
+/// Provides 111 translations for a Martinique country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -46,6 +47,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Italian
 /// - Japanese
 /// - Javanese
@@ -56,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -67,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -77,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -101,6 +106,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -254,4 +260,10 @@ const mtqCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Matinikuwi"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Matinikuwi", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Martinique"),
+  TranslatedName(LangChv(), name: "Мартиника"),
+  TranslatedName(LangIna(), name: "Martinica"),
+  TranslatedName(LangKur(), name: "Martînîk"),
+  TranslatedName(LangMri(), name: "Mātiniki"),
+  TranslatedName(LangSrd(), name: "Martinica"),
+  TranslatedName(LangXho(), name: "EMartinique"),
 ];

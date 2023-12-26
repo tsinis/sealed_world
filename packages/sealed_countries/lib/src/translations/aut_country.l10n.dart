@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Austria country:
+/// Provides 146 translations for a Austria country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -139,6 +139,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -373,4 +374,5 @@ const autCountryTranslations = [
   TranslatedName(LangVol(), name: "Lösterän"),
   TranslatedName(LangWln(), name: "Otriche"),
   TranslatedName(LangZha(), name: "Audeihleih"),
+  TranslatedName(LangXho(), name: "E-Austria"),
 ];

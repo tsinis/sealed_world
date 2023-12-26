@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 143 translations for a Kyrgyzstan country:
+/// Provides 146 translations for a Kyrgyzstan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -89,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
@@ -109,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -139,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -374,4 +377,7 @@ const kgzCountryTranslations = [
   TranslatedName(LangTgl(), name: "Kirgistan"),
   TranslatedName(LangVol(), name: "Kirgistän"),
   TranslatedName(LangYid(), name: "קירגיזסטאן"),
+  TranslatedName(LangMri(), name: "Kikitānga"),
+  TranslatedName(LangSrd(), name: "Kirghìzistan"),
+  TranslatedName(LangXho(), name: "EKyrgyzstan"),
 ];

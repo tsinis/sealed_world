@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 157 translations for a North Korea country:
+/// Provides 159 translations for a North Korea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -407,4 +409,6 @@ const prkCountryTranslations = [
   TranslatedName(LangXho(), name: "Coreia do Twoaie"),
   TranslatedName(LangYid(), name: "צפון קארעע"),
   TranslatedName(LangZha(), name: "Cauzsenh Minzcujcujyi Yinzminz Gunghozgoz"),
+  TranslatedName(LangChv(), name: "КХДР"),
+  TranslatedName(LangIbo(), name: "Ugwu Korea"),
 ];

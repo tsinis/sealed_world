@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 133 translations for a Bahamas country:
+/// Provides 135 translations for a Bahamas country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -81,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
@@ -127,6 +128,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -352,4 +354,6 @@ const bhsCountryTranslations = [
   TranslatedName(LangSsw(), name: "iBhahamasi"),
   TranslatedName(LangSun(), name: "Bahama"),
   TranslatedName(LangVol(), name: "Bahamuäns"),
+  TranslatedName(LangMri(), name: "Pahama"),
+  TranslatedName(LangXho(), name: "EBahamas"),
 ];

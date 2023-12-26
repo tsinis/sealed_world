@@ -4,7 +4,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Macau country:
+/// Provides 119 translations for a Macau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -25,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -36,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -46,7 +48,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -56,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -67,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -81,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -90,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -106,6 +114,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const macCountryTranslations = [
   CountryName(
@@ -339,4 +350,16 @@ const macCountryTranslations = [
   TranslatedName(LangUzb(), name: "Макао (Хитой ММҲ)", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Macao, Trung Quốc"),
   TranslatedName(LangZul(), name: "i-Macau SAR China"),
+  TranslatedName(LangChv(), name: "Макао (САР)"),
+  TranslatedName(LangFul(), name: "𞤖𞤂𞤀 𞤕𞤢𞤴𞤲𞤢 𞤫 𞤃𞤢𞤳𞤢𞤱𞤮𞥅"),
+  TranslatedName(LangHau(), name: "Babban Yankin Mulkin Macao na Ƙasar Sin"),
+  TranslatedName(LangIna(), name: "Macao, R.A.S. de China"),
+  TranslatedName(LangIbo(), name: "Macao SAR China"),
+  TranslatedName(LangKur(), name: "Makaoya Hît ya Çînê"),
+  TranslatedName(LangMri(), name: "Makau Haina"),
+  TranslatedName(LangSrd(), name: "RAS tzinesa de Macao"),
+  TranslatedName(LangTgl(), name: "Macau SAR China"),
+  TranslatedName(LangWol(), name: "Makaawo"),
+  TranslatedName(LangXho(), name: "EMacao SAR China"),
+  TranslatedName(LangYor(), name: "Agbègbè Ìṣàkóso Pàtàkì Macao"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 155 translations for a Azerbaijan country:
+/// Provides 156 translations for a Azerbaijan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -148,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -400,4 +401,5 @@ const azeCountryTranslations = [
   TranslatedName(LangVol(), name: "Lasärbäcän"),
   TranslatedName(LangYid(), name: "אַזערבײַדזשאַן"),
   TranslatedName(LangZha(), name: "Ahsehbaiqgyangh"),
+  TranslatedName(LangXho(), name: "E-Azerbaijan"),
 ];

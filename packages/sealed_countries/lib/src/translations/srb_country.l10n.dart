@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Serbia country:
+/// Provides 122 translations for a Serbia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -37,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -74,6 +75,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Nepali
 /// - Oriya
@@ -116,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -327,4 +330,7 @@ const srbCountryTranslations = [
   TranslatedName(LangTah(), name: "Terepia"),
   TranslatedName(LangVol(), name: "Särbän"),
   TranslatedName(LangYor(), name: "Sérbíà"),
+  TranslatedName(LangFul(), name: "𞤅𞤫𞤪𞤦𞤭𞤴𞤢𞥄"),
+  TranslatedName(LangMri(), name: "Hirupia"),
+  TranslatedName(LangXho(), name: "ESerbia"),
 ];

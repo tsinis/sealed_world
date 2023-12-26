@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Guernsey country:
+/// Provides 101 translations for a Guernsey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -21,6 +21,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -33,10 +34,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Ewe
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -94,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Zulu.
 const ggyCountryTranslations = [
@@ -254,4 +258,8 @@ const ggyCountryTranslations = [
   TranslatedName(LangOss(), name: "Гернси"),
   TranslatedName(LangKin(), name: "Gwasi"),
   TranslatedName(LangTgl(), name: "Gernesey"),
+  TranslatedName(LangChv(), name: "Гернси"),
+  TranslatedName(LangFul(), name: "𞤘𞤢𞤪𞤲𞤫𞤧𞤭𞥅"),
+  TranslatedName(LangHau(), name: "Yankin Guernsey"),
+  TranslatedName(LangXho(), name: "EGuernsey"),
 ];

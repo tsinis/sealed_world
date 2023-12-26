@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 112 translations for a Christmas Island country:
+/// Provides 119 translations for a Christmas Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -33,6 +34,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -55,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -66,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -80,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -106,6 +111,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const cxrCountryTranslations = [
   CountryName(
@@ -308,4 +315,11 @@ const cxrCountryTranslations = [
   TranslatedName(LangVie(), name: "Đảo Giáng Sinh"),
   TranslatedName(LangWol(), name: "Dunu Kirismas"),
   TranslatedName(LangZul(), name: "i-Christmas Island"),
+  TranslatedName(LangChv(), name: "Раштав утравӗ"),
+  TranslatedName(LangFul(), name: "𞤅𞤵𞤪𞤭𞥅𞤪𞤫 𞤑𞤭𞤪𞤧𞤭𞤥𞤢𞥄𞤧"),
+  TranslatedName(LangKur(), name: "Girava Christmasê"),
+  TranslatedName(LangMri(), name: "Te Moutere Kirihimete"),
+  TranslatedName(LangSrd(), name: "Ìsula de sa Natividade"),
+  TranslatedName(LangXho(), name: "EChristmas Island"),
+  TranslatedName(LangYor(), name: "Erékùsù Christmas"),
 ];

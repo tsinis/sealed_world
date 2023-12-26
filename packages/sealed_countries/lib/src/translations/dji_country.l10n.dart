@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 132 translations for a Djibouti country:
+/// Provides 134 translations for a Djibouti country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -53,6 +53,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Icelandic
 /// - Ido
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -128,6 +129,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -348,4 +350,6 @@ const djiCountryTranslations = [
   TranslatedName(LangSsw(), name: "IJibhuthi"),
   TranslatedName(LangTgl(), name: "Hiboti"),
   TranslatedName(LangVol(), name: "Cibutän"),
+  TranslatedName(LangIna(), name: "Djibuti"),
+  TranslatedName(LangXho(), name: "EDjibouti"),
 ];

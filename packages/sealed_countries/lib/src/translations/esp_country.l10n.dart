@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 159 translations for a Spain country:
+/// Provides 160 translations for a Spain country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -154,6 +154,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -410,4 +411,5 @@ const espCountryTranslations = [
   TranslatedName(LangVol(), name: "Spanyän"),
   TranslatedName(LangWln(), name: "Espagne"),
   TranslatedName(LangZha(), name: "Sihbanhyaz"),
+  TranslatedName(LangXho(), name: "ESpain"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 104 translations for a Saint Martin country:
+/// Provides 116 translations for a Saint Martin country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -33,16 +34,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -57,12 +62,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Lao
 /// - Latvian
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -77,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -85,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -98,9 +107,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const mafCountryTranslations = [
   CountryName(
@@ -299,4 +311,16 @@ const mafCountryTranslations = [
   TranslatedName(LangUzb(), name: "Сент-Мартин", script: ScriptCyrl()),
   TranslatedName(LangWol(), name: "Saŋ Marteŋ"),
   TranslatedName(LangZul(), name: "i-Saint Martin"),
+  TranslatedName(LangChv(), name: "Сен-Мартен"),
+  TranslatedName(LangFul(), name: "𞤅𞤼. 𞤃𞤢𞤪𞤼𞤫𞤲"),
+  TranslatedName(LangHau(), name: "San Martin"),
+  TranslatedName(LangIna(), name: "Sancte Martino francese"),
+  TranslatedName(LangIbo(), name: "Martin Dị nsọ"),
+  TranslatedName(LangLtz(), name: "St. Martin"),
+  TranslatedName(LangMri(), name: "Hato Mātene"),
+  TranslatedName(LangSrd(), name: "Santu Martine"),
+  TranslatedName(LangTgl(), name: "Saint Martin"),
+  TranslatedName(LangVie(), name: "St. Martin"),
+  TranslatedName(LangXho(), name: "ESt. Martin"),
+  TranslatedName(LangYor(), name: "Ìlú Màtìnì"),
 ];

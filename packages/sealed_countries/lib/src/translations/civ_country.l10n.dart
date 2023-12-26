@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Ivory Coast country:
+/// Provides 153 translations for a Ivory Coast country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -54,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -144,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -395,4 +397,6 @@ const civCountryTranslations = [
   TranslatedName(LangTso(), name: "Côte d'Ivoire"),
   TranslatedName(LangVie(), name: "Bờ Biển Ngà"),
   TranslatedName(LangVol(), name: "Viorajolän"),
+  TranslatedName(LangIbo(), name: "Côte d’Ivoire"),
+  TranslatedName(LangXho(), name: "ECôte d’Ivoire"),
 ];

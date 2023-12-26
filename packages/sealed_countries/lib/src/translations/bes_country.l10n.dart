@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 98 translations for a Caribbean Netherlands country:
+/// Provides 107 translations for a Caribbean Netherlands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -32,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -42,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -51,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -62,6 +66,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -73,7 +78,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,6 +104,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const besCountryTranslations = [
   CountryName(
@@ -297,4 +306,13 @@ const besCountryTranslations = [
   ),
   TranslatedName(LangVie(), name: "Ca-ri-bê Hà Lan"),
   TranslatedName(LangZul(), name: "i-Caribbean Netherlands"),
+  TranslatedName(LangChv(), name: "Бонэйр, Синт-Эстатиус тата Саба"),
+  TranslatedName(LangFul(), name: "𞤑𞤢𞤪𞤦𞤭𞤴𞤢𞥄 𞤖𞤮𞤤𞤢𞤲𞤣𞤭𞤴𞤢𞥄"),
+  TranslatedName(LangIna(), name: "Paises Basse caribe"),
+  TranslatedName(LangKur(), name: "Holendaya Karayîbê"),
+  TranslatedName(LangMri(), name: "Karapīana Hōrana"),
+  TranslatedName(LangRoh(), name: "Antillas Ollandaisas"),
+  TranslatedName(LangSrd(), name: "Caràibes olandesas"),
+  TranslatedName(LangXho(), name: "ECaribbean Netherlands"),
+  TranslatedName(LangYor(), name: "Kàríbíánì ti Nẹ́dálándì"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a Anguilla country:
+/// Provides 113 translations for a Anguilla country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -59,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -69,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -104,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const aiaCountryTranslations = [
@@ -216,4 +220,8 @@ const aiaCountryTranslations = [
   TranslatedName(LangCor(), name: "Angwilla"),
   TranslatedName(LangKin(), name: "Angwiya"),
   TranslatedName(LangTgl(), name: "Anggilya"),
+  TranslatedName(LangChv(), name: "Ангилья"),
+  TranslatedName(LangKur(), name: "Anguîla"),
+  TranslatedName(LangMri(), name: "Anguira"),
+  TranslatedName(LangXho(), name: "E-Anguilla"),
 ];

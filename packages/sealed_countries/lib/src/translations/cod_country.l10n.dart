@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a DR Congo country:
+/// Provides 153 translations for a DR Congo country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -54,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -123,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swati
 /// - Swedish
 /// - Tagalog
+/// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
@@ -143,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -394,4 +397,7 @@ const codCountryTranslations = [
   TranslatedName(LangWln(), name: "Republike democratike do Congo"),
   TranslatedName(LangWol(), name: "Republik Demokaraatik bu Kongóo"),
   TranslatedName(LangZha(), name: "Ganggoj Minzcuj Gunghozgoz"),
+  TranslatedName(LangIbo(), name: "Congo - Kinshasa"),
+  TranslatedName(LangTgk(), name: "Конго (ҶДК)"),
+  TranslatedName(LangXho(), name: "ECongo -Kinshasa"),
 ];

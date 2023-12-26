@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 146 translations for a Cameroon country:
+/// Provides 147 translations for a Cameroon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -141,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -383,4 +384,5 @@ const cmrCountryTranslations = [
   TranslatedName(LangSun(), name: "Kamerun"),
   TranslatedName(LangTgl(), name: "Kamerun"),
   TranslatedName(LangVol(), name: "Kamerunän"),
+  TranslatedName(LangXho(), name: "ECameroon"),
 ];

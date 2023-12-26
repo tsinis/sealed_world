@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Faroe Islands country:
+/// Provides 132 translations for a Faroe Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -38,11 +39,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -94,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -122,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -321,4 +326,9 @@ const froCountryTranslations = [
   TranslatedName(LangSun(), name: "Kapuloan Faroe"),
   TranslatedName(LangTgl(), name: "Kapuluang Peroe"),
   TranslatedName(LangYor(), name: "Àwọn Erékùṣù Fàróè"),
+  TranslatedName(LangChv(), name: "Фарер утравӗсем"),
+  TranslatedName(LangFul(), name: "𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤊𞤢𞤪𞤵𞥅𞤧"),
+  TranslatedName(LangHau(), name: "Tsibirai na Faroe"),
+  TranslatedName(LangSrd(), name: "Ìsulas Føroyar"),
+  TranslatedName(LangXho(), name: "EFaroe Islands"),
 ];

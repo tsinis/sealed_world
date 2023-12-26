@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Jamaica country:
+/// Provides 119 translations for a Jamaica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -75,6 +76,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -84,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -110,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -229,4 +233,8 @@ const jamCountryTranslations = [
   TranslatedName(LangIdo(), name: "Jamaika"),
   TranslatedName(LangLat(), name: "Iamaica"),
   TranslatedName(LangVol(), name: "Camekeän"),
+  TranslatedName(LangChv(), name: "Ямайка"),
+  TranslatedName(LangMri(), name: "Hemeika"),
+  TranslatedName(LangSrd(), name: "Giamàica"),
+  TranslatedName(LangXho(), name: "EJamaica"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Saint Kitts and Nevis country:
+/// Provides 133 translations for a Saint Kitts and Nevis country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -33,6 +34,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -48,6 +50,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -77,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -93,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -103,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -121,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const knaCountryTranslations = [
@@ -362,4 +369,11 @@ const knaCountryTranslations = [
   TranslatedName(LangIdo(), name: "Santa Kitts e Nevis"),
   TranslatedName(LangLim(), name: "Saint-Kitts"),
   TranslatedName(LangVol(), name: "Sankiteän e Neviseän"),
+  TranslatedName(LangChv(), name: "Сент-Китс тата Невис"),
+  TranslatedName(LangFao(), name: "St. Kitts & Nevis"),
+  TranslatedName(LangIbo(), name: "Kitts na Nevis Dị nsọ"),
+  TranslatedName(LangMri(), name: "Hato Kiti me Newhi"),
+  TranslatedName(LangSrd(), name: "Santu Cristolu e Nevis"),
+  TranslatedName(LangTgl(), name: "St. Kitts & Nevis"),
+  TranslatedName(LangXho(), name: "ESt. Kitts & Nevis"),
 ];

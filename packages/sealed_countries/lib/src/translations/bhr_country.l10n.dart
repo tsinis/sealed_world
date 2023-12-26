@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Bahrain country:
+/// Provides 131 translations for a Bahrain country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -80,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Occitan
@@ -95,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -124,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -340,4 +343,7 @@ const bhrCountryTranslations = [
   TranslatedName(LangSsw(), name: "iBhaharayi"),
   TranslatedName(LangVol(), name: "Bahruäns"),
   TranslatedName(LangYid(), name: "באכריין"),
+  TranslatedName(LangMri(), name: "Pāreina"),
+  TranslatedName(LangSrd(), name: "Bahrein"),
+  TranslatedName(LangXho(), name: "EBahrain"),
 ];

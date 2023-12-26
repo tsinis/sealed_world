@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 141 translations for a Solomon Islands country:
+/// Provides 144 translations for a Solomon Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -86,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
@@ -105,6 +106,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -136,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -373,4 +376,7 @@ const slbCountryTranslations = [
   TranslatedName(LangSun(), name: "Kapuloan Solomon"),
   TranslatedName(LangTgl(), name: "Kapuluang Solomon"),
   TranslatedName(LangVol(), name: "Solomonuäns"),
+  TranslatedName(LangMri(), name: "Ngā Motu Horomona"),
+  TranslatedName(LangSrd(), name: "Ìsulas Salomone"),
+  TranslatedName(LangXho(), name: "ESolomon Islands"),
 ];

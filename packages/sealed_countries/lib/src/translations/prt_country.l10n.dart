@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Portugal country:
+/// Provides 128 translations for a Portugal country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -124,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -343,4 +344,5 @@ const prtCountryTranslations = [
   TranslatedName(LangSsw(), name: "IPhuthukezi"),
   TranslatedName(LangTah(), name: "Pōtītī"),
   TranslatedName(LangVol(), name: "Portugän"),
+  TranslatedName(LangXho(), name: "EPortugal"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Botswana country:
+/// Provides 119 translations for a Botswana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -113,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Walloon
 /// - Welsh
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -327,4 +328,5 @@ const bwaCountryTranslations = [
   TranslatedName(LangVie(), name: "Bốt-xoa-na"),
   TranslatedName(LangVol(), name: "Zvanän"),
   TranslatedName(LangWln(), name: "Boswana"),
+  TranslatedName(LangXho(), name: "EBotswana"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Suriname country:
+/// Provides 131 translations for a Suriname country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -125,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -351,4 +352,5 @@ const surCountryTranslations = [
   TranslatedName(LangKin(), name: "Surinamu"),
   TranslatedName(LangTgl(), name: "Surinam"),
   TranslatedName(LangVol(), name: "Surinän"),
+  TranslatedName(LangXho(), name: "ESuriname"),
 ];

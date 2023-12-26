@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Burundi country:
+/// Provides 109 translations for a Burundi country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -68,6 +68,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
@@ -106,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -301,4 +303,6 @@ const bdiCountryTranslations = [
   TranslatedName(LangVol(), name: "Rundiyän"),
   TranslatedName(LangWln(), name: "Bouroundi"),
   TranslatedName(LangWol(), name: "Buruundi"),
+  TranslatedName(LangMri(), name: "Puruniti"),
+  TranslatedName(LangXho(), name: "EBurundi"),
 ];

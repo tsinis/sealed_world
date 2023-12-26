@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a South Sudan country:
+/// Provides 128 translations for a South Sudan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -37,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
@@ -75,6 +76,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
@@ -122,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -343,4 +346,7 @@ const ssdCountryTranslations = [
   TranslatedName(LangSun(), name: "Sudan Kidul"),
   TranslatedName(LangTgl(), name: "Timog Sudan"),
   TranslatedName(LangVol(), name: "Sulüda-Sudän"),
+  TranslatedName(LangFul(), name: "𞤅𞤵𞤣𞤢𞥄𞤲 𞤂𞤫𞤧𞤤𞤫𞤴𞤪𞤭"),
+  TranslatedName(LangMri(), name: "Hūtāne ki te Tonga"),
+  TranslatedName(LangXho(), name: "ESouth Sudan"),
 ];

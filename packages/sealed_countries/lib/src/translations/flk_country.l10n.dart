@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Falkland Islands country:
+/// Provides 135 translations for a Falkland Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -50,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -79,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -94,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -123,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -353,4 +358,9 @@ const flkCountryTranslations = [
   TranslatedName(LangKal(), name: "Falklandi qeqertaq"),
   TranslatedName(LangLat(), name: "Insulae Malvinae"),
   TranslatedName(LangTgl(), name: "Kapuluang Falkland (Kapuluang Malvinas)"),
+  TranslatedName(LangChv(), name: "Фолкленд утравӗсем"),
+  TranslatedName(LangIna(), name: "Insulas Falkland"),
+  TranslatedName(LangMri(), name: "Motu Whākarangi"),
+  TranslatedName(LangSrd(), name: "Ìsulas Falkland"),
+  TranslatedName(LangXho(), name: "EFalkland Islands"),
 ];

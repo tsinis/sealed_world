@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Benin country:
+/// Provides 124 translations for a Benin country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -122,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -317,4 +318,5 @@ const benCountryTranslations = [
   TranslatedName(LangSun(), name: "Bénin"),
   TranslatedName(LangVie(), name: "Bénin"),
   TranslatedName(LangVol(), name: "Beninän"),
+  TranslatedName(LangXho(), name: "EBenin"),
 ];

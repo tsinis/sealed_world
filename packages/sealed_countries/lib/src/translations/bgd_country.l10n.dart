@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Bangladesh country:
+/// Provides 116 translations for a Bangladesh country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -71,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
@@ -81,12 +83,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -106,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -309,4 +314,9 @@ const bgdCountryTranslations = [
   TranslatedName(LangFry(), name: "Banglades"),
   TranslatedName(LangLat(), name: "Bangladesha"),
   TranslatedName(LangLim(), name: "Bangladesj"),
+  TranslatedName(LangChv(), name: "Бангладеш"),
+  TranslatedName(LangMri(), name: "Pākaratēhi"),
+  TranslatedName(LangSrd(), name: "Bangladèsh"),
+  TranslatedName(LangSom(), name: "Bangaladhesh"),
+  TranslatedName(LangXho(), name: "EBangladesh"),
 ];

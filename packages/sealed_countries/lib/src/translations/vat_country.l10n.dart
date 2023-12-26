@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 155 translations for a Vatican City country:
+/// Provides 156 translations for a Vatican City country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -150,6 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -393,4 +394,5 @@ const vatCountryTranslations = [
   TranslatedName(LangTgl(), name: "Lungsod ng Vaticano"),
   TranslatedName(LangTat(), name: "Ватикан"),
   TranslatedName(LangVol(), name: "Vatikän"),
+  TranslatedName(LangXho(), name: "EVatican City"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Western Sahara country:
+/// Provides 113 translations for a Western Sahara country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -34,11 +35,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -67,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -81,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -90,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -104,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const eshCountryTranslations = [
@@ -305,4 +312,11 @@ const eshCountryTranslations = [
   TranslatedName(LangYor(), name: "Ìwọ̀òòrùn Sàhárà"),
   TranslatedName(LangYor(), name: "Ìwɔ̀òòrùn Sàhárà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Western Sahara"),
+  TranslatedName(LangChv(), name: "Анӑҫ Сахара"),
+  TranslatedName(LangFul(), name: "𞤅𞤢𞥄𞤸𞤢𞤪𞤢 𞤖𞤭𞥅𞤲𞤢𞥄𞤪𞤭"),
+  TranslatedName(LangHau(), name: "Yammacin Sahara"),
+  TranslatedName(LangMri(), name: "Hahāra ki te Tonga"),
+  TranslatedName(LangSrd(), name: "Sahara otzidentale"),
+  TranslatedName(LangTgl(), name: "Kanlurang Sahara"),
+  TranslatedName(LangXho(), name: "EWestern Sahara"),
 ];

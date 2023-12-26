@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 141 translations for a Papua New Guinea country:
+/// Provides 144 translations for a Papua New Guinea country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -27,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -106,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -135,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -384,4 +387,7 @@ const pngCountryTranslations = [
   TranslatedName(LangSun(), name: "Papua Nugini"),
   TranslatedName(LangTgl(), name: "Papua Bagong Ginea"),
   TranslatedName(LangVol(), name: "Papuveän Nula-Gineyän"),
+  TranslatedName(LangChv(), name: "Папуа — Ҫӗнӗ Гвиней"),
+  TranslatedName(LangSrd(), name: "Pàpua Guinea Noa"),
+  TranslatedName(LangXho(), name: "EPapua New Guinea"),
 ];

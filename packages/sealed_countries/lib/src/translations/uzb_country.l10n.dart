@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Uzbekistan country:
+/// Provides 134 translations for a Uzbekistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -82,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
@@ -100,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -128,6 +130,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -359,4 +362,7 @@ const uzbCountryTranslations = [
   TranslatedName(LangSun(), name: "Uzbékistan"),
   TranslatedName(LangVol(), name: "Lusbekän"),
   TranslatedName(LangYid(), name: "אוזבעקיסטאן"),
+  TranslatedName(LangMri(), name: "Uhipeketāne"),
+  TranslatedName(LangSrd(), name: "Uzbèkistan"),
+  TranslatedName(LangXho(), name: "E-Uzbekistan"),
 ];

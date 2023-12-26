@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 140 translations for a Thailand country:
+/// Provides 142 translations for a Thailand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -102,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -132,6 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -361,4 +363,6 @@ const thaCountryTranslations = [
   TranslatedName(LangTgl(), name: "Taylandiya"),
   TranslatedName(LangVol(), name: "Tayän"),
   TranslatedName(LangZha(), name: "Daigoz"),
+  TranslatedName(LangSrd(), name: "Tailàndia"),
+  TranslatedName(LangXho(), name: "EThailand"),
 ];

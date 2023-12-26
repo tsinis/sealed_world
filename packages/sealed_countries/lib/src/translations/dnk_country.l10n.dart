@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Denmark country:
+/// Provides 151 translations for a Denmark country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -145,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -383,4 +384,5 @@ const dnkCountryTranslations = [
   TranslatedName(LangSun(), name: "Dénmark"),
   TranslatedName(LangTgl(), name: "Dinamarka"),
   TranslatedName(LangVol(), name: "Danän"),
+  TranslatedName(LangXho(), name: "EDenmark"),
 ];

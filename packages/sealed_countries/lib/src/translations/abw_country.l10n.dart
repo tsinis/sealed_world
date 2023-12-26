@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 84 translations for a Aruba country:
+/// Provides 87 translations for a Aruba country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -19,6 +19,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -54,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Oriya
@@ -83,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Welsh
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -171,4 +174,7 @@ const abwCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Árúbà"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Árúbà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Aruba"),
+  TranslatedName(LangChv(), name: "Аруба"),
+  TranslatedName(LangMri(), name: "Arūpa"),
+  TranslatedName(LangXho(), name: "E-Aruba"),
 ];

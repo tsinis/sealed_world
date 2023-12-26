@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Georgia country:
+/// Provides 137 translations for a Georgia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -130,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -277,4 +279,6 @@ const geoCountryTranslations = [
   TranslatedName(LangTgl(), name: "Heorhiya"),
   TranslatedName(LangVie(), name: "Gruzia"),
   TranslatedName(LangVol(), name: "Grusiyän"),
+  TranslatedName(LangSrd(), name: "Geòrgia"),
+  TranslatedName(LangXho(), name: "EGeorgia"),
 ];

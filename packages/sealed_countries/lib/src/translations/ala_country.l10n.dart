@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Åland Islands country:
+/// Provides 116 translations for a Åland Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -33,11 +34,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -54,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -65,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -79,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -105,6 +111,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const alaCountryTranslations = [
   CountryName(
@@ -283,4 +291,12 @@ const alaCountryTranslations = [
   TranslatedName(LangVie(), name: "Quần đảo Åland"),
   TranslatedName(LangWol(), name: "Duni Aalànd"),
   TranslatedName(LangZul(), name: "i-Åland Islands"),
+  TranslatedName(LangChv(), name: "Аланди утравӗсем"),
+  TranslatedName(LangFul(), name: "𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤀𞤤𞤢𞤲𞤣"),
+  TranslatedName(LangHau(), name: "Tsibirai na Åland"),
+  TranslatedName(LangKur(), name: "Giravên Alandê"),
+  TranslatedName(LangMri(), name: "Motu Ōrana"),
+  TranslatedName(LangSrd(), name: "Ìsulas Åland"),
+  TranslatedName(LangXho(), name: "E-Åland Islands"),
+  TranslatedName(LangYor(), name: "Àwọn Erékùsù ti Åland"),
 ];

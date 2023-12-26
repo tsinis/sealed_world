@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 159 translations for a Egypt country:
+/// Provides 161 translations for a Egypt country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -32,6 +32,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chamorro
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -153,6 +154,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -401,4 +403,6 @@ const egyCountryTranslations = [
   TranslatedName(LangVol(), name: "Lägüptän"),
   TranslatedName(LangWln(), name: "Edjipe"),
   TranslatedName(LangZha(), name: "Aehciz"),
+  TranslatedName(LangChv(), name: "Египет"),
+  TranslatedName(LangXho(), name: "IYiputa"),
 ];

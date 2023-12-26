@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Timor-Leste country:
+/// Provides 125 translations for a Timor-Leste country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -23,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -77,6 +78,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -91,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -118,6 +121,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yiddish
 /// - Yoruba
 /// - Zulu.
 const tlsCountryTranslations = [
@@ -337,4 +342,9 @@ const tlsCountryTranslations = [
   TranslatedName(LangSlv(), name: "Vzhodni Timor"),
   TranslatedName(LangTgl(), name: "Silangan Timor"),
   TranslatedName(LangVie(), name: "Đông Timor"),
+  TranslatedName(LangChv(), name: "Хӗвелтухӑҫ Тимор"),
+  TranslatedName(LangMri(), name: "Tīmoa ki te Rāwhiti"),
+  TranslatedName(LangSrd(), name: "Timor-Est"),
+  TranslatedName(LangXho(), name: "ETimor-Leste"),
+  TranslatedName(LangYid(), name: "מזרח טימאר"),
 ];

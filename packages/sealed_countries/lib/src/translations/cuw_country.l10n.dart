@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 87 translations for a Curaçao country:
+/// Provides 92 translations for a Curaçao country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -18,6 +18,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -26,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Estonian
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -36,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
@@ -52,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -83,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Zulu.
 const cuwCountryTranslations = [
@@ -209,4 +214,9 @@ const cuwCountryTranslations = [
   TranslatedName(LangWol(), name: "Kursawo"),
   TranslatedName(LangYid(), name: "קוראַסאַא"),
   TranslatedName(LangZul(), name: "i-Curaçao"),
+  TranslatedName(LangChv(), name: "Кюрасао"),
+  TranslatedName(LangFul(), name: "𞤑𞤵𞥅𞤪𞤢𞤧𞤢𞤱𞤮"),
+  TranslatedName(LangGle(), name: "Cúrasó"),
+  TranslatedName(LangMri(), name: "Kurahao"),
+  TranslatedName(LangXho(), name: "ECuraçao"),
 ];

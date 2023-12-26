@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Guyana country:
+/// Provides 114 translations for a Guyana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -109,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -318,4 +319,5 @@ const guyCountryTranslations = [
   TranslatedName(LangKin(), name: "Giyana"),
   TranslatedName(LangSan(), name: "गयाना"),
   TranslatedName(LangVol(), name: "Gvayän"),
+  TranslatedName(LangXho(), name: "EGuyana"),
 ];

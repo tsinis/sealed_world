@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Pitcairn Islands country:
+/// Provides 131 translations for a Pitcairn Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -50,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -94,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -121,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -340,4 +344,8 @@ const pcnCountryTranslations = [
   TranslatedName(LangZul(), name: "i-Pitcairn Islands"),
   TranslatedName(LangLat(), name: "Pitcairn Insulae"),
   TranslatedName(LangMri(), name: "Pitikeina"),
+  TranslatedName(LangChv(), name: "Питкэрн утравӗсем"),
+  TranslatedName(LangIna(), name: "Insulas Pitcairn"),
+  TranslatedName(LangSrd(), name: "Ìsulas Pìtcairn"),
+  TranslatedName(LangXho(), name: "EPitcairn Islands"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Palestine country:
+/// Provides 125 translations for a Palestine country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -47,7 +48,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -74,6 +77,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -90,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -99,6 +104,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -113,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const pseCountryTranslations = [
@@ -321,4 +328,11 @@ const pseCountryTranslations = [
   TranslatedName(LangYor(), name: "Agbègbè Palẹsítíànù"),
   TranslatedName(LangYor(), name: "Agbègbè Palɛsítíànù", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Palestinian Territories"),
+  TranslatedName(LangChv(), name: "Палестинӑн территорийӗсем"),
+  TranslatedName(LangIna(), name: "Territorios palestin"),
+  TranslatedName(LangIbo(), name: "Palestinian Territories"),
+  TranslatedName(LangMri(), name: "Ngā Rohe o Parihitini"),
+  TranslatedName(LangSrd(), name: "Territòrios palestinesos"),
+  TranslatedName(LangTgl(), name: "Palestinian Territories"),
+  TranslatedName(LangXho(), name: "IPalestinian Territories"),
 ];

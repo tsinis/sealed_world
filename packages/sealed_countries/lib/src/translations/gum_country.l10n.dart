@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 90 translations for a Guam country:
+/// Provides 94 translations for a Guam country:
 /// - (Eastern) Punjabi
 /// - Amharic
 /// - Arabic
@@ -18,6 +18,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -58,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -66,6 +68,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -88,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -186,4 +190,8 @@ const gumCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Guamu"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Guamu", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Guam"),
+  TranslatedName(LangChv(), name: "Гуам"),
+  TranslatedName(LangMri(), name: "Kuama"),
+  TranslatedName(LangSrd(), name: "Guàm"),
+  TranslatedName(LangXho(), name: "EGuam"),
 ];

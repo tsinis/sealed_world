@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Ukraine country:
+/// Provides 151 translations for a Ukraine country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -145,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -299,4 +300,5 @@ const ukrCountryTranslations = [
   TranslatedName(LangTgl(), name: "Ukranya"),
   TranslatedName(LangVol(), name: "Lukrayän"),
   TranslatedName(LangWln(), name: "Oucrinne"),
+  TranslatedName(LangXho(), name: "E-Ukraine"),
 ];

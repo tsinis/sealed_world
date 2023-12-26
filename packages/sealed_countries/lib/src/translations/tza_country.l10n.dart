@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Tanzania country:
+/// Provides 120 translations for a Tanzania country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -115,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -330,4 +331,5 @@ const tzaCountryTranslations = [
   TranslatedName(LangSrd(), name: "Tanzània"),
   TranslatedName(LangSsw(), name: "IThanzaniya"),
   TranslatedName(LangVol(), name: "Tansanän"),
+  TranslatedName(LangXho(), name: "ETanzania"),
 ];

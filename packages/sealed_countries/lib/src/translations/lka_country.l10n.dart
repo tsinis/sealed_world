@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Sri Lanka country:
+/// Provides 120 translations for a Sri Lanka country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -113,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -332,4 +333,5 @@ const lkaCountryTranslations = [
   TranslatedName(LangSsw(), name: "Siri Lanka"),
   TranslatedName(LangSun(), name: "Sri Langka"),
   TranslatedName(LangVol(), name: "Sri-Lankän"),
+  TranslatedName(LangXho(), name: "ESri Lanka"),
 ];

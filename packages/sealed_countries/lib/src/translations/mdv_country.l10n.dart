@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Maldives country:
+/// Provides 131 translations for a Maldives country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -50,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -78,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -93,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -120,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -338,4 +343,9 @@ const mdvCountryTranslations = [
   TranslatedName(LangLat(), name: "Insulae Maldivae"),
   TranslatedName(LangMsa(), name: "Maldiv"),
   TranslatedName(LangVol(), name: "Maldivuäns"),
+  TranslatedName(LangChv(), name: "Мальдивсем"),
+  TranslatedName(LangIna(), name: "Maldivas"),
+  TranslatedName(LangMri(), name: "Māratiri"),
+  TranslatedName(LangSrd(), name: "Maldivas"),
+  TranslatedName(LangXho(), name: "EMaldives"),
 ];

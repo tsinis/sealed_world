@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 87 translations for a Palau country:
+/// Provides 89 translations for a Palau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Amharic
@@ -19,6 +19,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -86,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const plwCountryTranslations = [
@@ -244,4 +246,6 @@ const plwCountryTranslations = [
   TranslatedName(LangMri(), name: "Pārau"),
   TranslatedName(LangOci(), name: "Belau"),
   TranslatedName(LangVol(), name: "Palauäns"),
+  TranslatedName(LangChv(), name: "Палау"),
+  TranslatedName(LangXho(), name: "EPalau"),
 ];

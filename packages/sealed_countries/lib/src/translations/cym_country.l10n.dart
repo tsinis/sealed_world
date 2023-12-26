@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Cayman Islands country:
+/// Provides 132 translations for a Cayman Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -79,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -94,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -121,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -345,4 +349,8 @@ const cymCountryTranslations = [
   TranslatedName(LangBod(), name: "ཁེ་མེན་གླིང་ཕྲན།"),
   TranslatedName(LangGlv(), name: "Ellanyn Cayman"),
   TranslatedName(LangIdo(), name: "Insuli Kaiman"),
+  TranslatedName(LangChv(), name: "Кайман утравӗсем"),
+  TranslatedName(LangMri(), name: "Ngā Motu Keimana"),
+  TranslatedName(LangSrd(), name: "Ìsulas Cayman"),
+  TranslatedName(LangXho(), name: "ECayman Islands"),
 ];

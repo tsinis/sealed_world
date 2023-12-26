@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Haiti country:
+/// Provides 118 translations for a Haiti country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -115,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -304,4 +305,5 @@ const htiCountryTranslations = [
   TranslatedName(LangTgl(), name: "Hayti"),
   TranslatedName(LangVol(), name: "Haitiyän"),
   TranslatedName(LangWln(), name: "Ayiti"),
+  TranslatedName(LangXho(), name: "EHaiti"),
 ];

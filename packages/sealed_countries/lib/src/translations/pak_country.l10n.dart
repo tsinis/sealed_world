@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Pakistan country:
+/// Provides 118 translations for a Pakistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -87,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -113,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -321,4 +323,6 @@ const pakCountryTranslations = [
   TranslatedName(LangSsw(), name: "IPhakhistani"),
   TranslatedName(LangTuk(), name: "Päkistan"),
   TranslatedName(LangVol(), name: "Pakistän"),
+  TranslatedName(LangSrd(), name: "Pàkistan"),
+  TranslatedName(LangXho(), name: "EPakistan"),
 ];

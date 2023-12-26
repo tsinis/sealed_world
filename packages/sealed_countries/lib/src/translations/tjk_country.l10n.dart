@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Tajikistan country:
+/// Provides 139 translations for a Tajikistan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -83,6 +83,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
@@ -103,6 +104,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -132,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -364,4 +367,7 @@ const tjkCountryTranslations = [
   TranslatedName(LangTgl(), name: "Tayikistan"),
   TranslatedName(LangVol(), name: "Tacikistän"),
   TranslatedName(LangYid(), name: "טאדזשיקיסטאן"),
+  TranslatedName(LangMri(), name: "Takiritānga"),
+  TranslatedName(LangSrd(), name: "Tagìkistan"),
+  TranslatedName(LangXho(), name: "ETajikistan"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 129 translations for a Saint Vincent and the Grenadines country:
+/// Provides 135 translations for a Saint Vincent and the Grenadines country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -48,6 +49,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -77,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -93,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -103,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -121,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const vctCountryTranslations = [
@@ -393,4 +399,10 @@ const vctCountryTranslations = [
   TranslatedName(LangZul(), name: "i-Saint Vincent ne-Grenadines"),
   TranslatedName(LangLim(), name: "Saint-Vincent"),
   TranslatedName(LangVol(), name: "Saluda-Vinsenteän e Grenadineäns"),
+  TranslatedName(LangChv(), name: "Сент-Винсент тата Гренадины"),
+  TranslatedName(LangIbo(), name: "Vincent na Grenadines Dị nsọ"),
+  TranslatedName(LangMri(), name: "Hato Wēneti me Keretīni"),
+  TranslatedName(LangSrd(), name: "Santu Vissente e sas Grenadinas"),
+  TranslatedName(LangTgl(), name: "St. Vincent & Grenadines"),
+  TranslatedName(LangXho(), name: "ESt. Vincent & Grenadines"),
 ];

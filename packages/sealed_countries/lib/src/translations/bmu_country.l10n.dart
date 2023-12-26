@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Bermuda country:
+/// Provides 105 translations for a Bermuda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Akan
@@ -22,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -63,6 +64,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Occitan
@@ -75,6 +77,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -97,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -210,4 +214,8 @@ const bmuCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílɛ́ède Bémúdà", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Bermuda"),
   TranslatedName(LangOci(), name: "Bermudas"),
+  TranslatedName(LangChv(), name: "Бермуд утравӗсем"),
+  TranslatedName(LangMri(), name: "Pāmura"),
+  TranslatedName(LangSrd(), name: "Bermudas"),
+  TranslatedName(LangXho(), name: "EBermuda"),
 ];

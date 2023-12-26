@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 94 translations for a Mayotte country:
+/// Provides 97 translations for a Mayotte country:
 /// - (Eastern) Punjabi
 /// - Akan
 /// - Albanian
@@ -20,6 +20,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Burmese
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Dutch
@@ -58,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Oriya
 /// - Pashto (Pushto)
@@ -88,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -242,4 +245,7 @@ const mytCountryTranslations = [
   TranslatedName(LangYor(), name: "Orílẹ́ède Mayote"),
   TranslatedName(LangYor(), name: "Orílɛ́ède Mayote", countryCode: "BJ"),
   TranslatedName(LangZul(), name: "i-Mayotte"),
+  TranslatedName(LangChv(), name: "Майотта"),
+  TranslatedName(LangMri(), name: "Māiota"),
+  TranslatedName(LangXho(), name: "EMayotte"),
 ];

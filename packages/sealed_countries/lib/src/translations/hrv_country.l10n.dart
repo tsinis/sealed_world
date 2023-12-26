@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Croatia country:
+/// Provides 153 translations for a Croatia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -28,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
@@ -144,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -392,4 +394,6 @@ const hrvCountryTranslations = [
   TranslatedName(LangVol(), name: "Kroasän"),
   TranslatedName(LangWln(), name: "Crowaceye"),
   TranslatedName(LangZha(), name: "Gwzlozdiya"),
+  TranslatedName(LangChv(), name: "Хорвати"),
+  TranslatedName(LangXho(), name: "ECroatia"),
 ];

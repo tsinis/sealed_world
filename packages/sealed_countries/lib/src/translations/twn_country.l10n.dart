@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Taiwan country:
+/// Provides 125 translations for a Taiwan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -88,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -117,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -329,4 +331,6 @@ const twnCountryTranslations = [
   TranslatedName(LangVol(), name: "Tayvän"),
   TranslatedName(LangYid(), name: "טייוואַן"),
   TranslatedName(LangZha(), name: "Daizvanh"),
+  TranslatedName(LangSrd(), name: "Taiwàn"),
+  TranslatedName(LangXho(), name: "ETaiwan"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a British Virgin Islands country:
+/// Provides 130 translations for a British Virgin Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -50,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -61,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latin
@@ -76,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
@@ -91,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -118,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const vgbCountryTranslations = [
@@ -372,4 +378,10 @@ const vgbCountryTranslations = [
   ),
   TranslatedName(LangZul(), name: "i-British Virgin Islands"),
   TranslatedName(LangLat(), name: "Britannicae Virginis Insulae"),
+  TranslatedName(LangChv(), name: "Британин Виргини утравӗсем"),
+  TranslatedName(LangIna(), name: "Insulas Virgine britannic"),
+  TranslatedName(LangKur(), name: "Giravên Vîrjînê yên Brîtanyayê"),
+  TranslatedName(LangMri(), name: "Ngā Moutere Puhi Piritene"),
+  TranslatedName(LangSrd(), name: "Ìsulas Vèrgines Britànnicas"),
+  TranslatedName(LangXho(), name: "EBritish Virgin Islands"),
 ];

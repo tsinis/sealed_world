@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Trinidad and Tobago country:
+/// Provides 133 translations for a Trinidad and Tobago country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -24,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -33,6 +34,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -47,6 +49,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Irish
@@ -76,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
@@ -92,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -102,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -120,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -354,4 +361,11 @@ const ttoCountryTranslations = [
   TranslatedName(LangZul(), name: "i-Trinidad ne-Tobago"),
   TranslatedName(LangLat(), name: "Trinitas et Tabacum"),
   TranslatedName(LangVol(), name: "Trinidadeän e Tobageäns"),
+  TranslatedName(LangChv(), name: "Тринидад тата Тобаго"),
+  TranslatedName(LangFao(), name: "Trinidad & Tobago"),
+  TranslatedName(LangIbo(), name: "Trinidad na Tobago"),
+  TranslatedName(LangMri(), name: "Tirinaki Tōpako"),
+  TranslatedName(LangSrd(), name: "Trinidad e Tobago"),
+  TranslatedName(LangTgl(), name: "Trinidad & Tobago"),
+  TranslatedName(LangXho(), name: "ETrinidad & Tobago"),
 ];

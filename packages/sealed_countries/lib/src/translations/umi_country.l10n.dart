@@ -2,7 +2,8 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a United States Minor Outlying Islands country
+/// Provides 120 translations for a United States Minor Outlying Islands
+/// country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -22,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Catalan
 /// - Chechen
 /// - Chinese
+/// - Chuvash
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -34,17 +36,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -54,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kazakh
 /// - Khmer
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
@@ -65,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Norwegian
 /// - Norwegian Bokmål
@@ -78,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -87,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -104,6 +113,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
+/// - Yoruba
 /// - Zulu.
 const umiCountryTranslations = [
   CountryName(
@@ -354,4 +365,14 @@ const umiCountryTranslations = [
   TranslatedName(LangVie(), name: "Các tiểu đảo xa của Hoa Kỳ"),
   TranslatedName(LangWol(), name: "Duni Amerig Utar meer"),
   TranslatedName(LangZul(), name: "I-U.S. Outlying Islands"),
+  TranslatedName(LangChv(), name: "Тулашӗнчи утравӗсем (АПШ)"),
+  TranslatedName(LangFul(), name: "𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤁𞤢𞥄𞤴𞤭𞥅𞤯𞤫 𞤁𞤂𞤀"),
+  TranslatedName(LangHau(), name: "Rukunin Tsibirin U.S"),
+  TranslatedName(LangIna(), name: "Insulas peripheric del SUA"),
+  TranslatedName(LangKur(), name: "Giravên Biçûk ên Derveyî DYAyê"),
+  TranslatedName(LangMri(), name: "Ngā Moutere Amerika o Waho"),
+  TranslatedName(LangSrd(), name: "Ìsulas perifèricas de sos Istados Unidos"),
+  TranslatedName(LangTgl(), name: "U.S. Outlying Islands"),
+  TranslatedName(LangXho(), name: "I-U.S. Outlying Islands"),
+  TranslatedName(LangYor(), name: "Àwọn Erékùsù Kékèké Agbègbè US"),
 ];

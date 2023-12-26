@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 166 translations for a United Kingdom country:
+/// Provides 167 translations for a United Kingdom country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -157,6 +157,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -428,4 +429,5 @@ const gbrCountryTranslations = [
   TranslatedName(LangVol(), name: "Regän Pebalöl"),
   TranslatedName(LangWln(), name: "Rweyåme-Uni"),
   TranslatedName(LangZha(), name: "Yinghgoz"),
+  TranslatedName(LangXho(), name: "E-United Kingdom"),
 ];

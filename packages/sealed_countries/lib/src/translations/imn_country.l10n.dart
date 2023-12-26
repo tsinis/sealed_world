@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Isle of Man country:
+/// Provides 125 translations for a Isle of Man country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -37,11 +37,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Faroese
 /// - Finnish
 /// - French
+/// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
@@ -88,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Romanian
 /// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -117,6 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yoruba
 /// - Zulu.
 const imnCountryTranslations = [
@@ -301,4 +305,8 @@ const imnCountryTranslations = [
   TranslatedName(LangTgl(), name: "Pulo ng Man"),
   TranslatedName(LangVol(), name: "Mäneän"),
   TranslatedName(LangYor(), name: "Erékùṣù ilẹ̀ Man"),
+  TranslatedName(LangFul(), name: "𞤅𞤵𞤪𞤭𞥅𞤪𞤫 𞤃𞤫𞥅𞤲"),
+  TranslatedName(LangHau(), name: "Isle na Mutum"),
+  TranslatedName(LangSrd(), name: "Ìsula de Man"),
+  TranslatedName(LangXho(), name: "E-Isle of Man"),
 ];

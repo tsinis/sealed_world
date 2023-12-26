@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 156 translations for a Poland country:
+/// Provides 157 translations for a Poland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -151,6 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -391,4 +392,5 @@ const polCountryTranslations = [
   TranslatedName(LangTgl(), name: "Polonya"),
   TranslatedName(LangVol(), name: "Polän"),
   TranslatedName(LangWln(), name: "Pologne"),
+  TranslatedName(LangXho(), name: "EPoland"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Sweden country:
+/// Provides 152 translations for a Sweden country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -147,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -378,4 +379,5 @@ const sweCountryTranslations = [
   TranslatedName(LangTgl(), name: "Suwesya"),
   TranslatedName(LangVol(), name: "Svedän"),
   TranslatedName(LangWln(), name: "Suwedwesse"),
+  TranslatedName(LangXho(), name: "ESweden"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 161 translations for a France country:
+/// Provides 162 translations for a France country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -155,6 +155,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -401,4 +402,5 @@ const fraCountryTranslations = [
   TranslatedName(LangTah(), name: "Farāni"),
   TranslatedName(LangVol(), name: "Fransän"),
   TranslatedName(LangZha(), name: "Fazgoz"),
+  TranslatedName(LangXho(), name: "EFrance"),
 ];

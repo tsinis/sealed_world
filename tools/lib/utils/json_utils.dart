@@ -36,9 +36,9 @@ final class JsonUtils {
       final itemFromCode = _instanceFromCode(item.code);
       if (itemFromCode == null) continue; // Might be more items in the source.
       print("\nExtracting translations for: ${itemFromCode.name}\n");
-      final english = englishData[itemFromCode];
+      final english = englishData[itemFromCode] ?? item.translation(eng).name;
       final translations = package.translations(item.code).toSet();
-      if (english != null && translations.isEmpty)
+      if (translations.isEmpty)
         translations.add(TranslatedName(eng, name: english));
       for (final dir in directories) {
         final dirName = basename(dir.path);
@@ -157,13 +157,14 @@ const ${varFileName.toCamelCase()} = [
   }
 
   String _dartDoc(Set<TranslatedName> translations, Object name, String type) {
+    final itemName = name is TranslatedName ? name.common : name.toString();
     final sorted = List.of(translations.map((e) => e.language.name))..sort();
     final import = package.whenConstOrNull(sealedCountries: package.dirName) ??
         Package.sealedLanguages.dirName;
 
     final buffer = StringBuffer('import "package:$import/$import.dart";\n')
       ..write(
-        "/// Provides ${translations.length} $translation for a $name $type:",
+        "/// Provides ${translations.length} $translation for a $itemName $type:",
       );
     for (final name in Set.unmodifiable(sorted)) buffer.write("\n /// - $name");
 

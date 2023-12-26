@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Malaysia country:
+/// Provides 138 translations for a Malaysia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -101,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -130,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zhuang (Chuang)
@@ -275,4 +277,6 @@ const mysCountryTranslations = [
   TranslatedName(LangTgl(), name: "Malasya"),
   TranslatedName(LangVol(), name: "Malaysiyän"),
   TranslatedName(LangZha(), name: "Majlaizsihya"),
+  TranslatedName(LangSrd(), name: "Malèsia"),
+  TranslatedName(LangXho(), name: "EMalaysia"),
 ];

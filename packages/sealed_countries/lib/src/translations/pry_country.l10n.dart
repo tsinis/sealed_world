@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Paraguay country:
+/// Provides 126 translations for a Paraguay country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -64,6 +64,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
+/// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latin
@@ -78,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
 /// - Occitan
 /// - Oriya
@@ -91,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -117,6 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -335,4 +339,8 @@ const pryCountryTranslations = [
   TranslatedName(LangKin(), name: "Paragwe"),
   TranslatedName(LangSan(), name: "पेरेग्वाय"),
   TranslatedName(LangVol(), name: "Paragvän"),
+  TranslatedName(LangKur(), name: "Paragûay"),
+  TranslatedName(LangMri(), name: "Parakai"),
+  TranslatedName(LangSrd(), name: "Paraguày"),
+  TranslatedName(LangXho(), name: "EParaguay"),
 ];

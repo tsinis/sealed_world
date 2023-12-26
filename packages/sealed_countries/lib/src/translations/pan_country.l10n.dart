@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 94 translations for a Panama country:
+/// Provides 96 translations for a Panama country:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -69,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Quechua
 /// - Russian
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -93,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Wolof
+/// - Xhosa
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -275,4 +277,6 @@ const panCountryTranslations = [
   TranslatedName(LangSsw(), name: "IPhanama"),
   TranslatedName(LangVol(), name: "Panamän"),
   TranslatedName(LangWol(), name: "Panamaa"),
+  TranslatedName(LangSrd(), name: "Pànama"),
+  TranslatedName(LangXho(), name: "EPanama"),
 ];
