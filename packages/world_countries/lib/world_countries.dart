@@ -13,7 +13,6 @@ export "src/extensions/locale_translated_extension.dart";
 export "src/extensions/natural_language_extension.dart";
 export "src/extensions/world_country_extension.dart";
 export "src/generated/fonts.gen.dart";
-export "src/helpers/deprecated_translated_name_extension.dart";
 export "src/helpers/functional_platform.dart";
 export "src/helpers/name_text_input.dart";
 export "src/helpers/typed_locale_delegate.dart";
