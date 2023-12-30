@@ -24,7 +24,6 @@ void main() => group("$PhoneCodePicker", () {
         "scroll from first to last item and tap",
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
-          // ignore: deprecated_member_use_from_same_package, for test.
           (item) => item.namesNative.first.common,
         ),
       );
