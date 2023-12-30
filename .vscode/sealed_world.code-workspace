@@ -29,6 +29,7 @@
   "settings": {
     "search.exclude": {
       "**/.git": true,
+      "**/.fvm": true,
       "coverage/**": true,
       "**/coverage/*": true,
       "**/*.g.dart": true,
