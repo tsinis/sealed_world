@@ -16,4 +16,12 @@ void main() => group("$MaybeText", () {
         expect(find.byType(RichText), findsOneWidget);
         expect(find.text("Text"), findsOneWidget);
       });
+
+      testWidgets("renders with identifiable constructor", (tester) async {
+        await tester
+            .pumpWidget(MaterialApp(home: MaybeText.identifiable("Text")));
+        expect(find.byType(MaybeText), findsOneWidget);
+        expect(find.byType(RichText), findsOneWidget);
+        expect(find.text("Text"), findsOneWidget);
+      });
     });

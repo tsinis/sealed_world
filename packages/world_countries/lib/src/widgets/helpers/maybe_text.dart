@@ -1,4 +1,4 @@
-import "package:flutter/widgets.dart" show Text, TextSpan;
+import "package:flutter/widgets.dart" show Key, Text, TextSpan, ValueKey;
 
 /// A text widget that displays a string of text with an optional null safety
 /// check.
@@ -54,4 +54,41 @@ class MaybeText extends Text {
     super.textHeightBehavior,
     super.selectionColor,
   }) : super.rich(TextSpan(text: text));
+
+  /// Identifiable constructor for the [MaybeText] class.
+  ///
+  /// Creates a [MaybeText] with a key identifier. This ensures that the
+  /// widget will always have a different key than the one with a `null` value.
+  /// Typically used with animated parents.
+  ///
+  /// If [key] is not provided, a null-check key will be calculated and used.
+  ///
+  /// Example:
+  ///
+  /// ```
+  /// AnimatedSwitcher(
+  ///  duration: const Duration(milliseconds: 800),
+  ///  child: MaybeText.identifiable(nullableValue),
+  /// ),
+  /// ```
+  MaybeText.identifiable(
+    String? text, {
+    Key? key,
+    super.style,
+    super.strutStyle,
+    super.textAlign,
+    super.textDirection,
+    super.locale,
+    super.softWrap,
+    super.overflow,
+    super.textScaler,
+    super.maxLines,
+    super.semanticsLabel,
+    super.textWidthBasis,
+    super.textHeightBehavior,
+    super.selectionColor,
+  }) : super.rich(
+          TextSpan(text: text),
+          key: key ?? ValueKey<String?>(text),
+        );
 }
