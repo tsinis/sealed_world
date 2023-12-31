@@ -33,6 +33,17 @@ class TypedLocale<CountryType extends Object> extends Locale {
   /// The [country] and [script] parameters are optional.
   const TypedLocale(this.language, {this.country, this.script}) : super(" ");
 
+  /// Creates an instance of [TypedLocale] from subtags.
+  ///
+  /// The [language] parameter is required.
+  /// The [country] and [script] parameters are optional.
+  TypedLocale.fromSubtags({required this.language, this.country, this.script})
+      : super.fromSubtags(
+          languageCode: language.codeShort.toLowerCase(),
+          scriptCode: script?.code,
+          countryCode: country?.toString().trim().toUpperCase(),
+        );
+
   /// The [NaturalLanguage] representing the language of the locale.
   final NaturalLanguage language;
 

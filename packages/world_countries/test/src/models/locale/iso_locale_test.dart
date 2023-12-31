@@ -14,6 +14,10 @@ void main() => group("$IsoLocale", () {
         test("should compare regular $Locale object with $IsoLocale", () {
           expect(const IsoLocale(english, country: country), locale);
           expect(
+            IsoLocale.fromSubtags(language: english, country: country),
+            locale,
+          );
+          expect(
             const IsoLocale(english, country: country),
             isNot(Locale(locale.languageCode)),
           );
@@ -23,6 +27,17 @@ void main() => group("$IsoLocale", () {
           expect(
             const IsoLocale(english, country: country),
             TypedLocale(english, country: locale.countryCode),
+          );
+          expect(
+            IsoLocale.fromSubtags(language: english, country: country),
+            TypedLocale(english, country: locale.countryCode),
+          );
+          expect(
+            IsoLocale.fromSubtags(language: english, country: country),
+            TypedLocale.fromSubtags(
+              language: english,
+              country: locale.countryCode,
+            ),
           );
           expect(
             const IsoLocale(english, country: country),

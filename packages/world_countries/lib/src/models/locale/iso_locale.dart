@@ -31,6 +31,13 @@ final class IsoLocale extends TypedLocale<WorldCountry> {
   /// The [country] and [script] parameters are optional.
   const IsoLocale(super.language, {super.country, super.script});
 
+  /// Creates an instance of [IsoLocale] from subtags.
+  ///
+  /// The [language] parameter is required.
+  /// The [country] and [script] parameters are optional.
+  IsoLocale.fromSubtags({required super.language, super.country, super.script})
+      : super.fromSubtags();
+
   @override
   String? get countryCode => country?.codeShort;
 }
