@@ -87,8 +87,5 @@ class MaybeText extends Text {
     super.textWidthBasis,
     super.textHeightBehavior,
     super.selectionColor,
-  }) : super.rich(
-          TextSpan(text: text),
-          key: key ?? ValueKey<String?>(text),
-        );
+  }) : super.rich(TextSpan(text: text), key: key ?? ValueKey<String?>(text));
 }

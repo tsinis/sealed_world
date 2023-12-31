@@ -2,6 +2,7 @@ import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../extensions/locale_extension.dart";
+import "../models/locale/iso_locale.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";
 
@@ -36,7 +37,35 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// The [fallbackLanguage] parameter is optional. If provided, it sets the
   /// fallback language. The [localeMapResolution] parameter is optional. If
   /// provided, it sets the resolution strategy for the locale map.
-  const TypedLocaleDelegate({this.fallbackLanguage, this.localeMapResolution});
+  const TypedLocaleDelegate({
+    this.fallbackLanguage,
+    this.localeMapResolution = defaultLocaleMapResolution,
+  });
+
+  /// A constant list of [LocaleEntry] objects that define the default
+  /// resolution for locale mapping.
+  ///
+  /// Each [LocaleEntry] in the list maps a [Locale] to an [TypedLocale]. This
+  /// mapping is used to resolve the language and country of a [Locale] to the
+  /// corresponding language and country.
+  ///
+  /// The current mappings are:
+  /// * Filipino (Pilipino) to Tagalog. Tagalog is the foundation of Filipino.
+  ///   More details can be found
+  ///   [here](https://en.wikipedia.org/wiki/Tagalog_language).
+  /// * Swiss German Alemannic Alsatian to German (Switzerland).
+  /// * Bosnian (written in the Cyrillic script) to Serbian.
+  ///
+  /// These mappings are used as the default resolution when no other locale
+  /// mapping is provided.
+  static const List<LocaleEntry> defaultLocaleMapResolution = [
+    LocaleEntry(Locale("fil"), IsoLocale(LangTgl())),
+    LocaleEntry(Locale("gsw"), IsoLocale(LangDeu(), country: CountryChe())),
+    LocaleEntry(
+      Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
+      IsoLocale(LangSrp()),
+    ),
+  ];
 
   /// The fallback language to be used if the locale cannot be converted to
   /// [TypedLocale] instance.
