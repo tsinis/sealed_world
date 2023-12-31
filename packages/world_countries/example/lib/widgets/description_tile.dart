@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:world_countries/world_countries.dart";
+import "package:world_countries/helpers.dart";
 
 class DescriptionTile extends StatelessWidget {
   DescriptionTile(

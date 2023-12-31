@@ -5,6 +5,8 @@ import "package:world_countries/world_countries.dart";
 import "../../model/constants.dart";
 import "../../model/world_data.dart";
 
+export "package:world_countries/helpers.dart";
+
 abstract base class WorldDataTab<T extends IsoTranslated>
     extends StatelessWidget {
   WorldDataTab(

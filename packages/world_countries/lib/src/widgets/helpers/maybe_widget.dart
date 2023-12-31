@@ -67,6 +67,9 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   final T? value;
 
   @override
-  // ignore: avoid-non-null-assertion, value is not getter, class is immutable.
-  Widget build(BuildContext context) => value == null ? orElse : _map(value!);
+  Widget build(BuildContext context) {
+    final valueToMap = value;
+
+    return valueToMap == null ? orElse : _map(valueToMap);
+  }
 }
