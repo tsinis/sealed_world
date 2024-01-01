@@ -23,6 +23,7 @@ BREAKING CHANGES
 - Replaced old `FiatCurrency.list` with a new `FiatCurrency.listExtended`.
 - Removed `FiatCurrency.regularList` (please use `FiatCurrency.list` instead).
 - Marked Croatian Kuna as `Deprecated` (currencies).
+- Bump min. Flutter SDK version to 3.16.0.
 - Moved helpers of world_country package to separate library: `BuildContextExtension`, `FunctionalPlatform`, `NameTextInput`, `MaybeText`, `ClearButton` and `UiConstants`. To migrate just use IDE suggestions or manually replace old references:
 
 ```dart
