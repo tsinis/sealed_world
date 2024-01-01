@@ -4,7 +4,7 @@ import "../helpers/functional_platform.dart";
 import "../models/emoji_family.dart";
 
 /// Extension methods for [EmojiFamily].
-extension EmojiFamilyExtension on EmojiFamily {
+extension FlutterEmojiFamilyExtension on EmojiFamily {
   /// The package name for the emoji family.
   String get packageName => PackageConstants.name;
 

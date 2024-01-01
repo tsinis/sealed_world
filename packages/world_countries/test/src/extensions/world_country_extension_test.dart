@@ -49,17 +49,29 @@ void main() => group("WorldCountryExtension ", () {
 
         test(
           "should return correct $IsoLocale instance with all properties",
-          () => expect(
-            value.toIsoLocale(
+          () {
+            final convertedLocale = value.toIsoLocale(
               language: NaturalLanguage.list.first,
               script: Script.list.first,
-            ),
-            IsoLocale(
-              NaturalLanguage.list.first,
-              country: value,
-              script: Script.list.first,
-            ),
-          ),
+            );
+            expect(
+              convertedLocale,
+              IsoLocale(
+                NaturalLanguage.list.first,
+                country: value,
+                script: Script.list.first,
+              ),
+            );
+
+            expect(
+              convertedLocale,
+              TypedLocale.fromSubtags(
+                language: NaturalLanguage.list.first,
+                country: value.codeShort,
+                script: Script.list.first,
+              ),
+            );
+          },
         );
       });
     });

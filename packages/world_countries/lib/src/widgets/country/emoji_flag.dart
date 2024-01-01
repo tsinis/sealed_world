@@ -3,7 +3,7 @@ import "package:sealed_countries/sealed_countries.dart";
 
 import "../../constants/package_constants.dart";
 import "../../constants/ui_constants.dart";
-import "../../extensions/emoji_family_extension.dart";
+import "../../extensions/flutter_emoji_family_extension.dart";
 import "../../models/emoji_family.dart";
 
 // ignore: format-comment, false positive.

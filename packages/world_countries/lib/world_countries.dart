@@ -6,6 +6,7 @@ export "package:sealed_countries/country_translations.dart";
 export "package:sealed_countries/sealed_countries.dart";
 
 export "src/constants/package_constants.dart";
+export "src/extensions/flutter_emoji_family_extension.dart";
 export "src/extensions/locale_extension.dart";
 export "src/extensions/locale_translated_extension.dart";
 export "src/extensions/natural_language_extension.dart";
