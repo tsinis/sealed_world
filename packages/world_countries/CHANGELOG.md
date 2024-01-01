@@ -9,7 +9,6 @@ NEW FEATURES
 - Currencies translations now support all GlobalMaterialLocalizations and GlobalCupertinoLocalizations locales.
 - Updated LICENSE.
 
-- Added new widget called `MaybeText` which works same way as `Text` but accepts nullable String input.
 - Added CLI tool for removing unused emoji font families on the Web platform `dart run world_countries:clean_build [--keep twemoji,notoemoji,openmoji]`
 - Added `fromSubtags` constructors for `IsoLocale` and `TypedLocale` classes.
 - Added `defaultLocaleMapResolution` for a `TypedLocaleDelegate` that maps:
@@ -23,8 +22,7 @@ BREAKING CHANGES
 - Replaced old `FiatCurrency.list` with a new `FiatCurrency.listExtended`.
 - Removed `FiatCurrency.regularList` (please use `FiatCurrency.list` instead).
 - Marked Croatian Kuna as `Deprecated` (currencies).
-- Bump min. Flutter SDK version to 3.16.0.
-- Moved helpers of world_country package to separate library: `BuildContextExtension`, `FunctionalPlatform`, `NameTextInput`, `MaybeText`, `ClearButton` and `UiConstants`. To migrate just use IDE suggestions or manually replace old references:
+- Moved helpers of world_country package to separate library: `BuildContextExtension`, `FunctionalPlatform`, `NameTextInput`, `ClearButton` and `UiConstants`. To migrate just use IDE suggestions or manually replace old references:
 
 ```dart
 import "package:world_countries/world_countries.dart";

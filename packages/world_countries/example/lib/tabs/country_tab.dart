@@ -30,11 +30,14 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
               style: context.theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
-            MaybeText(
+            MaybeWidget(
               data.translation(const LangEng()).fullName,
-              style: context.theme.textTheme.titleMedium
-                  ?.copyWith(fontWeight: FontWeight.w200),
-              textAlign: TextAlign.center,
+              (fullName) => Text(
+                fullName,
+                style: context.theme.textTheme.titleMedium
+                    ?.copyWith(fontWeight: FontWeight.w200),
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
