@@ -37,7 +37,7 @@ Or you can just create your own pickers by extending `BasicPicker`.
 
 ### Demo
 
-To preview the demo from the example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **119** or higher). Please allow up 15 seconds for initial fonts and data caching.
+To preview the demo from the example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **119** or higher). Please allow up 10 seconds for initial fonts and data caching.
 
 > Note: Please keep in mind that demo was build with Flutter WASM which is in very early alpha stage, so performance might be affected.
 
@@ -230,6 +230,16 @@ Answer: Android OS [supports](https://developer.android.com/about/versions/13/fe
 #### My flags on web platform are grey (not colored)
 
 Answer: Please add `useColorEmoji: true` parameter to your `engineInitializer.initializeEngine` method ([index.html](https://github.com/flutter/flutter/issues/119536#issuecomment-1546247494)).
+
+#### Looks like tree shaking of unused emoji flags is not working on web
+
+Answer: Yes it's know Flutter's [issue](https://github.com/flutter/flutter/issues/64106). Although all font families together are not that big, every single KB might be crucial for a web-page loading times. Run this from your project's root directory:
+
+```shell
+dart run world_countries:clean_build [--keep twemoji,notoemoji,openmoji]
+```
+
+You can specify which emoji family you want to keep with the optional `--keep` parameter.
 
 #### I don't like default tiles UI in the pickers
 

@@ -1,3 +1,40 @@
+## 1.0.0
+
+🎉 First anniversary and first stable release!
+
+NEW FEATURES
+
+- Added new getter for `TranslatedName` name called `common`, which might be useful in some cases when `name` is being used by a parent class.
+- Added a lot of translations from the Symfony.
+- Currencies translations now support all GlobalMaterialLocalizations and GlobalCupertinoLocalizations locales.
+- Updated LICENSE.
+
+- Added new widget called `MaybeText` which works same way as `Text` but accepts nullable String input.
+- Added CLI tool for removing unused emoji font families on the Web platform `dart run world_countries:clean_build [--keep twemoji,notoemoji,openmoji]`
+- Added `fromSubtags` constructors for `IsoLocale` and `TypedLocale` classes.
+- Added `defaultLocaleMapResolution` for a `TypedLocaleDelegate` that maps:
+  - `fil` Filipino (Pilipino) to `tl` Tagalog.
+  - `gsw` Swiss German Alemannic Alsatian to `de_CH` German (Switzerland).
+  - `bs_Cyrl` Bosnian (written in the Cyrillic script) to `sr` Serbian.
+
+BREAKING CHANGES
+
+- Removed code marked as `Deprecated` in previous releases.
+- Replaced old `FiatCurrency.list` with a new `FiatCurrency.listExtended`.
+- Removed `FiatCurrency.regularList` (please use `FiatCurrency.list` instead).
+- Marked Croatian Kuna as `Deprecated` (currencies).
+- Moved helpers of world_country package to separate library: `BuildContextExtension`, `FunctionalPlatform`, `NameTextInput`, `MaybeText`, `ClearButton` and `UiConstants`. To migrate just use IDE suggestions or manually replace old references:
+
+```dart
+import "package:world_countries/world_countries.dart";
+```
+
+to a new one:
+
+```dart
+import "package:world_countries/helpers.dart";
+```
+
 ## 0.9.0
 
 NEW FEATURES
