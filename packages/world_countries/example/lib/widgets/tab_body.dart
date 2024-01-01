@@ -1,7 +1,7 @@
 import "dart:ui";
 
 import "package:flutter/material.dart";
-import "package:world_countries/world_countries.dart";
+import "package:world_countries/helpers.dart";
 
 import "../widgets/description_tile.dart";
 

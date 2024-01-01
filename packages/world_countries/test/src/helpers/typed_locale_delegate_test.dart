@@ -19,9 +19,17 @@ void main() => group("$TypedLocaleDelegate", () {
         );
 
         test(
+          "should map default resolution locale",
+          () async => expect(
+            await delegate.load(const Locale("gsw")),
+            const IsoLocale(LangDeu(), country: CountryChe()),
+          ),
+        );
+
+        test(
           "throws assertion error on unsupported locale",
           () async => expect(
-            () async => delegate.load(const Locale("gsw")),
+            () async => delegate.load(const Locale("00")),
             throwsAssertionError,
           ),
         );
@@ -33,7 +41,7 @@ void main() => group("$TypedLocaleDelegate", () {
                 TypedLocaleDelegate(fallbackLanguage: english);
             expect(fallbackDelegate.toString(), contains(english.name));
             expect(
-              await fallbackDelegate.load(const Locale("gsw")),
+              await fallbackDelegate.load(const Locale("00")),
               const IsoLocale(english),
             );
           },

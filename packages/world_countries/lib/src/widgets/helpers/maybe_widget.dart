@@ -32,12 +32,13 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Creates a [MaybeWidget] with a key identifier. This ensures that the
   /// widget will always have a different key than the one with a `null` value.
+  /// Typically used with animated parents.
   ///
   /// * [value] is the value to check for null.
   /// * [_map] is the builder function to call with a non-null [value].
   /// * [orElse] is the widget to display if [value] is null.
   /// * [key] is the key for the widget.
-  /// If [key] is not provided, a unique key will be calculated and used.
+  /// If [key] is not provided, a null-check key will be calculated and used.
   ///
   /// Example:
   ///
@@ -67,6 +68,9 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   final T? value;
 
   @override
-  // ignore: avoid-non-null-assertion, value is not getter, class is immutable.
-  Widget build(BuildContext context) => value == null ? orElse : _map(value!);
+  Widget build(BuildContext context) {
+    final valueToMap = value;
+
+    return valueToMap == null ? orElse : _map(valueToMap);
+  }
 }

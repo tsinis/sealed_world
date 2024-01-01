@@ -1,10 +1,8 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:sealed_countries/sealed_countries.dart";
-import "package:world_countries/src/extensions/world_country_extension.dart";
+import "package:world_countries/world_countries.dart";
 
 void main() => group("WorldCountryExtension ", () {
-      const defaultLangCode = "und";
       final value = WorldCountry.list.first;
 
       group("toLocale", () {
@@ -12,7 +10,10 @@ void main() => group("WorldCountryExtension ", () {
           "should return correct $Locale instance with codeShort",
           () => expect(
             value.toLocale(),
-            Locale(defaultLangCode, value.codeShort),
+            Locale(
+              value.languages.first.codeShort.toLowerCase(),
+              value.codeShort,
+            ),
           ),
         );
 
@@ -27,6 +28,47 @@ void main() => group("WorldCountryExtension ", () {
                 languageCode: language.codeShort.toLowerCase(),
                 scriptCode: scriptCode,
                 countryCode: value.codeShort,
+              ),
+            );
+          },
+        );
+      });
+
+      group("toIsoLocale", () {
+        test(
+          "should return correct $IsoLocale instance",
+          () => expect(
+            value.toIsoLocale(),
+            IsoLocale(
+              value.languages.first,
+              country: value,
+              script: value.languages.first.scripts.first,
+            ),
+          ),
+        );
+
+        test(
+          "should return correct $IsoLocale instance with all properties",
+          () {
+            final convertedLocale = value.toIsoLocale(
+              language: NaturalLanguage.list.first,
+              script: Script.list.first,
+            );
+            expect(
+              convertedLocale,
+              IsoLocale(
+                NaturalLanguage.list.first,
+                country: value,
+                script: Script.list.first,
+              ),
+            );
+
+            expect(
+              convertedLocale,
+              TypedLocale.fromSubtags(
+                language: NaturalLanguage.list.first,
+                country: value.codeShort,
+                script: Script.list.first,
               ),
             );
           },

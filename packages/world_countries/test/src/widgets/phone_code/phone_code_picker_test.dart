@@ -1,7 +1,7 @@
 // ignore_for_file: missing-test-assertion
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/helpers/deprecated_translated_name_extension.dart";
+import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/country/country_tile.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
@@ -24,7 +24,6 @@ void main() => group("$PhoneCodePicker", () {
         "scroll from first to last item and tap",
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
-          // ignore: deprecated_member_use_from_same_package, for test.
           (item) => item.namesNative.first.common,
         ),
       );

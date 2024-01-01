@@ -1,33 +1,58 @@
-import "dart:ui";
+import "dart:ui" show Locale;
 
-import "package:sealed_countries/sealed_countries.dart";
+import "../../world_countries.dart";
 
-/// Extension on [WorldCountry] to convert it to a [Locale].
+/// Extension on [WorldCountry] to convert it to a [Locale] classes.
 extension WorldCountryExtension on WorldCountry {
   /// Converts [WorldCountry] to a [Locale].
   ///
   /// The optional [languageCode] parameter specifies the language code for the
-  /// locale. If not provided, it defaults to "und" (undefined). The optional
-  /// [language] parameter specifies a [NaturalLanguage] object representing the
-  /// language of the locale - if provided, it is used instead of languageCode.
-  /// The optional [scriptCode] parameter specifies the script code for the
-  /// locale. Returns a [Locale] object representing the world country with the
-  /// specified language, script, and country codes.
+  /// locale. The optional [language] parameter specifies a [NaturalLanguage]
+  /// object representing the language of the locale. If both not provided
+  /// method will pick the first language in the languages list. The optional
+  /// [scriptCode] parameter specifies the script code for the locale. Returns a
+  /// [Locale] object representing the world country with the specified
+  /// language, script, and country codes.
   ///
   /// Example:
   /// ```dart
-  /// final country = WorldCountry.unitedStates;
-  /// final locale = country.toLocale(languageCode: 'en');
-  /// print(locale); // Prints: en_US
+  /// const country = CountryUsa();
+  /// final locale = country.toLocale(languageCode: 'sk');
+  /// print(locale.languageCode); // Prints: sk
+  /// print(locale.countryCode); // Prints: US
   /// ```
   Locale toLocale({
-    String languageCode = "und",
     NaturalLanguage? language,
+    String? languageCode,
     String? scriptCode,
   }) =>
       Locale.fromSubtags(
-        languageCode: language?.codeShort.toLowerCase() ?? languageCode,
+        languageCode: language?.codeShort.toLowerCase() ??
+            languageCode ??
+            languages.first.codeShort.toLowerCase(),
         scriptCode: scriptCode,
         countryCode: codeShort,
+      );
+
+  /// Converts [WorldCountry] to a [IsoLocale].
+  ///
+  /// The optional [language] parameter specifies a [NaturalLanguage] object
+  /// representing the language of the locale - if not provided method will pick
+  /// first language in the languages list. The optional [script] parameter
+  /// specifies the [Script] object for the locale, otherwise it will use the
+  /// first script from the first language in the languages list.
+  ///
+  /// Example:
+  /// ```dart
+  /// const country = CountryUsa();
+  /// final locale = country.toIsoLocale(language: LangRus());
+  /// print(locale.languageCode); // Prints: ru
+  /// print(locale.countryCode); // Prints: US
+  /// ```
+  IsoLocale toIsoLocale({NaturalLanguage? language, Script? script}) =>
+      IsoLocale(
+        language ?? languages.first,
+        country: this,
+        script: script ?? (language ?? languages.first).scripts.first,
       );
 }

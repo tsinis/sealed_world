@@ -3,9 +3,9 @@ import "dart:ui" show Locale;
 import "package:flutter/foundation.dart" show immutable, required;
 import "package:sealed_countries/sealed_countries.dart";
 
-@immutable
-
 /// A class representing a typed locale with optional country and script.
+/// However it's usually better to use the `IsoLocale` class instead of
+/// this one, in most cases, because ot generic nature of country argument.
 ///
 /// The [TypedLocale] class extends the [Locale] class and adds additional
 /// properties for language, country, and script. It provides a way to associate
@@ -25,12 +25,24 @@ import "package:sealed_countries/sealed_countries.dart";
 ///   script: ScriptLatn(),
 /// );
 /// ```
+@immutable
 class TypedLocale<CountryType extends Object> extends Locale {
   /// Creates an instance of [TypedLocale].
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
   const TypedLocale(this.language, {this.country, this.script}) : super(" ");
+
+  /// Creates an instance of [TypedLocale] from subtags.
+  ///
+  /// The [language] parameter is required.
+  /// The [country] and [script] parameters are optional.
+  TypedLocale.fromSubtags({required this.language, this.country, this.script})
+      : super.fromSubtags(
+          languageCode: language.codeShort.toLowerCase(),
+          scriptCode: script?.code,
+          countryCode: country?.toString().trim().toUpperCase(),
+        );
 
   /// The [NaturalLanguage] representing the language of the locale.
   final NaturalLanguage language;

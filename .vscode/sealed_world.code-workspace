@@ -29,6 +29,7 @@
   "settings": {
     "search.exclude": {
       "**/.git": true,
+      "**/.fvm": true,
       "coverage/**": true,
       "**/coverage/*": true,
       "**/*.g.dart": true,
@@ -62,7 +63,7 @@
     "dart.previewFlutterUiGuides": true,
     "dart.lineLength": 80,
     "[dart]": {
-      "editor.rulers": [81],
+      "editor.rulers": [80],
       "editor.defaultFormatter": "Dart-Code.dart-code",
       "editor.codeActionsOnSave": {
         "source.fixAll": "always",
@@ -73,17 +74,22 @@
     },
     "cSpell.words": [
       "Bhojpuri",
+      "CBDT",
       "Cinis",
       "cioc",
+      "COLR",
       "demonym",
       "demonyms",
       "devcontainers",
       "Fabien",
       "gini",
+      "openmoji",
+      "OTSVG",
       "Potencier",
       "Saša",
       "Stamenković",
       "Symfony",
+      "twemoji",
       "umpirsky"
     ],
     "cSpell.useGitignore": true,
