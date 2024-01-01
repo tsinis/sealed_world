@@ -9,7 +9,7 @@ class BuildCleaner {
   void checkArguments(List<String> keep) {
     final invalidValues = keep.where((arg) => !_fonts.keys.contains(arg));
     if (invalidValues.isNotEmpty) {
-      print('Invalid arguments: ${invalidValues.join(', ')}');
+      print('\nInvalid arguments: ${invalidValues.join(', ')}\n');
 
       return printHelp();
     }
@@ -31,38 +31,41 @@ class BuildCleaner {
     );
     print(
       """
+
 You can specify multiple families to --keep by separating them with commas, for example:
 ... clean_build --keep notoemoji,openmoji
-will only remove Twemoji related font files from the build directory.""",
+will only remove Twemoji related font files from the build directory.
+""",
     );
   }
 
-  void clean([
-    Iterable<EmojiFamily?> familiesToRemove = EmojiFamily.values,
-  ]) {
-    final removing = familiesToRemove.whereType<EmojiFamily>().toSet();
+  void clean([Iterable<EmojiFamily?> familiesToRemove = EmojiFamily.values]) {
+    final list = familiesToRemove.whereType<EmojiFamily>().toSet();
 
-    if (removing.isEmpty) {
+    if (list.isEmpty) {
       print("Nothing to remove!");
 
       return printHelp();
     }
 
     print(
-      """Starting to remove ${removing.length} emoji families ${removing.map((f) => f.projectName)}.""",
+      """${list.length} emoji families to remove ${list.map((f) => f.projectName)}.""",
     );
 
-    removing.forEach(_removeFontDirectory);
+    if (Directory("./build/web_wasm").existsSync()) list.forEach(removeFontDir);
+
+    for (final family in list) {
+      removeFontDir(family, "web");
+    }
   }
 
-  void _removeFontDirectory(EmojiFamily family) {
+  void removeFontDir(EmojiFamily family, [String webDir = "web_wasm"]) {
     // ignore: avoid-substring, no emojis in font family name here.
     final dirName = family.name[0].toUpperCase() + family.name.substring(1);
     final dir = Directory(
-      "./build/web/assets/packages/${PackageConstants.name}/assets/fonts/$dirName",
+      "./build/$webDir/assets/packages/${PackageConstants.name}/assets/fonts/$dirName",
     );
 
-    print("Removing ${family.projectName} font directory: ${dir.path}");
     if (dir.existsSync()) dir.deleteSync(recursive: true);
   }
 }
