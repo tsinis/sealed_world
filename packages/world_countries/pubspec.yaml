@@ -48,6 +48,9 @@ dev_dependencies:
     sdk: flutter
   lints: ^3.0.0 # From Google
 
+executables:
+  clean_build:
+
 flutter:
   assets:
     - lib/assets/
