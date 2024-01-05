@@ -5,6 +5,11 @@ import "package:sealed_languages/src/interfaces/json_encodable.dart";
 import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:test/test.dart";
 
+class _ScriptTest extends Script {
+  const _ScriptTest()
+      : super.permissive(name: "name", code: "", codeNumeric: "", date: "");
+}
+
 void main() => group("$Script", () {
       final value = Script.list.last;
       final array = {value, Script.list.first};
@@ -13,6 +18,17 @@ void main() => group("$Script", () {
         expect(value, isA<IsoStandardized>());
         expect(value, isA<JsonEncodable>());
       });
+
+      test(
+        "permissive constructor",
+        () {
+          expect(
+            () => const _ScriptTest().code,
+            isNot(throwsA(isA<AssertionError>())),
+          );
+          expect(const _ScriptTest().code, isEmpty);
+        },
+      );
 
       group("fields", () {
         for (final element in Script.list) {

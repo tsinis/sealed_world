@@ -9,7 +9,12 @@ import "package:test/test.dart";
 
 class _NaturalLanguageTest extends NaturalLanguage {
   const _NaturalLanguageTest()
-      : super(name: " ", code: "   ", codeShort: "  ", namesNative: const [""]);
+      : super.permissive(
+          name: " ",
+          code: "",
+          codeShort: "",
+          namesNative: const [],
+        );
 }
 
 void main() => group("$NaturalLanguage", () {
@@ -24,6 +29,17 @@ void main() => group("$NaturalLanguage", () {
         expect(value, isA<Named>());
         expect(value, isA<Translated>());
       });
+
+      test(
+        "permissive constructor",
+        () {
+          expect(
+            () => const _NaturalLanguageTest().code,
+            isNot(throwsA(isA<AssertionError>())),
+          );
+          expect(const _NaturalLanguageTest().code, isEmpty);
+        },
+      );
 
       group("fields", () {
         for (final element in NaturalLanguage.list) {

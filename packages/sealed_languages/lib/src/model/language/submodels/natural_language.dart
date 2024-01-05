@@ -5,6 +5,7 @@ class NaturalLanguage extends Language
     implements
         IsoTranslated<TranslatedName, String>,
         JsonEncodable<NaturalLanguage> {
+  /// {@template natural_language_constructor}
   /// Creates a new instance of the [NaturalLanguage] class.
   ///
   /// The [name] parameter is required and should be a non-empty string
@@ -20,6 +21,7 @@ class NaturalLanguage extends Language
   /// language belongs (defaults to the Indo-European family). The optional
   /// [isRightToLeft] parameter specifies whether the language is written
   /// right-to-left (defaults to `false`).
+  /// {@endtemplate}
   const NaturalLanguage({
     required super.name,
     required this.codeShort,
@@ -47,6 +49,39 @@ class NaturalLanguage extends Language
               bibliographicCode.length == IsoStandardized.codeLength,
           """`bibliographicCode` should be exactly ${IsoStandardized.codeLength} characters long!""",
         );
+
+  /// {@template permissive_constructor}
+  /// Creates an instance of the class with relaxed constraints.
+  ///
+  /// This constructor provides a means to instantiate objects while bypassing
+  /// the strict assertions typically enforced by classes adhering to the ISO
+  /// standard. It should be utilized only in scenarios where strict compliance
+  /// with the standard cannot be achieved. Be aware that minimal assertions
+  /// from superclasses may still apply, ensuring basic integrity of the object.
+  ///
+  /// For instances where conformity to the ISO standard is required, prefer
+  /// using the generative constructor to ensure full compatibility.
+  ///
+  /// Usage:
+  /// ```dart
+  /// class MyIsoClassInstance extends IsoClassWithPermissiveConstructor {
+  ///  const MyIsoClassInstance() : super.permissive(name: "Name", code: "123");
+  /// }
+  /// ```
+  /// Note: Employing this constructor may result in behavior that deviates from
+  /// the established ISO specifications and should be approached with caution.
+  /// {@endtemplate}
+  /// {@macro natural_language_constructor}
+  const NaturalLanguage.permissive({
+    required super.name,
+    required this.codeShort,
+    required this.namesNative,
+    required this.code,
+    this.bibliographicCode,
+    this.family = const IndoEuropean(),
+    this.isRightToLeft = false,
+    this.scripts = const {ScriptLatn()},
+  });
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code.
