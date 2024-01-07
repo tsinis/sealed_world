@@ -65,7 +65,7 @@ class NaturalLanguage extends Language
   /// Usage:
   /// ```dart
   /// class MyIsoClassInstance extends IsoClassWithPermissiveConstructor {
-  ///  const MyIsoClassInstance() : super.permissive(name: "Name", code: "123");
+  ///   const MyIsoClassInstance() : super.permissive(name: "Name", code: "1");
   /// }
   /// ```
   /// Note: Employing this constructor may result in behavior that deviates from

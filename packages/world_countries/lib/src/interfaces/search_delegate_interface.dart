@@ -76,7 +76,7 @@ abstract class SearchDelegateInterface<T extends Object>
       resultsBuilder;
 
   /// A boolean indicating whether to show the clear button on the search field.
-  final bool showClearButton;
+  final bool? showClearButton;
 
   /// A boolean indicating whether the search should be case-sensitive.
   @override

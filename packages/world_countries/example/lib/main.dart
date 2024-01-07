@@ -45,9 +45,18 @@ class _MainState extends State<Main> {
         child: MaterialApp.router(
           routeInformationParser: _routeParser,
           routerDelegate: _routerDelegate,
-          theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
-          darkTheme:
-              ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
+          theme: ThemeData(
+            extensions: const [PickerThemeData(reverse: true)],
+            useMaterial3: true,
+            colorScheme: lightColorScheme,
+          ),
+          darkTheme: ThemeData(
+            extensions: const [
+              PickerThemeData(reverse: true),
+            ],
+            useMaterial3: true,
+            colorScheme: darkColorScheme,
+          ),
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,

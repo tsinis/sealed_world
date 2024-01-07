@@ -51,7 +51,7 @@ extension WidgetTesterExtension on WidgetTester {
         ? picker.copyWith(onSelect: (item) => selected = item)
         : picker;
     await pumpWidget(MaterialApp(home: Scaffold(body: testPicker)));
-    if (testPicker.showClearButton) {
+    if (testPicker.showClearButton ?? true) {
       await enterText(find.byType(TextField), "A");
       await testTextInput.receiveAction(TextInputAction.done);
       final clearButton = find.byType(ClearButton);

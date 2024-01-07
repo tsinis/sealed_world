@@ -60,6 +60,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
 
   @override
   Widget defaultBuilder(
+    BuildContext context,
     ItemProperties<FiatCurrency> itemProperties, {
     bool? isDense,
   }) =>

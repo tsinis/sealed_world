@@ -14,47 +14,71 @@ class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
   }
 
   @override
-  Widget build(BuildContext context) => SearchableIndexedListViewBuilder<T>(
-        widget.items,
-        addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
-        addRepaintBoundaries: widget.addRepaintBoundaries,
-        addSemanticIndexes: widget.addSemanticIndexes,
-        cacheExtent: widget.cacheExtent,
-        chosen: widget.chosen,
-        clipBehavior: widget.clipBehavior,
-        crossAxisAlignment: widget.crossAxisAlignment,
-        direction: widget.direction,
-        disabled: widget.disabled,
-        dragStartBehavior: widget.dragStartBehavior,
-        emptyStatePlaceholder: widget.emptyStatePlaceholder,
-        header: widget.showHeader
-            ? AdaptiveSearchTextField(
+  Widget build(BuildContext context) {
+    final theme = context.pickerTheme;
+
+    return SearchableIndexedListViewBuilder<T>(
+      widget.items,
+      addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
+      addRepaintBoundaries:
+          widget.addRepaintBoundaries ?? theme?.addRepaintBoundaries ?? true,
+      addSemanticIndexes:
+          widget.addSemanticIndexes ?? theme?.addSemanticIndexes ?? true,
+      cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
+      chosen: widget.chosen,
+      clipBehavior: widget.clipBehavior ?? theme?.clipBehavior ?? Clip.hardEdge,
+      crossAxisAlignment: widget.crossAxisAlignment ??
+          theme?.crossAxisAlignment ??
+          CrossAxisAlignment.center,
+      direction: widget.direction ?? theme?.direction ?? Axis.vertical,
+      disabled: widget.disabled,
+      dragStartBehavior: widget.dragStartBehavior ??
+          theme?.dragStartBehavior ??
+          DragStartBehavior.start,
+      emptyStatePlaceholder: widget.emptyStatePlaceholder,
+      header: widget.showHeader ?? theme?.showHeader ?? true
+          ? widget.header ??
+              theme?.header ??
+              AdaptiveSearchTextField(
                 controller,
-                copyFrom: widget.searchBar,
-                padding: widget.searchBarPadding,
-                showClearButton: widget.showClearButton,
+                copyFrom: widget.searchBar ?? theme?.searchBar,
+                padding: widget.searchBarPadding ??
+                    theme?.searchBarPadding ??
+                    UiConstants.padding,
+                showClearButton:
+                    widget.showClearButton ?? theme?.showClearButton ?? true,
               )
-            : null,
-        itemBuilder: widget.itemBuilder ?? widget.defaultBuilder,
-        keyboardDismissBehavior: widget.keyboardDismissBehavior,
-        mainAxisAlignment: widget.mainAxisAlignment,
-        mainAxisSize: widget.mainAxisSize,
-        onSelect: widget.onSelect,
-        padding: widget.padding,
-        physics: widget.physics,
-        primary: widget.primary,
-        restorationId: widget.restorationId,
-        reverse: widget.reverse,
-        scrollController: widget.scrollController,
-        separator: widget.separator,
-        shrinkWrap: widget.shrinkWrap,
-        sort: widget.sort,
-        textBaseline: widget.textBaseline,
-        textDirection: widget.textDirection,
-        verticalDirection: widget.verticalDirection,
-        caseSensitiveSearch: widget.caseSensitiveSearch,
-        searchIn: widget.searchIn ?? widget.defaultSearch,
-        startWithSearch: widget.startWithSearch,
-        textController: controller,
-      );
+          : null,
+      itemBuilder: (itemProperties, {isDense}) =>
+          widget.itemBuilder?.call(itemProperties, isDense: isDense) ??
+          widget.defaultBuilder(context, itemProperties, isDense: isDense),
+      keyboardDismissBehavior: widget.keyboardDismissBehavior ??
+          theme?.keyboardDismissBehavior ??
+          ScrollViewKeyboardDismissBehavior.manual,
+      mainAxisAlignment: widget.mainAxisAlignment ??
+          theme?.mainAxisAlignment ??
+          MainAxisAlignment.start,
+      mainAxisSize:
+          widget.mainAxisSize ?? theme?.mainAxisSize ?? MainAxisSize.min,
+      onSelect: widget.onSelect,
+      padding: widget.padding ?? theme?.padding,
+      physics: widget.physics ?? theme?.physics,
+      primary: widget.primary ?? theme?.primary,
+      restorationId: widget.restorationId,
+      reverse: widget.reverse ?? theme?.reverse ?? false,
+      scrollController: widget.scrollController,
+      separator: widget.separator ?? theme?.separator ?? UiConstants.separator,
+      shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
+      sort: widget.sort,
+      textBaseline: widget.textBaseline ?? theme?.textBaseline,
+      textDirection: widget.textDirection ?? theme?.textDirection,
+      verticalDirection: widget.verticalDirection ??
+          theme?.verticalDirection ??
+          VerticalDirection.down,
+      caseSensitiveSearch: widget.caseSensitiveSearch,
+      searchIn: widget.searchIn ?? widget.defaultSearch,
+      startWithSearch: widget.startWithSearch,
+      textController: controller,
+    );
+  }
 }

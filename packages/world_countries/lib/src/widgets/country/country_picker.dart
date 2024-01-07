@@ -103,6 +103,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
 
   @override
   Widget defaultBuilder(
+    BuildContext context,
     ItemProperties<WorldCountry> itemProperties, {
     bool? isDense,
   }) {

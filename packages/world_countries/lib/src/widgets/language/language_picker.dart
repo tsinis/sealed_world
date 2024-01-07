@@ -60,6 +60,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
 
   @override
   Widget defaultBuilder(
+    BuildContext context,
     ItemProperties<NaturalLanguage> itemProperties, {
     bool? isDense,
   }) =>

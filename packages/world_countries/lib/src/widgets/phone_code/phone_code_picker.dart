@@ -108,6 +108,7 @@ class PhoneCodePicker extends CountryPicker {
 
   @override
   Widget defaultBuilder(
+    BuildContext context,
     ItemProperties<WorldCountry> itemProperties, {
     bool? isDense,
   }) =>
