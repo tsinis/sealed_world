@@ -15,7 +15,7 @@ class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = context.pickerTheme;
+    final theme = context.pickersTheme;
 
     return SearchableIndexedListViewBuilder<T>(
       widget.items,

@@ -2,6 +2,8 @@ import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../../constants/ui_constants.dart";
+import "../../extensions/world_countries_build_context_extension.dart";
+import "../../models/emoji_family.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "emoji_flag.dart";
@@ -105,7 +107,14 @@ class CountryTile extends ListItemTile<WorldCountry> {
               ),
           leading: Padding(
             padding: const EdgeInsets.only(top: UiConstants.point),
-            child: leading ?? EmojiFlag.twemoji(country.item),
+            child: leading ??
+                Builder(
+                  builder: (context) => EmojiFlag.fromEmojiFamily(
+                    country.item,
+                    emojiFamily: context.countryTileTheme?.emojiFamily ??
+                        EmojiFamily.twemoji,
+                  ),
+                ),
           ),
           subtitle: subtitle ?? Text(country.item.namesNative.first.common),
         );
@@ -161,6 +170,14 @@ class CountryTile extends ListItemTile<WorldCountry> {
                 country.item.namesNative.first.common,
                 overflow: TextOverflow.ellipsis,
               ),
-          leading: leading ?? EmojiFlag.twemoji(country.item),
+          leading: leading ??
+              leading ??
+              Builder(
+                builder: (context) => EmojiFlag.fromEmojiFamily(
+                  country.item,
+                  emojiFamily: context.countryTileTheme?.emojiFamily ??
+                      EmojiFamily.twemoji,
+                ),
+              ),
         );
 }

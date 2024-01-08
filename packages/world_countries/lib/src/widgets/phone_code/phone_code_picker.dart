@@ -4,6 +4,8 @@ import "package:sealed_countries/sealed_countries.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
+import "../../extensions/world_countries_build_context_extension.dart";
+import "../../models/emoji_family.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
 import "../country/country_picker.dart";
@@ -112,6 +114,8 @@ class PhoneCodePicker extends CountryPicker {
     ItemProperties<WorldCountry> itemProperties, {
     bool? isDense,
   }) =>
+      context.countryTileTheme?.builder
+          ?.call(itemProperties, isDense: isDense) ??
       CountryTile.fromProperties(
         itemProperties,
         leading: ConstrainedBox(
@@ -121,7 +125,13 @@ class PhoneCodePicker extends CountryPicker {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                EmojiFlag.twemoji(itemProperties.item),
+                Builder(
+                  builder: (context) => EmojiFlag.fromEmojiFamily(
+                    itemProperties.item,
+                    emojiFamily: context.countryTileTheme?.emojiFamily ??
+                        EmojiFamily.twemoji,
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(right: UiConstants.point / 2),
                   child: Builder(

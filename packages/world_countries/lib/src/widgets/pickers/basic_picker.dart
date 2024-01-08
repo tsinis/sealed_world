@@ -185,7 +185,7 @@ abstract class BasicPicker<T extends Translated>
 
   String? _maybeNameTranslation(T item, BuildContext context) {
     final typedLocale =
-        translation ?? context.pickerTheme?.translation ?? context.maybeLocale;
+        translation ?? context.pickersTheme?.translation ?? context.maybeLocale;
 
     return typedLocale != null ? item.maybeTranslate(typedLocale)?.name : null;
   }

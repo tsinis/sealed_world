@@ -92,7 +92,7 @@ class _IndexedListViewBuilderState<T extends Object>
     extends State<IndexedListViewBuilder<T>> {
   @override
   Widget build(BuildContext context) {
-    final theme = context.pickerTheme;
+    final theme = context.pickersTheme;
     final header = widget.header ?? theme?.header;
 
     return Column(

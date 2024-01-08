@@ -7,10 +7,10 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
 
   @override
   Widget build(BuildContext context) {
-    final theme = context.pickerTheme;
+    final theme = context.pickersTheme;
 
     return isSearchable &&
-            (widget.showHeader ?? context.pickerTheme?.showHeader ?? true)
+            (widget.showHeader ?? context.pickersTheme?.showHeader ?? true)
         ? SearchListListenableBuilder<T>(
             builder: (_, filteredItems) => IndexedListViewBuilder<T>(
               filteredItems,

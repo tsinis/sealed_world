@@ -16,16 +16,16 @@ import "../models/locale/typed_locale.dart";
 ///
 /// Usage example:
 /// ```dart
-/// final pickerTheme = PickerThemeData(
+/// final pickersTheme = PickersThemeData(
 ///   padding: EdgeInsets.all(8),
 ///   searchBarPadding: EdgeInsets.symmetric(horizontal: 16),
 ///   showClearButton: false,
 /// );
 /// ```
-class PickerThemeData extends ThemeExtension<PickerThemeData>
+class PickersThemeData extends ThemeExtension<PickersThemeData>
     implements IndexedListViewInterface, BasicPickerInterface {
-  /// Creates a [PickerThemeData] instance with the given properties.
-  const PickerThemeData({
+  /// Creates a [PickersThemeData] instance with the given properties.
+  const PickersThemeData({
     this.addRepaintBoundaries = true,
     this.addSemanticIndexes = true,
     this.cacheExtent,
@@ -69,7 +69,7 @@ class PickerThemeData extends ThemeExtension<PickerThemeData>
   /// ```
   @override
   // ignore: long-parameter-list, a lot of parameters here.
-  ThemeExtension<PickerThemeData> copyWith({
+  ThemeExtension<PickersThemeData> copyWith({
     bool? showClearButton,
     TextField? searchBar,
     EdgeInsetsGeometry? searchBarPadding,
@@ -96,7 +96,7 @@ class PickerThemeData extends ThemeExtension<PickerThemeData>
     DragStartBehavior? dragStartBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
   }) =>
-      PickerThemeData(
+      PickersThemeData(
         addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
         addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
         cacheExtent: cacheExtent ?? this.cacheExtent,
@@ -126,8 +126,8 @@ class PickerThemeData extends ThemeExtension<PickerThemeData>
       );
 
   @override
-  ThemeExtension<PickerThemeData> lerp(
-    covariant ThemeExtension<PickerThemeData>? other,
+  ThemeExtension<PickersThemeData> lerp(
+    covariant ThemeExtension<PickersThemeData>? other,
     double t,
   ) =>
       this;

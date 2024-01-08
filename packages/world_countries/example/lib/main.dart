@@ -23,6 +23,11 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
+  /// Also [CurrencyTileThemeData], [LanguageTileThemeData]...
+  static const pickerThemes = <ThemeExtension>[
+    PickersThemeData(primary: true), // Applies to all types of pickers.
+    CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
+  ];
   final _navigatorKey = GlobalKey<NavigatorState>();
   final _routeParser = TemplateRouteParser(allowedPaths: WorldData.paths);
   late final _routeState = RouteState(_routeParser);
@@ -46,14 +51,12 @@ class _MainState extends State<Main> {
           routeInformationParser: _routeParser,
           routerDelegate: _routerDelegate,
           theme: ThemeData(
-            extensions: const [PickerThemeData(reverse: true)],
+            extensions: pickerThemes,
             useMaterial3: true,
             colorScheme: lightColorScheme,
           ),
           darkTheme: ThemeData(
-            extensions: const [
-              PickerThemeData(reverse: true),
-            ],
+            extensions: pickerThemes,
             useMaterial3: true,
             colorScheme: darkColorScheme,
           ),
