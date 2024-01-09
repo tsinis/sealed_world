@@ -29,8 +29,9 @@ This ISO-driven, pure Dart, fully tested and and 3rd-party dependency-free packa
 | thousandsSeparator   | Yes      | The character used to separate thousands grouping of the whole unit.                    | "."                                           |
 | translations         | Yes      | A list of TranslatedNames representing the currency name translations.                  | **111** translations for a Euro currency name |
 
-Compile time constant list of all currencies accessible via `FiatCurrency.list` and more over, the **FiatCurrency** class provides the following methods:
+Compile time constant list of all currencies accessible via `FiatCurrency.list` and more over, the **FiatCurrency** class provides the following methods/constructors:
 
+- `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 - `maybeFromValue` - returns a currency instance if the value matches the provided value, otherwise returns `null`.
 - `maybeFromAnyCode` - returns a currency instance if the value matches any ISO 4217 code, otherwise returns `null`.
 - `fromCode` - returns a currency instance if the value matches the provided ISO 4217 letter code.
@@ -100,6 +101,7 @@ For more usage examples, please see the `/example` folder.
 - **Rich data**: This package offers far more data than any other package + tons of translations (all GlobalMaterialLocalizations and GlobalCupertinoLocalizations locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has a high level of coverage, providing confidence in its reliability and stability.
+- **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
 ### Additional information

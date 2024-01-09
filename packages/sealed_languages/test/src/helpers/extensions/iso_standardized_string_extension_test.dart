@@ -1,4 +1,4 @@
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_languages/src/helpers/extensions/iso_standardized_string_extension.dart";
 import "package:test/test.dart";
 
 void main() => group("IsoStandardizedStringExtension", () {

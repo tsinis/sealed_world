@@ -31,9 +31,11 @@ This package provides the following ready-to-use widgets and classes:
 - `CurrencyPicker` - A picker widget that displays a list of fiat currencies.
 - `LanguagePicker` - A picker widget that displays a list of natural languages.
 
+Or you can just create your own pickers by extending `BasicPicker`.
+
 - `TypedLocaleDelegate` - A locale delegate for automatic translation of pickers (80+ languages available).
 
-Or you can just create your own pickers by extending `BasicPicker`.
+- `PickersThemeData`, `CountryTileThemeData`, `CurrencyTileThemeData` and `LanguageTileThemeData` are [theme extensions](https://api.flutter.dev/flutter/material/ThemeExtension-class.html) that you can use in your `ThemeData` to specify global theme to your pickers, themes of your tiles (for example font family for emoji flags or builders).
 
 ### Demo
 
@@ -81,6 +83,13 @@ import "package:world_countries/world_countries.dart";
 void main() => runApp(
       MaterialApp(
         home: const MainPage(),
+        theme: ThemeData(
+          /// And also [CurrencyTileThemeData], [LanguageTileThemeData]...
+          extensions: const <ThemeExtension>[
+            PickersThemeData(primary: true), // Specify global pickers theme.
+            CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
+          ],
+        ),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
@@ -268,4 +277,5 @@ CountryPicker(
 - **Rich data**: This package offers far more data than any other package + tons of translations.
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has a high level of coverage, providing confidence in its reliability and stability.
+- **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.

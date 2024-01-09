@@ -1,3 +1,10 @@
+## 1.1.0
+
+NEW FEATURES
+
+- Added new constructor called `permissive` - which allow the creation of custom class instances that are not fully compatible with the ISO standard.
+- `Translated` class is now sealed - which means you can now directly compare instances of different ISO classes directly (for example in switch statements).
+
 ## 1.0.0
 
 🎉 First anniversary and first stable release!
