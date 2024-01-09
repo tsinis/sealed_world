@@ -9,6 +9,16 @@ void main() => group("$TypedLocaleDelegate", () {
       const english = LangEng();
       const delegate = TypedLocaleDelegate();
 
+      test(
+        "shouldReload",
+        () => expect(delegate.shouldReload(delegate), isFalse),
+      );
+
+      test(
+        "toString",
+        () => expect(delegate.toString(), contains("TypedLocaleDelegate")),
+      );
+
       group("isSupported", () {
         test(
           "returns typed locale on supported locale",

@@ -26,13 +26,13 @@ base class BaseTileThemeData<T extends Translated>
   const BaseTileThemeData({super.builder});
 
   @override
-  ThemeExtension<BaseTileThemeData<T>> copyWith({
+  BaseTileThemeData<T> copyWith({
     Widget Function(ItemProperties<T> itemProperties, {bool? isDense})? builder,
   }) =>
       BaseTileThemeData<T>(builder: builder ?? this.builder);
 
   @override
-  ThemeExtension<BaseTileThemeData<T>> lerp(
+  BaseTileThemeData<T> lerp(
     covariant ThemeExtension<BaseTileThemeData<T>>? other,
     double t,
   ) =>
@@ -42,7 +42,7 @@ base class BaseTileThemeData<T extends Translated>
 @immutable
 sealed class _BaseTileThemeData<T extends Translated>
     extends ThemeExtension<BaseTileThemeData<T>> {
-  const _BaseTileThemeData({this.builder});
+  const _BaseTileThemeData({this.builder}); // coverage:ignore-line
 
   /// A builder function that takes [ItemProperties] and an optional density
   /// flag, and returns a widget for the tile.

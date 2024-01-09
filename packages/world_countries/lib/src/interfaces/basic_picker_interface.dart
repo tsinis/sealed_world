@@ -23,7 +23,8 @@ import "../models/locale/typed_locale.dart";
 /// Implementing classes should provide behavior for these properties to create
 /// a coherent picker experience.
 abstract interface class BasicPickerInterface {
-  const BasicPickerInterface({
+  const BasicPickerInterface( // coverage:ignore-line
+      {
     this.searchBarPadding = UiConstants.padding,
     this.showClearButton = true,
     this.searchBar,

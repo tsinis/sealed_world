@@ -1,6 +1,8 @@
 // ignore_for_file: missing-test-assertion
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:sealed_countries/sealed_countries.dart";
+import "package:world_countries/src/theme/tile_theme_data/language_tile_theme_data.dart";
 import "package:world_countries/src/widgets/language/language_picker.dart";
 import "package:world_countries/src/widgets/language/language_tile.dart";
 
@@ -23,6 +25,18 @@ void main() => group("$LanguagePicker", () {
         (tester) async => tester.testPickerBody(
           const LanguagePicker(),
           (item) => item.namesNative.first,
+        ),
+      );
+
+      testWidgets(
+        "builder from theme",
+        (tester) async => tester.testPickerBody(
+          const LanguagePicker(),
+          theme: LanguageTileThemeData(
+            builder: (properties, {isDense}) =>
+                Text(properties.item.translations.first.common),
+          ),
+          (item) => item.translations.first.common,
         ),
       );
 

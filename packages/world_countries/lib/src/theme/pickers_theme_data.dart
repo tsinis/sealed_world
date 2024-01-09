@@ -69,7 +69,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   /// ```
   @override
   // ignore: long-parameter-list, a lot of parameters here.
-  ThemeExtension<PickersThemeData> copyWith({
+  PickersThemeData copyWith({
     bool? showClearButton,
     TextField? searchBar,
     EdgeInsetsGeometry? searchBarPadding,

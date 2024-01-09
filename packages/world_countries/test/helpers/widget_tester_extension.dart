@@ -1,18 +1,63 @@
-// ignore_for_file: prefer-moving-to-variable
+// ignore_for_file: prefer-moving-to-variable, avoid_redundant_argument_values
 import "dart:async";
 
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
+import "package:world_countries/src/constants/ui_constants.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
+import "package:world_countries/src/models/locale/iso_locale.dart";
+import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/widgets/buttons/clear_button.dart";
 import "package:world_countries/src/widgets/pickers/basic_picker.dart";
 
 // ignore: avoid-top-level-members-in-tests, it's not a test.
 extension WidgetTesterExtension on WidgetTester {
-  Future<MaterialApp> pumpMaterialApp(Widget child) async {
-    final app = MaterialApp(home: Scaffold(body: child));
+  static const pickersTheme = PickersThemeData(
+    addRepaintBoundaries: true,
+    addSemanticIndexes: true,
+    cacheExtent: 100,
+    clipBehavior: Clip.hardEdge,
+    crossAxisAlignment: CrossAxisAlignment.center,
+    direction: Axis.vertical,
+    dragStartBehavior: DragStartBehavior.start,
+    keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
+    mainAxisAlignment: MainAxisAlignment.start,
+    mainAxisSize: MainAxisSize.min,
+    padding: EdgeInsets.zero,
+    physics: ClampingScrollPhysics(),
+    primary: true,
+    reverse: false,
+    separator: UiConstants.separator,
+    showHeader: true,
+    shrinkWrap: false,
+    textBaseline: TextBaseline.alphabetic,
+    textDirection: TextDirection.ltr,
+    verticalDirection: VerticalDirection.down,
+    searchBarPadding: EdgeInsets.zero,
+    showClearButton: true,
+    translation: IsoLocale(LangEng()),
+  );
+
+  Future<BuildContext> contextExtractor([
+    Widget child = const SizedBox(),
+  ]) async {
+    await pumpMaterialApp(child);
+
+    return element(find.byType(child.runtimeType));
+  }
+
+  Future<MaterialApp> pumpMaterialApp(
+    Widget child, [
+    ThemeExtension? theme,
+  ]) async {
+    final app = MaterialApp(
+      home: Scaffold(body: child),
+      theme: ThemeData(
+        extensions: <ThemeExtension>[if (theme != null) theme, pickersTheme],
+      ),
+    );
     await pumpWidget(app);
 
     return app;
@@ -45,12 +90,18 @@ extension WidgetTesterExtension on WidgetTester {
     BasicPicker<T> picker,
     String Function(T value) findLabel, {
     bool testSelection = true,
+    ThemeExtension? theme,
   }) async {
     T? selected;
     final testPicker = testSelection
         ? picker.copyWith(onSelect: (item) => selected = item)
         : picker;
-    await pumpWidget(MaterialApp(home: Scaffold(body: testPicker)));
+    await pumpWidget(
+      MaterialApp(
+        home: Scaffold(body: testPicker),
+        theme: ThemeData(extensions: [if (theme != null) theme, pickersTheme]),
+      ),
+    );
     if (testPicker.showClearButton ?? true) {
       await enterText(find.byType(TextField), "A");
       await testTextInput.receiveAction(TextInputAction.done);

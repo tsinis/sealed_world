@@ -13,7 +13,8 @@ abstract interface class IndexedListViewInterface {
   /// This widget is designed to be highly customizable. The appearance and
   /// behavior of the list can be customized by passing in optional parameters
   /// to the constructor.
-  const IndexedListViewInterface({
+  const IndexedListViewInterface( // coverage:ignore-line
+      {
     this.addRepaintBoundaries, // Default to: true.
     this.addSemanticIndexes, // Default to: true.
     this.cacheExtent,

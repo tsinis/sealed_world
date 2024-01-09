@@ -94,7 +94,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
     super.restorationId,
     super.reverse,
     super.scrollController,
-    super.separator = UiConstants.separator,
+    super.separator,
     super.shrinkWrap,
     super.sort,
     super.textBaseline,
@@ -126,7 +126,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
   State<SearchableIndexedListViewBuilder<T>> createState() =>
       _SearchableIndexedListViewBuilderState<T>();
 
-  @override // coverage:ignore-line
+  @override
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
@@ -148,7 +148,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
   }) async =>
       null;
 
-  @override // coverage:ignore-line
+  @override
   Future<T?>? showInSearch(
     BuildContext context, {
     String? query = "",
@@ -156,7 +156,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
   }) =>
       null;
 
-  @override // coverage:ignore-line
+  @override
   Future<T?>? showInDialog(
     BuildContext context, {
     bool barrierDismissible = true,

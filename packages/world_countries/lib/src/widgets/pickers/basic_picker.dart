@@ -108,7 +108,7 @@ abstract class BasicPicker<T extends Translated>
     super.textDirection,
     super.verticalDirection,
     this.searchBar,
-    this.searchBarPadding = UiConstants.padding,
+    this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
     this.translation,
   }) : super(header: searchBar);
