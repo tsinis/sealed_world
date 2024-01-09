@@ -1,5 +1,7 @@
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/world_countries.dart";
+import "package:sealed_countries/sealed_countries.dart";
+import "package:world_countries/src/extensions/locale_translated_extension.dart";
+import "package:world_countries/src/models/locale/iso_locale.dart";
 
 void main() => group("LocaleTranslatedExtension ", () {
       const country = CountryUsa();

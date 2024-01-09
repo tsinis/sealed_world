@@ -93,10 +93,10 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     return _toTypedLocale(locale);
   }
 
-  @override // coverage:ignore-line
+  @override
   bool shouldReload(TypedLocaleDelegate old) => false;
 
-  @override // coverage:ignore-line
+  @override
   String toString() =>
       """TypedLocaleDelegate(fallbackLanguage: $fallbackLanguage, localeMapResolution: $localeMapResolution)""";
 

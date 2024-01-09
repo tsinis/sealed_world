@@ -1,6 +1,9 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/world_countries.dart";
+import "package:sealed_countries/sealed_countries.dart";
+import "package:world_countries/src/extensions/world_country_extension.dart";
+import "package:world_countries/src/models/locale/iso_locale.dart";
+import "package:world_countries/src/models/locale/typed_locale.dart";
 
 void main() => group("WorldCountryExtension ", () {
       final value = WorldCountry.list.first;

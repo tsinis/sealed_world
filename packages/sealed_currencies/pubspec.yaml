@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.1.0
 name: sealed_currencies
 description: Provides data for world currencies in the form of sealed classes.
 maintainer: Roman Cinis

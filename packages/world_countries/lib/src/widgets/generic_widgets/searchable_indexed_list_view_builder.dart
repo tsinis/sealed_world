@@ -1,8 +1,10 @@
 // ignore_for_file: long-parameter-list
 
+import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
+import "../../extensions/world_countries_build_context_extension.dart";
 import "../../interfaces/material_context_interface.dart";
 import "../../interfaces/searchable_interface.dart";
 import "../../mixins/popped_mixin.dart";
@@ -92,7 +94,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
     super.restorationId,
     super.reverse,
     super.scrollController,
-    super.separator = const Divider(height: 1),
+    super.separator,
     super.shrinkWrap,
     super.sort,
     super.textBaseline,
@@ -102,7 +104,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
     this.searchIn,
     this.startWithSearch = true,
     this.textController,
-    bool showSearchBar = true,
+    bool? showSearchBar = true,
   }) : super(showHeader: showSearchBar);
 
   /// The text editing controller for the search bar.
@@ -124,7 +126,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
   State<SearchableIndexedListViewBuilder<T>> createState() =>
       _SearchableIndexedListViewBuilderState<T>();
 
-  @override // coverage:ignore-line
+  @override
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
@@ -146,7 +148,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
   }) async =>
       null;
 
-  @override // coverage:ignore-line
+  @override
   Future<T?>? showInSearch(
     BuildContext context, {
     String? query = "",
@@ -154,7 +156,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
   }) =>
       null;
 
-  @override // coverage:ignore-line
+  @override
   Future<T?>? showInDialog(
     BuildContext context, {
     bool barrierDismissible = true,

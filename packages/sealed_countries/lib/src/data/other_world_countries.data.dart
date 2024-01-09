@@ -26,7 +26,7 @@ class CountryUnk extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: "UNK", ISO 3166-1 Alpha-2 code: "XK".
   const CountryUnk()
-      : super(
+      : super.permissive(
           name: const CountryName(
             language: LangEng(),
             official: "Republic of Kosovo",
@@ -46,7 +46,7 @@ class CountryUnk extends WorldCountry {
           ],
           tld: const [],
           code: "UNK",
-          codeNumeric: "",
+          codeNumeric: "   ",
           codeShort: "XK",
           cioc: "KOS",
           independent: true,

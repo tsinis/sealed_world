@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, prefer-match-file-name
 
 import "package:sealed_languages/sealed_languages.dart";
 
@@ -56,4 +56,21 @@ void main() {
         ?.maybeTranslation(const LangSrp(), script: const ScriptLatn())
         ?.name, // Prints "češki".
   );
+
+  print(const _LangCustom().name); // Prints "Custom".
+}
+
+/// Creates a instance of the custom language with permissive constructor.
+class _LangCustom extends NaturalLanguage {
+  const _LangCustom()
+      : super.permissive(
+          name: "Custom",
+          code: "CUSTOM",
+          codeShort: "CT",
+          namesNative: const ["Custom"],
+        );
+
+  @override
+  List<TranslatedName> get translations =>
+      const [TranslatedName(LangEng(), name: "Custom English Translation")];
 }

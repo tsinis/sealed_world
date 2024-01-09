@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.1.0
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
@@ -43,7 +43,7 @@ dev_dependencies:
   dart_code_metrics: # Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
-  flutter_gen_runner: ^5.3.2
+  flutter_gen_runner: ^5.4.0
   flutter_test: # From Google
     sdk: flutter
   lints: ^3.0.0 # From Google

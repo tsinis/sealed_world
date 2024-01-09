@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, prefer-match-file-name
 
 import "package:sealed_currencies/sealed_currencies.dart";
 
@@ -65,4 +65,18 @@ void main() {
       """German name of ${currency.name}: ${currency.maybeTranslation(const LangDeu())?.name}""",
     );
   }
+
+  print(const _FiatCustom().name); // Prints "Custom".
+}
+
+/// Creates a instance of the custom currency with permissive constructor.
+class _FiatCustom extends FiatCurrency {
+  const _FiatCustom()
+      : super.permissive(
+          code: "123",
+          name: "Custom",
+          codeNumeric: "",
+          namesNative: const [],
+          translations: const [],
+        );
 }

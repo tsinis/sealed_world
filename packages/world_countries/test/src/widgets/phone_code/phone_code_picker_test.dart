@@ -2,6 +2,8 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
+import "package:world_countries/src/models/emoji_family.dart";
+import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/country/country_tile.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
@@ -25,6 +27,19 @@ void main() => group("$PhoneCodePicker", () {
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
           (item) => item.namesNative.first.common,
+        ),
+      );
+
+      testWidgets(
+        "builder from theme",
+        (tester) async => tester.testPickerBody(
+          const PhoneCodePicker(),
+          theme: CountryTileThemeData(
+            emojiFamily: EmojiFamily.twemoji,
+            builder: (properties, {isDense}) =>
+                Text(properties.item.translations.first.common),
+          ),
+          (item) => item.translations.first.common,
         ),
       );
 

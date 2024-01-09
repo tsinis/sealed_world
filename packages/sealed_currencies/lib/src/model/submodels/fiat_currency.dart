@@ -8,6 +8,7 @@ class FiatCurrency extends Currency
     implements
         IsoTranslated<TranslatedName, String>,
         JsonEncodable<FiatCurrency> {
+  /// {@template currency_constructor}
   /// Creates a new instance of [FiatCurrency].
   ///
   /// The `code`, `name`, `namesNative`, `translations` and `codeNumeric`
@@ -19,7 +20,7 @@ class FiatCurrency extends Currency
   ///
   /// The `symbol`, `decimalMark`, and `thousandsSeparator` parameters are
   /// inherited from the [Currency] class and are also optional.
-  ///
+  /// {@endtemplate}
   /// Throws an `AssertionError` if `code` is not exactly 3 characters long,
   /// `codeNumeric` is not exactly 3 characters long, `namesNative` is empty,
   /// `htmlEntity` is empty, `subunit` is empty, `alternateSymbols` is empty, or
@@ -75,6 +76,27 @@ class FiatCurrency extends Currency
           translations != const <TranslatedName>[],
           "`translations` should not be empty!",
         );
+
+  /// {@macro permissive_constructor}
+  /// {@macro currency_constructor}
+  const FiatCurrency.permissive({
+    required super.code,
+    required super.name,
+    required this.namesNative,
+    required this.codeNumeric,
+    required this.translations,
+    this.alternateSymbols,
+    this.disambiguateSymbol,
+    this.htmlEntity,
+    this.priority = 100,
+    this.smallestDenomination = 1,
+    this.subunit,
+    this.subunitToUnit = 100,
+    this.unitFirst = false,
+    super.symbol,
+    super.decimalMark = dot,
+    super.thousandsSeparator = ",",
+  });
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.
   ///

@@ -9,6 +9,8 @@ import "package:sealed_countries/sealed_countries.dart";
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/locale_translated_extension.dart";
+import "../../extensions/world_countries_build_context_extension.dart";
+import "../../interfaces/basic_picker_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
@@ -22,7 +24,9 @@ part "basic_picker_state.dart";
 /// functionality and indexing support.
 @immutable
 abstract class BasicPicker<T extends Translated>
-    extends SearchableIndexedListViewBuilder<T> with CompareSearchMixin<T> {
+    extends SearchableIndexedListViewBuilder<T>
+    with CompareSearchMixin<T>
+    implements BasicPickerInterface {
   /// Constructor for the [BasicPicker] class.
   ///
   /// * [items] is the list of items to display.
@@ -104,21 +108,25 @@ abstract class BasicPicker<T extends Translated>
     super.textDirection,
     super.verticalDirection,
     this.searchBar,
-    this.searchBarPadding = UiConstants.padding,
+    this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
     this.translation,
   }) : super(header: searchBar);
 
   /// A boolean indicating whether to show a clear button in the search bar.
-  final bool showClearButton;
+  @override
+  final bool? showClearButton;
 
   /// The optional search bar to display.
+  @override
   final TextField? searchBar;
 
   /// The padding to apply to the search bar.
+  @override
   final EdgeInsetsGeometry? searchBarPadding;
 
   /// The local to use for translations.
+  @override
   final TypedLocale? translation;
 
   /// Returns the default builder for the items.
@@ -127,6 +135,7 @@ abstract class BasicPicker<T extends Translated>
   @required
   @protected
   Widget defaultBuilder(
+    BuildContext context,
     ItemProperties<T> itemProperties, {
     bool? isDense,
   });
@@ -165,13 +174,18 @@ abstract class BasicPicker<T extends Translated>
       x.length,
       (i) =>
           itemBuilder?.call(filteredProperties(x, context, i), isDense: true) ??
-          defaultBuilder.call(filteredProperties(x, context, i), isDense: true),
+          defaultBuilder.call(
+            context,
+            filteredProperties(x, context, i),
+            isDense: true,
+          ),
       growable: false,
     );
   }
 
   String? _maybeNameTranslation(T item, BuildContext context) {
-    final typedLocale = translation ?? context.maybeLocale;
+    final typedLocale =
+        translation ?? context.pickersTheme?.translation ?? context.maybeLocale;
 
     return typedLocale != null ? item.maybeTranslate(typedLocale)?.name : null;
   }
@@ -262,7 +276,7 @@ abstract class BasicPicker<T extends Translated>
           searchFieldDecorationTheme: searchFieldDecorationTheme,
           searchFieldLabel: searchFieldLabel,
           searchFieldStyle: searchFieldStyle,
-          showClearButton: showClearButton,
+          showClearButton: showClearButton ?? true,
           startWithSearch: startWithSearch,
           textInputAction: textInputAction,
         ),

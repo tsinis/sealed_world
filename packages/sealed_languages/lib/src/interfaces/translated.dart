@@ -3,7 +3,7 @@ import "iso_standardized.dart";
 
 part "iso_translated.dart";
 
-/// An interface representing a translated object.
+/// An sealed interface representing a translated object.
 ///
 /// The [Translated] interface is used to represent objects that have
 /// translations. The interface defines a required parameter `translations`
@@ -29,7 +29,7 @@ part "iso_translated.dart";
 /// representing the translated names of the country. The `Translated` interface
 /// is used to ensure that the `TranslatedObject` class has the required
 /// translations.
-abstract interface class Translated<T extends TranslatedName> {
+sealed class Translated<T extends TranslatedName> {
   /// Creates a new instance of the [Translated] object.
   ///
   /// The [translations] parameter is required and represents a list of objects

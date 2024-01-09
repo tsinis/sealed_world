@@ -67,7 +67,7 @@ class ImplicitSearchDelegate<T extends Object>
 
   @override
   List<Widget> buildActions(BuildContext context) => [
-        if (showClearButton)
+        if (showClearButton ?? true)
           IconButton(
             key: clearIconButton?.key,
             iconSize: clearIconButton?.iconSize,

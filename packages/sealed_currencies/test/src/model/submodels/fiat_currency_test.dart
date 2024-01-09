@@ -4,6 +4,17 @@ import "package:sealed_currencies/src/model/currency.dart";
 import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
+class _FiatCurrencyTest extends FiatCurrency {
+  const _FiatCurrencyTest()
+      : super.permissive(
+          code: "123",
+          name: "name",
+          codeNumeric: "",
+          namesNative: const [],
+          translations: const [],
+        );
+}
+
 void main() => group("$FiatCurrency", () {
       final value = FiatCurrency.list.last;
       final array = {value, FiatCurrency.list.first};
@@ -16,6 +27,17 @@ void main() => group("$FiatCurrency", () {
         expect(value, isA<Named>());
         expect(value, isA<Translated>());
       });
+
+      test(
+        "permissive constructor",
+        () {
+          expect(
+            () => const _FiatCurrencyTest().codeNumeric,
+            isNot(throwsA(isA<AssertionError>())),
+          );
+          expect(const _FiatCurrencyTest().codeNumeric, isEmpty);
+        },
+      );
 
       group("fields", () {
         for (final element in FiatCurrency.list) {

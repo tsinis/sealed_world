@@ -7,8 +7,8 @@ import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 void main() => group("$WorldCountry", () {
-      final value = WorldCountry.list.last;
-      final array = {value, WorldCountry.list.first};
+      final value = WorldCountry.list.first;
+      final array = {WorldCountry.list.last, value};
 
       test("interfaces", () {
         expect(value, isA<Country>());
@@ -19,12 +19,23 @@ void main() => group("$WorldCountry", () {
         expect(value, isA<Translated>());
       });
 
+      test(
+        "permissive constructor",
+        () {
+          expect(
+            () => array.first.tld,
+            isNot(throwsA(isA<AssertionError>())),
+          );
+          expect(array.first.tld, isEmpty);
+        },
+      );
+
       group("fields", () {
         final officialCountries =
             WorldCountry.list.where((country) => country.isOfficiallyAssigned);
 
         for (final element in officialCountries) {
-          test("of $WorldCountry: ${element.name}", () {
+          test("of $WorldCountry: ${element.name.common}", () {
             if (element.postalCode != null) {
               expect(element.postalCode?.format, isNotEmpty);
               expect(element.postalCode?.regExpPattern, isNotEmpty);
@@ -110,10 +121,10 @@ void main() => group("$WorldCountry", () {
 
       group("equality", () {
         test("basic", () {
-          expect(WorldCountry.list.first, isNot(equals(value)));
-          expect(WorldCountry.list.last, same(value));
+          expect(WorldCountry.list.last, isNot(equals(value)));
+          expect(WorldCountry.list.first, same(value));
           expect(
-            WorldCountry.fromCodeShort(WorldCountry.list.last.codeShort),
+            WorldCountry.fromCodeShort(WorldCountry.list.first.codeShort),
             same(value),
           );
           expect(
@@ -243,7 +254,7 @@ void main() => group("$WorldCountry", () {
 
       group("toJson", () {
         for (final element in WorldCountry.list) {
-          test("compared to $WorldCountry: ${element.name.name}", () {
+          test("compared to $WorldCountry: ${element.name.common}", () {
             final json = element.toJson();
 
             expect(json, isNotEmpty);
@@ -421,6 +432,34 @@ void main() => group("$WorldCountry", () {
               areaMetric: value.areaMetric,
               code: value.codeShort,
               codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: value.tld,
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "codeNumeric length",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeShort,
               codeShort: value.codeShort,
               continent: value.continent,
               emoji: value.emoji,
@@ -775,6 +814,35 @@ void main() => group("$WorldCountry", () {
               demonyms: value.demonyms,
               currencies: value.currencies,
               regionalBlocs: const [],
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test(
+          "tld empty",
+          () => expect(
+            () => WorldCountry(
+              name: value.name,
+              altSpellings: value.altSpellings,
+              areaMetric: value.areaMetric,
+              code: value.code,
+              codeNumeric: value.codeNumeric,
+              codeShort: value.codeShort,
+              continent: value.continent,
+              emoji: value.emoji,
+              idd: value.idd,
+              languages: value.languages,
+              latLng: value.latLng,
+              maps: value.maps,
+              namesNative: value.namesNative,
+              population: value.population,
+              timezones: value.timezones,
+              tld: const <String>[],
+              translations: value.translations,
+              demonyms: value.demonyms,
+              currencies: value.currencies,
+              regionalBlocs: value.regionalBlocs,
             ),
             throwsA(isA<AssertionError>()),
           ),

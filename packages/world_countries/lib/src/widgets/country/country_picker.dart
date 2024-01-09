@@ -2,6 +2,7 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
+import "../../extensions/world_countries_build_context_extension.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
 import "../pickers/basic_picker.dart";
@@ -103,9 +104,13 @@ class CountryPicker extends BasicPicker<WorldCountry> {
 
   @override
   Widget defaultBuilder(
+    BuildContext context,
     ItemProperties<WorldCountry> itemProperties, {
     bool? isDense,
   }) {
+    final builder = context.countryTileTheme?.builder;
+    if (builder != null) return builder(itemProperties, isDense: isDense);
+
     final maybeNameTitle =
         itemNameTranslated(itemProperties.item, itemProperties.context);
 

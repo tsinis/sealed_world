@@ -35,7 +35,7 @@ class AdaptiveSearchTextField extends TextField {
 
   /// A boolean indicating whether a clear button should be displayed
   /// in the text field.
-  final bool showClearButton;
+  final bool? showClearButton;
 
   @override
   State<AdaptiveSearchTextField> createState() =>
@@ -58,7 +58,8 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
       widget.copyFrom?.decoration ??
       UiConstants.inputDecoration.copyWith(
         hintText: context.materialL10n.searchFieldLabel,
-        suffixIcon: widget.showClearButton ? ClearButton(controller) : null,
+        suffixIcon:
+            (widget.showClearButton ?? true) ? ClearButton(controller) : null,
       );
 
   TextStyle? get textStyle => context.theme.textTheme.titleMedium;

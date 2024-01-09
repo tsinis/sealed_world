@@ -1,3 +1,27 @@
+## 1.1.0
+
+NEW FEATURES
+
+- Added new constructor called `permissive` - which allow the creation of custom class instances that are not fully compatible with the ISO standard.
+- `Translated` class is now sealed - which means you can now directly compare instances of different ISO classes directly (for example in switch statements).
+
+- Added theme extensions that you can specify in your `ThemeData` to provide global theme to your pickers. You can find `PickersThemeData`, `CountryTileThemeData`, `CurrencyTileThemeData` and `LanguageTileThemeData`:
+
+```dart
+MaterialApp(
+  ...
+  theme: ThemeData(
+    /// And also [CurrencyTileThemeData], [LanguageTileThemeData]...
+    extensions: const <ThemeExtension>[
+      PickersThemeData(primary: true), // Specify global pickers theme.
+      CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
+    ],
+  )
+);
+```
+
+This way you can specify for example that all your pickers lists are primary and define globally use of Twemoji as main flags font emoji family in all Country/Phone pickers in the app.
+
 ## 1.0.0
 
 🎉 First anniversary and first stable release!

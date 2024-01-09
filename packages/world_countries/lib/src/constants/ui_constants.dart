@@ -46,4 +46,7 @@ sealed class UiConstants {
 
   /// The default placeholder used in the UI.
   static const placeholder = SizedBox.shrink();
+
+  /// The default separator used in the UI in the list views.
+  static const separator = Divider(height: 1);
 }

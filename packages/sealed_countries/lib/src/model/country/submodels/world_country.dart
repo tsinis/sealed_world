@@ -28,6 +28,7 @@ class WorldCountry extends Country
     implements
         IsoTranslated<TranslatedName, CountryName>,
         JsonEncodable<WorldCountry> {
+  /// {@template country_constructor}
   /// Creates a new `WorldCountry` object with the given properties.
   ///
   /// The `name` parameter is required and must not be empty. The
@@ -36,6 +37,7 @@ class WorldCountry extends Country
   /// The `codeShort`, `codeNumeric`, `code`, `emoji`, `idd`, `latLng`, `maps`,
   /// `areaMetric`, `population`, and `startOfWeek` parameters should not be
   /// `null` and must be valid values.
+  /// {@endtemplate}
   const WorldCountry({
     required super.name,
     required this.altSpellings,
@@ -55,7 +57,7 @@ class WorldCountry extends Country
     required this.tld, // Top Level Domain.
     required this.translations,
     required this.demonyms,
-    required this.currencies,
+    this.currencies,
     this.capitalInfo,
     this.car = const Car(),
     this.cioc, // International Olympic Committee.
@@ -78,7 +80,12 @@ class WorldCountry extends Country
           codeShort.length == IsoStandardized.codeShortLength,
           """`codeShort` should be exactly ${IsoStandardized.codeShortLength} characters long!""",
         ),
+        assert(
+          codeNumeric.length == IsoStandardized.codeLength,
+          """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
+        ),
         assert(emoji.length > 0, "`emoji` should not be empty!"),
+        assert(tld != const <String>[], "`tld` should not be empty!"),
         assert(
           namesNative != const <CountryName>[],
           "`namesNative` should not be empty!",
@@ -113,6 +120,44 @@ class WorldCountry extends Country
           regionalBlocs != const <RegionalBloc>[],
           "`regionalBlocs` should not be empty!",
         );
+
+  /// {@macro permissive_constructor}
+  /// {@macro country_constructor}
+  const WorldCountry.permissive({
+    required super.name,
+    required this.altSpellings,
+    required this.areaMetric,
+    required this.code, // CCA3.
+    required this.codeNumeric, // CCN3.
+    required this.codeShort, // CCA2.
+    required this.continent,
+    required this.emoji,
+    required this.idd, // International Direct Dialing.
+    required this.languages,
+    required this.latLng,
+    required this.maps,
+    required this.namesNative,
+    required this.population,
+    required this.timezones,
+    required this.tld, // Top Level Domain.
+    required this.translations,
+    required this.demonyms,
+    this.currencies,
+    this.capitalInfo,
+    this.car = const Car(),
+    this.cioc, // International Olympic Committee.
+    this.fifa,
+    this.gini, // Gini Coefficient.
+    this.hasCoatOfArms = true,
+    this.independent = true,
+    this.landlocked = false,
+    this.postalCode,
+    this.bordersCodes,
+    this.startOfWeek = Weekday.monday,
+    this.subregion,
+    this.unMember = true,
+    this.regionalBlocs,
+  });
 
   /// Returns an `WorldCountry` object from the given `code`
   /// ISO 3166-1 Alpha-3 code.

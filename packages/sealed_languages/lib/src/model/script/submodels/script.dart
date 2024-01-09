@@ -3,6 +3,7 @@ part of "../writing_system.dart";
 /// A class that represents a script used in writing systems.
 class Script extends WritingSystem
     implements IsoStandardized<String>, JsonEncodable<Script> {
+  /// {@template script_constructor}
   /// Creates a new instance of the [Script] class.
   ///
   /// The [name] parameter is required and should be a non-empty string
@@ -13,6 +14,7 @@ class Script extends WritingSystem
   /// The [date] parameter is required and should be a string representing the
   /// date of addition of the script. The optional [pva] parameter is a string
   /// representing the property value alias for the script.
+  /// {@endtemplate}
   const Script({
     required super.name,
     required this.code,
@@ -28,6 +30,16 @@ class Script extends WritingSystem
           codeNumeric.length == IsoStandardized.codeLength,
           """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
         );
+
+  /// {@macro permissive_constructor}
+  /// {@macro script_constructor}
+  const Script.permissive({
+    required super.name,
+    required this.code,
+    required this.codeNumeric,
+    required this.date,
+    this.pva,
+  });
 
   /// Returns an instance of the [Script] class from a four-character ISO
   /// 15924 code.
