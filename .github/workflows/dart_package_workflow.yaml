@@ -81,7 +81,7 @@ jobs:
           min_coverage: 90
 
       - name: 💯 Upload coverage
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           file: ${{ env.relative_path }}/coverage/lcov.info
           flags: ${{ inputs.package_name }}
