@@ -60,7 +60,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚫 Cancel workflow if tag is not the same as version
-        uses: andymckay/cancel-action@0.3
+        uses: andymckay/cancel-action@0.4
         if: ${{ env.PUBSPEC != env.CHANGELOG || env.PUBSPEC != env.TAG || env.CHANGELOG != env.TAG }}
 
       - name: 💤 Sleep for 10 seconds
