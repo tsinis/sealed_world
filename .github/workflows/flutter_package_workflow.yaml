@@ -68,10 +68,6 @@ jobs:
           exit 1
           fi
 
-      - name: 🔎 Dart Code Metrics
-        if: ${{ github.event_name == 'pull_request' }}
-        run: dart run dart_code_metrics:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib test
-
       - name: 🧪 Run tests
         run: flutter test --coverage
 
@@ -81,6 +77,10 @@ jobs:
           path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.data.dart **/*.l10n.dart"
           min_coverage: 90
+
+      - name: 🔎 Dart Code Metrics
+        if: ${{ github.event_name == 'pull_request' }}
+        run: dart run dart_code_metrics:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib test
 
       - name: 💯 Upload coverage
         uses: codecov/codecov-action@v4
