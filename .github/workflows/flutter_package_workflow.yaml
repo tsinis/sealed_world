@@ -68,6 +68,9 @@ jobs:
           exit 1
           fi
 
+      - name: 🛂 Set up file system write permissions
+        run: sudo chmod -R 777 $(pwd)
+
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
         run: dart run dart_code_metrics:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib test
