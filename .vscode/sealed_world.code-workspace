@@ -24,6 +24,10 @@
     {
       "name": "Languages",
       "path": "../packages/sealed_languages"
+    },
+    {
+      "name": "Tests",
+      "path": "../packages/_sealed_world_tests"
     }
   ],
   "settings": {
@@ -217,6 +221,12 @@
       },
       {
         "type": "shell",
+        "command": "dart pub publish --dry-run",
+        "label": "Dart Publish Dry Run",
+        "presentation": { "revealProblems": "onProblem" }
+      },
+      {
+        "type": "shell",
         "command": "dart run build_runner build -d",
         "problemMatcher": ["$dart-build_runner"],
         "group": "build",
@@ -224,7 +234,7 @@
       },
       {
         "type": "shell",
-        "command": "dart test --fail-fast --coverage=coverage",
+        "command": "dart test --fail-fast --chain-stack-traces --coverage=coverage",
         "label": "Dart Test"
       },
       {
@@ -352,12 +362,13 @@
           "Flutter Test",
           "Dart Format",
           "Flutter Analyze",
+          "Dart Publish Dry Run",
           "Dart Code Metrics Analyze",
           "Dart Code Metrics Nullable",
           "Dart Code Metrics Unused Code",
           "Dart Code Metrics Unused Files"
         ],
-        "label": "Flutter Pub Get, Test, Format, Analyze, DCM"
+        "label": "Flutter Pub Get, Test, Format, Analyze, Dry Run, DCM"
       },
       {
         "type": "shell",
