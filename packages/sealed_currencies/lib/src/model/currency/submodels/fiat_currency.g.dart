@@ -1726,3 +1726,482 @@ extension FiatCurrencyFunctional on FiatCurrency {
         _ => orElse?.call(),
       };
 }
+
+extension FiatCurrencyBoolGetters on FiatCurrency {
+  /// Checks if this [FiatCurrency] instance is United Arab Emirates Dirham.
+  bool get isAed => this == const FiatAed();
+
+  /// Checks if this [FiatCurrency] instance is Afghan Afghani.
+  bool get isAfn => this == const FiatAfn();
+
+  /// Checks if this [FiatCurrency] instance is Albanian Lek.
+  bool get isAll => this == const FiatAll();
+
+  /// Checks if this [FiatCurrency] instance is Armenian Dram.
+  bool get isAmd => this == const FiatAmd();
+
+  /// Checks if this [FiatCurrency] instance is Netherlands Antillean Guilder.
+  bool get isAng => this == const FiatAng();
+
+  /// Checks if this [FiatCurrency] instance is Angolan Kwanza.
+  bool get isAoa => this == const FiatAoa();
+
+  /// Checks if this [FiatCurrency] instance is Argentine Peso.
+  bool get isArs => this == const FiatArs();
+
+  /// Checks if this [FiatCurrency] instance is Australian Dollar.
+  bool get isAud => this == const FiatAud();
+
+  /// Checks if this [FiatCurrency] instance is Aruban Florin.
+  bool get isAwg => this == const FiatAwg();
+
+  /// Checks if this [FiatCurrency] instance is Azerbaijani Manat.
+  bool get isAzn => this == const FiatAzn();
+
+  /// Checks if this [FiatCurrency] instance is Convertible Mark.
+  bool get isBam => this == const FiatBam();
+
+  /// Checks if this [FiatCurrency] instance is Barbadian Dollar.
+  bool get isBbd => this == const FiatBbd();
+
+  /// Checks if this [FiatCurrency] instance is Bangladeshi Taka.
+  bool get isBdt => this == const FiatBdt();
+
+  /// Checks if this [FiatCurrency] instance is Bulgarian Lev.
+  bool get isBgn => this == const FiatBgn();
+
+  /// Checks if this [FiatCurrency] instance is Bahraini Dinar.
+  bool get isBhd => this == const FiatBhd();
+
+  /// Checks if this [FiatCurrency] instance is Burundian Franc.
+  bool get isBif => this == const FiatBif();
+
+  /// Checks if this [FiatCurrency] instance is Bermudian Dollar.
+  bool get isBmd => this == const FiatBmd();
+
+  /// Checks if this [FiatCurrency] instance is Brunei Dollar.
+  bool get isBnd => this == const FiatBnd();
+
+  /// Checks if this [FiatCurrency] instance is Bolivian Boliviano.
+  bool get isBob => this == const FiatBob();
+
+  /// Checks if this [FiatCurrency] instance is Brazilian Real.
+  bool get isBrl => this == const FiatBrl();
+
+  /// Checks if this [FiatCurrency] instance is Bahamian Dollar.
+  bool get isBsd => this == const FiatBsd();
+
+  /// Checks if this [FiatCurrency] instance is Bhutanese Ngultrum.
+  bool get isBtn => this == const FiatBtn();
+
+  /// Checks if this [FiatCurrency] instance is Botswanan Pula.
+  bool get isBwp => this == const FiatBwp();
+
+  /// Checks if this [FiatCurrency] instance is Belarusian Ruble.
+  bool get isByn => this == const FiatByn();
+
+  /// Checks if this [FiatCurrency] instance is Belize Dollar.
+  bool get isBzd => this == const FiatBzd();
+
+  /// Checks if this [FiatCurrency] instance is Canadian Dollar.
+  bool get isCad => this == const FiatCad();
+
+  /// Checks if this [FiatCurrency] instance is Congolese Franc.
+  bool get isCdf => this == const FiatCdf();
+
+  /// Checks if this [FiatCurrency] instance is Swiss Franc.
+  bool get isChf => this == const FiatChf();
+
+  /// Checks if this [FiatCurrency] instance is Chilean Unit of Account (UF).
+  bool get isClf => this == const FiatClf();
+
+  /// Checks if this [FiatCurrency] instance is Chilean Peso.
+  bool get isClp => this == const FiatClp();
+
+  /// Checks if this [FiatCurrency] instance is Chinese Renminbi Yuan.
+  bool get isCny => this == const FiatCny();
+
+  /// Checks if this [FiatCurrency] instance is Colombian Peso.
+  bool get isCop => this == const FiatCop();
+
+  /// Checks if this [FiatCurrency] instance is Costa Rican Colón.
+  bool get isCrc => this == const FiatCrc();
+
+  /// Checks if this [FiatCurrency] instance is Cuban Convertible Peso.
+  bool get isCuc => this == const FiatCuc();
+
+  /// Checks if this [FiatCurrency] instance is Cuban Peso.
+  bool get isCup => this == const FiatCup();
+
+  /// Checks if this [FiatCurrency] instance is Cape Verdean Escudo.
+  bool get isCve => this == const FiatCve();
+
+  /// Checks if this [FiatCurrency] instance is Czech Koruna.
+  bool get isCzk => this == const FiatCzk();
+
+  /// Checks if this [FiatCurrency] instance is Djiboutian Franc.
+  bool get isDjf => this == const FiatDjf();
+
+  /// Checks if this [FiatCurrency] instance is Danish Krone.
+  bool get isDkk => this == const FiatDkk();
+
+  /// Checks if this [FiatCurrency] instance is Dominican Peso.
+  bool get isDop => this == const FiatDop();
+
+  /// Checks if this [FiatCurrency] instance is Algerian Dinar.
+  bool get isDzd => this == const FiatDzd();
+
+  /// Checks if this [FiatCurrency] instance is Egyptian Pound.
+  bool get isEgp => this == const FiatEgp();
+
+  /// Checks if this [FiatCurrency] instance is Eritrean Nakfa.
+  bool get isErn => this == const FiatErn();
+
+  /// Checks if this [FiatCurrency] instance is Ethiopian Birr.
+  bool get isEtb => this == const FiatEtb();
+
+  /// Checks if this [FiatCurrency] instance is Euro.
+  bool get isEur => this == const FiatEur();
+
+  /// Checks if this [FiatCurrency] instance is Fijian Dollar.
+  bool get isFjd => this == const FiatFjd();
+
+  /// Checks if this [FiatCurrency] instance is Falkland Pound.
+  bool get isFkp => this == const FiatFkp();
+
+  /// Checks if this [FiatCurrency] instance is British Pound.
+  bool get isGbp => this == const FiatGbp();
+
+  /// Checks if this [FiatCurrency] instance is Georgian Lari.
+  bool get isGel => this == const FiatGel();
+
+  /// Checks if this [FiatCurrency] instance is Ghanaian Cedi.
+  bool get isGhs => this == const FiatGhs();
+
+  /// Checks if this [FiatCurrency] instance is Gibraltar Pound.
+  bool get isGip => this == const FiatGip();
+
+  /// Checks if this [FiatCurrency] instance is Gambian Dalasi.
+  bool get isGmd => this == const FiatGmd();
+
+  /// Checks if this [FiatCurrency] instance is Guinean Franc.
+  bool get isGnf => this == const FiatGnf();
+
+  /// Checks if this [FiatCurrency] instance is Guatemalan Quetzal.
+  bool get isGtq => this == const FiatGtq();
+
+  /// Checks if this [FiatCurrency] instance is Guyanaese Dollar.
+  bool get isGyd => this == const FiatGyd();
+
+  /// Checks if this [FiatCurrency] instance is Hong Kong Dollar.
+  bool get isHkd => this == const FiatHkd();
+
+  /// Checks if this [FiatCurrency] instance is Honduran Lempira.
+  bool get isHnl => this == const FiatHnl();
+
+  /// Checks if this [FiatCurrency] instance is Croatian Kuna.
+  bool get isHrk => this == const FiatHrk();
+
+  /// Checks if this [FiatCurrency] instance is Haitian Gourde.
+  bool get isHtg => this == const FiatHtg();
+
+  /// Checks if this [FiatCurrency] instance is Hungarian Forint.
+  bool get isHuf => this == const FiatHuf();
+
+  /// Checks if this [FiatCurrency] instance is Indonesian Rupiah.
+  bool get isIdr => this == const FiatIdr();
+
+  /// Checks if this [FiatCurrency] instance is Israeli New Shekel.
+  bool get isIls => this == const FiatIls();
+
+  /// Checks if this [FiatCurrency] instance is Indian Rupee.
+  bool get isInr => this == const FiatInr();
+
+  /// Checks if this [FiatCurrency] instance is Iraqi Dinar.
+  bool get isIqd => this == const FiatIqd();
+
+  /// Checks if this [FiatCurrency] instance is Iranian Rial.
+  bool get isIrr => this == const FiatIrr();
+
+  /// Checks if this [FiatCurrency] instance is Icelandic Króna.
+  bool get isIsk => this == const FiatIsk();
+
+  /// Checks if this [FiatCurrency] instance is Jamaican Dollar.
+  bool get isJmd => this == const FiatJmd();
+
+  /// Checks if this [FiatCurrency] instance is Jordanian Dinar.
+  bool get isJod => this == const FiatJod();
+
+  /// Checks if this [FiatCurrency] instance is Japanese Yen.
+  bool get isJpy => this == const FiatJpy();
+
+  /// Checks if this [FiatCurrency] instance is Kenyan Shilling.
+  bool get isKes => this == const FiatKes();
+
+  /// Checks if this [FiatCurrency] instance is Kyrgystani Som.
+  bool get isKgs => this == const FiatKgs();
+
+  /// Checks if this [FiatCurrency] instance is Cambodian Riel.
+  bool get isKhr => this == const FiatKhr();
+
+  /// Checks if this [FiatCurrency] instance is Comorian Franc.
+  bool get isKmf => this == const FiatKmf();
+
+  /// Checks if this [FiatCurrency] instance is North Korean Won.
+  bool get isKpw => this == const FiatKpw();
+
+  /// Checks if this [FiatCurrency] instance is South Korean Won.
+  bool get isKrw => this == const FiatKrw();
+
+  /// Checks if this [FiatCurrency] instance is Kuwaiti Dinar.
+  bool get isKwd => this == const FiatKwd();
+
+  /// Checks if this [FiatCurrency] instance is Cayman Islands Dollar.
+  bool get isKyd => this == const FiatKyd();
+
+  /// Checks if this [FiatCurrency] instance is Kazakhstani Tenge.
+  bool get isKzt => this == const FiatKzt();
+
+  /// Checks if this [FiatCurrency] instance is Laotian Kip.
+  bool get isLak => this == const FiatLak();
+
+  /// Checks if this [FiatCurrency] instance is Lebanese Pound.
+  bool get isLbp => this == const FiatLbp();
+
+  /// Checks if this [FiatCurrency] instance is Sri Lankan Rupee.
+  bool get isLkr => this == const FiatLkr();
+
+  /// Checks if this [FiatCurrency] instance is Liberian Dollar.
+  bool get isLrd => this == const FiatLrd();
+
+  /// Checks if this [FiatCurrency] instance is Lesotho Loti.
+  bool get isLsl => this == const FiatLsl();
+
+  /// Checks if this [FiatCurrency] instance is Libyan Dinar.
+  bool get isLyd => this == const FiatLyd();
+
+  /// Checks if this [FiatCurrency] instance is Moroccan Dirham.
+  bool get isMad => this == const FiatMad();
+
+  /// Checks if this [FiatCurrency] instance is Moldovan Leu.
+  bool get isMdl => this == const FiatMdl();
+
+  /// Checks if this [FiatCurrency] instance is Malagasy Ariary.
+  bool get isMga => this == const FiatMga();
+
+  /// Checks if this [FiatCurrency] instance is Macedonian Denar.
+  bool get isMkd => this == const FiatMkd();
+
+  /// Checks if this [FiatCurrency] instance is Myanmar Kyat.
+  bool get isMmk => this == const FiatMmk();
+
+  /// Checks if this [FiatCurrency] instance is Mongolian Tugrik.
+  bool get isMnt => this == const FiatMnt();
+
+  /// Checks if this [FiatCurrency] instance is Macanese Pataca.
+  bool get isMop => this == const FiatMop();
+
+  /// Checks if this [FiatCurrency] instance is Mauritanian Ouguiya.
+  bool get isMru => this == const FiatMru();
+
+  /// Checks if this [FiatCurrency] instance is Mauritian Rupee.
+  bool get isMur => this == const FiatMur();
+
+  /// Checks if this [FiatCurrency] instance is Maldivian Rufiyaa.
+  bool get isMvr => this == const FiatMvr();
+
+  /// Checks if this [FiatCurrency] instance is Malawian Kwacha.
+  bool get isMwk => this == const FiatMwk();
+
+  /// Checks if this [FiatCurrency] instance is Mexican Peso.
+  bool get isMxn => this == const FiatMxn();
+
+  /// Checks if this [FiatCurrency] instance is Malaysian Ringgit.
+  bool get isMyr => this == const FiatMyr();
+
+  /// Checks if this [FiatCurrency] instance is Mozambican Metical.
+  bool get isMzn => this == const FiatMzn();
+
+  /// Checks if this [FiatCurrency] instance is Namibian Dollar.
+  bool get isNad => this == const FiatNad();
+
+  /// Checks if this [FiatCurrency] instance is Nigerian Naira.
+  bool get isNgn => this == const FiatNgn();
+
+  /// Checks if this [FiatCurrency] instance is Nicaraguan Córdoba.
+  bool get isNio => this == const FiatNio();
+
+  /// Checks if this [FiatCurrency] instance is Norwegian Krone.
+  bool get isNok => this == const FiatNok();
+
+  /// Checks if this [FiatCurrency] instance is Nepalese Rupee.
+  bool get isNpr => this == const FiatNpr();
+
+  /// Checks if this [FiatCurrency] instance is New Zealand Dollar.
+  bool get isNzd => this == const FiatNzd();
+
+  /// Checks if this [FiatCurrency] instance is Omani Rial.
+  bool get isOmr => this == const FiatOmr();
+
+  /// Checks if this [FiatCurrency] instance is Panamanian Balboa.
+  bool get isPab => this == const FiatPab();
+
+  /// Checks if this [FiatCurrency] instance is Peruvian Sol.
+  bool get isPen => this == const FiatPen();
+
+  /// Checks if this [FiatCurrency] instance is Papua New Guinean Kina.
+  bool get isPgk => this == const FiatPgk();
+
+  /// Checks if this [FiatCurrency] instance is Philippine Peso.
+  bool get isPhp => this == const FiatPhp();
+
+  /// Checks if this [FiatCurrency] instance is Pakistani Rupee.
+  bool get isPkr => this == const FiatPkr();
+
+  /// Checks if this [FiatCurrency] instance is Polish Zloty.
+  bool get isPln => this == const FiatPln();
+
+  /// Checks if this [FiatCurrency] instance is Paraguayan Guarani.
+  bool get isPyg => this == const FiatPyg();
+
+  /// Checks if this [FiatCurrency] instance is Qatari Riyal.
+  bool get isQar => this == const FiatQar();
+
+  /// Checks if this [FiatCurrency] instance is Romanian Leu.
+  bool get isRon => this == const FiatRon();
+
+  /// Checks if this [FiatCurrency] instance is Serbian Dinar.
+  bool get isRsd => this == const FiatRsd();
+
+  /// Checks if this [FiatCurrency] instance is Russian Ruble.
+  bool get isRub => this == const FiatRub();
+
+  /// Checks if this [FiatCurrency] instance is Rwandan Franc.
+  bool get isRwf => this == const FiatRwf();
+
+  /// Checks if this [FiatCurrency] instance is Saudi Riyal.
+  bool get isSar => this == const FiatSar();
+
+  /// Checks if this [FiatCurrency] instance is Solomon Islands Dollar.
+  bool get isSbd => this == const FiatSbd();
+
+  /// Checks if this [FiatCurrency] instance is Seychellois Rupee.
+  bool get isScr => this == const FiatScr();
+
+  /// Checks if this [FiatCurrency] instance is Sudanese Pound.
+  bool get isSdg => this == const FiatSdg();
+
+  /// Checks if this [FiatCurrency] instance is Swedish Krona.
+  bool get isSek => this == const FiatSek();
+
+  /// Checks if this [FiatCurrency] instance is Singapore Dollar.
+  bool get isSgd => this == const FiatSgd();
+
+  /// Checks if this [FiatCurrency] instance is St. Helena Pound.
+  bool get isShp => this == const FiatShp();
+
+  /// Checks if this [FiatCurrency] instance is Sierra Leonean Leone.
+  bool get isSle => this == const FiatSle();
+
+  /// Checks if this [FiatCurrency] instance is Sierra Leonean Leone (Old).
+  bool get isSll => this == const FiatSll();
+
+  /// Checks if this [FiatCurrency] instance is Somali Shilling.
+  bool get isSos => this == const FiatSos();
+
+  /// Checks if this [FiatCurrency] instance is Surinamese Dollar.
+  bool get isSrd => this == const FiatSrd();
+
+  /// Checks if this [FiatCurrency] instance is South Sudanese Pound.
+  bool get isSsp => this == const FiatSsp();
+
+  /// Checks if this [FiatCurrency] instance is São Tomé and Príncipe Second Dobra.
+  bool get isStn => this == const FiatStn();
+
+  /// Checks if this [FiatCurrency] instance is Salvadoran Colón.
+  bool get isSvc => this == const FiatSvc();
+
+  /// Checks if this [FiatCurrency] instance is Syrian Pound.
+  bool get isSyp => this == const FiatSyp();
+
+  /// Checks if this [FiatCurrency] instance is Swazi Lilangeni.
+  bool get isSzl => this == const FiatSzl();
+
+  /// Checks if this [FiatCurrency] instance is Thai Baht.
+  bool get isThb => this == const FiatThb();
+
+  /// Checks if this [FiatCurrency] instance is Tajikistani Somoni.
+  bool get isTjs => this == const FiatTjs();
+
+  /// Checks if this [FiatCurrency] instance is Turkmenistani Manat.
+  bool get isTmt => this == const FiatTmt();
+
+  /// Checks if this [FiatCurrency] instance is Tunisian Dinar.
+  bool get isTnd => this == const FiatTnd();
+
+  /// Checks if this [FiatCurrency] instance is Tongan Paʻanga.
+  bool get isTop => this == const FiatTop();
+
+  /// Checks if this [FiatCurrency] instance is Turkish Lira.
+  bool get isTry => this == const FiatTry();
+
+  /// Checks if this [FiatCurrency] instance is Trinidad & Tobago Dollar.
+  bool get isTtd => this == const FiatTtd();
+
+  /// Checks if this [FiatCurrency] instance is New Taiwan Dollar.
+  bool get isTwd => this == const FiatTwd();
+
+  /// Checks if this [FiatCurrency] instance is Tanzanian Shilling.
+  bool get isTzs => this == const FiatTzs();
+
+  /// Checks if this [FiatCurrency] instance is Ukrainian Hryvnia.
+  bool get isUah => this == const FiatUah();
+
+  /// Checks if this [FiatCurrency] instance is Ugandan Shilling.
+  bool get isUgx => this == const FiatUgx();
+
+  /// Checks if this [FiatCurrency] instance is United States Dollar.
+  bool get isUsd => this == const FiatUsd();
+
+  /// Checks if this [FiatCurrency] instance is Uruguayan Peso.
+  bool get isUyu => this == const FiatUyu();
+
+  /// Checks if this [FiatCurrency] instance is Uzbekistani Som.
+  bool get isUzs => this == const FiatUzs();
+
+  /// Checks if this [FiatCurrency] instance is Venezuelan Bolívar Soberano.
+  bool get isVes => this == const FiatVes();
+
+  /// Checks if this [FiatCurrency] instance is Vietnamese Dong.
+  bool get isVnd => this == const FiatVnd();
+
+  /// Checks if this [FiatCurrency] instance is Vanuatu Vatu.
+  bool get isVuv => this == const FiatVuv();
+
+  /// Checks if this [FiatCurrency] instance is Samoan Tala.
+  bool get isWst => this == const FiatWst();
+
+  /// Checks if this [FiatCurrency] instance is Central African Cfa Franc.
+  bool get isXaf => this == const FiatXaf();
+
+  /// Checks if this [FiatCurrency] instance is East Caribbean Dollar.
+  bool get isXcd => this == const FiatXcd();
+
+  /// Checks if this [FiatCurrency] instance is West African Cfa Franc.
+  bool get isXof => this == const FiatXof();
+
+  /// Checks if this [FiatCurrency] instance is Cfp Franc.
+  bool get isXpf => this == const FiatXpf();
+
+  /// Checks if this [FiatCurrency] instance is Yemeni Rial.
+  bool get isYer => this == const FiatYer();
+
+  /// Checks if this [FiatCurrency] instance is South African Rand.
+  bool get isZar => this == const FiatZar();
+
+  /// Checks if this [FiatCurrency] instance is Zambian Kwacha.
+  bool get isZmw => this == const FiatZmw();
+
+  /// Checks if this [FiatCurrency] instance is Zimbabwean Dollar.
+  bool get isZwl => this == const FiatZwl();
+}
