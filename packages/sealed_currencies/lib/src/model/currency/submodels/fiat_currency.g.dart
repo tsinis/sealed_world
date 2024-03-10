@@ -1899,9 +1899,6 @@ extension FiatCurrencyBoolGetters on FiatCurrency {
   /// Checks if this [FiatCurrency] instance is Honduran Lempira.
   bool get isHnl => this == const FiatHnl();
 
-  /// Checks if this [FiatCurrency] instance is Croatian Kuna.
-  bool get isHrk => this == const FiatHrk();
-
   /// Checks if this [FiatCurrency] instance is Haitian Gourde.
   bool get isHtg => this == const FiatHtg();
 
