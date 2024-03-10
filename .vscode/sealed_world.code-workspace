@@ -119,6 +119,8 @@
     "dart.previewFlutterUiGuidesCustomTracking": true,
     "flutterPrintTools.debugPrint": false,
     "git.autofetchPeriod": 360,
+    "markiscodecoverage.enableOnStartup": true,
+    "markiscodecoverage.coverageThreshold": 95,
     "git.branchProtection": ["main"],
     "git.branchValidationRegex": "^(docs|feat|fix|bug|chore|ci|style|refactor|test|perf)/[a-zA-Z0-9-/]+$",
     "git.detectSubmodulesLimit": 4,
@@ -329,14 +331,16 @@
       },
       {
         "type": "shell",
+        "label": "Update Dart Coverage",
+        "dependsOrder": "sequence",
+        "dependsOn": ["Dart Test", "Format Dart Coverage", "Generate Coverage"],
+        "presentation": { "revealProblems": "onProblem", "close": true }
+      },
+      {
+        "type": "shell",
         "label": "Show Dart Coverage",
         "dependsOrder": "sequence",
-        "dependsOn": [
-          "Dart Test",
-          "Format Dart Coverage",
-          "Generate Coverage",
-          "Open Coverage Report"
-        ],
+        "dependsOn": ["Update Dart Coverage", "Open Coverage Report"],
         "presentation": { "revealProblems": "onProblem", "close": true }
       },
       {
