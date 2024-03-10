@@ -3,7 +3,6 @@ import "dart:async";
 import "dart:math";
 
 import "package:meta/meta.dart";
-import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 const _defaultDurationLimitInMs = 2; // In milliseconds.
@@ -22,7 +21,7 @@ void performanceTest(
   Timeout? timeout,
   Object? skip,
   Object? tags,
-  JsonObjectMap? onPlatform,
+  Map<String, Object?>? onPlatform,
   int retry = _defaultRetryCount,
 }) =>
     test(
@@ -61,7 +60,7 @@ void assertTest(
   Timeout? timeout,
   Object? skip,
   Object? tags,
-  JsonObjectMap? onPlatform,
+  Map<String, Object?>? onPlatform,
   int? retry,
 }) =>
     test(
@@ -96,7 +95,7 @@ void randomElementTest<T extends Object>(
   Timeout? timeout,
   Object? skip,
   Object? tags,
-  JsonObjectMap? onPlatform,
+  Map<String, Object?>? onPlatform,
   int retry = _defaultRetryCount,
 }) =>
     performanceTest(
