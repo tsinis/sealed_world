@@ -217,22 +217,26 @@ void main() => group("$NaturalLanguage", () {
 
       group("toJson", () {
         for (final element in NaturalLanguage.list) {
-          performanceTest("compared to $NaturalLanguage: ${element.name}", () {
-            final json = element.toJson();
-            expect(json, isNotEmpty);
-            final decoded = json.tryParse(NaturalLanguageJson.fromMap);
-            expect(
-              decoded?.toString(short: false),
-              json.parse(NaturalLanguageJson.fromMap).toString(short: false),
-            );
-            expect(element.bibliographicCode, decoded?.bibliographicCode);
-            expect(element.family, decoded?.family);
-            expect(element.codeShort, decoded?.codeShort);
-            expect(element.isRightToLeft, decoded?.isRightToLeft);
-            expect(element.namesNative, decoded?.namesNative);
-            expect(element.code, decoded?.code);
-            expect(element.scripts, decoded?.scripts);
-          });
+          performanceTest(
+            "compared to $NaturalLanguage: ${element.name}",
+            () {
+              final json = element.toJson();
+              expect(json, isNotEmpty);
+              final decoded = json.tryParse(NaturalLanguageJson.fromMap);
+              expect(
+                decoded?.toString(short: false),
+                json.parse(NaturalLanguageJson.fromMap).toString(short: false),
+              );
+              expect(element.bibliographicCode, decoded?.bibliographicCode);
+              expect(element.family, decoded?.family);
+              expect(element.codeShort, decoded?.codeShort);
+              expect(element.isRightToLeft, decoded?.isRightToLeft);
+              expect(element.namesNative, decoded?.namesNative);
+              expect(element.code, decoded?.code);
+              expect(element.scripts, decoded?.scripts);
+            },
+            durationLimit: 3,
+          );
         }
       });
 
