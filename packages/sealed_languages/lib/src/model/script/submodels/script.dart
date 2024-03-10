@@ -49,13 +49,8 @@ class Script extends WritingSystem
   /// parameter can be used to specify a list of [Script] objects to search
   /// through. This method returns the [Script] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory Script.fromCode(String code, [Iterable<Script> scripts = list]) {
-    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
-
-    return scripts.firstWhere(
-      (script) => script.code.toUpperCase() == code.trim().toUpperCase(),
-    );
-  }
+  factory Script.fromCode(String code, [Iterable<Script> scripts = list]) =>
+      scripts.firstIsoWhereCode(formatToStandardCode(code.trim()));
 
   /// Returns an instance of the [Script] class from a three-digit ISO 15924
   /// code.
@@ -69,12 +64,8 @@ class Script extends WritingSystem
   factory Script.fromCodeNumeric(
     String codeNumeric, [
     Iterable<Script> scripts = list,
-  ]) {
-    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
-
-    return scripts
-        .firstWhere((script) => script.codeNumeric == codeNumeric.trim());
-  }
+  ]) =>
+      scripts.firstIsoWhereCodeOther(codeNumeric);
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
@@ -84,11 +75,10 @@ class Script extends WritingSystem
   /// method returns the [Script] instance that corresponds to the given name,
   /// or throws a [StateError] if no such instance exists.
   factory Script.fromName(String name, [Iterable<Script> scripts = list]) {
-    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
+    final upperCaseName = name.trim().toUpperCase();
 
-    return scripts.firstWhere(
-      (script) => script.name.toUpperCase() == name.trim().toUpperCase(),
-    );
+    return scripts
+        .firstIsoWhere((script) => script.name.toUpperCase() == upperCaseName);
   }
 
   /// Returns an instance of the [Script] class from any valid ISO 15924 code.
@@ -112,8 +102,8 @@ class Script extends WritingSystem
   /// resulting [Script] instance is assigned to the `script` variable.
   factory Script.fromAnyCode(String code, [Iterable<Script> scripts = list]) =>
       code.maybeMapIsoCode(
-        orElse: (_) => Script.fromCode(code, scripts),
-        numeric: (_) => Script.fromCodeNumeric(code, scripts),
+        orElse: (regularCode) => Script.fromCode(regularCode, scripts),
+        numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
       );
 
   /// The regular length of the ISO code (4). However, it's important to note
@@ -161,10 +151,11 @@ class Script extends WritingSystem
   /// instance exists.
   static Script? maybeFromValue<T extends Object>(
     T value, {
-    T? Function(Script lang)? where,
+    T? Function(Script script)? where,
     Iterable<Script> scripts = list,
   }) {
-    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
+    scripts.assertNotEmpty();
+
     for (final script in scripts) {
       final expectedValue = where?.call(script) ?? script.code;
       if (expectedValue == value) return script;
@@ -196,23 +187,71 @@ class Script extends WritingSystem
   /// [Script] instance. The resulting [Script] instance is assigned to the
   /// `script` variable.
   static Script? maybeFromAnyCode(
-    String? code, [
+    Object? code, [
+    Iterable<Script> scripts = list,
+  ]) =>
+      code?.toString().maybeMapIsoCode(
+            orElse: (regularCode) => maybeFromCode(regularCode, scripts),
+            numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
+          );
+
+  /// Returns an instance of the [Script] class from a four-character ISO
+  /// 15924 code if it exists. Returns `null` otherwise.
+  ///
+  /// The [code] parameter is required and should be an object representing the
+  /// four-character ISO 15924 code for the script. The optional [scripts]
+  /// parameter can be used to specify a list of [Script] objects to search
+  /// through.
+  ///
+  /// Example:
+  /// ```dart
+  /// final script = Script.maybeFromCode("Latn");
+  /// ```
+  ///
+  /// In the above example, the `maybeFromCode` static method is called with the
+  /// code "Latn". The resulting [Script] instance (or null) is assigned to the
+  /// `script` variable.
+  static Script? maybeFromCode(
+    Object? code, [
     Iterable<Script> scripts = list,
   ]) {
-    assert(scripts.isNotEmpty, "`scripts` should not be empty!");
-    final trimmedCode = code?.trim().toUpperCase();
-    if (trimmedCode?.isEmpty ?? true) return null;
+    final string = code?.toString().trim() ?? "";
 
-    for (final script in scripts) {
-      final expectedValue = trimmedCode?.maybeMapIsoCode(
-        orElse: (_) => script.code.toUpperCase(),
-        numeric: (_) => script.codeNumeric,
-      );
-      if (expectedValue == trimmedCode) return script;
-    }
-
-    return null;
+    return string.length == Script.codeLength
+        ? scripts.firstIsoWhereCodeOrNull(formatToStandardCode(string))
+        : null;
   }
+
+  /// Returns an instance of the [Script] class from a three-digit ISO 15924
+  /// code if it exists. Returns `null` otherwise.
+  ///
+  /// The [codeNumeric] parameter is required and should be a three-digit object
+  /// representing the ISO 15924 numeric code for the script. The optional
+  /// [scripts] parameter can be used to specify a list of [Script] objects to
+  /// search through.
+  ///
+  /// Example:
+  /// ```dart
+  /// final script = Script.maybeFromCodeNumeric("215");
+  /// ```
+  /// In the above example, the `maybeFromCodeNumeric` static method is called
+  /// with the code "215". The resulting [Script] instance (or null) is assigned
+  /// to the `script` variable.
+  static Script? maybeFromCodeNumeric(
+    Object? codeNumeric, [
+    Iterable<Script> scripts = list,
+  ]) =>
+      scripts.firstIsoWhereCodeOtherOrNull(codeNumeric);
+
+  /// Formats the given [input] to a standard four-character ISO 15924 code.
+  /// Example:
+  /// ```dart
+  /// final script = Script.formatToStandardCode("LATN");
+  /// print(script) // Prints: "Latn"
+  /// ```
+  static String formatToStandardCode(String input) =>
+      // ignore: avoid-substring, no emojis expected here.
+      input[0].toUpperCase() + input.substring(1).toLowerCase();
 
   /// The general standard ISO code for scripts, defined as ISO 15924.
   static const standardGeneralName = "15924";

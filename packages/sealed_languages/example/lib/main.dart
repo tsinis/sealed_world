@@ -15,6 +15,9 @@ void main() {
   final english = NaturalLanguage.fromCode("Eng");
   print("${english.name}: ${english.codeShort}"); // Prints: "English: EN".
 
+  final script = Script.fromCodeNumeric("215");
+  print("${script.name}: ${script.code}"); // Prints: "Latin: Latn".
+
   final russian = NaturalLanguage.fromCodeShort("ru");
   print("${russian.name}: ${russian.code}"); // Prints: "Russian: RUS".
 

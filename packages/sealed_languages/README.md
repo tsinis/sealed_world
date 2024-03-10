@@ -58,6 +58,9 @@ Use `NaturalLanguage` class to get information about languages. Either construct
  final english = NaturalLanguage.fromCode("Eng");
  print("${english.name}: ${english.codeShort}"); // Prints: "English: EN".
 
+ final script = Script.fromCodeNumeric("215");
+ print("${script.name}: ${script.code}"); // Prints: "Latin: Latn".
+
  final maybeCzech = NaturalLanguage.maybeFromValue(
    "CZE",
    where: (language) => language.bibliographicCode,
