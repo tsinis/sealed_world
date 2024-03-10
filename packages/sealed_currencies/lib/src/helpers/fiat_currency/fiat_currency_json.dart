@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-import "../../model/currency.dart";
+import "../../model/currency/currency.dart";
 
 /// Extension on [FiatCurrency] that provides methods for converting
 /// [FiatCurrency] objects to and from JSON maps.

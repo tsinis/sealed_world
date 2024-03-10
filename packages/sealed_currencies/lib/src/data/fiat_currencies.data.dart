@@ -1,5 +1,5 @@
 import "../../currency_translations.dart";
-import "../model/currency.dart";
+import "../model/currency/currency.dart";
 
 /// A class that represents the United Arab Emirates Dirham currency.
 class FiatAed extends FiatCurrency {

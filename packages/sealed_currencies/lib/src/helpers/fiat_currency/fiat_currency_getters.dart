@@ -1,4 +1,4 @@
-import "../../model/currency.dart";
+import "../../model/currency/currency.dart";
 
 /// Provides a set of getters for the [FiatCurrency] class.
 extension FiatCurrencyGetters on FiatCurrency {

@@ -3,7 +3,6 @@ import "dart:async";
 import "dart:math";
 
 import "package:meta/meta.dart";
-import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 const _defaultDurationLimitInMs = 2; // In milliseconds.
@@ -17,12 +16,12 @@ void performanceTest(
   String description,
   // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
   FutureOr Function() body, {
-  int durationLimit = _defaultDurationLimitInMs,
+  num durationLimit = _defaultDurationLimitInMs,
   String? testOn,
   Timeout? timeout,
   Object? skip,
   Object? tags,
-  JsonObjectMap? onPlatform,
+  Map<String, Object?>? onPlatform,
   int retry = _defaultRetryCount,
 }) =>
     test(
@@ -34,7 +33,7 @@ void performanceTest(
 
         stopwatch.stop();
         expect(
-          stopwatch.elapsedMilliseconds <= durationLimit + 1,
+          stopwatch.elapsedMilliseconds <= durationLimit.toInt() + 1,
           isTrue,
           reason: "The test shouldn't have taken longer than $durationLimit ms",
         );
@@ -61,7 +60,7 @@ void assertTest(
   Timeout? timeout,
   Object? skip,
   Object? tags,
-  JsonObjectMap? onPlatform,
+  Map<String, Object?>? onPlatform,
   int? retry,
 }) =>
     test(
@@ -91,12 +90,12 @@ void randomElementTest<T extends Object>(
   Iterable<T> iterable,
   // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
   FutureOr Function(T) body, {
-  int durationLimit = _defaultDurationLimitInMs,
+  num durationLimit = _defaultDurationLimitInMs,
   String? testOn,
   Timeout? timeout,
   Object? skip,
   Object? tags,
-  JsonObjectMap? onPlatform,
+  Map<String, Object?>? onPlatform,
   int retry = _defaultRetryCount,
 }) =>
     performanceTest(

@@ -1,6 +1,6 @@
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_format.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_getters.dart";
-import "package:sealed_currencies/src/model/currency.dart";
+import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:test/test.dart";
 
 void main() => group("FiatCurrencyFormat", () {

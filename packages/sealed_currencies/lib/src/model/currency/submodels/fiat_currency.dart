@@ -109,12 +109,8 @@ class FiatCurrency extends Currency
   factory FiatCurrency.fromCode(
     String code, [
     Iterable<FiatCurrency> currencies = listExtended,
-  ]) {
-    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
-
-    return currencies
-        .firstWhere((currency) => currency.code == code.trim().toUpperCase());
-  }
+  ]) =>
+      currencies.firstIsoWhereCode(code.toUpperCase());
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
@@ -127,13 +123,8 @@ class FiatCurrency extends Currency
   factory FiatCurrency.fromCodeNumeric(
     String codeNumeric, [
     Iterable<FiatCurrency> currencies = listExtended,
-  ]) {
-    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
-
-    return currencies.firstWhere(
-      (currency) => currency.codeNumeric == codeNumeric.trim(),
-    );
-  }
+  ]) =>
+      currencies.firstIsoWhereCodeOther(codeNumeric);
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
@@ -147,10 +138,10 @@ class FiatCurrency extends Currency
     String name, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) {
-    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+    final upperCaseName = name.trim().toUpperCase();
 
-    return currencies.firstWhere(
-      (currency) => currency.name.toUpperCase() == name.trim().toUpperCase(),
+    return currencies.firstIsoWhere(
+      (currency) => currency.name.toUpperCase() == upperCaseName,
     );
   }
 
@@ -180,8 +171,8 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency> currencies = listExtended,
   ]) =>
       code.maybeMapIsoCode(
-        orElse: (_) => FiatCurrency.fromCode(code, currencies),
-        numeric: (_) => FiatCurrency.fromCodeNumeric(code, currencies),
+        orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
+        numeric: (numeric) => FiatCurrency.fromCodeNumeric(numeric, currencies),
       );
 
   /// Alternative symbols for this currency or `null` if no such symbols exists.
@@ -226,7 +217,7 @@ class FiatCurrency extends Currency
   static const dot = ".";
 
   @override
-  String? get codeOther => codeNumeric;
+  String get codeOther => codeNumeric;
 
   /// Returns a string representation of this instance.
   @override
@@ -264,7 +255,8 @@ class FiatCurrency extends Currency
     T? Function(FiatCurrency currency)? where,
     Iterable<FiatCurrency> currencies = listExtended,
   }) {
-    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
+    currencies.assertNotEmpty();
+
     for (final currency in currencies) {
       final expectedValue = where?.call(currency) ?? currency.code;
       if (expectedValue == value) return currency;
@@ -296,22 +288,52 @@ class FiatCurrency extends Currency
   /// property of each [FiatCurrency] instance. The resulting [FiatCurrency]
   /// instance is assigned to the `currency` variable.
   static FiatCurrency? maybeFromAnyCode(
-    String? code, [
+    Object? code, [
+    Iterable<FiatCurrency> currencies = listExtended,
+  ]) =>
+      code?.toString().maybeMapIsoCode(
+            orElse: (regular) => maybeFromCode(regular, currencies),
+            numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
+          );
+
+  /// Returns a [FiatCurrency] instance from an letter ISO 4217 code, or
+  /// `null` if no such instance exists.
+  ///
+  /// The [code] parameter is required and should be a three-letter object
+  /// representing the letter ISO 4217 code for the currency. The optional
+  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
+  /// objects to search through. This method returns the [FiatCurrency] instance
+  /// that corresponds to the given code, or `null` if no such
+  /// instance exists.
+  static FiatCurrency? maybeFromCode(
+    Object? code, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) {
-    assert(currencies.isNotEmpty, "`currencies` should not be empty!");
-    final trimmedCode = code?.trim().toUpperCase();
-    if (trimmedCode?.isEmpty ?? true) return null;
+    final string = code?.toString().trim() ?? "";
 
-    for (final currency in currencies) {
-      final expectedValue = trimmedCode?.maybeMapIsoCode(
-        orElse: (_) => currency.code,
-        numeric: (_) => currency.codeNumeric,
-      );
-      if (expectedValue == trimmedCode) return currency;
-    }
+    return string.length == IsoStandardized.codeLength
+        ? currencies.firstIsoWhereCodeOrNull(string.toUpperCase())
+        : null;
+  }
 
-    return null;
+  /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code, or
+  /// `null` if no such instance exists.
+  ///
+  /// The [codeNumeric] parameter is required and should be a three-letter
+  /// object representing the numeric ISO 4217 code for the currency.The
+  /// optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through. This method returns the
+  /// [FiatCurrency] instance that corresponds to the given code,
+  /// or `null` if no such instance exists.
+  static FiatCurrency? maybeFromCodeNumeric(
+    Object? codeNumeric, [
+    Iterable<FiatCurrency> currencies = listExtended,
+  ]) {
+    final string = codeNumeric?.toString().trim() ?? "";
+
+    return string.length == IsoStandardized.codeLength
+        ? currencies.firstIsoWhereCodeOtherOrNull(string)
+        : null;
   }
 
   /// The general standard ISO code for currencies, defined as ISO 4217.

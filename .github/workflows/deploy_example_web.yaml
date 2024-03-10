@@ -37,7 +37,7 @@ jobs:
         run: flutter build web --release --base-href=/sealed_world/ --wasm
 
       - name: 🗑️ Remove unnecessary assets
-        working-directory: packages/world_countries/example/build/web_wasm
+        working-directory: packages/world_countries/example/build/web
         run: rm -rf assets/packages && rm -rf assets/assets
 
       - name: 🛫 Deploy website to GH Pages
