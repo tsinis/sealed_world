@@ -14,36 +14,36 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 24
     steps:
-    - name: 📚 Git checkout
-      uses: actions/checkout@v4.1.1
+      - name: 📚 Git checkout
+        uses: actions/checkout@v4.1.1
 
-    - name: 🐦 Setup Flutter
-      uses: subosito/flutter-action@v2.13.0
-      with:
-        cache: true
-        channel: "master"
-        cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2.13.0
+        with:
+          cache: true
+          channel: "master"
+          cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
-    - name: 📦 Install dependencies
-      working-directory: packages/world_countries/example
-      run: flutter pub get
+      - name: 📦 Install dependencies
+        working-directory: packages/world_countries/example
+        run: flutter pub get
 
-    - name: 🧼 Clean unused font families
-      working-directory: packages/world_countries/example
-      run: dart run world_countries:clean_build
+      - name: 🧼 Clean unused font families
+        working-directory: packages/world_countries/example
+        run: dart run world_countries:clean_build
 
-    - name: 🛠️ Build for web
-      working-directory: packages/world_countries/example
-      run: flutter build web --release --base-href=/sealed_world/ --wasm --omit-type-checks --wasm-opt full
+      - name: 🛠️ Build for web
+        working-directory: packages/world_countries/example
+        run: flutter build web --release --base-href=/sealed_world/ --wasm
 
-    - name: 🗑️ Remove unnecessary assets
-      working-directory: packages/world_countries/example/build/web_wasm
-      run: rm -rf assets/packages && rm -rf assets/assets
+      - name: 🗑️ Remove unnecessary assets
+        working-directory: packages/world_countries/example/build/web_wasm
+        run: rm -rf assets/packages && rm -rf assets/assets
 
-    - name: 🛫 Deploy website to GH Pages
-      uses: s0/git-publish-subdir-action@v2.6.0
-      env:
-        REPO: self
-        BRANCH: gh-pages
-        FOLDER: packages/world_countries/example/build/web_wasm
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🛫 Deploy website to GH Pages
+        uses: s0/git-publish-subdir-action@v2.6.0
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: packages/world_countries/example/build/web_wasm
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

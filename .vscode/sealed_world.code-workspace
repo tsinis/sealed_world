@@ -24,6 +24,10 @@
     {
       "name": "Languages",
       "path": "../packages/sealed_languages"
+    },
+    {
+      "name": "Tests",
+      "path": "../packages/_sealed_world_tests"
     }
   ],
   "settings": {
@@ -115,6 +119,8 @@
     "dart.previewFlutterUiGuidesCustomTracking": true,
     "flutterPrintTools.debugPrint": false,
     "git.autofetchPeriod": 360,
+    "markiscodecoverage.enableOnStartup": true,
+    "markiscodecoverage.coverageThreshold": 95,
     "git.branchProtection": ["main"],
     "git.branchValidationRegex": "^(docs|feat|fix|bug|chore|ci|style|refactor|test|perf)/[a-zA-Z0-9-/]+$",
     "git.detectSubmodulesLimit": 4,
@@ -217,6 +223,12 @@
       },
       {
         "type": "shell",
+        "command": "dart pub publish --dry-run",
+        "label": "Dart Publish Dry Run",
+        "presentation": { "revealProblems": "onProblem" }
+      },
+      {
+        "type": "shell",
         "command": "dart run build_runner build -d",
         "problemMatcher": ["$dart-build_runner"],
         "group": "build",
@@ -224,7 +236,7 @@
       },
       {
         "type": "shell",
-        "command": "dart test --fail-fast --coverage=coverage",
+        "command": "dart test --fail-fast --chain-stack-traces --coverage=coverage",
         "label": "Dart Test"
       },
       {
@@ -319,14 +331,16 @@
       },
       {
         "type": "shell",
+        "label": "Update Dart Coverage",
+        "dependsOrder": "sequence",
+        "dependsOn": ["Dart Test", "Format Dart Coverage", "Generate Coverage"],
+        "presentation": { "revealProblems": "onProblem", "close": true }
+      },
+      {
+        "type": "shell",
         "label": "Show Dart Coverage",
         "dependsOrder": "sequence",
-        "dependsOn": [
-          "Dart Test",
-          "Format Dart Coverage",
-          "Generate Coverage",
-          "Open Coverage Report"
-        ],
+        "dependsOn": ["Update Dart Coverage", "Open Coverage Report"],
         "presentation": { "revealProblems": "onProblem", "close": true }
       },
       {
@@ -352,12 +366,13 @@
           "Flutter Test",
           "Dart Format",
           "Flutter Analyze",
+          "Dart Publish Dry Run",
           "Dart Code Metrics Analyze",
           "Dart Code Metrics Nullable",
           "Dart Code Metrics Unused Code",
           "Dart Code Metrics Unused Files"
         ],
-        "label": "Flutter Pub Get, Test, Format, Analyze, DCM"
+        "label": "Flutter Pub Get, Test, Format, Analyze, Dry Run, DCM"
       },
       {
         "type": "shell",

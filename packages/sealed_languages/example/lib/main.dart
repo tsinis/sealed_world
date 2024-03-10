@@ -12,8 +12,12 @@ void main() {
   // ...
   // Language(name: Walloon), Language(name: Yiddish).
 
-  final english = NaturalLanguage.fromCode("Eng");
-  print("${english.name}: ${english.codeShort}"); // Prints: "English: EN".
+  final fromCode = NaturalLanguage.fromCode("Eng");
+  print("${fromCode.name}: ${fromCode.codeShort}"); // Prints: "English: EN".
+  print(fromCode.isEng); // Prints: "true".
+
+  final script = Script.fromCodeNumeric("215");
+  print("${script.name}: ${script.code}"); // Prints: "Latin: Latn".
 
   final russian = NaturalLanguage.fromCodeShort("ru");
   print("${russian.name}: ${russian.code}"); // Prints: "Russian: RUS".

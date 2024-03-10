@@ -2166,3 +2166,644 @@ extension ScriptFunctional on Script {
         _ => orElse?.call(),
       };
 }
+
+extension ScriptBoolGetters on Script {
+  /// Checks if this [Script] instance is Adlam.
+  bool get isAdlm => this == const ScriptAdlm();
+
+  /// Checks if this [Script] instance is Afaka.
+  bool get isAfak => this == const ScriptAfak();
+
+  /// Checks if this [Script] instance is Caucasian Albanian.
+  bool get isAghb => this == const ScriptAghb();
+
+  /// Checks if this [Script] instance is Ahom, Tai Ahom.
+  bool get isAhom => this == const ScriptAhom();
+
+  /// Checks if this [Script] instance is Arabic.
+  bool get isArab => this == const ScriptArab();
+
+  /// Checks if this [Script] instance is Arabic (Nastaliq variant).
+  bool get isAran => this == const ScriptAran();
+
+  /// Checks if this [Script] instance is Imperial Aramaic.
+  bool get isArmi => this == const ScriptArmi();
+
+  /// Checks if this [Script] instance is Armenian.
+  bool get isArmn => this == const ScriptArmn();
+
+  /// Checks if this [Script] instance is Avestan.
+  bool get isAvst => this == const ScriptAvst();
+
+  /// Checks if this [Script] instance is Balinese.
+  bool get isBali => this == const ScriptBali();
+
+  /// Checks if this [Script] instance is Bamum.
+  bool get isBamu => this == const ScriptBamu();
+
+  /// Checks if this [Script] instance is Bassa Vah.
+  bool get isBass => this == const ScriptBass();
+
+  /// Checks if this [Script] instance is Batak.
+  bool get isBatk => this == const ScriptBatk();
+
+  /// Checks if this [Script] instance is Bengali (Bangla).
+  bool get isBeng => this == const ScriptBeng();
+
+  /// Checks if this [Script] instance is Bhaiksuki.
+  bool get isBhks => this == const ScriptBhks();
+
+  /// Checks if this [Script] instance is Blissymbols.
+  bool get isBlis => this == const ScriptBlis();
+
+  /// Checks if this [Script] instance is Bopomofo.
+  bool get isBopo => this == const ScriptBopo();
+
+  /// Checks if this [Script] instance is Brahmi.
+  bool get isBrah => this == const ScriptBrah();
+
+  /// Checks if this [Script] instance is Braille.
+  bool get isBrai => this == const ScriptBrai();
+
+  /// Checks if this [Script] instance is Buginese.
+  bool get isBugi => this == const ScriptBugi();
+
+  /// Checks if this [Script] instance is Buhid.
+  bool get isBuhd => this == const ScriptBuhd();
+
+  /// Checks if this [Script] instance is Chakma.
+  bool get isCakm => this == const ScriptCakm();
+
+  /// Checks if this [Script] instance is Unified Canadian Aboriginal Syllabics.
+  bool get isCans => this == const ScriptCans();
+
+  /// Checks if this [Script] instance is Carian.
+  bool get isCari => this == const ScriptCari();
+
+  /// Checks if this [Script] instance is Cham.
+  bool get isCham => this == const ScriptCham();
+
+  /// Checks if this [Script] instance is Cherokee.
+  bool get isCher => this == const ScriptCher();
+
+  /// Checks if this [Script] instance is Chorasmian.
+  bool get isChrs => this == const ScriptChrs();
+
+  /// Checks if this [Script] instance is Cirth.
+  bool get isCirt => this == const ScriptCirt();
+
+  /// Checks if this [Script] instance is Coptic.
+  bool get isCopt => this == const ScriptCopt();
+
+  /// Checks if this [Script] instance is Cypro-Minoan.
+  bool get isCpmn => this == const ScriptCpmn();
+
+  /// Checks if this [Script] instance is Cypriot syllabary.
+  bool get isCprt => this == const ScriptCprt();
+
+  /// Checks if this [Script] instance is Cyrillic.
+  bool get isCyrl => this == const ScriptCyrl();
+
+  /// Checks if this [Script] instance is Cyrillic (Old Church Slavonic variant).
+  bool get isCyrs => this == const ScriptCyrs();
+
+  /// Checks if this [Script] instance is Devanagari (Nagari).
+  bool get isDeva => this == const ScriptDeva();
+
+  /// Checks if this [Script] instance is Dives Akuru.
+  bool get isDiak => this == const ScriptDiak();
+
+  /// Checks if this [Script] instance is Dogra.
+  bool get isDogr => this == const ScriptDogr();
+
+  /// Checks if this [Script] instance is Deseret (Mormon).
+  bool get isDsrt => this == const ScriptDsrt();
+
+  /// Checks if this [Script] instance is Duployan shorthand, Duployan stenography.
+  bool get isDupl => this == const ScriptDupl();
+
+  /// Checks if this [Script] instance is Egyptian demotic.
+  bool get isEgyd => this == const ScriptEgyd();
+
+  /// Checks if this [Script] instance is Egyptian hieratic.
+  bool get isEgyh => this == const ScriptEgyh();
+
+  /// Checks if this [Script] instance is Egyptian hieroglyphs.
+  bool get isEgyp => this == const ScriptEgyp();
+
+  /// Checks if this [Script] instance is Elbasan.
+  bool get isElba => this == const ScriptElba();
+
+  /// Checks if this [Script] instance is Elymaic.
+  bool get isElym => this == const ScriptElym();
+
+  /// Checks if this [Script] instance is Ethiopic (Geʻez).
+  bool get isEthi => this == const ScriptEthi();
+
+  /// Checks if this [Script] instance is Khutsuri (Asomtavruli and Nuskhuri).
+  bool get isGeok => this == const ScriptGeok();
+
+  /// Checks if this [Script] instance is Georgian (Mkhedruli and Mtavruli).
+  bool get isGeor => this == const ScriptGeor();
+
+  /// Checks if this [Script] instance is Glagolitic.
+  bool get isGlag => this == const ScriptGlag();
+
+  /// Checks if this [Script] instance is Gunjala Gondi.
+  bool get isGong => this == const ScriptGong();
+
+  /// Checks if this [Script] instance is Masaram Gondi.
+  bool get isGonm => this == const ScriptGonm();
+
+  /// Checks if this [Script] instance is Gothic.
+  bool get isGoth => this == const ScriptGoth();
+
+  /// Checks if this [Script] instance is Grantha.
+  bool get isGran => this == const ScriptGran();
+
+  /// Checks if this [Script] instance is Greek.
+  bool get isGrek => this == const ScriptGrek();
+
+  /// Checks if this [Script] instance is Gujarati.
+  bool get isGujr => this == const ScriptGujr();
+
+  /// Checks if this [Script] instance is Gurmukhi.
+  bool get isGuru => this == const ScriptGuru();
+
+  /// Checks if this [Script] instance is Han with Bopomofo (alias for Han + Bopomofo).
+  bool get isHanb => this == const ScriptHanb();
+
+  /// Checks if this [Script] instance is Hangul (Hangŭl, Hangeul).
+  bool get isHang => this == const ScriptHang();
+
+  /// Checks if this [Script] instance is Han (Hanzi, Kanji, Hanja).
+  bool get isHani => this == const ScriptHani();
+
+  /// Checks if this [Script] instance is Hanunoo (Hanunóo).
+  bool get isHano => this == const ScriptHano();
+
+  /// Checks if this [Script] instance is Han (Simplified variant).
+  bool get isHans => this == const ScriptHans();
+
+  /// Checks if this [Script] instance is Han (Traditional variant).
+  bool get isHant => this == const ScriptHant();
+
+  /// Checks if this [Script] instance is Hatran.
+  bool get isHatr => this == const ScriptHatr();
+
+  /// Checks if this [Script] instance is Hebrew.
+  bool get isHebr => this == const ScriptHebr();
+
+  /// Checks if this [Script] instance is Hiragana.
+  bool get isHira => this == const ScriptHira();
+
+  /// Checks if this [Script] instance is Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs).
+  bool get isHluw => this == const ScriptHluw();
+
+  /// Checks if this [Script] instance is Pahawh Hmong.
+  bool get isHmng => this == const ScriptHmng();
+
+  /// Checks if this [Script] instance is Nyiakeng Puachue Hmong.
+  bool get isHmnp => this == const ScriptHmnp();
+
+  /// Checks if this [Script] instance is Japanese syllabaries (alias for Hiragana + Katakana).
+  bool get isHrkt => this == const ScriptHrkt();
+
+  /// Checks if this [Script] instance is Old Hungarian (Hungarian Runic).
+  bool get isHung => this == const ScriptHung();
+
+  /// Checks if this [Script] instance is Indus (Harappan).
+  bool get isInds => this == const ScriptInds();
+
+  /// Checks if this [Script] instance is Old Italic (Etruscan, Oscan, etc.).
+  bool get isItal => this == const ScriptItal();
+
+  /// Checks if this [Script] instance is Jamo (alias for Jamo subset of Hangul).
+  bool get isJamo => this == const ScriptJamo();
+
+  /// Checks if this [Script] instance is Javanese.
+  bool get isJava => this == const ScriptJava();
+
+  /// Checks if this [Script] instance is Japanese (alias for Han + Hiragana + Katakana).
+  bool get isJpan => this == const ScriptJpan();
+
+  /// Checks if this [Script] instance is Jurchen.
+  bool get isJurc => this == const ScriptJurc();
+
+  /// Checks if this [Script] instance is Kayah Li.
+  bool get isKali => this == const ScriptKali();
+
+  /// Checks if this [Script] instance is Katakana.
+  bool get isKana => this == const ScriptKana();
+
+  /// Checks if this [Script] instance is Kawi.
+  bool get isKawi => this == const ScriptKawi();
+
+  /// Checks if this [Script] instance is Kharoshthi.
+  bool get isKhar => this == const ScriptKhar();
+
+  /// Checks if this [Script] instance is Khmer.
+  bool get isKhmr => this == const ScriptKhmr();
+
+  /// Checks if this [Script] instance is Khojki.
+  bool get isKhoj => this == const ScriptKhoj();
+
+  /// Checks if this [Script] instance is Khitan large script.
+  bool get isKitl => this == const ScriptKitl();
+
+  /// Checks if this [Script] instance is Khitan small script.
+  bool get isKits => this == const ScriptKits();
+
+  /// Checks if this [Script] instance is Kannada.
+  bool get isKnda => this == const ScriptKnda();
+
+  /// Checks if this [Script] instance is Korean (alias for Hangul + Han).
+  bool get isKore => this == const ScriptKore();
+
+  /// Checks if this [Script] instance is Kpelle.
+  bool get isKpel => this == const ScriptKpel();
+
+  /// Checks if this [Script] instance is Kaithi.
+  bool get isKthi => this == const ScriptKthi();
+
+  /// Checks if this [Script] instance is Tai Tham (Lanna).
+  bool get isLana => this == const ScriptLana();
+
+  /// Checks if this [Script] instance is Lao.
+  bool get isLaoo => this == const ScriptLaoo();
+
+  /// Checks if this [Script] instance is Latin (Fraktur variant).
+  bool get isLatf => this == const ScriptLatf();
+
+  /// Checks if this [Script] instance is Latin (Gaelic variant).
+  bool get isLatg => this == const ScriptLatg();
+
+  /// Checks if this [Script] instance is Latin.
+  bool get isLatn => this == const ScriptLatn();
+
+  /// Checks if this [Script] instance is Leke.
+  bool get isLeke => this == const ScriptLeke();
+
+  /// Checks if this [Script] instance is Lepcha (Róng).
+  bool get isLepc => this == const ScriptLepc();
+
+  /// Checks if this [Script] instance is Limbu.
+  bool get isLimb => this == const ScriptLimb();
+
+  /// Checks if this [Script] instance is Linear A.
+  bool get isLina => this == const ScriptLina();
+
+  /// Checks if this [Script] instance is Linear B.
+  bool get isLinb => this == const ScriptLinb();
+
+  /// Checks if this [Script] instance is Lisu (Fraser).
+  bool get isLisu => this == const ScriptLisu();
+
+  /// Checks if this [Script] instance is Loma.
+  bool get isLoma => this == const ScriptLoma();
+
+  /// Checks if this [Script] instance is Lycian.
+  bool get isLyci => this == const ScriptLyci();
+
+  /// Checks if this [Script] instance is Lydian.
+  bool get isLydi => this == const ScriptLydi();
+
+  /// Checks if this [Script] instance is Mahajani.
+  bool get isMahj => this == const ScriptMahj();
+
+  /// Checks if this [Script] instance is Makasar.
+  bool get isMaka => this == const ScriptMaka();
+
+  /// Checks if this [Script] instance is Mandaic, Mandaean.
+  bool get isMand => this == const ScriptMand();
+
+  /// Checks if this [Script] instance is Manichaean.
+  bool get isMani => this == const ScriptMani();
+
+  /// Checks if this [Script] instance is Marchen.
+  bool get isMarc => this == const ScriptMarc();
+
+  /// Checks if this [Script] instance is Mayan hieroglyphs.
+  bool get isMaya => this == const ScriptMaya();
+
+  /// Checks if this [Script] instance is Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ).
+  bool get isMedf => this == const ScriptMedf();
+
+  /// Checks if this [Script] instance is Mende Kikakui.
+  bool get isMend => this == const ScriptMend();
+
+  /// Checks if this [Script] instance is Meroitic Cursive.
+  bool get isMerc => this == const ScriptMerc();
+
+  /// Checks if this [Script] instance is Meroitic Hieroglyphs.
+  bool get isMero => this == const ScriptMero();
+
+  /// Checks if this [Script] instance is Malayalam.
+  bool get isMlym => this == const ScriptMlym();
+
+  /// Checks if this [Script] instance is Modi, Moḍī.
+  bool get isModi => this == const ScriptModi();
+
+  /// Checks if this [Script] instance is Mongolian.
+  bool get isMong => this == const ScriptMong();
+
+  /// Checks if this [Script] instance is Moon (Moon code, Moon script, Moon type).
+  bool get isMoon => this == const ScriptMoon();
+
+  /// Checks if this [Script] instance is Mro, Mru.
+  bool get isMroo => this == const ScriptMroo();
+
+  /// Checks if this [Script] instance is Meitei Mayek (Meithei, Meetei).
+  bool get isMtei => this == const ScriptMtei();
+
+  /// Checks if this [Script] instance is Multani.
+  bool get isMult => this == const ScriptMult();
+
+  /// Checks if this [Script] instance is Myanmar (Burmese).
+  bool get isMymr => this == const ScriptMymr();
+
+  /// Checks if this [Script] instance is Nag Mundari.
+  bool get isNagm => this == const ScriptNagm();
+
+  /// Checks if this [Script] instance is Nandinagari.
+  bool get isNand => this == const ScriptNand();
+
+  /// Checks if this [Script] instance is Old North Arabian (Ancient North Arabian).
+  bool get isNarb => this == const ScriptNarb();
+
+  /// Checks if this [Script] instance is Nabataean.
+  bool get isNbat => this == const ScriptNbat();
+
+  /// Checks if this [Script] instance is Newa, Newar, Newari, Nepāla lipi.
+  bool get isNewa => this == const ScriptNewa();
+
+  /// Checks if this [Script] instance is Naxi Dongba (na²¹ɕi³³ to³³ba²¹, Nakhi Tomba).
+  bool get isNkdb => this == const ScriptNkdb();
+
+  /// Checks if this [Script] instance is Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹, 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba).
+  bool get isNkgb => this == const ScriptNkgb();
+
+  /// Checks if this [Script] instance is N’Ko.
+  bool get isNkoo => this == const ScriptNkoo();
+
+  /// Checks if this [Script] instance is Nüshu.
+  bool get isNshu => this == const ScriptNshu();
+
+  /// Checks if this [Script] instance is Ogham.
+  bool get isOgam => this == const ScriptOgam();
+
+  /// Checks if this [Script] instance is Ol Chiki (Ol Cemet’, Ol, Santali).
+  bool get isOlck => this == const ScriptOlck();
+
+  /// Checks if this [Script] instance is Old Turkic, Orkhon Runic.
+  bool get isOrkh => this == const ScriptOrkh();
+
+  /// Checks if this [Script] instance is Oriya (Odia).
+  bool get isOrya => this == const ScriptOrya();
+
+  /// Checks if this [Script] instance is Osage.
+  bool get isOsge => this == const ScriptOsge();
+
+  /// Checks if this [Script] instance is Osmanya.
+  bool get isOsma => this == const ScriptOsma();
+
+  /// Checks if this [Script] instance is Old Uyghur.
+  bool get isOugr => this == const ScriptOugr();
+
+  /// Checks if this [Script] instance is Palmyrene.
+  bool get isPalm => this == const ScriptPalm();
+
+  /// Checks if this [Script] instance is Pau Cin Hau.
+  bool get isPauc => this == const ScriptPauc();
+
+  /// Checks if this [Script] instance is Proto-Cuneiform.
+  bool get isPcun => this == const ScriptPcun();
+
+  /// Checks if this [Script] instance is Proto-Elamite.
+  bool get isPelm => this == const ScriptPelm();
+
+  /// Checks if this [Script] instance is Old Permic.
+  bool get isPerm => this == const ScriptPerm();
+
+  /// Checks if this [Script] instance is Phags-pa.
+  bool get isPhag => this == const ScriptPhag();
+
+  /// Checks if this [Script] instance is Inscriptional Pahlavi.
+  bool get isPhli => this == const ScriptPhli();
+
+  /// Checks if this [Script] instance is Psalter Pahlavi.
+  bool get isPhlp => this == const ScriptPhlp();
+
+  /// Checks if this [Script] instance is Book Pahlavi.
+  bool get isPhlv => this == const ScriptPhlv();
+
+  /// Checks if this [Script] instance is Phoenician.
+  bool get isPhnx => this == const ScriptPhnx();
+
+  /// Checks if this [Script] instance is Klingon (KLI pIqaD).
+  bool get isPiqd => this == const ScriptPiqd();
+
+  /// Checks if this [Script] instance is Miao (Pollard).
+  bool get isPlrd => this == const ScriptPlrd();
+
+  /// Checks if this [Script] instance is Inscriptional Parthian.
+  bool get isPrti => this == const ScriptPrti();
+
+  /// Checks if this [Script] instance is Proto-Sinaitic.
+  bool get isPsin => this == const ScriptPsin();
+
+  /// Checks if this [Script] instance is Reserved for private use (start).
+  bool get isQaaa => this == const ScriptQaaa();
+
+  /// Checks if this [Script] instance is Reserved for private use (end).
+  bool get isQabx => this == const ScriptQabx();
+
+  /// Checks if this [Script] instance is Ranjana.
+  bool get isRanj => this == const ScriptRanj();
+
+  /// Checks if this [Script] instance is Rejang (Redjang, Kaganga).
+  bool get isRjng => this == const ScriptRjng();
+
+  /// Checks if this [Script] instance is Hanifi Rohingya.
+  bool get isRohg => this == const ScriptRohg();
+
+  /// Checks if this [Script] instance is Rongorongo.
+  bool get isRoro => this == const ScriptRoro();
+
+  /// Checks if this [Script] instance is Runic.
+  bool get isRunr => this == const ScriptRunr();
+
+  /// Checks if this [Script] instance is Samaritan.
+  bool get isSamr => this == const ScriptSamr();
+
+  /// Checks if this [Script] instance is Sarati.
+  bool get isSara => this == const ScriptSara();
+
+  /// Checks if this [Script] instance is Old South Arabian.
+  bool get isSarb => this == const ScriptSarb();
+
+  /// Checks if this [Script] instance is Saurashtra.
+  bool get isSaur => this == const ScriptSaur();
+
+  /// Checks if this [Script] instance is SignWriting.
+  bool get isSgnw => this == const ScriptSgnw();
+
+  /// Checks if this [Script] instance is Shavian (Shaw).
+  bool get isShaw => this == const ScriptShaw();
+
+  /// Checks if this [Script] instance is Sharada, Śāradā.
+  bool get isShrd => this == const ScriptShrd();
+
+  /// Checks if this [Script] instance is Shuishu.
+  bool get isShui => this == const ScriptShui();
+
+  /// Checks if this [Script] instance is Siddham, Siddhaṃ, Siddhamātṛkā.
+  bool get isSidd => this == const ScriptSidd();
+
+  /// Checks if this [Script] instance is Khudawadi, Sindhi.
+  bool get isSind => this == const ScriptSind();
+
+  /// Checks if this [Script] instance is Sinhala.
+  bool get isSinh => this == const ScriptSinh();
+
+  /// Checks if this [Script] instance is Sogdian.
+  bool get isSogd => this == const ScriptSogd();
+
+  /// Checks if this [Script] instance is Old Sogdian.
+  bool get isSogo => this == const ScriptSogo();
+
+  /// Checks if this [Script] instance is Sora Sompeng.
+  bool get isSora => this == const ScriptSora();
+
+  /// Checks if this [Script] instance is Soyombo.
+  bool get isSoyo => this == const ScriptSoyo();
+
+  /// Checks if this [Script] instance is Sundanese.
+  bool get isSund => this == const ScriptSund();
+
+  /// Checks if this [Script] instance is Sunuwar.
+  bool get isSunu => this == const ScriptSunu();
+
+  /// Checks if this [Script] instance is Syloti Nagri.
+  bool get isSylo => this == const ScriptSylo();
+
+  /// Checks if this [Script] instance is Syriac.
+  bool get isSyrc => this == const ScriptSyrc();
+
+  /// Checks if this [Script] instance is Syriac (Estrangelo variant).
+  bool get isSyre => this == const ScriptSyre();
+
+  /// Checks if this [Script] instance is Syriac (Western variant).
+  bool get isSyrj => this == const ScriptSyrj();
+
+  /// Checks if this [Script] instance is Syriac (Eastern variant).
+  bool get isSyrn => this == const ScriptSyrn();
+
+  /// Checks if this [Script] instance is Tagbanwa.
+  bool get isTagb => this == const ScriptTagb();
+
+  /// Checks if this [Script] instance is Takri, Ṭākrī, Ṭāṅkrī.
+  bool get isTakr => this == const ScriptTakr();
+
+  /// Checks if this [Script] instance is Tai Le.
+  bool get isTale => this == const ScriptTale();
+
+  /// Checks if this [Script] instance is New Tai Lue.
+  bool get isTalu => this == const ScriptTalu();
+
+  /// Checks if this [Script] instance is Tamil.
+  bool get isTaml => this == const ScriptTaml();
+
+  /// Checks if this [Script] instance is Tangut.
+  bool get isTang => this == const ScriptTang();
+
+  /// Checks if this [Script] instance is Tai Viet.
+  bool get isTavt => this == const ScriptTavt();
+
+  /// Checks if this [Script] instance is Telugu.
+  bool get isTelu => this == const ScriptTelu();
+
+  /// Checks if this [Script] instance is Tengwar.
+  bool get isTeng => this == const ScriptTeng();
+
+  /// Checks if this [Script] instance is Tifinagh (Berber).
+  bool get isTfng => this == const ScriptTfng();
+
+  /// Checks if this [Script] instance is Tagalog (Baybayin, Alibata).
+  bool get isTglg => this == const ScriptTglg();
+
+  /// Checks if this [Script] instance is Thaana.
+  bool get isThaa => this == const ScriptThaa();
+
+  /// Checks if this [Script] instance is Thai.
+  bool get isThai => this == const ScriptThai();
+
+  /// Checks if this [Script] instance is Tibetan.
+  bool get isTibt => this == const ScriptTibt();
+
+  /// Checks if this [Script] instance is Tirhuta.
+  bool get isTirh => this == const ScriptTirh();
+
+  /// Checks if this [Script] instance is Tangsa.
+  bool get isTnsa => this == const ScriptTnsa();
+
+  /// Checks if this [Script] instance is Toto.
+  bool get isToto => this == const ScriptToto();
+
+  /// Checks if this [Script] instance is Ugaritic.
+  bool get isUgar => this == const ScriptUgar();
+
+  /// Checks if this [Script] instance is Vai.
+  bool get isVaii => this == const ScriptVaii();
+
+  /// Checks if this [Script] instance is Visible Speech.
+  bool get isVisp => this == const ScriptVisp();
+
+  /// Checks if this [Script] instance is Vithkuqi.
+  bool get isVith => this == const ScriptVith();
+
+  /// Checks if this [Script] instance is Warang Citi (Varang Kshiti).
+  bool get isWara => this == const ScriptWara();
+
+  /// Checks if this [Script] instance is Wancho.
+  bool get isWcho => this == const ScriptWcho();
+
+  /// Checks if this [Script] instance is Woleai.
+  bool get isWole => this == const ScriptWole();
+
+  /// Checks if this [Script] instance is Old Persian.
+  bool get isXpeo => this == const ScriptXpeo();
+
+  /// Checks if this [Script] instance is Cuneiform, Sumero-Akkadian.
+  bool get isXsux => this == const ScriptXsux();
+
+  /// Checks if this [Script] instance is Yezidi.
+  bool get isYezi => this == const ScriptYezi();
+
+  /// Checks if this [Script] instance is Yi.
+  bool get isYiii => this == const ScriptYiii();
+
+  /// Checks if this [Script] instance is Zanabazar Square (Zanabazarin Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script).
+  bool get isZanb => this == const ScriptZanb();
+
+  /// Checks if this [Script] instance is Code for inherited script.
+  bool get isZinh => this == const ScriptZinh();
+
+  /// Checks if this [Script] instance is Mathematical notation.
+  bool get isZmth => this == const ScriptZmth();
+
+  /// Checks if this [Script] instance is Symbols (Emoji variant).
+  bool get isZsye => this == const ScriptZsye();
+
+  /// Checks if this [Script] instance is Symbols.
+  bool get isZsym => this == const ScriptZsym();
+
+  /// Checks if this [Script] instance is Code for unwritten documents.
+  bool get isZxxx => this == const ScriptZxxx();
+
+  /// Checks if this [Script] instance is Code for undetermined script.
+  bool get isZyyy => this == const ScriptZyyy();
+
+  /// Checks if this [Script] instance is Code for uncoded script.
+  bool get isZzzz => this == const ScriptZzzz();
+}
