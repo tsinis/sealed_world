@@ -102,7 +102,7 @@ class Script extends WritingSystem
   /// resulting [Script] instance is assigned to the `script` variable.
   factory Script.fromAnyCode(String code, [Iterable<Script> scripts = list]) =>
       code.maybeMapIsoCode(
-        orElse: (regularCode) => Script.fromCode(regularCode, scripts),
+        orElse: (regular) => Script.fromCode(regular, scripts),
         numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
       );
 
@@ -191,7 +191,7 @@ class Script extends WritingSystem
     Iterable<Script> scripts = list,
   ]) =>
       code?.toString().maybeMapIsoCode(
-            orElse: (regularCode) => maybeFromCode(regularCode, scripts),
+            orElse: (regular) => maybeFromCode(regular, scripts),
             numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
           );
 
@@ -240,8 +240,13 @@ class Script extends WritingSystem
   static Script? maybeFromCodeNumeric(
     Object? codeNumeric, [
     Iterable<Script> scripts = list,
-  ]) =>
-      scripts.firstIsoWhereCodeOtherOrNull(codeNumeric);
+  ]) {
+    final string = codeNumeric?.toString().trim() ?? "";
+
+    return string.length == IsoStandardized.codeLength
+        ? scripts.firstIsoWhereCodeOtherOrNull(formatToStandardCode(string))
+        : null;
+  }
 
   /// Formats the given [input] to a standard four-character ISO 15924 code.
   /// Example:

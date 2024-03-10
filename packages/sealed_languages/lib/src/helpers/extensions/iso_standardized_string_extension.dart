@@ -60,10 +60,21 @@ extension IsoStandardizedStringExtension on String {
       IsoStandardized.codeShortLength =>
         short?.call(code.toUpperCase()) ?? orElse(code),
       >= IsoStandardized.codeLength =>
-        RegExp("[a-z]", caseSensitive: false).hasMatch(code)
-            ? regular?.call(code) ?? orElse(code)
-            : numeric?.call(code) ?? orElse(code),
+        _onNumericAndRegular(code, orElse, regular: regular, numeric: numeric),
       _ => orElse(code),
     };
+  }
+
+  T _onNumericAndRegular<T extends Object?>(
+    String code,
+    T Function(String input) orElse, {
+    T Function(String code)? regular,
+    T Function(String code)? numeric,
+  }) {
+    if (numeric == null && regular == null) return orElse(code);
+
+    return RegExp("[a-z]", caseSensitive: false).hasMatch(code)
+        ? regular?.call(code) ?? orElse(code)
+        : numeric?.call(code) ?? orElse(code);
   }
 }
