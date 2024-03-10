@@ -12,6 +12,7 @@ void main() {
     "Euro",
     where: (currency) => currency.namesNative.first,
   );
+  print(maybeEuro?.isEur); // Prints: true.
   print(maybeEuro?.toString(short: false));
   /*
   Prints: "FiatCurrency(code: "EUR", name: "Euro", decimalMark: ",",
