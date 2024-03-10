@@ -2,7 +2,7 @@
 
 NEW FEATURES
 
-- Added new static `maybeFrom*` methods and refactored old ones.
+- Added new static `maybeFrom*` methods and refactored old ones. They are also now accept any `Object?` input instead of just `String?`.
 - Added new and refactored old tests with a performance in mind.
 - Added new `firstIsoWhere*` extensions on ISO iterables.
 - Added `is*` boolean getters for example:
