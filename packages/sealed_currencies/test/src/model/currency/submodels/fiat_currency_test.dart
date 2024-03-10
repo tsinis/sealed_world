@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/currency_translations.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
@@ -16,6 +17,7 @@ class _FiatCurrencyTest extends FiatCurrency {
 }
 
 void main() => group("$FiatCurrency", () {
+      const durationLimit = 30;
       final value = FiatCurrency.list.last;
       final array = {value, FiatCurrency.list.first};
 
@@ -28,15 +30,12 @@ void main() => group("$FiatCurrency", () {
         expect(value, isA<Translated>());
       });
 
-      test(
+      assertTest(
         "permissive constructor",
-        () {
-          expect(
-            () => const _FiatCurrencyTest().codeNumeric,
-            isNot(throwsA(isA<AssertionError>())),
-          );
-          expect(const _FiatCurrencyTest().codeNumeric, isEmpty);
-        },
+        () => const _FiatCurrencyTest().codeNumeric,
+        shouldThrow: false,
+        alsoExpect: () =>
+            expect(const _FiatCurrencyTest().codeNumeric, isEmpty),
       );
 
       group("fields", () {
@@ -117,142 +116,172 @@ void main() => group("$FiatCurrency", () {
       });
 
       group("fromName", () {
-        test(
+        performanceTest(
           "with proper name",
           () => expect(FiatCurrency.fromName(value.name), value),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
+          "with proper name lowercase",
+          () => expect(FiatCurrency.fromName(value.name.toLowerCase()), value),
+          durationLimit: durationLimit,
+        );
+
+        performanceTest(
+          "with proper name uppercase",
+          () => expect(FiatCurrency.fromName(value.name.toUpperCase()), value),
+          durationLimit: durationLimit,
+        );
+
+        performanceTest(
           "with wrong name",
           () => expect(
             () => FiatCurrency.fromName(value.toString()),
             throwsStateError,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        assertTest(
           "with empty currencies",
-          () => expect(
-            () => FiatCurrency.fromName(value.name, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => FiatCurrency.fromName(value.name, const []),
         );
       });
 
       group("fromCode", () {
-        test(
+        performanceTest(
           "with proper code",
           () => expect(FiatCurrency.fromCode(value.code), value),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
+          "with proper code lowercase",
+          () => expect(FiatCurrency.fromCode(value.code.toLowerCase()), value),
+          durationLimit: durationLimit,
+        );
+
+        performanceTest(
           "with wrong code",
           () => expect(
             () => FiatCurrency.fromCode(value.toString()),
             throwsStateError,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        assertTest(
           "with empty currencies",
-          () => expect(
-            () => FiatCurrency.fromCode(value.code, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => FiatCurrency.fromCode(value.code, const []),
         );
       });
 
       group("fromCodeNumeric", () {
-        test(
+        performanceTest(
           "with proper code",
           () => expect(FiatCurrency.fromCodeNumeric(value.codeNumeric), value),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
           "with wrong code",
           () => expect(
             () => FiatCurrency.fromCodeNumeric(value.toString()),
             throwsStateError,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        assertTest(
           "with empty currencies",
-          () => expect(
-            () => FiatCurrency.fromCodeNumeric(value.code, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => FiatCurrency.fromCodeNumeric(value.code, const []),
         );
       });
 
       group("fromAnyCode", () {
-        test(
+        performanceTest(
           "with proper numeric code",
           () => expect(FiatCurrency.fromAnyCode(value.codeNumeric), value),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
           "with proper alpha code",
           () => expect(FiatCurrency.fromAnyCode(value.code), value),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
+          "with proper alpha code lowercase",
+          () =>
+              expect(FiatCurrency.fromAnyCode(value.code.toLowerCase()), value),
+          durationLimit: durationLimit,
+        );
+
+        performanceTest(
           "with wrong code",
           () => expect(
             () => FiatCurrency.fromAnyCode(value.toString()),
             throwsStateError,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        assertTest(
           "with empty currencies",
-          () => expect(
-            () => FiatCurrency.fromAnyCode(value.code, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => FiatCurrency.fromAnyCode(value.code, const []),
         );
       });
 
       group("toJson", () {
         for (final element in FiatCurrency.list) {
-          test("compared to $FiatCurrency: ${element.name}", () {
-            final json = element.toJson();
-            expect(json, isNotEmpty);
-            final decoded = json.tryParse(FiatCurrencyJson.fromMap);
-            expect(
-              decoded?.toString(short: false),
-              json.parse(FiatCurrencyJson.fromMap).toString(short: false),
-            );
-            expect(element.code, decoded?.code);
-            expect(element.name, decoded?.name);
-            expect(element.codeNumeric, decoded?.codeNumeric);
-            expect(element.namesNative, decoded?.namesNative);
-            expect(element.alternateSymbols, decoded?.alternateSymbols);
-            expect(element.htmlEntity, decoded?.htmlEntity);
-            expect(element.disambiguateSymbol, decoded?.disambiguateSymbol);
-            expect(element.subunit, decoded?.subunit);
-            expect(element.symbol, decoded?.symbol);
-            expect(element.priority, decoded?.priority);
-            expect(element.smallestDenomination, decoded?.smallestDenomination);
-            expect(element.subunitToUnit, decoded?.subunitToUnit);
-            expect(element.unitFirst, decoded?.unitFirst);
-            expect(element.decimalMark, decoded?.decimalMark);
-            expect(element.thousandsSeparator, decoded?.thousandsSeparator);
-            expect(element.translations, decoded?.translations);
-          });
+          performanceTest(
+            "compared to $FiatCurrency: ${element.name}",
+            () {
+              final json = element.toJson();
+              expect(json, isNotEmpty);
+              final decoded = json.tryParse(FiatCurrencyJson.fromMap);
+              expect(
+                decoded?.toString(short: false),
+                json.parse(FiatCurrencyJson.fromMap).toString(short: false),
+              );
+              expect(element.code, decoded?.code);
+              expect(element.name, decoded?.name);
+              expect(element.codeNumeric, decoded?.codeNumeric);
+              expect(element.namesNative, decoded?.namesNative);
+              expect(element.alternateSymbols, decoded?.alternateSymbols);
+              expect(element.htmlEntity, decoded?.htmlEntity);
+              expect(element.disambiguateSymbol, decoded?.disambiguateSymbol);
+              expect(element.subunit, decoded?.subunit);
+              expect(element.symbol, decoded?.symbol);
+              expect(element.priority, decoded?.priority);
+              expect(
+                element.smallestDenomination,
+                decoded?.smallestDenomination,
+              );
+              expect(element.subunitToUnit, decoded?.subunitToUnit);
+              expect(element.unitFirst, decoded?.unitFirst);
+              expect(element.decimalMark, decoded?.decimalMark);
+              expect(element.thousandsSeparator, decoded?.thousandsSeparator);
+              expect(element.translations, decoded?.translations);
+            },
+            durationLimit: durationLimit / 3,
+          );
         }
       });
 
       group("maybeFromValue", () {
-        test(
+        performanceTest(
           "with proper value, without where",
           () => expect(
             FiatCurrency.maybeFromValue(value.code),
             value,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
           "with proper value, with where",
           () => expect(
             FiatCurrency.maybeFromValue(
@@ -261,17 +290,19 @@ void main() => group("$FiatCurrency", () {
             ),
             value,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
           "with wrong value, without where",
           () => expect(
             FiatCurrency.maybeFromValue(value),
             isNull,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
           "with wrong value, with where",
           () => expect(
             FiatCurrency.maybeFromValue(
@@ -280,221 +311,192 @@ void main() => group("$FiatCurrency", () {
             ),
             isNull,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        assertTest(
           "with empty languages",
-          () => expect(
-            () => FiatCurrency.maybeFromValue(
-              value.name,
-              currencies: const [],
-            ),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => FiatCurrency.maybeFromValue(value.name, currencies: const []),
         );
 
-        test(
-          "with custom languages",
+        performanceTest(
+          "with custom currencies",
           () => expect(
             FiatCurrency.maybeFromValue(value.code, currencies: array),
             value,
           ),
+          durationLimit: durationLimit,
         );
       });
 
       group("maybeFromAnyCode", () {
-        test(
+        performanceTest(
           "with proper numeric code",
           () => expect(FiatCurrency.maybeFromAnyCode(value.codeNumeric), value),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
           "with proper alpha code",
           () => expect(FiatCurrency.maybeFromAnyCode(value.code), value),
+          durationLimit: durationLimit,
         );
 
-        test(
+        performanceTest(
+          "with proper alpha code lowercase",
+          () => expect(
+            FiatCurrency.maybeFromAnyCode(value.code.toLowerCase()),
+            value,
+          ),
+          durationLimit: durationLimit,
+        );
+
+        performanceTest(
           "with wrong code",
           () => expect(
             FiatCurrency.maybeFromAnyCode(value.toString()),
             isNull,
           ),
+          durationLimit: durationLimit,
         );
 
-        test(
+        assertTest(
           "with empty currencies",
-          () => expect(
-            () => FiatCurrency.maybeFromAnyCode(value.code, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => FiatCurrency.maybeFromAnyCode(value.code, const []),
         );
 
-        test(
+        performanceTest(
           "with null code",
-          () => expect(
-            FiatCurrency.maybeFromAnyCode(null),
-            isNull,
-          ),
+          () => expect(FiatCurrency.maybeFromAnyCode(null), isNull),
+          durationLimit: durationLimit,
         );
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-            ),
-            isNot(throwsA(isA<AssertionError>())),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
           ),
+          shouldThrow: false,
         );
 
-        test(
+        assertTest(
           "empty name",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: "",
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: "",
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
           ),
         );
 
-        test(
+        assertTest(
           "code length",
-          () => expect(
-            () => FiatCurrency(
-              code: value.name,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.name,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
           ),
         );
 
-        test(
+        assertTest(
           "codeNumeric length",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.name,
-              translations: value.translations,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.name,
+            translations: value.translations,
           ),
         );
 
-        test(
+        assertTest(
           "empty namesNative",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: const [],
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: const [],
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
           ),
         );
 
-        test(
+        assertTest(
           "empty translations",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: const [],
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: const [],
           ),
         );
 
-        test(
+        assertTest(
           "empty htmlEntity",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-              htmlEntity: "",
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
+            htmlEntity: "",
           ),
         );
 
-        test(
+        assertTest(
           "empty subunit",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-              subunit: "",
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
+            subunit: "",
           ),
         );
 
-        test(
+        assertTest(
           "empty symbol",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-              symbol: "",
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
+            symbol: "",
           ),
         );
 
-        test(
+        assertTest(
           "empty alternateSymbols",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-              alternateSymbols: const [],
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
+            alternateSymbols: const [],
           ),
         );
 
-        test(
+        assertTest(
           "negative smallestDenomination",
-          () => expect(
-            () => FiatCurrency(
-              code: value.code,
-              name: value.name,
-              namesNative: value.namesNative,
-              codeNumeric: value.codeNumeric,
-              translations: value.translations,
-              smallestDenomination: -1,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => FiatCurrency(
+            code: value.code,
+            name: value.name,
+            namesNative: value.namesNative,
+            codeNumeric: value.codeNumeric,
+            translations: value.translations,
+            smallestDenomination: -1,
           ),
         );
       });

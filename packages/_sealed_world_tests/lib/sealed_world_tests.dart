@@ -16,7 +16,7 @@ void performanceTest(
   String description,
   // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
   FutureOr Function() body, {
-  int durationLimit = _defaultDurationLimitInMs,
+  num durationLimit = _defaultDurationLimitInMs,
   String? testOn,
   Timeout? timeout,
   Object? skip,
@@ -33,7 +33,7 @@ void performanceTest(
 
         stopwatch.stop();
         expect(
-          stopwatch.elapsedMilliseconds <= durationLimit + 1,
+          stopwatch.elapsedMilliseconds <= durationLimit.toInt() + 1,
           isTrue,
           reason: "The test shouldn't have taken longer than $durationLimit ms",
         );
@@ -90,7 +90,7 @@ void randomElementTest<T extends Object>(
   Iterable<T> iterable,
   // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
   FutureOr Function(T) body, {
-  int durationLimit = _defaultDurationLimitInMs,
+  num durationLimit = _defaultDurationLimitInMs,
   String? testOn,
   Timeout? timeout,
   Object? skip,
