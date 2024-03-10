@@ -174,10 +174,10 @@ class NaturalLanguage extends Language
     Object? code, [
     Iterable<NaturalLanguage> languages = list,
   ]) {
-    final string = code?.toString().trim().toUpperCase() ?? "";
+    final string = code?.toString().trim() ?? "";
 
     return string.length == IsoStandardized.codeLength
-        ? languages.firstIsoWhereCodeOrNull(string)
+        ? languages.firstIsoWhereCodeOrNull(string.toUpperCase())
         : null;
   }
 
@@ -192,10 +192,10 @@ class NaturalLanguage extends Language
     Object? codeShort, [
     Iterable<NaturalLanguage> languages = list,
   ]) {
-    final string = codeShort?.toString().trim().toUpperCase() ?? "";
+    final string = codeShort?.toString().trim() ?? "";
 
     return string.length == IsoStandardized.codeShortLength
-        ? languages.firstIsoWhereCodeOtherOrNull(string)
+        ? languages.firstIsoWhereCodeOtherOrNull(string.toUpperCase())
         : null;
   }
 
