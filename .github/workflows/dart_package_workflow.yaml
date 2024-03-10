@@ -93,3 +93,4 @@ jobs:
           name: ${{ inputs.package_name }}
           token: ${{ secrets.CODECOV_TOKEN }}
           override_branch: ${{ github.base_ref }}
+          verbose: true
