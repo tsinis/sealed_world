@@ -231,10 +231,7 @@ void main() => group("$Script", () {
       group("maybeFromValue", () {
         performanceTest(
           "with proper value, without where",
-          () => expect(
-            Script.maybeFromValue(value.code),
-            value,
-          ),
+          () => expect(Script.maybeFromValue(value.code), value),
         );
 
         performanceTest(
@@ -250,10 +247,7 @@ void main() => group("$Script", () {
 
         performanceTest(
           "with wrong value, without where",
-          () => expect(
-            Script.maybeFromValue(value),
-            isNull,
-          ),
+          () => expect(Script.maybeFromValue(value), isNull),
         );
 
         performanceTest(
@@ -453,10 +447,7 @@ void main() => group("$Script", () {
 
         performanceTest(
           "with wrong code",
-          () => expect(
-            Script.maybeFromCodeNumeric(value.toString()),
-            isNull,
-          ),
+          () => expect(Script.maybeFromCodeNumeric(value.toString()), isNull),
         );
 
         performanceTest(

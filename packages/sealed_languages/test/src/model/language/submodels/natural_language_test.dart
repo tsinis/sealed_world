@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
@@ -30,15 +31,11 @@ void main() => group("$NaturalLanguage", () {
         expect(value, isA<Translated>());
       });
 
-      test(
+      assertTest(
         "permissive constructor",
-        () {
-          expect(
-            () => const _NaturalLanguageTest().code,
-            isNot(throwsA(isA<AssertionError>())),
-          );
-          expect(const _NaturalLanguageTest().code, isEmpty);
-        },
+        () => const _NaturalLanguageTest().code,
+        shouldThrow: false,
+        alsoExpect: () => expect(const _NaturalLanguageTest().code, isEmpty),
       );
 
       group("fields", () {
@@ -95,12 +92,12 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("fromName", () {
-        test(
+        performanceTest(
           "with proper name",
           () => expect(NaturalLanguage.fromName(value.name), value),
         );
 
-        test(
+        performanceTest(
           "with wrong name",
           () => expect(
             () => NaturalLanguage.fromName(value.toString()),
@@ -108,22 +105,25 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        assertTest(
           "with empty languages",
-          () => expect(
-            () => NaturalLanguage.fromName(value.name, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => NaturalLanguage.fromName(value.name, const []),
         );
       });
 
       group("fromCode", () {
-        test(
+        performanceTest(
           "with proper code",
           () => expect(NaturalLanguage.fromCode(value.code), value),
         );
 
-        test(
+        performanceTest(
+          "with proper code lowercase",
+          () =>
+              expect(NaturalLanguage.fromCode(value.code.toLowerCase()), value),
+        );
+
+        performanceTest(
           "with wrong code",
           () => expect(
             () => NaturalLanguage.fromCode(value.toString()),
@@ -131,22 +131,27 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        assertTest(
           "with empty languages",
-          () => expect(
-            () => NaturalLanguage.fromCode(value.code, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => NaturalLanguage.fromCode(value.code, const []),
         );
       });
 
       group("fromCodeShort", () {
-        test(
+        performanceTest(
           "with proper code",
           () => expect(NaturalLanguage.fromCodeShort(value.codeShort), value),
         );
 
-        test(
+        performanceTest(
+          "with proper code lowercase",
+          () => expect(
+            NaturalLanguage.fromCodeShort(value.codeShort.toLowerCase()),
+            value,
+          ),
+        );
+
+        performanceTest(
           "with wrong code",
           () => expect(
             () => NaturalLanguage.fromCodeShort(value.toString()),
@@ -154,27 +159,49 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        assertTest(
           "with empty languages",
-          () => expect(
-            () => NaturalLanguage.fromCodeShort(value.codeShort, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => NaturalLanguage.fromCodeShort(value.codeShort, const []),
         );
       });
 
       group("fromAnyCode", () {
-        test(
+        randomElementTest(
+          "with random element from list and lowercase code",
+          NaturalLanguage.list,
+          (random) => expect(
+            NaturalLanguage.fromAnyCode(random.code.toLowerCase()),
+            random,
+          ),
+        );
+
+        performanceTest(
           "with proper short code",
           () => expect(NaturalLanguage.fromAnyCode(value.codeShort), value),
         );
 
-        test(
+        performanceTest(
           "with proper regular code",
           () => expect(NaturalLanguage.fromAnyCode(value.code), value),
         );
 
-        test(
+        performanceTest(
+          "with proper short code lowercase",
+          () => expect(
+            NaturalLanguage.fromAnyCode(value.codeShort.toLowerCase()),
+            value,
+          ),
+        );
+
+        performanceTest(
+          "with proper regular code lowercase",
+          () => expect(
+            NaturalLanguage.fromAnyCode(value.code.toLowerCase()),
+            value,
+          ),
+        );
+
+        performanceTest(
           "with wrong code",
           () => expect(
             () => NaturalLanguage.fromAnyCode(value.toString()),
@@ -182,18 +209,15 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        assertTest(
           "with empty languages",
-          () => expect(
-            () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
         );
       });
 
       group("toJson", () {
         for (final element in NaturalLanguage.list) {
-          test("compared to $NaturalLanguage: ${element.name}", () {
+          performanceTest("compared to $NaturalLanguage: ${element.name}", () {
             final json = element.toJson();
             expect(json, isNotEmpty);
             final decoded = json.tryParse(NaturalLanguageJson.fromMap);
@@ -213,7 +237,7 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("maybeFromValue", () {
-        test(
+        performanceTest(
           "with proper value, without where",
           () => expect(
             NaturalLanguage.maybeFromValue(value.code),
@@ -221,7 +245,7 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        performanceTest(
           "with proper value, with where",
           () => expect(
             NaturalLanguage.maybeFromValue(
@@ -232,7 +256,7 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        performanceTest(
           "with wrong value, without where",
           () => expect(
             NaturalLanguage.maybeFromValue(value),
@@ -240,7 +264,7 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        performanceTest(
           "with wrong value, with where",
           () => expect(
             NaturalLanguage.maybeFromValue(
@@ -251,18 +275,15 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        assertTest(
           "with empty languages",
-          () => expect(
-            () => NaturalLanguage.maybeFromValue(
-              value.name,
-              languages: const [],
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguage.maybeFromValue(
+            value.name,
+            languages: const [],
           ),
         );
 
-        test(
+        performanceTest(
           "with custom languages",
           () => expect(
             NaturalLanguage.maybeFromValue(value.code, languages: array),
@@ -272,18 +293,43 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("maybeFromAnyCode", () {
-        test(
+        randomElementTest(
+          "with random element from list and lowercase code",
+          NaturalLanguage.list,
+          (random) => expect(
+            NaturalLanguage.maybeFromAnyCode(random.code.toLowerCase()),
+            random,
+          ),
+        );
+
+        performanceTest(
           "with proper short code",
           () =>
               expect(NaturalLanguage.maybeFromAnyCode(value.codeShort), value),
         );
 
-        test(
+        performanceTest(
           "with proper regular code",
           () => expect(NaturalLanguage.maybeFromAnyCode(value.code), value),
         );
 
-        test(
+        performanceTest(
+          "with proper short code lowercase",
+          () => expect(
+            NaturalLanguage.maybeFromAnyCode(value.codeShort.toLowerCase()),
+            value,
+          ),
+        );
+
+        performanceTest(
+          "with proper regular code lowercase",
+          () => expect(
+            NaturalLanguage.maybeFromAnyCode(value.code.toLowerCase()),
+            value,
+          ),
+        );
+
+        performanceTest(
           "with wrong code",
           () => expect(
             NaturalLanguage.maybeFromAnyCode(value.toString()),
@@ -291,20 +337,14 @@ void main() => group("$NaturalLanguage", () {
           ),
         );
 
-        test(
+        performanceTest(
           "with null code",
-          () => expect(
-            NaturalLanguage.maybeFromAnyCode(null),
-            isNull,
-          ),
+          () => expect(NaturalLanguage.maybeFromAnyCode(null), isNull),
         );
 
-        test(
+        assertTest(
           "with empty languages",
-          () => expect(
-            () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
         );
       });
 
@@ -332,109 +372,86 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => NaturalLanguage(
-              name: value.name,
-              codeShort: value.codeShort,
-              namesNative: value.namesNative,
-              code: value.code,
-            ),
-            isNot(throwsA(isA<AssertionError>())),
+          () => NaturalLanguage(
+            name: value.name,
+            codeShort: value.codeShort,
+            namesNative: value.namesNative,
+            code: value.code,
           ),
+          shouldThrow: false,
         );
 
-        test(
+        assertTest(
           "empty name",
-          () => expect(
-            () => NaturalLanguage(
-              name: "",
-              codeShort: value.codeShort,
-              namesNative: value.namesNative,
-              code: value.code,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguage(
+            name: "",
+            codeShort: value.codeShort,
+            namesNative: value.namesNative,
+            code: value.code,
           ),
         );
 
-        test(
+        assertTest(
           "name",
-          () => expect(
-            () => NaturalLanguage(
-              name: "",
-              codeShort: value.codeShort,
-              namesNative: value.namesNative,
-              code: value.code,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguage(
+            name: "",
+            codeShort: value.codeShort,
+            namesNative: value.namesNative,
+            code: value.code,
           ),
         );
 
-        test(
+        assertTest(
           "codeShort length",
-          () => expect(
-            () => NaturalLanguage(
-              name: value.name,
-              codeShort: value.code,
-              namesNative: value.namesNative,
-              code: value.code,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguage(
+            name: value.name,
+            codeShort: value.code,
+            namesNative: value.namesNative,
+            code: value.code,
           ),
         );
 
-        test(
+        assertTest(
           "code length",
-          () => expect(
-            () => NaturalLanguage(
-              name: value.name,
-              codeShort: value.codeShort,
-              namesNative: value.namesNative,
-              code: value.codeShort,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguage(
+            name: value.name,
+            codeShort: value.codeShort,
+            namesNative: value.namesNative,
+            code: value.codeShort,
           ),
         );
 
-        test(
+        assertTest(
           "empty namesNative",
-          () => expect(
-            () => NaturalLanguage(
-              name: value.name,
-              codeShort: value.codeShort,
-              namesNative: const [],
-              code: value.code,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguage(
+            name: value.name,
+            codeShort: value.codeShort,
+            namesNative: const [],
+            code: value.code,
           ),
         );
 
-        test(
+        assertTest(
           "bibliographicCode length",
-          () => expect(
-            () => NaturalLanguage(
-              name: value.name,
-              codeShort: value.codeShort,
-              namesNative: value.namesNative,
-              code: value.code,
-              bibliographicCode: value.codeShort,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguage(
+            name: value.name,
+            codeShort: value.codeShort,
+            namesNative: value.namesNative,
+            code: value.code,
+            bibliographicCode: value.codeShort,
           ),
         );
 
-        test(
+        assertTest(
           "empty scripts",
-          () => expect(
-            () => NaturalLanguage(
-              name: value.name,
-              codeShort: value.codeShort,
-              namesNative: value.namesNative,
-              code: value.code,
-              scripts: const {},
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguage(
+            name: value.name,
+            codeShort: value.codeShort,
+            namesNative: value.namesNative,
+            code: value.code,
+            scripts: const {},
           ),
         );
       });
