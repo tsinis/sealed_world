@@ -1876,3 +1876,557 @@ extension NaturalLanguageFunctional on NaturalLanguage {
         _ => orElse?.call(),
       };
 }
+
+extension NaturalLanguageBoolGetters on NaturalLanguage {
+  /// Checks if this [NaturalLanguage] instance is Afar.
+  bool get isAar => this == const LangAar();
+
+  /// Checks if this [NaturalLanguage] instance is Abkhaz.
+  bool get isAbk => this == const LangAbk();
+
+  /// Checks if this [NaturalLanguage] instance is Afrikaans.
+  bool get isAfr => this == const LangAfr();
+
+  /// Checks if this [NaturalLanguage] instance is Akan.
+  bool get isAka => this == const LangAka();
+
+  /// Checks if this [NaturalLanguage] instance is Amharic.
+  bool get isAmh => this == const LangAmh();
+
+  /// Checks if this [NaturalLanguage] instance is Arabic.
+  bool get isAra => this == const LangAra();
+
+  /// Checks if this [NaturalLanguage] instance is Aragonese.
+  bool get isArg => this == const LangArg();
+
+  /// Checks if this [NaturalLanguage] instance is Assamese.
+  bool get isAsm => this == const LangAsm();
+
+  /// Checks if this [NaturalLanguage] instance is Avaric.
+  bool get isAva => this == const LangAva();
+
+  /// Checks if this [NaturalLanguage] instance is Avestan.
+  bool get isAve => this == const LangAve();
+
+  /// Checks if this [NaturalLanguage] instance is Aymara.
+  bool get isAym => this == const LangAym();
+
+  /// Checks if this [NaturalLanguage] instance is Azerbaijani.
+  bool get isAze => this == const LangAze();
+
+  /// Checks if this [NaturalLanguage] instance is Bashkir.
+  bool get isBak => this == const LangBak();
+
+  /// Checks if this [NaturalLanguage] instance is Bambara.
+  bool get isBam => this == const LangBam();
+
+  /// Checks if this [NaturalLanguage] instance is Belarusian.
+  bool get isBel => this == const LangBel();
+
+  /// Checks if this [NaturalLanguage] instance is Bengali (Bangla).
+  bool get isBen => this == const LangBen();
+
+  /// Checks if this [NaturalLanguage] instance is Bihari.
+  bool get isBih => this == const LangBih();
+
+  /// Checks if this [NaturalLanguage] instance is Bislama.
+  bool get isBis => this == const LangBis();
+
+  /// Checks if this [NaturalLanguage] instance is Tibetan Standard.
+  bool get isBod => this == const LangBod();
+
+  /// Checks if this [NaturalLanguage] instance is Bosnian.
+  bool get isBos => this == const LangBos();
+
+  /// Checks if this [NaturalLanguage] instance is Breton.
+  bool get isBre => this == const LangBre();
+
+  /// Checks if this [NaturalLanguage] instance is Bulgarian.
+  bool get isBul => this == const LangBul();
+
+  /// Checks if this [NaturalLanguage] instance is Catalan.
+  bool get isCat => this == const LangCat();
+
+  /// Checks if this [NaturalLanguage] instance is Czech.
+  bool get isCes => this == const LangCes();
+
+  /// Checks if this [NaturalLanguage] instance is Chamorro.
+  bool get isCha => this == const LangCha();
+
+  /// Checks if this [NaturalLanguage] instance is Chechen.
+  bool get isChe => this == const LangChe();
+
+  /// Checks if this [NaturalLanguage] instance is (Old) Church Slavonic.
+  bool get isChu => this == const LangChu();
+
+  /// Checks if this [NaturalLanguage] instance is Chuvash.
+  bool get isChv => this == const LangChv();
+
+  /// Checks if this [NaturalLanguage] instance is Cornish.
+  bool get isCor => this == const LangCor();
+
+  /// Checks if this [NaturalLanguage] instance is Corsican.
+  bool get isCos => this == const LangCos();
+
+  /// Checks if this [NaturalLanguage] instance is Cree.
+  bool get isCre => this == const LangCre();
+
+  /// Checks if this [NaturalLanguage] instance is Welsh.
+  bool get isCym => this == const LangCym();
+
+  /// Checks if this [NaturalLanguage] instance is Danish.
+  bool get isDan => this == const LangDan();
+
+  /// Checks if this [NaturalLanguage] instance is German.
+  bool get isDeu => this == const LangDeu();
+
+  /// Checks if this [NaturalLanguage] instance is Divehi (Dhivehi/Maldivian).
+  bool get isDiv => this == const LangDiv();
+
+  /// Checks if this [NaturalLanguage] instance is Dzongkha.
+  bool get isDzo => this == const LangDzo();
+
+  /// Checks if this [NaturalLanguage] instance is Greek (modern).
+  bool get isEll => this == const LangEll();
+
+  /// Checks if this [NaturalLanguage] instance is English.
+  bool get isEng => this == const LangEng();
+
+  /// Checks if this [NaturalLanguage] instance is Esperanto.
+  bool get isEpo => this == const LangEpo();
+
+  /// Checks if this [NaturalLanguage] instance is Estonian.
+  bool get isEst => this == const LangEst();
+
+  /// Checks if this [NaturalLanguage] instance is Basque.
+  bool get isEus => this == const LangEus();
+
+  /// Checks if this [NaturalLanguage] instance is Ewe.
+  bool get isEwe => this == const LangEwe();
+
+  /// Checks if this [NaturalLanguage] instance is Faroese.
+  bool get isFao => this == const LangFao();
+
+  /// Checks if this [NaturalLanguage] instance is Persian (Farsi).
+  bool get isFas => this == const LangFas();
+
+  /// Checks if this [NaturalLanguage] instance is Fijian.
+  bool get isFij => this == const LangFij();
+
+  /// Checks if this [NaturalLanguage] instance is Finnish.
+  bool get isFin => this == const LangFin();
+
+  /// Checks if this [NaturalLanguage] instance is French.
+  bool get isFra => this == const LangFra();
+
+  /// Checks if this [NaturalLanguage] instance is Western Frisian.
+  bool get isFry => this == const LangFry();
+
+  /// Checks if this [NaturalLanguage] instance is Fula (Fulah/Pulaar/Pular).
+  bool get isFul => this == const LangFul();
+
+  /// Checks if this [NaturalLanguage] instance is (Scottish) Gaelic.
+  bool get isGla => this == const LangGla();
+
+  /// Checks if this [NaturalLanguage] instance is Irish.
+  bool get isGle => this == const LangGle();
+
+  /// Checks if this [NaturalLanguage] instance is Galician.
+  bool get isGlg => this == const LangGlg();
+
+  /// Checks if this [NaturalLanguage] instance is Manx.
+  bool get isGlv => this == const LangGlv();
+
+  /// Checks if this [NaturalLanguage] instance is Guaraní.
+  bool get isGrn => this == const LangGrn();
+
+  /// Checks if this [NaturalLanguage] instance is Gujarati.
+  bool get isGuj => this == const LangGuj();
+
+  /// Checks if this [NaturalLanguage] instance is Haitian (Haitian Creole).
+  bool get isHat => this == const LangHat();
+
+  /// Checks if this [NaturalLanguage] instance is Hausa.
+  bool get isHau => this == const LangHau();
+
+  /// Checks if this [NaturalLanguage] instance is Hebrew (modern).
+  bool get isHeb => this == const LangHeb();
+
+  /// Checks if this [NaturalLanguage] instance is Herero.
+  bool get isHer => this == const LangHer();
+
+  /// Checks if this [NaturalLanguage] instance is Hindi.
+  bool get isHin => this == const LangHin();
+
+  /// Checks if this [NaturalLanguage] instance is Hiri Motu.
+  bool get isHmo => this == const LangHmo();
+
+  /// Checks if this [NaturalLanguage] instance is Croatian.
+  bool get isHrv => this == const LangHrv();
+
+  /// Checks if this [NaturalLanguage] instance is Hungarian.
+  bool get isHun => this == const LangHun();
+
+  /// Checks if this [NaturalLanguage] instance is Armenian.
+  bool get isHye => this == const LangHye();
+
+  /// Checks if this [NaturalLanguage] instance is Igbo.
+  bool get isIbo => this == const LangIbo();
+
+  /// Checks if this [NaturalLanguage] instance is Ido.
+  bool get isIdo => this == const LangIdo();
+
+  /// Checks if this [NaturalLanguage] instance is Nuosu.
+  bool get isIii => this == const LangIii();
+
+  /// Checks if this [NaturalLanguage] instance is Inuktitut.
+  bool get isIku => this == const LangIku();
+
+  /// Checks if this [NaturalLanguage] instance is Interlingue.
+  bool get isIle => this == const LangIle();
+
+  /// Checks if this [NaturalLanguage] instance is Interlingua.
+  bool get isIna => this == const LangIna();
+
+  /// Checks if this [NaturalLanguage] instance is Indonesian.
+  bool get isInd => this == const LangInd();
+
+  /// Checks if this [NaturalLanguage] instance is Inupiaq.
+  bool get isIpk => this == const LangIpk();
+
+  /// Checks if this [NaturalLanguage] instance is Icelandic.
+  bool get isIsl => this == const LangIsl();
+
+  /// Checks if this [NaturalLanguage] instance is Italian.
+  bool get isIta => this == const LangIta();
+
+  /// Checks if this [NaturalLanguage] instance is Javanese.
+  bool get isJav => this == const LangJav();
+
+  /// Checks if this [NaturalLanguage] instance is Japanese.
+  bool get isJpn => this == const LangJpn();
+
+  /// Checks if this [NaturalLanguage] instance is Kalaallisut (Greenlandic).
+  bool get isKal => this == const LangKal();
+
+  /// Checks if this [NaturalLanguage] instance is Kannada.
+  bool get isKan => this == const LangKan();
+
+  /// Checks if this [NaturalLanguage] instance is Kashmiri.
+  bool get isKas => this == const LangKas();
+
+  /// Checks if this [NaturalLanguage] instance is Georgian.
+  bool get isKat => this == const LangKat();
+
+  /// Checks if this [NaturalLanguage] instance is Kanuri.
+  bool get isKau => this == const LangKau();
+
+  /// Checks if this [NaturalLanguage] instance is Kazakh.
+  bool get isKaz => this == const LangKaz();
+
+  /// Checks if this [NaturalLanguage] instance is Khmer.
+  bool get isKhm => this == const LangKhm();
+
+  /// Checks if this [NaturalLanguage] instance is Kikuyu (Gikuyu).
+  bool get isKik => this == const LangKik();
+
+  /// Checks if this [NaturalLanguage] instance is Kinyarwanda.
+  bool get isKin => this == const LangKin();
+
+  /// Checks if this [NaturalLanguage] instance is Kyrgyz.
+  bool get isKir => this == const LangKir();
+
+  /// Checks if this [NaturalLanguage] instance is Komi.
+  bool get isKom => this == const LangKom();
+
+  /// Checks if this [NaturalLanguage] instance is Kongo.
+  bool get isKon => this == const LangKon();
+
+  /// Checks if this [NaturalLanguage] instance is Korean.
+  bool get isKor => this == const LangKor();
+
+  /// Checks if this [NaturalLanguage] instance is Kwanyama (Kuanyama).
+  bool get isKua => this == const LangKua();
+
+  /// Checks if this [NaturalLanguage] instance is Kurdish.
+  bool get isKur => this == const LangKur();
+
+  /// Checks if this [NaturalLanguage] instance is Lao.
+  bool get isLao => this == const LangLao();
+
+  /// Checks if this [NaturalLanguage] instance is Latin.
+  bool get isLat => this == const LangLat();
+
+  /// Checks if this [NaturalLanguage] instance is Latvian.
+  bool get isLav => this == const LangLav();
+
+  /// Checks if this [NaturalLanguage] instance is Limburgish (Limburgan/Limburger).
+  bool get isLim => this == const LangLim();
+
+  /// Checks if this [NaturalLanguage] instance is Lingala.
+  bool get isLin => this == const LangLin();
+
+  /// Checks if this [NaturalLanguage] instance is Lithuanian.
+  bool get isLit => this == const LangLit();
+
+  /// Checks if this [NaturalLanguage] instance is Luxembourgish (Letzeburgesch).
+  bool get isLtz => this == const LangLtz();
+
+  /// Checks if this [NaturalLanguage] instance is Luba-Katanga.
+  bool get isLub => this == const LangLub();
+
+  /// Checks if this [NaturalLanguage] instance is Ganda.
+  bool get isLug => this == const LangLug();
+
+  /// Checks if this [NaturalLanguage] instance is Marshallese.
+  bool get isMah => this == const LangMah();
+
+  /// Checks if this [NaturalLanguage] instance is Malayalam.
+  bool get isMal => this == const LangMal();
+
+  /// Checks if this [NaturalLanguage] instance is Marathi (Marāṭhī).
+  bool get isMar => this == const LangMar();
+
+  /// Checks if this [NaturalLanguage] instance is Macedonian.
+  bool get isMkd => this == const LangMkd();
+
+  /// Checks if this [NaturalLanguage] instance is Malagasy.
+  bool get isMlg => this == const LangMlg();
+
+  /// Checks if this [NaturalLanguage] instance is Maltese.
+  bool get isMlt => this == const LangMlt();
+
+  /// Checks if this [NaturalLanguage] instance is Mongolian.
+  bool get isMon => this == const LangMon();
+
+  /// Checks if this [NaturalLanguage] instance is Māori.
+  bool get isMri => this == const LangMri();
+
+  /// Checks if this [NaturalLanguage] instance is Malay.
+  bool get isMsa => this == const LangMsa();
+
+  /// Checks if this [NaturalLanguage] instance is Burmese.
+  bool get isMya => this == const LangMya();
+
+  /// Checks if this [NaturalLanguage] instance is Nauruan.
+  bool get isNau => this == const LangNau();
+
+  /// Checks if this [NaturalLanguage] instance is Navajo (Navaho).
+  bool get isNav => this == const LangNav();
+
+  /// Checks if this [NaturalLanguage] instance is Southern Ndebele.
+  bool get isNbl => this == const LangNbl();
+
+  /// Checks if this [NaturalLanguage] instance is Northern Ndebele.
+  bool get isNde => this == const LangNde();
+
+  /// Checks if this [NaturalLanguage] instance is Ndonga.
+  bool get isNdo => this == const LangNdo();
+
+  /// Checks if this [NaturalLanguage] instance is Nepali.
+  bool get isNep => this == const LangNep();
+
+  /// Checks if this [NaturalLanguage] instance is Dutch.
+  bool get isNld => this == const LangNld();
+
+  /// Checks if this [NaturalLanguage] instance is Norwegian Nynorsk.
+  bool get isNno => this == const LangNno();
+
+  /// Checks if this [NaturalLanguage] instance is Norwegian Bokmål.
+  bool get isNob => this == const LangNob();
+
+  /// Checks if this [NaturalLanguage] instance is Norwegian.
+  bool get isNor => this == const LangNor();
+
+  /// Checks if this [NaturalLanguage] instance is Chichewa (Chewa/Nyanja).
+  bool get isNya => this == const LangNya();
+
+  /// Checks if this [NaturalLanguage] instance is Occitan.
+  bool get isOci => this == const LangOci();
+
+  /// Checks if this [NaturalLanguage] instance is Ojibwe (Ojibwa).
+  bool get isOji => this == const LangOji();
+
+  /// Checks if this [NaturalLanguage] instance is Oriya.
+  bool get isOri => this == const LangOri();
+
+  /// Checks if this [NaturalLanguage] instance is Oromo.
+  bool get isOrm => this == const LangOrm();
+
+  /// Checks if this [NaturalLanguage] instance is Ossetian (Ossetic).
+  bool get isOss => this == const LangOss();
+
+  /// Checks if this [NaturalLanguage] instance is (Eastern) Punjabi.
+  bool get isPan => this == const LangPan();
+
+  /// Checks if this [NaturalLanguage] instance is Pāli.
+  bool get isPli => this == const LangPli();
+
+  /// Checks if this [NaturalLanguage] instance is Polish.
+  bool get isPol => this == const LangPol();
+
+  /// Checks if this [NaturalLanguage] instance is Portuguese.
+  bool get isPor => this == const LangPor();
+
+  /// Checks if this [NaturalLanguage] instance is Pashto (Pushto).
+  bool get isPus => this == const LangPus();
+
+  /// Checks if this [NaturalLanguage] instance is Quechua.
+  bool get isQue => this == const LangQue();
+
+  /// Checks if this [NaturalLanguage] instance is Romansh.
+  bool get isRoh => this == const LangRoh();
+
+  /// Checks if this [NaturalLanguage] instance is Romanian.
+  bool get isRon => this == const LangRon();
+
+  /// Checks if this [NaturalLanguage] instance is Kirundi.
+  bool get isRun => this == const LangRun();
+
+  /// Checks if this [NaturalLanguage] instance is Russian.
+  bool get isRus => this == const LangRus();
+
+  /// Checks if this [NaturalLanguage] instance is Sango.
+  bool get isSag => this == const LangSag();
+
+  /// Checks if this [NaturalLanguage] instance is Sanskrit (Saṁskṛta).
+  bool get isSan => this == const LangSan();
+
+  /// Checks if this [NaturalLanguage] instance is Sinhalese (Sinhala).
+  bool get isSin => this == const LangSin();
+
+  /// Checks if this [NaturalLanguage] instance is Slovak.
+  bool get isSlk => this == const LangSlk();
+
+  /// Checks if this [NaturalLanguage] instance is Slovene.
+  bool get isSlv => this == const LangSlv();
+
+  /// Checks if this [NaturalLanguage] instance is Northern Sami.
+  bool get isSme => this == const LangSme();
+
+  /// Checks if this [NaturalLanguage] instance is Samoan.
+  bool get isSmo => this == const LangSmo();
+
+  /// Checks if this [NaturalLanguage] instance is Shona.
+  bool get isSna => this == const LangSna();
+
+  /// Checks if this [NaturalLanguage] instance is Sindhi.
+  bool get isSnd => this == const LangSnd();
+
+  /// Checks if this [NaturalLanguage] instance is Somali.
+  bool get isSom => this == const LangSom();
+
+  /// Checks if this [NaturalLanguage] instance is Southern Sotho.
+  bool get isSot => this == const LangSot();
+
+  /// Checks if this [NaturalLanguage] instance is Spanish.
+  bool get isSpa => this == const LangSpa();
+
+  /// Checks if this [NaturalLanguage] instance is Albanian.
+  bool get isSqi => this == const LangSqi();
+
+  /// Checks if this [NaturalLanguage] instance is Sardinian.
+  bool get isSrd => this == const LangSrd();
+
+  /// Checks if this [NaturalLanguage] instance is Serbian.
+  bool get isSrp => this == const LangSrp();
+
+  /// Checks if this [NaturalLanguage] instance is Swati.
+  bool get isSsw => this == const LangSsw();
+
+  /// Checks if this [NaturalLanguage] instance is Sundanese.
+  bool get isSun => this == const LangSun();
+
+  /// Checks if this [NaturalLanguage] instance is Swahili.
+  bool get isSwa => this == const LangSwa();
+
+  /// Checks if this [NaturalLanguage] instance is Swedish.
+  bool get isSwe => this == const LangSwe();
+
+  /// Checks if this [NaturalLanguage] instance is Tahitian.
+  bool get isTah => this == const LangTah();
+
+  /// Checks if this [NaturalLanguage] instance is Tamil.
+  bool get isTam => this == const LangTam();
+
+  /// Checks if this [NaturalLanguage] instance is Tatar.
+  bool get isTat => this == const LangTat();
+
+  /// Checks if this [NaturalLanguage] instance is Telugu.
+  bool get isTel => this == const LangTel();
+
+  /// Checks if this [NaturalLanguage] instance is Tajik.
+  bool get isTgk => this == const LangTgk();
+
+  /// Checks if this [NaturalLanguage] instance is Tagalog.
+  bool get isTgl => this == const LangTgl();
+
+  /// Checks if this [NaturalLanguage] instance is Thai.
+  bool get isTha => this == const LangTha();
+
+  /// Checks if this [NaturalLanguage] instance is Tigrinya.
+  bool get isTir => this == const LangTir();
+
+  /// Checks if this [NaturalLanguage] instance is Tonga (Tonga Islands).
+  bool get isTon => this == const LangTon();
+
+  /// Checks if this [NaturalLanguage] instance is Tswana.
+  bool get isTsn => this == const LangTsn();
+
+  /// Checks if this [NaturalLanguage] instance is Tsonga.
+  bool get isTso => this == const LangTso();
+
+  /// Checks if this [NaturalLanguage] instance is Turkmen.
+  bool get isTuk => this == const LangTuk();
+
+  /// Checks if this [NaturalLanguage] instance is Turkish.
+  bool get isTur => this == const LangTur();
+
+  /// Checks if this [NaturalLanguage] instance is Twi.
+  bool get isTwi => this == const LangTwi();
+
+  /// Checks if this [NaturalLanguage] instance is Uyghur.
+  bool get isUig => this == const LangUig();
+
+  /// Checks if this [NaturalLanguage] instance is Ukrainian.
+  bool get isUkr => this == const LangUkr();
+
+  /// Checks if this [NaturalLanguage] instance is Urdu.
+  bool get isUrd => this == const LangUrd();
+
+  /// Checks if this [NaturalLanguage] instance is Uzbek.
+  bool get isUzb => this == const LangUzb();
+
+  /// Checks if this [NaturalLanguage] instance is Venda.
+  bool get isVen => this == const LangVen();
+
+  /// Checks if this [NaturalLanguage] instance is Vietnamese.
+  bool get isVie => this == const LangVie();
+
+  /// Checks if this [NaturalLanguage] instance is Volapük.
+  bool get isVol => this == const LangVol();
+
+  /// Checks if this [NaturalLanguage] instance is Walloon.
+  bool get isWln => this == const LangWln();
+
+  /// Checks if this [NaturalLanguage] instance is Wolof.
+  bool get isWol => this == const LangWol();
+
+  /// Checks if this [NaturalLanguage] instance is Xhosa.
+  bool get isXho => this == const LangXho();
+
+  /// Checks if this [NaturalLanguage] instance is Yiddish.
+  bool get isYid => this == const LangYid();
+
+  /// Checks if this [NaturalLanguage] instance is Yoruba.
+  bool get isYor => this == const LangYor();
+
+  /// Checks if this [NaturalLanguage] instance is Zhuang (Chuang).
+  bool get isZha => this == const LangZha();
+
+  /// Checks if this [NaturalLanguage] instance is Chinese.
+  bool get isZho => this == const LangZho();
+
+  /// Checks if this [NaturalLanguage] instance is Zulu.
+  bool get isZul => this == const LangZul();
+}
