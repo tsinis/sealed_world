@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-import "../../model/currency.dart";
+import "../../model/currency/currency.dart";
 
 /// Extension on [FiatCurrency] that provides a `copyWith` method for
 /// creating a new instance of [FiatCurrency] with updated properties.

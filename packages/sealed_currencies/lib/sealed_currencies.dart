@@ -8,4 +8,4 @@ export "src/helpers/fiat_currency/fiat_currency_copy_with.dart";
 export "src/helpers/fiat_currency/fiat_currency_format.dart";
 export "src/helpers/fiat_currency/fiat_currency_getters.dart";
 export "src/helpers/fiat_currency/fiat_currency_json.dart";
-export "src/model/currency.dart";
+export "src/model/currency/currency.dart";
