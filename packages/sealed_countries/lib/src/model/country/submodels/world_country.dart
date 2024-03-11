@@ -29,7 +29,7 @@ class WorldCountry extends Country
         IsoTranslated<TranslatedName, CountryName>,
         JsonEncodable<WorldCountry> {
   /// {@template country_constructor}
-  /// Creates a new `WorldCountry` object with the given properties.
+  /// Creates a new [WorldCountry] object with the given properties.
   ///
   /// The `name` parameter is required and must not be empty. The
   /// `altSpellings`, `languages`, `namesNative`, `translations`, `demonyms`,
@@ -159,55 +159,49 @@ class WorldCountry extends Country
     this.regionalBlocs,
   });
 
-  /// Returns an `WorldCountry` object from the given `code`
+  /// Returns an [WorldCountry] object from the given `code`
   /// ISO 3166-1 Alpha-3 code.
-  ///
-  /// The `code` parameter is required and must be a valid country code. Returns
-  /// a `WorldCountry` object that represents the country with the given `code`.
-  /// Throws a `StateError` if no such country exists.
-  /// The optional [countries] parameter can be used to specify a list of
-  /// [WorldCountry] objects to search through.
-  factory WorldCountry.fromCode(
-    String code, [
-    Iterable<WorldCountry> countries = list,
-  ]) {
-    assert(countries.isNotEmpty, "`countries` should not be empty!");
-
-    return countries.firstWhere((co) => co.code == code.trim().toUpperCase());
-  }
-
-  /// Returns an `WorldCountry` object from the given `codeShort`
-  /// ISO 3166-1 Alpha-2 code.
-  ///
-  /// The `codeShort` parameter is required and must be a valid country code
-  /// short. Returns a `WorldCountry` object that represents the country with
-  /// the given `codeShort`. Throws a `StateError` if no such country exists.
-  /// The optional [countries] parameter can be used to specify a list of
-  /// [WorldCountry] objects to search through.
-  factory WorldCountry.fromCodeShort(
-    String codeShort, [
-    Iterable<WorldCountry> countries = list,
-  ]) {
-    assert(countries.isNotEmpty, "`countries` should not be empty!");
-
-    return countries
-        .firstWhere((co) => co.codeShort == codeShort.trim().toUpperCase());
-  }
-
-  /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code.
   ///
   /// The `code` parameter is required and must be a valid country code. Returns
   /// a [WorldCountry] object that represents the country with the given `code`.
   /// Throws a `StateError` if no such country exists.
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
+  factory WorldCountry.fromCode(
+    String code, [
+    Iterable<WorldCountry> countries = list,
+  ]) =>
+      countries.firstIsoWhereCode(code.toUpperCase());
+
+  /// Returns an [WorldCountry] object from the given `codeShort`
+  /// ISO 3166-1 Alpha-2 code.
+  ///
+  /// The `codeShort` parameter is required and must be a valid country code
+  /// short. Returns a [WorldCountry] object that represents the country with
+  /// the given `codeShort`. Throws a `StateError` if no such country exists.
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  factory WorldCountry.fromCodeShort(
+    String codeShort, [
+    Iterable<WorldCountry> countries = list,
+  ]) =>
+      countries.firstIsoWhereCodeOther(codeShort.toUpperCase());
+
+  /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code.
+  ///
+  /// The `code` parameter is required and must be a valid country code. Returns
+  /// a [WorldCountry] object that represents the country with the given
+  /// `codeNumeric`. Throws a `StateError` if no such country exists.
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
   factory WorldCountry.fromCodeNumeric(
     String codeNumeric, [
     Iterable<WorldCountry> countries = list,
   ]) {
-    assert(countries.isNotEmpty, "`countries` should not be empty!");
+    final trimmedCode = codeNumeric.trim();
 
-    return countries.firstWhere((co) => co.codeNumeric == codeNumeric.trim());
+    return countries
+        .firstIsoWhere((country) => country.codeNumeric == trimmedCode);
   }
 
   /// Returns an instance of the [WorldCountry] class from any valid
@@ -236,9 +230,9 @@ class WorldCountry extends Country
     Iterable<WorldCountry> countries = list,
   ]) =>
       code.maybeMapIsoCode(
-        orElse: (_) => WorldCountry.fromCode(code, countries),
-        short: (_) => WorldCountry.fromCodeShort(code, countries),
-        numeric: (_) => WorldCountry.fromCodeNumeric(code, countries),
+        orElse: (regular) => WorldCountry.fromCode(regular, countries),
+        short: (short) => WorldCountry.fromCodeShort(short, countries),
+        numeric: (numeric) => WorldCountry.fromCodeNumeric(numeric, countries),
       );
 
   /// The native names of the country.
@@ -341,7 +335,7 @@ class WorldCountry extends Country
   final List<RegionalBloc>? regionalBlocs;
 
   @override
-  String? get codeOther => codeShort;
+  String get codeOther => codeShort;
 
   @override
   String toString({bool short = true}) => short
@@ -351,28 +345,85 @@ class WorldCountry extends Country
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
-  /// Returns a `WorldCountry` object that represents the country with the given
+  /// Returns a [WorldCountry] object that represents the country with the given
   /// `value`.
   ///
   /// The `value` parameter is required and should not be `null`. The `where`
-  /// parameter is an optional function that takes a `WorldCountry` object as
+  /// parameter is an optional function that takes a [WorldCountry] object as
   /// its parameter and returns a value to compare with `value`. If `where` is
-  /// `null`, the `code` field of the `WorldCountry` object will be used. The
-  /// `countries` parameter is an optional iterable of `WorldCountry` objects
-  /// that defaults to `list`. Returns a `WorldCountry` object that represents
+  /// `null`, the `code` field of the [WorldCountry] object will be used. The
+  /// `countries` parameter is an optional iterable of [WorldCountry] objects
+  /// that defaults to `list`. Returns a [WorldCountry] object that represents
   /// the country with the given `value`, or `null` if no such country exists.
   static WorldCountry? maybeFromValue<T extends Object>(
     T value, {
     T? Function(WorldCountry country)? where,
     Iterable<WorldCountry> countries = list,
   }) {
-    assert(countries.isNotEmpty, "`countries` should not be empty!");
+    countries.assertNotEmpty();
+
     for (final country in countries) {
       final expectedValue = where?.call(country) ?? country.code;
       if (expectedValue == value) return country;
     }
 
     return null;
+  }
+
+  /// Returns an [WorldCountry] object from the given `code`
+  /// ISO 3166-1 Alpha-3 code, or `null` if no such instance exists.
+  ///
+  /// The `code` parameter is required and must be a valid country code. Returns
+  /// a [WorldCountry] object that represents the country with the given `code`.
+  /// Throws a `StateError` if no such country exists.
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  static WorldCountry? maybeFromCode(
+    Object? code, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    final string = code?.toString().trim() ?? "";
+
+    return string.length == IsoStandardized.codeLength
+        ? countries.firstIsoWhereCodeOrNull(string.toUpperCase())
+        : null;
+  }
+
+  /// Returns an [WorldCountry] object from the given `codeShort`
+  /// ISO 3166-1 Alpha-2 code, or `null` if no such instance exists.
+  ///
+  /// The `codeShort` parameter is required and must be a valid country code
+  /// short. Returns a [WorldCountry] object that represents the country with
+  /// the given `codeShort`, or `null` if no such instance exists.
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  static WorldCountry? maybeFromCodeShort(
+    Object? codeShort, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    final string = codeShort?.toString().trim() ?? "";
+
+    return string.length == IsoStandardized.codeShortLength
+        ? countries.firstIsoWhereCodeOtherOrNull(string.toUpperCase())
+        : null;
+  }
+
+  /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code,
+  /// or `null` if no such instance exists.
+  ///
+  /// The `code` parameter is required and must be a valid country code. Returns
+  /// a [WorldCountry] object that represents the country with the given
+  /// `codeNumeric`, or `null` if no such instance exists.
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  static WorldCountry? maybeFromCodeNumeric(
+    String codeNumeric, [
+    Iterable<WorldCountry> countries = list,
+  ]) {
+    final trimmedCode = codeNumeric.trim();
+
+    return countries
+        .firstIsoWhereOrNull((country) => country.codeNumeric == trimmedCode);
   }
 
   /// Returns a [WorldCountry] instance that corresponds to the given code, or
@@ -400,24 +451,15 @@ class WorldCountry extends Country
   /// property of each [WorldCountry] instance. The resulting [WorldCountry]
   /// instance is assigned to the `country` variable.
   static WorldCountry? maybeFromAnyCode(
-    String? code, [
+    Object? code, [
     Iterable<WorldCountry> countries = list,
-  ]) {
-    assert(countries.isNotEmpty, "`countries` should not be empty!");
-    final trimmedCode = code?.trim().toUpperCase();
-    if (trimmedCode?.isEmpty ?? true) return null;
-
-    for (final country in countries) {
-      final expectedValue = trimmedCode?.maybeMapIsoCode(
-        orElse: (_) => country.code,
-        numeric: (_) => country.codeNumeric,
-        short: (_) => country.codeShort,
-      );
-      if (expectedValue == trimmedCode) return country;
-    }
-
-    return null;
-  }
+  ]) =>
+      code?.toString().maybeMapIsoCode(
+            orElse: (regular) => WorldCountry.maybeFromCode(regular, countries),
+            short: (short) => WorldCountry.maybeFromCodeShort(short, countries),
+            numeric: (numeric) =>
+                WorldCountry.maybeFromCodeNumeric(numeric, countries),
+          );
 
   /// The general standard ISO code for countries, defined as ISO 3166-1.
   static const standardGeneralName = "3166-1";
