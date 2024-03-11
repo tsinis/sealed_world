@@ -24,7 +24,7 @@ dependency_overrides:
     path: ../packages/sealed_languages
 
 dev_dependencies:
-  build_runner: ^2.4.7 # From Google
+  build_runner: ^2.4.8 # From Google
   dart_code_metrics: # Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics

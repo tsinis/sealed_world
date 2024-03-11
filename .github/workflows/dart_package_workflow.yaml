@@ -86,7 +86,7 @@ jobs:
           min_coverage: 90
 
       - name: 💯 Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v4.1.0
         with:
           file: ${{ env.relative_path }}/coverage/lcov.info
           flags: ${{ inputs.package_name }}
@@ -94,3 +94,5 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           override_branch: ${{ github.base_ref }}
           verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
