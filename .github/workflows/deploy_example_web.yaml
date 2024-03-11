@@ -40,10 +40,10 @@ jobs:
         working-directory: packages/world_countries/example/build/web
         run: rm -rf assets/packages && rm -rf assets/assets
 
-      - name: 🛫 Deploy website to GH Pages
+      - name: 🛫 Deploy the website to GH Pages
         uses: s0/git-publish-subdir-action@v2.6.0
         env:
           REPO: self
           BRANCH: gh-pages
-          FOLDER: packages/world_countries/example/build/web_wasm
+          FOLDER: packages/world_countries/example/build/web
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
