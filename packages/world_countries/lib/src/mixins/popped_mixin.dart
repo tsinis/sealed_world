@@ -15,6 +15,7 @@ mixin PoppedMixin<T extends Object> on StatefulIndexedListView<T> {
   ///
   /// Returns the selected [item].
   @protected
+  @optionalTypeArgs
   T maybeSelectAndPop(T item, BuildContext context) {
     onSelect?.call(item);
     unawaited(context.maybePop());

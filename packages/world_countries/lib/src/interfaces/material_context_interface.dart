@@ -14,6 +14,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
   ///
   /// [heightFactor]
   /// {@macro flutter.widgets.basic.fractionallySizedBox.heightFactor}
+  @optionalTypeArgs
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
@@ -35,6 +36,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
   });
 
   /// Twin of a Material's `showSearch` function.
+  @optionalTypeArgs
   Future<T?>? showInSearch(
     BuildContext context, {
     String? query = "",
@@ -42,6 +44,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
   });
 
   /// Twin of a Material's `showDialog` function.
+  @optionalTypeArgs
   Future<T?>? showInDialog(
     BuildContext context, {
     bool barrierDismissible = true,

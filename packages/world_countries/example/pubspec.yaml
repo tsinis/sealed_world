@@ -27,8 +27,8 @@ dev_dependencies:
       url: https://github.com/tsinis/dart-code-metrics
   dhttpd: ^4.1.0 # From Google
   flutter_gen_runner: ^5.4.0
-  # flutter_launcher_icons: ^0.13.1 # From Flutter Community
-  # flutter_native_splash: ^2.3.13 # Flutter Favorite
+  # flutter_launcher_icons: any # From Flutter Community
+  # flutter_native_splash: any # Flutter Favorite
   flutter_test: # From Google
     sdk: flutter
   lints: ^3.0.0 # From Google

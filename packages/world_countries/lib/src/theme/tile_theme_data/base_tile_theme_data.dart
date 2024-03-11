@@ -26,6 +26,7 @@ base class BaseTileThemeData<T extends Translated>
   const BaseTileThemeData({super.builder});
 
   @override
+  @optionalTypeArgs
   BaseTileThemeData<T> copyWith({
     Widget Function(ItemProperties<T> itemProperties, {bool? isDense})? builder,
   }) =>
