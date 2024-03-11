@@ -12,6 +12,7 @@ extension NavigatorContextExtension on BuildContext {
   /// ```dart
   /// onTap: context.pop,
   /// ```
+  @optionalTypeArgs
   void pop<T extends Object>([T? result]) => navigator.pop<T>(result);
 
   /// Pushes a new `Route` onto the navigation stack and returns a [Future] that
@@ -21,6 +22,7 @@ extension NavigatorContextExtension on BuildContext {
   /// ```dart
   /// context.push(MyRoute());
   /// ```
+  @optionalTypeArgs
   Future<T?> push<T extends Object>(Route<T> route) => navigator.push(route);
 
   /// Pops the current route off the navigation stack and returns to the
@@ -31,6 +33,7 @@ extension NavigatorContextExtension on BuildContext {
   /// ```dart
   /// context.maybePop();
   /// ```
+  @optionalTypeArgs
   Future<bool> maybePop<T extends Object>([T? result]) =>
       navigator.maybePop<T>(result);
 }

@@ -69,6 +69,7 @@ class ItemProperties<T extends Object> {
   ///   chosen.
   /// * [isDisabled] is the new boolean indicating whether the item is currently
   ///   disabled.
+  @optionalTypeArgs
   // ignore: long-parameter-list, class has 5 properties.
   ItemProperties<T> copyWith({
     BuildContext? context,

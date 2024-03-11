@@ -10,6 +10,7 @@ mixin PropertiesConvertibleMixin<T extends Object>
   /// Returns the [ItemProperties] for an item at the specified [index].
   ///
   /// The [context] parameter is the build context for the item.
+  @optionalTypeArgs
   ItemProperties<T> properties(BuildContext context, int index) =>
       filteredProperties(items, context, index);
 
@@ -20,6 +21,7 @@ mixin PropertiesConvertibleMixin<T extends Object>
   /// based on the current configuration. The [context] parameter is the build
   /// context for the item.
   @protected
+  @optionalTypeArgs
   ItemProperties<T> filteredProperties(
     Iterable<T> filtered,
     BuildContext context,

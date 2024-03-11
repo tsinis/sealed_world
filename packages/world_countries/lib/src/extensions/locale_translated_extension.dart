@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../models/locale/typed_locale.dart";
@@ -13,6 +14,7 @@ extension LocaleTranslatedExtension<T extends TranslatedName> on Translated<T> {
   ///
   /// Returns the translated object of type `T`, or `null` if the translation is
   /// not available.
+  @optionalTypeArgs
   T? maybeTranslate(TypedLocale? locale, {bool useLanguageFallback = true}) {
     final language = locale?.language;
 
