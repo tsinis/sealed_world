@@ -286,7 +286,7 @@ void main() => group("$FiatCurrency", () {
           () => expect(
             FiatCurrency.maybeFromValue(
               value.code,
-              where: (lang) => lang.code,
+              where: (currency) => currency.code,
             ),
             value,
           ),
@@ -307,7 +307,7 @@ void main() => group("$FiatCurrency", () {
           () => expect(
             FiatCurrency.maybeFromValue(
               value,
-              where: (lang) => lang.name,
+              where: (currency) => currency.name,
             ),
             isNull,
           ),
