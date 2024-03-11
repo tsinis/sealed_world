@@ -1,4 +1,5 @@
 import "package:change_case/change_case.dart";
+import "package:sealed_countries/sealed_countries.dart";
 
 import "../models/package.dart";
 import "../utils/code_utils.dart";
@@ -26,8 +27,10 @@ class BoolGettersGenerator {
     """);
 
     for (final item in package.dataList) {
+      final name = item.name;
+      final itemName = name is TranslatedName ? name.common : name.toString();
       buffer
-        ..write("/// Checks if this [$type] instance is ${item.name}.")
+        ..write("/// Checks if this [$type] instance is $itemName.")
         ..write("\n")
         ..write("bool get is${item.code.toSentenceCase()}")
         ..write("=> this == const ${item.runtimeType}();")

@@ -2536,3 +2536,755 @@ extension WorldCountryFunctional on WorldCountry {
         _ => orElse?.call(),
       };
 }
+
+extension WorldCountryBoolGetters on WorldCountry {
+  /// Checks if this [WorldCountry] instance is Aruba.
+  bool get isAbw => this == const CountryAbw();
+
+  /// Checks if this [WorldCountry] instance is Afghanistan.
+  bool get isAfg => this == const CountryAfg();
+
+  /// Checks if this [WorldCountry] instance is Angola.
+  bool get isAgo => this == const CountryAgo();
+
+  /// Checks if this [WorldCountry] instance is Anguilla.
+  bool get isAia => this == const CountryAia();
+
+  /// Checks if this [WorldCountry] instance is Åland Islands.
+  bool get isAla => this == const CountryAla();
+
+  /// Checks if this [WorldCountry] instance is Albania.
+  bool get isAlb => this == const CountryAlb();
+
+  /// Checks if this [WorldCountry] instance is Andorra.
+  bool get isAnd => this == const CountryAnd();
+
+  /// Checks if this [WorldCountry] instance is United Arab Emirates.
+  bool get isAre => this == const CountryAre();
+
+  /// Checks if this [WorldCountry] instance is Argentina.
+  bool get isArg => this == const CountryArg();
+
+  /// Checks if this [WorldCountry] instance is Armenia.
+  bool get isArm => this == const CountryArm();
+
+  /// Checks if this [WorldCountry] instance is American Samoa.
+  bool get isAsm => this == const CountryAsm();
+
+  /// Checks if this [WorldCountry] instance is Antarctica.
+  bool get isAta => this == const CountryAta();
+
+  /// Checks if this [WorldCountry] instance is French Southern and Antarctic Lands.
+  bool get isAtf => this == const CountryAtf();
+
+  /// Checks if this [WorldCountry] instance is Antigua and Barbuda.
+  bool get isAtg => this == const CountryAtg();
+
+  /// Checks if this [WorldCountry] instance is Australia.
+  bool get isAus => this == const CountryAus();
+
+  /// Checks if this [WorldCountry] instance is Austria.
+  bool get isAut => this == const CountryAut();
+
+  /// Checks if this [WorldCountry] instance is Azerbaijan.
+  bool get isAze => this == const CountryAze();
+
+  /// Checks if this [WorldCountry] instance is Burundi.
+  bool get isBdi => this == const CountryBdi();
+
+  /// Checks if this [WorldCountry] instance is Belgium.
+  bool get isBel => this == const CountryBel();
+
+  /// Checks if this [WorldCountry] instance is Benin.
+  bool get isBen => this == const CountryBen();
+
+  /// Checks if this [WorldCountry] instance is Caribbean Netherlands.
+  bool get isBes => this == const CountryBes();
+
+  /// Checks if this [WorldCountry] instance is Burkina Faso.
+  bool get isBfa => this == const CountryBfa();
+
+  /// Checks if this [WorldCountry] instance is Bangladesh.
+  bool get isBgd => this == const CountryBgd();
+
+  /// Checks if this [WorldCountry] instance is Bulgaria.
+  bool get isBgr => this == const CountryBgr();
+
+  /// Checks if this [WorldCountry] instance is Bahrain.
+  bool get isBhr => this == const CountryBhr();
+
+  /// Checks if this [WorldCountry] instance is Bahamas.
+  bool get isBhs => this == const CountryBhs();
+
+  /// Checks if this [WorldCountry] instance is Bosnia and Herzegovina.
+  bool get isBih => this == const CountryBih();
+
+  /// Checks if this [WorldCountry] instance is Saint Barthélemy.
+  bool get isBlm => this == const CountryBlm();
+
+  /// Checks if this [WorldCountry] instance is Belarus.
+  bool get isBlr => this == const CountryBlr();
+
+  /// Checks if this [WorldCountry] instance is Belize.
+  bool get isBlz => this == const CountryBlz();
+
+  /// Checks if this [WorldCountry] instance is Bermuda.
+  bool get isBmu => this == const CountryBmu();
+
+  /// Checks if this [WorldCountry] instance is Bolivia.
+  bool get isBol => this == const CountryBol();
+
+  /// Checks if this [WorldCountry] instance is Brazil.
+  bool get isBra => this == const CountryBra();
+
+  /// Checks if this [WorldCountry] instance is Barbados.
+  bool get isBrb => this == const CountryBrb();
+
+  /// Checks if this [WorldCountry] instance is Brunei.
+  bool get isBrn => this == const CountryBrn();
+
+  /// Checks if this [WorldCountry] instance is Bhutan.
+  bool get isBtn => this == const CountryBtn();
+
+  /// Checks if this [WorldCountry] instance is Bouvet Island.
+  bool get isBvt => this == const CountryBvt();
+
+  /// Checks if this [WorldCountry] instance is Botswana.
+  bool get isBwa => this == const CountryBwa();
+
+  /// Checks if this [WorldCountry] instance is Central African Republic.
+  bool get isCaf => this == const CountryCaf();
+
+  /// Checks if this [WorldCountry] instance is Canada.
+  bool get isCan => this == const CountryCan();
+
+  /// Checks if this [WorldCountry] instance is Cocos (Keeling) Islands.
+  bool get isCck => this == const CountryCck();
+
+  /// Checks if this [WorldCountry] instance is Switzerland.
+  bool get isChe => this == const CountryChe();
+
+  /// Checks if this [WorldCountry] instance is Chile.
+  bool get isChl => this == const CountryChl();
+
+  /// Checks if this [WorldCountry] instance is China.
+  bool get isChn => this == const CountryChn();
+
+  /// Checks if this [WorldCountry] instance is Ivory Coast.
+  bool get isCiv => this == const CountryCiv();
+
+  /// Checks if this [WorldCountry] instance is Cameroon.
+  bool get isCmr => this == const CountryCmr();
+
+  /// Checks if this [WorldCountry] instance is DR Congo.
+  bool get isCod => this == const CountryCod();
+
+  /// Checks if this [WorldCountry] instance is Republic of the Congo.
+  bool get isCog => this == const CountryCog();
+
+  /// Checks if this [WorldCountry] instance is Cook Islands.
+  bool get isCok => this == const CountryCok();
+
+  /// Checks if this [WorldCountry] instance is Colombia.
+  bool get isCol => this == const CountryCol();
+
+  /// Checks if this [WorldCountry] instance is Comoros.
+  bool get isCom => this == const CountryCom();
+
+  /// Checks if this [WorldCountry] instance is Cape Verde.
+  bool get isCpv => this == const CountryCpv();
+
+  /// Checks if this [WorldCountry] instance is Costa Rica.
+  bool get isCri => this == const CountryCri();
+
+  /// Checks if this [WorldCountry] instance is Cuba.
+  bool get isCub => this == const CountryCub();
+
+  /// Checks if this [WorldCountry] instance is Curaçao.
+  bool get isCuw => this == const CountryCuw();
+
+  /// Checks if this [WorldCountry] instance is Christmas Island.
+  bool get isCxr => this == const CountryCxr();
+
+  /// Checks if this [WorldCountry] instance is Cayman Islands.
+  bool get isCym => this == const CountryCym();
+
+  /// Checks if this [WorldCountry] instance is Cyprus.
+  bool get isCyp => this == const CountryCyp();
+
+  /// Checks if this [WorldCountry] instance is Czechia.
+  bool get isCze => this == const CountryCze();
+
+  /// Checks if this [WorldCountry] instance is Germany.
+  bool get isDeu => this == const CountryDeu();
+
+  /// Checks if this [WorldCountry] instance is Djibouti.
+  bool get isDji => this == const CountryDji();
+
+  /// Checks if this [WorldCountry] instance is Dominica.
+  bool get isDma => this == const CountryDma();
+
+  /// Checks if this [WorldCountry] instance is Denmark.
+  bool get isDnk => this == const CountryDnk();
+
+  /// Checks if this [WorldCountry] instance is Dominican Republic.
+  bool get isDom => this == const CountryDom();
+
+  /// Checks if this [WorldCountry] instance is Algeria.
+  bool get isDza => this == const CountryDza();
+
+  /// Checks if this [WorldCountry] instance is Ecuador.
+  bool get isEcu => this == const CountryEcu();
+
+  /// Checks if this [WorldCountry] instance is Egypt.
+  bool get isEgy => this == const CountryEgy();
+
+  /// Checks if this [WorldCountry] instance is Eritrea.
+  bool get isEri => this == const CountryEri();
+
+  /// Checks if this [WorldCountry] instance is Western Sahara.
+  bool get isEsh => this == const CountryEsh();
+
+  /// Checks if this [WorldCountry] instance is Spain.
+  bool get isEsp => this == const CountryEsp();
+
+  /// Checks if this [WorldCountry] instance is Estonia.
+  bool get isEst => this == const CountryEst();
+
+  /// Checks if this [WorldCountry] instance is Ethiopia.
+  bool get isEth => this == const CountryEth();
+
+  /// Checks if this [WorldCountry] instance is Finland.
+  bool get isFin => this == const CountryFin();
+
+  /// Checks if this [WorldCountry] instance is Fiji.
+  bool get isFji => this == const CountryFji();
+
+  /// Checks if this [WorldCountry] instance is Falkland Islands.
+  bool get isFlk => this == const CountryFlk();
+
+  /// Checks if this [WorldCountry] instance is France.
+  bool get isFra => this == const CountryFra();
+
+  /// Checks if this [WorldCountry] instance is Faroe Islands.
+  bool get isFro => this == const CountryFro();
+
+  /// Checks if this [WorldCountry] instance is Micronesia.
+  bool get isFsm => this == const CountryFsm();
+
+  /// Checks if this [WorldCountry] instance is Gabon.
+  bool get isGab => this == const CountryGab();
+
+  /// Checks if this [WorldCountry] instance is United Kingdom.
+  bool get isGbr => this == const CountryGbr();
+
+  /// Checks if this [WorldCountry] instance is Georgia.
+  bool get isGeo => this == const CountryGeo();
+
+  /// Checks if this [WorldCountry] instance is Guernsey.
+  bool get isGgy => this == const CountryGgy();
+
+  /// Checks if this [WorldCountry] instance is Ghana.
+  bool get isGha => this == const CountryGha();
+
+  /// Checks if this [WorldCountry] instance is Gibraltar.
+  bool get isGib => this == const CountryGib();
+
+  /// Checks if this [WorldCountry] instance is Guinea.
+  bool get isGin => this == const CountryGin();
+
+  /// Checks if this [WorldCountry] instance is Guadeloupe.
+  bool get isGlp => this == const CountryGlp();
+
+  /// Checks if this [WorldCountry] instance is Gambia.
+  bool get isGmb => this == const CountryGmb();
+
+  /// Checks if this [WorldCountry] instance is Guinea-Bissau.
+  bool get isGnb => this == const CountryGnb();
+
+  /// Checks if this [WorldCountry] instance is Equatorial Guinea.
+  bool get isGnq => this == const CountryGnq();
+
+  /// Checks if this [WorldCountry] instance is Greece.
+  bool get isGrc => this == const CountryGrc();
+
+  /// Checks if this [WorldCountry] instance is Grenada.
+  bool get isGrd => this == const CountryGrd();
+
+  /// Checks if this [WorldCountry] instance is Greenland.
+  bool get isGrl => this == const CountryGrl();
+
+  /// Checks if this [WorldCountry] instance is Guatemala.
+  bool get isGtm => this == const CountryGtm();
+
+  /// Checks if this [WorldCountry] instance is French Guiana.
+  bool get isGuf => this == const CountryGuf();
+
+  /// Checks if this [WorldCountry] instance is Guam.
+  bool get isGum => this == const CountryGum();
+
+  /// Checks if this [WorldCountry] instance is Guyana.
+  bool get isGuy => this == const CountryGuy();
+
+  /// Checks if this [WorldCountry] instance is Hong Kong.
+  bool get isHkg => this == const CountryHkg();
+
+  /// Checks if this [WorldCountry] instance is Heard Island and McDonald Islands.
+  bool get isHmd => this == const CountryHmd();
+
+  /// Checks if this [WorldCountry] instance is Honduras.
+  bool get isHnd => this == const CountryHnd();
+
+  /// Checks if this [WorldCountry] instance is Croatia.
+  bool get isHrv => this == const CountryHrv();
+
+  /// Checks if this [WorldCountry] instance is Haiti.
+  bool get isHti => this == const CountryHti();
+
+  /// Checks if this [WorldCountry] instance is Hungary.
+  bool get isHun => this == const CountryHun();
+
+  /// Checks if this [WorldCountry] instance is Indonesia.
+  bool get isIdn => this == const CountryIdn();
+
+  /// Checks if this [WorldCountry] instance is Isle of Man.
+  bool get isImn => this == const CountryImn();
+
+  /// Checks if this [WorldCountry] instance is India.
+  bool get isInd => this == const CountryInd();
+
+  /// Checks if this [WorldCountry] instance is British Indian Ocean Territory.
+  bool get isIot => this == const CountryIot();
+
+  /// Checks if this [WorldCountry] instance is Ireland.
+  bool get isIrl => this == const CountryIrl();
+
+  /// Checks if this [WorldCountry] instance is Iran.
+  bool get isIrn => this == const CountryIrn();
+
+  /// Checks if this [WorldCountry] instance is Iraq.
+  bool get isIrq => this == const CountryIrq();
+
+  /// Checks if this [WorldCountry] instance is Iceland.
+  bool get isIsl => this == const CountryIsl();
+
+  /// Checks if this [WorldCountry] instance is Israel.
+  bool get isIsr => this == const CountryIsr();
+
+  /// Checks if this [WorldCountry] instance is Italy.
+  bool get isIta => this == const CountryIta();
+
+  /// Checks if this [WorldCountry] instance is Jamaica.
+  bool get isJam => this == const CountryJam();
+
+  /// Checks if this [WorldCountry] instance is Jersey.
+  bool get isJey => this == const CountryJey();
+
+  /// Checks if this [WorldCountry] instance is Jordan.
+  bool get isJor => this == const CountryJor();
+
+  /// Checks if this [WorldCountry] instance is Japan.
+  bool get isJpn => this == const CountryJpn();
+
+  /// Checks if this [WorldCountry] instance is Kazakhstan.
+  bool get isKaz => this == const CountryKaz();
+
+  /// Checks if this [WorldCountry] instance is Kenya.
+  bool get isKen => this == const CountryKen();
+
+  /// Checks if this [WorldCountry] instance is Kyrgyzstan.
+  bool get isKgz => this == const CountryKgz();
+
+  /// Checks if this [WorldCountry] instance is Cambodia.
+  bool get isKhm => this == const CountryKhm();
+
+  /// Checks if this [WorldCountry] instance is Kiribati.
+  bool get isKir => this == const CountryKir();
+
+  /// Checks if this [WorldCountry] instance is Saint Kitts and Nevis.
+  bool get isKna => this == const CountryKna();
+
+  /// Checks if this [WorldCountry] instance is South Korea.
+  bool get isKor => this == const CountryKor();
+
+  /// Checks if this [WorldCountry] instance is Kuwait.
+  bool get isKwt => this == const CountryKwt();
+
+  /// Checks if this [WorldCountry] instance is Laos.
+  bool get isLao => this == const CountryLao();
+
+  /// Checks if this [WorldCountry] instance is Lebanon.
+  bool get isLbn => this == const CountryLbn();
+
+  /// Checks if this [WorldCountry] instance is Liberia.
+  bool get isLbr => this == const CountryLbr();
+
+  /// Checks if this [WorldCountry] instance is Libya.
+  bool get isLby => this == const CountryLby();
+
+  /// Checks if this [WorldCountry] instance is Saint Lucia.
+  bool get isLca => this == const CountryLca();
+
+  /// Checks if this [WorldCountry] instance is Liechtenstein.
+  bool get isLie => this == const CountryLie();
+
+  /// Checks if this [WorldCountry] instance is Sri Lanka.
+  bool get isLka => this == const CountryLka();
+
+  /// Checks if this [WorldCountry] instance is Lesotho.
+  bool get isLso => this == const CountryLso();
+
+  /// Checks if this [WorldCountry] instance is Lithuania.
+  bool get isLtu => this == const CountryLtu();
+
+  /// Checks if this [WorldCountry] instance is Luxembourg.
+  bool get isLux => this == const CountryLux();
+
+  /// Checks if this [WorldCountry] instance is Latvia.
+  bool get isLva => this == const CountryLva();
+
+  /// Checks if this [WorldCountry] instance is Macau.
+  bool get isMac => this == const CountryMac();
+
+  /// Checks if this [WorldCountry] instance is Saint Martin.
+  bool get isMaf => this == const CountryMaf();
+
+  /// Checks if this [WorldCountry] instance is Morocco.
+  bool get isMar => this == const CountryMar();
+
+  /// Checks if this [WorldCountry] instance is Monaco.
+  bool get isMco => this == const CountryMco();
+
+  /// Checks if this [WorldCountry] instance is Moldova.
+  bool get isMda => this == const CountryMda();
+
+  /// Checks if this [WorldCountry] instance is Madagascar.
+  bool get isMdg => this == const CountryMdg();
+
+  /// Checks if this [WorldCountry] instance is Maldives.
+  bool get isMdv => this == const CountryMdv();
+
+  /// Checks if this [WorldCountry] instance is Mexico.
+  bool get isMex => this == const CountryMex();
+
+  /// Checks if this [WorldCountry] instance is Marshall Islands.
+  bool get isMhl => this == const CountryMhl();
+
+  /// Checks if this [WorldCountry] instance is North Macedonia.
+  bool get isMkd => this == const CountryMkd();
+
+  /// Checks if this [WorldCountry] instance is Mali.
+  bool get isMli => this == const CountryMli();
+
+  /// Checks if this [WorldCountry] instance is Malta.
+  bool get isMlt => this == const CountryMlt();
+
+  /// Checks if this [WorldCountry] instance is Myanmar.
+  bool get isMmr => this == const CountryMmr();
+
+  /// Checks if this [WorldCountry] instance is Montenegro.
+  bool get isMne => this == const CountryMne();
+
+  /// Checks if this [WorldCountry] instance is Mongolia.
+  bool get isMng => this == const CountryMng();
+
+  /// Checks if this [WorldCountry] instance is Northern Mariana Islands.
+  bool get isMnp => this == const CountryMnp();
+
+  /// Checks if this [WorldCountry] instance is Mozambique.
+  bool get isMoz => this == const CountryMoz();
+
+  /// Checks if this [WorldCountry] instance is Mauritania.
+  bool get isMrt => this == const CountryMrt();
+
+  /// Checks if this [WorldCountry] instance is Montserrat.
+  bool get isMsr => this == const CountryMsr();
+
+  /// Checks if this [WorldCountry] instance is Martinique.
+  bool get isMtq => this == const CountryMtq();
+
+  /// Checks if this [WorldCountry] instance is Mauritius.
+  bool get isMus => this == const CountryMus();
+
+  /// Checks if this [WorldCountry] instance is Malawi.
+  bool get isMwi => this == const CountryMwi();
+
+  /// Checks if this [WorldCountry] instance is Malaysia.
+  bool get isMys => this == const CountryMys();
+
+  /// Checks if this [WorldCountry] instance is Mayotte.
+  bool get isMyt => this == const CountryMyt();
+
+  /// Checks if this [WorldCountry] instance is Namibia.
+  bool get isNam => this == const CountryNam();
+
+  /// Checks if this [WorldCountry] instance is New Caledonia.
+  bool get isNcl => this == const CountryNcl();
+
+  /// Checks if this [WorldCountry] instance is Niger.
+  bool get isNer => this == const CountryNer();
+
+  /// Checks if this [WorldCountry] instance is Norfolk Island.
+  bool get isNfk => this == const CountryNfk();
+
+  /// Checks if this [WorldCountry] instance is Nigeria.
+  bool get isNga => this == const CountryNga();
+
+  /// Checks if this [WorldCountry] instance is Nicaragua.
+  bool get isNic => this == const CountryNic();
+
+  /// Checks if this [WorldCountry] instance is Niue.
+  bool get isNiu => this == const CountryNiu();
+
+  /// Checks if this [WorldCountry] instance is Netherlands.
+  bool get isNld => this == const CountryNld();
+
+  /// Checks if this [WorldCountry] instance is Norway.
+  bool get isNor => this == const CountryNor();
+
+  /// Checks if this [WorldCountry] instance is Nepal.
+  bool get isNpl => this == const CountryNpl();
+
+  /// Checks if this [WorldCountry] instance is Nauru.
+  bool get isNru => this == const CountryNru();
+
+  /// Checks if this [WorldCountry] instance is New Zealand.
+  bool get isNzl => this == const CountryNzl();
+
+  /// Checks if this [WorldCountry] instance is Oman.
+  bool get isOmn => this == const CountryOmn();
+
+  /// Checks if this [WorldCountry] instance is Pakistan.
+  bool get isPak => this == const CountryPak();
+
+  /// Checks if this [WorldCountry] instance is Panama.
+  bool get isPan => this == const CountryPan();
+
+  /// Checks if this [WorldCountry] instance is Pitcairn Islands.
+  bool get isPcn => this == const CountryPcn();
+
+  /// Checks if this [WorldCountry] instance is Peru.
+  bool get isPer => this == const CountryPer();
+
+  /// Checks if this [WorldCountry] instance is Philippines.
+  bool get isPhl => this == const CountryPhl();
+
+  /// Checks if this [WorldCountry] instance is Palau.
+  bool get isPlw => this == const CountryPlw();
+
+  /// Checks if this [WorldCountry] instance is Papua New Guinea.
+  bool get isPng => this == const CountryPng();
+
+  /// Checks if this [WorldCountry] instance is Poland.
+  bool get isPol => this == const CountryPol();
+
+  /// Checks if this [WorldCountry] instance is Puerto Rico.
+  bool get isPri => this == const CountryPri();
+
+  /// Checks if this [WorldCountry] instance is North Korea.
+  bool get isPrk => this == const CountryPrk();
+
+  /// Checks if this [WorldCountry] instance is Portugal.
+  bool get isPrt => this == const CountryPrt();
+
+  /// Checks if this [WorldCountry] instance is Paraguay.
+  bool get isPry => this == const CountryPry();
+
+  /// Checks if this [WorldCountry] instance is Palestine.
+  bool get isPse => this == const CountryPse();
+
+  /// Checks if this [WorldCountry] instance is French Polynesia.
+  bool get isPyf => this == const CountryPyf();
+
+  /// Checks if this [WorldCountry] instance is Qatar.
+  bool get isQat => this == const CountryQat();
+
+  /// Checks if this [WorldCountry] instance is Réunion.
+  bool get isReu => this == const CountryReu();
+
+  /// Checks if this [WorldCountry] instance is Romania.
+  bool get isRou => this == const CountryRou();
+
+  /// Checks if this [WorldCountry] instance is Russia.
+  bool get isRus => this == const CountryRus();
+
+  /// Checks if this [WorldCountry] instance is Rwanda.
+  bool get isRwa => this == const CountryRwa();
+
+  /// Checks if this [WorldCountry] instance is Saudi Arabia.
+  bool get isSau => this == const CountrySau();
+
+  /// Checks if this [WorldCountry] instance is Sudan.
+  bool get isSdn => this == const CountrySdn();
+
+  /// Checks if this [WorldCountry] instance is Senegal.
+  bool get isSen => this == const CountrySen();
+
+  /// Checks if this [WorldCountry] instance is Singapore.
+  bool get isSgp => this == const CountrySgp();
+
+  /// Checks if this [WorldCountry] instance is South Georgia.
+  bool get isSgs => this == const CountrySgs();
+
+  /// Checks if this [WorldCountry] instance is Saint Helena, Ascension and Tristan da Cunha.
+  bool get isShn => this == const CountryShn();
+
+  /// Checks if this [WorldCountry] instance is Svalbard and Jan Mayen.
+  bool get isSjm => this == const CountrySjm();
+
+  /// Checks if this [WorldCountry] instance is Solomon Islands.
+  bool get isSlb => this == const CountrySlb();
+
+  /// Checks if this [WorldCountry] instance is Sierra Leone.
+  bool get isSle => this == const CountrySle();
+
+  /// Checks if this [WorldCountry] instance is El Salvador.
+  bool get isSlv => this == const CountrySlv();
+
+  /// Checks if this [WorldCountry] instance is San Marino.
+  bool get isSmr => this == const CountrySmr();
+
+  /// Checks if this [WorldCountry] instance is Somalia.
+  bool get isSom => this == const CountrySom();
+
+  /// Checks if this [WorldCountry] instance is Saint Pierre and Miquelon.
+  bool get isSpm => this == const CountrySpm();
+
+  /// Checks if this [WorldCountry] instance is Serbia.
+  bool get isSrb => this == const CountrySrb();
+
+  /// Checks if this [WorldCountry] instance is South Sudan.
+  bool get isSsd => this == const CountrySsd();
+
+  /// Checks if this [WorldCountry] instance is São Tomé and Príncipe.
+  bool get isStp => this == const CountryStp();
+
+  /// Checks if this [WorldCountry] instance is Suriname.
+  bool get isSur => this == const CountrySur();
+
+  /// Checks if this [WorldCountry] instance is Slovakia.
+  bool get isSvk => this == const CountrySvk();
+
+  /// Checks if this [WorldCountry] instance is Slovenia.
+  bool get isSvn => this == const CountrySvn();
+
+  /// Checks if this [WorldCountry] instance is Sweden.
+  bool get isSwe => this == const CountrySwe();
+
+  /// Checks if this [WorldCountry] instance is Eswatini.
+  bool get isSwz => this == const CountrySwz();
+
+  /// Checks if this [WorldCountry] instance is Sint Maarten.
+  bool get isSxm => this == const CountrySxm();
+
+  /// Checks if this [WorldCountry] instance is Seychelles.
+  bool get isSyc => this == const CountrySyc();
+
+  /// Checks if this [WorldCountry] instance is Syria.
+  bool get isSyr => this == const CountrySyr();
+
+  /// Checks if this [WorldCountry] instance is Turks and Caicos Islands.
+  bool get isTca => this == const CountryTca();
+
+  /// Checks if this [WorldCountry] instance is Chad.
+  bool get isTcd => this == const CountryTcd();
+
+  /// Checks if this [WorldCountry] instance is Togo.
+  bool get isTgo => this == const CountryTgo();
+
+  /// Checks if this [WorldCountry] instance is Thailand.
+  bool get isTha => this == const CountryTha();
+
+  /// Checks if this [WorldCountry] instance is Tajikistan.
+  bool get isTjk => this == const CountryTjk();
+
+  /// Checks if this [WorldCountry] instance is Tokelau.
+  bool get isTkl => this == const CountryTkl();
+
+  /// Checks if this [WorldCountry] instance is Turkmenistan.
+  bool get isTkm => this == const CountryTkm();
+
+  /// Checks if this [WorldCountry] instance is Timor-Leste.
+  bool get isTls => this == const CountryTls();
+
+  /// Checks if this [WorldCountry] instance is Tonga.
+  bool get isTon => this == const CountryTon();
+
+  /// Checks if this [WorldCountry] instance is Trinidad and Tobago.
+  bool get isTto => this == const CountryTto();
+
+  /// Checks if this [WorldCountry] instance is Tunisia.
+  bool get isTun => this == const CountryTun();
+
+  /// Checks if this [WorldCountry] instance is Turkey.
+  bool get isTur => this == const CountryTur();
+
+  /// Checks if this [WorldCountry] instance is Tuvalu.
+  bool get isTuv => this == const CountryTuv();
+
+  /// Checks if this [WorldCountry] instance is Taiwan.
+  bool get isTwn => this == const CountryTwn();
+
+  /// Checks if this [WorldCountry] instance is Tanzania.
+  bool get isTza => this == const CountryTza();
+
+  /// Checks if this [WorldCountry] instance is Uganda.
+  bool get isUga => this == const CountryUga();
+
+  /// Checks if this [WorldCountry] instance is Ukraine.
+  bool get isUkr => this == const CountryUkr();
+
+  /// Checks if this [WorldCountry] instance is United States Minor Outlying Islands.
+  bool get isUmi => this == const CountryUmi();
+
+  /// Checks if this [WorldCountry] instance is Uruguay.
+  bool get isUry => this == const CountryUry();
+
+  /// Checks if this [WorldCountry] instance is United States.
+  bool get isUsa => this == const CountryUsa();
+
+  /// Checks if this [WorldCountry] instance is Uzbekistan.
+  bool get isUzb => this == const CountryUzb();
+
+  /// Checks if this [WorldCountry] instance is Vatican City.
+  bool get isVat => this == const CountryVat();
+
+  /// Checks if this [WorldCountry] instance is Saint Vincent and the Grenadines.
+  bool get isVct => this == const CountryVct();
+
+  /// Checks if this [WorldCountry] instance is Venezuela.
+  bool get isVen => this == const CountryVen();
+
+  /// Checks if this [WorldCountry] instance is British Virgin Islands.
+  bool get isVgb => this == const CountryVgb();
+
+  /// Checks if this [WorldCountry] instance is United States Virgin Islands.
+  bool get isVir => this == const CountryVir();
+
+  /// Checks if this [WorldCountry] instance is Vietnam.
+  bool get isVnm => this == const CountryVnm();
+
+  /// Checks if this [WorldCountry] instance is Vanuatu.
+  bool get isVut => this == const CountryVut();
+
+  /// Checks if this [WorldCountry] instance is Wallis and Futuna.
+  bool get isWlf => this == const CountryWlf();
+
+  /// Checks if this [WorldCountry] instance is Samoa.
+  bool get isWsm => this == const CountryWsm();
+
+  /// Checks if this [WorldCountry] instance is Yemen.
+  bool get isYem => this == const CountryYem();
+
+  /// Checks if this [WorldCountry] instance is South Africa.
+  bool get isZaf => this == const CountryZaf();
+
+  /// Checks if this [WorldCountry] instance is Zambia.
+  bool get isZmb => this == const CountryZmb();
+
+  /// Checks if this [WorldCountry] instance is Zimbabwe.
+  bool get isZwe => this == const CountryZwe();
+
+  /// Checks if this [WorldCountry] instance is Kosovo.
+  bool get isUnk => this == const CountryUnk();
+}
