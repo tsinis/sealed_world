@@ -47,6 +47,16 @@ void main() => group("$Script", () {
         }
       });
 
+      group("maps O(1) access time check", () {
+        for (final element in Script.list) {
+          performanceTest("of $Script: ${element.name}", () {
+            expect(Script.map[element.code], element);
+            expect(Script.codeMap[element.code], element);
+            expect(Script.codeNumericMap[element.codeNumeric], element);
+          });
+        }
+      });
+
       group("equality", () {
         test("basic", () {
           expect(Script.list.first, isNot(equals(value)));

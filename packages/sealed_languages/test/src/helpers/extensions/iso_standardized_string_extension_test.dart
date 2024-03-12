@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/iso_standardized_string_extension.dart";
 import "package:test/test.dart";
 
@@ -6,6 +7,21 @@ void main() => group("IsoStandardizedStringExtension", () {
       const alphaShortCodes = ["en", "CZ", "rU", "Sk"];
       const numericCodes = ["100", "001", "010", "999"];
       const invalidCodes = ["a", "B", "1"];
+
+      group("toUpperCaseIsoCode", () {
+        performanceTest(
+          "should trim and convert to uppercase",
+          () => expect(" eng ".toUpperCaseIsoCode(), alphaRegularCodes.first),
+        );
+
+        performanceTest(
+          "should not make any changes",
+          () => expect(
+            alphaRegularCodes.first.toUpperCaseIsoCode(),
+            alphaRegularCodes.first,
+          ),
+        );
+      });
 
       group("isIsoAlphaRegularCode", () {
         test("should return true for valid ISO codes", () {

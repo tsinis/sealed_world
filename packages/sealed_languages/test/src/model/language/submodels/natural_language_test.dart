@@ -61,6 +61,16 @@ void main() => group("$NaturalLanguage", () {
         }
       });
 
+      group("maps O(1) access time check", () {
+        for (final element in NaturalLanguage.list) {
+          performanceTest("of $NaturalLanguage: ${element.name}", () {
+            expect(NaturalLanguage.map[element.code], element);
+            expect(NaturalLanguage.codeMap[element.code], element);
+            expect(NaturalLanguage.codeShortMap[element.codeShort], element);
+          });
+        }
+      });
+
       group("equality", () {
         test("basic", () {
           expect(NaturalLanguage.list.first, isNot(equals(value)));
