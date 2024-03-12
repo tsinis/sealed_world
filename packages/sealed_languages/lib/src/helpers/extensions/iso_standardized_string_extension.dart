@@ -15,6 +15,14 @@ extension IsoStandardizedStringExtension on String {
   bool get isIsoAlphaRegularCode =>
       RegExp(r"^[a-z]{3,}$", caseSensitive: false).hasMatch(this);
 
+  /// Trims and converts the provided string to an uppercase ISO code.
+  /// Example usage:
+  ///
+  /// ```dart
+  /// print(' en '.toUpperCaseIsoCode()); // Prints: EN
+  /// ```
+  String toUpperCaseIsoCode() => trim().toUpperCase();
+
   /// Maps the ISO code of a string to a value based on the code's length and
   /// type.
   ///

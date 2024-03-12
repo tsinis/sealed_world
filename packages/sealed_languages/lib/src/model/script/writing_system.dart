@@ -1,3 +1,4 @@
+import "../../collections/script_collections.dart";
 import "../../data/scripts.data.dart";
 import "../../helpers/extensions/iso_standardized_string_extension.dart";
 import "../../helpers/extensions/sealed_world_iterable_extension.dart";

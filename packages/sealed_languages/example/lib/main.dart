@@ -1,5 +1,4 @@
 // ignore_for_file: avoid_print, prefer-match-file-name
-
 import "package:sealed_languages/sealed_languages.dart";
 
 void main() {
@@ -12,9 +11,13 @@ void main() {
   // ...
   // Language(name: Walloon), Language(name: Yiddish).
 
-  final fromCode = NaturalLanguage.fromCode("Eng");
+  const eng = "Eng";
+  final fromCode = NaturalLanguage.fromCode(eng);
   print("${fromCode.name}: ${fromCode.codeShort}"); // Prints: "English: EN".
   print(fromCode.isEng); // Prints: "true".
+
+  /// For a O(1) access time, you can use: .map, .codeMap or .codeShortMap.
+  print(fromCode == NaturalLanguage.map[eng.toUpperCaseIsoCode()]); // True.
 
   final script = Script.fromCodeNumeric("215");
   print("${script.name}: ${script.code}"); // Prints: "Latin: Latn".

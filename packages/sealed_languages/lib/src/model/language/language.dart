@@ -1,3 +1,4 @@
+import "../../collections/natural_language_collections.dart";
 import "../../data/natural_language_families.data.dart";
 import "../../data/natural_languages.data.dart";
 import "../../data/scripts.data.dart";
