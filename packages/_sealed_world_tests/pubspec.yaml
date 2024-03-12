@@ -10,11 +10,12 @@ environment:
   sdk: ^3.0.0
 
 dependencies:
-  meta: ^1.12.0
-  test: ^1.25.2
+  meta: ^1.12.0 # From Google
+  test: ^1.25.2 # From Google
+  vm_service: ^14.1.0 # From Google
 
 dev_dependencies:
-  dart_code_metrics:
+  dart_code_metrics: # ex-Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
-  lints: ^3.0.0
+  lints: ^3.0.0 # From Google
