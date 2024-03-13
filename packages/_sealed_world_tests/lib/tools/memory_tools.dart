@@ -5,7 +5,6 @@ import "package:vm_service/vm_service.dart" show MemoryUsage;
 import "package:vm_service/vm_service_io.dart" show vmServiceConnectUri;
 
 /// Returns heap usage.
-
 class MemoryTools extends MemoryUsage {
   MemoryTools({super.externalUsage, super.heapCapacity, super.heapUsage});
 
