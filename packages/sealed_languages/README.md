@@ -33,7 +33,7 @@ Compile time constant list of all languages accessible via `NaturalLanguage.list
 - `fromAnyCode` - returns a language instance if the value matches the provided ISO 639-1 or ISO 639-2 codes.
 - `fromName` - returns a language instance if the value matches the provided name.
 
-and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc.
+and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc. Also a compile time const, tree-shakable, code `map`s (for a 0(1) access time code mapping), `list` and much more.
 
 > Translations: Use `maybeTranslation()` or `translation()` methods to get translations for specific locale.
 
@@ -57,9 +57,13 @@ import 'package:sealed_languages/sealed_languages.dart';
 Use `NaturalLanguage` class to get information about languages. Either construct a new instance directly or with use of the class factory constructors/static methods or select one from the `NaturalLanguage.list` constant.
 
 ```dart
- final fromCode = NaturalLanguage.fromCode("Eng");
- print("${fromCode.name}: ${fromCode.codeShort}"); // Prints: "English: EN".
- print(fromCode.isEng); // Prints: "true".
+  const eng = "Eng";
+  final fromCode = NaturalLanguage.fromCode(eng);
+  print("${fromCode.name}: ${fromCode.codeShort}"); // Prints: "English: EN".
+  print(fromCode.isEng); // Prints: "true".
+
+  /// For a O(1) access time, you can use: .map, .codeMap or .codeShortMap.
+  print(fromCode == NaturalLanguage.map[eng]); // Prints: "true".
 
  final script = Script.fromCodeNumeric("215");
  print("${script.name}: ${script.code}"); // Prints: "Latin: Latn".

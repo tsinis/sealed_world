@@ -17,9 +17,10 @@ void main() {
   print(fromCode.isEng); // Prints: "true".
 
   /// For a O(1) access time, you can use: .map, .codeMap or .codeShortMap.
-  print(fromCode == NaturalLanguage.map[eng.toUpperCaseIsoCode()]); // True.
+  print(fromCode == NaturalLanguage.map[eng]); // Prints: "true".
 
   final script = Script.fromCodeNumeric("215");
+  print(script == Script.codeMap["Latn"]); // Prints: "true".
   print("${script.name}: ${script.code}"); // Prints: "Latin: Latn".
 
   final russian = NaturalLanguage.fromCodeShort("ru");
