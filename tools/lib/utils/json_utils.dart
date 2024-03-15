@@ -102,7 +102,7 @@ const ${varFileName.toCamelCase()} = [
       final english = translations.firstWhere((e) => e.language == eng);
       final length = translations.length;
       print("\nExtracting translations for: ${itemFromCode.name}\n");
-      final codeShort = item.codeOther?.toLowerCase();
+      final codeShort = item.codeOther.toLowerCase();
       final file = File(join(dataDirectory.path, "$codeShort.yaml"));
       if (!file.existsSync()) continue;
       final yamlString = file.readAsStringSync();

@@ -41,7 +41,8 @@ class CollectionsGenerator {
     const ${camelCaseType}CodeMap = {
     """);
 
-    for (final i in items) buffer.write('"${i.code}": ${i.runtimeType}(),\n');
+    for (final i in items)
+      buffer.write('"${i.code.toUpperCase()}": ${i.runtimeType}(),\n');
     buffer
       ..write("};\n")
       ..write("""
@@ -50,7 +51,8 @@ class CollectionsGenerator {
     """);
 
     for (final item in items) {
-      buffer.write('"${item.codeOther}": ${item.runtimeType}(),\n');
+      buffer
+          .write('"${item.codeOther.toUpperCase()}": ${item.runtimeType}(),\n');
     }
     buffer.write("};\n");
     if (items is List<WorldCountry>) {
