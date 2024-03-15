@@ -36,8 +36,8 @@ extension IsoStandardizedStringExtension on String {
     final code = trim();
     if (exactLength != null) return code.length == exactLength ? code : null;
     assert(minLength > 0, "minLength must be > 0");
-    assert(maxLength > 0, "minLength must be > 0");
-    assert(minLength <= maxLength, "maxLength must be <= minLength");
+    assert(maxLength > 1, "minLength must be > 0");
+    assert(minLength < maxLength, "maxLength must be <= minLength");
 
     return code.length < minLength || code.length > maxLength ? null : code;
   }

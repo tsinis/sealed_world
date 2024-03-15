@@ -12,12 +12,12 @@ void main() => group("IsoStandardizedStringExtension", () {
       group("maybeToValidIsoCode", () {
         assertTest(
           "should throw assert if maxLength is smaller than minLength",
-          () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 1),
+          () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 2),
         );
 
         assertTest(
           "should throw assert if maxLength is zero",
-          () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 0),
+          () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 1),
         );
 
         assertTest(
