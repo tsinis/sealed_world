@@ -9,6 +9,7 @@ import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";
 import "../../interfaces/translated.dart";
+import "../core/upper_case_iso_map.dart";
 import "../language_family/language_family.dart";
 import "../script/writing_system.dart";
 import "../translated_name.dart";

@@ -49,8 +49,23 @@ class Script extends WritingSystem
   /// parameter can be used to specify a list of [Script] objects to search
   /// through. This method returns the [Script] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory Script.fromCode(String code, [Iterable<Script> scripts = list]) =>
-      scripts.firstIsoWhereCode(formatToStandardCode(code.trim()));
+  factory Script.fromCode(String code, [Iterable<Script> scripts = list]) {
+    var validCode = code.maybeToValidIsoCode(exactLength: codeLength);
+    if (validCode == null) {
+      throw StateError(
+        """Provided $code isn't a valid $standardCodeName code. Consider using nullable runtime safe maybeFromCode() instead.""",
+      );
+    }
+    validCode = formatToStandardCode(validCode);
+    final result = scripts.firstIsoWhereOrNull((iso) => iso.code == validCode);
+    if (result == null) {
+      throw StateError(
+        """No matching Script was found for the $code! Consider using nullable runtime safe maybeFromCode() instead.""",
+      );
+    }
+
+    return result;
+  }
 
   /// Returns an instance of the [Script] class from a three-digit ISO 15924
   /// code.
@@ -104,6 +119,8 @@ class Script extends WritingSystem
       code.maybeMapIsoCode(
         orElse: (regular) => Script.fromCode(regular, scripts),
         numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
+        maxLength: codeLength,
+        minLength: IsoStandardized.codeLength,
       );
 
   /// The regular length of the ISO code (4). However, it's important to note
@@ -193,6 +210,8 @@ class Script extends WritingSystem
       code?.toString().maybeMapIsoCode(
             orElse: (regular) => maybeFromCode(regular, scripts),
             numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
+            maxLength: codeLength,
+            minLength: IsoStandardized.codeLength,
           );
 
   /// Returns an instance of the [Script] class from a four-character ISO
@@ -215,11 +234,11 @@ class Script extends WritingSystem
     Object? code, [
     Iterable<Script> scripts = list,
   ]) {
-    final string = code?.toString().trim() ?? "";
+    var string = code.toString().maybeToValidIsoCode(exactLength: codeLength);
+    if (string == null) return null;
+    string = formatToStandardCode(string);
 
-    return string.length == Script.codeLength
-        ? scripts.firstIsoWhereCodeOrNull(formatToStandardCode(string))
-        : null;
+    return scripts.firstIsoWhereOrNull((iso) => iso.code == string);
   }
 
   /// Returns an instance of the [Script] class from a three-digit ISO 15924
@@ -241,11 +260,11 @@ class Script extends WritingSystem
     Object? codeNumeric, [
     Iterable<Script> scripts = list,
   ]) {
-    final string = codeNumeric?.toString().trim() ?? "";
+    final string = codeNumeric
+        .toString()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return string.length == IsoStandardized.codeLength
-        ? scripts.firstIsoWhereCodeOtherOrNull(formatToStandardCode(string))
-        : null;
+    return string != null ? scripts.firstIsoWhereCodeOtherOrNull(string) : null;
   }
 
   /// Formats the given [input] to a standard four-character ISO 15924 code.
@@ -276,7 +295,8 @@ class Script extends WritingSystem
   /// ```dart
   /// Script.codeMap['Latn']; // ScriptLatn().
   /// ```
-  static const codeMap = scriptCodeMap;
+  static const codeMap =
+      UpperCaseIsoMap(scriptCodeMap, exactLength: codeLength);
 
   /// A tree-shakable constant map containing numeric script (ISO 15924 Numeric)
   /// codes and their associated [Script] objects, for a O(1) access time.
@@ -286,7 +306,7 @@ class Script extends WritingSystem
   /// ```dart
   /// Script.codeNumericMap[215.toString()]; // ScriptLatn().
   /// ```
-  static const codeNumericMap = scriptCodeOtherMap;
+  static const codeNumericMap = UpperCaseIsoMap(scriptCodeOtherMap);
 
   /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
   /// a unified view of script codes and their [Script] objects, for a O(1)
@@ -297,7 +317,12 @@ class Script extends WritingSystem
   /// ```dart
   /// Script.map['Latn']; // ScriptLatn().
   /// ```
-  static const Map<String, Script> map = {...codeMap, ...codeNumericMap};
+  static const map = UpperCaseIsoMap(
+    {...scriptCodeMap, ...scriptCodeOtherMap},
+    exactLength: null,
+    maxLength: codeLength,
+    minLength: IsoStandardized.codeLength,
+  );
 
   /// A tree-shakable list of all the scripts currently supported
   /// by the [Script] class.

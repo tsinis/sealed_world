@@ -335,9 +335,9 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// Example usage:
   ///
   /// ```dart
-  /// NaturalLanguage.codeMap[' eng'.toUpperCaseIsoCode()]; // LangEng().
+  /// NaturalLanguage.codeMap[' eng']; // LangEng().
   /// ```
-  static const codeMap = naturalLanguageCodeMap;
+  static const codeMap = UpperCaseIsoMap(naturalLanguageCodeMap);
 
   /// A tree-shakable constant map containing short language (ISO 639-1) codes
   /// and their associated [NaturalLanguage] objects, for a O(1) access time.
@@ -345,9 +345,12 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// Example usage:
   ///
   /// ```dart
-  /// NaturalLanguage.codeShortMap['en '.toUpperCaseIsoCode()]; // LangEng().
+  /// NaturalLanguage.codeShortMap['en ']; // LangEng().
   /// ```
-  static const codeShortMap = naturalLanguageCodeOtherMap;
+  static const codeShortMap = UpperCaseIsoMap(
+    naturalLanguageCodeOtherMap,
+    exactLength: IsoStandardized.codeShortLength,
+  );
 
   /// A tree-shakable combined map of [codeMap] and [codeShortMap], providing a
   /// unified view of language codes and their [NaturalLanguage] objects, for a
@@ -356,9 +359,12 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// Example usage:
   ///
   /// ```dart
-  /// NaturalLanguage.map[' en '.toUpperCaseIsoCode()]; // LangEng().
+  /// NaturalLanguage.map[' en ']; // LangEng().
   /// ```
-  static const Map<String, NaturalLanguage> map = {...codeMap, ...codeShortMap};
+  static const map = UpperCaseIsoMap(
+    {...naturalLanguageCodeMap, ...naturalLanguageCodeOtherMap},
+    exactLength: null,
+  );
 
   /// A tree-shakable list of all the natural languages currently
   /// supported by the [NaturalLanguage] class.

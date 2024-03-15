@@ -6,6 +6,7 @@ import "../../helpers/script/script_json.dart";
 import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";
+import "../core/upper_case_iso_map.dart";
 
 part "submodels/script.dart";
 part "submodels/script.g.dart";

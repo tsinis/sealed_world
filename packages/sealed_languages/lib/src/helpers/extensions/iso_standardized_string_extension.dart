@@ -1,4 +1,4 @@
-import "../../../sealed_languages.dart";
+import "../../interfaces/iso_standardized.dart";
 
 /// Extension on [String] providing additional functionality
 /// for ISO standardized strings.
@@ -15,13 +15,56 @@ extension IsoStandardizedStringExtension on String {
   bool get isIsoAlphaRegularCode =>
       RegExp(r"^[a-z]{3,}$", caseSensitive: false).hasMatch(this);
 
-  /// Trims and converts the provided string to an uppercase ISO code.
+  /// Trims the provided string to an ISO code if it's
+  /// length is within the valid ISO codes range. If the string is not a valid
+  /// regular ISO code, it returns `null`. The [maxLength] and [minLength]
+  /// parameters control the maximum and minimum length of the trimmed string.
+  /// The optional [exactLength] parameter specifies the exact length of the
+  /// trimmed string.
+  ///
   /// Example usage:
   ///
   /// ```dart
-  /// print(' en '.toUpperCaseIsoCode()); // Prints: EN
+  /// print(' en '.maybeToValidIsoCode()); // Prints: "en"
+  /// print(' e'.maybeToValidIsoCode()); // Prints: null
   /// ```
-  String toUpperCaseIsoCode() => trim().toUpperCase();
+  String? maybeToValidIsoCode({
+    int maxLength = IsoStandardized.codeLength,
+    int minLength = IsoStandardized.codeShortLength,
+    int? exactLength,
+  }) {
+    final code = trim();
+    if (code.length == exactLength) return code;
+    assert(minLength > 0, "minLength must be > 0");
+    assert(maxLength > 0, "minLength must be > 0");
+    assert(minLength <= maxLength, "minLength must be <= maxLength");
+
+    return code.length < minLength || code.length > maxLength ? null : code;
+  }
+
+  /// Trims and converts the provided string to an ISO code to uppercase if it's
+  /// length is within the valid ISO codes range. If the string is not a valid
+  /// regular ISO code, it returns `null`. The [maxLength] and [minLength]
+  /// parameters control the maximum and minimum length of the trimmed string.
+  /// The optional [exactLength] parameter specifies the exact length of the
+  /// trimmed string.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// print(' eng '.maybeToValidIsoCode()); // Prints: "ENG"
+  /// print('english'.maybeToValidIsoCode()); // Prints: null
+  /// ```
+  String? maybeToValidIsoUppercaseCode({
+    int maxLength = IsoStandardized.codeLength,
+    int minLength = IsoStandardized.codeShortLength,
+    int? exactLength,
+  }) =>
+      maybeToValidIsoCode(
+        maxLength: maxLength,
+        minLength: minLength,
+        exactLength: exactLength,
+      )?.toUpperCase();
 
   /// Maps the ISO code of a string to a value based on the code's length and
   /// type.
@@ -56,24 +99,25 @@ extension IsoStandardizedStringExtension on String {
   ///
   /// print(result); // Prints "orElse"
   /// ```.
+// ignore: long-parameter-list, all but one of the parameters are optional.
   T maybeMapIsoCode<T extends Object?>({
     required T Function(String input) orElse,
     T Function(String code)? numeric,
     T Function(String code)? regular,
     T Function(String code)? short,
+    int maxLength = IsoStandardized.codeLength,
+    int minLength = IsoStandardized.codeShortLength,
   }) {
-    final code = trim();
+    final code =
+        maybeToValidIsoCode(maxLength: maxLength, minLength: minLength);
+    if (code == null) return orElse(this);
 
-    return switch (code.length) {
-      IsoStandardized.codeShortLength =>
-        short?.call(code.toUpperCase()) ?? orElse(code),
-      >= IsoStandardized.codeLength =>
-        _onNumericAndRegular(code, orElse, regular: regular, numeric: numeric),
-      _ => orElse(code),
-    };
+    return code.length == IsoStandardized.codeShortLength
+        ? short?.call(code.toUpperCase()) ?? orElse(code)
+        : _onNumericOrRegular(code, orElse, regular: regular, numeric: numeric);
   }
 
-  T _onNumericAndRegular<T extends Object?>(
+  T _onNumericOrRegular<T extends Object?>(
     String code,
     T Function(String input) orElse, {
     T Function(String code)? regular,

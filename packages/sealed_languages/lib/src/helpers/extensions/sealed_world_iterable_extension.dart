@@ -1,4 +1,5 @@
 import "../../interfaces/iso_standardized.dart";
+import "iso_standardized_string_extension.dart";
 
 /// Extension on [Iterable] class to provide helper methods for working
 /// with Iterables.
@@ -105,8 +106,8 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   }
 
   T? _mapTrimmedCode(T? Function(String output) mapper, Object? input) {
-    final code = input?.toString().trim() ?? "";
+    final code = input?.toString().maybeToValidIsoCode();
 
-    return code.length >= IsoStandardized.codeShortLength ? mapper(code) : null;
+    return code != null ? mapper(code) : null;
   }
 }
