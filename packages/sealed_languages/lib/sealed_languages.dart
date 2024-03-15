@@ -9,6 +9,7 @@ export "src/helpers/extensions/sealed_world_iterable_extension.dart";
 export "src/helpers/extensions/sealed_world_json_string_extension.dart";
 export "src/helpers/extensions/translated_extension.dart";
 export "src/helpers/extensions/translated_name_extension.dart";
+export "src/helpers/extensions/upper_case_iso_map_extension.dart";
 export "src/helpers/natural_language/natural_language_copy_with.dart";
 export "src/helpers/natural_language/natural_language_getters.dart";
 export "src/helpers/natural_language/natural_language_json.dart";

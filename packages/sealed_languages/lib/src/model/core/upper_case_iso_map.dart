@@ -90,14 +90,6 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends MapView<String, V> {
   V? operator [](Object? key) =>
       _map(key, (code) => super[code]) ?? defaultValue;
 
-  /// Retrieves the value associated with the given ISO code.
-  ///
-  /// Uses the ISO standardized key to look up a value in the map. If the key is
-  /// found, the corresponding value is returned. Otherwise, it returns the
-  /// [defaultValue] if it is specified (not specified by default),
-  /// or `null` if not.
-  V? findByCode(Object? code) => this[code];
-
   @override
   bool containsKey(Object? key) => _map(key, super.containsKey) ?? false;
 

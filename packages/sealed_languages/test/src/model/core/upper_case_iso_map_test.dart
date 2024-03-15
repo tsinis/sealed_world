@@ -21,13 +21,11 @@ void main() => group("$UpperCaseIsoMap", () {
         const mapOther =
             UpperCaseIsoMap(defaultMap, defaultValue: defaultValue);
         expect(mapOther[nonEng], defaultValue);
-        expect(mapOther.findByCode(nonEng), defaultValue);
       });
 
       test("should return null if there is no exactLength match", () {
         const mapOther = UpperCaseIsoMap(defaultMap, exactLength: 1);
         expect(mapOther[eng], isNull);
-        expect(mapOther.findByCode(eng), isNull);
       });
 
       test("should return null if there is no maxLength match", () {
@@ -38,7 +36,6 @@ void main() => group("$UpperCaseIsoMap", () {
           minLength: 1,
         );
         expect(mapOther[eng], isNull);
-        expect(mapOther.findByCode(eng), isNull);
       });
 
       test("should return null if there is no minLength match", () {
@@ -49,21 +46,16 @@ void main() => group("$UpperCaseIsoMap", () {
           minLength: 4,
         );
         expect(mapOther[eng], isNull);
-        expect(mapOther.findByCode(eng), isNull);
       });
 
       test(
         "should return null when key is not present and no defaultValue",
-        () {
-          expect(map[nonEng], isNull);
-          expect(map.findByCode(nonEng), isNull);
-        },
+        () => expect(map[nonEng], isNull),
       );
 
       test("should interpret keys as ISO standardized codes", () {
         expect(map[eng], isNotNull);
-        expect(map.findByCode(eng), isNotNull);
-        expect(map.findByCode(eng)?.name, equals("English"));
+        expect(map[eng]?.name, equals("English"));
       });
 
       test(
