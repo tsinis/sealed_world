@@ -132,11 +132,14 @@ void main() => group("$Script", () {
         );
 
         performanceTest(
-          "with wrong code",
-          () => expect(
-            () => Script.fromCode(value.toString()),
-            throwsStateError,
-          ),
+          "with wrong length code",
+          () =>
+              expect(() => Script.fromCode(value.toString()), throwsStateError),
+        );
+
+        performanceTest(
+          "with wrong value code",
+          () => expect(() => Script.fromCode("code"), throwsStateError),
         );
 
         assertTest(
@@ -148,10 +151,7 @@ void main() => group("$Script", () {
       group("fromCodeNumeric", () {
         performanceTest(
           "with proper code",
-          () => expect(
-            Script.fromCodeNumeric(value.codeNumeric),
-            value,
-          ),
+          () => expect(Script.fromCodeNumeric(value.codeNumeric), value),
         );
 
         performanceTest(
@@ -247,10 +247,7 @@ void main() => group("$Script", () {
         performanceTest(
           "with proper value, with where",
           () => expect(
-            Script.maybeFromValue(
-              value.name,
-              where: (lang) => lang.name,
-            ),
+            Script.maybeFromValue(value.name, where: (script) => script.name),
             value,
           ),
         );
@@ -263,10 +260,7 @@ void main() => group("$Script", () {
         performanceTest(
           "with wrong value, with where",
           () => expect(
-            Script.maybeFromValue(
-              value,
-              where: (lang) => lang.name,
-            ),
+            Script.maybeFromValue(value, where: (script) => script.name),
             isNull,
           ),
         );
@@ -420,10 +414,7 @@ void main() => group("$Script", () {
 
         performanceTest(
           "with wrong code",
-          () => expect(
-            Script.maybeFromCode(value.toString()),
-            isNull,
-          ),
+          () => expect(Script.maybeFromCode(value.toString()), isNull),
         );
 
         performanceTest(

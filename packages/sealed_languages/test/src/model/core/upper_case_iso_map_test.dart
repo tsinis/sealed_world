@@ -9,7 +9,7 @@ void main() => group("$UpperCaseIsoMap", () {
       const eng = "ENG";
       const nonEng = "DE";
       const defaultMap = {eng: LangEng()};
-      const map = UpperCaseIsoMap(defaultMap);
+      const map = UpperCaseIsoMap(defaultMap, exactLength: null);
 
       test("interfaces", () {
         expect(map, isA<Map<String, IsoStandardized>>());
@@ -18,9 +18,38 @@ void main() => group("$UpperCaseIsoMap", () {
 
       test("should return defaultValue when key is not present", () {
         const defaultValue = LangRus();
-        const map = UpperCaseIsoMap(defaultMap, defaultValue: defaultValue);
-        expect(map[nonEng], defaultValue);
-        expect(map.findByCode(nonEng), defaultValue);
+        const mapOther =
+            UpperCaseIsoMap(defaultMap, defaultValue: defaultValue);
+        expect(mapOther[nonEng], defaultValue);
+        expect(mapOther.findByCode(nonEng), defaultValue);
+      });
+
+      test("should return null if there is no exactLength match", () {
+        const mapOther = UpperCaseIsoMap(defaultMap, exactLength: 1);
+        expect(mapOther[eng], isNull);
+        expect(mapOther.findByCode(eng), isNull);
+      });
+
+      test("should return null if there is no maxLength match", () {
+        const mapOther = UpperCaseIsoMap(
+          defaultMap,
+          exactLength: null,
+          maxLength: 2,
+          minLength: 1,
+        );
+        expect(mapOther[eng], isNull);
+        expect(mapOther.findByCode(eng), isNull);
+      });
+
+      test("should return null if there is no minLength match", () {
+        const mapOther = UpperCaseIsoMap(
+          defaultMap,
+          exactLength: null,
+          maxLength: 5,
+          minLength: 4,
+        );
+        expect(mapOther[eng], isNull);
+        expect(mapOther.findByCode(eng), isNull);
       });
 
       test(

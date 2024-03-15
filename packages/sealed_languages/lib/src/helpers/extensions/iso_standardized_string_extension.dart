@@ -34,10 +34,10 @@ extension IsoStandardizedStringExtension on String {
     int? exactLength,
   }) {
     final code = trim();
-    if (code.length == exactLength) return code;
+    if (exactLength != null) return code.length == exactLength ? code : null;
     assert(minLength > 0, "minLength must be > 0");
     assert(maxLength > 0, "minLength must be > 0");
-    assert(minLength <= maxLength, "minLength must be <= maxLength");
+    assert(minLength <= maxLength, "maxLength must be <= minLength");
 
     return code.length < minLength || code.length > maxLength ? null : code;
   }

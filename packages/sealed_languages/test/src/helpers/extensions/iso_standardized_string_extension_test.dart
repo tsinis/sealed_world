@@ -10,6 +10,21 @@ void main() => group("IsoStandardizedStringExtension", () {
       const invalidCodes = ["a", "B", "1"];
 
       group("maybeToValidIsoCode", () {
+        assertTest(
+          "should throw assert if maxLength is smaller than minLength",
+          () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 1),
+        );
+
+        assertTest(
+          "should throw assert if maxLength is zero",
+          () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 0),
+        );
+
+        assertTest(
+          "should throw assert if minLength is zero",
+          () => alphaRegularCodes.first.maybeToValidIsoCode(minLength: 0),
+        );
+
         performanceTest(
           "should return null on too short code",
           () => expect(" E".maybeToValidIsoCode(), isNull),
@@ -35,6 +50,24 @@ void main() => group("IsoStandardizedStringExtension", () {
       });
 
       group("maybeToValidIsoUppercaseCode", () {
+        assertTest(
+          "should throw assert if maxLength is smaller than minLength",
+          () => alphaRegularCodes.first
+              .maybeToValidIsoUppercaseCode(maxLength: 1),
+        );
+
+        assertTest(
+          "should throw assert if maxLength is zero",
+          () => alphaRegularCodes.first
+              .maybeToValidIsoUppercaseCode(maxLength: 0),
+        );
+
+        assertTest(
+          "should throw assert if minLength is zero",
+          () => alphaRegularCodes.first
+              .maybeToValidIsoUppercaseCode(minLength: 0),
+        );
+
         performanceTest(
           "should return null on too short code",
           () => expect(" E".maybeToValidIsoUppercaseCode(), isNull),
