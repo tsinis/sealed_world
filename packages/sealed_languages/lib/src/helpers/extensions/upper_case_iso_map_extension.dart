@@ -4,6 +4,9 @@ import "../../model/core/upper_case_iso_map.dart";
 /// Extension methods for the [UpperCaseIsoMap] class.
 extension UpperCaseIsoMapExtension<V extends IsoStandardized>
     on UpperCaseIsoMap<V> {
+  /// Returns the unmodifiable list of ISO standardized codes in that map.
+  List<String> get codes => List.unmodifiable(keys);
+
   /// Retrieves the value associated with the given ISO code.
   ///
   /// Uses the ISO standardized key to look up a value in the map. If the key is

@@ -10,6 +10,8 @@ void main() => group("UpperCaseIsoMapExtension", () {
       const defaultMap = <String, NaturalLanguage>{eng: LangEng()};
       const map = UpperCaseIsoMap(defaultMap, exactLength: null);
 
+      test("codes", () => expect(map.codes, defaultMap.keys));
+
       group("copyWith", () {
         const mapOther = {"SPA": LangSpa(), "DEU": LangDeu()};
 
