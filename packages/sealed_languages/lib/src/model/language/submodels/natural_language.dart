@@ -173,13 +173,12 @@ class NaturalLanguage extends Language
   static NaturalLanguage? maybeFromCode(
     Object? code, [
     Iterable<NaturalLanguage> languages = list,
-  ]) {
-    final string = code?.toString().trim() ?? "";
-
-    return string.length == IsoStandardized.codeLength
-        ? languages.firstIsoWhereCodeOrNull(string.toUpperCase())
-        : null;
-  }
+  ]) =>
+      languages.firstIsoWhereCodeOrNull(
+        code
+            ?.maybeToIsoCode()
+            ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength),
+      );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
@@ -191,13 +190,12 @@ class NaturalLanguage extends Language
   static NaturalLanguage? maybeFromCodeShort(
     Object? codeShort, [
     Iterable<NaturalLanguage> languages = list,
-  ]) {
-    final string = codeShort?.toString().trim() ?? "";
-
-    return string.length == IsoStandardized.codeShortLength
-        ? languages.firstIsoWhereCodeOtherOrNull(string.toUpperCase())
-        : null;
-  }
+  ]) =>
+      languages.firstIsoWhereCodeOtherOrNull(
+        codeShort
+            ?.maybeToIsoCode()
+            ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeShortLength),
+      );
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
   /// the language.
@@ -310,7 +308,7 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
     Object? code, [
     Iterable<NaturalLanguage> languages = list,
   ]) =>
-      code?.toString().maybeMapIsoCode(
+      code?.maybeToIsoCode()?.maybeMapIsoCode(
             orElse: (regular) => maybeFromCode(regular, languages),
             short: (short) => maybeFromCodeShort(short, languages),
           );

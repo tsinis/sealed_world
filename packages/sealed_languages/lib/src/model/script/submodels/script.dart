@@ -261,10 +261,10 @@ class Script extends WritingSystem
     Iterable<Script> scripts = list,
   ]) {
     final string = codeNumeric
-        .toString()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+        ?.maybeToIsoCode()
+        ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return string != null ? scripts.firstIsoWhereCodeOtherOrNull(string) : null;
+    return scripts.firstIsoWhereCodeOtherOrNull(string);
   }
 
   /// Formats the given [input] to a standard four-character ISO 15924 code.

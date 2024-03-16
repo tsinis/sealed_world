@@ -1,6 +1,7 @@
 import "dart:collection" show MapBase, MapView;
 
 import "../../helpers/extensions/iso_standardized_string_extension.dart";
+import "../../helpers/extensions/sealed_world_object_extension.dart";
 import "../../interfaces/iso_standardized.dart";
 
 /// An uppercase key map that uses ISO standardized string keys.
@@ -97,9 +98,7 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends MapView<String, V> {
   String toString() => MapBase.mapToString(this);
 
   T? _map<T extends Object>(Object? key, T? Function(String isoCode) mapper) {
-    if (key == null) return null;
-    if (key is Enum) return mapper(key.name.toUpperCase());
-    final code = key.toString().maybeToValidIsoUppercaseCode(
+    final code = key?.maybeToIsoCode()?.maybeToValidIsoCode(
           maxLength: maxLength,
           minLength: minLength,
           exactLength: exactLength,
