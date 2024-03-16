@@ -1,10 +1,10 @@
 import "package:sealed_languages/src/helpers/extensions/sealed_world_object_extension.dart";
 import "package:test/test.dart";
 
-import "test_data.dart";
+import "../../test_data.dart";
 
 void main() => group("SealedWorldObjectExtension", () {
-      group("maybeToIsoString", () {
+      group("toUpperCaseIsoCode", () {
         test("from $Enum", () {
           expect(TestData.values.first.toUpperCaseIsoCode(), firstCode);
           expect(

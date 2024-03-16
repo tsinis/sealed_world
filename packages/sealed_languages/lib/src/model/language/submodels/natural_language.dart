@@ -86,47 +86,73 @@ class NaturalLanguage extends Language
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code.
   ///
-  /// The [code] parameter is required and should be a three-letter string
-  /// representing the Terminological ISO 639-2 code for the language.
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter Terminological ISO 639-2 code for the language.
+  /// {@template any_code_object}
+  /// Provided value could be any type of [Object] that returns ISO code on
+  /// `toString()` call. For example it could be an instance of [StringBuffer],
+  /// [String], [Enum] (in case of enum - `.name.toUpperCase()` will be used):
+  ///
+  /// ```dart
+  /// enum IsoEnum {de, fr, ar} // On (IsoEnum.de) call it will use "DE" input.
+  /// ```
+  ///
+  ///  Or has a custom `toString()` override, i.e.:
+  /// ```dart
+  /// class CustomIsoCodeClass {
+  ///  const CustomIsoCodeClass({String code = '123', this.foo}) : _code = code;
+  ///  final String _code;
+  ///  final Foo? foo;
+  ///
+  ///  @override
+  ///  String toString() => _code; // Has to override toString() with ISO value.
+  /// }
+  ///
+  /// // On (CustomIsoCodeClass(code: ' 321 ')) call it will use "321" input.
+  ///```
+  ///
+  /// {@endtemplate}
+  /// {@macro natural_language_constructor}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCode(
-    String code, [
+    Object code, [
     Iterable<NaturalLanguage> languages = list,
   ]) =>
-      languages.firstIsoWhereCode(code.toUpperCase());
+      languages.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns an instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
   ///
-  /// The [codeShort] parameter is required and should be a two-letter string
-  /// representing the ISO 639-1 code for the language.
+  /// The [codeShort] parameter is required and should be an object
+  /// representing the two-letter ISO 639-1 code for the language.
+  /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCodeShort(
-    String codeShort, [
+    Object codeShort, [
     Iterable<NaturalLanguage> languages = list,
   ]) =>
-      languages.firstIsoWhereCodeOther(codeShort.toUpperCase());
+      languages.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
 
   /// Returns an instance of the [NaturalLanguage] class from the name of the
   /// language.
   ///
-  /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the natural language.
+  /// The [name] parameter is required and should be a object
+  /// representing the non-empty name of the natural language.
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given name, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromName(
-    String name, [
+    Object name, [
     Iterable<NaturalLanguage> languages = list,
   ]) {
-    final upperCaseName = name.trim().toUpperCase();
+    final upperCaseName = name.toUpperCaseIsoCode();
 
     return languages.firstIsoWhere(
       (language) => language.name.toUpperCase() == upperCaseName,
@@ -136,8 +162,10 @@ class NaturalLanguage extends Language
   /// Returns an instance of the [NaturalLanguage] class from any valid ISO 639
   /// code.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 639 code for the language. The optional [languages] parameter can be
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 639 code for the language.
+  /// {@macro any_code_object}
+  /// The optional [languages] parameter can be
   /// used to specify a list of [NaturalLanguage] objects to search through.
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
@@ -155,19 +183,20 @@ class NaturalLanguage extends Language
   /// [NaturalLanguage] instance. The resulting [NaturalLanguage] instance is
   /// assigned to the `language` variable.
   factory NaturalLanguage.fromAnyCode(
-    String code, [
+    Object code, [
     Iterable<NaturalLanguage> languages = list,
   ]) =>
-      code.maybeMapIsoCode(
-        orElse: (regular) => NaturalLanguage.fromCode(regular, languages),
-        short: (short) => NaturalLanguage.fromCodeShort(short, languages),
-      );
+      code.toUpperCaseIsoCode().maybeMapIsoCode(
+            orElse: (regular) => NaturalLanguage.fromCode(regular, languages),
+            short: (short) => NaturalLanguage.fromCodeShort(short, languages),
+          );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
   ///
-  /// The [code] parameter is required and should be a three-letter string
-  /// representing the Terminological ISO 639-2 code for the language.
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter Terminological ISO 639-2 code for the language.
+  /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
   static NaturalLanguage? maybeFromCode(
@@ -183,8 +212,9 @@ class NaturalLanguage extends Language
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
   ///
-  /// The [code] parameter is required and should be a three-letter string
-  /// representing the Terminological ISO 639-2 code for the language.
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter Terminological ISO 639-2 code for the language.
+  /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
   static NaturalLanguage? maybeFromCodeShort(
@@ -222,6 +252,7 @@ class NaturalLanguage extends Language
   /// The ISO 15924 scripts used by the language.
   final Set<Script> scripts;
 
+  /// A two-letter string representing the ISO 639-1 code for the language.
   @override
   String get codeOther => codeShort;
 
@@ -293,8 +324,10 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// [code],
   /// or `null` if no such object exists in the specified [languages] list.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 639 code for the language. The optional [languages] parameter
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 639 code for the language.
+  /// {@macro any_code_object}
+  /// The optional [languages] parameter
   /// specifies the list of `NaturalLanguage` objects to search (defaults to
   /// `NaturalLanguage.list`).
   ///

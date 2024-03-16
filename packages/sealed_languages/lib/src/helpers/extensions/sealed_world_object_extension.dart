@@ -25,8 +25,9 @@ extension SealedWorldObjectExtension on Object {
   /// and converts it to uppercase.
   String toUpperCaseIsoCode() {
     final object = this;
-    if (object is Enum) return object.name.toUpperCase();
 
-    return object.toString().trim().toUpperCase();
+    return object is Enum
+        ? object.name.toUpperCase()
+        : object.toString().trim().toUpperCase();
   }
 }

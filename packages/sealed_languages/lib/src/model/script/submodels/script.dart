@@ -44,13 +44,16 @@ class Script extends WritingSystem
   /// Returns an instance of the [Script] class from a four-character ISO
   /// 15924 code.
   ///
-  /// The [code] parameter is required and should be a four-character string
-  /// representing the ISO 15924 code for the script. The optional [scripts]
+  /// The [code] parameter is required and should be am object representing
+  /// the ISO 15924 four-character code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts]
   /// parameter can be used to specify a list of [Script] objects to search
   /// through. This method returns the [Script] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory Script.fromCode(String code, [Iterable<Script> scripts = list]) {
-    var validCode = code.maybeToValidIsoCode(exactLength: codeLength);
+  factory Script.fromCode(Object code, [Iterable<Script> scripts = list]) {
+    var validCode =
+        code.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
         """Provided $code isn't a valid $standardCodeName code. Consider using nullable runtime safe maybeFromCode() instead.""",
@@ -70,27 +73,28 @@ class Script extends WritingSystem
   /// Returns an instance of the [Script] class from a three-digit ISO 15924
   /// code.
   ///
-  /// The [codeNumeric] parameter is required and should be a three-digit string
-  /// representing the ISO 15924 numeric code for the script. The optional
-  /// [scripts] parameter can be used to specify a list of [Script] objects to
-  /// search through. This method returns the [Script] instance that corresponds
-  /// to the given numeric code, or throws a [StateError] if no such instance
-  /// exists.
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-digit ISO 15924 numeric code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be used to specify a list of [Script]
+  /// objects to search through. This method returns the [Script] instance that
+  /// corresponds to the given numeric code, or throws a [StateError] if no such
+  /// instance exists.
   factory Script.fromCodeNumeric(
-    String codeNumeric, [
+    Object codeNumeric, [
     Iterable<Script> scripts = list,
   ]) =>
-      scripts.firstIsoWhereCodeOther(codeNumeric);
+      scripts.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
-  /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the script. The optional [scripts] parameter can
+  /// The [name] parameter is required and should be am object representing
+  /// the non-empty name of the script. The optional [scripts] parameter can
   /// be used to specify a list of [Script] objects to search through. This
   /// method returns the [Script] instance that corresponds to the given name,
   /// or throws a [StateError] if no such instance exists.
-  factory Script.fromName(String name, [Iterable<Script> scripts = list]) {
-    final upperCaseName = name.trim().toUpperCase();
+  factory Script.fromName(Object name, [Iterable<Script> scripts = list]) {
+    final upperCaseName = name.toUpperCaseIsoCode();
 
     return scripts
         .firstIsoWhere((script) => script.name.toUpperCase() == upperCaseName);
@@ -98,8 +102,10 @@ class Script extends WritingSystem
 
   /// Returns an instance of the [Script] class from any valid ISO 15924 code.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 15924 code for the script. The optional [scripts] parameter can be
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 15924 code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be
   /// used to specify a list of [Script] objects to search through. This method
   /// returns the [Script] instance that corresponds to the given code, or
   /// throws a [StateError] if no such instance exists.
@@ -115,13 +121,13 @@ class Script extends WritingSystem
   /// `fromCodeNumeric` factory method to create a [Script] instance. Otherwise,
   /// it calls the `fromCode` factory method to create a [Script] instance. The
   /// resulting [Script] instance is assigned to the `script` variable.
-  factory Script.fromAnyCode(String code, [Iterable<Script> scripts = list]) =>
-      code.maybeMapIsoCode(
-        orElse: (regular) => Script.fromCode(regular, scripts),
-        numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
-        maxLength: codeLength,
-        minLength: IsoStandardized.codeLength,
-      );
+  factory Script.fromAnyCode(Object code, [Iterable<Script> scripts = list]) =>
+      code.toUpperCaseIsoCode().maybeMapIsoCode(
+            orElse: (regular) => Script.fromCode(regular, scripts),
+            numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
+            maxLength: codeLength,
+            minLength: IsoStandardized.codeLength,
+          );
 
   /// The regular length of the ISO code (4). However, it's important to note
   /// that this length is not standardized for all ISO codes. Typically it is
@@ -146,6 +152,8 @@ class Script extends WritingSystem
   @override
   List<String>? get namesNative => null;
 
+  /// A three-digit string representing the ISO 15924 numeric code for the
+  /// script.
   @override
   String get codeOther => codeNumeric;
 
@@ -184,8 +192,10 @@ class Script extends WritingSystem
   /// Returns a [Script] instance that corresponds to the given value, or `null`
   /// if no such instance exists.
   ///
-  /// The [code] parameter is required and represents the value to match
-  /// against. The optional [scripts] parameter can be used to specify a list of
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 15924 code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be used to specify a list of
   /// [Script] objects to search through. This method returns the [Script]
   /// instance that corresponds to the given value, or `null` if no such
   /// instance exists.
@@ -207,7 +217,7 @@ class Script extends WritingSystem
     Object? code, [
     Iterable<Script> scripts = list,
   ]) =>
-      code?.toString().maybeMapIsoCode(
+      code?.toUpperCaseIsoCode().maybeMapIsoCode(
             orElse: (regular) => maybeFromCode(regular, scripts),
             numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
             maxLength: codeLength,
@@ -218,7 +228,9 @@ class Script extends WritingSystem
   /// 15924 code if it exists. Returns `null` otherwise.
   ///
   /// The [code] parameter is required and should be an object representing the
-  /// four-character ISO 15924 code for the script. The optional [scripts]
+  /// ISO 15924 code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts]
   /// parameter can be used to specify a list of [Script] objects to search
   /// through.
   ///
@@ -234,7 +246,8 @@ class Script extends WritingSystem
     Object? code, [
     Iterable<Script> scripts = list,
   ]) {
-    var string = code.toString().maybeToValidIsoCode(exactLength: codeLength);
+    var string =
+        code?.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
     string = formatToStandardCode(string);
 
@@ -244,10 +257,11 @@ class Script extends WritingSystem
   /// Returns an instance of the [Script] class from a three-digit ISO 15924
   /// code if it exists. Returns `null` otherwise.
   ///
-  /// The [codeNumeric] parameter is required and should be a three-digit object
-  /// representing the ISO 15924 numeric code for the script. The optional
-  /// [scripts] parameter can be used to specify a list of [Script] objects to
-  /// search through.
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-digit ISO 15924 numeric code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be used to specify a list of [Script]
+  /// objects to search through.
   ///
   /// Example:
   /// ```dart
