@@ -176,8 +176,8 @@ class NaturalLanguage extends Language
   ]) =>
       languages.firstIsoWhereCodeOrNull(
         code
-            ?.maybeToIsoCode()
-            ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength),
+            ?.toUpperCaseIsoCode()
+            .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength),
       );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
@@ -193,8 +193,8 @@ class NaturalLanguage extends Language
   ]) =>
       languages.firstIsoWhereCodeOtherOrNull(
         codeShort
-            ?.maybeToIsoCode()
-            ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeShortLength),
+            ?.toUpperCaseIsoCode()
+            .maybeToValidIsoCode(exactLength: IsoStandardized.codeShortLength),
       );
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
@@ -308,7 +308,7 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
     Object? code, [
     Iterable<NaturalLanguage> languages = list,
   ]) =>
-      code?.maybeToIsoCode()?.maybeMapIsoCode(
+      code?.toUpperCaseIsoCode().maybeMapIsoCode(
             orElse: (regular) => maybeFromCode(regular, languages),
             short: (short) => maybeFromCodeShort(short, languages),
           );

@@ -98,7 +98,7 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends MapView<String, V> {
   String toString() => MapBase.mapToString(this);
 
   T? _map<T extends Object>(Object? key, T? Function(String isoCode) mapper) {
-    final code = key?.maybeToIsoCode()?.maybeToValidIsoCode(
+    final code = key?.toUpperCaseIsoCode().maybeToValidIsoCode(
           maxLength: maxLength,
           minLength: minLength,
           exactLength: exactLength,

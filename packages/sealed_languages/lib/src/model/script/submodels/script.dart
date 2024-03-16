@@ -261,8 +261,8 @@ class Script extends WritingSystem
     Iterable<Script> scripts = list,
   ]) {
     final string = codeNumeric
-        ?.maybeToIsoCode()
-        ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+        ?.toUpperCaseIsoCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return scripts.firstIsoWhereCodeOtherOrNull(string);
   }
