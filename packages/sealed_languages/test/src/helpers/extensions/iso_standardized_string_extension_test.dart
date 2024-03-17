@@ -205,6 +205,22 @@ void main() => group("IsoStandardizedStringExtension", () {
         );
 
         test(
+          "should use exactLength if maxLength is equal to minLength",
+          () {
+            final scriptCode = alphaRegularCodes.last;
+            final result = scriptCode.maybeMapIsoCode(
+              orElse: (_) => orElse,
+              numeric: (_) => "numeric",
+              regular: (_) => "regular",
+              short: (_) => "short",
+              maxLength: Script.codeLength,
+              minLength: Script.codeLength,
+            );
+            expect(result, "regular");
+          },
+        );
+
+        test(
           "should call orElse function when code is not ISO code",
           () {
             for (final code in invalidCodes) {
