@@ -713,7 +713,9 @@ class FiatChf extends FiatCurrency {
           code: "CHF",
           name: "Swiss Franc",
           decimalMark: ".",
-          thousandsSeparator: ",",
+
+          /// https://de.wikipedia.org/wiki/Zifferngruppierung#Regelung_in_den_L%C3%A4ndern
+          thousandsSeparator: "'",
           symbol: null,
           alternateSymbols: const ["SFr", "Fr"],
           disambiguateSymbol: null,
