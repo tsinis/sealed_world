@@ -100,45 +100,58 @@ class FiatCurrency extends Currency
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.
   ///
-  /// The [code] parameter is required and should be a three-letter string
-  /// representing the letter ISO 4217 code for the currency. The optional
-  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
-  /// objects to search through. This method returns the [FiatCurrency] instance
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [FiatCurrency] instance
   /// that corresponds to the given code, or throws a [StateError] if no such
   /// instance exists.
   factory FiatCurrency.fromCode(
-    String code, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Object code, [
+    Iterable<FiatCurrency>? currencies,
   ]) =>
-      currencies.firstIsoWhereCode(code.toUpperCase());
+      currencies == null
+          ? codeMap.findByCodeOrThrow(code)
+          : currencies.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
-  /// The [codeNumeric] parameter is required and should be a three-letter
-  /// string representing the numeric ISO 4217 code for the currency.The
-  /// optional [currencies] parameter can be used to specify a list of
-  /// [FiatCurrency] objects to search through. This method returns the
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-letter numeric ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the
   /// [FiatCurrency] instance that corresponds to the given code, or throws a
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromCodeNumeric(
-    String codeNumeric, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Object codeNumeric, [
+    Iterable<FiatCurrency>? currencies,
   ]) =>
-      currencies.firstIsoWhereCodeOther(codeNumeric);
+      currencies == null
+          ? codeNumericMap.findByCodeOrThrow(codeNumeric)
+          : currencies.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
-  /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the currency. The optional
-  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
-  /// objects to search through. This method returns the
+  /// The [name] parameter is required and should be an object non-empty string
+  /// representing the name of the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the
   /// [FiatCurrency] instance that corresponds to the given name, or throws a
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromName(
-    String name, [
+    Object name, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) {
-    final upperCaseName = name.trim().toUpperCase();
+    final upperCaseName = name.toUpperCaseIsoCode();
 
     return currencies.firstIsoWhere(
       (currency) => currency.name.toUpperCase() == upperCaseName,
@@ -148,9 +161,12 @@ class FiatCurrency extends Currency
   /// Returns an instance of the [FiatCurrency] class from any valid
   /// ISO 4217 code.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 4217 code for the currency. The optional [currencies] parameter can be
-  /// used to specify a list of [FiatCurrency] objects to search through.
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   /// This method returns the [FiatCurrency] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   ///
@@ -167,13 +183,17 @@ class FiatCurrency extends Currency
   /// [FiatCurrency] instance. The resulting [FiatCurrency] instance is assigned
   /// to the `code` variable.
   factory FiatCurrency.fromAnyCode(
-    String code, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Object code, [
+    Iterable<FiatCurrency>? currencies,
   ]) =>
-      code.maybeMapIsoCode(
-        orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
-        numeric: (numeric) => FiatCurrency.fromCodeNumeric(numeric, currencies),
-      );
+      currencies == null
+          ? map.findByCodeOrThrow(code)
+          : code.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
+                numeric: (numeric) =>
+                    FiatCurrency.fromCodeNumeric(numeric, currencies),
+                minLength: IsoStandardized.codeLength,
+              );
 
   /// Alternative symbols for this currency or `null` if no such symbols exists.
   final List<String>? alternateSymbols;
@@ -216,6 +236,8 @@ class FiatCurrency extends Currency
   /// Default decimal separator for most currencies.
   static const dot = ".";
 
+  /// The international 3-numeric non-empty numeric code as defined by the ISO
+  /// 4217 standard.
   @override
   String get codeOther => codeNumeric;
 
@@ -268,9 +290,12 @@ class FiatCurrency extends Currency
   /// Returns a [FiatCurrency] instance that corresponds to the given code, or
   /// `null` if no such instance exists.
   ///
-  /// The [code] parameter is required and represents the value to match
-  /// against. The optional [currencies] parameter can be used to specify a list
-  /// of [FiatCurrency] objects to search through. This method returns the
+  /// The [code] parameter is required and represent the ISO 4217 currency code.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  ///  This method returns the
   /// [FiatCurrency] instance that corresponds to the given value, or `null` if
   /// no such instance exists.
   ///
@@ -289,51 +314,61 @@ class FiatCurrency extends Currency
   /// instance is assigned to the `currency` variable.
   static FiatCurrency? maybeFromAnyCode(
     Object? code, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) =>
-      code?.toString().maybeMapIsoCode(
-            orElse: (regular) => maybeFromCode(regular, currencies),
-            numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
-          );
+      currencies == null
+          ? map.maybeFindByCode(code)
+          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => maybeFromCode(regular, currencies),
+                numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
+                minLength: IsoStandardized.codeLength,
+              );
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code, or
   /// `null` if no such instance exists.
   ///
-  /// The [code] parameter is required and should be a three-letter object
-  /// representing the letter ISO 4217 code for the currency. The optional
-  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
-  /// objects to search through. This method returns the [FiatCurrency] instance
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [FiatCurrency] instance
   /// that corresponds to the given code, or `null` if no such
   /// instance exists.
   static FiatCurrency? maybeFromCode(
     Object? code, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) {
-    final string = code?.toString().trim() ?? "";
+    if (currencies == null) return codeMap.maybeFindByCode(code);
+    final string = code
+        ?.toUpperCaseIsoCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return string.length == IsoStandardized.codeLength
-        ? currencies.firstIsoWhereCodeOrNull(string.toUpperCase())
-        : null;
+    return currencies.firstIsoWhereCodeOrNull(string);
   }
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code, or
   /// `null` if no such instance exists.
   ///
-  /// The [codeNumeric] parameter is required and should be a three-letter
-  /// object representing the numeric ISO 4217 code for the currency.The
-  /// optional [currencies] parameter can be used to specify a list of
-  /// [FiatCurrency] objects to search through. This method returns the
-  /// [FiatCurrency] instance that corresponds to the given code,
-  /// or `null` if no such instance exists.
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-letter numeric ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [FiatCurrency] instance that corresponds to the
+  /// given code, or `null` if no such instance exists.
   static FiatCurrency? maybeFromCodeNumeric(
     Object? codeNumeric, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) {
-    final string = codeNumeric?.toString().trim() ?? "";
+    if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
+    final string = codeNumeric
+        ?.toUpperCaseIsoCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return string.length == IsoStandardized.codeLength
-        ? currencies.firstIsoWhereCodeOtherOrNull(string)
-        : null;
+    return currencies.firstIsoWhereCodeOtherOrNull(string);
   }
 
   /// The general standard ISO code for currencies, defined as ISO 4217.
@@ -346,175 +381,48 @@ class FiatCurrency extends Currency
   /// ISO 4217 Numeric.
   static const standardCodeNumericName = "$standardGeneralName Numeric";
 
+  /// A tree-shakable constant map containing 3-letter currency (ISO 4217 Alpha)
+  /// codes and their associated [FiatCurrency] objects, for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// FiatCurrency.codeMap['USD']; // FiatUsd().
+  /// ```
+  static const codeMap = UpperCaseIsoMap(fiatCurrencyCodeMap);
+
+  /// A tree-shakable constant map containing 3-digit numeric currency
+  /// (ISO 4217 Numeric) codes and their associated [FiatCurrency] objects,
+  /// for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// FiatCurrency.codeNumericMap[840.toString()]; // FiatUsd().
+  /// ```
+  static const codeNumericMap = UpperCaseIsoMap(fiatCurrencyCodeOtherMap);
+
+  /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
+  /// a unified view of currency codes (ISO 4217) and their [FiatCurrency
+  /// objects, for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// FiatCurrency.map['usd']; // FiatUsd().
+  /// ```
+  static const map =
+      UpperCaseIsoMap({...fiatCurrencyCodeMap, ...fiatCurrencyCodeOtherMap});
+
   /// A list of the regular currencies currently supported by the [FiatCurrency]
   /// class. For a full list with non-regular currencies please
   /// use [listExtended].
-  static const list = [
-    FiatAed(),
-    FiatAfn(),
-    FiatAll(),
-    FiatAmd(),
-    FiatAng(),
-    FiatAoa(),
-    FiatArs(),
-    FiatAud(),
-    FiatAwg(),
-    FiatAzn(),
-    FiatBam(),
-    FiatBbd(),
-    FiatBdt(),
-    FiatBgn(),
-    FiatBhd(),
-    FiatBif(),
-    FiatBmd(),
-    FiatBnd(),
-    FiatBob(),
-    FiatBrl(),
-    FiatBsd(),
-    FiatBtn(),
-    FiatBwp(),
-    FiatByn(),
-    FiatBzd(),
-    FiatCad(),
-    FiatCdf(),
-    FiatChf(),
-    FiatClf(),
-    FiatClp(),
-    FiatCny(),
-    FiatCop(),
-    FiatCrc(),
-    FiatCuc(),
-    FiatCup(),
-    FiatCve(),
-    FiatCzk(),
-    FiatDjf(),
-    FiatDkk(),
-    FiatDop(),
-    FiatDzd(),
-    FiatEgp(),
-    FiatErn(),
-    FiatEtb(),
-    FiatEur(),
-    FiatFjd(),
-    FiatFkp(),
-    FiatGbp(),
-    FiatGel(),
-    FiatGhs(),
-    FiatGip(),
-    FiatGmd(),
-    FiatGnf(),
-    FiatGtq(),
-    FiatGyd(),
-    FiatHkd(),
-    FiatHnl(),
-    FiatHrk(), // ignore: deprecated_member_use_from_same_package, until 2024+.
-    FiatHtg(),
-    FiatHuf(),
-    FiatIdr(),
-    FiatIls(),
-    FiatInr(),
-    FiatIqd(),
-    FiatIrr(),
-    FiatIsk(),
-    FiatJmd(),
-    FiatJod(),
-    FiatJpy(),
-    FiatKes(),
-    FiatKgs(),
-    FiatKhr(),
-    FiatKmf(),
-    FiatKpw(),
-    FiatKrw(),
-    FiatKwd(),
-    FiatKyd(),
-    FiatKzt(),
-    FiatLak(),
-    FiatLbp(),
-    FiatLkr(),
-    FiatLrd(),
-    FiatLsl(),
-    FiatLyd(),
-    FiatMad(),
-    FiatMdl(),
-    FiatMga(),
-    FiatMkd(),
-    FiatMmk(),
-    FiatMnt(),
-    FiatMop(),
-    FiatMru(),
-    FiatMur(),
-    FiatMvr(),
-    FiatMwk(),
-    FiatMxn(),
-    FiatMyr(),
-    FiatMzn(),
-    FiatNad(),
-    FiatNgn(),
-    FiatNio(),
-    FiatNok(),
-    FiatNpr(),
-    FiatNzd(),
-    FiatOmr(),
-    FiatPab(),
-    FiatPen(),
-    FiatPgk(),
-    FiatPhp(),
-    FiatPkr(),
-    FiatPln(),
-    FiatPyg(),
-    FiatQar(),
-    FiatRon(),
-    FiatRsd(),
-    FiatRub(),
-    FiatRwf(),
-    FiatSar(),
-    FiatSbd(),
-    FiatScr(),
-    FiatSdg(),
-    FiatSek(),
-    FiatSgd(),
-    FiatShp(),
-    FiatSle(),
-    FiatSll(),
-    FiatSos(),
-    FiatSrd(),
-    FiatSsp(),
-    FiatStn(),
-    FiatSvc(),
-    FiatSyp(),
-    FiatSzl(),
-    FiatThb(),
-    FiatTjs(),
-    FiatTmt(),
-    FiatTnd(),
-    FiatTop(),
-    FiatTry(),
-    FiatTtd(),
-    FiatTwd(),
-    FiatTzs(),
-    FiatUah(),
-    FiatUgx(),
-    FiatUsd(),
-    FiatUyu(),
-    FiatUzs(),
-    FiatVes(),
-    FiatVnd(),
-    FiatVuv(),
-    FiatWst(),
-    FiatXaf(),
-    FiatXcd(),
-    FiatXof(),
-    FiatXpf(),
-    FiatYer(),
-    FiatZar(),
-    FiatZmw(),
-    FiatZwl(),
-  ];
+  static const list = fiatCurrencyList;
 
   /// A list of special purpose fiat currencies (currencies that are
   /// not being used in the regular transactional currencies list).
   ///
-  /// This list contains instances of various `FiatCurrency` subclasses
+  /// This list contains instances of various [FiatCurrency] subclasses
   /// that represent special purpose fiat currencies.
   static const specialPurposeList = [
     FiatXag(),
