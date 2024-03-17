@@ -111,9 +111,11 @@ class FiatCurrency extends Currency
   /// instance exists.
   factory FiatCurrency.fromCode(
     Object code, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) =>
-      currencies.firstIsoWhereCode(code.toUpperCaseIsoCode());
+      currencies == null
+          ? codeMap.findByCodeOrThrow(code)
+          : currencies.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
@@ -128,9 +130,11 @@ class FiatCurrency extends Currency
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromCodeNumeric(
     Object codeNumeric, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) =>
-      currencies.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
+      currencies == null
+          ? codeNumericMap.findByCodeOrThrow(codeNumeric)
+          : currencies.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
@@ -180,14 +184,16 @@ class FiatCurrency extends Currency
   /// to the `code` variable.
   factory FiatCurrency.fromAnyCode(
     Object code, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) =>
-      code.toUpperCaseIsoCode().maybeMapIsoCode(
-            orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
-            numeric: (numeric) =>
-                FiatCurrency.fromCodeNumeric(numeric, currencies),
-            minLength: IsoStandardized.codeLength,
-          );
+      currencies == null
+          ? map.findByCodeOrThrow(code)
+          : code.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
+                numeric: (numeric) =>
+                    FiatCurrency.fromCodeNumeric(numeric, currencies),
+                minLength: IsoStandardized.codeLength,
+              );
 
   /// Alternative symbols for this currency or `null` if no such symbols exists.
   final List<String>? alternateSymbols;
@@ -308,13 +314,15 @@ class FiatCurrency extends Currency
   /// instance is assigned to the `currency` variable.
   static FiatCurrency? maybeFromAnyCode(
     Object? code, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) =>
-      code?.toUpperCaseIsoCode().maybeMapIsoCode(
-            orElse: (regular) => maybeFromCode(regular, currencies),
-            numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
-            minLength: IsoStandardized.codeLength,
-          );
+      currencies == null
+          ? map.maybeFindByCode(code)
+          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => maybeFromCode(regular, currencies),
+                numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
+                minLength: IsoStandardized.codeLength,
+              );
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code, or
   /// `null` if no such instance exists.
@@ -330,8 +338,9 @@ class FiatCurrency extends Currency
   /// instance exists.
   static FiatCurrency? maybeFromCode(
     Object? code, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) {
+    if (currencies == null) return codeMap.maybeFindByCode(code);
     final string = code
         ?.toUpperCaseIsoCode()
         .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
@@ -352,8 +361,9 @@ class FiatCurrency extends Currency
   /// given code, or `null` if no such instance exists.
   static FiatCurrency? maybeFromCodeNumeric(
     Object? codeNumeric, [
-    Iterable<FiatCurrency> currencies = listExtended,
+    Iterable<FiatCurrency>? currencies,
   ]) {
+    if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
     final string = codeNumeric
         ?.toUpperCaseIsoCode()
         .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);

@@ -327,6 +327,18 @@ const fiatCurrencyCodeMap = {
   "ZAR": FiatZar(),
   "ZMW": FiatZmw(),
   "ZWL": FiatZwl(),
+
+  /// Special purpose currencies.
+  "XAG": FiatXag(),
+  "XAU": FiatXau(),
+  "XBA": FiatXba(),
+  "XBB": FiatXbb(),
+  "XBC": FiatXbc(),
+  "XBD": FiatXbd(),
+  "XDR": FiatXdr(),
+  "XPD": FiatXpd(),
+  "XPT": FiatXpt(),
+  "XTS": FiatXts(),
 };
 
 /// Map of [FiatCurrency] other codes.
@@ -491,4 +503,16 @@ const fiatCurrencyCodeOtherMap = {
   "710": FiatZar(),
   "967": FiatZmw(),
   "932": FiatZwl(),
+
+  /// Special purpose currencies.
+  "961": FiatXag(),
+  "959": FiatXau(),
+  "955": FiatXba(),
+  "956": FiatXbb(),
+  "957": FiatXbc(),
+  "958": FiatXbd(),
+  "960": FiatXdr(),
+  "964": FiatXpd(),
+  "962": FiatXpt(),
+  "963": FiatXts(),
 };
