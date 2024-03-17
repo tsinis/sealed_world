@@ -100,45 +100,54 @@ class FiatCurrency extends Currency
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.
   ///
-  /// The [code] parameter is required and should be a three-letter string
-  /// representing the letter ISO 4217 code for the currency. The optional
-  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
-  /// objects to search through. This method returns the [FiatCurrency] instance
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [FiatCurrency] instance
   /// that corresponds to the given code, or throws a [StateError] if no such
   /// instance exists.
   factory FiatCurrency.fromCode(
-    String code, [
+    Object code, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) =>
-      currencies.firstIsoWhereCode(code.toUpperCase());
+      currencies.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
-  /// The [codeNumeric] parameter is required and should be a three-letter
-  /// string representing the numeric ISO 4217 code for the currency.The
-  /// optional [currencies] parameter can be used to specify a list of
-  /// [FiatCurrency] objects to search through. This method returns the
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-letter numeric ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the
   /// [FiatCurrency] instance that corresponds to the given code, or throws a
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromCodeNumeric(
-    String codeNumeric, [
+    Object codeNumeric, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) =>
-      currencies.firstIsoWhereCodeOther(codeNumeric);
+      currencies.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
-  /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the currency. The optional
-  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
-  /// objects to search through. This method returns the
+  /// The [name] parameter is required and should be an object non-empty string
+  /// representing the name of the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the
   /// [FiatCurrency] instance that corresponds to the given name, or throws a
   /// [StateError] if no such instance exists.
   factory FiatCurrency.fromName(
-    String name, [
+    Object name, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) {
-    final upperCaseName = name.trim().toUpperCase();
+    final upperCaseName = name.toUpperCaseIsoCode();
 
     return currencies.firstIsoWhere(
       (currency) => currency.name.toUpperCase() == upperCaseName,
@@ -148,9 +157,12 @@ class FiatCurrency extends Currency
   /// Returns an instance of the [FiatCurrency] class from any valid
   /// ISO 4217 code.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 4217 code for the currency. The optional [currencies] parameter can be
-  /// used to specify a list of [FiatCurrency] objects to search through.
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   /// This method returns the [FiatCurrency] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   ///
@@ -167,13 +179,15 @@ class FiatCurrency extends Currency
   /// [FiatCurrency] instance. The resulting [FiatCurrency] instance is assigned
   /// to the `code` variable.
   factory FiatCurrency.fromAnyCode(
-    String code, [
+    Object code, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) =>
-      code.maybeMapIsoCode(
-        orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
-        numeric: (numeric) => FiatCurrency.fromCodeNumeric(numeric, currencies),
-      );
+      code.toUpperCaseIsoCode().maybeMapIsoCode(
+            orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
+            numeric: (numeric) =>
+                FiatCurrency.fromCodeNumeric(numeric, currencies),
+            minLength: IsoStandardized.codeLength,
+          );
 
   /// Alternative symbols for this currency or `null` if no such symbols exists.
   final List<String>? alternateSymbols;
@@ -216,6 +230,8 @@ class FiatCurrency extends Currency
   /// Default decimal separator for most currencies.
   static const dot = ".";
 
+  /// The international 3-numeric non-empty numeric code as defined by the ISO
+  /// 4217 standard.
   @override
   String get codeOther => codeNumeric;
 
@@ -268,9 +284,12 @@ class FiatCurrency extends Currency
   /// Returns a [FiatCurrency] instance that corresponds to the given code, or
   /// `null` if no such instance exists.
   ///
-  /// The [code] parameter is required and represents the value to match
-  /// against. The optional [currencies] parameter can be used to specify a list
-  /// of [FiatCurrency] objects to search through. This method returns the
+  /// The [code] parameter is required and represent the ISO 4217 currency code.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  ///  This method returns the
   /// [FiatCurrency] instance that corresponds to the given value, or `null` if
   /// no such instance exists.
   ///
@@ -291,49 +310,55 @@ class FiatCurrency extends Currency
     Object? code, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) =>
-      code?.toString().maybeMapIsoCode(
+      code?.toUpperCaseIsoCode().maybeMapIsoCode(
             orElse: (regular) => maybeFromCode(regular, currencies),
             numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
+            minLength: IsoStandardized.codeLength,
           );
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code, or
   /// `null` if no such instance exists.
   ///
-  /// The [code] parameter is required and should be a three-letter object
-  /// representing the letter ISO 4217 code for the currency. The optional
-  /// [currencies] parameter can be used to specify a list of [FiatCurrency]
-  /// objects to search through. This method returns the [FiatCurrency] instance
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [FiatCurrency] instance
   /// that corresponds to the given code, or `null` if no such
   /// instance exists.
   static FiatCurrency? maybeFromCode(
     Object? code, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) {
-    final string = code?.toString().trim() ?? "";
+    final string = code
+        ?.toUpperCaseIsoCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return string.length == IsoStandardized.codeLength
-        ? currencies.firstIsoWhereCodeOrNull(string.toUpperCase())
-        : null;
+    return currencies.firstIsoWhereCodeOrNull(string);
   }
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code, or
   /// `null` if no such instance exists.
   ///
-  /// The [codeNumeric] parameter is required and should be a three-letter
-  /// object representing the numeric ISO 4217 code for the currency.The
-  /// optional [currencies] parameter can be used to specify a list of
-  /// [FiatCurrency] objects to search through. This method returns the
-  /// [FiatCurrency] instance that corresponds to the given code,
-  /// or `null` if no such instance exists.
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-letter numeric ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [FiatCurrency] instance that corresponds to the
+  /// given code, or `null` if no such instance exists.
   static FiatCurrency? maybeFromCodeNumeric(
     Object? codeNumeric, [
     Iterable<FiatCurrency> currencies = listExtended,
   ]) {
-    final string = codeNumeric?.toString().trim() ?? "";
+    final string = codeNumeric
+        ?.toUpperCaseIsoCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return string.length == IsoStandardized.codeLength
-        ? currencies.firstIsoWhereCodeOtherOrNull(string)
-        : null;
+    return currencies.firstIsoWhereCodeOtherOrNull(string);
   }
 
   /// The general standard ISO code for currencies, defined as ISO 4217.
