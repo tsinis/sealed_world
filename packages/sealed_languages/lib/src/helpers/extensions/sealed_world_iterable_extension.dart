@@ -65,7 +65,7 @@ extension SealedWorldIterableIsoExtension<T extends IsoStandardized>
     final maybeMatchingIso = getIsoOrNullFunc(value);
     if (maybeMatchingIso != null) return maybeMatchingIso;
     throw StateError(
-      """No matching ISO $T element was found for the input! Consider using same but nullable runtime safe methods instead.""",
+      """No matching ISO $T element was found for the input! Consider using the same but nullable runtime-safe methods (with a `maybe` prefix) instead.""",
     );
   }
 }

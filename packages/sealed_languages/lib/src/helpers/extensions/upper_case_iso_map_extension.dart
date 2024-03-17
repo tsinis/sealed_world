@@ -13,7 +13,42 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   /// found, the corresponding value is returned. Otherwise, it returns the
   /// [defaultValue] if it is specified (not specified by default),
   /// or `null` if not.
-  V? findByCode(Object? code) => this[code];
+  V? maybeFindByCode(Object? code) => this[code];
+
+  /// Retrieves the value associated with the given ISO code or throws an error.
+  ///
+  /// This method attempts to find a value associated with the [code] provided
+  /// by calling the `maybeFindByCode` method. The [code] should correspond to
+  /// an ISO standardized code key within the map.
+  ///
+  /// If the value is found, it is returned. However, if the value is not found
+  /// (i.e., `null`), this method throws a [StateError] indicating that no
+  /// matching ISO element was found for the given [code]. This behavior enforces
+  /// the existence of a value for the provided [code] and should be used when
+  /// the absence of a value is considered an error condition.
+  ///
+  /// The method is intended to be used when it is guaranteed that the [code]
+  /// exists in the map, and the caller expects a non-nullable result. If the
+  /// presence of the [code] in the map is uncertain, consider using the
+  /// [maybeFindByCode] method instead, which returns a nullable result and
+  /// does not throw an exception.
+  ///
+  /// ```dart
+  /// try {
+  ///   final result = map.findByCodeOrThrow('ISO');
+  ///   // Use the result here.
+  /// } on StateError catch (e) {
+  ///   // Handle the case when the ISO code does not have an associated value.
+  /// }
+  /// ```
+  V findByCodeOrThrow(Object? code) {
+    final result = maybeFindByCode(code);
+
+    if (result != null) return result;
+    throw StateError(
+      """No matching ISO $V element was found for the '$code'! Consider using the same but nullable runtime-safe methods (with a `maybe` prefix) instead.""",
+    );
+  }
 
   /// Creates a copy of [UpperCaseIsoMap] with a new map of ISO codes to values.
   ///

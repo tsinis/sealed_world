@@ -51,19 +51,20 @@ class Script extends WritingSystem
   /// parameter can be used to specify a list of [Script] objects to search
   /// through. This method returns the [Script] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory Script.fromCode(Object code, [Iterable<Script> scripts = list]) {
+  factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
+    if (scripts == null) return codeMap.findByCodeOrThrow(code);
     var validCode =
         code.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
-        """Provided $code isn't a valid $standardCodeName code. Consider using nullable runtime safe maybeFromCode() instead.""",
+        """Provided $code isn't a valid $standardCodeName code. Consider using nullable runtime-safe maybeFromCode() instead.""",
       );
     }
     validCode = formatToStandardCode(validCode);
     final result = scripts.firstIsoWhereOrNull((iso) => iso.code == validCode);
     if (result == null) {
       throw StateError(
-        """No matching Script was found for the $code! Consider using nullable runtime safe maybeFromCode() instead.""",
+        """No matching Script was found for the $code! Consider using nullable runtime-safe maybeFromCode() instead.""",
       );
     }
 
@@ -82,9 +83,11 @@ class Script extends WritingSystem
   /// instance exists.
   factory Script.fromCodeNumeric(
     Object codeNumeric, [
-    Iterable<Script> scripts = list,
+    Iterable<Script>? scripts,
   ]) =>
-      scripts.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
+      scripts == null
+          ? codeNumericMap.findByCodeOrThrow(codeNumeric)
+          : scripts.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
@@ -121,13 +124,15 @@ class Script extends WritingSystem
   /// `fromCodeNumeric` factory method to create a [Script] instance. Otherwise,
   /// it calls the `fromCode` factory method to create a [Script] instance. The
   /// resulting [Script] instance is assigned to the `script` variable.
-  factory Script.fromAnyCode(Object code, [Iterable<Script> scripts = list]) =>
-      code.toUpperCaseIsoCode().maybeMapIsoCode(
-            orElse: (regular) => Script.fromCode(regular, scripts),
-            numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
-            maxLength: codeLength,
-            minLength: IsoStandardized.codeLength,
-          );
+  factory Script.fromAnyCode(Object code, [Iterable<Script>? scripts]) =>
+      scripts == null
+          ? map.findByCodeOrThrow(code)
+          : code.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => Script.fromCode(regular, scripts),
+                numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
+                maxLength: codeLength,
+                minLength: IsoStandardized.codeLength,
+              );
 
   /// The regular length of the ISO code (4). However, it's important to note
   /// that this length is not standardized for all ISO codes. Typically it is
@@ -213,16 +218,15 @@ class Script extends WritingSystem
   /// compares it with the uppercase version of the `code` property of each
   /// [Script] instance. The resulting [Script] instance is assigned to the
   /// `script` variable.
-  static Script? maybeFromAnyCode(
-    Object? code, [
-    Iterable<Script> scripts = list,
-  ]) =>
-      code?.toUpperCaseIsoCode().maybeMapIsoCode(
-            orElse: (regular) => maybeFromCode(regular, scripts),
-            numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
-            maxLength: codeLength,
-            minLength: IsoStandardized.codeLength,
-          );
+  static Script? maybeFromAnyCode(Object? code, [Iterable<Script>? scripts]) =>
+      scripts == null
+          ? map.maybeFindByCode(code)
+          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => maybeFromCode(regular, scripts),
+                numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
+                maxLength: codeLength,
+                minLength: IsoStandardized.codeLength,
+              );
 
   /// Returns an instance of the [Script] class from a four-character ISO
   /// 15924 code if it exists. Returns `null` otherwise.
@@ -242,10 +246,8 @@ class Script extends WritingSystem
   /// In the above example, the `maybeFromCode` static method is called with the
   /// code "Latn". The resulting [Script] instance (or null) is assigned to the
   /// `script` variable.
-  static Script? maybeFromCode(
-    Object? code, [
-    Iterable<Script> scripts = list,
-  ]) {
+  static Script? maybeFromCode(Object? code, [Iterable<Script>? scripts]) {
+    if (scripts == null) return codeMap.maybeFindByCode(code);
     var string =
         code?.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
@@ -272,8 +274,9 @@ class Script extends WritingSystem
   /// to the `script` variable.
   static Script? maybeFromCodeNumeric(
     Object? codeNumeric, [
-    Iterable<Script> scripts = list,
+    Iterable<Script>? scripts,
   ]) {
+    if (scripts == null) return codeNumericMap.maybeFindByCode(codeNumeric);
     final string = codeNumeric
         ?.toUpperCaseIsoCode()
         .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);

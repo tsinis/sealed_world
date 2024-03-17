@@ -119,9 +119,11 @@ class NaturalLanguage extends Language
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCode(
     Object code, [
-    Iterable<NaturalLanguage> languages = list,
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      languages.firstIsoWhereCode(code.toUpperCaseIsoCode());
+      languages == null
+          ? codeMap.findByCodeOrThrow(code)
+          : languages.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns an instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
@@ -135,9 +137,11 @@ class NaturalLanguage extends Language
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCodeShort(
     Object codeShort, [
-    Iterable<NaturalLanguage> languages = list,
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      languages.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
+      languages == null
+          ? codeShortMap.findByCodeOrThrow(codeShort)
+          : languages.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
 
   /// Returns an instance of the [NaturalLanguage] class from the name of the
   /// language.
@@ -184,12 +188,16 @@ class NaturalLanguage extends Language
   /// assigned to the `language` variable.
   factory NaturalLanguage.fromAnyCode(
     Object code, [
-    Iterable<NaturalLanguage> languages = list,
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      code.toUpperCaseIsoCode().maybeMapIsoCode(
-            orElse: (regular) => NaturalLanguage.fromCode(regular, languages),
-            short: (short) => NaturalLanguage.fromCodeShort(short, languages),
-          );
+      languages == null
+          ? map.findByCodeOrThrow(code)
+          : code.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) =>
+                    NaturalLanguage.fromCode(regular, languages),
+                short: (short) =>
+                    NaturalLanguage.fromCodeShort(short, languages),
+              );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
@@ -201,13 +209,15 @@ class NaturalLanguage extends Language
   /// [NaturalLanguage] objects to search through.
   static NaturalLanguage? maybeFromCode(
     Object? code, [
-    Iterable<NaturalLanguage> languages = list,
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      languages.firstIsoWhereCodeOrNull(
-        code
-            ?.toUpperCaseIsoCode()
-            .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength),
-      );
+      languages == null
+          ? codeMap.maybeFindByCode(code)
+          : languages.firstIsoWhereCodeOrNull(
+              code
+                  ?.toUpperCaseIsoCode()
+                  .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength),
+            );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
@@ -219,13 +229,15 @@ class NaturalLanguage extends Language
   /// [NaturalLanguage] objects to search through.
   static NaturalLanguage? maybeFromCodeShort(
     Object? codeShort, [
-    Iterable<NaturalLanguage> languages = list,
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      languages.firstIsoWhereCodeOtherOrNull(
-        codeShort
-            ?.toUpperCaseIsoCode()
-            .maybeToValidIsoCode(exactLength: IsoStandardized.codeShortLength),
-      );
+      languages == null
+          ? codeShortMap.maybeFindByCode(codeShort)
+          : languages.firstIsoWhereCodeOtherOrNull(
+              codeShort?.toUpperCaseIsoCode().maybeToValidIsoCode(
+                    exactLength: IsoStandardized.codeShortLength,
+                  ),
+            );
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
   /// the language.
@@ -339,12 +351,14 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// ```
   static NaturalLanguage? maybeFromAnyCode(
     Object? code, [
-    Iterable<NaturalLanguage> languages = list,
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      code?.toUpperCaseIsoCode().maybeMapIsoCode(
-            orElse: (regular) => maybeFromCode(regular, languages),
-            short: (short) => maybeFromCodeShort(short, languages),
-          );
+      languages == null
+          ? map.maybeFindByCode(code)
+          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => maybeFromCode(regular, languages),
+                short: (short) => maybeFromCodeShort(short, languages),
+              );
 
   /// The general standard ISO code for languages, defined as ISO 639.
   static const standardGeneralName = "639";
