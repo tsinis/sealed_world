@@ -108,8 +108,9 @@ extension IsoStandardizedStringExtension on String {
     int maxLength = IsoStandardized.codeLength,
     int minLength = IsoStandardized.codeShortLength,
   }) {
-    final code =
-        maybeToValidIsoCode(maxLength: maxLength, minLength: minLength);
+    final code = minLength == maxLength
+        ? maybeToValidIsoCode(exactLength: minLength)
+        : maybeToValidIsoCode(maxLength: maxLength, minLength: minLength);
     if (code == null) return orElse(this);
 
     return code.length == IsoStandardized.codeShortLength
