@@ -1,5 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
+import "../../collections/fiat_currency_collections.dart";
 import "../../data/fiat_currencies.data.dart";
 import "../../helpers/fiat_currency/fiat_currency_json.dart";
 
