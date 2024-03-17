@@ -23,9 +23,9 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   ///
   /// If the value is found, it is returned. However, if the value is not found
   /// (i.e., `null`), this method throws a [StateError] indicating that no
-  /// matching ISO element was found for the given [code]. This behavior enforces
-  /// the existence of a value for the provided [code] and should be used when
-  /// the absence of a value is considered an error condition.
+  /// matching ISO element was found for the given [code]. This behavior
+  /// enforces the existence of a value for the provided [code] and should be
+  /// used when the absence of a value is considered an error condition.
   ///
   /// The method is intended to be used when it is guaranteed that the [code]
   /// exists in the map, and the caller expects a non-nullable result. If the
