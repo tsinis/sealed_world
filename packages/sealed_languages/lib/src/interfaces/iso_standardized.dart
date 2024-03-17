@@ -25,7 +25,7 @@
 ///   final List<String>? namesNative;
 ///
 ///   @override
-///   String? get codeOther => codeShort;
+///   String get codeOther => codeShort;
 /// }
 /// ```
 ///
@@ -37,14 +37,14 @@
 abstract interface class IsoStandardized<Name extends Object> {
   /// Creates a new instance of the [IsoStandardized] object.
   ///
-  /// The [name] and [code] parameters are required. The [namesNative] and
-  /// [codeOther] parameters are optional.
+  /// The [name], [code] and  [codeOther] parameters are required.
+  /// The [namesNative] parameter is optional.
   const IsoStandardized( // coverage:ignore-line
       {
     required this.name,
     required this.code,
+    required this.codeOther,
     this.namesNative,
-    this.codeOther,
   });
 
   /// The regular length of the ISO code (3 characters). However, it's important
@@ -68,10 +68,10 @@ abstract interface class IsoStandardized<Name extends Object> {
   /// A string representing the ISO (usually a 3-letter) code for the object.
   final String code;
 
-  /// An optional string representing an alternative ISO code for the object.
+  /// An string representing an alternative ISO code for the object.
   /// This is typically used for short code (2-letter, as codeShort) or numeric
   /// code (3-digit, as codeNumeric).
-  final String? codeOther;
+  final String codeOther;
 
   /// An object representing the name of the object.
   final Name name;

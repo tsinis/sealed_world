@@ -1,4 +1,5 @@
 import "../../interfaces/iso_standardized.dart";
+import "iso_standardized_string_extension.dart";
 
 /// Extension on [Iterable] class to provide helper methods for working
 /// with Iterables.
@@ -64,7 +65,7 @@ extension SealedWorldIterableIsoExtension<T extends IsoStandardized>
     final maybeMatchingIso = getIsoOrNullFunc(value);
     if (maybeMatchingIso != null) return maybeMatchingIso;
     throw StateError(
-      """No matching ISO $T element was found for the input! Consider using same but nullable runtime safe methods instead.""",
+      """No matching ISO $T element was found for the input! Consider using the same but nullable runtime-safe methods (with a `maybe` prefix) instead.""",
     );
   }
 }
@@ -105,8 +106,8 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   }
 
   T? _mapTrimmedCode(T? Function(String output) mapper, Object? input) {
-    final code = input?.toString().trim() ?? "";
+    final code = input?.toString().maybeToValidIsoCode();
 
-    return code.length >= IsoStandardized.codeShortLength ? mapper(code) : null;
+    return code != null ? mapper(code) : null;
   }
 }

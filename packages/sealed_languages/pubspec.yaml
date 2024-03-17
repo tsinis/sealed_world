@@ -1,4 +1,4 @@
-version: 1.2.0
+version: 1.3.0
 name: sealed_languages
 description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
@@ -7,9 +7,9 @@ issue_tracker: https://github.com/tsinis/sealed_world/issues
 topics:
   - languages
   - language
+  - script
   - locale
   - iso-639
-  - iso
 
 screenshots:
   - description: "Structure visualization"

@@ -44,38 +44,63 @@ class Script extends WritingSystem
   /// Returns an instance of the [Script] class from a four-character ISO
   /// 15924 code.
   ///
-  /// The [code] parameter is required and should be a four-character string
-  /// representing the ISO 15924 code for the script. The optional [scripts]
-  /// parameter can be used to specify a list of [Script] objects to search
-  /// through. This method returns the [Script] instance that corresponds to the
+  /// The [code] parameter is required and should be am object representing
+  /// the ISO 15924 four-character code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be used to specify a list of [Script]
+  /// objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [Script] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory Script.fromCode(String code, [Iterable<Script> scripts = list]) =>
-      scripts.firstIsoWhereCode(formatToStandardCode(code.trim()));
+  factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
+    if (scripts == null) return codeMap.findByCodeOrThrow(code);
+    var validCode =
+        code.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
+    if (validCode == null) {
+      throw StateError(
+        """Provided $code isn't a valid $standardCodeName code. Consider using nullable runtime-safe maybeFromCode() instead.""",
+      );
+    }
+    validCode = formatToStandardCode(validCode);
+    final result = scripts.firstIsoWhereOrNull((iso) => iso.code == validCode);
+    if (result == null) {
+      throw StateError(
+        """No matching Script was found for the $code! Consider using nullable runtime-safe maybeFromCode() instead.""",
+      );
+    }
+
+    return result;
+  }
 
   /// Returns an instance of the [Script] class from a three-digit ISO 15924
   /// code.
   ///
-  /// The [codeNumeric] parameter is required and should be a three-digit string
-  /// representing the ISO 15924 numeric code for the script. The optional
-  /// [scripts] parameter can be used to specify a list of [Script] objects to
-  /// search through. This method returns the [Script] instance that corresponds
-  /// to the given numeric code, or throws a [StateError] if no such instance
-  /// exists.
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-digit ISO 15924 numeric code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be used to specify a list of [Script]
+  /// objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [Script] instance that
+  /// corresponds to the given numeric code, or throws a [StateError] if no such
+  /// instance exists.
   factory Script.fromCodeNumeric(
-    String codeNumeric, [
-    Iterable<Script> scripts = list,
+    Object codeNumeric, [
+    Iterable<Script>? scripts,
   ]) =>
-      scripts.firstIsoWhereCodeOther(codeNumeric);
+      scripts == null
+          ? codeNumericMap.findByCodeOrThrow(codeNumeric)
+          : scripts.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
-  /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the script. The optional [scripts] parameter can
+  /// The [name] parameter is required and should be am object representing
+  /// the non-empty name of the script. The optional [scripts] parameter can
   /// be used to specify a list of [Script] objects to search through. This
   /// method returns the [Script] instance that corresponds to the given name,
   /// or throws a [StateError] if no such instance exists.
-  factory Script.fromName(String name, [Iterable<Script> scripts = list]) {
-    final upperCaseName = name.trim().toUpperCase();
+  factory Script.fromName(Object name, [Iterable<Script> scripts = list]) {
+    final upperCaseName = name.toUpperCaseIsoCode();
 
     return scripts
         .firstIsoWhere((script) => script.name.toUpperCase() == upperCaseName);
@@ -83,11 +108,14 @@ class Script extends WritingSystem
 
   /// Returns an instance of the [Script] class from any valid ISO 15924 code.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 15924 code for the script. The optional [scripts] parameter can be
-  /// used to specify a list of [Script] objects to search through. This method
-  /// returns the [Script] instance that corresponds to the given code, or
-  /// throws a [StateError] if no such instance exists.
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 15924 code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be
+  /// used to specify a list of [Script] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [Script] instance that corresponds to the given
+  /// code, or throws a [StateError] if no such instance exists.
   ///
   /// Example:
   /// ```dart
@@ -100,11 +128,15 @@ class Script extends WritingSystem
   /// `fromCodeNumeric` factory method to create a [Script] instance. Otherwise,
   /// it calls the `fromCode` factory method to create a [Script] instance. The
   /// resulting [Script] instance is assigned to the `script` variable.
-  factory Script.fromAnyCode(String code, [Iterable<Script> scripts = list]) =>
-      code.maybeMapIsoCode(
-        orElse: (regular) => Script.fromCode(regular, scripts),
-        numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
-      );
+  factory Script.fromAnyCode(Object code, [Iterable<Script>? scripts]) =>
+      scripts == null
+          ? map.findByCodeOrThrow(code)
+          : code.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => Script.fromCode(regular, scripts),
+                numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
+                maxLength: codeLength,
+                minLength: IsoStandardized.codeLength,
+              );
 
   /// The regular length of the ISO code (4). However, it's important to note
   /// that this length is not standardized for all ISO codes. Typically it is
@@ -129,6 +161,8 @@ class Script extends WritingSystem
   @override
   List<String>? get namesNative => null;
 
+  /// A three-digit string representing the ISO 15924 numeric code for the
+  /// script.
   @override
   String get codeOther => codeNumeric;
 
@@ -167,15 +201,18 @@ class Script extends WritingSystem
   /// Returns a [Script] instance that corresponds to the given value, or `null`
   /// if no such instance exists.
   ///
-  /// The [code] parameter is required and represents the value to match
-  /// against. The optional [scripts] parameter can be used to specify a list of
-  /// [Script] objects to search through. This method returns the [Script]
-  /// instance that corresponds to the given value, or `null` if no such
-  /// instance exists.
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 15924 code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be used to specify a list of
+  /// [Script] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [Script] instance that corresponds to the given
+  /// value, or `null` if no such instance exists.
   ///
   /// Example:
   /// ```dart
-  /// Script? script = Script.maybeFromAnyCode(ExampleScriptEnum.latn.name);
+  /// Script? script = Script.maybeFromAnyCode(ExampleScriptEnum.latn);
   /// print(script != null) // Prints: true.
   /// ```
   ///
@@ -186,22 +223,25 @@ class Script extends WritingSystem
   /// compares it with the uppercase version of the `code` property of each
   /// [Script] instance. The resulting [Script] instance is assigned to the
   /// `script` variable.
-  static Script? maybeFromAnyCode(
-    Object? code, [
-    Iterable<Script> scripts = list,
-  ]) =>
-      code?.toString().maybeMapIsoCode(
-            orElse: (regular) => maybeFromCode(regular, scripts),
-            numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
-          );
+  static Script? maybeFromAnyCode(Object? code, [Iterable<Script>? scripts]) =>
+      scripts == null
+          ? map.maybeFindByCode(code)
+          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => maybeFromCode(regular, scripts),
+                numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
+                maxLength: codeLength,
+                minLength: IsoStandardized.codeLength,
+              );
 
   /// Returns an instance of the [Script] class from a four-character ISO
   /// 15924 code if it exists. Returns `null` otherwise.
   ///
   /// The [code] parameter is required and should be an object representing the
-  /// four-character ISO 15924 code for the script. The optional [scripts]
-  /// parameter can be used to specify a list of [Script] objects to search
-  /// through.
+  /// ISO 15924 code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be used to specify a list of [Script]
+  /// objects to search through.
+  /// {@macro optional_instances_array_parameter}
   ///
   /// Example:
   /// ```dart
@@ -211,24 +251,25 @@ class Script extends WritingSystem
   /// In the above example, the `maybeFromCode` static method is called with the
   /// code "Latn". The resulting [Script] instance (or null) is assigned to the
   /// `script` variable.
-  static Script? maybeFromCode(
-    Object? code, [
-    Iterable<Script> scripts = list,
-  ]) {
-    final string = code?.toString().trim() ?? "";
+  static Script? maybeFromCode(Object? code, [Iterable<Script>? scripts]) {
+    if (scripts == null) return codeMap.maybeFindByCode(code);
+    var string =
+        code?.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
+    if (string == null) return null;
+    string = formatToStandardCode(string);
 
-    return string.length == Script.codeLength
-        ? scripts.firstIsoWhereCodeOrNull(formatToStandardCode(string))
-        : null;
+    return scripts.firstIsoWhereOrNull((iso) => iso.code == string);
   }
 
   /// Returns an instance of the [Script] class from a three-digit ISO 15924
   /// code if it exists. Returns `null` otherwise.
   ///
-  /// The [codeNumeric] parameter is required and should be a three-digit object
-  /// representing the ISO 15924 numeric code for the script. The optional
-  /// [scripts] parameter can be used to specify a list of [Script] objects to
-  /// search through.
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-digit ISO 15924 numeric code for the script.
+  /// {@macro any_code_object}
+  /// The optional [scripts] parameter can be used to specify a list of [Script]
+  /// objects to search through.
+  /// {@macro optional_instances_array_parameter}
   ///
   /// Example:
   /// ```dart
@@ -239,13 +280,14 @@ class Script extends WritingSystem
   /// to the `script` variable.
   static Script? maybeFromCodeNumeric(
     Object? codeNumeric, [
-    Iterable<Script> scripts = list,
+    Iterable<Script>? scripts,
   ]) {
-    final string = codeNumeric?.toString().trim() ?? "";
+    if (scripts == null) return codeNumericMap.maybeFindByCode(codeNumeric);
+    final string = codeNumeric
+        ?.toUpperCaseIsoCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return string.length == IsoStandardized.codeLength
-        ? scripts.firstIsoWhereCodeOtherOrNull(formatToStandardCode(string))
-        : null;
+    return scripts.firstIsoWhereCodeOtherOrNull(string);
   }
 
   /// Formats the given [input] to a standard four-character ISO 15924 code.
@@ -268,220 +310,44 @@ class Script extends WritingSystem
   /// ISO 15924 Numeric.
   static const standardCodeNumericName = "$standardGeneralName Numeric";
 
-  /// A list of all the scripts currently supported by the [Script] class.
-  static const list = [
-    ScriptAdlm(),
-    ScriptAfak(),
-    ScriptAghb(),
-    ScriptAhom(),
-    ScriptArab(),
-    ScriptAran(),
-    ScriptArmi(),
-    ScriptArmn(),
-    ScriptAvst(),
-    ScriptBali(),
-    ScriptBamu(),
-    ScriptBass(),
-    ScriptBatk(),
-    ScriptBeng(),
-    ScriptBhks(),
-    ScriptBlis(),
-    ScriptBopo(),
-    ScriptBrah(),
-    ScriptBrai(),
-    ScriptBugi(),
-    ScriptBuhd(),
-    ScriptCakm(),
-    ScriptCans(),
-    ScriptCari(),
-    ScriptCham(),
-    ScriptCher(),
-    ScriptChrs(),
-    ScriptCirt(),
-    ScriptCopt(),
-    ScriptCpmn(),
-    ScriptCprt(),
-    ScriptCyrl(),
-    ScriptCyrs(),
-    ScriptDeva(),
-    ScriptDiak(),
-    ScriptDogr(),
-    ScriptDsrt(),
-    ScriptDupl(),
-    ScriptEgyd(),
-    ScriptEgyh(),
-    ScriptEgyp(),
-    ScriptElba(),
-    ScriptElym(),
-    ScriptEthi(),
-    ScriptGeok(),
-    ScriptGeor(),
-    ScriptGlag(),
-    ScriptGong(),
-    ScriptGonm(),
-    ScriptGoth(),
-    ScriptGran(),
-    ScriptGrek(),
-    ScriptGujr(),
-    ScriptGuru(),
-    ScriptHanb(),
-    ScriptHang(),
-    ScriptHani(),
-    ScriptHano(),
-    ScriptHans(),
-    ScriptHant(),
-    ScriptHatr(),
-    ScriptHebr(),
-    ScriptHira(),
-    ScriptHluw(),
-    ScriptHmng(),
-    ScriptHmnp(),
-    ScriptHrkt(),
-    ScriptHung(),
-    ScriptInds(),
-    ScriptItal(),
-    ScriptJamo(),
-    ScriptJava(),
-    ScriptJpan(),
-    ScriptJurc(),
-    ScriptKali(),
-    ScriptKana(),
-    ScriptKawi(),
-    ScriptKhar(),
-    ScriptKhmr(),
-    ScriptKhoj(),
-    ScriptKitl(),
-    ScriptKits(),
-    ScriptKnda(),
-    ScriptKore(),
-    ScriptKpel(),
-    ScriptKthi(),
-    ScriptLana(),
-    ScriptLaoo(),
-    ScriptLatf(),
-    ScriptLatg(),
-    ScriptLatn(),
-    ScriptLeke(),
-    ScriptLepc(),
-    ScriptLimb(),
-    ScriptLina(),
-    ScriptLinb(),
-    ScriptLisu(),
-    ScriptLoma(),
-    ScriptLyci(),
-    ScriptLydi(),
-    ScriptMahj(),
-    ScriptMaka(),
-    ScriptMand(),
-    ScriptMani(),
-    ScriptMarc(),
-    ScriptMaya(),
-    ScriptMedf(),
-    ScriptMend(),
-    ScriptMerc(),
-    ScriptMero(),
-    ScriptMlym(),
-    ScriptModi(),
-    ScriptMong(),
-    ScriptMoon(),
-    ScriptMroo(),
-    ScriptMtei(),
-    ScriptMult(),
-    ScriptMymr(),
-    ScriptNagm(),
-    ScriptNand(),
-    ScriptNarb(),
-    ScriptNbat(),
-    ScriptNewa(),
-    ScriptNkdb(),
-    ScriptNkgb(),
-    ScriptNkoo(),
-    ScriptNshu(),
-    ScriptOgam(),
-    ScriptOlck(),
-    ScriptOrkh(),
-    ScriptOrya(),
-    ScriptOsge(),
-    ScriptOsma(),
-    ScriptOugr(),
-    ScriptPalm(),
-    ScriptPauc(),
-    ScriptPcun(),
-    ScriptPelm(),
-    ScriptPerm(),
-    ScriptPhag(),
-    ScriptPhli(),
-    ScriptPhlp(),
-    ScriptPhlv(),
-    ScriptPhnx(),
-    ScriptPiqd(),
-    ScriptPlrd(),
-    ScriptPrti(),
-    ScriptPsin(),
-    ScriptQaaa(),
-    ScriptQabx(),
-    ScriptRanj(),
-    ScriptRjng(),
-    ScriptRohg(),
-    ScriptRoro(),
-    ScriptRunr(),
-    ScriptSamr(),
-    ScriptSara(),
-    ScriptSarb(),
-    ScriptSaur(),
-    ScriptSgnw(),
-    ScriptShaw(),
-    ScriptShrd(),
-    ScriptShui(),
-    ScriptSidd(),
-    ScriptSind(),
-    ScriptSinh(),
-    ScriptSogd(),
-    ScriptSogo(),
-    ScriptSora(),
-    ScriptSoyo(),
-    ScriptSund(),
-    ScriptSunu(),
-    ScriptSylo(),
-    ScriptSyrc(),
-    ScriptSyre(),
-    ScriptSyrj(),
-    ScriptSyrn(),
-    ScriptTagb(),
-    ScriptTakr(),
-    ScriptTale(),
-    ScriptTalu(),
-    ScriptTaml(),
-    ScriptTang(),
-    ScriptTavt(),
-    ScriptTelu(),
-    ScriptTeng(),
-    ScriptTfng(),
-    ScriptTglg(),
-    ScriptThaa(),
-    ScriptThai(),
-    ScriptTibt(),
-    ScriptTirh(),
-    ScriptTnsa(),
-    ScriptToto(),
-    ScriptUgar(),
-    ScriptVaii(),
-    ScriptVisp(),
-    ScriptVith(),
-    ScriptWara(),
-    ScriptWcho(),
-    ScriptWole(),
-    ScriptXpeo(),
-    ScriptXsux(),
-    ScriptYezi(),
-    ScriptYiii(),
-    ScriptZanb(),
-    ScriptZinh(),
-    ScriptZmth(),
-    ScriptZsye(),
-    ScriptZsym(),
-    ScriptZxxx(),
-    ScriptZyyy(),
-    ScriptZzzz(),
-  ];
+  /// A tree-shakable constant map containing script (ISO 15924 Alpha-4) codes
+  /// and their associated [Script] objects, for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// Script.codeMap['Latn']; // ScriptLatn().
+  /// ```
+  static const codeMap =
+      UpperCaseIsoMap(scriptCodeMap, exactLength: codeLength);
+
+  /// A tree-shakable constant map containing numeric script (ISO 15924 Numeric)
+  /// codes and their associated [Script] objects, for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// Script.codeNumericMap[215.toString()]; // ScriptLatn().
+  /// ```
+  static const codeNumericMap = UpperCaseIsoMap(scriptCodeOtherMap);
+
+  /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
+  /// a unified view of script codes and their [Script] objects, for a O(1)
+  /// access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// Script.map['Latn']; // ScriptLatn().
+  /// ```
+  static const map = UpperCaseIsoMap(
+    {...scriptCodeMap, ...scriptCodeOtherMap},
+    exactLength: null,
+    maxLength: codeLength,
+    minLength: IsoStandardized.codeLength,
+  );
+
+  /// A tree-shakable list of all the scripts currently supported
+  /// by the [Script] class.
+  static const list = scriptList;
 }

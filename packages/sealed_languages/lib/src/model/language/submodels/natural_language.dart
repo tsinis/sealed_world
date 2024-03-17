@@ -86,47 +86,89 @@ class NaturalLanguage extends Language
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code.
   ///
-  /// The [code] parameter is required and should be a three-letter string
-  /// representing the Terminological ISO 639-2 code for the language.
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter Terminological ISO 639-2 code for the language.
+  /// {@template any_code_object}
+  /// Provided value could be any type of [Object] that returns ISO code on
+  /// `toString()` call. For example it could be an instance of [StringBuffer],
+  /// [String], [Enum] (in case of enum - `.name.toUpperCase()` will be used):
+  ///
+  /// ```dart
+  /// enum IsoEnum {de, fr, ar} // On (IsoEnum.de) call it will use "DE" input.
+  /// ```
+  ///
+  ///  Or has a custom `toString()` override, i.e.:
+  /// ```dart
+  /// class CustomIsoCodeClass {
+  ///  const CustomIsoCodeClass({String code = '123', this.foo}) : _code = code;
+  ///  final String _code;
+  ///  final Foo? foo;
+  ///
+  ///  @override
+  ///  String toString() => _code; // Has to override toString() with ISO value.
+  /// }
+  ///
+  /// // On (CustomIsoCodeClass(code: ' 321 ')) call it will use "321" input.
+  ///```
+  ///
+  /// {@endtemplate}
+  /// {@macro natural_language_constructor}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
+  /// {@template optional_instances_array_parameter}
+  /// If this optional array is not provided (it's default to `null`), this will
+  /// search in 0(1) access time case-insensitive [UpperCaseIsoMap] hash-map.
+  /// Otherwise it will search in provided array with equivalent of `firstWhere`
+  /// method, which might not be that fast comparing to the hashmap one,
+  /// especially for large arrays.
+  /// If you only need to add additional custom ISO instances of yours -
+  /// consider using the `copyWith` method with your custom instances in default
+  /// maps of this class (i.e. `codeMap.copyWith()`, `map.copyWith()` etc.).
+  /// This will ensure O(1) performance for your custom instances too.
+  /// {@endtemplate}
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCode(
-    String code, [
-    Iterable<NaturalLanguage> languages = list,
+    Object code, [
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      languages.firstIsoWhereCode(code.toUpperCase());
+      languages == null
+          ? codeMap.findByCodeOrThrow(code)
+          : languages.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns an instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
   ///
-  /// The [codeShort] parameter is required and should be a two-letter string
-  /// representing the ISO 639-1 code for the language.
+  /// The [codeShort] parameter is required and should be an object
+  /// representing the two-letter ISO 639-1 code for the language.
+  /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCodeShort(
-    String codeShort, [
-    Iterable<NaturalLanguage> languages = list,
+    Object codeShort, [
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      languages.firstIsoWhereCodeOther(codeShort.toUpperCase());
+      languages == null
+          ? codeShortMap.findByCodeOrThrow(codeShort)
+          : languages.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
 
   /// Returns an instance of the [NaturalLanguage] class from the name of the
   /// language.
   ///
-  /// The [name] parameter is required and should be a non-empty string
-  /// representing the name of the natural language.
+  /// The [name] parameter is required and should be a object
+  /// representing the non-empty name of the natural language.
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given name, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromName(
-    String name, [
+    Object name, [
     Iterable<NaturalLanguage> languages = list,
   ]) {
-    final upperCaseName = name.trim().toUpperCase();
+    final upperCaseName = name.toUpperCaseIsoCode();
 
     return languages.firstIsoWhere(
       (language) => language.name.toUpperCase() == upperCaseName,
@@ -136,9 +178,12 @@ class NaturalLanguage extends Language
   /// Returns an instance of the [NaturalLanguage] class from any valid ISO 639
   /// code.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 639 code for the language. The optional [languages] parameter can be
-  /// used to specify a list of [NaturalLanguage] objects to search through.
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 639 code for the language.
+  /// {@macro any_code_object}
+  /// The optional [languages] parameter can be used to specify a list of
+  /// [NaturalLanguage] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   ///
@@ -155,49 +200,59 @@ class NaturalLanguage extends Language
   /// [NaturalLanguage] instance. The resulting [NaturalLanguage] instance is
   /// assigned to the `language` variable.
   factory NaturalLanguage.fromAnyCode(
-    String code, [
-    Iterable<NaturalLanguage> languages = list,
+    Object code, [
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      code.maybeMapIsoCode(
-        orElse: (regular) => NaturalLanguage.fromCode(regular, languages),
-        short: (short) => NaturalLanguage.fromCodeShort(short, languages),
-      );
+      languages == null
+          ? map.findByCodeOrThrow(code)
+          : code.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) =>
+                    NaturalLanguage.fromCode(regular, languages),
+                short: (short) =>
+                    NaturalLanguage.fromCodeShort(short, languages),
+              );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
   ///
-  /// The [code] parameter is required and should be a three-letter string
-  /// representing the Terminological ISO 639-2 code for the language.
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter Terminological ISO 639-2 code for the language.
+  /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   static NaturalLanguage? maybeFromCode(
     Object? code, [
-    Iterable<NaturalLanguage> languages = list,
-  ]) {
-    final string = code?.toString().trim() ?? "";
-
-    return string.length == IsoStandardized.codeLength
-        ? languages.firstIsoWhereCodeOrNull(string.toUpperCase())
-        : null;
-  }
+    Iterable<NaturalLanguage>? languages,
+  ]) =>
+      languages == null
+          ? codeMap.maybeFindByCode(code)
+          : languages.firstIsoWhereCodeOrNull(
+              code
+                  ?.toUpperCaseIsoCode()
+                  .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength),
+            );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
   ///
-  /// The [code] parameter is required and should be a three-letter string
-  /// representing the Terminological ISO 639-2 code for the language.
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter Terminological ISO 639-2 code for the language.
+  /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   static NaturalLanguage? maybeFromCodeShort(
     Object? codeShort, [
-    Iterable<NaturalLanguage> languages = list,
-  ]) {
-    final string = codeShort?.toString().trim() ?? "";
-
-    return string.length == IsoStandardized.codeShortLength
-        ? languages.firstIsoWhereCodeOtherOrNull(string.toUpperCase())
-        : null;
-  }
+    Iterable<NaturalLanguage>? languages,
+  ]) =>
+      languages == null
+          ? codeShortMap.maybeFindByCode(codeShort)
+          : languages.firstIsoWhereCodeOtherOrNull(
+              codeShort?.toUpperCaseIsoCode().maybeToValidIsoCode(
+                    exactLength: IsoStandardized.codeShortLength,
+                  ),
+            );
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
   /// the language.
@@ -224,6 +279,7 @@ class NaturalLanguage extends Language
   /// The ISO 15924 scripts used by the language.
   final Set<Script> scripts;
 
+  /// A two-letter string representing the ISO 639-1 code for the language.
   @override
   String get codeOther => codeShort;
 
@@ -295,25 +351,28 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// [code],
   /// or `null` if no such object exists in the specified [languages] list.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 639 code for the language. The optional [languages] parameter
-  /// specifies the list of `NaturalLanguage` objects to search (defaults to
-  /// `NaturalLanguage.list`).
-  ///
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 639 code for the language.
+  /// {@macro any_code_object}
+  /// The optional [languages] parameter specifies the list of `NaturalLanguage`
+  /// objects to search.
+  /// {@macro optional_instances_array_parameter}
   /// Example usage:
   ///
   /// ```dart
-  /// NaturalLanguage? lng = NaturalLanguage.maybeFromAnyCode(LangEnum.en.name);
-  /// print(lng != null); // Prints: true
+  /// NaturalLanguage? language = NaturalLanguage.maybeFromAnyCode(LangEnum.en);
+  /// print(language != null); // Prints: true
   /// ```
   static NaturalLanguage? maybeFromAnyCode(
     Object? code, [
-    Iterable<NaturalLanguage> languages = list,
+    Iterable<NaturalLanguage>? languages,
   ]) =>
-      code?.toString().maybeMapIsoCode(
-            orElse: (regular) => maybeFromCode(regular, languages),
-            short: (short) => maybeFromCodeShort(short, languages),
-          );
+      languages == null
+          ? map.maybeFindByCode(code)
+          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => maybeFromCode(regular, languages),
+                short: (short) => maybeFromCodeShort(short, languages),
+              );
 
   /// The general standard ISO code for languages, defined as ISO 639.
   static const standardGeneralName = "639";
@@ -328,192 +387,45 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// defined as ISO 639-2/B.
   static const standardBibliographicCodeName = "$standardGeneralName-2/B";
 
-  /// A list of all the natural languages currently
+  /// A tree-shakable constant map containing language
+  /// (Terminological ISO 639-2) codes and their associated [NaturalLanguage]
+  /// objects, for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// NaturalLanguage.codeMap[' eng']; // LangEng().
+  /// ```
+  static const codeMap = UpperCaseIsoMap(naturalLanguageCodeMap);
+
+  /// A tree-shakable constant map containing short language (ISO 639-1) codes
+  /// and their associated [NaturalLanguage] objects, for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// NaturalLanguage.codeShortMap['en ']; // LangEng().
+  /// ```
+  static const codeShortMap = UpperCaseIsoMap(
+    naturalLanguageCodeOtherMap,
+    exactLength: IsoStandardized.codeShortLength,
+  );
+
+  /// A tree-shakable combined map of [codeMap] and [codeShortMap], providing a
+  /// unified view of language codes and their [NaturalLanguage] objects, for a
+  /// O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// NaturalLanguage.map[' en ']; // LangEng().
+  /// ```
+  static const map = UpperCaseIsoMap(
+    {...naturalLanguageCodeMap, ...naturalLanguageCodeOtherMap},
+    exactLength: null,
+  );
+
+  /// A tree-shakable list of all the natural languages currently
   /// supported by the [NaturalLanguage] class.
-  static const list = [
-    LangAar(),
-    LangAbk(),
-    LangAfr(),
-    LangAka(),
-    LangAmh(),
-    LangAra(),
-    LangArg(),
-    LangAsm(),
-    LangAva(),
-    LangAve(),
-    LangAym(),
-    LangAze(),
-    LangBak(),
-    LangBam(),
-    LangBel(),
-    LangBen(),
-    LangBih(),
-    LangBis(),
-    LangBod(),
-    LangBos(),
-    LangBre(),
-    LangBul(),
-    LangCat(),
-    LangCes(),
-    LangCha(),
-    LangChe(),
-    LangChu(),
-    LangChv(),
-    LangCor(),
-    LangCos(),
-    LangCre(),
-    LangCym(),
-    LangDan(),
-    LangDeu(),
-    LangDiv(),
-    LangDzo(),
-    LangEll(),
-    LangEng(),
-    LangEpo(),
-    LangEst(),
-    LangEus(),
-    LangEwe(),
-    LangFao(),
-    LangFas(),
-    LangFij(),
-    LangFin(),
-    LangFra(),
-    LangFry(),
-    LangFul(),
-    LangGla(),
-    LangGle(),
-    LangGlg(),
-    LangGlv(),
-    LangGrn(),
-    LangGuj(),
-    LangHat(),
-    LangHau(),
-    LangHeb(),
-    LangHer(),
-    LangHin(),
-    LangHmo(),
-    LangHrv(),
-    LangHun(),
-    LangHye(),
-    LangIbo(),
-    LangIdo(),
-    LangIii(),
-    LangIku(),
-    LangIle(),
-    LangIna(),
-    LangInd(),
-    LangIpk(),
-    LangIsl(),
-    LangIta(),
-    LangJav(),
-    LangJpn(),
-    LangKal(),
-    LangKan(),
-    LangKas(),
-    LangKat(),
-    LangKau(),
-    LangKaz(),
-    LangKhm(),
-    LangKik(),
-    LangKin(),
-    LangKir(),
-    LangKom(),
-    LangKon(),
-    LangKor(),
-    LangKua(),
-    LangKur(),
-    LangLao(),
-    LangLat(),
-    LangLav(),
-    LangLim(),
-    LangLin(),
-    LangLit(),
-    LangLtz(),
-    LangLub(),
-    LangLug(),
-    LangMah(),
-    LangMal(),
-    LangMar(),
-    LangMkd(),
-    LangMlg(),
-    LangMlt(),
-    LangMon(),
-    LangMri(),
-    LangMsa(),
-    LangMya(),
-    LangNau(),
-    LangNav(),
-    LangNbl(),
-    LangNde(),
-    LangNdo(),
-    LangNep(),
-    LangNld(),
-    LangNno(),
-    LangNob(),
-    LangNor(),
-    LangNya(),
-    LangOci(),
-    LangOji(),
-    LangOri(),
-    LangOrm(),
-    LangOss(),
-    LangPan(),
-    LangPli(),
-    LangPol(),
-    LangPor(),
-    LangPus(),
-    LangQue(),
-    LangRoh(),
-    LangRon(),
-    LangRun(),
-    LangRus(),
-    LangSag(),
-    LangSan(),
-    LangSin(),
-    LangSlk(),
-    LangSlv(),
-    LangSme(),
-    LangSmo(),
-    LangSna(),
-    LangSnd(),
-    LangSom(),
-    LangSot(),
-    LangSpa(),
-    LangSqi(),
-    LangSrd(),
-    LangSrp(),
-    LangSsw(),
-    LangSun(),
-    LangSwa(),
-    LangSwe(),
-    LangTah(),
-    LangTam(),
-    LangTat(),
-    LangTel(),
-    LangTgk(),
-    LangTgl(),
-    LangTha(),
-    LangTir(),
-    LangTon(),
-    LangTsn(),
-    LangTso(),
-    LangTuk(),
-    LangTur(),
-    LangTwi(),
-    LangUig(),
-    LangUkr(),
-    LangUrd(),
-    LangUzb(),
-    LangVen(),
-    LangVie(),
-    LangVol(),
-    LangWln(),
-    LangWol(),
-    LangXho(),
-    LangYid(),
-    LangYor(),
-    LangZha(),
-    LangZho(),
-    LangZul(),
-  ];
+  static const list = naturalLanguageList;
 }

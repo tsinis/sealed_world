@@ -61,6 +61,16 @@ void main() => group("$NaturalLanguage", () {
         }
       });
 
+      group("maps O(1) access time check", () {
+        for (final element in NaturalLanguage.list) {
+          performanceTest("of $NaturalLanguage: ${element.name}", () {
+            expect(NaturalLanguage.map[element.code], element);
+            expect(NaturalLanguage.codeMap[element.code], element);
+            expect(NaturalLanguage.codeShortMap[element.codeShort], element);
+          });
+        }
+      });
+
       group("equality", () {
         test("basic", () {
           expect(NaturalLanguage.list.first, isNot(equals(value)));
@@ -112,112 +122,210 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("fromCode", () {
-        performanceTest(
-          "with proper code",
-          () => expect(NaturalLanguage.fromCode(value.code), value),
-        );
+        group("with custom array", () {
+          performanceTest(
+            "with proper code",
+            () => expect(NaturalLanguage.fromCode(value.code, array), value),
+          );
 
-        performanceTest(
-          "with proper code lowercase",
-          () =>
-              expect(NaturalLanguage.fromCode(value.code.toLowerCase()), value),
-        );
+          performanceTest(
+            "with proper code lowercase",
+            () => expect(
+              NaturalLanguage.fromCode(value.code.toLowerCase(), array),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with wrong code",
-          () => expect(
-            () => NaturalLanguage.fromCode(value.toString()),
-            throwsStateError,
-          ),
-        );
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              () => NaturalLanguage.fromCode(value.toString(), array),
+              throwsStateError,
+            ),
+          );
 
-        assertTest(
-          "with empty languages",
-          () => NaturalLanguage.fromCode(value.code, const []),
-        );
+          assertTest(
+            "with empty languages",
+            () => NaturalLanguage.fromCode(value.code, const []),
+          );
+        });
+
+        group("without custom array", () {
+          performanceTest(
+            "with proper code",
+            () => expect(NaturalLanguage.fromCode(value.code), value),
+          );
+
+          performanceTest(
+            "with proper code lowercase",
+            () => expect(
+              NaturalLanguage.fromCode(value.code.toLowerCase()),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              () => NaturalLanguage.fromCode(value.toString()),
+              throwsStateError,
+            ),
+          );
+        });
       });
 
       group("fromCodeShort", () {
-        performanceTest(
-          "with proper code",
-          () => expect(NaturalLanguage.fromCodeShort(value.codeShort), value),
-        );
+        group("with custom array", () {
+          performanceTest(
+            "with proper code",
+            () => expect(
+              NaturalLanguage.fromCodeShort(value.codeShort, array),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with proper code lowercase",
-          () => expect(
-            NaturalLanguage.fromCodeShort(value.codeShort.toLowerCase()),
-            value,
-          ),
-        );
+          performanceTest(
+            "with proper code lowercase",
+            () => expect(
+              NaturalLanguage.fromCodeShort(
+                value.codeShort.toLowerCase(),
+                array,
+              ),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with wrong code",
-          () => expect(
-            () => NaturalLanguage.fromCodeShort(value.toString()),
-            throwsStateError,
-          ),
-        );
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              () => NaturalLanguage.fromCodeShort(value.toString(), array),
+              throwsStateError,
+            ),
+          );
 
-        assertTest(
-          "with empty languages",
-          () => NaturalLanguage.fromCodeShort(value.codeShort, const []),
-        );
+          assertTest(
+            "with empty languages",
+            () => NaturalLanguage.fromCodeShort(value.codeShort, const []),
+          );
+        });
+        group("without custom array", () {
+          performanceTest(
+            "with proper code",
+            () => expect(NaturalLanguage.fromCodeShort(value.codeShort), value),
+          );
+
+          performanceTest(
+            "with proper code lowercase",
+            () => expect(
+              NaturalLanguage.fromCodeShort(value.codeShort.toLowerCase()),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              () => NaturalLanguage.fromCodeShort(value.toString()),
+              throwsStateError,
+            ),
+          );
+        });
       });
 
       group("fromAnyCode", () {
-        randomElementTest(
-          "with random element from list and lowercase code",
-          NaturalLanguage.list,
-          (random) => expect(
-            NaturalLanguage.fromAnyCode(random.code.toLowerCase()),
-            random,
-          ),
-        );
+        group("with custom array", () {
+          performanceTest(
+            "with proper short code",
+            () => expect(
+              NaturalLanguage.fromAnyCode(value.codeShort, array),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with proper short code",
-          () => expect(NaturalLanguage.fromAnyCode(value.codeShort), value),
-        );
+          performanceTest(
+            "with proper regular code",
+            () => expect(NaturalLanguage.fromAnyCode(value.code, array), value),
+          );
 
-        performanceTest(
-          "with proper regular code",
-          () => expect(NaturalLanguage.fromAnyCode(value.code), value),
-        );
+          performanceTest(
+            "with proper short code lowercase",
+            () => expect(
+              NaturalLanguage.fromAnyCode(value.codeShort.toLowerCase(), array),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with proper short code lowercase",
-          () => expect(
-            NaturalLanguage.fromAnyCode(value.codeShort.toLowerCase()),
-            value,
-          ),
-        );
+          performanceTest(
+            "with proper regular code lowercase",
+            () => expect(
+              NaturalLanguage.fromAnyCode(value.code.toLowerCase(), array),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with proper regular code lowercase",
-          () => expect(
-            NaturalLanguage.fromAnyCode(value.code.toLowerCase()),
-            value,
-          ),
-        );
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              () => NaturalLanguage.fromAnyCode(value.toString(), array),
+              throwsStateError,
+            ),
+          );
 
-        performanceTest(
-          "with wrong code",
-          () => expect(
-            () => NaturalLanguage.fromAnyCode(value.toString()),
-            throwsStateError,
-          ),
-        );
+          assertTest(
+            "with empty languages",
+            () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
+          );
+        });
 
-        assertTest(
-          "with empty languages",
-          () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
-        );
+        group("without custom array", () {
+          randomElementTest(
+            "with random element from list and lowercase code",
+            NaturalLanguage.list,
+            (random) => expect(
+              NaturalLanguage.fromAnyCode(random.code.toLowerCase()),
+              random,
+            ),
+          );
+
+          performanceTest(
+            "with proper short code",
+            () => expect(NaturalLanguage.fromAnyCode(value.codeShort), value),
+          );
+
+          performanceTest(
+            "with proper regular code",
+            () => expect(NaturalLanguage.fromAnyCode(value.code), value),
+          );
+
+          performanceTest(
+            "with proper short code lowercase",
+            () => expect(
+              NaturalLanguage.fromAnyCode(value.codeShort.toLowerCase()),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with proper regular code lowercase",
+            () => expect(
+              NaturalLanguage.fromAnyCode(value.code.toLowerCase()),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              () => NaturalLanguage.fromAnyCode(value.toString()),
+              throwsStateError,
+            ),
+          );
+        });
       });
 
       group("toJson", () {
         for (final element in NaturalLanguage.list) {
-          performanceTest(
+          test(
             "compared to $NaturalLanguage: ${element.name}",
             () {
               final json = element.toJson();
@@ -235,7 +343,6 @@ void main() => group("$NaturalLanguage", () {
               expect(element.code, decoded?.code);
               expect(element.scripts, decoded?.scripts);
             },
-            durationLimit: 3,
           );
         }
       });
@@ -297,59 +404,271 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("maybeFromAnyCode", () {
-        randomElementTest(
-          "with random element from list and lowercase code",
-          NaturalLanguage.list,
-          (random) => expect(
-            NaturalLanguage.maybeFromAnyCode(random.code.toLowerCase()),
-            random,
-          ),
-        );
+        group("with custom array", () {
+          performanceTest(
+            "with proper short code",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(value.codeShort, array),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with proper short code",
-          () =>
-              expect(NaturalLanguage.maybeFromAnyCode(value.codeShort), value),
-        );
+          performanceTest(
+            "with proper regular code",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(value.code, array),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with proper regular code",
-          () => expect(NaturalLanguage.maybeFromAnyCode(value.code), value),
-        );
+          performanceTest(
+            "with proper short code lowercase",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(
+                value.codeShort.toLowerCase(),
+                array,
+              ),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with proper short code lowercase",
-          () => expect(
-            NaturalLanguage.maybeFromAnyCode(value.codeShort.toLowerCase()),
-            value,
-          ),
-        );
+          performanceTest(
+            "with proper regular code lowercase",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(value.code.toLowerCase(), array),
+              value,
+            ),
+          );
 
-        performanceTest(
-          "with proper regular code lowercase",
-          () => expect(
-            NaturalLanguage.maybeFromAnyCode(value.code.toLowerCase()),
-            value,
-          ),
-        );
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(value.toString(), array),
+              isNull,
+            ),
+          );
 
-        performanceTest(
-          "with wrong code",
-          () => expect(
-            NaturalLanguage.maybeFromAnyCode(value.toString()),
-            isNull,
-          ),
-        );
+          performanceTest(
+            "with null code",
+            () => expect(NaturalLanguage.maybeFromAnyCode(null, array), isNull),
+          );
 
-        performanceTest(
-          "with null code",
-          () => expect(NaturalLanguage.maybeFromAnyCode(null), isNull),
-        );
+          assertTest(
+            "with empty languages",
+            () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
+          );
+        });
 
-        assertTest(
-          "with empty languages",
-          () => NaturalLanguage.fromAnyCode(value.codeShort, const []),
-        );
+        group("without custom array", () {
+          randomElementTest(
+            "with random element from list and lowercase code",
+            NaturalLanguage.list,
+            (random) => expect(
+              NaturalLanguage.maybeFromAnyCode(random.code.toLowerCase()),
+              random,
+            ),
+          );
+
+          performanceTest(
+            "with proper short code",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(value.codeShort),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with proper regular code",
+            () => expect(NaturalLanguage.maybeFromAnyCode(value.code), value),
+          );
+
+          performanceTest(
+            "with proper short code lowercase",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(value.codeShort.toLowerCase()),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with proper regular code lowercase",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(value.code.toLowerCase()),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              NaturalLanguage.maybeFromAnyCode(value.toString()),
+              isNull,
+            ),
+          );
+
+          performanceTest(
+            "with null code",
+            () => expect(NaturalLanguage.maybeFromAnyCode(null), isNull),
+          );
+        });
+      });
+
+      group("maybeFromCodeShort", () {
+        group("with custom array", () {
+          performanceTest(
+            "with proper short code",
+            () => expect(
+              NaturalLanguage.maybeFromCodeShort(value.codeShort, array),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with proper short code lowercase",
+            () => expect(
+              NaturalLanguage.maybeFromCodeShort(
+                value.codeShort.toLowerCase(),
+                array,
+              ),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              NaturalLanguage.maybeFromCodeShort(value.toString(), array),
+              isNull,
+            ),
+          );
+
+          performanceTest(
+            "with null code",
+            () =>
+                expect(NaturalLanguage.maybeFromCodeShort(null, array), isNull),
+          );
+
+          assertTest(
+            "with empty languages",
+            () => NaturalLanguage.maybeFromCodeShort(value.codeShort, const []),
+          );
+        });
+
+        group("without custom array", () {
+          randomElementTest(
+            "with random element from list and lowercase code",
+            NaturalLanguage.list,
+            (random) => expect(
+              NaturalLanguage.maybeFromCodeShort(
+                random.codeShort.toLowerCase(),
+              ),
+              random,
+            ),
+          );
+
+          performanceTest(
+            "with proper short code",
+            () => expect(
+              NaturalLanguage.maybeFromCodeShort(value.codeShort),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with proper short code lowercase",
+            () => expect(
+              NaturalLanguage.maybeFromCodeShort(value.codeShort.toLowerCase()),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              NaturalLanguage.maybeFromCodeShort(value.toString()),
+              isNull,
+            ),
+          );
+
+          performanceTest(
+            "with null code",
+            () => expect(NaturalLanguage.maybeFromCodeShort(null), isNull),
+          );
+        });
+      });
+
+      group("maybeFromCode", () {
+        group("with custom array", () {
+          performanceTest(
+            "with proper regular code",
+            () => expect(
+              NaturalLanguage.maybeFromCode(value.code, array),
+              value,
+            ),
+          );
+          performanceTest(
+            "with proper regular code lowercase",
+            () => expect(
+              NaturalLanguage.maybeFromCode(value.code.toLowerCase(), array),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              NaturalLanguage.maybeFromCode(value.toString(), array),
+              isNull,
+            ),
+          );
+
+          performanceTest(
+            "with null code",
+            () => expect(NaturalLanguage.maybeFromCode(null, array), isNull),
+          );
+
+          assertTest(
+            "with empty languages",
+            () => NaturalLanguage.maybeFromCode(value.code, const []),
+          );
+        });
+
+        group("without custom array", () {
+          randomElementTest(
+            "with random element from list and lowercase code",
+            NaturalLanguage.list,
+            (random) => expect(
+              NaturalLanguage.maybeFromCode(random.code.toLowerCase()),
+              random,
+            ),
+          );
+
+          performanceTest(
+            "with proper regular code",
+            () => expect(NaturalLanguage.maybeFromCode(value.code), value),
+          );
+
+          performanceTest(
+            "with proper regular code lowercase",
+            () => expect(
+              NaturalLanguage.maybeFromCode(value.code.toLowerCase()),
+              value,
+            ),
+          );
+
+          performanceTest(
+            "with wrong code",
+            () => expect(
+              NaturalLanguage.maybeFromCode(value.toString()),
+              isNull,
+            ),
+          );
+
+          performanceTest(
+            "with null code",
+            () => expect(NaturalLanguage.maybeFromCode(null), isNull),
+          );
+        });
       });
 
       group("translations", () {

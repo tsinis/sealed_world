@@ -141,7 +141,8 @@
       "widgets": "middleware",
       "windows": "components",
       "linux": "sass",
-      "converters": "hook"
+      "converters": "hook",
+      "collections": "batch"
     }
   },
   "extensions": {
@@ -193,7 +194,13 @@
     "version": "0.2.0",
     "cwd": "${fileWorkspaceFolder}/example/lib/main.dart",
     "configurations": [
-      { "name": "Debug Example", "request": "launch", "type": "dart" }
+      { "name": "Debug Example", "request": "launch", "type": "dart" },
+      {
+        "name": "Debug And Observe Example",
+        "request": "launch",
+        "type": "dart",
+        "args": ["--observe"]
+      }
     ]
   },
   "tasks": {

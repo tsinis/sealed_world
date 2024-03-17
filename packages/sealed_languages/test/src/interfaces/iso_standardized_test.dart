@@ -11,7 +11,7 @@ final class _IsoStandardizedTest implements IsoStandardized {
   @override
   List<String>? get namesNative => [name];
   @override
-  String? get codeOther => code;
+  String get codeOther => code;
 
   @override
   String toString({bool short = true}) => name;
