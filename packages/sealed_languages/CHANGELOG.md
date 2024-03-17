@@ -1,3 +1,10 @@
+## 1.3.1
+
+REFACTOR
+
+- Refactored asserts in `maybeMapIsoCode` method.
+- Fixed typos in CHANGELOG and README.
+
 ## 1.3.0
 
 NEW FEATURES
@@ -5,7 +12,7 @@ NEW FEATURES
 - `codeOther` is no longer nullable (in all `IsoStandardized` classes).
 - Added new compile time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeShort` etc.).
 - Factory constructors and methods now using those maps if no (optional) array is provided there.
-- Factory constructors and methods in `IsoStandardized` classes now allow non-String - any `Object`s, for example you can now use `StringBuffer` or `Enum` instances directly:
+- Factory constructors and methods in `IsoStandardized` classes now allow non-String inputs - any `Object`, for example you can now use `StringBuffer` or `Enum` instances directly:
 
 ```dart
  enum IsoEnum {de, fr, ar} // On .fromCode(IsoEnum.de) call it will use "DE" input.
@@ -113,7 +120,7 @@ BREAKING CHANGES
 
 - refactor(data)!: languages list is now sorted alphabetically by the (3 letter) code
 
-OTHER
+REFACTOR
 
 - refactor(model): factory constructors and static methods for data classes creation now implicitly trimming and comparing uppercase string inputs
 - refactor(lints): fixing old ignores and new linter rules
