@@ -1,3 +1,31 @@
+## 1.3.0
+
+NEW FEATURES
+
+- `codeOther` is no longer nullable (in all `IsoStandardized` classes).
+- Added new compile time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeShort` etc.).
+- Factory constructors and methods now using those maps if no (optional) array is provided there.
+- Factory constructors and methods in `IsoStandardized` classes now allow non-String - any `Object`s, for example you can now use `StringBuffer` or `Enum` instances directly:
+
+```dart
+ enum IsoEnum {de, fr, ar} // On .fromCode(IsoEnum.de) call it will use "DE" input.
+```
+
+or you can basically use any custom class with `toString()` override:
+
+```dart
+class CustomIsoCodeClass {
+ const CustomIsoCodeClass({String code = '123', this.foo}) : _code = code;
+ final String _code;
+ final Foo? foo;
+
+ @override
+ String toString() => _code; // Has to override toString() with ISO value.
+}
+
+// On .fromAnyCode(CustomIsoCodeClass(code: ' 321 ')) call it will use "321" input.
+```
+
 ## 1.2.0
 
 NEW FEATURES

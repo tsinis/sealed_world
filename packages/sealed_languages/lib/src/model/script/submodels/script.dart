@@ -47,9 +47,10 @@ class Script extends WritingSystem
   /// The [code] parameter is required and should be am object representing
   /// the ISO 15924 four-character code for the script.
   /// {@macro any_code_object}
-  /// The optional [scripts]
-  /// parameter can be used to specify a list of [Script] objects to search
-  /// through. This method returns the [Script] instance that corresponds to the
+  /// The optional [scripts] parameter can be used to specify a list of [Script]
+  /// objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [Script] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
@@ -78,7 +79,9 @@ class Script extends WritingSystem
   /// representing the three-digit ISO 15924 numeric code for the script.
   /// {@macro any_code_object}
   /// The optional [scripts] parameter can be used to specify a list of [Script]
-  /// objects to search through. This method returns the [Script] instance that
+  /// objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [Script] instance that
   /// corresponds to the given numeric code, or throws a [StateError] if no such
   /// instance exists.
   factory Script.fromCodeNumeric(
@@ -109,9 +112,10 @@ class Script extends WritingSystem
   /// ISO 15924 code for the script.
   /// {@macro any_code_object}
   /// The optional [scripts] parameter can be
-  /// used to specify a list of [Script] objects to search through. This method
-  /// returns the [Script] instance that corresponds to the given code, or
-  /// throws a [StateError] if no such instance exists.
+  /// used to specify a list of [Script] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [Script] instance that corresponds to the given
+  /// code, or throws a [StateError] if no such instance exists.
   ///
   /// Example:
   /// ```dart
@@ -201,13 +205,14 @@ class Script extends WritingSystem
   /// ISO 15924 code for the script.
   /// {@macro any_code_object}
   /// The optional [scripts] parameter can be used to specify a list of
-  /// [Script] objects to search through. This method returns the [Script]
-  /// instance that corresponds to the given value, or `null` if no such
-  /// instance exists.
+  /// [Script] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [Script] instance that corresponds to the given
+  /// value, or `null` if no such instance exists.
   ///
   /// Example:
   /// ```dart
-  /// Script? script = Script.maybeFromAnyCode(ExampleScriptEnum.latn.name);
+  /// Script? script = Script.maybeFromAnyCode(ExampleScriptEnum.latn);
   /// print(script != null) // Prints: true.
   /// ```
   ///
@@ -234,9 +239,9 @@ class Script extends WritingSystem
   /// The [code] parameter is required and should be an object representing the
   /// ISO 15924 code for the script.
   /// {@macro any_code_object}
-  /// The optional [scripts]
-  /// parameter can be used to specify a list of [Script] objects to search
-  /// through.
+  /// The optional [scripts] parameter can be used to specify a list of [Script]
+  /// objects to search through.
+  /// {@macro optional_instances_array_parameter}
   ///
   /// Example:
   /// ```dart
@@ -264,6 +269,7 @@ class Script extends WritingSystem
   /// {@macro any_code_object}
   /// The optional [scripts] parameter can be used to specify a list of [Script]
   /// objects to search through.
+  /// {@macro optional_instances_array_parameter}
   ///
   /// Example:
   /// ```dart

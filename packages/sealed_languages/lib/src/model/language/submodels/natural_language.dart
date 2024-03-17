@@ -115,6 +115,17 @@ class NaturalLanguage extends Language
   /// {@macro natural_language_constructor}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
+  /// {@template optional_instances_array_parameter}
+  /// If this optional array is not provided (it's default to `null`), this will
+  /// search in 0(1) access time case-insensitive [UpperCaseIsoMap] hash-map.
+  /// Otherwise it will search in provided array with equivalent of `firstWhere`
+  /// method, which might not be that fast comparing to the hashmap one,
+  /// especially for large arrays.
+  /// If you only need to add additional custom ISO instances of yours -
+  /// consider using the `copyWith` method with your custom instances in default
+  /// maps of this class (i.e. `codeMap.copyWith()`, `map.copyWith()` etc.).
+  /// This will ensure O(1) performance for your custom instances too.
+  /// {@endtemplate}
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCode(
@@ -133,6 +144,7 @@ class NaturalLanguage extends Language
   /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   factory NaturalLanguage.fromCodeShort(
@@ -169,8 +181,9 @@ class NaturalLanguage extends Language
   /// The [code] parameter is required and should be an object representing the
   /// ISO 639 code for the language.
   /// {@macro any_code_object}
-  /// The optional [languages] parameter can be
-  /// used to specify a list of [NaturalLanguage] objects to search through.
+  /// The optional [languages] parameter can be used to specify a list of
+  /// [NaturalLanguage] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
   ///
@@ -207,6 +220,7 @@ class NaturalLanguage extends Language
   /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   static NaturalLanguage? maybeFromCode(
     Object? code, [
     Iterable<NaturalLanguage>? languages,
@@ -227,6 +241,7 @@ class NaturalLanguage extends Language
   /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   static NaturalLanguage? maybeFromCodeShort(
     Object? codeShort, [
     Iterable<NaturalLanguage>? languages,
@@ -339,15 +354,14 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// The [code] parameter is required and should be an object representing the
   /// ISO 639 code for the language.
   /// {@macro any_code_object}
-  /// The optional [languages] parameter
-  /// specifies the list of `NaturalLanguage` objects to search (defaults to
-  /// `NaturalLanguage.list`).
-  ///
+  /// The optional [languages] parameter specifies the list of `NaturalLanguage`
+  /// objects to search.
+  /// {@macro optional_instances_array_parameter}
   /// Example usage:
   ///
   /// ```dart
-  /// NaturalLanguage? lng = NaturalLanguage.maybeFromAnyCode(LangEnum.en.name);
-  /// print(lng != null); // Prints: true
+  /// NaturalLanguage? language = NaturalLanguage.maybeFromAnyCode(LangEnum.en);
+  /// print(language != null); // Prints: true
   /// ```
   static NaturalLanguage? maybeFromAnyCode(
     Object? code, [
