@@ -159,46 +159,63 @@ class WorldCountry extends Country
     this.regionalBlocs,
   });
 
-  /// Returns an [WorldCountry] object from the given `code`
+  /// Returns an [WorldCountry] object from the given [code]
   /// ISO 3166-1 Alpha-3 code.
   ///
-  /// The `code` parameter is required and must be a valid country code. Returns
-  /// a [WorldCountry] object that represents the country with the given `code`.
-  /// Throws a `StateError` if no such country exists.
+  /// The [code] parameter is required and must be a valid country code object
+  /// representing a three-letter ISO 3166-1 Alpha-3 code.
+  /// {@macro any_code_object}
+  /// Returns a [WorldCountry] object that represents the country with the given
+  /// code or throws a `StateError` if no such country exists.
+  ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   factory WorldCountry.fromCode(
-    String code, [
-    Iterable<WorldCountry> countries = list,
+    Object code, [
+    Iterable<WorldCountry>? countries,
   ]) =>
-      countries.firstIsoWhereCode(code.toUpperCase());
+      countries == null
+          ? codeMap.findByCodeOrThrow(code)
+          : countries.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns an [WorldCountry] object from the given `codeShort`
   /// ISO 3166-1 Alpha-2 code.
   ///
-  /// The `codeShort` parameter is required and must be a valid country code
-  /// short. Returns a [WorldCountry] object that represents the country with
-  /// the given `codeShort`. Throws a `StateError` if no such country exists.
+  /// The [codeShort] parameter is required and must be a valid country code
+  /// object representing a two-letter ISO 3166-1 Alpha-2 code.
+  /// {@macro any_code_object}
+  /// Returns a [WorldCountry] object that represents the country with the given
+  /// code or throws a `StateError` if no such country exists.
+  ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   factory WorldCountry.fromCodeShort(
-    String codeShort, [
-    Iterable<WorldCountry> countries = list,
+    Object codeShort, [
+    Iterable<WorldCountry>? countries,
   ]) =>
-      countries.firstIsoWhereCodeOther(codeShort.toUpperCase());
+      countries == null
+          ? codeShortMap.findByCodeOrThrow(codeShort)
+          : countries.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
 
   /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code.
   ///
-  /// The `code` parameter is required and must be a valid country code. Returns
-  /// a [WorldCountry] object that represents the country with the given
-  /// `codeNumeric`. Throws a `StateError` if no such country exists.
+  /// The [codeNumeric] parameter is required and must be a valid country code
+  /// object representing a three-digit ISO 3166-1 numeric code.
+  /// {@macro any_code_object}
+  /// Returns a [WorldCountry] object that represents the country with the given
+  /// code or throws a `StateError` if no such country exists.
+  ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   factory WorldCountry.fromCodeNumeric(
-    String codeNumeric, [
-    Iterable<WorldCountry> countries = list,
+    Object codeNumeric, [
+    Iterable<WorldCountry>? countries,
   ]) {
-    final trimmedCode = codeNumeric.trim();
+    if (countries == null) return codeNumericMap.findByCodeOrThrow(codeNumeric);
+    final trimmedCode = codeNumeric.toUpperCaseIsoCode();
 
     return countries
         .firstIsoWhere((country) => country.codeNumeric == trimmedCode);
@@ -207,11 +224,15 @@ class WorldCountry extends Country
   /// Returns an instance of the [WorldCountry] class from any valid
   /// ISO 3166 code.
   ///
-  /// The [code] parameter is required and should be a string representing the
-  /// ISO 3166 code for the country. The optional [countries] parameter can be
-  /// used to specify a list of [WorldCountry] objects to search through.
-  /// This method returns the [WorldCountry] instance that corresponds to the
-  /// given code, or throws a [StateError] if no such instance exists.
+  /// The [code] parameter is required and must be a valid country code object
+  /// representing a ISO 3166-1 code.
+  /// {@macro any_code_object}
+  /// Returns a [WorldCountry] object that represents the country with the given
+  /// code or throws a `StateError` if no such country exists.
+  ///
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   ///
   /// Example:
   /// ```dart
@@ -226,14 +247,17 @@ class WorldCountry extends Country
   /// [WorldCountry] instance. The resulting [WorldCountry] instance is assigned
   /// to the `code` variable.
   factory WorldCountry.fromAnyCode(
-    String code, [
-    Iterable<WorldCountry> countries = list,
+    Object code, [
+    Iterable<WorldCountry>? countries,
   ]) =>
-      code.maybeMapIsoCode(
-        orElse: (regular) => WorldCountry.fromCode(regular, countries),
-        short: (short) => WorldCountry.fromCodeShort(short, countries),
-        numeric: (numeric) => WorldCountry.fromCodeNumeric(numeric, countries),
-      );
+      countries == null
+          ? map.findByCodeOrThrow(code)
+          : code.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) => WorldCountry.fromCode(regular, countries),
+                short: (short) => WorldCountry.fromCodeShort(short, countries),
+                numeric: (numeric) =>
+                    WorldCountry.fromCodeNumeric(numeric, countries),
+              );
 
   /// The native names of the country.
   @override
@@ -334,6 +358,7 @@ class WorldCountry extends Country
   /// The regional blocs of the country.
   final List<RegionalBloc>? regionalBlocs;
 
+  /// The two-letter ISO 3166-1 Alpha-2 code of the country.
   @override
   String get codeOther => codeShort;
 
@@ -370,57 +395,73 @@ class WorldCountry extends Country
     return null;
   }
 
-  /// Returns an [WorldCountry] object from the given `code`
-  /// ISO 3166-1 Alpha-3 code, or `null` if no such instance exists.
+  /// Returns an nullable [WorldCountry] object from the given ISO 3166-1 code.
   ///
-  /// The `code` parameter is required and must be a valid country code. Returns
-  /// a [WorldCountry] object that represents the country with the given `code`.
-  /// Throws a `StateError` if no such country exists.
+  /// The [code] parameter is required and must be a valid country code object
+  /// representing a three-letter ISO 3166-1 Alpha-3 code.
+  /// {@macro any_code_object}
+  /// Returns a [WorldCountry] object that represents the country with the given
+  /// code or `null` if no such country exists.
+  ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   static WorldCountry? maybeFromCode(
     Object? code, [
-    Iterable<WorldCountry> countries = list,
+    Iterable<WorldCountry>? countries,
   ]) {
-    final string = code?.toString().trim() ?? "";
+    if (countries == null) return codeMap.maybeFindByCode(code);
+    final string = code
+        ?.toUpperCaseIsoCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return string.length == IsoStandardized.codeLength
-        ? countries.firstIsoWhereCodeOrNull(string.toUpperCase())
-        : null;
+    return countries.firstIsoWhereCodeOrNull(string);
   }
 
-  /// Returns an [WorldCountry] object from the given `codeShort`
+  /// Returns an [WorldCountry] object from the given [codeShort]
   /// ISO 3166-1 Alpha-2 code, or `null` if no such instance exists.
   ///
-  /// The `codeShort` parameter is required and must be a valid country code
-  /// short. Returns a [WorldCountry] object that represents the country with
-  /// the given `codeShort`, or `null` if no such instance exists.
+  /// The [codeShort] parameter is required and must be a valid country code
+  /// object representing a two-letter ISO 3166-1 Alpha-2 code.
+  /// {@macro any_code_object}
+  /// Returns a [WorldCountry] object that represents the country with the given
+  /// code or `null` if no such country exists.
+  ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   static WorldCountry? maybeFromCodeShort(
     Object? codeShort, [
-    Iterable<WorldCountry> countries = list,
+    Iterable<WorldCountry>? countries,
   ]) {
-    final string = codeShort?.toString().trim() ?? "";
+    if (countries == null) return codeShortMap.maybeFindByCode(codeShort);
+    final string = codeShort
+        ?.toUpperCaseIsoCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeShortLength);
 
-    return string.length == IsoStandardized.codeShortLength
-        ? countries.firstIsoWhereCodeOtherOrNull(string.toUpperCase())
-        : null;
+    return countries.firstIsoWhereCodeOtherOrNull(string);
   }
 
   /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code,
   /// or `null` if no such instance exists.
   ///
-  /// The `code` parameter is required and must be a valid country code. Returns
-  /// a [WorldCountry] object that represents the country with the given
-  /// `codeNumeric`, or `null` if no such instance exists.
+  /// The [codeNumeric] parameter is required and must be a valid country code
+  /// object representing a three-digit ISO 3166-1 numeric code.
+  /// {@macro any_code_object}
+  /// Returns a [WorldCountry] object that represents the country with the given
+  /// code or `null` if no such country exists.
+  ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   static WorldCountry? maybeFromCodeNumeric(
-    String codeNumeric, [
-    Iterable<WorldCountry> countries = list,
+    Object codeNumeric, [
+    Iterable<WorldCountry>? countries,
   ]) {
-    final trimmedCode = codeNumeric.trim();
+    if (countries == null) return codeNumericMap.maybeFindByCode(codeNumeric);
+    final trimmedCode = codeNumeric.toUpperCaseIsoCode().maybeToValidIsoCode(
+          exactLength: IsoStandardized.codeLength,
+        );
 
     return countries
         .firstIsoWhereOrNull((country) => country.codeNumeric == trimmedCode);
@@ -429,11 +470,15 @@ class WorldCountry extends Country
   /// Returns a [WorldCountry] instance that corresponds to the given code, or
   /// `null` if no such instance exists.
   ///
-  /// The [code] parameter is required and represents the value to match
-  /// against. The optional [countries] parameter can be used to specify a list
-  /// of [WorldCountry] objects to search through. This method returns the
-  /// [WorldCountry] instance that corresponds to the given value, or `null` if
-  /// no such instance exists.
+  /// The [code] parameter is required and must be a valid country code object
+  /// representing a ISO 3166-1 country code.
+  /// {@macro any_code_object}
+  /// Returns a [WorldCountry] object that represents the country with the given
+  /// code or `null` if no such country exists.
+  ///
+  /// The optional [countries] parameter can be used to specify a list of
+  /// [WorldCountry] objects to search through.
+  /// {@macro optional_instances_array_parameter}
   ///
   /// Example:
   /// ```dart
@@ -452,14 +497,18 @@ class WorldCountry extends Country
   /// instance is assigned to the `country` variable.
   static WorldCountry? maybeFromAnyCode(
     Object? code, [
-    Iterable<WorldCountry> countries = list,
+    Iterable<WorldCountry>? countries,
   ]) =>
-      code?.toString().maybeMapIsoCode(
-            orElse: (regular) => WorldCountry.maybeFromCode(regular, countries),
-            short: (short) => WorldCountry.maybeFromCodeShort(short, countries),
-            numeric: (numeric) =>
-                WorldCountry.maybeFromCodeNumeric(numeric, countries),
-          );
+      countries == null
+          ? map.maybeFindByCode(code)
+          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+                orElse: (regular) =>
+                    WorldCountry.maybeFromCode(regular, countries),
+                short: (short) =>
+                    WorldCountry.maybeFromCodeShort(short, countries),
+                numeric: (numeric) =>
+                    WorldCountry.maybeFromCodeNumeric(numeric, countries),
+              );
 
   /// The general standard ISO code for countries, defined as ISO 3166-1.
   static const standardGeneralName = "3166-1";
