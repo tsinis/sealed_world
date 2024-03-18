@@ -1,5 +1,6 @@
 import "package:sealed_currencies/sealed_currencies.dart";
 
+import "../../collections/world_country_collections.dart";
 import "../../data/official_world_countries.data.dart";
 import "../../data/other_world_countries.data.dart";
 import "../../helpers/world_country/world_country_json.dart";
