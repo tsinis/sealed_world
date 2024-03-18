@@ -25,6 +25,16 @@ void main() => group("$RegionalBloc", () {
       });
 
       group("fromAcronym", () {
+        for (final element in RegionalBloc.list) {
+          test(
+            "${element.acronym} from map",
+            () => expect(
+              RegionalBloc.fromAcronym(element.acronym, null),
+              element,
+            ),
+          );
+        }
+
         test(
           "with proper acronym",
           () => expect(RegionalBloc.fromAcronym(value.acronym), value),

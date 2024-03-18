@@ -1,5 +1,6 @@
 import "package:sealed_currencies/sealed_currencies.dart";
 
+import "../../collections/regional_bloc_collections.dart";
 import "../../data/regional_bloc/regional_bloc.data.dart";
 
 part "regional_bloc.dart";
