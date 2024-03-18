@@ -27,9 +27,26 @@ class RegionalBloc extends WorldBloc {
   }) : super(acronym: acronym);
 
   /// Creates a new `RegionalBloc` object from its acronym.
-  factory RegionalBloc.fromAcronym(String acronym) => list.firstWhere(
-        (bloc) => bloc.acronym == acronym.trim().toUpperCase(),
-      );
+  /// Returns an [RegionalBloc] object from the given `acronym`.
+  ///
+  /// The [acronym] parameter is required and must be a valid bloc acronym.
+  /// {@macro any_code_object}
+  /// Returns a [RegionalBloc] object that represents the bloc with the given
+  /// code or throws a `StateError` if no such bloc exists.
+  ///
+  /// The optional [blocs] parameter can be used to specify a list of
+  /// [RegionalBloc] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  factory RegionalBloc.fromAcronym(
+    Object acronym, [
+    Iterable<RegionalBloc>? blocs = list,
+  ]) {
+    final string = acronym.toUpperCaseIsoCode();
+
+    return blocs == null
+        ? regionalBlocAcronymMap[string]!
+        : list.firstWhere((bloc) => bloc.acronym == string);
+  }
 
   /// Creates a new `RegionalBloc` object from its name.
   factory RegionalBloc.fromName(String name) => list.firstWhere(
@@ -67,7 +84,8 @@ class RegionalBloc extends WorldBloc {
     T? Function(RegionalBloc regionalBloc)? where,
     Iterable<RegionalBloc> regionalBlocs = list,
   }) {
-    assert(regionalBlocs.isNotEmpty, "`regionalBlocs` should not be empty!");
+    regionalBlocs.assertNotEmpty();
+
     for (final regionalBloc in regionalBlocs) {
       final expectedValue = where?.call(regionalBloc) ?? regionalBloc.acronym;
       if (expectedValue == value) return regionalBloc;
@@ -76,21 +94,10 @@ class RegionalBloc extends WorldBloc {
     return null;
   }
 
+  /// A map of all the regional blocs with their corresponding acronyms.
+  static const map = regionalBlocAcronymMap;
+
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.
-  static const list = [
-    BlocAL(),
-    BlocASEAN(),
-    BlocAU(),
-    BlocCAIS(),
-    BlocCARICOM(),
-    BlocCEFTA(),
-    BlocEEU(),
-    BlocEFTA(),
-    BlocEU(),
-    BlocNAFTA(),
-    BlocPA(),
-    BlocSAARC(),
-    BlocUSAN(),
-  ];
+  static const list = regionalBlocList;
 }
