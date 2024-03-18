@@ -41,7 +41,7 @@ Compile time constant list of all currencies accessible via `FiatCurrency.list` 
 - `fromAnyCode` - returns a currency instance if the value matches any ISO 4217 code.
 - `fromName` - returns a currency instance if the value matches the provided English name.
 
-and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc. Also a compile time const, tree-shakable, code `map`s (for a 0(1) access time code mapping), `list` and much more.
+and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc. Also a compile time const, tree-shakable, case case insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
 
 > Translations: Use `maybeTranslation()` or `translation()` methods to get translations for specific locale.
 
