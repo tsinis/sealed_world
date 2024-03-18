@@ -55,12 +55,14 @@ class CollectionsGenerator {
           .write('"${item.codeOther.toUpperCase()}": ${item.runtimeType}(),\n');
     }
     buffer.write("};\n");
-    if (items is List<WorldCountry>) {
+
+    if (items.first is WorldCountry) {
       buffer.write("""
     /// Map of [$type] numeric codes.
     const ${camelCaseType}CodeNumericMap = {
     """);
-      for (final item in items) {
+      for (final item in items.cast<WorldCountry>()) {
+        if (item.codeNumeric.trim().isEmpty) continue;
         buffer.write('"${item.codeNumeric}": ${item.runtimeType}(),\n');
       }
       buffer.write("};\n");
