@@ -17,7 +17,6 @@ class _FiatCurrencyTest extends FiatCurrency {
 }
 
 void main() => group("$FiatCurrency", () {
-      const durationLimit = 30;
       final value = FiatCurrency.list.last;
       final array = {value, FiatCurrency.list.first};
 
@@ -129,19 +128,16 @@ void main() => group("$FiatCurrency", () {
         performanceTest(
           "with proper name",
           () => expect(FiatCurrency.fromName(value.name), value),
-          durationLimit: durationLimit,
         );
 
         performanceTest(
           "with proper name lowercase",
           () => expect(FiatCurrency.fromName(value.name.toLowerCase()), value),
-          durationLimit: durationLimit,
         );
 
         performanceTest(
           "with proper name uppercase",
           () => expect(FiatCurrency.fromName(value.name.toUpperCase()), value),
-          durationLimit: durationLimit,
         );
 
         performanceTest(
@@ -150,7 +146,6 @@ void main() => group("$FiatCurrency", () {
             () => FiatCurrency.fromName(value.toString()),
             throwsStateError,
           ),
-          durationLimit: durationLimit,
         );
 
         assertTest(
@@ -164,7 +159,6 @@ void main() => group("$FiatCurrency", () {
           performanceTest(
             "with proper code",
             () => expect(FiatCurrency.fromCode(value.code, array), value),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -173,7 +167,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.fromCode(value.code.toLowerCase(), array),
               value,
             ),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -182,7 +175,6 @@ void main() => group("$FiatCurrency", () {
               () => FiatCurrency.fromCode(value.toString(), array),
               throwsStateError,
             ),
-            durationLimit: durationLimit,
           );
 
           assertTest(
@@ -195,14 +187,12 @@ void main() => group("$FiatCurrency", () {
           performanceTest(
             "with proper code",
             () => expect(FiatCurrency.fromCode(value.code), value),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
             "with proper code lowercase",
             () =>
                 expect(FiatCurrency.fromCode(value.code.toLowerCase()), value),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -211,7 +201,6 @@ void main() => group("$FiatCurrency", () {
               () => FiatCurrency.fromCode(value.toString()),
               throwsStateError,
             ),
-            durationLimit: durationLimit,
           );
         });
       });
@@ -224,7 +213,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.fromCodeNumeric(value.codeNumeric, array),
               value,
             ),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -233,7 +221,6 @@ void main() => group("$FiatCurrency", () {
               () => FiatCurrency.fromCodeNumeric(value.toString(), array),
               throwsStateError,
             ),
-            durationLimit: durationLimit,
           );
 
           assertTest(
@@ -267,13 +254,11 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.fromAnyCode(value.codeNumeric, array),
               value,
             ),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
             "with proper alpha code",
             () => expect(FiatCurrency.fromAnyCode(value.code, array), value),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -282,7 +267,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.fromAnyCode(value.code.toLowerCase(), array),
               value,
             ),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -291,7 +275,6 @@ void main() => group("$FiatCurrency", () {
               () => FiatCurrency.fromAnyCode(value.toString(), array),
               throwsStateError,
             ),
-            durationLimit: durationLimit,
           );
 
           assertTest(
@@ -372,7 +355,6 @@ void main() => group("$FiatCurrency", () {
             FiatCurrency.maybeFromValue(value.code),
             value,
           ),
-          durationLimit: durationLimit,
         );
 
         performanceTest(
@@ -384,7 +366,6 @@ void main() => group("$FiatCurrency", () {
             ),
             value,
           ),
-          durationLimit: durationLimit,
         );
 
         performanceTest(
@@ -393,7 +374,6 @@ void main() => group("$FiatCurrency", () {
             FiatCurrency.maybeFromValue(value),
             isNull,
           ),
-          durationLimit: durationLimit,
         );
 
         performanceTest(
@@ -405,7 +385,6 @@ void main() => group("$FiatCurrency", () {
             ),
             isNull,
           ),
-          durationLimit: durationLimit,
         );
 
         assertTest(
@@ -419,7 +398,6 @@ void main() => group("$FiatCurrency", () {
             FiatCurrency.maybeFromValue(value.code, currencies: array),
             value,
           ),
-          durationLimit: durationLimit,
         );
       });
 
@@ -431,7 +409,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.maybeFromCodeNumeric(value.codeNumeric, array),
               value,
             ),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -440,7 +417,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.maybeFromCodeNumeric(value.toString(), array),
               isNull,
             ),
-            durationLimit: durationLimit,
           );
 
           assertTest(
@@ -452,7 +428,6 @@ void main() => group("$FiatCurrency", () {
             "with null code",
             () =>
                 expect(FiatCurrency.maybeFromCodeNumeric(null, array), isNull),
-            durationLimit: durationLimit,
           );
         });
 
@@ -485,7 +460,6 @@ void main() => group("$FiatCurrency", () {
           performanceTest(
             "with proper alpha code",
             () => expect(FiatCurrency.maybeFromCode(value.code, array), value),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -494,7 +468,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.maybeFromCode(value.code.toLowerCase(), array),
               value,
             ),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -503,7 +476,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.maybeFromCode(value.toString(), array),
               isNull,
             ),
-            durationLimit: durationLimit,
           );
 
           assertTest(
@@ -514,7 +486,6 @@ void main() => group("$FiatCurrency", () {
           performanceTest(
             "with null code",
             () => expect(FiatCurrency.maybeFromCode(null, array), isNull),
-            durationLimit: durationLimit,
           );
         });
 
@@ -555,14 +526,12 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.maybeFromAnyCode(value.codeNumeric, array),
               value,
             ),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
             "with proper alpha code",
             () =>
                 expect(FiatCurrency.maybeFromAnyCode(value.code, array), value),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -571,7 +540,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.maybeFromAnyCode(value.code.toLowerCase(), array),
               value,
             ),
-            durationLimit: durationLimit,
           );
 
           performanceTest(
@@ -580,7 +548,6 @@ void main() => group("$FiatCurrency", () {
               FiatCurrency.maybeFromAnyCode(value.toString(), array),
               isNull,
             ),
-            durationLimit: durationLimit,
           );
 
           assertTest(
@@ -591,7 +558,6 @@ void main() => group("$FiatCurrency", () {
           performanceTest(
             "with null code",
             () => expect(FiatCurrency.maybeFromAnyCode(null, array), isNull),
-            durationLimit: durationLimit,
           );
         });
 
