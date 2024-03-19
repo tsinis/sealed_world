@@ -1,3 +1,39 @@
+## 1.3.1
+
+NEW FEATURES
+
+- Use of UX/UI interpretation of [Hick's Law](https://en.wikipedia.org/wiki/Hick%27s_law) for conditionally showing search bar in the [SearchableIndexedListViewBuilder](https://pub.dev/documentation/world_countries/latest/world_countries/SearchableIndexedListViewBuilder-class.html) - If no `showSearchBar` value specified, it uses `PickersThemeData.showHeader` value as before but instead of falling back to default hardcoded `false` value it fallbacks to items count condition `if (items.length > 5)`.
+- `PickersThemeData.showHeader` is now nullable.
+- Fix thousands separator for [CHF](https://github.com/RubyMoney/money/pull/1072).
+- `codeOther` is no longer nullable (in all `IsoStandardized` classes).
+- Added new compile time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeNumericMap`, etc.).
+- Factory constructors and methods now using those maps if no (optional) array is provided there.
+- Factory constructors and methods in `IsoStandardized` classes now allow non-String inputs - any `Object`, for example you can now use `StringBuffer` or `Enum` instances directly:
+
+```dart
+ enum IsoEnum {de, fr, ar} // On .fromCode(IsoEnum.de) call it will use "DE" input.
+```
+
+or you can basically use any custom class with `toString()` override:
+
+```dart
+class CustomIsoCodeClass {
+ const CustomIsoCodeClass({String code = '123', this.foo}) : _code = code;
+ final String _code;
+ final Foo? foo;
+
+ @override
+ String toString() => _code; // Has to override toString() with ISO value.
+}
+
+// On .fromAnyCode(CustomIsoCodeClass(code: ' 321 ')) call it will use "321" input.
+```
+
+REFACTOR
+
+- Refactored asserts in `maybeMapIsoCode` method.
+- Fixed typos in CHANGELOG and README.
+
 ## 1.2.0
 
 NEW FEATURES

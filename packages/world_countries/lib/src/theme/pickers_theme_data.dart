@@ -148,7 +148,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   final Widget? separator;
 
   @override
-  final bool showHeader;
+  final bool? showHeader;
 
   @override
   final Widget? header;

@@ -5,12 +5,16 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
   bool get isSearchable =>
       widget.searchIn != null && widget.textController != null;
 
+  bool get toShowHeader =>
+      widget.showHeader ??
+      context.pickersTheme?.showHeader ??
+      widget.items.length > 5; // Hick's law optimal number.
+
   @override
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
 
-    return isSearchable &&
-            (widget.showHeader ?? context.pickersTheme?.showHeader ?? true)
+    return isSearchable && toShowHeader
         ? SearchListListenableBuilder<T>(
             builder: (_, filteredItems) => IndexedListViewBuilder<T>(
               filteredItems,
