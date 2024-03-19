@@ -67,7 +67,10 @@ class SearchableIndexedListViewBuilder<T extends Object>
   ///   case-sensitive.
   /// * [startWithSearch] is a boolean indicating whether the search should only
   ///   start with the search string.
-  /// * [showSearchBar] is a boolean indicating whether to show the search bar.
+  /// * [showSearchBar] is a nullable boolean indicating whether to show the
+  /// search bar. If not specified uses `PickersThemeData.showHeader` value and
+  /// fallbacks to items count condition `if (items.length > 5)`, according to
+  /// the Hick's law optimal range number of options.
   const SearchableIndexedListViewBuilder(
     super.items, {
     super.addAutomaticKeepAlives,
@@ -104,7 +107,11 @@ class SearchableIndexedListViewBuilder<T extends Object>
     this.searchIn,
     this.startWithSearch = true,
     this.textController,
-    bool? showSearchBar = true,
+
+    /// If not specified uses `PickersThemeData.showHeader` and fallbacks to
+    /// items count condition `if (items.length > 5)`, according to the Hick's
+    /// law optimal range number of options.
+    bool? showSearchBar,
   }) : super(showHeader: showSearchBar);
 
   /// The text editing controller for the search bar.
