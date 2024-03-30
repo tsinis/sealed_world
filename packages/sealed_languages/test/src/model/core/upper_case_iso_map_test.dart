@@ -7,7 +7,7 @@ import "package:test/test.dart";
 
 void main() => group("$UpperCaseIsoMap", () {
       const eng = "ENG";
-      const nonEng = "DE";
+      const nonEng = "De";
       const defaultMap = {eng: LangEng()};
       const map = UpperCaseIsoMap(defaultMap, exactLength: null);
 
@@ -25,7 +25,7 @@ void main() => group("$UpperCaseIsoMap", () {
 
       test("should return null if there is no exactLength match", () {
         const mapOther = UpperCaseIsoMap(defaultMap, exactLength: 1);
-        expect(mapOther[eng], isNull);
+        expect(mapOther[eng.toLowerCase()], isNull);
       });
 
       test("should return null if there is no maxLength match", () {

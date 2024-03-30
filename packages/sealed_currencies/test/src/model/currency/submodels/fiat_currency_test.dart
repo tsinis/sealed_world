@@ -231,6 +231,11 @@ void main() => group("$FiatCurrency", () {
 
         group("without custom array", () {
           performanceTest(
+            "with int code",
+            () => expect(FiatCurrency.fromCodeNumeric(932), value),
+          );
+
+          performanceTest(
             "with proper code",
             () =>
                 expect(FiatCurrency.fromCodeNumeric(value.codeNumeric), value),
