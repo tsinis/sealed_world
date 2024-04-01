@@ -3,8 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"index.html": "2cc83142878f6596298389153d7704c5",
-"/": "2cc83142878f6596298389153d7704c5",
+const RESOURCES = {"index.html": "da351c1e79b8b0f5844c08224e3c1789",
+"/": "da351c1e79b8b0f5844c08224e3c1789",
 "canvaskit/canvaskit.js": "7737f5fc722b6a040ac15271ea8d92fb",
 "canvaskit/skwasm.js": "5d4f9263ec93efeb022bb14a3881d240",
 "canvaskit/skwasm.wasm": "93c5bdbbd0dbed926e4612b26563a310",
@@ -26,7 +26,7 @@ const RESOURCES = {"index.html": "2cc83142878f6596298389153d7704c5",
 "assets/assets/fonts/EmojiOne/EmojiOneColor.otf": "6013b0ee3f8f9c0a77f77b2a775d058c",
 "assets/assets/fonts/EmojiOne/emojione-android.ttf": "53206ce915546f7d0dc453707fca221c",
 "assets/AssetManifest.bin": "ffe5b217fd278a9217dc80117408a6b9",
-"assets/NOTICES": "1d5496da3c6575d0941d48fd5ab1ccbf",
+"assets/NOTICES": "bf12d70f353d665b1a783ebe78cabebe",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "assets/packages/world_countries/assets/fonts/NotoEmoji/NotoColorEmoji.ttf": "37dde61042462d84903185e64cbff0fc",
 "assets/packages/world_countries/assets/fonts/NotoEmoji/noto_flags-picosvgz.ttf": "49e390de79186fe9757cac051ce7cbbe",
