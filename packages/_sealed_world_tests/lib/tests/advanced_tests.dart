@@ -48,6 +48,38 @@ void performanceTest(
       retry: retry,
     );
 
+/// Returns a random item from the provided [iterable] to test against.
+@isTest
+void randomElementTest<T extends Object>(
+  String description,
+  Iterable<T> iterable,
+  // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
+  FutureOr Function(T) body, {
+  num durationLimit = _defaultDurationLimitInMs,
+  String? testOn,
+  Timeout? timeout,
+  Object? skip,
+  Object? tags,
+  Map<String, Object?>? onPlatform,
+  int retry = _defaultRetryCount,
+}) =>
+    performanceTest(
+      description,
+      () async => body(randomIterableItem(iterable)),
+      durationLimit: durationLimit,
+      testOn: testOn,
+      timeout: timeout,
+      skip: skip,
+      tags: tags,
+      onPlatform: onPlatform,
+      retry: retry,
+    );
+
+/// Returns a random item from the provided [iterable].
+@visibleForTesting
+T randomIterableItem<T extends Object>(Iterable<T> iterable) =>
+    iterable.elementAt(Random().nextInt(iterable.length));
+
 /// Runs a test that should throw an assertion error during instance creation.
 @isTest
 void assertTest(
@@ -82,35 +114,3 @@ void assertTest(
       onPlatform: onPlatform,
       retry: retry,
     );
-
-/// Returns a random item from the provided [iterable] to test against.
-@isTest
-void randomElementTest<T extends Object>(
-  String description,
-  Iterable<T> iterable,
-  // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
-  FutureOr Function(T) body, {
-  num durationLimit = _defaultDurationLimitInMs,
-  String? testOn,
-  Timeout? timeout,
-  Object? skip,
-  Object? tags,
-  Map<String, Object?>? onPlatform,
-  int retry = _defaultRetryCount,
-}) =>
-    performanceTest(
-      description,
-      () async => body(randomIterableItem(iterable)),
-      durationLimit: durationLimit,
-      testOn: testOn,
-      timeout: timeout,
-      skip: skip,
-      tags: tags,
-      onPlatform: onPlatform,
-      retry: retry,
-    );
-
-/// Returns a random item from the provided [iterable].
-@visibleForTesting
-T randomIterableItem<T extends Object>(Iterable<T> iterable) =>
-    iterable.elementAt(Random().nextInt(iterable.length));
