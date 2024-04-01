@@ -25,6 +25,7 @@ dev_dependencies:
   dart_code_metrics: # Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
+    version: 5.7.6+1
   dhttpd: ^4.1.0 # From Google
   flutter_gen_runner: ^5.4.0
   # flutter_launcher_icons: any # From Flutter Community
