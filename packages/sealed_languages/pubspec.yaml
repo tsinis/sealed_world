@@ -23,10 +23,11 @@ environment:
 dev_dependencies:
   _sealed_world_tests:
     path: ../_sealed_world_tests
-  build_runner: ^2.4.8 # From Google
+  build_runner: ^2.4.9 # From Google
   coverage: ^1.7.2 # From Google
   dart_code_metrics: # Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
+      version: ^5.7.6+1
   lints: ^3.0.0 # From Google
   test: ^1.25.2 # From Google
