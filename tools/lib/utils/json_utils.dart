@@ -12,10 +12,15 @@ import "dart_utils.dart";
 import "io_utils.dart";
 
 final class JsonUtils {
-  const JsonUtils(this.package, {this.dataDirPath = defaultDataDirPath});
+  const JsonUtils(
+    this.package,
+    this.subDirPath, {
+    this.dataDirPath = defaultDataDirPath,
+  });
 
   final String dataDirPath;
   final Package package;
+  final String subDirPath;
 
   static const defaultDataDirPath = "json/data";
   static const eng = LangEng();
@@ -25,6 +30,7 @@ final class JsonUtils {
 
   Directory get dataDirectory => Directory(dataDirPath);
 
+  // ignore: long-method, it's not a production code, but just a helper tool.
   Future<List<String>> parseByLanguage() async {
     final stopwatch = Stopwatch()..start();
     final paths = <String>[];
@@ -41,6 +47,7 @@ final class JsonUtils {
       if (translations.isEmpty)
         translations.add(TranslatedName(eng, name: english));
       for (final dir in directories) {
+        if (basename(dir.path).startsWith(".")) continue; // Skip hidden files.
         final dirName = basename(dir.path);
         final translation = _extractL10N(dirName);
         final locale = _extractLocaleCode(dirName);
