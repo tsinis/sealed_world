@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 131 translations for a Korean language:
+/// Provides 132 translations for a Korean language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -108,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -261,4 +262,5 @@ const korLanguageTranslations = [
   TranslatedName(LangTat(), name: "корея"),
   TranslatedName(LangWol(), name: "Koreye"),
   TranslatedName(LangXho(), name: "Isi-Korean"),
+  TranslatedName(LangTgl(), name: "Koreano"),
 ];

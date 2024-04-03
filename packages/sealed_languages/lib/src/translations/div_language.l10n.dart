@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 107 translations for a Divehi (Dhivehi/Maldivian) language:
+/// Provides 108 translations for a Divehi (Dhivehi/Maldivian) language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -89,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -215,4 +216,5 @@ const divLanguageTranslations = [
   TranslatedName(LangInd(), name: "Divehi"),
   TranslatedName(LangMsa(), name: "Divehi"),
   TranslatedName(LangNld(), name: "Divehi"),
+  TranslatedName(LangTgl(), name: "Wikang Dhivehi"),
 ];

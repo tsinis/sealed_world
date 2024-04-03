@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 134 translations for a French language:
+/// Provides 135 translations for a French language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -112,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -268,4 +269,5 @@ const fraLanguageTranslations = [
   TranslatedName(LangTat(), name: "француз"),
   TranslatedName(LangWol(), name: "Farañse"),
   TranslatedName(LangXho(), name: "IsiFrentshi"),
+  TranslatedName(LangTgl(), name: "Pranses"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 131 translations for a Dutch language:
+/// Provides 132 translations for a Dutch language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -108,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -261,4 +262,5 @@ const nldLanguageTranslations = [
   TranslatedName(LangTat(), name: "голланд"),
   TranslatedName(LangWol(), name: "Neyerlànde"),
   TranslatedName(LangXho(), name: "IsiDatshi"),
+  TranslatedName(LangTgl(), name: "Olandes"),
 ];

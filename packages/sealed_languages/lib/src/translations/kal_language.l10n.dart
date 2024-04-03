@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Kalaallisut (Greenlandic) language:
+/// Provides 106 translations for a Kalaallisut (Greenlandic) language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -89,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -215,4 +216,5 @@ const kalLanguageTranslations = [
   TranslatedName(LangCym(), name: "Kalaallisut"),
   TranslatedName(LangInd(), name: "Kalaallisut"),
   TranslatedName(LangMsa(), name: "Kalaallisut"),
+  TranslatedName(LangTgl(), name: "Greenlandico"),
 ];

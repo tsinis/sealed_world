@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 111 translations for a Yiddish language:
+/// Provides 112 translations for a Yiddish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -91,6 +91,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -227,4 +228,5 @@ const yidLanguageTranslations = [
   TranslatedName(LangWol(), name: "Yidis"),
   TranslatedName(LangInd(), name: "Yiddish"),
   TranslatedName(LangMsa(), name: "Yiddish"),
+  TranslatedName(LangTgl(), name: "Yidish"),
 ];

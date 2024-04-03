@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Chichewa (Chewa/Nyanja) language:
+/// Provides 107 translations for a Chichewa (Chewa/Nyanja) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -88,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -213,4 +214,5 @@ const nyaLanguageTranslations = [
   TranslatedName(LangMsa(), name: "Nyanja"),
   TranslatedName(LangNld(), name: "Chichewa"),
   TranslatedName(LangTur(), name: "Çevaca"),
+  TranslatedName(LangTgl(), name: "Chichewa"),
 ];

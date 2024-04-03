@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a Abkhaz language:
+/// Provides 110 translations for a Abkhaz language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -92,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -222,4 +223,5 @@ const abkLanguageTranslations = [
   TranslatedName(LangTir(), name: "ኣብካዝኛ"),
   TranslatedName(LangTuk(), name: "abhaz dili"),
   TranslatedName(LangYor(), name: "Èdè Abasia"),
+  TranslatedName(LangTgl(), name: "Wikang Abkasiyo"),
 ];

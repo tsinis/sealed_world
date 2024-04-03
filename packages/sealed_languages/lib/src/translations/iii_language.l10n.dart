@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Nuosu language:
+/// Provides 102 translations for a Nuosu language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -87,6 +87,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -208,4 +209,5 @@ const iiiLanguageTranslations = [
   TranslatedName(LangInd(), name: "Sichuan Yi"),
   TranslatedName(LangMsa(), name: "Sichuan Yi"),
   TranslatedName(LangTur(), name: "Yi"),
+  TranslatedName(LangTgl(), name: "Wikang Nuosu"),
 ];

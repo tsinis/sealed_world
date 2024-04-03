@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Bislama language:
+/// Provides 99 translations for a Bislama language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -84,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -198,4 +199,5 @@ const bisLanguageTranslations = [
   TranslatedName(LangMsa(), name: "Bislama"),
   TranslatedName(LangNld(), name: "Bislama"),
   TranslatedName(LangTur(), name: "Bislama"),
+  TranslatedName(LangTgl(), name: "Wikang Bislama"),
 ];

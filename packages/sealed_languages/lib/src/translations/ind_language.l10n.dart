@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 131 translations for a Indonesian language:
+/// Provides 132 translations for a Indonesian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -108,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -261,4 +262,5 @@ const indLanguageTranslations = [
   TranslatedName(LangTat(), name: "индонезия"),
   TranslatedName(LangWol(), name: "Endonesiye"),
   TranslatedName(LangXho(), name: "Isi-Indonesia"),
+  TranslatedName(LangTgl(), name: "Wikang Indonesia"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 130 translations for a Czech language:
+/// Provides 131 translations for a Czech language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -108,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -259,4 +260,5 @@ const cesLanguageTranslations = [
   TranslatedName(LangTat(), name: "чех"),
   TranslatedName(LangWol(), name: "Cek"),
   TranslatedName(LangMsa(), name: "Czech"),
+  TranslatedName(LangTgl(), name: "Tseko"),
 ];

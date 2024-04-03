@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 136 translations for a Italian language:
+/// Provides 137 translations for a Italian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -112,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -270,4 +271,5 @@ const itaLanguageTranslations = [
   TranslatedName(LangTat(), name: "итальян"),
   TranslatedName(LangWol(), name: "Italiye"),
   TranslatedName(LangXho(), name: "IsiTaliyane"),
+  TranslatedName(LangTgl(), name: "Italyano"),
 ];

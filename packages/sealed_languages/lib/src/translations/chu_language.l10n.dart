@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a (Old) Church Slavonic language:
+/// Provides 105 translations for a (Old) Church Slavonic language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -88,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -214,4 +215,5 @@ const chuLanguageTranslations = [
   TranslatedName(LangUzb(), name: "slavyan (cherkov)"),
   TranslatedName(LangYor(), name: "Èdè Síláfííkì Ilé Ìjọ́sìn"),
   TranslatedName(LangZul(), name: "isi-Church Slavic"),
+  TranslatedName(LangTgl(), name: "Slavonic"),
 ];

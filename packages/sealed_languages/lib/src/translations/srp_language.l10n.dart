@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 117 translations for a Serbian language:
+/// Provides 118 translations for a Serbian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -234,4 +235,5 @@ const srpLanguageTranslations = [
   TranslatedName(LangTuk(), name: "serb dili"),
   TranslatedName(LangTat(), name: "серб"),
   TranslatedName(LangWol(), name: "Serb"),
+  TranslatedName(LangTgl(), name: "Serbyan"),
 ];

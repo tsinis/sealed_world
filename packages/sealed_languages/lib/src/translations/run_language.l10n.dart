@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Kirundi language:
+/// Provides 107 translations for a Kirundi language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -90,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -213,4 +214,5 @@ const runLanguageTranslations = [
   TranslatedName(LangAfr(), name: "Rundi"),
   TranslatedName(LangInd(), name: "Rundi"),
   TranslatedName(LangMsa(), name: "Rundi"),
+  TranslatedName(LangTgl(), name: "Wikang Kirundi"),
 ];
