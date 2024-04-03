@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Kanuri language:
+/// Provides 99 translations for a Kanuri language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -38,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -54,6 +57,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -163,11 +167,7 @@ const kauLanguageTranslations = [
   TranslatedName(LangBel(), name: "кануры"),
   TranslatedName(LangChe(), name: "канури"),
   TranslatedName(LangEus(), name: "kanuriera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤮𞥅𞤤𞤫𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞥅𞤤𞤫𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "kanuri"),
   TranslatedName(LangGlg(), name: "kanuri"),
   TranslatedName(LangHye(), name: "կանուրի"),
@@ -196,4 +196,8 @@ const kauLanguageTranslations = [
   TranslatedName(LangUzb(), name: "kanuri"),
   TranslatedName(LangYor(), name: "Èdè Kanuri"),
   TranslatedName(LangZul(), name: "isi-Kanuri"),
+  TranslatedName(LangAfr(), name: "Kanuri"),
+  TranslatedName(LangInd(), name: "Kanuri"),
+  TranslatedName(LangMsa(), name: "Kanuri"),
+  TranslatedName(LangNld(), name: "Kanuri"),
 ];

@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 91 translations for a Ndonga language:
+/// Provides 97 translations for a Ndonga language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -38,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -53,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -84,12 +88,14 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const ndoLanguageTranslations = [
@@ -155,11 +161,7 @@ const ndoLanguageTranslations = [
   TranslatedName(LangBel(), name: "ндонга"),
   TranslatedName(LangChe(), name: "ндонга"),
   TranslatedName(LangEus(), name: "ndonga"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤐𞤣𞤮𞤲𞤺𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤐𞤣𞤮𞤲𞤺𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "ndonga"),
   TranslatedName(LangGlg(), name: "ndonga"),
   TranslatedName(LangHye(), name: "նդոնգա"),
@@ -188,4 +190,10 @@ const ndoLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Ndonga"),
   TranslatedName(LangZul(), name: "isi-Ndonga"),
   TranslatedName(LangDeu(), name: "Ndonga"),
+  TranslatedName(LangAfr(), name: "Ndonga"),
+  TranslatedName(LangCym(), name: "Ndonga"),
+  TranslatedName(LangInd(), name: "Ndonga"),
+  TranslatedName(LangMsa(), name: "Ndonga"),
+  TranslatedName(LangNld(), name: "Ndonga"),
+  TranslatedName(LangTur(), name: "Ndonga"),
 ];

@@ -221,11 +221,7 @@ const hyeLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Armenia"),
   TranslatedName(LangAsm(), name: "আৰ্মেনীয়"),
   TranslatedName(LangChe(), name: "эрмалойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤪𞤥𞤫𞤲𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤪𞤥𞤫𞤲𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Armeniyanci"),
   TranslatedName(LangIna(), name: "armenio"),
   TranslatedName(LangIbo(), name: "Armenianị"),

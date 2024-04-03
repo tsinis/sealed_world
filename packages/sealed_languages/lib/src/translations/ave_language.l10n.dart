@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 88 translations for a Avestan language:
+/// Provides 89 translations for a Avestan language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Albanian
@@ -52,6 +52,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -177,4 +178,5 @@ const aveLanguageTranslations = [
   TranslatedName(LangUrd(), name: "زبان اوستا"),
   TranslatedName(LangUzb(), name: "avesto"),
   TranslatedName(LangZul(), name: "isi-Avestan"),
+  TranslatedName(LangMsa(), name: "Avestan"),
 ];

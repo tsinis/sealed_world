@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Telugu language:
+/// Provides 108 translations for a Telugu language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -59,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -101,6 +104,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const telLanguageTranslations = [
@@ -195,11 +199,7 @@ const telLanguageTranslations = [
   TranslatedName(LangAfr(), name: "Teloegoe"),
   TranslatedName(LangAsm(), name: "তেলুগু"),
   TranslatedName(LangChe(), name: "телугу"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤚𞤫𞤤𞤫𞤺𞤵𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤚𞤫𞤤𞤫𞤺𞤵𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "telugu"),
   TranslatedName(LangIbo(), name: "Telụgụ"),
   TranslatedName(LangKur(), name: "telûgûyî"),
@@ -212,4 +212,8 @@ const telLanguageTranslations = [
   TranslatedName(LangTuk(), name: "telugu dili"),
   TranslatedName(LangTat(), name: "телугу"),
   TranslatedName(LangDeu(), name: "Telugu"),
+  TranslatedName(LangCym(), name: "Telwgw"),
+  TranslatedName(LangInd(), name: "Telugu"),
+  TranslatedName(LangMsa(), name: "Telugu"),
+  TranslatedName(LangNld(), name: "Telugu"),
 ];

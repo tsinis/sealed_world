@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Malagasy language:
+/// Provides 113 translations for a Malagasy language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -64,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -228,4 +229,5 @@ const mlgLanguageTranslations = [
   TranslatedName(LangTat(), name: "малагаси"),
   TranslatedName(LangWol(), name: "Malagasi"),
   TranslatedName(LangYor(), name: "Malagasì"),
+  TranslatedName(LangMsa(), name: "Malagasy"),
 ];

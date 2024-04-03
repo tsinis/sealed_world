@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Chichewa (Chewa/Nyanja) language:
+/// Provides 106 translations for a Chichewa (Chewa/Nyanja) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Ewe
@@ -40,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -91,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -177,11 +182,7 @@ const nyaLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ন্যাঞ্জা"),
   TranslatedName(LangBel(), name: "ньянджа"),
   TranslatedName(LangChe(), name: "ньянджа"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤙𞤢𞤲𞤶𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤙𞤢𞤲𞤶𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "նյանջա"),
   TranslatedName(LangIna(), name: "nyanja"),
   TranslatedName(LangKaz(), name: "ньянджа тілі"),
@@ -207,4 +208,9 @@ const nyaLanguageTranslations = [
   TranslatedName(LangUzb(), name: "cheva"),
   TranslatedName(LangWol(), name: "Sewa"),
   TranslatedName(LangYor(), name: "Ńyájà"),
+  TranslatedName(LangAfr(), name: "Nyanja"),
+  TranslatedName(LangInd(), name: "Nyanja"),
+  TranslatedName(LangMsa(), name: "Nyanja"),
+  TranslatedName(LangNld(), name: "Chichewa"),
+  TranslatedName(LangTur(), name: "Çevaca"),
 ];

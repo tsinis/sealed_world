@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Malayalam language:
+/// Provides 109 translations for a Malayalam language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -59,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -101,6 +104,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -214,4 +218,8 @@ const malLanguageTranslations = [
   TranslatedName(LangTat(), name: "малаялам"),
   TranslatedName(LangYor(), name: "Málàyálámù"),
   TranslatedName(LangDeu(), name: "Malayalam"),
+  TranslatedName(LangCym(), name: "Malaialameg"),
+  TranslatedName(LangInd(), name: "Malayalam"),
+  TranslatedName(LangMsa(), name: "Malayalam"),
+  TranslatedName(LangNld(), name: "Malayalam"),
 ];

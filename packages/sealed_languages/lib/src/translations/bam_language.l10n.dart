@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 96 translations for a Bambara language:
+/// Provides 101 translations for a Bambara language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Ewe
@@ -40,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -88,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -182,11 +187,7 @@ const bamLanguageTranslations = [
   TranslatedName(LangAsm(), name: "বামবাৰা"),
   TranslatedName(LangBel(), name: "бамбара"),
   TranslatedName(LangChe(), name: "бамбара"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤢𞤥𞤦𞤢𞤪𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤢𞤥𞤦𞤢𞤪𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "bambara"),
   TranslatedName(LangKur(), name: "bambarayî"),
   TranslatedName(LangMri(), name: "Pāpara"),
@@ -198,4 +199,9 @@ const bamLanguageTranslations = [
   TranslatedName(LangTir(), name: "ባምባራ"),
   TranslatedName(LangTuk(), name: "bamana"),
   TranslatedName(LangYor(), name: "Èdè Báḿbàrà"),
+  TranslatedName(LangAfr(), name: "Bambara"),
+  TranslatedName(LangInd(), name: "Bambara"),
+  TranslatedName(LangMsa(), name: "Bambara"),
+  TranslatedName(LangNld(), name: "Bambara"),
+  TranslatedName(LangTur(), name: "Bambara"),
 ];

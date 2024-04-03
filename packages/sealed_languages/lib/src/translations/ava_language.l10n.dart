@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Avaric language:
+/// Provides 104 translations for a Avaric language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -59,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -178,11 +179,7 @@ const avaLanguageTranslations = [
   TranslatedName(LangAsm(), name: "আভেৰিক"),
   TranslatedName(LangChe(), name: "суьйлийн"),
   TranslatedName(LangEus(), name: "avarera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤬𞤱𞤢𞤪𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤬𞤱𞤢𞤪𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "avariskt"),
   TranslatedName(LangGlg(), name: "avar"),
   TranslatedName(LangHye(), name: "ավարերեն"),
@@ -211,4 +208,5 @@ const avaLanguageTranslations = [
   TranslatedName(LangUzb(), name: "avar"),
   TranslatedName(LangYor(), name: "Èdè Afariki"),
   TranslatedName(LangZul(), name: "isi-Avaric"),
+  TranslatedName(LangMsa(), name: "Avaric"),
 ];

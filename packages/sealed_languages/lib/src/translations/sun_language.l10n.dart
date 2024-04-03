@@ -211,11 +211,7 @@ const sunLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Sundanese"),
   TranslatedName(LangAsm(), name: "ছুণ্ডানীজ"),
   TranslatedName(LangChe(), name: "сунданхойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤵𞤲𞤣𞤢𞤲𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤵𞤲𞤣𞤢𞤲𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Harshen Sundanese"),
   TranslatedName(LangIna(), name: "sundanese"),
   TranslatedName(LangIbo(), name: "Sudanese"),

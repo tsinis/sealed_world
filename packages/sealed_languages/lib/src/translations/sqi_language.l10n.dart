@@ -219,11 +219,7 @@ const sqiLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Albania"),
   TranslatedName(LangAsm(), name: "আলবেনীয়"),
   TranslatedName(LangChe(), name: "албанойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤤𞤦𞤢𞤲𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤤𞤦𞤢𞤲𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Albaniyanci"),
   TranslatedName(LangIna(), name: "albanese"),
   TranslatedName(LangIbo(), name: "Albanianị"),

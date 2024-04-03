@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Ewe language:
+/// Provides 101 translations for a Ewe language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Ewe
@@ -39,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -55,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -86,12 +90,14 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const eweLanguageTranslations = [
@@ -176,11 +182,7 @@ const eweLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ইৱে"),
   TranslatedName(LangBel(), name: "эве"),
   TranslatedName(LangChe(), name: "эве"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤉𞤱𞤫𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤉𞤱𞤫𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "ewe"),
   TranslatedName(LangIna(), name: "ewe"),
   TranslatedName(LangKhm(), name: "អ៊ីវ"),
@@ -194,4 +196,10 @@ const eweLanguageTranslations = [
   TranslatedName(LangTuk(), name: "ewe dili"),
   TranslatedName(LangYor(), name: "Èdè Ewè"),
   TranslatedName(LangDeu(), name: "Ewe"),
+  TranslatedName(LangAfr(), name: "Ewe"),
+  TranslatedName(LangCym(), name: "Ewe"),
+  TranslatedName(LangInd(), name: "Ewe"),
+  TranslatedName(LangMsa(), name: "Ewe"),
+  TranslatedName(LangNld(), name: "Ewe"),
+  TranslatedName(LangTur(), name: "Ewe"),
 ];

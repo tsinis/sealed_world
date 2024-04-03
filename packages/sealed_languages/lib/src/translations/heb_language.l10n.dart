@@ -219,11 +219,7 @@ const hebLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Hebrew"),
   TranslatedName(LangAsm(), name: "হিব্ৰু"),
   TranslatedName(LangChe(), name: "жугтийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤖𞤭𞤦𞤵𞤪𞤵𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤖𞤭𞤦𞤵𞤪𞤵𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Ibrananci"),
   TranslatedName(LangIna(), name: "hebreo"),
   TranslatedName(LangJav(), name: "Ibrani"),

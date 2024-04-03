@@ -222,11 +222,7 @@ const gleLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Irish"),
   TranslatedName(LangAsm(), name: "আইৰিচ"),
   TranslatedName(LangChe(), name: "ирландхойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤋𞤪𞤤𞤢𞤲𞤣𞤫𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤋𞤪𞤤𞤢𞤲𞤣𞤫𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Dan Irish"),
   TranslatedName(LangIna(), name: "irlandese"),
   TranslatedName(LangIbo(), name: "Ịrịsh"),

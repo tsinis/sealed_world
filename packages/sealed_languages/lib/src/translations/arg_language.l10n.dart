@@ -185,11 +185,7 @@ const argLanguageTranslations = [
   TranslatedName(LangAsm(), name: "আৰ্গোনিজ"),
   TranslatedName(LangChe(), name: "арагонойн"),
   TranslatedName(LangEus(), name: "aragoiera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤪𞤢𞤺𞤮𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤪𞤢𞤺𞤮𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "aragoniskt"),
   TranslatedName(LangHau(), name: "Aragonesanci"),
   TranslatedName(LangHye(), name: "արագոներեն"),

@@ -205,11 +205,7 @@ const kasLanguageTranslations = [
   TranslatedName(LangAsm(), name: "কাশ্মিৰী"),
   TranslatedName(LangBel(), name: "кашмірская"),
   TranslatedName(LangChe(), name: "кашмири"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤢𞥃𞤥𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤢𞥃𞤥𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "kashmiri"),
   TranslatedName(LangIbo(), name: "Kashmịrị"),
   TranslatedName(LangKur(), name: "keşmîrî"),

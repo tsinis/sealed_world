@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Chamorro language:
+/// Provides 102 translations for a Chamorro language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -39,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -166,11 +170,7 @@ const chaLanguageTranslations = [
   TranslatedName(LangBel(), name: "чамора"),
   TranslatedName(LangChe(), name: "чаморро"),
   TranslatedName(LangEus(), name: "txamorroera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤕𞤢𞤥𞤮𞤪𞤮𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤕𞤢𞤥𞤮𞤪𞤮𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "chamorro"),
   TranslatedName(LangGlg(), name: "chamorro"),
   TranslatedName(LangHye(), name: "չամոռո"),
@@ -201,4 +201,8 @@ const chaLanguageTranslations = [
   TranslatedName(LangUzb(), name: "chamorro"),
   TranslatedName(LangYor(), name: "Èdè S̩amoro"),
   TranslatedName(LangZul(), name: "isi-Chamorro"),
+  TranslatedName(LangAfr(), name: "Chamorro"),
+  TranslatedName(LangInd(), name: "Chamorro"),
+  TranslatedName(LangMsa(), name: "Chamorro"),
+  TranslatedName(LangNld(), name: "Chamorro"),
 ];

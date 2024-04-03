@@ -191,11 +191,7 @@ const ossLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ওছেটিক"),
   TranslatedName(LangBel(), name: "асецінская"),
   TranslatedName(LangChe(), name: "хӀирийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤌𞤧𞥆𞤫𞤼𞤭𞤳𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤌𞤧𞥆𞤫𞤼𞤭𞤳𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "օսերեն"),
   TranslatedName(LangIna(), name: "osseto"),
   TranslatedName(LangIbo(), name: "Osetik"),

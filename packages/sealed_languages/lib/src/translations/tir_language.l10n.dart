@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Tigrinya language:
+/// Provides 111 translations for a Tigrinya language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -60,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -102,6 +106,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Wolof
 /// - Yoruba
 /// - Zulu.
@@ -198,11 +203,7 @@ const tirLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Tigrinya"),
   TranslatedName(LangAsm(), name: "টিগৰিনিয়া"),
   TranslatedName(LangChe(), name: "тигринья"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤚𞤭𞤺𞤭𞤪𞤻𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤚𞤭𞤺𞤭𞤪𞤻𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Tigrinyanci"),
   TranslatedName(LangIna(), name: "tigrinya"),
   TranslatedName(LangIbo(), name: "Tịgrịnya"),
@@ -216,4 +217,9 @@ const tirLanguageTranslations = [
   TranslatedName(LangTur(), name: "Tigrinya dili"),
   TranslatedName(LangTat(), name: "тигринья"),
   TranslatedName(LangWol(), name: "Tigriña"),
+  TranslatedName(LangAfr(), name: "Tigrinya"),
+  TranslatedName(LangCym(), name: "Tigrinya"),
+  TranslatedName(LangInd(), name: "Tigrinya"),
+  TranslatedName(LangMsa(), name: "Tigrinya"),
+  TranslatedName(LangNld(), name: "Tigrinya"),
 ];

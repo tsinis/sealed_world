@@ -204,11 +204,7 @@ const ociLanguageTranslations = [
   TranslatedName(LangZul(), name: "Isi-Osithani"),
   TranslatedName(LangAsm(), name: "অ’চিটান"),
   TranslatedName(LangChe(), name: "окситанойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤌𞤷𞥆𞤭𞤼𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤌𞤷𞥆𞤭𞤼𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Ositanci"),
   TranslatedName(LangHye(), name: "օքսիտաներեն"),
   TranslatedName(LangIna(), name: "occitano"),

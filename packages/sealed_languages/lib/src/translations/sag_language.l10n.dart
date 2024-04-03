@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 94 translations for a Sango language:
+/// Provides 100 translations for a Sango language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -41,6 +43,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -88,12 +92,14 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Zulu.
 const sagLanguageTranslations = [
   TranslatedName(LangEng(), name: "Sango"),
@@ -177,11 +183,7 @@ const sagLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ছাঙ্গো"),
   TranslatedName(LangBel(), name: "санга"),
   TranslatedName(LangChe(), name: "санго"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤢𞤲𞤺𞤮𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤢𞤲𞤺𞤮𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "sango"),
   TranslatedName(LangIbo(), name: "Sangọ"),
   TranslatedName(LangKhm(), name: "សានហ្គោ"),
@@ -194,4 +196,10 @@ const sagLanguageTranslations = [
   TranslatedName(LangTir(), name: "ሳንጎ"),
   TranslatedName(LangTuk(), name: "sango dili"),
   TranslatedName(LangDeu(), name: "Sango"),
+  TranslatedName(LangAfr(), name: "Sango"),
+  TranslatedName(LangCym(), name: "Sango"),
+  TranslatedName(LangInd(), name: "Sango"),
+  TranslatedName(LangMsa(), name: "Sango"),
+  TranslatedName(LangNld(), name: "Sango"),
+  TranslatedName(LangTur(), name: "Sango"),
 ];

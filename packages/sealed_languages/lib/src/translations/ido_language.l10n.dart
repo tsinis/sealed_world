@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Ido language:
+/// Provides 98 translations for a Ido language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -38,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -54,6 +57,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -85,12 +89,14 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -160,11 +166,7 @@ const idoLanguageTranslations = [
   TranslatedName(LangBel(), name: "іда"),
   TranslatedName(LangChe(), name: "идо"),
   TranslatedName(LangEus(), name: "idoa"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤋𞤣𞤮𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤋𞤣𞤮𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "ido"),
   TranslatedName(LangGlg(), name: "ido"),
   TranslatedName(LangHye(), name: "իդո"),
@@ -191,4 +193,10 @@ const idoLanguageTranslations = [
   TranslatedName(LangUzb(), name: "ido"),
   TranslatedName(LangYor(), name: "Èdè Ido"),
   TranslatedName(LangZul(), name: "isi-Ido"),
+  TranslatedName(LangAfr(), name: "Ido"),
+  TranslatedName(LangCym(), name: "Ido"),
+  TranslatedName(LangInd(), name: "Ido"),
+  TranslatedName(LangMsa(), name: "Ido"),
+  TranslatedName(LangNld(), name: "Ido"),
+  TranslatedName(LangTur(), name: "İdo"),
 ];

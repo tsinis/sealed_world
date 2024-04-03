@@ -210,11 +210,7 @@ const fijLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ফিজিয়ান"),
   TranslatedName(LangBel(), name: "фіджыйская"),
   TranslatedName(LangChe(), name: "фиджи"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤊𞤭𞥅𞤶𞤭𞤴𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤊𞤭𞥅𞤶𞤭𞤴𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Fijiyanci"),
   TranslatedName(LangIna(), name: "fijiano"),
   TranslatedName(LangIbo(), name: "Fijanị"),

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 113 translations for a Kazakh language:
+/// Provides 114 translations for a Kazakh language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -45,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -210,11 +211,7 @@ const kazLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Kazakh"),
   TranslatedName(LangAsm(), name: "কাজাখ"),
   TranslatedName(LangChe(), name: "кхазакхийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤢𞥁𞤢𞤳𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤢𞥁𞤢𞤳𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "kazakh"),
   TranslatedName(LangIbo(), name: "Kazak"),
   TranslatedName(LangKur(), name: "qazaxî"),
@@ -229,4 +226,5 @@ const kazLanguageTranslations = [
   TranslatedName(LangTat(), name: "казакъ"),
   TranslatedName(LangWol(), name: "Kasax"),
   TranslatedName(LangYor(), name: "Kaṣakì"),
+  TranslatedName(LangInd(), name: "Kazakh"),
 ];

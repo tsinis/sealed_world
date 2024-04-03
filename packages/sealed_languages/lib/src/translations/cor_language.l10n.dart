@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Cornish language:
+/// Provides 107 translations for a Cornish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -26,6 +26,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -60,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -195,11 +197,7 @@ const corLanguageTranslations = [
   TranslatedName(LangAsm(), name: "কোৰ্নিচ"),
   TranslatedName(LangBel(), name: "корнская"),
   TranslatedName(LangChe(), name: "корнуоллийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤮𞤪𞤲𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞤪𞤲𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "corniskt"),
   TranslatedName(LangIna(), name: "cornico"),
   TranslatedName(LangIbo(), name: "Kọnịsh"),
@@ -215,4 +213,6 @@ const corLanguageTranslations = [
   TranslatedName(LangTir(), name: "ኮርንኛ"),
   TranslatedName(LangTuk(), name: "korn dili"),
   TranslatedName(LangYor(), name: "Èdè Kọ́nììṣì"),
+  TranslatedName(LangMsa(), name: "Cornish"),
+  TranslatedName(LangNld(), name: "Cornisch"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a Yiddish language:
+/// Provides 111 translations for a Yiddish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -44,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -61,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -223,4 +225,6 @@ const yidLanguageTranslations = [
   TranslatedName(LangTat(), name: "идиш"),
   TranslatedName(LangUzb(), name: "idish"),
   TranslatedName(LangWol(), name: "Yidis"),
+  TranslatedName(LangInd(), name: "Yiddish"),
+  TranslatedName(LangMsa(), name: "Yiddish"),
 ];

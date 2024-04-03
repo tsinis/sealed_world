@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Swati language:
+/// Provides 101 translations for a Swati language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -42,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -58,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -96,6 +98,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Western Frisian
 /// - Yoruba
 /// - Zulu.
@@ -175,11 +178,7 @@ const sswLanguageTranslations = [
   TranslatedName(LangAsm(), name: "স্বাতি"),
   TranslatedName(LangBel(), name: "суаці"),
   TranslatedName(LangChe(), name: "свази"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤵𞤱𞤢𞤼𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤵𞤱𞤢𞤼𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "սվազերեն"),
   TranslatedName(LangIna(), name: "swati"),
   TranslatedName(LangKat(), name: "სუატი"),
@@ -202,4 +201,7 @@ const sswLanguageTranslations = [
   TranslatedName(LangTuk(), name: "swati dili"),
   TranslatedName(LangUzb(), name: "svati"),
   TranslatedName(LangYor(), name: "Èdè Suwati"),
+  TranslatedName(LangCym(), name: "Swati"),
+  TranslatedName(LangInd(), name: "Swati"),
+  TranslatedName(LangMsa(), name: "Swati"),
 ];

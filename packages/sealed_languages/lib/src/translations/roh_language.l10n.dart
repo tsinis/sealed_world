@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Romansh language:
+/// Provides 113 translations for a Romansh language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -63,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -208,11 +209,7 @@ const rohLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ৰোমানচ"),
   TranslatedName(LangBel(), name: "рэтараманская"),
   TranslatedName(LangChe(), name: "романшийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤈𞤮𞤥𞤢𞤲𞤧𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤈𞤮𞤥𞤢𞤲𞤧𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "romanche"),
   TranslatedName(LangIbo(), name: "Rọmansị"),
   TranslatedName(LangJav(), name: "Roman"),
@@ -228,4 +225,5 @@ const rohLanguageTranslations = [
   TranslatedName(LangTat(), name: "ретороман"),
   TranslatedName(LangWol(), name: "Romaas"),
   TranslatedName(LangYor(), name: "Rómáǹṣì"),
+  TranslatedName(LangMsa(), name: "Romansh"),
 ];

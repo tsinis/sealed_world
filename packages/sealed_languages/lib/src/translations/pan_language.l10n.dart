@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 121 translations for a (Eastern) Punjabi language:
+/// Provides 124 translations for a (Eastern) Punjabi language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -46,6 +47,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -69,6 +71,7 @@ import "../model/translated_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -241,4 +244,7 @@ const panLanguageTranslations = [
   TranslatedName(LangTgk(), name: "панҷобӣ"),
   TranslatedName(LangTuk(), name: "penjab dili"),
   TranslatedName(LangTat(), name: "пәнҗаби"),
+  TranslatedName(LangInd(), name: "Punjabi"),
+  TranslatedName(LangMsa(), name: "Punjabi"),
+  TranslatedName(LangNld(), name: "Panjabi"),
 ];

@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Quechua language:
+/// Provides 109 translations for a Quechua language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -58,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -100,6 +104,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Wolof
 /// - Yoruba
 /// - Zulu.
@@ -192,11 +197,7 @@ const queLanguageTranslations = [
   TranslatedName(LangAsm(), name: "কুৱেচুৱা"),
   TranslatedName(LangBel(), name: "кечуа"),
   TranslatedName(LangChe(), name: "кечуа"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤗𞤵𞤷𞤵𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤗𞤵𞤷𞤵𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "quechua"),
   TranslatedName(LangIbo(), name: "Qụechụa"),
   TranslatedName(LangKur(), name: "keçwayî"),
@@ -212,4 +213,9 @@ const queLanguageTranslations = [
   TranslatedName(LangWol(), name: "Kesuwa"),
   TranslatedName(LangYor(), name: "Kúẹ́ńjùà"),
   TranslatedName(LangDeu(), name: "Quechua"),
+  TranslatedName(LangAfr(), name: "Quechua"),
+  TranslatedName(LangCym(), name: "Cetshwa"),
+  TranslatedName(LangInd(), name: "Quechua"),
+  TranslatedName(LangMsa(), name: "Quechua"),
+  TranslatedName(LangNld(), name: "Quechua"),
 ];

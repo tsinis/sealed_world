@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 128 translations for a Greek (modern) language:
+/// Provides 129 translations for a Greek (modern) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -73,6 +73,7 @@ import "../model/translated_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -256,4 +257,5 @@ const ellLanguageTranslations = [
   TranslatedName(LangTuk(), name: "grek dili"),
   TranslatedName(LangTat(), name: "грек"),
   TranslatedName(LangWol(), name: "Gereg"),
+  TranslatedName(LangMsa(), name: "Yunani"),
 ];

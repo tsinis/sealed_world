@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Akan language:
+/// Provides 109 translations for a Akan language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Ewe
@@ -41,6 +43,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -60,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -94,6 +98,7 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -208,4 +213,9 @@ const akaLanguageTranslations = [
   TranslatedName(LangTir(), name: "ኣካን"),
   TranslatedName(LangTuk(), name: "akan dili"),
   TranslatedName(LangDeu(), name: "Akan"),
+  TranslatedName(LangAfr(), name: "Akan"),
+  TranslatedName(LangInd(), name: "Akan"),
+  TranslatedName(LangMsa(), name: "Akan"),
+  TranslatedName(LangNld(), name: "Akan"),
+  TranslatedName(LangTur(), name: "Akan"),
 ];

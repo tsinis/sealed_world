@@ -220,11 +220,7 @@ const catLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Catalan"),
   TranslatedName(LangAsm(), name: "কাতালান"),
   TranslatedName(LangChe(), name: "каталонийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤢𞤼𞤢𞤤𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤢𞤼𞤢𞤤𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Kataloniyanci"),
   TranslatedName(LangIna(), name: "catalano"),
   TranslatedName(LangJav(), name: "Katala"),

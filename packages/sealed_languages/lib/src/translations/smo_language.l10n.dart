@@ -195,11 +195,7 @@ const smoLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ছামোন"),
   TranslatedName(LangBel(), name: "самоа"),
   TranslatedName(LangChe(), name: "самоанойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤢𞤥𞤮𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤢𞤥𞤮𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "սամոաերեն"),
   TranslatedName(LangIna(), name: "samoano"),
   TranslatedName(LangIbo(), name: "Samọa"),

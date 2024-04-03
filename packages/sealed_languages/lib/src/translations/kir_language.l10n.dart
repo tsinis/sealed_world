@@ -218,11 +218,7 @@ const kirLanguageTranslations = [
   TranslatedName(LangAsm(), name: "কিৰ্গিজ"),
   TranslatedName(LangBel(), name: "кіргізская"),
   TranslatedName(LangChe(), name: "гӀиргӀизойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤭𞤪𞤺𞤵𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤭𞤪𞤺𞤵𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Kirgizanci"),
   TranslatedName(LangIna(), name: "kirghizo"),
   TranslatedName(LangIbo(), name: "Kyrayz"),

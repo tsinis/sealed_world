@@ -211,11 +211,7 @@ const bodLanguageTranslations = [
   TranslatedName(LangAsm(), name: "তিব্বতী"),
   TranslatedName(LangBel(), name: "тыбецкая"),
   TranslatedName(LangChe(), name: "тибетхойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤚𞤭𞤦𞤫𞤼𞤫𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤚𞤭𞤦𞤫𞤼𞤫𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "tibetano"),
   TranslatedName(LangJav(), name: "Tibet"),
   TranslatedName(LangKur(), name: "tîbetî"),

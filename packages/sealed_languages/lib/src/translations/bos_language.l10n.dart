@@ -221,11 +221,7 @@ const bosLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Bosnian"),
   TranslatedName(LangAsm(), name: "বছনীয়"),
   TranslatedName(LangChe(), name: "боснийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤮𞤧𞤲𞤭𞤴𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤮𞤧𞤲𞤭𞤴𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Bosniyanci"),
   TranslatedName(LangIna(), name: "bosniaco"),
   TranslatedName(LangIbo(), name: "Bosnia"),

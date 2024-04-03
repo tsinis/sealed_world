@@ -220,11 +220,7 @@ const lavLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Latvian"),
   TranslatedName(LangAsm(), name: "লাটভিয়ান"),
   TranslatedName(LangChe(), name: "латышийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤂𞤢𞤼𞤾𞤭𞤴𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤂𞤢𞤼𞤾𞤭𞤴𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Latbiyanci"),
   TranslatedName(LangIna(), name: "letton"),
   TranslatedName(LangIbo(), name: "Latviani"),

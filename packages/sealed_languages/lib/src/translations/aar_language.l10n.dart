@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 90 translations for a Afar language:
+/// Provides 95 translations for a Afar language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -40,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -55,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -82,6 +86,7 @@ import "../model/translated_name.dart";
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -160,11 +165,7 @@ const aarLanguageTranslations = [
   TranslatedName(LangBel(), name: "афарская"),
   TranslatedName(LangChe(), name: "афарийн"),
   TranslatedName(LangEus(), name: "afarera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤬𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤬𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "afar"),
   TranslatedName(LangGlg(), name: "afar"),
   TranslatedName(LangHye(), name: "աֆարերեն"),
@@ -186,4 +187,9 @@ const aarLanguageTranslations = [
   TranslatedName(LangUzb(), name: "afar"),
   TranslatedName(LangZul(), name: "isi-Afar"),
   TranslatedName(LangDeu(), name: "Afar"),
+  TranslatedName(LangAfr(), name: "Afar"),
+  TranslatedName(LangInd(), name: "Afar"),
+  TranslatedName(LangMsa(), name: "Afar"),
+  TranslatedName(LangNld(), name: "Afar"),
+  TranslatedName(LangTur(), name: "Afarca"),
 ];

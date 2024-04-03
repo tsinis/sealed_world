@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Interlingua language:
+/// Provides 103 translations for a Interlingua language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -41,6 +43,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -96,6 +100,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const inaLanguageTranslations = [
@@ -201,4 +206,9 @@ const inaLanguageTranslations = [
   TranslatedName(LangTur(), name: "İnterlingua"),
   TranslatedName(LangUzb(), name: "interlingva"),
   TranslatedName(LangDeu(), name: "Interlingua"),
+  TranslatedName(LangAfr(), name: "Interlingua"),
+  TranslatedName(LangCym(), name: "Interlingua"),
+  TranslatedName(LangInd(), name: "Interlingua"),
+  TranslatedName(LangMsa(), name: "Interlingua"),
+  TranslatedName(LangNld(), name: "Interlingua"),
 ];

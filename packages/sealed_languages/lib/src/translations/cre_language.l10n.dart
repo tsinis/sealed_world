@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 84 translations for a Cree language:
+/// Provides 85 translations for a Cree language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -22,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Finnish
@@ -169,4 +170,5 @@ const creLanguageTranslations = [
   TranslatedName(LangUrd(), name: "کری"),
   TranslatedName(LangUzb(), name: "kri"),
   TranslatedName(LangZul(), name: "isi-Cree"),
+  TranslatedName(LangNld(), name: "Cree"),
 ];

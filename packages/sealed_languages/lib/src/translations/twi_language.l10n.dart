@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 88 translations for a Twi language:
+/// Provides 91 translations for a Twi language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -22,6 +23,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -38,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -53,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -86,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Zulu.
 const twiLanguageTranslations = [
   TranslatedName(LangEng(), name: "Twi"),
@@ -174,4 +179,9 @@ const twiLanguageTranslations = [
   TranslatedName(LangSin(), name: "ට්වි"),
   TranslatedName(LangUzb(), name: "tvi"),
   TranslatedName(LangPus(), name: "دوه"),
+  TranslatedName(LangAfr(), name: "Twi"),
+  TranslatedName(LangCym(), name: "Twi"),
+  TranslatedName(LangInd(), name: "Twi"),
+  TranslatedName(LangMsa(), name: "Twi"),
+  TranslatedName(LangNld(), name: "Twi"),
 ];

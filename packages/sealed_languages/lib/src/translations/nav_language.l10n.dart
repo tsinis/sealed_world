@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Navajo (Navaho) language:
+/// Provides 99 translations for a Navajo (Navaho) language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -38,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -53,6 +56,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -163,11 +167,7 @@ const navLanguageTranslations = [
   TranslatedName(LangBel(), name: "наваха"),
   TranslatedName(LangChe(), name: "навахо"),
   TranslatedName(LangEus(), name: "navajoera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤐𞤢𞤬𞤱𞤢𞤸𞤮𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤐𞤢𞤬𞤱𞤢𞤸𞤮𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "navajo"),
   TranslatedName(LangGlg(), name: "navajo"),
   TranslatedName(LangHye(), name: "նավախո"),
@@ -195,4 +195,8 @@ const navLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Nafajo"),
   TranslatedName(LangZul(), name: "isi-Navajo"),
   TranslatedName(LangDeu(), name: "Navajo"),
+  TranslatedName(LangAfr(), name: "Navajo"),
+  TranslatedName(LangInd(), name: "Navajo"),
+  TranslatedName(LangMsa(), name: "Navajo"),
+  TranslatedName(LangNld(), name: "Navajo"),
 ];

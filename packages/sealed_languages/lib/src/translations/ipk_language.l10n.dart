@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 86 translations for a Inupiaq language:
+/// Provides 87 translations for a Inupiaq language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -22,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -173,4 +174,5 @@ const ipkLanguageTranslations = [
   TranslatedName(LangUrd(), name: "انوپیاک"),
   TranslatedName(LangUzb(), name: "inupiaq"),
   TranslatedName(LangZul(), name: "i-Inupiaq"),
+  TranslatedName(LangNld(), name: "Inupiaq"),
 ];

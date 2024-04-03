@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 83 translations for a Ojibwe (Ojibwa) language:
+/// Provides 86 translations for a Ojibwe (Ojibwa) language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -22,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Finnish
@@ -35,6 +36,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -82,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Zulu.
 const ojiLanguageTranslations = [
   TranslatedName(LangEng(), name: "Ojibwa"),
@@ -167,4 +170,7 @@ const ojiLanguageTranslations = [
   TranslatedName(LangUrd(), name: "اوجیبوئی"),
   TranslatedName(LangUzb(), name: "ojibve"),
   TranslatedName(LangZul(), name: "isi-Ojibwa"),
+  TranslatedName(LangCym(), name: "Ojibwa"),
+  TranslatedName(LangInd(), name: "Ojibwa"),
+  TranslatedName(LangNld(), name: "Ojibwa"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 113 translations for a Basque language:
+/// Provides 114 translations for a Basque language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -63,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -214,11 +215,7 @@ const eusLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Basque"),
   TranslatedName(LangAsm(), name: "বাস্ক"),
   TranslatedName(LangChe(), name: "баскийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤢𞤧𞤳𞤢𞤪𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤢𞤧𞤳𞤢𞤪𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "basco"),
   TranslatedName(LangIbo(), name: "Baskwe"),
   TranslatedName(LangKur(), name: "baskî"),
@@ -231,4 +228,5 @@ const eusLanguageTranslations = [
   TranslatedName(LangTuk(), name: "bask dili"),
   TranslatedName(LangTat(), name: "баск"),
   TranslatedName(LangWol(), name: "Bask"),
+  TranslatedName(LangMsa(), name: "Basque"),
 ];

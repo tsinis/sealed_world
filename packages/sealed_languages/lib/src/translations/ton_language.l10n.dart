@@ -206,11 +206,7 @@ const tonLanguageTranslations = [
   TranslatedName(LangAsm(), name: "টোঙ্গান"),
   TranslatedName(LangBel(), name: "танганская"),
   TranslatedName(LangChe(), name: "тонганийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤚𞤮𞤲𞤺𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤚𞤮𞤲𞤺𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Tonganci"),
   TranslatedName(LangIna(), name: "tongano"),
   TranslatedName(LangIbo(), name: "Tọngan"),

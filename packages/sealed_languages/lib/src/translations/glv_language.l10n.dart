@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 102 translations for a Manx language:
+/// Provides 106 translations for a Manx language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -40,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -55,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -189,11 +193,7 @@ const glvLanguageTranslations = [
   TranslatedName(LangAsm(), name: "মেংক্স"),
   TranslatedName(LangBel(), name: "мэнская"),
   TranslatedName(LangChe(), name: "мэнийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤃𞤢𞤲𞤳𞤭𞤧𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤃𞤢𞤲𞤳𞤭𞤧𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "manx"),
   TranslatedName(LangIna(), name: "mannese"),
   TranslatedName(LangIbo(), name: "Mansị"),
@@ -209,4 +209,8 @@ const glvLanguageTranslations = [
   TranslatedName(LangTuk(), name: "men dili"),
   TranslatedName(LangYor(), name: "Máǹkì"),
   TranslatedName(LangDeu(), name: "Manx"),
+  TranslatedName(LangAfr(), name: "Manx"),
+  TranslatedName(LangInd(), name: "Manx"),
+  TranslatedName(LangMsa(), name: "Manx"),
+  TranslatedName(LangNld(), name: "Manx"),
 ];

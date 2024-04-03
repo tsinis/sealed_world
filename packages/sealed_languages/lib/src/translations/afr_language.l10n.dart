@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Afrikaans language:
+/// Provides 118 translations for a Afrikaans language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -60,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -211,11 +215,7 @@ const afrLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Afrikaans"),
   TranslatedName(LangAsm(), name: "আফ্ৰিকানছ্"),
   TranslatedName(LangChe(), name: "африкаанс"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤬𞤪𞤭𞤳𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤬𞤪𞤭𞤳𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Afirkanci"),
   TranslatedName(LangIna(), name: "afrikaans"),
   TranslatedName(LangJav(), name: "Afrika"),
@@ -230,4 +230,8 @@ const afrLanguageTranslations = [
   TranslatedName(LangTat(), name: "африкаанс"),
   TranslatedName(LangXho(), name: "isiBhulu"),
   TranslatedName(LangDeu(), name: "Afrikaans"),
+  TranslatedName(LangAfr(), name: "Afrikaans"),
+  TranslatedName(LangInd(), name: "Afrikaans"),
+  TranslatedName(LangMsa(), name: "Afrikaans"),
+  TranslatedName(LangNld(), name: "Afrikaans"),
 ];

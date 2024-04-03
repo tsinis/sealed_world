@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Bashkir language:
+/// Provides 108 translations for a Bashkir language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -42,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -58,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -197,11 +199,7 @@ const bakLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Bashkir"),
   TranslatedName(LangAsm(), name: "বাছখিৰ"),
   TranslatedName(LangChe(), name: "башкирийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤢𞤧𞤳𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤢𞤧𞤳𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "bashkir"),
   TranslatedName(LangIna(), name: "bashkir"),
   TranslatedName(LangIbo(), name: "Bashki"),
@@ -216,4 +214,6 @@ const bakLanguageTranslations = [
   TranslatedName(LangTat(), name: "башкорт"),
   TranslatedName(LangWol(), name: "Baskir"),
   TranslatedName(LangYor(), name: "Èdè Bashiri"),
+  TranslatedName(LangInd(), name: "Bashkir"),
+  TranslatedName(LangMsa(), name: "Bashkir"),
 ];

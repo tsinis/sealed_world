@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 102 translations for a Inuktitut language:
+/// Provides 105 translations for a Inuktitut language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -41,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -187,11 +190,7 @@ const ikuLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ইনুক্টিটুট"),
   TranslatedName(LangBel(), name: "інуктытут"),
   TranslatedName(LangChe(), name: "инуктитут"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤋𞤲𞤵𞤳𞤼𞤫𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤋𞤲𞤵𞤳𞤼𞤫𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "inuktitut"),
   TranslatedName(LangIna(), name: "inuktitut"),
   TranslatedName(LangIbo(), name: "Inuktitutị"),
@@ -209,4 +208,7 @@ const ikuLanguageTranslations = [
   TranslatedName(LangWol(), name: "Inuktitit"),
   TranslatedName(LangYor(), name: "Èdè Inukitu"),
   TranslatedName(LangDeu(), name: "Inuktitut"),
+  TranslatedName(LangInd(), name: "Inuktitut"),
+  TranslatedName(LangMsa(), name: "Inuktitut"),
+  TranslatedName(LangNld(), name: "Inuktitut"),
 ];

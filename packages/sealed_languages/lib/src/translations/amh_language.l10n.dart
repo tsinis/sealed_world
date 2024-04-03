@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 125 translations for a Amharic language:
+/// Provides 126 translations for a Amharic language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -73,6 +73,7 @@ import "../model/translated_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -251,4 +252,5 @@ const amhLanguageTranslations = [
   TranslatedName(LangTuk(), name: "amhar dili"),
   TranslatedName(LangTat(), name: "амхар"),
   TranslatedName(LangWol(), name: "Amharik"),
+  TranslatedName(LangMsa(), name: "Amharic"),
 ];

@@ -203,11 +203,7 @@ const cosLanguageTranslations = [
   TranslatedName(LangAsm(), name: "কোৰ্ছিকান"),
   TranslatedName(LangBel(), name: "карсіканская"),
   TranslatedName(LangChe(), name: "корсиканийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤮𞤪𞤧𞤭𞤳𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞤪𞤧𞤭𞤳𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "korsikanskt"),
   TranslatedName(LangIna(), name: "corso"),
   TranslatedName(LangIbo(), name: "Kọsịan"),

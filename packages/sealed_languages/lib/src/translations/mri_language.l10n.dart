@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Māori language:
+/// Provides 113 translations for a Māori language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -107,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
@@ -205,11 +206,7 @@ const mriLanguageTranslations = [
   TranslatedName(LangAsm(), name: "মাওৰি"),
   TranslatedName(LangBel(), name: "маары"),
   TranslatedName(LangChe(), name: "маори"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤃𞤢𞥄𞤮𞤪𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤃𞤢𞥄𞤮𞤪𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFry(), name: "Maori"),
   TranslatedName(LangHau(), name: "Maori"),
   TranslatedName(LangIna(), name: "maori"),
@@ -232,4 +229,5 @@ const mriLanguageTranslations = [
   TranslatedName(LangWol(), name: "Mawri"),
   TranslatedName(LangYor(), name: "Màórì"),
   TranslatedName(LangDeu(), name: "Māori"),
+  TranslatedName(LangCym(), name: "Maori"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Slovak language:
+/// Provides 116 translations for a Slovak language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -46,6 +46,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -64,6 +65,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -214,11 +216,7 @@ const slkLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Slovak"),
   TranslatedName(LangAsm(), name: "শ্লোভাক"),
   TranslatedName(LangChe(), name: "словакийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤤𞤮𞤾𞤢𞥄𞤳𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤤𞤮𞤾𞤢𞥄𞤳𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Basulke"),
   TranslatedName(LangIna(), name: "slovaco"),
   TranslatedName(LangIbo(), name: "Slova"),
@@ -233,4 +231,6 @@ const slkLanguageTranslations = [
   TranslatedName(LangTuk(), name: "slowak dili"),
   TranslatedName(LangTat(), name: "словак"),
   TranslatedName(LangWol(), name: "Eslowaki (Eslowak)"),
+  TranslatedName(LangInd(), name: "Slovak"),
+  TranslatedName(LangMsa(), name: "Slovak"),
 ];

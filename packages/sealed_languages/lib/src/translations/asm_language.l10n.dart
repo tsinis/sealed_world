@@ -213,11 +213,7 @@ const asmLanguageTranslations = [
   TranslatedName(LangZho(), name: "阿薩姆文", script: ScriptHant()),
   TranslatedName(LangZul(), name: "isi-Assamese"),
   TranslatedName(LangChe(), name: "ассамийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤧𞤢𞤥𞤫𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤧𞤢𞤥𞤫𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Asamisanci"),
   TranslatedName(LangIna(), name: "assamese"),
   TranslatedName(LangIbo(), name: "Asamisị"),

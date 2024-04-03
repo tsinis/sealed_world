@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Oromo language:
+/// Provides 104 translations for a Oromo language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -41,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -98,6 +101,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const ormLanguageTranslations = [
@@ -183,11 +187,7 @@ const ormLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ওৰোমো"),
   TranslatedName(LangBel(), name: "арома"),
   TranslatedName(LangChe(), name: "оромо"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤌𞤪𞤮𞤥𞤮𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤌𞤪𞤮𞤥𞤮𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "oromo"),
   TranslatedName(LangIna(), name: "oromo"),
   TranslatedName(LangIbo(), name: "Ọromo"),
@@ -205,4 +205,8 @@ const ormLanguageTranslations = [
   TranslatedName(LangTat(), name: "оромо"),
   TranslatedName(LangYor(), name: "Òròmọ́"),
   TranslatedName(LangDeu(), name: "Oromo"),
+  TranslatedName(LangAfr(), name: "Oromo"),
+  TranslatedName(LangCym(), name: "Oromo"),
+  TranslatedName(LangInd(), name: "Oromo"),
+  TranslatedName(LangMsa(), name: "Oromo"),
 ];

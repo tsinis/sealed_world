@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 78 translations for a Pāli language:
+/// Provides 82 translations for a Pāli language:
 /// - (Eastern) Punjabi
 /// - Albanian
 /// - Amharic
@@ -22,6 +22,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Finnish
@@ -35,6 +36,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -74,11 +76,13 @@ import "../model/translated_name.dart";
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Zulu.
 const pliLanguageTranslations = [
   TranslatedName(LangEng(), name: "Pali"),
@@ -159,4 +163,8 @@ const pliLanguageTranslations = [
   TranslatedName(LangUrd(), name: "پایلی"),
   TranslatedName(LangUzb(), name: "pali"),
   TranslatedName(LangZul(), name: "isi-Pali"),
+  TranslatedName(LangCym(), name: "Pali"),
+  TranslatedName(LangInd(), name: "Pali"),
+  TranslatedName(LangNld(), name: "Pali"),
+  TranslatedName(LangTur(), name: "Pali"),
 ];

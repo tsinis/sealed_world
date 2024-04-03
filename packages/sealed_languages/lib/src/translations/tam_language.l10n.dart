@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Tamil language:
+/// Provides 122 translations for a Tamil language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -26,6 +27,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -46,6 +48,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -68,6 +71,7 @@ import "../model/translated_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -226,11 +230,7 @@ const tamLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Tamil"),
   TranslatedName(LangAsm(), name: "তামিল"),
   TranslatedName(LangChe(), name: "тамилхойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤚𞤢𞤥𞤵𞤤𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤚𞤢𞤥𞤵𞤤𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "tamil"),
   TranslatedName(LangKur(), name: "tamîlî"),
   TranslatedName(LangMri(), name: "Tamira"),
@@ -240,4 +240,8 @@ const tamLanguageTranslations = [
   TranslatedName(LangTgk(), name: "тамилӣ"),
   TranslatedName(LangTuk(), name: "tamil dili"),
   TranslatedName(LangTat(), name: "тамил"),
+  TranslatedName(LangAfr(), name: "Tamil"),
+  TranslatedName(LangInd(), name: "Tamil"),
+  TranslatedName(LangMsa(), name: "Tamil"),
+  TranslatedName(LangNld(), name: "Tamil"),
 ];

@@ -219,11 +219,7 @@ const srpLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Serbian"),
   TranslatedName(LangAsm(), name: "ছাৰ্বিয়ান"),
   TranslatedName(LangChe(), name: "сербийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤫𞤪𞤦𞤭𞤴𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤫𞤪𞤦𞤭𞤴𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Sabiyan"),
   TranslatedName(LangIna(), name: "serbo"),
   TranslatedName(LangIbo(), name: "Sebịan"),

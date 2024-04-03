@@ -223,11 +223,7 @@ const finLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Finnish"),
   TranslatedName(LangAsm(), name: "ফিনিচ"),
   TranslatedName(LangChe(), name: "финнийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤊𞤫𞤲𞤭𞤧𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤊𞤫𞤲𞤭𞤧𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Yaren mutanen Finland"),
   TranslatedName(LangIna(), name: "finnese"),
   TranslatedName(LangIbo(), name: "Fịnịsh"),

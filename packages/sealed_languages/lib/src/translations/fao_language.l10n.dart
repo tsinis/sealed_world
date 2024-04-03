@@ -218,11 +218,7 @@ const faoLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Faroese"),
   TranslatedName(LangAsm(), name: "ফাৰোইজ"),
   TranslatedName(LangChe(), name: "фарерийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤊𞤫𞤪𞤮𞤱𞤫𞤧𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤊𞤫𞤪𞤮𞤱𞤫𞤧𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "feroese"),
   TranslatedName(LangIbo(), name: "Farọse"),
   TranslatedName(LangJav(), name: "Faroe"),

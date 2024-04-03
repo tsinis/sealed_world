@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Sindhi language:
+/// Provides 110 translations for a Sindhi language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -59,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -101,6 +105,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -194,11 +199,7 @@ const sndLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Sindhi"),
   TranslatedName(LangAsm(), name: "সিন্ধী"),
   TranslatedName(LangChe(), name: "синдхи"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤭𞤲𞤣𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤭𞤲𞤣𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Sindiyanci"),
   TranslatedName(LangIna(), name: "sindhi"),
   TranslatedName(LangIbo(), name: "Sịndh"),
@@ -215,4 +216,9 @@ const sndLanguageTranslations = [
   TranslatedName(LangTat(), name: "синдһи"),
   TranslatedName(LangWol(), name: "Sindi"),
   TranslatedName(LangDeu(), name: "Sindhi"),
+  TranslatedName(LangAfr(), name: "Sindhi"),
+  TranslatedName(LangCym(), name: "Sindhi"),
+  TranslatedName(LangInd(), name: "Sindhi"),
+  TranslatedName(LangMsa(), name: "Sindhi"),
+  TranslatedName(LangNld(), name: "Sindhi"),
 ];

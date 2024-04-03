@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Luba-Katanga language:
+/// Provides 101 translations for a Luba-Katanga language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -39,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -55,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -87,12 +91,14 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const lubLanguageTranslations = [
@@ -195,4 +201,10 @@ const lubLanguageTranslations = [
   TranslatedName(LangTuk(), name: "luba-katanga dili"),
   TranslatedName(LangYor(), name: "Lúbà-Katanga"),
   TranslatedName(LangDeu(), name: "Luba-Katanga"),
+  TranslatedName(LangAfr(), name: "Luba-Katanga"),
+  TranslatedName(LangCym(), name: "Luba-Katanga"),
+  TranslatedName(LangInd(), name: "Luba-Katanga"),
+  TranslatedName(LangMsa(), name: "Luba-Katanga"),
+  TranslatedName(LangNld(), name: "Luba-Katanga"),
+  TranslatedName(LangTur(), name: "Luba-Katanga"),
 ];
