@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Ido language:
+/// Provides 99 translations for a Ido language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -84,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -199,4 +200,5 @@ const idoLanguageTranslations = [
   TranslatedName(LangMsa(), name: "Ido"),
   TranslatedName(LangNld(), name: "Ido"),
   TranslatedName(LangTur(), name: "İdo"),
+  TranslatedName(LangTgl(), name: "Ido"),
 ];

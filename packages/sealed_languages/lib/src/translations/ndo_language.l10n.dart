@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Ndonga language:
+/// Provides 98 translations for a Ndonga language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -83,6 +83,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -196,4 +197,5 @@ const ndoLanguageTranslations = [
   TranslatedName(LangMsa(), name: "Ndonga"),
   TranslatedName(LangNld(), name: "Ndonga"),
   TranslatedName(LangTur(), name: "Ndonga"),
+  TranslatedName(LangTgl(), name: "Ndonga"),
 ];

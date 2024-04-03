@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 91 translations for a Tagalog language:
+/// Provides 92 translations for a Tagalog language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -78,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -183,4 +184,5 @@ const tglLanguageTranslations = [
   TranslatedName(LangNld(), name: "Tagalog"),
   TranslatedName(LangMsa(), name: "Tagalog"),
   TranslatedName(LangAfr(), name: "Tagalog"),
+  TranslatedName(LangTgl(), name: "Tagalog"),
 ];

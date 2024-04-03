@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 87 translations for a Hiri Motu language:
+/// Provides 88 translations for a Hiri Motu language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -76,6 +76,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -176,4 +177,5 @@ const hmoLanguageTranslations = [
   TranslatedName(LangTur(), name: "Hiri motu"),
   TranslatedName(LangMsa(), name: "Hiri Motu"),
   TranslatedName(LangAfr(), name: "Hiri Motu"),
+  TranslatedName(LangTgl(), name: "Hiri Motu"),
 ];

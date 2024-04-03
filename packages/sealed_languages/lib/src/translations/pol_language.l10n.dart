@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 133 translations for a Polish language:
+/// Provides 134 translations for a Polish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -108,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -263,4 +264,5 @@ const polLanguageTranslations = [
   TranslatedName(LangTat(), name: "поляк"),
   TranslatedName(LangWol(), name: "Polone"),
   TranslatedName(LangXho(), name: "Isi-Polish"),
+  TranslatedName(LangTgl(), name: "Polish"),
 ];

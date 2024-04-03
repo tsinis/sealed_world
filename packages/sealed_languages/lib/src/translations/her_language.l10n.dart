@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Herero language:
+/// Provides 101 translations for a Herero language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -84,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -202,4 +203,5 @@ const herLanguageTranslations = [
   TranslatedName(LangInd(), name: "Herero"),
   TranslatedName(LangMsa(), name: "Herero"),
   TranslatedName(LangNld(), name: "Herero"),
+  TranslatedName(LangTgl(), name: "Herero"),
 ];

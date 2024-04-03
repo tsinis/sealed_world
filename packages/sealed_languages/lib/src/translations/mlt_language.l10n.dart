@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 117 translations for a Maltese language:
+/// Provides 118 translations for a Maltese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -238,4 +239,5 @@ const mltLanguageTranslations = [
   TranslatedName(LangTuk(), name: "malta dili"),
   TranslatedName(LangTat(), name: "мальта"),
   TranslatedName(LangWol(), name: "Malt"),
+  TranslatedName(LangTgl(), name: "Maltese"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Wolof language:
+/// Provides 106 translations for a Wolof language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -88,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -211,4 +212,5 @@ const wolLanguageTranslations = [
   TranslatedName(LangInd(), name: "Wolof"),
   TranslatedName(LangMsa(), name: "Wolof"),
   TranslatedName(LangNld(), name: "Wolof"),
+  TranslatedName(LangTgl(), name: "Wolof"),
 ];

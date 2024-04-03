@@ -281,6 +281,7 @@ const kSealedLanguagesSupportedLanguages = [
   LangSwe(),
   LangTam(),
   LangTel(),
+  LangTgl(),
   LangTha(),
   LangTon(),
   LangTur(),

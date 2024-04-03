@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 124 translations for a Malay language:
+/// Provides 125 translations for a Malay language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -105,6 +105,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -248,4 +249,5 @@ const msaLanguageTranslations = [
   TranslatedName(LangTgk(), name: "малайӣ"),
   TranslatedName(LangTuk(), name: "malaý dili"),
   TranslatedName(LangTat(), name: "малай"),
+  TranslatedName(LangTgl(), name: "Malay"),
 ];

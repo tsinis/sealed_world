@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Latin language:
+/// Provides 115 translations for a Latin language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -95,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -229,4 +230,5 @@ const latLanguageTranslations = [
   TranslatedName(LangTat(), name: "латин"),
   TranslatedName(LangInd(), name: "Latin"),
   TranslatedName(LangMsa(), name: "Latin"),
+  TranslatedName(LangTgl(), name: "Latin"),
 ];

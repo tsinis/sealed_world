@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Norwegian language:
+/// Provides 115 translations for a Norwegian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -95,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Telugu
@@ -233,4 +234,5 @@ const norLanguageTranslations = [
   TranslatedName(LangUzb(), name: "norveg"),
   TranslatedName(LangWol(), name: "Nerwesiye"),
   TranslatedName(LangZul(), name: "isi-Norwegian"),
+  TranslatedName(LangTgl(), name: "Norwegian"),
 ];

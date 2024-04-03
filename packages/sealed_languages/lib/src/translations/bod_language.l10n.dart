@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Tibetan Standard language:
+/// Provides 113 translations for a Tibetan Standard language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -92,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -225,4 +226,5 @@ const bodLanguageTranslations = [
   TranslatedName(LangTuk(), name: "tibet dili"),
   TranslatedName(LangTat(), name: "тибет"),
   TranslatedName(LangYor(), name: "Tibetán"),
+  TranslatedName(LangTgl(), name: "Tibetan"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Kannada language:
+/// Provides 113 translations for a Kannada language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -90,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -222,4 +223,5 @@ const kanLanguageTranslations = [
   TranslatedName(LangInd(), name: "Kannada"),
   TranslatedName(LangMsa(), name: "Kannada"),
   TranslatedName(LangNld(), name: "Kannada"),
+  TranslatedName(LangTgl(), name: "Kannada"),
 ];

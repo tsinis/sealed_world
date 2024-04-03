@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Kurdish language:
+/// Provides 119 translations for a Kurdish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -235,4 +236,5 @@ const kurLanguageTranslations = [
   TranslatedName(LangWol(), name: "Kurdi"),
   TranslatedName(LangYor(), name: "Kọdiṣì"),
   TranslatedName(LangMsa(), name: "Kurdish"),
+  TranslatedName(LangTgl(), name: "Kurdish"),
 ];

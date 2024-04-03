@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 99 translations for a Kanuri language:
+/// Provides 100 translations for a Kanuri language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -83,6 +83,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -200,4 +201,5 @@ const kauLanguageTranslations = [
   TranslatedName(LangInd(), name: "Kanuri"),
   TranslatedName(LangMsa(), name: "Kanuri"),
   TranslatedName(LangNld(), name: "Kanuri"),
+  TranslatedName(LangTgl(), name: "Kanuri"),
 ];

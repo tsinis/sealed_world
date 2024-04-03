@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a Tatar language:
+/// Provides 110 translations for a Tatar language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -89,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -218,4 +219,5 @@ const tatLanguageTranslations = [
   TranslatedName(LangYor(), name: "Tatarí"),
   TranslatedName(LangInd(), name: "Tatar"),
   TranslatedName(LangMsa(), name: "Tatar"),
+  TranslatedName(LangTgl(), name: "Tatar"),
 ];

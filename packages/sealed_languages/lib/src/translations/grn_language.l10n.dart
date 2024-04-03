@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 111 translations for a Guaraní language:
+/// Provides 112 translations for a Guaraní language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -92,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -223,4 +224,5 @@ const grnLanguageTranslations = [
   TranslatedName(LangAfr(), name: "Guarani"),
   TranslatedName(LangInd(), name: "Guarani"),
   TranslatedName(LangMsa(), name: "Guarani"),
+  TranslatedName(LangTgl(), name: "Guarani"),
 ];

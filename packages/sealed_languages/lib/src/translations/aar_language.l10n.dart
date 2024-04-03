@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Afar language:
+/// Provides 96 translations for a Afar language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -82,6 +82,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -192,4 +193,5 @@ const aarLanguageTranslations = [
   TranslatedName(LangMsa(), name: "Afar"),
   TranslatedName(LangNld(), name: "Afar"),
   TranslatedName(LangTur(), name: "Afarca"),
+  TranslatedName(LangTgl(), name: "Afar"),
 ];

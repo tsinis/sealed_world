@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 111 translations for a Tajik language:
+/// Provides 112 translations for a Tajik language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -91,6 +91,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -222,4 +223,5 @@ const tgkLanguageTranslations = [
   TranslatedName(LangYor(), name: "Tàjíìkì"),
   TranslatedName(LangInd(), name: "Tajik"),
   TranslatedName(LangMsa(), name: "Tajik"),
+  TranslatedName(LangTgl(), name: "Tajik"),
 ];

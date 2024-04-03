@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Sundanese language:
+/// Provides 113 translations for a Sundanese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -225,4 +226,5 @@ const sunLanguageTranslations = [
   TranslatedName(LangSom(), name: "Suudaaniis"),
   TranslatedName(LangSun(), name: "Basa Sunda"),
   TranslatedName(LangTuk(), name: "sundan dili"),
+  TranslatedName(LangTgl(), name: "Sundanese"),
 ];

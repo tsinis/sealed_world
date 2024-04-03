@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Inuktitut language:
+/// Provides 106 translations for a Inuktitut language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -87,6 +87,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -211,4 +212,5 @@ const ikuLanguageTranslations = [
   TranslatedName(LangInd(), name: "Inuktitut"),
   TranslatedName(LangMsa(), name: "Inuktitut"),
   TranslatedName(LangNld(), name: "Inuktitut"),
+  TranslatedName(LangTgl(), name: "Inuktitut"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Irish language:
+/// Provides 120 translations for a Irish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -97,6 +97,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -237,4 +238,5 @@ const gleLanguageTranslations = [
   TranslatedName(LangTuk(), name: "irland dili"),
   TranslatedName(LangTat(), name: "ирланд"),
   TranslatedName(LangWol(), name: "Irlànde"),
+  TranslatedName(LangTgl(), name: "Irish"),
 ];

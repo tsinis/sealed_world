@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 90 translations for a Zhuang (Chuang) language:
+/// Provides 91 translations for a Zhuang (Chuang) language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -77,6 +77,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -181,4 +182,5 @@ const zhaLanguageTranslations = [
   TranslatedName(LangNld(), name: "Zhuang"),
   TranslatedName(LangMsa(), name: "Zhuang"),
   TranslatedName(LangAfr(), name: "Zhuang"),
+  TranslatedName(LangTgl(), name: "Zhuang"),
 ];

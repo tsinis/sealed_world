@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 124 translations for a Khmer language:
+/// Provides 125 translations for a Khmer language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -104,6 +104,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -248,4 +249,5 @@ const khmLanguageTranslations = [
   TranslatedName(LangInd(), name: "Khmer"),
   TranslatedName(LangMsa(), name: "Khmer"),
   TranslatedName(LangNld(), name: "Khmer"),
+  TranslatedName(LangTgl(), name: "Khmer"),
 ];

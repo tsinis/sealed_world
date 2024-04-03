@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 102 translations for a Volapük language:
+/// Provides 103 translations for a Volapük language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -87,6 +87,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -206,4 +207,5 @@ const volLanguageTranslations = [
   TranslatedName(LangMsa(), name: "Volapük"),
   TranslatedName(LangNld(), name: "Volapük"),
   TranslatedName(LangTur(), name: "Volapük"),
+  TranslatedName(LangTgl(), name: "Volapük"),
 ];

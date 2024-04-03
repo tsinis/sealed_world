@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Pashto (Pushto) language:
+/// Provides 117 translations for a Pashto (Pushto) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -93,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -230,4 +231,5 @@ const pusLanguageTranslations = [
   TranslatedName(LangCym(), name: "Pushto"),
   TranslatedName(LangInd(), name: "Pashto"),
   TranslatedName(LangMsa(), name: "Pashto"),
+  TranslatedName(LangTgl(), name: "Pashto"),
 ];

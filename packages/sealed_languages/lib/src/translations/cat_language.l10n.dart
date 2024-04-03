@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 117 translations for a Catalan language:
+/// Provides 118 translations for a Catalan language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -234,4 +235,5 @@ const catLanguageTranslations = [
   TranslatedName(LangTuk(), name: "katalan dili"),
   TranslatedName(LangTat(), name: "каталан"),
   TranslatedName(LangWol(), name: "Katalan"),
+  TranslatedName(LangTgl(), name: "Catalan"),
 ];

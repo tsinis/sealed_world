@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 91 translations for a Twi language:
+/// Provides 92 translations for a Twi language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -79,6 +79,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -184,4 +185,5 @@ const twiLanguageTranslations = [
   TranslatedName(LangInd(), name: "Twi"),
   TranslatedName(LangMsa(), name: "Twi"),
   TranslatedName(LangNld(), name: "Twi"),
+  TranslatedName(LangTgl(), name: "Twi"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Norwegian Nynorsk language:
+/// Provides 115 translations for a Norwegian Nynorsk language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -95,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -231,4 +232,5 @@ const nnoLanguageTranslations = [
   TranslatedName(LangSom(), name: "Nawriijiga Nynorsk"),
   TranslatedName(LangTuk(), name: "norwegiýa nýunorsk dili"),
   TranslatedName(LangYor(), name: "Nọ́ọ́wè Nínọ̀sìkì"),
+  TranslatedName(LangTgl(), name: "Norwegian Nynorsk"),
 ];

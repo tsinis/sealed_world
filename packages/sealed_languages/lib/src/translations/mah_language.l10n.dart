@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Marshallese language:
+/// Provides 104 translations for a Marshallese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -87,6 +87,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -177,11 +178,7 @@ const mahLanguageTranslations = [
   TranslatedName(LangBel(), name: "маршальская"),
   TranslatedName(LangChe(), name: "маршаллийн"),
   TranslatedName(LangEus(), name: "marshallera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤃𞤢𞤪𞤧𞤢𞤤𞤫𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤃𞤢𞤪𞤧𞤢𞤤𞤫𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "marshallesiskt"),
   TranslatedName(LangGlg(), name: "marshalés"),
   TranslatedName(LangHye(), name: "մարշալերեն"),
@@ -211,4 +208,5 @@ const mahLanguageTranslations = [
   TranslatedName(LangUzb(), name: "marshall"),
   TranslatedName(LangYor(), name: "Èdè Mashali"),
   TranslatedName(LangZul(), name: "isi-Marshallese"),
+  TranslatedName(LangTgl(), name: "Marshallese"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 115 translations for a Assamese language:
+/// Provides 116 translations for a Assamese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -94,6 +94,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -230,4 +231,5 @@ const asmLanguageTranslations = [
   TranslatedName(LangTuk(), name: "assam dili"),
   TranslatedName(LangTat(), name: "ассам"),
   TranslatedName(LangWol(), name: "Asame"),
+  TranslatedName(LangTgl(), name: "Assamese"),
 ];

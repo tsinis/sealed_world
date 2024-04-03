@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Chechen language:
+/// Provides 105 translations for a Chechen language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -88,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -209,4 +210,5 @@ const cheLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Chechen"),
   TranslatedName(LangInd(), name: "Chechen"),
   TranslatedName(LangMsa(), name: "Chechen"),
+  TranslatedName(LangTgl(), name: "Chechen"),
 ];

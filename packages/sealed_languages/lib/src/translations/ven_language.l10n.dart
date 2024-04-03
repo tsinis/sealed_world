@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Venda language:
+/// Provides 102 translations for a Venda language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -84,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -204,4 +205,5 @@ const venLanguageTranslations = [
   TranslatedName(LangInd(), name: "Venda"),
   TranslatedName(LangMsa(), name: "Venda"),
   TranslatedName(LangNld(), name: "Venda"),
+  TranslatedName(LangTgl(), name: "Venda"),
 ];

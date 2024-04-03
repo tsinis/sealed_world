@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 99 translations for a Navajo (Navaho) language:
+/// Provides 100 translations for a Navajo (Navaho) language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -84,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -199,4 +200,5 @@ const navLanguageTranslations = [
   TranslatedName(LangInd(), name: "Navajo"),
   TranslatedName(LangMsa(), name: "Navajo"),
   TranslatedName(LangNld(), name: "Navajo"),
+  TranslatedName(LangTgl(), name: "Navajo"),
 ];

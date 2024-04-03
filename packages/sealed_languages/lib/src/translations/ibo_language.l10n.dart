@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 115 translations for a Igbo language:
+/// Provides 116 translations for a Igbo language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -97,6 +97,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -230,4 +231,5 @@ const iboLanguageTranslations = [
   TranslatedName(LangInd(), name: "Igbo"),
   TranslatedName(LangMsa(), name: "Igbo"),
   TranslatedName(LangNld(), name: "Igbo"),
+  TranslatedName(LangTgl(), name: "Igbo"),
 ];

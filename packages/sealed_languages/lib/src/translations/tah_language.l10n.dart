@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Tahitian language:
+/// Provides 107 translations for a Tahitian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -90,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -217,4 +218,5 @@ const tahLanguageTranslations = [
   TranslatedName(LangTuk(), name: "taiti dili"),
   TranslatedName(LangUzb(), name: "taiti"),
   TranslatedName(LangYor(), name: "Èdè Tahiti"),
+  TranslatedName(LangTgl(), name: "Tahitian"),
 ];

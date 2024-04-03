@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 108 translations for a Telugu language:
+/// Provides 109 translations for a Telugu language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -90,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -216,4 +217,5 @@ const telLanguageTranslations = [
   TranslatedName(LangInd(), name: "Telugu"),
   TranslatedName(LangMsa(), name: "Telugu"),
   TranslatedName(LangNld(), name: "Telugu"),
+  TranslatedName(LangTgl(), name: "Telugu"),
 ];

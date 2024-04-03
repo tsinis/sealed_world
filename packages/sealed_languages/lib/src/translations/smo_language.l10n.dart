@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a Samoan language:
+/// Provides 110 translations for a Samoan language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -92,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -219,4 +220,5 @@ const smoLanguageTranslations = [
   TranslatedName(LangTuk(), name: "samoa dili"),
   TranslatedName(LangUzb(), name: "samoa"),
   TranslatedName(LangYor(), name: "Sámóánù"),
+  TranslatedName(LangTgl(), name: "Samoan"),
 ];

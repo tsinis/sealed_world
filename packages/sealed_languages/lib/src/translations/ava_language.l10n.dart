@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Avaric language:
+/// Provides 105 translations for a Avaric language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -88,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -209,4 +210,5 @@ const avaLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Afariki"),
   TranslatedName(LangZul(), name: "isi-Avaric"),
   TranslatedName(LangMsa(), name: "Avaric"),
+  TranslatedName(LangTgl(), name: "Avaric"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Shona language:
+/// Provides 106 translations for a Shona language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -89,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -211,4 +212,5 @@ const snaLanguageTranslations = [
   TranslatedName(LangInd(), name: "Shona"),
   TranslatedName(LangMsa(), name: "Shona"),
   TranslatedName(LangNld(), name: "Shona"),
+  TranslatedName(LangTgl(), name: "Shona"),
 ];

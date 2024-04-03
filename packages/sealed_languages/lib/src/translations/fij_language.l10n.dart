@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Fijian language:
+/// Provides 113 translations for a Fijian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -93,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -223,4 +224,5 @@ const fijLanguageTranslations = [
   TranslatedName(LangTir(), name: "ፊጅያንኛ"),
   TranslatedName(LangTuk(), name: "fiji dili"),
   TranslatedName(LangYor(), name: "Èdè Fiji"),
+  TranslatedName(LangTgl(), name: "Fijian"),
 ];

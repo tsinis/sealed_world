@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 122 translations for a Tamil language:
+/// Provides 123 translations for a Tamil language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -103,6 +103,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -244,4 +245,5 @@ const tamLanguageTranslations = [
   TranslatedName(LangInd(), name: "Tamil"),
   TranslatedName(LangMsa(), name: "Tamil"),
   TranslatedName(LangNld(), name: "Tamil"),
+  TranslatedName(LangTgl(), name: "Tamil"),
 ];

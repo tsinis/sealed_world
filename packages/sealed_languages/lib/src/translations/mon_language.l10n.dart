@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Mongolian language:
+/// Provides 115 translations for a Mongolian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -94,6 +94,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -233,4 +234,5 @@ const monLanguageTranslations = [
   TranslatedName(LangTat(), name: "монгол"),
   TranslatedName(LangWol(), name: "Mongoliye"),
   TranslatedName(LangYor(), name: "Mòngólíà"),
+  TranslatedName(LangTgl(), name: "Mongolian"),
 ];

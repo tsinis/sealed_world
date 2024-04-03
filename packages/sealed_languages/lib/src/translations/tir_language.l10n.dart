@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 111 translations for a Tigrinya language:
+/// Provides 112 translations for a Tigrinya language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -92,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -222,4 +223,5 @@ const tirLanguageTranslations = [
   TranslatedName(LangInd(), name: "Tigrinya"),
   TranslatedName(LangMsa(), name: "Tigrinya"),
   TranslatedName(LangNld(), name: "Tigrinya"),
+  TranslatedName(LangTgl(), name: "Tigrinya"),
 ];

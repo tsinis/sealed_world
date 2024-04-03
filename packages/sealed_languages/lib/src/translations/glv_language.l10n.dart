@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Manx language:
+/// Provides 107 translations for a Manx language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -89,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -213,4 +214,5 @@ const glvLanguageTranslations = [
   TranslatedName(LangInd(), name: "Manx"),
   TranslatedName(LangMsa(), name: "Manx"),
   TranslatedName(LangNld(), name: "Manx"),
+  TranslatedName(LangTgl(), name: "Manx"),
 ];

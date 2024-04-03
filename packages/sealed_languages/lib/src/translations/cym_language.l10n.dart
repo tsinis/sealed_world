@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Welsh language:
+/// Provides 115 translations for a Welsh language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -93,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -228,4 +229,5 @@ const cymLanguageTranslations = [
   TranslatedName(LangWol(), name: "Wels"),
   TranslatedName(LangInd(), name: "Welsh"),
   TranslatedName(LangNld(), name: "Welsh"),
+  TranslatedName(LangTgl(), name: "Welsh"),
 ];

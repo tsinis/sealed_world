@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 120 translations for a Hausa language:
+/// Provides 121 translations for a Hausa language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -99,6 +99,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -239,4 +240,5 @@ const hauLanguageTranslations = [
   TranslatedName(LangInd(), name: "Hausa"),
   TranslatedName(LangMsa(), name: "Hausa"),
   TranslatedName(LangNld(), name: "Hausa"),
+  TranslatedName(LangTgl(), name: "Hausa"),
 ];

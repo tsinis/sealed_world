@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Afrikaans language:
+/// Provides 119 translations for a Afrikaans language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -95,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -234,4 +235,5 @@ const afrLanguageTranslations = [
   TranslatedName(LangInd(), name: "Afrikaans"),
   TranslatedName(LangMsa(), name: "Afrikaans"),
   TranslatedName(LangNld(), name: "Afrikaans"),
+  TranslatedName(LangTgl(), name: "Afrikaans"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 110 translations for a Swahili language:
+/// Provides 111 translations for a Swahili language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -93,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -224,4 +225,5 @@ const swaLanguageTranslations = [
   TranslatedName(LangInd(), name: "Swahili"),
   TranslatedName(LangMsa(), name: "Swahili"),
   TranslatedName(LangNld(), name: "Swahili"),
+  TranslatedName(LangTgl(), name: "Swahili"),
 ];

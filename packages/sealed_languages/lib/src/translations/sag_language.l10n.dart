@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Sango language:
+/// Provides 101 translations for a Sango language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -87,6 +87,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -202,4 +203,5 @@ const sagLanguageTranslations = [
   TranslatedName(LangMsa(), name: "Sango"),
   TranslatedName(LangNld(), name: "Sango"),
   TranslatedName(LangTur(), name: "Sango"),
+  TranslatedName(LangTgl(), name: "Sango"),
 ];

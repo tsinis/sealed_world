@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a Quechua language:
+/// Provides 110 translations for a Quechua language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -90,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -218,4 +219,5 @@ const queLanguageTranslations = [
   TranslatedName(LangInd(), name: "Quechua"),
   TranslatedName(LangMsa(), name: "Quechua"),
   TranslatedName(LangNld(), name: "Quechua"),
+  TranslatedName(LangTgl(), name: "Quechua"),
 ];

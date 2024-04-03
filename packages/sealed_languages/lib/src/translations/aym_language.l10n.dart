@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Aymara language:
+/// Provides 105 translations for a Aymara language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -89,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -209,4 +210,5 @@ const aymLanguageTranslations = [
   TranslatedName(LangMsa(), name: "Aymara"),
   TranslatedName(LangNld(), name: "Aymara"),
   TranslatedName(LangTur(), name: "Aymaraca"),
+  TranslatedName(LangTgl(), name: "Aymara"),
 ];

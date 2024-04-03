@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Turkmen language:
+/// Provides 117 translations for a Turkmen language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -94,6 +94,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -231,4 +232,5 @@ const tukLanguageTranslations = [
   TranslatedName(LangWol(), name: "Tirkmen"),
   TranslatedName(LangInd(), name: "Turkmen"),
   TranslatedName(LangMsa(), name: "Turkmen"),
+  TranslatedName(LangTgl(), name: "Turkmen"),
 ];

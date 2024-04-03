@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Interlingua language:
+/// Provides 104 translations for a Interlingua language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -88,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -211,4 +212,5 @@ const inaLanguageTranslations = [
   TranslatedName(LangInd(), name: "Interlingua"),
   TranslatedName(LangMsa(), name: "Interlingua"),
   TranslatedName(LangNld(), name: "Interlingua"),
+  TranslatedName(LangTgl(), name: "Interlingua"),
 ];

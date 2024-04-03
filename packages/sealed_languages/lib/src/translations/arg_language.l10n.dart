@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 107 translations for a Aragonese language:
+/// Provides 108 translations for a Aragonese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -90,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -215,4 +216,5 @@ const argLanguageTranslations = [
   TranslatedName(LangUzb(), name: "aragon"),
   TranslatedName(LangYor(), name: "Èdè Aragoni"),
   TranslatedName(LangZul(), name: "isi-Aragonese"),
+  TranslatedName(LangTgl(), name: "Aragonese"),
 ];

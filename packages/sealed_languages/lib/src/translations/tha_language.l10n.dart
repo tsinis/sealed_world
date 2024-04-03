@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 128 translations for a Thai language:
+/// Provides 129 translations for a Thai language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -107,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -256,4 +257,5 @@ const thaLanguageTranslations = [
   TranslatedName(LangCym(), name: "Tai"),
   TranslatedName(LangInd(), name: "Thai"),
   TranslatedName(LangMsa(), name: "Thai"),
+  TranslatedName(LangTgl(), name: "Thai"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 107 translations for a Cornish language:
+/// Provides 108 translations for a Cornish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -91,6 +91,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -215,4 +216,5 @@ const corLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Kọ́nììṣì"),
   TranslatedName(LangMsa(), name: "Cornish"),
   TranslatedName(LangNld(), name: "Cornisch"),
+  TranslatedName(LangTgl(), name: "Cornish"),
 ];
