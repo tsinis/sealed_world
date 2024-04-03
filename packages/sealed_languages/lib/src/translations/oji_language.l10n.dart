@@ -173,4 +173,6 @@ const ojiLanguageTranslations = [
   TranslatedName(LangCym(), name: "Ojibwa"),
   TranslatedName(LangInd(), name: "Ojibwa"),
   TranslatedName(LangNld(), name: "Ojibwa"),
+  TranslatedName(LangMsa(), name: "Ojibwe"),
+  TranslatedName(LangAfr(), name: "Ojibwe"),
 ];

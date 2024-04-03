@@ -179,4 +179,6 @@ const tglLanguageTranslations = [
   TranslatedName(LangCym(), name: "Tagalog"),
   TranslatedName(LangInd(), name: "Tagalog"),
   TranslatedName(LangNld(), name: "Tagalog"),
+  TranslatedName(LangMsa(), name: "Tagalog"),
+  TranslatedName(LangAfr(), name: "Tagalog"),
 ];

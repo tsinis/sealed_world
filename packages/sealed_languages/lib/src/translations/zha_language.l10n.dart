@@ -177,4 +177,6 @@ const zhaLanguageTranslations = [
   TranslatedName(LangCym(), name: "Zhuang"),
   TranslatedName(LangInd(), name: "Zhuang"),
   TranslatedName(LangNld(), name: "Zhuang"),
+  TranslatedName(LangMsa(), name: "Zhuang"),
+  TranslatedName(LangAfr(), name: "Zhuang"),
 ];

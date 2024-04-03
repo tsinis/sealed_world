@@ -171,4 +171,6 @@ const creLanguageTranslations = [
   TranslatedName(LangUzb(), name: "kri"),
   TranslatedName(LangZul(), name: "isi-Cree"),
   TranslatedName(LangNld(), name: "Cree"),
+  TranslatedName(LangMsa(), name: "Cree"),
+  TranslatedName(LangAfr(), name: "Cree"),
 ];

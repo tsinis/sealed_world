@@ -167,4 +167,6 @@ const pliLanguageTranslations = [
   TranslatedName(LangInd(), name: "Pali"),
   TranslatedName(LangNld(), name: "Pali"),
   TranslatedName(LangTur(), name: "Pali"),
+  TranslatedName(LangMsa(), name: "Pali"),
+  TranslatedName(LangAfr(), name: "Pali"),
 ];

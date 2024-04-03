@@ -179,4 +179,5 @@ const aveLanguageTranslations = [
   TranslatedName(LangUzb(), name: "avesto"),
   TranslatedName(LangZul(), name: "isi-Avestan"),
   TranslatedName(LangMsa(), name: "Avestan"),
+  TranslatedName(LangAfr(), name: "Avestan"),
 ];

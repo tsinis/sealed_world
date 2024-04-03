@@ -208,6 +208,7 @@ export "src/translations/zul_language.l10n.dart";
 /// such as (Old) Church Slavonic, Volapük, etc. Every language contains more
 /// than 77 translations of it's name to other languages.
 const kSealedLanguagesSupportedLanguages = [
+  LangAfr(),
   LangAmh(),
   LangAra(),
   LangAsm(),
@@ -219,6 +220,7 @@ const kSealedLanguagesSupportedLanguages = [
   LangBul(),
   LangCat(),
   LangCes(),
+  LangCym(),
   LangDan(),
   LangDeu(),
   LangEll(),
@@ -236,6 +238,7 @@ const kSealedLanguagesSupportedLanguages = [
   LangHrv(),
   LangHun(),
   LangHye(),
+  LangInd(),
   LangIsl(),
   LangIta(),
   LangJpn(),
@@ -253,8 +256,10 @@ const kSealedLanguagesSupportedLanguages = [
   LangMar(),
   LangMkd(),
   LangMon(),
+  LangMsa(),
   LangMya(),
   LangNep(),
+  LangNld(),
   LangNno(),
   LangNob(),
   LangNor(),
@@ -278,6 +283,7 @@ const kSealedLanguagesSupportedLanguages = [
   LangTel(),
   LangTha(),
   LangTon(),
+  LangTur(),
   LangUig(),
   LangUkr(),
   LangUrd(),

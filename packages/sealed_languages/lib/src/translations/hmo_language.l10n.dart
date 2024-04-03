@@ -172,4 +172,6 @@ const hmoLanguageTranslations = [
   TranslatedName(LangInd(), name: "Hiri Motu"),
   TranslatedName(LangNld(), name: "Hiri Motu"),
   TranslatedName(LangTur(), name: "Hiri motu"),
+  TranslatedName(LangMsa(), name: "Hiri Motu"),
+  TranslatedName(LangAfr(), name: "Hiri Motu"),
 ];

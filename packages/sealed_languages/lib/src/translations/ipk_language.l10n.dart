@@ -175,4 +175,6 @@ const ipkLanguageTranslations = [
   TranslatedName(LangUzb(), name: "inupiaq"),
   TranslatedName(LangZul(), name: "i-Inupiaq"),
   TranslatedName(LangNld(), name: "Inupiaq"),
+  TranslatedName(LangMsa(), name: "Inupiaq"),
+  TranslatedName(LangAfr(), name: "Inupiaq"),
 ];
