@@ -5,6 +5,7 @@ export "src/data/natural_language_families.data.dart";
 export "src/data/natural_languages.data.dart";
 export "src/data/scripts.data.dart";
 export "src/helpers/extensions/iso_standardized_string_extension.dart";
+export "src/helpers/extensions/iso_translated_iterable_extension.dart";
 export "src/helpers/extensions/sealed_world_iterable_extension.dart";
 export "src/helpers/extensions/sealed_world_json_string_extension.dart";
 export "src/helpers/extensions/sealed_world_object_extension.dart";
