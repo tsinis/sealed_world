@@ -163,7 +163,7 @@ const khmLanguageTranslations = [
   TranslatedName(LangHrv(), name: "kmerski"),
   TranslatedName(LangHun(), name: "kambodzsai"),
   TranslatedName(LangHye(), name: "քմերերեն"),
-  TranslatedName(LangIbo(), name: "Keme, Etiti"),
+  TranslatedName(LangIbo(), name: "Keme"),
   TranslatedName(LangIsl(), name: "kmer"),
   TranslatedName(LangIta(), name: "khmer"),
   TranslatedName(LangJpn(), name: "クメール語"),

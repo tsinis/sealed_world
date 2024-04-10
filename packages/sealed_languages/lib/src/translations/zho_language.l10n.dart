@@ -198,7 +198,7 @@ const zhoLanguageTranslations = [
   TranslatedName(LangLit(), name: "kinų"),
   TranslatedName(LangLub(), name: "shinɛ"),
   TranslatedName(LangLav(), name: "ķīniešu"),
-  TranslatedName(LangMlg(), name: "Sinoa, Mandarin"),
+  TranslatedName(LangMlg(), name: "Sinoa"),
   TranslatedName(LangMkd(), name: "кинески"),
   TranslatedName(LangMal(), name: "ചൈനീസ്"),
   TranslatedName(LangMon(), name: "хятад"),

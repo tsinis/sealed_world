@@ -158,7 +158,7 @@ const kalLanguageTranslations = [
   TranslatedName(LangNob(), name: "grønlandsk"),
   TranslatedName(LangNep(), name: "कालालिसुट"),
   TranslatedName(LangNld(), name: "Groenlands"),
-  TranslatedName(LangNno(), name: "kalaallisut; grønlandsk"),
+  TranslatedName(LangNno(), name: "kalaallisut"),
   TranslatedName(LangNor(), name: "grønlandsk"),
   TranslatedName(LangOri(), name: "ଗ୍ରୀନଲାଣ୍ଡିକ୍"),
   TranslatedName(LangPan(), name: "ਕਲਾਅੱਲੀਸੁਟ"),

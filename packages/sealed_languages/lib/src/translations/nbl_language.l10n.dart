@@ -149,7 +149,7 @@ const nblLanguageTranslations = [
   TranslatedName(LangMkd(), name: "јужен ндебеле"),
   TranslatedName(LangMal(), name: "ദക്ഷിണ നെഡിബിൾ"),
   TranslatedName(LangMar(), name: "दक्षिणात्य देबेली"),
-  TranslatedName(LangMlt(), name: "Ndebele, t’Isfel"),
+  TranslatedName(LangMlt(), name: "Ndebele"),
   TranslatedName(LangNob(), name: "sør-ndebele"),
   TranslatedName(LangNld(), name: "Zuid-Ndbele"),
   TranslatedName(LangNno(), name: "sør-ndebele"),

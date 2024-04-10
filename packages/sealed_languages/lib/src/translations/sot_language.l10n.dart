@@ -162,7 +162,7 @@ const sotLanguageTranslations = [
   TranslatedName(LangMal(), name: "തെക്കൻ സോതോ"),
   TranslatedName(LangMar(), name: "सेसोथो"),
   TranslatedName(LangMsa(), name: "Sotho Selatan"),
-  TranslatedName(LangMlt(), name: "Soto, t’Isfel"),
+  TranslatedName(LangMlt(), name: "Soto"),
   TranslatedName(LangNob(), name: "sør-sotho"),
   TranslatedName(LangNld(), name: "Zuid-Sotho"),
   TranslatedName(LangNno(), name: "sørsotho"),

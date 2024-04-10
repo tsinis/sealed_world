@@ -189,7 +189,7 @@ const chuLanguageTranslations = [
     script: ScriptAdlm(),
   ),
   TranslatedName(LangFao(), name: "kirkju sláviskt"),
-  TranslatedName(LangHye(), name: "սլավոներեն, եկեղեցական"),
+  TranslatedName(LangHye(), name: "սլավոներեն"),
   TranslatedName(LangIna(), name: "slavo ecclesiastic"),
   TranslatedName(LangIbo(), name: "Church slavic"),
   TranslatedName(LangJav(), name: "Slavia Gerejani"),

@@ -207,7 +207,7 @@ const myaLanguageTranslations = [
   TranslatedName(LangRon(), name: "birmaneză"),
   TranslatedName(LangRus(), name: "бирманский"),
   TranslatedName(LangSme(), name: "burmagiella"),
-  TranslatedName(LangSag(), name: "Miamära, Birimäni"),
+  TranslatedName(LangSag(), name: "Miamära"),
   TranslatedName(LangSin(), name: "බුරුම"),
   TranslatedName(LangSlk(), name: "barmčina"),
   TranslatedName(LangSlv(), name: "burmanščina"),
