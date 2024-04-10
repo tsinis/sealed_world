@@ -1,5 +1,6 @@
 import "../../interfaces/iso_standardized.dart";
 import "../../model/core/upper_case_iso_map.dart";
+import "sealed_world_object_extension.dart";
 
 /// Extension methods for the [UpperCaseIsoMap] class.
 extension UpperCaseIsoMapExtension<V extends IsoStandardized>
@@ -87,7 +88,7 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   /// - Returns: A new instance of [UpperCaseIsoMap] containing the provided ISO
   ///   codes and values, with keys standardized to uppercase.
   UpperCaseIsoMap<V> copyWith(Map<String, V> other, {V? defaultValue}) {
-    final upperCase = other.map((k, v) => MapEntry(k.trim().toUpperCase(), v));
+    final upperCase = other.map((k, v) => MapEntry(k.toUpperCaseIsoCode(), v));
     final newMap = Map.fromEntries(entries.followedBy(upperCase.entries));
     final list = List<String>.unmodifiable(newMap.keys);
     final short = list.map((key) => key.length).reduce((a, b) => a < b ? a : b);

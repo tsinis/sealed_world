@@ -25,6 +25,7 @@ export "src/interfaces/named.dart";
 export "src/interfaces/translated.dart";
 export "src/model/core/basic_locale.dart";
 export "src/model/core/upper_case_iso_map.dart";
+export "src/model/core/upper_case_map.dart";
 export "src/model/language/language.dart";
 export "src/model/language_family/language_family.dart";
 export "src/model/script/writing_system.dart";

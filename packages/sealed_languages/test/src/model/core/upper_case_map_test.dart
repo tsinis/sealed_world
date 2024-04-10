@@ -1,51 +1,27 @@
 import "dart:collection" show MapView;
 
-import "package:sealed_languages/src/data/natural_languages.data.dart";
-import "package:sealed_languages/src/interfaces/iso_standardized.dart";
-import "package:sealed_languages/src/model/core/upper_case_iso_map.dart";
+import "package:sealed_languages/src/model/core/upper_case_map.dart";
 import "package:test/test.dart";
 
-void main() => group("$UpperCaseIsoMap", () {
+import "../../test_data.dart";
+
+void main() => group("$UpperCaseMap", () {
       const eng = "ENG";
       const nonEng = "De";
-      const defaultMap = {eng: LangEng()};
-      const map = UpperCaseIsoMap(defaultMap, exactLength: null);
+      const defaultMap = {eng: TestData.cn};
+      const map = UpperCaseMap(defaultMap);
 
       test("interfaces", () {
-        expect(map, isA<Map<String, IsoStandardized>>());
-        expect(map, isA<MapView<String, IsoStandardized>>());
+        expect(map, isA<Map<String, TestData>>());
+        expect(map, isA<MapView<String, TestData>>());
+        expect(map, isA<Map<String, Object>>());
+        expect(map, isA<MapView<String, Object>>());
       });
 
       test("should return defaultValue when key is not present", () {
-        const defaultValue = LangRus();
-        const mapOther =
-            UpperCaseIsoMap(defaultMap, defaultValue: defaultValue);
+        const defaultValue = TestData.rus;
+        const mapOther = UpperCaseMap(defaultMap, defaultValue: defaultValue);
         expect(mapOther[nonEng], defaultValue);
-      });
-
-      test("should return null if there is no exactLength match", () {
-        const mapOther = UpperCaseIsoMap(defaultMap, exactLength: 1);
-        expect(mapOther[eng.toLowerCase()], isNull);
-      });
-
-      test("should return null if there is no maxLength match", () {
-        const mapOther = UpperCaseIsoMap(
-          defaultMap,
-          exactLength: null,
-          maxLength: 2,
-          minLength: 1,
-        );
-        expect(mapOther[eng], isNull);
-      });
-
-      test("should return null if there is no minLength match", () {
-        const mapOther = UpperCaseIsoMap(
-          defaultMap,
-          exactLength: null,
-          maxLength: 5,
-          minLength: 4,
-        );
-        expect(mapOther[eng], isNull);
       });
 
       test(
@@ -55,7 +31,7 @@ void main() => group("$UpperCaseIsoMap", () {
 
       test("should interpret keys as ISO standardized codes", () {
         expect(map[eng], isNotNull);
-        expect(map[eng]?.name, equals("English"));
+        expect(map[eng]?.name, equals(TestData.cn.name));
       });
 
       test(
@@ -70,7 +46,7 @@ void main() => group("$UpperCaseIsoMap", () {
 
       test(
         "toString should return a string representation of the map",
-        () => expect(map.toString(), '{$eng: Language(name: "English")}'),
+        () => expect(map.toString(), "{$eng: TestData.cn}"),
       );
 
       group("standard map methods", () {
@@ -149,7 +125,7 @@ void main() => group("$UpperCaseIsoMap", () {
         test(
           "putIfAbsent",
           () => expect(
-            () => map.putIfAbsent(nonEng, LangEng.new),
+            () => map.putIfAbsent(nonEng, () => TestData.cn),
             throwsUnsupportedError,
           ),
         );
