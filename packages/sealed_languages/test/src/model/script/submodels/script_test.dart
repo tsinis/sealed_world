@@ -38,6 +38,7 @@ void main() => group("$Script", () {
             expect(element.code, isNotEmpty);
             expect(element.name, isA<String>());
             expect(element.name, isNotEmpty);
+            expect(element.internationalName, element.name);
             expect(element.date, isA<String>());
             expect(element.date, isNotEmpty);
             if (element.pva == null) return expect(element.pva, isNull);

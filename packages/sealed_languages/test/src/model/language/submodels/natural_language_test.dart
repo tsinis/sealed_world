@@ -52,6 +52,7 @@ void main() => group("$NaturalLanguage", () {
             expect(element.codeShort, isA<String>());
             expect(element.codeShort, isNotEmpty);
             expect(element.codeOther, element.codeShort);
+            expect(element.internationalName, element.name);
             expect(element.isRightToLeft, isA<bool>());
             expect(element.namesNative, isA<List<String>>());
             expect(element.namesNative, isNotEmpty);
