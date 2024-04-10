@@ -2,8 +2,7 @@ import "../helpers/extensions/translated_name_extension.dart";
 import "../interfaces/iso_standardized.dart";
 import "../interfaces/json_encodable.dart";
 import "../interfaces/named.dart";
-import "language/language.dart";
-import "script/writing_system.dart";
+import "core/basic_locale.dart";
 
 /// A class representing a translated name of a country or region.
 ///
@@ -14,15 +13,15 @@ import "script/writing_system.dart";
 /// The [fullName] property represents the full/official translation.
 /// The [countryCode] property represents the regional code, that might be used
 /// for regional differences in the [language] translation.
-class TranslatedName implements Named<String>, JsonEncodable<TranslatedName> {
+class TranslatedName extends BasicLocale implements Named<String> {
   /// Creates a new [TranslatedName] instance with the given language, name
   /// and optional full name and country code.
   const TranslatedName(
-    this.language, {
+    super.language, {
     required this.name,
     this.fullName,
-    this.countryCode,
-    this.script,
+    super.countryCode,
+    super.script,
   })  : assert(name.length > 0, "`name` should not be empty!"),
         assert(
           fullName == null || fullName.length > 0,
@@ -33,13 +32,6 @@ class TranslatedName implements Named<String>, JsonEncodable<TranslatedName> {
               countryCode.length >= IsoStandardized.codeShortLength,
           """`countryCode` have to be at least ${IsoStandardized.codeShortLength} characters long!""",
         );
-
-  /// Represents the natural language of the translation.
-  final NaturalLanguage language;
-
-  /// Represents the regional code, that might be used
-  /// for regional differences in the [language] translation.
-  final String? countryCode;
 
   /// Represents the full/official translation.
   ///
@@ -53,9 +45,6 @@ class TranslatedName implements Named<String>, JsonEncodable<TranslatedName> {
   /// Represents the short/common translation.
   @override
   final String name;
-
-  /// Represents the writing system (script) of the translation.
-  final Script? script;
 
   @override
   String toString({bool short = true}) => short
