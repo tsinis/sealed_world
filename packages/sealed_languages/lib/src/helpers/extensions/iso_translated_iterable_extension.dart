@@ -1,4 +1,5 @@
 import "../../interfaces/translated.dart";
+import "../../model/core/basic_locale.dart";
 import "../../model/language/language.dart";
 import "../../model/script/writing_system.dart";
 import "../../model/translated_name.dart";
@@ -42,9 +43,11 @@ extension IsoTranslatedIterableExtension<T extends TranslatedName,
     final map = <I, T>{};
     for (final item in this) {
       final translation = item.maybeTranslation(
-        language,
-        countryCode: countryCode,
-        script: script,
+        BasicLocale(
+          language,
+          countryCode: countryCode,
+          script: script,
+        ),
         useLanguageFallback: useLanguageFallback,
       );
       if (translation != null) map[item] = translation;

@@ -42,7 +42,8 @@ final class JsonUtils {
       final itemFromCode = _instanceFromCode(item.code);
       if (itemFromCode == null) continue; // Might be more items in the source.
       print("\nExtracting translations for: ${itemFromCode.name}\n");
-      final english = englishData[itemFromCode] ?? item.translation(eng).name;
+      final english = englishData[itemFromCode] ??
+          item.translation(const BasicLocale(eng)).name;
       final translations = package.translations(item.code).toSet();
       if (translations.isEmpty)
         translations.add(TranslatedName(eng, name: english));

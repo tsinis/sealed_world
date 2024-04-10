@@ -2,6 +2,7 @@ import "package:sealed_languages/language_translations.dart";
 import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/data/scripts.data.dart";
 import "package:sealed_languages/src/helpers/extensions/translated_extension.dart";
+import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
@@ -17,15 +18,13 @@ void main() => group("TranslatedExtension", () {
           () {
             expect(
               kongo.maybeTranslation(
-                portuguese,
-                countryCode: countryCode,
+                const BasicLocale(portuguese, countryCode: countryCode),
               ),
               isNotNull,
             );
             expect(
               kongo.maybeTranslation(
-                portuguese,
-                countryCode: "",
+                const BasicLocale(portuguese, countryCode: "000"),
                 useLanguageFallback: false,
               ),
               isNull,
@@ -38,15 +37,13 @@ void main() => group("TranslatedExtension", () {
           () {
             expect(
               kongo.maybeTranslation(
-                bosnia,
-                script: const ScriptCyrs(),
+                const BasicLocale(bosnia, script: ScriptCyrs()),
               ),
               isNotNull,
             );
             expect(
               kongo.maybeTranslation(
-                bosnia,
-                script: const ScriptCyrs(),
+                const BasicLocale(bosnia, script: ScriptCyrs()),
                 useLanguageFallback: false,
               ),
               isNull,
@@ -57,9 +54,12 @@ void main() => group("TranslatedExtension", () {
         test(
           "should provide different translations if country code is provided",
           () {
-            final withoutCode = kongo.maybeTranslation(portuguese)?.name;
+            final withoutCode =
+                kongo.maybeTranslation(const BasicLocale(portuguese))?.name;
             final withCode = kongo
-                .maybeTranslation(portuguese, countryCode: countryCode)
+                .maybeTranslation(
+                  const BasicLocale(portuguese, countryCode: countryCode),
+                )
                 ?.name;
 
             expect(withCode, isNotEmpty);
@@ -71,9 +71,12 @@ void main() => group("TranslatedExtension", () {
         test(
           "should provide different translations if script code is provided",
           () {
-            final withoutCode = kongo.maybeTranslation(bosnia)?.name;
+            final withoutCode =
+                kongo.maybeTranslation(const BasicLocale(bosnia))?.name;
             final withCode = kongo
-                .maybeTranslation(bosnia, script: const ScriptCyrl())
+                .maybeTranslation(
+                  const BasicLocale(bosnia, script: ScriptCyrl()),
+                )
                 ?.name;
 
             expect(withCode, isNotEmpty);
@@ -85,18 +88,19 @@ void main() => group("TranslatedExtension", () {
 
       test("translation should always provide at least eng translation", () {
         const abkhazia = LangAbk();
-        const nonExistCode = "";
+        const nonExistCode = "000";
         var count = 0;
         for (final value in NaturalLanguage.list) {
           final maybeMissing = value.maybeTranslation(
-            abkhazia,
-            countryCode: nonExistCode,
+            const BasicLocale(abkhazia, countryCode: nonExistCode),
             useLanguageFallback: false,
           );
           if (maybeMissing != null) continue;
           count++;
           expect(
-            value.translation(abkhazia, countryCode: nonExistCode),
+            value.translation(
+              const BasicLocale(abkhazia, countryCode: nonExistCode),
+            ),
             isNotNull,
           );
         }
@@ -109,7 +113,8 @@ void main() => group("TranslatedExtension", () {
 
         for (final value in NaturalLanguage.list) {
           for (final l10n in NaturalLanguage.list) {
-            final hasTranslationForValue = value.maybeTranslation(l10n);
+            final hasTranslationForValue =
+                value.maybeTranslation(BasicLocale(l10n));
             if (hasTranslationForValue != null) {
               map[l10n] = map[l10n]! + 1;
             } else {
@@ -132,8 +137,8 @@ void main() => group("TranslatedExtension", () {
           for (final l10n in kSealedLanguagesSupportedLanguages) {
             if (l10n == const LangEng()) continue;
             expect(
-              language.translation(l10n),
-              isNot(language.translation(const LangEng())),
+              language.translation(BasicLocale(l10n)),
+              isNot(language.translation(const BasicLocale(LangEng()))),
             );
           }
         }
