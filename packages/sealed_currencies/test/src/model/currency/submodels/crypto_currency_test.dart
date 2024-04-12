@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:test/test.dart";
 
@@ -10,48 +11,32 @@ void main() => group("$CryptoCurrency", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => CryptoCurrency(code: value.code, name: value.name),
-            isNot(throwsA(isA<AssertionError>())),
-          ),
+          () => CryptoCurrency(code: value.code, name: value.name),
         );
 
-        test(
+        assertTest(
           "empty name",
-          () => expect(
-            () => CryptoCurrency(code: value.code, name: ""),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => CryptoCurrency(code: value.code, name: ""),
         );
 
-        test(
+        assertTest(
           "empty code",
-          () => expect(
-            () => CryptoCurrency(code: "", name: value.name),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => CryptoCurrency(code: "", name: value.name),
         );
 
-        test(
+        assertTest(
           "empty symbol",
-          () => expect(
-            () =>
-                CryptoCurrency(code: value.code, name: value.name, symbol: ""),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => CryptoCurrency(code: value.code, name: value.name, symbol: ""),
         );
 
-        test(
+        assertTest(
           "empty proofType",
-          () => expect(
-            () => CryptoCurrency(
-              code: value.code,
-              name: value.name,
-              proofType: "",
-            ),
-            throwsA(isA<AssertionError>()),
+          () => CryptoCurrency(
+            code: value.code,
+            name: value.name,
+            proofType: "",
           ),
         );
       });

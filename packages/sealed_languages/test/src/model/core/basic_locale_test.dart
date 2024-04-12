@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/basic_locale_extension.dart";
 import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
@@ -14,24 +15,19 @@ void main() => group("$BasicLocale", () {
       );
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => BasicLocale(
-              NaturalLanguage.list.first,
-              countryCode: string,
-              script: Script.list.last,
-            ),
-            isNot(throwsA(isA<AssertionError>())),
+          () => BasicLocale(
+            NaturalLanguage.list.first,
+            countryCode: string,
+            script: Script.list.last,
           ),
+          shouldThrow: false,
         );
 
-        test(
+        assertTest(
           "countryCode length",
-          () => expect(
-            () => BasicLocale(NaturalLanguage.list.last, countryCode: "1"),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => BasicLocale(NaturalLanguage.list.last, countryCode: "1"),
         );
       });
 
