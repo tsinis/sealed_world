@@ -10,6 +10,7 @@ on:
 jobs:
   verify-dart-package:
     env:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       relative_path: packages/${{ inputs.package_name }}
     name: ⏳ Verify ${{ inputs.package_name }} Package (Dart)
     defaults:
@@ -91,7 +92,6 @@ jobs:
           file: ${{ env.relative_path }}/coverage/lcov.info
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
+          token: ${{ secrets.CODECOV_TOKEN }}
           override_branch: ${{ github.base_ref }}
           verbose: true
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
