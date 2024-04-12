@@ -1,8 +1,6 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/currency_translations.dart";
-import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
-import "package:sealed_currencies/src/model/currency/currency.dart";
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 class _FiatCurrencyTest extends FiatCurrency {
@@ -733,18 +731,22 @@ void main() => group("$FiatCurrency", () {
       group("translations", () {
         test("translation should always provide at least eng translation", () {
           const abkhazia = LangAbk();
-          const nonExistCode = "";
+          const nonExistCode = "000";
           var count = 0;
           for (final value in FiatCurrency.list) {
             final maybeMissing = value.maybeTranslation(
-              abkhazia,
-              countryCode: nonExistCode,
+              const BasicLocale(
+                abkhazia,
+                countryCode: nonExistCode,
+              ),
               useLanguageFallback: false,
             );
             if (maybeMissing != null) continue;
             count++;
             expect(
-              value.translation(abkhazia, countryCode: nonExistCode),
+              value.translation(
+                const BasicLocale(abkhazia, countryCode: nonExistCode),
+              ),
               isNotNull,
             );
           }
@@ -758,7 +760,8 @@ void main() => group("$FiatCurrency", () {
 
           for (final l10n in NaturalLanguage.list) {
             for (final value in FiatCurrency.list) {
-              final hasTranslationForValue = value.maybeTranslation(l10n);
+              final hasTranslationForValue =
+                  value.maybeTranslation(BasicLocale(l10n));
               if (hasTranslationForValue != null) map[value] = map[value]! + 1;
             }
           }
@@ -777,8 +780,8 @@ void main() => group("$FiatCurrency", () {
 
           for (final l10n in NaturalLanguage.list) {
             for (final value in FiatCurrency.list) {
-              final hasTranslationForValue = value.maybeTranslation(l10n);
-              if (hasTranslationForValue != null) {
+              final translation = value.maybeTranslation(BasicLocale(l10n));
+              if (translation != null) {
                 map[l10n] = map[l10n]! + 1;
               } else {
                 missing[l10n] = {...?missing[l10n], value};
@@ -808,11 +811,34 @@ void main() => group("$FiatCurrency", () {
             for (final l10n in kSealedCurrenciesSupportedLanguages) {
               if (l10n == const LangEng()) continue;
               expect(
-                currency.translation(l10n),
-                isNot(currency.translation(const LangEng())),
+                currency.translation(BasicLocale(l10n)),
+                isNot(currency.translation(const BasicLocale(LangEng()))),
               );
             }
           }
+        });
+
+        group("commonNamesCacheMap", () {
+          performanceTest(
+            "languages in supported list should have all translations",
+            () {
+              for (final language in kSealedCurrenciesSupportedLanguages) {
+                final cache = FiatCurrency.list.commonNamesCacheMap(
+                  BasicLocale(language, script: language.scripts.first),
+                );
+                expect(cache.length, FiatCurrency.list.length);
+              }
+            },
+          );
+
+          performanceTest(
+            """some languages should have at least 2 translations of it's own name""",
+            () {
+              final cache = FiatCurrency.list
+                  .commonNamesCacheMap(const BasicLocale(LangKal()));
+              expect(cache.length, 2);
+            },
+          );
         });
       });
     });

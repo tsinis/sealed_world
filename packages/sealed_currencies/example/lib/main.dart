@@ -63,7 +63,7 @@ void main() {
   // Prints German translations of all available regular currencies.
   for (final currency in FiatCurrency.list) {
     print(
-      """German name of ${currency.name}: ${currency.maybeTranslation(const LangDeu())?.name}""",
+      """German name of ${currency.name}: ${currency.maybeTranslation(const BasicLocale(LangDeu()))?.name}""",
     );
   }
 
