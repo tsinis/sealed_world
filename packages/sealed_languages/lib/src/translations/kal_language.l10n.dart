@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Kalaallisut (Greenlandic) language:
+/// Provides 106 translations for a Kalaallisut (Greenlandic) language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -41,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -58,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -86,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -98,6 +102,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Western Frisian
 /// - Yoruba
 /// - Zulu.
@@ -153,7 +158,7 @@ const kalLanguageTranslations = [
   TranslatedName(LangNob(), name: "grønlandsk"),
   TranslatedName(LangNep(), name: "कालालिसुट"),
   TranslatedName(LangNld(), name: "Groenlands"),
-  TranslatedName(LangNno(), name: "kalaallisut; grønlandsk"),
+  TranslatedName(LangNno(), name: "kalaallisut"),
   TranslatedName(LangNor(), name: "grønlandsk"),
   TranslatedName(LangOri(), name: "ଗ୍ରୀନଲାଣ୍ଡିକ୍"),
   TranslatedName(LangPan(), name: "ਕਲਾਅੱਲੀਸੁਟ"),
@@ -207,4 +212,9 @@ const kalLanguageTranslations = [
   TranslatedName(LangTir(), name: "ግሪንላንድኛ"),
   TranslatedName(LangTuk(), name: "grenland dili"),
   TranslatedName(LangYor(), name: "Kalaalísùtì"),
+  TranslatedName(LangAfr(), name: "Kalaallisut"),
+  TranslatedName(LangCym(), name: "Kalaallisut"),
+  TranslatedName(LangInd(), name: "Kalaallisut"),
+  TranslatedName(LangMsa(), name: "Kalaallisut"),
+  TranslatedName(LangTgl(), name: "Greenlandico"),
 ];

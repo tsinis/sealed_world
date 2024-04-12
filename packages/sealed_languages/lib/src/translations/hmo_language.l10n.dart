@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 81 translations for a Hiri Motu language:
+/// Provides 88 translations for a Hiri Motu language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -22,6 +23,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Finnish
@@ -35,6 +37,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -49,6 +52,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -72,15 +76,18 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Zulu.
 const hmoLanguageTranslations = [
   TranslatedName(LangEng(), name: "Hiri Motu"),
@@ -164,4 +171,11 @@ const hmoLanguageTranslations = [
   TranslatedName(LangUrd(), name: "ہیری موٹو"),
   TranslatedName(LangUzb(), name: "hiri-motu"),
   TranslatedName(LangZul(), name: "isi-Hiri Motu"),
+  TranslatedName(LangCym(), name: "Hiri Motu"),
+  TranslatedName(LangInd(), name: "Hiri Motu"),
+  TranslatedName(LangNld(), name: "Hiri Motu"),
+  TranslatedName(LangTur(), name: "Hiri motu"),
+  TranslatedName(LangMsa(), name: "Hiri Motu"),
+  TranslatedName(LangAfr(), name: "Hiri Motu"),
+  TranslatedName(LangTgl(), name: "Hiri Motu"),
 ];

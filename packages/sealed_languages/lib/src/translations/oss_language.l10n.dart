@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 108 translations for a Ossetian (Ossetic) language:
+/// Provides 109 translations for a Ossetian (Ossetic) language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -90,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -191,11 +192,7 @@ const ossLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ওছেটিক"),
   TranslatedName(LangBel(), name: "асецінская"),
   TranslatedName(LangChe(), name: "хӀирийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤌𞤧𞥆𞤫𞤼𞤭𞤳𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤌𞤧𞥆𞤫𞤼𞤭𞤳𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "օսերեն"),
   TranslatedName(LangIna(), name: "osseto"),
   TranslatedName(LangIbo(), name: "Osetik"),
@@ -220,4 +217,5 @@ const ossLanguageTranslations = [
   TranslatedName(LangTuk(), name: "osetin dili"),
   TranslatedName(LangUzb(), name: "osetin"),
   TranslatedName(LangYor(), name: "Ọṣẹ́tíìkì"),
+  TranslatedName(LangTgl(), name: "Wikang Osetyo"),
 ];

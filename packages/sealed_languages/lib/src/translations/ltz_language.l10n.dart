@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Luxembourgish (Letzeburgesch) language:
+/// Provides 115 translations for a Luxembourgish (Letzeburgesch) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -93,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -232,4 +233,5 @@ const ltzLanguageTranslations = [
   TranslatedName(LangTat(), name: "люксембург"),
   TranslatedName(LangWol(), name: "Liksàmbursuwaa"),
   TranslatedName(LangYor(), name: "Lùṣẹ́mbọ́ọ̀gì"),
+  TranslatedName(LangTgl(), name: "Luxembourgish"),
 ];

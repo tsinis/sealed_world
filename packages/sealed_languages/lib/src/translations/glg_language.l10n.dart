@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Galician language:
+/// Provides 117 translations for a Galician language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -95,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -236,4 +237,5 @@ const glgLanguageTranslations = [
   TranslatedName(LangTuk(), name: "galisiý dili"),
   TranslatedName(LangTat(), name: "галисия"),
   TranslatedName(LangWol(), name: "Galisiye"),
+  TranslatedName(LangTgl(), name: "Galisyano"),
 ];

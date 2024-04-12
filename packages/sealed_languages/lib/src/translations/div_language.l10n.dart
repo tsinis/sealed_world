@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Divehi (Dhivehi/Maldivian) language:
+/// Provides 108 translations for a Divehi (Dhivehi/Maldivian) language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -41,6 +43,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -85,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -183,11 +188,7 @@ const divLanguageTranslations = [
   TranslatedName(LangAsm(), name: "দিবেহি"),
   TranslatedName(LangBel(), name: "мальдыўская"),
   TranslatedName(LangChe(), name: "мальдивийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤁𞤭𞥅𞤬𞤫𞤸𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤁𞤭𞥅𞤬𞤫𞤸𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "դիվեհի"),
   TranslatedName(LangIna(), name: "divehi"),
   TranslatedName(LangKaz(), name: "дивехи тілі"),
@@ -211,4 +212,9 @@ const divLanguageTranslations = [
   TranslatedName(LangUzb(), name: "divexi"),
   TranslatedName(LangWol(), name: "Diweyi"),
   TranslatedName(LangYor(), name: "Èdè Difehi"),
+  TranslatedName(LangAfr(), name: "Divehi"),
+  TranslatedName(LangInd(), name: "Divehi"),
+  TranslatedName(LangMsa(), name: "Divehi"),
+  TranslatedName(LangNld(), name: "Divehi"),
+  TranslatedName(LangTgl(), name: "Wikang Dhivehi"),
 ];

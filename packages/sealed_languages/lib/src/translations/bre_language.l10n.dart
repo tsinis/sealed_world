@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 109 translations for a Breton language:
+/// Provides 112 translations for a Breton language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -44,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -61,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -90,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -207,11 +210,7 @@ const breLanguageTranslations = [
   TranslatedName(LangZul(), name: "Isi-Breton"),
   TranslatedName(LangAsm(), name: "ব্ৰেটন"),
   TranslatedName(LangChe(), name: "бретонийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤫𞤪𞤫𞤼𞤮𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤫𞤪𞤫𞤼𞤮𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Buretananci"),
   TranslatedName(LangIna(), name: "breton"),
   TranslatedName(LangKur(), name: "bretonî"),
@@ -223,4 +222,7 @@ const breLanguageTranslations = [
   TranslatedName(LangTgk(), name: "бретонӣ"),
   TranslatedName(LangTuk(), name: "breton dili"),
   TranslatedName(LangTat(), name: "бретон"),
+  TranslatedName(LangInd(), name: "Breton"),
+  TranslatedName(LangMsa(), name: "Breton"),
+  TranslatedName(LangTgl(), name: "Breton"),
 ];

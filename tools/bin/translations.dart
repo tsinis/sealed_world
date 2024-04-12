@@ -21,8 +21,12 @@ Future<void> main(List<String> args, {bool skipFetch = true}) async {
       ..moveJsonFiles(clonedDir)
       ..deleteDirectory(clonedDir);
   }
+  final dirName = package.dirName;
+  final subDirPath =
+      join("../", PathConstants.packages, dirName, PathConstants.lib);
 
-  final exports = await JsonUtils(package).parseByLanguage();
+  final exports = await JsonUtils(package, join(subDirPath, PathConstants.src))
+      .parseByLanguage();
 
   final dataType = package.dataRepresent;
   final buffer = StringBuffer(
@@ -33,14 +37,17 @@ Future<void> main(List<String> args, {bool skipFetch = true}) async {
 // ${package.umpirskyRepoUrl} project (from Saša Stamenković).
 // Both projects are licensed under the MIT License.
 
-/// Provides $dataType translations for ${package.dirName}.
+/// Provides $dataType translations for $dirName.
 """,
   )..write(
       "library sealed_${dataType}_${JsonUtils.translation};\n".toLowerCase(),
     );
-  for (final export in exports) buffer.writeln('export "$export";');
-  final filename = "$dataType ${JsonUtils.translation}".toSnakeCase();
+  for (final export in exports)
+    buffer.writeln(
+      'export "${PathConstants.src}/${JsonUtils.translation}/$export";',
+    );
 
-  final path = join(JsonUtils.translation, "$filename.${PathConstants.dart}");
+  final filename = "$dataType ${JsonUtils.translation}".toSnakeCase();
+  final path = join(subDirPath, "$filename.${PathConstants.dart}");
   io.writeContentToFile(path, buffer);
 }

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Irish language:
+/// Provides 120 translations for a Irish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -97,6 +97,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -222,11 +223,7 @@ const gleLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Irish"),
   TranslatedName(LangAsm(), name: "আইৰিচ"),
   TranslatedName(LangChe(), name: "ирландхойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤋𞤪𞤤𞤢𞤲𞤣𞤫𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤋𞤪𞤤𞤢𞤲𞤣𞤫𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Dan Irish"),
   TranslatedName(LangIna(), name: "irlandese"),
   TranslatedName(LangIbo(), name: "Ịrịsh"),
@@ -241,4 +238,5 @@ const gleLanguageTranslations = [
   TranslatedName(LangTuk(), name: "irland dili"),
   TranslatedName(LangTat(), name: "ирланд"),
   TranslatedName(LangWol(), name: "Irlànde"),
+  TranslatedName(LangTgl(), name: "Irish"),
 ];

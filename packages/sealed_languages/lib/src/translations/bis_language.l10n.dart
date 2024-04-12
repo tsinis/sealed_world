@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Bislama language:
+/// Provides 99 translations for a Bislama language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -39,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -54,6 +57,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -80,17 +84,20 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const bisLanguageTranslations = [
@@ -157,11 +164,7 @@ const bisLanguageTranslations = [
   TranslatedName(LangBel(), name: "біслама"),
   TranslatedName(LangChe(), name: "бислама"),
   TranslatedName(LangEus(), name: "bislama"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤭𞤧𞤤𞤢𞤥𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤭𞤧𞤤𞤢𞤥𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "bislama"),
   TranslatedName(LangGlg(), name: "bislama"),
   TranslatedName(LangHye(), name: "բիսլամա"),
@@ -190,4 +193,11 @@ const bisLanguageTranslations = [
   TranslatedName(LangYor(), name: "Èdè Bisilama"),
   TranslatedName(LangZul(), name: "isi-Bislama"),
   TranslatedName(LangDeu(), name: "Bislama"),
+  TranslatedName(LangAfr(), name: "Bislama"),
+  TranslatedName(LangCym(), name: "Bislama"),
+  TranslatedName(LangInd(), name: "Bislama"),
+  TranslatedName(LangMsa(), name: "Bislama"),
+  TranslatedName(LangNld(), name: "Bislama"),
+  TranslatedName(LangTur(), name: "Bislama"),
+  TranslatedName(LangTgl(), name: "Wikang Bislama"),
 ];

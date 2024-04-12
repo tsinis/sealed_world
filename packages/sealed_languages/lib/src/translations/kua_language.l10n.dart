@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 94 translations for a Kwanyama (Kuanyama) language:
+/// Provides 101 translations for a Kwanyama (Kuanyama) language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -39,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -55,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -81,17 +85,20 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const kuaLanguageTranslations = [
@@ -160,11 +167,7 @@ const kuaLanguageTranslations = [
   TranslatedName(LangBel(), name: "куаньяма"),
   TranslatedName(LangChe(), name: "кунама"),
   TranslatedName(LangEus(), name: "kuanyama"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤵𞤢𞤻𞤢𞤥𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤵𞤢𞤻𞤢𞤥𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "kuanyama"),
   TranslatedName(LangGlg(), name: "kuanyama"),
   TranslatedName(LangHye(), name: "կուանյամա"),
@@ -193,4 +196,11 @@ const kuaLanguageTranslations = [
   TranslatedName(LangUzb(), name: "kvanyama"),
   TranslatedName(LangYor(), name: "Èdè Kuayama"),
   TranslatedName(LangZul(), name: "isi-Kuanyama"),
+  TranslatedName(LangAfr(), name: "Kuanyama"),
+  TranslatedName(LangCym(), name: "Kuanyama"),
+  TranslatedName(LangInd(), name: "Kuanyama"),
+  TranslatedName(LangMsa(), name: "Kuanyama"),
+  TranslatedName(LangNld(), name: "Kuanyama"),
+  TranslatedName(LangTur(), name: "Kuanyama"),
+  TranslatedName(LangTgl(), name: "Kwanyama"),
 ];

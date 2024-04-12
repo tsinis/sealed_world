@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 128 translations for a Hungarian language:
+/// Provides 129 translations for a Hungarian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -108,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -257,4 +258,5 @@ const hunLanguageTranslations = [
   TranslatedName(LangTuk(), name: "wenger dili"),
   TranslatedName(LangTat(), name: "венгр"),
   TranslatedName(LangWol(), name: "Ongruwaa"),
+  TranslatedName(LangTgl(), name: "Hanggaryan"),
 ];

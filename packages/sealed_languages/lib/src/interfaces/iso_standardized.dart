@@ -76,6 +76,10 @@ abstract interface class IsoStandardized<Name extends Object> {
   /// An object representing the name of the object.
   final Name name;
 
+  /// An [String] representing the international name of the object. This is
+  /// typically a English name of the ISO object.
+  String get internationalName;
+
   /// An optional list of objects representing the native names of the object.
   final List<Name>? namesNative;
 

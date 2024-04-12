@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 124 translations for a Burmese language:
+/// Provides 125 translations for a Burmese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -103,6 +103,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -206,7 +207,7 @@ const myaLanguageTranslations = [
   TranslatedName(LangRon(), name: "birmaneză"),
   TranslatedName(LangRus(), name: "бирманский"),
   TranslatedName(LangSme(), name: "burmagiella"),
-  TranslatedName(LangSag(), name: "Miamära, Birimäni"),
+  TranslatedName(LangSag(), name: "Miamära"),
   TranslatedName(LangSin(), name: "බුරුම"),
   TranslatedName(LangSlk(), name: "barmčina"),
   TranslatedName(LangSlv(), name: "burmanščina"),
@@ -248,4 +249,5 @@ const myaLanguageTranslations = [
   TranslatedName(LangTuk(), name: "birma dili"),
   TranslatedName(LangTat(), name: "бирма"),
   TranslatedName(LangWol(), name: "Birmes"),
+  TranslatedName(LangTgl(), name: "Burmese"),
 ];

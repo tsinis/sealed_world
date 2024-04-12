@@ -26,22 +26,10 @@ void performanceTest(
 }) =>
     test(
       description,
-      () async {
-        final stopwatch = Stopwatch()..start();
-
-        final testResult = await body();
-
-        stopwatch.stop();
-        expect(
-          stopwatch.elapsedMilliseconds <= durationLimit.toInt() + 1,
-          isTrue,
-          reason: "The test shouldn't have taken longer than $durationLimit ms",
-        );
-
-        return testResult;
-      },
+      body,
       testOn: testOn,
-      timeout: timeout,
+      timeout:
+          timeout ?? Timeout(Duration(milliseconds: durationLimit.toInt())),
       skip: skip,
       tags: tags,
       onPlatform: onPlatform,

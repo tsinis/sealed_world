@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/extensions/translated_name_extension.dart";
 import "package:sealed_languages/src/model/language/language.dart";
@@ -71,61 +72,32 @@ void main() => group("$TranslatedName", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => TranslatedName(
-              value.language,
-              name: value.name,
-              fullName: value.fullName,
-            ),
-            isNot(throwsA(isA<AssertionError>())),
+          () => TranslatedName(
+            value.language,
+            name: value.name,
+            fullName: value.fullName,
+          ),
+          shouldThrow: false,
+        );
+
+        assertTest(
+          "empty official",
+          () => TranslatedName(
+            value.language,
+            name: value.name,
+            fullName: "",
           ),
         );
 
-        test(
-          "empty official",
-          () {
-            expect(
-              () => TranslatedName(
-                NaturalLanguage.list.first,
-                name: value.name,
-                fullName: "",
-              ),
-              throwsA(isA<AssertionError>()),
-            );
-            expect(
-              () => TranslatedName(
-                value.language,
-                name: value.name,
-                fullName: "",
-              ),
-              throwsA(isA<AssertionError>()),
-            );
-          },
-        );
-
-        test(
+        assertTest(
           "empty common",
-          () {
-            expect(
-              () => TranslatedName(
-                NaturalLanguage.list.first,
-                name: "",
-                fullName: value.fullName,
-              ),
-              throwsA(isA<AssertionError>()),
-            );
-
-            expect(
-              () => TranslatedName(
-                value.language,
-                name: "",
-                fullName: value.fullName,
-              ),
-              throwsA(isA<AssertionError>()),
-            );
-          },
+          () => TranslatedName(
+            NaturalLanguage.list.first,
+            name: "",
+            fullName: value.fullName,
+          ),
         );
       });
 

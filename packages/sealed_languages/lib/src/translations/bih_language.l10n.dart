@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 96 translations for a Bihari language:
+/// Provides 102 translations for a Bihari language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -39,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -55,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -82,6 +86,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -94,6 +99,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const bihLanguageTranslations = [
@@ -166,11 +172,7 @@ const bihLanguageTranslations = [
   TranslatedName(LangBel(), name: "бхаджпуры"),
   TranslatedName(LangChe(), name: "бходжпури"),
   TranslatedName(LangEus(), name: "bhojpurera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤮𞤧𞤨𞤵𞤪𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤮𞤧𞤨𞤵𞤪𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "bhojpuri"),
   TranslatedName(LangGlg(), name: "bhojpuri"),
   TranslatedName(LangHye(), name: "բհոպուրի"),
@@ -197,4 +199,10 @@ const bihLanguageTranslations = [
   TranslatedName(LangUzb(), name: "bxojpuri"),
   TranslatedName(LangYor(), name: "Èdè Bojuri"),
   TranslatedName(LangZul(), name: "isi-Bhojpuri"),
+  TranslatedName(LangAfr(), name: "Bhojpuri"),
+  TranslatedName(LangCym(), name: "Bihari"),
+  TranslatedName(LangInd(), name: "Bhojpuri"),
+  TranslatedName(LangMsa(), name: "Bhojpuri"),
+  TranslatedName(LangNld(), name: "Bihari talen"),
+  TranslatedName(LangTgl(), name: "Bihari"),
 ];

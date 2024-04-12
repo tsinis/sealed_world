@@ -47,21 +47,27 @@ void main() {
   // Prints Slovak translations of all available languages.
   for (final language in NaturalLanguage.list) {
     print(
-      """Slovak name of ${language.name}: ${language.maybeTranslation(const LangSlk())?.name}""",
+      """Slovak name of ${language.name}: ${language.maybeTranslation(const BasicLocale(LangSlk()))?.name}""",
     );
   }
 
   // Distinguishes country code in translations.
-  print(maybeCzech?.maybeTranslation(const LangPor())?.name); // Prints tcheco.
   print(
-    maybeCzech?.maybeTranslation(const LangPor(), countryCode: "PT")?.name,
+    maybeCzech?.maybeTranslation(const BasicLocale(LangPor()))?.name,
+  ); // Prints tcheco.
+  print(
+    maybeCzech
+        ?.maybeTranslation(const BasicLocale(LangPor(), countryCode: "PT"))
+        ?.name,
   ); // Prints "checo".
 
   // Distinguishes script in translations.
-  print(maybeCzech?.maybeTranslation(const LangSrp())?.name); // Prints "чешки".
+  print(
+    maybeCzech?.maybeTranslation(const BasicLocale(LangSrp()))?.name,
+  ); // Prints "чешки".
   print(
     maybeCzech
-        ?.maybeTranslation(const LangSrp(), script: const ScriptLatn())
+        ?.maybeTranslation(const BasicLocale(LangSrp(), script: ScriptLatn()))
         ?.name, // Prints "češki".
   );
 

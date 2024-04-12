@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 96 translations for a Ganda language:
+/// Provides 102 translations for a Ganda language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -40,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -83,17 +86,20 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Zulu.
 const lugLanguageTranslations = [
   TranslatedName(LangEng(), name: "Ganda"),
@@ -178,11 +184,7 @@ const lugLanguageTranslations = [
   TranslatedName(LangAsm(), name: "গান্দা"),
   TranslatedName(LangBel(), name: "ганда"),
   TranslatedName(LangChe(), name: "ганда"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤘𞤢𞤲𞤣𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤘𞤢𞤲𞤣𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "ganda"),
   TranslatedName(LangIna(), name: "luganda"),
   TranslatedName(LangKhm(), name: "ហ្កាន់ដា"),
@@ -196,4 +198,10 @@ const lugLanguageTranslations = [
   TranslatedName(LangTir(), name: "ጋንዳ"),
   TranslatedName(LangTuk(), name: "ganda dili"),
   TranslatedName(LangDeu(), name: "Ganda"),
+  TranslatedName(LangAfr(), name: "Ganda"),
+  TranslatedName(LangCym(), name: "Ganda"),
+  TranslatedName(LangInd(), name: "Ganda"),
+  TranslatedName(LangMsa(), name: "Ganda"),
+  TranslatedName(LangTur(), name: "Luganda"),
+  TranslatedName(LangTgl(), name: "Ganda"),
 ];

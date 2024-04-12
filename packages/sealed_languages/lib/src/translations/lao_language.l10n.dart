@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Lao language:
+/// Provides 115 translations for a Lao language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -44,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -91,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -208,11 +211,7 @@ const laoLanguageTranslations = [
   TranslatedName(LangZul(), name: "i-Lao"),
   TranslatedName(LangAsm(), name: "লাও"),
   TranslatedName(LangChe(), name: "лаоссийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤂𞤢𞤮𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤂𞤢𞤮𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "laotiano"),
   TranslatedName(LangIbo(), name: "Laọ"),
   TranslatedName(LangJav(), name: "Laos"),
@@ -228,4 +227,7 @@ const laoLanguageTranslations = [
   TranslatedName(LangTat(), name: "лаос"),
   TranslatedName(LangWol(), name: "Laaw"),
   TranslatedName(LangYor(), name: "Láò"),
+  TranslatedName(LangAfr(), name: "Lao"),
+  TranslatedName(LangInd(), name: "Lao"),
+  TranslatedName(LangTgl(), name: "Lao"),
 ];

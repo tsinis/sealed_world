@@ -1,4 +1,4 @@
-import "dart:collection";
+import "dart:collection" show MapView;
 
 import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";

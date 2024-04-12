@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Lingala language:
+/// Provides 104 translations for a Lingala language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -24,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -42,6 +43,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -59,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -86,17 +89,20 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const linLanguageTranslations = [
@@ -185,11 +191,7 @@ const linLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Lingala"),
   TranslatedName(LangAsm(), name: "লিংগালা"),
   TranslatedName(LangChe(), name: "лингала"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤂𞤭𞤲𞤺𞤢𞤤𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤂𞤭𞤲𞤺𞤢𞤤𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "lingala"),
   TranslatedName(LangIbo(), name: "Lịngala"),
   TranslatedName(LangKur(), name: "lingalayî"),
@@ -202,4 +204,10 @@ const linLanguageTranslations = [
   TranslatedName(LangTuk(), name: "lingala dili"),
   TranslatedName(LangYor(), name: "Lìǹgálà"),
   TranslatedName(LangDeu(), name: "Lingala"),
+  TranslatedName(LangCym(), name: "Lingala"),
+  TranslatedName(LangInd(), name: "Lingala"),
+  TranslatedName(LangMsa(), name: "Lingala"),
+  TranslatedName(LangNld(), name: "Lingala"),
+  TranslatedName(LangTur(), name: "Lingala"),
+  TranslatedName(LangTgl(), name: "Lingala"),
 ];

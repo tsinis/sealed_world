@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Chuvash language:
+/// Provides 104 translations for a Chuvash language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -40,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -85,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -174,11 +178,7 @@ const chvLanguageTranslations = [
   TranslatedName(LangChv(), name: "чӑваш"),
   TranslatedName(LangCym(), name: "Tshwfasheg"),
   TranslatedName(LangEus(), name: "txuvaxera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤕𞤵𞥅𞤾𞤢𞤧𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤕𞤵𞥅𞤾𞤢𞤧𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "chuvash"),
   TranslatedName(LangGlg(), name: "chuvaxo"),
   TranslatedName(LangHye(), name: "չուվաշերեն"),
@@ -206,4 +206,8 @@ const chvLanguageTranslations = [
   TranslatedName(LangUzb(), name: "chuvash"),
   TranslatedName(LangYor(), name: "Èdè Shufasi"),
   TranslatedName(LangZul(), name: "isi-Chuvash"),
+  TranslatedName(LangAfr(), name: "Chuvash"),
+  TranslatedName(LangInd(), name: "Chuvash"),
+  TranslatedName(LangMsa(), name: "Chuvash"),
+  TranslatedName(LangTgl(), name: "Chuvash"),
 ];

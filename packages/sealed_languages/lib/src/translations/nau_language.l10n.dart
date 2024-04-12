@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Nauruan language:
+/// Provides 102 translations for a Nauruan language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -41,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -83,6 +86,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -202,4 +206,8 @@ const nauLanguageTranslations = [
   TranslatedName(LangUzb(), name: "nauru"),
   TranslatedName(LangYor(), name: "Èdè Nauru"),
   TranslatedName(LangZul(), name: "isi-Nauru"),
+  TranslatedName(LangAfr(), name: "Nauru"),
+  TranslatedName(LangInd(), name: "Nauru"),
+  TranslatedName(LangMsa(), name: "Nauru"),
+  TranslatedName(LangTgl(), name: "Wikang Nauruan"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Latin language:
+/// Provides 115 translations for a Latin language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -46,6 +46,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -63,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -93,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -212,11 +215,7 @@ const latLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Latin"),
   TranslatedName(LangAsm(), name: "লেটিন"),
   TranslatedName(LangChe(), name: "латинан"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤂𞤢𞤼𞤫𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤂𞤢𞤼𞤫𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Dan Kabilar Latin"),
   TranslatedName(LangIna(), name: "latino"),
   TranslatedName(LangIbo(), name: "Latịn"),
@@ -229,4 +228,7 @@ const latLanguageTranslations = [
   TranslatedName(LangTgk(), name: "лотинӣ"),
   TranslatedName(LangTuk(), name: "latyn dili"),
   TranslatedName(LangTat(), name: "латин"),
+  TranslatedName(LangInd(), name: "Latin"),
+  TranslatedName(LangMsa(), name: "Latin"),
+  TranslatedName(LangTgl(), name: "Latin"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 117 translations for a Albanian language:
+/// Provides 118 translations for a Albanian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -219,11 +220,7 @@ const sqiLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Albania"),
   TranslatedName(LangAsm(), name: "আলবেনীয়"),
   TranslatedName(LangChe(), name: "албанойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤤𞤦𞤢𞤲𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤤𞤦𞤢𞤲𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Albaniyanci"),
   TranslatedName(LangIna(), name: "albanese"),
   TranslatedName(LangIbo(), name: "Albanianị"),
@@ -238,4 +235,5 @@ const sqiLanguageTranslations = [
   TranslatedName(LangTuk(), name: "alban dili"),
   TranslatedName(LangTat(), name: "албан"),
   TranslatedName(LangWol(), name: "Albane"),
+  TranslatedName(LangTgl(), name: "Albanes"),
 ];

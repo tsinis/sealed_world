@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 131 translations for a Bengali (Bangla) language:
+/// Provides 132 translations for a Bengali (Bangla) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -108,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -261,4 +262,5 @@ const benLanguageTranslations = [
   TranslatedName(LangTat(), name: "бенгали"),
   TranslatedName(LangWol(), name: "Baŋla"),
   TranslatedName(LangXho(), name: "IsiBangla"),
+  TranslatedName(LangTgl(), name: "Bengali"),
 ];

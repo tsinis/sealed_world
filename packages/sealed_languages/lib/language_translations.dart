@@ -2,7 +2,7 @@
 // https://github.com/symfony/intl project
 // (from The Symfony - Intl Component, Fabien Potencier) and from the
 // https://github.com/umpirsky/language-list project (from Saša Stamenković).
-// Both projects are licensed under the  MIT License.
+// Both projects are licensed under the MIT License.
 
 /// Provides language translations for sealed_languages.
 library sealed_language_translations;
@@ -197,17 +197,26 @@ export "src/translations/zul_language.l10n.dart";
 // ignore_for_file: prefer-static-class
 
 /// This is a comprehensive list of languages that ensure the availability of
-/// translations for every language in the natural language list.
-///
-/// It's safe to say that this package supports 98% of the name translations
-/// from the `kMaterialSupportedLanguages` list (GlobalMaterialLocalizations).
+/// translations for every language in the natural language `list`.
 ///
 /// It is important to note that while other languages may not be included in
-/// this list, they may still have translations available for most common
-/// languages, but there may be some missing translations for rarer languages
-/// such as (Old) Church Slavonic, Volapük, etc. Every language contains more
-/// than 77 translations of it's name to other languages.
+/// this list, they may still have translations available for the most common
+/// languages, but there may be some missing translations for rarer languages.
+/// Every language contains more than 85 translations of it's name.
+///
+/// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+/// with a two letter code and much more (for example on top of that it also
+/// provides translations for the following languages):
+/// - Breton (BRE)
+/// - Irish (GLE)
+/// - Kashmiri (KAS)
+/// - Norwegian Nynorsk (NNO)
+/// - Romansh (ROH)
+/// - Tonga (TON)
+/// - Uyghur (UIG)
+/// That are not listed in Material one, and much more.
 const kSealedLanguagesSupportedLanguages = [
+  LangAfr(),
   LangAmh(),
   LangAra(),
   LangAsm(),
@@ -219,6 +228,7 @@ const kSealedLanguagesSupportedLanguages = [
   LangBul(),
   LangCat(),
   LangCes(),
+  LangCym(),
   LangDan(),
   LangDeu(),
   LangEll(),
@@ -236,6 +246,7 @@ const kSealedLanguagesSupportedLanguages = [
   LangHrv(),
   LangHun(),
   LangHye(),
+  LangInd(),
   LangIsl(),
   LangIta(),
   LangJpn(),
@@ -253,8 +264,10 @@ const kSealedLanguagesSupportedLanguages = [
   LangMar(),
   LangMkd(),
   LangMon(),
+  LangMsa(),
   LangMya(),
   LangNep(),
+  LangNld(),
   LangNno(),
   LangNob(),
   LangNor(),
@@ -276,8 +289,10 @@ const kSealedLanguagesSupportedLanguages = [
   LangSwe(),
   LangTam(),
   LangTel(),
+  LangTgl(),
   LangTha(),
   LangTon(),
+  LangTur(),
   LangUig(),
   LangUkr(),
   LangUrd(),

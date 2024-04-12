@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Armenian language:
+/// Provides 120 translations for a Armenian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -221,11 +222,7 @@ const hyeLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Armenia"),
   TranslatedName(LangAsm(), name: "আৰ্মেনীয়"),
   TranslatedName(LangChe(), name: "эрмалойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤪𞤥𞤫𞤲𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤪𞤥𞤫𞤲𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Armeniyanci"),
   TranslatedName(LangIna(), name: "armenio"),
   TranslatedName(LangIbo(), name: "Armenianị"),
@@ -240,4 +237,5 @@ const hyeLanguageTranslations = [
   TranslatedName(LangTuk(), name: "ermeni dili"),
   TranslatedName(LangTat(), name: "әрмән"),
   TranslatedName(LangWol(), name: "Armaniye"),
+  TranslatedName(LangTgl(), name: "Armenian"),
 ];

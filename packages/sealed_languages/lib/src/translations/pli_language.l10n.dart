@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 78 translations for a Pāli language:
+/// Provides 85 translations for a Pāli language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -22,6 +23,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Finnish
@@ -35,6 +37,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -48,6 +51,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -70,15 +74,18 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Zulu.
 const pliLanguageTranslations = [
   TranslatedName(LangEng(), name: "Pali"),
@@ -159,4 +166,11 @@ const pliLanguageTranslations = [
   TranslatedName(LangUrd(), name: "پایلی"),
   TranslatedName(LangUzb(), name: "pali"),
   TranslatedName(LangZul(), name: "isi-Pali"),
+  TranslatedName(LangCym(), name: "Pali"),
+  TranslatedName(LangInd(), name: "Pali"),
+  TranslatedName(LangNld(), name: "Pali"),
+  TranslatedName(LangTur(), name: "Pali"),
+  TranslatedName(LangMsa(), name: "Pali"),
+  TranslatedName(LangAfr(), name: "Pali"),
+  TranslatedName(LangTgl(), name: "Wikang Pali"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Kinyarwanda language:
+/// Provides 119 translations for a Kinyarwanda language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Akan
@@ -26,6 +26,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -46,6 +47,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -66,6 +68,7 @@ import "../model/translated_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -97,6 +100,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -104,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -229,4 +234,9 @@ const kinLanguageTranslations = [
   TranslatedName(LangTat(), name: "руанда"),
   TranslatedName(LangWol(), name: "Kinyarwànda"),
   TranslatedName(LangSwa(), name: "Kinyarwanda"),
+  TranslatedName(LangInd(), name: "Kinyarwanda"),
+  TranslatedName(LangMsa(), name: "Kinyarwanda"),
+  TranslatedName(LangNld(), name: "Kinyarwanda"),
+  TranslatedName(LangTur(), name: "Ruandaca"),
+  TranslatedName(LangTgl(), name: "Kinyarwanda"),
 ];

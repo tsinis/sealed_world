@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Tonga (Tonga Islands) language:
+/// Provides 113 translations for a Tonga (Tonga Islands) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -92,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -206,11 +207,7 @@ const tonLanguageTranslations = [
   TranslatedName(LangAsm(), name: "টোঙ্গান"),
   TranslatedName(LangBel(), name: "танганская"),
   TranslatedName(LangChe(), name: "тонганийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤚𞤮𞤲𞤺𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤚𞤮𞤲𞤺𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Tonganci"),
   TranslatedName(LangIna(), name: "tongano"),
   TranslatedName(LangIbo(), name: "Tọngan"),
@@ -227,4 +224,5 @@ const tonLanguageTranslations = [
   TranslatedName(LangTuk(), name: "tongan dili"),
   TranslatedName(LangTat(), name: "тонга"),
   TranslatedName(LangYor(), name: "Tóńgàn"),
+  TranslatedName(LangTgl(), name: "Tongan"),
 ];

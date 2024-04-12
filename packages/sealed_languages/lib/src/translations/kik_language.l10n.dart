@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Kikuyu (Gikuyu) language:
+/// Provides 104 translations for a Kikuyu (Gikuyu) language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -40,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -86,11 +88,13 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -185,11 +189,7 @@ const kikLanguageTranslations = [
   TranslatedName(LangAsm(), name: "কিকুয়ু"),
   TranslatedName(LangBel(), name: "кікуйю"),
   TranslatedName(LangChe(), name: "кикуйю"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤭𞤳𞤵𞤴𞤵𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤭𞤳𞤵𞤴𞤵𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "kikuyu"),
   TranslatedName(LangIna(), name: "kikuyu"),
   TranslatedName(LangIbo(), name: "Kịkụyụ"),
@@ -205,4 +205,8 @@ const kikLanguageTranslations = [
   TranslatedName(LangTuk(), name: "kikuýu dili"),
   TranslatedName(LangYor(), name: "Kíkúyù"),
   TranslatedName(LangDeu(), name: "Kikuyu"),
+  TranslatedName(LangAfr(), name: "Kikuyu"),
+  TranslatedName(LangInd(), name: "Kikuyu"),
+  TranslatedName(LangTur(), name: "Kikuyu"),
+  TranslatedName(LangTgl(), name: "Kikuyu"),
 ];

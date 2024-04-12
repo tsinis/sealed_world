@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Faroese language:
+/// Provides 117 translations for a Faroese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -95,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -218,11 +219,7 @@ const faoLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Faroese"),
   TranslatedName(LangAsm(), name: "ফাৰোইজ"),
   TranslatedName(LangChe(), name: "фарерийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤊𞤫𞤪𞤮𞤱𞤫𞤧𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤊𞤫𞤪𞤮𞤱𞤫𞤧𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "feroese"),
   TranslatedName(LangIbo(), name: "Farọse"),
   TranslatedName(LangJav(), name: "Faroe"),
@@ -236,4 +233,5 @@ const faoLanguageTranslations = [
   TranslatedName(LangTuk(), name: "farer dili"),
   TranslatedName(LangTat(), name: "фарер"),
   TranslatedName(LangWol(), name: "Feroos"),
+  TranslatedName(LangTgl(), name: "Faroese"),
 ];

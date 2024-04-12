@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 133 translations for a Chinese language:
+/// Provides 134 translations for a Chinese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -110,6 +110,7 @@ import "../model/translated_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -197,7 +198,7 @@ const zhoLanguageTranslations = [
   TranslatedName(LangLit(), name: "kinų"),
   TranslatedName(LangLub(), name: "shinɛ"),
   TranslatedName(LangLav(), name: "ķīniešu"),
-  TranslatedName(LangMlg(), name: "Sinoa, Mandarin"),
+  TranslatedName(LangMlg(), name: "Sinoa"),
   TranslatedName(LangMkd(), name: "кинески"),
   TranslatedName(LangMal(), name: "ചൈനീസ്"),
   TranslatedName(LangMon(), name: "хятад"),
@@ -266,4 +267,5 @@ const zhoLanguageTranslations = [
   TranslatedName(LangTat(), name: "кытай"),
   TranslatedName(LangWol(), name: "Sinuwaa"),
   TranslatedName(LangXho(), name: "IsiMandarin"),
+  TranslatedName(LangTgl(), name: "Tsino"),
 ];

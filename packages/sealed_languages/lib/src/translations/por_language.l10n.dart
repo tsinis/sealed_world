@@ -227,7 +227,7 @@ const porLanguageTranslations = [
   TranslatedName(LangRus(), name: "португальский"),
   TranslatedName(LangKin(), name: "Igiporutugali"),
   TranslatedName(LangSme(), name: "portugálagiella"),
-  TranslatedName(LangSag(), name: "Portugëe, Pûra"),
+  TranslatedName(LangSag(), name: "Portugëe"),
   TranslatedName(LangSin(), name: "පෘතුගීසි"),
   TranslatedName(LangSlk(), name: "portugalčina"),
   TranslatedName(LangSlv(), name: "portugalščina"),

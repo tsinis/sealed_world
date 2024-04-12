@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Lithuanian language:
+/// Provides 117 translations for a Lithuanian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -237,4 +238,5 @@ const litLanguageTranslations = [
   TranslatedName(LangTuk(), name: "litwa dili"),
   TranslatedName(LangTat(), name: "литва"),
   TranslatedName(LangWol(), name: "Lituyaniye"),
+  TranslatedName(LangTgl(), name: "Lithuanian"),
 ];

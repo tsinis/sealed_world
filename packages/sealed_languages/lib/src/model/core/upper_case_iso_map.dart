@@ -1,10 +1,9 @@
-import "dart:collection" show MapBase, MapView;
-
 import "../../helpers/extensions/iso_standardized_string_extension.dart";
 import "../../helpers/extensions/sealed_world_object_extension.dart";
 import "../../interfaces/iso_standardized.dart";
+import "upper_case_map.dart";
 
-/// An uppercase key map that uses ISO standardized string keys.
+/// An uppercase key map [UpperCaseMap], that uses ISO standardized string keys.
 ///
 /// This map is designed to work with keys that are ISO standardized codes, such
 /// as language, script, currency, country, and other codes. Usually it's an
@@ -34,7 +33,7 @@ import "../../interfaces/iso_standardized.dart";
 /// ```
 ///
 /// [V] is the type of the values in the map. It must extend [IsoStandardized].
-class UpperCaseIsoMap<V extends IsoStandardized> extends MapView<String, V> {
+class UpperCaseIsoMap<V extends IsoStandardized> extends UpperCaseMap<V> {
   /// Creates an uppercase key/value map view with ISO standardized string keys.
   ///
   /// The [map] parameter is the original map that this object will be a view
@@ -63,20 +62,11 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends MapView<String, V> {
   /// found.
   const UpperCaseIsoMap(
     super.map, {
-    this.defaultValue,
+    super.defaultValue,
     this.exactLength = IsoStandardized.codeLength,
     this.maxLength = IsoStandardized.codeLength,
     this.minLength = IsoStandardized.codeShortLength,
   });
-
-  /// The default value to return when a key lookup does not exist in the map.
-  ///
-  /// If a key is not found and [defaultValue] is provided, this value is
-  /// returned. Otherwise, `null` is returned.
-  ///
-  /// [defaultValue] is nullable to allow for the possibility of no default
-  /// value.
-  final V? defaultValue;
 
   /// The maximum length of an ISO code.
   final int maxLength;
@@ -93,9 +83,6 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends MapView<String, V> {
 
   @override
   bool containsKey(Object? key) => _map(key, super.containsKey) ?? false;
-
-  @override
-  String toString() => MapBase.mapToString(this);
 
   T? _map<T extends Object>(Object? key, T? Function(String isoCode) mapper) {
     final code = key?.toUpperCaseIsoCode().maybeToValidIsoCode(

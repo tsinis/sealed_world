@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 112 translations for a Uyghur language:
+/// Provides 115 translations for a Uyghur language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -46,6 +46,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -64,6 +65,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -92,6 +94,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -207,11 +210,7 @@ const uigLanguageTranslations = [
   TranslatedName(LangKas(), name: "اُیغُر"),
   TranslatedName(LangAsm(), name: "উইঘুৰ"),
   TranslatedName(LangChe(), name: "уйгурийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤓𞥅𞤴𞤺𞤵𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤓𞥅𞤴𞤺𞤵𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Ugiranci"),
   TranslatedName(LangIna(), name: "uighur"),
   TranslatedName(LangIbo(), name: "Ụyghụr"),
@@ -228,4 +227,7 @@ const uigLanguageTranslations = [
   TranslatedName(LangTat(), name: "уйгыр"),
   TranslatedName(LangWol(), name: "Uygur"),
   TranslatedName(LangYor(), name: "Yúgọ̀"),
+  TranslatedName(LangInd(), name: "Uyghur"),
+  TranslatedName(LangMsa(), name: "Uyghur"),
+  TranslatedName(LangTgl(), name: "Uyghur"),
 ];

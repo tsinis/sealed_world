@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 95 translations for a Herero language:
+/// Provides 101 translations for a Herero language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -38,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -54,6 +57,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -80,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -94,6 +99,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const herLanguageTranslations = [
@@ -162,11 +168,7 @@ const herLanguageTranslations = [
   TranslatedName(LangBel(), name: "герэра"),
   TranslatedName(LangChe(), name: "гереро"),
   TranslatedName(LangEus(), name: "hereroera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤖𞤫𞤪𞤫𞤪𞤮𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤖𞤫𞤪𞤫𞤪𞤮𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "herero"),
   TranslatedName(LangGlg(), name: "herero"),
   TranslatedName(LangHye(), name: "հերերո"),
@@ -196,4 +198,10 @@ const herLanguageTranslations = [
   TranslatedName(LangUzb(), name: "gerero"),
   TranslatedName(LangYor(), name: "Èdè Herero"),
   TranslatedName(LangZul(), name: "isi-Herero"),
+  TranslatedName(LangAfr(), name: "Herero"),
+  TranslatedName(LangCym(), name: "Herero"),
+  TranslatedName(LangInd(), name: "Herero"),
+  TranslatedName(LangMsa(), name: "Herero"),
+  TranslatedName(LangNld(), name: "Herero"),
+  TranslatedName(LangTgl(), name: "Herero"),
 ];

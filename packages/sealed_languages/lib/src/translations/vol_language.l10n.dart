@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Volapük language:
+/// Provides 103 translations for a Volapük language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -57,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -84,11 +87,13 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -167,11 +172,7 @@ const volLanguageTranslations = [
   TranslatedName(LangChe(), name: "волапюк"),
   TranslatedName(LangCym(), name: "Folapük"),
   TranslatedName(LangEus(), name: "volapük"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤏𞤮𞤤𞤢𞤨𞤵𞤳𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤏𞤮𞤤𞤢𞤨𞤵𞤳𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "volapykk"),
   TranslatedName(LangGlg(), name: "volapuk"),
   TranslatedName(LangHye(), name: "վոլապյուկ"),
@@ -202,4 +203,9 @@ const volLanguageTranslations = [
   TranslatedName(LangYor(), name: "Fọ́lápùùkù"),
   TranslatedName(LangZul(), name: "isi-Volapük"),
   TranslatedName(LangDeu(), name: "Volapük"),
+  TranslatedName(LangAfr(), name: "Volapük"),
+  TranslatedName(LangMsa(), name: "Volapük"),
+  TranslatedName(LangNld(), name: "Volapük"),
+  TranslatedName(LangTur(), name: "Volapük"),
+  TranslatedName(LangTgl(), name: "Volapük"),
 ];

@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 107 translations for a Kannada language:
+/// Provides 113 translations for a Kannada language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -42,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -58,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -86,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -100,6 +105,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Wolof
 /// - Yiddish
 /// - Yoruba
@@ -197,11 +203,7 @@ const kanLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Kannada"),
   TranslatedName(LangAsm(), name: "কানাড়া"),
   TranslatedName(LangChe(), name: "каннада"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤢𞤲𞥆𞤢𞤣𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤢𞤲𞥆𞤢𞤣𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "kannada"),
   TranslatedName(LangIbo(), name: "Kanhada"),
   TranslatedName(LangKur(), name: "kannadayî"),
@@ -216,4 +218,10 @@ const kanLanguageTranslations = [
   TranslatedName(LangTat(), name: "каннада"),
   TranslatedName(LangWol(), name: "Kannadaa"),
   TranslatedName(LangDeu(), name: "Kannada"),
+  TranslatedName(LangAfr(), name: "Kannada"),
+  TranslatedName(LangCym(), name: "Canareg"),
+  TranslatedName(LangInd(), name: "Kannada"),
+  TranslatedName(LangMsa(), name: "Kannada"),
+  TranslatedName(LangNld(), name: "Kannada"),
+  TranslatedName(LangTgl(), name: "Kannada"),
 ];

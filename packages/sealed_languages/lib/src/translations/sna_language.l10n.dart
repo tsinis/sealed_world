@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 100 translations for a Shona language:
+/// Provides 106 translations for a Shona language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -41,6 +43,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -85,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -97,6 +102,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -185,11 +191,7 @@ const snaLanguageTranslations = [
   TranslatedName(LangAsm(), name: "চোনা"),
   TranslatedName(LangBel(), name: "шона"),
   TranslatedName(LangChe(), name: "шона"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤮𞤲𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤮𞤲𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "shona"),
   TranslatedName(LangIbo(), name: "Shọna"),
   TranslatedName(LangKhm(), name: "សូណា"),
@@ -205,4 +207,10 @@ const snaLanguageTranslations = [
   TranslatedName(LangTur(), name: "Şona dili"),
   TranslatedName(LangYor(), name: "Ṣọnà"),
   TranslatedName(LangDeu(), name: "Shona"),
+  TranslatedName(LangAfr(), name: "Shona"),
+  TranslatedName(LangCym(), name: "Shona"),
+  TranslatedName(LangInd(), name: "Shona"),
+  TranslatedName(LangMsa(), name: "Shona"),
+  TranslatedName(LangNld(), name: "Shona"),
+  TranslatedName(LangTgl(), name: "Shona"),
 ];

@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 110 translations for a Sinhalese (Sinhala) language:
+/// Provides 114 translations for a Sinhalese (Sinhala) language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -43,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -60,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -89,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -207,11 +211,7 @@ const sinLanguageTranslations = [
   TranslatedName(LangZul(), name: "i-Sinhala"),
   TranslatedName(LangAsm(), name: "সিংহলা"),
   TranslatedName(LangChe(), name: "сингалхойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤅𞤭𞤲𞤸𞤢𞤤𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤅𞤭𞤲𞤸𞤢𞤤𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Sinhalanci"),
   TranslatedName(LangIna(), name: "cingalese"),
   TranslatedName(LangKur(), name: "kîngalî"),
@@ -224,4 +224,8 @@ const sinLanguageTranslations = [
   TranslatedName(LangTuk(), name: "singal dili"),
   TranslatedName(LangTat(), name: "сингал"),
   TranslatedName(LangWol(), name: "Sinala"),
+  TranslatedName(LangAfr(), name: "Sinhala"),
+  TranslatedName(LangInd(), name: "Sinhala"),
+  TranslatedName(LangMsa(), name: "Sinhala"),
+  TranslatedName(LangTgl(), name: "Sinhala"),
 ];

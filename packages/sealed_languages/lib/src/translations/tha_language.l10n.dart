@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 124 translations for a Thai language:
+/// Provides 129 translations for a Thai language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -48,6 +49,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -71,6 +73,7 @@ import "../model/translated_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -104,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -118,6 +122,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Xhosa
@@ -248,4 +253,9 @@ const thaLanguageTranslations = [
   TranslatedName(LangTat(), name: "тай"),
   TranslatedName(LangWol(), name: "Tay"),
   TranslatedName(LangXho(), name: "Isi-Thai"),
+  TranslatedName(LangAfr(), name: "Thai"),
+  TranslatedName(LangCym(), name: "Tai"),
+  TranslatedName(LangInd(), name: "Thai"),
+  TranslatedName(LangMsa(), name: "Thai"),
+  TranslatedName(LangTgl(), name: "Thai"),
 ];

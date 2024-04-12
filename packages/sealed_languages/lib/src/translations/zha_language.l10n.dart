@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 85 translations for a Zhuang (Chuang) language:
+/// Provides 91 translations for a Zhuang (Chuang) language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -22,6 +23,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -36,6 +38,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -50,6 +53,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -73,6 +77,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -83,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Zhuang (Chuang)
 /// - Zulu.
 const zhaLanguageTranslations = [
@@ -171,4 +177,10 @@ const zhaLanguageTranslations = [
   TranslatedName(LangUrd(), name: "ژوانگ"),
   TranslatedName(LangUzb(), name: "chjuan"),
   TranslatedName(LangZul(), name: "isi-Zhuang"),
+  TranslatedName(LangCym(), name: "Zhuang"),
+  TranslatedName(LangInd(), name: "Zhuang"),
+  TranslatedName(LangNld(), name: "Zhuang"),
+  TranslatedName(LangMsa(), name: "Zhuang"),
+  TranslatedName(LangAfr(), name: "Zhuang"),
+  TranslatedName(LangTgl(), name: "Zhuang"),
 ];

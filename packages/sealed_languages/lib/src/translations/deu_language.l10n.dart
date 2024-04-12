@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 135 translations for a German language:
+/// Provides 136 translations for a German language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -112,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -269,4 +270,5 @@ const deuLanguageTranslations = [
   TranslatedName(LangTat(), name: "алман"),
   TranslatedName(LangWol(), name: "Almaa"),
   TranslatedName(LangXho(), name: "IsiJamani"),
+  TranslatedName(LangTgl(), name: "Aleman"),
 ];

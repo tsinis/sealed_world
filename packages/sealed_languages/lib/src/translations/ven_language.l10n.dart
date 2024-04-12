@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 97 translations for a Venda language:
+/// Provides 102 translations for a Venda language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Ewe
@@ -39,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -54,6 +57,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -80,6 +84,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -170,11 +175,7 @@ const venLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ভেণ্ডা"),
   TranslatedName(LangBel(), name: "венда"),
   TranslatedName(LangChe(), name: "венда"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤏𞤫𞤲𞤣𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤏𞤫𞤲𞤣𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "վենդա"),
   TranslatedName(LangIna(), name: "venda"),
   TranslatedName(LangKat(), name: "ვენდა"),
@@ -200,4 +201,9 @@ const venLanguageTranslations = [
   TranslatedName(LangUzb(), name: "venda"),
   TranslatedName(LangWol(), name: "Wenda"),
   TranslatedName(LangYor(), name: "Èdè Fenda"),
+  TranslatedName(LangAfr(), name: "Venda"),
+  TranslatedName(LangInd(), name: "Venda"),
+  TranslatedName(LangMsa(), name: "Venda"),
+  TranslatedName(LangNld(), name: "Venda"),
+  TranslatedName(LangTgl(), name: "Venda"),
 ];

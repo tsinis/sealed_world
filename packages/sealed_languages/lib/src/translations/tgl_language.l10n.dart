@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 86 translations for a Tagalog language:
+/// Provides 92 translations for a Tagalog language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -22,6 +23,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -38,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -52,6 +55,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -74,6 +78,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -84,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yiddish
 /// - Zulu.
 const tglLanguageTranslations = [
@@ -173,4 +179,10 @@ const tglLanguageTranslations = [
   TranslatedName(LangSwa(), name: "Kitagalogi"),
   TranslatedName(LangUzb(), name: "tagalog"),
   TranslatedName(LangZul(), name: "isi-Tagalog"),
+  TranslatedName(LangCym(), name: "Tagalog"),
+  TranslatedName(LangInd(), name: "Tagalog"),
+  TranslatedName(LangNld(), name: "Tagalog"),
+  TranslatedName(LangMsa(), name: "Tagalog"),
+  TranslatedName(LangAfr(), name: "Tagalog"),
+  TranslatedName(LangTgl(), name: "Tagalog"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Azerbaijani language:
+/// Provides 119 translations for a Azerbaijani language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -239,4 +240,5 @@ const azeLanguageTranslations = [
   TranslatedName(LangTuk(), name: "azerbaýjan dili"),
   TranslatedName(LangTat(), name: "әзәрбайҗан"),
   TranslatedName(LangWol(), name: "Aserbayjane"),
+  TranslatedName(LangTgl(), name: "Azerbaijani"),
 ];

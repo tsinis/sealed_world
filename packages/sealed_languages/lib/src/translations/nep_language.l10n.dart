@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 128 translations for a Nepali language:
+/// Provides 130 translations for a Nepali language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -47,6 +47,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -104,6 +105,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -254,4 +256,6 @@ const nepLanguageTranslations = [
   TranslatedName(LangTuk(), name: "nepal dili"),
   TranslatedName(LangTat(), name: "непали"),
   TranslatedName(LangWol(), name: "Nepale"),
+  TranslatedName(LangInd(), name: "Nepali"),
+  TranslatedName(LangTgl(), name: "Nepali"),
 ];

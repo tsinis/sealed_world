@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Macedonian language:
+/// Provides 120 translations for a Macedonian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -97,6 +97,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -241,4 +242,5 @@ const mkdLanguageTranslations = [
   TranslatedName(LangTuk(), name: "makedon dili"),
   TranslatedName(LangTat(), name: "македон"),
   TranslatedName(LangWol(), name: "Maseduwaane"),
+  TranslatedName(LangTgl(), name: "Macedonian"),
 ];

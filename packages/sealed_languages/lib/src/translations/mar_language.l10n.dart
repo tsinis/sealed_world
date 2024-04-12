@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 106 translations for a Marathi (Marāṭhī) language:
+/// Provides 112 translations for a Marathi (Marāṭhī) language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -59,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -88,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -102,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Wolof
 /// - Yoruba
 /// - Zulu.
@@ -196,11 +202,7 @@ const marLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Marathi"),
   TranslatedName(LangAsm(), name: "মাৰাঠী"),
   TranslatedName(LangChe(), name: "маратхи"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤃𞤢𞤪𞤢𞤼𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤃𞤢𞤪𞤢𞤼𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Maratinci"),
   TranslatedName(LangIna(), name: "marathi"),
   TranslatedName(LangIbo(), name: "Maratị"),
@@ -216,4 +218,10 @@ const marLanguageTranslations = [
   TranslatedName(LangTat(), name: "маратхи"),
   TranslatedName(LangWol(), name: "Marati"),
   TranslatedName(LangDeu(), name: "Marathi"),
+  TranslatedName(LangAfr(), name: "Marathi"),
+  TranslatedName(LangCym(), name: "Marati"),
+  TranslatedName(LangInd(), name: "Marathi"),
+  TranslatedName(LangMsa(), name: "Marathi"),
+  TranslatedName(LangNld(), name: "Marathi"),
+  TranslatedName(LangTgl(), name: "Marathi"),
 ];

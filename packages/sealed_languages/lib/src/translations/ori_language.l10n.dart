@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 110 translations for a Oriya language:
+/// Provides 113 translations for a Oriya language:
 /// - (Eastern) Punjabi
 /// - Afrikaans
 /// - Albanian
@@ -63,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -91,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -105,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yoruba
@@ -204,11 +207,7 @@ const oriLanguageTranslations = [
   TranslatedName(LangBel(), name: "орыя"),
   TranslatedName(LangChe(), name: "ори"),
   TranslatedName(LangDeu(), name: "Oriya"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤌𞤣𞤭𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤌𞤣𞤭𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Odiya"),
   TranslatedName(LangIna(), name: "oriya"),
   TranslatedName(LangInd(), name: "Oriya"),
@@ -224,4 +223,7 @@ const oriLanguageTranslations = [
   TranslatedName(LangTat(), name: "ория"),
   TranslatedName(LangWol(), name: "Oja"),
   TranslatedName(LangYor(), name: "Òdíà"),
+  TranslatedName(LangCym(), name: "Orïa"),
+  TranslatedName(LangMsa(), name: "Odia"),
+  TranslatedName(LangTgl(), name: "Oriya"),
 ];

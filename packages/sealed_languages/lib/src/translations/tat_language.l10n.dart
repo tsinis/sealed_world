@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 107 translations for a Tatar language:
+/// Provides 110 translations for a Tatar language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -44,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -60,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -87,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -201,11 +204,7 @@ const tatLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Tatar"),
   TranslatedName(LangAsm(), name: "তাতাৰ"),
   TranslatedName(LangChe(), name: "гӀезалойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤚𞤢𞤼𞤢𞤪𞥇𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤚𞤢𞤼𞤢𞤪𞥇𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "tataro"),
   TranslatedName(LangIbo(), name: "Tata"),
   TranslatedName(LangKur(), name: "teterî"),
@@ -218,4 +217,7 @@ const tatLanguageTranslations = [
   TranslatedName(LangTuk(), name: "tatar dili"),
   TranslatedName(LangTat(), name: "татар"),
   TranslatedName(LangYor(), name: "Tatarí"),
+  TranslatedName(LangInd(), name: "Tatar"),
+  TranslatedName(LangMsa(), name: "Tatar"),
+  TranslatedName(LangTgl(), name: "Tatar"),
 ];

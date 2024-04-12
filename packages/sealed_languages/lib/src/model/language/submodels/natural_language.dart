@@ -284,6 +284,9 @@ class NaturalLanguage extends Language
   String get codeOther => codeShort;
 
   @override
+  String get internationalName => name;
+
+  @override
   List<TranslatedName> get translations => throw UnimplementedError(
         """
 Please provide translations for your custom language for example via override:

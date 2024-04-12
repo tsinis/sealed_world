@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 99 translations for a Aymara language:
+/// Provides 105 translations for a Aymara language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -42,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -85,11 +89,13 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -174,11 +180,7 @@ const aymLanguageTranslations = [
   TranslatedName(LangAsm(), name: "আয়মাৰা"),
   TranslatedName(LangChe(), name: "аймара"),
   TranslatedName(LangCym(), name: "Aymareg"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤀𞤴𞤥𞤢𞤪𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤀𞤴𞤥𞤢𞤪𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Aymaranci"),
   TranslatedName(LangHye(), name: "այմարա"),
   TranslatedName(LangIna(), name: "aymara"),
@@ -203,4 +205,10 @@ const aymLanguageTranslations = [
   TranslatedName(LangUzb(), name: "aymara"),
   TranslatedName(LangYor(), name: "Èdè Amara"),
   TranslatedName(LangDeu(), name: "Aymara"),
+  TranslatedName(LangAfr(), name: "Aymara"),
+  TranslatedName(LangInd(), name: "Aymara"),
+  TranslatedName(LangMsa(), name: "Aymara"),
+  TranslatedName(LangNld(), name: "Aymara"),
+  TranslatedName(LangTur(), name: "Aymaraca"),
+  TranslatedName(LangTgl(), name: "Aymara"),
 ];

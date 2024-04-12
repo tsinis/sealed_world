@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Tswana language:
+/// Provides 104 translations for a Tswana language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Esperanto
 /// - Estonian
@@ -41,6 +43,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -84,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -96,6 +101,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yoruba
 /// - Zulu.
 const tsnLanguageTranslations = [
@@ -175,11 +181,7 @@ const tsnLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ছোৱানা"),
   TranslatedName(LangBel(), name: "тсвана"),
   TranslatedName(LangChe(), name: "тсвана"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤚𞤭𞤧𞤱𞤢𞤲𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤚𞤭𞤧𞤱𞤢𞤲𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "ցվանա"),
   TranslatedName(LangIna(), name: "tswana"),
   TranslatedName(LangIbo(), name: "Swana"),
@@ -201,4 +203,10 @@ const tsnLanguageTranslations = [
   TranslatedName(LangTuk(), name: "tswana dili"),
   TranslatedName(LangUzb(), name: "tsvana"),
   TranslatedName(LangYor(), name: "Èdè Suwana"),
+  TranslatedName(LangAfr(), name: "Tswana"),
+  TranslatedName(LangCym(), name: "Tswana"),
+  TranslatedName(LangInd(), name: "Tswana"),
+  TranslatedName(LangMsa(), name: "Tswana"),
+  TranslatedName(LangNld(), name: "Tswana"),
+  TranslatedName(LangTgl(), name: "Tswana"),
 ];

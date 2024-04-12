@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 110 translations for a Corsican language:
+/// Provides 111 translations for a Corsican language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -91,6 +91,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -203,11 +204,7 @@ const cosLanguageTranslations = [
   TranslatedName(LangAsm(), name: "কোৰ্ছিকান"),
   TranslatedName(LangBel(), name: "карсіканская"),
   TranslatedName(LangChe(), name: "корсиканийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤮𞤪𞤧𞤭𞤳𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞤪𞤧𞤭𞤳𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "korsikanskt"),
   TranslatedName(LangIna(), name: "corso"),
   TranslatedName(LangIbo(), name: "Kọsịan"),
@@ -225,4 +222,5 @@ const cosLanguageTranslations = [
   TranslatedName(LangTat(), name: "корсика"),
   TranslatedName(LangWol(), name: "Kors"),
   TranslatedName(LangYor(), name: "Èdè Corsican"),
+  TranslatedName(LangTgl(), name: "Corsican"),
 ];

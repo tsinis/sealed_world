@@ -161,7 +161,7 @@ const ndeLanguageTranslations = [
   TranslatedName(LangMon(), name: "хойд ндебеле"),
   TranslatedName(LangMar(), name: "उत्तर देबेली"),
   TranslatedName(LangMsa(), name: "Ndebele Utara"),
-  TranslatedName(LangMlt(), name: "Ndebele, ta’ Fuq"),
+  TranslatedName(LangMlt(), name: "Ndebele"),
   TranslatedName(LangMya(), name: "တောင်ဒီဘီလီ"),
   TranslatedName(LangNob(), name: "nord-ndebele"),
   TranslatedName(LangNde(), name: "isiNdebele"),

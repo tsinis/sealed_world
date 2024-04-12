@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 92 translations for a Komi language:
+/// Provides 98 translations for a Komi language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Faroese
@@ -38,6 +40,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -54,6 +57,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -80,11 +84,13 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -162,11 +168,7 @@ const komLanguageTranslations = [
   TranslatedName(LangBel(), name: "комі"),
   TranslatedName(LangChe(), name: "комийн"),
   TranslatedName(LangEus(), name: "komiera"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤮𞤥𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞤥𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangFao(), name: "komi"),
   TranslatedName(LangGlg(), name: "komi"),
   TranslatedName(LangHye(), name: "կոմիերեն"),
@@ -191,4 +193,10 @@ const komLanguageTranslations = [
   TranslatedName(LangUzb(), name: "komi"),
   TranslatedName(LangYor(), name: "Èdè Komi"),
   TranslatedName(LangZul(), name: "isi-Komi"),
+  TranslatedName(LangAfr(), name: "Komi"),
+  TranslatedName(LangInd(), name: "Komi"),
+  TranslatedName(LangMsa(), name: "Komi"),
+  TranslatedName(LangNld(), name: "Komi"),
+  TranslatedName(LangTur(), name: "Komi"),
+  TranslatedName(LangTgl(), name: "Komi"),
 ];

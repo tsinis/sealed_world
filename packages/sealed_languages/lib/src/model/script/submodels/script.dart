@@ -167,6 +167,9 @@ class Script extends WritingSystem
   String get codeOther => codeNumeric;
 
   @override
+  String get internationalName => name;
+
+  @override
   String toString({bool short = true}) => short
       ? super.toString()
       : '''Script(name: "$name", code: "$code", codeNumeric: "$codeNumeric", date: "$date", pva: ${pva == null ? pva : '"$pva"'})''';

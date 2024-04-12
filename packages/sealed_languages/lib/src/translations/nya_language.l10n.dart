@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Chichewa (Chewa/Nyanja) language:
+/// Provides 107 translations for a Chichewa (Chewa/Nyanja) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - English
 /// - Estonian
 /// - Ewe
@@ -40,6 +42,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +59,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -84,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -91,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Thai
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
+/// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
@@ -133,12 +139,12 @@ const nyaLanguageTranslations = [
   TranslatedName(LangHin(), name: "न्यानजा"),
   TranslatedName(LangHrv(), name: "nyanja"),
   TranslatedName(LangHun(), name: "nyanja"),
-  TranslatedName(LangIsl(), name: "njanja; sísjeva; sjeva"),
+  TranslatedName(LangIsl(), name: "njanja"),
   TranslatedName(LangIta(), name: "nyanja"),
   TranslatedName(LangJpn(), name: "ニャンジャ語"),
   TranslatedName(LangKat(), name: "ნიანჯა"),
   TranslatedName(LangKan(), name: "ನ್ಯಾಂಜಾ"),
-  TranslatedName(LangKor(), name: "니안자어; 치츄어; 츄어"),
+  TranslatedName(LangKor(), name: "니안자어"),
   TranslatedName(LangKas(), name: "نِیَنجا"),
   TranslatedName(LangLtz(), name: "Nyanja-Sprooch"),
   TranslatedName(LangLao(), name: "ນານຈາ"),
@@ -147,7 +153,7 @@ const nyaLanguageTranslations = [
   TranslatedName(LangMkd(), name: "њанџа"),
   TranslatedName(LangMal(), name: "ന്യൻജ"),
   TranslatedName(LangMar(), name: "न्यान्जा"),
-  TranslatedName(LangMlt(), name: "Ċiċewa; Njanġa"),
+  TranslatedName(LangMlt(), name: "Ċiċewa"),
   TranslatedName(LangNob(), name: "nyanja"),
   TranslatedName(LangNno(), name: "nyanja"),
   TranslatedName(LangNor(), name: "nyanja"),
@@ -177,11 +183,7 @@ const nyaLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ন্যাঞ্জা"),
   TranslatedName(LangBel(), name: "ньянджа"),
   TranslatedName(LangChe(), name: "ньянджа"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤙𞤢𞤲𞤶𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤙𞤢𞤲𞤶𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHye(), name: "նյանջա"),
   TranslatedName(LangIna(), name: "nyanja"),
   TranslatedName(LangKaz(), name: "ньянджа тілі"),
@@ -207,4 +209,10 @@ const nyaLanguageTranslations = [
   TranslatedName(LangUzb(), name: "cheva"),
   TranslatedName(LangWol(), name: "Sewa"),
   TranslatedName(LangYor(), name: "Ńyájà"),
+  TranslatedName(LangAfr(), name: "Nyanja"),
+  TranslatedName(LangInd(), name: "Nyanja"),
+  TranslatedName(LangMsa(), name: "Nyanja"),
+  TranslatedName(LangNld(), name: "Chichewa"),
+  TranslatedName(LangTur(), name: "Çevaca"),
+  TranslatedName(LangTgl(), name: "Chichewa"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Finnish language:
+/// Provides 120 translations for a Finnish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -97,6 +97,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -223,11 +224,7 @@ const finLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Finnish"),
   TranslatedName(LangAsm(), name: "ফিনিচ"),
   TranslatedName(LangChe(), name: "финнийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤊𞤫𞤲𞤭𞤧𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤊𞤫𞤲𞤭𞤧𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Yaren mutanen Finland"),
   TranslatedName(LangIna(), name: "finnese"),
   TranslatedName(LangIbo(), name: "Fịnịsh"),
@@ -241,4 +238,5 @@ const finLanguageTranslations = [
   TranslatedName(LangTuk(), name: "fin dili"),
   TranslatedName(LangTat(), name: "фин"),
   TranslatedName(LangWol(), name: "Feylànde"),
+  TranslatedName(LangTgl(), name: "Finlandes"),
 ];

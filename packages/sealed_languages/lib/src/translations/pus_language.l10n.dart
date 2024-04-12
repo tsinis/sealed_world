@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 113 translations for a Pashto (Pushto) language:
+/// Provides 117 translations for a Pashto (Pushto) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -46,6 +46,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -63,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -91,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -105,6 +108,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Yiddish
@@ -210,11 +214,7 @@ const pusLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Pashto"),
   TranslatedName(LangAsm(), name: "পুস্ত"),
   TranslatedName(LangChe(), name: "пушту"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤆𞤢𞤧𞤼𞤵𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤆𞤢𞤧𞤼𞤵𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Pashtanci"),
   TranslatedName(LangIna(), name: "pashto"),
   TranslatedName(LangIbo(), name: "Pashọ"),
@@ -228,4 +228,8 @@ const pusLanguageTranslations = [
   TranslatedName(LangTat(), name: "пушту"),
   TranslatedName(LangWol(), name: "Pasto"),
   TranslatedName(LangYor(), name: "Páshítò"),
+  TranslatedName(LangCym(), name: "Pushto"),
+  TranslatedName(LangInd(), name: "Pashto"),
+  TranslatedName(LangMsa(), name: "Pashto"),
+  TranslatedName(LangTgl(), name: "Pashto"),
 ];

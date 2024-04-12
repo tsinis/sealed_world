@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Icelandic language:
+/// Provides 119 translations for a Icelandic language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -239,4 +240,5 @@ const islLanguageTranslations = [
   TranslatedName(LangTuk(), name: "island dili"),
   TranslatedName(LangTat(), name: "исланд"),
   TranslatedName(LangWol(), name: "Islànde"),
+  TranslatedName(LangTgl(), name: "Icelandic"),
 ];

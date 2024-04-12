@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Bosnian language:
+/// Provides 119 translations for a Bosnian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -97,6 +97,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -221,11 +222,7 @@ const bosLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Bosnian"),
   TranslatedName(LangAsm(), name: "বছনীয়"),
   TranslatedName(LangChe(), name: "боснийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤮𞤧𞤲𞤭𞤴𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤮𞤧𞤲𞤭𞤴𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Bosniyanci"),
   TranslatedName(LangIna(), name: "bosniaco"),
   TranslatedName(LangIbo(), name: "Bosnia"),
@@ -240,4 +237,5 @@ const bosLanguageTranslations = [
   TranslatedName(LangTuk(), name: "bosniýa dili"),
   TranslatedName(LangTat(), name: "босния"),
   TranslatedName(LangWol(), name: "Bosñak"),
+  TranslatedName(LangTgl(), name: "Bosnian"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 110 translations for a Kashmiri language:
+/// Provides 111 translations for a Kashmiri language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -91,6 +91,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -205,11 +206,7 @@ const kasLanguageTranslations = [
   TranslatedName(LangAsm(), name: "কাশ্মিৰী"),
   TranslatedName(LangBel(), name: "кашмірская"),
   TranslatedName(LangChe(), name: "кашмири"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤢𞥃𞤥𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤢𞥃𞤥𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "kashmiri"),
   TranslatedName(LangIbo(), name: "Kashmịrị"),
   TranslatedName(LangKur(), name: "keşmîrî"),
@@ -224,4 +221,5 @@ const kasLanguageTranslations = [
   TranslatedName(LangTuk(), name: "kaşmiri dili"),
   TranslatedName(LangTat(), name: "кашмири"),
   TranslatedName(LangYor(), name: "Kaṣímirì"),
+  TranslatedName(LangTgl(), name: "Kashmiri"),
 ];

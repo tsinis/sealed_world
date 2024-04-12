@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 130 translations for a Belarusian language:
+/// Provides 131 translations for a Belarusian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -107,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -258,4 +259,5 @@ const belLanguageTranslations = [
   TranslatedName(LangTuk(), name: "belarus dili"),
   TranslatedName(LangTat(), name: "белорус"),
   TranslatedName(LangWol(), name: "Belaris"),
+  TranslatedName(LangTgl(), name: "Belarusian"),
 ];

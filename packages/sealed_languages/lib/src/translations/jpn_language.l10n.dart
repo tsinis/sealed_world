@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 136 translations for a Japanese language:
+/// Provides 137 translations for a Japanese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -112,6 +112,7 @@ import "../model/translated_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -271,4 +272,5 @@ const jpnLanguageTranslations = [
   TranslatedName(LangTat(), name: "япон"),
   TranslatedName(LangWol(), name: "Sapone"),
   TranslatedName(LangXho(), name: "IsiJapan"),
+  TranslatedName(LangTgl(), name: "Hapon"),
 ];

@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/model/language_family/language_family.dart";
 import "package:test/test.dart";
 
@@ -55,12 +56,9 @@ void main() => group("$NaturalLanguageFamily", () {
           ),
         );
 
-        test(
+        assertTest(
           "with empty families",
-          () => expect(
-            () => NaturalLanguageFamily.fromName(value.name, const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => NaturalLanguageFamily.fromName(value.name, const []),
         );
       });
 
@@ -103,14 +101,11 @@ void main() => group("$NaturalLanguageFamily", () {
           ),
         );
 
-        test(
+        assertTest(
           "with empty families",
-          () => expect(
-            () => NaturalLanguageFamily.maybeFromValue(
-              value.name,
-              families: const [],
-            ),
-            throwsA(isA<AssertionError>()),
+          () => NaturalLanguageFamily.maybeFromValue(
+            value.name,
+            families: const [],
           ),
         );
 
@@ -124,20 +119,12 @@ void main() => group("$NaturalLanguageFamily", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => NaturalLanguageFamily(name: value.name),
-            isNot(throwsA(isA<AssertionError>())),
-          ),
+          () => NaturalLanguageFamily(name: value.name),
+          shouldThrow: false,
         );
 
-        test(
-          "empty name",
-          () => expect(
-            () => NaturalLanguageFamily(name: ""),
-            throwsA(isA<AssertionError>()),
-          ),
-        );
+        assertTest("empty name", () => NaturalLanguageFamily(name: ""));
       });
     });

@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 103 translations for a Kirundi language:
+/// Provides 107 translations for a Kirundi language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -43,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -60,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -87,6 +90,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -194,11 +198,7 @@ const runLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ৰুন্দি"),
   TranslatedName(LangBel(), name: "рундзі"),
   TranslatedName(LangChe(), name: "рунди"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤈𞤵𞤲𞤣𞤭𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤈𞤵𞤲𞤣𞤭𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "rundi"),
   TranslatedName(LangIbo(), name: "Rụndị"),
   TranslatedName(LangKur(), name: "rundî"),
@@ -211,4 +211,8 @@ const runLanguageTranslations = [
   TranslatedName(LangTir(), name: "ኪሩንዲ"),
   TranslatedName(LangTuk(), name: "rundi dili"),
   TranslatedName(LangYor(), name: "Rúńdì"),
+  TranslatedName(LangAfr(), name: "Rundi"),
+  TranslatedName(LangInd(), name: "Rundi"),
+  TranslatedName(LangMsa(), name: "Rundi"),
+  TranslatedName(LangTgl(), name: "Wikang Kirundi"),
 ];

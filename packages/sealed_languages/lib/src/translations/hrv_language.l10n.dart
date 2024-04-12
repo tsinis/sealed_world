@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Croatian language:
+/// Provides 120 translations for a Croatian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -97,6 +97,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -241,4 +242,5 @@ const hrvLanguageTranslations = [
   TranslatedName(LangTuk(), name: "horwat dili"),
   TranslatedName(LangTat(), name: "хорват"),
   TranslatedName(LangWol(), name: "Krowat"),
+  TranslatedName(LangTgl(), name: "Croatian"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 118 translations for a Latvian language:
+/// Provides 119 translations for a Latvian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -220,11 +221,7 @@ const lavLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Latvian"),
   TranslatedName(LangAsm(), name: "লাটভিয়ান"),
   TranslatedName(LangChe(), name: "латышийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤂𞤢𞤼𞤾𞤭𞤴𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤂𞤢𞤼𞤾𞤭𞤴𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Latbiyanci"),
   TranslatedName(LangIna(), name: "letton"),
   TranslatedName(LangIbo(), name: "Latviani"),
@@ -239,4 +236,5 @@ const lavLanguageTranslations = [
   TranslatedName(LangTuk(), name: "latyş dili"),
   TranslatedName(LangTat(), name: "латыш"),
   TranslatedName(LangWol(), name: "Letoniye"),
+  TranslatedName(LangTgl(), name: "Latvian"),
 ];

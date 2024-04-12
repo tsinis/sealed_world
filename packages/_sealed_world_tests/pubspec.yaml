@@ -7,15 +7,16 @@ repository: https://github.com/tsinis/sealed_world/tree/main/packages/_sealed_wo
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 
 environment:
-  sdk: ^3.0.0
+  sdk: ^3.3.0
 
 dependencies:
   meta: ^1.12.0 # From Google
-  test: ^1.25.2 # From Google
-  vm_service: ^14.1.0 # From Google
+  test: ^1.25.3 # From Google
+  vm_service: ^14.2.0 # From Google
 
 dev_dependencies:
   dart_code_metrics: # ex-Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
+      version: ^5.7.6+1
   lints: ^3.0.0 # From Google

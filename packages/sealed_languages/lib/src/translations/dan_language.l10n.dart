@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Danish language:
+/// Provides 120 translations for a Danish language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -96,6 +96,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -240,4 +241,5 @@ const danLanguageTranslations = [
   TranslatedName(LangTuk(), name: "daniýa dili"),
   TranslatedName(LangTat(), name: "дания"),
   TranslatedName(LangWol(), name: "Danuwa"),
+  TranslatedName(LangTgl(), name: "Danish"),
 ];

@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Southern Ndebele language:
+/// Provides 106 translations for a Southern Ndebele language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -89,6 +89,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -148,7 +149,7 @@ const nblLanguageTranslations = [
   TranslatedName(LangMkd(), name: "јужен ндебеле"),
   TranslatedName(LangMal(), name: "ദക്ഷിണ നെഡിബിൾ"),
   TranslatedName(LangMar(), name: "दक्षिणात्य देबेली"),
-  TranslatedName(LangMlt(), name: "Ndebele, t’Isfel"),
+  TranslatedName(LangMlt(), name: "Ndebele"),
   TranslatedName(LangNob(), name: "sør-ndebele"),
   TranslatedName(LangNld(), name: "Zuid-Ndbele"),
   TranslatedName(LangNno(), name: "sør-ndebele"),
@@ -215,4 +216,5 @@ const nblLanguageTranslations = [
   TranslatedName(LangUzb(), name: "janubiy ndebel"),
   TranslatedName(LangYor(), name: "Èdè Gusu Ndebele"),
   TranslatedName(LangZul(), name: "isi-South Ndebele"),
+  TranslatedName(LangTgl(), name: "Timog Ndebele"),
 ];

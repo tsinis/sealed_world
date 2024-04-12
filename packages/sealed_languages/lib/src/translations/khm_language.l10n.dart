@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 120 translations for a Khmer language:
+/// Provides 125 translations for a Khmer language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -26,6 +27,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -47,6 +49,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -68,6 +71,7 @@ import "../model/translated_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -100,6 +104,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -158,7 +163,7 @@ const khmLanguageTranslations = [
   TranslatedName(LangHrv(), name: "kmerski"),
   TranslatedName(LangHun(), name: "kambodzsai"),
   TranslatedName(LangHye(), name: "քմերերեն"),
-  TranslatedName(LangIbo(), name: "Keme, Etiti"),
+  TranslatedName(LangIbo(), name: "Keme"),
   TranslatedName(LangIsl(), name: "kmer"),
   TranslatedName(LangIta(), name: "khmer"),
   TranslatedName(LangJpn(), name: "クメール語"),
@@ -240,4 +245,9 @@ const khmLanguageTranslations = [
   TranslatedName(LangTuk(), name: "khmer dili"),
   TranslatedName(LangTat(), name: "кхмер"),
   TranslatedName(LangWol(), name: "Xmer"),
+  TranslatedName(LangAfr(), name: "Khmer"),
+  TranslatedName(LangInd(), name: "Khmer"),
+  TranslatedName(LangMsa(), name: "Khmer"),
+  TranslatedName(LangNld(), name: "Khmer"),
+  TranslatedName(LangTgl(), name: "Khmer"),
 ];

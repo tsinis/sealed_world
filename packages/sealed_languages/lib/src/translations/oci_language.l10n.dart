@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 115 translations for a Occitan language:
+/// Provides 116 translations for a Occitan language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -94,6 +94,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -204,11 +205,7 @@ const ociLanguageTranslations = [
   TranslatedName(LangZul(), name: "Isi-Osithani"),
   TranslatedName(LangAsm(), name: "অ’চিটান"),
   TranslatedName(LangChe(), name: "окситанойн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤌𞤷𞥆𞤭𞤼𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤌𞤷𞥆𞤭𞤼𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Ositanci"),
   TranslatedName(LangHye(), name: "օքսիտաներեն"),
   TranslatedName(LangIna(), name: "occitano"),
@@ -234,4 +231,5 @@ const ociLanguageTranslations = [
   TranslatedName(LangTat(), name: "окситан"),
   TranslatedName(LangUzb(), name: "oksitan"),
   TranslatedName(LangWol(), name: "Ositan"),
+  TranslatedName(LangTgl(), name: "Occitan"),
 ];

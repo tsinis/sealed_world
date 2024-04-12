@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 128 translations for a Romanian language:
+/// Provides 129 translations for a Romanian language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -107,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -256,4 +257,5 @@ const ronLanguageTranslations = [
   TranslatedName(LangTuk(), name: "rumyn dili"),
   TranslatedName(LangTat(), name: "румын"),
   TranslatedName(LangWol(), name: "Rumaniyee"),
+  TranslatedName(LangTgl(), name: "Rumano"),
 ];

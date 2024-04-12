@@ -2,9 +2,10 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Swahili language:
+/// Provides 111 translations for a Swahili language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -60,6 +63,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -89,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -101,6 +106,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
@@ -214,4 +220,10 @@ const swaLanguageTranslations = [
   TranslatedName(LangSnd(), name: "سواحيلي"),
   TranslatedName(LangSom(), name: "Sawaaxili"),
   TranslatedName(LangTuk(), name: "suahili dili"),
+  TranslatedName(LangAfr(), name: "Swahili"),
+  TranslatedName(LangCym(), name: "Swahili"),
+  TranslatedName(LangInd(), name: "Swahili"),
+  TranslatedName(LangMsa(), name: "Swahili"),
+  TranslatedName(LangNld(), name: "Swahili"),
+  TranslatedName(LangTgl(), name: "Swahili"),
 ];

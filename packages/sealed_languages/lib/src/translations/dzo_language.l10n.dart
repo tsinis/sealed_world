@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 105 translations for a Dzongkha language:
+/// Provides 111 translations for a Dzongkha language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -42,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -58,6 +61,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -87,6 +91,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -102,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Wolof
 /// - Yoruba
 /// - Zulu.
@@ -195,11 +201,7 @@ const dzoLanguageTranslations = [
   TranslatedName(LangAsm(), name: "জোংখা"),
   TranslatedName(LangBel(), name: "дзонг-кэ"),
   TranslatedName(LangChe(), name: "дзонг-кэ"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤄𞤵𞥅𞤼𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤄𞤵𞥅𞤼𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "dzongkha"),
   TranslatedName(LangIbo(), name: "Dọzngọka"),
   TranslatedName(LangKur(), name: "conxayî"),
@@ -215,4 +217,10 @@ const dzoLanguageTranslations = [
   TranslatedName(LangTat(), name: "дзонг-кха"),
   TranslatedName(LangWol(), name: "Dsongkaa"),
   TranslatedName(LangYor(), name: "Èdè Dzongkha"),
+  TranslatedName(LangAfr(), name: "Dzongkha"),
+  TranslatedName(LangCym(), name: "Dzongkha"),
+  TranslatedName(LangInd(), name: "Dzongkha"),
+  TranslatedName(LangMsa(), name: "Dzongkha"),
+  TranslatedName(LangNld(), name: "Dzongkha"),
+  TranslatedName(LangTgl(), name: "Dzongkha"),
 ];

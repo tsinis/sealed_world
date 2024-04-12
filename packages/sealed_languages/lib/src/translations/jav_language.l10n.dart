@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 124 translations for a Javanese language:
+/// Provides 125 translations for a Javanese language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -107,6 +107,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -249,4 +250,5 @@ const javLanguageTranslations = [
   TranslatedName(LangSrd(), name: "giavanesu"),
   TranslatedName(LangSnd(), name: "جاونيز"),
   TranslatedName(LangTuk(), name: "ýawa dili"),
+  TranslatedName(LangTgl(), name: "Javanese"),
 ];

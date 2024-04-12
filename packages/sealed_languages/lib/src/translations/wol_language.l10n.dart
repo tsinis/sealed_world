@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 101 translations for a Wolof language:
+/// Provides 106 translations for a Wolof language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -42,6 +44,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -57,6 +60,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -84,6 +88,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -188,11 +193,7 @@ const wolLanguageTranslations = [
   TranslatedName(LangAsm(), name: "ৱোলাফ"),
   TranslatedName(LangBel(), name: "валоф"),
   TranslatedName(LangChe(), name: "волоф"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤏𞤮𞤤𞤮𞤬𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤏𞤮𞤤𞤮𞤬𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "wolof"),
   TranslatedName(LangIbo(), name: "Wolọf"),
   TranslatedName(LangKur(), name: "wolofî"),
@@ -207,4 +208,9 @@ const wolLanguageTranslations = [
   TranslatedName(LangTat(), name: "волоф"),
   TranslatedName(LangYor(), name: "Wọ́lọ́ọ̀fù"),
   TranslatedName(LangDeu(), name: "Wolof"),
+  TranslatedName(LangAfr(), name: "Wolof"),
+  TranslatedName(LangInd(), name: "Wolof"),
+  TranslatedName(LangMsa(), name: "Wolof"),
+  TranslatedName(LangNld(), name: "Wolof"),
+  TranslatedName(LangTgl(), name: "Wolof"),
 ];

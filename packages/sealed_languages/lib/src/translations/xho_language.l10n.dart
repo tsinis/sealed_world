@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 104 translations for a Xhosa language:
+/// Provides 110 translations for a Xhosa language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -23,6 +24,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -43,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -59,6 +62,7 @@ import "../model/translated_name.dart";
 /// - Latvian
 /// - Lithuanian
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -88,6 +92,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -100,6 +105,7 @@ import "../model/translated_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Welsh
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
@@ -195,11 +201,7 @@ const xhoLanguageTranslations = [
   TranslatedName(LangZul(), name: "isiXhosa"),
   TranslatedName(LangAsm(), name: "হোছা"),
   TranslatedName(LangChe(), name: "коса"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤑𞤮𞥅𞤧𞤢𞥄𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤑𞤮𞥅𞤧𞤢𞥄𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Bazosa"),
   TranslatedName(LangIna(), name: "xhosa"),
   TranslatedName(LangIbo(), name: "Xhọsa"),
@@ -212,4 +214,10 @@ const xhoLanguageTranslations = [
   TranslatedName(LangTuk(), name: "kosa dili"),
   TranslatedName(LangXho(), name: "IsiXhosa"),
   TranslatedName(LangDeu(), name: "Xhosa"),
+  TranslatedName(LangAfr(), name: "Xhosa"),
+  TranslatedName(LangCym(), name: "Xhosa"),
+  TranslatedName(LangInd(), name: "Xhosa"),
+  TranslatedName(LangMsa(), name: "Xhosa"),
+  TranslatedName(LangNld(), name: "Xhosa"),
+  TranslatedName(LangTgl(), name: "Xhosa"),
 ];

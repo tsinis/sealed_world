@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 98 translations for a Walloon language:
+/// Provides 102 translations for a Walloon language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -40,6 +41,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -56,6 +58,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -83,6 +86,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -202,4 +206,8 @@ const wlnLanguageTranslations = [
   TranslatedName(LangUzb(), name: "vallon"),
   TranslatedName(LangYor(), name: "Èdè Waluni"),
   TranslatedName(LangZul(), name: "isi-Walloon"),
+  TranslatedName(LangAfr(), name: "Walloon"),
+  TranslatedName(LangInd(), name: "Walloon"),
+  TranslatedName(LangMsa(), name: "Walloon"),
+  TranslatedName(LangTgl(), name: "Walloon"),
 ];

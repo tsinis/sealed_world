@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Turkmen language:
+/// Provides 117 translations for a Turkmen language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -46,6 +46,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -63,6 +64,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -92,6 +94,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -214,11 +217,7 @@ const tukLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Turkmen"),
   TranslatedName(LangAsm(), name: "তুৰ্কমেন"),
   TranslatedName(LangChe(), name: "туркменийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤼𞤵𞤪𞤳𞤥𞤢𞤲𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤼𞤵𞤪𞤳𞤥𞤢𞤲𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Tukmenistanci"),
   TranslatedName(LangIna(), name: "turkmeno"),
   TranslatedName(LangIbo(), name: "Turkịs"),
@@ -231,4 +230,7 @@ const tukLanguageTranslations = [
   TranslatedName(LangTuk(), name: "türkmen dili"),
   TranslatedName(LangTat(), name: "төрекмән"),
   TranslatedName(LangWol(), name: "Tirkmen"),
+  TranslatedName(LangInd(), name: "Turkmen"),
+  TranslatedName(LangMsa(), name: "Turkmen"),
+  TranslatedName(LangTgl(), name: "Turkmen"),
 ];

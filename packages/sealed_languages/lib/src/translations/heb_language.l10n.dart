@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Hebrew (modern) language:
+/// Provides 117 translations for a Hebrew (modern) language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -95,6 +95,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -219,11 +220,7 @@ const hebLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Hebrew"),
   TranslatedName(LangAsm(), name: "হিব্ৰু"),
   TranslatedName(LangChe(), name: "жугтийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤖𞤭𞤦𞤵𞤪𞤵𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤖𞤭𞤦𞤵𞤪𞤵𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangHau(), name: "Ibrananci"),
   TranslatedName(LangIna(), name: "hebreo"),
   TranslatedName(LangJav(), name: "Ibrani"),
@@ -236,4 +233,5 @@ const hebLanguageTranslations = [
   TranslatedName(LangTuk(), name: "ýewreý dili"),
   TranslatedName(LangTat(), name: "яһүд"),
   TranslatedName(LangWol(), name: "Ebrë"),
+  TranslatedName(LangTgl(), name: "Ebreo"),
 ];

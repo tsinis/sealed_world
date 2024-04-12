@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 114 translations for a Uzbek language:
+/// Provides 116 translations for a Uzbek language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -45,6 +45,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -92,6 +93,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -215,11 +217,7 @@ const uzbLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Uzbek"),
   TranslatedName(LangAsm(), name: "উজবেক"),
   TranslatedName(LangChe(), name: "узбекийн"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤓𞥅𞤧𞤦𞤫𞤳𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤓𞥅𞤧𞤦𞤫𞤳𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "uzbeko"),
   TranslatedName(LangIbo(), name: "Ụzbek"),
   TranslatedName(LangKur(), name: "ozbekî"),
@@ -231,4 +229,6 @@ const uzbLanguageTranslations = [
   TranslatedName(LangTuk(), name: "özbek dili"),
   TranslatedName(LangTat(), name: "үзбәк"),
   TranslatedName(LangWol(), name: "Usbek"),
+  TranslatedName(LangInd(), name: "Uzbek"),
+  TranslatedName(LangTgl(), name: "Uzbek"),
 ];

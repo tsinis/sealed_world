@@ -2,7 +2,7 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 119 translations for a Urdu language:
+/// Provides 123 translations for a Urdu language:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -27,6 +27,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -48,6 +49,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -68,6 +70,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -100,6 +103,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -227,11 +231,7 @@ const urdLanguageTranslations = [
   TranslatedName(LangZul(), name: "isi-Urdu"),
   TranslatedName(LangAsm(), name: "উৰ্দু"),
   TranslatedName(LangChe(), name: "урду"),
-  TranslatedName(
-    LangFul(),
-    name: "𞤓𞤪𞤣𞤵𞥅𞤪𞤫",
-    script: ScriptAdlm(),
-  ),
+  TranslatedName(LangFul(), name: "𞤓𞤪𞤣𞤵𞥅𞤪𞤫", script: ScriptAdlm()),
   TranslatedName(LangIna(), name: "urdu"),
   TranslatedName(LangKur(), name: "urdûyî"),
   TranslatedName(LangMri(), name: "Ūrutu"),
@@ -242,4 +242,8 @@ const urdLanguageTranslations = [
   TranslatedName(LangTuk(), name: "urdu"),
   TranslatedName(LangTat(), name: "урду"),
   TranslatedName(LangDeu(), name: "Urdu"),
+  TranslatedName(LangInd(), name: "Urdu"),
+  TranslatedName(LangMsa(), name: "Urdu"),
+  TranslatedName(LangNld(), name: "Oerdoe"),
+  TranslatedName(LangTgl(), name: "Urdu"),
 ];

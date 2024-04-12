@@ -1,4 +1,5 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
+import "package:sealed_languages/language_translations.dart";
 import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
@@ -51,6 +52,7 @@ void main() => group("$NaturalLanguage", () {
             expect(element.codeShort, isA<String>());
             expect(element.codeShort, isNotEmpty);
             expect(element.codeOther, element.codeShort);
+            expect(element.internationalName, element.name);
             expect(element.isRightToLeft, isA<bool>());
             expect(element.namesNative, isA<List<String>>());
             expect(element.namesNative, isNotEmpty);
@@ -672,7 +674,8 @@ void main() => group("$NaturalLanguage", () {
       });
 
       group("translations", () {
-        const min = 57;
+        final min = kSealedLanguagesSupportedLanguages.length + 1;
+
         test("every language should have at least $min translations", () {
           for (final translated in NaturalLanguage.list) {
             expect(translated.translations.length, greaterThanOrEqualTo(min));

@@ -2,8 +2,9 @@ import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
 import "../model/translated_name.dart";
 
-/// Provides 116 translations for a Hausa language:
+/// Provides 121 translations for a Hausa language:
 /// - (Eastern) Punjabi
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -24,6 +25,7 @@ import "../model/translated_name.dart";
 /// - Croatian
 /// - Czech
 /// - Danish
+/// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
@@ -44,6 +46,7 @@ import "../model/translated_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Irish
 /// - Italian
@@ -63,6 +66,7 @@ import "../model/translated_name.dart";
 /// - Lithuanian
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -95,6 +99,7 @@ import "../model/translated_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -231,4 +236,9 @@ const hauLanguageTranslations = [
   TranslatedName(LangTur(), name: "Hausa dili"),
   TranslatedName(LangTat(), name: "хауса"),
   TranslatedName(LangWol(), name: "Hawsa"),
+  TranslatedName(LangAfr(), name: "Hausa"),
+  TranslatedName(LangInd(), name: "Hausa"),
+  TranslatedName(LangMsa(), name: "Hausa"),
+  TranslatedName(LangNld(), name: "Hausa"),
+  TranslatedName(LangTgl(), name: "Hausa"),
 ];
