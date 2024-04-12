@@ -6,7 +6,7 @@ NEW FEATURES
 - Added new `internationalName` getter in `IsoStandardized` interface, representing the international name of the ISO object.
 - Added new `UpperCaseMap` class, that `UpperCaseIsoMap` extends, a simple version of `UpperCaseIsoMap` without key length checks and `IsoStandardized` values requirement.
 - The `map` in the `RegionalBloc` is now `UpperCaseMap` (with all it's benefits).
-- Added new `fromAcronym` factory method in the `RegionalBloc`.
+- Added new `maybeFromAcronym` factory method in the `RegionalBloc`.
 - Added new `BasicLocale` class, that `TranslatedName` extends. Representing a type-safe world locale (language, country/region code and script).
 - Added new `commonNamesCacheMap` method for all ISO based sealed classes collections, which allows to create a cache map of common names translations for the given `BasicLocale`.
 
