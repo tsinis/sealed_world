@@ -14,6 +14,7 @@ void main() => group("$CryptoCurrency", () {
         assertTest(
           "not",
           () => CryptoCurrency(code: value.code, name: value.name),
+          shouldThrow: false,
         );
 
         assertTest(
