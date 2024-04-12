@@ -6,12 +6,9 @@ on:
       package_name:
         required: true
         type: string
-
-permissions:
-  actions: read
-  contents: read
-  pull-requests: write
-  security-events: write
+    secrets:
+      CODECOV_TOKEN:
+        required: true
 
 jobs:
   verify-dart-package:
@@ -93,8 +90,6 @@ jobs:
 
       - name: 💯 Upload coverage
         uses: codecov/codecov-action@v4.2.0
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ${{ env.relative_path }}/coverage/lcov.info
