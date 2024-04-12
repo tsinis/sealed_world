@@ -6,6 +6,9 @@ on:
       package_name:
         required: true
         type: string
+    secrets:
+      CODECOV_TOKEN:
+        required: true
 
 jobs:
   verify-flutter-package:
@@ -86,9 +89,7 @@ jobs:
           min_coverage: 90
 
       - name: 💯 Upload coverage
-        uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        uses: codecov/codecov-action@v4.2.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ${{ env.relative_path }}/coverage/lcov.info
