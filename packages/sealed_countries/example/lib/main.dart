@@ -29,7 +29,7 @@ void main() {
 
   for (final country in WorldCountry.list) {
     print(
-      """${country.name.common} translated to Slovak language: ${country.translation(const LangSlk()).name}""",
+      """${country.internationalName} translated to Slovak language: ${country.translation(const BasicLocale(LangSlk())).name}""",
     );
   }
 

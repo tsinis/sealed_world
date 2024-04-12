@@ -27,7 +27,7 @@ class RegionalBloc extends WorldBloc {
   }) : super(acronym: acronym);
 
   /// Creates a new `RegionalBloc` object from its acronym.
-  /// Returns an [RegionalBloc] object from the given `acronym`.
+  /// Returns an [RegionalBloc] object from the given [acronym].
   ///
   /// The [acronym] parameter is required and must be a valid bloc acronym.
   /// {@macro any_code_object}
@@ -39,13 +39,12 @@ class RegionalBloc extends WorldBloc {
   /// {@macro optional_instances_array_parameter}
   factory RegionalBloc.fromAcronym(
     Object acronym, [
-    Iterable<RegionalBloc>? blocs = list,
+    Iterable<RegionalBloc>? blocs,
   ]) {
+    if (blocs == null) return map["$acronym"]!;
     final string = acronym.toUpperCaseIsoCode();
 
-    return blocs == null
-        ? regionalBlocAcronymMap[string]!
-        : list.firstWhere((bloc) => bloc.acronym == string);
+    return list.firstWhere((bloc) => bloc.acronym == string);
   }
 
   /// Creates a new `RegionalBloc` object from its name.
@@ -67,6 +66,34 @@ class RegionalBloc extends WorldBloc {
   String toString({bool short = true}) => short
       ? super.toString()
       : '''RegionalBloc(acronym: "$acronym", name: "$name", otherAcronyms: ${jsonEncode(otherAcronyms)}, otherNames: ${jsonEncode(otherNames)})''';
+
+  /// Creates a new `RegionalBloc` object from its acronym.
+  ///
+  /// Returns an [RegionalBloc] object from the given [acronym], or `null`
+  /// if not found.
+  ///
+  /// The [acronym] parameter is required and must be a valid bloc acronym.
+  /// {@macro any_code_object}
+  /// Returns a [RegionalBloc] object that represents the bloc with the given
+  /// code or throws a `StateError` if no such bloc exists.
+  ///
+  /// The optional [blocs] parameter can be used to specify a list of
+  /// [RegionalBloc] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  static RegionalBloc? maybeFromAcronym(
+    Object? acronym, [
+    Iterable<RegionalBloc>? blocs,
+  ]) {
+    if (blocs == null) return map["$acronym"];
+    final string = acronym?.toUpperCaseIsoCode();
+    if (string == null) return null;
+
+    for (final bloc in blocs) {
+      if (bloc.acronym == string) return bloc;
+    }
+
+    return null;
+  }
 
   /// Creates a new `RegionalBloc` object from a value.
   ///
@@ -95,7 +122,7 @@ class RegionalBloc extends WorldBloc {
   }
 
   /// A map of all the regional blocs with their corresponding acronyms.
-  static const map = regionalBlocAcronymMap;
+  static const map = UpperCaseMap(regionalBlocAcronymMap);
 
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.
