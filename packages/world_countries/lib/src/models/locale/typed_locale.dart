@@ -26,7 +26,8 @@ import "package:sealed_countries/sealed_countries.dart";
 /// );
 /// ```
 @immutable
-class TypedLocale<CountryType extends Object> extends Locale {
+class TypedLocale<CountryType extends Object> extends Locale
+    implements BasicLocale {
   /// Creates an instance of [TypedLocale].
   ///
   /// The [language] parameter is required.
@@ -44,22 +45,25 @@ class TypedLocale<CountryType extends Object> extends Locale {
           countryCode: country?.toString().trim().toUpperCase(),
         );
 
-  /// The [NaturalLanguage] representing the language of the locale.
+  @override
   final NaturalLanguage language;
 
   /// The optional country information of generic type `CountryType`.
   final CountryType? country;
 
-  /// The optional script information of type [Script].
+  @override
   final Script? script;
 
   @override
   @required
-  String? get countryCode => country?.toString().trim().toUpperCase();
+  String? get countryCode => country?.toUpperCaseIsoCode();
 
   @override
   String get languageCode => language.codeShort.toLowerCase();
 
   @override
   String? get scriptCode => script?.code;
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => "{}"; // TODO!.
 }

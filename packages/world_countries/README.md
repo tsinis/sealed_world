@@ -174,7 +174,7 @@ class _MainPageState extends State<MainPage>
         ),
         body: Center(
           child: MaybeWidget(
-            selectedCountry?.maybeTranslation(const LangEng())?.name,
+            selectedCountry?.maybeTranslation(BasicLocale(LangEng()))?.name,
             Text.new,
             orElse: const Text(
               "Please select country by pressing on the search icon",
@@ -205,7 +205,7 @@ Pickers are providing a lot of info about the countries/languages/currencies:
 ### Additional information
 
 For more information on using this package, check out the API documentation.
-If you have any issues or suggestions for the package, please file them in the GitHub repository. PRs or ideas are always welcome. If you like this package, please give it a star or like.
+If you have any issues or suggestions for the package, please file them in the GitHub repository. **PRs or ideas are always welcome**. If you like this package, please give it a star or like.
 
 ### References and credits
 
@@ -276,6 +276,6 @@ CountryPicker(
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations.
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has almost 100% code coverage, with more than 1000 (+3350 in underling Dart packages) tests, providing confidence in its reliability and stability.
+- **High code coverage**: The code in this package has almost 100% code coverage, with more than 122 (+3140 in underling Dart packages) tests, providing confidence in its reliability and stability.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
