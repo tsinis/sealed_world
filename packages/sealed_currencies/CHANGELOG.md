@@ -1,3 +1,36 @@
+## 1.4.0
+
+NEW FEATURES
+
+- 🦾 Language translations now also support all `GlobalMaterialLocalization` + `GlobalCupertinoLocalizations` locales.
+- Added new `internationalName` getter in `IsoStandardized` interface, representing the international name of the ISO object.
+- Added new `UpperCaseMap` class, that `UpperCaseIsoMap` extends, a simple version of `UpperCaseIsoMap` without key length checks and `IsoStandardized` values requirement.
+- Added new `BasicLocale` class, that `TranslatedName` extends. Representing a type-safe world locale (language, country/region code and script).
+- Added new `commonNamesCacheMap` method for all ISO based sealed classes collections, which allows to create a cache map of common names translations for the given `BasicLocale`.
+
+BREAKING CHANGES
+
+Because of the `BasicLocale` changes (described above), `translation()` and `maybeTranslation()` methods on the `Translated` classes now require `BasicLocale` input. If you are not using those methods directly, then you don't need to change anything, otherwise you will need to do small adjustment - wrap the content of those methods with a `BasicLocale`.
+
+Before:
+
+```dart
+print(iso?.maybeTranslation(LangPor()));
+```
+
+After:
+
+```dart
+print(iso?.maybeTranslation(BasicLocale(LangPor())));
+```
+
+Or just:
+
+1. Enable **Regular Expressions** in your IDE's **Find and Replace** panel.
+2. In the **Find** field, enter the regex: `(translation\()(.*)(\))`
+3. In the **Replace** field, enter: `$1BasicLocale($2)$3`
+4. Execute the replace operation.
+
 ## 1.3.1
 
 NEW FEATURES

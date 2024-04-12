@@ -241,6 +241,9 @@ class FiatCurrency extends Currency
   @override
   String get codeOther => codeNumeric;
 
+  @override
+  String get internationalName => name;
+
   /// Returns a string representation of this instance.
   @override
   String toString({bool short = true}) => short

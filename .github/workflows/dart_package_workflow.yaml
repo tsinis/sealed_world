@@ -6,6 +6,9 @@ on:
       package_name:
         required: true
         type: string
+    secrets:
+      CODECOV_TOKEN:
+        required: true
 
 jobs:
   verify-dart-package:
@@ -86,13 +89,11 @@ jobs:
           min_coverage: 90
 
       - name: 💯 Upload coverage
-        uses: codecov/codecov-action@v3.1.6
+        uses: codecov/codecov-action@v4.2.0
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           file: ${{ env.relative_path }}/coverage/lcov.info
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
-          token: ${{ secrets.CODECOV_TOKEN }}
           override_branch: ${{ github.base_ref }}
           verbose: true
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

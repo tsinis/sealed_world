@@ -88,7 +88,7 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
   // Prints German translations of all available regular currencies.
   for (final currency in FiatCurrency.list) {
     print(
-      """German name of ${currency.name}: ${currency.maybeTranslation(const LangDeu())?.name}""",
+      """German name of ${currency.name}: ${currency.maybeTranslation(const BasicLocale(LangDeu()))?.name}""",
     );
   }
 ```
@@ -103,13 +103,13 @@ For more usage examples, please see the `/example` folder.
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has 100% code coverage, with more than 850 (+1500 in underling packages) tests, providing confidence in its reliability and stability.
+- **High code coverage**: The code in this package has 100% code coverage, with more than 583 (+1533 in underling packages) tests, providing confidence in its reliability and stability.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
 ### Additional information
 
-If you like this package, please give it a star or like. For more information on using this package, check out the API documentation. PRs or ideas are always welcome.
+If you like this package, please give it a star or like. For more information on using this package, check out the API documentation. **PRs or ideas are always welcome**.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
 
 ### References, credits and sources

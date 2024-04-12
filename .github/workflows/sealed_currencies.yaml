@@ -16,3 +16,5 @@ jobs:
     uses: ./.github/workflows/dart_package_workflow.yaml
     with:
       package_name: sealed_currencies
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
