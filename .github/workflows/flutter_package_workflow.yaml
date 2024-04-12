@@ -10,7 +10,6 @@ on:
 jobs:
   verify-flutter-package:
     env:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       relative_path: packages/${{ inputs.package_name }}
     name: ⏳ Verify ${{ inputs.package_name }} Package (Flutter)
     defaults:
@@ -87,11 +86,13 @@ jobs:
           min_coverage: 90
 
       - name: 💯 Upload coverage
-        uses: codecov/codecov-action@v4.2.0
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           file: ${{ env.relative_path }}/coverage/lcov.info
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
-          token: ${{ secrets.CODECOV_TOKEN }}
           override_branch: ${{ github.base_ref }}
           verbose: true
