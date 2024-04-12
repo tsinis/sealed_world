@@ -7,6 +7,12 @@ on:
         required: true
         type: string
 
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+  security-events: write
+
 jobs:
   verify-dart-package:
     env:
@@ -86,7 +92,7 @@ jobs:
           min_coverage: 90
 
       - name: 💯 Upload coverage
-        uses: codecov/codecov-action@v4.1.0
+        uses: codecov/codecov-action@v4.2.0
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
