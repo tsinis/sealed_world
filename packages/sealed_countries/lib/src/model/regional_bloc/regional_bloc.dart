@@ -105,7 +105,7 @@ class RegionalBloc extends WorldBloc {
   /// compare for each regional bloc.
   ///
   /// The `regionalBlocs` parameter is the list of regional blocs to search. If
-  /// no value is provided, the `list` constant is used.
+  /// no value is provided, the `RegionalBloc.list` constant is used.
   static RegionalBloc? maybeFromValue<T extends Object>(
     T value, {
     T? Function(RegionalBloc regionalBloc)? where,
