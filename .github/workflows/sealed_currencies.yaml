@@ -4,16 +4,16 @@ on:
   push:
     branches: [main]
     paths:
-      - "packages/sealed_currencies/**"
+      - "packages/sealed_currencies/**/*.dart"
   pull_request:
     branches: [main]
     paths:
-      - "packages/sealed_currencies/**"
+      - "packages/sealed_currencies/**/*.dart"
       - ".github/workflows/sealed_currencies.yaml"
 
 jobs:
   verify-sealed-currencies:
-    uses: ./.github/workflows/dart_package_workflow.yaml
+    uses: ./.github/workflows/verify_package_workflow.yaml
     with:
       package_name: sealed_currencies
     secrets:

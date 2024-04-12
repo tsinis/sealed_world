@@ -10,7 +10,7 @@ environment:
   sdk: ^3.3.0
 
 dependencies:
-  meta: ^1.12.0 # From Google
+  meta: ^1.14.0 # From Google
   test: ^1.25.3 # From Google
   vm_service: ^14.2.0 # From Google
 
