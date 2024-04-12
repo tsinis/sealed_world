@@ -14,19 +14,11 @@ extension LocaleTranslatedExtension<T extends TranslatedName> on Translated<T> {
   ///
   /// Returns the translated object of type `T`, or `null` if the translation is
   /// not available.
-  @optionalTypeArgs
-  T? maybeTranslate(TypedLocale? locale, {bool useLanguageFallback = true}) {
-    final language = locale?.language;
-
-    return language != null
-        ? maybeTranslation(
-            language,
-            countryCode: locale?.countryCode,
-            script: locale?.script,
-            useLanguageFallback: useLanguageFallback,
-          )
-        : null;
-  }
+  @optionalTypeArgs // TODO!
+  T? maybeTranslate(TypedLocale? locale, {bool useLanguageFallback = true}) =>
+      locale != null
+          ? maybeTranslation(locale, useLanguageFallback: useLanguageFallback)
+          : null;
 
   /// Translates the [Translated] object to the specified [locale].
   ///
@@ -37,10 +29,5 @@ extension LocaleTranslatedExtension<T extends TranslatedName> on Translated<T> {
   /// Returns the translated object of type `T`, or the [orElse] language
   /// translation if the locale translation is not available.
   T translate(TypedLocale locale, {NaturalLanguage orElse = const LangEng()}) =>
-      translation(
-        locale.language,
-        countryCode: locale.countryCode,
-        script: locale.script,
-        orElse: orElse,
-      );
+      translation(locale, orElse: orElse); // TODO!
 }

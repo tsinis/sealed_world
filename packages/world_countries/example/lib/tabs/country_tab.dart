@@ -26,12 +26,12 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              data.translation(const LangEng()).name,
+              data.translation(const BasicLocale(LangEng())).name,
               style: context.theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             MaybeWidget(
-              data.translation(const LangEng()).fullName,
+              data.translation(const BasicLocale(LangEng())).fullName,
               (fullName) => Text(
                 fullName,
                 style: context.theme.textTheme.titleMedium

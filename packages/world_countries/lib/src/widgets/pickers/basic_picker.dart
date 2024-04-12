@@ -147,7 +147,7 @@ abstract class BasicPicker<T extends Translated>
   @mustCallSuper
   Iterable<String> defaultSearch(T item, BuildContext context) => [
         _maybeNameTranslation(item, context) ??
-            item.translation(const LangEng()).name,
+            item.translation(const BasicLocale(LangEng())).name,
       ];
 
   /// Returns the name translation of the item (if exists) in form

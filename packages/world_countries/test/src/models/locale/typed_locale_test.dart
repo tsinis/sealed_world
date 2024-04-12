@@ -10,6 +10,8 @@ void main() => group("$TypedLocale", () {
       const country = "US";
       const locale = Locale("en", country);
 
+      // TODO! Add interfaces tests.
+
       group("equality", () {
         test("should compare regular $Locale object with $TypedLocale", () {
           expect(const TypedLocale(english, country: country), locale);
@@ -36,6 +38,12 @@ void main() => group("$TypedLocale", () {
             const TypedLocale(english, country: country),
             isNot(const IsoLocale(english)),
           );
+        });
+      });
+
+      group("toJson", () {
+        test("should return a JSON object", () {
+          expect(const TypedLocale(english).toJson(), isNotEmpty); // TODO!
         });
       });
     });
