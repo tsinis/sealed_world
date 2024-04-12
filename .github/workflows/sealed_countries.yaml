@@ -4,15 +4,17 @@ on:
   push:
     branches: [main]
     paths:
-      - "packages/sealed_countries/**"
+      - "packages/sealed_countries/**/*.dart"
   pull_request:
     branches: [main]
     paths:
-      - "packages/sealed_countries/**"
+      - "packages/sealed_countries/**/*.dart"
       - ".github/workflows/sealed_countries.yaml"
 
 jobs:
   verify-sealed-countries:
-    uses: ./.github/workflows/dart_package_workflow.yaml
+    uses: ./.github/workflows/verify_package_workflow.yaml
     with:
       package_name: sealed_countries
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

@@ -1,4 +1,4 @@
-name: flutter_package_workflow
+name: verify_package_workflow
 
 on:
   workflow_call:
@@ -6,27 +6,38 @@ on:
       package_name:
         required: true
         type: string
+      is_flutter:
+        required: false
+        default: false
+        type: boolean
     secrets:
       CODECOV_TOKEN:
         required: true
 
 jobs:
-  verify-flutter-package:
+  verify-package:
     env:
       relative_path: packages/${{ inputs.package_name }}
-    name: ⏳ Verify ${{ inputs.package_name }} Package (Flutter)
+    name: ⏳ Verify ${{ inputs.package_name }} Package
     defaults:
       run:
         working-directory: ${{ env.relative_path }}
 
     runs-on: "ubuntu-latest"
-    timeout-minutes: 15
+    timeout-minutes: 12
 
     steps:
       - name: 📚 Git checkout
         uses: actions/checkout@v4.1.2
 
+      - name: 🎯 Setup Dart
+        if: ${{ !inputs.is_flutter }}
+        uses: dart-lang/setup-dart@v1.6.2
+        with:
+          sdk: "stable"
+
       - name: 🐦 Setup Flutter
+        if: ${{ inputs.is_flutter }}
         uses: subosito/flutter-action@v2.16.0
         with:
           cache: true
@@ -34,7 +45,7 @@ jobs:
           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
       - name: 📦 Install dependencies
-        run: flutter pub get
+        run: dart pub get
 
       - name: 🕵️ Analyze code
         uses: ValentinVignal/action-dart-analyze@v0.16
@@ -57,7 +68,6 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           relativePath: ${{ env.relative_path }}
 
-
       - name: 📈 Check Pub score
         if: ${{ github.event_name == 'pull_request' }}
         env:
@@ -78,8 +88,15 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: dart run dart_code_metrics:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib test
 
-      - name: 🧪 Run tests
-        run: flutter test --coverage
+      - name: 🧪 Run Dart tests
+        if: ${{ !inputs.is_flutter }}
+        run: |
+          dart test --fail-fast --coverage=coverage
+          dart run coverage:format_coverage -c -l -i coverage -o coverage/lcov.info --report-on=lib
+
+      - name: 🧪 Run Flutter tests
+        if: ${{ inputs.is_flutter }}
+        run: flutter test --coverage --no-pub
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v3.0.0

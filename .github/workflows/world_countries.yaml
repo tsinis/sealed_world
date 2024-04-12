@@ -4,15 +4,18 @@ on:
   push:
     branches: [main]
     paths:
-      - "packages/world_countries/**"
+      - "packages/world_countries/**/*.dart"
   pull_request:
     branches: [main]
     paths:
-      - "packages/world_countries/**"
+      - "packages/world_countries/**/*.dart"
       - ".github/workflows/world_countries.yaml"
 
 jobs:
   verify-world-countries:
-    uses: ./.github/workflows/flutter_package_workflow.yaml
+    uses: ./.github/workflows/verify_package_workflow.yaml
     with:
       package_name: world_countries
+      is_flutter: true
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
