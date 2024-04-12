@@ -103,7 +103,7 @@ jobs:
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.g.dart **/*.data.dart **/*.l10n.dart"
-          min_coverage: 90
+          min_coverage: 97
 
       - name: 💯 Upload coverage
         uses: codecov/codecov-action@v4.2.0
