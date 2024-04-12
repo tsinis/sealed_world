@@ -4,7 +4,7 @@ import "../interfaces/json_encodable.dart";
 import "../interfaces/named.dart";
 import "core/basic_locale.dart";
 
-/// A class representing a translated name of a country or region.
+/// A class representing a translated name of an ISO object.
 ///
 /// This class implements the [Named] interface and the
 /// [JsonEncodable] interface.
