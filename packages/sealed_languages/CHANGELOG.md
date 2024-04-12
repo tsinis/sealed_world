@@ -28,7 +28,7 @@ Or just:
 
 1. Enable **Regular Expressions** in your IDE's **Find and Replace** panel.
 2. In the **Find** field, enter the regex: `(translation\()(.*)(\))`
-3. In the **Replace** field, enter: `$1const BasicLocale($2)$3`
+3. In the **Replace** field, enter: `$BasicLocale($2)$3`
 4. Execute the replace operation.
 
 ## 1.3.1
