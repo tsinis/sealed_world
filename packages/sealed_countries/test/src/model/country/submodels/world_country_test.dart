@@ -111,6 +111,7 @@ void main() => group("$WorldCountry", () {
             expect(element.namesNative, isNotEmpty);
             expect(element.tld, isNotEmpty);
             expect(element.codeOther, element.codeShort);
+            expect(element.internationalName, element.name.common);
             for (final domain in element.tld) {
               expect(domain, isNotEmpty);
             }
@@ -1255,18 +1256,22 @@ void main() => group("$WorldCountry", () {
       group("translations", () {
         test("translation should always provide at least eng translation", () {
           const abkhazia = LangAbk();
-          const nonExistCode = "";
+          const nonExistCode = "000";
           var count = 0;
           for (final value in WorldCountry.list) {
             final maybeMissing = value.maybeTranslation(
-              abkhazia,
-              countryCode: nonExistCode,
+              const BasicLocale(
+                abkhazia,
+                countryCode: nonExistCode,
+              ),
               useLanguageFallback: false,
             );
             if (maybeMissing != null) continue;
             count++;
             expect(
-              value.translation(abkhazia, countryCode: nonExistCode),
+              value.translation(
+                const BasicLocale(abkhazia, countryCode: nonExistCode),
+              ),
               isNotNull,
             );
           }
@@ -1278,7 +1283,8 @@ void main() => group("$WorldCountry", () {
 
           for (final l10n in NaturalLanguage.list) {
             for (final value in WorldCountry.list) {
-              final hasTranslationForValue = value.maybeTranslation(l10n);
+              final hasTranslationForValue =
+                  value.maybeTranslation(BasicLocale(l10n));
               if (hasTranslationForValue != null) map[value] = map[value]! + 1;
             }
           }
@@ -1294,7 +1300,8 @@ void main() => group("$WorldCountry", () {
 
           for (final l10n in NaturalLanguage.list) {
             for (final value in WorldCountry.list) {
-              final hasTranslationForValue = value.maybeTranslation(l10n);
+              final hasTranslationForValue =
+                  value.maybeTranslation(BasicLocale(l10n));
               if (hasTranslationForValue != null) {
                 map[l10n] = map[l10n]! + 1;
               } else {
@@ -1317,11 +1324,34 @@ void main() => group("$WorldCountry", () {
             for (final l10n in kSealedCountriesSupportedLanguages) {
               if (l10n == const LangEng()) continue;
               expect(
-                country.translation(l10n),
-                isNot(country.translation(const LangEng())),
+                country.translation(BasicLocale(l10n)),
+                isNot(country.translation(const BasicLocale(LangEng()))),
               );
             }
           }
+        });
+
+        group("commonNamesCacheMap", () {
+          performanceTest(
+            "languages in supported list should have all translations",
+            () {
+              for (final language in kSealedCountriesSupportedLanguages) {
+                final cache = WorldCountry.list.commonNamesCacheMap(
+                  BasicLocale(language, script: language.scripts.first),
+                );
+                expect(cache.length, WorldCountry.list.length);
+              }
+            },
+          );
+
+          performanceTest(
+            """some languages should have at smaller amount translations of it's own name""",
+            () {
+              final cache = WorldCountry.list
+                  .commonNamesCacheMap(const BasicLocale(LangKal()));
+              expect(cache.length, lessThan(WorldCountry.list.length));
+            },
+          );
         });
       });
     });

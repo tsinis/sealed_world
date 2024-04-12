@@ -29,7 +29,7 @@ void main() => group("$RegionalBloc", () {
           test(
             "${element.acronym} from map",
             () => expect(
-              RegionalBloc.fromAcronym(element.acronym, null),
+              RegionalBloc.fromAcronym(element.acronym),
               element,
             ),
           );
@@ -37,14 +37,55 @@ void main() => group("$RegionalBloc", () {
 
         test(
           "with proper acronym",
-          () => expect(RegionalBloc.fromAcronym(value.acronym), value),
+          () => expect(
+            RegionalBloc.fromAcronym(value.acronym, RegionalBloc.list),
+            value,
+          ),
         );
 
         test(
           "with wrong acronym",
           () => expect(
-            () => RegionalBloc.fromAcronym(value.toString()),
+            () => RegionalBloc.fromAcronym(value.toString(), RegionalBloc.list),
             throwsStateError,
+          ),
+        );
+      });
+
+      group("maybeFromAcronym", () {
+        for (final element in RegionalBloc.list) {
+          test(
+            "${element.acronym} from map",
+            () => expect(
+              RegionalBloc.maybeFromAcronym(element.acronym),
+              element,
+            ),
+          );
+        }
+
+        test(
+          "with proper acronym",
+          () => expect(RegionalBloc.maybeFromAcronym(value.acronym), value),
+        );
+
+        test(
+          "with null input",
+          () => expect(RegionalBloc.maybeFromAcronym(null), isNull),
+        );
+
+        test(
+          "with wrong acronym and map",
+          () => expect(
+            RegionalBloc.maybeFromAcronym(value.toString()),
+            isNull,
+          ),
+        );
+
+        test(
+          "with wrong acronym and list",
+          () => expect(
+            RegionalBloc.maybeFromAcronym(value.toString(), RegionalBloc.list),
+            isNull,
           ),
         );
       });
