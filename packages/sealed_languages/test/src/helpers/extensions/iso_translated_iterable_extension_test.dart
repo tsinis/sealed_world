@@ -7,12 +7,12 @@ import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
 void main() => group("IsoTranslatedIterableExtension", () {
-      group("translationsCacheMap", () {
+      group("commonNamesCacheMap", () {
         performanceTest(
           "languages in supported list should have all translations",
           () {
             for (final language in kSealedLanguagesSupportedLanguages) {
-              final cache = NaturalLanguage.list.translationsCacheMap(
+              final cache = NaturalLanguage.list.commonNamesCacheMap(
                 BasicLocale(language, script: language.scripts.first),
               );
               expect(cache.length, NaturalLanguage.list.length);
@@ -24,7 +24,7 @@ void main() => group("IsoTranslatedIterableExtension", () {
           "some languages should have at least 1 translation, of it's own name",
           () {
             final cache = NaturalLanguage.list
-                .translationsCacheMap(const BasicLocale(LangKal()));
+                .commonNamesCacheMap(const BasicLocale(LangKal()));
             expect(cache.length, 1);
           },
         );

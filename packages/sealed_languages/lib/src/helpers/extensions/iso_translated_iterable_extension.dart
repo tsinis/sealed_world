@@ -14,13 +14,13 @@ extension IsoTranslatedIterableExtension<
     T extends TranslatedName,
     N extends Object,
     I extends IsoTranslated<T, N>> on Iterable<I> {
-  /// Generates a cache map of translations for the given [locale].
+  /// Generates a cache map of common name translations for the given [locale].
   ///
   /// The cache map is a [Map] where the keys are [IsoTranslated] objects and
   /// the values are the corresponding translations in the given locale.
   ///
   /// The [BasicLocale] parameter with a required `language` parameter and
-  /// optional`countryCode` and `script` parameters can be used to specify the
+  /// optional `countryCode` and `script` parameters can be used to specify the
   /// locale for which to generate the translations. If [useLanguageFallback] is
   ///  set to `true`, the method will fall back to the language without
   /// filtering if no matching translation is found.
@@ -30,23 +30,26 @@ extension IsoTranslatedIterableExtension<
   /// Example usage:
   ///
   /// ```dart
-  /// final cache = NaturalLanguage.list.translationsCacheMap(const BasicLocale(
+  /// final cache = NaturalLanguage.list.commonNamesCacheMap(const BasicLocale(
   ///   LangEng(),
   ///   script: ScriptLatn(),
   ///  ),
   /// );
-  /// print(cache[const LangAfr()]?.name); // "Afrikaans"
+  /// print(cache[const LangAfr()]); // "Afrikaans"
   /// ```
-  Map<I, T> translationsCacheMap(L locale, {bool useLanguageFallback = true}) {
-    final map = <I, T>{};
+  Map<I, String> commonNamesCacheMap(
+    L locale, {
+    bool useLanguageFallback = true,
+  }) {
+    final map = <I, String>{};
     for (final item in this) {
       final translation = item.maybeTranslation(
         locale,
         useLanguageFallback: useLanguageFallback,
       );
-      if (translation != null) map[item] = translation;
+      if (translation != null) map[item] = translation.name;
     }
 
-    return Map<I, T>.unmodifiable(map);
+    return Map.unmodifiable(map);
   }
 }
