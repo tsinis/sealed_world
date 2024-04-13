@@ -41,9 +41,12 @@ void main() => group("$TypedLocale", () {
         });
       });
 
-      group("toJson", () {
-        test("should return a JSON object", () {
-          expect(const TypedLocale(english).toJson(), isNotEmpty); // TODO!
-        });
+      test("toJson", () {
+        const value = TypedLocale(english, country: country);
+        final json = value.toJson();
+        final parsed = json.parse(BasicLocaleExtension.fromMap);
+        expect(value.countryCode, parsed.countryCode);
+        expect(value.language, parsed.language);
+        expect(value.script, parsed.script);
       });
     });
