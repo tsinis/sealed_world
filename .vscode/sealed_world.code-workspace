@@ -195,12 +195,18 @@
     "version": "0.2.0",
     "cwd": "${fileWorkspaceFolder}/example/lib/main.dart",
     "configurations": [
-      { "name": "Debug Example", "request": "launch", "type": "dart" },
+      {
+        "name": "Debug Example",
+        "request": "launch",
+        "type": "dart",
+        "program": "${fileWorkspaceFolder}/example/lib/main.dart"
+      },
       {
         "name": "Debug And Observe Example",
         "request": "launch",
         "type": "dart",
-        "args": ["--observe"]
+        "args": ["--observe"],
+        "program": "${fileWorkspaceFolder}/example/lib/main.dart"
       }
     ]
   },
