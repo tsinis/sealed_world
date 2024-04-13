@@ -87,6 +87,10 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
       });
 
   @override
+  String? nameTranslationCache(NaturalLanguage item, TypedLocale locale) =>
+      locale.languageTranslations[item];
+
+  @override
   LanguagePicker copyWith({
     Iterable<NaturalLanguage>? items,
     bool? addAutomaticKeepAlives,

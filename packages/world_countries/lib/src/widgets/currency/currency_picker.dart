@@ -88,6 +88,10 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
       });
 
   @override
+  String? nameTranslationCache(FiatCurrency item, TypedLocale locale) =>
+      locale.currencyTranslations[item];
+
+  @override
   CurrencyPicker copyWith({
     Iterable<FiatCurrency>? items,
     bool? addAutomaticKeepAlives,

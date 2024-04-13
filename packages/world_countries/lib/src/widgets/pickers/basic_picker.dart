@@ -8,7 +8,6 @@ import "package:sealed_countries/sealed_countries.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
-import "../../extensions/locale_translated_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "../../interfaces/basic_picker_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
@@ -184,11 +183,18 @@ abstract class BasicPicker<T extends Translated>
   }
 
   String? _maybeNameTranslation(T item, BuildContext context) {
-    final typedLocale =
+    final locale =
         translation ?? context.pickersTheme?.translation ?? context.maybeLocale;
+    if (locale == null) return null;
 
-    return typedLocale != null ? item.maybeTranslate(typedLocale)?.name : null;
+    return nameTranslationCache(item, locale) ??
+        item.maybeTranslation(locale)?.name;
   }
+
+  /// Returns translated common name of the item (if exists).
+  @required
+  @protected
+  String? nameTranslationCache(T item, TypedLocale locale);
 
   @override
   State<BasicPicker<T>> createState() => _BasicPickerState<T>();

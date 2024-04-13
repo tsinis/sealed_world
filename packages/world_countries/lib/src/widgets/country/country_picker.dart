@@ -129,6 +129,10 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   }
 
   @override
+  String? nameTranslationCache(WorldCountry item, TypedLocale locale) =>
+      locale.countryTranslations[item];
+
+  @override
   Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>
       Set.unmodifiable({
         ...super.defaultSearch(item, context),

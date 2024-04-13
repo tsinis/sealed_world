@@ -32,14 +32,27 @@ class TypedLocale<CountryType extends Object> extends Locale
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  const TypedLocale(this.language, {this.country, this.script}) : super(" ");
+  const TypedLocale(
+    this.language, {
+    this.country,
+    this.script,
+    this.countryTranslations = const {},
+    this.currencyTranslations = const {},
+    this.languageTranslations = const {},
+  }) : super(" ");
 
   /// Creates an instance of [TypedLocale] from subtags.
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  TypedLocale.fromSubtags({required this.language, this.country, this.script})
-      : super.fromSubtags(
+  TypedLocale.fromSubtags({
+    required this.language,
+    this.country,
+    this.script,
+    this.countryTranslations = const {},
+    this.currencyTranslations = const {},
+    this.languageTranslations = const {},
+  }) : super.fromSubtags(
           languageCode: language.codeShort.toLowerCase(),
           scriptCode: script?.code,
           countryCode: country?.toString().trim().toUpperCase(),
@@ -54,6 +67,15 @@ class TypedLocale<CountryType extends Object> extends Locale
   @override
   final Script? script;
 
+  /// Common country names translations for the current locale.
+  final Map<WorldCountry, String> countryTranslations;
+
+  /// Common currency names translations for the current locale.
+  final Map<FiatCurrency, String> currencyTranslations;
+
+  /// Common language names translations for the current locale.
+  final Map<NaturalLanguage, String> languageTranslations;
+
   @override
   @required
   String? get countryCode => country?.toUpperCaseIsoCode();
@@ -65,5 +87,7 @@ class TypedLocale<CountryType extends Object> extends Locale
   String? get scriptCode => script?.code;
 
   @override
-  String toJson({JsonCodec codec = const JsonCodec()}) => "{}"; // TODO!.
+  String toJson({JsonCodec codec = const JsonCodec()}) =>
+      BasicLocale(language, countryCode: countryCode, script: script)
+          .toJson(codec: codec);
 }
