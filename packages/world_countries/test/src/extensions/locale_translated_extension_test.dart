@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use_from_same_package, for tests.
+
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/extensions/locale_translated_extension.dart";

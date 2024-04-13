@@ -26,20 +26,33 @@ import "package:sealed_countries/sealed_countries.dart";
 /// );
 /// ```
 @immutable
-class TypedLocale<CountryType extends Object> extends Locale
+base class TypedLocale<CountryType extends Object> extends Locale
     implements BasicLocale {
   /// Creates an instance of [TypedLocale].
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  const TypedLocale(this.language, {this.country, this.script}) : super(" ");
+  const TypedLocale(
+    this.language, {
+    this.country,
+    this.script,
+    this.countryTranslations = const {},
+    this.currencyTranslations = const {},
+    this.languageTranslations = const {},
+  }) : super(" ");
 
   /// Creates an instance of [TypedLocale] from subtags.
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  TypedLocale.fromSubtags({required this.language, this.country, this.script})
-      : super.fromSubtags(
+  TypedLocale.fromSubtags({
+    required this.language,
+    this.country,
+    this.script,
+    this.countryTranslations = const {},
+    this.currencyTranslations = const {},
+    this.languageTranslations = const {},
+  }) : super.fromSubtags(
           languageCode: language.codeShort.toLowerCase(),
           scriptCode: script?.code,
           countryCode: country?.toString().trim().toUpperCase(),
@@ -54,6 +67,15 @@ class TypedLocale<CountryType extends Object> extends Locale
   @override
   final Script? script;
 
+  /// Common country names translations for the current locale.
+  final Map<WorldCountry, String> countryTranslations;
+
+  /// Common currency names translations for the current locale.
+  final Map<FiatCurrency, String> currencyTranslations;
+
+  /// Common language names translations for the current locale.
+  final Map<NaturalLanguage, String> languageTranslations;
+
   @override
   @required
   String? get countryCode => country?.toUpperCaseIsoCode();
@@ -64,6 +86,29 @@ class TypedLocale<CountryType extends Object> extends Locale
   @override
   String? get scriptCode => script?.code;
 
+  /// Returns a copy of the [TypedLocale] object with the specified properties.
+  /// {@macro copy_with_method}
+  @required
+  // ignore: long-parameter-list, class has 6 properties.
+  TypedLocale<CountryType> copyWith({
+    NaturalLanguage? language,
+    CountryType? country,
+    Script? script,
+    Map<WorldCountry, String>? countryTranslations,
+    Map<FiatCurrency, String>? currencyTranslations,
+    Map<NaturalLanguage, String>? languageTranslations,
+  }) =>
+      TypedLocale<CountryType>(
+        language ?? this.language,
+        country: country ?? this.country,
+        script: script ?? this.script,
+        countryTranslations: countryTranslations ?? this.countryTranslations,
+        currencyTranslations: currencyTranslations ?? this.currencyTranslations,
+        languageTranslations: languageTranslations ?? this.languageTranslations,
+      );
+
   @override
-  String toJson({JsonCodec codec = const JsonCodec()}) => "{}"; // TODO!.
+  String toJson({JsonCodec codec = const JsonCodec()}) =>
+      BasicLocale(language, countryCode: countryCode, script: script)
+          .toJson(codec: codec);
 }

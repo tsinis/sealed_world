@@ -53,6 +53,7 @@ executables:
   clean_build:
 
 flutter:
+  uses-material-design: true
   assets:
     - lib/assets/
 

@@ -195,12 +195,18 @@
     "version": "0.2.0",
     "cwd": "${fileWorkspaceFolder}/example/lib/main.dart",
     "configurations": [
-      { "name": "Debug Example", "request": "launch", "type": "dart" },
+      {
+        "name": "Debug Example",
+        "request": "launch",
+        "type": "dart",
+        "program": "${fileWorkspaceFolder}/example/lib/main.dart"
+      },
       {
         "name": "Debug And Observe Example",
         "request": "launch",
         "type": "dart",
-        "args": ["--observe"]
+        "args": ["--observe"],
+        "program": "${fileWorkspaceFolder}/example/lib/main.dart"
       }
     ]
   },
@@ -271,12 +277,6 @@
         "type": "shell",
         "command": "dart run dart_code_metrics:metrics check-unused-code lib test --disable-sunset-warning",
         "label": "Dart Code Metrics Unused Code"
-      },
-      {
-        "type": "shell",
-        "command": "flutter pub get --no-example",
-        "label": "Flutter Pub Get",
-        "presentation": { "close": true }
       },
       {
         "type": "shell",
@@ -370,7 +370,7 @@
         "type": "shell",
         "dependsOrder": "sequence",
         "dependsOn": [
-          "Flutter Pub Get",
+          "Dart Pub Get",
           "Flutter Test",
           "Dart Format",
           "Flutter Analyze",
@@ -380,7 +380,7 @@
           "Dart Code Metrics Unused Code",
           "Dart Code Metrics Unused Files"
         ],
-        "label": "Flutter Pub Get, Test, Format, Analyze, Dry Run, DCM"
+        "label": "Dart Pub Get, Test, Format, Analyze, Dry Run, DCM"
       },
       {
         "type": "shell",

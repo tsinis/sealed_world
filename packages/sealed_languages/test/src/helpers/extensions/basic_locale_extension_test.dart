@@ -21,7 +21,7 @@ void main() => group("BasicLocaleExtension", () {
           expect(copy.script, Script.list.last);
           expect(copy.language, isNot(value.language));
           expect(copy.countryCode, isNot(value.countryCode));
-          expect(copy.script, isNot(value.countryCode));
+          expect(copy.script, isNot(value.script));
         });
 
         test("with null values", () {

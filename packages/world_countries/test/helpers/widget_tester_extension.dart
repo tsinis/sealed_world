@@ -118,9 +118,10 @@ extension WidgetTesterExtension on WidgetTester {
 
   Future<void> testPickerInDialog<T extends Translated>(
     BasicPicker<T> picker,
-    String Function(T value) findLabel,
-  ) =>
-      _testPickerIn(picker, findLabel, true);
+    String Function(T value) findLabel, [
+    NaturalLanguage supportedLanguage = const LangEng(),
+  ]) =>
+      _testPickerIn(picker, findLabel, true, [IsoLocale(supportedLanguage)]);
 
   Future<void> testPickerInSearch<T extends Translated>(
     BasicPicker<T> picker,
@@ -137,8 +138,9 @@ extension WidgetTesterExtension on WidgetTester {
   Future<void> _testPickerIn<T extends Translated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
-    bool? inDialog,
-  ) async {
+    bool? inDialog, [
+    List<IsoLocale> supportedLocales = const [IsoLocale(LangEng())],
+  ]) async {
     T? selected;
     final testPicker = picker.copyWith(onSelect: (item) => selected = item);
     await pumpWidget(
@@ -147,25 +149,23 @@ extension WidgetTesterExtension on WidgetTester {
           body: Builder(
             builder: (context) => Center(
               child: IconButton(
-                onPressed: () {
-                  switch (inDialog) {
-                    case true:
-                      return unawaited(testPicker.showInDialog(context));
-                    case false:
-                      return unawaited(testPicker.showInSearch(context));
-                    default:
-                      return unawaited(
-                        testPicker.showInModalBottomSheet(context),
-                      );
-                  }
+                onPressed: () => switch (inDialog) {
+                  true => unawaited(testPicker.showInDialog(context)),
+                  false => unawaited(testPicker.showInSearch(context)),
+                  _ => unawaited(testPicker.showInModalBottomSheet(context))
                 },
                 icon: const Icon(Icons.search),
               ),
             ),
           ),
         ),
-        localizationsDelegates: const [TypedLocaleDelegate()],
-        supportedLocales: const [Locale("en")],
+        localizationsDelegates: [
+          if (inDialog ?? false)
+            const TypedLocaleDelegate.selectiveCache()
+          else
+            const TypedLocaleDelegate(),
+        ],
+        supportedLocales: supportedLocales,
       ),
     );
     await pumpAndSettle();

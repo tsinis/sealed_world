@@ -37,10 +37,47 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// The [fallbackLanguage] parameter is optional. If provided, it sets the
   /// fallback language. The [localeMapResolution] parameter is optional. If
   /// provided, it sets the resolution strategy for the locale map.
+  /// The [countriesForTranslationCache] parameter is optional. If provided,
+  /// it sets the countries for translation cache.
+  /// The [currenciesForTranslationCache] parameter is optional. If provided,
+  /// it sets the currencies for translation cache.
+  /// The [languagesForTranslationCache] parameter is optional. If provided,
+  /// it sets the languages for translation cache.
   const TypedLocaleDelegate({
     this.fallbackLanguage,
     this.localeMapResolution = defaultLocaleMapResolution,
-  });
+    Iterable<WorldCountry> countriesForTranslationCache = WorldCountry.list,
+    Iterable<FiatCurrency> currenciesForTranslationCache = FiatCurrency.list,
+    Iterable<NaturalLanguage> languagesForTranslationCache =
+        NaturalLanguage.list,
+  })  : _countriesForTranslationCache = countriesForTranslationCache,
+        _currenciesForTranslationCache = currenciesForTranslationCache,
+        _languagesForTranslationCache = languagesForTranslationCache;
+
+  /// Creates an instance of [TypedLocaleDelegate] without translations caching.
+  /// This is useful when you don't want to cache the translations for the
+  /// specific unused ISO objects. For example you are only using country
+  /// pickers, so you might not need currency an language translations. In this
+  /// case you can provide [countriesForTranslationCache] for the countries.
+  ///
+  /// The [fallbackLanguage] parameter is optional. If provided, it sets the
+  /// fallback language. The [localeMapResolution] parameter is optional. If
+  /// provided, it sets the resolution strategy for the locale map.
+  /// The [countriesForTranslationCache] parameter is optional. If provided,
+  /// it sets the countries for translation cache.
+  /// The [currenciesForTranslationCache] parameter is optional. If provided,
+  /// it sets the currencies for translation cache.
+  /// The [languagesForTranslationCache] parameter is optional. If provided,
+  /// it sets the languages for translation cache.
+  const TypedLocaleDelegate.selectiveCache({
+    this.fallbackLanguage,
+    this.localeMapResolution = defaultLocaleMapResolution,
+    Iterable<WorldCountry> countriesForTranslationCache = const {},
+    Iterable<FiatCurrency> currenciesForTranslationCache = const {},
+    Iterable<NaturalLanguage> languagesForTranslationCache = const {},
+  })  : _countriesForTranslationCache = countriesForTranslationCache,
+        _currenciesForTranslationCache = currenciesForTranslationCache,
+        _languagesForTranslationCache = languagesForTranslationCache;
 
   /// A constant list of [LocaleEntry] objects that define the default
   /// resolution for locale mapping.
@@ -80,17 +117,32 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// is resolved based on the available locales.
   final Iterable<LocaleEntry>? localeMapResolution;
 
+  final Iterable<WorldCountry> _countriesForTranslationCache;
+  final Iterable<FiatCurrency> _currenciesForTranslationCache;
+  final Iterable<NaturalLanguage> _languagesForTranslationCache;
+
   @override
   bool isSupported(Locale locale) => _toTypedLocale(locale) != null;
 
   @override
   Future<TypedLocale?> load(Locale locale) async {
+    final typedLocale = _toTypedLocale(locale);
     assert(
-      isSupported(locale),
+      typedLocale != null,
       """Unsupported locale: $locale, consider adding `localeMapResolution` and/or `fallbackLanguage`""",
     );
 
-    return _toTypedLocale(locale);
+    if (typedLocale == null) return typedLocale;
+
+    final language = await _cache(_languagesForTranslationCache, typedLocale);
+    final currency = await _cache(_currenciesForTranslationCache, typedLocale);
+    final country = await _cache(_countriesForTranslationCache, typedLocale);
+
+    return typedLocale.copyWith(
+      countryTranslations: country, // Common country names cache.
+      currencyTranslations: currency, // Common currency names cache.
+      languageTranslations: language, // Common language names cache.
+    );
   }
 
   @override
@@ -102,6 +154,16 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
 
   @override
   Type get type => TypedLocale;
+
+  Future<Map<T, String>?> _cache<T extends IsoTranslated>(
+    Iterable<T> isoItems,
+    TypedLocale typedLocale,
+  ) async {
+    if (isoItems.isEmpty) return null;
+    await Future<void>.delayed(Duration.zero);
+
+    return isoItems.commonNamesCacheMap(typedLocale);
+  }
 
   TypedLocale? _maybeResolutionLocale(Locale locale) =>
       Map<Locale, TypedLocale>.fromEntries(localeMapResolution ?? [])[locale];

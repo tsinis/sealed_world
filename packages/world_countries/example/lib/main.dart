@@ -66,10 +66,11 @@ class _MainState extends State<Main> {
             TypedLocaleDelegate(), // <- Add for automatic pickers translations.
           ],
           supportedLocales: [
-            const Locale("pt", "PT"),
-            const Locale("pt", "BR"), // Classic, string only based locale, or:
-            const TypedLocale(LangBos(), script: ScriptLatn()), // Loose typed.
-            const IsoLocale(LangBos(), script: ScriptCyrl()), // Strict typed.
+            const Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
+            const Locale.fromSubtags(languageCode: "bs", scriptCode: "Latn"),
+            // Classic, string only based locale, or:
+            const TypedLocale(LangPor(), country: "PT"), // Loose typed.
+            const IsoLocale(LangPor(), country: CountryBra()), // Strict typed.
             for (final locale in kMaterialSupportedLanguages) Locale(locale),
           ],
         ),
