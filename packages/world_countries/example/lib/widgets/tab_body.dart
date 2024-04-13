@@ -54,7 +54,7 @@ class TabBody extends StatelessWidget {
           Expanded(
             child: ClipRect(
               child: ColoredBox(
-                color: context.theme.colorScheme.surface.withOpacity(1 / 2),
+                color: context.theme.colorScheme.background.withOpacity(1 / 2),
                 child: FunctionalPlatform.maybeWhenConst(
                   web: ListView(children: children),
                   orElse: BackdropFilter(

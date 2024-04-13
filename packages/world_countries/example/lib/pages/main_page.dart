@@ -117,7 +117,7 @@ class _MainPageState extends State<MainPage>
               : null,
           floatingActionButton:
               FloatingButton(_controller, onPressed: _onFabPressed),
-          backgroundColor: context.theme.colorScheme.surfaceContainerHighest,
+          backgroundColor: context.theme.colorScheme.surfaceVariant,
         ),
       );
 }
