@@ -26,7 +26,7 @@ import "package:sealed_countries/sealed_countries.dart";
 /// );
 /// ```
 @immutable
-class TypedLocale<CountryType extends Object> extends Locale
+base class TypedLocale<CountryType extends Object> extends Locale
     implements BasicLocale {
   /// Creates an instance of [TypedLocale].
   ///
@@ -85,6 +85,27 @@ class TypedLocale<CountryType extends Object> extends Locale
 
   @override
   String? get scriptCode => script?.code;
+
+  /// Returns a copy of the [TypedLocale] object with the specified properties.
+  /// {@macro copy_with_method}
+  @required
+  // ignore: long-parameter-list, class has 6 properties.
+  TypedLocale<CountryType> copyWith({
+    NaturalLanguage? language,
+    CountryType? country,
+    Script? script,
+    Map<WorldCountry, String>? countryTranslations,
+    Map<FiatCurrency, String>? currencyTranslations,
+    Map<NaturalLanguage, String>? languageTranslations,
+  }) =>
+      TypedLocale<CountryType>(
+        language ?? this.language,
+        country: country ?? this.country,
+        script: script ?? this.script,
+        countryTranslations: countryTranslations ?? this.countryTranslations,
+        currencyTranslations: currencyTranslations ?? this.currencyTranslations,
+        languageTranslations: languageTranslations ?? this.languageTranslations,
+      );
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) =>

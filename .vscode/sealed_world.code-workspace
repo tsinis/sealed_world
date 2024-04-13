@@ -280,12 +280,6 @@
       },
       {
         "type": "shell",
-        "command": "flutter pub get --no-example",
-        "label": "Flutter Pub Get",
-        "presentation": { "close": true }
-      },
-      {
-        "type": "shell",
         "command": "flutter clean",
         "label": "Flutter Clean",
         "presentation": { "close": true }
@@ -376,7 +370,7 @@
         "type": "shell",
         "dependsOrder": "sequence",
         "dependsOn": [
-          "Flutter Pub Get",
+          "Dart Pub Get",
           "Flutter Test",
           "Dart Format",
           "Flutter Analyze",
@@ -386,7 +380,7 @@
           "Dart Code Metrics Unused Code",
           "Dart Code Metrics Unused Files"
         ],
-        "label": "Flutter Pub Get, Test, Format, Analyze, Dry Run, DCM"
+        "label": "Dart Pub Get, Test, Format, Analyze, Dry Run, DCM"
       },
       {
         "type": "shell",

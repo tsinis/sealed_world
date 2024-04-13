@@ -2,7 +2,6 @@ import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../extensions/locale_extension.dart";
-import "../extensions/typed_locale_extension.dart";
 import "../models/locale/iso_locale.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";

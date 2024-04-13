@@ -9,23 +9,31 @@ void main() => group("$IsoLocale", () {
       const english = LangEng();
       const country = CountryUsa();
       const locale = Locale("en", "US");
+      const value = IsoLocale(english, country: country);
+
+      test("interfaces", () {
+        expect(value, isA<BasicLocale>());
+        expect(value, isA<TypedLocale>());
+        expect(value, isA<Locale>());
+        expect(value, isA<JsonEncodable>());
+      });
 
       group("equality", () {
         test("should compare regular $Locale object with $IsoLocale", () {
-          expect(const IsoLocale(english, country: country), locale);
+          expect(value, locale);
           expect(
             IsoLocale.fromSubtags(language: english, country: country),
             locale,
           );
           expect(
-            const IsoLocale(english, country: country),
+            value,
             isNot(Locale(locale.languageCode)),
           );
         });
 
         test("should compare $TypedLocale object with $IsoLocale", () {
           expect(
-            const IsoLocale(english, country: country),
+            value,
             TypedLocale(english, country: locale.countryCode),
           );
           expect(
@@ -40,9 +48,33 @@ void main() => group("$IsoLocale", () {
             ),
           );
           expect(
-            const IsoLocale(english, country: country),
+            value,
             isNot(const TypedLocale(english)),
           );
+        });
+      });
+
+      group("copyWith", () {
+        test("with non-null values", () {
+          final copy = value.copyWith(
+            language: NaturalLanguage.list.first,
+            country: WorldCountry.list.first,
+            script: Script.list.last,
+          );
+          expect(copy.language, NaturalLanguage.list.first);
+          expect(copy.countryCode, WorldCountry.list.first.codeShort);
+          expect(copy.country, WorldCountry.list.first);
+          expect(copy.script, Script.list.last);
+          expect(copy.language, isNot(value.language));
+          expect(copy.countryCode, isNot(value.countryCode));
+          expect(copy.script, isNot(value.script));
+        });
+
+        test("with null values", () {
+          final copy = value.copyWith();
+          expect(copy.language, value.language);
+          expect(copy.country, value.country);
+          expect(copy.script, value.script);
         });
       });
     });

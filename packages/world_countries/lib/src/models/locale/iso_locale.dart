@@ -29,14 +29,45 @@ final class IsoLocale extends TypedLocale<WorldCountry> {
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  const IsoLocale(super.language, {super.country, super.script});
+  const IsoLocale(
+    super.language, {
+    super.country,
+    super.script,
+    super.countryTranslations,
+    super.currencyTranslations,
+    super.languageTranslations,
+  });
 
   /// Creates an instance of [IsoLocale] from subtags.
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  IsoLocale.fromSubtags({required super.language, super.country, super.script})
-      : super.fromSubtags();
+  IsoLocale.fromSubtags({
+    required super.language,
+    super.country,
+    super.script,
+    super.countryTranslations,
+    super.currencyTranslations,
+    super.languageTranslations,
+  }) : super.fromSubtags();
+
+  @override
+  IsoLocale copyWith({
+    NaturalLanguage? language,
+    WorldCountry? country,
+    Script? script,
+    Map<WorldCountry, String>? countryTranslations,
+    Map<FiatCurrency, String>? currencyTranslations,
+    Map<NaturalLanguage, String>? languageTranslations,
+  }) =>
+      IsoLocale(
+        language ?? this.language,
+        country: country ?? this.country,
+        script: script ?? this.script,
+        countryTranslations: countryTranslations ?? this.countryTranslations,
+        currencyTranslations: currencyTranslations ?? this.currencyTranslations,
+        languageTranslations: languageTranslations ?? this.languageTranslations,
+      );
 
   @override
   String? get countryCode => country?.codeShort;
