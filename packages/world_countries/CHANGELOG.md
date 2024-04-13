@@ -4,8 +4,8 @@ NEW FEATURES
 
 - 🦾 Language translations now also support all `GlobalMaterialLocalization` + `GlobalCupertinoLocalizations` locales.
 - You can now provide translation caches list in `TypedLocaleDelegate` and it's new `selectiveCache` constructor. This is useful when you don't want to cache the translations for the specific unused ISO objects. For example you are only using country pickers, so you might not need currency an language translations. In this case you can provide only `countriesForTranslationCache` for the countries translation cache.
-- The`TypedLocale` (so and `IsoLocale`) has new fields for storing translations cache (see the point above).
-- The`TypedLocale` (so and `IsoLocale`) are now inherited from `BasicLocale` (so and `JsonEncodable`), so they can be used in the translations directly.
+- The `TypedLocale` (so and `IsoLocale`) has new fields for storing translations cache (see the point above).
+- The `TypedLocale` (so and `IsoLocale`) are now inherited from `BasicLocale` (so and `JsonEncodable`), so they can be used in the translations directly.
 - Added `copyWith` method in in `TypedLocale` (so and `IsoLocale`).
 - Added new `internationalName` getter in `IsoStandardized` interface, representing the international name of the ISO object.
 - Added new `UpperCaseMap` class, that `UpperCaseIsoMap` extends, a simple version of `UpperCaseIsoMap` without key length checks and `IsoStandardized` values requirement.
