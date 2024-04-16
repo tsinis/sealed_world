@@ -2,17 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a India country:
+/// Provides 144 translations for a India country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -23,6 +27,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chinese
 /// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -32,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -47,20 +54,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -68,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -75,24 +89,34 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
 /// - Nuosu
+/// - Occitan
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Sundanese
+/// - Swahili
 /// - Swedish
 /// - Tajik
 /// - Tamil
@@ -109,12 +133,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Vietnamese
+/// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const indCountryTranslations = [
   CountryName(
@@ -307,4 +333,30 @@ const indCountryTranslations = [
   TranslatedName(LangSan(), name: "भारतः"),
   TranslatedName(LangSrd(), name: "Ìndia"),
   TranslatedName(LangXho(), name: "E-Indiya"),
+  TranslatedName(LangAbk(), name: "Индиа"),
+  TranslatedName(LangArg(), name: "India"),
+  TranslatedName(LangCos(), name: "India"),
+  TranslatedName(LangChu(), name: "і҆́ндїа"),
+  TranslatedName(LangEus(), name: "India"),
+  TranslatedName(LangFao(), name: "India"),
+  TranslatedName(LangIna(), name: "India"),
+  TranslatedName(LangInd(), name: "India"),
+  TranslatedName(LangIle(), name: "India"),
+  TranslatedName(LangKik(), name: "India"),
+  TranslatedName(LangKal(), name: "India"),
+  TranslatedName(LangCor(), name: "Eynda"),
+  TranslatedName(LangLat(), name: "India"),
+  TranslatedName(LangMsa(), name: "India"),
+  TranslatedName(LangNor(), name: "India"),
+  TranslatedName(LangOci(), name: "Índia"),
+  TranslatedName(LangOrm(), name: "India"),
+  TranslatedName(LangQue(), name: "India"),
+  TranslatedName(LangRoh(), name: "India"),
+  TranslatedName(LangRon(), name: "India"),
+  TranslatedName(LangSme(), name: "India"),
+  TranslatedName(LangSna(), name: "India"),
+  TranslatedName(LangSun(), name: "India"),
+  TranslatedName(LangSwa(), name: "India"),
+  TranslatedName(LangVol(), name: "Lindän"),
+  TranslatedName(LangZha(), name: "Yindu"),
 ];

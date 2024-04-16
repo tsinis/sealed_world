@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 162 translations for a France country:
+/// Provides 165 translations for a France country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -109,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nuosu
 /// - Occitan
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -123,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -403,4 +406,7 @@ const fraCountryTranslations = [
   TranslatedName(LangVol(), name: "Fransän"),
   TranslatedName(LangZha(), name: "Fazgoz"),
   TranslatedName(LangXho(), name: "EFrance"),
+  TranslatedName(LangAbk(), name: "Франциа"),
+  TranslatedName(LangOrm(), name: "France"),
+  TranslatedName(LangSna(), name: "France"),
 ];

@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Algeria country:
+/// Provides 160 translations for a Algeria country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -40,6 +41,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -57,7 +59,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -83,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -93,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
@@ -106,6 +113,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
@@ -147,6 +156,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const dzaCountryTranslations = [
   CountryName(
@@ -391,4 +401,14 @@ const dzaCountryTranslations = [
   TranslatedName(LangWln(), name: "Aldjereye"),
   TranslatedName(LangXho(), name: "I-Algeria"),
   TranslatedName(LangYid(), name: "אַלזשיר"),
+  TranslatedName(LangAbk(), name: "Алжир"),
+  TranslatedName(LangFao(), name: "Algeria"),
+  TranslatedName(LangIna(), name: "Algeria"),
+  TranslatedName(LangIle(), name: "Algeria"),
+  TranslatedName(LangIbo(), name: "Algeria"),
+  TranslatedName(LangMsa(), name: "Algeria"),
+  TranslatedName(LangRoh(), name: "Algeria"),
+  TranslatedName(LangRon(), name: "Algeria"),
+  TranslatedName(LangSme(), name: "Algeria"),
+  TranslatedName(LangZha(), name: "Ahwjgizliya"),
 ];

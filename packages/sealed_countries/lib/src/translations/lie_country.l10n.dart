@@ -2,28 +2,34 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Liechtenstein country:
+/// Provides 137 translations for a Liechtenstein country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -34,6 +40,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -43,10 +50,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -62,22 +75,32 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -91,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -99,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -106,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const lieCountryTranslations = [
   CountryName(
@@ -318,4 +344,31 @@ const lieCountryTranslations = [
   TranslatedName(LangVol(), name: "Ligtänstän"),
   TranslatedName(LangChv(), name: "Лихтенштейн"),
   TranslatedName(LangXho(), name: "ELiechtenstein"),
+  TranslatedName(LangAbk(), name: "Лихтенштеин"),
+  TranslatedName(LangAfr(), name: "Liechtenstein"),
+  TranslatedName(LangArg(), name: "Liechtenstein"),
+  TranslatedName(LangBod(), name: "ལེག་ཏེན་ཚིན།"),
+  TranslatedName(LangCat(), name: "Liechtenstein"),
+  TranslatedName(LangDan(), name: "Liechtenstein"),
+  TranslatedName(LangEus(), name: "Liechtenstein"),
+  TranslatedName(LangGlg(), name: "Liechtenstein"),
+  TranslatedName(LangIna(), name: "Liechtenstein"),
+  TranslatedName(LangInd(), name: "Liechtenstein"),
+  TranslatedName(LangIle(), name: "Liechtenstein"),
+  TranslatedName(LangIbo(), name: "Liechtenstein"),
+  TranslatedName(LangIsl(), name: "Liechtenstein"),
+  TranslatedName(LangKal(), name: "Liechtensteini"),
+  TranslatedName(LangLtz(), name: "Liechtenstein"),
+  TranslatedName(LangMsa(), name: "Liechtenstein"),
+  TranslatedName(LangNor(), name: "Liechtenstein"),
+  TranslatedName(LangOci(), name: "Liechtenstein"),
+  TranslatedName(LangQue(), name: "Liechtenstein"),
+  TranslatedName(LangRoh(), name: "Liechtenstein"),
+  TranslatedName(LangRon(), name: "Liechtenstein"),
+  TranslatedName(LangSrd(), name: "Liechtenstein"),
+  TranslatedName(LangSme(), name: "Liechtenstein"),
+  TranslatedName(LangSna(), name: "Liechtenstein"),
+  TranslatedName(LangSwa(), name: "Liechtenstein"),
+  TranslatedName(LangVie(), name: "Liechtenstein"),
+  TranslatedName(LangZha(), name: "Lezcihdunhswdwngh"),
 ];

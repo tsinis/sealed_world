@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Saint Martin country:
+/// Provides 125 translations for a Saint Martin country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -23,12 +25,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chinese
 /// - Chuvash
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -48,10 +52,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -61,6 +67,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -75,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -92,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tajik
@@ -323,4 +332,13 @@ const mafCountryTranslations = [
   TranslatedName(LangVie(), name: "St. Martin"),
   TranslatedName(LangXho(), name: "ESt. Martin"),
   TranslatedName(LangYor(), name: "Ìlú Màtìnì"),
+  TranslatedName(LangAbk(), name: "Сен-Мартен"),
+  TranslatedName(LangArg(), name: "Sant Martín"),
+  TranslatedName(LangCos(), name: "San Martinu"),
+  TranslatedName(LangEpo(), name: "Saint-Martin"),
+  TranslatedName(LangIle(), name: "St.-Martin"),
+  TranslatedName(LangKal(), name: "Frankrigi Saint Martin"),
+  TranslatedName(LangLin(), name: "Sántu Martin"),
+  TranslatedName(LangOci(), name: "St. Martin"),
+  TranslatedName(LangSwa(), name: "St. Martin"),
 ];

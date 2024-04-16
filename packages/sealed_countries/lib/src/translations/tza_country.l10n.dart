@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Tanzania country:
+/// Provides 142 translations for a Tanzania country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -26,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -37,6 +41,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -48,26 +53,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -77,6 +91,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -84,18 +100,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -112,12 +131,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const tzaCountryTranslations = [
   CountryName(
@@ -332,4 +354,26 @@ const tzaCountryTranslations = [
   TranslatedName(LangSsw(), name: "IThanzaniya"),
   TranslatedName(LangVol(), name: "Tansanän"),
   TranslatedName(LangXho(), name: "ETanzania"),
+  TranslatedName(LangAbk(), name: "Танзаниа"),
+  TranslatedName(LangArg(), name: "Tanzania"),
+  TranslatedName(LangDan(), name: "Tanzania"),
+  TranslatedName(LangEus(), name: "Tanzania"),
+  TranslatedName(LangFry(), name: "Tanzania"),
+  TranslatedName(LangGlg(), name: "Tanzania"),
+  TranslatedName(LangIna(), name: "Tanzania"),
+  TranslatedName(LangInd(), name: "Tanzania"),
+  TranslatedName(LangIle(), name: "Tanzania"),
+  TranslatedName(LangIbo(), name: "Tanzania"),
+  TranslatedName(LangKik(), name: "Tanzania"),
+  TranslatedName(LangKal(), name: "Tanzania"),
+  TranslatedName(LangLat(), name: "Tanzania"),
+  TranslatedName(LangMlg(), name: "Tanzania"),
+  TranslatedName(LangMsa(), name: "Tanzania"),
+  TranslatedName(LangNor(), name: "Tanzania"),
+  TranslatedName(LangOci(), name: "Tanzania"),
+  TranslatedName(LangRon(), name: "Tanzania"),
+  TranslatedName(LangSna(), name: "Tanzania"),
+  TranslatedName(LangSwa(), name: "Tanzania"),
+  TranslatedName(LangVie(), name: "Tanzania"),
+  TranslatedName(LangZha(), name: "Dajsanghnizya"),
 ];

@@ -2,62 +2,88 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 89 translations for a Palau country:
+/// Provides 128 translations for a Palau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -65,30 +91,43 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
+/// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const plwCountryTranslations = [
   CountryName(
@@ -248,4 +287,43 @@ const plwCountryTranslations = [
   TranslatedName(LangVol(), name: "Palauäns"),
   TranslatedName(LangChv(), name: "Палау"),
   TranslatedName(LangXho(), name: "EPalau"),
+  TranslatedName(LangAbk(), name: "Палау"),
+  TranslatedName(LangAfr(), name: "Palau"),
+  TranslatedName(LangArg(), name: "Palau"),
+  TranslatedName(LangBod(), name: "པ་ལཽ།"),
+  TranslatedName(LangCat(), name: "Palau"),
+  TranslatedName(LangDan(), name: "Palau"),
+  TranslatedName(LangEus(), name: "Palau"),
+  TranslatedName(LangFao(), name: "Palau"),
+  TranslatedName(LangFry(), name: "Palau"),
+  TranslatedName(LangGlg(), name: "Palau"),
+  TranslatedName(LangHau(), name: "Palau"),
+  TranslatedName(LangIna(), name: "Palau"),
+  TranslatedName(LangInd(), name: "Palau"),
+  TranslatedName(LangIle(), name: "Palau"),
+  TranslatedName(LangIbo(), name: "Palau"),
+  TranslatedName(LangJav(), name: "Palau"),
+  TranslatedName(LangKik(), name: "Palau"),
+  TranslatedName(LangKal(), name: "Palau"),
+  TranslatedName(LangLat(), name: "Belavia"),
+  TranslatedName(LangLtz(), name: "Palau"),
+  TranslatedName(LangLin(), name: "Palau"),
+  TranslatedName(LangLit(), name: "Palau"),
+  TranslatedName(LangLav(), name: "Palau"),
+  TranslatedName(LangMsa(), name: "Palau"),
+  TranslatedName(LangMlt(), name: "Palau"),
+  TranslatedName(LangNor(), name: "Palau"),
+  TranslatedName(LangRoh(), name: "Palau"),
+  TranslatedName(LangRon(), name: "Palau"),
+  TranslatedName(LangSrd(), name: "Palau"),
+  TranslatedName(LangSme(), name: "Palau"),
+  TranslatedName(LangSag(), name: "Palau"),
+  TranslatedName(LangSlv(), name: "Palau"),
+  TranslatedName(LangSna(), name: "Palau"),
+  TranslatedName(LangSqi(), name: "Palau"),
+  TranslatedName(LangSwa(), name: "Palau"),
+  TranslatedName(LangTuk(), name: "Palau"),
+  TranslatedName(LangTon(), name: "Palau"),
+  TranslatedName(LangVie(), name: "Palau"),
+  TranslatedName(LangZha(), name: "Bwzlauh"),
 ];

@@ -2,16 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Angola country:
+/// Provides 142 translations for a Angola country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -19,11 +24,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -31,31 +38,48 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Kongo
 /// - Korean
 /// - Kyrgyz
 /// - Lao
 /// - Latin
+/// - Latvian
 /// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -65,6 +89,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -75,15 +101,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -96,10 +128,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -107,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const agoCountryTranslations = [
   CountryName(
@@ -300,4 +335,39 @@ const agoCountryTranslations = [
   TranslatedName(LangTgl(), name: "Anggola"),
   TranslatedName(LangVol(), name: "Langolän"),
   TranslatedName(LangXho(), name: "E-Angola"),
+  TranslatedName(LangAbk(), name: "Ангола"),
+  TranslatedName(LangAfr(), name: "Angola"),
+  TranslatedName(LangArg(), name: "Angola"),
+  TranslatedName(LangBam(), name: "Angola"),
+  TranslatedName(LangCat(), name: "Angola"),
+  TranslatedName(LangDan(), name: "Angola"),
+  TranslatedName(LangEus(), name: "Angola"),
+  TranslatedName(LangFao(), name: "Angola"),
+  TranslatedName(LangGlg(), name: "Angola"),
+  TranslatedName(LangHau(), name: "Angola"),
+  TranslatedName(LangIna(), name: "Angola"),
+  TranslatedName(LangInd(), name: "Angola"),
+  TranslatedName(LangIle(), name: "Angola"),
+  TranslatedName(LangIbo(), name: "Angola"),
+  TranslatedName(LangJav(), name: "Angola"),
+  TranslatedName(LangKik(), name: "Angola"),
+  TranslatedName(LangKal(), name: "Angola"),
+  TranslatedName(LangLtz(), name: "Angola"),
+  TranslatedName(LangLug(), name: "Angola"),
+  TranslatedName(LangLit(), name: "Angola"),
+  TranslatedName(LangLav(), name: "Angola"),
+  TranslatedName(LangMlg(), name: "Angola"),
+  TranslatedName(LangMsa(), name: "Angola"),
+  TranslatedName(LangNor(), name: "Angola"),
+  TranslatedName(LangRoh(), name: "Angola"),
+  TranslatedName(LangRun(), name: "Angola"),
+  TranslatedName(LangRon(), name: "Angola"),
+  TranslatedName(LangSrd(), name: "Angola"),
+  TranslatedName(LangSme(), name: "Angola"),
+  TranslatedName(LangSlv(), name: "Angola"),
+  TranslatedName(LangSna(), name: "Angola"),
+  TranslatedName(LangSwa(), name: "Angola"),
+  TranslatedName(LangTuk(), name: "Angola"),
+  TranslatedName(LangVie(), name: "Angola"),
+  TranslatedName(LangZha(), name: "Anhgohlah"),
 ];

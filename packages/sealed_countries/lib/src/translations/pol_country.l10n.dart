@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 157 translations for a Poland country:
+/// Provides 162 translations for a Poland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -59,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -90,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -120,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -154,6 +157,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const polCountryTranslations = [
   CountryName(
@@ -393,4 +397,9 @@ const polCountryTranslations = [
   TranslatedName(LangVol(), name: "Polän"),
   TranslatedName(LangWln(), name: "Pologne"),
   TranslatedName(LangXho(), name: "EPoland"),
+  TranslatedName(LangIbo(), name: "Poland"),
+  TranslatedName(LangMsa(), name: "Poland"),
+  TranslatedName(LangSna(), name: "Poland"),
+  TranslatedName(LangSwa(), name: "Poland"),
+  TranslatedName(LangZha(), name: "Bohlanz"),
 ];

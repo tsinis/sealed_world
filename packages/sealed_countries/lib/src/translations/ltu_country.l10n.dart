@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 160 translations for a Lithuania country:
+/// Provides 164 translations for a Lithuania country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -63,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -94,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -122,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -158,6 +161,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ltuCountryTranslations = [
   CountryName(
@@ -408,4 +412,8 @@ const ltuCountryTranslations = [
   TranslatedName(LangVol(), name: "Lietuvän"),
   TranslatedName(LangWln(), name: "Litwaneye"),
   TranslatedName(LangXho(), name: "ELithuania"),
+  TranslatedName(LangIbo(), name: "Lithuania"),
+  TranslatedName(LangMsa(), name: "Lithuania"),
+  TranslatedName(LangSna(), name: "Lithuania"),
+  TranslatedName(LangZha(), name: "Lizdauzvanj"),
 ];

@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a French Polynesia country:
+/// Provides 136 translations for a French Polynesia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -66,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -85,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -97,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -361,4 +367,10 @@ const pyfCountryTranslations = [
   TranslatedName(LangMri(), name: "Poronēhia Wīwī"),
   TranslatedName(LangSrd(), name: "Polinèsia frantzesa"),
   TranslatedName(LangXho(), name: "EFrench Polynesia"),
+  TranslatedName(LangAbk(), name: "Францызтәи Полинезиа"),
+  TranslatedName(LangArg(), name: "Polinesa Francesa"),
+  TranslatedName(LangIle(), name: "Francesi Polinesia"),
+  TranslatedName(LangLat(), name: "Polynesia Francica"),
+  TranslatedName(LangOci(), name: "Polinesia francesa"),
+  TranslatedName(LangSna(), name: "French Polynesia"),
 ];

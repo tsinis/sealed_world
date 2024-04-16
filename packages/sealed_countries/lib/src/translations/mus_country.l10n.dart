@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 129 translations for a Mauritius country:
+/// Provides 145 translations for a Mauritius country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -28,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -52,10 +55,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -72,8 +80,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -81,6 +91,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -89,11 +101,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -118,6 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -340,4 +356,20 @@ const musCountryTranslations = [
   TranslatedName(LangVol(), name: "Moriseän"),
   TranslatedName(LangMri(), name: "Marihi"),
   TranslatedName(LangXho(), name: "EMauritius"),
+  TranslatedName(LangAbk(), name: "Маврики"),
+  TranslatedName(LangAfr(), name: "Mauritius"),
+  TranslatedName(LangDan(), name: "Mauritius"),
+  TranslatedName(LangInd(), name: "Mauritius"),
+  TranslatedName(LangIle(), name: "Mauricio"),
+  TranslatedName(LangIbo(), name: "Mauritius"),
+  TranslatedName(LangJav(), name: "Mauritius"),
+  TranslatedName(LangKal(), name: "Mauritius"),
+  TranslatedName(LangLtz(), name: "Mauritius"),
+  TranslatedName(LangMsa(), name: "Mauritius"),
+  TranslatedName(LangNor(), name: "Mauritius"),
+  TranslatedName(LangRoh(), name: "Mauritius"),
+  TranslatedName(LangRon(), name: "Mauritius"),
+  TranslatedName(LangSme(), name: "Mauritius"),
+  TranslatedName(LangSna(), name: "Mauritius"),
+  TranslatedName(LangVie(), name: "Mauritius"),
 ];

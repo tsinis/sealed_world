@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 156 translations for a Azerbaijan country:
+/// Provides 162 translations for a Azerbaijan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -19,6 +19,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -59,11 +60,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
@@ -87,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -144,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -402,4 +408,10 @@ const azeCountryTranslations = [
   TranslatedName(LangYid(), name: "אַזערבײַדזשאַן"),
   TranslatedName(LangZha(), name: "Ahsehbaiqgyangh"),
   TranslatedName(LangXho(), name: "E-Azerbaijan"),
+  TranslatedName(LangEus(), name: "Azerbaijan"),
+  TranslatedName(LangInd(), name: "Azerbaijan"),
+  TranslatedName(LangIbo(), name: "Azerbaijan"),
+  TranslatedName(LangJav(), name: "Azerbaijan"),
+  TranslatedName(LangMsa(), name: "Azerbaijan"),
+  TranslatedName(LangVie(), name: "Azerbaijan"),
 ];

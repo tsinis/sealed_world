@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 133 translations for a Trinidad and Tobago country:
+/// Provides 138 translations for a Trinidad and Tobago country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,10 +54,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -86,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -368,4 +373,9 @@ const ttoCountryTranslations = [
   TranslatedName(LangSrd(), name: "Trinidad e Tobago"),
   TranslatedName(LangTgl(), name: "Trinidad & Tobago"),
   TranslatedName(LangXho(), name: "ETrinidad & Tobago"),
+  TranslatedName(LangAbk(), name: "Тринидади Тобагои"),
+  TranslatedName(LangArg(), name: "Trinidad y Tobago"),
+  TranslatedName(LangIle(), name: "Trinidad e Tobago"),
+  TranslatedName(LangKal(), name: "Trinidad aamma Tobago"),
+  TranslatedName(LangOci(), name: "Trinidad e Tobago"),
 ];

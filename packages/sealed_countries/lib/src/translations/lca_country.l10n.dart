@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Saint Lucia country:
+/// Provides 138 translations for a Saint Lucia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -25,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chinese
 /// - Chuvash
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -52,10 +55,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -85,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -104,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tajik
@@ -111,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -342,4 +350,12 @@ const lcaCountryTranslations = [
   TranslatedName(LangTgl(), name: "Saint Lucia"),
   TranslatedName(LangVie(), name: "St. Lucia"),
   TranslatedName(LangXho(), name: "ESt. Lucia"),
+  TranslatedName(LangAbk(), name: "Сент-Люсиа"),
+  TranslatedName(LangArg(), name: "Santa Lucía"),
+  TranslatedName(LangBod(), name: "སེནྚ། ལུ་ཤི་ཡ།"),
+  TranslatedName(LangCos(), name: "Santa Lucia"),
+  TranslatedName(LangIle(), name: "St.-Lucia"),
+  TranslatedName(LangKal(), name: "Saint Lucia"),
+  TranslatedName(LangOci(), name: "Santa Lucia"),
+  TranslatedName(LangSwa(), name: "St. Lucia"),
 ];

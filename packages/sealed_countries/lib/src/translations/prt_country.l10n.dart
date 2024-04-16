@@ -2,26 +2,31 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Portugal country:
+/// Provides 150 translations for a Portugal country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
@@ -29,6 +34,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -36,9 +42,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -46,13 +54,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -71,8 +86,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -82,6 +99,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -90,11 +109,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -127,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const prtCountryTranslations = [
   CountryName(
@@ -345,4 +367,26 @@ const prtCountryTranslations = [
   TranslatedName(LangTah(), name: "Pōtītī"),
   TranslatedName(LangVol(), name: "Portugän"),
   TranslatedName(LangXho(), name: "EPortugal"),
+  TranslatedName(LangAbk(), name: "Португалиа"),
+  TranslatedName(LangAfr(), name: "Portugal"),
+  TranslatedName(LangArg(), name: "Portugal"),
+  TranslatedName(LangCat(), name: "Portugal"),
+  TranslatedName(LangDan(), name: "Portugal"),
+  TranslatedName(LangEus(), name: "Portugal"),
+  TranslatedName(LangFao(), name: "Portugal"),
+  TranslatedName(LangGlg(), name: "Portugal"),
+  TranslatedName(LangHau(), name: "Portugal"),
+  TranslatedName(LangIna(), name: "Portugal"),
+  TranslatedName(LangInd(), name: "Portugal"),
+  TranslatedName(LangIle(), name: "Portugal"),
+  TranslatedName(LangIbo(), name: "Portugal"),
+  TranslatedName(LangJav(), name: "Portugal"),
+  TranslatedName(LangKal(), name: "Portugali"),
+  TranslatedName(LangLtz(), name: "Portugal"),
+  TranslatedName(LangMsa(), name: "Portugal"),
+  TranslatedName(LangNor(), name: "Portugal"),
+  TranslatedName(LangOci(), name: "Portugal"),
+  TranslatedName(LangRoh(), name: "Portugal"),
+  TranslatedName(LangSna(), name: "Portugal"),
+  TranslatedName(LangZha(), name: "Buzdauzyaz"),
 ];

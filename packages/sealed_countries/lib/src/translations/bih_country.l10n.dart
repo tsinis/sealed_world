@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 166 translations for a Bosnia and Herzegovina country:
+/// Provides 168 translations for a Bosnia and Herzegovina country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -161,6 +162,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const bihCountryTranslations = [
   CountryName(
@@ -445,4 +447,6 @@ const bihCountryTranslations = [
   TranslatedName(LangVol(), name: "Bosnän e Härzegovän"),
   TranslatedName(LangWln(), name: "Bosneye"),
   TranslatedName(LangXho(), name: "EBosnia & Herzegovina"),
+  TranslatedName(LangAbk(), name: "Босниеи Герцеговинеи"),
+  TranslatedName(LangZha(), name: "Bohswhnizya caeuq Hwzsaigohveizna"),
 ];

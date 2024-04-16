@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 143 translations for a Greenland country:
+/// Provides 152 translations for a Greenland country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -54,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -61,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
@@ -83,7 +86,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -108,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -132,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -139,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const grlCountryTranslations = [
   CountryName(language: LangEng(), official: "Greenland", common: "Greenland"),
@@ -308,4 +316,13 @@ const grlCountryTranslations = [
   TranslatedName(LangMri(), name: "Whenuakāriki"),
   TranslatedName(LangSrd(), name: "Groenlàndia"),
   TranslatedName(LangXho(), name: "EGreenland"),
+  TranslatedName(LangAbk(), name: "Гренландиа"),
+  TranslatedName(LangIbo(), name: "Greenland"),
+  TranslatedName(LangJav(), name: "Greenland"),
+  TranslatedName(LangMsa(), name: "Greenland"),
+  TranslatedName(LangMlt(), name: "Greenland"),
+  TranslatedName(LangSna(), name: "Greenland"),
+  TranslatedName(LangSwa(), name: "Greenland"),
+  TranslatedName(LangVie(), name: "Greenland"),
+  TranslatedName(LangZha(), name: "Gwzlingzlanz"),
 ];

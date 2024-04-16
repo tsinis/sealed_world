@@ -2,36 +2,45 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Nepal country:
+/// Provides 131 translations for a Nepal country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -41,10 +50,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,8 +74,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -68,18 +85,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
@@ -93,15 +118,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const nplCountryTranslations = [
   CountryName(
@@ -297,4 +326,34 @@ const nplCountryTranslations = [
   TranslatedName(LangMri(), name: "Nepōra"),
   TranslatedName(LangSrd(), name: "Nèpal"),
   TranslatedName(LangXho(), name: "ENepal"),
+  TranslatedName(LangAbk(), name: "Непал"),
+  TranslatedName(LangAfr(), name: "Nepal"),
+  TranslatedName(LangArg(), name: "Nepal"),
+  TranslatedName(LangCat(), name: "Nepal"),
+  TranslatedName(LangDan(), name: "Nepal"),
+  TranslatedName(LangEus(), name: "Nepal"),
+  TranslatedName(LangFao(), name: "Nepal"),
+  TranslatedName(LangFry(), name: "Nepal"),
+  TranslatedName(LangGlg(), name: "Nepal"),
+  TranslatedName(LangIna(), name: "Nepal"),
+  TranslatedName(LangInd(), name: "Nepal"),
+  TranslatedName(LangIle(), name: "Nepal"),
+  TranslatedName(LangIbo(), name: "Nepal"),
+  TranslatedName(LangIsl(), name: "Nepal"),
+  TranslatedName(LangKal(), name: "Nepal"),
+  TranslatedName(LangLtz(), name: "Nepal"),
+  TranslatedName(LangMsa(), name: "Nepal"),
+  TranslatedName(LangNor(), name: "Nepal"),
+  TranslatedName(LangOci(), name: "Nepal"),
+  TranslatedName(LangQue(), name: "Nepal"),
+  TranslatedName(LangRoh(), name: "Nepal"),
+  TranslatedName(LangRon(), name: "Nepal"),
+  TranslatedName(LangSme(), name: "Nepal"),
+  TranslatedName(LangSlv(), name: "Nepal"),
+  TranslatedName(LangSna(), name: "Nepal"),
+  TranslatedName(LangSqi(), name: "Nepal"),
+  TranslatedName(LangSwa(), name: "Nepal"),
+  TranslatedName(LangTuk(), name: "Nepal"),
+  TranslatedName(LangVie(), name: "Nepal"),
+  TranslatedName(LangZha(), name: "Nizbozwj"),
 ];

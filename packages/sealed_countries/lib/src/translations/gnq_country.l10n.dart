@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 152 translations for a Equatorial Guinea country:
+/// Provides 156 translations for a Equatorial Guinea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -57,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -115,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -148,6 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const gnqCountryTranslations = [
   CountryName(
@@ -398,4 +402,8 @@ const gnqCountryTranslations = [
   TranslatedName(LangTso(), name: "Gineya ya le Nkaveni"),
   TranslatedName(LangVol(), name: "Kveatora-Gineyän"),
   TranslatedName(LangXho(), name: "E-Equatorial Guinea"),
+  TranslatedName(LangAbk(), name: "Екваториалтәи Гвинеиа"),
+  TranslatedName(LangIbo(), name: "Equatorial Guinea"),
+  TranslatedName(LangSna(), name: "Equatorial Guinea"),
+  TranslatedName(LangZha(), name: "Cizdau Gijneiya"),
 ];

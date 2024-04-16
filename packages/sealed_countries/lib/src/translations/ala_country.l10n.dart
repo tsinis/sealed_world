@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Åland Islands country:
+/// Provides 124 translations for a Åland Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -48,10 +51,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -60,7 +65,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -75,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -299,4 +307,12 @@ const alaCountryTranslations = [
   TranslatedName(LangSrd(), name: "Ìsulas Åland"),
   TranslatedName(LangXho(), name: "E-Åland Islands"),
   TranslatedName(LangYor(), name: "Àwọn Erékùsù ti Åland"),
+  TranslatedName(LangAbk(), name: "Аландтәи ад-хақәа"),
+  TranslatedName(LangArg(), name: "Islas Åland"),
+  TranslatedName(LangEpo(), name: "Alando"),
+  TranslatedName(LangIle(), name: "Insules Åland"),
+  TranslatedName(LangKal(), name: "Ålandi"),
+  TranslatedName(LangLat(), name: "Alandia"),
+  TranslatedName(LangLin(), name: "Bisanga Ɛland"),
+  TranslatedName(LangOci(), name: "llas Åland"),
 ];

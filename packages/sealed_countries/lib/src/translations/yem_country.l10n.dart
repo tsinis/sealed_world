@@ -2,19 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Yemen country:
+/// Provides 149 translations for a Yemen country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -27,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -51,11 +55,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -75,6 +83,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
 /// - Malay
 /// - Malayalam
 /// - Maltese
@@ -97,11 +106,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -126,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -133,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const yemCountryTranslations = [
   CountryName(
@@ -346,4 +360,18 @@ const yemCountryTranslations = [
   TranslatedName(LangFul(), name: "𞤒𞤢𞤥𞤢𞤲"),
   TranslatedName(LangMri(), name: "Īmene"),
   TranslatedName(LangXho(), name: "EYemen"),
+  TranslatedName(LangAbk(), name: "Иемен"),
+  TranslatedName(LangArg(), name: "Yemen"),
+  TranslatedName(LangDan(), name: "Yemen"),
+  TranslatedName(LangEus(), name: "Yemen"),
+  TranslatedName(LangIna(), name: "Yemen"),
+  TranslatedName(LangIle(), name: "Yemen"),
+  TranslatedName(LangIbo(), name: "Yemen"),
+  TranslatedName(LangKal(), name: "Jemen"),
+  TranslatedName(LangMlg(), name: "Yemen"),
+  TranslatedName(LangRon(), name: "Yemen"),
+  TranslatedName(LangSrd(), name: "Yemen"),
+  TranslatedName(LangSna(), name: "Yemen"),
+  TranslatedName(LangVie(), name: "Yemen"),
+  TranslatedName(LangZha(), name: "Yejmwnz"),
 ];

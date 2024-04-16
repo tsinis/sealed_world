@@ -2,15 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 109 translations for a Burundi country:
+/// Provides 143 translations for a Burundi country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -18,11 +24,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -30,22 +38,32 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -60,9 +78,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
+/// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -71,6 +92,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -79,14 +103,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Pāli
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -98,10 +130,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -305,4 +339,38 @@ const bdiCountryTranslations = [
   TranslatedName(LangWol(), name: "Buruundi"),
   TranslatedName(LangMri(), name: "Puruniti"),
   TranslatedName(LangXho(), name: "EBurundi"),
+  TranslatedName(LangAbk(), name: "Бурунди"),
+  TranslatedName(LangAfr(), name: "Burundi"),
+  TranslatedName(LangArg(), name: "Burundi"),
+  TranslatedName(LangBam(), name: "Burundi"),
+  TranslatedName(LangCat(), name: "Burundi"),
+  TranslatedName(LangDan(), name: "Burundi"),
+  TranslatedName(LangEus(), name: "Burundi"),
+  TranslatedName(LangFao(), name: "Burundi"),
+  TranslatedName(LangGlg(), name: "Burundi"),
+  TranslatedName(LangHau(), name: "Burundi"),
+  TranslatedName(LangIna(), name: "Burundi"),
+  TranslatedName(LangInd(), name: "Burundi"),
+  TranslatedName(LangIle(), name: "Burundi"),
+  TranslatedName(LangIbo(), name: "Burundi"),
+  TranslatedName(LangJav(), name: "Burundi"),
+  TranslatedName(LangKal(), name: "Burundi"),
+  TranslatedName(LangLtz(), name: "Burundi"),
+  TranslatedName(LangLug(), name: "Burundi"),
+  TranslatedName(LangLin(), name: "Burundi"),
+  TranslatedName(LangMsa(), name: "Burundi"),
+  TranslatedName(LangNor(), name: "Burundi"),
+  TranslatedName(LangOci(), name: "Burundi"),
+  TranslatedName(LangQue(), name: "Burundi"),
+  TranslatedName(LangRoh(), name: "Burundi"),
+  TranslatedName(LangRon(), name: "Burundi"),
+  TranslatedName(LangSrd(), name: "Burundi"),
+  TranslatedName(LangSme(), name: "Burundi"),
+  TranslatedName(LangSlv(), name: "Burundi"),
+  TranslatedName(LangSna(), name: "Burundi"),
+  TranslatedName(LangSom(), name: "Burundi"),
+  TranslatedName(LangSqi(), name: "Burundi"),
+  TranslatedName(LangSwa(), name: "Burundi"),
+  TranslatedName(LangTuk(), name: "Burundi"),
+  TranslatedName(LangVie(), name: "Burundi"),
 ];

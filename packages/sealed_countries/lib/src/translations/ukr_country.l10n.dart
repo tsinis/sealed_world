@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Ukraine country:
+/// Provides 157 translations for a Ukraine country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -32,6 +32,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -65,6 +66,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -87,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -114,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -148,6 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ukrCountryTranslations = [
   CountryName(language: LangEng(), official: "Ukraine", common: "Ukraine"),
@@ -301,4 +306,10 @@ const ukrCountryTranslations = [
   TranslatedName(LangVol(), name: "Lukrayän"),
   TranslatedName(LangWln(), name: "Oucrinne"),
   TranslatedName(LangXho(), name: "E-Ukraine"),
+  TranslatedName(LangDan(), name: "Ukraine"),
+  TranslatedName(LangKal(), name: "Ukraina"),
+  TranslatedName(LangMsa(), name: "Ukraine"),
+  TranslatedName(LangSna(), name: "Ukraine"),
+  TranslatedName(LangSwa(), name: "Ukraine"),
+  TranslatedName(LangZha(), name: "Vuhgwzlanz"),
 ];

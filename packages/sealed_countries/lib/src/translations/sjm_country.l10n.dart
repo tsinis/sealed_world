@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Svalbard and Jan Mayen country:
+/// Provides 125 translations for a Svalbard and Jan Mayen country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -49,10 +51,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -62,6 +66,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -76,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -348,4 +354,10 @@ const sjmCountryTranslations = [
   TranslatedName(LangTgl(), name: "Svalbard & Jan Mayen"),
   TranslatedName(LangXho(), name: "ESvalbard & Jan Mayen"),
   TranslatedName(LangYor(), name: "Sífábáàdì àti Jánì Máyẹ̀nì"),
+  TranslatedName(LangAbk(), name: "Шпицбергени Иан-Маиени"),
+  TranslatedName(LangArg(), name: "Svalbard y Jan Mayen"),
+  TranslatedName(LangIle(), name: "Svalbard e Jan Mayen"),
+  TranslatedName(LangKal(), name: "Svalbard aamma Jan Mayen"),
+  TranslatedName(LangLin(), name: "Svalbard mpé Jan Mayen"),
+  TranslatedName(LangOci(), name: "Svalbard e Jan Mayen"),
 ];

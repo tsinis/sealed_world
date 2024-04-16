@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 156 translations for a North Macedonia country:
+/// Provides 160 translations for a North Macedonia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -58,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -149,6 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mkdCountryTranslations = [
   CountryName(
@@ -399,4 +402,8 @@ const mkdCountryTranslations = [
   TranslatedName(LangTgl(), name: "Republika ng Masedonya"),
   TranslatedName(LangVol(), name: "Nolüda-Makedoniyän"),
   TranslatedName(LangYid(), name: "רעפובליק פון מאקעדאניע"),
+  TranslatedName(LangAbk(), name: "Аҩадатәи Македониа"),
+  TranslatedName(LangIbo(), name: "North Macedonia"),
+  TranslatedName(LangKas(), name: "شُمالی میسڈونیا"),
+  TranslatedName(LangZha(), name: "Bwz Majgizdun"),
 ];

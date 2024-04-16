@@ -2,28 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Barbados country:
+/// Provides 144 translations for a Barbados country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -31,9 +38,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -45,10 +54,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -65,15 +80,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -82,13 +103,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Pāli
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
@@ -103,17 +130,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const brbCountryTranslations = [
   CountryName(language: LangEng(), official: "Barbados", common: "Barbados"),
@@ -229,4 +260,35 @@ const brbCountryTranslations = [
   TranslatedName(LangChv(), name: "Барбадос"),
   TranslatedName(LangMri(), name: "Papatohe"),
   TranslatedName(LangXho(), name: "EBarbados"),
+  TranslatedName(LangAbk(), name: "Барбадос"),
+  TranslatedName(LangAfr(), name: "Barbados"),
+  TranslatedName(LangArg(), name: "Barbados"),
+  TranslatedName(LangCat(), name: "Barbados"),
+  TranslatedName(LangDan(), name: "Barbados"),
+  TranslatedName(LangEus(), name: "Barbados"),
+  TranslatedName(LangFao(), name: "Barbados"),
+  TranslatedName(LangFry(), name: "Barbados"),
+  TranslatedName(LangGla(), name: "Barbados"),
+  TranslatedName(LangGlg(), name: "Barbados"),
+  TranslatedName(LangIna(), name: "Barbados"),
+  TranslatedName(LangInd(), name: "Barbados"),
+  TranslatedName(LangIle(), name: "Barbados"),
+  TranslatedName(LangIbo(), name: "Barbados"),
+  TranslatedName(LangIsl(), name: "Barbados"),
+  TranslatedName(LangKal(), name: "Barbados"),
+  TranslatedName(LangLtz(), name: "Barbados"),
+  TranslatedName(LangMsa(), name: "Barbados"),
+  TranslatedName(LangMlt(), name: "Barbados"),
+  TranslatedName(LangNor(), name: "Barbados"),
+  TranslatedName(LangOci(), name: "Barbados"),
+  TranslatedName(LangQue(), name: "Barbados"),
+  TranslatedName(LangRoh(), name: "Barbados"),
+  TranslatedName(LangRon(), name: "Barbados"),
+  TranslatedName(LangSrd(), name: "Barbados"),
+  TranslatedName(LangSme(), name: "Barbados"),
+  TranslatedName(LangSlv(), name: "Barbados"),
+  TranslatedName(LangSna(), name: "Barbados"),
+  TranslatedName(LangTuk(), name: "Barbados"),
+  TranslatedName(LangVie(), name: "Barbados"),
+  TranslatedName(LangZha(), name: "Bahbahdohswh"),
 ];

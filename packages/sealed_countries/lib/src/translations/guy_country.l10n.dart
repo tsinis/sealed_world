@@ -2,31 +2,37 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 114 translations for a Guyana country:
+/// Provides 143 translations for a Guyana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -46,17 +52,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
@@ -67,7 +81,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -75,6 +92,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -82,15 +102,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tajik
 /// - Tamil
@@ -106,12 +132,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const guyCountryTranslations = [
   CountryName(
@@ -320,4 +349,33 @@ const guyCountryTranslations = [
   TranslatedName(LangSan(), name: "गयाना"),
   TranslatedName(LangVol(), name: "Gvayän"),
   TranslatedName(LangXho(), name: "EGuyana"),
+  TranslatedName(LangAbk(), name: "Гаиана"),
+  TranslatedName(LangAfr(), name: "Guyana"),
+  TranslatedName(LangArg(), name: "Guyana"),
+  TranslatedName(LangCat(), name: "Guyana"),
+  TranslatedName(LangDan(), name: "Guyana"),
+  TranslatedName(LangEus(), name: "Guyana"),
+  TranslatedName(LangFry(), name: "Guyana"),
+  TranslatedName(LangHau(), name: "Guyana"),
+  TranslatedName(LangIna(), name: "Guyana"),
+  TranslatedName(LangInd(), name: "Guyana"),
+  TranslatedName(LangIle(), name: "Guyana"),
+  TranslatedName(LangIbo(), name: "Guyana"),
+  TranslatedName(LangJav(), name: "Guyana"),
+  TranslatedName(LangKik(), name: "Guyana"),
+  TranslatedName(LangKal(), name: "Guyana"),
+  TranslatedName(LangLtz(), name: "Guyana"),
+  TranslatedName(LangMlg(), name: "Guyana"),
+  TranslatedName(LangMsa(), name: "Guyana"),
+  TranslatedName(LangNor(), name: "Guyana"),
+  TranslatedName(LangOci(), name: "Guianà"),
+  TranslatedName(LangRoh(), name: "Guyana"),
+  TranslatedName(LangRon(), name: "Guyana"),
+  TranslatedName(LangSrd(), name: "Guyana"),
+  TranslatedName(LangSme(), name: "Guyana"),
+  TranslatedName(LangSna(), name: "Guyana"),
+  TranslatedName(LangSom(), name: "Guyana"),
+  TranslatedName(LangSwa(), name: "Guyana"),
+  TranslatedName(LangVie(), name: "Guyana"),
+  TranslatedName(LangZha(), name: "Gveihyana"),
 ];

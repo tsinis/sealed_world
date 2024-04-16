@@ -2,26 +2,33 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 93 translations for a Samoa country:
+/// Provides 130 translations for a Samoa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -32,6 +39,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -42,37 +50,62 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tajik
 /// - Tamil
@@ -83,10 +116,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -94,6 +129,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const wsmCountryTranslations = [
   CountryName(
@@ -277,4 +313,41 @@ const wsmCountryTranslations = [
   TranslatedName(LangVol(), name: "Samovuäns"),
   TranslatedName(LangChv(), name: "Самоа"),
   TranslatedName(LangXho(), name: "ESamoa"),
+  TranslatedName(LangAbk(), name: "Самоа"),
+  TranslatedName(LangAfr(), name: "Samoa"),
+  TranslatedName(LangArg(), name: "Samoa"),
+  TranslatedName(LangCat(), name: "Samoa"),
+  TranslatedName(LangDan(), name: "Samoa"),
+  TranslatedName(LangEus(), name: "Samoa"),
+  TranslatedName(LangGlg(), name: "Samoa"),
+  TranslatedName(LangHau(), name: "Samoa"),
+  TranslatedName(LangIna(), name: "Samoa"),
+  TranslatedName(LangInd(), name: "Samoa"),
+  TranslatedName(LangIle(), name: "Samoa"),
+  TranslatedName(LangIbo(), name: "Samoa"),
+  TranslatedName(LangJav(), name: "Samoa"),
+  TranslatedName(LangKik(), name: "Samoa"),
+  TranslatedName(LangKal(), name: "Samoa"),
+  TranslatedName(LangLat(), name: "Samoa"),
+  TranslatedName(LangLtz(), name: "Samoa"),
+  TranslatedName(LangLin(), name: "Samoa"),
+  TranslatedName(LangLit(), name: "Samoa"),
+  TranslatedName(LangLav(), name: "Samoa"),
+  TranslatedName(LangMlg(), name: "Samoa"),
+  TranslatedName(LangMsa(), name: "Samoa"),
+  TranslatedName(LangMlt(), name: "Samoa"),
+  TranslatedName(LangNor(), name: "Samoa"),
+  TranslatedName(LangOci(), name: "Samoa"),
+  TranslatedName(LangQue(), name: "Samoa"),
+  TranslatedName(LangRoh(), name: "Samoa"),
+  TranslatedName(LangRon(), name: "Samoa"),
+  TranslatedName(LangSrd(), name: "Samoa"),
+  TranslatedName(LangSme(), name: "Samoa"),
+  TranslatedName(LangSlv(), name: "Samoa"),
+  TranslatedName(LangSna(), name: "Samoa"),
+  TranslatedName(LangSqi(), name: "Samoa"),
+  TranslatedName(LangSwa(), name: "Samoa"),
+  TranslatedName(LangTuk(), name: "Samoa"),
+  TranslatedName(LangVie(), name: "Samoa"),
+  TranslatedName(LangZha(), name: "Sazmozya"),
 ];

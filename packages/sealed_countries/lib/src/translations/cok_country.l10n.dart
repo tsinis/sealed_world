@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 142 translations for a Cook Islands country:
+/// Provides 144 translations for a Cook Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -57,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -355,4 +357,6 @@ const cokCountryTranslations = [
   TranslatedName(LangChv(), name: "Кук утравӗсем"),
   TranslatedName(LangSrd(), name: "Ìsulas Cook"),
   TranslatedName(LangXho(), name: "ECook Islands"),
+  TranslatedName(LangAbk(), name: "Кук идгьылбжьахақәа"),
+  TranslatedName(LangIle(), name: "Insules Cook"),
 ];

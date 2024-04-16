@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a South Georgia country:
+/// Provides 128 translations for a South Georgia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -50,6 +52,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -78,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -456,7 +460,7 @@ const sgsCountryTranslations = [
   TranslatedName(
     LangFul(),
     name:
-        """𞤐𞤢𞤲𞥆𞤢𞥄𞤲𞤺𞤫 𞤔𞤮𞤪𞤶𞤭𞤴𞤢 & 𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤐𞤢𞤲𞥆𞤢𞥄𞤲𞤺𞤫 𞤅𞤢𞤲𞤣𞤵𞤱𞤭𞥅𞤷""",
+        "𞤐𞤢𞤲𞥆𞤢𞥄𞤲𞤺𞤫 𞤔𞤮𞤪𞤶𞤭𞤴𞤢 & 𞤕𞤵𞤪𞤭𞥅𞤶𞤫 𞤐𞤢𞤲𞥆𞤢𞥄𞤲𞤺𞤫 𞤅𞤢𞤲𞤣𞤵𞤱𞤭𞥅𞤷",
   ),
   TranslatedName(
     LangHau(),
@@ -477,5 +481,15 @@ const sgsCountryTranslations = [
   TranslatedName(
     LangYor(),
     name: "Gúúsù Georgia àti Gúúsù Àwọn Erékùsù Sandwich",
+  ),
+  TranslatedName(
+    LangAbk(),
+    name: "Аладатәи Георгиеи Аладатәи Сандвичқәеи ад-қәа",
+  ),
+  TranslatedName(LangArg(), name: "Islas Cheorchia d’o Sud y Sandwich d’o Sud"),
+  TranslatedName(LangIle(), name: "Insules Sud-Georgia e Sud-Sandwich"),
+  TranslatedName(
+    LangOci(),
+    name: "Georgie del Sud e les Illes Sandwich del Sud",
   ),
 ];

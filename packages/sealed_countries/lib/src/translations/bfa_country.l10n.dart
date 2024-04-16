@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Burkina Faso country:
+/// Provides 145 translations for a Burkina Faso country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -21,11 +25,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -33,6 +39,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -43,13 +50,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Greek (modern)
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -61,12 +75,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -75,6 +92,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -84,13 +104,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
@@ -328,4 +353,29 @@ const bfaCountryTranslations = [
   TranslatedName(LangVol(), name: "Burkinän"),
   TranslatedName(LangMri(), name: "Pākina Wharo"),
   TranslatedName(LangXho(), name: "EBurkina Faso"),
+  TranslatedName(LangAbk(), name: "Буркина-Фасо"),
+  TranslatedName(LangAfr(), name: "Burkina Faso"),
+  TranslatedName(LangArg(), name: "Burkina Faso"),
+  TranslatedName(LangCat(), name: "Burkina Faso"),
+  TranslatedName(LangDan(), name: "Burkina Faso"),
+  TranslatedName(LangEus(), name: "Burkina Faso"),
+  TranslatedName(LangFao(), name: "Burkina Faso"),
+  TranslatedName(LangHau(), name: "Burkina Faso"),
+  TranslatedName(LangIna(), name: "Burkina Faso"),
+  TranslatedName(LangInd(), name: "Burkina Faso"),
+  TranslatedName(LangIle(), name: "Burkina-Faso"),
+  TranslatedName(LangIbo(), name: "Burkina Faso"),
+  TranslatedName(LangJav(), name: "Burkina Faso"),
+  TranslatedName(LangKal(), name: "Burkina Faso"),
+  TranslatedName(LangLat(), name: "Burkina Faso"),
+  TranslatedName(LangLtz(), name: "Burkina Faso"),
+  TranslatedName(LangMsa(), name: "Burkina Faso"),
+  TranslatedName(LangNor(), name: "Burkina Faso"),
+  TranslatedName(LangOci(), name: "Burkina Faso"),
+  TranslatedName(LangRoh(), name: "Burkina Faso"),
+  TranslatedName(LangRon(), name: "Burkina Faso"),
+  TranslatedName(LangSrd(), name: "Burkina Faso"),
+  TranslatedName(LangSme(), name: "Burkina Faso"),
+  TranslatedName(LangSag(), name: "Burkina Faso"),
+  TranslatedName(LangSlv(), name: "Burkina Faso"),
 ];

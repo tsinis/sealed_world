@@ -2,88 +2,131 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 86 translations for a Kiribati country:
+/// Provides 129 translations for a Kiribati country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
 /// - Limburgish (Limburgan/Limburger)
+/// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
@@ -267,4 +310,47 @@ const kirCountryTranslations = [
   TranslatedName(LangChv(), name: "Кирибати"),
   TranslatedName(LangMri(), name: "Kiripati"),
   TranslatedName(LangXho(), name: "EKiribati"),
+  TranslatedName(LangAbk(), name: "Кирибати"),
+  TranslatedName(LangAfr(), name: "Kiribati"),
+  TranslatedName(LangArg(), name: "Kiribati"),
+  TranslatedName(LangBam(), name: "Kiribati"),
+  TranslatedName(LangBod(), name: "ཀི་རི་བཱ་ཏི།"),
+  TranslatedName(LangCat(), name: "Kiribati"),
+  TranslatedName(LangDan(), name: "Kiribati"),
+  TranslatedName(LangEus(), name: "Kiribati"),
+  TranslatedName(LangFao(), name: "Kiribati"),
+  TranslatedName(LangGlg(), name: "Kiribati"),
+  TranslatedName(LangHau(), name: "Kiribati"),
+  TranslatedName(LangIna(), name: "Kiribati"),
+  TranslatedName(LangInd(), name: "Kiribati"),
+  TranslatedName(LangIle(), name: "Kiribati"),
+  TranslatedName(LangIbo(), name: "Kiribati"),
+  TranslatedName(LangJav(), name: "Kiribati"),
+  TranslatedName(LangKik(), name: "Kiribati"),
+  TranslatedName(LangKal(), name: "Kiribati"),
+  TranslatedName(LangLat(), name: "Kiribati"),
+  TranslatedName(LangLtz(), name: "Kiribati"),
+  TranslatedName(LangLug(), name: "Kiribati"),
+  TranslatedName(LangLin(), name: "Kiribati"),
+  TranslatedName(LangLav(), name: "Kiribati"),
+  TranslatedName(LangMlg(), name: "Kiribati"),
+  TranslatedName(LangMsa(), name: "Kiribati"),
+  TranslatedName(LangMlt(), name: "Kiribati"),
+  TranslatedName(LangNor(), name: "Kiribati"),
+  TranslatedName(LangOci(), name: "Kiribatí"),
+  TranslatedName(LangQue(), name: "Kiribati"),
+  TranslatedName(LangRoh(), name: "Kiribati"),
+  TranslatedName(LangRun(), name: "Kiribati"),
+  TranslatedName(LangRon(), name: "Kiribati"),
+  TranslatedName(LangSrd(), name: "Kiribati"),
+  TranslatedName(LangSme(), name: "Kiribati"),
+  TranslatedName(LangSag(), name: "Kiribati"),
+  TranslatedName(LangSlv(), name: "Kiribati"),
+  TranslatedName(LangSna(), name: "Kiribati"),
+  TranslatedName(LangSom(), name: "Kiribati"),
+  TranslatedName(LangSqi(), name: "Kiribati"),
+  TranslatedName(LangSwa(), name: "Kiribati"),
+  TranslatedName(LangTuk(), name: "Kiribati"),
+  TranslatedName(LangVie(), name: "Kiribati"),
+  TranslatedName(LangWol(), name: "Kiribati"),
 ];

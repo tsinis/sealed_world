@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Rwanda country:
+/// Provides 143 translations for a Rwanda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -27,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -39,6 +42,7 @@ import "../model/country/submodels/country_name.dart";
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -49,14 +53,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
@@ -64,10 +74,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Lao
 /// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -77,6 +89,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -84,18 +99,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -113,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -120,6 +139,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const rwaCountryTranslations = [
   CountryName(
@@ -333,4 +353,24 @@ const rwaCountryTranslations = [
   TranslatedName(LangVol(), name: "Ruandän"),
   TranslatedName(LangMri(), name: "Rāwana"),
   TranslatedName(LangXho(), name: "ERwanda"),
+  TranslatedName(LangAbk(), name: "Руанда"),
+  TranslatedName(LangAfr(), name: "Rwanda"),
+  TranslatedName(LangDan(), name: "Rwanda"),
+  TranslatedName(LangInd(), name: "Rwanda"),
+  TranslatedName(LangIle(), name: "Rwanda"),
+  TranslatedName(LangIbo(), name: "Rwanda"),
+  TranslatedName(LangJav(), name: "Rwanda"),
+  TranslatedName(LangKik(), name: "Rwanda"),
+  TranslatedName(LangKal(), name: "Rwanda"),
+  TranslatedName(LangLug(), name: "Rwanda"),
+  TranslatedName(LangLin(), name: "Rwanda"),
+  TranslatedName(LangMsa(), name: "Rwanda"),
+  TranslatedName(LangNor(), name: "Rwanda"),
+  TranslatedName(LangOci(), name: "Roanda"),
+  TranslatedName(LangRon(), name: "Rwanda"),
+  TranslatedName(LangSme(), name: "Rwanda"),
+  TranslatedName(LangSna(), name: "Rwanda"),
+  TranslatedName(LangSwa(), name: "Rwanda"),
+  TranslatedName(LangVie(), name: "Rwanda"),
+  TranslatedName(LangZha(), name: "Luzvangdaz"),
 ];

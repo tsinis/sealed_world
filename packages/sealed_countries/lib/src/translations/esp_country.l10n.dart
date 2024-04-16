@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 160 translations for a Spain country:
+/// Provides 163 translations for a Spain country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -59,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -121,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -412,4 +415,7 @@ const espCountryTranslations = [
   TranslatedName(LangWln(), name: "Espagne"),
   TranslatedName(LangZha(), name: "Sihbanhyaz"),
   TranslatedName(LangXho(), name: "ESpain"),
+  TranslatedName(LangAbk(), name: "Испаниа"),
+  TranslatedName(LangIbo(), name: "Spain"),
+  TranslatedName(LangSna(), name: "Spain"),
 ];

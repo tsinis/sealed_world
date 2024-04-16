@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Nigeria country:
+/// Provides 149 translations for a Nigeria country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -16,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -36,6 +39,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -53,10 +57,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -69,12 +77,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -83,6 +94,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -91,11 +104,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -120,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -350,4 +367,22 @@ const ngaCountryTranslations = [
   TranslatedName(LangWln(), name: "Nidjeria"),
   TranslatedName(LangXho(), name: "INigeria"),
   TranslatedName(LangZha(), name: "Nizywlihya"),
+  TranslatedName(LangAbk(), name: "Нигериа"),
+  TranslatedName(LangDan(), name: "Nigeria"),
+  TranslatedName(LangEus(), name: "Nigeria"),
+  TranslatedName(LangFao(), name: "Nigeria"),
+  TranslatedName(LangIna(), name: "Nigeria"),
+  TranslatedName(LangInd(), name: "Nigeria"),
+  TranslatedName(LangIle(), name: "Nigeria"),
+  TranslatedName(LangKal(), name: "Nigeria"),
+  TranslatedName(LangLat(), name: "Nigeria"),
+  TranslatedName(LangLtz(), name: "Nigeria"),
+  TranslatedName(LangMsa(), name: "Nigeria"),
+  TranslatedName(LangNor(), name: "Nigeria"),
+  TranslatedName(LangRoh(), name: "Nigeria"),
+  TranslatedName(LangRon(), name: "Nigeria"),
+  TranslatedName(LangSme(), name: "Nigeria"),
+  TranslatedName(LangSna(), name: "Nigeria"),
+  TranslatedName(LangSwa(), name: "Nigeria"),
+  TranslatedName(LangVie(), name: "Nigeria"),
 ];

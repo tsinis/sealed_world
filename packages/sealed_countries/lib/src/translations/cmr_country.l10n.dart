@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Cameroon country:
+/// Provides 153 translations for a Cameroon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -58,10 +59,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -83,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -137,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -144,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const cmrCountryTranslations = [
   CountryName(
@@ -385,4 +391,10 @@ const cmrCountryTranslations = [
   TranslatedName(LangTgl(), name: "Kamerun"),
   TranslatedName(LangVol(), name: "Kamerunän"),
   TranslatedName(LangXho(), name: "ECameroon"),
+  TranslatedName(LangAbk(), name: "Камерун"),
+  TranslatedName(LangIle(), name: "Camerun"),
+  TranslatedName(LangKal(), name: "Kamerun"),
+  TranslatedName(LangMsa(), name: "Cameroon"),
+  TranslatedName(LangVie(), name: "Cameroon"),
+  TranslatedName(LangZha(), name: "Gahmwzlungz"),
 ];

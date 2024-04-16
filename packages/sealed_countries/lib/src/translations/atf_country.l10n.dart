@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a French Southern and Antarctic Lands country:
+/// Provides 125 translations for a French Southern and Antarctic Lands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -48,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -75,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -372,4 +377,9 @@ const atfCountryTranslations = [
   TranslatedName(LangSrd(), name: "Terras australes frantzesas"),
   TranslatedName(LangTgl(), name: "French Southern Territories"),
   TranslatedName(LangXho(), name: "EFrench Southern Territories"),
+  TranslatedName(LangAbk(), name: "Францызтәи Аладатәи аҵакырадгьылқәа"),
+  TranslatedName(LangArg(), name: "Territorios australs franceses"),
+  TranslatedName(LangEpo(), name: "Francaj Sudaj Teritorioj"),
+  TranslatedName(LangIle(), name: "Territorias meridional de Francia"),
+  TranslatedName(LangOci(), name: "Territòris del Sud franceses"),
 ];

@@ -2,28 +2,34 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Senegal country:
+/// Provides 140 translations for a Senegal country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -31,9 +37,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -43,10 +51,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -63,7 +77,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -72,6 +89,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -79,14 +99,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Sundanese
@@ -101,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -108,10 +133,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const senCountryTranslations = [
   CountryName(
@@ -311,4 +338,31 @@ const senCountryTranslations = [
   TranslatedName(LangVie(), name: "Sénégal"),
   TranslatedName(LangVol(), name: "Senegalän"),
   TranslatedName(LangXho(), name: "ESenegal"),
+  TranslatedName(LangAbk(), name: "Сенегал"),
+  TranslatedName(LangAfr(), name: "Senegal"),
+  TranslatedName(LangArg(), name: "Senegal"),
+  TranslatedName(LangCat(), name: "Senegal"),
+  TranslatedName(LangDan(), name: "Senegal"),
+  TranslatedName(LangEus(), name: "Senegal"),
+  TranslatedName(LangFao(), name: "Senegal"),
+  TranslatedName(LangFry(), name: "Senegal"),
+  TranslatedName(LangGlg(), name: "Senegal"),
+  TranslatedName(LangIna(), name: "Senegal"),
+  TranslatedName(LangInd(), name: "Senegal"),
+  TranslatedName(LangIle(), name: "Senegal"),
+  TranslatedName(LangIbo(), name: "Senegal"),
+  TranslatedName(LangIsl(), name: "Senegal"),
+  TranslatedName(LangKal(), name: "Senegal"),
+  TranslatedName(LangLtz(), name: "Senegal"),
+  TranslatedName(LangMlg(), name: "Senegal"),
+  TranslatedName(LangMsa(), name: "Senegal"),
+  TranslatedName(LangNor(), name: "Senegal"),
+  TranslatedName(LangOci(), name: "Senegal"),
+  TranslatedName(LangRoh(), name: "Senegal"),
+  TranslatedName(LangRon(), name: "Senegal"),
+  TranslatedName(LangSme(), name: "Senegal"),
+  TranslatedName(LangSlv(), name: "Senegal"),
+  TranslatedName(LangSna(), name: "Senegal"),
+  TranslatedName(LangTuk(), name: "Senegal"),
+  TranslatedName(LangZha(), name: "Saineigyahwj"),
 ];

@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Brunei country:
+/// Provides 148 translations for a Brunei country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -21,12 +25,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -34,9 +40,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -49,14 +57,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -69,14 +83,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -86,9 +105,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -98,6 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -114,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -344,4 +368,28 @@ const brnCountryTranslations = [
   TranslatedName(LangVol(), name: "Brunän"),
   TranslatedName(LangZha(), name: "Vwnzlaiz"),
   TranslatedName(LangXho(), name: "eBrunei"),
+  TranslatedName(LangAbk(), name: "Брунеи-Даруссалам"),
+  TranslatedName(LangArg(), name: "Brunei"),
+  TranslatedName(LangCat(), name: "Brunei"),
+  TranslatedName(LangDan(), name: "Brunei"),
+  TranslatedName(LangEus(), name: "Brunei"),
+  TranslatedName(LangFao(), name: "Brunei"),
+  TranslatedName(LangGlg(), name: "Brunei"),
+  TranslatedName(LangIna(), name: "Brunei"),
+  TranslatedName(LangInd(), name: "Brunei"),
+  TranslatedName(LangIle(), name: "Brunei"),
+  TranslatedName(LangIbo(), name: "Brunei"),
+  TranslatedName(LangKik(), name: "Brunei"),
+  TranslatedName(LangKal(), name: "Brunei"),
+  TranslatedName(LangLtz(), name: "Brunei"),
+  TranslatedName(LangMsa(), name: "Brunei"),
+  TranslatedName(LangNor(), name: "Brunei"),
+  TranslatedName(LangOci(), name: "Brunei"),
+  TranslatedName(LangRoh(), name: "Brunei"),
+  TranslatedName(LangRon(), name: "Brunei"),
+  TranslatedName(LangSrd(), name: "Brunei"),
+  TranslatedName(LangSme(), name: "Brunei"),
+  TranslatedName(LangSqi(), name: "Brunei"),
+  TranslatedName(LangSwa(), name: "Brunei"),
+  TranslatedName(LangVie(), name: "Brunei"),
 ];

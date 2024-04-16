@@ -2,10 +2,12 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 133 translations for a Uruguay country:
+/// Provides 152 translations for a Uruguay country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -31,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -55,9 +58,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -75,8 +84,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -86,6 +97,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -94,11 +107,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -122,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -130,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const uryCountryTranslations = [
   CountryName(
@@ -360,4 +378,23 @@ const uryCountryTranslations = [
   TranslatedName(LangWln(), name: "Ourougway"),
   TranslatedName(LangSrd(), name: "Uruguày"),
   TranslatedName(LangXho(), name: "E-Uruguay"),
+  TranslatedName(LangAbk(), name: "Уругваи"),
+  TranslatedName(LangAfr(), name: "Uruguay"),
+  TranslatedName(LangDan(), name: "Uruguay"),
+  TranslatedName(LangIna(), name: "Uruguay"),
+  TranslatedName(LangInd(), name: "Uruguay"),
+  TranslatedName(LangIle(), name: "Uruguay"),
+  TranslatedName(LangIbo(), name: "Uruguay"),
+  TranslatedName(LangJav(), name: "Uruguay"),
+  TranslatedName(LangKal(), name: "Uruguay"),
+  TranslatedName(LangLtz(), name: "Uruguay"),
+  TranslatedName(LangMsa(), name: "Uruguay"),
+  TranslatedName(LangNor(), name: "Uruguay"),
+  TranslatedName(LangRoh(), name: "Uruguay"),
+  TranslatedName(LangRon(), name: "Uruguay"),
+  TranslatedName(LangSme(), name: "Uruguay"),
+  TranslatedName(LangSna(), name: "Uruguay"),
+  TranslatedName(LangSwa(), name: "Uruguay"),
+  TranslatedName(LangVie(), name: "Uruguay"),
+  TranslatedName(LangZha(), name: "Vuhlahgveih"),
 ];

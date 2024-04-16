@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Wallis and Futuna country:
+/// Provides 136 translations for a Wallis and Futuna country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,10 +54,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -66,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -85,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -358,4 +364,10 @@ const wlfCountryTranslations = [
   TranslatedName(LangSrd(), name: "Wallis e Futuna"),
   TranslatedName(LangTgl(), name: "Wallis & Futuna"),
   TranslatedName(LangXho(), name: "EWallis & Futuna"),
+  TranslatedName(LangAbk(), name: "Уоллиси Футунеи"),
+  TranslatedName(LangArg(), name: "Wallis y Fortuna"),
+  TranslatedName(LangIle(), name: "Wallis e Futuna"),
+  TranslatedName(LangKal(), name: "Wallis aamma Futuna"),
+  TranslatedName(LangLat(), name: "Vallis et Futuna"),
+  TranslatedName(LangOci(), name: "Wallis e Futuna"),
 ];

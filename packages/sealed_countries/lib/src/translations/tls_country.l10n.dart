@@ -2,13 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Timor-Leste country:
+/// Provides 137 translations for a Timor-Leste country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -48,12 +51,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -85,11 +91,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
@@ -113,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -124,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const tlsCountryTranslations = [
   CountryName(
@@ -347,4 +358,16 @@ const tlsCountryTranslations = [
   TranslatedName(LangSrd(), name: "Timor-Est"),
   TranslatedName(LangXho(), name: "ETimor-Leste"),
   TranslatedName(LangYid(), name: "מזרח טימאר"),
+  TranslatedName(LangAbk(), name: "Мрагыларатәи Тимор"),
+  TranslatedName(LangArg(), name: "Timor-Leste"),
+  TranslatedName(LangIle(), name: "Ost-Timor"),
+  TranslatedName(LangIbo(), name: "Timor-Leste"),
+  TranslatedName(LangKal(), name: "Timor Kangilliit"),
+  TranslatedName(LangOci(), name: "Timòr Èst"),
+  TranslatedName(LangQue(), name: "Timor-Leste"),
+  TranslatedName(LangRon(), name: "Timor-Leste"),
+  TranslatedName(LangSqi(), name: "Timor-Leste"),
+  TranslatedName(LangSwa(), name: "Timor-Leste"),
+  TranslatedName(LangTuk(), name: "Timor-Leste"),
+  TranslatedName(LangZha(), name: "Dunghdivwn"),
 ];

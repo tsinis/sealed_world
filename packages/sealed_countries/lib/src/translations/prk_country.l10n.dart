@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 159 translations for a North Korea country:
+/// Provides 160 translations for a North Korea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -411,4 +412,5 @@ const prkCountryTranslations = [
   TranslatedName(LangZha(), name: "Cauzsenh Minzcujcujyi Yinzminz Gunghozgoz"),
   TranslatedName(LangChv(), name: "КХДР"),
   TranslatedName(LangIbo(), name: "Ugwu Korea"),
+  TranslatedName(LangAbk(), name: "КЖӘДР"),
 ];

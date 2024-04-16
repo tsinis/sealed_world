@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 142 translations for a Syria country:
+/// Provides 155 translations for a Syria country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -30,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -57,12 +59,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -75,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -83,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -91,6 +98,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -106,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -131,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -139,6 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const syrCountryTranslations = [
   CountryName(
@@ -375,4 +387,17 @@ const syrCountryTranslations = [
   TranslatedName(LangVol(), name: "Süriyän"),
   TranslatedName(LangWln(), name: "Sireye"),
   TranslatedName(LangXho(), name: "ESiriya"),
+  TranslatedName(LangAbk(), name: "Шьамтәыла"),
+  TranslatedName(LangCos(), name: "Siria"),
+  TranslatedName(LangIna(), name: "Syria"),
+  TranslatedName(LangIbo(), name: "Syria"),
+  TranslatedName(LangKal(), name: "Syria"),
+  TranslatedName(LangLat(), name: "Syria"),
+  TranslatedName(LangMsa(), name: "Syria"),
+  TranslatedName(LangNor(), name: "Syria"),
+  TranslatedName(LangSme(), name: "Syria"),
+  TranslatedName(LangSna(), name: "Syria"),
+  TranslatedName(LangSwa(), name: "Syria"),
+  TranslatedName(LangVie(), name: "Syria"),
+  TranslatedName(LangZha(), name: "Siliya"),
 ];

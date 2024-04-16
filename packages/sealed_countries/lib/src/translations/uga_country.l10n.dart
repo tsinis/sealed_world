@@ -2,27 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Uganda country:
+/// Provides 141 translations for a Uganda country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -30,9 +38,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -44,21 +54,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
 /// - Limburgish (Limburgan/Limburger)
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -67,6 +91,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -74,14 +100,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -93,10 +126,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -104,6 +139,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ugaCountryTranslations = [
   CountryName(
@@ -303,4 +339,40 @@ const ugaCountryTranslations = [
   TranslatedName(LangSsw(), name: "IBuganda"),
   TranslatedName(LangVol(), name: "Lugandayän"),
   TranslatedName(LangXho(), name: "E-Uganda"),
+  TranslatedName(LangAbk(), name: "Уганда"),
+  TranslatedName(LangAfr(), name: "Uganda"),
+  TranslatedName(LangArg(), name: "Uganda"),
+  TranslatedName(LangBam(), name: "Uganda"),
+  TranslatedName(LangCat(), name: "Uganda"),
+  TranslatedName(LangDan(), name: "Uganda"),
+  TranslatedName(LangEus(), name: "Uganda"),
+  TranslatedName(LangFao(), name: "Uganda"),
+  TranslatedName(LangGle(), name: "Uganda"),
+  TranslatedName(LangGla(), name: "Uganda"),
+  TranslatedName(LangGlg(), name: "Uganda"),
+  TranslatedName(LangIna(), name: "Uganda"),
+  TranslatedName(LangInd(), name: "Uganda"),
+  TranslatedName(LangIle(), name: "Uganda"),
+  TranslatedName(LangIbo(), name: "Uganda"),
+  TranslatedName(LangJav(), name: "Uganda"),
+  TranslatedName(LangKik(), name: "Uganda"),
+  TranslatedName(LangKal(), name: "Uganda"),
+  TranslatedName(LangLat(), name: "Uganda"),
+  TranslatedName(LangLtz(), name: "Uganda"),
+  TranslatedName(LangLin(), name: "Uganda"),
+  TranslatedName(LangLit(), name: "Uganda"),
+  TranslatedName(LangLav(), name: "Uganda"),
+  TranslatedName(LangMsa(), name: "Uganda"),
+  TranslatedName(LangNor(), name: "Uganda"),
+  TranslatedName(LangQue(), name: "Uganda"),
+  TranslatedName(LangRoh(), name: "Uganda"),
+  TranslatedName(LangRon(), name: "Uganda"),
+  TranslatedName(LangSrd(), name: "Uganda"),
+  TranslatedName(LangSme(), name: "Uganda"),
+  TranslatedName(LangSlv(), name: "Uganda"),
+  TranslatedName(LangSna(), name: "Uganda"),
+  TranslatedName(LangSwa(), name: "Uganda"),
+  TranslatedName(LangTuk(), name: "Uganda"),
+  TranslatedName(LangVie(), name: "Uganda"),
+  TranslatedName(LangZha(), name: "Vuhganhdaz"),
 ];

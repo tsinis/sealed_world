@@ -2,13 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Martinique country:
+/// Provides 133 translations for a Martinique country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -24,14 +27,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chinese
 /// - Chuvash
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -46,11 +52,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -61,17 +71,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -79,10 +96,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -104,7 +123,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
@@ -266,4 +287,26 @@ const mtqCountryTranslations = [
   TranslatedName(LangMri(), name: "Mātiniki"),
   TranslatedName(LangSrd(), name: "Martinica"),
   TranslatedName(LangXho(), name: "EMartinique"),
+  TranslatedName(LangAbk(), name: "Мартиника"),
+  TranslatedName(LangAfr(), name: "Martinique"),
+  TranslatedName(LangArg(), name: "Martinica"),
+  TranslatedName(LangCos(), name: "Martinica"),
+  TranslatedName(LangDan(), name: "Martinique"),
+  TranslatedName(LangFao(), name: "Martinique"),
+  TranslatedName(LangFry(), name: "Martinique"),
+  TranslatedName(LangGle(), name: "Martinique"),
+  TranslatedName(LangIle(), name: "Martinica"),
+  TranslatedName(LangIbo(), name: "Martinique"),
+  TranslatedName(LangKal(), name: "Martinique"),
+  TranslatedName(LangLat(), name: "Martinica"),
+  TranslatedName(LangLtz(), name: "Martinique"),
+  TranslatedName(LangMsa(), name: "Martinique"),
+  TranslatedName(LangMlt(), name: "Martinique"),
+  TranslatedName(LangNor(), name: "Martinique"),
+  TranslatedName(LangOci(), name: "Martinica"),
+  TranslatedName(LangRoh(), name: "Martinique"),
+  TranslatedName(LangSme(), name: "Martinique"),
+  TranslatedName(LangSna(), name: "Martinique"),
+  TranslatedName(LangSwa(), name: "Martinique"),
+  TranslatedName(LangVie(), name: "Martinique"),
 ];

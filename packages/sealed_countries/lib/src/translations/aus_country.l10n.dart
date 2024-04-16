@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 143 translations for a Australia country:
+/// Provides 159 translations for a Australia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -12,12 +12,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -31,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -45,6 +48,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -58,15 +62,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -74,6 +83,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -82,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -92,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -102,18 +114,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tahitian
@@ -374,4 +390,20 @@ const ausCountryTranslations = [
   TranslatedName(LangWln(), name: "Ostraleye"),
   TranslatedName(LangZha(), name: "Audaihleihya"),
   TranslatedName(LangXho(), name: "E-Australia"),
+  TranslatedName(LangArg(), name: "Australia"),
+  TranslatedName(LangCos(), name: "Australia"),
+  TranslatedName(LangEus(), name: "Australia"),
+  TranslatedName(LangGlg(), name: "Australia"),
+  TranslatedName(LangIna(), name: "Australia"),
+  TranslatedName(LangInd(), name: "Australia"),
+  TranslatedName(LangIle(), name: "Australia"),
+  TranslatedName(LangKik(), name: "Australia"),
+  TranslatedName(LangKal(), name: "Australia"),
+  TranslatedName(LangLat(), name: "Australia"),
+  TranslatedName(LangMsa(), name: "Australia"),
+  TranslatedName(LangNor(), name: "Australia"),
+  TranslatedName(LangRoh(), name: "Australia"),
+  TranslatedName(LangRon(), name: "Australia"),
+  TranslatedName(LangSna(), name: "Australia"),
+  TranslatedName(LangSwa(), name: "Australia"),
 ];

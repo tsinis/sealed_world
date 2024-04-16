@@ -2,29 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a El Salvador country:
+/// Provides 148 translations for a El Salvador country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -32,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -47,11 +54,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,14 +80,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nauruan
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -83,10 +102,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -94,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -110,12 +134,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const slvCountryTranslations = [
   CountryName(
@@ -331,4 +358,31 @@ const slvCountryTranslations = [
   TranslatedName(LangVol(), name: "Salvadorän"),
   TranslatedName(LangChv(), name: "Сальвадор"),
   TranslatedName(LangXho(), name: "E-El Salvador"),
+  TranslatedName(LangAbk(), name: "Сальвадор"),
+  TranslatedName(LangAfr(), name: "El Salvador"),
+  TranslatedName(LangArg(), name: "El Salvador"),
+  TranslatedName(LangCat(), name: "El Salvador"),
+  TranslatedName(LangDan(), name: "El Salvador"),
+  TranslatedName(LangEus(), name: "El Salvador"),
+  TranslatedName(LangFao(), name: "El Salvador"),
+  TranslatedName(LangFry(), name: "El Salvador"),
+  TranslatedName(LangIna(), name: "El Salvador"),
+  TranslatedName(LangInd(), name: "El Salvador"),
+  TranslatedName(LangIle(), name: "El-Salvador"),
+  TranslatedName(LangIbo(), name: "El Salvador"),
+  TranslatedName(LangIsl(), name: "El Salvador"),
+  TranslatedName(LangKal(), name: "El Salvador"),
+  TranslatedName(LangLtz(), name: "El Salvador"),
+  TranslatedName(LangMlg(), name: "El Salvador"),
+  TranslatedName(LangMsa(), name: "El Salvador"),
+  TranslatedName(LangMlt(), name: "El Salvador"),
+  TranslatedName(LangNor(), name: "El Salvador"),
+  TranslatedName(LangRoh(), name: "El Salvador"),
+  TranslatedName(LangRon(), name: "El Salvador"),
+  TranslatedName(LangSrd(), name: "El Salvador"),
+  TranslatedName(LangSme(), name: "El Salvador"),
+  TranslatedName(LangSna(), name: "El Salvador"),
+  TranslatedName(LangSwa(), name: "El Salvador"),
+  TranslatedName(LangVie(), name: "El Salvador"),
+  TranslatedName(LangZha(), name: "Sazwjvajdoh"),
 ];

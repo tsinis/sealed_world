@@ -1,16 +1,16 @@
-// ignore_for_file: lines_longer_than_80_chars
-
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Hong Kong country:
+/// Provides 127 translations for a Hong Kong country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -31,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -50,10 +51,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -62,7 +65,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -77,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -94,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tajik
@@ -101,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -115,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Wolof
 /// - Xhosa
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const hkgCountryTranslations = [
   CountryName(
@@ -362,4 +371,15 @@ const hkgCountryTranslations = [
     LangYor(),
     name: "Agbègbè Ìṣàkóso Ìṣúná Hong Kong Tí Ṣánà Ń Darí",
   ),
+  TranslatedName(LangAbk(), name: "Гонконг"),
+  TranslatedName(LangArg(), name: "Hong Kong"),
+  TranslatedName(LangBod(), name: "ཧོང་ཀོང༌།"),
+  TranslatedName(LangEpo(), name: "Honkongo"),
+  TranslatedName(LangIle(), name: "Hong-Kong"),
+  TranslatedName(LangKal(), name: "Hongkong"),
+  TranslatedName(LangLat(), name: "Hongcongum"),
+  TranslatedName(LangLin(), name: "Hong Kong"),
+  TranslatedName(LangOci(), name: "Hong Kong"),
+  TranslatedName(LangSwa(), name: "Hong Kong"),
+  TranslatedName(LangZha(), name: "Yanghgangj"),
 ];

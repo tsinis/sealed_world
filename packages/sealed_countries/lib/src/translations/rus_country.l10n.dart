@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 160 translations for a Russia country:
+/// Provides 167 translations for a Russia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -33,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -63,6 +64,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
@@ -82,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -106,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -115,12 +120,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -396,4 +403,11 @@ const rusCountryTranslations = [
   TranslatedName(LangXho(), name: "IRashiya"),
   TranslatedName(LangZha(), name: "Ezlozswh Lienzbangh"),
   TranslatedName(LangSan(), name: "रष्यदेश:"),
+  TranslatedName(LangCos(), name: "Russia"),
+  TranslatedName(LangIna(), name: "Russia"),
+  TranslatedName(LangIle(), name: "Russia"),
+  TranslatedName(LangLat(), name: "Russia"),
+  TranslatedName(LangOci(), name: "Russia"),
+  TranslatedName(LangRoh(), name: "Russia"),
+  TranslatedName(LangSna(), name: "Russia"),
 ];

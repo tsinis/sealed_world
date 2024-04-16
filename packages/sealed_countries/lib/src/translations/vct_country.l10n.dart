@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Saint Vincent and the Grenadines country:
+/// Provides 141 translations for a Saint Vincent and the Grenadines country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -66,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -86,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -113,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -405,4 +411,10 @@ const vctCountryTranslations = [
   TranslatedName(LangSrd(), name: "Santu Vissente e sas Grenadinas"),
   TranslatedName(LangTgl(), name: "St. Vincent & Grenadines"),
   TranslatedName(LangXho(), name: "ESt. Vincent & Grenadines"),
+  TranslatedName(LangAbk(), name: "Сент-Винсенти Гренадини"),
+  TranslatedName(LangArg(), name: "Sant Vicent y las Granadinas"),
+  TranslatedName(LangBod(), name: "སེནྚ། ཝིན་སན། དང༌། གྷིརིན་ཌིན།"),
+  TranslatedName(LangIle(), name: "St. Vincent e Grenadines"),
+  TranslatedName(LangLat(), name: "Sanctus Vincentius et Granatinae"),
+  TranslatedName(LangOci(), name: "St Vincent e Granadinas"),
 ];

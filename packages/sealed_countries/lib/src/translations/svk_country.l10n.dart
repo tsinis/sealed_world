@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Slovakia country:
+/// Provides 150 translations for a Slovakia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -39,6 +40,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -55,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -62,10 +65,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -81,6 +86,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -91,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -106,12 +114,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -129,6 +139,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -136,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const svkCountryTranslations = [
   CountryName(
@@ -364,4 +376,16 @@ const svkCountryTranslations = [
   TranslatedName(LangVol(), name: "Slovakiyän"),
   TranslatedName(LangSrd(), name: "Islovàchia"),
   TranslatedName(LangXho(), name: "ESlovakia"),
+  TranslatedName(LangAbk(), name: "Словакиа"),
+  TranslatedName(LangFao(), name: "Slovakia"),
+  TranslatedName(LangIbo(), name: "Slovakia"),
+  TranslatedName(LangKik(), name: "Slovakia"),
+  TranslatedName(LangKal(), name: "Slovakia"),
+  TranslatedName(LangMlg(), name: "Slovakia"),
+  TranslatedName(LangMsa(), name: "Slovakia"),
+  TranslatedName(LangNor(), name: "Slovakia"),
+  TranslatedName(LangSna(), name: "Slovakia"),
+  TranslatedName(LangSwa(), name: "Slovakia"),
+  TranslatedName(LangVie(), name: "Slovakia"),
+  TranslatedName(LangZha(), name: "Swhlozfazgwz"),
 ];

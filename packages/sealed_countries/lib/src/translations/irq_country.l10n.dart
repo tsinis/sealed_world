@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Iraq country:
+/// Provides 155 translations for a Iraq country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
@@ -22,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
@@ -53,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -61,6 +65,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -81,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -95,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -107,7 +114,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -134,6 +143,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -142,6 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const irqCountryTranslations = [
   CountryName(
@@ -340,4 +351,15 @@ const irqCountryTranslations = [
   TranslatedName(LangWln(), name: "Irak"),
   TranslatedName(LangYid(), name: "איראק"),
   TranslatedName(LangXho(), name: "E-Iraq"),
+  TranslatedName(LangAbk(), name: "Ирак"),
+  TranslatedName(LangArg(), name: "Iraq"),
+  TranslatedName(LangCat(), name: "Iraq"),
+  TranslatedName(LangIbo(), name: "Iraq"),
+  TranslatedName(LangKal(), name: "Irak"),
+  TranslatedName(LangMsa(), name: "Iraq"),
+  TranslatedName(LangOci(), name: "Iraq"),
+  TranslatedName(LangSrd(), name: "Iraq"),
+  TranslatedName(LangSna(), name: "Iraq"),
+  TranslatedName(LangVie(), name: "Iraq"),
+  TranslatedName(LangZha(), name: "Yihlahgwz"),
 ];

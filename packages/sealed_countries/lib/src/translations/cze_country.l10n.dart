@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 171 translations for a Czechia country:
+/// Provides 172 translations for a Czechia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -424,4 +424,5 @@ const czeCountryTranslations = [
   TranslatedName(LangWln(), name: "Tchekeye"),
   TranslatedName(LangZha(), name: "Ciethaek"),
   TranslatedName(LangXho(), name: "ECzechia"),
+  TranslatedName(LangMsa(), name: "Czechia"),
 ];

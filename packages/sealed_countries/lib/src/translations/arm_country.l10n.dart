@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a Armenia country:
+/// Provides 159 translations for a Armenia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -12,12 +12,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -40,9 +42,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -55,14 +59,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -70,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -77,6 +88,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -86,6 +99,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -95,12 +111,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -108,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -127,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -134,6 +155,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const armCountryTranslations = [
   CountryName(
@@ -365,4 +387,26 @@ const armCountryTranslations = [
   TranslatedName(LangTah(), name: "Āmenia"),
   TranslatedName(LangVol(), name: "Larmeniyän"),
   TranslatedName(LangXho(), name: "E-Armenia"),
+  TranslatedName(LangArg(), name: "Armenia"),
+  TranslatedName(LangEus(), name: "Armenia"),
+  TranslatedName(LangFao(), name: "Armenia"),
+  TranslatedName(LangGlg(), name: "Armenia"),
+  TranslatedName(LangIna(), name: "Armenia"),
+  TranslatedName(LangInd(), name: "Armenia"),
+  TranslatedName(LangIle(), name: "Armenia"),
+  TranslatedName(LangIbo(), name: "Armenia"),
+  TranslatedName(LangKik(), name: "Armenia"),
+  TranslatedName(LangKal(), name: "Armenia"),
+  TranslatedName(LangLat(), name: "Armenia"),
+  TranslatedName(LangMlg(), name: "Armenia"),
+  TranslatedName(LangMsa(), name: "Armenia"),
+  TranslatedName(LangNor(), name: "Armenia"),
+  TranslatedName(LangOci(), name: "Armenia"),
+  TranslatedName(LangRoh(), name: "Armenia"),
+  TranslatedName(LangRon(), name: "Armenia"),
+  TranslatedName(LangSme(), name: "Armenia"),
+  TranslatedName(LangSna(), name: "Armenia"),
+  TranslatedName(LangSwa(), name: "Armenia"),
+  TranslatedName(LangVie(), name: "Armenia"),
+  TranslatedName(LangZha(), name: "Yameijnizya"),
 ];

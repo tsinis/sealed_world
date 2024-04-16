@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 153 translations for a Hungary country:
+/// Provides 158 translations for a Hungary country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -60,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -90,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -118,6 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -143,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -150,6 +154,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const hunCountryTranslations = [
   CountryName(language: LangEng(), official: "Hungary", common: "Hungary"),
@@ -317,4 +322,9 @@ const hunCountryTranslations = [
   TranslatedName(LangVol(), name: "Macarän"),
   TranslatedName(LangSrd(), name: "Ungheria"),
   TranslatedName(LangXho(), name: "EHungary"),
+  TranslatedName(LangIbo(), name: "Hungary"),
+  TranslatedName(LangMsa(), name: "Hungary"),
+  TranslatedName(LangSna(), name: "Hungary"),
+  TranslatedName(LangVie(), name: "Hungary"),
+  TranslatedName(LangZha(), name: "Yunghyazli"),
 ];

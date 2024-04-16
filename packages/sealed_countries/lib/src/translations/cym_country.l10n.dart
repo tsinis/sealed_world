@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 132 translations for a Cayman Islands country:
+/// Provides 139 translations for a Cayman Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -53,10 +55,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -86,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -103,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
@@ -353,4 +360,11 @@ const cymCountryTranslations = [
   TranslatedName(LangMri(), name: "Ngā Motu Keimana"),
   TranslatedName(LangSrd(), name: "Ìsulas Cayman"),
   TranslatedName(LangXho(), name: "ECayman Islands"),
+  TranslatedName(LangAbk(), name: "Адгьылбжьахақәа Каиман"),
+  TranslatedName(LangArg(), name: "Islas Caimán"),
+  TranslatedName(LangIle(), name: "Insules Cayman"),
+  TranslatedName(LangKal(), name: "Cayman qeqertaq"),
+  TranslatedName(LangLat(), name: "Insulae Caimanenses"),
+  TranslatedName(LangOci(), name: "Islas Caiman"),
+  TranslatedName(LangSom(), name: "Cayman Islands"),
 ];

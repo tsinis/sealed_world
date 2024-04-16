@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Somalia country:
+/// Provides 149 translations for a Somalia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -27,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -34,9 +38,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -48,9 +54,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -63,12 +75,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -80,6 +96,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -88,17 +106,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -116,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -123,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const somCountryTranslations = [
   CountryName(
@@ -342,4 +366,28 @@ const somCountryTranslations = [
   TranslatedName(LangVol(), name: "Somalän"),
   TranslatedName(LangChv(), name: "Сомали"),
   TranslatedName(LangXho(), name: "ESomalia"),
+  TranslatedName(LangAbk(), name: "Сомали"),
+  TranslatedName(LangArg(), name: "Somalia"),
+  TranslatedName(LangDan(), name: "Somalia"),
+  TranslatedName(LangEus(), name: "Somalia"),
+  TranslatedName(LangFao(), name: "Somalia"),
+  TranslatedName(LangGlg(), name: "Somalia"),
+  TranslatedName(LangIna(), name: "Somalia"),
+  TranslatedName(LangInd(), name: "Somalia"),
+  TranslatedName(LangIle(), name: "Somalia"),
+  TranslatedName(LangIbo(), name: "Somalia"),
+  TranslatedName(LangJav(), name: "Somalia"),
+  TranslatedName(LangKal(), name: "Somalia"),
+  TranslatedName(LangLat(), name: "Somalia"),
+  TranslatedName(LangLtz(), name: "Somalia"),
+  TranslatedName(LangMlg(), name: "Somalia"),
+  TranslatedName(LangMsa(), name: "Somalia"),
+  TranslatedName(LangNor(), name: "Somalia"),
+  TranslatedName(LangOci(), name: "Somalia"),
+  TranslatedName(LangRoh(), name: "Somalia"),
+  TranslatedName(LangRon(), name: "Somalia"),
+  TranslatedName(LangSna(), name: "Somalia"),
+  TranslatedName(LangSwa(), name: "Somalia"),
+  TranslatedName(LangVie(), name: "Somalia"),
+  TranslatedName(LangZha(), name: "Sozmajlij"),
 ];

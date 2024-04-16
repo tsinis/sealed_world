@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 152 translations for a Republic of the Congo country:
+/// Provides 154 translations for a Republic of the Congo country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -63,6 +64,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -390,4 +392,6 @@ const cogCountryTranslations = [
   TranslatedName(LangYid(), name: "רעפובליק פון קאנגא"),
   TranslatedName(LangMri(), name: "Kōngo - Pārawhe"),
   TranslatedName(LangXho(), name: "ECongo - Brazzaville"),
+  TranslatedName(LangAbk(), name: "Конго-Браззавиль"),
+  TranslatedName(LangKal(), name: "Kongo-Brazzaville"),
 ];

@@ -2,20 +2,23 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a Costa Rica country:
+/// Provides 156 translations for a Costa Rica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -23,12 +26,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -40,6 +46,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -55,10 +62,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -76,8 +86,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -87,6 +99,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -97,10 +111,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -127,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -134,6 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const criCountryTranslations = [
   CountryName(
@@ -365,4 +384,23 @@ const criCountryTranslations = [
   TranslatedName(LangVol(), name: "Kostarikän"),
   TranslatedName(LangChv(), name: "Коста-Рика"),
   TranslatedName(LangXho(), name: "ECosta Rica"),
+  TranslatedName(LangAfr(), name: "Costa Rica"),
+  TranslatedName(LangArg(), name: "Costa Rica"),
+  TranslatedName(LangCat(), name: "Costa Rica"),
+  TranslatedName(LangCos(), name: "Costa Rica"),
+  TranslatedName(LangDan(), name: "Costa Rica"),
+  TranslatedName(LangEus(), name: "Costa Rica"),
+  TranslatedName(LangGlg(), name: "Costa Rica"),
+  TranslatedName(LangIna(), name: "Costa Rica"),
+  TranslatedName(LangIle(), name: "Costa-Rica"),
+  TranslatedName(LangKal(), name: "Costa Rica"),
+  TranslatedName(LangLtz(), name: "Costa Rica"),
+  TranslatedName(LangMsa(), name: "Costa Rica"),
+  TranslatedName(LangNor(), name: "Costa Rica"),
+  TranslatedName(LangRoh(), name: "Costa Rica"),
+  TranslatedName(LangRon(), name: "Costa Rica"),
+  TranslatedName(LangSrd(), name: "Costa Rica"),
+  TranslatedName(LangSme(), name: "Costa Rica"),
+  TranslatedName(LangVie(), name: "Costa Rica"),
+  TranslatedName(LangZha(), name: "Gohswhdazlizgyah"),
 ];

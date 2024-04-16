@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Tunisia country:
+/// Provides 148 translations for a Tunisia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -16,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -41,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -53,13 +56,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
@@ -75,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -83,6 +94,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -90,17 +104,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -118,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -126,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const tunCountryTranslations = [
   CountryName(
@@ -340,4 +360,24 @@ const tunCountryTranslations = [
   TranslatedName(LangVol(), name: "Tünisän"),
   TranslatedName(LangWln(), name: "Tunizeye"),
   TranslatedName(LangXho(), name: "ETunisia"),
+  TranslatedName(LangAbk(), name: "Тунис"),
+  TranslatedName(LangEus(), name: "Tunisia"),
+  TranslatedName(LangGlg(), name: "Tunisia"),
+  TranslatedName(LangIna(), name: "Tunisia"),
+  TranslatedName(LangInd(), name: "Tunisia"),
+  TranslatedName(LangIle(), name: "Tunisia"),
+  TranslatedName(LangIbo(), name: "Tunisia"),
+  TranslatedName(LangJav(), name: "Tunisia"),
+  TranslatedName(LangKik(), name: "Tunisia"),
+  TranslatedName(LangKal(), name: "Tunisia"),
+  TranslatedName(LangMsa(), name: "Tunisia"),
+  TranslatedName(LangNor(), name: "Tunisia"),
+  TranslatedName(LangOci(), name: "Tunisia"),
+  TranslatedName(LangRon(), name: "Tunisia"),
+  TranslatedName(LangSrd(), name: "Tunisia"),
+  TranslatedName(LangSme(), name: "Tunisia"),
+  TranslatedName(LangSna(), name: "Tunisia"),
+  TranslatedName(LangSwa(), name: "Tunisia"),
+  TranslatedName(LangVie(), name: "Tunisia"),
+  TranslatedName(LangZha(), name: "Duznizswh"),
 ];

@@ -2,12 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Sierra Leone country:
+/// Provides 143 translations for a Sierra Leone country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -20,12 +23,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -49,10 +54,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -69,13 +79,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -83,13 +100,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
@@ -111,6 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -335,4 +358,27 @@ const sleCountryTranslations = [
   TranslatedName(LangVol(), name: "Sieraleonän"),
   TranslatedName(LangChv(), name: "Сьерра-Леоне"),
   TranslatedName(LangXho(), name: "ESierra Leone"),
+  TranslatedName(LangAbk(), name: "Сиерра-Леоне"),
+  TranslatedName(LangAfr(), name: "Sierra Leone"),
+  TranslatedName(LangArg(), name: "Sierra Leona"),
+  TranslatedName(LangCat(), name: "Sierra Leone"),
+  TranslatedName(LangDan(), name: "Sierra Leone"),
+  TranslatedName(LangIna(), name: "Sierra Leone"),
+  TranslatedName(LangInd(), name: "Sierra Leone"),
+  TranslatedName(LangIle(), name: "Sierra-Leone"),
+  TranslatedName(LangIbo(), name: "Sierra Leone"),
+  TranslatedName(LangKal(), name: "Sierra Leone"),
+  TranslatedName(LangLtz(), name: "Sierra Leone"),
+  TranslatedName(LangMlg(), name: "Sierra Leone"),
+  TranslatedName(LangMsa(), name: "Sierra Leone"),
+  TranslatedName(LangMlt(), name: "Sierra Leone"),
+  TranslatedName(LangNor(), name: "Sierra Leone"),
+  TranslatedName(LangOci(), name: "Sierra Leone"),
+  TranslatedName(LangRoh(), name: "Sierra Leone"),
+  TranslatedName(LangRon(), name: "Sierra Leone"),
+  TranslatedName(LangSrd(), name: "Sierra Leone"),
+  TranslatedName(LangSme(), name: "Sierra Leone"),
+  TranslatedName(LangSlv(), name: "Sierra Leone"),
+  TranslatedName(LangSna(), name: "Sierra Leone"),
+  TranslatedName(LangVie(), name: "Sierra Leone"),
 ];

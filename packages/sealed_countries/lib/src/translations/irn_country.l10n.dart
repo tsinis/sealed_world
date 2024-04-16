@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Iran country:
+/// Provides 143 translations for a Iran country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -14,18 +16,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -33,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -43,13 +49,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Greek (modern)
 /// - Guaraní
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,7 +80,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -76,6 +92,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -83,14 +102,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
@@ -110,12 +133,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const irnCountryTranslations = [
   CountryName(
@@ -327,4 +353,30 @@ const irnCountryTranslations = [
   TranslatedName(LangChv(), name: "Иран"),
   TranslatedName(LangSrd(), name: "Iràn"),
   TranslatedName(LangXho(), name: "E-Iran"),
+  TranslatedName(LangAbk(), name: "Иран"),
+  TranslatedName(LangAfr(), name: "Iran"),
+  TranslatedName(LangCat(), name: "Iran"),
+  TranslatedName(LangDan(), name: "Iran"),
+  TranslatedName(LangEus(), name: "Iran"),
+  TranslatedName(LangFao(), name: "Iran"),
+  TranslatedName(LangFry(), name: "Iran"),
+  TranslatedName(LangHau(), name: "Iran"),
+  TranslatedName(LangIna(), name: "Iran"),
+  TranslatedName(LangInd(), name: "Iran"),
+  TranslatedName(LangIle(), name: "Iran"),
+  TranslatedName(LangIbo(), name: "Iran"),
+  TranslatedName(LangJav(), name: "Iran"),
+  TranslatedName(LangKal(), name: "Iran"),
+  TranslatedName(LangLtz(), name: "Iran"),
+  TranslatedName(LangMlg(), name: "Iran"),
+  TranslatedName(LangMsa(), name: "Iran"),
+  TranslatedName(LangNor(), name: "Iran"),
+  TranslatedName(LangOci(), name: "Iran"),
+  TranslatedName(LangRoh(), name: "Iran"),
+  TranslatedName(LangRon(), name: "Iran"),
+  TranslatedName(LangSme(), name: "Iran"),
+  TranslatedName(LangSlv(), name: "Iran"),
+  TranslatedName(LangSna(), name: "Iran"),
+  TranslatedName(LangVie(), name: "Iran"),
+  TranslatedName(LangZha(), name: "Yihlangj"),
 ];

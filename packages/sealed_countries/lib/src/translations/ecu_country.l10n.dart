@@ -2,13 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Ecuador country:
+/// Provides 149 translations for a Ecuador country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
@@ -29,6 +32,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -40,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -53,11 +58,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -74,8 +83,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -84,6 +95,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -92,11 +105,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -120,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -127,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ecuCountryTranslations = [
   CountryName(
@@ -347,4 +365,23 @@ const ecuCountryTranslations = [
   TranslatedName(LangVol(), name: "Lekvadorän"),
   TranslatedName(LangSrd(), name: "Ècuador"),
   TranslatedName(LangXho(), name: "EEcuador"),
+  TranslatedName(LangAbk(), name: "Еквадор"),
+  TranslatedName(LangAfr(), name: "Ecuador"),
+  TranslatedName(LangArg(), name: "Ecuador"),
+  TranslatedName(LangDan(), name: "Ecuador"),
+  TranslatedName(LangGlg(), name: "Ecuador"),
+  TranslatedName(LangIna(), name: "Ecuador"),
+  TranslatedName(LangIle(), name: "Ecuador"),
+  TranslatedName(LangIbo(), name: "Ecuador"),
+  TranslatedName(LangKal(), name: "Ecuador"),
+  TranslatedName(LangLtz(), name: "Ecuador"),
+  TranslatedName(LangMsa(), name: "Ecuador"),
+  TranslatedName(LangNor(), name: "Ecuador"),
+  TranslatedName(LangRoh(), name: "Ecuador"),
+  TranslatedName(LangRon(), name: "Ecuador"),
+  TranslatedName(LangSme(), name: "Ecuador"),
+  TranslatedName(LangSna(), name: "Ecuador"),
+  TranslatedName(LangSwa(), name: "Ecuador"),
+  TranslatedName(LangVie(), name: "Ecuador"),
+  TranslatedName(LangZha(), name: "Ngwzgyahdohwj"),
 ];

@@ -2,8 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 96 translations for a Panama country:
+/// Provides 135 translations for a Panama country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -11,7 +14,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -22,8 +27,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chinese
 /// - Chuvash
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -31,34 +38,56 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -67,15 +96,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -87,16 +122,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const panCountryTranslations = [
   CountryName(
@@ -279,4 +318,43 @@ const panCountryTranslations = [
   TranslatedName(LangWol(), name: "Panamaa"),
   TranslatedName(LangSrd(), name: "Pànama"),
   TranslatedName(LangXho(), name: "EPanama"),
+  TranslatedName(LangAbk(), name: "Панама"),
+  TranslatedName(LangAfr(), name: "Panama"),
+  TranslatedName(LangBam(), name: "Panama"),
+  TranslatedName(LangCos(), name: "Panama"),
+  TranslatedName(LangDan(), name: "Panama"),
+  TranslatedName(LangEus(), name: "Panama"),
+  TranslatedName(LangFao(), name: "Panama"),
+  TranslatedName(LangFry(), name: "Panama"),
+  TranslatedName(LangGle(), name: "Panama"),
+  TranslatedName(LangGla(), name: "Panama"),
+  TranslatedName(LangHau(), name: "Panama"),
+  TranslatedName(LangIna(), name: "Panama"),
+  TranslatedName(LangInd(), name: "Panama"),
+  TranslatedName(LangIbo(), name: "Panama"),
+  TranslatedName(LangIsl(), name: "Panama"),
+  TranslatedName(LangJav(), name: "Panama"),
+  TranslatedName(LangKik(), name: "Panama"),
+  TranslatedName(LangKal(), name: "Panama"),
+  TranslatedName(LangLat(), name: "Panama"),
+  TranslatedName(LangLtz(), name: "Panama"),
+  TranslatedName(LangLug(), name: "Panama"),
+  TranslatedName(LangLin(), name: "Panama"),
+  TranslatedName(LangLit(), name: "Panama"),
+  TranslatedName(LangLav(), name: "Panama"),
+  TranslatedName(LangMlg(), name: "Panama"),
+  TranslatedName(LangMri(), name: "Panama"),
+  TranslatedName(LangMsa(), name: "Panama"),
+  TranslatedName(LangNor(), name: "Panama"),
+  TranslatedName(LangRoh(), name: "Panama"),
+  TranslatedName(LangRun(), name: "Panama"),
+  TranslatedName(LangRon(), name: "Panama"),
+  TranslatedName(LangSme(), name: "Panama"),
+  TranslatedName(LangSag(), name: "Panama"),
+  TranslatedName(LangSlv(), name: "Panama"),
+  TranslatedName(LangSna(), name: "Panama"),
+  TranslatedName(LangSwa(), name: "Panama"),
+  TranslatedName(LangTuk(), name: "Panama"),
+  TranslatedName(LangVie(), name: "Panama"),
+  TranslatedName(LangZha(), name: "Bahnazmaj"),
 ];

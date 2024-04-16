@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Seychelles country:
+/// Provides 151 translations for a Seychelles country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -21,6 +23,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
@@ -52,6 +55,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -77,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -97,11 +105,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -127,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -358,4 +370,17 @@ const sycCountryTranslations = [
   TranslatedName(LangVol(), name: "Säceluäns"),
   TranslatedName(LangMri(), name: "Heikere"),
   TranslatedName(LangXho(), name: "ESeychelles"),
+  TranslatedName(LangAbk(), name: "Сеишелтәи адгьылбжьахақәа"),
+  TranslatedName(LangArg(), name: "Seychelles"),
+  TranslatedName(LangCat(), name: "Seychelles"),
+  TranslatedName(LangHau(), name: "Seychelles"),
+  TranslatedName(LangIna(), name: "Seychelles"),
+  TranslatedName(LangInd(), name: "Seychelles"),
+  TranslatedName(LangIle(), name: "Seychelles"),
+  TranslatedName(LangIbo(), name: "Seychelles"),
+  TranslatedName(LangMsa(), name: "Seychelles"),
+  TranslatedName(LangRon(), name: "Seychelles"),
+  TranslatedName(LangSrd(), name: "Seychelles"),
+  TranslatedName(LangSna(), name: "Seychelles"),
+  TranslatedName(LangVie(), name: "Seychelles"),
 ];

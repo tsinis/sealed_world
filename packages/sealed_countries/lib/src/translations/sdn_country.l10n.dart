@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Sudan country:
+/// Provides 146 translations for a Sudan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -15,18 +16,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -34,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -45,13 +50,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -69,8 +81,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -82,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -91,14 +106,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
@@ -113,10 +132,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -124,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const sdnCountryTranslations = [
   CountryName(
@@ -329,4 +351,27 @@ const sdnCountryTranslations = [
   TranslatedName(LangVol(), name: "Sudän"),
   TranslatedName(LangSrd(), name: "Sudàn"),
   TranslatedName(LangXho(), name: "ESudan"),
+  TranslatedName(LangAbk(), name: "Судан"),
+  TranslatedName(LangCat(), name: "Sudan"),
+  TranslatedName(LangDan(), name: "Sudan"),
+  TranslatedName(LangEus(), name: "Sudan"),
+  TranslatedName(LangFao(), name: "Sudan"),
+  TranslatedName(LangHau(), name: "Sudan"),
+  TranslatedName(LangIna(), name: "Sudan"),
+  TranslatedName(LangInd(), name: "Sudan"),
+  TranslatedName(LangIle(), name: "Sudan"),
+  TranslatedName(LangIbo(), name: "Sudan"),
+  TranslatedName(LangJav(), name: "Sudan"),
+  TranslatedName(LangKal(), name: "Avannarleqsudan"),
+  TranslatedName(LangLtz(), name: "Sudan"),
+  TranslatedName(LangMsa(), name: "Sudan"),
+  TranslatedName(LangNor(), name: "Sudan"),
+  TranslatedName(LangRoh(), name: "Sudan"),
+  TranslatedName(LangRon(), name: "Sudan"),
+  TranslatedName(LangSlv(), name: "Sudan"),
+  TranslatedName(LangSna(), name: "Sudan"),
+  TranslatedName(LangSwa(), name: "Sudan"),
+  TranslatedName(LangTuk(), name: "Sudan"),
+  TranslatedName(LangVie(), name: "Sudan"),
+  TranslatedName(LangZha(), name: "Suhdanh"),
 ];

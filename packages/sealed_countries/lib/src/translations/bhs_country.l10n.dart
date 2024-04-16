@@ -2,13 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Bahamas country:
+/// Provides 153 translations for a Bahamas country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -28,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -39,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -46,16 +51,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -76,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -86,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -96,9 +108,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -125,12 +140,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const bhsCountryTranslations = [
   CountryName(
@@ -356,4 +374,22 @@ const bhsCountryTranslations = [
   TranslatedName(LangVol(), name: "Bahamuäns"),
   TranslatedName(LangMri(), name: "Pahama"),
   TranslatedName(LangXho(), name: "EBahamas"),
+  TranslatedName(LangAbk(), name: "Баӷама"),
+  TranslatedName(LangAfr(), name: "Bahamas"),
+  TranslatedName(LangArg(), name: "Bahamas"),
+  TranslatedName(LangDan(), name: "Bahamas"),
+  TranslatedName(LangGlg(), name: "Bahamas"),
+  TranslatedName(LangHau(), name: "Bahamas"),
+  TranslatedName(LangIna(), name: "Bahamas"),
+  TranslatedName(LangIle(), name: "Bahamas"),
+  TranslatedName(LangIbo(), name: "Bahamas"),
+  TranslatedName(LangKal(), name: "Bahamas"),
+  TranslatedName(LangMsa(), name: "Bahamas"),
+  TranslatedName(LangNor(), name: "Bahamas"),
+  TranslatedName(LangRoh(), name: "Bahamas"),
+  TranslatedName(LangRon(), name: "Bahamas"),
+  TranslatedName(LangSrd(), name: "Bahamas"),
+  TranslatedName(LangVie(), name: "Bahamas"),
+  TranslatedName(LangWol(), name: "Bahamas"),
+  TranslatedName(LangZha(), name: "Bahhahmaj"),
 ];

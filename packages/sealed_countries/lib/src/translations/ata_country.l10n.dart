@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Antarctica country:
+/// Provides 128 translations for a Antarctica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -23,6 +25,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chinese
 /// - Chuvash
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -46,11 +49,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -75,12 +82,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sardinian
 /// - Serbian
@@ -97,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -107,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uzbek
 /// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
@@ -285,4 +297,16 @@ const ataCountryTranslations = [
   TranslatedName(LangSrd(), name: "Antàrticu"),
   TranslatedName(LangXho(), name: "E-Antarctica"),
   TranslatedName(LangYor(), name: "Antakítíkà"),
+  TranslatedName(LangAbk(), name: "Антарктида"),
+  TranslatedName(LangArg(), name: "Antartida"),
+  TranslatedName(LangBod(), name: "ལྷོ་རྩེའི་མཐའ་གླིང་།"),
+  TranslatedName(LangCos(), name: "Antarticu"),
+  TranslatedName(LangFry(), name: "Antarctica"),
+  TranslatedName(LangIna(), name: "Antarctica"),
+  TranslatedName(LangIle(), name: "Antarctica"),
+  TranslatedName(LangIbo(), name: "Antarctica"),
+  TranslatedName(LangKal(), name: "Qalasersuaq Kujalleq"),
+  TranslatedName(LangOci(), name: "Antartica"),
+  TranslatedName(LangRoh(), name: "Antarctica"),
+  TranslatedName(LangRon(), name: "Antarctica"),
 ];

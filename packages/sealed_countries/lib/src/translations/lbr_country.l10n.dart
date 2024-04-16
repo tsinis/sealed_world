@@ -2,19 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Liberia country:
+/// Provides 145 translations for a Liberia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -28,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -35,9 +39,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -49,25 +55,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -76,6 +92,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -84,17 +102,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -112,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -119,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const lbrCountryTranslations = [
   CountryName(
@@ -334,4 +358,28 @@ const lbrCountryTranslations = [
   TranslatedName(LangTso(), name: "Layiberiya"),
   TranslatedName(LangVol(), name: "Liberän"),
   TranslatedName(LangXho(), name: "ELiberia"),
+  TranslatedName(LangAbk(), name: "Либериа"),
+  TranslatedName(LangArg(), name: "Liberia"),
+  TranslatedName(LangDan(), name: "Liberia"),
+  TranslatedName(LangEus(), name: "Liberia"),
+  TranslatedName(LangFao(), name: "Liberia"),
+  TranslatedName(LangGlg(), name: "Liberia"),
+  TranslatedName(LangIna(), name: "Liberia"),
+  TranslatedName(LangInd(), name: "Liberia"),
+  TranslatedName(LangIle(), name: "Liberia"),
+  TranslatedName(LangIbo(), name: "Liberia"),
+  TranslatedName(LangKik(), name: "Liberia"),
+  TranslatedName(LangKal(), name: "Liberia"),
+  TranslatedName(LangLat(), name: "Liberia"),
+  TranslatedName(LangLtz(), name: "Liberia"),
+  TranslatedName(LangMlg(), name: "Liberia"),
+  TranslatedName(LangMsa(), name: "Liberia"),
+  TranslatedName(LangNor(), name: "Liberia"),
+  TranslatedName(LangRoh(), name: "Liberia"),
+  TranslatedName(LangRon(), name: "Liberia"),
+  TranslatedName(LangSme(), name: "Liberia"),
+  TranslatedName(LangSna(), name: "Liberia"),
+  TranslatedName(LangSwa(), name: "Liberia"),
+  TranslatedName(LangVie(), name: "Liberia"),
+  TranslatedName(LangZha(), name: "Libijlijya"),
 ];

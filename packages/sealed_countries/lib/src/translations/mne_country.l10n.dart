@@ -2,38 +2,47 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 112 translations for a Montenegro country:
+/// Provides 137 translations for a Montenegro country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
 /// - Azerbaijani
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -44,10 +53,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -62,7 +76,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -70,6 +86,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -78,7 +97,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
@@ -87,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -103,12 +125,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mneCountryTranslations = [
   CountryName(
@@ -303,4 +328,29 @@ const mneCountryTranslations = [
   TranslatedName(LangYor(), name: "Montenẹ́grò"),
   TranslatedName(LangFul(), name: "𞤃𞤮𞤲𞤼𞤫𞤲𞤫𞥅𞤺𞤮𞤪𞤮"),
   TranslatedName(LangXho(), name: "EMontenegro"),
+  TranslatedName(LangAbk(), name: "Ашьхеиқәаҵәа"),
+  TranslatedName(LangAfr(), name: "Montenegro"),
+  TranslatedName(LangArg(), name: "Montenegro"),
+  TranslatedName(LangCat(), name: "Montenegro"),
+  TranslatedName(LangDan(), name: "Montenegro"),
+  TranslatedName(LangEpo(), name: "Montenegro"),
+  TranslatedName(LangEus(), name: "Montenegro"),
+  TranslatedName(LangFao(), name: "Montenegro"),
+  TranslatedName(LangFry(), name: "Montenegro"),
+  TranslatedName(LangGlg(), name: "Montenegro"),
+  TranslatedName(LangIna(), name: "Montenegro"),
+  TranslatedName(LangInd(), name: "Montenegro"),
+  TranslatedName(LangIle(), name: "Montenegro"),
+  TranslatedName(LangIbo(), name: "Montenegro"),
+  TranslatedName(LangKal(), name: "Montenegro"),
+  TranslatedName(LangLtz(), name: "Montenegro"),
+  TranslatedName(LangMsa(), name: "Montenegro"),
+  TranslatedName(LangNor(), name: "Montenegro"),
+  TranslatedName(LangOci(), name: "Montenegro"),
+  TranslatedName(LangRoh(), name: "Montenegro"),
+  TranslatedName(LangSrd(), name: "Montenegro"),
+  TranslatedName(LangSme(), name: "Montenegro"),
+  TranslatedName(LangSwa(), name: "Montenegro"),
+  TranslatedName(LangVie(), name: "Montenegro"),
+  TranslatedName(LangZha(), name: "Hwzsanh"),
 ];

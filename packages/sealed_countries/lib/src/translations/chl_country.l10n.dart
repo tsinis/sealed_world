@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Chile country:
+/// Provides 163 translations for a Chile country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -12,6 +12,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
@@ -34,6 +35,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -45,10 +47,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
 /// - Hausa
@@ -57,17 +61,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -81,8 +90,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -93,6 +104,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -102,12 +115,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -115,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tahitian
@@ -143,6 +160,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const chlCountryTranslations = [
   CountryName(
@@ -350,4 +368,22 @@ const chlCountryTranslations = [
   TranslatedName(LangVol(), name: "Cilän"),
   TranslatedName(LangWln(), name: "Tchili"),
   TranslatedName(LangXho(), name: "iChile"),
+  TranslatedName(LangArg(), name: "Chile"),
+  TranslatedName(LangDan(), name: "Chile"),
+  TranslatedName(LangGlg(), name: "Chile"),
+  TranslatedName(LangGrn(), name: "Chíle"),
+  TranslatedName(LangIna(), name: "Chile"),
+  TranslatedName(LangIle(), name: "Chile"),
+  TranslatedName(LangIbo(), name: "Chile"),
+  TranslatedName(LangKik(), name: "Chile"),
+  TranslatedName(LangKal(), name: "Chile"),
+  TranslatedName(LangLtz(), name: "Chile"),
+  TranslatedName(LangMsa(), name: "Chile"),
+  TranslatedName(LangNor(), name: "Chile"),
+  TranslatedName(LangOci(), name: "Chile"),
+  TranslatedName(LangRoh(), name: "Chile"),
+  TranslatedName(LangRon(), name: "Chile"),
+  TranslatedName(LangSna(), name: "Chile"),
+  TranslatedName(LangSwa(), name: "Chile"),
+  TranslatedName(LangZha(), name: "Cili"),
 ];

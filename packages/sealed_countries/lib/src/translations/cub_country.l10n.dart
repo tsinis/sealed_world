@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Cuba country:
+/// Provides 154 translations for a Cuba country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
@@ -23,12 +25,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -40,6 +45,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -52,12 +59,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -70,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -77,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -87,6 +100,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -94,10 +109,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -123,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -312,4 +332,24 @@ const cubCountryTranslations = [
   TranslatedName(LangWln(), name: "Couba"),
   TranslatedName(LangZha(), name: "Gujbah"),
   TranslatedName(LangXho(), name: "ECuba"),
+  TranslatedName(LangAbk(), name: "Куба"),
+  TranslatedName(LangArg(), name: "Cuba"),
+  TranslatedName(LangCat(), name: "Cuba"),
+  TranslatedName(LangCos(), name: "Cuba"),
+  TranslatedName(LangDan(), name: "Cuba"),
+  TranslatedName(LangGlg(), name: "Cuba"),
+  TranslatedName(LangIna(), name: "Cuba"),
+  TranslatedName(LangIle(), name: "Cuba"),
+  TranslatedName(LangIbo(), name: "Cuba"),
+  TranslatedName(LangKal(), name: "Kuba"),
+  TranslatedName(LangLat(), name: "Cuba"),
+  TranslatedName(LangLug(), name: "Cuba"),
+  TranslatedName(LangMsa(), name: "Cuba"),
+  TranslatedName(LangNor(), name: "Cuba"),
+  TranslatedName(LangOci(), name: "Cuba"),
+  TranslatedName(LangRoh(), name: "Cuba"),
+  TranslatedName(LangRon(), name: "Cuba"),
+  TranslatedName(LangSrd(), name: "Cuba"),
+  TranslatedName(LangSna(), name: "Cuba"),
+  TranslatedName(LangVie(), name: "Cuba"),
 ];

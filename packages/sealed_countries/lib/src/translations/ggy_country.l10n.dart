@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 101 translations for a Guernsey country:
+/// Provides 126 translations for a Guernsey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -19,12 +21,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -32,9 +36,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -43,10 +49,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,12 +71,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -73,13 +90,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tajik
@@ -95,10 +117,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const ggyCountryTranslations = [
   CountryName(
@@ -262,4 +287,29 @@ const ggyCountryTranslations = [
   TranslatedName(LangFul(), name: "𞤘𞤢𞤪𞤲𞤫𞤧𞤭𞥅"),
   TranslatedName(LangHau(), name: "Yankin Guernsey"),
   TranslatedName(LangXho(), name: "EGuernsey"),
+  TranslatedName(LangAbk(), name: "Гернси"),
+  TranslatedName(LangAfr(), name: "Guernsey"),
+  TranslatedName(LangCat(), name: "Guernsey"),
+  TranslatedName(LangDan(), name: "Guernsey"),
+  TranslatedName(LangFao(), name: "Guernsey"),
+  TranslatedName(LangFry(), name: "Guernsey"),
+  TranslatedName(LangGlg(), name: "Guernsey"),
+  TranslatedName(LangIna(), name: "Guernsey"),
+  TranslatedName(LangInd(), name: "Guernsey"),
+  TranslatedName(LangIle(), name: "Guernsey"),
+  TranslatedName(LangIbo(), name: "Guernsey"),
+  TranslatedName(LangIsl(), name: "Guernsey"),
+  TranslatedName(LangKal(), name: "Guernsey"),
+  TranslatedName(LangLtz(), name: "Guernsey"),
+  TranslatedName(LangMsa(), name: "Guernsey"),
+  TranslatedName(LangMlt(), name: "Guernsey"),
+  TranslatedName(LangNor(), name: "Guernsey"),
+  TranslatedName(LangRoh(), name: "Guernsey"),
+  TranslatedName(LangRon(), name: "Guernsey"),
+  TranslatedName(LangSrd(), name: "Guernsey"),
+  TranslatedName(LangSme(), name: "Guernsey"),
+  TranslatedName(LangSlv(), name: "Guernsey"),
+  TranslatedName(LangSwa(), name: "Guernsey"),
+  TranslatedName(LangVie(), name: "Guernsey"),
+  TranslatedName(LangYor(), name: "Guernsey"),
 ];

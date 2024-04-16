@@ -2,31 +2,38 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Guatemala country:
+/// Provides 148 translations for a Guatemala country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -34,9 +41,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -48,10 +57,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,8 +81,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -77,6 +93,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nauruan
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -84,11 +103,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -96,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -113,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -120,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const gtmCountryTranslations = [
   CountryName(
@@ -336,4 +362,30 @@ const gtmCountryTranslations = [
   TranslatedName(LangVol(), name: "Gvatemän"),
   TranslatedName(LangChv(), name: "Гватемала"),
   TranslatedName(LangXho(), name: "EGuatemala"),
+  TranslatedName(LangAbk(), name: "Гватемала"),
+  TranslatedName(LangAfr(), name: "Guatemala"),
+  TranslatedName(LangArg(), name: "Guatemala"),
+  TranslatedName(LangCat(), name: "Guatemala"),
+  TranslatedName(LangCos(), name: "Guatemala"),
+  TranslatedName(LangDan(), name: "Guatemala"),
+  TranslatedName(LangEus(), name: "Guatemala"),
+  TranslatedName(LangFao(), name: "Guatemala"),
+  TranslatedName(LangGlg(), name: "Guatemala"),
+  TranslatedName(LangIna(), name: "Guatemala"),
+  TranslatedName(LangInd(), name: "Guatemala"),
+  TranslatedName(LangIle(), name: "Guatemala"),
+  TranslatedName(LangIbo(), name: "Guatemala"),
+  TranslatedName(LangKal(), name: "Guatemala"),
+  TranslatedName(LangLtz(), name: "Guatemala"),
+  TranslatedName(LangMsa(), name: "Guatemala"),
+  TranslatedName(LangNor(), name: "Guatemala"),
+  TranslatedName(LangOci(), name: "Guatemala"),
+  TranslatedName(LangRoh(), name: "Guatemala"),
+  TranslatedName(LangRon(), name: "Guatemala"),
+  TranslatedName(LangSrd(), name: "Guatemala"),
+  TranslatedName(LangSme(), name: "Guatemala"),
+  TranslatedName(LangSna(), name: "Guatemala"),
+  TranslatedName(LangSwa(), name: "Guatemala"),
+  TranslatedName(LangVie(), name: "Guatemala"),
+  TranslatedName(LangZha(), name: "Veizdimajlah"),
 ];

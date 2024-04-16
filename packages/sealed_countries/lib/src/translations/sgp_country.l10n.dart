@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a Singapore country:
+/// Provides 149 translations for a Singapore country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -30,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -54,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -61,6 +64,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -89,6 +93,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -97,12 +103,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -127,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -134,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const sgpCountryTranslations = [
   CountryName(
@@ -365,4 +376,16 @@ const sgpCountryTranslations = [
   TranslatedName(LangSun(), name: "Singapura"),
   TranslatedName(LangVol(), name: "Singapurän"),
   TranslatedName(LangXho(), name: "ESingapore"),
+  TranslatedName(LangAbk(), name: "Сингапур"),
+  TranslatedName(LangDan(), name: "Singapore"),
+  TranslatedName(LangIbo(), name: "Singapore"),
+  TranslatedName(LangKal(), name: "Singapore"),
+  TranslatedName(LangNor(), name: "Singapore"),
+  TranslatedName(LangRon(), name: "Singapore"),
+  TranslatedName(LangSrd(), name: "Singapore"),
+  TranslatedName(LangSme(), name: "Singapore"),
+  TranslatedName(LangSna(), name: "Singapore"),
+  TranslatedName(LangSwa(), name: "Singapore"),
+  TranslatedName(LangVie(), name: "Singapore"),
+  TranslatedName(LangZha(), name: "Sinhgyahboh"),
 ];

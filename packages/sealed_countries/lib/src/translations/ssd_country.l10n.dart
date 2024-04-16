@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a South Sudan country:
+/// Provides 135 translations for a South Sudan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -34,6 +35,7 @@ import "../model/country/submodels/country_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Ewe
 /// - Faroese
 /// - Finnish
 /// - French
@@ -49,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -56,7 +59,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
+/// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Komi
@@ -67,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -127,6 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ssdCountryTranslations = [
   CountryName(
@@ -349,4 +356,11 @@ const ssdCountryTranslations = [
   TranslatedName(LangFul(), name: "𞤅𞤵𞤣𞤢𞥄𞤲 𞤂𞤫𞤧𞤤𞤫𞤴𞤪𞤭"),
   TranslatedName(LangMri(), name: "Hūtāne ki te Tonga"),
   TranslatedName(LangXho(), name: "ESouth Sudan"),
+  TranslatedName(LangAbk(), name: "Аладатәи Судан"),
+  TranslatedName(LangEwe(), name: "Anyiehe Sudan nutome"),
+  TranslatedName(LangIbo(), name: "South Sudan"),
+  TranslatedName(LangKal(), name: "Kujalleqsudan"),
+  TranslatedName(LangKas(), name: "جنوبی سوڈان"),
+  TranslatedName(LangLin(), name: "Sudani ya Sidi"),
+  TranslatedName(LangZha(), name: "Nanz Suhdanh"),
 ];

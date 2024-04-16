@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Cyprus country:
+/// Provides 153 translations for a Cyprus country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -77,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -84,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -111,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -144,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const cypCountryTranslations = [
   CountryName(
@@ -369,4 +375,10 @@ const cypCountryTranslations = [
   TranslatedName(LangVol(), name: "Sipreän"),
   TranslatedName(LangYid(), name: "קיפראס"),
   TranslatedName(LangXho(), name: "ECyprus"),
+  TranslatedName(LangAbk(), name: "Кипр"),
+  TranslatedName(LangIbo(), name: "Cyprus"),
+  TranslatedName(LangLat(), name: "Cyprus"),
+  TranslatedName(LangMsa(), name: "Cyprus"),
+  TranslatedName(LangSna(), name: "Cyprus"),
+  TranslatedName(LangZha(), name: "Saibujluswh"),
 ];

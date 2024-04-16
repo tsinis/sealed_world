@@ -2,47 +2,63 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 99 translations for a San Marino country:
+/// Provides 133 translations for a San Marino country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -58,32 +74,46 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -92,11 +122,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
+/// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const smrCountryTranslations = [
   CountryName(
@@ -294,4 +328,38 @@ const smrCountryTranslations = [
   TranslatedName(LangChv(), name: "Сан-Марино"),
   TranslatedName(LangSrd(), name: "Santu Marinu"),
   TranslatedName(LangXho(), name: "ESan Marino"),
+  TranslatedName(LangAbk(), name: "Сан-Марино"),
+  TranslatedName(LangAfr(), name: "San Marino"),
+  TranslatedName(LangArg(), name: "San Marino"),
+  TranslatedName(LangBod(), name: "སན་མེ་རི་ནོ།"),
+  TranslatedName(LangCat(), name: "San Marino"),
+  TranslatedName(LangDan(), name: "San Marino"),
+  TranslatedName(LangEus(), name: "San Marino"),
+  TranslatedName(LangFao(), name: "San Marino"),
+  TranslatedName(LangFry(), name: "San Marino"),
+  TranslatedName(LangGla(), name: "San Marino"),
+  TranslatedName(LangGlg(), name: "San Marino"),
+  TranslatedName(LangHau(), name: "San Marino"),
+  TranslatedName(LangIna(), name: "San Marino"),
+  TranslatedName(LangInd(), name: "San Marino"),
+  TranslatedName(LangIle(), name: "San-Marino"),
+  TranslatedName(LangIbo(), name: "San Marino"),
+  TranslatedName(LangJav(), name: "San Marino"),
+  TranslatedName(LangKal(), name: "San Marino"),
+  TranslatedName(LangLtz(), name: "San Marino"),
+  TranslatedName(LangMsa(), name: "San Marino"),
+  TranslatedName(LangMlt(), name: "San Marino"),
+  TranslatedName(LangNor(), name: "San Marino"),
+  TranslatedName(LangOci(), name: "Sant Marin"),
+  TranslatedName(LangQue(), name: "San Marino"),
+  TranslatedName(LangRoh(), name: "San Marino"),
+  TranslatedName(LangRon(), name: "San Marino"),
+  TranslatedName(LangSme(), name: "San Marino"),
+  TranslatedName(LangSlv(), name: "San Marino"),
+  TranslatedName(LangSna(), name: "San Marino"),
+  TranslatedName(LangSom(), name: "San Marino"),
+  TranslatedName(LangSwa(), name: "San Marino"),
+  TranslatedName(LangVie(), name: "San Marino"),
+  TranslatedName(LangWol(), name: "San Marino"),
+  TranslatedName(LangZha(), name: "Swngmajlinoz"),
 ];

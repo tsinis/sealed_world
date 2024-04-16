@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Bolivia country:
+/// Provides 152 translations for a Bolivia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -10,12 +10,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -30,6 +32,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -37,9 +40,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -52,25 +57,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -81,6 +96,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -91,18 +108,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -119,13 +140,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const bolCountryTranslations = [
   CountryName(
@@ -344,4 +368,28 @@ const bolCountryTranslations = [
   TranslatedName(LangVol(), name: "Bolivän"),
   TranslatedName(LangWln(), name: "Boliveye"),
   TranslatedName(LangXho(), name: "EBolivia"),
+  TranslatedName(LangArg(), name: "Bolivia"),
+  TranslatedName(LangDan(), name: "Bolivia"),
+  TranslatedName(LangEus(), name: "Bolivia"),
+  TranslatedName(LangFao(), name: "Bolivia"),
+  TranslatedName(LangFry(), name: "Bolivia"),
+  TranslatedName(LangGlg(), name: "Bolivia"),
+  TranslatedName(LangIna(), name: "Bolivia"),
+  TranslatedName(LangInd(), name: "Bolivia"),
+  TranslatedName(LangIle(), name: "Bolivia"),
+  TranslatedName(LangIbo(), name: "Bolivia"),
+  TranslatedName(LangJav(), name: "Bolivia"),
+  TranslatedName(LangKik(), name: "Bolivia"),
+  TranslatedName(LangKal(), name: "Bolivia"),
+  TranslatedName(LangLat(), name: "Bolivia"),
+  TranslatedName(LangMlg(), name: "Bolivia"),
+  TranslatedName(LangMsa(), name: "Bolivia"),
+  TranslatedName(LangNor(), name: "Bolivia"),
+  TranslatedName(LangRoh(), name: "Bolivia"),
+  TranslatedName(LangRon(), name: "Bolivia"),
+  TranslatedName(LangSme(), name: "Bolivia"),
+  TranslatedName(LangSna(), name: "Bolivia"),
+  TranslatedName(LangSwa(), name: "Bolivia"),
+  TranslatedName(LangVie(), name: "Bolivia"),
+  TranslatedName(LangZha(), name: "Bohliveizya"),
 ];

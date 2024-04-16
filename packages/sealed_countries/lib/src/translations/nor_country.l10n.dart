@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 156 translations for a Norway country:
+/// Provides 161 translations for a Norway country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -59,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -90,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -118,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -396,4 +400,9 @@ const norCountryTranslations = [
   TranslatedName(LangWln(), name: "Norvedje"),
   TranslatedName(LangZha(), name: "Nozveih"),
   TranslatedName(LangXho(), name: "ENorway"),
+  TranslatedName(LangAbk(), name: "Норвегиа"),
+  TranslatedName(LangIbo(), name: "Norway"),
+  TranslatedName(LangMsa(), name: "Norway"),
+  TranslatedName(LangSna(), name: "Norway"),
+  TranslatedName(LangSwa(), name: "Norway"),
 ];

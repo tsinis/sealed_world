@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 146 translations for a Austria country:
+/// Provides 161 translations for a Austria country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -12,6 +12,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
@@ -19,6 +20,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -31,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -45,6 +48,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -57,6 +61,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -66,6 +74,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -74,6 +83,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -82,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -105,18 +116,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tajik
@@ -375,4 +390,19 @@ const autCountryTranslations = [
   TranslatedName(LangWln(), name: "Otriche"),
   TranslatedName(LangZha(), name: "Audeihleih"),
   TranslatedName(LangXho(), name: "E-Austria"),
+  TranslatedName(LangArg(), name: "Austria"),
+  TranslatedName(LangCos(), name: "Austria"),
+  TranslatedName(LangEus(), name: "Austria"),
+  TranslatedName(LangGlg(), name: "Austria"),
+  TranslatedName(LangIna(), name: "Austria"),
+  TranslatedName(LangInd(), name: "Austria"),
+  TranslatedName(LangIle(), name: "Austria"),
+  TranslatedName(LangIbo(), name: "Austria"),
+  TranslatedName(LangKik(), name: "Austria"),
+  TranslatedName(LangLat(), name: "Austria"),
+  TranslatedName(LangMsa(), name: "Austria"),
+  TranslatedName(LangRoh(), name: "Austria"),
+  TranslatedName(LangRon(), name: "Austria"),
+  TranslatedName(LangSna(), name: "Austria"),
+  TranslatedName(LangSwa(), name: "Austria"),
 ];

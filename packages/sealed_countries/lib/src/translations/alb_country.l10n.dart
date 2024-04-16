@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Albania country:
+/// Provides 159 translations for a Albania country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -12,6 +12,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
@@ -19,6 +20,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -41,9 +43,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -56,11 +60,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -73,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -80,6 +90,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -90,6 +102,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -99,16 +113,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -127,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -135,6 +155,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const albCountryTranslations = [
   CountryName(
@@ -363,4 +384,25 @@ const albCountryTranslations = [
   TranslatedName(LangVol(), name: "Lalbanän"),
   TranslatedName(LangWln(), name: "Albaneye"),
   TranslatedName(LangXho(), name: "E-Albania"),
+  TranslatedName(LangArg(), name: "Albania"),
+  TranslatedName(LangEus(), name: "Albania"),
+  TranslatedName(LangFao(), name: "Albania"),
+  TranslatedName(LangGlg(), name: "Albania"),
+  TranslatedName(LangIna(), name: "Albania"),
+  TranslatedName(LangInd(), name: "Albania"),
+  TranslatedName(LangIle(), name: "Albania"),
+  TranslatedName(LangIbo(), name: "Albania"),
+  TranslatedName(LangKal(), name: "Albania"),
+  TranslatedName(LangLat(), name: "Albania"),
+  TranslatedName(LangMlg(), name: "Albania"),
+  TranslatedName(LangMsa(), name: "Albania"),
+  TranslatedName(LangNor(), name: "Albania"),
+  TranslatedName(LangOci(), name: "Albania"),
+  TranslatedName(LangRoh(), name: "Albania"),
+  TranslatedName(LangRon(), name: "Albania"),
+  TranslatedName(LangSrd(), name: "Albania"),
+  TranslatedName(LangSna(), name: "Albania"),
+  TranslatedName(LangSwa(), name: "Albania"),
+  TranslatedName(LangVie(), name: "Albania"),
+  TranslatedName(LangZha(), name: "Ahwjbahnizya"),
 ];

@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 160 translations for a Netherlands country:
+/// Provides 164 translations for a Netherlands country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -60,6 +61,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -119,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -154,6 +157,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const nldCountryTranslations = [
   CountryName(
@@ -380,4 +384,8 @@ const nldCountryTranslations = [
   TranslatedName(LangVol(), name: "Nedän"),
   TranslatedName(LangWln(), name: "Bas Payis"),
   TranslatedName(LangXho(), name: "ENetherlands"),
+  TranslatedName(LangAbk(), name: "Нидерланд"),
+  TranslatedName(LangIbo(), name: "Netherlands"),
+  TranslatedName(LangSna(), name: "Netherlands"),
+  TranslatedName(LangZha(), name: "Hozlanz"),
 ];

@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Saint Barthélemy country:
+/// Provides 127 translations for a Saint Barthélemy country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -48,10 +51,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -60,7 +65,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -75,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -335,4 +343,12 @@ const blmCountryTranslations = [
   TranslatedName(LangVie(), name: "St. Barthélemy"),
   TranslatedName(LangXho(), name: "ESt. Barthélemy"),
   TranslatedName(LangYor(), name: "Ìlú Bátílẹ́mì"),
+  TranslatedName(LangAbk(), name: "Сен-Бартелеми"),
+  TranslatedName(LangArg(), name: "St. Barthélemy"),
+  TranslatedName(LangEpo(), name: "Sankta Bartolomeo"),
+  TranslatedName(LangIle(), name: "Sant-Bartolomeo"),
+  TranslatedName(LangKal(), name: "Saint Barthélemy"),
+  TranslatedName(LangLat(), name: "Insula Sancti Bartholomaei"),
+  TranslatedName(LangLin(), name: "Sántu Barthélemy"),
+  TranslatedName(LangOci(), name: "Sant Bertomiu"),
 ];

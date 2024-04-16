@@ -2,10 +2,12 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 154 translations for a Ethiopia country:
+/// Provides 162 translations for a Ethiopia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afar
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -59,12 +61,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -126,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -144,6 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -152,6 +159,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ethCountryTranslations = [
   CountryName(
@@ -404,4 +412,12 @@ const ethCountryTranslations = [
   TranslatedName(LangVol(), name: "Lätiopän"),
   TranslatedName(LangWln(), name: "Etiopeye"),
   TranslatedName(LangXho(), name: "iTopiya"),
+  TranslatedName(LangAar(), name: "Otobbia"),
+  TranslatedName(LangAbk(), name: "Ефиопиа"),
+  TranslatedName(LangIna(), name: "Ethiopia"),
+  TranslatedName(LangIbo(), name: "Ethiopia"),
+  TranslatedName(LangKal(), name: "Ethiopia"),
+  TranslatedName(LangSwa(), name: "Ethiopia"),
+  TranslatedName(LangVie(), name: "Ethiopia"),
+  TranslatedName(LangZha(), name: "Aihsaiwzbizya"),
 ];

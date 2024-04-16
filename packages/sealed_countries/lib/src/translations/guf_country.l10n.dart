@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a French Guiana country:
+/// Provides 137 translations for a French Guiana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -43,6 +45,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Georgian
 /// - German
 /// - Greek (modern)
+/// - Guaraní
 /// - Gujarati
 /// - Hausa
 /// - Hebrew (modern)
@@ -52,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -66,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -85,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -97,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -333,4 +340,11 @@ const gufCountryTranslations = [
   TranslatedName(LangMri(), name: "Kiāna Wīwī"),
   TranslatedName(LangSrd(), name: "Guiana frantzesa"),
   TranslatedName(LangXho(), name: "EFrench Guiana"),
+  TranslatedName(LangAbk(), name: "Францызтәи Гвиана"),
+  TranslatedName(LangArg(), name: "Guayana francesa"),
+  TranslatedName(LangGrn(), name: "Guyána Francésa"),
+  TranslatedName(LangIle(), name: "Francesi Guiana"),
+  TranslatedName(LangLat(), name: "Guiana Francica"),
+  TranslatedName(LangOci(), name: "Guiana francesa"),
+  TranslatedName(LangSna(), name: "French Guiana"),
 ];

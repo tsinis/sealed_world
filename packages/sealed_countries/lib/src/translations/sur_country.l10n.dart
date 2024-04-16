@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Suriname country:
+/// Provides 147 translations for a Suriname country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -40,6 +42,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -47,21 +50,28 @@ import "../model/country/submodels/country_name.dart";
 /// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
+/// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -98,7 +108,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -122,12 +134,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const surCountryTranslations = [
   CountryName(
@@ -353,4 +368,20 @@ const surCountryTranslations = [
   TranslatedName(LangTgl(), name: "Surinam"),
   TranslatedName(LangVol(), name: "Surinän"),
   TranslatedName(LangXho(), name: "ESuriname"),
+  TranslatedName(LangAbk(), name: "Суринам"),
+  TranslatedName(LangAfr(), name: "Suriname"),
+  TranslatedName(LangFry(), name: "Suriname"),
+  TranslatedName(LangGlg(), name: "Suriname"),
+  TranslatedName(LangHau(), name: "Suriname"),
+  TranslatedName(LangIna(), name: "Suriname"),
+  TranslatedName(LangInd(), name: "Suriname"),
+  TranslatedName(LangIbo(), name: "Suriname"),
+  TranslatedName(LangJav(), name: "Suriname"),
+  TranslatedName(LangKal(), name: "Suriname"),
+  TranslatedName(LangRun(), name: "Suriname"),
+  TranslatedName(LangSrd(), name: "Suriname"),
+  TranslatedName(LangSna(), name: "Suriname"),
+  TranslatedName(LangSwa(), name: "Suriname"),
+  TranslatedName(LangVie(), name: "Suriname"),
+  TranslatedName(LangZha(), name: "Suhlijnanz"),
 ];

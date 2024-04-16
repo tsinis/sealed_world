@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a United States Virgin Islands country:
+/// Provides 136 translations for a United States Virgin Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -66,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -85,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -379,4 +384,9 @@ const virCountryTranslations = [
   TranslatedName(LangSrd(), name: "Ìsulas Vèrgines de sos Istados Unidos"),
   TranslatedName(LangTgl(), name: "U.S. Virgin Islands"),
   TranslatedName(LangXho(), name: "E-U.S. Virgin Islands"),
+  TranslatedName(LangAbk(), name: "Виргинтәи ад-хақәа (ЕАШ)"),
+  TranslatedName(LangArg(), name: "Islas Virchens Norte-americanas"),
+  TranslatedName(LangIle(), name: "Insules Vírginas (USA)"),
+  TranslatedName(LangLat(), name: "Virginis Insulae Americanae"),
+  TranslatedName(LangOci(), name: "Illas Verges estatsunidencas"),
 ];

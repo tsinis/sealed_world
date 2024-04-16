@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Cape Verde country:
+/// Provides 141 translations for a Cape Verde country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -50,12 +52,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -75,7 +80,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
@@ -85,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -119,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -126,6 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const cpvCountryTranslations = [
   CountryName(
@@ -354,4 +364,15 @@ const cpvCountryTranslations = [
   TranslatedName(LangIna(), name: "Capo Verde"),
   TranslatedName(LangSrd(), name: "Cabu birde"),
   TranslatedName(LangXho(), name: "ECape Verde"),
+  TranslatedName(LangAbk(), name: "Кабо-Верде"),
+  TranslatedName(LangArg(), name: "Cabo Verde"),
+  TranslatedName(LangIle(), name: "Cap-Verdi"),
+  TranslatedName(LangIbo(), name: "Cape Verde"),
+  TranslatedName(LangKal(), name: "Cap Verde"),
+  TranslatedName(LangMsa(), name: "Cape Verde"),
+  TranslatedName(LangMlt(), name: "Cape Verde"),
+  TranslatedName(LangOci(), name: "Cap Verd"),
+  TranslatedName(LangSwa(), name: "Cape Verde"),
+  TranslatedName(LangVie(), name: "Cape Verde"),
+  TranslatedName(LangZha(), name: "Fozdwzgoz"),
 ];

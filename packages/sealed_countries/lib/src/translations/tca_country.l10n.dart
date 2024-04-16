@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Turks and Caicos Islands country:
+/// Provides 138 translations for a Turks and Caicos Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -70,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -89,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -382,4 +386,8 @@ const tcaCountryTranslations = [
   TranslatedName(LangSrd(), name: "Ìsulas Turks e Caicos"),
   TranslatedName(LangTgl(), name: "Turks & Caicos Islands"),
   TranslatedName(LangXho(), name: "ETurks & Caicos Islands"),
+  TranslatedName(LangAbk(), name: "ад-хақәа Тиоркси Каикоси"),
+  TranslatedName(LangIle(), name: "Turks e Caicos"),
+  TranslatedName(LangLat(), name: "Insulae Turcenses et Caicenses"),
+  TranslatedName(LangOci(), name: "Illas Turcas e Caïcas"),
 ];

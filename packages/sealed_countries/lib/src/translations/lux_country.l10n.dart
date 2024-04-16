@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Luxembourg country:
+/// Provides 155 translations for a Luxembourg country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -32,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -56,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -63,6 +66,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -84,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -96,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
+/// - Norwegian Nynorsk
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -111,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -135,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -143,6 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const luxCountryTranslations = [
   CountryName(
@@ -382,4 +391,14 @@ const luxCountryTranslations = [
   TranslatedName(LangVol(), name: "Luxämburgän"),
   TranslatedName(LangWln(), name: "Grande-Dutcheye do Lussimbork"),
   TranslatedName(LangXho(), name: "ELuxembourg"),
+  TranslatedName(LangAbk(), name: "Лиуксембург"),
+  TranslatedName(LangDan(), name: "Luxembourg"),
+  TranslatedName(LangIbo(), name: "Luxembourg"),
+  TranslatedName(LangKal(), name: "Luxembourg"),
+  TranslatedName(LangMsa(), name: "Luxembourg"),
+  TranslatedName(LangNno(), name: "Luxembourg"),
+  TranslatedName(LangSna(), name: "Luxembourg"),
+  TranslatedName(LangSwa(), name: "Luxembourg"),
+  TranslatedName(LangVie(), name: "Luxembourg"),
+  TranslatedName(LangZha(), name: "Luzswnhbauj"),
 ];

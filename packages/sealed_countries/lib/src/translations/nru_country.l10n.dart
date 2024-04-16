@@ -2,28 +2,34 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 92 translations for a Nauru country:
+/// Provides 131 translations for a Nauru country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -31,68 +37,101 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
 /// - Limburgish (Limburgan/Limburger)
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const nruCountryTranslations = [
   CountryName(
@@ -255,4 +294,43 @@ const nruCountryTranslations = [
   TranslatedName(LangVol(), name: "Naureän"),
   TranslatedName(LangChv(), name: "Науру"),
   TranslatedName(LangXho(), name: "ENauru"),
+  TranslatedName(LangAbk(), name: "Науру"),
+  TranslatedName(LangAfr(), name: "Nauru"),
+  TranslatedName(LangArg(), name: "Nauru"),
+  TranslatedName(LangBod(), name: "ནཽ་རུ།"),
+  TranslatedName(LangCat(), name: "Nauru"),
+  TranslatedName(LangDan(), name: "Nauru"),
+  TranslatedName(LangEus(), name: "Nauru"),
+  TranslatedName(LangFao(), name: "Nauru"),
+  TranslatedName(LangGlg(), name: "Nauru"),
+  TranslatedName(LangHau(), name: "Nauru"),
+  TranslatedName(LangIna(), name: "Nauru"),
+  TranslatedName(LangInd(), name: "Nauru"),
+  TranslatedName(LangIle(), name: "Nauru"),
+  TranslatedName(LangIbo(), name: "Nauru"),
+  TranslatedName(LangJav(), name: "Nauru"),
+  TranslatedName(LangKik(), name: "Nauru"),
+  TranslatedName(LangKal(), name: "Nauru"),
+  TranslatedName(LangLat(), name: "Nauru"),
+  TranslatedName(LangLtz(), name: "Nauru"),
+  TranslatedName(LangLin(), name: "Nauru"),
+  TranslatedName(LangLit(), name: "Nauru"),
+  TranslatedName(LangLav(), name: "Nauru"),
+  TranslatedName(LangMri(), name: "Nauru"),
+  TranslatedName(LangMsa(), name: "Nauru"),
+  TranslatedName(LangNor(), name: "Nauru"),
+  TranslatedName(LangOci(), name: "Nauru"),
+  TranslatedName(LangQue(), name: "Nauru"),
+  TranslatedName(LangRoh(), name: "Nauru"),
+  TranslatedName(LangRon(), name: "Nauru"),
+  TranslatedName(LangSrd(), name: "Nauru"),
+  TranslatedName(LangSme(), name: "Nauru"),
+  TranslatedName(LangSag(), name: "Nauru"),
+  TranslatedName(LangSlv(), name: "Nauru"),
+  TranslatedName(LangSna(), name: "Nauru"),
+  TranslatedName(LangSom(), name: "Nauru"),
+  TranslatedName(LangSwa(), name: "Nauru"),
+  TranslatedName(LangTuk(), name: "Nauru"),
+  TranslatedName(LangVie(), name: "Nauru"),
+  TranslatedName(LangZha(), name: "Naujluj"),
 ];

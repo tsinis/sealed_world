@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Kosovo country:
+/// Provides 140 translations for a Kosovo country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -27,7 +28,6 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chichewa (Chewa/Nyanja)
 /// - Chinese
-/// - Chuvash
 /// - Chuvash
 /// - Cornish
 /// - Croatian
@@ -85,8 +85,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Nepali
+/// - Northern Sami
 /// - Norwegian
 /// - Norwegian Nynorsk
 /// - Occitan
@@ -120,8 +122,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Thai
 /// - Tibetan Standard
 /// - Tigrinya
+/// - Tonga (Tonga Islands)
 /// - Tsonga
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -130,8 +134,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Xhosa
+/// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const unkCountryTranslations = [
   CountryName(
@@ -348,4 +355,14 @@ const unkCountryTranslations = [
   TranslatedName(LangDzo(), name: "ཀོ་སོ་ཝོ།"),
   TranslatedName(LangFul(), name: "Kowsowɔ"),
   TranslatedName(LangSnd(), name: "کوسوو"),
+  TranslatedName(LangAbk(), name: "Косово"),
+  TranslatedName(LangHau(), name: "Kasar Kosovo"),
+  TranslatedName(LangKas(), name: "کوسوو"),
+  TranslatedName(LangMri(), name: "Kōhoro"),
+  TranslatedName(LangSme(), name: "Kosovo"),
+  TranslatedName(LangTuk(), name: "Kosowo"),
+  TranslatedName(LangTon(), name: "Kōsovo"),
+  TranslatedName(LangWol(), name: "Kosowo"),
+  TranslatedName(LangYid(), name: "קאסאווא"),
+  TranslatedName(LangZha(), name: "Gohsozvo"),
 ];

@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Western Sahara country:
+/// Provides 121 translations for a Western Sahara country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -49,10 +51,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -61,7 +65,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -76,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -112,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Western Frisian
 /// - Xhosa
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const eshCountryTranslations = [
   CountryName(
@@ -319,4 +327,12 @@ const eshCountryTranslations = [
   TranslatedName(LangSrd(), name: "Sahara otzidentale"),
   TranslatedName(LangTgl(), name: "Kanlurang Sahara"),
   TranslatedName(LangXho(), name: "EWestern Sahara"),
+  TranslatedName(LangAbk(), name: "Мраҭашәаратәи Сахара"),
+  TranslatedName(LangArg(), name: "Sahara occidental"),
+  TranslatedName(LangIle(), name: "West-Sahara"),
+  TranslatedName(LangKal(), name: "Sahara Killiit"),
+  TranslatedName(LangLat(), name: "Sahara Occidentalis"),
+  TranslatedName(LangLin(), name: "Sahara ya Limbɛ"),
+  TranslatedName(LangOci(), name: "Saharà occidental"),
+  TranslatedName(LangZha(), name: "Sih Sahhahlah"),
 ];

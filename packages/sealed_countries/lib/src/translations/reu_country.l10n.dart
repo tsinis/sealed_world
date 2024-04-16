@@ -2,12 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Réunion country:
+/// Provides 133 translations for a Réunion country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -25,12 +29,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -44,10 +50,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -57,28 +69,37 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -100,7 +121,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
@@ -261,4 +284,27 @@ const reuCountryTranslations = [
   TranslatedName(LangMri(), name: "Reūnio"),
   TranslatedName(LangSrd(), name: "Riunione"),
   TranslatedName(LangXho(), name: "ERéunion"),
+  TranslatedName(LangAbk(), name: "Реиунон"),
+  TranslatedName(LangAfr(), name: "Réunion"),
+  TranslatedName(LangArg(), name: "Isla d’a Reunión"),
+  TranslatedName(LangDan(), name: "Réunion"),
+  TranslatedName(LangFao(), name: "Réunion"),
+  TranslatedName(LangFry(), name: "Réunion"),
+  TranslatedName(LangGla(), name: "Réunion"),
+  TranslatedName(LangInd(), name: "Réunion"),
+  TranslatedName(LangIle(), name: "Reunion"),
+  TranslatedName(LangIbo(), name: "Réunion"),
+  TranslatedName(LangIsl(), name: "Réunion"),
+  TranslatedName(LangJav(), name: "Réunion"),
+  TranslatedName(LangKal(), name: "Réunion"),
+  TranslatedName(LangLat(), name: "Reunio"),
+  TranslatedName(LangLtz(), name: "Réunion"),
+  TranslatedName(LangMlt(), name: "Réunion"),
+  TranslatedName(LangNor(), name: "Réunion"),
+  TranslatedName(LangOci(), name: "Reünion"),
+  TranslatedName(LangRoh(), name: "Réunion"),
+  TranslatedName(LangRon(), name: "Réunion"),
+  TranslatedName(LangSme(), name: "Réunion"),
+  TranslatedName(LangSna(), name: "Réunion"),
+  TranslatedName(LangVie(), name: "Réunion"),
 ];

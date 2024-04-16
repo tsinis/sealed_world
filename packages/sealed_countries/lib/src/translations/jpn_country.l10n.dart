@@ -2,11 +2,12 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Japan country:
+/// Provides 159 translations for a Japan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -31,8 +32,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -40,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -55,10 +59,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
 /// - Ido
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
@@ -82,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
 /// - Malay
@@ -95,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
 /// - Nuosu
 /// - Occitan
 /// - Oriya
@@ -113,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -143,6 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
@@ -299,4 +309,14 @@ const jpnCountryTranslations = [
   TranslatedName(LangVol(), name: "Yapän"),
   TranslatedName(LangZha(), name: "Nditbonj"),
   TranslatedName(LangXho(), name: "EJapan"),
+  TranslatedName(LangAfr(), name: "Japan"),
+  TranslatedName(LangCos(), name: "Giappone"),
+  TranslatedName(LangDan(), name: "Japan"),
+  TranslatedName(LangFao(), name: "Japan"),
+  TranslatedName(LangFry(), name: "Japan"),
+  TranslatedName(LangIle(), name: "Japan"),
+  TranslatedName(LangIsl(), name: "Japan"),
+  TranslatedName(LangLtz(), name: "Japan"),
+  TranslatedName(LangNor(), name: "Japan"),
+  TranslatedName(LangSna(), name: "Japan"),
 ];

@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Ireland country:
+/// Provides 156 translations for a Ireland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -59,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -88,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -115,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -139,6 +143,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -373,4 +378,9 @@ const irlCountryTranslations = [
   TranslatedName(LangWln(), name: "Irlande"),
   TranslatedName(LangZha(), name: "Aiwjlanz Gunghozgoz"),
   TranslatedName(LangXho(), name: "E-Ireland"),
+  TranslatedName(LangAbk(), name: "Ирландиа"),
+  TranslatedName(LangIbo(), name: "Ireland"),
+  TranslatedName(LangMsa(), name: "Ireland"),
+  TranslatedName(LangSna(), name: "Ireland"),
+  TranslatedName(LangVie(), name: "Ireland"),
 ];

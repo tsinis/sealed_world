@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Niger country:
+/// Provides 145 translations for a Niger country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -15,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -28,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -35,6 +39,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -51,10 +56,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,11 +77,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -79,6 +93,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -87,14 +103,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
@@ -110,16 +130,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const nerCountryTranslations = [
   CountryName(
@@ -318,4 +342,29 @@ const nerCountryTranslations = [
   TranslatedName(LangVol(), name: "Nigerän"),
   TranslatedName(LangChv(), name: "Нигер"),
   TranslatedName(LangXho(), name: "ENiger"),
+  TranslatedName(LangAbk(), name: "Нигер"),
+  TranslatedName(LangAfr(), name: "Niger"),
+  TranslatedName(LangDan(), name: "Niger"),
+  TranslatedName(LangEus(), name: "Niger"),
+  TranslatedName(LangFao(), name: "Niger"),
+  TranslatedName(LangFry(), name: "Niger"),
+  TranslatedName(LangIna(), name: "Niger"),
+  TranslatedName(LangInd(), name: "Niger"),
+  TranslatedName(LangIle(), name: "Niger"),
+  TranslatedName(LangIbo(), name: "Niger"),
+  TranslatedName(LangKal(), name: "Niger"),
+  TranslatedName(LangLat(), name: "Res publica Nigritana"),
+  TranslatedName(LangLtz(), name: "Niger"),
+  TranslatedName(LangMlg(), name: "Niger"),
+  TranslatedName(LangMsa(), name: "Niger"),
+  TranslatedName(LangNor(), name: "Niger"),
+  TranslatedName(LangRoh(), name: "Niger"),
+  TranslatedName(LangRon(), name: "Niger"),
+  TranslatedName(LangSme(), name: "Niger"),
+  TranslatedName(LangSlv(), name: "Niger"),
+  TranslatedName(LangSna(), name: "Niger"),
+  TranslatedName(LangSwa(), name: "Niger"),
+  TranslatedName(LangTuk(), name: "Niger"),
+  TranslatedName(LangVie(), name: "Niger"),
+  TranslatedName(LangZha(), name: "Nizyizwj"),
 ];

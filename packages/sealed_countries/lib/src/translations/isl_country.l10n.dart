@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 153 translations for a Iceland country:
+/// Provides 159 translations for a Iceland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -58,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -88,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -117,6 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -142,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -150,6 +155,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const islCountryTranslations = [
   CountryName(language: LangEng(), official: "Iceland", common: "Iceland"),
@@ -321,4 +327,10 @@ const islCountryTranslations = [
   TranslatedName(LangVol(), name: "Lisladeän"),
   TranslatedName(LangWln(), name: "Izlande"),
   TranslatedName(LangXho(), name: "E-Iceland"),
+  TranslatedName(LangAbk(), name: "Исландиа"),
+  TranslatedName(LangIbo(), name: "Iceland"),
+  TranslatedName(LangMsa(), name: "Iceland"),
+  TranslatedName(LangSna(), name: "Iceland"),
+  TranslatedName(LangVie(), name: "Iceland"),
+  TranslatedName(LangZha(), name: "Binghdauj"),
 ];

@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a British Indian Ocean Territory country:
+/// Provides 136 translations for a British Indian Ocean Territory country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -51,8 +52,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -84,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -96,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -407,4 +412,12 @@ const iotCountryTranslations = [
   TranslatedName(LangTgl(), name: "Teritoryo sa Karagatan ng British Indian"),
   TranslatedName(LangXho(), name: "EBritish Indian Ocean Territory"),
   TranslatedName(LangChv(), name: "Англисен Инди океанĕн территорийĕ"),
+  TranslatedName(
+    LangAbk(),
+    name: "Британиатәи аҵакырадгьыл Индиатәи аокеан аҟны",
+  ),
+  TranslatedName(LangIle(), name: "Chagos (BTIO)"),
+  TranslatedName(LangIbo(), name: "British Indian Ocean Territory"),
+  TranslatedName(LangOci(), name: "Territòri Britanic de l’Ocean Indian"),
+  TranslatedName(LangSna(), name: "British Indian Ocean Territory"),
 ];

@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Jordan country:
+/// Provides 150 translations for a Jordan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -29,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -36,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -46,11 +49,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Greek (modern)
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -58,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -79,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -90,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -105,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -130,6 +139,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -137,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const jorCountryTranslations = [
   CountryName(
@@ -365,4 +376,16 @@ const jorCountryTranslations = [
   TranslatedName(LangYid(), name: "יארדאניע"),
   TranslatedName(LangSrd(), name: "Giordània"),
   TranslatedName(LangXho(), name: "EJordan"),
+  TranslatedName(LangAbk(), name: "Иорданиа"),
+  TranslatedName(LangDan(), name: "Jordan"),
+  TranslatedName(LangFao(), name: "Jordan"),
+  TranslatedName(LangHau(), name: "Jordan"),
+  TranslatedName(LangIbo(), name: "Jordan"),
+  TranslatedName(LangKal(), name: "Jordani"),
+  TranslatedName(LangMsa(), name: "Jordan"),
+  TranslatedName(LangNor(), name: "Jordan"),
+  TranslatedName(LangSna(), name: "Jordan"),
+  TranslatedName(LangSwa(), name: "Jordan"),
+  TranslatedName(LangVie(), name: "Jordan"),
+  TranslatedName(LangZha(), name: "Yozdan"),
 ];

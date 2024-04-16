@@ -2,29 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 111 translations for a Laos country:
+/// Provides 141 translations for a Laos country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -32,9 +38,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -44,8 +52,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -62,8 +78,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -73,6 +91,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -80,13 +101,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swati
@@ -100,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -107,6 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
@@ -321,4 +350,34 @@ const laoCountryTranslations = [
   TranslatedName(LangVol(), name: "Laosän"),
   TranslatedName(LangZha(), name: "Lao"),
   TranslatedName(LangXho(), name: "ELaos"),
+  TranslatedName(LangAbk(), name: "Лаос"),
+  TranslatedName(LangAfr(), name: "Laos"),
+  TranslatedName(LangArg(), name: "Laos"),
+  TranslatedName(LangCat(), name: "Laos"),
+  TranslatedName(LangDan(), name: "Laos"),
+  TranslatedName(LangEus(), name: "Laos"),
+  TranslatedName(LangFao(), name: "Laos"),
+  TranslatedName(LangFry(), name: "Laos"),
+  TranslatedName(LangGle(), name: "Laos"),
+  TranslatedName(LangGlg(), name: "Laos"),
+  TranslatedName(LangIna(), name: "Laos"),
+  TranslatedName(LangInd(), name: "Laos"),
+  TranslatedName(LangIle(), name: "Laos"),
+  TranslatedName(LangIbo(), name: "Laos"),
+  TranslatedName(LangIsl(), name: "Laos"),
+  TranslatedName(LangJav(), name: "Laos"),
+  TranslatedName(LangKal(), name: "Laos"),
+  TranslatedName(LangLtz(), name: "Laos"),
+  TranslatedName(LangMsa(), name: "Laos"),
+  TranslatedName(LangNor(), name: "Laos"),
+  TranslatedName(LangOci(), name: "Laos"),
+  TranslatedName(LangRoh(), name: "Laos"),
+  TranslatedName(LangRon(), name: "Laos"),
+  TranslatedName(LangSrd(), name: "Laos"),
+  TranslatedName(LangSme(), name: "Laos"),
+  TranslatedName(LangSlv(), name: "Laos"),
+  TranslatedName(LangSna(), name: "Laos"),
+  TranslatedName(LangSom(), name: "Laos"),
+  TranslatedName(LangSwa(), name: "Laos"),
+  TranslatedName(LangTuk(), name: "Laos"),
 ];

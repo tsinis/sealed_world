@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Eswatini country:
+/// Provides 157 translations for a Eswatini country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -96,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
 /// - Norwegian Nynorsk
 /// - Occitan
 /// - Oriya
@@ -121,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Sundanese
 /// - Swahili
+/// - Swati
 /// - Swedish
 /// - Tagalog
 /// - Tajik
@@ -147,6 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const swzCountryTranslations = [
   CountryName(
@@ -392,4 +397,10 @@ const swzCountryTranslations = [
   TranslatedName(LangVol(), name: "Svasiyän"),
   TranslatedName(LangChv(), name: "Эсватини"),
   TranslatedName(LangXho(), name: "ESwatini"),
+  TranslatedName(LangAbk(), name: "Есватини"),
+  TranslatedName(LangHau(), name: "Eswatini"),
+  TranslatedName(LangIbo(), name: "Eswatini"),
+  TranslatedName(LangNor(), name: "Eswatini"),
+  TranslatedName(LangSsw(), name: "eSwatini"),
+  TranslatedName(LangZha(), name: "Swhveihswlanz"),
 ];
