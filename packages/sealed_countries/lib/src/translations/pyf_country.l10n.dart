@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a French Polynesia country:
+/// Provides 137 translations for a French Polynesia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -111,6 +111,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -373,4 +374,5 @@ const pyfCountryTranslations = [
   TranslatedName(LangLat(), name: "Polynesia Francica"),
   TranslatedName(LangOci(), name: "Polinesia francesa"),
   TranslatedName(LangSna(), name: "French Polynesia"),
+  TranslatedName(LangTgl(), name: "French Polynesia"),
 ];

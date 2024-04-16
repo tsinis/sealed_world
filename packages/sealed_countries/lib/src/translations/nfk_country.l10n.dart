@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 133 translations for a Norfolk Island country:
+/// Provides 134 translations for a Norfolk Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -110,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -357,4 +358,5 @@ const nfkCountryTranslations = [
   TranslatedName(LangIle(), name: "Insul Norfolk"),
   TranslatedName(LangLat(), name: "Insula Norfolcia"),
   TranslatedName(LangOci(), name: "Illas Norfòlk"),
+  TranslatedName(LangTgl(), name: "Norfolk Island"),
 ];

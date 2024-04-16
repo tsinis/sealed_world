@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a American Samoa country:
+/// Provides 136 translations for a American Samoa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -111,6 +111,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -363,4 +364,5 @@ const asmCountryTranslations = [
   TranslatedName(LangIbo(), name: "American Samoa"),
   TranslatedName(LangLat(), name: "Samoa Americana"),
   TranslatedName(LangOci(), name: "Samoa americana"),
+  TranslatedName(LangTgl(), name: "Amerikanong Samoa"),
 ];

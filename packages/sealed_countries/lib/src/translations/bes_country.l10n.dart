@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Caribbean Netherlands country:
+/// Provides 117 translations for a Caribbean Netherlands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -333,4 +334,5 @@ const besCountryTranslations = [
   TranslatedName(LangIbo(), name: "Caribbean Netherlands"),
   TranslatedName(LangOci(), name: "Païses Basses caribèus"),
   TranslatedName(LangSme(), name: "Vuolleeatnamat Karibe"),
+  TranslatedName(LangTgl(), name: "Netherland Antilles sa Caribbean"),
 ];

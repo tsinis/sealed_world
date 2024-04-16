@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Réunion country:
+/// Provides 135 translations for a Réunion country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -109,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -309,4 +310,5 @@ const reuCountryTranslations = [
   TranslatedName(LangSna(), name: "Réunion"),
   TranslatedName(LangVie(), name: "Réunion"),
   TranslatedName(LangNob(), name: "Réunion"),
+  TranslatedName(LangTgl(), name: "Réunion"),
 ];

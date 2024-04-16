@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a French Guiana country:
+/// Provides 138 translations for a French Guiana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -112,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -347,4 +348,5 @@ const gufCountryTranslations = [
   TranslatedName(LangLat(), name: "Guiana Francica"),
   TranslatedName(LangOci(), name: "Guiana francesa"),
   TranslatedName(LangSna(), name: "French Guiana"),
+  TranslatedName(LangTgl(), name: "French Guiana"),
 ];

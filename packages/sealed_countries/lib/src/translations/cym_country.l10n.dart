@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 139 translations for a Cayman Islands country:
+/// Provides 140 translations for a Cayman Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -113,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -367,4 +368,5 @@ const cymCountryTranslations = [
   TranslatedName(LangLat(), name: "Insulae Caimanenses"),
   TranslatedName(LangOci(), name: "Islas Caiman"),
   TranslatedName(LangSom(), name: "Cayman Islands"),
+  TranslatedName(LangTgl(), name: "Cayman Islands"),
 ];

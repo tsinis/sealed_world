@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Bouvet Island country:
+/// Provides 123 translations for a Bouvet Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -102,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -325,4 +326,5 @@ const bvtCountryTranslations = [
   TranslatedName(LangLat(), name: "Insula Bouvet"),
   TranslatedName(LangLin(), name: "Esanga Buvé"),
   TranslatedName(LangOci(), name: "Isla Bouvet"),
+  TranslatedName(LangTgl(), name: "Pulo ng Bouvet"),
 ];

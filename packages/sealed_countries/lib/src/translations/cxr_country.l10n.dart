@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Christmas Island country:
+/// Provides 128 translations for a Christmas Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -102,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -338,4 +339,5 @@ const cxrCountryTranslations = [
   TranslatedName(LangLat(), name: "Insula Christi Natalis"),
   TranslatedName(LangLin(), name: "Esanga ya Mbótama"),
   TranslatedName(LangOci(), name: "Illa Christmas"),
+  TranslatedName(LangTgl(), name: "Christmas Island"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a British Virgin Islands country:
+/// Provides 135 translations for a British Virgin Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -110,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -392,4 +393,5 @@ const vgbCountryTranslations = [
   TranslatedName(LangArg(), name: "Islas Virchens Britanicas"),
   TranslatedName(LangIle(), name: "Insules Vírginas (UR)"),
   TranslatedName(LangOci(), name: "Illas Verges britanicas"),
+  TranslatedName(LangTgl(), name: "British Virgin Islands"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Tokelau country:
+/// Provides 127 translations for a Tokelau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -108,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -275,4 +276,5 @@ const tklCountryTranslations = [
   TranslatedName(LangTon(), name: "Tokelau"),
   TranslatedName(LangVie(), name: "Tokelau"),
   TranslatedName(LangNob(), name: "Tokelau"),
+  TranslatedName(LangTgl(), name: "Tokelau"),
 ];

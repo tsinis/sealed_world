@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Åland Islands country:
+/// Provides 125 translations for a Åland Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -102,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -315,4 +316,5 @@ const alaCountryTranslations = [
   TranslatedName(LangLat(), name: "Alandia"),
   TranslatedName(LangLin(), name: "Bisanga Ɛland"),
   TranslatedName(LangOci(), name: "llas Åland"),
+  TranslatedName(LangTgl(), name: "Åland Islands"),
 ];

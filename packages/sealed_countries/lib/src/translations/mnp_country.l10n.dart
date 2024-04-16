@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 132 translations for a Northern Mariana Islands country:
+/// Provides 133 translations for a Northern Mariana Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -109,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -374,4 +375,5 @@ const mnpCountryTranslations = [
   TranslatedName(LangIle(), name: "Insules Nord Mariana"),
   TranslatedName(LangLat(), name: "Insulae Marianae Septentrionales"),
   TranslatedName(LangOci(), name: "Illas Mariannas del Nòrd"),
+  TranslatedName(LangTgl(), name: "Northern Mariana Islands"),
 ];

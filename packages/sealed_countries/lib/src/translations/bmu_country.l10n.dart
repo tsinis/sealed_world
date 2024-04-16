@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Bermuda country:
+/// Provides 135 translations for a Bermuda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -110,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -276,4 +277,5 @@ const bmuCountryTranslations = [
   TranslatedName(LangVie(), name: "Bermuda"),
   TranslatedName(LangZha(), name: "Bwzmuda"),
   TranslatedName(LangNob(), name: "Bermuda"),
+  TranslatedName(LangTgl(), name: "Bermuda"),
 ];

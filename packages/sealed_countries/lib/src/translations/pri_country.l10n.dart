@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Puerto Rico country:
+/// Provides 137 translations for a Puerto Rico country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -110,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -361,4 +362,5 @@ const priCountryTranslations = [
   TranslatedName(LangVie(), name: "Puerto Rico"),
   TranslatedName(LangZha(), name: "Bohdohlizgoz"),
   TranslatedName(LangNob(), name: "Puerto Rico"),
+  TranslatedName(LangTgl(), name: "Puerto Rico"),
 ];
