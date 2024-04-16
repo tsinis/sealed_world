@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a United States Minor Outlying Islands country:
+/// Provides 125 translations for a United States Minor Outlying Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -79,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -381,6 +382,7 @@ const umiCountryTranslations = [
   TranslatedName(LangAbk(), name: "Нҭыҵтәи малыетәи ад-қәа (ЕАШ)"),
   TranslatedName(LangArg(), name: "Islas perifericas d’os EUA"),
   TranslatedName(LangIle(), name: "Insules periferic de USA"),
+  TranslatedName(LangOci(), name: "Isole Minori Outlying di i Stati Uniti"),
   TranslatedName(
     LangLin(),
     name: "Bisanga Mokɛ́na Mosíká bya Lisangá lya Ameríka",

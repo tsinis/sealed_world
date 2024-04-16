@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 140 translations for a Kosovo country:
+/// Provides 141 translations for a Kosovo country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -38,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - English
 /// - Esperanto
 /// - Estonian
+/// - Ewe
 /// - Faroese
 /// - Finnish
 /// - French
@@ -365,4 +366,5 @@ const unkCountryTranslations = [
   TranslatedName(LangWol(), name: "Kosowo"),
   TranslatedName(LangYid(), name: "קאסאווא"),
   TranslatedName(LangZha(), name: "Gohsozvo"),
+  TranslatedName(LangEwe(), name: "Kosovo"),
 ];
