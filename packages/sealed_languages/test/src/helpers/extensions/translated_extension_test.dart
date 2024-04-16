@@ -133,6 +133,11 @@ void main() => group("TranslatedExtension", () {
 
         expect(sortedLanguages, kSealedLanguagesSupportedLanguages);
 
+        expect(
+          sortedLanguages,
+          containsAll(kMaterialSupportedLanguagesSealed),
+        );
+
         for (final language in NaturalLanguage.list) {
           for (final l10n in kSealedLanguagesSupportedLanguages) {
             if (l10n == const LangEng()) continue;

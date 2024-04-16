@@ -1318,6 +1318,11 @@ void main() => group("$WorldCountry", () {
           final sortedLanguages = sortedMap.keys.toList(growable: false)
             ..sort((a, b) => a.code.compareTo(b.code));
 
+          expect(
+            sortedLanguages,
+            containsAll(kMaterialSupportedLanguagesSealed),
+          );
+
           expect(sortedLanguages, kSealedCountriesSupportedLanguages);
 
           for (final country in WorldCountry.list) {
