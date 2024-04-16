@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Benin country:
+/// Provides 147 translations for a Benin country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -122,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -360,4 +362,6 @@ const benCountryTranslations = [
   TranslatedName(LangSwa(), name: "Benin"),
   TranslatedName(LangTuk(), name: "Benin"),
   TranslatedName(LangZha(), name: "Beiningz"),
+  TranslatedName(LangNob(), name: "Benin"),
+  TranslatedName(LangTgl(), name: "Benin"),
 ];

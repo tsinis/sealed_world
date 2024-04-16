@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Bangladesh country:
+/// Provides 138 translations for a Bangladesh country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -89,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -111,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -359,4 +361,6 @@ const bgdCountryTranslations = [
   TranslatedName(LangSqi(), name: "Bangladesh"),
   TranslatedName(LangVie(), name: "Bangladesh"),
   TranslatedName(LangZha(), name: "Munggyahlahgoz"),
+  TranslatedName(LangNob(), name: "Bangladesh"),
+  TranslatedName(LangTgl(), name: "Bangladesh"),
 ];

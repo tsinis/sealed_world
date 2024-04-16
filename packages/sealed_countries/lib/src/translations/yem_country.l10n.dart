@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Yemen country:
+/// Provides 150 translations for a Yemen country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -124,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -374,4 +375,5 @@ const yemCountryTranslations = [
   TranslatedName(LangSna(), name: "Yemen"),
   TranslatedName(LangVie(), name: "Yemen"),
   TranslatedName(LangZha(), name: "Yejmwnz"),
+  TranslatedName(LangTgl(), name: "Yemen"),
 ];

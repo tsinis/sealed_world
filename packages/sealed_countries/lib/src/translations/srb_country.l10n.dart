@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Serbia country:
+/// Provides 145 translations for a Serbia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -377,4 +378,5 @@ const srbCountryTranslations = [
   TranslatedName(LangSwa(), name: "Serbia"),
   TranslatedName(LangVie(), name: "Serbia"),
   TranslatedName(LangZha(), name: "Saiwjveizya"),
+  TranslatedName(LangNob(), name: "Serbia"),
 ];

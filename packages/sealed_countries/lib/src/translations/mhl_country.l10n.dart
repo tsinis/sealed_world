@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Marshall Islands country:
+/// Provides 137 translations for a Marshall Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -111,6 +111,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -367,4 +368,5 @@ const mhlCountryTranslations = [
   TranslatedName(LangArg(), name: "Islas Marshall"),
   TranslatedName(LangBod(), name: "མཱར་ཤལ་གླིང་ཕྲེན།"),
   TranslatedName(LangIle(), name: "Insules Marshall"),
+  TranslatedName(LangTgl(), name: "Kapuluang Marshall"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 152 translations for a Uruguay country:
+/// Provides 153 translations for a Uruguay country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -397,4 +398,5 @@ const uryCountryTranslations = [
   TranslatedName(LangSwa(), name: "Uruguay"),
   TranslatedName(LangVie(), name: "Uruguay"),
   TranslatedName(LangZha(), name: "Vuhlahgveih"),
+  TranslatedName(LangNob(), name: "Uruguay"),
 ];

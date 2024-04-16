@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 133 translations for a Niue country:
+/// Provides 134 translations for a Niue country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -89,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -268,4 +269,5 @@ const niuCountryTranslations = [
   TranslatedName(LangTuk(), name: "Niue"),
   TranslatedName(LangVie(), name: "Niue"),
   TranslatedName(LangZha(), name: "Niujaih"),
+  TranslatedName(LangNob(), name: "Niue"),
 ];

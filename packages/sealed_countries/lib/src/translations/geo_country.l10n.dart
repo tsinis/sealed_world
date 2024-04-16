@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Georgia country:
+/// Provides 152 translations for a Georgia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -309,4 +310,5 @@ const geoCountryTranslations = [
   TranslatedName(LangSme(), name: "Georgia"),
   TranslatedName(LangSna(), name: "Georgia"),
   TranslatedName(LangZha(), name: "Gwzlujgizya"),
+  TranslatedName(LangNob(), name: "Georgia"),
 ];

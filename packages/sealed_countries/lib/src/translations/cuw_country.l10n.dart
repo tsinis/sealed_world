@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Curaçao country:
+/// Provides 122 translations for a Curaçao country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -78,6 +78,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -277,4 +278,5 @@ const cuwCountryTranslations = [
   TranslatedName(LangSlv(), name: "Curaçao"),
   TranslatedName(LangVie(), name: "Curaçao"),
   TranslatedName(LangYor(), name: "Curaçao"),
+  TranslatedName(LangNob(), name: "Curaçao"),
 ];

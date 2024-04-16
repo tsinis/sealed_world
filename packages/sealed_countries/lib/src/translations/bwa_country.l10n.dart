@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a Botswana country:
+/// Provides 150 translations for a Botswana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -387,4 +389,6 @@ const bwaCountryTranslations = [
   TranslatedName(LangTuk(), name: "Botswana"),
   TranslatedName(LangWol(), name: "Botswana"),
   TranslatedName(LangZha(), name: "Bozswvajnaz"),
+  TranslatedName(LangNob(), name: "Botswana"),
+  TranslatedName(LangTgl(), name: "Botswana"),
 ];

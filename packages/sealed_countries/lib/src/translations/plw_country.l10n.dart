@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Palau country:
+/// Provides 130 translations for a Palau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -84,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -106,6 +107,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -326,4 +328,6 @@ const plwCountryTranslations = [
   TranslatedName(LangTon(), name: "Palau"),
   TranslatedName(LangVie(), name: "Palau"),
   TranslatedName(LangZha(), name: "Bwzlauh"),
+  TranslatedName(LangNob(), name: "Palau"),
+  TranslatedName(LangTgl(), name: "Palaw"),
 ];

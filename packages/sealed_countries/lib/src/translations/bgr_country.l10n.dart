@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 159 translations for a Bulgaria country:
+/// Provides 160 translations for a Bulgaria country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -104,6 +104,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -410,4 +411,5 @@ const bgrCountryTranslations = [
   TranslatedName(LangSwa(), name: "Bulgaria"),
   TranslatedName(LangVie(), name: "Bulgaria"),
   TranslatedName(LangZha(), name: "Baujgyahliya"),
+  TranslatedName(LangNob(), name: "Bulgaria"),
 ];

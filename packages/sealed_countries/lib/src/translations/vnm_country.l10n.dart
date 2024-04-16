@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Vietnam country:
+/// Provides 151 translations for a Vietnam country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -96,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -123,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -390,4 +392,6 @@ const vnmCountryTranslations = [
   TranslatedName(LangSme(), name: "Vietnam"),
   TranslatedName(LangSlv(), name: "Vietnam"),
   TranslatedName(LangSna(), name: "Vietnam"),
+  TranslatedName(LangNob(), name: "Vietnam"),
+  TranslatedName(LangTgl(), name: "Vietnam"),
 ];

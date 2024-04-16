@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Eritrea country:
+/// Provides 149 translations for a Eritrea country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -356,4 +358,6 @@ const eriCountryTranslations = [
   TranslatedName(LangSna(), name: "Eritrea"),
   TranslatedName(LangSwa(), name: "Eritrea"),
   TranslatedName(LangVie(), name: "Eritrea"),
+  TranslatedName(LangNob(), name: "Eritrea"),
+  TranslatedName(LangTgl(), name: "Eritrea"),
 ];

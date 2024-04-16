@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Nigeria country:
+/// Provides 150 translations for a Nigeria country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -96,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -385,4 +386,5 @@ const ngaCountryTranslations = [
   TranslatedName(LangSna(), name: "Nigeria"),
   TranslatedName(LangSwa(), name: "Nigeria"),
   TranslatedName(LangVie(), name: "Nigeria"),
+  TranslatedName(LangNob(), name: "Nigeria"),
 ];

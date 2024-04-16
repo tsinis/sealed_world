@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 152 translations for a Slovenia country:
+/// Provides 153 translations for a Slovenia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -100,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -396,4 +397,5 @@ const svnCountryTranslations = [
   TranslatedName(LangSwa(), name: "Slovenia"),
   TranslatedName(LangVie(), name: "Slovenia"),
   TranslatedName(LangZha(), name: "Swhlozvwnznizya"),
+  TranslatedName(LangNob(), name: "Slovenia"),
 ];

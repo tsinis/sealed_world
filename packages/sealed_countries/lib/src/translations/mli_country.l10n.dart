@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Mali country:
+/// Provides 137 translations for a Mali country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -88,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -113,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -309,4 +311,6 @@ const mliCountryTranslations = [
   TranslatedName(LangVie(), name: "Mali"),
   TranslatedName(LangWol(), name: "Mali"),
   TranslatedName(LangZha(), name: "Majlij"),
+  TranslatedName(LangNob(), name: "Mali"),
+  TranslatedName(LangTgl(), name: "Mali"),
 ];

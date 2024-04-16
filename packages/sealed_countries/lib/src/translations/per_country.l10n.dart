@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Peru country:
+/// Provides 147 translations for a Peru country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -97,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -123,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -333,4 +335,6 @@ const perCountryTranslations = [
   TranslatedName(LangVie(), name: "Peru"),
   TranslatedName(LangWol(), name: "Peru"),
   TranslatedName(LangZha(), name: "Biluj"),
+  TranslatedName(LangNob(), name: "Peru"),
+  TranslatedName(LangTgl(), name: "Peru"),
 ];

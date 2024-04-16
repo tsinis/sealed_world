@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Oman country:
+/// Provides 146 translations for a Oman country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -337,4 +339,6 @@ const omnCountryTranslations = [
   TranslatedName(LangTuk(), name: "Oman"),
   TranslatedName(LangVie(), name: "Oman"),
   TranslatedName(LangZha(), name: "Ahman"),
+  TranslatedName(LangNob(), name: "Oman"),
+  TranslatedName(LangTgl(), name: "Oman"),
 ];

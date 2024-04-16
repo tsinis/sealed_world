@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Jersey country:
+/// Provides 125 translations for a Jersey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -82,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -298,4 +299,5 @@ const jeyCountryTranslations = [
   TranslatedName(LangSwa(), name: "Jersey"),
   TranslatedName(LangVie(), name: "Jersey"),
   TranslatedName(LangYor(), name: "Jersey"),
+  TranslatedName(LangNob(), name: "Jersey"),
 ];

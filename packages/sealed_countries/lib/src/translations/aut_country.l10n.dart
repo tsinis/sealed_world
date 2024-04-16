@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 161 translations for a Austria country:
+/// Provides 162 translations for a Austria country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -134,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -405,4 +406,5 @@ const autCountryTranslations = [
   TranslatedName(LangRon(), name: "Austria"),
   TranslatedName(LangSna(), name: "Austria"),
   TranslatedName(LangSwa(), name: "Austria"),
+  TranslatedName(LangTgl(), name: "Austria"),
 ];

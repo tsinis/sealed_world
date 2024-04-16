@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 159 translations for a Japan country:
+/// Provides 160 translations for a Japan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -103,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Nuosu
 /// - Occitan
 /// - Oriya
@@ -319,4 +320,5 @@ const jpnCountryTranslations = [
   TranslatedName(LangLtz(), name: "Japan"),
   TranslatedName(LangNor(), name: "Japan"),
   TranslatedName(LangSna(), name: "Japan"),
+  TranslatedName(LangNob(), name: "Japan"),
 ];

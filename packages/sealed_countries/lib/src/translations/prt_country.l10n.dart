@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Portugal country:
+/// Provides 152 translations for a Portugal country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -100,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -125,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tahitian
 /// - Tajik
 /// - Tamil
@@ -389,4 +391,6 @@ const prtCountryTranslations = [
   TranslatedName(LangRoh(), name: "Portugal"),
   TranslatedName(LangSna(), name: "Portugal"),
   TranslatedName(LangZha(), name: "Buzdauzyaz"),
+  TranslatedName(LangNob(), name: "Portugal"),
+  TranslatedName(LangTgl(), name: "Portugal"),
 ];

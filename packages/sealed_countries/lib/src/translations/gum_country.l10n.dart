@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 129 translations for a Guam country:
+/// Provides 130 translations for a Guam country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -85,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -263,4 +264,5 @@ const gumCountryTranslations = [
   TranslatedName(LangTuk(), name: "Guam"),
   TranslatedName(LangVie(), name: "Guam"),
   TranslatedName(LangZha(), name: "Gvanhdauj"),
+  TranslatedName(LangNob(), name: "Guam"),
 ];

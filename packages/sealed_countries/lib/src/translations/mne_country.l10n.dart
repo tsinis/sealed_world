@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a Montenegro country:
+/// Provides 139 translations for a Montenegro country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -88,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -111,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -353,4 +355,6 @@ const mneCountryTranslations = [
   TranslatedName(LangSwa(), name: "Montenegro"),
   TranslatedName(LangVie(), name: "Montenegro"),
   TranslatedName(LangZha(), name: "Hwzsanh"),
+  TranslatedName(LangNob(), name: "Montenegro"),
+  TranslatedName(LangTgl(), name: "Montenegro"),
 ];

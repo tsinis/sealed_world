@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 133 translations for a Mayotte country:
+/// Provides 134 translations for a Mayotte country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -86,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -319,4 +320,5 @@ const mytCountryTranslations = [
   TranslatedName(LangSom(), name: "Mayotte"),
   TranslatedName(LangSwa(), name: "Mayotte"),
   TranslatedName(LangVie(), name: "Mayotte"),
+  TranslatedName(LangNob(), name: "Mayotte"),
 ];

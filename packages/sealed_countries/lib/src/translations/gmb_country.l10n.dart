@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Gambia country:
+/// Provides 148 translations for a Gambia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -382,4 +383,5 @@ const gmbCountryTranslations = [
   TranslatedName(LangSwa(), name: "Gambia"),
   TranslatedName(LangVie(), name: "Gambia"),
   TranslatedName(LangZha(), name: "Ganghbijya"),
+  TranslatedName(LangNob(), name: "Gambia"),
 ];

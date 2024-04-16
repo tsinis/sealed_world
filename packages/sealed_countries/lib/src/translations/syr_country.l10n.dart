@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 155 translations for a Syria country:
+/// Provides 156 translations for a Syria country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -100,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -400,4 +401,5 @@ const syrCountryTranslations = [
   TranslatedName(LangSwa(), name: "Syria"),
   TranslatedName(LangVie(), name: "Syria"),
   TranslatedName(LangZha(), name: "Siliya"),
+  TranslatedName(LangNob(), name: "Syria"),
 ];

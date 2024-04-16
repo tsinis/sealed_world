@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Guinea country:
+/// Provides 152 translations for a Guinea country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -97,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -381,4 +382,5 @@ const ginCountryTranslations = [
   TranslatedName(LangSme(), name: "Guinea"),
   TranslatedName(LangSna(), name: "Guinea"),
   TranslatedName(LangZha(), name: "Gijneiya"),
+  TranslatedName(LangNob(), name: "Guinea"),
 ];

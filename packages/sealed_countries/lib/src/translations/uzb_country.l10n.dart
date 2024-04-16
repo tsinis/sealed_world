@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a Uzbekistan country:
+/// Provides 149 translations for a Uzbekistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -124,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -393,4 +394,5 @@ const uzbCountryTranslations = [
   TranslatedName(LangSna(), name: "Uzbekistan"),
   TranslatedName(LangVie(), name: "Uzbekistan"),
   TranslatedName(LangZha(), name: "Vuhsihbezgwzswhdanj"),
+  TranslatedName(LangTgl(), name: "Uzbekistan"),
 ];

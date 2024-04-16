@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 142 translations for a Gabon country:
+/// Provides 144 translations for a Gabon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -92,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -117,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -369,4 +371,6 @@ const gabCountryTranslations = [
   TranslatedName(LangTuk(), name: "Gabon"),
   TranslatedName(LangVie(), name: "Gabon"),
   TranslatedName(LangZha(), name: "Gyahbungz"),
+  TranslatedName(LangNob(), name: "Gabon"),
+  TranslatedName(LangTgl(), name: "Gabon"),
 ];

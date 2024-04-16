@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Grenada country:
+/// Provides 133 translations for a Grenada country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -85,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -107,6 +108,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -263,4 +265,6 @@ const grdCountryTranslations = [
   TranslatedName(LangTuk(), name: "Grenada"),
   TranslatedName(LangVie(), name: "Grenada"),
   TranslatedName(LangZha(), name: "Gwzlinznazdaz"),
+  TranslatedName(LangNob(), name: "Grenada"),
+  TranslatedName(LangTgl(), name: "Grenada"),
 ];

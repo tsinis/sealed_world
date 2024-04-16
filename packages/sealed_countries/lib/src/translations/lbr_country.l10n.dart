@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Liberia country:
+/// Provides 147 translations for a Liberia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -119,6 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -382,4 +384,6 @@ const lbrCountryTranslations = [
   TranslatedName(LangSwa(), name: "Liberia"),
   TranslatedName(LangVie(), name: "Liberia"),
   TranslatedName(LangZha(), name: "Libijlijya"),
+  TranslatedName(LangNob(), name: "Liberia"),
+  TranslatedName(LangTgl(), name: "Liberia"),
 ];

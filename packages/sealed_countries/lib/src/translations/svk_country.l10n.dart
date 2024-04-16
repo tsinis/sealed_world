@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Slovakia country:
+/// Provides 151 translations for a Slovakia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -388,4 +389,5 @@ const svkCountryTranslations = [
   TranslatedName(LangSwa(), name: "Slovakia"),
   TranslatedName(LangVie(), name: "Slovakia"),
   TranslatedName(LangZha(), name: "Swhlozfazgwz"),
+  TranslatedName(LangNob(), name: "Slovakia"),
 ];

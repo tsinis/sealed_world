@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Turkmenistan country:
+/// Provides 149 translations for a Turkmenistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -96,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -122,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -386,4 +388,6 @@ const tkmCountryTranslations = [
   TranslatedName(LangSwa(), name: "Turkmenistan"),
   TranslatedName(LangVie(), name: "Turkmenistan"),
   TranslatedName(LangZha(), name: "Dujgumanswhdanj"),
+  TranslatedName(LangNob(), name: "Turkmenistan"),
+  TranslatedName(LangTgl(), name: "Turkmenistan"),
 ];

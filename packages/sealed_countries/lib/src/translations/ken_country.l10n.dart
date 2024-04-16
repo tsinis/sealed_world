@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 146 translations for a Kenya country:
+/// Provides 148 translations for a Kenya country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -363,4 +365,6 @@ const kenCountryTranslations = [
   TranslatedName(LangSwa(), name: "Kenya"),
   TranslatedName(LangVie(), name: "Kenya"),
   TranslatedName(LangZha(), name: "Gwnjnizya"),
+  TranslatedName(LangNob(), name: "Kenya"),
+  TranslatedName(LangTgl(), name: "Kenya"),
 ];

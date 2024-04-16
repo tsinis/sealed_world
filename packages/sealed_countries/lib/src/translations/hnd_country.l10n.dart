@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 146 translations for a Honduras country:
+/// Provides 148 translations for a Honduras country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -121,6 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -385,4 +387,6 @@ const hndCountryTranslations = [
   TranslatedName(LangSwa(), name: "Honduras"),
   TranslatedName(LangVie(), name: "Honduras"),
   TranslatedName(LangZha(), name: "Hungzduhlahswh"),
+  TranslatedName(LangNob(), name: "Honduras"),
+  TranslatedName(LangTgl(), name: "Honduras"),
 ];

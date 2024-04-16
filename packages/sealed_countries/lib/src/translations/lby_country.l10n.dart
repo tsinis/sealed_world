@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Libya country:
+/// Provides 153 translations for a Libya country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -98,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -123,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -325,4 +327,6 @@ const lbyCountryTranslations = [
   TranslatedName(LangSwa(), name: "Libya"),
   TranslatedName(LangVie(), name: "Libya"),
   TranslatedName(LangZha(), name: "Libijya"),
+  TranslatedName(LangNob(), name: "Libya"),
+  TranslatedName(LangTgl(), name: "Libya"),
 ];

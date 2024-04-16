@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 139 translations for a Comoros country:
+/// Provides 140 translations for a Comoros country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -113,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -348,4 +349,5 @@ const comCountryTranslations = [
   TranslatedName(LangOci(), name: "Comòras"),
   TranslatedName(LangVie(), name: "Comoros"),
   TranslatedName(LangZha(), name: "Gohmozloz"),
+  TranslatedName(LangTgl(), name: "Komoros"),
 ];

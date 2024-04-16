@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Guadeloupe country:
+/// Provides 132 translations for a Guadeloupe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -86,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -313,4 +314,5 @@ const glpCountryTranslations = [
   TranslatedName(LangSna(), name: "Guadeloupe"),
   TranslatedName(LangSwa(), name: "Guadeloupe"),
   TranslatedName(LangVie(), name: "Guadeloupe"),
+  TranslatedName(LangNob(), name: "Guadeloupe"),
 ];

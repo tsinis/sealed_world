@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Micronesia country:
+/// Provides 137 translations for a Micronesia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -113,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -364,4 +365,5 @@ const fsmCountryTranslations = [
   TranslatedName(LangQue(), name: "Micronesia"),
   TranslatedName(LangRoh(), name: "Micronesia"),
   TranslatedName(LangSna(), name: "Micronesia"),
+  TranslatedName(LangTgl(), name: "Mikronesya"),
 ];

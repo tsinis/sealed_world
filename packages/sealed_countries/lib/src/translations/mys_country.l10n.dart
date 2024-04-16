@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 152 translations for a Malaysia country:
+/// Provides 153 translations for a Malaysia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -100,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -307,4 +308,5 @@ const mysCountryTranslations = [
   TranslatedName(LangNor(), name: "Malaysia"),
   TranslatedName(LangSna(), name: "Malaysia"),
   TranslatedName(LangVie(), name: "Malaysia"),
+  TranslatedName(LangNob(), name: "Malaysia"),
 ];

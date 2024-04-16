@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Zambia country:
+/// Provides 145 translations for a Zambia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -376,4 +377,5 @@ const zmbCountryTranslations = [
   TranslatedName(LangSwa(), name: "Zambia"),
   TranslatedName(LangVie(), name: "Zambia"),
   TranslatedName(LangZha(), name: "Canbijya"),
+  TranslatedName(LangNob(), name: "Zambia"),
 ];

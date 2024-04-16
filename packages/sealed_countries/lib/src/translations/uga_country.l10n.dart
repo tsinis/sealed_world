@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 141 translations for a Uganda country:
+/// Provides 143 translations for a Uganda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -117,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -375,4 +377,6 @@ const ugaCountryTranslations = [
   TranslatedName(LangTuk(), name: "Uganda"),
   TranslatedName(LangVie(), name: "Uganda"),
   TranslatedName(LangZha(), name: "Vuhganhdaz"),
+  TranslatedName(LangNob(), name: "Uganda"),
+  TranslatedName(LangTgl(), name: "Uganda"),
 ];

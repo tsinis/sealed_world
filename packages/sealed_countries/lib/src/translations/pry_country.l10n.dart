@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Paraguay country:
+/// Provides 147 translations for a Paraguay country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -118,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -380,4 +382,6 @@ const pryCountryTranslations = [
   TranslatedName(LangSwa(), name: "Paraguay"),
   TranslatedName(LangVie(), name: "Paraguay"),
   TranslatedName(LangZha(), name: "Bahlahgveih"),
+  TranslatedName(LangNob(), name: "Paraguay"),
+  TranslatedName(LangTgl(), name: "Paraguay"),
 ];

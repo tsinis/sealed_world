@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 154 translations for a Cuba country:
+/// Provides 155 translations for a Cuba country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -101,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -352,4 +353,5 @@ const cubCountryTranslations = [
   TranslatedName(LangSrd(), name: "Cuba"),
   TranslatedName(LangSna(), name: "Cuba"),
   TranslatedName(LangVie(), name: "Cuba"),
+  TranslatedName(LangNob(), name: "Cuba"),
 ];

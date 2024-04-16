@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 139 translations for a Maldives country:
+/// Provides 140 translations for a Maldives country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -112,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -364,4 +365,5 @@ const mdvCountryTranslations = [
   TranslatedName(LangSna(), name: "Maldives"),
   TranslatedName(LangVie(), name: "Maldives"),
   TranslatedName(LangZha(), name: "Majwjdaifuh"),
+  TranslatedName(LangTgl(), name: "Maldives"),
 ];

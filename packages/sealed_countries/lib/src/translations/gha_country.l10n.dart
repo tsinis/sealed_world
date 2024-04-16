@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 146 translations for a Ghana country:
+/// Provides 148 translations for a Ghana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -348,4 +350,6 @@ const ghaCountryTranslations = [
   TranslatedName(LangSwa(), name: "Ghana"),
   TranslatedName(LangVie(), name: "Ghana"),
   TranslatedName(LangZha(), name: "Gyahnaz"),
+  TranslatedName(LangNob(), name: "Ghana"),
+  TranslatedName(LangTgl(), name: "Ghana"),
 ];

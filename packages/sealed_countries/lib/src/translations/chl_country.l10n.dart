@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 163 translations for a Chile country:
+/// Provides 165 translations for a Chile country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -105,6 +105,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -134,6 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tahitian
 /// - Tajik
 /// - Tamil
@@ -386,4 +388,6 @@ const chlCountryTranslations = [
   TranslatedName(LangSna(), name: "Chile"),
   TranslatedName(LangSwa(), name: "Chile"),
   TranslatedName(LangZha(), name: "Cili"),
+  TranslatedName(LangNob(), name: "Chile"),
+  TranslatedName(LangTgl(), name: "Chile"),
 ];

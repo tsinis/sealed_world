@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 141 translations for a Anguilla country:
+/// Provides 142 translations for a Anguilla country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -92,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -279,4 +280,5 @@ const aiaCountryTranslations = [
   TranslatedName(LangSwa(), name: "Anguilla"),
   TranslatedName(LangVie(), name: "Anguilla"),
   TranslatedName(LangZha(), name: "Anhgveihlah"),
+  TranslatedName(LangNob(), name: "Anguilla"),
 ];

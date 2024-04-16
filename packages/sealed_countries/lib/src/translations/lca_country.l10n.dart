@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Saint Lucia country:
+/// Provides 139 translations for a Saint Lucia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -90,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -358,4 +359,5 @@ const lcaCountryTranslations = [
   TranslatedName(LangKal(), name: "Saint Lucia"),
   TranslatedName(LangOci(), name: "Santa Lucia"),
   TranslatedName(LangSwa(), name: "St. Lucia"),
+  TranslatedName(LangNob(), name: "St. Lucia"),
 ];

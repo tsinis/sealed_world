@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Malta country:
+/// Provides 133 translations for a Malta country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -87,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -109,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -333,4 +335,6 @@ const mltCountryTranslations = [
   TranslatedName(LangTuk(), name: "Malta"),
   TranslatedName(LangVie(), name: "Malta"),
   TranslatedName(LangZha(), name: "Majwjdah"),
+  TranslatedName(LangNob(), name: "Malta"),
+  TranslatedName(LangTgl(), name: "Malta"),
 ];

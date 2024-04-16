@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a India country:
+/// Provides 146 translations for a India country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -91,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Nuosu
 /// - Occitan
 /// - Oriya
@@ -118,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -359,4 +361,6 @@ const indCountryTranslations = [
   TranslatedName(LangSwa(), name: "India"),
   TranslatedName(LangVol(), name: "Lindän"),
   TranslatedName(LangZha(), name: "Yindu"),
+  TranslatedName(LangNob(), name: "India"),
+  TranslatedName(LangTgl(), name: "Indiya"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Namibia country:
+/// Provides 146 translations for a Namibia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -382,4 +383,5 @@ const namCountryTranslations = [
   TranslatedName(LangSwa(), name: "Namibia"),
   TranslatedName(LangVie(), name: "Namibia"),
   TranslatedName(LangZha(), name: "Nazmijbijya"),
+  TranslatedName(LangNob(), name: "Namibia"),
 ];

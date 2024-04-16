@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Saint Helena, Ascension and Tristan da Cunha country:
+/// Provides 137 translations for a Saint Helena, Ascension and Tristan da Cunha country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -88,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Occitan
 /// - Oriya
@@ -373,4 +374,5 @@ const shnCountryTranslations = [
   TranslatedName(LangOci(), name: "Santa Elena"),
   TranslatedName(LangSwa(), name: "St. Helena"),
   TranslatedName(LangZha(), name: "Swnghwzlwznaz"),
+  TranslatedName(LangNob(), name: "St. Helena"),
 ];

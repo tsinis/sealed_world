@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 159 translations for a Indonesia country:
+/// Provides 160 translations for a Indonesia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -103,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -409,4 +410,5 @@ const idnCountryTranslations = [
   TranslatedName(LangSna(), name: "Indonesia"),
   TranslatedName(LangSwa(), name: "Indonesia"),
   TranslatedName(LangVie(), name: "Indonesia"),
+  TranslatedName(LangNob(), name: "Indonesia"),
 ];

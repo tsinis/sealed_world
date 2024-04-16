@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a Tunisia country:
+/// Provides 149 translations for a Tunisia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -96,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -380,4 +381,5 @@ const tunCountryTranslations = [
   TranslatedName(LangSwa(), name: "Tunisia"),
   TranslatedName(LangVie(), name: "Tunisia"),
   TranslatedName(LangZha(), name: "Duznizswh"),
+  TranslatedName(LangNob(), name: "Tunisia"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Sint Maarten country:
+/// Provides 119 translations for a Sint Maarten country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -77,6 +77,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -324,4 +325,5 @@ const sxmCountryTranslations = [
   TranslatedName(LangSlv(), name: "Sint Maarten"),
   TranslatedName(LangSwa(), name: "Sint Maarten"),
   TranslatedName(LangVie(), name: "Sint Maarten"),
+  TranslatedName(LangNob(), name: "Sint Maarten"),
 ];

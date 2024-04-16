@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 141 translations for a Laos country:
+/// Provides 143 translations for a Laos country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -118,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -380,4 +382,6 @@ const laoCountryTranslations = [
   TranslatedName(LangSom(), name: "Laos"),
   TranslatedName(LangSwa(), name: "Laos"),
   TranslatedName(LangTuk(), name: "Laos"),
+  TranslatedName(LangNob(), name: "Laos"),
+  TranslatedName(LangTgl(), name: "Laos"),
 ];

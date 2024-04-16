@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 141 translations for a Cape Verde country:
+/// Provides 142 translations for a Cape Verde country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -114,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -375,4 +376,5 @@ const cpvCountryTranslations = [
   TranslatedName(LangSwa(), name: "Cape Verde"),
   TranslatedName(LangVie(), name: "Cape Verde"),
   TranslatedName(LangZha(), name: "Fozdwzgoz"),
+  TranslatedName(LangTgl(), name: "Kabo Berde"),
 ];

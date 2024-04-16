@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Lesotho country:
+/// Provides 148 translations for a Lesotho country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -378,4 +379,5 @@ const lsoCountryTranslations = [
   TranslatedName(LangSna(), name: "Lesotho"),
   TranslatedName(LangVie(), name: "Lesotho"),
   TranslatedName(LangZha(), name: "Laizsozdoz"),
+  TranslatedName(LangNob(), name: "Lesotho"),
 ];

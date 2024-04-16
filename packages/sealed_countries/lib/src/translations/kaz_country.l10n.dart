@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 154 translations for a Kazakhstan country:
+/// Provides 155 translations for a Kazakhstan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -129,6 +129,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -400,4 +401,5 @@ const kazCountryTranslations = [
   TranslatedName(LangMsa(), name: "Kazakhstan"),
   TranslatedName(LangSna(), name: "Kazakhstan"),
   TranslatedName(LangVie(), name: "Kazakhstan"),
+  TranslatedName(LangTgl(), name: "Kazakhstan"),
 ];

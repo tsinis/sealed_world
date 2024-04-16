@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Niger country:
+/// Provides 146 translations for a Niger country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -367,4 +368,5 @@ const nerCountryTranslations = [
   TranslatedName(LangTuk(), name: "Niger"),
   TranslatedName(LangVie(), name: "Niger"),
   TranslatedName(LangZha(), name: "Nizyizwj"),
+  TranslatedName(LangNob(), name: "Niger"),
 ];

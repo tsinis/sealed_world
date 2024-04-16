@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 143 translations for a Zimbabwe country:
+/// Provides 144 translations for a Zimbabwe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -90,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -378,4 +379,5 @@ const zweCountryTranslations = [
   TranslatedName(LangTuk(), name: "Zimbabwe"),
   TranslatedName(LangVie(), name: "Zimbabwe"),
   TranslatedName(LangZha(), name: "Cinhbahbuveiz"),
+  TranslatedName(LangNob(), name: "Zimbabwe"),
 ];

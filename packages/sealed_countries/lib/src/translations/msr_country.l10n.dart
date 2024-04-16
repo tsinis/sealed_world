@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Montserrat country:
+/// Provides 137 translations for a Montserrat country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -90,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -346,4 +347,5 @@ const msrCountryTranslations = [
   TranslatedName(LangSom(), name: "Montserrat"),
   TranslatedName(LangSwa(), name: "Montserrat"),
   TranslatedName(LangVie(), name: "Montserrat"),
+  TranslatedName(LangNob(), name: "Montserrat"),
 ];

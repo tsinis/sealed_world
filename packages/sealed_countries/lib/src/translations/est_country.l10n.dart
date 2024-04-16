@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 152 translations for a Estonia country:
+/// Provides 153 translations for a Estonia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -126,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -387,4 +388,5 @@ const estCountryTranslations = [
   TranslatedName(LangSwa(), name: "Estonia"),
   TranslatedName(LangVie(), name: "Estonia"),
   TranslatedName(LangZha(), name: "Aisahnizya"),
+  TranslatedName(LangTgl(), name: "Estonia"),
 ];

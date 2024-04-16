@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Somalia country:
+/// Provides 150 translations for a Somalia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -97,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -390,4 +391,5 @@ const somCountryTranslations = [
   TranslatedName(LangSwa(), name: "Somalia"),
   TranslatedName(LangVie(), name: "Somalia"),
   TranslatedName(LangZha(), name: "Sozmajlij"),
+  TranslatedName(LangNob(), name: "Somalia"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 142 translations for a Tonga country:
+/// Provides 144 translations for a Tonga country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -91,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -116,6 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tahitian
 /// - Tajik
 /// - Tamil
@@ -348,4 +350,6 @@ const tonCountryTranslations = [
   TranslatedName(LangVie(), name: "Tonga"),
   TranslatedName(LangWol(), name: "Tonga"),
   TranslatedName(LangZha(), name: "Tanghgyah"),
+  TranslatedName(LangNob(), name: "Tonga"),
+  TranslatedName(LangTgl(), name: "Tonga"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Mongolia country:
+/// Provides 152 translations for a Mongolia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -98,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -317,4 +318,5 @@ const mngCountryTranslations = [
   TranslatedName(LangSme(), name: "Mongolia"),
   TranslatedName(LangSna(), name: "Mongolia"),
   TranslatedName(LangSwa(), name: "Mongolia"),
+  TranslatedName(LangNob(), name: "Mongolia"),
 ];

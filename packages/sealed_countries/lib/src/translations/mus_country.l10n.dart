@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Mauritius country:
+/// Provides 146 translations for a Mauritius country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -372,4 +373,5 @@ const musCountryTranslations = [
   TranslatedName(LangSme(), name: "Mauritius"),
   TranslatedName(LangSna(), name: "Mauritius"),
   TranslatedName(LangVie(), name: "Mauritius"),
+  TranslatedName(LangNob(), name: "Mauritius"),
 ];

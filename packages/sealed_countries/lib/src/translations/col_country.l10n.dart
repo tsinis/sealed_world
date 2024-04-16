@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Colombia country:
+/// Provides 152 translations for a Colombia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -124,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -387,4 +389,6 @@ const colCountryTranslations = [
   TranslatedName(LangNor(), name: "Colombia"),
   TranslatedName(LangVie(), name: "Colombia"),
   TranslatedName(LangZha(), name: "Gohlunzbijya"),
+  TranslatedName(LangNob(), name: "Colombia"),
+  TranslatedName(LangTgl(), name: "Colombia"),
 ];

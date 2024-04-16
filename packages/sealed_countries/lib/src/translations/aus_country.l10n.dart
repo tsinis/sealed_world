@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 159 translations for a Australia country:
+/// Provides 160 translations for a Australia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -104,6 +104,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -406,4 +407,5 @@ const ausCountryTranslations = [
   TranslatedName(LangRon(), name: "Australia"),
   TranslatedName(LangSna(), name: "Australia"),
   TranslatedName(LangSwa(), name: "Australia"),
+  TranslatedName(LangNob(), name: "Australia"),
 ];

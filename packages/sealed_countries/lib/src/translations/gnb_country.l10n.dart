@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Guinea-Bissau country:
+/// Provides 151 translations for a Guinea-Bissau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -98,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -391,4 +392,5 @@ const gnbCountryTranslations = [
   TranslatedName(LangSme(), name: "Guinea-Bissau"),
   TranslatedName(LangSna(), name: "Guinea-Bissau"),
   TranslatedName(LangZha(), name: "Gijneiyabijsau"),
+  TranslatedName(LangNob(), name: "Guinea-Bissau"),
 ];

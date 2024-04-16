@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Sri Lanka country:
+/// Provides 149 translations for a Sri Lanka country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -388,4 +390,6 @@ const lkaCountryTranslations = [
   TranslatedName(LangSwa(), name: "Sri Lanka"),
   TranslatedName(LangVie(), name: "Sri Lanka"),
   TranslatedName(LangZha(), name: "Swhlijlanzgaj"),
+  TranslatedName(LangNob(), name: "Sri Lanka"),
+  TranslatedName(LangTgl(), name: "Sri Lanka"),
 ];

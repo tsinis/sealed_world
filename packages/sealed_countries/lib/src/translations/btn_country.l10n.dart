@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 155 translations for a Bhutan country:
+/// Provides 156 translations for a Bhutan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -373,4 +374,5 @@ const btnCountryTranslations = [
   TranslatedName(LangSme(), name: "Bhutan"),
   TranslatedName(LangSwa(), name: "Bhutan"),
   TranslatedName(LangVie(), name: "Bhutan"),
+  TranslatedName(LangNob(), name: "Bhutan"),
 ];

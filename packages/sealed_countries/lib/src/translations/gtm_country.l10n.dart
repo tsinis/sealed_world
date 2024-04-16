@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a Guatemala country:
+/// Provides 149 translations for a Guatemala country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -388,4 +389,5 @@ const gtmCountryTranslations = [
   TranslatedName(LangSwa(), name: "Guatemala"),
   TranslatedName(LangVie(), name: "Guatemala"),
   TranslatedName(LangZha(), name: "Veizdimajlah"),
+  TranslatedName(LangNob(), name: "Guatemala"),
 ];

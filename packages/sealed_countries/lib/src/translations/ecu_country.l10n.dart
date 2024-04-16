@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Ecuador country:
+/// Provides 151 translations for a Ecuador country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -97,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -122,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -384,4 +386,6 @@ const ecuCountryTranslations = [
   TranslatedName(LangSwa(), name: "Ecuador"),
   TranslatedName(LangVie(), name: "Ecuador"),
   TranslatedName(LangZha(), name: "Ngwzgyahdohwj"),
+  TranslatedName(LangNob(), name: "Ecuador"),
+  TranslatedName(LangTgl(), name: "Ekwador"),
 ];

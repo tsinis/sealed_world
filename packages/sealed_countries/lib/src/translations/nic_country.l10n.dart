@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Nicaragua country:
+/// Provides 151 translations for a Nicaragua country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -98,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -124,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -390,4 +392,6 @@ const nicCountryTranslations = [
   TranslatedName(LangSna(), name: "Nicaragua"),
   TranslatedName(LangVie(), name: "Nicaragua"),
   TranslatedName(LangZha(), name: "Nizgyahlahgvah"),
+  TranslatedName(LangNob(), name: "Nicaragua"),
+  TranslatedName(LangTgl(), name: "Nicaragua"),
 ];

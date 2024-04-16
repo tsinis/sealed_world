@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 143 translations for a Sierra Leone country:
+/// Provides 144 translations for a Sierra Leone country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -92,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -381,4 +382,5 @@ const sleCountryTranslations = [
   TranslatedName(LangSlv(), name: "Sierra Leone"),
   TranslatedName(LangSna(), name: "Sierra Leone"),
   TranslatedName(LangVie(), name: "Sierra Leone"),
+  TranslatedName(LangNob(), name: "Sierra Leone"),
 ];

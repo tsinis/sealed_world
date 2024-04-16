@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Taiwan country:
+/// Provides 148 translations for a Taiwan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -93,6 +93,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -376,4 +377,5 @@ const twnCountryTranslations = [
   TranslatedName(LangSme(), name: "Taiwan"),
   TranslatedName(LangSna(), name: "Taiwan"),
   TranslatedName(LangSwa(), name: "Taiwan"),
+  TranslatedName(LangNob(), name: "Taiwan"),
 ];

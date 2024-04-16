@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 157 translations for a Eswatini country:
+/// Provides 158 translations for a Eswatini country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -99,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Occitan
 /// - Oriya
@@ -403,4 +404,5 @@ const swzCountryTranslations = [
   TranslatedName(LangNor(), name: "Eswatini"),
   TranslatedName(LangSsw(), name: "eSwatini"),
   TranslatedName(LangZha(), name: "Swhveihswlanz"),
+  TranslatedName(LangNob(), name: "Eswatini"),
 ];

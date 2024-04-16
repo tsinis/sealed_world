@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 156 translations for a Afghanistan country:
+/// Provides 157 translations for a Afghanistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -98,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -409,4 +410,5 @@ const afgCountryTranslations = [
   TranslatedName(LangSwa(), name: "Afghanistan"),
   TranslatedName(LangVie(), name: "Afghanistan"),
   TranslatedName(LangZha(), name: "Ahfuhan"),
+  TranslatedName(LangNob(), name: "Afghanistan"),
 ];

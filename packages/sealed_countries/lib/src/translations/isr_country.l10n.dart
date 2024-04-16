@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Israel country:
+/// Provides 153 translations for a Israel country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -100,6 +100,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -125,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -354,4 +356,6 @@ const isrCountryTranslations = [
   TranslatedName(LangSme(), name: "Israel"),
   TranslatedName(LangVie(), name: "Israel"),
   TranslatedName(LangZha(), name: "Yijswzlez"),
+  TranslatedName(LangNob(), name: "Israel"),
+  TranslatedName(LangTgl(), name: "Israel"),
 ];

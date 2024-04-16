@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Fiji country:
+/// Provides 146 translations for a Fiji country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -355,4 +356,5 @@ const fjiCountryTranslations = [
   TranslatedName(LangTuk(), name: "Fiji"),
   TranslatedName(LangVie(), name: "Fiji"),
   TranslatedName(LangZha(), name: "Feijci"),
+  TranslatedName(LangNob(), name: "Fiji"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 152 translations for a Thailand country:
+/// Provides 153 translations for a Thailand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -98,6 +98,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -385,4 +386,5 @@ const thaCountryTranslations = [
   TranslatedName(LangMsa(), name: "Thailand"),
   TranslatedName(LangNor(), name: "Thailand"),
   TranslatedName(LangSna(), name: "Thailand"),
+  TranslatedName(LangNob(), name: "Thailand"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Kuwait country:
+/// Provides 149 translations for a Kuwait country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -97,6 +97,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -122,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -342,4 +344,6 @@ const kwtCountryTranslations = [
   TranslatedName(LangSwa(), name: "Kuwait"),
   TranslatedName(LangVie(), name: "Kuwait"),
   TranslatedName(LangZha(), name: "Gohveihdwz"),
+  TranslatedName(LangNob(), name: "Kuwait"),
+  TranslatedName(LangTgl(), name: "Kuwait"),
 ];

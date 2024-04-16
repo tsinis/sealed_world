@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Mauritania country:
+/// Provides 149 translations for a Mauritania country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -390,4 +392,6 @@ const mrtCountryTranslations = [
   TranslatedName(LangRon(), name: "Mauritania"),
   TranslatedName(LangSna(), name: "Mauritania"),
   TranslatedName(LangZha(), name: "Mauzlijdaznizya"),
+  TranslatedName(LangNob(), name: "Mauritania"),
+  TranslatedName(LangTgl(), name: "Mauritania"),
 ];

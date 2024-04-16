@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a El Salvador country:
+/// Provides 150 translations for a El Salvador country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -94,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -385,4 +387,6 @@ const slvCountryTranslations = [
   TranslatedName(LangSwa(), name: "El Salvador"),
   TranslatedName(LangVie(), name: "El Salvador"),
   TranslatedName(LangZha(), name: "Sazwjvajdoh"),
+  TranslatedName(LangNob(), name: "El Salvador"),
+  TranslatedName(LangTgl(), name: "El Salvador"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Guernsey country:
+/// Provides 127 translations for a Guernsey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -82,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -312,4 +313,5 @@ const ggyCountryTranslations = [
   TranslatedName(LangSwa(), name: "Guernsey"),
   TranslatedName(LangVie(), name: "Guernsey"),
   TranslatedName(LangYor(), name: "Guernsey"),
+  TranslatedName(LangNob(), name: "Guernsey"),
 ];
