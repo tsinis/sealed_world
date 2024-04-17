@@ -268,10 +268,46 @@ export "src/translations/zwe_country.l10n.dart";
 /// It is important to note that while other languages may not be included in
 /// this list, they may still have translations available for most common
 /// countries, but there may be some missing translations for rarer languages.
-/// Every country contains more than 85 translations of it's name.
+/// Every country contains more than 114 translations of it's name.
 ///
-/// Supports most of the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
-/// with a two letter (but not three letter) code.
+/// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+/// with a two letter code and much more (for example on top of that it also
+/// provides translations for the following languages):
+/// - Abkhaz (ABK)
+/// - Aragonese (ARG)
+/// - Breton (BRE)
+/// - Chechen (CHE)
+/// - Chuvash (CHV)
+/// - Dzongkha (DZO)
+/// - Esperanto (EPO)
+/// - Ewe (EWE)
+/// - Faroese (FAO)
+/// - Western Frisian (FRY)
+/// - Fula (Fulah/Pulaar/Pular) (FUL)
+/// - (Scottish) Gaelic (GLA)
+/// - Irish (GLE)
+/// - Hausa (HAU)
+/// - Igbo (IBO)
+/// - Interlingue (ILE)
+/// - Interlingua (INA)
+/// - Javanese (JAV)
+/// - Kashmiri (KAS)
+/// - Luxembourgish (Letzeburgesch) (LTZ)
+/// - Maltese (MLT)
+/// - Māori (MRI)
+/// - Occitan (OCI)
+/// - Quechua (QUE)
+/// - Romansh (ROH)
+/// - Sindhi (SND)
+/// - Somali (SOM)
+/// - Sardinian (SRD)
+/// - Tigrinya (TIR)
+/// - Tonga (Tonga Islands) (TON)
+/// - Turkmen (TUK)
+/// - Uyghur (UIG)
+/// - Xhosa (XHO)
+/// - Yoruba (YOR)
+/// That are not listed in Material one, and much more.
 // ignore: prefer-static-class, to follow pattern from languages.
 const kSealedCountriesSupportedLanguages = [
   LangAbk(),
