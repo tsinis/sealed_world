@@ -70,16 +70,10 @@ jobs:
 
       - name: 📈 Check Pub score
         if: ${{ github.event_name == 'pull_request' }}
-        env:
-          TOTAL: ${{ steps.analysis.outputs.total }}
-          TOTAL_MAX: ${{ steps.analysis.outputs.total_max }}
-        run: |
-          PERCENTAGE=$(( $TOTAL * 100 / $TOTAL_MAX ))
-          if (( $PERCENTAGE < 90 ))
-          then
-          echo Score too low!
-          exit 1
-          fi
+        uses: fujidaiti/dart-package-inspector@v1.0.0
+        with:
+          report: ${{ steps.analysis.outputs.json_output }}
+          min-pub-points: 130
 
       - name: 🛂 Set up file system write permissions
         run: sudo chown -R runner:runner $(pwd) && sudo chmod -R 777 $(pwd)
@@ -106,7 +100,7 @@ jobs:
           min_coverage: 99
 
       - name: 💯 Upload coverage
-        uses: codecov/codecov-action@v4.2.0
+        uses: codecov/codecov-action@v4.3.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ${{ env.relative_path }}/coverage/lcov.info
