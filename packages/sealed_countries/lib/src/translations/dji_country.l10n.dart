@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Djibouti country:
+/// Provides 148 translations for a Djibouti country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afar
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -23,12 +25,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -52,12 +56,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -78,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -86,6 +94,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -95,12 +106,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -125,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -352,4 +366,18 @@ const djiCountryTranslations = [
   TranslatedName(LangVol(), name: "Cibutän"),
   TranslatedName(LangIna(), name: "Djibuti"),
   TranslatedName(LangXho(), name: "EDjibouti"),
+  TranslatedName(LangAar(), name: "Yabuuti"),
+  TranslatedName(LangAbk(), name: "Џибути"),
+  TranslatedName(LangCat(), name: "Djibouti"),
+  TranslatedName(LangDan(), name: "Djibouti"),
+  TranslatedName(LangIle(), name: "Djibuti"),
+  TranslatedName(LangIbo(), name: "Djibouti"),
+  TranslatedName(LangKal(), name: "Djibouti"),
+  TranslatedName(LangMsa(), name: "Djibouti"),
+  TranslatedName(LangNor(), name: "Djibouti"),
+  TranslatedName(LangRon(), name: "Djibouti"),
+  TranslatedName(LangSme(), name: "Djibouti"),
+  TranslatedName(LangSna(), name: "Djibouti"),
+  TranslatedName(LangVie(), name: "Djibouti"),
+  TranslatedName(LangNob(), name: "Djibouti"),
 ];

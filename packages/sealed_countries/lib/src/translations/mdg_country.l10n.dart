@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 139 translations for a Madagascar country:
+/// Provides 153 translations for a Madagascar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -22,6 +24,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
@@ -41,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -56,9 +60,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -93,6 +101,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -100,11 +109,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -130,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -137,6 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mdgCountryTranslations = [
   CountryName(
@@ -370,4 +384,18 @@ const mdgCountryTranslations = [
   TranslatedName(LangTgl(), name: "Madagaskar"),
   TranslatedName(LangVol(), name: "Malagaseän"),
   TranslatedName(LangXho(), name: "EMadagascar"),
+  TranslatedName(LangAbk(), name: "Мадагаскар"),
+  TranslatedName(LangArg(), name: "Madagascar"),
+  TranslatedName(LangCat(), name: "Madagascar"),
+  TranslatedName(LangGle(), name: "Madagascar"),
+  TranslatedName(LangGlg(), name: "Madagascar"),
+  TranslatedName(LangIna(), name: "Madagascar"),
+  TranslatedName(LangIle(), name: "Madagascar"),
+  TranslatedName(LangKal(), name: "Madagaskar"),
+  TranslatedName(LangOci(), name: "Madagascar"),
+  TranslatedName(LangRoh(), name: "Madagascar"),
+  TranslatedName(LangRon(), name: "Madagascar"),
+  TranslatedName(LangSna(), name: "Madagascar"),
+  TranslatedName(LangVie(), name: "Madagascar"),
+  TranslatedName(LangZha(), name: "Majdazgyahswhgyah"),
 ];

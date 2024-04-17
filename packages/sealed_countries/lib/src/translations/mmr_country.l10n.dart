@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 146 translations for a Myanmar country:
+/// Provides 152 translations for a Myanmar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -57,10 +59,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -92,6 +96,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -381,4 +386,10 @@ const mmrCountryTranslations = [
   TranslatedName(LangNor(), name: "Myanmar (Burma)"),
   TranslatedName(LangTgl(), name: "Myanmar (Burma)"),
   TranslatedName(LangXho(), name: "EMyanmar (Burma)"),
+  TranslatedName(LangAbk(), name: "Мианма (Бирма)"),
+  TranslatedName(LangArg(), name: "Myanmar (Burma)"),
+  TranslatedName(LangIle(), name: "Myanmar (Birmania)"),
+  TranslatedName(LangKal(), name: "Burma"),
+  TranslatedName(LangSwa(), name: "Myanmar (Burma)"),
+  TranslatedName(LangNob(), name: "Myanmar (Burma)"),
 ];

@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Turkmenistan country:
+/// Provides 149 translations for a Turkmenistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -16,18 +18,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -35,6 +40,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -50,11 +56,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -72,8 +82,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -82,6 +94,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -90,19 +105,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
 /// - Sundanese
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -117,12 +138,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const tkmCountryTranslations = [
   CountryName(
@@ -341,4 +365,29 @@ const tkmCountryTranslations = [
   TranslatedName(LangMri(), name: "Tukumanatānga"),
   TranslatedName(LangSrd(), name: "Turkmènistan"),
   TranslatedName(LangXho(), name: "ETurkmenistan"),
+  TranslatedName(LangAbk(), name: "Ҭурқменисҭан"),
+  TranslatedName(LangAfr(), name: "Turkmenistan"),
+  TranslatedName(LangCat(), name: "Turkmenistan"),
+  TranslatedName(LangDan(), name: "Turkmenistan"),
+  TranslatedName(LangEus(), name: "Turkmenistan"),
+  TranslatedName(LangFao(), name: "Turkmenistan"),
+  TranslatedName(LangFry(), name: "Turkmenistan"),
+  TranslatedName(LangIna(), name: "Turkmenistan"),
+  TranslatedName(LangIle(), name: "Turkmenistan"),
+  TranslatedName(LangIbo(), name: "Turkmenistan"),
+  TranslatedName(LangKal(), name: "Turkmenistani"),
+  TranslatedName(LangLtz(), name: "Turkmenistan"),
+  TranslatedName(LangMsa(), name: "Turkmenistan"),
+  TranslatedName(LangNor(), name: "Turkmenistan"),
+  TranslatedName(LangRoh(), name: "Turkmenistan"),
+  TranslatedName(LangRon(), name: "Turkmenistan"),
+  TranslatedName(LangSme(), name: "Turkmenistan"),
+  TranslatedName(LangSlv(), name: "Turkmenistan"),
+  TranslatedName(LangSna(), name: "Turkmenistan"),
+  TranslatedName(LangSom(), name: "Turkmenistan"),
+  TranslatedName(LangSwa(), name: "Turkmenistan"),
+  TranslatedName(LangVie(), name: "Turkmenistan"),
+  TranslatedName(LangZha(), name: "Dujgumanswhdanj"),
+  TranslatedName(LangNob(), name: "Turkmenistan"),
+  TranslatedName(LangTgl(), name: "Turkmenistan"),
 ];

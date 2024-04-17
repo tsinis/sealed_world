@@ -2,19 +2,23 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Honduras country:
+/// Provides 148 translations for a Honduras country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -28,6 +32,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -35,9 +40,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -49,9 +56,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -68,8 +81,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -78,6 +93,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nauruan
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -85,17 +104,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -110,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -118,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const hndCountryTranslations = [
   CountryName(
@@ -331,4 +360,33 @@ const hndCountryTranslations = [
   TranslatedName(LangHau(), name: "Yankin Honduras"),
   TranslatedName(LangMri(), name: "Honotura"),
   TranslatedName(LangXho(), name: "EHonduras"),
+  TranslatedName(LangAbk(), name: "Гондурас"),
+  TranslatedName(LangAfr(), name: "Honduras"),
+  TranslatedName(LangArg(), name: "Honduras"),
+  TranslatedName(LangDan(), name: "Honduras"),
+  TranslatedName(LangEus(), name: "Honduras"),
+  TranslatedName(LangFao(), name: "Honduras"),
+  TranslatedName(LangGlg(), name: "Honduras"),
+  TranslatedName(LangIna(), name: "Honduras"),
+  TranslatedName(LangInd(), name: "Honduras"),
+  TranslatedName(LangIle(), name: "Hondura"),
+  TranslatedName(LangIbo(), name: "Honduras"),
+  TranslatedName(LangJav(), name: "Honduras"),
+  TranslatedName(LangKal(), name: "Honduras"),
+  TranslatedName(LangLtz(), name: "Honduras"),
+  TranslatedName(LangMsa(), name: "Honduras"),
+  TranslatedName(LangNor(), name: "Honduras"),
+  TranslatedName(LangOci(), name: "Onduras"),
+  TranslatedName(LangRoh(), name: "Honduras"),
+  TranslatedName(LangRon(), name: "Honduras"),
+  TranslatedName(LangSrd(), name: "Honduras"),
+  TranslatedName(LangSme(), name: "Honduras"),
+  TranslatedName(LangSlv(), name: "Honduras"),
+  TranslatedName(LangSna(), name: "Honduras"),
+  TranslatedName(LangSom(), name: "Honduras"),
+  TranslatedName(LangSwa(), name: "Honduras"),
+  TranslatedName(LangVie(), name: "Honduras"),
+  TranslatedName(LangZha(), name: "Hungzduhlahswh"),
+  TranslatedName(LangNob(), name: "Honduras"),
+  TranslatedName(LangTgl(), name: "Honduras"),
 ];

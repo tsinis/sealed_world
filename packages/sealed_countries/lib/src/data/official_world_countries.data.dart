@@ -18079,7 +18079,7 @@ class CountryVat extends WorldCountry {
           codeShort: "VA",
           cioc: null,
           independent: true,
-          unMember: true,
+          unMember: false,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [79]),
           altSpellings: const [

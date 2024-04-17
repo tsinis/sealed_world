@@ -2,80 +2,115 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 94 translations for a Malta country:
+/// Provides 133 translations for a Malta country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
 /// - Latin
+/// - Latvian
 /// - Lingala
+/// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -85,16 +120,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mltCountryTranslations = [
   CountryName(
@@ -259,4 +298,43 @@ const mltCountryTranslations = [
   TranslatedName(LangChv(), name: "Мальта"),
   TranslatedName(LangMri(), name: "Mārata"),
   TranslatedName(LangXho(), name: "EMalta"),
+  TranslatedName(LangAbk(), name: "Мальта"),
+  TranslatedName(LangAfr(), name: "Malta"),
+  TranslatedName(LangArg(), name: "Malta"),
+  TranslatedName(LangCat(), name: "Malta"),
+  TranslatedName(LangDan(), name: "Malta"),
+  TranslatedName(LangEus(), name: "Malta"),
+  TranslatedName(LangFao(), name: "Malta"),
+  TranslatedName(LangFry(), name: "Malta"),
+  TranslatedName(LangGla(), name: "Malta"),
+  TranslatedName(LangGlg(), name: "Malta"),
+  TranslatedName(LangHau(), name: "Malta"),
+  TranslatedName(LangIna(), name: "Malta"),
+  TranslatedName(LangInd(), name: "Malta"),
+  TranslatedName(LangIle(), name: "Malta"),
+  TranslatedName(LangIbo(), name: "Malta"),
+  TranslatedName(LangIsl(), name: "Malta"),
+  TranslatedName(LangJav(), name: "Malta"),
+  TranslatedName(LangKik(), name: "Malta"),
+  TranslatedName(LangKal(), name: "Malta"),
+  TranslatedName(LangLtz(), name: "Malta"),
+  TranslatedName(LangLit(), name: "Malta"),
+  TranslatedName(LangLav(), name: "Malta"),
+  TranslatedName(LangMlg(), name: "Malta"),
+  TranslatedName(LangMsa(), name: "Malta"),
+  TranslatedName(LangMlt(), name: "Malta"),
+  TranslatedName(LangNor(), name: "Malta"),
+  TranslatedName(LangOci(), name: "Malta"),
+  TranslatedName(LangQue(), name: "Malta"),
+  TranslatedName(LangRoh(), name: "Malta"),
+  TranslatedName(LangRon(), name: "Malta"),
+  TranslatedName(LangSrd(), name: "Malta"),
+  TranslatedName(LangSlv(), name: "Malta"),
+  TranslatedName(LangSna(), name: "Malta"),
+  TranslatedName(LangSwa(), name: "Malta"),
+  TranslatedName(LangTuk(), name: "Malta"),
+  TranslatedName(LangVie(), name: "Malta"),
+  TranslatedName(LangZha(), name: "Majwjdah"),
+  TranslatedName(LangNob(), name: "Malta"),
+  TranslatedName(LangTgl(), name: "Malta"),
 ];

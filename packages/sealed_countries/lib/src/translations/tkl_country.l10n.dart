@@ -2,34 +2,44 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 88 translations for a Tokelau country:
+/// Provides 127 translations for a Tokelau country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -40,19 +50,32 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -60,30 +83,46 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
 /// - Tigrinya
+/// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -199,4 +238,43 @@ const tklCountryTranslations = [
   TranslatedName(LangChv(), name: "Токелау"),
   TranslatedName(LangMri(), name: "Tokerau"),
   TranslatedName(LangXho(), name: "ETokelau"),
+  TranslatedName(LangAbk(), name: "Токелау"),
+  TranslatedName(LangAfr(), name: "Tokelau"),
+  TranslatedName(LangArg(), name: "Tokelau"),
+  TranslatedName(LangCat(), name: "Tokelau"),
+  TranslatedName(LangDan(), name: "Tokelau"),
+  TranslatedName(LangEus(), name: "Tokelau"),
+  TranslatedName(LangFao(), name: "Tokelau"),
+  TranslatedName(LangGla(), name: "Tokelau"),
+  TranslatedName(LangGlg(), name: "Tokelau"),
+  TranslatedName(LangIna(), name: "Tokelau"),
+  TranslatedName(LangInd(), name: "Tokelau"),
+  TranslatedName(LangIle(), name: "Tokelau"),
+  TranslatedName(LangIbo(), name: "Tokelau"),
+  TranslatedName(LangJav(), name: "Tokelau"),
+  TranslatedName(LangKik(), name: "Tokelau"),
+  TranslatedName(LangKal(), name: "Tokelau"),
+  TranslatedName(LangLat(), name: "Tokelau"),
+  TranslatedName(LangLtz(), name: "Tokelau"),
+  TranslatedName(LangLin(), name: "Tokelau"),
+  TranslatedName(LangLit(), name: "Tokelau"),
+  TranslatedName(LangLav(), name: "Tokelau"),
+  TranslatedName(LangMsa(), name: "Tokelau"),
+  TranslatedName(LangNor(), name: "Tokelau"),
+  TranslatedName(LangOci(), name: "Tokelau"),
+  TranslatedName(LangQue(), name: "Tokelau"),
+  TranslatedName(LangRoh(), name: "Tokelau"),
+  TranslatedName(LangRon(), name: "Tokelau"),
+  TranslatedName(LangSrd(), name: "Tokelau"),
+  TranslatedName(LangSme(), name: "Tokelau"),
+  TranslatedName(LangSag(), name: "Tokelau"),
+  TranslatedName(LangSlv(), name: "Tokelau"),
+  TranslatedName(LangSna(), name: "Tokelau"),
+  TranslatedName(LangSqi(), name: "Tokelau"),
+  TranslatedName(LangSwa(), name: "Tokelau"),
+  TranslatedName(LangTuk(), name: "Tokelau"),
+  TranslatedName(LangTon(), name: "Tokelau"),
+  TranslatedName(LangVie(), name: "Tokelau"),
+  TranslatedName(LangNob(), name: "Tokelau"),
+  TranslatedName(LangTgl(), name: "Tokelau"),
 ];

@@ -2,26 +2,34 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 99 translations for a Mali country:
+/// Provides 137 translations for a Mali country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -29,33 +37,48 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latin
+/// - Latvian
 /// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -63,6 +86,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -70,17 +97,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -90,16 +124,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mliCountryTranslations = [
   CountryName(
@@ -237,4 +275,42 @@ const mliCountryTranslations = [
   TranslatedName(LangSsw(), name: "IMali"),
   TranslatedName(LangVol(), name: "Maliyän"),
   TranslatedName(LangXho(), name: "EMali"),
+  TranslatedName(LangAbk(), name: "Мали"),
+  TranslatedName(LangAfr(), name: "Mali"),
+  TranslatedName(LangArg(), name: "Mali"),
+  TranslatedName(LangBam(), name: "Mali"),
+  TranslatedName(LangCat(), name: "Mali"),
+  TranslatedName(LangDan(), name: "Mali"),
+  TranslatedName(LangEus(), name: "Mali"),
+  TranslatedName(LangFao(), name: "Mali"),
+  TranslatedName(LangHau(), name: "Mali"),
+  TranslatedName(LangIna(), name: "Mali"),
+  TranslatedName(LangInd(), name: "Mali"),
+  TranslatedName(LangIle(), name: "Mali"),
+  TranslatedName(LangIbo(), name: "Mali"),
+  TranslatedName(LangJav(), name: "Mali"),
+  TranslatedName(LangKik(), name: "Mali"),
+  TranslatedName(LangKal(), name: "Mali"),
+  TranslatedName(LangLtz(), name: "Mali"),
+  TranslatedName(LangLug(), name: "Mali"),
+  TranslatedName(LangLav(), name: "Mali"),
+  TranslatedName(LangMlg(), name: "Mali"),
+  TranslatedName(LangMsa(), name: "Mali"),
+  TranslatedName(LangNor(), name: "Mali"),
+  TranslatedName(LangOci(), name: "Mali"),
+  TranslatedName(LangRoh(), name: "Mali"),
+  TranslatedName(LangRun(), name: "Mali"),
+  TranslatedName(LangRon(), name: "Mali"),
+  TranslatedName(LangSrd(), name: "Mali"),
+  TranslatedName(LangSme(), name: "Mali"),
+  TranslatedName(LangSlv(), name: "Mali"),
+  TranslatedName(LangSna(), name: "Mali"),
+  TranslatedName(LangSqi(), name: "Mali"),
+  TranslatedName(LangSwa(), name: "Mali"),
+  TranslatedName(LangTuk(), name: "Mali"),
+  TranslatedName(LangVie(), name: "Mali"),
+  TranslatedName(LangWol(), name: "Mali"),
+  TranslatedName(LangZha(), name: "Majlij"),
+  TranslatedName(LangNob(), name: "Mali"),
+  TranslatedName(LangTgl(), name: "Mali"),
 ];

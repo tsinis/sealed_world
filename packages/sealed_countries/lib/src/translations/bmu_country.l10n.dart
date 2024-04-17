@@ -2,17 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 105 translations for a Bermuda country:
+/// Provides 135 translations for a Bermuda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -25,12 +29,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -46,27 +52,42 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
@@ -74,35 +95,44 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const bmuCountryTranslations = [
   CountryName(language: LangEng(), official: "Bermuda", common: "Bermuda"),
@@ -218,4 +248,34 @@ const bmuCountryTranslations = [
   TranslatedName(LangMri(), name: "Pāmura"),
   TranslatedName(LangSrd(), name: "Bermudas"),
   TranslatedName(LangXho(), name: "EBermuda"),
+  TranslatedName(LangAbk(), name: "Бермудтәи ад-хақәа"),
+  TranslatedName(LangAfr(), name: "Bermuda"),
+  TranslatedName(LangArg(), name: "Bermuda"),
+  TranslatedName(LangBod(), name: "བར་མུ་ཌ།"),
+  TranslatedName(LangDan(), name: "Bermuda"),
+  TranslatedName(LangEus(), name: "Bermuda"),
+  TranslatedName(LangFao(), name: "Bermuda"),
+  TranslatedName(LangFry(), name: "Bermuda"),
+  TranslatedName(LangIna(), name: "Bermuda"),
+  TranslatedName(LangInd(), name: "Bermuda"),
+  TranslatedName(LangIle(), name: "Bermuda"),
+  TranslatedName(LangJav(), name: "Bermuda"),
+  TranslatedName(LangKik(), name: "Bermuda"),
+  TranslatedName(LangKal(), name: "Bermuda"),
+  TranslatedName(LangLat(), name: "Bermuda"),
+  TranslatedName(LangLtz(), name: "Bermuda"),
+  TranslatedName(LangLin(), name: "Bermuda"),
+  TranslatedName(LangLit(), name: "Bermuda"),
+  TranslatedName(LangMsa(), name: "Bermuda"),
+  TranslatedName(LangMlt(), name: "Bermuda"),
+  TranslatedName(LangNor(), name: "Bermuda"),
+  TranslatedName(LangRon(), name: "Bermuda"),
+  TranslatedName(LangSme(), name: "Bermuda"),
+  TranslatedName(LangSna(), name: "Bermuda"),
+  TranslatedName(LangSwa(), name: "Bermuda"),
+  TranslatedName(LangTuk(), name: "Bermuda"),
+  TranslatedName(LangVie(), name: "Bermuda"),
+  TranslatedName(LangZha(), name: "Bwzmuda"),
+  TranslatedName(LangNob(), name: "Bermuda"),
+  TranslatedName(LangTgl(), name: "Bermuda"),
 ];

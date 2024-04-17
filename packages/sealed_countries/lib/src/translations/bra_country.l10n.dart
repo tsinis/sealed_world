@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 158 translations for a Brazil country:
+/// Provides 163 translations for a Brazil country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -67,6 +68,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -89,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -122,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -129,6 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tahitian
@@ -408,4 +413,9 @@ const braCountryTranslations = [
   TranslatedName(LangWln(), name: "Braezi"),
   TranslatedName(LangXho(), name: "Brasil"),
   TranslatedName(LangZha(), name: "Bahsih"),
+  TranslatedName(LangAbk(), name: "Бразилиа"),
+  TranslatedName(LangKal(), name: "Brazil"),
+  TranslatedName(LangMsa(), name: "Brazil"),
+  TranslatedName(LangSna(), name: "Brazil"),
+  TranslatedName(LangSwa(), name: "Brazil"),
 ];

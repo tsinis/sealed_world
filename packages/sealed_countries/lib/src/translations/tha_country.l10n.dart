@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 142 translations for a Thailand country:
+/// Provides 153 translations for a Thailand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -54,7 +57,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -77,8 +83,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -89,6 +97,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -104,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -365,4 +376,15 @@ const thaCountryTranslations = [
   TranslatedName(LangZha(), name: "Daigoz"),
   TranslatedName(LangSrd(), name: "Tailàndia"),
   TranslatedName(LangXho(), name: "EThailand"),
+  TranslatedName(LangAbk(), name: "Таиланд"),
+  TranslatedName(LangAfr(), name: "Thailand"),
+  TranslatedName(LangDan(), name: "Thailand"),
+  TranslatedName(LangInd(), name: "Thailand"),
+  TranslatedName(LangIle(), name: "Thailand"),
+  TranslatedName(LangIbo(), name: "Thailand"),
+  TranslatedName(LangLtz(), name: "Thailand"),
+  TranslatedName(LangMsa(), name: "Thailand"),
+  TranslatedName(LangNor(), name: "Thailand"),
+  TranslatedName(LangSna(), name: "Thailand"),
+  TranslatedName(LangNob(), name: "Thailand"),
 ];

@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 133 translations for a Slovenia country:
+/// Provides 153 translations for a Slovenia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -40,6 +41,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -56,14 +58,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -71,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -78,6 +87,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -87,6 +98,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -95,11 +109,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -107,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -124,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -131,6 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const svnCountryTranslations = [
   CountryName(
@@ -358,4 +378,24 @@ const svnCountryTranslations = [
   TranslatedName(LangTgl(), name: "Eslobenya"),
   TranslatedName(LangVol(), name: "Sloveniyän"),
   TranslatedName(LangXho(), name: "ESlovenia"),
+  TranslatedName(LangAbk(), name: "Словениа"),
+  TranslatedName(LangFao(), name: "Slovenia"),
+  TranslatedName(LangIna(), name: "Slovenia"),
+  TranslatedName(LangInd(), name: "Slovenia"),
+  TranslatedName(LangIle(), name: "Slovenia"),
+  TranslatedName(LangIbo(), name: "Slovenia"),
+  TranslatedName(LangKik(), name: "Slovenia"),
+  TranslatedName(LangKal(), name: "Slovenia"),
+  TranslatedName(LangLat(), name: "Slovenia"),
+  TranslatedName(LangMlg(), name: "Slovenia"),
+  TranslatedName(LangMsa(), name: "Slovenia"),
+  TranslatedName(LangNor(), name: "Slovenia"),
+  TranslatedName(LangRoh(), name: "Slovenia"),
+  TranslatedName(LangRon(), name: "Slovenia"),
+  TranslatedName(LangSme(), name: "Slovenia"),
+  TranslatedName(LangSna(), name: "Slovenia"),
+  TranslatedName(LangSwa(), name: "Slovenia"),
+  TranslatedName(LangVie(), name: "Slovenia"),
+  TranslatedName(LangZha(), name: "Swhlozvwnznizya"),
+  TranslatedName(LangNob(), name: "Slovenia"),
 ];

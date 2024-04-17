@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a Romania country:
+/// Provides 153 translations for a Romania country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -25,6 +26,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
@@ -57,7 +59,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
@@ -68,6 +72,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -75,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -82,6 +88,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -91,6 +99,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -102,13 +113,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -126,6 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -134,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const rouCountryTranslations = [
   CountryName(language: LangEng(), official: "Romania", common: "Romania"),
@@ -273,4 +289,20 @@ const rouCountryTranslations = [
   TranslatedName(LangVol(), name: "Rumän"),
   TranslatedName(LangWln(), name: "Roumaneye"),
   TranslatedName(LangXho(), name: "ERomania"),
+  TranslatedName(LangAbk(), name: "Румыниа"),
+  TranslatedName(LangCat(), name: "Romania"),
+  TranslatedName(LangIna(), name: "Romania"),
+  TranslatedName(LangIbo(), name: "Romania"),
+  TranslatedName(LangKik(), name: "Romania"),
+  TranslatedName(LangLat(), name: "Romania"),
+  TranslatedName(LangMlg(), name: "Romania"),
+  TranslatedName(LangMsa(), name: "Romania"),
+  TranslatedName(LangNor(), name: "Romania"),
+  TranslatedName(LangOci(), name: "Romania"),
+  TranslatedName(LangSrd(), name: "Romania"),
+  TranslatedName(LangSna(), name: "Romania"),
+  TranslatedName(LangSwa(), name: "Romania"),
+  TranslatedName(LangVie(), name: "Romania"),
+  TranslatedName(LangZha(), name: "Lozmajnizya"),
+  TranslatedName(LangNob(), name: "Romania"),
 ];

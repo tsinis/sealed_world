@@ -2,34 +2,44 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 94 translations for a Guam country:
+/// Provides 131 translations for a Guam country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -40,8 +50,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -51,32 +68,47 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -85,15 +117,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const gumCountryTranslations = [
   CountryName(language: LangEng(), official: "Guam", common: "Guam"),
@@ -194,4 +230,41 @@ const gumCountryTranslations = [
   TranslatedName(LangMri(), name: "Kuama"),
   TranslatedName(LangSrd(), name: "Guàm"),
   TranslatedName(LangXho(), name: "EGuam"),
+  TranslatedName(LangAbk(), name: "Гуам"),
+  TranslatedName(LangAfr(), name: "Guam"),
+  TranslatedName(LangArg(), name: "Guam"),
+  TranslatedName(LangCat(), name: "Guam"),
+  TranslatedName(LangDan(), name: "Guam"),
+  TranslatedName(LangEus(), name: "Guam"),
+  TranslatedName(LangFao(), name: "Guam"),
+  TranslatedName(LangFry(), name: "Guam"),
+  TranslatedName(LangGle(), name: "Guam"),
+  TranslatedName(LangGla(), name: "Guam"),
+  TranslatedName(LangGlg(), name: "Guam"),
+  TranslatedName(LangIna(), name: "Guam"),
+  TranslatedName(LangInd(), name: "Guam"),
+  TranslatedName(LangIle(), name: "Guam"),
+  TranslatedName(LangIbo(), name: "Guam"),
+  TranslatedName(LangJav(), name: "Guam"),
+  TranslatedName(LangKal(), name: "Guam"),
+  TranslatedName(LangLat(), name: "Guama"),
+  TranslatedName(LangLtz(), name: "Guam"),
+  TranslatedName(LangMlg(), name: "Guam"),
+  TranslatedName(LangMsa(), name: "Guam"),
+  TranslatedName(LangMlt(), name: "Guam"),
+  TranslatedName(LangNor(), name: "Guam"),
+  TranslatedName(LangOci(), name: "Guam"),
+  TranslatedName(LangQue(), name: "Guam"),
+  TranslatedName(LangRoh(), name: "Guam"),
+  TranslatedName(LangRon(), name: "Guam"),
+  TranslatedName(LangSme(), name: "Guam"),
+  TranslatedName(LangSlv(), name: "Guam"),
+  TranslatedName(LangSna(), name: "Guam"),
+  TranslatedName(LangSqi(), name: "Guam"),
+  TranslatedName(LangSwa(), name: "Guam"),
+  TranslatedName(LangTuk(), name: "Guam"),
+  TranslatedName(LangVie(), name: "Guam"),
+  TranslatedName(LangZha(), name: "Gvanhdauj"),
+  TranslatedName(LangNob(), name: "Guam"),
+  TranslatedName(LangTgl(), name: "Guam"),
 ];

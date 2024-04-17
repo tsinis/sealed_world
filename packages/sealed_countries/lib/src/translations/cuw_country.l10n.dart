@@ -2,32 +2,43 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 92 translations for a Curaçao country:
+/// Provides 123 translations for a Curaçao country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
+/// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -38,40 +49,57 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
+/// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -85,10 +113,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const cuwCountryTranslations = [
   CountryName(
@@ -219,4 +250,35 @@ const cuwCountryTranslations = [
   TranslatedName(LangGle(), name: "Cúrasó"),
   TranslatedName(LangMri(), name: "Kurahao"),
   TranslatedName(LangXho(), name: "ECuraçao"),
+  TranslatedName(LangAbk(), name: "Киурасао"),
+  TranslatedName(LangAfr(), name: "Curaçao"),
+  TranslatedName(LangArg(), name: "Curaçao"),
+  TranslatedName(LangCat(), name: "Curaçao"),
+  TranslatedName(LangDan(), name: "Curaçao"),
+  TranslatedName(LangEwe(), name: "Kurakao nutome"),
+  TranslatedName(LangEpo(), name: "Kuracao"),
+  TranslatedName(LangEus(), name: "Curaçao"),
+  TranslatedName(LangFao(), name: "Curaçao"),
+  TranslatedName(LangFry(), name: "Curaçao"),
+  TranslatedName(LangGla(), name: "Curaçao"),
+  TranslatedName(LangGlg(), name: "Curaçao"),
+  TranslatedName(LangIna(), name: "Curaçao"),
+  TranslatedName(LangInd(), name: "Curaçao"),
+  TranslatedName(LangIle(), name: "Curaçao"),
+  TranslatedName(LangKal(), name: "Curaçao"),
+  TranslatedName(LangKas(), name: "کیوراکو"),
+  TranslatedName(LangLat(), name: "Insula Curacensis"),
+  TranslatedName(LangLtz(), name: "Curaçao"),
+  TranslatedName(LangMlt(), name: "Curaçao"),
+  TranslatedName(LangNor(), name: "Curaçao"),
+  TranslatedName(LangOci(), name: "Curaçao"),
+  TranslatedName(LangRoh(), name: "Curaçao"),
+  TranslatedName(LangRon(), name: "Curaçao"),
+  TranslatedName(LangSrd(), name: "Curaçao"),
+  TranslatedName(LangSme(), name: "Curaçao"),
+  TranslatedName(LangSlv(), name: "Curaçao"),
+  TranslatedName(LangVie(), name: "Curaçao"),
+  TranslatedName(LangYor(), name: "Curaçao"),
+  TranslatedName(LangNob(), name: "Curaçao"),
+  TranslatedName(LangTgl(), name: "Curaçao"),
 ];

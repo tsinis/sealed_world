@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Montserrat country:
+/// Provides 138 translations for a Montserrat country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -15,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -27,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -34,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -47,10 +52,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -62,30 +73,47 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -99,7 +127,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
@@ -289,4 +319,35 @@ const msrCountryTranslations = [
   TranslatedName(LangKur(), name: "Montserat"),
   TranslatedName(LangMri(), name: "Monoterā"),
   TranslatedName(LangXho(), name: "EMontserrat"),
+  TranslatedName(LangAbk(), name: "Монтсеррат"),
+  TranslatedName(LangAfr(), name: "Montserrat"),
+  TranslatedName(LangDan(), name: "Montserrat"),
+  TranslatedName(LangEus(), name: "Montserrat"),
+  TranslatedName(LangFao(), name: "Montserrat"),
+  TranslatedName(LangFry(), name: "Montserrat"),
+  TranslatedName(LangIna(), name: "Montserrat"),
+  TranslatedName(LangInd(), name: "Montserrat"),
+  TranslatedName(LangIle(), name: "Montserrat"),
+  TranslatedName(LangIbo(), name: "Montserrat"),
+  TranslatedName(LangIsl(), name: "Montserrat"),
+  TranslatedName(LangKal(), name: "Montserrat"),
+  TranslatedName(LangLat(), name: "Montserrat"),
+  TranslatedName(LangLtz(), name: "Montserrat"),
+  TranslatedName(LangMlg(), name: "Montserrat"),
+  TranslatedName(LangMsa(), name: "Montserrat"),
+  TranslatedName(LangMlt(), name: "Montserrat"),
+  TranslatedName(LangNor(), name: "Montserrat"),
+  TranslatedName(LangOci(), name: "Montserrat"),
+  TranslatedName(LangQue(), name: "Montserrat"),
+  TranslatedName(LangRoh(), name: "Montserrat"),
+  TranslatedName(LangRon(), name: "Montserrat"),
+  TranslatedName(LangSrd(), name: "Montserrat"),
+  TranslatedName(LangSme(), name: "Montserrat"),
+  TranslatedName(LangSlv(), name: "Montserrat"),
+  TranslatedName(LangSna(), name: "Montserrat"),
+  TranslatedName(LangSom(), name: "Montserrat"),
+  TranslatedName(LangSwa(), name: "Montserrat"),
+  TranslatedName(LangVie(), name: "Montserrat"),
+  TranslatedName(LangNob(), name: "Montserrat"),
+  TranslatedName(LangTgl(), name: "Montserrat"),
 ];

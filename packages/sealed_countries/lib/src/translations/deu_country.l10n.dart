@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 164 translations for a Germany country:
+/// Provides 166 translations for a Germany country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -110,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nuosu
 /// - Occitan
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -124,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -420,4 +422,6 @@ const deuCountryTranslations = [
   TranslatedName(LangWln(), name: "Almagne"),
   TranslatedName(LangXho(), name: "IJamani"),
   TranslatedName(LangZha(), name: "Dwzgoz"),
+  TranslatedName(LangOrm(), name: "Germany"),
+  TranslatedName(LangSna(), name: "Germany"),
 ];

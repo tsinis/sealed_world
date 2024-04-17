@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Haiti country:
+/// Provides 147 translations for a Haiti country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -16,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -36,6 +39,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -46,18 +50,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Greek (modern)
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Kongo
@@ -66,19 +77,27 @@ import "../model/country/submodels/country_name.dart";
 /// - Kyrgyz
 /// - Lao
 /// - Latin
+/// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -87,13 +106,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -104,12 +130,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Thai
 /// - Tibetan Standard
 /// - Tigrinya
+/// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -118,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const htiCountryTranslations = [
   CountryName(
@@ -306,4 +335,33 @@ const htiCountryTranslations = [
   TranslatedName(LangVol(), name: "Haitiyän"),
   TranslatedName(LangWln(), name: "Ayiti"),
   TranslatedName(LangXho(), name: "EHaiti"),
+  TranslatedName(LangAbk(), name: "Гаити"),
+  TranslatedName(LangDan(), name: "Haiti"),
+  TranslatedName(LangEus(), name: "Haiti"),
+  TranslatedName(LangFao(), name: "Haiti"),
+  TranslatedName(LangHau(), name: "Haiti"),
+  TranslatedName(LangIna(), name: "Haiti"),
+  TranslatedName(LangInd(), name: "Haiti"),
+  TranslatedName(LangIle(), name: "Haiti"),
+  TranslatedName(LangJav(), name: "Haiti"),
+  TranslatedName(LangKik(), name: "Haiti"),
+  TranslatedName(LangKal(), name: "Haiti"),
+  TranslatedName(LangLtz(), name: "Haiti"),
+  TranslatedName(LangLav(), name: "Haiti"),
+  TranslatedName(LangMlg(), name: "Haiti"),
+  TranslatedName(LangMri(), name: "Haiti"),
+  TranslatedName(LangMsa(), name: "Haiti"),
+  TranslatedName(LangNor(), name: "Haiti"),
+  TranslatedName(LangRoh(), name: "Haiti"),
+  TranslatedName(LangRon(), name: "Haiti"),
+  TranslatedName(LangSrd(), name: "Haiti"),
+  TranslatedName(LangSme(), name: "Haiti"),
+  TranslatedName(LangSlv(), name: "Haiti"),
+  TranslatedName(LangSna(), name: "Haiti"),
+  TranslatedName(LangSom(), name: "Haiti"),
+  TranslatedName(LangSwa(), name: "Haiti"),
+  TranslatedName(LangTon(), name: "Haiti"),
+  TranslatedName(LangVie(), name: "Haiti"),
+  TranslatedName(LangZha(), name: "Haijdi"),
+  TranslatedName(LangNob(), name: "Haiti"),
 ];

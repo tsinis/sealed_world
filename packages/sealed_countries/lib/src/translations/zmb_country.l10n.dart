@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Zambia country:
+/// Provides 145 translations for a Zambia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -27,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -38,6 +42,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -49,26 +54,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -77,6 +91,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -84,18 +102,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -113,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -120,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const zmbCountryTranslations = [
   CountryName(
@@ -332,4 +355,27 @@ const zmbCountryTranslations = [
   TranslatedName(LangTgl(), name: "Sambya"),
   TranslatedName(LangVol(), name: "Zambiyän"),
   TranslatedName(LangXho(), name: "EZambia"),
+  TranslatedName(LangAbk(), name: "Замбиа"),
+  TranslatedName(LangArg(), name: "Zambia"),
+  TranslatedName(LangDan(), name: "Zambia"),
+  TranslatedName(LangEus(), name: "Zambia"),
+  TranslatedName(LangGlg(), name: "Zambia"),
+  TranslatedName(LangIna(), name: "Zambia"),
+  TranslatedName(LangInd(), name: "Zambia"),
+  TranslatedName(LangIle(), name: "Zambia"),
+  TranslatedName(LangIbo(), name: "Zambia"),
+  TranslatedName(LangKik(), name: "Zambia"),
+  TranslatedName(LangKal(), name: "Zambia"),
+  TranslatedName(LangLat(), name: "Zambia"),
+  TranslatedName(LangMlg(), name: "Zambia"),
+  TranslatedName(LangMsa(), name: "Zambia"),
+  TranslatedName(LangNor(), name: "Zambia"),
+  TranslatedName(LangOci(), name: "Zambia"),
+  TranslatedName(LangRon(), name: "Zambia"),
+  TranslatedName(LangSme(), name: "Zambia"),
+  TranslatedName(LangSna(), name: "Zambia"),
+  TranslatedName(LangSwa(), name: "Zambia"),
+  TranslatedName(LangVie(), name: "Zambia"),
+  TranslatedName(LangZha(), name: "Canbijya"),
+  TranslatedName(LangNob(), name: "Zambia"),
 ];

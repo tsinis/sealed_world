@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Falkland Islands country:
+/// Provides 139 translations for a Falkland Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -87,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -363,4 +367,8 @@ const flkCountryTranslations = [
   TranslatedName(LangMri(), name: "Motu Whākarangi"),
   TranslatedName(LangSrd(), name: "Ìsulas Falkland"),
   TranslatedName(LangXho(), name: "EFalkland Islands"),
+  TranslatedName(LangAbk(), name: "Фолклендтәи ад-хақәа"),
+  TranslatedName(LangArg(), name: "Islas Malvinas"),
+  TranslatedName(LangIle(), name: "Insules Falkland"),
+  TranslatedName(LangOci(), name: "Isclas Falkland"),
 ];

@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 107 translations for a Caribbean Netherlands country:
+/// Provides 117 translations for a Caribbean Netherlands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -29,7 +31,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
+/// - Ewe
 /// - Faroese
 /// - Finnish
 /// - French
@@ -39,12 +43,15 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -68,9 +75,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -90,6 +99,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tamil
 /// - Telugu
 /// - Thai
@@ -315,4 +325,14 @@ const besCountryTranslations = [
   TranslatedName(LangSrd(), name: "Caràibes olandesas"),
   TranslatedName(LangXho(), name: "ECaribbean Netherlands"),
   TranslatedName(LangYor(), name: "Kàríbíánì ti Nẹ́dálándì"),
+  TranslatedName(LangAbk(), name: "Бонеир, Синт-Естатиуси Сабеи"),
+  TranslatedName(LangArg(), name: "Caribe neerlandés"),
+  TranslatedName(LangEwe(), name: "Karibbeatɔwo ƒe Nedalanɖs nutome"),
+  TranslatedName(LangEpo(), name: "Karibia Nederlando"),
+  TranslatedName(LangHau(), name: "Caribbean Netherlands"),
+  TranslatedName(LangIle(), name: "Caribean Nederland"),
+  TranslatedName(LangIbo(), name: "Caribbean Netherlands"),
+  TranslatedName(LangOci(), name: "Païses Basses caribèus"),
+  TranslatedName(LangSme(), name: "Vuolleeatnamat Karibe"),
+  TranslatedName(LangTgl(), name: "Netherland Antilles sa Caribbean"),
 ];

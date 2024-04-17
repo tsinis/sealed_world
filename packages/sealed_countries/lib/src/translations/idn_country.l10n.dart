@@ -2,21 +2,24 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 139 translations for a Indonesia country:
+/// Provides 160 translations for a Indonesia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -39,9 +42,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -54,15 +59,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -70,6 +81,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -78,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -88,6 +101,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -97,12 +114,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -110,6 +129,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -127,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -369,4 +390,25 @@ const idnCountryTranslations = [
   TranslatedName(LangZha(), name: "Yindunizsihya"),
   TranslatedName(LangSrd(), name: "Indonèsia"),
   TranslatedName(LangXho(), name: "E-Indonesia"),
+  TranslatedName(LangAbk(), name: "Индонезиа"),
+  TranslatedName(LangArg(), name: "Indonesia"),
+  TranslatedName(LangEus(), name: "Indonesia"),
+  TranslatedName(LangFao(), name: "Indonesia"),
+  TranslatedName(LangGlg(), name: "Indonesia"),
+  TranslatedName(LangIna(), name: "Indonesia"),
+  TranslatedName(LangInd(), name: "Indonesia"),
+  TranslatedName(LangIle(), name: "Indonesia"),
+  TranslatedName(LangIbo(), name: "Indonesia"),
+  TranslatedName(LangKik(), name: "Indonesia"),
+  TranslatedName(LangKal(), name: "Indonesia"),
+  TranslatedName(LangLat(), name: "Indonesia"),
+  TranslatedName(LangMsa(), name: "Indonesia"),
+  TranslatedName(LangNor(), name: "Indonesia"),
+  TranslatedName(LangOci(), name: "Indonesia"),
+  TranslatedName(LangRoh(), name: "Indonesia"),
+  TranslatedName(LangSme(), name: "Indonesia"),
+  TranslatedName(LangSna(), name: "Indonesia"),
+  TranslatedName(LangSwa(), name: "Indonesia"),
+  TranslatedName(LangVie(), name: "Indonesia"),
+  TranslatedName(LangNob(), name: "Indonesia"),
 ];

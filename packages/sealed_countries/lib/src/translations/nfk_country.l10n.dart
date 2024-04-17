@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Norfolk Island country:
+/// Provides 134 translations for a Norfolk Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -27,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -51,6 +54,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -65,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -83,6 +88,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -104,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -345,4 +352,11 @@ const nfkCountryTranslations = [
   TranslatedName(LangMri(), name: "Te Moutere Nōpoke"),
   TranslatedName(LangSrd(), name: "Ìsula Norfolk"),
   TranslatedName(LangXho(), name: "ENorfolk Island"),
+  TranslatedName(LangAbk(), name: "Ад-ха Норфолк"),
+  TranslatedName(LangArg(), name: "Isla Norfolk"),
+  TranslatedName(LangDan(), name: "Norfolk Island"),
+  TranslatedName(LangIle(), name: "Insul Norfolk"),
+  TranslatedName(LangLat(), name: "Insula Norfolcia"),
+  TranslatedName(LangOci(), name: "Illas Norfòlk"),
+  TranslatedName(LangTgl(), name: "Norfolk Island"),
 ];

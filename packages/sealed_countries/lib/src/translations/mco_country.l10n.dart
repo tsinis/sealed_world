@@ -2,9 +2,12 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a Monaco country:
+/// Provides 154 translations for a Monaco country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -29,6 +32,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -53,12 +57,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -77,8 +84,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -87,6 +96,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -95,11 +107,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -126,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -133,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mcoCountryTranslations = [
   CountryName(
@@ -355,4 +372,22 @@ const mcoCountryTranslations = [
   TranslatedName(LangVol(), name: "Monakän"),
   TranslatedName(LangSrd(), name: "Mònacu"),
   TranslatedName(LangXho(), name: "EMonaco"),
+  TranslatedName(LangAbk(), name: "Монако"),
+  TranslatedName(LangAfr(), name: "Monaco"),
+  TranslatedName(LangDan(), name: "Monaco"),
+  TranslatedName(LangGla(), name: "Monaco"),
+  TranslatedName(LangIna(), name: "Monaco"),
+  TranslatedName(LangIbo(), name: "Monaco"),
+  TranslatedName(LangKal(), name: "Monaco"),
+  TranslatedName(LangLtz(), name: "Monaco"),
+  TranslatedName(LangMsa(), name: "Monaco"),
+  TranslatedName(LangNor(), name: "Monaco"),
+  TranslatedName(LangRoh(), name: "Monaco"),
+  TranslatedName(LangRon(), name: "Monaco"),
+  TranslatedName(LangSme(), name: "Monaco"),
+  TranslatedName(LangSna(), name: "Monaco"),
+  TranslatedName(LangSwa(), name: "Monaco"),
+  TranslatedName(LangVie(), name: "Monaco"),
+  TranslatedName(LangZha(), name: "Mohnazgoh"),
+  TranslatedName(LangNob(), name: "Monaco"),
 ];

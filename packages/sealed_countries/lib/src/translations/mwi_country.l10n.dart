@@ -2,28 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 106 translations for a Malawi country:
+/// Provides 141 translations for a Malawi country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chichewa (Chewa/Nyanja)
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -36,30 +43,43 @@ import "../model/country/submodels/country_name.dart";
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -67,24 +87,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -94,16 +125,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mwiCountryTranslations = [
   CountryName(
@@ -296,4 +331,39 @@ const mwiCountryTranslations = [
   TranslatedName(LangSsw(), name: "IMalawi"),
   TranslatedName(LangVol(), name: "Malaviyän"),
   TranslatedName(LangXho(), name: "EMalawi"),
+  TranslatedName(LangAbk(), name: "Малави"),
+  TranslatedName(LangAfr(), name: "Malawi"),
+  TranslatedName(LangArg(), name: "Malawi"),
+  TranslatedName(LangBam(), name: "Malawi"),
+  TranslatedName(LangCat(), name: "Malawi"),
+  TranslatedName(LangDan(), name: "Malawi"),
+  TranslatedName(LangEus(), name: "Malawi"),
+  TranslatedName(LangHau(), name: "Malawi"),
+  TranslatedName(LangIna(), name: "Malawi"),
+  TranslatedName(LangInd(), name: "Malawi"),
+  TranslatedName(LangIle(), name: "Malawi"),
+  TranslatedName(LangIbo(), name: "Malawi"),
+  TranslatedName(LangJav(), name: "Malawi"),
+  TranslatedName(LangKik(), name: "Malawi"),
+  TranslatedName(LangKal(), name: "Malawi"),
+  TranslatedName(LangLtz(), name: "Malawi"),
+  TranslatedName(LangLug(), name: "Malawi"),
+  TranslatedName(LangLin(), name: "Malawi"),
+  TranslatedName(LangMsa(), name: "Malawi"),
+  TranslatedName(LangNor(), name: "Malawi"),
+  TranslatedName(LangOci(), name: "Malavi"),
+  TranslatedName(LangQue(), name: "Malawi"),
+  TranslatedName(LangRoh(), name: "Malawi"),
+  TranslatedName(LangRun(), name: "Malawi"),
+  TranslatedName(LangRon(), name: "Malawi"),
+  TranslatedName(LangSrd(), name: "Malawi"),
+  TranslatedName(LangSme(), name: "Malawi"),
+  TranslatedName(LangSna(), name: "Malawi"),
+  TranslatedName(LangSwa(), name: "Malawi"),
+  TranslatedName(LangTuk(), name: "Malawi"),
+  TranslatedName(LangVie(), name: "Malawi"),
+  TranslatedName(LangWol(), name: "Malawi"),
+  TranslatedName(LangZha(), name: "Majlahveiz"),
+  TranslatedName(LangNob(), name: "Malawi"),
+  TranslatedName(LangTgl(), name: "Malawi"),
 ];

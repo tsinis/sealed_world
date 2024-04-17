@@ -2,14 +2,17 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 143 translations for a Mexico country:
+/// Provides 157 translations for a Mexico country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
@@ -31,6 +34,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -56,13 +60,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Inupiaq
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -83,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -94,6 +103,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -103,10 +114,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -140,6 +153,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mexCountryTranslations = [
   CountryName(
@@ -377,4 +391,18 @@ const mexCountryTranslations = [
   TranslatedName(LangVie(), name: "México"),
   TranslatedName(LangVol(), name: "Mäxikän"),
   TranslatedName(LangXho(), name: "EMexico"),
+  TranslatedName(LangAbk(), name: "Мексика"),
+  TranslatedName(LangArg(), name: "Mexico"),
+  TranslatedName(LangChu(), name: "Ме́ѯїко"),
+  TranslatedName(LangDan(), name: "Mexico"),
+  TranslatedName(LangIna(), name: "Mexico"),
+  TranslatedName(LangIle(), name: "Mexico"),
+  TranslatedName(LangIbo(), name: "Mexico"),
+  TranslatedName(LangKal(), name: "Mexiko"),
+  TranslatedName(LangMsa(), name: "Mexico"),
+  TranslatedName(LangNor(), name: "Mexico"),
+  TranslatedName(LangRoh(), name: "Mexico"),
+  TranslatedName(LangSna(), name: "Mexico"),
+  TranslatedName(LangZha(), name: "Mwzsihgoh"),
+  TranslatedName(LangNob(), name: "Mexico"),
 ];

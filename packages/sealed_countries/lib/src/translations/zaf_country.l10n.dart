@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 156 translations for a South Africa country:
+/// Provides 161 translations for a South Africa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -55,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -62,6 +64,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -113,6 +116,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -151,6 +155,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const zafCountryTranslations = [
   CountryName(
@@ -420,4 +425,9 @@ const zafCountryTranslations = [
   TranslatedName(LangVen(), name: "Afurika Tshipembe"),
   TranslatedName(LangVol(), name: "Sulüdafrikän"),
   TranslatedName(LangWln(), name: "Nonne-Afrike"),
+  TranslatedName(LangAbk(), name: "Алада-Африкатәи ареспублика"),
+  TranslatedName(LangIbo(), name: "South Africa"),
+  TranslatedName(LangKal(), name: "Kujalleqafrika"),
+  TranslatedName(LangSna(), name: "South Africa"),
+  TranslatedName(LangZha(), name: "Nanz Feih"),
 ];

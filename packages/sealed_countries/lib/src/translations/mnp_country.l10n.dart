@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Northern Mariana Islands country:
+/// Provides 133 translations for a Northern Mariana Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -51,6 +53,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -65,6 +68,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -83,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -104,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -364,4 +370,10 @@ const mnpCountryTranslations = [
   TranslatedName(LangMri(), name: "Ngā Motu Mariana ki te Raki"),
   TranslatedName(LangSrd(), name: "Ìsulas Mariannas setentrionales"),
   TranslatedName(LangXho(), name: "ENorthern Mariana Islands"),
+  TranslatedName(LangAbk(), name: "Аҩадатәи Мариантәи ад-хақәа"),
+  TranslatedName(LangArg(), name: "Islas Marianas d’o Norte"),
+  TranslatedName(LangIle(), name: "Insules Nord Mariana"),
+  TranslatedName(LangLat(), name: "Insulae Marianae Septentrionales"),
+  TranslatedName(LangOci(), name: "Illas Mariannas del Nòrd"),
+  TranslatedName(LangTgl(), name: "Northern Mariana Islands"),
 ];

@@ -2,15 +2,17 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Saint Helena, Ascension and Tristan da Cunha
-/// country:
+/// Provides 137 translations for a Saint Helena, Ascension and Tristan da Cunha
+///  country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -53,10 +55,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -84,7 +89,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Northern Ndebele
 /// - Northern Sami
 /// - Norwegian
+/// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -104,12 +111,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -125,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const shnCountryTranslations = [
   CountryName(
@@ -353,4 +363,17 @@ const shnCountryTranslations = [
   TranslatedName(LangSrd(), name: "Santa Elene"),
   TranslatedName(LangTgl(), name: "St. Helena"),
   TranslatedName(LangXho(), name: "ESt. Helena"),
+  TranslatedName(LangAbk(), name: "Иԥшьоу Елена ладгьылбжьаха"),
+  TranslatedName(LangArg(), name: "Santa Helena"),
+  TranslatedName(LangBod(), name: "སེནྚ། ཧེ་ལི་ན།"),
+  TranslatedName(LangIle(), name: "Sant-Helena"),
+  TranslatedName(LangKal(), name: "Saint Helena"),
+  TranslatedName(
+    LangLat(),
+    name: "Sancta Helena, Ascensio et Tristan da Cunha",
+  ),
+  TranslatedName(LangOci(), name: "Santa Elena"),
+  TranslatedName(LangSwa(), name: "St. Helena"),
+  TranslatedName(LangZha(), name: "Swnghwzlwznaz"),
+  TranslatedName(LangNob(), name: "St. Helena"),
 ];

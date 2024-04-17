@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 151 translations for a Denmark country:
+/// Provides 158 translations for a Denmark country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -58,6 +59,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Interlingue
 /// - Irish
@@ -87,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -116,10 +120,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Sundanese
 /// - Swahili
@@ -148,6 +154,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const dnkCountryTranslations = [
   CountryName(
@@ -385,4 +392,11 @@ const dnkCountryTranslations = [
   TranslatedName(LangTgl(), name: "Dinamarka"),
   TranslatedName(LangVol(), name: "Danän"),
   TranslatedName(LangXho(), name: "EDenmark"),
+  TranslatedName(LangAbk(), name: "Даниа"),
+  TranslatedName(LangInd(), name: "Denmark"),
+  TranslatedName(LangIbo(), name: "Denmark"),
+  TranslatedName(LangMsa(), name: "Denmark"),
+  TranslatedName(LangSna(), name: "Denmark"),
+  TranslatedName(LangSom(), name: "Denmark"),
+  TranslatedName(LangZha(), name: "Danhmwz"),
 ];

@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Jersey country:
+/// Provides 125 translations for a Jersey country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -12,18 +14,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -31,6 +36,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -43,9 +49,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -55,14 +68,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Lao
 /// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -70,14 +90,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tajik
@@ -93,10 +118,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
+/// - Yoruba
 /// - Zulu.
 const jeyCountryTranslations = [
   CountryName(
@@ -244,4 +272,32 @@ const jeyCountryTranslations = [
   TranslatedName(LangFul(), name: "𞤔𞤫𞤪𞤧𞤭𞥅"),
   TranslatedName(LangHau(), name: "Kasar Jersey"),
   TranslatedName(LangXho(), name: "EJersey"),
+  TranslatedName(LangAbk(), name: "Џерси"),
+  TranslatedName(LangAfr(), name: "Jersey"),
+  TranslatedName(LangCat(), name: "Jersey"),
+  TranslatedName(LangDan(), name: "Jersey"),
+  TranslatedName(LangEus(), name: "Jersey"),
+  TranslatedName(LangFao(), name: "Jersey"),
+  TranslatedName(LangFry(), name: "Jersey"),
+  TranslatedName(LangIna(), name: "Jersey"),
+  TranslatedName(LangInd(), name: "Jersey"),
+  TranslatedName(LangIle(), name: "Jersey"),
+  TranslatedName(LangIbo(), name: "Jersey"),
+  TranslatedName(LangIsl(), name: "Jersey"),
+  TranslatedName(LangJav(), name: "Jersey"),
+  TranslatedName(LangKal(), name: "Jersey"),
+  TranslatedName(LangLtz(), name: "Jersey"),
+  TranslatedName(LangLin(), name: "Jelezy"),
+  TranslatedName(LangMsa(), name: "Jersey"),
+  TranslatedName(LangMlt(), name: "Jersey"),
+  TranslatedName(LangNor(), name: "Jersey"),
+  TranslatedName(LangQue(), name: "Jersey"),
+  TranslatedName(LangRoh(), name: "Jersey"),
+  TranslatedName(LangSrd(), name: "Jersey"),
+  TranslatedName(LangSme(), name: "Jersey"),
+  TranslatedName(LangSlv(), name: "Jersey"),
+  TranslatedName(LangSwa(), name: "Jersey"),
+  TranslatedName(LangVie(), name: "Jersey"),
+  TranslatedName(LangYor(), name: "Jersey"),
+  TranslatedName(LangNob(), name: "Jersey"),
 ];

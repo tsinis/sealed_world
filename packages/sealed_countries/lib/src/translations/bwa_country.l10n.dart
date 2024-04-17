@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Botswana country:
+/// Provides 150 translations for a Botswana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -21,11 +25,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -37,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -48,23 +55,33 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
 /// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -74,6 +91,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -83,18 +104,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -104,6 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
@@ -113,9 +141,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Volapük
 /// - Walloon
 /// - Welsh
+/// - Western Frisian
+/// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const bwaCountryTranslations = [
   CountryName(
@@ -329,4 +360,35 @@ const bwaCountryTranslations = [
   TranslatedName(LangVol(), name: "Zvanän"),
   TranslatedName(LangWln(), name: "Boswana"),
   TranslatedName(LangXho(), name: "EBotswana"),
+  TranslatedName(LangAbk(), name: "Ботсвана"),
+  TranslatedName(LangAfr(), name: "Botswana"),
+  TranslatedName(LangArg(), name: "Botswana"),
+  TranslatedName(LangCat(), name: "Botswana"),
+  TranslatedName(LangDan(), name: "Botswana"),
+  TranslatedName(LangEus(), name: "Botswana"),
+  TranslatedName(LangFry(), name: "Botswana"),
+  TranslatedName(LangGlg(), name: "Botswana"),
+  TranslatedName(LangIna(), name: "Botswana"),
+  TranslatedName(LangInd(), name: "Botswana"),
+  TranslatedName(LangIle(), name: "Botswana"),
+  TranslatedName(LangIbo(), name: "Botswana"),
+  TranslatedName(LangJav(), name: "Botswana"),
+  TranslatedName(LangKik(), name: "Botswana"),
+  TranslatedName(LangKal(), name: "Botswana"),
+  TranslatedName(LangLin(), name: "Botswana"),
+  TranslatedName(LangMsa(), name: "Botswana"),
+  TranslatedName(LangNor(), name: "Botswana"),
+  TranslatedName(LangOci(), name: "Botswana"),
+  TranslatedName(LangRoh(), name: "Botswana"),
+  TranslatedName(LangRun(), name: "Botswana"),
+  TranslatedName(LangRon(), name: "Botswana"),
+  TranslatedName(LangSme(), name: "Botswana"),
+  TranslatedName(LangSag(), name: "Botswana"),
+  TranslatedName(LangSna(), name: "Botswana"),
+  TranslatedName(LangSwa(), name: "Botswana"),
+  TranslatedName(LangTuk(), name: "Botswana"),
+  TranslatedName(LangWol(), name: "Botswana"),
+  TranslatedName(LangZha(), name: "Bozswvajnaz"),
+  TranslatedName(LangNob(), name: "Botswana"),
+  TranslatedName(LangTgl(), name: "Botswana"),
 ];

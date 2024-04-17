@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 150 translations for a Philippines country:
+/// Provides 155 translations for a Philippines country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -26,6 +27,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -54,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -112,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -137,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -390,4 +395,9 @@ const phlCountryTranslations = [
   TranslatedName(LangZha(), name: "Feihlizbinh"),
   TranslatedName(LangSrd(), name: "Filipinas"),
   TranslatedName(LangXho(), name: "EPhilippines"),
+  TranslatedName(LangAbk(), name: "Филиппин"),
+  TranslatedName(LangCos(), name: "Filippine"),
+  TranslatedName(LangIbo(), name: "Philippines"),
+  TranslatedName(LangSna(), name: "Philippines"),
+  TranslatedName(LangVie(), name: "Philippines"),
 ];

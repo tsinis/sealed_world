@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 136 translations for a São Tomé and Príncipe country:
+/// Provides 142 translations for a São Tomé and Príncipe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -53,10 +55,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -88,6 +92,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -115,6 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -381,4 +387,10 @@ const stpCountryTranslations = [
   TranslatedName(LangSrd(), name: "São Tomé e Príncipe"),
   TranslatedName(LangTgl(), name: "São Tomé & Príncipe"),
   TranslatedName(LangXho(), name: "ESão Tomé & Príncipe"),
+  TranslatedName(LangAbk(), name: "Сан-Томеи Принсипиеи"),
+  TranslatedName(LangArg(), name: "Sant Tomé y Principe"),
+  TranslatedName(LangBod(), name: "ས་འོ་ཏོད་མད། དང༌། པ྄རིན་སི་པེ།"),
+  TranslatedName(LangIle(), name: "São-Tomé e Príncipe"),
+  TranslatedName(LangKal(), name: "São Tomé aamma Príncipe"),
+  TranslatedName(LangOci(), name: "Sant Tomàs e Prince"),
 ];

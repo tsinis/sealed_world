@@ -2,31 +2,37 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Belize country:
+/// Provides 151 translations for a Belize country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -39,6 +45,7 @@ import "../model/country/submodels/country_name.dart";
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -50,14 +57,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -66,8 +80,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -77,6 +93,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -86,17 +106,23 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -114,12 +140,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const blzCountryTranslations = [
   CountryName(language: LangEng(), official: "Belize", common: "Belize"),
@@ -244,4 +273,33 @@ const blzCountryTranslations = [
   TranslatedName(LangVol(), name: "Belisän"),
   TranslatedName(LangMri(), name: "Perīhi"),
   TranslatedName(LangXho(), name: "EBelize"),
+  TranslatedName(LangAbk(), name: "Белиз"),
+  TranslatedName(LangAfr(), name: "Belize"),
+  TranslatedName(LangArg(), name: "Belize"),
+  TranslatedName(LangCat(), name: "Belize"),
+  TranslatedName(LangDan(), name: "Belize"),
+  TranslatedName(LangEus(), name: "Belize"),
+  TranslatedName(LangFry(), name: "Belize"),
+  TranslatedName(LangIna(), name: "Belize"),
+  TranslatedName(LangInd(), name: "Belize"),
+  TranslatedName(LangIle(), name: "Belize"),
+  TranslatedName(LangIbo(), name: "Belize"),
+  TranslatedName(LangKik(), name: "Belize"),
+  TranslatedName(LangKal(), name: "Belize"),
+  TranslatedName(LangLtz(), name: "Belize"),
+  TranslatedName(LangLug(), name: "Belize"),
+  TranslatedName(LangMsa(), name: "Belize"),
+  TranslatedName(LangNor(), name: "Belize"),
+  TranslatedName(LangOci(), name: "Belize"),
+  TranslatedName(LangRoh(), name: "Belize"),
+  TranslatedName(LangRun(), name: "Belize"),
+  TranslatedName(LangRon(), name: "Belize"),
+  TranslatedName(LangSrd(), name: "Belize"),
+  TranslatedName(LangSme(), name: "Belize"),
+  TranslatedName(LangSlv(), name: "Belize"),
+  TranslatedName(LangSna(), name: "Belize"),
+  TranslatedName(LangSwa(), name: "Belize"),
+  TranslatedName(LangVie(), name: "Belize"),
+  TranslatedName(LangZha(), name: "Bwzlizswh"),
+  TranslatedName(LangNob(), name: "Belize"),
 ];

@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 141 translations for a Mozambique country:
+/// Provides 151 translations for a Mozambique country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -30,6 +32,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -41,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -56,10 +60,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -80,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -106,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -132,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Uyghur
 /// - Uzbek
 /// - Venda
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -374,4 +384,14 @@ const mozCountryTranslations = [
   TranslatedName(LangVen(), name: "Mozambikwi"),
   TranslatedName(LangVol(), name: "Mozambikän"),
   TranslatedName(LangXho(), name: "EMozambique"),
+  TranslatedName(LangAbk(), name: "Мозамбик"),
+  TranslatedName(LangArg(), name: "Mozambique"),
+  TranslatedName(LangDan(), name: "Mozambique"),
+  TranslatedName(LangGlg(), name: "Mozambique"),
+  TranslatedName(LangIna(), name: "Mozambique"),
+  TranslatedName(LangIle(), name: "Mozambic"),
+  TranslatedName(LangKal(), name: "Moçambique"),
+  TranslatedName(LangMsa(), name: "Mozambique"),
+  TranslatedName(LangSna(), name: "Mozambique"),
+  TranslatedName(LangVie(), name: "Mozambique"),
 ];

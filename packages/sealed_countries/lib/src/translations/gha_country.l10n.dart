@@ -2,29 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Ghana country:
+/// Provides 148 translations for a Ghana country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -48,9 +54,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -68,7 +80,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -78,6 +93,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -85,18 +104,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -111,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -119,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const ghaCountryTranslations = [
   CountryName(
@@ -298,4 +325,31 @@ const ghaCountryTranslations = [
   TranslatedName(LangVol(), name: "Ganän"),
   TranslatedName(LangWln(), name: "Gana"),
   TranslatedName(LangXho(), name: "EGhana"),
+  TranslatedName(LangAbk(), name: "Гана"),
+  TranslatedName(LangAfr(), name: "Ghana"),
+  TranslatedName(LangArg(), name: "Ghana"),
+  TranslatedName(LangCat(), name: "Ghana"),
+  TranslatedName(LangDan(), name: "Ghana"),
+  TranslatedName(LangEus(), name: "Ghana"),
+  TranslatedName(LangIna(), name: "Ghana"),
+  TranslatedName(LangInd(), name: "Ghana"),
+  TranslatedName(LangIle(), name: "Ghana"),
+  TranslatedName(LangIbo(), name: "Ghana"),
+  TranslatedName(LangJav(), name: "Ghana"),
+  TranslatedName(LangKal(), name: "Ghana"),
+  TranslatedName(LangLtz(), name: "Ghana"),
+  TranslatedName(LangMlg(), name: "Ghana"),
+  TranslatedName(LangMsa(), name: "Ghana"),
+  TranslatedName(LangNor(), name: "Ghana"),
+  TranslatedName(LangOci(), name: "Ganà"),
+  TranslatedName(LangRoh(), name: "Ghana"),
+  TranslatedName(LangRon(), name: "Ghana"),
+  TranslatedName(LangSrd(), name: "Ghana"),
+  TranslatedName(LangSme(), name: "Ghana"),
+  TranslatedName(LangSna(), name: "Ghana"),
+  TranslatedName(LangSwa(), name: "Ghana"),
+  TranslatedName(LangVie(), name: "Ghana"),
+  TranslatedName(LangZha(), name: "Gyahnaz"),
+  TranslatedName(LangNob(), name: "Ghana"),
+  TranslatedName(LangTgl(), name: "Ghana"),
 ];

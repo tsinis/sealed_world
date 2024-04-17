@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Peru country:
+/// Provides 147 translations for a Peru country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -14,7 +15,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Assamese
 /// - Aymara
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -30,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -37,10 +41,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -52,24 +58,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Komi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latin
+/// - Latvian
 /// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -78,6 +95,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -86,19 +106,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -108,16 +134,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
+/// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const perCountryTranslations = [
   CountryName(
@@ -277,4 +307,34 @@ const perCountryTranslations = [
   TranslatedName(LangFul(), name: "𞤆𞤫𞤪𞤵𞥅"),
   TranslatedName(LangSrd(), name: "Perù"),
   TranslatedName(LangXho(), name: "EPeru"),
+  TranslatedName(LangAfr(), name: "Peru"),
+  TranslatedName(LangBam(), name: "Peru"),
+  TranslatedName(LangDan(), name: "Peru"),
+  TranslatedName(LangEus(), name: "Peru"),
+  TranslatedName(LangFao(), name: "Peru"),
+  TranslatedName(LangIna(), name: "Peru"),
+  TranslatedName(LangInd(), name: "Peru"),
+  TranslatedName(LangIbo(), name: "Peru"),
+  TranslatedName(LangJav(), name: "Peru"),
+  TranslatedName(LangKik(), name: "Peru"),
+  TranslatedName(LangKal(), name: "Peru"),
+  TranslatedName(LangLtz(), name: "Peru"),
+  TranslatedName(LangLug(), name: "Peru"),
+  TranslatedName(LangLit(), name: "Peru"),
+  TranslatedName(LangLav(), name: "Peru"),
+  TranslatedName(LangMsa(), name: "Peru"),
+  TranslatedName(LangNor(), name: "Peru"),
+  TranslatedName(LangRoh(), name: "Peru"),
+  TranslatedName(LangRun(), name: "Peru"),
+  TranslatedName(LangRon(), name: "Peru"),
+  TranslatedName(LangSme(), name: "Peru"),
+  TranslatedName(LangSlv(), name: "Peru"),
+  TranslatedName(LangSna(), name: "Peru"),
+  TranslatedName(LangSwa(), name: "Peru"),
+  TranslatedName(LangTuk(), name: "Peru"),
+  TranslatedName(LangVie(), name: "Peru"),
+  TranslatedName(LangWol(), name: "Peru"),
+  TranslatedName(LangZha(), name: "Biluj"),
+  TranslatedName(LangNob(), name: "Peru"),
+  TranslatedName(LangTgl(), name: "Peru"),
 ];

@@ -2,30 +2,37 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Eritrea country:
+/// Provides 149 translations for a Eritrea country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afar
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -33,9 +40,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -48,15 +57,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
@@ -68,13 +82,19 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -84,10 +104,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -95,8 +118,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -112,6 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -308,4 +334,30 @@ const eriCountryTranslations = [
   TranslatedName(LangVol(), name: "Lerüträn"),
   TranslatedName(LangChv(), name: "Эритрей"),
   TranslatedName(LangXho(), name: "E-Eritrea"),
+  TranslatedName(LangAar(), name: "Eretria"),
+  TranslatedName(LangAbk(), name: "Еритреиа"),
+  TranslatedName(LangAfr(), name: "Eritrea"),
+  TranslatedName(LangArg(), name: "Eritrea"),
+  TranslatedName(LangCat(), name: "Eritrea"),
+  TranslatedName(LangDan(), name: "Eritrea"),
+  TranslatedName(LangEus(), name: "Eritrea"),
+  TranslatedName(LangFao(), name: "Eritrea"),
+  TranslatedName(LangGlg(), name: "Eritrea"),
+  TranslatedName(LangIna(), name: "Eritrea"),
+  TranslatedName(LangInd(), name: "Eritrea"),
+  TranslatedName(LangIbo(), name: "Eritrea"),
+  TranslatedName(LangKik(), name: "Eritrea"),
+  TranslatedName(LangKal(), name: "Eritrea"),
+  TranslatedName(LangLtz(), name: "Eritrea"),
+  TranslatedName(LangMlg(), name: "Eritrea"),
+  TranslatedName(LangMsa(), name: "Eritrea"),
+  TranslatedName(LangNor(), name: "Eritrea"),
+  TranslatedName(LangRoh(), name: "Eritrea"),
+  TranslatedName(LangSrd(), name: "Eritrea"),
+  TranslatedName(LangSme(), name: "Eritrea"),
+  TranslatedName(LangSna(), name: "Eritrea"),
+  TranslatedName(LangSwa(), name: "Eritrea"),
+  TranslatedName(LangVie(), name: "Eritrea"),
+  TranslatedName(LangNob(), name: "Eritrea"),
+  TranslatedName(LangTgl(), name: "Eritrea"),
 ];

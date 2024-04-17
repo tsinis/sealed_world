@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 129 translations for a Comoros country:
+/// Provides 140 translations for a Comoros country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,10 +54,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -74,7 +79,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
@@ -84,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -105,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -118,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -125,6 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const comCountryTranslations = [
   CountryName(
@@ -328,4 +339,15 @@ const comCountryTranslations = [
   TranslatedName(LangMri(), name: "Komoro"),
   TranslatedName(LangSrd(), name: "Comoras"),
   TranslatedName(LangXho(), name: "EComoros"),
+  TranslatedName(LangAbk(), name: "Комор"),
+  TranslatedName(LangArg(), name: "Comoros"),
+  TranslatedName(LangIna(), name: "Comoros"),
+  TranslatedName(LangIle(), name: "Comoros"),
+  TranslatedName(LangKal(), name: "Comoros"),
+  TranslatedName(LangMsa(), name: "Comoros"),
+  TranslatedName(LangMlt(), name: "Comoros"),
+  TranslatedName(LangOci(), name: "Comòras"),
+  TranslatedName(LangVie(), name: "Comoros"),
+  TranslatedName(LangZha(), name: "Gohmozloz"),
+  TranslatedName(LangTgl(), name: "Komoros"),
 ];

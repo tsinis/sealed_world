@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Christmas Island country:
+/// Provides 128 translations for a Christmas Island country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -48,10 +51,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -60,7 +65,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -75,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -94,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -322,4 +331,13 @@ const cxrCountryTranslations = [
   TranslatedName(LangSrd(), name: "Ìsula de sa Natividade"),
   TranslatedName(LangXho(), name: "EChristmas Island"),
   TranslatedName(LangYor(), name: "Erékùsù Christmas"),
+  TranslatedName(LangAbk(), name: "ад-ха Қьырса"),
+  TranslatedName(LangArg(), name: "Isla Chirstmas"),
+  TranslatedName(LangEpo(), name: "Kristnaskinsulo"),
+  TranslatedName(LangIle(), name: "Insul Christmas"),
+  TranslatedName(LangKal(), name: "Jul-qeqertaq"),
+  TranslatedName(LangLat(), name: "Insula Christi Natalis"),
+  TranslatedName(LangLin(), name: "Esanga ya Mbótama"),
+  TranslatedName(LangOci(), name: "Illa Christmas"),
+  TranslatedName(LangTgl(), name: "Christmas Island"),
 ];

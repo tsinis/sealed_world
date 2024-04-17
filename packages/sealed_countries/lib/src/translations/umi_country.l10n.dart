@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a United States Minor Outlying Islands
+/// Provides 125 translations for a United States Minor Outlying Islands
 /// country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -50,6 +52,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -63,6 +66,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kyrgyz
 /// - Lao
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -76,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -375,4 +380,12 @@ const umiCountryTranslations = [
   TranslatedName(LangTgl(), name: "U.S. Outlying Islands"),
   TranslatedName(LangXho(), name: "I-U.S. Outlying Islands"),
   TranslatedName(LangYor(), name: "Àwọn Erékùsù Kékèké Agbègbè US"),
+  TranslatedName(LangAbk(), name: "Нҭыҵтәи малыетәи ад-қәа (ЕАШ)"),
+  TranslatedName(LangArg(), name: "Islas perifericas d’os EUA"),
+  TranslatedName(LangIle(), name: "Insules periferic de USA"),
+  TranslatedName(LangOci(), name: "Isole Minori Outlying di i Stati Uniti"),
+  TranslatedName(
+    LangLin(),
+    name: "Bisanga Mokɛ́na Mosíká bya Lisangá lya Ameríka",
+  ),
 ];

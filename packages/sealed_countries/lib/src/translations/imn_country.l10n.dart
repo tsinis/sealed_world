@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Isle of Man country:
+/// Provides 134 translations for a Isle of Man country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -27,6 +28,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -49,12 +51,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,9 +72,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
+/// - Lingala
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -309,4 +318,13 @@ const imnCountryTranslations = [
   TranslatedName(LangHau(), name: "Isle na Mutum"),
   TranslatedName(LangSrd(), name: "Ìsula de Man"),
   TranslatedName(LangXho(), name: "E-Isle of Man"),
+  TranslatedName(LangAbk(), name: "ад-ха Мен"),
+  TranslatedName(LangDan(), name: "Isle of Man"),
+  TranslatedName(LangIle(), name: "Insul de Man"),
+  TranslatedName(LangIbo(), name: "Isle of Man"),
+  TranslatedName(LangKal(), name: "Isle of Man"),
+  TranslatedName(LangLtz(), name: "Isle of Man"),
+  TranslatedName(LangLin(), name: "Esanga ya Man"),
+  TranslatedName(LangMsa(), name: "Isle of Man"),
+  TranslatedName(LangMlt(), name: "Isle of Man"),
 ];

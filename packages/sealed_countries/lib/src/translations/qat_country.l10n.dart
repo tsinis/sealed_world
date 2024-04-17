@@ -2,30 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 130 translations for a Qatar country:
+/// Provides 150 translations for a Qatar country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -50,11 +55,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -76,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -85,18 +95,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -121,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -128,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const qatCountryTranslations = [
   CountryName(language: LangEng(), official: "State of Qatar", common: "Qatar"),
@@ -276,4 +295,24 @@ const qatCountryTranslations = [
   TranslatedName(LangVol(), name: "Katarän"),
   TranslatedName(LangSrd(), name: "Catar"),
   TranslatedName(LangXho(), name: "EQatar"),
+  TranslatedName(LangAbk(), name: "Катар"),
+  TranslatedName(LangArg(), name: "Qatar"),
+  TranslatedName(LangCat(), name: "Qatar"),
+  TranslatedName(LangDan(), name: "Qatar"),
+  TranslatedName(LangEus(), name: "Qatar"),
+  TranslatedName(LangIna(), name: "Qatar"),
+  TranslatedName(LangInd(), name: "Qatar"),
+  TranslatedName(LangIbo(), name: "Qatar"),
+  TranslatedName(LangKal(), name: "Quatar"),
+  TranslatedName(LangMsa(), name: "Qatar"),
+  TranslatedName(LangNor(), name: "Qatar"),
+  TranslatedName(LangOci(), name: "Catar"),
+  TranslatedName(LangQue(), name: "Qatar"),
+  TranslatedName(LangRon(), name: "Qatar"),
+  TranslatedName(LangSme(), name: "Qatar"),
+  TranslatedName(LangSna(), name: "Qatar"),
+  TranslatedName(LangSwa(), name: "Qatar"),
+  TranslatedName(LangVie(), name: "Qatar"),
+  TranslatedName(LangZha(), name: "Gajdajwj"),
+  TranslatedName(LangNob(), name: "Qatar"),
 ];

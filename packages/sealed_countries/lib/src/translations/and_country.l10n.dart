@@ -2,20 +2,24 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 122 translations for a Andorra country:
+/// Provides 152 translations for a Andorra country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
+/// - (Scottish) Gaelic
 /// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -23,11 +27,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -35,9 +41,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -48,11 +56,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -65,19 +79,26 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -88,10 +109,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -100,8 +124,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -111,16 +137,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const andCountryTranslations = [
   CountryName(
@@ -329,4 +359,34 @@ const andCountryTranslations = [
   TranslatedName(LangVol(), name: "Landorän"),
   TranslatedName(LangMri(), name: "Anatōra"),
   TranslatedName(LangXho(), name: "E-Andorra"),
+  TranslatedName(LangAfr(), name: "Andorra"),
+  TranslatedName(LangArg(), name: "Andorra"),
+  TranslatedName(LangCat(), name: "Andorra"),
+  TranslatedName(LangDan(), name: "Andorra"),
+  TranslatedName(LangEus(), name: "Andorra"),
+  TranslatedName(LangFao(), name: "Andorra"),
+  TranslatedName(LangFry(), name: "Andorra"),
+  TranslatedName(LangGla(), name: "Andorra"),
+  TranslatedName(LangGlg(), name: "Andorra"),
+  TranslatedName(LangIna(), name: "Andorra"),
+  TranslatedName(LangInd(), name: "Andorra"),
+  TranslatedName(LangIle(), name: "Andorra"),
+  TranslatedName(LangIbo(), name: "Andorra"),
+  TranslatedName(LangIsl(), name: "Andorra"),
+  TranslatedName(LangKal(), name: "Andorra"),
+  TranslatedName(LangLat(), name: "Andorra"),
+  TranslatedName(LangLtz(), name: "Andorra"),
+  TranslatedName(LangMsa(), name: "Andorra"),
+  TranslatedName(LangMlt(), name: "Andorra"),
+  TranslatedName(LangNor(), name: "Andorra"),
+  TranslatedName(LangRoh(), name: "Andorra"),
+  TranslatedName(LangRon(), name: "Andorra"),
+  TranslatedName(LangSrd(), name: "Andorra"),
+  TranslatedName(LangSme(), name: "Andorra"),
+  TranslatedName(LangSwa(), name: "Andorra"),
+  TranslatedName(LangTuk(), name: "Andorra"),
+  TranslatedName(LangVie(), name: "Andorra"),
+  TranslatedName(LangZha(), name: "Anhdauwj"),
+  TranslatedName(LangNob(), name: "Andorra"),
+  TranslatedName(LangTgl(), name: "Andorra"),
 ];

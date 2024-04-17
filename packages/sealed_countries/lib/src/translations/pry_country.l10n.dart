@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 126 translations for a Paraguay country:
+/// Provides 147 translations for a Paraguay country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -53,9 +56,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -72,8 +81,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -81,6 +92,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -89,12 +103,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -103,6 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -117,12 +134,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const pryCountryTranslations = [
   CountryName(
@@ -343,4 +363,25 @@ const pryCountryTranslations = [
   TranslatedName(LangMri(), name: "Parakai"),
   TranslatedName(LangSrd(), name: "Paraguày"),
   TranslatedName(LangXho(), name: "EParaguay"),
+  TranslatedName(LangAbk(), name: "Парагваи"),
+  TranslatedName(LangAfr(), name: "Paraguay"),
+  TranslatedName(LangDan(), name: "Paraguay"),
+  TranslatedName(LangFry(), name: "Paraguay"),
+  TranslatedName(LangIna(), name: "Paraguay"),
+  TranslatedName(LangInd(), name: "Paraguay"),
+  TranslatedName(LangIle(), name: "Paraguay"),
+  TranslatedName(LangIbo(), name: "Paraguay"),
+  TranslatedName(LangJav(), name: "Paraguay"),
+  TranslatedName(LangKal(), name: "Paraguay"),
+  TranslatedName(LangLtz(), name: "Paraguay"),
+  TranslatedName(LangMsa(), name: "Paraguay"),
+  TranslatedName(LangNor(), name: "Paraguay"),
+  TranslatedName(LangRon(), name: "Paraguay"),
+  TranslatedName(LangSme(), name: "Paraguay"),
+  TranslatedName(LangSna(), name: "Paraguay"),
+  TranslatedName(LangSwa(), name: "Paraguay"),
+  TranslatedName(LangVie(), name: "Paraguay"),
+  TranslatedName(LangZha(), name: "Bahlahgveih"),
+  TranslatedName(LangNob(), name: "Paraguay"),
+  TranslatedName(LangTgl(), name: "Paraguay"),
 ];

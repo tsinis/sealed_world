@@ -25,11 +25,23 @@ class PhpConverter {
     return translations;
   }
 
-  static Map<String, String> extractL10nFromSimpleMap(String phpFileContent) {
+  static Map<String, String> extractL10nFromSimpleMap(
+    String phpFileContent, [
+    String? startFrom,
+  ]) {
     final translations = <String, String>{};
-    final regex = RegExp(r"'(\w+)'\s*=>\s*'([^']+)'");
 
-    final matches = regex.allMatches(phpFileContent);
+    var startIndex = 0;
+    if (startFrom != null) {
+      startIndex = phpFileContent.indexOf(startFrom);
+      if (startIndex == -1) return translations;
+    }
+
+    // ignore: avoid-substring, only use the substring from 'startFrom'.
+    final contentToMatch = phpFileContent.substring(startIndex);
+
+    final regex = RegExp(r"'(\w+)'\s*=>\s*'([^']+)'");
+    final matches = regex.allMatches(contentToMatch);
 
     for (final match in matches) {
       final code = match.group(1); // Code.

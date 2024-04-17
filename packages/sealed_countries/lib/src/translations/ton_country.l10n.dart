@@ -2,26 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 94 translations for a Tonga country:
+/// Provides 144 translations for a Tonga country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -29,9 +38,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -40,24 +52,46 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kinyarwanda
+/// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -66,15 +100,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
+/// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tahitian
 /// - Tajik
 /// - Tamil
@@ -83,16 +126,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Thai
 /// - Tibetan Standard
 /// - Tigrinya
+/// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
+/// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const tonCountryTranslations = [
   CountryName(
@@ -253,4 +302,54 @@ const tonCountryTranslations = [
   TranslatedName(LangVol(), name: "Tonguäns"),
   TranslatedName(LangChv(), name: "Тонга"),
   TranslatedName(LangXho(), name: "ETonga"),
+  TranslatedName(LangAbk(), name: "Тонга"),
+  TranslatedName(LangAfr(), name: "Tonga"),
+  TranslatedName(LangArg(), name: "Tonga"),
+  TranslatedName(LangBam(), name: "Tonga"),
+  TranslatedName(LangCat(), name: "Tonga"),
+  TranslatedName(LangDan(), name: "Tonga"),
+  TranslatedName(LangEus(), name: "Tonga"),
+  TranslatedName(LangFao(), name: "Tonga"),
+  TranslatedName(LangFry(), name: "Tonga"),
+  TranslatedName(LangGle(), name: "Tonga"),
+  TranslatedName(LangGla(), name: "Tonga"),
+  TranslatedName(LangGlg(), name: "Tonga"),
+  TranslatedName(LangHau(), name: "Tonga"),
+  TranslatedName(LangIna(), name: "Tonga"),
+  TranslatedName(LangInd(), name: "Tonga"),
+  TranslatedName(LangIle(), name: "Tonga"),
+  TranslatedName(LangIbo(), name: "Tonga"),
+  TranslatedName(LangIsl(), name: "Tonga"),
+  TranslatedName(LangJav(), name: "Tonga"),
+  TranslatedName(LangKik(), name: "Tonga"),
+  TranslatedName(LangKal(), name: "Tonga"),
+  TranslatedName(LangLat(), name: "Tonga"),
+  TranslatedName(LangLtz(), name: "Tonga"),
+  TranslatedName(LangLug(), name: "Tonga"),
+  TranslatedName(LangLin(), name: "Tonga"),
+  TranslatedName(LangLit(), name: "Tonga"),
+  TranslatedName(LangLav(), name: "Tonga"),
+  TranslatedName(LangMri(), name: "Tonga"),
+  TranslatedName(LangMsa(), name: "Tonga"),
+  TranslatedName(LangMlt(), name: "Tonga"),
+  TranslatedName(LangNor(), name: "Tonga"),
+  TranslatedName(LangRoh(), name: "Tonga"),
+  TranslatedName(LangRun(), name: "Tonga"),
+  TranslatedName(LangRon(), name: "Tonga"),
+  TranslatedName(LangKin(), name: "Tonga"),
+  TranslatedName(LangSrd(), name: "Tonga"),
+  TranslatedName(LangSme(), name: "Tonga"),
+  TranslatedName(LangSag(), name: "Tonga"),
+  TranslatedName(LangSlv(), name: "Tonga"),
+  TranslatedName(LangSna(), name: "Tonga"),
+  TranslatedName(LangSom(), name: "Tonga"),
+  TranslatedName(LangSqi(), name: "Tonga"),
+  TranslatedName(LangSwa(), name: "Tonga"),
+  TranslatedName(LangTuk(), name: "Tonga"),
+  TranslatedName(LangTon(), name: "Tonga"),
+  TranslatedName(LangVie(), name: "Tonga"),
+  TranslatedName(LangWol(), name: "Tonga"),
+  TranslatedName(LangZha(), name: "Tanghgyah"),
+  TranslatedName(LangNob(), name: "Tonga"),
+  TranslatedName(LangTgl(), name: "Tonga"),
 ];

@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a United Arab Emirates country:
+/// Provides 152 translations for a United Arab Emirates country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -55,6 +56,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -111,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -121,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -143,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const areCountryTranslations = [
   CountryName(
@@ -408,4 +413,9 @@ const areCountryTranslations = [
   TranslatedName(LangChv(), name: "Арапсен Пӗрлешӳллӗ Эмирачӗ"),
   TranslatedName(LangSrd(), name: "Emirados Àrabos Unidos"),
   TranslatedName(LangXho(), name: "E-United Arab Emirates"),
+  TranslatedName(LangAbk(), name: "ЕАЕ"),
+  TranslatedName(LangIbo(), name: "United Arab Emirates"),
+  TranslatedName(LangSna(), name: "United Arab Emirates"),
+  TranslatedName(LangZha(), name: "Azlenzciuz"),
+  TranslatedName(LangTgl(), name: "United Arab Emirates"),
 ];

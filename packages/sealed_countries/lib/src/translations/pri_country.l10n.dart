@@ -2,28 +2,34 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 110 translations for a Puerto Rico country:
+/// Provides 137 translations for a Puerto Rico country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -45,12 +51,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -61,25 +70,38 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -88,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -101,11 +124,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const priCountryTranslations = [
   CountryName(
@@ -310,4 +336,31 @@ const priCountryTranslations = [
   TranslatedName(LangIna(), name: "Porto Rico"),
   TranslatedName(LangMri(), name: "Peta Riko"),
   TranslatedName(LangXho(), name: "EPuerto Rico"),
+  TranslatedName(LangAbk(), name: "Пуерто-Рико"),
+  TranslatedName(LangAfr(), name: "Puerto Rico"),
+  TranslatedName(LangArg(), name: "Puerto Rico"),
+  TranslatedName(LangCat(), name: "Puerto Rico"),
+  TranslatedName(LangDan(), name: "Puerto Rico"),
+  TranslatedName(LangEus(), name: "Puerto Rico"),
+  TranslatedName(LangFry(), name: "Puerto Rico"),
+  TranslatedName(LangIle(), name: "Porto-Rico"),
+  TranslatedName(LangIbo(), name: "Puerto Rico"),
+  TranslatedName(LangKal(), name: "Puerto Rico"),
+  TranslatedName(LangLat(), name: "Portus Dives"),
+  TranslatedName(LangLtz(), name: "Puerto Rico"),
+  TranslatedName(LangMsa(), name: "Puerto Rico"),
+  TranslatedName(LangMlt(), name: "Puerto Rico"),
+  TranslatedName(LangNor(), name: "Puerto Rico"),
+  TranslatedName(LangOci(), name: "Puerto Rico"),
+  TranslatedName(LangQue(), name: "Puerto Rico"),
+  TranslatedName(LangRoh(), name: "Puerto Rico"),
+  TranslatedName(LangRon(), name: "Puerto Rico"),
+  TranslatedName(LangSrd(), name: "Puerto Rico"),
+  TranslatedName(LangSme(), name: "Puerto Rico"),
+  TranslatedName(LangSna(), name: "Puerto Rico"),
+  TranslatedName(LangSwa(), name: "Puerto Rico"),
+  TranslatedName(LangVie(), name: "Puerto Rico"),
+  TranslatedName(LangZha(), name: "Bohdohlizgoz"),
+  TranslatedName(LangNob(), name: "Puerto Rico"),
+  TranslatedName(LangTgl(), name: "Puerto Rico"),
 ];

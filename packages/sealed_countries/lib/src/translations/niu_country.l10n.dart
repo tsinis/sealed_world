@@ -2,26 +2,34 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 92 translations for a Niue country:
+/// Provides 135 translations for a Niue country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -29,9 +37,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -41,57 +51,90 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
+/// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const niuCountryTranslations = [
   CountryName(language: LangEng(), official: "Niue", common: "Niue"),
@@ -186,4 +229,47 @@ const niuCountryTranslations = [
   TranslatedName(LangKin(), name: "Niyuwe"),
   TranslatedName(LangChv(), name: "Ниуэ"),
   TranslatedName(LangXho(), name: "ENiue"),
+  TranslatedName(LangAbk(), name: "Ниуе"),
+  TranslatedName(LangAfr(), name: "Niue"),
+  TranslatedName(LangArg(), name: "Niue"),
+  TranslatedName(LangBod(), name: "ནིའུ་ཝ།"),
+  TranslatedName(LangCat(), name: "Niue"),
+  TranslatedName(LangDan(), name: "Niue"),
+  TranslatedName(LangEus(), name: "Niue"),
+  TranslatedName(LangFao(), name: "Niue"),
+  TranslatedName(LangGle(), name: "Niue"),
+  TranslatedName(LangGla(), name: "Niue"),
+  TranslatedName(LangGlg(), name: "Niue"),
+  TranslatedName(LangIna(), name: "Niue"),
+  TranslatedName(LangInd(), name: "Niue"),
+  TranslatedName(LangIle(), name: "Niue"),
+  TranslatedName(LangIbo(), name: "Niue"),
+  TranslatedName(LangIsl(), name: "Niue"),
+  TranslatedName(LangJav(), name: "Niue"),
+  TranslatedName(LangKik(), name: "Niue"),
+  TranslatedName(LangKal(), name: "Niue"),
+  TranslatedName(LangLat(), name: "Niue"),
+  TranslatedName(LangLtz(), name: "Niue"),
+  TranslatedName(LangLav(), name: "Niue"),
+  TranslatedName(LangMri(), name: "Niue"),
+  TranslatedName(LangMsa(), name: "Niue"),
+  TranslatedName(LangMlt(), name: "Niue"),
+  TranslatedName(LangNor(), name: "Niue"),
+  TranslatedName(LangOci(), name: "Niue"),
+  TranslatedName(LangQue(), name: "Niue"),
+  TranslatedName(LangRoh(), name: "Niue"),
+  TranslatedName(LangRon(), name: "Niue"),
+  TranslatedName(LangSrd(), name: "Niue"),
+  TranslatedName(LangSme(), name: "Niue"),
+  TranslatedName(LangSag(), name: "Niue"),
+  TranslatedName(LangSlv(), name: "Niue"),
+  TranslatedName(LangSna(), name: "Niue"),
+  TranslatedName(LangSom(), name: "Niue"),
+  TranslatedName(LangSqi(), name: "Niue"),
+  TranslatedName(LangSwa(), name: "Niue"),
+  TranslatedName(LangTuk(), name: "Niue"),
+  TranslatedName(LangVie(), name: "Niue"),
+  TranslatedName(LangZha(), name: "Niujaih"),
+  TranslatedName(LangNob(), name: "Niue"),
+  TranslatedName(LangTgl(), name: "Niue"),
 ];

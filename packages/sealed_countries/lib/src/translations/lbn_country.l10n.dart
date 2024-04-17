@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Lebanon country:
+/// Provides 157 translations for a Lebanon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -28,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -56,12 +58,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -113,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -146,6 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const lbnCountryTranslations = [
   CountryName(
@@ -377,4 +384,12 @@ const lbnCountryTranslations = [
   TranslatedName(LangVol(), name: "Libanän"),
   TranslatedName(LangSrd(), name: "Lèbanu"),
   TranslatedName(LangXho(), name: "ELebanon"),
+  TranslatedName(LangAbk(), name: "Ливан"),
+  TranslatedName(LangCos(), name: "Libanu"),
+  TranslatedName(LangInd(), name: "Lebanon"),
+  TranslatedName(LangIbo(), name: "Lebanon"),
+  TranslatedName(LangKal(), name: "Libanon"),
+  TranslatedName(LangSna(), name: "Lebanon"),
+  TranslatedName(LangSwa(), name: "Lebanon"),
+  TranslatedName(LangZha(), name: "Lizbahnwn"),
 ];

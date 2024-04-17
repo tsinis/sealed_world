@@ -2,34 +2,45 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 92 translations for a Tuvalu country:
+/// Provides 131 translations for a Tuvalu country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -39,39 +50,66 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -86,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -187,4 +226,43 @@ const tuvCountryTranslations = [
   TranslatedName(LangGle(), name: "Túvalú"),
   TranslatedName(LangMri(), name: "Tūwaru"),
   TranslatedName(LangXho(), name: "ETuvalu"),
+  TranslatedName(LangAbk(), name: "Тувалу"),
+  TranslatedName(LangAfr(), name: "Tuvalu"),
+  TranslatedName(LangArg(), name: "Tuvalu"),
+  TranslatedName(LangBam(), name: "Tuvalu"),
+  TranslatedName(LangCat(), name: "Tuvalu"),
+  TranslatedName(LangDan(), name: "Tuvalu"),
+  TranslatedName(LangEus(), name: "Tuvalu"),
+  TranslatedName(LangFao(), name: "Tuvalu"),
+  TranslatedName(LangGlg(), name: "Tuvalu"),
+  TranslatedName(LangIna(), name: "Tuvalu"),
+  TranslatedName(LangInd(), name: "Tuvalu"),
+  TranslatedName(LangIle(), name: "Tuvalu"),
+  TranslatedName(LangIbo(), name: "Tuvalu"),
+  TranslatedName(LangJav(), name: "Tuvalu"),
+  TranslatedName(LangKik(), name: "Tuvalu"),
+  TranslatedName(LangKal(), name: "Tuvalu"),
+  TranslatedName(LangLat(), name: "Tuvalu"),
+  TranslatedName(LangLtz(), name: "Tuvalu"),
+  TranslatedName(LangLug(), name: "Tuvalu"),
+  TranslatedName(LangLin(), name: "Tuvalu"),
+  TranslatedName(LangLit(), name: "Tuvalu"),
+  TranslatedName(LangLav(), name: "Tuvalu"),
+  TranslatedName(LangMsa(), name: "Tuvalu"),
+  TranslatedName(LangMlt(), name: "Tuvalu"),
+  TranslatedName(LangNor(), name: "Tuvalu"),
+  TranslatedName(LangOci(), name: "Tuvalu"),
+  TranslatedName(LangQue(), name: "Tuvalu"),
+  TranslatedName(LangRoh(), name: "Tuvalu"),
+  TranslatedName(LangRun(), name: "Tuvalu"),
+  TranslatedName(LangRon(), name: "Tuvalu"),
+  TranslatedName(LangSrd(), name: "Tuvalu"),
+  TranslatedName(LangSme(), name: "Tuvalu"),
+  TranslatedName(LangSlv(), name: "Tuvalu"),
+  TranslatedName(LangSna(), name: "Tuvalu"),
+  TranslatedName(LangSqi(), name: "Tuvalu"),
+  TranslatedName(LangSwa(), name: "Tuvalu"),
+  TranslatedName(LangVie(), name: "Tuvalu"),
+  TranslatedName(LangNob(), name: "Tuvalu"),
+  TranslatedName(LangTgl(), name: "Tuvalu"),
 ];

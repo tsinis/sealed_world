@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 153 translations for a Croatia country:
+/// Provides 160 translations for a Croatia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -58,7 +58,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -77,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -85,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -140,6 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -396,4 +402,11 @@ const hrvCountryTranslations = [
   TranslatedName(LangZha(), name: "Gwzlozdiya"),
   TranslatedName(LangChv(), name: "Хорвати"),
   TranslatedName(LangXho(), name: "ECroatia"),
+  TranslatedName(LangIna(), name: "Croatia"),
+  TranslatedName(LangIle(), name: "Croatia"),
+  TranslatedName(LangIbo(), name: "Croatia"),
+  TranslatedName(LangLat(), name: "Croatia"),
+  TranslatedName(LangMsa(), name: "Croatia"),
+  TranslatedName(LangSwa(), name: "Croatia"),
+  TranslatedName(LangVie(), name: "Croatia"),
 ];

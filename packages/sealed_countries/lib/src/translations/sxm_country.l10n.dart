@@ -2,32 +2,43 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 91 translations for a Sint Maarten country:
+/// Provides 120 translations for a Sint Maarten country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
+/// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -37,11 +48,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
 /// - Kannada
+/// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Korean
@@ -50,27 +66,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Lao
 /// - Latvian
 /// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
+/// - Sardinian
 /// - Serbian
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -84,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -270,4 +299,33 @@ const sxmCountryTranslations = [
   TranslatedName(LangMri(), name: "Hiti Mātene"),
   TranslatedName(LangXho(), name: "ESint Maarten"),
   TranslatedName(LangYor(), name: "Síntì Mátẹ́ẹ̀nì"),
+  TranslatedName(LangAbk(), name: "Синт-Мартен"),
+  TranslatedName(LangAfr(), name: "Sint Maarten"),
+  TranslatedName(LangArg(), name: "Sint Maarten"),
+  TranslatedName(LangCat(), name: "Sint Maarten"),
+  TranslatedName(LangDan(), name: "Sint Maarten"),
+  TranslatedName(LangEwe(), name: "Sint Maarten nutome"),
+  TranslatedName(LangEpo(), name: "Sint-Maarten"),
+  TranslatedName(LangEus(), name: "Sint Maarten"),
+  TranslatedName(LangFao(), name: "Sint Maarten"),
+  TranslatedName(LangGle(), name: "Sint Maarten"),
+  TranslatedName(LangGla(), name: "Sint Maarten"),
+  TranslatedName(LangGlg(), name: "Sint Maarten"),
+  TranslatedName(LangInd(), name: "Sint Maarten"),
+  TranslatedName(LangIle(), name: "Sint-Maarten"),
+  TranslatedName(LangIbo(), name: "Sint Maarten"),
+  TranslatedName(LangKas(), name: "سِنٹ مارٹِن"),
+  TranslatedName(LangLtz(), name: "Sint Maarten"),
+  TranslatedName(LangMsa(), name: "Sint Maarten"),
+  TranslatedName(LangMlt(), name: "Sint Maarten"),
+  TranslatedName(LangNor(), name: "Sint Maarten"),
+  TranslatedName(LangOci(), name: "Sant Martin"),
+  TranslatedName(LangQue(), name: "Sint Maarten"),
+  TranslatedName(LangRoh(), name: "Sint Maarten"),
+  TranslatedName(LangSrd(), name: "Sint Maarten"),
+  TranslatedName(LangSlv(), name: "Sint Maarten"),
+  TranslatedName(LangSwa(), name: "Sint Maarten"),
+  TranslatedName(LangVie(), name: "Sint Maarten"),
+  TranslatedName(LangNob(), name: "Sint Maarten"),
+  TranslatedName(LangTgl(), name: "Sint Maarten"),
 ];

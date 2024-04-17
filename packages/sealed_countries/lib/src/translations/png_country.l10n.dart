@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Papua New Guinea country:
+/// Provides 153 translations for a Papua New Guinea country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -55,12 +56,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -81,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -109,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -133,6 +139,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -140,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const pngCountryTranslations = [
   CountryName(
@@ -390,4 +398,13 @@ const pngCountryTranslations = [
   TranslatedName(LangChv(), name: "Папуа — Ҫӗнӗ Гвиней"),
   TranslatedName(LangSrd(), name: "Pàpua Guinea Noa"),
   TranslatedName(LangXho(), name: "EPapua New Guinea"),
+  TranslatedName(LangAbk(), name: "Папуа — Гвинеиа ҿыц"),
+  TranslatedName(LangIle(), name: "Papua Nov-Guinea"),
+  TranslatedName(LangIbo(), name: "Papua New Guinea"),
+  TranslatedName(LangKal(), name: "Papua Nutaaq Guinea"),
+  TranslatedName(LangMsa(), name: "Papua New Guinea"),
+  TranslatedName(LangSna(), name: "Papua New Guinea"),
+  TranslatedName(LangSwa(), name: "Papua New Guinea"),
+  TranslatedName(LangVie(), name: "Papua New Guinea"),
+  TranslatedName(LangZha(), name: "Bahbuyasinhgijneiya"),
 ];

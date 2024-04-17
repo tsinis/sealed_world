@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Pakistan country:
+/// Provides 146 translations for a Pakistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -14,6 +16,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -21,11 +24,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -33,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -43,13 +49,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Greek (modern)
 /// - Guaraní
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -66,7 +80,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -76,6 +93,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -84,19 +104,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -111,12 +136,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const pakCountryTranslations = [
   CountryName(
@@ -325,4 +353,32 @@ const pakCountryTranslations = [
   TranslatedName(LangVol(), name: "Pakistän"),
   TranslatedName(LangSrd(), name: "Pàkistan"),
   TranslatedName(LangXho(), name: "EPakistan"),
+  TranslatedName(LangAbk(), name: "Пакистан"),
+  TranslatedName(LangAfr(), name: "Pakistan"),
+  TranslatedName(LangCat(), name: "Pakistan"),
+  TranslatedName(LangDan(), name: "Pakistan"),
+  TranslatedName(LangEus(), name: "Pakistan"),
+  TranslatedName(LangFao(), name: "Pakistan"),
+  TranslatedName(LangFry(), name: "Pakistan"),
+  TranslatedName(LangHau(), name: "Pakistan"),
+  TranslatedName(LangIna(), name: "Pakistan"),
+  TranslatedName(LangInd(), name: "Pakistan"),
+  TranslatedName(LangIle(), name: "Pakistan"),
+  TranslatedName(LangIbo(), name: "Pakistan"),
+  TranslatedName(LangIsl(), name: "Pakistan"),
+  TranslatedName(LangJav(), name: "Pakistan"),
+  TranslatedName(LangKal(), name: "Pakistani"),
+  TranslatedName(LangLtz(), name: "Pakistan"),
+  TranslatedName(LangMlg(), name: "Pakistan"),
+  TranslatedName(LangMsa(), name: "Pakistan"),
+  TranslatedName(LangNor(), name: "Pakistan"),
+  TranslatedName(LangRoh(), name: "Pakistan"),
+  TranslatedName(LangRon(), name: "Pakistan"),
+  TranslatedName(LangSme(), name: "Pakistan"),
+  TranslatedName(LangSlv(), name: "Pakistan"),
+  TranslatedName(LangSna(), name: "Pakistan"),
+  TranslatedName(LangVie(), name: "Pakistan"),
+  TranslatedName(LangZha(), name: "Bahgihswhdanj"),
+  TranslatedName(LangNob(), name: "Pakistan"),
+  TranslatedName(LangTgl(), name: "Pakistan"),
 ];

@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Afghanistan country:
+/// Provides 157 translations for a Afghanistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -30,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -55,12 +57,16 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -78,8 +84,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -89,6 +97,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -133,6 +143,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -140,6 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const afgCountryTranslations = [
   CountryName(
@@ -328,7 +340,7 @@ const afgCountryTranslations = [
   TranslatedName(LangRun(), name: "Afuganisitani"),
   TranslatedName(LangRon(), name: "Afganistan"),
   TranslatedName(LangSnd(), name: "افغانستان"),
-  TranslatedName(LangSag(), name: "Faganïta, Afganïstäan"),
+  TranslatedName(LangSag(), name: "Afganïstäan"),
   TranslatedName(LangSin(), name: "ඇෆ්ගනිස්ථානය"),
   TranslatedName(LangSlv(), name: "Afganistan"),
   TranslatedName(LangSna(), name: "Afuganistani"),
@@ -386,4 +398,17 @@ const afgCountryTranslations = [
   TranslatedName(LangTgl(), name: "Apganistan"),
   TranslatedName(LangVol(), name: "Lafganistän"),
   TranslatedName(LangXho(), name: "E-Afghanistan"),
+  TranslatedName(LangAbk(), name: "Афганистан"),
+  TranslatedName(LangDan(), name: "Afghanistan"),
+  TranslatedName(LangIna(), name: "Afghanistan"),
+  TranslatedName(LangIle(), name: "Afghanistan"),
+  TranslatedName(LangIbo(), name: "Afghanistan"),
+  TranslatedName(LangKal(), name: "Afghanistani"),
+  TranslatedName(LangLtz(), name: "Afghanistan"),
+  TranslatedName(LangMsa(), name: "Afghanistan"),
+  TranslatedName(LangNor(), name: "Afghanistan"),
+  TranslatedName(LangSwa(), name: "Afghanistan"),
+  TranslatedName(LangVie(), name: "Afghanistan"),
+  TranslatedName(LangZha(), name: "Ahfuhan"),
+  TranslatedName(LangNob(), name: "Afghanistan"),
 ];

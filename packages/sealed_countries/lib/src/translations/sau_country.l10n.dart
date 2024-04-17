@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Saudi Arabia country:
+/// Provides 154 translations for a Saudi Arabia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -16,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -55,12 +57,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -111,6 +116,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -143,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const sauCountryTranslations = [
   CountryName(
@@ -384,4 +391,11 @@ const sauCountryTranslations = [
   TranslatedName(LangMri(), name: "Hauri Arāpia"),
   TranslatedName(LangSrd(), name: "Aràbia Saudita"),
   TranslatedName(LangXho(), name: "ESaudi Arabia"),
+  TranslatedName(LangAbk(), name: "Саудтәи Арабсҭан"),
+  TranslatedName(LangEus(), name: "Saudi Arabia"),
+  TranslatedName(LangIle(), name: "Sauditic Arabia"),
+  TranslatedName(LangIbo(), name: "Saudi Arabia"),
+  TranslatedName(LangKal(), name: "Saudi Arabia"),
+  TranslatedName(LangSna(), name: "Saudi Arabia"),
+  TranslatedName(LangZha(), name: "Sahdwz Ahlahbwz"),
 ];

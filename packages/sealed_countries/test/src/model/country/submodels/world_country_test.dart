@@ -1255,13 +1255,13 @@ void main() => group("$WorldCountry", () {
 
       group("translations", () {
         test("translation should always provide at least eng translation", () {
-          const abkhazia = LangAbk();
+          const language = LangZha();
           const nonExistCode = "000";
           var count = 0;
           for (final value in WorldCountry.list) {
             final maybeMissing = value.maybeTranslation(
               const BasicLocale(
-                abkhazia,
+                language,
                 countryCode: nonExistCode,
               ),
               useLanguageFallback: false,
@@ -1270,7 +1270,7 @@ void main() => group("$WorldCountry", () {
             count++;
             expect(
               value.translation(
-                const BasicLocale(abkhazia, countryCode: nonExistCode),
+                const BasicLocale(language, countryCode: nonExistCode),
               ),
               isNotNull,
             );
@@ -1291,7 +1291,7 @@ void main() => group("$WorldCountry", () {
 
           final sortedList = map.entries.toList(growable: false)
             ..sort((a, b) => a.value.compareTo(b.value));
-          expect(sortedList.first.value, 85);
+          expect(sortedList.first.value, 114);
         });
 
         test("there should be always translations for specific languages", () {
@@ -1317,6 +1317,11 @@ void main() => group("$WorldCountry", () {
           final sortedMap = Map.fromEntries(complete);
           final sortedLanguages = sortedMap.keys.toList(growable: false)
             ..sort((a, b) => a.code.compareTo(b.code));
+
+          expect(
+            sortedLanguages,
+            containsAll(kMaterialSupportedLanguagesSealed),
+          );
 
           expect(sortedLanguages, kSealedCountriesSupportedLanguages);
 

@@ -92,6 +92,7 @@ const ${varFileName.toCamelCase()} = [
       translations.clear();
     }
 
+    await _dart.fixApply();
     await _dart.fixFormat();
     stopwatch.stop();
     print("\n🎉 Done! Generation process took ${stopwatch.elapsed}");
@@ -157,6 +158,7 @@ const ${varFileName.toCamelCase()} = [
       translations.clear();
     }
 
+    await _dart.fixApply();
     await _dart.fixFormat();
     stopwatch.stop();
     print("\n🎉 Done! Generation process took ${stopwatch.elapsed}");

@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Chad country:
+/// Provides 150 translations for a Chad country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,11 +54,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -78,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -91,17 +98,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -137,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const tcdCountryTranslations = [
   CountryName(
@@ -325,4 +336,16 @@ const tcdCountryTranslations = [
   TranslatedName(LangVol(), name: "Tjadän"),
   TranslatedName(LangWln(), name: "Tchad"),
   TranslatedName(LangXho(), name: "EChad"),
+  TranslatedName(LangAbk(), name: "Чад"),
+  TranslatedName(LangArg(), name: "Chad"),
+  TranslatedName(LangIle(), name: "Tchad"),
+  TranslatedName(LangIbo(), name: "Chad"),
+  TranslatedName(LangJav(), name: "Chad"),
+  TranslatedName(LangKal(), name: "Chad"),
+  TranslatedName(LangMsa(), name: "Chad"),
+  TranslatedName(LangOci(), name: "Chad"),
+  TranslatedName(LangQue(), name: "Chad"),
+  TranslatedName(LangSrd(), name: "Chad"),
+  TranslatedName(LangSwa(), name: "Chad"),
+  TranslatedName(LangZha(), name: "Cadwz"),
 ];

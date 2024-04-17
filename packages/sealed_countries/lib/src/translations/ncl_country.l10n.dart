@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a New Caledonia country:
+/// Provides 136 translations for a New Caledonia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -49,12 +51,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -65,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -72,7 +78,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
@@ -81,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -93,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -101,6 +111,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -114,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
@@ -341,4 +353,17 @@ const nclCountryTranslations = [
   TranslatedName(LangMri(), name: "Whenua Kanaki"),
   TranslatedName(LangSrd(), name: "Caledònia Noa"),
   TranslatedName(LangXho(), name: "ENew Caledonia"),
+  TranslatedName(LangAbk(), name: "Каледониа ҿыц"),
+  TranslatedName(LangArg(), name: "Nueva Caledonia"),
+  TranslatedName(LangIle(), name: "Nov-Caledonia"),
+  TranslatedName(LangIbo(), name: "New Caledonia"),
+  TranslatedName(LangKal(), name: "Nutaaq Caledonia"),
+  TranslatedName(LangLat(), name: "Nova Caledonia"),
+  TranslatedName(LangMsa(), name: "New Caledonia"),
+  TranslatedName(LangMlt(), name: "New Caledonia"),
+  TranslatedName(LangOci(), name: "Nòva Caledonia"),
+  TranslatedName(LangSna(), name: "New Caledonia"),
+  TranslatedName(LangSwa(), name: "New Caledonia"),
+  TranslatedName(LangVie(), name: "New Caledonia"),
+  TranslatedName(LangTgl(), name: "New Caledonia"),
 ];

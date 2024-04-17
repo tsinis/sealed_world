@@ -2,31 +2,36 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 124 translations for a Kuwait country:
+/// Provides 149 translations for a Kuwait country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -38,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -49,9 +55,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -70,8 +82,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -81,6 +95,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -88,19 +105,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -115,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -122,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const kwtCountryTranslations = [
   CountryName(
@@ -296,4 +321,29 @@ const kwtCountryTranslations = [
   TranslatedName(LangYid(), name: "קואווייט"),
   TranslatedName(LangMri(), name: "Kūweiti"),
   TranslatedName(LangXho(), name: "EKuwait"),
+  TranslatedName(LangAbk(), name: "Кувеит"),
+  TranslatedName(LangArg(), name: "Kuwait"),
+  TranslatedName(LangCat(), name: "Kuwait"),
+  TranslatedName(LangDan(), name: "Kuwait"),
+  TranslatedName(LangEus(), name: "Kuwait"),
+  TranslatedName(LangGlg(), name: "Kuwait"),
+  TranslatedName(LangIna(), name: "Kuwait"),
+  TranslatedName(LangInd(), name: "Kuwait"),
+  TranslatedName(LangIle(), name: "Kuwait"),
+  TranslatedName(LangIbo(), name: "Kuwait"),
+  TranslatedName(LangJav(), name: "Kuwait"),
+  TranslatedName(LangKal(), name: "Kuwait"),
+  TranslatedName(LangLtz(), name: "Kuwait"),
+  TranslatedName(LangMsa(), name: "Kuwait"),
+  TranslatedName(LangNor(), name: "Kuwait"),
+  TranslatedName(LangQue(), name: "Kuwait"),
+  TranslatedName(LangRoh(), name: "Kuwait"),
+  TranslatedName(LangSrd(), name: "Kuwait"),
+  TranslatedName(LangSme(), name: "Kuwait"),
+  TranslatedName(LangSna(), name: "Kuwait"),
+  TranslatedName(LangSwa(), name: "Kuwait"),
+  TranslatedName(LangVie(), name: "Kuwait"),
+  TranslatedName(LangZha(), name: "Gohveihdwz"),
+  TranslatedName(LangNob(), name: "Kuwait"),
+  TranslatedName(LangTgl(), name: "Kuwait"),
 ];

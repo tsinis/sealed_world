@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 133 translations for a Guinea-Bissau country:
+/// Provides 151 translations for a Guinea-Bissau country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -36,6 +39,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -52,9 +56,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -73,6 +83,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
 /// - Malay
@@ -85,6 +96,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -94,9 +108,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -130,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const gnbCountryTranslations = [
   CountryName(
@@ -357,4 +375,22 @@ const gnbCountryTranslations = [
   TranslatedName(LangVie(), name: "Guiné-Bissau"),
   TranslatedName(LangVol(), name: "Gineyän-Bisauän"),
   TranslatedName(LangXho(), name: "EGuinea-Bissau"),
+  TranslatedName(LangAbk(), name: "Гвинеиа-Бисау"),
+  TranslatedName(LangArg(), name: "Guinea-Bissau"),
+  TranslatedName(LangDan(), name: "Guinea-Bissau"),
+  TranslatedName(LangFao(), name: "Guinea-Bissau"),
+  TranslatedName(LangIna(), name: "Guinea-Bissau"),
+  TranslatedName(LangInd(), name: "Guinea-Bissau"),
+  TranslatedName(LangIle(), name: "Guinea-Bissau"),
+  TranslatedName(LangIbo(), name: "Guinea-Bissau"),
+  TranslatedName(LangJav(), name: "Guinea-Bissau"),
+  TranslatedName(LangKal(), name: "Guinea-Bissau"),
+  TranslatedName(LangLtz(), name: "Guinea-Bissau"),
+  TranslatedName(LangNor(), name: "Guinea-Bissau"),
+  TranslatedName(LangRoh(), name: "Guinea-Bissau"),
+  TranslatedName(LangSrd(), name: "Guinea-Bissau"),
+  TranslatedName(LangSme(), name: "Guinea-Bissau"),
+  TranslatedName(LangSna(), name: "Guinea-Bissau"),
+  TranslatedName(LangZha(), name: "Gijneiyabijsau"),
+  TranslatedName(LangNob(), name: "Guinea-Bissau"),
 ];

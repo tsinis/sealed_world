@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 157 translations for a Antigua and Barbuda country:
+/// Provides 158 translations for a Antigua and Barbuda country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -415,4 +416,5 @@ const atgCountryTranslations = [
   TranslatedName(LangIbo(), name: "Antigua na Barbuda"),
   TranslatedName(LangMri(), name: "Motu Nehe me Pāputa"),
   TranslatedName(LangXho(), name: "E-Antigua & Barbuda"),
+  TranslatedName(LangAbk(), name: "Антигуеи Барбудеи"),
 ];

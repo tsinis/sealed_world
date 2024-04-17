@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Fiji country:
+/// Provides 146 translations for a Fiji country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -14,7 +15,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
+/// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -22,11 +25,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -34,28 +39,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Fijian
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
@@ -68,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -77,6 +94,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -84,17 +104,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
 /// - Tagalog
 /// - Tajik
@@ -106,10 +131,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -117,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const fjiCountryTranslations = [
   CountryName(
@@ -301,4 +329,32 @@ const fjiCountryTranslations = [
   TranslatedName(LangTgl(), name: "Piyi"),
   TranslatedName(LangVol(), name: "Ficiyuäns"),
   TranslatedName(LangXho(), name: "EFiji"),
+  TranslatedName(LangAbk(), name: "Фиџи"),
+  TranslatedName(LangBam(), name: "Fiji"),
+  TranslatedName(LangCat(), name: "Fiji"),
+  TranslatedName(LangDan(), name: "Fiji"),
+  TranslatedName(LangEus(), name: "Fiji"),
+  TranslatedName(LangFao(), name: "Fiji"),
+  TranslatedName(LangHau(), name: "Fiji"),
+  TranslatedName(LangIna(), name: "Fiji"),
+  TranslatedName(LangInd(), name: "Fiji"),
+  TranslatedName(LangIle(), name: "Fidji"),
+  TranslatedName(LangIbo(), name: "Fiji"),
+  TranslatedName(LangJav(), name: "Fiji"),
+  TranslatedName(LangKik(), name: "Fiji"),
+  TranslatedName(LangKal(), name: "Fiji"),
+  TranslatedName(LangLug(), name: "Fiji"),
+  TranslatedName(LangMsa(), name: "Fiji"),
+  TranslatedName(LangNor(), name: "Fiji"),
+  TranslatedName(LangOci(), name: "Fiji"),
+  TranslatedName(LangRun(), name: "Fiji"),
+  TranslatedName(LangRon(), name: "Fiji"),
+  TranslatedName(LangSrd(), name: "Fiji"),
+  TranslatedName(LangSna(), name: "Fiji"),
+  TranslatedName(LangSom(), name: "Fiji"),
+  TranslatedName(LangSwa(), name: "Fiji"),
+  TranslatedName(LangTuk(), name: "Fiji"),
+  TranslatedName(LangVie(), name: "Fiji"),
+  TranslatedName(LangZha(), name: "Feijci"),
+  TranslatedName(LangNob(), name: "Fiji"),
 ];

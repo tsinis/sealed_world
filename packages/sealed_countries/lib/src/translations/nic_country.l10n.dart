@@ -2,13 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 127 translations for a Nicaragua country:
+/// Provides 151 translations for a Nicaragua country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
@@ -22,12 +25,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -39,6 +45,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -52,11 +59,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -69,12 +80,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -82,6 +96,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -89,11 +107,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -104,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -118,6 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -125,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const nicCountryTranslations = [
   CountryName(
@@ -346,4 +370,28 @@ const nicCountryTranslations = [
   TranslatedName(LangChv(), name: "Никарагуа"),
   TranslatedName(LangSrd(), name: "Nicaràgua"),
   TranslatedName(LangXho(), name: "ENicaragua"),
+  TranslatedName(LangAbk(), name: "Никарагуа"),
+  TranslatedName(LangAfr(), name: "Nicaragua"),
+  TranslatedName(LangArg(), name: "Nicaragua"),
+  TranslatedName(LangCat(), name: "Nicaragua"),
+  TranslatedName(LangCos(), name: "Nicaragua"),
+  TranslatedName(LangDan(), name: "Nicaragua"),
+  TranslatedName(LangGlg(), name: "Nicaragua"),
+  TranslatedName(LangIna(), name: "Nicaragua"),
+  TranslatedName(LangIle(), name: "Nicaragua"),
+  TranslatedName(LangIbo(), name: "Nicaragua"),
+  TranslatedName(LangKal(), name: "Nicaragua"),
+  TranslatedName(LangLat(), name: "Nicaragua"),
+  TranslatedName(LangLtz(), name: "Nicaragua"),
+  TranslatedName(LangMsa(), name: "Nicaragua"),
+  TranslatedName(LangNor(), name: "Nicaragua"),
+  TranslatedName(LangOci(), name: "Nicaragüa"),
+  TranslatedName(LangRoh(), name: "Nicaragua"),
+  TranslatedName(LangRon(), name: "Nicaragua"),
+  TranslatedName(LangSme(), name: "Nicaragua"),
+  TranslatedName(LangSna(), name: "Nicaragua"),
+  TranslatedName(LangVie(), name: "Nicaragua"),
+  TranslatedName(LangZha(), name: "Nizgyahlahgvah"),
+  TranslatedName(LangNob(), name: "Nicaragua"),
+  TranslatedName(LangTgl(), name: "Nicaragua"),
 ];

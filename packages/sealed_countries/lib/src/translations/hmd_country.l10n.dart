@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 117 translations for a Heard Island and McDonald Islands country:
+/// Provides 121 translations for a Heard Island and McDonald Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -49,6 +51,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -77,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -350,4 +354,8 @@ const hmdCountryTranslations = [
   TranslatedName(LangTgl(), name: "Heard & McDonald Islands"),
   TranslatedName(LangXho(), name: "EHeard & McDonald Islands"),
   TranslatedName(LangYor(), name: "Erékùsù Heard àti Erékùsù McDonald"),
+  TranslatedName(LangAbk(), name: "ад-хақәа Херди Макдональди"),
+  TranslatedName(LangArg(), name: "Islas Heard y McDonald"),
+  TranslatedName(LangIle(), name: "Insules Heard e McDonald Islands"),
+  TranslatedName(LangOci(), name: "Illas Heard e McDonald"),
 ];

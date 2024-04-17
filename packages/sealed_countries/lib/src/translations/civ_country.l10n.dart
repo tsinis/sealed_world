@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 153 translations for a Ivory Coast country:
+/// Provides 154 translations for a Ivory Coast country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -399,4 +400,5 @@ const civCountryTranslations = [
   TranslatedName(LangVol(), name: "Viorajolän"),
   TranslatedName(LangIbo(), name: "Côte d’Ivoire"),
   TranslatedName(LangXho(), name: "ECôte d’Ivoire"),
+  TranslatedName(LangAbk(), name: "Кот-д’Ивуар"),
 ];

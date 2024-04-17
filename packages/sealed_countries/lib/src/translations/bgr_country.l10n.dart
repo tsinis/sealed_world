@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Bulgaria country:
+/// Provides 160 translations for a Bulgaria country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -12,6 +12,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
@@ -19,6 +20,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -41,9 +43,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -56,14 +60,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -72,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -80,6 +91,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -91,6 +103,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -100,17 +115,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -128,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -136,6 +157,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const bgrCountryTranslations = [
   CountryName(
@@ -368,4 +390,26 @@ const bgrCountryTranslations = [
   TranslatedName(LangVol(), name: "Bulgarän"),
   TranslatedName(LangWln(), name: "Bulgåreye"),
   TranslatedName(LangXho(), name: "EBulgaria"),
+  TranslatedName(LangArg(), name: "Bulgaria"),
+  TranslatedName(LangEus(), name: "Bulgaria"),
+  TranslatedName(LangFao(), name: "Bulgaria"),
+  TranslatedName(LangGlg(), name: "Bulgaria"),
+  TranslatedName(LangIna(), name: "Bulgaria"),
+  TranslatedName(LangInd(), name: "Bulgaria"),
+  TranslatedName(LangIle(), name: "Bulgaria"),
+  TranslatedName(LangIbo(), name: "Bulgaria"),
+  TranslatedName(LangKik(), name: "Bulgaria"),
+  TranslatedName(LangKal(), name: "Bulgaria"),
+  TranslatedName(LangLat(), name: "Bulgaria"),
+  TranslatedName(LangMsa(), name: "Bulgaria"),
+  TranslatedName(LangNor(), name: "Bulgaria"),
+  TranslatedName(LangOci(), name: "Bolgària"),
+  TranslatedName(LangRoh(), name: "Bulgaria"),
+  TranslatedName(LangRon(), name: "Bulgaria"),
+  TranslatedName(LangSrd(), name: "Bulgaria"),
+  TranslatedName(LangSna(), name: "Bulgaria"),
+  TranslatedName(LangSwa(), name: "Bulgaria"),
+  TranslatedName(LangVie(), name: "Bulgaria"),
+  TranslatedName(LangZha(), name: "Baujgyahliya"),
+  TranslatedName(LangNob(), name: "Bulgaria"),
 ];

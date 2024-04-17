@@ -2,20 +2,23 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Estonia country:
+/// Provides 153 translations for a Estonia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -40,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -52,6 +56,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -61,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Komi
@@ -68,6 +77,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -75,6 +85,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -96,11 +108,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -108,8 +123,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -124,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -131,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const estCountryTranslations = [
   CountryName(
@@ -351,4 +370,23 @@ const estCountryTranslations = [
   TranslatedName(LangSun(), name: "Éstonia"),
   TranslatedName(LangVol(), name: "Lestiyän"),
   TranslatedName(LangXho(), name: "E-Estonia"),
+  TranslatedName(LangAbk(), name: "Естониа"),
+  TranslatedName(LangArg(), name: "Estonia"),
+  TranslatedName(LangEus(), name: "Estonia"),
+  TranslatedName(LangGlg(), name: "Estonia"),
+  TranslatedName(LangIna(), name: "Estonia"),
+  TranslatedName(LangInd(), name: "Estonia"),
+  TranslatedName(LangIle(), name: "Estonia"),
+  TranslatedName(LangIbo(), name: "Estonia"),
+  TranslatedName(LangKik(), name: "Estonia"),
+  TranslatedName(LangLat(), name: "Estonia"),
+  TranslatedName(LangMlg(), name: "Estonia"),
+  TranslatedName(LangMsa(), name: "Estonia"),
+  TranslatedName(LangRoh(), name: "Estonia"),
+  TranslatedName(LangRon(), name: "Estonia"),
+  TranslatedName(LangSna(), name: "Estonia"),
+  TranslatedName(LangSwa(), name: "Estonia"),
+  TranslatedName(LangVie(), name: "Estonia"),
+  TranslatedName(LangZha(), name: "Aisahnizya"),
+  TranslatedName(LangTgl(), name: "Estonia"),
 ];

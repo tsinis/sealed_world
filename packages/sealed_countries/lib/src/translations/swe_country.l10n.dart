@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 152 translations for a Sweden country:
+/// Provides 156 translations for a Sweden country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -58,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -89,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -116,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -150,6 +153,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const sweCountryTranslations = [
   CountryName(
@@ -380,4 +384,8 @@ const sweCountryTranslations = [
   TranslatedName(LangVol(), name: "Svedän"),
   TranslatedName(LangWln(), name: "Suwedwesse"),
   TranslatedName(LangXho(), name: "ESweden"),
+  TranslatedName(LangIbo(), name: "Sweden"),
+  TranslatedName(LangMsa(), name: "Sweden"),
+  TranslatedName(LangSna(), name: "Sweden"),
+  TranslatedName(LangZha(), name: "Suidenj"),
 ];

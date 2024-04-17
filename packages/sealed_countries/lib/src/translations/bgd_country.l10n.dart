@@ -2,17 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Bangladesh country:
+/// Provides 138 translations for a Bangladesh country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -25,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -35,6 +40,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -45,10 +51,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -68,6 +79,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -75,11 +87,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
@@ -94,11 +112,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -107,12 +127,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
 /// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const bgdCountryTranslations = [
   CountryName(
@@ -319,4 +341,26 @@ const bgdCountryTranslations = [
   TranslatedName(LangSrd(), name: "Bangladèsh"),
   TranslatedName(LangSom(), name: "Bangaladhesh"),
   TranslatedName(LangXho(), name: "EBangladesh"),
+  TranslatedName(LangAbk(), name: "Бангладеш"),
+  TranslatedName(LangArg(), name: "Bangladesh"),
+  TranslatedName(LangBod(), name: "བངྒ་ལ་དེཤ།"),
+  TranslatedName(LangDan(), name: "Bangladesh"),
+  TranslatedName(LangEus(), name: "Bangladesh"),
+  TranslatedName(LangGlg(), name: "Bangladesh"),
+  TranslatedName(LangIna(), name: "Bangladesh"),
+  TranslatedName(LangInd(), name: "Bangladesh"),
+  TranslatedName(LangIle(), name: "Bangladesh"),
+  TranslatedName(LangIbo(), name: "Bangladesh"),
+  TranslatedName(LangKal(), name: "Bangladesh"),
+  TranslatedName(LangMsa(), name: "Bangladesh"),
+  TranslatedName(LangNor(), name: "Bangladesh"),
+  TranslatedName(LangOci(), name: "Bangladesh"),
+  TranslatedName(LangQue(), name: "Bangladesh"),
+  TranslatedName(LangRon(), name: "Bangladesh"),
+  TranslatedName(LangSme(), name: "Bangladesh"),
+  TranslatedName(LangSqi(), name: "Bangladesh"),
+  TranslatedName(LangVie(), name: "Bangladesh"),
+  TranslatedName(LangZha(), name: "Munggyahlahgoz"),
+  TranslatedName(LangNob(), name: "Bangladesh"),
+  TranslatedName(LangTgl(), name: "Bangladesh"),
 ];

@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Latvia country:
+/// Provides 160 translations for a Latvia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -60,10 +60,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
 /// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
@@ -86,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -96,6 +101,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -114,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -138,6 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -146,6 +155,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const lvaCountryTranslations = [
   CountryName(
@@ -377,4 +387,15 @@ const lvaCountryTranslations = [
   TranslatedName(LangVol(), name: "Latviyän"),
   TranslatedName(LangWln(), name: "Letoneye"),
   TranslatedName(LangXho(), name: "ELatvia"),
+  TranslatedName(LangInd(), name: "Latvia"),
+  TranslatedName(LangIle(), name: "Lettonia"),
+  TranslatedName(LangIbo(), name: "Latvia"),
+  TranslatedName(LangJav(), name: "Latvia"),
+  TranslatedName(LangMsa(), name: "Latvia"),
+  TranslatedName(LangNor(), name: "Latvia"),
+  TranslatedName(LangSna(), name: "Latvia"),
+  TranslatedName(LangSwa(), name: "Latvia"),
+  TranslatedName(LangVie(), name: "Latvia"),
+  TranslatedName(LangZha(), name: "Lahdozveizya"),
+  TranslatedName(LangNob(), name: "Latvia"),
 ];

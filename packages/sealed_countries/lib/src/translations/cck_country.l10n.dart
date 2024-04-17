@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Cocos (Keeling) Islands country:
+/// Provides 129 translations for a Cocos (Keeling) Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -29,6 +31,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -48,10 +51,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -60,7 +65,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -75,6 +82,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -94,6 +102,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -366,4 +375,13 @@ const cckCountryTranslations = [
   TranslatedName(LangSrd(), name: "Ìsulas Cocos (Keeling)"),
   TranslatedName(LangXho(), name: "ECocos (Keeling) Islands"),
   TranslatedName(LangYor(), name: "Erékùsù Cocos (Keeling)"),
+  TranslatedName(LangAbk(), name: "Кокостәи ад-қәа"),
+  TranslatedName(LangArg(), name: "Islas Cocos"),
+  TranslatedName(LangEpo(), name: "Kokosinsuloj"),
+  TranslatedName(LangIle(), name: "Insules Cocos (Keeling)"),
+  TranslatedName(LangKal(), name: "Cocos qeqertaq"),
+  TranslatedName(LangLat(), name: "Insulae Cocos seu Keeling"),
+  TranslatedName(LangLin(), name: "Bisanga Kokos"),
+  TranslatedName(LangOci(), name: "Illas Còcos"),
+  TranslatedName(LangTgl(), name: "Cocos Island"),
 ];

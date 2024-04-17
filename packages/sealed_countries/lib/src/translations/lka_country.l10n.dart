@@ -2,29 +2,35 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 120 translations for a Sri Lanka country:
+/// Provides 149 translations for a Sri Lanka country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -32,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -47,9 +54,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,7 +80,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -75,6 +91,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -82,10 +102,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -93,8 +118,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -109,6 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -116,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const lkaCountryTranslations = [
   CountryName(
@@ -334,4 +363,33 @@ const lkaCountryTranslations = [
   TranslatedName(LangSun(), name: "Sri Langka"),
   TranslatedName(LangVol(), name: "Sri-Lankän"),
   TranslatedName(LangXho(), name: "ESri Lanka"),
+  TranslatedName(LangAbk(), name: "Шри-Ланка"),
+  TranslatedName(LangAfr(), name: "Sri Lanka"),
+  TranslatedName(LangArg(), name: "Sri Lanka"),
+  TranslatedName(LangCat(), name: "Sri Lanka"),
+  TranslatedName(LangDan(), name: "Sri Lanka"),
+  TranslatedName(LangEus(), name: "Sri Lanka"),
+  TranslatedName(LangFao(), name: "Sri Lanka"),
+  TranslatedName(LangIna(), name: "Sri Lanka"),
+  TranslatedName(LangInd(), name: "Sri Lanka"),
+  TranslatedName(LangIle(), name: "Sri-Lanka"),
+  TranslatedName(LangIbo(), name: "Sri Lanka"),
+  TranslatedName(LangJav(), name: "Sri Lanka"),
+  TranslatedName(LangKal(), name: "Sri Lanka"),
+  TranslatedName(LangLtz(), name: "Sri Lanka"),
+  TranslatedName(LangMlg(), name: "Sri Lanka"),
+  TranslatedName(LangMsa(), name: "Sri Lanka"),
+  TranslatedName(LangNor(), name: "Sri Lanka"),
+  TranslatedName(LangOci(), name: "Sri Lanka"),
+  TranslatedName(LangQue(), name: "Sri Lanka"),
+  TranslatedName(LangRoh(), name: "Sri Lanka"),
+  TranslatedName(LangRon(), name: "Sri Lanka"),
+  TranslatedName(LangSrd(), name: "Sri Lanka"),
+  TranslatedName(LangSme(), name: "Sri Lanka"),
+  TranslatedName(LangSna(), name: "Sri Lanka"),
+  TranslatedName(LangSwa(), name: "Sri Lanka"),
+  TranslatedName(LangVie(), name: "Sri Lanka"),
+  TranslatedName(LangZha(), name: "Swhlijlanzgaj"),
+  TranslatedName(LangNob(), name: "Sri Lanka"),
+  TranslatedName(LangTgl(), name: "Sri Lanka"),
 ];

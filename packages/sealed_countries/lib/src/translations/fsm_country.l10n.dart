@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Micronesia country:
+/// Provides 137 translations for a Micronesia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -38,6 +40,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -49,12 +52,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
+/// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kikuyu (Gikuyu)
@@ -63,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -71,6 +80,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -87,11 +97,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -100,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -338,4 +352,18 @@ const fsmCountryTranslations = [
   TranslatedName(LangMri(), name: "Mekanēhia"),
   TranslatedName(LangSrd(), name: "Micronèsia"),
   TranslatedName(LangXho(), name: "EMicronesia"),
+  TranslatedName(LangAbk(), name: "Еилоу Микронезиатәи Аштатқәа"),
+  TranslatedName(LangArg(), name: "Micronesia"),
+  TranslatedName(LangGlg(), name: "Micronesia"),
+  TranslatedName(LangIna(), name: "Micronesia"),
+  TranslatedName(LangIle(), name: "Micronesia"),
+  TranslatedName(LangIbo(), name: "Micronesia"),
+  TranslatedName(LangKal(), name: "Micronesia"),
+  TranslatedName(LangKas(), name: "مائیکرونیشیا"),
+  TranslatedName(LangLat(), name: "Micronesia"),
+  TranslatedName(LangMsa(), name: "Micronesia"),
+  TranslatedName(LangQue(), name: "Micronesia"),
+  TranslatedName(LangRoh(), name: "Micronesia"),
+  TranslatedName(LangSna(), name: "Micronesia"),
+  TranslatedName(LangTgl(), name: "Mikronesya"),
 ];

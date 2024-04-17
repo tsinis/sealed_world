@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 148 translations for a Cambodia country:
+/// Provides 152 translations for a Cambodia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -63,6 +65,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -145,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const khmCountryTranslations = [
   CountryName(
@@ -387,4 +391,8 @@ const khmCountryTranslations = [
   TranslatedName(LangVol(), name: "Kambocän"),
   TranslatedName(LangSrd(), name: "Cambòdia"),
   TranslatedName(LangXho(), name: "ECambodia"),
+  TranslatedName(LangAbk(), name: "Камбоџа"),
+  TranslatedName(LangIbo(), name: "Cambodia"),
+  TranslatedName(LangKal(), name: "Kambodia"),
+  TranslatedName(LangZha(), name: "Genjbujsai"),
 ];

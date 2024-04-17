@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Anguilla country:
+/// Provides 142 translations for a Anguilla country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
@@ -22,12 +24,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -35,6 +39,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -50,37 +55,56 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
 /// - Shona
 /// - Sindhi
@@ -97,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -105,10 +130,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const aiaCountryTranslations = [
   CountryName(language: LangEng(), official: "Anguilla", common: "Anguilla"),
@@ -224,4 +252,33 @@ const aiaCountryTranslations = [
   TranslatedName(LangKur(), name: "Anguîla"),
   TranslatedName(LangMri(), name: "Anguira"),
   TranslatedName(LangXho(), name: "E-Anguilla"),
+  TranslatedName(LangAbk(), name: "Ангилиа"),
+  TranslatedName(LangAfr(), name: "Anguilla"),
+  TranslatedName(LangBod(), name: "ཨང་གུའི་ལ།"),
+  TranslatedName(LangCat(), name: "Anguilla"),
+  TranslatedName(LangDan(), name: "Anguilla"),
+  TranslatedName(LangFao(), name: "Anguilla"),
+  TranslatedName(LangFry(), name: "Anguilla"),
+  TranslatedName(LangIna(), name: "Anguilla"),
+  TranslatedName(LangInd(), name: "Anguilla"),
+  TranslatedName(LangIle(), name: "Anguilla"),
+  TranslatedName(LangIbo(), name: "Anguilla"),
+  TranslatedName(LangJav(), name: "Anguilla"),
+  TranslatedName(LangKik(), name: "Anguilla"),
+  TranslatedName(LangKal(), name: "Anguilla"),
+  TranslatedName(LangLat(), name: "Anguilla"),
+  TranslatedName(LangLtz(), name: "Anguilla"),
+  TranslatedName(LangMlg(), name: "Anguilla"),
+  TranslatedName(LangMsa(), name: "Anguilla"),
+  TranslatedName(LangMlt(), name: "Anguilla"),
+  TranslatedName(LangNor(), name: "Anguilla"),
+  TranslatedName(LangOci(), name: "Anguilla"),
+  TranslatedName(LangRoh(), name: "Anguilla"),
+  TranslatedName(LangRon(), name: "Anguilla"),
+  TranslatedName(LangSrd(), name: "Anguilla"),
+  TranslatedName(LangSme(), name: "Anguilla"),
+  TranslatedName(LangSwa(), name: "Anguilla"),
+  TranslatedName(LangVie(), name: "Anguilla"),
+  TranslatedName(LangZha(), name: "Anhgveihlah"),
+  TranslatedName(LangNob(), name: "Anguilla"),
 ];

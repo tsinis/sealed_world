@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a Solomon Islands country:
+/// Provides 146 translations for a Solomon Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -379,4 +381,6 @@ const slbCountryTranslations = [
   TranslatedName(LangMri(), name: "Ngā Motu Horomona"),
   TranslatedName(LangSrd(), name: "Ìsulas Salomone"),
   TranslatedName(LangXho(), name: "ESolomon Islands"),
+  TranslatedName(LangAbk(), name: "Соломонтәи адгьылбжьахақәа"),
+  TranslatedName(LangIle(), name: "Insules Solomon"),
 ];

@@ -2,36 +2,46 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 97 translations for a Mayotte country:
+/// Provides 135 translations for a Mayotte country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -40,41 +50,66 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
+/// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
+/// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -88,7 +123,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
@@ -248,4 +285,42 @@ const mytCountryTranslations = [
   TranslatedName(LangChv(), name: "Майотта"),
   TranslatedName(LangMri(), name: "Māiota"),
   TranslatedName(LangXho(), name: "EMayotte"),
+  TranslatedName(LangAbk(), name: "Маиотта"),
+  TranslatedName(LangAfr(), name: "Mayotte"),
+  TranslatedName(LangArg(), name: "Mayotte"),
+  TranslatedName(LangCat(), name: "Mayotte"),
+  TranslatedName(LangDan(), name: "Mayotte"),
+  TranslatedName(LangEus(), name: "Mayotte"),
+  TranslatedName(LangFao(), name: "Mayotte"),
+  TranslatedName(LangFry(), name: "Mayotte"),
+  TranslatedName(LangGle(), name: "Mayotte"),
+  TranslatedName(LangGla(), name: "Mayotte"),
+  TranslatedName(LangGlg(), name: "Mayotte"),
+  TranslatedName(LangIna(), name: "Mayotte"),
+  TranslatedName(LangInd(), name: "Mayotte"),
+  TranslatedName(LangIle(), name: "Mayotte"),
+  TranslatedName(LangIbo(), name: "Mayotte"),
+  TranslatedName(LangIsl(), name: "Mayotte"),
+  TranslatedName(LangJav(), name: "Mayotte"),
+  TranslatedName(LangKik(), name: "Mayotte"),
+  TranslatedName(LangKal(), name: "Mayotte"),
+  TranslatedName(LangLat(), name: "Maiotta"),
+  TranslatedName(LangLtz(), name: "Mayotte"),
+  TranslatedName(LangLug(), name: "Mayotte"),
+  TranslatedName(LangMsa(), name: "Mayotte"),
+  TranslatedName(LangMlt(), name: "Mayotte"),
+  TranslatedName(LangNor(), name: "Mayotte"),
+  TranslatedName(LangOci(), name: "Maiòta"),
+  TranslatedName(LangQue(), name: "Mayotte"),
+  TranslatedName(LangRoh(), name: "Mayotte"),
+  TranslatedName(LangRon(), name: "Mayotte"),
+  TranslatedName(LangSrd(), name: "Mayotte"),
+  TranslatedName(LangSme(), name: "Mayotte"),
+  TranslatedName(LangSlv(), name: "Mayotte"),
+  TranslatedName(LangSna(), name: "Mayotte"),
+  TranslatedName(LangSom(), name: "Mayotte"),
+  TranslatedName(LangSwa(), name: "Mayotte"),
+  TranslatedName(LangVie(), name: "Mayotte"),
+  TranslatedName(LangNob(), name: "Mayotte"),
+  TranslatedName(LangTgl(), name: "Mayotte"),
 ];

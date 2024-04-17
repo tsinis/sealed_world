@@ -2,13 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 108 translations for a Guadeloupe country:
+/// Provides 133 translations for a Guadeloupe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -26,12 +29,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -46,10 +51,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -59,17 +69,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Korean
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -77,17 +95,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Quechua
 /// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -101,7 +123,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
@@ -268,4 +292,29 @@ const glpCountryTranslations = [
   TranslatedName(LangMri(), name: "Kuatarupa"),
   TranslatedName(LangSrd(), name: "Guadalupa"),
   TranslatedName(LangXho(), name: "EGuadeloupe"),
+  TranslatedName(LangAbk(), name: "Гваделупа"),
+  TranslatedName(LangAfr(), name: "Guadeloupe"),
+  TranslatedName(LangArg(), name: "Guadeloupe"),
+  TranslatedName(LangDan(), name: "Guadeloupe"),
+  TranslatedName(LangFao(), name: "Guadeloupe"),
+  TranslatedName(LangFry(), name: "Guadeloupe"),
+  TranslatedName(LangIna(), name: "Guadeloupe"),
+  TranslatedName(LangInd(), name: "Guadeloupe"),
+  TranslatedName(LangIle(), name: "Guadelup"),
+  TranslatedName(LangIbo(), name: "Guadeloupe"),
+  TranslatedName(LangKal(), name: "Guadeloupe"),
+  TranslatedName(LangLat(), name: "Guadalupa"),
+  TranslatedName(LangLtz(), name: "Guadeloupe"),
+  TranslatedName(LangMsa(), name: "Guadeloupe"),
+  TranslatedName(LangMlt(), name: "Guadeloupe"),
+  TranslatedName(LangNor(), name: "Guadeloupe"),
+  TranslatedName(LangOci(), name: "Guadalope"),
+  TranslatedName(LangRoh(), name: "Guadeloupe"),
+  TranslatedName(LangSme(), name: "Guadeloupe"),
+  TranslatedName(LangSlv(), name: "Guadeloupe"),
+  TranslatedName(LangSna(), name: "Guadeloupe"),
+  TranslatedName(LangSwa(), name: "Guadeloupe"),
+  TranslatedName(LangVie(), name: "Guadeloupe"),
+  TranslatedName(LangNob(), name: "Guadeloupe"),
+  TranslatedName(LangTgl(), name: "Guadeloupe"),
 ];

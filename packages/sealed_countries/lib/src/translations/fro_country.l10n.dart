@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 132 translations for a Faroe Islands country:
+/// Provides 136 translations for a Faroe Islands country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -54,12 +55,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
 /// - Kalaallisut (Greenlandic)
 /// - Kannada
+/// - Kashmiri
 /// - Kazakh
 /// - Khmer
 /// - Kinyarwanda
@@ -71,6 +74,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
@@ -331,4 +335,8 @@ const froCountryTranslations = [
   TranslatedName(LangHau(), name: "Tsibirai na Faroe"),
   TranslatedName(LangSrd(), name: "Ìsulas Føroyar"),
   TranslatedName(LangXho(), name: "EFaroe Islands"),
+  TranslatedName(LangAbk(), name: "Фарертәи ад-хақәа"),
+  TranslatedName(LangIle(), name: "Insulas Feroe"),
+  TranslatedName(LangKas(), name: "فارو جزیرہ"),
+  TranslatedName(LangLin(), name: "Bisanga bya Faloé"),
 ];

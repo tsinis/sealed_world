@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 139 translations for a Colombia country:
+/// Provides 152 translations for a Colombia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Aymara
@@ -30,6 +32,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -41,6 +44,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -54,12 +58,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -79,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -90,6 +98,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -115,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -129,6 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -136,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const colCountryTranslations = [
   CountryName(
@@ -365,4 +378,17 @@ const colCountryTranslations = [
   TranslatedName(LangVol(), name: "Kolumbän"),
   TranslatedName(LangXho(), name: "IsiColombia"),
   TranslatedName(LangSrd(), name: "Colòmbia"),
+  TranslatedName(LangAbk(), name: "Колумбиа"),
+  TranslatedName(LangArg(), name: "Colombia"),
+  TranslatedName(LangDan(), name: "Colombia"),
+  TranslatedName(LangGlg(), name: "Colombia"),
+  TranslatedName(LangIna(), name: "Colombia"),
+  TranslatedName(LangIbo(), name: "Colombia"),
+  TranslatedName(LangKal(), name: "Colombia"),
+  TranslatedName(LangMsa(), name: "Colombia"),
+  TranslatedName(LangNor(), name: "Colombia"),
+  TranslatedName(LangVie(), name: "Colombia"),
+  TranslatedName(LangZha(), name: "Gohlunzbijya"),
+  TranslatedName(LangNob(), name: "Colombia"),
+  TranslatedName(LangTgl(), name: "Colombia"),
 ];

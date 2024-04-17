@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Kazakhstan country:
+/// Provides 155 translations for a Kazakhstan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -19,12 +19,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
@@ -57,7 +59,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
@@ -85,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -113,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -123,6 +129,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -137,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -386,4 +394,12 @@ const kazCountryTranslations = [
   TranslatedName(LangZha(), name: "Hahsazgwswhdanj"),
   TranslatedName(LangSrd(), name: "Kazàkistan"),
   TranslatedName(LangXho(), name: "EKazakhstan"),
+  TranslatedName(LangCat(), name: "Kazakhstan"),
+  TranslatedName(LangEus(), name: "Kazakhstan"),
+  TranslatedName(LangIna(), name: "Kazakhstan"),
+  TranslatedName(LangIbo(), name: "Kazakhstan"),
+  TranslatedName(LangMsa(), name: "Kazakhstan"),
+  TranslatedName(LangSna(), name: "Kazakhstan"),
+  TranslatedName(LangVie(), name: "Kazakhstan"),
+  TranslatedName(LangTgl(), name: "Kazakhstan"),
 ];

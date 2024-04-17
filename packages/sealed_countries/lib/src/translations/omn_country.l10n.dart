@@ -2,9 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 116 translations for a Oman country:
+/// Provides 146 translations for a Oman country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -14,17 +16,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -32,6 +37,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -43,13 +49,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -67,7 +80,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -77,6 +93,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -84,19 +104,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -106,16 +131,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const omnCountryTranslations = [
   CountryName(
@@ -282,4 +311,34 @@ const omnCountryTranslations = [
   TranslatedName(LangYid(), name: "אמאן"),
   TranslatedName(LangSrd(), name: "Omàn"),
   TranslatedName(LangXho(), name: "E-Oman"),
+  TranslatedName(LangAbk(), name: "Оман"),
+  TranslatedName(LangAfr(), name: "Oman"),
+  TranslatedName(LangCat(), name: "Oman"),
+  TranslatedName(LangDan(), name: "Oman"),
+  TranslatedName(LangEus(), name: "Oman"),
+  TranslatedName(LangFao(), name: "Oman"),
+  TranslatedName(LangFry(), name: "Oman"),
+  TranslatedName(LangHau(), name: "Oman"),
+  TranslatedName(LangIna(), name: "Oman"),
+  TranslatedName(LangInd(), name: "Oman"),
+  TranslatedName(LangIle(), name: "Oman"),
+  TranslatedName(LangIbo(), name: "Oman"),
+  TranslatedName(LangJav(), name: "Oman"),
+  TranslatedName(LangKal(), name: "Oman"),
+  TranslatedName(LangLtz(), name: "Oman"),
+  TranslatedName(LangMlg(), name: "Oman"),
+  TranslatedName(LangMsa(), name: "Oman"),
+  TranslatedName(LangNor(), name: "Oman"),
+  TranslatedName(LangOci(), name: "Òman"),
+  TranslatedName(LangRoh(), name: "Oman"),
+  TranslatedName(LangRon(), name: "Oman"),
+  TranslatedName(LangSme(), name: "Oman"),
+  TranslatedName(LangSlv(), name: "Oman"),
+  TranslatedName(LangSna(), name: "Oman"),
+  TranslatedName(LangSwa(), name: "Oman"),
+  TranslatedName(LangTuk(), name: "Oman"),
+  TranslatedName(LangVie(), name: "Oman"),
+  TranslatedName(LangZha(), name: "Ahman"),
+  TranslatedName(LangNob(), name: "Oman"),
+  TranslatedName(LangTgl(), name: "Oman"),
 ];

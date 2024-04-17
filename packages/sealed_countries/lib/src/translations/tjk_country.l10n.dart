@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 139 translations for a Tajikistan country:
+/// Provides 151 translations for a Tajikistan country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -17,6 +18,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -49,15 +51,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Greek (modern)
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -78,6 +85,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -106,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -130,6 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -137,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const tjkCountryTranslations = [
   CountryName(
@@ -370,4 +382,16 @@ const tjkCountryTranslations = [
   TranslatedName(LangMri(), name: "Takiritānga"),
   TranslatedName(LangSrd(), name: "Tagìkistan"),
   TranslatedName(LangXho(), name: "ETajikistan"),
+  TranslatedName(LangAbk(), name: "Таџьықсҭан"),
+  TranslatedName(LangEus(), name: "Tajikistan"),
+  TranslatedName(LangHau(), name: "Tajikistan"),
+  TranslatedName(LangInd(), name: "Tajikistan"),
+  TranslatedName(LangIbo(), name: "Tajikistan"),
+  TranslatedName(LangJav(), name: "Tajikistan"),
+  TranslatedName(LangKal(), name: "Tajikistani"),
+  TranslatedName(LangMlg(), name: "Tajikistan"),
+  TranslatedName(LangMsa(), name: "Tajikistan"),
+  TranslatedName(LangSna(), name: "Tajikistan"),
+  TranslatedName(LangVie(), name: "Tajikistan"),
+  TranslatedName(LangZha(), name: "Dazgizgwzswhdanj"),
 ];

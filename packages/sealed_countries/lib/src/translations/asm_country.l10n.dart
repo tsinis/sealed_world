@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a American Samoa country:
+/// Provides 136 translations for a American Samoa country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -31,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -48,8 +51,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -64,6 +69,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -83,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -104,6 +111,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -349,4 +357,12 @@ const asmCountryTranslations = [
   TranslatedName(LangMri(), name: "Hāmoa-Amerika"),
   TranslatedName(LangSrd(), name: "Samoa americanas"),
   TranslatedName(LangXho(), name: "E-American Samoa"),
+  TranslatedName(LangAbk(), name: "Америкатәи Самоа"),
+  TranslatedName(LangArg(), name: "Samoa Americana"),
+  TranslatedName(LangEpo(), name: "Usona Samoo"),
+  TranslatedName(LangIle(), name: "American Samoa"),
+  TranslatedName(LangIbo(), name: "American Samoa"),
+  TranslatedName(LangLat(), name: "Samoa Americana"),
+  TranslatedName(LangOci(), name: "Samoa americana"),
+  TranslatedName(LangTgl(), name: "Amerikanong Samoa"),
 ];

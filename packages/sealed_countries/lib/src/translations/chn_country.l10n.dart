@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 156 translations for a China country:
+/// Provides 167 translations for a China country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -12,6 +12,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
@@ -31,6 +32,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chinese
 /// - Chuvash
+/// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -62,6 +65,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
@@ -86,8 +91,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -102,6 +109,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
 /// - Nuosu
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -110,12 +118,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Samoan
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -298,7 +309,7 @@ const chnCountryTranslations = [
   TranslatedName(LangGlg(), name: "A China"),
   TranslatedName(LangGuj(), name: "ચીન"),
   TranslatedName(LangHau(), name: "Sin"),
-  TranslatedName(LangHau(), name: "Caina, Sin", script: ScriptLatn()),
+  TranslatedName(LangHau(), name: "Caina", script: ScriptLatn()),
   TranslatedName(LangHeb(), name: "סין"),
   TranslatedName(LangHin(), name: "चीन"),
   TranslatedName(LangHye(), name: "Չինաստան"),
@@ -399,4 +410,15 @@ const chnCountryTranslations = [
   TranslatedName(LangXho(), name: "IShayina"),
   TranslatedName(LangZha(), name: "Cunghgoz"),
   TranslatedName(LangSan(), name: "चीन:"),
+  TranslatedName(LangArg(), name: "¨China"),
+  TranslatedName(LangCos(), name: "China"),
+  TranslatedName(LangIna(), name: "China"),
+  TranslatedName(LangIle(), name: "China"),
+  TranslatedName(LangCor(), name: "China"),
+  TranslatedName(LangLtz(), name: "China"),
+  TranslatedName(LangMsa(), name: "China"),
+  TranslatedName(LangOci(), name: "China"),
+  TranslatedName(LangRoh(), name: "China"),
+  TranslatedName(LangRon(), name: "China"),
+  TranslatedName(LangSna(), name: "China"),
 ];

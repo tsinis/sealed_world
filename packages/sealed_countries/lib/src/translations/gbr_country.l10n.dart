@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 167 translations for a United Kingdom country:
+/// Provides 169 translations for a United Kingdom country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -95,6 +95,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -126,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -430,4 +432,6 @@ const gbrCountryTranslations = [
   TranslatedName(LangWln(), name: "Rweyåme-Uni"),
   TranslatedName(LangZha(), name: "Yinghgoz"),
   TranslatedName(LangXho(), name: "E-United Kingdom"),
+  TranslatedName(LangMsa(), name: "UK"),
+  TranslatedName(LangSna(), name: "United Kingdom"),
 ];

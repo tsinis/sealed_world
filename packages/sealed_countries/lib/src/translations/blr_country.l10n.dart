@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 145 translations for a Belarus country:
+/// Provides 155 translations for a Belarus country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -51,11 +52,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Guaraní
 /// - Gujarati
 /// - Haitian (Haitian Creole)
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
 /// - Interlingua
 /// - Interlingue
 /// - Irish
@@ -85,6 +89,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -106,6 +111,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
@@ -117,6 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Sundanese
 /// - Swahili
@@ -137,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -144,6 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const blrCountryTranslations = [
   CountryName(
@@ -379,4 +388,14 @@ const blrCountryTranslations = [
   TranslatedName(LangVol(), name: "Belarusän"),
   TranslatedName(LangSrd(), name: "Bielorùssia"),
   TranslatedName(LangXho(), name: "EBelarus"),
+  TranslatedName(LangAbk(), name: "Беларус"),
+  TranslatedName(LangHau(), name: "Belarus"),
+  TranslatedName(LangInd(), name: "Belarus"),
+  TranslatedName(LangIbo(), name: "Belarus"),
+  TranslatedName(LangMsa(), name: "Belarus"),
+  TranslatedName(LangRon(), name: "Belarus"),
+  TranslatedName(LangSom(), name: "Belarus"),
+  TranslatedName(LangSwa(), name: "Belarus"),
+  TranslatedName(LangVie(), name: "Belarus"),
+  TranslatedName(LangZha(), name: "Bwzngozlozswh"),
 ];

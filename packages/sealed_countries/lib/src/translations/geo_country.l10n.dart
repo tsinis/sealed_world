@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a Georgia country:
+/// Provides 152 translations for a Georgia country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -18,6 +18,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Avaric
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -56,10 +57,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -72,6 +78,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -80,6 +87,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -89,6 +97,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -97,10 +108,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -134,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const geoCountryTranslations = [
   CountryName(language: LangEng(), official: "Georgia", common: "Georgia"),
@@ -281,4 +296,19 @@ const geoCountryTranslations = [
   TranslatedName(LangVol(), name: "Grusiyän"),
   TranslatedName(LangSrd(), name: "Geòrgia"),
   TranslatedName(LangXho(), name: "EGeorgia"),
+  TranslatedName(LangEus(), name: "Georgia"),
+  TranslatedName(LangIna(), name: "Georgia"),
+  TranslatedName(LangInd(), name: "Georgia"),
+  TranslatedName(LangIle(), name: "Georgia"),
+  TranslatedName(LangIbo(), name: "Georgia"),
+  TranslatedName(LangKal(), name: "Georgia"),
+  TranslatedName(LangLat(), name: "Georgia"),
+  TranslatedName(LangMsa(), name: "Georgia"),
+  TranslatedName(LangNor(), name: "Georgia"),
+  TranslatedName(LangRoh(), name: "Georgia"),
+  TranslatedName(LangRon(), name: "Georgia"),
+  TranslatedName(LangSme(), name: "Georgia"),
+  TranslatedName(LangSna(), name: "Georgia"),
+  TranslatedName(LangZha(), name: "Gwzlujgizya"),
+  TranslatedName(LangNob(), name: "Georgia"),
 ];

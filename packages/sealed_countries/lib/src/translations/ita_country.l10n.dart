@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 161 translations for a Italy country:
+/// Provides 164 translations for a Italy country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -110,6 +110,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Nuosu
 /// - Occitan
 /// - Oriya
+/// - Oromo
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -124,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -159,6 +161,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const itaCountryTranslations = [
   CountryName(
@@ -414,4 +417,7 @@ const itaCountryTranslations = [
   TranslatedName(LangVol(), name: "Litaliyän"),
   TranslatedName(LangWln(), name: "Itåleye"),
   TranslatedName(LangXho(), name: "E-Italy"),
+  TranslatedName(LangOrm(), name: "Italy"),
+  TranslatedName(LangSna(), name: "Italy"),
+  TranslatedName(LangZha(), name: "Yidali"),
 ];

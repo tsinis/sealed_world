@@ -2,33 +2,40 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 100 translations for a Grenada country:
+/// Provides 133 translations for a Grenada country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -42,14 +49,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kirundi
 /// - Korean
 /// - Kyrgyz
@@ -57,48 +71,67 @@ import "../model/country/submodels/country_name.dart";
 /// - Latin
 /// - Latvian
 /// - Lingala
+/// - Lithuanian
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const grdCountryTranslations = [
   CountryName(language: LangEng(), official: "Grenada", common: "Grenada"),
@@ -201,4 +234,37 @@ const grdCountryTranslations = [
   TranslatedName(LangChv(), name: "Гренада"),
   TranslatedName(LangMri(), name: "Kerenāta"),
   TranslatedName(LangXho(), name: "EGrenada"),
+  TranslatedName(LangAbk(), name: "Гренада"),
+  TranslatedName(LangAfr(), name: "Grenada"),
+  TranslatedName(LangArg(), name: "Grenada"),
+  TranslatedName(LangBod(), name: "གྷ་རི་ན་ཌ།"),
+  TranslatedName(LangCat(), name: "Grenada"),
+  TranslatedName(LangDan(), name: "Grenada"),
+  TranslatedName(LangEus(), name: "Grenada"),
+  TranslatedName(LangFao(), name: "Grenada"),
+  TranslatedName(LangFry(), name: "Grenada"),
+  TranslatedName(LangIna(), name: "Grenada"),
+  TranslatedName(LangInd(), name: "Grenada"),
+  TranslatedName(LangIle(), name: "Grenada"),
+  TranslatedName(LangIbo(), name: "Grenada"),
+  TranslatedName(LangIsl(), name: "Grenada"),
+  TranslatedName(LangKik(), name: "Grenada"),
+  TranslatedName(LangKal(), name: "Grenada"),
+  TranslatedName(LangLit(), name: "Grenada"),
+  TranslatedName(LangMsa(), name: "Grenada"),
+  TranslatedName(LangMlt(), name: "Grenada"),
+  TranslatedName(LangNor(), name: "Grenada"),
+  TranslatedName(LangOci(), name: "Grenada"),
+  TranslatedName(LangRoh(), name: "Grenada"),
+  TranslatedName(LangRon(), name: "Grenada"),
+  TranslatedName(LangSrd(), name: "Grenada"),
+  TranslatedName(LangSme(), name: "Grenada"),
+  TranslatedName(LangSlv(), name: "Grenada"),
+  TranslatedName(LangSna(), name: "Grenada"),
+  TranslatedName(LangSwa(), name: "Grenada"),
+  TranslatedName(LangTuk(), name: "Grenada"),
+  TranslatedName(LangVie(), name: "Grenada"),
+  TranslatedName(LangZha(), name: "Gwzlinznazdaz"),
+  TranslatedName(LangNob(), name: "Grenada"),
+  TranslatedName(LangTgl(), name: "Grenada"),
 ];

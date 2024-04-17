@@ -2,31 +2,36 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 128 translations for a Vietnam country:
+/// Provides 151 translations for a Vietnam country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Avaric
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -38,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -49,11 +55,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -71,7 +81,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -81,6 +94,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Oromo
 /// - Ossetian (Ossetic)
@@ -89,19 +106,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Sundanese
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -348,4 +371,27 @@ const vnmCountryTranslations = [
   TranslatedName(LangVol(), name: "Vietnamän"),
   TranslatedName(LangZha(), name: "Yiednamz"),
   TranslatedName(LangXho(), name: "EVietnam"),
+  TranslatedName(LangAbk(), name: "Виетнам"),
+  TranslatedName(LangArg(), name: "Vietnam"),
+  TranslatedName(LangCat(), name: "Vietnam"),
+  TranslatedName(LangDan(), name: "Vietnam"),
+  TranslatedName(LangEus(), name: "Vietnam"),
+  TranslatedName(LangGlg(), name: "Vietnam"),
+  TranslatedName(LangIna(), name: "Vietnam"),
+  TranslatedName(LangInd(), name: "Vietnam"),
+  TranslatedName(LangIbo(), name: "Vietnam"),
+  TranslatedName(LangKal(), name: "Vietnam"),
+  TranslatedName(LangLtz(), name: "Vietnam"),
+  TranslatedName(LangMlg(), name: "Vietnam"),
+  TranslatedName(LangMsa(), name: "Vietnam"),
+  TranslatedName(LangNor(), name: "Vietnam"),
+  TranslatedName(LangOci(), name: "Vietnam"),
+  TranslatedName(LangRoh(), name: "Vietnam"),
+  TranslatedName(LangRon(), name: "Vietnam"),
+  TranslatedName(LangSrd(), name: "Vietnam"),
+  TranslatedName(LangSme(), name: "Vietnam"),
+  TranslatedName(LangSlv(), name: "Vietnam"),
+  TranslatedName(LangSna(), name: "Vietnam"),
+  TranslatedName(LangNob(), name: "Vietnam"),
+  TranslatedName(LangTgl(), name: "Vietnam"),
 ];

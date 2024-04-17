@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 119 translations for a Jamaica country:
+/// Provides 138 translations for a Jamaica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -21,11 +23,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -50,10 +54,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -72,22 +79,30 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -96,11 +111,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -109,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -116,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const jamCountryTranslations = [
   CountryName(language: LangEng(), official: "Jamaica", common: "Jamaica"),
@@ -237,4 +256,23 @@ const jamCountryTranslations = [
   TranslatedName(LangMri(), name: "Hemeika"),
   TranslatedName(LangSrd(), name: "Giamàica"),
   TranslatedName(LangXho(), name: "EJamaica"),
+  TranslatedName(LangAbk(), name: "Иамаика"),
+  TranslatedName(LangArg(), name: "Chamaica"),
+  TranslatedName(LangBod(), name: "ཛ་མེ་ཀ།"),
+  TranslatedName(LangCat(), name: "Jamaica"),
+  TranslatedName(LangDan(), name: "Jamaica"),
+  TranslatedName(LangIna(), name: "Jamaica"),
+  TranslatedName(LangIle(), name: "Jamaica"),
+  TranslatedName(LangKal(), name: "Jamaica"),
+  TranslatedName(LangMsa(), name: "Jamaica"),
+  TranslatedName(LangNor(), name: "Jamaica"),
+  TranslatedName(LangOci(), name: "Jamaïca"),
+  TranslatedName(LangQue(), name: "Jamaica"),
+  TranslatedName(LangRon(), name: "Jamaica"),
+  TranslatedName(LangSme(), name: "Jamaica"),
+  TranslatedName(LangSna(), name: "Jamaica"),
+  TranslatedName(LangVie(), name: "Jamaica"),
+  TranslatedName(LangZha(), name: "Yazmaijgyah"),
+  TranslatedName(LangNob(), name: "Jamaica"),
+  TranslatedName(LangTgl(), name: "Hamayka"),
 ];

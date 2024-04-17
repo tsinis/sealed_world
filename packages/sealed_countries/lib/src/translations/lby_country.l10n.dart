@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 135 translations for a Libya country:
+/// Provides 153 translations for a Libya country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
@@ -37,10 +38,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -55,13 +58,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Ido
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Kongo
@@ -69,6 +77,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -77,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -86,6 +96,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -101,14 +114,17 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -124,6 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -132,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const lbyCountryTranslations = [
   CountryName(language: LangEng(), official: "State of Libya", common: "Libya"),
@@ -293,4 +311,22 @@ const lbyCountryTranslations = [
   TranslatedName(LangVol(), name: "Lübän"),
   TranslatedName(LangWln(), name: "Libeye"),
   TranslatedName(LangXho(), name: "ELibya"),
+  TranslatedName(LangAbk(), name: "Ливиа"),
+  TranslatedName(LangFao(), name: "Libya"),
+  TranslatedName(LangIna(), name: "Libya"),
+  TranslatedName(LangIle(), name: "Libia"),
+  TranslatedName(LangJav(), name: "Libya"),
+  TranslatedName(LangKik(), name: "Libya"),
+  TranslatedName(LangKal(), name: "Libya"),
+  TranslatedName(LangLat(), name: "Libya"),
+  TranslatedName(LangLug(), name: "Libya"),
+  TranslatedName(LangMsa(), name: "Libya"),
+  TranslatedName(LangNor(), name: "Libya"),
+  TranslatedName(LangSme(), name: "Libya"),
+  TranslatedName(LangSna(), name: "Libya"),
+  TranslatedName(LangSwa(), name: "Libya"),
+  TranslatedName(LangVie(), name: "Libya"),
+  TranslatedName(LangZha(), name: "Libijya"),
+  TranslatedName(LangNob(), name: "Libya"),
+  TranslatedName(LangTgl(), name: "Libya"),
 ];

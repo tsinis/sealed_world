@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Bahrain country:
+/// Provides 151 translations for a Bahrain country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -16,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -23,12 +25,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -53,9 +57,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -74,8 +84,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -83,6 +95,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -93,6 +108,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
@@ -108,6 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -122,6 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -129,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const bhrCountryTranslations = [
   CountryName(
@@ -346,4 +366,24 @@ const bhrCountryTranslations = [
   TranslatedName(LangMri(), name: "Pāreina"),
   TranslatedName(LangSrd(), name: "Bahrein"),
   TranslatedName(LangXho(), name: "EBahrain"),
+  TranslatedName(LangAbk(), name: "Бахреин"),
+  TranslatedName(LangCat(), name: "Bahrain"),
+  TranslatedName(LangDan(), name: "Bahrain"),
+  TranslatedName(LangEus(), name: "Bahrain"),
+  TranslatedName(LangIna(), name: "Bahrain"),
+  TranslatedName(LangInd(), name: "Bahrain"),
+  TranslatedName(LangIle(), name: "Bahrain"),
+  TranslatedName(LangIbo(), name: "Bahrain"),
+  TranslatedName(LangJav(), name: "Bahrain"),
+  TranslatedName(LangKal(), name: "Bahrain"),
+  TranslatedName(LangLtz(), name: "Bahrain"),
+  TranslatedName(LangMsa(), name: "Bahrain"),
+  TranslatedName(LangNor(), name: "Bahrain"),
+  TranslatedName(LangRoh(), name: "Bahrain"),
+  TranslatedName(LangRon(), name: "Bahrain"),
+  TranslatedName(LangSme(), name: "Bahrain"),
+  TranslatedName(LangVie(), name: "Bahrain"),
+  TranslatedName(LangZha(), name: "Bahlinz"),
+  TranslatedName(LangNob(), name: "Bahrain"),
+  TranslatedName(LangTgl(), name: "Barein"),
 ];

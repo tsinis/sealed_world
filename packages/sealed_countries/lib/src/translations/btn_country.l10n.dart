@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Bhutan country:
+/// Provides 156 translations for a Bhutan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
@@ -17,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bihari
@@ -24,12 +25,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -54,9 +57,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -74,8 +83,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -86,6 +97,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -96,6 +110,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Portuguese
 /// - Pāli
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
@@ -128,6 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -340,4 +357,22 @@ const btnCountryTranslations = [
   TranslatedName(LangZha(), name: "Budanh"),
   TranslatedName(LangSrd(), name: "Bhutàn"),
   TranslatedName(LangXho(), name: "EBhutan"),
+  TranslatedName(LangCat(), name: "Bhutan"),
+  TranslatedName(LangDan(), name: "Bhutan"),
+  TranslatedName(LangEus(), name: "Bhutan"),
+  TranslatedName(LangIna(), name: "Bhutan"),
+  TranslatedName(LangInd(), name: "Bhutan"),
+  TranslatedName(LangIle(), name: "Bhutan"),
+  TranslatedName(LangIbo(), name: "Bhutan"),
+  TranslatedName(LangJav(), name: "Bhutan"),
+  TranslatedName(LangKal(), name: "Bhutan"),
+  TranslatedName(LangLtz(), name: "Bhutan"),
+  TranslatedName(LangMsa(), name: "Bhutan"),
+  TranslatedName(LangNor(), name: "Bhutan"),
+  TranslatedName(LangRoh(), name: "Bhutan"),
+  TranslatedName(LangRon(), name: "Bhutan"),
+  TranslatedName(LangSme(), name: "Bhutan"),
+  TranslatedName(LangSwa(), name: "Bhutan"),
+  TranslatedName(LangVie(), name: "Bhutan"),
+  TranslatedName(LangNob(), name: "Bhutan"),
 ];

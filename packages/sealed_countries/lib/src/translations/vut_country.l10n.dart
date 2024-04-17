@@ -2,27 +2,33 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 103 translations for a Vanuatu country:
+/// Provides 138 translations for a Vanuatu country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz
+/// - Afrikaans
+/// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -30,9 +36,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -44,21 +52,34 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
+/// - Latvian
+/// - Lingala
+/// - Lithuanian
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -68,6 +89,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -75,15 +100,22 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -91,12 +123,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Thai
 /// - Tibetan Standard
 /// - Tigrinya
+/// - Tonga (Tonga Islands)
 /// - Turkish
 /// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -104,6 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const vutCountryTranslations = [
   CountryName(
@@ -297,4 +332,39 @@ const vutCountryTranslations = [
   TranslatedName(LangChv(), name: "Вануату"),
   TranslatedName(LangMri(), name: "Whenuatū"),
   TranslatedName(LangXho(), name: "EVanuatu"),
+  TranslatedName(LangAfr(), name: "Vanuatu"),
+  TranslatedName(LangArg(), name: "Vanuatu"),
+  TranslatedName(LangCat(), name: "Vanuatu"),
+  TranslatedName(LangDan(), name: "Vanuatu"),
+  TranslatedName(LangEus(), name: "Vanuatu"),
+  TranslatedName(LangFao(), name: "Vanuatu"),
+  TranslatedName(LangGlg(), name: "Vanuatu"),
+  TranslatedName(LangIna(), name: "Vanuatu"),
+  TranslatedName(LangInd(), name: "Vanuatu"),
+  TranslatedName(LangIle(), name: "Vanuatu"),
+  TranslatedName(LangIbo(), name: "Vanuatu"),
+  TranslatedName(LangJav(), name: "Vanuatu"),
+  TranslatedName(LangKik(), name: "Vanuatu"),
+  TranslatedName(LangKal(), name: "Vanuatu"),
+  TranslatedName(LangLat(), name: "Vanuatu"),
+  TranslatedName(LangLtz(), name: "Vanuatu"),
+  TranslatedName(LangLin(), name: "Vanuatu"),
+  TranslatedName(LangLit(), name: "Vanuatu"),
+  TranslatedName(LangLav(), name: "Vanuatu"),
+  TranslatedName(LangMsa(), name: "Vanuatu"),
+  TranslatedName(LangNor(), name: "Vanuatu"),
+  TranslatedName(LangOci(), name: "Vanuatú"),
+  TranslatedName(LangRoh(), name: "Vanuatu"),
+  TranslatedName(LangRon(), name: "Vanuatu"),
+  TranslatedName(LangSrd(), name: "Vanuatu"),
+  TranslatedName(LangSme(), name: "Vanuatu"),
+  TranslatedName(LangSlv(), name: "Vanuatu"),
+  TranslatedName(LangSna(), name: "Vanuatu"),
+  TranslatedName(LangSqi(), name: "Vanuatu"),
+  TranslatedName(LangSwa(), name: "Vanuatu"),
+  TranslatedName(LangTon(), name: "Vanuatu"),
+  TranslatedName(LangVie(), name: "Vanuatu"),
+  TranslatedName(LangZha(), name: "Vajnujahduz"),
+  TranslatedName(LangNob(), name: "Vanuatu"),
+  TranslatedName(LangTgl(), name: "Vanuatu"),
 ];

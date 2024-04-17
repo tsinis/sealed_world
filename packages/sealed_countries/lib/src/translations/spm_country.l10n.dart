@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Saint Pierre and Miquelon country:
+/// Provides 137 translations for a Saint Pierre and Miquelon country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -52,10 +54,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -66,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -85,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -371,4 +377,10 @@ const spmCountryTranslations = [
   TranslatedName(LangSrd(), name: "Santu Predu e Miquelon"),
   TranslatedName(LangTgl(), name: "St. Pierre & Miquelon"),
   TranslatedName(LangXho(), name: "ESt. Pierre & Miquelon"),
+  TranslatedName(LangAbk(), name: "Сен-Пиери Микелони"),
+  TranslatedName(LangArg(), name: "Saint-Pierre y Miquelon"),
+  TranslatedName(LangIle(), name: "St.-Pierre e Miquelon"),
+  TranslatedName(LangKal(), name: "Saint Pierre aamma Miquelon"),
+  TranslatedName(LangLat(), name: "Insulae Sancti Petri et Miquelonensis"),
+  TranslatedName(LangOci(), name: "Sant Pèire e Miquelon"),
 ];

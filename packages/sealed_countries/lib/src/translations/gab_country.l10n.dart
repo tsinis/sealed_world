@@ -2,8 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 115 translations for a Gabon country:
+/// Provides 144 translations for a Gabon country:
 /// - (Eastern) Punjabi
+/// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -15,17 +17,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -33,6 +38,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
@@ -42,12 +48,20 @@ import "../model/country/submodels/country_name.dart";
 /// - German
 /// - Greek (modern)
 /// - Gujarati
+/// - Hausa
 /// - Hebrew (modern)
 /// - Hindi
 /// - Hungarian
+/// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -65,6 +79,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Marathi (Marāṭhī)
@@ -74,6 +90,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -81,20 +101,24 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -105,16 +129,20 @@ import "../model/country/submodels/country_name.dart";
 /// - Tonga (Tonga Islands)
 /// - Tsonga
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const gabCountryTranslations = [
   CountryName(
@@ -316,4 +344,33 @@ const gabCountryTranslations = [
   TranslatedName(LangTso(), name: "Gaboni"),
   TranslatedName(LangVol(), name: "Gabunän"),
   TranslatedName(LangXho(), name: "EGabon"),
+  TranslatedName(LangAbk(), name: "Габон"),
+  TranslatedName(LangCat(), name: "Gabon"),
+  TranslatedName(LangDan(), name: "Gabon"),
+  TranslatedName(LangEus(), name: "Gabon"),
+  TranslatedName(LangFao(), name: "Gabon"),
+  TranslatedName(LangFry(), name: "Gabon"),
+  TranslatedName(LangGla(), name: "Gabon"),
+  TranslatedName(LangHau(), name: "Gabon"),
+  TranslatedName(LangIna(), name: "Gabon"),
+  TranslatedName(LangInd(), name: "Gabon"),
+  TranslatedName(LangIle(), name: "Gabon"),
+  TranslatedName(LangIbo(), name: "Gabon"),
+  TranslatedName(LangIsl(), name: "Gabon"),
+  TranslatedName(LangJav(), name: "Gabon"),
+  TranslatedName(LangKal(), name: "Gabon"),
+  TranslatedName(LangMlg(), name: "Gabon"),
+  TranslatedName(LangMsa(), name: "Gabon"),
+  TranslatedName(LangNor(), name: "Gabon"),
+  TranslatedName(LangOci(), name: "Gabon"),
+  TranslatedName(LangRon(), name: "Gabon"),
+  TranslatedName(LangSme(), name: "Gabon"),
+  TranslatedName(LangSlv(), name: "Gabon"),
+  TranslatedName(LangSna(), name: "Gabon"),
+  TranslatedName(LangSwa(), name: "Gabon"),
+  TranslatedName(LangTuk(), name: "Gabon"),
+  TranslatedName(LangVie(), name: "Gabon"),
+  TranslatedName(LangZha(), name: "Gyahbungz"),
+  TranslatedName(LangNob(), name: "Gabon"),
+  TranslatedName(LangTgl(), name: "Gabon"),
 ];

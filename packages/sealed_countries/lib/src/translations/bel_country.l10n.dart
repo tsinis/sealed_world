@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 162 translations for a Belgium country:
+/// Provides 166 translations for a Belgium country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -62,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -92,6 +94,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -158,6 +161,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const belCountryTranslations = [
   CountryName(
@@ -339,7 +343,7 @@ const belCountryTranslations = [
   TranslatedName(LangRon(), name: "Belgia"),
   TranslatedName(LangSnd(), name: "بيلجيم"),
   TranslatedName(LangSme(), name: "Belgia"),
-  TranslatedName(LangSag(), name: "Bêleze, Belezîki"),
+  TranslatedName(LangSag(), name: "Bêleze"),
   TranslatedName(LangSin(), name: "බෙල්ජියම"),
   TranslatedName(LangSlv(), name: "Belgija"),
   TranslatedName(LangSna(), name: "Beljium"),
@@ -402,4 +406,8 @@ const belCountryTranslations = [
   TranslatedName(LangVol(), name: "Belgän"),
   TranslatedName(LangWln(), name: "Beldjike"),
   TranslatedName(LangXho(), name: "EBelgium"),
+  TranslatedName(LangAbk(), name: "Бельгиа"),
+  TranslatedName(LangIbo(), name: "Belgium"),
+  TranslatedName(LangMsa(), name: "Belgium"),
+  TranslatedName(LangZha(), name: "Bijlisiz"),
 ];

@@ -2,13 +2,15 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 131 translations for a Maldives country:
+/// Provides 140 translations for a Maldives country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -20,6 +22,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
@@ -52,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -86,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -98,6 +103,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sango
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -106,6 +112,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -120,6 +127,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -127,6 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const mdvCountryTranslations = [
   CountryName(
@@ -348,4 +357,13 @@ const mdvCountryTranslations = [
   TranslatedName(LangMri(), name: "Māratiri"),
   TranslatedName(LangSrd(), name: "Maldivas"),
   TranslatedName(LangXho(), name: "EMaldives"),
+  TranslatedName(LangAbk(), name: "Мальдив"),
+  TranslatedName(LangArg(), name: "Maldivas"),
+  TranslatedName(LangCat(), name: "Maldives"),
+  TranslatedName(LangIle(), name: "Maldivas"),
+  TranslatedName(LangOci(), name: "Maldivas"),
+  TranslatedName(LangSna(), name: "Maldives"),
+  TranslatedName(LangVie(), name: "Maldives"),
+  TranslatedName(LangZha(), name: "Majwjdaifuh"),
+  TranslatedName(LangTgl(), name: "Maldives"),
 ];

@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 123 translations for a Gambia country:
+/// Provides 148 translations for a Gambia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -27,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -34,9 +38,11 @@ import "../model/country/submodels/country_name.dart";
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -48,25 +54,35 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
 /// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
 /// - Kinyarwanda
 /// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -78,6 +94,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -86,17 +104,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -115,12 +137,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
+/// - Western Frisian
 /// - Wolof
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const gmbCountryTranslations = [
   CountryName(
@@ -334,4 +359,29 @@ const gmbCountryTranslations = [
   TranslatedName(LangVol(), name: "Gambiyän"),
   TranslatedName(LangMri(), name: "Kamopia"),
   TranslatedName(LangXho(), name: "EGambia"),
+  TranslatedName(LangAbk(), name: "Гамбиа"),
+  TranslatedName(LangArg(), name: "Gambia"),
+  TranslatedName(LangDan(), name: "Gambia"),
+  TranslatedName(LangEus(), name: "Gambia"),
+  TranslatedName(LangFao(), name: "Gambia"),
+  TranslatedName(LangFry(), name: "Gambia"),
+  TranslatedName(LangGlg(), name: "Gambia"),
+  TranslatedName(LangIna(), name: "Gambia"),
+  TranslatedName(LangInd(), name: "Gambia"),
+  TranslatedName(LangIbo(), name: "Gambia"),
+  TranslatedName(LangJav(), name: "Gambia"),
+  TranslatedName(LangKik(), name: "Gambia"),
+  TranslatedName(LangKal(), name: "Gambia"),
+  TranslatedName(LangLat(), name: "Gambia"),
+  TranslatedName(LangLtz(), name: "Gambia"),
+  TranslatedName(LangMlg(), name: "Gambia"),
+  TranslatedName(LangMsa(), name: "Gambia"),
+  TranslatedName(LangNor(), name: "Gambia"),
+  TranslatedName(LangRoh(), name: "Gambia"),
+  TranslatedName(LangRon(), name: "Gambia"),
+  TranslatedName(LangSna(), name: "Gambia"),
+  TranslatedName(LangSwa(), name: "Gambia"),
+  TranslatedName(LangVie(), name: "Gambia"),
+  TranslatedName(LangZha(), name: "Ganghbijya"),
+  TranslatedName(LangNob(), name: "Gambia"),
 ];

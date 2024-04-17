@@ -2,18 +2,21 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 121 translations for a Namibia country:
+/// Provides 146 translations for a Namibia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -27,15 +30,18 @@ import "../model/country/submodels/country_name.dart";
 /// - Cornish
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
 /// - Esperanto
 /// - Estonian
 /// - Ewe
+/// - Faroese
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -47,9 +53,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -61,6 +73,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Limburgish (Limburgan/Limburger)
 /// - Lingala
@@ -68,6 +81,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Luba-Katanga
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
+/// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -77,6 +92,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -84,17 +103,21 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
 /// - Somali
 /// - Spanish
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -112,6 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -119,6 +143,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const namCountryTranslations = [
   CountryName(
@@ -334,4 +359,29 @@ const namCountryTranslations = [
   TranslatedName(LangTgl(), name: "Namibya"),
   TranslatedName(LangVol(), name: "Namibiyän"),
   TranslatedName(LangXho(), name: "ENamibia"),
+  TranslatedName(LangAbk(), name: "Намибиа"),
+  TranslatedName(LangArg(), name: "Namibia"),
+  TranslatedName(LangDan(), name: "Namibia"),
+  TranslatedName(LangEus(), name: "Namibia"),
+  TranslatedName(LangFao(), name: "Namibia"),
+  TranslatedName(LangGlg(), name: "Namibia"),
+  TranslatedName(LangIna(), name: "Namibia"),
+  TranslatedName(LangInd(), name: "Namibia"),
+  TranslatedName(LangIle(), name: "Namibia"),
+  TranslatedName(LangIbo(), name: "Namibia"),
+  TranslatedName(LangJav(), name: "Namibia"),
+  TranslatedName(LangKal(), name: "Namibia"),
+  TranslatedName(LangLat(), name: "Namibia"),
+  TranslatedName(LangMlg(), name: "Namibia"),
+  TranslatedName(LangMsa(), name: "Namibia"),
+  TranslatedName(LangNor(), name: "Namibia"),
+  TranslatedName(LangOci(), name: "Namibia"),
+  TranslatedName(LangRoh(), name: "Namibia"),
+  TranslatedName(LangRon(), name: "Namibia"),
+  TranslatedName(LangSme(), name: "Namibia"),
+  TranslatedName(LangSna(), name: "Namibia"),
+  TranslatedName(LangSwa(), name: "Namibia"),
+  TranslatedName(LangVie(), name: "Namibia"),
+  TranslatedName(LangZha(), name: "Nazmijbijya"),
+  TranslatedName(LangNob(), name: "Namibia"),
 ];

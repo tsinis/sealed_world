@@ -2,11 +2,12 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Finland country:
+/// Provides 158 translations for a Finland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Abkhaz
+/// - Afrikaans
 /// - Albanian
 /// - Amharic
 /// - Arabic
@@ -32,6 +33,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -57,8 +59,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Inuktitut
 /// - Irish
 /// - Italian
@@ -86,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -95,6 +100,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -111,10 +118,12 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
 /// - Slovene
+/// - Somali
 /// - Spanish
 /// - Sundanese
 /// - Swahili
@@ -380,4 +389,13 @@ const finCountryTranslations = [
   TranslatedName(LangWln(), name: "Finlande"),
   TranslatedName(LangZha(), name: "Finlan"),
   TranslatedName(LangXho(), name: "EFinland"),
+  TranslatedName(LangAfr(), name: "Finland"),
+  TranslatedName(LangDan(), name: "Finland"),
+  TranslatedName(LangIle(), name: "Finland"),
+  TranslatedName(LangIbo(), name: "Finland"),
+  TranslatedName(LangMsa(), name: "Finland"),
+  TranslatedName(LangNor(), name: "Finland"),
+  TranslatedName(LangSna(), name: "Finland"),
+  TranslatedName(LangSom(), name: "Finland"),
+  TranslatedName(LangNob(), name: "Finland"),
 ];

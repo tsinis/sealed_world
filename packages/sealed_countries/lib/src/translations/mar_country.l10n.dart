@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 149 translations for a Morocco country:
+/// Provides 156 translations for a Morocco country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -55,12 +56,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -111,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -145,6 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const marCountryTranslations = [
   CountryName(
@@ -376,4 +382,11 @@ const marCountryTranslations = [
   TranslatedName(LangVol(), name: "Marokän"),
   TranslatedName(LangWln(), name: "Marok"),
   TranslatedName(LangXho(), name: "EMorocco"),
+  TranslatedName(LangAbk(), name: "Марокко"),
+  TranslatedName(LangIle(), name: "Marocco"),
+  TranslatedName(LangIbo(), name: "Morocco"),
+  TranslatedName(LangKal(), name: "Marocko"),
+  TranslatedName(LangSna(), name: "Morocco"),
+  TranslatedName(LangSwa(), name: "Morocco"),
+  TranslatedName(LangZha(), name: "Mohlozgoh"),
 ];

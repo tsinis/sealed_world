@@ -2,10 +2,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 154 translations for a Switzerland country:
+/// Provides 158 translations for a Switzerland country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -58,6 +59,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -88,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -115,6 +118,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -393,4 +397,8 @@ const cheCountryTranslations = [
   TranslatedName(LangVol(), name: "Jveizän"),
   TranslatedName(LangZha(), name: "Nyeiqswq"),
   TranslatedName(LangXho(), name: "ESwitzerland"),
+  TranslatedName(LangAbk(), name: "Швеицариа"),
+  TranslatedName(LangIbo(), name: "Switzerland"),
+  TranslatedName(LangMsa(), name: "Switzerland"),
+  TranslatedName(LangSna(), name: "Switzerland"),
 ];

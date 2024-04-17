@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Dominican Republic country:
+/// Provides 152 translations for a Dominican Republic country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -28,6 +29,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
@@ -58,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -111,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -144,6 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const domCountryTranslations = [
   CountryName(
@@ -401,4 +406,9 @@ const domCountryTranslations = [
   TranslatedName(LangChv(), name: "Доминикан Республики"),
   TranslatedName(LangSrd(), name: "Repùblica Dominicana"),
   TranslatedName(LangXho(), name: "EDominican Republic"),
+  TranslatedName(LangAbk(), name: "Доминиканатәи Ареспублика"),
+  TranslatedName(LangCos(), name: "Republica Duminicana"),
+  TranslatedName(LangIle(), name: "Dominican Republica"),
+  TranslatedName(LangSna(), name: "Dominican Republic"),
+  TranslatedName(LangZha(), name: "Dohmijnizgyah Gunghozgoz"),
 ];

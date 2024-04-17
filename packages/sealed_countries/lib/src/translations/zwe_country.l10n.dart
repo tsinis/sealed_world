@@ -2,18 +2,22 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 118 translations for a Zimbabwe country:
+/// Provides 144 translations for a Zimbabwe country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
+/// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -26,6 +30,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -38,6 +43,7 @@ import "../model/country/submodels/country_name.dart";
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
 /// - Galician
+/// - Ganda
 /// - Georgian
 /// - German
 /// - Greek (modern)
@@ -47,24 +53,33 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
 /// - Khmer
+/// - Kikuyu (Gikuyu)
+/// - Kirundi
 /// - Korean
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
 /// - Latin
 /// - Latvian
+/// - Lingala
 /// - Lithuanian
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -73,6 +88,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Māori
 /// - Navajo (Navaho)
 /// - Nepali
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
 /// - Pashto (Pushto)
@@ -80,11 +99,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -92,6 +114,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Somali
 /// - Spanish
 /// - Sundanese
+/// - Swahili
 /// - Swati
 /// - Swedish
 /// - Tagalog
@@ -104,11 +127,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
+/// - Turkmen
 /// - Ukrainian
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
 /// - Venda
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -116,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const zweCountryTranslations = [
   CountryName(
@@ -328,4 +354,30 @@ const zweCountryTranslations = [
   TranslatedName(LangVen(), name: "Zimbagwe"),
   TranslatedName(LangVol(), name: "Zimbabiyän"),
   TranslatedName(LangXho(), name: "EZimbabwe"),
+  TranslatedName(LangAbk(), name: "Зимбабве"),
+  TranslatedName(LangAfr(), name: "Zimbabwe"),
+  TranslatedName(LangArg(), name: "Zimbabue"),
+  TranslatedName(LangDan(), name: "Zimbabwe"),
+  TranslatedName(LangEus(), name: "Zimbabwe"),
+  TranslatedName(LangIna(), name: "Zimbabwe"),
+  TranslatedName(LangInd(), name: "Zimbabwe"),
+  TranslatedName(LangIle(), name: "Zimbabwe"),
+  TranslatedName(LangIbo(), name: "Zimbabwe"),
+  TranslatedName(LangKik(), name: "Zimbabwe"),
+  TranslatedName(LangKal(), name: "Zimbabwe"),
+  TranslatedName(LangLug(), name: "Zimbabwe"),
+  TranslatedName(LangLin(), name: "Zimbabwe"),
+  TranslatedName(LangMsa(), name: "Zimbabwe"),
+  TranslatedName(LangNor(), name: "Zimbabwe"),
+  TranslatedName(LangOci(), name: "Zimbabwe"),
+  TranslatedName(LangRun(), name: "Zimbabwe"),
+  TranslatedName(LangRon(), name: "Zimbabwe"),
+  TranslatedName(LangSrd(), name: "Zimbabwe"),
+  TranslatedName(LangSme(), name: "Zimbabwe"),
+  TranslatedName(LangSna(), name: "Zimbabwe"),
+  TranslatedName(LangSwa(), name: "Zimbabwe"),
+  TranslatedName(LangTuk(), name: "Zimbabwe"),
+  TranslatedName(LangVie(), name: "Zimbabwe"),
+  TranslatedName(LangZha(), name: "Cinhbahbuveiz"),
+  TranslatedName(LangNob(), name: "Zimbabwe"),
 ];

@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 144 translations for a New Zealand country:
+/// Provides 156 translations for a New Zealand country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -29,8 +30,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -55,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -62,6 +66,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -83,7 +88,9 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Manx
 /// - Marathi (Marāṭhī)
 /// - Mongolian
@@ -91,6 +98,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nauruan
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -107,6 +116,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -116,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sundanese
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tahitian
 /// - Tajik
 /// - Tamil
@@ -131,6 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Walloon
 /// - Welsh
@@ -370,4 +382,16 @@ const nzlCountryTranslations = [
   TranslatedName(LangZha(), name: "Saen Saelanz"),
   TranslatedName(LangSrd(), name: "Zelanda Noa"),
   TranslatedName(LangXho(), name: "ENew Zealand"),
+  TranslatedName(LangAbk(), name: "Зеландиа ҿыц"),
+  TranslatedName(LangCos(), name: "Nova Zelanda"),
+  TranslatedName(LangDan(), name: "New Zealand"),
+  TranslatedName(LangIbo(), name: "New Zealand"),
+  TranslatedName(LangKal(), name: "Nutaaq Zeelandi"),
+  TranslatedName(LangMsa(), name: "New Zealand"),
+  TranslatedName(LangMlt(), name: "New Zealand"),
+  TranslatedName(LangNor(), name: "New Zealand"),
+  TranslatedName(LangSna(), name: "New Zealand"),
+  TranslatedName(LangVie(), name: "New Zealand"),
+  TranslatedName(LangNob(), name: "New Zealand"),
+  TranslatedName(LangTgl(), name: "New Zealand"),
 ];

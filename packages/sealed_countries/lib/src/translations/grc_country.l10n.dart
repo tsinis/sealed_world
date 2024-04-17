@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 156 translations for a Greece country:
+/// Provides 160 translations for a Greece country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -60,6 +60,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -120,6 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -153,6 +155,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const grcCountryTranslations = [
   CountryName(
@@ -399,4 +402,8 @@ const grcCountryTranslations = [
   TranslatedName(LangTgl(), name: "Gresya"),
   TranslatedName(LangVol(), name: "Grikän"),
   TranslatedName(LangXho(), name: "EGreece"),
+  TranslatedName(LangIbo(), name: "Greece"),
+  TranslatedName(LangMsa(), name: "Greece"),
+  TranslatedName(LangSna(), name: "Greece"),
+  TranslatedName(LangZha(), name: "Hihlaz"),
 ];

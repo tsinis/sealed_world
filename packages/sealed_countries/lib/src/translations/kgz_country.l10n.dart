@@ -2,8 +2,9 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 146 translations for a Kyrgyzstan country:
+/// Provides 152 translations for a Kyrgyzstan country:
 /// - (Eastern) Punjabi
+/// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
 /// - Abkhaz
 /// - Afrikaans
@@ -56,6 +57,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -84,6 +86,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -112,6 +115,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -137,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -144,6 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const kgzCountryTranslations = [
   CountryName(
@@ -380,4 +386,10 @@ const kgzCountryTranslations = [
   TranslatedName(LangMri(), name: "Kikitānga"),
   TranslatedName(LangSrd(), name: "Kirghìzistan"),
   TranslatedName(LangXho(), name: "EKyrgyzstan"),
+  TranslatedName(LangChu(), name: "кирги́зїа"),
+  TranslatedName(LangIbo(), name: "Kyrgyzstan"),
+  TranslatedName(LangMsa(), name: "Kyrgyzstan"),
+  TranslatedName(LangSna(), name: "Kyrgyzstan"),
+  TranslatedName(LangVie(), name: "Kyrgyzstan"),
+  TranslatedName(LangZha(), name: "Gizwjgizswhswhdanj"),
 ];

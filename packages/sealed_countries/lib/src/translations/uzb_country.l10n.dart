@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 134 translations for a Uzbekistan country:
+/// Provides 149 translations for a Uzbekistan country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -16,12 +17,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
@@ -52,10 +55,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hindi
 /// - Hungarian
 /// - Icelandic
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -77,6 +85,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
 /// - Maltese
 /// - Manx
@@ -97,21 +106,25 @@ import "../model/country/submodels/country_name.dart";
 /// - Polish
 /// - Portuguese
 /// - Quechua
+/// - Romanian
 /// - Romansh
 /// - Russian
 /// - Sango
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
+/// - Slovene
 /// - Somali
 /// - Spanish
 /// - Sundanese
 /// - Swahili
 /// - Swati
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
@@ -126,6 +139,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -133,6 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const uzbCountryTranslations = [
   CountryName(
@@ -365,4 +380,19 @@ const uzbCountryTranslations = [
   TranslatedName(LangMri(), name: "Uhipeketāne"),
   TranslatedName(LangSrd(), name: "Uzbèkistan"),
   TranslatedName(LangXho(), name: "E-Uzbekistan"),
+  TranslatedName(LangAbk(), name: "Узбеқьисҭан"),
+  TranslatedName(LangCat(), name: "Uzbekistan"),
+  TranslatedName(LangEus(), name: "Uzbekistan"),
+  TranslatedName(LangIna(), name: "Uzbekistan"),
+  TranslatedName(LangInd(), name: "Uzbekistan"),
+  TranslatedName(LangIle(), name: "Uzbekistan"),
+  TranslatedName(LangIbo(), name: "Uzbekistan"),
+  TranslatedName(LangKal(), name: "Uzbekistani"),
+  TranslatedName(LangMsa(), name: "Uzbekistan"),
+  TranslatedName(LangRon(), name: "Uzbekistan"),
+  TranslatedName(LangSlv(), name: "Uzbekistan"),
+  TranslatedName(LangSna(), name: "Uzbekistan"),
+  TranslatedName(LangVie(), name: "Uzbekistan"),
+  TranslatedName(LangZha(), name: "Vuhsihbezgwzswhdanj"),
+  TranslatedName(LangTgl(), name: "Uzbekistan"),
 ];

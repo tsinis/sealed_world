@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 147 translations for a Central African Republic country:
+/// Provides 150 translations for a Central African Republic country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -57,6 +58,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -111,6 +113,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -406,4 +409,7 @@ const cafCountryTranslations = [
   TranslatedName(LangVol(), name: "Zänoda-Frikop"),
   TranslatedName(LangChv(), name: "Тӗп Африка Республики"),
   TranslatedName(LangXho(), name: "ECentral African Republic"),
+  TranslatedName(LangAbk(), name: "Агәҭантәи-Африкатәи Ареспублика"),
+  TranslatedName(LangIle(), name: "Central African Republica"),
+  TranslatedName(LangSna(), name: "Central African Republic"),
 ];

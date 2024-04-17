@@ -2,9 +2,10 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 138 translations for a Malaysia country:
+/// Provides 153 translations for a Malaysia country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
@@ -16,6 +17,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Azerbaijani
 /// - Bambara
 /// - Bashkir
+/// - Basque
 /// - Belarusian
 /// - Bengali (Bangla)
 /// - Bosnian
@@ -27,8 +29,10 @@ import "../model/country/submodels/country_name.dart";
 /// - Chinese
 /// - Chuvash
 /// - Cornish
+/// - Corsican
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Divehi (Dhivehi/Maldivian)
 /// - Dutch
 /// - Dzongkha
@@ -53,9 +57,15 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
+/// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
+/// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -74,6 +84,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
 /// - Malay
@@ -88,6 +99,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Nepali
 /// - Northern Ndebele
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Ossetian (Ossetic)
@@ -103,6 +116,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -127,6 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -279,4 +294,19 @@ const mysCountryTranslations = [
   TranslatedName(LangZha(), name: "Majlaizsihya"),
   TranslatedName(LangSrd(), name: "Malèsia"),
   TranslatedName(LangXho(), name: "EMalaysia"),
+  TranslatedName(LangAbk(), name: "Малаизиа"),
+  TranslatedName(LangCos(), name: "Malesia"),
+  TranslatedName(LangDan(), name: "Malaysia"),
+  TranslatedName(LangEus(), name: "Malaysia"),
+  TranslatedName(LangIna(), name: "Malaysia"),
+  TranslatedName(LangInd(), name: "Malaysia"),
+  TranslatedName(LangIle(), name: "Malaysia"),
+  TranslatedName(LangIbo(), name: "Malaysia"),
+  TranslatedName(LangJav(), name: "Malaysia"),
+  TranslatedName(LangKal(), name: "Malaysia"),
+  TranslatedName(LangLtz(), name: "Malaysia"),
+  TranslatedName(LangNor(), name: "Malaysia"),
+  TranslatedName(LangSna(), name: "Malaysia"),
+  TranslatedName(LangVie(), name: "Malaysia"),
+  TranslatedName(LangNob(), name: "Malaysia"),
 ];

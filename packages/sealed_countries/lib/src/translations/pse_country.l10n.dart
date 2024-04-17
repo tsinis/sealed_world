@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a Palestine country:
+/// Provides 133 translations for a Palestine country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -25,12 +27,14 @@ import "../model/country/submodels/country_name.dart";
 /// - Chechen
 /// - Chinese
 /// - Chuvash
+/// - Corsican
 /// - Croatian
 /// - Czech
 /// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
+/// - Esperanto
 /// - Estonian
 /// - Ewe
 /// - Faroese
@@ -51,6 +55,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Igbo
 /// - Indonesian
 /// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
@@ -65,6 +70,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
@@ -84,6 +90,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Norwegian
 /// - Norwegian Bokmål
 /// - Norwegian Nynorsk
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
@@ -121,6 +128,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Western Frisian
 /// - Xhosa
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const pseCountryTranslations = [
   CountryName(
@@ -335,4 +343,12 @@ const pseCountryTranslations = [
   TranslatedName(LangSrd(), name: "Territòrios palestinesos"),
   TranslatedName(LangTgl(), name: "Palestinian Territories"),
   TranslatedName(LangXho(), name: "IPalestinian Territories"),
+  TranslatedName(LangAbk(), name: "Палестина"),
+  TranslatedName(LangArg(), name: "Palestina"),
+  TranslatedName(LangCos(), name: "Palestina"),
+  TranslatedName(LangEpo(), name: "Palestino"),
+  TranslatedName(LangIle(), name: "Palestina"),
+  TranslatedName(LangLat(), name: "Territoria Palaestinensia"),
+  TranslatedName(LangOci(), name: "Palestina"),
+  TranslatedName(LangZha(), name: "Bahlwzswhdanj"),
 ];

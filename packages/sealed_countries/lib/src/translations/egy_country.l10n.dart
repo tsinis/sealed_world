@@ -2,7 +2,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 161 translations for a Egypt country:
+/// Provides 166 translations for a Egypt country:
 /// - (Eastern) Punjabi
 /// - (Old) Church Slavonic
 /// - (Scottish) Gaelic
@@ -63,6 +63,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Hungarian
 /// - Icelandic
 /// - Ido
+/// - Igbo
 /// - Indonesian
 /// - Interlingua
 /// - Interlingue
@@ -70,6 +71,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -102,6 +104,8 @@ import "../model/country/submodels/country_name.dart";
 /// - Navajo (Navaho)
 /// - Nepali
 /// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
 /// - Occitan
 /// - Oriya
 /// - Oromo
@@ -120,6 +124,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Sanskrit (Saṁskṛta)
 /// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -298,7 +303,7 @@ const egyCountryTranslations = [
   TranslatedName(LangGlg(), name: "Exipto"),
   TranslatedName(LangGuj(), name: "ઇજિપ્ત"),
   TranslatedName(LangHau(), name: "Misira"),
-  TranslatedName(LangHau(), name: "Masar, Misira", script: ScriptLatn()),
+  TranslatedName(LangHau(), name: "Masar", script: ScriptLatn()),
   TranslatedName(LangHeb(), name: "מצרים"),
   TranslatedName(LangHin(), name: "मिस्र"),
   TranslatedName(LangHye(), name: "Եգիպտոս"),
@@ -405,4 +410,9 @@ const egyCountryTranslations = [
   TranslatedName(LangZha(), name: "Aehciz"),
   TranslatedName(LangChv(), name: "Египет"),
   TranslatedName(LangXho(), name: "IYiputa"),
+  TranslatedName(LangIbo(), name: "Egypt"),
+  TranslatedName(LangKal(), name: "Egypten"),
+  TranslatedName(LangNor(), name: "Egypt"),
+  TranslatedName(LangSna(), name: "Egypt"),
+  TranslatedName(LangNob(), name: "Egypt"),
 ];

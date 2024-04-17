@@ -2,14 +2,16 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 113 translations for a Dominica country:
+/// Provides 138 translations for a Dominica country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
+/// - Abkhaz
 /// - Afrikaans
 /// - Akan
 /// - Albanian
 /// - Amharic
 /// - Arabic
+/// - Aragonese
 /// - Armenian
 /// - Assamese
 /// - Azerbaijani
@@ -21,11 +23,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Breton
 /// - Bulgarian
 /// - Burmese
+/// - Catalan
 /// - Chechen
 /// - Chinese
 /// - Chuvash
 /// - Croatian
 /// - Czech
+/// - Danish
 /// - Dutch
 /// - Dzongkha
 /// - English
@@ -36,6 +40,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Finnish
 /// - French
 /// - Fula (Fulah/Pulaar/Pular)
+/// - Galician
 /// - Ganda
 /// - Georgian
 /// - German
@@ -48,10 +53,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Icelandic
 /// - Igbo
 /// - Indonesian
+/// - Interlingua
+/// - Interlingue
 /// - Irish
 /// - Italian
 /// - Japanese
 /// - Javanese
+/// - Kalaallisut (Greenlandic)
 /// - Kannada
 /// - Kashmiri
 /// - Kazakh
@@ -62,26 +70,39 @@ import "../model/country/submodels/country_name.dart";
 /// - Kurdish
 /// - Kyrgyz
 /// - Lao
+/// - Latin
 /// - Latvian
 /// - Lingala
 /// - Lithuanian
 /// - Luba-Katanga
+/// - Luxembourgish (Letzeburgesch)
 /// - Macedonian
 /// - Malagasy
+/// - Malay
 /// - Malayalam
+/// - Maltese
 /// - Marathi (Marāṭhī)
 /// - Mongolian
 /// - Māori
 /// - Nepali
 /// - Northern Ndebele
+/// - Northern Sami
+/// - Norwegian
+/// - Norwegian Bokmål
+/// - Occitan
 /// - Oriya
 /// - Pashto (Pushto)
 /// - Persian (Farsi)
 /// - Polish
 /// - Portuguese
+/// - Quechua
+/// - Romanian
+/// - Romansh
 /// - Russian
 /// - Sango
+/// - Sardinian
 /// - Serbian
+/// - Shona
 /// - Sindhi
 /// - Sinhalese (Sinhala)
 /// - Slovak
@@ -90,11 +111,13 @@ import "../model/country/submodels/country_name.dart";
 /// - Spanish
 /// - Swahili
 /// - Swedish
+/// - Tagalog
 /// - Tajik
 /// - Tamil
 /// - Tatar
 /// - Telugu
 /// - Thai
+/// - Tibetan Standard
 /// - Tigrinya
 /// - Tonga (Tonga Islands)
 /// - Turkish
@@ -103,6 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Urdu
 /// - Uyghur
 /// - Uzbek
+/// - Vietnamese
 /// - Volapük
 /// - Welsh
 /// - Western Frisian
@@ -110,6 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yiddish
 /// - Yoruba
+/// - Zhuang (Chuang)
 /// - Zulu.
 const dmaCountryTranslations = [
   CountryName(
@@ -317,4 +342,29 @@ const dmaCountryTranslations = [
   TranslatedName(LangChv(), name: "Доминика"),
   TranslatedName(LangMri(), name: "Tominika"),
   TranslatedName(LangXho(), name: "EDominica"),
+  TranslatedName(LangAbk(), name: "Доминика"),
+  TranslatedName(LangArg(), name: "Dominica"),
+  TranslatedName(LangBod(), name: "ཌོ་མིན་ནི་ཀ།"),
+  TranslatedName(LangCat(), name: "Dominica"),
+  TranslatedName(LangDan(), name: "Dominica"),
+  TranslatedName(LangGlg(), name: "Dominica"),
+  TranslatedName(LangIna(), name: "Dominica"),
+  TranslatedName(LangIle(), name: "Dominica"),
+  TranslatedName(LangKal(), name: "Dominica"),
+  TranslatedName(LangLat(), name: "Dominica"),
+  TranslatedName(LangLtz(), name: "Dominica"),
+  TranslatedName(LangMsa(), name: "Dominica"),
+  TranslatedName(LangMlt(), name: "Dominica"),
+  TranslatedName(LangNor(), name: "Dominica"),
+  TranslatedName(LangOci(), name: "Dominica"),
+  TranslatedName(LangQue(), name: "Dominica"),
+  TranslatedName(LangRoh(), name: "Dominica"),
+  TranslatedName(LangRon(), name: "Dominica"),
+  TranslatedName(LangSrd(), name: "Dominica"),
+  TranslatedName(LangSme(), name: "Dominica"),
+  TranslatedName(LangSna(), name: "Dominica"),
+  TranslatedName(LangVie(), name: "Dominica"),
+  TranslatedName(LangZha(), name: "Dohmijnizgwz"),
+  TranslatedName(LangNob(), name: "Dominica"),
+  TranslatedName(LangTgl(), name: "Dominika"),
 ];
