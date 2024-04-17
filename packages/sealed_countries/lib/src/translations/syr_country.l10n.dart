@@ -299,7 +299,7 @@ const syrCountryTranslations = [
   TranslatedName(LangGla(), name: "Siridhea"),
   TranslatedName(LangGlg(), name: "Siria"),
   TranslatedName(LangGuj(), name: "સીરિયા"),
-  TranslatedName(LangHau(), name: "Sham, Siriya"),
+  TranslatedName(LangHau(), name: "Siriya"),
   TranslatedName(LangHeb(), name: "סוריה"),
   TranslatedName(LangHin(), name: "सीरिया"),
   TranslatedName(LangHye(), name: "Սիրիա"),

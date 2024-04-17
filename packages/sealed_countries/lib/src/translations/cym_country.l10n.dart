@@ -325,7 +325,7 @@ const cymCountryTranslations = [
   TranslatedName(LangRon(), name: "Insulele Cayman"),
   TranslatedName(LangSnd(), name: "ڪي مين ٻيٽ"),
   TranslatedName(LangSme(), name: "Cayman-sullot"),
-  TranslatedName(LangSag(), name: "Âzûâ Ngundë, Kaimäni"),
+  TranslatedName(LangSag(), name: "Âzûâ Ngundë"),
   TranslatedName(LangSin(), name: "කේමන් දූපත්"),
   TranslatedName(LangSlv(), name: "Kajmanski otoki"),
   TranslatedName(LangSna(), name: "Zvitsuwa zveCayman"),

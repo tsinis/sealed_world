@@ -343,7 +343,7 @@ const belCountryTranslations = [
   TranslatedName(LangRon(), name: "Belgia"),
   TranslatedName(LangSnd(), name: "بيلجيم"),
   TranslatedName(LangSme(), name: "Belgia"),
-  TranslatedName(LangSag(), name: "Bêleze, Belezîki"),
+  TranslatedName(LangSag(), name: "Bêleze"),
   TranslatedName(LangSin(), name: "බෙල්ජියම"),
   TranslatedName(LangSlv(), name: "Belgija"),
   TranslatedName(LangSna(), name: "Beljium"),

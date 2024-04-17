@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";

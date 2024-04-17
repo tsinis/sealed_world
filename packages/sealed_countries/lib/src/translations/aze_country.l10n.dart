@@ -346,7 +346,7 @@ const azeCountryTranslations = [
   TranslatedName(LangRon(), name: "Azerbaidjan"),
   TranslatedName(LangSnd(), name: "آذربائيجان"),
   TranslatedName(LangSme(), name: "Aserbaižan"),
-  TranslatedName(LangSag(), name: "Zerebaidyäan, Azerbaidyäan,"),
+  TranslatedName(LangSag(), name: "Zerebaidyäan"),
   TranslatedName(LangSin(), name: "අසර්බයිජානය"),
   TranslatedName(LangSlv(), name: "Azerbajdžan"),
   TranslatedName(LangSna(), name: "Azabajani"),

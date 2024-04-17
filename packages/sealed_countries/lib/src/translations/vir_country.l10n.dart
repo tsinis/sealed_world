@@ -344,7 +344,7 @@ const virCountryTranslations = [
   TranslatedName(LangSna(), name: "Zvitsuwa zveAmerika"),
   TranslatedName(LangSom(), name: "U.S Fargin Island"),
   TranslatedName(LangSqi(), name: "Ishujt e Virgjër të SHBA-së"),
-  TranslatedName(LangSwa(), name: "Visiwa vya Virgin, Marekani"),
+  TranslatedName(LangSwa(), name: "Visiwa vya Virgin vya Marekani"),
   TranslatedName(
     LangSwa(),
     name: "Visiwa vya Virgin vya Marekani",

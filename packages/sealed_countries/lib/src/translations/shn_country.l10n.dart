@@ -2,7 +2,8 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 137 translations for a Saint Helena, Ascension and Tristan da Cunha country:
+/// Provides 137 translations for a Saint Helena, Ascension and Tristan da Cunha
+///  country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz

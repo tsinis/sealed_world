@@ -333,7 +333,7 @@ const ausCountryTranslations = [
   TranslatedName(LangRun(), name: "Ositaraliya"),
   TranslatedName(LangSnd(), name: "آسٽريليا"),
   TranslatedName(LangSme(), name: "Austrália"),
-  TranslatedName(LangSag(), name: "Ostralïi, Sotralïi"),
+  TranslatedName(LangSag(), name: "Ostralïi"),
   TranslatedName(LangSin(), name: "ඕස්ට්‍රේලියාව"),
   TranslatedName(LangSlv(), name: "Avstralija"),
   TranslatedName(LangSom(), name: "Awstaraaliya"),

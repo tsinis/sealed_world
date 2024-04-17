@@ -232,7 +232,7 @@ const gibCountryTranslations = [
   TranslatedName(LangPus(), name: "جبل الطارق"),
   TranslatedName(LangRun(), name: "Juburalitari"),
   TranslatedName(LangSnd(), name: "جبرالٽر"),
-  TranslatedName(LangSag(), name: "Zibraltära, Zibaratära"),
+  TranslatedName(LangSag(), name: "Zibraltära"),
   TranslatedName(LangSin(), name: "ජිබ්‍රෝල්ටාව"),
   TranslatedName(LangSqi(), name: "Gjibraltar"),
   TranslatedName(LangTam(), name: "ஜிப்ரால்டர்"),

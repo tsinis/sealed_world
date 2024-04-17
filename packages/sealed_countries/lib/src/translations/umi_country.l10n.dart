@@ -2,7 +2,8 @@ import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/submodels/country_name.dart";
 
-/// Provides 125 translations for a United States Minor Outlying Islands country:
+/// Provides 125 translations for a United States Minor Outlying Islands
+/// country:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Abkhaz

@@ -309,7 +309,7 @@ const chnCountryTranslations = [
   TranslatedName(LangGlg(), name: "A China"),
   TranslatedName(LangGuj(), name: "ચીન"),
   TranslatedName(LangHau(), name: "Sin"),
-  TranslatedName(LangHau(), name: "Caina, Sin", script: ScriptLatn()),
+  TranslatedName(LangHau(), name: "Caina", script: ScriptLatn()),
   TranslatedName(LangHeb(), name: "סין"),
   TranslatedName(LangHin(), name: "चीन"),
   TranslatedName(LangHye(), name: "Չինաստան"),

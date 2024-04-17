@@ -340,7 +340,7 @@ const afgCountryTranslations = [
   TranslatedName(LangRun(), name: "Afuganisitani"),
   TranslatedName(LangRon(), name: "Afganistan"),
   TranslatedName(LangSnd(), name: "افغانستان"),
-  TranslatedName(LangSag(), name: "Faganïta, Afganïstäan"),
+  TranslatedName(LangSag(), name: "Afganïstäan"),
   TranslatedName(LangSin(), name: "ඇෆ්ගනිස්ථානය"),
   TranslatedName(LangSlv(), name: "Afganistan"),
   TranslatedName(LangSna(), name: "Afuganistani"),

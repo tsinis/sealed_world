@@ -346,7 +346,7 @@ const vgbCountryTranslations = [
   TranslatedName(LangSna(), name: "Zvitsuwa zveHingirandi"),
   TranslatedName(LangSom(), name: "Biritish Farjin Island"),
   TranslatedName(LangSqi(), name: "Ishujt e Virgjër Britanikë"),
-  TranslatedName(LangSwa(), name: "Visiwa vya Virgin, Uingereza"),
+  TranslatedName(LangSwa(), name: "Visiwa vya Virgin vya Uingereza"),
   TranslatedName(
     LangSwa(),
     name: "Visiwa vya Virgin vya Uingereza",

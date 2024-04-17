@@ -311,7 +311,7 @@ const lieCountryTranslations = [
   TranslatedName(LangPus(), name: "لیختن اشتاین"),
   TranslatedName(LangRun(), name: "Lishyitenshitayini"),
   TranslatedName(LangSnd(), name: "لچي ٽينسٽين"),
-  TranslatedName(LangSag(), name: "Liechtenstein,"),
+  TranslatedName(LangSag(), name: "Liechtenstein"),
   TranslatedName(LangSin(), name: "ලික්ටන්ස්ටයින්"),
   TranslatedName(LangSlv(), name: "Lihtenštajn"),
   TranslatedName(LangSom(), name: "Liyjtensteyn"),

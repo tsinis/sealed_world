@@ -303,7 +303,7 @@ const egyCountryTranslations = [
   TranslatedName(LangGlg(), name: "Exipto"),
   TranslatedName(LangGuj(), name: "ઇજિપ્ત"),
   TranslatedName(LangHau(), name: "Misira"),
-  TranslatedName(LangHau(), name: "Masar, Misira", script: ScriptLatn()),
+  TranslatedName(LangHau(), name: "Masar", script: ScriptLatn()),
   TranslatedName(LangHeb(), name: "מצרים"),
   TranslatedName(LangHin(), name: "मिस्र"),
   TranslatedName(LangHye(), name: "Եգիպտոս"),
