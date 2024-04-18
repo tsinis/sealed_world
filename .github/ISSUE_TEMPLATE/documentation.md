@@ -1,7 +1,7 @@
 ---
 name: Documentation
 about: Improve the documentation so all collaborators have a common understanding
-title: 'docs: '
+title: "docs: "
 labels: documentation
 ---
 

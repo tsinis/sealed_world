@@ -1,7 +1,7 @@
 ---
 name: Chore
 about: Other changes that don't modify src or test files
-title: 'chore: '
+title: "chore: "
 labels: chore
 ---
 

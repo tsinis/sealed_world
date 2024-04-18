@@ -1,7 +1,7 @@
 ---
 name: Test
 about: Adding missing tests or correcting existing tests
-title: 'test: '
+title: "test: "
 labels: test
 ---
 
