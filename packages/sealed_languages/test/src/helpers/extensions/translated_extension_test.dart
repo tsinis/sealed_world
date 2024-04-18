@@ -14,6 +14,11 @@ void main() => group("TranslatedExtension", () {
 
       group("maybeTranslation", () {
         test(
+          "should return null on null locale",
+          () => expect(kongo.maybeTranslation(null), isNull),
+        );
+
+        test(
           "should use useLanguageFallback when no country code is provided",
           () {
             expect(
