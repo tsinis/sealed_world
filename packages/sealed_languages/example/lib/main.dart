@@ -76,13 +76,7 @@ void main() {
 
 /// Creates a instance of the custom language with permissive constructor.
 class _LangCustom extends NaturalLanguage {
-  const _LangCustom()
-      : super.permissive(
-          name: "Custom",
-          code: "CUSTOM",
-          codeShort: "CT",
-          namesNative: const ["Custom"],
-        );
+  const _LangCustom() : super.permissive(name: "Custom", code: "CUSTOM");
 
   @override
   List<TranslatedName> get translations =>

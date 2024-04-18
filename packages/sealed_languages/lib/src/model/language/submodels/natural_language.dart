@@ -74,9 +74,9 @@ class NaturalLanguage extends Language
   /// {@macro natural_language_constructor}
   const NaturalLanguage.permissive({
     required super.name,
-    required this.codeShort,
-    required this.namesNative,
     required this.code,
+    this.codeShort = "",
+    this.namesNative = const [],
     this.bibliographicCode,
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,

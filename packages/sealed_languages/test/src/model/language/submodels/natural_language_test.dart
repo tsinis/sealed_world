@@ -10,13 +10,7 @@ import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
 class _NaturalLanguageTest extends NaturalLanguage {
-  const _NaturalLanguageTest()
-      : super.permissive(
-          name: " ",
-          code: "",
-          codeShort: "",
-          namesNative: const [],
-        );
+  const _NaturalLanguageTest() : super.permissive(name: " ", code: "");
 }
 
 void main() => group("$NaturalLanguage", () {

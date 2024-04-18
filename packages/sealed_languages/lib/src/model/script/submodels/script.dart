@@ -36,8 +36,8 @@ class Script extends WritingSystem
   const Script.permissive({
     required super.name,
     required this.code,
-    required this.codeNumeric,
-    required this.date,
+    this.codeNumeric = "",
+    this.date = "",
     this.pva,
   });
 
