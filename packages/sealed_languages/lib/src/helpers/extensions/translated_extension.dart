@@ -88,7 +88,8 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale>
   /// // language if no matching translation is found.
   /// );
   /// ```
-  T? maybeTranslation(L locale, {bool useLanguageFallback = true}) {
+  T? maybeTranslation(L? locale, {bool useLanguageFallback = true}) {
+    if (locale == null) return null;
     final filtered = List<T>.unmodifiable(
       translations.where((l10n) => l10n.language == locale.language),
     );
