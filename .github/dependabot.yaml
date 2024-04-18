@@ -68,6 +68,17 @@ updates:
       prefix: "chore"
       include: "scope"
 
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "packages/_sealed_world_tests/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
   # Maintain dependencies for Flutter (example)
   - package-ecosystem: "pub"
     versioning-strategy: increase

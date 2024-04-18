@@ -1,7 +1,7 @@
 ---
 name: Build System
 about: Changes that affect the build system or external dependencies
-title: 'build: '
+title: "build: "
 labels: build
 ---
 

@@ -7,8 +7,7 @@ import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:test/test.dart";
 
 class _ScriptTest extends Script {
-  const _ScriptTest()
-      : super.permissive(name: "name", code: "", codeNumeric: "", date: "");
+  const _ScriptTest() : super.permissive(name: " ", code: "");
 }
 
 void main() => group("$Script", () {

@@ -1,7 +1,7 @@
 ---
 name: Revert Commit
 about: Reverts a previous commit
-title: 'revert: '
+title: "revert: "
 labels: revert
 ---
 

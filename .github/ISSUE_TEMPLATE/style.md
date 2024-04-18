@@ -1,7 +1,7 @@
 ---
 name: Style Changes
 about: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-title: 'style: '
+title: "style: "
 labels: style
 ---
 
