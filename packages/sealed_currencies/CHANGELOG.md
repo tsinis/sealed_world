@@ -1,3 +1,13 @@
+## 1.5.0
+
+> This is the last minor version update with significant changes for some time. The next steps will be patches at most. Currently working on v2.0.0 which will bring new data and a big feature, very likely without breaking the existing API.
+
+NEW FEATURES
+
+- 🎉 All translations in the eco-system packages now support all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales.
+- The `locale` parameter in the `maybeTranslation` method is now nullable.
+- The `permissive` constructors are now even more permissive, only `name` and `code` parameters remain required.
+
 ## 1.4.0
 
 NEW FEATURES
