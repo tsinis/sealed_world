@@ -72,12 +72,5 @@ void main() {
 
 /// Creates a instance of the custom currency with permissive constructor.
 class _FiatCustom extends FiatCurrency {
-  const _FiatCustom()
-      : super.permissive(
-          code: "123",
-          name: "Custom",
-          codeNumeric: "",
-          namesNative: const [],
-          translations: const [],
-        );
+  const _FiatCustom() : super.permissive(code: "123", name: "Custom");
 }

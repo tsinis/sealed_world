@@ -6,14 +6,7 @@ import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 class _FiatCurrencyTest extends FiatCurrency {
-  const _FiatCurrencyTest()
-      : super.permissive(
-          code: "123",
-          name: "name",
-          codeNumeric: "",
-          namesNative: const [],
-          translations: const [],
-        );
+  const _FiatCurrencyTest() : super.permissive(code: "123", name: " ");
 }
 
 void main() => group("$FiatCurrency", () {
@@ -804,10 +797,12 @@ void main() => group("$FiatCurrency", () {
             sortedLanguages,
             containsAll(kMaterialSupportedLanguagesSealed),
           );
+
           expect(
             sortedLanguages,
-            containsAll(kSealedCurrenciesSupportedLanguages),
+            containsAll(kCupertinoSupportedLanguagesSealed),
           );
+
           expect(sortedLanguages, kSealedCurrenciesSupportedLanguages);
 
           for (final currency in FiatCurrency.list) {

@@ -82,9 +82,9 @@ class FiatCurrency extends Currency
   const FiatCurrency.permissive({
     required super.code,
     required super.name,
-    required this.namesNative,
-    required this.codeNumeric,
-    required this.translations,
+    this.namesNative = const [],
+    this.codeNumeric = "",
+    this.translations = const [],
     this.alternateSymbols,
     this.disambiguateSymbol,
     this.htmlEntity,
