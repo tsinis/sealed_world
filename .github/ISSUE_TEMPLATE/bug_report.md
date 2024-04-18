@@ -1,7 +1,7 @@
 ---
 name: Bug Report
 about: Create a report to help us improve
-title: 'fix: '
+title: "fix: "
 labels: bug
 ---
 
@@ -11,7 +11,7 @@ A clear and concise description of what the bug is.
 
 #### Steps To Reproduce
 
-1. Go to '...'
+1. Open '...'
 2. Add '....'
 3. Run '....'
 4. See error
