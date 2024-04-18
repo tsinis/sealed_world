@@ -1,4 +1,4 @@
-version: 1.4.0
+version: 1.5.0
 name: sealed_languages
 description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
@@ -30,4 +30,4 @@ dev_dependencies:
       url: https://github.com/tsinis/dart-code-metrics
       version: ^5.7.6+1
   lints: ^3.0.0 # From Google
-  test: ^1.25.3 # From Google
+  test: ^1.25.4 # From Google
