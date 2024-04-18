@@ -11,8 +11,8 @@ environment:
 
 dependencies:
   meta: ^1.14.0 # From Google
-  test: ^1.25.3 # From Google
-  vm_service: ^14.2.0 # From Google
+  test: ^1.25.4 # From Google
+  vm_service: ^14.2.1 # From Google
 
 dev_dependencies:
   dart_code_metrics: # ex-Flutter Favorite
