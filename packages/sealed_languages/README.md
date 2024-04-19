@@ -13,16 +13,16 @@ This ISO-driven, pure Dart, fully tested and and dependency-free package provide
 
 **NaturalLanguage** class provides the following information about languages:
 
-| Field             | Mandatory | Description                                                                              | Example for LangEng                               |
-| ----------------- | --------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| name              | Yes       | A non-empty string representing the English name of the natural language.                | "English"                                         |
-| code              | Yes       | A three-letter string representing the ISO 639-2/T Terminological code for the language. | "ENG"                                             |
-| codeShort         | Yes       | A two-letter string representing the ISO 639-1 code for the language.                    | "EN"                                              |
-| namesNative       | Yes       | A list of non-empty strings representing the language's native names.                    | ["English"]                                       |
-| bibliographicCode | No        | A three-letter string representing the ISO 639-2/B Bibliographic code for the language.  | `null`                                            |
-| family            | No        | The language family to which the language belongs.                                       | `LanguageFamily`(name: "Indo-European")           |
-| isRightToLeft     | No        | A boolean value specifying whether the language is written right-to-left.                | false                                             |
-| translations      | Yes       | A list of `TranslatedName`s representing the language name translations.                 | **140+** translations for a English language name |
+| **Field**         | **Required** | **Description**                                                                          | **Example for LangEng**                           |
+| ----------------- | ------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| name              | Yes          | A non-empty string representing the English name of the natural language.                | "English"                                         |
+| code              | Yes          | A three-letter string representing the ISO 639-2/T Terminological code for the language. | "ENG"                                             |
+| codeShort         | Yes          | A two-letter string representing the ISO 639-1 code for the language.                    | "EN"                                              |
+| namesNative       | Yes          | A list of non-empty strings representing the language's native names.                    | ["English"]                                       |
+| bibliographicCode | No           | A three-letter string representing the ISO 639-2/B Bibliographic code for the language.  | `null`                                            |
+| family            | No           | The language family to which the language belongs.                                       | `LanguageFamily`(name: "Indo-European")           |
+| isRightToLeft     | No           | A boolean value specifying whether the language is written right-to-left.                | false                                             |
+| translations      | Yes          | A list of `TranslatedName`s representing the language name translations.                 | **140+** translations for a English language name |
 
 Compile time constant list of all languages accessible via `NaturalLanguage.list` and more over, the **NaturalLanguage** class provides the following methods/constructors:
 

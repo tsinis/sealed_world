@@ -1,6 +1,6 @@
 ## 1.5.0
 
-> This is the last minor version update with significant changes for some time. The next steps will be patches at most. Currently working on v2.0.0 which will bring new data and a big feature, very likely without breaking the existing API.
+> This is the last minor version update with significant changes for some time. The next steps will be patches at most. Currently working on `sealed_countries` (and `world_countries`) v2.0.0 which will bring new data and a big feature there, very likely without breaking the existing API.
 
 NEW FEATURES
 
@@ -152,14 +152,22 @@ NEW FEATURES
 - Refactored factory constructors - there is an optional parameter to provide custom list.
 - Added `TranslatedName` class for the `translations`.
 - Implement new abstract interfaces for currencies: `Named` and `Translated`.
+
+FIX
+
 - Fixed several English currency names.
 
 ## 0.6.0
 
 NEW FEATURES
 
-- Added `copyWith`, `toJson` etc. to the `FiatCurrency` class.
+- Added `copyWith`, `toJson` etc. to the `FiatCurrency`, `NaturalLanguage` classes.
+- Added new interfaces (`IsoStandardized`, `JsonEncodable`) and typedef (`JsonMap`) to the model.
+
+FIX
+
 - Fixed the alternate symbols list for the Scandinavian countries.
+- Fixed the names native list for Sindhi in the data.
 
 ## 0.5.0
 
