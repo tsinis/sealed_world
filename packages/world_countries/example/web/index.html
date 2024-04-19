@@ -174,9 +174,7 @@
         } else {
           _flutter.loader
             .loadEntrypoint({
-              serviceWorker: {
-                serviceWorkerVersion: {{flutter_service_worker_version}},
-              },
+              serviceWorker: { serviceWorkerVersion: serviceWorkerVersion },
             })
             .then(function (engineInitializer) {
               loading.classList.add("main_done");
