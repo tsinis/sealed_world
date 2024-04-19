@@ -67,7 +67,11 @@ You can use provided widgets directly, or just use their methods:
 ### L10N
 
 For automatic translations of the pickers just add delegate to your app widget:
-`MaterialApp(localizationsDelegates: const [TypedLocaleDelegate())`
+
+```dart
+MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
+```
+
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
 Also, you can force pickers to use specific locale instead, by providing translation parameter to it (for example, `translation: IsoLocale(LangEng())`, will show names in English).
