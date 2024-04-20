@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_currencies.svg)](https://pub.dev/packages/sealed_currencies)
 
-This ISO-driven, pure Dart, fully tested and and 3rd-party dependency-free package provides information about world currencies in form of compile-time constant sealed classes. Contains the all actively used 169[^1] currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and and 3rd-party dependency-free package provides information about world currencies in form of compile-time, tree-shakable constant sealed classes. Contains the all actively used 169[^1] currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
