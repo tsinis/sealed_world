@@ -3974,7 +3974,7 @@ class CountryCpv extends WorldCountry {
           subregion: const WesternAfrica(),
           languages: const [LangPor()],
           translations: cpvCountryTranslations,
-          latLng: const LatLng(16.5388, 23.0418),
+          latLng: const LatLng(16.5388, -23.0418),
           landlocked: false,
           bordersCodes: null,
           areaMetric: 4033,
