@@ -3,6 +3,8 @@ import "dart:ui" show Locale;
 import "package:flutter/foundation.dart" show immutable, required;
 import "package:sealed_countries/sealed_countries.dart";
 
+import "../../extensions/typed_locale_extension.dart";
+
 /// A class representing a typed locale with optional country and script.
 /// However it's usually better to use the `IsoLocale` class instead of
 /// this one, in most cases, because ot generic nature of country argument.
@@ -57,6 +59,29 @@ base class TypedLocale<CountryType extends Object> extends Locale
           scriptCode: script?.code,
           countryCode: country?.toString().trim().toUpperCase(),
         );
+
+  /// Creates an instance of [TypedLocale] with implicit translations cache
+  /// creation.
+  ///
+  /// The [language] parameter is required. The [country] and [script]
+  /// parameters are optional.
+  ///
+  /// {@macro typed_locale_with_translations_cache}
+  ///
+  factory TypedLocale.withTranslationsCache(
+    NaturalLanguage language, {
+    CountryType? country,
+    Script? script,
+    Iterable<NaturalLanguage>? languages = NaturalLanguage.list,
+    Iterable<FiatCurrency>? currencies = FiatCurrency.list,
+    Iterable<WorldCountry>? countries = WorldCountry.list,
+  }) =>
+      TypedLocale(language, country: country, script: script)
+          .copyWithTranslationsCache(
+        languages: languages,
+        currencies: currencies,
+        countries: countries,
+      );
 
   @override
   final NaturalLanguage language;

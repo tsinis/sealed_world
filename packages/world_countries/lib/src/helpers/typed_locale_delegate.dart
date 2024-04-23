@@ -2,6 +2,7 @@ import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../extensions/locale_extension.dart";
+import "../extensions/typed_locale_extension.dart";
 import "../models/locale/iso_locale.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";
@@ -43,14 +44,18 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// it sets the currencies for translation cache.
   /// The [languagesForTranslationCache] parameter is optional. If provided,
   /// it sets the languages for translation cache.
+  /// The [asyncTranslationCacheProcessing] parameter is optional. If provided,
+  /// it sets the async translation cache processing. Default to `true`.
   const TypedLocaleDelegate({
     this.fallbackLanguage,
     this.localeMapResolution = defaultLocaleMapResolution,
+    bool asyncTranslationCacheProcessing = true,
     Iterable<WorldCountry> countriesForTranslationCache = WorldCountry.list,
     Iterable<FiatCurrency> currenciesForTranslationCache = FiatCurrency.list,
     Iterable<NaturalLanguage> languagesForTranslationCache =
         NaturalLanguage.list,
-  })  : _countriesForTranslationCache = countriesForTranslationCache,
+  })  : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
+        _countriesForTranslationCache = countriesForTranslationCache,
         _currenciesForTranslationCache = currenciesForTranslationCache,
         _languagesForTranslationCache = languagesForTranslationCache;
 
@@ -69,13 +74,17 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// it sets the currencies for translation cache.
   /// The [languagesForTranslationCache] parameter is optional. If provided,
   /// it sets the languages for translation cache.
+  /// The [asyncTranslationCacheProcessing] parameter is optional. If provided,
+  /// it sets the async translation cache processing. Default to `true`.
   const TypedLocaleDelegate.selectiveCache({
     this.fallbackLanguage,
     this.localeMapResolution = defaultLocaleMapResolution,
+    bool asyncTranslationCacheProcessing = true,
     Iterable<WorldCountry> countriesForTranslationCache = const {},
     Iterable<FiatCurrency> currenciesForTranslationCache = const {},
     Iterable<NaturalLanguage> languagesForTranslationCache = const {},
-  })  : _countriesForTranslationCache = countriesForTranslationCache,
+  })  : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
+        _countriesForTranslationCache = countriesForTranslationCache,
         _currenciesForTranslationCache = currenciesForTranslationCache,
         _languagesForTranslationCache = languagesForTranslationCache;
 
@@ -117,6 +126,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// is resolved based on the available locales.
   final Iterable<LocaleEntry>? localeMapResolution;
 
+  final bool _asyncTranslationCacheProcessing;
   final Iterable<WorldCountry> _countriesForTranslationCache;
   final Iterable<FiatCurrency> _currenciesForTranslationCache;
   final Iterable<NaturalLanguage> _languagesForTranslationCache;
@@ -129,20 +139,20 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     final typedLocale = _toTypedLocale(locale);
     assert(
       typedLocale != null,
-      """Unsupported locale: $locale, consider adding `localeMapResolution` and/or `fallbackLanguage`""",
+      """Unsupported ISO locale: $locale, consider adding `localeMapResolution` and/or `fallbackLanguage`""",
     );
 
-    if (typedLocale == null) return typedLocale;
-
-    final language = await _cache(_languagesForTranslationCache, typedLocale);
-    final currency = await _cache(_currenciesForTranslationCache, typedLocale);
-    final country = await _cache(_countriesForTranslationCache, typedLocale);
-
-    return typedLocale.copyWith(
-      countryTranslations: country, // Common country names cache.
-      currencyTranslations: currency, // Common currency names cache.
-      languageTranslations: language, // Common language names cache.
-    );
+    return _asyncTranslationCacheProcessing
+        ? await typedLocale?.copyWithTranslationsCacheAsync(
+            languages: _languagesForTranslationCache,
+            currencies: _currenciesForTranslationCache,
+            countries: _countriesForTranslationCache,
+          )
+        : typedLocale?.copyWithTranslationsCache(
+            languages: _languagesForTranslationCache,
+            currencies: _currenciesForTranslationCache,
+            countries: _countriesForTranslationCache,
+          );
   }
 
   @override
@@ -154,16 +164,6 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
 
   @override
   Type get type => TypedLocale;
-
-  Future<Map<T, String>?> _cache<T extends IsoTranslated>(
-    Iterable<T> isoItems,
-    TypedLocale typedLocale,
-  ) async {
-    if (isoItems.isEmpty) return null;
-    await Future<void>.delayed(Duration.zero);
-
-    return isoItems.commonNamesCacheMap(typedLocale);
-  }
 
   TypedLocale? _maybeResolutionLocale(Locale locale) =>
       Map<Locale, TypedLocale>.fromEntries(localeMapResolution ?? [])[locale];
