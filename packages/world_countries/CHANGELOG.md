@@ -9,6 +9,11 @@ NEW FEATURES
 - The `locale` parameter in the `maybeTranslation` method is now nullable.
 - The `permissive` constructors are now even more permissive, only `name` and `code` parameters remain required.
 - Changed Vatican city `unMember` field to `false` and fix Cape Verde coordinates [Link](https://gitlab.com/restcountries/restcountries/-/merge_requests/70)
+- Added new `DurationExtension` to the `helpers` library.
+- Added new `TypedLocaleExtension` with a `copyWithTranslationsCache(Async)` method.
+- Added `asyncTranslationCacheProcessing` parameter for the `TypedLocaleDelegate`.
+- Added `withTranslationsCache` constructor for `TypedLocale` and `IsoLocale`.
+- Set default value for `startWithSearch` in the country and phone code pickers also to `false`, to unify behavior across the pickers.
 
 ## 1.4.0
 

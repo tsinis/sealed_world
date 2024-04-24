@@ -102,7 +102,7 @@ abstract class BasicPicker<T extends Translated>
     super.showSearchBar,
     super.shrinkWrap,
     super.sort,
-    super.startWithSearch,
+    super.startWithSearch = false,
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,

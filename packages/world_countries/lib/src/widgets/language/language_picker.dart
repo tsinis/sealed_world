@@ -49,7 +49,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     super.showSearchBar,
     super.shrinkWrap,
     super.sort,
-    super.startWithSearch = false,
+    super.startWithSearch,
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,

@@ -9,7 +9,7 @@
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_countries/doc/example.gif)
 
-This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in form of compile-time, tree-shakable constant sealed classes with a customizable pickers. This is Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language/script](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
+This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in form of compile-time, tree-shakable constant sealed classes with a customizable pickers. This is Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
 
 ### Table of Contents
 
@@ -74,7 +74,7 @@ MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
 
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
-Also, you can force pickers to use specific locale instead, by providing translation parameter to it (for example, `translation: IsoLocale(LangEng())`, will show names in English).
+Also, you can force pickers to use specific locale instead, by providing translation parameter to it (for example, `translation: IsoLocale.withTranslationsCache(LangEng())`, will show names in English).
 
 > Package also provides access to `TypedLocale` and `IsoLocale` classes that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). You can also utilize them in `translation()` and `maybeTranslation()` methods (you can use with country/currency/language data).
 
