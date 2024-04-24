@@ -92,7 +92,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.showSearchBar,
     super.shrinkWrap,
     super.sort,
-    super.startWithSearch,
+    super.startWithSearch = false,
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
