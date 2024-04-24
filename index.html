@@ -37,7 +37,7 @@
         );
       }
       // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = "1550875158";
+      const serviceWorkerVersion = "2514749798";
     </script>
 
     <script src="flutter.js" defer></script>
@@ -174,9 +174,7 @@
         } else {
           _flutter.loader
             .loadEntrypoint({
-              serviceWorker: {
-                serviceWorkerVersion: "1550875158",
-              },
+              serviceWorker: { serviceWorkerVersion: serviceWorkerVersion },
             })
             .then(function (engineInitializer) {
               loading.classList.add("main_done");
