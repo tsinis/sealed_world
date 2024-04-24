@@ -19,6 +19,16 @@ void main() => group("$TypedLocaleDelegate", () {
         () => expect(delegate.toString(), contains("TypedLocaleDelegate")),
       );
 
+      test("asyncTranslationCacheProcessing set to false", () async {
+        const locale = Locale("en");
+        final asyncLoad = delegate.load(locale);
+        final syncLoad =
+            const TypedLocaleDelegate(asyncTranslationCacheProcessing: false)
+                .load(locale);
+
+        expect(await asyncLoad, await syncLoad);
+      });
+
       group("isSupported", () {
         test(
           "returns typed locale on supported locale",

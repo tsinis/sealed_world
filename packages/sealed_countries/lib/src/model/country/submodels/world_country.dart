@@ -125,23 +125,23 @@ class WorldCountry extends Country
   /// {@macro country_constructor}
   const WorldCountry.permissive({
     required super.name,
-    required this.altSpellings,
-    required this.areaMetric,
-    required this.code, // CCA3.
-    required this.codeNumeric, // CCN3.
-    required this.codeShort, // CCA2.
-    required this.continent,
-    required this.emoji,
-    required this.idd, // International Direct Dialing.
-    required this.languages,
-    required this.latLng,
-    required this.maps,
-    required this.namesNative,
-    required this.population,
-    required this.timezones,
-    required this.tld, // Top Level Domain.
-    required this.translations,
-    required this.demonyms,
+    required this.code,
+    this.altSpellings = const [],
+    this.areaMetric = 1,
+    this.codeNumeric = "",
+    this.codeShort = "",
+    this.continent = const Europe(),
+    this.emoji = "🏳️", // ignore: avoid-non-ascii-symbols, for permissive one.
+    this.idd = const Idd(root: 0, suffixes: [0]),
+    this.languages = const [],
+    this.latLng = const LatLng(0, 0),
+    this.maps = const Maps(googleMaps: " ", openStreetMaps: " "),
+    this.namesNative = const [],
+    this.population = 1,
+    this.timezones = const [],
+    this.tld = const [],
+    this.translations = const [],
+    this.demonyms = const [],
     this.currencies,
     this.capitalInfo,
     this.car = const Car(),

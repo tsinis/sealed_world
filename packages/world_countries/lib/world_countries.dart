@@ -10,6 +10,7 @@ export "src/extensions/flutter_emoji_family_extension.dart";
 export "src/extensions/locale_extension.dart";
 export "src/extensions/locale_translated_extension.dart";
 export "src/extensions/natural_language_extension.dart";
+export "src/extensions/typed_locale_extension.dart";
 export "src/extensions/world_countries_build_context_extension.dart";
 export "src/extensions/world_country_extension.dart";
 export "src/generated/fonts.gen.dart";

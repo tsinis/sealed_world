@@ -46,6 +46,33 @@ void main() => group("$TypedLocale", () {
         });
       });
 
+      group("withTranslationsCache constructor", () {
+        test(
+          "should throw assert when no iterable specified",
+          () => expect(
+            () => TypedLocale.withTranslationsCache(
+              const LangEng(),
+              languages: null,
+              currencies: null,
+              countries: null,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test("should create translation cache for everything", () {
+          final locale = TypedLocale.withTranslationsCache(
+            const LangEng(),
+            country: "US",
+          );
+          expect(locale, isA<TypedLocale>());
+          expect(locale.country, isA<String>());
+          expect(locale.languageTranslations, isNotEmpty);
+          expect(locale.currencyTranslations, isNotEmpty);
+          expect(locale.countryTranslations, isNotEmpty);
+        });
+      });
+
       test("toJson", () {
         final json = value.toJson();
         final parsed = json.parse(BasicLocaleExtension.fromMap);

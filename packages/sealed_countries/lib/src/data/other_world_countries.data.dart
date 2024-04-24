@@ -44,7 +44,6 @@ class CountryUnk extends WorldCountry {
               common: "Косово",
             ),
           ],
-          tld: const [],
           code: "UNK",
           codeNumeric: "   ",
           codeShort: "XK",

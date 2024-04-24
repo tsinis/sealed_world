@@ -82,14 +82,12 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
   /// A list of items that should be disabled.
   final Iterable<T>? disabled;
 
-  /// A widget to display between each item in the list.
   @override
   final Widget? separator;
 
   /// A function to sort the items in the list.
   final int Function(T, T)? sort;
 
-  /// Whether to show the header widget.
   @override
   final bool? showHeader;
 
@@ -97,132 +95,48 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
   @override
   final Widget? header;
 
-  /// {@macro flutter.widgets.scroll_view.scrollDirection}
   @override
   final Axis? direction;
 
-  /// {@template sealed_world.main_axis_alignment}
-  /// How the items should be placed along the main axis.
-  ///
-  /// For example, `MainAxisAlignment.start`, the default, places the children
-  /// at the start (i.e., the left for a horizontal axis or the top for
-  /// a vertical) of the main axis.
-  /// {@endtemplate}
   @override
   final MainAxisAlignment? mainAxisAlignment;
 
-  /// {@template sealed_world.main_axis_size}
-  /// How much space should be occupied in the main axis.
-  ///
-  /// After allocating space to items, there might be some remaining free
-  /// space. This value controls whether to maximize or minimize the amount of
-  /// free space, subject to the incoming layout constraints.
-  /// {@endtemplate}
   @override
   final MainAxisSize? mainAxisSize;
 
-  /// {@template sealed_world.cross_axis_alignment}
-  /// How the items should be placed along the cross axis.
-  ///
-  /// For example, `CrossAxisAlignment.center`, the default, centers the
-  /// children in the cross axis.
-  /// {@endtemplate}
   @override
   final CrossAxisAlignment? crossAxisAlignment;
 
-  /// {@template sealed_world.text_direction}
-  /// Determines the order to lay children out horizontally and how to interpret
-  /// `start` and `end` in the horizontal direction.
-  ///
-  /// Defaults to the ambient `Directionality`.
-  ///
-  /// If `textDirection` is `TextDirection.rtl`, then the direction in which
-  /// text flows starts from right to left. Otherwise, if `textDirection` is
-  /// `TextDirection.ltr`, then the direction in which text flows starts from
-  /// left to right.
-  ///
-  /// If the `direction` is `Axis.horizontal`, this controls the order in which
-  /// the children are positioned (left-to-right or right-to-left), and the
-  /// meaning of the `mainAxisAlignment` property's `MainAxisAlignment.start`
-  /// and `MainAxisAlignment.end` values.
-  ///
-  /// If the `direction` is `Axis.horizontal`, and either the
-  /// `mainAxisAlignment` is either `MainAxisAlignment.start` or
-  /// `MainAxisAlignment.end`, or there's more than one child, then the
-  /// `textDirection` (or the ambient `Directionality`) must not be null.
-  ///
-  /// If the `direction` is `Axis.vertical`, this controls the meaning of the
-  /// `crossAxisAlignment` property's `CrossAxisAlignment.start` and
-  /// `CrossAxisAlignment.end` values.
-  ///
-  /// If the `direction` is `Axis.vertical`, and the `crossAxisAlignment` is
-  /// either `CrossAxisAlignment.start` or `CrossAxisAlignment.end`, then the
-  /// `textDirection` (or the ambient `Directionality`) must not be null.
-  /// {@endtemplate}
   @override
   final TextDirection? textDirection;
 
-  /// {@template sealed_world.vertical_direction}
-  /// Determines the order to lay children out vertically and how to interpret
-  /// `start` and `end` in the vertical direction.
-  ///
-  /// Defaults to `VerticalDirection.down`.
-  ///
-  /// If the `direction` is `Axis.vertical`, this controls which order children
-  /// are painted in (down or up), the meaning of the `mainAxisAlignment`
-  /// property's `MainAxisAlignment.start` and `MainAxisAlignment.end` values.
-  ///
-  /// If the `direction` is `Axis.vertical`, and either the `mainAxisAlignment`
-  /// is either `MainAxisAlignment.start` or `MainAxisAlignment.end`, or there's
-  /// more than one child, then the `verticalDirection` must not be null.
-  ///
-  /// If the `direction` is `Axis.horizontal`, this controls the meaning of the
-  /// `crossAxisAlignment` property's `CrossAxisAlignment.start` and
-  /// `CrossAxisAlignment.end` values.
-  ///
-  /// If the `direction` is `Axis.horizontal`, and the `crossAxisAlignment` is
-  /// either `CrossAxisAlignment.start` or `CrossAxisAlignment.end`, then the
-  /// `verticalDirection` must not be null.
-  /// {@endtemplate}
   @override
   final VerticalDirection? verticalDirection;
 
-  /// {@template sealed_world.text_baseline}
-  /// If aligning items according to their baseline, which baseline to use.
-  ///
-  /// This must be set if using baseline alignment. There is no default because
-  /// there is no way for the framework to know the correct baseline _a priori_.
-  /// {@endtemplate}
   @override
   final TextBaseline? textBaseline;
 
-  /// {@macro flutter.material.Material.clipBehavior}
   @override
   final Clip? clipBehavior;
 
-  /// {@macro flutter.widgets.scroll_view.reverse}
   @override
   final bool? reverse;
 
   /// {@macro flutter.widgets.scroll_view.controller}
   final ScrollController? scrollController;
 
-  /// {@macro flutter.widgets.scroll_view.primary}
   @override
   final bool? primary;
 
-  /// {@macro flutter.widgets.scroll_view.shrinkWrap}
   @override
   final bool? shrinkWrap;
 
   /// {@macro flutter.widgets.scrollable.restorationId}
   final String? restorationId;
 
-  /// {@macro flutter.widgets.scroll_view.physics}
   @override
   final ScrollPhysics? physics;
 
-  /// The amount of space by which to inset the children.
   @override
   final EdgeInsetsGeometry? padding;
 
@@ -242,47 +156,18 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
   /// {@endtemplate}
   final bool addAutomaticKeepAlives;
 
-  /// {@template sealed_world.add_repaint_boundaries}
-  /// Whether to wrap each child in a `RepaintBoundary`.
-  ///
-  /// Typically, children in a scrolling container are wrapped in repaint
-  /// boundaries so that they do not need to be repainted as the list scrolls.
-  /// If the children are easy to repaint (e.g., solid color blocks or a short
-  /// snippet of text), it might be more efficient to not add a repaint boundary
-  /// and instead always repaint the children during scrolling.
-  ///
-  /// Defaults to true.
-  /// {@endtemplate}
   @override
   final bool? addRepaintBoundaries;
 
-  /// {@template sealed_world.add_semantic_indexes}
-  /// Whether to wrap each child in an `IndexedSemantics`.
-  ///
-  /// Typically, children in a scrolling container must be annotated with a
-  /// semantic index in order to generate the correct accessibility
-  /// announcements. This should only be set to false if the indexes have
-  /// already been provided by an `IndexedSemantics` widget.
-  ///
-  /// Defaults to true.
-  ///
-  /// See also:
-  ///
-  ///  * `IndexedSemantics`, for an explanation of how to manually
-  ///    provide semantic indexes.
-  /// {@endtemplate}
   @override
   final bool? addSemanticIndexes;
 
-  /// {@macro flutter.rendering.RenderViewportBase.cacheExtent}
   @override
   final double? cacheExtent;
 
-  /// {@macro flutter.widgets.scrollable.dragStartBehavior}
   @override
   final DragStartBehavior? dragStartBehavior;
 
-  /// {@macro flutter.widgets.scroll_view.keyboardDismissBehavior}
   @override
   final ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior;
 }

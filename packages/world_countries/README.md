@@ -1,12 +1,15 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
 [![world_countries](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml)
+![Pub points](https://img.shields.io/pub/points/world_countries)
+![Last commit](https://img.shields.io/github/last-commit/badges/shields/master)
+![Pub popularity](https://img.shields.io/pub/popularity/world_countries)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/world_countries.svg)](https://pub.dev/packages/world_countries)
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_countries/doc/example.gif)
 
-This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in form of compile-time constant sealed classes with a customizable pickers. This is Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the country/currency/language/script data, like codes, names, translations, etc. (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
+This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in form of compile-time, tree-shakable constant sealed classes with a customizable pickers. This is Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
 
 ### Table of Contents
 
@@ -33,7 +36,7 @@ This package provides the following ready-to-use widgets and classes:
 
 Or you can just create your own pickers by extending `BasicPicker`.
 
-- `TypedLocaleDelegate` - A locale delegate for automatic translation of pickers (80+ languages available).
+- `TypedLocaleDelegate` - A locale delegate for automatic translation of pickers. Provides translations including (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 
 - `PickersThemeData`, `CountryTileThemeData`, `CurrencyTileThemeData` and `LanguageTileThemeData` are [theme extensions](https://api.flutter.dev/flutter/material/ThemeExtension-class.html) that you can use in your `ThemeData` to specify global theme to your pickers, themes of your tiles (for example font family for emoji flags or builders).
 
@@ -64,12 +67,16 @@ You can use provided widgets directly, or just use their methods:
 ### L10N
 
 For automatic translations of the pickers just add delegate to your app widget:
-`MaterialApp(localizationsDelegates: const [TypedLocaleDelegate(), ...] ...)`
+
+```dart
+MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
+```
+
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
-Also, you can force pickers to use specific locale instead, by providing translation parameter to it (for example, `translation: IsoLocale(LangEng())`, will show names in English).
+Also, you can force pickers to use specific locale instead, by providing translation parameter to it (for example, `translation: IsoLocale.withTranslationsCache(LangEng())`, will show names in English).
 
-Package also provides access to `TypedLocale` and `IsoLocale` classes that allows you to work with a type-safe versions of default `Locale`. You can also utilize them in `translate()` and `maybeTranslate()` methods (you can use with country/currency/language data).
+> Package also provides access to `TypedLocale` and `IsoLocale` classes that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). You can also utilize them in `translation()` and `maybeTranslation()` methods (you can use with country/currency/language data).
 
 ### Example
 
@@ -274,7 +281,7 @@ CountryPicker(
 
 - **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing it's sealed nature), you can also override existing or add new data, etc.).
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
-- **Rich data**: This package offers far more data than any other package + tons of translations.
+- **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has almost 100% code coverage, with more than 130 (+3140 in underling Dart packages) tests, providing confidence in its reliability and stability.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.

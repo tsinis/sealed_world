@@ -5,7 +5,7 @@
 
 ## Sealed World
 
-Pure Dart, fully tested and ISO-driven ecosystem for the world's data in form of compile-time constant sealed classes.
+Pure Dart, fully tested and ISO-driven ecosystem for the world's data in form of compile-time, tree-shakable constant sealed classes.
 
 | Package                                                                                          | Description                                                                                              | Pub                                                                                                          |
 | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |

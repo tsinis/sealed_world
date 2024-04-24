@@ -54,6 +54,33 @@ void main() => group("$IsoLocale", () {
         });
       });
 
+      group("withTranslationsCache constructor", () {
+        test(
+          "should throw assert when no iterable specified",
+          () => expect(
+            () => IsoLocale.withTranslationsCache(
+              const LangEng(),
+              languages: null,
+              currencies: null,
+              countries: null,
+            ),
+            throwsA(isA<AssertionError>()),
+          ),
+        );
+
+        test("should create translation cache for everything", () {
+          final locale = IsoLocale.withTranslationsCache(
+            const LangEng(),
+            country: const CountryUsa(),
+          );
+          expect(locale, isA<IsoLocale>());
+          expect(locale.country, isA<WorldCountry>());
+          expect(locale.languageTranslations, isNotEmpty);
+          expect(locale.currencyTranslations, isNotEmpty);
+          expect(locale.countryTranslations, isNotEmpty);
+        });
+      });
+
       group("copyWith", () {
         test("with non-null values", () {
           final copy = value.copyWith(

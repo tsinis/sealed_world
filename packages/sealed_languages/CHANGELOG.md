@@ -1,6 +1,6 @@
 ## 1.5.0
 
-> This is the last minor version update with significant changes for some time. The next steps will be patches at most. Currently working on v2.0.0 which will bring new data and a big feature, very likely without breaking the existing API.
+> This is the last minor version update with significant changes for some time. The next steps will be patches at most. Currently working on `sealed_countries` (and `world_countries`) v2.0.0 which will bring new data and a big feature there, very likely without breaking the existing API.
 
 NEW FEATURES
 

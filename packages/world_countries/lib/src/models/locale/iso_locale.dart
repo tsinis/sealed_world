@@ -1,6 +1,7 @@
 import "package:flutter/foundation.dart" show immutable;
 import "package:sealed_countries/sealed_countries.dart";
 
+import "../../extensions/typed_locale_extension.dart";
 import "typed_locale.dart";
 
 /// A class representing an ISO locale with optional country and script.
@@ -50,6 +51,29 @@ final class IsoLocale extends TypedLocale<WorldCountry> {
     super.currencyTranslations,
     super.languageTranslations,
   }) : super.fromSubtags();
+
+  /// Creates an instance of [IsoLocale] with implicit translations cache
+  /// creation.
+  ///
+  /// The [language] parameter is required. The [country] and [script]
+  /// parameters are optional.
+  ///
+  /// {@macro typed_locale_with_translations_cache}
+  ///
+  factory IsoLocale.withTranslationsCache(
+    NaturalLanguage language, {
+    WorldCountry? country,
+    Script? script,
+    Iterable<NaturalLanguage>? languages = NaturalLanguage.list,
+    Iterable<FiatCurrency>? currencies = FiatCurrency.list,
+    Iterable<WorldCountry>? countries = WorldCountry.list,
+  }) =>
+      IsoLocale(language, country: country, script: script)
+          .copyWithTranslationsCache(
+        languages: languages,
+        currencies: currencies,
+        countries: countries,
+      );
 
   @override
   IsoLocale copyWith({
