@@ -5,7 +5,7 @@
   "run": {
     "image": "docker.io/ubuntu:latest"
   },
-  "forwardPorts": [3000, 4000, 5000, 8000, 8080],
+  "forwardPorts": [8000, 8080],
   "name": "Dart SDK",
   "customizations": {
     "vscode": {
