@@ -1,6 +1,20 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/jarrodcolburn/features/flutter-sdk:0": {}
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "run": {
+    "image": "docker.io/ubuntu:latest"
+  },
+  "forwardPorts": [8000, 8080],
+  "name": "Dart SDK",
+  "customizations": {
+    "vscode": {
+      "extensions": ["Dart-Code.dart-code"]
+    },
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "remoteUser": "root",
+    "runArgs": ["--privileged"]
   }
 }

@@ -1,6 +1,7 @@
 {
   "folders": [
     { "name": "VS Code", "path": "../.vscode" },
+    { "name": "Dev Container", "path": "../.devcontainer" },
     {
       "name": "GitHub Setup",
       "path": "../.github"
