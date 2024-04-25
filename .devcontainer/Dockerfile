@@ -2,6 +2,5 @@
 FROM dart:stable AS build
 
 # Resolve app dependencies.
-WORKDIR /packages/sealed_languages
-COPY pubspec.* ./
+WORKDIR /packages/sealed_languages/
 RUN dart pub get
