@@ -18,5 +18,4 @@ dev_dependencies:
   dart_code_metrics: # ex-Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
-      version: ^5.7.6+1
   lints: ^3.0.0 # From Google
