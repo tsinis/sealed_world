@@ -47,14 +47,12 @@ const map = {
 class FlagProperties {
   const FlagProperties(
     this.colors, {
-    this.backgroundColor,
     this.aspectRatio = 2 / 3,
     this.isHorizontalStriped = true,
     this.symbolsProperties,
     this.url,
   });
 
-  final Color? backgroundColor;
   final List<ColorsProperties> colors;
   final List<SymbolsProperties>? symbolsProperties;
   final double aspectRatio;
@@ -72,8 +70,7 @@ class FlagProperties {
   final bool? isHorizontalStriped;
 
   @override
-  String toString() => "FlagProperties($colors, "
-      "backgroundColor: $backgroundColor, aspectRatio: $aspectRatio, "
+  String toString() => "FlagProperties($colors, aspectRatio: $aspectRatio, "
       "isHorizontalStriped: $isHorizontalStriped, "
       "symbolsProperties: $symbolsProperties)";
 }
@@ -97,16 +94,23 @@ class SymbolsProperties {
     this.y = middle,
     this.heightFactor,
     this.widthFactor,
-    this.rotation = 0,
+    this.angle,
+    this.type,
+    this.children = const [],
   })  : assert(widthFactor == null || widthFactor >= 0.0),
         assert(heightFactor == null || heightFactor >= 0.0);
 
   static const middle = 0.5;
 
-  final double? widthFactor;
+  /// Height factor of the symbol. Is more relevant than width factor, because
+  /// of various aspect rations of the flags, when width varies but height
+  /// remains the same.
   final double? heightFactor;
+  final double? widthFactor;
   final List<Color> colors;
-  final double rotation;
+  final double? angle;
+  final SymbolType? type;
+  final List<SymbolsProperties> children;
 
   /// The distance fraction in the horizontal direction.
   ///
@@ -129,5 +133,7 @@ class SymbolsProperties {
   String toString() =>
       "SymbolsProperties(${x.toStringAsFixed(1)}, ${y.toStringAsFixed(1)}"
       "widthFactor: $widthFactor, heightFactor: $heightFactor, "
-      "colors: $colors, rotation: $rotation)";
+      "colors: $colors, angle: $angle)";
 }
+
+enum SymbolType { star, triangle, circle, rectangle, moon, sun }

@@ -1,3 +1,5 @@
+import "dart:math" as math;
+
 import "package:pure_dart_ui/pure_dart_ui.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
@@ -16,6 +18,17 @@ void main() {
   const relativeY = 1 - 2 * normalizedY;
 
   print("Relative coordinates of element: ($relativeX, $relativeY)");
+
+  const lineLength = 57.0;
+  const angleInDegrees = 30.0;
+
+  const angleInRadians = angleInDegrees * (math.pi / 180);
+
+  final projectionX = lineLength * math.cos(angleInRadians);
+  final projectionY = lineLength * math.sin(angleInRadians);
+
+  print("Projection on X-axis: $projectionX cm");
+  print("Projection on Y-axis: $projectionY cm");
 }
 
 // ignore: prefer-static-class, temporary map.
@@ -31,40 +44,40 @@ const flags = {
     symbolsProperties: [
       SymbolsProperties(
         [Color(0xff00bce4)],
-        heightFactor: 4 / 72,
-        widthFactor: 4 / 72,
+        heightFactor: 4 / 36,
+        type: SymbolType.star,
       ),
       SymbolsProperties(
         [Color(0xff00bce4)],
         x: -20 / 72,
         y: 6 / 36,
-        heightFactor: 4 / 72,
-        widthFactor: 4 / 72,
+        heightFactor: 4 / 36,
+        type: SymbolType.star,
       ),
       SymbolsProperties(
         [Color(0xff00bce4)],
         x: -20 / 72,
         y: -6 / 36,
-        heightFactor: 4 / 72,
-        widthFactor: 4 / 72,
+        heightFactor: 4 / 36,
+        type: SymbolType.star,
       ),
       SymbolsProperties(
         [Color(0xff00bce4)],
         x: 20 / 72,
         y: 6 / 36,
-        heightFactor: 4 / 72,
-        widthFactor: 4 / 72,
+        heightFactor: 4 / 36,
+        type: SymbolType.star,
       ),
       SymbolsProperties(
         [Color(0xff00bce4)],
         x: 20 / 72,
         y: -6 / 36,
-        heightFactor: 4 / 72,
-        widthFactor: 4 / 72,
+        heightFactor: 4 / 36,
+        type: SymbolType.star,
       ),
     ],
     url:
-        "https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_Honduras_%28construction_sheet%29.svg",
+        "https://wikipedia.org/wiki/File:Flag_of_Honduras_(construction_sheet).svg",
   ),
 
   /// Dominica: DM.
@@ -82,21 +95,34 @@ const flags = {
         [Color(0xffFFCD00), Color(0xFF000000), Color(0xffffffff)],
         heightFactor: 1,
         widthFactor: 30 / 240,
+        type: SymbolType.rectangle,
       ),
       SymbolsProperties(
-        [
-          Color(0xffE4002B),
-          Color(0xFF000000),
-          Color(0xffFFCD00),
-          Color(0xFF981E97),
-          Color(0xff009A44),
+        [Color(0xffE4002B)],
+        heightFactor: 60 / 120,
+        type: SymbolType.circle,
+        children: [
+          SymbolsProperties(
+            [Color(0xff009A44)],
+            heightFactor: 9 / 60,
+            type: SymbolType.star, // TODO!
+          ),
+          SymbolsProperties(
+            [
+              Color(0xffE4002B),
+              Color(0xFF000000),
+              Color(0xffFFCD00),
+              Color(0xFF981E97),
+              Color(0xff009A44),
+            ],
+            heightFactor: 40 / 60,
+            widthFactor: 20 / 60,
+          ),
         ],
-        heightFactor: 60 / 240,
-        widthFactor: 60 / 240,
       ),
     ],
     url:
-        "https://upload.wikimedia.org/wikipedia/commons/4/44/Flag_of_Dominica_%28construction_sheet%29.svg",
+        "https://wikipedia.org/wiki/File:Flag_of_Dominica_(construction_sheet).svg",
   ),
 
   /// France: FR.
@@ -108,7 +134,7 @@ const flags = {
     ],
     isHorizontalStriped: false,
     url:
-        "https://commons.wikimedia.org/wiki/File:Flag_of_France_(construction_sheet).svg",
+        "https://wikipedia.org/wiki/File:Flag_of_France_(construction_sheet).svg",
   ),
 
   /// Algeria: DZ.
@@ -123,59 +149,126 @@ const flags = {
         [Color(0xffD21034)],
         heightFactor: 10 / 20,
         widthFactor: 10 / 20,
+        type: SymbolType.moon,
       ),
       SymbolsProperties(
         [Color(0xffD21034)],
         x: 2 / 15,
         heightFactor: 5 / 20,
         widthFactor: 5 / 20,
-        rotation: 20, // ? Not confirmed.
+        angle: 20, // ? Not confirmed.
+        type: SymbolType.star,
       ),
     ],
     url:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Algeria_%28construction_sheet%29.svg/2560px-Flag_of_Algeria_%28construction_sheet%29.svg.png",
+        "https://wikipedia.org/wiki/File:Flag_of_Algeria_(construction_sheet).svg",
   ),
 
   /// Gabon: GA.
-  CountryGab(): FlagProperties([
-    ColorsProperties(Color(0xffffe700)),
-    ColorsProperties(Color(0xff36a100)),
-    ColorsProperties(Color(0xff006dbc)),
-  ]),
+  CountryGab(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff36a100)),
+      ColorsProperties(Color(0xffffe700)),
+      ColorsProperties(Color(0xff006dbc)),
+    ],
+    aspectRatio: 3 / 4,
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Gabon_(construction_sheet).svg",
+  ),
 
   /// Philippines: PH.
-  CountryPhl(): FlagProperties([
-    ColorsProperties(Color(0xff0038a8)),
-    ColorsProperties(Color(0xffce1126)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xfffcd116)),
-  ]),
+  CountryPhl(): FlagProperties(
+    [ColorsProperties(Color(0xff0038a8)), ColorsProperties(Color(0xffce1126))],
+    aspectRatio: 1 / 2,
+    symbolsProperties: [
+      SymbolsProperties(
+        [Color(0xffffffff)],
+        x: -1,
+        angle: 60,
+        type: SymbolType.triangle,
+        children: [
+          SymbolsProperties(
+            [Color(0xfffcd116)],
+            heightFactor: 10 / 90,
+            angle: 30,
+            type: SymbolType.star, // TODO!
+          ),
+        ],
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_the_Philippines_(construction_sheet).svg",
+  ),
 
   /// South Sudan: SS.
-  CountrySsd(): FlagProperties([
-    ColorsProperties(Color(0xff078930)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xffda121a)),
-    ColorsProperties(Color(0xff0f47af)),
-    ColorsProperties(Color(0xfffcdd09)),
-  ]),
+  CountrySsd(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff000000), ratio: 17),
+      ColorsProperties(Color(0xffffffff), ratio: 3),
+      ColorsProperties(Color(0xffE22028), ratio: 17),
+      ColorsProperties(Color(0xffffffff), ratio: 3),
+      ColorsProperties(Color(0xFF00914C), ratio: 17),
+    ],
+    aspectRatio: 1 / 2,
+    symbolsProperties: [
+      SymbolsProperties(
+        [Color(0xff00B6F2)],
+        x: -1,
+        angle: 60,
+        type: SymbolType.triangle,
+        children: [
+          SymbolsProperties(
+            [Color(0xffFFE51A)],
+            heightFactor: 19 / 57,
+            angle: 60, // TODO!
+            type: SymbolType.star,
+          ),
+        ],
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_South_Sudan_(construction_sheet).svg",
+  ),
 
   /// Rwanda: RW.
-  CountryRwa(): FlagProperties([
-    ColorsProperties(Color(0xff20603d)),
-    ColorsProperties(Color(0xfffad201)),
-    ColorsProperties(Color(0xff00a1de)),
-    ColorsProperties(Color(0xffe5be01)),
-  ]),
+  CountryRwa(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff00a1de), ratio: 130),
+      ColorsProperties(Color(0xffFAD201), ratio: 65),
+      ColorsProperties(Color(0xff20603d), ratio: 65),
+    ],
+    symbolsProperties: [
+      SymbolsProperties(
+        [Color(0xffE5BE01)],
+        x: 0.8564,
+        y: -0.8,
+        heightFactor: 42 / 130,
+        type: SymbolType.sun,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Rwanda_(construction_sheet).svg",
+  ),
 
   /// Sudan: SD.
-  CountrySdn(): FlagProperties([
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffff0000)),
-    ColorsProperties(Color(0xff009a00)),
-  ]),
+  CountrySdn(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffD21034)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff000000)),
+    ],
+    aspectRatio: 1 / 2,
+    symbolsProperties: [
+      SymbolsProperties(
+        [Color(0xff007229)],
+        x: -1,
+        angle: 36.9,
+        type: SymbolType.triangle,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Sudan_(construction_sheet).svg",
+  ),
 
   /// Sweden: SE.
   CountrySwe(): FlagProperties([
