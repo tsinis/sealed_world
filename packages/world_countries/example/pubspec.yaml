@@ -31,7 +31,7 @@ dev_dependencies:
   # flutter_native_splash: any # Flutter Favorite
   flutter_test: # From Google
     sdk: flutter
-  lints: ^3.0.0 # From Google
+  lints: ^4.0.0 # From Google
 
 flutter:
   uses-material-design: true
