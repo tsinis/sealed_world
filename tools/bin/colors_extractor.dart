@@ -105,7 +105,7 @@ class ElementsProperties {
   })  : assert(widthFactor == null || widthFactor >= 0.0),
         assert(heightFactor == null || heightFactor >= 0.0);
 
-  static const middle = 0.5;
+  static const double middle = 0;
 
   /// Height factor of the symbol. Is more relevant than width factor, because
   /// of various aspect rations of the flags, when width varies but height
