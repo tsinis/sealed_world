@@ -40,40 +40,40 @@ const flags = {
       ColorsProperties(Color(0xffffffff)),
       ColorsProperties(Color(0xff00bce4)),
     ],
-    aspectRatio: 1 / 2,
-    symbolsProperties: [
-      SymbolsProperties(
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
         [Color(0xff00bce4)],
         heightFactor: 4 / 36,
-        type: SymbolType.star,
+        type: ElementType.star,
       ),
-      SymbolsProperties(
+      ElementsProperties(
         [Color(0xff00bce4)],
         x: -20 / 72,
         y: 6 / 36,
         heightFactor: 4 / 36,
-        type: SymbolType.star,
+        type: ElementType.star,
       ),
-      SymbolsProperties(
+      ElementsProperties(
         [Color(0xff00bce4)],
         x: -20 / 72,
         y: -6 / 36,
         heightFactor: 4 / 36,
-        type: SymbolType.star,
+        type: ElementType.star,
       ),
-      SymbolsProperties(
+      ElementsProperties(
         [Color(0xff00bce4)],
         x: 20 / 72,
         y: 6 / 36,
         heightFactor: 4 / 36,
-        type: SymbolType.star,
+        type: ElementType.star,
       ),
-      SymbolsProperties(
+      ElementsProperties(
         [Color(0xff00bce4)],
         x: 20 / 72,
         y: -6 / 36,
         heightFactor: 4 / 36,
-        type: SymbolType.star,
+        type: ElementType.star,
       ),
     ],
     url:
@@ -89,25 +89,25 @@ const flags = {
       ColorsProperties(Color(0xffffffff), ratio: 10),
       ColorsProperties(Color(0xff009A44), ratio: 45),
     ],
-    aspectRatio: 1 / 2,
-    symbolsProperties: [
-      SymbolsProperties(
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
         [Color(0xffFFCD00), Color(0xFF000000), Color(0xffffffff)],
         heightFactor: 1,
         widthFactor: 30 / 240,
-        type: SymbolType.rectangle,
+        type: ElementType.rectangle,
       ),
-      SymbolsProperties(
+      ElementsProperties(
         [Color(0xffE4002B)],
         heightFactor: 60 / 120,
-        type: SymbolType.circle,
+        type: ElementType.circle,
         children: [
-          SymbolsProperties(
+          ElementsProperties(
             [Color(0xff009A44)],
             heightFactor: 9 / 60,
-            type: SymbolType.star, // TODO!
+            type: ElementType.star, // TODO!
           ),
-          SymbolsProperties(
+          ElementsProperties(
             [
               Color(0xffE4002B),
               Color(0xFF000000),
@@ -144,20 +144,20 @@ const flags = {
       ColorsProperties(Color(0xffffffff)),
     ],
     isHorizontalStriped: false,
-    symbolsProperties: [
-      SymbolsProperties(
+    elementsProperties: [
+      ElementsProperties(
         [Color(0xffD21034)],
         heightFactor: 10 / 20,
         widthFactor: 10 / 20,
-        type: SymbolType.moon,
+        type: ElementType.moon,
       ),
-      SymbolsProperties(
+      ElementsProperties(
         [Color(0xffD21034)],
         x: 2 / 15,
         heightFactor: 5 / 20,
         widthFactor: 5 / 20,
         angle: 20, // ? Not confirmed.
-        type: SymbolType.star,
+        type: ElementType.star,
       ),
     ],
     url:
@@ -171,7 +171,7 @@ const flags = {
       ColorsProperties(Color(0xffffe700)),
       ColorsProperties(Color(0xff006dbc)),
     ],
-    aspectRatio: 3 / 4,
+    aspectRatio: 4 / 3,
     url:
         "https://wikipedia.org/wiki/File:Flag_of_Gabon_(construction_sheet).svg",
   ),
@@ -179,19 +179,19 @@ const flags = {
   /// Philippines: PH.
   CountryPhl(): FlagProperties(
     [ColorsProperties(Color(0xff0038a8)), ColorsProperties(Color(0xffce1126))],
-    aspectRatio: 1 / 2,
-    symbolsProperties: [
-      SymbolsProperties(
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
         [Color(0xffffffff)],
         x: -1,
         angle: 60,
-        type: SymbolType.triangle,
+        type: ElementType.triangle,
         children: [
-          SymbolsProperties(
+          ElementsProperties(
             [Color(0xfffcd116)],
             heightFactor: 10 / 90,
             angle: 30,
-            type: SymbolType.star, // TODO!
+            type: ElementType.star, // TODO!
           ),
         ],
       ),
@@ -209,19 +209,19 @@ const flags = {
       ColorsProperties(Color(0xffffffff), ratio: 3),
       ColorsProperties(Color(0xFF00914C), ratio: 17),
     ],
-    aspectRatio: 1 / 2,
-    symbolsProperties: [
-      SymbolsProperties(
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
         [Color(0xff00B6F2)],
         x: -1,
         angle: 60,
-        type: SymbolType.triangle,
+        type: ElementType.triangle,
         children: [
-          SymbolsProperties(
+          ElementsProperties(
             [Color(0xffFFE51A)],
             heightFactor: 19 / 57,
             angle: 60, // TODO!
-            type: SymbolType.star,
+            type: ElementType.star,
           ),
         ],
       ),
@@ -237,13 +237,13 @@ const flags = {
       ColorsProperties(Color(0xffFAD201), ratio: 65),
       ColorsProperties(Color(0xff20603d), ratio: 65),
     ],
-    symbolsProperties: [
-      SymbolsProperties(
+    elementsProperties: [
+      ElementsProperties(
         [Color(0xffE5BE01)],
         x: 0.8564,
         y: -0.8,
         heightFactor: 42 / 130,
-        type: SymbolType.sun,
+        type: ElementType.sun,
       ),
     ],
     url:
@@ -257,13 +257,13 @@ const flags = {
       ColorsProperties(Color(0xffffffff)),
       ColorsProperties(Color(0xff000000)),
     ],
-    aspectRatio: 1 / 2,
-    symbolsProperties: [
-      SymbolsProperties(
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
         [Color(0xff007229)],
         x: -1,
         angle: 36.9,
-        type: SymbolType.triangle,
+        type: ElementType.triangle,
       ),
     ],
     url:
@@ -271,176 +271,377 @@ const flags = {
   ),
 
   /// Sweden: SE.
-  CountrySwe(): FlagProperties([
-    ColorsProperties(Color(0xff005293)),
-    ColorsProperties(Color(0xfffecb00)),
-  ]),
+  CountrySwe(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff006AA7), ratio: 4),
+      ColorsProperties(Color(0xffFFCD00), ratio: 2),
+      ColorsProperties(Color(0xff006AA7), ratio: 4),
+    ],
+    aspectRatio: 8 / 5,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffFFCD00)],
+        x: -0.375,
+        heightFactor: 1,
+        widthFactor: 2 / 16,
+        type: ElementType.rectangle,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Sweden_(construction_sheet).svg",
+  ),
 
   /// Suriname: SR.
-  CountrySur(): FlagProperties([
-    ColorsProperties(Color(0xff377e3f)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffb40a2d)),
-    ColorsProperties(Color(0xffecc81d)),
-  ]),
+  CountrySur(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff377e3f), ratio: 4),
+      ColorsProperties(Color(0xffffffff), ratio: 2),
+      ColorsProperties(Color(0xffb40a2d), ratio: 8),
+      ColorsProperties(Color(0xffffffff), ratio: 2),
+      ColorsProperties(Color(0xff377e3f), ratio: 4),
+    ],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffecc81d)],
+        heightFactor: 8 / 20,
+        type: ElementType.star,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Suriname_(construction_sheet).svg",
+  ),
 
   /// Western Sahara: EH.
-  CountryEsh(): FlagProperties([
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xff007a3d)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc4111b)),
-  ]),
+  CountryEsh(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff000000)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff007a3d)),
+    ],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffc4111b)],
+        heightFactor: 1 / 4,
+        type: ElementType.star,
+      ),
+      ElementsProperties(
+        [Color(0xffc4111b)],
+        heightFactor: 1 / 3,
+        type: ElementType.moon,
+      ),
+    ],
+    url:
+        "https://www.vexilla-mundi.com/western_sahara/western_sahara_sheet.png",
+  ),
 
   /// Guinea-Bissau: GW.
-  CountryGnb(): FlagProperties([
-    ColorsProperties(Color(0xffce1126)),
-    ColorsProperties(Color(0xfffcd116)),
-    ColorsProperties(Color(0xff009e49)),
-    ColorsProperties(Color(0xff000001)),
-  ]),
+  CountryGnb(): FlagProperties(
+    [
+      ColorsProperties(Color(0xfffcd116)),
+      ColorsProperties(Color(0xff009e49)),
+    ],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffce1126)],
+        x: -1,
+        heightFactor: 1,
+        widthFactor: 1 / 3,
+        type: ElementType.rectangle,
+        children: [
+          ElementsProperties(
+            [Color(0xff000000)],
+            heightFactor: 1 / 3,
+            type: ElementType.star,
+          ),
+        ],
+      ),
+    ],
+    url: "https://www.vexilla-mundi.com/guinea-bissau/guinea-bissau_sheet.png",
+  ),
 
   /// Japan: JP.
-  CountryJpn(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffbc002d)),
-  ]),
+  CountryJpn(): FlagProperties(
+    [ColorsProperties(Color(0xffffffff))],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffbc002d)],
+        heightFactor: 12 / 20,
+        type: ElementType.circle,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Japan_(construction_sheet).svg",
+  ),
 
   /// Heard Island and McDonald Islands: HM.
-  CountryHmd(): FlagProperties([
-    ColorsProperties(Color(0xff00008b)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffff0000)),
-  ]),
+  CountryHmd(): FlagProperties([], sameAs: CountryAus()),
 
   /// Jersey: JE.
-  CountryJey(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffcf142b)),
-    ColorsProperties(Color(0xffffd700)),
-    ColorsProperties(Color(0xff377bc8)),
-    ColorsProperties(Color(0xff504416)),
-    ColorsProperties(Color(0xffd1b948)),
-    ColorsProperties(Color(0xff806600)),
-    ColorsProperties(Color(0xff2b2200)),
-    ColorsProperties(Color(0xff800000)),
-    ColorsProperties(Color(0xff2c5aa0)),
-  ]),
+  CountryJey(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffcf142b)),
+      ColorsProperties(Color(0xffffd700)),
+      ColorsProperties(Color(0xff377bc8)),
+      ColorsProperties(Color(0xff000000)),
+    ],
+    aspectRatio: 5 / 3,
+    url: "https://www.vexilla-mundi.com/jersey/jersey_sheet.png",
+  ),
 
   /// Guam: GU.
-  CountryGum(): FlagProperties([
-    ColorsProperties(Color(0xffbe0027)),
-    ColorsProperties(Color(0xff3b5aa3)),
-    ColorsProperties(Color(0xffcbe0e5)),
-    ColorsProperties(Color(0xffadd2d9)),
-    ColorsProperties(Color(0xfffdf9a1)),
-    ColorsProperties(Color(0xff179a3b)),
-    ColorsProperties(Color(0xffa79270)),
-    ColorsProperties(Color(0xffbd0728)),
-    ColorsProperties(Color(0xff239e46)),
-    ColorsProperties(Color(0xfffdf9ff)),
-    ColorsProperties(Color(0xffa68861)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryGum(): FlagProperties(
+    [ColorsProperties(Color(0xffC62139))],
+    aspectRatio: 41 / 22,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffC62139)],
+        heightFactor: 38 / 40,
+        widthFactor: 76 / 78,
+        type: ElementType.rectangle,
+        children: [
+          ElementsProperties(
+            [
+              Color(0xffC62139),
+              Color(0xff00297B),
+              Color(0xffcbe0e5),
+              Color(0xffadd2d9),
+              Color(0xfffdf9a1),
+              Color(0xff179a3b),
+              Color(0xffa79270),
+              Color(0xffbd0728),
+              Color(0xff239e46),
+              Color(0xfffdf9ff),
+              Color(0xffa68861),
+              Color(0xffffffff),
+            ],
+            heightFactor: 38 / 40,
+            widthFactor: 76 / 78,
+          ),
+        ],
+      ),
+    ],
+    url: "https://www.vexilla-mundi.com/guam/guam_sheet.png",
+  ),
 
   /// United Kingdom: GB.
-  CountryGbr(): FlagProperties([
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-  ]),
+  CountryGbr(): FlagProperties(
+    [ColorsProperties(Color(0xff012169))],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties([Color(0xffffffff), Color(0xffc8102e)]),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_the_United_Kingdom_(1-2)_(construction_sheet).svg",
+  ),
 
   /// Pakistan: PK.
-  CountryPak(): FlagProperties([
-    ColorsProperties(Color(0xff0c590b)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryPak(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff), ratio: 15),
+      ColorsProperties(Color(0xff115740), ratio: 60),
+    ],
+    isHorizontalStriped: false,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: 0.25,
+        heightFactor: 12 / 20,
+        angle: 60,
+        type: ElementType.moon,
+      ),
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: 0.3,
+        y: 0.1,
+        heightFactor: 4 / 20,
+        angle: 60,
+        type: ElementType.star,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Pakistan_(construction_sheet).svg",
+  ),
 
   /// Singapore: SG.
-  CountrySgp(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffdf0000)),
-  ]),
+  CountrySgp(): FlagProperties(
+    [ColorsProperties(Color(0xffEE2536)), ColorsProperties(Color(0xffffffff))],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: -0.75,
+        y: 0.15,
+        heightFactor: 13.25 / 18,
+        angle: 60,
+        type: ElementType.moon,
+      ),
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: -0.6,
+        y: 0.2,
+        heightFactor: 3.45 / 36,
+        type: ElementType.star,
+      ),
+    ],
+    url:
+        "https://en.wikipedia.org/wiki/File:Construction_Sheet_of_the_Flag_of_Singapore.svg",
+  ),
 
   /// Russia: RU.
-  CountryRus(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff0039a6)),
-    ColorsProperties(Color(0xffd52b1e)),
-  ]),
+  CountryRus(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff0036A7)),
+      ColorsProperties(Color(0xffD62718)),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Russia_(construction_sheet).svg",
+  ),
 
   /// Dominican Republic: DO.
-  CountryDom(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff002d62)),
-    ColorsProperties(Color(0xffce1126)),
-    ColorsProperties(Color(0xff201b18)),
-    ColorsProperties(Color(0xffeac102)),
-    ColorsProperties(Color(0xff006300)),
-    ColorsProperties(Color(0xffffff00)),
-    ColorsProperties(Color(0xff008f4c)),
-    ColorsProperties(Color(0xff00873f)),
-    ColorsProperties(Color(0xffff0000)),
-    ColorsProperties(Color(0xff00863d)),
-    ColorsProperties(Color(0xffaa241e)),
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xff808000)),
-    ColorsProperties(Color(0xff000000)),
-  ]),
+  CountryDom(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff002d62), ratio: 2),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffce1126), ratio: 2),
+    ],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xff002d62), Color(0xffce1126)],
+        x: -1,
+        y: -1,
+        heightFactor: 2 / 5,
+        widthFactor: 1,
+        type: ElementType.rectangle,
+      ),
+      ElementsProperties(
+        [Color(0xffffffff)],
+        heightFactor: 1,
+        widthFactor: 1 / 9,
+        type: ElementType.rectangle,
+        children: [
+          ElementsProperties(
+            [
+              Color(0xff201b18),
+              Color(0xffeac102),
+              Color(0xff006300),
+              Color(0xffffff00),
+              Color(0xff008f4c),
+              Color(0xff00873f),
+              Color(0xffff0000),
+              Color(0xff00863d),
+              Color(0xffaa241e),
+              Color(0xff000001),
+              Color(0xff808000),
+              Color(0xff000000),
+            ],
+            heightFactor: 1 / 5,
+          ),
+        ],
+      ),
+    ],
+    url:
+        "https://www.vexilla-mundi.com/dominican_republic/dominican_republic_sheet.png",
+  ),
 
   /// Guatemala: GT.
-  CountryGtm(): FlagProperties([
-    ColorsProperties(Color(0xff4997d0)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff406325)),
-    ColorsProperties(Color(0xff67923d)),
-    ColorsProperties(Color(0xffba1f3e)),
-    ColorsProperties(Color(0xff8c959d)),
-    ColorsProperties(Color(0xff485654)),
-    ColorsProperties(Color(0xff6c301e)),
-    ColorsProperties(Color(0xffb2b6ba)),
-    ColorsProperties(Color(0xfffab81c)),
-    ColorsProperties(Color(0xfff9f0aa)),
-    ColorsProperties(Color(0xffb07e09)),
-    ColorsProperties(Color(0xff448127)),
-    ColorsProperties(Color(0xffeac102)),
-    ColorsProperties(Color(0xffa08307)),
-    ColorsProperties(Color(0xff34541f)),
-    ColorsProperties(Color(0xff24420e)),
-    ColorsProperties(Color(0xff511124)),
-    ColorsProperties(Color(0xff351710)),
-    ColorsProperties(Color(0xff999270)),
-    ColorsProperties(Color(0xff4c0505)),
-    ColorsProperties(Color(0xff000000)),
-  ]),
+  CountryGtm(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff4997d0)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff4997d0)),
+    ],
+    aspectRatio: 8 / 5,
+    isHorizontalStriped: false,
+    elementsProperties: [
+      ElementsProperties(
+        [
+          Color(0xff406325),
+          Color(0xff67923d),
+          Color(0xffba1f3e),
+          Color(0xff8c959d),
+          Color(0xff485654),
+          Color(0xff6c301e),
+          Color(0xffb2b6ba),
+          Color(0xfffab81c),
+          Color(0xfff9f0aa),
+          Color(0xffb07e09),
+          Color(0xff448127),
+          Color(0xffeac102),
+          Color(0xffa08307),
+          Color(0xff34541f),
+          Color(0xff24420e),
+          Color(0xff511124),
+          Color(0xff351710),
+          Color(0xff999270),
+          Color(0xff4c0505),
+          Color(0xff000000),
+        ],
+        heightFactor: 1 / 3,
+      ),
+    ],
+    url: "https://www.vexilla-mundi.com/guatemala/guatemala_sheet.png",
+  ),
 
   /// Kuwait: KW.
-  CountryKwt(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xfff31830)),
-    ColorsProperties(Color(0xff00d941)),
-    ColorsProperties(Color(0xff000001)),
-  ]),
+  CountryKwt(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff007A3D)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffCE1126)),
+    ],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xff000000)],
+        x: -1,
+        heightFactor: 1,
+        widthFactor: 3 / 12,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Kuwait_(construction_sheet).svg",
+  ),
 
   /// Israel: IL.
-  CountryIsr(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff0038b8)),
-  ]),
+  CountryIsr(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff), ratio: 15),
+      ColorsProperties(Color(0xff0038b8), ratio: 25),
+      ColorsProperties(Color(0xffffffff), ratio: 80),
+      ColorsProperties(Color(0xff0038b8), ratio: 25),
+      ColorsProperties(Color(0xffffffff), ratio: 15),
+    ],
+    aspectRatio: 11 / 8,
+    elementsProperties: [
+      ElementsProperties([Color(0xff0038b8)], heightFactor: 69 / 160),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Israel_(construction_sheet).svg",
+  ),
 
   /// Guernsey: GG.
-  CountryGgy(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffe8112d)),
-    ColorsProperties(Color(0xfff9dd16)),
-  ]),
+  CountryGgy(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff), ratio: 5),
+      ColorsProperties(Color(0xffe8112d), ratio: 2),
+      ColorsProperties(Color(0xffffffff), ratio: 5),
+    ],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffe8112d)],
+        heightFactor: 1,
+        widthFactor: 2 / 12,
+      ),
+      ElementsProperties([Color(0xfff9dd16)], heightFactor: 0.8),
+    ],
+    url: "https://www.vexilla-mundi.com/guernsey/guernsey_sheet.png",
+  ),
 
   /// Guadeloupe: GP.
-  CountryGlp(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000091)),
-    ColorsProperties(Color(0xffe1000f)),
-  ]),
+  CountryGlp(): FlagProperties([], sameAs: CountryFra()),
 
   /// Denmark: DK.
   CountryDnk(): FlagProperties([

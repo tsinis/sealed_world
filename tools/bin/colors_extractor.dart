@@ -47,16 +47,22 @@ const map = {
 class FlagProperties {
   const FlagProperties(
     this.colors, {
-    this.aspectRatio = 2 / 3,
+    this.aspectRatio = 3 / 2,
     this.isHorizontalStriped = true,
-    this.symbolsProperties,
+    this.elementsProperties,
     this.url,
+    this.sameAs,
   });
 
   final List<ColorsProperties> colors;
-  final List<SymbolsProperties>? symbolsProperties;
+  final List<ElementsProperties>? elementsProperties;
+
+  /// Aspect ration of the flag. The aspect ratio is conventionally given
+  /// as height to width, but in this package (and in CG in general) it is given
+  /// as width to height.
   final double aspectRatio;
   final String? url;
+  final WorldCountry? sameAs;
 
   /// Indicates whether the stripes on the flag are arranged horizontally.
   ///
@@ -72,7 +78,7 @@ class FlagProperties {
   @override
   String toString() => "FlagProperties($colors, aspectRatio: $aspectRatio, "
       "isHorizontalStriped: $isHorizontalStriped, "
-      "symbolsProperties: $symbolsProperties)";
+      "elementsProperties: $elementsProperties)";
 }
 
 class ColorsProperties {
@@ -86,9 +92,8 @@ class ColorsProperties {
   String toString() => "ColorsProperties($color, ratio: $ratio)";
 }
 
-class SymbolsProperties {
-  /// Creates an alignment.
-  const SymbolsProperties(
+class ElementsProperties {
+  const ElementsProperties(
     this.colors, {
     this.x = middle,
     this.y = middle,
@@ -106,13 +111,16 @@ class SymbolsProperties {
   /// of various aspect rations of the flags, when width varies but height
   /// remains the same.
   final double? heightFactor;
+
+  /// If [widthFactor] is null, this is usually means that element's bounding
+  /// box has square form.
   final double? widthFactor;
   final List<Color> colors;
   final double? angle;
-  final SymbolType? type;
-  final List<SymbolsProperties> children;
+  final ElementType? type;
+  final List<ElementsProperties> children;
 
-  /// The distance fraction in the horizontal direction.
+  /// The distance fraction in the horizontal direction (of the center).
   ///
   /// A value of -1.0 corresponds to the leftmost edge. A value of 1.0
   /// corresponds to the rightmost edge. Values are not limited to that range;
@@ -121,7 +129,7 @@ class SymbolsProperties {
   /// edge.
   final double x;
 
-  /// The distance fraction in the vertical direction.
+  /// The distance fraction in the vertical direction (of the center).
   ///
   /// A value of -1.0 corresponds to the topmost edge. A value of 1.0
   /// corresponds to the bottommost edge. Values are not limited to that range;
@@ -131,9 +139,9 @@ class SymbolsProperties {
 
   @override
   String toString() =>
-      "SymbolsProperties(${x.toStringAsFixed(1)}, ${y.toStringAsFixed(1)}"
+      "ElementsProperties(${x.toStringAsFixed(1)}, ${y.toStringAsFixed(1)}"
       "widthFactor: $widthFactor, heightFactor: $heightFactor, "
       "colors: $colors, angle: $angle)";
 }
 
-enum SymbolType { star, triangle, circle, rectangle, moon, sun }
+enum ElementType { star, triangle, circle, rectangle, moon, sun }
