@@ -922,93 +922,127 @@ const flags = {
   ),
 
   /// North Korea: KP.
-  CountryPrk(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff3e5698)),
-    ColorsProperties(Color(0xffc60000)),
-    ColorsProperties(Color(0xffc40000)),
-    ColorsProperties(Color(0xff000000)),
-  ]),
+  CountryPrk(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff024FA2), ratio: 6),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffED1C27), ratio: 22),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff024FA2), ratio: 6),
+    ],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: -1 / 3,
+        heightFactor: 16 / 36,
+        type: ElementType.circle,
+        children: [
+          ElementsProperties(
+            [Color(0xffED1C27)],
+            heightFactor: 0.968,
+            type: ElementType.star,
+          ),
+        ],
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_North_Korea_(construction_sheet).svg",
+  ),
 
   /// British Indian Ocean Territory: IO.
-  CountryIot(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000063)),
-    ColorsProperties(Color(0xffa24300)),
-    ColorsProperties(Color(0xff006d00)),
-    ColorsProperties(Color(0xffcc0000)),
-    ColorsProperties(Color(0xfffff100)),
-    ColorsProperties(Color(0xff808080)),
-    ColorsProperties(Color(0xff006300)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
-  ]),
+  CountryIot(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff000063)),
+      ColorsProperties(Color(0xffa24300)),
+      ColorsProperties(Color(0xff006d00)),
+      ColorsProperties(Color(0xffcc0000)),
+      ColorsProperties(Color(0xfffff100)),
+      ColorsProperties(Color(0xff808080)),
+      ColorsProperties(Color(0xff006300)),
+      ColorsProperties(Color(0xff012169)),
+      ColorsProperties(Color(0xffc8102e)),
+      ColorsProperties(Color(0xff000000)),
+    ],
+    aspectRatio: 2,
+    url:
+        "https://www.vexilla-mundi.com/british_indian_ocean_territory/british_indian_ocean_territory_sheet.png",
+  ),
 
   /// Grenada: GD.
-  CountryGrd(): FlagProperties([
-    ColorsProperties(Color(0xfffcd116)),
-    ColorsProperties(Color(0xffce1126)),
-    ColorsProperties(Color(0xff007a5e)),
-  ]),
+  CountryGrd(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffFFD100)),
+      ColorsProperties(Color(0xffEF3340)),
+      ColorsProperties(Color(0xff009739)),
+    ],
+    aspectRatio: 5 / 3,
+    url: "https://www.vexilla-mundi.com/grenada/grenada_sheet.png",
+  ),
 
   /// South Georgia: GS.
-  CountrySgs(): FlagProperties([
-    ColorsProperties(Color(0xff000066)),
-    ColorsProperties(Color(0xff6a4c2d)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff656263)),
-    ColorsProperties(Color(0xffffbb00)),
-    ColorsProperties(Color(0xff00713d)),
-    ColorsProperties(Color(0xff006b00)),
-    ColorsProperties(Color(0xffffc900)),
-    ColorsProperties(Color(0xffcdad56)),
-    ColorsProperties(Color(0xffe80000)),
-    ColorsProperties(Color(0xffc01500)),
-    ColorsProperties(Color(0xff1e5aa6)),
-    ColorsProperties(Color(0xffff7000)),
-    ColorsProperties(Color(0xffc75b00)),
-    ColorsProperties(Color(0xffcccccd)),
-    ColorsProperties(Color(0xff0000ff)),
-    ColorsProperties(Color(0xff923f00)),
-    ColorsProperties(Color(0xfffffeff)),
-    ColorsProperties(Color(0xff5e0043)),
-    ColorsProperties(Color(0xff474747)),
-    ColorsProperties(Color(0xffb4b6b9)),
-    ColorsProperties(Color(0xff8a9396)),
-    ColorsProperties(Color(0xffcecfcf)),
-    ColorsProperties(Color(0xff2b2b2b)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xff3ec26d)),
-    ColorsProperties(Color(0xfffff700)),
-    ColorsProperties(Color(0xffcccccc)),
-  ]),
+  CountrySgs(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff000066)),
+      ColorsProperties(Color(0xff6a4c2d)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff656263)),
+      ColorsProperties(Color(0xffffbb00)),
+      ColorsProperties(Color(0xff00713d)),
+      ColorsProperties(Color(0xff006b00)),
+      ColorsProperties(Color(0xffffc900)),
+      ColorsProperties(Color(0xffcdad56)),
+      ColorsProperties(Color(0xffe80000)),
+      ColorsProperties(Color(0xffc01500)),
+      ColorsProperties(Color(0xff1e5aa6)),
+      ColorsProperties(Color(0xffff7000)),
+      ColorsProperties(Color(0xffc75b00)),
+      ColorsProperties(Color(0xffcccccd)),
+      ColorsProperties(Color(0xff0000ff)),
+      ColorsProperties(Color(0xff923f00)),
+      ColorsProperties(Color(0xfffffeff)),
+      ColorsProperties(Color(0xff5e0043)),
+      ColorsProperties(Color(0xff474747)),
+      ColorsProperties(Color(0xffb4b6b9)),
+      ColorsProperties(Color(0xff8a9396)),
+      ColorsProperties(Color(0xffcecfcf)),
+      ColorsProperties(Color(0xff2b2b2b)),
+      ColorsProperties(Color(0xff012169)),
+      ColorsProperties(Color(0xffc8102e)),
+      ColorsProperties(Color(0xff000000)),
+      ColorsProperties(Color(0xff3ec26d)),
+      ColorsProperties(Color(0xfffff700)),
+      ColorsProperties(Color(0xffcccccc)),
+    ],
+    aspectRatio: 2,
+    url:
+        "https://www.vexilla-mundi.com/south_georgia_and_the_south_sandwich_islands/south_georgia_and_the_south_sandwich_islands_sheet.png",
+  ),
 
   /// Saudi Arabia: SA.
-  CountrySau(): FlagProperties([
-    ColorsProperties(Color(0xff165d31)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountrySau(): FlagProperties(
+    [ColorsProperties(Color(0xff005430))],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        heightFactor: 1 / 4,
+        widthFactor: 1 / 4,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Saudi_Arabia_(construction_sheet).svg",
+  ),
 
   /// Réunion: RE.
-  CountryReu(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000091)),
-    ColorsProperties(Color(0xffe1000f)),
-  ]),
+  CountryReu(): FlagProperties([], sameAs: CountryFra()),
 
   /// Saint Pierre and Miquelon: PM.
-  CountrySpm(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000091)),
-    ColorsProperties(Color(0xffe1000f)),
-  ]),
+  CountrySpm(): FlagProperties([], sameAs: CountryFra()),
 
   /// El Salvador: SV.
   CountrySlv(): FlagProperties([
-    ColorsProperties(Color(0xff0f47af)),
+    ColorsProperties(Color(0xff0047AB)),
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffe60000)),
     ColorsProperties(Color(0xff1f601a)),
