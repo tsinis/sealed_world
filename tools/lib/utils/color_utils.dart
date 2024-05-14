@@ -72,8 +72,8 @@ class ColorUtils {
   /// * AARRGGBB
   /// * #AARRGGBB
   ///
-  /// Where: A stands for Alpha, R for Red, G for Green, and B for blue color. It
-  /// will only accept 3/6/8 long HEXs with an optional hash (`#`) at the
+  /// Where: A stands for Alpha, R for Red, G for Green, and B for blue color.
+  /// It will only accept 3/6/8 long HEXs with an optional hash (`#`) at the
   /// beginning. Allowed characters are Latin A-F case insensitive and numbers
   /// 0-9. Optional [enableAlpha] can be provided (it's `true` by default). If
   /// it's set to `false` transparency information (alpha channel) will be
