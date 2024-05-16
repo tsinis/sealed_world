@@ -1592,78 +1592,134 @@ const flags = {
   ),
 
   /// Tuvalu: TV.
-  CountryTuv(): FlagProperties([
-    ColorsProperties(Color(0xff009fca)),
-    ColorsProperties(Color(0xfffff40d)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-  ]),
+  CountryTuv(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff009fca)),
+      ColorsProperties(Color(0xfffff40d)),
+      ColorsProperties(Color(0xff012169)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffc8102e)),
+    ],
+    aspectRatio: 2,
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Tuvalu_(construction_sheet).svg",
+  ),
 
   /// Saint Barthélemy: BL.
-  CountryBlm(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000091)),
-    ColorsProperties(Color(0xffe1000f)),
-  ]),
+  CountryBlm(): FlagProperties([], sameAs: CountryFra()),
 
   /// Aruba: AW.
-  CountryAbw(): FlagProperties([
-    ColorsProperties(Color(0xff3399cc)),
-    ColorsProperties(Color(0xffffff00)),
-    ColorsProperties(Color(0xff99cccc)),
-    ColorsProperties(Color(0xffccccff)),
-    ColorsProperties(Color(0xff66cccc)),
-    ColorsProperties(Color(0xffcc6666)),
-    ColorsProperties(Color(0xffffcccc)),
-    ColorsProperties(Color(0xffcc0000)),
-    ColorsProperties(Color(0xff99ccff)),
-    ColorsProperties(Color(0xff6699cc)),
-    ColorsProperties(Color(0xffcc3333)),
-    ColorsProperties(Color(0xffccffff)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryAbw(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff418FDE), ratio: 12),
+      ColorsProperties(Color(0xffF7D417)),
+      ColorsProperties(Color(0xff418FDE)),
+      ColorsProperties(Color(0xffF7D417)),
+      ColorsProperties(Color(0xff418FDE), ratio: 3),
+    ],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff), Color(0xffEF3340)],
+        x: -4 / 9,
+        y: -8 / 27,
+        heightFactor: 6 / 18,
+      ),
+    ],
+    url: "https://en.wikipedia.org/wiki/File:Flag_of_Aruba_construction.svg",
+  ),
 
   /// Switzerland: CH.
-  CountryChe(): FlagProperties([
-    ColorsProperties(Color(0xffff0000)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryChe(): FlagProperties(
+    [ColorsProperties(Color(0xffff0000))],
+    aspectRatio: 1,
+    elementsProperties: [
+      ElementsProperties([Color(0xffffffff)], heightFactor: 20 / 32),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Switzerland_(construction_sheet).svg",
+  ),
 
   /// Monaco: MC.
-  CountryMco(): FlagProperties([
-    ColorsProperties(Color(0xfff31830)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryMco(): FlagProperties(
+    [ColorsProperties(Color(0xffCE1126)), ColorsProperties(Color(0xffffffff))],
+    aspectRatio: 5 / 4,
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Monaco_(construction_sheet).svg",
+  ),
 
   /// Malta: MT.
-  CountryMlt(): FlagProperties([
-    ColorsProperties(Color(0xffce0000)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xfff1eeee)),
-    ColorsProperties(Color(0xffcc0000)),
-    ColorsProperties(Color(0xffffe600)),
-    ColorsProperties(Color(0xff707070)),
-    ColorsProperties(Color(0xffa0a0a0)),
-    ColorsProperties(Color(0xffd0d0d0)),
-    ColorsProperties(Color(0xff808080)),
-    ColorsProperties(Color(0xffa7a7a7)),
-  ]),
+  CountryMlt(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffCF142B)),
+    ],
+    isHorizontalStriped: false,
+    elementsProperties: [
+      ElementsProperties(
+        [
+          Color(0xffCF142B),
+          Color(0xff000000),
+          Color(0xffffffff),
+          Color(0xffa0a0a0),
+        ],
+        x: -0.75,
+        y: -0.625,
+        heightFactor: 112 / 432,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Malta_(construction_sheet).svg",
+  ),
 
   /// Norway: NO.
-  CountryNor(): FlagProperties([
-    ColorsProperties(Color(0xffed2939)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff002664)),
-  ]),
+  CountryNor(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffBA0C2F), ratio: 6),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff002664), ratio: 2),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffBA0C2F), ratio: 6),
+    ],
+    aspectRatio: 11 / 8,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: -1 / 3,
+        heightFactor: 1,
+        widthFactor: 4 / 22,
+        type: ElementType.rectangle,
+        children: [
+          ElementsProperties(
+            [Color(0xff002664)],
+            heightFactor: 1,
+            widthFactor: 1 / 2,
+            type: ElementType.rectangle,
+          ),
+        ],
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Norway_(construction_sheet).svg",
+  ),
 
   /// Saint Lucia: LC.
-  CountryLca(): FlagProperties([
-    ColorsProperties(Color(0xff65cfff)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xffffce00)),
-  ]),
+  CountryLca(): FlagProperties(
+    [ColorsProperties(Color(0xff65cfff))],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        heightFactor: 0.824,
+        widthFactor: 1 / 2,
+        angle: 90,
+        children: [
+          ElementsProperties([Color(0xff000000), Color(0xffffce00)]),
+        ],
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Saint_Lucia_(construction_sheet).svg",
+  ),
 
   /// Madagascar: MG.
   CountryMdg(): FlagProperties([
