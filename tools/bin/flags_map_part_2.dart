@@ -6,47 +6,78 @@ import "colors_extractor.dart";
 // ignore: prefer-static-class, temporary map.
 const flags = {
   /// Madagascar: MG.
-  CountryMdg(): FlagProperties([
-    ColorsProperties(Color(0xfffc3d32)),
-    ColorsProperties(Color(0xff007e3a)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryMdg(): FlagProperties(
+    [ColorsProperties(Color(0xfffc3d32)), ColorsProperties(Color(0xff007e3a))],
+    isHorizontalStriped: false,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: -1,
+        heightFactor: 1,
+        widthFactor: 1 / 3,
+        type: ElementType.rectangle,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Madagascar_(construction_sheet).svg",
+  ),
 
   /// Lithuania: LT.
-  CountryLtu(): FlagProperties([
-    ColorsProperties(Color(0xff006a44)),
-    ColorsProperties(Color(0xffc1272d)),
-    ColorsProperties(Color(0xfffdb913)),
-  ]),
+  CountryLtu(): FlagProperties(
+    [
+      ColorsProperties(Color(0xfffdb913)),
+      ColorsProperties(Color(0xff006a44)),
+      ColorsProperties(Color(0xffc1272d)),
+    ],
+    aspectRatio: 5 / 3,
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Lithuania_(construction_sheet).svg",
+  ),
 
   /// Northern Mariana Islands: MP.
-  CountryMnp(): FlagProperties([
-    ColorsProperties(Color(0xff0071bc)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff217900)),
-    ColorsProperties(Color(0xffffd200)),
-    ColorsProperties(Color(0xff8c8a8c)),
-    ColorsProperties(Color(0xffde2010)),
-    ColorsProperties(Color(0xffffe300)),
-    ColorsProperties(Color(0xff6b18b5)),
-    ColorsProperties(Color(0xfff7df73)),
-    ColorsProperties(Color(0xff8c1800)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xffef8a10)),
-  ]),
+  CountryMnp(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff0071bc)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff217900)),
+      ColorsProperties(Color(0xffffd200)),
+      ColorsProperties(Color(0xff8c8a8c)),
+      ColorsProperties(Color(0xffde2010)),
+      ColorsProperties(Color(0xffffe300)),
+      ColorsProperties(Color(0xff6b18b5)),
+      ColorsProperties(Color(0xfff7df73)),
+      ColorsProperties(Color(0xff8c1800)),
+      ColorsProperties(Color(0xff000000)),
+      ColorsProperties(Color(0xffef8a10)),
+    ],
+    aspectRatio: 2,
+    url:
+        "https://www.vexilla-mundi.com/northern_mariana_islands/northern_mariana_islands_sheet.png",
+  ),
 
   /// Andorra: AD.
-  CountryAnd(): FlagProperties([
-    ColorsProperties(Color(0xffd0103a)),
-    ColorsProperties(Color(0xfffedf00)),
-    ColorsProperties(Color(0xff0018a8)),
-    ColorsProperties(Color(0xffc7b37f)),
-    ColorsProperties(Color(0xff703d29)),
-    ColorsProperties(Color(0xffd52b1e)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xfffcd900)),
-    ColorsProperties(Color(0xff0065bd)),
-  ]),
+  CountryAnd(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff10069f), ratio: 64),
+      ColorsProperties(Color(0xfffedd00), ratio: 72),
+      ColorsProperties(Color(0xffd50032), ratio: 64),
+      ColorsProperties(Color(0xffc6aa76)),
+    ],
+    aspectRatio: 10 / 7,
+    isHorizontalStriped: false,
+    elementsProperties: [
+      ElementsProperties(
+        [
+          Color(0xffc6aa76),
+          Color(0xfffedd00),
+          Color(0xffd50032),
+          Color(0xff10069f),
+        ],
+        heightFactor: 66 / 140,
+      ),
+    ],
+    url: "https://wikipedia.org/wiki/File:Flag_of_Andorra_(construction).svg",
+  ),
 
   /// Chile: CL.
   CountryChl(): FlagProperties([
