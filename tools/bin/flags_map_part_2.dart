@@ -1502,66 +1502,135 @@ const flags = {
   ),
 
   /// Turkmenistan: TM.
-  CountryTkm(): FlagProperties([
-    ColorsProperties(Color(0xff00843d)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffd22630)),
-    ColorsProperties(Color(0xff383739)),
-    ColorsProperties(Color(0xffffc72c)),
-  ]),
+  CountryTkm(): FlagProperties(
+    [ColorsProperties(Color(0xff00853A))],
+    elementsProperties: [
+      ElementsProperties([
+        Color(0xff00853A),
+        Color(0xffffffff),
+        Color(0xffd22630),
+        Color(0xff383739),
+        Color(0xffffc72c),
+      ]),
+    ],
+    url: "https://www.vexilla-mundi.com/turkmenistan/turkmenistan_sheet.png",
+  ),
 
   /// Tanzania: TZ.
-  CountryTza(): FlagProperties([
-    ColorsProperties(Color(0xff0099ff)),
-    ColorsProperties(Color(0xff009900)),
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xffffff00)),
-  ]),
+  CountryTza(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff009900)),
+      ColorsProperties(Color(0xffffff00)),
+      ColorsProperties(Color(0xff000001)),
+      ColorsProperties(Color(0xffffff00)),
+      ColorsProperties(Color(0xff0099ff)),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Tanzania_(construction_sheet).svg",
+  ),
 
   /// Venezuela: VE.
-  CountryVen(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffcf142b)),
-    ColorsProperties(Color(0xff00247d)),
-    ColorsProperties(Color(0xffffcc00)),
-  ]),
+  CountryVen(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffcc00)),
+      ColorsProperties(Color(0xff00247d)),
+      ColorsProperties(Color(0xffcf142b)),
+    ],
+    elementsProperties: [
+      ElementsProperties([Color(0xffffffff)], heightFactor: 0.3),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Venezuela_(construction_sheet).svg",
+  ),
 
   /// Albania: AL.
-  CountryAlb(): FlagProperties([
-    ColorsProperties(Color(0xffff0000)),
-    ColorsProperties(Color(0xff000001)),
-  ]),
+  CountryAlb(): FlagProperties(
+    [ColorsProperties(Color(0xffff0000))],
+    aspectRatio: 7 / 5,
+    elementsProperties: [
+      ElementsProperties([Color(0xff000000)], heightFactor: 2 / 3),
+    ],
+    url: "https://www.vexilla-mundi.com/albania/albania_sheet.png",
+  ),
 
   /// Botswana: BW.
-  CountryBwa(): FlagProperties([
-    ColorsProperties(Color(0xff00cbff)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000001)),
-  ]),
+  CountryBwa(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff6DA9D2), ratio: 9),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff000000), ratio: 4),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff6DA9D2), ratio: 9),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Botswana_(construction_sheet).svg",
+  ),
 
   /// DR Congo: CD.
-  CountryCod(): FlagProperties([
-    ColorsProperties(Color(0xff007fff)),
-    ColorsProperties(Color(0xfff7d618)),
-    ColorsProperties(Color(0xffce1021)),
-  ]),
+  CountryCod(): FlagProperties(
+    [ColorsProperties(Color(0xff007fff))],
+    aspectRatio: 4 / 3,
+    elementsProperties: [
+      ElementsProperties([Color(0xffce1021), Color(0xfff7d618)]),
+      ElementsProperties(
+        [Color(0xfff7d618)],
+        x: -0.9,
+        y: -0.9,
+        heightFactor: 513 / 1500,
+        type: ElementType.star,
+      ),
+    ],
+    url:
+        "https://www.vexilla-mundi.com/congo_democratic_republic/congo_democratic_republic_sheet.png",
+  ),
 
   /// Sri Lanka: LK.
-  CountryLka(): FlagProperties([
-    ColorsProperties(Color(0xffffb700)),
-    ColorsProperties(Color(0xffff5b00)),
-    ColorsProperties(Color(0xff005641)),
-    ColorsProperties(Color(0xff8d2029)),
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xff000000)),
-  ]),
+  CountryLka(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffF7B718), ratio: 7),
+      ColorsProperties(Color(0xff005F56), ratio: 39),
+      ColorsProperties(Color(0xffDF7500), ratio: 39),
+      ColorsProperties(Color(0xffF7B718), ratio: 7),
+      ColorsProperties(Color(0xff941E32), ratio: 90),
+      ColorsProperties(Color(0xffF7B718), ratio: 7),
+    ],
+    aspectRatio: 2,
+    isHorizontalStriped: false,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffF7B718)],
+        y: -1,
+        heightFactor: 70 / 750,
+        widthFactor: 1,
+        type: ElementType.rectangle,
+      ),
+      ElementsProperties(
+        [Color(0xffF7B718)],
+        y: 1,
+        heightFactor: 70 / 750,
+        widthFactor: 1,
+        type: ElementType.rectangle,
+      ),
+      ElementsProperties(
+        [Color(0xffF7B718), Color(0xff000000)],
+        heightFactor: 610 / 750,
+        widthFactor: 900 / 1890,
+      ),
+    ],
+    url: "https://www.vexilla-mundi.com/sri_lanka/sri_lanka_sheet.png",
+  ),
 
   /// Macau: MO.
-  CountryMac(): FlagProperties([
-    ColorsProperties(Color(0xff00785e)),
-    ColorsProperties(Color(0xfffbd116)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryMac(): FlagProperties(
+    [ColorsProperties(Color(0xff067662))],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff), Color(0xffFFDF1E)],
+        heightFactor: 18 / 30,
+      ),
+    ],
+    url: "https://wikipedia.org/wiki/File:Flag_of_Macau.svg",
+  ),
 
   /// Mexico: MX.
   CountryMex(): FlagProperties([
