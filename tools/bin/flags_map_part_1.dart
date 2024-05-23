@@ -32,7 +32,7 @@ void main() {
 }
 
 // ignore: prefer-static-class, temporary map.
-const flags = {
+const flags1 = {
   /// Honduras: HN.
   CountryHnd(): FlagProperties(
     [
