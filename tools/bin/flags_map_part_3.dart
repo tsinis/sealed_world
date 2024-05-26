@@ -957,127 +957,280 @@ const flags3 = {
   ),
 
   /// Saint Kitts and Nevis: KN.
-  CountryKna(): FlagProperties([
-    ColorsProperties(Color(0xffffe900)),
-    ColorsProperties(Color(0xff35a100)),
-    ColorsProperties(Color(0xffc70000)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryKna(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff35a100)),
+      ColorsProperties(Color(0xffffe900)),
+      ColorsProperties(Color(0xffc70000)),
+      ColorsProperties(Color(0xff000000)),
+      ColorsProperties(Color(0xffffffff)),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Saint_Kitts_and_Nevis_(construction_sheet).svg",
+  ),
 
   /// Hungary: HU.
-  CountryHun(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff388d00)),
-    ColorsProperties(Color(0xffd43516)),
-  ]),
+  CountryHun(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffCE2939)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff477050)),
+    ],
+    aspectRatio: 2,
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Hungary_(1-2)_(construction_sheet).svg",
+  ),
 
   /// Estonia: EE.
-  CountryEst(): FlagProperties([
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff1791ff)),
-  ]),
+  CountryEst(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff0072CE)),
+      ColorsProperties(Color(0xff000000)),
+      ColorsProperties(Color(0xffffffff)),
+    ],
+    aspectRatio: 11 / 7,
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Estonia_(construction_sheet).svg",
+  ),
 
   /// Eritrea: ER.
-  CountryEri(): FlagProperties([
-    ColorsProperties(Color(0xffbe0027)),
-    ColorsProperties(Color(0xffb4d7f4)),
-    ColorsProperties(Color(0xff239e46)),
-    ColorsProperties(Color(0xfff3e295)),
-  ]),
+  CountryEri(): FlagProperties(
+    [ColorsProperties(Color(0xff0BAC24)), ColorsProperties(Color(0xff3C8BDC))],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffEB0433)],
+        heightFactor: 1,
+        widthFactor: 1,
+        type: ElementType.triangle,
+        children: [
+          ElementsProperties([Color(0xffFBC724)], x: -0.5, heightFactor: 1 / 2),
+        ],
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Eritrea_(construction_sheet).svg",
+  ),
 
   /// Finland: FI.
-  CountryFin(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff002f6c)),
-  ]),
+  CountryFin(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff), ratio: 4),
+      ColorsProperties(Color(0xff002f6c), ratio: 3),
+      ColorsProperties(Color(0xffffffff), ratio: 4),
+    ],
+    aspectRatio: 18 / 11,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xff002f6c)],
+        x: -0.222,
+        heightFactor: 1,
+        widthFactor: 3 / 18,
+        type: ElementType.rectangle,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Finland_(construction_sheet).svg",
+  ),
 
   /// Gambia: GM.
-  CountryGmb(): FlagProperties([
-    ColorsProperties(Color(0xffff0000)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000099)),
-    ColorsProperties(Color(0xff009900)),
-  ]),
+  CountryGmb(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffff0000), ratio: 6),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff000099), ratio: 4),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff009900), ratio: 6),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_the_Gambia_(construction_sheet).svg",
+  ),
 
   /// Saint Helena, Ascension and Tristan da Cunha: SH.
-  CountryShn(): FlagProperties([
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-  ]),
+  CountryShn(): FlagProperties([], sameAs: CountryGbr()),
 
   /// Palestine: PS.
-  CountryPse(): FlagProperties([
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff009900)),
-    ColorsProperties(Color(0xffff0000)),
-  ]),
+  CountryPse(): FlagProperties(
+    [
+      ColorsProperties(Color(0xff000000)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff009736)),
+    ],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffEE2A35)],
+        x: -1,
+        heightFactor: 1,
+        widthFactor: 2 / 6,
+        type: ElementType.triangle,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Palestine_(construction_sheet).svg",
+  ),
 
   /// Puerto Rico: PR.
-  CountryPri(): FlagProperties([
-    ColorsProperties(Color(0xffed0000)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff0050f0)),
-  ]),
+  CountryPri(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffed0000)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffed0000)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffed0000)),
+    ],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xff0050f0)],
+        x: -1,
+        heightFactor: 1,
+        widthFactor: 23 / 45,
+        type: ElementType.triangle,
+        children: [
+          ElementsProperties(
+            [Color(0xffffffff)],
+            heightFactor: 27 / 60,
+            type: ElementType.star,
+          ),
+        ],
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Puerto_Rico_(construction_sheet).svg",
+  ),
 
   /// Slovenia: SI.
-  CountrySvn(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffd50000)),
-    ColorsProperties(Color(0xff0000bf)),
-    ColorsProperties(Color(0xffffdf00)),
-  ]),
+  CountrySvn(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xff0000FF)),
+      ColorsProperties(Color(0xffFF0000)),
+    ],
+    aspectRatio: 2,
+    elementsProperties: [
+      ElementsProperties(
+        [
+          Color(0xffFF0000),
+          Color(0xff0000FF),
+          Color(0xffffffff),
+          Color(0xffFFFF00),
+        ],
+        x: -0.5,
+        y: -1 / 3,
+        heightFactor: 1 / 3,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Slovenia_(construction_sheet).svg",
+  ),
 
   /// Peru: PE.
-  CountryPer(): FlagProperties([
-    ColorsProperties(Color(0xffd91023)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryPer(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffd91023)),
+      ColorsProperties(Color(0xffffffff)),
+      ColorsProperties(Color(0xffd91023)),
+    ],
+    isHorizontalStriped: false,
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Peru_(construction_sheet).svg",
+  ),
 
   /// Qatar: QA.
-  CountryQat(): FlagProperties([
-    ColorsProperties(Color(0xff8d1b3d)),
-    ColorsProperties(Color(0xffffffff)),
-  ]),
+  CountryQat(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffffffff), ratio: 3696),
+      ColorsProperties(Color(0xff8A1538), ratio: 8904),
+    ],
+    aspectRatio: 28 / 11,
+    isHorizontalStriped: false,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: -1 / 3,
+        heightFactor: 1,
+        widthFactor: 1008 / 12600,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Qatar_(construction_sheet).svg",
+  ),
 
   /// Greenland: GL.
-  CountryGrl(): FlagProperties([
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffd00c33)),
-  ]),
+  CountryGrl(): FlagProperties(
+    [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffd00c33))],
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        x: -0.222,
+        heightFactor: 8 / 12,
+        type: ElementType.circle,
+        children: [
+          ElementsProperties([Color(0xffd00c33)], y: -1, heightFactor: 1 / 2),
+        ],
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Greenland_(construction_sheet).svg",
+  ),
 
   /// Spain: ES.
-  CountryEsp(): FlagProperties([
-    ColorsProperties(Color(0xffaa151b)),
-    ColorsProperties(Color(0xfff1bf00)),
-    ColorsProperties(Color(0xffad1519)),
-    ColorsProperties(Color(0xffc8b100)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff058e6e)),
-    ColorsProperties(Color(0xff005bbf)),
-    ColorsProperties(Color(0xffcccccc)),
-    ColorsProperties(Color(0xffc7b500)),
-    ColorsProperties(Color(0xffdb4446)),
-    ColorsProperties(Color(0xffed72aa)),
-    ColorsProperties(Color(0xffffd691)),
-    ColorsProperties(Color(0xff0039f0)),
-    ColorsProperties(Color(0xff000000)),
-  ]),
+  CountryEsp(): FlagProperties(
+    [
+      ColorsProperties(Color(0xffAD1519)),
+      ColorsProperties(Color(0xffFABD00), ratio: 2),
+      ColorsProperties(Color(0xffAD1519)),
+    ],
+    elementsProperties: [
+      ElementsProperties(
+        [
+          Color(0xffad1519),
+          Color(0xffc8b100),
+          Color(0xffffffff),
+          Color(0xff058e6e),
+          Color(0xff005bbf),
+          Color(0xffcccccc),
+          Color(0xffc7b500),
+          Color(0xffdb4446),
+          Color(0xffed72aa),
+          Color(0xffffd691),
+          Color(0xff0039f0),
+          Color(0xff000000),
+        ],
+        x: -1 / 3,
+        heightFactor: 0.4,
+      ),
+    ],
+    url:
+        "https://wikipedia.org/wiki/File:Flag_of_Spain_(construction_sheet).png",
+  ),
 
   /// Haiti: HT.
-  CountryHti(): FlagProperties([
-    ColorsProperties(Color(0xffd21034)),
-    ColorsProperties(Color(0xff00209f)),
-    ColorsProperties(Color(0xfff1b517)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff016a16)),
-    ColorsProperties(Color(0xff0a328c)),
-    ColorsProperties(Color(0xffd20014)),
-    ColorsProperties(Color(0xff503200)),
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xff000000)),
-  ]),
+  CountryHti(): FlagProperties(
+    [ColorsProperties(Color(0xff00209f)), ColorsProperties(Color(0xffd21034))],
+    aspectRatio: 5 / 3,
+    elementsProperties: [
+      ElementsProperties(
+        [Color(0xffffffff)],
+        heightFactor: 90 / 348,
+        widthFactor: 110 / 570,
+        type: ElementType.rectangle,
+        children: [
+          ElementsProperties(
+            [
+              Color(0xff00209f),
+              Color(0xffd21034),
+              Color(0xfff1b517),
+              Color(0xffffffff),
+              Color(0xff016a16),
+              Color(0xff0a328c),
+              Color(0xffd20014),
+              Color(0xff000000),
+            ],
+          ),
+        ],
+      ),
+    ],
+    url: "https://wikipedia.org/wiki/File:Flag_of_Haiti_(construction).jpg",
+  ),
 };
