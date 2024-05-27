@@ -1,7 +1,7 @@
 import "package:flags/flags.dart";
 import "package:flutter/material.dart";
 
-import "stripes_only_flag.dart";
+import "ui/flags/simple_stripes_flag.dart";
 
 void main() => runApp(
       MaterialApp(
@@ -29,16 +29,15 @@ class _MainState extends State<Main> {
     final flagData = flagPropertiesMap.entries.elementAt(index);
 
     return Scaffold(
-      appBar: AppBar(title: Text(flagData.key.internationalName)),
+      appBar: AppBar(title: SelectableText(flagData.key.internationalName)),
       body: Center(
         child: SizedBox(
-          width: 100,
-          child: StripesOnlyFlag(flagData.value),
+          width: 200,
+          child: GestureDetector(
+            onTap: _incrementIndex,
+            child: SimpleStripesFlag(flagData.value),
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementIndex,
-        child: const Icon(Icons.add),
       ),
     );
   }
