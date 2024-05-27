@@ -32,7 +32,7 @@ class _MainState extends State<Main> {
       appBar: AppBar(title: Text(flagData.key.internationalName)),
       body: Center(
         child: SizedBox(
-          height: 100,
+          width: 100,
           child: StripesOnlyFlag(flagData.value),
         ),
       ),
