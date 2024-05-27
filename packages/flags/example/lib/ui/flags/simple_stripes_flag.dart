@@ -18,6 +18,21 @@ class SimpleStripesFlag extends BasicCountryFlag {
   final Color? strokeColor;
   final double? strokeHeightFactor;
 
+  SimpleStripesFlag copyWith({
+    // TODO!
+    Color? strokeColor,
+    double? strokeHeightFactor,
+    double? aspectRatio,
+    Radius? borderRadius,
+  }) =>
+      SimpleStripesFlag(
+        properties,
+        strokeColor: strokeColor ?? this.strokeColor,
+        strokeHeightFactor: strokeHeightFactor ?? this.strokeHeightFactor,
+        borderRadius: borderRadius ?? this.borderRadius,
+        aspectRatio: aspectRatio ?? this.aspectRatio,
+      );
+
   @override
   Widget build(BuildContext context) => BasicCountryFlag(
         properties,

@@ -1,10 +1,14 @@
 import "package:flags/flags.dart";
 import "package:flutter/material.dart";
 
-import "ui/flags/simple_stripes_flag.dart";
+import "flags_map.dart";
 
 void main() => runApp(
-      MaterialApp(home: const Main(), theme: ThemeData.dark()),
+      MaterialApp(
+        home: const Main(),
+        theme: ThemeData.light(useMaterial3: true),
+        darkTheme: ThemeData.dark(useMaterial3: true),
+      ),
     );
 
 class Main extends StatefulWidget {
@@ -15,52 +19,58 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  double opacity = 0;
-  int index = 0;
+  int _index = 0;
+  double _opacity = 1 / 2;
 
-  void _incrementIndex() => setState(() => index++);
+  void _incrementIndex() => setState(() => _index++);
+
+  String _labelBuilder() => switch (_opacity) {
+        0 => "Original flag",
+        1 => "Flag from the package",
+        _ => " ${(_opacity * 100).round()}% opacity ",
+      };
 
   @override
   Widget build(BuildContext context) {
-    final flagData = flagPropertiesMap.entries.elementAt(index);
+    final flagData = flagsMap.entries.elementAt(_index);
 
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(48),
-        child: Scaffold(
-          appBar: AppBar(
-            title: Slider(
-              value: opacity,
-              onChanged: (newOpacity) => setState(() => opacity = newOpacity),
-            ),
-            backgroundColor: Colors.transparent,
+      minimum: const EdgeInsets.all(40),
+      child: Scaffold(
+        appBar: AppBar(
+          title: SelectableText(
+            "${flagData.key.internationalName} (${flagData.key.code})",
+            textAlign: TextAlign.center,
           ),
-          body: Center(
+          backgroundColor: Colors.transparent,
+        ),
+        body: GestureDetector(
+          onTap: _incrementIndex,
+          child: Center(
             child: Stack(
               alignment: Alignment.center,
               clipBehavior: Clip.none,
               children: [
                 Image.network(flagData.key.flagPngUrl(), scale: 0.1),
                 Opacity(
-                  opacity: opacity,
-                  child: GestureDetector(
-                    onTap: _incrementIndex,
-                    child: SimpleStripesFlag(
-                      flagData.value,
-                      borderRadius: Radius.zero,
-                    ),
-                  ),
+                  opacity: _opacity,
+                  child: flagData.value.copyWith(borderRadius: Radius.zero),
                 ),
               ],
             ),
           ),
-          bottomNavigationBar: SelectableText(
-            flagData.key.internationalName,
-            style: const TextStyle(color: Colors.grey, fontSize: 32),
-            textAlign: TextAlign.center,
-          ),
-          backgroundColor: Colors.transparent,
         ),
+        bottomNavigationBar: SizedBox(
+          height: 40,
+          child: Slider(
+            value: _opacity,
+            onChanged: (newOpacity) => setState(() => _opacity = newOpacity),
+            divisions: 10,
+            label: _labelBuilder(),
+            autofocus: true,
+          ),
+        ),
+        backgroundColor: Colors.transparent,
       ),
     );
   }
