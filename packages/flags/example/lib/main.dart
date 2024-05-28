@@ -34,43 +34,44 @@ class _MainState extends State<Main> {
   Widget build(BuildContext context) {
     final flagData = flagsMap.entries.elementAt(_index);
 
-    return SafeArea(
-      minimum: const EdgeInsets.all(40),
-      child: Scaffold(
-        appBar: AppBar(
-          title: SelectableText(
-            "${flagData.key.internationalName} (${flagData.key.code})",
-            textAlign: TextAlign.center,
+    return ColoredBox(
+      color: Theme.of(context).scaffoldBackgroundColor,
+      child: SafeArea(
+        minimum: const EdgeInsets.all(40),
+        child: Scaffold(
+          appBar: AppBar(
+            title: SelectableText(
+              "${flagData.key.internationalName} (${flagData.key.code})",
+              textAlign: TextAlign.center,
+            ),
           ),
-          backgroundColor: Colors.transparent,
-        ),
-        body: GestureDetector(
-          onTap: _incrementIndex,
-          child: Center(
-            child: Stack(
-              alignment: Alignment.center,
-              clipBehavior: Clip.none,
-              children: [
-                Image.network(flagData.key.flagPngUrl(), scale: 0.1),
-                Opacity(
-                  opacity: _opacity,
-                  child: flagData.value.copyWith(borderRadius: Radius.zero),
-                ),
-              ],
+          body: GestureDetector(
+            onTap: _incrementIndex,
+            child: Center(
+              child: Stack(
+                alignment: Alignment.center,
+                clipBehavior: Clip.none,
+                children: [
+                  Image.network(flagData.key.flagPngUrl(), scale: 0.1),
+                  Opacity(
+                    opacity: _opacity,
+                    child: flagData.value.copyWith(borderRadius: Radius.zero),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          bottomNavigationBar: SizedBox(
+            height: 40,
+            child: Slider(
+              value: _opacity,
+              onChanged: (newOpacity) => setState(() => _opacity = newOpacity),
+              divisions: 10,
+              label: _labelBuilder(),
+              autofocus: true,
             ),
           ),
         ),
-        bottomNavigationBar: SizedBox(
-          height: 40,
-          child: Slider(
-            value: _opacity,
-            onChanged: (newOpacity) => setState(() => _opacity = newOpacity),
-            divisions: 10,
-            label: _labelBuilder(),
-            autofocus: true,
-          ),
-        ),
-        backgroundColor: Colors.transparent,
       ),
     );
   }

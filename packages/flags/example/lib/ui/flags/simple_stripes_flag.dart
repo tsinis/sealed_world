@@ -8,6 +8,7 @@ class SimpleStripesFlag extends BasicCountryFlag {
     super.properties, {
     this.strokeColor,
     this.strokeHeightFactor,
+    this.strokeWidth,
     super.foregroundPainter,
     super.foregroundWidget,
     super.borderRadius,
@@ -17,11 +18,13 @@ class SimpleStripesFlag extends BasicCountryFlag {
 
   final Color? strokeColor;
   final double? strokeHeightFactor;
+  final double? strokeWidth;
 
   SimpleStripesFlag copyWith({
     // TODO!
     Color? strokeColor,
     double? strokeHeightFactor,
+    double? strokeWidth,
     double? aspectRatio,
     Radius? borderRadius,
   }) =>
@@ -29,6 +32,7 @@ class SimpleStripesFlag extends BasicCountryFlag {
         properties,
         strokeColor: strokeColor ?? this.strokeColor,
         strokeHeightFactor: strokeHeightFactor ?? this.strokeHeightFactor,
+        strokeWidth: strokeWidth ?? this.strokeWidth,
         borderRadius: borderRadius ?? this.borderRadius,
         aspectRatio: aspectRatio ?? this.aspectRatio,
       );
@@ -42,6 +46,7 @@ class SimpleStripesFlag extends BasicCountryFlag {
           isHorizontal: properties.isHorizontalStriped ?? false,
           strokeColor: strokeColor,
           strokeHeightFactor: strokeHeightFactor,
+          strokeWidth: strokeWidth,
         ),
         foregroundWidget: foregroundWidget,
         borderRadius: borderRadius,

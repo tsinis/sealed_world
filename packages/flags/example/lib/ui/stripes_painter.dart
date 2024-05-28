@@ -8,6 +8,7 @@ class StripesPainter extends CustomPainter {
     required this.isHorizontal,
     this.strokeColor,
     this.strokeHeightFactor,
+    this.strokeWidth,
   }) : assert(
           (strokeHeightFactor ?? 0) >= 0 && (strokeHeightFactor ?? 0) <= 1,
           "strokeHeightFactor must be between 0 and 1!",
@@ -21,6 +22,7 @@ class StripesPainter extends CustomPainter {
 
   final Color? strokeColor;
   final double? strokeHeightFactor;
+  final double? strokeWidth;
 
   static const _withAntiAlias = false;
 
@@ -52,11 +54,11 @@ class StripesPainter extends CustomPainter {
       }
     }
 
-    if (strokeHeightFactor == null) return;
+    if (strokeHeightFactor == null && strokeWidth == null) return;
 
     final outlinePaint = Paint()
       ..color = strokeColor ?? defaultStrokeColor
-      ..strokeWidth = height * (strokeHeightFactor ?? 0)
+      ..strokeWidth = strokeWidth ?? height * (strokeHeightFactor ?? 0)
       ..style = PaintingStyle.stroke
       ..isAntiAlias = _withAntiAlias;
 
