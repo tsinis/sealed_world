@@ -1,8 +1,8 @@
 import "package:flags/flags.dart";
 import "package:flutter/widgets.dart";
 
-class BasicCountryFlag extends StatelessWidget {
-  const BasicCountryFlag(
+class BasicFlag extends StatelessWidget {
+  const BasicFlag(
     this.properties, {
     this.backgroundPainter,
     this.foregroundPainter,
@@ -22,7 +22,6 @@ class BasicCountryFlag extends StatelessWidget {
   final CustomPainter? backgroundPainter;
   final CustomPainter? foregroundPainter;
   final Widget? foregroundWidget;
-
   final CustomPainter? Function(List<ElementsProperties>? properties)?
       foregroundPainterBuilder;
   final Widget? Function(List<ElementsProperties>? properties)?

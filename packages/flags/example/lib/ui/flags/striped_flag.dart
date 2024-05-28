@@ -1,9 +1,9 @@
 import "package:flutter/widgets.dart";
 
-import "../basic_country_flag.dart";
+import "../basic_flag.dart";
 import "../stripes_painter.dart";
 
-class StripedFlag extends BasicCountryFlag {
+class StripedFlag extends BasicFlag {
   const StripedFlag(
     super.properties, {
     this.strokeColor,
@@ -40,7 +40,7 @@ class StripedFlag extends BasicCountryFlag {
       );
 
   @override
-  Widget build(BuildContext context) => BasicCountryFlag(
+  Widget build(BuildContext context) => BasicFlag(
         properties,
         backgroundPainter: StripesPainter(
           properties.colors,
