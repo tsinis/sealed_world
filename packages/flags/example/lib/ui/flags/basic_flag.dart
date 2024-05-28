@@ -1,10 +1,14 @@
 import "package:flags/flags.dart";
 import "package:flutter/widgets.dart";
 
+import "../stripes_painter.dart";
+
 class BasicFlag extends StatelessWidget {
   const BasicFlag(
     this.properties, {
-    this.backgroundPainter,
+    this.strokeColor,
+    this.strokeHeightFactor,
+    this.strokeWidth,
     this.foregroundPainter,
     this.foregroundWidget,
     this.foregroundPainterBuilder,
@@ -14,12 +18,14 @@ class BasicFlag extends StatelessWidget {
     super.key,
   });
 
+  final Color? strokeColor;
+  final double? strokeHeightFactor;
+  final double? strokeWidth;
   final FlagProperties properties;
 
   final double? aspectRatio;
   final Radius borderRadius;
 
-  final CustomPainter? backgroundPainter;
   final CustomPainter? foregroundPainter;
   final Widget? foregroundWidget;
   final CustomPainter? Function(List<ElementsProperties>? properties)?
@@ -27,11 +33,35 @@ class BasicFlag extends StatelessWidget {
   final Widget? Function(List<ElementsProperties>? properties)?
       foregroundWidgetBuilder;
 
+  BasicFlag copyWith({
+    // TODO!
+    Color? strokeColor,
+    double? strokeHeightFactor,
+    double? strokeWidth,
+    double? aspectRatio,
+    Radius? borderRadius,
+  }) =>
+      BasicFlag(
+        properties,
+        strokeColor: strokeColor ?? this.strokeColor,
+        strokeHeightFactor: strokeHeightFactor ?? this.strokeHeightFactor,
+        strokeWidth: strokeWidth ?? this.strokeWidth,
+        borderRadius: borderRadius ?? this.borderRadius,
+        aspectRatio: aspectRatio ?? this.aspectRatio,
+      );
+
   @override
   Widget build(BuildContext context) => AspectRatio(
         aspectRatio: aspectRatio ?? properties.aspectRatio,
         child: CustomPaint(
-          painter: backgroundPainter,
+          painter: StripesPainter(
+            properties.colors,
+            borderRadius,
+            isHorizontal: properties.isHorizontalStriped ?? false,
+            strokeColor: strokeColor,
+            strokeHeightFactor: strokeHeightFactor,
+            strokeWidth: strokeWidth,
+          ),
           foregroundPainter: foregroundPainter ??
               foregroundPainterBuilder?.call(properties.elementsProperties),
           child: foregroundWidget ??
