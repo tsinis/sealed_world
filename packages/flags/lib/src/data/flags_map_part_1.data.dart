@@ -1,7 +1,5 @@
 import "dart:ui";
 
-import "package:sealed_countries/sealed_countries.dart";
-
 import "../model/colors_properties.dart";
 import "../model/element_type.dart";
 import "../model/elements_properties.dart";
@@ -346,9 +344,6 @@ const flagJpnProperties = FlagProperties(
   url: "https://wikipedia.org/wiki/File:Flag_of_Japan_(construction_sheet).svg",
 );
 
-/// Flag properties of of country Heard Island and McDonald Islands (HM).
-const flagHmdProperties = FlagProperties([], sameAs: CountryAus());
-
 /// Flag properties of of country Jersey (JE).
 const flagJeyProperties = FlagProperties(
   [
@@ -408,6 +403,10 @@ const flagGbrProperties = FlagProperties(
   url:
       "https://wikipedia.org/wiki/File:Flag_of_the_United_Kingdom_(1-2)_(construction_sheet).svg",
 );
+
+/// Flag properties of of country Saint Helena,
+/// Ascension and Tristan da Cunha (SH).
+const flagShnProperties = flagGbrProperties; // TODO!
 
 /// Flag properties of of country Pakistan (PK).
 const flagPakProperties = FlagProperties(
@@ -613,7 +612,31 @@ const flagGgyProperties = FlagProperties(
 );
 
 /// Flag properties of of country Guadeloupe (GP).
-const flagGlpProperties = FlagProperties([], sameAs: CountryFra());
+const flagGlpProperties = flagFraProperties;
+
+/// Flag properties of of country Mayotte (YT).
+const flagMytProperties = flagFraProperties;
+
+/// Flag properties of of country Saint Martin (MF).
+const flagMafProperties = flagFraProperties;
+
+/// Flag properties of of country Wallis and Futuna (WF).
+const flagWlfProperties = flagFraProperties;
+
+/// Flag properties of of country Saint Barthélemy (BL).
+const flagBlmProperties = flagFraProperties;
+
+/// Flag properties of of country New Caledonia (NC).
+const flagNclProperties = flagFraProperties;
+
+/// Flag properties of of country Réunion (RE).
+const flagReuProperties = flagFraProperties;
+
+/// Flag properties of of country Saint Pierre and Miquelon (PM).
+const flagSpmProperties = flagFraProperties;
+
+/// Flag properties of of country French Guiana (GF).
+const flagGufProperties = flagFraProperties;
 
 /// Flag properties of of country Denmark (DK).
 const flagDnkProperties = FlagProperties(
@@ -820,9 +843,6 @@ const flagGnqProperties = FlagProperties(
       "https://www.vexilla-mundi.com/equatorial_guinea/equatorial_guinea_sheet.png",
 );
 
-/// Flag properties of of country French Guiana (GF).
-const flagGufProperties = FlagProperties([], sameAs: CountryFra());
-
 /// Flag properties of of country South Korea (KR).
 const flagKorProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
@@ -1003,12 +1023,6 @@ const flagSauProperties = FlagProperties(
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Saudi_Arabia_(construction_sheet).svg",
 );
-
-/// Flag properties of of country Réunion (RE).
-const flagReuProperties = FlagProperties([], sameAs: CountryFra());
-
-/// Flag properties of of country Saint Pierre and Miquelon (PM).
-const flagSpmProperties = FlagProperties([], sameAs: CountryFra());
 
 /// Flag properties of of country El Salvador (SV).
 const flagSlvProperties = FlagProperties(
@@ -1229,6 +1243,9 @@ const flagAusProperties = FlagProperties(
       "https://wikipedia.org/wiki/File:Flag_of_Australia_(construction_sheet).svg",
 );
 
+/// Flag properties of of country Heard Island and McDonald Islands (HM).
+const flagHmdProperties = flagAusProperties; // TODO!
+
 /// Flag properties of of country Brunei (BN).
 const flagBrnProperties = FlagProperties(
   [
@@ -1413,6 +1430,9 @@ const flagNldProperties = FlagProperties(
       "https://wikipedia.org/wiki/File:Flag_of_the_Netherlands_(construction_sheet).svg",
 );
 
+/// Flag properties of of country Caribbean Netherlands (BQ).
+const flagBesProperties = flagNldProperties;
+
 /// Flag properties of of country Mauritius (MU).
 const flagMusProperties = FlagProperties(
   [
@@ -1542,6 +1562,9 @@ const flagUsaProperties = FlagProperties(
       "https://wikipedia.org/wiki/File:Flag_of_the_United_States_(construction_sheet).svg",
 );
 
+/// Flag properties of of country United States Minor Outlying Islands (UM).
+const flagUmiProperties = flagUsaProperties; // TODO!
+
 /// Flag properties of of country United States Virgin Islands (VI).
 const flagVirProperties = FlagProperties(
   [
@@ -1569,9 +1592,6 @@ const flagTuvProperties = FlagProperties(
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Tuvalu_(construction_sheet).svg",
 );
-
-/// Flag properties of of country Saint Barthélemy (BL).
-const flagBlmProperties = FlagProperties([], sameAs: CountryFra());
 
 /// Flag properties of of country Aruba (AW).
 const flagAbwProperties = FlagProperties(
@@ -1665,6 +1685,12 @@ const flagNorProperties = FlagProperties(
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Norway_(construction_sheet).svg",
 );
+
+/// Flag properties of of country Bouvet Island (BV).
+const flagBvtProperties = flagNorProperties; // TODO!
+
+/// Flag properties of of country Svalbard and Jan Mayen (SJ).
+const flagSjmProperties = flagNorProperties; // TODO!
 
 /// Flag properties of of country Saint Lucia (LC).
 const flagLcaProperties = FlagProperties(

@@ -1,5 +1,3 @@
-import "package:sealed_countries/sealed_countries.dart";
-
 import "colors_properties.dart";
 import "elements_properties.dart";
 
@@ -9,7 +7,6 @@ class FlagProperties {
     this.aspectRatio = 3 / 2,
     this.isHorizontalStriped = true,
     this.elementsProperties,
-    this.sameAs,
     this.url,
   });
 
@@ -21,7 +18,6 @@ class FlagProperties {
   /// as width to height.
   final double aspectRatio;
   final String? url;
-  final WorldCountry? sameAs;
 
   /// Indicates whether the stripes on the flag are arranged horizontally.
   ///

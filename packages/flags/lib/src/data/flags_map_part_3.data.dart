@@ -1,7 +1,5 @@
 import "dart:ui";
 
-import "package:sealed_countries/sealed_countries.dart";
-
 import "../model/colors_properties.dart";
 import "../model/element_type.dart";
 import "../model/elements_properties.dart";
@@ -819,9 +817,6 @@ const flagRouProperties = FlagProperties(
       "https://wikipedia.org/wiki/File:Flag_of_Romania_(construction_sheet).svg",
 );
 
-/// Flag properties of of country Svalbard and Jan Mayen (SJ).
-const flagSjmProperties = FlagProperties([], sameAs: CountryNor());
-
 /// Flag properties of of country French Polynesia (PF).
 const flagPyfProperties = FlagProperties(
   [
@@ -1042,10 +1037,6 @@ const flagGmbProperties = FlagProperties(
   url:
       "https://wikipedia.org/wiki/File:Flag_of_the_Gambia_(construction_sheet).svg",
 );
-
-/// Flag properties of of country Saint Helena,
-/// Ascension and Tristan da Cunha (SH).
-const flagShnProperties = FlagProperties([], sameAs: CountryGbr());
 
 /// Flag properties of of country Palestine (PS).
 const flagPseProperties = FlagProperties(
