@@ -7,6 +7,8 @@ class BasicCountryFlag extends StatelessWidget {
     this.backgroundPainter,
     this.foregroundPainter,
     this.foregroundWidget,
+    this.foregroundPainterBuilder,
+    this.foregroundWidgetBuilder,
     this.borderRadius = const Radius.circular(8),
     this.aspectRatio,
     super.key,
@@ -21,13 +23,20 @@ class BasicCountryFlag extends StatelessWidget {
   final CustomPainter? foregroundPainter;
   final Widget? foregroundWidget;
 
+  final CustomPainter? Function(List<ElementsProperties>? properties)?
+      foregroundPainterBuilder;
+  final Widget? Function(List<ElementsProperties>? properties)?
+      foregroundWidgetBuilder;
+
   @override
   Widget build(BuildContext context) => AspectRatio(
         aspectRatio: aspectRatio ?? properties.aspectRatio,
         child: CustomPaint(
           painter: backgroundPainter,
-          foregroundPainter: foregroundPainter,
-          child: foregroundWidget,
+          foregroundPainter: foregroundPainter ??
+              foregroundPainterBuilder?.call(properties.elementsProperties),
+          child: foregroundWidget ??
+              foregroundWidgetBuilder?.call(properties.elementsProperties),
         ),
       );
 }

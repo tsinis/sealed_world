@@ -3,14 +3,16 @@ import "package:flutter/widgets.dart";
 import "../basic_country_flag.dart";
 import "../stripes_painter.dart";
 
-class SimpleStripesFlag extends BasicCountryFlag {
-  const SimpleStripesFlag(
+class StripedFlag extends BasicCountryFlag {
+  const StripedFlag(
     super.properties, {
     this.strokeColor,
     this.strokeHeightFactor,
     this.strokeWidth,
     super.foregroundPainter,
     super.foregroundWidget,
+    super.foregroundPainterBuilder,
+    super.foregroundWidgetBuilder,
     super.borderRadius,
     super.aspectRatio,
     super.key,
@@ -20,7 +22,7 @@ class SimpleStripesFlag extends BasicCountryFlag {
   final double? strokeHeightFactor;
   final double? strokeWidth;
 
-  SimpleStripesFlag copyWith({
+  StripedFlag copyWith({
     // TODO!
     Color? strokeColor,
     double? strokeHeightFactor,
@@ -28,7 +30,7 @@ class SimpleStripesFlag extends BasicCountryFlag {
     double? aspectRatio,
     Radius? borderRadius,
   }) =>
-      SimpleStripesFlag(
+      StripedFlag(
         properties,
         strokeColor: strokeColor ?? this.strokeColor,
         strokeHeightFactor: strokeHeightFactor ?? this.strokeHeightFactor,
@@ -49,6 +51,8 @@ class SimpleStripesFlag extends BasicCountryFlag {
           strokeWidth: strokeWidth,
         ),
         foregroundWidget: foregroundWidget,
+        foregroundPainterBuilder: foregroundPainterBuilder,
+        foregroundWidgetBuilder: foregroundWidgetBuilder,
         borderRadius: borderRadius,
         aspectRatio: aspectRatio,
       );

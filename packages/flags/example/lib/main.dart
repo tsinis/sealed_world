@@ -22,7 +22,10 @@ class _MainState extends State<Main> {
   int _index = 0;
   double _opacity = 1 / 2;
 
-  void _incrementIndex() => setState(() => _index++);
+  void _incrementIndex() {
+    _index = _index >= flagsMap.length ? 0 : _index + 1;
+    setState(() => _opacity = 1 / 2);
+  }
 
   String _labelBuilder() => switch (_opacity) {
         0 => "Original flag",
