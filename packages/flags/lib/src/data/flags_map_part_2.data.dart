@@ -11,7 +11,6 @@ import "../model/flag_properties.dart";
 /// Flag properties of of country Madagascar (MG).
 const flagMdgProperties = FlagProperties(
   [ColorsProperties(Color(0xfffc3d32)), ColorsProperties(Color(0xff007e3a))],
-  isHorizontalStriped: false,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
@@ -174,10 +173,7 @@ const flagBhrProperties = FlagProperties(
 
 /// Flag properties of of country Ukraine (UA).
 const flagUkrProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffd700)),
-    ColorsProperties(Color(0xff0057b8)),
-  ],
+  [ColorsProperties(Color(0xff0057b8)), ColorsProperties(Color(0xffffd700))],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Ukraine_(construction_sheet).svg",
 );
@@ -329,6 +325,7 @@ const flagLuxProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff00A3E0)),
   ],
+  aspectRatio: 5 / 3,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Luxembourg_(construction_sheet).svg",
 );
@@ -356,9 +353,6 @@ const flagMdaProperties = FlagProperties(
     ColorsProperties(Color(0xff0046AE)),
     ColorsProperties(Color(0xffFFD200)),
     ColorsProperties(Color(0xffCC092F)),
-    ColorsProperties(Color(0xffB07E5B)),
-    ColorsProperties(Color(0xff007A50)),
-    ColorsProperties(Color(0xff000000)),
   ],
   aspectRatio: 2,
   isHorizontalStriped: false,
@@ -469,12 +463,7 @@ const flagVnmProperties = FlagProperties(
 
 /// Flag properties of of country Zambia (ZM).
 const flagZmbProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff009E49)),
-    ColorsProperties(Color(0xffFCAD56)),
-    ColorsProperties(Color(0xffEF3340)),
-    ColorsProperties(Color(0xff000000)),
-  ],
+  [ColorsProperties(Color(0xff009E49))],
   elementsProperties: [
     ElementsProperties(
       [Color(0xffFCAD56), Color(0xff000000)],
@@ -757,6 +746,7 @@ const flagCckProperties = FlagProperties(
 );
 
 /// Flag properties of of country Bulgaria (BG).
+/// Colors reference https://wikipedia.org/wiki/Flag_of_Bulgaria#Colours.
 const flagBgrProperties = FlagProperties(
   [
     ColorsProperties(Color(0xffffffff)),
@@ -967,9 +957,9 @@ const flagCubProperties = FlagProperties(
 /// Flag properties of of country Niger (NE).
 const flagNerProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xff0db02b)),
-    ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffe05206)),
+    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xff0db02b)),
   ],
   aspectRatio: 7 / 6,
   elementsProperties: [
@@ -1032,6 +1022,7 @@ const flagNgaProperties = FlagProperties(
     ColorsProperties(Color(0xff008000)),
   ],
   aspectRatio: 2,
+  isHorizontalStriped: false,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Nigeria_(construction_sheet).svg",
 );
@@ -1309,6 +1300,7 @@ const flagNfkProperties = FlagProperties(
     ColorsProperties(Color(0xff007833), ratio: 56),
   ],
   aspectRatio: 2,
+  isHorizontalStriped: false,
   elementsProperties: [
     ElementsProperties([Color(0xff007833)], heightFactor: 78 / 92),
   ],
@@ -1581,12 +1573,12 @@ const flagCodProperties = FlagProperties(
 /// Flag properties of of country Sri Lanka (LK).
 const flagLkaProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xffF7B718), ratio: 7),
-    ColorsProperties(Color(0xff005F56), ratio: 39),
-    ColorsProperties(Color(0xffDF7500), ratio: 39),
-    ColorsProperties(Color(0xffF7B718), ratio: 7),
-    ColorsProperties(Color(0xff941E32), ratio: 90),
-    ColorsProperties(Color(0xffF7B718), ratio: 7),
+    ColorsProperties(Color(0xffF7B718), ratio: 6),
+    ColorsProperties(Color(0xff005F56), ratio: 17),
+    ColorsProperties(Color(0xffDF7500), ratio: 17),
+    ColorsProperties(Color(0xffF7B718), ratio: 6),
+    ColorsProperties(Color(0xff941E32), ratio: 80),
+    ColorsProperties(Color(0xffF7B718), ratio: 6),
   ],
   aspectRatio: 2,
   isHorizontalStriped: false,
@@ -1752,7 +1744,6 @@ const flagCafProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff289728)),
     ColorsProperties(Color(0xffffce00)),
-    ColorsProperties(Color(0xffd21034)),
   ],
   elementsProperties: [
     ElementsProperties(
@@ -1775,7 +1766,11 @@ const flagCafProperties = FlagProperties(
 
 /// Flag properties of of country Barbados (BB).
 const flagBrbProperties = FlagProperties(
-  [ColorsProperties(Color(0xff00267f)), ColorsProperties(Color(0xffffc726))],
+  [
+    ColorsProperties(Color(0xff00267f)),
+    ColorsProperties(Color(0xffffc726)),
+    ColorsProperties(Color(0xff00267f)),
+  ],
   isHorizontalStriped: false,
   elementsProperties: [
     ElementsProperties([Color(0xff000000)], heightFactor: 1 / 2),

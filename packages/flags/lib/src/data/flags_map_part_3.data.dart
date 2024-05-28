@@ -293,7 +293,7 @@ const flagGibProperties = FlagProperties(
 /// Flag properties of of country Micronesia (FM).
 const flagFsmProperties = FlagProperties(
   [ColorsProperties(Color(0xff6797d6))],
-  aspectRatio: 10 / 19,
+  aspectRatio: 19 / 10,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],

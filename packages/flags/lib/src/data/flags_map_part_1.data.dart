@@ -413,7 +413,7 @@ const flagGbrProperties = FlagProperties(
 const flagPakProperties = FlagProperties(
   [
     ColorsProperties(Color(0xffffffff), ratio: 15),
-    ColorsProperties(Color(0xff115740), ratio: 60),
+    ColorsProperties(Color(0xff115740), ratio: 45),
   ],
   isHorizontalStriped: false,
   elementsProperties: [
