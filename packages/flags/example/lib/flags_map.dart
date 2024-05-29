@@ -6,6 +6,7 @@ import "package:flags/src/data/flags_map_part_3.data.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "ui/flags/basic_flag.dart";
+// import "ui/flags/disc_flag.dart";
 
 // ignore: prefer-static-class, to follow pattern from eco-system.
 const flagsMap = {
@@ -31,7 +32,7 @@ const flagsMap = {
   CountryBen(): BasicFlag(flagBenProperties),
   // CountryBes(): BasicFlag(flagBesProperties),
   CountryBfa(): BasicFlag(flagBfaProperties),
-  CountryBgd(): BasicFlag(flagBgdProperties),
+  // CountryBgd(): DiscFlag(flagBgdProperties),
   // CountryBgr(): BasicFlag(flagBgrProperties),
   CountryBhr(): BasicFlag(flagBhrProperties),
   CountryBhs(): BasicFlag(flagBhsProperties),
@@ -124,7 +125,7 @@ const flagsMap = {
   CountryJam(): BasicFlag(flagJamProperties),
   CountryJey(): BasicFlag(flagJeyProperties),
   CountryJor(): BasicFlag(flagJorProperties),
-  CountryJpn(): BasicFlag(flagJpnProperties),
+  // CountryJpn(): DiscFlag(flagJpnProperties),
   CountryKaz(): BasicFlag(flagKazProperties),
   CountryKen(): BasicFlag(flagKenProperties),
   CountryKgz(): BasicFlag(flagKgzProperties),
@@ -133,7 +134,7 @@ const flagsMap = {
   CountryKna(): BasicFlag(flagKnaProperties),
   CountryKor(): BasicFlag(flagKorProperties),
   CountryKwt(): BasicFlag(flagKwtProperties),
-  CountryLao(): BasicFlag(flagLaoProperties),
+  // CountryLao(): DiscFlag(flagLaoProperties),
   CountryLbn(): BasicFlag(flagLbnProperties),
   CountryLbr(): BasicFlag(flagLbrProperties),
   CountryLby(): BasicFlag(flagLbyProperties),
@@ -170,7 +171,7 @@ const flagsMap = {
   // CountryMyt(): BasicFlag(flagMytProperties),
   CountryNam(): BasicFlag(flagNamProperties),
   // CountryNcl(): BasicFlag(flagNclProperties),
-  CountryNer(): BasicFlag(flagNerProperties),
+  // CountryNer(): DiscFlag(flagNerProperties),
   CountryNfk(): BasicFlag(flagNfkProperties),
   // CountryNga(): BasicFlag(flagNgaProperties),
   CountryNic(): BasicFlag(flagNicProperties),
@@ -186,7 +187,7 @@ const flagsMap = {
   CountryPcn(): BasicFlag(flagPcnProperties),
   // CountryPer(): BasicFlag(flagPerProperties),
   CountryPhl(): BasicFlag(flagPhlProperties),
-  CountryPlw(): BasicFlag(flagPlwProperties),
+  // CountryPlw(): DiscFlag(flagPlwProperties),
   CountryPng(): BasicFlag(flagPngProperties),
   // CountryPol(): BasicFlag(flagPolProperties),
   CountryPri(): BasicFlag(flagPriProperties),

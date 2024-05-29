@@ -52,22 +52,23 @@ class BasicFlag extends StatelessWidget {
       );
 
   @override
-  Widget build(BuildContext context) => AspectRatio(
-        aspectRatio: theme?.aspectRatio ?? properties.aspectRatio,
-        child: CustomPaint(
-          painter: backgroundPainter ??
-              StripesPainter(
-                properties.colors,
-                theme?.borderRadius,
-                isHorizontal: properties.isHorizontalStriped ?? true,
-                strokeColor: theme?.strokeColor,
-                strokeHeightFactor: theme?.strokeHeightFactor,
-                strokeWidth: theme?.strokeWidth,
-              ),
-          foregroundPainter: foregroundPainter ??
-              foregroundPainterBuilder?.call(properties.elementsProperties),
-          child: foregroundWidget ??
-              foregroundWidgetBuilder?.call(properties.elementsProperties),
+  Widget build(BuildContext context) => DecoratedBox(
+        decoration: const BoxDecoration(), // TODO!
+        position: DecorationPosition.foreground,
+        child: AspectRatio(
+          aspectRatio: theme?.aspectRatio ?? properties.aspectRatio,
+          child: CustomPaint(
+            painter: backgroundPainter ??
+                StripesPainter(
+                  properties.colors,
+                  theme?.borderRadius,
+                  isHorizontal: properties.isHorizontalStriped ?? true,
+                ),
+            foregroundPainter: foregroundPainter ??
+                foregroundPainterBuilder?.call(properties.elementsProperties),
+            child: foregroundWidget ??
+                foregroundWidgetBuilder?.call(properties.elementsProperties),
+          ),
         ),
       );
 }

@@ -1158,7 +1158,7 @@ const flagMdvProperties = FlagProperties(
       [Color(0xff007e3a)],
       heightFactor: 1 / 2,
       widthFactor: 48 / 72,
-      type: ElementType.circle,
+      type: ElementType.rectangle,
       children: [
         ElementsProperties(
           [Color(0xffffffff)],

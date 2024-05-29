@@ -1,0 +1,14 @@
+import "../painters/basic/circle_painter.dart";
+import "basic_flag.dart";
+
+class DiscFlag extends BasicFlag {
+  const DiscFlag(
+    super.properties, {
+    super.theme,
+    super.backgroundPainter,
+    super.foregroundPainter,
+    super.foregroundWidget,
+    super.foregroundWidgetBuilder,
+    super.key,
+  }) : super(foregroundPainterBuilder: CirclePainter.new);
+}
