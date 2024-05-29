@@ -13,7 +13,6 @@ const flagMdgProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1 / 3,
       type: ElementType.rectangle,
     ),
@@ -112,7 +111,6 @@ const flagAsmProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffef3340)],
       y: 1,
-      heightFactor: 1,
       widthFactor: 1,
       angle: 180,
       type: ElementType.triangle,
@@ -161,7 +159,6 @@ const flagBhrProperties = FlagProperties(
         Color(0xffffffff),
       ],
       x: -0.4,
-      heightFactor: 1,
       widthFactor: 1 / 3,
     ),
   ],
@@ -268,7 +265,6 @@ const flagAreProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffff0000)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 3 / 12,
       type: ElementType.rectangle,
     ),
@@ -287,7 +283,6 @@ const flagCzeProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff11457e)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1 / 2,
       type: ElementType.triangle,
     ),
@@ -305,7 +300,6 @@ const flagMtqProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffef1923)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1 / 2,
       type: ElementType.triangle,
     ),
@@ -390,12 +384,12 @@ const flagAtgProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xff000000)],
-      heightFactor: 1,
       widthFactor: 1,
       type: ElementType.triangle,
       children: [
         ElementsProperties(
           [Color(0xfffcd116), Color(0xff0072c6), Color(0xffffffff)],
+          heightFactor: 0.9,
         ),
       ],
     ),
@@ -526,7 +520,6 @@ const flagBenProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff008850)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 6 / 15,
       type: ElementType.rectangle,
     ),
@@ -591,7 +584,6 @@ const flagOmnProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffef2d29)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 20 / 60,
       type: ElementType.rectangle,
       children: [
@@ -720,7 +712,10 @@ const flagMhlProperties = FlagProperties(
   [ColorsProperties(Color(0xff003893))],
   aspectRatio: 19 / 10,
   elementsProperties: [
-    ElementsProperties([Color(0xffDD7500), Color(0xffffffff)]),
+    ElementsProperties(
+      [Color(0xffDD7500), Color(0xffffffff)],
+      heightFactor: 0.96,
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_the_Marshall_Islands_(construction_sheet).svg",
@@ -774,7 +769,9 @@ const flagVutProperties = FlagProperties(
     ColorsProperties(Color(0xff009543), ratio: 15),
   ],
   elementsProperties: [
-    ElementsProperties([Color(0xfffdce12), Color(0xff000000)]),
+    ElementsProperties(
+      [Color(0xfffdce12), Color(0xff000000)],
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Vanuatu_(construction_sheet).svg",
@@ -850,7 +847,6 @@ const flagZweProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff), Color(0xff000000)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1 / 3,
       type: ElementType.triangle,
       children: [
@@ -925,7 +921,6 @@ const flagCubProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffCC0D0D)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 0.4,
       type: ElementType.triangle,
       children: [
@@ -1025,7 +1020,6 @@ const flagBhsProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff000000)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 0.4,
       type: ElementType.triangle,
     ),
@@ -1143,7 +1137,7 @@ const flagWsmProperties = FlagProperties(
       heightFactor: 1 / 2,
       widthFactor: 1 / 2,
       children: [
-        ElementsProperties([Color(0xffffffff)]),
+        ElementsProperties([Color(0xffffffff)], heightFactor: 0.9),
       ],
     ),
   ],
@@ -1241,7 +1235,10 @@ const flagBraProperties = FlagProperties(
           heightFactor: 350 / 530,
           type: ElementType.circle,
           children: [
-            ElementsProperties([Color(0xffffffff), Color(0xff229e45)]),
+            ElementsProperties(
+              [Color(0xffffffff), Color(0xff229e45)],
+              heightFactor: 1 / 2,
+            ),
           ],
         ),
       ],
@@ -1441,14 +1438,12 @@ const flagTlsProperties = FlagProperties(
     ElementsProperties(
       [Color(0xfff8c00c)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1 / 2,
       type: ElementType.triangle,
       children: [
         ElementsProperties(
           [Color(0xff000000)],
           x: -1,
-          heightFactor: 1,
           widthFactor: 12 / 18,
           type: ElementType.triangle,
           children: [
@@ -1471,13 +1466,15 @@ const flagTlsProperties = FlagProperties(
 const flagTkmProperties = FlagProperties(
   [ColorsProperties(Color(0xff00853A))],
   elementsProperties: [
-    ElementsProperties([
-      Color(0xff00853A),
-      Color(0xffffffff),
-      Color(0xffd22630),
-      Color(0xff383739),
-      Color(0xffffc72c),
-    ]),
+    ElementsProperties(
+      [
+        Color(0xff00853A),
+        Color(0xffffffff),
+        Color(0xffd22630),
+        Color(0xff383739),
+        Color(0xffffc72c),
+      ],
+    ),
   ],
   url: "https://www.vexilla-mundi.com/turkmenistan/turkmenistan_sheet.png",
 );
@@ -1651,7 +1648,6 @@ const flagMozProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffE4002B)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 0.4,
       type: ElementType.triangle,
       children: [
@@ -1660,7 +1656,9 @@ const flagMozProperties = FlagProperties(
           heightFactor: 12 / 32,
           type: ElementType.star,
           children: [
-            ElementsProperties([Color(0xff000000), Color(0xffffffff)]),
+            ElementsProperties(
+              [Color(0xff000000), Color(0xffffffff)],
+            ),
           ],
         ),
       ],
@@ -1714,7 +1712,6 @@ const flagCafProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffd21034)],
-      heightFactor: 1,
       widthFactor: 10 / 60,
       type: ElementType.rectangle,
     ),
@@ -1835,7 +1832,10 @@ const flagBtnProperties = FlagProperties(
   [ColorsProperties(Color(0xffFFCC33)), ColorsProperties(Color(0xffff4e12))],
   isHorizontalStriped: null,
   elementsProperties: [
-    ElementsProperties([Color(0xff000000), Color(0xffffffff)]),
+    ElementsProperties(
+      [Color(0xff000000), Color(0xffffffff)],
+      heightFactor: 0.8,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/bhutan/bhutan_sheet.png",
 );

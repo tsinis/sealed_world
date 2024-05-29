@@ -20,13 +20,11 @@ const flagAlaProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffFFD300)],
       x: -0.375,
-      heightFactor: 1,
       widthFactor: 50 / 260,
       type: ElementType.rectangle,
       children: [
         ElementsProperties(
           [Color(0xffDA0E15)],
-          heightFactor: 1,
           widthFactor: 20 / 50,
           type: ElementType.rectangle,
         ),
@@ -44,7 +42,6 @@ const flagCogProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff009543)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 2 / 3,
       angle: 90,
       type: ElementType.triangle,
@@ -52,7 +49,6 @@ const flagCogProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffDC241F)],
       x: 1,
-      heightFactor: 1,
       widthFactor: 2 / 3,
       angle: -90,
       type: ElementType.triangle,
@@ -85,7 +81,6 @@ const flagJorProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffce1126)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1 / 2,
       type: ElementType.triangle,
       children: [
@@ -377,13 +372,11 @@ const flagFroProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff005EB9)],
       x: -0.375,
-      heightFactor: 1,
       widthFactor: 4 / 22,
       type: ElementType.rectangle,
       children: [
         ElementsProperties(
           [Color(0xffEF303E)],
-          heightFactor: 1,
           widthFactor: 1 / 2,
           type: ElementType.rectangle,
         ),
@@ -480,7 +473,6 @@ const flagSxmProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 4 / 9,
       type: ElementType.triangle,
       children: [
@@ -609,11 +601,12 @@ const flagKazProperties = FlagProperties(
   [ColorsProperties(Color(0xff00abc2))],
   aspectRatio: 2,
   elementsProperties: [
-    ElementsProperties([Color(0xffffec2d)]),
+    ElementsProperties([Color(0xffffec2d)], heightFactor: 0.9),
     ElementsProperties(
       [Color(0xffffec2d)],
       x: -0.1,
       y: 0.1,
+      heightFactor: 1 / 2,
       type: ElementType.circle,
     ),
   ],
@@ -651,12 +644,12 @@ const flagComProperties = FlagProperties(
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
-          widthFactor: 68 / 144,
+          heightFactor: 68 / 144,
           type: ElementType.moon,
           children: [
             ElementsProperties(
               [Color(0xffffffff)],
-              widthFactor: 14 / 68,
+              heightFactor: 14 / 68,
               type: ElementType.star,
             ),
           ],
@@ -678,7 +671,7 @@ const flagIrnProperties = FlagProperties(
   aspectRatio: 7 / 4,
   elementsProperties: [
     ElementsProperties([Color(0xffda0000)], heightFactor: 63 / 252),
-    ElementsProperties([Color(0xffffffff)]),
+    ElementsProperties([Color(0xffffffff)], heightFactor: 1 / 2),
   ],
   url: "https://www.crwflags.com/fotw/images/i/ir'.gif",
 );
@@ -691,7 +684,6 @@ const flagGuyProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1,
       type: ElementType.triangle,
       children: [
@@ -705,7 +697,6 @@ const flagGuyProperties = FlagProperties(
         ElementsProperties(
           [Color(0xff000000)],
           x: -1,
-          heightFactor: 1,
           widthFactor: 1 / 2,
           type: ElementType.triangle,
           children: [
@@ -763,7 +754,6 @@ const flagPngProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff000000)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1,
       angle: 90,
       type: ElementType.triangle,
@@ -892,13 +882,11 @@ const flagIslProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -0.357,
-      heightFactor: 1,
       widthFactor: 4 / 25,
       type: ElementType.rectangle,
       children: [
         ElementsProperties(
           [Color(0xffDC1E35)],
-          heightFactor: 1,
           widthFactor: 1 / 2,
           type: ElementType.rectangle,
         ),
@@ -992,7 +980,6 @@ const flagEriProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffEB0433)],
-      heightFactor: 1,
       widthFactor: 1,
       type: ElementType.triangle,
       children: [
@@ -1016,7 +1003,6 @@ const flagFinProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff002f6c)],
       x: -0.222,
-      heightFactor: 1,
       widthFactor: 3 / 18,
       type: ElementType.rectangle,
     ),
@@ -1050,7 +1036,6 @@ const flagPseProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffEE2A35)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 2 / 6,
       type: ElementType.triangle,
     ),
@@ -1072,7 +1057,6 @@ const flagPriProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff0050f0)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 23 / 45,
       type: ElementType.triangle,
       children: [
@@ -1136,7 +1120,6 @@ const flagQatProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1 / 3,
-      heightFactor: 1,
       widthFactor: 1008 / 12600,
     ),
   ],

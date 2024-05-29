@@ -7,20 +7,20 @@ class ElementsProperties {
     this.colors, {
     this.x = middle,
     this.y = middle,
-    this.heightFactor,
+    this.heightFactor = 1,
     this.widthFactor,
     this.angle,
     this.type,
     this.children = const [],
   })  : assert(widthFactor == null || widthFactor >= 0.0),
-        assert(heightFactor == null || heightFactor >= 0.0);
+        assert(heightFactor >= 0.0);
 
   static const double middle = 0;
 
   /// Height factor of the symbol. Is more relevant than width factor, because
   /// of various aspect rations of the flags, when width varies but height
   /// remains the same.
-  final double? heightFactor;
+  final double heightFactor;
 
   /// If [widthFactor] is null, this is usually means that element's bounding
   /// box has square form.

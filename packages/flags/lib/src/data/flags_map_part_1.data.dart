@@ -66,7 +66,6 @@ const flagDmaProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffFFCD00), Color(0xFF000000), Color(0xffffffff)],
-      heightFactor: 1,
       widthFactor: 30 / 240,
       type: ElementType.rectangle,
     ),
@@ -234,7 +233,6 @@ const flagSdnProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff007229)],
       x: -1,
-      angle: 36.9,
       type: ElementType.triangle,
     ),
   ],
@@ -253,7 +251,6 @@ const flagSweProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffFFCD00)],
       x: -0.375,
-      heightFactor: 1,
       widthFactor: 2 / 16,
       type: ElementType.rectangle,
     ),
@@ -316,7 +313,6 @@ const flagGnbProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffce1126)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 1 / 3,
       type: ElementType.rectangle,
       children: [
@@ -398,7 +394,9 @@ const flagGbrProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
   elementsProperties: [
-    ElementsProperties([Color(0xffffffff), Color(0xffc8102e)]),
+    ElementsProperties(
+      [Color(0xffffffff), Color(0xffc8102e)],
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_the_United_Kingdom_(1-2)_(construction_sheet).svg",
@@ -489,7 +487,6 @@ const flagDomProperties = FlagProperties(
     ),
     ElementsProperties(
       [Color(0xffffffff)],
-      heightFactor: 1,
       widthFactor: 1 / 9,
       type: ElementType.rectangle,
       children: [
@@ -568,7 +565,6 @@ const flagKwtProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff000000)],
       x: -1,
-      heightFactor: 1,
       widthFactor: 3 / 12,
     ),
   ],
@@ -603,7 +599,6 @@ const flagGgyProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffe8112d)],
-      heightFactor: 1,
       widthFactor: 2 / 12,
     ),
     ElementsProperties([Color(0xfff9dd16)], heightFactor: 0.8),
@@ -650,7 +645,6 @@ const flagDnkProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -0.24,
-      heightFactor: 1,
       widthFactor: 4 / 37,
       type: ElementType.rectangle,
     ),
@@ -754,7 +748,6 @@ const flagStpProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffd21034)],
       x: -1,
-      angle: 60, // TODO!
       type: ElementType.triangle,
     ),
     ElementsProperties(
@@ -798,7 +791,6 @@ const flagDjiProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1,
-      angle: 66, // TODO!
       type: ElementType.triangle,
       children: [
         ElementsProperties(
@@ -823,7 +815,6 @@ const flagGnqProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff0073ce)],
       x: -1,
-      angle: 30, // TODO!
       type: ElementType.triangle,
     ),
     ElementsProperties(
@@ -852,10 +843,15 @@ const flagKorProperties = FlagProperties(
       heightFactor: 24 / 48,
       type: ElementType.circle,
       children: [
-        ElementsProperties([Color(0xff0047a0)]),
+        ElementsProperties(
+          [Color(0xff0047a0)],
+          heightFactor: 1 / 2,
+        ),
       ],
     ),
-    ElementsProperties([Color(0xff000000)]), // TODO!
+    ElementsProperties(
+      [Color(0xff000000)],
+    ), // TODO!
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_South_Korea_(construction_sheet).svg",
@@ -1102,7 +1098,9 @@ const flagGrcProperties = FlagProperties(
       widthFactor: 10 / 18,
       type: ElementType.rectangle,
       children: [
-        ElementsProperties([Color(0xffffffff)]),
+        ElementsProperties(
+          [Color(0xffffffff)],
+        ),
       ],
     ),
   ],
@@ -1120,7 +1118,6 @@ const flagGeoProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffff0000)],
-      heightFactor: 1,
       widthFactor: 40 / 300,
       type: ElementType.rectangle,
     ),
@@ -1268,11 +1265,12 @@ const flagBlrProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
-      heightFactor: 1,
       widthFactor: 2 / 18,
       type: ElementType.rectangle,
       children: [
-        ElementsProperties([Color(0xffD22730), Color(0xffffffff)]),
+        ElementsProperties(
+          [Color(0xffD22730), Color(0xffffffff)],
+        ),
       ],
     ),
   ],
@@ -1285,7 +1283,9 @@ const flagTtoProperties = FlagProperties(
   [ColorsProperties(Color(0xffe00000))],
   aspectRatio: 5 / 3,
   elementsProperties: [
-    ElementsProperties([Color(0xffffffff), Color(0xff000000)]),
+    ElementsProperties(
+      [Color(0xffffffff), Color(0xff000000)],
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Trinidad_and_Tobago_(construction_sheet).svg",
@@ -1307,13 +1307,16 @@ const flagUgaProperties = FlagProperties(
       heightFactor: 1 / 3,
       type: ElementType.circle,
       children: [
-        ElementsProperties([
-          Color(0xff000000),
-          Color(0xffFCDC04),
-          Color(0xffD90000),
-          Color(0xffffffff),
-          Color(0xff9ca69c),
-        ]),
+        ElementsProperties(
+          [
+            Color(0xff000000),
+            Color(0xffFCDC04),
+            Color(0xffD90000),
+            Color(0xffffffff),
+            Color(0xff9ca69c),
+          ],
+          heightFactor: 0.96,
+        ),
       ],
     ),
   ],
@@ -1500,7 +1503,6 @@ const flagBlzProperties = FlagProperties(
             Color(0xffffe682),
             Color(0xff9dc9e2),
           ],
-          type: ElementType.circle,
         ),
       ],
     ),
@@ -1669,13 +1671,11 @@ const flagNorProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1 / 3,
-      heightFactor: 1,
       widthFactor: 4 / 22,
       type: ElementType.rectangle,
       children: [
         ElementsProperties(
           [Color(0xff002664)],
-          heightFactor: 1,
           widthFactor: 1 / 2,
           type: ElementType.rectangle,
         ),
@@ -1703,7 +1703,9 @@ const flagLcaProperties = FlagProperties(
       widthFactor: 1 / 2,
       angle: 90,
       children: [
-        ElementsProperties([Color(0xff000000), Color(0xffffce00)]),
+        ElementsProperties(
+          [Color(0xff000000), Color(0xffffce00)],
+        ),
       ],
     ),
   ],
