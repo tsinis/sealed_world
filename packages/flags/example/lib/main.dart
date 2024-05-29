@@ -56,10 +56,7 @@ class _MainState extends State<Main> {
                 clipBehavior: Clip.none,
                 children: [
                   Image.network(flagData.key.flagPngUrl(), scale: 0.1),
-                  Opacity(
-                    opacity: _opacity,
-                    child: flagData.value.copyWith(borderRadius: Radius.zero),
-                  ),
+                  Opacity(opacity: _opacity, child: flagData.value),
                 ],
               ),
             ),

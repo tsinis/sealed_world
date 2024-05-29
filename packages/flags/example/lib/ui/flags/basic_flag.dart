@@ -1,31 +1,26 @@
 import "package:flags/flags.dart";
 import "package:flutter/widgets.dart";
 
-import "../stripes_painter.dart";
+import "../../theme/flag_theme_data.dart";
+import "../painters/basic/stripes_painter.dart";
 
 class BasicFlag extends StatelessWidget {
   const BasicFlag(
     this.properties, {
-    this.strokeColor,
-    this.strokeHeightFactor,
-    this.strokeWidth,
+    this.theme,
+    this.backgroundPainter,
     this.foregroundPainter,
     this.foregroundWidget,
     this.foregroundPainterBuilder,
     this.foregroundWidgetBuilder,
-    this.borderRadius = const Radius.circular(8),
-    this.aspectRatio,
     super.key,
   });
 
-  final Color? strokeColor;
-  final double? strokeHeightFactor;
-  final double? strokeWidth;
   final FlagProperties properties;
 
-  final double? aspectRatio;
-  final Radius borderRadius;
+  final FlagThemeData? theme;
 
+  final CustomPainter? backgroundPainter;
   final CustomPainter? foregroundPainter;
   final Widget? foregroundWidget;
   final CustomPainter? Function(List<ElementsProperties>? properties)?
@@ -34,34 +29,41 @@ class BasicFlag extends StatelessWidget {
       foregroundWidgetBuilder;
 
   BasicFlag copyWith({
-    // TODO!
-    Color? strokeColor,
-    double? strokeHeightFactor,
-    double? strokeWidth,
-    double? aspectRatio,
-    Radius? borderRadius,
+    FlagProperties? properties,
+    FlagThemeData? theme,
+    CustomPainter? backgroundPainter,
+    CustomPainter? foregroundPainter,
+    Widget? foregroundWidget,
+    CustomPainter? Function(List<ElementsProperties>? properties)?
+        foregroundPainterBuilder,
+    Widget? Function(List<ElementsProperties>? properties)?
+        foregroundWidgetBuilder,
   }) =>
       BasicFlag(
-        properties,
-        strokeColor: strokeColor ?? this.strokeColor,
-        strokeHeightFactor: strokeHeightFactor ?? this.strokeHeightFactor,
-        strokeWidth: strokeWidth ?? this.strokeWidth,
-        borderRadius: borderRadius ?? this.borderRadius,
-        aspectRatio: aspectRatio ?? this.aspectRatio,
+        properties ?? this.properties,
+        theme: theme ?? this.theme,
+        backgroundPainter: backgroundPainter ?? this.backgroundPainter,
+        foregroundPainter: foregroundPainter ?? this.foregroundPainter,
+        foregroundWidget: foregroundWidget ?? this.foregroundWidget,
+        foregroundPainterBuilder:
+            foregroundPainterBuilder ?? this.foregroundPainterBuilder,
+        foregroundWidgetBuilder:
+            foregroundWidgetBuilder ?? this.foregroundWidgetBuilder,
       );
 
   @override
   Widget build(BuildContext context) => AspectRatio(
-        aspectRatio: aspectRatio ?? properties.aspectRatio,
+        aspectRatio: theme?.aspectRatio ?? properties.aspectRatio,
         child: CustomPaint(
-          painter: StripesPainter(
-            properties.colors,
-            borderRadius,
-            isHorizontal: properties.isHorizontalStriped ?? false,
-            strokeColor: strokeColor,
-            strokeHeightFactor: strokeHeightFactor,
-            strokeWidth: strokeWidth,
-          ),
+          painter: backgroundPainter ??
+              StripesPainter(
+                properties.colors,
+                theme?.borderRadius,
+                isHorizontal: properties.isHorizontalStriped ?? true,
+                strokeColor: theme?.strokeColor,
+                strokeHeightFactor: theme?.strokeHeightFactor,
+                strokeWidth: theme?.strokeWidth,
+              ),
           foregroundPainter: foregroundPainter ??
               foregroundPainterBuilder?.call(properties.elementsProperties),
           child: foregroundWidget ??
