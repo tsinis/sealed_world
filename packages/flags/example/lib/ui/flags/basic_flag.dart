@@ -1,13 +1,14 @@
 import "package:flags/flags.dart";
 import "package:flutter/widgets.dart";
 
-import "../../theme/flag_theme_data.dart";
 import "../painters/basic/stripes_painter.dart";
 
 class BasicFlag extends StatelessWidget {
   const BasicFlag(
     this.properties, {
-    this.theme,
+    this.aspectRatio,
+    this.decoration,
+    this.decorationPosition,
     this.backgroundPainter,
     this.foregroundPainter,
     this.foregroundWidget,
@@ -18,7 +19,9 @@ class BasicFlag extends StatelessWidget {
 
   final FlagProperties properties;
 
-  final FlagThemeData? theme;
+  final double? aspectRatio;
+  final BoxDecoration? decoration;
+  final DecorationPosition? decorationPosition;
 
   final CustomPainter? backgroundPainter;
   final CustomPainter? foregroundPainter;
@@ -28,40 +31,17 @@ class BasicFlag extends StatelessWidget {
   final Widget? Function(List<ElementsProperties>? properties)?
       foregroundWidgetBuilder;
 
-  BasicFlag copyWith({
-    FlagProperties? properties,
-    FlagThemeData? theme,
-    CustomPainter? backgroundPainter,
-    CustomPainter? foregroundPainter,
-    Widget? foregroundWidget,
-    CustomPainter? Function(List<ElementsProperties>? properties)?
-        foregroundPainterBuilder,
-    Widget? Function(List<ElementsProperties>? properties)?
-        foregroundWidgetBuilder,
-  }) =>
-      BasicFlag(
-        properties ?? this.properties,
-        theme: theme ?? this.theme,
-        backgroundPainter: backgroundPainter ?? this.backgroundPainter,
-        foregroundPainter: foregroundPainter ?? this.foregroundPainter,
-        foregroundWidget: foregroundWidget ?? this.foregroundWidget,
-        foregroundPainterBuilder:
-            foregroundPainterBuilder ?? this.foregroundPainterBuilder,
-        foregroundWidgetBuilder:
-            foregroundWidgetBuilder ?? this.foregroundWidgetBuilder,
-      );
-
   @override
   Widget build(BuildContext context) => DecoratedBox(
-        decoration: const BoxDecoration(), // TODO!
-        position: DecorationPosition.foreground,
+        decoration: decoration ?? const BoxDecoration(),
+        position: decorationPosition ?? DecorationPosition.foreground,
         child: AspectRatio(
-          aspectRatio: theme?.aspectRatio ?? properties.aspectRatio,
+          aspectRatio: aspectRatio ?? properties.aspectRatio,
           child: CustomPaint(
             painter: backgroundPainter ??
                 StripesPainter(
                   properties.colors,
-                  theme?.borderRadius,
+                  decoration?.borderRadius,
                   isHorizontal: properties.isHorizontalStriped ?? true,
                 ),
             foregroundPainter: foregroundPainter ??

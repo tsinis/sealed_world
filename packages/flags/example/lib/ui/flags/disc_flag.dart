@@ -4,7 +4,9 @@ import "basic_flag.dart";
 class DiscFlag extends BasicFlag {
   const DiscFlag(
     super.properties, {
-    super.theme,
+    super.aspectRatio,
+    super.decoration,
+    super.decorationPosition,
     super.backgroundPainter,
     super.foregroundPainter,
     super.foregroundWidget,

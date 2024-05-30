@@ -6,25 +6,21 @@ class StripesPainter extends CustomPainter {
 
   final List<ColorsProperties> colors;
   final bool isHorizontal;
+  final BorderRadiusGeometry? _radius;
 
-  static const _withAntiAlias = false;
-  final Radius? _radius;
+  static const _doAntiAlias = false;
 
-  Radius get radius => _radius ?? Radius.zero;
+  BorderRadiusGeometry get radius => _radius ?? BorderRadius.zero;
 
   @override
   void paint(Canvas canvas, Size size) {
-    final height = size.height;
-    final width = size.width;
-    final rect = Rect.fromLTWH(0, 0, width, height);
+    final rect = Rect.fromLTWH(0, 0, size.width, size.height);
 
-    if (radius == Radius.zero) {
-      canvas.clipRect(rect, doAntiAlias: _withAntiAlias);
+    if (radius == BorderRadius.zero) {
+      canvas.clipRect(rect, doAntiAlias: _doAntiAlias);
     } else {
-      canvas.clipRRect(
-        RRect.fromRectAndRadius(rect, radius),
-        doAntiAlias: _withAntiAlias,
-      );
+      final borderRadius = radius.resolve(TextDirection.ltr);
+      canvas.clipRRect(borderRadius.toRRect(rect), doAntiAlias: _doAntiAlias);
     }
 
     final totalRatio = colors.fold(0, (sum, cp) => sum + cp.ratio);
@@ -33,15 +29,15 @@ class StripesPainter extends CustomPainter {
 
     if (isHorizontal) {
       for (final property in colors) {
-        final stripeSize = height * property.ratio / totalRatio;
-        final stripe = Rect.fromLTWH(0, position, width, stripeSize);
+        final stripeSize = size.height * property.ratio / totalRatio;
+        final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
         canvas.drawRect(stripe, paint..color = property.color);
         position += stripeSize;
       }
     } else {
       for (final property in colors) {
-        final stripeSize = width * property.ratio / totalRatio;
-        final stripe = Rect.fromLTWH(position, 0, stripeSize, height);
+        final stripeSize = size.width * property.ratio / totalRatio;
+        final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
         canvas.drawRect(stripe, paint..color = property.color);
         position += stripeSize;
       }

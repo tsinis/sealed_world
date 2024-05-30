@@ -2,7 +2,6 @@ import "package:flags/flags.dart";
 import "package:flutter/material.dart";
 
 import "flags_map.dart";
-import "theme/flag_theme_data.dart";
 
 void main() => runApp(
       MaterialApp(
@@ -59,12 +58,7 @@ class _MainState extends State<Main> {
                   Image.network(flagData.key.flagPngUrl(), scale: 0.1),
                   Opacity(
                     opacity: _opacity,
-                    child: flagData.value.copyWith(
-                      theme: const FlagThemeData(
-                        strokeColor: Color.fromARGB(139, 76, 175, 79),
-                        strokeWidth: 30,
-                      ),
-                    ),
+                    child: flagData.value,
                   ),
                 ],
               ),
