@@ -7,6 +7,7 @@ class DiscFlag extends BasicFlag {
     super.aspectRatio,
     super.decoration,
     super.decorationPosition,
+    super.padding,
     super.backgroundPainter,
     super.foregroundPainter,
     super.foregroundWidget,

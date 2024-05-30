@@ -1,6 +1,7 @@
 import "package:flags/flags.dart";
 import "package:flutter/widgets.dart";
 
+import "../../model/typedefs.dart";
 import "../../ui/flags/basic_flag.dart";
 
 extension BasicFlagExtension<T extends BasicFlag> on T {
@@ -10,19 +11,19 @@ extension BasicFlagExtension<T extends BasicFlag> on T {
     double? aspectRatio,
     BoxDecoration? decoration,
     DecorationPosition? decorationPosition,
+    EdgeInsetsGeometry? padding,
     CustomPainter? backgroundPainter,
     CustomPainter? foregroundPainter,
     Widget? foregroundWidget,
-    CustomPainter? Function(List<ElementsProperties>? properties)?
-        foregroundPainterBuilder,
-    Widget? Function(List<ElementsProperties>? properties)?
-        foregroundWidgetBuilder,
+    FlagPainterBuilder? foregroundPainterBuilder,
+    FlagWidgetBuilder? foregroundWidgetBuilder,
   }) =>
       BasicFlag(
         properties ?? this.properties,
         aspectRatio: aspectRatio ?? this.aspectRatio,
         decoration: decoration ?? this.decoration,
         decorationPosition: decorationPosition ?? this.decorationPosition,
+        padding: padding ?? this.padding,
         backgroundPainter: backgroundPainter ?? this.backgroundPainter,
         foregroundPainter: foregroundPainter ?? this.foregroundPainter,
         foregroundWidget: foregroundWidget ?? this.foregroundWidget,

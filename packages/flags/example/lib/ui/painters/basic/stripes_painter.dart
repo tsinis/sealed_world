@@ -1,41 +1,48 @@
 import "package:flags/flags.dart";
 import "package:flutter/rendering.dart";
 
-class StripesPainter extends CustomPainter {
-  const StripesPainter(this.colors, this._radius, {required this.isHorizontal});
+import "../../../helpers/extensions/box_decoration_extension.dart";
 
-  final List<ColorsProperties> colors;
-  final bool isHorizontal;
-  final BorderRadiusGeometry? _radius;
+class StripesPainter extends CustomPainter {
+  const StripesPainter(this.properties, this.decoration);
+
+  final FlagProperties properties;
+  final BoxDecoration? decoration;
 
   static const _doAntiAlias = false;
 
-  BorderRadiusGeometry get radius => _radius ?? BorderRadius.zero;
+  BorderRadiusGeometry get borderRadius =>
+      decoration?.borderRadius ?? BorderRadius.zero;
 
   @override
   void paint(Canvas canvas, Size size) {
     final rect = Rect.fromLTWH(0, 0, size.width, size.height);
 
-    if (radius == BorderRadius.zero) {
-      canvas.clipRect(rect, doAntiAlias: _doAntiAlias);
+    if (decoration.isCircle) {
+      final radius = size.height / 2;
+      final circle = Rect.fromCircle(center: rect.center, radius: radius);
+      final rRect = RRect.fromRectAndRadius(circle, Radius.circular(radius));
+      canvas.clipRRect(rRect, doAntiAlias: _doAntiAlias);
+    } else if (borderRadius != BorderRadius.zero) {
+      final radius = borderRadius.resolve(TextDirection.ltr);
+      canvas.clipRRect(radius.toRRect(rect), doAntiAlias: _doAntiAlias);
     } else {
-      final borderRadius = radius.resolve(TextDirection.ltr);
-      canvas.clipRRect(borderRadius.toRRect(rect), doAntiAlias: _doAntiAlias);
+      canvas.clipRect(rect, doAntiAlias: _doAntiAlias);
     }
 
-    final totalRatio = colors.fold(0, (sum, cp) => sum + cp.ratio);
+    final totalRatio = properties.colors.fold(0, (sum, cp) => sum + cp.ratio);
     final paint = Paint();
     var position = 0.0;
 
-    if (isHorizontal) {
-      for (final property in colors) {
+    if (properties.isHorizontalStriped ?? true) {
+      for (final property in properties.colors) {
         final stripeSize = size.height * property.ratio / totalRatio;
         final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
         canvas.drawRect(stripe, paint..color = property.color);
         position += stripeSize;
       }
     } else {
-      for (final property in colors) {
+      for (final property in properties.colors) {
         final stripeSize = size.width * property.ratio / totalRatio;
         final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
         canvas.drawRect(stripe, paint..color = property.color);

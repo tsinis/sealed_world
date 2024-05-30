@@ -1,11 +1,12 @@
 import "package:flutter/material.dart";
 
 @immutable
-class FlagThemeData implements ThemeExtension<FlagThemeData> {
+class FlagThemeData extends ThemeExtension<FlagThemeData> {
   const FlagThemeData({
     this.aspectRatio,
     this.decoration,
     this.decorationPosition,
+    this.padding,
   });
 
   final double? aspectRatio;
@@ -13,25 +14,26 @@ class FlagThemeData implements ThemeExtension<FlagThemeData> {
 
   /// If not provided - default to [DecorationPosition.foreground].
   final DecorationPosition? decorationPosition;
-
-  @override
-  Type get type => FlagThemeData;
+  final EdgeInsetsGeometry? padding;
 
   @override
   FlagThemeData copyWith({
     double? aspectRatio,
     BoxDecoration? decoration,
     DecorationPosition? decorationPosition,
+    EdgeInsetsGeometry? padding,
   }) =>
       FlagThemeData(
         aspectRatio: aspectRatio ?? this.aspectRatio,
         decoration: decoration ?? this.decoration,
         decorationPosition: decorationPosition ?? this.decorationPosition,
+        padding: padding ?? this.padding,
       );
 
   @override
   String toString() => "FlagThemeData(aspectRatio: $aspectRatio, "
-      "decoration: $decoration, decorationPosition: $decorationPosition";
+      "decoration: $decoration, decorationPosition: $decorationPosition, "
+      "padding: $padding)";
 
   @override
   bool operator ==(Object other) {
@@ -40,12 +42,16 @@ class FlagThemeData implements ThemeExtension<FlagThemeData> {
     return other is FlagThemeData &&
         other.aspectRatio == aspectRatio &&
         other.decoration == decoration &&
-        other.decorationPosition == decorationPosition;
+        other.decorationPosition == decorationPosition &&
+        other.padding == padding;
   }
 
   @override
   int get hashCode =>
-      aspectRatio.hashCode ^ decoration.hashCode ^ decorationPosition.hashCode;
+      aspectRatio.hashCode ^
+      decoration.hashCode ^
+      decorationPosition.hashCode ^
+      padding.hashCode;
 
   @override
   FlagThemeData lerp(
