@@ -385,6 +385,7 @@ const flagAtgProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff000000)],
       widthFactor: 1,
+      angle: 90,
       type: ElementType.triangle,
       children: [
         ElementsProperties(
@@ -1020,7 +1021,7 @@ const flagBhsProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff000000)],
       x: -1,
-      widthFactor: 0.4,
+      widthFactor: 0.43,
       type: ElementType.triangle,
     ),
   ],

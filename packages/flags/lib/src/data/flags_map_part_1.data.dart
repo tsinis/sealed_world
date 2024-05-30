@@ -233,6 +233,7 @@ const flagSdnProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff007229)],
       x: -1,
+      widthFactor: 1 / 3,
       type: ElementType.triangle,
     ),
   ],

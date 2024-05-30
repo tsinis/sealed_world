@@ -3,11 +3,12 @@ import "package:flutter/rendering.dart";
 
 import "../../../helpers/extensions/box_decoration_extension.dart";
 
-class StripesPainter extends CustomPainter {
-  const StripesPainter(this.properties, this.decoration);
+class StripesPainter<T extends CustomPainter> extends CustomPainter {
+  const StripesPainter(this.properties, this.decoration, this.elementsPainter);
 
   final FlagProperties properties;
   final BoxDecoration? decoration;
+  final T? elementsPainter;
 
   static const _doAntiAlias = false;
 
@@ -49,6 +50,8 @@ class StripesPainter extends CustomPainter {
         position += stripeSize;
       }
     }
+
+    elementsPainter?.paint(canvas, size);
   }
 
   @override

@@ -1,8 +1,8 @@
-import "../painters/common/circle_painter.dart";
+import "../painters/common/triangle_painter.dart";
 import "basic_flag.dart";
 
-class DiscFlag extends BasicFlag {
-  const DiscFlag(
+class TriangleFlag extends BasicFlag {
+  const TriangleFlag(
     super.properties, {
     super.aspectRatio,
     super.decoration,
@@ -13,5 +13,5 @@ class DiscFlag extends BasicFlag {
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
-  }) : super(elementsBuilder: CirclePainter.new);
+  }) : super(elementsBuilder: TrianglePainter.new);
 }

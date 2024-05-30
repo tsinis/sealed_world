@@ -2,6 +2,8 @@ import "package:flags/flags.dart";
 import "package:flutter/material.dart";
 
 import "flags_map.dart";
+import "helpers/extensions/basic_flag_extension.dart";
+import "ui/flags/basic_flag.dart";
 
 void main() => runApp(
       MaterialApp(
@@ -27,6 +29,10 @@ class _MainState extends State<Main> {
     setState(() => _opacity = 1 / 2);
   }
 
+  @optionalTypeArgs
+  MapEntry<WorldCountry, BasicFlag> _flagData<T extends BasicFlag>() =>
+      flagsMap.entries.where((flag) => flag.value is T).elementAt(_index);
+
   String _labelBuilder() => switch (_opacity) {
         0 => "Original flag",
         1 => "Flag from the package",
@@ -35,7 +41,7 @@ class _MainState extends State<Main> {
 
   @override
   Widget build(BuildContext context) {
-    final flagData = flagsMap.entries.elementAt(_index);
+    final flag = _flagData();
 
     return ColoredBox(
       color: Theme.of(context).scaffoldBackgroundColor,
@@ -44,7 +50,7 @@ class _MainState extends State<Main> {
         child: Scaffold(
           appBar: AppBar(
             title: SelectableText(
-              "${flagData.key.internationalName} (${flagData.key.code})",
+              "${flag.key.internationalName} (${flag.key.code}): ${_index + 1}",
               textAlign: TextAlign.center,
             ),
           ),
@@ -55,10 +61,10 @@ class _MainState extends State<Main> {
                 alignment: Alignment.center,
                 clipBehavior: Clip.none,
                 children: [
-                  Image.network(flagData.key.flagPngUrl(), scale: 0.1),
+                  flag.value.copyWith(),
                   Opacity(
                     opacity: _opacity,
-                    child: flagData.value,
+                    child: Image.network(flag.key.flagPngUrl(), scale: 0.1),
                   ),
                 ],
               ),

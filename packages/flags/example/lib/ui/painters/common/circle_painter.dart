@@ -1,9 +1,9 @@
 import "package:flutter/rendering.dart";
 
-import "basic_elements_painter.dart";
+import "../basic/elements_painter.dart";
 
-class CirclePainter extends BasicElementsPainter {
-  const CirclePainter(super.properties);
+class CirclePainter extends ElementsPainter {
+  const CirclePainter(super.properties, super.aspectRatio);
 
   @override
   void paint(Canvas canvas, Size size) => canvas.drawCircle(

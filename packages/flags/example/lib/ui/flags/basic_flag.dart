@@ -12,6 +12,7 @@ class BasicFlag extends StatelessWidget {
     this.decoration,
     this.decorationPosition,
     this.padding,
+    this.elementsBuilder,
     this.backgroundPainter,
     this.foregroundPainter,
     this.foregroundWidget,
@@ -28,13 +29,17 @@ class BasicFlag extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   final CustomPainter? backgroundPainter;
+  final FlagPainterBuilder? elementsBuilder;
   final CustomPainter? foregroundPainter;
   final Widget? foregroundWidget;
-  final FlagPainterBuilder? foregroundPainterBuilder;
   final FlagWidgetBuilder? foregroundWidgetBuilder;
+  final FlagPainterBuilder? foregroundPainterBuilder;
 
-  double _ratio(BoxDecoration? boxDecoration, double? ratio) =>
-      boxDecoration.isCircle ? 1 : ratio ?? properties.aspectRatio;
+  double get _flagAspectRatio => properties.aspectRatio;
+  List<ElementsProperties>? get _elements => properties.elementsProperties;
+
+  double _boxRatio(BoxDecoration? boxDecoration, double? ratio) =>
+      boxDecoration.isCircle ? 1 : ratio ?? _flagAspectRatio;
 
   @override
   Widget build(BuildContext context) {
@@ -46,14 +51,18 @@ class BasicFlag extends StatelessWidget {
         decoration: boxDecoration ?? const BoxDecoration(),
         position: decorationPosition ?? DecorationPosition.foreground,
         child: AspectRatio(
-          aspectRatio: _ratio(boxDecoration, aspectRatio),
+          aspectRatio: _boxRatio(boxDecoration, aspectRatio),
           child: CustomPaint(
-            painter:
-                backgroundPainter ?? StripesPainter(properties, boxDecoration),
+            painter: backgroundPainter ??
+                StripesPainter(
+                  properties,
+                  boxDecoration,
+                  elementsBuilder?.call(_elements, _flagAspectRatio),
+                ),
             foregroundPainter: foregroundPainter ??
-                foregroundPainterBuilder?.call(properties.elementsProperties),
+                foregroundPainterBuilder?.call(_elements, _flagAspectRatio),
             child: foregroundWidget ??
-                foregroundWidgetBuilder?.call(properties.elementsProperties),
+                foregroundWidgetBuilder?.call(_elements, _flagAspectRatio),
           ),
         ),
       ),

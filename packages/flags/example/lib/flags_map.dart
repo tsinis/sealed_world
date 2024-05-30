@@ -6,6 +6,7 @@ import "package:flags/src/data/flags_map_part_3.data.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "ui/flags/basic_flag.dart";
+import "ui/flags/triangle_flag.dart";
 // import "ui/flags/disc_flag.dart";
 
 // ignore: prefer-static-class, to follow pattern from eco-system.
@@ -35,7 +36,7 @@ const flagsMap = {
   // CountryBgd(): DiscFlag(flagBgdProperties),
   // CountryBgr(): BasicFlag(flagBgrProperties),
   CountryBhr(): BasicFlag(flagBhrProperties),
-  CountryBhs(): BasicFlag(flagBhsProperties),
+  CountryBhs(): TriangleFlag(flagBhsProperties),
   CountryBih(): BasicFlag(flagBihProperties),
   // CountryBlm(): BasicFlag(flagBlmProperties),
   CountryBlr(): BasicFlag(flagBlrProperties),
@@ -68,7 +69,7 @@ const flagsMap = {
   CountryCxr(): BasicFlag(flagCxrProperties),
   CountryCym(): BasicFlag(flagCymProperties),
   CountryCyp(): BasicFlag(flagCypProperties),
-  CountryCze(): BasicFlag(flagCzeProperties),
+  CountryCze(): TriangleFlag(flagCzeProperties),
   // CountryDeu(): BasicFlag(flagDeuProperties),
   CountryDji(): BasicFlag(flagDjiProperties),
   CountryDma(): BasicFlag(flagDmaProperties),
@@ -164,7 +165,7 @@ const flagsMap = {
   CountryMoz(): BasicFlag(flagMozProperties),
   CountryMrt(): BasicFlag(flagMrtProperties),
   CountryMsr(): BasicFlag(flagMsrProperties),
-  CountryMtq(): BasicFlag(flagMtqProperties),
+  CountryMtq(): TriangleFlag(flagMtqProperties),
   // CountryMus(): BasicFlag(flagMusProperties),
   CountryMwi(): BasicFlag(flagMwiProperties),
   CountryMys(): BasicFlag(flagMysProperties),
@@ -194,7 +195,7 @@ const flagsMap = {
   CountryPrk(): BasicFlag(flagPrkProperties),
   CountryPrt(): BasicFlag(flagPrtProperties),
   CountryPry(): BasicFlag(flagPryProperties),
-  CountryPse(): BasicFlag(flagPseProperties),
+  CountryPse(): TriangleFlag(flagPseProperties),
   CountryPyf(): BasicFlag(flagPyfProperties),
   CountryQat(): BasicFlag(flagQatProperties),
   // CountryReu(): BasicFlag(flagReuProperties),
@@ -202,7 +203,7 @@ const flagsMap = {
   // CountryRus(): BasicFlag(flagRusProperties),
   CountryRwa(): BasicFlag(flagRwaProperties),
   CountrySau(): BasicFlag(flagSauProperties),
-  CountrySdn(): BasicFlag(flagSdnProperties),
+  CountrySdn(): TriangleFlag(flagSdnProperties),
   CountrySen(): BasicFlag(flagSenProperties),
   CountrySgp(): BasicFlag(flagSgpProperties),
   CountrySgs(): BasicFlag(flagSgsProperties),
