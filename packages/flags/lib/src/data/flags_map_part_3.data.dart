@@ -1,9 +1,9 @@
 import "dart:ui";
 
 import "../model/colors_properties.dart";
-import "../model/element_type.dart";
 import "../model/elements_properties.dart";
 import "../model/flag_properties.dart";
+import "../model/shape.dart";
 
 // ignore_for_file: prefer-static-class
 /// Flag properties of country Åland Islands (AX).
@@ -21,12 +21,12 @@ const flagAlaProperties = FlagProperties(
       [Color(0xffFFD300)],
       x: -0.375,
       widthFactor: 50 / 260,
-      type: ElementType.rectangle,
+      shape: Rectangle(),
       children: [
         ElementsProperties(
           [Color(0xffDA0E15)],
           widthFactor: 20 / 50,
-          type: ElementType.rectangle,
+          shape: Rectangle(),
         ),
       ],
     ),
@@ -44,14 +44,14 @@ const flagCogProperties = FlagProperties(
       x: -1,
       widthFactor: 2 / 3,
       angle: 90,
-      type: ElementType.triangle,
+      shape: Triangle(),
     ),
     ElementsProperties(
       [Color(0xffDC241F)],
       x: 1,
       widthFactor: 2 / 3,
       angle: -90,
-      type: ElementType.triangle,
+      shape: Triangle(),
     ),
   ],
   url:
@@ -82,12 +82,12 @@ const flagJorProperties = FlagProperties(
       [Color(0xffce1126)],
       x: -1,
       widthFactor: 1 / 2,
-      type: ElementType.triangle,
+      shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
           heightFactor: 6 / 42,
-          type: ElementType.sun,
+          shape: Star(points: 7),
         ),
       ],
     ),
@@ -119,7 +119,7 @@ const flagGhaProperties = FlagProperties(
       [Color(0xff000000)],
       y: 0.033,
       heightFactor: 0.366,
-      type: ElementType.star,
+      shape: Star(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Ghana_(construction_sheet).svg",
@@ -172,12 +172,12 @@ const flagPanProperties = FlagProperties(
       y: -1,
       heightFactor: 1 / 2,
       widthFactor: 1 / 2,
-      type: ElementType.rectangle,
+      shape: Rectangle(),
       children: [
         ElementsProperties(
           [Color(0xff072357)],
           heightFactor: 2.21 / 4,
-          type: ElementType.star,
+          shape: Star(),
         ),
       ],
     ),
@@ -187,12 +187,12 @@ const flagPanProperties = FlagProperties(
       y: 1,
       heightFactor: 1 / 2,
       widthFactor: 1 / 2,
-      type: ElementType.rectangle,
+      shape: Rectangle(),
       children: [
         ElementsProperties(
           [Color(0xffDA121A)],
           heightFactor: 2.21 / 4,
-          type: ElementType.star,
+          shape: Star(),
         ),
       ],
     ),
@@ -234,7 +234,7 @@ const flagPlwProperties = FlagProperties(
       [Color(0xffffde00)],
       x: -0.125,
       heightFactor: 6 / 10,
-      type: ElementType.circle,
+      shape: Circle(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Palau_(construction_sheet).svg",
@@ -293,28 +293,28 @@ const flagFsmProperties = FlagProperties(
       [Color(0xffffffff)],
       y: -0.6,
       heightFactor: 4 / 20,
-      type: ElementType.star,
+      shape: Star(),
     ),
     ElementsProperties(
       [Color(0xffffffff)],
       y: 0.6,
       heightFactor: 4 / 20,
       angle: -20,
-      type: ElementType.star,
+      shape: Star(),
     ),
     ElementsProperties(
       [Color(0xffffffff)],
       x: 0.6,
       heightFactor: 4 / 20,
       angle: 20,
-      type: ElementType.star,
+      shape: Star(),
     ),
     ElementsProperties(
       [Color(0xffffffff)],
       x: -0.6,
       heightFactor: 4 / 20,
       angle: -20,
-      type: ElementType.star,
+      shape: Star(),
     ),
   ],
   url: "https://www.vexilla-mundi.com/micronesia/micronesia_sheet.png",
@@ -349,7 +349,7 @@ const flagEthProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff006bc6)],
       heightFactor: 40 / 60,
-      type: ElementType.circle,
+      shape: Circle(),
       children: [
         ElementsProperties([Color(0xffffc621)], heightFactor: 32 / 40),
       ],
@@ -373,12 +373,12 @@ const flagFroProperties = FlagProperties(
       [Color(0xff005EB9)],
       x: -0.375,
       widthFactor: 4 / 22,
-      type: ElementType.rectangle,
+      shape: Rectangle(),
       children: [
         ElementsProperties(
           [Color(0xffEF303E)],
           widthFactor: 1 / 2,
-          type: ElementType.rectangle,
+          shape: Rectangle(),
         ),
       ],
     ),
@@ -435,7 +435,7 @@ const flagSenProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff0b7226)],
       heightFactor: 4 / 12,
-      type: ElementType.star,
+      shape: Star(),
     ),
   ],
   url: "https://www.vexilla-mundi.com/senegal/senegal_sheet.png",
@@ -453,13 +453,13 @@ const flagSyrProperties = FlagProperties(
       [Color(0xff007a3d)],
       x: -0.2,
       heightFactor: 3 / 12,
-      type: ElementType.star,
+      shape: Star(),
     ),
     ElementsProperties(
       [Color(0xff007a3d)],
       x: 0.2,
       heightFactor: 3 / 12,
-      type: ElementType.star,
+      shape: Star(),
     ),
   ],
   url:
@@ -474,7 +474,7 @@ const flagSxmProperties = FlagProperties(
       [Color(0xffffffff)],
       x: -1,
       widthFactor: 4 / 9,
-      type: ElementType.triangle,
+      shape: Triangle(),
       children: [
         ElementsProperties(
           [
@@ -512,7 +512,7 @@ const flagPrtProperties = FlagProperties(
       [Color(0xffffff00)],
       x: -1 / 3,
       heightFactor: 1 / 3,
-      type: ElementType.circle,
+      shape: Circle(),
       children: [
         ElementsProperties(
           [
@@ -538,7 +538,7 @@ const flagSomProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       heightFactor: 0.4,
-      type: ElementType.star,
+      shape: Star(),
     ),
   ],
   url: "https://www.vexilla-mundi.com/somalia/somalia_sheet.png",
@@ -607,7 +607,7 @@ const flagKazProperties = FlagProperties(
       x: -0.1,
       y: 0.1,
       heightFactor: 1 / 2,
-      type: ElementType.circle,
+      shape: Circle(),
     ),
   ],
   url: "https://www.vexilla-mundi.com/kazakhstan/kazakhstan_sheet.png",
@@ -640,17 +640,17 @@ const flagComProperties = FlagProperties(
       [Color(0xff239e46)],
       x: -1,
       widthFactor: 1 / 2,
-      type: ElementType.triangle,
+      shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
           heightFactor: 68 / 144,
-          type: ElementType.moon,
+          shape: Moon(),
           children: [
             ElementsProperties(
               [Color(0xffffffff)],
               heightFactor: 14 / 68,
-              type: ElementType.star,
+              shape: Star(),
             ),
           ],
         ),
@@ -685,27 +685,27 @@ const flagGuyProperties = FlagProperties(
       [Color(0xffffffff)],
       x: -1,
       widthFactor: 1,
-      type: ElementType.triangle,
+      shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xffffde08)],
           x: -1,
           heightFactor: 0.9,
           widthFactor: 0.9,
-          type: ElementType.triangle,
+          shape: Triangle(),
         ),
         ElementsProperties(
           [Color(0xff000000)],
           x: -1,
           widthFactor: 1 / 2,
-          type: ElementType.triangle,
+          shape: Triangle(),
           children: [
             ElementsProperties(
               [Color(0xffde2110)],
               x: -1,
               heightFactor: 0.9,
               widthFactor: 0.85,
-              type: ElementType.triangle,
+              shape: Triangle(),
             ),
           ],
         ),
@@ -756,13 +756,13 @@ const flagPngProperties = FlagProperties(
       x: -1,
       widthFactor: 1,
       angle: 90,
-      type: ElementType.triangle,
+      shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
           heightFactor: 0.9,
           widthFactor: 0.9,
-          type: ElementType.star,
+          shape: Star(),
         ),
       ],
     ),
@@ -883,12 +883,12 @@ const flagIslProperties = FlagProperties(
       [Color(0xffffffff)],
       x: -0.357,
       widthFactor: 4 / 25,
-      type: ElementType.rectangle,
+      shape: Rectangle(),
       children: [
         ElementsProperties(
           [Color(0xffDC1E35)],
           widthFactor: 1 / 2,
-          type: ElementType.rectangle,
+          shape: Rectangle(),
         ),
       ],
     ),
@@ -981,7 +981,7 @@ const flagEriProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffEB0433)],
       widthFactor: 1,
-      type: ElementType.triangle,
+      shape: Triangle(),
       children: [
         ElementsProperties([Color(0xffFBC724)], x: -0.5, heightFactor: 1 / 2),
       ],
@@ -1004,7 +1004,7 @@ const flagFinProperties = FlagProperties(
       [Color(0xff002f6c)],
       x: -0.445,
       widthFactor: 3 / 18,
-      type: ElementType.rectangle,
+      shape: Rectangle(),
     ),
   ],
   url:
@@ -1037,7 +1037,7 @@ const flagPseProperties = FlagProperties(
       [Color(0xffEE2A35)],
       x: -1,
       widthFactor: 2 / 6,
-      type: ElementType.triangle,
+      shape: Triangle(),
     ),
   ],
   url:
@@ -1058,12 +1058,12 @@ const flagPriProperties = FlagProperties(
       [Color(0xff0050f0)],
       x: -1,
       widthFactor: 23 / 45,
-      type: ElementType.triangle,
+      shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
           heightFactor: 27 / 60,
-          type: ElementType.star,
+          shape: Star(),
         ),
       ],
     ),
@@ -1134,7 +1134,7 @@ const flagGrlProperties = FlagProperties(
       [Color(0xffffffff)],
       x: -0.222,
       heightFactor: 8 / 12,
-      type: ElementType.circle,
+      shape: Circle(),
       children: [
         ElementsProperties([Color(0xffd00c33)], y: -1, heightFactor: 1 / 2),
       ],
@@ -1183,7 +1183,7 @@ const flagHtiProperties = FlagProperties(
       [Color(0xffffffff)],
       heightFactor: 90 / 348,
       widthFactor: 110 / 570,
-      type: ElementType.rectangle,
+      shape: Rectangle(),
       children: [
         ElementsProperties(
           [

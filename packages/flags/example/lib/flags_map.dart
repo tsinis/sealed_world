@@ -182,7 +182,7 @@ const flagsMap = {
   // CountryNld(): BasicFlag(flagNldProperties),
   CountryNor(): BasicFlag(flagNorProperties),
   CountryNpl(): BasicFlag(flagNplProperties),
-  CountryNru(): BasicFlag(flagNruProperties),
+  // CountryNru(): StarFlag(flagNruProperties),
   CountryNzl(): BasicFlag(flagNzlProperties),
   CountryOmn(): BasicFlag(flagOmnProperties),
   CountryPak(): BasicFlag(flagPakProperties),

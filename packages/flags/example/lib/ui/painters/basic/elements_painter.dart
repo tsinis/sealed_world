@@ -17,6 +17,9 @@ class ElementsPainter extends CustomPainter {
   @protected
   ElementsProperties get property => (properties ?? const []).first;
 
+  @protected
+  Shape? get shape => property.shape;
+
   @override
   void paint(Canvas canvas, Size size) {
     return; // TODO!

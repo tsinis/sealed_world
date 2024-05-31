@@ -1,6 +1,6 @@
 import "dart:ui" show Color;
 
-import "element_type.dart";
+import "shape.dart";
 
 class ElementsProperties {
   const ElementsProperties(
@@ -10,7 +10,7 @@ class ElementsProperties {
     this.heightFactor = 1,
     this.widthFactor,
     this.angle,
-    this.type,
+    this.shape,
     this.children = const [],
   })  : assert(widthFactor == null || widthFactor >= 0.0),
         assert(heightFactor >= 0.0);
@@ -27,7 +27,7 @@ class ElementsProperties {
   final double? widthFactor;
   final List<Color> colors;
   final double? angle;
-  final ElementType? type;
+  final Shape? shape;
   final List<ElementsProperties> children;
 
   /// The distance fraction in the horizontal direction (of the center).
@@ -52,5 +52,5 @@ class ElementsProperties {
   String toString() =>
       "ElementsProperties(${x.toStringAsFixed(1)}, ${y.toStringAsFixed(1)}"
       "widthFactor: $widthFactor, heightFactor: $heightFactor, "
-      "colors: $colors, angle: $angle)";
+      "colors: $colors, angle: $angle, shape: $shape, children: $children)";
 }
