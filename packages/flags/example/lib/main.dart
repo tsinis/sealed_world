@@ -4,7 +4,7 @@ import "package:flutter/material.dart";
 import "flags_map.dart";
 import "helpers/extensions/basic_flag_extension.dart";
 import "ui/flags/basic_flag.dart";
-import "ui/flags/rectangle_flag.dart";
+import "ui/flags/star_flag.dart";
 
 void main() => runApp(
       MaterialApp(
@@ -42,7 +42,7 @@ class _MainState extends State<Main> {
 
   @override
   Widget build(BuildContext context) {
-    final flag = _flagData<RectangleFlag>();
+    final flag = _flagData<StarFlag>();
 
     return ColoredBox(
       color: Theme.of(context).scaffoldBackgroundColor,

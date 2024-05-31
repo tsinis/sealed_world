@@ -61,7 +61,7 @@ dart_code_metrics:
     - avoid-nested-conditional-expressions:
       acceptable-level: 2
     - prefer-correct-identifier-length:
-        exceptions: ["i", "x", "sb"] # i for index, x for math operations, sb for StringBuffer.
+        exceptions: ["i", "x", "y", "sb"] # i for index, x/y for math operations, sb for StringBuffer.
     - avoid-top-level-members-in-tests:
         exclude:
           - test/data/*.dart

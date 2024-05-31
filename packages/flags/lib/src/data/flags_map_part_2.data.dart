@@ -1694,7 +1694,8 @@ const flagMmrProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
-      heightFactor: 8.84 / 12,
+      y: 0.072,
+      heightFactor: 0.72,
       type: ElementType.star,
     ),
   ],

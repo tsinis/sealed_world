@@ -117,7 +117,8 @@ const flagGhaProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xff000000)],
-      heightFactor: 1 / 3,
+      y: 0.033,
+      heightFactor: 0.366,
       type: ElementType.star,
     ),
   ],
@@ -331,7 +332,6 @@ const flagKhmProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff), Color(0xff000000)],
       heightFactor: 168 / 360,
-      type: ElementType.star,
     ),
   ],
   url: "https://www.vexilla-mundi.com/cambodia/cambodia_sheet.png",
@@ -537,7 +537,7 @@ const flagSomProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
-      heightFactor: 4 / 12,
+      heightFactor: 0.4,
       type: ElementType.star,
     ),
   ],

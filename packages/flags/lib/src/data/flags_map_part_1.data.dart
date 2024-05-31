@@ -272,6 +272,7 @@ const flagSurProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffecc81d)],
+      y: 0.04,
       heightFactor: 8 / 20,
       type: ElementType.star,
     ),

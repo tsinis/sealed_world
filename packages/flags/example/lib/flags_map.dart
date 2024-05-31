@@ -6,6 +6,7 @@ import "package:flags/src/data/flags_map_part_3.data.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "ui/flags/basic_flag.dart";
+// import "ui/flags/star_flag.dart";
 // import "ui/flags/rectangle_flag.dart";
 // import "ui/flags/triangle_flag.dart";
 // import "ui/flags/disc_flag.dart";
@@ -33,7 +34,7 @@ const flagsMap = {
   // CountryBel(): BasicFlag(flagBelProperties),
   // CountryBen(): RectangleFlag(flagBenProperties),
   // CountryBes(): BasicFlag(flagBesProperties),
-  CountryBfa(): BasicFlag(flagBfaProperties),
+  // CountryBfa(): StarFlag(flagBfaProperties),
   // CountryBgd(): DiscFlag(flagBgdProperties),
   // CountryBgr(): BasicFlag(flagBgrProperties),
   CountryBhr(): BasicFlag(flagBhrProperties),
@@ -57,7 +58,7 @@ const flagsMap = {
   CountryChl(): BasicFlag(flagChlProperties),
   CountryChn(): BasicFlag(flagChnProperties),
   // CountryCiv(): BasicFlag(flagCivProperties),
-  CountryCmr(): BasicFlag(flagCmrProperties),
+  // CountryCmr(): StarFlag(flagCmrProperties),
   CountryCod(): BasicFlag(flagCodProperties),
   CountryCog(): BasicFlag(flagCogProperties),
   CountryCok(): BasicFlag(flagCokProperties),
@@ -94,7 +95,7 @@ const flagsMap = {
   CountryGbr(): BasicFlag(flagGbrProperties),
   CountryGeo(): BasicFlag(flagGeoProperties),
   CountryGgy(): BasicFlag(flagGgyProperties),
-  CountryGha(): BasicFlag(flagGhaProperties),
+  // CountryGha(): StarFlag(flagGhaProperties),
   CountryGib(): BasicFlag(flagGibProperties),
   // CountryGin(): BasicFlag(flagGinProperties),
   // CountryGlp(): BasicFlag(flagGlpProperties),
@@ -159,7 +160,7 @@ const flagsMap = {
   CountryMkd(): BasicFlag(flagMkdProperties),
   // CountryMli(): BasicFlag(flagMliProperties),
   CountryMlt(): BasicFlag(flagMltProperties),
-  CountryMmr(): BasicFlag(flagMmrProperties),
+  // CountryMmr(): StarFlag(flagMmrProperties),
   CountryMne(): BasicFlag(flagMneProperties),
   CountryMng(): BasicFlag(flagMngProperties),
   CountryMnp(): BasicFlag(flagMnpProperties),
@@ -205,7 +206,7 @@ const flagsMap = {
   CountryRwa(): BasicFlag(flagRwaProperties),
   CountrySau(): BasicFlag(flagSauProperties),
   // CountrySdn(): TriangleFlag(flagSdnProperties),
-  CountrySen(): BasicFlag(flagSenProperties),
+  // CountrySen(): StarFlag(flagSenProperties),
   CountrySgp(): BasicFlag(flagSgpProperties),
   CountrySgs(): BasicFlag(flagSgsProperties),
   CountryShn(): BasicFlag(flagShnProperties),
@@ -214,12 +215,12 @@ const flagsMap = {
   // CountrySle(): BasicFlag(flagSleProperties),
   CountrySlv(): BasicFlag(flagSlvProperties),
   CountrySmr(): BasicFlag(flagSmrProperties),
-  CountrySom(): BasicFlag(flagSomProperties),
+  // CountrySom(): StarFlag(flagSomProperties),
   // CountrySpm(): BasicFlag(flagSpmProperties),
   CountrySrb(): BasicFlag(flagSrbProperties),
   CountrySsd(): BasicFlag(flagSsdProperties),
   CountryStp(): BasicFlag(flagStpProperties),
-  CountrySur(): BasicFlag(flagSurProperties),
+  // CountrySur(): StarFlag(flagSurProperties),
   CountrySvk(): BasicFlag(flagSvkProperties),
   CountrySvn(): BasicFlag(flagSvnProperties),
   // CountrySwe(): RectangleFlag(flagSweProperties),
@@ -253,7 +254,7 @@ const flagsMap = {
   CountryVen(): BasicFlag(flagVenProperties),
   CountryVgb(): BasicFlag(flagVgbProperties),
   CountryVir(): BasicFlag(flagVirProperties),
-  CountryVnm(): BasicFlag(flagVnmProperties),
+  // CountryVnm(): StarFlag(flagVnmProperties),
   CountryVut(): BasicFlag(flagVutProperties),
   // CountryWlf(): BasicFlag(flagWlfProperties),
   CountryWsm(): BasicFlag(flagWsmProperties),
