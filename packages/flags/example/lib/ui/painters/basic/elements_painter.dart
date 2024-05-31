@@ -43,6 +43,9 @@ class ElementsPainter extends CustomPainter {
     return Offset(horizontal, vertical);
   }
 
+  @protected
+  double calculateAspectRatio(Size size) => size.width / size.height;
+
   @override
   bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
 

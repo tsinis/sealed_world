@@ -4,6 +4,7 @@ import "package:flutter/material.dart";
 import "flags_map.dart";
 import "helpers/extensions/basic_flag_extension.dart";
 import "ui/flags/basic_flag.dart";
+import "ui/flags/rectangle_flag.dart";
 
 void main() => runApp(
       MaterialApp(
@@ -34,14 +35,14 @@ class _MainState extends State<Main> {
       flagsMap.entries.where((flag) => flag.value is T).elementAt(_index);
 
   String _labelBuilder() => switch (_opacity) {
-        0 => "Original flag",
-        1 => "Flag from the package",
+        1 => "Original flag",
+        0 => "Flag from the package",
         _ => " ${(_opacity * 100).round()}% opacity ",
       };
 
   @override
   Widget build(BuildContext context) {
-    final flag = _flagData();
+    final flag = _flagData<RectangleFlag>();
 
     return ColoredBox(
       color: Theme.of(context).scaffoldBackgroundColor,
@@ -61,7 +62,9 @@ class _MainState extends State<Main> {
                 alignment: Alignment.center,
                 clipBehavior: Clip.none,
                 children: [
-                  flag.value.copyWith(),
+                  flag.value.copyWith(
+                      // decoration: const BoxDecoration(shape: BoxShape.circle),
+                      ),
                   Opacity(
                     opacity: _opacity,
                     child: Image.network(flag.key.flagPngUrl(), scale: 0.1),
