@@ -299,6 +299,12 @@ const flagEshProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffc4111b)],
+      x: -1,
+      widthFactor: 1 / 3,
+      shape: Triangle(),
+    ),
+    ElementsProperties(
+      [Color(0xffc4111b)],
       heightFactor: 1 / 4,
       shape: Star(),
     ),

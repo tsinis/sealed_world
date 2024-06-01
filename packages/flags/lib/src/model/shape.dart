@@ -1,5 +1,7 @@
 import "package:flutter/foundation.dart";
 
+part "shape.g.dart";
+
 @immutable
 sealed class Shape {
   const Shape();
