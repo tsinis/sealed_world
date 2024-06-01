@@ -4,7 +4,13 @@ import "package:flags/flags.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
-class ElementsPainter extends CustomPainter {
+import "../../../model/typedefs.dart";
+import "../common/circle_painter.dart";
+import "../common/rectangle_painter.dart";
+import "../common/star_painter.dart";
+import "../common/triangle_painter.dart";
+
+abstract base class ElementsPainter extends CustomPainter {
   const ElementsPainter(this.properties, this.aspectRatio)
       : assert(
           properties != null && properties.length > 0,
@@ -18,11 +24,44 @@ class ElementsPainter extends CustomPainter {
   ElementsProperties get property => (properties ?? const []).first;
 
   @protected
-  Shape? get shape => property.shape;
+  FlagParentPath paintFlagElements(Canvas canvas, Size size);
 
   @override
   void paint(Canvas canvas, Size size) {
-    return; // TODO!
+    final parent = paintFlagElements(canvas, size);
+    paintChild(parent.canvas, parent.path);
+  }
+
+  @protected
+  T? shapeType<T extends Shape>([Shape? shape]) {
+    shape ??= property.shape;
+
+    return shape is T ? shape : null;
+  }
+
+  @protected
+  void paintChild(Canvas canvas, Path parentPath) {
+    final child = property.children.firstOrNull;
+    final childShape = child?.shape;
+    if (child == null || childShape == null) return; // TODO!
+
+    final parentBounds = parentPath.getBounds();
+    final painter = childShape.whenConst(
+      circle: CirclePainter.new,
+      moon: CirclePainter.new, // TODO!
+      rectangle: RectanglePainter.new,
+      star: StarPainter.new,
+      triangle: TrianglePainter.new,
+    );
+
+    /// if (parentPath != null) canvas.clipPath(parentPath); // TODO!
+    canvas
+      ..save()
+      ..translate(parentBounds.left, parentBounds.top);
+
+    final parentSize = parentBounds.size;
+    painter([child], parentSize.aspectRatio).paint(canvas, parentSize);
+    canvas.restore();
   }
 
   @protected

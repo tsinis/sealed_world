@@ -1,20 +1,28 @@
+import "package:flags/flags.dart";
 import "package:flutter/rendering.dart";
 
+import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 
-class RectanglePainter extends ElementsPainter {
+final class RectanglePainter extends ElementsPainter {
   const RectanglePainter(super.properties, super.aspectRatio);
 
   @override
-  void paint(Canvas canvas, Size size) {
+  FlagParentPath paintFlagElements(Canvas canvas, Size size) {
+    final maybeAspectRatio = shapeType<Rectangle>()?.aspectRatio;
     final width = size.width;
-    final compensated = width *
-        (property.widthFactor ?? 1) *
-        (aspectRatio / calculateAspectRatio(size));
-    final x = (width * (property.x + 1) / 2).clamp(0.0, width - compensated);
     final height = size.height * property.heightFactor;
-    final rect =
-        Rect.fromLTWH(x, size.height * property.y, compensated, height);
+    final compensated = maybeAspectRatio != null
+        ? height * maybeAspectRatio
+        : width *
+            (property.widthFactor ?? 1) *
+            (aspectRatio / calculateAspectRatio(size));
+
+    final x = ((width - compensated) / 2) * (property.x + 1);
+    final y = ((size.height - height) / 2) * (property.y + 1);
+    final rect = Rect.fromLTWH(x, y, compensated, height);
     canvas.drawRect(rect, createPaintWithColor());
+
+    return (canvas: canvas, path: Path()..addRect(rect));
   }
 }

@@ -4,8 +4,7 @@ import "package:flutter/widgets.dart";
 import "../../model/typedefs.dart";
 import "../../ui/flags/basic_flag.dart";
 
-extension BasicFlagExtension<T extends BasicFlag> on T {
-  // ignore: long-parameter-list, a lot of properties.
+extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
   BasicFlag copyWith({
     FlagProperties? properties,
     double? aspectRatio,

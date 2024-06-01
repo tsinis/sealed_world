@@ -2,9 +2,9 @@ import "package:flags/flags.dart";
 import "package:flutter/material.dart";
 
 import "flags_map.dart";
-import "helpers/extensions/basic_flag_extension.dart";
+import "helpers/extensions/basic_flag_extension_copy_with.dart";
 import "ui/flags/basic_flag.dart";
-import "ui/flags/star_flag.dart";
+import "ui/flags/rectangle_flag.dart";
 
 void main() => runApp(
       MaterialApp(
@@ -42,7 +42,7 @@ class _MainState extends State<Main> {
 
   @override
   Widget build(BuildContext context) {
-    final flag = _flagData<StarFlag>();
+    final flag = _flagData<RectangleFlag>();
 
     return ColoredBox(
       color: Theme.of(context).scaffoldBackgroundColor,
@@ -63,8 +63,8 @@ class _MainState extends State<Main> {
                 clipBehavior: Clip.none,
                 children: [
                   flag.value.copyWith(
-                      // decoration: const BoxDecoration(shape: BoxShape.circle),
-                      ),
+                    decoration: const BoxDecoration(shape: BoxShape.circle),
+                  ),
                   Opacity(
                     opacity: _opacity,
                     child: Image.network(flag.key.flagPngUrl(), scale: 0.1),

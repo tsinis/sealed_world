@@ -185,13 +185,14 @@ const flagSsdProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff00B6F2)],
       x: -1,
-      angle: 60,
+      widthFactor: 15 / 35,
       shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xffFFE51A)],
+          x: -0.3,
+          y: 0.03,
           heightFactor: 19 / 57,
-          angle: 60, // TODO!
           shape: Star(),
         ),
       ],
@@ -1173,7 +1174,7 @@ const flagMdvProperties = FlagProperties(
       [Color(0xff007e3a)],
       heightFactor: 1 / 2,
       widthFactor: 48 / 72,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 48 / 24),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
@@ -1208,13 +1209,12 @@ const flagLbrProperties = FlagProperties(
       [Color(0xff000066)],
       x: -1,
       y: -1,
-      heightFactor: 1 / 11,
-      widthFactor: 1 / 11,
-      shape: Rectangle(),
+      heightFactor: 5 / 11,
+      shape: Rectangle(aspectRatio: 1),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
-          heightFactor: 15 / 30,
+          heightFactor: 18 / 30,
           shape: Star(),
         ),
       ],
@@ -1534,10 +1534,28 @@ const flagTwnProperties = FlagProperties(
       x: -1,
       y: -1,
       heightFactor: 1 / 2,
-      widthFactor: 1 / 2,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 3 / 2),
       children: [
-        ElementsProperties([Color(0xffffffff)], heightFactor: 3 / 4),
+        ElementsProperties(
+          [Color(0xffffffff)],
+          heightFactor: 3 / 4,
+          angle: 50,
+          shape: Star(points: 12, radiusFactor: 1 / 2),
+          children: [
+            ElementsProperties(
+              [Color(0xff0029CC)],
+              heightFactor: 0.6,
+              shape: Circle(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffffff)],
+                  heightFactor: 0.85,
+                  shape: Circle(),
+                ),
+              ],
+            ),
+          ],
+        ),
       ],
     ),
   ],

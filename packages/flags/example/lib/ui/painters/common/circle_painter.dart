@@ -1,14 +1,18 @@
 import "package:flutter/rendering.dart";
 
+import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 
-class CirclePainter extends ElementsPainter {
+final class CirclePainter extends ElementsPainter {
   const CirclePainter(super.properties, super.aspectRatio);
 
   @override
-  void paint(Canvas canvas, Size size) => canvas.drawCircle(
-        calculateCenter(size),
-        calculateSize(size),
-        createPaintWithColor(),
-      );
+  FlagParentPath paintFlagElements(Canvas canvas, Size size) {
+    final radius = calculateSize(size);
+    final rect = Rect.fromCircle(center: calculateCenter(size), radius: radius);
+    final path = Path()..addOval(rect);
+    canvas.drawPath(path, createPaintWithColor());
+
+    return (canvas: canvas, path: path);
+  }
 }

@@ -12,7 +12,9 @@ class Triangle implements Shape {
 }
 
 class Rectangle implements Shape {
-  const Rectangle();
+  const Rectangle({this.aspectRatio});
+
+  final double? aspectRatio;
 }
 
 class Star implements Shape {

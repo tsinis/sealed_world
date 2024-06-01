@@ -90,7 +90,7 @@ const flagChlProperties = FlagProperties(
       y: -1,
       heightFactor: 1 / 2,
       widthFactor: 1 / 2,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 1),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
@@ -493,7 +493,7 @@ const flagTgoProperties = FlagProperties(
       x: -1,
       y: -1,
       heightFactor: 3 / 5,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 1),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
@@ -801,14 +801,32 @@ const flagUryProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
+      x: -1,
+      y: -1,
       heightFactor: 78 / 162,
-      widthFactor: 78 / 162,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 1.15),
       children: [
         ElementsProperties(
           [Color(0xfffcd116), Color(0xff7b3f00)],
-          heightFactor: 42 / 66,
-          shape: Star(points: 16),
+          y: 0.15,
+          heightFactor: 0.85,
+          angle: 10,
+          shape: Star(points: 16, radiusFactor: 0.45),
+          children: [
+            ElementsProperties(
+              [Color.fromARGB(255, 145, 86, 22)],
+              x: -0.01,
+              angle: 32,
+              shape: Star(points: 16, radiusFactor: 0.3),
+              children: [
+                ElementsProperties(
+                  [Color(0xfffcd116)],
+                  heightFactor: 1 / 3,
+                  shape: Circle(),
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     ),
