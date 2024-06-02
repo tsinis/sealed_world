@@ -1639,10 +1639,19 @@ const flagAbwProperties = FlagProperties(
   ],
   elementsProperties: [
     ElementsProperties(
-      [Color(0xffffffff), Color(0xffEF3340)],
-      x: -4 / 9,
-      y: -8 / 27,
-      heightFactor: 6 / 18,
+      [Color(0xffffffff)],
+      x: -0.705,
+      y: -0.56,
+      heightFactor: 0.33,
+      angle: 45,
+      shape: Star(points: 4, radiusFactor: 0.35),
+      children: [
+        ElementsProperties(
+          [Color(0xffEF3340)],
+          angle: 45,
+          shape: Star(points: 4, radiusFactor: 0.35),
+        ),
+      ],
     ),
   ],
   url: "https://en.wikipedia.org/wiki/File:Flag_of_Aruba_construction.svg",

@@ -13,6 +13,6 @@ final class CirclePainter extends ElementsPainter {
     final path = Path()..addOval(rect);
     canvas.drawPath(path, createPaintWithColor());
 
-    return (canvas: canvas, path: path);
+    return (canvas: canvas, path: path, children: property.children);
   }
 }

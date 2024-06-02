@@ -19,6 +19,6 @@ final class TrianglePainter extends ElementsPainter {
       ..close();
     canvas.drawPath(path, createPaintWithColor());
 
-    return (canvas: canvas, path: path);
+    return (canvas: canvas, path: path, children: property.children);
   }
 }

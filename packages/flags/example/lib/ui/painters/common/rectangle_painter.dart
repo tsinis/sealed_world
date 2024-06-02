@@ -22,7 +22,8 @@ final class RectanglePainter extends ElementsPainter {
     final y = ((size.height - height) / 2) * (property.y + 1);
     final rect = Rect.fromLTWH(x, y, compensated, height);
     canvas.drawRect(rect, createPaintWithColor());
+    final path = Path()..addRect(rect);
 
-    return (canvas: canvas, path: Path()..addRect(rect));
+    return (canvas: canvas, path: path, children: property.children);
   }
 }

@@ -11,17 +11,20 @@ import "../common/star_painter.dart";
 import "../common/triangle_painter.dart";
 
 abstract base class ElementsPainter extends CustomPainter {
-  const ElementsPainter(this.properties, this.aspectRatio)
+  const ElementsPainter(ElementsProps? properties, this.aspectRatio)
       : assert(
           properties != null && properties.length > 0,
           "`properties` must contain at least one element.",
-        );
+        ),
+        _properties = properties;
 
-  final List<ElementsProperties>? properties;
   final double aspectRatio;
+  final ElementsProps? _properties;
+
+  ElementsProps get properties => _properties ?? const [];
 
   @protected
-  ElementsProperties get property => (properties ?? const []).first;
+  ElementsProperties get property => properties.first;
 
   @protected
   FlagParentPath paintFlagElements(Canvas canvas, Size size);
@@ -29,7 +32,7 @@ abstract base class ElementsPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final parent = paintFlagElements(canvas, size);
-    paintChild(parent.canvas, parent.path);
+    paintChild(parent.canvas, parent.path, parent.children);
   }
 
   @protected
@@ -40,7 +43,7 @@ abstract base class ElementsPainter extends CustomPainter {
   }
 
   @protected
-  void paintChild(Canvas canvas, Path parentPath) {
+  void paintChild(Canvas canvas, Path parentPath, ElementsProps children) {
     final child = property.children.firstOrNull;
     final childShape = child?.shape;
     if (child == null || childShape == null) return; // TODO!

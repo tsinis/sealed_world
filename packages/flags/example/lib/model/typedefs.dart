@@ -1,16 +1,18 @@
 import "package:flags/flags.dart";
 import "package:flutter/widgets.dart";
 
+typedef ElementsProps = List<ElementsProperties>;
+
 @optionalTypeArgs
 typedef FlagPainterBuilder<T extends CustomPainter> = T? Function(
-  List<ElementsProperties>? properties,
+  ElementsProps? properties,
   double aspectRatio,
 );
 
 @optionalTypeArgs
 typedef FlagWidgetBuilder<T extends Widget> = T? Function(
-  List<ElementsProperties>? properties,
+  ElementsProps? properties,
   double aspectRatio,
 );
 
-typedef FlagParentPath = ({Canvas canvas, Path path});
+typedef FlagParentPath = ({Canvas canvas, Path path, ElementsProps children});

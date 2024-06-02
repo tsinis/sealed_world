@@ -228,13 +228,21 @@ const flagArgProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xfff6b40e), Color(0xff85340a)],
-      heightFactor: 50 / 180,
-      shape: Star(points: 32),
+      heightFactor: 55 / 180,
+      angle: 17,
+      shape: Star(points: 32, radiusFactor: 0.45),
       children: [
         ElementsProperties(
           [Color(0xff85340a)],
-          heightFactor: 1 / 2,
+          heightFactor: 0.4,
           shape: Circle(),
+          children: [
+            ElementsProperties(
+              [Color(0xfff6b40e)],
+              heightFactor: 0.9,
+              shape: Circle(),
+            ),
+          ],
         ),
       ],
     ),

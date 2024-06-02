@@ -9,6 +9,7 @@ import "../basic/elements_painter.dart";
 final class StarPainter extends ElementsPainter {
   StarPainter(super.properties, super.aspectRatio);
   static const startRadians = math.pi / 2;
+  static const radiansMultiplier = math.pi / 180;
 
   @override
   FlagParentPath paintFlagElements(Canvas canvas, Size size) {
@@ -30,15 +31,16 @@ final class StarPainter extends ElementsPainter {
     if (property.angle == null) {
       canvas.drawPath(path..close(), createPaintWithColor());
     } else {
+      final angleInRadians = (property.angle ?? 0) * radiansMultiplier;
       canvas
         ..save()
         ..translate(center.dx, center.dy)
-        ..rotate(property.angle ?? 0)
+        ..rotate(angleInRadians)
         ..translate(-center.dx, -center.dy)
         ..drawPath(path..close(), createPaintWithColor())
         ..restore();
     }
 
-    return (canvas: canvas, path: path);
+    return (canvas: canvas, path: path, children: property.children);
   }
 }

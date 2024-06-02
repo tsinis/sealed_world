@@ -36,7 +36,7 @@ class BasicFlag extends StatelessWidget {
   final FlagPainterBuilder? foregroundPainterBuilder;
 
   double get _flagAspectRatio => properties.aspectRatio;
-  List<ElementsProperties>? get _elements => properties.elementsProperties;
+  ElementsProps? get _elements => properties.elementsProperties;
 
   double _boxRatio(BoxDecoration? boxDecoration, double? ratio) =>
       boxDecoration.isCircle ? 1 : ratio ?? _flagAspectRatio;
