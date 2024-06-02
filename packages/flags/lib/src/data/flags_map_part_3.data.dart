@@ -10,18 +10,16 @@ import "../model/shape.dart";
 const flagAlaProperties = FlagProperties(
   [
     ColorsProperties(Color(0xff0064AD), ratio: 60),
-    ColorsProperties(Color(0xffFFD300), ratio: 15),
-    ColorsProperties(Color(0xffDA0E15), ratio: 20),
-    ColorsProperties(Color(0xffFFD300), ratio: 15),
+    ColorsProperties(Color(0xffFFD300), ratio: 50),
     ColorsProperties(Color(0xff0064AD), ratio: 60),
   ],
   aspectRatio: 26 / 17,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffFFD300)],
-      x: -0.375,
+      x: -0.24,
       widthFactor: 50 / 260,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 50 / 170),
       children: [
         ElementsProperties(
           [Color(0xffDA0E15)],
@@ -29,6 +27,12 @@ const flagAlaProperties = FlagProperties(
           shape: Rectangle(),
         ),
       ],
+    ),
+    ElementsProperties(
+      [Color(0xffDA0E15)],
+      heightFactor: 15 / 125,
+      widthFactor: 1,
+      shape: Rectangle(),
     ),
   ],
   url: "https://www.vexilla-mundi.com/aland/aland_sheet.png",
@@ -648,13 +652,40 @@ const flagComProperties = FlagProperties(
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
+          x: -0.32,
           heightFactor: 68 / 144,
-          shape: Moon(),
+          shape: Moon(radius: 0.98, x: 0.4),
           children: [
             ElementsProperties(
               [Color(0xffffffff)],
+              x: 1.05,
+              y: -0.66,
               heightFactor: 14 / 68,
               shape: Star(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffffff)],
+                  y: 2.5,
+                  heightFactor: 1.1,
+                  shape: Star(),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xffffffff)],
+                      y: 2.5,
+                      heightFactor: 1.2,
+                      shape: Star(),
+                      children: [
+                        ElementsProperties(
+                          [Color(0xffffffff)],
+                          y: 2.3,
+                          heightFactor: 1.1,
+                          shape: Star(),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),

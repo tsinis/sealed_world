@@ -1714,7 +1714,16 @@ const flagCheProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000))],
   aspectRatio: 1,
   elementsProperties: [
-    ElementsProperties([Color(0xffffffff)], heightFactor: 20 / 32),
+    ElementsProperties(
+      [Color(0xffffffff)],
+      heightFactor: 20 / 32,
+      shape: Rectangle(aspectRatio: 6 / 20),
+    ),
+    ElementsProperties(
+      [Color(0xffffffff)],
+      heightFactor: 6 / 32,
+      shape: Rectangle(aspectRatio: 20 / 6),
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Switzerland_(construction_sheet).svg",
