@@ -179,15 +179,19 @@ const flagTurProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
-      x: -0.4,
+      x: -0.333,
       heightFactor: 1 / 2,
       widthFactor: 1 / 3,
-    ),
-    ElementsProperties(
-      [Color(0xffffffff)],
-      heightFactor: 1 / 4,
-      angle: -10,
-      shape: Star(),
+      shape: Moon(radius: 0.8, x: 0.75),
+      children: [
+        ElementsProperties(
+          [Color(0xffffffff)],
+          x: 1.466,
+          heightFactor: 0.5,
+          angle: -18,
+          shape: Star(),
+        ),
+      ],
     ),
   ],
   url:
@@ -624,16 +628,18 @@ const flagMrtProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffFFD700)],
-      x: 0.2,
+      y: -0.35,
       heightFactor: 1 / 4,
-      widthFactor: 20 / 60,
-      shape: Moon(),
-    ),
-    ElementsProperties(
-      [Color(0xffFFD700)],
-      x: -0.2,
-      heightFactor: 191 / 1000,
-      shape: Star(),
+      widthFactor: 3 / 6,
+      shape: Moon(radius: 1.09, x: 0, y: -0.9),
+      children: [
+        ElementsProperties(
+          [Color(0xffFFD700)],
+          y: -0.75,
+          heightFactor: 0.6,
+          shape: Star(),
+        ),
+      ],
     ),
   ],
   url:
@@ -1073,15 +1079,15 @@ const flagCuwProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
-      x: -0.8,
-      y: -0.8,
+      x: -0.78,
+      y: -0.666,
       heightFactor: 12 / 72,
       shape: Star(),
     ),
     ElementsProperties(
       [Color(0xffffffff)],
-      x: -0.6,
-      y: -0.6,
+      x: -0.56,
+      y: -0.333,
       heightFactor: 16 / 72,
       shape: Star(),
     ),
@@ -1294,14 +1300,16 @@ const flagLbyProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       heightFactor: 6 / 24,
-      shape: Moon(),
-    ),
-    ElementsProperties(
-      [Color(0xffffffff)],
-      x: 0.1,
-      heightFactor: 4.46 / 24,
-      angle: -20,
-      shape: Star(),
+      shape: Moon(radius: 0.86),
+      children: [
+        ElementsProperties(
+          [Color(0xffffffff)],
+          x: 1.6,
+          heightFactor: 0.7,
+          angle: 54,
+          shape: Star(),
+        ),
+      ],
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Libya_(construction_sheet).svg",
@@ -1411,14 +1419,18 @@ const flagAzeProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
+      x: -0.05,
       heightFactor: 0.3,
       shape: Moon(),
-    ),
-    ElementsProperties(
-      [Color(0xffffffff)],
-      x: 0.1,
-      heightFactor: 0.2,
-      shape: Star(points: 8),
+      children: [
+        ElementsProperties(
+          [Color(0xffffffff)],
+          x: 1.4,
+          heightFactor: 0.52,
+          angle: 22,
+          shape: Star(points: 8, radiusFactor: 0.5),
+        ),
+      ],
     ),
   ],
   url:
@@ -1756,14 +1768,14 @@ const flagCafProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffd21034)],
       widthFactor: 10 / 60,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 1 / 4),
     ),
     ElementsProperties(
       [Color(0xffffce00)],
-      x: -0.9,
-      y: -0.9,
+      x: -2 / 3,
+      y: -0.73,
       heightFactor: 9 / 40,
-      shape: Rectangle(),
+      shape: Star(),
     ),
   ],
   url:

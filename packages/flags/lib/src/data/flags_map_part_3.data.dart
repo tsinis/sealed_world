@@ -176,6 +176,7 @@ const flagPanProperties = FlagProperties(
       children: [
         ElementsProperties(
           [Color(0xff072357)],
+          y: 0.05,
           heightFactor: 2.21 / 4,
           shape: Star(),
         ),
@@ -191,6 +192,7 @@ const flagPanProperties = FlagProperties(
       children: [
         ElementsProperties(
           [Color(0xffDA121A)],
+          y: 0.05,
           heightFactor: 2.21 / 4,
           shape: Star(),
         ),
@@ -299,21 +301,21 @@ const flagFsmProperties = FlagProperties(
       [Color(0xffffffff)],
       y: 0.6,
       heightFactor: 4 / 20,
-      angle: -20,
+      angle: 36,
       shape: Star(),
     ),
     ElementsProperties(
       [Color(0xffffffff)],
-      x: 0.6,
+      x: 0.315,
       heightFactor: 4 / 20,
-      angle: 20,
+      angle: 18,
       shape: Star(),
     ),
     ElementsProperties(
       [Color(0xffffffff)],
-      x: -0.6,
+      x: -0.315,
       heightFactor: 4 / 20,
-      angle: -20,
+      angle: -18,
       shape: Star(),
     ),
   ],
@@ -451,14 +453,16 @@ const flagSyrProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xff007a3d)],
-      x: -0.2,
-      heightFactor: 3 / 12,
+      x: -1 / 3,
+      y: 0.03,
+      heightFactor: 3 / 11,
       shape: Star(),
     ),
     ElementsProperties(
       [Color(0xff007a3d)],
-      x: 0.2,
-      heightFactor: 3 / 12,
+      x: 1 / 3,
+      y: 0.03,
+      heightFactor: 3 / 11,
       shape: Star(),
     ),
   ],

@@ -34,7 +34,7 @@ class _MainState extends State<Main> {
     final map = flagsMap.entries.where((f) => f.value is T).elementAt(_index);
     for (final e in flagsMap.entries) {
       if ((e.value.properties.elementsProperties?.length ?? 0) <= 1) continue;
-      print(e);
+      // print("E: ${e.key.code}");
     }
 
     return map;

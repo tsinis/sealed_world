@@ -6,6 +6,7 @@ import "package:flutter/rendering.dart";
 
 import "../../../model/typedefs.dart";
 import "../common/circle_painter.dart";
+import "../common/moon_painter.dart";
 import "../common/rectangle_painter.dart";
 import "../common/star_painter.dart";
 import "../common/triangle_painter.dart";
@@ -48,24 +49,28 @@ abstract base class ElementsPainter extends CustomPainter {
     final childShape = child?.shape;
     if (child == null || childShape == null) return; // TODO!
 
+    final shapePainter = painter(childShape);
     final parentBounds = parentPath.getBounds();
-    final painter = childShape.whenConst(
-      circle: CirclePainter.new,
-      moon: CirclePainter.new, // TODO!
-      rectangle: RectanglePainter.new,
-      star: StarPainter.new,
-      triangle: TrianglePainter.new,
-    );
 
-    /// if (parentPath != null) canvas.clipPath(parentPath); // TODO!
+    /// if (parentPath != null) canvas.clipPath(parentPath); // TODO?
     canvas
       ..save()
       ..translate(parentBounds.left, parentBounds.top);
 
     final parentSize = parentBounds.size;
-    painter([child], parentSize.aspectRatio).paint(canvas, parentSize);
+    shapePainter([child], parentSize.aspectRatio).paint(canvas, parentSize);
     canvas.restore();
   }
+
+  @protected
+  ElementsPainter Function(ElementsProps?, double) painter(Shape childShape) =>
+      childShape.whenConst(
+        circle: CirclePainter.new,
+        moon: MoonPainter.new,
+        rectangle: RectanglePainter.new,
+        star: StarPainter.new,
+        triangle: TrianglePainter.new,
+      );
 
   @protected
   Paint createPaintWithColor([Color? color]) =>

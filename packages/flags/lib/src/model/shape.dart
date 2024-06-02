@@ -32,5 +32,14 @@ class Circle implements Shape {
 }
 
 class Moon implements Shape {
-  const Moon();
+  const Moon({this.radius = 0.85, this.x = 0.22, this.y = 0});
+
+  /// Relative radius of the second circle.
+  final double radius;
+
+  /// Relative X position of the second circle.
+  final double x;
+
+  /// Relative Y position of the second circle.
+  final double y;
 }
