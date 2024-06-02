@@ -21,7 +21,7 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  int _index = 222;
+  int _index = 0;
   double _opacity = 1 / 2;
 
   void _incrementIndex() {
@@ -30,8 +30,15 @@ class _MainState extends State<Main> {
   }
 
   @optionalTypeArgs
-  MapEntry<WorldCountry, BasicFlag> _flagData<T extends BasicFlag>() =>
-      flagsMap.entries.where((flag) => flag.value is T).elementAt(_index);
+  MapEntry<WorldCountry, BasicFlag> _flagData<T extends BasicFlag>() {
+    final map = flagsMap.entries.where((f) => f.value is T).elementAt(_index);
+    for (final e in flagsMap.entries) {
+      if ((e.value.properties.elementsProperties?.length ?? 0) <= 1) continue;
+      print(e);
+    }
+
+    return map;
+  }
 
   String _labelBuilder() => switch (_opacity) {
         1 => "Original flag",

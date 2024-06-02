@@ -44,7 +44,7 @@ abstract base class ElementsPainter extends CustomPainter {
 
   @protected
   void paintChild(Canvas canvas, Path parentPath, ElementsProps children) {
-    final child = property.children.firstOrNull;
+    final child = children.firstOrNull;
     final childShape = child?.shape;
     if (child == null || childShape == null) return; // TODO!
 

@@ -122,14 +122,16 @@ const flagDzaProperties = FlagProperties(
       heightFactor: 10 / 20,
       widthFactor: 10 / 20,
       shape: Moon(),
-    ),
-    ElementsProperties(
-      [Color(0xffD21034)],
-      x: 2 / 15,
-      heightFactor: 5 / 20,
-      widthFactor: 5 / 20,
-      angle: 20, // ? Not confirmed.
-      shape: Star(),
+      children: [
+        ElementsProperties(
+          [Color(0xffD21034)],
+          x: 2 / 15,
+          heightFactor: 5 / 20,
+          widthFactor: 5 / 20,
+          angle: 20, // ? Not confirmed.
+          shape: Star(),
+        ),
+      ],
     ),
   ],
   url:
