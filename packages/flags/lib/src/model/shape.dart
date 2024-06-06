@@ -18,10 +18,7 @@ class Rectangle implements Shape {
 }
 
 class Star implements Shape {
-  const Star({this.points = defaultPoints, this.radiusFactor = defaultFactor});
-
-  static const defaultFactor = 0.38;
-  static const defaultPoints = 5;
+  const Star({this.points = 5, this.radiusFactor = 0.38});
 
   final int points;
   final double radiusFactor;

@@ -119,16 +119,14 @@ const flagDzaProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffD21034)],
-      heightFactor: 10 / 20,
-      widthFactor: 10 / 20,
-      shape: Moon(),
+      heightFactor: 1 / 2,
+      shape: Moon(radius: 0.8, x: 0.25),
       children: [
         ElementsProperties(
           [Color(0xffD21034)],
-          x: 2 / 15,
-          heightFactor: 5 / 20,
-          widthFactor: 5 / 20,
-          angle: 20, // ? Not confirmed.
+          x: 0.52,
+          heightFactor: 10 / 20,
+          angle: 18,
           shape: Star(),
         ),
       ],
@@ -157,16 +155,63 @@ const flagPhlProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1,
-      angle: 60,
+      y: -1,
+      widthFactor: 0.43,
       shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xfffcd116)],
-          heightFactor: 10 / 90,
-          angle: 30,
-          shape: Star(), // TODO!
+          x: -0.275,
+          heightFactor: 0.42,
+          angle: 22.5,
+          shape: Star(points: 8, radiusFactor: 0.2),
+          children: [
+            ElementsProperties(
+              [Color(0xfffcd116)],
+              heightFactor: 0.98,
+              angle: 31.5,
+              shape: Star(points: 8, radiusFactor: 0.2),
+              children: [
+                ElementsProperties(
+                  [Color(0xfffcd116)],
+                  angle: -31.5,
+                  shape: Star(points: 8, radiusFactor: 0.2),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xfffcd116)],
+                      heightFactor: 0.64,
+                      shape: Circle(),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         ),
       ],
+    ),
+    ElementsProperties(
+      [Color(0xfffcd116)],
+      x: -0.29,
+      heightFactor: 10 / 90,
+      angle: 20,
+      shape: Star(),
+    ),
+    ElementsProperties(
+      [Color(0xfffcd116)],
+      x: -0.925,
+      y: -0.73,
+      heightFactor: 10 / 90,
+      angle: 112,
+      shape: Star(),
+    ),
+    ElementsProperties(
+      [Color(0xfffcd116)],
+      x: -0.925,
+      y: 0.73,
+      heightFactor: 10 / 90,
+      angle: -4,
+      shape: Star(),
     ),
   ],
   url:
@@ -187,6 +232,7 @@ const flagSsdProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff00B6F2)],
       x: -1,
+      y: -1,
       widthFactor: 15 / 35,
       shape: Triangle(),
       children: [
@@ -217,12 +263,20 @@ const flagRwaProperties = FlagProperties(
       x: 0.642,
       y: -0.48,
       heightFactor: 40 / 130,
-      shape: Star(points: 24),
+      angle: 22,
+      shape: Star(points: 24, radiusFactor: 0.3),
       children: [
         ElementsProperties(
           [Color(0xff00a1de)],
-          heightFactor: 1 / 2,
+          heightFactor: 1 / 3,
           shape: Circle(),
+          children: [
+            ElementsProperties(
+              [Color(0xffE5BE01)],
+              heightFactor: 0.8,
+              shape: Circle(),
+            ),
+          ],
         ),
       ],
     ),
@@ -243,6 +297,7 @@ const flagSdnProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff007229)],
       x: -1,
+      y: -1,
       widthFactor: 1 / 3,
       shape: Triangle(),
     ),
@@ -261,9 +316,9 @@ const flagSweProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffFFCD00)],
-      x: -0.375,
+      x: -0.282,
       widthFactor: 2 / 16,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 2 / 10),
     ),
   ],
   url:
@@ -303,6 +358,7 @@ const flagEshProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffc4111b)],
       x: -1,
+      y: -1,
       widthFactor: 1 / 3,
       shape: Triangle(),
     ),
@@ -708,9 +764,9 @@ const flagDnkProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
-      x: -0.35,
+      x: -0.272,
       widthFactor: 4 / 37,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 4 / 28),
     ),
   ],
   url:
@@ -734,9 +790,9 @@ const flagSlbProperties = FlagProperties(
 /// Flag properties of country Paraguay (PY).
 const flagPryProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xff0038a8)),
-    ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffd52b1e)),
+    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xff0038a8)),
   ],
   aspectRatio: 20 / 11,
   elementsProperties: [
@@ -812,6 +868,7 @@ const flagStpProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffd21034)],
       x: -1,
+      y: -1,
       widthFactor: 1 / 4,
       shape: Triangle(),
     ),
@@ -820,13 +877,15 @@ const flagStpProperties = FlagProperties(
       y: 0.03,
       heightFactor: 28 / 84,
       shape: Star(),
-    ),
-    ElementsProperties(
-      [Color(0xff000000)],
-      x: 0.5,
-      y: 0.03,
-      heightFactor: 28 / 84,
-      shape: Star(),
+      children: [
+        ElementsProperties(
+          [Color(0xff000000)],
+          x: 3.15,
+          y: 0.1,
+          heightFactor: 1.1,
+          shape: Star(),
+        ),
+      ],
     ),
   ],
   url:
@@ -858,11 +917,15 @@ const flagDjiProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1,
+      y: -1,
+      widthFactor: 0.575,
       shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xffD7141A)],
-          heightFactor: 1 / 3,
+          x: -0.2333,
+          y: 0.025,
+          heightFactor: 0.28,
           shape: Star(),
         ),
       ],
@@ -882,6 +945,7 @@ const flagGnqProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff0073ce)],
       x: -1,
+      y: -1,
       widthFactor: 1 / 4,
       shape: Triangle(),
     ),
@@ -1163,11 +1227,25 @@ const flagGrcProperties = FlagProperties(
       x: -1,
       y: -1,
       heightFactor: 10 / 18,
-      widthFactor: 10 / 18,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 1),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
+          shape: Rectangle(aspectRatio: 1 / 5),
+        ),
+      ],
+    ),
+    ElementsProperties(
+      [Color.fromARGB(0, 0, 90, 174)],
+      x: -1,
+      y: -1,
+      heightFactor: 10 / 18,
+      shape: Rectangle(aspectRatio: 1),
+      children: [
+        ElementsProperties(
+          [Color(0xffffffff)],
+          heightFactor: 1 / 5,
+          shape: Rectangle(),
         ),
       ],
     ),
@@ -1209,8 +1287,30 @@ const flagIndProperties = FlagProperties(
       shape: Circle(),
       children: [
         ElementsProperties(
-          [Color(0xffffffff), Color(0xff06038D)],
+          [Color(0xffffffff)],
           heightFactor: 160 / 185,
+          shape: Circle(),
+          children: [
+            ElementsProperties(
+              [Color(0xff06038D)],
+              heightFactor: 1.1,
+              shape: Star(points: 24, radiusFactor: 0.8),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffffff)],
+                  heightFactor: 0.89,
+                  shape: Circle(),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xff06038D)],
+                      angle: 22.5,
+                      shape: Star(points: 24, radiusFactor: 0.25),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     ),
@@ -1230,8 +1330,9 @@ const flagMdvProperties = FlagProperties(
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
+          x: 0.12,
           heightFactor: 16 / 24,
-          shape: Moon(),
+          shape: Moon(radius: 1, x: 0.38),
         ),
       ],
     ),
@@ -1591,7 +1692,7 @@ const flagTwnProperties = FlagProperties(
         ElementsProperties(
           [Color(0xffffffff)],
           heightFactor: 3 / 4,
-          angle: 50,
+          angle: 15,
           shape: Star(points: 12, radiusFactor: 1 / 2),
           children: [
             ElementsProperties(
@@ -1680,93 +1781,11 @@ const flagTuvProperties = FlagProperties(
       "https://wikipedia.org/wiki/File:Flag_of_Tuvalu_(construction_sheet).svg",
 );
 
-/// Flag properties of country Aruba (AW).
-const flagAbwProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff418FDE), ratio: 12),
-    ColorsProperties(Color(0xffF7D417)),
-    ColorsProperties(Color(0xff418FDE)),
-    ColorsProperties(Color(0xffF7D417)),
-    ColorsProperties(Color(0xff418FDE), ratio: 3),
-  ],
-  elementsProperties: [
-    ElementsProperties(
-      [Color(0xffffffff)],
-      x: -0.705,
-      y: -0.56,
-      heightFactor: 0.33,
-      angle: 45,
-      shape: Star(points: 4, radiusFactor: 0.35),
-      children: [
-        ElementsProperties(
-          [Color(0xffEF3340)],
-          angle: 45,
-          shape: Star(points: 4, radiusFactor: 0.35),
-        ),
-      ],
-    ),
-  ],
-  url: "https://en.wikipedia.org/wiki/File:Flag_of_Aruba_construction.svg",
-);
-
-/// Flag properties of country Switzerland (CH).
-const flagCheProperties = FlagProperties(
-  [ColorsProperties(Color(0xffff0000))],
-  aspectRatio: 1,
-  elementsProperties: [
-    ElementsProperties(
-      [Color(0xffffffff)],
-      heightFactor: 20 / 32,
-      shape: Rectangle(aspectRatio: 6 / 20),
-    ),
-    ElementsProperties(
-      [Color(0xffffffff)],
-      heightFactor: 6 / 32,
-      shape: Rectangle(aspectRatio: 20 / 6),
-    ),
-  ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Switzerland_(construction_sheet).svg",
-);
-
-/// Flag properties of country Monaco (MC).
-const flagMcoProperties = FlagProperties(
-  [ColorsProperties(Color(0xffCE1126)), ColorsProperties(Color(0xffffffff))],
-  aspectRatio: 5 / 4,
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Monaco_(construction_sheet).svg",
-);
-
-/// Flag properties of country Malta (MT).
-const flagMltProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffCF142B)),
-  ],
-  isHorizontalStriped: false,
-  elementsProperties: [
-    ElementsProperties(
-      [
-        Color(0xffCF142B),
-        Color(0xff000000),
-        Color(0xffffffff),
-        Color(0xffa0a0a0),
-      ],
-      x: -0.75,
-      y: -0.625,
-      heightFactor: 112 / 432,
-    ),
-  ],
-  url: "https://wikipedia.org/wiki/File:Flag_of_Malta_(construction_sheet).svg",
-);
-
 /// Flag properties of country Norway (NO).
 const flagNorProperties = FlagProperties(
   [
     ColorsProperties(Color(0xffBA0C2F), ratio: 6),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff002664), ratio: 2),
-    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xffffffff), ratio: 4),
     ColorsProperties(Color(0xffBA0C2F), ratio: 6),
   ],
   aspectRatio: 11 / 8,
@@ -1775,7 +1794,7 @@ const flagNorProperties = FlagProperties(
       [Color(0xffffffff)],
       x: -1 / 3,
       widthFactor: 4 / 22,
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 1 / 4),
       children: [
         ElementsProperties(
           [Color(0xff002664)],
@@ -1783,6 +1802,12 @@ const flagNorProperties = FlagProperties(
           shape: Rectangle(),
         ),
       ],
+    ),
+    ElementsProperties(
+      [Color(0xff002664)],
+      heightFactor: 2 / 16,
+      widthFactor: 1,
+      shape: Rectangle(),
     ),
   ],
   url:
@@ -1794,24 +1819,3 @@ const flagBvtProperties = flagNorProperties; // TODO!
 
 /// Flag properties of country Svalbard and Jan Mayen (SJ).
 const flagSjmProperties = flagNorProperties; // TODO!
-
-/// Flag properties of country Saint Lucia (LC).
-const flagLcaProperties = FlagProperties(
-  [ColorsProperties(Color(0xff65cfff))],
-  aspectRatio: 2,
-  elementsProperties: [
-    ElementsProperties(
-      [Color(0xffffffff)],
-      heightFactor: 0.824,
-      widthFactor: 1 / 2,
-      angle: 90,
-      children: [
-        ElementsProperties(
-          [Color(0xff000000), Color(0xffffce00)],
-        ),
-      ],
-    ),
-  ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Saint_Lucia_(construction_sheet).svg",
-);
