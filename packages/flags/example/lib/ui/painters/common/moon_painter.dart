@@ -32,6 +32,10 @@ final class MoonPainter extends ElementsPainter {
         Path.combine(PathOperation.difference, mainPath, secondPath);
     canvas.drawPath(crescentPath, createPaintWithColor());
 
-    return (canvas: canvas, path: crescentPath, children: property.children);
+    return (
+      canvas: canvas,
+      bounds: crescentPath.getBounds(),
+      children: property.children
+    );
   }
 }

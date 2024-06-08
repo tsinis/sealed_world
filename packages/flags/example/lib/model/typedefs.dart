@@ -15,4 +15,4 @@ typedef FlagWidgetBuilder<T extends Widget> = T? Function(
   double aspectRatio,
 );
 
-typedef FlagParentPath = ({Canvas canvas, Path path, ElementsProps children});
+typedef FlagParentPath = ({Canvas canvas, Rect bounds, ElementsProps children});

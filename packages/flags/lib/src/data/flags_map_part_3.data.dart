@@ -110,7 +110,7 @@ const flagTunProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       heightFactor: 1 / 2,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [Color(0xffe70013)],
@@ -378,7 +378,7 @@ const flagPlwProperties = FlagProperties(
       [Color(0xffffde00)],
       x: -0.125,
       heightFactor: 6 / 10,
-      shape: Circle(),
+      shape: Ellipse(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Palau_(construction_sheet).svg",
@@ -501,7 +501,7 @@ const flagEthProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff006bc6)],
       heightFactor: 40 / 60,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties([Color(0xffffc621)], heightFactor: 32 / 40),
       ],
@@ -666,7 +666,7 @@ const flagPrtProperties = FlagProperties(
       [Color(0xffffff00)],
       x: -1 / 3,
       heightFactor: 1 / 3,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [
@@ -761,7 +761,7 @@ const flagKazProperties = FlagProperties(
       x: -0.1,
       y: 0.1,
       heightFactor: 1 / 2,
-      shape: Circle(),
+      shape: Ellipse(),
     ),
   ],
   url: "https://www.vexilla-mundi.com/kazakhstan/kazakhstan_sheet.png",
@@ -1394,7 +1394,7 @@ const flagGrlProperties = FlagProperties(
       [Color(0xffffffff)],
       x: -0.222,
       heightFactor: 8 / 12,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties([Color(0xffd00c33)], y: -1, heightFactor: 1 / 2),
       ],

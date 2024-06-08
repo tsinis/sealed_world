@@ -6,7 +6,7 @@ import "package:flags/src/data/flags_map_part_3.data.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "ui/flags/basic_flag.dart";
-import "ui/flags/disc_flag.dart";
+import "ui/flags/ellipse_flag.dart";
 import "ui/flags/moon_flag.dart";
 import "ui/flags/multi_element_flag.dart";
 import "ui/flags/rectangle_flag.dart";
@@ -37,7 +37,7 @@ const flagsMap = {
   CountryBen(): RectangleFlag(flagBenProperties),
   CountryBes(): BasicFlag(flagBesProperties),
   CountryBfa(): StarFlag(flagBfaProperties),
-  CountryBgd(): DiscFlag(flagBgdProperties),
+  CountryBgd(): EllipseFlag(flagBgdProperties),
   CountryBgr(): BasicFlag(flagBgrProperties),
   CountryBhr(): TriangleFlag(flagBhrProperties),
   CountryBhs(): TriangleFlag(flagBhsProperties),
@@ -119,7 +119,7 @@ const flagsMap = {
   CountryHun(): BasicFlag(flagHunProperties),
   CountryIdn(): BasicFlag(flagIdnProperties),
   CountryImn(): BasicFlag(flagImnProperties),
-  CountryInd(): DiscFlag(flagIndProperties),
+  CountryInd(): EllipseFlag(flagIndProperties),
   CountryIot(): BasicFlag(flagIotProperties),
   CountryIrl(): BasicFlag(flagIrlProperties),
   CountryIrn(): BasicFlag(flagIrnProperties),
@@ -130,7 +130,7 @@ const flagsMap = {
   CountryJam(): BasicFlag(flagJamProperties),
   CountryJey(): BasicFlag(flagJeyProperties),
   CountryJor(): TriangleFlag(flagJorProperties),
-  CountryJpn(): DiscFlag(flagJpnProperties),
+  CountryJpn(): EllipseFlag(flagJpnProperties),
   CountryKaz(): BasicFlag(flagKazProperties),
   CountryKen(): BasicFlag(flagKenProperties),
   CountryKgz(): BasicFlag(flagKgzProperties),
@@ -139,7 +139,7 @@ const flagsMap = {
   CountryKna(): BasicFlag(flagKnaProperties),
   CountryKor(): BasicFlag(flagKorProperties),
   CountryKwt(): BasicFlag(flagKwtProperties),
-  CountryLao(): DiscFlag(flagLaoProperties),
+  CountryLao(): EllipseFlag(flagLaoProperties),
   CountryLbn(): BasicFlag(flagLbnProperties),
   CountryLbr(): RectangleFlag(flagLbrProperties),
   CountryLby(): MoonFlag(flagLbyProperties),
@@ -176,7 +176,7 @@ const flagsMap = {
   CountryMyt(): BasicFlag(flagMytProperties),
   CountryNam(): BasicFlag(flagNamProperties),
   CountryNcl(): BasicFlag(flagNclProperties),
-  CountryNer(): DiscFlag(flagNerProperties),
+  CountryNer(): EllipseFlag(flagNerProperties),
   CountryNfk(): BasicFlag(flagNfkProperties),
   CountryNga(): BasicFlag(flagNgaProperties),
   CountryNic(): BasicFlag(flagNicProperties),
@@ -192,13 +192,13 @@ const flagsMap = {
   CountryPcn(): BasicFlag(flagPcnProperties),
   CountryPer(): BasicFlag(flagPerProperties),
   CountryPhl(): MultiElementFlag(flagPhlProperties),
-  CountryPlw(): DiscFlag(flagPlwProperties),
+  CountryPlw(): EllipseFlag(flagPlwProperties),
   CountryPng(): BasicFlag(flagPngProperties),
   CountryPol(): BasicFlag(flagPolProperties),
   CountryPri(): TriangleFlag(flagPriProperties),
-  CountryPrk(): DiscFlag(flagPrkProperties),
+  CountryPrk(): EllipseFlag(flagPrkProperties),
   CountryPrt(): BasicFlag(flagPrtProperties),
-  CountryPry(): DiscFlag(flagPryProperties),
+  CountryPry(): EllipseFlag(flagPryProperties),
   CountryPse(): TriangleFlag(flagPseProperties),
   CountryPyf(): BasicFlag(flagPyfProperties),
   CountryQat(): MultiElementFlag(flagQatProperties),
@@ -240,7 +240,7 @@ const flagsMap = {
   CountryTls(): TriangleFlag(flagTlsProperties),
   CountryTon(): MultiElementFlag(flagTonProperties),
   CountryTto(): BasicFlag(flagTtoProperties),
-  CountryTun(): DiscFlag(flagTunProperties),
+  CountryTun(): EllipseFlag(flagTunProperties),
   CountryTur(): MoonFlag(flagTurProperties),
   CountryTuv(): BasicFlag(flagTuvProperties),
   CountryTwn(): RectangleFlag(flagTwnProperties),

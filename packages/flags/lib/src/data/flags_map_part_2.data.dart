@@ -282,12 +282,12 @@ const flagArgProperties = FlagProperties(
         ElementsProperties(
           [Color(0xff85340a)],
           heightFactor: 0.4,
-          shape: Circle(),
+          shape: Ellipse(),
           children: [
             ElementsProperties(
               [Color(0xfff6b40e)],
               heightFactor: 0.9,
-              shape: Circle(),
+              shape: Ellipse(),
             ),
           ],
         ),
@@ -770,7 +770,7 @@ const flagLaoProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       heightFactor: 8 / 20,
-      shape: Circle(),
+      shape: Ellipse(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Laos_(construction_sheet).svg",
@@ -912,7 +912,7 @@ const flagUryProperties = FlagProperties(
                 ElementsProperties(
                   [Color(0xfffcd116)],
                   heightFactor: 1 / 3,
-                  shape: Circle(),
+                  shape: Ellipse(),
                 ),
               ],
             ),
@@ -1100,7 +1100,7 @@ const flagNerProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffe05206)],
       heightFactor: 1 / 4,
-      shape: Circle(),
+      shape: Ellipse(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Niger_(construction).svg",
@@ -1218,7 +1218,7 @@ const flagBgdProperties = FlagProperties(
       [Color(0xfff42a41)],
       x: -0.1,
       heightFactor: 8 / 12,
-      shape: Circle(),
+      shape: Ellipse(),
     ),
   ],
   url:
@@ -1618,7 +1618,7 @@ const flagBraProperties = FlagProperties(
         ElementsProperties(
           [Color(0xff2b49a3)],
           heightFactor: 350 / 530,
-          shape: Circle(),
+          shape: Ellipse(),
           children: [
             ElementsProperties(
               [Color(0xffffffff), Color(0xff229e45)],
@@ -2108,7 +2108,7 @@ const flagNamProperties = FlagProperties(
         ElementsProperties(
           [Color(0xff002F6C)],
           heightFactor: 1 / 2,
-          shape: Circle(),
+          shape: Ellipse(),
         ),
       ],
     ),

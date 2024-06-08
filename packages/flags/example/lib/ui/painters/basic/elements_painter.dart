@@ -5,7 +5,7 @@ import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
 import "../../../model/typedefs.dart";
-import "../common/circle_painter.dart";
+import "../common/ellipse_painter.dart";
 import "../common/moon_painter.dart";
 import "../common/rectangle_painter.dart";
 import "../common/star_painter.dart";
@@ -33,7 +33,7 @@ abstract base class ElementsPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final parent = paintFlagElements(canvas, size);
-    paintChild(parent.canvas, parent.path, parent.children);
+    paintChild(parent.canvas, parent.bounds, parent.children);
   }
 
   @protected
@@ -44,15 +44,12 @@ abstract base class ElementsPainter extends CustomPainter {
   }
 
   @protected
-  void paintChild(Canvas canvas, Path parentPath, ElementsProps children) {
+  void paintChild(Canvas canvas, Rect parentBounds, ElementsProps children) {
     final child = children.firstOrNull;
     final childShape = child?.shape;
-    if (child == null || childShape == null) return; // TODO!
+    if (child == null || childShape == null) return;
 
     final shapePainter = painter(childShape);
-    final parentBounds = parentPath.getBounds();
-
-    /// if (parentPath != null) canvas.clipPath(parentPath); // TODO?
     canvas
       ..save()
       ..translate(parentBounds.left, parentBounds.top);
@@ -65,7 +62,7 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   ElementsPainter Function(ElementsProps?, double) painter(Shape childShape) =>
       childShape.whenConst(
-        circle: CirclePainter.new,
+        ellipse: EllipsePainter.new,
         moon: MoonPainter.new,
         rectangle: RectanglePainter.new,
         star: StarPainter.new,

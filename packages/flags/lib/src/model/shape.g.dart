@@ -9,14 +9,14 @@ extension $ShapeExtension on Shape {
     required T Function() orElse,
     T Function()? star,
     T Function()? triangle,
-    T Function()? circle,
+    T Function()? ellipse,
     T Function()? rectangle,
     T Function()? moon,
   }) =>
       switch (this) {
         Star() => star?.call() ?? orElse(),
         Triangle() => triangle?.call() ?? orElse(),
-        Circle() => circle?.call() ?? orElse(),
+        Ellipse() => ellipse?.call() ?? orElse(),
         Rectangle() => rectangle?.call() ?? orElse(),
         Moon() => moon?.call() ?? orElse(),
       };
@@ -24,14 +24,14 @@ extension $ShapeExtension on Shape {
   T when<T>({
     required T Function() star,
     required T Function() triangle,
-    required T Function() circle,
+    required T Function() ellipse,
     required T Function() rectangle,
     required T Function() moon,
   }) =>
       switch (this) {
         Star() => star(),
         Triangle() => triangle(),
-        Circle() => circle(),
+        Ellipse() => ellipse(),
         Rectangle() => rectangle(),
         Moon() => moon(),
       };
@@ -39,14 +39,14 @@ extension $ShapeExtension on Shape {
   T whenConst<T>({
     required T star,
     required T triangle,
-    required T circle,
+    required T ellipse,
     required T rectangle,
     required T moon,
   }) =>
       switch (this) {
         Star() => star,
         Triangle() => triangle,
-        Circle() => circle,
+        Ellipse() => ellipse,
         Rectangle() => rectangle,
         Moon() => moon,
       };
@@ -55,14 +55,14 @@ extension $ShapeExtension on Shape {
     required T orElse,
     T? star,
     T? triangle,
-    T? circle,
+    T? ellipse,
     T? rectangle,
     T? moon,
   }) =>
       switch (this) {
         Star() => star ?? orElse,
         Triangle() => triangle ?? orElse,
-        Circle() => circle ?? orElse,
+        Ellipse() => ellipse ?? orElse,
         Rectangle() => rectangle ?? orElse,
         Moon() => moon ?? orElse,
       };
@@ -70,14 +70,14 @@ extension $ShapeExtension on Shape {
   T? whenOrNull<T>({
     T Function()? star,
     T Function()? triangle,
-    T Function()? circle,
+    T Function()? ellipse,
     T Function()? rectangle,
     T Function()? moon,
   }) =>
       switch (this) {
         Star() => star?.call(),
         Triangle() => triangle?.call(),
-        Circle() => circle?.call(),
+        Ellipse() => ellipse?.call(),
         Rectangle() => rectangle?.call(),
         Moon() => moon?.call(),
       };
@@ -85,14 +85,14 @@ extension $ShapeExtension on Shape {
   T? whenConstOrNull<T>({
     T? star,
     T? triangle,
-    T? circle,
+    T? ellipse,
     T? rectangle,
     T? moon,
   }) =>
       switch (this) {
         Star() => star,
         Triangle() => triangle,
-        Circle() => circle,
+        Ellipse() => ellipse,
         Rectangle() => rectangle,
         Moon() => moon,
       };

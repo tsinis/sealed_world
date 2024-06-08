@@ -72,7 +72,7 @@ const flagDmaProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffE4002B)],
       heightFactor: 60 / 120,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [Color(0xff009A44)],
@@ -180,7 +180,7 @@ const flagPhlProperties = FlagProperties(
                     ElementsProperties(
                       [Color(0xfffcd116)],
                       heightFactor: 0.64,
-                      shape: Circle(),
+                      shape: Ellipse(),
                     ),
                   ],
                 ),
@@ -269,12 +269,12 @@ const flagRwaProperties = FlagProperties(
         ElementsProperties(
           [Color(0xff00a1de)],
           heightFactor: 1 / 3,
-          shape: Circle(),
+          shape: Ellipse(),
           children: [
             ElementsProperties(
               [Color(0xffE5BE01)],
               heightFactor: 0.8,
-              shape: Circle(),
+              shape: Ellipse(),
             ),
           ],
         ),
@@ -412,7 +412,7 @@ const flagJpnProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffbc002d)],
       heightFactor: 12 / 20,
-      shape: Circle(),
+      shape: Ellipse(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Japan_(construction_sheet).svg",
@@ -799,22 +799,22 @@ const flagPryProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff000000)],
       heightFactor: 0.26,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
           heightFactor: 0.92,
-          shape: Circle(),
+          shape: Ellipse(),
           children: [
             ElementsProperties(
               [Color(0xff000000)],
               heightFactor: 0.9,
-              shape: Circle(),
+              shape: Ellipse(),
               children: [
                 ElementsProperties(
                   [Color(0xffffffff)],
                   heightFactor: 0.96,
-                  shape: Circle(),
+                  shape: Ellipse(),
                   children: [
                     ElementsProperties(
                       [
@@ -973,7 +973,7 @@ const flagKorProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffcd2e3a)],
       heightFactor: 24 / 48,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [Color(0xff0047a0)],
@@ -1054,7 +1054,7 @@ const flagPrkProperties = FlagProperties(
       [Color(0xffffffff)],
       x: -1 / 3,
       heightFactor: 16 / 36,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [Color(0xffED1C27)],
@@ -1284,12 +1284,12 @@ const flagIndProperties = FlagProperties(
     ElementsProperties(
       [Color(0xff06038D)],
       heightFactor: 185 / 600,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
           heightFactor: 160 / 185,
-          shape: Circle(),
+          shape: Ellipse(),
           children: [
             ElementsProperties(
               [Color(0xff06038D)],
@@ -1299,7 +1299,7 @@ const flagIndProperties = FlagProperties(
                 ElementsProperties(
                   [Color(0xffffffff)],
                   heightFactor: 0.89,
-                  shape: Circle(),
+                  shape: Ellipse(),
                   children: [
                     ElementsProperties(
                       [Color(0xff06038D)],
@@ -1473,7 +1473,7 @@ const flagUgaProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       heightFactor: 1 / 3,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [
@@ -1660,7 +1660,7 @@ const flagBlzProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       heightFactor: 210 / 360,
-      shape: Circle(),
+      shape: Ellipse(),
       children: [
         ElementsProperties(
           [
@@ -1698,12 +1698,12 @@ const flagTwnProperties = FlagProperties(
             ElementsProperties(
               [Color(0xff0029CC)],
               heightFactor: 0.6,
-              shape: Circle(),
+              shape: Ellipse(),
               children: [
                 ElementsProperties(
                   [Color(0xffffffff)],
                   heightFactor: 0.85,
-                  shape: Circle(),
+                  shape: Ellipse(),
                 ),
               ],
             ),

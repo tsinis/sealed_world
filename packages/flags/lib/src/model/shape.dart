@@ -24,8 +24,8 @@ class Star implements Shape {
   final double radiusFactor;
 }
 
-class Circle implements Shape {
-  const Circle();
+class Ellipse implements Shape {
+  const Ellipse();
 }
 
 class Moon implements Shape {

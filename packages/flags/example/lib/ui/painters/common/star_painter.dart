@@ -41,6 +41,10 @@ final class StarPainter extends ElementsPainter {
         ..restore();
     }
 
-    return (canvas: canvas, path: path, children: property.children);
+    return (
+      canvas: canvas,
+      bounds: path.getBounds(),
+      children: property.children
+    );
   }
 }
