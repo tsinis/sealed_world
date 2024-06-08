@@ -106,18 +106,20 @@ const flagChlProperties = FlagProperties(
 /// Flag properties of country American Samoa (AS).
 const flagAsmProperties = FlagProperties(
   [ColorsProperties(Color(0xff00205b))],
-  aspectRatio: 19 / 10,
+  aspectRatio: 2,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffef3340)],
-      y: 1,
+      x: 1,
+      y: -1,
       widthFactor: 1,
       angle: 180,
       shape: Triangle(),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
-          y: 1,
+          x: 1,
+          y: -0.9,
           heightFactor: 0.9,
           widthFactor: 0.9,
           angle: 180,
@@ -240,12 +242,24 @@ const flagTcdProperties = FlagProperties(
 
 /// Flag properties of country Burundi (BI).
 const flagBdiProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff18b637)),
-    ColorsProperties(Color(0xffcf0921)),
-    ColorsProperties(Color(0xffffffff)),
-  ],
+  [ColorsProperties(Color(0xff18b637))],
   aspectRatio: 5 / 3,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffcf0921)],
+      y: -0.5,
+      heightFactor: 1 / 2,
+      angle: 90,
+      shape: Triangle(),
+    ),
+    ElementsProperties(
+      [Color(0xffcf0921)],
+      y: 1,
+      heightFactor: 1 / 2,
+      angle: 270,
+      shape: Triangle(),
+    ),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Burundi_(construction_sheet).svg",
 );
@@ -1244,9 +1258,117 @@ const flagUzbProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
-      x: -0.8,
-      y: -0.9,
+      x: -0.72,
+      y: -0.68,
       heightFactor: 30 / 125,
+      shape: Moon(radius: 1, x: 0.31),
+      children: [
+        ElementsProperties(
+          [Color(0xffffffff)],
+          x: 1.75,
+          y: 0.8,
+          heightFactor: 0.2,
+          shape: Star(),
+          children: [
+            ElementsProperties(
+              [Color(0xffffffff)],
+              x: 4.2,
+              y: 0.1,
+              heightFactor: 1.1,
+              shape: Star(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffffff)],
+                  x: 4.2,
+                  y: 0.1,
+                  heightFactor: 1.1,
+                  shape: Star(),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xffffffff)],
+                      x: 4.2,
+                      y: 0.1,
+                      heightFactor: 1.1,
+                      shape: Star(),
+                      children: [
+                        ElementsProperties(
+                          [Color(0xffffffff)],
+                          x: 4.2,
+                          y: 0.1,
+                          heightFactor: 1.1,
+                          shape: Star(),
+                          children: [
+                            ElementsProperties(
+                              [Color(0xffffffff)],
+                              y: -4.4,
+                              heightFactor: 1.1,
+                              shape: Star(),
+                              children: [
+                                ElementsProperties(
+                                  [Color(0xffffffff)],
+                                  x: -4.2,
+                                  y: 0.1,
+                                  heightFactor: 1.1,
+                                  shape: Star(),
+                                  children: [
+                                    ElementsProperties(
+                                      [Color(0xffffffff)],
+                                      x: -4.2,
+                                      y: 0.1,
+                                      heightFactor: 1.1,
+                                      shape: Star(),
+                                      children: [
+                                        ElementsProperties(
+                                          [Color(0xffffffff)],
+                                          x: -4.3,
+                                          y: 0.1,
+                                          heightFactor: 1.1,
+                                          shape: Star(),
+                                          children: [
+                                            ElementsProperties(
+                                              [Color(0xffffffff)],
+                                              x: 4.3,
+                                              y: -4.5,
+                                              heightFactor: 1.1,
+                                              shape: Star(),
+                                              children: [
+                                                ElementsProperties(
+                                                  [Color(0xffffffff)],
+                                                  x: 4.3,
+                                                  y: 0.1,
+                                                  heightFactor: 1.1,
+                                                  shape: Star(),
+                                                  children: [
+                                                    ElementsProperties(
+                                                      [Color(0xffffffff)],
+                                                      x: 4.3,
+                                                      y: 0.1,
+                                                      heightFactor: 1.1,
+                                                      shape: Star(),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
     ),
   ],
   url:
@@ -1776,7 +1898,84 @@ const flagVenProperties = FlagProperties(
     ColorsProperties(Color(0xffcf142b)),
   ],
   elementsProperties: [
-    ElementsProperties([Color(0xffffffff)], heightFactor: 0.3),
+    ElementsProperties(
+      [Color(0xffffffff)],
+      x: -0.07,
+      y: -0.172,
+      heightFactor: 0.08,
+      angle: -10,
+      shape: Star(),
+      children: [
+        ElementsProperties(
+          [Color(0xffffffff)],
+          x: 2.75,
+          y: 0.08,
+          heightFactor: 1.1,
+          angle: 10,
+          shape: Star(),
+          children: [
+            ElementsProperties(
+              [Color(0xffffffff)],
+              x: 2.5,
+              y: 1.05,
+              heightFactor: 1.13,
+              angle: 30,
+              shape: Star(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffffff)],
+                  x: -7.6,
+                  y: 0.1,
+                  heightFactor: 1.13,
+                  angle: -30,
+                  shape: Star(),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xffffffff)],
+                      x: -2,
+                      y: 1.8,
+                      heightFactor: 1.13,
+                      angle: -45,
+                      shape: Star(),
+                      children: [
+                        ElementsProperties(
+                          [Color(0xffffffff)],
+                          x: 11.2,
+                          y: 0.1,
+                          heightFactor: 1.13,
+                          angle: 45,
+                          shape: Star(),
+                          children: [
+                            ElementsProperties(
+                              [Color(0xffffffff)],
+                              x: 1.32,
+                              y: 2.25,
+                              heightFactor: 1.1,
+                              angle: -2,
+                              shape: Star(),
+                              children: [
+                                ElementsProperties(
+                                  [Color(0xffffffff)],
+                                  x: -13.7,
+                                  y: 0.1,
+                                  heightFactor: 1.1,
+                                  angle: 2,
+                                  shape: Star(),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Venezuela_(construction_sheet).svg",
@@ -1983,139 +2182,4 @@ const flagMmrProperties = FlagProperties(
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Myanmar_(construction_sheet).svg",
-);
-
-/// Flag properties of country Central African Republic (CF).
-const flagCafProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff003082)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff289728)),
-    ColorsProperties(Color(0xffffce00)),
-  ],
-  elementsProperties: [
-    ElementsProperties(
-      [Color(0xffd21034)],
-      widthFactor: 10 / 60,
-      shape: Rectangle(aspectRatio: 1 / 4),
-    ),
-    ElementsProperties(
-      [Color(0xffffce00)],
-      x: -2 / 3,
-      y: -0.73,
-      heightFactor: 9 / 40,
-      shape: Star(),
-    ),
-  ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_the_Central_African_Republic_(construction_sheet).svg",
-);
-
-/// Flag properties of country Barbados (BB).
-const flagBrbProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff00267f)),
-    ColorsProperties(Color(0xffffc726)),
-    ColorsProperties(Color(0xff00267f)),
-  ],
-  isHorizontalStriped: false,
-  elementsProperties: [
-    ElementsProperties([Color(0xff000000)], heightFactor: 1 / 2),
-  ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Barbados_(construction_sheet).png",
-);
-
-/// Flag properties of country British Virgin Islands (VG).
-const flagVgbProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff000066)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff006129)),
-    ColorsProperties(Color(0xffffc72c)),
-    ColorsProperties(Color(0xffffc6b5)),
-    ColorsProperties(Color(0xff9c5100)),
-    ColorsProperties(Color(0xff000000)),
-  ],
-  aspectRatio: 2,
-  url:
-      "https://www.vexilla-mundi.com/british_virgin_islands/british_virgin_islands_sheet.png",
-);
-
-/// Flag properties of country Tonga (TO).
-const flagTonProperties = FlagProperties(
-  [ColorsProperties(Color(0xffc10000))],
-  aspectRatio: 2,
-  elementsProperties: [
-    ElementsProperties(
-      [Color(0xffffffff)],
-      x: -1,
-      y: -1,
-      heightFactor: 1 / 2,
-      shape: Rectangle(aspectRatio: 1.66),
-      children: [
-        ElementsProperties(
-          [Color(0xffc10000)],
-          heightFactor: 9 / 12,
-          shape: Rectangle(aspectRatio: 7 / 20),
-        ),
-      ],
-    ),
-    ElementsProperties(
-      [Color(0x00ffffff)],
-      x: -1,
-      y: -1,
-      heightFactor: 1 / 2,
-      shape: Rectangle(aspectRatio: 1.66),
-      children: [
-        ElementsProperties(
-          [Color(0xffc10000)],
-          heightFactor: 3 / 12,
-          shape: Rectangle(aspectRatio: 21 / 7),
-        ),
-      ],
-    ),
-  ],
-  url: "https://wikipedia.org/wiki/File:Flag_of_Tonga_(construction_sheet).svg",
-);
-
-/// Flag properties of country Tunisia (TN).
-const flagTunProperties = FlagProperties(
-  [ColorsProperties(Color(0xffe70013))],
-  elementsProperties: [
-    ElementsProperties(
-      [Color(0xffffffff)],
-      heightFactor: 1 / 2,
-      shape: Circle(),
-      children: [
-        ElementsProperties(
-          [Color(0xffe70013)],
-          heightFactor: 15 / 20,
-          shape: Moon(radius: 0.8, x: 0.26),
-          children: [
-            ElementsProperties(
-              [Color(0xffe70013)],
-              x: 0.38,
-              heightFactor: 0.62,
-              angle: -18,
-              shape: Star(),
-            ),
-          ],
-        ),
-      ],
-    ),
-  ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Tunisia_(construction_sheet).svg",
-);
-
-/// Flag properties of country Angola (AO).
-const flagAgoProperties = FlagProperties(
-  [ColorsProperties(Color(0xffff0000)), ColorsProperties(Color(0xff000000))],
-  elementsProperties: [
-    ElementsProperties([Color(0xffFFCD00)], heightFactor: 1 / 2),
-  ],
-  url: "https://www.vexilla-mundi.com/angola/angola_sheet.png",
 );

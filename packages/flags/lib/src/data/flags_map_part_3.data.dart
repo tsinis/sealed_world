@@ -6,6 +6,142 @@ import "../model/flag_properties.dart";
 import "../model/shape.dart";
 
 // ignore_for_file: prefer-static-class
+
+/// Flag properties of country Central African Republic (CF).
+const flagCafProperties = FlagProperties(
+  [
+    ColorsProperties(Color(0xff003082)),
+    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xff289728)),
+    ColorsProperties(Color(0xffffce00)),
+  ],
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffd21034)],
+      widthFactor: 10 / 60,
+      shape: Rectangle(aspectRatio: 1 / 4),
+    ),
+    ElementsProperties(
+      [Color(0xffffce00)],
+      x: -2 / 3,
+      y: -0.73,
+      heightFactor: 9 / 40,
+      shape: Star(),
+    ),
+  ],
+  url:
+      "https://wikipedia.org/wiki/File:Flag_of_the_Central_African_Republic_(construction_sheet).svg",
+);
+
+/// Flag properties of country Barbados (BB).
+const flagBrbProperties = FlagProperties(
+  [
+    ColorsProperties(Color(0xff00267f)),
+    ColorsProperties(Color(0xffffc726)),
+    ColorsProperties(Color(0xff00267f)),
+  ],
+  isHorizontalStriped: false,
+  elementsProperties: [
+    ElementsProperties([Color(0xff000000)], heightFactor: 1 / 2),
+  ],
+  url:
+      "https://wikipedia.org/wiki/File:Flag_of_Barbados_(construction_sheet).png",
+);
+
+/// Flag properties of country British Virgin Islands (VG).
+const flagVgbProperties = FlagProperties(
+  [
+    ColorsProperties(Color(0xff000066)),
+    ColorsProperties(Color(0xff012169)),
+    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xffc8102e)),
+    ColorsProperties(Color(0xff006129)),
+    ColorsProperties(Color(0xffffc72c)),
+    ColorsProperties(Color(0xffffc6b5)),
+    ColorsProperties(Color(0xff9c5100)),
+    ColorsProperties(Color(0xff000000)),
+  ],
+  aspectRatio: 2,
+  url:
+      "https://www.vexilla-mundi.com/british_virgin_islands/british_virgin_islands_sheet.png",
+);
+
+/// Flag properties of country Tonga (TO).
+const flagTonProperties = FlagProperties(
+  [ColorsProperties(Color(0xffc10000))],
+  aspectRatio: 2,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffffffff)],
+      x: -1,
+      y: -1,
+      heightFactor: 1 / 2,
+      shape: Rectangle(aspectRatio: 1.66),
+      children: [
+        ElementsProperties(
+          [Color(0xffc10000)],
+          heightFactor: 9 / 12,
+          shape: Rectangle(aspectRatio: 7 / 20),
+        ),
+      ],
+    ),
+    ElementsProperties(
+      [Color(0x00ffffff)],
+      x: -1,
+      y: -1,
+      heightFactor: 1 / 2,
+      shape: Rectangle(aspectRatio: 1.66),
+      children: [
+        ElementsProperties(
+          [Color(0xffc10000)],
+          heightFactor: 3 / 12,
+          shape: Rectangle(aspectRatio: 21 / 7),
+        ),
+      ],
+    ),
+  ],
+  url: "https://wikipedia.org/wiki/File:Flag_of_Tonga_(construction_sheet).svg",
+);
+
+/// Flag properties of country Tunisia (TN).
+const flagTunProperties = FlagProperties(
+  [ColorsProperties(Color(0xffe70013))],
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffffffff)],
+      heightFactor: 1 / 2,
+      shape: Circle(),
+      children: [
+        ElementsProperties(
+          [Color(0xffe70013)],
+          heightFactor: 15 / 20,
+          shape: Moon(radius: 0.8, x: 0.26),
+          children: [
+            ElementsProperties(
+              [Color(0xffe70013)],
+              x: 0.38,
+              heightFactor: 0.62,
+              angle: -18,
+              shape: Star(),
+            ),
+          ],
+        ),
+      ],
+    ),
+  ],
+  url:
+      "https://wikipedia.org/wiki/File:Flag_of_Tunisia_(construction_sheet).svg",
+);
+
+/// Flag properties of country Angola (AO).
+const flagAgoProperties = FlagProperties(
+  [ColorsProperties(Color(0xffff0000)), ColorsProperties(Color(0xff000000))],
+  elementsProperties: [
+    ElementsProperties([Color(0xffFFCD00)], heightFactor: 1 / 2),
+  ],
+  url: "https://www.vexilla-mundi.com/angola/angola_sheet.png",
+);
+
 /// Flag properties of country Åland Islands (AX).
 const flagAlaProperties = FlagProperties(
   [
@@ -1426,13 +1562,38 @@ const flagLcaProperties = FlagProperties(
   aspectRatio: 2,
   elementsProperties: [
     ElementsProperties(
-      [Color(0xffffffff)],
-      heightFactor: 0.824,
-      widthFactor: 1 / 2,
-      angle: 90,
+      [Color(0xff65cfff)],
+      y: 4.5,
+      heightFactor: 0.82,
+      widthFactor: 1 / 3,
+      shape: Rectangle(),
       children: [
         ElementsProperties(
-          [Color(0xff000000), Color(0xffffce00)],
+          [Color(0xffffffff)],
+          angle: 270,
+          shape: Triangle(),
+          children: [
+            ElementsProperties(
+              [Color(0xff000000)],
+              x: 0.0666,
+              y: 1,
+              heightFactor: 0.87,
+              widthFactor: 0.87,
+              angle: 270,
+              shape: Triangle(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffce00)],
+                  x: -0.08,
+                  y: 1,
+                  heightFactor: 0.57,
+                  widthFactor: 1.155,
+                  angle: 270,
+                  shape: Triangle(),
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     ),

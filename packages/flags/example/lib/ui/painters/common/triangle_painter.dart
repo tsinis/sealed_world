@@ -9,7 +9,16 @@ final class TrianglePainter extends ElementsPainter {
   const TrianglePainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentPath paintFlagElements(Canvas canvas, Size size) {
+  FlagParentPath paintFlagElements(Canvas canvas, Size size) =>
+      switch (property.angle ?? 0) {
+        0 => _leftToRightTriangle(canvas, size),
+        180 => _rightToLeftTriangle(canvas, size),
+        270 => _bottomToTopTriangle(canvas, size),
+        _ => _topToBottomTriangle(canvas, size),
+      };
+
+  /// Czechia like triangle on the flag.
+  FlagParentPath _leftToRightTriangle(Canvas canvas, Size size) {
     final compensation = (1 + aspectRatio / calculateAspectRatio(size)) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
@@ -20,6 +29,58 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset + width, yOffset + height / 2)
       ..lineTo(xOffset, yOffset + height)
       ..close();
+    canvas.drawPath(path, createPaintWithColor());
+
+    return (canvas: canvas, path: path, children: property.children);
+  }
+
+  /// American Samoa like triangle on the flag.
+  FlagParentPath _rightToLeftTriangle(Canvas canvas, Size size) {
+    final compensation = (1 + aspectRatio / calculateAspectRatio(size)) / 2;
+    final width = size.width * (property.widthFactor ?? 1) * compensation;
+    final height = size.height * property.heightFactor;
+    final xOffset = size.width - ((size.width / 2) * (1 - property.x));
+    final yOffset = (size.height / 2) * (property.y + 1);
+    final path = Path()
+      ..moveTo(xOffset, yOffset)
+      ..lineTo(xOffset - width, yOffset + height / 2)
+      ..lineTo(xOffset, yOffset + height)
+      ..close();
+    canvas.drawPath(path, createPaintWithColor());
+
+    return (canvas: canvas, path: path, children: property.children);
+  }
+
+  FlagParentPath _topToBottomTriangle(Canvas canvas, Size size) {
+    final width = size.width * (property.widthFactor ?? 1);
+    final height = size.height * property.heightFactor;
+    final xOffset = size.width * property.x;
+    final yOffset = (size.height / 2) * (property.y + 1) - (height / 2);
+
+    final path = Path()
+      ..moveTo(xOffset, yOffset)
+      ..lineTo(xOffset + width, yOffset)
+      ..lineTo(xOffset + width / 2, yOffset + height)
+      ..close();
+
+    canvas.drawPath(path, createPaintWithColor());
+
+    return (canvas: canvas, path: path, children: property.children);
+  }
+
+  FlagParentPath _bottomToTopTriangle(Canvas canvas, Size size) {
+    final width = size.width * (property.widthFactor ?? 1);
+    final height = size.height * property.heightFactor;
+    final xOffset = size.width * property.x;
+
+    final yOffset = size.height * (1 + property.y) / 2 - height;
+
+    final path = Path()
+      ..moveTo(xOffset, yOffset + height)
+      ..lineTo(xOffset + width, yOffset + height)
+      ..lineTo(xOffset + width / 2, yOffset)
+      ..close();
+
     canvas.drawPath(path, createPaintWithColor());
 
     return (canvas: canvas, path: path, children: property.children);
