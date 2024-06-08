@@ -35,17 +35,17 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     final paint = Paint();
     var position = 0.0;
 
-    if (properties.isHorizontalStriped ?? true) {
+    if (properties.stripeOrientation == StripeOrientation.vertical) {
       for (final property in properties.colors) {
-        final stripeSize = size.height * property.ratio / totalRatio;
-        final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
+        final stripeSize = size.width * property.ratio / totalRatio;
+        final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
         canvas.drawRect(stripe, paint..color = property.color);
         position += stripeSize;
       }
     } else {
       for (final property in properties.colors) {
-        final stripeSize = size.width * property.ratio / totalRatio;
-        final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
+        final stripeSize = size.height * property.ratio / totalRatio;
+        final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
         canvas.drawRect(stripe, paint..color = property.color);
         position += stripeSize;
       }

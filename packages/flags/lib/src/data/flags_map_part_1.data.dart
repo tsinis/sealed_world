@@ -4,6 +4,7 @@ import "../model/colors_properties.dart";
 import "../model/elements_properties.dart";
 import "../model/flag_properties.dart";
 import "../model/shape.dart";
+import "../model/stripe_orientation.dart";
 
 // ignore_for_file: prefer-static-class
 /// Flag properties of country Honduras (HN).
@@ -104,7 +105,7 @@ const flagFraProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffED2939)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_France_(construction_sheet).svg",
 );
@@ -115,7 +116,7 @@ const flagDzaProperties = FlagProperties(
     ColorsProperties(Color(0xff006633)),
     ColorsProperties(Color(0xffffffff)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffD21034)],
@@ -435,7 +436,6 @@ const flagJeyProperties = FlagProperties(
 const flagGumProperties = FlagProperties(
   [ColorsProperties(Color(0xffC62139))],
   aspectRatio: 41 / 22,
-  isHorizontalStriped: null,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffC62139)],
@@ -490,7 +490,7 @@ const flagPakProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff), ratio: 15),
     ColorsProperties(Color(0xff115740), ratio: 45),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
@@ -642,7 +642,7 @@ const flagGtmProperties = FlagProperties(
     ColorsProperties(Color(0xff4997d0)),
   ],
   aspectRatio: 8 / 5,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [
@@ -782,7 +782,7 @@ const flagSlbProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: null,
+  stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   url:
       "https://www.vexilla-mundi.com/solomon_islands/solomon_islands_sheet.png",
 );
@@ -851,7 +851,6 @@ const flagPcnProperties = FlagProperties(
     ColorsProperties(Color(0xff000000)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: null,
   url:
       "https://www.vexilla-mundi.com/pitcairn_islands/pitcairn_island_sheet.png",
 );
@@ -902,7 +901,7 @@ const flagSycProperties = FlagProperties(
     ColorsProperties(Color(0xff007A3A)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: null,
+  stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Seychelles_(construction_sheet).svg",
 );
@@ -1623,7 +1622,7 @@ const flagCivProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff009A44)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Ivory_Coast_(construction_sheet).svg",
 );

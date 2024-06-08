@@ -4,6 +4,7 @@ import "../model/colors_properties.dart";
 import "../model/elements_properties.dart";
 import "../model/flag_properties.dart";
 import "../model/shape.dart";
+import "../model/stripe_orientation.dart";
 
 // ignore_for_file: prefer-static-class
 
@@ -40,7 +41,7 @@ const flagBrbProperties = FlagProperties(
     ColorsProperties(Color(0xffffc726)),
     ColorsProperties(Color(0xff00267f)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties([Color(0xff000000)], heightFactor: 1 / 2),
   ],
@@ -177,7 +178,7 @@ const flagAlaProperties = FlagProperties(
 /// Flag properties of country Republic of the Congo (CG).
 const flagCogProperties = FlagProperties(
   [ColorsProperties(Color(0xffFBDE4A))],
-  isHorizontalStriped: null,
+  stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   elementsProperties: [
     ElementsProperties(
       [Color(0xff009543)],
@@ -205,7 +206,7 @@ const flagMliProperties = FlagProperties(
     ColorsProperties(Color(0xffFCD116)),
     ColorsProperties(Color(0xffCE1126)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url: "https://wikipedia.org/wiki/File:Flag_of_Mali_(construction_sheet).svg",
 );
 
@@ -245,7 +246,7 @@ const flagItaProperties = FlagProperties(
     ColorsProperties(Color(0xffF4F5F0)),
     ColorsProperties(Color(0xffCD212A)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url: "https://wikipedia.org/wiki/File:Flag_of_Italy_(construction_sheet).svg",
 );
 
@@ -586,7 +587,7 @@ const flagSenProperties = FlagProperties(
     ColorsProperties(Color(0xffffff00)),
     ColorsProperties(Color(0xffbc0000)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xff0b7226)],
@@ -660,7 +661,7 @@ const flagPrtProperties = FlagProperties(
     ColorsProperties(Color(0xff006600), ratio: 2),
     ColorsProperties(Color(0xffff0000), ratio: 3),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffff00)],
@@ -706,7 +707,6 @@ const flagJamProperties = FlagProperties(
     ColorsProperties(Color(0xffffcc00)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: null,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Jamaica_(construction_sheet).svg",
 );
@@ -775,7 +775,7 @@ const flagIrlProperties = FlagProperties(
     ColorsProperties(Color(0xffFF883E)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Ireland_(construction_sheet).svg",
 );
@@ -909,7 +909,7 @@ const flagGinProperties = FlagProperties(
     ColorsProperties(Color(0xffFCD116)),
     ColorsProperties(Color(0xff009460)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Guinea_(construction_sheet).svg",
 );
@@ -988,7 +988,7 @@ const flagRouProperties = FlagProperties(
     ColorsProperties(Color(0xffFCD116)),
     ColorsProperties(Color(0xffCE1126)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Romania_(construction_sheet).svg",
 );
@@ -1297,7 +1297,7 @@ const flagPerProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffd91023)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url: "https://wikipedia.org/wiki/File:Flag_of_Peru_(construction_sheet).svg",
 );
 
@@ -1308,7 +1308,7 @@ const flagQatProperties = FlagProperties(
     ColorsProperties(Color(0xff8A1538), ratio: 8904),
   ],
   aspectRatio: 28 / 11,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
@@ -1466,7 +1466,7 @@ const flagHtiProperties = FlagProperties(
 /// Flag properties of country Bhutan (BT).
 const flagBtnProperties = FlagProperties(
   [ColorsProperties(Color(0xffFFCC33)), ColorsProperties(Color(0xffff4e12))],
-  isHorizontalStriped: null,
+  stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   elementsProperties: [
     ElementsProperties(
       [Color(0xff000000), Color(0xffffffff)],
@@ -1539,7 +1539,7 @@ const flagMltProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffCF142B)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [

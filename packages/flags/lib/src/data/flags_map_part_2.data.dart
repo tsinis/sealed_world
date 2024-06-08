@@ -4,6 +4,7 @@ import "../model/colors_properties.dart";
 import "../model/elements_properties.dart";
 import "../model/flag_properties.dart";
 import "../model/shape.dart";
+import "../model/stripe_orientation.dart";
 
 // ignore_for_file: prefer-static-class
 /// Flag properties of country Madagascar (MG).
@@ -62,7 +63,7 @@ const flagAndProperties = FlagProperties(
     ColorsProperties(Color(0xffd50032), ratio: 64),
   ],
   aspectRatio: 10 / 7,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [
@@ -150,7 +151,7 @@ const flagBhrProperties = FlagProperties(
     ColorsProperties(Color(0xffDA291C), ratio: 75),
   ],
   aspectRatio: 5 / 3,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffffff)],
@@ -236,7 +237,7 @@ const flagTcdProperties = FlagProperties(
     ColorsProperties(Color(0xfffecb00)),
     ColorsProperties(Color(0xffc60c30)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url: "https://wikipedia.org/wiki/File:Flag_of_Chad_(construction_sheet).svg",
 );
 
@@ -304,7 +305,7 @@ const flagCmrProperties = FlagProperties(
     ColorsProperties(Color(0xffce1126)),
     ColorsProperties(Color(0xfffcd116)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xfffcd116)],
@@ -405,7 +406,7 @@ const flagMdaProperties = FlagProperties(
     ColorsProperties(Color(0xffCC092F)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [
@@ -1020,7 +1021,7 @@ const flagVctProperties = FlagProperties(
     ColorsProperties(Color(0xfff4f100), ratio: 2),
     ColorsProperties(Color(0xff199a00)),
   ],
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xff199a00)],
@@ -1157,7 +1158,7 @@ const flagNgaProperties = FlagProperties(
     ColorsProperties(Color(0xff008000)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Nigeria_(construction_sheet).svg",
 );
@@ -1229,7 +1230,7 @@ const flagBgdProperties = FlagProperties(
 const flagVatProperties = FlagProperties(
   [ColorsProperties(Color(0xffffe000)), ColorsProperties(Color(0xffffffff))],
   aspectRatio: 1,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [
@@ -1470,7 +1471,7 @@ const flagCanProperties = FlagProperties(
     ColorsProperties(Color(0xffd52b1e)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Canada_(construction_sheet_-_leaf_geometry).svg",
 );
@@ -1483,7 +1484,7 @@ const flagBelProperties = FlagProperties(
     ColorsProperties(Color(0xffEF3340)),
   ],
   aspectRatio: 15 / 13,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Belgium_(construction_sheet).svg",
 );
@@ -1667,7 +1668,7 @@ const flagNfkProperties = FlagProperties(
     ColorsProperties(Color(0xff007833), ratio: 56),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties([Color(0xff007833)], heightFactor: 78 / 92),
   ],
@@ -1731,7 +1732,7 @@ const flagMngProperties = FlagProperties(
     ColorsProperties(Color(0xffda2032)),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffffd900)],
@@ -2033,7 +2034,7 @@ const flagLkaProperties = FlagProperties(
     ColorsProperties(Color(0xffF7B718), ratio: 6),
   ],
   aspectRatio: 2,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffF7B718)],
@@ -2078,7 +2079,7 @@ const flagMexProperties = FlagProperties(
     ColorsProperties(Color(0xffce1125)),
   ],
   aspectRatio: 7 / 4,
-  isHorizontalStriped: false,
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffaf7029)],

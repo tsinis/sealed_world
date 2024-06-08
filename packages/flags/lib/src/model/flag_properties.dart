@@ -1,13 +1,14 @@
 import "colors_properties.dart";
 import "elements_properties.dart";
+import "stripe_orientation.dart";
 
 class FlagProperties {
   const FlagProperties(
     this.colors, {
     this.aspectRatio = 3 / 2,
-    this.isHorizontalStriped = true,
+    this.stripeOrientation = StripeOrientation.horizontal,
     this.elementsProperties,
-    this.url,
+    this.url = "",
   });
 
   final List<ColorsProperties> colors;
@@ -17,21 +18,11 @@ class FlagProperties {
   /// as height to width, but in this package (and in CG in general) it is given
   /// as width to height.
   final double aspectRatio;
-  final String? url;
-
-  /// Indicates whether the stripes on the flag are arranged horizontally.
-  ///
-  /// * If the value is `false`, the stripes run from left to right, i.e. Italy,
-  /// France, Ireland, etc., like flags.
-  /// * If the value is `true`, the stripes run from the bottom to the top, i.e.
-  /// Russia, Germany, Poland, Latvia, etc., like flags.
-  /// * If the value is `null`, it means that it is not clear whether the
-  /// stripes are arranged horizontally or vertically, or the flag may not
-  /// have any stripes at all.
-  final bool? isHorizontalStriped;
+  final String url;
+  final StripeOrientation stripeOrientation;
 
   @override
   String toString() => "FlagProperties($colors, aspectRatio: $aspectRatio, "
-      "isHorizontalStriped: $isHorizontalStriped, "
+      "stripeOrientation: $stripeOrientation, "
       "elementsProperties: $elementsProperties)";
 }

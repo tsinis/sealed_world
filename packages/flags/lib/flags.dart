@@ -9,3 +9,4 @@ export "src/model/colors_properties.dart";
 export "src/model/elements_properties.dart";
 export "src/model/flag_properties.dart";
 export "src/model/shape.dart";
+export "src/model/stripe_orientation.dart";
