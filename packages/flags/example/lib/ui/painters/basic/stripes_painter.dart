@@ -1,3 +1,5 @@
+import "dart:math";
+
 import "package:flags/flags.dart";
 import "package:flutter/rendering.dart";
 
@@ -17,8 +19,25 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    final total = properties.colors.fold(0, (sum, cp) => sum + cp.ratio);
     final rect = Rect.fromLTWH(0, 0, size.width, size.height);
 
+    _applyFlagClipping(canvas, rect, size);
+    switch (properties.stripeOrientation) {
+      case StripeOrientation.horizontal:
+        _drawHorizontalStripes(canvas, size, total);
+      case StripeOrientation.vertical:
+        _drawVerticalStripes(canvas, size, total);
+      case StripeOrientation.diagonalBottomLeftToTopRight:
+        _drawDiagonalStripes(canvas, size, total, isTopLeftToBottom: true);
+      case StripeOrientation.diagonalTopLeftToBottomRight:
+        _drawDiagonalStripes(canvas, size, total, isTopLeftToBottom: false);
+    }
+
+    elementsPainter?.paint(canvas, size);
+  }
+
+  void _applyFlagClipping(Canvas canvas, Rect rect, Size size) {
     if (decoration.isCircle) {
       final radius = size.height / 2;
       final circle = Rect.fromCircle(center: rect.center, radius: radius);
@@ -30,28 +49,54 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     } else {
       canvas.clipRect(rect, doAntiAlias: _doAntiAlias);
     }
+  }
 
-    final totalRatio = properties.colors.fold(0, (sum, cp) => sum + cp.ratio);
-    final paint = Paint();
+  void _drawVerticalStripes(Canvas canvas, Size size, int totalRatio) {
     var position = 0.0;
+    for (final property in properties.colors) {
+      final stripeSize = size.width * property.ratio / totalRatio;
+      final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
+      canvas.drawRect(stripe, Paint()..color = property.color);
+      position += stripeSize;
+    }
+  }
 
-    if (properties.stripeOrientation == StripeOrientation.vertical) {
-      for (final property in properties.colors) {
-        final stripeSize = size.width * property.ratio / totalRatio;
-        final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
-        canvas.drawRect(stripe, paint..color = property.color);
-        position += stripeSize;
-      }
-    } else {
-      for (final property in properties.colors) {
-        final stripeSize = size.height * property.ratio / totalRatio;
-        final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
-        canvas.drawRect(stripe, paint..color = property.color);
-        position += stripeSize;
-      }
+  void _drawHorizontalStripes(Canvas canvas, Size size, int totalRatio) {
+    var position = 0.0;
+    for (final property in properties.colors) {
+      final stripeSize = size.height * property.ratio / totalRatio;
+      final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
+      canvas.drawRect(stripe, Paint()..color = property.color);
+      position += stripeSize;
+    }
+  }
+
+  void _drawDiagonalStripes(
+    Canvas canvas,
+    Size size,
+    int totalRatio, {
+    required bool isTopLeftToBottom,
+  }) {
+    final width = size.width;
+    final height = size.height;
+    final angle = atan2(width, height);
+    final diagonalLength = sqrt(width * width + height * height);
+
+    canvas
+      ..save()
+      ..translate(width / 2, height / 2)
+      ..rotate(isTopLeftToBottom ? angle : -angle)
+      ..translate(-diagonalLength, -height * 2);
+
+    var position = 0.0;
+    for (final colorProperty in properties.colors) {
+      final stripeSize = diagonalLength * 2 * colorProperty.ratio / totalRatio;
+      final stripe = Rect.fromLTWH(position, 0, stripeSize, height * 4);
+      canvas.drawRect(stripe, Paint()..color = colorProperty.color);
+      position += stripeSize;
     }
 
-    elementsPainter?.paint(canvas, size);
+    canvas.restore();
   }
 
   @override
