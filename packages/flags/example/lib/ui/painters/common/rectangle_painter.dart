@@ -8,7 +8,7 @@ final class RectanglePainter extends ElementsPainter {
   const RectanglePainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentPath paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final maybeAspectRatio = shapeType<Rectangle>()?.aspectRatio;
     final width = size.width;
     final height = size.height * property.heightFactor;

@@ -5,6 +5,7 @@ import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
 import "../../../model/typedefs.dart";
+import "../common/diagonal_line_painter.dart";
 import "../common/ellipse_painter.dart";
 import "../common/moon_painter.dart";
 import "../common/rectangle_painter.dart";
@@ -28,7 +29,7 @@ abstract base class ElementsPainter extends CustomPainter {
   ElementsProperties get property => properties.first;
 
   @protected
-  FlagParentPath paintFlagElements(Canvas canvas, Size size);
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -67,6 +68,7 @@ abstract base class ElementsPainter extends CustomPainter {
         rectangle: RectanglePainter.new,
         star: StarPainter.new,
         triangle: TrianglePainter.new,
+        diagonalLine: DiagonalLinePainter.new,
       );
 
   @protected

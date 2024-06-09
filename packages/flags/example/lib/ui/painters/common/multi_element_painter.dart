@@ -16,7 +16,7 @@ final class MultiElementPainter extends ElementsPainter {
   }
 
   @override
-  FlagParentPath paintFlagElements(Canvas canvas, Size size) => (
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) => (
         canvas: canvas,
         bounds: Rect.fromLTWH(0, 0, size.width, size.height),
         children: property.children,

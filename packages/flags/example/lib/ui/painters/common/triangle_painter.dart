@@ -9,7 +9,7 @@ final class TrianglePainter extends ElementsPainter {
   const TrianglePainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentPath paintFlagElements(Canvas canvas, Size size) =>
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) =>
       switch (property.angle ?? 0) {
         0 => _leftToRightTriangle(canvas, size),
         270 => _bottomToTopTriangle(canvas, size),
@@ -18,7 +18,7 @@ final class TrianglePainter extends ElementsPainter {
       };
 
   /// Czechia like triangle on the flag.
-  FlagParentPath _leftToRightTriangle(Canvas canvas, Size size) {
+  FlagParentBounds _leftToRightTriangle(Canvas canvas, Size size) {
     final compensation = (1 + aspectRatio / calculateAspectRatio(size)) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
@@ -40,7 +40,7 @@ final class TrianglePainter extends ElementsPainter {
   }
 
   /// American Samoa like triangle on the flag.
-  FlagParentPath _rightToLeftTriangle(Canvas canvas, Size size) {
+  FlagParentBounds _rightToLeftTriangle(Canvas canvas, Size size) {
     final compensation = (1 + aspectRatio / calculateAspectRatio(size)) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
@@ -61,7 +61,7 @@ final class TrianglePainter extends ElementsPainter {
     );
   }
 
-  FlagParentPath _topToBottomTriangle(Canvas canvas, Size size) {
+  FlagParentBounds _topToBottomTriangle(Canvas canvas, Size size) {
     final width = size.width * (property.widthFactor ?? 1);
     final height = size.height * property.heightFactor;
     final xOffset = size.width * property.x;
@@ -81,7 +81,7 @@ final class TrianglePainter extends ElementsPainter {
     );
   }
 
-  FlagParentPath _bottomToTopTriangle(Canvas canvas, Size size) {
+  FlagParentBounds _bottomToTopTriangle(Canvas canvas, Size size) {
     final width = size.width * (property.widthFactor ?? 1);
     final height = size.height * property.heightFactor;
     final xOffset = size.width * property.x;

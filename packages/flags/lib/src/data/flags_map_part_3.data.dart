@@ -1,10 +1,6 @@
 import "dart:ui";
 
-import "../model/colors_properties.dart";
-import "../model/elements_properties.dart";
-import "../model/flag_properties.dart";
-import "../model/shape.dart";
-import "../model/stripe_orientation.dart";
+import "../../flags.dart";
 
 // ignore_for_file: prefer-static-class
 
@@ -138,7 +134,17 @@ const flagTunProperties = FlagProperties(
 const flagAgoProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000)), ColorsProperties(Color(0xff000000))],
   elementsProperties: [
-    ElementsProperties([Color(0xffFFCD00)], heightFactor: 1 / 2),
+    ElementsProperties(
+      [Color(0xffFFCD00)],
+      x: -0.025,
+      y: -0.262,
+      heightFactor: 0.155,
+      shape: Star(),
+    ),
+    ElementsProperties(
+      [Color(0xffFFCD00), Color(0xff000000)],
+      heightFactor: 1 / 3,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/angola/angola_sheet.png",
 );
@@ -177,23 +183,10 @@ const flagAlaProperties = FlagProperties(
 
 /// Flag properties of country Republic of the Congo (CG).
 const flagCogProperties = FlagProperties(
-  [ColorsProperties(Color(0xffFBDE4A))],
+  [ColorsProperties(Color(0xff009543)), ColorsProperties(Color(0xffDC241F))],
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   elementsProperties: [
-    ElementsProperties(
-      [Color(0xff009543)],
-      x: -1,
-      widthFactor: 2 / 3,
-      angle: 90,
-      shape: Triangle(),
-    ),
-    ElementsProperties(
-      [Color(0xffDC241F)],
-      x: 1,
-      widthFactor: 2 / 3,
-      angle: -90,
-      shape: Triangle(),
-    ),
+    ElementsProperties([Color(0xffFBDE4A)]),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_the_Republic_of_the_Congo_(construction_sheet).svg",
@@ -701,12 +694,34 @@ const flagSomProperties = FlagProperties(
 
 /// Flag properties of country Jamaica (JM).
 const flagJamProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xff009900)),
-    ColorsProperties(Color(0xffffcc00)),
-  ],
+  [ColorsProperties(Color(0xff000000))],
   aspectRatio: 2,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xff009B3A)],
+      y: -0.5,
+      heightFactor: 1 / 2,
+      angle: 90,
+      shape: Triangle(),
+    ),
+    ElementsProperties(
+      [Color(0xff009B3A)],
+      y: 1,
+      heightFactor: 1 / 2,
+      angle: 270,
+      shape: Triangle(),
+    ),
+    ElementsProperties(
+      [Color(0xffffcc00)],
+      heightFactor: 0.17,
+      shape: DiagonalLine(),
+    ),
+    ElementsProperties(
+      [Color(0xffffcc00)],
+      heightFactor: 0.17,
+      shape: DiagonalLine(isTopRightToBottomLeft: false),
+    ),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Jamaica_(construction_sheet).svg",
 );
@@ -1131,12 +1146,40 @@ const flagIrqProperties = FlagProperties(
 const flagKnaProperties = FlagProperties(
   [
     ColorsProperties(Color(0xff35a100), ratio: 420),
-    ColorsProperties(Color(0xffffe900), ratio: 15),
-    ColorsProperties(Color(0xff000000), ratio: 80),
-    ColorsProperties(Color(0xffffe900), ratio: 15),
+    ColorsProperties(Color(0xffffe900), ratio: 110),
     ColorsProperties(Color(0xffc70000), ratio: 420),
   ],
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xff000000)],
+      heightFactor: 126 / 420,
+      shape: DiagonalLine(isTopRightToBottomLeft: false),
+      children: [
+        ElementsProperties(
+          [Color(0xffffffff)],
+          shape: Star(),
+        ),
+      ],
+    ),
+    ElementsProperties(
+      [Color(0xffc70000)],
+      x: 1,
+      y: 1,
+      widthFactor: 1,
+      shape: Triangle(),
+      children: [
+        ElementsProperties(
+          [Color(0xffffe900)],
+          x: 1,
+          y: 0.94,
+          heightFactor: 0.94,
+          widthFactor: 0.925,
+          shape: Triangle(),
+        ),
+      ],
+    ),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Saint_Kitts_and_Nevis_(construction_sheet).svg",
 );

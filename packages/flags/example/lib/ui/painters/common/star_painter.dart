@@ -12,7 +12,7 @@ final class StarPainter extends ElementsPainter {
   static const radiansMultiplier = math.pi / 180;
 
   @override
-  FlagParentPath paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final star = shapeType<Star>() ?? const Star();
     final radiansPerPoint = math.pi * 2 / (star.points * 2);
     final center = calculateCenter(size);

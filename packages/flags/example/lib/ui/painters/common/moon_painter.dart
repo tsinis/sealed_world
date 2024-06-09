@@ -8,7 +8,7 @@ final class MoonPainter extends ElementsPainter {
   const MoonPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentPath paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final moon = shapeType<Moon>() ?? const Moon();
     final center = calculateCenter(size);
     final widthFactor = property.widthFactor;

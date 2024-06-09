@@ -260,6 +260,73 @@ const flagBdiProperties = FlagProperties(
       angle: 270,
       shape: Triangle(),
     ),
+    ElementsProperties(
+      [Color(0xffffffff)],
+      heightFactor: 0.13,
+      shape: DiagonalLine(),
+    ),
+    ElementsProperties(
+      [Color(0xffffffff)],
+      heightFactor: 0.13,
+      shape: DiagonalLine(isTopRightToBottomLeft: false),
+    ),
+    ElementsProperties(
+      [Color(0xffffffff)],
+      heightFactor: 0.56,
+      shape: Ellipse(),
+      children: [
+        ElementsProperties(
+          [Color(0xff18b637)],
+          y: -0.52,
+          heightFactor: 0.23,
+          angle: 90,
+          shape: Star(points: 6, radiusFactor: 0.6),
+          children: [
+            ElementsProperties(
+              [Color(0xffcf0921)],
+              heightFactor: 0.9,
+              angle: 90,
+              shape: Star(points: 6, radiusFactor: 0.6),
+              children: [
+                ElementsProperties(
+                  [Color(0xff18b637)],
+                  x: -2.5,
+                  y: 5,
+                  heightFactor: 1.45,
+                  angle: 90,
+                  shape: Star(points: 6, radiusFactor: 0.6),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xffcf0921)],
+                      heightFactor: 0.9,
+                      angle: 90,
+                      shape: Star(points: 6, radiusFactor: 0.6),
+                      children: [
+                        ElementsProperties(
+                          [Color(0xff18b637)],
+                          x: 5.12,
+                          heightFactor: 1.45,
+                          angle: 90,
+                          shape: Star(points: 6, radiusFactor: 0.6),
+                          children: [
+                            ElementsProperties(
+                              [Color(0xffcf0921)],
+                              heightFactor: 0.9,
+                              angle: 90,
+                              shape: Star(points: 6, radiusFactor: 0.6),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Burundi_(construction_sheet).svg",
@@ -822,12 +889,69 @@ const flagMhlProperties = FlagProperties(
 
 /// Flag properties of country Cocos (Keeling) Islands (CC).
 const flagCckProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff008000)),
-    ColorsProperties(Color(0xffffe000)),
-    ColorsProperties(Color(0xff802000)),
-  ],
+  [ColorsProperties(Color(0xff008000))],
   aspectRatio: 2,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffffe000)],
+      heightFactor: 0.42,
+      shape: Moon(radius: 0.82, x: 0.3),
+      children: [
+        ElementsProperties(
+          [Color(0xffffe000)],
+          x: 1.58,
+          y: -0.29,
+          heightFactor: 0.32,
+          shape: Star(points: 7, radiusFactor: 0.45),
+        ),
+      ],
+    ),
+    ElementsProperties(
+      [Color(0xffffe000)],
+      x: 0.6,
+      y: 0.082,
+      heightFactor: 0.085,
+      shape: Star(),
+      children: [
+        ElementsProperties(
+          [Color(0xffffe000)],
+          x: 3,
+          y: -4.3,
+          heightFactor: 1.75,
+          shape: Star(points: 7, radiusFactor: 0.45),
+          children: [
+            ElementsProperties(
+              [Color(0xffffe000)],
+              x: -3.4,
+              y: -3.15,
+              heightFactor: 1.1,
+              shape: Star(points: 7, radiusFactor: 0.45),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffe000)],
+                  y: 10,
+                  shape: Star(points: 7, radiusFactor: 0.45),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    ),
+    ElementsProperties(
+      [Color(0xffffe000)],
+      x: -0.658,
+      y: -0.418,
+      heightFactor: 0.435,
+      shape: Ellipse(),
+      children: [
+        ElementsProperties(
+          [Color(0xff802000), Color(0xff008000)],
+          heightFactor: 0.8,
+        ),
+      ],
+    ),
+  ],
   url: "https://www.vexilla-mundi.com/cocos_islands/cocos_islands_sheet.png",
 );
 
@@ -1792,8 +1916,104 @@ const flagBihProperties = FlagProperties(
   aspectRatio: 2,
   elementsProperties: [
     ElementsProperties(
-      [Color(0xffffffff), Color(0xffFFCD00)],
-      heightFactor: 2 / 3,
+      [Color(0xff001489)],
+      x: 0.5,
+      shape: Rectangle(aspectRatio: 2),
+      children: [
+        ElementsProperties(
+          [Color(0xffFFCD00)],
+          x: 0.266,
+          angle: 90,
+          shape: Triangle(),
+          children: [
+            ElementsProperties(
+              [Color(0xffffffff)],
+              x: -1.185,
+              y: -1.02,
+              heightFactor: 0.18,
+              shape: Star(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffffff)],
+                  x: 1.485,
+                  y: 1.665,
+                  heightFactor: 1.1,
+                  shape: Star(),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xffffffff)],
+                      x: 1.485,
+                      y: 1.665,
+                      heightFactor: 1.1,
+                      shape: Star(),
+                      children: [
+                        ElementsProperties(
+                          [Color(0xffffffff)],
+                          x: 1.485,
+                          y: 1.665,
+                          heightFactor: 1.1,
+                          shape: Star(),
+                          children: [
+                            ElementsProperties(
+                              [Color(0xffffffff)],
+                              x: 1.485,
+                              y: 1.665,
+                              heightFactor: 1.1,
+                              shape: Star(),
+                              children: [
+                                ElementsProperties(
+                                  [Color(0xffffffff)],
+                                  x: 1.485,
+                                  y: 1.665,
+                                  heightFactor: 1.1,
+                                  shape: Star(),
+                                  children: [
+                                    ElementsProperties(
+                                      [Color(0xffffffff)],
+                                      x: 1.485,
+                                      y: 1.665,
+                                      heightFactor: 1.1,
+                                      shape: Star(),
+                                      children: [
+                                        ElementsProperties(
+                                          [Color(0xffffffff)],
+                                          x: 1.485,
+                                          y: 1.665,
+                                          heightFactor: 1.1,
+                                          shape: Star(),
+                                          children: [
+                                            ElementsProperties(
+                                              [Color(0xffffffff)],
+                                              x: 1.485,
+                                              y: 1.665,
+                                              heightFactor: 1.1,
+                                              shape: Star(),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    ),
+    ElementsProperties(
+      [Color(0xff001489)],
+      x: 1,
+      widthFactor: 0.235,
+      shape: Rectangle(),
     ),
   ],
   url:
@@ -1822,6 +2042,21 @@ const flagCriProperties = FlagProperties(
     ColorsProperties(Color(0xff001489)),
   ],
   aspectRatio: 5 / 3,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffffffff)],
+      x: -0.4,
+      heightFactor: 0.29,
+      shape: Ellipse(widthRatio: 0.85),
+      children: [
+        ElementsProperties(
+          [Color(0xff002b7f)],
+          heightFactor: 0.9,
+          widthFactor: 0.9,
+        ),
+      ],
+    ),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Costa_Rica_(construction_sheet).svg",
 );
@@ -2011,14 +2246,14 @@ const flagCodProperties = FlagProperties(
   [ColorsProperties(Color(0xff007fff))],
   aspectRatio: 4 / 3,
   elementsProperties: [
-    ElementsProperties([Color(0xffce1021), Color(0xfff7d618)]),
     ElementsProperties(
       [Color(0xfff7d618)],
-      x: -0.9,
-      y: -0.9,
-      heightFactor: 513 / 1500,
+      x: -0.635,
+      y: -0.475,
+      heightFactor: 0.39,
       shape: Star(),
     ),
+    ElementsProperties([Color(0xffce1021), Color(0xfff7d618)]),
   ],
   url:
       "https://www.vexilla-mundi.com/congo_democratic_republic/congo_democratic_republic_sheet.png",

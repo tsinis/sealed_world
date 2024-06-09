@@ -1,10 +1,6 @@
 import "dart:ui";
 
-import "../model/colors_properties.dart";
-import "../model/elements_properties.dart";
-import "../model/flag_properties.dart";
-import "../model/shape.dart";
-import "../model/stripe_orientation.dart";
+import "../../flags.dart";
 
 // ignore_for_file: prefer-static-class
 /// Flag properties of country Honduras (HN).
@@ -423,12 +419,26 @@ const flagJpnProperties = FlagProperties(
 const flagJeyProperties = FlagProperties(
   [
     ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffcf142b)),
-    ColorsProperties(Color(0xffffd700)),
-    ColorsProperties(Color(0xff377bc8)),
-    ColorsProperties(Color(0xff000000)),
   ],
   aspectRatio: 5 / 3,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffcf142b)],
+      heightFactor: 0.11,
+      shape: DiagonalLine(),
+    ),
+    ElementsProperties(
+      [Color(0xffcf142b)],
+      heightFactor: 0.11,
+      shape: DiagonalLine(isTopRightToBottomLeft: false),
+    ),
+    ElementsProperties([
+      Color(0xffcf142b),
+      Color(0xffffd700),
+      Color(0xff377bc8),
+      Color(0xff000000),
+    ]),
+  ],
   url: "https://www.vexilla-mundi.com/jersey/jersey_sheet.png",
 );
 
@@ -782,6 +792,49 @@ const flagSlbProperties = FlagProperties(
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffffffff)],
+      x: -0.85,
+      y: -0.74,
+      heightFactor: 0.2,
+      shape: Star(),
+      children: [
+        ElementsProperties(
+          [Color(0xffffffff)],
+          y: 3.85,
+          heightFactor: 1.1,
+          shape: Star(),
+          children: [
+            ElementsProperties(
+              [Color(0xffffffff)],
+              x: 4.2,
+              y: 0.1,
+              heightFactor: 1.1,
+              shape: Star(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffffff)],
+                  y: -3.7,
+                  heightFactor: 1.1,
+                  shape: Star(),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xffffffff)],
+                      x: -2.1,
+                      y: 2,
+                      heightFactor: 1.1,
+                      shape: Star(),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    ),
+  ],
   url:
       "https://www.vexilla-mundi.com/solomon_islands/solomon_islands_sheet.png",
 );

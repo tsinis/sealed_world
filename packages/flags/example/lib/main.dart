@@ -21,7 +21,7 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  int _index = 0;
+  int _index = 50;
   double _opacity = 1 / 2;
 
   void _incrementIndex() {
