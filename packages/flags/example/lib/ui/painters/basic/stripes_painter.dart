@@ -19,10 +19,8 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    _applyFlagClipping(canvas, size);
     final total = properties.colors.fold(0, (sum, cp) => sum + cp.ratio);
-    final rect = Rect.fromLTWH(0, 0, size.width, size.height);
-
-    _applyFlagClipping(canvas, rect, size);
     switch (properties.stripeOrientation) {
       case StripeOrientation.horizontal:
         _drawHorizontalStripes(canvas, size, total);
@@ -37,7 +35,8 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     elementsPainter?.paint(canvas, size);
   }
 
-  void _applyFlagClipping(Canvas canvas, Rect rect, Size size) {
+  void _applyFlagClipping(Canvas canvas, Size size) {
+    final rect = Rect.fromLTWH(0, 0, size.width, size.height);
     if (decoration.isCircle) {
       final radius = size.height / 2;
       final circle = Rect.fromCircle(center: rect.center, radius: radius);
@@ -53,20 +52,20 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   void _drawVerticalStripes(Canvas canvas, Size size, int totalRatio) {
     var position = 0.0;
-    for (final property in properties.colors) {
-      final stripeSize = size.width * property.ratio / totalRatio;
+    for (final colorProperty in properties.colors) {
+      final stripeSize = size.width * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
-      canvas.drawRect(stripe, Paint()..color = property.color);
+      canvas.drawRect(stripe, Paint()..color = colorProperty.color);
       position += stripeSize;
     }
   }
 
   void _drawHorizontalStripes(Canvas canvas, Size size, int totalRatio) {
     var position = 0.0;
-    for (final property in properties.colors) {
-      final stripeSize = size.height * property.ratio / totalRatio;
+    for (final colorProperty in properties.colors) {
+      final stripeSize = size.height * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
-      canvas.drawRect(stripe, Paint()..color = property.color);
+      canvas.drawRect(stripe, Paint()..color = colorProperty.color);
       position += stripeSize;
     }
   }
@@ -77,14 +76,13 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     int totalRatio, {
     required bool isTopLeftToBottom,
   }) {
-    final width = size.width;
     final height = size.height;
-    final angle = atan2(width, height);
-    final diagonalLength = sqrt(width * width + height * height);
+    final angle = atan2(size.width, height);
+    final diagonalLength = sqrt(size.width * size.width + height * height);
 
     canvas
       ..save()
-      ..translate(width / 2, height / 2)
+      ..translate(size.width / 2, height / 2)
       ..rotate(isTopLeftToBottom ? angle : -angle)
       ..translate(-diagonalLength, -height * 2);
 

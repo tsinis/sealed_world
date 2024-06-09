@@ -776,10 +776,9 @@ const flagDnkProperties = FlagProperties(
 /// Flag properties of country Solomon Islands (SB).
 const flagSlbProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xff0000d6)),
-    ColorsProperties(Color(0xff006000)),
+    ColorsProperties(Color(0xff0000d6), ratio: 25),
     ColorsProperties(Color(0xffffcc00)),
-    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xff006000), ratio: 25),
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
@@ -1235,7 +1234,7 @@ const flagGrcProperties = FlagProperties(
       ],
     ),
     ElementsProperties(
-      [Color.fromARGB(0, 0, 90, 174)],
+      [Color(0x00005bae)],
       x: -1,
       y: -1,
       heightFactor: 10 / 18,
@@ -1413,12 +1412,16 @@ const flagHmdProperties = flagAusProperties; // TODO!
 /// Flag properties of country Brunei (BN).
 const flagBrnProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xfff7e017)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xffcf1126)),
+    ColorsProperties(Color(0xfff7e017), ratio: 3),
+    ColorsProperties(Color(0xffffffff), ratio: 2),
+    ColorsProperties(Color(0xff000000), ratio: 2),
+    ColorsProperties(Color(0xfff7e017), ratio: 3),
   ],
   aspectRatio: 2,
+  stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
+  elementsProperties: [
+    ElementsProperties([Color(0xffcf1126), Color(0xfff7e017)]),
+  ],
   url: "https://wikipedia.org/wiki/File:Brunei_Flag_Official_Measurements.jpg",
 );
 

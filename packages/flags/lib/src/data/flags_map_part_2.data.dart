@@ -1881,12 +1881,13 @@ const flagTkmProperties = FlagProperties(
 /// Flag properties of country Tanzania (TZ).
 const flagTzaProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xff009900)),
-    ColorsProperties(Color(0xffffff00)),
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xffffff00)),
-    ColorsProperties(Color(0xff0099ff)),
+    ColorsProperties(Color(0xff009900), ratio: 100),
+    ColorsProperties(Color(0xffffff00), ratio: 4),
+    ColorsProperties(Color(0xff000001), ratio: 17),
+    ColorsProperties(Color(0xffffff00), ratio: 4),
+    ColorsProperties(Color(0xff0099ff), ratio: 100),
   ],
+  stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Tanzania_(construction_sheet).svg",
 );
@@ -2092,24 +2093,33 @@ const flagMexProperties = FlagProperties(
 /// Flag properties of country Namibia (NA).
 const flagNamProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xff002F6C)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffC8102E)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff009A44)),
+    ColorsProperties(Color(0xff002F6C), ratio: 210),
+    ColorsProperties(Color(0xffffffff), ratio: 5),
+    ColorsProperties(Color(0xffC8102E), ratio: 32),
+    ColorsProperties(Color(0xffffffff), ratio: 5),
+    ColorsProperties(Color(0xff009A44), ratio: 210),
   ],
+  stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   elementsProperties: [
     ElementsProperties(
       [Color(0xffFFCD00)],
-      x: -0.8,
-      y: -0.8,
+      x: -0.602,
+      y: -0.455,
       heightFactor: 4 / 12,
-      shape: Star(points: 12),
+      angle: 45,
+      shape: Star(points: 12, radiusFactor: 0.6),
       children: [
         ElementsProperties(
           [Color(0xff002F6C)],
-          heightFactor: 1 / 2,
+          heightFactor: 0.63,
           shape: Ellipse(),
+          children: [
+            ElementsProperties(
+              [Color(0xffFFCD00)],
+              heightFactor: 0.8,
+              shape: Ellipse(),
+            ),
+          ],
         ),
       ],
     ),

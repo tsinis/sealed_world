@@ -12,6 +12,7 @@ extension $ShapeExtension on Shape {
     T Function()? ellipse,
     T Function()? rectangle,
     T Function()? moon,
+    T Function()? diagonalLine,
   }) =>
       switch (this) {
         Star() => star?.call() ?? orElse(),
@@ -19,6 +20,7 @@ extension $ShapeExtension on Shape {
         Ellipse() => ellipse?.call() ?? orElse(),
         Rectangle() => rectangle?.call() ?? orElse(),
         Moon() => moon?.call() ?? orElse(),
+        DiagonalLine() => diagonalLine?.call() ?? orElse(),
       };
 
   T when<T>({
@@ -27,6 +29,7 @@ extension $ShapeExtension on Shape {
     required T Function() ellipse,
     required T Function() rectangle,
     required T Function() moon,
+    required T Function() diagonalLine,
   }) =>
       switch (this) {
         Star() => star(),
@@ -34,6 +37,7 @@ extension $ShapeExtension on Shape {
         Ellipse() => ellipse(),
         Rectangle() => rectangle(),
         Moon() => moon(),
+        DiagonalLine() => diagonalLine(),
       };
 
   T whenConst<T>({
@@ -42,6 +46,7 @@ extension $ShapeExtension on Shape {
     required T ellipse,
     required T rectangle,
     required T moon,
+    required T diagonalLine,
   }) =>
       switch (this) {
         Star() => star,
@@ -49,6 +54,7 @@ extension $ShapeExtension on Shape {
         Ellipse() => ellipse,
         Rectangle() => rectangle,
         Moon() => moon,
+        DiagonalLine() => diagonalLine,
       };
 
   T maybeWhenConst<T>({
@@ -58,6 +64,7 @@ extension $ShapeExtension on Shape {
     T? ellipse,
     T? rectangle,
     T? moon,
+    T? diagonalLine,
   }) =>
       switch (this) {
         Star() => star ?? orElse,
@@ -65,6 +72,7 @@ extension $ShapeExtension on Shape {
         Ellipse() => ellipse ?? orElse,
         Rectangle() => rectangle ?? orElse,
         Moon() => moon ?? orElse,
+        DiagonalLine() => diagonalLine ?? orElse,
       };
 
   T? whenOrNull<T>({
@@ -73,6 +81,7 @@ extension $ShapeExtension on Shape {
     T Function()? ellipse,
     T Function()? rectangle,
     T Function()? moon,
+    T Function()? diagonalLine,
   }) =>
       switch (this) {
         Star() => star?.call(),
@@ -80,6 +89,7 @@ extension $ShapeExtension on Shape {
         Ellipse() => ellipse?.call(),
         Rectangle() => rectangle?.call(),
         Moon() => moon?.call(),
+        DiagonalLine() => diagonalLine?.call(),
       };
 
   T? whenConstOrNull<T>({
@@ -88,6 +98,7 @@ extension $ShapeExtension on Shape {
     T? ellipse,
     T? rectangle,
     T? moon,
+    T? diagonalLine,
   }) =>
       switch (this) {
         Star() => star,
@@ -95,5 +106,6 @@ extension $ShapeExtension on Shape {
         Ellipse() => ellipse,
         Rectangle() => rectangle,
         Moon() => moon,
+        DiagonalLine() => diagonalLine,
       };
 }

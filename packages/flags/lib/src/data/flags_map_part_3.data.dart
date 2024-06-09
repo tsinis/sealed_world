@@ -934,8 +934,9 @@ const flagFjiProperties = FlagProperties(
 
 /// Flag properties of country Papua New Guinea (PG).
 const flagPngProperties = FlagProperties(
-  [ColorsProperties(Color(0xffff0000))],
+  [ColorsProperties(Color(0xff000000)), ColorsProperties(Color(0xffff0000))],
   aspectRatio: 4 / 3,
+  stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   elementsProperties: [
     ElementsProperties(
       [Color(0xff000000)],
@@ -1129,12 +1130,13 @@ const flagIrqProperties = FlagProperties(
 /// Flag properties of country Saint Kitts and Nevis (KN).
 const flagKnaProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xff35a100)),
-    ColorsProperties(Color(0xffffe900)),
-    ColorsProperties(Color(0xffc70000)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xff35a100), ratio: 420),
+    ColorsProperties(Color(0xffffe900), ratio: 15),
+    ColorsProperties(Color(0xff000000), ratio: 80),
+    ColorsProperties(Color(0xffffe900), ratio: 15),
+    ColorsProperties(Color(0xffc70000), ratio: 420),
   ],
+  stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Saint_Kitts_and_Nevis_(construction_sheet).svg",
 );
@@ -1496,6 +1498,7 @@ const flagAbwProperties = FlagProperties(
       children: [
         ElementsProperties(
           [Color(0xffEF3340)],
+          heightFactor: 1.1,
           angle: 45,
           shape: Star(points: 4, radiusFactor: 0.35),
         ),

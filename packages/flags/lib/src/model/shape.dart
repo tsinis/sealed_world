@@ -25,7 +25,9 @@ class Star implements Shape {
 }
 
 class Ellipse implements Shape {
-  const Ellipse();
+  const Ellipse({this.aspectRatio = 1});
+
+  final double aspectRatio;
 }
 
 class Moon implements Shape {
@@ -39,4 +41,10 @@ class Moon implements Shape {
 
   /// Relative Y position of the second circle.
   final double y;
+}
+
+class DiagonalLine implements Shape {
+  const DiagonalLine({this.isTopRightToBottomLeft = true});
+
+  final bool isTopRightToBottomLeft;
 }

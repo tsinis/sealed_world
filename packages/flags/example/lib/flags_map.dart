@@ -174,7 +174,7 @@ const flagsMap = {
   CountryMwi(): BasicFlag(flagMwiProperties),
   CountryMys(): RectangleFlag(flagMysProperties),
   CountryMyt(): BasicFlag(flagMytProperties),
-  CountryNam(): BasicFlag(flagNamProperties),
+  CountryNam(): StarFlag(flagNamProperties),
   CountryNcl(): BasicFlag(flagNclProperties),
   CountryNer(): EllipseFlag(flagNerProperties),
   CountryNfk(): BasicFlag(flagNfkProperties),
