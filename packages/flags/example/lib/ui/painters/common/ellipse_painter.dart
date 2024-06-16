@@ -1,4 +1,3 @@
-import "package:flags/flags.dart";
 import "package:flutter/rendering.dart";
 
 import "../../../model/typedefs.dart";
@@ -9,11 +8,9 @@ final class EllipsePainter extends ElementsPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final widthRatio = shapeType<Ellipse>()?.widthRatio;
     final center = calculateCenter(size);
-    final height = size.height * property.heightFactor;
-    final width = widthRatio == null ? height : height * widthRatio;
-    final rect = Rect.fromCenter(center: center, width: width, height: height);
+    final radius = size.height * property.heightFactor / 2;
+    final rect = Rect.fromCircle(center: center, radius: radius);
     canvas.drawOval(rect, createPaintWithColor());
 
     return (canvas: canvas, bounds: rect, children: property.children);

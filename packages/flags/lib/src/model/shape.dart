@@ -25,9 +25,7 @@ class Star implements Shape {
 }
 
 class Ellipse implements Shape {
-  const Ellipse({this.widthRatio});
-
-  final double? widthRatio;
+  const Ellipse();
 }
 
 class Moon implements Shape {

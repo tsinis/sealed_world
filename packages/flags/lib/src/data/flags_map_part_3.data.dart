@@ -4,6 +4,185 @@ import "../../flags.dart";
 
 // ignore_for_file: prefer-static-class
 
+/// Flag properties of country Macau (MO).
+const flagMacProperties = FlagProperties(
+  [ColorsProperties(Color(0xff067662))],
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffFFDF1E)],
+      y: -0.512,
+      heightFactor: 0.11,
+      shape: Star(),
+      children: [
+        ElementsProperties(
+          [Color(0xffFFDF1E)],
+          x: 2.6,
+          y: 0.95,
+          heightFactor: 0.7,
+          angle: 36,
+          shape: Star(),
+          children: [
+            ElementsProperties(
+              [Color(0xffFFDF1E)],
+              x: -8.2,
+              y: 0.1,
+              heightFactor: 1.1,
+              angle: -36,
+              shape: Star(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffFFDF1E)],
+                  x: -2.4,
+                  y: 3.1,
+                  heightFactor: 1.18,
+                  angle: 8,
+                  shape: Star(),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xffFFDF1E)],
+                      x: 12.2,
+                      y: 0.1,
+                      heightFactor: 1.1,
+                      angle: -8,
+                      shape: Star(),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    ),
+    ElementsProperties([Color(0xffffffff)], heightFactor: 18 / 30),
+  ],
+  url: "https://wikipedia.org/wiki/File:Flag_of_Macau.svg",
+);
+
+/// Flag properties of country Mexico (MX).
+const flagMexProperties = FlagProperties(
+  [
+    ColorsProperties(Color(0xff006847)),
+    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xffce1125)),
+  ],
+  aspectRatio: 7 / 4,
+  stripeOrientation: StripeOrientation.vertical,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffaf7029)],
+      heightFactor: 1 / 4,
+    ),
+  ],
+  url: "https://wikipedia.org/wiki/File:Mexico_flag_construction_sheet.svg",
+);
+
+/// Flag properties of country Namibia (NA).
+const flagNamProperties = FlagProperties(
+  [
+    ColorsProperties(Color(0xff002F6C), ratio: 210),
+    ColorsProperties(Color(0xffffffff), ratio: 5),
+    ColorsProperties(Color(0xffC8102E), ratio: 32),
+    ColorsProperties(Color(0xffffffff), ratio: 5),
+    ColorsProperties(Color(0xff009A44), ratio: 210),
+  ],
+  stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffFFCD00)],
+      x: -0.602,
+      y: -0.455,
+      heightFactor: 4 / 12,
+      angle: 45,
+      shape: Star(points: 12, radiusFactor: 0.6),
+      children: [
+        ElementsProperties(
+          [Color(0xff002F6C)],
+          heightFactor: 0.63,
+          shape: Ellipse(),
+          children: [
+            ElementsProperties(
+              [Color(0xffFFCD00)],
+              heightFactor: 0.8,
+              shape: Ellipse(),
+            ),
+          ],
+        ),
+      ],
+    ),
+  ],
+  url:
+      "https://wikipedia.org/wiki/File:Flag_of_Namibia_(construction_sheet).svg",
+);
+
+/// Flag properties of country Mozambique (MZ).
+const flagMozProperties = FlagProperties(
+  [
+    ColorsProperties(Color(0xff009739), ratio: 10),
+    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xff000000), ratio: 10),
+    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xffFFD100), ratio: 10),
+  ],
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffE4002B)],
+      x: -1,
+      y: -1,
+      widthFactor: 0.44,
+      shape: Triangle(),
+      children: [
+        ElementsProperties(
+          [Color(0xffffca00)],
+          x: -0.333,
+          y: 0.04,
+          heightFactor: 13 / 32,
+          shape: Star(),
+          children: [
+            ElementsProperties([Color(0xff000000), Color(0xffffffff)]),
+          ],
+        ),
+      ],
+    ),
+  ],
+  url: "https://www.vexilla-mundi.com/mozambique/mozambique_sheet.png",
+);
+
+/// Flag properties of country Liechtenstein (LI).
+const flagLieProperties = FlagProperties(
+  [ColorsProperties(Color(0xff002780)), ColorsProperties(Color(0xffCF0921))],
+  aspectRatio: 5 / 3,
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffffd83d), Color(0xff000000)],
+      x: -0.6,
+      y: -0.4,
+      heightFactor: 3 / 12,
+    ),
+  ],
+  url:
+      "https://wikipedia.org/wiki/File:Flag_of_Liechtenstein_(construction).svg",
+);
+
+/// Flag properties of country Myanmar (MM).
+const flagMmrProperties = FlagProperties(
+  [
+    ColorsProperties(Color(0xfffecb00)),
+    ColorsProperties(Color(0xff34b233)),
+    ColorsProperties(Color(0xffea2839)),
+  ],
+  elementsProperties: [
+    ElementsProperties(
+      [Color(0xffffffff)],
+      y: 0.072,
+      heightFactor: 0.72,
+      shape: Star(),
+    ),
+  ],
+  url:
+      "https://wikipedia.org/wiki/File:Flag_of_Myanmar_(construction_sheet).svg",
+);
+
 /// Flag properties of country Central African Republic (CF).
 const flagCafProperties = FlagProperties(
   [
@@ -494,10 +673,10 @@ const flagEthProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xff006bc6)],
-      heightFactor: 40 / 60,
+      heightFactor: 2 / 3,
       shape: Ellipse(),
       children: [
-        ElementsProperties([Color(0xffffc621)], heightFactor: 32 / 40),
+        ElementsProperties([Color(0xffffc621)], heightFactor: 0.8),
       ],
     ),
   ],
@@ -625,6 +804,7 @@ const flagSxmProperties = FlagProperties(
     ElementsProperties(
       [Color(0xffffffff)],
       x: -1,
+      y: -1,
       widthFactor: 4 / 9,
       shape: Triangle(),
       children: [
@@ -770,14 +950,29 @@ const flagKazProperties = FlagProperties(
   [ColorsProperties(Color(0xff00abc2))],
   aspectRatio: 2,
   elementsProperties: [
-    ElementsProperties([Color(0xffffec2d)], heightFactor: 0.9),
     ElementsProperties(
       [Color(0xffffec2d)],
-      x: -0.1,
-      y: 0.1,
-      heightFactor: 1 / 2,
-      shape: Ellipse(),
+      x: 0.08,
+      y: -0.16,
+      heightFactor: 0.42,
+      angle: 17,
+      shape: Star(points: 32, radiusFactor: 0.666),
+      children: [
+        ElementsProperties(
+          [Color(0xff00abc2)],
+          heightFactor: 0.75,
+          shape: Ellipse(),
+          children: [
+            ElementsProperties(
+              [Color(0xffffec2d)],
+              heightFactor: 0.85,
+              shape: Ellipse(),
+            ),
+          ],
+        ),
+      ],
     ),
+    ElementsProperties([Color(0xffffec2d)], heightFactor: 0.9),
   ],
   url: "https://www.vexilla-mundi.com/kazakhstan/kazakhstan_sheet.png",
 );
@@ -954,17 +1149,44 @@ const flagPngProperties = FlagProperties(
   stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   elementsProperties: [
     ElementsProperties(
-      [Color(0xff000000)],
-      x: -1,
-      widthFactor: 1,
-      angle: 90,
-      shape: Triangle(),
+      [Color(0xffffffff)],
+      x: -0.5,
+      y: -0.25,
+      heightFactor: 0.13,
+      shape: Star(),
       children: [
         ElementsProperties(
           [Color(0xffffffff)],
-          heightFactor: 0.9,
-          widthFactor: 0.9,
+          y: 8,
+          heightFactor: 1.1,
           shape: Star(),
+          children: [
+            ElementsProperties(
+              [Color(0xffffffff)],
+              x: -2.4,
+              y: -4.45,
+              heightFactor: 1.1,
+              shape: Star(),
+              children: [
+                ElementsProperties(
+                  [Color(0xffffffff)],
+                  x: 4.6,
+                  y: -0.1,
+                  heightFactor: 1.1,
+                  shape: Star(),
+                  children: [
+                    ElementsProperties(
+                      [Color(0xffffffff)],
+                      x: -1.1,
+                      y: 2.4,
+                      heightFactor: 0.6,
+                      shape: Star(),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     ),
@@ -1215,6 +1437,8 @@ const flagEriProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       [Color(0xffEB0433)],
+      x: -1,
+      y: -1,
       widthFactor: 1,
       shape: Triangle(),
       children: [
