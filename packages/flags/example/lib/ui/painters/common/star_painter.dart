@@ -29,7 +29,7 @@ final class StarPainter extends ElementsPainter {
     }
 
     if (property.angle == null) {
-      canvas.drawPath(path..close(), createPaintWithColor());
+      canvas.drawPath(path..close(), colorPaint);
     } else {
       final angleInRadians = (property.angle ?? 0) * radiansMultiplier;
       canvas
@@ -37,14 +37,10 @@ final class StarPainter extends ElementsPainter {
         ..translate(center.dx, center.dy)
         ..rotate(angleInRadians)
         ..translate(-center.dx, -center.dy)
-        ..drawPath(path..close(), createPaintWithColor())
+        ..drawPath(path..close(), colorPaint)
         ..restore();
     }
 
-    return (
-      canvas: canvas,
-      bounds: path.getBounds(),
-      children: property.children
-    );
+    return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
 }

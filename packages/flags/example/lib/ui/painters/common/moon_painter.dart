@@ -28,14 +28,9 @@ final class MoonPainter extends ElementsPainter {
     final secondRect =
         Rect.fromCircle(center: secondCenter, radius: moon.radius * radius);
     final secondPath = Path()..addOval(secondRect);
-    final crescentPath =
-        Path.combine(PathOperation.difference, mainPath, secondPath);
-    canvas.drawPath(crescentPath, createPaintWithColor());
+    final path = Path.combine(PathOperation.difference, mainPath, secondPath);
+    canvas.drawPath(path, colorPaint);
 
-    return (
-      canvas: canvas,
-      bounds: crescentPath.getBounds(),
-      children: property.children
-    );
+    return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
 }

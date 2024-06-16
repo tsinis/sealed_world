@@ -11,8 +11,8 @@ final class EllipsePainter extends ElementsPainter {
     final center = calculateCenter(size);
     final radius = size.height * property.heightFactor / 2;
     final rect = Rect.fromCircle(center: center, radius: radius);
-    canvas.drawOval(rect, createPaintWithColor());
+    canvas.drawOval(rect, colorPaint);
 
-    return (canvas: canvas, bounds: rect, children: property.children);
+    return (canvas: canvas, bounds: rect, child: property.child);
   }
 }

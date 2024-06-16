@@ -19,6 +19,6 @@ final class MultiElementPainter extends ElementsPainter {
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) => (
         canvas: canvas,
         bounds: Rect.fromLTWH(0, 0, size.width, size.height),
-        children: property.children,
+        child: property.child,
       );
 }

@@ -30,13 +30,9 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset + width, yOffset + height / 2)
       ..lineTo(xOffset, yOffset + height)
       ..close();
-    canvas.drawPath(path, createPaintWithColor());
+    canvas.drawPath(path, colorPaint);
 
-    return (
-      canvas: canvas,
-      bounds: path.getBounds(),
-      children: property.children
-    );
+    return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
 
   /// American Samoa like triangle on the flag.
@@ -52,13 +48,9 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset - width, yOffset + height / 2)
       ..lineTo(xOffset, yOffset + height)
       ..close();
-    canvas.drawPath(path, createPaintWithColor());
+    canvas.drawPath(path, colorPaint);
 
-    return (
-      canvas: canvas,
-      bounds: path.getBounds(),
-      children: property.children
-    );
+    return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
 
   FlagParentBounds _topToBottomTriangle(Canvas canvas, Size size) {
@@ -72,13 +64,9 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset + width, yOffset)
       ..lineTo(xOffset + width / 2, yOffset + height)
       ..close();
-    canvas.drawPath(path, createPaintWithColor());
+    canvas.drawPath(path, colorPaint);
 
-    return (
-      canvas: canvas,
-      bounds: path.getBounds(),
-      children: property.children
-    );
+    return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
 
   FlagParentBounds _bottomToTopTriangle(Canvas canvas, Size size) {
@@ -92,12 +80,8 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset + width, yOffset + height)
       ..lineTo(xOffset + width / 2, yOffset)
       ..close();
-    canvas.drawPath(path, createPaintWithColor());
+    canvas.drawPath(path, colorPaint);
 
-    return (
-      canvas: canvas,
-      bounds: path.getBounds(),
-      children: property.children
-    );
+    return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
 }

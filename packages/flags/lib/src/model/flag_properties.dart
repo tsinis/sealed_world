@@ -1,5 +1,5 @@
 import "colors_properties.dart";
-import "elements_properties.dart";
+import "elements/elements_properties.dart";
 import "stripe_orientation.dart";
 
 class FlagProperties {
@@ -23,6 +23,6 @@ class FlagProperties {
 
   @override
   String toString() => "FlagProperties($colors, aspectRatio: $aspectRatio, "
-      "stripeOrientation: $stripeOrientation, "
+      "stripeOrientation: $stripeOrientation, url: $url, "
       "elementsProperties: $elementsProperties)";
 }

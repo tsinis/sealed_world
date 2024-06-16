@@ -1,4 +1,4 @@
-import "package:flags/flags.dart";
+import "package:flags/flags.dart" show ElementsProperties;
 import "package:flutter/widgets.dart";
 
 typedef ElementsProps = List<ElementsProperties>;
@@ -18,5 +18,5 @@ typedef FlagWidgetBuilder<T extends Widget> = T? Function(
 typedef FlagParentBounds = ({
   Canvas canvas,
   Rect bounds,
-  ElementsProps children
+  ElementsProperties? child
 });

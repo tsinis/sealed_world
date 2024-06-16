@@ -1,21 +1,23 @@
-import "dart:ui" show Color;
+import "dart:ui";
 
-import "shape.dart";
+import "../shape.dart";
 
 class ElementsProperties {
   const ElementsProperties(
-    this.colors, {
+    this.mainColor, {
+    required this.shape,
     this.x = middle,
     this.y = middle,
     this.heightFactor = 1,
     this.widthFactor,
     this.angle,
-    this.shape,
-    this.children = const [],
+    this.child,
   })  : assert(widthFactor == null || widthFactor >= 0.0),
         assert(heightFactor >= 0.0);
 
   static const double middle = 0;
+
+  final Color mainColor;
 
   /// Height factor of the symbol. Is more relevant than width factor, because
   /// of various aspect rations of the flags, when width varies but height
@@ -25,10 +27,9 @@ class ElementsProperties {
   /// If [widthFactor] is null, this is usually means that element's bounding
   /// box has square form.
   final double? widthFactor;
-  final List<Color> colors;
   final double? angle;
   final Shape? shape;
-  final List<ElementsProperties> children;
+  final ElementsProperties? child;
 
   /// The distance fraction in the horizontal direction (of the center).
   ///
@@ -50,7 +51,8 @@ class ElementsProperties {
 
   @override
   String toString() =>
-      "ElementsProperties(${x.toStringAsFixed(1)}, ${y.toStringAsFixed(1)}"
-      "widthFactor: $widthFactor, heightFactor: $heightFactor, "
-      "colors: $colors, angle: $angle, shape: $shape, children: $children)";
+      "ElementsProperties($mainColor, x: ${x.toStringAsFixed(1)}, "
+      "y: ${y.toStringAsFixed(1)}, widthFactor: $widthFactor, "
+      "heightFactor: $heightFactor, angle: $angle, shape: $shape, "
+      "child: $child)";
 }

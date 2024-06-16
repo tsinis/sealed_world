@@ -22,9 +22,9 @@ final class DiagonalLinePainter extends ElementsPainter {
       ..save()
       ..translate(size.width / 2, size.height / 2)
       ..rotate(isTopRightToBottomLeft ? angle : -angle)
-      ..drawRect(rect, createPaintWithColor())
+      ..drawRect(rect, colorPaint)
       ..restore();
 
-    return (canvas: canvas, bounds: rect, children: property.children);
+    return (canvas: canvas, bounds: rect, child: property.child);
   }
 }

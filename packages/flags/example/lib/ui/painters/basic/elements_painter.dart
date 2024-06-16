@@ -29,12 +29,15 @@ abstract base class ElementsPainter extends CustomPainter {
   ElementsProperties get property => properties.first;
 
   @protected
+  Paint get colorPaint => Paint()..color = property.mainColor;
+
+  @protected
   FlagParentBounds paintFlagElements(Canvas canvas, Size size);
 
   @override
   void paint(Canvas canvas, Size size) {
     final parent = paintFlagElements(canvas, size);
-    paintChild(parent.canvas, parent.bounds, parent.children);
+    paintChild(parent.canvas, parent.bounds, parent.child);
   }
 
   @protected
@@ -45,8 +48,7 @@ abstract base class ElementsPainter extends CustomPainter {
   }
 
   @protected
-  void paintChild(Canvas canvas, Rect parentBounds, ElementsProps children) {
-    final child = children.firstOrNull;
+  void paintChild(Canvas canvas, Rect parentBounds, ElementsProperties? child) {
     final childShape = child?.shape;
     if (child == null || childShape == null) return;
 
@@ -70,10 +72,6 @@ abstract base class ElementsPainter extends CustomPainter {
         triangle: TrianglePainter.new,
         diagonalLine: DiagonalLinePainter.new,
       );
-
-  @protected
-  Paint createPaintWithColor([Color? color]) =>
-      Paint()..color = color ?? property.colors.first;
 
   @protected
   double calculateSize(Size size) {
