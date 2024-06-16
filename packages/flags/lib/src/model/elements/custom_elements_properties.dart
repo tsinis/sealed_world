@@ -17,7 +17,7 @@ class CustomElementsProperties extends ElementsProperties {
 
   @override
   String toString() =>
-      "CustomElementsProperties($mainColor, x: ${x.toStringAsFixed(1)}, "
-      "y: ${y.toStringAsFixed(1)}, widthFactor: $widthFactor, "
-      "heightFactor: $heightFactor, angle: $angle, otherColors: $otherColors)";
+      "CustomElementsProperties($mainColor, otherColors: $otherColors, "
+      "x: ${x.toStringAsFixed(1)}, y: ${y.toStringAsFixed(1)}, "
+      "heightFactor: $heightFactor, widthFactor: $widthFactor, angle: $angle)";
 }

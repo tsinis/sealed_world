@@ -20,7 +20,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     _applyFlagClipping(canvas, size);
-    final total = properties.colors.fold(0, (sum, cp) => sum + cp.ratio);
+    final total = properties.stripeColors.fold(0, (sum, cp) => sum + cp.ratio);
     switch (properties.stripeOrientation) {
       case StripeOrientation.horizontal:
         _drawHorizontalStripes(canvas, size, total);
@@ -52,7 +52,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   void _drawVerticalStripes(Canvas canvas, Size size, int totalRatio) {
     var position = 0.0;
-    for (final colorProperty in properties.colors) {
+    for (final colorProperty in properties.stripeColors) {
       final stripeSize = size.width * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
       canvas.drawRect(stripe, Paint()..color = colorProperty.color);
@@ -62,7 +62,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   void _drawHorizontalStripes(Canvas canvas, Size size, int totalRatio) {
     var position = 0.0;
-    for (final colorProperty in properties.colors) {
+    for (final colorProperty in properties.stripeColors) {
       final stripeSize = size.height * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
       canvas.drawRect(stripe, Paint()..color = colorProperty.color);
@@ -87,7 +87,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       ..translate(-diagonalLength, -height * 2);
 
     var position = 0.0;
-    for (final colorProperty in properties.colors) {
+    for (final colorProperty in properties.stripeColors) {
       final stripeSize = diagonalLength * 2 * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, height * 4);
       canvas.drawRect(stripe, Paint()..color = colorProperty.color);

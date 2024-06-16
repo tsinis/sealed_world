@@ -4,14 +4,14 @@ import "stripe_orientation.dart";
 
 class FlagProperties {
   const FlagProperties(
-    this.colors, {
+    this.stripeColors, {
     this.aspectRatio = 3 / 2,
     this.stripeOrientation = StripeOrientation.horizontal,
     this.elementsProperties,
     this.url = "",
   });
 
-  final List<ColorsProperties> colors;
+  final List<ColorsProperties> stripeColors;
   final List<ElementsProperties>? elementsProperties;
 
   /// Aspect ration of the flag. The aspect ratio is conventionally given
@@ -22,7 +22,8 @@ class FlagProperties {
   final StripeOrientation stripeOrientation;
 
   @override
-  String toString() => "FlagProperties($colors, aspectRatio: $aspectRatio, "
+  String toString() =>
+      "FlagProperties($stripeColors, aspectRatio: $aspectRatio, "
       "stripeOrientation: $stripeOrientation, url: $url, "
       "elementsProperties: $elementsProperties)";
 }

@@ -14,9 +14,9 @@ const flagMdgProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Rectangle(),
       x: -1,
       widthFactor: 1 / 3,
-      shape: Rectangle(),
     ),
   ],
   url:
@@ -88,15 +88,15 @@ const flagChlProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff0039a6),
+      shape: Rectangle(aspectRatio: 1),
       x: -1,
       y: -1,
       heightFactor: 1 / 2,
       widthFactor: 1 / 2,
-      shape: Rectangle(aspectRatio: 1),
       child: ElementsProperties(
         Color(0xffffffff),
-        heightFactor: 1 / 2,
         shape: Star(),
+        heightFactor: 1 / 2,
       ),
     ),
   ],
@@ -110,19 +110,19 @@ const flagAsmProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffef3340),
+      shape: Triangle(),
       x: 1,
       y: -1,
       widthFactor: 1,
       angle: 180,
-      shape: Triangle(),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Triangle(),
         x: 1,
         y: -0.9,
         heightFactor: 0.9,
         widthFactor: 0.9,
         angle: 180,
-        shape: Triangle(),
         child: CustomElementsProperties(
           Color(0xffffd100),
           otherColors: [
@@ -150,31 +150,31 @@ const flagBhrProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Triangle(),
       x: -0.6,
       y: -1.06,
       heightFactor: 0.26,
       widthFactor: 1 / 5,
-      shape: Triangle(),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Triangle(),
         x: -1,
         y: 0.54,
-        shape: Triangle(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Triangle(),
           x: -1,
           y: 0.54,
-          shape: Triangle(),
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Triangle(),
             x: -1,
             y: 0.54,
-            shape: Triangle(),
             child: ElementsProperties(
               Color(0xffffffff),
+              shape: Triangle(),
               x: -1,
               y: 0.54,
-              shape: Triangle(),
             ),
           ),
         ),
@@ -198,16 +198,16 @@ const flagTurProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Moon(radius: 0.8, x: 0.75),
       x: -0.333,
       heightFactor: 1 / 2,
       widthFactor: 1 / 3,
-      shape: Moon(radius: 0.8, x: 0.75),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: 1.466,
         heightFactor: 0.5,
         angle: -18,
-        shape: Star(),
       ),
     ),
   ],
@@ -233,66 +233,66 @@ const flagBdiProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffcf0921),
+      shape: Triangle(),
       y: -0.5,
       heightFactor: 1 / 2,
       angle: 90,
-      shape: Triangle(),
     ),
     ElementsProperties(
       Color(0xffcf0921),
+      shape: Triangle(),
       y: 1,
       heightFactor: 1 / 2,
       angle: 270,
-      shape: Triangle(),
     ),
     ElementsProperties(
       Color(0xffffffff),
-      heightFactor: 0.13,
       shape: DiagonalLine(),
-    ),
-    ElementsProperties(
-      Color(0xffffffff),
       heightFactor: 0.13,
-      shape: DiagonalLine(isTopRightToBottomLeft: false),
     ),
     ElementsProperties(
       Color(0xffffffff),
-      heightFactor: 0.56,
+      shape: DiagonalLine(isTopRightToBottomLeft: false),
+      heightFactor: 0.13,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
       shape: Ellipse(),
+      heightFactor: 0.56,
       child: ElementsProperties(
         Color(0xff18b637),
+        shape: Star(points: 6, radiusFactor: 0.6),
         y: -0.52,
         heightFactor: 0.23,
         angle: 90,
-        shape: Star(points: 6, radiusFactor: 0.6),
         child: ElementsProperties(
           Color(0xffcf0921),
+          shape: Star(points: 6, radiusFactor: 0.6),
           heightFactor: 0.9,
           angle: 90,
-          shape: Star(points: 6, radiusFactor: 0.6),
           child: ElementsProperties(
             Color(0xff18b637),
+            shape: Star(points: 6, radiusFactor: 0.6),
             x: -2.5,
             y: 5,
             heightFactor: 1.45,
             angle: 90,
-            shape: Star(points: 6, radiusFactor: 0.6),
             child: ElementsProperties(
               Color(0xffcf0921),
+              shape: Star(points: 6, radiusFactor: 0.6),
               heightFactor: 0.9,
               angle: 90,
-              shape: Star(points: 6, radiusFactor: 0.6),
               child: ElementsProperties(
                 Color(0xff18b637),
+                shape: Star(points: 6, radiusFactor: 0.6),
                 x: 5.12,
                 heightFactor: 1.45,
                 angle: 90,
-                shape: Star(points: 6, radiusFactor: 0.6),
                 child: ElementsProperties(
                   Color(0xffcf0921),
+                  shape: Star(points: 6, radiusFactor: 0.6),
                   heightFactor: 0.9,
                   angle: 90,
-                  shape: Star(points: 6, radiusFactor: 0.6),
                 ),
               ),
             ),
@@ -316,17 +316,17 @@ const flagArgProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xfff6b40e),
+      shape: Star(points: 32, radiusFactor: 0.45),
       heightFactor: 55 / 180,
       angle: 17,
-      shape: Star(points: 32, radiusFactor: 0.45),
       child: ElementsProperties(
         Color(0xff85340a),
-        heightFactor: 0.4,
         shape: Ellipse(),
+        heightFactor: 0.4,
         child: ElementsProperties(
           Color(0xfff6b40e),
-          heightFactor: 0.9,
           shape: Ellipse(),
+          heightFactor: 0.9,
         ),
       ),
     ),
@@ -343,11 +343,7 @@ const flagCmrProperties = FlagProperties(
   ],
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xfffcd116),
-      heightFactor: 2 / 6,
-      shape: Star(),
-    ),
+    ElementsProperties(Color(0xfffcd116), shape: Star(), heightFactor: 2 / 6),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Cameroon_(construction).png",
 );
@@ -363,9 +359,9 @@ const flagAreProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffff0000),
+      shape: Rectangle(),
       x: -1,
       widthFactor: 3 / 12,
-      shape: Rectangle(),
     ),
   ],
   url:
@@ -381,10 +377,10 @@ const flagCzeProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff11457e),
+      shape: Triangle(),
       x: -1,
       y: -1,
       widthFactor: 1 / 2,
-      shape: Triangle(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Czech_flag_construction.svg",
@@ -399,10 +395,10 @@ const flagMtqProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffef1923),
+      shape: Triangle(),
       x: -1,
       y: -1,
       widthFactor: 1 / 2,
-      shape: Triangle(),
     ),
   ],
   url: "https://www.vexilla-mundi.com/martinique/martinique_sheet.png",
@@ -485,9 +481,9 @@ const flagAtgProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
+      shape: Triangle(),
       widthFactor: 1,
       angle: 90,
-      shape: Triangle(),
       child: CustomElementsProperties(
         Color(0xfffcd116),
         otherColors: [Color(0xff0072c6), Color(0xffffffff)],
@@ -507,43 +503,39 @@ const flagCxrProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Star(points: 7, radiusFactor: 0.48),
       x: -0.433,
       heightFactor: 0.12,
-      shape: Star(points: 7, radiusFactor: 0.48),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: -2.2,
         y: 2.48,
         heightFactor: 0.8,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Star(points: 7, radiusFactor: 0.48),
           x: -1.85,
           y: 5.6,
           heightFactor: 1.45,
-          shape: Star(points: 7, radiusFactor: 0.48),
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Star(points: 7, radiusFactor: 0.48),
             x: -0.1,
             y: -9.4,
             heightFactor: 1.05,
-            shape: Star(points: 7, radiusFactor: 0.48),
             child: ElementsProperties(
               Color(0xffffffff),
+              shape: Star(points: 7, radiusFactor: 0.48),
               x: -3.9,
               y: 4.4,
               heightFactor: 1.05,
-              shape: Star(points: 7, radiusFactor: 0.48),
             ),
           ),
         ),
       ),
     ),
-    ElementsProperties(
-      Color(0xffffc639),
-      heightFactor: 0.36,
-      shape: Ellipse(),
-    ),
+    ElementsProperties(Color(0xffffc639), shape: Ellipse(), heightFactor: 0.36),
     CustomElementsProperties(
       Color(0xff1c8a42),
       otherColors: [Color(0xffffc639)],
@@ -579,11 +571,7 @@ const flagAtfProperties = FlagProperties(
 const flagVnmProperties = FlagProperties(
   [ColorsProperties(Color(0xffda251d))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffffff00),
-      heightFactor: 12 / 20,
-      shape: Star(),
-    ),
+    ElementsProperties(Color(0xffffff00), shape: Star(), heightFactor: 12 / 20),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Vietnam_(construction_sheet).svg",
@@ -595,18 +583,18 @@ const flagZmbProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffEF3340),
+      shape: Rectangle(aspectRatio: 0.8333),
       x: 1,
       y: 1,
       heightFactor: 144 / 224,
-      shape: Rectangle(aspectRatio: 0.8333),
       child: ElementsProperties(
         Color(0xff000000),
-        x: 1,
         shape: Rectangle(aspectRatio: 0.56),
+        x: 1,
         child: ElementsProperties(
           Color(0xffFCAD56),
-          x: 1,
           shape: Rectangle(aspectRatio: 0.27),
+          x: 1,
         ),
       ),
     ),
@@ -635,14 +623,14 @@ const flagTgoProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffd80000),
+      shape: Rectangle(aspectRatio: 1),
       x: -1,
       y: -1,
       heightFactor: 3 / 5,
-      shape: Rectangle(aspectRatio: 1),
       child: ElementsProperties(
         Color(0xffffffff),
-        heightFactor: 19 / 30,
         shape: Star(),
+        heightFactor: 19 / 30,
       ),
     ),
   ],
@@ -655,41 +643,41 @@ const flagChnProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffff00),
+      shape: Star(),
       x: -0.667,
       y: -0.5,
       heightFactor: 0.3,
-      shape: Star(),
     ),
     ElementsProperties(
       Color(0xffffff00),
+      shape: Star(),
       x: -0.333,
       y: -0.8,
       heightFactor: 0.1,
       angle: 22,
-      shape: Star(),
     ),
     ElementsProperties(
       Color(0xffffff00),
+      shape: Star(),
       x: -0.2,
       y: -0.6,
       heightFactor: 0.1,
       angle: -25,
-      shape: Star(),
     ),
     ElementsProperties(
       Color(0xffffff00),
+      shape: Star(),
       x: -0.2,
       y: -0.3,
       heightFactor: 0.1,
-      shape: Star(),
     ),
     ElementsProperties(
       Color(0xffffff00),
+      shape: Star(),
       x: -0.333,
       y: -0.1,
       heightFactor: 0.1,
       angle: 22,
-      shape: Star(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_China_(construction_sheet).svg",
@@ -701,9 +689,9 @@ const flagBenProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff008850),
+      shape: Rectangle(),
       x: -1,
       widthFactor: 6 / 15,
-      shape: Rectangle(),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Benin_(construction_sheet).svg",
@@ -765,9 +753,9 @@ const flagOmnProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffef2d29),
+      shape: Rectangle(),
       x: -1,
       widthFactor: 20 / 60,
-      shape: Rectangle(),
       child: CustomElementsProperties(
         Color(0xffffffff),
         y: -0.97,
@@ -788,15 +776,15 @@ const flagMrtProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFD700),
+      shape: Moon(radius: 1.09, x: 0, y: -0.9),
       y: -0.35,
       heightFactor: 1 / 4,
       widthFactor: 3 / 6,
-      shape: Moon(radius: 1.09, x: 0, y: -0.9),
       child: ElementsProperties(
         Color(0xffFFD700),
+        shape: Star(),
         y: -0.75,
         heightFactor: 0.6,
-        shape: Star(),
       ),
     ),
   ],
@@ -815,37 +803,37 @@ const flagNicProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffc8a400),
-      heightFactor: 18 / 60,
       shape: Ellipse(),
+      heightFactor: 18 / 60,
       child: ElementsProperties(
         Color(0xffffffff),
-        heightFactor: 0.9,
         shape: Ellipse(),
+        heightFactor: 0.9,
         child: ElementsProperties(
           Color(0xffffffff),
-          heightFactor: 1.25,
           shape: Star(points: 3, radiusFactor: 0.5),
+          heightFactor: 1.25,
           child: ElementsProperties(
             Color(0xffc8a400),
+            shape: Triangle(),
             x: 0.1,
             y: 0.85,
             heightFactor: 0.8,
             widthFactor: 0.8,
             angle: 270,
-            shape: Triangle(),
             child: ElementsProperties(
               Color(0xff17c0eb),
+              shape: Triangle(),
               x: 0.1,
               y: 0.87,
               heightFactor: 0.8,
               widthFactor: 0.8,
               angle: 270,
-              shape: Triangle(),
               child: ElementsProperties(
                 Color(0xffff0000),
+                shape: Ellipse(),
                 y: 0.06,
                 heightFactor: 0.1,
-                shape: Ellipse(),
               ),
             ),
           ),
@@ -866,8 +854,8 @@ const flagLaoProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
-      heightFactor: 8 / 20,
       shape: Ellipse(),
+      heightFactor: 8 / 20,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Laos_(construction_sheet).svg",
@@ -880,8 +868,8 @@ const flagMneProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffc40308),
-      heightFactor: 54 / 60,
       shape: Rectangle(aspectRatio: 2.1),
+      heightFactor: 54 / 60,
       child: CustomElementsProperties(
         Color(0xffd3ae3b),
         otherColors: [
@@ -906,15 +894,15 @@ const flagMhlProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Star(points: 4, radiusFactor: 0.08),
       x: -0.617,
       y: -0.27,
       heightFactor: 0.6,
       angle: 45,
-      shape: Star(points: 4, radiusFactor: 0.08),
       child: ElementsProperties(
         Color(0xffffffff),
-        angle: 22.5,
         shape: Star(points: 24, radiusFactor: 0.45),
+        angle: 22.5,
       ),
     ),
     CustomElementsProperties(
@@ -934,48 +922,48 @@ const flagCckProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffe000),
-      heightFactor: 0.42,
       shape: Moon(radius: 0.82, x: 0.3),
+      heightFactor: 0.42,
       child: ElementsProperties(
         Color(0xffffe000),
+        shape: Star(points: 7, radiusFactor: 0.45),
         x: 1.58,
         y: -0.29,
         heightFactor: 0.32,
-        shape: Star(points: 7, radiusFactor: 0.45),
       ),
     ),
     ElementsProperties(
       Color(0xffffe000),
+      shape: Star(),
       x: 0.6,
       y: 0.082,
       heightFactor: 0.085,
-      shape: Star(),
       child: ElementsProperties(
         Color(0xffffe000),
+        shape: Star(points: 7, radiusFactor: 0.45),
         x: 3,
         y: -4.3,
         heightFactor: 1.75,
-        shape: Star(points: 7, radiusFactor: 0.45),
         child: ElementsProperties(
           Color(0xffffe000),
+          shape: Star(points: 7, radiusFactor: 0.45),
           x: -3.4,
           y: -3.15,
           heightFactor: 1.1,
-          shape: Star(points: 7, radiusFactor: 0.45),
           child: ElementsProperties(
             Color(0xffffe000),
-            y: 10,
             shape: Star(points: 7, radiusFactor: 0.45),
+            y: 10,
           ),
         ),
       ),
     ),
     ElementsProperties(
       Color(0xffffe000),
+      shape: Ellipse(),
       x: -0.658,
       y: -0.418,
       heightFactor: 0.435,
-      shape: Ellipse(),
       child: CustomElementsProperties(
         Color(0xff802000),
         otherColors: [Color(0xff008000)],
@@ -1010,45 +998,45 @@ const flagTjkProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffF8C400),
+      shape: Star(),
       y: -0.31,
       heightFactor: 0.07,
-      shape: Star(),
       child: ElementsProperties(
         Color(0xffF8C400),
+        shape: Star(),
         x: -2.9,
         y: 0.95,
         heightFactor: 1.1,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffF8C400),
+          shape: Star(),
           x: 5.85,
           y: 0.1,
           heightFactor: 1.1,
-          shape: Star(),
           child: ElementsProperties(
             Color(0xffF8C400),
+            shape: Star(),
             x: 2.3,
             y: 2.4,
             heightFactor: 1.1,
-            shape: Star(),
             child: ElementsProperties(
               Color(0xffF8C400),
+              shape: Star(),
               x: -10.5,
               y: 0.15,
               heightFactor: 1.1,
-              shape: Star(),
               child: ElementsProperties(
                 Color(0xffF8C400),
+                shape: Star(),
                 x: -0.9,
                 y: 3.2,
                 heightFactor: 1.1,
-                shape: Star(),
                 child: ElementsProperties(
                   Color(0xffF8C400),
+                  shape: Star(),
                   x: 12.3,
                   y: 0.1,
                   heightFactor: 1.1,
-                  shape: Star(),
                 ),
               ),
             ),
@@ -1073,30 +1061,30 @@ const flagVutProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
+      shape: Triangle(),
       x: -1,
       y: -1,
       widthFactor: 0.58,
-      shape: Triangle(),
     ),
     ElementsProperties(
       Color(0xfffdce12),
-      heightFactor: 2 / 36,
       shape: Rectangle(),
+      heightFactor: 2 / 36,
     ),
     ElementsProperties(
       Color(0xfffdce12),
+      shape: Triangle(),
       x: -1,
       y: -0.85,
       heightFactor: 0.85,
       widthFactor: 0.5,
-      shape: Triangle(),
       child: ElementsProperties(
         Color(0xff000000),
+        shape: Triangle(),
         x: -1,
         y: -0.85,
         heightFactor: 0.85,
         widthFactor: 0.85,
-        shape: Triangle(),
       ),
     ),
     CustomElementsProperties(
@@ -1125,25 +1113,25 @@ const flagUryProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Rectangle(aspectRatio: 1.15),
       x: -1,
       y: -1,
       heightFactor: 78 / 162,
-      shape: Rectangle(aspectRatio: 1.15),
       child: ElementsProperties(
         Color(0xff7b3f00),
+        shape: Star(points: 16, radiusFactor: 0.45),
         y: 0.15,
         heightFactor: 0.85,
         angle: 10,
-        shape: Star(points: 16, radiusFactor: 0.45),
         child: ElementsProperties(
           Color.fromARGB(255, 145, 86, 22),
+          shape: Star(points: 16, radiusFactor: 0.3),
           x: -0.01,
           angle: 32,
-          shape: Star(points: 16, radiusFactor: 0.3),
           child: ElementsProperties(
             Color(0xfffcd116),
-            heightFactor: 1 / 3,
             shape: Ellipse(),
+            heightFactor: 1 / 3,
           ),
         ),
       ),
@@ -1164,41 +1152,41 @@ const flagZafProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Triangle(),
       x: -1,
       y: -1.4,
       heightFactor: 1.4,
       widthFactor: 0.7,
-      shape: Triangle(),
       child: ElementsProperties(
         Color(0xff007A4D),
+        shape: Rectangle(),
         x: -0.5,
         heightFactor: 0.143,
         widthFactor: 1,
-        shape: Rectangle(),
       ),
     ),
     ElementsProperties(
       Color(0xff007A4D),
+      shape: Triangle(),
       x: -1,
       y: -1.25,
       heightFactor: 1.25,
       widthFactor: 0.62,
-      shape: Triangle(),
     ),
     ElementsProperties(
       Color(0xffFFB612),
+      shape: Triangle(),
       x: -1,
       y: -0.75,
       heightFactor: 0.75,
       widthFactor: 0.38,
-      shape: Triangle(),
       child: ElementsProperties(
         Color(0xff000000),
+        shape: Triangle(),
         x: -1,
         y: -0.8,
         heightFactor: 0.8,
         widthFactor: 0.8,
-        shape: Triangle(),
       ),
     ),
   ],
@@ -1221,24 +1209,24 @@ const flagZweProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
+      shape: Triangle(),
       x: -1,
       y: -1.06,
       heightFactor: 1.06,
       widthFactor: 0.35,
-      shape: Triangle(),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Triangle(),
         x: -1,
         y: -0.94,
         heightFactor: 0.94,
         widthFactor: 0.94,
-        shape: Triangle(),
         child: ElementsProperties(
           Color(0xffd40000),
+          shape: Star(),
           x: -0.225,
           y: -0.05,
           heightFactor: 29 / 64,
-          shape: Star(),
           child: CustomElementsProperties(
             Color(0xffffcc00),
             otherColors: [Color(0xff000000)],
@@ -1279,26 +1267,26 @@ const flagTklProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Star(),
       x: -0.42,
       y: -0.405,
       heightFactor: 1 / 12,
-      shape: Star(),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: -5.02,
         y: 11.5,
         heightFactor: 1.55,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffffffff),
-          y: -11.3,
           shape: Star(),
+          y: -11.3,
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Star(),
             x: -4.66,
             y: 5,
             heightFactor: 1.1,
-            shape: Star(),
           ),
         ),
       ),
@@ -1312,11 +1300,7 @@ const flagTklProperties = FlagProperties(
 const flagBfaProperties = FlagProperties(
   [ColorsProperties(Color(0xffEF2B2D)), ColorsProperties(Color(0xff35a100))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xfffff300),
-      heightFactor: 4 / 12,
-      shape: Star(),
-    ),
+    ElementsProperties(Color(0xfffff300), shape: Star(), heightFactor: 4 / 12),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Burkina_Faso_(construction_sheet).svg",
@@ -1335,15 +1319,15 @@ const flagCubProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffCC0D0D),
+      shape: Triangle(),
       x: -1,
       y: -1,
       widthFactor: 0.43,
-      shape: Triangle(),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: -1 / 3,
         heightFactor: 5 / 15,
-        shape: Star(),
       ),
     ),
   ],
@@ -1361,8 +1345,8 @@ const flagNerProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffe05206),
-      heightFactor: 1 / 4,
       shape: Ellipse(),
+      heightFactor: 1 / 4,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Niger_(construction).svg",
@@ -1379,11 +1363,11 @@ const flagNruProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Star(points: 12, radiusFactor: 1 / 2),
       x: -0.5,
       y: 0.42,
       heightFactor: 8 / 24,
       angle: 45,
-      shape: Star(points: 12, radiusFactor: 1 / 2),
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Nauru_(construction_sheet).svg",
@@ -1397,12 +1381,12 @@ const flagMkdProperties = FlagProperties(
     CustomElementsProperties(Color(0xffF9D616)),
     ElementsProperties(
       Color(0xffCE2028),
-      heightFactor: 0.355,
       shape: Ellipse(),
+      heightFactor: 0.355,
       child: ElementsProperties(
         Color(0xffF9D616),
-        heightFactor: 0.8,
         shape: Ellipse(),
+        heightFactor: 0.8,
       ),
     ),
   ],
@@ -1445,10 +1429,10 @@ const flagBhsProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
+      shape: Triangle(),
       x: -1,
       y: -1,
       widthFactor: 0.43,
-      shape: Triangle(),
     ),
   ],
   url:
@@ -1465,17 +1449,17 @@ const flagCuwProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Star(),
       x: -0.78,
       y: -0.666,
       heightFactor: 12 / 72,
-      shape: Star(),
     ),
     ElementsProperties(
       Color(0xffffffff),
+      shape: Star(),
       x: -0.56,
       y: -0.333,
       heightFactor: 16 / 72,
-      shape: Star(),
     ),
   ],
   url: "https://www.vexilla-mundi.com/curacao/curacao_sheet.png",
@@ -1488,9 +1472,9 @@ const flagBgdProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xfff42a41),
+      shape: Ellipse(),
       x: -0.1,
       heightFactor: 8 / 12,
-      shape: Ellipse(),
     ),
   ],
   url:
@@ -1530,81 +1514,81 @@ const flagUzbProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Moon(radius: 1, x: 0.31),
       x: -0.72,
       y: -0.68,
       heightFactor: 30 / 125,
-      shape: Moon(radius: 1, x: 0.31),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: 1.75,
         y: 0.8,
         heightFactor: 0.2,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Star(),
           x: 4.2,
           y: 0.1,
           heightFactor: 1.1,
-          shape: Star(),
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Star(),
             x: 4.2,
             y: 0.1,
             heightFactor: 1.1,
-            shape: Star(),
             child: ElementsProperties(
               Color(0xffffffff),
+              shape: Star(),
               x: 4.2,
               y: 0.1,
               heightFactor: 1.1,
-              shape: Star(),
               child: ElementsProperties(
                 Color(0xffffffff),
+                shape: Star(),
                 x: 4.2,
                 y: 0.1,
                 heightFactor: 1.1,
-                shape: Star(),
                 child: ElementsProperties(
                   Color(0xffffffff),
+                  shape: Star(),
                   y: -4.4,
                   heightFactor: 1.1,
-                  shape: Star(),
                   child: ElementsProperties(
                     Color(0xffffffff),
+                    shape: Star(),
                     x: -4.2,
                     y: 0.1,
                     heightFactor: 1.1,
-                    shape: Star(),
                     child: ElementsProperties(
                       Color(0xffffffff),
+                      shape: Star(),
                       x: -4.2,
                       y: 0.1,
                       heightFactor: 1.1,
-                      shape: Star(),
                       child: ElementsProperties(
                         Color(0xffffffff),
+                        shape: Star(),
                         x: -4.3,
                         y: 0.1,
                         heightFactor: 1.1,
-                        shape: Star(),
                         child: ElementsProperties(
                           Color(0xffffffff),
+                          shape: Star(),
                           x: 4.3,
                           y: -4.5,
                           heightFactor: 1.1,
-                          shape: Star(),
                           child: ElementsProperties(
                             Color(0xffffffff),
+                            shape: Star(),
                             x: 4.3,
                             y: 0.1,
                             heightFactor: 1.1,
-                            shape: Star(),
                             child: ElementsProperties(
                               Color(0xffffffff),
+                              shape: Star(),
                               x: 4.3,
                               y: 0.1,
                               heightFactor: 1.1,
-                              shape: Star(),
                             ),
                           ),
                         ),
@@ -1630,40 +1614,40 @@ const flagUnkProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Star(),
       x: -0.1,
       y: -0.6,
       heightFactor: 0.12,
-      shape: Star(),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: 2.45,
         y: 0.1,
         heightFactor: 1.1,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Star(),
           x: 2.45,
           y: 0.6,
           heightFactor: 1.1,
-          shape: Star(),
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Star(),
             x: -7.35,
             y: 0.1,
             heightFactor: 1.1,
-            shape: Star(),
             child: ElementsProperties(
               Color(0xffffffff),
+              shape: Star(),
               x: -2.333,
               y: 1,
               heightFactor: 1.1,
-              shape: Star(),
               child: ElementsProperties(
                 Color(0xffffffff),
+                shape: Star(),
                 x: 12.05,
                 y: 0.1,
                 heightFactor: 1.1,
-                shape: Star(),
               ),
             ),
           ),
@@ -1682,40 +1666,40 @@ const flagWsmProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff002b7f),
+      shape: Rectangle(aspectRatio: 2),
       x: -1,
       y: -1,
       heightFactor: 1 / 2,
-      shape: Rectangle(aspectRatio: 2),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: -0.305,
         y: -0.18,
         heightFactor: 0.23,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Star(),
           x: 2.8,
           y: -2.3,
           heightFactor: 1.1,
-          shape: Star(),
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Star(),
             x: 2.85,
             y: 2,
             heightFactor: 1.1,
-            shape: Star(),
             child: ElementsProperties(
               Color(0xffffffff),
+              shape: Star(),
               x: -1.5,
               y: 2.25,
               heightFactor: 0.7,
-              shape: Star(),
               child: ElementsProperties(
                 Color(0xffffffff),
+                shape: Star(),
                 x: -2.2,
                 y: 4.1,
                 heightFactor: 2.2,
-                shape: Star(),
               ),
             ),
           ),
@@ -1778,62 +1762,62 @@ const flagCpvProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffF7D116),
+      shape: Star(),
       x: -0.53,
       y: 0.425,
       heightFactor: 2 / 22,
-      shape: Star(),
       child: ElementsProperties(
         Color(0xffF7D116),
+        shape: Star(),
         y: -4,
         heightFactor: 1.1,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffF7D116),
+          shape: Star(),
           x: 2.05,
           y: -3,
           heightFactor: 1.1,
-          shape: Star(),
           child: ElementsProperties(
             Color(0xffF7D116),
+            shape: Star(),
             x: 3.5,
             y: -1.1,
             heightFactor: 1.1,
-            shape: Star(),
             child: ElementsProperties(
               Color(0xffF7D116),
+              shape: Star(),
               x: 3.5,
               y: 1.3,
               heightFactor: 1.1,
-              shape: Star(),
               child: ElementsProperties(
                 Color(0xffF7D116),
+                shape: Star(),
                 x: 2.3,
                 y: 3.3,
                 heightFactor: 1.1,
-                shape: Star(),
                 child: ElementsProperties(
                   Color(0xffF7D116),
+                  shape: Star(),
                   y: 4.3,
                   heightFactor: 1.1,
-                  shape: Star(),
                   child: ElementsProperties(
                     Color(0xffF7D116),
+                    shape: Star(),
                     x: -2.3,
                     y: 3.2,
                     heightFactor: 1.1,
-                    shape: Star(),
                     child: ElementsProperties(
                       Color(0xffF7D116),
+                      shape: Star(),
                       x: -7,
                       y: 0.2,
                       heightFactor: 1.1,
-                      shape: Star(),
                       child: ElementsProperties(
                         Color(0xffF7D116),
+                        shape: Star(),
                         x: 3.44,
                         y: 1.2,
                         heightFactor: 1.1,
-                        shape: Star(),
                       ),
                     ),
                   ),
@@ -1870,13 +1854,13 @@ const flagBraProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xfff8e509),
+      shape: Rectangle(),
       heightFactor: 530 / 700,
       angle: 30,
-      shape: Rectangle(),
       child: ElementsProperties(
         Color(0xff2b49a3),
-        heightFactor: 350 / 530,
         shape: Ellipse(),
+        heightFactor: 350 / 530,
         child: CustomElementsProperties(
           Color(0xffffffff),
           otherColors: [Color(0xff229e45)],
@@ -1899,14 +1883,14 @@ const flagLbyProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
-      heightFactor: 6 / 24,
       shape: Moon(radius: 0.86),
+      heightFactor: 6 / 24,
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: 1.6,
         heightFactor: 0.7,
         angle: 54,
-        shape: Star(),
       ),
     ),
   ],
@@ -1950,21 +1934,21 @@ const flagMysProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff000066),
+      shape: Rectangle(aspectRatio: 28 / 16),
       x: -1,
       y: -1,
       heightFactor: 8 / 14,
-      shape: Rectangle(aspectRatio: 28 / 16),
       child: ElementsProperties(
         Color(0xffffcc00),
+        shape: Moon(radius: 0.9),
         x: -0.175,
         heightFactor: 6 / 8,
-        shape: Moon(radius: 0.9),
         child: ElementsProperties(
           Color(0xffffcc00),
+          shape: Star(points: 14),
           x: 1.6,
           heightFactor: 0.8,
           angle: 38,
-          shape: Star(points: 14),
         ),
       ),
     ),
@@ -2017,15 +2001,15 @@ const flagAzeProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Moon(),
       x: -0.05,
       heightFactor: 0.3,
-      shape: Moon(),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(points: 8, radiusFactor: 0.5),
         x: 1.4,
         heightFactor: 0.52,
         angle: 22,
-        shape: Star(points: 8, radiusFactor: 0.5),
       ),
     ),
   ],
@@ -2040,67 +2024,67 @@ const flagBihProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff001489),
-      x: 0.5,
       shape: Rectangle(aspectRatio: 2),
+      x: 0.5,
       child: ElementsProperties(
         Color(0xffFFCD00),
+        shape: Triangle(),
         x: 0.266,
         angle: 90,
-        shape: Triangle(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Star(),
           x: -1.185,
           y: -1.02,
           heightFactor: 0.18,
-          shape: Star(),
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Star(),
             x: 1.485,
             y: 1.665,
             heightFactor: 1.1,
-            shape: Star(),
             child: ElementsProperties(
               Color(0xffffffff),
+              shape: Star(),
               x: 1.485,
               y: 1.665,
               heightFactor: 1.1,
-              shape: Star(),
               child: ElementsProperties(
                 Color(0xffffffff),
+                shape: Star(),
                 x: 1.485,
                 y: 1.665,
                 heightFactor: 1.1,
-                shape: Star(),
                 child: ElementsProperties(
                   Color(0xffffffff),
+                  shape: Star(),
                   x: 1.485,
                   y: 1.665,
                   heightFactor: 1.1,
-                  shape: Star(),
                   child: ElementsProperties(
                     Color(0xffffffff),
+                    shape: Star(),
                     x: 1.485,
                     y: 1.665,
                     heightFactor: 1.1,
-                    shape: Star(),
                     child: ElementsProperties(
                       Color(0xffffffff),
+                      shape: Star(),
                       x: 1.485,
                       y: 1.665,
                       heightFactor: 1.1,
-                      shape: Star(),
                       child: ElementsProperties(
                         Color(0xffffffff),
+                        shape: Star(),
                         x: 1.485,
                         y: 1.665,
                         heightFactor: 1.1,
-                        shape: Star(),
                         child: ElementsProperties(
                           Color(0xffffffff),
+                          shape: Star(),
                           x: 1.485,
                           y: 1.665,
                           heightFactor: 1.1,
-                          shape: Star(),
                         ),
                       ),
                     ),
@@ -2114,9 +2098,9 @@ const flagBihProperties = FlagProperties(
     ),
     ElementsProperties(
       Color(0xff001489),
+      shape: Rectangle(),
       x: 1,
       widthFactor: 0.235,
-      shape: Rectangle(),
     ),
   ],
   url:
@@ -2165,22 +2149,22 @@ const flagTlsProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xfff8c00c),
+      shape: Triangle(),
       x: -1,
       y: -1,
       widthFactor: 1 / 2,
-      shape: Triangle(),
       child: ElementsProperties(
         Color(0xff000000),
+        shape: Triangle(),
         x: -1,
         y: -1,
         widthFactor: 12 / 18,
-        shape: Triangle(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Star(),
           x: -1 / 3,
           heightFactor: 0.32,
           angle: -24,
-          shape: Star(),
         ),
       ),
     ),
@@ -2195,45 +2179,45 @@ const flagTkmProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Moon(radius: 1.02, x: -0.3, y: -0.2),
       x: -0.075,
       y: -0.55,
       heightFactor: 0.25,
-      shape: Moon(radius: 1.02, x: -0.3, y: -0.2),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: -0.86,
         y: 0.1,
         heightFactor: 0.2,
         angle: 36,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Star(),
           x: -2.8,
           y: -1.45,
           heightFactor: 1.1,
           angle: 36,
-          shape: Star(),
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Star(),
             x: 2.8,
             y: -1.4,
             heightFactor: 1.1,
             angle: 36,
-            shape: Star(),
             child: ElementsProperties(
               Color(0xffffffff),
+              shape: Star(),
               x: 2.8,
               y: -1.4,
               heightFactor: 1.1,
               angle: 36,
-              shape: Star(),
               child: ElementsProperties(
                 Color(0xffffffff),
+                shape: Star(),
                 x: -2.8,
                 y: -1.4,
                 heightFactor: 1.1,
                 angle: 36,
-                shape: Star(),
               ),
             ),
           ),
@@ -2242,8 +2226,8 @@ const flagTkmProperties = FlagProperties(
     ),
     ElementsProperties(
       Color(0xffd22630),
-      x: -0.71,
       shape: Rectangle(aspectRatio: 0.27),
+      x: -0.71,
       child: CustomElementsProperties(
         Color(0xff00853A),
         otherColors: [
@@ -2282,60 +2266,60 @@ const flagVenProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
+      shape: Star(),
       x: -0.07,
       y: -0.172,
       heightFactor: 0.08,
       angle: -10,
-      shape: Star(),
       child: ElementsProperties(
         Color(0xffffffff),
+        shape: Star(),
         x: 2.75,
         y: 0.08,
         heightFactor: 1.1,
         angle: 10,
-        shape: Star(),
         child: ElementsProperties(
           Color(0xffffffff),
+          shape: Star(),
           x: 2.5,
           y: 1.05,
           heightFactor: 1.13,
           angle: 30,
-          shape: Star(),
           child: ElementsProperties(
             Color(0xffffffff),
+            shape: Star(),
             x: -7.6,
             y: 0.1,
             heightFactor: 1.13,
             angle: -30,
-            shape: Star(),
             child: ElementsProperties(
               Color(0xffffffff),
+              shape: Star(),
               x: -2,
               y: 1.8,
               heightFactor: 1.13,
               angle: -45,
-              shape: Star(),
               child: ElementsProperties(
                 Color(0xffffffff),
+                shape: Star(),
                 x: 11.2,
                 y: 0.1,
                 heightFactor: 1.13,
                 angle: 45,
-                shape: Star(),
                 child: ElementsProperties(
                   Color(0xffffffff),
+                  shape: Star(),
                   x: 1.32,
                   y: 2.25,
                   heightFactor: 1.1,
                   angle: -2,
-                  shape: Star(),
                   child: ElementsProperties(
                     Color(0xffffffff),
+                    shape: Star(),
                     x: -13.7,
                     y: 0.1,
                     heightFactor: 1.1,
                     angle: 2,
-                    shape: Star(),
                   ),
                 ),
               ),

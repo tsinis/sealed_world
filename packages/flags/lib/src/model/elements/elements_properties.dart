@@ -50,9 +50,8 @@ class ElementsProperties {
   final double y;
 
   @override
-  String toString() =>
-      "ElementsProperties($mainColor, x: ${x.toStringAsFixed(1)}, "
-      "y: ${y.toStringAsFixed(1)}, widthFactor: $widthFactor, "
-      "heightFactor: $heightFactor, angle: $angle, shape: $shape, "
+  String toString() => "ElementsProperties($mainColor, shape: $shape, "
+      "x: ${x.toStringAsFixed(1)}, y: ${y.toStringAsFixed(1)}, "
+      "heightFactor: $heightFactor, widthFactor: $widthFactor, angle: $angle, "
       "child: $child)";
 }
