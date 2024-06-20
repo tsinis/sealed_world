@@ -533,13 +533,40 @@ const flagGumProperties = FlagProperties(
 
 /// Flag properties of country United Kingdom (GB).
 const flagGbrProperties = FlagProperties(
-  [ColorsProperties(Color(0xff012169))],
+  [
+    ColorsProperties(Color(0xff012169)),
+    ColorsProperties(Color(0xffffffff)),
+    ColorsProperties(Color(0xff012169)),
+  ],
   aspectRatio: 2,
   elementsProperties: [
-    CustomElementsProperties(
+    ElementsProperties(
       Color(0xffffffff),
-      otherColors: [Color(0xffc8102e)],
+      shape: DiagonalLine(),
       heightFactor: 0.2,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: DiagonalLine(isTopRightToBottomLeft: false),
+      heightFactor: 0.2,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      heightFactor: 0.2,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(aspectRatio: 1 / 3),
+      child: ElementsProperties(
+        Color(0xffc8102e),
+        shape: Rectangle(aspectRatio: 1 / 5),
+      ),
+    ),
+    ElementsProperties(
+      Color(0xffc8102e),
+      shape: Rectangle(),
+      heightFactor: 1 / 5,
     ),
   ],
   url:

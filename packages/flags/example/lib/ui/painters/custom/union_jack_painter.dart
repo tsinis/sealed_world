@@ -1,44 +1,35 @@
 part of "../multi_element_painter.dart";
 
 final class UnionJackPainter extends MultiElementPainter {
-  const UnionJackPainter(super.properties, super.aspectRatio) : _isFull = false;
+  const UnionJackPainter.half(super.properties, super.aspectRatio)
+      : _isFull = false;
   const UnionJackPainter.full(super.properties, super.aspectRatio)
       : _isFull = true;
 
   final bool _isFull;
 
-  static const _whiteColor = Color(0xffffffff);
-  static const _redColor = Color(0xffc8102e);
   static const _blueColor = Color(0xff012169);
+  static const _redColor = Color(0xffc8102e);
+  static const _whiteColor = Color(0xffffffff);
 
   static const _stripesProps = [
-    ElementsProperties(
-      _whiteColor,
-      shape: Rectangle(),
-      heightFactor: 1 / 3,
-      widthFactor: 1,
-    ),
+    ElementsProperties(_whiteColor, shape: Rectangle(), heightFactor: 1 / 3),
     ElementsProperties(
       _whiteColor,
       shape: Rectangle(aspectRatio: 1 / 3),
       child: ElementsProperties(_redColor, shape: Rectangle(aspectRatio: 0.2)),
     ),
-    ElementsProperties(
-      _redColor,
-      shape: Rectangle(),
-      heightFactor: 0.2,
-      widthFactor: 1,
-    ),
+    ElementsProperties(_redColor, shape: Rectangle(), heightFactor: 1 / 5),
   ];
 
   @override
   void paint(Canvas canvas, Size size) {
-    super.paint(canvas, size);
+    if (!_isFull) super.paint(canvas, size);
     _paintUnionJack(canvas, size);
   }
 
   void _paintUnionJack(Canvas canvas, Size fullSize) {
-    final size = fullSize / 3;
+    final size = _isFull ? fullSize : fullSize / 2;
     final width = size.width;
     final height = size.height;
     final center = calculateCenter(size);
@@ -65,48 +56,36 @@ final class UnionJackPainter extends MultiElementPainter {
       ..drawRect(line, colorPaint)
       ..restore();
 
-    _DiagonalLine.topLeft
-        .paint(canvas, Offset.zero, center, redPaint, height, width);
-    _DiagonalLine.topRight
-        .paint(canvas, Offset(width, 0), center, redPaint, height, width);
-    _DiagonalLine.bottomLeft
-        .paint(canvas, Offset(0, height), center, redPaint, height, width);
-    _DiagonalLine.bottomRight
-        .paint(canvas, Offset(width, height), center, redPaint, height, width);
+    _SaintPatrickCross(canvas, center, redPaint, size)
+      ..paint(Offset.zero, -0.075)
+      ..paint(Offset(width, 0), -0.015, -0.015)
+      ..paint(Offset(0, height), 0.015, 0.015)
+      ..paint(Offset(width, height), 0.075);
 
     MultiElementPainter(_stripesProps, aspectRatio).paint(canvas, size);
   }
 }
 
-enum _DiagonalLine {
-  topLeft(-0.075, 0),
-  topRight(-0.015, -0.015),
-  bottomLeft(0.015, 0.015),
-  bottomRight(0.075, 0);
+class _SaintPatrickCross {
+  _SaintPatrickCross(this._canvas, this._center, this._paint, this._size);
 
-  const _DiagonalLine(this.xShiftPercent, this.yShiftPercent);
+  final Canvas _canvas;
+  final Offset _center;
+  final Paint _paint;
+  final Size _size;
 
-  final double xShiftPercent;
-  final double yShiftPercent;
-
-  // ignore: long-parameter-list, TODO: Refactor.
-  void paint(
-    Canvas canvas,
-    Offset start,
-    Offset end,
-    Paint paint,
-    double width,
-    double height,
-  ) {
+  void paint(Offset start, double xShiftPercent, [double yShiftPercent = 0]) {
+    final width = _size.height;
+    final height = _size.width;
     final aspectRatioCorrectionFactor = height / width / 2;
     final xShift = width * xShiftPercent * aspectRatioCorrectionFactor;
     final yShift = height * yShiftPercent * aspectRatioCorrectionFactor;
-    final adjustedStart = start.translate(xShift, yShift);
-    final adjustedExtendedMidPoint = Offset(
-      adjustedStart.dx + (end.dx - start.dx),
-      adjustedStart.dy + (end.dy - start.dy),
+    final shift = start.translate(xShift, yShift);
+    final compensated = Offset(
+      shift.dx + (_center.dx - start.dx),
+      shift.dy + (_center.dy - start.dy),
     );
 
-    canvas.drawLine(adjustedStart, adjustedExtendedMidPoint, paint);
+    _canvas.drawLine(shift, compensated, _paint);
   }
 }

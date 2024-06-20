@@ -69,6 +69,7 @@ class _MainState extends State<Main> {
                 clipBehavior: Clip.none,
                 children: [
                   flag.value.copyWith(
+                      // aspectRatio: 2.5,
                       // decoration: const BoxDecoration(shape: BoxShape.circle),
                       ),
                   Opacity(
