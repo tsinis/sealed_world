@@ -50,20 +50,20 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   void paintChild(Canvas canvas, Rect parentBounds, ElementsProperties? child) {
     final childShape = child?.shape;
-    if (child == null || childShape == null) return;
+    if (childShape == null || child == null) return;
 
     final shapePainter = painter(childShape);
+    final parentSize = parentBounds.size;
+
     canvas
       ..save()
       ..translate(parentBounds.left, parentBounds.top);
-
-    final parentSize = parentBounds.size;
-    shapePainter([child], parentSize.aspectRatio).paint(canvas, parentSize);
+    shapePainter([child], parentSize.aspectRatio)?.paint(canvas, parentSize);
     canvas.restore();
   }
 
   @protected
-  ElementsPainter Function(ElementsProps?, double) painter(Shape childShape) =>
+  ElementsPainter? Function(ElementsProps?, double) painter(Shape childShape) =>
       childShape.whenConst(
         ellipse: EllipsePainter.new,
         moon: MoonPainter.new,

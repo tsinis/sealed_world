@@ -6,6 +6,7 @@ export "package:sealed_countries/sealed_countries.dart";
 
 export "src/collections/properties_map.dart";
 export "src/model/colors_properties.dart";
+export "src/model/elements/custom_elements_properties.dart";
 export "src/model/elements/elements_properties.dart";
 export "src/model/flag_properties.dart";
 export "src/model/shape.dart";

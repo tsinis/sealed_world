@@ -12,6 +12,7 @@ import "ui/flags/multi_element_flag.dart";
 import "ui/flags/rectangle_flag.dart";
 import "ui/flags/star_flag.dart";
 import "ui/flags/triangle_flag.dart";
+import "ui/painters/multi_element_painter.dart";
 
 // ignore: prefer-static-class, to follow pattern from eco-system.
 const flagsMap = {
@@ -94,7 +95,8 @@ const flagsMap = {
   CountryFro(): MultiElementFlag(flagFroProperties),
   CountryFsm(): StarFlag(flagFsmProperties),
   CountryGab(): BasicFlag(flagGabProperties),
-  CountryGbr(): BasicFlag(flagGbrProperties),
+  CountryGbr():
+      BasicFlag(flagGbrProperties, elementsBuilder: UnionJackPainter.full),
   CountryGeo(): MultiElementFlag(flagGeoProperties),
   CountryGgy(): MultiElementFlag(flagGgyProperties),
   CountryGha(): StarFlag(flagGhaProperties),

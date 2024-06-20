@@ -1,7 +1,7 @@
 import "dart:math";
+import "dart:ui";
 
 import "package:flags/flags.dart";
-import "package:flutter/rendering.dart";
 
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
@@ -14,7 +14,7 @@ final class DiagonalLinePainter extends ElementsPainter {
     final angle = atan2(size.height, size.width);
     final thickness = size.height * property.heightFactor;
     final length = sqrt(size.width * size.width + size.height * size.height);
-    final rect = Rect.fromLTWH(-length / 2, -thickness / 2, length, thickness);
+    final line = Rect.fromLTWH(-length / 2, -thickness / 2, length, thickness);
     final isTopRightToBottomLeft =
         shapeType<DiagonalLine>()?.isTopRightToBottomLeft ?? true;
 
@@ -22,9 +22,9 @@ final class DiagonalLinePainter extends ElementsPainter {
       ..save()
       ..translate(size.width / 2, size.height / 2)
       ..rotate(isTopRightToBottomLeft ? angle : -angle)
-      ..drawRect(rect, colorPaint)
+      ..drawRect(line, colorPaint)
       ..restore();
 
-    return (canvas: canvas, bounds: rect, child: property.child);
+    return (canvas: canvas, bounds: line, child: property.child);
   }
 }

@@ -1,7 +1,12 @@
-import "package:flutter/rendering.dart";
+import "dart:math";
+import "dart:ui";
 
-import "../../../model/typedefs.dart";
-import "../basic/elements_painter.dart";
+import "package:flags/flags.dart";
+
+import "../../model/typedefs.dart";
+import "basic/elements_painter.dart";
+
+part "custom/union_jack_painter.dart";
 
 final class MultiElementPainter extends ElementsPainter {
   const MultiElementPainter(super.properties, super.aspectRatio);
@@ -11,7 +16,7 @@ final class MultiElementPainter extends ElementsPainter {
     for (final property in properties) {
       final shape = property.shape;
       if (shape == null) continue;
-      painter(shape)([property], size.aspectRatio).paint(canvas, size);
+      painter(shape)([property], size.aspectRatio)?.paint(canvas, size);
     }
   }
 

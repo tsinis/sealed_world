@@ -37,6 +37,8 @@ class BasicFlag extends StatelessWidget {
 
   double get _flagAspectRatio => properties.aspectRatio;
   ElementsProps? get _elements => properties.elementsProperties;
+  CustomPainter? get _elementsPainter =>
+      elementsBuilder?.call(_elements, _flagAspectRatio);
 
   double _boxRatio(BoxDecoration? boxDecoration, double? ratio) =>
       boxDecoration.isCircle ? 1 : ratio ?? _flagAspectRatio;
@@ -54,11 +56,7 @@ class BasicFlag extends StatelessWidget {
           aspectRatio: _boxRatio(boxDecoration, aspectRatio),
           child: CustomPaint(
             painter: backgroundPainter ??
-                StripesPainter(
-                  properties,
-                  boxDecoration,
-                  elementsBuilder?.call(_elements, _flagAspectRatio),
-                ),
+                StripesPainter(properties, boxDecoration, _elementsPainter),
             foregroundPainter: foregroundPainter ??
                 foregroundPainterBuilder?.call(_elements, _flagAspectRatio),
             child: foregroundWidget ??

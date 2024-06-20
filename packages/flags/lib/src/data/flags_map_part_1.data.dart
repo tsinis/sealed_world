@@ -539,6 +539,7 @@ const flagGbrProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [Color(0xffc8102e)],
+      heightFactor: 0.2,
     ),
   ],
   url:

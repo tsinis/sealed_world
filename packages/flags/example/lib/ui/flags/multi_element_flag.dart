@@ -1,4 +1,4 @@
-import "../painters/common/multi_element_painter.dart";
+import "../painters/multi_element_painter.dart";
 import "basic_flag.dart";
 
 class MultiElementFlag extends BasicFlag {
