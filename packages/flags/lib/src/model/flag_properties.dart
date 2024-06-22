@@ -1,3 +1,5 @@
+import "package:flutter/foundation.dart";
+
 import "colors_properties.dart";
 import "elements/elements_properties.dart";
 import "stripe_orientation.dart";
@@ -18,8 +20,9 @@ class FlagProperties {
   /// as height to width, but in this package (and in CG in general) it is given
   /// as width to height.
   final double aspectRatio;
-  final String url;
   final StripeOrientation stripeOrientation;
+  @visibleForTesting
+  final String url;
 
   @override
   String toString() =>
