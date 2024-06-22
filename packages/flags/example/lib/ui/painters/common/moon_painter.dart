@@ -18,11 +18,13 @@ final class MoonPainter extends ElementsPainter {
 
     final mainRect = Rect.fromCircle(center: center, radius: radius);
     final mainPath = Path()..addOval(mainRect);
+    final x = moon.offset.dx;
+    final y = moon.offset.dy;
     final secondCenter = widthFactor == null
-        ? Offset(center.dx + moon.x * radius, center.dy + moon.y * radius)
+        ? Offset(center.dx + x * radius, center.dy + y * radius)
         : Offset(
-            center.dx + moon.x * radius * widthFactor,
-            center.dy + moon.y * radius * property.heightFactor * aspectRatio,
+            center.dx + x * radius * widthFactor,
+            center.dy + y * radius * property.heightFactor * aspectRatio,
           );
 
     final secondRect =

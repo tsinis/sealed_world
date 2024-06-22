@@ -6,8 +6,7 @@ class ElementsProperties {
   const ElementsProperties(
     this.mainColor, {
     required this.shape,
-    this.x = middle,
-    this.y = middle,
+    this.offset = Offset.zero,
     this.heightFactor = 1,
     this.widthFactor,
     this.angle,
@@ -15,7 +14,12 @@ class ElementsProperties {
   })  : assert(widthFactor == null || widthFactor >= 0.0),
         assert(heightFactor >= 0.0);
 
-  static const double middle = 0;
+  /// The distance fraction in the horizontal/vertical direction (of the center).
+  ///
+  /// A value of -1.0 corresponds to the leftmost/topmost edge. A value of 1.0
+  /// corresponds to the rightmost/bottommost edge. Values are not limited to
+  /// that range.
+  final Offset offset;
 
   final Color mainColor;
 
@@ -27,31 +31,12 @@ class ElementsProperties {
   /// If [widthFactor] is null, this is usually means that element's bounding
   /// box has square form.
   final double? widthFactor;
-  final double? angle;
+  final int? angle;
   final Shape? shape;
   final ElementsProperties? child;
 
-  /// The distance fraction in the horizontal direction (of the center).
-  ///
-  /// A value of -1.0 corresponds to the leftmost edge. A value of 1.0
-  /// corresponds to the rightmost edge. Values are not limited to that range;
-  /// values less than -1.0 represent positions to the left of the left edge,
-  /// and values greater than 1.0 represent positions to the right of the right
-  /// edge.
-  final double x;
-
-  /// The distance fraction in the vertical direction (of the center).
-  ///
-  /// A value of -1.0 corresponds to the topmost edge. A value of 1.0
-  /// corresponds to the bottommost edge. Values are not limited to that range;
-  /// values less than -1.0 represent positions above the top, and values
-  /// greater than 1.0 represent positions below the bottom.
-  // ignore: prefer-correct-identifier-length, conventional name for Y axis.
-  final double y;
-
   @override
   String toString() => "ElementsProperties($mainColor, shape: $shape, "
-      "x: ${x.toStringAsFixed(1)}, y: ${y.toStringAsFixed(1)}, "
       "heightFactor: $heightFactor, widthFactor: $widthFactor, angle: $angle, "
-      "child: $child)";
+      "offset: $offset, child: $child)";
 }

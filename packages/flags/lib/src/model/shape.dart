@@ -1,3 +1,5 @@
+import "dart:ui" show Offset;
+
 import "package:flutter/foundation.dart";
 
 part "shape.g.dart";
@@ -29,16 +31,13 @@ class Ellipse implements Shape {
 }
 
 class Moon implements Shape {
-  const Moon({this.radius = 0.85, this.x = 0.22, this.y = 0});
+  const Moon({this.radius = 0.85, this.offset = const Offset(0.22, 0)});
 
   /// Relative radius of the second circle.
   final double radius;
 
-  /// Relative X position of the second circle.
-  final double x;
-
-  /// Relative Y position of the second circle.
-  final double y;
+  /// Relative X and Y positions of the second circle.
+  final Offset offset;
 }
 
 class DiagonalLine implements Shape {

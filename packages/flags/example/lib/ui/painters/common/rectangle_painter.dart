@@ -18,8 +18,8 @@ final class RectanglePainter extends ElementsPainter {
             (property.widthFactor ?? 1) *
             (aspectRatio / calculateAspectRatio(size));
 
-    final x = ((width - compensated) / 2) * (property.x + 1);
-    final y = ((size.height - height) / 2) * (property.y + 1);
+    final x = ((width - compensated) / 2) * (property.offset.dx + 1);
+    final y = ((size.height - height) / 2) * (property.offset.dy + 1);
     final rect = Rect.fromLTWH(x, y, compensated, height);
     canvas.drawRect(rect, colorPaint);
 

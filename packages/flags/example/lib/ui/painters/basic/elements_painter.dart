@@ -84,8 +84,8 @@ abstract base class ElementsPainter extends CustomPainter {
 
   @protected
   Offset calculateCenter(Size size) {
-    final horizontal = (property.x + 1) * size.width / 2;
-    final vertical = (property.y + 1) * size.height / 2;
+    final horizontal = (property.offset.dx + 1) * size.width / 2;
+    final vertical = (property.offset.dy + 1) * size.height / 2;
 
     return Offset(horizontal, vertical);
   }

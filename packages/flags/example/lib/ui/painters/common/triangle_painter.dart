@@ -22,8 +22,8 @@ final class TrianglePainter extends ElementsPainter {
     final compensation = (1 + aspectRatio / calculateAspectRatio(size)) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
-    final xOffset = (size.width / 2) * (property.x + 1);
-    final yOffset = (size.height / 2) * (property.y + 1);
+    final xOffset = (size.width / 2) * (property.offset.dx + 1);
+    final yOffset = (size.height / 2) * (property.offset.dy + 1);
 
     final path = Path()
       ..moveTo(xOffset, yOffset)
@@ -40,8 +40,8 @@ final class TrianglePainter extends ElementsPainter {
     final compensation = (1 + aspectRatio / calculateAspectRatio(size)) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
-    final xOffset = size.width - ((size.width / 2) * (1 - property.x));
-    final yOffset = (size.height / 2) * (property.y + 1);
+    final xOffset = size.width - ((size.width / 2) * (1 - property.offset.dx));
+    final yOffset = (size.height / 2) * (property.offset.dy + 1);
 
     final path = Path()
       ..moveTo(xOffset, yOffset)
@@ -56,8 +56,8 @@ final class TrianglePainter extends ElementsPainter {
   FlagParentBounds _topToBottomTriangle(Canvas canvas, Size size) {
     final width = size.width * (property.widthFactor ?? 1);
     final height = size.height * property.heightFactor;
-    final xOffset = size.width * property.x;
-    final yOffset = (size.height / 2) * (property.y + 1) - (height / 2);
+    final xOffset = size.width * property.offset.dx;
+    final yOffset = (size.height / 2) * (property.offset.dy + 1) - (height / 2);
 
     final path = Path()
       ..moveTo(xOffset, yOffset)
@@ -72,8 +72,8 @@ final class TrianglePainter extends ElementsPainter {
   FlagParentBounds _bottomToTopTriangle(Canvas canvas, Size size) {
     final width = size.width * (property.widthFactor ?? 1);
     final height = size.height * property.heightFactor;
-    final xOffset = size.width * property.x;
-    final yOffset = size.height * (property.y + 1) / 2 - height;
+    final xOffset = size.width * property.offset.dx;
+    final yOffset = size.height * (property.offset.dy + 1) / 2 - height;
 
     final path = Path()
       ..moveTo(xOffset, yOffset + height)
