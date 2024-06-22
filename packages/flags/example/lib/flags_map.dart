@@ -12,6 +12,7 @@ import "ui/flags/multi_element_flag.dart";
 import "ui/flags/rectangle_flag.dart";
 import "ui/flags/star_flag.dart";
 import "ui/flags/triangle_flag.dart";
+import "ui/painters/custom/maple_leaf_painter.dart";
 import "ui/painters/multi_element_painter.dart";
 
 // ignore: prefer-static-class, to follow pattern from eco-system.
@@ -58,7 +59,8 @@ const flagsMap = {
   CountryBvt(): MultiElementFlag(flagBvtProperties),
   CountryBwa(): BasicFlag(flagBwaProperties),
   CountryCaf(): MultiElementFlag(flagCafProperties),
-  CountryCan(): BasicFlag(flagCanProperties),
+  CountryCan():
+      BasicFlag(flagCanProperties, elementsBuilder: MapleLeafPainter.new),
   CountryCck(): MultiElementFlag(flagCckProperties),
   CountryChe(): MultiElementFlag(flagCheProperties),
   CountryChl(): RectangleFlag(flagChlProperties),

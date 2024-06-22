@@ -1,7 +1,10 @@
 import "dart:ui";
 
+import "package:flutter/foundation.dart";
+
 import "../shape.dart";
 
+@immutable
 class ElementsProperties {
   const ElementsProperties(
     this.mainColor, {
@@ -11,8 +14,8 @@ class ElementsProperties {
     this.widthFactor,
     this.angle,
     this.child,
-  })  : assert(widthFactor == null || widthFactor >= 0.0),
-        assert(heightFactor >= 0.0);
+  })  : assert(widthFactor == null || widthFactor >= 0),
+        assert(heightFactor >= 0);
 
   /// The distance fraction in the horizontal/vertical direction (of the center).
   ///

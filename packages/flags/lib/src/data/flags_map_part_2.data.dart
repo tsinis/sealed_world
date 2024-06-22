@@ -1728,6 +1728,13 @@ const flagCanProperties = FlagProperties(
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffd52b1e),
+      heightFactor: 0.85,
+      widthFactor: 0.62,
+    ),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Canada_(construction_sheet_-_leaf_geometry).svg",
 );

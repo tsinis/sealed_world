@@ -4,6 +4,7 @@ import "colors_properties.dart";
 import "elements/elements_properties.dart";
 import "stripe_orientation.dart";
 
+@immutable
 class FlagProperties {
   const FlagProperties(
     this.stripeColors, {

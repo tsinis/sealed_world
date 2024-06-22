@@ -1,7 +1,8 @@
 import "dart:ui";
 
-import "package:flutter/foundation.dart" show visibleForTesting;
+import "package:flutter/foundation.dart" show immutable, visibleForTesting;
 
+@immutable
 class ColorsProperties {
   const ColorsProperties(this.color, {this.ratio = 1})
       : assert(ratio >= 0, "Ratio must be greater than or equal to zero.");
