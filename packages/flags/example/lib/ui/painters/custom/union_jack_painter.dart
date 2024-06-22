@@ -32,12 +32,13 @@ final class UnionJackPainter extends MultiElementPainter {
     final size = _isFull ? fullSize : fullSize / 2;
     final width = size.width;
     final height = size.height;
-    final center = calculateCenter(size);
+    final angle = atan2(height, width);
+    final thickness = size.height * 0.2;
+    final center = Offset(width / 2, height / 2);
     final rect = Rect.fromLTWH(0, 0, width, height);
-    final angle = atan2(size.height, size.width);
-    final thickness = size.height * property.heightFactor;
-    final length = sqrt(size.width * size.width + size.height * size.height);
+    final length = sqrt(width * width + height * height);
     final line = Rect.fromLTWH(-length / 2, -thickness / 2, length, thickness);
+    final whitePaint = Paint()..color = _whiteColor;
     final redPaint = Paint()
       ..color = _redColor
       ..strokeWidth = thickness / 3;
@@ -48,12 +49,12 @@ final class UnionJackPainter extends MultiElementPainter {
       ..save()
       ..translate(width / 2, height / 2)
       ..rotate(-angle)
-      ..drawRect(line, colorPaint)
+      ..drawRect(line, whitePaint)
       ..restore()
       ..save()
       ..translate(width / 2, height / 2)
       ..rotate(angle)
-      ..drawRect(line, colorPaint)
+      ..drawRect(line, whitePaint)
       ..restore();
 
     _SaintPatrickCross(canvas, center, redPaint, size)

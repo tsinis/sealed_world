@@ -13,18 +13,25 @@ import "../model/stripe_orientation.dart";
 const flagIotProperties = FlagProperties(
   [
     ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000063)),
-    ColorsProperties(Color(0xffa24300)),
-    ColorsProperties(Color(0xff006d00)),
-    ColorsProperties(Color(0xffcc0000)),
-    ColorsProperties(Color(0xfffff100)),
-    ColorsProperties(Color(0xff808080)),
-    ColorsProperties(Color(0xff006300)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
   ],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xff000063),
+      otherColors: [
+        Color(0xff000063),
+        Color(0xffa24300),
+        Color(0xff006d00),
+        Color(0xffcc0000),
+        Color(0xfffff100),
+        Color(0xff808080),
+        Color(0xff006300),
+        Color(0xff012169),
+        Color(0xffc8102e),
+        Color(0xff000000),
+      ],
+    ),
+  ],
   url:
       "https://www.vexilla-mundi.com/british_indian_ocean_territory/british_indian_ocean_territory_sheet.png",
 );
@@ -134,39 +141,44 @@ const flagGrdProperties = FlagProperties(
 
 /// Flag properties of country South Georgia (GS).
 const flagSgsProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff000066)),
-    ColorsProperties(Color(0xff6a4c2d)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff656263)),
-    ColorsProperties(Color(0xffffbb00)),
-    ColorsProperties(Color(0xff00713d)),
-    ColorsProperties(Color(0xff006b00)),
-    ColorsProperties(Color(0xffffc900)),
-    ColorsProperties(Color(0xffcdad56)),
-    ColorsProperties(Color(0xffe80000)),
-    ColorsProperties(Color(0xffc01500)),
-    ColorsProperties(Color(0xff1e5aa6)),
-    ColorsProperties(Color(0xffff7000)),
-    ColorsProperties(Color(0xffc75b00)),
-    ColorsProperties(Color(0xffcccccd)),
-    ColorsProperties(Color(0xff0000ff)),
-    ColorsProperties(Color(0xff923f00)),
-    ColorsProperties(Color(0xfffffeff)),
-    ColorsProperties(Color(0xff5e0043)),
-    ColorsProperties(Color(0xff474747)),
-    ColorsProperties(Color(0xffb4b6b9)),
-    ColorsProperties(Color(0xff8a9396)),
-    ColorsProperties(Color(0xffcecfcf)),
-    ColorsProperties(Color(0xff2b2b2b)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xff3ec26d)),
-    ColorsProperties(Color(0xfffff700)),
-    ColorsProperties(Color(0xffcccccc)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [
+        Color(0xff000066),
+        Color(0xff6a4c2d),
+        Color(0xff656263),
+        Color(0xffffbb00),
+        Color(0xff00713d),
+        Color(0xff006b00),
+        Color(0xffffc900),
+        Color(0xffcdad56),
+        Color(0xffe80000),
+        Color(0xffc01500),
+        Color(0xff1e5aa6),
+        Color(0xffff7000),
+        Color(0xffc75b00),
+        Color(0xffcccccd),
+        Color(0xff0000ff),
+        Color(0xff923f00),
+        Color(0xfffffeff),
+        Color(0xff5e0043),
+        Color(0xff474747),
+        Color(0xffb4b6b9),
+        Color(0xff8a9396),
+        Color(0xffcecfcf),
+        Color(0xff2b2b2b),
+        Color(0xff012169),
+        Color(0xffc8102e),
+        Color(0xff000000),
+        Color(0xff3ec26d),
+        Color(0xfffff700),
+        Color(0xffcccccc),
+      ],
+    ),
+  ],
   url:
       "https://www.vexilla-mundi.com/south_georgia_and_the_south_sandwich_islands/south_georgia_and_the_south_sandwich_islands_sheet.png",
 );
@@ -436,18 +448,24 @@ const flagBrbProperties = FlagProperties(
 
 /// Flag properties of country British Virgin Islands (VG).
 const flagVgbProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff000066)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff006129)),
-    ColorsProperties(Color(0xffffc72c)),
-    ColorsProperties(Color(0xffffc6b5)),
-    ColorsProperties(Color(0xff9c5100)),
-    ColorsProperties(Color(0xff000000)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xff006129),
+      otherColors: [
+        Color(0xff000066),
+        Color(0xff012169),
+        Color(0xffffffff),
+        Color(0xffc8102e),
+        Color(0xffffc72c),
+        Color(0xffffc6b5),
+        Color(0xff9c5100),
+        Color(0xff000000),
+      ],
+      heightFactor: 1 / 2,
+    ),
+  ],
   url:
       "https://www.vexilla-mundi.com/british_virgin_islands/british_virgin_islands_sheet.png",
 );
@@ -1289,19 +1307,23 @@ const flagGinProperties = FlagProperties(
 
 /// Flag properties of country Fiji (FJ).
 const flagFjiProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff62b5e5)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffd21034)),
-    ColorsProperties(Color(0xffffd100)),
-    ColorsProperties(Color(0xff00a651)),
-    ColorsProperties(Color(0xff964b36)),
-    ColorsProperties(Color(0xfffff200)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
-  ],
+  [ColorsProperties(Color(0xff62b5e5))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffd21034),
+      otherColors: [
+        Color(0xffffffff),
+        Color(0xffffd100),
+        Color(0xff00a651),
+        Color(0xff964b36),
+        Color(0xfffff200),
+        Color(0xff012169),
+        Color(0xffc8102e),
+        Color(0xff000000),
+      ],
+    ),
+  ],
   url: "https://www.vexilla-mundi.com/fiji/fiji_sheet.png",
 );
 
@@ -1412,25 +1434,29 @@ const flagPyfProperties = FlagProperties(
 
 /// Flag properties of country Falkland Islands (FK).
 const flagFlkProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xff0072c4)),
-    ColorsProperties(Color(0xffbcbcbc)),
-    ColorsProperties(Color(0xfffefefe)),
-    ColorsProperties(Color(0xffc4c4c2)),
-    ColorsProperties(Color(0xff005120)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffdd8b59)),
-    ColorsProperties(Color(0xfffecf3e)),
-    ColorsProperties(Color(0xffb6b6b4)),
-    ColorsProperties(Color(0xffbe0f17)),
-    ColorsProperties(Color(0xffff0000)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xff002b0d)),
-    ColorsProperties(Color(0xff512007)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xff0072c4),
+      otherColors: [
+        Color(0xffbcbcbc),
+        Color(0xfffefefe),
+        Color(0xffc4c4c2),
+        Color(0xff005120),
+        Color(0xffffffff),
+        Color(0xffdd8b59),
+        Color(0xfffecf3e),
+        Color(0xffb6b6b4),
+        Color(0xffbe0f17),
+        Color(0xffff0000),
+        Color(0xffc8102e),
+        Color(0xff000000),
+        Color(0xff002b0d),
+        Color(0xff512007),
+      ],
+    ),
+  ],
   url:
       "https://www.vexilla-mundi.com/falkland_islands/falkland_islands_sheet.png",
 );
@@ -1488,19 +1514,26 @@ const flagIdnProperties = FlagProperties(
 
 /// Flag properties of country Cayman Islands (KY).
 const flagCymProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff000066)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xfffcea83)),
-    ColorsProperties(Color(0xff00493d)),
-    ColorsProperties(Color(0xff073163)),
-    ColorsProperties(Color(0xfff9d050)),
-    ColorsProperties(Color(0xff059334)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xff0b50a0)),
-    ColorsProperties(Color(0xff024919)),
+  [ColorsProperties(Color(0xff012169))],
+  aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xff000066),
+      otherColors: [
+        Color(0xff012169),
+        Color(0xffffffff),
+        Color(0xffc8102e),
+        Color(0xfffcea83),
+        Color(0xff00493d),
+        Color(0xff073163),
+        Color(0xfff9d050),
+        Color(0xff059334),
+        Color(0xff000000),
+        Color(0xff0b50a0),
+        Color(0xff024919),
+      ],
+      heightFactor: 2 / 3,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/cayman_islands/cayman_islands_sheet.png",
 );

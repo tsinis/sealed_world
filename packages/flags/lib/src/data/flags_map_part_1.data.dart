@@ -962,20 +962,25 @@ const flagPryProperties = FlagProperties(
 
 /// Flag properties of country Pitcairn Islands (PN).
 const flagPcnProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff00247d)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xfff7e017)),
-    ColorsProperties(Color(0xff337321)),
-    ColorsProperties(Color(0xff316d3a)),
-    ColorsProperties(Color(0xff006ec7)),
-    ColorsProperties(Color(0xffe5e5e5)),
-    ColorsProperties(Color(0xff96877d)),
-    ColorsProperties(Color(0xff000000)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xfff7e017),
+      otherColors: [
+        Color(0xff00247d),
+        Color(0xff012169),
+        Color(0xffffffff),
+        Color(0xffc8102e),
+        Color(0xff337321),
+        Color(0xff316d3a),
+        Color(0xff006ec7),
+        Color(0xffe5e5e5),
+        Color(0xff96877d),
+        Color(0xff000000),
+      ],
+    ),
+  ],
   url:
       "https://www.vexilla-mundi.com/pitcairn_islands/pitcairn_island_sheet.png",
 );
@@ -1489,21 +1494,111 @@ const flagMarProperties = FlagProperties(
 
 /// Flag properties of country New Zealand (NZ).
 const flagNzlProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffC8102E)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Star(),
+      x: 0.5,
+      y: 0.6,
+      heightFactor: 0.18,
+      child: ElementsProperties(
+        Color(0xffC8102E),
+        shape: Star(),
+        y: 0.11,
+        heightFactor: 0.85,
+        child: ElementsProperties(
+          Color(0xffffffff),
+          shape: Star(),
+          x: 3,
+          y: -6.75,
+          heightFactor: 1.1,
+          child: ElementsProperties(
+            Color(0xffC8102E),
+            shape: Star(),
+            y: 0.11,
+            heightFactor: 0.85,
+            child: ElementsProperties(
+              Color(0xffffffff),
+              shape: Star(),
+              x: -3.9,
+              y: -3.48,
+              heightFactor: 1.55,
+              child: ElementsProperties(
+                Color(0xffC8102E),
+                shape: Star(),
+                y: 0.11,
+                heightFactor: 0.85,
+                child: ElementsProperties(
+                  Color(0xffffffff),
+                  shape: Star(),
+                  x: -4.25,
+                  y: 4.6,
+                  heightFactor: 1.5,
+                  child: ElementsProperties(
+                    Color(0xffC8102E),
+                    shape: Star(),
+                    y: 0.11,
+                    heightFactor: 0.85,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  ],
   url: "https://wikipedia.org/wiki/File:Flag_of_New_Zealand_construction.svg",
 );
 
 /// Flag properties of country Australia (AU).
 const flagAusProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffE4002B)),
+  [ColorsProperties(Color(0xff012169))],
+  aspectRatio: 2,
+  elementsProperties: [
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Star(points: 7, radiusFactor: 0.42),
+      x: -0.5,
+      y: 0.5,
+      heightFactor: 0.3,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Star(points: 7, radiusFactor: 0.42),
+      x: 0.5,
+      y: 0.666,
+      heightFactor: 0.14,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Star(),
+        x: 1.45,
+        y: -4.333,
+        heightFactor: 0.66,
+        child: ElementsProperties(
+          Color(0xffffffff),
+          shape: Star(points: 7, radiusFactor: 0.42),
+          x: 2.95,
+          y: -4.2,
+          heightFactor: 1.8,
+          child: ElementsProperties(
+            Color(0xffffffff),
+            shape: Star(points: 7, radiusFactor: 0.42),
+            x: -3.2,
+            y: -2.95,
+            heightFactor: 1.1,
+            child: ElementsProperties(
+              Color(0xffffffff),
+              shape: Star(points: 7, radiusFactor: 0.42),
+              x: -3.4,
+              y: 3.85,
+            ),
+          ),
+        ),
+      ),
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Australia_(construction_sheet).svg",
@@ -1599,22 +1694,26 @@ const flagUgaProperties = FlagProperties(
 
 /// Flag properties of country Turks and Caicos Islands (TC).
 const flagTcaProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff002868)),
-    ColorsProperties(Color(0xfffcd116)),
-    ColorsProperties(Color(0xfffcad56)),
-    ColorsProperties(Color(0xffffa1a1)),
-    ColorsProperties(Color(0xfff1b2dc)),
-    ColorsProperties(Color(0xff9e540a)),
-    ColorsProperties(Color(0xff009e49)),
-    ColorsProperties(Color(0xffce1126)),
-    ColorsProperties(Color(0xff000001)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xfffcd116),
+      otherColors: [
+        Color(0xfffcad56),
+        Color(0xffffa1a1),
+        Color(0xfff1b2dc),
+        Color(0xff9e540a),
+        Color(0xff009e49),
+        Color(0xffce1126),
+        Color(0xff000001),
+        Color(0xff012169),
+        Color(0xffffffff),
+        Color(0xffc8102e),
+        Color(0xff000000),
+      ],
+    ),
+  ],
   url:
       "https://www.vexilla-mundi.com/turks_and_caicos_islands/turks_and_caicos_islands_sheet.png",
 );
@@ -1631,12 +1730,125 @@ const flagYemProperties = FlagProperties(
 
 /// Flag properties of country Cook Islands (CK).
 const flagCokProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff00205B)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffEF3340)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Star(),
+      x: 0.175,
+      y: -0.21,
+      heightFactor: 0.145,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Star(),
+        x: 1.05,
+        y: -1.75,
+        heightFactor: 1.1,
+        angle: 25,
+        child: ElementsProperties(
+          Color(0xffffffff),
+          shape: Star(),
+          x: 1.65,
+          y: -1.15,
+          heightFactor: 1.1,
+          angle: 48,
+          child: ElementsProperties(
+            Color(0xffffffff),
+            shape: Star(),
+            x: 2.05,
+            y: -0.35,
+            heightFactor: 1.1,
+            child: ElementsProperties(
+              Color(0xffffffff),
+              shape: Star(),
+              x: 2.05,
+              y: 0.55,
+              heightFactor: 1.1,
+              angle: -48,
+              child: ElementsProperties(
+                Color(0xffffffff),
+                shape: Star(),
+                x: 1.65,
+                y: 1.4,
+                heightFactor: 1.1,
+                angle: -25,
+                child: ElementsProperties(
+                  Color(0xffffffff),
+                  shape: Star(),
+                  x: 1.05,
+                  y: 2.05,
+                  heightFactor: 1.1,
+                  child: ElementsProperties(
+                    Color(0xffffffff),
+                    shape: Star(),
+                    x: 0.25,
+                    y: 2.3,
+                    heightFactor: 1.1,
+                    angle: 24,
+                    child: ElementsProperties(
+                      Color(0xffffffff),
+                      shape: Star(),
+                      x: -0.65,
+                      y: 2.2,
+                      heightFactor: 1.1,
+                      angle: -24,
+                      child: ElementsProperties(
+                        Color(0xffffffff),
+                        shape: Star(),
+                        x: -1.45,
+                        y: 1.75,
+                        heightFactor: 1.1,
+                        child: ElementsProperties(
+                          Color(0xffffffff),
+                          shape: Star(),
+                          x: -1.95,
+                          y: 1.05,
+                          heightFactor: 1.1,
+                          angle: -48,
+                          child: ElementsProperties(
+                            Color(0xffffffff),
+                            shape: Star(),
+                            x: -2.15,
+                            y: 0.1,
+                            heightFactor: 1.1,
+                            angle: 48,
+                            child: ElementsProperties(
+                              Color(0xffffffff),
+                              shape: Star(),
+                              x: -2,
+                              y: -0.8,
+                              heightFactor: 1.1,
+                              child: ElementsProperties(
+                                Color(0xffffffff),
+                                shape: Star(),
+                                x: -1.45,
+                                y: -1.6,
+                                heightFactor: 1.1,
+                                angle: -48,
+                                child: ElementsProperties(
+                                  Color(0xffffffff),
+                                  shape: Star(),
+                                  x: -0.65,
+                                  y: -2.1,
+                                  heightFactor: 1.1,
+                                  angle: -24,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  ],
   url: "https://www.vexilla-mundi.com/cook_islands/cook_islands_sheet.png",
 );
 
@@ -1740,21 +1952,25 @@ const flagCivProperties = FlagProperties(
 
 /// Flag properties of country Bermuda (BM).
 const flagBmuProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffcf142b)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff2f8f22)),
-    ColorsProperties(Color(0xffd40000)),
-    ColorsProperties(Color(0xff64b4d1)),
-    ColorsProperties(Color(0xff784421)),
-    ColorsProperties(Color(0xfff5ce00)),
-    ColorsProperties(Color(0xffe4cb5e)),
-    ColorsProperties(Color(0xff000066)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xff00247d)),
-  ],
+  [ColorsProperties(Color(0xffcf142b))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [
+        Color(0xff2f8f22),
+        Color(0xffd40000),
+        Color(0xff64b4d1),
+        Color(0xff784421),
+        Color(0xfff5ce00),
+        Color(0xffe4cb5e),
+        Color(0xff000066),
+        Color(0xffc8102e),
+        Color(0xff000000),
+        Color(0xff00247d),
+      ],
+    ),
+  ],
   url: "https://www.vexilla-mundi.com/bermuda/bermuda_sheet.png",
 );
 
@@ -1880,14 +2096,76 @@ const flagVirProperties = FlagProperties(
 
 /// Flag properties of country Tuvalu (TV).
 const flagTuvProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff009fca)),
-    ColorsProperties(Color(0xfffff40d)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-  ],
+  [ColorsProperties(Color(0xff009fca))],
   aspectRatio: 2,
+  elementsProperties: [
+    ElementsProperties(
+      Color(0xfffff40d),
+      shape: Star(),
+      x: 0.092,
+      y: 0.8,
+      heightFactor: 1 / 6,
+      child: ElementsProperties(
+        Color(0xfffff40d),
+        shape: Star(),
+        x: 2.6,
+        y: -3.3,
+        heightFactor: 1.1,
+        angle: -36,
+        child: ElementsProperties(
+          Color(0xfffff40d),
+          shape: Star(),
+          y: 2.85,
+          heightFactor: 1.1,
+          angle: -36,
+          child: ElementsProperties(
+            Color(0xfffff40d),
+            shape: Star(),
+            x: 2.7,
+            y: -0.7,
+            heightFactor: 1.1,
+            angle: -36,
+            child: ElementsProperties(
+              Color(0xfffff40d),
+              shape: Star(),
+              x: 2.2,
+              y: -1.9,
+              heightFactor: 1.1,
+              child: ElementsProperties(
+                Color(0xfffff40d),
+                shape: Star(),
+                x: 2.26,
+                y: -1.35,
+                heightFactor: 1.1,
+                child: ElementsProperties(
+                  Color(0xfffff40d),
+                  shape: Star(),
+                  y: -5.35,
+                  heightFactor: 1.1,
+                  child: ElementsProperties(
+                    Color(0xfffff40d),
+                    shape: Star(),
+                    x: -2.25,
+                    y: 2.3,
+                    heightFactor: 1.1,
+                    angle: -36,
+                    child: ElementsProperties(
+                      Color(0xfffff40d),
+                      shape: Star(),
+                      x: -2.3,
+                      y: 1,
+                      heightFactor: 1.1,
+                      angle: -36,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Tuvalu_(construction_sheet).svg",
 );

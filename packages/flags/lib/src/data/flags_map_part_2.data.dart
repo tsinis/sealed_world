@@ -37,21 +37,39 @@ const flagLtuProperties = FlagProperties(
 
 /// Flag properties of country Northern Mariana Islands (MP).
 const flagMnpProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff0071bc)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff217900)),
-    ColorsProperties(Color(0xffffd200)),
-    ColorsProperties(Color(0xff8c8a8c)),
-    ColorsProperties(Color(0xffde2010)),
-    ColorsProperties(Color(0xffffe300)),
-    ColorsProperties(Color(0xff6b18b5)),
-    ColorsProperties(Color(0xfff7df73)),
-    ColorsProperties(Color(0xff8c1800)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xffef8a10)),
-  ],
+  [ColorsProperties(Color(0xff0033A1))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [
+        Color(0xffffffff),
+        Color(0xff217900),
+        Color(0xffffd200),
+        Color(0xff8c8a8c),
+        Color(0xffde2010),
+        Color(0xffffe300),
+        Color(0xff6b18b5),
+        Color(0xfff7df73),
+        Color(0xff8c1800),
+        Color(0xff000000),
+        Color(0xffef8a10),
+      ],
+    ),
+    ElementsProperties(
+      Color(0xff000000),
+      shape: Star(),
+      x: -0.01,
+      y: 0.175,
+      heightFactor: 0.38,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Star(),
+        y: 0.1,
+        heightFactor: 0.98,
+      ),
+    ),
+  ],
   url:
       "https://www.vexilla-mundi.com/northern_mariana_islands/northern_mariana_islands_sheet.png",
 );
@@ -458,20 +476,24 @@ const flagMdaProperties = FlagProperties(
 
 /// Flag properties of country Montserrat (MS).
 const flagMsrProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff00a2bd)),
-    ColorsProperties(Color(0xffa53d08)),
-    ColorsProperties(Color(0xffff9a08)),
-    ColorsProperties(Color(0xff008021)),
-    ColorsProperties(Color(0xffffe1cf)),
-    ColorsProperties(Color(0xff870f00)),
-    ColorsProperties(Color(0xffc8102e)),
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xffffdf00)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xff00a2bd),
+      otherColors: [
+        Color(0xffffffff),
+        Color(0xffa53d08),
+        Color(0xffff9a08),
+        Color(0xff008021),
+        Color(0xffffe1cf),
+        Color(0xff870f00),
+        Color(0xffc8102e),
+        Color(0xff000000),
+        Color(0xffffdf00),
+      ],
+    ),
+  ],
   url: "https://www.vexilla-mundi.com/montserrat/montserrat_sheet.png",
 );
 
@@ -558,10 +580,70 @@ const flagColProperties = FlagProperties(
 
 /// Flag properties of country French Southern and Antarctic Lands (TF).
 const flagAtfProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff002654)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffED2939)),
+  [ColorsProperties(Color(0xff002654))],
+  elementsProperties: [
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(aspectRatio: 1.48),
+      x: -1,
+      y: -1,
+      heightFactor: 0.41,
+      child: ElementsProperties(
+        Color(0xffED2939),
+        shape: Rectangle(aspectRatio: 0.5),
+        x: 0.95,
+        y: -1,
+        heightFactor: 0.97,
+      ),
+    ),
+    ElementsProperties(
+      Color(0xff002654),
+      shape: Rectangle(aspectRatio: 0.5),
+      x: -1,
+      y: -1,
+      heightFactor: 0.4,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Star(),
+      x: 0.39,
+      y: 0.81,
+      heightFactor: 0.1,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Star(),
+        x: 2.3,
+        y: -1.8,
+        heightFactor: 1.1,
+        child: ElementsProperties(
+          Color(0xffffffff),
+          shape: Star(),
+          x: -4.75,
+          y: 0.1,
+          heightFactor: 1.1,
+          child: ElementsProperties(
+            Color(0xffffffff),
+            shape: Star(),
+            x: -2,
+            y: -5.5,
+            heightFactor: 1.1,
+            child: ElementsProperties(
+              Color(0xffffffff),
+              shape: Star(),
+              x: 8.9,
+              y: 0.1,
+              heightFactor: 1.1,
+            ),
+          ),
+        ),
+      ),
+    ),
+    CustomElementsProperties(
+      Color(0xffffffff),
+      x: 0.39,
+      y: 0.5,
+      heightFactor: 0.5,
+    ),
   ],
   url:
       "https://www.vexilla-mundi.com/french_southern_and_antarctic_lands/french_southern_and_antarctic_lands_sheet.png",
@@ -1118,13 +1200,13 @@ const flagUryProperties = FlagProperties(
       y: -1,
       heightFactor: 78 / 162,
       child: ElementsProperties(
-        Color(0xff7b3f00),
+        Color(0xfffcd116),
         shape: Star(points: 16, radiusFactor: 0.45),
         y: 0.15,
         heightFactor: 0.85,
         angle: 10,
         child: ElementsProperties(
-          Color.fromARGB(255, 145, 86, 22),
+          Color(0xff7b3f00),
           shape: Star(points: 16, radiusFactor: 0.3),
           x: -0.01,
           angle: 32,
@@ -1835,15 +1917,22 @@ const flagCpvProperties = FlagProperties(
 
 /// Flag properties of country Anguilla (AI).
 const flagAiaProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffff9900)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff99ccff)),
-    ColorsProperties(Color(0xfffdc301)),
-    ColorsProperties(Color(0xffc8102e)),
-  ],
+  [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [
+        Color(0xffff9900),
+        Color(0xff012169),
+        Color(0xffffffff),
+        Color(0xff99ccff),
+        Color(0xfffdc301),
+        Color(0xffc8102e),
+      ],
+      heightFactor: 1 / 2,
+    ),
+  ],
   url: "https://www.vexilla-mundi.com/anguilla/anguilla_sheet.png",
 );
 
@@ -1980,13 +2069,9 @@ const flagMngProperties = FlagProperties(
 
 /// Flag properties of country Niue (NU).
 const flagNiuProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xfffedd00)),
-    ColorsProperties(Color(0xff012169)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffc8102e)),
-  ],
+  [ColorsProperties(Color(0xfffedd00))],
   aspectRatio: 2,
+  elementsProperties: [CustomElementsProperties(Color(0xfffedd00))],
   url: "https://www.vexilla-mundi.com/niue/niue_sheet.png",
 );
 
