@@ -13,7 +13,11 @@ final class MapleLeafPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
-  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds? paintFlagElements(
+    Canvas canvas,
+    Size size, [
+    FlagParentBounds? parent,
+  ]) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -161,10 +165,8 @@ final class MapleLeafPainter extends CustomElementsPainter {
       ..close();
 
     canvas
-      ..save()
       ..translate(center.dx, center.dy)
-      ..drawPath(path, colorPaint)
-      ..restore();
+      ..drawPath(path, colorPaint);
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }

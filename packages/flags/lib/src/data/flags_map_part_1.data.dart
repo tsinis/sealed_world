@@ -1997,11 +1997,10 @@ const flagUsaProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xff3C3B6E),
-      shape: Rectangle(),
+      shape: Rectangle(aspectRatio: 2964 / 2100),
       offset: Offset(-1, -1),
       heightFactor: 7 / 13,
-      widthFactor: 0.4,
-      child: CustomElementsProperties(Color(0xffffffff), heightFactor: 0.11),
+      child: CustomElementsProperties(Color(0xffffffff), heightFactor: 0.052),
     ),
   ],
   url:

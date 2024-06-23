@@ -23,12 +23,13 @@ final class UnionJackPainter extends MultiElementPainter {
   ];
 
   @override
-  void paint(Canvas canvas, Size size) {
+  FlagParentBounds? paint(Canvas canvas, Size size) {
     if (!_isFull) super.paint(canvas, size);
-    _paintUnionJack(canvas, size);
+
+    return _paintUnionJack(canvas, size);
   }
 
-  void _paintUnionJack(Canvas canvas, Size fullSize) {
+  FlagParentBounds? _paintUnionJack(Canvas canvas, Size fullSize) {
     final size = _isFull ? fullSize : fullSize / 2;
     final width = size.width;
     final height = size.height;
@@ -63,7 +64,7 @@ final class UnionJackPainter extends MultiElementPainter {
       ..paint(Offset(0, height), 0.015, 0.015)
       ..paint(Offset(width, height), 0.075);
 
-    MultiElementPainter(_stripesProps, aspectRatio).paint(canvas, size);
+    return MultiElementPainter(_stripesProps, aspectRatio).paint(canvas, size);
   }
 }
 

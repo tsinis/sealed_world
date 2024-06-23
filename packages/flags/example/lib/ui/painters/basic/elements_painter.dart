@@ -32,12 +32,15 @@ abstract base class ElementsPainter extends CustomPainter {
   Paint get colorPaint => Paint()..color = property.mainColor;
 
   @protected
-  FlagParentBounds paintFlagElements(Canvas canvas, Size size);
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size);
 
   @override
-  void paint(Canvas canvas, Size size) {
+  FlagParentBounds? paint(Canvas canvas, Size size) {
     final parent = paintFlagElements(canvas, size);
-    paintChild(parent.canvas, parent.bounds, parent.child);
+    if (parent == null) return parent;
+    final child = paintChild(parent.canvas, parent.bounds, parent.child);
+
+    return child ?? parent;
   }
 
   @protected
@@ -48,23 +51,29 @@ abstract base class ElementsPainter extends CustomPainter {
   }
 
   @protected
-  void paintChild(Canvas canvas, Rect parentBounds, ElementsProperties? child) {
+  FlagParentBounds? paintChild(
+    Canvas canvas,
+    Rect parentBounds,
+    ElementsProperties? child,
+  ) {
     final childShape = child?.shape;
-    if (childShape == null || child == null) return;
+    if (childShape == null || child == null) return null;
 
     final shapePainter = painter(childShape);
-    final parentSize = parentBounds.size;
+    final parent = parentBounds.size;
 
     canvas
       ..save()
       ..translate(parentBounds.left, parentBounds.top);
-    shapePainter([child], parentSize.aspectRatio)?.paint(canvas, parentSize);
+    final res = shapePainter([child], parent.aspectRatio).paint(canvas, parent);
     canvas.restore();
+
+    return res;
   }
 
   @protected
-  ElementsPainter? Function(ElementsProps?, double) painter(Shape childShape) =>
-      childShape.whenConst(
+  ElementsPainter Function(ElementsProps?, double) painter(Shape child) =>
+      child.whenConst(
         ellipse: EllipsePainter.new,
         moon: MoonPainter.new,
         rectangle: RectanglePainter.new,

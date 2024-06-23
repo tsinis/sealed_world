@@ -268,9 +268,11 @@ const flagsMap = {
   CountryTza(): BasicFlag(flagTzaProperties),
   CountryUga(): EllipseFlag(flagUgaProperties),
   CountryUkr(): BasicFlag(flagUkrProperties),
-  CountryUmi(): RectangleFlag(flagUmiProperties),
+  CountryUmi():
+      BasicFlag(flagUmiProperties, elementsBuilder: UsaStarsPainter.new),
   CountryUry(): RectangleFlag(flagUryProperties),
-  CountryUsa(): RectangleFlag(flagUsaProperties),
+  CountryUsa():
+      BasicFlag(flagUsaProperties, elementsBuilder: UsaStarsPainter.new),
   CountryUzb(): MoonFlag(flagUzbProperties),
   CountryVat(): BasicFlag(flagVatProperties),
   CountryVct(): BasicFlag(flagVctProperties),
