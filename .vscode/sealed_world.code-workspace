@@ -11,6 +11,10 @@
       "path": "../tools"
     },
     {
+      "name": "Flags",
+      "path": "../packages/flags"
+    },
+    {
       "name": "Flutter World",
       "path": "../packages/world_countries"
     },
