@@ -146,6 +146,12 @@ const flagDmaProperties = FlagProperties(
         ),
       ),
     ),
+    ElementsProperties(
+      Color(0xff009A44),
+      shape: Rectangle(),
+      heightFactor: 14 / 60,
+      widthFactor: 3 / 60,
+    ),
     CustomElementsProperties(
       Color(0xffE4002B),
       otherColors: [

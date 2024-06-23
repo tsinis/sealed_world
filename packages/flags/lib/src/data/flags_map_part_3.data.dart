@@ -1430,7 +1430,12 @@ const flagEgyProperties = FlagProperties(
     ColorsProperties(Color(0xff000000)),
   ],
   elementsProperties: [
-    CustomElementsProperties(Color(0xffc09300), heightFactor: 0.3),
+    CustomElementsProperties(
+      Color.fromARGB(50, 190, 145, 0),
+      otherColors: [Color(0xffc09300), Color(0xffffffff), Color(0xffc09300)],
+      heightFactor: 0.3,
+      widthFactor: 1 / 6,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/egypt/egypt_sheet.png",
 );

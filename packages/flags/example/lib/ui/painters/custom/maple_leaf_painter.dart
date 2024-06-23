@@ -17,6 +17,7 @@ final class MapleLeafPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
+    List<Color>? otherColors,
   ]) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);

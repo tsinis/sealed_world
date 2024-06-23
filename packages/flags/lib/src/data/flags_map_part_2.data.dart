@@ -447,15 +447,18 @@ const flagMdaProperties = FlagProperties(
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffB07E5B),
+      Color.fromARGB(255, 113, 55, 13),
       otherColors: [
-        Color(0xff0046AE),
+        Color.fromARGB(255, 92, 55, 29),
         Color(0xffCC092F),
+        Color(0xff0046AE),
+        Color(0xffB07E5B),
         Color(0xffFFD200),
         Color(0xff007A50),
         Color(0xff000000),
       ],
       heightFactor: 168 / 300,
+      widthFactor: 1 / 5,
     ),
   ],
   url:
@@ -917,17 +920,19 @@ const flagMneProperties = FlagProperties(
       Color(0xffc40308),
       shape: Rectangle(aspectRatio: 2.1),
       heightFactor: 54 / 60,
+      widthFactor: 0.4,
       child: CustomElementsProperties(
         Color(0xffd3ae3b),
         otherColors: [
-          Color(0xffc40308),
-          Color(0xffb96b29),
-          Color(0xffd4af3a),
+          Color(0xffd3ae3b),
           Color(0xff1d5e91),
           Color(0xff6d8c3e),
+          Color(0xffb96b29),
+          Color(0xffc40308),
           Color(0xffc52126),
         ],
-        heightFactor: 40 / 54,
+        heightFactor: 0.6,
+        widthFactor: 0.4,
       ),
     ),
   ],
@@ -2309,7 +2314,11 @@ const flagAlbProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000))],
   aspectRatio: 7 / 5,
   elementsProperties: [
-    CustomElementsProperties(Color(0xff000000), heightFactor: 2 / 3),
+    CustomElementsProperties(
+      Color(0xff000000),
+      heightFactor: 0.65,
+      widthFactor: 0.45,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/albania/albania_sheet.png",
 );
