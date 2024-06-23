@@ -1,8 +1,7 @@
 import "dart:math";
 import "dart:ui";
 
-import "package:flags/flags.dart";
-
+import "../../../../flags.dart";
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 

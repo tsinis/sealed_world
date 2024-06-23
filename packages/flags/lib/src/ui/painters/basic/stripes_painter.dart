@@ -1,9 +1,10 @@
 import "dart:math";
 
-import "package:flags/flags.dart";
 import "package:flutter/rendering.dart";
 
 import "../../../helpers/extensions/box_decoration_extension.dart";
+import "../../../model/flag_properties.dart";
+import "../../../model/stripe_orientation.dart";
 
 class StripesPainter<T extends CustomPainter> extends CustomPainter {
   const StripesPainter(this.properties, this.decoration, this.elementsPainter);

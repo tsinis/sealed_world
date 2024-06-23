@@ -1,6 +1,6 @@
-import "package:flags/flags.dart";
 import "package:flutter/widgets.dart";
 
+import "../../../flags.dart";
 import "../../model/typedefs.dart";
 import "../../ui/flags/basic_flag.dart";
 

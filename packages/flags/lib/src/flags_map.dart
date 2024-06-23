@@ -1,10 +1,10 @@
 // ignore_for_file: depend_on_referenced_packages
 
-import "package:flags/src/data/flags_map_part_1.data.dart";
-import "package:flags/src/data/flags_map_part_2.data.dart";
-import "package:flags/src/data/flags_map_part_3.data.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
+import "data/flags_map_part_1.data.dart";
+import "data/flags_map_part_2.data.dart";
+import "data/flags_map_part_3.data.dart";
 import "ui/flags/basic_flag.dart";
 import "ui/flags/ellipse_flag.dart";
 import "ui/flags/moon_flag.dart";
@@ -16,7 +16,7 @@ import "ui/painters/custom/maple_leaf_painter.dart";
 import "ui/painters/multi_element_painter.dart";
 
 // ignore: prefer-static-class, to follow pattern from eco-system.
-const flagsMap = {
+const smallSimplifiedFlagsMap = {
   CountryAbw(): StarFlag(flagAbwProperties),
   CountryAfg(): BasicFlag(flagAfgProperties),
   CountryAgo(): MultiElementFlag(flagAgoProperties),

@@ -1,9 +1,9 @@
 import "dart:math" as math;
 
-import "package:flags/flags.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
+import "../../../../flags.dart";
 import "../../../model/typedefs.dart";
 import "../common/diagonal_line_painter.dart";
 import "../common/ellipse_painter.dart";

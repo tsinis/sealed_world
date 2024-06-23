@@ -1,6 +1,6 @@
-import "package:flags/flags.dart";
 import "package:flutter/widgets.dart";
 
+import "../../../flags.dart";
 import "../../helpers/extensions/box_decoration_extension.dart";
 import "../../model/typedefs.dart";
 import "../painters/basic/stripes_painter.dart";

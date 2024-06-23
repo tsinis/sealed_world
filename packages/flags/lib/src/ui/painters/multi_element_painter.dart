@@ -1,8 +1,7 @@
 import "dart:math";
 import "dart:ui";
 
-import "package:flags/flags.dart";
-
+import "../../../flags.dart";
 import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
 
@@ -21,7 +20,6 @@ final class MultiElementPainter extends CustomElementsPainter {
       if (shape != null) {
         final ratio = size.aspectRatio;
         parent = painter(shape)([property], ratio).paint(canvas, size);
-        if (parent == null) continue;
       }
       final child = property.child; // TODO: Refactor.
       if (child is CustomElementsProperties) {

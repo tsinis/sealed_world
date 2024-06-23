@@ -1,10 +1,6 @@
 import "package:flags/flags.dart";
 import "package:flutter/material.dart";
 
-import "flags_map.dart";
-import "helpers/extensions/basic_flag_extension_copy_with.dart";
-import "ui/flags/basic_flag.dart";
-
 void main() => runApp(
       MaterialApp(
         home: const Main(),
