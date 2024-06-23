@@ -1,5 +1,5 @@
 name: example
-description: A flags package example application.
+description: A world_flags package example application.
 publish_to: none
 
 version: 0.0.1+1
@@ -8,15 +8,15 @@ environment:
   sdk: ^3.4.1
 
 dependencies:
-  flags:
-    path: ../
   flutter:
     sdk: flutter
+  world_flags:
+    path: ../
 
 dev_dependencies:
   flutter_test: # From Google
     sdk: flutter
-  lints: ^3.0.0 # From Google
+  lints: ^4.0.0 # From Google
 
 flutter:
   uses-material-design: true

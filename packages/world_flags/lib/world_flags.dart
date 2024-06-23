@@ -1,5 +1,5 @@
 /// Every flag is a Widget.
-library flags;
+library world_flags;
 
 import "package:sealed_countries/sealed_countries.dart";
 

@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Pub package](https://img.shields.io/pub/v/flags.svg)](https://pub.dev/packages/flags)
+[![Pub package](https://img.shields.io/pub/v/world_flags.svg)](https://pub.dev/packages/world_flags)
 
 # Every country flag is a Flutter Widget
 
@@ -13,11 +13,11 @@
 
 ## Getting Started
 
-To use this package, you will need Flutter version 3.10+. Add `flags` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need Flutter version 3.10+. Add `world_flags` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:
-  flags: any
+  world_flags: any
 ```
 
 ### Usage
@@ -30,10 +30,6 @@ If you have any issues or suggestions for the package, please file them in the G
 ### References and credits
 
 This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
-
-### Attributions
-
-The color emoji flags fonts used in this package were obtained from open-source repositories of the original creators.
 
 ---
 

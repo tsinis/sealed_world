@@ -1,7 +1,5 @@
 import "dart:ui";
 
-import "package:flutter/rendering.dart";
-
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 
