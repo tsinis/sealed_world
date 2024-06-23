@@ -1,5 +1,6 @@
-import "package:flags/flags.dart" show ElementsProperties;
 import "package:flutter/widgets.dart";
+
+import "elements/elements_properties.dart";
 
 typedef ElementsProps = List<ElementsProperties>;
 

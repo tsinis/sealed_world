@@ -1,7 +1,7 @@
 import "dart:math";
 import "dart:ui";
 
-import "../../../../flags.dart";
+import "../../../model/shape.dart";
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 

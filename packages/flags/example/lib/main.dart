@@ -21,20 +21,15 @@ class _MainState extends State<Main> {
   double _opacity = 1 / 2;
 
   void _incrementIndex() {
-    _index = _index >= flagsMap.length ? 0 : _index + 1;
+    _index = _index >= smallSimplifiedFlagsMap.length ? 0 : _index + 1;
     setState(() => _opacity = 1 / 2);
   }
 
   @optionalTypeArgs
-  MapEntry<WorldCountry, BasicFlag> _flagData<T extends BasicFlag>() {
-    final map = flagsMap.entries.where((f) => f.value is T).elementAt(_index);
-    for (final e in flagsMap.entries) {
-      if ((e.value.properties.elementsProperties?.length ?? 0) <= 1) continue;
-      // print("E: ${e.key.code}");
-    }
-
-    return map;
-  }
+  MapEntry<WorldCountry, BasicFlag> _flagData<T extends BasicFlag>() =>
+      smallSimplifiedFlagsMap.entries
+          .where((f) => f.value is T)
+          .elementAt(_index);
 
   String _labelBuilder() => switch (_opacity) {
         1 => "Original flag",
@@ -64,10 +59,10 @@ class _MainState extends State<Main> {
                 alignment: Alignment.center,
                 clipBehavior: Clip.none,
                 children: [
+                  /// + decoration: const BoxDecoration(shape: BoxShape.circle),
                   flag.value.copyWith(
-                      // aspectRatio: 2.5,
-                      // decoration: const BoxDecoration(shape: BoxShape.circle),
-                      ),
+                    aspectRatio: 3 / 2,
+                  ),
                   Opacity(
                     opacity: _opacity,
                     child: Image.network(flag.key.flagPngUrl(), scale: 0.1),

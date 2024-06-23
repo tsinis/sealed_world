@@ -3,7 +3,8 @@ import "dart:math" as math;
 import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
-import "../../../../flags.dart";
+import "../../../model/elements/elements_properties.dart";
+import "../../../model/shape.dart";
 import "../../../model/typedefs.dart";
 import "../common/diagonal_line_painter.dart";
 import "../common/ellipse_painter.dart";

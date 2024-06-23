@@ -1,7 +1,10 @@
-import "dart:math";
+import "dart:math" hide Rectangle;
 import "dart:ui";
 
-import "../../../flags.dart";
+import "package:flags/src/model/shape.dart";
+
+import "../../model/elements/custom_elements_properties.dart";
+import "../../model/elements/elements_properties.dart";
 import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
 

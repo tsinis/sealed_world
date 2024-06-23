@@ -1,6 +1,6 @@
+import "package:flags/src/model/shape.dart";
 import "package:flutter/rendering.dart";
 
-import "../../../../flags.dart";
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 
