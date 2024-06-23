@@ -4,7 +4,6 @@ description: Country flags made with Flutter - every flag is a Widget.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/flags
 issue_tracker: https://github.com/tsinis/sealed_world/issues/
-publish_to: none # TODO!
 topics:
   - flags
   - flag
