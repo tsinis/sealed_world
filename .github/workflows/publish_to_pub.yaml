@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: 📚 Git checkout
-        uses: actions/checkout@v4.1.4
+        uses: actions/checkout@v4.1.7
 
       - name: 1️⃣ Set version tag
         run: |
@@ -60,7 +60,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚫 Cancel workflow if tag is not the same as version
-        uses: andymckay/cancel-action@0.4
+        uses: andymckay/cancel-action@0.5
         if: ${{ env.PUBSPEC != env.CHANGELOG || env.PUBSPEC != env.TAG || env.CHANGELOG != env.TAG }}
 
       - name: 💤 Sleep for 10 seconds

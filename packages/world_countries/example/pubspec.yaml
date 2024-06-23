@@ -21,17 +21,17 @@ dependencies:
     path: ../
 
 dev_dependencies:
-  build_runner: ^2.4.9 # From Google
+  build_runner: ^2.4.11 # From Google
   dart_code_metrics: # Flutter Favorite
     git:
       url: https://github.com/tsinis/dart-code-metrics
   dhttpd: ^4.1.0 # From Google
-  flutter_gen_runner: ^5.4.0
+  flutter_gen_runner: ^5.5.0+1
   # flutter_launcher_icons: any # From Flutter Community
   # flutter_native_splash: any # Flutter Favorite
   flutter_test: # From Google
     sdk: flutter
-  lints: ^3.0.0 # From Google
+  lints: ^4.0.0 # From Google
 
 flutter:
   uses-material-design: true
