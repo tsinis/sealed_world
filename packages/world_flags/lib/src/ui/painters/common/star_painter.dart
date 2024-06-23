@@ -1,4 +1,4 @@
-import "dart:math" as math;
+import "dart:math";
 import "dart:ui";
 
 import "../../../model/shape.dart";
@@ -7,13 +7,13 @@ import "../basic/elements_painter.dart";
 
 final class StarPainter extends ElementsPainter {
   StarPainter(super.properties, super.aspectRatio);
-  static const startRadians = math.pi / 2;
-  static const radiansMultiplier = math.pi / 180;
+  static const startRadians = pi / 2;
+  static const radiansMultiplier = pi / 180;
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final star = shapeType<Star>() ?? const Star();
-    final radiansPerPoint = math.pi * 2 / (star.points * 2);
+    final radiansPerPoint = pi * 2 / (star.points * 2);
     final center = calculateCenter(size);
     final radius = calculateSize(size);
     final path = Path();
@@ -21,9 +21,9 @@ final class StarPainter extends ElementsPainter {
     for (var i = 0; i <= star.points * 2; i++) {
       final radiusFactor = i.isEven ? star.radiusFactor : 1;
       final x = center.dx +
-          radius * radiusFactor * math.cos(i * radiansPerPoint + startRadians);
+          radius * radiusFactor * cos(i * radiansPerPoint + startRadians);
       final y = center.dy +
-          radius * radiusFactor * math.sin(i * radiansPerPoint + startRadians);
+          radius * radiusFactor * sin(i * radiansPerPoint + startRadians);
       i == 0 ? path.moveTo(x, y) : path.lineTo(x, y);
     }
 

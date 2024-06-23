@@ -11,8 +11,8 @@
       "path": "../tools"
     },
     {
-      "name": "Flags",
-      "path": "../packages/flags"
+      "name": "Flutter Flags",
+      "path": "../packages/world_flags"
     },
     {
       "name": "Flutter World",

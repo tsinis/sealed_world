@@ -1,4 +1,4 @@
-import "package:flutter/rendering.dart";
+import "dart:ui";
 
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
