@@ -14,6 +14,7 @@ import "src/ui/flags/rectangle_flag.dart";
 import "src/ui/flags/star_flag.dart";
 import "src/ui/flags/triangle_flag.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
+import "src/ui/painters/custom/tto_line_painter.dart";
 import "src/ui/painters/multi_element_painter.dart";
 
 export "package:sealed_countries/sealed_countries.dart";
@@ -106,8 +107,14 @@ const smallSimplifiedFlagsMap = {
   CountryChn(): MultiElementFlag(flagChnProperties),
   CountryCiv(): BasicFlag(flagCivProperties),
   CountryCmr(): StarFlag(flagCmrProperties),
-  CountryCod(): MultiElementFlag(flagCodProperties),
-  CountryCog(): BasicFlag(flagCogProperties),
+  CountryCod(): BasicFlag(
+    flagCodProperties,
+    elementsBuilder: CustomDiagonalPainter.horizontal,
+  ),
+  CountryCog(): BasicFlag(
+    flagCogProperties,
+    elementsBuilder: CustomDiagonalPainter.vertical,
+  ),
   CountryCok():
       BasicFlag(flagCokProperties, elementsBuilder: UnionJackPainter.half),
   CountryCol(): BasicFlag(flagColProperties),
@@ -274,7 +281,7 @@ const smallSimplifiedFlagsMap = {
   CountryShn():
       BasicFlag(flagShnProperties, elementsBuilder: UnionJackPainter.full),
   CountrySjm(): MultiElementFlag(flagSjmProperties),
-  CountrySlb(): StarFlag(flagSlbProperties),
+  CountrySlb(): MultiElementFlag(flagSlbProperties),
   CountrySle(): BasicFlag(flagSleProperties),
   CountrySlv(): EllipseFlag(flagSlvProperties),
   CountrySmr(): BasicFlag(flagSmrProperties),
@@ -301,7 +308,8 @@ const smallSimplifiedFlagsMap = {
   CountryTkm(): MultiElementFlag(flagTkmProperties),
   CountryTls(): TriangleFlag(flagTlsProperties),
   CountryTon(): MultiElementFlag(flagTonProperties),
-  CountryTto(): BasicFlag(flagTtoProperties),
+  CountryTto():
+      BasicFlag(flagTtoProperties, elementsBuilder: TtoLinePainter.new),
   CountryTun(): EllipseFlag(flagTunProperties),
   CountryTur(): MoonFlag(flagTurProperties),
   CountryTuv():

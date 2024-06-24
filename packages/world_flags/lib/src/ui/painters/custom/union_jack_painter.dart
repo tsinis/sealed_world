@@ -46,7 +46,7 @@ final class UnionJackPainter extends MultiElementPainter {
 
     canvas
       ..drawRect(rect, Paint()..color = _blueColor)
-      ..clipRect(rect)
+      ..clipRect(rect, doAntiAlias: false)
       ..save()
       ..translate(width / 2, height / 2)
       ..rotate(-angle)

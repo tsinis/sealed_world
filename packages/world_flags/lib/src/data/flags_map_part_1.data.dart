@@ -841,11 +841,7 @@ const flagDnkProperties = FlagProperties(
 
 /// Flag properties of country Solomon Islands (SB).
 const flagSlbProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff0000d6), ratio: 25),
-    ColorsProperties(Color(0xffffcc00)),
-    ColorsProperties(Color(0xff006000), ratio: 25),
-  ],
+  [ColorsProperties(Color(0xff0000d6)), ColorsProperties(Color(0xff006000))],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   elementsProperties: [
@@ -878,6 +874,11 @@ const flagSlbProperties = FlagProperties(
           ),
         ),
       ),
+    ),
+    ElementsProperties(
+      Color(0xffffcc00),
+      shape: DiagonalLine(isTopRightToBottomLeft: false),
+      heightFactor: 0.1,
     ),
   ],
   url:
@@ -1610,6 +1611,8 @@ const flagTtoProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [Color(0xff000000)],
+      heightFactor: 0.3,
+      widthFactor: 0.05,
     ),
   ],
   url:

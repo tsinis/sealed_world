@@ -59,10 +59,10 @@ class _MainState extends State<Main> {
                 alignment: Alignment.center,
                 clipBehavior: Clip.none,
                 children: [
-                  /// + decoration: const BoxDecoration(shape: BoxShape.circle),
                   flag.value.copyWith(
-                    aspectRatio: 3 / 2,
-                  ),
+                      // decoration: const BoxDecoration(shape: BoxShape.circle),
+                      // aspectRatio: 2.5,
+                      ),
                   Opacity(
                     opacity: _opacity,
                     child: Image.network(flag.key.flagPngUrl(), scale: 0.1),

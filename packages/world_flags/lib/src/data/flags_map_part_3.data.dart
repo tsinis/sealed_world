@@ -182,15 +182,17 @@ const flagCodProperties = FlagProperties(
   [ColorsProperties(Color(0xff007fff))],
   aspectRatio: 4 / 3,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffce1021),
+      otherColors: [Color(0xfff7d618)],
+      heightFactor: 0.2,
+      widthFactor: 0.08,
+    ),
     ElementsProperties(
       Color(0xfff7d618),
       shape: Star(),
       offset: Offset(-0.635, -0.475),
       heightFactor: 0.39,
-    ),
-    CustomElementsProperties(
-      Color(0xffce1021),
-      otherColors: [Color(0xfff7d618)],
     ),
   ],
   url:
@@ -564,7 +566,9 @@ const flagAlaProperties = FlagProperties(
 const flagCogProperties = FlagProperties(
   [ColorsProperties(Color(0xff009543)), ColorsProperties(Color(0xffDC241F))],
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
-  elementsProperties: [CustomElementsProperties(Color(0xffFBDE4A))],
+  elementsProperties: [
+    CustomElementsProperties(Color(0xffFBDE4A), heightFactor: 1 / 3),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_the_Republic_of_the_Congo_(construction_sheet).svg",
 );
@@ -1530,20 +1534,20 @@ const flagKnaProperties = FlagProperties(
       Color(0xff000000),
       shape: DiagonalLine(isTopRightToBottomLeft: false),
       heightFactor: 126 / 420,
-      child: ElementsProperties(Color(0xffffffff), shape: Star()),
     ),
     ElementsProperties(
-      Color(0xffc70000),
-      shape: Triangle(),
-      offset: Offset(1, 1),
-      widthFactor: 1,
-      child: ElementsProperties(
-        Color(0xffffe900),
-        shape: Triangle(),
-        offset: Offset(1, 0.94),
-        heightFactor: 0.94,
-        widthFactor: 0.925,
-      ),
+      Color(0xffffffff),
+      shape: Star(),
+      offset: Offset(-0.38, 0.4),
+      heightFactor: 0.27,
+      angle: 38,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Star(),
+      offset: Offset(0.395, -0.366),
+      heightFactor: 0.27,
+      angle: 38,
     ),
   ],
   url:
