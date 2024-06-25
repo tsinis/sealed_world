@@ -57,6 +57,33 @@ const flagMnpProperties = FlagProperties(
       ],
     ),
     ElementsProperties(
+      Color(0xffffffff),
+      shape: Ellipse(),
+      offset: Offset(0, 0.03),
+      heightFactor: 0.75,
+      child: ElementsProperties(
+        Color(0xffef8a10),
+        shape: Ellipse(),
+        heightFactor: 0.85,
+        child: ElementsProperties(
+          Color(0xffffffff),
+          shape: Ellipse(),
+          heightFactor: 0.85,
+          child: ElementsProperties(
+            Color(0xff0033A1),
+            shape: Ellipse(),
+            heightFactor: 0.85,
+          ),
+        ),
+      ),
+    ),
+    ElementsProperties(
+      Color(0xff8c8a8c),
+      shape: Rectangle(aspectRatio: 0.36),
+      offset: Offset(-0.02, 0.5),
+      heightFactor: 0.55,
+    ),
+    ElementsProperties(
       Color(0xff000000),
       shape: Star(),
       offset: Offset(-0.01, 0.175),
@@ -771,10 +798,7 @@ const flagCypProperties = FlagProperties(
 
 /// Flag properties of country Afghanistan (AF).
 const flagAfgProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000000)),
-  ],
+  [ColorsProperties(Color(0xffffffff))],
   aspectRatio: 2,
   elementsProperties: [
     CustomElementsProperties(Color(0xff000000), heightFactor: 1 / 2),
@@ -808,10 +832,16 @@ const flagOmnProperties = FlagProperties(
       shape: Rectangle(),
       offset: Offset(-1, 0),
       widthFactor: 20 / 60,
-      child: CustomElementsProperties(
+      child: ElementsProperties(
         Color(0xffffffff),
-        offset: Offset(0, -0.97),
-        heightFactor: 9 / 30,
+        shape: Star(points: 4, radiusFactor: 0.1),
+        offset: Offset(0, -0.58),
+        heightFactor: 0.38,
+        child: ElementsProperties(
+          Color(0xffffffff),
+          shape: Star(points: 3, radiusFactor: 0.15),
+          offset: Offset(0, -0.3),
+        ),
       ),
     ),
   ],
@@ -1256,10 +1286,12 @@ const flagZweProperties = FlagProperties(
           shape: Star(),
           offset: Offset(-0.225, -0.05),
           heightFactor: 29 / 64,
-          child: CustomElementsProperties(
+          child: ElementsProperties(
             Color(0xffffcc00),
-            otherColors: [Color(0xff000000)],
-            heightFactor: 0.8,
+            shape: Star(points: 4),
+            offset: Offset(0, 0.1),
+            heightFactor: 0.6,
+            angle: 30,
           ),
         ),
       ),
@@ -1973,10 +2005,72 @@ const flagMngProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    CustomElementsProperties(
+    ElementsProperties(
       Color(0xffffd900),
-      offset: Offset(-0.667, 0.1),
-      heightFactor: 45 / 60,
+      shape: Rectangle(aspectRatio: 0.92),
+      offset: Offset(-0.82, 0.5),
+      heightFactor: 24 / 60,
+      child: ElementsProperties(
+        Color(0xffda2032),
+        shape: Rectangle(aspectRatio: 0.5),
+        child: ElementsProperties(
+          Color(0xffffd900),
+          shape: Ellipse(),
+          offset: Offset(0, -2.3),
+          heightFactor: 0.2,
+          child: ElementsProperties(
+            Color(0xffffd900),
+            shape: Ellipse(),
+            offset: Offset(0, 3.2),
+            heightFactor: 1.6,
+            child: ElementsProperties(
+              Color(0xffffd900),
+              shape: Moon(radius: 1.0, offset: Offset(0, -0.3)),
+              offset: Offset(0, 0.4),
+              heightFactor: 1.4,
+              child: ElementsProperties(
+                Color(0xffffd900),
+                shape: Triangle(),
+                offset: Offset(0.06, 1.75),
+                heightFactor: 0.45,
+                widthFactor: 0.9,
+                angle: 90,
+                child: ElementsProperties(
+                  Color(0xffffd900),
+                  shape: Triangle(),
+                  offset: Offset(0, 15.1),
+                  angle: 90,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+    ElementsProperties(
+      Color.fromARGB(0, 255, 217, 0),
+      shape: Rectangle(aspectRatio: 0.92),
+      offset: Offset(-0.82, 0.5),
+      heightFactor: 24 / 60,
+      child: ElementsProperties(
+        Color.fromARGB(0, 255, 217, 0),
+        shape: Rectangle(aspectRatio: 0.5),
+        child: ElementsProperties(
+          Color(0xffffd900),
+          shape: Rectangle(aspectRatio: 0.6),
+          heightFactor: 0.666,
+          child: ElementsProperties(
+            Color(0xffda2032),
+            shape: Rectangle(),
+            heightFactor: 0.75,
+            child: ElementsProperties(
+              Color(0xffffd900),
+              shape: Ellipse(),
+              heightFactor: 0.85,
+            ),
+          ),
+        ),
+      ),
     ),
   ],
   url:

@@ -87,7 +87,7 @@ const smallSimplifiedFlagsMap = {
   CountryBhs(): TriangleFlag(flagBhsProperties),
   CountryBih(): MultiElementFlag(flagBihProperties),
   CountryBlm(): BasicFlag(flagBlmProperties),
-  CountryBlr(): BasicFlag(flagBlrProperties),
+  CountryBlr(): RectangleFlag(flagBlrProperties),
   CountryBlz(): MultiElementFlag(flagBlzProperties),
   CountryBmu():
       BasicFlag(flagBmuProperties, elementsBuilder: UnionJackPainter.half),
@@ -165,7 +165,7 @@ const smallSimplifiedFlagsMap = {
   CountryGrc(): MultiElementFlag(flagGrcProperties),
   CountryGrd(): MultiElementFlag(flagGrdProperties),
   CountryGrl(): MultiElementFlag(flagGrlProperties),
-  CountryGtm(): BasicFlag(flagGtmProperties),
+  CountryGtm(): EllipseFlag(flagGtmProperties),
   CountryGuf(): BasicFlag(flagGufProperties),
   CountryGum(): RectangleFlag(flagGumProperties),
   CountryGuy(): MultiElementFlag(flagGuyProperties),
@@ -222,11 +222,11 @@ const smallSimplifiedFlagsMap = {
   CountryMhl(): MultiElementFlag(flagMhlProperties),
   CountryMkd(): MultiElementFlag(flagMkdProperties),
   CountryMli(): BasicFlag(flagMliProperties),
-  CountryMlt(): BasicFlag(flagMltProperties),
+  CountryMlt(): MultiElementFlag(flagMltProperties),
   CountryMmr(): StarFlag(flagMmrProperties),
   CountryMne():
       BasicFlag(flagMneProperties, elementsBuilder: SimpleBirdPainter.egy),
-  CountryMng(): BasicFlag(flagMngProperties),
+  CountryMng(): MultiElementFlag(flagMngProperties),
   CountryMnp(): MultiElementFlag(flagMnpProperties),
   CountryMoz(): TriangleFlag(flagMozProperties),
   CountryMrt(): MoonFlag(flagMrtProperties),
@@ -251,7 +251,7 @@ const smallSimplifiedFlagsMap = {
   CountryNru(): StarFlag(flagNruProperties),
   CountryNzl():
       BasicFlag(flagNzlProperties, elementsBuilder: UnionJackPainter.half),
-  CountryOmn(): RectangleFlag(flagOmnProperties),
+  CountryOmn(): MultiElementFlag(flagOmnProperties),
   CountryPak(): MoonFlag(flagPakProperties),
   CountryPan(): MultiElementFlag(flagPanProperties),
   CountryPcn():

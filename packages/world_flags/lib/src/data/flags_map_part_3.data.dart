@@ -12,6 +12,18 @@ import "../model/stripe_orientation.dart";
 /// Flag properties of country British Indian Ocean Territory (IO).
 const flagIotProperties = FlagProperties(
   [
+    ColorsProperties(Color(0xffffffff), ratio: 2),
+    ColorsProperties(Color(0xff000063), ratio: 2),
+    ColorsProperties(Color(0xffffffff), ratio: 2),
+    ColorsProperties(Color(0xff000063), ratio: 2),
+    ColorsProperties(Color(0xffffffff), ratio: 2),
+    ColorsProperties(Color(0xff000063), ratio: 2),
+    ColorsProperties(Color(0xffffffff), ratio: 2),
+    ColorsProperties(Color(0xff000063), ratio: 2),
+    ColorsProperties(Color(0xffffffff), ratio: 2),
+    ColorsProperties(Color(0xff000063), ratio: 2),
+    ColorsProperties(Color(0xffffffff), ratio: 2),
+    ColorsProperties(Color(0xff000063), ratio: 2),
     ColorsProperties(Color(0xffffffff)),
   ],
   aspectRatio: 2,
@@ -347,9 +359,17 @@ const flagMozProperties = FlagProperties(
         shape: Star(),
         offset: Offset(-0.333, 0.04),
         heightFactor: 13 / 32,
-        child: CustomElementsProperties(
-          Color(0xff000000),
-          otherColors: [Color(0xffffffff)],
+        child: ElementsProperties(
+          Color(0xffffffff),
+          shape: Rectangle(aspectRatio: 1.5),
+          offset: Offset(0, 0.3),
+          heightFactor: 0.35,
+          child: ElementsProperties(
+            Color(0xff000000),
+            shape: Star(points: 4, radiusFactor: 0.1),
+            offset: Offset(0, -0.8),
+            heightFactor: 2.7,
+          ),
         ),
       ),
     ),
@@ -861,7 +881,19 @@ const flagEthProperties = FlagProperties(
       Color(0xff006bc6),
       shape: Ellipse(),
       heightFactor: 2 / 3,
-      child: CustomElementsProperties(Color(0xffffc621), heightFactor: 0.8),
+      child: ElementsProperties(
+        Color(0xffffc621),
+        shape: Star(radiusFactor: 0.1),
+        heightFactor: 0.8,
+        angle: 180,
+        child: ElementsProperties(
+          Color(0xff006bc6),
+          shape: Ellipse(),
+          offset: Offset(0, 0.1),
+          heightFactor: 0.5,
+          child: CustomElementsProperties(Color(0xffffc621), heightFactor: 0.8),
+        ),
+      ),
     ),
   ],
   url: "https://www.vexilla-mundi.com/ethiopia/ethiopia_sheet.png",
@@ -1108,8 +1140,13 @@ const flagHrvProperties = FlagProperties(
 /// Flag properties of country Kiribati (KI).
 const flagKirProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xffe73e2d), ratio: 55),
-    ColorsProperties(Color(0xff005989), ratio: 45),
+    ColorsProperties(Color(0xffe73e2d), ratio: 108),
+    ColorsProperties(Color(0xffffffff), ratio: 15),
+    ColorsProperties(Color(0xff005989), ratio: 15),
+    ColorsProperties(Color(0xffffffff), ratio: 15),
+    ColorsProperties(Color(0xff005989), ratio: 15),
+    ColorsProperties(Color(0xffffffff), ratio: 15),
+    ColorsProperties(Color(0xff005989), ratio: 18),
   ],
   aspectRatio: 2,
   elementsProperties: [
@@ -1142,6 +1179,12 @@ const flagKazProperties = FlagProperties(
           heightFactor: 0.85,
         ),
       ),
+    ),
+    ElementsProperties(
+      Color(0xffffec2d),
+      shape: Rectangle(aspectRatio: 0.12),
+      offset: Offset(-0.93, 0),
+      heightFactor: 0.9,
     ),
     CustomElementsProperties(Color(0xffffec2d), heightFactor: 0.9),
   ],
@@ -1944,6 +1987,53 @@ const flagMltProperties = FlagProperties(
   ],
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
+    ElementsProperties(
+      Color(0xffCF142B),
+      shape: Rectangle(aspectRatio: 3.2),
+      offset: Offset(-0.92, -0.68),
+      heightFactor: 0.085,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Rectangle(aspectRatio: 3.4),
+        heightFactor: 0.9,
+        child: ElementsProperties(
+          Color(0xffa0a0a0),
+          shape: Rectangle(),
+          child: ElementsProperties(
+            Color(0xffffffff),
+            shape: Rectangle(aspectRatio: 3.85),
+            heightFactor: 0.85,
+          ),
+        ),
+      ),
+    ),
+    ElementsProperties(
+      Color(0xffCF142B),
+      shape: Rectangle(aspectRatio: 0.3),
+      offset: Offset(-0.795, -0.86),
+      heightFactor: 0.27,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Rectangle(aspectRatio: 0.28),
+        heightFactor: 0.96,
+        child: ElementsProperties(
+          Color(0xffa0a0a0),
+          shape: Rectangle(),
+          child: ElementsProperties(
+            Color(0xffffffff),
+            shape: Rectangle(aspectRatio: 0.26),
+            heightFactor: 0.95,
+            child: ElementsProperties(
+              Color(0xffa0a0a0),
+              shape: Ellipse(),
+              heightFactor: 0.45,
+              child: ElementsProperties(Color(0xffffffff),
+                  shape: Ellipse(), heightFactor: 0.8),
+            ),
+          ),
+        ),
+      ),
+    ),
     CustomElementsProperties(
       Color(0xffCF142B),
       otherColors: [
