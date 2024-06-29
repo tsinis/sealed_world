@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
-import 'package:world_flags/world_flags.dart';
+import 'package:sealed_countries/sealed_countries.dart';
 
+import '../../world_flags.dart' show smallSimplifiedFlagsMap;
+import '../helpers/extensions/basic_flag_extension_copy_with.dart';
 import '../interfaces/decorated_flag_interface.dart';
 
 class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
@@ -30,6 +32,11 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   Widget build(BuildContext context) => SizedBox(
         width: width,
         height: height,
-        child: smallSimplifiedFlagsMap[country] ?? orElse,
+        child: smallSimplifiedFlagsMap[country]?.copyWith(
+              decorationPosition: decorationPosition,
+              aspectRatio: aspectRatio,
+              decoration: decoration,
+            ) ??
+            orElse,
       );
 }

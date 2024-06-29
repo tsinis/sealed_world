@@ -25,6 +25,8 @@ export "src/data/flags_map_part_2.data.dart";
 export "src/data/flags_map_part_3.data.dart";
 export "src/helpers/extensions/basic_flag_extension_copy_with.dart";
 export "src/helpers/extensions/box_decoration_extension.dart";
+export "src/helpers/extensions/world_flags_build_context_extension.dart";
+export "src/interfaces/decorated_flag_interface.dart";
 export "src/model/colors_properties.dart";
 export "src/model/elements/custom_elements_properties.dart";
 export "src/model/elements/elements_properties.dart";
