@@ -25,11 +25,7 @@ class _MainState extends State<Main> {
     setState(() => _opacity = 1 / 2);
   }
 
-  @optionalTypeArgs
-  MapEntry<WorldCountry, BasicFlag> _flagData<T extends BasicFlag>() =>
-      smallSimplifiedFlagsMap.entries
-          .where((f) => f.value is T)
-          .elementAt(_index);
+  WorldCountry get country => WorldCountry.list.elementAt(_index);
 
   String _labelBuilder() => switch (_opacity) {
         1 => "Original flag",
@@ -38,51 +34,49 @@ class _MainState extends State<Main> {
       };
 
   @override
-  Widget build(BuildContext context) {
-    final flag = _flagData<BasicFlag>();
-
-    return ColoredBox(
-      color: Theme.of(context).scaffoldBackgroundColor,
-      child: SafeArea(
-        minimum: const EdgeInsets.all(40),
-        child: Scaffold(
-          appBar: AppBar(
-            title: SelectableText(
-              "${flag.key.internationalName} (${flag.key.code}): ${_index + 1}",
-              textAlign: TextAlign.center,
+  Widget build(BuildContext context) => ColoredBox(
+        color: Theme.of(context).scaffoldBackgroundColor,
+        child: SafeArea(
+          minimum: const EdgeInsets.all(40),
+          child: Scaffold(
+            appBar: AppBar(
+              title: SelectableText(
+                "${country.internationalName} (${country.code}): ${_index + 1}",
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-          body: GestureDetector(
-            onTap: _incrementIndex,
-            child: Center(
-              child: Stack(
-                alignment: Alignment.center,
-                clipBehavior: Clip.none,
-                children: [
-                  flag.value.copyWith(
-                      // decoration: const BoxDecoration(shape: BoxShape.circle),
+            body: GestureDetector(
+              onTap: _incrementIndex,
+              child: Center(
+                child: Stack(
+                  alignment: Alignment.center,
+                  clipBehavior: Clip.none,
+                  children: [
+                    CountryFlag.simplified(
+                      country,
                       // aspectRatio: 2.5,
-                      ),
-                  Opacity(
-                    opacity: _opacity,
-                    child: Image.network(flag.key.flagPngUrl(), scale: 0.1),
-                  ),
-                ],
+                      // decoration: const BoxDecoration(shape: BoxShape.circle),
+                    ),
+                    Opacity(
+                      opacity: _opacity,
+                      child: Image.network(country.flagPngUrl(), scale: 0.1),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            bottomNavigationBar: SizedBox(
+              height: 40,
+              child: Slider(
+                value: _opacity,
+                onChanged: (newOpacity) =>
+                    setState(() => _opacity = newOpacity),
+                divisions: 10,
+                label: _labelBuilder(),
+                autofocus: true,
               ),
             ),
           ),
-          bottomNavigationBar: SizedBox(
-            height: 40,
-            child: Slider(
-              value: _opacity,
-              onChanged: (newOpacity) => setState(() => _opacity = newOpacity),
-              divisions: 10,
-              label: _labelBuilder(),
-              autofocus: true,
-            ),
-          ),
         ),
-      ),
-    );
-  }
+      );
 }
