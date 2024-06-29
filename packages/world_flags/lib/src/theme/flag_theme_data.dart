@@ -1,7 +1,10 @@
 import "package:flutter/material.dart";
 
+import "../interfaces/decorated_flag_interface.dart";
+
 @immutable
-class FlagThemeData extends ThemeExtension<FlagThemeData> {
+class FlagThemeData extends ThemeExtension<FlagThemeData>
+    implements DecoratedFlagInterface {
   const FlagThemeData({
     this.aspectRatio,
     this.decoration,

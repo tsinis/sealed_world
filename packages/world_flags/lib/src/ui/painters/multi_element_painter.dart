@@ -7,6 +7,7 @@ import "../../model/shape.dart";
 import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
 
+part "custom/custom_diagonal_painter.dart";
 part "custom/simple_bird_painter.dart";
 part "custom/union_jack_painter.dart";
 part "custom/usa_stars_painter.dart";

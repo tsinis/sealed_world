@@ -710,6 +710,29 @@ const flagGtmProperties = FlagProperties(
   aspectRatio: 8 / 5,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
+    ElementsProperties(
+      Color(0xff406325),
+      shape: Ellipse(),
+      heightFactor: 0.35,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Ellipse(),
+        offset: Offset(0, -0.25),
+        heightFactor: 0.8,
+        child: ElementsProperties(
+          Color(0xff6c301e),
+          shape: Star(points: 4, radiusFactor: 0.1),
+          offset: Offset(0, 0.35),
+          heightFactor: 1.1,
+          child: ElementsProperties(
+            Color(0xfff9f0aa),
+            shape: Rectangle(aspectRatio: 0.6),
+            offset: Offset(0, -0.35),
+            heightFactor: 0.6,
+          ),
+        ),
+      ),
+    ),
     CustomElementsProperties(
       Color(0xff406325),
       otherColors: [
@@ -841,11 +864,7 @@ const flagDnkProperties = FlagProperties(
 
 /// Flag properties of country Solomon Islands (SB).
 const flagSlbProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff0000d6), ratio: 25),
-    ColorsProperties(Color(0xffffcc00)),
-    ColorsProperties(Color(0xff006000), ratio: 25),
-  ],
+  [ColorsProperties(Color(0xff0000d6)), ColorsProperties(Color(0xff006000))],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
   elementsProperties: [
@@ -878,6 +897,11 @@ const flagSlbProperties = FlagProperties(
           ),
         ),
       ),
+    ),
+    ElementsProperties(
+      Color(0xffffcc00),
+      shape: DiagonalLine(isTopRightToBottomLeft: false),
+      heightFactor: 0.1,
     ),
   ],
   url:
@@ -1141,7 +1165,12 @@ const flagKgzProperties = FlagProperties(
               shape: Ellipse(),
               offset: Offset(0, -0.05),
               heightFactor: 0.88,
-              child: CustomElementsProperties(Color(0xffff0000)),
+              child: ElementsProperties(
+                Color(0xffff0000),
+                shape: Star(points: 4, radiusFactor: 0.1),
+                offset: Offset(0, -0.3),
+                heightFactor: 0.9,
+              ),
             ),
           ),
         ),
@@ -1591,6 +1620,7 @@ const flagBlrProperties = FlagProperties(
     ElementsProperties(
       Color(0xffffffff),
       shape: Rectangle(),
+      offset: Offset(-0.99, 0),
       widthFactor: 2 / 18,
       child: CustomElementsProperties(
         Color(0xffD22730),
@@ -1610,6 +1640,8 @@ const flagTtoProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [Color(0xff000000)],
+      heightFactor: 0.3,
+      widthFactor: 0.05,
     ),
   ],
   url:

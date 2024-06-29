@@ -1,6 +1,6 @@
 version: 0.0.0
 name: world_flags
-description: Country flags made with Flutter - every flag is a Widget.
+description: Country flags made with Flutter - every flag is a Widget, without any assets.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_flags
 issue_tracker: https://github.com/tsinis/sealed_world/issues/

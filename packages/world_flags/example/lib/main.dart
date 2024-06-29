@@ -4,8 +4,11 @@ import "package:world_flags/world_flags.dart";
 void main() => runApp(
       MaterialApp(
         home: const Main(),
-        theme: ThemeData.light(useMaterial3: true),
-        darkTheme: ThemeData.dark(useMaterial3: true),
+        theme: ThemeData(
+          extensions: const [
+            // FlagThemeData(decoration: BoxDecoration(shape: BoxShape.circle)),
+          ],
+        ),
       ),
     );
 
@@ -17,72 +20,61 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  int _index = 0;
-  double _opacity = 1 / 2;
+  int index = 0;
+  double opacity = 1 / 2;
 
-  void _incrementIndex() {
-    _index = _index >= smallSimplifiedFlagsMap.length ? 0 : _index + 1;
-    setState(() => _opacity = 1 / 2);
+  void incrementIndex() {
+    index = index >= smallSimplifiedFlagsMap.length ? 0 : index + 1;
+    setState(() => opacity = 1 / 2);
   }
 
-  @optionalTypeArgs
-  MapEntry<WorldCountry, BasicFlag> _flagData<T extends BasicFlag>() =>
-      smallSimplifiedFlagsMap.entries
-          .where((f) => f.value is T)
-          .elementAt(_index);
+  WorldCountry get country => WorldCountry.list.elementAt(index);
 
-  String _labelBuilder() => switch (_opacity) {
+  String labelBuilder() => switch (opacity) {
         1 => "Original flag",
         0 => "Flag from the package",
-        _ => " ${(_opacity * 100).round()}% opacity ",
+        _ => " ${(opacity * 100).round()}% opacity ",
       };
 
   @override
-  Widget build(BuildContext context) {
-    final flag = _flagData<BasicFlag>();
-
-    return ColoredBox(
-      color: Theme.of(context).scaffoldBackgroundColor,
-      child: SafeArea(
-        minimum: const EdgeInsets.all(40),
-        child: Scaffold(
-          appBar: AppBar(
-            title: SelectableText(
-              "${flag.key.internationalName} (${flag.key.code}): ${_index + 1}",
-              textAlign: TextAlign.center,
+  Widget build(BuildContext context) => ColoredBox(
+        color: Theme.of(context).scaffoldBackgroundColor,
+        child: SafeArea(
+          minimum: const EdgeInsets.all(40),
+          child: Scaffold(
+            appBar: AppBar(
+              title: SelectableText(
+                "${country.internationalName} (${country.code}): ${index + 1}",
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-          body: GestureDetector(
-            onTap: _incrementIndex,
-            child: Center(
-              child: Stack(
-                alignment: Alignment.center,
-                clipBehavior: Clip.none,
-                children: [
-                  /// + decoration: const BoxDecoration(shape: BoxShape.circle),
-                  flag.value.copyWith(
-                    aspectRatio: 3 / 2,
-                  ),
-                  Opacity(
-                    opacity: _opacity,
-                    child: Image.network(flag.key.flagPngUrl(), scale: 0.1),
-                  ),
-                ],
+            body: GestureDetector(
+              onTap: incrementIndex,
+              child: Center(
+                child: Stack(
+                  alignment: Alignment.center,
+                  clipBehavior: Clip.none,
+                  children: [
+                    CountryFlag.simplified(country),
+                    Opacity(
+                      opacity: opacity,
+                      child: Image.network(country.flagPngUrl(), scale: 0.1),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            bottomNavigationBar: SizedBox(
+              height: 40,
+              child: Slider(
+                value: opacity,
+                onChanged: (newOpacity) => setState(() => opacity = newOpacity),
+                divisions: 10,
+                label: labelBuilder(),
+                autofocus: true,
               ),
             ),
           ),
-          bottomNavigationBar: SizedBox(
-            height: 40,
-            child: Slider(
-              value: _opacity,
-              onChanged: (newOpacity) => setState(() => _opacity = newOpacity),
-              divisions: 10,
-              label: _labelBuilder(),
-              autofocus: true,
-            ),
-          ),
         ),
-      ),
-    );
-  }
+      );
 }
