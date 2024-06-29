@@ -2027,8 +2027,11 @@ const flagMltProperties = FlagProperties(
               Color(0xffa0a0a0),
               shape: Ellipse(),
               heightFactor: 0.45,
-              child: ElementsProperties(Color(0xffffffff),
-                  shape: Ellipse(), heightFactor: 0.8),
+              child: ElementsProperties(
+                Color(0xffffffff),
+                shape: Ellipse(),
+                heightFactor: 0.8,
+              ),
             ),
           ),
         ),
