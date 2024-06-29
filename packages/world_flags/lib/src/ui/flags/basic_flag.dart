@@ -1,6 +1,7 @@
 import "package:flutter/widgets.dart";
 
 import "../../helpers/extensions/box_decoration_extension.dart";
+import "../../helpers/extensions/world_flags_build_context_extension.dart";
 import "../../interfaces/decorated_flag_interface.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
@@ -46,15 +47,19 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
 
   @override
   Widget build(BuildContext context) {
-    final boxDecoration = decoration;
+    final theme = context.flagTheme;
+    final boxDecoration = decoration ?? theme?.decoration;
 
     return Padding(
-      padding: padding ?? EdgeInsets.zero,
+      padding: padding ?? theme?.padding ?? EdgeInsets.zero,
       child: DecoratedBox(
         decoration: boxDecoration ?? const BoxDecoration(),
-        position: decorationPosition ?? DecorationPosition.foreground,
+        position: decorationPosition ??
+            theme?.decorationPosition ??
+            DecorationPosition.foreground,
         child: AspectRatio(
-          aspectRatio: _boxRatio(boxDecoration, aspectRatio),
+          aspectRatio:
+              _boxRatio(boxDecoration, aspectRatio ?? theme?.aspectRatio),
           child: CustomPaint(
             painter: backgroundPainter ??
                 StripesPainter(properties, boxDecoration, _elementsPainter),

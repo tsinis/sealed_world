@@ -4,8 +4,11 @@ import "package:world_flags/world_flags.dart";
 void main() => runApp(
       MaterialApp(
         home: const Main(),
-        theme: ThemeData.light(useMaterial3: true),
-        darkTheme: ThemeData.dark(useMaterial3: true),
+        theme: ThemeData(
+          extensions: const [
+            // FlagThemeData(decoration: BoxDecoration(shape: BoxShape.circle)),
+          ],
+        ),
       ),
     );
 
@@ -17,20 +20,20 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  int _index = 0;
-  double _opacity = 1 / 2;
+  int index = 0;
+  double opacity = 1 / 2;
 
-  void _incrementIndex() {
-    _index = _index >= smallSimplifiedFlagsMap.length ? 0 : _index + 1;
-    setState(() => _opacity = 1 / 2);
+  void incrementIndex() {
+    index = index >= smallSimplifiedFlagsMap.length ? 0 : index + 1;
+    setState(() => opacity = 1 / 2);
   }
 
-  WorldCountry get country => WorldCountry.list.elementAt(_index);
+  WorldCountry get country => WorldCountry.list.elementAt(index);
 
-  String _labelBuilder() => switch (_opacity) {
+  String labelBuilder() => switch (opacity) {
         1 => "Original flag",
         0 => "Flag from the package",
-        _ => " ${(_opacity * 100).round()}% opacity ",
+        _ => " ${(opacity * 100).round()}% opacity ",
       };
 
   @override
@@ -41,24 +44,20 @@ class _MainState extends State<Main> {
           child: Scaffold(
             appBar: AppBar(
               title: SelectableText(
-                "${country.internationalName} (${country.code}): ${_index + 1}",
+                "${country.internationalName} (${country.code}): ${index + 1}",
                 textAlign: TextAlign.center,
               ),
             ),
             body: GestureDetector(
-              onTap: _incrementIndex,
+              onTap: incrementIndex,
               child: Center(
                 child: Stack(
                   alignment: Alignment.center,
                   clipBehavior: Clip.none,
                   children: [
-                    CountryFlag.simplified(
-                      country,
-                      // aspectRatio: 2.5,
-                      // decoration: const BoxDecoration(shape: BoxShape.circle),
-                    ),
+                    CountryFlag.simplified(country),
                     Opacity(
-                      opacity: _opacity,
+                      opacity: opacity,
                       child: Image.network(country.flagPngUrl(), scale: 0.1),
                     ),
                   ],
@@ -68,11 +67,10 @@ class _MainState extends State<Main> {
             bottomNavigationBar: SizedBox(
               height: 40,
               child: Slider(
-                value: _opacity,
-                onChanged: (newOpacity) =>
-                    setState(() => _opacity = newOpacity),
+                value: opacity,
+                onChanged: (newOpacity) => setState(() => opacity = newOpacity),
                 divisions: 10,
-                label: _labelBuilder(),
+                label: labelBuilder(),
                 autofocus: true,
               ),
             ),
