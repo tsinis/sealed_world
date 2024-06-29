@@ -1,11 +1,12 @@
 import "package:flutter/widgets.dart";
 
 import "../../helpers/extensions/box_decoration_extension.dart";
+import "../../interfaces/decorated_flag_interface.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../painters/basic/stripes_painter.dart";
 
-class BasicFlag extends StatelessWidget {
+class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
   const BasicFlag(
     this.properties, {
     this.aspectRatio,
