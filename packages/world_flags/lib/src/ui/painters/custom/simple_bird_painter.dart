@@ -51,7 +51,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
 
     final topColor = otherColors?.elementAtOrNull(1);
     final bottomColor = otherColors?.elementAtOrNull(2);
-    if (topColor == null || bottomColor == null) return null;
+    if (topColor == null || bottomColor == null) return parent;
 
     final birdSize = path.getBounds();
     final squareSize = birdSize.height / 3;

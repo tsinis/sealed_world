@@ -7,7 +7,6 @@ final class TtoLinePainter extends CustomElementsPainter {
   TtoLinePainter(super.properties, super.aspectRatio);
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

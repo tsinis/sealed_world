@@ -21,7 +21,7 @@ final class UsaStarsPainter extends MultiElementPainter {
   ]) {
     final child = parent?.child;
     final color = child?.mainColor;
-    if (parent == null || color == null) return null;
+    if (parent == null || color == null) return parent;
     final paint = Paint()..color = color;
     final parentSize = parent.bounds.size;
     final rectSize = Size(parentSize.width, parentSize.height);
@@ -39,7 +39,7 @@ final class UsaStarsPainter extends MultiElementPainter {
       }
     }
 
-    return null;
+    return parent;
   }
 
   Path _drawStar(Offset offset, double outerRadius) {
