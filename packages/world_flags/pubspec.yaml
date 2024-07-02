@@ -30,5 +30,5 @@ dev_dependencies:
   lints: ^4.0.0 # From Google
 
 screenshots:
-  - description: "Example"
+  - description: "Example of usage"
     path: doc/example.webp
