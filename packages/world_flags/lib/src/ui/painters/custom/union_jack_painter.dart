@@ -1,10 +1,26 @@
 part of "../multi_element_painter.dart";
 
-final class UnionJackPainter extends MultiElementPainter {
-  const UnionJackPainter.half(super.properties, super.aspectRatio)
-      : _isFull = false;
-  const UnionJackPainter.full(super.properties, super.aspectRatio)
-      : _isFull = true;
+final class UnionJackPainter extends SimpleShieldPainter {
+  const UnionJackPainter.half(
+    List<ElementsProperties>? properties,
+    double aspectRatio,
+  )   : _isFull = false,
+        super.outlinedWithoutDividers(properties, aspectRatio);
+  const UnionJackPainter.halfWithoutOutline(
+    List<ElementsProperties>? properties,
+    double aspectRatio,
+  )   : _isFull = false,
+        super.withoutDividers(properties, aspectRatio);
+  const UnionJackPainter.halfWithDividers(
+    List<ElementsProperties>? properties,
+    double aspectRatio,
+  )   : _isFull = false,
+        super.withDividers(properties, aspectRatio);
+  const UnionJackPainter.full(
+    List<ElementsProperties>? properties,
+    double aspectRatio,
+  )   : _isFull = true,
+        super.withoutDividers(properties, aspectRatio);
 
   final bool _isFull;
 

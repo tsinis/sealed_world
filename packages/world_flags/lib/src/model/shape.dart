@@ -20,10 +20,11 @@ class Rectangle implements Shape {
 }
 
 class Star implements Shape {
-  const Star({this.points = 5, this.radiusFactor = 0.38});
+  const Star({this.points = 5, this.radiusFactor = 0.38, this.isFilled = true});
 
   final int points;
   final double radiusFactor;
+  final bool isFilled;
 }
 
 class Ellipse implements Shape {

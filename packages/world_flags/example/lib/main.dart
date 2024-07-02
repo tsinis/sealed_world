@@ -5,8 +5,13 @@ void main() => runApp(
       MaterialApp(
         home: const Main(),
         theme: ThemeData(
+          /// Provide flag decorations globally.
           extensions: const [
-            // FlagThemeData(decoration: BoxDecoration(shape: BoxShape.circle)),
+            FlagThemeData(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(2)),
+              ),
+            ),
           ],
         ),
       ),
@@ -20,58 +25,55 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  int index = 0;
-  double opacity = 1 / 2;
+  static const height = 50.0;
 
-  void incrementIndex() {
-    index = index >= smallSimplifiedFlagsMap.length ? 0 : index + 1;
-    setState(() => opacity = 1 / 2);
-  }
+  final _aspectRatio = ValueNotifier<double>(1);
 
-  WorldCountry get country => WorldCountry.list.elementAt(index);
-
-  String labelBuilder() => switch (opacity) {
-        1 => "Original flag",
-        0 => "Flag from the package",
-        _ => " ${(opacity * 100).round()}% opacity ",
-      };
+  late final countries = List<WorldCountry>.unmodifiable(
+    WorldCountry.list.where((country) => !notReadyYet.contains(country)),
+  );
 
   @override
   Widget build(BuildContext context) => ColoredBox(
         color: Theme.of(context).scaffoldBackgroundColor,
         child: SafeArea(
-          minimum: const EdgeInsets.all(40),
+          minimum: const EdgeInsets.all(height / 2),
           child: Scaffold(
-            appBar: AppBar(
-              title: SelectableText(
-                "${country.internationalName} (${country.code}): ${index + 1}",
-                textAlign: TextAlign.center,
-              ),
-            ),
-            body: GestureDetector(
-              onTap: incrementIndex,
-              child: Center(
-                child: Stack(
-                  alignment: Alignment.center,
-                  clipBehavior: Clip.none,
-                  children: [
-                    CountryFlag.simplified(country),
-                    Opacity(
-                      opacity: opacity,
-                      child: Image.network(country.flagPngUrl(), scale: 0.1),
+            body: LayoutBuilder(
+              builder: (_, constraints) => ValueListenableBuilder<double>(
+                valueListenable: _aspectRatio,
+                builder: (_, aspectRatio, __) => Scaffold(
+                  body: ListView.builder(
+                    itemBuilder: (_, i) {
+                      final country = countries[i];
+
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: SizedBox(
+                          height: height / 3,
+                          child: ListTile(
+                            title: Text(country.internationalName),
+                            trailing: CountryFlag.simplified(
+                              country,
+                              aspectRatio: aspectRatio,
+                            ),
+                            dense: true,
+                          ),
+                        ),
+                      );
+                    },
+                    itemCount: countries.length,
+                  ),
+                  bottomNavigationBar: SizedBox(
+                    height: height,
+                    child: Slider(
+                      value: aspectRatio,
+                      onChanged: (newRatio) => _aspectRatio.value = newRatio,
+                      min: 1,
+                      max: 2.2,
                     ),
-                  ],
+                  ),
                 ),
-              ),
-            ),
-            bottomNavigationBar: SizedBox(
-              height: 40,
-              child: Slider(
-                value: opacity,
-                onChanged: (newOpacity) => setState(() => opacity = newOpacity),
-                divisions: 10,
-                label: labelBuilder(),
-                autofocus: true,
               ),
             ),
           ),

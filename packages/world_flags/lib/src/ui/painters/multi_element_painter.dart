@@ -1,6 +1,8 @@
 import "dart:math" hide Rectangle;
 import "dart:ui";
 
+import "package:flutter/foundation.dart";
+
 import "../../model/elements/custom_elements_properties.dart";
 import "../../model/elements/elements_properties.dart";
 import "../../model/shape.dart";
@@ -8,7 +10,10 @@ import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
 
 part "custom/custom_diagonal_painter.dart";
+part "custom/half_ellipse_painter.dart";
+part "custom/rhombus_painter.dart";
 part "custom/simple_bird_painter.dart";
+part "custom/simple_shield_painter.dart";
 part "custom/union_jack_painter.dart";
 part "custom/usa_stars_painter.dart";
 
