@@ -26,9 +26,13 @@ final class StarPainter extends ElementsPainter {
           radius * radiusFactor * sin(i * radiansPerPoint + startRadians);
       i == 0 ? path.moveTo(x, y) : path.lineTo(x, y);
     }
-
+    var paint = Paint()..color = property.mainColor;
+    if (!star.isFilled) {
+      paint.style = PaintingStyle.stroke;
+      paint.strokeWidth = radius / 8;
+    }
     if (property.angle == null) {
-      canvas.drawPath(path..close(), colorPaint);
+      canvas.drawPath(path..close(), paint);
     } else {
       final angleInRadians = (property.angle ?? 0) * radiansMultiplier;
       canvas
@@ -36,7 +40,7 @@ final class StarPainter extends ElementsPainter {
         ..translate(center.dx, center.dy)
         ..rotate(angleInRadians)
         ..translate(-center.dx, -center.dy)
-        ..drawPath(path..close(), colorPaint)
+        ..drawPath(path..close(), paint)
         ..restore();
     }
 

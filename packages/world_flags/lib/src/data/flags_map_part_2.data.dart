@@ -582,7 +582,24 @@ const flagCxrProperties = FlagProperties(
         ),
       ),
     ),
-    ElementsProperties(Color(0xffffc639), shape: Ellipse(), heightFactor: 0.36),
+    ElementsProperties(
+      Color(0xffffc639),
+      shape: Ellipse(),
+      heightFactor: 0.36,
+      child: ElementsProperties(
+        Color(0xff1c8a42),
+        shape: Star(points: 3, radiusFactor: 0.3),
+        heightFactor: 0.8,
+        angle: 50,
+      ),
+    ),
+    ElementsProperties(
+      Color(0xffffc639),
+      shape: Star(points: 3, radiusFactor: 0.3),
+      offset: Offset(0.66, -0.3),
+      heightFactor: 0.5,
+      angle: -20,
+    ),
     CustomElementsProperties(
       Color(0xff1c8a42),
       otherColors: [Color(0xffffc639)],
@@ -694,6 +711,12 @@ const flagZmbProperties = FlagProperties(
           offset: Offset(1, 0),
         ),
       ),
+    ),
+    ElementsProperties(
+      Color(0xffFCAD56),
+      shape: Star(points: 2, radiusFactor: 0.2),
+      offset: Offset(0.65, -0.7),
+      heightFactor: 0.4,
     ),
     CustomElementsProperties(
       Color(0xffFCAD56),
@@ -809,9 +832,19 @@ const flagCypProperties = FlagProperties(
 
 /// Flag properties of country Afghanistan (AF).
 const flagAfgProperties = FlagProperties(
-  [ColorsProperties(Color(0xffffffff))],
-  aspectRatio: 2,
+  [
+    ColorsProperties(Color(0xff000000)),
+    ColorsProperties(Color(0xffD32011)),
+    ColorsProperties(Color(0xff007A36)),
+  ],
+  // TODO! Change to the new look with aspectRatio: 2.
+  stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
+    ElementsProperties(
+      Color.fromARGB(100, 255, 255, 255),
+      shape: Ellipse(),
+      heightFactor: 0.8,
+    ),
     CustomElementsProperties(Color(0xff000000), heightFactor: 1 / 2),
   ],
   url: "https://www.vexilla-mundi.com/afghanistan/afghanistan_taliban_flag.png",
@@ -1051,11 +1084,24 @@ const flagCckProperties = FlagProperties(
       shape: Ellipse(),
       offset: Offset(-0.658, -0.418),
       heightFactor: 0.435,
-      child: CustomElementsProperties(
+      child: ElementsProperties(
         Color(0xff802000),
-        otherColors: [Color(0xff008000)],
-        heightFactor: 0.8,
+        shape: Rectangle(aspectRatio: 0.15),
+        offset: Offset(0.1, 0.2),
+        heightFactor: 0.6,
+        child: ElementsProperties(
+          Color(0xff008000),
+          shape: Star(points: 3),
+          offset: Offset(0, -0.4),
+          heightFactor: 1.1,
+          angle: 20,
+        ),
       ),
+    ),
+    CustomElementsProperties(
+      Color(0xff802000),
+      otherColors: [Color(0xff008000)],
+      heightFactor: 0.8,
     ),
   ],
   url: "https://www.vexilla-mundi.com/cocos_islands/cocos_islands_sheet.png",
@@ -1125,6 +1171,12 @@ const flagTjkProperties = FlagProperties(
         ),
       ),
     ),
+    ElementsProperties(
+      Color(0xffF8C400),
+      shape: Star(points: 3, radiusFactor: 0.25),
+      offset: Offset(0, 0.2),
+      heightFactor: 0.3,
+    ),
     CustomElementsProperties(Color(0xffF8C400), heightFactor: 0.3),
   ],
   url: "https://www.vexilla-mundi.com/tajikistan/tajikistan_sheet.png",
@@ -1163,6 +1215,23 @@ const flagVutProperties = FlagProperties(
         offset: Offset(-1, -0.85),
         heightFactor: 0.85,
         widthFactor: 0.85,
+        child: ElementsProperties(
+          Color(0xfffdce12),
+          shape: Ellipse(),
+          offset: Offset(-0.4, 0),
+          heightFactor: 12 / 36,
+          child: ElementsProperties(
+            Color(0xff000000),
+            shape: Ellipse(),
+            offset: Offset(0, -0.2),
+            heightFactor: 0.6,
+            child: ElementsProperties(
+              Color(0xfffdce12),
+              shape: Star(points: 4, radiusFactor: 0.3),
+              heightFactor: 0.666,
+            ),
+          ),
+        ),
       ),
     ),
     CustomElementsProperties(
@@ -1904,20 +1973,20 @@ const flagBraProperties = FlagProperties(
   [ColorsProperties(Color(0xff229e45))],
   aspectRatio: 10 / 7,
   elementsProperties: [
-    ElementsProperties(
+    CustomElementsProperties(
       Color(0xfff8e509),
-      shape: Rectangle(),
       heightFactor: 530 / 700,
+      widthFactor: 0.8,
       angle: 30,
-      child: ElementsProperties(
-        Color(0xff2b49a3),
-        shape: Ellipse(),
-        heightFactor: 350 / 530,
-        child: CustomElementsProperties(
-          Color(0xffffffff),
-          otherColors: [Color(0xff229e45)],
-          heightFactor: 1 / 2,
-        ),
+    ),
+    ElementsProperties(
+      Color(0xff2b49a3),
+      shape: Ellipse(),
+      heightFactor: 35 / 530,
+      child: CustomElementsProperties(
+        Color(0xffffffff),
+        otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
+        heightFactor: 1 / 2,
       ),
     ),
   ],

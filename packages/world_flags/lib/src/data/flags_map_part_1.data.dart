@@ -782,10 +782,17 @@ const flagKwtProperties = FlagProperties(
   ],
   aspectRatio: 2,
   elementsProperties: [
-    CustomElementsProperties(
+    ElementsProperties(
       Color(0xff000000),
-      offset: Offset(-1, 0),
-      widthFactor: 3 / 12,
+      shape: Triangle(),
+      offset: Offset(-1, -1),
+      widthFactor: 0.38,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Rectangle(aspectRatio: 1),
+        offset: Offset(1.333, 0),
+        heightFactor: 1 / 3,
+      ),
     ),
   ],
   url:
@@ -820,6 +827,16 @@ const flagGgyProperties = FlagProperties(
     ElementsProperties(
       Color(0xffe8112d),
       shape: Rectangle(aspectRatio: 10 / 40),
+      child: ElementsProperties(
+        Color(0xfff9dd16),
+        shape: Rectangle(aspectRatio: 0.1),
+        heightFactor: 0.75,
+      ),
+    ),
+    ElementsProperties(
+      Color(0xfff9dd16),
+      shape: Rectangle(aspectRatio: 9),
+      heightFactor: 0.08,
     ),
     CustomElementsProperties(Color(0xfff9dd16), heightFactor: 0.8),
   ],
@@ -1505,7 +1522,25 @@ const flagLbrProperties = FlagProperties(
 const flagMarProperties = FlagProperties(
   [ColorsProperties(Color(0xffc1272d))],
   elementsProperties: [
-    CustomElementsProperties(Color(0xff006233), heightFactor: 1.9 / 4),
+    ElementsProperties(
+      Color(0xff006233),
+      shape: Star(isFilled: false),
+      heightFactor: 0.45,
+      child: ElementsProperties(
+        Color(0xff006233),
+        shape: Star(radiusFactor: 0.8),
+        offset: Offset(0, 0.1),
+        heightFactor: 0.5,
+        angle: 180,
+        child: ElementsProperties(
+          Color(0xffc1272d),
+          shape: Star(radiusFactor: 0.8),
+          offset: Offset(0, 0.1),
+          heightFactor: 0.8,
+          angle: 180,
+        ),
+      ),
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Morocco_(construction_sheet).svg",
@@ -1689,16 +1724,22 @@ const flagUgaProperties = FlagProperties(
       Color(0xffffffff),
       shape: Ellipse(),
       heightFactor: 0.31,
-      child: CustomElementsProperties(
+      child: ElementsProperties(
         Color(0xff000000),
-        otherColors: [
-          Color(0xffFCDC04),
-          Color(0xffD90000),
-          Color(0xffffffff),
-          Color(0xff9ca69c),
-        ],
-        heightFactor: 0.96,
+        shape: Star(points: 3, radiusFactor: 0.2),
+        heightFactor: 0.9,
+        angle: 90,
       ),
+    ),
+    CustomElementsProperties(
+      Color(0xff000000),
+      otherColors: [
+        Color(0xffFCDC04),
+        Color(0xffD90000),
+        Color(0xffffffff),
+        Color(0xff9ca69c),
+      ],
+      heightFactor: 0.96,
     ),
   ],
   url: "https://www.vexilla-mundi.com/uganda/uganda_sheet.png",
@@ -1905,7 +1946,10 @@ const flagLsoProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xff000000),
       otherColors: [Color(0xffffffff)],
-      heightFactor: 92 / 250,
+      offset: Offset(0.4, 0.3),
+      heightFactor: 0.3,
+      widthFactor: 0.2,
+      angle: 270,
     ),
   ],
   url:

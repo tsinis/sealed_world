@@ -146,6 +146,18 @@ const flagGrdProperties = FlagProperties(
         heightFactor: 0.9,
       ),
     ),
+    ElementsProperties(
+      Color(0xffFFD100),
+      shape: Ellipse(),
+      offset: Offset(-0.7, 0.02),
+      heightFactor: 0.13,
+      child: ElementsProperties(
+        Color(0xffEF3340),
+        shape: Ellipse(),
+        offset: Offset(0.4, 0.6),
+        heightFactor: 0.5,
+      ),
+    ),
     CustomElementsProperties(
       Color(0xffEF3340),
       otherColors: [Color(0xffFFD100)],
@@ -400,8 +412,9 @@ const flagLieProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffd83d),
       otherColors: [Color(0xff000000)],
-      offset: Offset(-0.6, -0.4),
-      heightFactor: 3 / 12,
+      offset: Offset(-0.65, -0.6),
+      heightFactor: 2 / 12,
+      widthFactor: 0.15,
     ),
   ],
   url:
@@ -461,6 +474,23 @@ const flagBrbProperties = FlagProperties(
   ],
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
+    ElementsProperties(
+      Color(0xff000000),
+      shape: Rectangle(aspectRatio: 1),
+      offset: Offset(0, -0.1),
+      heightFactor: 0.3,
+      child: ElementsProperties(
+        Color(0xffffc726),
+        shape: Rectangle(aspectRatio: 0.8),
+        offset: Offset(0, -1),
+        heightFactor: 0.8,
+      ),
+    ),
+    ElementsProperties(
+      Color(0xff000000),
+      shape: Rectangle(aspectRatio: 0.15),
+      heightFactor: 0.45,
+    ),
     CustomElementsProperties(Color(0xff000000), heightFactor: 1 / 2),
   ],
   url:
@@ -824,6 +854,47 @@ const flagGibProperties = FlagProperties(
   ],
   aspectRatio: 2,
   elementsProperties: [
+    ElementsProperties(
+      Color(0xfff8d80e),
+      shape: Rectangle(aspectRatio: 0.1),
+      offset: Offset(0, 0.8),
+      heightFactor: 30 / 114,
+    ),
+    ElementsProperties(
+      Color(0xffda000c),
+      shape: Rectangle(aspectRatio: 0.8),
+      offset: Offset(0, -0.5),
+      heightFactor: 60 / 114,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Rectangle(aspectRatio: 1),
+        offset: Offset(0, -1),
+        heightFactor: 0.4,
+        child: ElementsProperties(
+          Color(0xffda000c),
+          shape: Rectangle(aspectRatio: 0.6),
+        ),
+      ),
+    ),
+    ElementsProperties(
+      Color(0xffda000c),
+      shape: Rectangle(aspectRatio: 2.1),
+      heightFactor: 30 / 114,
+      child: ElementsProperties(
+        Color(0xff000000),
+        shape: Rectangle(aspectRatio: 4),
+        offset: Offset(0, 0.5),
+        heightFactor: 0.4,
+        child: ElementsProperties(
+          Color(0xffda000c),
+          shape: Rectangle(aspectRatio: 2.5),
+          child: ElementsProperties(
+            Color(0xff000000),
+            shape: Rectangle(aspectRatio: 1),
+          ),
+        ),
+      ),
+    ),
     CustomElementsProperties(
       Color(0xffda000c),
       otherColors: [
@@ -882,6 +953,22 @@ const flagKhmProperties = FlagProperties(
   ],
   aspectRatio: 25 / 16,
   elementsProperties: [
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(aspectRatio: 1.5),
+      offset: Offset(0, 0.1),
+      heightFactor: 40 / 114,
+      child: ElementsProperties(
+        Color(0xffe00025),
+        shape: Rectangle(aspectRatio: 2.2),
+        offset: Offset(0, -1),
+        heightFactor: 0.4,
+        child: ElementsProperties(
+          Color(0xffffffff),
+          shape: Rectangle(aspectRatio: 0.6),
+        ),
+      ),
+    ),
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [Color(0xff000000)],
@@ -914,7 +1001,25 @@ const flagEthProperties = FlagProperties(
           shape: Ellipse(),
           offset: Offset(0, 0.1),
           heightFactor: 0.5,
-          child: CustomElementsProperties(Color(0xffffc621), heightFactor: 0.8),
+          child: ElementsProperties(
+            Color(0xffffc621),
+            shape: Star(isFilled: false),
+            heightFactor: 2,
+            child: ElementsProperties(
+              Color(0xffffc621),
+              shape: Star(radiusFactor: 0.8),
+              offset: Offset(0, 0.1),
+              heightFactor: 0.5,
+              angle: 180,
+              child: ElementsProperties(
+                Color(0xff006bc6),
+                shape: Star(radiusFactor: 0.8),
+                offset: Offset(0, 0.1),
+                heightFactor: 0.8,
+                angle: 180,
+              ),
+            ),
+          ),
         ),
       ),
     ),
@@ -1417,6 +1522,13 @@ const flagPngProperties = FlagProperties(
         ),
       ),
     ),
+    ElementsProperties(
+      Color(0xffffcc00),
+      shape: Star(points: 4),
+      offset: Offset(0.4, -0.3),
+      heightFactor: 64 / 144,
+      angle: 40,
+    ),
     CustomElementsProperties(
       Color(0xffffcc00),
       offset: Offset(0.5, 0.5),
@@ -1688,11 +1800,27 @@ const flagEriProperties = FlagProperties(
       shape: Triangle(),
       offset: Offset(-1, -1),
       widthFactor: 1,
-      child: CustomElementsProperties(
+      child: ElementsProperties(
         Color(0xffFBC724),
+        shape: Ellipse(),
         offset: Offset(-0.5, 0),
-        heightFactor: 1 / 2,
+        heightFactor: 0.48,
+        child: ElementsProperties(
+          Color(0xffEB0433),
+          shape: Ellipse(),
+          offset: Offset(0, -0.1),
+          heightFactor: 0.7,
+          child: ElementsProperties(
+            Color(0xffFBC724),
+            shape: Rectangle(aspectRatio: 0.15),
+          ),
+        ),
       ),
+    ),
+    CustomElementsProperties(
+      Color(0xffFBC724),
+      offset: Offset(-0.5, 0),
+      heightFactor: 1 / 2,
     ),
   ],
   url:
@@ -1969,18 +2097,25 @@ const flagHtiProperties = FlagProperties(
       shape: Rectangle(),
       heightFactor: 90 / 348,
       widthFactor: 110 / 570,
-      child: CustomElementsProperties(
+      child: ElementsProperties(
         Color(0xff00209f),
-        otherColors: [
-          Color(0xffd21034),
-          Color(0xfff1b517),
-          Color(0xffffffff),
-          Color(0xff016a16),
-          Color(0xff0a328c),
-          Color(0xffd20014),
-          Color(0xff000000),
-        ],
+        shape: Rectangle(),
+        offset: Offset(0, 1),
+        heightFactor: 0.5,
+        widthFactor: 0.8,
       ),
+    ),
+    CustomElementsProperties(
+      Color(0xff00209f),
+      otherColors: [
+        Color(0xffd21034),
+        Color(0xfff1b517),
+        Color(0xffffffff),
+        Color(0xff016a16),
+        Color(0xff0a328c),
+        Color(0xffd20014),
+        Color(0xff000000),
+      ],
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Haiti_(construction).jpg",

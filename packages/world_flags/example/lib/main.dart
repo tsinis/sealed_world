@@ -6,7 +6,9 @@ void main() => runApp(
         home: const Main(),
         theme: ThemeData(
           extensions: const [
-            // FlagThemeData(decoration: BoxDecoration(shape: BoxShape.circle)),
+            FlagThemeData(
+                // decoration: BoxDecoration(shape: BoxShape.circle),
+                ),
           ],
         ),
       ),
@@ -20,6 +22,10 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
+  late final countries = List<WorldCountry>.unmodifiable(
+    WorldCountry.list.where((country) => !notReadyYet.contains(country)),
+  );
+
   int index = 0;
   double opacity = 1 / 2;
 
@@ -28,7 +34,7 @@ class _MainState extends State<Main> {
     setState(() => opacity = 1 / 2);
   }
 
-  WorldCountry get country => WorldCountry.list.elementAt(index);
+  WorldCountry get country => countries.elementAt(index);
 
   String labelBuilder() => switch (opacity) {
         1 => "Original flag",
