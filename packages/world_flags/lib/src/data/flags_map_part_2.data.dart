@@ -113,11 +113,16 @@ const flagAndProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffc6aa76),
       otherColors: [
+        Color(0xffc6aa76),
+        Color(0xffd50032),
         Color(0xfffedd00),
         Color(0xffd50032),
+        Color(0xfffedd00),
         Color(0xff10069f),
+        Color(0xffc6aa76),
       ],
-      heightFactor: 66 / 140,
+      heightFactor: 0.4,
+      widthFactor: 0.25,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Andorra_(construction).svg",
@@ -501,6 +506,9 @@ const flagMsrProperties = FlagProperties(
       Color(0xff00a2bd),
       otherColors: [
         Color(0xffffffff),
+        Color(0xff00a2bd),
+        Color(0xff00a2bd),
+        Color(0xffa53d08),
         Color(0xffa53d08),
         Color(0xffff9a08),
         Color(0xff008021),
@@ -510,6 +518,9 @@ const flagMsrProperties = FlagProperties(
         Color(0xff000000),
         Color(0xffffdf00),
       ],
+      offset: Offset(0.5, 0),
+      heightFactor: 0.5,
+      widthFactor: 0.2,
     ),
   ],
   url: "https://www.vexilla-mundi.com/montserrat/montserrat_sheet.png",
@@ -1873,14 +1884,16 @@ const flagAiaProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [
+        Color(0xffffffff),
         Color(0xffff9900),
-        Color(0xff012169),
         Color(0xffffffff),
         Color(0xff99ccff),
+        Color(0xff99ccff),
         Color(0xfffdc301),
-        Color(0xffc8102e),
       ],
-      heightFactor: 1 / 2,
+      offset: Offset(0.5, 0),
+      heightFactor: 0.4,
+      widthFactor: 0.15,
     ),
   ],
   url: "https://www.vexilla-mundi.com/anguilla/anguilla_sheet.png",
@@ -2081,7 +2094,18 @@ const flagMngProperties = FlagProperties(
 const flagNiuProperties = FlagProperties(
   [ColorsProperties(Color(0xfffedd00))],
   aspectRatio: 2,
-  elementsProperties: [CustomElementsProperties(Color(0xfffedd00))],
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xfffedd00),
+      otherColors: [
+        Color(0xfffedd00),
+        Color(0xfffedd00),
+        Color(0xfffedd00),
+        Color(0xfffedd00),
+        Color(0xfffedd00),
+      ],
+    ),
+  ],
   url: "https://www.vexilla-mundi.com/niue/niue_sheet.png",
 );
 
@@ -2218,10 +2242,18 @@ const flagCriProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
-      otherColors: [Color(0xff002b7f)],
+      otherColors: [
+        Color(0xff002b7f),
+        Color(0xff74acdf),
+        Color(0xff74acdf),
+        Color(0xff001489),
+        Color(0xff001489),
+        Color(0xffDA291C),
+        Color(0xffffffff),
+      ],
       offset: Offset(-0.4, 0),
-      heightFactor: 0.29,
-      widthFactor: 0.85,
+      heightFactor: 0.2,
+      widthFactor: 0.1,
     ),
   ],
   url:
