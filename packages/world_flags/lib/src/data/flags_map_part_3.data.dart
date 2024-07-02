@@ -1292,6 +1292,16 @@ const flagKirProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [Color(0xfffec74a), Color(0xff000000)],
+      offset: Offset(0, 0.07),
+      heightFactor: 0.5,
+      widthFactor: 0.25,
+    ),
+    ElementsProperties(
+      Color(0xfffec74a),
+      shape: Star(points: 2, radiusFactor: 0.5),
+      offset: Offset(0, -0.8),
+      heightFactor: 0.3,
+      widthFactor: 0.2,
     ),
   ],
   url: "https://www.vexilla-mundi.com/kiribati/kiribati_sheet.png",
@@ -1403,6 +1413,21 @@ const flagIrnProperties = FlagProperties(
   ],
   aspectRatio: 7 / 4,
   elementsProperties: [
+    ElementsProperties(
+      Color(0xffda0000),
+      shape: Ellipse(),
+      heightFactor: 0.2,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Ellipse(),
+        offset: Offset(0, -0.3),
+        heightFactor: 0.75,
+        child: ElementsProperties(
+          Color(0xffda0000),
+          shape: Rectangle(aspectRatio: 0.2),
+        ),
+      ),
+    ),
     CustomElementsProperties(Color(0xffffffff), heightFactor: 1 / 2),
     CustomElementsProperties(Color(0xffda0000), heightFactor: 63 / 252),
   ],
@@ -2076,10 +2101,10 @@ const flagGrlProperties = FlagProperties(
       shape: Ellipse(),
       offset: Offset(-0.222, 0),
       heightFactor: 8 / 12,
+      widthFactor: 0.45,
       child: CustomElementsProperties(
-        Color(0xffd00c33),
-        offset: Offset(0, -1),
-        heightFactor: 1 / 2,
+        Color(0xffffffff),
+        otherColors: [Color(0xffd00c33)],
       ),
     ),
   ],
