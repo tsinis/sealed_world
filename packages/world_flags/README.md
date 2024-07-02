@@ -3,13 +3,17 @@
 
 # Every country flag is a Flutter Widget
 
+![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_flags/doc/example.gif)
+
 ## Features
 
 - **Fully Customizable**: Adjust the shape, size, decoration, aspect ratio, etc. of any flag to fit your UI needs.
+- **Efficient**: No images, SVGs, fonts or any other type of assets used - it keeps your app lightweight.
 - **Flexible**: Declarative approach allows for flags to have different shapes and aspect ratios.
-- **Efficient**: No heavy image assets or SVGs, which keeps your app lightweight.
 - **High Performance**: Optimized CustomPainters ensure smooth rendering across all devices.
 - **Easy to Use**: Simplified API for adding flags with minimal code.
+
+> Package provides 240 out of all 250 small and simplified world country flags.
 
 ## Getting Started
 
@@ -22,6 +26,93 @@ dependencies:
 
 ### Usage
 
+All you need is a WorldCountry object (either create with factories of that class or just pick some specific, i.e. `CountryDeu()`). Use it in the `CountryFlag` widget. For example:
+
+```dart
+import "package:flutter/material.dart";
+import "package:world_flags/world_flags.dart";
+
+void main() => runApp(
+      MaterialApp(
+        home: const Main(),
+        theme: ThemeData(
+          /// Provide flag decorations globally.
+          extensions: const [
+            FlagThemeData(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(2)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+
+class Main extends StatefulWidget {
+  const Main({super.key});
+
+  @override
+  State<Main> createState() => _MainState();
+}
+
+class _MainState extends State<Main> {
+  static const height = 50.0;
+
+  final _aspectRatio = ValueNotifier<double>(1);
+
+  late final countries = List<WorldCountry>.unmodifiable(
+    WorldCountry.list.where((country) => !notReadyYet.contains(country)),
+  );
+
+  @override
+  Widget build(BuildContext context) => ColoredBox(
+        color: Theme.of(context).scaffoldBackgroundColor,
+        child: SafeArea(
+          minimum: const EdgeInsets.all(height / 2),
+          child: Scaffold(
+            body: LayoutBuilder(
+              builder: (_, constraints) => ValueListenableBuilder<double>(
+                valueListenable: _aspectRatio,
+                builder: (_, aspectRatio, __) => Scaffold(
+                  body: ListView.builder(
+                    itemBuilder: (_, i) {
+                      final country = countries[i];
+
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: SizedBox(
+                          height: height / 3,
+                          child: ListTile(
+                            title: Text(country.internationalName),
+                            trailing: CountryFlag.simplified(
+                              country,
+                              aspectRatio: aspectRatio,
+                            ),
+                            dense: true,
+                          ),
+                        ),
+                      );
+                    },
+                    itemCount: countries.length,
+                  ),
+                  bottomNavigationBar: SizedBox(
+                    height: height,
+                    child: Slider(
+                      value: aspectRatio,
+                      onChanged: (newRatio) => _aspectRatio.value = newRatio,
+                      min: 1,
+                      max: 2.2,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+}
+```
+
 ### Additional information
 
 For more information on using this package, check out the API documentation.
@@ -30,17 +121,3 @@ If you have any issues or suggestions for the package, please file them in the G
 ### References and credits
 
 This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
-
----
-
-### FAQ
-
-#### Why should I use this package over any other country/currency/language picker package?
-
-- **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing it's sealed nature), you can also override existing or add new data, etc.).
-- **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
-- **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
-- **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has almost 100% code coverage, with more than 130 (+3140 in underling Dart packages) tests, providing confidence in its reliability and stability.
-- **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
-- **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
