@@ -3,6 +3,7 @@ import "dart:ui" show Canvas, Color, Size;
 
 import "package:flutter/foundation.dart";
 
+import "../../../model/elements/custom_elements_properties.dart";
 import "../../../model/typedefs.dart";
 import "elements_painter.dart";
 
@@ -12,6 +13,13 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
 
   @protected
   double? get originalAspectRatio => null;
+
+  List<Color> get customColors =>
+      properties
+          .whereType<CustomElementsProperties>()
+          .firstOrNull
+          ?.otherColors ??
+      const [];
 
   @override
   @optionalTypeArgs

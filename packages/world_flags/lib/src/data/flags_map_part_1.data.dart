@@ -1050,15 +1050,15 @@ const flagStpProperties = FlagProperties(
 
 /// Flag properties of country Seychelles (SC).
 const flagSycProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff003d88)),
-    ColorsProperties(Color(0xfffcd955)),
-    ColorsProperties(Color(0xffd92223)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff007A3A)),
-  ],
+  [ColorsProperties(Color(0xff003d88)), ColorsProperties(Color(0xff007A3A))],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffd92223),
+      otherColors: [Color(0xfffcd955), Color(0xffffffff)],
+    ),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Seychelles_(construction_sheet).svg",
 );
