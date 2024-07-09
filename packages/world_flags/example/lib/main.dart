@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
+import "settings_dialog.dart";
+
 void main() => runApp(
       MaterialApp(
         home: const Main(),
@@ -13,6 +15,7 @@ void main() => runApp(
               ),
             ),
           ],
+          brightness: Brightness.dark,
         ),
       ),
     );
@@ -25,13 +28,19 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  static const height = 50.0;
+  static const height = 18.0;
 
-  final _aspectRatio = ValueNotifier<double>(1);
+  final aspectRatio = ValueNotifier<double>(1);
 
   late final countries = List<WorldCountry>.unmodifiable(
     WorldCountry.list.where((country) => !notReadyYet.contains(country)),
   );
+
+  @override
+  void dispose() {
+    aspectRatio.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => ColoredBox(
@@ -41,24 +50,22 @@ class _MainState extends State<Main> {
           child: Scaffold(
             body: LayoutBuilder(
               builder: (_, constraints) => ValueListenableBuilder<double>(
-                valueListenable: _aspectRatio,
-                builder: (_, aspectRatio, __) => Scaffold(
+                valueListenable: aspectRatio,
+                builder: (_, ratio, __) => Scaffold(
                   body: ListView.builder(
                     itemBuilder: (_, i) {
                       final country = countries[i];
 
                       return Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8),
-                        child: SizedBox(
-                          height: height / 3,
-                          child: ListTile(
-                            title: Text(country.internationalName),
-                            trailing: CountryFlag.simplified(
-                              country,
-                              aspectRatio: aspectRatio,
-                            ),
-                            dense: true,
+                        child: ListTile(
+                          title: Text(country.internationalName),
+                          trailing: CountryFlag.simplified(
+                            country,
+                            height: height,
+                            aspectRatio: ratio,
                           ),
+                          onTap: () => SettingsDialog.show(context, country),
                         ),
                       );
                     },
@@ -67,8 +74,8 @@ class _MainState extends State<Main> {
                   bottomNavigationBar: SizedBox(
                     height: height,
                     child: Slider(
-                      value: aspectRatio,
-                      onChanged: (newRatio) => _aspectRatio.value = newRatio,
+                      value: ratio,
+                      onChanged: (newRatio) => aspectRatio.value = newRatio,
                       min: 1,
                       max: 2.2,
                     ),
