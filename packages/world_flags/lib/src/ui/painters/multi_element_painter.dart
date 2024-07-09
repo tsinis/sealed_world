@@ -11,6 +11,7 @@ import "basic/custom_elements_painter.dart";
 
 part "custom/custom_diagonal_painter.dart";
 part "custom/half_ellipse_painter.dart";
+part "custom/mhl_painter.dart";
 part "custom/rhombus_painter.dart";
 part "custom/simple_bird_painter.dart";
 part "custom/simple_shield_painter.dart";

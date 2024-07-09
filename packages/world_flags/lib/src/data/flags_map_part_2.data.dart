@@ -1018,6 +1018,12 @@ const flagMhlProperties = FlagProperties(
   [ColorsProperties(Color(0xff003893))],
   aspectRatio: 19 / 10,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [Color(0xffDD7500)],
+      heightFactor: 0.02,
+      widthFactor: 0.2,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Star(points: 4, radiusFactor: 0.08),
@@ -1029,11 +1035,6 @@ const flagMhlProperties = FlagProperties(
         shape: Star(points: 24, radiusFactor: 0.45),
         angle: 23,
       ),
-    ),
-    CustomElementsProperties(
-      Color(0xffDD7500),
-      otherColors: [Color(0xffffffff)],
-      heightFactor: 0.96,
     ),
   ],
   url:

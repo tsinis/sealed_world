@@ -13,7 +13,6 @@ final class SycPainter extends CustomElementsPainter {
     FlagParentBounds? parent,
     List<Color>? otherColors,
   ]) {
-    final red = Paint()..color = property.mainColor;
     final white = Paint()..color = customColors.last;
     final yellow = Paint()..color = customColors.first;
 
@@ -46,7 +45,7 @@ final class SycPainter extends CustomElementsPainter {
     canvas
       ..drawPath(yellowPath, yellow)
       ..drawPath(whitePath, white)
-      ..drawPath(redPath, red);
+      ..drawPath(redPath, colorPaint);
 
     return (canvas: canvas, bounds: redPath.getBounds(), child: property.child);
   }
