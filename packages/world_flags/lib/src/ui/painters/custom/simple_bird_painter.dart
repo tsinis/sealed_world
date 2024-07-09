@@ -3,11 +3,11 @@
 part of "../multi_element_painter.dart";
 
 final class SimpleBirdPainter extends MultiElementPainter {
-  SimpleBirdPainter.alb(super.properties, super.aspectRatio)
+  const SimpleBirdPainter.alb(super.properties, super.aspectRatio)
       : _originalAspectRatio = 7 / 5;
-  SimpleBirdPainter.egy(super.properties, super.aspectRatio)
+  const SimpleBirdPainter.egy(super.properties, super.aspectRatio)
       : _originalAspectRatio = 3 / 2;
-  SimpleBirdPainter.mda(super.properties, super.aspectRatio)
+  const SimpleBirdPainter.mda(super.properties, super.aspectRatio)
       : _originalAspectRatio = 2;
 
   final double _originalAspectRatio;

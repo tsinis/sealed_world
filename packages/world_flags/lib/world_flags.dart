@@ -15,6 +15,7 @@ import "src/ui/flags/star_flag.dart";
 import "src/ui/flags/triangle_flag.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
+import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/tto_line_painter.dart";
 import "src/ui/painters/multi_element_painter.dart";
 
@@ -258,7 +259,7 @@ const smallSimplifiedFlagsMap = {
   CountryMdg(): RectangleFlag(flagMdgProperties),
   CountryMdv(): RectangleFlag(flagMdvProperties),
   CountryMex(): BasicFlag(flagMexProperties),
-  CountryMhl(): MultiElementFlag(flagMhlProperties),
+  CountryMhl(): BasicFlag(flagMhlProperties, elementsBuilder: MhlPainter.new),
   CountryMkd(): MultiElementFlag(flagMkdProperties),
   CountryMli(): BasicFlag(flagMliProperties),
   CountryMlt(): MultiElementFlag(flagMltProperties),
@@ -353,7 +354,7 @@ const smallSimplifiedFlagsMap = {
   CountrySwe(): RectangleFlag(flagSweProperties),
   CountrySwz(): BasicFlag(flagSwzProperties),
   CountrySxm(): TriangleFlag(flagSxmProperties),
-  CountrySyc(): BasicFlag(flagSycProperties),
+  CountrySyc(): BasicFlag(flagSycProperties, elementsBuilder: SycPainter.new),
   CountrySyr(): MultiElementFlag(flagSyrProperties),
   CountryTca():
       BasicFlag(flagTcaProperties, elementsBuilder: UnionJackPainter.half),
@@ -361,7 +362,7 @@ const smallSimplifiedFlagsMap = {
   CountryTgo(): RectangleFlag(flagTgoProperties),
   CountryTha(): BasicFlag(flagThaProperties),
   CountryTjk(): MultiElementFlag(flagTjkProperties),
-  CountryTkl(): MultiElementFlag(flagTklProperties),
+  CountryTkl(): BasicFlag(flagTklProperties, elementsBuilder: TklPainter.new),
   CountryTkm(): MultiElementFlag(flagTkmProperties),
   CountryTls(): TriangleFlag(flagTlsProperties),
   CountryTon(): MultiElementFlag(flagTonProperties),
@@ -414,15 +415,12 @@ const notReadyYet = [
   CountryLbn(),
   CountryLka(),
   CountryMac(),
-  CountryMhl(),
   CountryMkd(),
   CountryNfk(),
   CountryNpl(),
   CountryPyf(),
   CountrySau(),
   CountrySwz(),
-  CountrySyc(),
-  CountryTkl(),
   CountryVct(),
   CountryVir(),
 ];

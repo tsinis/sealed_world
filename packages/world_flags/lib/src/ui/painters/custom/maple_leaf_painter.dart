@@ -5,7 +5,7 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
 final class MapleLeafPainter extends CustomElementsPainter {
-  MapleLeafPainter(super.properties, super.aspectRatio);
+  const MapleLeafPainter(super.properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagCanProperties.aspectRatio;

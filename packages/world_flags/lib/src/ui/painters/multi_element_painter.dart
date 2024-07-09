@@ -15,6 +15,7 @@ part "custom/mhl_painter.dart";
 part "custom/rhombus_painter.dart";
 part "custom/simple_bird_painter.dart";
 part "custom/simple_shield_painter.dart";
+part "custom/tkl_painter.dart";
 part "custom/union_jack_painter.dart";
 part "custom/usa_stars_painter.dart";
 

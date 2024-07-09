@@ -4,7 +4,7 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
 final class SycPainter extends CustomElementsPainter {
-  SycPainter(super.properties, super.aspectRatio);
+  const SycPainter(super.properties, super.aspectRatio);
 
   @override
   FlagParentBounds? paintFlagElements(

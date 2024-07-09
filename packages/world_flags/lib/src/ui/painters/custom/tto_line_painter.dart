@@ -4,7 +4,7 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
 final class TtoLinePainter extends CustomElementsPainter {
-  TtoLinePainter(super.properties, super.aspectRatio);
+  const TtoLinePainter(super.properties, super.aspectRatio);
 
   @override
   FlagParentBounds? paintFlagElements(

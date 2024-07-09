@@ -1,7 +1,7 @@
 part of "../multi_element_painter.dart";
 
 final class MhlPainter extends MultiElementPainter {
-  MhlPainter(super.properties, super.aspectRatio);
+  const MhlPainter(super.properties, super.aspectRatio);
 
   @override
   FlagParentBounds? paintFlagElements(

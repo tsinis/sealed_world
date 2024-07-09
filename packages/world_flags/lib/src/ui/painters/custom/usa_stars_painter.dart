@@ -1,7 +1,7 @@
 part of "../multi_element_painter.dart";
 
 final class UsaStarsPainter extends MultiElementPainter {
-  UsaStarsPainter(super.properties, super.aspectRatio);
+  const UsaStarsPainter(super.properties, super.aspectRatio);
 
   /// Count of star points.
   static const _points = 5;

@@ -6,7 +6,7 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
 final class DavidStarPainter extends CustomElementsPainter {
-  DavidStarPainter(super.properties, super.aspectRatio);
+  const DavidStarPainter(super.properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagIsrProperties.aspectRatio;

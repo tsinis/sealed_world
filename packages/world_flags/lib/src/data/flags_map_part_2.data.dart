@@ -1407,6 +1407,12 @@ const flagTklProperties = FlagProperties(
   [ColorsProperties(Color(0xff00247d))],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xfffed100),
+      offset: Offset(0.6, 0),
+      heightFactor: 0.86,
+      widthFactor: 0.94,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Star(),
@@ -1429,11 +1435,6 @@ const flagTklProperties = FlagProperties(
           ),
         ),
       ),
-    ),
-    CustomElementsProperties(
-      Color(0xfffed100),
-      offset: Offset(0.6, 0),
-      heightFactor: 0.9,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Tokelau.svg",
