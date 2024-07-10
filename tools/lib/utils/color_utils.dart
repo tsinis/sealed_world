@@ -1,6 +1,5 @@
 // ignore_for_file: format-comment, avoid_print
 
-import "package:collection/collection.dart";
 import "package:pure_dart_ui/pure_dart_ui.dart";
 
 /// Actually my code from flutter_colorpicker + SVG content parser.
@@ -51,7 +50,7 @@ class ColorUtils {
     for (final match in fills) _colorFromHex(match.group(1));
     for (final match in strokes) _colorFromHex(match.group(1));
 
-    return Set.unmodifiable(_colors.whereNotNull());
+    return Set.unmodifiable(_colors.nonNulls);
   }
 
   void _colorFromHex(String? color) {
