@@ -1393,9 +1393,21 @@ const flagVctProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff199a00),
-      offset: Offset(0, 0.1),
-      heightFactor: 26 / 48,
-      angle: 60,
+      offset: Offset(0, 0.55),
+      heightFactor: 0.33,
+      widthFactor: 0.125,
+    ),
+    CustomElementsProperties(
+      Color(0xff199a00),
+      offset: Offset(-0.6, -0.05),
+      heightFactor: 0.33,
+      widthFactor: 0.125,
+    ),
+    CustomElementsProperties(
+      Color(0xff199a00),
+      offset: Offset(0.6, -0.05),
+      heightFactor: 0.33,
+      widthFactor: 0.125,
     ),
   ],
   url:

@@ -41,6 +41,10 @@ final class MhlPainter extends MultiElementPainter {
       ..drawPath(orangePath, orange)
       ..drawPath(whitePath, colorPaint);
 
-    return (canvas: canvas, bounds: whitePath.getBounds(), child: null);
+    return (
+      canvas: canvas,
+      bounds: whitePath.getBounds(),
+      child: parent?.child
+    );
   }
 }

@@ -36,7 +36,7 @@ final class DavidStarPainter extends CustomElementsPainter {
 
     canvas.restore();
 
-    return null;
+    return parent;
   }
 
 // ignore: long-parameter-list, TODO! Refactor.

@@ -38,6 +38,10 @@ final class TtoLinePainter extends CustomElementsPainter {
       ..drawPath(whitePath, colorPaint)
       ..drawPath(blackPath, blackPaint);
 
-    return (canvas: canvas, bounds: whitePath.getBounds(), child: null);
+    return (
+      canvas: canvas,
+      bounds: whitePath.getBounds(),
+      child: parent?.child
+    );
   }
 }

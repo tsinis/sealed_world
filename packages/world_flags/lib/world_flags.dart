@@ -17,6 +17,7 @@ import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/tto_line_painter.dart";
+import "src/ui/painters/custom/vct_painter.dart";
 import "src/ui/painters/multi_element_painter.dart";
 
 export "package:sealed_countries/sealed_countries.dart";
@@ -104,8 +105,7 @@ const smallSimplifiedFlagsMap = {
     elementsBuilder: UnionJackPainter.halfWithoutOutline,
   ),
   CountryBol(): BasicFlag(flagBolProperties),
-  CountryBra():
-      BasicFlag(flagBraProperties, elementsBuilder: RhombusPainter.new),
+  CountryBra(): BasicFlag(flagBraProperties, elementsBuilder: BraPainter.new),
   CountryBrb(): MultiElementFlag(flagBrbProperties),
   CountryBrn(): BasicFlag(flagBrnProperties),
   CountryBtn(): BasicFlag(flagBtnProperties),
@@ -260,7 +260,7 @@ const smallSimplifiedFlagsMap = {
   CountryMdv(): RectangleFlag(flagMdvProperties),
   CountryMex(): BasicFlag(flagMexProperties),
   CountryMhl(): BasicFlag(flagMhlProperties, elementsBuilder: MhlPainter.new),
-  CountryMkd(): MultiElementFlag(flagMkdProperties),
+  CountryMkd(): BasicFlag(flagMkdProperties, elementsBuilder: MkdPainter.new),
   CountryMli(): BasicFlag(flagMliProperties),
   CountryMlt(): MultiElementFlag(flagMltProperties),
   CountryMmr(): StarFlag(flagMmrProperties),
@@ -383,7 +383,7 @@ const smallSimplifiedFlagsMap = {
       BasicFlag(flagUsaProperties, elementsBuilder: UsaStarsPainter.new),
   CountryUzb(): MoonFlag(flagUzbProperties),
   CountryVat(): BasicFlag(flagVatProperties),
-  CountryVct(): BasicFlag(flagVctProperties),
+  CountryVct(): BasicFlag(flagVctProperties, elementsBuilder: VctPainter.new),
   CountryVen(): StarFlag(flagVenProperties),
   CountryVgb():
       BasicFlag(flagVgbProperties, elementsBuilder: UnionJackPainter.half),
@@ -400,27 +400,25 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryAgo(),
-  CountryAsm(),
-  CountryAta(),
-  CountryAtg(),
-  CountryBrn(),
-  CountryCyp(),
   CountryGeo(),
+  CountryKor(),
+  CountryAta(),
+  CountryCyp(),
+  CountryAgo(),
   CountryGum(),
   CountryHkg(),
+  CountryMac(),
   CountryImn(),
   CountryIrq(),
-  CountryKor(),
   CountryLbn(),
-  CountryLka(),
-  CountryMac(),
-  CountryMkd(),
   CountryNfk(),
-  CountryNpl(),
-  CountryPyf(),
+  CountryLka(),
   CountrySau(),
   CountrySwz(),
-  CountryVct(),
+  CountryAtg(),
+  CountryPyf(),
+  CountryBrn(),
+  CountryAsm(),
   CountryVir(),
+  CountryNpl(),
 ];

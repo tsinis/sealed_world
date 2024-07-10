@@ -1,7 +1,7 @@
 part of "../multi_element_painter.dart";
 
-final class RhombusPainter extends MultiElementPainter {
-  const RhombusPainter(super.properties, super.aspectRatio);
+final class BraPainter extends MultiElementPainter {
+  const BraPainter(super.properties, super.aspectRatio);
 
   @protected
   double? get originalAspectRatio => 3 / 2;
