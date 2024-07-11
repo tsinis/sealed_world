@@ -4,70 +4,95 @@ import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
 class SettingsDialog extends StatefulWidget {
-  const SettingsDialog(this.country, {super.key});
+  const SettingsDialog(this.country, this.aspectRatio, {super.key});
 
-  static void show(BuildContext context, WorldCountry country) => unawaited(
+  static void show(
+    BuildContext context,
+    WorldCountry country,
+    ValueNotifier<double> aspectRatio,
+  ) =>
+      unawaited(
         showDialog(
           context: context,
-          builder: (_) => SettingsDialog(country),
+          builder: (_) => SettingsDialog(country, aspectRatio),
         ),
       );
 
   final WorldCountry country;
+  final ValueNotifier<double> aspectRatio;
 
   @override
   State<SettingsDialog> createState() => _SettingsDialogState();
 }
 
 class _SettingsDialogState extends State<SettingsDialog> {
-  double opacity = 1 / 2;
+  final opacity = ValueNotifier(1 / 2);
 
   WorldCountry get country => widget.country;
 
-  void incrementIndex() => setState(() => opacity = 1 / 2);
-
-  String labelBuilder() => switch (opacity) {
-        1 => "Original flag",
+  String labelBuilder() => switch (opacity.value) {
+        1 => "Original bitmap flag",
         0 => "Flag from the package",
-        _ => " ${(opacity * 100).round()}% opacity ",
+        _ => " ${(opacity.value * 100).round()}% opacity ",
       };
+
+  @override
+  void dispose() {
+    opacity.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => Dialog(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Scaffold(
-            appBar: AppBar(
-              title: SelectableText(
-                "${country.internationalName} (${country.code})",
-                textAlign: TextAlign.center,
-              ),
-            ),
-            body: GestureDetector(
-              onTap: incrementIndex,
-              child: Center(
-                child: Stack(
-                  alignment: Alignment.center,
-                  clipBehavior: Clip.none,
+          child: ValueListenableBuilder(
+            valueListenable: widget.aspectRatio,
+            builder: (_, ratio, __) => ValueListenableBuilder(
+              valueListenable: opacity,
+              builder: (_, opacityValue, flag) => Scaffold(
+                appBar: AppBar(
+                  title: SelectableText(
+                    "${country.internationalName} (${country.code}) Settings",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                body: Center(
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(country.flagPngUrl(), scale: 0.1),
+                      ),
+                    ),
+                    child: Opacity(opacity: opacityValue, child: flag),
+                  ),
+                ),
+                bottomNavigationBar: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    CountryFlag.simplified(country),
-                    Opacity(
-                      opacity: opacity,
-                      child: Image.network(country.flagPngUrl(), scale: 0.1),
+                    ListTile(
+                      title: const Text("Aspect Ratio:"),
+                      subtitle: Slider(
+                        value: ratio,
+                        onChanged: (newRatio) =>
+                            widget.aspectRatio.value = newRatio,
+                        min: 1,
+                        max: 2.2,
+                      ),
+                    ),
+                    ListTile(
+                      title: const Text("Opacity:"),
+                      subtitle: Slider(
+                        value: opacityValue,
+                        onChanged: (newOpacity) => opacity.value = newOpacity,
+                        divisions: 10,
+                        label: labelBuilder(),
+                      ),
                     ),
                   ],
                 ),
               ),
-            ),
-            bottomNavigationBar: SizedBox(
-              height: 40,
-              child: Slider(
-                value: opacity,
-                onChanged: (newOpacity) => setState(() => opacity = newOpacity),
-                divisions: 10,
-                label: labelBuilder(),
-                autofocus: true,
-              ),
+              child: CountryFlag.simplified(country, aspectRatio: ratio),
             ),
           ),
         ),
