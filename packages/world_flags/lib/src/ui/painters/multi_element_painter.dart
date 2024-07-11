@@ -11,6 +11,7 @@ import "basic/custom_elements_painter.dart";
 
 part "custom/bra_painter.dart";
 part "custom/custom_diagonal_painter.dart";
+part "custom/geo_painter.dart";
 part "custom/half_ellipse_painter.dart";
 part "custom/mhl_painter.dart";
 part "custom/mkd_painter.dart";

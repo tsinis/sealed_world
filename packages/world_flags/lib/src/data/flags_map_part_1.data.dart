@@ -1422,7 +1422,26 @@ const flagGeoProperties = FlagProperties(
   ],
   elementsProperties: [
     ElementsProperties(Color(0xffff0000), shape: Rectangle(aspectRatio: 1 / 5)),
-    CustomElementsProperties(Color(0xffff0000), heightFactor: 40 / 200),
+    CustomElementsProperties(
+      Color(0xffff0000),
+      offset: Offset(-0.85, 0.4),
+      heightFactor: 40 / 200,
+    ),
+    CustomElementsProperties(
+      Color(0xffff0000),
+      offset: Offset(0.85, 0.4),
+      heightFactor: 40 / 200,
+    ),
+    CustomElementsProperties(
+      Color(0xffff0000),
+      offset: Offset(-0.85, -0.8),
+      heightFactor: 40 / 200,
+    ),
+    CustomElementsProperties(
+      Color(0xffff0000),
+      offset: Offset(0.85, -0.8),
+      heightFactor: 40 / 200,
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Georgia_(construction_sheet).svg",

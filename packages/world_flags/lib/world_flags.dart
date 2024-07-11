@@ -179,7 +179,7 @@ const smallSimplifiedFlagsMap = {
   CountryGab(): BasicFlag(flagGabProperties),
   CountryGbr():
       BasicFlag(flagGbrProperties, elementsBuilder: UnionJackPainter.full),
-  CountryGeo(): MultiElementFlag(flagGeoProperties),
+  CountryGeo(): BasicFlag(flagGeoProperties, elementsBuilder: GeoPainter.new),
   CountryGgy(): MultiElementFlag(flagGgyProperties),
   CountryGha(): StarFlag(flagGhaProperties),
   CountryGib(): MultiElementFlag(flagGibProperties),
@@ -400,7 +400,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryGeo(),
   CountryKor(),
   CountryAta(),
   CountryCyp(),
