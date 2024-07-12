@@ -28,7 +28,7 @@ final class BraPainter extends MultiElementPainter {
     canvas
       ..save()
       ..translate(center.dx - width / 2, center.dy - height / 2)
-      ..drawPath(path, colorPaint)
+      ..drawPath(path, paintCreator())
       ..restore();
 
     final otherColor = otherColors?.firstOrNull;

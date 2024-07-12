@@ -95,8 +95,8 @@ final class GeoPainter extends MultiElementPainter {
       canvas
         ..save()
         ..translate(offsetX, offsetY)
-        ..drawPath(vertical, colorPaint)
-        ..drawPath(horizontal, colorPaint)
+        ..drawPath(vertical, paintCreator())
+        ..drawPath(horizontal, paintCreator())
         ..restore();
     }
 

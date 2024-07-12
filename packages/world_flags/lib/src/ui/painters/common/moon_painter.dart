@@ -31,7 +31,7 @@ final class MoonPainter extends ElementsPainter {
         Rect.fromCircle(center: secondCenter, radius: moon.radius * radius);
     final secondPath = Path()..addOval(secondRect);
     final path = Path.combine(PathOperation.difference, mainPath, secondPath);
-    canvas.drawPath(path, colorPaint);
+    canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }

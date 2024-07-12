@@ -76,7 +76,7 @@ final class TklPainter extends MultiElementPainter {
     canvas
       ..save()
       ..translate(width * 0.03, -height * 0.23)
-      ..drawPath(path, colorPaint)
+      ..drawPath(path, paintCreator())
       ..restore();
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);

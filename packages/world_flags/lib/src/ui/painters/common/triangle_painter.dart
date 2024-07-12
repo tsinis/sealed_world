@@ -28,7 +28,7 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset + width, yOffset + height / 2)
       ..lineTo(xOffset, yOffset + height)
       ..close();
-    canvas.drawPath(path, colorPaint);
+    canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
@@ -46,7 +46,7 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset - width, yOffset + height / 2)
       ..lineTo(xOffset, yOffset + height)
       ..close();
-    canvas.drawPath(path, colorPaint);
+    canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
@@ -62,7 +62,7 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset + width, yOffset)
       ..lineTo(xOffset + width / 2, yOffset + height)
       ..close();
-    canvas.drawPath(path, colorPaint);
+    canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }
@@ -78,7 +78,7 @@ final class TrianglePainter extends ElementsPainter {
       ..lineTo(xOffset + width, yOffset + height)
       ..lineTo(xOffset + width / 2, yOffset)
       ..close();
-    canvas.drawPath(path, colorPaint);
+    canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }

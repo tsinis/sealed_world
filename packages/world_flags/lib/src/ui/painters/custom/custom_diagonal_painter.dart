@@ -42,7 +42,7 @@ final class CustomDiagonalPainter extends MultiElementPainter {
           ..strokeWidth = strokeWidth,
       );
     }
-    canvas.drawPath(path, colorPaint);
+    canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }

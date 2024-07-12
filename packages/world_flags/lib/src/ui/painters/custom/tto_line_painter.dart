@@ -35,7 +35,7 @@ final class TtoLinePainter extends CustomElementsPainter {
       ..close();
 
     canvas
-      ..drawPath(whitePath, colorPaint)
+      ..drawPath(whitePath, paintCreator())
       ..drawPath(blackPath, blackPaint);
 
     return (

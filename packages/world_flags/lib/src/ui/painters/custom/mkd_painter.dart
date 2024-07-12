@@ -41,7 +41,7 @@ final class MkdPainter extends MultiElementPainter {
         ..lineTo(endWidePoint.dx, endWidePoint.dy)
         ..close();
 
-      canvas.drawPath(rayPath, colorPaint);
+      canvas.drawPath(rayPath, paintCreator());
     }
 
     return parent;

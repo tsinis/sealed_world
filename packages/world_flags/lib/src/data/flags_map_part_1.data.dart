@@ -1125,14 +1125,9 @@ const flagGnqProperties = FlagProperties(
 const flagKorProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffcd2e3a),
-      shape: Ellipse(),
-      heightFactor: 1 / 2,
-    ),
     CustomElementsProperties(
-      Color(0xff0047a0),
-      otherColors: [Color(0xff000000)],
+      Color(0xff000000),
+      otherColors: [Color(0xff0047a0), Color(0xffcd2e3a)],
       heightFactor: 1 / 2,
     ),
   ],

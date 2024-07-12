@@ -166,7 +166,7 @@ final class MapleLeafPainter extends CustomElementsPainter {
 
     canvas
       ..translate(center.dx, center.dy)
-      ..drawPath(path, colorPaint);
+      ..drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }

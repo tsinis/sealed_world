@@ -35,7 +35,7 @@ final class VctPainter extends CustomElementsPainter {
       canvas
         ..save()
         ..translate(offsetX, offsetY)
-        ..drawPath(path, colorPaint)
+        ..drawPath(path, paintCreator())
         ..restore();
     }
 

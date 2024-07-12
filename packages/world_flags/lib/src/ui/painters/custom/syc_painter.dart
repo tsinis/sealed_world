@@ -45,7 +45,7 @@ final class SycPainter extends CustomElementsPainter {
     canvas
       ..drawPath(yellowPath, yellow)
       ..drawPath(whitePath, white)
-      ..drawPath(redPath, colorPaint);
+      ..drawPath(redPath, paintCreator());
 
     return (canvas: canvas, bounds: redPath.getBounds(), child: property.child);
   }

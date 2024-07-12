@@ -16,6 +16,7 @@ import "src/ui/flags/triangle_flag.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
+import "src/ui/painters/custom/taegukgi_painter.dart";
 import "src/ui/painters/custom/tto_line_painter.dart";
 import "src/ui/painters/custom/vct_painter.dart";
 import "src/ui/painters/multi_element_painter.dart";
@@ -237,7 +238,8 @@ const smallSimplifiedFlagsMap = {
   CountryKir():
       BasicFlag(flagKirProperties, elementsBuilder: HalfEllipsePainter.new),
   CountryKna(): MultiElementFlag(flagKnaProperties),
-  CountryKor(): EllipseFlag(flagKorProperties),
+  CountryKor():
+      BasicFlag(flagKorProperties, elementsBuilder: TaegukgiPainter.new),
   CountryKwt(): MultiElementFlag(flagKwtProperties),
   CountryLao(): EllipseFlag(flagLaoProperties),
   CountryLbn(): BasicFlag(flagLbnProperties),

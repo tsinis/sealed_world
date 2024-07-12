@@ -39,7 +39,7 @@ final class MhlPainter extends MultiElementPainter {
 
     canvas
       ..drawPath(orangePath, orange)
-      ..drawPath(whitePath, colorPaint);
+      ..drawPath(whitePath, paintCreator());
 
     return (
       canvas: canvas,
