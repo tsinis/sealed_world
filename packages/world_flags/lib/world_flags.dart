@@ -13,6 +13,7 @@ import "src/ui/flags/multi_element_flag.dart";
 import "src/ui/flags/rectangle_flag.dart";
 import "src/ui/flags/star_flag.dart";
 import "src/ui/flags/triangle_flag.dart";
+import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
@@ -81,7 +82,7 @@ const smallSimplifiedFlagsMap = {
   CountryArg(): StarFlag(flagArgProperties),
   CountryArm(): BasicFlag(flagArmProperties),
   CountryAsm(): TriangleFlag(flagAsmProperties),
-  CountryAta(): BasicFlag(flagAtaProperties),
+  CountryAta(): BasicFlag(flagAtaProperties, elementsBuilder: AtaPainter.new),
   CountryAtf(): MultiElementFlag(flagAtfProperties),
   CountryAtg(): BasicFlag(flagAtgProperties),
   CountryAus():
@@ -402,8 +403,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryKor(),
-  CountryAta(),
   CountryCyp(),
   CountryAgo(),
   CountryGum(),

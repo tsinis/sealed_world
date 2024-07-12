@@ -814,7 +814,7 @@ const flagBenProperties = FlagProperties(
 const flagAtaProperties = FlagProperties(
   [ColorsProperties(Color(0xff3a7dce))],
   elementsProperties: [
-    CustomElementsProperties(Color(0xffffffff), heightFactor: 0.9),
+    CustomElementsProperties(Color(0xffffffff)),
   ],
   url:
       "https://wikipedia.org/wiki/File:Proposed_flag_of_Antarctica_(Graham_Bartram).svg",
