@@ -824,8 +824,12 @@ const flagAtaProperties = FlagProperties(
 const flagCypProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
   elementsProperties: [
-    CustomElementsProperties(Color(0xffD57800), heightFactor: 6 / 12),
-    CustomElementsProperties(Color(0xff4E5B31), heightFactor: 3 / 12),
+    CustomElementsProperties(
+      Color(0xff4E5B31),
+      otherColors: [Color(0xffD57800)],
+      offset: Offset(0.05, 0.04),
+      widthFactor: 0.9,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/cyprus/cyprus_sheet.png",
 );

@@ -9,7 +9,7 @@ class SettingsDialog extends StatefulWidget {
   static void show(
     BuildContext context,
     WorldCountry country,
-    ValueNotifier<double> aspectRatio,
+    ValueNotifier<double?> aspectRatio,
   ) =>
       unawaited(
         showDialog(
@@ -19,18 +19,19 @@ class SettingsDialog extends StatefulWidget {
       );
 
   final WorldCountry country;
-  final ValueNotifier<double> aspectRatio;
+  final ValueNotifier<double?> aspectRatio;
 
   @override
   State<SettingsDialog> createState() => _SettingsDialogState();
 }
 
 class _SettingsDialogState extends State<SettingsDialog> {
+  static const minRatio = 1.0;
   final opacity = ValueNotifier(1 / 2);
 
   WorldCountry get country => widget.country;
 
-  String labelBuilder() => switch (opacity.value) {
+  String opacityLabelBuilder() => switch (opacity.value) {
         1 => "Original bitmap flag",
         0 => "Flag from the package",
         _ => " ${(opacity.value * 100).round()}% opacity ",
@@ -71,12 +72,16 @@ class _SettingsDialogState extends State<SettingsDialog> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     ListTile(
-                      title: const Text("Aspect Ratio:"),
+                      title: Text(
+                        "${ratio == null ? "(Original) " : ""}Aspect Ratio:",
+                      ),
                       subtitle: Slider(
-                        value: ratio,
+                        value: ratio ??
+                            flagPropertiesMap[country]?.aspectRatio ??
+                            minRatio,
                         onChanged: (newRatio) =>
                             widget.aspectRatio.value = newRatio,
-                        min: 1,
+                        min: minRatio,
                         max: 2.2,
                       ),
                     ),
@@ -86,7 +91,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
                         value: opacityValue,
                         onChanged: (newOpacity) => opacity.value = newOpacity,
                         divisions: 10,
-                        label: labelBuilder(),
+                        label: opacityLabelBuilder(),
                       ),
                     ),
                   ],
