@@ -26,7 +26,7 @@ class SettingsDialog extends StatefulWidget {
 }
 
 class _SettingsDialogState extends State<SettingsDialog> {
-  static const minRatio = 1.0;
+  static const minRatio = 0.8; // TODO! Use Nepal value.
   final opacity = ValueNotifier(1 / 2);
 
   WorldCountry get country => widget.country;

@@ -1217,7 +1217,12 @@ const flagKgzProperties = FlagProperties(
 const flagHkgProperties = FlagProperties(
   [ColorsProperties(Color(0xffec1b2e))],
   elementsProperties: [
-    CustomElementsProperties(Color(0xffffffff), heightFactor: 18 / 30),
+    CustomElementsProperties(
+      Color(0xffffffff),
+      offset: Offset(0, -0.02),
+      heightFactor: 0.55,
+      widthFactor: 0.38,
+    ),
   ],
   url: "https://wikipedia.org/wiki/File:HKSARFlagConstructionSheet_2.svg",
 );

@@ -16,6 +16,7 @@ import "src/ui/flags/triangle_flag.dart";
 import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
+import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/taegukgi_painter.dart";
@@ -202,7 +203,7 @@ const smallSimplifiedFlagsMap = {
   CountryGuf(): BasicFlag(flagGufProperties),
   CountryGum(): RectangleFlag(flagGumProperties),
   CountryGuy(): MultiElementFlag(flagGuyProperties),
-  CountryHkg(): BasicFlag(flagHkgProperties),
+  CountryHkg(): BasicFlag(flagHkgProperties, elementsBuilder: HkgPainter.new),
   CountryHmd():
       BasicFlag(flagHmdProperties, elementsBuilder: UnionJackPainter.half),
   CountryHnd(): MultiElementFlag(flagHndProperties),
@@ -404,16 +405,15 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryAgo(),
-  CountryGum(),
-  CountryHkg(),
-  CountryMac(),
   CountryImn(),
   CountryIrq(),
+  CountrySau(),
+  CountryAgo(),
+  CountryMac(),
   CountryLbn(),
   CountryNfk(),
   CountryLka(),
-  CountrySau(),
+  CountryGum(),
   CountrySwz(),
   CountryAtg(),
   CountryPyf(),
