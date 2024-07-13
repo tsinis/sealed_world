@@ -279,11 +279,17 @@ const flagLkaProperties = FlagProperties(
 const flagMacProperties = FlagProperties(
   [ColorsProperties(Color(0xff067662))],
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      offset: Offset(-0.1, 0),
+      heightFactor: 0.45,
+      widthFactor: 0.8,
+    ),
     ElementsProperties(
       Color(0xffFFDF1E),
       shape: Star(),
-      offset: Offset(0, -0.512),
-      heightFactor: 0.11,
+      offset: Offset(0, 0.26),
+      heightFactor: 0.24,
       child: ElementsProperties(
         Color(0xffFFDF1E),
         shape: Star(),
@@ -313,7 +319,6 @@ const flagMacProperties = FlagProperties(
         ),
       ),
     ),
-    CustomElementsProperties(Color(0xffffffff), heightFactor: 18 / 30),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Macau.svg",
 );
