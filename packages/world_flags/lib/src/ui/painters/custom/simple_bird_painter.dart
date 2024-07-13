@@ -66,7 +66,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
           squareSize,
           squareSize / 3,
         ),
-        Paint()..color = topColor,
+        paintCreator(topColor),
       )
       ..drawRect(
         Rect.fromLTWH(
@@ -75,7 +75,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
           squareSize,
           squareSize / 3,
         ),
-        Paint()..color = bottomColor,
+        paintCreator(bottomColor),
       );
 
     return (canvas: canvas, bounds: birdSize, child: property.child);

@@ -587,16 +587,12 @@ const flagTunProperties = FlagProperties(
 const flagAgoProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000)), ColorsProperties(Color(0xff000000))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffFFCD00),
-      shape: Star(),
-      offset: Offset(-0.025, -0.262),
-      heightFactor: 0.155,
-    ),
     CustomElementsProperties(
       Color(0xffFFCD00),
       otherColors: [Color(0xff000000)],
-      heightFactor: 1 / 3,
+      offset: Offset(-0.14, -0.03),
+      heightFactor: 0.26,
+      widthFactor: 0.71,
     ),
   ],
   url: "https://www.vexilla-mundi.com/angola/angola_sheet.png",

@@ -13,8 +13,8 @@ final class SycPainter extends CustomElementsPainter {
     FlagParentBounds? parent,
     List<Color>? otherColors,
   ]) {
-    final white = Paint()..color = customColors.last;
-    final yellow = Paint()..color = customColors.first;
+    final white = paintCreator(customColors.last);
+    final yellow = paintCreator(customColors.first);
 
     final bottomLeft = Offset(0, size.height);
     final oneThirdRight = Offset(size.width, size.height / 3);

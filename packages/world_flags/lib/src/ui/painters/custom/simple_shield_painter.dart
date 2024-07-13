@@ -32,7 +32,6 @@ final class SimpleShieldPainter extends MultiElementPainter {
   double? get originalAspectRatio => 3 / 2;
 
   @override
-  // ignore: long-method,  CustomElementsPainter have long paintFlagElements :-/.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

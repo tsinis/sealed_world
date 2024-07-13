@@ -35,7 +35,7 @@ final class BraPainter extends MultiElementPainter {
     if (otherColor != null) {
       canvas.drawOval(
         Rect.fromCircle(center: center, radius: height / 3),
-        Paint()..color = otherColor,
+        paintCreator(otherColor),
       );
     }
 

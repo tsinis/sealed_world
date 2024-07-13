@@ -13,6 +13,7 @@ import "src/ui/flags/multi_element_flag.dart";
 import "src/ui/flags/rectangle_flag.dart";
 import "src/ui/flags/star_flag.dart";
 import "src/ui/flags/triangle_flag.dart";
+import "src/ui/painters/custom/ago_painter.dart";
 import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
@@ -71,7 +72,7 @@ export "src/ui/painters/multi_element_painter.dart";
 const smallSimplifiedFlagsMap = {
   CountryAbw(): StarFlag(flagAbwProperties),
   CountryAfg(): EllipseFlag(flagAfgProperties),
-  CountryAgo(): MultiElementFlag(flagAgoProperties),
+  CountryAgo(): BasicFlag(flagAgoProperties, elementsBuilder: AgoPainter.new),
   CountryAia():
       BasicFlag(flagAiaProperties, elementsBuilder: UnionJackPainter.half),
   CountryAla(): MultiElementFlag(flagAlaProperties),
@@ -408,7 +409,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryAgo(),
   CountryMac(),
   CountryLbn(),
   CountryNfk(),
