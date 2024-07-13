@@ -18,6 +18,7 @@ import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
+import "src/ui/painters/custom/irq_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/taegukgi_painter.dart";
@@ -223,7 +224,7 @@ const smallSimplifiedFlagsMap = {
   ),
   CountryIrl(): BasicFlag(flagIrlProperties),
   CountryIrn(): EllipseFlag(flagIrnProperties),
-  CountryIrq(): BasicFlag(flagIrqProperties),
+  CountryIrq(): BasicFlag(flagIrqProperties, elementsBuilder: IrqPainter.new),
   CountryIsl(): MultiElementFlag(flagIslProperties),
   CountryIsr():
       BasicFlag(flagIsrProperties, elementsBuilder: DavidStarPainter.new),
@@ -406,8 +407,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryImn(),
-  CountryIrq(),
   CountrySau(),
   CountryAgo(),
   CountryMac(),
