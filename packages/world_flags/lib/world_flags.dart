@@ -20,6 +20,7 @@ import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
 import "src/ui/painters/custom/irq_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
+import "src/ui/painters/custom/sau_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/taegukgi_painter.dart";
 import "src/ui/painters/custom/tto_line_painter.dart";
@@ -325,7 +326,7 @@ const smallSimplifiedFlagsMap = {
   CountryRou(): BasicFlag(flagRouProperties),
   CountryRus(): BasicFlag(flagRusProperties),
   CountryRwa(): StarFlag(flagRwaProperties),
-  CountrySau(): BasicFlag(flagSauProperties),
+  CountrySau(): BasicFlag(flagSauProperties, elementsBuilder: SauPainter.new),
   CountrySdn(): TriangleFlag(flagSdnProperties),
   CountrySen(): StarFlag(flagSenProperties),
   CountrySgp(): MultiElementFlag(flagSgpProperties),
@@ -407,7 +408,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountrySau(),
   CountryAgo(),
   CountryMac(),
   CountryLbn(),

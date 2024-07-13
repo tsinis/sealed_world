@@ -1262,8 +1262,8 @@ const flagSauProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
+      offset: Offset(0, -0.2),
       heightFactor: 1 / 4,
-      widthFactor: 1 / 4,
     ),
   ],
   url:
