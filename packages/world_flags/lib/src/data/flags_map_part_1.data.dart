@@ -1143,7 +1143,9 @@ const flagImnProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [Color(0xffF9DD16), Color(0xFF000000)],
-      heightFactor: 75 / 100,
+      offset: Offset(0, 0.15),
+      heightFactor: 0.59,
+      widthFactor: 0.67,
     ),
   ],
   url: "https://www.vexilla-mundi.com/man/man_sheet.png",

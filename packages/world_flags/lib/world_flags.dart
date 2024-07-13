@@ -17,6 +17,7 @@ import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
+import "src/ui/painters/custom/imn_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/taegukgi_painter.dart";
@@ -214,7 +215,7 @@ const smallSimplifiedFlagsMap = {
   CountryHti(): RectangleFlag(flagHtiProperties),
   CountryHun(): BasicFlag(flagHunProperties),
   CountryIdn(): BasicFlag(flagIdnProperties),
-  CountryImn(): BasicFlag(flagImnProperties),
+  CountryImn(): BasicFlag(flagImnProperties, elementsBuilder: ImnPainter.new),
   CountryInd(): EllipseFlag(flagIndProperties),
   CountryIot(): BasicFlag(
     flagIotProperties,
