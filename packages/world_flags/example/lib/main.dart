@@ -3,22 +3,23 @@ import "package:world_flags/world_flags.dart";
 
 import "settings_dialog.dart";
 
-void main() => runApp(
-      MaterialApp(
-        home: const Main(),
-        theme: ThemeData(
-          /// Provide flag decorations globally.
-          extensions: const [
-            FlagThemeData(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
-              ),
-            ),
-          ],
-          brightness: Brightness.dark,
-        ),
-      ),
-    );
+void main() {
+  /// Provide flag decorations globally.
+  const extensions = [
+    FlagThemeData(
+      decoration:
+          BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
+    ),
+  ];
+
+  runApp(
+    MaterialApp(
+      home: const Main(),
+      theme: ThemeData(extensions: extensions, brightness: Brightness.light),
+      darkTheme: ThemeData(extensions: extensions, brightness: Brightness.dark),
+    ),
+  );
+}
 
 class Main extends StatefulWidget {
   const Main({super.key});
@@ -29,9 +30,11 @@ class Main extends StatefulWidget {
 
 class _MainState extends State<Main> {
   static const height = 18.0;
-  final aspectRatio = ValueNotifier<double>(1);
+  final aspectRatio = ValueNotifier<double?>(null);
   late final countries = List<WorldCountry>.unmodifiable(
-    WorldCountry.list.where((country) => !notReadyYet.contains(country)),
+    WorldCountry.list.where(
+      (cnt) => const [CountryAsm(), CountryVir(), CountryNpl()].contains(cnt),
+    ),
   );
 
   @override

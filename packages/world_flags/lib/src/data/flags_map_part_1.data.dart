@@ -1683,18 +1683,36 @@ const flagHmdProperties = flagAusProperties; // TODO!
 
 /// Flag properties of country Brunei (BN).
 const flagBrnProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xfff7e017), ratio: 3),
-    ColorsProperties(Color(0xffffffff), ratio: 2),
-    ColorsProperties(Color(0xff000000), ratio: 2),
-    ColorsProperties(Color(0xfff7e017), ratio: 3),
-  ],
+  [ColorsProperties(Color(0xfff7e017))],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   elementsProperties: [
     CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [Color(0xff000000)],
+    ),
+    ElementsProperties(
       Color(0xffcf1126),
-      otherColors: [Color(0xfff7e017)],
+      shape: Moon(offset: Offset(0, -0.25)),
+      offset: Offset(0, 0.1),
+      heightFactor: 0.4,
+    ),
+    ElementsProperties(
+      Color(0xffcf1126),
+      shape: Rectangle(aspectRatio: 0.18),
+      heightFactor: 0.45,
+    ),
+    ElementsProperties(
+      Color(0xffcf1126),
+      shape: Rectangle(aspectRatio: 2),
+      offset: Offset(0, -0.25),
+      heightFactor: 0.1,
+    ),
+    ElementsProperties(
+      Color(0xffcf1126),
+      shape: Moon(radius: 0.95, offset: Offset(0, -0.45)),
+      offset: Offset(0, 0),
+      heightFactor: 0.5,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Brunei_Flag_Official_Measurements.jpg",

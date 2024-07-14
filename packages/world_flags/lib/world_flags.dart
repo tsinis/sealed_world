@@ -119,7 +119,7 @@ const smallSimplifiedFlagsMap = {
   CountryBol(): BasicFlag(flagBolProperties),
   CountryBra(): BasicFlag(flagBraProperties, elementsBuilder: BraPainter.new),
   CountryBrb(): MultiElementFlag(flagBrbProperties),
-  CountryBrn(): BasicFlag(flagBrnProperties),
+  CountryBrn(): BasicFlag(flagBrnProperties, elementsBuilder: BrnPainter.new),
   CountryBtn(): BasicFlag(flagBtnProperties),
   CountryBvt(): MultiElementFlag(flagBvtProperties),
   CountryBwa(): BasicFlag(flagBwaProperties),
@@ -413,5 +413,3 @@ const smallSimplifiedFlagsMap = {
   CountryZwe(): TriangleFlag(flagZweProperties),
   CountryUnk(): MultiElementFlag(flagUnkProperties),
 };
-
-const notReadyYet = [CountryBrn(), CountryAsm(), CountryVir(), CountryNpl()];
