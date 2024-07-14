@@ -11,7 +11,6 @@ final class IrqPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagIrqProperties.aspectRatio;
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

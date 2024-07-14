@@ -27,7 +27,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
     Canvas canvas,
     Size size, [
     T? parent,
-    List<Color>? otherColors,
+    List<Color>? otherColors, // TODO! Remove.
   ]) =>
       null;
 

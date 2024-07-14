@@ -251,6 +251,37 @@ const flagLkaProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffF7B718),
+      otherColors: [Color(0xff000000)],
+      offset: Offset(0.33, -0.14),
+      heightFactor: 0.63,
+      widthFactor: 0.45,
+    ),
+    ElementsProperties(
+      Color(0xffF7B718),
+      shape: Ellipse(),
+      offset: Offset(-0.19, -0.666),
+      heightFactor: 0.1,
+    ),
+    ElementsProperties(
+      Color(0xffF7B718),
+      shape: Ellipse(),
+      offset: Offset(-0.19, 0.666),
+      heightFactor: 0.1,
+    ),
+    ElementsProperties(
+      Color(0xffF7B718),
+      shape: Ellipse(),
+      offset: Offset(0.8, 0.666),
+      heightFactor: 0.1,
+    ),
+    ElementsProperties(
+      Color(0xffF7B718),
+      shape: Ellipse(),
+      offset: Offset(0.8, -0.666),
+      heightFactor: 0.1,
+    ),
     ElementsProperties(
       Color(0xffF7B718),
       shape: Rectangle(),
@@ -264,12 +295,6 @@ const flagLkaProperties = FlagProperties(
       offset: Offset(0, 1),
       heightFactor: 70 / 750,
       widthFactor: 1,
-    ),
-    CustomElementsProperties(
-      Color(0xffF7B718),
-      otherColors: [Color(0xff000000)],
-      heightFactor: 610 / 750,
-      widthFactor: 900 / 1890,
     ),
   ],
   url: "https://www.vexilla-mundi.com/sri_lanka/sri_lanka_sheet.png",

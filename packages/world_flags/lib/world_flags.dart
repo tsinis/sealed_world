@@ -20,6 +20,7 @@ import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
 import "src/ui/painters/custom/irq_painter.dart";
+import "src/ui/painters/custom/lka_painter.dart";
 import "src/ui/painters/custom/mac_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/pine_painter.dart";
@@ -256,7 +257,7 @@ const smallSimplifiedFlagsMap = {
   CountryLby(): MoonFlag(flagLbyProperties),
   CountryLca(): RectangleFlag(flagLcaProperties),
   CountryLie(): RectangleFlag(flagLieProperties),
-  CountryLka(): MultiElementFlag(flagLkaProperties),
+  CountryLka(): BasicFlag(flagLkaProperties, elementsBuilder: LkaPainter.new),
   CountryLso(): TriangleFlag(flagLsoProperties),
   CountryLtu(): BasicFlag(flagLtuProperties),
   CountryLux(): BasicFlag(flagLuxProperties),
@@ -411,7 +412,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryLka(),
   CountryGum(),
   CountrySwz(),
   CountryAtg(),
