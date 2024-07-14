@@ -3,6 +3,7 @@ import "dart:ui";
 
 import "package:flutter/foundation.dart";
 
+import "../../constants/flag_constants.dart";
 import "../../model/elements/custom_elements_properties.dart";
 import "../../model/elements/elements_properties.dart";
 import "../../model/shape.dart";

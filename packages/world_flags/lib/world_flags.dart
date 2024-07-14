@@ -22,6 +22,7 @@ import "src/ui/painters/custom/imn_painter.dart";
 import "src/ui/painters/custom/irq_painter.dart";
 import "src/ui/painters/custom/mac_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
+import "src/ui/painters/custom/pine_painter.dart";
 import "src/ui/painters/custom/sau_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/taegukgi_painter.dart";
@@ -250,7 +251,7 @@ const smallSimplifiedFlagsMap = {
       BasicFlag(flagKorProperties, elementsBuilder: TaegukgiPainter.new),
   CountryKwt(): MultiElementFlag(flagKwtProperties),
   CountryLao(): EllipseFlag(flagLaoProperties),
-  CountryLbn(): BasicFlag(flagLbnProperties),
+  CountryLbn(): BasicFlag(flagLbnProperties, elementsBuilder: PinePainter.new),
   CountryLbr(): RectangleFlag(flagLbrProperties),
   CountryLby(): MoonFlag(flagLbyProperties),
   CountryLca(): RectangleFlag(flagLcaProperties),
@@ -293,7 +294,7 @@ const smallSimplifiedFlagsMap = {
   CountryNam(): StarFlag(flagNamProperties),
   CountryNcl(): BasicFlag(flagNclProperties),
   CountryNer(): EllipseFlag(flagNerProperties),
-  CountryNfk(): BasicFlag(flagNfkProperties),
+  CountryNfk(): BasicFlag(flagNfkProperties, elementsBuilder: PinePainter.new),
   CountryNga(): BasicFlag(flagNgaProperties),
   CountryNic(): EllipseFlag(flagNicProperties),
   CountryNiu():
@@ -410,8 +411,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryLbn(),
-  CountryNfk(),
   CountryLka(),
   CountryGum(),
   CountrySwz(),

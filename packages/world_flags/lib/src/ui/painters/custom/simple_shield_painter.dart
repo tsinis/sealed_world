@@ -28,8 +28,8 @@ final class SimpleShieldPainter extends MultiElementPainter {
 
   static const _fallback = Color(0x00000000);
 
-  @protected
-  double? get originalAspectRatio => 3 / 2;
+  @override
+  double get originalAspectRatio => FlagConstants.defaultAspectRatio;
 
   @override
   FlagParentBounds? paintFlagElements(

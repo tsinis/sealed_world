@@ -462,7 +462,11 @@ const flagLbnProperties = FlagProperties(
     ColorsProperties(Color(0xffee161f)),
   ],
   elementsProperties: [
-    CustomElementsProperties(Color(0xff00a850), heightFactor: 1 / 2),
+    CustomElementsProperties(
+      Color(0xff00a850),
+      heightFactor: 0.55,
+      widthFactor: 1 / 2,
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Construction_Sheet_of_Flag_of_Lebanon.gif",
@@ -2046,7 +2050,11 @@ const flagNfkProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    CustomElementsProperties(Color(0xff007833), heightFactor: 78 / 92),
+    CustomElementsProperties(
+      Color(0xff007833),
+      heightFactor: 78 / 92,
+      widthFactor: 0.3,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/norfolk_island/norfolk_island_sheet.png",
 );

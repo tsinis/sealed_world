@@ -4,7 +4,7 @@ final class BraPainter extends MultiElementPainter {
   const BraPainter(super.properties, super.aspectRatio);
 
   @protected
-  double? get originalAspectRatio => 3 / 2;
+  double? get originalAspectRatio => FlagConstants.defaultAspectRatio;
 
   @override
   FlagParentBounds? paintFlagElements(
