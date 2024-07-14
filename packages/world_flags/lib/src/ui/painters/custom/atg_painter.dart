@@ -8,7 +8,6 @@ final class AtgPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final path = Path()
       ..moveTo(0, 0)

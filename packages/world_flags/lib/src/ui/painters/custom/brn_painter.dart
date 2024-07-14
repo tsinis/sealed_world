@@ -9,7 +9,6 @@ final class BrnPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final midLeft = Offset(0, size.height * 0.3);
     final midRight = Offset(size.width, size.height * 0.72);

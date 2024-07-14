@@ -9,7 +9,6 @@ final class GeoPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final center = calculateCenter(size);
     final dimension = size.height / 5;

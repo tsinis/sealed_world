@@ -743,19 +743,19 @@ const flagSmrProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffdd00),
       otherColors: [
-        Color(0xff4fd46b),
+        Color(0xffffe100),
         Color(0xff65c7ff),
         Color(0xff65c7ff),
         Color(0xff8fc753),
         Color(0xff8fc753),
         Color(0xffe40000),
         Color(0xffc76e2e),
-        Color(0xffffe100),
+        Color(0xffc76e2e),
         Color(0xff9d4916),
-        Color(0xffb97700),
         Color(0xff006800),
         Color(0xff7d6c00),
         Color(0xff3a9d4f),
+        Color(0xff4fd46b),
         Color(0xff000000),
         Color(0xffac0000),
         Color(0xff68300e),
@@ -1241,7 +1241,7 @@ const flagPrtProperties = FlagProperties(
       Color(0xffffff00),
       shape: Ellipse(),
       offset: Offset(-0.2, 0),
-      heightFactor: 0.4,
+      heightFactor: 0.5,
       widthFactor: 0.45,
       child: CustomElementsProperties(
         Color(0xff006600),
@@ -1352,8 +1352,7 @@ const flagKirProperties = FlagProperties(
   aspectRatio: 2,
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffffffff),
-      otherColors: [Color(0xfffec74a), Color(0xff000000)],
+      Color(0xfffec74a),
       offset: Offset(0, 0.07),
       heightFactor: 0.5,
       widthFactor: 0.25,
@@ -1637,7 +1636,7 @@ const flagSvkProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [
-        Color(0xffee1c25),
+        Color(0xffffffff),
         Color(0xffee1c25),
         Color(0xffee1c25),
         Color(0xff0b4ea2),
@@ -2176,16 +2175,12 @@ const flagQatProperties = FlagProperties(
 const flagGrlProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffd00c33))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffffffff),
-      shape: Ellipse(),
+    CustomElementsProperties(
+      Color(0xffd00c33),
+      otherColors: [Color(0xffffffff)],
       offset: Offset(-0.222, 0),
       heightFactor: 8 / 12,
       widthFactor: 0.45,
-      child: CustomElementsProperties(
-        Color(0xffffffff),
-        otherColors: [Color(0xffd00c33)],
-      ),
     ),
   ],
   url:

@@ -80,10 +80,8 @@ const smallSimplifiedFlagsMap = {
   CountryAia():
       BasicFlag(flagAiaProperties, elementsBuilder: UnionJackPainter.half),
   CountryAla(): MultiElementFlag(flagAlaProperties),
-  CountryAlb(): BasicFlag(
-    flagAlbProperties,
-    elementsBuilder: SimpleBirdPainter.alb,
-  ),
+  CountryAlb():
+      BasicFlag(flagAlbProperties, elementsBuilder: SimpleBirdPainter.alb),
   CountryAnd(): BasicFlag(
     flagAndProperties,
     elementsBuilder: SimpleShieldPainter.outlinedWithDividers,

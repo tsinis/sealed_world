@@ -9,7 +9,6 @@ final class TklPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final height = size.height * property.heightFactor;
     final width = size.width * (property.widthFactor ?? 1);

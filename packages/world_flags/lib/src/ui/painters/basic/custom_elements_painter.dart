@@ -23,12 +23,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
 
   @override
   @optionalTypeArgs
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    T? parent,
-    List<Color>? otherColors, // TODO! Remove.
-  ]) =>
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size, [T? parent]) =>
       null;
 
   @protected

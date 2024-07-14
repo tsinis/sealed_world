@@ -11,18 +11,21 @@ final class HalfEllipsePainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
-    final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
-    final height = adjustedSize.height;
-    final width = adjustedSize.width;
-    final rect = Rect.fromCenter(center: center, width: width, height: height);
-
+    final radius = size.height * property.heightFactor / 2;
+    final rect = Rect.fromCircle(center: center, radius: radius);
+    final firstColor = property.mainColor;
+    final lastColor = customColors.firstOrNull ?? firstColor.withOpacity(0);
     final paint = Paint()
-      ..color = otherColors?.firstOrNull ?? property.mainColor;
+      ..shader = LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [firstColor, lastColor],
+        stops: const [0.5, 0.5],
+      ).createShader(rect);
 
-    canvas.drawArc(rect, pi, pi, false, paint);
+    canvas.drawOval(rect, paint);
 
     return (canvas: canvas, bounds: rect, child: property.child);
   }

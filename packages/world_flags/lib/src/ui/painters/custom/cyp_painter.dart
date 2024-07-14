@@ -16,7 +16,6 @@ final class CypPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
     final center = calculateCenter(size);

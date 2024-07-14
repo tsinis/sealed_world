@@ -18,8 +18,14 @@ final class SimpleBirdPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
+    final otherColors = (property is CustomElementsProperties?)
+        ? (property as CustomElementsProperties?)?.otherColors
+        : properties
+            .whereType<CustomElementsProperties>()
+            .firstOrNull
+            ?.otherColors;
+
     final adjustedSize = ratioAdjustedSize(size, parent: parent);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

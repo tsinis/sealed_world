@@ -13,12 +13,11 @@ final class CustomDiagonalPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final height = size.height;
     final width = size.width;
     final mainLineFactor = property.heightFactor;
-    final outlineColor = otherColors?.firstOrNull;
+    final outlineColor = customColors.firstOrNull;
 
     final path = Path()..moveTo(0, height);
     if (_isHorizontal) {

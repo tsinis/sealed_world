@@ -11,7 +11,6 @@ final class SycPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final white = paintCreator(customColors.last);
     final yellow = paintCreator(customColors.first);

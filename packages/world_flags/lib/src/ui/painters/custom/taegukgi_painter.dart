@@ -19,7 +19,6 @@ final class TaegukgiPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final paint = paintCreator(customColors.last);
     final adjustedSize = ratioAdjustedSize(size);

@@ -2006,19 +2006,15 @@ const flagBraProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xfff8e509),
       heightFactor: 530 / 700,
-      widthFactor: 0.8,
+      widthFactor: 0.82,
       angle: 30,
     ),
-    ElementsProperties(
-      Color(0xff2b49a3),
-      shape: Ellipse(),
-      heightFactor: 35 / 530,
-      child: CustomElementsProperties(
-        Color(0xffffffff),
-        otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
-        heightFactor: 1 / 2,
-      ),
+    CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
+      heightFactor: 1 / 2,
     ),
+    ElementsProperties(Color(0xff2b49a3), shape: Ellipse(), heightFactor: 0.5),
   ],
   url: "https://www.vexilla-mundi.com/brazil/brazil_sheet.png",
 );

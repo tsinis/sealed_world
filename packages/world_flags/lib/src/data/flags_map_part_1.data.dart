@@ -2014,7 +2014,6 @@ const flagMwiProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff41408),
-      otherColors: [Color(0xfff41408), Color(0xff000000)],
       offset: Offset(0, -0.38),
       heightFactor: 0.5,
       widthFactor: 0.42,

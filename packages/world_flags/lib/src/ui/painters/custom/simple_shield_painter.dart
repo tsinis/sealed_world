@@ -27,6 +27,7 @@ final class SimpleShieldPainter extends MultiElementPainter {
   final bool _showOutline;
 
   static const _fallback = Color(0x00000000);
+  static const _lineFactor = 0.2;
 
   @override
   double get originalAspectRatio => FlagConstants.defaultAspectRatio;
@@ -36,13 +37,19 @@ final class SimpleShieldPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
-    const lineFactor = 0.2;
     final adjustedSize = ratioAdjustedSize(size, parent: parent);
+    final parentChild = parent?.child;
+    final thisProperty = parentChild ?? property;
+    final otherColors = (thisProperty is CustomElementsProperties?)
+        ? (thisProperty as CustomElementsProperties?)?.otherColors
+        : properties
+            .whereType<CustomElementsProperties>()
+            .firstOrNull
+            ?.otherColors;
     final center = calculateCenter(size);
     final height = adjustedSize.height;
-    final strokeWidth = height * lineFactor;
+    final strokeWidth = height * _lineFactor;
     final width = adjustedSize.width;
     final half = height * 0.5;
     final halfWidth = width * 0.5;
@@ -74,13 +81,13 @@ final class SimpleShieldPainter extends MultiElementPainter {
       ..saveLayer(Rect.fromLTWH(0, 0, height, height), Paint())
       ..clipPath(path);
 
-    paint.color = otherColors?[1] ?? _fallback;
+    paint.color = otherColors?.elementAtOrNull(1) ?? _fallback;
     canvas.drawRect(Rect.fromLTWH(0, 0, halfWidth, half), paint);
-    paint.color = otherColors?[2] ?? paint.color;
+    paint.color = otherColors?.elementAtOrNull(2) ?? paint.color;
     canvas.drawRect(Rect.fromLTWH(halfWidth, 0, halfWidth, half), paint);
-    paint.color = otherColors?[3] ?? paint.color;
+    paint.color = otherColors?.elementAtOrNull(3) ?? paint.color;
     canvas.drawRect(Rect.fromLTWH(0, half, halfWidth, half), paint);
-    paint.color = otherColors?[4] ?? paint.color;
+    paint.color = otherColors?.elementAtOrNull(4) ?? paint.color;
     canvas
       ..drawRect(Rect.fromLTWH(halfWidth, half, halfWidth, half), paint)
       ..restore();
@@ -94,6 +101,6 @@ final class SimpleShieldPainter extends MultiElementPainter {
     }
     canvas.restore();
 
-    return (bounds: path.getBounds(), canvas: canvas, child: parent?.child);
+    return (bounds: path.getBounds(), canvas: canvas, child: parentChild);
   }
 }

@@ -17,7 +17,6 @@ final class UsaStarsPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final child = parent?.child;
     final color = child?.mainColor;

@@ -15,7 +15,6 @@ final class VctPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final adjustedSize = ratioAdjustedSize(size);
     final height = adjustedSize.height / 2;

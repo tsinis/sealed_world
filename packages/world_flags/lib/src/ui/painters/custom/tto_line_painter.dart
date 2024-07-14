@@ -11,14 +11,13 @@ final class TtoLinePainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final width = size.width;
     final height = size.height;
     final heightFactor = property.heightFactor;
     final widthFactor = property.widthFactor ?? 1;
     final blackPaint = Paint()
-      ..color = otherColors?.firstOrNull ?? Color(0xff000000);
+      ..color = customColors.firstOrNull ?? Color(0xff000000);
 
     final whitePath = Path()
       ..moveTo(0, 0)

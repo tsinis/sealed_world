@@ -8,7 +8,6 @@ final class MhlPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final biggerFactor = property.widthFactor ?? 1;
     final offsetFromEdges = property.heightFactor * size.height;

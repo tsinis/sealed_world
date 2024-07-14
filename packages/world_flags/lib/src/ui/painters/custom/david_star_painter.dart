@@ -16,7 +16,6 @@ final class DavidStarPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final paint = Paint()
       ..color = property.mainColor
@@ -39,7 +38,7 @@ final class DavidStarPainter extends CustomElementsPainter {
     return parent;
   }
 
-// ignore: long-parameter-list, TODO! Refactor.
+// ignore: long-parameter-list, TODO! Refactor later.
   void _drawTriangle(
     Canvas canvas,
     Offset center,

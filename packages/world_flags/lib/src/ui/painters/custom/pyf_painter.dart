@@ -11,7 +11,6 @@ final class PyfPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final center = calculateCenter(size);
     final radius = size.height * property.heightFactor / 2;

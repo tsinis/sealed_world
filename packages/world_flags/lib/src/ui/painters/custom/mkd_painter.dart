@@ -11,7 +11,6 @@ final class MkdPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final center = Offset(size.width / 2, size.height / 2);
     final rayLength = max(size.width, size.height) * sqrt2;

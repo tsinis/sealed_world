@@ -15,7 +15,6 @@ final class IrqPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1);
     final center = calculateCenter(size);

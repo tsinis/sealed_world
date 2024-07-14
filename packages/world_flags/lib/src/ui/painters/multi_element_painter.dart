@@ -5,6 +5,7 @@ import "package:flutter/rendering.dart";
 import "package:world_flags/src/data/flags_map_part_3.data.dart";
 
 import "../../constants/flag_constants.dart";
+import "../../data/flags_map_part_2.data.dart";
 import "../../model/elements/custom_elements_properties.dart";
 import "../../model/elements/elements_properties.dart";
 import "../../model/shape.dart";
@@ -38,12 +39,7 @@ final class MultiElementPainter extends CustomElementsPainter {
         final ratio = size.aspectRatio;
         parent = painter(shape)([property], ratio).paint(canvas, size);
       }
-      final child = property.child; // TODO: Refactor.
-      if (child is CustomElementsProperties) {
-        paintFlagElements(canvas, size, parent, child.otherColors);
-      } else if (property is CustomElementsProperties) {
-        paintFlagElements(canvas, size, parent, property.otherColors);
-      }
+      paintFlagElements(canvas, size, parent);
     }
 
     return null;
