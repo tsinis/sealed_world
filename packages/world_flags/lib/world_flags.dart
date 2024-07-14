@@ -94,7 +94,7 @@ const smallSimplifiedFlagsMap = {
   CountryAsm(): TriangleFlag(flagAsmProperties),
   CountryAta(): BasicFlag(flagAtaProperties, elementsBuilder: AtaPainter.new),
   CountryAtf(): MultiElementFlag(flagAtfProperties),
-  CountryAtg(): BasicFlag(flagAtgProperties),
+  CountryAtg(): BasicFlag(flagAtgProperties, elementsBuilder: AtgPainter.new),
   CountryAus():
       BasicFlag(flagAusProperties, elementsBuilder: UnionJackPainter.half),
   CountryAut(): BasicFlag(flagAutProperties),
@@ -415,7 +415,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryAtg(),
   CountryPyf(),
   CountryBrn(),
   CountryAsm(),

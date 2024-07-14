@@ -532,19 +532,27 @@ const flagMsrProperties = FlagProperties(
 
 /// Flag properties of country Antigua and Barbuda (AG).
 const flagAtgProperties = FlagProperties(
-  [ColorsProperties(Color(0xffce1126))],
+  [ColorsProperties(Color(0xff000000))],
   elementsProperties: [
     ElementsProperties(
-      Color(0xff000000),
-      shape: Triangle(),
-      widthFactor: 1,
-      angle: 90,
-      child: CustomElementsProperties(
-        Color(0xfffcd116),
-        otherColors: [Color(0xff0072c6), Color(0xffffffff)],
-        heightFactor: 0.9,
-      ),
+      Color(0xfffcd116),
+      shape: Star(points: 15, radiusFactor: 0.48),
+      offset: Offset(0, -0.27),
+      heightFactor: 0.62,
     ),
+    ElementsProperties(
+      Color(0xff0072c6),
+      shape: Rectangle(),
+      offset: Offset(0, 1),
+      heightFactor: 0.61,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      offset: Offset(0, 1),
+      heightFactor: 0.39,
+    ),
+    CustomElementsProperties(Color(0xffce1126)),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Antigua_and_Barbuda_(construction_sheet).svg",

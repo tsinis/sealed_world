@@ -14,12 +14,12 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   @protected
   double? get originalAspectRatio => null;
 
-  List<Color> get customColors =>
-      properties
-          .whereType<CustomElementsProperties>()
-          .firstOrNull
-          ?.otherColors ??
-      const [];
+  @protected
+  CustomElementsProperties get customProperties =>
+      properties.whereType<CustomElementsProperties>().first;
+
+  @protected
+  List<Color> get customColors => customProperties.otherColors;
 
   @override
   @optionalTypeArgs

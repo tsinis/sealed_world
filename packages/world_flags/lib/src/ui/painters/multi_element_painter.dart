@@ -10,6 +10,7 @@ import "../../model/shape.dart";
 import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
 
+part "custom/atg_painter.dart";
 part "custom/bra_painter.dart";
 part "custom/custom_diagonal_painter.dart";
 part "custom/geo_painter.dart";
