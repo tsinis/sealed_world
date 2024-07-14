@@ -498,31 +498,40 @@ const flagJeyProperties = FlagProperties(
 
 /// Flag properties of country Guam (GU).
 const flagGumProperties = FlagProperties(
-  [ColorsProperties(Color(0xffC62139))],
+  [
+    ColorsProperties(Color(0xffC62139)),
+    ColorsProperties(Color(0xff00297B), ratio: 19),
+    ColorsProperties(Color(0xffC62139)),
+  ],
   aspectRatio: 41 / 22,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffC62139),
+      otherColors: [
+        Color(0xffadd2d9),
+        Color(0xffcbe0e5),
+        Color(0xff00297B),
+        Color(0xff179a3b),
+        Color(0xffa79270),
+        Color(0xffbd0728),
+        Color(0xff239e46),
+        Color(0xfffdf9ff),
+        Color(0xffa68861),
+        Color(0xffffffff),
+        Color(0xfffdf9a1),
+      ],
+      heightFactor: 0.52,
+      widthFactor: 0.18,
+    ),
     ElementsProperties(
-      Color(0xff00297B),
-      shape: Rectangle(aspectRatio: 43 / 22),
-      heightFactor: 36 / 40,
-      child: CustomElementsProperties(
-        Color(0xffC62139),
-        otherColors: [
-          Color(0xff00297B),
-          Color(0xffcbe0e5),
-          Color(0xffadd2d9),
-          Color(0xfffdf9a1),
-          Color(0xff179a3b),
-          Color(0xffa79270),
-          Color(0xffbd0728),
-          Color(0xff239e46),
-          Color(0xfffdf9ff),
-          Color(0xffa68861),
-          Color(0xffffffff),
-        ],
-        heightFactor: 38 / 40,
-        widthFactor: 76 / 78,
-      ),
+      Color(0xffC62139),
+      shape: Rectangle(aspectRatio: 0.045),
+      offset: Offset(-1, 0),
+    ),
+    ElementsProperties(
+      Color(0xffC62139),
+      shape: Rectangle(aspectRatio: 0.045),
+      offset: Offset(1, 0),
     ),
   ],
   url: "https://www.vexilla-mundi.com/guam/guam_sheet.png",

@@ -14,6 +14,7 @@ import "src/ui/flags/rectangle_flag.dart";
 import "src/ui/flags/star_flag.dart";
 import "src/ui/flags/triangle_flag.dart";
 import "src/ui/painters/custom/ago_painter.dart";
+import "src/ui/painters/custom/almond_painter.dart";
 import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
@@ -208,7 +209,8 @@ const smallSimplifiedFlagsMap = {
       BasicFlag(flagGrlProperties, elementsBuilder: HalfEllipsePainter.new),
   CountryGtm(): EllipseFlag(flagGtmProperties),
   CountryGuf(): BasicFlag(flagGufProperties),
-  CountryGum(): RectangleFlag(flagGumProperties),
+  CountryGum():
+      BasicFlag(flagGumProperties, elementsBuilder: AlmondPainter.gum),
   CountryGuy(): MultiElementFlag(flagGuyProperties),
   CountryHkg(): BasicFlag(flagHkgProperties, elementsBuilder: HkgPainter.new),
   CountryHmd():
@@ -364,7 +366,8 @@ const smallSimplifiedFlagsMap = {
     elementsBuilder: SimpleShieldPainter.withoutDividers,
   ),
   CountrySwe(): RectangleFlag(flagSweProperties),
-  CountrySwz(): BasicFlag(flagSwzProperties),
+  CountrySwz():
+      BasicFlag(flagSwzProperties, elementsBuilder: AlmondPainter.swz),
   CountrySxm(): TriangleFlag(flagSxmProperties),
   CountrySyc(): BasicFlag(flagSycProperties, elementsBuilder: SycPainter.new),
   CountrySyr(): MultiElementFlag(flagSyrProperties),
@@ -412,8 +415,6 @@ const smallSimplifiedFlagsMap = {
 };
 
 const notReadyYet = [
-  CountryGum(),
-  CountrySwz(),
   CountryAtg(),
   CountryPyf(),
   CountryBrn(),
