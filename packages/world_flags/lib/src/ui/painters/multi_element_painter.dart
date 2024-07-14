@@ -1,7 +1,8 @@
 import "dart:math" hide Rectangle;
-import "dart:ui";
 
 import "package:flutter/foundation.dart";
+import "package:flutter/rendering.dart";
+import "package:world_flags/src/data/flags_map_part_3.data.dart";
 
 import "../../constants/flag_constants.dart";
 import "../../model/elements/custom_elements_properties.dart";
@@ -17,6 +18,7 @@ part "custom/geo_painter.dart";
 part "custom/half_ellipse_painter.dart";
 part "custom/mhl_painter.dart";
 part "custom/mkd_painter.dart";
+part "custom/pyf_painter.dart";
 part "custom/simple_bird_painter.dart";
 part "custom/simple_shield_painter.dart";
 part "custom/tkl_painter.dart";

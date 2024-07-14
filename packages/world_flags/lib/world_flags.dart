@@ -326,7 +326,7 @@ const smallSimplifiedFlagsMap = {
   ),
   CountryPry(): EllipseFlag(flagPryProperties),
   CountryPse(): TriangleFlag(flagPseProperties),
-  CountryPyf(): BasicFlag(flagPyfProperties),
+  CountryPyf(): BasicFlag(flagPyfProperties, elementsBuilder: PyfPainter.new),
   CountryQat(): MultiElementFlag(flagQatProperties),
   CountryReu(): BasicFlag(flagReuProperties),
   CountryRou(): BasicFlag(flagRouProperties),
@@ -414,10 +414,4 @@ const smallSimplifiedFlagsMap = {
   CountryUnk(): MultiElementFlag(flagUnkProperties),
 };
 
-const notReadyYet = [
-  CountryPyf(),
-  CountryBrn(),
-  CountryAsm(),
-  CountryVir(),
-  CountryNpl(),
-];
+const notReadyYet = [CountryBrn(), CountryAsm(), CountryVir(), CountryNpl()];

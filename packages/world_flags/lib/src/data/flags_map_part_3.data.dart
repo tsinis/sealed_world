@@ -1676,12 +1676,30 @@ const flagPyfProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffff0000),
       otherColors: [
-        Color(0xff083d9c),
         Color(0xffef7d08),
         Color(0xffde2010),
         Color(0xff000000),
+        Color(0xff083d9c),
       ],
-      heightFactor: 42 / 100,
+      heightFactor: 44 / 100,
+    ),
+    ElementsProperties(
+      Color(0xffff0000),
+      shape: Rectangle(aspectRatio: 0.4),
+      offset: Offset(0, -0.25),
+      heightFactor: 0.24,
+    ),
+    ElementsProperties(
+      Color(0xffff0000),
+      shape: Rectangle(aspectRatio: 0.15),
+      offset: Offset(-0.15, 0),
+      heightFactor: 0.22,
+    ),
+    ElementsProperties(
+      Color(0xffff0000),
+      shape: Rectangle(aspectRatio: 0.15),
+      offset: Offset(0.15, 0),
+      heightFactor: 0.22,
     ),
   ],
   url:
