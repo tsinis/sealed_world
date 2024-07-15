@@ -15,6 +15,7 @@ import "src/ui/flags/star_flag.dart";
 import "src/ui/flags/triangle_flag.dart";
 import "src/ui/painters/custom/ago_painter.dart";
 import "src/ui/painters/custom/almond_painter.dart";
+import "src/ui/painters/custom/asm_painter.dart";
 import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
@@ -89,7 +90,7 @@ const smallSimplifiedFlagsMap = {
   CountryAre(): RectangleFlag(flagAreProperties),
   CountryArg(): StarFlag(flagArgProperties),
   CountryArm(): BasicFlag(flagArmProperties),
-  CountryAsm(): TriangleFlag(flagAsmProperties),
+  CountryAsm(): BasicFlag(flagAsmProperties, elementsBuilder: AsmPainter.new),
   CountryAta(): BasicFlag(flagAtaProperties, elementsBuilder: AtaPainter.new),
   CountryAtf(): MultiElementFlag(flagAtfProperties),
   CountryAtg(): BasicFlag(flagAtgProperties, elementsBuilder: AtgPainter.new),

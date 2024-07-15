@@ -33,7 +33,7 @@ class _MainState extends State<Main> {
   final aspectRatio = ValueNotifier<double?>(null);
   late final countries = List<WorldCountry>.unmodifiable(
     WorldCountry.list.where(
-      (cnt) => const [CountryAsm(), CountryVir(), CountryNpl()].contains(cnt),
+      (country) => const [CountryNpl(), CountryVir()].contains(country),
     ),
   );
 

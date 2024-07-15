@@ -156,6 +156,18 @@ const flagAsmProperties = FlagProperties(
   [ColorsProperties(Color(0xff00205b))],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffd100),
+      otherColors: [
+        Color(0xff5a3719),
+        Color(0xff7b3c20),
+        Color(0xffbe531c),
+        Color(0xff999999),
+      ],
+      offset: Offset(0.66, -0.15),
+      heightFactor: 0.5,
+      widthFactor: 0.3,
+    ),
     ElementsProperties(
       Color(0xffef3340),
       shape: Triangle(),
@@ -169,16 +181,6 @@ const flagAsmProperties = FlagProperties(
         heightFactor: 0.9,
         widthFactor: 0.9,
         angle: 180,
-        child: CustomElementsProperties(
-          Color(0xffffd100),
-          otherColors: [
-            Color(0xff5a3719),
-            Color(0xff7b3c20),
-            Color(0xffbe531c),
-            Color(0xff999999),
-          ],
-          heightFactor: 0.9,
-        ),
       ),
     ),
   ],
