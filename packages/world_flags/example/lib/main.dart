@@ -32,7 +32,7 @@ class _MainState extends State<Main> {
   static const height = 18.0;
   final aspectRatio = ValueNotifier<double?>(null);
   late final countries = List<WorldCountry>.unmodifiable(
-    WorldCountry.list.where((country) => country.isVir),
+    WorldCountry.list.where((country) => !country.isVir),
   );
 
   @override

@@ -638,6 +638,12 @@ const flagColProperties = FlagProperties(
 const flagAtfProperties = FlagProperties(
   [ColorsProperties(Color(0xff002654))],
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      offset: Offset(0.39, 0.27),
+      heightFactor: 0.36,
+      widthFactor: 0.25,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Rectangle(aspectRatio: 1.48),
@@ -685,11 +691,6 @@ const flagAtfProperties = FlagProperties(
           ),
         ),
       ),
-    ),
-    CustomElementsProperties(
-      Color(0xffffffff),
-      offset: Offset(0.39, 0.5),
-      heightFactor: 0.5,
     ),
   ],
   url:
@@ -2028,16 +2029,11 @@ const flagBraProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff8e509),
+      otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
       heightFactor: 530 / 700,
       widthFactor: 0.82,
       angle: 30,
     ),
-    CustomElementsProperties(
-      Color(0xffffffff),
-      otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
-      heightFactor: 1 / 2,
-    ),
-    ElementsProperties(Color(0xff2b49a3), shape: Ellipse(), heightFactor: 0.5),
   ],
   url: "https://www.vexilla-mundi.com/brazil/brazil_sheet.png",
 );

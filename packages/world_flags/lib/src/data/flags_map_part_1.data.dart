@@ -1685,7 +1685,6 @@ const flagHmdProperties = flagAusProperties; // TODO!
 const flagBrnProperties = FlagProperties(
   [ColorsProperties(Color(0xfff7e017))],
   aspectRatio: 2,
-  stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -1693,14 +1692,14 @@ const flagBrnProperties = FlagProperties(
     ),
     ElementsProperties(
       Color(0xffcf1126),
-      shape: Moon(offset: Offset(0, -0.25)),
-      offset: Offset(0, 0.1),
-      heightFactor: 0.4,
+      shape: Rectangle(aspectRatio: 0.18),
+      heightFactor: 0.45,
     ),
     ElementsProperties(
       Color(0xffcf1126),
-      shape: Rectangle(aspectRatio: 0.18),
-      heightFactor: 0.45,
+      shape: Moon(offset: Offset(0, -0.25)),
+      offset: Offset(0, 0.1),
+      heightFactor: 0.4,
     ),
     ElementsProperties(
       Color(0xffcf1126),

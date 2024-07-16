@@ -93,7 +93,7 @@ const smallSimplifiedFlagsMap = {
   CountryArm(): BasicFlag(flagArmProperties),
   CountryAsm(): BasicFlag(flagAsmProperties, elementsBuilder: AsmPainter.new),
   CountryAta(): BasicFlag(flagAtaProperties, elementsBuilder: AtaPainter.new),
-  CountryAtf(): MultiElementFlag(flagAtfProperties),
+  CountryAtf(): BasicFlag(flagAtfProperties, elementsBuilder: AtfPainter.new),
   CountryAtg(): BasicFlag(flagAtgProperties, elementsBuilder: AtgPainter.new),
   CountryAus():
       BasicFlag(flagAusProperties, elementsBuilder: UnionJackPainter.half),

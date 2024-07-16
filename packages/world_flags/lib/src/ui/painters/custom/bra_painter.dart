@@ -32,7 +32,7 @@ final class BraPainter extends MultiElementPainter {
 
     canvas.drawOval(
       Rect.fromCircle(center: center, radius: height / 3),
-      paintCreator(),
+      paintCreator(customColors.first),
     );
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);

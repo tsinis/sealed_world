@@ -12,6 +12,7 @@ import "../../model/shape.dart";
 import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
 
+part "custom/atf_painter.dart";
 part "custom/atg_painter.dart";
 part "custom/bra_painter.dart";
 part "custom/brn_painter.dart";
@@ -39,7 +40,10 @@ final class MultiElementPainter extends CustomElementsPainter {
         final ratio = size.aspectRatio;
         parent = painter(shape)([property], ratio).paint(canvas, size);
       }
-      paintFlagElements(canvas, size, parent);
+      if (property is CustomElementsProperties ||
+          property.child is CustomElementsProperties) {
+        paintFlagElements(canvas, size, parent);
+      }
     }
 
     return null;
