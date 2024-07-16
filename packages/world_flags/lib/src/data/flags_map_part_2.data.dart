@@ -1568,12 +1568,33 @@ const flagMkdProperties = FlagProperties(
 
 /// Flag properties of country Nepal (NP).
 const flagNplProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffce0000)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000063)),
+  [ColorsProperties(Color.fromARGB(0, 0, 0, 0))],
+  aspectRatio: 41 / 50,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffce0000),
+      otherColors: [Color(0xff000063)],
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Star(points: 12, radiusFactor: 0.6),
+      offset: Offset(-0.51, 0.45),
+      heightFactor: 0.3,
+      angle: 15,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Moon(radius: 1, offset: Offset(0, -0.32)),
+      offset: Offset(-0.51, -0.36),
+      heightFactor: 0.28,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Star(points: 16, radiusFactor: 0.7),
+        offset: Offset(0, 0.04),
+        heightFactor: 1,
+      ),
+    ),
   ],
-  aspectRatio: 41 / 50, // Yep this one will be fun...
   url: "https://wikipedia.org/wiki/File:Nepal_Flag_Construction.png",
 );
 

@@ -25,6 +25,7 @@ import "src/ui/painters/custom/irq_painter.dart";
 import "src/ui/painters/custom/lka_painter.dart";
 import "src/ui/painters/custom/mac_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
+import "src/ui/painters/custom/npl_painter.dart";
 import "src/ui/painters/custom/pine_painter.dart";
 import "src/ui/painters/custom/sau_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
@@ -303,7 +304,7 @@ const smallSimplifiedFlagsMap = {
       BasicFlag(flagNiuProperties, elementsBuilder: UnionJackPainter.half),
   CountryNld(): BasicFlag(flagNldProperties),
   CountryNor(): MultiElementFlag(flagNorProperties),
-  CountryNpl(): BasicFlag(flagNplProperties),
+  CountryNpl(): BasicFlag(flagNplProperties, elementsBuilder: NplPainter.new),
   CountryNru(): StarFlag(flagNruProperties),
   CountryNzl():
       BasicFlag(flagNzlProperties, elementsBuilder: UnionJackPainter.half),
