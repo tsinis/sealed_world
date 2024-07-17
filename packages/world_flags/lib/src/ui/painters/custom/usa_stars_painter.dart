@@ -1,7 +1,7 @@
 part of "../multi_element_painter.dart";
 
 final class UsaStarsPainter extends MultiElementPainter {
-  UsaStarsPainter(super.properties, super.aspectRatio);
+  const UsaStarsPainter(super.properties, super.aspectRatio);
 
   /// Count of star points.
   static const _points = 5;
@@ -17,12 +17,11 @@ final class UsaStarsPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final child = parent?.child;
     final color = child?.mainColor;
     if (parent == null || color == null) return parent;
-    final paint = Paint()..color = color;
+    final paint = paintCreator(color);
     final parentSize = parent.bounds.size;
     final rectSize = Size(parentSize.width, parentSize.height);
     final horizontalSpacing = rectSize.width / _starsInRow;

@@ -5,7 +5,7 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
 final class MapleLeafPainter extends CustomElementsPainter {
-  MapleLeafPainter(super.properties, super.aspectRatio);
+  const MapleLeafPainter(super.properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagCanProperties.aspectRatio;
@@ -16,7 +16,6 @@ final class MapleLeafPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
@@ -166,7 +165,7 @@ final class MapleLeafPainter extends CustomElementsPainter {
 
     canvas
       ..translate(center.dx, center.dy)
-      ..drawPath(path, colorPaint);
+      ..drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
   }

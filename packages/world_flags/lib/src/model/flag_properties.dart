@@ -1,5 +1,6 @@
 import "package:flutter/foundation.dart";
 
+import "../constants/flag_constants.dart";
 import "colors_properties.dart";
 import "elements/elements_properties.dart";
 import "stripe_orientation.dart";
@@ -8,7 +9,7 @@ import "stripe_orientation.dart";
 class FlagProperties {
   const FlagProperties(
     this.stripeColors, {
-    this.aspectRatio = 3 / 2,
+    this.aspectRatio = FlagConstants.defaultAspectRatio,
     this.stripeOrientation = StripeOrientation.horizontal,
     this.elementsProperties,
     this.url = "",

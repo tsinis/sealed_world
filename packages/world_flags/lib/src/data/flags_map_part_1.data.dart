@@ -498,31 +498,40 @@ const flagJeyProperties = FlagProperties(
 
 /// Flag properties of country Guam (GU).
 const flagGumProperties = FlagProperties(
-  [ColorsProperties(Color(0xffC62139))],
+  [
+    ColorsProperties(Color(0xffC62139)),
+    ColorsProperties(Color(0xff00297B), ratio: 19),
+    ColorsProperties(Color(0xffC62139)),
+  ],
   aspectRatio: 41 / 22,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffC62139),
+      otherColors: [
+        Color(0xffadd2d9),
+        Color(0xffcbe0e5),
+        Color(0xff00297B),
+        Color(0xff179a3b),
+        Color(0xffa79270),
+        Color(0xffbd0728),
+        Color(0xff239e46),
+        Color(0xfffdf9ff),
+        Color(0xffa68861),
+        Color(0xffffffff),
+        Color(0xfffdf9a1),
+      ],
+      heightFactor: 0.52,
+      widthFactor: 0.18,
+    ),
     ElementsProperties(
-      Color(0xff00297B),
-      shape: Rectangle(aspectRatio: 43 / 22),
-      heightFactor: 36 / 40,
-      child: CustomElementsProperties(
-        Color(0xffC62139),
-        otherColors: [
-          Color(0xff00297B),
-          Color(0xffcbe0e5),
-          Color(0xffadd2d9),
-          Color(0xfffdf9a1),
-          Color(0xff179a3b),
-          Color(0xffa79270),
-          Color(0xffbd0728),
-          Color(0xff239e46),
-          Color(0xfffdf9ff),
-          Color(0xffa68861),
-          Color(0xffffffff),
-        ],
-        heightFactor: 38 / 40,
-        widthFactor: 76 / 78,
-      ),
+      Color(0xffC62139),
+      shape: Rectangle(aspectRatio: 0.045),
+      offset: Offset(-1, 0),
+    ),
+    ElementsProperties(
+      Color(0xffC62139),
+      shape: Rectangle(aspectRatio: 0.045),
+      offset: Offset(1, 0),
     ),
   ],
   url: "https://www.vexilla-mundi.com/guam/guam_sheet.png",
@@ -787,12 +796,13 @@ const flagKwtProperties = FlagProperties(
       shape: Triangle(),
       offset: Offset(-1, -1),
       widthFactor: 0.38,
-      child: ElementsProperties(
-        Color(0xffffffff),
-        shape: Rectangle(aspectRatio: 1),
-        offset: Offset(1.333, 0),
-        heightFactor: 1 / 3,
-      ),
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      offset: Offset(1, 0),
+      heightFactor: 1 / 3,
+      widthFactor: 0.75,
     ),
   ],
   url:
@@ -1050,15 +1060,15 @@ const flagStpProperties = FlagProperties(
 
 /// Flag properties of country Seychelles (SC).
 const flagSycProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff003d88)),
-    ColorsProperties(Color(0xfffcd955)),
-    ColorsProperties(Color(0xffd92223)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff007A3A)),
-  ],
+  [ColorsProperties(Color(0xff003d88)), ColorsProperties(Color(0xff007A3A))],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffd92223),
+      otherColors: [Color(0xfffcd955), Color(0xffffffff)],
+    ),
+  ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Seychelles_(construction_sheet).svg",
 );
@@ -1125,14 +1135,9 @@ const flagGnqProperties = FlagProperties(
 const flagKorProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffcd2e3a),
-      shape: Ellipse(),
-      heightFactor: 1 / 2,
-    ),
     CustomElementsProperties(
-      Color(0xff0047a0),
-      otherColors: [Color(0xff000000)],
+      Color(0xff000000),
+      otherColors: [Color(0xff0047a0), Color(0xffcd2e3a)],
       heightFactor: 1 / 2,
     ),
   ],
@@ -1148,7 +1153,9 @@ const flagImnProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [Color(0xffF9DD16), Color(0xFF000000)],
-      heightFactor: 75 / 100,
+      offset: Offset(0, 0.15),
+      heightFactor: 0.59,
+      widthFactor: 0.67,
     ),
   ],
   url: "https://www.vexilla-mundi.com/man/man_sheet.png",
@@ -1165,12 +1172,20 @@ const flagKenProperties = FlagProperties(
   ],
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xff000000),
+      Color(0xffffffff),
       otherColors: [
         Color(0xffbb0000),
-        Color(0xffffffff),
+        Color(0xff000000),
+        Color(0xffbb0000),
       ],
-      heightFactor: 48 / 80,
+      heightFactor: 0.71,
+      widthFactor: 0.2,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      heightFactor: 0.3,
+      widthFactor: 0.1,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Kenya_(construction_sheet).png",
@@ -1222,7 +1237,12 @@ const flagKgzProperties = FlagProperties(
 const flagHkgProperties = FlagProperties(
   [ColorsProperties(Color(0xffec1b2e))],
   elementsProperties: [
-    CustomElementsProperties(Color(0xffffffff), heightFactor: 18 / 30),
+    CustomElementsProperties(
+      Color(0xffffffff),
+      offset: Offset(0, -0.02),
+      heightFactor: 0.55,
+      widthFactor: 0.38,
+    ),
   ],
   url: "https://wikipedia.org/wiki/File:HKSARFlagConstructionSheet_2.svg",
 );
@@ -1260,8 +1280,8 @@ const flagSauProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
+      offset: Offset(0, -0.2),
       heightFactor: 1 / 4,
-      widthFactor: 1 / 4,
     ),
   ],
   url:
@@ -1422,7 +1442,26 @@ const flagGeoProperties = FlagProperties(
   ],
   elementsProperties: [
     ElementsProperties(Color(0xffff0000), shape: Rectangle(aspectRatio: 1 / 5)),
-    CustomElementsProperties(Color(0xffff0000), heightFactor: 40 / 200),
+    CustomElementsProperties(
+      Color(0xffff0000),
+      offset: Offset(-0.85, 0.4),
+      heightFactor: 40 / 200,
+    ),
+    CustomElementsProperties(
+      Color(0xffff0000),
+      offset: Offset(0.85, 0.4),
+      heightFactor: 40 / 200,
+    ),
+    CustomElementsProperties(
+      Color(0xffff0000),
+      offset: Offset(-0.85, -0.8),
+      heightFactor: 40 / 200,
+    ),
+    CustomElementsProperties(
+      Color(0xffff0000),
+      offset: Offset(0.85, -0.8),
+      heightFactor: 40 / 200,
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Georgia_(construction_sheet).svg",
@@ -1653,18 +1692,35 @@ const flagHmdProperties = flagAusProperties; // TODO!
 
 /// Flag properties of country Brunei (BN).
 const flagBrnProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xfff7e017), ratio: 3),
-    ColorsProperties(Color(0xffffffff), ratio: 2),
-    ColorsProperties(Color(0xff000000), ratio: 2),
-    ColorsProperties(Color(0xfff7e017), ratio: 3),
-  ],
+  [ColorsProperties(Color(0xfff7e017))],
   aspectRatio: 2,
-  stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   elementsProperties: [
     CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [Color(0xff000000)],
+    ),
+    ElementsProperties(
       Color(0xffcf1126),
-      otherColors: [Color(0xfff7e017)],
+      shape: Rectangle(aspectRatio: 0.18),
+      heightFactor: 0.45,
+    ),
+    ElementsProperties(
+      Color(0xffcf1126),
+      shape: Moon(offset: Offset(0, -0.25)),
+      offset: Offset(0, 0.1),
+      heightFactor: 0.4,
+    ),
+    ElementsProperties(
+      Color(0xffcf1126),
+      shape: Rectangle(aspectRatio: 2),
+      offset: Offset(0, -0.25),
+      heightFactor: 0.1,
+    ),
+    ElementsProperties(
+      Color(0xffcf1126),
+      shape: Moon(radius: 0.95, offset: Offset(0, -0.45)),
+      offset: Offset(0, 0),
+      heightFactor: 0.5,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Brunei_Flag_Official_Measurements.jpg",
@@ -1966,7 +2022,6 @@ const flagMwiProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff41408),
-      otherColors: [Color(0xfff41408), Color(0xff000000)],
       offset: Offset(0, -0.38),
       heightFactor: 0.5,
       widthFactor: 0.42,
@@ -1984,6 +2039,28 @@ const flagNldProperties = FlagProperties(
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_the_Netherlands_(construction_sheet).svg",
+);
+
+/// Flag properties of country United States Virgin Islands (VI).
+const flagVirProperties = FlagProperties(
+  [ColorsProperties(Color(0xffffffff))],
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xfff4c53d),
+      otherColors: [
+        Color(0xfff4c53d),
+        Color(0xff162667),
+        Color(0xffffffff),
+        Color(0xffa60032),
+        Color(0xff369443),
+        Color(0xff010002),
+        Color(0xff0081c6),
+      ],
+      heightFactor: 0.9,
+      widthFactor: 0.6,
+    ),
+  ],
+  url: "https://www.vexilla-mundi.com/virgin_islands/virgin_islands_sheet.png",
 );
 
 /// Flag properties of country Caribbean Netherlands (BQ).
@@ -2147,20 +2224,6 @@ const flagUsaProperties = FlagProperties(
 
 /// Flag properties of country United States Minor Outlying Islands (UM).
 const flagUmiProperties = flagUsaProperties; // TODO!
-
-/// Flag properties of country United States Virgin Islands (VI).
-const flagVirProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff369443)),
-    ColorsProperties(Color(0xfff4c53d)),
-    ColorsProperties(Color(0xff0081c6)),
-    ColorsProperties(Color(0xffa60032)),
-    ColorsProperties(Color(0xff162667)),
-    ColorsProperties(Color(0xff010002)),
-  ],
-  url: "https://www.vexilla-mundi.com/virgin_islands/virgin_islands_sheet.png",
-);
 
 /// Flag properties of country Tuvalu (TV).
 const flagTuvProperties = FlagProperties(

@@ -30,9 +30,6 @@ abstract base class ElementsPainter extends CustomPainter {
   ElementsProperties get property => properties.first;
 
   @protected
-  Paint get colorPaint => Paint()..color = property.mainColor;
-
-  @protected
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size);
 
   @override
@@ -43,6 +40,11 @@ abstract base class ElementsPainter extends CustomPainter {
 
     return child ?? parent;
   }
+
+  @protected
+  Paint paintCreator([Color? color]) => Paint()
+    ..color = color ?? property.mainColor
+    ..isAntiAlias = false;
 
   @protected
   T? shapeType<T extends Shape>([Shape? shape]) {

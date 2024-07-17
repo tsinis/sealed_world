@@ -156,6 +156,18 @@ const flagAsmProperties = FlagProperties(
   [ColorsProperties(Color(0xff00205b))],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffd100),
+      otherColors: [
+        Color(0xff5a3719),
+        Color(0xff7b3c20),
+        Color(0xffbe531c),
+        Color(0xff999999),
+      ],
+      offset: Offset(0.66, -0.15),
+      heightFactor: 0.5,
+      widthFactor: 0.3,
+    ),
     ElementsProperties(
       Color(0xffef3340),
       shape: Triangle(),
@@ -169,16 +181,6 @@ const flagAsmProperties = FlagProperties(
         heightFactor: 0.9,
         widthFactor: 0.9,
         angle: 180,
-        child: CustomElementsProperties(
-          Color(0xffffd100),
-          otherColors: [
-            Color(0xff5a3719),
-            Color(0xff7b3c20),
-            Color(0xffbe531c),
-            Color(0xff999999),
-          ],
-          heightFactor: 0.9,
-        ),
       ),
     ),
   ],
@@ -462,7 +464,11 @@ const flagLbnProperties = FlagProperties(
     ColorsProperties(Color(0xffee161f)),
   ],
   elementsProperties: [
-    CustomElementsProperties(Color(0xff00a850), heightFactor: 1 / 2),
+    CustomElementsProperties(
+      Color(0xff00a850),
+      heightFactor: 0.55,
+      widthFactor: 1 / 2,
+    ),
   ],
   url:
       "https://wikipedia.org/wiki/File:Construction_Sheet_of_Flag_of_Lebanon.gif",
@@ -528,19 +534,27 @@ const flagMsrProperties = FlagProperties(
 
 /// Flag properties of country Antigua and Barbuda (AG).
 const flagAtgProperties = FlagProperties(
-  [ColorsProperties(Color(0xffce1126))],
+  [ColorsProperties(Color(0xff000000))],
   elementsProperties: [
     ElementsProperties(
-      Color(0xff000000),
-      shape: Triangle(),
-      widthFactor: 1,
-      angle: 90,
-      child: CustomElementsProperties(
-        Color(0xfffcd116),
-        otherColors: [Color(0xff0072c6), Color(0xffffffff)],
-        heightFactor: 0.9,
-      ),
+      Color(0xfffcd116),
+      shape: Star(points: 15, radiusFactor: 0.48),
+      offset: Offset(0, -0.27),
+      heightFactor: 0.62,
     ),
+    ElementsProperties(
+      Color(0xff0072c6),
+      shape: Rectangle(),
+      offset: Offset(0, 1),
+      heightFactor: 0.61,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      offset: Offset(0, 1),
+      heightFactor: 0.39,
+    ),
+    CustomElementsProperties(Color(0xffce1126)),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Antigua_and_Barbuda_(construction_sheet).svg",
@@ -624,6 +638,12 @@ const flagColProperties = FlagProperties(
 const flagAtfProperties = FlagProperties(
   [ColorsProperties(Color(0xff002654))],
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      offset: Offset(0.39, 0.27),
+      heightFactor: 0.36,
+      widthFactor: 0.25,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Rectangle(aspectRatio: 1.48),
@@ -671,11 +691,6 @@ const flagAtfProperties = FlagProperties(
           ),
         ),
       ),
-    ),
-    CustomElementsProperties(
-      Color(0xffffffff),
-      offset: Offset(0.39, 0.5),
-      heightFactor: 0.5,
     ),
   ],
   url:
@@ -814,7 +829,7 @@ const flagBenProperties = FlagProperties(
 const flagAtaProperties = FlagProperties(
   [ColorsProperties(Color(0xff3a7dce))],
   elementsProperties: [
-    CustomElementsProperties(Color(0xffffffff), heightFactor: 0.9),
+    CustomElementsProperties(Color(0xffffffff)),
   ],
   url:
       "https://wikipedia.org/wiki/File:Proposed_flag_of_Antarctica_(Graham_Bartram).svg",
@@ -824,8 +839,12 @@ const flagAtaProperties = FlagProperties(
 const flagCypProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
   elementsProperties: [
-    CustomElementsProperties(Color(0xffD57800), heightFactor: 6 / 12),
-    CustomElementsProperties(Color(0xff4E5B31), heightFactor: 3 / 12),
+    CustomElementsProperties(
+      Color(0xff4E5B31),
+      otherColors: [Color(0xffD57800)],
+      offset: Offset(0.05, 0.04),
+      widthFactor: 0.9,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/cyprus/cyprus_sheet.png",
 );
@@ -1018,6 +1037,12 @@ const flagMhlProperties = FlagProperties(
   [ColorsProperties(Color(0xff003893))],
   aspectRatio: 19 / 10,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      otherColors: [Color(0xffDD7500)],
+      heightFactor: 0.02,
+      widthFactor: 0.2,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Star(points: 4, radiusFactor: 0.08),
@@ -1029,11 +1054,6 @@ const flagMhlProperties = FlagProperties(
         shape: Star(points: 24, radiusFactor: 0.45),
         angle: 23,
       ),
-    ),
-    CustomElementsProperties(
-      Color(0xffDD7500),
-      otherColors: [Color(0xffffffff)],
-      heightFactor: 0.96,
     ),
   ],
   url:
@@ -1392,9 +1412,21 @@ const flagVctProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff199a00),
-      offset: Offset(0, 0.1),
-      heightFactor: 26 / 48,
-      angle: 60,
+      offset: Offset(0, 0.55),
+      heightFactor: 0.33,
+      widthFactor: 0.125,
+    ),
+    CustomElementsProperties(
+      Color(0xff199a00),
+      offset: Offset(-0.6, -0.05),
+      heightFactor: 0.33,
+      widthFactor: 0.125,
+    ),
+    CustomElementsProperties(
+      Color(0xff199a00),
+      offset: Offset(0.6, -0.05),
+      heightFactor: 0.33,
+      widthFactor: 0.125,
     ),
   ],
   url:
@@ -1406,6 +1438,12 @@ const flagTklProperties = FlagProperties(
   [ColorsProperties(Color(0xff00247d))],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xfffed100),
+      offset: Offset(0.6, 0),
+      heightFactor: 0.86,
+      widthFactor: 0.94,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Star(),
@@ -1428,11 +1466,6 @@ const flagTklProperties = FlagProperties(
           ),
         ),
       ),
-    ),
-    CustomElementsProperties(
-      Color(0xfffed100),
-      offset: Offset(0.6, 0),
-      heightFactor: 0.9,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Tokelau.svg",
@@ -1536,12 +1569,33 @@ const flagMkdProperties = FlagProperties(
 
 /// Flag properties of country Nepal (NP).
 const flagNplProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffce0000)),
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff000063)),
+  [ColorsProperties(Color.fromARGB(0, 0, 0, 0))],
+  aspectRatio: 41 / 50,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffce0000),
+      otherColors: [Color(0xff000063)],
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Star(points: 12, radiusFactor: 0.6),
+      offset: Offset(-0.51, 0.45),
+      heightFactor: 0.3,
+      angle: 15,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Moon(radius: 1, offset: Offset(0, -0.32)),
+      offset: Offset(-0.51, -0.36),
+      heightFactor: 0.28,
+      child: ElementsProperties(
+        Color(0xffffffff),
+        shape: Star(points: 16, radiusFactor: 0.7),
+        offset: Offset(0, 0.04),
+        heightFactor: 1,
+      ),
+    ),
   ],
-  aspectRatio: 41 / 50, // Yep this one will be fun...
   url: "https://wikipedia.org/wiki/File:Nepal_Flag_Construction.png",
 );
 
@@ -1737,6 +1791,12 @@ const flagUnkProperties = FlagProperties(
   [ColorsProperties(Color(0xff244aa5))],
   aspectRatio: 7 / 5,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffd0a650),
+      offset: Offset(0, -1),
+      heightFactor: 0.55,
+      widthFactor: 1.1,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Star(),
@@ -1773,7 +1833,6 @@ const flagUnkProperties = FlagProperties(
         ),
       ),
     ),
-    CustomElementsProperties(Color(0xffd0a650), heightFactor: 1 / 2),
   ],
   url: "https://www.vexilla-mundi.com/kosovo/kosovo_sheet.png",
 );
@@ -1975,19 +2034,10 @@ const flagBraProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff8e509),
+      otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
       heightFactor: 530 / 700,
-      widthFactor: 0.8,
+      widthFactor: 0.82,
       angle: 30,
-    ),
-    ElementsProperties(
-      Color(0xff2b49a3),
-      shape: Ellipse(),
-      heightFactor: 35 / 530,
-      child: CustomElementsProperties(
-        Color(0xffffffff),
-        otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
-        heightFactor: 1 / 2,
-      ),
     ),
   ],
   url: "https://www.vexilla-mundi.com/brazil/brazil_sheet.png",
@@ -2028,7 +2078,11 @@ const flagNfkProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    CustomElementsProperties(Color(0xff007833), heightFactor: 78 / 92),
+    CustomElementsProperties(
+      Color(0xff007833),
+      heightFactor: 78 / 92,
+      widthFactor: 0.3,
+    ),
   ],
   url: "https://www.vexilla-mundi.com/norfolk_island/norfolk_island_sheet.png",
 );

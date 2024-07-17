@@ -6,7 +6,7 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
 final class DavidStarPainter extends CustomElementsPainter {
-  DavidStarPainter(super.properties, super.aspectRatio);
+  const DavidStarPainter(super.properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagIsrProperties.aspectRatio;
@@ -16,7 +16,6 @@ final class DavidStarPainter extends CustomElementsPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
     final paint = Paint()
       ..color = property.mainColor
@@ -36,10 +35,10 @@ final class DavidStarPainter extends CustomElementsPainter {
 
     canvas.restore();
 
-    return null;
+    return parent;
   }
 
-// ignore: long-parameter-list, TODO! Refactor.
+// ignore: long-parameter-list, TODO! Refactor later.
   void _drawTriangle(
     Canvas canvas,
     Offset center,

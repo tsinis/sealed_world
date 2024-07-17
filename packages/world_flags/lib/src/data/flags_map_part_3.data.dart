@@ -251,6 +251,37 @@ const flagLkaProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffF7B718),
+      otherColors: [Color(0xff000000)],
+      offset: Offset(0.33, -0.14),
+      heightFactor: 0.63,
+      widthFactor: 0.45,
+    ),
+    ElementsProperties(
+      Color(0xffF7B718),
+      shape: Ellipse(),
+      offset: Offset(-0.19, -0.666),
+      heightFactor: 0.1,
+    ),
+    ElementsProperties(
+      Color(0xffF7B718),
+      shape: Ellipse(),
+      offset: Offset(-0.19, 0.666),
+      heightFactor: 0.1,
+    ),
+    ElementsProperties(
+      Color(0xffF7B718),
+      shape: Ellipse(),
+      offset: Offset(0.8, 0.666),
+      heightFactor: 0.1,
+    ),
+    ElementsProperties(
+      Color(0xffF7B718),
+      shape: Ellipse(),
+      offset: Offset(0.8, -0.666),
+      heightFactor: 0.1,
+    ),
     ElementsProperties(
       Color(0xffF7B718),
       shape: Rectangle(),
@@ -265,12 +296,6 @@ const flagLkaProperties = FlagProperties(
       heightFactor: 70 / 750,
       widthFactor: 1,
     ),
-    CustomElementsProperties(
-      Color(0xffF7B718),
-      otherColors: [Color(0xff000000)],
-      heightFactor: 610 / 750,
-      widthFactor: 900 / 1890,
-    ),
   ],
   url: "https://www.vexilla-mundi.com/sri_lanka/sri_lanka_sheet.png",
 );
@@ -279,11 +304,17 @@ const flagLkaProperties = FlagProperties(
 const flagMacProperties = FlagProperties(
   [ColorsProperties(Color(0xff067662))],
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffffff),
+      offset: Offset(-0.1, 0),
+      heightFactor: 0.45,
+      widthFactor: 0.8,
+    ),
     ElementsProperties(
       Color(0xffFFDF1E),
       shape: Star(),
-      offset: Offset(0, -0.512),
-      heightFactor: 0.11,
+      offset: Offset(0, 0.26),
+      heightFactor: 0.24,
       child: ElementsProperties(
         Color(0xffFFDF1E),
         shape: Star(),
@@ -313,7 +344,6 @@ const flagMacProperties = FlagProperties(
         ),
       ),
     ),
-    CustomElementsProperties(Color(0xffffffff), heightFactor: 18 / 30),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Macau.svg",
 );
@@ -328,7 +358,18 @@ const flagMexProperties = FlagProperties(
   aspectRatio: 7 / 4,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    CustomElementsProperties(Color(0xffaf7029), heightFactor: 1 / 4),
+    CustomElementsProperties(
+      Color(0xff9CA168),
+      otherColors: [Color(0xffaf7029)],
+      offset: Offset(0.03, -0.06),
+      heightFactor: 0.3,
+      widthFactor: 0.25,
+    ),
+    ElementsProperties(
+      Color(0xff0C8489),
+      shape: Moon(offset: Offset(0, -0.3)),
+      heightFactor: 0.2,
+    ),
   ],
   url: "https://wikipedia.org/wiki/File:Mexico_flag_construction_sheet.svg",
 );
@@ -587,16 +628,12 @@ const flagTunProperties = FlagProperties(
 const flagAgoProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000)), ColorsProperties(Color(0xff000000))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffFFCD00),
-      shape: Star(),
-      offset: Offset(-0.025, -0.262),
-      heightFactor: 0.155,
-    ),
     CustomElementsProperties(
       Color(0xffFFCD00),
       otherColors: [Color(0xff000000)],
-      heightFactor: 1 / 3,
+      offset: Offset(-0.14, -0.03),
+      heightFactor: 0.26,
+      widthFactor: 0.71,
     ),
   ],
   url: "https://www.vexilla-mundi.com/angola/angola_sheet.png",
@@ -717,19 +754,19 @@ const flagSmrProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffdd00),
       otherColors: [
-        Color(0xff4fd46b),
+        Color(0xffffe100),
         Color(0xff65c7ff),
         Color(0xff65c7ff),
         Color(0xff8fc753),
         Color(0xff8fc753),
         Color(0xffe40000),
         Color(0xffc76e2e),
-        Color(0xffffe100),
+        Color(0xffc76e2e),
         Color(0xff9d4916),
-        Color(0xffb97700),
         Color(0xff006800),
         Color(0xff7d6c00),
         Color(0xff3a9d4f),
+        Color(0xff4fd46b),
         Color(0xff000000),
         Color(0xffac0000),
         Color(0xff68300e),
@@ -797,12 +834,48 @@ const flagSwzProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [
+        Color(0xffffffff),
         Color(0xffa70000),
         Color(0xff333333),
         Color(0xffb3b3b3),
         Color(0xff000000),
       ],
-      heightFactor: 1 / 2,
+      offset: Offset(1, 0),
+      heightFactor: 0.75,
+      widthFactor: 0.27,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      offset: Offset(0, -0.12),
+      heightFactor: 0.01,
+      widthFactor: 0.58,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      offset: Offset(-0.06, -0.04),
+      heightFactor: 0.02,
+      widthFactor: 0.62,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      offset: Offset(0, 0.05),
+      heightFactor: 0.02,
+      widthFactor: 0.8,
+    ),
+    ElementsProperties(
+      Color(0xffb3b3b3),
+      shape: Ellipse(),
+      offset: Offset(0.71, 0.16),
+      heightFactor: 0.11,
+    ),
+    ElementsProperties(
+      Color(0xffb3b3b3),
+      shape: Ellipse(),
+      offset: Offset(-0.71, 0.16),
+      heightFactor: 0.11,
     ),
   ],
   url: "https://www.vexilla-mundi.com/swaziland/swaziland_sheet.png",
@@ -1179,7 +1252,7 @@ const flagPrtProperties = FlagProperties(
       Color(0xffffff00),
       shape: Ellipse(),
       offset: Offset(-0.2, 0),
-      heightFactor: 0.4,
+      heightFactor: 0.5,
       widthFactor: 0.45,
       child: CustomElementsProperties(
         Color(0xff006600),
@@ -1290,8 +1363,7 @@ const flagKirProperties = FlagProperties(
   aspectRatio: 2,
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffffffff),
-      otherColors: [Color(0xfffec74a), Color(0xff000000)],
+      Color(0xfffec74a),
       offset: Offset(0, 0.07),
       heightFactor: 0.5,
       widthFactor: 0.25,
@@ -1312,6 +1384,12 @@ const flagKazProperties = FlagProperties(
   [ColorsProperties(Color(0xff00abc2))],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffec2d),
+      offset: Offset(0.08, 0.3),
+      heightFactor: 0.3,
+      widthFactor: 0.3,
+    ),
     ElementsProperties(
       Color(0xffffec2d),
       shape: Star(points: 32, radiusFactor: 0.666),
@@ -1335,7 +1413,6 @@ const flagKazProperties = FlagProperties(
       offset: Offset(-0.93, 0),
       heightFactor: 0.9,
     ),
-    CustomElementsProperties(Color(0xffffec2d), heightFactor: 0.9),
   ],
   url: "https://www.vexilla-mundi.com/kazakhstan/kazakhstan_sheet.png",
 );
@@ -1575,7 +1652,7 @@ const flagSvkProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [
-        Color(0xffee1c25),
+        Color(0xffffffff),
         Color(0xffee1c25),
         Color(0xffee1c25),
         Color(0xff0b4ea2),
@@ -1614,12 +1691,30 @@ const flagPyfProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffff0000),
       otherColors: [
-        Color(0xff083d9c),
         Color(0xffef7d08),
         Color(0xffde2010),
         Color(0xff000000),
+        Color(0xff083d9c),
       ],
-      heightFactor: 42 / 100,
+      heightFactor: 44 / 100,
+    ),
+    ElementsProperties(
+      Color(0xffff0000),
+      shape: Rectangle(aspectRatio: 0.4),
+      offset: Offset(0, -0.25),
+      heightFactor: 0.24,
+    ),
+    ElementsProperties(
+      Color(0xffff0000),
+      shape: Rectangle(aspectRatio: 0.15),
+      offset: Offset(-0.15, 0),
+      heightFactor: 0.22,
+    ),
+    ElementsProperties(
+      Color(0xffff0000),
+      shape: Rectangle(aspectRatio: 0.15),
+      offset: Offset(0.15, 0),
+      heightFactor: 0.22,
     ),
   ],
   url:
@@ -2096,16 +2191,12 @@ const flagQatProperties = FlagProperties(
 const flagGrlProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffd00c33))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffffffff),
-      shape: Ellipse(),
+    CustomElementsProperties(
+      Color(0xffd00c33),
+      otherColors: [Color(0xffffffff)],
       offset: Offset(-0.222, 0),
       heightFactor: 8 / 12,
       widthFactor: 0.45,
-      child: CustomElementsProperties(
-        Color(0xffffffff),
-        otherColors: [Color(0xffd00c33)],
-      ),
     ),
   ],
   url:
@@ -2154,7 +2245,9 @@ const flagBtnProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xff000000),
       otherColors: [Color(0xffffffff)],
-      heightFactor: 0.8,
+      offset: Offset(0, 0.05),
+      heightFactor: 0.75,
+      widthFactor: 0.666,
     ),
   ],
   url: "https://www.vexilla-mundi.com/bhutan/bhutan_sheet.png",

@@ -1,10 +1,10 @@
 part of "../multi_element_painter.dart";
 
-final class HalfEllipsePainter extends MultiElementPainter {
-  const HalfEllipsePainter(super.properties, super.aspectRatio);
+final class PyfPainter extends MultiElementPainter {
+  const PyfPainter(super.properties, super.aspectRatio);
 
-  @protected
-  double? get originalAspectRatio => FlagConstants.defaultAspectRatio;
+  @override
+  double get originalAspectRatio => flagPyfProperties.aspectRatio;
 
   @override
   FlagParentBounds? paintFlagElements(
@@ -15,14 +15,12 @@ final class HalfEllipsePainter extends MultiElementPainter {
     final center = calculateCenter(size);
     final radius = size.height * property.heightFactor / 2;
     final rect = Rect.fromCircle(center: center, radius: radius);
-    final firstColor = property.mainColor;
-    final lastColor = customColors.firstOrNull ?? firstColor.withOpacity(0);
     final paint = Paint()
       ..shader = LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
-        colors: [firstColor, lastColor],
-        stops: const [0.5, 0.5],
+        colors: [customColors.first, customColors.last],
+        stops: const [0.6, 0.6],
       ).createShader(rect);
 
     canvas.drawOval(rect, paint);

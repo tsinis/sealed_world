@@ -1,13 +1,11 @@
-// ignore_for_file: long-method, CustomElementsPainter is big :-/.
-
 part of "../multi_element_painter.dart";
 
 final class SimpleBirdPainter extends MultiElementPainter {
-  SimpleBirdPainter.alb(super.properties, super.aspectRatio)
+  const SimpleBirdPainter.alb(super.properties, super.aspectRatio)
       : _originalAspectRatio = 7 / 5;
-  SimpleBirdPainter.egy(super.properties, super.aspectRatio)
-      : _originalAspectRatio = 3 / 2;
-  SimpleBirdPainter.mda(super.properties, super.aspectRatio)
+  const SimpleBirdPainter.egy(super.properties, super.aspectRatio)
+      : _originalAspectRatio = FlagConstants.defaultAspectRatio;
+  const SimpleBirdPainter.mda(super.properties, super.aspectRatio)
       : _originalAspectRatio = 2;
 
   final double _originalAspectRatio;
@@ -20,8 +18,14 @@ final class SimpleBirdPainter extends MultiElementPainter {
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
-    List<Color>? otherColors,
   ]) {
+    final otherColors = (property is CustomElementsProperties?)
+        ? (property as CustomElementsProperties?)?.otherColors
+        : properties
+            .whereType<CustomElementsProperties>()
+            .firstOrNull
+            ?.otherColors;
+
     final adjustedSize = ratioAdjustedSize(size, parent: parent);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -66,7 +70,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
           squareSize,
           squareSize / 3,
         ),
-        Paint()..color = topColor,
+        paintCreator(topColor),
       )
       ..drawRect(
         Rect.fromLTWH(
@@ -75,12 +79,13 @@ final class SimpleBirdPainter extends MultiElementPainter {
           squareSize,
           squareSize / 3,
         ),
-        Paint()..color = bottomColor,
+        paintCreator(bottomColor),
       );
 
     return (canvas: canvas, bounds: birdSize, child: property.child);
   }
 
+  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
   Path _drawPath(double width, double height) => Path()
     ..moveTo(width, height * 0.2)
     ..lineTo(width * 0.68, height * 0.2)

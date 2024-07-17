@@ -55,13 +55,13 @@ final class UnionJackPainter extends SimpleShieldPainter {
     final rect = Rect.fromLTWH(0, 0, width, height);
     final length = sqrt(width * width + height * height);
     final line = Rect.fromLTWH(-length / 2, -thickness / 2, length, thickness);
-    final whitePaint = Paint()..color = _whiteColor;
+    final whitePaint = paintCreator(_whiteColor);
     final redPaint = Paint()
       ..color = _redColor
       ..strokeWidth = thickness / 3;
 
     canvas
-      ..drawRect(rect, Paint()..color = _blueColor)
+      ..drawRect(rect, paintCreator(_blueColor))
       ..clipRect(rect, doAntiAlias: false)
       ..save()
       ..translate(width / 2, height / 2)
