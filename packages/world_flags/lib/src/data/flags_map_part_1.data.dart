@@ -796,12 +796,13 @@ const flagKwtProperties = FlagProperties(
       shape: Triangle(),
       offset: Offset(-1, -1),
       widthFactor: 0.38,
-      child: ElementsProperties(
-        Color(0xffffffff),
-        shape: Rectangle(aspectRatio: 1),
-        offset: Offset(1.333, 0),
-        heightFactor: 1 / 3,
-      ),
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      offset: Offset(1, 0),
+      heightFactor: 1 / 3,
+      widthFactor: 0.75,
     ),
   ],
   url:

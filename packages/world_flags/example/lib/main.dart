@@ -46,9 +46,20 @@ class _MainState extends State<Main> {
           child: ListView.separated(
             itemBuilder: (_, index) {
               final country = WorldCountry.list[index];
+              final isFull = fullFlags.contains(country);
 
               return ListTile(
-                title: Text(country.internationalName),
+                leading: Icon(
+                  isFull
+                      ? Icons.open_in_full_rounded
+                      : Icons.close_fullscreen_rounded,
+                ),
+                title: Text(
+                  country.internationalName,
+                  style: TextStyle(
+                    color: isFull ? null : Theme.of(context).disabledColor,
+                  ),
+                ),
                 trailing: ValueListenableBuilder(
                   valueListenable: aspectRatio,
                   builder: (_, ratio, __) => CountryFlag.simplified(
@@ -57,7 +68,9 @@ class _MainState extends State<Main> {
                     aspectRatio: ratio,
                   ),
                 ),
-                onTap: () => SettingsDialog.show(context, country, aspectRatio),
+                onTap: isFull
+                    ? () => SettingsDialog.show(context, country, aspectRatio)
+                    : null,
               );
             },
             separatorBuilder: (_, __) => const Divider(
