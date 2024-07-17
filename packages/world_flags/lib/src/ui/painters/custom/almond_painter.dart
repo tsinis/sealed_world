@@ -1,7 +1,12 @@
 import 'dart:math';
 
 import 'package:flutter/rendering.dart';
-import 'package:world_flags/world_flags.dart';
+
+import '../../../data/flags_map_part_1.data.dart';
+import '../../../data/flags_map_part_3.data.dart';
+import '../../../model/typedefs.dart';
+import '../basic/custom_elements_painter.dart';
+import '../multi_element_painter.dart';
 
 final class AlmondPainter extends CustomElementsPainter {
   const AlmondPainter.gum(super.properties, super.aspectRatio)

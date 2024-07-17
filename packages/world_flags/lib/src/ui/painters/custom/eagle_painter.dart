@@ -1,6 +1,9 @@
 import 'dart:ui';
 
-import 'package:world_flags/world_flags.dart';
+import '../../../data/flags_map_part_2.data.dart';
+import '../../../model/typedefs.dart';
+import '../basic/custom_elements_painter.dart';
+import '../multi_element_painter.dart';
 
 final class EaglePainter extends CustomElementsPainter {
   const EaglePainter(super.properties, super.aspectRatio);

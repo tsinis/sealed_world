@@ -39,6 +39,7 @@ import "src/ui/painters/multi_element_painter.dart";
 export "package:sealed_countries/sealed_countries.dart";
 
 export "src/collections/properties_map.dart";
+export "src/constants/flag_constants.dart";
 export "src/data/flags_map_part_1.data.dart";
 export "src/data/flags_map_part_2.data.dart";
 export "src/data/flags_map_part_3.data.dart";
