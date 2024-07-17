@@ -13,7 +13,7 @@
 - **High Performance**: Optimized CustomPainters ensure smooth rendering across all devices.
 - **Easy to Use**: Simplified API for adding flags with minimal code.
 
-> Package provides 240 out of all 250 small and simplified world country flags.
+> Package provides 250 small and simplified world country flags, but at the same time 2/3 of these flags can be used as full-dimensional flags.
 
 ## Getting Started
 
@@ -57,12 +57,9 @@ class Main extends StatefulWidget {
 
 class _MainState extends State<Main> {
   static const height = 50.0;
+  static const countries = WorldCountry.list;
 
   final _aspectRatio = ValueNotifier<double>(1);
-
-  late final countries = List<WorldCountry>.unmodifiable(
-    WorldCountry.list.where((country) => !notReadyYet.contains(country)),
-  );
 
   @override
   Widget build(BuildContext context) => ColoredBox(
