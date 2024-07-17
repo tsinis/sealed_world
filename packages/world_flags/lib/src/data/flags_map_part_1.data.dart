@@ -1171,12 +1171,20 @@ const flagKenProperties = FlagProperties(
   ],
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xff000000),
+      Color(0xffffffff),
       otherColors: [
         Color(0xffbb0000),
-        Color(0xffffffff),
+        Color(0xff000000),
+        Color(0xffbb0000),
       ],
-      heightFactor: 48 / 80,
+      heightFactor: 0.71,
+      widthFactor: 0.2,
+    ),
+    ElementsProperties(
+      Color(0xffffffff),
+      shape: Rectangle(),
+      heightFactor: 0.3,
+      widthFactor: 0.1,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Kenya_(construction_sheet).png",

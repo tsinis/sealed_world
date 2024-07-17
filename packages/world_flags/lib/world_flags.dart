@@ -15,11 +15,11 @@ import "src/ui/flags/star_flag.dart";
 import "src/ui/flags/triangle_flag.dart";
 import "src/ui/painters/custom/ago_painter.dart";
 import "src/ui/painters/custom/almond_painter.dart";
-import "src/ui/painters/custom/asm_painter.dart";
 import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/btn_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
+import "src/ui/painters/custom/eagle_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
 import "src/ui/painters/custom/irq_painter.dart";
@@ -92,7 +92,7 @@ const smallSimplifiedFlagsMap = {
   CountryAre(): RectangleFlag(flagAreProperties),
   CountryArg(): StarFlag(flagArgProperties),
   CountryArm(): BasicFlag(flagArmProperties),
-  CountryAsm(): BasicFlag(flagAsmProperties, elementsBuilder: AsmPainter.new),
+  CountryAsm(): BasicFlag(flagAsmProperties, elementsBuilder: EaglePainter.new),
   CountryAta(): BasicFlag(flagAtaProperties, elementsBuilder: AtaPainter.new),
   CountryAtf(): BasicFlag(flagAtfProperties, elementsBuilder: AtfPainter.new),
   CountryAtg(): BasicFlag(flagAtgProperties, elementsBuilder: AtgPainter.new),
@@ -245,7 +245,8 @@ const smallSimplifiedFlagsMap = {
   CountryJor(): TriangleFlag(flagJorProperties),
   CountryJpn(): EllipseFlag(flagJpnProperties),
   CountryKaz(): BasicFlag(flagKazProperties, elementsBuilder: KazPainter.new),
-  CountryKen(): BasicFlag(flagKenProperties),
+  CountryKen():
+      BasicFlag(flagKenProperties, elementsBuilder: AlmondPainter.gum),
   CountryKgz(): StarFlag(flagKgzProperties),
   CountryKhm(): RectangleFlag(flagKhmProperties),
   CountryKir():
@@ -273,7 +274,7 @@ const smallSimplifiedFlagsMap = {
       BasicFlag(flagMdaProperties, elementsBuilder: SimpleBirdPainter.mda),
   CountryMdg(): RectangleFlag(flagMdgProperties),
   CountryMdv(): RectangleFlag(flagMdvProperties),
-  CountryMex(): BasicFlag(flagMexProperties),
+  CountryMex(): BasicFlag(flagMexProperties, elementsBuilder: EaglePainter.new),
   CountryMhl(): BasicFlag(flagMhlProperties, elementsBuilder: MhlPainter.new),
   CountryMkd(): BasicFlag(flagMkdProperties, elementsBuilder: MkdPainter.new),
   CountryMli(): BasicFlag(flagMliProperties),

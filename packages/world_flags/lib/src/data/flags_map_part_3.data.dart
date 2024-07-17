@@ -358,7 +358,18 @@ const flagMexProperties = FlagProperties(
   aspectRatio: 7 / 4,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    CustomElementsProperties(Color(0xffaf7029), heightFactor: 1 / 4),
+    CustomElementsProperties(
+      Color(0xff9CA168),
+      otherColors: [Color(0xffaf7029)],
+      offset: Offset(0.03, -0.06),
+      heightFactor: 0.3,
+      widthFactor: 0.25,
+    ),
+    ElementsProperties(
+      Color(0xff0C8489),
+      shape: Moon(offset: Offset(0, -0.3)),
+      heightFactor: 0.2,
+    ),
   ],
   url: "https://wikipedia.org/wiki/File:Mexico_flag_construction_sheet.svg",
 );

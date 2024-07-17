@@ -23,6 +23,7 @@ final class AlmondPainter extends CustomElementsPainter {
     Size size, [
     FlagParentBounds? parent,
   ]) {
+    /// TODO! Refactor with .save() and .restore() methods.
     MultiElementPainter(List.unmodifiable(properties.skip(1)), aspectRatio)
         .paint(canvas, size);
 

@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:world_flags/world_flags.dart';
 
-final class AsmPainter extends CustomElementsPainter {
-  const AsmPainter(super.properties, super.aspectRatio);
+final class EaglePainter extends CustomElementsPainter {
+  const EaglePainter(super.properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagAsmProperties.aspectRatio;
@@ -18,8 +18,8 @@ final class AsmPainter extends CustomElementsPainter {
     MultiElementPainter(List.unmodifiable(properties.skip(1)), aspectRatio)
         .paint(canvas, size);
 
-    final center = calculateCenter(size);
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
+    final center = calculateCenter(size);
     final height = size.height * property.heightFactor;
     final width = adjustedSize.width;
 
@@ -144,18 +144,19 @@ final class AsmPainter extends CustomElementsPainter {
 
     final bounds = eagle.getBounds();
 
-    canvas.translate(
-      center.dx - bounds.center.dx,
-      center.dy - bounds.center.dy,
-    );
-    canvas.drawPath(eagle, paintCreator(customColors.first));
-    canvas.drawPath(
-      path,
-      paintCreator()
-        ..style = PaintingStyle.stroke
-        ..strokeCap = StrokeCap.round
-        ..strokeWidth = height / 10,
-    );
+    canvas
+      ..translate(
+        center.dx - bounds.center.dx,
+        center.dy - bounds.center.dy,
+      )
+      ..drawPath(eagle, paintCreator(customColors.first))
+      ..drawPath(
+        path,
+        paintCreator()
+          ..style = PaintingStyle.stroke
+          ..strokeCap = StrokeCap.round
+          ..strokeWidth = height / 10,
+      );
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }
