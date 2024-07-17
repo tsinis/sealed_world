@@ -33,6 +33,7 @@ import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/taegukgi_painter.dart";
 import "src/ui/painters/custom/tto_line_painter.dart";
 import "src/ui/painters/custom/vct_painter.dart";
+import "src/ui/painters/custom/vir_painter.dart";
 import "src/ui/painters/multi_element_painter.dart";
 
 export "package:sealed_countries/sealed_countries.dart";
@@ -404,7 +405,7 @@ const smallSimplifiedFlagsMap = {
   CountryVen(): StarFlag(flagVenProperties),
   CountryVgb():
       BasicFlag(flagVgbProperties, elementsBuilder: UnionJackPainter.half),
-  CountryVir(): BasicFlag(flagVirProperties),
+  CountryVir(): BasicFlag(flagVirProperties, elementsBuilder: VirPainter.new),
   CountryVnm(): StarFlag(flagVnmProperties),
   CountryVut(): MultiElementFlag(flagVutProperties),
   CountryWlf(): BasicFlag(flagWlfProperties),

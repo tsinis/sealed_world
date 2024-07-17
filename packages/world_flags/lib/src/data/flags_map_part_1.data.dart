@@ -2040,6 +2040,28 @@ const flagNldProperties = FlagProperties(
       "https://wikipedia.org/wiki/File:Flag_of_the_Netherlands_(construction_sheet).svg",
 );
 
+/// Flag properties of country United States Virgin Islands (VI).
+const flagVirProperties = FlagProperties(
+  [ColorsProperties(Color(0xffffffff))],
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xfff4c53d),
+      otherColors: [
+        Color(0xfff4c53d),
+        Color(0xff162667),
+        Color(0xffffffff),
+        Color(0xffa60032),
+        Color(0xff369443),
+        Color(0xff010002),
+        Color(0xff0081c6),
+      ],
+      heightFactor: 0.9,
+      widthFactor: 0.6,
+    ),
+  ],
+  url: "https://www.vexilla-mundi.com/virgin_islands/virgin_islands_sheet.png",
+);
+
 /// Flag properties of country Caribbean Netherlands (BQ).
 const flagBesProperties = flagNldProperties;
 
@@ -2201,20 +2223,6 @@ const flagUsaProperties = FlagProperties(
 
 /// Flag properties of country United States Minor Outlying Islands (UM).
 const flagUmiProperties = flagUsaProperties; // TODO!
-
-/// Flag properties of country United States Virgin Islands (VI).
-const flagVirProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xff369443)),
-    ColorsProperties(Color(0xfff4c53d)),
-    ColorsProperties(Color(0xff0081c6)),
-    ColorsProperties(Color(0xffa60032)),
-    ColorsProperties(Color(0xff162667)),
-    ColorsProperties(Color(0xff010002)),
-  ],
-  url: "https://www.vexilla-mundi.com/virgin_islands/virgin_islands_sheet.png",
-);
 
 /// Flag properties of country Tuvalu (TV).
 const flagTuvProperties = FlagProperties(

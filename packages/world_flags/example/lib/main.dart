@@ -31,9 +31,6 @@ class Main extends StatefulWidget {
 class _MainState extends State<Main> {
   static const height = 18.0;
   final aspectRatio = ValueNotifier<double?>(null);
-  late final countries = List<WorldCountry>.unmodifiable(
-    WorldCountry.list.where((country) => !country.isVir),
-  );
 
   @override
   void dispose() {
@@ -48,7 +45,7 @@ class _MainState extends State<Main> {
           minimum: const EdgeInsets.all(height / 2),
           child: ListView.separated(
             itemBuilder: (_, index) {
-              final country = countries[index];
+              final country = WorldCountry.list[index];
 
               return ListTile(
                 title: Text(country.internationalName),
@@ -67,7 +64,7 @@ class _MainState extends State<Main> {
               height: 1,
               color: Color.fromARGB(33, 133, 133, 133),
             ),
-            itemCount: countries.length,
+            itemCount: WorldCountry.list.length,
             clipBehavior: Clip.none,
           ),
         ),
