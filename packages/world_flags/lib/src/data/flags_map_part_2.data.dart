@@ -1791,6 +1791,12 @@ const flagUnkProperties = FlagProperties(
   [ColorsProperties(Color(0xff244aa5))],
   aspectRatio: 7 / 5,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffd0a650),
+      offset: Offset(0, -1),
+      heightFactor: 0.55,
+      widthFactor: 1.1,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Star(),
@@ -1827,7 +1833,6 @@ const flagUnkProperties = FlagProperties(
         ),
       ),
     ),
-    CustomElementsProperties(Color(0xffd0a650), heightFactor: 1 / 2),
   ],
   url: "https://www.vexilla-mundi.com/kosovo/kosovo_sheet.png",
 );

@@ -413,5 +413,6 @@ const smallSimplifiedFlagsMap = {
   CountryZaf(): MultiElementFlag(flagZafProperties),
   CountryZmb(): MultiElementFlag(flagZmbProperties),
   CountryZwe(): TriangleFlag(flagZweProperties),
-  CountryUnk(): MultiElementFlag(flagUnkProperties),
+  CountryUnk():
+      BasicFlag(flagUnkProperties, elementsBuilder: KosovoPainter.new),
 };

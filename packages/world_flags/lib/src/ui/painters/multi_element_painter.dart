@@ -20,6 +20,7 @@ part "custom/custom_diagonal_painter.dart";
 part "custom/geo_painter.dart";
 part "custom/half_ellipse_painter.dart";
 part "custom/kaz_painter.dart";
+part "custom/kosovo_painter.dart";
 part "custom/mhl_painter.dart";
 part "custom/mkd_painter.dart";
 part "custom/pyf_painter.dart";
