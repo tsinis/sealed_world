@@ -1,4 +1,5 @@
-import 'package:flutter/rendering.dart';
+import 'dart:ui';
+
 import 'package:world_flags/world_flags.dart';
 
 final class AsmPainter extends CustomElementsPainter {

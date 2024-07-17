@@ -17,6 +17,7 @@ import "src/ui/painters/custom/ago_painter.dart";
 import "src/ui/painters/custom/almond_painter.dart";
 import "src/ui/painters/custom/asm_painter.dart";
 import "src/ui/painters/custom/ata_painter.dart";
+import "src/ui/painters/custom/btn_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
@@ -120,7 +121,7 @@ const smallSimplifiedFlagsMap = {
   CountryBra(): BasicFlag(flagBraProperties, elementsBuilder: BraPainter.new),
   CountryBrb(): MultiElementFlag(flagBrbProperties),
   CountryBrn(): BasicFlag(flagBrnProperties, elementsBuilder: BrnPainter.new),
-  CountryBtn(): BasicFlag(flagBtnProperties),
+  CountryBtn(): BasicFlag(flagBtnProperties, elementsBuilder: BtnPainter.new),
   CountryBvt(): MultiElementFlag(flagBvtProperties),
   CountryBwa(): BasicFlag(flagBwaProperties),
   CountryCaf(): MultiElementFlag(flagCafProperties),
@@ -243,7 +244,7 @@ const smallSimplifiedFlagsMap = {
   ),
   CountryJor(): TriangleFlag(flagJorProperties),
   CountryJpn(): EllipseFlag(flagJpnProperties),
-  CountryKaz(): MultiElementFlag(flagKazProperties),
+  CountryKaz(): BasicFlag(flagKazProperties, elementsBuilder: KazPainter.new),
   CountryKen(): BasicFlag(flagKenProperties),
   CountryKgz(): StarFlag(flagKgzProperties),
   CountryKhm(): RectangleFlag(flagKhmProperties),

@@ -1373,6 +1373,12 @@ const flagKazProperties = FlagProperties(
   [ColorsProperties(Color(0xff00abc2))],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffec2d),
+      offset: Offset(0.08, 0.3),
+      heightFactor: 0.3,
+      widthFactor: 0.3,
+    ),
     ElementsProperties(
       Color(0xffffec2d),
       shape: Star(points: 32, radiusFactor: 0.666),
@@ -1396,7 +1402,6 @@ const flagKazProperties = FlagProperties(
       offset: Offset(-0.93, 0),
       heightFactor: 0.9,
     ),
-    CustomElementsProperties(Color(0xffffec2d), heightFactor: 0.9),
   ],
   url: "https://www.vexilla-mundi.com/kazakhstan/kazakhstan_sheet.png",
 );
@@ -2229,7 +2234,9 @@ const flagBtnProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xff000000),
       otherColors: [Color(0xffffffff)],
-      heightFactor: 0.8,
+      offset: Offset(0, 0.05),
+      heightFactor: 0.75,
+      widthFactor: 0.666,
     ),
   ],
   url: "https://www.vexilla-mundi.com/bhutan/bhutan_sheet.png",
