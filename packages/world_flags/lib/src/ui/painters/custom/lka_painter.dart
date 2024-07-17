@@ -15,8 +15,9 @@ final class LkaPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size,
-[
+  FlagParentBounds? paintFlagElements(
+    Canvas canvas,
+    Size size, [
     FlagParentBounds? parent,
   ]) {
     MultiElementPainter(List.unmodifiable(properties.skip(1)), aspectRatio)
