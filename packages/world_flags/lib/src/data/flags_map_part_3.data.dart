@@ -1,5 +1,6 @@
 import "dart:ui";
 
+import "../constants/flag_constants.dart";
 import "../model/colors_properties.dart";
 import "../model/elements/custom_elements_properties.dart";
 import "../model/elements/elements_properties.dart";
@@ -2117,7 +2118,7 @@ const flagQatProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff), ratio: 3696),
     ColorsProperties(Color(0xff8A1538), ratio: 8904),
   ],
-  aspectRatio: 28 / 11,
+  aspectRatio: FlagConstants.maxAspectRatio,
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(

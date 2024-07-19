@@ -1,5 +1,6 @@
 import "dart:ui";
 
+import "../constants/flag_constants.dart";
 import "../model/colors_properties.dart";
 import "../model/elements/custom_elements_properties.dart";
 import "../model/elements/elements_properties.dart";
@@ -1570,7 +1571,7 @@ const flagMkdProperties = FlagProperties(
 /// Flag properties of country Nepal (NP).
 const flagNplProperties = FlagProperties(
   [ColorsProperties(Color.fromARGB(0, 0, 0, 0))],
-  aspectRatio: 41 / 50,
+  aspectRatio: FlagConstants.minAspectRatio,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffce0000),
