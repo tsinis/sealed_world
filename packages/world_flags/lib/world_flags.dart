@@ -305,7 +305,7 @@ const smallSimplifiedFlagsMap = {
   CountryMng(): MultiElementFlag(flagMngProperties),
   CountryMnp(): MultiElementFlag(flagMnpProperties),
   CountryMoz(): TriangleFlag(flagMozProperties),
-  CountryMrt(): MoonFlag(flagMrtProperties),
+  CountryMrt(): StarFlag(flagMrtProperties),
   CountryMsr(): BasicFlag(
     flagMsrProperties,
     elementsBuilder: UnionJackPainter.halfWithoutOutline,

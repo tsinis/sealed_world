@@ -921,15 +921,15 @@ const flagMrtProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFD700),
-      shape: Moon(radius: 1.09, offset: Offset(0, -0.9)),
-      offset: Offset(0, -0.35),
-      heightFactor: 1 / 4,
-      widthFactor: 3 / 6,
+      shape: Star(),
+      offset: Offset(0, -0.2),
+      heightFactor: 0.2,
       child: ElementsProperties(
         Color(0xffFFD700),
-        shape: Star(),
-        offset: Offset(0, -0.75),
-        heightFactor: 0.6,
+        shape: Moon(radius: 1.09, offset: Offset(0, -1)),
+        offset: Offset(0, -0.9),
+        heightFactor: 0.3,
+        widthFactor: 4,
       ),
     ),
   ],

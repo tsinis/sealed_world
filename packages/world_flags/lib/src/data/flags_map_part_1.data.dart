@@ -731,7 +731,7 @@ const flagGtmProperties = FlagProperties(
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
-      Color(0xff406325),
+      Color(0xff67923d),
       shape: Ellipse(),
       heightFactor: 0.35,
       child: ElementsProperties(
