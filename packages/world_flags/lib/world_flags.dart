@@ -252,7 +252,7 @@ const smallSimplifiedFlagsMap = {
     elementsBuilder: UnionJackPainter.halfWithoutOutline,
   ),
   CountryIrl(): BasicFlag(flagIrlProperties),
-  CountryIrn(): EllipseFlag(flagIrnProperties),
+  CountryIrn(): BasicFlag(flagIrnProperties, elementsBuilder: IrnPainter.new),
   CountryIrq(): BasicFlag(flagIrqProperties, elementsBuilder: IrqPainter.new),
   CountryIsl(): MultiElementFlag(flagIslProperties),
   CountryIsr():

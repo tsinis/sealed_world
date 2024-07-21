@@ -1475,23 +1475,26 @@ const flagIrnProperties = FlagProperties(
   ],
   aspectRatio: 7 / 4,
   elementsProperties: [
-    ElementsProperties(
+    CustomElementsProperties(
       Color(0xffda0000),
-      shape: Ellipse(),
-      heightFactor: 0.2,
-      child: ElementsProperties(
-        Color(0xffffffff),
-        shape: Ellipse(),
-        offset: Offset(0, -0.3),
-        heightFactor: 0.75,
-        child: ElementsProperties(
-          Color(0xffda0000),
-          shape: Rectangle(aspectRatio: 0.2),
-        ),
-      ),
+      offset: Offset(-0.01, 0.025),
+      heightFactor: 0.22,
+      widthFactor: 0.17,
     ),
-    CustomElementsProperties(Color(0xffffffff), heightFactor: 1 / 2),
-    CustomElementsProperties(Color(0xffda0000), heightFactor: 63 / 252),
+    ElementsProperties(
+      Color.fromARGB(100, 255, 255, 255),
+      shape: Rectangle(),
+      offset: Offset(0, -0.4),
+      heightFactor: 0.1,
+      widthFactor: 0.98,
+    ),
+    ElementsProperties(
+      Color.fromARGB(100, 255, 255, 255),
+      shape: Rectangle(),
+      offset: Offset(0, 0.4),
+      heightFactor: 0.1,
+      widthFactor: 0.98,
+    ),
   ],
   url: "https://www.crwflags.com/fotw/images/i/ir'.gif",
 );
