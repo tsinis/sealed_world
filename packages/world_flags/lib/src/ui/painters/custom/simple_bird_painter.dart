@@ -1,8 +1,6 @@
 part of "../multi_element_painter.dart";
 
 final class SimpleBirdPainter extends MultiElementPainter {
-  const SimpleBirdPainter.alb(super.properties, super.aspectRatio)
-      : _originalAspectRatio = 7 / 5;
   const SimpleBirdPainter.egy(super.properties, super.aspectRatio)
       : _originalAspectRatio = FlagConstants.defaultAspectRatio;
   const SimpleBirdPainter.mda(super.properties, super.aspectRatio)

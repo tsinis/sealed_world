@@ -14,12 +14,16 @@ import "src/ui/flags/rectangle_flag.dart";
 import "src/ui/flags/star_flag.dart";
 import "src/ui/flags/triangle_flag.dart";
 import "src/ui/painters/custom/ago_painter.dart";
+import "src/ui/painters/custom/alb_painter.dart";
 import "src/ui/painters/custom/almond_painter.dart";
 import "src/ui/painters/custom/ata_painter.dart";
+import "src/ui/painters/custom/blr_painter.dart";
+import "src/ui/painters/custom/brb_painter.dart";
 import "src/ui/painters/custom/btn_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/eagle_painter.dart";
+import "src/ui/painters/custom/eri_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
 import "src/ui/painters/custom/irq_painter.dart";
@@ -103,8 +107,7 @@ const smallSimplifiedFlagsMap = {
   CountryAia():
       BasicFlag(flagAiaProperties, elementsBuilder: UnionJackPainter.half),
   CountryAla(): MultiElementFlag(flagAlaProperties),
-  CountryAlb():
-      BasicFlag(flagAlbProperties, elementsBuilder: SimpleBirdPainter.alb),
+  CountryAlb(): BasicFlag(flagAlbProperties, elementsBuilder: AlbPainter.new),
   CountryAnd(): BasicFlag(
     flagAndProperties,
     elementsBuilder: SimpleShieldPainter.outlinedWithDividers,
@@ -131,7 +134,7 @@ const smallSimplifiedFlagsMap = {
   CountryBhs(): TriangleFlag(flagBhsProperties),
   CountryBih(): MultiElementFlag(flagBihProperties),
   CountryBlm(): BasicFlag(flagBlmProperties),
-  CountryBlr(): RectangleFlag(flagBlrProperties),
+  CountryBlr(): BasicFlag(flagBlrProperties, elementsBuilder: BlrPainter.new),
   CountryBlz(): MultiElementFlag(flagBlzProperties),
   CountryBmu(): BasicFlag(
     flagBmuProperties,
@@ -139,7 +142,7 @@ const smallSimplifiedFlagsMap = {
   ),
   CountryBol(): BasicFlag(flagBolProperties),
   CountryBra(): BasicFlag(flagBraProperties, elementsBuilder: BraPainter.new),
-  CountryBrb(): MultiElementFlag(flagBrbProperties),
+  CountryBrb(): BasicFlag(flagBrbProperties, elementsBuilder: BrbPainter.new),
   CountryBrn(): BasicFlag(flagBrnProperties, elementsBuilder: BrnPainter.new),
   CountryBtn(): BasicFlag(flagBtnProperties, elementsBuilder: BtnPainter.new),
   CountryBvt(): MultiElementFlag(flagBvtProperties),
@@ -189,7 +192,7 @@ const smallSimplifiedFlagsMap = {
   ),
   CountryEgy():
       BasicFlag(flagEgyProperties, elementsBuilder: SimpleBirdPainter.egy),
-  CountryEri(): TriangleFlag(flagEriProperties),
+  CountryEri(): BasicFlag(flagEriProperties, elementsBuilder: EriPainter.new),
   CountryEsh(): MultiElementFlag(flagEshProperties),
   CountryEsp(): BasicFlag(
     flagEspProperties,

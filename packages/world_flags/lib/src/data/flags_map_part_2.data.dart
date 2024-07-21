@@ -2566,8 +2566,9 @@ const flagAlbProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000000),
-      heightFactor: 0.65,
-      widthFactor: 0.45,
+      offset: Offset(0, -0.04),
+      heightFactor: 0.61,
+      widthFactor: 0.4,
     ),
   ],
   url: "https://www.vexilla-mundi.com/albania/albania_sheet.png",

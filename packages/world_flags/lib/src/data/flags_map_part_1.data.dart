@@ -1734,15 +1734,11 @@ const flagBlrProperties = FlagProperties(
   ],
   aspectRatio: 2,
   elementsProperties: [
-    ElementsProperties(
+    CustomElementsProperties(
       Color(0xffffffff),
-      shape: Rectangle(),
-      offset: Offset(-0.99, 0),
+      otherColors: [Color(0xffD22730)],
+      offset: Offset(-0.88, 0),
       widthFactor: 2 / 18,
-      child: CustomElementsProperties(
-        Color(0xffD22730),
-        otherColors: [Color(0xffffffff)],
-      ),
     ),
   ],
   url:

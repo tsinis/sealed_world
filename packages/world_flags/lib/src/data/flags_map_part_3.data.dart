@@ -516,24 +516,11 @@ const flagBrbProperties = FlagProperties(
   ],
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    ElementsProperties(
+    CustomElementsProperties(
       Color(0xff000000),
-      shape: Rectangle(aspectRatio: 1),
-      offset: Offset(0, -0.1),
-      heightFactor: 0.3,
-      child: ElementsProperties(
-        Color(0xffffc726),
-        shape: Rectangle(aspectRatio: 0.8),
-        offset: Offset(0, -1),
-        heightFactor: 0.8,
-      ),
+      heightFactor: 0.49,
+      widthFactor: 1 / 3,
     ),
-    ElementsProperties(
-      Color(0xff000000),
-      shape: Rectangle(aspectRatio: 0.15),
-      heightFactor: 0.45,
-    ),
-    CustomElementsProperties(Color(0xff000000), heightFactor: 1 / 2),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Barbados_(construction_sheet).png",
@@ -1916,32 +1903,17 @@ const flagEriProperties = FlagProperties(
   [ColorsProperties(Color(0xff0BAC24)), ColorsProperties(Color(0xff3C8BDC))],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffFBC724),
+      offset: Offset(-0.68, -0.21),
+      heightFactor: 1 / 2,
+      widthFactor: 1 / 4,
+    ),
     ElementsProperties(
       Color(0xffEB0433),
       shape: Triangle(),
       offset: Offset(-1, -1),
       widthFactor: 1,
-      child: ElementsProperties(
-        Color(0xffFBC724),
-        shape: Ellipse(),
-        offset: Offset(-0.5, 0),
-        heightFactor: 0.48,
-        child: ElementsProperties(
-          Color(0xffEB0433),
-          shape: Ellipse(),
-          offset: Offset(0, -0.1),
-          heightFactor: 0.7,
-          child: ElementsProperties(
-            Color(0xffFBC724),
-            shape: Rectangle(aspectRatio: 0.15),
-          ),
-        ),
-      ),
-    ),
-    CustomElementsProperties(
-      Color(0xffFBC724),
-      offset: Offset(-0.5, 0),
-      heightFactor: 1 / 2,
     ),
   ],
   url:
