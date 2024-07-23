@@ -28,6 +28,7 @@ import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/hrv_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
 import "src/ui/painters/custom/irq_painter.dart";
+import "src/ui/painters/custom/ken_painter.dart";
 import "src/ui/painters/custom/lka_painter.dart";
 import "src/ui/painters/custom/mac_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
@@ -266,8 +267,7 @@ const smallSimplifiedFlagsMap = {
   CountryJor(): TriangleFlag(flagJorProperties),
   CountryJpn(): EllipseFlag(flagJpnProperties),
   CountryKaz(): BasicFlag(flagKazProperties, elementsBuilder: KazPainter.new),
-  CountryKen():
-      BasicFlag(flagKenProperties, elementsBuilder: AlmondPainter.gum),
+  CountryKen(): BasicFlag(flagKenProperties, elementsBuilder: KenPainter.new),
   CountryKgz(): StarFlag(flagKgzProperties),
   CountryKhm(): RectangleFlag(flagKhmProperties),
   CountryKir():
