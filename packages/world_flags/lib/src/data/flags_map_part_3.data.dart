@@ -454,9 +454,9 @@ const flagLieProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffffd83d),
       otherColors: [Color(0xff000000)],
-      offset: Offset(-0.65, -0.6),
-      heightFactor: 2 / 12,
-      widthFactor: 0.15,
+      offset: Offset(-0.56, -0.55),
+      heightFactor: 0.26,
+      widthFactor: 0.2,
     ),
   ],
   url:
@@ -1014,26 +1014,11 @@ const flagKhmProperties = FlagProperties(
   ],
   aspectRatio: 25 / 16,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffffffff),
-      shape: Rectangle(aspectRatio: 1.5),
-      offset: Offset(0, 0.1),
-      heightFactor: 40 / 114,
-      child: ElementsProperties(
-        Color(0xffe00025),
-        shape: Rectangle(aspectRatio: 2.2),
-        offset: Offset(0, -1),
-        heightFactor: 0.4,
-        child: ElementsProperties(
-          Color(0xffffffff),
-          shape: Rectangle(aspectRatio: 0.6),
-        ),
-      ),
-    ),
     CustomElementsProperties(
       Color(0xffffffff),
       otherColors: [Color(0xff000000)],
-      heightFactor: 168 / 360,
+      heightFactor: 0.42,
+      widthFactor: 0.42,
     ),
   ],
   url: "https://www.vexilla-mundi.com/cambodia/cambodia_sheet.png",

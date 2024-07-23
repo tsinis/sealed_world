@@ -29,7 +29,11 @@ import "src/ui/painters/custom/hrv_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
 import "src/ui/painters/custom/irq_painter.dart";
 import "src/ui/painters/custom/ken_painter.dart";
+import "src/ui/painters/custom/khm_painter.dart";
+import "src/ui/painters/custom/lbn_painter.dart";
+import "src/ui/painters/custom/lie_painter.dart";
 import "src/ui/painters/custom/lka_painter.dart";
+import "src/ui/painters/custom/lso_painter.dart";
 import "src/ui/painters/custom/mac_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/npl_painter.dart";
@@ -269,7 +273,7 @@ const smallSimplifiedFlagsMap = {
   CountryKaz(): BasicFlag(flagKazProperties, elementsBuilder: KazPainter.new),
   CountryKen(): BasicFlag(flagKenProperties, elementsBuilder: KenPainter.new),
   CountryKgz(): StarFlag(flagKgzProperties),
-  CountryKhm(): RectangleFlag(flagKhmProperties),
+  CountryKhm(): BasicFlag(flagKhmProperties, elementsBuilder: KhmPainter.new),
   CountryKir():
       BasicFlag(flagKirProperties, elementsBuilder: HalfEllipsePainter.new),
   CountryKna(): MultiElementFlag(flagKnaProperties),
@@ -277,13 +281,13 @@ const smallSimplifiedFlagsMap = {
       BasicFlag(flagKorProperties, elementsBuilder: TaegukgiPainter.new),
   CountryKwt(): MultiElementFlag(flagKwtProperties),
   CountryLao(): EllipseFlag(flagLaoProperties),
-  CountryLbn(): BasicFlag(flagLbnProperties, elementsBuilder: PinePainter.new),
+  CountryLbn(): BasicFlag(flagLbnProperties, elementsBuilder: LbnPainter.new),
   CountryLbr(): RectangleFlag(flagLbrProperties),
   CountryLby(): MoonFlag(flagLbyProperties),
   CountryLca(): RectangleFlag(flagLcaProperties),
-  CountryLie(): RectangleFlag(flagLieProperties),
+  CountryLie(): BasicFlag(flagLieProperties, elementsBuilder: LiePainter.new),
   CountryLka(): BasicFlag(flagLkaProperties, elementsBuilder: LkaPainter.new),
-  CountryLso(): TriangleFlag(flagLsoProperties),
+  CountryLso(): BasicFlag(flagLsoProperties, elementsBuilder: LsoPainter.new),
   CountryLtu(): BasicFlag(flagLtuProperties),
   CountryLux(): BasicFlag(flagLuxProperties),
   CountryLva(): BasicFlag(flagLvaProperties),

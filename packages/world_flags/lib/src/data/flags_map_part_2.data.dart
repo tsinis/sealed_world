@@ -467,8 +467,8 @@ const flagLbnProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff00a850),
-      heightFactor: 0.55,
-      widthFactor: 1 / 2,
+      heightFactor: 0.5,
+      widthFactor: 0.36,
     ),
   ],
   url:

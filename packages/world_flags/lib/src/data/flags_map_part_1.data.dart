@@ -1989,9 +1989,9 @@ const flagLsoProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xff000000),
       otherColors: [Color(0xffffffff)],
-      offset: Offset(0.4, 0.3),
-      heightFactor: 0.3,
-      widthFactor: 0.2,
+      offset: Offset(0, 0.01),
+      heightFactor: 0.37,
+      widthFactor: 0.27,
       angle: 270,
     ),
   ],
