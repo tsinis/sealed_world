@@ -1567,6 +1567,12 @@ const flagPngProperties = FlagProperties(
   aspectRatio: 4 / 3,
   stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffffcc00),
+      offset: Offset(0.35, -0.24),
+      heightFactor: 0.51,
+      widthFactor: 0.36,
+    ),
     ElementsProperties(
       Color(0xffffffff),
       shape: Star(),
@@ -1596,18 +1602,6 @@ const flagPngProperties = FlagProperties(
           ),
         ),
       ),
-    ),
-    ElementsProperties(
-      Color(0xffffcc00),
-      shape: Star(points: 4),
-      offset: Offset(0.4, -0.3),
-      heightFactor: 64 / 144,
-      angle: 40,
-    ),
-    CustomElementsProperties(
-      Color(0xffffcc00),
-      offset: Offset(0.5, 0.5),
-      heightFactor: 64 / 144,
     ),
   ],
   url:

@@ -712,6 +712,13 @@ const flagVnmProperties = FlagProperties(
 const flagZmbProperties = FlagProperties(
   [ColorsProperties(Color(0xff009E49))],
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffFCAD56),
+      otherColors: [Color(0xff000000)],
+      offset: Offset(0.65, -0.65),
+      heightFactor: 42 / 224,
+      widthFactor: 0.333,
+    ),
     ElementsProperties(
       Color(0xffEF3340),
       shape: Rectangle(aspectRatio: 0.8333),
@@ -727,18 +734,6 @@ const flagZmbProperties = FlagProperties(
           offset: Offset(1, 0),
         ),
       ),
-    ),
-    ElementsProperties(
-      Color(0xffFCAD56),
-      shape: Star(points: 2, radiusFactor: 0.2),
-      offset: Offset(0.65, -0.7),
-      heightFactor: 0.4,
-    ),
-    CustomElementsProperties(
-      Color(0xffFCAD56),
-      otherColors: [Color(0xff000000)],
-      offset: Offset(0.94, -0.8),
-      heightFactor: 42 / 224,
     ),
   ],
   url:
@@ -1150,6 +1145,12 @@ const flagTjkProperties = FlagProperties(
   ],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffF8C400),
+      offset: Offset(0, 0.07),
+      heightFactor: 0.2,
+      widthFactor: 0.18,
+    ),
     ElementsProperties(
       Color(0xffF8C400),
       shape: Star(),
@@ -1192,13 +1193,6 @@ const flagTjkProperties = FlagProperties(
         ),
       ),
     ),
-    ElementsProperties(
-      Color(0xffF8C400),
-      shape: Star(points: 3, radiusFactor: 0.25),
-      offset: Offset(0, 0.2),
-      heightFactor: 0.3,
-    ),
-    CustomElementsProperties(Color(0xffF8C400), heightFactor: 0.3),
   ],
   url: "https://www.vexilla-mundi.com/tajikistan/tajikistan_sheet.png",
 );
