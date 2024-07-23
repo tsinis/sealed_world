@@ -39,9 +39,13 @@ import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/npl_painter.dart";
 import "src/ui/painters/custom/pine_painter.dart";
 import "src/ui/painters/custom/sau_painter.dart";
+import "src/ui/painters/custom/srb_painter.dart";
+import "src/ui/painters/custom/svk_painter.dart";
+import "src/ui/painters/custom/svn_painter.dart";
 import "src/ui/painters/custom/syc_painter.dart";
 import "src/ui/painters/custom/taegukgi_painter.dart";
 import "src/ui/painters/custom/tto_line_painter.dart";
+import "src/ui/painters/custom/vat_painter.dart";
 import "src/ui/painters/custom/vct_painter.dart";
 import "src/ui/painters/custom/vir_painter.dart";
 import "src/ui/painters/multi_element_painter.dart";
@@ -377,21 +381,12 @@ const smallSimplifiedFlagsMap = {
   ),
   CountrySom(): StarFlag(flagSomProperties),
   CountrySpm(): BasicFlag(flagSpmProperties),
-  CountrySrb(): BasicFlag(
-    flagSrbProperties,
-    elementsBuilder: SimpleShieldPainter.withDividers,
-  ),
+  CountrySrb(): BasicFlag(flagSrbProperties, elementsBuilder: SrbPainter.new),
   CountrySsd(): TriangleFlag(flagSsdProperties),
   CountryStp(): MultiElementFlag(flagStpProperties),
   CountrySur(): StarFlag(flagSurProperties),
-  CountrySvk(): BasicFlag(
-    flagSvkProperties,
-    elementsBuilder: SimpleShieldPainter.outlinedWithDividers,
-  ),
-  CountrySvn(): BasicFlag(
-    flagSvnProperties,
-    elementsBuilder: SimpleShieldPainter.withoutDividers,
-  ),
+  CountrySvk(): BasicFlag(flagSvkProperties, elementsBuilder: SvkPainter.new),
+  CountrySvn(): BasicFlag(flagSvnProperties, elementsBuilder: SvnPainter.new),
   CountrySwe(): RectangleFlag(flagSweProperties),
   CountrySwz():
       BasicFlag(flagSwzProperties, elementsBuilder: AlmondPainter.swz),
@@ -405,7 +400,7 @@ const smallSimplifiedFlagsMap = {
   CountryTha(): BasicFlag(flagThaProperties),
   CountryTjk(): BasicFlag(flagTjkProperties, elementsBuilder: TjkPainter.new),
   CountryTkl(): BasicFlag(flagTklProperties, elementsBuilder: TklPainter.new),
-  CountryTkm(): MultiElementFlag(flagTkmProperties),
+  CountryTkm(): BasicFlag(flagTkmProperties, elementsBuilder: TkmPainter.new),
   CountryTls(): TriangleFlag(flagTlsProperties),
   CountryTon(): MultiElementFlag(flagTonProperties),
   CountryTto():
@@ -424,7 +419,7 @@ const smallSimplifiedFlagsMap = {
   CountryUsa():
       BasicFlag(flagUsaProperties, elementsBuilder: UsaStarsPainter.new),
   CountryUzb(): MoonFlag(flagUzbProperties),
-  CountryVat(): BasicFlag(flagVatProperties),
+  CountryVat(): BasicFlag(flagVatProperties, elementsBuilder: VatPainter.new),
   CountryVct(): BasicFlag(flagVctProperties, elementsBuilder: VctPainter.new),
   CountryVen(): StarFlag(flagVenProperties),
   CountryVgb():
