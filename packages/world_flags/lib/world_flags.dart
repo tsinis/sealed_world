@@ -39,6 +39,7 @@ import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/npl_painter.dart";
 import "src/ui/painters/custom/pine_painter.dart";
 import "src/ui/painters/custom/sau_painter.dart";
+import "src/ui/painters/custom/smr_painter.dart";
 import "src/ui/painters/custom/srb_painter.dart";
 import "src/ui/painters/custom/svk_painter.dart";
 import "src/ui/painters/custom/svn_painter.dart";
@@ -375,10 +376,7 @@ const smallSimplifiedFlagsMap = {
   CountrySlb(): MultiElementFlag(flagSlbProperties),
   CountrySle(): BasicFlag(flagSleProperties),
   CountrySlv(): EllipseFlag(flagSlvProperties),
-  CountrySmr(): BasicFlag(
-    flagSmrProperties,
-    elementsBuilder: SimpleShieldPainter.outlinedWithoutDividers,
-  ),
+  CountrySmr(): BasicFlag(flagSmrProperties, elementsBuilder: SmrPainter.new),
   CountrySom(): StarFlag(flagSomProperties),
   CountrySpm(): BasicFlag(flagSpmProperties),
   CountrySrb(): BasicFlag(flagSrbProperties, elementsBuilder: SrbPainter.new),
