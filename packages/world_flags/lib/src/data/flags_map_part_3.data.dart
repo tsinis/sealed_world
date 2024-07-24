@@ -1793,6 +1793,39 @@ const flagCymProperties = FlagProperties(
   url: "https://www.vexilla-mundi.com/cayman_islands/cayman_islands_sheet.png",
 );
 
+/// Flag properties of country Spain (ES).
+const flagEspProperties = FlagProperties(
+  [
+    ColorsProperties(Color(0xffAD1519)),
+    ColorsProperties(Color(0xffFABD00), ratio: 2),
+    ColorsProperties(Color(0xffAD1519)),
+  ],
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffad1519),
+      otherColors: [
+        Color(0xffc8b100),
+        Color(0xff005bbf),
+        Color(0xffad1519),
+        Color(0xffc7b500),
+        Color(0xffdb4446),
+        Color(0xff058e6e),
+        Color(0xffcccccc),
+        Color(0xffc7b500),
+        Color(0xffed72aa),
+        Color(0xffffd691),
+        Color(0xff0039f0),
+        Color(0xff000000),
+        Color(0xffffffff),
+      ],
+      offset: Offset(-1 / 3, 0.125),
+      heightFactor: 0.28,
+      widthFactor: 0.25,
+    ),
+  ],
+  url: "https://wikipedia.org/wiki/File:Flag_of_Spain_(construction_sheet).png",
+);
+
 /// Flag properties of country Iraq (IQ).
 const flagIrqProperties = FlagProperties(
   [
@@ -1903,51 +1936,6 @@ const flagFinProperties = FlagProperties(
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_Finland_(construction_sheet).svg",
-);
-
-/// Flag properties of country Spain (ES).
-const flagEspProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffAD1519)),
-    ColorsProperties(Color(0xffFABD00), ratio: 2),
-    ColorsProperties(Color(0xffAD1519)),
-  ],
-  elementsProperties: [
-    CustomElementsProperties(
-      Color(0xffad1519),
-      otherColors: [
-        Color(0xffc8b100),
-        Color(0xffad1519),
-        Color(0xffffffff),
-        Color(0xffc7b500),
-        Color(0xffdb4446),
-        Color(0xff058e6e),
-        Color(0xff005bbf),
-        Color(0xffcccccc),
-        Color(0xffc7b500),
-        Color(0xffed72aa),
-        Color(0xffffd691),
-        Color(0xff0039f0),
-        Color(0xff000000),
-      ],
-      offset: Offset(-1 / 3, 0.1),
-      heightFactor: 0.3,
-      widthFactor: 0.15,
-    ),
-    ElementsProperties(
-      Color(0xffcccccc),
-      shape: Rectangle(aspectRatio: 0.2),
-      offset: Offset(-0.15, 0.17),
-      heightFactor: 0.25,
-    ),
-    ElementsProperties(
-      Color(0xffcccccc),
-      shape: Rectangle(aspectRatio: 0.2),
-      offset: Offset(-0.55, 0.17),
-      heightFactor: 0.25,
-    ),
-  ],
-  url: "https://wikipedia.org/wiki/File:Flag_of_Spain_(construction_sheet).png",
 );
 
 /// Flag properties of country Gambia (GM).

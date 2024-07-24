@@ -24,6 +24,7 @@ import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/eagle_painter.dart";
 import "src/ui/painters/custom/eri_painter.dart";
+import "src/ui/painters/custom/esp_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/hrv_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
@@ -206,10 +207,7 @@ const smallSimplifiedFlagsMap = {
       BasicFlag(flagEgyProperties, elementsBuilder: SimpleBirdPainter.egy),
   CountryEri(): BasicFlag(flagEriProperties, elementsBuilder: EriPainter.new),
   CountryEsh(): MultiElementFlag(flagEshProperties),
-  CountryEsp(): BasicFlag(
-    flagEspProperties,
-    elementsBuilder: SimpleShieldPainter.withoutDividers,
-  ),
+  CountryEsp(): BasicFlag(flagEspProperties, elementsBuilder: EspPainter.new),
   CountryEst(): BasicFlag(flagEstProperties),
   CountryEth(): MultiElementFlag(flagEthProperties),
   CountryFin(): RectangleFlag(flagFinProperties),
