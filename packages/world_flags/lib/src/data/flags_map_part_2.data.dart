@@ -2041,7 +2041,7 @@ const flagBraProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff8e509),
-      otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
+      otherColors: [Color(0xff2b49a3), Color(0xffffffff), Color(0xff229e45)],
       heightFactor: 530 / 700,
       widthFactor: 0.82,
       angle: 30,
