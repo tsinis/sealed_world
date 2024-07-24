@@ -38,6 +38,7 @@ import "src/ui/painters/custom/mac_painter.dart";
 import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/npl_painter.dart";
 import "src/ui/painters/custom/pine_painter.dart";
+import "src/ui/painters/custom/prt_painter.dart";
 import "src/ui/painters/custom/sau_painter.dart";
 import "src/ui/painters/custom/smr_painter.dart";
 import "src/ui/painters/custom/srb_painter.dart";
@@ -352,10 +353,7 @@ const smallSimplifiedFlagsMap = {
   CountryPol(): BasicFlag(flagPolProperties),
   CountryPri(): TriangleFlag(flagPriProperties),
   CountryPrk(): EllipseFlag(flagPrkProperties),
-  CountryPrt(): BasicFlag(
-    flagPrtProperties,
-    elementsBuilder: SimpleShieldPainter.outlinedWithDividers,
-  ),
+  CountryPrt(): BasicFlag(flagPrtProperties, elementsBuilder: PrtPainter.new),
   CountryPry(): EllipseFlag(flagPryProperties),
   CountryPse(): TriangleFlag(flagPseProperties),
   CountryPyf(): BasicFlag(flagPyfProperties, elementsBuilder: PyfPainter.new),

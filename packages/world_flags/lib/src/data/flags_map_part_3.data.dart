@@ -1221,26 +1221,19 @@ const flagPrtProperties = FlagProperties(
   ],
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    ElementsProperties(
+    CustomElementsProperties(
       Color(0xffffff00),
-      shape: Ellipse(),
+      otherColors: [
+        Color(0xffffffff),
+        Color(0xff003399),
+        Color(0xff006600),
+        Color(0xffffff00),
+        Color(0xff000000),
+        Color(0xffff0000),
+      ],
       offset: Offset(-0.2, 0),
       heightFactor: 0.5,
-      widthFactor: 0.45,
-      child: CustomElementsProperties(
-        Color(0xff006600),
-        otherColors: [
-          Color(0xff003399),
-          Color(0xffffffff),
-          Color(0xffffffff),
-          Color(0xffffffff),
-          Color(0xffffffff),
-          Color(0xffffff00),
-          Color(0xff000000),
-          Color(0xffff0000),
-        ],
-        heightFactor: 0.8,
-      ),
+      widthFactor: 0.34,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Portugal_blank_measures.svg",
