@@ -309,8 +309,7 @@ const smallSimplifiedFlagsMap = {
   CountryMli(): BasicFlag(flagMliProperties),
   CountryMlt(): MultiElementFlag(flagMltProperties),
   CountryMmr(): StarFlag(flagMmrProperties),
-  CountryMne():
-      BasicFlag(flagMneProperties, elementsBuilder: SimpleBirdPainter.egy),
+  CountryMne(): BasicFlag(flagMneProperties, elementsBuilder: MnePainter.new),
   CountryMng(): MultiElementFlag(flagMngProperties),
   CountryMnp(): MultiElementFlag(flagMnpProperties),
   CountryMoz(): TriangleFlag(flagMozProperties),

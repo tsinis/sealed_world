@@ -1002,27 +1002,38 @@ const flagLaoProperties = FlagProperties(
 
 /// Flag properties of country Montenegro (ME).
 const flagMneProperties = FlagProperties(
-  [ColorsProperties(Color(0xffd3ae3b))],
+  [
+    ColorsProperties(Color(0xffd3ae3b)),
+    ColorsProperties(Color(0xffc40308), ratio: 20),
+    ColorsProperties(Color(0xffd3ae3b)),
+  ],
   aspectRatio: 2,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffc40308),
-      shape: Rectangle(aspectRatio: 2.1),
-      heightFactor: 54 / 60,
-      widthFactor: 0.4,
-      child: CustomElementsProperties(
+    CustomElementsProperties(
+      Color(0xffd3ae3b),
+      otherColors: [
+        Color(0xff6d8c3e),
         Color(0xffd3ae3b),
-        otherColors: [
-          Color(0xffd3ae3b),
-          Color(0xff1d5e91),
-          Color(0xff6d8c3e),
-          Color(0xffb96b29),
-          Color(0xffc40308),
-          Color(0xffc52126),
-        ],
-        heightFactor: 0.6,
-        widthFactor: 0.4,
-      ),
+        Color(0xffb96b29),
+        Color(0xffc40308),
+        Color(0xffc52126),
+        Color(0xff1d5e91),
+      ],
+      offset: Offset(0.09, -0.1),
+      heightFactor: 0.57,
+      widthFactor: 0.27,
+    ),
+    ElementsProperties(
+      Color(0xffd3ae3b),
+      shape: Rectangle(aspectRatio: 0.05),
+      offset: Offset(-1, 0),
+      heightFactor: 1,
+    ),
+    ElementsProperties(
+      Color(0xffd3ae3b),
+      shape: Rectangle(aspectRatio: 0.05),
+      offset: Offset(1, 0),
+      heightFactor: 1,
     ),
   ],
   url: "https://www.vexilla-mundi.com/montenegro/montenegro_sheet.png",
