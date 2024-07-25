@@ -14,7 +14,7 @@ final class LkaPainter extends CustomElementsPainter {
   double? get originalAspectRatio => flagLkaProperties.aspectRatio;
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

@@ -7,8 +7,10 @@ void main() {
   /// Provide flag decorations globally.
   const extensions = [
     FlagThemeData(
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
+      decoration: BoxDecoration(
+        border: Border.fromBorderSide(BorderSide()),
+        shape: BoxShape.circle,
+      ),
     ),
   ];
 
@@ -29,7 +31,8 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  static const size = kMinInteractiveDimension / 2;
+  static const size =
+      kMinInteractiveDimension / FlagConstants.defaultAspectRatio;
   final aspectRatio = ValueNotifier<double?>(null);
 
   @override

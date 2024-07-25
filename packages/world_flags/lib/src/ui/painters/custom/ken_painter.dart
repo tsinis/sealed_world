@@ -11,7 +11,7 @@ final class KenPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagKenProperties.aspectRatio;
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [
@@ -35,7 +35,13 @@ final class KenPainter extends CustomElementsPainter {
         height * 0.17,
       )
       ..cubicTo(
-          width * 0.91, height * 0.15, width * 0.97, height * 0.09, width, 0)
+        width * 0.91,
+        height * 0.15,
+        width * 0.97,
+        height * 0.09,
+        width,
+        0,
+      )
       ..cubicTo(
         width * 0.92,
         height * 0.04,

@@ -7,7 +7,7 @@ final class TjkPainter extends MultiElementPainter {
   double get originalAspectRatio => flagTjkProperties.aspectRatio;
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

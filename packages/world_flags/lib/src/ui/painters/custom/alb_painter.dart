@@ -11,7 +11,7 @@ final class AlbPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagAlbProperties.aspectRatio;
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [
@@ -139,8 +139,14 @@ final class AlbPainter extends CustomElementsPainter {
         width * 0.8,
         height * 0.46,
       )
-      ..cubicTo(width * 0.79, height * 0.45, width * 0.79, height * 0.43,
-          width * 0.81, height * 0.44)
+      ..cubicTo(
+        width * 0.79,
+        height * 0.45,
+        width * 0.79,
+        height * 0.43,
+        width * 0.81,
+        height * 0.44,
+      )
       ..cubicTo(
         width * 0.84,
         height * 0.49,

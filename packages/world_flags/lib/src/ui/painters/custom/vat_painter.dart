@@ -11,7 +11,7 @@ final class VatPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagVatProperties.aspectRatio;
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

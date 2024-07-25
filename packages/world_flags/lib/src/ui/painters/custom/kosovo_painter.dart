@@ -4,7 +4,7 @@ final class KosovoPainter extends MultiElementPainter {
   const KosovoPainter(super.properties, super.aspectRatio);
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

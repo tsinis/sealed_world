@@ -14,7 +14,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
   static const _radians = -123 * pi / 180;
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [
