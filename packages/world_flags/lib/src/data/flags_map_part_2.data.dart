@@ -1,5 +1,6 @@
 import "dart:ui";
 
+import "../constants/flag_constants.dart";
 import "../model/colors_properties.dart";
 import "../model/elements/custom_elements_properties.dart";
 import "../model/elements/elements_properties.dart";
@@ -466,8 +467,8 @@ const flagLbnProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff00a850),
-      heightFactor: 0.55,
-      widthFactor: 1 / 2,
+      heightFactor: 0.5,
+      widthFactor: 0.36,
     ),
   ],
   url:
@@ -711,6 +712,13 @@ const flagVnmProperties = FlagProperties(
 const flagZmbProperties = FlagProperties(
   [ColorsProperties(Color(0xff009E49))],
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffFCAD56),
+      otherColors: [Color(0xff000000)],
+      offset: Offset(0.65, -0.65),
+      heightFactor: 42 / 224,
+      widthFactor: 0.333,
+    ),
     ElementsProperties(
       Color(0xffEF3340),
       shape: Rectangle(aspectRatio: 0.8333),
@@ -726,18 +734,6 @@ const flagZmbProperties = FlagProperties(
           offset: Offset(1, 0),
         ),
       ),
-    ),
-    ElementsProperties(
-      Color(0xffFCAD56),
-      shape: Star(points: 2, radiusFactor: 0.2),
-      offset: Offset(0.65, -0.7),
-      heightFactor: 0.4,
-    ),
-    CustomElementsProperties(
-      Color(0xffFCAD56),
-      otherColors: [Color(0xff000000)],
-      offset: Offset(0.94, -0.8),
-      heightFactor: 42 / 224,
     ),
   ],
   url:
@@ -921,15 +917,15 @@ const flagMrtProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFD700),
-      shape: Moon(radius: 1.09, offset: Offset(0, -0.9)),
-      offset: Offset(0, -0.35),
-      heightFactor: 1 / 4,
-      widthFactor: 3 / 6,
+      shape: Star(),
+      offset: Offset(0, -0.2),
+      heightFactor: 0.2,
       child: ElementsProperties(
         Color(0xffFFD700),
-        shape: Star(),
-        offset: Offset(0, -0.75),
-        heightFactor: 0.6,
+        shape: Moon(radius: 1.09, offset: Offset(0, -1)),
+        offset: Offset(0, -0.9),
+        heightFactor: 0.3,
+        widthFactor: 4,
       ),
     ),
   ],
@@ -1006,27 +1002,38 @@ const flagLaoProperties = FlagProperties(
 
 /// Flag properties of country Montenegro (ME).
 const flagMneProperties = FlagProperties(
-  [ColorsProperties(Color(0xffd3ae3b))],
+  [
+    ColorsProperties(Color(0xffd3ae3b)),
+    ColorsProperties(Color(0xffc40308), ratio: 20),
+    ColorsProperties(Color(0xffd3ae3b)),
+  ],
   aspectRatio: 2,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffc40308),
-      shape: Rectangle(aspectRatio: 2.1),
-      heightFactor: 54 / 60,
-      widthFactor: 0.4,
-      child: CustomElementsProperties(
+    CustomElementsProperties(
+      Color(0xffd3ae3b),
+      otherColors: [
+        Color(0xff6d8c3e),
         Color(0xffd3ae3b),
-        otherColors: [
-          Color(0xffd3ae3b),
-          Color(0xff1d5e91),
-          Color(0xff6d8c3e),
-          Color(0xffb96b29),
-          Color(0xffc40308),
-          Color(0xffc52126),
-        ],
-        heightFactor: 0.6,
-        widthFactor: 0.4,
-      ),
+        Color(0xffb96b29),
+        Color(0xffc40308),
+        Color(0xffc52126),
+        Color(0xff1d5e91),
+      ],
+      offset: Offset(0.09, -0.1),
+      heightFactor: 0.57,
+      widthFactor: 0.27,
+    ),
+    ElementsProperties(
+      Color(0xffd3ae3b),
+      shape: Rectangle(aspectRatio: 0.05),
+      offset: Offset(-1, 0),
+      heightFactor: 1,
+    ),
+    ElementsProperties(
+      Color(0xffd3ae3b),
+      shape: Rectangle(aspectRatio: 0.05),
+      offset: Offset(1, 0),
+      heightFactor: 1,
     ),
   ],
   url: "https://www.vexilla-mundi.com/montenegro/montenegro_sheet.png",
@@ -1149,6 +1156,12 @@ const flagTjkProperties = FlagProperties(
   ],
   aspectRatio: 2,
   elementsProperties: [
+    CustomElementsProperties(
+      Color(0xffF8C400),
+      offset: Offset(0, 0.07),
+      heightFactor: 0.2,
+      widthFactor: 0.18,
+    ),
     ElementsProperties(
       Color(0xffF8C400),
       shape: Star(),
@@ -1191,13 +1204,6 @@ const flagTjkProperties = FlagProperties(
         ),
       ),
     ),
-    ElementsProperties(
-      Color(0xffF8C400),
-      shape: Star(points: 3, radiusFactor: 0.25),
-      offset: Offset(0, 0.2),
-      heightFactor: 0.3,
-    ),
-    CustomElementsProperties(Color(0xffF8C400), heightFactor: 0.3),
   ],
   url: "https://www.vexilla-mundi.com/tajikistan/tajikistan_sheet.png",
 );
@@ -1570,7 +1576,7 @@ const flagMkdProperties = FlagProperties(
 /// Flag properties of country Nepal (NP).
 const flagNplProperties = FlagProperties(
   [ColorsProperties(Color.fromARGB(0, 0, 0, 0))],
-  aspectRatio: 41 / 50,
+  aspectRatio: FlagConstants.minAspectRatio,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffce0000),
@@ -1686,7 +1692,8 @@ const flagVatProperties = FlagProperties(
         Color(0xff000000),
       ],
       offset: Offset(0.5, 0),
-      heightFactor: 20 / 36,
+      heightFactor: 1 / 3,
+      widthFactor: 1 / 3,
     ),
   ],
   url: "https://www.vexilla-mundi.com/vatican/vatican_sheet.png",
@@ -2034,7 +2041,7 @@ const flagBraProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff8e509),
-      otherColors: [Color(0xff2b49a3), Color(0xff229e45)],
+      otherColors: [Color(0xff2b49a3), Color(0xffffffff), Color(0xff229e45)],
       heightFactor: 530 / 700,
       widthFactor: 0.82,
       angle: 30,
@@ -2457,19 +2464,17 @@ const flagTkmProperties = FlagProperties(
         ),
       ),
     ),
-    ElementsProperties(
-      Color(0xffd22630),
-      shape: Rectangle(aspectRatio: 0.27),
-      offset: Offset(-0.71, 0),
-      child: CustomElementsProperties(
-        Color(0xff00853A),
-        otherColors: [
-          Color(0xffffffff),
-          Color(0xffd22630),
-          Color(0xff383739),
-          Color(0xffffc72c),
-        ],
-      ),
+    CustomElementsProperties(
+      Color(0xff00853A),
+      otherColors: [
+        Color(0xffffffff),
+        Color(0xffd22630),
+        Color(0xff383739),
+        Color(0xffffc72c),
+      ],
+      offset: Offset(-0.58, -0.8),
+      heightFactor: 0.52,
+      widthFactor: 0.15,
     ),
   ],
   url: "https://www.vexilla-mundi.com/turkmenistan/turkmenistan_sheet.png",
@@ -2565,8 +2570,9 @@ const flagAlbProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000000),
-      heightFactor: 0.65,
-      widthFactor: 0.45,
+      offset: Offset(0, -0.04),
+      heightFactor: 0.61,
+      widthFactor: 0.4,
     ),
   ],
   url: "https://www.vexilla-mundi.com/albania/albania_sheet.png",

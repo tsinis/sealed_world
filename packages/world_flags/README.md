@@ -1,7 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/world_flags.svg)](https://pub.dev/packages/world_flags)
 
-# Every country flag is a Flutter Widget
+# Every country flag is a Widget
+
+Flutter library for compact and visually appealing country flag icons. Optimized for rendering sizes from 18 to 48 pixels (height), these flags draw inspiration from circle-flags, OpenMoji, and Twemoji. Over two-thirds of the flags in this library are also suitable for full-scale use.
+
+Each flag is a vector-based CustomPainter, ensuring precise, scalable, and stunning results at any size. By following official color standards and using a declarative design, world_flags allows easy customization of flag shapes, decorations and aspect ratios without losing quality.
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_flags/doc/example.gif)
 
@@ -26,7 +30,7 @@ dependencies:
 
 ### Usage
 
-All you need is a WorldCountry object (either create with factories of that class or just pick some specific, i.e. `CountryDeu()`). Use it in the `CountryFlag` widget. For example:
+All you need is a [WorldCountry](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries#usage) instance (either create with factories of that class or just pick some specific one, i.e. `CountryDeu()`). Use it in the `CountryFlag` widget. For example:
 
 ```dart
 import "package:flutter/material.dart";
@@ -40,7 +44,7 @@ void main() => runApp(
           extensions: const [
             FlagThemeData(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(2)),
+                borderRadius: BorderRadius.all(Radius.circular(4)),
               ),
             ),
           ],
@@ -56,51 +60,43 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  static const height = 50.0;
+  static const size = kMinInteractiveDimension / 2;
   static const countries = WorldCountry.list;
 
-  final _aspectRatio = ValueNotifier<double>(1);
+  final _aspectRatio = ValueNotifier(FlagConstants.defaultAspectRatio);
+
+  @override
+  void dispose() {
+    _aspectRatio.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => ColoredBox(
         color: Theme.of(context).scaffoldBackgroundColor,
         child: SafeArea(
-          minimum: const EdgeInsets.all(height / 2),
-          child: Scaffold(
-            body: LayoutBuilder(
-              builder: (_, constraints) => ValueListenableBuilder<double>(
-                valueListenable: _aspectRatio,
-                builder: (_, aspectRatio, __) => Scaffold(
-                  body: ListView.builder(
-                    itemBuilder: (_, i) {
-                      final country = countries[i];
-
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8),
-                        child: SizedBox(
-                          height: height / 3,
-                          child: ListTile(
-                            title: Text(country.internationalName),
-                            trailing: CountryFlag.simplified(
-                              country,
-                              aspectRatio: aspectRatio,
-                            ),
-                            dense: true,
-                          ),
-                        ),
-                      );
-                    },
-                    itemCount: countries.length,
+          minimum: const EdgeInsets.all(size / 2),
+          child: ValueListenableBuilder(
+            valueListenable: _aspectRatio,
+            builder: (_, aspectRatio, __) => Scaffold(
+              body: ListView.builder(
+                itemBuilder: (_, i) => ListTile(
+                  title: Text(countries[i].internationalName),
+                  trailing: CountryFlag.simplified(
+                    countries[i],
+                    height: size,
+                    aspectRatio: aspectRatio,
                   ),
-                  bottomNavigationBar: SizedBox(
-                    height: height,
-                    child: Slider(
-                      value: aspectRatio,
-                      onChanged: (newRatio) => _aspectRatio.value = newRatio,
-                      min: 1,
-                      max: 2.2,
-                    ),
-                  ),
+                ),
+                itemCount: countries.length,
+              ),
+              bottomNavigationBar: SizedBox(
+                height: size * 2,
+                child: Slider(
+                  value: aspectRatio,
+                  onChanged: (newRatio) => _aspectRatio.value = newRatio,
+                  min: FlagConstants.minAspectRatio,
+                  max: FlagConstants.maxAspectRatio,
                 ),
               ),
             ),
@@ -109,6 +105,8 @@ class _MainState extends State<Main> {
       );
 }
 ```
+
+> TIP: You can also provide your global flag decorations in the theme extensions.
 
 ### Additional information
 

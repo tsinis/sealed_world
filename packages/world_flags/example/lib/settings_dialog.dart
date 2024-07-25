@@ -26,7 +26,6 @@ class SettingsDialog extends StatefulWidget {
 }
 
 class _SettingsDialogState extends State<SettingsDialog> {
-  static const minRatio = 0.8; // TODO! Use Nepal value.
   final opacity = ValueNotifier(1 / 2);
 
   WorldCountry get country => widget.country;
@@ -78,11 +77,11 @@ class _SettingsDialogState extends State<SettingsDialog> {
                       subtitle: Slider(
                         value: ratio ??
                             flagPropertiesMap[country]?.aspectRatio ??
-                            minRatio,
+                            FlagConstants.minAspectRatio,
                         onChanged: (newRatio) =>
                             widget.aspectRatio.value = newRatio,
-                        min: minRatio,
-                        max: 2.2,
+                        min: FlagConstants.minAspectRatio,
+                        max: FlagConstants.maxAspectRatio,
                       ),
                     ),
                     ListTile(

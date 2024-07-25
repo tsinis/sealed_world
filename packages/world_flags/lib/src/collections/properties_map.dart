@@ -282,6 +282,8 @@ const fullFlags = [
   CountryBhs(),
   CountryBih(),
   CountryBlm(), // TODO?
+  CountryBol(), // TODO?
+  CountryBrb(),
   CountryBvt(),
   CountryBwa(),
   CountryCaf(),
@@ -305,6 +307,7 @@ const fullFlags = [
   CountryDji(),
   CountryDnk(),
   CountryDza(),
+  CountryEri(),
   CountryEsh(),
   CountryEst(),
   CountryFin(),
@@ -351,6 +354,7 @@ const fullFlags = [
   CountryMdg(),
   CountryMdv(),
   CountryMhl(),
+  CountryMkd(),
   CountryMli(),
   CountryMmr(),
   CountryMrt(), // TODO!
@@ -371,6 +375,7 @@ const fullFlags = [
   CountryPan(),
   CountryPer(),
   CountryPlw(),
+  CountryPng(), // TODO?
   CountryPol(),
   CountryPri(),
   CountryPrk(),
@@ -392,12 +397,14 @@ const fullFlags = [
   CountrySsd(),
   CountryStp(),
   CountrySur(),
+  CountrySvk(),
   CountrySwe(),
   CountrySyc(),
   CountrySyr(),
   CountryTcd(),
   CountryTgo(),
   CountryTha(),
+  CountryTjk(), // TODO?
   CountryTkl(), // TODO!
   CountryTls(),
   CountryTon(),

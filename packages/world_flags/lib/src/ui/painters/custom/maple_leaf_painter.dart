@@ -11,7 +11,7 @@ final class MapleLeafPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagCanProperties.aspectRatio;
 
   @override
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

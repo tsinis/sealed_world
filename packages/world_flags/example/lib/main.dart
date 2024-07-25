@@ -7,8 +7,9 @@ void main() {
   /// Provide flag decorations globally.
   const extensions = [
     FlagThemeData(
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(4)),
+      ),
     ),
   ];
 
@@ -29,7 +30,7 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  static const height = 18.0;
+  static const size = kMinInteractiveDimension / 2;
   final aspectRatio = ValueNotifier<double?>(null);
 
   @override
@@ -42,35 +43,32 @@ class _MainState extends State<Main> {
   Widget build(BuildContext context) => Material(
         color: Theme.of(context).scaffoldBackgroundColor,
         child: SafeArea(
-          minimum: const EdgeInsets.all(height / 2),
+          minimum: const EdgeInsets.all(size / 2),
           child: ListView.separated(
             itemBuilder: (_, index) {
               final country = WorldCountry.list[index];
               final isFull = fullFlags.contains(country);
+              final style = TextStyle(
+                color: isFull ? null : Theme.of(context).disabledColor,
+              );
 
               return ListTile(
-                leading: Icon(
-                  isFull
-                      ? Icons.open_in_full_rounded
-                      : Icons.close_fullscreen_rounded,
-                ),
-                title: Text(
-                  country.internationalName,
-                  style: TextStyle(
-                    color: isFull ? null : Theme.of(context).disabledColor,
-                  ),
-                ),
+                leading:
+                    Text(country.code, style: style.copyWith(fontSize: 16)),
+                title: Text(country.internationalName, style: style),
+                subtitle: Text(country.namesNative.first.common, style: style),
                 trailing: ValueListenableBuilder(
                   valueListenable: aspectRatio,
                   builder: (_, ratio, __) => CountryFlag.simplified(
                     country,
-                    height: height,
+                    height: size,
                     aspectRatio: ratio,
                   ),
                 ),
                 onTap: isFull
                     ? () => SettingsDialog.show(context, country, aspectRatio)
                     : null,
+                minLeadingWidth: size * 1.5,
               );
             },
             separatorBuilder: (_, __) => const Divider(

@@ -1,8 +1,6 @@
 part of "../multi_element_painter.dart";
 
 final class SimpleBirdPainter extends MultiElementPainter {
-  const SimpleBirdPainter.alb(super.properties, super.aspectRatio)
-      : _originalAspectRatio = 7 / 5;
   const SimpleBirdPainter.egy(super.properties, super.aspectRatio)
       : _originalAspectRatio = FlagConstants.defaultAspectRatio;
   const SimpleBirdPainter.mda(super.properties, super.aspectRatio)
@@ -85,7 +83,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
     return (canvas: canvas, bounds: birdSize, child: property.child);
   }
 
-  // ignore: long-method, CustomElementsPainter have long paintFlagElements :-/.
+  // ignore: long-method, expected for CustomElementsPainters.
   Path _drawPath(double width, double height) => Path()
     ..moveTo(width, height * 0.2)
     ..lineTo(width * 0.68, height * 0.2)
