@@ -19,7 +19,7 @@ dependencies:
   url_strategy: ^0.2.0
   world_countries:
     path: ../
-  world_flags: ^0.0.1
+  world_flags: ^0.1.0
 
 dev_dependencies:
   build_runner: ^2.4.11 # From Google
