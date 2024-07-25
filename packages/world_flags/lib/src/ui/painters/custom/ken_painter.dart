@@ -338,7 +338,7 @@ final class KenPainter extends CustomElementsPainter {
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(spear, mainPaint)
-      ..scale(-1.0, 1.0)
+      ..scale(-1, 1)
       ..translate(-bounds.width * 1.66, 0)
       ..drawPath(spear, mainPaint)
       ..scale(1.333, 1)

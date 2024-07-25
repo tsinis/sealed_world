@@ -96,7 +96,7 @@ final class VatPainter extends CustomElementsPainter {
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(path, paintCreator(customColors.first))
-      ..scale(-1.0, 1.0)
+      ..scale(-1, 1)
       ..translate(-bounds.width, 0)
       ..drawPath(path, paintCreator());
 

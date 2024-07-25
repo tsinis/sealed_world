@@ -1035,7 +1035,7 @@ final class EriPainter extends CustomElementsPainter {
       )
       ..drawPath(tree, paint)
       ..drawPath(path, paint)
-      ..scale(-1.0, 1.0)
+      ..scale(-1, 1)
       ..translate(-bounds.width * 1.66, 0)
       ..drawPath(path, paint)
       ..restore();

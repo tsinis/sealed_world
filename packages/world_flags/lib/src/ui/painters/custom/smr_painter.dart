@@ -1191,7 +1191,7 @@ final class SmrPainter extends CustomElementsPainter {
             center.dy - bounds.center.dy * 0.9,
           )
           ..drawPath(path6, paintCreator(customColors[1]))
-          ..scale(-1.0, 1.0)
+          ..scale(-1, 1)
           ..translate(-bounds.width * 1.75, 0)
           ..drawPath(path6, paintCreator(customColors[1]))
           ..drawRect(rect, paintCreator(customColors[2]))

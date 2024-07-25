@@ -3,45 +3,54 @@ part of "../multi_element_painter.dart";
 final class MkdPainter extends MultiElementPainter {
   const MkdPainter(super.properties, super.aspectRatio);
 
-  static const offsetFactor = 0.5;
-  static const rotationOffset = pi / -31;
-
   @override
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [
     FlagParentBounds? parent,
   ]) {
-    final center = Offset(size.width / 2, size.height / 2);
-    final rayLength = max(size.width, size.height) * sqrt2;
+    final width = size.width;
+    final height = size.height;
+    final center = Offset(width / 2, height / 2);
 
-    for (int i = 0; i < 8; i++) {
-      final startAngle = ((pi / 4) * i - (pi / 8) / 2) + rotationOffset;
-      final endAngle = startAngle + (pi / 8);
+    final firstRay = Path()
+      ..lineTo(width * 0.15, 0)
+      ..lineTo(center.dx, center.dy)
+      ..close();
 
-      final startOffset = Offset(
-        center.dx + (rayLength * offsetFactor) * cos(startAngle + (pi / 8) / 2),
-        center.dy + (rayLength * offsetFactor) * sin(startAngle + (pi / 8) / 2),
-      );
+    final secondRay = Path()
+      ..moveTo(center.dx, center.dy - height * 0.1)
+      ..lineTo(center.dx - width * 0.05, 0)
+      ..lineTo(center.dx + width * 0.05, 0)
+      ..close();
 
-      final startWidePoint = Offset(
-        center.dx + rayLength * cos(startAngle),
-        center.dy + rayLength * sin(startAngle),
-      );
-      final endWidePoint = Offset(
-        center.dx + rayLength * cos(endAngle),
-        center.dy + rayLength * sin(endAngle),
-      );
+    final thirdRay = Path()
+      ..moveTo(width * 0.85, 0)
+      ..lineTo(width, 0)
+      ..lineTo(center.dx, center.dy)
+      ..close();
 
-      final rayPath = Path()
-        ..moveTo(center.dx, center.dy)
-        ..lineTo(startOffset.dx, startOffset.dy)
-        ..lineTo(startWidePoint.dx, startWidePoint.dy)
-        ..lineTo(endWidePoint.dx, endWidePoint.dy)
-        ..close();
+    final fourthRay = Path()
+      ..moveTo(center.dx, center.dy)
+      ..lineTo(width, center.dy - height * 0.1)
+      ..lineTo(width, center.dy + height * 0.1)
+      ..close();
 
-      canvas.drawPath(rayPath, paintCreator());
-    }
+    final paint = paintCreator();
+
+    canvas
+      ..save()
+      ..drawPath(firstRay, paint)
+      ..drawPath(secondRay, paint)
+      ..drawPath(thirdRay, paint)
+      ..drawPath(fourthRay, paint)
+      ..scale(-1, -1)
+      ..translate(-width, -height)
+      ..drawPath(firstRay, paint)
+      ..drawPath(secondRay, paint)
+      ..drawPath(thirdRay, paint)
+      ..drawPath(fourthRay, paint)
+      ..restore();
 
     return parent;
   }
