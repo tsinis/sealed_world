@@ -795,13 +795,13 @@ packages:
     source: path
     version: "1.5.0"
   world_flags:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: world_flags
-      sha256: "70543c6501b30f5776993b703298df67d1f396725916ef29068eba0fe42c1b8a"
+      sha256: "35cad996a382f3cad09cb0d8973a05b23595aa16e57d3e4e5fe4fcd1cdce0c72"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1"
+    version: "0.5.0"
   xml:
     dependency: transitive
     description:
