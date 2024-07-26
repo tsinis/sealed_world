@@ -1,11 +1,11 @@
 // ignore_for_file: missing-test-assertion
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/models/emoji_family.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/country/country_tile.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
 

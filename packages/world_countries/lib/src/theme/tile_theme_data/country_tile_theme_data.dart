@@ -1,4 +1,4 @@
-import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../../models/emoji_family.dart";
 import "../../models/item_properties.dart";

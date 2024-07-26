@@ -4,13 +4,13 @@ import "dart:async";
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/constants/ui_constants.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/models/locale/iso_locale.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/widgets/buttons/clear_button.dart";
 import "package:world_countries/src/widgets/pickers/basic_picker.dart";
+import "package:world_flags/world_flags.dart";
 
 // ignore: avoid-top-level-members-in-tests, it's not a test.
 extension WidgetTesterExtension on WidgetTester {

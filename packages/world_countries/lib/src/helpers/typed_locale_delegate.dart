@@ -1,5 +1,5 @@
 import "package:flutter/widgets.dart";
-import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../extensions/locale_extension.dart";
 import "../extensions/typed_locale_extension.dart";

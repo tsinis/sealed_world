@@ -1,7 +1,7 @@
 import "package:flutter_test/flutter_test.dart";
-import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/models/emoji_family.dart";
 import "package:world_countries/src/widgets/country/emoji_flag.dart";
+import "package:world_flags/world_flags.dart";
 
 void main() => group("$EmojiFlag", () {
       final value = WorldCountry.list.first;
