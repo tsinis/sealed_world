@@ -1,0 +1,15 @@
+appId: world.countries.example
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "search_icon"
+    timeout: 2000
+- assertVisible: "search_icon"
+- longPressOn: "search_icon"
+- waitForAnimationToEnd:
+    timeout: 2000
+- hideKeyboard
+- repeat:
+    times: 36
+    commands:
+      - scroll
