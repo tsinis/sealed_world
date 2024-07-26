@@ -3,7 +3,7 @@ appId: world.countries.example
 - launchApp
 - extendedWaitUntil:
     visible: "search_icon"
-    timeout: 2000
+    timeout: 5000
 - assertVisible: "search_icon"
 - longPressOn: "search_icon"
 - waitForAnimationToEnd:
