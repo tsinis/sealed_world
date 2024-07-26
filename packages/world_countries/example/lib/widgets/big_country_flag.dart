@@ -4,8 +4,8 @@ import "package:world_countries/world_countries.dart";
 
 import "../assets/fonts.gen.dart";
 
-class CountryFlag extends StatelessWidget {
-  const CountryFlag(this.country, {required this.size, super.key});
+class BigCountryFlag extends StatelessWidget {
+  const BigCountryFlag(this.country, {required this.size, super.key});
 
   final WorldCountry country;
   final double size;

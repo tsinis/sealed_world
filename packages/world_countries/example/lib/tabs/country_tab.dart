@@ -4,9 +4,9 @@ import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
-import "../../widgets/country_flag.dart";
 import "../model/world_data.dart";
 import "../widgets/abstractions/world_data_tab.dart";
+import "../widgets/big_country_flag.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
@@ -41,7 +41,7 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             ),
           ],
         ),
-        titleOverlay: AbsorbPointer(child: CountryFlag(data, size: 136)),
+        titleOverlay: AbsorbPointer(child: BigCountryFlag(data, size: 136)),
         titlePadding: const EdgeInsets.only(top: 80, bottom: 8),
         titleMargin: const EdgeInsets.only(top: 100),
         children: <DescriptionTile>[
