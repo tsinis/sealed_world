@@ -1,5 +1,4 @@
-// ignore_for_file: avoid_print
-
+// ignore_for_file: avoid_print, deprecated_member_use_from_same_package
 import "dart:io";
 
 import "package:world_countries/src/constants/package_constants.dart";
@@ -7,6 +6,7 @@ import "package:world_countries/src/models/emoji_family.dart";
 
 class BuildCleaner {
   void checkArguments(List<String> keep) {
+    print("This command is deprecated and will no longer be needed in v2.0.0!");
     final invalidValues = keep.where((arg) => !_fonts.keys.contains(arg));
     if (invalidValues.isNotEmpty) {
       print('\nInvalid arguments: ${invalidValues.join(', ')}\n');

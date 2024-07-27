@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use_from_same_package
+
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
@@ -5,12 +7,12 @@ import "package:world_flags/world_flags.dart";
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
-import "../../models/emoji_family.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
 import "../country/country_picker.dart";
 import "../country/country_tile.dart";
 import "../country/emoji_flag.dart";
+import "../helpers/maybe_widget.dart";
 
 /// A picker widget that displays a list of countries with their phone codes.
 class PhoneCodePicker extends CountryPicker {
@@ -126,10 +128,22 @@ class PhoneCodePicker extends CountryPicker {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Builder(
-                  builder: (context) => EmojiFlag.fromEmojiFamily(
-                    itemProperties.item,
-                    emojiFamily: context.countryTileTheme?.emojiFamily ??
-                        EmojiFamily.twemoji,
+                  builder: (context) => MaybeWidget(
+                    context.countryTileTheme?.emojiFamily,
+                    (emojiFamily) => EmojiFlag.fromEmojiFamily(
+                      itemProperties.item,
+                      emojiFamily: emojiFamily,
+                    ),
+                    orElse: CountryFlag.simplified(
+                      itemProperties.item,
+                      height: 18,
+                      aspectRatio: context.flagTheme?.aspectRatio ??
+                          FlagConstants.defaultAspectRatio,
+                      decoration: context.flagTheme?.decoration ??
+                          const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(4)),
+                          ),
+                    ),
                   ),
                 ),
                 Padding(

@@ -2,6 +2,9 @@ part "emoji_family.g.dart";
 
 /// An enumeration of different emoji families, with their respective licenses
 /// and project information.
+@Deprecated(
+  "Migrate to CountryFlag instead. This constructor will be removed in v2.0.0.",
+)
 enum EmojiFamily {
   /// The Twemoji family.
   twemoji(
@@ -33,6 +36,9 @@ enum EmojiFamily {
     projectUrl: "https://fonts.google.com/noto/specimen/Noto+Color+Emoji",
   );
 
+  @Deprecated(
+    """Migrate to CountryFlag instead. This constructor will be removed in v2.0.0.""",
+  )
   const EmojiFamily({
     required this.codeLicense,
     required this.codeLicenseUrl,
