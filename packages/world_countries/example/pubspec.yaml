@@ -1,11 +1,11 @@
 name: example
 description: A world_countries example application.
 publish_to: none
-version: 1.5.0+1
+version: 1.6.0+1
 
 environment:
-  sdk: ^3.3.0
-  flutter: ">=3.19.0"
+  sdk: ^3.4.4
+  flutter: ">=3.22.3"
 
 dependencies:
   flutter:
