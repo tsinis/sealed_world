@@ -10,9 +10,6 @@ on:
         required: false
         default: false
         type: boolean
-    secrets:
-      CODECOV_TOKEN:
-        required: true
 
 jobs:
   verify-package:
@@ -51,7 +48,7 @@ jobs:
         uses: ValentinVignal/action-dart-analyze@v0.17
         if: ${{ github.event_name == 'pull_request' }}
         with:
-          fail-on: 'format'
+          fail-on: "format"
           token: ${{ secrets.GITHUB_TOKEN }}
           working-directory: ${{ env.relative_path }}
           format: true

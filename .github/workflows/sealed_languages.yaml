@@ -16,5 +16,4 @@ jobs:
     uses: ./.github/workflows/verify_package_workflow.yaml
     with:
       package_name: sealed_languages
-    secrets:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    secrets: inherit

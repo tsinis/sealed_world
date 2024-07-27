@@ -17,5 +17,4 @@ jobs:
     with:
       package_name: world_countries
       is_flutter: true
-    secrets:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    secrets: inherit
