@@ -16,7 +16,6 @@ dependencies:
     sdk: flutter
   path_to_regexp: ^0.4.0
   quiver: ^3.2.1 # From Google
-  url_strategy: ^0.2.0
   world_countries:
     path: ../
 

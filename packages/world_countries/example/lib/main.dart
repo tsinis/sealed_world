@@ -1,6 +1,5 @@
 import "package:flutter/material.dart";
 import "package:flutter_localizations/flutter_localizations.dart";
-import "package:url_strategy/url_strategy.dart";
 import "package:world_countries/world_countries.dart";
 
 import "app_navigator.dart";
@@ -10,10 +9,7 @@ import "routing/parser.dart";
 import "routing/route_state.dart";
 import "theme/color_schemes.g.dart";
 
-void main() {
-  setPathUrlStrategy();
-  runApp(const Main());
-}
+void main() => runApp(const Main());
 
 class Main extends StatefulWidget {
   const Main({super.key});
