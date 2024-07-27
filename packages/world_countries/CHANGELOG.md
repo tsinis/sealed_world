@@ -5,7 +5,7 @@ NEW FEATURES
 The package now uses `CountryFlag` from the [`world_flags`](https://pub.dev/packages/world_flags) package to display flags in the default country and phone code pickers. This approach offers several benefits:
 
 - **More customization:** `CountryFlag` provides greater flexibility for customizing the appearance of flags.
-- **Improved performance:** These flags offer better performance compared to the assets.
+- **Improved performance:** These flags offer better [performance](https://github.com/tsinis/sealed_world/wiki/Performance) compared to the assets.
 - **Platform independence:** They work seamlessly across different platforms.
 - **No assets required:** Since they are drawn using Flutter's `CustomPainter`, they don't require additional platform dependant and heavy font assets.
 
