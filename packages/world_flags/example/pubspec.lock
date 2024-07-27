@@ -224,5 +224,5 @@ packages:
     source: path
     version: "0.6.0"
 sdks:
-  dart: ">=3.4.1 <4.0.0"
-  flutter: ">=3.18.0-18.0.pre.54"
+  dart: ">=3.4.4 <4.0.0"
+  flutter: ">=3.22.3"
