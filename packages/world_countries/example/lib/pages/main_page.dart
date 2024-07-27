@@ -74,7 +74,10 @@ class _MainPageState extends State<MainPage>
                   onLongPress: _onAppBarSearchPressed,
                   child: IconButton(
                     onPressed: controller.openView,
-                    icon: const Icon(Icons.search),
+                    icon: const Icon(
+                      Icons.search,
+                      semanticLabel: "search_icon",
+                    ),
                   ),
                 ),
                 suggestionsBuilder: _anchorPicker,

@@ -1,4 +1,12 @@
+## 0.6.0
+
+NEW FEATURES
+
+- Two new properties in the `FlagThemeData` - width and height. Those will be also used in the `CountryFlag` and in aspect ratio calculation (if no `aspectRatio` is provided) if specified.
+
 ## 0.5.0
+
+NEW FEATURES
 
 - Updated README and example.
 - Updated some simplified world country flags and also a `fullFlags` list.
@@ -39,9 +47,13 @@ Updated simplified flags:
 
 ## 0.1.0
 
+NEW FEATURES
+
 - Provided all 250 small and simplified world country flags, but at the same time 2/3 of these flags can be used as full-dimensional flags (`fullFlags` list).
 
 ## 0.0.1
+
+NEW FEATURES
 
 - Provided 225 out of all 250 small and simplified world country flags.
 

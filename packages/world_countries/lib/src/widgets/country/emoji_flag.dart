@@ -1,5 +1,5 @@
 import "package:flutter/widgets.dart";
-import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../../constants/package_constants.dart";
 import "../../constants/ui_constants.dart";
@@ -21,6 +21,9 @@ import "../../models/emoji_family.dart";
 /// * JoyPixels are also not open-source and free for everyone.
 class EmojiFlag extends Text {
   /// Twemoji representation of the emoji flag.
+  @Deprecated(
+    "Use CountryFlag instead. This constructor will be removed in v2.0.0.",
+  )
   EmojiFlag.twemoji(
     WorldCountry country, {
     double? size,
@@ -49,6 +52,9 @@ class EmojiFlag extends Text {
         );
 
   /// OpenMoji representation of the emoji flag.
+  @Deprecated(
+    "Use CountryFlag instead. This constructor will be removed in v2.0.0.",
+  )
   EmojiFlag.openMoji(
     WorldCountry country, {
     double? size,
@@ -77,6 +83,9 @@ class EmojiFlag extends Text {
         );
 
   /// Noto Emoji Color representation of the emoji flag.
+  @Deprecated(
+    "Use CountryFlag instead. This constructor will be removed in v2.0.0.",
+  )
   EmojiFlag.notoEmoji(
     WorldCountry country, {
     double? size,
@@ -105,6 +114,9 @@ class EmojiFlag extends Text {
         );
 
   /// Adaptive representation of the emoji flag.
+  @Deprecated(
+    "Use CountryFlag instead. This constructor will be removed in v2.0.0.",
+  )
   EmojiFlag.fromEmojiFamily(
     WorldCountry country, {
     EmojiFamily? emojiFamily,

@@ -23,10 +23,15 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  /// Also [CurrencyTileThemeData], [LanguageTileThemeData]...
+  /// Also [CurrencyTileThemeData], [LanguageTileThemeData],
+  /// [CountryTileThemeData].
   static const pickerThemes = <ThemeExtension>[
     PickersThemeData(primary: true), // Applies to all types of pickers.
-    CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
+    /// Specify the flag decoration in the default country/phone-code picker.
+    FlagThemeData(
+      decoration:
+          BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
+    ),
   ];
   final _navigatorKey = GlobalKey<NavigatorState>();
   final _routeParser = TemplateRouteParser(allowedPaths: WorldData.paths);

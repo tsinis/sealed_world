@@ -1,12 +1,12 @@
-// ignore_for_file: missing-test-assertion
+// ignore_for_file: missing-test-assertion, deprecated_member_use_from_same_package, lines_longer_than_80_chars
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/models/emoji_family.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/country/country_tile.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
 
@@ -27,6 +27,15 @@ void main() => group("$PhoneCodePicker", () {
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
           (item) => item.namesNative.first.common,
+        ),
+      );
+
+      testWidgets(
+        "scroll from first to last item and tap with emoji family",
+        (tester) async => tester.testPickerBody(
+          const PhoneCodePicker(),
+          (item) => item.namesNative.first.common,
+          theme: const CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
         ),
       );
 
@@ -89,6 +98,21 @@ void main() => group("$PhoneCodePicker", () {
           SearchAnchor.bar(
             suggestionsBuilder: const PhoneCodePicker().searchSuggestions,
           ),
+        );
+        final tile = find.byType(CountryTile);
+        expect(tile, findsNothing);
+        await tester.tapAndSettle(find.byIcon(Icons.search));
+        expect(tile, findsWidgets);
+        await tester.tapAndSettle(tile.first);
+        expect(tile, findsNothing);
+      });
+
+      testWidgets("searchSuggestions() with emoji family", (tester) async {
+        await tester.pumpMaterialApp(
+          SearchAnchor.bar(
+            suggestionsBuilder: const PhoneCodePicker().searchSuggestions,
+          ),
+          const CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
         );
         final tile = find.byType(CountryTile);
         expect(tile, findsNothing);

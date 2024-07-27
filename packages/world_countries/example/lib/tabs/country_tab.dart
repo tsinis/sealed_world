@@ -1,10 +1,8 @@
 // ignore_for_file: avoid-non-ascii-symbols
 
-import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
-import "../../widgets/country_flag.dart";
 import "../model/world_data.dart";
 import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
@@ -41,7 +39,8 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             ),
           ],
         ),
-        titleOverlay: AbsorbPointer(child: CountryFlag(data, size: 136)),
+        titleOverlay:
+            AbsorbPointer(child: EmojiFlag.platformDefault(data, size: 136)),
         titlePadding: const EdgeInsets.only(top: 80, bottom: 8),
         titleMargin: const EdgeInsets.only(top: 100),
         children: <DescriptionTile>[
@@ -55,26 +54,6 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             icon: Icons.flag_outlined,
             description: "Native Common Name(s)",
           ),
-          if (kIsWeb)
-            DescriptionTile(
-              "Only default flags are available in this web example",
-              icon: Icons.block_outlined,
-              description:
-                  "Build this app on a mobile/desktop device to see the all of them",
-            )
-          else
-            for (final emoji in EmojiFamily.values)
-              DescriptionTile.raw(
-                emoji.projectName,
-                description: "Emoji Flag (Vector)",
-                leading: SizedBox(
-                  width: 24,
-                  child: FittedBox(
-                    fit: BoxFit.fitWidth,
-                    child: EmojiFlag.fromEmojiFamily(data, emojiFamily: emoji),
-                  ),
-                ),
-              ),
           DescriptionTile.raw(
             "Device Default Emoji",
             description: "Emoji Flag",

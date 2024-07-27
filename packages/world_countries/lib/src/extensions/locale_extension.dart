@@ -1,6 +1,6 @@
 import "dart:ui";
 
-import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../models/locale/typed_locale.dart";
 

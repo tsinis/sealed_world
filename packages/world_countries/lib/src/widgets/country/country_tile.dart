@@ -1,11 +1,13 @@
+// ignore_for_file: deprecated_member_use_from_same_package
+
 import "package:flutter/material.dart";
-import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
-import "../../models/emoji_family.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
+import "../helpers/maybe_widget.dart";
 import "emoji_flag.dart";
 
 /// A tile widget that displays information about a world country.
@@ -66,6 +68,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
     Widget? leading,
     Widget? subtitle,
     Widget? title,
+    double? leadingFlagHeight = 18,
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -109,10 +112,22 @@ class CountryTile extends ListItemTile<WorldCountry> {
             padding: const EdgeInsets.only(top: UiConstants.point),
             child: leading ??
                 Builder(
-                  builder: (context) => EmojiFlag.fromEmojiFamily(
-                    country.item,
-                    emojiFamily: context.countryTileTheme?.emojiFamily ??
-                        EmojiFamily.twemoji,
+                  builder: (context) => MaybeWidget(
+                    context.countryTileTheme?.emojiFamily,
+                    (emojiFamily) => EmojiFlag.fromEmojiFamily(
+                      country.item,
+                      emojiFamily: emojiFamily,
+                    ),
+                    orElse: CountryFlag.simplified(
+                      country.item,
+                      height: leadingFlagHeight,
+                      aspectRatio: context.flagTheme?.aspectRatio ??
+                          FlagConstants.defaultAspectRatio,
+                      decoration: context.flagTheme?.decoration ??
+                          const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(4)),
+                          ),
+                    ),
                   ),
                 ),
           ),
@@ -130,6 +145,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
     ItemProperties<WorldCountry> country, {
     Widget? leading,
     Widget? title,
+    double? leadingFlagHeight = 16,
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -171,12 +187,23 @@ class CountryTile extends ListItemTile<WorldCountry> {
                 overflow: TextOverflow.ellipsis,
               ),
           leading: leading ??
-              leading ??
               Builder(
-                builder: (context) => EmojiFlag.fromEmojiFamily(
-                  country.item,
-                  emojiFamily: context.countryTileTheme?.emojiFamily ??
-                      EmojiFamily.twemoji,
+                builder: (context) => MaybeWidget(
+                  context.countryTileTheme?.emojiFamily,
+                  (emojiFamily) => EmojiFlag.fromEmojiFamily(
+                    country.item,
+                    emojiFamily: emojiFamily,
+                  ),
+                  orElse: CountryFlag.simplified(
+                    country.item,
+                    height: leadingFlagHeight,
+                    aspectRatio: context.flagTheme?.aspectRatio ??
+                        FlagConstants.defaultAspectRatio,
+                    decoration: context.flagTheme?.decoration ??
+                        const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(3)),
+                        ),
+                  ),
                 ),
               ),
         );

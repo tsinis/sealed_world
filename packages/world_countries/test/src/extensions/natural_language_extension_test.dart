@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:sealed_countries/sealed_countries.dart";
 import "package:world_countries/src/extensions/natural_language_extension.dart";
+import "package:world_flags/world_flags.dart";
 
 void main() => group("NaturalLanguageExtension ", () {
       final value = NaturalLanguage.list.first;

@@ -3,6 +3,7 @@ import 'package:sealed_countries/sealed_countries.dart';
 
 import '../../world_flags.dart' show smallSimplifiedFlagsMap;
 import '../helpers/extensions/basic_flag_extension_copy_with.dart';
+import '../helpers/extensions/world_flags_build_context_extension.dart';
 import '../interfaces/decorated_flag_interface.dart';
 import 'flags/basic_flag.dart';
 
@@ -46,8 +47,8 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-        width: width,
-        height: height,
+        width: width ?? context.flagTheme?.width,
+        height: height ?? context.flagTheme?.height,
         child: _map[country]?.copyWith(
               decorationPosition: decorationPosition,
               aspectRatio: aspectRatio,

@@ -6,18 +6,29 @@ import "../interfaces/decorated_flag_interface.dart";
 class FlagThemeData extends ThemeExtension<FlagThemeData>
     implements DecoratedFlagInterface {
   const FlagThemeData({
-    this.aspectRatio,
+    double? aspectRatio,
     this.decoration,
     this.decorationPosition,
     this.padding,
-  });
+    this.height,
+    this.width,
+  }) : _aspectRatio = aspectRatio;
+  // TODO: Add asserts for width and height > 0.
 
-  final double? aspectRatio;
   final BoxDecoration? decoration;
 
   /// If not provided - default to [DecorationPosition.foreground].
   final DecorationPosition? decorationPosition;
   final EdgeInsetsGeometry? padding;
+  final double? height;
+  final double? width;
+
+  final double? _aspectRatio;
+
+  double? get aspectRatio => _aspectRatio ?? calculatedAspectRatio;
+  double? get specifiedAspectRatio => _aspectRatio;
+  double? get calculatedAspectRatio =>
+      width == null || height == null ? null : (width ?? 1) / (height ?? 1);
 
   @override
   FlagThemeData copyWith({
@@ -25,36 +36,44 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     BoxDecoration? decoration,
     DecorationPosition? decorationPosition,
     EdgeInsetsGeometry? padding,
+    double? height,
+    double? width,
   }) =>
       FlagThemeData(
-        aspectRatio: aspectRatio ?? this.aspectRatio,
+        aspectRatio: aspectRatio ?? this._aspectRatio,
         decoration: decoration ?? this.decoration,
         decorationPosition: decorationPosition ?? this.decorationPosition,
         padding: padding ?? this.padding,
+        height: height ?? this.height,
+        width: width ?? this.width,
       );
 
   @override
-  String toString() => "FlagThemeData(aspectRatio: $aspectRatio, "
+  String toString() => "FlagThemeData(aspectRatio: $_aspectRatio, "
       "decoration: $decoration, decorationPosition: $decorationPosition, "
-      "padding: $padding)";
+      "padding: $padding, height: $height, width: $width)";
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
     return other is FlagThemeData &&
-        other.aspectRatio == aspectRatio &&
+        other.aspectRatio == _aspectRatio &&
         other.decoration == decoration &&
         other.decorationPosition == decorationPosition &&
-        other.padding == padding;
+        other.padding == padding &&
+        other.height == height &&
+        other.width == width;
   }
 
   @override
   int get hashCode =>
-      aspectRatio.hashCode ^
+      _aspectRatio.hashCode ^
       decoration.hashCode ^
       decorationPosition.hashCode ^
-      padding.hashCode;
+      padding.hashCode ^
+      height.hashCode ^
+      width.hashCode;
 
   @override
   FlagThemeData lerp(

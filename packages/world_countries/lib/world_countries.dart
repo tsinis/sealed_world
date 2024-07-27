@@ -2,8 +2,7 @@
 /// widgets (country, phone, currency pickers, etc.).
 library world_countries;
 
-export "package:sealed_countries/country_translations.dart";
-export "package:sealed_countries/sealed_countries.dart";
+export "package:world_flags/world_flags.dart";
 
 export "src/constants/package_constants.dart";
 export "src/extensions/flutter_emoji_family_extension.dart";

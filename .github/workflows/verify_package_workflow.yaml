@@ -80,7 +80,7 @@ jobs:
 
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
-        run: dart run dart_code_metrics:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib test
+        run: dart run dart_code_linter:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib
 
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
