@@ -105,8 +105,14 @@ void main() => group("$CountryPicker", () {
           ),
         );
         expect(find.byType(CountryPicker), findsOneWidget);
-        expect(find.text(countries.first.emoji), findsOneWidget);
-        expect(find.text(countries.last.emoji), findsNothing);
+        expect(
+          find.text(countries.first.namesNative.first.common),
+          findsNWidgets(2), // TODO: Refactor with semantic label.
+        );
+        expect(
+          find.text(countries.last.namesNative.first.common),
+          findsNothing,
+        );
       });
 
       testWidgets("in $WidgetsApp with sorted via sort param", (tester) async {
@@ -123,8 +129,14 @@ void main() => group("$CountryPicker", () {
         final sortedCountries = List.of(WorldCountry.list)
           ..sort((a, b) => a.population.compareTo(b.population));
         expect(find.byType(CountryPicker), findsOneWidget);
-        expect(find.text(sortedCountries.first.emoji), findsOneWidget);
-        expect(find.text(sortedCountries.last.emoji), findsNothing);
+        expect(
+          find.text(sortedCountries.first.namesNative.first.common),
+          findsNWidgets(2), // TODO: Refactor with semantic label.
+        );
+        expect(
+          find.text(sortedCountries.last.namesNative.first.common),
+          findsNothing,
+        );
       });
 
       testWidgets("in $WidgetsApp with empty countries", (tester) async {
