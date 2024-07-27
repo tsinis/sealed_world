@@ -9,7 +9,7 @@
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_countries/doc/example.gif)
 
-This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in form of compile-time, tree-shakable constant sealed classes with a customizable pickers. This is Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag types in form of color fonts, Twemoji, Noto Color Emoji, OpenMoji) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
+This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in form of compile-time, tree-shakable constant sealed classes with a customizable pickers. This is Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag look) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers.
 
 ### Table of Contents
 
@@ -38,7 +38,7 @@ Or you can just create your own pickers by extending `BasicPicker`.
 
 - `TypedLocaleDelegate` - A locale delegate for automatic translation of pickers. Provides translations including (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 
-- `PickersThemeData`, `CountryTileThemeData`, `CurrencyTileThemeData` and `LanguageTileThemeData` are [theme extensions](https://api.flutter.dev/flutter/material/ThemeExtension-class.html) that you can use in your `ThemeData` to specify global theme to your pickers, themes of your tiles (for example font family for emoji flags or builders).
+- `PickersThemeData`, `FlagThemeData`, `CountryTileThemeData`, `CurrencyTileThemeData` and `LanguageTileThemeData` are [theme extensions](https://api.flutter.dev/flutter/material/ThemeExtension-class.html) that you can use in your `ThemeData` to specify global theme to your pickers, themes of your tiles (for example country flag adjustments or builders).
 
 ### Demo
 
@@ -91,10 +91,13 @@ void main() => runApp(
       MaterialApp(
         home: const MainPage(),
         theme: ThemeData(
-          /// And also [CurrencyTileThemeData], [LanguageTileThemeData]...
+          /// And also [CurrencyTileThemeData], [LanguageTileThemeData], [CountryTileThemeData]...
           extensions: const <ThemeExtension>[
             PickersThemeData(primary: true), // Specify global pickers theme.
-            CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
+            FlagThemeData(
+            decoration:
+                BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
+            ),
           ],
         ),
         localizationsDelegates: const [
@@ -273,7 +276,7 @@ Answer: You can create your own `itemBuilder` with use of `EmojiFlag` widget tha
 
 ```dart
 CountryPicker(
-  itemBuilder: (country, {isDense}) => EmojiFlag.notoEmoji(country.item),
+  itemBuilder: (country, {isDense}) => EmojiFlag.platformDefault(country.item),
 );
 ```
 

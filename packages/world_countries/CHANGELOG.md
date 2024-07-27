@@ -1,6 +1,33 @@
-## 1.5.0
+## 1.6.0
 
-> This is the last minor version update with significant changes for some time. The next steps will be patches at most. Currently working on v2.0.0 which will bring new data and a big feature there, very likely without breaking the existing API.
+NEW FEATURES
+
+The package now uses `CountryFlag` from the [`world_flags`](https://pub.dev/packages/world_flags) package to display flags in the default country and phone code pickers. This approach offers several benefits:
+
+- **More customization:** `CountryFlag` provides greater flexibility for customizing the appearance of flags.
+- **Improved performance:** These flags offer better performance compared to the assets.
+- **Platform independence:** They work seamlessly across different platforms.
+- **No assets required:** Since they are drawn using Flutter's `CustomPainter`, they don't require additional platform dependant and heavy font assets.
+
+> Asset based `EmojiFlag`s are being deprecated, but you can still use them until the next major update, you will be also able to use them after v2.0.0 with `EmojiFlag.custom` if needed.
+
+```dart
+MaterialApp(
+  ...
+  theme: ThemeData(
+    extensions: const <ThemeExtension>[
+      /// The `emojiFamily` will work until v2.0.0, with old, assets based flags.
+      CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
+      /// Instead you can migrate to FlagThemeData, where you can specify way more properties.
+      FlagThemeData(
+        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
+      ),
+    ],
+  )
+);
+```
+
+## 1.5.0
 
 NEW FEATURES
 
@@ -124,10 +151,9 @@ NEW FEATURES
 MaterialApp(
   ...
   theme: ThemeData(
-    /// And also [CurrencyTileThemeData], [LanguageTileThemeData]...
+    /// And also [CurrencyTileThemeData], [LanguageTileThemeData], [CountryTileThemeData]...
     extensions: const <ThemeExtension>[
       PickersThemeData(primary: true), // Specify global pickers theme.
-      CountryTileThemeData(emojiFamily: EmojiFamily.twemoji),
     ],
   )
 );
