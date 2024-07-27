@@ -120,7 +120,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
                     ),
                     orElse: CountryFlag.simplified(
                       country.item,
-                      height: leadingFlagHeight,
+                      height: context.flagTheme?.height ?? leadingFlagHeight,
                       aspectRatio: context.flagTheme?.aspectRatio ??
                           FlagConstants.defaultAspectRatio,
                       decoration: context.flagTheme?.decoration ??
@@ -196,7 +196,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
                   ),
                   orElse: CountryFlag.simplified(
                     country.item,
-                    height: leadingFlagHeight,
+                    height: context.flagTheme?.height ?? leadingFlagHeight,
                     aspectRatio: context.flagTheme?.aspectRatio ??
                         FlagConstants.defaultAspectRatio,
                     decoration: context.flagTheme?.decoration ??

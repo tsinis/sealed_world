@@ -15,74 +15,16 @@ updates:
   # Maintain dependencies for Dart
   - package-ecosystem: "pub"
     versioning-strategy: increase
-    directory: "/packages/sealed_countries/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - "tsinis"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-
-  - package-ecosystem: "pub"
-    versioning-strategy: increase
-    directory: "/packages/world_countries/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - "tsinis"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-
-  - package-ecosystem: "pub"
-    versioning-strategy: increase
-    directory: "/packages/sealed_languages/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - "tsinis"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-
-  - package-ecosystem: "pub"
-    versioning-strategy: increase
-    directory: "/packages/sealed_currencies/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - "tsinis"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-
-  - package-ecosystem: "pub"
-    versioning-strategy: increase
-    directory: "/tools/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - "tsinis"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-
-  - package-ecosystem: "pub"
-    versioning-strategy: increase
-    directory: "packages/_sealed_world_tests/"
-    schedule:
-      interval: "weekly"
-    reviewers:
-      - "tsinis"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-
-  # Maintain dependencies for Flutter (example)
-  - package-ecosystem: "pub"
-    versioning-strategy: increase
-    directory: "/packages/world_countries/example/"
+    directories:
+      - "/packages/tools/"
+      - "/packages/_sealed_world_tests/"
+      - "/packages/sealed_languages/"
+      - "/packages/sealed_currencies/"
+      - "/packages/sealed_countries/"
+      - "/packages/world_flags/"
+      - "/packages/world_flags/example/"
+      - "/packages/world_countries/"
+      - "/packages/world_countries/example/"
     schedule:
       interval: "weekly"
     reviewers:
@@ -93,7 +35,9 @@ updates:
 
   # Maintain dependencies for Android (example)
   - package-ecosystem: "gradle"
-    directory: "/packages/world_countries/example/android/"
+    directories:
+      - "/packages/world_countries/example/android/"
+      - "/packages/world_flags/example/android/"
     schedule:
       interval: "weekly"
     reviewers:

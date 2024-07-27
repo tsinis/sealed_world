@@ -706,14 +706,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.2"
-  url_strategy:
-    dependency: "direct main"
-    description:
-      name: url_strategy
-      sha256: "42b68b42a9864c4d710401add17ad06e28f1c1d5500c93b98c431f6b0ea4ab87"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.0"
   uuid:
     dependency: transitive
     description:
@@ -789,10 +781,10 @@ packages:
     dependency: transitive
     description:
       name: world_flags
-      sha256: "35cad996a382f3cad09cb0d8973a05b23595aa16e57d3e4e5fe4fcd1cdce0c72"
+      sha256: "6b4510f1ef4a9037cfafc9adc4814e588a7a4632ece3644b71edcd40a91df110"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.6.0"
   xml:
     dependency: transitive
     description:
@@ -810,5 +802,5 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.4.0 <4.0.0"
-  flutter: ">=3.19.0"
+  dart: ">=3.4.4 <4.0.0"
+  flutter: ">=3.22.3"
