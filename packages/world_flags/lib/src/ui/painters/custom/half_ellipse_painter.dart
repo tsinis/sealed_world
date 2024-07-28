@@ -4,9 +4,6 @@ final class HalfEllipsePainter extends MultiElementPainter {
   const HalfEllipsePainter(super.properties, super.aspectRatio);
 
   @override
-  double? get originalAspectRatio => FlagConstants.defaultAspectRatio;
-
-  @override
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

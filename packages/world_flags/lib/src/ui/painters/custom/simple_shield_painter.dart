@@ -41,12 +41,8 @@ final class SimpleShieldPainter extends MultiElementPainter {
     final adjustedSize = ratioAdjustedSize(size, parent: parent);
     final parentChild = parent?.child;
     final thisProperty = parentChild ?? property;
-    final otherColors = (thisProperty is CustomElementsProperties?)
-        ? (thisProperty as CustomElementsProperties?)?.otherColors
-        : properties
-            .whereType<CustomElementsProperties>()
-            .firstOrNull
-            ?.otherColors;
+    final otherColors =
+        (thisProperty as CustomElementsProperties?)?.otherColors;
     final center = calculateCenter(size);
     final height = adjustedSize.height;
     final strokeWidth = height * _lineFactor;

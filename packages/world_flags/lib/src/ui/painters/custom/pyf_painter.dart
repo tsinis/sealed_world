@@ -4,9 +4,6 @@ final class PyfPainter extends MultiElementPainter {
   const PyfPainter(super.properties, super.aspectRatio);
 
   @override
-  double get originalAspectRatio => flagPyfProperties.aspectRatio;
-
-  @override
   FlagParentBounds? paintFlagElements(
     Canvas canvas,
     Size size, [

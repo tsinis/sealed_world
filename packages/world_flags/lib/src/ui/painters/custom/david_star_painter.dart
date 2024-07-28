@@ -1,15 +1,11 @@
 import "dart:math";
 import "dart:ui";
 
-import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
 final class DavidStarPainter extends CustomElementsPainter {
   const DavidStarPainter(super.properties, super.aspectRatio);
-
-  @override
-  double get originalAspectRatio => flagIsrProperties.aspectRatio;
 
   @override
   FlagParentBounds? paintFlagElements(

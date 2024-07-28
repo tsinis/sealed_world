@@ -29,7 +29,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   final double? _aspectRatio;
 
   @override
-  double? get aspectRatio => _aspectRatio ?? calculatedAspectRatio;
+  double? get aspectRatio => specifiedAspectRatio ?? calculatedAspectRatio;
   double? get specifiedAspectRatio => _aspectRatio;
   double? get calculatedAspectRatio =>
       width == null || height == null ? null : (width ?? 1) / (height ?? 1);
