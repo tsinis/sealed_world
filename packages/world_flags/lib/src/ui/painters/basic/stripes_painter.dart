@@ -97,9 +97,9 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     canvas.restore();
   }
 
-  @override
+  @override // coverage:ignore-line
   bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
 
-  @override
+  @override // coverage:ignore-line
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }

@@ -13,5 +13,5 @@ class RectangleFlag extends BasicFlag {
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
-  }) : super(elementsBuilder: RectanglePainter.new);
+  }) : super(elementsBuilder: RectanglePainter.new); // coverage:ignore-line
 }

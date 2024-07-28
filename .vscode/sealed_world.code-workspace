@@ -447,7 +447,7 @@
         "problemMatcher": []
       },
       {
-        "label": "Rung Golden Tests on macOS",
+        "label": "Run Golden Tests on macOS",
         "type": "shell",
         "dependsOrder": "sequence",
         "dependsOn": [

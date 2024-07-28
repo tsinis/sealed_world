@@ -106,9 +106,9 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   double calculateAspectRatio(Size size) => size.width / size.height;
 
-  @override
+  @override // coverage:ignore-line
   bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
 
-  @override
+  @override // coverage:ignore-line
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }

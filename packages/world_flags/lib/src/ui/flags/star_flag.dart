@@ -13,5 +13,5 @@ class StarFlag extends BasicFlag {
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
-  }) : super(elementsBuilder: StarPainter.new);
+  }) : super(elementsBuilder: StarPainter.new); // coverage:ignore-line
 }

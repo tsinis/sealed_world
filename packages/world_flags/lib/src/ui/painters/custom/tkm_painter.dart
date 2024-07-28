@@ -4,9 +4,6 @@ final class TkmPainter extends MultiElementPainter {
   const TkmPainter(super.properties, super.aspectRatio);
 
   @override
-  double get originalAspectRatio => flagTkmProperties.aspectRatio;
-
-  @override
   // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,

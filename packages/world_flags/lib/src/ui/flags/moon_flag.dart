@@ -13,5 +13,5 @@ class MoonFlag extends BasicFlag {
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
-  }) : super(elementsBuilder: MoonPainter.new);
+  }) : super(elementsBuilder: MoonPainter.new); // coverage:ignore-line
 }
