@@ -11,7 +11,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
     extends ElementsPainter {
   const CustomElementsPainter(super.properties, super.aspectRatio);
 
-  @protected
+  @protected // coverage:ignore-line
   double? get originalAspectRatio => null;
 
   @protected
@@ -28,7 +28,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
 
   @protected
   Size ratioAdjustedSize(Size childSize, {T? parent, double minRatio = 1.1}) {
-    final size = parent?.bounds.size ?? childSize;
+    final size = parent?.bounds.size ?? childSize; // Coverage isn't triggered?
     final originalRatio = originalAspectRatio;
     if (originalRatio == null) return size;
     final currentAspectRatio = calculateAspectRatio(size);

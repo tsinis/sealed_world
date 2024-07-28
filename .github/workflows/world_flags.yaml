@@ -1,0 +1,20 @@
+name: verify_world_flags
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/world_flags/**/*.dart"
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/world_flags/**/*.dart"
+      - ".github/workflows/world_flags.yaml"
+
+jobs:
+  verify-world-flags:
+    uses: ./.github/workflows/verify_package_workflow.yaml
+    with:
+      package_name: world_flags
+      is_flutter: true
+    secrets: inherit

@@ -13,5 +13,5 @@ class MultiElementFlag extends BasicFlag {
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
-  }) : super(elementsBuilder: MultiElementPainter.new);
+  }) : super(elementsBuilder: MultiElementPainter.new); // coverage:ignore-line
 }

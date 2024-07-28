@@ -13,5 +13,5 @@ class EllipseFlag extends BasicFlag {
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
-  }) : super(elementsBuilder: EllipsePainter.new);
+  }) : super(elementsBuilder: EllipsePainter.new); // coverage:ignore-line
 }

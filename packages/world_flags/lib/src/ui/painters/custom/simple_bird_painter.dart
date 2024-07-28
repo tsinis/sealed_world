@@ -17,12 +17,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
     Size size, [
     FlagParentBounds? parent,
   ]) {
-    final otherColors = (property is CustomElementsProperties?)
-        ? (property as CustomElementsProperties?)?.otherColors
-        : properties
-            .whereType<CustomElementsProperties>()
-            .firstOrNull
-            ?.otherColors;
+    final otherColors = (property as CustomElementsProperties?)?.otherColors;
 
     final adjustedSize = ratioAdjustedSize(size, parent: parent);
     final center = calculateCenter(size);

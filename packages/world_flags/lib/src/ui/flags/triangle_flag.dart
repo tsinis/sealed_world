@@ -13,5 +13,5 @@ class TriangleFlag extends BasicFlag {
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
-  }) : super(elementsBuilder: TrianglePainter.new);
+  }) : super(elementsBuilder: TrianglePainter.new); // coverage:ignore-line
 }

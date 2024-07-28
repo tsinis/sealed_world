@@ -25,9 +25,13 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
 
   final FlagProperties properties;
 
+  @override
   final double? aspectRatio;
+  @override
   final BoxDecoration? decoration;
+  @override
   final DecorationPosition? decorationPosition;
+  @override
   final EdgeInsetsGeometry? padding;
 
   final CustomPainter? backgroundPainter;

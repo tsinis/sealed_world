@@ -26,10 +26,11 @@ final class StarPainter extends ElementsPainter {
           radius * radiusFactor * sin(i * radiansPerPoint + startRadians);
       i == 0 ? path.moveTo(x, y) : path.lineTo(x, y);
     }
-    var paint = paintCreator();
+    final paint = paintCreator();
     if (!star.isFilled) {
-      paint.style = PaintingStyle.stroke;
-      paint.strokeWidth = radius / 8;
+      paint
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = radius / 8;
     }
     if (property.angle == null) {
       canvas.drawPath(path..close(), paint);

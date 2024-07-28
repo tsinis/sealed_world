@@ -4,9 +4,6 @@ final class UgaPainter extends MultiElementPainter {
   const UgaPainter(super.properties, super.aspectRatio);
 
   @override
-  double get originalAspectRatio => flagUgaProperties.aspectRatio;
-
-  @override
   // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(
     Canvas canvas,

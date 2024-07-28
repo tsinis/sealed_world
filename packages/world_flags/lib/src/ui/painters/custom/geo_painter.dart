@@ -85,7 +85,7 @@ final class GeoPainter extends MultiElementPainter {
       )
       ..lineTo(dimension, dimension * 0.33);
 
-    for (var prop in properties.skip(1)) {
+    for (final prop in properties.skip(1)) {
       final offsetY = center.dy + (prop.offset.dy * size.height / 2);
       final offsetX = center.dx +
           (prop.offset.dx * size.width / 2 / aspectRatio) -

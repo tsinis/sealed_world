@@ -1,7 +1,6 @@
 import "dart:ui";
 
-import "package:world_flags/src/data/flags_map_part_1.data.dart";
-
+import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 

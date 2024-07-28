@@ -21,7 +21,7 @@ final class IrqPainter extends CustomElementsPainter {
     final height = adjustedSize.height;
     final width = adjustedSize.width;
     final textSpan = TextSpan(
-      text: 'الله اكبر', //ignore: avoid-non-ascii-symbols, text on the flag.
+      text: "الله اكبر", //ignore: avoid-non-ascii-symbols, text on the flag.
       style: TextStyle(
         inherit: false,
         color: property.mainColor,

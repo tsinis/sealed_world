@@ -41,12 +41,8 @@ final class SimpleShieldPainter extends MultiElementPainter {
     final adjustedSize = ratioAdjustedSize(size, parent: parent);
     final parentChild = parent?.child;
     final thisProperty = parentChild ?? property;
-    final otherColors = (thisProperty is CustomElementsProperties?)
-        ? (thisProperty as CustomElementsProperties?)?.otherColors
-        : properties
-            .whereType<CustomElementsProperties>()
-            .firstOrNull
-            ?.otherColors;
+    final otherColors =
+        (thisProperty as CustomElementsProperties?)?.otherColors;
     final center = calculateCenter(size);
     final height = adjustedSize.height;
     final strokeWidth = height * _lineFactor;
@@ -56,16 +52,18 @@ final class SimpleShieldPainter extends MultiElementPainter {
     final path = Path();
     final paint = Paint();
 
-    canvas.save();
-    canvas.translate(center.dx - halfWidth, center.dy - half);
+    canvas
+      ..save()
+      ..translate(center.dx - halfWidth, center.dy - half);
 
-    path.moveTo(0, half);
-    path.cubicTo(0, height * 0.8, halfWidth, height, halfWidth, height);
-    path.cubicTo(halfWidth, height, width, height * 0.8, width, half);
-    path.lineTo(width, height * 0.07);
-    path.cubicTo(width, height * 0.07, width * 0.7, 0, halfWidth, 0);
-    path.lineTo(0, height * 0.07);
-    path.lineTo(0, half);
+    path
+      ..moveTo(0, half)
+      ..cubicTo(0, height * 0.8, halfWidth, height, halfWidth, height)
+      ..cubicTo(halfWidth, height, width, height * 0.8, width, half)
+      ..lineTo(width, height * 0.07)
+      ..cubicTo(width, height * 0.07, width * 0.7, 0, halfWidth, 0)
+      ..lineTo(0, height * 0.07)
+      ..lineTo(0, half);
 
     if (_showOutline) {
       paint
@@ -94,10 +92,12 @@ final class SimpleShieldPainter extends MultiElementPainter {
 
     if (_showDividers) {
       canvas.clipPath(path);
-      paint.color = property.mainColor;
-      paint.strokeWidth = half * 0.2;
-      canvas.drawLine(Offset(halfWidth, 0), Offset(halfWidth, height), paint);
-      canvas.drawLine(Offset(0, half), Offset(width, half), paint);
+      paint
+        ..color = property.mainColor
+        ..strokeWidth = half * 0.2;
+      canvas
+        ..drawLine(Offset(halfWidth, 0), Offset(halfWidth, height), paint)
+        ..drawLine(Offset(0, half), Offset(width, half), paint);
     }
     canvas.restore();
 

@@ -1,8 +1,8 @@
-import 'dart:ui';
+import "dart:ui";
 
-import '../../../model/typedefs.dart';
-import '../basic/custom_elements_painter.dart';
-import '../multi_element_painter.dart';
+import "../../../model/typedefs.dart";
+import "../basic/custom_elements_painter.dart";
+import "../multi_element_painter.dart";
 
 final class NplPainter extends CustomElementsPainter {
   const NplPainter(super.properties, super.aspectRatio);

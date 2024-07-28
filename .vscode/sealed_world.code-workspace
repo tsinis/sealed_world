@@ -98,6 +98,7 @@
       "Potencier",
       "Saša",
       "Stamenković",
+      "subdir",
       "subtag",
       "Symfony",
       "taeguk",
@@ -411,6 +412,51 @@
         "command": "cwebp -q 90 doc/example.png -o doc/example.webp",
         "label": "Convert Example PNG to WEBP",
         "presentation": { "revealProblems": "onProblem", "close": true }
+      },
+      {
+        "label": "Disable Font Smoothing on macOS",
+        "type": "shell",
+        "command": "defaults -currentHost write -g AppleFontSmoothing -int 0",
+        "presentation": { "reveal": "always" },
+        "problemMatcher": []
+      },
+      {
+        "label": "Update Goldens",
+        "type": "shell",
+        "command": "flutter test --update-goldens",
+        "presentation": { "reveal": "always" },
+        "problemMatcher": []
+      },
+      {
+        "label": "Enable Font Smoothing on macOS",
+        "type": "shell",
+        "command": "defaults -currentHost write -g AppleFontSmoothing -int 3",
+        "presentation": { "reveal": "always" },
+        "problemMatcher": []
+      },
+      {
+        "label": "Generate Goldens on macOS",
+        "type": "shell",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "Disable Font Smoothing on macOS",
+          "Update Goldens",
+          "Enable Font Smoothing on macOS"
+        ],
+        "presentation": { "reveal": "always" },
+        "problemMatcher": []
+      },
+      {
+        "label": "Run Golden Tests on macOS",
+        "type": "shell",
+        "dependsOrder": "sequence",
+        "dependsOn": [
+          "Disable Font Smoothing on macOS",
+          "Show Flutter Coverage",
+          "Enable Font Smoothing on macOS"
+        ],
+        "presentation": { "reveal": "always" },
+        "problemMatcher": []
       }
     ]
   }

@@ -10,6 +10,7 @@ import "../common/star_painter.dart";
 final class AgoPainter extends CustomElementsPainter {
   const AgoPainter(super.properties, super.aspectRatio);
 
+  @override
   double? get originalAspectRatio => flagAgoProperties.aspectRatio;
 
   @override
@@ -19,10 +20,20 @@ final class AgoPainter extends CustomElementsPainter {
     Size size, [
     FlagParentBounds? parent,
   ]) {
-    final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
-    final center = calculateCenter(size);
+    final adjustedSize = ratioAdjustedSize(size, minRatio: 1.4);
     final height = adjustedSize.height * 2;
     final width = adjustedSize.width;
+
+    final starProperties = ElementsProperties(
+      property.mainColor,
+      shape: const Star(),
+      offset: const Offset(-0.025, -0.25),
+      widthFactor: 0.11,
+    );
+
+    final star = StarPainter([starProperties], aspectRatio)
+        .paintFlagElements(canvas, size);
+    final center = star.bounds.center;
 
     final path = Path()
       ..moveTo(width * 0.61, height * 1.33)
@@ -266,20 +277,11 @@ final class AgoPainter extends CustomElementsPainter {
     final bounds = path.getBounds();
 
     canvas
-      ..save()
-      ..translate(center.dx - bounds.width, center.dy - bounds.height)
+      ..translate(
+          center.dx - bounds.width * 1.2, center.dy - bounds.height * 0.78)
       ..drawPath(path, paintCreator())
-      ..drawPath(path2, paintCreator())
-      ..restore();
+      ..drawPath(path2, paintCreator());
 
-    final starProperties = ElementsProperties(
-      property.mainColor,
-      shape: Star(),
-      offset: Offset(-0.025, (-0.15 - width / 1000) / aspectRatio / 2),
-      widthFactor: 0.11,
-    );
-
-    return StarPainter([starProperties], aspectRatio)
-        .paintFlagElements(canvas, size);
+    return star;
   }
 }

@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 final class AtfPainter extends MultiElementPainter {
   const AtfPainter(super.properties, super.aspectRatio);
 
-  @protected
+  @override
   double? get originalAspectRatio => flagAtfProperties.aspectRatio;
 
   @override

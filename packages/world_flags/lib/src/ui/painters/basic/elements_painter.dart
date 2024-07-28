@@ -12,6 +12,7 @@ import "../common/moon_painter.dart";
 import "../common/rectangle_painter.dart";
 import "../common/star_painter.dart";
 import "../common/triangle_painter.dart";
+import "flag_anti_alias.dart";
 
 abstract base class ElementsPainter extends CustomPainter {
   const ElementsPainter(ElementsProps? properties, this.aspectRatio)
@@ -44,7 +45,7 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   Paint paintCreator([Color? color]) => Paint()
     ..color = color ?? property.mainColor
-    ..isAntiAlias = false;
+    ..isAntiAlias = flagAntiAliasOverride;
 
   @protected
   T? shapeType<T extends Shape>([Shape? shape]) {
@@ -105,9 +106,9 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   double calculateAspectRatio(Size size) => size.width / size.height;
 
-  @override
+  @override // coverage:ignore-line
   bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
 
-  @override
+  @override // coverage:ignore-line
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }

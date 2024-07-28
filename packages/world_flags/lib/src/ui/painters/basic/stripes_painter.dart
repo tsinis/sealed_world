@@ -5,6 +5,7 @@ import "package:flutter/rendering.dart";
 import "../../../helpers/extensions/box_decoration_extension.dart";
 import "../../../model/flag_properties.dart";
 import "../../../model/stripe_orientation.dart";
+import "flag_anti_alias.dart";
 
 class StripesPainter<T extends CustomPainter> extends CustomPainter {
   const StripesPainter(this.properties, this.decoration, this.elementsPainter);
@@ -12,8 +13,6 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   final FlagProperties properties;
   final BoxDecoration? decoration;
   final T? elementsPainter;
-
-  static const _doAntiAlias = false;
 
   BorderRadiusGeometry get borderRadius =>
       decoration?.borderRadius ?? BorderRadius.zero;
@@ -42,12 +41,12 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       final radius = size.height / 2;
       final circle = Rect.fromCircle(center: rect.center, radius: radius);
       final rRect = RRect.fromRectAndRadius(circle, Radius.circular(radius));
-      canvas.clipRRect(rRect, doAntiAlias: _doAntiAlias);
+      canvas.clipRRect(rRect, doAntiAlias: flagAntiAliasOverride);
     } else if (borderRadius != BorderRadius.zero) {
-      final radius = borderRadius.resolve(TextDirection.ltr);
-      canvas.clipRRect(radius.toRRect(rect), doAntiAlias: _doAntiAlias);
+      final rad = borderRadius.resolve(TextDirection.ltr);
+      canvas.clipRRect(rad.toRRect(rect), doAntiAlias: flagAntiAliasOverride);
     } else {
-      canvas.clipRect(rect, doAntiAlias: _doAntiAlias);
+      canvas.clipRect(rect, doAntiAlias: flagAntiAliasOverride);
     }
   }
 
@@ -98,9 +97,9 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     canvas.restore();
   }
 
-  @override
+  @override // coverage:ignore-line
   bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
 
-  @override
+  @override // coverage:ignore-line
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }

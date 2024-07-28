@@ -1,4 +1,4 @@
-import 'dart:math';
+import "dart:math";
 import "dart:ui";
 
 import "../../../data/flags_map_part_1.data.dart";
@@ -119,7 +119,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
       ..translate(offset.dx, offset.dy)
       ..rotate(angle);
 
-    for (int i = 0; i < brokenBars.length; i++) {
+    for (var i = 0; i < brokenBars.length; i++) {
       final isBroken = brokenBars.length > i && brokenBars[i];
       final y = (height + space) * i;
       final half = width / 2;
