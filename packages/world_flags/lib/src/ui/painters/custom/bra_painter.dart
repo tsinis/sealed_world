@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 final class BraPainter extends MultiElementPainter {
   const BraPainter(super.properties, super.aspectRatio);
 
-  @protected
+  @override
   double? get originalAspectRatio => flagBraProperties.aspectRatio;
 
   @override

@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 final class KazPainter extends MultiElementPainter {
   const KazPainter(super.properties, super.aspectRatio);
 
-  @protected
+  @override
   double? get originalAspectRatio => flagKazProperties.aspectRatio;
 
   @override

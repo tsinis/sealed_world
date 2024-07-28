@@ -33,7 +33,7 @@ final class SauPainter extends CustomElementsPainter {
     );
     final textSpan = TextSpan(
       // ignore: avoid-non-ascii-symbols, text on the flag.
-      text: 'لَا إِلٰهَ إِلَّا اللَّٰه مُحَمَّدٌ رَسُولُ اللَّٰه',
+      text: "لَا إِلٰهَ إِلَّا اللَّٰه مُحَمَّدٌ رَسُولُ اللَّٰه",
       style: TextStyle(
         inherit: false,
         color: property.mainColor,

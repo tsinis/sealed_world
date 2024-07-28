@@ -15,16 +15,20 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   }) : _aspectRatio = aspectRatio;
   // TODO: Add asserts for width and height > 0.
 
+  @override
   final BoxDecoration? decoration;
 
   /// If not provided - default to [DecorationPosition.foreground].
+  @override
   final DecorationPosition? decorationPosition;
+  @override
   final EdgeInsetsGeometry? padding;
   final double? height;
   final double? width;
 
   final double? _aspectRatio;
 
+  @override
   double? get aspectRatio => _aspectRatio ?? calculatedAspectRatio;
   double? get specifiedAspectRatio => _aspectRatio;
   double? get calculatedAspectRatio =>
@@ -40,7 +44,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     double? width,
   }) =>
       FlagThemeData(
-        aspectRatio: aspectRatio ?? this._aspectRatio,
+        aspectRatio: aspectRatio ?? _aspectRatio,
         decoration: decoration ?? this.decoration,
         decorationPosition: decorationPosition ?? this.decorationPosition,
         padding: padding ?? this.padding,

@@ -10,6 +10,7 @@ import "../common/star_painter.dart";
 final class AgoPainter extends CustomElementsPainter {
   const AgoPainter(super.properties, super.aspectRatio);
 
+  @override
   double? get originalAspectRatio => flagAgoProperties.aspectRatio;
 
   @override
@@ -274,8 +275,8 @@ final class AgoPainter extends CustomElementsPainter {
 
     final starProperties = ElementsProperties(
       property.mainColor,
-      shape: Star(),
-      offset: Offset(-0.025, (-0.15 - width / 1000) / aspectRatio / 2),
+      shape: const Star(),
+      offset: const Offset(-0.025, -0.25),
       widthFactor: 0.11,
     );
 

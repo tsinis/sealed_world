@@ -1,12 +1,11 @@
 import "dart:math" hide Rectangle;
 
-import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
-import "package:world_flags/src/data/flags_map_part_3.data.dart";
 
 import "../../constants/flag_constants.dart";
 import "../../data/flags_map_part_1.data.dart";
 import "../../data/flags_map_part_2.data.dart";
+import "../../data/flags_map_part_3.data.dart";
 import "../../model/elements/custom_elements_properties.dart";
 import "../../model/elements/elements_properties.dart";
 import "../../model/shape.dart";

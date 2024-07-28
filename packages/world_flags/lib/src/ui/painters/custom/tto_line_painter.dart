@@ -17,7 +17,7 @@ final class TtoLinePainter extends CustomElementsPainter {
     final heightFactor = property.heightFactor;
     final widthFactor = property.widthFactor ?? 1;
     final blackPaint = Paint()
-      ..color = customColors.firstOrNull ?? Color(0xff000000);
+      ..color = customColors.firstOrNull ?? const Color(0xff000000);
 
     final whitePath = Path()
       ..moveTo(0, 0)

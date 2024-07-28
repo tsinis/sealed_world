@@ -27,7 +27,7 @@ final class VctPainter extends CustomElementsPainter {
       ..lineTo(0, height)
       ..close();
 
-    for (var prop in properties) {
+    for (final prop in properties) {
       final offsetX = size.width / 2 - width + prop.offset.dx * width * 2;
       final offsetY = size.height / 2 - height + prop.offset.dy * height * 2;
 

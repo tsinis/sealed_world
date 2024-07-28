@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 final class HalfEllipsePainter extends MultiElementPainter {
   const HalfEllipsePainter(super.properties, super.aspectRatio);
 
-  @protected
+  @override
   double? get originalAspectRatio => FlagConstants.defaultAspectRatio;
 
   @override

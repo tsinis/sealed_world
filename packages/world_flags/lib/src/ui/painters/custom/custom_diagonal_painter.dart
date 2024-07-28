@@ -21,13 +21,15 @@ final class CustomDiagonalPainter extends MultiElementPainter {
 
     final path = Path()..moveTo(0, height);
     if (_isHorizontal) {
-      path.lineTo(0, height - (height * mainLineFactor));
-      path.lineTo(width, 0);
-      path.lineTo(width, height * mainLineFactor);
+      path
+        ..lineTo(0, height - (height * mainLineFactor))
+        ..lineTo(width, 0)
+        ..lineTo(width, height * mainLineFactor);
     } else {
-      path.lineTo(width * mainLineFactor, height);
-      path.lineTo(width, 0);
-      path.lineTo(width - (width * mainLineFactor), 0);
+      path
+        ..lineTo(width * mainLineFactor, height)
+        ..lineTo(width, 0)
+        ..lineTo(width - (width * mainLineFactor), 0);
     }
     path.close();
 

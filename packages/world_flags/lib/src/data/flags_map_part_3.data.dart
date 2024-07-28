@@ -2270,7 +2270,6 @@ const flagMltProperties = FlagProperties(
       Color.fromARGB(0, 255, 255, 255),
       shape: Rectangle(aspectRatio: 1),
       offset: Offset(-0.915, -0.86),
-      heightFactor: 1,
       child: ElementsProperties(
         Color(0xffCF142B),
         shape: Rectangle(aspectRatio: 0.3),

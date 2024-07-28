@@ -1707,7 +1707,6 @@ const flagBrnProperties = FlagProperties(
     ElementsProperties(
       Color(0xffcf1126),
       shape: Moon(radius: 0.95, offset: Offset(0, -0.45)),
-      offset: Offset(0, 0),
       heightFactor: 0.5,
     ),
   ],

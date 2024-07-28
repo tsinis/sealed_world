@@ -1,16 +1,14 @@
-import 'dart:ui';
+import "dart:ui";
 
-import 'package:flutter/foundation.dart';
-
-import '../../../data/flags_map_part_3.data.dart';
-import '../../../model/typedefs.dart';
-import '../basic/custom_elements_painter.dart';
-import '../multi_element_painter.dart';
+import "../../../data/flags_map_part_3.data.dart";
+import "../../../model/typedefs.dart";
+import "../basic/custom_elements_painter.dart";
+import "../multi_element_painter.dart";
 
 final class LkaPainter extends CustomElementsPainter {
   const LkaPainter(super.properties, super.aspectRatio);
 
-  @protected
+  @override
   double? get originalAspectRatio => flagLkaProperties.aspectRatio;
 
   @override

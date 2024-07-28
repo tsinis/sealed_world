@@ -44,7 +44,7 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   Paint paintCreator([Color? color]) => Paint()
     ..color = color ?? property.mainColor
-    ..isAntiAlias = false;
+    ..isAntiAlias = _isAntiAlias;
 
   @protected
   T? shapeType<T extends Shape>([Shape? shape]) {
@@ -111,3 +111,12 @@ abstract base class ElementsPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
+
+@visibleForTesting
+// ignore: avoid_positional_boolean_parameters, against wrong_number_of_parameters_for_setter.
+set flagAntiAliasOverride(bool isAntiAlias) => _isAntiAlias = isAntiAlias;
+
+@visibleForTesting
+bool get flagAntiAliasOverride => _isAntiAlias;
+
+bool _isAntiAlias = false;

@@ -1027,13 +1027,11 @@ const flagMneProperties = FlagProperties(
       Color(0xffd3ae3b),
       shape: Rectangle(aspectRatio: 0.05),
       offset: Offset(-1, 0),
-      heightFactor: 1,
     ),
     ElementsProperties(
       Color(0xffd3ae3b),
       shape: Rectangle(aspectRatio: 0.05),
       offset: Offset(1, 0),
-      heightFactor: 1,
     ),
   ],
   url: "https://www.vexilla-mundi.com/montenegro/montenegro_sheet.png",
@@ -1598,7 +1596,6 @@ const flagNplProperties = FlagProperties(
         Color(0xffffffff),
         shape: Star(points: 16, radiusFactor: 0.7),
         offset: Offset(0, 0.04),
-        heightFactor: 1,
       ),
     ),
   ],
@@ -2168,7 +2165,7 @@ const flagMngProperties = FlagProperties(
             heightFactor: 1.6,
             child: ElementsProperties(
               Color(0xffffd900),
-              shape: Moon(radius: 1.0, offset: Offset(0, -0.3)),
+              shape: Moon(radius: 1, offset: Offset(0, -0.3)),
               offset: Offset(0, 0.4),
               heightFactor: 1.4,
               child: ElementsProperties(

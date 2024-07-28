@@ -1,12 +1,12 @@
-import 'dart:math';
+import "dart:math";
 
-import 'package:flutter/rendering.dart';
+import "package:flutter/rendering.dart";
 
-import '../../../data/flags_map_part_1.data.dart';
-import '../../../data/flags_map_part_3.data.dart';
-import '../../../model/typedefs.dart';
-import '../basic/custom_elements_painter.dart';
-import '../multi_element_painter.dart';
+import "../../../data/flags_map_part_1.data.dart";
+import "../../../data/flags_map_part_3.data.dart";
+import "../../../model/typedefs.dart";
+import "../basic/custom_elements_painter.dart";
+import "../multi_element_painter.dart";
 
 final class AlmondPainter extends CustomElementsPainter {
   const AlmondPainter.gum(super.properties, super.aspectRatio)
@@ -57,18 +57,16 @@ final class AlmondPainter extends CustomElementsPainter {
       ).createShader(bounds);
 
     if (_isVertical) {
-      canvas.translate(
-        center.dx - bounds.center.dx,
-        center.dy - bounds.center.dy,
-      );
-      canvas.drawPath(path, paint);
-      canvas.drawPath(
-        path,
-        paintCreator()
-          ..style = PaintingStyle.stroke
-          ..strokeCap = StrokeCap.round
-          ..strokeWidth = height / 25,
-      );
+      canvas
+        ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
+        ..drawPath(path, paint)
+        ..drawPath(
+          path,
+          paintCreator()
+            ..style = PaintingStyle.stroke
+            ..strokeCap = StrokeCap.round
+            ..strokeWidth = height / 25,
+        );
     } else {
       canvas
         ..save()
