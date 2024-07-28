@@ -30,7 +30,7 @@ dependencies:
 
 ### Usage
 
-All you need is a [WorldCountry](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries#usage) instance (either create with factories of that class or just pick some specific one, i.e. `CountryDeu()`). Use it in the `CountryFlag` widget. For example:
+All you need is a [WorldCountry](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries#usage) instance (either create with factories of that class or just pick some specific one, i.e. `const CountryDeu()`). Use it in the `CountryFlag` widget. For example:
 
 ```dart
 import "package:flutter/material.dart";

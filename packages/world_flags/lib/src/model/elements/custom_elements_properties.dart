@@ -10,7 +10,7 @@ class CustomElementsProperties extends ElementsProperties {
     super.heightFactor,
     super.widthFactor,
     super.angle,
-  }) : super(shape: null);
+  }) : super(shape: null); // coverage:ignore-line
 
   final List<Color> otherColors;
 }

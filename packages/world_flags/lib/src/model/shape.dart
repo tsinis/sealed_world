@@ -6,7 +6,7 @@ part "shape.g.dart";
 
 @immutable
 sealed class Shape {
-  const Shape();
+  const Shape(); // coverage:ignore-line
 }
 
 class Triangle implements Shape {

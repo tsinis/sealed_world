@@ -79,7 +79,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
       height.hashCode ^
       width.hashCode;
 
-  @override
+  @override // coverage:ignore-line
   FlagThemeData lerp(
     covariant ThemeExtension<FlagThemeData>? other,
     double t,

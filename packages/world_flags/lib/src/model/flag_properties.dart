@@ -14,6 +14,7 @@ class FlagProperties {
     this.elementsProperties,
     this.url = "",
   });
+  // TODO! Add assert for stripeColors.length > 0.
 
   final List<ColorsProperties> stripeColors;
   final List<ElementsProperties>? elementsProperties;

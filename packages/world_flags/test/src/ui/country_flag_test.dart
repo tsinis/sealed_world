@@ -8,7 +8,7 @@ import "../../helpers/flag_type.dart";
 void main() => group("$CountryFlag", () {
       setUpAll(() => flagAntiAliasOverride = true);
 
-      testWidgets('custom constructor', (tester) async {
+      testWidgets("custom constructor", (tester) async {
         await tester.pumpWidget(
           const MaterialApp(
             home: CountryFlag.custom(CountryDeu(), {}, orElse: FlutterLogo()),
@@ -18,11 +18,11 @@ void main() => group("$CountryFlag", () {
         expect(find.byType(FlutterLogo), findsOneWidget);
       });
 
-      group('Full', () {
+      group("Full", () {
         for (final country in fullFlags) {
           testWidgets(
-            '${country.internationalName} Flag',
-            (tester) => tester.flagGolden(country, FlagType.full),
+            "${country.internationalName} Flag",
+            (tester) async => tester.flagGolden(country, FlagType.full),
           );
         }
       });
