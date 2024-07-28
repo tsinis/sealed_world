@@ -2,7 +2,11 @@ import "package:flutter/material.dart";
 
 enum FlagType {
   full(height: 320),
-  simplified,
+  simplified(
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(4)),
+    ),
+  ),
   decorated(
     decoration: BoxDecoration(
       shape: BoxShape.circle,

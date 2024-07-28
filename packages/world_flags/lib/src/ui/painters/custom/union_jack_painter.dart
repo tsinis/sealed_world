@@ -56,7 +56,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
 
     canvas
       ..drawRect(rect, paintCreator(_blueColor))
-      ..clipRect(rect, doAntiAlias: false)
+      ..clipRect(rect, doAntiAlias: flagAntiAliasOverride)
       ..save()
       ..translate(width / 2, height / 2)
       ..rotate(-angle)

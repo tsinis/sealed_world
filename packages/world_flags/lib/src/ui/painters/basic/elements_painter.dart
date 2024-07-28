@@ -12,6 +12,7 @@ import "../common/moon_painter.dart";
 import "../common/rectangle_painter.dart";
 import "../common/star_painter.dart";
 import "../common/triangle_painter.dart";
+import "flag_anti_alias.dart";
 
 abstract base class ElementsPainter extends CustomPainter {
   const ElementsPainter(ElementsProps? properties, this.aspectRatio)
@@ -44,7 +45,7 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   Paint paintCreator([Color? color]) => Paint()
     ..color = color ?? property.mainColor
-    ..isAntiAlias = _isAntiAlias;
+    ..isAntiAlias = flagAntiAliasOverride;
 
   @protected
   T? shapeType<T extends Shape>([Shape? shape]) {
@@ -111,12 +112,3 @@ abstract base class ElementsPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
-
-@visibleForTesting
-// ignore: avoid_positional_boolean_parameters, against wrong_number_of_parameters_for_setter.
-set flagAntiAliasOverride(bool isAntiAlias) => _isAntiAlias = isAntiAlias;
-
-@visibleForTesting
-bool get flagAntiAliasOverride => _isAntiAlias;
-
-bool _isAntiAlias = false;
