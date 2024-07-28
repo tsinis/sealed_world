@@ -1,3 +1,10 @@
+## 0.7.0
+
+TESTS
+
+- Added unit, widget and golden tests for the package with code coverage around 100%.
+- Small refactoring related to the linter rules.
+
 ## 0.6.0
 
 NEW FEATURES

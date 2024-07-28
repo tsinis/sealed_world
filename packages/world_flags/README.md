@@ -1,3 +1,8 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
+[![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
+[![world_flags](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml)
+![Pub points](https://img.shields.io/pub/points/world_flags)
+![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/world_flags.svg)](https://pub.dev/packages/world_flags)
 
@@ -5,7 +10,7 @@
 
 Flutter library for compact and visually appealing country flag icons. Optimized for rendering sizes from 18 to 48 pixels (height), these flags draw inspiration from circle-flags, OpenMoji, and Twemoji. Over two-thirds of the flags in this library are also suitable for full-scale use.
 
-Each flag is a vector-based CustomPainter, ensuring precise, scalable, and stunning results at any size. By following official color standards and using a declarative design, world_flags allows easy customization of flag shapes, decorations and aspect ratios without losing quality.
+Each flag is a vector-based CustomPainter, ensuring precise, scalable, and stunning results. By following official color standards and using a declarative design, world_flags allows easy customization of flag shapes, decorations and aspect ratios without losing quality or breaking flag element proportions.
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_flags/doc/example.gif)
 
@@ -116,3 +121,17 @@ If you have any issues or suggestions for the package, please file them in the G
 ### References and credits
 
 This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
+
+### FAQ
+
+#### Why should I use this package over any other country flag package?
+
+- **Every flag is a Widget** - This package doesn't use heavy SVG or any other assets, all flags are declarative-style optimized CustomPainters. That means that you don't have to worry about pre-caching, increased app size, platform dependant look of the flags, etc. And since it's a widget - you can always change it's look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change aspect ratio of asset based flags without stretching/shrinking them?
+- **Custom flags** - package provides multiple classes and simple API to create your own flags.
+- **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing it's sealed nature), you can also override existing or add new data, etc.).
+- **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
+- **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
+- **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
+- **High code coverage**: The code in this package has almost 100% code coverage, with more than 678 (+3140 in underling Dart packages) tests, providing confidence in its reliability and stability.
+- **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
+- **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
