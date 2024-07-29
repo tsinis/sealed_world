@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_3.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Liechtenstein flag.
 final class LiePainter extends CustomElementsPainter {
+  /// Creates a new instance of [LiePainter].
   const LiePainter(super.properties, super.aspectRatio);
 
   @override

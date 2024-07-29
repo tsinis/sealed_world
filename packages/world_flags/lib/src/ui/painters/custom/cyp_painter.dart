@@ -4,11 +4,13 @@ import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Cyprus flag.
 final class CypPainter extends CustomElementsPainter {
+  /// Creates a new instance of [CypPainter].
   const CypPainter(super.properties, super.aspectRatio);
 
   @override
-  double get originalAspectRatio => flagAtaProperties.aspectRatio;
+  double get originalAspectRatio => flagCypProperties.aspectRatio;
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.

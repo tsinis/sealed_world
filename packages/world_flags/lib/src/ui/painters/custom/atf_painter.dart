@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the French Southern and Antarctic Lands flag.
 final class AtfPainter extends MultiElementPainter {
+  /// Creates a new instance of [AtfPainter].
   const AtfPainter(super.properties, super.aspectRatio);
 
   @override

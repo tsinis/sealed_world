@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Kosovo region.
 final class KosovoPainter extends MultiElementPainter {
+  /// Creates a new instance of [KosovoPainter].
   const KosovoPainter(super.properties, super.aspectRatio);
 
   @override

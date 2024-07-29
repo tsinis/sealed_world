@@ -1,14 +1,16 @@
 import "dart:ui";
 
-import "../../../constants/flag_constants.dart";
+import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Norfolk Island flag.
 final class PinePainter extends CustomElementsPainter {
+  /// Creates a new instance of [PinePainter].
   const PinePainter(super.properties, super.aspectRatio);
 
   @override
-  double get originalAspectRatio => FlagConstants.defaultAspectRatio;
+  double get originalAspectRatio => flagNfkProperties.aspectRatio;
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {

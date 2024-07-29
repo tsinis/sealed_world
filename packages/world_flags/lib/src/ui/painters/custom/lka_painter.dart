@@ -5,7 +5,9 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../multi_element_painter.dart";
 
+/// Painter for the Sri Lanka flag.
 final class LkaPainter extends CustomElementsPainter {
+  /// Creates a new instance of [LkaPainter].
   const LkaPainter(super.properties, super.aspectRatio);
 
   @override

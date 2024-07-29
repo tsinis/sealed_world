@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Papua New Guinea flag.
 final class PngPainter extends MultiElementPainter {
+  /// Creates a new instance of [PngPainter].
   const PngPainter(super.properties, super.aspectRatio);
 
   @override

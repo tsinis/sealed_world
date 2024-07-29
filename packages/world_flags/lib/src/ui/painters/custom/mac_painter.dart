@@ -5,7 +5,9 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../common/star_painter.dart";
 
+/// Painter for the Macau flag.
 final class MacPainter extends CustomElementsPainter {
+  /// Creates a new instance of [MacPainter].
   const MacPainter(super.properties, super.aspectRatio);
 
   @override

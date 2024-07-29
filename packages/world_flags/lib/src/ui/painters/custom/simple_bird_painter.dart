@@ -1,8 +1,12 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the simple bird.
 final class SimpleBirdPainter extends MultiElementPainter {
+  /// Creates a new instance of [SimpleBirdPainter] for Egypt flag.
   const SimpleBirdPainter.egy(super.properties, super.aspectRatio)
       : _originalAspectRatio = FlagConstants.defaultAspectRatio;
+
+  /// Creates a new instance of [SimpleBirdPainter] for Moldova flag.
   const SimpleBirdPainter.mda(super.properties, super.aspectRatio)
       : _originalAspectRatio = 2;
 

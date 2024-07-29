@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Serbia flag.
 final class SrbPainter extends CustomElementsPainter {
+  /// Creates a new instance of [SrbPainter].
   const SrbPainter(super.properties, super.aspectRatio);
 
   @override

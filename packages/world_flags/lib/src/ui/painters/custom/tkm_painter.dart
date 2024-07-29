@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Turkmenistan flag.
 final class TkmPainter extends MultiElementPainter {
+  /// Creates a new instance of [TkmPainter].
   const TkmPainter(super.properties, super.aspectRatio);
 
   @override

@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Albania flag.
 final class AlbPainter extends CustomElementsPainter {
+  /// Creates a new instance of [AlbPainter].
   const AlbPainter(super.properties, super.aspectRatio);
 
   @override

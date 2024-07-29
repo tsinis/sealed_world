@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Brunei flag.
 final class BrnPainter extends MultiElementPainter {
+  /// Creates a new instance of [BrnPainter].
   const BrnPainter(super.properties, super.aspectRatio);
 
   @override

@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Kazakhstan flag.
 final class KazPainter extends MultiElementPainter {
+  /// Creates a new instance of [KazPainter].
   const KazPainter(super.properties, super.aspectRatio);
 
   @override

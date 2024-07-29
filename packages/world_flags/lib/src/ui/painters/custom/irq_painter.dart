@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_3.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Iraq flag.
 final class IrqPainter extends CustomElementsPainter {
+  /// Creates a new instance of [IrqPainter].
   const IrqPainter(super.properties, super.aspectRatio);
 
   @override

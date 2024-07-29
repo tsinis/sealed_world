@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Saudi Arabia flag.
 final class SauPainter extends CustomElementsPainter {
+  /// Creates a new instance of [SauPainter].
   const SauPainter(super.properties, super.aspectRatio);
 
   @override

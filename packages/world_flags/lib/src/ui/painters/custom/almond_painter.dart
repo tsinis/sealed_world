@@ -8,9 +8,13 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../multi_element_painter.dart";
 
+/// Painter for the Guam and Eswatini flag.
 final class AlmondPainter extends CustomElementsPainter {
+  /// Creates a new instance of [AlmondPainter] for Guam flag.
   const AlmondPainter.gum(super.properties, super.aspectRatio)
       : _isVertical = true;
+
+  /// Creates a new instance of [AlmondPainter] for Eswatini flag.
   const AlmondPainter.swz(super.properties, super.aspectRatio)
       : _isVertical = false;
 

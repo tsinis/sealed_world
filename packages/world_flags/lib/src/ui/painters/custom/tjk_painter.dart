@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Tajikistan flag.
 final class TjkPainter extends MultiElementPainter {
+  /// Creates a new instance of [TjkPainter].
   const TjkPainter(super.properties, super.aspectRatio);
 
   @override

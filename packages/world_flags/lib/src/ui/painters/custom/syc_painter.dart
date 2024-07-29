@@ -3,7 +3,9 @@ import "package:flutter/painting.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Seychelles flag.
 final class SycPainter extends CustomElementsPainter {
+  /// Creates a new instance of [SycPainter].
   const SycPainter(super.properties, super.aspectRatio);
 
   @override

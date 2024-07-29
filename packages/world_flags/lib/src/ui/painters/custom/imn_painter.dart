@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Isle of Man flag.
 final class ImnPainter extends CustomElementsPainter {
+  /// Creates a new instance of [ImnPainter].
   const ImnPainter(super.properties, super.aspectRatio);
 
   @override

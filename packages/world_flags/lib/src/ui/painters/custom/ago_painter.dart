@@ -7,7 +7,9 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../common/star_painter.dart";
 
+/// Painter for the Angola flag.
 final class AgoPainter extends CustomElementsPainter {
+  /// Creates a new instance of [AgoPainter].
   const AgoPainter(super.properties, super.aspectRatio);
 
   @override
@@ -274,7 +276,9 @@ final class AgoPainter extends CustomElementsPainter {
 
     canvas
       ..translate(
-          center.dx - bounds.width * 1.2, center.dy - bounds.height * 0.78)
+        center.dx - bounds.width * 1.2,
+        center.dy - bounds.height * 0.78,
+      )
       ..drawPath(path, paintCreator())
       ..drawPath(path2, paintCreator());
 

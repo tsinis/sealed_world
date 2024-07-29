@@ -5,7 +5,9 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../multi_element_painter.dart";
 
+/// Painter for the simple eagle.
 final class EaglePainter extends CustomElementsPainter {
+  /// Creates a new instance of [EaglePainter].
   const EaglePainter(super.properties, super.aspectRatio);
 
   @override

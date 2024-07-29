@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Vatican City flag.
 final class VatPainter extends CustomElementsPainter {
+  /// Creates a new instance of [VatPainter].
   const VatPainter(super.properties, super.aspectRatio);
 
   @override

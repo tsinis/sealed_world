@@ -3,7 +3,9 @@ import "dart:ui";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Trinidad and Tobago flag.
 final class TtoLinePainter extends CustomElementsPainter {
+  /// Creates a new instance of [TtoLinePainter].
   const TtoLinePainter(super.properties, super.aspectRatio);
 
   @override
