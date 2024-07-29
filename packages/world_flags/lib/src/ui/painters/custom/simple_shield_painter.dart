@@ -33,14 +33,9 @@ final class SimpleShieldPainter extends MultiElementPainter {
   double get originalAspectRatio => FlagConstants.defaultAspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
-    final adjustedSize = ratioAdjustedSize(size, parent: parent);
-    final parentChild = parent?.child;
-    final thisProperty = parentChild ?? property;
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+    final adjustedSize = ratioAdjustedSize(size);
+    final thisProperty = property;
     final otherColors =
         (thisProperty as CustomElementsProperties?)?.otherColors;
     final center = calculateCenter(size);
@@ -101,6 +96,6 @@ final class SimpleShieldPainter extends MultiElementPainter {
     }
     canvas.restore();
 
-    return (bounds: path.getBounds(), canvas: canvas, child: parentChild);
+    return (bounds: path.getBounds(), canvas: canvas, child: null);
   }
 }

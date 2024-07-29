@@ -13,20 +13,16 @@ final class UsaStarsPainter extends MultiElementPainter {
   static const _starsInRow = 6;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
-    final child = parent?.child;
-    final color = child?.mainColor;
-    if (parent == null || color == null) return parent;
-    final paint = paintCreator(color);
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+    final parent =
+        RectanglePainter([properties.first], aspectRatio).paint(canvas, size);
+    if (parent == null) return parent;
+    final paint = paintCreator(customProperties.mainColor);
     final parentSize = parent.bounds.size;
     final rectSize = Size(parentSize.width, parentSize.height);
     final horizontalSpacing = rectSize.width / _starsInRow;
     final verticalSpacing = (rectSize.height / _rows) * 0.9;
-    final outerRadius = rectSize.height * (child?.heightFactor ?? 1);
+    final outerRadius = rectSize.height * customProperties.heightFactor;
 
     for (var row = 0; row < _rows; row++) {
       final isEven = row.isEven;

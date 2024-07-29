@@ -15,11 +15,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final paint = paintCreator(customColors.last);
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
@@ -98,7 +94,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
       _radians,
     );
 
-    return parent;
+    return null;
   }
 
   // ignore: long-parameter-list, TODO: Refactor later.

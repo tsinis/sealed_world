@@ -11,11 +11,7 @@ final class KhmPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagKhmProperties.aspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

@@ -5,11 +5,7 @@ final class UgaPainter extends MultiElementPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final width = size.width * (customProperties.widthFactor ?? 1);
     final height = size.height * customProperties.heightFactor;
     final center = calculateCenter(size);

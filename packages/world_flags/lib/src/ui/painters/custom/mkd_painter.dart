@@ -4,11 +4,7 @@ final class MkdPainter extends MultiElementPainter {
   const MkdPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final width = size.width;
     final height = size.height;
     final center = Offset(width / 2, height / 2);
@@ -52,6 +48,6 @@ final class MkdPainter extends MultiElementPainter {
       ..drawPath(fourthRay, paint)
       ..restore();
 
-    return parent;
+    return null;
   }
 }

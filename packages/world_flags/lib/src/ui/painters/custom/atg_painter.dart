@@ -4,11 +4,7 @@ final class AtgPainter extends MultiElementPainter {
   const AtgPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final path = Path()
       ..moveTo(0, 0)
       ..lineTo(size.width / 2, size.height)

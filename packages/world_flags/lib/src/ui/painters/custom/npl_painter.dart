@@ -8,11 +8,7 @@ final class NplPainter extends CustomElementsPainter {
   const NplPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final height = size.height;
     final width = size.width;
     final path = Path()

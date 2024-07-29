@@ -15,11 +15,7 @@ final class AgoPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.4);
     final height = adjustedSize.height * 2;
     final width = adjustedSize.width;

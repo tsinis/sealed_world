@@ -11,6 +11,7 @@ import "../../model/shape.dart";
 import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
 import "basic/flag_anti_alias.dart";
+import "common/rectangle_painter.dart";
 
 part "custom/atf_painter.dart";
 part "custom/atg_painter.dart";
@@ -41,18 +42,16 @@ final class MultiElementPainter extends CustomElementsPainter {
   const MultiElementPainter(super.properties, super.aspectRatio);
 
   @override
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) => null;
+
+  @override
   FlagParentBounds? paint(Canvas canvas, Size size) {
-    for (final property in properties) {
-      final shape = property.shape;
-      FlagParentBounds? parent;
+    for (final props in properties) {
+      final shape = props.shape;
       if (shape != null) {
-        final ratio = size.aspectRatio;
-        parent = painter(shape)([property], ratio).paint(canvas, size);
+        painter(shape)([props], size.aspectRatio).paint(canvas, size);
       }
-      if (property is CustomElementsProperties ||
-          property.child is CustomElementsProperties) {
-        paintFlagElements(canvas, size, parent);
-      }
+      if (props is CustomElementsProperties) paintFlagElements(canvas, size);
     }
 
     return null;

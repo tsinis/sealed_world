@@ -8,11 +8,7 @@ final class DavidStarPainter extends CustomElementsPainter {
   const DavidStarPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final paint = Paint()
       ..color = property.mainColor
       ..style = PaintingStyle.stroke
@@ -31,7 +27,7 @@ final class DavidStarPainter extends CustomElementsPainter {
 
     canvas.restore();
 
-    return parent;
+    return null;
   }
 
 // ignore: long-parameter-list, TODO! Refactor later.

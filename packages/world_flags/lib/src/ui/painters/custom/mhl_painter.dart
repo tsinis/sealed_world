@@ -4,11 +4,7 @@ final class MhlPainter extends MultiElementPainter {
   const MhlPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final biggerFactor = property.widthFactor ?? 1;
     final offsetFromEdges = property.heightFactor * size.height;
     final start = Offset(0, size.height - offsetFromEdges * 2);
@@ -40,10 +36,6 @@ final class MhlPainter extends MultiElementPainter {
       ..drawPath(orangePath, orange)
       ..drawPath(whitePath, paintCreator());
 
-    return (
-      canvas: canvas,
-      bounds: whitePath.getBounds(),
-      child: parent?.child
-    );
+    return (canvas: canvas, bounds: whitePath.getBounds(), child: null);
   }
 }

@@ -13,11 +13,7 @@ final class EaglePainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     MultiElementPainter(List.unmodifiable(properties.skip(1)), aspectRatio)
         .paint(canvas, size);
 

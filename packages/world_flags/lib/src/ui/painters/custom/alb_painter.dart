@@ -12,11 +12,7 @@ final class AlbPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.6);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

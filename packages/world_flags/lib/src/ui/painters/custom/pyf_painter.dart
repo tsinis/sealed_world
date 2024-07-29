@@ -4,11 +4,7 @@ final class PyfPainter extends MultiElementPainter {
   const PyfPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final center = calculateCenter(size);
     final radius = size.height * property.heightFactor / 2;
     final rect = Rect.fromCircle(center: center, radius: radius);

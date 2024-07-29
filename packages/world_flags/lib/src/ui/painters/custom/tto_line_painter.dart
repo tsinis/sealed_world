@@ -7,11 +7,7 @@ final class TtoLinePainter extends CustomElementsPainter {
   const TtoLinePainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final width = size.width;
     final height = size.height;
     final heightFactor = property.heightFactor;
@@ -37,10 +33,6 @@ final class TtoLinePainter extends CustomElementsPainter {
       ..drawPath(whitePath, paintCreator())
       ..drawPath(blackPath, blackPaint);
 
-    return (
-      canvas: canvas,
-      bounds: whitePath.getBounds(),
-      child: parent?.child
-    );
+    return (canvas: canvas, bounds: whitePath.getBounds(), child: null);
   }
 }

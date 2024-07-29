@@ -5,11 +5,7 @@ final class TkmPainter extends MultiElementPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final horizontal = (customProperties.offset.dx + 1) * size.width / 2;
     final vertical = (customProperties.offset.dy + 1) * size.height / 2;
     final center = Offset(horizontal, vertical);

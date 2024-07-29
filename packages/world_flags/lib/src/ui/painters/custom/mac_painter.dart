@@ -13,11 +13,7 @@ final class MacPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

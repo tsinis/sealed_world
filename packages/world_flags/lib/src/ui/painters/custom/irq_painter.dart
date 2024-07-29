@@ -11,11 +11,7 @@ final class IrqPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagIrqProperties.aspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -37,6 +33,6 @@ final class IrqPainter extends CustomElementsPainter {
       Offset((width - text.width) / 2, center.dy - text.height / 2),
     );
 
-    return parent;
+    return null;
   }
 }
