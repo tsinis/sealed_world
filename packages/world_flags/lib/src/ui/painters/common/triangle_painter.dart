@@ -3,7 +3,12 @@ import "dart:ui";
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 
+/// A painter for rendering triangular elements on flags.
+///
+/// This class extends [ElementsPainter] and provides methods to paint
+/// triangles in various orientations based on the specified properties.
 final class TrianglePainter extends ElementsPainter {
+  /// Creates a [TrianglePainter] with the given properties and aspect ratio.
   const TrianglePainter(super.properties, super.aspectRatio);
 
   @override

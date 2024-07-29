@@ -1,8 +1,21 @@
 part of "../multi_element_painter.dart";
 
+/// A painter for rendering custom diagonal elements.
+///
+/// This class extends [MultiElementPainter] and provides different constructors
+/// for rendering diagonal elements either vertically or horizontally.
 final class CustomDiagonalPainter extends MultiElementPainter {
+  /// Creates a [CustomDiagonalPainter] for vertical diagonal elements.
+  ///
+  /// The [properties] parameter specifies the properties of the elements.
+  /// The [aspectRatio] parameter specifies the aspect ratio of the elements.
   const CustomDiagonalPainter.vertical(super.properties, super.aspectRatio)
       : _isHorizontal = false;
+
+  /// Creates a [CustomDiagonalPainter] for horizontal diagonal elements.
+  ///
+  /// The [properties] parameter specifies the properties of the elements.
+  /// The [aspectRatio] parameter specifies the aspect ratio of the elements.
   const CustomDiagonalPainter.horizontal(super.properties, super.aspectRatio)
       : _isHorizontal = true;
 

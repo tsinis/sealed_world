@@ -4,7 +4,12 @@ import "../../../model/shape.dart";
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 
+/// A painter for rendering rectangular elements on flags.
+///
+/// This class extends [ElementsPainter] and provides methods to paint
+/// rectangles based on the specified properties.
 final class RectanglePainter extends ElementsPainter {
+  /// Creates a [RectanglePainter] with the given properties and aspect ratio.
   const RectanglePainter(super.properties, super.aspectRatio);
 
   @override

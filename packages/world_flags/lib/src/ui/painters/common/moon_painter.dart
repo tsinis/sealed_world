@@ -4,7 +4,12 @@ import "../../../model/shape.dart";
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 
+/// A painter for rendering moon elements on flags.
+///
+/// This class extends [ElementsPainter] and provides methods to paint
+/// moon shapes based on the specified properties.
 final class MoonPainter extends ElementsPainter {
+  /// Creates a [MoonPainter] with the given properties and aspect ratio.
   const MoonPainter(super.properties, super.aspectRatio);
 
   @override

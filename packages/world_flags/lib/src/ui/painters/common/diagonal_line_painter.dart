@@ -5,7 +5,13 @@ import "../../../model/shape.dart";
 import "../../../model/typedefs.dart";
 import "../basic/elements_painter.dart";
 
+/// A painter for rendering diagonal line elements on flags.
+///
+/// This class extends [ElementsPainter] and provides methods to paint
+/// diagonal lines based on the specified properties.
 final class DiagonalLinePainter extends ElementsPainter {
+  /// Creates a [DiagonalLinePainter] with the given properties
+  /// and aspect ratio.
   const DiagonalLinePainter(super.properties, super.aspectRatio);
 
   @override
