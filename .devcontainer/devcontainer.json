@@ -1,20 +1,36 @@
 {
+  "name": "Fluter SDK",
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "run": {
-    "image": "docker.io/ubuntu:latest"
-  },
-  "forwardPorts": [8000, 8080],
-  "name": "Dart SDK",
   "customizations": {
     "vscode": {
-      "extensions": ["Dart-Code.dart-code"]
+      "extensions": ["dart-code.dart-code", "dart-code.flutter"],
+      "settings": {
+        "emulator.emulatorPath": "/opt/android-sdk-linux/emulator",
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true
+    }
+  },
+  "runArgs": [
+    "--add-host=host.docker.internal:host-gateway",
+    "--device=/dev/kvm"
+  ],
+  "portsAttributes": {
+    "5554": {
+      "label": "Emulator port",
+      "onAutoForward": "notify"
     },
-    "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "remoteUser": "root",
-    "runArgs": ["--privileged"]
-  }
+    "5555": {
+      "label": "ADB connection port",
+      "onAutoForward": "notify"
+    }
+  },
+  "onCreateCommand": "flutter pub get",
+  "remoteUser": "root"
 }
