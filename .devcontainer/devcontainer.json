@@ -1,8 +1,6 @@
 {
-  "name": "Fluter SDK",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "name": "Flutter SDK",
+  "image": "instrumentisto/flutter",
   "customizations": {
     "vscode": {
       "extensions": ["dart-code.dart-code", "dart-code.flutter"],
