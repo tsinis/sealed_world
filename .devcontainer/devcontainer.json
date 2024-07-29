@@ -29,6 +29,5 @@
       "onAutoForward": "notify"
     }
   },
-  "onCreateCommand": "flutter pub get",
   "remoteUser": "root"
 }
