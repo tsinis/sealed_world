@@ -5,6 +5,20 @@ import "../data/flags_map_part_1.data.dart";
 import "../data/flags_map_part_2.data.dart";
 import "../data/flags_map_part_3.data.dart";
 
+/// A map containing properties for the official ISO 3166 country flags.
+///
+/// This map associates each flag with its specific properties, such as colors,
+/// elements, and aspect ratios.
+///
+/// Example usage:
+/// ```dart
+/// import 'package:world_flags/world_flags.dart';
+///
+/// void main() {
+///   var nepalProperties = flagPropertiesMap[const CountryNpl()];
+///   print('Nepal flag properties: $nepalProperties');
+/// }
+/// ```
 const flagPropertiesMap = {
   CountryAbw(): flagAbwProperties,
   CountryAfg(): flagAfgProperties,
@@ -258,6 +272,22 @@ const flagPropertiesMap = {
   CountryUnk(): flagUnkProperties,
 };
 
+/// A list of countries whose flags are suitable for rendering in any size.
+///
+/// Example usage:
+/// ```dart
+/// import 'package:world_flags/world_flags.dart';
+///
+/// void main() {
+///   if (fullFlags.contains(const CountryRus())) {
+///     print('The flag of Russia is suitable for full-scale rendering.');
+///   }
+/// }
+/// ```
+///
+/// This list is useful for applications that need to display high-quality
+/// flag images at various sizes, ensuring that the flags in this list
+/// maintain their visual integrity in any scale.
 const fullFlags = [
   CountryAbw(),
   CountryAgo(), // TODO!
