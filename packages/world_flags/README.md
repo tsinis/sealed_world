@@ -10,7 +10,7 @@
 
 Flutter library for compact and visually appealing country flag icons. Optimized for rendering sizes from 18 to 48 pixels (height), these flags draw inspiration from circle-flags, OpenMoji, and Twemoji. Over two-thirds of the flags in this library are also suitable for full-scale use.
 
-Each flag is a vector-based CustomPainter, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, world_flags allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions.
+Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, world_flags allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions.
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_flags/doc/example.gif)
 
@@ -126,12 +126,13 @@ This package is licensed under the MIT license. See [LICENSE](./LICENSE) for det
 
 #### Why should I use this package over any other country flag package?
 
-- **Every flag is a Widget** - This package doesn't use heavy SVG or any other assets, all flags are declarative-style optimized CustomPainters. That means that you don't have to worry about pre-caching, increased app size, platform-dependent look of the flags, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
-- **Custom flags** - package provides multiple classes and simple API to create your own flags.
+- **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets, all flags are declarative-style optimized CustomPainters. That means that you don't have to worry about pre-caching, increased app size, platform-dependent look of the flags, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
+- **Custom flags**: Package provides multiple classes and simple API to create your own flags.
 - **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing its sealed nature), you can also override existing or add new data, etc.).
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has almost 100% code coverage, with **more than 678 (+3140 in underlying Dart packages) tests**, providing confidence in its reliability and stability.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
+- **Fully documented**: Package provides documentation for every public member, usually with examples.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
