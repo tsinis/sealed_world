@@ -3,7 +3,7 @@ name: world_flags
 description: Country flags made with Flutter - every flag is a Widget, without any assets.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_flags
-issue_tracker: https://github.com/tsinis/sealed_world/issues/
+issue_tracker: https://github.com/tsinis/sealed_world/issues
 topics:
   - flags
   - flag
