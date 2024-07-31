@@ -5,7 +5,7 @@ import "package:flutter/foundation.dart" show visibleForTesting;
 /// This flag is used to enable or disable anti-aliasing for flag elements. It
 /// is primarily used in golden tests where anti-aliasing is set to true.
 @visibleForTesting
-// ignore: avoid_positional_boolean_parameters, against wrong_number_of_parameters_for_setter
+// ignore: avoid_positional_boolean_parameters, against wrong_number_of_parameters_for_setter.
 set flagAntiAliasOverride(bool doAntiAlias) => _doAntiAlias = doAntiAlias;
 
 /// Retrieves the current value of the anti-aliasing flag.

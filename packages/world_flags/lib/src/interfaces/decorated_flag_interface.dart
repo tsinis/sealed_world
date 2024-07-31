@@ -14,7 +14,8 @@ abstract interface class DecoratedFlagInterface {
   /// - [decorationPosition]: The position of the decoration. Defaults to
   ///  [DecorationPosition.foreground] if not provided.
   /// - [padding]: The padding around the flag.
-  const DecoratedFlagInterface({
+  const DecoratedFlagInterface( // coverage: ignore-line
+      {
     this.aspectRatio,
     this.decoration,
     this.decorationPosition,
