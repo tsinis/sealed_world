@@ -7,13 +7,35 @@ import "../../../model/flag_properties.dart";
 import "../../../model/stripe_orientation.dart";
 import "flag_anti_alias.dart";
 
+/// A custom painter that draws stripes on a flag.
+///
+/// This class extends [CustomPainter] and allows for the drawing of stripes on
+/// a flag. It uses the provided [FlagProperties], [BoxDecoration], and an
+/// optional elements painter to customize the appearance of the stripes.
 class StripesPainter<T extends CustomPainter> extends CustomPainter {
+  /// Creates a new instance of [StripesPainter].
+  ///
+  /// - [properties]: The properties of the flag.
+  /// - [decoration]: The decoration to apply to the flag, such as background
+  ///   color and border radius.
+  /// - [elementsPainter]: An optional custom painter for additional elements on
+  ///   the flag.
   const StripesPainter(this.properties, this.decoration, this.elementsPainter);
 
+  /// The properties of the flag.
   final FlagProperties properties;
+
+  /// The decoration to apply to the flag, such as background color and border
+  /// radius.
   final BoxDecoration? decoration;
+
+  /// An optional custom painter for additional elements on the flag.
   final T? elementsPainter;
 
+  /// The border radius of the flag, derived from the [decoration].
+  ///
+  /// If no border radius is specified in the [decoration], this defaults to
+  /// [BorderRadius.zero].
   BorderRadiusGeometry get borderRadius =>
       decoration?.borderRadius ?? BorderRadius.zero;
 
