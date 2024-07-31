@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Saudi Arabia flag.
 final class SauPainter extends CustomElementsPainter {
+  /// Creates a new instance of [SauPainter].
   const SauPainter(super.properties, super.aspectRatio);
 
   @override
@@ -13,11 +15,7 @@ final class SauPainter extends CustomElementsPainter {
   static const _widthScale = 0.3;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

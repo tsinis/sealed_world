@@ -5,7 +5,9 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../multi_element_painter.dart";
 
+/// Painter for the U.S. Virgin Islands flag.
 final class VirPainter extends CustomElementsPainter {
+  /// Creates a new instance of [VirPainter].
   const VirPainter(super.properties, super.aspectRatio);
 
   @override
@@ -22,11 +24,7 @@ final class VirPainter extends CustomElementsPainter {
       );
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

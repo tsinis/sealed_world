@@ -2201,8 +2201,8 @@ const flagUsaProperties = FlagProperties(
       shape: Rectangle(aspectRatio: 2964 / 2100),
       offset: Offset(-1, -1),
       heightFactor: 7 / 13,
-      child: CustomElementsProperties(Color(0xffffffff), heightFactor: 0.052),
     ),
+    CustomElementsProperties(Color(0xffffffff), heightFactor: 0.052),
   ],
   url:
       "https://wikipedia.org/wiki/File:Flag_of_the_United_States_(construction_sheet).svg",

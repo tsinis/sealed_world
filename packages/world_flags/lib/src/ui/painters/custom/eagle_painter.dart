@@ -5,7 +5,9 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../multi_element_painter.dart";
 
+/// Painter for the simple eagle.
 final class EaglePainter extends CustomElementsPainter {
+  /// Creates a new instance of [EaglePainter].
   const EaglePainter(super.properties, super.aspectRatio);
 
   @override
@@ -13,11 +15,7 @@ final class EaglePainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     MultiElementPainter(List.unmodifiable(properties.skip(1)), aspectRatio)
         .paint(canvas, size);
 

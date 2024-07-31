@@ -1,17 +1,15 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Brazil flag.
 final class BraPainter extends MultiElementPainter {
+  /// Creates a new instance of [BraPainter].
   const BraPainter(super.properties, super.aspectRatio);
 
   @override
   double? get originalAspectRatio => flagBraProperties.aspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

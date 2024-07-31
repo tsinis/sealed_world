@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Canada flag.
 final class MapleLeafPainter extends CustomElementsPainter {
+  /// Creates a new instance of [MapleLeafPainter].
   const MapleLeafPainter(super.properties, super.aspectRatio);
 
   @override
@@ -12,11 +14,7 @@ final class MapleLeafPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

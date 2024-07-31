@@ -1,3 +1,13 @@
+## 0.8.0
+
+NEW FEATURES
+
+- `CountryFlag` now have non-required child property.
+
+DOCUMENTATION
+
+- Fully document all the public members of the package.
+
 ## 0.7.0
 
 TESTS

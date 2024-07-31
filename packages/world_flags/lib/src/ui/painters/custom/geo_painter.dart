@@ -1,15 +1,13 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Georgia flag.
 final class GeoPainter extends MultiElementPainter {
+  /// Creates a new instance of [GeoPainter].
   const GeoPainter(super.properties, super.aspectRatio);
 
   @override
   // ignore: long-method,  expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final center = calculateCenter(size);
     final dimension = size.height / 5;
 
@@ -99,6 +97,6 @@ final class GeoPainter extends MultiElementPainter {
         ..restore();
     }
 
-    return parent;
+    return null;
   }
 }

@@ -131,6 +131,16 @@ export "src/ui/painters/custom/vct_painter.dart";
 export "src/ui/painters/custom/vir_painter.dart";
 export "src/ui/painters/multi_element_painter.dart";
 
+/// A map that associates country objects with simplified flag representations.
+///
+/// This map is used to provide simplified flag representations for various
+/// countries. Each entry in the map consists of a country as the key and a
+/// list of flag elements as the value.
+///
+/// Example usage:
+/// ```dart
+/// final usaFlagElements = smallSimplifiedFlagsMap[const CountryUsa()];
+/// ```
 // ignore_for_file: prefer-static-class, to follow pattern from eco-system.
 const smallSimplifiedFlagsMap = {
   CountryAbw(): StarFlag(flagAbwProperties),

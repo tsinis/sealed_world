@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Papua New Guinea flag.
 final class PngPainter extends MultiElementPainter {
+  /// Creates a new instance of [PngPainter].
   const PngPainter(super.properties, super.aspectRatio);
 
   @override
@@ -8,11 +10,7 @@ final class PngPainter extends MultiElementPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.5);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

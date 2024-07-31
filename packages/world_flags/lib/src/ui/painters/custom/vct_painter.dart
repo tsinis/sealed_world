@@ -4,18 +4,16 @@ import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Saint Vincent and the Grenadines flag.
 final class VctPainter extends CustomElementsPainter {
+  /// Creates a new instance of [VctPainter].
   const VctPainter(super.properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagVctProperties.aspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final height = adjustedSize.height / 2;
     final width = adjustedSize.width / 2;

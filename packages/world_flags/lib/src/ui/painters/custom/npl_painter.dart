@@ -4,15 +4,13 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../multi_element_painter.dart";
 
+/// Painter for the Nepal flag.
 final class NplPainter extends CustomElementsPainter {
+  /// Creates a new instance of [NplPainter].
   const NplPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final height = size.height;
     final width = size.width;
     final path = Path()

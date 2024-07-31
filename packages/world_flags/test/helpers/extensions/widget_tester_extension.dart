@@ -18,7 +18,7 @@ extension GoldenWidgetTesterExtension on WidgetTester {
         theme: ThemeData(
           extensions: [FlagThemeData(decoration: type.decoration)],
         ),
-        home: CountryFlag.simplified(country),
+        home: CountryFlag.simplified(country, child: type.child),
       ),
     );
 

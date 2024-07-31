@@ -1,14 +1,12 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Antigua and Barbuda flag.
 final class AtgPainter extends MultiElementPainter {
+  /// Creates a new instance of [AtgPainter].
   const AtgPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final path = Path()
       ..moveTo(0, 0)
       ..lineTo(size.width / 2, size.height)

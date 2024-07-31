@@ -1,26 +1,46 @@
 part of "../multi_element_painter.dart";
 
+/// A painter for rendering shields with various styles and configurations.
+///
+/// This class extends [MultiElementPainter] and provides different constructors
+/// for rendering shields with or without outlines and dividers.
 final class SimpleShieldPainter extends MultiElementPainter {
+  /// Creates a [SimpleShieldPainter] with an outlined shield and dividers.
+  ///
+  /// The [properties] parameter specifies the properties of the shield. The
+  /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const SimpleShieldPainter.outlinedWithDividers(
     super.properties,
     super.aspectRatio,
   )   : _showDividers = true,
         _showOutline = true;
+
+  /// Creates a [SimpleShieldPainter] with an outlined shield without dividers.
+  ///
+  /// The [properties] parameter specifies the properties of the shield. The
+  /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const SimpleShieldPainter.outlinedWithoutDividers(
     super.properties,
     super.aspectRatio,
   )   : _showDividers = false,
         _showOutline = true;
 
-  const SimpleShieldPainter.withDividers(
-    super.properties,
-    super.aspectRatio,
-  )   : _showDividers = true,
+  /// Creates a [SimpleShieldPainter] with a shield with dividers but without an
+  /// outline.
+  ///
+  /// The [properties] parameter specifies the properties of the shield. The
+  /// [aspectRatio] parameter specifies the aspect ratio of the shield.
+  const SimpleShieldPainter.withDividers(super.properties, super.aspectRatio)
+      : _showDividers = true,
         _showOutline = false;
-  const SimpleShieldPainter.withoutDividers(
-    super.properties,
-    super.aspectRatio,
-  )   : _showDividers = false,
+
+  /// Creates a [SimpleShieldPainter] with a shield without dividers and
+  /// outline.
+  ///
+  /// The [properties] parameter specifies the properties of the shield. The
+  /// [aspectRatio] parameter specifies the aspect ratio of the shield.
+  const SimpleShieldPainter.withoutDividers(super.properties, super.aspectRatio)
+      : _showDividers = false,
         _showOutline = false;
 
   final bool _showDividers;
@@ -33,14 +53,9 @@ final class SimpleShieldPainter extends MultiElementPainter {
   double get originalAspectRatio => FlagConstants.defaultAspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
-    final adjustedSize = ratioAdjustedSize(size, parent: parent);
-    final parentChild = parent?.child;
-    final thisProperty = parentChild ?? property;
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+    final adjustedSize = ratioAdjustedSize(size);
+    final thisProperty = property;
     final otherColors =
         (thisProperty as CustomElementsProperties?)?.otherColors;
     final center = calculateCenter(size);
@@ -101,6 +116,6 @@ final class SimpleShieldPainter extends MultiElementPainter {
     }
     canvas.restore();
 
-    return (bounds: path.getBounds(), canvas: canvas, child: parentChild);
+    return (bounds: path.getBounds(), canvas: canvas, child: null);
   }
 }

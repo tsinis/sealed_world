@@ -4,7 +4,9 @@ import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Kenya flag.
 final class KenPainter extends CustomElementsPainter {
+  /// Creates a new instance of [KenPainter].
   const KenPainter(super.properties, super.aspectRatio);
 
   @override
@@ -12,11 +14,7 @@ final class KenPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.25);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

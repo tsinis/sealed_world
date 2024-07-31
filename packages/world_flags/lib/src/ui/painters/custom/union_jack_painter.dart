@@ -1,17 +1,42 @@
 part of "../multi_element_painter.dart";
 
+/// A painter for rendering the Union Jack flag.
+///
+/// This class extends [SimpleShieldPainter] and provides different constructors
+/// for rendering the Union Jack flag with various styles and configurations.
 final class UnionJackPainter extends SimpleShieldPainter {
+  /// Creates a [UnionJackPainter] with an outlined half Union Jack without
+  /// dividers.
+  ///
+  /// The [properties] parameter specifies the properties of the shield. The
+  /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const UnionJackPainter.half(super.properties, super.aspectRatio)
       : _isFull = false,
         super.outlinedWithoutDividers();
+
+  /// Creates a [UnionJackPainter] with a half Union Jack without outline and
+  /// dividers.
+  ///
+  /// The [properties] parameter specifies the properties of the shield. The
+  /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const UnionJackPainter.halfWithoutOutline(super.properties, super.aspectRatio)
       : _isFull = false,
         super.withoutDividers();
+
+  /// Creates a [UnionJackPainter] with a half Union Jack with dividers.
+  ///
+  /// The [properties] parameter specifies the properties of the shield. The
+  /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const UnionJackPainter.halfWithDividers(
     super.properties,
     super.aspectRatio,
   )   : _isFull = false,
         super.withDividers();
+
+  /// Creates a [UnionJackPainter] with a full Union Jack without dividers.
+  ///
+  /// The [properties] parameter specifies the properties of the shield. The
+  /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const UnionJackPainter.full(super.properties, super.aspectRatio)
       : _isFull = true,
         super.withoutDividers();

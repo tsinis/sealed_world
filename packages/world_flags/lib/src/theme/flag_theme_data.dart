@@ -2,9 +2,24 @@ import "package:flutter/material.dart";
 
 import "../interfaces/decorated_flag_interface.dart";
 
+/// A class that defines the theme data for a flag, including its aspect ratio,
+/// decoration, padding, and dimensions.
+///
+/// This class extends [ThemeExtension] to allow for easy theming and
+/// customization of flags. It also implements [DecoratedFlagInterface] to
+/// provide a consistent interface for decorated flags.
 @immutable
 class FlagThemeData extends ThemeExtension<FlagThemeData>
     implements DecoratedFlagInterface {
+  /// Creates a new instance of [FlagThemeData].
+  ///
+  /// - [aspectRatio]: The aspect ratio of the flag.
+  /// - [decoration]: The decoration to paint behind the flag.
+  /// - [decorationPosition]: The position of the decoration. Defaults to
+  ///  [DecorationPosition.foreground].
+  /// - [padding]: The padding around the flag.
+  /// - [height]: The height of the flag.
+  /// - [width]: The width of the flag.
   const FlagThemeData({
     double? aspectRatio,
     this.decoration,
@@ -13,27 +28,47 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.height,
     this.width,
   }) : _aspectRatio = aspectRatio;
-  // TODO: Add asserts for width and height > 0.
+  // TODO! Add asserts for width and height > 0.
 
   @override
   final BoxDecoration? decoration;
 
-  /// If not provided - default to [DecorationPosition.foreground].
   @override
   final DecorationPosition? decorationPosition;
+
   @override
   final EdgeInsetsGeometry? padding;
+
+  /// The height of the flag.
   final double? height;
+
+  /// The width of the flag.
   final double? width;
 
+  /// The specified aspect ratio of the flag.
   final double? _aspectRatio;
 
+  /// The aspect ratio of the flag, calculated based on the specified aspect
+  /// ratio or the dimensions of the flag.
   @override
   double? get aspectRatio => specifiedAspectRatio ?? calculatedAspectRatio;
+
+  /// The specified aspect ratio of the flag.
   double? get specifiedAspectRatio => _aspectRatio;
+
+  /// The calculated aspect ratio of the flag based on its width and height.
   double? get calculatedAspectRatio =>
       width == null || height == null ? null : (width ?? 1) / (height ?? 1);
 
+  /// Creates a copy of this [FlagThemeData] but with the given fields replaced
+  /// with the new values.
+  ///
+  /// - [aspectRatio]: The aspect ratio of the flag.
+  /// - [decoration]: The decoration to paint behind the flag.
+  /// - [decorationPosition]: The position of the decoration.
+  /// - [padding]: The padding around the flag.
+  /// - [height]: The height of the flag.
+  /// - [width]: The width of the flag.
   @override
   FlagThemeData copyWith({
     double? aspectRatio,

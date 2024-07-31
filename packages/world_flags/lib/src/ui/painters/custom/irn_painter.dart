@@ -1,6 +1,8 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Iran flag.
 final class IrnPainter extends MultiElementPainter {
+  /// Creates a new instance of [IrnPainter].
   const IrnPainter(super.properties, super.aspectRatio);
 
   @override
@@ -8,11 +10,7 @@ final class IrnPainter extends MultiElementPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

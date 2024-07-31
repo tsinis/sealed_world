@@ -7,7 +7,27 @@ import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../painters/basic/stripes_painter.dart";
 
+/// A widget that represents a basic flag with customizable properties,
+/// decorations, and elements.
+///
+/// This class implements [DecoratedFlagInterface] to provide a consistent
+/// interface for decorated flags. It allows for various customizations such as
+/// aspect ratio, decoration, padding, and custom painters for background and
+/// foreground elements.
 class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
+  /// Creates a new instance of [BasicFlag].
+  ///
+  /// - [properties]: The properties of the flag.
+  /// - [aspectRatio]: The aspect ratio of the flag.
+  /// - [decoration]: The decoration to paint behind the flag.
+  /// - [decorationPosition]: The position of the decoration.
+  /// - [padding]: The padding around the flag.
+  /// - [elementsBuilder]: A builder for the elements of the flag.
+  /// - [backgroundPainter]: A custom painter for the background of the flag.
+  /// - [foregroundPainter]: A custom painter for the foreground of the flag.
+  /// - [foregroundWidget]: A widget to display in the foreground of the flag.
+  /// - [foregroundPainterBuilder]: A builder for the foreground painter.
+  /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
   const BasicFlag(
     this.properties, {
     this.aspectRatio,
@@ -23,8 +43,6 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
     super.key,
   });
 
-  final FlagProperties properties;
-
   @override
   final double? aspectRatio;
   @override
@@ -34,11 +52,25 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
   @override
   final EdgeInsetsGeometry? padding;
 
+  /// The properties of the flag.
+  final FlagProperties properties;
+
+  /// A custom painter for the background of the flag.
   final CustomPainter? backgroundPainter;
+
+  /// A builder for the elements of the flag.
   final FlagPainterBuilder? elementsBuilder;
+
+  /// A custom painter for the foreground of the flag.
   final CustomPainter? foregroundPainter;
+
+  /// A widget to display in the foreground of the flag.
   final Widget? foregroundWidget;
+
+  /// A builder for the foreground widget.
   final FlagWidgetBuilder? foregroundWidgetBuilder;
+
+  /// A builder for the foreground painter.
   final FlagPainterBuilder? foregroundPainterBuilder;
 
   double get _flagAspectRatio => properties.aspectRatio;

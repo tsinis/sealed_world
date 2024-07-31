@@ -1,8 +1,12 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the simple bird.
 final class SimpleBirdPainter extends MultiElementPainter {
+  /// Creates a new instance of [SimpleBirdPainter] for Egypt flag.
   const SimpleBirdPainter.egy(super.properties, super.aspectRatio)
       : _originalAspectRatio = FlagConstants.defaultAspectRatio;
+
+  /// Creates a new instance of [SimpleBirdPainter] for Moldova flag.
   const SimpleBirdPainter.mda(super.properties, super.aspectRatio)
       : _originalAspectRatio = 2;
 
@@ -12,21 +16,17 @@ final class SimpleBirdPainter extends MultiElementPainter {
   double get originalAspectRatio => _originalAspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final otherColors = (property as CustomElementsProperties?)?.otherColors;
 
-    final adjustedSize = ratioAdjustedSize(size, parent: parent);
+    final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
     final width = adjustedSize.width;
 
     final path = _drawPath(width, height);
     final outlineColor = otherColors?.firstOrNull;
-    final color = parent?.child?.mainColor ?? property.mainColor;
+    final color = property.mainColor;
     final isSameAsOutline = outlineColor == color || outlineColor == null;
     final mainColor = Paint()
       ..color = isSameAsOutline ? color : color.withOpacity(1 / 3);
@@ -48,7 +48,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
 
     final topColor = otherColors?.elementAtOrNull(1);
     final bottomColor = otherColors?.elementAtOrNull(2);
-    if (topColor == null || bottomColor == null) return parent;
+    if (topColor == null || bottomColor == null) return null;
 
     final birdSize = path.getBounds();
     final squareSize = birdSize.height / 3;

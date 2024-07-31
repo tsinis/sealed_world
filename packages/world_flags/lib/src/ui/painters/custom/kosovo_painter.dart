@@ -1,15 +1,13 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Kosovo region.
 final class KosovoPainter extends MultiElementPainter {
+  /// Creates a new instance of [KosovoPainter].
   const KosovoPainter(super.properties, super.aspectRatio);
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final center = calculateCenter(size);
     final height = size.height * property.heightFactor;
     final width = size.width * (property.widthFactor ?? 1);

@@ -4,15 +4,13 @@ import "dart:ui";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Israel flag.
 final class DavidStarPainter extends CustomElementsPainter {
+  /// Creates a new instance of [DavidStarPainter].
   const DavidStarPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final paint = Paint()
       ..color = property.mainColor
       ..style = PaintingStyle.stroke
@@ -31,7 +29,7 @@ final class DavidStarPainter extends CustomElementsPainter {
 
     canvas.restore();
 
-    return parent;
+    return null;
   }
 
 // ignore: long-parameter-list, TODO! Refactor later.

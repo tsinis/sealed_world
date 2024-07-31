@@ -5,7 +5,9 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../common/star_painter.dart";
 
+/// Painter for the Macau flag.
 final class MacPainter extends CustomElementsPainter {
+  /// Creates a new instance of [MacPainter].
   const MacPainter(super.properties, super.aspectRatio);
 
   @override
@@ -13,11 +15,7 @@ final class MacPainter extends CustomElementsPainter {
 
   @override
   // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

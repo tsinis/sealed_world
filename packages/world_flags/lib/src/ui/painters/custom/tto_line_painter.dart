@@ -3,15 +3,13 @@ import "dart:ui";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Trinidad and Tobago flag.
 final class TtoLinePainter extends CustomElementsPainter {
+  /// Creates a new instance of [TtoLinePainter].
   const TtoLinePainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final width = size.width;
     final height = size.height;
     final heightFactor = property.heightFactor;
@@ -37,10 +35,6 @@ final class TtoLinePainter extends CustomElementsPainter {
       ..drawPath(whitePath, paintCreator())
       ..drawPath(blackPath, blackPaint);
 
-    return (
-      canvas: canvas,
-      bounds: whitePath.getBounds(),
-      child: parent?.child
-    );
+    return (canvas: canvas, bounds: whitePath.getBounds(), child: null);
   }
 }

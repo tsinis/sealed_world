@@ -4,18 +4,16 @@ import "../../../data/flags_map_part_3.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
+/// Painter for the Cambodia flag.
 final class KhmPainter extends CustomElementsPainter {
+  /// Creates a new instance of [KhmPainter].
   const KhmPainter(super.properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagKhmProperties.aspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

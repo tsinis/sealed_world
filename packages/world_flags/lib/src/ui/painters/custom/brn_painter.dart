@@ -1,15 +1,13 @@
 part of "../multi_element_painter.dart";
 
+/// Painter for the Brunei flag.
 final class BrnPainter extends MultiElementPainter {
+  /// Creates a new instance of [BrnPainter].
   const BrnPainter(super.properties, super.aspectRatio);
 
   @override
   @override
-  FlagParentBounds? paintFlagElements(
-    Canvas canvas,
-    Size size, [
-    FlagParentBounds? parent,
-  ]) {
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final midLeft = Offset(0, size.height * 0.3);
     final midRight = Offset(size.width, size.height * 0.72);
     final topLeft = Offset(0, size.height * 0.07);
@@ -35,6 +33,6 @@ final class BrnPainter extends MultiElementPainter {
       ..drawPath(whitePath, paintCreator())
       ..drawPath(blackPath, paintCreator(customColors.first));
 
-    return parent;
+    return null;
   }
 }
