@@ -12,10 +12,16 @@ enum FlagType {
       shape: BoxShape.circle,
       border: Border.fromBorderSide(BorderSide(width: 2)),
     ),
+    child: Padding(padding: EdgeInsets.all(8), child: FlutterLogo()),
   );
 
-  const FlagType({this.height = kMinInteractiveDimension, this.decoration});
+  const FlagType({
+    this.height = kMinInteractiveDimension,
+    this.decoration,
+    this.child,
+  });
 
   final BoxDecoration? decoration;
   final double height;
+  final Widget? child;
 }
