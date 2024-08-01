@@ -351,13 +351,11 @@ final class SvkPainter extends CustomElementsPainter {
     final bounds = path4.getBounds();
 
     canvas
-      ..save()
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(path, paintCreator(customColors.first)) // Red.
       ..drawPath(path2, paintCreator()) // White.
       ..drawPath(path3, paintCreator(customColors.last)) // Blue.
-      ..drawPath(path4, paintCreator()) // White.
-      ..restore();
+      ..drawPath(path4, paintCreator()); // White.
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

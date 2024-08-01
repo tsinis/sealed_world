@@ -263,13 +263,11 @@ final class PrtPainter extends CustomElementsPainter {
     final bluePaint = paintCreator(customColors[1]);
 
     canvas
-      ..save()
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(path, paintCreator()) // Yellow.
       ..drawPath(path2, paintCreator(customColors.last)) // Red.
       ..drawPath(path3, paintCreator(customColors.first)) // White.
-      ..drawPath(path6, bluePaint) // Blue.
-      ..restore();
+      ..drawPath(path6, bluePaint); // Blue.
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

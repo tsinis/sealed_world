@@ -1026,7 +1026,6 @@ final class EriPainter extends CustomElementsPainter {
     final paint = paintCreator(customProperties.mainColor);
 
     canvas
-      ..save()
       ..translate(
         center.dx - bounds.center.dx / 2,
         center.dy - bounds.center.dy / 2,
@@ -1035,8 +1034,7 @@ final class EriPainter extends CustomElementsPainter {
       ..drawPath(path, paint)
       ..scale(-1, 1)
       ..translate(-bounds.width * 1.66, 0)
-      ..drawPath(path, paint)
-      ..restore();
+      ..drawPath(path, paint);
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }
