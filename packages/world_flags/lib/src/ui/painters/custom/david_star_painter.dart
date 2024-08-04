@@ -19,15 +19,12 @@ final class DavidStarPainter extends CustomElementsPainter {
     final radius = min(size.width, size.height) / 5.5;
 
     canvas
-      ..save()
       ..translate(size.width / 2, size.height / 2)
       ..rotate(pi / 2)
       ..translate(-size.width / 2, -size.height / 2);
 
     _drawTriangle(canvas, center, radius, paint, isUpward: true);
     _drawTriangle(canvas, center, radius, paint, isUpward: false);
-
-    canvas.restore();
 
     return null;
   }

@@ -187,7 +187,6 @@ final class BlrPainter extends CustomElementsPainter {
         Rect.fromLTRB(bounds.left, 0, bounds.right - 2, size.height * 1.1);
 
     canvas
-      ..save()
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawRect(rect, paintCreator())
       ..drawPath(path, redPaint)
@@ -197,8 +196,7 @@ final class BlrPainter extends CustomElementsPainter {
         redPaint
           ..style = PaintingStyle.stroke
           ..strokeWidth = height * 0.025,
-      )
-      ..restore();
+      );
 
     return (canvas: canvas, bounds: rect, child: property.child);
   }

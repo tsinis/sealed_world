@@ -267,10 +267,8 @@ final class LbnPainter extends CustomElementsPainter {
     final bounds = path.getBounds();
 
     canvas
-      ..save()
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawPath(path, paintCreator())
-      ..restore();
+      ..drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

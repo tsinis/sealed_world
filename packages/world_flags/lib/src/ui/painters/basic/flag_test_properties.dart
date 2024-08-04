@@ -1,4 +1,4 @@
-import "package:flutter/foundation.dart" show visibleForTesting;
+import "package:flutter/material.dart";
 
 /// A flag to control anti-aliasing for flag elements.
 ///
@@ -17,3 +17,15 @@ bool get flagAntiAliasOverride => _doAntiAlias;
 ///
 /// This flag is set to false by default.
 bool _doAntiAlias = false;
+
+/// Flutter Golden tests are using Ahem font family by default. It's showing
+/// squares instead of real characters. With this setter you can specify
+/// different font family for your tests.
+@visibleForTesting
+set flagTextStyleOverride(TextStyle textStyle) => _textStyle = textStyle;
+
+/// Retrieves the current value of the font family that is used for flag's
+/// custom text elements (i.e. AFG, SAU, IRQ, VIR flags).
+TextStyle get flagTextStyleOverride => _textStyle;
+
+TextStyle _textStyle = const TextStyle();

@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/model/colors_properties.dart";
@@ -24,12 +25,9 @@ void main() => group("$ColorsProperties", () {
           expect(colorsProperties.ratio, ratio);
         });
 
-        test(
-          "should throw $AssertionError for invalid ratio",
-          () => expect(
-            () => ColorsProperties(color, ratio: invalidRatio),
-            throwsA(isA<AssertionError>()),
-          ),
+        assertTest(
+          "invalid ratio",
+          () => ColorsProperties(color, ratio: invalidRatio),
         );
       });
 
@@ -42,12 +40,9 @@ void main() => group("$ColorsProperties", () {
           expect(colorsProperties.ratio, ratio);
         });
 
-        test(
-          "should throw $AssertionError for invalid ratio",
-          () => expect(
-            () => ColorsProperties.fromIntColor(bitColor, ratio: invalidRatio),
-            throwsA(isA<AssertionError>()),
-          ),
+        assertTest(
+          "invalid ratio",
+          () => ColorsProperties.fromIntColor(bitColor, ratio: invalidRatio),
         );
       });
     });

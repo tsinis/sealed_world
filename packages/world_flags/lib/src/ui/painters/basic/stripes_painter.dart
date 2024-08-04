@@ -5,7 +5,7 @@ import "package:flutter/rendering.dart";
 import "../../../helpers/extensions/box_decoration_extension.dart";
 import "../../../model/flag_properties.dart";
 import "../../../model/stripe_orientation.dart";
-import "flag_anti_alias.dart";
+import "flag_test_properties.dart";
 
 /// A custom painter that draws stripes on a flag.
 ///

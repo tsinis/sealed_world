@@ -3,6 +3,7 @@ import "package:flutter/rendering.dart";
 import "../../../data/flags_map_part_3.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
+import "../basic/flag_test_properties.dart";
 
 /// Painter for the Iraq flag.
 final class IrqPainter extends CustomElementsPainter {
@@ -20,8 +21,7 @@ final class IrqPainter extends CustomElementsPainter {
     final width = adjustedSize.width;
     final textSpan = TextSpan(
       text: "الله اكبر", //ignore: avoid-non-ascii-symbols, text on the flag.
-      style: TextStyle(
-        inherit: false,
+      style: flagTextStyleOverride.copyWith(
         color: property.mainColor,
         fontSize: height,
         fontWeight: FontWeight.bold,

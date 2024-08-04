@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/theme/flag_theme_data.dart";
@@ -70,5 +71,17 @@ void main() => group("$FlagThemeData", () {
           expect(value, isNot(updated));
           expect(value.hashCode, isNot(updated.hashCode));
         });
+      });
+
+      group("asserts", () {
+        const negative = -1.0;
+
+        assertTest("negative width", () => FlagThemeData(width: negative));
+        assertTest("negative height", () => FlagThemeData(height: negative));
+
+        assertTest(
+          "negative aspectRatio",
+          () => FlagThemeData(aspectRatio: negative),
+        );
       });
     });

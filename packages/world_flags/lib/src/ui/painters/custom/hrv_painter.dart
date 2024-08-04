@@ -245,13 +245,11 @@ final class HrvPainter extends CustomElementsPainter {
     final bounds = path.getBounds();
 
     canvas
-      ..save()
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(path, paintCreator()) // Red.
       ..drawPath(path2, paintCreator(customColors.first)) // White.
       ..drawPath(path3, paintCreator(customColors[1])) // Blue.
-      ..drawPath(path4, paintCreator(customColors.last)) // Light blue.
-      ..restore();
+      ..drawPath(path4, paintCreator(customColors.last)); // Light blue.
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

@@ -1,7 +1,8 @@
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
-import "../../world_flags.dart" show smallSimplifiedFlagsMap;
+import "../../world_flags.dart"
+    show smallSimplifiedAlternativeFlagsMap, smallSimplifiedFlagsMap;
 import "../helpers/extensions/basic_flag_extension_copy_with.dart";
 import "../helpers/extensions/world_flags_build_context_extension.dart";
 import "../interfaces/decorated_flag_interface.dart";
@@ -38,6 +39,9 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   /// - [child]: A widget to display in the foreground of the flag.
   const CountryFlag.simplified(
     this.country, {
+    /// Map of non-official or alternative flags of the countries.
+    Map<WorldCountry, BasicFlag>? alternativeMap =
+        smallSimplifiedAlternativeFlagsMap,
     this.height,
     this.width,
     this.aspectRatio,
@@ -47,7 +51,8 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
     this.orElse,
     this.child,
     super.key,
-  }) : _map = smallSimplifiedFlagsMap;
+  })  : _map = smallSimplifiedFlagsMap,
+        _alternativeMap = alternativeMap;
 
   /// Creates a [CountryFlag] widget with a custom flag representation.
   ///
@@ -66,6 +71,8 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   const CountryFlag.custom(
     this.country,
     this._map, {
+    /// Map of non-official or alternative flags of the countries.
+    Map<WorldCountry, BasicFlag>? alternativeMap,
     this.height,
     this.width,
     this.aspectRatio,
@@ -75,12 +82,14 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
     this.orElse,
     this.child,
     super.key,
-  });
+  }) : _alternativeMap = alternativeMap;
 
   /// A map of flags for different countries.
   ///
   /// This map is used to look up the flag for the specified [country].
   final Map<WorldCountry, BasicFlag> _map;
+
+  final Map<WorldCountry, BasicFlag>? _alternativeMap;
 
   /// The country for which the flag is to be displayed.
   final WorldCountry country;
@@ -113,11 +122,13 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   @override
   final EdgeInsetsGeometry? padding;
 
+  BasicFlag? get _basicFlag => _alternativeMap?[country] ?? _map[country];
+
   @override
   Widget build(BuildContext context) => SizedBox(
         width: width ?? context.flagTheme?.width,
         height: height ?? context.flagTheme?.height,
-        child: _map[country]?.copyWith(
+        child: _basicFlag?.copyWith(
               decorationPosition: decorationPosition,
               aspectRatio: aspectRatio,
               decoration: decoration,

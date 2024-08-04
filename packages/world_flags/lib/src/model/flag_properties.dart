@@ -49,8 +49,10 @@ class FlagProperties {
     this.stripeOrientation = StripeOrientation.horizontal,
     this.elementsProperties,
     this.url = "",
-  });
-  // TODO! Add assert for stripeColors.length > 0.
+  }) : assert(
+          stripeColors != const <ColorsProperties>[],
+          "`stripeColors` should not be empty!",
+        );
 
   /// The list of colors for the stripes of the flag.
   final List<ColorsProperties> stripeColors;
