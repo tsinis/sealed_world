@@ -22,7 +22,6 @@ This ISO-driven and fully tested package provides information about world countr
 - [Data](#data)
 - [Additional information](#additional-information)
 - [References and credits](#references-and-credits)
-- [Attributions](#attributions)
 - [FAQ](#faq)
 
 ### Features
@@ -220,23 +219,6 @@ If you have any issues or suggestions for the package, please file them in the G
 ### References and credits
 
 This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
-
-### Attributions
-
-The color emoji flags fonts used in this package were obtained from open-source repositories of the original creators. The fonts are redistributed under the terms of the licenses offered by the original authors. The fonts sizes were reduced, by removing non-flag glyphs, to reduce the package size and to reduce the copyright footprint, since most of the country flags are in Public Domain. No modifications in graphic itself were made.
-
-#### Noto Emoji fonts
-
-The [Noto Emoji font](./lib/assets/fonts/NotoEmoji/) font comes from [Noto Emoji](https://github.com/googlefonts/noto-emoji) emoji library. Noto Emoji fonts are under the [SIL Open Font License, version 1.1](https://scripts.sil.org/OFL).
-
-#### OpenMoji fonts
-
-The [OpenMoji](./lib/assets/fonts/OpenMoji/) font comes from [OpenMoji](https://github.com/hfg-gmuend/openmoji) project and redistributed under the CC-BY-SA-4.0 [license terms](https://creativecommons.org/licenses/by-sa/4.0/).
-
-#### Twemoji fonts
-
-The [Twemoji font in COLR/CPAL layered format](./lib/assets/fonts/Twemoji/) font comes from [Twemoji-COLR](https://github.com/mozilla/twemoji-colr) project (Mozilla's COLR/CPAL version of [Twemoji](https://github.com/twitter/twemoji)). Twemoji graphics made by Twitter and other contributors
-and is used and redistributed under the CC-BY-4.0 [license terms](https://creativecommons.org/licenses/by/4.0) offered by the Twemoji project.
 
 ---
 

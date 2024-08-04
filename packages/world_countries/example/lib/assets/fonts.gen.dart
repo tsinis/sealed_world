@@ -10,12 +10,9 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: EmojiOneAndroid
-  static const String emojiOneAndroid = 'EmojiOneAndroid';
+  /// Font family: OpenMojiCOLR0
+  static const String openMojiCOLR0 = 'OpenMojiCOLR0';
 
-  /// Font family: EmojiOneColor
-  static const String emojiOneColor = 'EmojiOneColor';
-
-  /// Font family: EmojiOneMozilla
-  static const String emojiOneMozilla = 'EmojiOneMozilla';
+  /// Font family: OpenMojiCOLR1
+  static const String openMojiCOLR1 = 'OpenMojiCOLR1';
 }
