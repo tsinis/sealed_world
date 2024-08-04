@@ -789,10 +789,10 @@ packages:
     dependency: transitive
     description:
       name: world_flags
-      sha256: "6b4510f1ef4a9037cfafc9adc4814e588a7a4632ece3644b71edcd40a91df110"
+      sha256: ce65a76da5671d66474a036488cf2384f2ad65831fbcbe0b448ad25d76c163db
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.0"
+    version: "1.0.0"
   xml:
     dependency: transitive
     description:

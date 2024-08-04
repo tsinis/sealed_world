@@ -11,8 +11,6 @@ import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
 import "../country/country_picker.dart";
 import "../country/country_tile.dart";
-import "../country/emoji_flag.dart";
-import "../helpers/maybe_widget.dart";
 
 /// A picker widget that displays a list of countries with their phone codes.
 class PhoneCodePicker extends CountryPicker {
@@ -128,22 +126,17 @@ class PhoneCodePicker extends CountryPicker {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Builder(
-                  builder: (context) => MaybeWidget(
-                    context.countryTileTheme?.emojiFamily,
-                    (emojiFamily) => EmojiFlag.fromEmojiFamily(
-                      itemProperties.item,
-                      emojiFamily: emojiFamily,
-                    ),
-                    orElse: CountryFlag.simplified(
-                      itemProperties.item,
-                      height: 18,
-                      aspectRatio: context.flagTheme?.aspectRatio ??
-                          FlagConstants.defaultAspectRatio,
-                      decoration: context.flagTheme?.decoration ??
-                          const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(4)),
+                  builder: (context) => CountryFlag.simplified(
+                    itemProperties.item,
+                    height: 18,
+                    aspectRatio: context.flagTheme?.aspectRatio ??
+                        FlagConstants.defaultAspectRatio,
+                    decoration: context.flagTheme?.decoration ??
+                        const BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(UiConstants.point / 2),
                           ),
-                    ),
+                        ),
                   ),
                 ),
                 Padding(

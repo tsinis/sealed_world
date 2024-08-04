@@ -242,37 +242,9 @@ and is used and redistributed under the CC-BY-4.0 [license terms](https://creati
 
 ### FAQ
 
-#### I have problems rendering COLR emoji flags on Android
-
-Answer: Android OS [supports](https://developer.android.com/about/versions/13/features#color-vector-fonts) COLRv1 fonts from version 13 on (API level 33).
-
-#### My flags on web platform are grey (not colored)
-
-Answer: Please add `useColorEmoji: true` parameter to your `engineInitializer.initializeEngine` method ([index.html](https://github.com/flutter/flutter/issues/119536#issuecomment-1546247494)).
-
-#### Looks like tree shaking of unused emoji flags is not working on web
-
-Answer: Yes it's know Flutter's [issue](https://github.com/flutter/flutter/issues/64106). Although all font families together are not that big, every single KB might be crucial for a web-page loading times. Run this from your project's root directory:
-
-```shell
-dart run world_countries:clean_build [--keep twemoji,notoemoji,openmoji]
-```
-
-You can specify which emoji family you want to keep with the optional `--keep` parameter.
-
 #### I don't like default tiles UI in the pickers
 
 Answer: Every picker has a `itemBuilder` parameter, providing access to specific list item properties, for example this is how you can show only a common country name in `CountryPicker`:
-
-```dart
-CountryPicker(
-  itemBuilder: (country, {isDense}) => Text(country.item.name.common),
-);
-```
-
-#### How can I change emoji flag from default Twemoji to something else?
-
-Answer: You can create your own `itemBuilder` with use of `EmojiFlag` widget that has multiple named constructors and only require country instance, to show different type of flag:
 
 ```dart
 CountryPicker(

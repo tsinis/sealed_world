@@ -1,8 +1,5 @@
-// ignore_for_file: deprecated_member_use_from_same_package
-
 import "package:world_flags/world_flags.dart";
 
-import "../../models/emoji_family.dart";
 import "../../models/item_properties.dart";
 import "base_tile_theme_data.dart";
 
@@ -36,23 +33,5 @@ final class CountryTileThemeData extends BaseTileThemeData<WorldCountry> {
   /// The builder function should take [ItemProperties] of type [WorldCountry]
   /// and an optional density flag, and return a widget that visually represents
   /// the country.
-  const CountryTileThemeData({
-    @Deprecated(
-      "Use FlagThemeData instead. This property will be removed in v2.0.0.",
-    )
-    this.emojiFamily,
-    super.builder,
-  });
-
-  /// The family of emoji flag to be used when rendering country flags in tiles.
-  ///
-  /// This allows for consistent flag rendering across the app. The available
-  /// families are typically different emoji sets provided by various creators,
-  /// such as Twemoji, OpenMoji, Noto Color Emoji, etc.
-  ///
-  /// The default emoji flag family is [EmojiFamily.twemoji].
-  @Deprecated(
-    "Use FlagThemeData instead. This property will be removed in v2.0.0.",
-  )
-  final EmojiFamily? emojiFamily;
+  const CountryTileThemeData({super.builder});
 }
