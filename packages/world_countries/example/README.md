@@ -28,7 +28,7 @@ This project includes code from the [Flutter samples: Navigation and Routing](ht
 
 Please see the original [LICENSE](./lib/routing/LICENSE) and [AUTHORS](./lib/routing/AUTHORS) files for the full text of the BSD 3-Clause License and original authors list.
 
-This project using [EmojiOne Fonts](https://github.com/adobe-fonts/emojione-color) as an example. You can read more about it in the [fonts/EmojiOne](./assets/fonts/EmojiOne/) directory.
+This project using [OpenMoji Fonts](https://github.com/hfg-gmuend/openmoji) as an example of custom `EmojiFlag` usage. You can read more about it and it's license in the [fonts/OpenMoji](./assets/fonts/OpenMoji/) directory.
 
 ## License
 

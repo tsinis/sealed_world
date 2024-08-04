@@ -1,15 +1,12 @@
 import "package:flutter/widgets.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../constants/package_constants.dart";
 import "../../constants/ui_constants.dart";
-import "../../extensions/flutter_emoji_family_extension.dart";
-import "../../models/emoji_family.dart";
 
 // ignore: format-comment, false positive.
 /// Small context about other emoji fonts:
 /// * FxEmojis is deprecated.
-/// * EmojiOne is also deprecated, but you can see usage in the package example.
+/// * EmojiOne is also deprecated.
 /// * emojidex provides no open-source emojis.
 /// * Segoe UI Emoji doesn't include country flags.
 /// * EmojiTwo has no font (especially COLR) support:
@@ -20,131 +17,6 @@ import "../../models/emoji_family.dart";
 /// * Apple Color Emoji are not open-source and free for everyone.
 /// * JoyPixels are also not open-source and free for everyone.
 class EmojiFlag extends Text {
-  /// Twemoji representation of the emoji flag.
-  @Deprecated(
-    "Use CountryFlag instead. This constructor will be removed in v2.0.0.",
-  )
-  EmojiFlag.twemoji(
-    WorldCountry country, {
-    double? size,
-    TextStyle? style,
-    super.key,
-    super.strutStyle,
-    super.textAlign,
-    super.textDirection,
-    super.locale,
-    super.softWrap,
-    super.overflow,
-    super.textScaleFactor,
-    super.maxLines,
-    super.semanticsLabel,
-    super.textWidthBasis,
-    super.textHeightBehavior,
-    super.selectionColor,
-  }) : super(
-          country.emoji,
-          style: _style(
-            style,
-            EmojiFamily.twemoji.fontByPlatform,
-            package: PackageConstants.name,
-            size: size,
-          ),
-        );
-
-  /// OpenMoji representation of the emoji flag.
-  @Deprecated(
-    "Use CountryFlag instead. This constructor will be removed in v2.0.0.",
-  )
-  EmojiFlag.openMoji(
-    WorldCountry country, {
-    double? size,
-    TextStyle? style,
-    super.key,
-    super.strutStyle,
-    super.textAlign,
-    super.textDirection,
-    super.locale,
-    super.softWrap,
-    super.overflow,
-    super.textScaleFactor,
-    super.maxLines,
-    super.semanticsLabel,
-    super.textWidthBasis,
-    super.textHeightBehavior,
-    super.selectionColor,
-  }) : super(
-          country.emoji,
-          style: _style(
-            style,
-            EmojiFamily.openMoji.fontByPlatform,
-            package: PackageConstants.name,
-            size: size,
-          ),
-        );
-
-  /// Noto Emoji Color representation of the emoji flag.
-  @Deprecated(
-    "Use CountryFlag instead. This constructor will be removed in v2.0.0.",
-  )
-  EmojiFlag.notoEmoji(
-    WorldCountry country, {
-    double? size,
-    TextStyle? style,
-    super.key,
-    super.strutStyle,
-    super.textAlign,
-    super.textDirection,
-    super.locale,
-    super.softWrap,
-    super.overflow,
-    super.textScaleFactor,
-    super.maxLines,
-    super.semanticsLabel,
-    super.textWidthBasis,
-    super.textHeightBehavior,
-    super.selectionColor,
-  }) : super(
-          country.emoji,
-          style: _style(
-            style,
-            EmojiFamily.notoEmoji.fontByPlatform,
-            package: PackageConstants.name,
-            size: size,
-          ),
-        );
-
-  /// Adaptive representation of the emoji flag.
-  @Deprecated(
-    "Use CountryFlag instead. This constructor will be removed in v2.0.0.",
-  )
-  EmojiFlag.fromEmojiFamily(
-    WorldCountry country, {
-    EmojiFamily? emojiFamily,
-    double? size,
-    TextStyle? style,
-    super.key,
-    super.strutStyle,
-    super.textAlign,
-    super.textDirection,
-    super.locale,
-    super.softWrap,
-    super.overflow,
-    super.textScaleFactor,
-    super.maxLines,
-    super.semanticsLabel,
-    super.textWidthBasis,
-    super.textHeightBehavior,
-    super.selectionColor,
-  }) : super(
-          country.emoji,
-          style: _style(
-            style,
-            emojiFamily?.fontByPlatform,
-            package: emojiFamily?.packageName,
-            size: size,
-          ),
-        );
-
   /// Platform default representation of the emoji flag.
   EmojiFlag.platformDefault(
     WorldCountry country, {

@@ -1,3 +1,24 @@
+## 2.0.0
+
+BREAKING CHANGES
+
+- Package requires Flutter version 3.19+, because it now uses Semantics [identifier](https://api.flutter.dev/flutter/semantics/SemanticsData/identifier.html) property in all picker's tiles (this property was introduced in that SDK version). This identifier describes the node for UI automation tools that work by querying the accessibility hierarchy, such as Android UI Automator, iOS XCUITest, or Appium. It's not exposed to users.
+- All previously deprecated code, marked with the @Deprecated annotation, has been removed. Including color font emojis (you can still use them on your own via `EmojiFlag.custom` constructor, example code is provided in the `example` project).
+
+NEW FEATURES
+
+- All pickers are updated with accessibility in mind, ensuring seamless integration with screen readers and assistive technologies. Feel free to use [SemanticsDebugger](https://api.flutter.dev/flutter/widgets/SemanticsDebugger-class.html) to check it.
+- `CountryFlag` now offers `alternativeMap` parameter that you can use to provide alternative look of the country flag. By default it contains updated Afghanistan flag (with official design from year 2021) and alternative French Guiana flags.
+- `CountryFlag` now have non-required child property.
+
+REFACTOR
+
+- New asserts in the constructors and optimizations in several country flag painters.
+
+TESTS
+
+- Added tests for new flag asserts and update goldens with arabic fonts.
+
 ## 1.6.0
 
 NEW FEATURES

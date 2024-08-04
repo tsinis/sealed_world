@@ -3,6 +3,7 @@ import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
+import "../../extensions/iso_semantics_extension.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 
@@ -50,6 +51,8 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.excludeSemantics = false,
+    super.semanticsIdentifier,
   });
 
   /// Constructor for the [CurrencyTile] class that uses an [ItemProperties]
@@ -94,10 +97,12 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.excludeSemantics,
   }) : super(
           currency.item,
           isChosen: currency.isChosen,
           isDisabled: currency.isDisabled,
+          semanticsIdentifier: currency.item.semanticIdentifier,
           title: title ??
               Text(
                 "${currency.item.name} (${currency.item.code})",

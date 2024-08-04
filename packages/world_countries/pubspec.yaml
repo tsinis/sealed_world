@@ -1,4 +1,4 @@
-version: 1.6.0
+version: 2.0.0
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
@@ -30,13 +30,13 @@ screenshots:
     path: doc/language_data.webp
 
 environment:
-  sdk: ^3.0.0
-  flutter: ">=3.10.0"
+  sdk: ^3.3.0
+  flutter: ">=3.19.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  world_flags: ^0.6.0
+  world_flags: ^1.0.0
 
 dev_dependencies:
   build_runner: ^2.4.11 # From Google
@@ -46,47 +46,5 @@ dev_dependencies:
     sdk: flutter
   lints: ^4.0.0 # From Google
 
-executables:
-  clean_build:
-
 flutter:
   uses-material-design: true
-  assets:
-    - lib/assets/
-
-  fonts:
-    # Twemoji
-    - family: TwemojiTTF
-      fonts:
-        - asset: packages/world_countries/assets/fonts/Twemoji/Twemoji.Mozilla.ttf
-    - family: TwemojiWOFF2
-      fonts:
-        - asset: packages/world_countries/assets/fonts/Twemoji/Twemoji.Mozilla.woff2
-
-    # OpenMoji
-    - family: OpenMojiCOLR1
-      fonts:
-        - asset: packages/world_countries/assets/fonts/OpenMoji/OpenMoji-color-colr1_svg.ttf
-    - family: OpenMojiCOLR0
-      fonts:
-        - asset: packages/world_countries/assets/fonts/OpenMoji/OpenMoji-color-glyf_colr_0.ttf
-
-    # NotoEmoji
-    - family: NotoEmojiCBDT
-      fonts:
-        - asset: packages/world_countries/assets/fonts/NotoEmoji/NotoColorEmoji.ttf
-    - family: NotoEmojiOTSVG
-      fonts:
-        - asset: packages/world_countries/assets/fonts/NotoEmoji/noto_flags-picosvgz.ttf
-
-flutter_gen:
-  output: lib/src/generated/
-  assets:
-    enabled: false
-  colors:
-    enabled: false
-  fonts:
-    enabled: true
-    outputs:
-      class_name: WorldCountryFonts
-      package_parameter_enabled: true # TODO: Until https://github.com/FlutterGen/flutter_gen/issues/357

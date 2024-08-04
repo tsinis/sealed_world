@@ -22,7 +22,6 @@ This ISO-driven and fully tested package provides information about world countr
 - [Data](#data)
 - [Additional information](#additional-information)
 - [References and credits](#references-and-credits)
-- [Attributions](#attributions)
 - [FAQ](#faq)
 
 ### Features
@@ -48,7 +47,7 @@ To preview the demo from the example, you can visit [this web page](https://tsin
 
 ### Getting started
 
-To use this package, you will need Flutter version 3.10+. Add `world_countries` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need Flutter version 3.19+. Add `world_countries` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:
@@ -221,58 +220,13 @@ If you have any issues or suggestions for the package, please file them in the G
 
 This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
 
-### Attributions
-
-The color emoji flags fonts used in this package were obtained from open-source repositories of the original creators. The fonts are redistributed under the terms of the licenses offered by the original authors. The fonts sizes were reduced, by removing non-flag glyphs, to reduce the package size and to reduce the copyright footprint, since most of the country flags are in Public Domain. No modifications in graphic itself were made.
-
-#### Noto Emoji fonts
-
-The [Noto Emoji font](./lib/assets/fonts/NotoEmoji/) font comes from [Noto Emoji](https://github.com/googlefonts/noto-emoji) emoji library. Noto Emoji fonts are under the [SIL Open Font License, version 1.1](https://scripts.sil.org/OFL).
-
-#### OpenMoji fonts
-
-The [OpenMoji](./lib/assets/fonts/OpenMoji/) font comes from [OpenMoji](https://github.com/hfg-gmuend/openmoji) project and redistributed under the CC-BY-SA-4.0 [license terms](https://creativecommons.org/licenses/by-sa/4.0/).
-
-#### Twemoji fonts
-
-The [Twemoji font in COLR/CPAL layered format](./lib/assets/fonts/Twemoji/) font comes from [Twemoji-COLR](https://github.com/mozilla/twemoji-colr) project (Mozilla's COLR/CPAL version of [Twemoji](https://github.com/twitter/twemoji)). Twemoji graphics made by Twitter and other contributors
-and is used and redistributed under the CC-BY-4.0 [license terms](https://creativecommons.org/licenses/by/4.0) offered by the Twemoji project.
-
 ---
 
 ### FAQ
 
-#### I have problems rendering COLR emoji flags on Android
-
-Answer: Android OS [supports](https://developer.android.com/about/versions/13/features#color-vector-fonts) COLRv1 fonts from version 13 on (API level 33).
-
-#### My flags on web platform are grey (not colored)
-
-Answer: Please add `useColorEmoji: true` parameter to your `engineInitializer.initializeEngine` method ([index.html](https://github.com/flutter/flutter/issues/119536#issuecomment-1546247494)).
-
-#### Looks like tree shaking of unused emoji flags is not working on web
-
-Answer: Yes it's know Flutter's [issue](https://github.com/flutter/flutter/issues/64106). Although all font families together are not that big, every single KB might be crucial for a web-page loading times. Run this from your project's root directory:
-
-```shell
-dart run world_countries:clean_build [--keep twemoji,notoemoji,openmoji]
-```
-
-You can specify which emoji family you want to keep with the optional `--keep` parameter.
-
 #### I don't like default tiles UI in the pickers
 
 Answer: Every picker has a `itemBuilder` parameter, providing access to specific list item properties, for example this is how you can show only a common country name in `CountryPicker`:
-
-```dart
-CountryPicker(
-  itemBuilder: (country, {isDense}) => Text(country.item.name.common),
-);
-```
-
-#### How can I change emoji flag from default Twemoji to something else?
-
-Answer: You can create your own `itemBuilder` with use of `EmojiFlag` widget that has multiple named constructors and only require country instance, to show different type of flag:
 
 ```dart
 CountryPicker(
@@ -282,10 +236,14 @@ CountryPicker(
 
 #### Why should I use this package over any other country/currency/language picker package?
 
+- **Fully Accessible**: All pickers are meticulously crafted with accessibility in mind, ensuring seamless integration with screen readers and assistive technologies.
+- **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets to show country flags in the pickers. All flags are declarative-style optimized CustomPainters. That means that you don't have to worry about pre-caching, increased app size, platform-dependent look of the flags, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
+- **Up-to-date Flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021).
 - **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing it's sealed nature), you can also override existing or add new data, etc.).
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has almost 100% code coverage, with more than 130 (+3819 in underling Dart packages) tests, providing confidence in its reliability and stability.
+- **High code coverage**: The code in this package boasts nearly 100% test coverage, with almost 4,000 tests (130+ in this package, 3828+ in underlying Dart packages) ensuring reliability and stability.
+- **Comprehensive Documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.

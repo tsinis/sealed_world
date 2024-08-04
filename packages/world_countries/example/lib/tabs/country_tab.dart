@@ -3,6 +3,7 @@
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
+import "../assets/fonts.gen.dart";
 import "../model/world_data.dart";
 import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
@@ -39,8 +40,20 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             ),
           ],
         ),
-        titleOverlay:
-            AbsorbPointer(child: EmojiFlag.platformDefault(data, size: 136)),
+        titleOverlay: AbsorbPointer(
+          child: EmojiFlag.custom(
+            data,
+            size: 148,
+            style: TextStyle(
+              fontFamily: FunctionalPlatform.maybeWhenConst(
+                iOS: FontFamily.openMojiCOLR0,
+                macOS: FontFamily.openMojiCOLR0,
+                windows: FontFamily.openMojiCOLR0,
+                orElse: FontFamily.openMojiCOLR1,
+              ),
+            ),
+          ),
+        ),
         titlePadding: const EdgeInsets.only(top: 80, bottom: 8),
         titleMargin: const EdgeInsets.only(top: 100),
         children: <DescriptionTile>[

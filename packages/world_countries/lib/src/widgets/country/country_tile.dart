@@ -1,14 +1,10 @@
-// ignore_for_file: deprecated_member_use_from_same_package
-
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
-import "../../extensions/world_countries_build_context_extension.dart";
+import "../../extensions/iso_semantics_extension.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
-import "../helpers/maybe_widget.dart";
-import "emoji_flag.dart";
 
 /// A tile widget that displays information about a world country.
 class CountryTile extends ListItemTile<WorldCountry> {
@@ -54,6 +50,8 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.excludeSemantics = false,
+    super.semanticsIdentifier,
   });
 
   /// Constructor for the [CountryTile] class that uses an [ItemProperties]
@@ -99,10 +97,12 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.excludeSemantics,
   }) : super(
           country.item,
           isChosen: country.isChosen,
           isDisabled: country.isDisabled,
+          semanticsIdentifier: country.item.semanticIdentifier,
           title: title ??
               Text(
                 country.item.namesCommonNative(skipFirst: true),
@@ -112,22 +112,17 @@ class CountryTile extends ListItemTile<WorldCountry> {
             padding: const EdgeInsets.only(top: UiConstants.point),
             child: leading ??
                 Builder(
-                  builder: (context) => MaybeWidget(
-                    context.countryTileTheme?.emojiFamily,
-                    (emojiFamily) => EmojiFlag.fromEmojiFamily(
-                      country.item,
-                      emojiFamily: emojiFamily,
-                    ),
-                    orElse: CountryFlag.simplified(
-                      country.item,
-                      height: context.flagTheme?.height ?? leadingFlagHeight,
-                      aspectRatio: context.flagTheme?.aspectRatio ??
-                          FlagConstants.defaultAspectRatio,
-                      decoration: context.flagTheme?.decoration ??
-                          const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(4)),
+                  builder: (context) => CountryFlag.simplified(
+                    country.item,
+                    height: context.flagTheme?.height ?? leadingFlagHeight,
+                    aspectRatio: context.flagTheme?.aspectRatio ??
+                        FlagConstants.defaultAspectRatio,
+                    decoration: context.flagTheme?.decoration ??
+                        const BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(UiConstants.point / 2),
                           ),
-                    ),
+                        ),
                   ),
                 ),
           ),
@@ -177,10 +172,12 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity = VisualDensity.compact,
+    super.excludeSemantics,
   }) : super(
           country.item,
           isChosen: country.isChosen,
           isDisabled: country.isDisabled,
+          semanticsIdentifier: country.item.semanticIdentifier,
           title: title ??
               Text(
                 country.item.namesNative.first.common,
@@ -188,22 +185,15 @@ class CountryTile extends ListItemTile<WorldCountry> {
               ),
           leading: leading ??
               Builder(
-                builder: (context) => MaybeWidget(
-                  context.countryTileTheme?.emojiFamily,
-                  (emojiFamily) => EmojiFlag.fromEmojiFamily(
-                    country.item,
-                    emojiFamily: emojiFamily,
-                  ),
-                  orElse: CountryFlag.simplified(
-                    country.item,
-                    height: context.flagTheme?.height ?? leadingFlagHeight,
-                    aspectRatio: context.flagTheme?.aspectRatio ??
-                        FlagConstants.defaultAspectRatio,
-                    decoration: context.flagTheme?.decoration ??
-                        const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(3)),
-                        ),
-                  ),
+                builder: (context) => CountryFlag.simplified(
+                  country.item,
+                  height: context.flagTheme?.height ?? leadingFlagHeight,
+                  aspectRatio: context.flagTheme?.aspectRatio ??
+                      FlagConstants.defaultAspectRatio,
+                  decoration: context.flagTheme?.decoration ??
+                      const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(3)),
+                      ),
                 ),
               ),
         );

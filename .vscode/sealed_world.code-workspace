@@ -82,6 +82,8 @@
       }
     },
     "cSpell.words": [
+      "Appium",
+      "Automator",
       "Bhojpuri",
       "CBDT",
       "Cinis",
@@ -105,7 +107,8 @@
       "taeguk",
       "Taegukgi",
       "twemoji",
-      "umpirsky"
+      "umpirsky",
+      "XCUI"
     ],
     "cSpell.useGitignore": true,
     "cSpell.ignorePaths": [
