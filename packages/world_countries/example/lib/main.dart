@@ -23,10 +23,9 @@ class _MainState extends State<Main> {
   /// [CountryTileThemeData].
   static const pickerThemes = <ThemeExtension>[
     PickersThemeData(primary: true), // Applies to all types of pickers.
-    /// Specify the flag decoration in the default country/phone-code picker.
     FlagThemeData(
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
+      /// Specify the flag decoration in the default country/phone-code picker.
+      decoration: BoxDecoration(border: Border.fromBorderSide(BorderSide())),
     ),
   ];
   final _navigatorKey = GlobalKey<NavigatorState>();

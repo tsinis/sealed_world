@@ -784,7 +784,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.6.0"
+    version: "2.0.0"
   world_flags:
     dependency: transitive
     description:
