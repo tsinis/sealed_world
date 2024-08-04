@@ -852,7 +852,6 @@ const flagAfgProperties = FlagProperties(
     ColorsProperties(Color(0xffD32011)),
     ColorsProperties(Color(0xff007A36)),
   ],
-  // TODO! Change to the new look with aspectRatio: 2.
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(

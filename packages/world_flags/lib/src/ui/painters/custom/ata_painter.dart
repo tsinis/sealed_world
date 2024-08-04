@@ -802,7 +802,7 @@ final class AtaPainter extends CustomElementsPainter {
 
     final bounds = path.getBounds();
 
-    canvas // TODO! Refactor to bounds.center everywhere.
+    canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(path, paintCreator());
 
