@@ -1,3 +1,4 @@
+import "package:arabic_font/arabic_font.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/world_flags.dart";
@@ -6,7 +7,11 @@ import "../../helpers/extensions/widget_tester_extension.dart";
 import "../../helpers/flag_type.dart";
 
 void main() => group("$CountryFlag", () {
-      setUpAll(() => flagAntiAliasOverride = true);
+      setUpAll(() {
+        flagAntiAliasOverride = true;
+        flagTextStyleOverride =
+            const ArabicTextStyle(arabicFont: ArabicFont.lateef);
+      });
 
       testWidgets("custom constructor", (tester) async {
         await tester.pumpWidget(

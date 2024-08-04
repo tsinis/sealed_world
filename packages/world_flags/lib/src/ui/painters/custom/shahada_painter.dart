@@ -4,6 +4,7 @@ import "../../../data/flags_map_part_1.data.dart";
 import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
+import "../basic/flag_test_properties.dart";
 
 /// Painter for the Saudi Arabia and Afghanistan flag.
 final class ShahadaPainter extends CustomElementsPainter {
@@ -41,8 +42,7 @@ final class ShahadaPainter extends CustomElementsPainter {
     final textSpan = TextSpan(
       // ignore: avoid-non-ascii-symbols, text on the flag.
       text: "لَا إِلٰهَ إِلَّا اللَّٰه مُحَمَّدٌ رَسُولُ اللَّٰه",
-      style: TextStyle(
-        inherit: false,
+      style: flagTextStyleOverride.copyWith(
         color: property.mainColor,
         fontSize: height,
       ),

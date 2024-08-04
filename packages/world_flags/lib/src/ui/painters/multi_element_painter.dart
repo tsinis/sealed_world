@@ -10,7 +10,7 @@ import "../../model/elements/elements_properties.dart";
 import "../../model/shape.dart";
 import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
-import "basic/flag_anti_alias.dart";
+import "basic/flag_test_properties.dart";
 import "common/rectangle_painter.dart";
 
 part "custom/atf_painter.dart";

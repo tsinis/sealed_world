@@ -3,6 +3,7 @@ import "package:flutter/rendering.dart";
 import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
+import "../basic/flag_test_properties.dart";
 import "../multi_element_painter.dart";
 
 /// Painter for the U.S. Virgin Islands flag.
@@ -15,8 +16,7 @@ final class VirPainter extends CustomElementsPainter {
 
   TextSpan _letterCreator(String letter, double fontSize) => TextSpan(
         text: letter,
-        style: TextStyle(
-          inherit: false,
+        style: flagTextStyleOverride.copyWith(
           color: customColors.last,
           fontSize: fontSize * 0.4,
           fontWeight: FontWeight.w500,

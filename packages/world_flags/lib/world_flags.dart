@@ -86,7 +86,7 @@ export "src/ui/flags/star_flag.dart";
 export "src/ui/flags/triangle_flag.dart";
 export "src/ui/painters/basic/custom_elements_painter.dart";
 export "src/ui/painters/basic/elements_painter.dart";
-export "src/ui/painters/basic/flag_anti_alias.dart";
+export "src/ui/painters/basic/flag_test_properties.dart";
 export "src/ui/painters/basic/stripes_painter.dart";
 export "src/ui/painters/common/diagonal_line_painter.dart";
 export "src/ui/painters/common/ellipse_painter.dart";
