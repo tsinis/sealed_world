@@ -21,6 +21,8 @@ dependencies:
   sealed_countries: ^1.5.0
 
 dev_dependencies:
+  _sealed_world_tests:
+    path: ../_sealed_world_tests
   arabic_font: ^0.0.9
   dart_code_linter: ^1.1.3 # Ex-DCM.
   flutter_test: # From Google

@@ -27,8 +27,13 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.padding,
     this.height,
     this.width,
-  }) : _aspectRatio = aspectRatio;
-  // TODO! Add asserts for width and height > 0.
+  })  : assert(
+          aspectRatio == null || aspectRatio > 0,
+          "`aspectRatio` must be greater than 0",
+        ),
+        assert(height == null || height > 0, "`height` must be greater than 0"),
+        assert(width == null || width > 0, "`width` must be greater than 0"),
+        _aspectRatio = aspectRatio;
 
   @override
   final BoxDecoration? decoration;

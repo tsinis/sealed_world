@@ -3,7 +3,16 @@ import "dart:math" as math;
 import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
-import "../../../../world_flags.dart";
+import "../../../model/elements/elements_properties.dart";
+import "../../../model/shape.dart";
+import "../../../model/typedefs.dart";
+import "../common/diagonal_line_painter.dart";
+import "../common/ellipse_painter.dart";
+import "../common/moon_painter.dart";
+import "../common/rectangle_painter.dart";
+import "../common/star_painter.dart";
+import "../common/triangle_painter.dart";
+import "flag_test_properties.dart";
 
 /// An abstract base class for painting elements on a flag.
 ///
@@ -17,7 +26,8 @@ abstract base class ElementsPainter extends CustomPainter {
   /// at least one element.
   /// - [aspectRatio]: The aspect ratio of the flag.
   const ElementsPainter(ElementsProps? properties, this.aspectRatio)
-      : assert(
+      : assert(aspectRatio > 0, "`aspectRatio` must be greater than 0"),
+        assert(
           properties != null && properties.length > 0,
           "`properties` must contain at least one element.",
         ),
