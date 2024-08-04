@@ -46,8 +46,5 @@ dev_dependencies:
     sdk: flutter
   lints: ^4.0.0 # From Google
 
-executables:
-  clean_build:
-
 flutter:
   uses-material-design: true
