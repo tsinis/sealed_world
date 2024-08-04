@@ -111,8 +111,6 @@ class _MainState extends State<Main> {
 }
 ```
 
-> TIP: You can also provide your global flag decorations in the theme extensions.
-
 ### Additional information
 
 For more information on using this package, check out the API documentation.
@@ -128,11 +126,13 @@ This package is licensed under the MIT license. See [LICENSE](./LICENSE) for det
 
 - **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets, all flags are declarative-style optimized CustomPainters. That means that you don't have to worry about pre-caching, increased app size, platform-dependent look of the flags, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
 - **Custom flags**: Package provides multiple classes and simple API to create your own flags.
+- **Up-to-date Flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021).
 - **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing its sealed nature), you can also override existing or add new data, etc.).
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has almost 100% code coverage, with **more than 678 (+3140 in underlying Dart packages) tests**, providing confidence in its reliability and stability.
+- **High code coverage**: The code in this package has almost 100% code coverage, with **more than 688 (+3140 in underlying Dart packages) tests**, providing confidence in its reliability and stability.
+- **Comprehensive Documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **Fully documented**: Package provides documentation for every public member, usually with examples.
 - **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.

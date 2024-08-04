@@ -1,3 +1,19 @@
+## 1.0.0
+
+🎉 First stable release!
+
+NEW FEATURES
+
+- `CountryFlag` now offers `alternativeMap` parameter that you can use to provide alternative look of the country flag. By default it contains updated Afghanistan flag (with official design from year 2021) and alternative French Guiana flags.
+
+REFACTOR
+
+- New asserts in the constructors and optimizations in several country flag painters.
+
+TESTS
+
+- Added tests for new asserts and update goldens with arabic fonts.
+
 ## 0.8.0
 
 NEW FEATURES
