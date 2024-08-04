@@ -1,3 +1,4 @@
+// ignore_for_file: prefer-static-class, to follow pattern from eco-system.
 import "dart:ui";
 
 import "../constants/flag_constants.dart";
@@ -8,7 +9,6 @@ import "../model/flag_properties.dart";
 import "../model/shape.dart";
 import "../model/stripe_orientation.dart";
 
-// ignore_for_file: prefer-static-class
 /// Flag properties of country Madagascar (MG).
 const flagMdgProperties = FlagProperties(
   [ColorsProperties(Color(0xfffc3d32)), ColorsProperties(Color(0xff007e3a))],

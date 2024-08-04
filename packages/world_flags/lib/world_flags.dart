@@ -1,8 +1,10 @@
+// ignore_for_file: prefer-static-class, to follow pattern from eco-system.
 /// Every flag is a Widget.
 library world_flags;
 
 import "package:sealed_countries/sealed_countries.dart";
 
+import "src/data/alternative_flags_map.data.dart";
 import "src/data/flags_map_part_1.data.dart";
 import "src/data/flags_map_part_2.data.dart";
 import "src/data/flags_map_part_3.data.dart";
@@ -58,6 +60,7 @@ export "package:sealed_countries/sealed_countries.dart";
 
 export "src/collections/properties_map.dart";
 export "src/constants/flag_constants.dart";
+export "src/data/alternative_flags_map.data.dart";
 export "src/data/flags_map_part_1.data.dart";
 export "src/data/flags_map_part_2.data.dart";
 export "src/data/flags_map_part_3.data.dart";
@@ -141,7 +144,6 @@ export "src/ui/painters/multi_element_painter.dart";
 /// ```dart
 /// final usaFlagElements = smallSimplifiedFlagsMap[const CountryUsa()];
 /// ```
-// ignore_for_file: prefer-static-class, to follow pattern from eco-system.
 const smallSimplifiedFlagsMap = {
   CountryAbw(): StarFlag(flagAbwProperties),
   CountryAfg(): EllipseFlag(flagAfgProperties),
@@ -457,4 +459,8 @@ const smallSimplifiedFlagsMap = {
   CountryZwe(): TriangleFlag(flagZweProperties),
   CountryUnk():
       BasicFlag(flagUnkProperties, elementsBuilder: KosovoPainter.new),
+};
+
+const smallSimplifiedAlternativeFlagsMap = {
+  CountryGuf(): StarFlag(flagGufPropertiesAlt),
 };

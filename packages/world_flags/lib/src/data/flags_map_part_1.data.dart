@@ -1,3 +1,4 @@
+// ignore_for_file: prefer-static-class, to follow pattern from eco-system.
 import "dart:ui";
 
 import "../model/colors_properties.dart";
@@ -7,7 +8,6 @@ import "../model/flag_properties.dart";
 import "../model/shape.dart";
 import "../model/stripe_orientation.dart";
 
-// ignore_for_file: prefer-static-class
 /// Flag properties of country Honduras (HN).
 const flagHndProperties = FlagProperties(
   [
