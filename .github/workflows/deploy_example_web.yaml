@@ -28,17 +28,9 @@ jobs:
         working-directory: packages/world_countries/example
         run: flutter pub get
 
-      - name: 🧼 Clean unused font families
-        working-directory: packages/world_countries/example
-        run: dart run world_countries:clean_build
-
       - name: 🛠️ Build for web
         working-directory: packages/world_countries/example
         run: flutter build web --release --base-href=/sealed_world/ --wasm
-
-      - name: 🗑️ Remove unnecessary assets
-        working-directory: packages/world_countries/example/build/web
-        run: rm -rf assets/packages && rm -rf assets/assets
 
       - name: 🛫 Deploy the website to GH Pages
         uses: s0/git-publish-subdir-action@v2.6.0
