@@ -42,7 +42,7 @@ import "src/ui/painters/custom/maple_leaf_painter.dart";
 import "src/ui/painters/custom/npl_painter.dart";
 import "src/ui/painters/custom/pine_painter.dart";
 import "src/ui/painters/custom/prt_painter.dart";
-import "src/ui/painters/custom/sau_painter.dart";
+import "src/ui/painters/custom/shahada_painter.dart";
 import "src/ui/painters/custom/smr_painter.dart";
 import "src/ui/painters/custom/srb_painter.dart";
 import "src/ui/painters/custom/svk_painter.dart";
@@ -121,7 +121,7 @@ export "src/ui/painters/custom/maple_leaf_painter.dart";
 export "src/ui/painters/custom/npl_painter.dart";
 export "src/ui/painters/custom/pine_painter.dart";
 export "src/ui/painters/custom/prt_painter.dart";
-export "src/ui/painters/custom/sau_painter.dart";
+export "src/ui/painters/custom/shahada_painter.dart";
 export "src/ui/painters/custom/smr_painter.dart";
 export "src/ui/painters/custom/srb_painter.dart";
 export "src/ui/painters/custom/svk_painter.dart";
@@ -390,7 +390,8 @@ const smallSimplifiedFlagsMap = {
   CountryRou(): BasicFlag(flagRouProperties),
   CountryRus(): BasicFlag(flagRusProperties),
   CountryRwa(): StarFlag(flagRwaProperties),
-  CountrySau(): BasicFlag(flagSauProperties, elementsBuilder: SauPainter.new),
+  CountrySau():
+      BasicFlag(flagSauProperties, elementsBuilder: ShahadaPainter.sau),
   CountrySdn(): TriangleFlag(flagSdnProperties),
   CountrySen(): StarFlag(flagSenProperties),
   CountrySgp(): MultiElementFlag(flagSgpProperties),
@@ -461,6 +462,13 @@ const smallSimplifiedFlagsMap = {
       BasicFlag(flagUnkProperties, elementsBuilder: KosovoPainter.new),
 };
 
+/// Alternative flags for specific countries. As an alternative for flags from
+/// the [smallSimplifiedFlagsMap]. For example Afghanistan flag is no longer
+/// using the old version but rather using the new flag properties (after 2021).
+/// Also French Guiana flag is represented by unofficial, but very popular
+/// and more commonly used green-yellow flag with a red star in the center.
 const smallSimplifiedAlternativeFlagsMap = {
+  CountryAfg():
+      BasicFlag(flagAfgPropertiesAlt, elementsBuilder: ShahadaPainter.afg),
   CountryGuf(): StarFlag(flagGufPropertiesAlt),
 };

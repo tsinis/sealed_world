@@ -1,16 +1,25 @@
 import "package:flutter/rendering.dart";
 
 import "../../../data/flags_map_part_1.data.dart";
+import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
-/// Painter for the Saudi Arabia flag.
-final class SauPainter extends CustomElementsPainter {
-  /// Creates a new instance of [SauPainter].
-  const SauPainter(super.properties, super.aspectRatio);
+/// Painter for the Saudi Arabia and Afghanistan flag.
+final class ShahadaPainter extends CustomElementsPainter {
+  /// Creates a new instance of [ShahadaPainter] for the Saudi Arabia flag.
+  const ShahadaPainter.sau(super.properties, super.aspectRatio)
+      : _hasSabre = true;
+
+  /// Creates a new instance of [ShahadaPainter] for the Afghanistan flag.
+  const ShahadaPainter.afg(super.properties, super.aspectRatio)
+      : _hasSabre = false;
+
+  final bool _hasSabre;
 
   @override
-  double get originalAspectRatio => flagSauProperties.aspectRatio;
+  double get originalAspectRatio =>
+      _hasSabre ? flagSauProperties.aspectRatio : flagAfgProperties.aspectRatio;
 
   static const _widthScale = 0.3;
 
@@ -48,13 +57,13 @@ final class SauPainter extends CustomElementsPainter {
     text.paint(
       canvas,
       Offset(
-        width - text.width / 2 * _widthScale / 2,
+        (width - text.width / 2 * _widthScale / 2) - center.dx,
         center.dy - text.height / 2,
       ),
     );
-    canvas
-      ..restore()
-      ..drawRect(rectangle, paintCreator());
+    canvas.restore();
+
+    if (_hasSabre) canvas.drawRect(rectangle, paintCreator());
 
     return (canvas: canvas, bounds: rectangle, child: property.child);
   }
