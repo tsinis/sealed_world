@@ -14,6 +14,8 @@ class ListItemTile<T extends Object> extends ListTile {
   const ListItemTile(
     this._item, {
     this.onPressed,
+    this.excludeSemantics = true,
+    this.semanticsIdentifier,
     Widget? chosenIcon = const Icon(Icons.beenhere_outlined),
     bool isChosen = false,
     bool isDisabled = false,
@@ -61,15 +63,28 @@ class ListItemTile<T extends Object> extends ListTile {
   @protected
   final T _item;
 
+  /// Whether to exclude subtitle and leading from semantics tree.
+  final bool excludeSemantics;
+
+  /// Optional string that describes the node for UI automation
+  /// tools that work by querying the accessibility hierarchy, such as Android
+  /// UI Automator, iOS XCUITest, or Appium. It's not exposed to users.
+  final String? semanticsIdentifier;
+
   @override
   Widget build(BuildContext context) => Material(
         // Reference: https://github.com/flutter/flutter/issues/86584.
         type: MaterialType.transparency,
         child: ListTile(
           key: key,
-          leading: leading,
+          leading: Semantics(
+            excludeSemantics: excludeSemantics,
+            identifier: semanticsIdentifier,
+            child: leading,
+          ),
           title: title,
-          subtitle: subtitle,
+          subtitle:
+              Semantics(excludeSemantics: excludeSemantics, child: subtitle),
           trailing: selected ? trailing : null,
           isThreeLine: isThreeLine,
           dense: dense,

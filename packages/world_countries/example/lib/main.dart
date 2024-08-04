@@ -49,6 +49,7 @@ class _MainState extends State<Main> {
   Widget build(BuildContext context) => RouteStateScope(
         notifier: _routeState,
         child: MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           routeInformationParser: _routeParser,
           routerDelegate: _routerDelegate,
           theme: ThemeData(

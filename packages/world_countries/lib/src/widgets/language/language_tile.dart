@@ -3,6 +3,7 @@ import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
+import "../../extensions/iso_semantics_extension.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 
@@ -50,6 +51,8 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.excludeSemantics = false,
+    super.semanticsIdentifier,
   });
 
   /// Constructor for the [LanguageTile] class, that uses the item-properties.
@@ -88,10 +91,12 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.excludeSemantics,
   }) : super(
           language.item,
           isChosen: language.isChosen,
           isDisabled: language.isDisabled,
+          semanticsIdentifier: language.item.semanticIdentifier,
           title: title ??
               Text(
                 "${language.item.name} (${language.item.codeShort})",

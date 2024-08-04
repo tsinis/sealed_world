@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
+import "../../extensions/iso_semantics_extension.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 
@@ -49,6 +50,8 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.excludeSemantics = false,
+    super.semanticsIdentifier,
   });
 
   /// Constructor for the [CountryTile] class that uses an [ItemProperties]
@@ -94,10 +97,12 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.excludeSemantics,
   }) : super(
           country.item,
           isChosen: country.isChosen,
           isDisabled: country.isDisabled,
+          semanticsIdentifier: country.item.semanticIdentifier,
           title: title ??
               Text(
                 country.item.namesCommonNative(skipFirst: true),
@@ -167,10 +172,12 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity = VisualDensity.compact,
+    super.excludeSemantics,
   }) : super(
           country.item,
           isChosen: country.isChosen,
           isDisabled: country.isDisabled,
+          semanticsIdentifier: country.item.semanticIdentifier,
           title: title ??
               Text(
                 country.item.namesNative.first.common,
