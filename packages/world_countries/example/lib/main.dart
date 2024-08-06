@@ -7,9 +7,10 @@ import "model/world_data.dart";
 import "routing/delegate.dart";
 import "routing/parser.dart";
 import "routing/route_state.dart";
-import "theme/color_schemes.g.dart";
+import "theme/theme_manager.dart";
+import "theme/theme_switcher.dart";
 
-void main() => runApp(const Main());
+void main() => runApp(const ThemeManager(child: Main()));
 
 class Main extends StatefulWidget {
   const Main({super.key});
@@ -21,13 +22,14 @@ class Main extends StatefulWidget {
 class _MainState extends State<Main> {
   /// Also [CurrencyTileThemeData], [LanguageTileThemeData],
   /// [CountryTileThemeData].
-  static const pickerThemes = <ThemeExtension>[
+  static const extensions = <ThemeExtension>[
     PickersThemeData(primary: true), // Applies to all types of pickers.
     FlagThemeData(
       /// Specify the flag decoration in the default country/phone-code picker.
       decoration: BoxDecoration(border: Border.fromBorderSide(BorderSide())),
     ),
   ];
+
   final _navigatorKey = GlobalKey<NavigatorState>();
   final _routeParser = TemplateRouteParser(allowedPaths: WorldData.paths);
   late final _routeState = RouteState(_routeParser);
@@ -51,16 +53,8 @@ class _MainState extends State<Main> {
           debugShowCheckedModeBanner: false,
           routeInformationParser: _routeParser,
           routerDelegate: _routerDelegate,
-          theme: ThemeData(
-            extensions: pickerThemes,
-            useMaterial3: true,
-            colorScheme: lightColorScheme,
-          ),
-          darkTheme: ThemeData(
-            extensions: pickerThemes,
-            useMaterial3: true,
-            colorScheme: darkColorScheme,
-          ),
+          theme:
+              ThemeProvider.of(context)?.theme.copyWith(extensions: extensions),
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,

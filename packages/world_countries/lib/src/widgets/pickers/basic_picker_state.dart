@@ -1,14 +1,20 @@
 part of "basic_picker.dart";
 
 class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
-  late final controller = widget.textController ??
-      widget.searchBar?.controller ??
-      TextEditingController();
+  TextEditingController? controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = widget.textController ??
+        widget.searchBar?.controller ??
+        TextEditingController();
+  }
 
   @override
   void dispose() {
     if (widget.textController == null && widget.searchBar?.controller == null) {
-      controller.dispose();
+      controller?.dispose();
     }
     super.dispose();
   }
