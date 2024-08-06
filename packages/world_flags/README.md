@@ -21,6 +21,7 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 - **Flexible**: The declarative approach allows for flags to have different shapes and aspect ratios.
 - **High Performance**: Optimized CustomPainters ensure smooth rendering across all devices.
 - **Easy to Use**: Simplified API for adding flags with minimal code.
+- **Pure Dart**: As these are code-based flags, developers can easily access and manipulate flag colors, aspect ratios, and other properties like any other Dart object.
 
 > Package provides 250 small and simplified world country flags, but at the same time, more than 2/3 of these flags can be used as full-dimensional flags.
 
@@ -131,7 +132,7 @@ This package is licensed under the MIT license. See [LICENSE](./LICENSE) for det
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has almost 100% code coverage, with **more than 688 (+3140 in underlying Dart packages) tests**, providing confidence in its reliability and stability.
+- **High code coverage**: The code in this package has almost 100% code coverage, with **more than 1687 (+3140 in underlying Dart packages) tests**, providing confidence in its reliability and stability.
 - **Comprehensive Documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **Fully documented**: Package provides documentation for every public member, usually with examples.

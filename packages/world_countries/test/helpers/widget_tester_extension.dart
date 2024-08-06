@@ -15,28 +15,14 @@ import "package:world_flags/world_flags.dart";
 // ignore: avoid-top-level-members-in-tests, it's not a test.
 extension WidgetTesterExtension on WidgetTester {
   static const pickersTheme = PickersThemeData(
-    addRepaintBoundaries: true,
-    addSemanticIndexes: true,
     cacheExtent: 100,
-    clipBehavior: Clip.hardEdge,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    direction: Axis.vertical,
-    dragStartBehavior: DragStartBehavior.start,
-    keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
-    mainAxisAlignment: MainAxisAlignment.start,
-    mainAxisSize: MainAxisSize.min,
     padding: EdgeInsets.zero,
     physics: ClampingScrollPhysics(),
     primary: true,
-    reverse: false,
     separator: UiConstants.separator,
-    showHeader: true,
-    shrinkWrap: false,
     textBaseline: TextBaseline.alphabetic,
     textDirection: TextDirection.ltr,
-    verticalDirection: VerticalDirection.down,
     searchBarPadding: EdgeInsets.zero,
-    showClearButton: true,
     translation: IsoLocale(LangEng()),
   );
 

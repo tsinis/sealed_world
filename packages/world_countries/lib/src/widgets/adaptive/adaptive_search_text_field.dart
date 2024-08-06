@@ -20,7 +20,7 @@ class AdaptiveSearchTextField extends TextField {
   ///   be displayed in the text field.
   /// * `key` is the optional key to use for the widget.
   const AdaptiveSearchTextField(
-    TextEditingController controller, {
+    TextEditingController? controller, {
     this.copyFrom,
     this.padding,
     this.showClearButton = true,

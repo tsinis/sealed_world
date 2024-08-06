@@ -1,3 +1,13 @@
+## 1.1.0
+
+NEW FEATURES
+
+- Added `FlagExtension` on `WorldCountry` to provide flag-related properties and colors:
+  - `flagStripeColors`: Retrieves the stripe colors of the flag from `FlagProperties`.
+  - `flagElementsColors`: Retrieves the element colors of the flag from `FlagProperties`.
+  - `flagColors`: Combines `flagStripeColors` and `flagElementsColors` into a single list of colors.
+  - `flagProperties`: Retrieves the `FlagProperties` associated with country (from the default `WorldCountry.list`).
+
 ## 1.0.0
 
 🎉 First stable release!

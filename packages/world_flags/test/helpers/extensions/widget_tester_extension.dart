@@ -9,7 +9,7 @@ import "../flag_type.dart";
 extension GoldenWidgetTesterExtension on WidgetTester {
   Future<void> flagGolden(WorldCountry country, FlagType type) async {
     final height = type.height;
-    final aspectRatio = flagPropertiesMap[country]?.aspectRatio ?? 1;
+    final aspectRatio = country.flagProperties?.aspectRatio ?? 1;
     final width = type == FlagType.decorated ? height : height * aspectRatio;
     final file = "../../goldens/${type.name}/${country.code.toLowerCase()}.png";
 
