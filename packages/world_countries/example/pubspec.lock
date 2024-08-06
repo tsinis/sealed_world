@@ -802,10 +802,10 @@ packages:
     dependency: transitive
     description:
       name: world_flags
-      sha256: ce65a76da5671d66474a036488cf2384f2ad65831fbcbe0b448ad25d76c163db
+      sha256: "63d05604145d41b046e2f3c2835d06079ae731fc71d32d2c14147693368c148e"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.1.0"
   xml:
     dependency: transitive
     description:

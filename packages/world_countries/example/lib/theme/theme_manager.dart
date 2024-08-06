@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import "package:world_countries/world_countries.dart";
 
 import "theme_switcher.dart";
 
@@ -13,14 +12,12 @@ class ThemeManager extends StatefulWidget {
 }
 
 class _ThemeManagerState extends State<ThemeManager> {
-  FlagProperties? _properties;
+  List<Color> _colors = const [];
 
-  void _onChange(FlagProperties? newProperties) =>
-      setState(() => _properties = newProperties);
   @override
   Widget build(BuildContext context) => ThemeProvider(
-        _properties,
-        changeColors: _onChange,
+        _colors,
+        changeColors: (colors) => setState(() => _colors = colors),
         child: widget.child,
       );
 }
