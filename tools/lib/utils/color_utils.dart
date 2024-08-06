@@ -57,7 +57,8 @@ class ColorUtils {
     if (color == null || color == "none" || color.startsWith("url(#")) return;
     var result = colorFromHex(color);
     result ??= _namedColors[color.toLowerCase()];
-    if (result == null) print("$_tag Warning: Unsupported color format $color");
+    // ignore: only_throw_errors, it's CLI helper tool.
+    if (result == null) throw "$_tag Warning: Unsupported color format $color";
     _colors.add(result);
   }
 
