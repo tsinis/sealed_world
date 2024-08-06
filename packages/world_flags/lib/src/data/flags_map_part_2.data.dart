@@ -1572,7 +1572,7 @@ const flagMkdProperties = FlagProperties(
 
 /// Flag properties of country Nepal (NP).
 const flagNplProperties = FlagProperties(
-  [ColorsProperties(Color.fromARGB(0, 0, 0, 0))],
+  [ColorsProperties(Color(0x00000063))],
   aspectRatio: FlagConstants.minAspectRatio,
   elementsProperties: [
     CustomElementsProperties(

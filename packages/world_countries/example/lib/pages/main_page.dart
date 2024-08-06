@@ -11,17 +11,19 @@ import "../tabs/country_tab.dart";
 import "../tabs/currency_tab.dart";
 import "../tabs/language_tab.dart";
 import "../tabs/tabs_data_controller.dart";
+import "../theme/theme_switcher.dart";
 import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/floating_button.dart";
+import "../widgets/menu_button.dart";
 
 class MainPage extends StatefulWidget {
-  MainPage(ParsedData data, {AsyncValueSetter<String>? navigate, super.key})
-      : _dataType = data.value,
-        _country = CountryTab(data.country, navigate),
-        _currency = CurrencyTab(data.currency, navigate),
-        _lang = LanguageTab(data.language, navigate);
+  MainPage(this._data, {AsyncValueSetter<String>? navigate, super.key})
+      : _country = CountryTab(_data.country, navigate),
+        _currency = CurrencyTab(_data.currency, navigate),
+        _lang = LanguageTab(_data.language, navigate);
 
-  final WorldData _dataType;
+  final ParsedData _data;
+
   final WorldDataTab<WorldCountry> _country;
   final WorldDataTab<FiatCurrency> _currency;
   final WorldDataTab<NaturalLanguage> _lang;
@@ -35,7 +37,17 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
-  late final _controller = TabsDataController(widget._dataType, vsync: this);
+  late final _controller = TabsDataController(widget._data.value, vsync: this);
+
+  @override
+  void didUpdateWidget(MainPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => ThemeProvider.of(context)?.changeColors?.call(
+            flagPropertiesMap[widget._data.country],
+          ),
+    );
+  }
 
   FutureOr<void> _onFabPressed({bool isLong = false}) {
     final pick = widget._mapPickers(_controller.currentData);
@@ -74,14 +86,13 @@ class _MainPageState extends State<MainPage>
                   onLongPress: _onAppBarSearchPressed,
                   child: IconButton(
                     onPressed: controller.openView,
-                    icon: const Icon(
-                      Icons.search,
-                      semanticLabel: "search_icon",
-                    ),
+                    icon:
+                        const Icon(Icons.search, semanticLabel: "search_icon"),
                   ),
                 ),
                 suggestionsBuilder: _anchorPicker,
               ),
+              const MenuButton(),
             ],
             bottom: TabBar(
               tabs: List.unmodifiable(

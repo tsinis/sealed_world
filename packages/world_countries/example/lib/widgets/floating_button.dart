@@ -13,8 +13,6 @@ class FloatingButton extends StatelessWidget {
   Widget build(BuildContext context) => GestureDetector(
         onLongPress: () => onPressed(isLong: true),
         child: FloatingActionButton(
-          foregroundColor: context.theme.colorScheme.onTertiary,
-          backgroundColor: context.theme.colorScheme.tertiary,
           onPressed: () => onPressed(isLong: false),
           child: AnimatedBuilder(
             animation: controller,

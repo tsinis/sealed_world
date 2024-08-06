@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use_from_same_package
-
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";

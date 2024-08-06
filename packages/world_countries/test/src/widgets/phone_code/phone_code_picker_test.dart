@@ -1,4 +1,3 @@
-// ignore_for_file: missing-test-assertion, deprecated_member_use_from_same_package, lines_longer_than_80_chars
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";

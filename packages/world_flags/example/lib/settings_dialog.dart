@@ -76,7 +76,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
                       ),
                       subtitle: Slider(
                         value: ratio ??
-                            flagPropertiesMap[country]?.aspectRatio ??
+                            country.flagProperties?.aspectRatio ??
                             FlagConstants.minAspectRatio,
                         onChanged: (newRatio) =>
                             widget.aspectRatio.value = newRatio,
