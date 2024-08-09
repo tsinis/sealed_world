@@ -1,7 +1,7 @@
 name: example
 description: A world_countries example application.
 publish_to: none
-version: 2.0.0+0
+version: 2.1.0+0
 
 environment:
   sdk: ^3.4.3
@@ -32,6 +32,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - web/icons/Icon-192.png
   fonts:
     - family: OpenMojiCOLR1
       fonts:
