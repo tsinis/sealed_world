@@ -18,8 +18,8 @@ final class ParsedData {
   final WorldData value;
 
   @override
-  String toString() =>
-      """ParsedData(country: $country, currency: $currency, language: $language, value: $value)""";
+  String toString() => "ParsedData(country: $country, currency: $currency, "
+      "language: $language, value: $value)";
 
   @override
   bool operator ==(Object other) {

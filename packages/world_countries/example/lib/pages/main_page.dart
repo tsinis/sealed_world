@@ -43,9 +43,9 @@ class _MainPageState extends State<MainPage>
   void didUpdateWidget(MainPage oldWidget) {
     super.didUpdateWidget(oldWidget);
     WidgetsBinding.instance.addPostFrameCallback(
-      (_) => ThemeProvider.of(context)?.changeColors?.call(
-            flagPropertiesMap[widget._data.country],
-          ),
+      (_) => ThemeProvider.of(context)
+          ?.changeColors
+          ?.call(widget._data.country.flagStripeColors),
     );
   }
 

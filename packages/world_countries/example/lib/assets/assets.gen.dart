@@ -9,6 +9,13 @@
 
 import 'package:flutter/widgets.dart';
 
+class $WebGen {
+  const $WebGen();
+
+  /// Directory path: web/icons
+  $WebIconsGen get icons => const $WebIconsGen();
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -20,10 +27,21 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [background];
 }
 
+class $WebIconsGen {
+  const $WebIconsGen();
+
+  /// File path: web/icons/Icon-192.png
+  AssetGenImage get icon192 => const AssetGenImage('web/icons/Icon-192.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [icon192];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $WebGen web = $WebGen();
 }
 
 class AssetGenImage {

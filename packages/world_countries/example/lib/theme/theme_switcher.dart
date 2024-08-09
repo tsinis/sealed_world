@@ -1,47 +1,40 @@
+import "package:flutter/foundation.dart" show listEquals;
 import "package:flutter/material.dart";
-import "package:world_countries/world_countries.dart";
 
-class ThemeProvider extends InheritedWidget {
+class ThemeProvider<T extends List<Color>> extends InheritedWidget {
   const ThemeProvider(
-    this._flagProperties, {
+    this._flagColors, {
     required super.child,
     this.changeColors,
     super.key,
   });
 
   static const _whiteColor = Colors.white;
-  final FlagProperties? _flagProperties;
-  final ValueSetter<FlagProperties?>? changeColors;
 
-  Iterable<Color>? _maybeStripeColors(FlagProperties? flagProperties) =>
-      flagProperties?.stripeColors.map((stripe) => stripe.color);
+  final T _flagColors;
+  final ValueSetter<T>? changeColors;
 
   @override
-  bool updateShouldNotify(ThemeProvider oldWidget) {
-    final oldSeed = _maybeStripeColors(oldWidget._flagProperties)?.firstOrNull;
-    final newSeed = _maybeStripeColors(_flagProperties)?.firstOrNull;
-
-    return newSeed != oldSeed;
-  }
+  bool updateShouldNotify(ThemeProvider oldWidget) =>
+      !listEquals(_flagColors, oldWidget._flagColors);
 
   static ThemeProvider? of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<ThemeProvider>();
 
   ThemeData get theme {
-    final stripeColors = _maybeStripeColors(_flagProperties);
-    final seedColor = stripeColors?.first.withOpacity(1) ?? _whiteColor;
-    final isDark =
-        ThemeData.estimateBrightnessForColor(seedColor) == Brightness.dark;
+    final seedColor = _flagColors.firstOrNull?.withOpacity(1) ?? _whiteColor;
+    final brightness = ThemeData.estimateBrightnessForColor(seedColor);
 
     return ThemeData(
       colorScheme: ColorScheme.fromSeed(
         seedColor: seedColor,
-        secondary: stripeColors?.elementAtOrNull(1),
-        primary: stripeColors?.elementAtOrNull(2),
+        primary: _flagColors.elementAtOrNull(2),
+        secondary: _flagColors.elementAtOrNull(1),
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: seedColor,
-        foregroundColor: isDark ? _whiteColor : Colors.black,
+        foregroundColor:
+            brightness == Brightness.dark ? _whiteColor : Colors.black,
       ),
     );
   }

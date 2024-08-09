@@ -1,9 +1,19 @@
+## 2.0.1
+
+NEW FEATURES
+
+- Added `FlagExtension` on `WorldCountry` to provide flag-related properties and colors:
+  - `flagStripeColors`: Retrieves the stripe colors of the flag from `FlagProperties`.
+  - `flagElementsColors`: Retrieves the element colors of the flag from `FlagProperties`.
+  - `flagColors`: Combines `flagStripeColors` and `flagElementsColors` into a single list of colors.
+  - `flagProperties`: Retrieves the `FlagProperties` associated with country (from the default `WorldCountry.list`).
+
 ## 2.0.0
 
 BREAKING CHANGES
 
 - Package requires Flutter version 3.19+, because it now uses Semantics [identifier](https://api.flutter.dev/flutter/semantics/SemanticsData/identifier.html) property in all picker's tiles (this property was introduced in that SDK version). This identifier describes the node for UI automation tools that work by querying the accessibility hierarchy, such as Android UI Automator, iOS XCUITest, or Appium. It's not exposed to users.
-- All previously deprecated code, marked with the @Deprecated annotation, has been removed. Including color font emojis (you can still use them on your own via `EmojiFlag.custom` constructor, example code is provided in the `example` project).
+- All previously deprecated code, marked with the `@Deprecated` annotation, has been removed. Including color font emojis (you can still use them on your own via `EmojiFlag.custom` constructor, example code is provided in the `example` project).
 
 NEW FEATURES
 
