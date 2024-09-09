@@ -67,7 +67,7 @@ jobs:
 
       - name: 📈 Check Pub score
         if: ${{ github.event_name == 'pull_request' }}
-        uses: fujidaiti/dart-package-inspector@v2.0.3
+        uses: fujidaiti/dart-package-inspector@v2.0.4
         with:
           report: ${{ steps.analysis.outputs.json_output }}
           min-pub-points: 130
