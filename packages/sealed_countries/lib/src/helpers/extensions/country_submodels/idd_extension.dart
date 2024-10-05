@@ -21,7 +21,7 @@ extension IddExtension on Idd {
 
   /// Returns a string representation of the phone code for this `Idd` object.
   ///
-  /// The returned string has the format "<leading><root><suffix>", where
+  /// The returned string has the format `<leading><root><suffix>`, where
   /// `<leading>` is the given `leading` parameter (defaults to `+`), `<root>`
   /// is the `root` field of this `Idd` object, and `<suffix>` is the first
   /// value in the `suffixes` list of this `Idd` object if it has a single

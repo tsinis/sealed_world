@@ -8,7 +8,7 @@ import "routing/delegate.dart";
 import "routing/parser.dart";
 import "routing/route_state.dart";
 import "theme/theme_manager.dart";
-import "theme/theme_switcher.dart";
+import "theme/theme_provider.dart";
 
 void main() => runApp(const ThemeManager(child: Main()));
 
@@ -50,7 +50,6 @@ class _MainState extends State<Main> {
   Widget build(BuildContext context) => RouteStateScope(
         notifier: _routeState,
         child: MaterialApp.router(
-          debugShowCheckedModeBanner: false,
           routeInformationParser: _routeParser,
           routerDelegate: _routerDelegate,
           theme:
@@ -68,6 +67,7 @@ class _MainState extends State<Main> {
             const IsoLocale(LangPor(), country: CountryBra()), // Strict typed.
             for (final locale in kMaterialSupportedLanguages) Locale(locale),
           ],
+          debugShowCheckedModeBanner: false,
         ),
       );
 }

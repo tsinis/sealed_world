@@ -69,6 +69,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
           ?.call(itemProperties, isDense: isDense) ??
       LanguageTile.fromProperties(
         itemProperties,
+        // ignore: avoid-returning-widgets, allow-nullable not working.
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
         onPressed: (language) => isDense ?? false

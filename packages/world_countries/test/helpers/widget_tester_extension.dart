@@ -138,7 +138,7 @@ extension WidgetTesterExtension on WidgetTester {
                 onPressed: () => switch (inDialog) {
                   true => unawaited(testPicker.showInDialog(context)),
                   false => unawaited(testPicker.showInSearch(context)),
-                  _ => unawaited(testPicker.showInModalBottomSheet(context))
+                  _ => unawaited(testPicker.showInModalBottomSheet(context)),
                 },
                 icon: const Icon(Icons.search),
               ),

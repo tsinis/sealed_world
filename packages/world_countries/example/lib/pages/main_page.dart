@@ -11,7 +11,7 @@ import "../tabs/country_tab.dart";
 import "../tabs/currency_tab.dart";
 import "../tabs/language_tab.dart";
 import "../tabs/tabs_data_controller.dart";
-import "../theme/theme_switcher.dart";
+import "../theme/theme_provider.dart";
 import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/floating_button.dart";
 import "../widgets/menu_button.dart";
@@ -39,16 +39,6 @@ class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
   late final _controller = TabsDataController(widget._data.value, vsync: this);
 
-  @override
-  void didUpdateWidget(MainPage oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) => ThemeProvider.of(context)
-          ?.changeColors
-          ?.call(widget._data.country.flagStripeColors),
-    );
-  }
-
   FutureOr<void> _onFabPressed({bool isLong = false}) {
     final pick = widget._mapPickers(_controller.currentData);
     isLong ? pick.showInDialog(context) : pick.showInModalBottomSheet(context);
@@ -64,6 +54,16 @@ class _MainPageState extends State<MainPage>
       widget
           ._mapPickers(_controller.currentData)
           .searchSuggestions(context, controller);
+
+  @override
+  void didUpdateWidget(MainPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => ThemeProvider.of(context)
+          ?.changeColors
+          ?.call(widget._data.country.flagStripeColors),
+    );
+  }
 
   @override
   void dispose() {
@@ -105,13 +105,13 @@ class _MainPageState extends State<MainPage>
           body: !kProfileMode
               ? DecoratedBox(
                   decoration: FunctionalPlatform.maybeWhenConst(
-                    web: const BoxDecoration(),
                     orElse: BoxDecoration(
                       image: DecorationImage(
                         image: Assets.images.background.provider(),
                         fit: BoxFit.cover,
                       ),
                     ),
+                    web: const BoxDecoration(),
                   ),
                   child: Align(
                     alignment: Alignment.topCenter,

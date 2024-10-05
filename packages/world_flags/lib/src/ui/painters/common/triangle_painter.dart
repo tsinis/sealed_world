@@ -22,7 +22,7 @@ final class TrianglePainter extends ElementsPainter {
 
   /// Czechia like triangle on the flag.
   FlagParentBounds _leftToRightTriangle(Canvas canvas, Size size) {
-    final compensation = (1 + aspectRatio / calculateAspectRatio(size)) / 2;
+    final compensation = (aspectRatio / calculateAspectRatio(size) + 1) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
     final xOffset = (size.width / 2) * (property.offset.dx + 1);
@@ -40,7 +40,7 @@ final class TrianglePainter extends ElementsPainter {
 
   /// American Samoa like triangle on the flag.
   FlagParentBounds _rightToLeftTriangle(Canvas canvas, Size size) {
-    final compensation = (1 + aspectRatio / calculateAspectRatio(size)) / 2;
+    final compensation = (aspectRatio / calculateAspectRatio(size) + 1) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
     final xOffset = size.width - ((size.width / 2) * (1 - property.offset.dx));

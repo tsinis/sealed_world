@@ -155,11 +155,11 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   ElementsPainter Function(ElementsProps?, double) painter(Shape child) =>
       child.whenConst(
-        ellipse: EllipsePainter.new,
-        moon: MoonPainter.new,
-        rectangle: RectanglePainter.new,
         star: StarPainter.new,
         triangle: TrianglePainter.new,
+        ellipse: EllipsePainter.new,
+        rectangle: RectanglePainter.new,
+        moon: MoonPainter.new,
         diagonalLine: DiagonalLinePainter.new,
       );
 

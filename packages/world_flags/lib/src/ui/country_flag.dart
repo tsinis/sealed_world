@@ -122,6 +122,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   @override
   final EdgeInsetsGeometry? padding;
 
+  // ignore: avoid-returning-widgets, allow-nullable not working.
   BasicFlag? get _basicFlag => _alternativeMap?[country] ?? _map[country];
 
   @override
@@ -129,9 +130,9 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
         width: width ?? context.flagTheme?.width,
         height: height ?? context.flagTheme?.height,
         child: _basicFlag?.copyWith(
-              decorationPosition: decorationPosition,
               aspectRatio: aspectRatio,
               decoration: decoration,
+              decorationPosition: decorationPosition,
               foregroundWidget: child,
             ) ??
             orElse,

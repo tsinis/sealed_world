@@ -83,6 +83,7 @@ final class GeoPainter extends MultiElementPainter {
       )
       ..lineTo(dimension, dimension * 0.33);
 
+    final paint = paintCreator();
     for (final prop in properties.skip(1)) {
       final offsetY = center.dy + (prop.offset.dy * size.height / 2);
       final offsetX = center.dx +
@@ -92,8 +93,8 @@ final class GeoPainter extends MultiElementPainter {
       canvas
         ..save()
         ..translate(offsetX, offsetY)
-        ..drawPath(vertical, paintCreator())
-        ..drawPath(horizontal, paintCreator())
+        ..drawPath(vertical, paint)
+        ..drawPath(horizontal, paint)
         ..restore();
     }
 

@@ -1132,7 +1132,7 @@ const flagCckProperties = FlagProperties(
 );
 
 /// Flag properties of country Bulgaria (BG).
-/// Colors reference https://wikipedia.org/wiki/Flag_of_Bulgaria#Colours.
+/// Colors reference: https://wikipedia.org/wiki/Flag_of_Bulgaria#Colours.
 const flagBgrProperties = FlagProperties(
   [
     ColorsProperties(Color(0xffffffff)),

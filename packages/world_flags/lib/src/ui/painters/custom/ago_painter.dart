@@ -273,14 +273,15 @@ final class AgoPainter extends CustomElementsPainter {
       ..lineTo(width * 0.73, height * 1.53);
 
     final bounds = path.getBounds();
+    final paint = paintCreator();
 
     canvas
       ..translate(
         center.dx - bounds.width * 1.2,
         center.dy - bounds.height * 0.78,
       )
-      ..drawPath(path, paintCreator())
-      ..drawPath(path2, paintCreator());
+      ..drawPath(path, paint)
+      ..drawPath(path2, paint);
 
     return star;
   }

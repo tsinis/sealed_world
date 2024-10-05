@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-moving-to-variable
+
 import "dart:ui";
 
 import "../../../data/flags_map_part_3.data.dart";

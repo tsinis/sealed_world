@@ -14,7 +14,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// * [key] is the key for the widget.
   /// Example:
   ///
-  /// ```
+  /// ```dart
   /// MaybeWidget(
   ///  nullableValue,
   ///  (nonNullValue) => Text(nonNullValue.toString()),
@@ -42,7 +42,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example:
   ///
-  /// ```
+  /// ```dart
   /// AnimatedSwitcher(
   ///  duration: const Duration(milliseconds: 800),
   ///  child: MaybeWidget.identifiable(

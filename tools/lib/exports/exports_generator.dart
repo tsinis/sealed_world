@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, it's just a CLI tool, not a production code.
 
 import "../constants/path_constants.dart";
 import "../models/package.dart";
@@ -15,7 +15,8 @@ sealed class ExportsGenerator {
     else
       print("Generating ${selectedPackage.dirName} exports...");
 
-    final package = selectedPackage ?? Package.sealedLanguages; // TODO: Remove.
+    final package = selectedPackage ??
+        Package.sealedLanguages; // TODO(tsinis): Remove, no issue related.
     final packageDirName = package.dirName;
     final sourcePath =
         "configs/${packageDirName}_exports.${PathConstants.yaml}";

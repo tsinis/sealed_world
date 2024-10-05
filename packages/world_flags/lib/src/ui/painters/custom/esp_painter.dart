@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-moving-to-variable
+
 import "dart:ui";
 
 import "../../../data/flags_map_part_3.data.dart";
@@ -1019,7 +1021,7 @@ final class EspPainter extends CustomElementsPainter {
       ..drawPath(path, paintCreator(customColors.last)) // White.
       ..drawPath(path2, paint) // Red.
       ..drawPath(path3, paintCreator(customColors.first)) // Yellow.
-      ..drawPath(path4, paintCreator()) // Black.
+      ..drawPath(path4, paint) // Black.
       ..drawPath(path5, paint) // Red.
       ..drawPath(path6, paintCreator(customColors.last)) // White.
       ..drawPath(path7, paintCreator(customColors.first)) // Yellow.

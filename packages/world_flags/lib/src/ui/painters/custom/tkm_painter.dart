@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-moving-to-variable
+
 part of "../multi_element_painter.dart";
 
 /// Painter for the Turkmenistan flag.

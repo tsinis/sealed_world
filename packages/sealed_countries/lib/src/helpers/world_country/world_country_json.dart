@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-correct-identifier-length
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../model/country/country.dart";

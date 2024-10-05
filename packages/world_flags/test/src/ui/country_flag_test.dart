@@ -1,9 +1,11 @@
+// ignore_for_file: missing-test-assertion, tested in flagGolden method.
+
 import "package:arabic_font/arabic_font.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../helpers/extensions/widget_tester_extension.dart";
+import "../../helpers/extensions/golden_widget_tester_extension.dart";
 import "../../helpers/flag_type.dart";
 
 void main() => group("$CountryFlag", () {

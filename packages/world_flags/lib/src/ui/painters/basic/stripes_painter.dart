@@ -42,6 +42,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     _applyFlagClipping(canvas, size);
+    // ignore: prefer-correct-identifier-length, CP for [ColorsProperties].
     final total = properties.stripeColors.fold(0, (sum, cp) => sum + cp.ratio);
     switch (properties.stripeOrientation) {
       case StripeOrientation.horizontal:

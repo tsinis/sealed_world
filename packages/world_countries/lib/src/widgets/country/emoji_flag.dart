@@ -3,7 +3,6 @@ import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 
-// ignore: format-comment, false positive.
 /// Small context about other emoji fonts:
 /// * FxEmojis is deprecated.
 /// * EmojiOne is also deprecated.
@@ -68,8 +67,8 @@ class EmojiFlag extends Text {
     double? size,
   }) =>
       (style ?? const TextStyle()).copyWith(
-        fontSize: size ?? style?.fontSize,
         color: UiConstants.color,
+        fontSize: size ?? style?.fontSize,
         fontFamily: font,
         package: package,
       );

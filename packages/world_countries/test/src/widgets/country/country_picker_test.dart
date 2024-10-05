@@ -31,11 +31,11 @@ void main() => group("$CountryPicker", () {
         "builder from theme",
         (tester) async => tester.testPickerBody(
           const CountryPicker(),
+          (item) => item.translations.first.common,
           theme: CountryTileThemeData(
             builder: (properties, {isDense}) =>
                 Text(properties.item.translations.first.common),
           ),
-          (item) => item.translations.first.common,
         ),
       );
 

@@ -268,8 +268,8 @@ abstract class BasicPicker<T extends Translated>
           items,
           resultsBuilder: (newContext, items) => copyWith(
             items: items,
-            showSearchBar: false,
             onSelect: (selected) => maybeSelectAndPop(selected, newContext),
+            showSearchBar: false,
           ),
           searchIn: searchIn ?? defaultSearch,
           appBarBottom: appBarBottom,

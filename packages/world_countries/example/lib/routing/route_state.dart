@@ -13,7 +13,7 @@ import "parser.dart";
 /// The current route state. To change the current route, call obtain the state
 /// using `RouteStateScope.of(context)` and call `go()`:
 ///
-/// ```
+/// ```dart
 /// RouteStateScope.of(context).go('/path/to/route');
 /// ```
 class RouteState extends ChangeNotifier {

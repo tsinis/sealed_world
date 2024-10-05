@@ -5,7 +5,7 @@ import "package:cli/utils/json_utils.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 /// Usage: `dart run :colors_extractor`.
-Future<void> main() async {
+void main() {
   final io = IoUtils();
   var i = 0;
   final buffer = StringBuffer("""
@@ -18,7 +18,6 @@ const map = {
   io
     ..forFileInDirectory(
       Directory(join(JsonUtils.defaultDataDirPath, "flags")),
-      format: ColorUtils.svgFormat,
       withFile: (file, name) {
         if (name.length > 2) return;
         // ignore: avoid-substring, no emoji here.
@@ -34,13 +33,12 @@ const map = {
         // final properties = FlagProperties(
         //   colors.map((c) => ColorsProperties.fromIntColor(c.value)).toList(),
         // );
-        buffer.write(
-          "\n/// ${country.internationalName}: ${country.codeShort}.\n",
-        )
+        buffer.write("\n/// $countryName: ${country.codeShort}.\n")
             // ..write("${country.runtimeType}(): $properties,")
             ;
         i++;
       },
+      format: ColorUtils.svgFormat,
     )
     ..writeContentToFile("flags_map.txt", "$buffer};");
 

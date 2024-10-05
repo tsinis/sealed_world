@@ -74,6 +74,7 @@ class _SearchListListenableBuilderState<T extends Object>
 
   void textChanged() {
     final filteredItems = widget.items
+        // ignore: prefer-moving-to-variable, Looks like a false-positive.
         .where((i) => widget.searchIn(i, context).toSet().any(hasSameText));
     setState(() => items = UnmodifiableListView(filteredItems));
   }

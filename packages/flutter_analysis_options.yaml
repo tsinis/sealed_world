@@ -27,7 +27,6 @@ linter:
     avoid_unnecessary_containers: true
     avoid_web_libraries_in_flutter: true
     no_logic_in_create_state: true
-    public_member_api_docs: true
     sized_box_for_whitespace: true
     sized_box_shrink_expand: true
     sort_child_properties_last: true

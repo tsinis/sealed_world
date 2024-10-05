@@ -150,6 +150,7 @@ class PhoneCodePicker extends CountryPicker {
             ),
           ),
         ),
+        // ignore: avoid-returning-widgets, allow-nullable not working.
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         onPressed: (phone) => isDense ?? false
             ? maybeSelectAndPop(phone, itemProperties.context)

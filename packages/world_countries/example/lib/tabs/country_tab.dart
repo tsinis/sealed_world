@@ -46,10 +46,10 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             size: 148,
             style: TextStyle(
               fontFamily: FunctionalPlatform.maybeWhenConst(
+                orElse: FontFamily.openMojiCOLR1,
                 iOS: FontFamily.openMojiCOLR0,
                 macOS: FontFamily.openMojiCOLR0,
                 windows: FontFamily.openMojiCOLR0,
-                orElse: FontFamily.openMojiCOLR1,
               ),
             ),
           ),

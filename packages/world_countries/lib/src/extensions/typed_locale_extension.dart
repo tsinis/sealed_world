@@ -84,15 +84,15 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
     Map<WorldCountry, String>? countries,
   ) =>
       copyWith(
-        languageTranslations: languages, // Common language names cache.
-        currencyTranslations: currencies, // Common currency names cache.
         countryTranslations: countries, // Common country names cache.
+        currencyTranslations: currencies, // Common currency names cache.
+        languageTranslations: languages, // Common language names cache.
       ) as T;
 
   ({
     Iterable<NaturalLanguage> languages,
     Iterable<FiatCurrency> currencies,
-    Iterable<WorldCountry> countries
+    Iterable<WorldCountry> countries,
   }) _itemsToTranslate(
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,
@@ -106,7 +106,7 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
     return (
       languages: languages ?? languageTranslations.keys,
       currencies: currencies ?? currencyTranslations.keys,
-      countries: countries ?? countryTranslations.keys
+      countries: countries ?? countryTranslations.keys,
     );
   }
 }

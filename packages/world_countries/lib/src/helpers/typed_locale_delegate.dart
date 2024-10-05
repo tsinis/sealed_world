@@ -95,10 +95,9 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// mapping is used to resolve the language and country of a [Locale] to the
   /// corresponding language and country.
   ///
-  /// The current mappings are:
+  /// The current mappings are
   /// * Filipino (Pilipino) to Tagalog. Tagalog is the foundation of Filipino.
-  ///   More details can be found
-  ///   [here](https://en.wikipedia.org/wiki/Tagalog_language).
+  ///   More details can be found at: https://en.wikipedia.org/wiki/Tagalog_language.
   /// * Swiss German Alemannic Alsatian to German (Switzerland).
   /// * Bosnian (written in the Cyrillic script) to Serbian.
   ///

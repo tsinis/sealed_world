@@ -38,11 +38,11 @@ void main() {
   ///}
   /// ```
   bool? isVikingKrone(FiatCurrency currency) => currency.whenOrNull(
+        fiatCzk: () => false,
         fiatDkk: () => true,
         fiatIsk: () => true,
         fiatNok: () => true,
         fiatSek: () => true,
-        fiatCzk: () => false,
       );
 
   print(isVikingKrone(const FiatNok())); // Prints "true".

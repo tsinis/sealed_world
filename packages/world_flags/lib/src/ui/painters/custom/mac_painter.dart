@@ -166,13 +166,15 @@ final class MacPainter extends CustomElementsPainter {
       ..lineTo(width * 0.72, height * 1.43);
 
     final bounds = path.getBounds();
+    final paint = paintCreator();
+
     canvas
       ..translate(
         center.dx - bounds.width,
         center.dy - bounds.height * 1.2,
       )
-      ..drawPath(path2, paintCreator())
-      ..drawPath(path, paintCreator());
+      ..drawPath(path2, paint)
+      ..drawPath(path, paint);
 
     return StarPainter([properties.last], aspectRatio)
         .paintFlagElements(canvas, adjustedSize);

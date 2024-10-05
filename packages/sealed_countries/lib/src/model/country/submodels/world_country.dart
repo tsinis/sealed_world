@@ -254,9 +254,9 @@ class WorldCountry extends Country
           ? map.findByCodeOrThrow(code)
           : code.toUpperCaseIsoCode().maybeMapIsoCode(
                 orElse: (regular) => WorldCountry.fromCode(regular, countries),
-                short: (short) => WorldCountry.fromCodeShort(short, countries),
                 numeric: (numeric) =>
                     WorldCountry.fromCodeNumeric(numeric, countries),
+                short: (short) => WorldCountry.fromCodeShort(short, countries),
               );
 
   /// The native names of the country.
@@ -507,10 +507,10 @@ class WorldCountry extends Country
           : code?.toUpperCaseIsoCode().maybeMapIsoCode(
                 orElse: (regular) =>
                     WorldCountry.maybeFromCode(regular, countries),
-                short: (short) =>
-                    WorldCountry.maybeFromCodeShort(short, countries),
                 numeric: (numeric) =>
                     WorldCountry.maybeFromCodeNumeric(numeric, countries),
+                short: (short) =>
+                    WorldCountry.maybeFromCodeShort(short, countries),
               );
 
   /// The general standard ISO code for countries, defined as ISO 3166-1.

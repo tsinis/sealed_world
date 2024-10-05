@@ -32,11 +32,11 @@ void main() => group("$CurrencyPicker", () {
         "builder from theme",
         (tester) async => tester.testPickerBody(
           const CurrencyPicker(),
+          (item) => item.translations.first.common,
           theme: CurrencyTileThemeData(
             builder: (properties, {isDense}) =>
                 Text(properties.item.translations.first.common),
           ),
-          (item) => item.translations.first.common,
         ),
       );
 

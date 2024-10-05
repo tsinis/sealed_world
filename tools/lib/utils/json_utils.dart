@@ -1,4 +1,5 @@
-// ignore_for_file: avoid_print, avoid-non-ascii-symbols
+// ignore: lines_longer_than_80_chars, it's CLI tool, not a production code.
+// ignore_for_file: avoid_print, avoid-non-ascii-symbols, prefer-moving-to-variable
 import "dart:convert";
 
 import "package:change_case/change_case.dart";
@@ -120,7 +121,7 @@ const ${varFileName.toCamelCase()} = [
       for (final entry in map.entries) {
         final l10n = NaturalLanguage.maybeFromValue(
           entry.key.toUpperCase().trim(),
-          where: (l) => l.codeShort,
+          where: (lang) => lang.codeShort,
         );
         if (l10n == null) continue;
         if (translations.any((e) => e.language == l10n)) continue;
@@ -218,8 +219,8 @@ const ${varFileName.toCamelCase()} = [
   }
 
   IsoStandardized<Object>? _instanceFromCode(String code) => package.when(
-        sealedCurrencies: () => _convertCodeToCurrency(code),
         sealedLanguages: () => _convertCodeToLang(code),
+        sealedCurrencies: () => _convertCodeToCurrency(code),
         sealedCountries: () => _convertCodeToCountry(code),
       );
 
@@ -268,9 +269,10 @@ const ${varFileName.toCamelCase()} = [
     final match = regex.firstMatch(code.toUpperCase());
 
     final lang = match?.group(1) ?? "";
+    final country = match?.group(2);
     var countryCode = match?.group(3);
-    var scriptCode = countryCode == null ? null : match?.group(2);
-    countryCode = scriptCode == null ? match?.group(2) : countryCode;
+    var scriptCode = countryCode == null ? null : country;
+    countryCode = scriptCode == null ? country : countryCode;
     countryCode = countryCode?.isEmpty ?? true ? null : countryCode;
     if (countryCode?.length == 4) {
       scriptCode = countryCode;
@@ -280,7 +282,7 @@ const ${varFileName.toCamelCase()} = [
     return (
       languageCode: lang,
       countryCode: countryCode,
-      scriptCode: scriptCode
+      scriptCode: scriptCode,
     );
   }
 }

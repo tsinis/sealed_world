@@ -43,6 +43,7 @@ extension SealedWorldJsonStringExtension on String {
       final jsonMap = codec.decode(this) as JsonMap;
 
       return fromJson?.call(jsonMap);
+      // ignore: avoid_catches_without_on_clauses, it's just some exception.
     } catch (_) {
       return null;
     }

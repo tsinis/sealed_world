@@ -61,7 +61,10 @@ dart_code_metrics:
     - avoid-nested-conditional-expressions:
       acceptable-level: 2
     - prefer-correct-identifier-length:
-        exceptions: ["i", "x", "y", "sb"] # i for index, x/y for math operations, sb for StringBuffer.
+        # i for index, x/y for math operations, sb for StringBuffer, io for IO,
+        # bc for BuildContext, a and b are convenient for sorting, e for the element,
+        # k for key, v for value.
+        exceptions: ["a", "b", "e", "i", "k", "v", "x", "y", "io", "bc", "sb"]
     - avoid-top-level-members-in-tests:
         exclude:
           - test/data/*.dart
@@ -72,9 +75,16 @@ dart_code_metrics:
         include-assertions:
           - verify
           - verifyZeroInteractions
+          - assertTest
+          - testPickerBody
+          - testPickerInDialog
+          - testPickerInSearch
+          - testPickerInModal
     - avoid-passing-async-when-sync-expected:
         exclude:
           - test/**
+    - avoid-returning-widgets:
+        allow-nullable: true
     - avoid-redundant-async:
         exclude:
           - test/**
@@ -142,20 +152,27 @@ dart_code_metrics:
 linter:
   rules:
     # Disabled:
+    always_put_control_body_on_new_line: false # Makes code harder to read.
     always_specify_types: false # Conflicts with: omit_local_variable_types.
     always_use_package_imports: false # Conflicts with: prefer_relative_imports.
     avoid_classes_with_only_static_members: false # Conflicts with: prefer-static-class
+    avoid_equals_and_hash_code_on_mutable_classes: false # We have no access to meta here.
+    flutter_style_todos: false # Not a Flutter team.
+    # omit_obvious_local_variable_types: true # Conflicts with: specify_nonobvious_local_variable_types. #TODO! After Dart 3.6 is released.
     prefer_final_parameters: false # Conflicts with: avoid_final_parameters.
     prefer_single_quotes: false # Conflicts with: prefer_double_quotes.
     unnecessary_final: false # Conflicts with: prefer_final_locals.
+    unnecessary_library_name: false # To prevent breaking changes for those who use this libs.
 
     # Enabled:
     always_declare_return_types: true
     always_put_required_named_parameters_first: true
     always_require_non_null_named_parameters: true
     annotate_overrides: true
+    annotate_redeclares: true
     avoid_annotating_with_dynamic: true
     avoid_bool_literals_in_conditional_expressions: true
+    avoid_catches_without_on_clauses: true
     avoid_catching_errors: true
     avoid_double_and_int_checks: true
     avoid_dynamic_calls: true
@@ -207,10 +224,10 @@ linter:
     depend_on_referenced_packages: true
     deprecated_consistency: true
     deprecated_member_use_from_same_package: true
-    diagnostic_describe_all_properties: true
     directives_ordering: true
     discarded_futures: true
     do_not_use_environment: true
+    document_ignores: true
     empty_catches: true
     empty_constructor_bodies: true
     empty_statements: true
@@ -223,6 +240,7 @@ linter:
     implicit_call_tearoffs: true
     implicit_reopen: true
     invalid_case_patterns: true
+    invalid_runtime_check_with_js_interop_types: true
     join_return_with_assignment: true
     leading_newlines_in_multiline_strings: true
     library_annotations: true
@@ -232,6 +250,7 @@ linter:
     lines_longer_than_80_chars: true
     literal_only_boolean_expressions: true
     matching_super_parameters: true
+    missing_code_block_language_in_doc_comment: true
     missing_whitespace_between_adjacent_strings: true
     no_adjacent_strings_in_list: true
     no_default_cases: true
@@ -301,6 +320,7 @@ linter:
     sort_constructors_first: true
     sort_pub_dependencies: true
     sort_unnamed_constructors_first: true
+    # specify_nonobvious_local_variable_types: true #TODO! After Dart 3.6 is released.
     test_types_in_equals: true
     throw_in_finally: true
     tighten_type_of_initializing_formals: true
@@ -308,6 +328,7 @@ linter:
     type_init_formals: true
     type_literal_in_constant_pattern: true
     unawaited_futures: true
+    unintended_html_in_doc_comment: true
     unnecessary_await_in_return: true
     unnecessary_brace_in_string_interps: true
     unnecessary_breaks: true
@@ -348,5 +369,6 @@ linter:
     use_super_parameters: true
     use_test_throws_matchers: true
     use_to_and_as_if_applicable: true
+    # use_truncating_division: true #TODO! After Dart 3.6 is released.
     valid_regexps: true
     void_checks: true

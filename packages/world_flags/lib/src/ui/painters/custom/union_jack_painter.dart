@@ -69,7 +69,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
     final width = size.width;
     final height = size.height;
     final angle = atan2(height, width);
-    final thickness = size.height * 0.2;
+    final thickness = height * 0.2;
     final center = Offset(width / 2, height / 2);
     final rect = Rect.fromLTWH(0, 0, width, height);
     final length = sqrt(width * width + height * height);

@@ -38,7 +38,7 @@ void main() {
   print("Native name: ${maybeCzech?.namesNative.first}");
 
   // Contains functional style methods (when, whenOrNull, map, etc).
-  print(maybeCzech?.maybeWhen(langCes: () => "Ahoj!", orElse: () => "Hey!"));
+  print(maybeCzech?.maybeWhen(orElse: () => "Hey!", langCes: () => "Ahoj!"));
 
   print(NaturalLanguage.list.length); // Prints: "184".
 

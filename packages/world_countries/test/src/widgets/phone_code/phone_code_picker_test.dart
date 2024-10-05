@@ -32,11 +32,11 @@ void main() => group("$PhoneCodePicker", () {
         "builder from theme",
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
+          (item) => item.translations.first.common,
           theme: CountryTileThemeData(
             builder: (properties, {isDense}) =>
                 Text(properties.item.translations.first.common),
           ),
-          (item) => item.translations.first.common,
         ),
       );
 

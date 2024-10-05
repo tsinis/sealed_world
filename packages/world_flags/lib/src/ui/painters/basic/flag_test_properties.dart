@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-static-class
+
 import "package:flutter/material.dart";
 
 /// A flag to control anti-aliasing for flag elements.
