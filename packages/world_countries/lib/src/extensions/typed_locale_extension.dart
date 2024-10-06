@@ -83,6 +83,7 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
     Map<FiatCurrency, String>? currencies,
     Map<WorldCountry, String>? countries,
   ) =>
+      // ignore: avoid-type-casts, Might be a breaking change.
       copyWith(
         countryTranslations: countries, // Common country names cache.
         currencyTranslations: currencies, // Common currency names cache.

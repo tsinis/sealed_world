@@ -108,8 +108,8 @@ class RegionalBloc extends WorldBloc {
   /// no value is provided, the `RegionalBloc.list` constant is used.
   static RegionalBloc? maybeFromValue<T extends Object>(
     T value, {
-    T? Function(RegionalBloc regionalBloc)? where,
     Iterable<RegionalBloc> regionalBlocs = list,
+    T? Function(RegionalBloc regionalBloc)? where,
   }) {
     regionalBlocs.assertNotEmpty();
 

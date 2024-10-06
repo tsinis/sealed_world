@@ -28,10 +28,7 @@ void main() => group("$RegionalBloc", () {
         for (final element in RegionalBloc.list) {
           test(
             "${element.acronym} from map",
-            () => expect(
-              RegionalBloc.fromAcronym(element.acronym),
-              element,
-            ),
+            () => expect(RegionalBloc.fromAcronym(element.acronym), element),
           );
         }
 
@@ -93,10 +90,7 @@ void main() => group("$RegionalBloc", () {
       group("maybeFromValue", () {
         test(
           "with proper value, without where",
-          () => expect(
-            RegionalBloc.maybeFromValue(value.acronym),
-            value,
-          ),
+          () => expect(RegionalBloc.maybeFromValue(value.acronym), value),
         );
 
         test(
@@ -112,10 +106,7 @@ void main() => group("$RegionalBloc", () {
 
         test(
           "with wrong value, without where",
-          () => expect(
-            RegionalBloc.maybeFromValue(value),
-            isNull,
-          ),
+          () => expect(RegionalBloc.maybeFromValue(value), isNull),
         );
 
         test(

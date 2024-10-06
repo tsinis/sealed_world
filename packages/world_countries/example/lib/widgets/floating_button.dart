@@ -13,6 +13,7 @@ class FloatingButton extends StatelessWidget {
   Widget build(BuildContext context) => GestureDetector(
         onLongPress: () => onPressed(isLong: true),
         child: FloatingActionButton(
+          tooltip: "Change",
           heroTag: "fab",
           onPressed: () => onPressed(isLong: false),
           child: AnimatedBuilder(

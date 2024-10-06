@@ -15,6 +15,7 @@ dependencies:
     path: ../
 
 dev_dependencies:
+  dart_code_metrics_presets: ^2.16.0
   flutter_test: # From Google
     sdk: flutter
   lints: ^4.0.0 # From Google

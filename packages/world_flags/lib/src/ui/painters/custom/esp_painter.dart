@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-moving-to-variable
+// ignore_for_file: prefer-moving-to-variable, avoid-similar-names
 
 import "dart:ui";
 
@@ -15,8 +15,7 @@ final class EspPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagEspProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.22);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

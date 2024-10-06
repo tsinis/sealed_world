@@ -25,17 +25,11 @@ void main() => group("$IsoLocale", () {
             IsoLocale.fromSubtags(language: english, country: country),
             locale,
           );
-          expect(
-            value,
-            isNot(Locale(locale.languageCode)),
-          );
+          expect(value, isNot(Locale(locale.languageCode)));
         });
 
         test("should compare $TypedLocale object with $IsoLocale", () {
-          expect(
-            value,
-            TypedLocale(english, country: locale.countryCode),
-          );
+          expect(value, TypedLocale(english, country: locale.countryCode));
           expect(
             IsoLocale.fromSubtags(language: english, country: country),
             TypedLocale(english, country: locale.countryCode),
@@ -47,10 +41,7 @@ void main() => group("$IsoLocale", () {
               country: locale.countryCode,
             ),
           );
-          expect(
-            value,
-            isNot(const TypedLocale(english)),
-          );
+          expect(value, isNot(const TypedLocale(english)));
         });
       });
 
@@ -69,15 +60,15 @@ void main() => group("$IsoLocale", () {
         );
 
         test("should create translation cache for everything", () {
-          final locale = IsoLocale.withTranslationsCache(
+          final isoLocale = IsoLocale.withTranslationsCache(
             const LangEng(),
             country: const CountryUsa(),
           );
-          expect(locale, isA<IsoLocale>());
-          expect(locale.country, isA<WorldCountry>());
-          expect(locale.languageTranslations, isNotEmpty);
-          expect(locale.currencyTranslations, isNotEmpty);
-          expect(locale.countryTranslations, isNotEmpty);
+          expect(isoLocale, isA<IsoLocale>());
+          expect(isoLocale.country, isA<WorldCountry>());
+          expect(isoLocale.languageTranslations, isNotEmpty);
+          expect(isoLocale.currencyTranslations, isNotEmpty);
+          expect(isoLocale.countryTranslations, isNotEmpty);
         });
       });
 

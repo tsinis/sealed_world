@@ -115,11 +115,7 @@ const hrkCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ক্রোয়েশিয়ান কুনা"),
   TranslatedName(LangBre(), name: "kuna Kroatia"),
   TranslatedName(LangBos(), name: "Hrvatska kuna"),
-  TranslatedName(
-    LangBos(),
-    name: "Хрватска куна",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Хрватска куна", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "kuna croata"),
   TranslatedName(LangChe(), name: "Хорватин куна"),
   TranslatedName(LangCes(), name: "chorvatská kuna"),

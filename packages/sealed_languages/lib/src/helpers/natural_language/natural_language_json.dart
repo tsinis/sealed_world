@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-type-casts
+
 import "../../interfaces/json_encodable.dart";
 import "../../model/language/language.dart";
 import "../../model/language_family/language_family.dart";
@@ -40,11 +42,11 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// final english = NaturalLanguageJson.fromMap(jsonMap);
   /// ```
   static NaturalLanguage fromMap(JsonMap map) => NaturalLanguage(
-        name: map["name"] as String,
-        codeShort: map["codeShort"] as String,
+        name: map["name"].toString(),
+        codeShort: map["codeShort"].toString(),
         namesNative: List<String>.unmodifiable(map["namesNative"] as List),
-        code: map["code"] as String,
-        bibliographicCode: map["bibliographicCode"] as String?,
+        code: map["code"].toString(),
+        bibliographicCode: map["bibliographicCode"]?.toString(),
         family: NaturalLanguageFamily.fromName(map["family"].toString()),
         isRightToLeft: map["isRightToLeft"] as bool,
         scripts: (map["scripts"] as List<Object?>)
@@ -72,13 +74,13 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// final jsonMap = LangEng().toMap();
   /// ```
   JsonObjectMap toMap() => {
-        "name": name,
+        "bibliographicCode": bibliographicCode,
         "code": code,
         "codeShort": codeShort,
-        "namesNative": namesNative,
-        "bibliographicCode": bibliographicCode,
         "family": family.name,
         "isRightToLeft": isRightToLeft,
+        "name": name,
+        "namesNative": namesNative,
         "scripts": scripts.toIsoList(),
         "translations":
             translations.map((l10n) => l10n.toMap()).toList(growable: false),

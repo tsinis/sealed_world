@@ -13,9 +13,11 @@ void main(List<String> args) {
   final package = ArgsParser(args).maybePackageName();
   if (package == null) throw ArgumentError("Package name should be provided.");
   final io = IoUtils();
-  var i = 0;
+  int i = 0;
   io.forFileInDirectory(
     Directory(join(JsonUtils.defaultDataDirPath, package.dataRepresentPlural)),
+    format: PhpConverter.format,
+    // ignore: prefer-extracting-function-callbacks, it's CLI tool, not prod.
     withFile: (file, name) {
       // ignore: avoid-substring, no emoji here.
       final langCode = name.substring(0, 2).toLowerCase();
@@ -35,9 +37,8 @@ void main(List<String> args) {
         "${package.dataRepresent.toLowerCase()}.${PathConstants.json}",
       );
       final result = io.writeContentToFile(path, jsonEncode(translations));
-      if (result != null) i++;
+      if (result != null) i += 1;
     },
-    format: PhpConverter.format,
   );
 
   print("Conversion completed successfully. $i files converted.");

@@ -129,11 +129,7 @@ const ugxCurrencyTranslations = [
   TranslatedName(LangBen(), name: "উগান্ডান শিলিং"),
   TranslatedName(LangBre(), name: "shilling Ouganda"),
   TranslatedName(LangBos(), name: "Ugandski šiling"),
-  TranslatedName(
-    LangBos(),
-    name: "Угандски шилинг",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Угандски шилинг", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "xíling ugandès"),
   TranslatedName(LangChe(), name: "Угандан шиллинг"),
   TranslatedName(LangCes(), name: "ugandský šilink"),

@@ -14,8 +14,7 @@ final class MacPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagMacProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -169,10 +168,7 @@ final class MacPainter extends CustomElementsPainter {
     final paint = paintCreator();
 
     canvas
-      ..translate(
-        center.dx - bounds.width,
-        center.dy - bounds.height * 1.2,
-      )
+      ..translate(center.dx - bounds.width, center.dy - bounds.height * 1.2)
       ..drawPath(path2, paint)
       ..drawPath(path, paint);
 

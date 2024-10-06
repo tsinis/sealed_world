@@ -9,6 +9,7 @@ import "../../helpers/extensions/golden_widget_tester_extension.dart";
 import "../../helpers/flag_type.dart";
 
 void main() => group("$CountryFlag", () {
+      // ignore: prefer-extracting-function-callbacks, it's a test.
       setUpAll(() {
         flagAntiAliasOverride = true;
         flagTextStyleOverride =

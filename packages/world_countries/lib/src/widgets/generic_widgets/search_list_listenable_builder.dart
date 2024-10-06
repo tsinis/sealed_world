@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-widget-private-members
+
 import "dart:collection";
 
 import "package:flutter/widgets.dart";

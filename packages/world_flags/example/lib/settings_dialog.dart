@@ -4,17 +4,17 @@ import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
 class SettingsDialog extends StatefulWidget {
-  const SettingsDialog(this.country, this.aspectRatio, {super.key});
+  const SettingsDialog(this.aspectRatio, this.country, {super.key});
 
   static void show(
+    ValueNotifier<double?> aspectRatio,
     BuildContext context,
     WorldCountry country,
-    ValueNotifier<double?> aspectRatio,
   ) =>
       unawaited(
         showDialog(
           context: context,
-          builder: (_) => SettingsDialog(country, aspectRatio),
+          builder: (_) => SettingsDialog(aspectRatio, country),
         ),
       );
 
@@ -26,19 +26,19 @@ class SettingsDialog extends StatefulWidget {
 }
 
 class _SettingsDialogState extends State<SettingsDialog> {
-  final opacity = ValueNotifier(1 / 2);
+  final _opacity = ValueNotifier(1 / 2);
 
-  WorldCountry get country => widget.country;
+  WorldCountry get _country => widget.country;
 
-  String opacityLabelBuilder() => switch (opacity.value) {
+  String get _opacityLabel => switch (_opacity.value) {
         1 => "Original bitmap flag",
         0 => "Flag from the package",
-        _ => " ${(opacity.value * 100).round()}% opacity ",
+        _ => " ${(_opacity.value * 100).round()}% opacity ",
       };
 
   @override
   void dispose() {
-    opacity.dispose();
+    _opacity.dispose();
     super.dispose();
   }
 
@@ -49,11 +49,11 @@ class _SettingsDialogState extends State<SettingsDialog> {
           child: ValueListenableBuilder(
             valueListenable: widget.aspectRatio,
             builder: (_, ratio, __) => ValueListenableBuilder(
-              valueListenable: opacity,
+              valueListenable: _opacity,
               builder: (_, opacityValue, flag) => Scaffold(
                 appBar: AppBar(
                   title: SelectableText(
-                    "${country.internationalName} (${country.code}) Settings",
+                    "${_country.internationalName} (${_country.code}) Settings",
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -61,7 +61,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage(country.flagPngUrl(), scale: 0.1),
+                        image: NetworkImage(_country.flagPngUrl(), scale: 0.1),
                       ),
                     ),
                     child: Opacity(opacity: opacityValue, child: flag),
@@ -76,7 +76,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
                       ),
                       subtitle: Slider(
                         value: ratio ??
-                            country.flagProperties?.aspectRatio ??
+                            _country.flagProperties?.aspectRatio ??
                             FlagConstants.minAspectRatio,
                         onChanged: (newRatio) =>
                             widget.aspectRatio.value = newRatio,
@@ -88,15 +88,15 @@ class _SettingsDialogState extends State<SettingsDialog> {
                       title: const Text("Opacity:"),
                       subtitle: Slider(
                         value: opacityValue,
-                        onChanged: (newOpacity) => opacity.value = newOpacity,
+                        onChanged: (newOpacity) => _opacity.value = newOpacity,
                         divisions: 10,
-                        label: opacityLabelBuilder(),
+                        label: _opacityLabel,
                       ),
                     ),
                   ],
                 ),
               ),
-              child: CountryFlag.simplified(country, aspectRatio: ratio),
+              child: CountryFlag.simplified(_country, aspectRatio: ratio),
             ),
           ),
         ),

@@ -21,9 +21,7 @@ void main() => group("$Car", () {
           );
           expect(
             array.first,
-            equals(
-              Car(sign: value.sign, isRightSide: value.isRightSide),
-            ),
+            equals(Car(sign: value.sign, isRightSide: value.isRightSide)),
           );
         });
 

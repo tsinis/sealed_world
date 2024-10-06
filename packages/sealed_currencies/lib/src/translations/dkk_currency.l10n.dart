@@ -117,11 +117,7 @@ const dkkCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ড্যানিশ ক্রৌন"),
   TranslatedName(LangBre(), name: "kurunenn Danmark"),
   TranslatedName(LangBos(), name: "Danska kruna"),
-  TranslatedName(
-    LangBos(),
-    name: "Данска круна",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Данска круна", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "corona danesa"),
   TranslatedName(LangChe(), name: "Данин крона"),
   TranslatedName(LangCes(), name: "dánská koruna"),

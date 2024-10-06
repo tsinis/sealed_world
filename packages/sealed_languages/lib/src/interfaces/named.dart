@@ -17,5 +17,6 @@ abstract interface class Named<T extends Object> {
   final T name;
 
   @override
+  // ignore: avoid-unnecessary-overrides, it has boolean config flag.
   String toString({bool short = true});
 }

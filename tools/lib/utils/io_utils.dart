@@ -1,3 +1,6 @@
+// ignore_for_file: avoid-similar-names, prefer-correct-setter-parameter-name,
+// ignore_for_file: prefer-extracting-function-callbacks
+
 import "dart:io";
 
 import "package:path/path.dart";
@@ -13,7 +16,7 @@ final class IoUtils {
 
   final Directory _dirCache;
 
-  set directory(Directory directory) => Directory.current = directory;
+  set directory(Directory value) => Directory.current = value;
   Directory get directory => _dirCache;
 
   File copyFile(String sourcePath, Directory destination, String filename) {
@@ -25,10 +28,10 @@ final class IoUtils {
   }
 
   Directory createDirectory(String path) {
-    final directory = Directory(path);
-    if (!directory.existsSync()) directory.createSync(recursive: true);
+    final value = Directory(path);
+    if (!directory.existsSync()) value.createSync(recursive: true);
 
-    return directory;
+    return value;
   }
 
   File? writeContentToFile(String filePath, Object buffer) {
@@ -37,6 +40,7 @@ final class IoUtils {
     final file = File(filePath);
 
     if (!file.existsSync()) {
+      // ignore: avoid-returning-cascades, it's CLI tool.
       return file
         ..createSync(recursive: true)
         ..writeAsStringSync(content);
@@ -52,12 +56,13 @@ final class IoUtils {
   void deleteFile(File file) =>
       file.existsSync() ? file.deleteSync(recursive: true) : null;
 
-  void deleteDirectory(Directory directory) =>
-      directory.existsSync() ? directory.deleteSync(recursive: true) : null;
+  void deleteDirectory(Directory value) =>
+      value.existsSync() ? value.deleteSync(recursive: true) : null;
 
   void resetCurrentDir() => directory = _dirCache;
 
   void moveJsonFiles(Directory source, [Directory? destination]) {
+    // ignore: avoid-mutating-parameters, it's CLI tool.
     destination ??= Directory.current;
     final destinationPath = join(destination.path, PathConstants.json);
     if (!destination.existsSync()) destination.createSync(recursive: true);
@@ -73,11 +78,11 @@ final class IoUtils {
   }
 
   void forFileInDirectory(
-    Directory directory, {
+    Directory value, {
     required void Function(File file, String filename) withFile,
     String format = PathConstants.json,
   }) =>
-      directory.listSync(recursive: true).forEach((file) {
+      value.listSync(recursive: true).forEach((file) {
         if (file is! File) return;
         final name = basename(file.path);
         if (name.endsWith(".$format")) withFile(file, withoutExtension(name));

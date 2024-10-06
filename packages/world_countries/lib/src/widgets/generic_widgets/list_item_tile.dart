@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-nullable-parameters-with-default-values
+
 import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
@@ -115,7 +117,7 @@ class ListItemTile<T extends Object> extends ListTile {
           enableFeedback: enableFeedback,
           horizontalTitleGap: horizontalTitleGap,
           minVerticalPadding: minVerticalPadding,
-          minLeadingWidth: minLeadingWidth ?? fontSize + UiConstants.point,
+          minLeadingWidth: minLeadingWidth ?? (fontSize + UiConstants.point),
           titleAlignment: titleAlignment,
         ),
       );

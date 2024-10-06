@@ -60,7 +60,7 @@ final class Capital implements JsonEncodable<Capital> {
 
     return other.deFacto == deFacto &&
         other.deJure == deJure &&
-        other.third == other.third;
+        other.third == third;
   }
 
   @override

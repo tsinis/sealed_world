@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-type-casts
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../../model/country/submodels/idd.dart";

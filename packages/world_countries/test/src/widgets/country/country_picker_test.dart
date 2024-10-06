@@ -87,6 +87,7 @@ void main() => group("$CountryPicker", () {
         await tester.tapAndSettle(find.byIcon(Icons.search));
         expect(tile, findsWidgets);
         await tester.tapAndSettle(tile.first);
+        // ignore: avoid-duplicate-test-assertions, tile will be missing after.
         expect(tile, findsNothing);
       });
 

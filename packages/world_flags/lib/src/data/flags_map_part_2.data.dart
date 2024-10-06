@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-static-class, to follow pattern from eco-system.
+// ignore_for_file: prefer-static-class, avoid-long-files
 import "dart:ui";
 
 import "../constants/flag_constants.dart";
@@ -131,10 +131,7 @@ const flagAndProperties = FlagProperties(
 
 /// Flag properties of country Chile (CL).
 const flagChlProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffd52b1e)),
-  ],
+  [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffd52b1e))],
   elementsProperties: [
     ElementsProperties(
       Color(0xff0039a6),
@@ -413,10 +410,7 @@ const flagAreProperties = FlagProperties(
 
 /// Flag properties of country Czechia (CZ).
 const flagCzeProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffd7141a)),
-  ],
+  [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffd7141a))],
   elementsProperties: [
     ElementsProperties(
       Color(0xff11457e),
@@ -430,10 +424,7 @@ const flagCzeProperties = FlagProperties(
 
 /// Flag properties of country Martinique (MQ).
 const flagMtqProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff00a650)),
-    ColorsProperties(Color(0xff000000)),
-  ],
+  [ColorsProperties(Color(0xff00a650)), ColorsProperties(Color(0xff000000))],
   elementsProperties: [
     ElementsProperties(
       Color(0xffef1923),
@@ -824,9 +815,7 @@ const flagBenProperties = FlagProperties(
 /// Flag properties of country Antarctica (AQ).
 const flagAtaProperties = FlagProperties(
   [ColorsProperties(Color(0xff3a7dce))],
-  elementsProperties: [
-    CustomElementsProperties(Color(0xffffffff)),
-  ],
+  elementsProperties: [CustomElementsProperties(Color(0xffffffff))],
   url:
       "https://wikipedia.org/wiki/File:Proposed_flag_of_Antarctica_(Graham_Bartram).svg",
 );
@@ -1682,11 +1671,7 @@ const flagVatProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffce9d09),
-      otherColors: [
-        Color(0xffcccccc),
-        Color(0xfffa0204),
-        Color(0xff000000),
-      ],
+      otherColors: [Color(0xffcccccc), Color(0xfffa0204), Color(0xff000000)],
       offset: Offset(0.5, 0),
       heightFactor: 1 / 3,
       widthFactor: 1 / 3,

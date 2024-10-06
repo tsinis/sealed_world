@@ -129,11 +129,7 @@ const lydCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লিবিয়ান ডলার"),
   TranslatedName(LangBre(), name: "dinar Libia"),
   TranslatedName(LangBos(), name: "Libijski dinar"),
-  TranslatedName(
-    LangBos(),
-    name: "Либијски динар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Либијски динар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dinar libi"),
   TranslatedName(LangChe(), name: "Ливин динар"),
   TranslatedName(LangCes(), name: "libyjský dinár"),
@@ -220,11 +216,7 @@ const lydCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "лівійський динар"),
   TranslatedName(LangUrd(), name: "لیبیائی دینار"),
   TranslatedName(LangUzb(), name: "Liviya dinori"),
-  TranslatedName(
-    LangUzb(),
-    name: "Ливия динори",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Ливия динори", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Dinar Libi"),
   TranslatedName(LangYor(), name: "Dina ti Orílẹ́ède Libiya"),
   TranslatedName(

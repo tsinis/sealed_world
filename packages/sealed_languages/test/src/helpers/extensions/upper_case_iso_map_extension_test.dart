@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-passing-default-values
+
 import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/helpers/extensions/upper_case_iso_map_extension.dart";
 import "package:sealed_languages/src/model/core/upper_case_iso_map.dart";
@@ -13,7 +15,7 @@ void main() => group("UpperCaseIsoMapExtension", () {
       test("codes", () => expect(map.codes, defaultMap.keys));
 
       group("copyWith", () {
-        const mapOther = {"SPA": LangSpa(), "DEU": LangDeu()};
+        const mapOther = {"DEU": LangDeu(), "SPA": LangSpa()};
 
         test("should copy values from other map with exactLength", () {
           final copy = map.copyWith(mapOther);

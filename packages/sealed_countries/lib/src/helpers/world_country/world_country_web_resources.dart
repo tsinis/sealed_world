@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-getter-over-method
+
 import "../../model/country/country.dart";
 
 /// Provides extension methods for accessing web resources related to a

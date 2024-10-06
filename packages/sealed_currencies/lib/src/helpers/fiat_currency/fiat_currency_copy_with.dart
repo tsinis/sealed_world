@@ -19,22 +19,22 @@ extension FiatCurrencyCopyWith on FiatCurrency {
   /// final shortTaka = taka.copyWith(name: 'Taka');
   /// ```
   FiatCurrency copyWith({
-    String? code,
-    String? name,
-    String? decimalMark,
-    String? thousandsSeparator,
-    String? symbol,
     List<String>? alternateSymbols,
+    String? code,
+    String? codeNumeric,
+    String? decimalMark,
     String? disambiguateSymbol,
     String? htmlEntity,
-    String? codeNumeric,
+    String? name,
     List<String>? namesNative,
     int? priority,
     int? smallestDenomination,
     String? subunit,
     int? subunitToUnit,
-    bool? unitFirst,
+    String? symbol,
+    String? thousandsSeparator,
     List<TranslatedName>? translations,
+    bool? unitFirst,
   }) =>
       FiatCurrency(
         code: code ?? this.code,

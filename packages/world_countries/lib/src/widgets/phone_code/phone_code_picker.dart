@@ -124,12 +124,12 @@ class PhoneCodePicker extends CountryPicker {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Builder(
-                  builder: (context) => CountryFlag.simplified(
+                  builder: (newContext) => CountryFlag.simplified(
                     itemProperties.item,
                     height: 18,
-                    aspectRatio: context.flagTheme?.aspectRatio ??
+                    aspectRatio: newContext.flagTheme?.aspectRatio ??
                         FlagConstants.defaultAspectRatio,
-                    decoration: context.flagTheme?.decoration ??
+                    decoration: newContext.flagTheme?.decoration ??
                         const BoxDecoration(
                           borderRadius: BorderRadius.all(
                             Radius.circular(UiConstants.point / 2),
@@ -140,9 +140,9 @@ class PhoneCodePicker extends CountryPicker {
                 Padding(
                   padding: const EdgeInsets.only(right: UiConstants.point / 2),
                   child: Builder(
-                    builder: (context) => Text(
+                    builder: (newContext) => Text(
                       itemProperties.item.idd.phoneCode(),
-                      style: context.theme.textTheme.labelSmall,
+                      style: newContext.theme.textTheme.labelSmall,
                     ),
                   ),
                 ),
@@ -166,6 +166,7 @@ class PhoneCodePicker extends CountryPicker {
       });
 
   @override
+  // ignore: avoid-incomplete-copy-with, items is covering countries.
   PhoneCodePicker copyWith({
     Iterable<WorldCountry>? items,
     bool? addAutomaticKeepAlives,

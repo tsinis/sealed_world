@@ -115,11 +115,7 @@ const gipCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জিব্রাল্টার পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Jibraltar"),
   TranslatedName(LangBos(), name: "Gibraltarska funta"),
-  TranslatedName(
-    LangBos(),
-    name: "Гибралташка фунта",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Гибралташка фунта", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "lliura de Gibraltar"),
   TranslatedName(LangChe(), name: "Гибралтаран фунт"),
   TranslatedName(LangCes(), name: "gibraltarská libra"),

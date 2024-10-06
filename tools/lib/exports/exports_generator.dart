@@ -20,16 +20,16 @@ sealed class ExportsGenerator {
     final packageDirName = package.dirName;
     final sourcePath =
         "configs/${packageDirName}_exports.${PathConstants.yaml}";
-    final packageDir =
+    final packageDirectory =
         Directory("../${PathConstants.packages}/$packageDirName");
 
     final io = IoUtils();
     final copy = io.copyFile(
       sourcePath,
-      packageDir,
+      packageDirectory,
       "$_generatorPackage.${PathConstants.yaml}",
     );
-    io.directory = packageDir;
+    io.directory = packageDirectory;
 
     await _dart.pub(["activate", _generatorPackage], isGlobal: true);
     await _dart.pub(["run", _generatorPackage], isGlobal: true);

@@ -22,29 +22,6 @@ void main() {
   subunitToUnit: 100, unitFirst: true), translations: eurCurrencyTranslations".
   */
 
-  /// [Currency] is a sealed class, it means
-  /// this `whenOrNull` can be used same way as switch:
-  /// ```dart
-  /// switch (currency) {
-  ///  case FiatDkk():
-  ///  case FiatIsk():
-  ///  case FiatNok():
-  ///  case FiatSek():
-  ///    return true;
-  ///  case FiatCzk():
-  ///    return false;
-  ///  default:
-  ///    return null;
-  ///}
-  /// ```
-  bool? isVikingKrone(FiatCurrency currency) => currency.whenOrNull(
-        fiatCzk: () => false,
-        fiatDkk: () => true,
-        fiatIsk: () => true,
-        fiatNok: () => true,
-        fiatSek: () => true,
-      );
-
   print(isVikingKrone(const FiatNok())); // Prints "true".
   print(isVikingKrone(serbianDinar)); // Prints "null".
   print(isVikingKrone(const FiatCzk())); // Prints "false".
@@ -69,6 +46,30 @@ void main() {
 
   print(const _FiatCustom().name); // Prints "Custom".
 }
+
+/// [Currency] is a sealed class, it means
+/// this `whenOrNull` can be used same way as switch:
+/// ```dart
+/// switch (currency) {
+///  case FiatDkk():
+///  case FiatIsk():
+///  case FiatNok():
+///  case FiatSek():
+///    return true;
+///  case FiatCzk():
+///    return false;
+///  default:
+///    return null;
+///}
+/// ```
+// ignore: prefer-static-class, just for example.
+bool? isVikingKrone(FiatCurrency currency) => currency.whenOrNull(
+      fiatCzk: () => false,
+      fiatDkk: () => true,
+      fiatIsk: () => true,
+      fiatNok: () => true,
+      fiatSek: () => true,
+    );
 
 /// Creates a instance of the custom currency with permissive constructor.
 class _FiatCustom extends FiatCurrency {

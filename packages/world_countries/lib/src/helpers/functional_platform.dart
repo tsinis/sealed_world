@@ -29,14 +29,19 @@ sealed class FunctionalPlatform {
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android ?? orElse;
+
       case TargetPlatform.iOS:
         return iOS ?? orElse;
+
       case TargetPlatform.macOS:
         return macOS ?? orElse;
+
       case TargetPlatform.windows:
         return windows ?? orElse;
+
       case TargetPlatform.linux:
         return linux ?? orElse;
+
       case TargetPlatform.fuchsia:
         return fuchsia ?? orElse;
     }

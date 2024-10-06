@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-returning-void
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/script/script_json.dart";
@@ -61,10 +63,7 @@ void main() => group("$Script", () {
         test("basic", () {
           expect(Script.list.first, isNot(equals(value)));
           expect(Script.list.last, same(value));
-          expect(
-            Script.fromName(Script.list.last.name),
-            same(value),
-          );
+          expect(Script.fromName(Script.list.last.name), same(value));
           expect(
             Script.fromName(Script.list.last.name),
             same(Script.list.last),
@@ -450,10 +449,7 @@ void main() => group("$Script", () {
 
           performanceTest(
             "with wrong code",
-            () => expect(
-              Script.maybeFromAnyCode(value.toString()),
-              isNull,
-            ),
+            () => expect(Script.maybeFromAnyCode(value.toString()), isNull),
           );
 
           performanceTest(

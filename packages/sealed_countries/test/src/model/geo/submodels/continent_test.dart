@@ -23,10 +23,7 @@ void main() => group("$Continent", () {
       group("maybeFromValue", () {
         test(
           "with proper value, without where",
-          () => expect(
-            Continent.maybeFromValue(value.name),
-            value,
-          ),
+          () => expect(Continent.maybeFromValue(value.name), value),
         );
 
         test(
@@ -42,10 +39,7 @@ void main() => group("$Continent", () {
 
         test(
           "with wrong value, without where",
-          () => expect(
-            Continent.maybeFromValue(value),
-            isNull,
-          ),
+          () => expect(Continent.maybeFromValue(value), isNull),
         );
 
         test(
@@ -62,10 +56,7 @@ void main() => group("$Continent", () {
         test(
           "with empty countries",
           () => expect(
-            () => Continent.maybeFromValue(
-              value.name,
-              continents: const [],
-            ),
+            () => Continent.maybeFromValue(value.name, continents: const []),
             throwsA(isA<AssertionError>()),
           ),
         );

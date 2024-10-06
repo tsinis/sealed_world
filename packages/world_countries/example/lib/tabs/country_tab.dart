@@ -184,9 +184,9 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             description: "Demonym(s)",
           ),
           DescriptionTile(
-            data.gini != null
-                ? """${data.gini?.coefficient} (${data.gini?.year})"""
-                : null,
+            data.gini == null
+                ? null
+                : "${data.gini?.coefficient} (${data.gini?.year})",
             icon: Icons.layers_outlined,
             description: "Gini Coefficient",
           ),

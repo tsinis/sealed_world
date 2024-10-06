@@ -128,11 +128,7 @@ const bifCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বুরুন্ডি ফ্রাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Burundi"),
   TranslatedName(LangBos(), name: "Burundski franak"),
-  TranslatedName(
-    LangBos(),
-    name: "Бурундски франак",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Бурундски франак", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "franc de Burundi"),
   TranslatedName(LangChe(), name: "Бурундин франк"),
   TranslatedName(LangCes(), name: "burundský frank"),

@@ -115,11 +115,7 @@ const bndCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ব্রুনেই ডলার"),
   TranslatedName(LangBre(), name: "dollar Brunei"),
   TranslatedName(LangBos(), name: "Brunejski dolar"),
-  TranslatedName(
-    LangBos(),
-    name: "Брунејски долар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Брунејски долар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dòlar de Brunei"),
   TranslatedName(LangChe(), name: "Брунейн доллар"),
   TranslatedName(LangCes(), name: "brunejský dolar"),

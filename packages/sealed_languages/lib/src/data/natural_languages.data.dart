@@ -1,3 +1,4 @@
+// ignore: avoid-importing-entrypoint-exports, it contains all the translations.
 import "../../language_translations.dart";
 import "../model/language/language.dart";
 import "../model/translated_name.dart";
@@ -15,10 +16,7 @@ class LangAar extends NaturalLanguage {
           code: "AAR",
           codeShort: "AA",
           namesNative: const ["Afaraf"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -36,9 +34,7 @@ class LangAbk extends NaturalLanguage {
           code: "ABK",
           codeShort: "AB",
           namesNative: const ["аҧсуа бызшәа", "аҧсшәа"],
-          bibliographicCode: null,
           family: const NorthwestCaucasian(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -57,10 +53,7 @@ class LangAfr extends NaturalLanguage {
           code: "AFR",
           codeShort: "AF",
           namesNative: const ["Afrikaans"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -78,10 +71,7 @@ class LangAka extends NaturalLanguage {
           code: "AKA",
           codeShort: "AK",
           namesNative: const ["Akan"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -99,9 +89,7 @@ class LangAmh extends NaturalLanguage {
           code: "AMH",
           codeShort: "AM",
           namesNative: const ["አማርኛ"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
-          isRightToLeft: false,
           scripts: const {ScriptEthi()},
         );
 
@@ -120,7 +108,6 @@ class LangAra extends NaturalLanguage {
           code: "ARA",
           codeShort: "AR",
           namesNative: const ["العربية"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: true,
           scripts: const {ScriptArab()},
@@ -141,10 +128,7 @@ class LangArg extends NaturalLanguage {
           code: "ARG",
           codeShort: "AN",
           namesNative: const ["aragonés"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -162,9 +146,7 @@ class LangAsm extends NaturalLanguage {
           code: "ASM",
           codeShort: "AS",
           namesNative: const ["অসমীয়া"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptBeng()},
         );
 
@@ -183,9 +165,7 @@ class LangAva extends NaturalLanguage {
           code: "AVA",
           codeShort: "AV",
           namesNative: const ["авар мацӀ", "магӀарул мацӀ"],
-          bibliographicCode: null,
           family: const NortheastCaucasian(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -204,9 +184,7 @@ class LangAve extends NaturalLanguage {
           code: "AVE",
           codeShort: "AE",
           namesNative: const ["avesta"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptAvst()},
         );
 
@@ -225,10 +203,7 @@ class LangAym extends NaturalLanguage {
           code: "AYM",
           codeShort: "AY",
           namesNative: const ["aymar aru"],
-          bibliographicCode: null,
           family: const Aymaran(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -246,9 +221,7 @@ class LangAze extends NaturalLanguage {
           code: "AZE",
           codeShort: "AZ",
           namesNative: const ["azərbaycan dili"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
           scripts: const {ScriptArab(), ScriptLatn(), ScriptCyrl()},
         );
 
@@ -267,9 +240,7 @@ class LangBak extends NaturalLanguage {
           code: "BAK",
           codeShort: "BA",
           namesNative: const ["башҡорт теле"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -288,10 +259,7 @@ class LangBam extends NaturalLanguage {
           code: "BAM",
           codeShort: "BM",
           namesNative: const ["bamanankan"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -309,9 +277,7 @@ class LangBel extends NaturalLanguage {
           code: "BEL",
           codeShort: "BE",
           namesNative: const ["беларуская мова"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -330,9 +296,7 @@ class LangBen extends NaturalLanguage {
           code: "BEN",
           codeShort: "BN",
           namesNative: const ["বাংলা"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptBeng()},
         );
 
@@ -351,9 +315,7 @@ class LangBih extends NaturalLanguage {
           code: "BIH",
           codeShort: "BH",
           namesNative: const ["भोजपुरी"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptDeva(), ScriptBhks()},
         );
 
@@ -372,10 +334,7 @@ class LangBis extends NaturalLanguage {
           code: "BIS",
           codeShort: "BI",
           namesNative: const ["Bislama"],
-          bibliographicCode: null,
           family: const Creole(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -395,7 +354,6 @@ class LangBod extends NaturalLanguage {
           namesNative: const ["བོད་ཡིག"],
           bibliographicCode: "TIB",
           family: const SinoTibetan(),
-          isRightToLeft: false,
           scripts: const {ScriptTibt()},
         );
 
@@ -414,9 +372,7 @@ class LangBos extends NaturalLanguage {
           code: "BOS",
           codeShort: "BS",
           namesNative: const ["bosanski jezik"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptLatn(), ScriptCyrl()},
         );
 
@@ -435,10 +391,7 @@ class LangBre extends NaturalLanguage {
           code: "BRE",
           codeShort: "BR",
           namesNative: const ["brezhoneg"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -456,9 +409,7 @@ class LangBul extends NaturalLanguage {
           code: "BUL",
           codeShort: "BG",
           namesNative: const ["български език"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -477,10 +428,7 @@ class LangCat extends NaturalLanguage {
           code: "CAT",
           codeShort: "CA",
           namesNative: const ["català"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -500,8 +448,6 @@ class LangCes extends NaturalLanguage {
           namesNative: const ["čeština"],
           bibliographicCode: "CZE",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -519,10 +465,7 @@ class LangCha extends NaturalLanguage {
           code: "CHA",
           codeShort: "CH",
           namesNative: const ["Chamoru"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -540,9 +483,7 @@ class LangChe extends NaturalLanguage {
           code: "CHE",
           codeShort: "CE",
           namesNative: const ["нохчийн мотт"],
-          bibliographicCode: null,
           family: const NortheastCaucasian(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -561,9 +502,7 @@ class LangChu extends NaturalLanguage {
           code: "CHU",
           codeShort: "CU",
           namesNative: const ["ѩзыкъ словѣньскъ"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrs()},
         );
 
@@ -582,9 +521,7 @@ class LangChv extends NaturalLanguage {
           code: "CHV",
           codeShort: "CV",
           namesNative: const ["чӑваш чӗлхи"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -603,10 +540,7 @@ class LangCor extends NaturalLanguage {
           code: "COR",
           codeShort: "KW",
           namesNative: const ["Kernewek"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -624,10 +558,7 @@ class LangCos extends NaturalLanguage {
           code: "COS",
           codeShort: "CO",
           namesNative: const ["corsu", "lingua corsa"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -645,10 +576,7 @@ class LangCre extends NaturalLanguage {
           code: "CRE",
           codeShort: "CR",
           namesNative: const ["ᓀᐦᐃᔭᐍᐏᐣ"],
-          bibliographicCode: null,
           family: const Algonquian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -668,8 +596,6 @@ class LangCym extends NaturalLanguage {
           namesNative: const ["Cymraeg"],
           bibliographicCode: "WEL",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -687,10 +613,7 @@ class LangDan extends NaturalLanguage {
           code: "DAN",
           codeShort: "DA",
           namesNative: const ["dansk"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -710,8 +633,6 @@ class LangDeu extends NaturalLanguage {
           namesNative: const ["Deutsch"],
           bibliographicCode: "GER",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -729,7 +650,6 @@ class LangDiv extends NaturalLanguage {
           code: "DIV",
           codeShort: "DV",
           namesNative: const ["ދިވެހި"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
           scripts: const {ScriptThaa()},
@@ -750,9 +670,7 @@ class LangDzo extends NaturalLanguage {
           code: "DZO",
           codeShort: "DZ",
           namesNative: const ["རྫོང་ཁ"],
-          bibliographicCode: null,
           family: const SinoTibetan(),
-          isRightToLeft: false,
           scripts: const {ScriptTibt()},
         );
 
@@ -773,7 +691,6 @@ class LangEll extends NaturalLanguage {
           namesNative: const ["ελληνικά"],
           bibliographicCode: "GRE",
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptGrek()},
         );
 
@@ -792,10 +709,7 @@ class LangEng extends NaturalLanguage {
           code: "ENG",
           codeShort: "EN",
           namesNative: const ["English"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -813,10 +727,7 @@ class LangEpo extends NaturalLanguage {
           code: "EPO",
           codeShort: "EO",
           namesNative: const ["Esperanto"],
-          bibliographicCode: null,
           family: const Constructed(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -834,10 +745,7 @@ class LangEst extends NaturalLanguage {
           code: "EST",
           codeShort: "ET",
           namesNative: const ["eesti", "eesti keel"],
-          bibliographicCode: null,
           family: const Uralic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -857,8 +765,6 @@ class LangEus extends NaturalLanguage {
           namesNative: const ["euskara", "euskera"],
           bibliographicCode: "BAQ",
           family: const LanguageIsolate(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -876,10 +782,7 @@ class LangEwe extends NaturalLanguage {
           code: "EWE",
           codeShort: "EE",
           namesNative: const ["Eʋegbe"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -897,10 +800,7 @@ class LangFao extends NaturalLanguage {
           code: "FAO",
           codeShort: "FO",
           namesNative: const ["føroyskt"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -939,10 +839,7 @@ class LangFij extends NaturalLanguage {
           code: "FIJ",
           codeShort: "FJ",
           namesNative: const ["vosa Vakaviti"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -960,10 +857,7 @@ class LangFin extends NaturalLanguage {
           code: "FIN",
           codeShort: "FI",
           namesNative: const ["suomi", "suomen kieli"],
-          bibliographicCode: null,
           family: const Uralic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -983,8 +877,6 @@ class LangFra extends NaturalLanguage {
           namesNative: const ["français", "langue française"],
           bibliographicCode: "FRE",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1002,10 +894,7 @@ class LangFry extends NaturalLanguage {
           code: "FRY",
           codeShort: "FY",
           namesNative: const ["Frysk"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1023,10 +912,7 @@ class LangFul extends NaturalLanguage {
           code: "FUL",
           codeShort: "FF",
           namesNative: const ["Fulfulde", "Pulaar", "Pular"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1044,10 +930,7 @@ class LangGla extends NaturalLanguage {
           code: "GLA",
           codeShort: "GD",
           namesNative: const ["Gàidhlig"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1065,10 +948,7 @@ class LangGle extends NaturalLanguage {
           code: "GLE",
           codeShort: "GA",
           namesNative: const ["Gaeilge"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1086,10 +966,7 @@ class LangGlg extends NaturalLanguage {
           code: "GLG",
           codeShort: "GL",
           namesNative: const ["galego"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1107,10 +984,7 @@ class LangGlv extends NaturalLanguage {
           code: "GLV",
           codeShort: "GV",
           namesNative: const ["Gaelg", "Gailck"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1128,10 +1002,7 @@ class LangGrn extends NaturalLanguage {
           code: "GRN",
           codeShort: "GN",
           namesNative: const ["Avañe'ẽ"],
-          bibliographicCode: null,
           family: const Tupian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1149,9 +1020,7 @@ class LangGuj extends NaturalLanguage {
           code: "GUJ",
           codeShort: "GU",
           namesNative: const ["ગુજરાતી"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptGujr()},
         );
 
@@ -1170,10 +1039,7 @@ class LangHat extends NaturalLanguage {
           code: "HAT",
           codeShort: "HT",
           namesNative: const ["Kreyòl ayisyen"],
-          bibliographicCode: null,
           family: const Creole(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1191,10 +1057,8 @@ class LangHau extends NaturalLanguage {
           code: "HAU",
           codeShort: "HA",
           namesNative: const ["(Hausa) هَوُسَ"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: true,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1212,7 +1076,6 @@ class LangHeb extends NaturalLanguage {
           code: "HEB",
           codeShort: "HE",
           namesNative: const ["עברית"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
           isRightToLeft: true,
           scripts: const {ScriptHebr()},
@@ -1233,10 +1096,7 @@ class LangHer extends NaturalLanguage {
           code: "HER",
           codeShort: "HZ",
           namesNative: const ["Otjiherero"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1254,9 +1114,7 @@ class LangHin extends NaturalLanguage {
           code: "HIN",
           codeShort: "HI",
           namesNative: const ["हिन्दी", "हिंदी"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptDeva()},
         );
 
@@ -1275,10 +1133,7 @@ class LangHmo extends NaturalLanguage {
           code: "HMO",
           codeShort: "HO",
           namesNative: const ["Hiri Motu"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1296,10 +1151,7 @@ class LangHrv extends NaturalLanguage {
           code: "HRV",
           codeShort: "HR",
           namesNative: const ["hrvatski jezik"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1317,10 +1169,7 @@ class LangHun extends NaturalLanguage {
           code: "HUN",
           codeShort: "HU",
           namesNative: const ["magyar"],
-          bibliographicCode: null,
           family: const Uralic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1340,7 +1189,6 @@ class LangHye extends NaturalLanguage {
           namesNative: const ["Հայերեն"],
           bibliographicCode: "ARM",
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptArmn()},
         );
 
@@ -1359,10 +1207,7 @@ class LangIbo extends NaturalLanguage {
           code: "IBO",
           codeShort: "IG",
           namesNative: const ["Asụsụ Igbo"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1380,10 +1225,7 @@ class LangIdo extends NaturalLanguage {
           code: "IDO",
           codeShort: "IO",
           namesNative: const ["Ido"],
-          bibliographicCode: null,
           family: const Constructed(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1401,9 +1243,7 @@ class LangIii extends NaturalLanguage {
           code: "III",
           codeShort: "II",
           namesNative: const ["ꆈꌠ꒿ Nuosuhxop"],
-          bibliographicCode: null,
           family: const SinoTibetan(),
-          isRightToLeft: false,
           scripts: const {ScriptYiii()},
         );
 
@@ -1422,10 +1262,7 @@ class LangIku extends NaturalLanguage {
           code: "IKU",
           codeShort: "IU",
           namesNative: const ["ᐃᓄᒃᑎᑐᑦ"],
-          bibliographicCode: null,
           family: const EskimoAleut(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1443,10 +1280,7 @@ class LangIle extends NaturalLanguage {
           code: "ILE",
           codeShort: "IE",
           namesNative: const ["Interlingue", "Occidental"],
-          bibliographicCode: null,
           family: const Constructed(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1464,10 +1298,7 @@ class LangIna extends NaturalLanguage {
           code: "INA",
           codeShort: "IA",
           namesNative: const ["Interlingua"],
-          bibliographicCode: null,
           family: const Constructed(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1485,10 +1316,7 @@ class LangInd extends NaturalLanguage {
           code: "IND",
           codeShort: "ID",
           namesNative: const ["Bahasa Indonesia"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1506,10 +1334,7 @@ class LangIpk extends NaturalLanguage {
           code: "IPK",
           codeShort: "IK",
           namesNative: const ["Iñupiaq", "Iñupiatun"],
-          bibliographicCode: null,
           family: const EskimoAleut(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1529,8 +1354,6 @@ class LangIsl extends NaturalLanguage {
           namesNative: const ["Íslenska"],
           bibliographicCode: "ICE",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1548,10 +1371,7 @@ class LangIta extends NaturalLanguage {
           code: "ITA",
           codeShort: "IT",
           namesNative: const ["Italiano"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1569,10 +1389,7 @@ class LangJav extends NaturalLanguage {
           code: "JAV",
           codeShort: "JV",
           namesNative: const ["ꦧꦱꦗꦮ", "Basa Jawa"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1590,9 +1407,7 @@ class LangJpn extends NaturalLanguage {
           code: "JPN",
           codeShort: "JA",
           namesNative: const ["日本語 (にほんご)"],
-          bibliographicCode: null,
           family: const Japonic(),
-          isRightToLeft: false,
           scripts: const {ScriptJpan()},
         );
 
@@ -1611,10 +1426,7 @@ class LangKal extends NaturalLanguage {
           code: "KAL",
           codeShort: "KL",
           namesNative: const ["kalaallisut", "kalaallit oqaasii"],
-          bibliographicCode: null,
           family: const EskimoAleut(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1632,9 +1444,7 @@ class LangKan extends NaturalLanguage {
           code: "KAN",
           codeShort: "KN",
           namesNative: const ["ಕನ್ನಡ"],
-          bibliographicCode: null,
           family: const Dravidian(),
-          isRightToLeft: false,
           scripts: const {ScriptKnda()},
         );
 
@@ -1653,7 +1463,6 @@ class LangKas extends NaturalLanguage {
           code: "KAS",
           codeShort: "KS",
           namesNative: const ["कश्मीरी", "كشميري‎"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
           scripts: const {ScriptDeva()},
@@ -1676,7 +1485,6 @@ class LangKat extends NaturalLanguage {
           namesNative: const ["ქართული"],
           bibliographicCode: "GEO",
           family: const SouthCaucasian(),
-          isRightToLeft: false,
           scripts: const {ScriptGeor()},
         );
 
@@ -1695,10 +1503,7 @@ class LangKau extends NaturalLanguage {
           code: "KAU",
           codeShort: "KR",
           namesNative: const ["Kanuri"],
-          bibliographicCode: null,
           family: const NiloSaharan(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1716,9 +1521,7 @@ class LangKaz extends NaturalLanguage {
           code: "KAZ",
           codeShort: "KK",
           namesNative: const ["қазақ тілі"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -1737,9 +1540,7 @@ class LangKhm extends NaturalLanguage {
           code: "KHM",
           codeShort: "KM",
           namesNative: const ["ខ្មែរ", "ខេមរភាសា", "ភាសាខ្មែរ"],
-          bibliographicCode: null,
           family: const Austroasiatic(),
-          isRightToLeft: false,
           scripts: const {ScriptKhmr()},
         );
 
@@ -1758,10 +1559,7 @@ class LangKik extends NaturalLanguage {
           code: "KIK",
           codeShort: "KI",
           namesNative: const ["Gĩkũyũ"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1779,10 +1577,7 @@ class LangKin extends NaturalLanguage {
           code: "KIN",
           codeShort: "RW",
           namesNative: const ["Ikinyarwanda"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1800,9 +1595,7 @@ class LangKir extends NaturalLanguage {
           code: "KIR",
           codeShort: "KY",
           namesNative: const ["Кыргызча", "Кыргыз тили"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -1821,9 +1614,7 @@ class LangKom extends NaturalLanguage {
           code: "KOM",
           codeShort: "KV",
           namesNative: const ["коми кыв"],
-          bibliographicCode: null,
           family: const Uralic(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -1842,10 +1633,7 @@ class LangKon extends NaturalLanguage {
           code: "KON",
           codeShort: "KG",
           namesNative: const ["Kikongo"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1863,9 +1651,7 @@ class LangKor extends NaturalLanguage {
           code: "KOR",
           codeShort: "KO",
           namesNative: const ["한국어"],
-          bibliographicCode: null,
           family: const Koreanic(),
-          isRightToLeft: false,
           scripts: const {ScriptKore()},
         );
 
@@ -1884,10 +1670,7 @@ class LangKua extends NaturalLanguage {
           code: "KUA",
           codeShort: "KJ",
           namesNative: const ["Kuanyama"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1905,7 +1688,6 @@ class LangKur extends NaturalLanguage {
           code: "KUR",
           codeShort: "KU",
           namesNative: const ["Kurdî", "كوردی‎"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
           scripts: const {ScriptArab(), ScriptLatn()},
@@ -1926,9 +1708,7 @@ class LangLao extends NaturalLanguage {
           code: "LAO",
           codeShort: "LO",
           namesNative: const ["ພາສາລາວ"],
-          bibliographicCode: null,
           family: const TaiKadai(),
-          isRightToLeft: false,
           scripts: const {ScriptLaoo()},
         );
 
@@ -1947,10 +1727,7 @@ class LangLat extends NaturalLanguage {
           code: "LAT",
           codeShort: "LA",
           namesNative: const ["latine", "lingua latina"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1968,10 +1745,7 @@ class LangLav extends NaturalLanguage {
           code: "LAV",
           codeShort: "LV",
           namesNative: const ["latviešu valoda"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -1989,10 +1763,7 @@ class LangLim extends NaturalLanguage {
           code: "LIM",
           codeShort: "LI",
           namesNative: const ["Limburgs"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2010,10 +1781,7 @@ class LangLin extends NaturalLanguage {
           code: "LIN",
           codeShort: "LN",
           namesNative: const ["Lingála"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2031,10 +1799,7 @@ class LangLit extends NaturalLanguage {
           code: "LIT",
           codeShort: "LT",
           namesNative: const ["lietuvių kalba"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2052,10 +1817,7 @@ class LangLtz extends NaturalLanguage {
           code: "LTZ",
           codeShort: "LB",
           namesNative: const ["Lëtzebuergesch"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2073,10 +1835,7 @@ class LangLub extends NaturalLanguage {
           code: "LUB",
           codeShort: "LU",
           namesNative: const ["Tshiluba"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2094,10 +1853,7 @@ class LangLug extends NaturalLanguage {
           code: "LUG",
           codeShort: "LG",
           namesNative: const ["Luganda"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2115,10 +1871,7 @@ class LangMah extends NaturalLanguage {
           code: "MAH",
           codeShort: "MH",
           namesNative: const ["Kajin M̧ajeļ"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2136,9 +1889,7 @@ class LangMal extends NaturalLanguage {
           code: "MAL",
           codeShort: "ML",
           namesNative: const ["മലയാളം"],
-          bibliographicCode: null,
           family: const Dravidian(),
-          isRightToLeft: false,
           scripts: const {ScriptMlym()},
         );
 
@@ -2157,9 +1908,7 @@ class LangMar extends NaturalLanguage {
           code: "MAR",
           codeShort: "MR",
           namesNative: const ["मराठी"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptDeva()},
         );
 
@@ -2180,7 +1929,6 @@ class LangMkd extends NaturalLanguage {
           namesNative: const ["македонски јазик"],
           bibliographicCode: "MAC",
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -2199,10 +1947,7 @@ class LangMlg extends NaturalLanguage {
           code: "MLG",
           codeShort: "MG",
           namesNative: const ["fiteny malagasy"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2220,10 +1965,7 @@ class LangMlt extends NaturalLanguage {
           code: "MLT",
           codeShort: "MT",
           namesNative: const ["Malti"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2241,9 +1983,7 @@ class LangMon extends NaturalLanguage {
           code: "MON",
           codeShort: "MN",
           namesNative: const ["Монгол хэл"],
-          bibliographicCode: null,
           family: const Mongolic(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -2264,8 +2004,6 @@ class LangMri extends NaturalLanguage {
           namesNative: const ["te reo Māori"],
           bibliographicCode: "MAO",
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2285,7 +2023,6 @@ class LangMsa extends NaturalLanguage {
           namesNative: const ["bahasa Melayu", "بهاس ملايو‎"],
           bibliographicCode: "MAY",
           family: const Austronesian(),
-          isRightToLeft: false,
           scripts: const {ScriptArab()},
         );
 
@@ -2306,7 +2043,6 @@ class LangMya extends NaturalLanguage {
           namesNative: const ["ဗမာစာ"],
           bibliographicCode: "BUR",
           family: const SinoTibetan(),
-          isRightToLeft: false,
           scripts: const {ScriptMymr()},
         );
 
@@ -2325,10 +2061,7 @@ class LangNau extends NaturalLanguage {
           code: "NAU",
           codeShort: "NA",
           namesNative: const ["Dorerin Naoero"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2346,10 +2079,7 @@ class LangNav extends NaturalLanguage {
           code: "NAV",
           codeShort: "NV",
           namesNative: const ["Diné bizaad"],
-          bibliographicCode: null,
           family: const DeneYeniseian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2367,10 +2097,7 @@ class LangNbl extends NaturalLanguage {
           code: "NBL",
           codeShort: "NR",
           namesNative: const ["isiNdebele"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2388,10 +2115,7 @@ class LangNde extends NaturalLanguage {
           code: "NDE",
           codeShort: "ND",
           namesNative: const ["isiNdebele"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2409,10 +2133,7 @@ class LangNdo extends NaturalLanguage {
           code: "NDO",
           codeShort: "NG",
           namesNative: const ["Owambo"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2430,9 +2151,7 @@ class LangNep extends NaturalLanguage {
           code: "NEP",
           codeShort: "NE",
           namesNative: const ["नेपाली"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptDeva()},
         );
 
@@ -2453,8 +2172,6 @@ class LangNld extends NaturalLanguage {
           namesNative: const ["Nederlands", "Vlaams"],
           bibliographicCode: "DUT",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2472,10 +2189,7 @@ class LangNno extends NaturalLanguage {
           code: "NNO",
           codeShort: "NN",
           namesNative: const ["Norsk nynorsk"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2493,10 +2207,7 @@ class LangNob extends NaturalLanguage {
           code: "NOB",
           codeShort: "NB",
           namesNative: const ["Norsk bokmål"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2514,10 +2225,7 @@ class LangNor extends NaturalLanguage {
           code: "NOR",
           codeShort: "NO",
           namesNative: const ["Norsk"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2535,10 +2243,7 @@ class LangNya extends NaturalLanguage {
           code: "NYA",
           codeShort: "NY",
           namesNative: const ["chiCheŵa", "chinyanja"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2556,10 +2261,7 @@ class LangOci extends NaturalLanguage {
           code: "OCI",
           codeShort: "OC",
           namesNative: const ["occitan", "lenga d'òc"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2577,10 +2279,7 @@ class LangOji extends NaturalLanguage {
           code: "OJI",
           codeShort: "OJ",
           namesNative: const ["ᐊᓂᔑᓈᐯᒧᐎᓐ"],
-          bibliographicCode: null,
           family: const Algonquian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2598,9 +2297,7 @@ class LangOri extends NaturalLanguage {
           code: "ORI",
           codeShort: "OR",
           namesNative: const ["ଓଡ଼ିଆ"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptOrya()},
         );
 
@@ -2619,10 +2316,7 @@ class LangOrm extends NaturalLanguage {
           code: "ORM",
           codeShort: "OM",
           namesNative: const ["Afaan Oromoo"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2640,9 +2334,7 @@ class LangOss extends NaturalLanguage {
           code: "OSS",
           codeShort: "OS",
           namesNative: const ["ирон æвзаг"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -2661,9 +2353,7 @@ class LangPan extends NaturalLanguage {
           code: "PAN",
           codeShort: "PA",
           namesNative: const ["ਪੰਜਾਬੀ"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptGuru()},
         );
 
@@ -2682,9 +2372,7 @@ class LangPli extends NaturalLanguage {
           code: "PLI",
           codeShort: "PI",
           namesNative: const ["पाऴि"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {
             ScriptLatn(),
             ScriptBrah(),
@@ -2709,10 +2397,7 @@ class LangPol extends NaturalLanguage {
           code: "POL",
           codeShort: "PL",
           namesNative: const ["polszczyzna"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2730,10 +2415,7 @@ class LangPor extends NaturalLanguage {
           code: "POR",
           codeShort: "PT",
           namesNative: const ["Português"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2751,7 +2433,6 @@ class LangPus extends NaturalLanguage {
           code: "PUS",
           codeShort: "PS",
           namesNative: const ["پښتو"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
           scripts: const {ScriptArab()},
@@ -2772,10 +2453,7 @@ class LangQue extends NaturalLanguage {
           code: "QUE",
           codeShort: "QU",
           namesNative: const ["Runa Simi", "Kichwa"],
-          bibliographicCode: null,
           family: const Quechuan(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2793,10 +2471,7 @@ class LangRoh extends NaturalLanguage {
           code: "ROH",
           codeShort: "RM",
           namesNative: const ["rumantsch grischun"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2816,8 +2491,6 @@ class LangRon extends NaturalLanguage {
           namesNative: const ["Română"],
           bibliographicCode: "RUM",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2835,10 +2508,7 @@ class LangRun extends NaturalLanguage {
           code: "RUN",
           codeShort: "RN",
           namesNative: const ["Ikirundi"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2856,9 +2526,7 @@ class LangRus extends NaturalLanguage {
           code: "RUS",
           codeShort: "RU",
           namesNative: const ["Русский"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -2877,10 +2545,7 @@ class LangSag extends NaturalLanguage {
           code: "SAG",
           codeShort: "SG",
           namesNative: const ["yângâ tî sängö"],
-          bibliographicCode: null,
           family: const Creole(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2898,9 +2563,7 @@ class LangSan extends NaturalLanguage {
           code: "SAN",
           codeShort: "SA",
           namesNative: const ["संस्कृतम्"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptDeva()},
         );
 
@@ -2919,9 +2582,7 @@ class LangSin extends NaturalLanguage {
           code: "SIN",
           codeShort: "SI",
           namesNative: const ["සිංහල"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptSinh()},
         );
 
@@ -2942,8 +2603,6 @@ class LangSlk extends NaturalLanguage {
           namesNative: const ["slovenčina"],
           bibliographicCode: "SLO",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2961,10 +2620,7 @@ class LangSlv extends NaturalLanguage {
           code: "SLV",
           codeShort: "SL",
           namesNative: const ["slovenščina"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -2982,10 +2638,7 @@ class LangSme extends NaturalLanguage {
           code: "SME",
           codeShort: "SE",
           namesNative: const ["Davvisámegiella"],
-          bibliographicCode: null,
           family: const Uralic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3003,10 +2656,7 @@ class LangSmo extends NaturalLanguage {
           code: "SMO",
           codeShort: "SM",
           namesNative: const ["gagana fa'a Samoa"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3024,10 +2674,7 @@ class LangSna extends NaturalLanguage {
           code: "SNA",
           codeShort: "SN",
           namesNative: const ["chiShona"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3045,7 +2692,6 @@ class LangSnd extends NaturalLanguage {
           code: "SND",
           codeShort: "SD",
           namesNative: const ["सिन्धी", "سنڌي، سندھی‎"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
           scripts: const {ScriptDeva()},
@@ -3066,10 +2712,7 @@ class LangSom extends NaturalLanguage {
           code: "SOM",
           codeShort: "SO",
           namesNative: const ["Soomaaliga"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3087,10 +2730,7 @@ class LangSot extends NaturalLanguage {
           code: "SOT",
           codeShort: "ST",
           namesNative: const ["Sesotho"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3108,10 +2748,7 @@ class LangSpa extends NaturalLanguage {
           code: "SPA",
           codeShort: "ES",
           namesNative: const ["Español"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3131,8 +2768,6 @@ class LangSqi extends NaturalLanguage {
           namesNative: const ["Shqip"],
           bibliographicCode: "ALB",
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3150,10 +2785,7 @@ class LangSrd extends NaturalLanguage {
           code: "SRD",
           codeShort: "SC",
           namesNative: const ["sardu"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3171,9 +2803,7 @@ class LangSrp extends NaturalLanguage {
           code: "SRP",
           codeShort: "SR",
           namesNative: const ["српски језик"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl(), ScriptLatn()},
         );
 
@@ -3192,10 +2822,7 @@ class LangSsw extends NaturalLanguage {
           code: "SSW",
           codeShort: "SS",
           namesNative: const ["SiSwati"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3213,10 +2840,7 @@ class LangSun extends NaturalLanguage {
           code: "SUN",
           codeShort: "SU",
           namesNative: const ["Basa Sunda"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3234,10 +2858,7 @@ class LangSwa extends NaturalLanguage {
           code: "SWA",
           codeShort: "SW",
           namesNative: const ["Kiswahili"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3255,10 +2876,7 @@ class LangSwe extends NaturalLanguage {
           code: "SWE",
           codeShort: "SV",
           namesNative: const ["svenska"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3276,10 +2894,7 @@ class LangTah extends NaturalLanguage {
           code: "TAH",
           codeShort: "TY",
           namesNative: const ["Reo Tahiti"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3297,9 +2912,7 @@ class LangTam extends NaturalLanguage {
           code: "TAM",
           codeShort: "TA",
           namesNative: const ["தமிழ்"],
-          bibliographicCode: null,
           family: const Dravidian(),
-          isRightToLeft: false,
           scripts: const {ScriptTaml()},
         );
 
@@ -3318,9 +2931,7 @@ class LangTat extends NaturalLanguage {
           code: "TAT",
           codeShort: "TT",
           namesNative: const ["татар теле", "tatar tele"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -3339,9 +2950,7 @@ class LangTel extends NaturalLanguage {
           code: "TEL",
           codeShort: "TE",
           namesNative: const ["తెలుగు"],
-          bibliographicCode: null,
           family: const Dravidian(),
-          isRightToLeft: false,
           scripts: const {ScriptTelu()},
         );
 
@@ -3360,9 +2969,7 @@ class LangTgk extends NaturalLanguage {
           code: "TGK",
           codeShort: "TG",
           namesNative: const ["тоҷикӣ", "تاجیکی‎", "toçikī"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -3381,10 +2988,7 @@ class LangTgl extends NaturalLanguage {
           code: "TGL",
           codeShort: "TL",
           namesNative: const ["Wikang Tagalog"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3402,9 +3006,7 @@ class LangTha extends NaturalLanguage {
           code: "THA",
           codeShort: "TH",
           namesNative: const ["ไทย"],
-          bibliographicCode: null,
           family: const TaiKadai(),
-          isRightToLeft: false,
           scripts: const {ScriptThai()},
         );
 
@@ -3423,9 +3025,7 @@ class LangTir extends NaturalLanguage {
           code: "TIR",
           codeShort: "TI",
           namesNative: const ["ትግርኛ"],
-          bibliographicCode: null,
           family: const AfroAsiatic(),
-          isRightToLeft: false,
           scripts: const {ScriptEthi()},
         );
 
@@ -3444,10 +3044,7 @@ class LangTon extends NaturalLanguage {
           code: "TON",
           codeShort: "TO",
           namesNative: const ["faka Tonga"],
-          bibliographicCode: null,
           family: const Austronesian(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3465,10 +3062,7 @@ class LangTsn extends NaturalLanguage {
           code: "TSN",
           codeShort: "TN",
           namesNative: const ["Setswana"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3486,10 +3080,7 @@ class LangTso extends NaturalLanguage {
           code: "TSO",
           codeShort: "TS",
           namesNative: const ["Xitsonga"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3507,10 +3098,7 @@ class LangTuk extends NaturalLanguage {
           code: "TUK",
           codeShort: "TK",
           namesNative: const ["Türkmen", "Түркмен"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3528,10 +3116,7 @@ class LangTur extends NaturalLanguage {
           code: "TUR",
           codeShort: "TR",
           namesNative: const ["Türkçe"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3549,10 +3134,7 @@ class LangTwi extends NaturalLanguage {
           code: "TWI",
           codeShort: "TW",
           namesNative: const ["Twi"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3570,9 +3152,7 @@ class LangUig extends NaturalLanguage {
           code: "UIG",
           codeShort: "UG",
           namesNative: const ["ئۇيغۇرچە‎", "Uyghurche"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
           scripts: const {ScriptArab()},
         );
 
@@ -3591,9 +3171,7 @@ class LangUkr extends NaturalLanguage {
           code: "UKR",
           codeShort: "UK",
           namesNative: const ["Українська"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
           scripts: const {ScriptCyrl()},
         );
 
@@ -3612,7 +3190,6 @@ class LangUrd extends NaturalLanguage {
           code: "URD",
           codeShort: "UR",
           namesNative: const ["اردو"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
           scripts: const {ScriptArab()},
@@ -3633,10 +3210,7 @@ class LangUzb extends NaturalLanguage {
           code: "UZB",
           codeShort: "UZ",
           namesNative: const ["Ўзбек", "أۇزبېك‎", "Oʻzbek"],
-          bibliographicCode: null,
           family: const Turkic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3654,10 +3228,7 @@ class LangVen extends NaturalLanguage {
           code: "VEN",
           codeShort: "VE",
           namesNative: const ["Tshivenḓa"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3675,10 +3246,7 @@ class LangVie extends NaturalLanguage {
           code: "VIE",
           codeShort: "VI",
           namesNative: const ["Tiếng Việt"],
-          bibliographicCode: null,
           family: const Austroasiatic(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3696,10 +3264,7 @@ class LangVol extends NaturalLanguage {
           code: "VOL",
           codeShort: "VO",
           namesNative: const ["Volapük"],
-          bibliographicCode: null,
           family: const Constructed(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3717,10 +3282,7 @@ class LangWln extends NaturalLanguage {
           code: "WLN",
           codeShort: "WA",
           namesNative: const ["walon"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3738,10 +3300,7 @@ class LangWol extends NaturalLanguage {
           code: "WOL",
           codeShort: "WO",
           namesNative: const ["Wollof"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3759,10 +3318,7 @@ class LangXho extends NaturalLanguage {
           code: "XHO",
           codeShort: "XH",
           namesNative: const ["isiXhosa"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3780,7 +3336,6 @@ class LangYid extends NaturalLanguage {
           code: "YID",
           codeShort: "YI",
           namesNative: const ["ייִדיש"],
-          bibliographicCode: null,
           family: const IndoEuropean(),
           isRightToLeft: true,
           scripts: const {ScriptHebr()},
@@ -3801,10 +3356,7 @@ class LangYor extends NaturalLanguage {
           code: "YOR",
           codeShort: "YO",
           namesNative: const ["Yorùbá"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3822,10 +3374,7 @@ class LangZha extends NaturalLanguage {
           code: "ZHA",
           codeShort: "ZA",
           namesNative: const ["Saɯ cueŋƅ", "Saw cuengh"],
-          bibliographicCode: null,
           family: const TaiKadai(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override
@@ -3845,7 +3394,6 @@ class LangZho extends NaturalLanguage {
           namesNative: const ["中文 (Zhōngwén)", "汉语", "漢語"],
           bibliographicCode: "CHI",
           family: const SinoTibetan(),
-          isRightToLeft: false,
           scripts: const {
             ScriptHans(),
             ScriptHant(),
@@ -3869,10 +3417,7 @@ class LangZul extends NaturalLanguage {
           code: "ZUL",
           codeShort: "ZU",
           namesNative: const ["isiZulu"],
-          bibliographicCode: null,
           family: const NigerCongo(),
-          isRightToLeft: false,
-          scripts: const {ScriptLatn()},
         );
 
   @override

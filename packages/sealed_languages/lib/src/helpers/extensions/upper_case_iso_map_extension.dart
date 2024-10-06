@@ -87,6 +87,7 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   ///     found within the new [UpperCaseIsoMap].
   /// - Returns: A new instance of [UpperCaseIsoMap] containing the provided ISO
   ///   codes and values, with keys standardized to uppercase.
+  // ignore: avoid-incomplete-copy-with, those are calculated.
   UpperCaseIsoMap<V> copyWith(Map<String, V> other, {V? defaultValue}) {
     final upperCase = other.map((k, v) => MapEntry(k.toUpperCaseIsoCode(), v));
     final newMap = Map.fromEntries(entries.followedBy(upperCase.entries));
@@ -104,7 +105,7 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
     return UpperCaseIsoMap(
       newMap,
       defaultValue: value,
-      exactLength: null,
+      exactLength: null, // ignore: avoid-passing-default-values, Not default.
       maxLength: longest,
       minLength: short,
     );

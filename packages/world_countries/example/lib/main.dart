@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-late-keyword
+
 import "package:flutter/material.dart";
 import "package:flutter_localizations/flutter_localizations.dart";
 import "package:world_countries/world_countries.dart";

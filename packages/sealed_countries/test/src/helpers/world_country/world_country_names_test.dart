@@ -24,18 +24,15 @@ void main() => group("WorldCountryNames", () {
             ),
           );
 
-          test(
-            "with single name",
-            () {
-              final singleNameCountry = WorldCountry.list.firstWhere(
-                (cnt) => cnt.namesNative.length == 1,
-              );
-              expect(
-                singleNameCountry.namesCommonNative(skipFirst: true),
-                singleNameCountry.namesNative.first.name,
-              );
-            },
-          );
+          test("with single name", () {
+            final singleNameCountry = WorldCountry.list.firstWhere(
+              (cnt) => cnt.namesNative.length == 1,
+            );
+            expect(
+              singleNameCountry.namesCommonNative(skipFirst: true),
+              singleNameCountry.namesNative.first.name,
+            );
+          });
         });
       });
 
@@ -60,18 +57,15 @@ void main() => group("WorldCountryNames", () {
             ),
           );
 
-          test(
-            "with single name",
-            () {
-              final singleNameCountry = WorldCountry.list.firstWhere(
-                (country) => country.namesNative.length == 1,
-              );
-              expect(
-                singleNameCountry.namesOfficialNative(skipFirst: true),
-                singleNameCountry.namesNative.first.fullName,
-              );
-            },
-          );
+          test("with single name", () {
+            final singleNameCountry = WorldCountry.list.firstWhere(
+              (cnt) => cnt.namesNative.length == 1,
+            );
+            expect(
+              singleNameCountry.namesOfficialNative(skipFirst: true),
+              singleNameCountry.namesNative.first.fullName,
+            );
+          });
         });
       });
     });

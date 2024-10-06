@@ -114,6 +114,7 @@ class RouteParseUtils {
 
   ParsedData _returnWithoutCode(String pathTemplate) {
     WorldData? data;
+    // ignore: avoid-unused-assignment, false positive.
     if (pathTemplate == WorldData.currency.path) data = WorldData.currency;
     if (pathTemplate == WorldData.language.path) data = WorldData.language;
 

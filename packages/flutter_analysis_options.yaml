@@ -2,6 +2,20 @@ include: analysis_options.yaml
 
 dart_code_metrics:
   rules:
+    # Disabled:
+    - no-magic-string: false # Packages contain a lot of strings.
+    - prefer-prefixed-global-constants: false # This will be a breaking change.
+    - no-equal-arguments: false # Conflicts with CustomPainters.
+    - avoid-duplicate-cascades: false # Conflicts with CustomPainters.
+    # Enabled:
+    - prefer-correct-throws: true # Flutter SDK provides access to meta.
+    - avoid-long-files:
+        exclude:
+          - lib/**/*_painter.dart
+    - avoid-similar-names:
+        similarity-threshold: 0.8
+        ignored-names:
+          - path
     - always-remove-listener: true
     - avoid-border-all: true
     - avoid-expanded-as-spacer: true

@@ -9,8 +9,7 @@ final class IrnPainter extends MultiElementPainter {
   double get originalAspectRatio => flagIrnProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

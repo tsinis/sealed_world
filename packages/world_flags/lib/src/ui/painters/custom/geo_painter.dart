@@ -6,7 +6,6 @@ final class GeoPainter extends MultiElementPainter {
   const GeoPainter(super.properties, super.aspectRatio);
 
   @override
-  // ignore: long-method,  expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final center = calculateCenter(size);
     final dimension = size.height / 5;
@@ -86,6 +85,7 @@ final class GeoPainter extends MultiElementPainter {
     final paint = paintCreator();
     for (final prop in properties.skip(1)) {
       final offsetY = center.dy + (prop.offset.dy * size.height / 2);
+      // ignore: avoid-similar-names, Horizontal is already defined.
       final offsetX = center.dx +
           (prop.offset.dx * size.width / 2 / aspectRatio) -
           dimension / 2;

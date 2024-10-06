@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-similar-names
+
 part of "../multi_element_painter.dart";
 
 /// A painter for rendering the Union Jack flag.
@@ -104,7 +106,8 @@ final class UnionJackPainter extends SimpleShieldPainter {
 }
 
 class _SaintPatrickCross {
-  _SaintPatrickCross(this._canvas, this._center, this._paint, this._size);
+  // ignore: prefer-named-parameters, it's a private implementation.
+  const _SaintPatrickCross(this._canvas, this._center, this._paint, this._size);
 
   final Canvas _canvas;
   final Offset _center;

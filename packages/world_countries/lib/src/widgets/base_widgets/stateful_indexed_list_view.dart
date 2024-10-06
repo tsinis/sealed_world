@@ -1,7 +1,7 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/widgets.dart";
 
-import "../../../helpers.dart";
+import "../../constants/ui_constants.dart";
 import "../../interfaces/indexed_list_view_interface.dart";
 import "../../models/item_properties.dart";
 
@@ -86,6 +86,7 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
   final Widget? separator;
 
   /// A function to sort the items in the list.
+  // ignore: prefer-correct-callback-field-name, A breaking change.
   final int Function(T, T)? sort;
 
   @override

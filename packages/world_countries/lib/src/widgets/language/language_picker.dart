@@ -92,6 +92,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
       locale.languageTranslations[item];
 
   @override
+  // ignore: avoid-incomplete-copy-with, items is covering languages.
   LanguagePicker copyWith({
     Iterable<NaturalLanguage>? items,
     bool? addAutomaticKeepAlives,

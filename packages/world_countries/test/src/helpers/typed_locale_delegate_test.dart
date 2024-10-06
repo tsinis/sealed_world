@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-similar-names
+
 import "dart:ui";
 
 import "package:flutter_test/flutter_test.dart";
@@ -11,7 +13,8 @@ void main() => group("$TypedLocaleDelegate", () {
 
       test(
         "shouldReload",
-        () => expect(delegate.shouldReload(delegate), isFalse),
+        () =>
+            expect(delegate.shouldReload(const TypedLocaleDelegate()), isFalse),
       );
 
       test(
@@ -48,7 +51,7 @@ void main() => group("$TypedLocaleDelegate", () {
 
         test(
           "throws assertion error on unsupported locale",
-          () async => expect(
+          () => expect(
             () async => delegate.load(const Locale("00")),
             throwsAssertionError,
           ),

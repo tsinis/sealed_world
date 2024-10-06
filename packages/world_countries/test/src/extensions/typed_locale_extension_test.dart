@@ -58,7 +58,7 @@ void main() => group("TypedLocaleExtension", () {
       group("copyWithTranslationsCacheAsync", () {
         test(
           "should throw assert when no iterable specified",
-          () async => expect(
+          () => expect(
             () async => locale.copyWithTranslationsCacheAsync(),
             throwsA(isA<AssertionError>()),
           ),

@@ -91,6 +91,7 @@ abstract base class ElementsPainter extends CustomPainter {
   ///
   /// Returns a configured [Paint] object.
   @protected
+  // ignore: avoid-returning-cascades, it's ok for a shorthand method.
   Paint paintCreator([Color? color]) => Paint()
     ..color = color ?? property.mainColor
     ..isAntiAlias = flagAntiAliasOverride;
@@ -105,8 +106,10 @@ abstract base class ElementsPainter extends CustomPainter {
   /// Returns the shape if it matches the type [T], otherwise null.
   @protected
   T? shapeType<T extends Shape>([Shape? shape]) {
+    // ignore: avoid-mutating-parameters, it's two liner.
     shape ??= property.shape;
 
+    // ignore: prefer-switch-with-sealed-classes, switch will be longer.
     return shape is T ? shape : null;
   }
 
@@ -153,6 +156,7 @@ abstract base class ElementsPainter extends CustomPainter {
   /// Returns a function that creates an [ElementsPainter] for the specified
   /// shape.
   @protected
+  // ignore: prefer-typedefs-for-callbacks, Might be a breaking change.
   ElementsPainter Function(ElementsProps?, double) painter(Shape child) =>
       child.whenConst(
         star: StarPainter.new,

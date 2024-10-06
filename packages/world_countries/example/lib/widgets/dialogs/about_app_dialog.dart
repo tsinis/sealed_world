@@ -7,6 +7,7 @@ import "../../assets/assets.gen.dart";
 class AboutAppDialog extends StatelessWidget {
   const AboutAppDialog({super.key});
 
+  // ignore: prefer-widget-private-members, being used outside of the class.
   void show(BuildContext context) =>
       unawaited(showDialog(context: context, builder: (_) => this));
 

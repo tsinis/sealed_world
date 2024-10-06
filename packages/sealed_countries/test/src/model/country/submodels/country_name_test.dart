@@ -73,50 +73,44 @@ void main() => group("$CountryName", () {
           ),
         );
 
-        test(
-          "empty official",
-          () {
-            expect(
-              () => CountryName(
-                language: const LangEng(),
-                official: TestData.emptyString,
-                common: value.common,
-              ),
-              throwsA(isA<AssertionError>()),
-            );
-            expect(
-              () => CountryName(
-                language: value.language,
-                official: TestData.emptyString,
-                common: value.common,
-              ),
-              throwsA(isA<AssertionError>()),
-            );
-          },
-        );
+        test("empty official", () {
+          expect(
+            () => CountryName(
+              language: const LangEng(),
+              official: TestData.emptyString,
+              common: value.common,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+          expect(
+            () => CountryName(
+              language: value.language,
+              official: TestData.emptyString,
+              common: value.common,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
 
-        test(
-          "empty common",
-          () {
-            expect(
-              () => CountryName(
-                language: const LangEng(),
-                official: value.official,
-                common: TestData.emptyString,
-              ),
-              throwsA(isA<AssertionError>()),
-            );
+        test("empty common", () {
+          expect(
+            () => CountryName(
+              language: const LangEng(),
+              official: value.official,
+              common: TestData.emptyString,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
 
-            expect(
-              () => CountryName(
-                language: value.language,
-                official: value.official,
-                common: TestData.emptyString,
-              ),
-              throwsA(isA<AssertionError>()),
-            );
-          },
-        );
+          expect(
+            () => CountryName(
+              language: value.language,
+              official: value.official,
+              common: TestData.emptyString,
+            ),
+            throwsA(isA<AssertionError>()),
+          );
+        });
       });
 
       test("toJson", () {

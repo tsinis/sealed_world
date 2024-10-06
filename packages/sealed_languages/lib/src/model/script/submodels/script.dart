@@ -54,7 +54,7 @@ class Script extends WritingSystem
   /// given code, or throws a [StateError] if no such instance exists.
   factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
-    var validCode =
+    String? validCode =
         code.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
@@ -256,7 +256,7 @@ class Script extends WritingSystem
   /// `script` variable.
   static Script? maybeFromCode(Object? code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.maybeFindByCode(code);
-    var string =
+    String? string =
         code?.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
     string = formatToStandardCode(string);
@@ -345,7 +345,7 @@ class Script extends WritingSystem
   /// ```
   static const map = UpperCaseIsoMap(
     {...scriptCodeMap, ...scriptCodeOtherMap},
-    exactLength: null,
+    exactLength: null, // ignore: avoid-passing-default-values, is not default.
     maxLength: codeLength,
     minLength: IsoStandardized.codeLength,
   );

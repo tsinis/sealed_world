@@ -41,6 +41,7 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     Widget? foregroundWidget,
     FlagPainterBuilder? foregroundPainterBuilder,
     FlagWidgetBuilder? foregroundWidgetBuilder,
+    Key? key,
   }) =>
       BasicFlag(
         properties ?? this.properties,
@@ -56,5 +57,6 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
             foregroundPainterBuilder ?? this.foregroundPainterBuilder,
         foregroundWidgetBuilder:
             foregroundWidgetBuilder ?? this.foregroundWidgetBuilder,
+        key: key ?? this.key,
       );
 }

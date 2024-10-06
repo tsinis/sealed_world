@@ -103,7 +103,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///
   /// These mappings are used as the default resolution when no other locale
   /// mapping is provided.
-  static const List<LocaleEntry> defaultLocaleMapResolution = [
+  static const defaultLocaleMapResolution = [
     LocaleEntry(Locale("fil"), IsoLocale(LangTgl())),
     LocaleEntry(Locale("gsw"), IsoLocale(LangDeu(), country: CountryChe())),
     LocaleEntry(

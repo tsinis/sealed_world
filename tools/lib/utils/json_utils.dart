@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-shadowing, avoid-similar-names, avoid-type-casts,
+
 // ignore: lines_longer_than_80_chars, it's CLI tool, not a production code.
 // ignore_for_file: avoid_print, avoid-non-ascii-symbols, prefer-moving-to-variable
 import "dart:convert";
@@ -31,12 +33,12 @@ final class JsonUtils {
 
   Directory get dataDirectory => Directory(dataDirPath);
 
-  // ignore: long-method, it's not a production code, but just a helper tool.
   Future<List<String>> parseByLanguage() async {
     final stopwatch = Stopwatch()..start();
     final paths = <String>[];
     final io = IoUtils()..createDirectory(translation);
     final englishData = _extractL10N(eng.codeShort.toLowerCase());
+    final dataType = package.dataRepresent;
     final directories = dataDirectory.listSync()
       ..sort((a, b) => basename(a.path).compareTo(basename(b.path)));
     for (final item in package.dataList) {
@@ -69,14 +71,13 @@ final class JsonUtils {
           lang,
           name: translationForLang,
           countryCode: locale.countryCode,
-          script: script != null ? Script.fromCode(script) : null,
+          script: script == null ? null : Script.fromCode(script),
         );
         final isAdded = translations.add(translated);
         if (!isAdded) continue;
       }
 
       final translationCode = item.code.toLowerCase();
-      final dataType = package.dataRepresent;
       final varFileName = "$translationCode $dataType $translation";
       final fileNameFull =
           """${translationCode}_${dataType.toLowerCase()}.l10n.${PathConstants.dart}""";
@@ -105,6 +106,7 @@ const ${varFileName.toCamelCase()} = [
     final stopwatch = Stopwatch()..start();
     final paths = <String>[];
     final io = IoUtils()..createDirectory(translation);
+    final dataType = package.dataRepresent;
     for (final item in [package.dataList.last]) {
       final itemFromCode = _instanceFromCode(item.code);
       if (itemFromCode == null) continue; // Might be more items in the source.
@@ -140,7 +142,6 @@ const ${varFileName.toCamelCase()} = [
       }
 
       final translationCode = item.code.toLowerCase();
-      final dataType = package.dataRepresent;
       final varFileName = "$translationCode $dataType $translation";
       final fileNameFull =
           """${translationCode}_${dataType.toLowerCase()}.l10n.${PathConstants.dart}""";
@@ -170,6 +171,7 @@ const ${varFileName.toCamelCase()} = [
   String _dartDoc(Set<TranslatedName> translations, Object name, String type) {
     final itemName = name is TranslatedName ? name.common : name.toString();
     final sorted = List.of(translations.map((e) => e.language.name))..sort();
+    // ignore: avoid-passing-self-as-argument, it's CLI tool.
     final import = package.whenConstOrNull(sealedCountries: package.dirName) ??
         Package.sealedLanguages.dirName;
 
@@ -206,7 +208,7 @@ const ${varFileName.toCamelCase()} = [
     if (package == Package.sealedCurrencies) _fixCurrencyData(nullMap);
     nullMap.removeWhere((key, value) => key == null || value == null);
 
-    return Map<IsoStandardized, String>.unmodifiable(nullMap);
+    return Map.unmodifiable(nullMap);
   }
 
   void _fixCurrencyData(Map<IsoStandardized?, String?> mapToUpdate) {
@@ -238,7 +240,7 @@ const ${varFileName.toCamelCase()} = [
   /// Missing: XAG, XAU, XBA, XBB, XBC, XBD, XDR, XPD, XPT, XTS.
   FiatCurrency? _convertCodeToCurrency(String rawCode) {
     final code = rawCode.toUpperCase().trim();
-    var fiat = FiatCurrency.maybeFromAnyCode(code);
+    FiatCurrency? fiat = FiatCurrency.maybeFromAnyCode(code);
     if (fiat != null) return fiat;
     const old = {"MRO": "MRU", "STD": "STN", "VEF": "VES"};
     if (old.containsKey(code)) fiat = FiatCurrency.maybeFromValue(old[code]!);
@@ -270,8 +272,8 @@ const ${varFileName.toCamelCase()} = [
 
     final lang = match?.group(1) ?? "";
     final country = match?.group(2);
-    var countryCode = match?.group(3);
-    var scriptCode = countryCode == null ? null : country;
+    String? countryCode = match?.group(3);
+    String? scriptCode = countryCode == null ? null : country;
     countryCode = scriptCode == null ? country : countryCode;
     countryCode = countryCode?.isEmpty ?? true ? null : countryCode;
     if (countryCode?.length == 4) {

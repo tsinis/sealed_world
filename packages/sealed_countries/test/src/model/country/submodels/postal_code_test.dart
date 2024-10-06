@@ -7,13 +7,10 @@ import "../../../test_data.dart";
 
 void main() => group("$PostalCode", () {
       const value = PostalCode();
-      test(
-        "toString",
-        () {
-          expect(value.toString(), contains(value.format));
-          expect(value.toString(), contains(value.regExpPattern));
-        },
-      );
+      test("toString", () {
+        expect(value.toString(), contains(value.format));
+        expect(value.toString(), contains(value.regExpPattern));
+      });
 
       group("equality", () {
         const other = PostalCode(format: TestData.string);

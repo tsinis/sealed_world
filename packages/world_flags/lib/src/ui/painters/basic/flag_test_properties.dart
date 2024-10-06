@@ -7,8 +7,9 @@ import "package:flutter/material.dart";
 /// This flag is used to enable or disable anti-aliasing for flag elements. It
 /// is primarily used in golden tests where anti-aliasing is set to true.
 @visibleForTesting
-// ignore: avoid_positional_boolean_parameters, against wrong_number_of_parameters_for_setter.
-set flagAntiAliasOverride(bool doAntiAlias) => _doAntiAlias = doAntiAlias;
+// Ignoring because of against wrong_number_of_parameters_for_setter.
+// ignore: avoid_positional_boolean_parameters, prefer-named-boolean-parameters
+set flagAntiAliasOverride(bool value) => _doAntiAlias = value;
 
 /// Retrieves the current value of the anti-aliasing flag.
 ///
@@ -24,7 +25,7 @@ bool _doAntiAlias = false;
 /// squares instead of real characters. With this setter you can specify
 /// different font family for your tests.
 @visibleForTesting
-set flagTextStyleOverride(TextStyle textStyle) => _textStyle = textStyle;
+set flagTextStyleOverride(TextStyle value) => _textStyle = value;
 
 /// Retrieves the current value of the font family that is used for flag's
 /// custom text elements (i.e. AFG, SAU, IRQ, VIR flags).

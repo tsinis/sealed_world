@@ -29,9 +29,9 @@ extension IsoStandardizedStringExtension on String {
   /// print(' e'.maybeToValidIsoCode()); // Prints: null
   /// ```
   String? maybeToValidIsoCode({
+    int? exactLength,
     int maxLength = IsoStandardized.codeLength,
     int minLength = IsoStandardized.codeShortLength,
-    int? exactLength,
   }) {
     final code = trim();
     if (exactLength != null) return code.length == exactLength ? code : null;
@@ -56,9 +56,9 @@ extension IsoStandardizedStringExtension on String {
   /// print('english'.maybeToValidIsoCode()); // Prints: null
   /// ```
   String? maybeToValidIsoUppercaseCode({
+    int? exactLength,
     int maxLength = IsoStandardized.codeLength,
     int minLength = IsoStandardized.codeShortLength,
-    int? exactLength,
   }) =>
       maybeToValidIsoCode(
         maxLength: maxLength,
@@ -100,13 +100,13 @@ extension IsoStandardizedStringExtension on String {
   /// print(result); // Prints "orElse"
   /// ```.
 // ignore: long-parameter-list, all but one of the parameters are optional.
-  T maybeMapIsoCode<T extends Object?>({
+  T maybeMapIsoCode<T>({
     required T Function(String input) orElse,
+    int maxLength = IsoStandardized.codeLength,
+    int minLength = IsoStandardized.codeShortLength,
     T Function(String code)? numeric,
     T Function(String code)? regular,
     T Function(String code)? short,
-    int maxLength = IsoStandardized.codeLength,
-    int minLength = IsoStandardized.codeShortLength,
   }) {
     final code = minLength == maxLength
         ? maybeToValidIsoCode(exactLength: minLength)
@@ -118,11 +118,11 @@ extension IsoStandardizedStringExtension on String {
         : _onNumericOrRegular(code, orElse, regular: regular, numeric: numeric);
   }
 
-  T _onNumericOrRegular<T extends Object?>(
+  T _onNumericOrRegular<T>(
     String code,
     T Function(String input) orElse, {
-    T Function(String code)? regular,
     T Function(String code)? numeric,
+    T Function(String code)? regular,
   }) {
     if (numeric == null && regular == null) return orElse(code);
 

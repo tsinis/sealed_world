@@ -37,17 +37,18 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
+  // ignore: avoid-late-keyword, we need lazy data value first.
   late final _controller = TabsDataController(widget._data.value, vsync: this);
 
-  FutureOr<void> _onFabPressed({bool isLong = false}) {
+  FutureOr<void> _handleFab({bool isLong = false}) {
     final pick = widget._mapPickers(_controller.currentData);
     isLong ? pick.showInDialog(context) : pick.showInModalBottomSheet(context);
   }
 
-  FutureOr<void> _onAppBarSearchPressed() =>
+  FutureOr<void> _handleAppBarSearch() =>
       widget._mapPickers(_controller.currentData).showInSearch(context);
 
-  FutureOr<Iterable<Widget>> _anchorPicker(
+  FutureOr<Iterable<Widget>> _handleAnchor(
     BuildContext context,
     SearchController controller,
   ) =>
@@ -60,7 +61,7 @@ class _MainPageState extends State<MainPage>
     super.didUpdateWidget(oldWidget);
     WidgetsBinding.instance.addPostFrameCallback(
       (_) => ThemeProvider.of(context)
-          ?.changeColors
+          ?.onColorsChange
           ?.call(widget._data.country.flagStripeColors),
     );
   }
@@ -83,14 +84,14 @@ class _MainPageState extends State<MainPage>
                 viewConstraints:
                     const BoxConstraints(minWidth: 220, maxWidth: 320),
                 builder: (_, controller) => GestureDetector(
-                  onLongPress: _onAppBarSearchPressed,
+                  onLongPress: _handleAppBarSearch,
                   child: IconButton(
                     onPressed: controller.openView,
                     icon:
                         const Icon(Icons.search, semanticLabel: "search_icon"),
                   ),
                 ),
-                suggestionsBuilder: _anchorPicker,
+                suggestionsBuilder: _handleAnchor,
               ),
               const MenuButton(),
             ],
@@ -102,8 +103,9 @@ class _MainPageState extends State<MainPage>
             ),
             centerTitle: false,
           ),
-          body: !kProfileMode
-              ? DecoratedBox(
+          body: kProfileMode
+              ? null
+              : DecoratedBox(
                   decoration: FunctionalPlatform.maybeWhenConst(
                     orElse: BoxDecoration(
                       image: DecorationImage(
@@ -127,10 +129,9 @@ class _MainPageState extends State<MainPage>
                       ),
                     ),
                   ),
-                )
-              : null,
+                ),
           floatingActionButton:
-              FloatingButton(_controller, onPressed: _onFabPressed),
+              FloatingButton(_controller, onPressed: _handleFab),
           backgroundColor: context.theme.colorScheme.surfaceContainerHighest,
         ),
       );

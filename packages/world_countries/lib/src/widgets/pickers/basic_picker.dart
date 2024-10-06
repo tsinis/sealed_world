@@ -1,4 +1,7 @@
-// ignore_for_file: long-parameter-list
+// ignore_for_file: avoid-unnecessary-nullable-return-type
+
+// ignore: lines_longer_than_80_chars, Might be a breaking change.
+// ignore_for_file: long-parameter-list, avoid-nullable-parameters-with-default-values, prefer-correct-handler-name
 
 import "dart:async" show FutureOr;
 
@@ -154,7 +157,7 @@ abstract class BasicPicker<T extends Translated>
   Text? itemNameTranslated(T item, BuildContext context) {
     final title = _maybeNameTranslation(item, context);
 
-    return title != null ? Text(title, overflow: TextOverflow.ellipsis) : null;
+    return title == null ? null : Text(title, overflow: TextOverflow.ellipsis);
   }
 
   /// Called to get the suggestion list for the search view (typically in
@@ -173,7 +176,8 @@ abstract class BasicPicker<T extends Translated>
       x.length,
       (i) =>
           itemBuilder?.call(filteredProperties(x, context, i), isDense: true) ??
-          defaultBuilder.call(
+          // ignore: avoid-returning-widgets, Might be breaking change.
+          defaultBuilder(
             context,
             filteredProperties(x, context, i),
             isDense: true,
@@ -261,34 +265,40 @@ abstract class BasicPicker<T extends Translated>
     TextInputType? keyboardType,
     TextInputAction textInputAction = UiConstants.textInputAction,
     ThemeData? appBarThemeData,
-  }) =>
-      showSearch<T?>(
-        context: context,
-        delegate: ImplicitSearchDelegate<T>(
-          items,
-          resultsBuilder: (newContext, items) => copyWith(
-            items: items,
-            onSelect: (selected) => maybeSelectAndPop(selected, newContext),
-            showSearchBar: false,
-          ),
-          searchIn: searchIn ?? defaultSearch,
-          appBarBottom: appBarBottom,
-          appBarThemeData: appBarThemeData,
-          backIconButton: backIconButton,
-          caseSensitiveSearch: caseSensitiveSearch,
-          clearIconButton: clearIconButton,
-          keyboardType: keyboardType,
-          resultValidator: (item) => !(disabled?.contains(item) ?? false),
-          searchFieldDecorationTheme: searchFieldDecorationTheme,
-          searchFieldLabel: searchFieldLabel,
-          searchFieldStyle: searchFieldStyle,
-          showClearButton: showClearButton ?? true,
-          startWithSearch: startWithSearch,
-          textInputAction: textInputAction,
-        ),
-        query: query,
-        useRootNavigator: useRootNavigator,
-      );
+  }) async {
+    final delegate = ImplicitSearchDelegate<T>(
+      items,
+      resultsBuilder: (newContext, items) => copyWith(
+        items: items,
+        onSelect: (selected) => maybeSelectAndPop(selected, newContext),
+        showSearchBar: false,
+      ),
+      searchIn: searchIn ?? defaultSearch,
+      appBarBottom: appBarBottom,
+      appBarThemeData: appBarThemeData,
+      backIconButton: backIconButton,
+      caseSensitiveSearch: caseSensitiveSearch,
+      clearIconButton: clearIconButton,
+      keyboardType: keyboardType,
+      resultValidator: (item) => !(disabled?.contains(item) ?? false),
+      searchFieldDecorationTheme: searchFieldDecorationTheme,
+      searchFieldLabel: searchFieldLabel,
+      searchFieldStyle: searchFieldStyle,
+      showClearButton: showClearButton ?? true,
+      startWithSearch: startWithSearch,
+      textInputAction: textInputAction,
+    );
+
+    final result = await showSearch<T?>(
+      context: context,
+      delegate: delegate,
+      query: query,
+      useRootNavigator: useRootNavigator,
+    );
+    delegate.dispose();
+
+    return result;
+  }
 
   @override
   Future<T?>? showInDialog(
@@ -415,10 +425,8 @@ abstract class BasicPicker<T extends Translated>
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(T item, BuildContext context)? searchIn,
-    Widget? Function(
-      ItemProperties<T> itemProperties, {
-      bool? isDense,
-    })? itemBuilder,
+    Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
+        itemBuilder,
     TypedLocale? translation,
   });
 }

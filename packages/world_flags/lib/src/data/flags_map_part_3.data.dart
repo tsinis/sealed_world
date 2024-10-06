@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-static-class, to follow pattern from eco-system.
+// ignore_for_file: prefer-static-class, avoid-long-files
 import "dart:ui";
 
 import "../constants/flag_constants.dart";
@@ -772,10 +772,7 @@ const flagSmrProperties = FlagProperties(
 
 /// Flag properties of country Panama (PA).
 const flagPanProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffDA121A)),
-    ColorsProperties(Color(0xff072357)),
-  ],
+  [ColorsProperties(Color(0xffDA121A)), ColorsProperties(Color(0xff072357))],
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -957,11 +954,7 @@ const flagGibProperties = FlagProperties(
     ),
     CustomElementsProperties(
       Color(0xffda000c),
-      otherColors: [
-        Color(0xffffffff),
-        Color(0xff000000),
-        Color(0xfff8d80e),
-      ],
+      otherColors: [Color(0xffffffff), Color(0xff000000), Color(0xfff8d80e)],
       heightFactor: 100 / 114,
     ),
   ],
@@ -1242,11 +1235,7 @@ const flagPrtProperties = FlagProperties(
 const flagSomProperties = FlagProperties(
   [ColorsProperties(Color(0xff418FDE))],
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffffffff),
-      shape: Star(),
-      heightFactor: 0.4,
-    ),
+    ElementsProperties(Color(0xffffffff), shape: Star(), heightFactor: 0.4),
   ],
   url: "https://www.vexilla-mundi.com/somalia/somalia_sheet.png",
 );
@@ -2234,10 +2223,7 @@ const flagMcoProperties = FlagProperties(
 
 /// Flag properties of country Malta (MT).
 const flagMltProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffffff)),
-    ColorsProperties(Color(0xffCF142B)),
-  ],
+  [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffCF142B))],
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
@@ -2302,11 +2288,7 @@ const flagMltProperties = FlagProperties(
     ),
     CustomElementsProperties(
       Color(0xffCF142B),
-      otherColors: [
-        Color(0xff000000),
-        Color(0xffffffff),
-        Color(0xffa0a0a0),
-      ],
+      otherColors: [Color(0xff000000), Color(0xffffffff), Color(0xffa0a0a0)],
       offset: Offset(-0.75, -0.625),
       heightFactor: 112 / 432,
     ),

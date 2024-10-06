@@ -52,8 +52,8 @@ class Continent extends SubRegion {
   /// value is provided, the `list` constant is used.
   static Continent? maybeFromValue<T extends Object>(
     T value, {
-    T? Function(Continent continent)? where,
     Iterable<Continent> continents = list,
+    T? Function(Continent continent)? where,
   }) {
     assert(continents.isNotEmpty, "`continents` should not be empty!");
     for (final continent in continents) {

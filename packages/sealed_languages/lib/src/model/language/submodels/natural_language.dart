@@ -425,7 +425,7 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// ```
   static const map = UpperCaseIsoMap(
     {...naturalLanguageCodeMap, ...naturalLanguageCodeOtherMap},
-    exactLength: null,
+    exactLength: null, // ignore: avoid-passing-default-values, is not default.
   );
 
   /// A tree-shakable list of all the natural languages currently

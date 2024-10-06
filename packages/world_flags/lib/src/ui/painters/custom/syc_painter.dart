@@ -9,7 +9,7 @@ final class SycPainter extends CustomElementsPainter {
   const SycPainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final white = paintCreator(customColors.last);
     final yellow = paintCreator(customColors.first);
 

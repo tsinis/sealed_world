@@ -186,11 +186,7 @@ const ilsCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "ізраїльський новий шекель"),
   TranslatedName(LangUrd(), name: "اسرائیلی نیا شیکل"),
   TranslatedName(LangUzb(), name: "Isroil yangi shekeli"),
-  TranslatedName(
-    LangUzb(),
-    name: "ILS",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "ILS", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Sheqel Israel mới"),
   TranslatedName(LangZho(), name: "以色列新谢克尔"),
   TranslatedName(LangZho(), name: "以色列新謝克爾", script: ScriptHant()),

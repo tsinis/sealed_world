@@ -17,9 +17,9 @@ enum FlagType {
   );
 
   const FlagType({
-    this.height = kMinInteractiveDimension,
-    this.decoration,
     this.child,
+    this.decoration,
+    this.height = kMinInteractiveDimension,
   });
 
   final BoxDecoration? decoration;

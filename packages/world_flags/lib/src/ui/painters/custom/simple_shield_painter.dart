@@ -53,14 +53,14 @@ final class SimpleShieldPainter extends MultiElementPainter {
   double get originalAspectRatio => FlagConstants.defaultAspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final thisProperty = property;
     final otherColors =
+        // ignore: avoid-type-casts, Might be a breaking change.
         (thisProperty as CustomElementsProperties?)?.otherColors;
     final center = calculateCenter(size);
     final height = adjustedSize.height;
-    final strokeWidth = height * _lineFactor;
     final width = adjustedSize.width;
     final half = height * 0.5;
     final halfWidth = width * 0.5;
@@ -81,6 +81,8 @@ final class SimpleShieldPainter extends MultiElementPainter {
       ..lineTo(0, half);
 
     if (_showOutline) {
+      final strokeWidth = height * _lineFactor;
+
       paint
         ..color = otherColors?.last ?? _fallback
         ..style = PaintingStyle.stroke

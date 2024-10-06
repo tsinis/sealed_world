@@ -5,7 +5,7 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
   const ThemeProvider(
     this._flagColors, {
     required super.child,
-    this.changeColors,
+    this.onColorsChange,
     super.key,
   });
 
@@ -15,7 +15,7 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
       context.dependOnInheritedWidgetOfExactType<ThemeProvider>();
 
   final T _flagColors;
-  final ValueSetter<T>? changeColors;
+  final ValueSetter<T>? onColorsChange;
 
   @override
   bool updateShouldNotify(ThemeProvider oldWidget) =>

@@ -2,19 +2,19 @@ part of "searchable_indexed_list_view_builder.dart";
 
 class _SearchableIndexedListViewBuilderState<T extends Object>
     extends State<SearchableIndexedListViewBuilder<T>> {
-  bool get isSearchable =>
+  bool get _isSearchable =>
       widget.searchIn != null && widget.textController != null;
 
-  bool get toShowHeader =>
+  bool get _toShowHeader =>
       widget.showHeader ??
       context.pickersTheme?.showHeader ??
-      widget.items.length > 5; // Hick's law optimal number.
+      (widget.items.length > 5); // Hick's law optimal number.
 
   @override
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
 
-    return isSearchable && toShowHeader
+    return _isSearchable && _toShowHeader
         ? SearchListListenableBuilder<T>(
             builder: (_, filteredItems) => IndexedListViewBuilder<T>(
               filteredItems,

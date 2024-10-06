@@ -5,6 +5,7 @@ import "package:world_countries/src/extensions/navigator_context_extension.dart"
 import "../../helpers/widget_tester_extension.dart";
 
 void main() => group("NavigatorContextExtension", () {
+      // ignore: avoid-local-functions, it's test group.
       Future<BuildContext> contextExtractor(
         WidgetTester tester, [
         Widget child = const SizedBox(),
@@ -59,22 +60,24 @@ void main() => group("NavigatorContextExtension", () {
       testWidgets(
         "maybePop pops the current route if there is a previous route",
         (tester) async {
-          final route1 = MaterialPageRoute<Object>(builder: (_) => Container());
-          final route2 =
+          final routeFirst =
+              MaterialPageRoute<Object>(builder: (_) => Container());
+          final routeSecond =
               MaterialPageRoute<Object>(builder: (_) => const SizedBox());
+
           await tester.pumpMaterialApp(
             Builder(
               builder: (context) => ElevatedButton(
                 onPressed: () async {
-                  await context.push(route1);
-                  await context.push(route2);
+                  await context.push(routeFirst);
+                  await context.push(routeSecond);
                 },
                 child: const Text("Push routes"),
               ),
             ),
           );
           await tester.tapAndSettle(find.byType(ElevatedButton));
-          var context = tester.element(find.byType(Container));
+          Element context = tester.element(find.byType(Container));
           expect(find.byType(Container), findsOneWidget);
           final result = await context.maybePop();
           expect(result, isTrue);
@@ -86,12 +89,9 @@ void main() => group("NavigatorContextExtension", () {
         },
       );
 
-      testWidgets(
-        "maybePop",
-        (tester) async {
-          final context = await contextExtractor(tester);
-          final result = await context.maybePop();
-          expect(result, isFalse);
-        },
-      );
+      testWidgets("maybePop", (tester) async {
+        final context = await contextExtractor(tester);
+        final result = await context.maybePop();
+        expect(result, isFalse);
+      });
     });

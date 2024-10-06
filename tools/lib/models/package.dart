@@ -11,8 +11,6 @@ enum Package {
   sealedCurrencies,
   sealedCountries;
 
-  const Package();
-
   String get dirName => name.toSnakeCase();
 
   String get fullPath =>

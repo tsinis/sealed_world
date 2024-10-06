@@ -219,11 +219,7 @@ const cnyCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "китайський юань"),
   TranslatedName(LangUrd(), name: "چینی یوآن"),
   TranslatedName(LangUzb(), name: "Xitoy yuani"),
-  TranslatedName(
-    LangUzb(),
-    name: "Хитой юани",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Хитой юани", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Nhân dân tệ"),
   TranslatedName(LangYid(), name: "כינעזישער יואן"),
   TranslatedName(LangYor(), name: "Reminibi ti Orílẹ́ède ṣáínà"),

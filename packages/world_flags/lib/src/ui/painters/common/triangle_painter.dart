@@ -25,13 +25,13 @@ final class TrianglePainter extends ElementsPainter {
     final compensation = (aspectRatio / calculateAspectRatio(size) + 1) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
-    final xOffset = (size.width / 2) * (property.offset.dx + 1);
-    final yOffset = (size.height / 2) * (property.offset.dy + 1);
+    final horizontal = (size.width / 2) * (property.offset.dx + 1);
+    final vertical = (size.height / 2) * (property.offset.dy + 1);
 
     final path = Path()
-      ..moveTo(xOffset, yOffset)
-      ..lineTo(xOffset + width, yOffset + height / 2)
-      ..lineTo(xOffset, yOffset + height)
+      ..moveTo(horizontal, vertical)
+      ..lineTo(horizontal + width, vertical + height / 2)
+      ..lineTo(horizontal, vertical + height)
       ..close();
     canvas.drawPath(path, paintCreator());
 
@@ -43,13 +43,14 @@ final class TrianglePainter extends ElementsPainter {
     final compensation = (aspectRatio / calculateAspectRatio(size) + 1) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
-    final xOffset = size.width - ((size.width / 2) * (1 - property.offset.dx));
-    final yOffset = (size.height / 2) * (property.offset.dy + 1);
+    final horizontal =
+        size.width - ((size.width / 2) * (1 - property.offset.dx));
+    final vertical = (size.height / 2) * (property.offset.dy + 1);
 
     final path = Path()
-      ..moveTo(xOffset, yOffset)
-      ..lineTo(xOffset - width, yOffset + height / 2)
-      ..lineTo(xOffset, yOffset + height)
+      ..moveTo(horizontal, vertical)
+      ..lineTo(horizontal - width, vertical + height / 2)
+      ..lineTo(horizontal, vertical + height)
       ..close();
     canvas.drawPath(path, paintCreator());
 
@@ -59,13 +60,14 @@ final class TrianglePainter extends ElementsPainter {
   FlagParentBounds _topToBottomTriangle(Canvas canvas, Size size) {
     final width = size.width * (property.widthFactor ?? 1);
     final height = size.height * property.heightFactor;
-    final xOffset = size.width * property.offset.dx;
-    final yOffset = (size.height / 2) * (property.offset.dy + 1) - (height / 2);
+    final horizontal = size.width * property.offset.dx;
+    final vertical =
+        (size.height / 2) * (property.offset.dy + 1) - (height / 2);
 
     final path = Path()
-      ..moveTo(xOffset, yOffset)
-      ..lineTo(xOffset + width, yOffset)
-      ..lineTo(xOffset + width / 2, yOffset + height)
+      ..moveTo(horizontal, vertical)
+      ..lineTo(horizontal + width, vertical)
+      ..lineTo(horizontal + width / 2, vertical + height)
       ..close();
     canvas.drawPath(path, paintCreator());
 
@@ -75,13 +77,13 @@ final class TrianglePainter extends ElementsPainter {
   FlagParentBounds _bottomToTopTriangle(Canvas canvas, Size size) {
     final width = size.width * (property.widthFactor ?? 1);
     final height = size.height * property.heightFactor;
-    final xOffset = size.width * property.offset.dx;
-    final yOffset = size.height * (property.offset.dy + 1) / 2 - height;
+    final horizontal = size.width * property.offset.dx;
+    final vertical = size.height * (property.offset.dy + 1) / 2 - height;
 
     final path = Path()
-      ..moveTo(xOffset, yOffset + height)
-      ..lineTo(xOffset + width, yOffset + height)
-      ..lineTo(xOffset + width / 2, yOffset)
+      ..moveTo(horizontal, vertical + height)
+      ..lineTo(horizontal + width, vertical + height)
+      ..lineTo(horizontal + width / 2, vertical)
       ..close();
     canvas.drawPath(path, paintCreator());
 

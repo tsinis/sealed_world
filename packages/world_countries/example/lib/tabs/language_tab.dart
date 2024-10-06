@@ -57,20 +57,18 @@ final class LanguageTab extends WorldDataTab<NaturalLanguage> {
             icon: Icons.first_page_outlined,
             description: "Right to Left",
           ),
-          for (final script in data.scripts) ...[
+          for (final script in data.scripts)
             DescriptionTile(
               script.name,
               icon: Icons.history_edu_outlined,
               description: "Script code: ${script.code}",
             ),
-          ],
-          for (final translation in data.translations) ...[
+          for (final translation in data.translations)
             DescriptionTile.raw(
               translation.name,
               description: """Common ${translation.language.name} Name""",
               leading: Text(translation.language.codeShort),
             ),
-          ],
         ],
       );
 }

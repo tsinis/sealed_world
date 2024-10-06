@@ -17,7 +17,7 @@ extension WorldCountryGeo on WorldCountry {
     final codes = bordersCodes;
     if (codes == null || codes.isEmpty) return null;
 
-    return List<WorldCountry>.unmodifiable(codes.map(WorldCountry.fromCode));
+    return List.unmodifiable(codes.map(WorldCountry.fromCode));
   }
 
   /// Returns the area of the country in square miles.

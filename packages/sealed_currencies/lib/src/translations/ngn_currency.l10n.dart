@@ -128,11 +128,7 @@ const ngnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নাইজেরিয়ান নায়রা"),
   TranslatedName(LangBre(), name: "naira Nigeria"),
   TranslatedName(LangBos(), name: "Nigerijska naira"),
-  TranslatedName(
-    LangBos(),
-    name: "Нигеријска наира",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Нигеријска наира", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "naira nigerià"),
   TranslatedName(LangChe(), name: "Нигерин найра"),
   TranslatedName(LangCes(), name: "nigerijská naira"),

@@ -17,9 +17,9 @@ final class MoonPainter extends ElementsPainter {
     final moon = shapeType<Moon>() ?? const Moon();
     final center = calculateCenter(size);
     final widthFactor = property.widthFactor;
-    final radius = widthFactor != null
-        ? (size.width * widthFactor) / 2
-        : calculateSize(size);
+    final radius = widthFactor == null
+        ? calculateSize(size)
+        : (size.width * widthFactor) / 2;
 
     final mainRect = Rect.fromCircle(center: center, radius: radius);
     final mainPath = Path()..addOval(mainRect);

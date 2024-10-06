@@ -6,6 +6,7 @@
 
 import "package:sealed_currencies/sealed_currencies.dart";
 
+// ignore: avoid-importing-entrypoint-exports, it contains all the translations.
 import "../../country_translations.dart";
 import "../model/country/country.dart";
 import "../model/country/submodels/capital.dart";
@@ -57,8 +58,6 @@ class CountryAbw extends WorldCountry {
           languages: const [LangNld()],
           translations: abwCountryTranslations,
           latLng: const LatLng(12.5, -69.96666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 180,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Aruban", male: "Aruban"),
@@ -70,18 +69,13 @@ class CountryAbw extends WorldCountry {
             openStreetMaps: "relation/1231749",
           ),
           population: 106766,
-          gini: null,
           fifa: "ARU",
           car: const Car(sign: "A"),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Oranjestad"),
             latLng: LatLng(12.52, -70.03),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -114,8 +108,6 @@ class CountryAfg extends WorldCountry {
           codeNumeric: "004",
           codeShort: "AF",
           cioc: "AFG",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAfn()],
           idd: const Idd(root: 9, suffixes: [3]),
           altSpellings: const ["AF", "Afġānistān"],
@@ -137,17 +129,13 @@ class CountryAfg extends WorldCountry {
             openStreetMaps: "relation/303427",
           ),
           population: 40218234,
-          gini: null,
           fifa: "AFG",
           car: const Car(sign: "AFG"),
           timezones: const ["UTC+04:30"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kabul"),
             latLng: LatLng(34.52, 69.18),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocSAARC()],
         );
 }
@@ -176,8 +164,6 @@ class CountryAgo extends WorldCountry {
           codeNumeric: "024",
           codeShort: "AO",
           cioc: "ANG",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAoa()],
           idd: const Idd(root: 2, suffixes: [44]),
           altSpellings: const [
@@ -190,7 +176,6 @@ class CountryAgo extends WorldCountry {
           languages: const [LangPor()],
           translations: agoCountryTranslations,
           latLng: const LatLng(-12.5, 18.5),
-          landlocked: false,
           bordersCodes: const ["Cog", "Cod", "Zmb", "Nam"],
           areaMetric: 1246700,
           demonyms: const [
@@ -211,13 +196,10 @@ class CountryAgo extends WorldCountry {
           fifa: "ANG",
           car: const Car(sign: "ANG"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Luanda"),
             latLng: LatLng(-8.83, 13.22),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -245,7 +227,6 @@ class CountryAia extends WorldCountry {
           code: "AIA",
           codeNumeric: "660",
           codeShort: "AI",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatXcd()],
@@ -256,8 +237,6 @@ class CountryAia extends WorldCountry {
           languages: const [LangEng()],
           translations: aiaCountryTranslations,
           latLng: const LatLng(18.25, -63.16666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 91,
           demonyms: const [
             Demonyms(
@@ -277,18 +256,13 @@ class CountryAia extends WorldCountry {
             openStreetMaps: "relation/2177161",
           ),
           population: 13452,
-          gini: null,
           fifa: "AIA",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("The Valley"),
             latLng: LatLng(18.22, -63.05),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -315,7 +289,6 @@ class CountryAla extends WorldCountry {
           code: "ALA",
           codeNumeric: "248",
           codeShort: "AX",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -326,8 +299,6 @@ class CountryAla extends WorldCountry {
           languages: const [LangSwe()],
           translations: alaCountryTranslations,
           latLng: const LatLng(60.116667, 19.9),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 1580,
           demonyms: const [
             Demonyms(
@@ -347,17 +318,12 @@ class CountryAla extends WorldCountry {
             openStreetMaps: "relation/1650407",
           ),
           population: 29458,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Mariehamn"),
             latLng: LatLng(60.12, 19.9),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocEU()],
         );
 }
@@ -386,8 +352,6 @@ class CountryAlb extends WorldCountry {
           codeNumeric: "008",
           codeShort: "AL",
           cioc: "ALB",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAll()],
           idd: const Idd(root: 3, suffixes: [55]),
           altSpellings: const ["AL", "Shqipëri", "Shqipëria", "Shqipnia"],
@@ -396,7 +360,6 @@ class CountryAlb extends WorldCountry {
           languages: const [LangSqi()],
           translations: albCountryTranslations,
           latLng: const LatLng(41, 20),
-          landlocked: false,
           bordersCodes: const ["Mne", "Grc", "Mkd", "Unk"],
           areaMetric: 28748,
           demonyms: const [
@@ -421,13 +384,10 @@ class CountryAlb extends WorldCountry {
           fifa: "ALB",
           car: const Car(sign: "AL"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tirana"),
             latLng: LatLng(41.32, 19.82),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCEFTA()],
         );
 }
@@ -456,8 +416,6 @@ class CountryAnd extends WorldCountry {
           codeNumeric: "020",
           codeShort: "AD",
           cioc: "AND",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [76]),
           altSpellings: const [
@@ -491,12 +449,9 @@ class CountryAnd extends WorldCountry {
             openStreetMaps: "relation/9407",
           ),
           population: 77265,
-          gini: null,
           fifa: "AND",
           car: const Car(sign: "AND"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Andorra la Vella"),
             latLng: LatLng(42.5, 1.52),
@@ -505,7 +460,6 @@ class CountryAnd extends WorldCountry {
             format: "AD###",
             regExpPattern: r"^(?:AD)*(\d{3})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -533,8 +487,6 @@ class CountryAre extends WorldCountry {
           codeNumeric: "784",
           codeShort: "AE",
           cioc: "UAE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAed()],
           idd: const Idd(root: 9, suffixes: [71]),
           altSpellings: const ["AE", "UAE", "Emirates"],
@@ -543,7 +495,6 @@ class CountryAre extends WorldCountry {
           languages: const [LangAra()],
           translations: areCountryTranslations,
           latLng: const LatLng(24, 54),
-          landlocked: false,
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 83600,
           demonyms: const [
@@ -564,13 +515,11 @@ class CountryAre extends WorldCountry {
           fifa: "UAE",
           car: const Car(sign: "UAE"),
           timezones: const ["UTC+04:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Abu Dhabi"),
             latLng: LatLng(24.47, 54.37),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAL()],
         );
 }
@@ -604,8 +553,6 @@ class CountryArg extends WorldCountry {
           codeNumeric: "032",
           codeShort: "AR",
           cioc: "ARG",
-          independent: true,
-          unMember: true,
           currencies: const [FiatArs()],
           idd: const Idd(root: 5, suffixes: [4]),
           altSpellings: const [
@@ -618,7 +565,6 @@ class CountryArg extends WorldCountry {
           languages: const [LangGrn(), LangSpa()],
           translations: argCountryTranslations,
           latLng: const LatLng(-34, -64),
-          landlocked: false,
           bordersCodes: const ["Bol", "Bra", "Chl", "Pry", "Ury"],
           areaMetric: 2780400,
           demonyms: const [
@@ -643,8 +589,6 @@ class CountryArg extends WorldCountry {
           fifa: "ARG",
           car: const Car(sign: "RA"),
           timezones: const ["UTC-03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Buenos Aires"),
             latLng: LatLng(-34.58, -58.67),
@@ -681,8 +625,6 @@ class CountryArm extends WorldCountry {
           codeNumeric: "051",
           codeShort: "AM",
           cioc: "ARM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAmd()],
           idd: const Idd(root: 3, suffixes: [74]),
           altSpellings: const [
@@ -721,8 +663,6 @@ class CountryArm extends WorldCountry {
           fifa: "ARM",
           car: const Car(sign: "AM"),
           timezones: const ["UTC+04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Yerevan"),
             latLng: LatLng(40.17, 44.5),
@@ -777,8 +717,6 @@ class CountryAsm extends WorldCountry {
           languages: const [LangEng(), LangSmo()],
           translations: asmCountryTranslations,
           latLng: const LatLng(-14.33333333, -170),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 199,
           demonyms: const [
             Demonyms(
@@ -794,18 +732,14 @@ class CountryAsm extends WorldCountry {
             openStreetMaps: "relation/2177187",
           ),
           population: 55197,
-          gini: null,
           fifa: "ASA",
           car: const Car(sign: "USA"),
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Pago Pago"),
             latLng: LatLng(-14.27, -170.7),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -832,19 +766,14 @@ class CountryAta extends WorldCountry {
           code: "ATA",
           codeNumeric: "010",
           codeShort: "AQ",
-          cioc: null,
           independent: false,
           unMember: false,
-          currencies: null,
           idd: const Idd(root: 6, suffixes: [72]),
           altSpellings: const ["AQ"],
           continent: const Antarctica(),
-          subregion: null,
           languages: const [LangEng()],
           translations: ataCountryTranslations,
           latLng: const LatLng(-90, 0),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 14000000,
           demonyms: const [
             Demonyms(
@@ -864,8 +793,6 @@ class CountryAta extends WorldCountry {
             openStreetMaps: "node/36966060",
           ),
           population: 1000,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const [
             "UTC-03:00",
@@ -877,11 +804,6 @@ class CountryAta extends WorldCountry {
             "UTC+10:00",
             "UTC+12:00",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
-          capitalInfo: null,
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -909,19 +831,15 @@ class CountryAtf extends WorldCountry {
           code: "ATF",
           codeNumeric: "260",
           codeShort: "TF",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
           idd: const Idd(root: 2, suffixes: [62]),
           altSpellings: const ["TF", "French Southern Territories"],
           continent: const Antarctica(),
-          subregion: null,
           languages: const [LangFra()],
           translations: atfCountryTranslations,
           latLng: const LatLng(-49.25, 69.167),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 7747,
           demonyms: const [
             Demonyms(language: LangEng(), female: "French", male: "French"),
@@ -937,17 +855,12 @@ class CountryAtf extends WorldCountry {
             openStreetMaps: "relation/2186658",
           ),
           population: 400,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const ["UTC+05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Port-aux-Français"),
             latLng: LatLng(48.81, -1.4),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -976,8 +889,6 @@ class CountryAtg extends WorldCountry {
           codeNumeric: "028",
           codeShort: "AG",
           cioc: "ANT",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [268]),
           altSpellings: const ["AG"],
@@ -986,8 +897,6 @@ class CountryAtg extends WorldCountry {
           languages: const [LangEng()],
           translations: atgCountryTranslations,
           latLng: const LatLng(17.05, -61.8),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 442,
           demonyms: const [
             Demonyms(
@@ -1007,17 +916,13 @@ class CountryAtg extends WorldCountry {
             openStreetMaps: "relation/536900",
           ),
           population: 97928,
-          gini: null,
           fifa: "ATG",
           car: const Car(sign: "AG", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Saint John's"),
             latLng: LatLng(17.12, -61.85),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM()],
         );
 }
@@ -1046,8 +951,6 @@ class CountryAus extends WorldCountry {
           codeNumeric: "036",
           codeShort: "AU",
           cioc: "AUS",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [1]),
           altSpellings: const ["AU"],
@@ -1056,8 +959,6 @@ class CountryAus extends WorldCountry {
           languages: const [LangEng()],
           translations: ausCountryTranslations,
           latLng: const LatLng(-27, 133),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 7692024,
           demonyms: const [
             Demonyms(
@@ -1090,15 +991,12 @@ class CountryAus extends WorldCountry {
             "UTC+10:30",
             "UTC+11:30",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Canberra"),
             latLng: LatLng(-35.27, 149.13),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -1126,8 +1024,6 @@ class CountryAut extends WorldCountry {
           codeNumeric: "040",
           codeShort: "AT",
           cioc: "AUT",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 4, suffixes: [3]),
           altSpellings: const ["AT", "Osterreich", "Oesterreich"],
@@ -1170,8 +1066,6 @@ class CountryAut extends WorldCountry {
           fifa: "AUT",
           car: const Car(sign: "A"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Vienna"),
             latLng: LatLng(48.2, 16.37),
@@ -1206,8 +1100,6 @@ class CountryAze extends WorldCountry {
           codeNumeric: "031",
           codeShort: "AZ",
           cioc: "AZE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAzn()],
           idd: const Idd(root: 9, suffixes: [94]),
           altSpellings: const [
@@ -1245,8 +1137,6 @@ class CountryAze extends WorldCountry {
           fifa: "AZE",
           car: const Car(sign: "AZ"),
           timezones: const ["UTC+04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Baku"),
             latLng: LatLng(40.38, 49.87),
@@ -1255,7 +1145,6 @@ class CountryAze extends WorldCountry {
             format: "AZ ####",
             regExpPattern: r"^(?:AZ)*(\d{4})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -1288,8 +1177,6 @@ class CountryBdi extends WorldCountry {
           codeNumeric: "108",
           codeShort: "BI",
           cioc: "BDI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBif()],
           idd: const Idd(root: 2, suffixes: [57]),
           altSpellings: const [
@@ -1328,13 +1215,10 @@ class CountryBdi extends WorldCountry {
           fifa: "BDI",
           car: const Car(sign: "RU"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Gitega"),
             latLng: LatLng(-3.43, 29.93),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -1373,8 +1257,6 @@ class CountryBel extends WorldCountry {
           codeNumeric: "056",
           codeShort: "BE",
           cioc: "BEL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [2]),
           altSpellings: const [
@@ -1393,7 +1275,6 @@ class CountryBel extends WorldCountry {
           languages: const [LangDeu(), LangFra(), LangNld()],
           translations: belCountryTranslations,
           latLng: const LatLng(50.83333333, 4),
-          landlocked: false,
           bordersCodes: const ["Fra", "Deu", "Lux", "Nld"],
           areaMetric: 30528,
           demonyms: const [
@@ -1410,8 +1291,6 @@ class CountryBel extends WorldCountry {
           fifa: "BEL",
           car: const Car(sign: "B"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Brussels"),
             latLng: LatLng(50.83, 4.33),
@@ -1446,8 +1325,6 @@ class CountryBen extends WorldCountry {
           codeNumeric: "204",
           codeShort: "BJ",
           cioc: "BEN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [29]),
           altSpellings: const [
@@ -1460,7 +1337,6 @@ class CountryBen extends WorldCountry {
           languages: const [LangFra()],
           translations: benCountryTranslations,
           latLng: const LatLng(9.5, 2.25),
-          landlocked: false,
           bordersCodes: const ["Bfa", "Ner", "Nga", "Tgo"],
           areaMetric: 112622,
           demonyms: const [
@@ -1485,13 +1361,10 @@ class CountryBen extends WorldCountry {
           fifa: "BEN",
           car: const Car(sign: "DY"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Porto-Novo"),
             latLng: LatLng(6.48, 2.62),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -1519,7 +1392,6 @@ class CountryBes extends WorldCountry {
           code: "BES",
           codeNumeric: "535",
           codeShort: "BQ",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatUsd()],
@@ -1530,8 +1402,6 @@ class CountryBes extends WorldCountry {
           languages: const [LangEng(), LangNld()],
           translations: besCountryTranslations,
           latLng: const LatLng(12.18, -68.25),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 328,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Dutch", male: "Dutch"),
@@ -1547,18 +1417,12 @@ class CountryBes extends WorldCountry {
             openStreetMaps: "relation/1216720",
           ),
           population: 25987,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kralendijk"),
             latLng: LatLng(12.14, -68.27),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -1586,8 +1450,6 @@ class CountryBfa extends WorldCountry {
           codeNumeric: "854",
           codeShort: "BF",
           cioc: "BUR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [26]),
           altSpellings: const ["BF"],
@@ -1621,13 +1483,10 @@ class CountryBfa extends WorldCountry {
           fifa: "BFA",
           car: const Car(sign: "BF"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Ouagadougou"),
             latLng: LatLng(12.37, -1.52),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -1656,8 +1515,6 @@ class CountryBgd extends WorldCountry {
           codeNumeric: "050",
           codeShort: "BD",
           cioc: "BAN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBdt()],
           idd: const Idd(root: 8, suffixes: [80]),
           altSpellings: const [
@@ -1670,7 +1527,6 @@ class CountryBgd extends WorldCountry {
           languages: const [LangBen()],
           translations: bgdCountryTranslations,
           latLng: const LatLng(24, 90),
-          landlocked: false,
           bordersCodes: const ["Mmr", "Ind"],
           areaMetric: 147570,
           demonyms: const [
@@ -1695,7 +1551,6 @@ class CountryBgd extends WorldCountry {
           fifa: "BAN",
           car: const Car(sign: "BD", isRightSide: false),
           timezones: const ["UTC+06:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Dhaka"),
@@ -1731,8 +1586,6 @@ class CountryBgr extends WorldCountry {
           codeNumeric: "100",
           codeShort: "BG",
           cioc: "BUL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBgn()],
           idd: const Idd(root: 3, suffixes: [59]),
           altSpellings: const [
@@ -1745,7 +1598,6 @@ class CountryBgr extends WorldCountry {
           languages: const [LangBul()],
           translations: bgrCountryTranslations,
           latLng: const LatLng(43, 25),
-          landlocked: false,
           bordersCodes: const ["Grc", "Mkd", "Rou", "Srb", "Tur"],
           areaMetric: 110879,
           demonyms: const [
@@ -1766,8 +1618,6 @@ class CountryBgr extends WorldCountry {
           fifa: "BUL",
           car: const Car(sign: "BG"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Sofia"),
             latLng: LatLng(42.68, 23.32),
@@ -1802,8 +1652,6 @@ class CountryBhr extends WorldCountry {
           codeNumeric: "048",
           codeShort: "BH",
           cioc: "BHR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBhd()],
           idd: const Idd(root: 9, suffixes: [73]),
           altSpellings: const [
@@ -1816,8 +1664,6 @@ class CountryBhr extends WorldCountry {
           languages: const [LangAra()],
           translations: bhrCountryTranslations,
           latLng: const LatLng(26, 50.55),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 765,
           demonyms: const [
             Demonyms(
@@ -1837,12 +1683,9 @@ class CountryBhr extends WorldCountry {
             openStreetMaps: "relation/378734",
           ),
           population: 1701583,
-          gini: null,
           fifa: "BHR",
           car: const Car(sign: "BRN"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Manama"),
             latLng: LatLng(26.23, 50.57),
@@ -1879,8 +1722,6 @@ class CountryBhs extends WorldCountry {
           codeNumeric: "044",
           codeShort: "BS",
           cioc: "BAH",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBsd(), FiatUsd()],
           idd: const Idd(root: 1, suffixes: [242]),
           altSpellings: const ["BS", "Commonwealth of the Bahamas"],
@@ -1889,8 +1730,6 @@ class CountryBhs extends WorldCountry {
           languages: const [LangEng()],
           translations: bhsCountryTranslations,
           latLng: const LatLng(25.0343, -77.3963),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 13943,
           demonyms: const [
             Demonyms(
@@ -1910,17 +1749,13 @@ class CountryBhs extends WorldCountry {
             openStreetMaps: "relation/547469",
           ),
           population: 393248,
-          gini: null,
           fifa: "BAH",
           car: const Car(sign: "BS", isRightSide: false),
           timezones: const ["UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Nassau"),
             latLng: LatLng(25.08, -77.35),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM()],
         );
 }
@@ -1959,8 +1794,6 @@ class CountryBih extends WorldCountry {
           codeNumeric: "070",
           codeShort: "BA",
           cioc: "BIH",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBam()],
           idd: const Idd(root: 3, suffixes: [87]),
           altSpellings: const [
@@ -1973,7 +1806,6 @@ class CountryBih extends WorldCountry {
           languages: const [LangBos(), LangHrv(), LangSrp()],
           translations: bihCountryTranslations,
           latLng: const LatLng(44, 18),
-          landlocked: false,
           bordersCodes: const ["Hrv", "Mne", "Srb"],
           areaMetric: 51209,
           demonyms: const [
@@ -1999,8 +1831,6 @@ class CountryBih extends WorldCountry {
           fifa: "BIH",
           car: const Car(sign: "BIH"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Sarajevo"),
             latLng: LatLng(43.87, 18.42),
@@ -2033,7 +1863,6 @@ class CountryBlm extends WorldCountry {
           code: "BLM",
           codeNumeric: "652",
           codeShort: "BL",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -2049,8 +1878,6 @@ class CountryBlm extends WorldCountry {
           languages: const [LangFra()],
           translations: blmCountryTranslations,
           latLng: const LatLng(18.5, -63.41666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 21,
           demonyms: const [
             Demonyms(
@@ -2070,18 +1897,14 @@ class CountryBlm extends WorldCountry {
             openStreetMaps: "relation/7552779",
           ),
           population: 4255,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Gustavia"),
             latLng: LatLng(17.88, -62.85),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -2114,8 +1937,6 @@ class CountryBlr extends WorldCountry {
           codeNumeric: "112",
           codeShort: "BY",
           cioc: "BLR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatByn()],
           idd: const Idd(root: 3, suffixes: [75]),
           altSpellings: const [
@@ -2155,8 +1976,6 @@ class CountryBlr extends WorldCountry {
           fifa: "BLR",
           car: const Car(sign: "BY"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Minsk"),
             latLng: LatLng(53.9, 27.57),
@@ -2196,8 +2015,6 @@ class CountryBlz extends WorldCountry {
           codeNumeric: "084",
           codeShort: "BZ",
           cioc: "BIZ",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBzd()],
           idd: const Idd(root: 50, suffixes: [1]),
           altSpellings: const ["BZ"],
@@ -2206,7 +2023,6 @@ class CountryBlz extends WorldCountry {
           languages: const [LangEng(), LangSpa()],
           translations: blzCountryTranslations,
           latLng: const LatLng(17.25, -88.75),
-          landlocked: false,
           bordersCodes: const ["Gtm", "Mex"],
           areaMetric: 22966,
           demonyms: const [
@@ -2231,13 +2047,10 @@ class CountryBlz extends WorldCountry {
           fifa: "BLZ",
           car: const Car(sign: "BH"),
           timezones: const ["UTC-06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Belmopan"),
             latLng: LatLng(17.25, -88.77),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM(), BlocCAIS()],
         );
 }
@@ -2281,8 +2094,6 @@ class CountryBmu extends WorldCountry {
           languages: const [LangEng()],
           translations: bmuCountryTranslations,
           latLng: const LatLng(32.33333333, -64.75),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 54,
           demonyms: const [
             Demonyms(
@@ -2302,12 +2113,9 @@ class CountryBmu extends WorldCountry {
             openStreetMaps: "relation/1993208",
           ),
           population: 63903,
-          gini: null,
           fifa: "BER",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Hamilton"),
             latLng: LatLng(32.28, -64.78),
@@ -2316,7 +2124,6 @@ class CountryBmu extends WorldCountry {
             format: "@@ ##",
             regExpPattern: r"^([A-Z]{2}\d{2})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -2359,8 +2166,6 @@ class CountryBol extends WorldCountry {
           codeNumeric: "068",
           codeShort: "BO",
           cioc: "BOL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBob()],
           idd: const Idd(root: 5, suffixes: [91]),
           altSpellings: const [
@@ -2404,13 +2209,10 @@ class CountryBol extends WorldCountry {
           fifa: "BOL",
           car: const Car(sign: "BOL"),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Sucre"),
             latLng: LatLng(-19.02, -65.26),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocUSAN()],
         );
 }
@@ -2439,8 +2241,6 @@ class CountryBra extends WorldCountry {
           codeNumeric: "076",
           codeShort: "BR",
           cioc: "BRA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBrl()],
           idd: const Idd(root: 5, suffixes: [5]),
           altSpellings: const [
@@ -2454,7 +2254,6 @@ class CountryBra extends WorldCountry {
           languages: const [LangPor()],
           translations: braCountryTranslations,
           latLng: const LatLng(-10, -55),
-          landlocked: false,
           bordersCodes: const [
             "Arg",
             "Bol",
@@ -2495,8 +2294,6 @@ class CountryBra extends WorldCountry {
             "UTC-03:00",
             "UTC-02:00",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Brasília"),
             latLng: LatLng(-15.79, -47.88),
@@ -2533,8 +2330,6 @@ class CountryBrb extends WorldCountry {
           codeNumeric: "052",
           codeShort: "BB",
           cioc: "BAR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBbd()],
           idd: const Idd(root: 1, suffixes: [246]),
           altSpellings: const ["BB"],
@@ -2543,8 +2338,6 @@ class CountryBrb extends WorldCountry {
           languages: const [LangEng()],
           translations: brbCountryTranslations,
           latLng: const LatLng(13.16666666, -59.53333333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 430,
           demonyms: const [
             Demonyms(
@@ -2564,12 +2357,9 @@ class CountryBrb extends WorldCountry {
             openStreetMaps: "relation/547511",
           ),
           population: 287371,
-          gini: null,
           fifa: "BRB",
           car: const Car(sign: "BDS", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bridgetown"),
             latLng: LatLng(13.1, -59.62),
@@ -2606,8 +2396,6 @@ class CountryBrn extends WorldCountry {
           codeNumeric: "096",
           codeShort: "BN",
           cioc: "BRU",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBnd(), FiatSgd()],
           idd: const Idd(root: 6, suffixes: [73]),
           altSpellings: const [
@@ -2621,7 +2409,6 @@ class CountryBrn extends WorldCountry {
           languages: const [LangMsa()],
           translations: brnCountryTranslations,
           latLng: const LatLng(4.5, 114.66666666),
-          landlocked: false,
           bordersCodes: const ["Mys"],
           areaMetric: 5765,
           demonyms: const [
@@ -2642,12 +2429,9 @@ class CountryBrn extends WorldCountry {
             openStreetMaps: "relation/2103120",
           ),
           population: 437483,
-          gini: null,
           fifa: "BRU",
           car: const Car(sign: "BRU", isRightSide: false),
           timezones: const ["UTC+08:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bandar Seri Begawan"),
             latLng: LatLng(4.88, 114.93),
@@ -2684,8 +2468,6 @@ class CountryBtn extends WorldCountry {
           codeNumeric: "064",
           codeShort: "BT",
           cioc: "BHU",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBtn(), FiatInr()],
           idd: const Idd(root: 9, suffixes: [75]),
           altSpellings: const ["BT", "Kingdom of Bhutan"],
@@ -2719,13 +2501,10 @@ class CountryBtn extends WorldCountry {
           fifa: "BHU",
           car: const Car(sign: "BHT", isRightSide: false),
           timezones: const ["UTC+06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Thimphu"),
             latLng: LatLng(27.47, 89.63),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocSAARC()],
         );
 }
@@ -2753,19 +2532,14 @@ class CountryBvt extends WorldCountry {
           code: "BVT",
           codeNumeric: "074",
           codeShort: "BV",
-          cioc: null,
           independent: false,
           unMember: false,
-          currencies: null,
           idd: const Idd(root: 4, suffixes: [7]),
           altSpellings: const ["BV", "Bouvetøya", "Bouvet-øya"],
           continent: const Antarctica(),
-          subregion: null,
           languages: const [LangNor()],
           translations: bvtCountryTranslations,
           latLng: const LatLng(54.4208, 3.3464),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 49,
           demonyms: const [
             Demonyms(
@@ -2780,15 +2554,9 @@ class CountryBvt extends WorldCountry {
             openStreetMaps: "way/174996681",
           ),
           population: 0,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
-          capitalInfo: null,
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -2821,8 +2589,6 @@ class CountryBwa extends WorldCountry {
           codeNumeric: "072",
           codeShort: "BW",
           cioc: "BOT",
-          independent: true,
-          unMember: true,
           currencies: const [FiatBwp()],
           idd: const Idd(root: 2, suffixes: [67]),
           altSpellings: const [
@@ -2860,13 +2626,10 @@ class CountryBwa extends WorldCountry {
           fifa: "BOT",
           car: const Car(sign: "BW", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Gaborone"),
             latLng: LatLng(-24.63, 25.9),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -2900,8 +2663,6 @@ class CountryCaf extends WorldCountry {
           codeNumeric: "140",
           codeShort: "CF",
           cioc: "CAF",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [36]),
           altSpellings: const [
@@ -2939,13 +2700,10 @@ class CountryCaf extends WorldCountry {
           fifa: "CTA",
           car: const Car(sign: "RCA"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bangui"),
             latLng: LatLng(4.37, 18.58),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -2979,8 +2737,6 @@ class CountryCan extends WorldCountry {
           codeNumeric: "124",
           codeShort: "CA",
           cioc: "CAN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatCad()],
           idd: const Idd(
             root: 1,
@@ -3026,7 +2782,6 @@ class CountryCan extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: canCountryTranslations,
           latLng: const LatLng(60, -95),
-          landlocked: false,
           bordersCodes: const ["Usa"],
           areaMetric: 9984670,
           demonyms: const [
@@ -3058,7 +2813,6 @@ class CountryCan extends WorldCountry {
             "UTC-04:00",
             "UTC-03:30",
           ],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Ottawa"),
@@ -3096,7 +2850,6 @@ class CountryCck extends WorldCountry {
           code: "CCK",
           codeNumeric: "166",
           codeShort: "CC",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatAud()],
@@ -3107,8 +2860,6 @@ class CountryCck extends WorldCountry {
           languages: const [LangEng()],
           translations: cckCountryTranslations,
           latLng: const LatLng(12.1642, 96.871),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 14,
           demonyms: const [
             Demonyms(
@@ -3123,18 +2874,13 @@ class CountryCck extends WorldCountry {
             openStreetMaps: "relation/82636",
           ),
           population: 544,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+06:30"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("West Island"),
             latLng: LatLng(-12.17, 96.83),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -3177,8 +2923,6 @@ class CountryChe extends WorldCountry {
           codeNumeric: "756",
           codeShort: "CH",
           cioc: "SUI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatChf()],
           idd: const Idd(root: 4, suffixes: [1]),
           altSpellings: const [
@@ -3211,8 +2955,6 @@ class CountryChe extends WorldCountry {
           fifa: "SUI",
           car: const Car(sign: "CH"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bern"),
             latLng: LatLng(46.92, 7.47),
@@ -3247,8 +2989,6 @@ class CountryChl extends WorldCountry {
           codeNumeric: "152",
           codeShort: "CL",
           cioc: "CHI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatClp()],
           idd: const Idd(root: 5, suffixes: [6]),
           altSpellings: const [
@@ -3261,7 +3001,6 @@ class CountryChl extends WorldCountry {
           languages: const [LangSpa()],
           translations: chlCountryTranslations,
           latLng: const LatLng(-30, -71),
-          landlocked: false,
           bordersCodes: const ["Arg", "Bol", "Per"],
           areaMetric: 756102,
           demonyms: const [
@@ -3282,8 +3021,6 @@ class CountryChl extends WorldCountry {
           fifa: "CHI",
           car: const Car(sign: "RCH"),
           timezones: const ["UTC-06:00", "UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Santiago"),
             latLng: LatLng(-33.45, -70.67),
@@ -3320,8 +3057,6 @@ class CountryChn extends WorldCountry {
           codeNumeric: "156",
           codeShort: "CN",
           cioc: "CHN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatCny()],
           idd: const Idd(root: 8, suffixes: [6]),
           altSpellings: const [
@@ -3338,7 +3073,6 @@ class CountryChn extends WorldCountry {
           languages: const [LangZho()],
           translations: chnCountryTranslations,
           latLng: const LatLng(35, 105),
-          landlocked: false,
           bordersCodes: const [
             "Afg",
             "Btn",
@@ -3372,15 +3106,12 @@ class CountryChn extends WorldCountry {
           fifa: "CHN",
           car: const Car(sign: "RC"),
           timezones: const ["UTC+08:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Beijing"),
             latLng: LatLng(39.92, 116.38),
           ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -3408,8 +3139,6 @@ class CountryCiv extends WorldCountry {
           codeNumeric: "384",
           codeShort: "CI",
           cioc: "CIV",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [25]),
           altSpellings: const [
@@ -3424,7 +3153,6 @@ class CountryCiv extends WorldCountry {
           languages: const [LangFra()],
           translations: civCountryTranslations,
           latLng: const LatLng(8, -5),
-          landlocked: false,
           bordersCodes: const ["Bfa", "Gha", "Gin", "Lbr", "Mli"],
           areaMetric: 322463,
           demonyms: const [
@@ -3445,13 +3173,10 @@ class CountryCiv extends WorldCountry {
           fifa: "CIV",
           car: const Car(sign: "CI"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Yamoussoukro"),
             latLng: LatLng(6.82, -5.27),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -3485,8 +3210,6 @@ class CountryCmr extends WorldCountry {
           codeNumeric: "120",
           codeShort: "CM",
           cioc: "CMR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [37]),
           altSpellings: const [
@@ -3499,7 +3222,6 @@ class CountryCmr extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: cmrCountryTranslations,
           latLng: const LatLng(6, 12),
-          landlocked: false,
           bordersCodes: const ["Caf", "Tcd", "Cog", "Gnq", "Gab", "Nga"],
           areaMetric: 475442,
           demonyms: const [
@@ -3524,13 +3246,10 @@ class CountryCmr extends WorldCountry {
           fifa: "CMR",
           car: const Car(sign: "CAM"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Yaoundé"),
             latLng: LatLng(3.85, 11.5),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -3574,8 +3293,6 @@ class CountryCod extends WorldCountry {
           codeNumeric: "180",
           codeShort: "CD",
           cioc: "COD",
-          independent: true,
-          unMember: true,
           currencies: const [FiatCdf()],
           idd: const Idd(root: 2, suffixes: [43]),
           altSpellings: const [
@@ -3590,7 +3307,6 @@ class CountryCod extends WorldCountry {
           languages: const [LangFra(), LangKon(), LangLin(), LangSwa()],
           translations: codCountryTranslations,
           latLng: const LatLng(0, 25),
-          landlocked: false,
           bordersCodes: const [
             "Ago",
             "Bdi",
@@ -3625,13 +3341,10 @@ class CountryCod extends WorldCountry {
           fifa: "COD",
           car: const Car(sign: "CGO"),
           timezones: const ["UTC+01:00", "UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kinshasa"),
             latLng: LatLng(-4.32, 15.3),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -3670,8 +3383,6 @@ class CountryCog extends WorldCountry {
           codeNumeric: "178",
           codeShort: "CG",
           cioc: "CGO",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [42]),
           altSpellings: const ["CG", "Congo", "Congo-Brazzaville"],
@@ -3680,7 +3391,6 @@ class CountryCog extends WorldCountry {
           languages: const [LangFra(), LangKon(), LangLin()],
           translations: cogCountryTranslations,
           latLng: const LatLng(-1, 15),
-          landlocked: false,
           bordersCodes: const ["Ago", "Cmr", "Caf", "Cod", "Gab"],
           areaMetric: 342000,
           demonyms: const [
@@ -3706,12 +3416,10 @@ class CountryCog extends WorldCountry {
           car: const Car(sign: "RCB"),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Brazzaville"),
             latLng: LatLng(-4.25, 15.28),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -3750,8 +3458,6 @@ class CountryCok extends WorldCountry {
           languages: const [LangEng()],
           translations: cokCountryTranslations,
           latLng: const LatLng(-21.23333333, -159.76666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 236,
           demonyms: const [
             Demonyms(
@@ -3771,18 +3477,13 @@ class CountryCok extends WorldCountry {
             openStreetMaps: "relation/2184233",
           ),
           population: 18100,
-          gini: null,
           fifa: "COK",
           car: const Car(sign: "NZ", isRightSide: false),
           timezones: const ["UTC-10:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Avarua"),
             latLng: LatLng(-21.2, -159.77),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -3810,8 +3511,6 @@ class CountryCol extends WorldCountry {
           codeNumeric: "170",
           codeShort: "CO",
           cioc: "COL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatCop()],
           idd: const Idd(root: 5, suffixes: [7]),
           altSpellings: const [
@@ -3824,7 +3523,6 @@ class CountryCol extends WorldCountry {
           languages: const [LangSpa()],
           translations: colCountryTranslations,
           latLng: const LatLng(4, -72),
-          landlocked: false,
           bordersCodes: const ["Bra", "Ecu", "Pan", "Per", "Ven"],
           areaMetric: 1141748,
           demonyms: const [
@@ -3849,13 +3547,10 @@ class CountryCol extends WorldCountry {
           fifa: "COL",
           car: const Car(sign: "CO"),
           timezones: const ["UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bogotá"),
             latLng: LatLng(4.71, -74.07),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
 }
@@ -3889,8 +3584,6 @@ class CountryCom extends WorldCountry {
           codeNumeric: "174",
           codeShort: "KM",
           cioc: "COM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatKmf()],
           idd: const Idd(root: 2, suffixes: [69]),
           altSpellings: const [
@@ -3905,8 +3598,6 @@ class CountryCom extends WorldCountry {
           languages: const [LangAra(), LangFra()],
           translations: comCountryTranslations,
           latLng: const LatLng(-12.16666666, 44.25),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 1862,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Comoran", male: "Comoran"),
@@ -3926,13 +3617,10 @@ class CountryCom extends WorldCountry {
           fifa: "COM",
           car: const Car(sign: "COM"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Moroni"),
             latLng: LatLng(-11.7, 43.23),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
@@ -3961,8 +3649,6 @@ class CountryCpv extends WorldCountry {
           codeNumeric: "132",
           codeShort: "CV",
           cioc: "CPV",
-          independent: true,
-          unMember: true,
           currencies: const [FiatCve()],
           idd: const Idd(root: 2, suffixes: [38]),
           altSpellings: const [
@@ -3975,8 +3661,6 @@ class CountryCpv extends WorldCountry {
           languages: const [LangPor()],
           translations: cpvCountryTranslations,
           latLng: const LatLng(16.5388, -23.0418),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 4033,
           demonyms: const [
             Demonyms(
@@ -4000,8 +3684,6 @@ class CountryCpv extends WorldCountry {
           fifa: "CPV",
           car: const Car(sign: "CV"),
           timezones: const ["UTC-01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Praia"),
             latLng: LatLng(14.92, -23.52),
@@ -4036,8 +3718,6 @@ class CountryCri extends WorldCountry {
           codeNumeric: "188",
           codeShort: "CR",
           cioc: "CRC",
-          independent: true,
-          unMember: true,
           currencies: const [FiatCrc()],
           idd: const Idd(root: 50, suffixes: [6]),
           altSpellings: const [
@@ -4050,7 +3730,6 @@ class CountryCri extends WorldCountry {
           languages: const [LangSpa()],
           translations: criCountryTranslations,
           latLng: const LatLng(10, -84),
-          landlocked: false,
           bordersCodes: const ["Nic", "Pan"],
           areaMetric: 51100,
           demonyms: const [
@@ -4075,8 +3754,6 @@ class CountryCri extends WorldCountry {
           fifa: "CRC",
           car: const Car(sign: "CR"),
           timezones: const ["UTC-06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("San José"),
             latLng: LatLng(9.93, -84.09),
@@ -4111,8 +3788,6 @@ class CountryCub extends WorldCountry {
           codeNumeric: "192",
           codeShort: "CU",
           cioc: "CUB",
-          independent: true,
-          unMember: true,
           currencies: const [FiatCuc(), FiatCup()],
           idd: const Idd(root: 5, suffixes: [3]),
           altSpellings: const ["CU", "Republic of Cuba", "República de Cuba"],
@@ -4121,8 +3796,6 @@ class CountryCub extends WorldCountry {
           languages: const [LangSpa()],
           translations: cubCountryTranslations,
           latLng: const LatLng(21.5, -80),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 109884,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Cuban", male: "Cuban"),
@@ -4134,12 +3807,9 @@ class CountryCub extends WorldCountry {
             openStreetMaps: "relation/307833",
           ),
           population: 11326616,
-          gini: null,
           fifa: "CUB",
           car: const Car(sign: "C"),
           timezones: const ["UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Havana"),
             latLng: LatLng(23.12, -82.35),
@@ -4148,7 +3818,6 @@ class CountryCub extends WorldCountry {
             format: "CP #####",
             regExpPattern: r"^(?:CP)*(\d{5})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -4180,7 +3849,6 @@ class CountryCuw extends WorldCountry {
           code: "CUW",
           codeNumeric: "531",
           codeShort: "CW",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatAng()],
@@ -4198,8 +3866,6 @@ class CountryCuw extends WorldCountry {
           languages: const [LangEng(), LangNld()],
           translations: cuwCountryTranslations,
           latLng: const LatLng(12.116667, -68.933333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 444,
           demonyms: const [
             Demonyms(
@@ -4219,18 +3885,13 @@ class CountryCuw extends WorldCountry {
             openStreetMaps: "relation/1216719",
           ),
           population: 155014,
-          gini: null,
           fifa: "CUW",
           car: const Car(sign: "CW"),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Willemstad"),
             latLng: LatLng(12.1, -68.92),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -4257,7 +3918,6 @@ class CountryCxr extends WorldCountry {
           code: "CXR",
           codeNumeric: "162",
           codeShort: "CX",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatAud()],
@@ -4268,8 +3928,6 @@ class CountryCxr extends WorldCountry {
           languages: const [LangEng()],
           translations: cxrCountryTranslations,
           latLng: const LatLng(-10.5, 105.66666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 135,
           demonyms: const [
             Demonyms(
@@ -4284,19 +3942,14 @@ class CountryCxr extends WorldCountry {
             openStreetMaps: "relation/6365444",
           ),
           population: 2072,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+07:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Flying Fish Cove"),
             latLng: LatLng(-10.42, 105.68),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -4334,8 +3987,6 @@ class CountryCym extends WorldCountry {
           languages: const [LangEng()],
           translations: cymCountryTranslations,
           latLng: const LatLng(19.3133, -81.2546),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 264,
           demonyms: const [
             Demonyms(
@@ -4355,18 +4006,13 @@ class CountryCym extends WorldCountry {
             openStreetMaps: "relation/7269765",
           ),
           population: 65720,
-          gini: null,
           fifa: "CAY",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("George Town"),
             latLng: LatLng(19.3, -81.38),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -4399,8 +4045,6 @@ class CountryCyp extends WorldCountry {
           codeNumeric: "196",
           codeShort: "CY",
           cioc: "CYP",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [57]),
           altSpellings: const [
@@ -4416,8 +4060,6 @@ class CountryCyp extends WorldCountry {
           languages: const [LangEll(), LangTur()],
           translations: cypCountryTranslations,
           latLng: const LatLng(35, 33),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 9251,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Cypriot", male: "Cypriot"),
@@ -4437,8 +4079,6 @@ class CountryCyp extends WorldCountry {
           fifa: "CYP",
           car: const Car(sign: "CY", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Nicosia"),
             latLng: LatLng(35.17, 33.37),
@@ -4473,8 +4113,6 @@ class CountryCze extends WorldCountry {
           codeNumeric: "203",
           codeShort: "CZ",
           cioc: "CZE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatCzk()],
           idd: const Idd(root: 4, suffixes: [20]),
           altSpellings: const ["CZ", "Česká republika", "Česko"],
@@ -4500,8 +4138,6 @@ class CountryCze extends WorldCountry {
           fifa: "CZE",
           car: const Car(sign: "CZ"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Prague"),
             latLng: LatLng(50.08, 14.47),
@@ -4535,8 +4171,6 @@ class CountryDeu extends WorldCountry {
           codeNumeric: "276",
           codeShort: "DE",
           cioc: "GER",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 4, suffixes: [9]),
           altSpellings: const [
@@ -4549,7 +4183,6 @@ class CountryDeu extends WorldCountry {
           languages: const [LangDeu()],
           translations: deuCountryTranslations,
           latLng: const LatLng(51, 9),
-          landlocked: false,
           bordersCodes: const [
             "Aut",
             "Bel",
@@ -4580,8 +4213,6 @@ class CountryDeu extends WorldCountry {
           fifa: "GER",
           car: const Car(sign: "DY"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Berlin"),
             latLng: LatLng(52.52, 13.4),
@@ -4620,8 +4251,6 @@ class CountryDji extends WorldCountry {
           codeNumeric: "262",
           codeShort: "DJ",
           cioc: "DJI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatDjf()],
           idd: const Idd(root: 2, suffixes: [53]),
           altSpellings: const [
@@ -4638,7 +4267,6 @@ class CountryDji extends WorldCountry {
           languages: const [LangAra(), LangFra()],
           translations: djiCountryTranslations,
           latLng: const LatLng(11.5, 43),
-          landlocked: false,
           bordersCodes: const ["Eri", "Eth", "Som"],
           areaMetric: 23200,
           demonyms: const [
@@ -4663,13 +4291,10 @@ class CountryDji extends WorldCountry {
           fifa: "DJI",
           car: const Car(sign: "DJI"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Djibouti"),
             latLng: LatLng(11.58, 43.15),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
@@ -4698,8 +4323,6 @@ class CountryDma extends WorldCountry {
           codeNumeric: "212",
           codeShort: "DM",
           cioc: "DMA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [767]),
           altSpellings: const [
@@ -4713,8 +4336,6 @@ class CountryDma extends WorldCountry {
           languages: const [LangEng()],
           translations: dmaCountryTranslations,
           latLng: const LatLng(15.41666666, -61.33333333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 751,
           demonyms: const [
             Demonyms(
@@ -4734,18 +4355,13 @@ class CountryDma extends WorldCountry {
             openStreetMaps: "relation/307823",
           ),
           population: 71991,
-          gini: null,
           fifa: "DMA",
           car: const Car(sign: "WD", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Roseau"),
             latLng: LatLng(15.3, -61.4),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -4773,8 +4389,6 @@ class CountryDnk extends WorldCountry {
           codeNumeric: "208",
           codeShort: "DK",
           cioc: "DEN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatDkk()],
           idd: const Idd(root: 4, suffixes: [5]),
           altSpellings: const [
@@ -4788,7 +4402,6 @@ class CountryDnk extends WorldCountry {
           languages: const [LangDan()],
           translations: dnkCountryTranslations,
           latLng: const LatLng(56, 10),
-          landlocked: false,
           bordersCodes: const ["Deu"],
           areaMetric: 43094,
           demonyms: const [
@@ -4811,8 +4424,6 @@ class CountryDnk extends WorldCountry {
             "UTC+00:00",
             "UTC+01:00",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Copenhagen"),
             latLng: LatLng(55.67, 12.58),
@@ -4847,8 +4458,6 @@ class CountryDom extends WorldCountry {
           codeNumeric: "214",
           codeShort: "DO",
           cioc: "DOM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatDop()],
           idd: const Idd(root: 1, suffixes: [809, 829, 849]),
           altSpellings: const ["DO"],
@@ -4857,7 +4466,6 @@ class CountryDom extends WorldCountry {
           languages: const [LangSpa()],
           translations: domCountryTranslations,
           latLng: const LatLng(19, -70.66666666),
-          landlocked: false,
           bordersCodes: const ["Hti"],
           areaMetric: 48671,
           demonyms: const [
@@ -4882,8 +4490,6 @@ class CountryDom extends WorldCountry {
           fifa: "DOM",
           car: const Car(sign: "DOM"),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Santo Domingo"),
             latLng: LatLng(18.47, -69.9),
@@ -4917,8 +4523,6 @@ class CountryDza extends WorldCountry {
           codeNumeric: "012",
           codeShort: "DZ",
           cioc: "ALG",
-          independent: true,
-          unMember: true,
           currencies: const [FiatDzd()],
           idd: const Idd(root: 2, suffixes: [13]),
           altSpellings: const ["DZ", "Dzayer", "Algérie"],
@@ -4927,7 +4531,6 @@ class CountryDza extends WorldCountry {
           languages: const [LangAra()],
           translations: dzaCountryTranslations,
           latLng: const LatLng(28, 3),
-          landlocked: false,
           bordersCodes: const [
             "Tun",
             "Lby",
@@ -4960,7 +4563,6 @@ class CountryDza extends WorldCountry {
           fifa: "ALG",
           car: const Car(sign: "DZ"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Algiers"),
@@ -4995,8 +4597,6 @@ class CountryEcu extends WorldCountry {
           codeNumeric: "218",
           codeShort: "EC",
           cioc: "ECU",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUsd()],
           idd: const Idd(root: 5, suffixes: [93]),
           altSpellings: const [
@@ -5009,7 +4609,6 @@ class CountryEcu extends WorldCountry {
           languages: const [LangSpa()],
           translations: ecuCountryTranslations,
           latLng: const LatLng(-2, -77.5),
-          landlocked: false,
           bordersCodes: const ["Col", "Per"],
           areaMetric: 276841,
           demonyms: const [
@@ -5034,8 +4633,6 @@ class CountryEcu extends WorldCountry {
           fifa: "ECU",
           car: const Car(sign: "EC"),
           timezones: const ["UTC-06:00", "UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Quito"),
             latLng: LatLng(-0.22, -78.5),
@@ -5072,8 +4669,6 @@ class CountryEgy extends WorldCountry {
           codeNumeric: "818",
           codeShort: "EG",
           cioc: "EGY",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEgp()],
           idd: const Idd(root: 2, suffixes: [0]),
           altSpellings: const ["EG", "Arab Republic of Egypt"],
@@ -5082,7 +4677,6 @@ class CountryEgy extends WorldCountry {
           languages: const [LangAra()],
           translations: egyCountryTranslations,
           latLng: const LatLng(27, 30),
-          landlocked: false,
           bordersCodes: const ["Isr", "Lby", "Pse", "Sdn"],
           areaMetric: 1002450,
           demonyms: const [
@@ -5107,7 +4701,6 @@ class CountryEgy extends WorldCountry {
           fifa: "EGY",
           car: const Car(sign: "ET"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Cairo"),
@@ -5152,8 +4745,6 @@ class CountryEri extends WorldCountry {
           codeNumeric: "232",
           codeShort: "ER",
           cioc: "ERI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatErn()],
           idd: const Idd(root: 2, suffixes: [91]),
           altSpellings: const [
@@ -5169,7 +4760,6 @@ class CountryEri extends WorldCountry {
           languages: const [LangAra(), LangEng(), LangTir()],
           translations: eriCountryTranslations,
           latLng: const LatLng(15, 39),
-          landlocked: false,
           bordersCodes: const ["Dji", "Eth", "Sdn"],
           areaMetric: 117600,
           demonyms: const [
@@ -5190,17 +4780,13 @@ class CountryEri extends WorldCountry {
             openStreetMaps: "relation/296961",
           ),
           population: 5352000,
-          gini: null,
           fifa: "ERI",
           car: const Car(sign: "ER"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Asmara"),
             latLng: LatLng(15.33, 38.93),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -5228,7 +4814,6 @@ class CountryEsh extends WorldCountry {
           code: "ESH",
           codeNumeric: "732",
           codeShort: "EH",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatDzd(), FiatMad(), FiatMru()],
@@ -5239,7 +4824,6 @@ class CountryEsh extends WorldCountry {
           languages: const [LangSpa()],
           translations: eshCountryTranslations,
           latLng: const LatLng(24.5, -13),
-          landlocked: false,
           bordersCodes: const ["Dza", "Mrt", "Mar"],
           areaMetric: 266000,
           demonyms: const [
@@ -5251,17 +4835,13 @@ class CountryEsh extends WorldCountry {
             openStreetMaps: "relation/5441968",
           ),
           population: 510713,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("El Aaiún"),
             latLng: LatLng(-13.28, 27.14),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -5290,8 +4870,6 @@ class CountryEsp extends WorldCountry {
           codeNumeric: "724",
           codeShort: "ES",
           cioc: "ESP",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [4]),
           altSpellings: const ["ES", "Kingdom of Spain", "Reino de España"],
@@ -5300,7 +4878,6 @@ class CountryEsp extends WorldCountry {
           languages: const [LangSpa()],
           translations: espCountryTranslations,
           latLng: const LatLng(40, -4),
-          landlocked: false,
           bordersCodes: const ["And", "Fra", "Gib", "Prt", "Mar"],
           areaMetric: 505992,
           demonyms: const [
@@ -5321,8 +4898,6 @@ class CountryEsp extends WorldCountry {
           fifa: "ESP",
           car: const Car(sign: "E"),
           timezones: const ["UTC+00:00", "UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Madrid"),
             latLng: LatLng(40.4, -3.68),
@@ -5356,8 +4931,6 @@ class CountryEst extends WorldCountry {
           codeNumeric: "233",
           codeShort: "EE",
           cioc: "EST",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [72]),
           altSpellings: const [
@@ -5371,7 +4944,6 @@ class CountryEst extends WorldCountry {
           languages: const [LangEst()],
           translations: estCountryTranslations,
           latLng: const LatLng(59, 26),
-          landlocked: false,
           bordersCodes: const ["Lva", "Rus"],
           areaMetric: 45227,
           demonyms: const [
@@ -5396,8 +4968,6 @@ class CountryEst extends WorldCountry {
           fifa: "EST",
           car: const Car(sign: "EST"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tallinn"),
             latLng: LatLng(59.43, 24.72),
@@ -5431,8 +5001,6 @@ class CountryEth extends WorldCountry {
           codeNumeric: "231",
           codeShort: "ET",
           cioc: "ETH",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEtb()],
           idd: const Idd(root: 2, suffixes: [51]),
           altSpellings: const [
@@ -5471,8 +5039,6 @@ class CountryEth extends WorldCountry {
           fifa: "ETH",
           car: const Car(sign: "ETH"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Addis Ababa"),
             latLng: LatLng(9.03, 38.7),
@@ -5512,8 +5078,6 @@ class CountryFin extends WorldCountry {
           codeNumeric: "246",
           codeShort: "FI",
           cioc: "FIN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [58]),
           altSpellings: const [
@@ -5528,7 +5092,6 @@ class CountryFin extends WorldCountry {
           languages: const [LangFin(), LangSwe()],
           translations: finCountryTranslations,
           latLng: const LatLng(64, 26),
-          landlocked: false,
           bordersCodes: const ["Nor", "Swe", "Rus"],
           areaMetric: 338424,
           demonyms: const [
@@ -5549,8 +5112,6 @@ class CountryFin extends WorldCountry {
           fifa: "FIN",
           car: const Car(sign: "FIN"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Helsinki"),
             latLng: LatLng(60.17, 24.93),
@@ -5589,8 +5150,6 @@ class CountryFji extends WorldCountry {
           codeNumeric: "242",
           codeShort: "FJ",
           cioc: "FIJ",
-          independent: true,
-          unMember: true,
           currencies: const [FiatFjd()],
           idd: const Idd(root: 6, suffixes: [79]),
           altSpellings: const [
@@ -5605,8 +5164,6 @@ class CountryFji extends WorldCountry {
           languages: const [LangEng(), LangFij()],
           translations: fjiCountryTranslations,
           latLng: const LatLng(17.7134, 178.065),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 18272,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Fijian", male: "Fijian"),
@@ -5626,14 +5183,10 @@ class CountryFji extends WorldCountry {
           fifa: "FIJ",
           car: const Car(sign: "FJI", isRightSide: false),
           timezones: const ["UTC+12:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Suva"),
             latLng: LatLng(-18.13, 178.42),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -5660,7 +5213,6 @@ class CountryFlk extends WorldCountry {
           code: "FLK",
           codeNumeric: "238",
           codeShort: "FK",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatFkp()],
@@ -5675,8 +5227,6 @@ class CountryFlk extends WorldCountry {
           languages: const [LangEng()],
           translations: flkCountryTranslations,
           latLng: const LatLng(-51.75, -59),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 12173,
           demonyms: const [
             Demonyms(
@@ -5696,17 +5246,12 @@ class CountryFlk extends WorldCountry {
             openStreetMaps: "relation/2185374",
           ),
           population: 2563,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Stanley"),
             latLng: LatLng(-51.7, -57.85),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocUSAN()],
         );
 }
@@ -5735,8 +5280,6 @@ class CountryFra extends WorldCountry {
           codeNumeric: "250",
           codeShort: "FR",
           cioc: "FRA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [3]),
           altSpellings: const [
@@ -5749,7 +5292,6 @@ class CountryFra extends WorldCountry {
           languages: const [LangFra()],
           translations: fraCountryTranslations,
           latLng: const LatLng(46, 2),
-          landlocked: false,
           bordersCodes: const [
             "And",
             "Bel",
@@ -5794,8 +5336,6 @@ class CountryFra extends WorldCountry {
             "UTC+11:00",
             "UTC+12:00",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Paris"),
             latLng: LatLng(48.87, 2.33),
@@ -5833,7 +5373,6 @@ class CountryFro extends WorldCountry {
           code: "FRO",
           codeNumeric: "234",
           codeShort: "FO",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatDkk()],
@@ -5844,8 +5383,6 @@ class CountryFro extends WorldCountry {
           languages: const [LangDan(), LangFao()],
           translations: froCountryTranslations,
           latLng: const LatLng(62, -7),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 1393,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Faroese", male: "Faroese"),
@@ -5861,12 +5398,9 @@ class CountryFro extends WorldCountry {
             openStreetMaps: "relation/52939",
           ),
           population: 48865,
-          gini: null,
           fifa: "FRO",
           car: const Car(sign: "FO"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tórshavn"),
             latLng: LatLng(62.01, -6.77),
@@ -5875,7 +5409,6 @@ class CountryFro extends WorldCountry {
             format: "FO-###",
             regExpPattern: r"^(?:FO)*(\d{3})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -5903,8 +5436,6 @@ class CountryFsm extends WorldCountry {
           codeNumeric: "583",
           codeShort: "FM",
           cioc: "FSM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUsd()],
           idd: const Idd(root: 6, suffixes: [91]),
           altSpellings: const [
@@ -5917,8 +5448,6 @@ class CountryFsm extends WorldCountry {
           languages: const [LangEng()],
           translations: fsmCountryTranslations,
           latLng: const LatLng(6.91666666, 158.25),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 702,
           demonyms: const [
             Demonyms(
@@ -5939,17 +5468,13 @@ class CountryFsm extends WorldCountry {
           ),
           population: 115021,
           gini: const Gini(year: 2013, coefficient: 40.1),
-          fifa: null,
           car: const Car(sign: "FSM"),
           timezones: const ["UTC+10:00", "UTC+11:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Palikir"),
             latLng: LatLng(6.92, 158.15),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -5977,8 +5502,6 @@ class CountryGab extends WorldCountry {
           codeNumeric: "266",
           codeShort: "GA",
           cioc: "GAB",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [41]),
           altSpellings: const [
@@ -5991,7 +5514,6 @@ class CountryGab extends WorldCountry {
           languages: const [LangFra()],
           translations: gabCountryTranslations,
           latLng: const LatLng(-1, 11.75),
-          landlocked: false,
           bordersCodes: const ["Cmr", "Cog", "Gnq"],
           areaMetric: 267668,
           demonyms: const [
@@ -6016,13 +5538,10 @@ class CountryGab extends WorldCountry {
           fifa: "GAB",
           car: const Car(sign: "G"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Libreville"),
             latLng: LatLng(0.38, 9.45),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -6051,8 +5570,6 @@ class CountryGbr extends WorldCountry {
           codeNumeric: "826",
           codeShort: "GB",
           cioc: "GBR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatGbp()],
           idd: const Idd(root: 4, suffixes: [4]),
           altSpellings: const ["GB", "UK", "Great Britain"],
@@ -6061,7 +5578,6 @@ class CountryGbr extends WorldCountry {
           languages: const [LangEng()],
           translations: gbrCountryTranslations,
           latLng: const LatLng(54, -2),
-          landlocked: false,
           bordersCodes: const ["Irl"],
           areaMetric: 242900,
           demonyms: const [
@@ -6079,7 +5595,6 @@ class CountryGbr extends WorldCountry {
           ),
           population: 67215293,
           gini: const Gini(year: 2017, coefficient: 35.1),
-          fifa: null,
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const [
             "UTC-08:00",
@@ -6092,8 +5607,6 @@ class CountryGbr extends WorldCountry {
             "UTC+02:00",
             "UTC+06:00",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("London"),
             latLng: LatLng(51.5, -0.08),
@@ -6103,7 +5616,6 @@ class CountryGbr extends WorldCountry {
             regExpPattern:
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -6131,8 +5643,6 @@ class CountryGeo extends WorldCountry {
           codeNumeric: "268",
           codeShort: "GE",
           cioc: "GEO",
-          independent: true,
-          unMember: true,
           currencies: const [FiatGel()],
           idd: const Idd(root: 9, suffixes: [95]),
           altSpellings: const ["GE", "Sakartvelo"],
@@ -6141,7 +5651,6 @@ class CountryGeo extends WorldCountry {
           languages: const [LangKat()],
           translations: geoCountryTranslations,
           latLng: const LatLng(42, 43.5),
-          landlocked: false,
           bordersCodes: const ["Arm", "Aze", "Rus", "Tur"],
           areaMetric: 69700,
           demonyms: const [
@@ -6166,15 +5675,12 @@ class CountryGeo extends WorldCountry {
           fifa: "GEO",
           car: const Car(sign: "GE"),
           timezones: const ["UTC+04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tbilisi"),
             latLng: LatLng(41.68, 44.83),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -6206,7 +5712,6 @@ class CountryGgy extends WorldCountry {
           code: "GGY",
           codeNumeric: "831",
           codeShort: "GG",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatGbp()],
@@ -6221,8 +5726,6 @@ class CountryGgy extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: ggyCountryTranslations,
           latLng: const LatLng(49.46666666, -2.58333333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 78,
           demonyms: const [
             Demonyms(
@@ -6242,12 +5745,8 @@ class CountryGgy extends WorldCountry {
             openStreetMaps: "relation/270009",
           ),
           population: 62999,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "GBG", isRightSide: false),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("St. Peter Port"),
             latLng: LatLng(49.45, -2.54),
@@ -6257,7 +5756,6 @@ class CountryGgy extends WorldCountry {
             regExpPattern:
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -6285,8 +5783,6 @@ class CountryGha extends WorldCountry {
           codeNumeric: "288",
           codeShort: "GH",
           cioc: "GHA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatGhs()],
           idd: const Idd(root: 2, suffixes: [33]),
           altSpellings: const ["GH"],
@@ -6295,7 +5791,6 @@ class CountryGha extends WorldCountry {
           languages: const [LangEng()],
           translations: ghaCountryTranslations,
           latLng: const LatLng(8, -2),
-          landlocked: false,
           bordersCodes: const ["Bfa", "Civ", "Tgo"],
           areaMetric: 238533,
           demonyms: const [
@@ -6320,13 +5815,10 @@ class CountryGha extends WorldCountry {
           fifa: "GHA",
           car: const Car(sign: "GH"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Accra"),
             latLng: LatLng(5.55, -0.22),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -6354,7 +5846,6 @@ class CountryGib extends WorldCountry {
           code: "GIB",
           codeNumeric: "292",
           codeShort: "GI",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatGip()],
@@ -6365,7 +5856,6 @@ class CountryGib extends WorldCountry {
           languages: const [LangEng()],
           translations: gibCountryTranslations,
           latLng: const LatLng(36.13333333, -5.35),
-          landlocked: false,
           bordersCodes: const ["Esp"],
           areaMetric: 6,
           demonyms: const [
@@ -6386,17 +5876,13 @@ class CountryGib extends WorldCountry {
             openStreetMaps: "relation/1278736",
           ),
           population: 33691,
-          gini: null,
           fifa: "GIB",
           car: const Car(sign: "GBZ"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Gibraltar"),
             latLng: LatLng(36.13, -5.35),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocEU()],
         );
 }
@@ -6425,8 +5911,6 @@ class CountryGin extends WorldCountry {
           codeNumeric: "324",
           codeShort: "GN",
           cioc: "GUI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatGnf()],
           idd: const Idd(root: 2, suffixes: [24]),
           altSpellings: const [
@@ -6439,7 +5923,6 @@ class CountryGin extends WorldCountry {
           languages: const [LangFra()],
           translations: ginCountryTranslations,
           latLng: const LatLng(11, -10),
-          landlocked: false,
           bordersCodes: const ["Civ", "Gnb", "Lbr", "Mli", "Sen", "Sle"],
           areaMetric: 245857,
           demonyms: const [
@@ -6460,13 +5943,10 @@ class CountryGin extends WorldCountry {
           fifa: "GUI",
           car: const Car(sign: "RG"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Conakry"),
             latLng: LatLng(9.5, -13.7),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -6494,7 +5974,6 @@ class CountryGlp extends WorldCountry {
           code: "GLP",
           codeNumeric: "312",
           codeShort: "GP",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -6505,8 +5984,6 @@ class CountryGlp extends WorldCountry {
           languages: const [LangFra()],
           translations: glpCountryTranslations,
           latLng: const LatLng(16.25, -61.583333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 1628,
           demonyms: const [
             Demonyms(
@@ -6526,18 +6003,13 @@ class CountryGlp extends WorldCountry {
             openStreetMaps: "relation/7109289",
           ),
           population: 400132,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Basse-Terre"),
             latLng: LatLng(16.03, -61.73),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)\d{3})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -6565,8 +6037,6 @@ class CountryGmb extends WorldCountry {
           codeNumeric: "270",
           codeShort: "GM",
           cioc: "GAM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatGmd()],
           idd: const Idd(root: 2, suffixes: [20]),
           altSpellings: const ["GM", "Republic of the Gambia"],
@@ -6575,7 +6045,6 @@ class CountryGmb extends WorldCountry {
           languages: const [LangEng()],
           translations: gmbCountryTranslations,
           latLng: const LatLng(13.46666666, -16.56666666),
-          landlocked: false,
           bordersCodes: const ["Sen"],
           areaMetric: 10689,
           demonyms: const [
@@ -6596,13 +6065,10 @@ class CountryGmb extends WorldCountry {
           fifa: "GAM",
           car: const Car(sign: "WAG"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Banjul"),
             latLng: LatLng(13.45, -16.57),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -6631,7 +6097,6 @@ class CountryGnb extends WorldCountry {
           codeNumeric: "624",
           codeShort: "GW",
           cioc: "GBS",
-          independent: true,
           unMember: false,
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [45]),
@@ -6645,7 +6110,6 @@ class CountryGnb extends WorldCountry {
           languages: const [LangPor()],
           translations: gnbCountryTranslations,
           latLng: const LatLng(12, -15),
-          landlocked: false,
           bordersCodes: const ["Gin", "Sen"],
           areaMetric: 36125,
           demonyms: const [
@@ -6670,8 +6134,6 @@ class CountryGnb extends WorldCountry {
           fifa: "GNB",
           car: const Car(sign: "RGB"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bissau"),
             latLng: LatLng(11.85, -15.58),
@@ -6716,8 +6178,6 @@ class CountryGnq extends WorldCountry {
           codeNumeric: "226",
           codeShort: "GQ",
           cioc: "GEQ",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [40]),
           altSpellings: const [
@@ -6732,7 +6192,6 @@ class CountryGnq extends WorldCountry {
           languages: const [LangFra(), LangPor(), LangSpa()],
           translations: gnqCountryTranslations,
           latLng: const LatLng(2, 10),
-          landlocked: false,
           bordersCodes: const ["Cmr", "Gab"],
           areaMetric: 28051,
           demonyms: const [
@@ -6753,17 +6212,13 @@ class CountryGnq extends WorldCountry {
             openStreetMaps: "relation/192791",
           ),
           population: 1402985,
-          gini: null,
           fifa: "EQG",
           car: const Car(sign: "GQ"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Malabo"),
             latLng: LatLng(3.75, 8.78),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -6792,8 +6247,6 @@ class CountryGrc extends WorldCountry {
           codeNumeric: "300",
           codeShort: "GR",
           cioc: "GRE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [0]),
           altSpellings: const [
@@ -6807,7 +6260,6 @@ class CountryGrc extends WorldCountry {
           languages: const [LangEll()],
           translations: grcCountryTranslations,
           latLng: const LatLng(39, 22),
-          landlocked: false,
           bordersCodes: const ["Alb", "Bgr", "Tur", "Mkd"],
           areaMetric: 131990,
           demonyms: const [
@@ -6824,8 +6276,6 @@ class CountryGrc extends WorldCountry {
           fifa: "GRE",
           car: const Car(sign: "GR"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Athens"),
             latLng: LatLng(37.98, 23.73),
@@ -6859,8 +6309,6 @@ class CountryGrd extends WorldCountry {
           codeNumeric: "308",
           codeShort: "GD",
           cioc: "GRN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [473]),
           altSpellings: const ["GD"],
@@ -6869,8 +6317,6 @@ class CountryGrd extends WorldCountry {
           languages: const [LangEng()],
           translations: grdCountryTranslations,
           latLng: const LatLng(12.11666666, -61.66666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 344,
           demonyms: const [
             Demonyms(
@@ -6890,17 +6336,13 @@ class CountryGrd extends WorldCountry {
             openStreetMaps: "relation/550727",
           ),
           population: 112519,
-          gini: null,
           fifa: "GRN",
           car: const Car(sign: "WG", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("St. George's"),
             latLng: LatLng(32.38, -64.68),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCAIS()],
         );
 }
@@ -6928,7 +6370,6 @@ class CountryGrl extends WorldCountry {
           code: "GRL",
           codeNumeric: "304",
           codeShort: "GL",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatDkk()],
@@ -6939,8 +6380,6 @@ class CountryGrl extends WorldCountry {
           languages: const [LangKal()],
           translations: grlCountryTranslations,
           latLng: const LatLng(72, -40),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 2166086,
           demonyms: const [
             Demonyms(
@@ -6960,8 +6399,6 @@ class CountryGrl extends WorldCountry {
             openStreetMaps: "relation/2184073",
           ),
           population: 56367,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "DK"),
           timezones: const [
             "UTC-04:00",
@@ -6969,15 +6406,12 @@ class CountryGrl extends WorldCountry {
             "UTC-01:00",
             "UTC+00:00",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Nuuk"),
             latLng: LatLng(64.18, -51.75),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -7005,8 +6439,6 @@ class CountryGtm extends WorldCountry {
           codeNumeric: "320",
           codeShort: "GT",
           cioc: "GUA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatGtq()],
           idd: const Idd(root: 50, suffixes: [2]),
           altSpellings: const ["GT"],
@@ -7015,7 +6447,6 @@ class CountryGtm extends WorldCountry {
           languages: const [LangSpa()],
           translations: gtmCountryTranslations,
           latLng: const LatLng(15.5, -90.25),
-          landlocked: false,
           bordersCodes: const ["Blz", "Slv", "Hnd", "Mex"],
           areaMetric: 108889,
           demonyms: const [
@@ -7040,14 +6471,11 @@ class CountryGtm extends WorldCountry {
           fifa: "GUA",
           car: const Car(sign: "GCA"),
           timezones: const ["UTC-06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Guatemala City"),
             latLng: LatLng(14.62, -90.52),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -7074,7 +6502,6 @@ class CountryGuf extends WorldCountry {
           code: "GUF",
           codeNumeric: "254",
           codeShort: "GF",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -7085,7 +6512,6 @@ class CountryGuf extends WorldCountry {
           languages: const [LangFra()],
           translations: gufCountryTranslations,
           latLng: const LatLng(4, -53),
-          landlocked: false,
           bordersCodes: const ["Bra", "Sur"],
           areaMetric: 83534,
           demonyms: const [
@@ -7102,12 +6528,8 @@ class CountryGuf extends WorldCountry {
             openStreetMaps: "relation/2502058",
           ),
           population: 254541,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC-03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Cayenne"),
             latLng: LatLng(4.94, -52.33),
@@ -7157,8 +6579,6 @@ class CountryGum extends WorldCountry {
           languages: const [LangCha(), LangEng(), LangSpa()],
           translations: gumCountryTranslations,
           latLng: const LatLng(13.46666666, 144.78333333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 549,
           demonyms: const [
             Demonyms(
@@ -7173,12 +6593,9 @@ class CountryGum extends WorldCountry {
             openStreetMaps: "relation/306001",
           ),
           population: 168783,
-          gini: null,
           fifa: "GUM",
           car: const Car(sign: "USA"),
           timezones: const ["UTC+10:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Hagåtña"),
             latLng: LatLng(13.48, 144.75),
@@ -7187,7 +6604,6 @@ class CountryGum extends WorldCountry {
             format: "969##",
             regExpPattern: r"^(969\d{2})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -7215,8 +6631,6 @@ class CountryGuy extends WorldCountry {
           codeNumeric: "328",
           codeShort: "GY",
           cioc: "GUY",
-          independent: true,
-          unMember: true,
           currencies: const [FiatGyd()],
           idd: const Idd(root: 5, suffixes: [92]),
           altSpellings: const ["GY", "Co-operative Republic of Guyana"],
@@ -7225,7 +6639,6 @@ class CountryGuy extends WorldCountry {
           languages: const [LangEng()],
           translations: guyCountryTranslations,
           latLng: const LatLng(5, -59),
-          landlocked: false,
           bordersCodes: const ["Bra", "Sur", "Ven"],
           areaMetric: 214969,
           demonyms: const [
@@ -7250,13 +6663,10 @@ class CountryGuy extends WorldCountry {
           fifa: "GUY",
           car: const Car(sign: "GUY", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Georgetown"),
             latLng: LatLng(6.8, -58.15),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM(), BlocUSAN()],
         );
 }
@@ -7302,7 +6712,6 @@ class CountryHkg extends WorldCountry {
           languages: const [LangEng(), LangZho()],
           translations: hkgCountryTranslations,
           latLng: const LatLng(22.267, 114.188),
-          landlocked: false,
           bordersCodes: const ["Chn"],
           areaMetric: 1104,
           demonyms: const [
@@ -7323,18 +6732,13 @@ class CountryHkg extends WorldCountry {
             openStreetMaps: "relation/913110",
           ),
           population: 7500700,
-          gini: null,
           fifa: "HKG",
           car: const Car(sign: "HK", isRightSide: false),
           timezones: const ["UTC+08:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("City of Victoria"),
             latLng: LatLng(22.267, 114.188),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -7361,19 +6765,14 @@ class CountryHmd extends WorldCountry {
           code: "HMD",
           codeNumeric: "334",
           codeShort: "HM",
-          cioc: null,
           independent: false,
           unMember: false,
-          currencies: null,
           idd: const Idd(root: 6, suffixes: [72]),
           altSpellings: const ["HM", "Heard Island and McDonald Islands"],
           continent: const Antarctica(),
-          subregion: null,
           languages: const [LangEng()],
           translations: hmdCountryTranslations,
           latLng: const LatLng(53.0818, 73.5042),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 412,
           demonyms: const [
             Demonyms(
@@ -7388,15 +6787,9 @@ class CountryHmd extends WorldCountry {
             openStreetMaps: "relation/2177227",
           ),
           population: 0,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const ["UTC+05:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
-          capitalInfo: null,
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -7424,8 +6817,6 @@ class CountryHnd extends WorldCountry {
           codeNumeric: "340",
           codeShort: "HN",
           cioc: "HON",
-          independent: true,
-          unMember: true,
           currencies: const [FiatHnl()],
           idd: const Idd(root: 50, suffixes: [4]),
           altSpellings: const [
@@ -7438,7 +6829,6 @@ class CountryHnd extends WorldCountry {
           languages: const [LangSpa()],
           translations: hndCountryTranslations,
           latLng: const LatLng(15, -86.5),
-          landlocked: false,
           bordersCodes: const ["Gtm", "Slv", "Nic"],
           areaMetric: 112492,
           demonyms: const [
@@ -7463,8 +6853,6 @@ class CountryHnd extends WorldCountry {
           fifa: "HON",
           car: const Car(sign: "HN"),
           timezones: const ["UTC-06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tegucigalpa"),
             latLng: LatLng(14.1, -87.22),
@@ -7501,8 +6889,6 @@ class CountryHrv extends WorldCountry {
           codeNumeric: "191",
           codeShort: "HR",
           cioc: "CRO",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [85]),
           altSpellings: const [
@@ -7516,7 +6902,6 @@ class CountryHrv extends WorldCountry {
           languages: const [LangHrv()],
           translations: hrvCountryTranslations,
           latLng: const LatLng(45.16666666, 15.5),
-          landlocked: false,
           bordersCodes: const ["Bih", "Hun", "Mne", "Srb", "Svn"],
           areaMetric: 56594,
           demonyms: const [
@@ -7537,8 +6922,6 @@ class CountryHrv extends WorldCountry {
           fifa: "CRO",
           car: const Car(sign: "HR"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Zagreb"),
             latLng: LatLng(45.8, 16),
@@ -7580,8 +6963,6 @@ class CountryHti extends WorldCountry {
           codeNumeric: "332",
           codeShort: "HT",
           cioc: "HAI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatHtg()],
           idd: const Idd(root: 50, suffixes: [9]),
           altSpellings: const [
@@ -7595,7 +6976,6 @@ class CountryHti extends WorldCountry {
           languages: const [LangFra(), LangHat()],
           translations: htiCountryTranslations,
           latLng: const LatLng(19, -72.41666666),
-          landlocked: false,
           bordersCodes: const ["Dom"],
           areaMetric: 27750,
           demonyms: const [
@@ -7616,8 +6996,6 @@ class CountryHti extends WorldCountry {
           fifa: "HAI",
           car: const Car(sign: "RH"),
           timezones: const ["UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Port-au-Prince"),
             latLng: LatLng(18.53, -72.33),
@@ -7654,8 +7032,6 @@ class CountryHun extends WorldCountry {
           codeNumeric: "348",
           codeShort: "HU",
           cioc: "HUN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatHuf()],
           idd: const Idd(root: 3, suffixes: [6]),
           altSpellings: const ["HU"],
@@ -7697,8 +7073,6 @@ class CountryHun extends WorldCountry {
           fifa: "HUN",
           car: const Car(sign: "H"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Budapest"),
             latLng: LatLng(47.5, 19.08),
@@ -7733,8 +7107,6 @@ class CountryIdn extends WorldCountry {
           codeNumeric: "360",
           codeShort: "ID",
           cioc: "INA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatIdr()],
           idd: const Idd(root: 6, suffixes: [2]),
           altSpellings: const [
@@ -7747,7 +7119,6 @@ class CountryIdn extends WorldCountry {
           languages: const [LangInd()],
           translations: idnCountryTranslations,
           latLng: const LatLng(-5, 120),
-          landlocked: false,
           bordersCodes: const ["Tls", "Mys", "Png"],
           areaMetric: 1904569,
           demonyms: const [
@@ -7772,8 +7143,6 @@ class CountryIdn extends WorldCountry {
           fifa: "IDN",
           car: const Car(sign: "RI", isRightSide: false),
           timezones: const ["UTC+07:00", "UTC+08:00", "UTC+09:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Jakarta"),
             latLng: LatLng(-6.17, 106.82),
@@ -7811,7 +7180,6 @@ class CountryImn extends WorldCountry {
           code: "IMN",
           codeNumeric: "833",
           codeShort: "IM",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatGbp()],
@@ -7822,8 +7190,6 @@ class CountryImn extends WorldCountry {
           languages: const [LangEng(), LangGlv()],
           translations: imnCountryTranslations,
           latLng: const LatLng(54.25, -4.5),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 572,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Manx", male: "Manx"),
@@ -7834,12 +7200,8 @@ class CountryImn extends WorldCountry {
             openStreetMaps: "relation/62269",
           ),
           population: 85032,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "GBM", isRightSide: false),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Douglas"),
             latLng: LatLng(54.15, -4.48),
@@ -7887,8 +7249,6 @@ class CountryInd extends WorldCountry {
           codeNumeric: "356",
           codeShort: "IN",
           cioc: "IND",
-          independent: true,
-          unMember: true,
           currencies: const [FiatInr()],
           idd: const Idd(root: 9, suffixes: [1]),
           altSpellings: const [
@@ -7903,7 +7263,6 @@ class CountryInd extends WorldCountry {
           languages: const [LangEng(), LangHin(), LangTam()],
           translations: indCountryTranslations,
           latLng: const LatLng(20, 77),
-          landlocked: false,
           bordersCodes: const ["Bgd", "Btn", "Mmr", "Chn", "Npl", "Pak"],
           areaMetric: 3287590,
           demonyms: const [
@@ -7920,8 +7279,6 @@ class CountryInd extends WorldCountry {
           fifa: "IND",
           car: const Car(sign: "IND", isRightSide: false),
           timezones: const ["UTC+05:30"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("New Delhi"),
             latLng: LatLng(28.6, 77.2),
@@ -7955,7 +7312,6 @@ class CountryIot extends WorldCountry {
           code: "IOT",
           codeNumeric: "086",
           codeShort: "IO",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatUsd()],
@@ -7966,8 +7322,6 @@ class CountryIot extends WorldCountry {
           languages: const [LangEng()],
           translations: iotCountryTranslations,
           latLng: const LatLng(-6, 71.5),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 60,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Indian", male: "Indian"),
@@ -7978,17 +7332,13 @@ class CountryIot extends WorldCountry {
             openStreetMaps: "relation/1993867",
           ),
           population: 3000,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "GB"),
           timezones: const ["UTC+06:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Diego Garcia"),
             latLng: LatLng(-7.3, 72.4),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -8022,8 +7372,6 @@ class CountryIrl extends WorldCountry {
           codeNumeric: "372",
           codeShort: "IE",
           cioc: "IRL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [53]),
           altSpellings: const [
@@ -8037,7 +7385,6 @@ class CountryIrl extends WorldCountry {
           languages: const [LangEng(), LangGle()],
           translations: irlCountryTranslations,
           latLng: const LatLng(53, -8),
-          landlocked: false,
           bordersCodes: const ["Gbr"],
           areaMetric: 70273,
           demonyms: const [
@@ -8058,8 +7405,6 @@ class CountryIrl extends WorldCountry {
           fifa: "IRL",
           car: const Car(sign: "IRL", isRightSide: false),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Dublin"),
             latLng: LatLng(53.32, -6.23),
@@ -8097,8 +7442,6 @@ class CountryIrn extends WorldCountry {
           codeNumeric: "364",
           codeShort: "IR",
           cioc: "IRI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatIrr()],
           idd: const Idd(root: 9, suffixes: [8]),
           altSpellings: const [
@@ -8112,7 +7455,6 @@ class CountryIrn extends WorldCountry {
           languages: const [LangFas()],
           translations: irnCountryTranslations,
           latLng: const LatLng(32, 53),
-          landlocked: false,
           bordersCodes: const [
             "Afg",
             "Arm",
@@ -8141,7 +7483,6 @@ class CountryIrn extends WorldCountry {
           fifa: "IRN",
           car: const Car(sign: "IR"),
           timezones: const ["UTC+03:30"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.saturday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tehran"),
@@ -8151,7 +7492,6 @@ class CountryIrn extends WorldCountry {
             format: "##########",
             regExpPattern: r"^(\d{10})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -8179,8 +7519,6 @@ class CountryIrq extends WorldCountry {
           codeNumeric: "368",
           codeShort: "IQ",
           cioc: "IRQ",
-          independent: true,
-          unMember: true,
           currencies: const [FiatIqd()],
           idd: const Idd(root: 9, suffixes: [64]),
           altSpellings: const [
@@ -8193,7 +7531,6 @@ class CountryIrq extends WorldCountry {
           languages: const [LangAra()],
           translations: irqCountryTranslations,
           latLng: const LatLng(33, 44),
-          landlocked: false,
           bordersCodes: const ["Irn", "Jor", "Kwt", "Sau", "Syr", "Tur"],
           areaMetric: 438317,
           demonyms: const [
@@ -8214,7 +7551,6 @@ class CountryIrq extends WorldCountry {
           fifa: "IRQ",
           car: const Car(sign: "IRQ"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Baghdad"),
@@ -8249,8 +7585,6 @@ class CountryIsl extends WorldCountry {
           codeNumeric: "352",
           codeShort: "IS",
           cioc: "ISL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatIsk()],
           idd: const Idd(root: 3, suffixes: [54]),
           altSpellings: const [
@@ -8264,8 +7598,6 @@ class CountryIsl extends WorldCountry {
           languages: const [LangIsl()],
           translations: islCountryTranslations,
           latLng: const LatLng(65, -18),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 103000,
           demonyms: const [
             Demonyms(
@@ -8289,8 +7621,6 @@ class CountryIsl extends WorldCountry {
           fifa: "ISL",
           car: const Car(sign: "IS"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Reykjavik"),
             latLng: LatLng(64.15, -21.95),
@@ -8330,8 +7660,6 @@ class CountryIsr extends WorldCountry {
           codeNumeric: "376",
           codeShort: "IL",
           cioc: "ISR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatIls()],
           idd: const Idd(root: 9, suffixes: [72]),
           altSpellings: const ["IL", "State of Israel", "Medīnat Yisrā'el"],
@@ -8340,7 +7668,6 @@ class CountryIsr extends WorldCountry {
           languages: const [LangAra(), LangHeb()],
           translations: isrCountryTranslations,
           latLng: const LatLng(31.47, 35.13),
-          landlocked: false,
           bordersCodes: const ["Egy", "Jor", "Lbn", "Pse", "Syr"],
           areaMetric: 20770,
           demonyms: const [
@@ -8361,14 +7688,12 @@ class CountryIsr extends WorldCountry {
           fifa: "ISR",
           car: const Car(sign: "IL"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Jerusalem"),
             latLng: LatLng(31.77, 35.23),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -8396,8 +7721,6 @@ class CountryIta extends WorldCountry {
           codeNumeric: "380",
           codeShort: "IT",
           cioc: "ITA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [9]),
           altSpellings: const [
@@ -8410,7 +7733,6 @@ class CountryIta extends WorldCountry {
           languages: const [LangIta()],
           translations: itaCountryTranslations,
           latLng: const LatLng(42.83333333, 12.83333333),
-          landlocked: false,
           bordersCodes: const ["Aut", "Fra", "Smr", "Svn", "Che", "Vat"],
           areaMetric: 301336,
           demonyms: const [
@@ -8431,8 +7753,6 @@ class CountryIta extends WorldCountry {
           fifa: "ITA",
           car: const Car(sign: "I"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Rome"),
             latLng: LatLng(41.9, 12.48),
@@ -8466,8 +7786,6 @@ class CountryJam extends WorldCountry {
           codeNumeric: "388",
           codeShort: "JM",
           cioc: "JAM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatJmd()],
           idd: const Idd(root: 1, suffixes: [658, 876]),
           altSpellings: const ["JM"],
@@ -8476,8 +7794,6 @@ class CountryJam extends WorldCountry {
           languages: const [LangEng()],
           translations: jamCountryTranslations,
           latLng: const LatLng(18.25, -77.5),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 10991,
           demonyms: const [
             Demonyms(
@@ -8501,13 +7817,10 @@ class CountryJam extends WorldCountry {
           fifa: "JAM",
           car: const Car(sign: "JA", isRightSide: false),
           timezones: const ["UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kingston"),
             latLng: LatLng(17.99702, -76.79358),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM()],
         );
 }
@@ -8540,7 +7853,6 @@ class CountryJey extends WorldCountry {
           code: "JEY",
           codeNumeric: "832",
           codeShort: "JE",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatGbp()],
@@ -8556,8 +7868,6 @@ class CountryJey extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: jeyCountryTranslations,
           latLng: const LatLng(49.25, -2.16666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 116,
           demonyms: const [
             Demonyms(
@@ -8577,12 +7887,8 @@ class CountryJey extends WorldCountry {
             openStreetMaps: "relation/367988",
           ),
           population: 100800,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "GBJ", isRightSide: false),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Saint Helier"),
             latLng: LatLng(49.18, -2.1),
@@ -8592,7 +7898,6 @@ class CountryJey extends WorldCountry {
             regExpPattern:
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -8620,8 +7925,6 @@ class CountryJor extends WorldCountry {
           codeNumeric: "400",
           codeShort: "JO",
           cioc: "JOR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatJod()],
           idd: const Idd(root: 9, suffixes: [62]),
           altSpellings: const [
@@ -8634,7 +7937,6 @@ class CountryJor extends WorldCountry {
           languages: const [LangAra()],
           translations: jorCountryTranslations,
           latLng: const LatLng(31, 36),
-          landlocked: false,
           bordersCodes: const ["Irq", "Isr", "Pse", "Sau", "Syr"],
           areaMetric: 89342,
           demonyms: const [
@@ -8659,7 +7961,6 @@ class CountryJor extends WorldCountry {
           fifa: "JOR",
           car: const Car(sign: "HKJ"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Amman"),
@@ -8690,8 +7991,6 @@ class CountryJpn extends WorldCountry {
           codeNumeric: "392",
           codeShort: "JP",
           cioc: "JPN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatJpy()],
           idd: const Idd(root: 8, suffixes: [1]),
           altSpellings: const ["JP", "Nippon", "Nihon"],
@@ -8700,8 +7999,6 @@ class CountryJpn extends WorldCountry {
           languages: const [LangJpn()],
           translations: jpnCountryTranslations,
           latLng: const LatLng(36, 138),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 377930,
           demonyms: const [
             Demonyms(
@@ -8725,8 +8022,6 @@ class CountryJpn extends WorldCountry {
           fifa: "JPN",
           car: const Car(sign: "J", isRightSide: false),
           timezones: const ["UTC+09:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tokyo"),
             latLng: LatLng(35.68, 139.75),
@@ -8735,7 +8030,6 @@ class CountryJpn extends WorldCountry {
             format: "###-####",
             regExpPattern: r"^(\d{7})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -8768,8 +8062,6 @@ class CountryKaz extends WorldCountry {
           codeNumeric: "398",
           codeShort: "KZ",
           cioc: "KAZ",
-          independent: true,
-          unMember: true,
           currencies: const [FiatKzt()],
           idd: const Idd(root: 7, suffixes: [6, 7]),
           altSpellings: const [
@@ -8812,8 +8104,6 @@ class CountryKaz extends WorldCountry {
           fifa: "KAZ",
           car: const Car(sign: "KZ"),
           timezones: const ["UTC+05:00", "UTC+06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Nur-Sultan"),
             latLng: LatLng(51.16, 71.45),
@@ -8853,8 +8143,6 @@ class CountryKen extends WorldCountry {
           codeNumeric: "404",
           codeShort: "KE",
           cioc: "KEN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatKes()],
           idd: const Idd(root: 2, suffixes: [54]),
           altSpellings: const ["KE", "Republic of Kenya", "Jamhuri ya Kenya"],
@@ -8863,7 +8151,6 @@ class CountryKen extends WorldCountry {
           languages: const [LangEng(), LangSwa()],
           translations: kenCountryTranslations,
           latLng: const LatLng(1, 38),
-          landlocked: false,
           bordersCodes: const ["Eth", "Som", "Ssd", "Tza", "Uga"],
           areaMetric: 580367,
           demonyms: const [
@@ -8880,8 +8167,6 @@ class CountryKen extends WorldCountry {
           fifa: "KEN",
           car: const Car(sign: "EAK", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Nairobi"),
             latLng: LatLng(-1.28, 36.82),
@@ -8920,8 +8205,6 @@ class CountryKgz extends WorldCountry {
           codeNumeric: "417",
           codeShort: "KG",
           cioc: "KGZ",
-          independent: true,
-          unMember: true,
           currencies: const [FiatKgs()],
           idd: const Idd(root: 9, suffixes: [96]),
           altSpellings: const [
@@ -8957,8 +8240,6 @@ class CountryKgz extends WorldCountry {
           fifa: "KGZ",
           car: const Car(sign: "KS"),
           timezones: const ["UTC+06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bishkek"),
             latLng: LatLng(42.87, 74.6),
@@ -8993,8 +8274,6 @@ class CountryKhm extends WorldCountry {
           codeNumeric: "116",
           codeShort: "KH",
           cioc: "CAM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatKhr(), FiatUsd()],
           idd: const Idd(root: 8, suffixes: [55]),
           altSpellings: const ["KH", "Kingdom of Cambodia"],
@@ -9003,7 +8282,6 @@ class CountryKhm extends WorldCountry {
           languages: const [LangKhm()],
           translations: khmCountryTranslations,
           latLng: const LatLng(13, 105),
-          landlocked: false,
           bordersCodes: const ["Lao", "Tha", "Vnm"],
           areaMetric: 181035,
           demonyms: const [
@@ -9024,12 +8302,9 @@ class CountryKhm extends WorldCountry {
             openStreetMaps: "relation/49898",
           ),
           population: 16718971,
-          gini: null,
           fifa: "CAM",
           car: const Car(sign: "K"),
           timezones: const ["UTC+07:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Phnom Penh"),
             latLng: LatLng(11.55, 104.92),
@@ -9063,8 +8338,6 @@ class CountryKir extends WorldCountry {
           codeNumeric: "296",
           codeShort: "KI",
           cioc: "KIR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [86]),
           altSpellings: const [
@@ -9077,8 +8350,6 @@ class CountryKir extends WorldCountry {
           languages: const [LangEng()],
           translations: kirCountryTranslations,
           latLng: const LatLng(1.41666666, 173),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 811,
           demonyms: const [
             Demonyms(
@@ -9099,17 +8370,12 @@ class CountryKir extends WorldCountry {
           ),
           population: 119446,
           gini: const Gini(year: 2006, coefficient: 37),
-          fifa: null,
           car: const Car(sign: "KIR", isRightSide: false),
           timezones: const ["UTC+12:00", "UTC+13:00", "UTC+14:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("South Tarawa"),
             latLng: LatLng(1.33, 172.98),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -9137,8 +8403,6 @@ class CountryKna extends WorldCountry {
           codeNumeric: "659",
           codeShort: "KN",
           cioc: "SKN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [869]),
           altSpellings: const [
@@ -9150,8 +8414,6 @@ class CountryKna extends WorldCountry {
           languages: const [LangEng()],
           translations: knaCountryTranslations,
           latLng: const LatLng(17.33333333, -62.75),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 261,
           demonyms: const [
             Demonyms(
@@ -9171,17 +8433,13 @@ class CountryKna extends WorldCountry {
             openStreetMaps: "relation/536899",
           ),
           population: 53192,
-          gini: null,
           fifa: "SKN",
           car: const Car(sign: "KN", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Basseterre"),
             latLng: LatLng(17.3, -62.72),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM()],
         );
 }
@@ -9206,8 +8464,6 @@ class CountryKor extends WorldCountry {
           codeNumeric: "410",
           codeShort: "KR",
           cioc: "KOR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatKrw()],
           idd: const Idd(root: 8, suffixes: [2]),
           altSpellings: const [
@@ -9222,7 +8478,6 @@ class CountryKor extends WorldCountry {
           languages: const [LangKor()],
           translations: korCountryTranslations,
           latLng: const LatLng(37, 127.5),
-          landlocked: false,
           bordersCodes: const ["Prk"],
           areaMetric: 100210,
           demonyms: const [
@@ -9247,8 +8502,6 @@ class CountryKor extends WorldCountry {
           fifa: "KOR",
           car: const Car(sign: "ROK"),
           timezones: const ["UTC+09:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Seoul"),
             latLng: LatLng(37.55, 126.98),
@@ -9257,7 +8510,6 @@ class CountryKor extends WorldCountry {
             format: "SEOUL ###-###",
             regExpPattern: r"^(?:SEOUL)*(\d{6})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -9285,8 +8537,6 @@ class CountryKwt extends WorldCountry {
           codeNumeric: "414",
           codeShort: "KW",
           cioc: "KUW",
-          independent: true,
-          unMember: true,
           currencies: const [FiatKwd()],
           idd: const Idd(root: 9, suffixes: [65]),
           altSpellings: const ["KW", "State of Kuwait", "Dawlat al-Kuwait"],
@@ -9295,7 +8545,6 @@ class CountryKwt extends WorldCountry {
           languages: const [LangAra()],
           translations: kwtCountryTranslations,
           latLng: const LatLng(29.5, 45.75),
-          landlocked: false,
           bordersCodes: const ["Irq", "Sau"],
           areaMetric: 17818,
           demonyms: const [
@@ -9312,11 +8561,9 @@ class CountryKwt extends WorldCountry {
             openStreetMaps: "relation/305099",
           ),
           population: 4270563,
-          gini: null,
           fifa: "KUW",
           car: const Car(sign: "KWT"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kuwait City"),
@@ -9351,8 +8598,6 @@ class CountryLao extends WorldCountry {
           codeNumeric: "418",
           codeShort: "LA",
           cioc: "LAO",
-          independent: true,
-          unMember: true,
           currencies: const [FiatLak()],
           idd: const Idd(root: 8, suffixes: [56]),
           altSpellings: const [
@@ -9387,8 +8632,6 @@ class CountryLao extends WorldCountry {
           fifa: "LAO",
           car: const Car(sign: "LAO"),
           timezones: const ["UTC+07:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Vientiane"),
             latLng: LatLng(17.97, 102.6),
@@ -9427,8 +8670,6 @@ class CountryLbn extends WorldCountry {
           codeNumeric: "422",
           codeShort: "LB",
           cioc: "LBN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatLbp()],
           idd: const Idd(root: 9, suffixes: [61]),
           altSpellings: const [
@@ -9441,7 +8682,6 @@ class CountryLbn extends WorldCountry {
           languages: const [LangAra(), LangFra()],
           translations: lbnCountryTranslations,
           latLng: const LatLng(33.83333333, 35.83333333),
-          landlocked: false,
           bordersCodes: const ["Isr", "Syr"],
           areaMetric: 10452,
           demonyms: const [
@@ -9466,8 +8706,6 @@ class CountryLbn extends WorldCountry {
           fifa: "LBN",
           car: const Car(sign: "RL"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Beirut"),
             latLng: LatLng(33.87, 35.5),
@@ -9504,8 +8742,6 @@ class CountryLbr extends WorldCountry {
           codeNumeric: "430",
           codeShort: "LR",
           cioc: "LBR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatLrd()],
           idd: const Idd(root: 2, suffixes: [31]),
           altSpellings: const ["LR", "Republic of Liberia"],
@@ -9514,7 +8750,6 @@ class CountryLbr extends WorldCountry {
           languages: const [LangEng()],
           translations: lbrCountryTranslations,
           latLng: const LatLng(6.5, -9.5),
-          landlocked: false,
           bordersCodes: const ["Gin", "Civ", "Sle"],
           areaMetric: 111369,
           demonyms: const [
@@ -9539,8 +8774,6 @@ class CountryLbr extends WorldCountry {
           fifa: "LBR",
           car: const Car(sign: "LB"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Monrovia"),
             latLng: LatLng(6.3, -10.8),
@@ -9575,8 +8808,6 @@ class CountryLby extends WorldCountry {
           codeNumeric: "434",
           codeShort: "LY",
           cioc: "LBA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatLyd()],
           idd: const Idd(root: 2, suffixes: [18]),
           altSpellings: const ["LY", "State of Libya", "Dawlat Libya"],
@@ -9585,7 +8816,6 @@ class CountryLby extends WorldCountry {
           languages: const [LangAra()],
           translations: lbyCountryTranslations,
           latLng: const LatLng(25, 17),
-          landlocked: false,
           bordersCodes: const ["Dza", "Tcd", "Egy", "Ner", "Sdn", "Tun"],
           areaMetric: 1759540,
           demonyms: const [
@@ -9598,18 +8828,14 @@ class CountryLby extends WorldCountry {
             openStreetMaps: "relation/192758",
           ),
           population: 6871287,
-          gini: null,
           fifa: "LBY",
           car: const Car(sign: "LAR"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tripoli"),
             latLng: LatLng(32.88, 13.17),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -9637,8 +8863,6 @@ class CountryLca extends WorldCountry {
           codeNumeric: "662",
           codeShort: "LC",
           cioc: "LCA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [758]),
           altSpellings: const ["LC"],
@@ -9647,8 +8871,6 @@ class CountryLca extends WorldCountry {
           languages: const [LangEng()],
           translations: lcaCountryTranslations,
           latLng: const LatLng(13.88333333, -60.96666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 616,
           demonyms: const [
             Demonyms(
@@ -9672,13 +8894,10 @@ class CountryLca extends WorldCountry {
           fifa: "LCA",
           car: const Car(sign: "WL", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Castries"),
             latLng: LatLng(14, -61),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM()],
         );
 }
@@ -9707,8 +8926,6 @@ class CountryLie extends WorldCountry {
           codeNumeric: "438",
           codeShort: "LI",
           cioc: "LIE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatChf()],
           idd: const Idd(root: 4, suffixes: [23]),
           altSpellings: const [
@@ -9742,12 +8959,9 @@ class CountryLie extends WorldCountry {
             openStreetMaps: "relation/1155955",
           ),
           population: 38137,
-          gini: null,
           fifa: "LIE",
           car: const Car(sign: "FL"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Vaduz"),
             latLng: LatLng(47.13, 9.52),
@@ -9787,8 +9001,6 @@ class CountryLka extends WorldCountry {
           codeNumeric: "144",
           codeShort: "LK",
           cioc: "SRI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatLkr()],
           idd: const Idd(root: 9, suffixes: [4]),
           altSpellings: const [
@@ -9801,7 +9013,6 @@ class CountryLka extends WorldCountry {
           languages: const [LangSin(), LangTam()],
           translations: lkaCountryTranslations,
           latLng: const LatLng(7, 81),
-          landlocked: false,
           bordersCodes: const ["Ind"],
           areaMetric: 65610,
           demonyms: const [
@@ -9826,8 +9037,6 @@ class CountryLka extends WorldCountry {
           fifa: "SRI",
           car: const Car(sign: "CL", isRightSide: false),
           timezones: const ["UTC+05:30"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Sri Jayawardenepura Kotte"),
             latLng: LatLng(6.89, 79.9),
@@ -9866,8 +9075,6 @@ class CountryLso extends WorldCountry {
           codeNumeric: "426",
           codeShort: "LS",
           cioc: "LES",
-          independent: true,
-          unMember: true,
           currencies: const [FiatLsl(), FiatZar()],
           idd: const Idd(root: 2, suffixes: [66]),
           altSpellings: const ["LS", "Kingdom of Lesotho", "Muso oa Lesotho"],
@@ -9897,8 +9104,6 @@ class CountryLso extends WorldCountry {
           fifa: "LES",
           car: const Car(sign: "LS", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Maseru"),
             latLng: LatLng(-29.32, 27.48),
@@ -9933,8 +9138,6 @@ class CountryLtu extends WorldCountry {
           codeNumeric: "440",
           codeShort: "LT",
           cioc: "LTU",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [70]),
           altSpellings: const [
@@ -9947,7 +9150,6 @@ class CountryLtu extends WorldCountry {
           languages: const [LangLit()],
           translations: ltuCountryTranslations,
           latLng: const LatLng(56, 24),
-          landlocked: false,
           bordersCodes: const ["Blr", "Lva", "Pol", "Rus"],
           areaMetric: 65300,
           demonyms: const [
@@ -9972,8 +9174,6 @@ class CountryLtu extends WorldCountry {
           fifa: "LTU",
           car: const Car(sign: "LT"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Vilnius"),
             latLng: LatLng(54.68, 25.32),
@@ -10020,8 +9220,6 @@ class CountryLux extends WorldCountry {
           codeNumeric: "442",
           codeShort: "LU",
           cioc: "LUX",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [52]),
           altSpellings: const [
@@ -10061,8 +9259,6 @@ class CountryLux extends WorldCountry {
           fifa: "LUX",
           car: const Car(sign: "L"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Luxembourg"),
             latLng: LatLng(49.6, 6.12),
@@ -10097,8 +9293,6 @@ class CountryLva extends WorldCountry {
           codeNumeric: "428",
           codeShort: "LV",
           cioc: "LAT",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [71]),
           altSpellings: const [
@@ -10111,7 +9305,6 @@ class CountryLva extends WorldCountry {
           languages: const [LangLav()],
           translations: lvaCountryTranslations,
           latLng: const LatLng(57, 25),
-          landlocked: false,
           bordersCodes: const ["Blr", "Est", "Ltu", "Rus"],
           areaMetric: 64559,
           demonyms: const [
@@ -10128,8 +9321,6 @@ class CountryLva extends WorldCountry {
           fifa: "LVA",
           car: const Car(sign: "LV"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Riga"),
             latLng: LatLng(56.95, 24.1),
@@ -10172,7 +9363,6 @@ class CountryMac extends WorldCountry {
           code: "MAC",
           codeNumeric: "446",
           codeShort: "MO",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatMop()],
@@ -10190,7 +9380,6 @@ class CountryMac extends WorldCountry {
           languages: const [LangPor(), LangZho()],
           translations: macCountryTranslations,
           latLng: const LatLng(22.16666666, 113.55),
-          landlocked: false,
           bordersCodes: const ["Chn"],
           areaMetric: 30,
           demonyms: const [
@@ -10211,15 +9400,9 @@ class CountryMac extends WorldCountry {
             openStreetMaps: "relation/1867188",
           ),
           population: 649342,
-          gini: null,
           fifa: "MAC",
           car: const Car(sign: "MO", isRightSide: false),
           timezones: const ["UTC+08:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
-          capitalInfo: null,
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -10246,7 +9429,6 @@ class CountryMaf extends WorldCountry {
           code: "MAF",
           codeNumeric: "663",
           codeShort: "MF",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -10262,7 +9444,6 @@ class CountryMaf extends WorldCountry {
           languages: const [LangFra()],
           translations: mafCountryTranslations,
           latLng: const LatLng(18.0708, 63.0501),
-          landlocked: false,
           bordersCodes: const ["Sxm"],
           areaMetric: 53,
           demonyms: const [
@@ -10283,18 +9464,14 @@ class CountryMaf extends WorldCountry {
             openStreetMaps: "relation/63064",
           ),
           population: 38659,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Marigot"),
             latLng: LatLng(18.07, -63.08),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -10322,8 +9499,6 @@ class CountryMar extends WorldCountry {
           codeNumeric: "504",
           codeShort: "MA",
           cioc: "MAR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMad()],
           idd: const Idd(root: 2, suffixes: [12]),
           altSpellings: const [
@@ -10336,7 +9511,6 @@ class CountryMar extends WorldCountry {
           languages: const [LangAra()],
           translations: marCountryTranslations,
           latLng: const LatLng(32, -5),
-          landlocked: false,
           bordersCodes: const ["Dza", "Esh", "Esp"],
           areaMetric: 446550,
           demonyms: const [
@@ -10361,8 +9535,6 @@ class CountryMar extends WorldCountry {
           fifa: "MAR",
           car: const Car(sign: "MA"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Rabat"),
             latLng: LatLng(34.02, -6.82),
@@ -10396,8 +9568,6 @@ class CountryMco extends WorldCountry {
           codeNumeric: "492",
           codeShort: "MC",
           cioc: "MON",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [77]),
           altSpellings: const [
@@ -10410,7 +9580,6 @@ class CountryMco extends WorldCountry {
           languages: const [LangFra()],
           translations: mcoCountryTranslations,
           latLng: const LatLng(43.73333333, 7.4),
-          landlocked: false,
           bordersCodes: const ["Fra"],
           areaMetric: 2.02,
           demonyms: const [
@@ -10431,18 +9600,13 @@ class CountryMco extends WorldCountry {
             openStreetMaps: "relation/1124039",
           ),
           population: 39244,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "MC"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Monaco"),
             latLng: LatLng(43.73, 7.42),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -10470,8 +9634,6 @@ class CountryMda extends WorldCountry {
           codeNumeric: "498",
           codeShort: "MD",
           cioc: "MDA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMdl()],
           idd: const Idd(root: 3, suffixes: [73]),
           altSpellings: const [
@@ -10506,8 +9668,6 @@ class CountryMda extends WorldCountry {
           fifa: "MDA",
           car: const Car(sign: "MD"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Chișinău"),
             latLng: LatLng(47.01, 28.9),
@@ -10549,8 +9709,6 @@ class CountryMdg extends WorldCountry {
           codeNumeric: "450",
           codeShort: "MG",
           cioc: "MAD",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMga()],
           idd: const Idd(root: 2, suffixes: [61]),
           altSpellings: const [
@@ -10564,8 +9722,6 @@ class CountryMdg extends WorldCountry {
           languages: const [LangFra(), LangMlg()],
           translations: mdgCountryTranslations,
           latLng: const LatLng(-20, 47),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 587041,
           demonyms: const [
             Demonyms(
@@ -10589,8 +9745,6 @@ class CountryMdg extends WorldCountry {
           fifa: "MAD",
           car: const Car(sign: "RM"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Antananarivo"),
             latLng: LatLng(-18.92, 47.52),
@@ -10625,8 +9779,6 @@ class CountryMdv extends WorldCountry {
           codeNumeric: "462",
           codeShort: "MV",
           cioc: "MDV",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMvr()],
           idd: const Idd(root: 9, suffixes: [60]),
           altSpellings: const [
@@ -10640,8 +9792,6 @@ class CountryMdv extends WorldCountry {
           languages: const [LangDiv()],
           translations: mdvCountryTranslations,
           latLng: const LatLng(3.25, 73),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 300,
           demonyms: const [
             Demonyms(
@@ -10665,7 +9815,6 @@ class CountryMdv extends WorldCountry {
           fifa: "MDV",
           car: const Car(sign: "MV", isRightSide: false),
           timezones: const ["UTC+05:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Malé"),
@@ -10700,8 +9849,6 @@ class CountryMex extends WorldCountry {
           codeNumeric: "484",
           codeShort: "MX",
           cioc: "MEX",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMxn()],
           idd: const Idd(root: 5, suffixes: [2]),
           altSpellings: const [
@@ -10715,7 +9862,6 @@ class CountryMex extends WorldCountry {
           languages: const [LangSpa()],
           translations: mexCountryTranslations,
           latLng: const LatLng(23, -102),
-          landlocked: false,
           bordersCodes: const ["Blz", "Gtm", "Usa"],
           areaMetric: 1964375,
           demonyms: const [
@@ -10736,8 +9882,6 @@ class CountryMex extends WorldCountry {
           fifa: "MEX",
           car: const Car(sign: "MEX"),
           timezones: const ["UTC-08:00", "UTC-07:00", "UTC-06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Mexico City"),
             latLng: LatLng(19.43, -99.13),
@@ -10776,8 +9920,6 @@ class CountryMhl extends WorldCountry {
           codeNumeric: "584",
           codeShort: "MH",
           cioc: "MHL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUsd()],
           idd: const Idd(root: 6, suffixes: [92]),
           altSpellings: const [
@@ -10790,8 +9932,6 @@ class CountryMhl extends WorldCountry {
           languages: const [LangEng(), LangMah()],
           translations: mhlCountryTranslations,
           latLng: const LatLng(9, 168),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 181,
           demonyms: const [
             Demonyms(
@@ -10811,18 +9951,12 @@ class CountryMhl extends WorldCountry {
             openStreetMaps: "relation/571771",
           ),
           population: 59194,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "MH"),
           timezones: const ["UTC+12:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Majuro"),
             latLng: LatLng(7.1, 171.38),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -10850,8 +9984,6 @@ class CountryMkd extends WorldCountry {
           codeNumeric: "807",
           codeShort: "MK",
           cioc: "MKD",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMkd()],
           idd: const Idd(root: 3, suffixes: [89]),
           altSpellings: const [
@@ -10891,8 +10023,6 @@ class CountryMkd extends WorldCountry {
           fifa: "MKD",
           car: const Car(sign: "MK"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Skopje"),
             latLng: LatLng(42, 21.43),
@@ -10927,8 +10057,6 @@ class CountryMli extends WorldCountry {
           codeNumeric: "466",
           codeShort: "ML",
           cioc: "MLI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [23]),
           altSpellings: const [
@@ -10966,13 +10094,10 @@ class CountryMli extends WorldCountry {
           fifa: "MLI",
           car: const Car(sign: "RMM"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bamako"),
             latLng: LatLng(12.65, -8),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -11006,8 +10131,6 @@ class CountryMlt extends WorldCountry {
           codeNumeric: "470",
           codeShort: "MT",
           cioc: "MLT",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [56]),
           altSpellings: const [
@@ -11020,8 +10143,6 @@ class CountryMlt extends WorldCountry {
           languages: const [LangEng(), LangMlt()],
           translations: mltCountryTranslations,
           latLng: const LatLng(35.9375, 14.3754),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 316,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Maltese", male: "Maltese"),
@@ -11037,8 +10158,6 @@ class CountryMlt extends WorldCountry {
           fifa: "MLT",
           car: const Car(sign: "M", isRightSide: false),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Valletta"),
             latLng: LatLng(35.88, 14.5),
@@ -11075,8 +10194,6 @@ class CountryMmr extends WorldCountry {
           codeNumeric: "104",
           codeShort: "MM",
           cioc: "MYA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMmk()],
           idd: const Idd(root: 9, suffixes: [5]),
           altSpellings: const [
@@ -11090,7 +10207,6 @@ class CountryMmr extends WorldCountry {
           languages: const [LangMya()],
           translations: mmrCountryTranslations,
           latLng: const LatLng(22, 98),
-          landlocked: false,
           bordersCodes: const ["Bgd", "Chn", "Ind", "Lao", "Tha"],
           areaMetric: 676578,
           demonyms: const [
@@ -11107,8 +10223,6 @@ class CountryMmr extends WorldCountry {
           fifa: "MYA",
           car: const Car(sign: "BUR"),
           timezones: const ["UTC+06:30"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Naypyidaw"),
             latLng: LatLng(19.76, 96.07),
@@ -11142,8 +10256,6 @@ class CountryMne extends WorldCountry {
           codeNumeric: "499",
           codeShort: "ME",
           cioc: "MNE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [82]),
           altSpellings: const ["ME", "Crna Gora"],
@@ -11152,7 +10264,6 @@ class CountryMne extends WorldCountry {
           languages: const [LangSrp()],
           translations: mneCountryTranslations,
           latLng: const LatLng(42.5, 19.3),
-          landlocked: false,
           bordersCodes: const ["Alb", "Bih", "Hrv", "Srb", "Unk"],
           areaMetric: 13812,
           demonyms: const [
@@ -11177,8 +10288,6 @@ class CountryMne extends WorldCountry {
           fifa: "MNE",
           car: const Car(sign: "SCG"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Podgorica"),
             latLng: LatLng(42.43, 19.27),
@@ -11212,8 +10321,6 @@ class CountryMng extends WorldCountry {
           codeNumeric: "496",
           codeShort: "MN",
           cioc: "MGL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMnt()],
           idd: const Idd(root: 9, suffixes: [76]),
           altSpellings: const ["MN"],
@@ -11243,15 +10350,12 @@ class CountryMng extends WorldCountry {
           fifa: "MNG",
           car: const Car(sign: "MGL"),
           timezones: const ["UTC+07:00", "UTC+08:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Ulan Bator"),
             latLng: LatLng(47.92, 106.91),
           ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -11283,7 +10387,6 @@ class CountryMnp extends WorldCountry {
           code: "MNP",
           codeNumeric: "580",
           codeShort: "MP",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatUsd()],
@@ -11298,8 +10401,6 @@ class CountryMnp extends WorldCountry {
           languages: const [LangCha(), LangEng()],
           translations: mnpCountryTranslations,
           latLng: const LatLng(15.2, 145.75),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 464,
           demonyms: const [
             Demonyms(
@@ -11319,18 +10420,13 @@ class CountryMnp extends WorldCountry {
             openStreetMaps: "relation/306004",
           ),
           population: 57557,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "USA"),
           timezones: const ["UTC+10:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Saipan"),
             latLng: LatLng(15.2, 145.75),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -11358,8 +10454,6 @@ class CountryMoz extends WorldCountry {
           codeNumeric: "508",
           codeShort: "MZ",
           cioc: "MOZ",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMzn()],
           idd: const Idd(root: 2, suffixes: [58]),
           altSpellings: const [
@@ -11372,7 +10466,6 @@ class CountryMoz extends WorldCountry {
           languages: const [LangPor()],
           translations: mozCountryTranslations,
           latLng: const LatLng(-18.25, 35),
-          landlocked: false,
           bordersCodes: const ["Mwi", "Zaf", "Swz", "Tza", "Zmb", "Zwe"],
           areaMetric: 801590,
           demonyms: const [
@@ -11397,8 +10490,6 @@ class CountryMoz extends WorldCountry {
           fifa: "MOZ",
           car: const Car(sign: "MOC", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Maputo"),
             latLng: LatLng(-25.95, 32.58),
@@ -11433,8 +10524,6 @@ class CountryMrt extends WorldCountry {
           codeNumeric: "478",
           codeShort: "MR",
           cioc: "MTN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMru()],
           idd: const Idd(root: 2, suffixes: [22]),
           altSpellings: const [
@@ -11447,7 +10536,6 @@ class CountryMrt extends WorldCountry {
           languages: const [LangAra()],
           translations: mrtCountryTranslations,
           latLng: const LatLng(20, -12),
-          landlocked: false,
           bordersCodes: const ["Dza", "Mli", "Sen", "Esh"],
           areaMetric: 1030700,
           demonyms: const [
@@ -11472,13 +10560,10 @@ class CountryMrt extends WorldCountry {
           fifa: "MTN",
           car: const Car(sign: "RIM"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Nouakchott"),
             latLng: LatLng(18.07, -15.97),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
 }
@@ -11506,7 +10591,6 @@ class CountryMsr extends WorldCountry {
           code: "MSR",
           codeNumeric: "500",
           codeShort: "MS",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatXcd()],
@@ -11517,8 +10601,6 @@ class CountryMsr extends WorldCountry {
           languages: const [LangEng()],
           translations: msrCountryTranslations,
           latLng: const LatLng(16.75, -62.2),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 102,
           demonyms: const [
             Demonyms(
@@ -11538,17 +10620,13 @@ class CountryMsr extends WorldCountry {
             openStreetMaps: "relation/537257",
           ),
           population: 4922,
-          gini: null,
           fifa: "MSR",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Plymouth"),
             latLng: LatLng(16.7, -62.22),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM()],
         );
 }
@@ -11576,7 +10654,6 @@ class CountryMtq extends WorldCountry {
           code: "MTQ",
           codeNumeric: "474",
           codeShort: "MQ",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -11587,8 +10664,6 @@ class CountryMtq extends WorldCountry {
           languages: const [LangFra()],
           translations: mtqCountryTranslations,
           latLng: const LatLng(14.666667, -61),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 1128,
           demonyms: const [
             Demonyms(
@@ -11608,18 +10683,13 @@ class CountryMtq extends WorldCountry {
             openStreetMaps: "relation/2473088",
           ),
           population: 378243,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Fort-de-France"),
             latLng: LatLng(14.6, -61.08),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -11652,8 +10722,6 @@ class CountryMus extends WorldCountry {
           codeNumeric: "480",
           codeShort: "MU",
           cioc: "MRI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMur()],
           idd: const Idd(root: 2, suffixes: [30]),
           altSpellings: const [
@@ -11666,8 +10734,6 @@ class CountryMus extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: musCountryTranslations,
           latLng: const LatLng(-20.28333333, 57.55),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 2040,
           demonyms: const [
             Demonyms(
@@ -11691,13 +10757,10 @@ class CountryMus extends WorldCountry {
           fifa: "MRI",
           car: const Car(sign: "MS", isRightSide: false),
           timezones: const ["UTC+04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Port Louis"),
             latLng: LatLng(-20.15, 57.48),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -11731,8 +10794,6 @@ class CountryMwi extends WorldCountry {
           codeNumeric: "454",
           codeShort: "MW",
           cioc: "MAW",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMwk()],
           idd: const Idd(root: 2, suffixes: [65]),
           altSpellings: const ["MW", "Republic of Malawi"],
@@ -11766,13 +10827,10 @@ class CountryMwi extends WorldCountry {
           fifa: "MWI",
           car: const Car(sign: "MW", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Lilongwe"),
             latLng: LatLng(-13.97, 33.78),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -11806,8 +10864,6 @@ class CountryMys extends WorldCountry {
           codeNumeric: "458",
           codeShort: "MY",
           cioc: "MAS",
-          independent: true,
-          unMember: true,
           currencies: const [FiatMyr()],
           idd: const Idd(root: 6, suffixes: [0]),
           altSpellings: const ["MY"],
@@ -11816,7 +10872,6 @@ class CountryMys extends WorldCountry {
           languages: const [LangEng(), LangMsa()],
           translations: mysCountryTranslations,
           latLng: const LatLng(2.5, 112.5),
-          landlocked: false,
           bordersCodes: const ["Brn", "Idn", "Tha"],
           areaMetric: 330803,
           demonyms: const [
@@ -11841,7 +10896,6 @@ class CountryMys extends WorldCountry {
           fifa: "MAS",
           car: const Car(sign: "MAL", isRightSide: false),
           timezones: const ["UTC+08:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kuala Lumpur"),
@@ -11875,7 +10929,6 @@ class CountryMyt extends WorldCountry {
           code: "MYT",
           codeNumeric: "175",
           codeShort: "YT",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -11890,8 +10943,6 @@ class CountryMyt extends WorldCountry {
           languages: const [LangFra()],
           translations: mytCountryTranslations,
           latLng: const LatLng(-12.83333333, 45.16666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 374,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Mahoran", male: "Mahoran"),
@@ -11907,12 +10958,9 @@ class CountryMyt extends WorldCountry {
             openStreetMaps: "relation/1259885",
           ),
           population: 226915,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC+03:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Mamoudzou"),
             latLng: LatLng(-12.78, 45.22),
@@ -11966,8 +11014,6 @@ class CountryNam extends WorldCountry {
           codeNumeric: "516",
           codeShort: "NA",
           cioc: "NAM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatNad(), FiatZar()],
           idd: const Idd(root: 2, suffixes: [64]),
           altSpellings: const ["NA", "Namibië", "Republic of Namibia"],
@@ -11983,7 +11029,6 @@ class CountryNam extends WorldCountry {
           ],
           translations: namCountryTranslations,
           latLng: const LatLng(-22, 17),
-          landlocked: false,
           bordersCodes: const ["Ago", "Bwa", "Zaf", "Tur"],
           areaMetric: 825615,
           demonyms: const [
@@ -12008,13 +11053,10 @@ class CountryNam extends WorldCountry {
           fifa: "NAM",
           car: const Car(sign: "NAM", isRightSide: false),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Windhoek"),
             latLng: LatLng(-22.57, 17.08),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -12042,7 +11084,6 @@ class CountryNcl extends WorldCountry {
           code: "NCL",
           codeNumeric: "540",
           codeShort: "NC",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatXpf()],
@@ -12053,8 +11094,6 @@ class CountryNcl extends WorldCountry {
           languages: const [LangFra()],
           translations: nclCountryTranslations,
           latLng: const LatLng(-21.5, 165.5),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 18575,
           demonyms: const [
             Demonyms(
@@ -12074,18 +11113,14 @@ class CountryNcl extends WorldCountry {
             openStreetMaps: "relation/3407643",
           ),
           population: 271960,
-          gini: null,
           fifa: "NCL",
           car: const Car(sign: "F"),
           timezones: const ["UTC+11:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Nouméa"),
             latLng: LatLng(-22.27, 166.45),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -12113,8 +11148,6 @@ class CountryNer extends WorldCountry {
           codeNumeric: "562",
           codeShort: "NE",
           cioc: "NIG",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [27]),
           altSpellings: const ["NE", "Nijar"],
@@ -12156,8 +11189,6 @@ class CountryNer extends WorldCountry {
           fifa: "NIG",
           car: const Car(sign: "RN"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Niamey"),
             latLng: LatLng(13.52, 2.12),
@@ -12191,7 +11222,6 @@ class CountryNfk extends WorldCountry {
           code: "NFK",
           codeNumeric: "574",
           codeShort: "NF",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatAud()],
@@ -12206,8 +11236,6 @@ class CountryNfk extends WorldCountry {
           languages: const [LangEng()],
           translations: nfkCountryTranslations,
           latLng: const LatLng(-29.03333333, 167.95),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 36,
           demonyms: const [
             Demonyms(
@@ -12227,18 +11255,13 @@ class CountryNfk extends WorldCountry {
             openStreetMaps: "relation/2574988",
           ),
           population: 2302,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+11:30"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kingston"),
             latLng: LatLng(-29.05, 167.97),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -12266,8 +11289,6 @@ class CountryNga extends WorldCountry {
           codeNumeric: "566",
           codeShort: "NG",
           cioc: "NGR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatNgn()],
           idd: const Idd(root: 2, suffixes: [34]),
           altSpellings: const [
@@ -12281,7 +11302,6 @@ class CountryNga extends WorldCountry {
           languages: const [LangEng()],
           translations: ngaCountryTranslations,
           latLng: const LatLng(10, 8),
-          landlocked: false,
           bordersCodes: const ["Ben", "Cmr", "Tcd", "Ner"],
           areaMetric: 923768,
           demonyms: const [
@@ -12306,8 +11326,6 @@ class CountryNga extends WorldCountry {
           fifa: "NGA",
           car: const Car(sign: "WAN"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Abuja"),
             latLng: LatLng(9.08, 7.53),
@@ -12342,8 +11360,6 @@ class CountryNic extends WorldCountry {
           codeNumeric: "558",
           codeShort: "NI",
           cioc: "NCA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatNio()],
           idd: const Idd(root: 50, suffixes: [5]),
           altSpellings: const [
@@ -12356,7 +11372,6 @@ class CountryNic extends WorldCountry {
           languages: const [LangSpa()],
           translations: nicCountryTranslations,
           latLng: const LatLng(13, -85),
-          landlocked: false,
           bordersCodes: const ["Cri", "Hnd"],
           areaMetric: 130373,
           demonyms: const [
@@ -12381,8 +11396,6 @@ class CountryNic extends WorldCountry {
           fifa: "NCA",
           car: const Car(sign: "NIC"),
           timezones: const ["UTC-06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Managua"),
             latLng: LatLng(12.13, -86.25),
@@ -12414,7 +11427,6 @@ class CountryNiu extends WorldCountry {
           code: "NIU",
           codeNumeric: "570",
           codeShort: "NU",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatNzd()],
@@ -12425,8 +11437,6 @@ class CountryNiu extends WorldCountry {
           languages: const [LangEng()],
           translations: niuCountryTranslations,
           latLng: const LatLng(-19.03333333, -169.86666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 260,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Niuean", male: "Niuean"),
@@ -12438,18 +11448,13 @@ class CountryNiu extends WorldCountry {
             openStreetMaps: "relation/1558556",
           ),
           population: 1470,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "NZ", isRightSide: false),
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Alofi"),
             latLng: LatLng(-19.02, -169.92),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -12477,8 +11482,6 @@ class CountryNld extends WorldCountry {
           codeNumeric: "528",
           codeShort: "NL",
           cioc: "NED",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [1]),
           altSpellings: const [
@@ -12492,7 +11495,6 @@ class CountryNld extends WorldCountry {
           languages: const [LangNld()],
           translations: nldCountryTranslations,
           latLng: const LatLng(52.5, 5.75),
-          landlocked: false,
           bordersCodes: const ["Bel", "Deu"],
           areaMetric: 41850,
           demonyms: const [
@@ -12513,8 +11515,6 @@ class CountryNld extends WorldCountry {
           fifa: "NED",
           car: const Car(sign: "NL"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Amsterdam"),
             latLng: LatLng(52.35, 4.92),
@@ -12556,8 +11556,6 @@ class CountryNor extends WorldCountry {
           codeNumeric: "578",
           codeShort: "NO",
           cioc: "NOR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatNok()],
           idd: const Idd(root: 4, suffixes: [7]),
           altSpellings: const [
@@ -12573,7 +11571,6 @@ class CountryNor extends WorldCountry {
           languages: const [LangNno(), LangNob()],
           translations: norCountryTranslations,
           latLng: const LatLng(62, 10),
-          landlocked: false,
           bordersCodes: const ["Fin", "Swe", "Rus"],
           areaMetric: 323802,
           demonyms: const [
@@ -12598,8 +11595,6 @@ class CountryNor extends WorldCountry {
           fifa: "NOR",
           car: const Car(sign: "N"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Oslo"),
             latLng: LatLng(59.92, 10.75),
@@ -12634,8 +11629,6 @@ class CountryNpl extends WorldCountry {
           codeNumeric: "524",
           codeShort: "NP",
           cioc: "NEP",
-          independent: true,
-          unMember: true,
           currencies: const [FiatNpr()],
           idd: const Idd(root: 9, suffixes: [77]),
           altSpellings: const [
@@ -12673,7 +11666,6 @@ class CountryNpl extends WorldCountry {
           fifa: "NEP",
           car: const Car(sign: "NEP", isRightSide: false),
           timezones: const ["UTC+05:45"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kathmandu"),
@@ -12713,8 +11705,6 @@ class CountryNru extends WorldCountry {
           codeNumeric: "520",
           codeShort: "NR",
           cioc: "NRU",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [74]),
           altSpellings: const [
@@ -12729,8 +11719,6 @@ class CountryNru extends WorldCountry {
           languages: const [LangEng(), LangNau()],
           translations: nruCountryTranslations,
           latLng: const LatLng(-0.53333333, 166.91666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 21,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Nauruan", male: "Nauruan"),
@@ -12743,17 +11731,12 @@ class CountryNru extends WorldCountry {
           ),
           population: 10834,
           gini: const Gini(year: 2012, coefficient: 34.8),
-          fifa: null,
           car: const Car(sign: "NAU", isRightSide: false),
           timezones: const ["UTC+12:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Yaren"),
             latLng: LatLng(-0.55, 166.92),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -12786,8 +11769,6 @@ class CountryNzl extends WorldCountry {
           codeNumeric: "554",
           codeShort: "NZ",
           cioc: "NZL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatNzd()],
           idd: const Idd(root: 6, suffixes: [4]),
           altSpellings: const ["NZ", "Aotearoa"],
@@ -12796,8 +11777,6 @@ class CountryNzl extends WorldCountry {
           languages: const [LangEng(), LangMri()],
           translations: nzlCountryTranslations,
           latLng: const LatLng(-41, 174),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 270467,
           demonyms: const [
             Demonyms(
@@ -12817,7 +11796,6 @@ class CountryNzl extends WorldCountry {
             openStreetMaps: "relation/556706#map=5/-46.710/172.046",
           ),
           population: 5084300,
-          gini: null,
           fifa: "NZL",
           car: const Car(sign: "NZ", isRightSide: false),
           timezones: const [
@@ -12827,15 +11805,12 @@ class CountryNzl extends WorldCountry {
             "UTC+12:45",
             "UTC+13:00",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Wellington"),
             latLng: LatLng(-41.3, 174.78),
           ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -12863,8 +11838,6 @@ class CountryOmn extends WorldCountry {
           codeNumeric: "512",
           codeShort: "OM",
           cioc: "OMA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatOmr()],
           idd: const Idd(root: 9, suffixes: [68]),
           altSpellings: const ["OM", "Sultanate of Oman", "Salṭanat ʻUmān"],
@@ -12873,7 +11846,6 @@ class CountryOmn extends WorldCountry {
           languages: const [LangAra()],
           translations: omnCountryTranslations,
           latLng: const LatLng(21, 57),
-          landlocked: false,
           bordersCodes: const ["Sau", "Are", "Yem"],
           areaMetric: 309500,
           demonyms: const [
@@ -12886,11 +11858,9 @@ class CountryOmn extends WorldCountry {
             openStreetMaps: "relation/305138",
           ),
           population: 5106622,
-          gini: null,
           fifa: "OMA",
           car: const Car(sign: "OM"),
           timezones: const ["UTC+04:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Muscat"),
@@ -12931,8 +11901,6 @@ class CountryPak extends WorldCountry {
           codeNumeric: "586",
           codeShort: "PK",
           cioc: "PAK",
-          independent: true,
-          unMember: true,
           currencies: const [FiatPkr()],
           idd: const Idd(root: 9, suffixes: [2]),
           altSpellings: const [
@@ -12946,7 +11914,6 @@ class CountryPak extends WorldCountry {
           languages: const [LangEng(), LangUrd()],
           translations: pakCountryTranslations,
           latLng: const LatLng(30, 70),
-          landlocked: false,
           bordersCodes: const ["Afg", "Chn", "Ind", "Irn"],
           areaMetric: 881912,
           demonyms: const [
@@ -12971,8 +11938,6 @@ class CountryPak extends WorldCountry {
           fifa: "PAK",
           car: const Car(sign: "PK", isRightSide: false),
           timezones: const ["UTC+05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Islamabad"),
             latLng: LatLng(33.68, 73.05),
@@ -13006,8 +11971,6 @@ class CountryPan extends WorldCountry {
           codeNumeric: "591",
           codeShort: "PA",
           cioc: "PAN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatPab(), FiatUsd()],
           idd: const Idd(root: 50, suffixes: [7]),
           altSpellings: const [
@@ -13020,7 +11983,6 @@ class CountryPan extends WorldCountry {
           languages: const [LangSpa()],
           translations: panCountryTranslations,
           latLng: const LatLng(9, -80),
-          landlocked: false,
           bordersCodes: const ["Col", "Cri"],
           areaMetric: 75417,
           demonyms: const [
@@ -13045,13 +12007,10 @@ class CountryPan extends WorldCountry {
           fifa: "PAN",
           car: const Car(sign: "PA"),
           timezones: const ["UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Panama City"),
             latLng: LatLng(8.97, -79.53),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCAIS()],
         );
 }
@@ -13079,7 +12038,6 @@ class CountryPcn extends WorldCountry {
           code: "PCN",
           codeNumeric: "612",
           codeShort: "PN",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatNzd()],
@@ -13094,8 +12052,6 @@ class CountryPcn extends WorldCountry {
           languages: const [LangEng()],
           translations: pcnCountryTranslations,
           latLng: const LatLng(-25.06666666, -130.1),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 47,
           demonyms: const [
             Demonyms(
@@ -13115,18 +12071,13 @@ class CountryPcn extends WorldCountry {
             openStreetMaps: "relation/2185375",
           ),
           population: 56,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-08:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Adamstown"),
             latLng: LatLng(-25.07, -130.08),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -13164,8 +12115,6 @@ class CountryPer extends WorldCountry {
           codeNumeric: "604",
           codeShort: "PE",
           cioc: "PER",
-          independent: true,
-          unMember: true,
           currencies: const [FiatPen()],
           idd: const Idd(root: 5, suffixes: [1]),
           altSpellings: const [
@@ -13178,7 +12127,6 @@ class CountryPer extends WorldCountry {
           languages: const [LangAym(), LangQue(), LangSpa()],
           translations: perCountryTranslations,
           latLng: const LatLng(-10, -76),
-          landlocked: false,
           bordersCodes: const ["Bol", "Bra", "Chl", "Col", "Ecu"],
           areaMetric: 1285216,
           demonyms: const [
@@ -13203,8 +12151,6 @@ class CountryPer extends WorldCountry {
           fifa: "PER",
           car: const Car(sign: "PE"),
           timezones: const ["UTC-05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Lima"),
             latLng: LatLng(-12.05, -77.05),
@@ -13243,8 +12189,6 @@ class CountryPhl extends WorldCountry {
           codeNumeric: "608",
           codeShort: "PH",
           cioc: "PHI",
-          independent: true,
-          unMember: true,
           currencies: const [FiatPhp()],
           idd: const Idd(root: 6, suffixes: [3]),
           altSpellings: const [
@@ -13257,8 +12201,6 @@ class CountryPhl extends WorldCountry {
           languages: const [LangEng(), LangTgl()],
           translations: phlCountryTranslations,
           latLng: const LatLng(13, 122),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 342353,
           demonyms: const [
             Demonyms(
@@ -13282,8 +12224,6 @@ class CountryPhl extends WorldCountry {
           fifa: "PHI",
           car: const Car(sign: "RP"),
           timezones: const ["UTC+08:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Manila"),
             latLng: LatLng(14.6, 120.97),
@@ -13318,8 +12258,6 @@ class CountryPlw extends WorldCountry {
           codeNumeric: "585",
           codeShort: "PW",
           cioc: "PLW",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUsd()],
           idd: const Idd(root: 6, suffixes: [80]),
           altSpellings: const ["PW", "Republic of Palau", "Beluu er a Belau"],
@@ -13328,8 +12266,6 @@ class CountryPlw extends WorldCountry {
           languages: const [LangEng()],
           translations: plwCountryTranslations,
           latLng: const LatLng(7.5, 134.5),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 459,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Palauan", male: "Palauan"),
@@ -13341,19 +12277,14 @@ class CountryPlw extends WorldCountry {
             openStreetMaps: "relation/571805",
           ),
           population: 18092,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "PAL"),
           timezones: const ["UTC+09:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Ngerulmud"),
             latLng: LatLng(7.5, 134.62),
           ),
           postalCode:
               const PostalCode(format: "96940", regExpPattern: r"^(96940)$"),
-          regionalBlocs: null,
         );
 }
 
@@ -13386,8 +12317,6 @@ class CountryPng extends WorldCountry {
           codeNumeric: "598",
           codeShort: "PG",
           cioc: "PNG",
-          independent: true,
-          unMember: true,
           currencies: const [FiatPgk()],
           idd: const Idd(root: 6, suffixes: [75]),
           altSpellings: const [
@@ -13400,7 +12329,6 @@ class CountryPng extends WorldCountry {
           languages: const [LangEng(), LangHmo()],
           translations: pngCountryTranslations,
           latLng: const LatLng(-6, 147),
-          landlocked: false,
           bordersCodes: const ["Idn"],
           areaMetric: 462840,
           demonyms: const [
@@ -13425,15 +12353,12 @@ class CountryPng extends WorldCountry {
           fifa: "PNG",
           car: const Car(sign: "PNG", isRightSide: false),
           timezones: const ["UTC+10:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Port Moresby"),
             latLng: LatLng(-9.45, 147.18),
           ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -13461,8 +12386,6 @@ class CountryPol extends WorldCountry {
           codeNumeric: "616",
           codeShort: "PL",
           cioc: "POL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatPln()],
           idd: const Idd(root: 4, suffixes: [8]),
           altSpellings: const [
@@ -13475,7 +12398,6 @@ class CountryPol extends WorldCountry {
           languages: const [LangPol()],
           translations: polCountryTranslations,
           latLng: const LatLng(52, 20),
-          landlocked: false,
           bordersCodes: const [
             "Blr",
             "Cze",
@@ -13504,8 +12426,6 @@ class CountryPol extends WorldCountry {
           fifa: "POL",
           car: const Car(sign: "PL"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Warsaw"),
             latLng: LatLng(52.25, 21),
@@ -13558,8 +12478,6 @@ class CountryPri extends WorldCountry {
           languages: const [LangEng(), LangSpa()],
           translations: priCountryTranslations,
           latLng: const LatLng(18.25, -66.5),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 8870,
           demonyms: const [
             Demonyms(
@@ -13579,12 +12497,10 @@ class CountryPri extends WorldCountry {
             openStreetMaps: "relation/4422604",
           ),
           population: 3194034,
-          gini: null,
           fifa: "PUR",
           car: const Car(sign: "USA"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("San Juan"),
             latLng: LatLng(18.47, -66.12),
@@ -13593,7 +12509,6 @@ class CountryPri extends WorldCountry {
             format: "#####-####",
             regExpPattern: r"^(\d{9})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -13621,8 +12536,6 @@ class CountryPrk extends WorldCountry {
           codeNumeric: "408",
           codeShort: "KP",
           cioc: "PRK",
-          independent: true,
-          unMember: true,
           currencies: const [FiatKpw()],
           idd: const Idd(root: 8, suffixes: [50]),
           altSpellings: const [
@@ -13640,7 +12553,6 @@ class CountryPrk extends WorldCountry {
           languages: const [LangKor()],
           translations: prkCountryTranslations,
           latLng: const LatLng(40, 127),
-          landlocked: false,
           bordersCodes: const ["Chn", "Kor", "Rus"],
           areaMetric: 120538,
           demonyms: const [
@@ -13661,12 +12573,9 @@ class CountryPrk extends WorldCountry {
             openStreetMaps: "relation/192734",
           ),
           population: 25778815,
-          gini: null,
           fifa: "PRK",
           car: const Car(),
           timezones: const ["UTC+09:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Pyongyang"),
             latLng: LatLng(39.02, 125.75),
@@ -13675,7 +12584,6 @@ class CountryPrk extends WorldCountry {
             format: "###-###",
             regExpPattern: r"^(\d{6})$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -13703,8 +12611,6 @@ class CountryPrt extends WorldCountry {
           codeNumeric: "620",
           codeShort: "PT",
           cioc: "POR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [51]),
           altSpellings: const [
@@ -13718,7 +12624,6 @@ class CountryPrt extends WorldCountry {
           languages: const [LangPor()],
           translations: prtCountryTranslations,
           latLng: const LatLng(39.5, -8),
-          landlocked: false,
           bordersCodes: const ["Esp"],
           areaMetric: 92090,
           demonyms: const [
@@ -13743,8 +12648,6 @@ class CountryPrt extends WorldCountry {
           fifa: "POR",
           car: const Car(sign: "P"),
           timezones: const ["UTC-01:00", "UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Lisbon"),
             latLng: LatLng(38.72, -9.13),
@@ -13786,8 +12689,6 @@ class CountryPry extends WorldCountry {
           codeNumeric: "600",
           codeShort: "PY",
           cioc: "PAR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatPyg()],
           idd: const Idd(root: 5, suffixes: [95]),
           altSpellings: const [
@@ -13826,8 +12727,6 @@ class CountryPry extends WorldCountry {
           fifa: "PAR",
           car: const Car(sign: "PY"),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Asunción"),
             latLng: LatLng(-25.28, -57.57),
@@ -13877,7 +12776,6 @@ class CountryPse extends WorldCountry {
           languages: const [LangAra()],
           translations: pseCountryTranslations,
           latLng: const LatLng(31.9, 35.2),
-          landlocked: false,
           bordersCodes: const ["Isr", "Egy", "Jor"],
           areaMetric: 6220,
           demonyms: const [
@@ -13902,13 +12800,11 @@ class CountryPse extends WorldCountry {
           fifa: "PLE",
           car: const Car(sign: "PS"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Ramallah", deJure: "Jerusalem"),
             latLng: LatLng(31.9, 35.2),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAL()],
         );
 }
@@ -13936,7 +12832,6 @@ class CountryPyf extends WorldCountry {
           code: "PYF",
           codeNumeric: "258",
           codeShort: "PF",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatXpf()],
@@ -13952,8 +12847,6 @@ class CountryPyf extends WorldCountry {
           languages: const [LangFra()],
           translations: pyfCountryTranslations,
           latLng: const LatLng(17.6797, 149.4068),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 4167,
           demonyms: const [
             Demonyms(
@@ -13973,18 +12866,13 @@ class CountryPyf extends WorldCountry {
             openStreetMaps: "relation/3412620",
           ),
           population: 280904,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC-10:00", "UTC-09:30", "UTC-09:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Papeetē"),
             latLng: LatLng(-17.53, -149.56),
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)7\d{2})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -14012,8 +12900,6 @@ class CountryQat extends WorldCountry {
           codeNumeric: "634",
           codeShort: "QA",
           cioc: "QAT",
-          independent: true,
-          unMember: true,
           currencies: const [FiatQar()],
           idd: const Idd(root: 9, suffixes: [74]),
           altSpellings: const ["QA", "State of Qatar", "Dawlat Qaṭar"],
@@ -14022,7 +12908,6 @@ class CountryQat extends WorldCountry {
           languages: const [LangAra()],
           translations: qatCountryTranslations,
           latLng: const LatLng(25.5, 51.25),
-          landlocked: false,
           bordersCodes: const ["Sau"],
           areaMetric: 11586,
           demonyms: const [
@@ -14039,17 +12924,14 @@ class CountryQat extends WorldCountry {
             openStreetMaps: "relation/305095",
           ),
           population: 2881060,
-          gini: null,
           fifa: "QAT",
           car: const Car(sign: "Q"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Doha"),
             latLng: LatLng(25.28, 51.53),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAL()],
         );
 }
@@ -14077,7 +12959,6 @@ class CountryReu extends WorldCountry {
           code: "REU",
           codeNumeric: "638",
           codeShort: "RE",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -14088,8 +12969,6 @@ class CountryReu extends WorldCountry {
           languages: const [LangFra()],
           translations: reuCountryTranslations,
           latLng: const LatLng(-21.15, 55.5),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 2511,
           demonyms: const [
             Demonyms(
@@ -14109,12 +12988,9 @@ class CountryReu extends WorldCountry {
             openStreetMaps: "relation/1785276",
           ),
           population: 840974,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC+04:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Saint-Denis"),
             latLng: LatLng(-20.88, 55.45),
@@ -14149,8 +13025,6 @@ class CountryRou extends WorldCountry {
           codeNumeric: "642",
           codeShort: "RO",
           cioc: "ROU",
-          independent: true,
-          unMember: true,
           currencies: const [FiatRon()],
           idd: const Idd(root: 4, suffixes: [0]),
           altSpellings: const ["RO", "Rumania", "Roumania", "România"],
@@ -14159,7 +13033,6 @@ class CountryRou extends WorldCountry {
           languages: const [LangRon()],
           translations: rouCountryTranslations,
           latLng: const LatLng(46, 25),
-          landlocked: false,
           bordersCodes: const ["Bgr", "Hun", "Mda", "Srb", "Ukr"],
           areaMetric: 238391,
           demonyms: const [
@@ -14180,8 +13053,6 @@ class CountryRou extends WorldCountry {
           fifa: "ROU",
           car: const Car(sign: "RO"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bucharest"),
             latLng: LatLng(44.43, 26.1),
@@ -14216,8 +13087,6 @@ class CountryRus extends WorldCountry {
           codeNumeric: "643",
           codeShort: "RU",
           cioc: "RUS",
-          independent: true,
-          unMember: true,
           currencies: const [FiatRub()],
           idd: const Idd(root: 7, suffixes: [3, 4, 5, 8, 9]),
           altSpellings: const [
@@ -14230,7 +13099,6 @@ class CountryRus extends WorldCountry {
           languages: const [LangRus()],
           translations: rusCountryTranslations,
           latLng: const LatLng(60, 100),
-          landlocked: false,
           bordersCodes: const [
             "Aze",
             "Blr",
@@ -14272,8 +13140,6 @@ class CountryRus extends WorldCountry {
             "UTC+11:00",
             "UTC+12:00",
           ],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Moscow"),
             latLng: LatLng(55.75, 37.6),
@@ -14318,8 +13184,6 @@ class CountryRwa extends WorldCountry {
           codeNumeric: "646",
           codeShort: "RW",
           cioc: "RWA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatRwf()],
           idd: const Idd(root: 2, suffixes: [50]),
           altSpellings: const [
@@ -14354,13 +13218,10 @@ class CountryRwa extends WorldCountry {
           fifa: "RWA",
           car: const Car(sign: "RWA"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kigali"),
             latLng: LatLng(-1.95, 30.05),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -14389,8 +13250,6 @@ class CountrySau extends WorldCountry {
           codeNumeric: "682",
           codeShort: "SA",
           cioc: "KSA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSar()],
           idd: const Idd(root: 9, suffixes: [66]),
           altSpellings: const [
@@ -14404,7 +13263,6 @@ class CountrySau extends WorldCountry {
           languages: const [LangAra()],
           translations: sauCountryTranslations,
           latLng: const LatLng(25, 45),
-          landlocked: false,
           bordersCodes: const [
             "Irq",
             "Jor",
@@ -14433,11 +13291,9 @@ class CountrySau extends WorldCountry {
             openStreetMaps: "relation/307584",
           ),
           population: 34813867,
-          gini: null,
           fifa: "KSA",
           car: const Car(sign: "SA"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Riyadh"),
@@ -14477,8 +13333,6 @@ class CountrySdn extends WorldCountry {
           codeNumeric: "729",
           codeShort: "SD",
           cioc: "SUD",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSdg()],
           idd: const Idd(root: 2, suffixes: [49]),
           altSpellings: const [
@@ -14491,7 +13345,6 @@ class CountrySdn extends WorldCountry {
           languages: const [LangAra(), LangEng()],
           translations: sdnCountryTranslations,
           latLng: const LatLng(15, 30),
-          landlocked: false,
           bordersCodes: const [
             "Caf",
             "Tcd",
@@ -14524,8 +13377,6 @@ class CountrySdn extends WorldCountry {
           fifa: "SDN",
           car: const Car(sign: "SUD"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Khartoum"),
             latLng: LatLng(15.6, 32.53),
@@ -14559,8 +13410,6 @@ class CountrySen extends WorldCountry {
           codeNumeric: "686",
           codeShort: "SN",
           cioc: "SEN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [21]),
           altSpellings: const [
@@ -14573,7 +13422,6 @@ class CountrySen extends WorldCountry {
           languages: const [LangFra()],
           translations: senCountryTranslations,
           latLng: const LatLng(14, -14),
-          landlocked: false,
           bordersCodes: const ["Gmb", "Gin", "Gnb", "Mli", "Mrt"],
           areaMetric: 196722,
           demonyms: const [
@@ -14598,8 +13446,6 @@ class CountrySen extends WorldCountry {
           fifa: "SEN",
           car: const Car(sign: "SN"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Dakar"),
             latLng: LatLng(14.73, -17.63),
@@ -14648,8 +13494,6 @@ class CountrySgp extends WorldCountry {
           codeNumeric: "702",
           codeShort: "SG",
           cioc: "SGP",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSgd()],
           idd: const Idd(root: 6, suffixes: [5]),
           altSpellings: const [
@@ -14663,8 +13507,6 @@ class CountrySgp extends WorldCountry {
           languages: const [LangZho(), LangEng(), LangMsa(), LangTam()],
           translations: sgpCountryTranslations,
           latLng: const LatLng(1.36666666, 103.8),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 710,
           demonyms: const [
             Demonyms(
@@ -14684,12 +13526,9 @@ class CountrySgp extends WorldCountry {
             openStreetMaps: "relation/536780",
           ),
           population: 5685807,
-          gini: null,
           fifa: "SIN",
           car: const Car(sign: "SGP", isRightSide: false),
           timezones: const ["UTC+08:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Singapore"),
             latLng: LatLng(1.28, 103.85),
@@ -14723,7 +13562,6 @@ class CountrySgs extends WorldCountry {
           code: "SGS",
           codeNumeric: "239",
           codeShort: "GS",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatShp()],
@@ -14733,12 +13571,9 @@ class CountrySgs extends WorldCountry {
             "South Georgia and the South Sandwich Islands",
           ],
           continent: const Antarctica(),
-          subregion: null,
           languages: const [LangEng()],
           translations: sgsCountryTranslations,
           latLng: const LatLng(-54.5, -37),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 3903,
           demonyms: const [
             Demonyms(
@@ -14753,17 +13588,13 @@ class CountrySgs extends WorldCountry {
             openStreetMaps: "relation/1983629",
           ),
           population: 30,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const ["UTC-02:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("King Edward Point"),
             latLng: LatLng(-54.28, -36.5),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocUSAN()],
         );
 }
@@ -14791,7 +13622,6 @@ class CountryShn extends WorldCountry {
           code: "SHN",
           codeNumeric: "654",
           codeShort: "SH",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatGbp(), FiatShp()],
@@ -14805,8 +13635,6 @@ class CountryShn extends WorldCountry {
           languages: const [LangEng()],
           translations: shnCountryTranslations,
           latLng: const LatLng(-15.95, -5.72),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 394,
           demonyms: const [
             Demonyms(
@@ -14826,12 +13654,9 @@ class CountryShn extends WorldCountry {
             openStreetMaps: "relation/4868269#map=13/-15.9657/-5.7120",
           ),
           population: 53192,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Jamestown"),
             latLng: LatLng(-15.93, -5.72),
@@ -14867,7 +13692,6 @@ class CountrySjm extends WorldCountry {
           code: "SJM",
           codeNumeric: "744",
           codeShort: "SJ",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatNok()],
@@ -14878,8 +13702,6 @@ class CountrySjm extends WorldCountry {
           languages: const [LangNor()],
           translations: sjmCountryTranslations,
           latLng: const LatLng(78, 20),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 377,
           demonyms: const [
             Demonyms(
@@ -14894,18 +13716,13 @@ class CountrySjm extends WorldCountry {
             openStreetMaps: "relation/1337397",
           ),
           population: 2562,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "N"),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Longyearbyen"),
             latLng: LatLng(78.22, 15.63),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -14933,8 +13750,6 @@ class CountrySlb extends WorldCountry {
           codeNumeric: "090",
           codeShort: "SB",
           cioc: "SOL",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSbd()],
           idd: const Idd(root: 6, suffixes: [77]),
           altSpellings: const ["SB"],
@@ -14943,8 +13758,6 @@ class CountrySlb extends WorldCountry {
           languages: const [LangEng()],
           translations: slbCountryTranslations,
           latLng: const LatLng(-8, 159),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 28896,
           demonyms: const [
             Demonyms(
@@ -14968,14 +13781,10 @@ class CountrySlb extends WorldCountry {
           fifa: "SOL",
           car: const Car(sign: "SOL", isRightSide: false),
           timezones: const ["UTC+11:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Honiara"),
             latLng: LatLng(-9.43, 159.95),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -15003,8 +13812,6 @@ class CountrySle extends WorldCountry {
           codeNumeric: "694",
           codeShort: "SL",
           cioc: "SLE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSll()],
           idd: const Idd(root: 2, suffixes: [32]),
           altSpellings: const ["SL", "Republic of Sierra Leone"],
@@ -15013,7 +13820,6 @@ class CountrySle extends WorldCountry {
           languages: const [LangEng()],
           translations: sleCountryTranslations,
           latLng: const LatLng(8.5, -11.5),
-          landlocked: false,
           bordersCodes: const ["Gin", "Lbr"],
           areaMetric: 71740,
           demonyms: const [
@@ -15038,13 +13844,10 @@ class CountrySle extends WorldCountry {
           fifa: "SLE",
           car: const Car(sign: "WAL"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Freetown"),
             latLng: LatLng(8.48, -13.23),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -15073,8 +13876,6 @@ class CountrySlv extends WorldCountry {
           codeNumeric: "222",
           codeShort: "SV",
           cioc: "ESA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUsd()],
           idd: const Idd(root: 50, suffixes: [3]),
           altSpellings: const [
@@ -15087,7 +13888,6 @@ class CountrySlv extends WorldCountry {
           languages: const [LangSpa()],
           translations: slvCountryTranslations,
           latLng: const LatLng(13.83333333, -88.91666666),
-          landlocked: false,
           bordersCodes: const ["Gtm", "Hnd"],
           areaMetric: 21041,
           demonyms: const [
@@ -15112,8 +13912,6 @@ class CountrySlv extends WorldCountry {
           fifa: "SLV",
           car: const Car(sign: "ES"),
           timezones: const ["UTC-06:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("San Salvador"),
             latLng: LatLng(13.7, -89.2),
@@ -15150,8 +13948,6 @@ class CountrySmr extends WorldCountry {
           codeNumeric: "674",
           codeShort: "SM",
           cioc: "SMR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [78]),
           altSpellings: const [
@@ -15185,19 +13981,15 @@ class CountrySmr extends WorldCountry {
             openStreetMaps: "relation/54624",
           ),
           population: 33938,
-          gini: null,
           fifa: "SMR",
           car: const Car(sign: "RSM"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("City of San Marino"),
             latLng: LatLng(43.94, 12.45),
           ),
           postalCode:
               const PostalCode(format: "4789#", regExpPattern: r"^(4789\d)$"),
-          regionalBlocs: null,
         );
 }
 
@@ -15230,8 +14022,6 @@ class CountrySom extends WorldCountry {
           codeNumeric: "706",
           codeShort: "SO",
           cioc: "SOM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSos()],
           idd: const Idd(root: 2, suffixes: [52]),
           altSpellings: const [
@@ -15246,7 +14036,6 @@ class CountrySom extends WorldCountry {
           languages: const [LangAra(), LangSom()],
           translations: somCountryTranslations,
           latLng: const LatLng(10, 49),
-          landlocked: false,
           bordersCodes: const ["Dji", "Eth", "Ken"],
           areaMetric: 637657,
           demonyms: const [
@@ -15267,8 +14056,6 @@ class CountrySom extends WorldCountry {
           fifa: "SOM",
           car: const Car(sign: "SO"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Mogadishu"),
             latLng: LatLng(2.07, 45.33),
@@ -15304,7 +14091,6 @@ class CountrySpm extends WorldCountry {
           code: "SPM",
           codeNumeric: "666",
           codeShort: "PM",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatEur()],
@@ -15318,8 +14104,6 @@ class CountrySpm extends WorldCountry {
           languages: const [LangFra()],
           translations: spmCountryTranslations,
           latLng: const LatLng(46.83333333, -56.33333333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 242,
           demonyms: const [
             Demonyms(
@@ -15339,18 +14123,14 @@ class CountrySpm extends WorldCountry {
             openStreetMaps: "relation/3406826",
           ),
           population: 6069,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC-03:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Saint-Pierre"),
             latLng: LatLng(46.77, -56.18),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(97500)$"),
-          regionalBlocs: null,
         );
 }
 
@@ -15378,8 +14158,6 @@ class CountrySrb extends WorldCountry {
           codeNumeric: "688",
           codeShort: "RS",
           cioc: "SRB",
-          independent: true,
-          unMember: true,
           currencies: const [FiatRsd()],
           idd: const Idd(root: 3, suffixes: [81]),
           altSpellings: const [
@@ -15419,8 +14197,6 @@ class CountrySrb extends WorldCountry {
           fifa: "SRB",
           car: const Car(sign: "SRB"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Belgrade"),
             latLng: LatLng(44.83, 20.5),
@@ -15455,8 +14231,6 @@ class CountrySsd extends WorldCountry {
           codeNumeric: "728",
           codeShort: "SS",
           cioc: "SSD",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSsp()],
           idd: const Idd(root: 2, suffixes: [11]),
           altSpellings: const ["SS"],
@@ -15490,13 +14264,11 @@ class CountrySsd extends WorldCountry {
           fifa: "SSD",
           car: const Car(),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Juba"),
             latLng: LatLng(4.85, 31.62),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -15525,8 +14297,6 @@ class CountryStp extends WorldCountry {
           codeNumeric: "678",
           codeShort: "ST",
           cioc: "STP",
-          independent: true,
-          unMember: true,
           currencies: const [FiatStn()],
           idd: const Idd(root: 2, suffixes: [39]),
           altSpellings: const [
@@ -15540,8 +14310,6 @@ class CountryStp extends WorldCountry {
           languages: const [LangPor()],
           translations: stpCountryTranslations,
           latLng: const LatLng(1, 7),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 964,
           demonyms: const [
             Demonyms(
@@ -15565,13 +14333,10 @@ class CountryStp extends WorldCountry {
           fifa: "STP",
           car: const Car(sign: "STP"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("São Tomé"),
             latLng: LatLng(0.34, 6.73),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -15600,8 +14365,6 @@ class CountrySur extends WorldCountry {
           codeNumeric: "740",
           codeShort: "SR",
           cioc: "SUR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSrd()],
           idd: const Idd(root: 5, suffixes: [97]),
           altSpellings: const [
@@ -15616,7 +14379,6 @@ class CountrySur extends WorldCountry {
           languages: const [LangNld()],
           translations: surCountryTranslations,
           latLng: const LatLng(4, -56),
-          landlocked: false,
           bordersCodes: const ["Bra", "Guf", "Guy"],
           areaMetric: 163820,
           demonyms: const [
@@ -15641,13 +14403,10 @@ class CountrySur extends WorldCountry {
           fifa: "SUR",
           car: const Car(sign: "SME", isRightSide: false),
           timezones: const ["UTC-03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Paramaribo"),
             latLng: LatLng(5.83, -55.17),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM(), BlocUSAN()],
         );
 }
@@ -15676,8 +14435,6 @@ class CountrySvk extends WorldCountry {
           codeNumeric: "703",
           codeShort: "SK",
           cioc: "SVK",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 4, suffixes: [21]),
           altSpellings: const [
@@ -15711,8 +14468,6 @@ class CountrySvk extends WorldCountry {
           fifa: "SVK",
           car: const Car(sign: "SK"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bratislava"),
             latLng: LatLng(48.15, 17.12),
@@ -15746,8 +14501,6 @@ class CountrySvn extends WorldCountry {
           codeNumeric: "705",
           codeShort: "SI",
           cioc: "SLO",
-          independent: true,
-          unMember: true,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [86]),
           altSpellings: const [
@@ -15760,7 +14513,6 @@ class CountrySvn extends WorldCountry {
           languages: const [LangSlv()],
           translations: svnCountryTranslations,
           latLng: const LatLng(46.11666666, 14.81666666),
-          landlocked: false,
           bordersCodes: const ["Aut", "Hrv", "Ita", "Hun"],
           areaMetric: 20273,
           demonyms: const [
@@ -15777,8 +14529,6 @@ class CountrySvn extends WorldCountry {
           fifa: "SVN",
           car: const Car(sign: "SLO"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Ljubljana"),
             latLng: LatLng(46.05, 14.52),
@@ -15815,8 +14565,6 @@ class CountrySwe extends WorldCountry {
           codeNumeric: "752",
           codeShort: "SE",
           cioc: "SWE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSek()],
           idd: const Idd(root: 4, suffixes: [6]),
           altSpellings: const [
@@ -15829,7 +14577,6 @@ class CountrySwe extends WorldCountry {
           languages: const [LangSwe()],
           translations: sweCountryTranslations,
           latLng: const LatLng(62, 15),
-          landlocked: false,
           bordersCodes: const ["Fin", "Nor"],
           areaMetric: 450295,
           demonyms: const [
@@ -15846,8 +14593,6 @@ class CountrySwe extends WorldCountry {
           fifa: "SWE",
           car: const Car(sign: "S"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Stockholm"),
             latLng: LatLng(59.33, 18.05),
@@ -15889,8 +14634,6 @@ class CountrySwz extends WorldCountry {
           codeNumeric: "748",
           codeShort: "SZ",
           cioc: "SWZ",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSzl(), FiatZar()],
           idd: const Idd(root: 2, suffixes: [68]),
           altSpellings: const [
@@ -15925,7 +14668,6 @@ class CountrySwz extends WorldCountry {
           car: const Car(sign: "SD", isRightSide: false),
           timezones: const ["UTC+02:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Mbabane"),
             latLng: LatLng(-26.32, 31.13),
@@ -15971,7 +14713,6 @@ class CountrySxm extends WorldCountry {
           code: "SXM",
           codeNumeric: "534",
           codeShort: "SX",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatAng()],
@@ -15982,7 +14723,6 @@ class CountrySxm extends WorldCountry {
           languages: const [LangEng(), LangFra(), LangNld()],
           translations: sxmCountryTranslations,
           latLng: const LatLng(18.033333, -63.05),
-          landlocked: false,
           bordersCodes: const ["Maf"],
           areaMetric: 34,
           demonyms: const [
@@ -16003,18 +14743,13 @@ class CountrySxm extends WorldCountry {
             openStreetMaps: "relation/1231790",
           ),
           population: 40812,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "SX"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Philipsburg"),
             latLng: LatLng(18.02, -63.03),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -16047,8 +14782,6 @@ class CountrySyc extends WorldCountry {
           codeNumeric: "690",
           codeShort: "SC",
           cioc: "SEY",
-          independent: true,
-          unMember: true,
           currencies: const [FiatScr()],
           idd: const Idd(root: 2, suffixes: [48]),
           altSpellings: const [
@@ -16062,8 +14795,6 @@ class CountrySyc extends WorldCountry {
           languages: const [LangEng(), LangFra()],
           translations: sycCountryTranslations,
           latLng: const LatLng(-4.58333333, 55.66666666),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 452,
           demonyms: const [
             Demonyms(
@@ -16087,13 +14818,10 @@ class CountrySyc extends WorldCountry {
           fifa: "SEY",
           car: const Car(sign: "SY", isRightSide: false),
           timezones: const ["UTC+04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Victoria"),
             latLng: LatLng(-4.62, 55.45),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -16122,8 +14850,6 @@ class CountrySyr extends WorldCountry {
           codeNumeric: "760",
           codeShort: "SY",
           cioc: "SYR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatSyp()],
           idd: const Idd(root: 9, suffixes: [63]),
           altSpellings: const [
@@ -16136,7 +14862,6 @@ class CountrySyr extends WorldCountry {
           languages: const [LangAra()],
           translations: syrCountryTranslations,
           latLng: const LatLng(35, 38),
-          landlocked: false,
           bordersCodes: const ["Irq", "Isr", "Jor", "Lbn", "Tur"],
           areaMetric: 185180,
           demonyms: const [
@@ -16153,13 +14878,10 @@ class CountrySyr extends WorldCountry {
           fifa: "SYR",
           car: const Car(sign: "SYR"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Damascus"),
             latLng: LatLng(33.5, 36.3),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAL()],
         );
 }
@@ -16187,7 +14909,6 @@ class CountryTca extends WorldCountry {
           code: "TCA",
           codeNumeric: "796",
           codeShort: "TC",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatUsd()],
@@ -16198,8 +14919,6 @@ class CountryTca extends WorldCountry {
           languages: const [LangEng()],
           translations: tcaCountryTranslations,
           latLng: const LatLng(21.75, -71.58333333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 948,
           demonyms: const [
             Demonyms(
@@ -16214,12 +14933,10 @@ class CountryTca extends WorldCountry {
             openStreetMaps: "relation/547479",
           ),
           population: 38718,
-          gini: null,
           fifa: "TCA",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Cockburn Town"),
             latLng: LatLng(21.46, -71.14),
@@ -16228,7 +14945,6 @@ class CountryTca extends WorldCountry {
             format: "TKCA 1ZZ",
             regExpPattern: r"^(TKCA 1ZZ)$",
           ),
-          regionalBlocs: null,
         );
 }
 
@@ -16261,8 +14977,6 @@ class CountryTcd extends WorldCountry {
           codeNumeric: "148",
           codeShort: "TD",
           cioc: "CHA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [35]),
           altSpellings: const [
@@ -16297,14 +15011,10 @@ class CountryTcd extends WorldCountry {
           fifa: "CHA",
           car: const Car(sign: "TCH/TD"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("N'Djamena"),
             latLng: LatLng(12.1, 15.03),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -16332,8 +15042,6 @@ class CountryTgo extends WorldCountry {
           codeNumeric: "768",
           codeShort: "TG",
           cioc: "TOG",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [28]),
           altSpellings: const [
@@ -16347,7 +15055,6 @@ class CountryTgo extends WorldCountry {
           languages: const [LangFra()],
           translations: tgoCountryTranslations,
           latLng: const LatLng(8, 1.16666666),
-          landlocked: false,
           bordersCodes: const ["Ben", "Bfa", "Gha"],
           areaMetric: 56785,
           demonyms: const [
@@ -16372,14 +15079,10 @@ class CountryTgo extends WorldCountry {
           fifa: "TOG",
           car: const Car(sign: "TG"),
           timezones: const ["UTC+00:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Lomé"),
             latLng: LatLng(6.14, 1.21),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -16407,8 +15110,6 @@ class CountryTha extends WorldCountry {
           codeNumeric: "764",
           codeShort: "TH",
           cioc: "THA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatThb()],
           idd: const Idd(root: 6, suffixes: [6]),
           altSpellings: const [
@@ -16424,7 +15125,6 @@ class CountryTha extends WorldCountry {
           languages: const [LangTha()],
           translations: thaCountryTranslations,
           latLng: const LatLng(15, 100),
-          landlocked: false,
           bordersCodes: const ["Mmr", "Khm", "Lao", "Mys"],
           areaMetric: 513120,
           demonyms: const [
@@ -16445,8 +15145,6 @@ class CountryTha extends WorldCountry {
           fifa: "THA",
           car: const Car(sign: "T", isRightSide: false),
           timezones: const ["UTC+07:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Bangkok"),
             latLng: LatLng(13.75, 100.52),
@@ -16485,8 +15183,6 @@ class CountryTjk extends WorldCountry {
           codeNumeric: "762",
           codeShort: "TJ",
           cioc: "TJK",
-          independent: true,
-          unMember: true,
           currencies: const [FiatTjs()],
           idd: const Idd(root: 9, suffixes: [92]),
           altSpellings: const [
@@ -16518,15 +15214,12 @@ class CountryTjk extends WorldCountry {
           fifa: "TJK",
           car: const Car(sign: "TJ"),
           timezones: const ["UTC+05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Dushanbe"),
             latLng: LatLng(38.55, 68.77),
           ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -16558,7 +15251,6 @@ class CountryTkl extends WorldCountry {
           code: "TKL",
           codeNumeric: "772",
           codeShort: "TK",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatNzd()],
@@ -16569,8 +15261,6 @@ class CountryTkl extends WorldCountry {
           languages: const [LangEng(), LangSmo()],
           translations: tklCountryTranslations,
           latLng: const LatLng(-9, -172),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 12,
           demonyms: const [
             Demonyms(
@@ -16585,18 +15275,13 @@ class CountryTkl extends WorldCountry {
             openStreetMaps: "relation/2186600",
           ),
           population: 1411,
-          gini: null,
-          fifa: null,
           car: const Car(isRightSide: false),
           timezones: const ["UTC+13:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Fakaofo"),
             latLng: LatLng(-9.38, -171.22),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -16629,8 +15314,6 @@ class CountryTkm extends WorldCountry {
           codeNumeric: "795",
           codeShort: "TM",
           cioc: "TKM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatTmt()],
           idd: const Idd(root: 9, suffixes: [93]),
           altSpellings: const ["TM"],
@@ -16660,15 +15343,12 @@ class CountryTkm extends WorldCountry {
           fifa: "TKM",
           car: const Car(sign: "TM"),
           timezones: const ["UTC+05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Ashgabat"),
             latLng: LatLng(37.95, 58.38),
           ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -16696,8 +15376,6 @@ class CountryTls extends WorldCountry {
           codeNumeric: "626",
           codeShort: "TL",
           cioc: "TLS",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUsd()],
           idd: const Idd(root: 6, suffixes: [70]),
           altSpellings: const [
@@ -16714,7 +15392,6 @@ class CountryTls extends WorldCountry {
           languages: const [LangPor()],
           translations: tlsCountryTranslations,
           latLng: const LatLng(-8.83333333, 125.91666666),
-          landlocked: false,
           bordersCodes: const ["Idn"],
           areaMetric: 14874,
           demonyms: const [
@@ -16740,13 +15417,10 @@ class CountryTls extends WorldCountry {
           car: const Car(sign: "TL", isRightSide: false),
           timezones: const ["UTC+09:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Dili"),
             latLng: LatLng(-8.58, 125.6),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -16779,8 +15453,6 @@ class CountryTon extends WorldCountry {
           codeNumeric: "776",
           codeShort: "TO",
           cioc: "TGA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatTop()],
           idd: const Idd(root: 6, suffixes: [76]),
           altSpellings: const ["TO"],
@@ -16789,8 +15461,6 @@ class CountryTon extends WorldCountry {
           languages: const [LangEng(), LangTon()],
           translations: tonCountryTranslations,
           latLng: const LatLng(-20, -175),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 747,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Tongan", male: "Tongan"),
@@ -16810,14 +15480,10 @@ class CountryTon extends WorldCountry {
           fifa: "TGA",
           car: const Car(sign: "TO", isRightSide: false),
           timezones: const ["UTC+13:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Nuku'alofa"),
             latLng: LatLng(-21.13, -175.2),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -16845,8 +15511,6 @@ class CountryTto extends WorldCountry {
           codeNumeric: "780",
           codeShort: "TT",
           cioc: "TTO",
-          independent: true,
-          unMember: true,
           currencies: const [FiatTtd()],
           idd: const Idd(root: 1, suffixes: [868]),
           altSpellings: const ["TT", "Republic of Trinidad and Tobago"],
@@ -16855,8 +15519,6 @@ class CountryTto extends WorldCountry {
           languages: const [LangEng()],
           translations: ttoCountryTranslations,
           latLng: const LatLng(10.6918, -61.2225),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 5130,
           demonyms: const [
             Demonyms(
@@ -16880,13 +15542,10 @@ class CountryTto extends WorldCountry {
           fifa: "TRI",
           car: const Car(sign: "TT", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Port of Spain"),
             latLng: LatLng(10.65, -61.52),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM()],
         );
 }
@@ -16915,8 +15574,6 @@ class CountryTun extends WorldCountry {
           codeNumeric: "788",
           codeShort: "TN",
           cioc: "TUN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatTnd()],
           idd: const Idd(root: 2, suffixes: [16]),
           altSpellings: const [
@@ -16929,7 +15586,6 @@ class CountryTun extends WorldCountry {
           languages: const [LangAra()],
           translations: tunCountryTranslations,
           latLng: const LatLng(34, 9),
-          landlocked: false,
           bordersCodes: const ["Dza", "Lby"],
           areaMetric: 163610,
           demonyms: const [
@@ -16954,8 +15610,6 @@ class CountryTun extends WorldCountry {
           fifa: "TUN",
           car: const Car(sign: "TN"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tunis"),
             latLng: LatLng(36.8, 10.18),
@@ -16990,8 +15644,6 @@ class CountryTur extends WorldCountry {
           codeNumeric: "792",
           codeShort: "TR",
           cioc: "TUR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatTry()],
           idd: const Idd(root: 9, suffixes: [0]),
           altSpellings: const [
@@ -17005,7 +15657,6 @@ class CountryTur extends WorldCountry {
           languages: const [LangTur()],
           translations: turCountryTranslations,
           latLng: const LatLng(39, 35),
-          landlocked: false,
           bordersCodes: const [
             "Arm",
             "Aze",
@@ -17031,14 +15682,11 @@ class CountryTur extends WorldCountry {
           fifa: "TUR",
           car: const Car(sign: "TR"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Ankara"),
             latLng: LatLng(39.93, 32.87),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -17066,8 +15714,6 @@ class CountryTuv extends WorldCountry {
           codeNumeric: "798",
           codeShort: "TV",
           cioc: "TUV",
-          independent: true,
-          unMember: true,
           currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [88]),
           altSpellings: const ["TV"],
@@ -17076,8 +15722,6 @@ class CountryTuv extends WorldCountry {
           languages: const [LangEng()],
           translations: tuvCountryTranslations,
           latLng: const LatLng(-8, 178),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 26,
           demonyms: const [
             Demonyms(
@@ -17098,17 +15742,12 @@ class CountryTuv extends WorldCountry {
           ),
           population: 11792,
           gini: const Gini(year: 2010, coefficient: 39.1),
-          fifa: null,
           car: const Car(sign: "TUV", isRightSide: false),
           timezones: const ["UTC+12:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Funafuti"),
             latLng: LatLng(-8.52, 179.22),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -17149,8 +15788,6 @@ class CountryTwn extends WorldCountry {
           languages: const [LangZho()],
           translations: twnCountryTranslations,
           latLng: const LatLng(23.5, 121),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 36193,
           demonyms: const [
             Demonyms(
@@ -17170,18 +15807,14 @@ class CountryTwn extends WorldCountry {
             openStreetMaps: "relation/449220",
           ),
           population: 23503349,
-          gini: null,
           fifa: "TPE",
           car: const Car(sign: "RC"),
           timezones: const ["UTC+08:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Taipei"),
             latLng: LatLng(25.03, 121.52),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -17214,8 +15847,6 @@ class CountryTza extends WorldCountry {
           codeNumeric: "834",
           codeShort: "TZ",
           cioc: "TAN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatTzs()],
           idd: const Idd(root: 2, suffixes: [55]),
           altSpellings: const [
@@ -17229,7 +15860,6 @@ class CountryTza extends WorldCountry {
           languages: const [LangEng(), LangSwa()],
           translations: tzaCountryTranslations,
           latLng: const LatLng(-6, 35),
-          landlocked: false,
           bordersCodes: const [
             "Bdi",
             "Cod",
@@ -17263,13 +15893,10 @@ class CountryTza extends WorldCountry {
           fifa: "TAN",
           car: const Car(sign: "EAT", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Dodoma"),
             latLng: LatLng(-6.16, 35.75),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -17303,8 +15930,6 @@ class CountryUga extends WorldCountry {
           codeNumeric: "800",
           codeShort: "UG",
           cioc: "UGA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUgx()],
           idd: const Idd(root: 2, suffixes: [56]),
           altSpellings: const [
@@ -17338,13 +15963,10 @@ class CountryUga extends WorldCountry {
           fifa: "UGA",
           car: const Car(sign: "EAU", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kampala"),
             latLng: LatLng(0.32, 32.55),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }
@@ -17373,8 +15995,6 @@ class CountryUkr extends WorldCountry {
           codeNumeric: "804",
           codeShort: "UA",
           cioc: "UKR",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUah()],
           idd: const Idd(root: 3, suffixes: [80]),
           altSpellings: const ["UA", "Ukrayina", "Украина"],
@@ -17383,7 +16003,6 @@ class CountryUkr extends WorldCountry {
           languages: const [LangUkr()],
           translations: ukrCountryTranslations,
           latLng: const LatLng(49, 32),
-          landlocked: false,
           bordersCodes: const [
             "Blr",
             "Hun",
@@ -17416,14 +16035,11 @@ class CountryUkr extends WorldCountry {
           fifa: "UKR",
           car: const Car(sign: "UA"),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kyiv"),
             latLng: LatLng(50.43, 30.52),
           ),
           postalCode: const PostalCode(),
-          regionalBlocs: null,
         );
 }
 
@@ -17450,7 +16066,6 @@ class CountryUmi extends WorldCountry {
           code: "UMI",
           codeNumeric: "581",
           codeShort: "UM",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatUsd()],
@@ -17461,8 +16076,6 @@ class CountryUmi extends WorldCountry {
           languages: const [LangEng()],
           translations: umiCountryTranslations,
           latLng: const LatLng(19.3, 166.633333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 34.2,
           demonyms: const [
             Demonyms(
@@ -17477,18 +16090,13 @@ class CountryUmi extends WorldCountry {
             openStreetMaps: "relation/6430384",
           ),
           population: 300,
-          gini: null,
-          fifa: null,
           car: const Car(),
           timezones: const ["UTC-11:00", "UTC-10:00", "UTC+12:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Washington DC"),
             latLng: LatLng(38.9072, 77.0369),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -17516,8 +16124,6 @@ class CountryUry extends WorldCountry {
           codeNumeric: "858",
           codeShort: "UY",
           cioc: "URU",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUyu()],
           idd: const Idd(root: 5, suffixes: [98]),
           altSpellings: const [
@@ -17530,7 +16136,6 @@ class CountryUry extends WorldCountry {
           languages: const [LangSpa()],
           translations: uryCountryTranslations,
           latLng: const LatLng(-33, -56),
-          landlocked: false,
           bordersCodes: const ["Arg", "Bra"],
           areaMetric: 181034,
           demonyms: const [
@@ -17555,8 +16160,6 @@ class CountryUry extends WorldCountry {
           fifa: "URU",
           car: const Car(sign: "ROU"),
           timezones: const ["UTC-03:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Montevideo"),
             latLng: LatLng(-34.85, -56.17),
@@ -17590,8 +16193,6 @@ class CountryUsa extends WorldCountry {
           codeNumeric: "840",
           codeShort: "US",
           cioc: "USA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUsd()],
           idd: const Idd(
             root: 1,
@@ -17921,7 +16522,6 @@ class CountryUsa extends WorldCountry {
           languages: const [LangEng()],
           translations: usaCountryTranslations,
           latLng: const LatLng(38, -97),
-          landlocked: false,
           bordersCodes: const ["Can", "Mex"],
           areaMetric: 9372610,
           demonyms: const [
@@ -17958,7 +16558,6 @@ class CountryUsa extends WorldCountry {
             "UTC+10:00",
             "UTC+12:00",
           ],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Washington, D.C."),
@@ -18001,8 +16600,6 @@ class CountryUzb extends WorldCountry {
           codeNumeric: "860",
           codeShort: "UZ",
           cioc: "UZB",
-          independent: true,
-          unMember: true,
           currencies: const [FiatUzs()],
           idd: const Idd(root: 9, suffixes: [98]),
           altSpellings: const [
@@ -18037,15 +16634,12 @@ class CountryUzb extends WorldCountry {
           fifa: "UZB",
           car: const Car(sign: "UZ"),
           timezones: const ["UTC+05:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Tashkent"),
             latLng: LatLng(41.32, 69.25),
           ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -18077,8 +16671,6 @@ class CountryVat extends WorldCountry {
           code: "VAT",
           codeNumeric: "336",
           codeShort: "VA",
-          cioc: null,
-          independent: true,
           unMember: false,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [79]),
@@ -18106,18 +16698,12 @@ class CountryVat extends WorldCountry {
             openStreetMaps: "relation/36989",
           ),
           population: 451,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "V"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Vatican City"),
             latLng: LatLng(41.9, 12.45),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -18145,8 +16731,6 @@ class CountryVct extends WorldCountry {
           codeNumeric: "670",
           codeShort: "VC",
           cioc: "VIN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [784]),
           altSpellings: const ["VC"],
@@ -18155,8 +16739,6 @@ class CountryVct extends WorldCountry {
           languages: const [LangEng()],
           translations: vctCountryTranslations,
           latLng: const LatLng(13.25, -61.2),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 389,
           demonyms: const [
             Demonyms(
@@ -18176,17 +16758,13 @@ class CountryVct extends WorldCountry {
             openStreetMaps: "relation/550725",
           ),
           population: 110947,
-          gini: null,
           fifa: "VIN",
           car: const Car(sign: "WV", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Kingstown"),
             latLng: LatLng(13.13, -61.22),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCARICOM()],
         );
 }
@@ -18215,8 +16793,6 @@ class CountryVen extends WorldCountry {
           codeNumeric: "862",
           codeShort: "VE",
           cioc: "VEN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatVes()],
           idd: const Idd(root: 5, suffixes: [8]),
           altSpellings: const [
@@ -18230,7 +16806,6 @@ class CountryVen extends WorldCountry {
           languages: const [LangSpa()],
           translations: venCountryTranslations,
           latLng: const LatLng(8, -66),
-          landlocked: false,
           bordersCodes: const ["Bra", "Col", "Guy"],
           areaMetric: 916445,
           demonyms: const [
@@ -18255,8 +16830,6 @@ class CountryVen extends WorldCountry {
           fifa: "VEN",
           car: const Car(sign: "YV"),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Caracas"),
             latLng: LatLng(10.48, -66.87),
@@ -18301,8 +16874,6 @@ class CountryVgb extends WorldCountry {
           languages: const [LangEng()],
           translations: vgbCountryTranslations,
           latLng: const LatLng(18.431383, -64.62305),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 151,
           demonyms: const [
             Demonyms(
@@ -18317,18 +16888,13 @@ class CountryVgb extends WorldCountry {
             openStreetMaps: "relation/285454",
           ),
           population: 30237,
-          gini: null,
           fifa: "VGB",
           car: const Car(sign: "BVI", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Road Town"),
             latLng: LatLng(18.42, -64.62),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -18366,8 +16932,6 @@ class CountryVir extends WorldCountry {
           languages: const [LangEng()],
           translations: virCountryTranslations,
           latLng: const LatLng(18.35, -64.933333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 347,
           demonyms: const [
             Demonyms(
@@ -18382,18 +16946,14 @@ class CountryVir extends WorldCountry {
             openStreetMaps: "relation/286898",
           ),
           population: 106290,
-          gini: null,
           fifa: "VIR",
           car: const Car(sign: "USA"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Charlotte Amalie"),
             latLng: LatLng(18.35, -64.93),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -18421,8 +16981,6 @@ class CountryVnm extends WorldCountry {
           codeNumeric: "704",
           codeShort: "VN",
           cioc: "VIE",
-          independent: true,
-          unMember: true,
           currencies: const [FiatVnd()],
           idd: const Idd(root: 8, suffixes: [4]),
           altSpellings: const [
@@ -18436,7 +16994,6 @@ class CountryVnm extends WorldCountry {
           languages: const [LangVie()],
           translations: vnmCountryTranslations,
           latLng: const LatLng(16.16666666, 107.83333333),
-          landlocked: false,
           bordersCodes: const ["Khm", "Chn", "Lao"],
           areaMetric: 331212,
           demonyms: const [
@@ -18461,8 +17018,6 @@ class CountryVnm extends WorldCountry {
           fifa: "VIE",
           car: const Car(sign: "VN"),
           timezones: const ["UTC+07:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Hanoi"),
             latLng: LatLng(21.03, 105.85),
@@ -18507,8 +17062,6 @@ class CountryVut extends WorldCountry {
           codeNumeric: "548",
           codeShort: "VU",
           cioc: "VAN",
-          independent: true,
-          unMember: true,
           currencies: const [FiatVuv()],
           idd: const Idd(root: 6, suffixes: [78]),
           altSpellings: const [
@@ -18522,8 +17075,6 @@ class CountryVut extends WorldCountry {
           languages: const [LangBis(), LangEng(), LangFra()],
           translations: vutCountryTranslations,
           latLng: const LatLng(-16, 167),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 12189,
           demonyms: const [
             Demonyms(
@@ -18547,14 +17098,10 @@ class CountryVut extends WorldCountry {
           fifa: "VAN",
           car: const Car(sign: "VU"),
           timezones: const ["UTC+11:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Port Vila"),
             latLng: LatLng(-17.73, 168.32),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -18581,7 +17128,6 @@ class CountryWlf extends WorldCountry {
           code: "WLF",
           codeNumeric: "876",
           codeShort: "WF",
-          cioc: null,
           independent: false,
           unMember: false,
           currencies: const [FiatXpf()],
@@ -18596,8 +17142,6 @@ class CountryWlf extends WorldCountry {
           languages: const [LangFra()],
           translations: wlfCountryTranslations,
           latLng: const LatLng(-13.3, -176.2),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 142,
           demonyms: const [
             Demonyms(
@@ -18612,18 +17156,14 @@ class CountryWlf extends WorldCountry {
             openStreetMaps: "relation/3412448",
           ),
           population: 11750,
-          gini: null,
-          fifa: null,
           car: const Car(sign: "F"),
           timezones: const ["UTC+12:00"],
           hasCoatOfArms: false,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Mata-Utu"),
             latLng: LatLng(-13.95, -171.93),
           ),
           postalCode: const PostalCode(regExpPattern: r"^(986\d{2})$"),
-          regionalBlocs: null,
         );
 }
 
@@ -18656,8 +17196,6 @@ class CountryWsm extends WorldCountry {
           codeNumeric: "882",
           codeShort: "WS",
           cioc: "SAM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatWst()],
           idd: const Idd(root: 6, suffixes: [85]),
           altSpellings: const [
@@ -18670,8 +17208,6 @@ class CountryWsm extends WorldCountry {
           languages: const [LangEng(), LangSmo()],
           translations: wsmCountryTranslations,
           latLng: const LatLng(-13.58333333, -172.33333333),
-          landlocked: false,
-          bordersCodes: null,
           areaMetric: 2842,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Samoan", male: "Samoan"),
@@ -18687,14 +17223,10 @@ class CountryWsm extends WorldCountry {
           fifa: "SAM",
           car: const Car(sign: "WS", isRightSide: false),
           timezones: const ["UTC+13:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Apia"),
             latLng: LatLng(-13.82, -171.77),
           ),
-          postalCode: null,
-          regionalBlocs: null,
         );
 }
 
@@ -18722,8 +17254,6 @@ class CountryYem extends WorldCountry {
           codeNumeric: "887",
           codeShort: "YE",
           cioc: "YEM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatYer()],
           idd: const Idd(root: 9, suffixes: [67]),
           altSpellings: const [
@@ -18736,7 +17266,6 @@ class CountryYem extends WorldCountry {
           languages: const [LangAra()],
           translations: yemCountryTranslations,
           latLng: const LatLng(15, 48),
-          landlocked: false,
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 527968,
           demonyms: const [
@@ -18757,13 +17286,11 @@ class CountryYem extends WorldCountry {
           fifa: "YEM",
           car: const Car(sign: "YAR"),
           timezones: const ["UTC+03:00"],
-          hasCoatOfArms: true,
           startOfWeek: Weekday.sunday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Sana'a"),
             latLng: LatLng(15.37, 44.19),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAL()],
         );
 }
@@ -18837,8 +17364,6 @@ class CountryZaf extends WorldCountry {
           codeNumeric: "710",
           codeShort: "ZA",
           cioc: "RSA",
-          independent: true,
-          unMember: true,
           currencies: const [FiatZar()],
           idd: const Idd(root: 2, suffixes: [7]),
           altSpellings: const [
@@ -18863,7 +17388,6 @@ class CountryZaf extends WorldCountry {
           ],
           translations: zafCountryTranslations,
           latLng: const LatLng(-29, 24),
-          landlocked: false,
           bordersCodes: const ["Bwa", "Lso", "Moz", "Nam", "Swz", "Zwe"],
           areaMetric: 1221037,
           demonyms: const [
@@ -18888,8 +17412,6 @@ class CountryZaf extends WorldCountry {
           fifa: "RSA",
           car: const Car(sign: "ZA", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital(
               "Pretoria",
@@ -18928,8 +17450,6 @@ class CountryZmb extends WorldCountry {
           codeNumeric: "894",
           codeShort: "ZM",
           cioc: "ZAM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatZmw()],
           idd: const Idd(root: 2, suffixes: [60]),
           altSpellings: const ["ZM", "Republic of Zambia"],
@@ -18968,8 +17488,6 @@ class CountryZmb extends WorldCountry {
           fifa: "ZAM",
           car: const Car(sign: "RNR", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Lusaka"),
             latLng: LatLng(-15.42, 28.28),
@@ -19023,8 +17541,6 @@ class CountryZwe extends WorldCountry {
           codeNumeric: "716",
           codeShort: "ZW",
           cioc: "ZIM",
-          independent: true,
-          unMember: true,
           currencies: const [FiatGbp(), FiatZwl()],
           idd: const Idd(root: 2, suffixes: [63]),
           altSpellings: const ["ZW", "Republic of Zimbabwe"],
@@ -19068,13 +17584,10 @@ class CountryZwe extends WorldCountry {
           fifa: "ZIM",
           car: const Car(sign: "ZW", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Harare"),
             latLng: LatLng(-17.82, 31.03),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocAU()],
         );
 }

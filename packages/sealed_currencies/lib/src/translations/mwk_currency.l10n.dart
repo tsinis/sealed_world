@@ -127,11 +127,7 @@ const mwkCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মালাউইয়ান কওয়াচ"),
   TranslatedName(LangBre(), name: "kwacha Malawi"),
   TranslatedName(LangBos(), name: "Malavijska kvača"),
-  TranslatedName(
-    LangBos(),
-    name: "Малавијска квача",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Малавијска квача", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "kwacha malawià"),
   TranslatedName(LangChe(), name: "Малавин квача"),
   TranslatedName(LangCes(), name: "malawijská kwacha"),

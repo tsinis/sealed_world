@@ -1,5 +1,5 @@
 import "dart:math";
-import "dart:ui" show Canvas, Color, Size;
+import "dart:ui" show Color, Size;
 
 import "package:flutter/foundation.dart";
 
@@ -45,19 +45,6 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// Returns a list of custom colors.
   @protected
   List<Color> get customColors => customProperties.otherColors;
-
-  /// Paints the custom flag elements on the given canvas and size.
-  ///
-  /// This method should be overridden by subclasses to provide custom painting
-  /// logic.
-  ///
-  /// - [canvas]: The canvas on which to paint.
-  /// - [size]: The size of the area to paint.
-  ///
-  /// Returns a [FlagParentBounds] object representing the bounds of the painted
-  /// elements.
-  @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size);
 
   /// Adjusts the size of the child element based on the aspect ratio.
   ///
