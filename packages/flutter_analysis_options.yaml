@@ -3,12 +3,8 @@ include: analysis_options.yaml
 dart_code_metrics:
   rules:
     # Disabled:
-    - no-magic-string: false # Packages contain a lot of strings.
-    - prefer-prefixed-global-constants: false # This will be a breaking change.
-    - no-equal-arguments: false # Conflicts with CustomPainters.
     - avoid-duplicate-cascades: false # Conflicts with CustomPainters.
     # Enabled:
-    - prefer-correct-throws: true # Flutter SDK provides access to meta.
     - avoid-long-files:
         exclude:
           - lib/**/*_painter.dart
@@ -16,30 +12,13 @@ dart_code_metrics:
         similarity-threshold: 0.8
         ignored-names:
           - path
-    - always-remove-listener: true
-    - avoid-border-all: true
-    - avoid-expanded-as-spacer: true
-    - avoid-returning-widgets: true
-    - avoid-shrink-wrap-in-lists: true
-    - avoid-unnecessary-setstate: true
-    - avoid-wrapping-in-padding: true
-    - check-for-equals-in-render-object-setters: true
-    - consistent-update-render-object: true
-    - prefer-const-border-radius: true
-    - prefer-correct-edge-insets-constructor: true
-    - prefer-define-hero-tag: true
-    - prefer-extracting-callbacks: true
-    - prefer-intl-name: true
-    - prefer-single-widget-per-file: true
-    - prefer-using-list-view: true
-    - provide-correct-intl-args: true
-    - use-setstate-synchronously: true
 
 linter:
   rules:
     avoid_equals_and_hash_code_on_mutable_classes: true
     avoid_unnecessary_containers: true
     avoid_web_libraries_in_flutter: true
+    diagnostic_describe_all_properties: false # TODO? Enable and fix this in the far-future.
     no_logic_in_create_state: true
     sized_box_for_whitespace: true
     sized_box_shrink_expand: true
@@ -49,6 +28,3 @@ linter:
     use_decorated_box: true
     use_full_hex_values_for_flutter_colors: true
     use_key_in_widget_constructors: true
-
-    # TODO? Enable and fix this in the far-future.
-    diagnostic_describe_all_properties: false

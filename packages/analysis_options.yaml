@@ -61,28 +61,28 @@ dart_code_metrics:
     - test/**
   rules:
     # Disabled:
+    - arguments-ordering: false # This will be a breaking change.
+    - avoid-collection-equality-checks: false # Doesn't work for models exclude.
+    - avoid-collection-mutating-methods: false # Mostly false positives.
+    - avoid-duplicate-collection-elements: false # They are being used on purpose.
+    - avoid-ignoring-return-values: false # Mostly, collection methods are ignored.
     - avoid-inferrable-type-arguments: false # Against prefer-explicit-type-arguments.
+    - avoid-long-files: false # A lot of data and collections.
+    - avoid-long-functions: false # Cannot get exclude to work with tests...
+    - avoid-nullable-interpolation: false # Doesn't work for toString() methods.
+    - avoid-unsafe-collection-methods: false # They are being used on purpose.
     - enum-constants-ordering: false # This might be a breaking change.
-    - no-magic-string: false # Packages contain a lot of strings.
+    - match-getter-setter-field-names: false # Most of those are just aliases.
+    - no-equal-arguments: false # Not our use-case here.
     - no-magic-number: false # Packages contain a lot of numbers.
+    - no-magic-string: false # Packages contain a lot of strings.
+    - parameters-ordering: false # This will be a breaking change.
+    - prefer-boolean-prefixes: false # This will be a breaking change.
+    - prefer-correct-throws: false # No meta in Dart packages.
+    - prefer-explicit-parameter-names: false # This will be dev. defined.
     - prefer-prefixed-global-constants: false # This will be a breaking change.
     - prefer-single-declaration-per-file: false # Data is stored in one file.
-    - parameters-ordering: false # This will be a breaking change.
     - prefer-test-matchers: false # Introduces coupling in tests.
-    - prefer-boolean-prefixes: false # This will be a breaking change.
-    - avoid-unsafe-collection-methods: false # They are being used on purpose.
-    - avoid-duplicate-collection-elements: false # They are being used on purpose.
-    - arguments-ordering: false # This will be a breaking change.
-    - avoid-long-files: false # A lot of data and collections.
-    - prefer-explicit-parameter-names: false # This will be dev. defined.
-    - avoid-ignoring-return-values: false # Mostly, collection methods are ignored.
-    - avoid-nullable-interpolation: false # Doesn't work for toString() methods.
-    - avoid-long-functions: false # Cannot get exclude to work with tests...
-    - avoid-collection-equality-checks: false # Doesn't work for models exclude.
-    - match-getter-setter-field-names: false # Most of those are just aliases.
-    - avoid-collection-mutating-methods: false # Mostly false positives.
-    - no-equal-arguments: false # Not our use-case here.
-    - prefer-correct-throws: false # No meta in Dart packages.
     # Enabled:
     - prefer-named-parameters:
         max-number: 3
@@ -151,45 +151,6 @@ dart_code_metrics:
         exclude:
           - "**/data/**.data.dart"
           - "**/translations/**.l10n.dart"
-    - prefer-explicit-type-arguments: true
-    - avoid-banned-imports: true
-    - avoid-cascade-after-if-null: true
-    - avoid-collection-methods-with-unrelated-types: true
-    - avoid-double-slash-imports: true
-    - avoid-duplicate-exports: true
-    - avoid-dynamic: true
-    - avoid-global-state: true
-    - avoid-missing-enum-constant-in-map: true
-    - avoid-non-null-assertion: true
-    - avoid-substring: true
-    - avoid-throw-in-catch-block: true
-    - avoid-unnecessary-conditionals: true
-    - avoid-unnecessary-type-assertions: true
-    - avoid-unnecessary-type-casts: true
-    - avoid-unrelated-type-assertions: true
-    - avoid-unused-parameters: true
-    - ban-name: true
-    - binary-expression-operand-order: true
-    - double-literal-format: true
-    - list-all-equatable-fields: true
-    - newline-before-return: true
-    - no-boolean-literal-compare: true
-    - no-empty-block: true
-    - no-equal-then-else: true
-    - no-object-declaration: true
-    - prefer-async-await: true
-    - prefer-commenting-analyzer-ignores: true
-    - prefer-conditional-expressions: true
-    - prefer-correct-test-file-name: true
-    - prefer-correct-type-name: true
-    - prefer-enums-by-name: true
-    - prefer-first: true
-    - prefer-immediate-return: true
-    - prefer-iterable-of: true
-    - prefer-last: true
-    - prefer-moving-to-variable: true
-    - prefer-trailing-comma: true
-    - tag-name: true
 
 linter:
   rules:
