@@ -112,7 +112,6 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     if (builder != null) return builder(itemProperties, isDense: isDense);
 
     final maybeNameTitle =
-        // ignore: avoid-returning-widgets, allow-nullable not working.
         itemNameTranslated(itemProperties.item, itemProperties.context);
 
     return isDense ?? false

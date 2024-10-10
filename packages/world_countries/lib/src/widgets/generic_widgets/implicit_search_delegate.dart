@@ -134,7 +134,7 @@ class ImplicitSearchDelegate<T extends Object>
 
   @override
   Widget buildResults(BuildContext context) {
-    _tryClose(context);
+    _tryClose(context); // TODO! Check if this is still necessary.
 
     return buildSuggestions(context);
   }

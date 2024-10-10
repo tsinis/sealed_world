@@ -3,7 +3,7 @@
 // ignore: lines_longer_than_80_chars, Might be a breaking change.
 // ignore_for_file: long-parameter-list, avoid-nullable-parameters-with-default-values, prefer-correct-handler-name
 
-import "dart:async" show FutureOr;
+import "dart:async" show FutureOr, unawaited;
 
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
@@ -11,6 +11,7 @@ import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
+import "../../extensions/duration_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "../../interfaces/basic_picker_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
@@ -164,6 +165,7 @@ abstract class BasicPicker<T extends Translated>
   /// [SearchAnchor] widgets).
   FutureOr<Iterable<Widget>> searchSuggestions(
     BuildContext context,
+    // SDK bug fixed in v3.27.0: https://github.com/flutter/flutter/pull/155219
     SearchController controller,
   ) {
     final x = items.where(
@@ -266,11 +268,18 @@ abstract class BasicPicker<T extends Translated>
     TextInputAction textInputAction = UiConstants.textInputAction,
     ThemeData? appBarThemeData,
   }) async {
-    final delegate = ImplicitSearchDelegate<T>(
+    T? result;
+    // ignore: avoid-late-keyword, it's created on the next line...
+    late final ImplicitSearchDelegate<T> delegate;
+    delegate = ImplicitSearchDelegate<T>(
       items,
       resultsBuilder: (newContext, items) => copyWith(
         items: items,
-        onSelect: (selected) => maybeSelectAndPop(selected, newContext),
+        // ignore: prefer-extracting-function-callbacks, lazy delegate.
+        onSelect: (selected) {
+          delegate.close(newContext, selected);
+          onSelect?.call(result = selected);
+        },
         showSearchBar: false,
       ),
       searchIn: searchIn ?? defaultSearch,
@@ -289,13 +298,20 @@ abstract class BasicPicker<T extends Translated>
       textInputAction: textInputAction,
     );
 
-    final result = await showSearch<T?>(
+    // ignore: avoid-local-functions, to not create overhead.
+    void animationListener(AnimationStatus status) {
+      if (status != AnimationStatus.dismissed) return;
+      delegate.transitionAnimation.removeStatusListener(animationListener);
+      unawaited(Duration.zero.delayed(delegate.dispose));
+    }
+
+    delegate.transitionAnimation.addStatusListener(animationListener);
+    await showSearch<T?>(
       context: context,
       delegate: delegate,
       query: query,
       useRootNavigator: useRootNavigator,
     );
-    delegate.dispose();
 
     return result;
   }

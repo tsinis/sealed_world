@@ -45,10 +45,10 @@ packages:
     dependency: "direct dev"
     description:
       name: dart_code_metrics_presets
-      sha256: "2a889a92995fadaf770ee9d08792dd04ae0259029600be55554b6790f1b5da38"
+      sha256: "8190cadc2d3c78fae4ce60b627fdece56297b3fbae386440406734f6ef742b70"
       url: "https://pub.dev"
     source: hosted
-    version: "2.16.0"
+    version: "2.17.0"
   fake_async:
     dependency: transitive
     description:
@@ -95,10 +95,10 @@ packages:
     dependency: "direct dev"
     description:
       name: lints
-      sha256: "976c774dd944a42e83e2467f4cc670daef7eed6295b10b36ae8c85bcbf828235"
+      sha256: "3315600f3fb3b135be672bf4a178c55f274bebe368325ae18462c89ac1e3b413"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.0"
+    version: "5.0.0"
   matcher:
     dependency: transitive
     description:
@@ -232,5 +232,5 @@ packages:
     source: path
     version: "1.1.0"
 sdks:
-  dart: ">=3.4.4 <4.0.0"
-  flutter: ">=3.22.3"
+  dart: ">=3.5.3 <4.0.0"
+  flutter: ">=3.24.3"

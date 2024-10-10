@@ -41,7 +41,13 @@ void main() => group("$TypedLocale", () {
         test(
           "should throw assert when no iterable specified",
           () => expect(
-            () => TypedLocale.withTranslationsCache(const LangEng()),
+            () => TypedLocale.withTranslationsCache(
+              const LangEng(),
+              // ignore_for_file: avoid-passing-default-values, false-positive.
+              languages: null,
+              currencies: null,
+              countries: null,
+            ),
             throwsA(isA<AssertionError>()),
           ),
         );

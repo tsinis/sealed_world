@@ -69,7 +69,6 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
           ?.call(itemProperties, isDense: isDense) ??
       CurrencyTile.fromProperties(
         itemProperties,
-        // ignore: avoid-returning-widgets, allow-nullable not working.
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
         onPressed: (currency) => isDense ?? false
