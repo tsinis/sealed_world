@@ -54,7 +54,7 @@ void main() {
   // Distinguishes country code in translations.
   print(
     maybeCzech?.maybeTranslation(const BasicLocale(LangPor()))?.name,
-  ); // Prints tcheco.
+  ); // Prints "tcheco".
   print(
     maybeCzech
         ?.maybeTranslation(const BasicLocale(LangPor(), countryCode: "PT"))
