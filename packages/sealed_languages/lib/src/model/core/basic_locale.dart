@@ -35,6 +35,7 @@ class BasicLocale implements JsonEncodable<BasicLocale> {
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
-  String toString() =>
-      """BasicLocale(language: $language, countryCode: $countryCode, script: $script)""";
+  String toString() => "BasicLocale(${language.runtimeType}()"
+      '${countryCode == null ? '' : ', countryCode: "$countryCode"'}'
+      "${script == null ? '' : ', script: ${script.runtimeType}()'})";
 }

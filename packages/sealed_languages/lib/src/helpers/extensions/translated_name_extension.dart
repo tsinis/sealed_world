@@ -63,6 +63,5 @@ extension TranslatedNameExtension on TranslatedName {
   /// Might be useful in some cases when `name` is being used by a parent class.
   /// For example instead of `name.name` it's more natural/readable to use
   /// `name.common`.
-
   String get common => name;
 }

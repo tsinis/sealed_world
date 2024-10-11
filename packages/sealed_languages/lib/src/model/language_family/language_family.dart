@@ -1,4 +1,5 @@
 import "../../data/natural_language_families.data.dart";
+import "../../helpers/extensions/sealed_world_object_extension.dart";
 import "../../interfaces/named.dart";
 
 part "submodels/natural_language_family.dart";

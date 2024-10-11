@@ -49,7 +49,10 @@ class TranslatedName extends BasicLocale implements Named<String> {
   @override
   String toString({bool short = true}) => short
       ? name
-      : '''TranslatedName(${language.runtimeType}(), name: "$name", fullName: ${fullName == null ? fullName : '"$fullName"'}, countryCode: ${countryCode == null ? countryCode : '"$countryCode"'}, script: ${script == null ? script : '${script?.runtimeType}()'})''';
+      : 'TranslatedName(${language.runtimeType}(), name: "$name",'
+          '${fullName == null ? '' : ' fullName: "$fullName",'}'
+          '${countryCode == null ? '' : ' countryCode: "$countryCode",'}'
+          '${script == null ? '' : ' script: ${script.runtimeType}()'})';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

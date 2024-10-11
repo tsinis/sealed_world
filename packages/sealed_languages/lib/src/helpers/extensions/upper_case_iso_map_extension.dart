@@ -47,7 +47,8 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
 
     if (result != null) return result;
     throw StateError(
-      """No matching ISO $V element was found for the '$code'! Consider using the same but nullable runtime-safe methods (with a `maybe` prefix) instead.""",
+      "No matching ISO $V element was found for the '$code'! Consider using the"
+      " same but nullable runtime-safe methods (with a `maybe` prefix) instead",
     );
   }
 
@@ -99,7 +100,6 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
     if (hasSameLength) {
       return UpperCaseIsoMap(newMap, defaultValue: value, exactLength: short);
     }
-
     final longest = list.map((k) => k.length).reduce((a, b) => a > b ? a : b);
 
     return UpperCaseIsoMap(

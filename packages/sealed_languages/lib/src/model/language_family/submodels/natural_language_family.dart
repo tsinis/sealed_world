@@ -33,7 +33,7 @@ class NaturalLanguageFamily extends LanguageFamily {
     assert(families.isNotEmpty, "`families` should not be empty!");
 
     return families.firstWhere(
-      (family) => family.name.toUpperCase() == name.trim().toUpperCase(),
+      (family) => family.name.toUpperCase() == name.toUpperCaseIsoCode(),
     );
   }
 
