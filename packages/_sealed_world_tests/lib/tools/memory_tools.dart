@@ -47,6 +47,7 @@ class MemoryTools extends MemoryUsage {
       bytes == null ? 0 : (bytes / (1024 * 1024)).roundToDouble();
 
   @override
-  String toString() =>
-      """Memory(externalUsage: ${toMB(externalUsage)} MB, heapCapacity: ${toMB(heapCapacity)} MB, heapUsage: ${toMB(heapUsage)} MB)""";
+  String toString() => "Memory(externalUsage: ${toMB(externalUsage)} MB, "
+      "heapCapacity: ${toMB(heapCapacity)} MB, "
+      "heapUsage: ${toMB(heapUsage)} MB)";
 }
