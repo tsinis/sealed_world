@@ -310,7 +310,7 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
           'codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, '
           '''${bibliographicCode == null ? '' : 'bibliographicCode: "$bibliographicCode", '}'''
           "family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, "
-          "scripts: ${scripts.toUniqueInstancesString()})";
+          "scripts: ${scripts.toUniqueInstancesString()},)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

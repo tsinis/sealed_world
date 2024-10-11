@@ -52,5 +52,11 @@ class CryptoCurrency extends Currency {
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''CryptoCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : '"$symbol"'}, isMinable: $isMinable, isFork: $isFork, proofType: ${proofType == null ? proofType : '"$proofType"'}, dateAdded: $dateAdded)''';
+      : 'CryptoCurrency(code: "$code", name: "$name", '
+          'decimalMark: "$decimalMark", '
+          'thousandsSeparator: "$thousandsSeparator", '
+          '${symbol == null ? '' : 'symbol: r"$symbol", '}'
+          "isMinable: $isMinable, isFork: $isFork, "
+          '${proofType == null ? '' : 'proofType: "$proofType", '}'
+          '${dateAdded == null ? '' : 'dateAdded: "$dateAdded"'})';
 }
