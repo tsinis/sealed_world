@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-referencing-subclasses, those are static constants.
+
 part of "../currency.dart";
 
 /// A class representing fiat currency.

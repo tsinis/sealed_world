@@ -12,18 +12,15 @@ extension WorldCountryGetters on WorldCountry {
   /// Returns the ISO 3166-1 Alpha-3 code of country.
   ///
   /// Provides same data as [code].
-
   String get iso3166oneAlpha3 => code;
 
   /// Returns the ISO 3166-1 Alpha-2 code of country.
   ///
   /// Provides same data as [codeShort].
-
   String get iso3166oneAlpha2 => codeShort;
 
   /// Returns the ISO 3166-1 Numeric code of country.
   ///
   /// Provides same data as [codeNumeric].
-
   String get iso3166oneNumeric => codeNumeric;
 }

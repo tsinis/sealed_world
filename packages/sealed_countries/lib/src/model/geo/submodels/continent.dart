@@ -1,3 +1,7 @@
+// ignore_for_file: avoid-referencing-subclasses, those are static constants.
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
 import "../../../data/geo/continental_sections.data.dart";
 import "../../../data/geo/continents.data.dart";
 import "../region.dart";
@@ -36,7 +40,7 @@ class Continent extends SubRegion {
 
   /// Creates a new `Continent` object from its name.
   factory Continent.fromName(String name) => list.firstWhere(
-        (region) => region.name.toUpperCase() == name.trim().toUpperCase(),
+        (region) => region.name.toUpperCase() == name.toUpperCaseIsoCode(),
       );
 
   /// Creates a new `Continent` object from a value.

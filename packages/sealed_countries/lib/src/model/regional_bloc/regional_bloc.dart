@@ -20,11 +20,11 @@ class RegionalBloc extends WorldBloc {
   ///
   /// The `name` and `acronym` parameters are required and must not be empty.
   const RegionalBloc({
-    required String acronym,
+    required String super.acronym,
     required super.name,
     this.otherAcronyms,
     this.otherNames,
-  }) : super(acronym: acronym);
+  });
 
   /// Creates a new `RegionalBloc` object from its acronym.
   /// Returns an [RegionalBloc] object from the given [acronym].
@@ -41,15 +41,15 @@ class RegionalBloc extends WorldBloc {
     Object acronym, [
     Iterable<RegionalBloc>? blocs,
   ]) {
-    if (blocs == null) return map["$acronym"]!;
     final string = acronym.toUpperCaseIsoCode();
+    if (blocs == null) return map[string]!;
 
     return list.firstWhere((bloc) => bloc.acronym == string);
   }
 
   /// Creates a new `RegionalBloc` object from its name.
   factory RegionalBloc.fromName(String name) => list.firstWhere(
-        (bloc) => bloc.name.toUpperCase() == name.trim().toUpperCase(),
+        (bloc) => bloc.name.toUpperCase() == name.toUpperCaseIsoCode(),
       );
 
   /// Other acronyms of the regional bloc.
@@ -65,7 +65,9 @@ class RegionalBloc extends WorldBloc {
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''RegionalBloc(acronym: "$acronym", name: "$name", otherAcronyms: ${jsonEncode(otherAcronyms)}, otherNames: ${jsonEncode(otherNames)})''';
+      : 'RegionalBloc(acronym: "$acronym", name: "$name", '
+          "otherAcronyms: ${jsonEncode(otherAcronyms)}, "
+          "otherNames: ${jsonEncode(otherNames)})";
 
   /// Creates a new `RegionalBloc` object from its acronym.
   ///
@@ -84,9 +86,9 @@ class RegionalBloc extends WorldBloc {
     Object? acronym, [
     Iterable<RegionalBloc>? blocs,
   ]) {
-    if (blocs == null) return map["$acronym"];
-    final string = acronym?.toUpperCaseIsoCode();
-    if (string == null) return null;
+    if (acronym == null) return null;
+    final string = acronym.toUpperCaseIsoCode();
+    if (blocs == null) return map[string];
 
     for (final bloc in blocs) {
       if (bloc.acronym == string) return bloc;
