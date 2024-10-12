@@ -386,8 +386,8 @@ class WorldCountry extends Country
           "timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, "
           "startOfWeek: $startOfWeek, "
           """${capitalInfo == null ? '' : 'capitalInfo: ${capitalInfo?.toString(short: false)}, '}"""
-          "${postalCode == null ? '' : 'postalCode: $postalCode'}"
-          """${regionalBlocs == null ? '' : ', regionalBlocs: ${regionalBlocs?.toInstancesString()},'})""";
+          "${postalCode == null ? '' : 'postalCode: $postalCode, '}"
+          """${regionalBlocs == null ? '' : 'regionalBlocs: ${regionalBlocs?.toInstancesString()},'})""";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

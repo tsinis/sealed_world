@@ -301,11 +301,7 @@ class CountryAla extends WorldCountry {
           latLng: const LatLng(60.116667, 19.9),
           areaMetric: 1580,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Ålandish",
-              male: "Ålandish",
-            ),
+            Demonyms(language: LangEng(), female: "Ålandish", male: "Ålandish"),
             Demonyms(
               language: LangFra(),
               female: "Ålandaise",
@@ -363,11 +359,7 @@ class CountryAlb extends WorldCountry {
           bordersCodes: const ["Mne", "Grc", "Mkd", "Unk"],
           areaMetric: 28748,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Albanian",
-              male: "Albanian",
-            ),
+            Demonyms(language: LangEng(), female: "Albanian", male: "Albanian"),
             Demonyms(
               language: LangFra(),
               female: "Albanaise",
@@ -432,11 +424,7 @@ class CountryAnd extends WorldCountry {
           bordersCodes: const ["Fra", "Esp"],
           areaMetric: 468,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Andorran",
-              male: "Andorran",
-            ),
+            Demonyms(language: LangEng(), female: "Andorran", male: "Andorran"),
             Demonyms(
               language: LangFra(),
               female: "Andorrane",
@@ -499,11 +487,7 @@ class CountryAre extends WorldCountry {
           areaMetric: 83600,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Emirati", male: "Emirati"),
-            Demonyms(
-              language: LangFra(),
-              female: "Emirienne",
-              male: "Emirien",
-            ),
+            Demonyms(language: LangFra(), female: "Emirienne", male: "Emirien"),
           ],
           emoji: "🇦🇪",
           maps: const Maps(
@@ -642,11 +626,7 @@ class CountryArm extends WorldCountry {
           bordersCodes: const ["Aze", "Geo", "Irn", "Tur"],
           areaMetric: 29743,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Armenian",
-              male: "Armenian",
-            ),
+            Demonyms(language: LangEng(), female: "Armenian", male: "Armenian"),
             Demonyms(
               language: LangFra(),
               female: "Arménienne",
@@ -1045,11 +1025,7 @@ class CountryAut extends WorldCountry {
           ],
           areaMetric: 83871,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Austrian",
-              male: "Austrian",
-            ),
+            Demonyms(language: LangEng(), female: "Austrian", male: "Austrian"),
             Demonyms(
               language: LangFra(),
               female: "Autrichienne",
@@ -1340,11 +1316,7 @@ class CountryBen extends WorldCountry {
           bordersCodes: const ["Bfa", "Ner", "Nga", "Tgo"],
           areaMetric: 112622,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Beninese",
-              male: "Beninese",
-            ),
+            Demonyms(language: LangEng(), female: "Beninese", male: "Beninese"),
             Demonyms(
               language: LangFra(),
               female: "Béninoise",
@@ -1666,11 +1638,7 @@ class CountryBhr extends WorldCountry {
           latLng: const LatLng(26, 50.55),
           areaMetric: 765,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bahraini",
-              male: "Bahraini",
-            ),
+            Demonyms(language: LangEng(), female: "Bahraini", male: "Bahraini"),
             Demonyms(
               language: LangFra(),
               female: "Bahreïnienne",
@@ -1732,11 +1700,7 @@ class CountryBhs extends WorldCountry {
           latLng: const LatLng(25.0343, -77.3963),
           areaMetric: 13943,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bahamian",
-              male: "Bahamian",
-            ),
+            Demonyms(language: LangEng(), female: "Bahamian", male: "Bahamian"),
             Demonyms(
               language: LangFra(),
               female: "Bahamienne",
@@ -1814,11 +1778,7 @@ class CountryBih extends WorldCountry {
               female: "Bosnian, Herzegovinian",
               male: "Bosnian, Herzegovinian",
             ),
-            Demonyms(
-              language: LangFra(),
-              female: "Bosnienne",
-              male: "Bosnien",
-            ),
+            Demonyms(language: LangFra(), female: "Bosnienne", male: "Bosnien"),
           ],
           emoji: "🇧🇦",
           maps: const Maps(
@@ -2026,11 +1986,7 @@ class CountryBlz extends WorldCountry {
           bordersCodes: const ["Gtm", "Mex"],
           areaMetric: 22966,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Belizean",
-              male: "Belizean",
-            ),
+            Demonyms(language: LangEng(), female: "Belizean", male: "Belizean"),
             Demonyms(
               language: LangFra(),
               female: "Bélizienne",
@@ -2188,11 +2144,7 @@ class CountryBol extends WorldCountry {
           bordersCodes: const ["Arg", "Bra", "Chl", "Pry", "Per"],
           areaMetric: 1098581,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bolivian",
-              male: "Bolivian",
-            ),
+            Demonyms(language: LangEng(), female: "Bolivian", male: "Bolivian"),
             Demonyms(
               language: LangFra(),
               female: "Bolivienne",
@@ -2288,12 +2240,7 @@ class CountryBra extends WorldCountry {
           gini: const Gini(year: 2019, coefficient: 53.4),
           fifa: "BRA",
           car: const Car(sign: "BR"),
-          timezones: const [
-            "UTC-05:00",
-            "UTC-04:00",
-            "UTC-03:00",
-            "UTC-02:00",
-          ],
+          timezones: const ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Brasília"),
             latLng: LatLng(-15.79, -47.88),
@@ -2412,11 +2359,7 @@ class CountryBrn extends WorldCountry {
           bordersCodes: const ["Mys"],
           areaMetric: 5765,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bruneian",
-              male: "Bruneian",
-            ),
+            Demonyms(language: LangEng(), female: "Bruneian", male: "Bruneian"),
             Demonyms(
               language: LangFra(),
               female: "Brunéienne",
@@ -2605,11 +2548,7 @@ class CountryBwa extends WorldCountry {
           bordersCodes: const ["Nam", "Zaf", "Zmb", "Zwe"],
           areaMetric: 582000,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Motswana",
-              male: "Motswana",
-            ),
+            Demonyms(language: LangEng(), female: "Motswana", male: "Motswana"),
             Demonyms(
               language: LangFra(),
               female: "Botswanaise",
@@ -2785,11 +2724,7 @@ class CountryCan extends WorldCountry {
           bordersCodes: const ["Usa"],
           areaMetric: 9984670,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Canadian",
-              male: "Canadian",
-            ),
+            Demonyms(language: LangEng(), female: "Canadian", male: "Canadian"),
             Demonyms(
               language: LangFra(),
               female: "Canadienne",
@@ -2991,11 +2926,7 @@ class CountryChl extends WorldCountry {
           cioc: "CHI",
           currencies: const [FiatClp()],
           idd: const Idd(root: 5, suffixes: [6]),
-          altSpellings: const [
-            "CL",
-            "Republic of Chile",
-            "República de Chile",
-          ],
+          altSpellings: const ["CL", "Republic of Chile", "República de Chile"],
           continent: const Americas(),
           subregion: const SouthAmerica(),
           languages: const [LangSpa()],
@@ -3005,11 +2936,7 @@ class CountryChl extends WorldCountry {
           areaMetric: 756102,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Chilean", male: "Chilean"),
-            Demonyms(
-              language: LangFra(),
-              female: "Chilienne",
-              male: "Chilien",
-            ),
+            Demonyms(language: LangFra(), female: "Chilienne", male: "Chilien"),
           ],
           emoji: "🇨🇱",
           maps: const Maps(
@@ -3025,10 +2952,8 @@ class CountryChl extends WorldCountry {
             capital: Capital("Santiago"),
             latLng: LatLng(-33.45, -70.67),
           ),
-          postalCode: const PostalCode(
-            format: "#######",
-            regExpPattern: r"^(\d{7})$",
-          ),
+          postalCode:
+              const PostalCode(format: "#######", regExpPattern: r"^(\d{7})$"),
           regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
 }
@@ -3046,11 +2971,7 @@ class CountryChn extends WorldCountry {
             common: "China",
           ),
           namesNative: const [
-            CountryName(
-              language: LangZho(),
-              official: "中华人民共和国",
-              common: "中国",
-            ),
+            CountryName(language: LangZho(), official: "中华人民共和国", common: "中国"),
           ],
           tld: const [".cn", ".中国", ".中國", ".公司", ".网络"],
           code: "CHN",
@@ -3465,11 +3386,7 @@ class CountryCok extends WorldCountry {
               female: "Cook Islander",
               male: "Cook Islander",
             ),
-            Demonyms(
-              language: LangFra(),
-              female: "Cookienne",
-              male: "Cookien",
-            ),
+            Demonyms(language: LangFra(), female: "Cookienne", male: "Cookien"),
           ],
           emoji: "🇨🇰",
           maps: const Maps(
@@ -4270,11 +4187,7 @@ class CountryDji extends WorldCountry {
           bordersCodes: const ["Eri", "Eth", "Som"],
           areaMetric: 23200,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Djibouti",
-              male: "Djibouti",
-            ),
+            Demonyms(language: LangEng(), female: "Djibouti", male: "Djibouti"),
             Demonyms(
               language: LangFra(),
               female: "Djiboutienne",
@@ -4531,22 +4444,10 @@ class CountryDza extends WorldCountry {
           languages: const [LangAra()],
           translations: dzaCountryTranslations,
           latLng: const LatLng(28, 3),
-          bordersCodes: const [
-            "Tun",
-            "Lby",
-            "Ner",
-            "Esh",
-            "Mrt",
-            "Mli",
-            "Mar",
-          ],
+          bordersCodes: const ["Tun", "Lby", "Ner", "Esh", "Mrt", "Mli", "Mar"],
           areaMetric: 2381741,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Algerian",
-              male: "Algerian",
-            ),
+            Demonyms(language: LangEng(), female: "Algerian", male: "Algerian"),
             Demonyms(
               language: LangFra(),
               female: "Algérienne",
@@ -4680,11 +4581,7 @@ class CountryEgy extends WorldCountry {
           bordersCodes: const ["Isr", "Lby", "Pse", "Sdn"],
           areaMetric: 1002450,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Egyptian",
-              male: "Egyptian",
-            ),
+            Demonyms(language: LangEng(), female: "Egyptian", male: "Egyptian"),
             Demonyms(
               language: LangFra(),
               female: "Égyptienne",
@@ -4763,11 +4660,7 @@ class CountryEri extends WorldCountry {
           bordersCodes: const ["Dji", "Eth", "Sdn"],
           areaMetric: 117600,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Eritrean",
-              male: "Eritrean",
-            ),
+            Demonyms(language: LangEng(), female: "Eritrean", male: "Eritrean"),
             Demonyms(
               language: LangFra(),
               female: "Érythréenne",
@@ -4947,11 +4840,7 @@ class CountryEst extends WorldCountry {
           bordersCodes: const ["Lva", "Rus"],
           areaMetric: 45227,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Estonian",
-              male: "Estonian",
-            ),
+            Demonyms(language: LangEng(), female: "Estonian", male: "Estonian"),
             Demonyms(
               language: LangFra(),
               female: "Estonienne",
@@ -5167,11 +5056,7 @@ class CountryFji extends WorldCountry {
           areaMetric: 18272,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Fijian", male: "Fijian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Fidjienne",
-              male: "Fidjien",
-            ),
+            Demonyms(language: LangFra(), female: "Fidjienne", male: "Fidjien"),
           ],
           emoji: "🇫🇯",
           maps: const Maps(
@@ -5234,11 +5119,7 @@ class CountryFlk extends WorldCountry {
               female: "Falkland Islander",
               male: "Falkland Islander",
             ),
-            Demonyms(
-              language: LangFra(),
-              female: "Malouinne",
-              male: "Malouin",
-            ),
+            Demonyms(language: LangFra(), female: "Malouinne", male: "Malouin"),
           ],
           emoji: "🇫🇰",
           maps: const Maps(
@@ -5282,11 +5163,7 @@ class CountryFra extends WorldCountry {
           cioc: "FRA",
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [3]),
-          altSpellings: const [
-            "FR",
-            "French Republic",
-            "République française",
-          ],
+          altSpellings: const ["FR", "French Republic", "République française"],
           continent: const Europe(),
           subregion: const WesternEurope(),
           languages: const [LangFra()],
@@ -5386,11 +5263,7 @@ class CountryFro extends WorldCountry {
           areaMetric: 1393,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Faroese", male: "Faroese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Féroïenne",
-              male: "Féroïen",
-            ),
+            Demonyms(language: LangFra(), female: "Féroïenne", male: "Féroïen"),
           ],
           emoji: "🇫🇴",
           maps: const Maps(
@@ -5517,11 +5390,7 @@ class CountryGab extends WorldCountry {
           bordersCodes: const ["Cmr", "Cog", "Gnq"],
           areaMetric: 267668,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Gabonese",
-              male: "Gabonese",
-            ),
+            Demonyms(language: LangEng(), female: "Gabonese", male: "Gabonese"),
             Demonyms(
               language: LangFra(),
               female: "Gabonaise",
@@ -5654,11 +5523,7 @@ class CountryGeo extends WorldCountry {
           bordersCodes: const ["Arm", "Aze", "Rus", "Tur"],
           areaMetric: 69700,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Georgian",
-              male: "Georgian",
-            ),
+            Demonyms(language: LangEng(), female: "Georgian", male: "Georgian"),
             Demonyms(
               language: LangFra(),
               female: "Géorgienne",
@@ -5794,16 +5659,8 @@ class CountryGha extends WorldCountry {
           bordersCodes: const ["Bfa", "Civ", "Tgo"],
           areaMetric: 238533,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Ghanaian",
-              male: "Ghanaian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Ghanéenne",
-              male: "Ghanéen",
-            ),
+            Demonyms(language: LangEng(), female: "Ghanaian", male: "Ghanaian"),
+            Demonyms(language: LangFra(), female: "Ghanéenne", male: "Ghanéen"),
           ],
           emoji: "🇬🇭",
           maps: const Maps(
@@ -5927,11 +5784,7 @@ class CountryGin extends WorldCountry {
           areaMetric: 245857,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Guinean", male: "Guinean"),
-            Demonyms(
-              language: LangFra(),
-              female: "Guinéenne",
-              male: "Guinéen",
-            ),
+            Demonyms(language: LangFra(), female: "Guinéenne", male: "Guinéen"),
           ],
           emoji: "🇬🇳",
           maps: const Maps(
@@ -6049,11 +5902,7 @@ class CountryGmb extends WorldCountry {
           areaMetric: 10689,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Gambian", male: "Gambian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Gambienne",
-              male: "Gambien",
-            ),
+            Demonyms(language: LangFra(), female: "Gambienne", male: "Gambien"),
           ],
           emoji: "🇬🇲",
           maps: const Maps(
@@ -6400,12 +6249,7 @@ class CountryGrl extends WorldCountry {
           ),
           population: 56367,
           car: const Car(sign: "DK"),
-          timezones: const [
-            "UTC-04:00",
-            "UTC-03:00",
-            "UTC-01:00",
-            "UTC+00:00",
-          ],
+          timezones: const ["UTC-04:00", "UTC-03:00", "UTC-01:00", "UTC+00:00"],
           capitalInfo: const CapitalInfo(
             capital: Capital("Nuuk"),
             latLng: LatLng(64.18, -51.75),
@@ -6557,11 +6401,7 @@ class CountryGum extends WorldCountry {
               official: "Guåhån",
               common: "Guåhån",
             ),
-            CountryName(
-              language: LangEng(),
-              official: "Guam",
-              common: "Guam",
-            ),
+            CountryName(language: LangEng(), official: "Guam", common: "Guam"),
             CountryName(language: LangSpa(), official: "Guam", common: "Guam"),
           ],
           tld: const [".gu"],
@@ -6600,10 +6440,8 @@ class CountryGum extends WorldCountry {
             capital: Capital("Hagåtña"),
             latLng: LatLng(13.48, 144.75),
           ),
-          postalCode: const PostalCode(
-            format: "969##",
-            regExpPattern: r"^(969\d{2})$",
-          ),
+          postalCode:
+              const PostalCode(format: "969##", regExpPattern: r"^(969\d{2})$"),
         );
 }
 
@@ -6642,11 +6480,7 @@ class CountryGuy extends WorldCountry {
           bordersCodes: const ["Bra", "Sur", "Ven"],
           areaMetric: 214969,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Guyanese",
-              male: "Guyanese",
-            ),
+            Demonyms(language: LangEng(), female: "Guyanese", male: "Guyanese"),
             Demonyms(
               language: LangFra(),
               female: "Guyanienne",
@@ -6832,11 +6666,7 @@ class CountryHnd extends WorldCountry {
           bordersCodes: const ["Gtm", "Slv", "Nic"],
           areaMetric: 112492,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Honduran",
-              male: "Honduran",
-            ),
+            Demonyms(language: LangEng(), female: "Honduran", male: "Honduran"),
             Demonyms(
               language: LangFra(),
               female: "Hondurienne",
@@ -6905,11 +6735,7 @@ class CountryHrv extends WorldCountry {
           bordersCodes: const ["Bih", "Hun", "Mne", "Srb", "Svn"],
           areaMetric: 56594,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Croatian",
-              male: "Croatian",
-            ),
+            Demonyms(language: LangEng(), female: "Croatian", male: "Croatian"),
             Demonyms(language: LangFra(), female: "Croate", male: "Croate"),
           ],
           emoji: "🇭🇷",
@@ -6980,11 +6806,7 @@ class CountryHti extends WorldCountry {
           areaMetric: 27750,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Haitian", male: "Haitian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Haïtienne",
-              male: "Haïtien",
-            ),
+            Demonyms(language: LangFra(), female: "Haïtienne", male: "Haïtien"),
           ],
           emoji: "🇭🇹",
           maps: const Maps(
@@ -7041,15 +6863,7 @@ class CountryHun extends WorldCountry {
           translations: hunCountryTranslations,
           latLng: const LatLng(47, 20),
           landlocked: true,
-          bordersCodes: const [
-            "Aut",
-            "Hrv",
-            "Rou",
-            "Srb",
-            "Svk",
-            "Svn",
-            "Ukr",
-          ],
+          bordersCodes: const ["Aut", "Hrv", "Rou", "Srb", "Svk", "Svn", "Ukr"],
           areaMetric: 93028,
           demonyms: const [
             Demonyms(
@@ -7455,23 +7269,11 @@ class CountryIrn extends WorldCountry {
           languages: const [LangFas()],
           translations: irnCountryTranslations,
           latLng: const LatLng(32, 53),
-          bordersCodes: const [
-            "Afg",
-            "Arm",
-            "Aze",
-            "Irq",
-            "Pak",
-            "Tur",
-            "Tkm",
-          ],
+          bordersCodes: const ["Afg", "Arm", "Aze", "Irq", "Pak", "Tur", "Tkm"],
           areaMetric: 1648195,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Iranian", male: "Iranian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Iranienne",
-              male: "Iranien",
-            ),
+            Demonyms(language: LangFra(), female: "Iranienne", male: "Iranien"),
           ],
           emoji: "🇮🇷",
           maps: const Maps(
@@ -7535,11 +7337,7 @@ class CountryIrq extends WorldCountry {
           areaMetric: 438317,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Iraqi", male: "Iraqi"),
-            Demonyms(
-              language: LangFra(),
-              female: "Irakienne",
-              male: "Irakien",
-            ),
+            Demonyms(language: LangFra(), female: "Irakienne", male: "Irakien"),
           ],
           emoji: "🇮🇶",
           maps: const Maps(
@@ -7723,11 +7521,7 @@ class CountryIta extends WorldCountry {
           cioc: "ITA",
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [9]),
-          altSpellings: const [
-            "IT",
-            "Italian Republic",
-            "Repubblica italiana",
-          ],
+          altSpellings: const ["IT", "Italian Republic", "Repubblica italiana"],
           continent: const Europe(),
           subregion: const SouthernEurope(),
           languages: const [LangIta()],
@@ -7737,11 +7531,7 @@ class CountryIta extends WorldCountry {
           areaMetric: 301336,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Italian", male: "Italian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Italienne",
-              male: "Italien",
-            ),
+            Demonyms(language: LangFra(), female: "Italienne", male: "Italien"),
           ],
           emoji: "🇮🇹",
           maps: const Maps(
@@ -7796,11 +7586,7 @@ class CountryJam extends WorldCountry {
           latLng: const LatLng(18.25, -77.5),
           areaMetric: 10991,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Jamaican",
-              male: "Jamaican",
-            ),
+            Demonyms(language: LangEng(), female: "Jamaican", male: "Jamaican"),
             Demonyms(
               language: LangFra(),
               female: "Jamaïcaine",
@@ -8001,11 +7787,7 @@ class CountryJpn extends WorldCountry {
           latLng: const LatLng(36, 138),
           areaMetric: 377930,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Japanese",
-              male: "Japanese",
-            ),
+            Demonyms(language: LangEng(), female: "Japanese", male: "Japanese"),
             Demonyms(
               language: LangFra(),
               female: "Japonaise",
@@ -8026,10 +7808,8 @@ class CountryJpn extends WorldCountry {
             capital: Capital("Tokyo"),
             latLng: LatLng(35.68, 139.75),
           ),
-          postalCode: const PostalCode(
-            format: "###-####",
-            regExpPattern: r"^(\d{7})$",
-          ),
+          postalCode:
+              const PostalCode(format: "###-####", regExpPattern: r"^(\d{7})$"),
         );
 }
 
@@ -8224,11 +8004,7 @@ class CountryKgz extends WorldCountry {
           areaMetric: 199951,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Kirghiz", male: "Kirghiz"),
-            Demonyms(
-              language: LangFra(),
-              female: "Kirghize",
-              male: "Kirghize",
-            ),
+            Demonyms(language: LangFra(), female: "Kirghize", male: "Kirghize"),
           ],
           emoji: "🇰🇬",
           maps: const Maps(
@@ -8616,11 +8392,7 @@ class CountryLao extends WorldCountry {
           areaMetric: 236800,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Laotian", male: "Laotian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Laotienne",
-              male: "Laotien",
-            ),
+            Demonyms(language: LangFra(), female: "Laotienne", male: "Laotien"),
           ],
           emoji: "🇱🇦",
           maps: const Maps(
@@ -8685,11 +8457,7 @@ class CountryLbn extends WorldCountry {
           bordersCodes: const ["Isr", "Syr"],
           areaMetric: 10452,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Lebanese",
-              male: "Lebanese",
-            ),
+            Demonyms(language: LangEng(), female: "Lebanese", male: "Lebanese"),
             Demonyms(
               language: LangFra(),
               female: "Libanaise",
@@ -8753,11 +8521,7 @@ class CountryLbr extends WorldCountry {
           bordersCodes: const ["Gin", "Civ", "Sle"],
           areaMetric: 111369,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Liberian",
-              male: "Liberian",
-            ),
+            Demonyms(language: LangEng(), female: "Liberian", male: "Liberian"),
             Demonyms(
               language: LangFra(),
               female: "Libérienne",
@@ -9383,11 +9147,7 @@ class CountryMac extends WorldCountry {
           bordersCodes: const ["Chn"],
           areaMetric: 30,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Macanese",
-              male: "Macanese",
-            ),
+            Demonyms(language: LangEng(), female: "Macanese", male: "Macanese"),
             Demonyms(
               language: LangFra(),
               female: "Macanaise",
@@ -9514,11 +9274,7 @@ class CountryMar extends WorldCountry {
           bordersCodes: const ["Dza", "Esh", "Esp"],
           areaMetric: 446550,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Moroccan",
-              male: "Moroccan",
-            ),
+            Demonyms(language: LangEng(), female: "Moroccan", male: "Moroccan"),
             Demonyms(
               language: LangFra(),
               female: "Marocaine",
@@ -9651,11 +9407,7 @@ class CountryMda extends WorldCountry {
           bordersCodes: const ["Rou", "Ukr"],
           areaMetric: 33846,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Moldovan",
-              male: "Moldovan",
-            ),
+            Demonyms(language: LangEng(), female: "Moldovan", male: "Moldovan"),
             Demonyms(language: LangFra(), female: "Moldave", male: "Moldave"),
           ],
           emoji: "🇲🇩",
@@ -9724,16 +9476,8 @@ class CountryMdg extends WorldCountry {
           latLng: const LatLng(-20, 47),
           areaMetric: 587041,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Malagasy",
-              male: "Malagasy",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Malgache",
-              male: "Malgache",
-            ),
+            Demonyms(language: LangEng(), female: "Malagasy", male: "Malagasy"),
+            Demonyms(language: LangFra(), female: "Malgache", male: "Malgache"),
           ],
           emoji: "🇲🇬",
           maps: const Maps(
@@ -9794,11 +9538,7 @@ class CountryMdv extends WorldCountry {
           latLng: const LatLng(3.25, 73),
           areaMetric: 300,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Maldivan",
-              male: "Maldivan",
-            ),
+            Demonyms(language: LangEng(), female: "Maldivan", male: "Maldivan"),
             Demonyms(
               language: LangFra(),
               female: "Maldivienne",
@@ -10059,26 +9799,14 @@ class CountryMli extends WorldCountry {
           cioc: "MLI",
           currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [23]),
-          altSpellings: const [
-            "ML",
-            "Republic of Mali",
-            "République du Mali",
-          ],
+          altSpellings: const ["ML", "Republic of Mali", "République du Mali"],
           continent: const Africa(),
           subregion: const WesternAfrica(),
           languages: const [LangFra()],
           translations: mliCountryTranslations,
           latLng: const LatLng(17, -4),
           landlocked: true,
-          bordersCodes: const [
-            "Dza",
-            "Bfa",
-            "Gin",
-            "Civ",
-            "Mrt",
-            "Ner",
-            "Sen",
-          ],
+          bordersCodes: const ["Dza", "Bfa", "Gin", "Civ", "Mrt", "Ner", "Sen"],
           areaMetric: 1240192,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Malian", male: "Malian"),
@@ -10403,11 +10131,7 @@ class CountryMnp extends WorldCountry {
           latLng: const LatLng(15.2, 145.75),
           areaMetric: 464,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "American",
-              male: "American",
-            ),
+            Demonyms(language: LangEng(), female: "American", male: "American"),
             Demonyms(
               language: LangFra(),
               female: "Américaine",
@@ -10806,11 +10530,7 @@ class CountryMwi extends WorldCountry {
           bordersCodes: const ["Moz", "Tza", "Zmb"],
           areaMetric: 118484,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Malawian",
-              male: "Malawian",
-            ),
+            Demonyms(language: LangEng(), female: "Malawian", male: "Malawian"),
             Demonyms(
               language: LangFra(),
               female: "Malawienne",
@@ -11032,11 +10752,7 @@ class CountryNam extends WorldCountry {
           bordersCodes: const ["Ago", "Bwa", "Zaf", "Tur"],
           areaMetric: 825615,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Namibian",
-              male: "Namibian",
-            ),
+            Demonyms(language: LangEng(), female: "Namibian", male: "Namibian"),
             Demonyms(
               language: LangFra(),
               female: "Namibienne",
@@ -11157,22 +10873,10 @@ class CountryNer extends WorldCountry {
           translations: nerCountryTranslations,
           latLng: const LatLng(16, 8),
           landlocked: true,
-          bordersCodes: const [
-            "Dza",
-            "Ben",
-            "Bfa",
-            "Tcd",
-            "Lby",
-            "Mli",
-            "Nga",
-          ],
+          bordersCodes: const ["Dza", "Ben", "Bfa", "Tcd", "Lby", "Mli", "Nga"],
           areaMetric: 1267000,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Nigerien",
-              male: "Nigerien",
-            ),
+            Demonyms(language: LangEng(), female: "Nigerien", male: "Nigerien"),
             Demonyms(
               language: LangFra(),
               female: "Nigérienne",
@@ -11305,11 +11009,7 @@ class CountryNga extends WorldCountry {
           bordersCodes: const ["Ben", "Cmr", "Tcd", "Ner"],
           areaMetric: 923768,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Nigerian",
-              male: "Nigerian",
-            ),
+            Demonyms(language: LangEng(), female: "Nigerian", male: "Nigerian"),
             Demonyms(
               language: LangFra(),
               female: "Nigériane",
@@ -11484,12 +11184,7 @@ class CountryNld extends WorldCountry {
           cioc: "NED",
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [1]),
-          altSpellings: const [
-            "NL",
-            "Holland",
-            "Nederland",
-            "The Netherlands",
-          ],
+          altSpellings: const ["NL", "Holland", "Nederland", "The Netherlands"],
           continent: const Europe(),
           subregion: const WesternEurope(),
           languages: const [LangNld()],
@@ -11645,11 +11340,7 @@ class CountryNpl extends WorldCountry {
           bordersCodes: const ["Chn", "Ind"],
           areaMetric: 147181,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Nepalese",
-              male: "Nepalese",
-            ),
+            Demonyms(language: LangEng(), female: "Nepalese", male: "Nepalese"),
             Demonyms(
               language: LangFra(),
               female: "Népalaise",
@@ -12117,11 +11808,7 @@ class CountryPer extends WorldCountry {
           cioc: "PER",
           currencies: const [FiatPen()],
           idd: const Idd(root: 5, suffixes: [1]),
-          altSpellings: const [
-            "PE",
-            "Republic of Peru",
-            "República del Perú",
-          ],
+          altSpellings: const ["PE", "Republic of Peru", "República del Perú"],
           continent: const Americas(),
           subregion: const SouthAmerica(),
           languages: const [LangAym(), LangQue(), LangSpa()],
@@ -12130,11 +11817,7 @@ class CountryPer extends WorldCountry {
           bordersCodes: const ["Bol", "Bra", "Chl", "Col", "Ecu"],
           areaMetric: 1285216,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Peruvian",
-              male: "Peruvian",
-            ),
+            Demonyms(language: LangEng(), female: "Peruvian", male: "Peruvian"),
             Demonyms(
               language: LangFra(),
               female: "Péruvienne",
@@ -12203,11 +11886,7 @@ class CountryPhl extends WorldCountry {
           latLng: const LatLng(13, 122),
           areaMetric: 342353,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Filipino",
-              male: "Filipino",
-            ),
+            Demonyms(language: LangEng(), female: "Filipino", male: "Filipino"),
             Demonyms(
               language: LangFra(),
               female: "Philippine",
@@ -12398,15 +12077,7 @@ class CountryPol extends WorldCountry {
           languages: const [LangPol()],
           translations: polCountryTranslations,
           latLng: const LatLng(52, 20),
-          bordersCodes: const [
-            "Blr",
-            "Cze",
-            "Deu",
-            "Ltu",
-            "Rus",
-            "Svk",
-            "Ukr",
-          ],
+          bordersCodes: const ["Blr", "Cze", "Deu", "Ltu", "Rus", "Svk", "Ukr"],
           areaMetric: 312679,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Polish", male: "Polish"),
@@ -12580,10 +12251,8 @@ class CountryPrk extends WorldCountry {
             capital: Capital("Pyongyang"),
             latLng: LatLng(39.02, 125.75),
           ),
-          postalCode: const PostalCode(
-            format: "###-###",
-            regExpPattern: r"^(\d{6})$",
-          ),
+          postalCode:
+              const PostalCode(format: "###-###", regExpPattern: r"^(\d{6})$"),
         );
 }
 
@@ -12652,10 +12321,8 @@ class CountryPrt extends WorldCountry {
             capital: Capital("Lisbon"),
             latLng: LatLng(38.72, -9.13),
           ),
-          postalCode: const PostalCode(
-            format: "####-###",
-            regExpPattern: r"^(\d{7})$",
-          ),
+          postalCode:
+              const PostalCode(format: "####-###", regExpPattern: r"^(\d{7})$"),
           regionalBlocs: const [BlocEU()],
         );
 }
@@ -13036,11 +12703,7 @@ class CountryRou extends WorldCountry {
           bordersCodes: const ["Bgr", "Hun", "Mda", "Srb", "Ukr"],
           areaMetric: 238391,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Romanian",
-              male: "Romanian",
-            ),
+            Demonyms(language: LangEng(), female: "Romanian", male: "Romanian"),
             Demonyms(language: LangFra(), female: "Roumaine", male: "Roumain"),
           ],
           emoji: "🇷🇴",
@@ -13263,15 +12926,7 @@ class CountrySau extends WorldCountry {
           languages: const [LangAra()],
           translations: sauCountryTranslations,
           latLng: const LatLng(25, 45),
-          bordersCodes: const [
-            "Irq",
-            "Jor",
-            "Kwt",
-            "Omn",
-            "Qat",
-            "Are",
-            "Yem",
-          ],
+          bordersCodes: const ["Irq", "Jor", "Kwt", "Omn", "Qat", "Are", "Yem"],
           areaMetric: 2149690,
           demonyms: const [
             Demonyms(
@@ -13345,22 +13000,10 @@ class CountrySdn extends WorldCountry {
           languages: const [LangAra(), LangEng()],
           translations: sdnCountryTranslations,
           latLng: const LatLng(15, 30),
-          bordersCodes: const [
-            "Caf",
-            "Tcd",
-            "Egy",
-            "Eri",
-            "Eth",
-            "Lby",
-            "Ssd",
-          ],
+          bordersCodes: const ["Caf", "Tcd", "Egy", "Eri", "Eth", "Lby", "Ssd"],
           areaMetric: 1886068,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Sudanese",
-              male: "Sudanese",
-            ),
+            Demonyms(language: LangEng(), female: "Sudanese", male: "Sudanese"),
             Demonyms(
               language: LangFra(),
               female: "Soudanaise",
@@ -13473,11 +13116,7 @@ class CountrySgp extends WorldCountry {
               official: "Republic of Singapore",
               common: "Singapore",
             ),
-            CountryName(
-              language: LangZho(),
-              official: "新加坡共和国",
-              common: "新加坡",
-            ),
+            CountryName(language: LangZho(), official: "新加坡共和国", common: "新加坡"),
             CountryName(
               language: LangMsa(),
               official: "Republik Singapura",
@@ -14173,15 +13812,7 @@ class CountrySrb extends WorldCountry {
           translations: srbCountryTranslations,
           latLng: const LatLng(44, 21),
           landlocked: true,
-          bordersCodes: const [
-            "Bih",
-            "Bgr",
-            "Hrv",
-            "Hun",
-            "Mkd",
-            "Mne",
-            "Rou",
-          ],
+          bordersCodes: const ["Bih", "Bgr", "Hrv", "Hun", "Mkd", "Mne", "Rou"],
           areaMetric: 88361,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Serbian", male: "Serbian"),
@@ -14437,11 +14068,7 @@ class CountrySvk extends WorldCountry {
           cioc: "SVK",
           currencies: const [FiatEur()],
           idd: const Idd(root: 4, suffixes: [21]),
-          altSpellings: const [
-            "SK",
-            "Slovak Republic",
-            "Slovenská republika",
-          ],
+          altSpellings: const ["SK", "Slovak Republic", "Slovenská republika"],
           continent: const Europe(),
           subregion: const CentralEurope(),
           languages: const [LangSlk()],
@@ -14452,11 +14079,7 @@ class CountrySvk extends WorldCountry {
           areaMetric: 49037,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Slovak", male: "Slovak"),
-            Demonyms(
-              language: LangFra(),
-              female: "Slovaque",
-              male: "Slovaque",
-            ),
+            Demonyms(language: LangFra(), female: "Slovaque", male: "Slovaque"),
           ],
           emoji: "🇸🇰",
           maps: const Maps(
@@ -15058,11 +14681,7 @@ class CountryTgo extends WorldCountry {
           bordersCodes: const ["Ben", "Bfa", "Gha"],
           areaMetric: 56785,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Togolese",
-              male: "Togolese",
-            ),
+            Demonyms(language: LangEng(), female: "Togolese", male: "Togolese"),
             Demonyms(
               language: LangFra(),
               female: "Togolaise",
@@ -15327,11 +14946,7 @@ class CountryTkm extends WorldCountry {
           areaMetric: 488100,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Turkmen", male: "Turkmen"),
-            Demonyms(
-              language: LangFra(),
-              female: "Turkmène",
-              male: "Turkmène",
-            ),
+            Demonyms(language: LangFra(), female: "Turkmène", male: "Turkmène"),
           ],
           emoji: "🇹🇲",
           maps: const Maps(
@@ -15589,11 +15204,7 @@ class CountryTun extends WorldCountry {
           bordersCodes: const ["Dza", "Lby"],
           areaMetric: 163610,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Tunisian",
-              male: "Tunisian",
-            ),
+            Demonyms(language: LangEng(), female: "Tunisian", male: "Tunisian"),
             Demonyms(
               language: LangFra(),
               female: "Tunisienne",
@@ -15724,11 +15335,7 @@ class CountryTuv extends WorldCountry {
           latLng: const LatLng(-8, 178),
           areaMetric: 26,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Tuvaluan",
-              male: "Tuvaluan",
-            ),
+            Demonyms(language: LangEng(), female: "Tuvaluan", male: "Tuvaluan"),
             Demonyms(
               language: LangFra(),
               female: "Tuvaluane",
@@ -15932,11 +15539,7 @@ class CountryUga extends WorldCountry {
           cioc: "UGA",
           currencies: const [FiatUgx()],
           idd: const Idd(root: 2, suffixes: [56]),
-          altSpellings: const [
-            "UG",
-            "Republic of Uganda",
-            "Jamhuri ya Uganda",
-          ],
+          altSpellings: const ["UG", "Republic of Uganda", "Jamhuri ya Uganda"],
           continent: const Africa(),
           subregion: const EasternAfrica(),
           languages: const [LangEng(), LangSwa()],
@@ -16003,15 +15606,7 @@ class CountryUkr extends WorldCountry {
           languages: const [LangUkr()],
           translations: ukrCountryTranslations,
           latLng: const LatLng(49, 32),
-          bordersCodes: const [
-            "Blr",
-            "Hun",
-            "Mda",
-            "Pol",
-            "Rou",
-            "Rus",
-            "Svk",
-          ],
+          bordersCodes: const ["Blr", "Hun", "Mda", "Pol", "Rou", "Rus", "Svk"],
           areaMetric: 603500,
           demonyms: const [
             Demonyms(
@@ -16525,11 +16120,7 @@ class CountryUsa extends WorldCountry {
           bordersCodes: const ["Can", "Mex"],
           areaMetric: 9372610,
           demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "American",
-              male: "American",
-            ),
+            Demonyms(language: LangEng(), female: "American", male: "American"),
             Demonyms(
               language: LangFra(),
               female: "Américaine",
@@ -17270,11 +16861,7 @@ class CountryYem extends WorldCountry {
           areaMetric: 527968,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Yemeni", male: "Yemeni"),
-            Demonyms(
-              language: LangFra(),
-              female: "Yéménite",
-              male: "Yéménite",
-            ),
+            Demonyms(language: LangFra(), female: "Yéménite", male: "Yéménite"),
           ],
           emoji: "🇾🇪",
           maps: const Maps(
@@ -17472,11 +17059,7 @@ class CountryZmb extends WorldCountry {
           areaMetric: 752612,
           demonyms: const [
             Demonyms(language: LangEng(), female: "Zambian", male: "Zambian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Zambienne",
-              male: "Zambien",
-            ),
+            Demonyms(language: LangFra(), female: "Zambienne", male: "Zambien"),
           ],
           emoji: "🇿🇲",
           maps: const Maps(
