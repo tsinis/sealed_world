@@ -77,6 +77,6 @@ class FlagProperties {
   @override
   String toString() =>
       "FlagProperties($stripeColors, aspectRatio: $aspectRatio, "
-      "stripeOrientation: $stripeOrientation, url: $url, "
-      "elementsProperties: $elementsProperties)";
+      "stripeOrientation: $stripeOrientation, url: $url"
+      """${elementsProperties == null ? '' : ', elementsProperties: $elementsProperties'},)""";
 }
