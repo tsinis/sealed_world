@@ -1,6 +1,6 @@
 name: cli
 description: Command-line tools for a sealed_world eco-system.
-version: 0.0.2
+version: 0.0.3
 publish_to: none
 
 environment:
