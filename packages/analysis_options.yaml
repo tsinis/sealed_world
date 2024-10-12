@@ -84,6 +84,8 @@ dart_code_metrics:
     - prefer-single-declaration-per-file: false # Data is stored in one file.
     - prefer-test-matchers: false # Introduces coupling in tests.
     # Enabled:
+    - avoid-high-cyclomatic-complexity:
+        threshold: 40
     - prefer-named-parameters:
         max-number: 3
     - avoid-nested-conditional-expressions:
