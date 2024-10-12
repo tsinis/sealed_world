@@ -9,7 +9,7 @@ import "scripts.data.dart";
 class LangAar extends NaturalLanguage {
   /// Creates a instance of [LangAar] (Afar language).
   ///
-  /// ISO 639-2 code: "AAR", ISO 639-1 code: "AA".
+  /// ISO 639-2/T code: "AAR", ISO 639-1 code: "AA".
   const LangAar()
       : super(
           name: "Afar",
@@ -27,7 +27,7 @@ class LangAar extends NaturalLanguage {
 class LangAbk extends NaturalLanguage {
   /// Creates a instance of [LangAbk] (Abkhaz language).
   ///
-  /// ISO 639-2 code: "ABK", ISO 639-1 code: "AB".
+  /// ISO 639-2/T code: "ABK", ISO 639-1 code: "AB".
   const LangAbk()
       : super(
           name: "Abkhaz",
@@ -46,7 +46,7 @@ class LangAbk extends NaturalLanguage {
 class LangAfr extends NaturalLanguage {
   /// Creates a instance of [LangAfr] (Afrikaans language).
   ///
-  /// ISO 639-2 code: "AFR", ISO 639-1 code: "AF".
+  /// ISO 639-2/T code: "AFR", ISO 639-1 code: "AF".
   const LangAfr()
       : super(
           name: "Afrikaans",
@@ -64,7 +64,7 @@ class LangAfr extends NaturalLanguage {
 class LangAka extends NaturalLanguage {
   /// Creates a instance of [LangAka] (Akan language).
   ///
-  /// ISO 639-2 code: "AKA", ISO 639-1 code: "AK".
+  /// ISO 639-2/T code: "AKA", ISO 639-1 code: "AK".
   const LangAka()
       : super(
           name: "Akan",
@@ -82,7 +82,7 @@ class LangAka extends NaturalLanguage {
 class LangAmh extends NaturalLanguage {
   /// Creates a instance of [LangAmh] (Amharic language).
   ///
-  /// ISO 639-2 code: "AMH", ISO 639-1 code: "AM".
+  /// ISO 639-2/T code: "AMH", ISO 639-1 code: "AM".
   const LangAmh()
       : super(
           name: "Amharic",
@@ -101,7 +101,7 @@ class LangAmh extends NaturalLanguage {
 class LangAra extends NaturalLanguage {
   /// Creates a instance of [LangAra] (Arabic language).
   ///
-  /// ISO 639-2 code: "ARA", ISO 639-1 code: "AR".
+  /// ISO 639-2/T code: "ARA", ISO 639-1 code: "AR".
   const LangAra()
       : super(
           name: "Arabic",
@@ -121,7 +121,7 @@ class LangAra extends NaturalLanguage {
 class LangArg extends NaturalLanguage {
   /// Creates a instance of [LangArg] (Aragonese language).
   ///
-  /// ISO 639-2 code: "ARG", ISO 639-1 code: "AN".
+  /// ISO 639-2/T code: "ARG", ISO 639-1 code: "AN".
   const LangArg()
       : super(
           name: "Aragonese",
@@ -139,7 +139,7 @@ class LangArg extends NaturalLanguage {
 class LangAsm extends NaturalLanguage {
   /// Creates a instance of [LangAsm] (Assamese language).
   ///
-  /// ISO 639-2 code: "ASM", ISO 639-1 code: "AS".
+  /// ISO 639-2/T code: "ASM", ISO 639-1 code: "AS".
   const LangAsm()
       : super(
           name: "Assamese",
@@ -158,7 +158,7 @@ class LangAsm extends NaturalLanguage {
 class LangAva extends NaturalLanguage {
   /// Creates a instance of [LangAva] (Avaric language).
   ///
-  /// ISO 639-2 code: "AVA", ISO 639-1 code: "AV".
+  /// ISO 639-2/T code: "AVA", ISO 639-1 code: "AV".
   const LangAva()
       : super(
           name: "Avaric",
@@ -177,7 +177,7 @@ class LangAva extends NaturalLanguage {
 class LangAve extends NaturalLanguage {
   /// Creates a instance of [LangAve] (Avestan language).
   ///
-  /// ISO 639-2 code: "AVE", ISO 639-1 code: "AE".
+  /// ISO 639-2/T code: "AVE", ISO 639-1 code: "AE".
   const LangAve()
       : super(
           name: "Avestan",
@@ -196,7 +196,7 @@ class LangAve extends NaturalLanguage {
 class LangAym extends NaturalLanguage {
   /// Creates a instance of [LangAym] (Aymara language).
   ///
-  /// ISO 639-2 code: "AYM", ISO 639-1 code: "AY".
+  /// ISO 639-2/T code: "AYM", ISO 639-1 code: "AY".
   const LangAym()
       : super(
           name: "Aymara",
@@ -214,7 +214,7 @@ class LangAym extends NaturalLanguage {
 class LangAze extends NaturalLanguage {
   /// Creates a instance of [LangAze] (Azerbaijani language).
   ///
-  /// ISO 639-2 code: "AZE", ISO 639-1 code: "AZ".
+  /// ISO 639-2/T code: "AZE", ISO 639-1 code: "AZ".
   const LangAze()
       : super(
           name: "Azerbaijani",
@@ -233,7 +233,7 @@ class LangAze extends NaturalLanguage {
 class LangBak extends NaturalLanguage {
   /// Creates a instance of [LangBak] (Bashkir language).
   ///
-  /// ISO 639-2 code: "BAK", ISO 639-1 code: "BA".
+  /// ISO 639-2/T code: "BAK", ISO 639-1 code: "BA".
   const LangBak()
       : super(
           name: "Bashkir",
@@ -252,7 +252,7 @@ class LangBak extends NaturalLanguage {
 class LangBam extends NaturalLanguage {
   /// Creates a instance of [LangBam] (Bambara language).
   ///
-  /// ISO 639-2 code: "BAM", ISO 639-1 code: "BM".
+  /// ISO 639-2/T code: "BAM", ISO 639-1 code: "BM".
   const LangBam()
       : super(
           name: "Bambara",
@@ -270,7 +270,7 @@ class LangBam extends NaturalLanguage {
 class LangBel extends NaturalLanguage {
   /// Creates a instance of [LangBel] (Belarusian language).
   ///
-  /// ISO 639-2 code: "BEL", ISO 639-1 code: "BE".
+  /// ISO 639-2/T code: "BEL", ISO 639-1 code: "BE".
   const LangBel()
       : super(
           name: "Belarusian",
@@ -289,7 +289,7 @@ class LangBel extends NaturalLanguage {
 class LangBen extends NaturalLanguage {
   /// Creates a instance of [LangBen] (Bengali (Bangla) language).
   ///
-  /// ISO 639-2 code: "BEN", ISO 639-1 code: "BN".
+  /// ISO 639-2/T code: "BEN", ISO 639-1 code: "BN".
   const LangBen()
       : super(
           name: "Bengali (Bangla)",
@@ -308,7 +308,7 @@ class LangBen extends NaturalLanguage {
 class LangBih extends NaturalLanguage {
   /// Creates a instance of [LangBih] (Bihari language).
   ///
-  /// ISO 639-2 code: "BIH", ISO 639-1 code: "BH".
+  /// ISO 639-2/T code: "BIH", ISO 639-1 code: "BH".
   const LangBih()
       : super(
           name: "Bihari",
@@ -327,7 +327,7 @@ class LangBih extends NaturalLanguage {
 class LangBis extends NaturalLanguage {
   /// Creates a instance of [LangBis] (Bislama language).
   ///
-  /// ISO 639-2 code: "BIS", ISO 639-1 code: "BI".
+  /// ISO 639-2/T code: "BIS", ISO 639-1 code: "BI".
   const LangBis()
       : super(
           name: "Bislama",
@@ -345,7 +345,7 @@ class LangBis extends NaturalLanguage {
 class LangBod extends NaturalLanguage {
   /// Creates a instance of [LangBod] (Tibetan Standard language).
   ///
-  /// ISO 639-2 code: "BOD", ISO 639-1 code: "BO".
+  /// ISO 639-2/T code: "BOD", ISO 639-1 code: "BO".
   const LangBod()
       : super(
           name: "Tibetan Standard",
@@ -365,7 +365,7 @@ class LangBod extends NaturalLanguage {
 class LangBos extends NaturalLanguage {
   /// Creates a instance of [LangBos] (Bosnian language).
   ///
-  /// ISO 639-2 code: "BOS", ISO 639-1 code: "BS".
+  /// ISO 639-2/T code: "BOS", ISO 639-1 code: "BS".
   const LangBos()
       : super(
           name: "Bosnian",
@@ -384,7 +384,7 @@ class LangBos extends NaturalLanguage {
 class LangBre extends NaturalLanguage {
   /// Creates a instance of [LangBre] (Breton language).
   ///
-  /// ISO 639-2 code: "BRE", ISO 639-1 code: "BR".
+  /// ISO 639-2/T code: "BRE", ISO 639-1 code: "BR".
   const LangBre()
       : super(
           name: "Breton",
@@ -402,7 +402,7 @@ class LangBre extends NaturalLanguage {
 class LangBul extends NaturalLanguage {
   /// Creates a instance of [LangBul] (Bulgarian language).
   ///
-  /// ISO 639-2 code: "BUL", ISO 639-1 code: "BG".
+  /// ISO 639-2/T code: "BUL", ISO 639-1 code: "BG".
   const LangBul()
       : super(
           name: "Bulgarian",
@@ -421,7 +421,7 @@ class LangBul extends NaturalLanguage {
 class LangCat extends NaturalLanguage {
   /// Creates a instance of [LangCat] (Catalan language).
   ///
-  /// ISO 639-2 code: "CAT", ISO 639-1 code: "CA".
+  /// ISO 639-2/T code: "CAT", ISO 639-1 code: "CA".
   const LangCat()
       : super(
           name: "Catalan",
@@ -439,7 +439,7 @@ class LangCat extends NaturalLanguage {
 class LangCes extends NaturalLanguage {
   /// Creates a instance of [LangCes] (Czech language).
   ///
-  /// ISO 639-2 code: "CES", ISO 639-1 code: "CS".
+  /// ISO 639-2/T code: "CES", ISO 639-1 code: "CS".
   const LangCes()
       : super(
           name: "Czech",
@@ -458,7 +458,7 @@ class LangCes extends NaturalLanguage {
 class LangCha extends NaturalLanguage {
   /// Creates a instance of [LangCha] (Chamorro language).
   ///
-  /// ISO 639-2 code: "CHA", ISO 639-1 code: "CH".
+  /// ISO 639-2/T code: "CHA", ISO 639-1 code: "CH".
   const LangCha()
       : super(
           name: "Chamorro",
@@ -476,7 +476,7 @@ class LangCha extends NaturalLanguage {
 class LangChe extends NaturalLanguage {
   /// Creates a instance of [LangChe] (Chechen language).
   ///
-  /// ISO 639-2 code: "CHE", ISO 639-1 code: "CE".
+  /// ISO 639-2/T code: "CHE", ISO 639-1 code: "CE".
   const LangChe()
       : super(
           name: "Chechen",
@@ -495,7 +495,7 @@ class LangChe extends NaturalLanguage {
 class LangChu extends NaturalLanguage {
   /// Creates a instance of [LangChu] ((Old) Church Slavonic language).
   ///
-  /// ISO 639-2 code: "CHU", ISO 639-1 code: "CU".
+  /// ISO 639-2/T code: "CHU", ISO 639-1 code: "CU".
   const LangChu()
       : super(
           name: "(Old) Church Slavonic",
@@ -514,7 +514,7 @@ class LangChu extends NaturalLanguage {
 class LangChv extends NaturalLanguage {
   /// Creates a instance of [LangChv] (Chuvash language).
   ///
-  /// ISO 639-2 code: "CHV", ISO 639-1 code: "CV".
+  /// ISO 639-2/T code: "CHV", ISO 639-1 code: "CV".
   const LangChv()
       : super(
           name: "Chuvash",
@@ -533,7 +533,7 @@ class LangChv extends NaturalLanguage {
 class LangCor extends NaturalLanguage {
   /// Creates a instance of [LangCor] (Cornish language).
   ///
-  /// ISO 639-2 code: "COR", ISO 639-1 code: "KW".
+  /// ISO 639-2/T code: "COR", ISO 639-1 code: "KW".
   const LangCor()
       : super(
           name: "Cornish",
@@ -551,7 +551,7 @@ class LangCor extends NaturalLanguage {
 class LangCos extends NaturalLanguage {
   /// Creates a instance of [LangCos] (Corsican language).
   ///
-  /// ISO 639-2 code: "COS", ISO 639-1 code: "CO".
+  /// ISO 639-2/T code: "COS", ISO 639-1 code: "CO".
   const LangCos()
       : super(
           name: "Corsican",
@@ -569,7 +569,7 @@ class LangCos extends NaturalLanguage {
 class LangCre extends NaturalLanguage {
   /// Creates a instance of [LangCre] (Cree language).
   ///
-  /// ISO 639-2 code: "CRE", ISO 639-1 code: "CR".
+  /// ISO 639-2/T code: "CRE", ISO 639-1 code: "CR".
   const LangCre()
       : super(
           name: "Cree",
@@ -587,7 +587,7 @@ class LangCre extends NaturalLanguage {
 class LangCym extends NaturalLanguage {
   /// Creates a instance of [LangCym] (Welsh language).
   ///
-  /// ISO 639-2 code: "CYM", ISO 639-1 code: "CY".
+  /// ISO 639-2/T code: "CYM", ISO 639-1 code: "CY".
   const LangCym()
       : super(
           name: "Welsh",
@@ -606,7 +606,7 @@ class LangCym extends NaturalLanguage {
 class LangDan extends NaturalLanguage {
   /// Creates a instance of [LangDan] (Danish language).
   ///
-  /// ISO 639-2 code: "DAN", ISO 639-1 code: "DA".
+  /// ISO 639-2/T code: "DAN", ISO 639-1 code: "DA".
   const LangDan()
       : super(
           name: "Danish",
@@ -624,7 +624,7 @@ class LangDan extends NaturalLanguage {
 class LangDeu extends NaturalLanguage {
   /// Creates a instance of [LangDeu] (German language).
   ///
-  /// ISO 639-2 code: "DEU", ISO 639-1 code: "DE".
+  /// ISO 639-2/T code: "DEU", ISO 639-1 code: "DE".
   const LangDeu()
       : super(
           name: "German",
@@ -643,7 +643,7 @@ class LangDeu extends NaturalLanguage {
 class LangDiv extends NaturalLanguage {
   /// Creates a instance of [LangDiv] (Divehi (Dhivehi/Maldivian) language).
   ///
-  /// ISO 639-2 code: "DIV", ISO 639-1 code: "DV".
+  /// ISO 639-2/T code: "DIV", ISO 639-1 code: "DV".
   const LangDiv()
       : super(
           name: "Divehi (Dhivehi/Maldivian)",
@@ -663,7 +663,7 @@ class LangDiv extends NaturalLanguage {
 class LangDzo extends NaturalLanguage {
   /// Creates a instance of [LangDzo] (Dzongkha language).
   ///
-  /// ISO 639-2 code: "DZO", ISO 639-1 code: "DZ".
+  /// ISO 639-2/T code: "DZO", ISO 639-1 code: "DZ".
   const LangDzo()
       : super(
           name: "Dzongkha",
@@ -682,7 +682,7 @@ class LangDzo extends NaturalLanguage {
 class LangEll extends NaturalLanguage {
   /// Creates a instance of [LangEll] (Greek (modern) language).
   ///
-  /// ISO 639-2 code: "ELL", ISO 639-1 code: "EL".
+  /// ISO 639-2/T code: "ELL", ISO 639-1 code: "EL".
   const LangEll()
       : super(
           name: "Greek (modern)",
@@ -702,7 +702,7 @@ class LangEll extends NaturalLanguage {
 class LangEng extends NaturalLanguage {
   /// Creates a instance of [LangEng] (English language).
   ///
-  /// ISO 639-2 code: "ENG", ISO 639-1 code: "EN".
+  /// ISO 639-2/T code: "ENG", ISO 639-1 code: "EN".
   const LangEng()
       : super(
           name: "English",
@@ -720,7 +720,7 @@ class LangEng extends NaturalLanguage {
 class LangEpo extends NaturalLanguage {
   /// Creates a instance of [LangEpo] (Esperanto language).
   ///
-  /// ISO 639-2 code: "EPO", ISO 639-1 code: "EO".
+  /// ISO 639-2/T code: "EPO", ISO 639-1 code: "EO".
   const LangEpo()
       : super(
           name: "Esperanto",
@@ -738,7 +738,7 @@ class LangEpo extends NaturalLanguage {
 class LangEst extends NaturalLanguage {
   /// Creates a instance of [LangEst] (Estonian language).
   ///
-  /// ISO 639-2 code: "EST", ISO 639-1 code: "ET".
+  /// ISO 639-2/T code: "EST", ISO 639-1 code: "ET".
   const LangEst()
       : super(
           name: "Estonian",
@@ -756,7 +756,7 @@ class LangEst extends NaturalLanguage {
 class LangEus extends NaturalLanguage {
   /// Creates a instance of [LangEus] (Basque language).
   ///
-  /// ISO 639-2 code: "EUS", ISO 639-1 code: "EU".
+  /// ISO 639-2/T code: "EUS", ISO 639-1 code: "EU".
   const LangEus()
       : super(
           name: "Basque",
@@ -775,7 +775,7 @@ class LangEus extends NaturalLanguage {
 class LangEwe extends NaturalLanguage {
   /// Creates a instance of [LangEwe] (Ewe language).
   ///
-  /// ISO 639-2 code: "EWE", ISO 639-1 code: "EE".
+  /// ISO 639-2/T code: "EWE", ISO 639-1 code: "EE".
   const LangEwe()
       : super(
           name: "Ewe",
@@ -793,7 +793,7 @@ class LangEwe extends NaturalLanguage {
 class LangFao extends NaturalLanguage {
   /// Creates a instance of [LangFao] (Faroese language).
   ///
-  /// ISO 639-2 code: "FAO", ISO 639-1 code: "FO".
+  /// ISO 639-2/T code: "FAO", ISO 639-1 code: "FO".
   const LangFao()
       : super(
           name: "Faroese",
@@ -811,7 +811,7 @@ class LangFao extends NaturalLanguage {
 class LangFas extends NaturalLanguage {
   /// Creates a instance of [LangFas] (Persian (Farsi) language).
   ///
-  /// ISO 639-2 code: "FAS", ISO 639-1 code: "FA".
+  /// ISO 639-2/T code: "FAS", ISO 639-1 code: "FA".
   const LangFas()
       : super(
           name: "Persian (Farsi)",
@@ -832,7 +832,7 @@ class LangFas extends NaturalLanguage {
 class LangFij extends NaturalLanguage {
   /// Creates a instance of [LangFij] (Fijian language).
   ///
-  /// ISO 639-2 code: "FIJ", ISO 639-1 code: "FJ".
+  /// ISO 639-2/T code: "FIJ", ISO 639-1 code: "FJ".
   const LangFij()
       : super(
           name: "Fijian",
@@ -850,7 +850,7 @@ class LangFij extends NaturalLanguage {
 class LangFin extends NaturalLanguage {
   /// Creates a instance of [LangFin] (Finnish language).
   ///
-  /// ISO 639-2 code: "FIN", ISO 639-1 code: "FI".
+  /// ISO 639-2/T code: "FIN", ISO 639-1 code: "FI".
   const LangFin()
       : super(
           name: "Finnish",
@@ -868,7 +868,7 @@ class LangFin extends NaturalLanguage {
 class LangFra extends NaturalLanguage {
   /// Creates a instance of [LangFra] (French language).
   ///
-  /// ISO 639-2 code: "FRA", ISO 639-1 code: "FR".
+  /// ISO 639-2/T code: "FRA", ISO 639-1 code: "FR".
   const LangFra()
       : super(
           name: "French",
@@ -887,7 +887,7 @@ class LangFra extends NaturalLanguage {
 class LangFry extends NaturalLanguage {
   /// Creates a instance of [LangFry] (Western Frisian language).
   ///
-  /// ISO 639-2 code: "FRY", ISO 639-1 code: "FY".
+  /// ISO 639-2/T code: "FRY", ISO 639-1 code: "FY".
   const LangFry()
       : super(
           name: "Western Frisian",
@@ -905,7 +905,7 @@ class LangFry extends NaturalLanguage {
 class LangFul extends NaturalLanguage {
   /// Creates a instance of [LangFul] (Fula (Fulah/Pulaar/Pular) language).
   ///
-  /// ISO 639-2 code: "FUL", ISO 639-1 code: "FF".
+  /// ISO 639-2/T code: "FUL", ISO 639-1 code: "FF".
   const LangFul()
       : super(
           name: "Fula (Fulah/Pulaar/Pular)",
@@ -923,7 +923,7 @@ class LangFul extends NaturalLanguage {
 class LangGla extends NaturalLanguage {
   /// Creates a instance of [LangGla] ((Scottish) Gaelic language).
   ///
-  /// ISO 639-2 code: "GLA", ISO 639-1 code: "GD".
+  /// ISO 639-2/T code: "GLA", ISO 639-1 code: "GD".
   const LangGla()
       : super(
           name: "(Scottish) Gaelic",
@@ -941,7 +941,7 @@ class LangGla extends NaturalLanguage {
 class LangGle extends NaturalLanguage {
   /// Creates a instance of [LangGle] (Irish language).
   ///
-  /// ISO 639-2 code: "GLE", ISO 639-1 code: "GA".
+  /// ISO 639-2/T code: "GLE", ISO 639-1 code: "GA".
   const LangGle()
       : super(
           name: "Irish",
@@ -959,7 +959,7 @@ class LangGle extends NaturalLanguage {
 class LangGlg extends NaturalLanguage {
   /// Creates a instance of [LangGlg] (Galician language).
   ///
-  /// ISO 639-2 code: "GLG", ISO 639-1 code: "GL".
+  /// ISO 639-2/T code: "GLG", ISO 639-1 code: "GL".
   const LangGlg()
       : super(
           name: "Galician",
@@ -977,7 +977,7 @@ class LangGlg extends NaturalLanguage {
 class LangGlv extends NaturalLanguage {
   /// Creates a instance of [LangGlv] (Manx language).
   ///
-  /// ISO 639-2 code: "GLV", ISO 639-1 code: "GV".
+  /// ISO 639-2/T code: "GLV", ISO 639-1 code: "GV".
   const LangGlv()
       : super(
           name: "Manx",
@@ -995,7 +995,7 @@ class LangGlv extends NaturalLanguage {
 class LangGrn extends NaturalLanguage {
   /// Creates a instance of [LangGrn] (Guaraní language).
   ///
-  /// ISO 639-2 code: "GRN", ISO 639-1 code: "GN".
+  /// ISO 639-2/T code: "GRN", ISO 639-1 code: "GN".
   const LangGrn()
       : super(
           name: "Guaraní",
@@ -1013,7 +1013,7 @@ class LangGrn extends NaturalLanguage {
 class LangGuj extends NaturalLanguage {
   /// Creates a instance of [LangGuj] (Gujarati language).
   ///
-  /// ISO 639-2 code: "GUJ", ISO 639-1 code: "GU".
+  /// ISO 639-2/T code: "GUJ", ISO 639-1 code: "GU".
   const LangGuj()
       : super(
           name: "Gujarati",
@@ -1032,7 +1032,7 @@ class LangGuj extends NaturalLanguage {
 class LangHat extends NaturalLanguage {
   /// Creates a instance of [LangHat] (Haitian (Haitian Creole) language).
   ///
-  /// ISO 639-2 code: "HAT", ISO 639-1 code: "HT".
+  /// ISO 639-2/T code: "HAT", ISO 639-1 code: "HT".
   const LangHat()
       : super(
           name: "Haitian (Haitian Creole)",
@@ -1050,7 +1050,7 @@ class LangHat extends NaturalLanguage {
 class LangHau extends NaturalLanguage {
   /// Creates a instance of [LangHau] (Hausa language).
   ///
-  /// ISO 639-2 code: "HAU", ISO 639-1 code: "HA".
+  /// ISO 639-2/T code: "HAU", ISO 639-1 code: "HA".
   const LangHau()
       : super(
           name: "Hausa",
@@ -1069,7 +1069,7 @@ class LangHau extends NaturalLanguage {
 class LangHeb extends NaturalLanguage {
   /// Creates a instance of [LangHeb] (Hebrew (modern) language).
   ///
-  /// ISO 639-2 code: "HEB", ISO 639-1 code: "HE".
+  /// ISO 639-2/T code: "HEB", ISO 639-1 code: "HE".
   const LangHeb()
       : super(
           name: "Hebrew (modern)",
@@ -1089,7 +1089,7 @@ class LangHeb extends NaturalLanguage {
 class LangHer extends NaturalLanguage {
   /// Creates a instance of [LangHer] (Herero language).
   ///
-  /// ISO 639-2 code: "HER", ISO 639-1 code: "HZ".
+  /// ISO 639-2/T code: "HER", ISO 639-1 code: "HZ".
   const LangHer()
       : super(
           name: "Herero",
@@ -1107,7 +1107,7 @@ class LangHer extends NaturalLanguage {
 class LangHin extends NaturalLanguage {
   /// Creates a instance of [LangHin] (Hindi language).
   ///
-  /// ISO 639-2 code: "HIN", ISO 639-1 code: "HI".
+  /// ISO 639-2/T code: "HIN", ISO 639-1 code: "HI".
   const LangHin()
       : super(
           name: "Hindi",
@@ -1126,7 +1126,7 @@ class LangHin extends NaturalLanguage {
 class LangHmo extends NaturalLanguage {
   /// Creates a instance of [LangHmo] (Hiri Motu language).
   ///
-  /// ISO 639-2 code: "HMO", ISO 639-1 code: "HO".
+  /// ISO 639-2/T code: "HMO", ISO 639-1 code: "HO".
   const LangHmo()
       : super(
           name: "Hiri Motu",
@@ -1144,7 +1144,7 @@ class LangHmo extends NaturalLanguage {
 class LangHrv extends NaturalLanguage {
   /// Creates a instance of [LangHrv] (Croatian language).
   ///
-  /// ISO 639-2 code: "HRV", ISO 639-1 code: "HR".
+  /// ISO 639-2/T code: "HRV", ISO 639-1 code: "HR".
   const LangHrv()
       : super(
           name: "Croatian",
@@ -1162,7 +1162,7 @@ class LangHrv extends NaturalLanguage {
 class LangHun extends NaturalLanguage {
   /// Creates a instance of [LangHun] (Hungarian language).
   ///
-  /// ISO 639-2 code: "HUN", ISO 639-1 code: "HU".
+  /// ISO 639-2/T code: "HUN", ISO 639-1 code: "HU".
   const LangHun()
       : super(
           name: "Hungarian",
@@ -1180,7 +1180,7 @@ class LangHun extends NaturalLanguage {
 class LangHye extends NaturalLanguage {
   /// Creates a instance of [LangHye] (Armenian language).
   ///
-  /// ISO 639-2 code: "HYE", ISO 639-1 code: "HY".
+  /// ISO 639-2/T code: "HYE", ISO 639-1 code: "HY".
   const LangHye()
       : super(
           name: "Armenian",
@@ -1200,7 +1200,7 @@ class LangHye extends NaturalLanguage {
 class LangIbo extends NaturalLanguage {
   /// Creates a instance of [LangIbo] (Igbo language).
   ///
-  /// ISO 639-2 code: "IBO", ISO 639-1 code: "IG".
+  /// ISO 639-2/T code: "IBO", ISO 639-1 code: "IG".
   const LangIbo()
       : super(
           name: "Igbo",
@@ -1218,7 +1218,7 @@ class LangIbo extends NaturalLanguage {
 class LangIdo extends NaturalLanguage {
   /// Creates a instance of [LangIdo] (Ido language).
   ///
-  /// ISO 639-2 code: "IDO", ISO 639-1 code: "IO".
+  /// ISO 639-2/T code: "IDO", ISO 639-1 code: "IO".
   const LangIdo()
       : super(
           name: "Ido",
@@ -1236,7 +1236,7 @@ class LangIdo extends NaturalLanguage {
 class LangIii extends NaturalLanguage {
   /// Creates a instance of [LangIii] (Nuosu language).
   ///
-  /// ISO 639-2 code: "III", ISO 639-1 code: "II".
+  /// ISO 639-2/T code: "III", ISO 639-1 code: "II".
   const LangIii()
       : super(
           name: "Nuosu",
@@ -1255,7 +1255,7 @@ class LangIii extends NaturalLanguage {
 class LangIku extends NaturalLanguage {
   /// Creates a instance of [LangIku] (Inuktitut language).
   ///
-  /// ISO 639-2 code: "IKU", ISO 639-1 code: "IU".
+  /// ISO 639-2/T code: "IKU", ISO 639-1 code: "IU".
   const LangIku()
       : super(
           name: "Inuktitut",
@@ -1273,7 +1273,7 @@ class LangIku extends NaturalLanguage {
 class LangIle extends NaturalLanguage {
   /// Creates a instance of [LangIle] (Interlingue language).
   ///
-  /// ISO 639-2 code: "ILE", ISO 639-1 code: "IE".
+  /// ISO 639-2/T code: "ILE", ISO 639-1 code: "IE".
   const LangIle()
       : super(
           name: "Interlingue",
@@ -1291,7 +1291,7 @@ class LangIle extends NaturalLanguage {
 class LangIna extends NaturalLanguage {
   /// Creates a instance of [LangIna] (Interlingua language).
   ///
-  /// ISO 639-2 code: "INA", ISO 639-1 code: "IA".
+  /// ISO 639-2/T code: "INA", ISO 639-1 code: "IA".
   const LangIna()
       : super(
           name: "Interlingua",
@@ -1309,7 +1309,7 @@ class LangIna extends NaturalLanguage {
 class LangInd extends NaturalLanguage {
   /// Creates a instance of [LangInd] (Indonesian language).
   ///
-  /// ISO 639-2 code: "IND", ISO 639-1 code: "ID".
+  /// ISO 639-2/T code: "IND", ISO 639-1 code: "ID".
   const LangInd()
       : super(
           name: "Indonesian",
@@ -1327,7 +1327,7 @@ class LangInd extends NaturalLanguage {
 class LangIpk extends NaturalLanguage {
   /// Creates a instance of [LangIpk] (Inupiaq language).
   ///
-  /// ISO 639-2 code: "IPK", ISO 639-1 code: "IK".
+  /// ISO 639-2/T code: "IPK", ISO 639-1 code: "IK".
   const LangIpk()
       : super(
           name: "Inupiaq",
@@ -1345,7 +1345,7 @@ class LangIpk extends NaturalLanguage {
 class LangIsl extends NaturalLanguage {
   /// Creates a instance of [LangIsl] (Icelandic language).
   ///
-  /// ISO 639-2 code: "ISL", ISO 639-1 code: "IS".
+  /// ISO 639-2/T code: "ISL", ISO 639-1 code: "IS".
   const LangIsl()
       : super(
           name: "Icelandic",
@@ -1364,7 +1364,7 @@ class LangIsl extends NaturalLanguage {
 class LangIta extends NaturalLanguage {
   /// Creates a instance of [LangIta] (Italian language).
   ///
-  /// ISO 639-2 code: "ITA", ISO 639-1 code: "IT".
+  /// ISO 639-2/T code: "ITA", ISO 639-1 code: "IT".
   const LangIta()
       : super(
           name: "Italian",
@@ -1382,7 +1382,7 @@ class LangIta extends NaturalLanguage {
 class LangJav extends NaturalLanguage {
   /// Creates a instance of [LangJav] (Javanese language).
   ///
-  /// ISO 639-2 code: "JAV", ISO 639-1 code: "JV".
+  /// ISO 639-2/T code: "JAV", ISO 639-1 code: "JV".
   const LangJav()
       : super(
           name: "Javanese",
@@ -1400,7 +1400,7 @@ class LangJav extends NaturalLanguage {
 class LangJpn extends NaturalLanguage {
   /// Creates a instance of [LangJpn] (Japanese language).
   ///
-  /// ISO 639-2 code: "JPN", ISO 639-1 code: "JA".
+  /// ISO 639-2/T code: "JPN", ISO 639-1 code: "JA".
   const LangJpn()
       : super(
           name: "Japanese",
@@ -1419,7 +1419,7 @@ class LangJpn extends NaturalLanguage {
 class LangKal extends NaturalLanguage {
   /// Creates a instance of [LangKal] (Kalaallisut (Greenlandic) language).
   ///
-  /// ISO 639-2 code: "KAL", ISO 639-1 code: "KL".
+  /// ISO 639-2/T code: "KAL", ISO 639-1 code: "KL".
   const LangKal()
       : super(
           name: "Kalaallisut (Greenlandic)",
@@ -1437,7 +1437,7 @@ class LangKal extends NaturalLanguage {
 class LangKan extends NaturalLanguage {
   /// Creates a instance of [LangKan] (Kannada language).
   ///
-  /// ISO 639-2 code: "KAN", ISO 639-1 code: "KN".
+  /// ISO 639-2/T code: "KAN", ISO 639-1 code: "KN".
   const LangKan()
       : super(
           name: "Kannada",
@@ -1456,7 +1456,7 @@ class LangKan extends NaturalLanguage {
 class LangKas extends NaturalLanguage {
   /// Creates a instance of [LangKas] (Kashmiri language).
   ///
-  /// ISO 639-2 code: "KAS", ISO 639-1 code: "KS".
+  /// ISO 639-2/T code: "KAS", ISO 639-1 code: "KS".
   const LangKas()
       : super(
           name: "Kashmiri",
@@ -1476,7 +1476,7 @@ class LangKas extends NaturalLanguage {
 class LangKat extends NaturalLanguage {
   /// Creates a instance of [LangKat] (Georgian language).
   ///
-  /// ISO 639-2 code: "KAT", ISO 639-1 code: "KA".
+  /// ISO 639-2/T code: "KAT", ISO 639-1 code: "KA".
   const LangKat()
       : super(
           name: "Georgian",
@@ -1496,7 +1496,7 @@ class LangKat extends NaturalLanguage {
 class LangKau extends NaturalLanguage {
   /// Creates a instance of [LangKau] (Kanuri language).
   ///
-  /// ISO 639-2 code: "KAU", ISO 639-1 code: "KR".
+  /// ISO 639-2/T code: "KAU", ISO 639-1 code: "KR".
   const LangKau()
       : super(
           name: "Kanuri",
@@ -1514,7 +1514,7 @@ class LangKau extends NaturalLanguage {
 class LangKaz extends NaturalLanguage {
   /// Creates a instance of [LangKaz] (Kazakh language).
   ///
-  /// ISO 639-2 code: "KAZ", ISO 639-1 code: "KK".
+  /// ISO 639-2/T code: "KAZ", ISO 639-1 code: "KK".
   const LangKaz()
       : super(
           name: "Kazakh",
@@ -1533,7 +1533,7 @@ class LangKaz extends NaturalLanguage {
 class LangKhm extends NaturalLanguage {
   /// Creates a instance of [LangKhm] (Khmer language).
   ///
-  /// ISO 639-2 code: "KHM", ISO 639-1 code: "KM".
+  /// ISO 639-2/T code: "KHM", ISO 639-1 code: "KM".
   const LangKhm()
       : super(
           name: "Khmer",
@@ -1552,7 +1552,7 @@ class LangKhm extends NaturalLanguage {
 class LangKik extends NaturalLanguage {
   /// Creates a instance of [LangKik] (Kikuyu (Gikuyu) language).
   ///
-  /// ISO 639-2 code: "KIK", ISO 639-1 code: "KI".
+  /// ISO 639-2/T code: "KIK", ISO 639-1 code: "KI".
   const LangKik()
       : super(
           name: "Kikuyu (Gikuyu)",
@@ -1570,7 +1570,7 @@ class LangKik extends NaturalLanguage {
 class LangKin extends NaturalLanguage {
   /// Creates a instance of [LangKin] (Kinyarwanda language).
   ///
-  /// ISO 639-2 code: "KIN", ISO 639-1 code: "RW".
+  /// ISO 639-2/T code: "KIN", ISO 639-1 code: "RW".
   const LangKin()
       : super(
           name: "Kinyarwanda",
@@ -1588,7 +1588,7 @@ class LangKin extends NaturalLanguage {
 class LangKir extends NaturalLanguage {
   /// Creates a instance of [LangKir] (Kyrgyz language).
   ///
-  /// ISO 639-2 code: "KIR", ISO 639-1 code: "KY".
+  /// ISO 639-2/T code: "KIR", ISO 639-1 code: "KY".
   const LangKir()
       : super(
           name: "Kyrgyz",
@@ -1607,7 +1607,7 @@ class LangKir extends NaturalLanguage {
 class LangKom extends NaturalLanguage {
   /// Creates a instance of [LangKom] (Komi language).
   ///
-  /// ISO 639-2 code: "KOM", ISO 639-1 code: "KV".
+  /// ISO 639-2/T code: "KOM", ISO 639-1 code: "KV".
   const LangKom()
       : super(
           name: "Komi",
@@ -1626,7 +1626,7 @@ class LangKom extends NaturalLanguage {
 class LangKon extends NaturalLanguage {
   /// Creates a instance of [LangKon] (Kongo language).
   ///
-  /// ISO 639-2 code: "KON", ISO 639-1 code: "KG".
+  /// ISO 639-2/T code: "KON", ISO 639-1 code: "KG".
   const LangKon()
       : super(
           name: "Kongo",
@@ -1644,7 +1644,7 @@ class LangKon extends NaturalLanguage {
 class LangKor extends NaturalLanguage {
   /// Creates a instance of [LangKor] (Korean language).
   ///
-  /// ISO 639-2 code: "KOR", ISO 639-1 code: "KO".
+  /// ISO 639-2/T code: "KOR", ISO 639-1 code: "KO".
   const LangKor()
       : super(
           name: "Korean",
@@ -1663,7 +1663,7 @@ class LangKor extends NaturalLanguage {
 class LangKua extends NaturalLanguage {
   /// Creates a instance of [LangKua] (Kwanyama (Kuanyama) language).
   ///
-  /// ISO 639-2 code: "KUA", ISO 639-1 code: "KJ".
+  /// ISO 639-2/T code: "KUA", ISO 639-1 code: "KJ".
   const LangKua()
       : super(
           name: "Kwanyama (Kuanyama)",
@@ -1681,7 +1681,7 @@ class LangKua extends NaturalLanguage {
 class LangKur extends NaturalLanguage {
   /// Creates a instance of [LangKur] (Kurdish language).
   ///
-  /// ISO 639-2 code: "KUR", ISO 639-1 code: "KU".
+  /// ISO 639-2/T code: "KUR", ISO 639-1 code: "KU".
   const LangKur()
       : super(
           name: "Kurdish",
@@ -1701,7 +1701,7 @@ class LangKur extends NaturalLanguage {
 class LangLao extends NaturalLanguage {
   /// Creates a instance of [LangLao] (Lao language).
   ///
-  /// ISO 639-2 code: "LAO", ISO 639-1 code: "LO".
+  /// ISO 639-2/T code: "LAO", ISO 639-1 code: "LO".
   const LangLao()
       : super(
           name: "Lao",
@@ -1720,7 +1720,7 @@ class LangLao extends NaturalLanguage {
 class LangLat extends NaturalLanguage {
   /// Creates a instance of [LangLat] (Latin language).
   ///
-  /// ISO 639-2 code: "LAT", ISO 639-1 code: "LA".
+  /// ISO 639-2/T code: "LAT", ISO 639-1 code: "LA".
   const LangLat()
       : super(
           name: "Latin",
@@ -1738,7 +1738,7 @@ class LangLat extends NaturalLanguage {
 class LangLav extends NaturalLanguage {
   /// Creates a instance of [LangLav] (Latvian language).
   ///
-  /// ISO 639-2 code: "LAV", ISO 639-1 code: "LV".
+  /// ISO 639-2/T code: "LAV", ISO 639-1 code: "LV".
   const LangLav()
       : super(
           name: "Latvian",
@@ -1756,7 +1756,7 @@ class LangLav extends NaturalLanguage {
 class LangLim extends NaturalLanguage {
   /// Creates a instance of [LangLim] (Limburgish (Limburgan/Limburger) language).
   ///
-  /// ISO 639-2 code: "LIM", ISO 639-1 code: "LI".
+  /// ISO 639-2/T code: "LIM", ISO 639-1 code: "LI".
   const LangLim()
       : super(
           name: "Limburgish (Limburgan/Limburger)",
@@ -1774,7 +1774,7 @@ class LangLim extends NaturalLanguage {
 class LangLin extends NaturalLanguage {
   /// Creates a instance of [LangLin] (Lingala language).
   ///
-  /// ISO 639-2 code: "LIN", ISO 639-1 code: "LN".
+  /// ISO 639-2/T code: "LIN", ISO 639-1 code: "LN".
   const LangLin()
       : super(
           name: "Lingala",
@@ -1792,7 +1792,7 @@ class LangLin extends NaturalLanguage {
 class LangLit extends NaturalLanguage {
   /// Creates a instance of [LangLit] (Lithuanian language).
   ///
-  /// ISO 639-2 code: "LIT", ISO 639-1 code: "LT".
+  /// ISO 639-2/T code: "LIT", ISO 639-1 code: "LT".
   const LangLit()
       : super(
           name: "Lithuanian",
@@ -1810,7 +1810,7 @@ class LangLit extends NaturalLanguage {
 class LangLtz extends NaturalLanguage {
   /// Creates a instance of [LangLtz] (Luxembourgish (Letzeburgesch) language).
   ///
-  /// ISO 639-2 code: "LTZ", ISO 639-1 code: "LB".
+  /// ISO 639-2/T code: "LTZ", ISO 639-1 code: "LB".
   const LangLtz()
       : super(
           name: "Luxembourgish (Letzeburgesch)",
@@ -1828,7 +1828,7 @@ class LangLtz extends NaturalLanguage {
 class LangLub extends NaturalLanguage {
   /// Creates a instance of [LangLub] (Luba-Katanga language).
   ///
-  /// ISO 639-2 code: "LUB", ISO 639-1 code: "LU".
+  /// ISO 639-2/T code: "LUB", ISO 639-1 code: "LU".
   const LangLub()
       : super(
           name: "Luba-Katanga",
@@ -1846,7 +1846,7 @@ class LangLub extends NaturalLanguage {
 class LangLug extends NaturalLanguage {
   /// Creates a instance of [LangLug] (Ganda language).
   ///
-  /// ISO 639-2 code: "LUG", ISO 639-1 code: "LG".
+  /// ISO 639-2/T code: "LUG", ISO 639-1 code: "LG".
   const LangLug()
       : super(
           name: "Ganda",
@@ -1864,7 +1864,7 @@ class LangLug extends NaturalLanguage {
 class LangMah extends NaturalLanguage {
   /// Creates a instance of [LangMah] (Marshallese language).
   ///
-  /// ISO 639-2 code: "MAH", ISO 639-1 code: "MH".
+  /// ISO 639-2/T code: "MAH", ISO 639-1 code: "MH".
   const LangMah()
       : super(
           name: "Marshallese",
@@ -1882,7 +1882,7 @@ class LangMah extends NaturalLanguage {
 class LangMal extends NaturalLanguage {
   /// Creates a instance of [LangMal] (Malayalam language).
   ///
-  /// ISO 639-2 code: "MAL", ISO 639-1 code: "ML".
+  /// ISO 639-2/T code: "MAL", ISO 639-1 code: "ML".
   const LangMal()
       : super(
           name: "Malayalam",
@@ -1901,7 +1901,7 @@ class LangMal extends NaturalLanguage {
 class LangMar extends NaturalLanguage {
   /// Creates a instance of [LangMar] (Marathi (Marāṭhī) language).
   ///
-  /// ISO 639-2 code: "MAR", ISO 639-1 code: "MR".
+  /// ISO 639-2/T code: "MAR", ISO 639-1 code: "MR".
   const LangMar()
       : super(
           name: "Marathi (Marāṭhī)",
@@ -1920,7 +1920,7 @@ class LangMar extends NaturalLanguage {
 class LangMkd extends NaturalLanguage {
   /// Creates a instance of [LangMkd] (Macedonian language).
   ///
-  /// ISO 639-2 code: "MKD", ISO 639-1 code: "MK".
+  /// ISO 639-2/T code: "MKD", ISO 639-1 code: "MK".
   const LangMkd()
       : super(
           name: "Macedonian",
@@ -1940,7 +1940,7 @@ class LangMkd extends NaturalLanguage {
 class LangMlg extends NaturalLanguage {
   /// Creates a instance of [LangMlg] (Malagasy language).
   ///
-  /// ISO 639-2 code: "MLG", ISO 639-1 code: "MG".
+  /// ISO 639-2/T code: "MLG", ISO 639-1 code: "MG".
   const LangMlg()
       : super(
           name: "Malagasy",
@@ -1958,7 +1958,7 @@ class LangMlg extends NaturalLanguage {
 class LangMlt extends NaturalLanguage {
   /// Creates a instance of [LangMlt] (Maltese language).
   ///
-  /// ISO 639-2 code: "MLT", ISO 639-1 code: "MT".
+  /// ISO 639-2/T code: "MLT", ISO 639-1 code: "MT".
   const LangMlt()
       : super(
           name: "Maltese",
@@ -1976,7 +1976,7 @@ class LangMlt extends NaturalLanguage {
 class LangMon extends NaturalLanguage {
   /// Creates a instance of [LangMon] (Mongolian language).
   ///
-  /// ISO 639-2 code: "MON", ISO 639-1 code: "MN".
+  /// ISO 639-2/T code: "MON", ISO 639-1 code: "MN".
   const LangMon()
       : super(
           name: "Mongolian",
@@ -1995,7 +1995,7 @@ class LangMon extends NaturalLanguage {
 class LangMri extends NaturalLanguage {
   /// Creates a instance of [LangMri] (Māori language).
   ///
-  /// ISO 639-2 code: "MRI", ISO 639-1 code: "MI".
+  /// ISO 639-2/T code: "MRI", ISO 639-1 code: "MI".
   const LangMri()
       : super(
           name: "Māori",
@@ -2014,7 +2014,7 @@ class LangMri extends NaturalLanguage {
 class LangMsa extends NaturalLanguage {
   /// Creates a instance of [LangMsa] (Malay language).
   ///
-  /// ISO 639-2 code: "MSA", ISO 639-1 code: "MS".
+  /// ISO 639-2/T code: "MSA", ISO 639-1 code: "MS".
   const LangMsa()
       : super(
           name: "Malay",
@@ -2034,7 +2034,7 @@ class LangMsa extends NaturalLanguage {
 class LangMya extends NaturalLanguage {
   /// Creates a instance of [LangMya] (Burmese language).
   ///
-  /// ISO 639-2 code: "MYA", ISO 639-1 code: "MY".
+  /// ISO 639-2/T code: "MYA", ISO 639-1 code: "MY".
   const LangMya()
       : super(
           name: "Burmese",
@@ -2054,7 +2054,7 @@ class LangMya extends NaturalLanguage {
 class LangNau extends NaturalLanguage {
   /// Creates a instance of [LangNau] (Nauruan language).
   ///
-  /// ISO 639-2 code: "NAU", ISO 639-1 code: "NA".
+  /// ISO 639-2/T code: "NAU", ISO 639-1 code: "NA".
   const LangNau()
       : super(
           name: "Nauruan",
@@ -2072,7 +2072,7 @@ class LangNau extends NaturalLanguage {
 class LangNav extends NaturalLanguage {
   /// Creates a instance of [LangNav] (Navajo (Navaho) language).
   ///
-  /// ISO 639-2 code: "NAV", ISO 639-1 code: "NV".
+  /// ISO 639-2/T code: "NAV", ISO 639-1 code: "NV".
   const LangNav()
       : super(
           name: "Navajo (Navaho)",
@@ -2090,7 +2090,7 @@ class LangNav extends NaturalLanguage {
 class LangNbl extends NaturalLanguage {
   /// Creates a instance of [LangNbl] (Southern Ndebele language).
   ///
-  /// ISO 639-2 code: "NBL", ISO 639-1 code: "NR".
+  /// ISO 639-2/T code: "NBL", ISO 639-1 code: "NR".
   const LangNbl()
       : super(
           name: "Southern Ndebele",
@@ -2108,7 +2108,7 @@ class LangNbl extends NaturalLanguage {
 class LangNde extends NaturalLanguage {
   /// Creates a instance of [LangNde] (Northern Ndebele language).
   ///
-  /// ISO 639-2 code: "NDE", ISO 639-1 code: "ND".
+  /// ISO 639-2/T code: "NDE", ISO 639-1 code: "ND".
   const LangNde()
       : super(
           name: "Northern Ndebele",
@@ -2126,7 +2126,7 @@ class LangNde extends NaturalLanguage {
 class LangNdo extends NaturalLanguage {
   /// Creates a instance of [LangNdo] (Ndonga language).
   ///
-  /// ISO 639-2 code: "NDO", ISO 639-1 code: "NG".
+  /// ISO 639-2/T code: "NDO", ISO 639-1 code: "NG".
   const LangNdo()
       : super(
           name: "Ndonga",
@@ -2144,7 +2144,7 @@ class LangNdo extends NaturalLanguage {
 class LangNep extends NaturalLanguage {
   /// Creates a instance of [LangNep] (Nepali language).
   ///
-  /// ISO 639-2 code: "NEP", ISO 639-1 code: "NE".
+  /// ISO 639-2/T code: "NEP", ISO 639-1 code: "NE".
   const LangNep()
       : super(
           name: "Nepali",
@@ -2163,7 +2163,7 @@ class LangNep extends NaturalLanguage {
 class LangNld extends NaturalLanguage {
   /// Creates a instance of [LangNld] (Dutch language).
   ///
-  /// ISO 639-2 code: "NLD", ISO 639-1 code: "NL".
+  /// ISO 639-2/T code: "NLD", ISO 639-1 code: "NL".
   const LangNld()
       : super(
           name: "Dutch",
@@ -2182,7 +2182,7 @@ class LangNld extends NaturalLanguage {
 class LangNno extends NaturalLanguage {
   /// Creates a instance of [LangNno] (Norwegian Nynorsk language).
   ///
-  /// ISO 639-2 code: "NNO", ISO 639-1 code: "NN".
+  /// ISO 639-2/T code: "NNO", ISO 639-1 code: "NN".
   const LangNno()
       : super(
           name: "Norwegian Nynorsk",
@@ -2200,7 +2200,7 @@ class LangNno extends NaturalLanguage {
 class LangNob extends NaturalLanguage {
   /// Creates a instance of [LangNob] (Norwegian Bokmål language).
   ///
-  /// ISO 639-2 code: "NOB", ISO 639-1 code: "NB".
+  /// ISO 639-2/T code: "NOB", ISO 639-1 code: "NB".
   const LangNob()
       : super(
           name: "Norwegian Bokmål",
@@ -2218,7 +2218,7 @@ class LangNob extends NaturalLanguage {
 class LangNor extends NaturalLanguage {
   /// Creates a instance of [LangNor] (Norwegian language).
   ///
-  /// ISO 639-2 code: "NOR", ISO 639-1 code: "NO".
+  /// ISO 639-2/T code: "NOR", ISO 639-1 code: "NO".
   const LangNor()
       : super(
           name: "Norwegian",
@@ -2236,7 +2236,7 @@ class LangNor extends NaturalLanguage {
 class LangNya extends NaturalLanguage {
   /// Creates a instance of [LangNya] (Chichewa (Chewa/Nyanja) language).
   ///
-  /// ISO 639-2 code: "NYA", ISO 639-1 code: "NY".
+  /// ISO 639-2/T code: "NYA", ISO 639-1 code: "NY".
   const LangNya()
       : super(
           name: "Chichewa (Chewa/Nyanja)",
@@ -2254,7 +2254,7 @@ class LangNya extends NaturalLanguage {
 class LangOci extends NaturalLanguage {
   /// Creates a instance of [LangOci] (Occitan language).
   ///
-  /// ISO 639-2 code: "OCI", ISO 639-1 code: "OC".
+  /// ISO 639-2/T code: "OCI", ISO 639-1 code: "OC".
   const LangOci()
       : super(
           name: "Occitan",
@@ -2272,7 +2272,7 @@ class LangOci extends NaturalLanguage {
 class LangOji extends NaturalLanguage {
   /// Creates a instance of [LangOji] (Ojibwe (Ojibwa) language).
   ///
-  /// ISO 639-2 code: "OJI", ISO 639-1 code: "OJ".
+  /// ISO 639-2/T code: "OJI", ISO 639-1 code: "OJ".
   const LangOji()
       : super(
           name: "Ojibwe (Ojibwa)",
@@ -2290,7 +2290,7 @@ class LangOji extends NaturalLanguage {
 class LangOri extends NaturalLanguage {
   /// Creates a instance of [LangOri] (Oriya language).
   ///
-  /// ISO 639-2 code: "ORI", ISO 639-1 code: "OR".
+  /// ISO 639-2/T code: "ORI", ISO 639-1 code: "OR".
   const LangOri()
       : super(
           name: "Oriya",
@@ -2309,7 +2309,7 @@ class LangOri extends NaturalLanguage {
 class LangOrm extends NaturalLanguage {
   /// Creates a instance of [LangOrm] (Oromo language).
   ///
-  /// ISO 639-2 code: "ORM", ISO 639-1 code: "OM".
+  /// ISO 639-2/T code: "ORM", ISO 639-1 code: "OM".
   const LangOrm()
       : super(
           name: "Oromo",
@@ -2327,7 +2327,7 @@ class LangOrm extends NaturalLanguage {
 class LangOss extends NaturalLanguage {
   /// Creates a instance of [LangOss] (Ossetian (Ossetic) language).
   ///
-  /// ISO 639-2 code: "OSS", ISO 639-1 code: "OS".
+  /// ISO 639-2/T code: "OSS", ISO 639-1 code: "OS".
   const LangOss()
       : super(
           name: "Ossetian (Ossetic)",
@@ -2346,7 +2346,7 @@ class LangOss extends NaturalLanguage {
 class LangPan extends NaturalLanguage {
   /// Creates a instance of [LangPan] ((Eastern) Punjabi language).
   ///
-  /// ISO 639-2 code: "PAN", ISO 639-1 code: "PA".
+  /// ISO 639-2/T code: "PAN", ISO 639-1 code: "PA".
   const LangPan()
       : super(
           name: "(Eastern) Punjabi",
@@ -2365,7 +2365,7 @@ class LangPan extends NaturalLanguage {
 class LangPli extends NaturalLanguage {
   /// Creates a instance of [LangPli] (Pāli language).
   ///
-  /// ISO 639-2 code: "PLI", ISO 639-1 code: "PI".
+  /// ISO 639-2/T code: "PLI", ISO 639-1 code: "PI".
   const LangPli()
       : super(
           name: "Pāli",
@@ -2390,7 +2390,7 @@ class LangPli extends NaturalLanguage {
 class LangPol extends NaturalLanguage {
   /// Creates a instance of [LangPol] (Polish language).
   ///
-  /// ISO 639-2 code: "POL", ISO 639-1 code: "PL".
+  /// ISO 639-2/T code: "POL", ISO 639-1 code: "PL".
   const LangPol()
       : super(
           name: "Polish",
@@ -2408,7 +2408,7 @@ class LangPol extends NaturalLanguage {
 class LangPor extends NaturalLanguage {
   /// Creates a instance of [LangPor] (Portuguese language).
   ///
-  /// ISO 639-2 code: "POR", ISO 639-1 code: "PT".
+  /// ISO 639-2/T code: "POR", ISO 639-1 code: "PT".
   const LangPor()
       : super(
           name: "Portuguese",
@@ -2426,7 +2426,7 @@ class LangPor extends NaturalLanguage {
 class LangPus extends NaturalLanguage {
   /// Creates a instance of [LangPus] (Pashto (Pushto) language).
   ///
-  /// ISO 639-2 code: "PUS", ISO 639-1 code: "PS".
+  /// ISO 639-2/T code: "PUS", ISO 639-1 code: "PS".
   const LangPus()
       : super(
           name: "Pashto (Pushto)",
@@ -2446,7 +2446,7 @@ class LangPus extends NaturalLanguage {
 class LangQue extends NaturalLanguage {
   /// Creates a instance of [LangQue] (Quechua language).
   ///
-  /// ISO 639-2 code: "QUE", ISO 639-1 code: "QU".
+  /// ISO 639-2/T code: "QUE", ISO 639-1 code: "QU".
   const LangQue()
       : super(
           name: "Quechua",
@@ -2464,7 +2464,7 @@ class LangQue extends NaturalLanguage {
 class LangRoh extends NaturalLanguage {
   /// Creates a instance of [LangRoh] (Romansh language).
   ///
-  /// ISO 639-2 code: "ROH", ISO 639-1 code: "RM".
+  /// ISO 639-2/T code: "ROH", ISO 639-1 code: "RM".
   const LangRoh()
       : super(
           name: "Romansh",
@@ -2482,7 +2482,7 @@ class LangRoh extends NaturalLanguage {
 class LangRon extends NaturalLanguage {
   /// Creates a instance of [LangRon] (Romanian language).
   ///
-  /// ISO 639-2 code: "RON", ISO 639-1 code: "RO".
+  /// ISO 639-2/T code: "RON", ISO 639-1 code: "RO".
   const LangRon()
       : super(
           name: "Romanian",
@@ -2501,7 +2501,7 @@ class LangRon extends NaturalLanguage {
 class LangRun extends NaturalLanguage {
   /// Creates a instance of [LangRun] (Kirundi language).
   ///
-  /// ISO 639-2 code: "RUN", ISO 639-1 code: "RN".
+  /// ISO 639-2/T code: "RUN", ISO 639-1 code: "RN".
   const LangRun()
       : super(
           name: "Kirundi",
@@ -2519,7 +2519,7 @@ class LangRun extends NaturalLanguage {
 class LangRus extends NaturalLanguage {
   /// Creates a instance of [LangRus] (Russian language).
   ///
-  /// ISO 639-2 code: "RUS", ISO 639-1 code: "RU".
+  /// ISO 639-2/T code: "RUS", ISO 639-1 code: "RU".
   const LangRus()
       : super(
           name: "Russian",
@@ -2538,7 +2538,7 @@ class LangRus extends NaturalLanguage {
 class LangSag extends NaturalLanguage {
   /// Creates a instance of [LangSag] (Sango language).
   ///
-  /// ISO 639-2 code: "SAG", ISO 639-1 code: "SG".
+  /// ISO 639-2/T code: "SAG", ISO 639-1 code: "SG".
   const LangSag()
       : super(
           name: "Sango",
@@ -2556,7 +2556,7 @@ class LangSag extends NaturalLanguage {
 class LangSan extends NaturalLanguage {
   /// Creates a instance of [LangSan] (Sanskrit (Saṁskṛta) language).
   ///
-  /// ISO 639-2 code: "SAN", ISO 639-1 code: "SA".
+  /// ISO 639-2/T code: "SAN", ISO 639-1 code: "SA".
   const LangSan()
       : super(
           name: "Sanskrit (Saṁskṛta)",
@@ -2575,7 +2575,7 @@ class LangSan extends NaturalLanguage {
 class LangSin extends NaturalLanguage {
   /// Creates a instance of [LangSin] (Sinhalese (Sinhala) language).
   ///
-  /// ISO 639-2 code: "SIN", ISO 639-1 code: "SI".
+  /// ISO 639-2/T code: "SIN", ISO 639-1 code: "SI".
   const LangSin()
       : super(
           name: "Sinhalese (Sinhala)",
@@ -2594,7 +2594,7 @@ class LangSin extends NaturalLanguage {
 class LangSlk extends NaturalLanguage {
   /// Creates a instance of [LangSlk] (Slovak language).
   ///
-  /// ISO 639-2 code: "SLK", ISO 639-1 code: "SK".
+  /// ISO 639-2/T code: "SLK", ISO 639-1 code: "SK".
   const LangSlk()
       : super(
           name: "Slovak",
@@ -2613,7 +2613,7 @@ class LangSlk extends NaturalLanguage {
 class LangSlv extends NaturalLanguage {
   /// Creates a instance of [LangSlv] (Slovene language).
   ///
-  /// ISO 639-2 code: "SLV", ISO 639-1 code: "SL".
+  /// ISO 639-2/T code: "SLV", ISO 639-1 code: "SL".
   const LangSlv()
       : super(
           name: "Slovene",
@@ -2631,7 +2631,7 @@ class LangSlv extends NaturalLanguage {
 class LangSme extends NaturalLanguage {
   /// Creates a instance of [LangSme] (Northern Sami language).
   ///
-  /// ISO 639-2 code: "SME", ISO 639-1 code: "SE".
+  /// ISO 639-2/T code: "SME", ISO 639-1 code: "SE".
   const LangSme()
       : super(
           name: "Northern Sami",
@@ -2649,7 +2649,7 @@ class LangSme extends NaturalLanguage {
 class LangSmo extends NaturalLanguage {
   /// Creates a instance of [LangSmo] (Samoan language).
   ///
-  /// ISO 639-2 code: "SMO", ISO 639-1 code: "SM".
+  /// ISO 639-2/T code: "SMO", ISO 639-1 code: "SM".
   const LangSmo()
       : super(
           name: "Samoan",
@@ -2667,7 +2667,7 @@ class LangSmo extends NaturalLanguage {
 class LangSna extends NaturalLanguage {
   /// Creates a instance of [LangSna] (Shona language).
   ///
-  /// ISO 639-2 code: "SNA", ISO 639-1 code: "SN".
+  /// ISO 639-2/T code: "SNA", ISO 639-1 code: "SN".
   const LangSna()
       : super(
           name: "Shona",
@@ -2685,7 +2685,7 @@ class LangSna extends NaturalLanguage {
 class LangSnd extends NaturalLanguage {
   /// Creates a instance of [LangSnd] (Sindhi language).
   ///
-  /// ISO 639-2 code: "SND", ISO 639-1 code: "SD".
+  /// ISO 639-2/T code: "SND", ISO 639-1 code: "SD".
   const LangSnd()
       : super(
           name: "Sindhi",
@@ -2705,7 +2705,7 @@ class LangSnd extends NaturalLanguage {
 class LangSom extends NaturalLanguage {
   /// Creates a instance of [LangSom] (Somali language).
   ///
-  /// ISO 639-2 code: "SOM", ISO 639-1 code: "SO".
+  /// ISO 639-2/T code: "SOM", ISO 639-1 code: "SO".
   const LangSom()
       : super(
           name: "Somali",
@@ -2723,7 +2723,7 @@ class LangSom extends NaturalLanguage {
 class LangSot extends NaturalLanguage {
   /// Creates a instance of [LangSot] (Southern Sotho language).
   ///
-  /// ISO 639-2 code: "SOT", ISO 639-1 code: "ST".
+  /// ISO 639-2/T code: "SOT", ISO 639-1 code: "ST".
   const LangSot()
       : super(
           name: "Southern Sotho",
@@ -2741,7 +2741,7 @@ class LangSot extends NaturalLanguage {
 class LangSpa extends NaturalLanguage {
   /// Creates a instance of [LangSpa] (Spanish language).
   ///
-  /// ISO 639-2 code: "SPA", ISO 639-1 code: "ES".
+  /// ISO 639-2/T code: "SPA", ISO 639-1 code: "ES".
   const LangSpa()
       : super(
           name: "Spanish",
@@ -2759,7 +2759,7 @@ class LangSpa extends NaturalLanguage {
 class LangSqi extends NaturalLanguage {
   /// Creates a instance of [LangSqi] (Albanian language).
   ///
-  /// ISO 639-2 code: "SQI", ISO 639-1 code: "SQ".
+  /// ISO 639-2/T code: "SQI", ISO 639-1 code: "SQ".
   const LangSqi()
       : super(
           name: "Albanian",
@@ -2778,7 +2778,7 @@ class LangSqi extends NaturalLanguage {
 class LangSrd extends NaturalLanguage {
   /// Creates a instance of [LangSrd] (Sardinian language).
   ///
-  /// ISO 639-2 code: "SRD", ISO 639-1 code: "SC".
+  /// ISO 639-2/T code: "SRD", ISO 639-1 code: "SC".
   const LangSrd()
       : super(
           name: "Sardinian",
@@ -2796,7 +2796,7 @@ class LangSrd extends NaturalLanguage {
 class LangSrp extends NaturalLanguage {
   /// Creates a instance of [LangSrp] (Serbian language).
   ///
-  /// ISO 639-2 code: "SRP", ISO 639-1 code: "SR".
+  /// ISO 639-2/T code: "SRP", ISO 639-1 code: "SR".
   const LangSrp()
       : super(
           name: "Serbian",
@@ -2815,7 +2815,7 @@ class LangSrp extends NaturalLanguage {
 class LangSsw extends NaturalLanguage {
   /// Creates a instance of [LangSsw] (Swati language).
   ///
-  /// ISO 639-2 code: "SSW", ISO 639-1 code: "SS".
+  /// ISO 639-2/T code: "SSW", ISO 639-1 code: "SS".
   const LangSsw()
       : super(
           name: "Swati",
@@ -2833,7 +2833,7 @@ class LangSsw extends NaturalLanguage {
 class LangSun extends NaturalLanguage {
   /// Creates a instance of [LangSun] (Sundanese language).
   ///
-  /// ISO 639-2 code: "SUN", ISO 639-1 code: "SU".
+  /// ISO 639-2/T code: "SUN", ISO 639-1 code: "SU".
   const LangSun()
       : super(
           name: "Sundanese",
@@ -2851,7 +2851,7 @@ class LangSun extends NaturalLanguage {
 class LangSwa extends NaturalLanguage {
   /// Creates a instance of [LangSwa] (Swahili language).
   ///
-  /// ISO 639-2 code: "SWA", ISO 639-1 code: "SW".
+  /// ISO 639-2/T code: "SWA", ISO 639-1 code: "SW".
   const LangSwa()
       : super(
           name: "Swahili",
@@ -2869,7 +2869,7 @@ class LangSwa extends NaturalLanguage {
 class LangSwe extends NaturalLanguage {
   /// Creates a instance of [LangSwe] (Swedish language).
   ///
-  /// ISO 639-2 code: "SWE", ISO 639-1 code: "SV".
+  /// ISO 639-2/T code: "SWE", ISO 639-1 code: "SV".
   const LangSwe()
       : super(
           name: "Swedish",
@@ -2887,7 +2887,7 @@ class LangSwe extends NaturalLanguage {
 class LangTah extends NaturalLanguage {
   /// Creates a instance of [LangTah] (Tahitian language).
   ///
-  /// ISO 639-2 code: "TAH", ISO 639-1 code: "TY".
+  /// ISO 639-2/T code: "TAH", ISO 639-1 code: "TY".
   const LangTah()
       : super(
           name: "Tahitian",
@@ -2905,7 +2905,7 @@ class LangTah extends NaturalLanguage {
 class LangTam extends NaturalLanguage {
   /// Creates a instance of [LangTam] (Tamil language).
   ///
-  /// ISO 639-2 code: "TAM", ISO 639-1 code: "TA".
+  /// ISO 639-2/T code: "TAM", ISO 639-1 code: "TA".
   const LangTam()
       : super(
           name: "Tamil",
@@ -2924,7 +2924,7 @@ class LangTam extends NaturalLanguage {
 class LangTat extends NaturalLanguage {
   /// Creates a instance of [LangTat] (Tatar language).
   ///
-  /// ISO 639-2 code: "TAT", ISO 639-1 code: "TT".
+  /// ISO 639-2/T code: "TAT", ISO 639-1 code: "TT".
   const LangTat()
       : super(
           name: "Tatar",
@@ -2943,7 +2943,7 @@ class LangTat extends NaturalLanguage {
 class LangTel extends NaturalLanguage {
   /// Creates a instance of [LangTel] (Telugu language).
   ///
-  /// ISO 639-2 code: "TEL", ISO 639-1 code: "TE".
+  /// ISO 639-2/T code: "TEL", ISO 639-1 code: "TE".
   const LangTel()
       : super(
           name: "Telugu",
@@ -2962,7 +2962,7 @@ class LangTel extends NaturalLanguage {
 class LangTgk extends NaturalLanguage {
   /// Creates a instance of [LangTgk] (Tajik language).
   ///
-  /// ISO 639-2 code: "TGK", ISO 639-1 code: "TG".
+  /// ISO 639-2/T code: "TGK", ISO 639-1 code: "TG".
   const LangTgk()
       : super(
           name: "Tajik",
@@ -2981,7 +2981,7 @@ class LangTgk extends NaturalLanguage {
 class LangTgl extends NaturalLanguage {
   /// Creates a instance of [LangTgl] (Tagalog language).
   ///
-  /// ISO 639-2 code: "TGL", ISO 639-1 code: "TL".
+  /// ISO 639-2/T code: "TGL", ISO 639-1 code: "TL".
   const LangTgl()
       : super(
           name: "Tagalog",
@@ -2999,7 +2999,7 @@ class LangTgl extends NaturalLanguage {
 class LangTha extends NaturalLanguage {
   /// Creates a instance of [LangTha] (Thai language).
   ///
-  /// ISO 639-2 code: "THA", ISO 639-1 code: "TH".
+  /// ISO 639-2/T code: "THA", ISO 639-1 code: "TH".
   const LangTha()
       : super(
           name: "Thai",
@@ -3018,7 +3018,7 @@ class LangTha extends NaturalLanguage {
 class LangTir extends NaturalLanguage {
   /// Creates a instance of [LangTir] (Tigrinya language).
   ///
-  /// ISO 639-2 code: "TIR", ISO 639-1 code: "TI".
+  /// ISO 639-2/T code: "TIR", ISO 639-1 code: "TI".
   const LangTir()
       : super(
           name: "Tigrinya",
@@ -3037,7 +3037,7 @@ class LangTir extends NaturalLanguage {
 class LangTon extends NaturalLanguage {
   /// Creates a instance of [LangTon] (Tonga (Tonga Islands) language).
   ///
-  /// ISO 639-2 code: "TON", ISO 639-1 code: "TO".
+  /// ISO 639-2/T code: "TON", ISO 639-1 code: "TO".
   const LangTon()
       : super(
           name: "Tonga (Tonga Islands)",
@@ -3055,7 +3055,7 @@ class LangTon extends NaturalLanguage {
 class LangTsn extends NaturalLanguage {
   /// Creates a instance of [LangTsn] (Tswana language).
   ///
-  /// ISO 639-2 code: "TSN", ISO 639-1 code: "TN".
+  /// ISO 639-2/T code: "TSN", ISO 639-1 code: "TN".
   const LangTsn()
       : super(
           name: "Tswana",
@@ -3073,7 +3073,7 @@ class LangTsn extends NaturalLanguage {
 class LangTso extends NaturalLanguage {
   /// Creates a instance of [LangTso] (Tsonga language).
   ///
-  /// ISO 639-2 code: "TSO", ISO 639-1 code: "TS".
+  /// ISO 639-2/T code: "TSO", ISO 639-1 code: "TS".
   const LangTso()
       : super(
           name: "Tsonga",
@@ -3091,7 +3091,7 @@ class LangTso extends NaturalLanguage {
 class LangTuk extends NaturalLanguage {
   /// Creates a instance of [LangTuk] (Turkmen language).
   ///
-  /// ISO 639-2 code: "TUK", ISO 639-1 code: "TK".
+  /// ISO 639-2/T code: "TUK", ISO 639-1 code: "TK".
   const LangTuk()
       : super(
           name: "Turkmen",
@@ -3109,7 +3109,7 @@ class LangTuk extends NaturalLanguage {
 class LangTur extends NaturalLanguage {
   /// Creates a instance of [LangTur] (Turkish language).
   ///
-  /// ISO 639-2 code: "TUR", ISO 639-1 code: "TR".
+  /// ISO 639-2/T code: "TUR", ISO 639-1 code: "TR".
   const LangTur()
       : super(
           name: "Turkish",
@@ -3127,7 +3127,7 @@ class LangTur extends NaturalLanguage {
 class LangTwi extends NaturalLanguage {
   /// Creates a instance of [LangTwi] (Twi language).
   ///
-  /// ISO 639-2 code: "TWI", ISO 639-1 code: "TW".
+  /// ISO 639-2/T code: "TWI", ISO 639-1 code: "TW".
   const LangTwi()
       : super(
           name: "Twi",
@@ -3145,7 +3145,7 @@ class LangTwi extends NaturalLanguage {
 class LangUig extends NaturalLanguage {
   /// Creates a instance of [LangUig] (Uyghur language).
   ///
-  /// ISO 639-2 code: "UIG", ISO 639-1 code: "UG".
+  /// ISO 639-2/T code: "UIG", ISO 639-1 code: "UG".
   const LangUig()
       : super(
           name: "Uyghur",
@@ -3164,7 +3164,7 @@ class LangUig extends NaturalLanguage {
 class LangUkr extends NaturalLanguage {
   /// Creates a instance of [LangUkr] (Ukrainian language).
   ///
-  /// ISO 639-2 code: "UKR", ISO 639-1 code: "UK".
+  /// ISO 639-2/T code: "UKR", ISO 639-1 code: "UK".
   const LangUkr()
       : super(
           name: "Ukrainian",
@@ -3183,7 +3183,7 @@ class LangUkr extends NaturalLanguage {
 class LangUrd extends NaturalLanguage {
   /// Creates a instance of [LangUrd] (Urdu language).
   ///
-  /// ISO 639-2 code: "URD", ISO 639-1 code: "UR".
+  /// ISO 639-2/T code: "URD", ISO 639-1 code: "UR".
   const LangUrd()
       : super(
           name: "Urdu",
@@ -3203,7 +3203,7 @@ class LangUrd extends NaturalLanguage {
 class LangUzb extends NaturalLanguage {
   /// Creates a instance of [LangUzb] (Uzbek language).
   ///
-  /// ISO 639-2 code: "UZB", ISO 639-1 code: "UZ".
+  /// ISO 639-2/T code: "UZB", ISO 639-1 code: "UZ".
   const LangUzb()
       : super(
           name: "Uzbek",
@@ -3221,7 +3221,7 @@ class LangUzb extends NaturalLanguage {
 class LangVen extends NaturalLanguage {
   /// Creates a instance of [LangVen] (Venda language).
   ///
-  /// ISO 639-2 code: "VEN", ISO 639-1 code: "VE".
+  /// ISO 639-2/T code: "VEN", ISO 639-1 code: "VE".
   const LangVen()
       : super(
           name: "Venda",
@@ -3239,7 +3239,7 @@ class LangVen extends NaturalLanguage {
 class LangVie extends NaturalLanguage {
   /// Creates a instance of [LangVie] (Vietnamese language).
   ///
-  /// ISO 639-2 code: "VIE", ISO 639-1 code: "VI".
+  /// ISO 639-2/T code: "VIE", ISO 639-1 code: "VI".
   const LangVie()
       : super(
           name: "Vietnamese",
@@ -3257,7 +3257,7 @@ class LangVie extends NaturalLanguage {
 class LangVol extends NaturalLanguage {
   /// Creates a instance of [LangVol] (Volapük language).
   ///
-  /// ISO 639-2 code: "VOL", ISO 639-1 code: "VO".
+  /// ISO 639-2/T code: "VOL", ISO 639-1 code: "VO".
   const LangVol()
       : super(
           name: "Volapük",
@@ -3275,7 +3275,7 @@ class LangVol extends NaturalLanguage {
 class LangWln extends NaturalLanguage {
   /// Creates a instance of [LangWln] (Walloon language).
   ///
-  /// ISO 639-2 code: "WLN", ISO 639-1 code: "WA".
+  /// ISO 639-2/T code: "WLN", ISO 639-1 code: "WA".
   const LangWln()
       : super(
           name: "Walloon",
@@ -3293,7 +3293,7 @@ class LangWln extends NaturalLanguage {
 class LangWol extends NaturalLanguage {
   /// Creates a instance of [LangWol] (Wolof language).
   ///
-  /// ISO 639-2 code: "WOL", ISO 639-1 code: "WO".
+  /// ISO 639-2/T code: "WOL", ISO 639-1 code: "WO".
   const LangWol()
       : super(
           name: "Wolof",
@@ -3311,7 +3311,7 @@ class LangWol extends NaturalLanguage {
 class LangXho extends NaturalLanguage {
   /// Creates a instance of [LangXho] (Xhosa language).
   ///
-  /// ISO 639-2 code: "XHO", ISO 639-1 code: "XH".
+  /// ISO 639-2/T code: "XHO", ISO 639-1 code: "XH".
   const LangXho()
       : super(
           name: "Xhosa",
@@ -3329,7 +3329,7 @@ class LangXho extends NaturalLanguage {
 class LangYid extends NaturalLanguage {
   /// Creates a instance of [LangYid] (Yiddish language).
   ///
-  /// ISO 639-2 code: "YID", ISO 639-1 code: "YI".
+  /// ISO 639-2/T code: "YID", ISO 639-1 code: "YI".
   const LangYid()
       : super(
           name: "Yiddish",
@@ -3349,7 +3349,7 @@ class LangYid extends NaturalLanguage {
 class LangYor extends NaturalLanguage {
   /// Creates a instance of [LangYor] (Yoruba language).
   ///
-  /// ISO 639-2 code: "YOR", ISO 639-1 code: "YO".
+  /// ISO 639-2/T code: "YOR", ISO 639-1 code: "YO".
   const LangYor()
       : super(
           name: "Yoruba",
@@ -3367,7 +3367,7 @@ class LangYor extends NaturalLanguage {
 class LangZha extends NaturalLanguage {
   /// Creates a instance of [LangZha] (Zhuang (Chuang) language).
   ///
-  /// ISO 639-2 code: "ZHA", ISO 639-1 code: "ZA".
+  /// ISO 639-2/T code: "ZHA", ISO 639-1 code: "ZA".
   const LangZha()
       : super(
           name: "Zhuang (Chuang)",
@@ -3385,7 +3385,7 @@ class LangZha extends NaturalLanguage {
 class LangZho extends NaturalLanguage {
   /// Creates a instance of [LangZho] (Chinese language).
   ///
-  /// ISO 639-2 code: "ZHO", ISO 639-1 code: "ZH".
+  /// ISO 639-2/T code: "ZHO", ISO 639-1 code: "ZH".
   const LangZho()
       : super(
           name: "Chinese",
@@ -3410,7 +3410,7 @@ class LangZho extends NaturalLanguage {
 class LangZul extends NaturalLanguage {
   /// Creates a instance of [LangZul] (Zulu language).
   ///
-  /// ISO 639-2 code: "ZUL", ISO 639-1 code: "ZU".
+  /// ISO 639-2/T code: "ZUL", ISO 639-1 code: "ZU".
   const LangZul()
       : super(
           name: "Zulu",
