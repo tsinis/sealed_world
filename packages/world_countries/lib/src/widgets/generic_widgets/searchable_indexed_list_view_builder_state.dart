@@ -11,6 +11,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
       (widget.items.length > 5); // Hick's law optimal number.
 
   @override
+  // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
 

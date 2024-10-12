@@ -20,6 +20,7 @@ class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
   }
 
   @override
+  // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
 
