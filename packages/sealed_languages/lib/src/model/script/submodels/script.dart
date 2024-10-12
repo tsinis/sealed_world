@@ -58,14 +58,16 @@ class Script extends WritingSystem
         code.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
-        """Provided $code isn't a valid $standardCodeName code. Consider using nullable runtime-safe maybeFromCode() instead.""",
+        "Provided $code isn't a valid $standardCodeName code. "
+        "Consider using nullable runtime-safe `maybeFromCode()` instead.",
       );
     }
     validCode = formatToStandardCode(validCode);
     final result = scripts.firstIsoWhereOrNull((iso) => iso.code == validCode);
     if (result == null) {
       throw StateError(
-        """No matching Script was found for the $code! Consider using nullable runtime-safe maybeFromCode() instead.""",
+        "No matching Script was found for the $code! "
+        "Consider using nullable runtime-safe `maybeFromCode()` instead.",
       );
     }
 

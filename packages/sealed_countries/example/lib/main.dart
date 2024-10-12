@@ -32,7 +32,7 @@ void main() {
     );
   }
 
-  print(const _CountryCustom().name.common); // Prints "Custom".
+  print(const _CountryCustom().name.common); // Prints "Unknown".
 }
 
 /// Creates a instance of the custom country with permissive constructor.

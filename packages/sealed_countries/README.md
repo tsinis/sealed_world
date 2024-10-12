@@ -97,11 +97,12 @@ Use `WorldCountry` class to get information about countries. Either construct a 
   );
   print(europeanCountries); // Prints a list of European countries.
 
-  for (final country in WorldCountry.list) {
-  print(
-    """${country.internationalName} translated to Slovak language: ${country.translation(BasicLocale(LangSlk())).name}""",
-  );
-}
+  for (final cnt in WorldCountry.list) {
+    print(
+      "${cnt.internationalName} translated to Slovak language: "
+      "${cnt.translation(const BasicLocale(LangSlk())).name}",
+    );
+  }
 ```
 
 For more usage examples, please see the `/example` folder.

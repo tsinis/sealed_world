@@ -47,7 +47,8 @@ void main() {
   // Prints Slovak translations of all available languages.
   for (final language in NaturalLanguage.list) {
     print(
-      """Slovak name of ${language.name}: ${language.maybeTranslation(const BasicLocale(LangSlk()))?.name}""",
+      "Slovak name of ${language.name}: "
+      "${language.maybeTranslation(const BasicLocale(LangSlk()))?.name}",
     );
   }
 
