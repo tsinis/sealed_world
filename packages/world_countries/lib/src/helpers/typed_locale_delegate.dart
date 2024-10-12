@@ -138,7 +138,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     final typedLocale = _toTypedLocale(locale);
     assert(
       typedLocale != null,
-      """Unsupported ISO locale: $locale, consider adding `localeMapResolution` and/or `fallbackLanguage`""",
+      "Unsupported ISO locale: $locale, consider adding "
+      "`localeMapResolution` and/or `fallbackLanguage`",
     );
 
     return _asyncTranslationCacheProcessing
@@ -158,8 +159,13 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   bool shouldReload(TypedLocaleDelegate old) => false;
 
   @override
-  String toString() =>
-      """TypedLocaleDelegate(fallbackLanguage: $fallbackLanguage, localeMapResolution: $localeMapResolution)""";
+  String toString() => "TypedLocaleDelegate("
+      """${fallbackLanguage == null ? '' : 'fallbackLanguage: ${fallbackLanguage.runtimeType}(), '}"""
+      """${localeMapResolution == null ? '' : 'localeMapResolution: $localeMapResolution, '}"""
+      "asyncTranslationCacheProcessing: $_asyncTranslationCacheProcessing, "
+      "countriesForTranslationCache: $_countriesForTranslationCache, "
+      "currenciesForTranslationCache: $_currenciesForTranslationCache, "
+      "languagesForTranslationCache: $_languagesForTranslationCache,)";
 
   @override
   Type get type => TypedLocale;

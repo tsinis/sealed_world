@@ -101,7 +101,7 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
   ) {
     assert(
       languages != null || currencies != null || countries != null,
-      "At least one of languages, currencies, or countries must be non-null",
+      """At least one of `languages`, `currencies`, or `countries` must be non-null""",
     );
 
     return (
