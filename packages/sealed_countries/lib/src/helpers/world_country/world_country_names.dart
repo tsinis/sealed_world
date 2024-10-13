@@ -41,6 +41,7 @@ extension WorldCountryNames on WorldCountry {
     bool skipFirst = false,
   }) {
     final names = namesNative.map(toName).toSet();
+    // ignore: avoid-passing-self-as-argument, length is checked.
     if (skipFirst && names.length > 1) names.remove(names.first);
 
     return names.join(separator);

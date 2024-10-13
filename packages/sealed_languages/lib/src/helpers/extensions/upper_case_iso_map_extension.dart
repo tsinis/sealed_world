@@ -47,7 +47,8 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
 
     if (result != null) return result;
     throw StateError(
-      """No matching ISO $V element was found for the '$code'! Consider using the same but nullable runtime-safe methods (with a `maybe` prefix) instead.""",
+      "No matching ISO $V element was found for the '$code'! Consider using the"
+      " same but nullable runtime-safe methods (with a `maybe` prefix) instead",
     );
   }
 
@@ -87,6 +88,7 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   ///     found within the new [UpperCaseIsoMap].
   /// - Returns: A new instance of [UpperCaseIsoMap] containing the provided ISO
   ///   codes and values, with keys standardized to uppercase.
+  // ignore: avoid-incomplete-copy-with, those are calculated.
   UpperCaseIsoMap<V> copyWith(Map<String, V> other, {V? defaultValue}) {
     final upperCase = other.map((k, v) => MapEntry(k.toUpperCaseIsoCode(), v));
     final newMap = Map.fromEntries(entries.followedBy(upperCase.entries));
@@ -98,13 +100,12 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
     if (hasSameLength) {
       return UpperCaseIsoMap(newMap, defaultValue: value, exactLength: short);
     }
-
     final longest = list.map((k) => k.length).reduce((a, b) => a > b ? a : b);
 
     return UpperCaseIsoMap(
       newMap,
       defaultValue: value,
-      exactLength: null,
+      exactLength: null, // ignore: avoid-passing-default-values, Not default.
       maxLength: longest,
       minLength: short,
     );

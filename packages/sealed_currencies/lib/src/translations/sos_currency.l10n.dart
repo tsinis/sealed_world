@@ -128,11 +128,7 @@ const sosCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সোমালি শিলিং"),
   TranslatedName(LangBre(), name: "shilling Somalia"),
   TranslatedName(LangBos(), name: "Somalski šiling"),
-  TranslatedName(
-    LangBos(),
-    name: "СОмалијски шилинг",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "СОмалијски шилинг", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "xíling somali"),
   TranslatedName(LangChe(), name: "Сомалин шиллинг"),
   TranslatedName(LangCes(), name: "somálský šilink"),

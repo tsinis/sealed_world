@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-passing-default-values
+
 import "dart:collection" show MapView;
 
 import "package:sealed_languages/src/data/natural_languages.data.dart";
@@ -84,16 +86,13 @@ void main() => group("$UpperCaseIsoMap", () {
         test("isEmpty", () => expect(map.isEmpty, isFalse));
         test("isNotEmpty", () => expect(map.isNotEmpty, isTrue));
         test("length", () => expect(map.length, 1));
-        test(
-          "entries",
-          () {
-            final expectedEntries =
-                map.entries.map((entry) => "${entry.key}: ${entry.value})");
-            final actualEntries = defaultMap.entries
-                .map((entry) => "${entry.key}: ${entry.value})");
-            expect(expectedEntries, equals(actualEntries));
-          },
-        );
+        test("entries", () {
+          final expectedEntries =
+              map.entries.map((entry) => "${entry.key}: ${entry.value})");
+          final actualEntries = defaultMap.entries
+              .map((entry) => "${entry.key}: ${entry.value})");
+          expect(expectedEntries, equals(actualEntries));
+        });
       });
 
       group("unsupported errors", () {

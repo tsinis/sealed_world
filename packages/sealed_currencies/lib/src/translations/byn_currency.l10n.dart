@@ -115,11 +115,7 @@ const bynCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বেলারুশিয়ান রুবেল"),
   TranslatedName(LangBre(), name: "roubl Belarus"),
   TranslatedName(LangBos(), name: "Bjeloruska rublja"),
-  TranslatedName(
-    LangBos(),
-    name: "Белоруска рубља",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Белоруска рубља", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "ruble bielorús"),
   TranslatedName(LangChe(), name: "Белоруссин сом"),
   TranslatedName(LangCes(), name: "běloruský rubl"),

@@ -5,9 +5,9 @@ import "package:cli/utils/json_utils.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 /// Usage: `dart run :colors_extractor`.
-Future<void> main() async {
+void main() {
   final io = IoUtils();
-  var i = 0;
+  int i = 0;
   final buffer = StringBuffer("""
 import "colors_extractor.dart";
 import "package:pure_dart_ui/pure_dart_ui.dart";
@@ -18,7 +18,7 @@ const map = {
   io
     ..forFileInDirectory(
       Directory(join(JsonUtils.defaultDataDirPath, "flags")),
-      format: ColorUtils.svgFormat,
+      // ignore: prefer-extracting-function-callbacks, it's CLI tool, not prod.
       withFile: (file, name) {
         if (name.length > 2) return;
         // ignore: avoid-substring, no emoji here.
@@ -29,18 +29,18 @@ const map = {
 
         final svg = file.readAsStringSync();
         final colors = ColorUtils([], countryName).extractColorsFromSvg(svg);
+        // ignore: avoid-returning-void, we need this message.
         if (colors.isEmpty) return print("No colors for $countryName!");
         // ignore_for_file: format-comment, it's made it job already.
         // final properties = FlagProperties(
         //   colors.map((c) => ColorsProperties.fromIntColor(c.value)).toList(),
         // );
-        buffer.write(
-          "\n/// ${country.internationalName}: ${country.codeShort}.\n",
-        )
+        buffer.write("\n/// $countryName: ${country.codeShort}.\n")
             // ..write("${country.runtimeType}(): $properties,")
             ;
-        i++;
+        i += 1;
       },
+      format: ColorUtils.svgFormat,
     )
     ..writeContentToFile("flags_map.txt", "$buffer};");
 

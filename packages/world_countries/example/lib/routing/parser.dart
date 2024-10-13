@@ -5,6 +5,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// ignore_for_file: prefer-correct-callback-field-name
+
 import "package:flutter/widgets.dart";
 import "package:path_to_regexp/path_to_regexp.dart";
 
@@ -44,7 +46,7 @@ class TemplateRouteParser extends RouteInformationParser<ParsedRoute> {
     final uri = routeInformation.uri;
     final path = uri.toString();
     final queryParams = uri.queryParameters;
-    var parsedRoute = initialRoute;
+    ParsedRoute parsedRoute = initialRoute;
 
     for (final pathTemplate in _pathTemplates) {
       final parameters = <String>[];

@@ -6,8 +6,7 @@ final class TklPainter extends MultiElementPainter {
   const TklPainter(super.properties, super.aspectRatio);
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final height = size.height * property.heightFactor;
     final width = size.width * (property.widthFactor ?? 1);
 

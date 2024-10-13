@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-getter-over-method
+
 import "../../model/country/country.dart";
 
 /// Provides extension methods for accessing web resources related to a
@@ -20,7 +22,7 @@ extension WorldCountryWebResources on WorldCountry {
   String flagSvgUrl() => "$_flagProvider/$_lowerCaseCode.$svg";
 
   static const _coatOfArmsProvider =
-      """https://mainfacts.com/media/images/coats_of_arms""";
+      "https://mainfacts.com/media/images/coats_of_arms";
 
   /// Returns the URL of the PNG image file for the country's coat of arms if it
   /// has one, or `null` otherwise.

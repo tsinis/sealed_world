@@ -197,11 +197,7 @@ const crcCurrencyTranslations = [
   TranslatedName(LangUrd(), name: "کوسٹا ریکا کا کولن"),
   TranslatedName(LangUrd(), name: "کوسٹا ریکا کولون", countryCode: "IN"),
   TranslatedName(LangUzb(), name: "Kosta-Rika koloni"),
-  TranslatedName(
-    LangUzb(),
-    name: "Коста-Рика колони",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Коста-Рика колони", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Colón Costa Rica"),
   TranslatedName(LangZho(), name: "哥斯达黎加科朗"),
   TranslatedName(LangZho(), name: "哥斯達黎加科郎", countryCode: "HK"),

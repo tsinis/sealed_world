@@ -91,6 +91,7 @@ class IndexedListViewBuilder<T extends Object>
 class _IndexedListViewBuilderState<T extends Object>
     extends State<IndexedListViewBuilder<T>> {
   @override
+  // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
     final header = widget.header ?? theme?.header;

@@ -5,6 +5,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// ignore_for_file: avoid-shadowing, prefer-correct-setter-parameter-name
+
 import "package:flutter/widgets.dart";
 
 import "parsed_route.dart";
@@ -13,7 +15,7 @@ import "parser.dart";
 /// The current route state. To change the current route, call obtain the state
 /// using `RouteStateScope.of(context)` and call `go()`:
 ///
-/// ```
+/// ```dart
 /// RouteStateScope.of(context).go('/path/to/route');
 /// ```
 class RouteState extends ChangeNotifier {

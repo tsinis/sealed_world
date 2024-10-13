@@ -28,8 +28,7 @@ class AppNavigator extends StatelessWidget {
           child: MainPage(parsed, navigate: routeState.go),
         ),
       ],
-      // ignore: deprecated_member_use, TODO!
-      onPopPage: (route, result) => route.didPop(result),
+      onDidRemovePage: (page) => page,
     );
   }
 }

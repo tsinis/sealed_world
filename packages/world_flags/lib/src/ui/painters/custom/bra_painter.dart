@@ -6,10 +6,10 @@ final class BraPainter extends MultiElementPainter {
   const BraPainter(super.properties, super.aspectRatio);
 
   @override
-  double? get originalAspectRatio => flagBraProperties.aspectRatio;
+  double get originalAspectRatio => flagBraProperties.aspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -34,10 +34,10 @@ final class BraPainter extends MultiElementPainter {
         endPoint.dy,
       );
     final path = Path()
-      ..moveTo(width / 2, height / 2 - height / 2)
+      ..moveTo(width / 2, 0)
       ..lineTo(width / 2 + width / 2, height / 2)
       ..lineTo(width / 2, height / 2 + height / 2)
-      ..lineTo(width / 2 - width / 2, height / 2)
+      ..lineTo(0, height / 2)
       ..close();
 
     final arcPaint = Paint()

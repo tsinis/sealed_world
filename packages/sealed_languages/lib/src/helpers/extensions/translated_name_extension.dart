@@ -17,9 +17,9 @@ extension TranslatedNameExtension on TranslatedName {
   /// {@endtemplate}
   // ignore: long-parameter-list, 5 params in the default constructor.
   TranslatedName copyWith({
-    NaturalLanguage? language,
     String? countryCode,
     String? fullName,
+    NaturalLanguage? language,
     String? name,
     Script? script,
   }) =>
@@ -39,9 +39,9 @@ extension TranslatedNameExtension on TranslatedName {
   /// {@endtemplate}
   static TranslatedName fromMap(JsonMap map) => TranslatedName(
         NaturalLanguage.fromCode(map["language"].toString()),
-        name: map["name"] as String,
-        fullName: map["fullName"] as String?,
-        countryCode: map["countryCode"] as String?,
+        name: map["name"].toString(),
+        fullName: map["fullName"]?.toString(),
+        countryCode: map["countryCode"]?.toString(),
         script: map["script"] is String
             ? Script.fromCode(map["script"].toString())
             : null,
@@ -51,10 +51,10 @@ extension TranslatedNameExtension on TranslatedName {
   /// Converts this object object to a JSON like map.
   /// {@endtemplate}
   JsonObjectMap toMap() => {
+        "countryCode": countryCode,
+        "fullName": fullName,
         "language": language.code,
         "name": name,
-        "fullName": fullName,
-        "countryCode": countryCode,
         "script": script?.code,
       };
 

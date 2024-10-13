@@ -45,5 +45,5 @@ abstract interface class JsonEncodable<T extends Object> {
   String toJson({JsonCodec codec = const JsonCodec()});
 
   /// A string separator used, for example, for joining JSON-encoded arrays.
-  static const String separator = ",";
+  static const separator = ",";
 }

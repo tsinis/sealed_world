@@ -6,7 +6,7 @@ extension FiatCurrencyFormat on FiatCurrency {
   /// If value is not `null` - formats the value as a string with
   /// the currency symbol. Otherwise returns `null`.
   String? tryFormat([num? maybeValue]) =>
-      maybeValue != null ? format(maybeValue) : null;
+      maybeValue == null ? null : format(maybeValue);
 
   /// Adds the currency unit to a value.
   ///

@@ -1,3 +1,7 @@
+// ignore_for_file: avoid-referencing-subclasses, those are static constants.
+
+import "package:sealed_currencies/sealed_currencies.dart";
+
 import "../../../data/geo/continental_sections.data.dart";
 import "../../../data/geo/continents.data.dart";
 import "../region.dart";
@@ -36,7 +40,7 @@ class Continent extends SubRegion {
 
   /// Creates a new `Continent` object from its name.
   factory Continent.fromName(String name) => list.firstWhere(
-        (region) => region.name.toUpperCase() == name.trim().toUpperCase(),
+        (region) => region.name.toUpperCase() == name.toUpperCaseIsoCode(),
       );
 
   /// Creates a new `Continent` object from a value.
@@ -52,8 +56,8 @@ class Continent extends SubRegion {
   /// value is provided, the `list` constant is used.
   static Continent? maybeFromValue<T extends Object>(
     T value, {
-    T? Function(Continent continent)? where,
     Iterable<Continent> continents = list,
+    T? Function(Continent continent)? where,
   }) {
     assert(continents.isNotEmpty, "`continents` should not be empty!");
     for (final continent in continents) {

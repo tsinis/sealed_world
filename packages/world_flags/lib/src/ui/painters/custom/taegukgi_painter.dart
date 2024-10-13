@@ -16,7 +16,6 @@ final class TaegukgiPainter extends CustomElementsPainter {
   static const _radians = -123 * pi / 180;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final paint = paintCreator(customColors.last);
     final adjustedSize = ratioAdjustedSize(size);
@@ -111,16 +110,16 @@ final class TaegukgiPainter extends CustomElementsPainter {
     final height = size.height / 25;
     final width = size.width / 6;
     final space = height / 2;
+    final half = width / 2;
 
     canvas
       ..save()
       ..translate(offset.dx, offset.dy)
       ..rotate(angle);
 
-    for (var i = 0; i < brokenBars.length; i++) {
+    for (int i = 0; i < brokenBars.length; i += 1) {
       final isBroken = brokenBars.length > i && brokenBars[i];
       final y = (height + space) * i;
-      final half = width / 2;
 
       if (isBroken) {
         canvas

@@ -72,6 +72,6 @@ class UpperCaseMap<V extends Object> extends MapView<String, V> {
   T? _map<T extends Object>(Object? key, T? Function(String stringKey) mapper) {
     final stringKey = key?.toUpperCaseIsoCode();
 
-    return stringKey != null ? mapper(stringKey) : null;
+    return stringKey == null ? null : mapper(stringKey);
   }
 }

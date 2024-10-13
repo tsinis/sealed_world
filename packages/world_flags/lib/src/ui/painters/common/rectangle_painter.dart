@@ -17,11 +17,11 @@ final class RectanglePainter extends ElementsPainter {
     final maybeAspectRatio = shapeType<Rectangle>()?.aspectRatio;
     final width = size.width;
     final height = size.height * property.heightFactor;
-    final compensated = maybeAspectRatio != null
-        ? height * maybeAspectRatio
-        : width *
+    final compensated = maybeAspectRatio == null
+        ? width *
             (property.widthFactor ?? 1) *
-            (aspectRatio / calculateAspectRatio(size));
+            (aspectRatio / calculateAspectRatio(size))
+        : height * maybeAspectRatio;
 
     final x = ((width - compensated) / 2) * (property.offset.dx + 1);
     final y = ((size.height - height) / 2) * (property.offset.dy + 1);

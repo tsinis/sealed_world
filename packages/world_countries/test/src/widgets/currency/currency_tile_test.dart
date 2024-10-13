@@ -9,23 +9,21 @@ void main() => group("$CurrencyTile", () {
       final value = FiatCurrency.list.first;
       test(
         "constructor",
+        // ignore: avoid-misused-test-matchers, testing constructor.
         () => expect(CurrencyTile(value).autofocus, isNotNull),
       );
 
-      testWidgets(
-        "default title",
-        (tester) async {
-          final context = await tester.contextExtractor();
-          await tester.pumpMaterialApp(
-            CurrencyTile.fromProperties(
-              ItemProperties(context, value, index: 1),
-            ),
-          );
+      testWidgets("default title", (tester) async {
+        final context = await tester.contextExtractor();
+        await tester.pumpMaterialApp(
+          CurrencyTile.fromProperties(
+            ItemProperties(context, value, index: 1),
+          ),
+        );
 
-          expect(
-            find.widgetWithText(CurrencyTile, "${value.name} (${value.code})"),
-            findsOneWidget,
-          );
-        },
-      );
+        expect(
+          find.widgetWithText(CurrencyTile, "${value.name} (${value.code})"),
+          findsOneWidget,
+        );
+      });
     });

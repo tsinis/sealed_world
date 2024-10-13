@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-widget-private-members
+
 import "dart:ui" show BoxHeightStyle, BoxWidthStyle;
 
 import "package:flutter/gestures.dart" show DragStartBehavior;
@@ -20,7 +22,7 @@ class AdaptiveSearchTextField extends TextField {
   ///   be displayed in the text field.
   /// * `key` is the optional key to use for the widget.
   const AdaptiveSearchTextField(
-    TextEditingController? controller, {
+    TextEditingController controller, {
     this.copyFrom,
     this.padding,
     this.showClearButton = true,
@@ -67,30 +69,8 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
   @override
   Widget build(BuildContext context) => Padding(
         padding: widget.padding ?? EdgeInsets.zero,
-        child: !context.hasMaterialL10n
-            ? DecoratedBox(
-                decoration: BoxDecoration(
-                  border: Border.fromBorderSide(
-                    BorderSide(color: textStyle?.color ?? UiConstants.color),
-                  ),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(UiConstants.point / 2),
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(UiConstants.point),
-                  child: EditableText(
-                    controller: controller,
-                    focusNode: focusNode,
-                    style: textStyle ?? const TextStyle(),
-                    cursorColor: textStyle?.color ?? UiConstants.color,
-                    backgroundCursorColor: Colors.transparent,
-                    textInputAction: UiConstants.textInputAction,
-                    inputFormatters: NameTextInput.formatters,
-                  ),
-                ),
-              )
-            : Material(
+        child: context.hasMaterialL10n
+            ? Material(
                 type: MaterialType.transparency,
                 child: TextField(
                   controller: controller,
@@ -163,6 +143,28 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
                       widget.copyFrom?.spellCheckConfiguration,
                   magnifierConfiguration:
                       widget.copyFrom?.magnifierConfiguration,
+                ),
+              )
+            : DecoratedBox(
+                decoration: BoxDecoration(
+                  border: Border.fromBorderSide(
+                    BorderSide(color: textStyle?.color ?? UiConstants.color),
+                  ),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(UiConstants.point / 2),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(UiConstants.point),
+                  child: EditableText(
+                    controller: controller,
+                    focusNode: focusNode,
+                    style: textStyle ?? const TextStyle(),
+                    cursorColor: textStyle?.color ?? UiConstants.color,
+                    backgroundCursorColor: Colors.transparent,
+                    textInputAction: UiConstants.textInputAction,
+                    inputFormatters: NameTextInput.formatters,
+                  ),
                 ),
               ),
       );

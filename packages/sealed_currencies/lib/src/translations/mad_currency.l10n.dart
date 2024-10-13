@@ -129,11 +129,7 @@ const madCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মোরোক্কান দিরহাম"),
   TranslatedName(LangBre(), name: "dirham Maroko"),
   TranslatedName(LangBos(), name: "Marokanski dirham"),
-  TranslatedName(
-    LangBos(),
-    name: "Марокански дирхам",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Марокански дирхам", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dírham marroquí"),
   TranslatedName(LangChe(), name: "Мароккон дирхам"),
   TranslatedName(LangCes(), name: "marocký dinár"),
@@ -221,11 +217,7 @@ const madCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "марокканський дирхам"),
   TranslatedName(LangUrd(), name: "مراکشی درہم"),
   TranslatedName(LangUzb(), name: "Marokash dirhami"),
-  TranslatedName(
-    LangUzb(),
-    name: "Марокаш дирҳами",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Марокаш дирҳами", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Dirham Ma-rốc"),
   TranslatedName(LangYor(), name: "Dirami ti Orílẹ́ède Moroko"),
   TranslatedName(

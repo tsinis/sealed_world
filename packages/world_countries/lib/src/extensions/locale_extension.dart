@@ -33,6 +33,7 @@ extension LocaleExtension on Locale? {
   TypedLocale<String>? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
     final language = maybeLanguage ?? fallbackLanguage;
 
+    // ignore: avoid-negated-conditions, due to line length.
     return language != null
         ? TypedLocale(language, country: this?.countryCode, script: maybeScript)
         : null;

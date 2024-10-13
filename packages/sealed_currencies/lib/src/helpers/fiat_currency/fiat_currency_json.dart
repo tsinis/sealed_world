@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-type-casts
+
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../../model/currency/currency.dart";
@@ -7,47 +9,47 @@ import "../../model/currency/currency.dart";
 extension FiatCurrencyJson on FiatCurrency {
   /// {@macro from_map_method}
   static FiatCurrency fromMap(JsonMap map) => FiatCurrency(
-        code: map["code"] as String,
-        name: map["name"] as String,
-        namesNative: List<String>.unmodifiable(map["namesNative"] as List),
-        codeNumeric: map["codeNumeric"] as String,
-        translations: List<TranslatedName>.unmodifiable(
-          (map["translations"] as List)
-              .map((l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap)),
-        ),
         alternateSymbols: map["alternateSymbols"] is List
             ? List<String>.unmodifiable(map["alternateSymbols"] as List)
             : null,
-        disambiguateSymbol: map["disambiguateSymbol"] as String?,
-        htmlEntity: map["htmlEntity"] as String?,
+        code: map["code"].toString(),
+        codeNumeric: map["codeNumeric"].toString(),
+        decimalMark: map["decimalMark"].toString(),
+        disambiguateSymbol: map["disambiguateSymbol"]?.toString(),
+        htmlEntity: map["htmlEntity"]?.toString(),
+        name: map["name"].toString(),
+        namesNative: List<String>.unmodifiable(map["namesNative"] as List),
         priority: map["priority"] as int,
         smallestDenomination: map["smallestDenomination"] as int,
-        subunit: map["subunit"] as String?,
+        subunit: map["subunit"]?.toString(),
         subunitToUnit: map["subunitToUnit"] as int,
+        symbol: map["symbol"]?.toString(),
+        thousandsSeparator: map["thousandsSeparator"].toString(),
+        translations: List.unmodifiable(
+          (map["translations"] as List)
+              .map((l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap)),
+        ),
         unitFirst: map["unitFirst"] as bool,
-        symbol: map["symbol"] as String?,
-        decimalMark: map["decimalMark"] as String,
-        thousandsSeparator: map["thousandsSeparator"] as String,
       );
 
   /// {@macro to_map_method}
   JsonObjectMap toMap() => {
-        "code": code,
-        "name": name,
-        "decimalMark": decimalMark,
-        "thousandsSeparator": thousandsSeparator,
-        "symbol": symbol,
         "alternateSymbols": alternateSymbols,
+        "code": code,
+        "codeNumeric": codeNumeric,
+        "decimalMark": decimalMark,
         "disambiguateSymbol": disambiguateSymbol,
         "htmlEntity": htmlEntity,
-        "codeNumeric": codeNumeric,
+        "name": name,
         "namesNative": namesNative,
         "priority": priority,
         "smallestDenomination": smallestDenomination,
         "subunit": subunit,
         "subunitToUnit": subunitToUnit,
-        "unitFirst": unitFirst,
+        "symbol": symbol,
+        "thousandsSeparator": thousandsSeparator,
         "translations":
             translations.map((l10n) => l10n.toMap()).toList(growable: false),
+        "unitFirst": unitFirst,
       };
 }

@@ -28,13 +28,13 @@ class ColorUtils {
   final String _tag;
 
   static const _namedColors = {
-    "red": Color(0xFFff0000),
+    "gold": Color(0xFFffd700),
     "gray": Color(0xFF808080),
     "green": Color(0xFF008000),
-    "gold": Color(0xFFffd700),
     "maroon": Color(0xFF800000),
     "olive": Color(0xFF808000),
     "purple": Color(0xFF800080),
+    "red": Color(0xFFff0000),
   };
 
   Set<Color> extractColorsFromSvg(String svgContent) {
@@ -55,7 +55,7 @@ class ColorUtils {
 
   void _colorFromHex(String? color) {
     if (color == null || color == "none" || color.startsWith("url(#")) return;
-    var result = colorFromHex(color);
+    Color? result = colorFromHex(color);
     result ??= _namedColors[color.toLowerCase()];
     // ignore: only_throw_errors, it's CLI helper tool.
     if (result == null) throw "$_tag Warning: Unsupported color format $color";
@@ -123,7 +123,7 @@ class ColorUtils {
     // Validating input, if it does not match — it's not proper HEX.
     if (!hexValidator.hasMatch(inputString)) return null;
     // Remove optional hash if exists and convert HEX to UPPER CASE.
-    var hexToParse = inputString.replaceFirst("#", "").toUpperCase();
+    String hexToParse = inputString.replaceFirst("#", "").toUpperCase();
     // It may allow HEX with transparency information even if alpha is disabled,
     if (!enableAlpha && hexToParse.length == 8) {
       // but it will replace this info with 100% non-transparent value (FF).
@@ -132,6 +132,7 @@ class ColorUtils {
     }
     // HEX may be provided in 3-digits format, let's just duplicate each letter.
     if (hexToParse.length == 3) {
+      // ignore: avoid-slow-collection-methods, it's CLI tool, not prod. code.
       hexToParse = hexToParse.split("").expand((i) => [i * 2]).join();
     }
     // We will need 8 digits to parse the color, let's add missing digits.

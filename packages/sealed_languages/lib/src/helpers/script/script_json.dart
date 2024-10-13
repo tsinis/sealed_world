@@ -6,19 +6,19 @@ import "../../typedefs/typedefs.dart";
 extension ScriptJson on Script {
   /// {@macro from_json_method}
   static Script fromMap(JsonMap map) => Script(
-        name: map["name"] as String,
-        code: map["code"] as String,
-        codeNumeric: map["codeNumeric"] as String,
-        date: map["date"] as String,
-        pva: map["pva"] as String?,
+        name: map["name"].toString(),
+        code: map["code"].toString(),
+        codeNumeric: map["codeNumeric"].toString(),
+        date: map["date"].toString(),
+        pva: map["pva"]?.toString(),
       );
 
   /// {@macro from_map_method}
   JsonObjectMap toMap() => {
-        "name": name,
         "code": code,
         "codeNumeric": codeNumeric,
         "date": date,
+        "name": name,
         "pva": pva,
       };
 }

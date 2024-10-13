@@ -1,8 +1,9 @@
 import "../../model/regional_bloc/world_bloc.dart";
 
-/// {@hideConstantImplementations}
+/// Represents the South Asian Association for Regional Cooperation.
 class BlocSAARC extends RegionalBloc {
-  /// Represents the South Asian Association for Regional Cooperation.
+  /// Creates an instance of the South Asian Association
+  /// for Regional Cooperation.
   const BlocSAARC()
       : super(
           acronym: "SAARC",
@@ -10,15 +11,15 @@ class BlocSAARC extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the European Union.
 class BlocEU extends RegionalBloc {
-  /// Represents the European Union.
+  /// Creates an instance of the European Union.
   const BlocEU() : super(acronym: "EU", name: "European Union");
 }
 
-/// {@hideConstantImplementations}
+/// Represents the Central European Free Trade Agreement.
 class BlocCEFTA extends RegionalBloc {
-  /// Represents the Central European Free Trade Agreement.
+  /// Creates an instance of the Central European Free Trade Agreement.
   const BlocCEFTA()
       : super(
           acronym: "CEFTA",
@@ -26,9 +27,9 @@ class BlocCEFTA extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the African Union.
 class BlocAU extends RegionalBloc {
-  /// Represents the African Union.
+  /// Creates an instance of the African Union.
   const BlocAU()
       : super(
           acronym: "AU",
@@ -43,9 +44,9 @@ class BlocAU extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the Arab League.
 class BlocAL extends RegionalBloc {
-  /// Represents the Arab League.
+  /// Creates an instance of the Arab League.
   const BlocAL()
       : super(
           acronym: "AL",
@@ -58,9 +59,9 @@ class BlocAL extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the Caribbean Community.
 class BlocCARICOM extends RegionalBloc {
-  /// Represents the Caribbean Community.
+  /// Creates an instance of the Caribbean Community.
   const BlocCARICOM()
       : super(
           acronym: "CARICOM",
@@ -73,9 +74,9 @@ class BlocCARICOM extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the Central American Integration System.
 class BlocCAIS extends RegionalBloc {
-  /// Represents the Central American Integration System.
+  /// Creates an instance of the Central American Integration System.
   const BlocCAIS()
       : super(
           acronym: "CAIS",
@@ -85,9 +86,9 @@ class BlocCAIS extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the Union of South American Nations.
 class BlocUSAN extends RegionalBloc {
-  /// Represents the Union of South American Nations.
+  /// Creates an instance of the Union of South American Nations.
   const BlocUSAN()
       : super(
           acronym: "USAN",
@@ -102,9 +103,9 @@ class BlocUSAN extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the Eurasian Economic Union.
 class BlocEEU extends RegionalBloc {
-  /// Represents the Eurasian Economic Union.
+  /// Creates an instance of the Eurasian Economic Union.
   const BlocEEU()
       : super(
           acronym: "EEU",
@@ -113,16 +114,16 @@ class BlocEEU extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the Association of Southeast Asian Nations.
 class BlocASEAN extends RegionalBloc {
-  /// Represents the Association of Southeast Asian Nations.
+  /// Creates an instance of the Association of Southeast Asian Nations.
   const BlocASEAN()
       : super(acronym: "ASEAN", name: "Association of Southeast Asian Nations");
 }
 
-/// {@hideConstantImplementations}
+/// Represents the North American Free Trade Agreement.
 class BlocNAFTA extends RegionalBloc {
-  /// Represents the North American Free Trade Agreement.
+  /// Creates an instance of the North American Free Trade Agreement.
   const BlocNAFTA()
       : super(
           acronym: "NAFTA",
@@ -134,9 +135,9 @@ class BlocNAFTA extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the Pacific Alliance.
 class BlocPA extends RegionalBloc {
-  /// Represents the Pacific Alliance.
+  /// Creates an instance of the Pacific Alliance.
   const BlocPA()
       : super(
           acronym: "PA",
@@ -145,9 +146,9 @@ class BlocPA extends RegionalBloc {
         );
 }
 
-/// {@hideConstantImplementations}
+/// Represents the European Free Trade Association.
 class BlocEFTA extends RegionalBloc {
-  /// Represents the European Free Trade Association.
+  /// Creates an instance of the European Free Trade Association.
   const BlocEFTA()
       : super(acronym: "EFTA", name: "European Free Trade Association");
 }

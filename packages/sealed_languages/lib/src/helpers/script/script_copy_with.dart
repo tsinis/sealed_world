@@ -4,10 +4,10 @@ import "../../model/script/writing_system.dart";
 extension ScriptCopyWith on Script {
   /// {@macro copy_with_method}
   Script copyWith({
-    String? name,
     String? code,
     String? codeNumeric,
     String? date,
+    String? name,
     String? pva,
   }) =>
       Script(

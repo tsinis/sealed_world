@@ -45,5 +45,5 @@ typedef FlagWidgetBuilder<T extends Widget> = T? Function(
 typedef FlagParentBounds = ({
   Canvas canvas,
   Rect bounds,
-  ElementsProperties? child
+  ElementsProperties? child,
 });

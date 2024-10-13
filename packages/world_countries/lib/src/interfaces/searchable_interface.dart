@@ -1,6 +1,7 @@
 import "package:flutter/widgets.dart" show BuildContext;
 
 /// An interface for classes that can be searched.
+// ignore: avoid-unnecessary-extends, It's more explicit for users.
 abstract interface class SearchableInterface<T extends Object?> {
   /// Constructor for the [SearchableInterface] class.
   ///
@@ -19,6 +20,7 @@ abstract interface class SearchableInterface<T extends Object?> {
 
   /// A function that takes an item and returns an iterable of strings to search
   /// in.
+  // ignore: prefer-correct-callback-field-name, Might be breaking change.
   final Iterable<String> Function(T item, BuildContext context)? searchIn;
 
   /// A boolean indicating whether the search should be case-sensitive.

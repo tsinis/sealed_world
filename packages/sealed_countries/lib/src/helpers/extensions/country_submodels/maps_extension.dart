@@ -17,7 +17,7 @@ extension MapsExtension on Maps {
 
   /// {@macro from_map_method}
   static Maps fromMap(JsonMap map) => Maps(
-        googleMaps: map["googleMaps"] as String,
-        openStreetMaps: map["openStreetMaps"] as String,
+        googleMaps: map["googleMaps"].toString(),
+        openStreetMaps: map["openStreetMaps"].toString(),
       );
 }

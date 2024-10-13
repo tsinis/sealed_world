@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/postal_code_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/postal_code.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -7,13 +8,10 @@ import "../../../test_data.dart";
 
 void main() => group("$PostalCode", () {
       const value = PostalCode();
-      test(
-        "toString",
-        () {
-          expect(value.toString(), contains(value.format));
-          expect(value.toString(), contains(value.regExpPattern));
-        },
-      );
+      test("toString", () {
+        expect(value.toString(), contains(value.format));
+        expect(value.toString(), contains(value.regExpPattern));
+      });
 
       group("equality", () {
         const other = PostalCode(format: TestData.string);
@@ -36,28 +34,20 @@ void main() => group("$PostalCode", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => PostalCode(format: value.format),
-            isNot(throwsA(isA<AssertionError>())),
-          ),
+          () => PostalCode(format: value.format),
+          shouldThrow: false,
         );
 
-        test(
+        assertTest(
           "empty format",
-          () => expect(
-            () => PostalCode(format: TestData.emptyString),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => PostalCode(format: TestData.emptyString),
         );
 
-        test(
+        assertTest(
           "empty regExpPattern",
-          () => expect(
-            () => PostalCode(regExpPattern: TestData.emptyString),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => PostalCode(regExpPattern: TestData.emptyString),
         );
       });
 

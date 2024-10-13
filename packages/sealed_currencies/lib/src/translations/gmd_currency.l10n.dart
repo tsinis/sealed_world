@@ -128,11 +128,7 @@ const gmdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "গাম্বিয়া ডালাসি"),
   TranslatedName(LangBre(), name: "dalasi Gambia"),
   TranslatedName(LangBos(), name: "Gambijski dalasi"),
-  TranslatedName(
-    LangBos(),
-    name: "Гамбијски даласи",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Гамбијски даласи", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dalasi gambià"),
   TranslatedName(LangChe(), name: "Гамбин даласи"),
   TranslatedName(LangCes(), name: "gambijský dalasi"),

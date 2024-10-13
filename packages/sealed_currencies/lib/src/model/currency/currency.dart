@@ -74,5 +74,5 @@ sealed class Currency implements Named<String> {
   @override
   String toString({bool short = true}) => short
       ? 'Currency(code: "$code")'
-      : '''Currency(code: "$code", name: "$name", symbol: ${symbol == null ? symbol : '"$symbol"'}, decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator")''';
+      : '''Currency(code: "$code", name: "$name", ${symbol == null ? '' : 'symbol: r"$symbol", '}decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator")''';
 }

@@ -32,7 +32,7 @@ final class Car implements JsonEncodable<Car> {
 
   @override
   String toString() =>
-      '''Car(sign: ${sign == null ? sign : '"$sign"'}, isRightSide: $isRightSide)''';
+      'Car(${sign == null ? '' : 'sign: "$sign", '}isRightSide: $isRightSide)';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

@@ -32,6 +32,7 @@ void main() => group("$MaybeWidget", () {
       testWidgets(
         "renders orElse when value is null in identifiable constructor",
         (tester) async {
+          // ignore: avoid-explicit-type-declaration, just for testing.
           const String? maybeValue = null;
 
           await tester.pumpWidget(

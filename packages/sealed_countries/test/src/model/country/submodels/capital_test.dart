@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/capital_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/capital.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -29,40 +30,26 @@ void main() => group("$Capital", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => Capital(
-              value.deFacto,
-              deJure: TestData.string,
-              third: TestData.string,
-            ),
-            isNot(throwsA(isA<AssertionError>())),
+          () => Capital(
+            value.deFacto,
+            deJure: TestData.string,
+            third: TestData.string,
           ),
+          shouldThrow: false,
         );
 
-        test(
-          "name length",
-          () => expect(
-            () => Capital(TestData.emptyString),
-            throwsA(isA<AssertionError>()),
-          ),
-        );
+        assertTest("name length", () => Capital(TestData.emptyString));
 
-        test(
+        assertTest(
           "deJure length",
-          () => expect(
-            () => Capital(value.deFacto, deJure: TestData.emptyString),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => Capital(value.deFacto, deJure: TestData.emptyString),
         );
 
-        test(
+        assertTest(
           "third length",
-          () => expect(
-            () => Capital(value.deFacto, third: TestData.emptyString),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => Capital(value.deFacto, third: TestData.emptyString),
         );
       });
 

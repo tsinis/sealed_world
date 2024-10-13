@@ -27,7 +27,7 @@ class RouteParseUtils {
         onCode: WorldCountry.maybeFromAnyCode,
         orElse: () => WorldCountry.maybeFromValue(
           code,
-          where: (c) => c.name.common.toUpperCase(),
+          where: (cnt) => cnt.name.common.toUpperCase(),
         ),
       );
 
@@ -38,7 +38,7 @@ class RouteParseUtils {
         onCode: FiatCurrency.maybeFromAnyCode,
         orElse: () => FiatCurrency.maybeFromValue(
           code,
-          where: (c) => c.name.toUpperCase(),
+          where: (cur) => cur.name.toUpperCase(),
         ),
       );
 
@@ -49,7 +49,7 @@ class RouteParseUtils {
         onCode: NaturalLanguage.maybeFromAnyCode,
         orElse: () => NaturalLanguage.maybeFromValue(
           code,
-          where: (l) => l.name.toUpperCase(),
+          where: (lang) => lang.name.toUpperCase(),
         ),
       );
 
@@ -114,6 +114,7 @@ class RouteParseUtils {
 
   ParsedData _returnWithoutCode(String pathTemplate) {
     WorldData? data;
+    // ignore: avoid-unused-assignment, false positive.
     if (pathTemplate == WorldData.currency.path) data = WorldData.currency;
     if (pathTemplate == WorldData.language.path) data = WorldData.language;
 

@@ -32,11 +32,11 @@ void main() => group("$CurrencyPicker", () {
         "builder from theme",
         (tester) async => tester.testPickerBody(
           const CurrencyPicker(),
+          (item) => item.translations.first.common,
           theme: CurrencyTileThemeData(
             builder: (properties, {isDense}) =>
                 Text(properties.item.translations.first.common),
           ),
-          (item) => item.translations.first.common,
         ),
       );
 
@@ -84,6 +84,7 @@ void main() => group("$CurrencyPicker", () {
         await tester.tapAndSettle(find.byIcon(Icons.search));
         expect(tile, findsWidgets);
         await tester.tapAndSettle(tile.first);
+        // ignore: avoid-duplicate-test-assertions, tile will be missing after.
         expect(tile, findsNothing);
       });
     });

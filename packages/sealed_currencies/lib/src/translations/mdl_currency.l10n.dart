@@ -115,11 +115,7 @@ const mdlCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মোল্ডোভান লেয়ু"),
   TranslatedName(LangBre(), name: "leu Moldova"),
   TranslatedName(LangBos(), name: "Moldavski lej"),
-  TranslatedName(
-    LangBos(),
-    name: "Молдовски љу",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Молдовски љу", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "leu moldau"),
   TranslatedName(LangChe(), name: "Молдавин лей"),
   TranslatedName(LangCes(), name: "moldavský leu"),

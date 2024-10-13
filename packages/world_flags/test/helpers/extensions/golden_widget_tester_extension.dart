@@ -6,6 +6,7 @@ import "package:world_flags/world_flags.dart";
 
 import "../flag_type.dart";
 
+// ignore: avoid-top-level-members-in-tests, it's not a test, but extension.
 extension GoldenWidgetTesterExtension on WidgetTester {
   Future<void> flagGolden(WorldCountry country, FlagType type) async {
     final height = type.height;
@@ -20,10 +21,10 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     await binding.setSurfaceSize(Size(width, height));
     await pumpWidget(
       MaterialApp(
+        home: CountryFlag.simplified(country, child: type.child),
         theme: ThemeData(
           extensions: [FlagThemeData(decoration: type.decoration)],
         ),
-        home: CountryFlag.simplified(country, child: type.child),
       ),
     );
 

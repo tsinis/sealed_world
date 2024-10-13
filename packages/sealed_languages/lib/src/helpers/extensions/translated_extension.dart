@@ -117,7 +117,7 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale>
       if (countryCode != null && l10n.countryCode != countryCode) continue;
       if (script != null && l10n.script != script) continue;
 
-      return l10n;
+      return l10n; // ignore: avoid-unconditional-break, conditions were met.
     }
 
     return useLanguageFallback ? translations.first : null;

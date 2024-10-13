@@ -119,11 +119,7 @@ const cadCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কানাডিয়ান ডলার"),
   TranslatedName(LangBre(), name: "dollar Kanada"),
   TranslatedName(LangBos(), name: "Kanadski dolar"),
-  TranslatedName(
-    LangBos(),
-    name: "Канадски долар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Канадски долар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dòlar canadenc"),
   TranslatedName(LangChe(), name: "Канадан доллар"),
   TranslatedName(LangCes(), name: "kanadský dolar"),
@@ -213,11 +209,7 @@ const cadCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "канадський долар"),
   TranslatedName(LangUrd(), name: "کنیڈین ڈالر"),
   TranslatedName(LangUzb(), name: "Kanada dollari"),
-  TranslatedName(
-    LangUzb(),
-    name: "Канада доллари",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Канада доллари", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Đô la Canada"),
   TranslatedName(LangYor(), name: "Dọla ti Orílẹ́ède Kánádà"),
   TranslatedName(

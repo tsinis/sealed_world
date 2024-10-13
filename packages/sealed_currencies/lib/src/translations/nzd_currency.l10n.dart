@@ -186,11 +186,7 @@ const nzdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "новозеландський долар"),
   TranslatedName(LangUrd(), name: "نیوزی لینڈ ڈالر"),
   TranslatedName(LangUzb(), name: "Yangi Zelandiya dollari"),
-  TranslatedName(
-    LangUzb(),
-    name: "NZD",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "NZD", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Đô la New Zealand"),
   TranslatedName(LangZho(), name: "新西兰元"),
   TranslatedName(LangZho(), name: "紐西蘭元", countryCode: "HK"),

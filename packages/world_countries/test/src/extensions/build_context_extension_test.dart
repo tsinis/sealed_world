@@ -5,22 +5,16 @@ import "package:world_countries/src/extensions/build_context_extension.dart";
 import "../../helpers/widget_tester_extension.dart";
 
 void main() => group("BuildContextExtension", () {
-      testWidgets(
-        "materialL10n",
-        (tester) async {
-          final context = await tester.contextExtractor();
-          expect(context.materialL10n, isA<MaterialLocalizations>());
-          expect(context.materialL10n.okButtonLabel, isNotEmpty);
-        },
-      );
+      testWidgets("materialL10n", (tester) async {
+        final context = await tester.contextExtractor();
+        expect(context.materialL10n, isA<MaterialLocalizations>());
+        expect(context.materialL10n.okButtonLabel, isNotEmpty);
+      });
 
-      testWidgets(
-        "hasMaterialL10n",
-        (tester) async {
-          final context = await tester.contextExtractor();
-          expect(context.hasMaterialL10n, isTrue);
-        },
-      );
+      testWidgets("hasMaterialL10n", (tester) async {
+        final context = await tester.contextExtractor();
+        expect(context.hasMaterialL10n, isTrue);
+      });
 
       testWidgets("focus", (tester) async {
         final context = await tester.contextExtractor();

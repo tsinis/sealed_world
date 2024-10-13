@@ -116,11 +116,7 @@ const btnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ভুটানি এনগুল্ট্রুম"),
   TranslatedName(LangBre(), name: "ngultrum Bhoutan"),
   TranslatedName(LangBos(), name: "Butanski ngultrum"),
-  TranslatedName(
-    LangBos(),
-    name: "Бутански нгултрум",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Бутански нгултрум", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "ngultrum de Bhutan"),
   TranslatedName(LangChe(), name: "Бутанан нгултрум"),
   TranslatedName(LangCes(), name: "bhútánský ngultrum"),

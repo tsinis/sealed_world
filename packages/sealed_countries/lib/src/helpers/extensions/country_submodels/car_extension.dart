@@ -16,7 +16,8 @@ extension CarExtension on Car {
 
   /// {@macro from_map_method}
   static Car fromMap(JsonMap map) => Car(
-        sign: map["sign"] as String?,
+        sign: map["sign"]?.toString(),
+        // ignore: avoid-type-casts, it's JSON map.
         isRightSide: map["isRightSide"] as bool,
       );
 }

@@ -15,8 +15,8 @@ extension CountryNameExtension on CountryName {
   /// {@macro to_map_method}
   static CountryName fromMap(JsonMap map) => CountryName(
         language: NaturalLanguage.fromCode(map["language"].toString()),
-        official: map["official"] as String,
-        common: map["common"] as String,
+        official: map["official"].toString(),
+        common: map["common"].toString(),
       );
 
   /// {@macro copy_with_method}
@@ -33,8 +33,8 @@ extension CountryNameExtension on CountryName {
 
   /// {@macro to_map_method}
   JsonObjectMap toMap() => {
+        "common": name,
         "language": language.code,
         "official": fullName,
-        "common": name,
       };
 }

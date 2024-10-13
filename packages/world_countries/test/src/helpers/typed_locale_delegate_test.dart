@@ -1,5 +1,8 @@
+// ignore_for_file: avoid-similar-names
+
 import "dart:ui";
 
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/models/locale/iso_locale.dart";
@@ -11,7 +14,8 @@ void main() => group("$TypedLocaleDelegate", () {
 
       test(
         "shouldReload",
-        () => expect(delegate.shouldReload(delegate), isFalse),
+        () =>
+            expect(delegate.shouldReload(const TypedLocaleDelegate()), isFalse),
       );
 
       test(
@@ -46,12 +50,9 @@ void main() => group("$TypedLocaleDelegate", () {
           ),
         );
 
-        test(
+        assertTest(
           "throws assertion error on unsupported locale",
-          () async => expect(
-            () async => delegate.load(const Locale("00")),
-            throwsAssertionError,
-          ),
+          () async => delegate.load(const Locale("00")),
         );
 
         test(
