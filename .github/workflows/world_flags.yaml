@@ -8,8 +8,8 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "packages/world_flags/**/*.dart"
       - ".github/workflows/world_flags.yaml"
+      - "packages/world_flags/**/*.dart"
 
 jobs:
   verify-world-flags:
