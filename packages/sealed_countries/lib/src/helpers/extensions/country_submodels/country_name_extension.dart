@@ -6,7 +6,6 @@ import "../../../model/country/submodels/country_name.dart";
 /// {@macro submodels_class_extension}
 extension CountryNameExtension on CountryName {
   /// Non-nullable alias for a `name`. The common name of the country.
-
   String get common => name;
 
   /// Non-nullable alias for a `fullName`. The official name of the country.

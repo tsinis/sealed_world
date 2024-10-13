@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/idd_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/idd.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -36,20 +37,15 @@ void main() => group("$Idd", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => Idd(root: value.root, suffixes: value.suffixes),
-            isNot(throwsA(isA<AssertionError>())),
-          ),
+          () => Idd(root: value.root, suffixes: value.suffixes),
+          shouldThrow: false,
         );
 
-        test(
+        assertTest(
           "empty suffixes",
-          () => expect(
-            () => Idd(root: value.root, suffixes: const []),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => Idd(root: value.root, suffixes: const []),
         );
       });
 

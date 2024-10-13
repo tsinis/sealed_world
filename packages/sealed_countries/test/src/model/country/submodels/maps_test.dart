@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/maps_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/maps.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -69,36 +70,28 @@ void main() => group("$Maps", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => Maps(
-              googleMaps: value.googleMaps,
-              openStreetMaps: value.openStreetMaps,
-            ),
-            isNot(throwsA(isA<AssertionError>())),
+          () => Maps(
+            googleMaps: value.googleMaps,
+            openStreetMaps: value.openStreetMaps,
           ),
+          shouldThrow: false,
         );
 
-        test(
+        assertTest(
           "empty format",
-          () => expect(
-            () => Maps(
-              googleMaps: TestData.emptyString,
-              openStreetMaps: value.openStreetMaps,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => Maps(
+            googleMaps: TestData.emptyString,
+            openStreetMaps: value.openStreetMaps,
           ),
         );
 
-        test(
+        assertTest(
           "empty regExpPattern",
-          () => expect(
-            () => Maps(
-              googleMaps: value.googleMaps,
-              openStreetMaps: TestData.emptyString,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => Maps(
+            googleMaps: value.googleMaps,
+            openStreetMaps: TestData.emptyString,
           ),
         );
       });

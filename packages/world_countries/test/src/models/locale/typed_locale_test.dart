@@ -1,5 +1,6 @@
 import "dart:ui";
 
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/models/locale/iso_locale.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
@@ -38,17 +39,14 @@ void main() => group("$TypedLocale", () {
       });
 
       group("withTranslationsCache constructor", () {
-        test(
+        assertTest(
           "should throw assert when no iterable specified",
-          () => expect(
-            () => TypedLocale.withTranslationsCache(
-              const LangEng(),
-              // ignore_for_file: avoid-passing-default-values, false-positive.
-              languages: null,
-              currencies: null,
-              countries: null,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => TypedLocale.withTranslationsCache(
+            const LangEng(),
+            // ignore_for_file: avoid-passing-default-values, false-positive.
+            languages: null,
+            currencies: null,
+            countries: null,
           ),
         );
 

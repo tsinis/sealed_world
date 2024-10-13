@@ -37,7 +37,7 @@ extension IsoStandardizedStringExtension on String {
     if (exactLength != null) return code.length == exactLength ? code : null;
     assert(minLength > 0, "`minLength` must be > 0");
     assert(maxLength > 1, "`maxLength` must be > 1");
-    assert(minLength < maxLength, "`maxLength` must be < `minLength`");
+    assert(minLength < maxLength, "`maxLength` must be > `minLength`");
 
     return code.length < minLength || code.length > maxLength ? null : code;
   }
@@ -99,8 +99,8 @@ extension IsoStandardizedStringExtension on String {
   ///
   /// print(result); // Prints "orElse"
   /// ```.
-// ignore: long-parameter-list, all but one of the parameters are optional.
-  T maybeMapIsoCode<T>({
+// ignore: long-parameter-list, avoid-unnecessary-extends, all but 1 required.
+  T maybeMapIsoCode<T extends Object?>({
     required T Function(String input) orElse,
     int maxLength = IsoStandardized.codeLength,
     int minLength = IsoStandardized.codeShortLength,

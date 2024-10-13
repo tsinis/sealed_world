@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/world_countries.dart";
 
@@ -8,12 +9,9 @@ void main() => group("TypedLocaleExtension", () {
       const countries = WorldCountry.list;
 
       group("copyWithTranslationsCache", () {
-        test(
+        assertTest(
           "should throw assert when no iterable specified",
-          () => expect(
-            () => locale.copyWithTranslationsCache(),
-            throwsA(isA<AssertionError>()),
-          ),
+          () => locale.copyWithTranslationsCache(),
         );
 
         test("should only create languages cache", () {
@@ -56,12 +54,9 @@ void main() => group("TypedLocaleExtension", () {
       });
 
       group("copyWithTranslationsCacheAsync", () {
-        test(
+        assertTest(
           "should throw assert when no iterable specified",
-          () => expect(
-            () async => locale.copyWithTranslationsCacheAsync(),
-            throwsA(isA<AssertionError>()),
-          ),
+          () async => locale.copyWithTranslationsCacheAsync(),
         );
 
         test("should only create languages cache", () async {

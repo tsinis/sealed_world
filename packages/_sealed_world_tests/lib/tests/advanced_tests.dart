@@ -81,7 +81,7 @@ void assertTest(
   int? retry,
 }) =>
     test(
-      "throws $AssertionError on $description",
+      description,
       () async {
         expect(
           createInstance,
