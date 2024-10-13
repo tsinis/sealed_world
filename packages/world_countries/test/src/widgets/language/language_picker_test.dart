@@ -87,4 +87,31 @@ void main() => group("$LanguagePicker", () {
         // ignore: avoid-duplicate-test-assertions, tile will be missing after.
         expect(tile, findsNothing);
       });
+
+      testWidgets("resultValidator should pop single result", (tester) async {
+        const expected = LangLtz();
+        const searchIcon = Icons.search;
+        NaturalLanguage? selected;
+        final picker = LanguagePicker(onSelect: (item) => selected = item);
+
+        await tester.pumpMaterialApp(
+          Builder(
+            builder: (context) => IconButton(
+              onPressed: () async => picker.showInSearch(context),
+              icon: const Icon(searchIcon),
+            ),
+          ),
+        );
+        await tester.pumpAndSettle();
+        await tester.tapAndSettle(find.byIcon(searchIcon));
+        expect(selected, isNull);
+
+        final textField = find.byType(TextField);
+        expect(textField, findsOneWidget);
+        await tester.enterText(textField, expected.namesNative.first);
+        await tester.testTextInput.receiveAction(TextInputAction.done);
+        await tester.pump();
+
+        await expectLater(selected, expected);
+      });
     });

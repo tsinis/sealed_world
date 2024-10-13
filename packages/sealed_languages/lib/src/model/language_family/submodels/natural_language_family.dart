@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-referencing-subclasses
+
 part of "../language_family.dart";
 
 /// A class that represents a family of natural languages.

@@ -133,15 +133,15 @@ class ImplicitSearchDelegate<T extends Object>
       );
 
   @override
-  Widget buildResults(BuildContext context) {
-    _tryClose(context); // TODO! Check if this is still necessary.
-
-    return buildSuggestions(context);
-  }
+  Widget buildResults(BuildContext context) =>
+      buildSuggestions(context, _maybeCloseOnSingleResult(context));
 
   @override
-  Widget buildSuggestions(BuildContext context) =>
-      resultsBuilder(context, _filteredItems(context));
+  Widget buildSuggestions(
+    BuildContext context, [
+    UnmodifiableListView<T>? items,
+  ]) =>
+      resultsBuilder(context, items ?? _filteredItems(context));
 
   UnmodifiableListView<T> _filteredItems(BuildContext context) =>
       UnmodifiableListView(
@@ -150,12 +150,11 @@ class ImplicitSearchDelegate<T extends Object>
 
   bool _hasSameText(String itemText) => compareWithInput(query, itemText);
 
-  void _tryClose(BuildContext context) {
+  UnmodifiableListView<T> _maybeCloseOnSingleResult(BuildContext context) {
     final filteredItems = _filteredItems(context);
-    final result = filteredItems.length == 1 ? filteredItems.first : null;
-    if (result == null) return;
-    final isValid = resultValidator?.call(result) ?? true;
-    if (!isValid) return;
-    WidgetsBinding.instance.addPostFrameCallback((_) => close(context, result));
+    final singleResult = filteredItems.length == 1 ? filteredItems.first : null;
+    if (singleResult != null) resultValidator?.call(singleResult);
+
+    return filteredItems;
   }
 }

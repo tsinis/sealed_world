@@ -269,17 +269,19 @@ abstract class BasicPicker<T extends Translated>
     ThemeData? appBarThemeData,
   }) async {
     T? result;
-    // ignore: avoid-late-keyword, it's created on the next line...
+    // ignore: avoid-late-keyword, we need it in the local function below.
     late final ImplicitSearchDelegate<T> delegate;
+    // ignore: avoid-local-functions, lazy delegate.
+    void closeOnSelect(T selected) {
+      delegate.close(context, selected);
+      onSelect?.call(result = selected);
+    }
+
     delegate = ImplicitSearchDelegate<T>(
       items,
       resultsBuilder: (newContext, items) => copyWith(
         items: items,
-        // ignore: prefer-extracting-function-callbacks, lazy delegate.
-        onSelect: (selected) {
-          delegate.close(newContext, selected);
-          onSelect?.call(result = selected);
-        },
+        onSelect: closeOnSelect,
         showSearchBar: false,
       ),
       searchIn: searchIn ?? defaultSearch,
@@ -289,7 +291,15 @@ abstract class BasicPicker<T extends Translated>
       caseSensitiveSearch: caseSensitiveSearch,
       clearIconButton: clearIconButton,
       keyboardType: keyboardType,
-      resultValidator: (item) => !(disabled?.contains(item) ?? false),
+      // ignore: prefer-extracting-callbacks, same reason as prev. ignore.
+      resultValidator: (i) {
+        final isValid = !(disabled?.contains(i) ?? false);
+        if (isValid) {
+          WidgetsBinding.instance.addPostFrameCallback((_) => closeOnSelect(i));
+        }
+
+        return isValid;
+      },
       searchFieldDecorationTheme: searchFieldDecorationTheme,
       searchFieldLabel: searchFieldLabel,
       searchFieldStyle: searchFieldStyle,
@@ -306,14 +316,14 @@ abstract class BasicPicker<T extends Translated>
     }
 
     delegate.transitionAnimation.addStatusListener(animationListener);
-    await showSearch<T?>(
+    final popResult = await showSearch<T?>(
       context: context,
       delegate: delegate,
       query: query,
       useRootNavigator: useRootNavigator,
     );
 
-    return result;
+    return popResult ?? result;
   }
 
   @override
