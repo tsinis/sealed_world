@@ -35,44 +35,44 @@ void main() => group("$WorldCountry", () {
 
         for (final element in officialCountries) {
           test("of $WorldCountry: ${element.name.common}", () {
-            if (element.postalCode != null) {
+            if (element.postalCode == null) {
+              expect(element.postalCode, isNull);
+            } else {
               expect(element.postalCode?.format, isNotEmpty);
               expect(element.postalCode?.regExpPattern, isNotEmpty);
-            } else {
-              expect(element.postalCode, isNull);
             }
             expect(
               element.capitalInfo?.capital.deFacto,
-              element.capitalInfo != null ? isNotEmpty : isNull,
+              element.capitalInfo == null ? isNull : isNotEmpty,
             );
             expect(
               element.capitalInfo?.latLng,
-              element.capitalInfo != null ? isNotNull : isNull,
+              element.capitalInfo == null ? isNull : isNotNull,
             );
-            expect(element.fifa, element.fifa != null ? isNotEmpty : isNull);
-            if (element.gini != null) {
+            expect(element.fifa, element.fifa == null ? isNull : isNotEmpty);
+            if (element.gini == null) {
+              expect(element.gini, isNull);
+            } else {
               expect(element.gini?.year, isPositive);
               expect(element.gini?.coefficient, isPositive);
-            } else {
-              expect(element.gini, isNull);
             }
             expect(element.demonyms, isNotEmpty);
             expect(element.demonyms.first.language, const LangEng());
             expect(
               element.bordersCodes,
-              element.bordersCodes != null ? isNotEmpty : isNull,
+              element.bordersCodes == null ? isNull : isNotEmpty,
             );
             expect(
               element.subregion?.name,
-              element.subregion != null ? isNotEmpty : isNull,
+              element.subregion == null ? isNull : isNotEmpty,
             );
             expect(element.idd.root, isPositive);
             expect(element.idd.suffixes, isNotEmpty);
             expect(
               element.currencies,
-              element.currencies != null ? isNotEmpty : isNull,
+              element.currencies == null ? isNull : isNotEmpty,
             );
-            expect(element.cioc, element.cioc != null ? isNotEmpty : isNull);
+            expect(element.cioc, element.cioc == null ? isNull : isNotEmpty);
             for (final zone in element.timezones) {
               expect(zone.length, 9);
               expect(zone.startsWith(WorldCountryDateTime.utcString), isTrue);
@@ -441,51 +441,48 @@ void main() => group("$WorldCountry", () {
 
       group("toJson", () {
         for (final element in WorldCountry.list) {
-          test(
-            "compared to $WorldCountry: ${element.name.common}",
-            () {
-              final json = element.toJson();
+          test("compared to $WorldCountry: ${element.name.common}", () {
+            final json = element.toJson();
 
-              expect(json, isNotEmpty);
-              final decoded = json.tryParse(WorldCountryJson.fromMap);
-              expect(
-                decoded?.toString(short: false),
-                json.parse(WorldCountryJson.fromMap).toString(short: false),
-              );
+            expect(json, isNotEmpty);
+            final decoded = json.tryParse(WorldCountryJson.fromMap);
+            expect(
+              decoded?.toString(short: false),
+              json.parse(WorldCountryJson.fromMap).toString(short: false),
+            );
 
-              expect(element.code, decoded?.code);
-              expect(element.postalCode, decoded?.postalCode);
-              expect(element.capitalInfo, decoded?.capitalInfo);
-              expect(element.fifa, decoded?.fifa);
-              expect(element.gini, decoded?.gini);
-              expect(element.demonyms, decoded?.demonyms);
-              expect(element.bordersCodes, decoded?.bordersCodes);
-              expect(element.subregion, decoded?.subregion);
-              expect(element.idd, decoded?.idd);
-              expect(element.currencies, decoded?.currencies);
-              expect(element.cioc, decoded?.cioc);
-              expect(element.startOfWeek, decoded?.startOfWeek);
-              expect(element.hasCoatOfArms, decoded?.hasCoatOfArms);
-              expect(element.landlocked, decoded?.landlocked);
-              expect(element.unMember, decoded?.unMember);
-              expect(element.independent, decoded?.independent);
-              expect(element.timezones, decoded?.timezones);
-              expect(element.car, decoded?.car);
-              expect(element.population, decoded?.population);
-              expect(element.areaMetric, decoded?.areaMetric);
-              expect(element.maps, decoded?.maps);
-              expect(element.emoji, decoded?.emoji);
-              expect(element.latLng, decoded?.latLng);
-              expect(element.translations, decoded?.translations);
-              expect(element.languages, decoded?.languages);
-              expect(element.continent, decoded?.continent);
-              expect(element.altSpellings, decoded?.altSpellings);
-              expect(element.codeNumeric, decoded?.codeNumeric);
-              expect(element.codeShort, decoded?.codeShort);
-              expect(element.namesNative, decoded?.namesNative);
-              expect(element.tld, decoded?.tld);
-            },
-          );
+            expect(element.code, decoded?.code);
+            expect(element.postalCode, decoded?.postalCode);
+            expect(element.capitalInfo, decoded?.capitalInfo);
+            expect(element.fifa, decoded?.fifa);
+            expect(element.gini, decoded?.gini);
+            expect(element.demonyms, decoded?.demonyms);
+            expect(element.bordersCodes, decoded?.bordersCodes);
+            expect(element.subregion, decoded?.subregion);
+            expect(element.idd, decoded?.idd);
+            expect(element.currencies, decoded?.currencies);
+            expect(element.cioc, decoded?.cioc);
+            expect(element.startOfWeek, decoded?.startOfWeek);
+            expect(element.hasCoatOfArms, decoded?.hasCoatOfArms);
+            expect(element.landlocked, decoded?.landlocked);
+            expect(element.unMember, decoded?.unMember);
+            expect(element.independent, decoded?.independent);
+            expect(element.timezones, decoded?.timezones);
+            expect(element.car, decoded?.car);
+            expect(element.population, decoded?.population);
+            expect(element.areaMetric, decoded?.areaMetric);
+            expect(element.maps, decoded?.maps);
+            expect(element.emoji, decoded?.emoji);
+            expect(element.latLng, decoded?.latLng);
+            expect(element.translations, decoded?.translations);
+            expect(element.languages, decoded?.languages);
+            expect(element.continent, decoded?.continent);
+            expect(element.altSpellings, decoded?.altSpellings);
+            expect(element.codeNumeric, decoded?.codeNumeric);
+            expect(element.codeShort, decoded?.codeShort);
+            expect(element.namesNative, decoded?.namesNative);
+            expect(element.tld, decoded?.tld);
+          });
         }
       });
 
@@ -634,10 +631,7 @@ void main() => group("$WorldCountry", () {
 
           performanceTest(
             "with regular code",
-            () => expect(
-              WorldCountry.maybeFromAnyCode(value.code),
-              value,
-            ),
+            () => expect(WorldCountry.maybeFromAnyCode(value.code), value),
           );
 
           performanceTest(
@@ -650,10 +644,7 @@ void main() => group("$WorldCountry", () {
 
           performanceTest(
             "with wrong code",
-            () => expect(
-              WorldCountry.maybeFromAnyCode(value),
-              isNull,
-            ),
+            () => expect(WorldCountry.maybeFromAnyCode(value), isNull),
           );
         });
       });
@@ -702,10 +693,7 @@ void main() => group("$WorldCountry", () {
 
           performanceTest(
             "with wrong code",
-            () => expect(
-              WorldCountry.maybeFromCodeNumeric(value),
-              isNull,
-            ),
+            () => expect(WorldCountry.maybeFromCodeNumeric(value), isNull),
           );
         });
       });
@@ -753,10 +741,7 @@ void main() => group("$WorldCountry", () {
 
           performanceTest(
             "with regular code",
-            () => expect(
-              WorldCountry.maybeFromCode(value.code),
-              value,
-            ),
+            () => expect(WorldCountry.maybeFromCode(value.code), value),
           );
 
           performanceTest(
@@ -769,10 +754,7 @@ void main() => group("$WorldCountry", () {
 
           performanceTest(
             "with wrong code",
-            () => expect(
-              WorldCountry.maybeFromCode(value),
-              isNull,
-            ),
+            () => expect(WorldCountry.maybeFromCode(value), isNull),
           );
         });
       });
@@ -837,10 +819,7 @@ void main() => group("$WorldCountry", () {
 
           performanceTest(
             "with wrong code",
-            () => expect(
-              WorldCountry.maybeFromCodeShort(value),
-              isNull,
-            ),
+            () => expect(WorldCountry.maybeFromCodeShort(value), isNull),
           );
         });
       });
@@ -1244,7 +1223,7 @@ void main() => group("$WorldCountry", () {
             namesNative: value.namesNative,
             population: value.population,
             timezones: value.timezones,
-            tld: const <String>[],
+            tld: const [],
             translations: value.translations,
             demonyms: value.demonyms,
             currencies: value.currencies,
@@ -1257,19 +1236,16 @@ void main() => group("$WorldCountry", () {
         test("translation should always provide at least eng translation", () {
           const language = LangZha();
           const nonExistCode = "000";
-          var count = 0;
-          for (final value in WorldCountry.list) {
-            final maybeMissing = value.maybeTranslation(
-              const BasicLocale(
-                language,
-                countryCode: nonExistCode,
-              ),
+          int count = 0;
+          for (final country in WorldCountry.list) {
+            final maybeMissing = country.maybeTranslation(
+              const BasicLocale(language, countryCode: nonExistCode),
               useLanguageFallback: false,
             );
             if (maybeMissing != null) continue;
-            count++;
+            count += 1;
             expect(
-              value.translation(
+              country.translation(
                 const BasicLocale(language, countryCode: nonExistCode),
               ),
               isNotNull,
@@ -1282,10 +1258,12 @@ void main() => group("$WorldCountry", () {
           final map = {for (final country in WorldCountry.list) country: 0};
 
           for (final l10n in NaturalLanguage.list) {
-            for (final value in WorldCountry.list) {
+            for (final country in WorldCountry.list) {
               final hasTranslationForValue =
-                  value.maybeTranslation(BasicLocale(l10n));
-              if (hasTranslationForValue != null) map[value] = map[value]! + 1;
+                  country.maybeTranslation(BasicLocale(l10n));
+              if (hasTranslationForValue != null) {
+                map[country] = map[country]! + 1;
+              }
             }
           }
 
@@ -1299,13 +1277,13 @@ void main() => group("$WorldCountry", () {
           final missing = <NaturalLanguage, Set<WorldCountry>>{};
 
           for (final l10n in NaturalLanguage.list) {
-            for (final value in WorldCountry.list) {
+            for (final country in WorldCountry.list) {
               final hasTranslationForValue =
-                  value.maybeTranslation(BasicLocale(l10n));
-              if (hasTranslationForValue != null) {
-                map[l10n] = map[l10n]! + 1;
+                  country.maybeTranslation(BasicLocale(l10n));
+              if (hasTranslationForValue == null) {
+                missing[l10n] = {...?missing[l10n], country};
               } else {
-                missing[l10n] = {...?missing[l10n], value};
+                map[l10n] = map[l10n]! + 1;
               }
             }
           }

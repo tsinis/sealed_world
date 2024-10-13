@@ -119,6 +119,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
             itemProperties,
             title: maybeNameTitle,
             onPressed: (country) =>
+                // ignore: prefer-correct-handler-name, breaking change.
                 maybeSelectAndPop(country, itemProperties.context),
           )
         : CountryTile.fromProperties(
@@ -142,6 +143,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
       });
 
   @override
+  // ignore: avoid-incomplete-copy-with, items is covering countries.
   CountryPicker copyWith({
     Iterable<WorldCountry>? items,
     bool? addAutomaticKeepAlives,

@@ -31,16 +31,16 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
   const BasicFlag(
     this.properties, {
     this.aspectRatio,
+    this.backgroundPainter,
     this.decoration,
     this.decorationPosition,
-    this.padding,
     this.elementsBuilder,
-    this.backgroundPainter,
     this.foregroundPainter,
-    this.foregroundWidget,
     this.foregroundPainterBuilder,
+    this.foregroundWidget,
     this.foregroundWidgetBuilder,
     super.key,
+    this.padding,
   });
 
   @override

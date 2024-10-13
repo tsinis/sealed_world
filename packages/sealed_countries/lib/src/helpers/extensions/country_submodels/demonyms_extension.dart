@@ -38,12 +38,12 @@ extension DemonymsExtension on Demonyms {
 
   /// {@macro to_map_method}
   JsonObjectMap toMap() =>
-      {"language": language.code, "female": female, "male": male};
+      {"female": female, "language": language.code, "male": male};
 
   /// {@macro from_map_method}
   static Demonyms fromMap(JsonMap map) => Demonyms(
         language: NaturalLanguage.fromCode(map["language"].toString()),
-        female: map["female"] as String,
-        male: map["male"] as String,
+        female: map["female"].toString(),
+        male: map["male"].toString(),
       );
 }

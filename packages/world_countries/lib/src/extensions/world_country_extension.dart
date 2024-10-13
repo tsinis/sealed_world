@@ -1,6 +1,8 @@
 import "dart:ui" show Locale;
 
-import "../../world_countries.dart";
+import "package:world_flags/world_flags.dart";
+
+import "../models/locale/iso_locale.dart";
 
 /// Extension on [WorldCountry] to convert it to a [Locale] classes.
 extension WorldCountryExtension on WorldCountry {

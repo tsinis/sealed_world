@@ -13,7 +13,7 @@ final class PinePainter extends CustomElementsPainter {
   double get originalAspectRatio => flagNfkProperties.aspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -48,6 +48,7 @@ final class PinePainter extends CustomElementsPainter {
       ..lineTo(width * 0.5, height * 0.6);
 
     final bounds = path.getBounds();
+    final paint = paintCreator();
     final rectangle = Rect.fromCenter(
       center: bounds.center + Offset(0, bounds.height * 0.1),
       width: width / 10,
@@ -59,8 +60,8 @@ final class PinePainter extends CustomElementsPainter {
         center.dx - bounds.center.dx,
         center.dy - bounds.center.dy * 1.1,
       )
-      ..drawRect(rectangle, paintCreator())
-      ..drawPath(path, paintCreator());
+      ..drawRect(rectangle, paint)
+      ..drawPath(path, paint);
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

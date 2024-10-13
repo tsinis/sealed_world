@@ -12,14 +12,13 @@ void main() => group("ScriptGetters", () {
       );
 
       test("dateTime", () {
-        for (final value in Script.list) {
-          expect(value.dateTime, isA<DateTime>());
+        final past =
+            DateTime(2004, 5).subtract(const Duration(microseconds: 1));
 
-          final past =
-              DateTime(2004, 5).subtract(const Duration(microseconds: 1));
-
-          expect(value.dateTime.isAfter(past), isTrue);
-          expect(value.dateTime.isBefore(DateTime.now()), isTrue);
+        for (final script in Script.list) {
+          expect(script.dateTime, isA<DateTime>());
+          expect(script.dateTime.isAfter(past), isTrue);
+          expect(script.dateTime.isBefore(DateTime.now()), isTrue);
         }
       });
     });

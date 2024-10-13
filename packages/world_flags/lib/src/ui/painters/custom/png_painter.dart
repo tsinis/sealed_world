@@ -9,8 +9,7 @@ final class PngPainter extends MultiElementPainter {
   double get originalAspectRatio => flagPngProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.5);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

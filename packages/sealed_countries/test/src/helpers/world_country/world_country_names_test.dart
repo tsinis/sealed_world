@@ -5,7 +5,7 @@ import "package:test/test.dart";
 void main() => group("WorldCountryNames", () {
       group("namesCommonNative", () {
         final country =
-            WorldCountry.list.firstWhere((c) => c.namesNative.length > 1);
+            WorldCountry.list.firstWhere((cnt) => cnt.namesNative.length > 1);
 
         test(
           "separator",
@@ -24,24 +24,21 @@ void main() => group("WorldCountryNames", () {
             ),
           );
 
-          test(
-            "with single name",
-            () {
-              final singleNameCountry = WorldCountry.list.firstWhere(
-                (c) => c.namesNative.length == 1,
-              );
-              expect(
-                singleNameCountry.namesCommonNative(skipFirst: true),
-                singleNameCountry.namesNative.first.name,
-              );
-            },
-          );
+          test("with single name", () {
+            final singleNameCountry = WorldCountry.list.firstWhere(
+              (cnt) => cnt.namesNative.length == 1,
+            );
+            expect(
+              singleNameCountry.namesCommonNative(skipFirst: true),
+              singleNameCountry.namesNative.first.name,
+            );
+          });
         });
       });
 
       group("namesOfficialNative", () {
         final country =
-            WorldCountry.list.firstWhere((c) => c.namesNative.length > 1);
+            WorldCountry.list.firstWhere((cnt) => cnt.namesNative.length > 1);
 
         test(
           "separator",
@@ -60,18 +57,15 @@ void main() => group("WorldCountryNames", () {
             ),
           );
 
-          test(
-            "with single name",
-            () {
-              final singleNameCountry = WorldCountry.list.firstWhere(
-                (c) => c.namesNative.length == 1,
-              );
-              expect(
-                singleNameCountry.namesOfficialNative(skipFirst: true),
-                singleNameCountry.namesNative.first.fullName,
-              );
-            },
-          );
+          test("with single name", () {
+            final singleNameCountry = WorldCountry.list.firstWhere(
+              (cnt) => cnt.namesNative.length == 1,
+            );
+            expect(
+              singleNameCountry.namesOfficialNative(skipFirst: true),
+              singleNameCountry.namesNative.first.fullName,
+            );
+          });
         });
       });
     });

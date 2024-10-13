@@ -1,4 +1,4 @@
-class PhpConverter {
+abstract final class PhpConverter {
   const PhpConverter();
 
   static const format = "php";
@@ -13,12 +13,12 @@ class PhpConverter {
 
     for (final match in matches) {
       final code = match.group(1)?.toUpperCase(); // Code.
-      var translation = match.group(2); // Translation.
+      String? translationMatch = match.group(2); // Translation.
 
-      if (code != null && translation != null) {
+      if (code != null && translationMatch != null) {
         // Remove any trailing brackets with their content.
-        translation = translation.replaceAll(cleanupRegex, "");
-        translations[code] = translation.trim();
+        translationMatch = translationMatch.replaceAll(cleanupRegex, "");
+        translations[code] = translationMatch.trim();
       }
     }
 
@@ -31,7 +31,7 @@ class PhpConverter {
   ]) {
     final translations = <String, String>{};
 
-    var startIndex = 0;
+    int startIndex = 0;
     if (startFrom != null) {
       startIndex = phpFileContent.indexOf(startFrom);
       if (startIndex == -1) return translations;

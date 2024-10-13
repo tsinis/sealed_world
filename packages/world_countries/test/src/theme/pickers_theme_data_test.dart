@@ -10,7 +10,7 @@ void main() => group("$PickersThemeData", () {
       const original = WidgetTesterExtension.pickersTheme;
 
       test("copyWith", () {
-        var copy = original.copyWith(translation: locale);
+        PickersThemeData copy = original.copyWith(translation: locale);
 
         expect(copy, isNot(WidgetTesterExtension.pickersTheme));
         expect(copy.translation, locale);

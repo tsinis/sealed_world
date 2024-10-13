@@ -20,13 +20,13 @@ class CryptoCurrency extends Currency {
   const CryptoCurrency({
     required super.code,
     required super.name,
-    super.decimalMark = ".",
-    super.thousandsSeparator = ",",
-    super.symbol,
-    this.isMinable = false,
-    this.isFork = false,
-    this.proofType,
     this.dateAdded,
+    super.decimalMark = ".",
+    this.isFork = false,
+    this.isMinable = false,
+    this.proofType,
+    super.symbol,
+    super.thousandsSeparator = ",",
   }) : assert(
           proofType == null || proofType.length > 0,
           "`proofType` should not be empty!",
@@ -52,5 +52,11 @@ class CryptoCurrency extends Currency {
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''CryptoCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : '"$symbol"'}, isMinable: $isMinable, isFork: $isFork, proofType: ${proofType == null ? proofType : '"$proofType"'}, dateAdded: $dateAdded)''';
+      : 'CryptoCurrency(code: "$code", name: "$name", '
+          'decimalMark: "$decimalMark", '
+          'thousandsSeparator: "$thousandsSeparator", '
+          '${symbol == null ? '' : 'symbol: r"$symbol", '}'
+          "isMinable: $isMinable, isFork: $isFork, "
+          '${proofType == null ? '' : 'proofType: "$proofType", '}'
+          '${dateAdded == null ? '' : 'dateAdded: "$dateAdded"'})';
 }

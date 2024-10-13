@@ -1,3 +1,5 @@
+import "dart:async";
+
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:world_countries/world_countries.dart";
@@ -20,7 +22,9 @@ abstract base class WorldDataTab<T extends IsoTranslated>
           chosen: [data],
           disabled: items.isNotEmpty ? [items.first] : null,
           onSelect: (i) => data != i && nav != null
-              ? nav.call(type.path + Constants.slash + i.code.toLowerCase())
+              ? unawaited(
+                  nav(type.path + Constants.slash + i.code.toLowerCase()),
+                )
               : null,
         );
 

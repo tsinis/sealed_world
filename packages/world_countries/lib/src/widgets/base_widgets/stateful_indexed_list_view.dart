@@ -1,26 +1,32 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/widgets.dart";
 
-import "../../../helpers.dart";
+import "../../constants/ui_constants.dart";
 import "../../interfaces/indexed_list_view_interface.dart";
 import "../../models/item_properties.dart";
 
-/// {@hideConstantImplementations}
+/// A stateful widget for displaying an indexed list of items.
+///
+/// This widget can be used to display a list of items, each of which can be
+/// selected by the user. The items are displayed in an indexed list, meaning
+/// that each item is associated with a unique index. The user can select an
+/// item by tapping on it, and the selected item will be highlighted.
+///
+/// This widget is designed to be highly customizable. The appearance and
+/// behavior of the list can be customized by passing in optional parameters
+/// to the constructor.
+///
+/// This widget can be used in conjunction with the [ItemProperties] class to
+/// customize the appearance and behavior of individual items in the list.
 abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
     implements IndexedListViewInterface {
-  /// A stateful widget for displaying an indexed list of items.
+  /// Creates a [StatefulIndexedListView] with the given parameters.
   ///
-  /// This widget can be used to display a list of items, each of which can be
-  /// selected by the user. The items are displayed in an indexed list, meaning
-  /// that each item is associated with a unique index. The user can select an
-  /// item by tapping on it, and the selected item will be highlighted.
+  /// The [items] parameter is required and specifies the list of items to
+  /// display.
   ///
-  /// This widget is designed to be highly customizable. The appearance and
-  /// behavior of the list can be customized by passing in optional parameters
-  /// to the constructor.
-  ///
-  /// This widget can be used in conjunction with the [ItemProperties] class to
-  /// customize the appearance and behavior of individual items in the list.
+  /// The optional parameters allow customization of the list's appearance and
+  /// behavior.
   const StatefulIndexedListView(
     this.items, {
     this.addAutomaticKeepAlives = true,
@@ -86,6 +92,7 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
   final Widget? separator;
 
   /// A function to sort the items in the list.
+  // ignore: prefer-correct-callback-field-name, A breaking change.
   final int Function(T, T)? sort;
 
   @override

@@ -13,8 +13,7 @@ final class SvkPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagSvkProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -349,13 +348,14 @@ final class SvkPainter extends CustomElementsPainter {
       ..lineTo(width * 0.07, height * 0.03);
 
     final bounds = path4.getBounds();
+    final whitePaint = paintCreator();
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(path, paintCreator(customColors.first)) // Red.
-      ..drawPath(path2, paintCreator()) // White.
+      ..drawPath(path2, whitePaint) // White.
       ..drawPath(path3, paintCreator(customColors.last)) // Blue.
-      ..drawPath(path4, paintCreator()); // White.
+      ..drawPath(path4, whitePaint); // White.
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

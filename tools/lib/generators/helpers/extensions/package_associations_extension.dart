@@ -23,9 +23,9 @@ extension PackageAssociationsExtension on Package {
       );
 
   List<TranslatedName> translations(String code) => when(
+        sealedLanguages: () => NaturalLanguage.fromCode(code),
         sealedCurrencies: () => FiatCurrency.fromCode(code),
         sealedCountries: () => WorldCountry.fromCode(code),
-        sealedLanguages: () => NaturalLanguage.fromCode(code),
       ).translations;
 
   String get dataFilePrefix => whenConst(
@@ -36,8 +36,8 @@ extension PackageAssociationsExtension on Package {
 
   String get dataRepresent => whenConst(
         sealedLanguages: Language,
-        sealedCountries: Country,
         sealedCurrencies: Currency,
+        sealedCountries: Country,
       ).toString().toLowerCase();
 
   String get dataRepresentPlural => whenConst(

@@ -129,11 +129,7 @@ const ernCurrencyTranslations = [
   TranslatedName(LangBen(), name: "এরিট্রিয়েন নাকফা"),
   TranslatedName(LangBre(), name: "nakfa Eritrea"),
   TranslatedName(LangBos(), name: "Eritrejska nakfa"),
-  TranslatedName(
-    LangBos(),
-    name: "Еритреанска накфа",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Еритреанска накфа", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "nakfa eritreu"),
   TranslatedName(LangChe(), name: "Эритрейн накфа"),
   TranslatedName(LangCes(), name: "eritrejská nakfa"),

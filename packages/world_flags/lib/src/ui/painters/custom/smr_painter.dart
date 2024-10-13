@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-moving-to-variable
+
 import "dart:ui";
 
 import "../../../data/flags_map_part_3.data.dart";
@@ -13,8 +15,7 @@ final class SmrPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagSmrProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.4);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

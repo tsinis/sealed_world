@@ -7,6 +7,7 @@ extension SealedWorldIterableExtension<T extends Object> on Iterable<T?> {
   /// Return a [List] of mapped objects, typically [IsoStandardized] objects,
   /// created with `fromCode` factory constructor.
   List<R> fromIsoList<R>(R Function(String code) mapper) =>
+      // ignore: avoid-nullable-tostring, it's expected to be non-null.
       List<R>.unmodifiable(map((code) => mapper(code.toString())));
 
   /// Returns a [String] representation of the list containing only the unique
@@ -65,7 +66,8 @@ extension SealedWorldIterableIsoExtension<T extends IsoStandardized>
     final maybeMatchingIso = getIsoOrNullFunc(value);
     if (maybeMatchingIso != null) return maybeMatchingIso;
     throw StateError(
-      """No matching ISO $T element was found for the input! Consider using the same but nullable runtime-safe methods (with a `maybe` prefix) instead.""",
+      "No matching ISO $T element was found for the input! Consider using the"
+      " same but nullable runtime-safe methods (with a `maybe` prefix) instead",
     );
   }
 }
@@ -108,6 +110,6 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   T? _mapTrimmedCode(T? Function(String output) mapper, Object? input) {
     final code = input?.toString().maybeToValidIsoCode();
 
-    return code != null ? mapper(code) : null;
+    return code == null ? null : mapper(code);
   }
 }

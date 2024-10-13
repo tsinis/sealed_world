@@ -1,157 +1,157 @@
 import "../model/language_family/language_family.dart";
 
-/// {@hideConstantImplementations}
+/// A class that represents the Afro-Asiatic language family.
 class AfroAsiatic extends NaturalLanguageFamily {
-  /// A class that represents the Afro-Asiatic language family.
+  /// Creates an instance of the Afro-Asiatic language family.
   const AfroAsiatic() : super(name: "Afro-Asiatic");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Algonquian language family.
 class Algonquian extends NaturalLanguageFamily {
-  /// A class that represents the Algonquian language family.
+  /// Creates an instance of the Algonquian language family.
   const Algonquian() : super(name: "Algonquian");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Austroasiatic language family.
 class Austroasiatic extends NaturalLanguageFamily {
-  /// A class that represents the Austroasiatic language family.
+  /// Creates an instance of the Austroasiatic language family.
   const Austroasiatic() : super(name: "Austroasiatic");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Austronesian language family.
 class Austronesian extends NaturalLanguageFamily {
-  /// A class that represents the Austronesian language family.
+  /// Creates an instance of the Austronesian language family.
   const Austronesian() : super(name: "Austronesian");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Aymaran language family.
 class Aymaran extends NaturalLanguageFamily {
-  /// A class that represents the Aymaran language family.
+  /// Creates an instance of the Aymaran language family.
   const Aymaran() : super(name: "Aymaran");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Constructed language family.
 class Constructed extends NaturalLanguageFamily {
-  /// A class that represents the Constructed language family.
+  /// Creates an instance of the Constructed language family.
   const Constructed() : super(name: "Constructed");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Creole language family.
 class Creole extends NaturalLanguageFamily {
-  /// A class that represents the Creole language family.
+  /// Creates an instance of the Creole language family.
   const Creole() : super(name: "Creole");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Dene-Yeniseian language family.
 class DeneYeniseian extends NaturalLanguageFamily {
-  /// A class that represents the Dene-Yeniseian language family.
+  /// Creates an instance of the Dene-Yeniseian language family.
   const DeneYeniseian() : super(name: "Dene-Yeniseian");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Dravidian language family.
 class Dravidian extends NaturalLanguageFamily {
-  /// A class that represents the Dravidian language family.
+  /// Creates an instance of the Dravidian language family.
   const Dravidian() : super(name: "Dravidian");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Indo-European language family.
 class IndoEuropean extends NaturalLanguageFamily {
-  /// A class that represents the Indo-European language family.
+  /// Creates an instance of the Indo-European language family.
   const IndoEuropean() : super(name: "Indo-European");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Japonic language family.
 class Japonic extends NaturalLanguageFamily {
-  /// A class that represents the Japonic language family.
+  /// Creates an instance of the Japonic language family.
   const Japonic() : super(name: "Japonic");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Koreanic language family.
 class Koreanic extends NaturalLanguageFamily {
-  /// A class that represents the Koreanic language family.
+  /// Creates an instance of the Koreanic language family.
   const Koreanic() : super(name: "Koreanic");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Language Isolate language family.
 class LanguageIsolate extends NaturalLanguageFamily {
-  /// A class that represents the Language Isolate language family.
+  /// Creates an instance of the Language Isolate language family.
   const LanguageIsolate() : super(name: "Language Isolate");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Mongolic language family.
 class Mongolic extends NaturalLanguageFamily {
-  /// A class that represents the Mongolic language family.
+  /// Creates an instance of the Mongolic language family.
   const Mongolic() : super(name: "Mongolic");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Niger-Congo language family.
 class NigerCongo extends NaturalLanguageFamily {
-  /// A class that represents the Niger-Congo language family.
+  /// Creates an instance of the Niger-Congo language family.
   const NigerCongo() : super(name: "Niger-Congo");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Nilo-Saharan language family.
 class NiloSaharan extends NaturalLanguageFamily {
-  /// A class that represents the Nilo-Saharan language family.
+  /// Creates an instance of the Nilo-Saharan language family.
   const NiloSaharan() : super(name: "Nilo-Saharan");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Northeast Caucasian language family.
 class NortheastCaucasian extends NaturalLanguageFamily {
-  /// A class that represents the Northeast Caucasian language family.
+  /// Creates an instance of the Northeast Caucasian language family.
   const NortheastCaucasian() : super(name: "Northeast Caucasian");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Northwest Caucasian language family.
 class NorthwestCaucasian extends NaturalLanguageFamily {
-  /// A class that represents the Northwest Caucasian language family.
+  /// Creates an instance of the Northwest Caucasian language family.
   const NorthwestCaucasian() : super(name: "Northwest Caucasian");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Quechuan language family.
 class Quechuan extends NaturalLanguageFamily {
-  /// A class that represents the Quechuan language family.
+  /// Creates an instance of the Quechuan language family.
   const Quechuan() : super(name: "Quechuan");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Sino-Tibetan language family.
 class SinoTibetan extends NaturalLanguageFamily {
-  /// A class that represents the Sino-Tibetan language family.
+  /// Creates an instance of the Sino-Tibetan language family.
   const SinoTibetan() : super(name: "Sino-Tibetan");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the South-Caucasian language family.
 class SouthCaucasian extends NaturalLanguageFamily {
-  /// A class that represents the South-Caucasian language family.
+  /// Creates an instance of the South-Caucasian language family.
   const SouthCaucasian() : super(name: "South-Caucasian");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tai-Kadai language family.
 class TaiKadai extends NaturalLanguageFamily {
-  /// A class that represents the Tai-Kadai language family.
+  /// Creates an instance of the Tai-Kadai language family.
   const TaiKadai() : super(name: "Tai-Kadai");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Tupian language family.
 class Tupian extends NaturalLanguageFamily {
-  /// A class that represents the Tupian language family.
+  /// Creates an instance of the Tupian language family.
   const Tupian() : super(name: "Tupian");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Turkic language family.
 class Turkic extends NaturalLanguageFamily {
-  /// A class that represents the Turkic language family.
+  /// Creates an instance of the Turkic language family.
   const Turkic() : super(name: "Turkic");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Eskimo Aleut language family.
 class EskimoAleut extends NaturalLanguageFamily {
-  /// A class that represents the Eskimo Aleut language family.
+  /// Creates an instance of the Eskimo Aleut language family.
   const EskimoAleut() : super(name: "Eskimo Aleut");
 }
 
-/// {@hideConstantImplementations}
+/// A class that represents the Uralic language family.
 class Uralic extends NaturalLanguageFamily {
-  /// A class that represents the Uralic language family.
+  /// Creates an instance of the Uralic language family.
   const Uralic() : super(name: "Uralic");
 }

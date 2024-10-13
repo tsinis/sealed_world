@@ -31,11 +31,11 @@ void main() => group("$CountryPicker", () {
         "builder from theme",
         (tester) async => tester.testPickerBody(
           const CountryPicker(),
+          (item) => item.translations.first.common,
           theme: CountryTileThemeData(
             builder: (properties, {isDense}) =>
                 Text(properties.item.translations.first.common),
           ),
-          (item) => item.translations.first.common,
         ),
       );
 
@@ -87,6 +87,7 @@ void main() => group("$CountryPicker", () {
         await tester.tapAndSettle(find.byIcon(Icons.search));
         expect(tile, findsWidgets);
         await tester.tapAndSettle(tile.first);
+        // ignore: avoid-duplicate-test-assertions, tile will be missing after.
         expect(tile, findsNothing);
       });
 

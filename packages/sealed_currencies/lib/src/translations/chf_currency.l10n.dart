@@ -128,11 +128,7 @@ const chfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সুইস ফ্রাঁ"),
   TranslatedName(LangBre(), name: "lur Suis"),
   TranslatedName(LangBos(), name: "Švicarski franak"),
-  TranslatedName(
-    LangBos(),
-    name: "Швајцарски франак",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Швајцарски франак", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "franc suís"),
   TranslatedName(LangChe(), name: "Швейцарин франк"),
   TranslatedName(LangCes(), name: "švýcarský frank"),

@@ -128,11 +128,7 @@ const murCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মৌরিতানিয়ান রুপি"),
   TranslatedName(LangBre(), name: "roupi Moris"),
   TranslatedName(LangBos(), name: "Mauricijska rupija"),
-  TranslatedName(
-    LangBos(),
-    name: "Маурицијски рупи",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Маурицијски рупи", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "rupia mauriciana"),
   TranslatedName(LangChe(), name: "Маврикин рупи"),
   TranslatedName(LangCes(), name: "mauricijská rupie"),

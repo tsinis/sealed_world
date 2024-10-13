@@ -4,7 +4,6 @@
 
 import "package:sealed_currencies/sealed_currencies.dart";
 
-import "../../country_translations.dart";
 import "../model/country/country.dart";
 import "../model/country/submodels/capital.dart";
 import "../model/country/submodels/capital_info.dart";
@@ -15,7 +14,7 @@ import "../model/country/submodels/gini.dart";
 import "../model/country/submodels/idd.dart";
 import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
-import "../model/country/submodels/weekday.dart";
+import "../translations/unk_country.l10n.dart";
 import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
 import "regional_bloc/regional_bloc.data.dart";
@@ -48,7 +47,6 @@ class CountryUnk extends WorldCountry {
           codeNumeric: "   ",
           codeShort: "XK",
           cioc: "KOS",
-          independent: true,
           unMember: false,
           currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [83]),
@@ -75,13 +73,10 @@ class CountryUnk extends WorldCountry {
           fifa: "KVX",
           car: const Car(sign: "CS"),
           timezones: const ["UTC+01:00"],
-          hasCoatOfArms: true,
-          startOfWeek: Weekday.monday,
           capitalInfo: const CapitalInfo(
             capital: Capital("Pristina"),
             latLng: LatLng(42.67, 21.17),
           ),
-          postalCode: null,
           regionalBlocs: const [BlocCEFTA()],
         );
 }

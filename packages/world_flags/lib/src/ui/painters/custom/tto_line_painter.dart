@@ -9,7 +9,7 @@ final class TtoLinePainter extends CustomElementsPainter {
   const TtoLinePainter(super.properties, super.aspectRatio);
 
   @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final width = size.width;
     final height = size.height;
     final heightFactor = property.heightFactor;

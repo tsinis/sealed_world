@@ -54,18 +54,20 @@ class Script extends WritingSystem
   /// given code, or throws a [StateError] if no such instance exists.
   factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
-    var validCode =
+    String? validCode =
         code.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
-        """Provided $code isn't a valid $standardCodeName code. Consider using nullable runtime-safe maybeFromCode() instead.""",
+        "Provided $code isn't a valid $standardCodeName code. "
+        "Consider using nullable runtime-safe `maybeFromCode()` instead.",
       );
     }
     validCode = formatToStandardCode(validCode);
     final result = scripts.firstIsoWhereOrNull((iso) => iso.code == validCode);
     if (result == null) {
       throw StateError(
-        """No matching Script was found for the $code! Consider using nullable runtime-safe maybeFromCode() instead.""",
+        "No matching Script was found for the $code! "
+        "Consider using nullable runtime-safe `maybeFromCode()` instead.",
       );
     }
 
@@ -172,7 +174,8 @@ class Script extends WritingSystem
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''Script(name: "$name", code: "$code", codeNumeric: "$codeNumeric", date: "$date", pva: ${pva == null ? pva : '"$pva"'})''';
+      : 'Script(name: "$name", code: "$code", codeNumeric: "$codeNumeric", '
+          'date: "$date"${pva == null ? '' : ', pva: "$pva"'},)';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -256,7 +259,7 @@ class Script extends WritingSystem
   /// `script` variable.
   static Script? maybeFromCode(Object? code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.maybeFindByCode(code);
-    var string =
+    String? string =
         code?.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
     string = formatToStandardCode(string);
@@ -345,7 +348,7 @@ class Script extends WritingSystem
   /// ```
   static const map = UpperCaseIsoMap(
     {...scriptCodeMap, ...scriptCodeOtherMap},
-    exactLength: null,
+    exactLength: null, // ignore: avoid-passing-default-values, is not default.
     maxLength: codeLength,
     minLength: IsoStandardized.codeLength,
   );

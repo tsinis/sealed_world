@@ -84,10 +84,7 @@ void main() => group("$NaturalLanguageFamily", () {
 
         test(
           "with wrong value, without where",
-          () => expect(
-            NaturalLanguageFamily.maybeFromValue(value),
-            isNull,
-          ),
+          () => expect(NaturalLanguageFamily.maybeFromValue(value), isNull),
         );
 
         test(

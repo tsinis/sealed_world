@@ -116,11 +116,7 @@ const nokCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নরওয়ে ক্রৌন"),
   TranslatedName(LangBre(), name: "kurunenn Norvegia"),
   TranslatedName(LangBos(), name: "Norveška kruna"),
-  TranslatedName(
-    LangBos(),
-    name: "Норвешка круна",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Норвешка круна", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "corona noruega"),
   TranslatedName(LangChe(), name: "Норвегин крона"),
   TranslatedName(LangCes(), name: "norská koruna"),

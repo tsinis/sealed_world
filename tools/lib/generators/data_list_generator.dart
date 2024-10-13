@@ -20,9 +20,9 @@ class DataListGenerator {
         join(currentFileDir.path, "data/${package.dataFilePrefix}.data.dart");
     final currentImports = _code.readContentUntilFound(currentFilePath);
     final buffer = StringBuffer(currentImports);
+    final type = package.type.toString();
 
     for (final item in package.dataList) {
-      final type = package.type.toString();
       final code = item.code.toPascalCase();
       final itemString = item.toString(short: false);
       final className = "${package.classPrefix}$code";

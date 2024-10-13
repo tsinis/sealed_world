@@ -26,13 +26,13 @@ class TriangleFlag extends BasicFlag {
   const TriangleFlag(
     super.properties, {
     super.aspectRatio,
+    super.backgroundPainter,
     super.decoration,
     super.decorationPosition,
-    super.padding,
-    super.backgroundPainter,
     super.foregroundPainter,
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
+    super.padding,
   }) : super(elementsBuilder: TrianglePainter.new); // coverage:ignore-line
 }

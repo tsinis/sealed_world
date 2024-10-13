@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-referencing-subclasses
+
 part of "../language_family.dart";
 
 /// A class that represents a family of natural languages.
@@ -33,7 +35,7 @@ class NaturalLanguageFamily extends LanguageFamily {
     assert(families.isNotEmpty, "`families` should not be empty!");
 
     return families.firstWhere(
-      (family) => family.name.toUpperCase() == name.trim().toUpperCase(),
+      (family) => family.name.toUpperCase() == name.toUpperCaseIsoCode(),
     );
   }
 

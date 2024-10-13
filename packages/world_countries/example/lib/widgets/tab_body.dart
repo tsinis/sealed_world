@@ -36,7 +36,6 @@ class TabBody extends StatelessWidget {
                     width: double.infinity,
                     margin: titleMargin,
                     child: FunctionalPlatform.maybeWhenConst(
-                      web: title,
                       orElse: BackdropFilter(
                         filter: ImageFilter.blur(
                           sigmaX: UiConstants.point,
@@ -44,6 +43,7 @@ class TabBody extends StatelessWidget {
                         ),
                         child: title,
                       ),
+                      web: title,
                     ),
                   ),
                 ),
@@ -56,7 +56,6 @@ class TabBody extends StatelessWidget {
               child: ColoredBox(
                 color: context.theme.colorScheme.surface.withOpacity(1 / 2),
                 child: FunctionalPlatform.maybeWhenConst(
-                  web: ListView(children: children),
                   orElse: BackdropFilter(
                     filter: ImageFilter.blur(
                       sigmaX: UiConstants.point,
@@ -67,6 +66,7 @@ class TabBody extends StatelessWidget {
                       children: children,
                     ),
                   ),
+                  web: ListView(children: children),
                 ),
               ),
             ),

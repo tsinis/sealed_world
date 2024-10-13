@@ -13,10 +13,12 @@ final class SimpleBirdPainter extends MultiElementPainter {
   final double _originalAspectRatio;
 
   @override
+  // ignore: avoid-unnecessary-getter, _originalAspectRatio shouldn't be public.
   double get originalAspectRatio => _originalAspectRatio;
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+    // ignore: avoid-type-casts, it's tested.
     final otherColors = (property as CustomElementsProperties?)?.otherColors;
 
     final adjustedSize = ratioAdjustedSize(size);
@@ -78,7 +80,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
     return (canvas: canvas, bounds: birdSize, child: property.child);
   }
 
-  // ignore: long-method, expected for CustomElementsPainters.
+  // ignore: avoid-returning-cascades, it's exceptional.
   Path _drawPath(double width, double height) => Path()
     ..moveTo(width, height * 0.2)
     ..lineTo(width * 0.68, height * 0.2)

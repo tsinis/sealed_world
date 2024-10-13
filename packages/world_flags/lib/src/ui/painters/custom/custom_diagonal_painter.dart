@@ -22,7 +22,7 @@ final class CustomDiagonalPainter extends MultiElementPainter {
   final bool _isHorizontal;
 
   @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final height = size.height;
     final width = size.width;
     final mainLineFactor = property.heightFactor;

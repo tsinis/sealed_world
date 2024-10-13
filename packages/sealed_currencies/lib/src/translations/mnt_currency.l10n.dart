@@ -116,11 +116,7 @@ const mntCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মঙ্গোলিয়ান তুগরিক"),
   TranslatedName(LangBre(), name: "tugrik Mongolia"),
   TranslatedName(LangBos(), name: "Mongolski tugrik"),
-  TranslatedName(
-    LangBos(),
-    name: "Монголски тугрик",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Монголски тугрик", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "tögrög mongol"),
   TranslatedName(LangChe(), name: "Монголин тугрик"),
   TranslatedName(LangCes(), name: "mongolský tugrik"),

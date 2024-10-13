@@ -5,21 +5,21 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
   const ThemeProvider(
     this._flagColors, {
     required super.child,
-    this.changeColors,
+    this.onColorsChange,
     super.key,
   });
 
   static const _whiteColor = Colors.white;
 
+  static ThemeProvider? of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<ThemeProvider>();
+
   final T _flagColors;
-  final ValueSetter<T>? changeColors;
+  final ValueSetter<T>? onColorsChange;
 
   @override
   bool updateShouldNotify(ThemeProvider oldWidget) =>
       !listEquals(_flagColors, oldWidget._flagColors);
-
-  static ThemeProvider? of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<ThemeProvider>();
 
   ThemeData get theme {
     final seedColor = _flagColors.firstOrNull?.withOpacity(1) ?? _whiteColor;
@@ -32,9 +32,9 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
         secondary: _flagColors.elementAtOrNull(1),
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: seedColor,
         foregroundColor:
             brightness == Brightness.dark ? _whiteColor : Colors.black,
+        backgroundColor: seedColor,
       ),
     );
   }

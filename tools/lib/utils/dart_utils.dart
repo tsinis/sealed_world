@@ -11,7 +11,8 @@ final class DartUtils {
 
   Future<void> pub(List<String> arguments, {bool isGlobal = false}) => run([
         "pub",
-        if (isGlobal) ...["global"] else ...[],
+        // ignore: avoid-empty-spread, it's CLI tool.
+        if (isGlobal) "global" else ...[],
         ...arguments,
       ]);
 
@@ -23,5 +24,6 @@ final class DartUtils {
   }
 
   Future<void> fixApply() => run(["fix", "--apply"]);
+
   Future<void> format() => run(["format", "."]);
 }

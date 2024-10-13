@@ -94,14 +94,14 @@ void main() => group("TranslatedExtension", () {
       test("translation should always provide at least eng translation", () {
         const abkhazia = LangAbk();
         const nonExistCode = "000";
-        var count = 0;
+        int count = 0;
         for (final value in NaturalLanguage.list) {
           final maybeMissing = value.maybeTranslation(
             const BasicLocale(abkhazia, countryCode: nonExistCode),
             useLanguageFallback: false,
           );
           if (maybeMissing != null) continue;
-          count++;
+          count += 1;
           expect(
             value.translation(
               const BasicLocale(abkhazia, countryCode: nonExistCode),
@@ -120,10 +120,10 @@ void main() => group("TranslatedExtension", () {
           for (final l10n in NaturalLanguage.list) {
             final hasTranslationForValue =
                 value.maybeTranslation(BasicLocale(l10n));
-            if (hasTranslationForValue != null) {
-              map[l10n] = map[l10n]! + 1;
-            } else {
+            if (hasTranslationForValue == null) {
               missing[l10n] = {...?missing[l10n], value};
+            } else {
+              map[l10n] = map[l10n]! + 1;
             }
           }
         }

@@ -30,12 +30,12 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  static const size = kMinInteractiveDimension / 2;
-  final aspectRatio = ValueNotifier<double?>(null);
+  static const _size = kMinInteractiveDimension / 2;
+  final _aspectRatio = ValueNotifier<double?>(null);
 
   @override
   void dispose() {
-    aspectRatio.dispose();
+    _aspectRatio.dispose();
     super.dispose();
   }
 
@@ -43,7 +43,7 @@ class _MainState extends State<Main> {
   Widget build(BuildContext context) => Material(
         color: Theme.of(context).scaffoldBackgroundColor,
         child: SafeArea(
-          minimum: const EdgeInsets.all(size / 2),
+          minimum: const EdgeInsets.all(_size / 2),
           child: ListView.separated(
             itemBuilder: (_, index) {
               final country = WorldCountry.list[index];
@@ -58,17 +58,17 @@ class _MainState extends State<Main> {
                 title: Text(country.internationalName, style: style),
                 subtitle: Text(country.namesNative.first.common, style: style),
                 trailing: ValueListenableBuilder(
-                  valueListenable: aspectRatio,
+                  valueListenable: _aspectRatio,
                   builder: (_, ratio, __) => CountryFlag.simplified(
                     country,
-                    height: size,
+                    height: _size,
                     aspectRatio: ratio,
                   ),
                 ),
                 onTap: isFull
-                    ? () => SettingsDialog.show(context, country, aspectRatio)
+                    ? () => SettingsDialog.show(_aspectRatio, context, country)
                     : null,
-                minLeadingWidth: size * 1.5,
+                minLeadingWidth: _size * 1.5,
               );
             },
             separatorBuilder: (_, __) => const Divider(

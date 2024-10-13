@@ -36,11 +36,11 @@ void main() => group("$NaturalLanguage", () {
       group("fields", () {
         for (final element in NaturalLanguage.list) {
           test("of $NaturalLanguage: ${element.name}", () {
-            if (element.bibliographicCode != null) {
+            if (element.bibliographicCode == null) {
+              expect(element.bibliographicCode, isNull);
+            } else {
               expect(element.bibliographicCode, isA<String>());
               expect(element.bibliographicCode, isNotEmpty);
-            } else {
-              expect(element.bibliographicCode, isNull);
             }
             expect(element.family.name, isNotEmpty);
             expect(element.codeShort, isA<String>());
@@ -76,9 +76,7 @@ void main() => group("$NaturalLanguage", () {
             same(value),
           );
           expect(
-            NaturalLanguage.fromName(
-              NaturalLanguage.list.last.name,
-            ),
+            NaturalLanguage.fromName(NaturalLanguage.list.last.name),
             same(NaturalLanguage.list.last),
           );
         });
@@ -321,35 +319,29 @@ void main() => group("$NaturalLanguage", () {
 
       group("toJson", () {
         for (final element in NaturalLanguage.list) {
-          test(
-            "compared to $NaturalLanguage: ${element.name}",
-            () {
-              final json = element.toJson();
-              expect(json, isNotEmpty);
-              final decoded = json.tryParse(NaturalLanguageJson.fromMap);
-              expect(
-                decoded?.toString(short: false),
-                json.parse(NaturalLanguageJson.fromMap).toString(short: false),
-              );
-              expect(element.bibliographicCode, decoded?.bibliographicCode);
-              expect(element.family, decoded?.family);
-              expect(element.codeShort, decoded?.codeShort);
-              expect(element.isRightToLeft, decoded?.isRightToLeft);
-              expect(element.namesNative, decoded?.namesNative);
-              expect(element.code, decoded?.code);
-              expect(element.scripts, decoded?.scripts);
-            },
-          );
+          test("compared to $NaturalLanguage: ${element.name}", () {
+            final json = element.toJson();
+            expect(json, isNotEmpty);
+            final decoded = json.tryParse(NaturalLanguageJson.fromMap);
+            expect(
+              decoded?.toString(short: false),
+              json.parse(NaturalLanguageJson.fromMap).toString(short: false),
+            );
+            expect(element.bibliographicCode, decoded?.bibliographicCode);
+            expect(element.family, decoded?.family);
+            expect(element.codeShort, decoded?.codeShort);
+            expect(element.isRightToLeft, decoded?.isRightToLeft);
+            expect(element.namesNative, decoded?.namesNative);
+            expect(element.code, decoded?.code);
+            expect(element.scripts, decoded?.scripts);
+          });
         }
       });
 
       group("maybeFromValue", () {
         performanceTest(
           "with proper value, without where",
-          () => expect(
-            NaturalLanguage.maybeFromValue(value.code),
-            value,
-          ),
+          () => expect(NaturalLanguage.maybeFromValue(value.code), value),
         );
 
         performanceTest(
@@ -365,10 +357,7 @@ void main() => group("$NaturalLanguage", () {
 
         performanceTest(
           "with wrong value, without where",
-          () => expect(
-            NaturalLanguage.maybeFromValue(value),
-            isNull,
-          ),
+          () => expect(NaturalLanguage.maybeFromValue(value), isNull),
         );
 
         performanceTest(

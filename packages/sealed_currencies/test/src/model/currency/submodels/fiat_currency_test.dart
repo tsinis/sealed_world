@@ -43,11 +43,11 @@ void main() => group("$FiatCurrency", () {
             expect(element.internationalName, element.name);
             expect(element.namesNative, isA<List<String>>());
             expect(element.namesNative, isNotEmpty);
-            if (element.alternateSymbols != null) {
+            if (element.alternateSymbols == null) {
+              expect(element.alternateSymbols, isNull);
+            } else {
               expect(element.alternateSymbols, isA<List<String>>());
               expect(element.alternateSymbols, isNotEmpty);
-            } else {
-              expect(element.alternateSymbols, isNull);
             }
             expect(element.disambiguateSymbol, isA<String?>());
             expect(
@@ -94,10 +94,7 @@ void main() => group("$FiatCurrency", () {
         test("basic", () {
           expect(FiatCurrency.list.first, isNot(equals(value)));
           expect(FiatCurrency.list.last, same(value));
-          expect(
-            FiatCurrency.fromName(value.name),
-            same(value),
-          );
+          expect(FiatCurrency.fromName(value.name), same(value));
           expect(
             FiatCurrency.fromName(FiatCurrency.list.last.name),
             same(FiatCurrency.list.last),
@@ -313,47 +310,41 @@ void main() => group("$FiatCurrency", () {
 
       group("toJson", () {
         for (final element in FiatCurrency.list) {
-          test(
-            "compared to $FiatCurrency: ${element.name}",
-            () {
-              final json = element.toJson();
-              expect(json, isNotEmpty);
-              final decoded = json.tryParse(FiatCurrencyJson.fromMap);
-              expect(
-                decoded?.toString(short: false),
-                json.parse(FiatCurrencyJson.fromMap).toString(short: false),
-              );
-              expect(element.code, decoded?.code);
-              expect(element.name, decoded?.name);
-              expect(element.codeNumeric, decoded?.codeNumeric);
-              expect(element.namesNative, decoded?.namesNative);
-              expect(element.alternateSymbols, decoded?.alternateSymbols);
-              expect(element.htmlEntity, decoded?.htmlEntity);
-              expect(element.disambiguateSymbol, decoded?.disambiguateSymbol);
-              expect(element.subunit, decoded?.subunit);
-              expect(element.symbol, decoded?.symbol);
-              expect(element.priority, decoded?.priority);
-              expect(
-                element.smallestDenomination,
-                decoded?.smallestDenomination,
-              );
-              expect(element.subunitToUnit, decoded?.subunitToUnit);
-              expect(element.unitFirst, decoded?.unitFirst);
-              expect(element.decimalMark, decoded?.decimalMark);
-              expect(element.thousandsSeparator, decoded?.thousandsSeparator);
-              expect(element.translations, decoded?.translations);
-            },
-          );
+          test("compared to $FiatCurrency: ${element.name}", () {
+            final json = element.toJson();
+            expect(json, isNotEmpty);
+            final decoded = json.tryParse(FiatCurrencyJson.fromMap);
+            expect(
+              decoded?.toString(short: false),
+              json.parse(FiatCurrencyJson.fromMap).toString(short: false),
+            );
+            expect(element.code, decoded?.code);
+            expect(element.name, decoded?.name);
+            expect(element.codeNumeric, decoded?.codeNumeric);
+            expect(element.namesNative, decoded?.namesNative);
+            expect(element.alternateSymbols, decoded?.alternateSymbols);
+            expect(element.htmlEntity, decoded?.htmlEntity);
+            expect(element.disambiguateSymbol, decoded?.disambiguateSymbol);
+            expect(element.subunit, decoded?.subunit);
+            expect(element.symbol, decoded?.symbol);
+            expect(element.priority, decoded?.priority);
+            expect(
+              element.smallestDenomination,
+              decoded?.smallestDenomination,
+            );
+            expect(element.subunitToUnit, decoded?.subunitToUnit);
+            expect(element.unitFirst, decoded?.unitFirst);
+            expect(element.decimalMark, decoded?.decimalMark);
+            expect(element.thousandsSeparator, decoded?.thousandsSeparator);
+            expect(element.translations, decoded?.translations);
+          });
         }
       });
 
       group("maybeFromValue", () {
         performanceTest(
           "with proper value, without where",
-          () => expect(
-            FiatCurrency.maybeFromValue(value.code),
-            value,
-          ),
+          () => expect(FiatCurrency.maybeFromValue(value.code), value),
         );
 
         performanceTest(
@@ -369,10 +360,7 @@ void main() => group("$FiatCurrency", () {
 
         performanceTest(
           "with wrong value, without where",
-          () => expect(
-            FiatCurrency.maybeFromValue(value),
-            isNull,
-          ),
+          () => expect(FiatCurrency.maybeFromValue(value), isNull),
         );
 
         performanceTest(
@@ -728,19 +716,16 @@ void main() => group("$FiatCurrency", () {
         test("translation should always provide at least eng translation", () {
           const abkhazia = LangAbk();
           const nonExistCode = "000";
-          var count = 0;
-          for (final value in FiatCurrency.list) {
-            final maybeMissing = value.maybeTranslation(
-              const BasicLocale(
-                abkhazia,
-                countryCode: nonExistCode,
-              ),
+          int count = 0;
+          for (final currency in FiatCurrency.list) {
+            final maybeMissing = currency.maybeTranslation(
+              const BasicLocale(abkhazia, countryCode: nonExistCode),
               useLanguageFallback: false,
             );
             if (maybeMissing != null) continue;
-            count++;
+            count += 1;
             expect(
-              value.translation(
+              currency.translation(
                 const BasicLocale(abkhazia, countryCode: nonExistCode),
               ),
               isNotNull,
@@ -755,10 +740,12 @@ void main() => group("$FiatCurrency", () {
           };
 
           for (final l10n in NaturalLanguage.list) {
-            for (final value in FiatCurrency.list) {
+            for (final currency in FiatCurrency.list) {
               final hasTranslationForValue =
-                  value.maybeTranslation(BasicLocale(l10n));
-              if (hasTranslationForValue != null) map[value] = map[value]! + 1;
+                  currency.maybeTranslation(BasicLocale(l10n));
+              if (hasTranslationForValue != null) {
+                map[currency] = map[currency]! + 1;
+              }
             }
           }
 
@@ -775,12 +762,12 @@ void main() => group("$FiatCurrency", () {
           final missing = <NaturalLanguage, Set<FiatCurrency>>{};
 
           for (final l10n in NaturalLanguage.list) {
-            for (final value in FiatCurrency.list) {
-              final translation = value.maybeTranslation(BasicLocale(l10n));
-              if (translation != null) {
-                map[l10n] = map[l10n]! + 1;
+            for (final currency in FiatCurrency.list) {
+              final translation = currency.maybeTranslation(BasicLocale(l10n));
+              if (translation == null) {
+                missing[l10n] = {...?missing[l10n], currency};
               } else {
-                missing[l10n] = {...?missing[l10n], value};
+                map[l10n] = map[l10n]! + 1;
               }
             }
           }

@@ -82,16 +82,16 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
   print(maybeEuro?.toString(short: false));
   /*
   Prints: "FiatCurrency(code: "EUR", name: "Euro", decimalMark: ",",
-  thousandsSeparator: ".", symbol: "€", alternateSymbols: null,
-  disambiguateSymbol: null, htmlEntity: "€", codeNumeric: "978", namesNative:
-  ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
-  subunitToUnit: 100, unitFirst: true, translations rsdCurrencyTranslations)".
+  thousandsSeparator: ".", symbol: r"€", htmlEntity: "€", codeNumeric: "978",
+  namesNative: ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
+  subunitToUnit: 100, unitFirst: true), translations: eurCurrencyTranslations".
   */
 
   // Prints German translations of all available regular currencies.
   for (final currency in FiatCurrency.list) {
     print(
-      """German name of ${currency.name}: ${currency.maybeTranslation(const BasicLocale(LangDeu()))?.name}""",
+      "German name of ${currency.name}: "
+      "${currency.maybeTranslation(const BasicLocale(LangDeu()))?.name}",
     );
   }
 ```

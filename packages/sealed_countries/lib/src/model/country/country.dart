@@ -35,5 +35,5 @@ sealed class Country implements Named<CountryName> {
   final CountryName name;
 
   @override
-  String toString({bool short = true}) => 'Country(name: "${name.name}")';
+  String toString({bool short = true}) => 'Country(name: "${name.common}")';
 }

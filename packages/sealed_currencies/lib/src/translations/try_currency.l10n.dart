@@ -115,11 +115,7 @@ const tryCurrencyTranslations = [
   TranslatedName(LangBen(), name: "তুর্কি লিরা"),
   TranslatedName(LangBre(), name: "lur Turkia"),
   TranslatedName(LangBos(), name: "Turska lira"),
-  TranslatedName(
-    LangBos(),
-    name: "Турска лира",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Турска лира", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "lira turca"),
   TranslatedName(LangChe(), name: "Туркойчоьнан лира"),
   TranslatedName(LangCes(), name: "turecká lira"),

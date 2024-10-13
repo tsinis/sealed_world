@@ -84,5 +84,6 @@ abstract interface class IsoStandardized<Name extends Object> {
   final List<Name>? namesNative;
 
   @override
+  // ignore: avoid-unnecessary-overrides, it has boolean config flag.
   String toString({bool short = true});
 }

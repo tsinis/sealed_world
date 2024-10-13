@@ -1,5 +1,6 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
-import "../../sealed_countries.dart";
+import "../data/regional_bloc/regional_bloc.data.dart";
+import "../model/regional_bloc/world_bloc.dart";
 
 /// List of all standard [RegionalBloc] sorted by code.
 const regionalBlocList = [

@@ -21,13 +21,13 @@ extension NaturalLanguageCopyWith on NaturalLanguage {
   /// );
   /// ```
   NaturalLanguage copyWith({
-    String? name,
+    String? bibliographicCode,
     String? code,
     String? codeShort,
-    List<String>? namesNative,
-    String? bibliographicCode,
     NaturalLanguageFamily? family,
     bool? isRightToLeft,
+    String? name,
+    List<String>? namesNative,
     Set<Script>? scripts,
   }) =>
       NaturalLanguage(

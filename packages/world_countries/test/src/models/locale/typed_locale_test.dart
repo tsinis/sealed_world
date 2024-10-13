@@ -1,5 +1,6 @@
 import "dart:ui";
 
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/models/locale/iso_locale.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
@@ -24,52 +25,41 @@ void main() => group("$TypedLocale", () {
             TypedLocale.fromSubtags(language: english, country: string),
             locale,
           );
-          expect(
-            value,
-            isNot(Locale(locale.languageCode)),
-          );
+          expect(value, isNot(Locale(locale.languageCode)));
         });
 
         test("should compare $IsoLocale object with $TypedLocale", () {
-          expect(
-            value,
-            const IsoLocale(english, country: CountryUsa()),
-          );
+          expect(value, const IsoLocale(english, country: CountryUsa()));
           expect(
             TypedLocale.fromSubtags(language: english, country: string),
             const IsoLocale(english, country: CountryUsa()),
           );
-          expect(
-            value,
-            isNot(const IsoLocale(english)),
-          );
+          expect(value, isNot(const IsoLocale(english)));
         });
       });
 
       group("withTranslationsCache constructor", () {
-        test(
+        assertTest(
           "should throw assert when no iterable specified",
-          () => expect(
-            () => TypedLocale.withTranslationsCache(
-              const LangEng(),
-              languages: null,
-              currencies: null,
-              countries: null,
-            ),
-            throwsA(isA<AssertionError>()),
+          () => TypedLocale.withTranslationsCache(
+            const LangEng(),
+            // ignore_for_file: avoid-passing-default-values, false-positive.
+            languages: null,
+            currencies: null,
+            countries: null,
           ),
         );
 
         test("should create translation cache for everything", () {
-          final locale = TypedLocale.withTranslationsCache(
+          final typedLocale = TypedLocale.withTranslationsCache(
             const LangEng(),
             country: "US",
           );
-          expect(locale, isA<TypedLocale>());
-          expect(locale.country, isA<String>());
-          expect(locale.languageTranslations, isNotEmpty);
-          expect(locale.currencyTranslations, isNotEmpty);
-          expect(locale.countryTranslations, isNotEmpty);
+          expect(typedLocale, isA<TypedLocale>());
+          expect(typedLocale.country, isA<String>());
+          expect(typedLocale.languageTranslations, isNotEmpty);
+          expect(typedLocale.currencyTranslations, isNotEmpty);
+          expect(typedLocale.countryTranslations, isNotEmpty);
         });
       });
 

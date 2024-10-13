@@ -83,16 +83,17 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
     Map<FiatCurrency, String>? currencies,
     Map<WorldCountry, String>? countries,
   ) =>
+      // ignore: avoid-type-casts, Might be a breaking change.
       copyWith(
-        languageTranslations: languages, // Common language names cache.
-        currencyTranslations: currencies, // Common currency names cache.
         countryTranslations: countries, // Common country names cache.
+        currencyTranslations: currencies, // Common currency names cache.
+        languageTranslations: languages, // Common language names cache.
       ) as T;
 
   ({
     Iterable<NaturalLanguage> languages,
     Iterable<FiatCurrency> currencies,
-    Iterable<WorldCountry> countries
+    Iterable<WorldCountry> countries,
   }) _itemsToTranslate(
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,
@@ -100,13 +101,13 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
   ) {
     assert(
       languages != null || currencies != null || countries != null,
-      "At least one of languages, currencies, or countries must be non-null",
+      """At least one of `languages`, `currencies`, or `countries` must be non-null""",
     );
 
     return (
       languages: languages ?? languageTranslations.keys,
       currencies: currencies ?? currencyTranslations.keys,
-      countries: countries ?? countryTranslations.keys
+      countries: countries ?? countryTranslations.keys,
     );
   }
 }

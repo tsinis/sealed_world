@@ -26,8 +26,7 @@ final class AlmondPainter extends CustomElementsPainter {
       : flagSwzProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     /// TODO! Refactor with .save() and .restore() methods.
     MultiElementPainter(List.unmodifiable(properties.skip(1)), aspectRatio)
         .paint(canvas, size);
@@ -68,14 +67,17 @@ final class AlmondPainter extends CustomElementsPainter {
             ..strokeWidth = height / 25,
         );
     } else {
+      final verticalCenter = bounds.center.dy;
+      final horizontalCenter = bounds.center.dx;
+
       canvas
         ..save()
-        ..translate(center.dx - bounds.center.dy, center.dy - bounds.center.dx)
-        ..rotate(90 * (pi / 180))
+        ..translate(center.dx - verticalCenter, center.dy - horizontalCenter)
+        ..rotate((pi / 180) * 90)
         ..drawPath(path, paint)
         ..translate(
-          -center.dx - bounds.center.dy,
-          -center.dy - bounds.center.dx,
+          -center.dx - verticalCenter,
+          -center.dy - horizontalCenter,
         )
         ..restore();
     }

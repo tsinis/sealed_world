@@ -1,7 +1,6 @@
 version: 2
-enable-beta-ecosystems: true
 updates:
-  # Maintain dependencies for GitHub Actions
+  # Maintain dependencies for GitHub Actions.
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -12,19 +11,12 @@ updates:
       prefix: "chore"
       include: "scope"
 
-  # Maintain dependencies for Dart
+  # Maintain dependencies for Dart.
   - package-ecosystem: "pub"
     versioning-strategy: increase
     directories:
-      - "/packages/tools/"
-      - "/packages/_sealed_world_tests/"
-      - "/packages/sealed_languages/"
-      - "/packages/sealed_currencies/"
-      - "/packages/sealed_countries/"
-      - "/packages/world_flags/"
-      - "/packages/world_flags/example/"
-      - "/packages/world_countries/"
-      - "/packages/world_countries/example/"
+      - packages/**/*
+      - tools
     schedule:
       interval: "weekly"
     reviewers:
@@ -33,7 +25,7 @@ updates:
       prefix: "chore"
       include: "scope"
 
-  # Maintain dependencies for Android (example)
+  # Maintain dependencies for Android (examples).
   - package-ecosystem: "gradle"
     directories:
       - "/packages/world_countries/example/android/"

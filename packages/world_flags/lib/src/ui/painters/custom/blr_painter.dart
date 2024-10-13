@@ -13,8 +13,7 @@ final class BlrPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagBlrProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final width = adjustedSize.width;
@@ -183,8 +182,7 @@ final class BlrPainter extends CustomElementsPainter {
 
     final bounds = path.getBounds();
     final redPaint = paintCreator(customColors.first);
-    final rect =
-        Rect.fromLTRB(bounds.left, 0, bounds.right - 2, size.height * 1.1);
+    final rect = Rect.fromLTRB(bounds.left, 0, bounds.right - 2, height * 1.1);
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)

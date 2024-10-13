@@ -127,11 +127,7 @@ const djfCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জিবুতি ফ্রাঙ্ক"),
   TranslatedName(LangBre(), name: "lur Djibouti"),
   TranslatedName(LangBos(), name: "Džibutski franak"),
-  TranslatedName(
-    LangBos(),
-    name: "Џибутански франак",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Џибутански франак", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "franc de Djibouti"),
   TranslatedName(LangChe(), name: "Джибутин франк"),
   TranslatedName(LangCes(), name: "džibutský frank"),

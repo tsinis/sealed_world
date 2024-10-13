@@ -117,11 +117,7 @@ const ghsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ঘানা সেডি"),
   TranslatedName(LangBre(), name: "cedi Ghana"),
   TranslatedName(LangBos(), name: "Ganski cedi"),
-  TranslatedName(
-    LangBos(),
-    name: "Гански цеди",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Гански цеди", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "cedi ghanès"),
   TranslatedName(LangChe(), name: "Ганан седи"),
   TranslatedName(LangCes(), name: "ghanský cedi"),

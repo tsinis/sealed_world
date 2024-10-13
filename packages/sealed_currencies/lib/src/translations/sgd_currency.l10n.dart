@@ -116,11 +116,7 @@ const sgdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সিঙ্গাপুর ডলার"),
   TranslatedName(LangBre(), name: "dollar Singapour"),
   TranslatedName(LangBos(), name: "Singapurski dolar"),
-  TranslatedName(
-    LangBos(),
-    name: "Сингапурски долар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Сингапурски долар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dòlar de Singapur"),
   TranslatedName(LangChe(), name: "Сингапуран доллар"),
   TranslatedName(LangCes(), name: "singapurský dolar"),

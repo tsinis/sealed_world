@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-type-casts
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../../model/country/submodels/gini.dart";
@@ -27,7 +29,7 @@ extension GiniExtension on Gini {
       );
 
   /// {@macro to_map_method}
-  Map<String, num> toMap() => {"year": year, "coefficient": coefficient};
+  Map<String, num> toMap() => {"coefficient": coefficient, "year": year};
 
   /// {@macro from_map_method}
   static Gini fromMap(JsonMap map) => Gini(

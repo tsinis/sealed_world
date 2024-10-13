@@ -104,11 +104,7 @@ const phpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ফিলিপাইন পেসো"),
   TranslatedName(LangBre(), name: "peso Filipinez"),
   TranslatedName(LangBos(), name: "Filipinski pezos"),
-  TranslatedName(
-    LangBos(),
-    name: "Филипински пезо",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Филипински пезо", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "peso filipí"),
   TranslatedName(LangChe(), name: "Филиппинийн песо"),
   TranslatedName(LangCes(), name: "filipínské peso"),

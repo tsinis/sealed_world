@@ -25,12 +25,12 @@ import "dart:async" show FutureOr;
 extension DurationExtension on Duration {
   /// Executes a [callback] function after the current duration has passed.
   ///
-  /// The [callback] is an optional function that returns a [FutureOr<T>],
+  /// The [callback] is an optional function that returns a `FutureOr<T>`,
   /// allowing for both synchronous and asynchronous operations within the
   /// [callback]. If no [callback] is provided, the method simply waits for the
   /// duration to complete before resolving the returned [Future].
   ///
-  /// The method returns a [Future<T>] which completes after the duration has
+  /// The method returns a `Future<T>` which completes after the duration has
   /// elapsed and the [callback] (if provided) has finished executing.
   ///
   /// Usage:
@@ -45,7 +45,7 @@ extension DurationExtension on Duration {
   Future<T> delayed<T>([FutureOr<T> Function()? callback]) =>
       Future<T>.delayed(this, callback);
 
-  /// A convenience getter that returns a [Future<void>] which completes after
+  /// A convenience getter that returns a `Future<void>` which completes after
   /// the current duration has elapsed.
   ///
   /// This getter can be used to introduce a delay in the execution flow,

@@ -6,10 +6,10 @@ final class AtfPainter extends MultiElementPainter {
   const AtfPainter(super.properties, super.aspectRatio);
 
   @override
-  double? get originalAspectRatio => flagAtfProperties.aspectRatio;
+  double get originalAspectRatio => flagAtfProperties.aspectRatio;
 
   @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

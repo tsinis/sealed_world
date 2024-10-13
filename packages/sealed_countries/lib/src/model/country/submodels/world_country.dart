@@ -254,9 +254,9 @@ class WorldCountry extends Country
           ? map.findByCodeOrThrow(code)
           : code.toUpperCaseIsoCode().maybeMapIsoCode(
                 orElse: (regular) => WorldCountry.fromCode(regular, countries),
-                short: (short) => WorldCountry.fromCodeShort(short, countries),
                 numeric: (numeric) =>
                     WorldCountry.fromCodeNumeric(numeric, countries),
+                short: (short) => WorldCountry.fromCodeShort(short, countries),
               );
 
   /// The native names of the country.
@@ -368,7 +368,26 @@ class WorldCountry extends Country
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''WorldCountry(name: $name, namesNative: $namesNative, tld: ${jsonEncode(tld)}, code: "$code", codeNumeric: "$codeNumeric", codeShort: "$codeShort", cioc: ${cioc == null ? cioc : '"$cioc"'}, independent: $independent, unMember: $unMember, currencies: ${currencies?.toInstancesString()}, idd: $idd, altSpellings: ${jsonEncode(altSpellings)}, continent: ${continent.runtimeType}(), subregion: ${subregion == null ? subregion : '${subregion?.runtimeType}()'}, languages: ${languages.toInstancesString()}, translations: ${code.toLowerCase()}CountryTranslations, latLng: $latLng, landlocked: $landlocked, bordersCodes: ${jsonEncode(bordersCodes)}, areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, population: $population, gini: $gini, fifa: ${fifa == null ? fifa : '"$fifa"'}, car: $car, timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, startOfWeek: $startOfWeek, capitalInfo: ${capitalInfo?.toString(short: false)}, postalCode: $postalCode, regionalBlocs: ${regionalBlocs?.toInstancesString()})''';
+      : "WorldCountry(name: $name, namesNative: $namesNative, "
+          'tld: ${jsonEncode(tld)}, code: "$code", '
+          'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
+          '${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '
+          "unMember: $unMember, currencies: ${currencies?.toInstancesString()},"
+          " idd: $idd, altSpellings: ${jsonEncode(altSpellings)}, "
+          "continent: ${continent.runtimeType}(), "
+          """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
+          "languages: ${languages.toInstancesString()}, "
+          "translations: ${code.toLowerCase()}CountryTranslations, "
+          "latLng: $latLng, landlocked: $landlocked, "
+          """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
+          '''areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, '''
+          "population: $population, ${gini == null ? '' : 'gini: $gini, '}"
+          '${fifa == null ? '' : 'fifa: "$fifa", '}car: $car, '
+          "timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, "
+          "startOfWeek: $startOfWeek, "
+          """${capitalInfo == null ? '' : 'capitalInfo: ${capitalInfo?.toString(short: false)}, '}"""
+          "${postalCode == null ? '' : 'postalCode: $postalCode, '}"
+          """${regionalBlocs == null ? '' : 'regionalBlocs: ${regionalBlocs?.toInstancesString()},'})""";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -507,10 +526,10 @@ class WorldCountry extends Country
           : code?.toUpperCaseIsoCode().maybeMapIsoCode(
                 orElse: (regular) =>
                     WorldCountry.maybeFromCode(regular, countries),
-                short: (short) =>
-                    WorldCountry.maybeFromCodeShort(short, countries),
                 numeric: (numeric) =>
                     WorldCountry.maybeFromCodeNumeric(numeric, countries),
+                short: (short) =>
+                    WorldCountry.maybeFromCodeShort(short, countries),
               );
 
   /// The general standard ISO code for countries, defined as ISO 3166-1.
@@ -575,7 +594,7 @@ class WorldCountry extends Country
       ...worldCountryCodeOtherMap,
       ...worldCountryCodeNumericMap,
     },
-    exactLength: null,
+    exactLength: null, // ignore: avoid-passing-default-values, is not default.
   );
 
   /// A list of all the countries currently supported

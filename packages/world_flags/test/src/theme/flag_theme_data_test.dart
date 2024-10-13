@@ -58,19 +58,21 @@ void main() => group("$FlagThemeData", () {
           },
         );
 
-        test("returns a new instance with mixed updated and original values",
-            () {
-          final updated = value.copyWith(aspectRatio: 2, height: 150);
+        test(
+          "returns a new instance with mixed updated and original values",
+          () {
+            final updated = value.copyWith(aspectRatio: 2, height: 150);
 
-          expect(updated.aspectRatio, 2.0);
-          expect(updated.decoration, value.decoration);
-          expect(updated.decorationPosition, value.decorationPosition);
-          expect(updated.padding, value.padding);
-          expect(updated.height, 150);
-          expect(updated.width, value.width);
-          expect(value, isNot(updated));
-          expect(value.hashCode, isNot(updated.hashCode));
-        });
+            expect(updated.aspectRatio, 2.0);
+            expect(updated.decoration, value.decoration);
+            expect(updated.decorationPosition, value.decorationPosition);
+            expect(updated.padding, value.padding);
+            expect(updated.height, 150);
+            expect(updated.width, value.width);
+            expect(value, isNot(updated));
+            expect(value.hashCode, isNot(updated.hashCode));
+          },
+        );
       });
 
       group("asserts", () {

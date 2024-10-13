@@ -35,6 +35,7 @@ final class VirPainter extends CustomElementsPainter {
       ..layout();
     vText.paint(canvas, Offset(width * 0.06, center.dy - vText.height / 2));
 
+    // ignore: avoid-similar-names, it will be replaced in next refactoring.
     final iLetter = _letterCreator("I", height);
     final iText = TextPainter(text: iLetter, textDirection: TextDirection.ltr)
       ..layout();

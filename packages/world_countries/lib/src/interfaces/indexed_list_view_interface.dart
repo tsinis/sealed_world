@@ -2,17 +2,21 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/widgets.dart";
 
 /// {@hideConstantImplementations}
+/// An interface for widgets that are displaying an indexed list of items.
+///
+/// This widget can be used to display a list of items, each of which can be
+/// selected by the user. The items are displayed in an indexed list, meaning
+/// that each item is associated with a unique index. The user can select an
+/// item by tapping on it, and the selected item will be highlighted.
+///
+/// This widget is designed to be highly customizable. The appearance and
+/// behavior of the list can be customized by passing in optional parameters
+/// to the constructor.
 abstract interface class IndexedListViewInterface {
-  /// An interface for widgets that are displaying an indexed list of items.
+  /// Creates an [IndexedListViewInterface] with the given parameters.
   ///
-  /// This widget can be used to display a list of items, each of which can be
-  /// selected by the user. The items are displayed in an indexed list, meaning
-  /// that each item is associated with a unique index. The user can select an
-  /// item by tapping on it, and the selected item will be highlighted.
-  ///
-  /// This widget is designed to be highly customizable. The appearance and
-  /// behavior of the list can be customized by passing in optional parameters
-  /// to the constructor.
+  /// The optional parameters allow customization of the list's appearance
+  /// and behavior.
   const IndexedListViewInterface( // coverage:ignore-line
       {
     this.addRepaintBoundaries, // Default to: true.
