@@ -42,6 +42,8 @@ analyzer:
     - dart_code_metrics
 
 dart_code_metrics:
+  extends:
+    - package:dart_code_metrics_presets/all.yaml
   anti-patterns:
     - long-parameter-list:
         ignore-optional: true
@@ -58,10 +60,56 @@ dart_code_metrics:
   metrics-exclude:
     - test/**
   rules:
+    # Disabled:
+    - arguments-ordering: false # This will be a breaking change.
+    - avoid-collection-equality-checks: false # Doesn't work for models exclude.
+    - avoid-collection-mutating-methods: false # Mostly false positives.
+    - avoid-duplicate-collection-elements: false # They are being used on purpose.
+    - avoid-ignoring-return-values: false # Mostly, collection methods are ignored.
+    - avoid-inferrable-type-arguments: false # Against prefer-explicit-type-arguments.
+    - avoid-long-files: false # A lot of data and collections.
+    - avoid-long-functions: false # Cannot get exclude to work with tests...
+    - avoid-nullable-interpolation: false # Doesn't work for toString() methods.
+    - avoid-unsafe-collection-methods: false # They are being used on purpose.
+    - enum-constants-ordering: false # This might be a breaking change.
+    - match-getter-setter-field-names: false # Most of those are just aliases.
+    - no-equal-arguments: false # Not our use-case here.
+    - no-magic-number: false # Packages contain a lot of numbers.
+    - no-magic-string: false # Packages contain a lot of strings.
+    - parameters-ordering: false # This will be a breaking change.
+    - prefer-boolean-prefixes: false # This will be a breaking change.
+    - prefer-correct-throws: false # No meta in Dart packages.
+    - prefer-explicit-parameter-names: false # This will be dev. defined.
+    - prefer-prefixed-global-constants: false # This will be a breaking change.
+    - prefer-single-declaration-per-file: false # Data is stored in one file.
+    - prefer-test-matchers: false # Introduces coupling in tests.
+    # Enabled:
+    - avoid-high-cyclomatic-complexity:
+        threshold: 40
+    - prefer-named-parameters:
+        max-number: 3
     - avoid-nested-conditional-expressions:
-      acceptable-level: 2
+        acceptable-level: 2
     - prefer-correct-identifier-length:
-        exceptions: ["i", "x", "y", "sb"] # i for index, x/y for math operations, sb for StringBuffer.
+        # i for index, x/y for math operations, sb for StringBuffer, io for IO,
+        # bc for BuildContext, a and b are convenient for sorting, e for the element,
+        # k for key, v for value.
+        exceptions: ["a", "b", "e", "i", "k", "v", "x", "y", "io", "bc", "sb"]
+    - avoid-long-parameter-list:
+        ignore-optional: true
+    - prefer-widget-private-members:
+        ignore-static: true
+    - avoid-type-casts:
+        exclude:
+          - "*_json.dart"
+    - prefer-typedefs-for-callbacks:
+        ignore-fields: true
+        ignore-parameters: true
+        ignore-type-arguments: false
+        ignore-return-types: false
+    - avoid-passing-self-as-argument:
+        exclude:
+          - test/**
     - avoid-top-level-members-in-tests:
         exclude:
           - test/data/*.dart
@@ -72,9 +120,16 @@ dart_code_metrics:
         include-assertions:
           - verify
           - verifyZeroInteractions
+          - assertTest
+          - testPickerBody
+          - testPickerInDialog
+          - testPickerInSearch
+          - testPickerInModal
     - avoid-passing-async-when-sync-expected:
         exclude:
           - test/**
+    - avoid-returning-widgets:
+        allow-nullable: true
     - avoid-redundant-async:
         exclude:
           - test/**
@@ -98,64 +153,32 @@ dart_code_metrics:
         exclude:
           - "**/data/**.data.dart"
           - "**/translations/**.l10n.dart"
-    - arguments-ordering:
-        child-last: true
-    - avoid-banned-imports: true
-    - avoid-cascade-after-if-null: true
-    - avoid-collection-methods-with-unrelated-types: true
-    - avoid-double-slash-imports: true
-    - avoid-duplicate-exports: true
-    - avoid-dynamic: true
-    - avoid-global-state: true
-    - avoid-missing-enum-constant-in-map: true
-    - avoid-non-null-assertion: true
-    - avoid-substring: true
-    - avoid-throw-in-catch-block: true
-    - avoid-unnecessary-conditionals: true
-    - avoid-unnecessary-type-assertions: true
-    - avoid-unnecessary-type-casts: true
-    - avoid-unrelated-type-assertions: true
-    - avoid-unused-parameters: true
-    - ban-name: true
-    - binary-expression-operand-order: true
-    - double-literal-format: true
-    - list-all-equatable-fields: true
-    - newline-before-return: true
-    - no-boolean-literal-compare: true
-    - no-empty-block: true
-    - no-equal-then-else: true
-    - no-object-declaration: true
-    - prefer-async-await: true
-    - prefer-commenting-analyzer-ignores: true
-    - prefer-conditional-expressions: true
-    - prefer-correct-test-file-name: true
-    - prefer-correct-type-name: true
-    - prefer-enums-by-name: true
-    - prefer-first: true
-    - prefer-immediate-return: true
-    - prefer-iterable-of: true
-    - prefer-last: true
-    - prefer-moving-to-variable: true
-    - prefer-trailing-comma: true
-    - tag-name: true
 
 linter:
   rules:
     # Disabled:
+    always_put_control_body_on_new_line: false # Makes code harder to read.
+    omit_local_variable_types: false # Conflicts with: prefer-type-over-var.
     always_specify_types: false # Conflicts with: omit_local_variable_types.
     always_use_package_imports: false # Conflicts with: prefer_relative_imports.
     avoid_classes_with_only_static_members: false # Conflicts with: prefer-static-class
+    avoid_equals_and_hash_code_on_mutable_classes: false # We have no access to meta here.
+    flutter_style_todos: false # Not a Flutter team.
+    # omit_obvious_local_variable_types: true # Conflicts with: specify_nonobvious_local_variable_types. #TODO! After Dart 3.6 is released.
     prefer_final_parameters: false # Conflicts with: avoid_final_parameters.
     prefer_single_quotes: false # Conflicts with: prefer_double_quotes.
     unnecessary_final: false # Conflicts with: prefer_final_locals.
+    unnecessary_library_name: false # To prevent breaking changes for those who use this libs.
 
     # Enabled:
     always_declare_return_types: true
     always_put_required_named_parameters_first: true
     always_require_non_null_named_parameters: true
     annotate_overrides: true
+    annotate_redeclares: true
     avoid_annotating_with_dynamic: true
     avoid_bool_literals_in_conditional_expressions: true
+    avoid_catches_without_on_clauses: true
     avoid_catching_errors: true
     avoid_double_and_int_checks: true
     avoid_dynamic_calls: true
@@ -207,10 +230,10 @@ linter:
     depend_on_referenced_packages: true
     deprecated_consistency: true
     deprecated_member_use_from_same_package: true
-    diagnostic_describe_all_properties: true
     directives_ordering: true
     discarded_futures: true
     do_not_use_environment: true
+    document_ignores: true
     empty_catches: true
     empty_constructor_bodies: true
     empty_statements: true
@@ -223,6 +246,7 @@ linter:
     implicit_call_tearoffs: true
     implicit_reopen: true
     invalid_case_patterns: true
+    invalid_runtime_check_with_js_interop_types: true
     join_return_with_assignment: true
     leading_newlines_in_multiline_strings: true
     library_annotations: true
@@ -232,6 +256,7 @@ linter:
     lines_longer_than_80_chars: true
     literal_only_boolean_expressions: true
     matching_super_parameters: true
+    missing_code_block_language_in_doc_comment: true
     missing_whitespace_between_adjacent_strings: true
     no_adjacent_strings_in_list: true
     no_default_cases: true
@@ -246,7 +271,6 @@ linter:
     noop_primitive_operations: true
     null_check_on_nullable_type_parameter: true
     null_closures: true
-    omit_local_variable_types: true
     one_member_abstracts: true
     only_throw_errors: true
     overridden_fields: true
@@ -301,6 +325,7 @@ linter:
     sort_constructors_first: true
     sort_pub_dependencies: true
     sort_unnamed_constructors_first: true
+    # specify_nonobvious_local_variable_types: true #TODO! After Dart 3.6 is released.
     test_types_in_equals: true
     throw_in_finally: true
     tighten_type_of_initializing_formals: true
@@ -308,6 +333,7 @@ linter:
     type_init_formals: true
     type_literal_in_constant_pattern: true
     unawaited_futures: true
+    unintended_html_in_doc_comment: true
     unnecessary_await_in_return: true
     unnecessary_brace_in_string_interps: true
     unnecessary_breaks: true
@@ -348,5 +374,6 @@ linter:
     use_super_parameters: true
     use_test_throws_matchers: true
     use_to_and_as_if_applicable: true
+    # use_truncating_division: true #TODO! After Dart 3.6 is released.
     valid_regexps: true
     void_checks: true

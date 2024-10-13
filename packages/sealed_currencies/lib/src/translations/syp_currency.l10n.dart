@@ -116,11 +116,7 @@ const sypCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সিরিয়ান পাউন্ড"),
   TranslatedName(LangBre(), name: "lur Siria"),
   TranslatedName(LangBos(), name: "Sirijska funta"),
-  TranslatedName(
-    LangBos(),
-    name: "Сиријска фунта",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Сиријска фунта", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "lliura síria"),
   TranslatedName(LangChe(), name: "Шеман фунт"),
   TranslatedName(LangCes(), name: "syrská libra"),

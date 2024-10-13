@@ -1,6 +1,9 @@
-// ignore_for_file: long-parameter-list
+// ignore_for_file: avoid-unnecessary-nullable-return-type
 
-import "dart:async" show FutureOr;
+// ignore: lines_longer_than_80_chars, Might be a breaking change.
+// ignore_for_file: long-parameter-list, avoid-nullable-parameters-with-default-values, prefer-correct-handler-name
+
+import "dart:async" show FutureOr, unawaited;
 
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
@@ -8,6 +11,7 @@ import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
+import "../../extensions/duration_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "../../interfaces/basic_picker_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
@@ -154,13 +158,14 @@ abstract class BasicPicker<T extends Translated>
   Text? itemNameTranslated(T item, BuildContext context) {
     final title = _maybeNameTranslation(item, context);
 
-    return title != null ? Text(title, overflow: TextOverflow.ellipsis) : null;
+    return title == null ? null : Text(title, overflow: TextOverflow.ellipsis);
   }
 
   /// Called to get the suggestion list for the search view (typically in
   /// [SearchAnchor] widgets).
   FutureOr<Iterable<Widget>> searchSuggestions(
     BuildContext context,
+    // SDK bug fixed in v3.27.0: https://github.com/flutter/flutter/pull/155219
     SearchController controller,
   ) {
     final x = items.where(
@@ -173,7 +178,8 @@ abstract class BasicPicker<T extends Translated>
       x.length,
       (i) =>
           itemBuilder?.call(filteredProperties(x, context, i), isDense: true) ??
-          defaultBuilder.call(
+          // ignore: avoid-returning-widgets, Might be breaking change.
+          defaultBuilder(
             context,
             filteredProperties(x, context, i),
             isDense: true,
@@ -261,34 +267,64 @@ abstract class BasicPicker<T extends Translated>
     TextInputType? keyboardType,
     TextInputAction textInputAction = UiConstants.textInputAction,
     ThemeData? appBarThemeData,
-  }) =>
-      showSearch<T?>(
-        context: context,
-        delegate: ImplicitSearchDelegate<T>(
-          items,
-          resultsBuilder: (newContext, items) => copyWith(
-            items: items,
-            showSearchBar: false,
-            onSelect: (selected) => maybeSelectAndPop(selected, newContext),
-          ),
-          searchIn: searchIn ?? defaultSearch,
-          appBarBottom: appBarBottom,
-          appBarThemeData: appBarThemeData,
-          backIconButton: backIconButton,
-          caseSensitiveSearch: caseSensitiveSearch,
-          clearIconButton: clearIconButton,
-          keyboardType: keyboardType,
-          resultValidator: (item) => !(disabled?.contains(item) ?? false),
-          searchFieldDecorationTheme: searchFieldDecorationTheme,
-          searchFieldLabel: searchFieldLabel,
-          searchFieldStyle: searchFieldStyle,
-          showClearButton: showClearButton ?? true,
-          startWithSearch: startWithSearch,
-          textInputAction: textInputAction,
-        ),
-        query: query,
-        useRootNavigator: useRootNavigator,
-      );
+  }) async {
+    T? result;
+    // ignore: avoid-late-keyword, we need it in the local function below.
+    late final ImplicitSearchDelegate<T> delegate;
+    // ignore: avoid-local-functions, lazy delegate.
+    void closeOnSelect(T selected) {
+      delegate.close(context, selected);
+      onSelect?.call(result = selected);
+    }
+
+    delegate = ImplicitSearchDelegate<T>(
+      items,
+      resultsBuilder: (newContext, items) => copyWith(
+        items: items,
+        onSelect: closeOnSelect,
+        showSearchBar: false,
+      ),
+      searchIn: searchIn ?? defaultSearch,
+      appBarBottom: appBarBottom,
+      appBarThemeData: appBarThemeData,
+      backIconButton: backIconButton,
+      caseSensitiveSearch: caseSensitiveSearch,
+      clearIconButton: clearIconButton,
+      keyboardType: keyboardType,
+      // ignore: prefer-extracting-callbacks, same reason as prev. ignore.
+      resultValidator: (i) {
+        final isValid = !(disabled?.contains(i) ?? false);
+        if (isValid) {
+          WidgetsBinding.instance.addPostFrameCallback((_) => closeOnSelect(i));
+        }
+
+        return isValid;
+      },
+      searchFieldDecorationTheme: searchFieldDecorationTheme,
+      searchFieldLabel: searchFieldLabel,
+      searchFieldStyle: searchFieldStyle,
+      showClearButton: showClearButton ?? true,
+      startWithSearch: startWithSearch,
+      textInputAction: textInputAction,
+    );
+
+    // ignore: avoid-local-functions, to not create overhead.
+    void animationListener(AnimationStatus status) {
+      if (status != AnimationStatus.dismissed) return;
+      delegate.transitionAnimation.removeStatusListener(animationListener);
+      unawaited(Duration.zero.delayed(delegate.dispose));
+    }
+
+    delegate.transitionAnimation.addStatusListener(animationListener);
+    final popResult = await showSearch<T?>(
+      context: context,
+      delegate: delegate,
+      query: query,
+      useRootNavigator: useRootNavigator,
+    );
+
+    return popResult ?? result;
+  }
 
   @override
   Future<T?>? showInDialog(
@@ -415,10 +451,8 @@ abstract class BasicPicker<T extends Translated>
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(T item, BuildContext context)? searchIn,
-    Widget? Function(
-      ItemProperties<T> itemProperties, {
-      bool? isDense,
-    })? itemBuilder,
+    Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
+        itemBuilder,
     TypedLocale? translation,
   });
 }

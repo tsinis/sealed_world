@@ -12,7 +12,7 @@ import "../basic/elements_painter.dart";
 /// properties.
 final class StarPainter extends ElementsPainter {
   /// Creates a [StarPainter] with the given properties and aspect ratio.
-  StarPainter(super.properties, super.aspectRatio);
+  const StarPainter(super.properties, super.aspectRatio);
   static const _startRadians = pi / 2;
   static const _radiansMultiplier = pi / 180;
 
@@ -24,7 +24,7 @@ final class StarPainter extends ElementsPainter {
     final radius = calculateSize(size);
     final path = Path();
 
-    for (var i = 0; i <= star.points * 2; i++) {
+    for (int i = 0; i <= star.points * 2; i += 1) {
       final radiusFactor = i.isEven ? star.radiusFactor : 1;
       final x = center.dx +
           radius * radiusFactor * cos(i * radiansPerPoint + _startRadians);

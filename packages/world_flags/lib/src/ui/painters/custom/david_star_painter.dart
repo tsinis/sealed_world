@@ -41,7 +41,7 @@ final class DavidStarPainter extends CustomElementsPainter {
     final path = Path();
     final startAngle = isUpward ? pi : 0;
 
-    for (var i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i += 1) {
       final x = center.dx + radius * cos(startAngle + angle * i);
       final y = center.dy + radius * sin(startAngle + angle * i);
       if (i == 0) {

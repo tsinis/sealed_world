@@ -47,11 +47,11 @@ extension WorldCountryDateTime on WorldCountry {
     final hour = timezone.substring(utcString.length + 1, utcString.length + 3);
     final min = timezone.substring(utcString.length + 4, timezoneValueLength);
 
-    final hours = int.tryParse(hour);
+    final intHour = int.tryParse(hour);
     final minutes = int.tryParse(min);
-    if (minutes == null || hours == null) return null;
+    if (minutes == null || intHour == null) return null;
 
-    return Duration(hours: hours, minutes: minutes);
+    return Duration(hours: intHour, minutes: minutes);
   }
 
   /// Returns an unmodifiable list of `UtcDurationDifference` objects

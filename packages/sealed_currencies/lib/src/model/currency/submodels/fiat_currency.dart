@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-referencing-subclasses, those are static constants.
+
 part of "../currency.dart";
 
 /// A class representing fiat currency.
@@ -248,7 +250,19 @@ class FiatCurrency extends Currency
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : '''FiatCurrency(code: "$code", name: "$name", decimalMark: "$decimalMark", thousandsSeparator: "$thousandsSeparator", symbol: ${symbol == null ? symbol : 'r"$symbol"'}, alternateSymbols: ${alternateSymbols == null ? alternateSymbols : jsonEncode(alternateSymbols)}, disambiguateSymbol: ${disambiguateSymbol == null ? disambiguateSymbol : 'r"$disambiguateSymbol"'}, htmlEntity: ${htmlEntity == null ? htmlEntity : 'r"$htmlEntity"'}, codeNumeric: "$codeNumeric", namesNative: ${jsonEncode(namesNative)}, priority: $priority, smallestDenomination: $smallestDenomination, subunit: ${subunit == null ? subunit : '"$subunit"'}, subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, translations: ${code.toLowerCase()}CurrencyTranslations)''';
+      : 'FiatCurrency(code: "$code", name: "$name", '
+          'decimalMark: "$decimalMark", '
+          'thousandsSeparator: "$thousandsSeparator", '
+          '${symbol == null ? '' : 'symbol: r"$symbol", '}'
+          '''${alternateSymbols == null ? '' : 'alternateSymbols: ${jsonEncode(alternateSymbols)}, '}'''
+          '''${disambiguateSymbol == null ? '' : 'disambiguateSymbol: r"$disambiguateSymbol", '}'''
+          '${htmlEntity == null ? '' : 'htmlEntity: r"$htmlEntity", '}'
+          'codeNumeric: "$codeNumeric", '
+          "namesNative: ${jsonEncode(namesNative)}, "
+          "priority: $priority, smallestDenomination: $smallestDenomination, "
+          '${subunit == null ? '' : 'subunit: "$subunit", '}'
+          "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, "
+          "translations: ${code.toLowerCase()}CurrencyTranslations,)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

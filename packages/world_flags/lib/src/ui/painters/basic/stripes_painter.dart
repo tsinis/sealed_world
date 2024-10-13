@@ -42,14 +42,18 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     _applyFlagClipping(canvas, size);
+    // ignore: prefer-correct-identifier-length, CP for [ColorsProperties].
     final total = properties.stripeColors.fold(0, (sum, cp) => sum + cp.ratio);
     switch (properties.stripeOrientation) {
       case StripeOrientation.horizontal:
         _drawHorizontalStripes(canvas, size, total);
+
       case StripeOrientation.vertical:
         _drawVerticalStripes(canvas, size, total);
+
       case StripeOrientation.diagonalBottomLeftToTopRight:
         _drawDiagonalStripes(canvas, size, total, isTopLeftToBottom: true);
+
       case StripeOrientation.diagonalTopLeftToBottomRight:
         _drawDiagonalStripes(canvas, size, total, isTopLeftToBottom: false);
     }
@@ -73,7 +77,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   }
 
   void _drawVerticalStripes(Canvas canvas, Size size, int totalRatio) {
-    var position = 0.0;
+    double position = 0;
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = size.width * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
@@ -83,7 +87,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   }
 
   void _drawHorizontalStripes(Canvas canvas, Size size, int totalRatio) {
-    var position = 0.0;
+    double position = 0;
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = size.height * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
@@ -108,7 +112,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       ..rotate(isTopLeftToBottom ? angle : -angle)
       ..translate(-diagonalLength, -height * 2);
 
-    var position = 0.0;
+    double position = 0;
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = diagonalLength * 2 * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, height * 4);

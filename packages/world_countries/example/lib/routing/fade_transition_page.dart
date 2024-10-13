@@ -49,6 +49,7 @@ class PageBasedFadeTransitionRoute<T> extends PageRoute<T> {
 
     return FadeTransition(
       opacity: animation.drive(curveTween),
+      // ignore: avoid-type-casts, to simplify example code.
       child: (settings as FadeTransitionPage).child,
     );
   }

@@ -13,11 +13,10 @@ final class AgoPainter extends CustomElementsPainter {
   const AgoPainter(super.properties, super.aspectRatio);
 
   @override
-  double? get originalAspectRatio => flagAgoProperties.aspectRatio;
+  double get originalAspectRatio => flagAgoProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.4);
     final height = adjustedSize.height * 2;
     final width = adjustedSize.width;
@@ -273,14 +272,15 @@ final class AgoPainter extends CustomElementsPainter {
       ..lineTo(width * 0.73, height * 1.53);
 
     final bounds = path.getBounds();
+    final paint = paintCreator();
 
     canvas
       ..translate(
         center.dx - bounds.width * 1.2,
         center.dy - bounds.height * 0.78,
       )
-      ..drawPath(path, paintCreator())
-      ..drawPath(path2, paintCreator());
+      ..drawPath(path, paint)
+      ..drawPath(path2, paint);
 
     return star;
   }

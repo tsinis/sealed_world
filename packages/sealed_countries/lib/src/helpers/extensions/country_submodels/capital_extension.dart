@@ -28,8 +28,8 @@ extension CapitalExtension on Capital {
 
   /// {@macro from_map_method}
   static Capital fromMap(JsonMap map) => Capital(
-        map["deFacto"] as String,
-        deJure: map["deJure"] as String?,
-        third: map["third"] as String?,
+        map["deFacto"].toString(),
+        deJure: map["deJure"]?.toString(),
+        third: map["third"]?.toString(),
       );
 }

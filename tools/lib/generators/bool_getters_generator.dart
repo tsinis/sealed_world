@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-duplicate-cascades
+
 import "package:change_case/change_case.dart";
 
 import "../models/package.dart";

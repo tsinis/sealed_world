@@ -115,11 +115,7 @@ const rsdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সারবিয়ান দিনার"),
   TranslatedName(LangBre(), name: "dinar Serbia"),
   TranslatedName(LangBos(), name: "Srpski dinar"),
-  TranslatedName(
-    LangBos(),
-    name: "Српски динар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Српски динар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dinar serbi"),
   TranslatedName(LangChe(), name: "Сербин динар"),
   TranslatedName(LangCes(), name: "srbský dinár"),

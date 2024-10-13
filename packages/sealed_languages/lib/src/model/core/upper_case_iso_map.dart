@@ -91,6 +91,6 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends UpperCaseMap<V> {
           exactLength: exactLength,
         );
 
-    return code != null ? mapper(code) : null;
+    return code == null ? null : mapper(code);
   }
 }

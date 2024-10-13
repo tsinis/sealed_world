@@ -11,7 +11,7 @@ import "../tabs/country_tab.dart";
 import "../tabs/currency_tab.dart";
 import "../tabs/language_tab.dart";
 import "../tabs/tabs_data_controller.dart";
-import "../theme/theme_switcher.dart";
+import "../theme/theme_provider.dart";
 import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/floating_button.dart";
 import "../widgets/menu_button.dart";
@@ -37,33 +37,34 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
+  // ignore: avoid-late-keyword, we need lazy data value first.
   late final _controller = TabsDataController(widget._data.value, vsync: this);
 
-  @override
-  void didUpdateWidget(MainPage oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) => ThemeProvider.of(context)
-          ?.changeColors
-          ?.call(widget._data.country.flagStripeColors),
-    );
-  }
-
-  FutureOr<void> _onFabPressed({bool isLong = false}) {
+  FutureOr<void> _handleFab({bool isLong = false}) {
     final pick = widget._mapPickers(_controller.currentData);
     isLong ? pick.showInDialog(context) : pick.showInModalBottomSheet(context);
   }
 
-  FutureOr<void> _onAppBarSearchPressed() =>
+  FutureOr<void> _handleAppBarSearch() =>
       widget._mapPickers(_controller.currentData).showInSearch(context);
 
-  FutureOr<Iterable<Widget>> _anchorPicker(
+  FutureOr<Iterable<Widget>> _handleAnchor(
     BuildContext context,
     SearchController controller,
   ) =>
       widget
           ._mapPickers(_controller.currentData)
           .searchSuggestions(context, controller);
+
+  @override
+  void didUpdateWidget(MainPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => ThemeProvider.of(context)
+          ?.onColorsChange
+          ?.call(widget._data.country.flagStripeColors),
+    );
+  }
 
   @override
   void dispose() {
@@ -83,14 +84,14 @@ class _MainPageState extends State<MainPage>
                 viewConstraints:
                     const BoxConstraints(minWidth: 220, maxWidth: 320),
                 builder: (_, controller) => GestureDetector(
-                  onLongPress: _onAppBarSearchPressed,
+                  onLongPress: _handleAppBarSearch,
                   child: IconButton(
                     onPressed: controller.openView,
                     icon:
                         const Icon(Icons.search, semanticLabel: "search_icon"),
                   ),
                 ),
-                suggestionsBuilder: _anchorPicker,
+                suggestionsBuilder: _handleAnchor,
               ),
               const MenuButton(),
             ],
@@ -102,16 +103,17 @@ class _MainPageState extends State<MainPage>
             ),
             centerTitle: false,
           ),
-          body: !kProfileMode
-              ? DecoratedBox(
+          body: kProfileMode
+              ? null
+              : DecoratedBox(
                   decoration: FunctionalPlatform.maybeWhenConst(
-                    web: const BoxDecoration(),
                     orElse: BoxDecoration(
                       image: DecorationImage(
                         image: Assets.images.background.provider(),
                         fit: BoxFit.cover,
                       ),
                     ),
+                    web: const BoxDecoration(),
                   ),
                   child: Align(
                     alignment: Alignment.topCenter,
@@ -127,10 +129,9 @@ class _MainPageState extends State<MainPage>
                       ),
                     ),
                   ),
-                )
-              : null,
+                ),
           floatingActionButton:
-              FloatingButton(_controller, onPressed: _onFabPressed),
+              FloatingButton(_controller, onPressed: _handleFab),
           backgroundColor: context.theme.colorScheme.surfaceContainerHighest,
         ),
       );

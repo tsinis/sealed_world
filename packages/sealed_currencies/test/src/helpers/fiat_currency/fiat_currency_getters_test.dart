@@ -21,10 +21,10 @@ void main() => group("FiatCurrencyGetters", () {
         });
 
         test("as code", () {
-          final valueWithoutSymbol = FiatCurrency.list.firstWhere(
+          final withSymbol = FiatCurrency.list.firstWhere(
             (currency) => currency.symbol == null,
           );
-          expect(valueWithoutSymbol.unit, valueWithoutSymbol.code);
+          expect(withSymbol.unit, withSymbol.code);
         });
       });
     });

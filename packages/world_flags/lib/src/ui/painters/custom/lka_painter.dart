@@ -11,11 +11,10 @@ final class LkaPainter extends CustomElementsPainter {
   const LkaPainter(super.properties, super.aspectRatio);
 
   @override
-  double? get originalAspectRatio => flagLkaProperties.aspectRatio;
+  double get originalAspectRatio => flagLkaProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     MultiElementPainter(List.unmodifiable(properties.skip(1)), aspectRatio)
         .paint(canvas, size);
 

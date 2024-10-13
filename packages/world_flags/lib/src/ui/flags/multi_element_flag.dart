@@ -26,13 +26,13 @@ class MultiElementFlag extends BasicFlag {
   const MultiElementFlag(
     super.properties, {
     super.aspectRatio,
+    super.backgroundPainter,
     super.decoration,
     super.decorationPosition,
-    super.padding,
-    super.backgroundPainter,
     super.foregroundPainter,
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
+    super.padding,
   }) : super(elementsBuilder: MultiElementPainter.new); // coverage:ignore-line
 }

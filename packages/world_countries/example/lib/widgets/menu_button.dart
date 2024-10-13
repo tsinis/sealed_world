@@ -9,11 +9,11 @@ class MenuButton extends StatelessWidget {
   Widget build(BuildContext context) => PopupMenuButton<String>(
         itemBuilder: (_) => [
           PopupMenuItem(
+            onTap: () => const AboutAppDialog().show(context),
             child: const Align(
               alignment: Alignment.centerRight,
               child: Text("About"),
             ),
-            onTap: () => const AboutAppDialog().show(context),
           ),
         ],
       );

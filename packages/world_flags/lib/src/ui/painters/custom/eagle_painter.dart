@@ -14,8 +14,7 @@ final class EaglePainter extends CustomElementsPainter {
   double get originalAspectRatio => flagAsmProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     MultiElementPainter(List.unmodifiable(properties.skip(1)), aspectRatio)
         .paint(canvas, size);
 

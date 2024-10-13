@@ -38,7 +38,7 @@ void main() {
   print("Native name: ${maybeCzech?.namesNative.first}");
 
   // Contains functional style methods (when, whenOrNull, map, etc).
-  print(maybeCzech?.maybeWhen(langCes: () => "Ahoj!", orElse: () => "Hey!"));
+  print(maybeCzech?.maybeWhen(orElse: () => "Hey!", langCes: () => "Ahoj!"));
 
   print(NaturalLanguage.list.length); // Prints: "184".
 
@@ -47,14 +47,15 @@ void main() {
   // Prints Slovak translations of all available languages.
   for (final language in NaturalLanguage.list) {
     print(
-      """Slovak name of ${language.name}: ${language.maybeTranslation(const BasicLocale(LangSlk()))?.name}""",
+      "Slovak name of ${language.name}: "
+      "${language.maybeTranslation(const BasicLocale(LangSlk()))?.name}",
     );
   }
 
   // Distinguishes country code in translations.
   print(
     maybeCzech?.maybeTranslation(const BasicLocale(LangPor()))?.name,
-  ); // Prints tcheco.
+  ); // Prints "tcheco".
   print(
     maybeCzech
         ?.maybeTranslation(const BasicLocale(LangPor(), countryCode: "PT"))

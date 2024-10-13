@@ -115,11 +115,7 @@ const xofCurrencyTranslations = [
   TranslatedName(LangBen(), name: "পশ্চিম আফ্রিকান [CFA] ফ্র্যাঙ্ক"),
   TranslatedName(LangBre(), name: "lur CFA Afrika ar Cʼhornôg"),
   TranslatedName(LangBos(), name: "Zapadnoafrički franak (CFA)"),
-  TranslatedName(
-    LangBos(),
-    name: "CFA франак BCEAO",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "CFA франак BCEAO", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "franc CFA BCEAO"),
   TranslatedName(LangChe(), name: "Малхбузен Африкан КФА франк"),
   TranslatedName(LangCes(), name: "CFA/BCEAO frank"),
@@ -210,11 +206,7 @@ const xofCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "західноафриканський франк"),
   TranslatedName(LangUrd(), name: "مغربی افریقی [CFA] فرانک"),
   TranslatedName(LangUzb(), name: "G‘arbiy Afrika CFA franki"),
-  TranslatedName(
-    LangUzb(),
-    name: "XOF",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "XOF", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Franc CFA Tây Phi"),
   TranslatedName(LangYor(), name: "Faransi ti Orílẹ́ède BIKEAO"),
   TranslatedName(

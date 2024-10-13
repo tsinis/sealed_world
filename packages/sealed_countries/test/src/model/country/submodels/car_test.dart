@@ -1,3 +1,4 @@
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/car_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/car.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -21,9 +22,7 @@ void main() => group("$Car", () {
           );
           expect(
             array.first,
-            equals(
-              Car(sign: value.sign, isRightSide: value.isRightSide),
-            ),
+            equals(Car(sign: value.sign, isRightSide: value.isRightSide)),
           );
         });
 
@@ -37,21 +36,13 @@ void main() => group("$Car", () {
       });
 
       group("asserts", () {
-        test(
+        assertTest(
           "not",
-          () => expect(
-            () => Car(sign: value.sign, isRightSide: value.isRightSide),
-            isNot(throwsA(isA<AssertionError>())),
-          ),
+          () => Car(sign: value.sign, isRightSide: value.isRightSide),
+          shouldThrow: false,
         );
 
-        test(
-          "empty sign",
-          () => expect(
-            () => Car(sign: TestData.emptyString),
-            throwsA(isA<AssertionError>()),
-          ),
-        );
+        assertTest("empty sign", () => Car(sign: TestData.emptyString));
       });
 
       test("toJson", () {

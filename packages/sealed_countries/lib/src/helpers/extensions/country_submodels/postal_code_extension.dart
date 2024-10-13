@@ -24,10 +24,10 @@ extension PostalCodeExtension on PostalCode {
   /// print(isValid); // Prints: true
   /// ```
   RegExp validator({
-    bool multiLine = false,
     bool caseSensitive = true,
-    bool unicode = false,
     bool dotAll = false,
+    bool multiLine = false,
+    bool unicode = false,
   }) =>
       RegExp(
         regExpPattern,
@@ -49,7 +49,7 @@ extension PostalCodeExtension on PostalCode {
 
   /// {@macro from_map_method}
   static PostalCode fromMap(JsonMap map) => PostalCode(
-        format: map["format"] as String,
-        regExpPattern: map["regExpPattern"] as String,
+        format: map["format"].toString(),
+        regExpPattern: map["regExpPattern"].toString(),
       );
 }

@@ -214,11 +214,7 @@ const audCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "австралійський долар"),
   TranslatedName(LangUrd(), name: "آسٹریلین ڈالر"),
   TranslatedName(LangUzb(), name: "Avstraliya dollari"),
-  TranslatedName(
-    LangUzb(),
-    name: "AUD",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "AUD", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Đô la Australia"),
   TranslatedName(LangYor(), name: "Dọla ti Orílẹ́ède Ástràlìá"),
   TranslatedName(

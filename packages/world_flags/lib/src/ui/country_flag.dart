@@ -1,6 +1,7 @@
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
+// ignore: avoid-importing-entrypoint-exports, hiding all but flag maps.
 import "../../world_flags.dart"
     show smallSimplifiedAlternativeFlagsMap, smallSimplifiedFlagsMap;
 import "../helpers/extensions/basic_flag_extension_copy_with.dart";
@@ -40,6 +41,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   const CountryFlag.simplified(
     this.country, {
     /// Map of non-official or alternative flags of the countries.
+    // ignore: avoid-nullable-parameters-with-default-values, breaking change.
     Map<WorldCountry, BasicFlag>? alternativeMap =
         smallSimplifiedAlternativeFlagsMap,
     this.height,
@@ -129,9 +131,9 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
         width: width ?? context.flagTheme?.width,
         height: height ?? context.flagTheme?.height,
         child: _basicFlag?.copyWith(
-              decorationPosition: decorationPosition,
               aspectRatio: aspectRatio,
               decoration: decoration,
+              decorationPosition: decorationPosition,
               foregroundWidget: child,
             ) ??
             orElse,

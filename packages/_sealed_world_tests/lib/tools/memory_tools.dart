@@ -8,10 +8,11 @@ import "package:vm_service/vm_service_io.dart" show vmServiceConnectUri;
 class MemoryTools extends MemoryUsage {
   MemoryTools({super.externalUsage, super.heapCapacity, super.heapUsage});
 
-  Future<MemoryTools?> getMemoryUsage() async {
+  Future<MemoryTools?> get memoryUsage async {
     final info = await Service.getInfo();
     if (info.serverWebSocketUri == null) return null;
     final service =
+        // ignore: avoid-nullable-tostring, this is helper method.
         await vmServiceConnectUri(info.serverWebSocketUri.toString());
     final virtualMachine = await service.getVM();
     final isolateId = virtualMachine.isolates?.firstOrNull?.id;
@@ -28,9 +29,9 @@ class MemoryTools extends MemoryUsage {
   }
 
   Future<MemoryTools?> compareTo(MemoryTools? other) async {
-    final memNow = await getMemoryUsage();
+    final memNow = await memoryUsage;
 
-    return memNow != null ? memNow - other : null;
+    return memNow == null ? null : memNow - other;
   }
 
   // Define a method to calculate the difference between two MemoryTools
@@ -46,6 +47,7 @@ class MemoryTools extends MemoryUsage {
       bytes == null ? 0 : (bytes / (1024 * 1024)).roundToDouble();
 
   @override
-  String toString() =>
-      """Memory(externalUsage: ${toMB(externalUsage)} MB, heapCapacity: ${toMB(heapCapacity)} MB, heapUsage: ${toMB(heapUsage)} MB)""";
+  String toString() => "Memory(externalUsage: ${toMB(externalUsage)} MB, "
+      "heapCapacity: ${toMB(heapCapacity)} MB, "
+      "heapUsage: ${toMB(heapUsage)} MB)";
 }

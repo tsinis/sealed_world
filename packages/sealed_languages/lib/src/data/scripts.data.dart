@@ -26,7 +26,6 @@ class ScriptAfak extends Script {
           code: "Afak",
           codeNumeric: "439",
           date: "2010-12-21",
-          pva: null,
         );
 }
 
@@ -86,7 +85,6 @@ class ScriptAran extends Script {
           code: "Aran",
           codeNumeric: "161",
           date: "2014-11-15",
-          pva: null,
         );
 }
 
@@ -236,7 +234,6 @@ class ScriptBlis extends Script {
           code: "Blis",
           codeNumeric: "550",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -417,7 +414,6 @@ class ScriptCirt extends Script {
           code: "Cirt",
           codeNumeric: "291",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -493,7 +489,6 @@ class ScriptCyrs extends Script {
           code: "Cyrs",
           codeNumeric: "221",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -584,7 +579,6 @@ class ScriptEgyd extends Script {
           code: "Egyd",
           codeNumeric: "070",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -599,7 +593,6 @@ class ScriptEgyh extends Script {
           code: "Egyh",
           codeNumeric: "060",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -828,7 +821,6 @@ class ScriptHanb extends Script {
           code: "Hanb",
           codeNumeric: "503",
           date: "2016-01-19",
-          pva: null,
         );
 }
 
@@ -888,7 +880,6 @@ class ScriptHans extends Script {
           code: "Hans",
           codeNumeric: "501",
           date: "2004-05-29",
-          pva: null,
         );
 }
 
@@ -903,7 +894,6 @@ class ScriptHant extends Script {
           code: "Hant",
           codeNumeric: "502",
           date: "2004-05-29",
-          pva: null,
         );
 }
 
@@ -1044,7 +1034,6 @@ class ScriptInds extends Script {
           code: "Inds",
           codeNumeric: "610",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -1076,7 +1065,6 @@ class ScriptJamo extends Script {
           code: "Jamo",
           codeNumeric: "284",
           date: "2016-01-19",
-          pva: null,
         );
 }
 
@@ -1108,7 +1096,6 @@ class ScriptJpan extends Script {
           code: "Jpan",
           codeNumeric: "413",
           date: "2006-06-21",
-          pva: null,
         );
 }
 
@@ -1123,7 +1110,6 @@ class ScriptJurc extends Script {
           code: "Jurc",
           codeNumeric: "510",
           date: "2010-12-21",
-          pva: null,
         );
 }
 
@@ -1168,7 +1154,6 @@ class ScriptKawi extends Script {
           code: "Kawi",
           codeNumeric: "368",
           date: "2021-12-03",
-          pva: null,
         );
 }
 
@@ -1228,7 +1213,6 @@ class ScriptKitl extends Script {
           code: "Kitl",
           codeNumeric: "505",
           date: "2015-07-15",
-          pva: null,
         );
 }
 
@@ -1274,7 +1258,6 @@ class ScriptKore extends Script {
           code: "Kore",
           codeNumeric: "287",
           date: "2007-06-13",
-          pva: null,
         );
 }
 
@@ -1289,7 +1272,6 @@ class ScriptKpel extends Script {
           code: "Kpel",
           codeNumeric: "436",
           date: "2010-03-26",
-          pva: null,
         );
 }
 
@@ -1349,7 +1331,6 @@ class ScriptLatf extends Script {
           code: "Latf",
           codeNumeric: "217",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -1364,7 +1345,6 @@ class ScriptLatg extends Script {
           code: "Latg",
           codeNumeric: "216",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -1394,7 +1374,6 @@ class ScriptLeke extends Script {
           code: "Leke",
           codeNumeric: "364",
           date: "2015-07-07",
-          pva: null,
         );
 }
 
@@ -1484,7 +1463,6 @@ class ScriptLoma extends Script {
           code: "Loma",
           codeNumeric: "437",
           date: "2010-03-26",
-          pva: null,
         );
 }
 
@@ -1604,7 +1582,6 @@ class ScriptMaya extends Script {
           code: "Maya",
           codeNumeric: "090",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -1726,7 +1703,6 @@ class ScriptMoon extends Script {
           code: "Moon",
           codeNumeric: "218",
           date: "2006-12-11",
-          pva: null,
         );
 }
 
@@ -1802,7 +1778,6 @@ class ScriptNagm extends Script {
           code: "Nagm",
           codeNumeric: "295",
           date: "2021-12-03",
-          pva: null,
         );
 }
 
@@ -1882,7 +1857,6 @@ class ScriptNkdb extends Script {
           code: "Nkdb",
           codeNumeric: "085",
           date: "2017-07-26",
-          pva: null,
         );
 }
 
@@ -1899,7 +1873,6 @@ class ScriptNkgb extends Script {
           code: "Nkgb",
           codeNumeric: "420",
           date: "2017-07-26",
-          pva: null,
         );
 }
 
@@ -2080,7 +2053,6 @@ class ScriptPcun extends Script {
           code: "Pcun",
           codeNumeric: "015",
           date: "2021-01-25",
-          pva: null,
         );
 }
 
@@ -2095,7 +2067,6 @@ class ScriptPelm extends Script {
           code: "Pelm",
           codeNumeric: "016",
           date: "2021-01-25",
-          pva: null,
         );
 }
 
@@ -2170,7 +2141,6 @@ class ScriptPhlv extends Script {
           code: "Phlv",
           codeNumeric: "133",
           date: "2007-07-15",
-          pva: null,
         );
 }
 
@@ -2200,7 +2170,6 @@ class ScriptPiqd extends Script {
           code: "Piqd",
           codeNumeric: "293",
           date: "2015-12-16",
-          pva: null,
         );
 }
 
@@ -2245,7 +2214,6 @@ class ScriptPsin extends Script {
           code: "Psin",
           codeNumeric: "103",
           date: "2021-01-25",
-          pva: null,
         );
 }
 
@@ -2261,7 +2229,6 @@ class ScriptQaaa extends Script {
           code: "Qaaa",
           codeNumeric: "900",
           date: "2004-05-29",
-          pva: null,
         );
 }
 
@@ -2277,7 +2244,6 @@ class ScriptQabx extends Script {
           code: "Qabx",
           codeNumeric: "949",
           date: "2004-05-29",
-          pva: null,
         );
 }
 
@@ -2292,7 +2258,6 @@ class ScriptRanj extends Script {
           code: "Ranj",
           codeNumeric: "303",
           date: "2021-01-25",
-          pva: null,
         );
 }
 
@@ -2337,7 +2302,6 @@ class ScriptRoro extends Script {
           code: "Roro",
           codeNumeric: "620",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -2382,7 +2346,6 @@ class ScriptSara extends Script {
           code: "Sara",
           codeNumeric: "292",
           date: "2004-05-29",
-          pva: null,
         );
 }
 
@@ -2472,7 +2435,6 @@ class ScriptShui extends Script {
           code: "Shui",
           codeNumeric: "530",
           date: "2017-07-26",
-          pva: null,
         );
 }
 
@@ -2608,7 +2570,6 @@ class ScriptSunu extends Script {
           code: "Sunu",
           codeNumeric: "274",
           date: "2021-12-03",
-          pva: null,
         );
 }
 
@@ -2653,7 +2614,6 @@ class ScriptSyre extends Script {
           code: "Syre",
           codeNumeric: "138",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -2668,7 +2628,6 @@ class ScriptSyrj extends Script {
           code: "Syrj",
           codeNumeric: "137",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -2683,7 +2642,6 @@ class ScriptSyrn extends Script {
           code: "Syrn",
           codeNumeric: "136",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -2818,7 +2776,6 @@ class ScriptTeng extends Script {
           code: "Teng",
           codeNumeric: "290",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -2983,7 +2940,6 @@ class ScriptVisp extends Script {
           code: "Visp",
           codeNumeric: "280",
           date: "2004-05-01",
-          pva: null,
         );
 }
 
@@ -3043,7 +2999,6 @@ class ScriptWole extends Script {
           code: "Wole",
           codeNumeric: "480",
           date: "2010-12-21",
-          pva: null,
         );
 }
 
@@ -3151,7 +3106,6 @@ class ScriptZmth extends Script {
           code: "Zmth",
           codeNumeric: "995",
           date: "2007-11-26",
-          pva: null,
         );
 }
 
@@ -3166,7 +3120,6 @@ class ScriptZsye extends Script {
           code: "Zsye",
           codeNumeric: "993",
           date: "2015-12-16",
-          pva: null,
         );
 }
 
@@ -3181,7 +3134,6 @@ class ScriptZsym extends Script {
           code: "Zsym",
           codeNumeric: "996",
           date: "2007-11-26",
-          pva: null,
         );
 }
 
@@ -3196,7 +3148,6 @@ class ScriptZxxx extends Script {
           code: "Zxxx",
           codeNumeric: "997",
           date: "2011-06-21",
-          pva: null,
         );
 }
 

@@ -116,11 +116,7 @@ const lakCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লেউশান কিপ"),
   TranslatedName(LangBre(), name: "kip Laos"),
   TranslatedName(LangBos(), name: "Laoski kip"),
-  TranslatedName(
-    LangBos(),
-    name: "Лаошки кип",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Лаошки кип", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "kip laosià"),
   TranslatedName(LangChe(), name: "Лаосан кип"),
   TranslatedName(LangCes(), name: "laoský kip"),

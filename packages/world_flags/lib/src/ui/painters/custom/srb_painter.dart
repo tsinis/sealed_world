@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-moving-to-variable
+
 import "dart:ui";
 
 import "../../../data/flags_map_part_1.data.dart";
@@ -13,8 +15,7 @@ final class SrbPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagSrbProperties.aspectRatio;
 
   @override
-  // ignore: long-method, expected for CustomElementsPainters.
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -1509,6 +1510,7 @@ final class SrbPainter extends CustomElementsPainter {
       ..lineTo(width * 0.27, height * 0.81)
       ..lineTo(width * 0.27, height * 0.81);
 
+    // ignore: avoid-similar-names, painters have a lot of paths.
     final path11 = Path()
       ..moveTo(width * 0.72, height * 0.98)
       ..lineTo(width * 0.55, height * 0.98)

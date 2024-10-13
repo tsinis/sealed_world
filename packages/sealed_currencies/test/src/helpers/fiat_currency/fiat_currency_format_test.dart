@@ -69,22 +69,10 @@ void main() => group("FiatCurrencyFormat", () {
             valueWithoutDot.format(-1000),
             "${valueWithoutDot.unit} -1.000",
           );
-          expect(
-            valueWithoutDot.format(0),
-            "${valueWithoutDot.unit} 0",
-          );
-          expect(
-            valueWithoutDot.format(1),
-            "${valueWithoutDot.unit} 1",
-          );
-          expect(
-            valueWithoutDot.format(10),
-            "${valueWithoutDot.unit} 10",
-          );
-          expect(
-            valueWithoutDot.format(100),
-            "${valueWithoutDot.unit} 100",
-          );
+          expect(valueWithoutDot.format(0), "${valueWithoutDot.unit} 0");
+          expect(valueWithoutDot.format(1), "${valueWithoutDot.unit} 1");
+          expect(valueWithoutDot.format(10), "${valueWithoutDot.unit} 10");
+          expect(valueWithoutDot.format(100), "${valueWithoutDot.unit} 100");
           expect(
             valueWithoutDot.format(1000),
             "${valueWithoutDot.unit} 1.000",

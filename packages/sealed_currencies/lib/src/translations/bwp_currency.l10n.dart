@@ -128,11 +128,7 @@ const bwpCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বতসোয়ানা পুলা"),
   TranslatedName(LangBre(), name: "pula Botswana"),
   TranslatedName(LangBos(), name: "Bocvanska pula"),
-  TranslatedName(
-    LangBos(),
-    name: "Боцванска пула",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Боцванска пула", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "pula de Botswana"),
   TranslatedName(LangChe(), name: "Ботсванан пула"),
   TranslatedName(LangCes(), name: "botswanská pula"),

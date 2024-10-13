@@ -116,11 +116,7 @@ const lkrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "শ্রীলঙ্কান রুপি"),
   TranslatedName(LangBre(), name: "roupi Sri Lanka"),
   TranslatedName(LangBos(), name: "Šrilankanska rupija"),
-  TranslatedName(
-    LangBos(),
-    name: "Шриланкански рупи",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Шриланкански рупи", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "rupia de Sri Lanka"),
   TranslatedName(LangChe(), name: "Шри-Ланкан рупи"),
   TranslatedName(LangCes(), name: "srílanská rupie"),

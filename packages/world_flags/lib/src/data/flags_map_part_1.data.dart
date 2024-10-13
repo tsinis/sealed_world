@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-static-class, to follow pattern from eco-system.
+// ignore_for_file: prefer-static-class, avoid-long-files
 import "dart:ui";
 
 import "../model/colors_properties.dart";
@@ -182,10 +182,7 @@ const flagFraProperties = FlagProperties(
 
 /// Flag properties of country Algeria (DZ).
 const flagDzaProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff006633)),
-    ColorsProperties(Color(0xffffffff)),
-  ],
+  [ColorsProperties(Color(0xff006633)), ColorsProperties(Color(0xffffffff))],
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
     ElementsProperties(
@@ -426,10 +423,7 @@ const flagEshProperties = FlagProperties(
 
 /// Flag properties of country Guinea-Bissau (GW).
 const flagGnbProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xfffcd116)),
-    ColorsProperties(Color(0xff009e49)),
-  ],
+  [ColorsProperties(Color(0xfffcd116)), ColorsProperties(Color(0xff009e49))],
   aspectRatio: 2,
   elementsProperties: [
     ElementsProperties(
@@ -462,9 +456,7 @@ const flagJpnProperties = FlagProperties(
 
 /// Flag properties of country Jersey (JE).
 const flagJeyProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xffffffff)),
-  ],
+  [ColorsProperties(Color(0xffffffff))],
   aspectRatio: 5 / 3,
   elementsProperties: [
     CustomElementsProperties(
@@ -1075,10 +1067,7 @@ const flagSycProperties = FlagProperties(
 
 /// Flag properties of country Djibouti (DJ).
 const flagDjiProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff6AB2E7)),
-    ColorsProperties(Color(0xff12AD2B)),
-  ],
+  [ColorsProperties(Color(0xff6AB2E7)), ColorsProperties(Color(0xff12AD2B))],
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),

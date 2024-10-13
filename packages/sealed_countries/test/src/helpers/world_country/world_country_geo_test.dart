@@ -7,7 +7,7 @@ void main() => group("WorldCountryGeo", () {
         test(
           "with null bordersCodes",
           () => expect(
-            WorldCountry.list.firstWhere((c) => c.borders == null).borders,
+            WorldCountry.list.firstWhere((cnt) => cnt.borders == null).borders,
             isNull,
           ),
         );
@@ -15,7 +15,7 @@ void main() => group("WorldCountryGeo", () {
         test(
           "with non-null bordersCodes",
           () => expect(
-            WorldCountry.list.firstWhere((c) => c.borders != null).borders,
+            WorldCountry.list.firstWhere((cnt) => cnt.borders != null).borders,
             isNotEmpty,
           ),
         );
@@ -23,7 +23,7 @@ void main() => group("WorldCountryGeo", () {
         test(
           "proper type",
           () => expect(
-            WorldCountry.list.firstWhere((c) => c.borders != null).borders,
+            WorldCountry.list.firstWhere((cnt) => cnt.borders != null).borders,
             everyElement(isA<WorldCountry>()),
           ),
         );

@@ -184,11 +184,7 @@ const twdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "новий тайванський долар"),
   TranslatedName(LangUrd(), name: "نیو تائیوان ڈالر"),
   TranslatedName(LangUzb(), name: "Yangi Tayvan dollari"),
-  TranslatedName(
-    LangUzb(),
-    name: "TWD",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "TWD", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Đô la Đài Loan mới"),
   TranslatedName(LangZho(), name: "新台币"),
   TranslatedName(LangZho(), name: "新台幣", countryCode: "HK"),

@@ -9,8 +9,8 @@ import "../../typedefs/typedefs.dart";
 extension BasicLocaleExtension on BasicLocale {
   /// {@macro copy_with_method}
   BasicLocale copyWith({
-    NaturalLanguage? language,
     String? countryCode,
+    NaturalLanguage? language,
     Script? script,
   }) =>
       BasicLocale(
@@ -21,8 +21,8 @@ extension BasicLocaleExtension on BasicLocale {
 
   /// {@macro to_map_method}
   Map<String, String?> toMap() => {
-        "language": language.codeShort.toLowerCase(),
         "countryCode": countryCode?.toUpperCaseIsoCode(),
+        "language": language.codeShort.toLowerCase(),
         "script": script?.code,
       };
 

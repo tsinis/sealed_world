@@ -16,34 +16,10 @@ void main() {
   print(maybeEuro?.toString(short: false));
   /*
   Prints: "FiatCurrency(code: "EUR", name: "Euro", decimalMark: ",",
-  thousandsSeparator: ".", symbol: "€", alternateSymbols: null,
-  disambiguateSymbol: null, htmlEntity: "€", codeNumeric: "978", namesNative:
-  ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
+  thousandsSeparator: ".", symbol: r"€", htmlEntity: "€", codeNumeric: "978",
+  namesNative: ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
   subunitToUnit: 100, unitFirst: true), translations: eurCurrencyTranslations".
   */
-
-  /// [Currency] is a sealed class, it means
-  /// this `whenOrNull` can be used same way as switch:
-  /// ```dart
-  /// switch (currency) {
-  ///  case FiatDkk():
-  ///  case FiatIsk():
-  ///  case FiatNok():
-  ///  case FiatSek():
-  ///    return true;
-  ///  case FiatCzk():
-  ///    return false;
-  ///  default:
-  ///    return null;
-  ///}
-  /// ```
-  bool? isVikingKrone(FiatCurrency currency) => currency.whenOrNull(
-        fiatDkk: () => true,
-        fiatIsk: () => true,
-        fiatNok: () => true,
-        fiatSek: () => true,
-        fiatCzk: () => false,
-      );
 
   print(isVikingKrone(const FiatNok())); // Prints "true".
   print(isVikingKrone(serbianDinar)); // Prints "null".
@@ -63,12 +39,37 @@ void main() {
   // Prints German translations of all available regular currencies.
   for (final currency in FiatCurrency.list) {
     print(
-      """German name of ${currency.name}: ${currency.maybeTranslation(const BasicLocale(LangDeu()))?.name}""",
+      "German name of ${currency.name}: "
+      "${currency.maybeTranslation(const BasicLocale(LangDeu()))?.name}",
     );
   }
 
   print(const _FiatCustom().name); // Prints "Custom".
 }
+
+/// [Currency] is a sealed class, it means
+/// this `whenOrNull` can be used same way as switch:
+/// ```dart
+/// switch (currency) {
+///  case FiatDkk():
+///  case FiatIsk():
+///  case FiatNok():
+///  case FiatSek():
+///    return true;
+///  case FiatCzk():
+///    return false;
+///  default:
+///    return null;
+///}
+/// ```
+// ignore: prefer-static-class, just for example.
+bool? isVikingKrone(FiatCurrency currency) => currency.whenOrNull(
+      fiatCzk: () => false,
+      fiatDkk: () => true,
+      fiatIsk: () => true,
+      fiatNok: () => true,
+      fiatSek: () => true,
+    );
 
 /// Creates a instance of the custom currency with permissive constructor.
 class _FiatCustom extends FiatCurrency {

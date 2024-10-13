@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-unnecessary-enum-prefix, Due to shadowing.
+
 import "package:flutter/material.dart" show IconData, Icons;
 
 import "../helpers/extensions/string_extension.dart";
@@ -12,6 +14,7 @@ enum WorldData {
 
   final IconData icon;
 
+  // ignore: avoid-shadowing, it's not shadowing enum values.
   R map<R>({required R country, required R currency, required R language}) =>
       switch (this) {
         WorldData.country => country,
@@ -24,6 +27,7 @@ enum WorldData {
   String? get label => name.toBeginningOfSentenceCase;
 
   static List<String> get paths => List.unmodifiable(
+        // ignore: avoid-slow-collection-methods, to simplify example code.
         WorldData.values.expand((tab) => [tab.path, tab.pathTemplate]),
       );
 }

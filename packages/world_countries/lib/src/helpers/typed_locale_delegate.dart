@@ -95,16 +95,15 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// mapping is used to resolve the language and country of a [Locale] to the
   /// corresponding language and country.
   ///
-  /// The current mappings are:
+  /// The current mappings are
   /// * Filipino (Pilipino) to Tagalog. Tagalog is the foundation of Filipino.
-  ///   More details can be found
-  ///   [here](https://en.wikipedia.org/wiki/Tagalog_language).
+  ///   More details can be found at: https://en.wikipedia.org/wiki/Tagalog_language.
   /// * Swiss German Alemannic Alsatian to German (Switzerland).
   /// * Bosnian (written in the Cyrillic script) to Serbian.
   ///
   /// These mappings are used as the default resolution when no other locale
   /// mapping is provided.
-  static const List<LocaleEntry> defaultLocaleMapResolution = [
+  static const defaultLocaleMapResolution = [
     LocaleEntry(Locale("fil"), IsoLocale(LangTgl())),
     LocaleEntry(Locale("gsw"), IsoLocale(LangDeu(), country: CountryChe())),
     LocaleEntry(
@@ -139,7 +138,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     final typedLocale = _toTypedLocale(locale);
     assert(
       typedLocale != null,
-      """Unsupported ISO locale: $locale, consider adding `localeMapResolution` and/or `fallbackLanguage`""",
+      "Unsupported ISO locale: $locale, consider adding "
+      "`localeMapResolution` and/or `fallbackLanguage`",
     );
 
     return _asyncTranslationCacheProcessing
@@ -159,8 +159,13 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   bool shouldReload(TypedLocaleDelegate old) => false;
 
   @override
-  String toString() =>
-      """TypedLocaleDelegate(fallbackLanguage: $fallbackLanguage, localeMapResolution: $localeMapResolution)""";
+  String toString() => "TypedLocaleDelegate("
+      """${fallbackLanguage == null ? '' : 'fallbackLanguage: ${fallbackLanguage.runtimeType}(), '}"""
+      """${localeMapResolution == null ? '' : 'localeMapResolution: $localeMapResolution, '}"""
+      "asyncTranslationCacheProcessing: $_asyncTranslationCacheProcessing, "
+      "countriesForTranslationCache: $_countriesForTranslationCache, "
+      "currenciesForTranslationCache: $_currenciesForTranslationCache, "
+      "languagesForTranslationCache: $_languagesForTranslationCache,)";
 
   @override
   Type get type => TypedLocale;

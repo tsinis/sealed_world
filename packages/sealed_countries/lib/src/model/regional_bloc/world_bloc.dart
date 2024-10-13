@@ -10,7 +10,6 @@ part "regional_bloc.g.dart";
 /// bloc. It consists of a `String` values that represents the name and acronym
 /// of the WorldBloc. The `name` and `acronym` fields are required and must
 /// not be empty (if provided).
-/// ```
 sealed class WorldBloc implements Named<String> {
   /// Creates a new `WorldBloc` object with the given name.
   ///
@@ -33,5 +32,5 @@ sealed class WorldBloc implements Named<String> {
   @override
   String toString({bool short = true}) => short
       ? 'WorldBloc(name: "$name")'
-      : '''WorldBloc(name: "$name", acronym: ${acronym == null ? acronym : '"$acronym"'})''';
+      : '''WorldBloc(name: "$name"${acronym == null ? '' : ', acronym: "$acronym"'})''';
 }

@@ -94,8 +94,11 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
 
   @override
   String toString() => "FlagThemeData(aspectRatio: $_aspectRatio, "
-      "decoration: $decoration, decorationPosition: $decorationPosition, "
-      "padding: $padding, height: $height, width: $width)";
+      "${decoration == null ? '' : 'decoration: $decoration, '}"
+      """${decorationPosition == null ? '' : 'decorationPosition: $decorationPosition, '}"""
+      "${padding == null ? '' : 'padding: $padding, '}"
+      "${height == null ? '' : 'height: $height, '}"
+      "${width == null ? '' : 'width: $width,'})";
 
   @override
   bool operator ==(Object other) {

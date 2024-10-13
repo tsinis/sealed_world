@@ -116,11 +116,7 @@ const jodCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জর্ডানিয়ান দিনার"),
   TranslatedName(LangBre(), name: "dinar Jordania"),
   TranslatedName(LangBos(), name: "Jordanski dinar"),
-  TranslatedName(
-    LangBos(),
-    name: "Јордански динар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Јордански динар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dinar jordà"),
   TranslatedName(LangChe(), name: "Урданан динар"),
   TranslatedName(LangCes(), name: "jordánský dinár"),

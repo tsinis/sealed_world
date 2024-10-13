@@ -26,13 +26,13 @@ class RectangleFlag extends BasicFlag {
   const RectangleFlag(
     super.properties, {
     super.aspectRatio,
+    super.backgroundPainter,
     super.decoration,
     super.decorationPosition,
-    super.padding,
-    super.backgroundPainter,
     super.foregroundPainter,
     super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
+    super.padding,
   }) : super(elementsBuilder: RectanglePainter.new); // coverage:ignore-line
 }

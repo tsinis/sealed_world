@@ -95,7 +95,10 @@ class ElementsProperties {
   final ElementsProperties? child;
 
   @override
-  String toString() => "ElementsProperties($mainColor, shape: $shape, "
-      "heightFactor: $heightFactor, widthFactor: $widthFactor, angle: $angle, "
-      "offset: $offset, child: $child)";
+  String toString() => "ElementsProperties($mainColor, "
+      "${shape == null ? '' : 'shape: ${shape.runtimeType}(), '}"
+      "heightFactor: $heightFactor, "
+      "${widthFactor == null ? '' : 'widthFactor: $widthFactor, '}"
+      "${angle == null ? '' : 'angle: $angle, '}offset: $offset, "
+      "${child == null ? '' : 'child: $child,'})";
 }

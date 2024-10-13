@@ -92,6 +92,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
       locale.currencyTranslations[item];
 
   @override
+  // ignore: avoid-incomplete-copy-with, items is covering currencies.
   CurrencyPicker copyWith({
     Iterable<FiatCurrency>? items,
     bool? addAutomaticKeepAlives,

@@ -49,7 +49,8 @@ final class Capital implements JsonEncodable<Capital> {
   @override
   String toString({bool short = true}) => short
       ? "Capital($deFacto)"
-      : '''Capital("$deFacto", deJure: ${deJure == null ? deJure : '"$deJure"'}, third: ${third == null ? third : '"$third"'})''';
+      : 'Capital("$deFacto"${deJure == null ? '' : ', deJure: "$deJure"'}'
+          '${third == null ? '' : ', third: "$third"'})';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -60,7 +61,7 @@ final class Capital implements JsonEncodable<Capital> {
 
     return other.deFacto == deFacto &&
         other.deJure == deJure &&
-        other.third == other.third;
+        other.third == third;
   }
 
   @override

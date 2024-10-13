@@ -128,11 +128,7 @@ const scrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সেয়চেল্লোইস রুপি"),
   TranslatedName(LangBre(), name: "roupi Sechelez"),
   TranslatedName(LangBos(), name: "Sejšelska rupija"),
-  TranslatedName(
-    LangBos(),
-    name: "Сејшелска рупија",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Сејшелска рупија", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "rupia de les Seychelles"),
   TranslatedName(LangChe(), name: "Сейшелан рупи"),
   TranslatedName(LangCes(), name: "seychelská rupie"),

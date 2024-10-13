@@ -99,11 +99,7 @@ const svcCurrencyTranslations = [
   TranslatedName(LangBen(), name: "এল স্যালভোডোর কোলোন"),
   TranslatedName(LangBre(), name: "colón Salvador"),
   TranslatedName(LangBos(), name: "Salvadorski kolon"),
-  TranslatedName(
-    LangBos(),
-    name: "Салвадорски колон",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Салвадорски колон", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "colón salvadorenc"),
   TranslatedName(LangCes(), name: "salvadorský colón"),
   TranslatedName(LangCym(), name: "Colón El Salvador"),

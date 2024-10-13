@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-nullable-parameters-with-default-values
+
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 

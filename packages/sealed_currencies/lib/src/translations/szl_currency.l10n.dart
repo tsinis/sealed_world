@@ -128,11 +128,7 @@ const szlCurrencyTranslations = [
   TranslatedName(LangBen(), name: "সোয়াজিল্যান্ড লিলাঙ্গেনি"),
   TranslatedName(LangBre(), name: "lilangeni Swaziland"),
   TranslatedName(LangBos(), name: "Svazilendski lilangeni"),
-  TranslatedName(
-    LangBos(),
-    name: "Свази лилангени",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Свази лилангени", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "lilangeni swazi"),
   TranslatedName(LangChe(), name: "Свазилендан лилангени"),
   TranslatedName(LangCes(), name: "svazijský lilangeni"),

@@ -14,7 +14,6 @@ const _defaultRetryCount = 1; // For performance tests.
 @isTest
 void performanceTest(
   String description,
-  // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
   FutureOr<void> Function() body, {
   num durationLimit = _defaultDurationLimitInMs,
   String? testOn,
@@ -41,7 +40,6 @@ void performanceTest(
 void randomElementTest<T extends Object>(
   String description,
   Iterable<T> iterable,
-  // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
   FutureOr<void> Function(T) body, {
   num durationLimit = _defaultDurationLimitInMs,
   String? testOn,
@@ -74,7 +72,6 @@ void assertTest(
   String description,
   Object? Function() createInstance, {
   bool shouldThrow = true,
-  // ignore: avoid-dynamic, strict_raw_type, it's a copy of regular test method.
   FutureOr<void> Function()? alsoExpect,
   String? testOn,
   Timeout? timeout,
@@ -84,7 +81,7 @@ void assertTest(
   int? retry,
 }) =>
     test(
-      "throws $AssertionError on $description",
+      description,
       () async {
         expect(
           createInstance,

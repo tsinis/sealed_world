@@ -129,11 +129,7 @@ const lrdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "লিবেরিয়ান ডলার"),
   TranslatedName(LangBre(), name: "dollar Liberia"),
   TranslatedName(LangBos(), name: "Liberijski dolar"),
-  TranslatedName(
-    LangBos(),
-    name: "Либеријски долар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Либеријски долар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dòlar liberià"),
   TranslatedName(LangChe(), name: "Либерин доллар"),
   TranslatedName(LangCes(), name: "liberijský dolar"),

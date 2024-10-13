@@ -61,7 +61,10 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   CountryTileThemeData? get countryTileTheme {
     final theme = _tileTheme<WorldCountry>();
 
-    return switch (theme) { CountryTileThemeData() => theme, _ => null };
+    return switch (theme) {
+      CountryTileThemeData() => theme,
+      _ => null,
+    };
   }
 
   /// Retrieves the theme data for currency tiles.

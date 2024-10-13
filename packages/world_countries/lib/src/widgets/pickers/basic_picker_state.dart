@@ -1,12 +1,12 @@
 part of "basic_picker.dart";
 
 class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
-  TextEditingController? controller;
+  TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    controller = widget.textController ??
+    _controller = widget.textController ??
         widget.searchBar?.controller ??
         TextEditingController();
   }
@@ -14,12 +14,13 @@ class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
   @override
   void dispose() {
     if (widget.textController == null && widget.searchBar?.controller == null) {
-      controller?.dispose();
+      _controller.dispose();
     }
     super.dispose();
   }
 
   @override
+  // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
 
@@ -46,7 +47,7 @@ class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
           ? widget.header ??
               theme?.header ??
               AdaptiveSearchTextField(
-                controller,
+                _controller,
                 copyFrom: widget.searchBar ?? theme?.searchBar,
                 padding: widget.searchBarPadding ??
                     theme?.searchBarPadding ??
@@ -84,7 +85,7 @@ class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
       caseSensitiveSearch: widget.caseSensitiveSearch,
       searchIn: widget.searchIn ?? widget.defaultSearch,
       startWithSearch: widget.startWithSearch,
-      textController: controller,
+      textController: _controller,
     );
   }
 }

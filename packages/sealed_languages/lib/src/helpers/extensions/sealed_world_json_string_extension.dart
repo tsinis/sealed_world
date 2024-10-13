@@ -20,6 +20,7 @@ extension SealedWorldJsonStringExtension on String {
     T Function(JsonMap map) fromJson, {
     JsonCodec codec = const JsonCodec(),
   }) =>
+      // ignore: avoid-type-casts, nature of JSON decoding
       fromJson(codec.decode(this) as JsonMap);
 
   /// Tries to parse the JSON string into an object of type [T].
@@ -38,11 +39,13 @@ extension SealedWorldJsonStringExtension on String {
   /// final maybePerson = jsonString.tryParse(Person.fromJson);
   /// ```
   T? tryParse<T>(T? Function(JsonMap map)? fromJson, {JsonCodec? codec}) {
-    codec ??= const JsonCodec();
+    final decoderCodec = codec ?? const JsonCodec();
     try {
-      final jsonMap = codec.decode(this) as JsonMap;
+      // ignore: avoid-type-casts, nature of JSON decoding
+      final jsonMap = decoderCodec.decode(this) as JsonMap;
 
       return fromJson?.call(jsonMap);
+      // ignore: avoid_catches_without_on_clauses, it's just some exception.
     } catch (_) {
       return null;
     }

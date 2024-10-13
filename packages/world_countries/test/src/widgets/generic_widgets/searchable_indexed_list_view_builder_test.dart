@@ -89,27 +89,18 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
         },
       );
 
-      testWidgets(
-        "showInSearch",
-        (tester) async {
-          final context = await tester.contextExtractor();
-          expect(await builder.showInSearch(context), isNull);
-        },
-      );
+      testWidgets("showInSearch", (tester) async {
+        final context = await tester.contextExtractor();
+        expect(await builder.showInSearch(context), isNull);
+      });
 
-      testWidgets(
-        "showInDialog",
-        (tester) async {
-          final context = await tester.contextExtractor();
-          expect(await builder.showInDialog(context), isNull);
-        },
-      );
+      testWidgets("showInDialog", (tester) async {
+        final context = await tester.contextExtractor();
+        expect(await builder.showInDialog(context), isNull);
+      });
 
-      testWidgets(
-        "showInModalBottomSheet",
-        (tester) async {
-          final context = await tester.contextExtractor();
-          expect(await builder.showInModalBottomSheet(context), isNull);
-        },
-      );
+      testWidgets("showInModalBottomSheet", (tester) async {
+        final context = await tester.contextExtractor();
+        expect(await builder.showInModalBottomSheet(context), isNull);
+      });
     });

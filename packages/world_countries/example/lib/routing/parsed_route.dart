@@ -15,6 +15,7 @@ import "parser.dart";
 /// A route path that has been parsed by [TemplateRouteParser].
 @immutable
 class ParsedRoute {
+  // ignore: prefer-named-parameters, for example simplicity.
   const ParsedRoute(
     this.path,
     this.pathTemplate,

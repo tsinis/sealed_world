@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-correct-identifier-length, avoid-type-casts
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../model/country/country.dart";
@@ -21,55 +23,54 @@ import "../extensions/country_submodels/postal_code_extension.dart";
 extension WorldCountryJson on WorldCountry {
   /// {@macro to_map_method}
   JsonObjectMap toMap() => {
-        "name": name.toMap(),
-        "namesNative":
-            namesNative.map((nn) => nn.toMap()).toList(growable: false),
-        "tld": tld,
+        "altSpellings": altSpellings,
+        "areaMetric": areaMetric,
+        "bordersCodes": bordersCodes,
+        "capitalInfo": capitalInfo?.toMap(),
+        "car": car.toMap(),
+        "cioc": cioc,
         "code": code,
         "codeNumeric": codeNumeric,
         "codeShort": codeShort,
-        "cioc": cioc,
-        "independent": independent,
-        "unMember": unMember,
-        "currencies": currencies?.toIsoList(),
-        "idd": idd.toMap(),
-        "altSpellings": altSpellings,
         "continent": continent.name,
-        "subregion": subregion?.name,
-        "languages": languages.toIsoList(),
-        "translations":
-            translations.map((t) => t.toMap()).toList(growable: false),
-        "latLng": latLng.toMap(),
-        "landlocked": landlocked,
-        "bordersCodes": bordersCodes,
-        "areaMetric": areaMetric,
+        "currencies": currencies?.toIsoList(),
         "demonyms": demonyms.map((d) => d.toMap()).toList(growable: false),
         "emoji": emoji,
-        "maps": maps.toMap(),
-        "population": population,
-        "gini": gini?.toMap(),
         "fifa": fifa,
-        "car": car.toMap(),
-        "timezones": timezones,
+        "gini": gini?.toMap(),
         "hasCoatOfArms": hasCoatOfArms,
-        "startOfWeek": startOfWeek.toMap(),
-        "capitalInfo": capitalInfo?.toMap(),
+        "idd": idd.toMap(),
+        "independent": independent,
+        "landlocked": landlocked,
+        "languages": languages.toIsoList(),
+        "latLng": latLng.toMap(),
+        "maps": maps.toMap(),
+        "name": name.toMap(),
+        "namesNative":
+            namesNative.map((nn) => nn.toMap()).toList(growable: false),
+        "population": population,
         "postalCode": postalCode?.toMap(),
         "regionalBlocs":
             regionalBlocs?.map((rb) => rb.acronym).toList(growable: false),
+        "startOfWeek": startOfWeek.toMap(),
+        "subregion": subregion?.name,
+        "timezones": timezones,
+        "tld": tld,
+        "translations":
+            translations.map((t) => t.toMap()).toList(growable: false),
+        "unMember": unMember,
       };
 
   /// {@macro from_map_method}
-  // ignore: long-method, class is quite big.
   static WorldCountry fromMap(JsonMap map) => WorldCountry(
         name: CountryNameExtension.fromMap(map["name"] as JsonMap),
         altSpellings: List<String>.unmodifiable(map["altSpellings"] as List),
         areaMetric: map["areaMetric"] as double,
-        code: map["code"] as String,
-        codeNumeric: map["codeNumeric"] as String,
-        codeShort: map["codeShort"] as String,
+        code: map["code"].toString(),
+        codeNumeric: map["codeNumeric"].toString(),
+        codeShort: map["codeShort"].toString(),
         continent: Continent.fromName(map["continent"] as String),
-        emoji: map["emoji"] as String,
+        emoji: map["emoji"].toString(),
         idd: IddExtension.fromMap(map["idd"] as JsonMap),
         languages: (map["languages"] as List<Object?>)
             .fromIsoList(NaturalLanguage.fromCode)
@@ -96,21 +97,21 @@ extension WorldCountryJson on WorldCountry {
                 .fromIsoList(FiatCurrency.fromCode)
                 .toList(growable: false)
             : null,
-        capitalInfo: map["capitalInfo"] != null
-            ? CapitalInfoExtension.fromMap(map["capitalInfo"] as JsonMap)
-            : null,
+        capitalInfo: map["capitalInfo"] == null
+            ? null
+            : CapitalInfoExtension.fromMap(map["capitalInfo"] as JsonMap),
         car: CarExtension.fromMap(map["car"] as JsonMap),
-        cioc: map["cioc"] as String?,
-        fifa: map["fifa"] as String?,
-        gini: map["gini"] != null
-            ? GiniExtension.fromMap(map["gini"] as JsonMap)
-            : null,
+        cioc: map["cioc"]?.toString(),
+        fifa: map["fifa"]?.toString(),
+        gini: map["gini"] == null
+            ? null
+            : GiniExtension.fromMap(map["gini"] as JsonMap),
         hasCoatOfArms: map["hasCoatOfArms"] as bool,
         independent: map["independent"] as bool,
         landlocked: map["landlocked"] as bool,
-        postalCode: map["postalCode"] != null
-            ? PostalCodeExtension.fromMap(map["postalCode"] as JsonMap)
-            : null,
+        postalCode: map["postalCode"] == null
+            ? null
+            : PostalCodeExtension.fromMap(map["postalCode"] as JsonMap),
         bordersCodes: map["bordersCodes"] is List
             ? List<String>.unmodifiable(map["bordersCodes"] as List)
             : null,

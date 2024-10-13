@@ -119,7 +119,7 @@ void main() => group("IsoStandardizedStringExtension", () {
           "should call short function when code length is equal to 2",
           () {
             for (final code in alphaShortCodes) {
-              var result = code.maybeMapIsoCode(
+              String result = code.maybeMapIsoCode(
                 orElse: (_) => orElse,
                 numeric: (_) => "numeric",
                 regular: (_) => "regular",
@@ -137,34 +137,31 @@ void main() => group("IsoStandardizedStringExtension", () {
           },
         );
 
-        test(
-          "should call numeric function when code is numeric",
-          () {
-            for (final code in numericCodes) {
-              var result = code.maybeMapIsoCode(
-                orElse: (_) => orElse,
-                numeric: (_) => "numeric",
-                regular: (_) => "regular",
-                short: (_) => "short",
-              );
-              expect(result, "numeric");
+        test("should call numeric function when code is numeric", () {
+          for (final code in numericCodes) {
+            String result = code.maybeMapIsoCode(
+              orElse: (_) => orElse,
+              numeric: (_) => "numeric",
+              regular: (_) => "regular",
+              short: (_) => "short",
+            );
+            expect(result, "numeric");
 
-              result = code.maybeMapIsoCode(
-                orElse: (_) => orElse,
-                regular: (_) => "regular",
-                short: (_) => "short",
-              );
-              expect(result, orElse);
-            }
-          },
-        );
+            result = code.maybeMapIsoCode(
+              orElse: (_) => orElse,
+              regular: (_) => "regular",
+              short: (_) => "short",
+            );
+            expect(result, orElse);
+          }
+        });
 
         test(
           "should call regular function if code length is 3 and is not numeric",
           () {
             for (final code
                 in alphaRegularCodes.take(alphaRegularCodes.length - 1)) {
-              var result = code.maybeMapIsoCode(
+              String result = code.maybeMapIsoCode(
                 orElse: (_) => orElse,
                 numeric: (_) => "numeric",
                 regular: (_) => "regular",
@@ -186,7 +183,7 @@ void main() => group("IsoStandardizedStringExtension", () {
           "should use maxLength with non default value for script codes",
           () {
             final scriptCode = alphaRegularCodes.last;
-            var result = scriptCode.maybeMapIsoCode(
+            String result = scriptCode.maybeMapIsoCode(
               orElse: (_) => orElse,
               numeric: (_) => "numeric",
               regular: (_) => "regular",
@@ -220,19 +217,16 @@ void main() => group("IsoStandardizedStringExtension", () {
           },
         );
 
-        test(
-          "should call orElse function when code is not ISO code",
-          () {
-            for (final code in invalidCodes) {
-              final result = code.maybeMapIsoCode(
-                orElse: (_) => orElse,
-                numeric: (_) => "numeric",
-                regular: (_) => "regular",
-                short: (_) => "short",
-              );
-              expect(result, orElse);
-            }
-          },
-        );
+        test("should call orElse function when code is not ISO code", () {
+          for (final code in invalidCodes) {
+            final result = code.maybeMapIsoCode(
+              orElse: (_) => orElse,
+              numeric: (_) => "numeric",
+              regular: (_) => "regular",
+              short: (_) => "short",
+            );
+            expect(result, orElse);
+          }
+        });
       });
     });
