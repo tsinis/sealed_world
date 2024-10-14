@@ -7,7 +7,7 @@ environment:
   sdk: ^3.5.3
 
 dependencies:
-  args: ^2.5.0
+  args: ^2.6.0
   change_case: ^2.1.0
   collection: ^1.19.0
   path: ^1.9.0

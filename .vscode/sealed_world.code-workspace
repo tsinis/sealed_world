@@ -38,12 +38,9 @@
   "settings": {
     "search.exclude": {
       "**/.git": true,
-      "**/.fvm": true,
       "coverage/**": true,
       "**/coverage/*": true,
-      "**/*.g.dart": true,
-      "**/*.freezed.dart": true,
-      "**/*.select.dart": true
+      "**/*.g.dart": true
     },
     "explorer.confirmDragAndDrop": false,
     "explorer.fileNesting.enabled": true,
@@ -164,15 +161,12 @@
       "alexisvt.flutter-snippets",
       "bierner.github-markdown-preview",
       "bierner.markdown-checkbox",
-      "blaxou.freezed",
       "circlecodesolution.ccs-flutter-color",
-      "codeium.codeium",
       "coenraads.bracket-pair-colorizer-2",
       "dart-code.dart-code",
       "dart-code.flutter",
       "davidanson.vscode-markdownlint",
       "esbenp.prettier-vscode",
-      "felixangelov.bloc",
       "formulahendry.code-runner",
       "foxundermoon.shell-format",
       "gaetschwartz.build-runner",
@@ -180,11 +174,9 @@
       "giyyapan.fast-snippet",
       "gmlewis-vscode.flutter-stylizer",
       "gruntfuggly.todo-tree",
-      "hirantha.json-to-dart",
       "ibm.output-colorizer",
       "jasonlhy.hungry-delete",
       "jeroen-meijer.pubspec-assist",
-      "kameshkotwani.google-search",
       "lacroixdavid1.vscode-format-context-menu",
       "marinv.flutter-print-tools",
       "nash.awesome-flutter-snippets",
@@ -192,6 +184,7 @@
       "peterhdd.dartgettersetter",
       "peterschmalfeldt.explorer-exclude",
       "plibither8.remove-comments",
+      "plugfox.flutter-plus",
       "prasadsunny1.flutter-create-wizard",
       "rafamel.subtle-brackets",
       "redhat.vscode-yaml",
@@ -199,8 +192,7 @@
       "stkb.rewrap",
       "streetsidesoftware.code-spell-checker",
       "tenraneko.pubspec-dependency-opener",
-      "tyriar.sort-lines",
-      "withfig.fig"
+      "tyriar.sort-lines"
     ]
   },
   "launch": {

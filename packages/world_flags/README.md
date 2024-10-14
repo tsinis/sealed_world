@@ -1,9 +1,12 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
-[![world_flags](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml)
+![CodeRabbit](https://img.shields.io/badge/reviewed-code?style=flat&logo=vowpalwabbit&logoColor=orange&label=coderabbit&color=dark-green&link=https%3A%2F%2Fcoderabbit.ai)
+![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green&link=https%3A%2F%2Fdcm.dev)
+[![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml)
 ![Pub points](https://img.shields.io/pub/points/world_flags)
 ![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)
+[![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/world_flags.svg)](https://pub.dev/packages/world_flags)
 
 # Every country flag is a Widget
@@ -23,7 +26,7 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 - **Easy to Use**: Simplified API for adding flags with minimal code.
 - **Pure Dart**: As these are code-based flags, developers can easily access and manipulate flag colors, aspect ratios, and other properties like any other Dart object.
 
-> Package provides 250 small and simplified world country flags, but at the same time, more than 2/3 of these flags can be used as full-dimensional flags.
+> Package provides 250 small and simplified world country flags, but at the same time, **more than 2/3** of these flags can be used as full-dimensional flags.
 
 ## Getting Started
 
@@ -127,13 +130,12 @@ This package is licensed under the MIT license. See [LICENSE](./LICENSE) for det
 
 - **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets, all flags are declarative-style optimized CustomPainters. That means that you don't have to worry about pre-caching, increased app size, platform-dependent look of the flags, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
 - **Custom flags**: Package provides multiple classes and simple API to create your own flags.
-- **Up-to-date Flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021).
+- **Up-to-date flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021).
 - **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing its sealed nature), you can also override existing or add new data, etc.).
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
-- **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
+- **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has almost 100% code coverage, with **more than 1687 (+3140 in underlying Dart packages) tests**, providing confidence in its reliability and stability.
-- **Comprehensive Documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
+- **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
-- **Fully documented**: Package provides documentation for every public member, usually with examples.
-- **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+- **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
