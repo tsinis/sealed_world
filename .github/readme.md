@@ -8,7 +8,7 @@
 
 ## Sealed World
 
-Pure Dart, fully tested and ISO-driven ecosystem for the world's data in the form of compile-time, tree-shakable constant sealed classes.
+A pure Dart, fully tested and ISO-driven ecosystem for the world's data in the form of compile-time, tree-shakable constant sealed classes.
 
 > [!TIP]
 > Flutter packages follow a **world** prefix convention, whereas Dart packages utilize the **sealed** prefix.
