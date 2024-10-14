@@ -1,10 +1,12 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
-[![sealed_currencies](https://github.com/tsinis/sealed_world/actions/workflows/sealed_currencies.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/sealed_currencies.yaml)
+![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green&link=https%3A%2F%2Fdcm.dev)
+[![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/sealed_currencies.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/sealed_currencies.yaml)
 ![Pub points](https://img.shields.io/pub/points/sealed_currencies)
 ![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)
 ![Pub popularity](https://img.shields.io/pub/popularity/sealed_currencies)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)
+[![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_currencies.svg)](https://pub.dev/packages/sealed_currencies)
 
 This ISO-driven, pure Dart, fully tested and and 3rd-party dependency-free package provides information about world currencies in form of compile-time, tree-shakable constant sealed classes. Contains the all actively used 169[^1] currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
@@ -15,22 +17,22 @@ This ISO-driven, pure Dart, fully tested and and 3rd-party dependency-free packa
 
 | **Field**            | **Required** | **Description**                                                                         | **Example for FiatEur**                        |
 | -------------------- | ------------ | --------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| code                 | Yes          | The international 3-numeric non-empty letter code as defined by the ISO 4217 standard.  | "EUR"                                          |
-| name                 | Yes          | The English name of the currency.                                                       | "Euro"                                         |
-| namesNative          | Yes          | The native names of the currency in different locales.                                  | ["Euro"]                                       |
-| codeNumeric          | Yes          | The international 3-numeric non-empty numeric code as defined by the ISO 4217 standard. | "978"                                          |
+| code                 | **Yes**      | The international 3-numeric non-empty letter code as defined by the ISO 4217 standard.  | "EUR"                                          |
+| name                 | **Yes**      | The English name of the currency.                                                       | "Euro"                                         |
+| namesNative          | **Yes**      | The native names of the currency in different locales.                                  | ["Euro"]                                       |
+| codeNumeric          | **Yes**      | The international 3-numeric non-empty numeric code as defined by the ISO 4217 standard. | "978"                                          |
 | alternateSymbols     | No           | Alternative symbols for this currency or `null` if no such symbols exists.              | `null`                                         |
 | disambiguateSymbol   | No           | Alternative currency used if symbol is ambiguous, or `null` if no such symbol exists.   | `null`                                         |
 | htmlEntity           | No           | The HTML entity for the currency symbol, or `null` if no such entity exists.            | "€"                                            |
-| smallestDenomination | Yes          | Smallest amount of cash possible (in the subunit of this currency).                     | 1                                              |
+| smallestDenomination | **Yes**      | Smallest amount of cash possible (in the subunit of this currency).                     | 1                                              |
 | subunit              | No           | The name of the fractional monetary unit, or `null` if no such name exists.             | "Cent"                                         |
-| subunitToUnit        | Yes          | The proportion between the unit and the subunit.                                        | 100                                            |
-| priority             | Yes          | A numerical value that can be used to sort/group any currency list.                     | 2                                              |
-| unitFirst            | Yes          | Should the currency symbol precede the amount, or should it come after?                 | true                                           |
+| subunitToUnit        | **Yes**      | The proportion between the unit and the subunit.                                        | 100                                            |
+| priority             | **Yes**      | A numerical value that can be used to sort/group any currency list.                     | 2                                              |
+| unitFirst            | **Yes**      | Should the currency symbol precede the amount, or should it come after?                 | true                                           |
 | symbol               | No           | The currency symbol.                                                                    | "€"                                            |
-| decimalMark          | Yes          | The decimal mark, or character used to separate the whole unit from the subunit.        | ","                                            |
-| thousandsSeparator   | Yes          | The character used to separate thousands grouping of the whole unit.                    | "."                                            |
-| translations         | Yes          | A list of `TranslatedName`s representing the currency name translations.                | **115+** translations for a Euro currency name |
+| decimalMark          | **Yes**      | The decimal mark, or character used to separate the whole unit from the subunit.        | ","                                            |
+| thousandsSeparator   | **Yes**      | The character used to separate thousands grouping of the whole unit.                    | "."                                            |
+| translations         | **Yes**      | A list of `TranslatedName`s representing the currency name translations.                | **115+** translations for a Euro currency name |
 
 Compile time constant list of all currencies accessible via `FiatCurrency.list` and more over, the **FiatCurrency** class provides the following methods/constructors:
 
@@ -106,9 +108,10 @@ For more usage examples, please see the `/example` folder.
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are very strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has 100% code coverage, with more than 583 (+1533 in underling packages) tests, providing confidence in its reliability and stability.
+- **High code coverage**: The code in this package has 100% code coverage, with more than 583 (+1534 in underling packages) tests, providing confidence in its reliability and stability.
+- **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
-- **MIT License**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+- **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
 ### Additional information
 
