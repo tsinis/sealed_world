@@ -1,5 +1,6 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
+![CodeRabbit](https://img.shields.io/badge/reviewed-code?style=flat&logo=vowpalwabbit&logoColor=orange&label=coderabbit&color=dark-green&link=https%3A%2F%2Fcoderabbit.ai)
 ![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green&link=https%3A%2F%2Fdcm.dev)
 [![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/sealed_countries.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/sealed_countries.yaml)
 ![Pub points](https://img.shields.io/pub/points/sealed_countries)
@@ -9,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_countries.svg)](https://pub.dev/packages/sealed_countries)
 
-This ISO-driven, fully tested and pure Dart package provides information about world countries in form of compile-time, tree-shakable constant sealed classes. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, [languages (and scripts)](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages), [currencies](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies), country/currency/language name translations, etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, fully tested and pure Dart package provides information about world countries in the form of compile-time, tree-shakable constant sealed classes. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, [languages (and scripts)](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages), [currencies](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies), country/currency/language name translations, etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 

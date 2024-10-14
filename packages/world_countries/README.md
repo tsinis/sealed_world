@@ -1,5 +1,6 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
+![CodeRabbit](https://img.shields.io/badge/reviewed-code?style=flat&logo=vowpalwabbit&logoColor=orange&label=coderabbit&color=dark-green&link=https%3A%2F%2Fcoderabbit.ai)
 ![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green&link=https%3A%2F%2Fdcm.dev)
 [![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml)
 ![Pub points](https://img.shields.io/pub/points/world_countries)
@@ -11,7 +12,7 @@
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_countries/doc/example.gif)
 
-This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in form of compile-time, tree-shakable constant sealed classes with a customizable pickers. This is Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag look) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers. Country flags are created with optimized CustomPainters with a help of underlying [world_flags](https://pub.dev/packages/world_flags) package.
+This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in the form of compile-time, tree-shakable constant sealed classes with a customizable pickers. This is a Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag look) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers. Country flags are created with optimized CustomPainters with a help of underlying [world_flags](https://pub.dev/packages/world_flags) package.
 
 ### Table of Contents
 

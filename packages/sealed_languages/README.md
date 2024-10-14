@@ -1,5 +1,6 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
+![CodeRabbit](https://img.shields.io/badge/reviewed-code?style=flat&logo=vowpalwabbit&logoColor=orange&label=coderabbit&color=dark-green&link=https%3A%2F%2Fcoderabbit.ai)
 ![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green&link=https%3A%2F%2Fdcm.dev)
 [![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/sealed_languages.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/sealed_languages.yaml)
 ![Pub points](https://img.shields.io/pub/points/sealed_languages)
@@ -9,7 +10,7 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_languages.svg)](https://pub.dev/packages/sealed_languages)
 
-This ISO-driven, pure Dart, fully tested and and dependency-free package provides information about world languages in form of compile-time, tree-shakable constant sealed classes. Contains the **all 184 languages with ISO 639-1 codes**, also provides ISO 639-2 codes, their English, native names, language family info, language name translations, etc. For Flutter ready widgets (like language picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and and dependency-free package provides information about world languages in the form of compile-time, tree-shakable constant sealed classes. Contains the **all 184 languages with ISO 639-1 codes**, also provides ISO 639-2 codes, their English, native names, language family info, language name translations, etc. For Flutter ready widgets (like language picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
