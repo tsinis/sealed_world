@@ -1623,7 +1623,7 @@ class CountryBhr extends WorldCountry {
           code: "BHR",
           codeNumeric: "048",
           codeShort: "BH",
-          cioc: "BHR",
+          cioc: "BRN",
           currencies: const [FiatBhd()],
           idd: const Idd(root: 9, suffixes: [73]),
           altSpellings: const [
@@ -12399,7 +12399,7 @@ class CountryPry extends WorldCountry {
             latLng: LatLng(-25.28, -57.57),
           ),
           postalCode:
-              const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
+              const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocUSAN()],
         );
 }
