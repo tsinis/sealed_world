@@ -1,3 +1,12 @@
+## 1.5.1
+
+NEW FEATURES
+
+- Updated postal code pattern a format for Paraguay.
+- Updated International Olympic Committee (IOC) country code for Bahrain.
+- Improvements of `toString()` method implementations in models and addressing new lints + DCM reports.
+- Added "polski" to the [Polish](https://github.com/tsinis/sealed_world/issues/221) language `namesNative` array.
+
 ## 1.5.0
 
 > This is the last minor version update with significant changes for some time. The next steps will be patches at most. Currently working on v2.0.0 which will bring new data and a big feature there, very likely without breaking the existing API.
