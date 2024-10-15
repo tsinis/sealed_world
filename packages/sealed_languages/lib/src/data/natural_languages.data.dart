@@ -2396,7 +2396,7 @@ class LangPol extends NaturalLanguage {
           name: "Polish",
           code: "POL",
           codeShort: "PL",
-          namesNative: const ["polszczyzna"],
+          namesNative: const ["polski", "polszczyzna"],
           family: const IndoEuropean(),
         );
 
