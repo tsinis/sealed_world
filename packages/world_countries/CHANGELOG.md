@@ -4,7 +4,7 @@ NEW FEATURES
 
 - Added new method for the [FunctionalPlatform](https://pub.dev/documentation/world_countries/latest/helpers/FunctionalPlatform-class.html) - `maybeWhen` (in addition to hash-map like method `maybeWhenConst` that works with mostly immutable object returns (instead of closures in the new method)).
 - Improved `showInSearch` method pop handling.
-- A `searchSuggestions` method might be affected by the SDK [bug](https://github.com/flutter/flutter/issues/155180) fixed in [v3.27.0+](https://github.com/flutter/flutter/pull/155219). As a temp. workaround for it - you can still create your instance of `SearchController` and dispose it on your own.
+- A `searchSuggestions` method might be affected by the SDK [bug](https://github.com/flutter/flutter/issues/155180) fixed in [v3.27.0](https://github.com/flutter/flutter/pull/155219). As a temporary workaround, you can create your own instance of `SearchController` and dispose of it manually.
 - Updated postal code pattern a format for Paraguay.
 - Updated International Olympic Committee (IOC) country code for Bahrain.
 - Improvements of `toString()` method implementations in models and addressing new lints + DCM reports.
