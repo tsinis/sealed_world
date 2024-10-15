@@ -1,7 +1,7 @@
 name: example
 description: A world_countries example application.
 publish_to: none
-version: 2.1.0+0
+version: 2.0.2+0
 
 # Should run on Flutter v3.27 or higher, because of SearchController bug.
 environment:
