@@ -80,7 +80,7 @@ jobs:
 
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
-        run: dcm analyze .
+        run: dcm analyze . --congratulate --fatal-style --fatal-warnings --reporter=github
 
       - name: 🛂 Set up file system write permissions
         run: sudo chown -R runner:runner $(pwd) && sudo chmod -R 777 $(pwd)
