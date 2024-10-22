@@ -14,7 +14,7 @@ class FloatingButton extends StatelessWidget {
         onLongPress: () => onPressed(isLong: true),
         // ignore: prefer-action-button-tooltip, we need long-press here.
         child: FloatingActionButton(
-          heroTag: "fab",
+          heroTag: "FAB",
           onPressed: () => onPressed(isLong: false),
           child: AnimatedBuilder(
             animation: controller,
