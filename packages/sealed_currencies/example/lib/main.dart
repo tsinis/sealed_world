@@ -21,9 +21,9 @@ void main() {
   subunitToUnit: 100, unitFirst: true), translations: eurCurrencyTranslations".
   */
 
-  print(isVikingKrone(const FiatNok())); // Prints "true".
-  print(isVikingKrone(serbianDinar)); // Prints "null".
-  print(isVikingKrone(const FiatCzk())); // Prints "false".
+  print(isVikingKrone(const FiatNok())); // Prints true.
+  print(isVikingKrone(serbianDinar)); // Prints null.
+  print(isVikingKrone(const FiatCzk())); // Prints false.
 
   FiatCurrency.list
       .where((currency) => currency.symbol?.contains("kr") ?? false)
