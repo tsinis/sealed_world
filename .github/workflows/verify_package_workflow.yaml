@@ -72,12 +72,15 @@ jobs:
           report: ${{ steps.analysis.outputs.json_output }}
           min-pub-points: 130
 
-      - name: 🛂 Set up file system write permissions
-        run: sudo chown -R runner:runner $(pwd) && sudo chmod -R 777 $(pwd)
+      - name: 📥 Install DCM
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: CQLabs/setup-dcm@v1.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
-        run: dart run dart_code_linter:metrics --fatal-style --fatal-performance --fatal-warnings -r github lib
+        run: dcm analyze .
 
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
