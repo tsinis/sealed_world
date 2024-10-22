@@ -82,11 +82,8 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: dcm analyze .
 
-      - name: 🛂 Adjust permissions for build directory
-        run: |
-          mkdir -p build
-          sudo chown -R runner:runner build
-          sudo chmod -R 777 build
+      - name: 🛂 Set up file system write permissions
+        run: sudo chown -R runner:runner $(pwd) && sudo chmod -R 777 $(pwd)
 
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
