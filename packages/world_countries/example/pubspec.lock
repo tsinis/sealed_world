@@ -205,10 +205,10 @@ packages:
     dependency: "direct dev"
     description:
       name: dart_code_linter
-      sha256: "4ab030d610d7833a0e416768dac5341fa873da922694793e1cab6274a7af4991"
+      sha256: e61c495b46f329aa84e228bfcd0567f1f9d8495bd1953f6c16f7c496e2bb964c
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.5"
+    version: "1.2.0"
   dart_code_metrics_presets:
     dependency: "direct dev"
     description:
