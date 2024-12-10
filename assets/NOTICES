@@ -4123,7 +4123,7 @@ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 --------------------------------------------------------------------------------
 boringssl
 
-Copyright (c) 2023, Google LLC
+Copyright (c) 2024, Google Inc.
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -4139,7 +4139,7 @@ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 --------------------------------------------------------------------------------
 boringssl
 
-Copyright (c) 2024, Google Inc.
+Copyright (c) 2024, Google LLC
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -8083,7 +8083,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
   This Source Code Form is "Incompatible With Secondary Licenses", as
   defined by the Mozilla Public License, v. 2.0.
 
-You may obtain a copy of this library's Source Code Form from: https://dart.googlesource.com/sdk/+/69170fac244cf668cf59c1b6ce73c473b8710cc2
+You may obtain a copy of this library's Source Code Form from: https://dart.googlesource.com/sdk/+/1a28e6c86b09f1c83365f54388c32ed97c9e9b31
 /third_party/fallback_root_certificates/
 
 --------------------------------------------------------------------------------
