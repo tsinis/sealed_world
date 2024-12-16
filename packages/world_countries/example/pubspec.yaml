@@ -28,7 +28,7 @@ dev_dependencies:
   flutter_gen_runner: ^5.8.0
   flutter_test: # From Google
     sdk: flutter
-  lints: ^5.0.0 # From Google
+  lints: ^5.1.0 # From Google
 
 flutter:
   uses-material-design: true
