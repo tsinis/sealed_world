@@ -152,6 +152,7 @@ class FiatCurrency extends Currency
   factory FiatCurrency.fromName(
     Object name, [
     Iterable<FiatCurrency> currencies = listExtended,
+    // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     final upperCaseName = name.toUpperCaseIsoCode();
 

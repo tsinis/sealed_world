@@ -99,6 +99,6 @@ class ElementsProperties {
       "${shape == null ? '' : 'shape: ${shape.runtimeType}(), '}"
       "heightFactor: $heightFactor, "
       "${widthFactor == null ? '' : 'widthFactor: $widthFactor, '}"
-      "${angle == null ? '' : 'angle: $angle, '}offset: $offset, "
-      "${child == null ? '' : 'child: $child,'})";
+      "${angle == null ? '' : 'angle: $angle, '}offset: $offset,"
+      "${child == null ? '' : ' child: $child,'})";
 }

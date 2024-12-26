@@ -269,7 +269,7 @@ abstract class BasicPicker<T extends Translated>
     ThemeData? appBarThemeData,
   }) async {
     T? result;
-    // ignore: avoid-late-keyword, we need it in the local function below.
+    // ignore: avoid-late-keyword, avoid-unnecessary-local-late, it's not.
     late final ImplicitSearchDelegate<T> delegate;
     // ignore: avoid-local-functions, lazy delegate.
     void closeOnSelect(T selected) {

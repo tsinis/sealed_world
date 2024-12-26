@@ -1,7 +1,6 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/widgets.dart";
 
-/// {@hideConstantImplementations}
 /// An interface for widgets that are displaying an indexed list of items.
 ///
 /// This widget can be used to display a list of items, each of which can be

@@ -167,6 +167,7 @@ class NaturalLanguage extends Language
   factory NaturalLanguage.fromName(
     Object name, [
     Iterable<NaturalLanguage> languages = list,
+    // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     final upperCaseName = name.toUpperCaseIsoCode();
 

@@ -52,6 +52,7 @@ class Script extends WritingSystem
   /// {@macro optional_instances_array_parameter}
   /// This method returns the [Script] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
+  // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
     String? validCode =
@@ -101,6 +102,7 @@ class Script extends WritingSystem
   /// be used to specify a list of [Script] objects to search through. This
   /// method returns the [Script] instance that corresponds to the given name,
   /// or throws a [StateError] if no such instance exists.
+  // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   factory Script.fromName(Object name, [Iterable<Script> scripts = list]) {
     final upperCaseName = name.toUpperCaseIsoCode();
 

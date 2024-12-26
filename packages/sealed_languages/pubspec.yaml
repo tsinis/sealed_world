@@ -23,9 +23,8 @@ environment:
 dev_dependencies:
   _sealed_world_tests:
     path: ../_sealed_world_tests
-  build_runner: ^2.4.13 # From Google
-  coverage: ^1.9.2 # From Google
-  dart_code_linter: ^1.1.5 # Ex-DCM.
-  dart_code_metrics_presets: ^2.17.0
-  lints: ^5.0.0 # From Google
-  test: ^1.25.8 # From Google
+  build_runner: ^2.4.14 # From Google
+  coverage: ^1.11.1 # From Google
+  dart_code_metrics_presets: ^2.19.0
+  lints: ^5.1.1 # From Google
+  test: ^1.25.14 # From Google

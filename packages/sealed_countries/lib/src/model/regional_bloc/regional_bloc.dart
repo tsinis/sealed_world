@@ -40,6 +40,7 @@ class RegionalBloc extends WorldBloc {
   factory RegionalBloc.fromAcronym(
     Object acronym, [
     Iterable<RegionalBloc>? blocs,
+    // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     final string = acronym.toUpperCaseIsoCode();
     if (blocs == null) return map[string]!;

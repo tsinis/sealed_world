@@ -5,7 +5,7 @@ linter:
     public_member_api_docs: false
     curly_braces_in_flow_control_structures: false
 
-dart_code_linter:
+dart_code_metrics:
   rules:
     - prefer-moving-to-variable:
         allowed-duplicated-chains: 3

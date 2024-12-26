@@ -26,7 +26,8 @@ class TabBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ColoredBox(
-            color: context.theme.colorScheme.onSecondary.withOpacity(1 / 2),
+            color:
+                context.theme.colorScheme.onSecondary.withValues(alpha: 1 / 2),
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
@@ -54,7 +55,8 @@ class TabBody extends StatelessWidget {
           Expanded(
             child: ClipRect(
               child: ColoredBox(
-                color: context.theme.colorScheme.surface.withOpacity(1 / 2),
+                color:
+                    context.theme.colorScheme.surface.withValues(alpha: 1 / 2),
                 child: FunctionalPlatform.maybeWhenConst(
                   orElse: BackdropFilter(
                     filter: ImageFilter.blur(

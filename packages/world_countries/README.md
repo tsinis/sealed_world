@@ -3,10 +3,10 @@
 [![CodeRabbit](https://img.shields.io/badge/reviewed-code?style=flat&logo=vowpalwabbit&logoColor=orange&label=coderabbit&color=dark-green)](https://coderabbit.ai)
 [![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green)](https://dcm.dev)
 [![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml)
-![Pub points](https://img.shields.io/pub/points/world_countries)
-![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)
-![Pub popularity](https://img.shields.io/pub/popularity/world_countries)
-![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)
+[![Pub points](https://img.shields.io/pub/points/world_countries)](https://pub.dev/packages/world_countries/score)
+[![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/commits/main/packages/world_countries)
+[![Pub popularity](https://img.shields.io/pub/popularity/world_countries)](https://pub.dev/packages/world_countries/score)
+[![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/world_countries.svg)](https://pub.dev/packages/world_countries)
 
@@ -47,6 +47,10 @@ Or you can just create your own pickers by extending `BasicPicker`.
 To preview the demo from the example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **119** or higher). Please allow up 10 seconds for initial fonts and data caching.
 
 > Note: Please keep in mind that demo was built with Flutter WASM which is in very early alpha stage, so performance might be affected.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tsinis/sealed_world?hide_repo_select=true&ref=main)
+<a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Ftsinis%2Fsealed_world%2Ftree%2Fmain%2Fpackages%2Fworld_countries%2Fexample">
+<img height="32" alt="Open in IDX" src="https://cdn.idx.dev/btn/open_dark_32.svg"> </a>
 
 ### Getting started
 

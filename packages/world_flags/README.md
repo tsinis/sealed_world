@@ -3,9 +3,9 @@
 [![CodeRabbit](https://img.shields.io/badge/reviewed-code?style=flat&logo=vowpalwabbit&logoColor=orange&label=coderabbit&color=dark-green)](https://coderabbit.ai)
 [![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green)](https://dcm.dev)
 [![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml)
-![Pub points](https://img.shields.io/pub/points/world_flags)
-![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)
-![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)
+[![Pub points](https://img.shields.io/pub/points/world_flags)](https://pub.dev/packages/world_flags/score)
+[![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/commits/main/packages/world_flags)
+[![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/world_flags.svg)](https://pub.dev/packages/world_flags)
 

@@ -20,6 +20,7 @@ class SimpleRouterDelegate extends RouterDelegate<ParsedRoute>
     required this.routeState,
     required this.builder,
     required this.navigatorKey,
+    // ignore: avoid-non-empty-constructor-bodies, it's original Google code.
   }) {
     routeState.addListener(notifyListeners);
   }

@@ -114,7 +114,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     final maybeNameTitle =
         itemNameTranslated(itemProperties.item, itemProperties.context);
 
-    return isDense ?? false
+    return (isDense ?? false)
         ? CountryTile.simple(
             itemProperties,
             title: maybeNameTitle,

@@ -11,7 +11,9 @@ void main() => group("$ElementsProperties", () {
         "toString",
         () => expect(
           value.toString(),
-          startsWith("$ElementsProperties(Color(0xffffffff)"),
+          "$ElementsProperties(Color(alpha: 1.0000, red: 1.0000, green: "
+          "1.0000, blue: 1.0000, colorSpace: ColorSpace.sRGB), "
+          "heightFactor: 1.0, offset: Offset(0.0, 0.0),)",
         ),
       );
 

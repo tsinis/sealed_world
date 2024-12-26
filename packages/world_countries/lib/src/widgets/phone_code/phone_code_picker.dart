@@ -151,10 +151,10 @@ class PhoneCodePicker extends CountryPicker {
           ),
         ),
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
-        onPressed: (phone) => isDense ?? false
+        onPressed: (phone) => (isDense ?? false)
             ? maybeSelectAndPop(phone, itemProperties.context)
             : onSelect?.call(phone),
-        visualDensity: isDense ?? false ? VisualDensity.compact : null,
+        visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
       );
 
   @override

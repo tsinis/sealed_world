@@ -46,7 +46,7 @@ class DescriptionTile extends StatelessWidget {
             Divider(
               height: 1,
               thickness: 1,
-              color: leadingColor.withOpacity(0.1),
+              color: leadingColor.withValues(alpha: 0.1),
             ),
             ListTile(
               leading: _leading,

@@ -213,6 +213,7 @@ class WorldCountry extends Country
   factory WorldCountry.fromCodeNumeric(
     Object codeNumeric, [
     Iterable<WorldCountry>? countries,
+    // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     if (countries == null) return codeNumericMap.findByCodeOrThrow(codeNumeric);
     final trimmedCode = codeNumeric.toUpperCaseIsoCode();

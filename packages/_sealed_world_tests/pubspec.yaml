@@ -7,14 +7,13 @@ repository: https://github.com/tsinis/sealed_world/tree/main/packages/_sealed_wo
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 
 environment:
-  sdk: ^3.5.3
+  sdk: ^3.6.0
 
 dependencies:
   meta: ^1.15.0 # Specific version for the flags package. From Google
-  test: ^1.25.7 # Specific version for the flags package. From Google
+  test: ^1.25.8 # Specific version for the flags package. From Google
   vm_service: ^14.2.5 # Specific version for the flags package. From Google
 
 dev_dependencies:
-  dart_code_linter: ^1.1.5 # Ex-DCM.
-  dart_code_metrics_presets: ^2.17.0
-  lints: ^5.0.0 # From Google
+  dart_code_metrics_presets: ^2.19.0
+  lints: ^5.1.1 # From Google
