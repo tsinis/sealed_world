@@ -31,6 +31,7 @@ class NaturalLanguageFamily extends LanguageFamily {
   factory NaturalLanguageFamily.fromName(
     String name, [
     Iterable<NaturalLanguageFamily> families = list,
+    // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     assert(families.isNotEmpty, "`families` should not be empty!");
 

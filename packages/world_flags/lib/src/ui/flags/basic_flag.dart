@@ -79,7 +79,7 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
       elementsBuilder?.call(_elements, _flagAspectRatio);
 
   double _boxRatio(BoxDecoration? boxDecoration, double? ratio) =>
-      boxDecoration.isCircle ? 1 : ratio ?? _flagAspectRatio;
+      boxDecoration.isCircle ? 1 : (ratio ?? _flagAspectRatio);
 
   @override
   Widget build(BuildContext context) {

@@ -59,7 +59,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   /// Creates a [CountryFlag] widget with a custom flag representation.
   ///
   /// - [country]: The country for which the flag is to be displayed.
-  /// - [map]: A map of custom flags.
+  /// - [alternativeMap]: A map of custom flags.
   /// - [height]: The height of the flag. If null, the height from the flag
   /// theme is used.
   /// - [width]: The width of the flag. If null, the width from the flag theme

@@ -22,7 +22,8 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
       !listEquals(_flagColors, oldWidget._flagColors);
 
   ThemeData get theme {
-    final seedColor = _flagColors.firstOrNull?.withOpacity(1) ?? _whiteColor;
+    final seedColor =
+        _flagColors.firstOrNull?.withValues(alpha: 1) ?? _whiteColor;
     final brightness = ThemeData.estimateBrightnessForColor(seedColor);
 
     return ThemeData(

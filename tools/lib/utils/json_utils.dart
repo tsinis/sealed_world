@@ -264,7 +264,7 @@ const ${varFileName.toCamelCase()} = [
     return language;
   }
 
-  ({String languageCode, String? countryCode, String? scriptCode})
+  ({String? countryCode, String languageCode, String? scriptCode})
       _extractLocaleCode(String code) {
     final regex = RegExp("^([A-Z]+)(?:_([A-Z]+))?(?:_([A-Z]+))?");
 
@@ -275,7 +275,7 @@ const ${varFileName.toCamelCase()} = [
     String? countryCode = match?.group(3);
     String? scriptCode = countryCode == null ? null : country;
     countryCode = scriptCode == null ? country : countryCode;
-    countryCode = countryCode?.isEmpty ?? true ? null : countryCode;
+    countryCode = (countryCode?.isEmpty ?? true) ? null : countryCode;
     if (countryCode?.length == 4) {
       scriptCode = countryCode;
       countryCode = null;

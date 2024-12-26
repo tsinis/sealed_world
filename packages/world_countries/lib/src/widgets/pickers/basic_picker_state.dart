@@ -43,8 +43,8 @@ class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
           theme?.dragStartBehavior ??
           DragStartBehavior.start,
       emptyStatePlaceholder: widget.emptyStatePlaceholder,
-      header: widget.showHeader ?? theme?.showHeader ?? true
-          ? widget.header ??
+      header: (widget.showHeader ?? theme?.showHeader ?? true)
+          ? (widget.header ??
               theme?.header ??
               AdaptiveSearchTextField(
                 _controller,
@@ -54,7 +54,7 @@ class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
                     UiConstants.padding,
                 showClearButton:
                     widget.showClearButton ?? theme?.showClearButton ?? true,
-              )
+              ))
           : null,
       itemBuilder: (itemProperties, {isDense}) =>
           widget.itemBuilder?.call(itemProperties, isDense: isDense) ??

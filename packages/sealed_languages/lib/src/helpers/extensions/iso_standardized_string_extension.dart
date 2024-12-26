@@ -108,13 +108,13 @@ extension IsoStandardizedStringExtension on String {
     T Function(String code)? regular,
     T Function(String code)? short,
   }) {
-    final code = minLength == maxLength
+    final code = (minLength == maxLength)
         ? maybeToValidIsoCode(exactLength: minLength)
         : maybeToValidIsoCode(maxLength: maxLength, minLength: minLength);
     if (code == null) return orElse(this);
 
     return code.length == IsoStandardized.codeShortLength
-        ? short?.call(code.toUpperCase()) ?? orElse(code)
+        ? (short?.call(code.toUpperCase()) ?? orElse(code))
         : _onNumericOrRegular(code, orElse, regular: regular, numeric: numeric);
   }
 
@@ -127,7 +127,7 @@ extension IsoStandardizedStringExtension on String {
     if (numeric == null && regular == null) return orElse(code);
 
     return RegExp("[a-z]", caseSensitive: false).hasMatch(code)
-        ? regular?.call(code) ?? orElse(code)
-        : numeric?.call(code) ?? orElse(code);
+        ? (regular?.call(code) ?? orElse(code))
+        : (numeric?.call(code) ?? orElse(code));
   }
 }

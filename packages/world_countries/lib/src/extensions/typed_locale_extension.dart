@@ -91,9 +91,9 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
       ) as T;
 
   ({
-    Iterable<NaturalLanguage> languages,
-    Iterable<FiatCurrency> currencies,
     Iterable<WorldCountry> countries,
+    Iterable<FiatCurrency> currencies,
+    Iterable<NaturalLanguage> languages,
   }) _itemsToTranslate(
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,

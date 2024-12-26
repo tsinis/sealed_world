@@ -117,6 +117,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
       ..translate(offset.dx, offset.dy)
       ..rotate(angle);
 
+    // ignore: prefer-for-in, need index here.
     for (int i = 0; i < brokenBars.length; i += 1) {
       final isBroken = brokenBars.length > i && brokenBars[i];
       final y = (height + space) * i;
