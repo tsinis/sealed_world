@@ -259,27 +259,27 @@
       },
       {
         "type": "shell",
-        "command": "dart run dart_code_linter:metrics analyze lib",
+        "command": "dcm analyze lib",
         "label": "Dart Code Metrics Analyze"
       },
       {
         "type": "shell",
-        "command": "dart run dart_code_linter:metrics check-unnecessary-nullable lib",
+        "command": "dcm check-unnecessary-nullable lib",
         "label": "Dart Code Metrics Nullable"
       },
       {
         "type": "shell",
-        "command": "dart run dart_code_linter:metrics check-unused-l10n lib",
+        "command": "dcm check-unused-l10n lib",
         "label": "Dart Code Metrics Unused L10N"
       },
       {
         "type": "shell",
-        "command": "dart run dart_code_linter:metrics check-unused-files lib",
+        "command": "dcm check-unused-files lib",
         "label": "Dart Code Metrics Unused Files"
       },
       {
         "type": "shell",
-        "command": "dart run dart_code_linter:metrics check-unused-code lib",
+        "command": "dcm check-unused-code lib",
         "label": "Dart Code Metrics Unused Code"
       },
       {
