@@ -12,8 +12,9 @@ void main() => group("$ColorsProperties", () {
         "toString",
         () => expect(
           const ColorsProperties(color).toString(),
-          "$ColorsProperties(MaterialColor(primary value: Color(0xff2196f3)), "
-          "ratio: 1)",
+          "$ColorsProperties(MaterialColor(primary value: Color(alpha: 1.0000, "
+          "red: 0.1294, green: 0.5882, blue: 0.9529, colorSpace: "
+          "ColorSpace.sRGB)), ratio: 1)",
         ),
       );
 
