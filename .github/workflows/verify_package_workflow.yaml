@@ -106,7 +106,7 @@ jobs:
         uses: codecov/codecov-action@v5.1.2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ${{ env.relative_path }}/coverage/lcov.info
+          files: ${{ env.relative_path }}/coverage/lcov.info
           flags: ${{ inputs.package_name }}
           name: ${{ inputs.package_name }}
           override_branch: ${{ github.base_ref }}

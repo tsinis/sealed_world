@@ -16,6 +16,7 @@ updates:
     versioning-strategy: increase
     directories:
       - packages/**/*
+      - packages/*
       - tools
     schedule:
       interval: "weekly"

@@ -27,7 +27,7 @@ jobs:
       - name: ✍🏻 Add Reviewer and Author Assign
         uses: kentaro-m/auto-assign-action@v2.0.0
         with:
-          configuration-path: '.github/workflows/config/auto-assign.yaml'
+          configuration-path: ".github/workflows/config/auto-assign.yaml"
 
   pr-title:
     runs-on: ubuntu-latest

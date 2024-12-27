@@ -4,10 +4,11 @@ on:
   push:
     branches: [main]
     tags:
-    - 'world_countries-v[0-9]+.[0-9]+.[0-9]+*'
+      - "world_countries-v[0-9]+.[0-9]+.[0-9]+*"
 
 jobs:
   publish-world-countries:
+    if: github.ref_type == 'tag'
     uses: ./.github/workflows/publish_to_pub.yaml
     permissions:
       id-token: write
