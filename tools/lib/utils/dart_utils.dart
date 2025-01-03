@@ -3,8 +3,8 @@ import "dart:io";
 final class DartUtils {
   const DartUtils();
 
-  Future<void> run(List<String> arguments) async {
-    final result = await Process.run("dart", arguments);
+  Future<void> run(List<String> arguments, [String process = "dart"]) async {
+    final result = await Process.run(process, arguments);
     // ignore: avoid_print, it's just a CLI tool, not a production code.
     if (result.exitCode != 0) print(result.stderr);
   }
@@ -26,4 +26,6 @@ final class DartUtils {
   Future<void> fixApply() => run(["fix", "--apply"]);
 
   Future<void> format() => run(["format", "."]);
+
+  Future<void> dcm([String directory = "."]) => run(["fix", directory], "dcm");
 }

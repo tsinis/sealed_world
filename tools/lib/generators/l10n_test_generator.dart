@@ -1,0 +1,97 @@
+import "package:sealed_countries/sealed_countries.dart";
+
+import "../constants/path_constants.dart";
+import "../models/package.dart";
+import "../utils/dart_utils.dart";
+import "../utils/io_utils.dart";
+import "helpers/extensions/package_associations_extension.dart";
+
+class L10NTestGenerator {
+  const L10NTestGenerator(this.package);
+
+  final Package package;
+
+  static const _dart = DartUtils();
+
+  Future<void> generate(String path) async {
+    final io = IoUtils();
+    final dependencyImport = package.whenConst(
+      sealedLanguages: "TBD",
+      sealedCountries: '"package:sealed_currencies/sealed_currencies.dart";',
+      sealedCurrencies: '"package:sealed_languages/sealed_languages.dart";',
+    );
+
+    final dataImport = package.whenConst(
+      sealedLanguages: "TBD",
+      sealedCountries:
+          '"package:sealed_countries/src/data/official_world_countries.data.dart";',
+      sealedCurrencies: "TBD",
+    );
+
+    for (final translated in package.dataList) {
+      final code = translated.code;
+      final instance = "${translated.runtimeType}()";
+      final buffer = StringBuffer("""
+// ignore_for_file: lines_longer_than_80_chars, avoid-non-ascii-symbols
+
+import $dataImport
+import $dependencyImport
+import "package:test/test.dart";
+
+void main() => group("\$$instance L10N", () {
+const value = $instance;\n
+""");
+
+      for (final l10n in translated.translations) {
+        final locale = l10n.locale;
+        final common = l10n.name;
+        final full = l10n.fullName;
+
+        buffer.write("""
+\ntest("has translation for '$locale' locale", () {
+        const expectedName = "$common";
+        ${full == null ? '' : 'const expectedFullName = ${full == common ? 'expectedName' : '"$full"'};'}
+        final translated = value.maybeTranslation(
+          const ${locale.toString(short: false)},
+          useLanguageFallback: false,
+        );
+
+        expect(translated?.name, expectedName);
+""");
+        if (full != null) {
+          buffer.write("expect(translated?.fullName, expectedFullName);");
+        }
+
+        buffer.write("""
+        expect(
+          value.translations,
+          contains(
+            const TranslatedName(${locale.language.runtimeType}(),
+            name: expectedName,
+        """);
+
+        if (full != null) buffer.write("fullName: expectedFullName,");
+        if (locale.script != null) {
+          buffer.write("script: ${locale.script.runtimeType}(),");
+        }
+        if (locale.countryCode != null) {
+          buffer.write('countryCode: "${locale.countryCode}",');
+        }
+
+        buffer.write("),),);\n});");
+      }
+
+      buffer.write("\n});");
+
+      final test = "${code}_l10n_${PathConstants.test}.${PathConstants.dart}";
+      io.writeContentToFile(join(path, test.toLowerCase()), buffer);
+    }
+
+    io.directory = Directory(path);
+
+    await _dart.fixFormat();
+    await _dart.dcm();
+    await _dart.dcm();
+    await _dart.fixFormat();
+  }
+}
