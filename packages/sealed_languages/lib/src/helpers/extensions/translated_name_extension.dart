@@ -1,3 +1,4 @@
+import "../../model/core/basic_locale.dart";
 import "../../model/language/language.dart";
 import "../../model/script/writing_system.dart";
 import "../../model/translated_name.dart";
@@ -64,4 +65,7 @@ extension TranslatedNameExtension on TranslatedName {
   /// For example instead of `name.name` it's more natural/readable to use
   /// `name.common`.
   String get common => name;
+
+  BasicLocale get locale =>
+      BasicLocale(language, countryCode: countryCode, script: script);
 }

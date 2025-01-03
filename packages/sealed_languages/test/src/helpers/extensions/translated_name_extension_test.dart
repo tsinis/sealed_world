@@ -1,4 +1,6 @@
+import "package:sealed_languages/src/data/scripts.data.dart";
 import "package:sealed_languages/src/helpers/extensions/translated_name_extension.dart";
+import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:sealed_languages/src/model/translated_name.dart";
@@ -10,6 +12,21 @@ void main() => group("TranslatedNameExtension", () {
         NaturalLanguage.list.last,
         name: string,
         fullName: string,
+      );
+
+      test(
+        "locale",
+        () => expect(
+          value
+              .copyWith(script: const ScriptLatn(), countryCode: "SK")
+              .locale
+              .toString(),
+          BasicLocale(
+            NaturalLanguage.list.last,
+            script: const ScriptLatn(),
+            countryCode: "SK",
+          ).toString(),
+        ),
       );
 
       group("copyWith", () {
