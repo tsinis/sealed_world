@@ -230,11 +230,7 @@
         "command": "dart pub get --no-example",
         "label": "Dart Pub Get"
       },
-      {
-        "type": "shell",
-        "command": "dart analyze .",
-        "label": "Dart Analyze"
-      },
+      { "type": "shell", "command": "dart analyze .", "label": "Dart Analyze" },
       {
         "type": "shell",
         "command": "dart format .",
@@ -258,10 +254,11 @@
         "group": "build",
         "label": "Dart Build Runner"
       },
+      { "type": "shell", "command": "dart test", "label": "Dart Test (All)" },
       {
         "type": "shell",
         "command": "dart test --exclude-tags generated --fail-fast --coverage=coverage",
-        "label": "Dart Test"
+        "label": "Dart Test (Exclude Generated)"
       },
       {
         "type": "shell",

@@ -11,9 +11,11 @@ class L10NTestGenerator {
 
   final Package package;
 
+  static const l10nLabel = "L10N";
   static const _dart = DartUtils();
 
   Future<void> generate(String path) async {
+    final prefix = "${package.dataRepresent}_${l10nLabel}_";
     final io = IoUtils();
     final dependencyImport = package.whenConst(
       sealedLanguages: "TBD",
@@ -38,7 +40,7 @@ import $dataImport
 import $dependencyImport
 import "package:test/test.dart";
 
-void main() => group("\$$instance L10N", () {
+void main() => group("\$$instance $l10nLabel", () {
 const value = $instance;\n
 """);
 
@@ -83,7 +85,7 @@ const value = $instance;\n
 
       buffer.write('\n}, tags: "generated",);');
 
-      final test = "${code}_l10n_${PathConstants.test}.${PathConstants.dart}";
+      final test = "${code}_$prefix${PathConstants.test}.${PathConstants.dart}";
       io.writeContentToFile(join(path, test.toLowerCase()), buffer);
     }
 
