@@ -81,7 +81,7 @@ const value = $instance;\n
         buffer.write("),),);\n});");
       }
 
-      buffer.write("\n});");
+      buffer.write('\n}, tags: "generated",);');
 
       final test = "${code}_l10n_${PathConstants.test}.${PathConstants.dart}";
       io.writeContentToFile(join(path, test.toLowerCase()), buffer);

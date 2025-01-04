@@ -260,7 +260,7 @@
       },
       {
         "type": "shell",
-        "command": "dart test --fail-fast --chain-stack-traces --coverage=coverage",
+        "command": "dart test --exclude-tags generated --fail-fast --coverage=coverage",
         "label": "Dart Test"
       },
       {

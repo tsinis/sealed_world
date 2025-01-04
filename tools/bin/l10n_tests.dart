@@ -15,7 +15,7 @@ Future<void> main(List<String> args) {
     PathConstants.packages,
     dirName,
     PathConstants.test,
-    PathConstants.src,
+    "generated",
     "l10n",
   );
 
