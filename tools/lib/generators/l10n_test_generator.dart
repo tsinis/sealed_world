@@ -38,7 +38,7 @@ import "package:sealed_languages/src/model/translated_name.dart";
       sealedCurrencies:
           '"package:sealed_currencies/src/data/fiat_currencies.data.dart";',
     );
-
+    int translationsCount = 0;
     for (final translated in package.dataList) {
       final code = translated.code;
       final instance = "${translated.runtimeType}()";
@@ -90,6 +90,7 @@ const value = $instance;\n
         }
 
         buffer.write("),),);\n});");
+        translationsCount += 1;
       }
 
       buffer.write('\n}, tags: "generated",);');
@@ -97,7 +98,17 @@ const value = $instance;\n
       final test = "${code}_$prefix${PathConstants.test}.${PathConstants.dart}";
       io.writeContentToFile(join(path, test.toLowerCase()), buffer);
     }
-
+    // ignore: avoid_print, it's CLI, helper tool.
+    print(
+      "Created tests for $translationsCount "
+      "${package.dataRepresent} translations",
+    );
+    // Last stats for 31.12.2024:
+    // Countries: 36 709.
+    // Currencies: 17 550.
+    // Languages: 20 881.
+    //
+    // In fact total: 68 236.
     io.directory = Directory(path);
 
     await _dart.fixFormat();
