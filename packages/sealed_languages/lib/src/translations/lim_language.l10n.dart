@@ -200,7 +200,7 @@ const limLanguageTranslations = [
   TranslatedName(LangSnd(), name: "لمبرگش"),
   TranslatedName(LangSin(), name: "ලිම්බර්ගිශ්"),
   TranslatedName(LangSqi(), name: "limburgisht"),
-  TranslatedName(LangSwa(), name: "Kilimburgi", countryCode: "CD"),
+  TranslatedName(LangSwa(), name: "Kilimburgi"),
   TranslatedName(LangSwa(), name: "Kilimbugi", countryCode: "KE"),
   TranslatedName(LangTir(), name: "ሊምበርግኛ"),
   TranslatedName(LangTuk(), name: "limburg dili"),

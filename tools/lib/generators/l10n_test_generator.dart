@@ -18,16 +18,25 @@ class L10NTestGenerator {
     final prefix = "${package.dataRepresent}_${l10nLabel}_";
     final io = IoUtils();
     final dependencyImport = package.whenConst(
-      sealedLanguages: "TBD",
-      sealedCountries: '"package:sealed_currencies/sealed_currencies.dart";',
-      sealedCurrencies: '"package:sealed_languages/sealed_languages.dart";',
+      sealedLanguages: """
+import "package:sealed_languages/src/data/scripts.data.dart";
+import "package:sealed_languages/src/helpers/extensions/translated_extension.dart";
+import "package:sealed_languages/src/model/core/basic_locale.dart";
+import "package:sealed_languages/src/model/translated_name.dart";
+""",
+      sealedCountries:
+          'import "package:sealed_currencies/sealed_currencies.dart";',
+      sealedCurrencies:
+          'import "package:sealed_languages/sealed_languages.dart";',
     );
 
     final dataImport = package.whenConst(
-      sealedLanguages: "TBD",
+      sealedLanguages:
+          '"package:sealed_languages/src/data/natural_languages.data.dart";',
       sealedCountries:
           '"package:sealed_countries/src/data/official_world_countries.data.dart";',
-      sealedCurrencies: "TBD",
+      sealedCurrencies:
+          '"package:sealed_currencies/src/data/fiat_currencies.data.dart";',
     );
 
     for (final translated in package.dataList) {
@@ -37,7 +46,7 @@ class L10NTestGenerator {
 // ignore_for_file: lines_longer_than_80_chars, avoid-non-ascii-symbols
 
 import $dataImport
-import $dependencyImport
+$dependencyImport
 import "package:test/test.dart";
 
 void main() => group("\$$instance $l10nLabel", () {
@@ -51,8 +60,8 @@ const value = $instance;\n
 
         buffer.write("""
 \ntest("has translation for '$locale' locale", () {
-        const expectedName = "$common";
-        ${full == null ? '' : 'const expectedFullName = ${full == common ? 'expectedName' : '"$full"'};'}
+        const expectedName = r"$common";
+        ${full == null ? '' : 'const expectedFullName = ${full == common ? 'expectedName' : 'r"$full"'};'}
         final translated = value.maybeTranslation(
           const ${locale.toString(short: false)},
           useLanguageFallback: false,

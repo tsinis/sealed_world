@@ -144,7 +144,6 @@ const zwlCurrencyTranslations = [
   TranslatedName(LangVie(), name: "Đồng Đô la Zimbabwe"),
   TranslatedName(LangZho(), name: "津巴布韦元"),
   TranslatedName(LangZho(), name: "辛巴威元", script: ScriptHant()),
-  TranslatedName(LangInd(), name: "Dolar na Siombáibe"),
   TranslatedName(LangMal(), name: "സിംബാബ്‌വേയൻ ഡോളർ"),
   TranslatedName(LangAfr(), name: "Zimbabwiese dollar"),
   TranslatedName(LangAmh(), name: "ዚምባብዌ ዶላር"),
