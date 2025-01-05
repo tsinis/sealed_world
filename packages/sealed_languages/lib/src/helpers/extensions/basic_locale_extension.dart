@@ -32,4 +32,28 @@ extension BasicLocaleExtension on BasicLocale {
         countryCode: map["countryCode"]?.toString(),
         script: Script.maybeFromCode(map["script"]),
       );
+
+  /// Returns `true` if the locale has no country code specified.
+  bool get hasNoCountry => countryCode == null;
+
+  /// Returns `true` if the locale has no script specified.
+  bool get hasNoScript => script == null;
+
+  /// Returns `true` if the locale has only language specified.
+  bool get hasOnlyLanguage => hasNoScript && hasNoCountry;
+
+  /// Returns a string representing the locale.
+  ///
+  /// This identifier should to be a valid Unicode Locale Identifier.
+  /// By default it uses Java-like underscore `_` [separator].
+  String toUnicodeLocaleId({String separator = "_"}) {
+    final languageCode = language.codeShort.toLowerCase();
+    if (hasOnlyLanguage) return languageCode;
+
+    final sb = StringBuffer(languageCode);
+    if (!hasNoScript) sb.write(separator + (script?.code ?? ""));
+    if (!hasNoCountry) sb.write(separator + (countryCode ?? ""));
+
+    return sb.toString();
+  }
 }

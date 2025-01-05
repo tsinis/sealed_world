@@ -66,6 +66,8 @@ extension TranslatedNameExtension on TranslatedName {
   /// `name.common`.
   String get common => name;
 
+  /// Returns a [BasicLocale] object from this [TranslatedName] that represent
+  /// locale of translation.
   BasicLocale get locale =>
       BasicLocale(language, countryCode: countryCode, script: script);
 }
