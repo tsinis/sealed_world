@@ -44,7 +44,7 @@ base class TypedLocale<CountryType extends Object> extends Locale
     this.countryTranslations = const {},
     this.currencyTranslations = const {},
     this.languageTranslations = const {},
-  }) : super(" ");
+  }) : super(" ", " ");
 
   /// Creates an instance of [TypedLocale] from subtags.
   ///
@@ -60,7 +60,7 @@ base class TypedLocale<CountryType extends Object> extends Locale
   }) : super.fromSubtags(
           languageCode: language.codeShort.toLowerCase(),
           scriptCode: script?.code,
-          countryCode: country?.toString().trim().toUpperCase(),
+          countryCode: country?.toUpperCaseIsoCode(),
         );
 
   /// Creates an instance of [TypedLocale] with implicit translations cache
@@ -137,6 +137,7 @@ base class TypedLocale<CountryType extends Object> extends Locale
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) =>
-      BasicLocale(language, countryCode: countryCode, script: script)
-          .toJson(codec: codec);
+      asBasicLocale.toJson(codec: codec);
+
+  // TODO! Provide String toLanguageTag() => toUnicodeLocaleId('-'); override.
 }

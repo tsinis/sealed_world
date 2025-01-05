@@ -112,7 +112,10 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale>
     String? countryCode,
     Script? script,
   }) {
-    if (countryCode == null && script == null) return translations.first;
+    if (countryCode == null && script == null) {
+      return translations // TODO! Always put ones without code last.
+          .firstWhere((trn) => trn.countryCode == null && trn.script == null);
+    }
     for (final l10n in translations) {
       if (countryCode != null && l10n.countryCode != countryCode) continue;
       if (script != null && l10n.script != script) continue;

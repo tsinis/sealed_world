@@ -38,4 +38,6 @@ void main() => group("$BasicLocale", () {
         expect(value.language, parsed.language);
         expect(value.script, parsed.script);
       });
+
+      test("toString", () => expect(value.toString(), "aa_Zzzz_01"));
     });

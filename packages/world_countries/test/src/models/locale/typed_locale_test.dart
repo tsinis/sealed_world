@@ -2,6 +2,7 @@ import "dart:ui";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:world_countries/src/extensions/typed_locale_extension.dart";
 import "package:world_countries/src/models/locale/iso_locale.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
@@ -66,9 +67,16 @@ void main() => group("$TypedLocale", () {
       test("toJson", () {
         final json = value.toJson();
         final parsed = json.parse(BasicLocaleExtension.fromMap);
+        expect(parsed.toString(), value.asBasicLocale.toString());
         expect(value.countryCode, parsed.countryCode);
         expect(value.language, parsed.language);
         expect(value.script, parsed.script);
+      });
+
+      test("toString", () {
+        expect(value.toString(), locale.toString());
+        final fullValue = value.copyWith(script: const ScriptLatn());
+        expect(fullValue.toString(), fullValue.asLocale.toString());
       });
 
       group("copyWith", () {

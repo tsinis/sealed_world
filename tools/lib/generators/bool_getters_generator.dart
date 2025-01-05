@@ -24,7 +24,7 @@ class BoolGettersGenerator {
     );
     final currentImports = _code.readContentUntilFound(currentFilePath);
     final buffer = StringBuffer(currentImports)..write("""
-    extension ${type}BoolGetters on $type {
+    extension ${type}BoolGetters on $type? {
     """);
 
     for (final item in package.dataList) {

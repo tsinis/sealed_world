@@ -8,4 +8,5 @@ sealed class PathConstants {
   static const lib = "lib";
   static const packages = "packages";
   static const src = "src";
+  static const test = "test";
 }
