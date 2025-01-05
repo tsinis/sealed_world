@@ -1,12 +1,26 @@
+import "dart:ui" show Locale;
+
 import "package:world_flags/world_flags.dart";
 
 import "../models/locale/typed_locale.dart";
 import "duration_extension.dart";
 
 /// An extension on [TypedLocale] that provides utilities to manage translation
-/// caches.
+/// caches and transforms to other locale types.
 extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
     on T {
+  /// Returns typed locale in the more basic (parent) type [BasicLocale],
+  /// without translations and other additional properties.
+  BasicLocale get asBasicLocale =>
+      BasicLocale(language, countryCode: countryCode, script: script);
+
+  /// Returns a weak typed (String-based) SDK locale representation of [Locale].
+  Locale get asLocale => Locale.fromSubtags(
+        languageCode: languageCode,
+        countryCode: countryCode,
+        scriptCode: script?.code,
+      );
+
   /// Synchronously returns a copy of this [TypedLocale] with updated
   /// translation caches.
   ///
