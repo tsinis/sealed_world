@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 import "../constants/ui_constants.dart";
+import "../helpers/typed_locale_delegate.dart";
 import "../models/locale/typed_locale.dart";
 
 /// An abstract interface defining the basic contract for picker components.
@@ -52,7 +53,7 @@ abstract interface class BasicPickerInterface<T extends TypedLocale> {
   /// access time.
   ///
   /// Those hash-maps are cached in the [TypedLocale] class by default, when
-  /// using a `TypedLocaleDelegate` - providing translations to translated
+  /// using a [TypedLocaleDelegate] - providing translations to translated
   /// common country/currency/language names based on the device's locale. But
   /// when custom translations are provided, those hash-maps are not relevant
   /// because provided custom [translation] will be used instead.

@@ -19,7 +19,7 @@ import "../../extensions/typed_locale_extension.dart";
 /// The [TypedLocale] class has the following properties:
 /// - `language`: The [NaturalLanguage] representing the language of the locale.
 /// - `country`: The optional country information of generic type `CountryType`.
-/// - `script`: The optional script information of type `Script`.
+/// - `script`: The optional script information of type [Script].
 ///
 /// Example usage:
 ///

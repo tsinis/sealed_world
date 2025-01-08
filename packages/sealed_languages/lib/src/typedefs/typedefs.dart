@@ -19,12 +19,12 @@
 /// string keys to retrieve the values.
 typedef JsonMap = Map<String, dynamic>;
 
-/// A typedef representing a JSON-encoded map with string keys and `Object?`
+/// A typedef representing a JSON-encoded map with string keys and [Object?]
 /// values.
 ///
 /// The `JsonObjectMap` type is used to represent a map-like structure commonly
-/// found in JSON-encoded data. It has string keys and `Object?` values, where
-/// `Object?` represents a nullable value of any type. This typedef is typically
+/// found in JSON-encoded data. It has string keys and [Object?] values, where
+/// [Object?] represents a nullable value of any type. This typedef is typically
 /// used to improve code readability and provide a more expressive type
 /// annotation.
 ///
@@ -38,7 +38,7 @@ typedef JsonMap = Map<String, dynamic>;
 /// ```
 ///
 /// Note: JSON-encoded maps can contain values of different types, including
-/// null. The `Object?` type allows for flexibility in handling different value
+/// null. The [Object?] type allows for flexibility in handling different value
 /// types.
 ///
 /// See also:
