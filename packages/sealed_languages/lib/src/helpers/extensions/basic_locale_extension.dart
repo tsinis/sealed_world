@@ -2,6 +2,7 @@ import "../../helpers/extensions/sealed_world_object_extension.dart";
 import "../../model/core/basic_locale.dart";
 import "../../model/language/language.dart";
 import "../../model/script/writing_system.dart";
+import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
 
 /// Provides extension methods for [BasicLocale] class.
@@ -56,4 +57,13 @@ extension BasicLocaleExtension on BasicLocale {
 
     return sb.toString();
   }
+
+  TranslatedName toTranslatedName(String name, {String? fullName}) =>
+      TranslatedName(
+        language,
+        name: name,
+        fullName: fullName,
+        countryCode: countryCode,
+        script: script,
+      );
 }

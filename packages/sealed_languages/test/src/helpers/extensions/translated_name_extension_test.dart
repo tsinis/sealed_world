@@ -15,11 +15,11 @@ void main() => group("TranslatedNameExtension", () {
       );
 
       test(
-        "locale",
+        "asBasicLocale",
         () => expect(
           value
               .copyWith(script: const ScriptLatn(), countryCode: "SK")
-              .locale
+              .asBasicLocale
               .toString(),
           BasicLocale(
             NaturalLanguage.list.last,

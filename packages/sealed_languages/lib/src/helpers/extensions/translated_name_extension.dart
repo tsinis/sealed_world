@@ -68,6 +68,6 @@ extension TranslatedNameExtension on TranslatedName {
 
   /// Returns a [BasicLocale] object from this [TranslatedName] that represent
   /// locale of translation.
-  BasicLocale get locale =>
+  BasicLocale get asBasicLocale =>
       BasicLocale(language, countryCode: countryCode, script: script);
 }
