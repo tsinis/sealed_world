@@ -1,5 +1,6 @@
 import "dart:collection";
 
+import "../../interfaces/basic_locale_parser.dart";
 import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
 import "../utils/locale_parser.dart";
@@ -8,7 +9,7 @@ import "basic_locale_extension.dart";
 extension LocaleMapExtension on UnmodifiableMapView<IsoLocaleKey, String> {
   List<TranslatedName> toTranslatedNames({
     required String altSymbol,
-    LocaleParser parser = const LocaleParser(),
+    BasicLocaleParser parser = const LocaleParser(),
   }) =>
       List.unmodifiable(
         entries
@@ -19,7 +20,7 @@ extension LocaleMapExtension on UnmodifiableMapView<IsoLocaleKey, String> {
   TranslatedName? _maybeToTranslatedName(
     MapEntry<IsoLocaleKey, String> entry,
     String altSymbol,
-    LocaleParser parser,
+    BasicLocaleParser parser,
   ) {
     final isoCode = entry.key.isoCode;
     if (isoCode.endsWith(altSymbol)) return null;

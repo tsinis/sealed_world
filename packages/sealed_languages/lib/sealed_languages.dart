@@ -21,6 +21,7 @@ export "src/helpers/script/script_copy_with.dart";
 export "src/helpers/script/script_getters.dart";
 export "src/helpers/script/script_json.dart";
 export "src/helpers/utils/locale_parser.dart";
+export "src/interfaces/basic_locale_parser.dart";
 export "src/interfaces/iso_standardized.dart";
 export "src/interfaces/json_encodable.dart";
 export "src/interfaces/named.dart";
