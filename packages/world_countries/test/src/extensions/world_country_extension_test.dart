@@ -70,6 +70,7 @@ void main() => group("WorldCountryExtension ", () {
               convertedLocale,
               TypedLocale.fromSubtags(
                 language: NaturalLanguage.list.first,
+                // ignore: deprecated_member_use_from_same_package, it's TODO!
                 country: value.codeShort,
                 script: Script.list.first,
               ),

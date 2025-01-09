@@ -27,14 +27,15 @@ extension LocaleExtension on Locale? {
   ///
   /// ```dart
   /// final locale = Locale('en', 'US');
+  /// // typedLocale is equal to: IsoLocale(LangEng(), country: CountryUsa()).
   /// final typedLocale = locale.maybeToTypedLocale();
-  /// /// typedLocale is equal to: IsoLocale(LangEng(), country: CountryUsa()).
   /// ```
   TypedLocale<String>? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
     final language = maybeLanguage ?? fallbackLanguage;
 
     // ignore: avoid-negated-conditions, due to line length.
     return language != null
+        // ignore: deprecated_member_use_from_same_package, it's TODO!
         ? TypedLocale(language, country: this?.countryCode, script: maybeScript)
         : null;
   }
